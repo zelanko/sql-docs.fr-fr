@@ -1,5 +1,5 @@
 ---
-title: Objet d’Options de schéma de base de données de zone (Assistant génération de schéma) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Options de schéma de la base de données de la zone de sujet (Assistant génération de schéma) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2173255654b9ef02c269ec34bd21f93f8bf629a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067975"
 ---
 # <a name="subject-area-database-schema-options-schema-generation-wizard-analysis-services---multidimensional-data"></a>Options du schéma de la base de données de la zone de sujet (Assistant Génération de schéma) (Analysis Services - Données multidimensionnelles)
@@ -26,7 +26,7 @@ ms.locfileid: "66067975"
  **Schéma propriétaire**  
  Définit le nom du schéma dans la nouvelle base de données de la zone de sujet.  
   
- **Créer des clés primaires sur les tables de dimension**  
+ **Créer des clés primaires sur les tables de la dimension**  
  Crée des clés primaires dans les tables de dimension dans le schéma généré. Aucun index n'est généré si vous ne sélectionnez pas cette option.  
   
 > [!NOTE]  
@@ -35,25 +35,25 @@ ms.locfileid: "66067975"
  **Créer des index**  
  Crée des index dans les colonnes clés étrangères dans le schéma généré.  
   
- **Appliquer l’intégrité référentielle**  
+ **Appliquer l'intégrité référentielle**  
  Applique l'intégrité référentielle dans le schéma généré. Si vous ne sélectionnez pas cette option, les relations sont créées, mais pas appliquées.  
   
  **Préserver les données lors de la régénération**  
  Conserve les données dans base de données de la zone de sujet lorsque l'Assistant termine son exécution. Si vous ne sélectionnez pas cette option, toutes les données de la base de données de la zone de sujet peuvent être effacées sans avertissement.  
   
- **Remplir une ou plusieurs tables de temps**  
+ **Remplir la ou les tables de temps**  
  Définit la manière dont l'Assistant remplit les tables de temps. Le tableau suivant répertorie les valeurs possibles de cette option.  
   
 > [!NOTE]  
 >  Cette option est activée uniquement si l’Assistant Génération de schéma est ouvert depuis un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en utilisant [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] en mode projet.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |Remplir|Les tables de temps de la zone de sujet sont remplies.|  
 |Ne pas remplir|Les tables de temps de la zone de sujet ne sont pas remplies.|  
 |Remplir uniquement si la table est vide|Les tables de temps de la zone de sujet sont remplies uniquement si elles sont vides.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide F1 d’Assistant génération de schéma &#40;Analysis Services - données multidimensionnelles&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)  
+ [Aide (F1) de l’Assistant génération de schéma &#40;Analysis Services-données multidimensionnelles&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)  
   
   

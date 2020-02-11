@@ -16,18 +16,18 @@ ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e87e542395c00797ce50b220ad8a6c981f43605a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771090"
 ---
-# <a name="sphelparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
+# <a name="sp_helparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Retourne toutes les colonnes dans la table sous-jacente. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication. Dans le cas des serveurs de publication Oracle, cette procédure stockée est exécutée sur n'importe quelle base de données du serveur de distribution.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,12 +43,12 @@ sp_helparticlecolumns [ @publication = ] 'publication'
   
 `[ @article = ] 'article'`Nom de l’article dont les colonnes sont retournées. *article* est de **type sysname**et n’a pas de valeur par défaut.  
   
-`[ @publisher = ] 'publisher'`Spécifie un serveur [!INCLUDE[msCoName](../../includes/msconame-md.md)] de publication non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'`Spécifie un serveur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de publication non-. *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  l' *éditeur* ne doit pas être spécifié lorsque l’article demandé est publié [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par un serveur de publication.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (colonnes qui ne sont pas publiées) ou **1** (colonnes publiées)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -56,8 +56,8 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**ID de colonne**|**int**|Identificateur de la colonne.|  
-|**column**|**sysname**|Nom de la colonne.|  
-|**published**|**bit**|Indique si la colonne est publiée :<br /><br /> **0** = Non<br /><br /> **1** = Oui|  
+|**chronique**|**sysname**|Nom de la colonne.|  
+|**publié**|**bit**|Indique si la colonne est publiée :<br /><br /> **0** = non<br /><br /> **1** = Oui|  
 |**type de serveur de publication**|**sysname**|Type de données de la colonne sur le serveur de publication.|  
 |**type d’abonné**|**sysname**|Type de données de la colonne sur l'Abonné.|  
   
@@ -67,7 +67,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
  **sp_helparticlecolumns** est utile pour la vérification d’une partition verticale.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres du rôle serveur fixe **sysadmin** , du rôle de base de données fixe **db_owner** ou de la liste d’accès à la publication pour la publication actuelle peuvent exécuter **sp_helparticlecolumns**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** , du rôle de base de données fixe **db_owner** ou la liste d’accès à la publication pour la publication actuelle peuvent exécuter **sp_helparticlecolumns**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Définir et modifier un filtre de colonne](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   

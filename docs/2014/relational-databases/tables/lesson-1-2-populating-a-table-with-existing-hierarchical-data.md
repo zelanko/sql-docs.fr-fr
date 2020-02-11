@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7b2614d090bce0ecf0c61db5c9a5222ec6b10951
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110165"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>Remplissage d'une table avec des données hiérarchiques existantes
-  Cette tâche crée une table et la remplit avec les données de la table **EmployeeDemo**. Les étapes de cette tâche sont les suivantes :  
+  Cette tâche crée une table et la remplit avec les données de la table **EmployeeDemo** . Les étapes de cette tâche sont les suivantes :  
   
 -   Créez une nouvelle table qui contient une colonne `hierarchyid`. Cette colonne pourrait remplacer les colonnes **EmployeeID** et **ManagerID** existantes. Toutefois, vous conserverez ces colonnes. Cela s'explique par le fait que les applications existantes peuvent faire référence à ces colonnes. De même, cela peut vous aider à comprendre les données après le transfert. La définition de table spécifie que **OrgNode** est la clé primaire, ce qui exige que la colonne contienne des valeurs uniques. L’index cluster sur la colonne **OrgNode** stockera la date dans la séquence **OrgNode** .  
   
@@ -113,7 +113,7 @@ ms.locfileid: "66110165"
   
      `10        4         2`  
   
-3.  Remplissez la table **NewOrg** . Utiliser les méthodes GetRoot et ToString pour concaténer le **Num** des valeurs dans le `hierarchyid` mettre en forme, puis mettez à jour le **OrgNode** colonne avec les valeurs hiérarchiques résultantes :  
+3.  Remplissez la table **NewOrg** . Utilisez les méthodes GetRoot et ToString pour concaténer les valeurs **num** au `hierarchyid` format, puis mettez à jour la colonne **OrgNode** avec les valeurs hiérarchiques résultantes :  
   
     ```  
     WITH paths(path, EmployeeID)   
@@ -151,7 +151,7 @@ ms.locfileid: "66110165"
   
     ```  
   
-     Le **LogicalNode** colonne convertit le `hierarchyid` colonne dans un format texte plus lisible qui représente la hiérarchie. Dans les tâches restantes, vous utiliserez la méthode `ToString()` pour afficher le format logique des colonnes `hierarchyid`.  
+     La colonne **LogicalNode** convertit `hierarchyid` la colonne en un format de texte plus lisible qui représente la hiérarchie. Dans les tâches restantes, vous utiliserez la méthode `ToString()` pour afficher le format logique des colonnes `hierarchyid`.  
   
 5.  Supprimez la table temporaire, qui n'est plus nécessaire :  
   

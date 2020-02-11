@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_clr_loaded_assemblies (Transact-SQL) | Microsoft Docs
+title: sys. dm_clr_loaded_assemblies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,31 +19,31 @@ ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1cd677e516048aa52badec7fc9875e5a5b13f25a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138658"
 ---
-# <a name="sysdmclrloadedassemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies (Transact-SQL)
+# <a name="sysdm_clr_loaded_assemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne une ligne pour chaque assembly d'utilisateur géré chargé dans l'espace d'adressage du serveur. Utilisez cette vue pour comprendre et résoudre les problèmes d’intégration du CLR de base de données objets managés qui s’exécutent dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Retourne une ligne pour chaque assembly d'utilisateur géré chargé dans l'espace d'adressage du serveur. Utilisez cette vue pour comprendre et dépanner les objets de base de données managés [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]d’intégration du CLR qui s’exécutent dans.  
   
- Les assemblys sont des fichiers DLL de code managé qui sont utilisés pour définir et déployer des objets de base de données managés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dès lors qu'un utilisateur exécute un de ces objets de base de données managés, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le CLR chargent l'assembly (et ses références) dans lequel l'objet de base de données managé est défini. L'assembly reste chargé dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour augmenter les performances, de sorte que les objets de base de données managés contenus dans l'assembly puissent être appelés ultérieurement, sans avoir à recharger l'assembly. L'assembly n'est pas déchargé tant que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne présente pas une mémoire insuffisante. Pour plus d’informations sur les assemblys et intégration du CLR, consultez [CLR hébergé environnement](../../relational-databases/clr-integration/clr-integration-architecture-clr-hosted-environment.md). Pour plus d’informations sur les objets de base de données managés, consultez [création d’objets de base de données avec Common Language Runtime &#40;CLR&#41; intégration](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md).  
+ Les assemblys sont des fichiers DLL de code managé qui sont utilisés pour définir et déployer des objets de base de données managés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dès lors qu'un utilisateur exécute un de ces objets de base de données managés, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le CLR chargent l'assembly (et ses références) dans lequel l'objet de base de données managé est défini. L'assembly reste chargé dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour augmenter les performances, de sorte que les objets de base de données managés contenus dans l'assembly puissent être appelés ultérieurement, sans avoir à recharger l'assembly. L'assembly n'est pas déchargé tant que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne présente pas une mémoire insuffisante. Pour plus d’informations sur les assemblys et l’intégration du CLR, consultez [environnement hébergé dans CLR](../../relational-databases/clr-integration/clr-integration-architecture-clr-hosted-environment.md). Pour plus d’informations sur les objets de base de données managés, consultez [génération d’objets de base de données avec Common Language Runtime &#40;l’intégration du CLR&#41;](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md).  
 
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**assembly_id**|**Int**|ID de l'assembly chargé. Le **assembly_id** peut être utilisée pour rechercher plus d’informations sur l’assembly dans le [sys.assemblies &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) vue de catalogue. Notez que le [!INCLUDE[tsql](../../includes/tsql-md.md)] [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) catalogue affiche les assemblys dans la base de données actuelle uniquement. Le **sqs.dm_clr_loaded_assemblies** affiche tous les assemblys chargés sur le serveur.|  
-|**appdomain_address**|**int**|Adresse du domaine d’application (**AppDomain**) dans lequel l’assembly est chargé. Tous les assemblys appartenant à un seul utilisateur sont toujours chargés dans le même **AppDomain**. Le **appdomain_address** peut être utilisé pour rechercher plus d’informations sur la **AppDomain** dans le [sys.dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md) vue.|  
-|**load_time**|**datetime**|Heure à laquelle l'assembly a été chargé. Notez que l’assembly reste chargé tant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est sous pression de mémoire et décharge le **AppDomain**. Vous pouvez surveiller **load_time** à comprendre à quelle fréquence [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est fourni avec une mémoire insuffisante et décharge le **AppDomain**.|  
+|**assembly_id**|**int**|ID de l'assembly chargé. La **assembly_id** peut être utilisée pour rechercher plus d’informations sur l’assembly dans la vue de catalogue [sys. Assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) . Notez que le [!INCLUDE[tsql](../../includes/tsql-md.md)] catalogue [sys. Assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) affiche uniquement les assemblys dans la base de données active. La vue **SQS. dm_clr_loaded_assemblies** affiche tous les assemblys chargés sur le serveur.|  
+|**appdomain_address**|**int**|Adresse du domaine d’application (**AppDomain**) dans lequel l’assembly est chargé. Tous les assemblys appartenant à un seul utilisateur sont toujours chargés dans le même **AppDomain**. La **appdomain_address** peut être utilisée pour rechercher plus d’informations sur le domaine d’application **AppDomain** dans la vue [sys. dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md) .|  
+|**load_time**|**DATETIME**|Heure à laquelle l'assembly a été chargé. Notez que l’assembly reste chargé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jusqu’à ce que soit soumis à une sollicitation de la mémoire et décharge l' **AppDomain**. Vous pouvez surveiller **load_time** pour comprendre la fréquence [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la sollicitation de la mémoire et décharger l' **AppDomain**.|  
   
 ## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="remarks"></a>Notes  
- Le **dm_clr_loaded_assemblies.appdomain_address** vue a une relation plusieurs-à-un avec **dm_clr_appdomains.appdomain_address**. Le **dm_clr_loaded_assemblies.assembly_id** vue a une relation un-à-plusieurs avec **sys.assemblies.assembly_id**.  
+ La vue **dm_clr_loaded_assemblies. appdomain_address** a une relation plusieurs-à-un avec **dm_clr_appdomains. appdomain_address**. La vue **dm_clr_loaded_assemblies. assembly_id** a une relation un-à-plusieurs avec **sys. assemblies. assembly_id**.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant montre comment afficher les détails de tous les assemblys de la base de données active qui sont chargés.  
@@ -55,7 +55,7 @@ INNER JOIN sys.assemblies AS a
 ON l.assembly_id = a.assembly_id;  
 ```  
   
- L’exemple suivant montre comment afficher les détails de la **AppDomain** dans lequel un assembly donné est chargé.  
+ L’exemple suivant montre comment afficher les détails de l' **AppDomain** dans lequel un assembly donné est chargé.  
   
 ```  
 SELECT appdomain_id, creation_time, db_id, user_id, state  
@@ -67,6 +67,6 @@ WHERE appdomain_address =
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues de gestion dynamique liées à Common Language Runtime &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
+ [Vues de gestion dynamique liées au Common Language Runtime &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
   

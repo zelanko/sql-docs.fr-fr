@@ -1,5 +1,5 @@
 ---
-title: Héritée de Transactions | Microsoft Docs
+title: Transactions héritées | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d8e22375e660e6bcd55c8075edaaba067160279d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058056"
 ---
 # <a name="inherited-transactions"></a>Transactions héritées
@@ -37,11 +37,11 @@ ms.locfileid: "66058056"
   
  Les packages et les tâches ont les attributs de transaction suivants :  
   
--   **TransactionOption** a pour valeur **Required** sur les packages A et C.  
+-   **TransactionOption** a pour valeur **Required** sur les packages A et C  
   
--   **TransactionOption** a pour valeur **Supported** sur les packages B et D, et sur les tâches d’exécution des packages B, D et F.  
+-   **TransactionOption** a pour valeur **Supported** sur les packages b et D, et sur les tâches d’exécution du package b, de l’exécution du package D et de l’exécution du package F.  
   
--   **TransactionOption** a pour valeur **NotSupported** sur le package E, et sur les tâches d’exécution des packages C et E.  
+-   **TransactionOption** a pour valeur **NotSupported** sur le package e, et sur les tâches exécuter le package C et exécuter le package e.  
   
  ![Flux de transactions héritées](media/mw-dts-executepack.gif "Flux de transactions héritées")  
   
@@ -56,6 +56,6 @@ ms.locfileid: "66058056"
  Le package E n'utilise pas de transactions.  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Configurer un package pour l’utilisation de transactions](../relational-databases/native-client-ole-db-transactions/transactions.md)  
+ [Configurer un package pour l'utilisation de transactions](../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
   

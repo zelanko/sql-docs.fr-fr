@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 991223c373113b465c3182f552e5f5d157efef9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831602"
 ---
 # <a name="for-loop-container"></a>Conteneur de boucles For
@@ -38,7 +38,7 @@ ms.locfileid: "62831602"
   
  ![Un conteneur de boucles For répète une tâche quatre fois.](../media/ssis-forloop.gif "Un conteneur de boucles For répète une tâche quatre fois.")  
   
- Les expressions doivent être des expressions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] valides.  
+ Les expressions doivent être des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] expressions valides.  
   
  Pour créer les expressions d'initialisation et d'assignation, vous pouvez utiliser l'opérateur d'affectation (=). Cet opérateur n'est pas pris en charge par la grammaire d'expression Integration Services et ne peut être utilisé que par les types d'expression d'initialisation et d'assignation du conteneur de boucles For. Toute expression qui utilise l’opérateur d’affectation doit contenir la syntaxe `@Var = <expression>`, où **Var** représente une variable d’exécution et \<expression> indique une expression qui suit les règles de la syntaxe d’expression [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. L'expression peut comprendre les variables, les littéraux et l'ensemble des opérateurs et des fonctions pris en charge par la grammaire d'expression SSIS. L'expression doit correspondre à une valeur dont le type de données peut être converti vers le type de données de la variable.  
   

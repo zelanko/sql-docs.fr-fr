@@ -1,5 +1,5 @@
 ---
-title: Partitions et Mode DirectQuery (SSAS tabulaire) | Microsoft Docs
+title: Partitions et mode DirectQuery (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fe22de3cc0718647de84345260017a4dd4e477e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067308"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>Partitions et mode DirectQuery (SSAS Tabulaire)
   Cette section explique comment sont utilisées les partitions dans les modèles DirectQuery. Pour obtenir des informations générales sur les partitions dans les modèles tabulaires, consultez [Partitions &#40;SSAS Tabulaire&#41;](partitions-ssas-tabular.md).  
   
- Pour obtenir des instructions sur la modification de la partition qui est utilisée, ou afficher des informations sur la partition, consultez [modifier la DirectQuery Partition &#40;tabulaire SSAS&#41;](../change-the-directquery-partition-ssas-tabular.md).  
+ Pour obtenir des instructions sur la façon de modifier la partition utilisée, ou afficher des informations sur la partition, consultez [modifier la partition DirectQuery &#40;la&#41;tabulaire SSAS ](../change-the-directquery-partition-ssas-tabular.md).  
   
 ## <a name="using-partitions-in-directquery-mode"></a>Utilisation de partitions en mode DirectQuery  
  Pour chaque table, vous devez spécifier une seule partition à utiliser en tant que source de données DirectQuery.  S'il existe plusieurs partitions, lorsque vous basculez le modèle pour activer le mode DirectQuery, par défaut la première partition qui a été créée dans la table est marquée en tant que partition DirectQuery. Vous pouvez modifier ce comportement ultérieurement à l'aide du Gestionnaire de partitions de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -42,12 +42,12 @@ ms.locfileid: "66067308"
   
  Il existe deux options de traitement pour la partition DirectQuery. Pour définir cette propriété, utilisez le **Gestionnaire de partitions** de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ou [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puis sélectionnez la propriété **Option de traitement** . Le tableau suivant répertorie les valeurs de cette propriété, et décrit les effets de chaque valeur lorsqu'elle est associée à la propriété DirectQueryUsage sur la chaîne de connexion :  
   
-|**DirectQueryUsage** propriété|Propriété**Option de traitement**|Remarques|  
+|Propriété **DirectQueryUsage**|Propriété de l' **option de traitement**|Notes|  
 |-----------------------------------|------------------------------------|-----------|  
 |DirectQuery|Ne jamais traiter cette partition|Lorsque le modèle utilise DirectQuery uniquement, le traitement n'est jamais nécessaire.<br /><br /> Dans les modèles hybrides, vous pouvez configurer la partition DirectQuery de façon à ce qu'elle ne soit jamais traitée. Par exemple, si vous effectuez une opération sur un jeu de données très volumineux et vous ne souhaitez pas que les résultats complets soient ajoutés dans le cache, vous pouvez spécifier que la partition DirectQuery inclut l'union des résultats pour toutes les autres partitions dans la table, et ne jamais traiter l'union. Les requêtes transmises à la source relationnelle ne sont pas affectées, et les requêtes sur des données en mémoire cache associent les données des autres partitions.|  
 |InMemory avec DirectQuery|Autoriser le traitement de la partition|Si le modèle utilise le mode hybride, vous devez utiliser la même partition pour les requêtes sur InMemory et les requêtes sur la source de données DirectQuery.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Partitions &#40;SSAS Tabulaire&#41;](partitions-ssas-tabular.md)  
+ [Partitions &#40;&#41;tabulaire SSAS](partitions-ssas-tabular.md)  
   
   

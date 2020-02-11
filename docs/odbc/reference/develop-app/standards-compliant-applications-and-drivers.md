@@ -1,5 +1,5 @@
 ---
-title: Applications conformes aux normes et les pilotes | Microsoft Docs
+title: Applications et pilotes conformes aux normes | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,29 +15,29 @@ ms.assetid: a1145c4c-3094-4f3f-8cc2-e6bb1a930ab1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4980cfe64a5a8e8404c6b5b0bdc8b1aba484f0c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107333"
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>Applications et pilotes conformes aux normes
-Une application conforme aux normes ou le pilote est celui qui est conforme à la spécification d’IAO groupe Open « gestion des données : Interface de niveau d’appel SQL (CLI) » et la norme ISO/IEC 9075-Interface de niveau d’appel 3:1995 (E) (SQL/CLI).  
+Une application ou un pilote conforme aux normes est un pilote conforme à la spécification Open Group IAO « Gestion des données : interface de niveau d’appel SQL (CLI) » et l’interface de niveau d’appel ISO/IEC 9075-3:1995 (E) (SQL/CLI).  
   
- ODBC *3.x* garantit les fonctionnalités suivantes :  
+ ODBC *3. x* garantit les fonctionnalités suivantes :  
   
--   Une application écrite dans les spécifications Open Group et ISO CLI fonctionne avec une application ODBC *3.x* pilote ou un pilote conforme aux normes lorsqu’il est compilé avec ODBC *3.x* en-tête des fichiers et lié à ODBC *3.x* bibliothèques, et quand il accède au pilote via ODBC *3.x* Gestionnaire de pilotes.  
+-   Une application écrite dans les spécifications Open Group et ISO CLI fonctionne avec un pilote ODBC *3. x* ou un pilote conforme aux normes lorsqu’elle est compilée avec les fichiers d’en-tête ODBC *3. x* et est liée aux bibliothèques ODBC *3. x* , et lorsqu’elle accède au pilote par le biais du gestionnaire de pilotes ODBC *3. x* .  
   
--   Un pilote écrit dans les spécifications Open Group et ISO CLI fonctionne avec une application ODBC *3.x* application ou une application conforme aux normes lorsqu’il est compilé avec ODBC *3.x* en-tête des fichiers et lié avec ODBC *3.x* bibliothèques, et lorsque l’application accède au pilote via ODBC *3.x* Gestionnaire de pilotes.  
+-   Un pilote écrit dans les spécifications Open Group et ISO CLI fonctionne avec une application ODBC *3. x* ou une application conforme aux normes lorsqu’elle est compilée avec les fichiers d’en-tête ODBC *3. x* et est liée aux bibliothèques ODBC *3. x* , et lorsque l’application accède au pilote par le biais du gestionnaire de pilotes ODBC *3. x* .  
   
- Pilotes et les applications conformes aux normes sont compilées avec l’indicateur de compilation ODBC_STD.  
+ Les applications et les pilotes conformes aux normes sont compilés avec l’indicateur de compilation ODBC_STD.  
   
- Applications conformes aux normes présentent le comportement suivant :  
+ Les applications conformes aux normes présentent le comportement suivant :  
   
--   Si une application conforme aux normes appelle **SQLAllocEnv** (qui peut se produire car **SQLAllocEnv** est une fonction valide dans l’Open Group et ISO CLI), l’appel est mappé à  **SQLAllocHandleStd** au moment de la compilation. Par conséquent, au moment de l’exécution, l’application appelle **SQLAllocHandleStd**. Au cours de traitement de cet appel, le Gestionnaire de pilotes définit l’attribut d’environnement SQL_ATTR_ODBC_VERSION à SQL_OV_ODBC3. Un appel à **SQLAllocHandleStd** équivaut à un appel à **SQLAllocHandle** avec un *HandleType* de SQL_HANDLE_ENV et un appel à **SQLSetEnvAttr** à la valeur SQL_ATTR_ODBC_VERSION SQL_OV_ODBC3.  
+-   Si une application conforme aux normes appelle **SQLAllocEnv** (ce qui peut se produire parce que **SQLAllocEnv** est une fonction valide dans le groupe Open et l’interface CLI ISO), l’appel est mappé à **SQLAllocHandleStd** au moment de la compilation. Par conséquent, au moment de l’exécution, l’application appelle **SQLAllocHandleStd**. Au cours du traitement de cet appel, le gestionnaire de pilotes définit l’attribut d’environnement SQL_ATTR_ODBC_VERSION sur SQL_OV_ODBC3. Un appel à **SQLAllocHandleStd** est équivalent à un appel à **SQLAllocHandle** avec un *comme HandleType* de SQL_HANDLE_ENV et un appel à **SQLSetEnvAttr** pour définir SQL_ATTR_ODBC_VERSION à SQL_OV_ODBC3.  
   
--   Si une application conforme aux normes appelle **SQLBindParam** (qui peut se produire car **SQLBindParam** est une fonction valide dans l’Open Group et ISO CLI), ODBC *3.x* Gestionnaire de pilotes mappe l’appel à l’appel équivalent dans **SQLBindParameter**. (Consultez [SQLBindParam, mappage](../../../odbc/reference/appendixes/sqlbindparam-mapping.md) dans l’annexe g : Pilote des instructions pour la compatibilité descendante.)  
+-   Si une application conforme aux normes appelle **SQLBindParam** (ce qui peut se produire parce que **SQLBindParam** est une fonction valide dans le groupe Open et l’interface CLI ISO), le gestionnaire de pilotes ODBC *3. x* mappe l’appel à l’appel équivalent dans **SQLBindParameter**. (Voir le [mappage SQLBindParam](../../../odbc/reference/appendixes/sqlbindparam-mapping.md) dans l’annexe G : instructions relatives aux pilotes pour la compatibilité descendante.)  
   
--   Pour s’aligner avec la CLI ISO, ODBC *3.x* fichiers d’en-tête contiennent des alias pour les types d’informations utilisés dans les appels à **SQLGetInfo**. Une application conforme aux normes peut utiliser ces alias au lieu de ODBC *3.x* types d’informations. Pour plus d’informations, consultez la rubrique suivante, [fichiers d’en-tête](../../../odbc/reference/develop-app/header-files.md).  
+-   Pour aligner avec l’interface CLI ISO, les fichiers d’en-tête ODBC *3. x* contiennent des alias pour les types d’informations utilisés dans les appels à **SQLGetInfo**. Une application conforme aux normes peut utiliser ces alias au lieu des types d’informations ODBC *3. x* . Pour plus d’informations, consultez la rubrique suivante, [fichiers d’en-tête](../../../odbc/reference/develop-app/header-files.md).  
   
--   Une application conforme aux normes doit vérifier qu’il prend en charge de toutes les fonctionnalités sont prises en charge dans le pilote, avec qu'elle fonctionnera. Définition de l’attribut d’instruction SQL_ATTR_CURSOR_SCROLLABLE à SQL_SCROLLABLE et en affectant l’attribut d’instruction SQL_ATTR_CURSOR_SENSITIVITY SQL_INSENSITIVE ou SQL_SENSITIVE sont les fonctionnalités qui sont disponibles en tant que fonctionnalités facultatives dans les normes mais ne sont ne pas inclus dans le système ODBC *3.x* Core niveau et par conséquent ne peut pas être pris en charge par tous les ODBC *3.x* pilotes. Si une application conforme aux normes utilise ces fonctionnalités, il doit vérifier que le pilote qui fonctionne avec les prend en charge.
+-   Une application conforme aux normes doit vérifier que toutes les fonctionnalités qu’elle prend en charge sont prises en charge dans le pilote qu’elle utilisera. La définition de l’attribut d’instruction SQL_ATTR_CURSOR_SCROLLABLE sur SQL_SCROLLABLE et la définition de l’attribut d’instruction SQL_ATTR_CURSOR_SENSITIVITY sur SQL_INSENSITIVE ou SQL_SENSITIVE sont des fonctionnalités disponibles en tant que fonctionnalités facultatives dans les normes, mais qui ne sont pas incluses dans le niveau principal ODBC *3. x* et qui, par conséquent, ne sont pas prises en charge par tous les pilotes ODBC *3. x* . Si une application conforme aux normes utilise ces fonctionnalités, elle doit vérifier que le pilote qu’elle utilisera les prend en charge.

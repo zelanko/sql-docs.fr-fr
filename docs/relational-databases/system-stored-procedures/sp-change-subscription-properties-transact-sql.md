@@ -16,18 +16,18 @@ ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cfc42dbf08b6718e72970a703f56fb0bfff850f4
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771407"
 ---
-# <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
+# <a name="sp_change_subscription_properties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Met à jour les informations pour les abonnements par extraction de données (pull). Cette procédure stockée est exécutée sur la base de données d'abonnement de l'Abonné.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,20 +50,20 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
 `[ @property = ] 'property'`Propriété à modifier. *Property* est de **type sysname**.  
   
-`[ @value = ] 'value'`Nouvelle valeur de la propriété. la *valeur* est de type **nvarchar (1000)** , sans valeur par défaut.  
+`[ @value = ] 'value'`Nouvelle valeur de la propriété. la *valeur* est de type **nvarchar (1000)**, sans valeur par défaut.  
   
 `[ @publication_type = ] publication_type`Spécifie le type de réplication de la publication. *publication_type* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Value|Type de publication|  
+|Valeur|Type de publication|  
 |-----------|----------------------|  
 |**0**|Transactionnelle|  
 |**1**|Instantané|  
-|**2**|Fusion|  
+|**2**|Fusionner|  
 |NULL (par défaut)|La réplication détermine le type de publication. La procédure stockée devant consulter plusieurs tables, cette option est plus lente que lorsque le type de publication exact est fourni.|  
   
  Le tableau ci-dessous décrit les propriétés des articles et les valeurs de ces propriétés.  
   
-|Propriété|Value|Description|  
+|Propriété|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Indique l'emplacement du dossier de remplacement pour l'instantané. Si l'argument est défini à NULL, les fichiers d'instantané sont prélevés à l'emplacement par défaut spécifié par le serveur de publication.|  
 |**distrib_job_login**||Nom de connexion du compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lequel l'Agent s'exécute.|  
@@ -73,7 +73,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**distributor_security_mode**|**1**|Utilise l'authentification Windows pour la connexion au serveur de distribution.|  
 ||**0**|Utilise l'authentification  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la connexion au serveur de distribution.|  
 |**dts_package_name**||Définit le nom du package DTS (Data Transformation Services) SQL Server 2000. Cette valeur peut être spécifiée seulement s'il s'agit d'une publication transactionnelle ou d'instantané.|  
-|**dts_package_password**||Spécifie le mot de passe du package. *dts_package_password* est de **type sysname** , avec NULL comme valeur par défaut, qui spécifie que la propriété de mot de passe doit rester inchangée.<br /><br /> Remarque : Un package DTS doit avoir un mot de passe.<br /><br /> Cette valeur peut être spécifiée seulement s'il s'agit d'une publication transactionnelle ou d'instantané.|  
+|**dts_package_password**||Spécifie le mot de passe du package. *dts_package_password* est de **type sysname** , avec NULL comme valeur par défaut, qui spécifie que la propriété de mot de passe doit rester inchangée.<br /><br /> Remarque : un package DTS doit avoir un mot de passe.<br /><br /> Cette valeur peut être spécifiée seulement s'il s'agit d'une publication transactionnelle ou d'instantané.|  
 |**dts_package_location**||Emplacement où le package DTS est stocké. Cette valeur peut être spécifiée seulement s'il s'agit d'une publication transactionnelle ou d'instantané.|  
 |**dynamic_snapshot_location**||Spécifie le chemin d'accès au dossier où les fichiers d'instantané sont enregistrés. Cette valeur peut être spécifiée seulement s'il s'agit d'une publication de fusion.|  
 |**ftp_address**||Pour compatibilité descendante uniquement.|  
@@ -83,8 +83,8 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**nom d’hôte**||Nom d’hôte utilisé lors de la connexion au serveur de publication.|  
 |**internet_login**||Connexion que l'Agent de fusion utilise pour se connecter, à l'aide de l'authentification de base, au serveur Web qui héberge la synchronisation Web.|  
 |**internet_password**||Mot de passe qu'utilise l'Agent de fusion lors de la connexion au serveur Web qui héberge la synchronisation Web avec l'authentification de base.|  
-|**internet_security_mode**|**1**|Utilise l'authentification intégrée Windows pour la synchronisation Web. Il est recommandé d'utiliser l'authentification de base pour la synchronisation Web. Pour plus d’informations, consultez [Configurer la synchronisation Web](../../relational-databases/replication/configure-web-synchronization.md).|  
-||**0**|Utiliser l'authentification de base pour la synchronisation Web.<br /><br /> Remarque : La synchronisation Web requiert une connexion SSL au serveur Web.|  
+|**internet_security_mode**|**1**|Utilise l'authentification intégrée Windows pour la synchronisation Web. Il est recommandé d'utiliser l'authentification de base pour la synchronisation Web. Pour plus d'informations, voir [Configurer la synchronisation web](../../relational-databases/replication/configure-web-synchronization.md).|  
+||**0**|Utiliser l'authentification de base pour la synchronisation Web.<br /><br /> Remarque : la synchronisation Web nécessite une connexion SSL au serveur Web.|  
 |**internet_timeout**||Délai en secondes avant l'expiration d'une demande de synchronisation Web.|  
 |**internet_url**||URL qui représente l'emplacement de l'écouteur de réplication pour la synchronisation Web.|  
 |**merge_job_login**||Connexion pour le compte Windows sous lequel l’agent s’exécute.|  
@@ -93,13 +93,13 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**publisher_password**||Mot de passe de l’éditeur. La modification de *publisher_password* est prise en charge uniquement pour les abonnements aux publications de fusion.|  
 |**publisher_security_mode**|**1**|Utiliser l'authentification Windows pour la connexion au serveur de publication. La modification de *publisher_security_mode* est prise en charge uniquement pour les abonnements aux publications de fusion.|  
 ||**0**|Utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la connexion au serveur de publication.|  
-|**use_ftp**|**true**|Utiliser FTP au lieu du protocole standard pour extraire les instantanés.|  
-||**false**|Utiliser le protocole standard pour extraire les instantanés.|  
-|**use_web_sync**|**true**|Active la synchronisation Web.|  
-||**false**|Désactive la synchronisation Web.|  
+|**use_ftp**|**:**|Utiliser FTP au lieu du protocole standard pour extraire les instantanés.|  
+||**fausses**|Utiliser le protocole standard pour extraire les instantanés.|  
+|**use_web_sync**|**:**|Active la synchronisation Web.|  
+||**fausses**|Désactive la synchronisation Web.|  
 |**working_directory**||Nom du répertoire de travail utilisé pour stocker temporairement les fichiers de données et de schéma de la publication lorsque le protocole FTP (File Transfer Protocol) est utilisé pour transférer des fichiers d'instantané.|  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  

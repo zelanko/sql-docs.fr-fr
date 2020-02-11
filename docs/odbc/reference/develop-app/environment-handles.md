@@ -14,25 +14,25 @@ ms.assetid: 917f1b0c-272b-4e37-a1f5-87cd24b9fa21
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 409b2c14282238766457d349287f65d90fe463b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68114323"
 ---
 # <a name="environment-handles"></a>Handles d’environnement
-Un *environnement* est un contexte global d’accès aux données ; est associée à un environnement à toutes les informations qui est globales par nature, telles que :  
+Un *environnement* est un contexte global dans lequel accéder aux données ; les informations de nature globale sont associées à un environnement, par exemple :  
   
 -   État de l’environnement  
   
--   Les diagnostics de niveau de l’environnement actuels  
+-   Diagnostics au niveau de l’environnement actuel  
   
--   Les handles de connexions actuellement allouées sur l’environnement  
+-   Handles des connexions actuellement allouées sur l’environnement  
   
--   Les paramètres actuels de chaque attribut de l’environnement  
+-   Paramètres actuels de chaque attribut d’environnement  
   
- Au sein d’un morceau de code qui implémente ODBC (le Gestionnaire de pilotes ou un pilote), un handle d’environnement identifie une structure destinée à contenir ces informations.  
+ Dans un morceau de code qui implémente ODBC (gestionnaire de pilotes ou pilote), un descripteur d’environnement identifie une structure qui contient ces informations.  
   
- Handles d’environnement ne sont pas utilisés fréquemment dans les applications ODBC. Ils sont toujours utilisés dans les appels à **SQLDataSources** et **SQLDrivers** et parfois utilisés dans les appels à **SQLAllocHandle**, **SQLEndTran**, **SQLFreeHandle**, **SQLGetDiagField**, et **SQLGetDiagRec**.  
+ Les handles d’environnement ne sont pas souvent utilisés dans les applications ODBC. Elles sont toujours utilisées dans les appels à **SQLDataSources** et **SQLDrivers** et parfois utilisées dans les appels à **SQLAllocHandle**, **SQLEndTran**, **SQLFreeHandle**, **SQLGetDiagField**et **SQLGetDiagRec**.  
   
- Chaque partie du code qui implémente ODBC (le Gestionnaire de pilotes ou un pilote) contient un ou plusieurs handles d’environnement. Par exemple, le Gestionnaire de pilotes conserve un handle d’environnement distinct pour chaque application qui y est connecté. Handles d’environnement sont allouées avec **SQLAllocHandle** et libéré avec **SQLFreeHandle**.
+ Chaque morceau de code qui implémente ODBC (le gestionnaire de pilotes ou un pilote) contient un ou plusieurs descripteurs d’environnement. Par exemple, le gestionnaire de pilotes gère un handle d’environnement distinct pour chaque application qui y est connectée. Les handles d’environnement sont alloués avec **SQLAllocHandle** et libérés avec **SQLFreeHandle**.

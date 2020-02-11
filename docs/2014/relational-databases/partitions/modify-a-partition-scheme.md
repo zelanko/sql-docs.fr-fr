@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 56148cca72ca9561219a9ea14025b0bd0f2204b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206572"
 ---
 # <a name="modify-a-partition-scheme"></a>Modifier un schéma de partition
@@ -53,7 +53,7 @@ ms.locfileid: "68206572"
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour modifier un schéma de partition :**  
   
- Cette action spécifique ne peut pas être exécutée à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Afin de modifier un schéma de partition, vous devez d'abord le supprimer puis en créer un nouveau avec les propriétés souhaitées à l'aide de l'Assistant Création de partition. Pour plus d’informations, consultez [créer des Tables partitionnées et des index à l’aide de SQL Server Management Studio](create-partitioned-tables-and-indexes.md#SSMSProcedure) sous **créer des Tables et index partitionnés**.  
+ Cette action spécifique ne peut pas être exécutée à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Afin de modifier un schéma de partition, vous devez d'abord le supprimer puis en créer un nouveau avec les propriétés souhaitées à l'aide de l'Assistant Création de partition. Pour plus d’informations, consultez [créer des tables et des index partitionnés à l’aide de SQL Server Management Studio](create-partitioned-tables-and-indexes.md#SSMSProcedure) sous **créer des tables et des index partitionnés**.  
   
 #### <a name="to-delete-a-partition-scheme"></a>Pour supprimer un schéma de partition  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68206572"
   
 #### <a name="to-modify-a-partition-scheme"></a>Pour modifier un schéma de partition  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

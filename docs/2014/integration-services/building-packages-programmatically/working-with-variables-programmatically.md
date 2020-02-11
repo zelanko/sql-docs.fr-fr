@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4833ee0dd6514b6a05118b80b756c5fd2de069a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836783"
 ---
 # <a name="working-with-variables-programmatically"></a>Utilisation de variables par programmation
@@ -44,9 +44,9 @@ ms.locfileid: "62836783"
   
 -   Création d’expressions qui incluent des valeurs de variables.  
   
--   Vous pouvez créer des variables personnalisées pour tous les types de conteneurs : packages, conteneurs de **boucles Foreach**, conteneurs de **boucles For**, conteneurs de **séquences**, TaskHosts et gestionnaires d’événements. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](../use-variables-in-packages.md).  
+-   Vous pouvez créer des variables personnalisées pour tous les types de conteneurs : packages, conteneurs de **boucles Foreach**, conteneurs de **boucles For**, conteneurs de **séquences**, TaskHosts et gestionnaires d’événements. Pour plus d’informations, consultez [Integration Services &#40;des variables de&#41; SSIS](../integration-services-ssis-variables.md) et [utiliser des variables dans des packages](../use-variables-in-packages.md).  
   
-## <a name="scope"></a>`Scope`  
+## <a name="scope"></a>Étendue  
  Chaque conteneur possède sa propre collection <xref:Microsoft.SqlServer.Dts.Runtime.Variables>. Lorsqu'une nouvelle variable est créée, elle se trouve dans la portée de son conteneur parent. Le conteneur de packages se trouvant au sommet de la hiérarchie de conteneurs, les variables avec une portée de package fonctionnent comme les variables globales et sont visibles pour tous les conteneurs contenus dans le package. La collection de variables du conteneur est également accessible par les enfants du conteneur via la collection <xref:Microsoft.SqlServer.Dts.Runtime.Variables>, en utilisant le nom de variable ou l'index de la variable dans la collection.  
   
  Parce que la visibilité d'une variable s'étend du haut vers le bas, les variables déclarées au niveau du package sont visibles pour tous les conteneurs situés dans le package. Par conséquent, la collection <xref:Microsoft.SqlServer.Dts.Runtime.Variables> sur un conteneur inclut toutes les variables qui appartiennent à son parent en plus de ses propres variables.  
@@ -158,11 +158,11 @@ End Module
  Notez que toutes les variables délimitées à l’espace de noms **System** sont disponibles dans le package. Pour plus d’informations, consultez [Variables système](../system-variables.md).  
   
 ## <a name="namespaces"></a>Espaces de noms  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) fournit deux espaces de noms par défaut dans lesquels résident les variables : **User** et **System**. Par défaut, toute variable personnalisée créée par le développeur est ajoutée à l’espace de noms **User**. Les variables système résident dans l’espace de noms **System**. Vous pouvez créer d’autres espaces de noms dans lesquels placer des variables personnalisées en plus de l’espace de noms **User** et modifier le nom de l’espace de noms **User**. En revanche, vous ne pouvez pas ajouter ou modifier des variables dans l’espace de noms **System**, ni assigner des variables système à un autre espace de noms.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)]() fournit deux espaces de[!INCLUDE[ssIS](../../includes/ssis-md.md)]noms par défaut dans lesquels les variables résident ; [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Les espaces de noms **utilisateur** et **système** . Par défaut, toute variable personnalisée créée par le développeur est ajoutée à l’espace de noms **User**. Les variables système résident dans l’espace de noms **System**. Vous pouvez créer d’autres espaces de noms dans lesquels placer des variables personnalisées en plus de l’espace de noms **User** et modifier le nom de l’espace de noms **User**. En revanche, vous ne pouvez pas ajouter ou modifier des variables dans l’espace de noms **System**, ni assigner des variables système à un autre espace de noms.  
   
  Les variables système qui sont disponibles diffèrent selon le type de conteneur. Pour obtenir la liste des variables système disponibles pour les packages, conteneurs, tâches et gestionnaires d’événements, consultez [Variables système](../system-variables.md).  
   
-## <a name="value"></a>Value  
+## <a name="value"></a>Valeur  
  La valeur d'une variable personnalisée peut être un littéral ou une expression :  
   
 -   Si vous souhaitez que la variable contienne une valeur littérale, définissez la valeur de sa propriété <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A>.  
@@ -228,7 +228,7 @@ End Module
 ## <a name="configuration-files"></a>Fichiers de configuration  
  Si un fichier de configuration inclut une variable personnalisée, la variable peut être mise à jour au moment de l'exécution. Cela signifie que lorsque le package s'exécute, la valeur de la variable qui se trouvait à l'origine dans le package est remplacée par une nouvelle valeur provenant du fichier de configuration. Cette technique de remplacement s'avère utile lorsqu'un package est déployé sur plusieurs serveurs qui requièrent des valeurs de variables différentes. Par exemple, une variable peut spécifier combien de fois un conteneur de **boucles Foreach** répète son flux de travail, répertorier les destinataires auxquels un gestionnaire d’événements envoie des e-mails lorsqu’une erreur est déclenchée ou changer le nombre d’erreurs pouvant se produire avant que le package n’échoue. Ces variables sont fournies de manière dynamique dans des fichiers de configuration pour chaque environnement. Par conséquent, seules les variables accessibles en lecture/écriture sont autorisées dans les fichiers de configuration. Pour plus d’informations, consultez [Créer des configurations de package](../create-package-configurations.md).  
   
-![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône de Integration Services (petite)](../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Variables Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md)   

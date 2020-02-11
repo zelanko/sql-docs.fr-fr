@@ -18,20 +18,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: feca89ac2ac888c2fa9f082595e761e898dea971
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211929"
 ---
 # <a name="programming-languages"></a>Langages de programmation
-  Cette section décrit comment le programme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual c# .NET, et [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cette section décrit comment programmer Management Objects (Smo) dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# .net et [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++.  
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Bien démarrer avec Visual Basic .NET](../../database-engine/dev-guide/getting-started-in-visual-basic-net.md)|Fournit des informations sur la façon de commencer à écrire un programme SMO dans Visual Basic .NET|  
-|[Mise en route avec Visual C&#35; .NET](smo-programming-getting-started-in-visual-csharp-net.md)|Fournit des informations sur la façon de commencer à écrire un programme SMO dans Visual c# .NET|  
+|[Mise en route avec Visual Basic .NET](../../database-engine/dev-guide/getting-started-in-visual-basic-net.md)|Fournit des informations sur l'écriture d'un programme SMO dans Visual Basic .NET|  
+|[Prise en main dans Visual C&#35; .NET](smo-programming-getting-started-in-visual-csharp-net.md)|Fournit des informations sur l'écriture d'un programme SMO dans Visual C# .NET|  
   
- SMO est un assembly .NET. Pour programmer à l'aide du [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, vous devez choisir un langage pris en charge par le CLR (Common Language Runtime). Syntaxe pour les langages managés tels que Visual Basic .NET et Visual c# .NET est dans la référence SMO.  
+ SMO est un assembly .NET. Pour programmer à l'aide du [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, vous devez choisir un langage pris en charge par le CLR (Common Language Runtime). Les informations de référence sur SMO contiennent la syntaxe des langages gérés comme Visual Basic .NET et Visual C# .NET.  
   
   

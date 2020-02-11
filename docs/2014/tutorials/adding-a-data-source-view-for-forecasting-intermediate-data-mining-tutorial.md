@@ -1,5 +1,5 @@
 ---
-title: Ajout d’une données vue de Source pour la prévision (didacticiel d’exploration de données intermédiaire) | Microsoft Docs
+title: Ajout d’une vue de source de données pour la prévision (didacticiel sur l’exploration de données intermédiaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f60ea2b2a642cf9435ed8366c42e43abb927e426
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62823129"
 ---
 # <a name="adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial"></a>Ajout d'une vue de source de données à des fins de prévision (Didacticiel sur l'exploration de données intermédiaire)
@@ -22,40 +22,40 @@ ms.locfileid: "62823129"
   
 ### <a name="to-add-a-data-source-view"></a>Pour ajouter une vue de source de données  
   
-1.  Dans l’Explorateur de solutions, cliquez sur **les vues de sources de données**, puis sélectionnez **nouvelle vue de Source de données**.  
+1.  Dans Explorateur de solutions, cliquez avec le bouton droit sur **vues de source de données**, puis sélectionnez **nouvelle vue de source de données**.  
   
-2.  Dans la page **Assistant Vue de source de données** , cliquez sur **Suivant**.  
+2.  Sur la page **Bienvenue dans l'Assistant Sources de données**, cliquez sur **Suivant**.  
   
-3.  Sur le **sélectionner une Source de données** page sous **sources de données relationnelles**, sélectionnez le [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] source de données. Cliquer sur **Suivant**.  
+3.  Dans la page **Sélectionner une source de données** , sous **sources de données relationnelles**, [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] sélectionnez la source de données. Cliquez sur **Suivant**.  
   
     > [!NOTE]  
-    >  Si vous n’avez pas de cette source de données, vous trouverez les étapes pour créer la source de données dans le [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md).  
+    >  Si vous ne disposez pas de cette source de données, vous trouverez les étapes nécessaires à la création de la source de données dans le didacticiel sur l' [exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md).  
   
-4.  Sur le **sélectionner des Tables et vues** page, sélectionnez la table vTimeSeries (dbo) et puis cliquez sur la flèche droite pour l’ajouter à la vue de source de données.  
+4.  Sur la page **Sélectionner des tables et des vues** , sélectionnez la table vTimeSeries (DBO), puis cliquez sur la flèche droite pour l’ajouter à la vue de source de données.  
   
-5.  Cliquer sur **Suivant**.  
+5.  Cliquez sur **Suivant**.  
   
-6.  Sur le **fin de l’Assistant** page, la vue de source de données est nommée par défaut [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]. Remplacez le nom par **SalesByRegion**, puis cliquez sur **Terminer**.  
+6.  Dans la page **fin de l’Assistant** , la vue de source de données est [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]nommée par défaut. Remplacez le nom par **SalesByRegion**, puis cliquez sur **Terminer**.  
   
-     Concepteur de vue de Source de données s’ouvre et la **SalesByRegion** vue de source de données s’affiche.  
+     Le concepteur de vue de source de données s’ouvre et la vue de source de données **SalesByRegion** s’affiche.  
   
 ## <a name="working-with-the-data-source-view"></a>Utilisation de la vue de source de données  
  Une fois que vous avez créé la vue de source de données, pour explorer les données, vous pouvez procéder des manières suivantes :  
   
--   Avec le bouton droit de la table vTimeSeries dans le concepteur, puis sélectionnez **Explorer les données** pour ouvrir la table sélectionnée dans une grille.  
+-   Cliquez avec le bouton droit sur la table vTimeSeries dans le concepteur, puis sélectionnez **Explorer les données** pour ouvrir la table sélectionnée dans une grille.  
   
--   Cliquez sur **options d’échantillonnage** , puis utilisez le **Options d’Exploration de données** boîte de dialogue pour modifier la méthode d’échantillonnage. Cliquez sur **Actualiser** pour charger des données dans la table en utilisant les nouveaux paramètres d’option. Par exemple, vous pouvez spécifier le nombre de lignes dans l’exemple de sortie, ou choisissez les n premières lignes.  
+-   Cliquez sur **options d’échantillonnage** , puis utilisez la boîte de dialogue Options d’exploration de **données** pour modifier la méthode d’échantillonnage. Cliquez sur **Actualiser** pour charger les données dans la table à l’aide des nouveaux paramètres d’option. Par exemple, vous pouvez spécifier le nombre de lignes à générer dans l’exemple ou choisir les n premières lignes.  
   
--   Cliquez sur la table vTimeSeries et sélectionnez **propriétés** pour attribuer un nouveau nom à la table. Vous pouvez également sélectionner des colonnes individuelles dans la vue de source de données et modifier les propriétés des colonnes.  
+-   Cliquez avec le bouton droit sur la table vTimeSeries, puis sélectionnez **Propriétés** pour affecter un nouveau nom à la table. Vous pouvez également sélectionner des colonnes individuelles dans la vue de source de données et modifier les propriétés des colonnes.  
   
 -   Cliquez n'importe où dans la zone de conception de la vue de source de données pour créer une nouvelle requête et lui affecter un nom, pour créer des relations entre des tables, ou pour modifier la disposition de la zone de conception.  
   
--   Cliquez sur une table et sélectionnez **nouveau calcul nommé** pour créer des colonnes dérivées, y compris les agrégations. Vous pouvez également ajouter de nouvelles tables et des vues à partir de la source de données dans cette vue.  
+-   Cliquez avec le bouton droit sur une table et sélectionnez **nouveau calcul nommé** pour créer des colonnes dérivées, y compris les agrégations. Vous pouvez également ajouter de nouvelles tables et des vues à partir de la source de données dans cette vue.  
   
  Dans la tâche suivante, vous allez explorer les données de série chronologique et déterminer la meilleure colonne à utiliser comme identificateur de série chronologique. Vous allez également apprendre à gérer les écarts dans les données de série chronologique.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Présentation de la configuration requise pour une série chronologique de modèle &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/time-series-model-requirements-intermediate-data-mining-tutorial.md)  
+ [Comprendre la configuration requise pour un modèle de série chronologique &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/time-series-model-requirements-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithme MTS (Microsoft Time Series)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  

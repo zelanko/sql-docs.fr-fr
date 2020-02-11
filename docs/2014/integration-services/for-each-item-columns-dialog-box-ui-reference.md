@@ -1,5 +1,5 @@
 ---
-title: Pour chaque référence d’interface utilisateur la boîte de dialogue élément colonnes | Microsoft Docs
+title: Informations de référence sur l’interface utilisateur de chaque boîte de dialogue colonnes d’élément | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12f9b5ad88ce49eb13b4aa460e02e295b13135ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058549"
 ---
 # <a name="for-each-item-columns-dialog-box-ui-reference"></a>Référence de l'interface utilisateur de la boîte de dialogue Colonnes For Each Item
@@ -34,11 +34,11 @@ ms.locfileid: "66058549"
  **Ajouter**  
  Ajoutez une nouvelle colonne.  
   
- **Supprimer**  
+ **Remove**  
  Sélectionnez une colonne, puis cliquez sur **Supprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de boucle foreach &#40;Page de Collection&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
+ [Éditeur de boucle foreach &#40;page de collection&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Conteneur de boucles Foreach](control-flow/foreach-loop-container.md)  
   
   

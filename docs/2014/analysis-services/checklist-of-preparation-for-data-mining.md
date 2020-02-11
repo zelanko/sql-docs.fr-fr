@@ -1,5 +1,5 @@
 ---
-title: Liste de vérification de préparation pour l’exploration de données | Microsoft Docs
+title: Liste de contrôle de préparation pour l’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a20fde7ebe09a3e57af504846cf010c8120ffbc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088149"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>Liste de vérification : préparation pour l'exploration de données
   Bien que les compléments d'exploration de données facilitent et agrémentent la création de modèles et leur expérimentation, lorsque vous devez obtenir des résultats reproductibles et utilisables, vous devez prévoir suffisamment de temps pour formuler les critères fondamentaux pour l'entreprise, ainsi que pour obtenir et préparer les données. Cette section fournit une liste de vérification pour vous aider à planifier les tâches d'inspection, et décrit les problèmes courants.  
   
 ## <a name="checklist-of-data-preparation"></a>Liste de vérification de la préparation des données  
- **J’ai identifié un résultat bien défini.**  
+ **J'ai identifié un résultat bien défini.**  
  Disposer d'un plan pour la façon dont vous allez utiliser les résultats. Les différents types de modèles génèrent des résultats différents. Un modèle de série chronologique génère des valeurs d'une série dans le futur, qui sont facilement compréhensible et utilisables. D'autres modèles génèrent des jeux complexes qui doivent être analysés par des experts techniques pour obtenir la plus grande valeur.  
   
 -   Quel résultat voulez-vous ?  
@@ -34,23 +34,23 @@ ms.locfileid: "66088149"
   
 -   Pouvez-vous mapper les nouvelles données d'entrée aux résultats attendus ?  
   
- **Je sais la signification, types de données et la distribution des données d’entrée.**  
+ **Je connais la signification, les types de données et la distribution des données d'entrée.**  
  Prenez le temps d'explorer et comprendre vos données source. Il est important que les personnes qui examinent le modèle comprennent le type de données d'entrée qui a été utilisé et sachent interpréter les types de données et la variabilité, ainsi que l'équilibre et la qualité.  
   
 -   De quel volume de données disposez-vous ? Les données sont-elles suffisantes pour la modélisation ?  
   
-     Il ne sont pas nécessairement une énorme quantité - plus petite et équilibré peut être mieux.  
+     Il n’est pas nécessaire qu’il soit très petit et équilibré.  
   
 -   Les données proviennent-elles de plusieurs sources, ou d'une seule source ?  
   
 -   Est-ce-que les données sont déjà traitée et nettoyées ? Des données d'entrée supplémentaires sont-elles disponibles ?  
   
--   Savez-vous comment elles ont été manipulées avant réception - comment données peuvent ont été tronquées, synthétisées ou converties ?  
+-   Savez-vous comment il a été manipulé avant de le recevoir, comment les données ont peut-être été tronquées, résumées ou converties ?  
   
 -   Les données d'entrée ont-elles des exemples de résultats qui peuvent être utilisés pour l'apprentissage ?  
   
- **Je comprends le niveau de l’intégrité des données que nous avons et le niveau que nous avons besoin.**  
- Des données incorrectes peuvent affecter la qualité du modèle ou empêcher la génération du modèle. Vous devez avoir une bonne compréhension de la distribution et de la signification des données, et de la manière dont elles sont parvenues à cet état. Vous devrez comprendre s’il est possible ou approprié de simplifier les données en les étiquetant, tronquer les types de données numériques, ou par synthèse.  
+ **Je comprends le niveau d'intégrité des données dont nous disposons et celui dont nous avons besoin.**  
+ Des données incorrectes peuvent affecter la qualité du modèle ou empêcher la génération du modèle. Vous devez avoir une bonne compréhension de la distribution et de la signification des données, et de la manière dont elles sont parvenues à cet état. Vous devez comprendre s’il est possible ou approprié de simplifier les données en les étiquetant, en tronquant les types de données numériques ou en les résumant.  
   
 -   Étiquettes de données : sont-elles claires et correctes ?  
   
@@ -70,8 +70,8 @@ ms.locfileid: "66088149"
   
 -   Si vous avez combiné des jeux de données, avez-vous recherché plusieurs colonnes représentant les mêmes données ?  
   
- **Je sais où les données sources sont stockées, d'où viennent ces données, et comment elles sont traitées. Le processus peut être répété facilement si nécessaire.**  
- Jeux de données uniques sont très bien pour les expériences, mais si vous voulez déplacer le modèle en production, vous souhaiterez penser à l’avance comment le processus de nettoyage peuvent être appliqué aux données opérationnelles. En outre, si vous disposez de données opérationnelles, vous devez savoir comment il ont été modifiée avant obtention-vous devez savoir comment il a été arrondie ou synthétisée.  
+ **Je sais où les données sources sont stockées, où elles proviennent et comment elles sont traitées. Le processus peut être répété facilement si nécessaire.**  
+ Les jeux de données uniques sont corrects pour les expériences, mais si vous souhaitez déplacer le modèle en production, pensez à l’avance sur la façon dont le processus de nettoyage peut être appliqué aux données opérationnelles. En outre, si vous avez des données opérationnelles, vous devez savoir comment elles peuvent avoir été altérées avant de vous y avoir. vous devez savoir comment elles ont été arrondies, ou résumées, certainement.  
   
 -   Voulez-vous être en mesure de répéter l'expérience ?  
   
@@ -81,14 +81,14 @@ ms.locfileid: "66088149"
   
 -   Votre infrastructure de traitement des données peut-elle également appliquer des algorithmes d'apprentissage automatique, réaliser des tests et visualiser les résultats ?  
   
- **Nous sommes entendus sur la granularité souhaitée des prédictions et nos données ont été modifiées pour ces unités de sortie.**  
+ **Nous nous sommes entendus sur la granularité souhaitée des prédictions et nos données ont été modifiées pour obtenir ces unités.**  
  Décidez de la granularité des résultats que vous recherchez avant de préparer des données. Par exemple, avez-vous besoin des prédictions de ventes chaque jour ou pour chaque trimestre ? Envisagez éventuellement de configurer différentes structures de données pour les mêmes données de façon à gérer différents niveaux de résumé.  
   
 -   Quelle est l'unité de mesure ou l'unité de temps actuelle ?  
   
      Quelle unité souhaitez-vous utiliser dans les résultats ?  
   
--   Il est possible de définir une unité de base (par exemple, jour / heure / min / appel d’instruction) pour toutes les données d’entrée ?  
+-   Est-il possible de définir une unité de base (par exemple, jour/heure/min/instruction call) pour toutes les données d’entrée ?  
   
      Voulez-vous effectuer le cumul aux unités supérieures ?  
   
@@ -103,14 +103,14 @@ ms.locfileid: "66088149"
   
 -   Avez-vous décidé d'utiliser une valeur initiale pour le modèle ?  
   
- **Nous disposent de connaissances de domaine pour valider les résultats, ou avoir accès à des experts techniques qui peuvent nous conseiller.**  
- Prenez le temps de valider les variables, le modèle et les résultats. Obtenez de l'aide auprès d'experts pour évaluer les interactions et les résultats. Toutefois, ne laissez aucun des hypothèses preuve. Soyez ouvert aux résultats nouveaux et inattendus.  
+ **Nous disposons des connaissances dans le domaine pour valider les résultats, ou nous avons accès à des experts techniques qui peuvent nous conseiller.**  
+ Prenez le temps de valider les variables, le modèle et les résultats. Obtenez de l'aide auprès d'experts pour évaluer les interactions et les résultats. Toutefois, ne laissez pas les hypothèses prioritaires sur les preuves. Soyez ouvert aux résultats nouveaux et inattendus.  
   
 -   La connaissance de domaine est-elle disponible pour faciliter le filtrage des données et réduire le bruit des données d'entrée ?  
   
 -   Est-ce-que les experts en matière de domaine aident à comprendre et interpréter les résultats et proposent des améliorations ?  
   
 ## <a name="see-also"></a>Voir aussi  
- [Choix des données pour l’exploration de données](choosing-data-for-data-mining.md)  
+ [Choisir les données pour l'exploration de données](choosing-data-for-data-mining.md)  
   
   

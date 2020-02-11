@@ -1,5 +1,5 @@
 ---
-title: Classement et Types de données CLR Integration | Microsoft Docs
+title: Types de données d’intégration du classement et du CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ ms.assetid: 6ebaed8e-2e2b-4f6d-bf4b-bc25452de441
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 51345c498277cc7013bbc05784022f65d77aef65
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68081344"
 ---
 # <a name="collation-and-clr-integration-data-types"></a>Classement et types de données de l'intégration du CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], le **CompareInfo** objet gère les classements. Le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] application utilisent des interfaces de programmation (API) de la chaîne la **CompareInfo** propriété associée à la **CultureInfo** objet du thread actuel pour effectuer des comparaisons de chaînes. Le paramètre par défaut de la **CultureInfo** objet est basé sur le [!INCLUDE[msCoName](../../includes/msconame-md.md)] paramètres régionaux de Windows pour l’ordinateur sur lequel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d’exécution. Ce paramètre détermine la sémantique de comparaison par défaut, si aucun explicite **CultureInfo** est spécifié, pour les comparaisons de **System.String** valeurs. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne change pas explicitement le **CompareInfo** propriété en fonction du classement de base de données ou serveur. Si nécessaire, les utilisateurs doivent définir approprié **CompareInfo** propriété dans leurs routines.  
+  Dans [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], l’objet **CompareInfo** gère les classements. Les [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] interfaces de programmation d’application (API) de chaîne utilisent la propriété **CompareInfo** associée à l’objet **CultureInfo** du thread actuel pour effectuer des comparaisons de chaînes. Le paramètre par défaut de l’objet **CultureInfo** est basé sur [!INCLUDE[msCoName](../../includes/msconame-md.md)] les paramètres régionaux Windows de l’ordinateur sur lequel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute. Cela détermine la sémantique de comparaison par défaut, si aucun **CultureInfo** explicite n’est spécifié, pour les comparaisons de valeurs **System. String** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ne change pas explicitement la propriété **CompareInfo** en classement de base de données ou de serveur. Si nécessaire, les utilisateurs doivent définir la propriété **CompareInfo** appropriée dans leurs routines.  
   
 ## <a name="parameter-collation"></a>Paramètre Collation  
- Lorsque vous créez une routine du common language runtime (CLR), et un paramètre d’une méthode CLR liée à la routine est de type **SQLString**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée une instance du paramètre avec le classement par défaut de la base de données qui contient la routine d’appel. Si un paramètre n’est pas un **SqlType** (par exemple, **chaîne** plutôt que **SQLString**), les informations de classement à partir de la base de données ne sont pas associées au paramètre.  
+ Lorsque vous créez une routine de Common Language Runtime (CLR) et qu’un paramètre d’une méthode CLR liée à la routine est de **** type SqlString [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , crée une instance du paramètre avec le classement par défaut de la base de données qui contient la routine d’appel. Si un paramètre n’est pas un **SQLType** (par exemple, **String** plutôt que **SqlString**), les informations de classement de la base de données ne sont pas associées au paramètre.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données SQL Server dans .NET Framework](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
+ [Types de données SQL Server dans le .NET Framework](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
   
   

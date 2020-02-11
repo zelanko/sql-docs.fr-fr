@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41ac7c11824457bd6d93a062344eb3b411c95b3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900558"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Transformation de regroupement approximatif
@@ -64,12 +64,12 @@ ms.locfileid: "62900558"
   
  Vous pouvez personnaliser le regroupement effectué par la transformation en définissant les propriétés des colonnes dans l'entrée de la transformation du regroupement probable. Par exemple, la propriété FuzzyComparisonFlags spécifie comment la transformation compare les données de chaîne dans une colonne, et la propriété ExactFuzzy indique si la transformation effectue une correspondance approximative ou exacte.  
   
- Vous pouvez configurer la quantité de mémoire utilisée par la transformation de regroupement probable en définissant la propriété personnalisée MaxMemoryUsage. Vous pouvez spécifier le nombre de mégaoctets (Mo) ou utiliser la valeur 0 pour permettre à la transformation d'utiliser une quantité dynamique de mémoire en fonction de ses besoins et de la mémoire physique disponible. La propriété personnalisée MaxMemoryUsage peut être mise à jour par une expression de la propriété au moment du chargement du package. Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41;](../../expressions/integration-services-ssis-expressions.md), [Expressions de propriété dans des packages](../../expressions/use-property-expressions-in-packages.md) et [Propriétés personnalisées des transformations](transformation-custom-properties.md).  
+ Vous pouvez configurer la quantité de mémoire utilisée par la transformation de regroupement probable en définissant la propriété personnalisée MaxMemoryUsage. Vous pouvez spécifier le nombre de mégaoctets (Mo) ou utiliser la valeur 0 pour permettre à la transformation d'utiliser une quantité dynamique de mémoire en fonction de ses besoins et de la mémoire physique disponible. La propriété personnalisée MaxMemoryUsage peut être mise à jour par une expression de la propriété au moment du chargement du package. Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41; ](../../expressions/integration-services-ssis-expressions.md), [Expressions de propriété dans des packages](../../expressions/use-property-expressions-in-packages.md) et [Propriétés personnalisées des transformations](transformation-custom-properties.md).  
   
  Cette transformation a une entrée et une sortie. Elle ne prend pas en charge de sortie d'erreur.  
   
 ## <a name="row-comparison"></a>Comparaison de lignes  
- Lorsque vous configurez la transformation de regroupement probable, vous pouvez spécifier l'algorithme de comparaison utilisé par la transformation pour comparer les lignes dans l'entrée de transformation. Si vous définissez la propriété Exhaustive sur `true`, la transformation compare chaque ligne dans l’entrée à chaque autre ligne dans l’entrée. Cet algorithme de comparaison peut produire des résultats plus précis, mais il peut ralentir la transformation, sauf si le nombre de lignes dans l'entrée est peu élevé. Pour éviter les problèmes de performances, il est recommandé de définir la propriété Exhaustive `true` uniquement lors du développement du package.  
+ Lorsque vous configurez la transformation de regroupement probable, vous pouvez spécifier l'algorithme de comparaison utilisé par la transformation pour comparer les lignes dans l'entrée de transformation. Si vous affectez à `true`la propriété exhaustif la valeur, la transformation compare chaque ligne de l’entrée à chaque autre ligne de l’entrée. Cet algorithme de comparaison peut produire des résultats plus précis, mais il peut ralentir la transformation, sauf si le nombre de lignes dans l'entrée est peu élevé. Pour éviter les problèmes de performances, il est recommandé de définir la propriété `true` exhaustive sur uniquement pendant le développement des packages.  
   
 ## <a name="temporary-tables-and-indexes"></a>Tables et index temporaires  
  Au moment de l'exécution, la transformation de regroupement approximatif crée des objets temporaires, tels que des tables et des index, parfois de taille importante, dans la base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à laquelle la transformation se connecte. La taille des tables et des index est proportionnelle au nombre de lignes dans l'entrée de la transformation et au nombre de jetons créés par la transformation de regroupement probable.  
@@ -85,9 +85,9 @@ ms.locfileid: "62900558"
   
 -   [Éditeur de transformation de regroupement probable &#40;onglet Gestionnaire de connexions&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
--   [Éditeur de transformation de regroupement approximatif &#40;onglet Colonnes&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
+-   [Éditeur de transformation de regroupement probable &#40;onglet colonnes&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
   
--   [Éditeur de transformation de regroupement probable &#40;onglet Avancé&#41;.](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
+-   [Éditeur de transformation de regroupement probable &#40;onglet Avancé&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
   
  Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   

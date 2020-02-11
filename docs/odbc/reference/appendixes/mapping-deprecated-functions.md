@@ -18,44 +18,44 @@ ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 307f0f54434fdcb4ebb19c38256a7a04f4a5c46d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990711"
 ---
 # <a name="mapping-deprecated-functions"></a>Mappage des fonctions dépréciées
-Cette section décrit les fonctions déconseillées comment sont mappés par ODBC *3.x* Gestionnaire de pilotes afin de garantir la compatibilité descendante d’ODBC *3.x* pilotes qui sont utilisés avec ODBC *2.x* applications. Le Gestionnaire de pilotes effectue ce mappage, quel que soit la version de l’application. Étant donné que chacun des ODBC *2.x* fonctions dans la liste suivante est mappé à ODBC correspondant *3.x* fonction lorsqu’elle est appelée dans une application ODBC *3.x* pilote ODBC *3.x* n’est pas nécessaire d’implémenter ODBC pilote *2.x* fonctions.  
+Cette section décrit comment les fonctions déconseillées sont mappées par le gestionnaire de pilotes ODBC *3. x* pour garantir la compatibilité descendante des pilotes ODBC *3. x* utilisés avec les applications ODBC *2. x* . Le gestionnaire de pilotes effectue ce mappage, quelle que soit la version de l’application. Étant donné que chacune des fonctions ODBC *2. x* de la liste suivante est mappée à la fonction ODBC *3. x* correspondante quand elle est appelée dans un pilote ODBC *3. x* , le pilote ODBC *3. x* n’a pas à implémenter les fonctions ODBC *2. x* .  
   
- Le mappage dans la liste est déclenché lorsque le pilote est une application ODBC *3.x* pilote et le pilote ne prend pas en charge la fonction qui est mappée.  
+ Le mappage de la liste est déclenché lorsque le pilote est un pilote ODBC *3. x* et que le pilote ne prend pas en charge la fonction qui est mappée.  
   
- Le tableau suivant répertorie les fonctionnalités tout en double qui a été introduite dans ODBC *3.x*.  
+ Le tableau suivant répertorie toutes les fonctionnalités dupliquées qui ont été introduites dans ODBC *3. x*.  
   
-|ODBC *2.x* (fonction)|ODBC *3.x* (fonction)|  
+|ODBC *2. x,* fonction|ODBC *3. x,* fonction|  
 |-------------------------|-------------------------|  
 |**SQLAllocConnect**|**SQLAllocHandle**|  
 |**SQLAllocEnv**|**SQLAllocHandle**|  
-|**SQLAllocStmt**|**SQLAllocHandle**|  
+|**SQLAllocStmt,**|**SQLAllocHandle**|  
 |**SQLBindParam**[1]|**SQLBindParameter**|  
 |**SQLColAttributes**|**SQLColAttribute**|  
 |**SQLError**|**SQLGetDiagRec**|  
-|**SQLFreeConnect**|**SQLFreeHandle**|  
-|**SQLFreeEnv**|**SQLFreeHandle**|  
-|**SQLFreeStmt** avec un *Option* de SQL_DROP|**SQLFreeHandle**|  
-|**SQLGetConnectOption**|**SQLGetConnectAttr**|  
+|**Sqlfreeconnect,**|**SQLFreeHandle**|  
+|**Sqlfreeenv,**|**SQLFreeHandle**|  
+|**SQLFreeStmt** avec une *option* de SQL_DROP|**SQLFreeHandle**|  
+|**Sqlgetconnectoption,**|**SQLGetConnectAttr**|  
 |**SQLGetStmtOption**|**SQLGetStmtAttr**|  
-|**SQLParamOptions**|**SQLSetStmtAttr**|  
+|**SQLParamOptions,**|**SQLSetStmtAttr**|  
 |**SQLSetConnectOption**|**SQLSetConnectAttr**|  
-|**SQLSetParam**[2]|**SQLBindParameter**|  
+|**SQLSetParam,**[2]|**SQLBindParameter**|  
 |**SQLSetScrollOption**|**SQLSetStmtAttr**|  
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1] bien que cette fonction n’existait pas dans ODBC *2.x*, il se trouve dans les normes Open Group et ISO.  
+ [1] même si cette fonction n’existait pas dans ODBC *2. x*, elle se trouve dans les normes de groupe et ISO ouvertes.  
   
- [2] Il s’agit d’une fonction ODBC 1.0.  
+ [2] il s’agit d’une fonction ODBC 1,0.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [SQLAllocConnect, mappage](../../../odbc/reference/appendixes/sqlallocconnect-mapping.md)  
   

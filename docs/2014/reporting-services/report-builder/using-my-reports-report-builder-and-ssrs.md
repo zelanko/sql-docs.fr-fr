@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 410cb4de6b89052493618404df3e595fd6999936
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107577"
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>Utilisation du dossier Mes rapports (Générateur de rapports et SSRS)
@@ -44,6 +44,6 @@ ms.locfileid: "66107577"
  Lorsque vous effectuez des recherches dans la base de données d'un serveur de rapports, le contenu de votre dossier Mes rapports est inclus dans l'étendue de la recherche, tandis que le contenu des dossiers Mes rapports des autres utilisateurs en est exclu. Les résultats de la recherche présentent uniquement les rapports auxquels vous avez accès.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Recherche, affichage et gestion de rapports &#40;Générateur de rapports et SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

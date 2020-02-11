@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bd865b3bf80c930fe2bb8e23f5ea807717f2b1d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092049"
 ---
 # <a name="sql-server-2014-upgrade-advisor"></a>Conseiller de mise à niveau SQL Server 2014
@@ -26,9 +26,9 @@ ms.locfileid: "66092049"
 |-----------|-----------------|  
 |[Installation du Conseiller de mise à niveau](../../../2014/sql-server/install/installing-upgrade-advisor.md)|Décrit les différentes méthodes d'installation du Conseiller de mise à niveau.|  
 |[Utilisation du Conseiller de mise à niveau](../../../2014/sql-server/install/working-with-upgrade-advisor.md)|Offre une vue d'ensemble des fonctionnalités du Conseiller de mise à niveau, fournit des informations sur la manière de l'installer et de l'exécuter et explique comment utiliser ses rapports.|  
-|[Résolution des problèmes de mise à niveau](../../../2014/sql-server/install/resolving-upgrade-issues.md)|Fournit des descriptions et des actions correctives relatives à des problèmes détectables et indétectables concernant une mise à niveau.|  
+|[Résolution de problèmes de mise à niveau](../../../2014/sql-server/install/resolving-upgrade-issues.md)|Fournit des descriptions et des actions correctives relatives à des problèmes détectables et indétectables concernant une mise à niveau.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mise à niveau vers SQL Server 2014 à l’aide de l’Assistant Installation &#40;le programme d’installation&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
+ [Effectuez une mise à niveau vers SQL Server 2014 à l’aide de l’Assistant Installation &#40;le programme d’installation&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

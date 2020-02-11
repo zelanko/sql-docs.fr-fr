@@ -12,10 +12,10 @@ ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 8aaf6c9cb9f4c7ed0f006492e6e11ce82ef333f2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251727"
 ---
 # <a name="data-quality-client-home-screen"></a>Écran d'accueil de Data Quality Client
@@ -58,7 +58,7 @@ ms.locfileid: "75251727"
  **Surveillance de l’activité**  
  Affiche une vue de l'état de toutes les activités (à la fois actuelles et historiques) en rapport avec le [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]connecté. Les types d'activités analysées incluent la gestion des connaissances, le projet de qualité des données et la correction des données SSIS.  
   
- **Configuré**  
+ **Configuration**  
  Affichez les propriétés de configuration des comptes de service de données de référence (via la place de marché Azure et directement vers les services de données de référence), les paramètres généraux (nettoyage interactif, correspondance et profilage) et les paramètres de gravité du journal.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d60820ba7c384347aeeec80d8c41f934078eca8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056870"
 ---
 # <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
@@ -29,7 +29,7 @@ ms.locfileid: "66056870"
  **Utiliser un paramètre existant**  
  Sélectionnez cette option pour associer la propriété de la tâche à un paramètre existant, puis sélectionnez le paramètre dans la liste déroulante.  
   
- **Ne pas utiliser de paramètre**  
+ **Ne pas utiliser le paramètre**  
  Sélectionnez cette option pour supprimer une référence à un paramètre. Le paramètre n'est pas supprimé.  
   
  **Créer un paramètre**  
@@ -44,10 +44,10 @@ ms.locfileid: "66056870"
  **Valeur**  
  Spécifiez la valeur par défaut du paramètre. Cette opération est aussi appelée « valeur par défaut de conception », qui peut être remplacée ultérieurement au moment du déploiement.  
   
- **Portée**  
+ **Étendue**  
  Spécifiez l'étendue du paramètre en sélectionnant l'option **Projet** ou **Package** . Les paramètres du projet sont utilisés pour fournir une entrée externe que le projet reçoit à un ou plusieurs packages du projet. L'utilisation de paramètres de package vous permet de modifier l'exécution du package sans avoir à modifier et à redéployer le package.  
   
- **Sensible**  
+ **Stratégiques**  
  Spécifiez si le paramètre contient une valeur sensible en activant ou en désactivant la case à cocher. Les valeurs de paramètre sensibles sont chiffrées dans le catalogue et apparaissent sous la forme d'une valeur Null lorsqu'elles sont affichées avec Transact-SQL ou SQL Server Management Studio.  
   
  **Obligatoire**  

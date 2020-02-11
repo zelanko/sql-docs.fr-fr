@@ -18,19 +18,19 @@ ms.assetid: 421ede8e-ad57-474a-9fb9-92f70a3e77e3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8e55465dfe2424144d74bc40492fdb897d4aa72b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130619"
 ---
-# <a name="spdeletejobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
+# <a name="sp_delete_jobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Supprime une étape d'un travail.  
+  Supprime une étape de travail d’un travail.  
   
  
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,26 +41,26 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_id = ] job_id` Le numéro d’identification du travail à partir de laquelle supprimer l’étape. *job_id*est **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] job_id`Numéro d’identification du travail à partir duquel l’étape sera supprimée. *job_id*est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
-`[ @job_name = ] 'job_name'` Le nom du travail à partir de laquelle supprimer l’étape. *job_name*est **sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'`Nom du travail à partir duquel l’étape sera supprimée. *job_name*est de **type sysname**, avec NULL comme valeur par défaut.  
   
-> **REMARQUE :** Soit *job_id* ou *nom_travail* doit être spécifié ; ne peut pas être spécifiés.  
+> **Remarque :** *Job_id* ou *job_name* doit être spécifié ; les deux ne peuvent pas être spécifiés.  
   
-`[ @step_id = ] step_id` Le numéro d’identification de l’étape en cours de suppression. *l’argument id_étape*est **int**, sans valeur par défaut.  
+`[ @step_id = ] step_id`Numéro d’identification de l’étape en cours de suppression. *step_id*est de **type int**, sans valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  Si vous supprimez une étape de travail, les autres étapes contenant une référence à l'étape supprimée sont automatiquement mises à jour.  
   
  Pour plus d’informations sur les étapes associées à un travail particulier, exécutez **sp_help_jobstep**.  
   
-> **REMARQUE :** Appel **sp_delete_jobstep** avec un *id_de_l* la valeur zéro supprime toutes les étapes de travail pour le travail.  
+> **Remarque :** L’appel de **sp_delete_jobstep** avec une valeur *step_id* égale à zéro supprime toutes les étapes de travail du travail.  
   
  Microsoft SQL Server Management Studio est un outil simple, basé sur une interface graphique, qui permet de gérer les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
   
@@ -73,9 +73,9 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Seuls les membres du **sysadmin** peut supprimer une étape de travail qui est détenue par un autre utilisateur.  
+ Seuls les membres de **sysadmin** peuvent supprimer une étape de travail appartenant à un autre utilisateur.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant supprime l'étape `1` du travail `Weekly Sales Data Backup`.  

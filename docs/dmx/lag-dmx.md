@@ -1,5 +1,5 @@
 ---
-title: Lag (DMX) | Microsoft Docs
+title: Décalage (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 170e2f8b565f8b3d9d5e385b2bba9f183e743ace
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008350"
 ---
 # <a name="lag-dmx"></a>Lag (DMX)
@@ -31,7 +31,7 @@ Lag()
  Valeur scalaire de type entier.  
   
 ## <a name="remarks"></a>Notes  
- Si le **Lag** fonction est utilisée sur un modèle où se trouve la colonne KEY TIME au sein d’une table imbriquée, la fonction doit se trouve dans l’expression Sub-SELECT de l’instruction.  
+ Si la fonction **lag** est utilisée sur un modèle où la colonne Key Time se trouve dans une table imbriquée, la fonction doit se trouver dans la sous-sélection de l’instruction.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant retourne les cas compris dans les données des 12 derniers mois qui ont servi à l'apprentissage du modèle.  
@@ -42,8 +42,8 @@ WHERE Lag() < 12
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Informations de référence sur les fonctions DMX&#41; Data Mining Extensions &#40;](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Fonctions &#40;&#41;DMX](../dmx/functions-dmx.md)   
+ [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)  
   
   

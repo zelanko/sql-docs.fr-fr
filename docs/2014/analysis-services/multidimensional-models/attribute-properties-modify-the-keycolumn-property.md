@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5c5effed34dda946d3c65028aa5834f4fbddf7cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077250"
 ---
 # <a name="modify-the-keycolumn-property-of-an-attribute"></a>Modifier la propriété KeyColumn d'un attribut
@@ -34,7 +34,7 @@ ms.locfileid: "66077250"
   
          -ou-  
   
-    -   Dans le Concepteur de Cube, sur le **Structure de Cube** onglet, développez la dimension de cube dans le **Dimensions** volet et cliquez sur **modifier \<dimension >**.  
+    -   Dans le concepteur de cube, sous l’onglet **structure de cube** , développez la dimension de cube dans le volet **dimensions** , puis cliquez sur ** \<modifier la dimension>**.  
   
 3.  Sous l'onglet **Structure de dimension** , dans le volet **Attributs** , cliquez sur l'attribut dont vous souhaitez modifier la propriété **KeyColumns** .  
   
@@ -54,6 +54,6 @@ ms.locfileid: "66077250"
 8.  Pour modifier l'ordre des colonnes clés, sélectionnez une colonne, puis cliquez le bouton **Haut** ou **Bas** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des propriétés d'attribut de dimension](dimension-attribute-properties-reference.md)  
+ [Référence des propriétés d’attribut de dimension](dimension-attribute-properties-reference.md)  
   
   

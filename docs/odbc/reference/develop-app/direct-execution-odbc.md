@@ -1,5 +1,5 @@
 ---
-title: Exécution directe dans ODBC | Microsoft Docs
+title: ODBC d’exécution directe | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: dd00a535-b136-494f-913b-410838e3de7e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72d9222be541a8d41b5b9935ac7cbbcfde4da19c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039798"
 ---
 # <a name="direct-execution-odbc"></a>Exécution directe dans ODBC
-L’exécution directe est la façon la plus simple d’exécuter une instruction. Lorsque l’instruction est envoyée pour exécution, la source de données compile dans un plan d’accès, puis exécute ce plan d’accès.  
+L’exécution directe est la manière la plus simple d’exécuter une instruction. Lorsque l’instruction est soumise pour exécution, la source de données la compile dans un plan d’accès, puis exécute ce plan d’accès.  
   
- L’exécution directe est couramment utilisée par les applications génériques qui créent et exécutent des instructions au moment de l’exécution. Par exemple, le code suivant génère une instruction SQL et l’exécute une seule fois :  
+ L’exécution directe est couramment utilisée par les applications génériques qui génèrent et exécutent des instructions au moment de l’exécution. Par exemple, le code suivant génère une instruction SQL et l’exécute une seule fois :  
   
 ```  
 SQLCHAR *SQLStatement;  
@@ -36,20 +36,20 @@ BuildStatement(SQLStatement);
 SQLExecDirect(hstmt, SQLStatement, SQL_NTS);  
 ```  
   
- L’exécution directe convient le mieux pour les instructions qui seront exécutées une seule fois. Son inconvénient majeur est que l’instruction SQL est analysée chaque fois qu’elle est exécutée. En outre, l’application ne peut pas récupérer des informations sur le jeu de résultats créé par l’instruction (le cas échéant) jusqu'à ce qu’après que l’instruction est exécutée ; Cela est possible si l’instruction est préparée et exécutée en deux étapes distinctes.  
+ L’exécution directe fonctionne mieux pour les instructions qui seront exécutées une seule fois. Son inconvénient majeur est que l’instruction SQL est analysée chaque fois qu’elle est exécutée. En outre, l’application ne peut pas récupérer les informations sur le jeu de résultats créé par l’instruction (le cas échéant) tant que l’instruction n’a pas été exécutée ; Cela est possible si l’instruction est préparée et exécutée en deux étapes distinctes.  
   
- Pour exécuter une instruction directement, l’application effectue les actions suivantes :  
+ Pour exécuter directement une instruction, l’application effectue les actions suivantes :  
   
-1.  Définit les valeurs des paramètres. Pour plus d’informations, consultez [paramètres d’instruction](../../../odbc/reference/develop-app/statement-parameters.md), plus loin dans cette section.  
+1.  Définit les valeurs de tous les paramètres. Pour plus d’informations, consultez [paramètres des instructions](../../../odbc/reference/develop-app/statement-parameters.md), plus loin dans cette section.  
   
-2.  Appels **SQLExecDirect** et lui passe une chaîne contenant l’instruction SQL.  
+2.  Appelle **SQLExecDirect** et lui transmet une chaîne contenant l’instruction SQL.  
   
-3.  Lorsque **SQLExecDirect** est appelée, le pilote :  
+3.  Lorsque **SQLExecDirect** est appelé, le pilote :  
   
-    -   Modifie l’instruction SQL pour utiliser la grammaire SQL de la source de données sans l’analyse de l’instruction ; Cela inclut en remplaçant les séquences d’échappement abordées dans [les séquences d’échappement dans ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md). L’application peut extraire la forme d’une instruction SQL modifiée en appelant **SQLNativeSql**. Séquences d’échappement ne sont pas remplacés si la valeur de l’attribut d’instruction SQL_ATTR_NOSCAN.  
+    -   Modifie l’instruction SQL pour utiliser la grammaire SQL de la source de données sans analyser l’instruction. Cela comprend le remplacement des séquences d’échappement présentées dans [séquences d’échappement dans ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md). L’application peut récupérer la forme modifiée d’une instruction SQL en appelant **SQLNativeSql**. Les séquences d’échappement ne sont pas remplacées si l’attribut d’instruction SQL_ATTR_NOSCAN est défini.  
   
-    -   Récupère les valeurs de paramètre en cours et les convertit en fonction des besoins. Pour plus d’informations, consultez [paramètres d’instruction](../../../odbc/reference/develop-app/statement-parameters.md), plus loin dans cette section.  
+    -   Récupère les valeurs de paramètres actuelles et les convertit si nécessaire. Pour plus d’informations, consultez [paramètres des instructions](../../../odbc/reference/develop-app/statement-parameters.md), plus loin dans cette section.  
   
-    -   Envoie l’instruction et les valeurs de paramètre converti à la source de données pour l’exécution.  
+    -   Envoie l’instruction et les valeurs de paramètre converties à la source de données pour l’exécution.  
   
-    -   Retourne toutes les erreurs. Ceux-ci incluent le séquencement ou diagnostics d’état telles que SQLSTATE 24000 (état de curseur non valide), des erreurs syntaxiques comme SQLSTATE 42000 (syntaxe ou violation d’accès) et les erreurs sémantiques telles que 42 s 02 SQLSTATE (Base table ou vue introuvable).
+    -   Retourne les erreurs éventuelles. Celles-ci incluent le séquencement ou les diagnostics d’État tels que SQLSTATE 24000 (état de curseur non valide), les erreurs syntaxiques telles que SQLSTATE 42000 (erreur de syntaxe ou violation d’accès) et les erreurs sémantiques telles que SQLSTATE 42S02 (table ou vue de base introuvable).

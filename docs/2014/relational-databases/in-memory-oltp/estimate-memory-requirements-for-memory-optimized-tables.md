@@ -11,14 +11,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cbd8a79bf9d881d2d4c9055531bac2e290f202a4
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811009"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimer les besoins en mémoire des tables mémoire optimisées
-  Que vous soyez en train de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] créer une table optimisée en mémoire ou de migrer une table sur disque existante vers une table optimisée en mémoire, il est important d’avoir une estimation raisonnable des besoins en mémoire de chaque table afin que vous puissiez approvisionner le serveur avec suffisamment de capacité. Cette section explique comment estimer la quantité de mémoire nécessaire pour accueillir les données d'une table mémoire optimisée.  
+  Que vous soyez en train de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] créer une table optimisée en mémoire ou de migrer une table sur disque existante vers une table optimisée en mémoire, il est important d’avoir une estimation raisonnable des besoins en mémoire de chaque table afin que vous puissiez approvisionner le serveur avec suffisamment de mémoire. Cette section explique comment estimer la quantité de mémoire nécessaire pour accueillir les données d'une table mémoire optimisée.  
   
  Si vous envisagez d’effectuer une migration à partir de tables sur disque vers des tables optimisées en mémoire, avant de poursuivre la lecture de cette rubrique, consultez [Déterminer si une table ou une procédure stockée doit être déplacée vers l’OLTP en mémoire](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) pour obtenir des conseils sur les tables les plus judicieuses à faire migrer. Toutes les rubriques sous [Migration vers OLTP en mémoire](migrating-to-in-memory-oltp.md) fournissent des conseils sur la migration à partir de tables sur disque vers des tables optimisées en mémoire.  
   
@@ -117,9 +117,9 @@ SELECT COUNT(DISTINCT [Col2])
   
  **Remarque :** Vous ne pouvez pas modifier la taille du tableau d’index de hachage à la volée. Pour modifier la taille du tableau d'index de hachage, vous devez supprimer la table, modifier la valeur bucket_count et recréer la table.  
   
- **Définition de la taille du tableau d’index de hachage**  
+ **Définition de la taille du tableau d'index de hachage**  
   
- La taille du tableau de hachage est `(bucket_count= <value>)` définie \<par où la valeur > est une valeur entière supérieure à zéro. Si \<la valeur > n’est pas une puissance de 2, le bucket_count réel est arrondi à la puissance suivante la plus proche de 2.  Dans notre exemple de table, (bucket_count = 5 millions), étant donné que 5 millions n’est pas une puissance de 2, le nombre réel de compartiments est arrondi à 8 388 608 (2<sup>23</sup>).  Vous devez utiliser ce nombre, et non pas 5 000 000, lorsque vous calculez la mémoire nécessaire pour le tableau de hachage.  
+ La taille du tableau de hachage est `(bucket_count= <value>)` définie \<par où la valeur> est une valeur entière supérieure à zéro. Si \<la valeur> n’est pas une puissance de 2, le bucket_count réel est arrondi à la puissance de 2 la plus proche suivante.  Dans notre exemple de table, (bucket_count = 5 millions), étant donné que 5 millions n’est pas une puissance de 2, le nombre réel de compartiments est arrondi à 8 388 608 (2<sup>23</sup>).  Vous devez utiliser ce nombre, et non pas 5 000 000, lorsque vous calculez la mémoire nécessaire pour le tableau de hachage.  
   
  Ainsi, dans notre exemple, la mémoire nécessaire pour chaque tableau de hachage est :  
   
@@ -127,22 +127,22 @@ SELECT COUNT(DISTINCT [Col2])
   
  Comme il y a trois index de hachage, la mémoire nécessaire pour les index de hachage est de 3 * 64 Mo = 192 Mo.  
   
- **Mémoire pour les index non cluster**  
+ **Mémoire pour les index non-cluster**  
   
- Les index non cluster sont implémentés en tant que BTrees avec les nœuds internes contenant la valeur d’index et les pointeurs vers les nœuds suivants.  Les nœuds terminaux contiennent la valeur d'index et un pointeur vers la ligne de table en mémoire.  
+ Les index non-cluster sont implémentés en tant que BTrees avec des nœuds internes contenant la valeur des index et les pointeurs vers les nœuds suivants.  Les nœuds terminaux contiennent la valeur d'index et un pointeur vers la ligne de table en mémoire.  
   
- Contrairement aux index de hachage, les index non cluster n’ont pas une taille de compartiment fixe. L'index augmente et se réduit de façon dynamique avec les données.  
+ Contrairement aux index de hachage, les index non-cluster n’ont pas une taille fixe de compartiment. L'index augmente et se réduit de façon dynamique avec les données.  
   
- La mémoire nécessaire pour les index non cluster peut être calculée comme suit:  
+ La mémoire nécessaire pour les index non-cluster peut être calculée de la façon suivante :  
   
 -   **Mémoire allouée aux nœuds non terminaux**   
     Pour une configuration spécifique, la mémoire allouée aux nœuds non terminaux représente un tout petit pourcentage de la mémoire globale utilisée par l'index. Il est si petit qu'il peut être ignoré sans risque.  
   
 -   **Mémoire allouée aux nœuds terminaux**   
-    Les nœuds terminaux ont une ligne pour chaque clé unique dans la table et elle pointe vers les lignes de données avec cette clé unique.  Si vous avez plusieurs lignes avec la même clé (c’est-à-dire que vous avez un index non-cluster non unique), il n’y a qu’une seule ligne dans le nœud terminal d’index qui pointe vers l’une des lignes avec les autres lignes liées entre elles.  Ainsi, la mémoire totale requise peut être estimée par :   
+    Les nœuds terminaux ont une ligne pour chaque clé unique dans la table et elle pointe vers les lignes de données avec cette clé unique.  Si vous avez plusieurs lignes comportant la même clé (c’est-à-dire que vous avez un index non-cluster non unique), il n’y a qu’une seule ligne dans le nœud terminal d’index qui pointe vers l’une des lignes, et les autres lignes sont liées entre elles.  Ainsi, la mémoire totale requise peut être estimée par :   
     memoryForNonClusteredIndex = (pointerSize + sum(keyColumnDataTypeSizes)) * rowsWithUniqueKeys  
   
- Les index non cluster sont préférables lorsqu’ils sont utilisés pour les recherches de plage, comme illustré par la requête suivante:  
+ Les index non-cluster sont préférables lorsqu’ils sont utilisés pour les recherches de plage, comme l’illustre la requête suivante :  
   
 ```sql  
   

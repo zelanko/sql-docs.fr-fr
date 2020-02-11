@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8bd4676eed22cea99808d87016231dbd2ebaf4cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032110"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>Analyser l'utilisation des ressources (Moniteur système)
@@ -69,7 +69,7 @@ ms.locfileid: "63032110"
   
 -   Activité du disque  
   
--   Utilisation du processeur  
+-   Utilisation des processeurs  
   
 -   Utilisation de la mémoire  
   
@@ -80,12 +80,12 @@ ms.locfileid: "63032110"
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
 |Décrit quand utiliser le Moniteur système et présente la surcharge de performances lorsque vous utilisez le Moniteur système.|[Exécuter le Moniteur système](run-system-monitor.md)|  
-|Décrit comment surveiller les compteurs de disque afin de déterminer l'activité des disque et la quantité d'E/S générées par leurs composants SQL Server.|[Surveiller l'utilisation du disque](monitor-disk-usage.md)|  
-|Décrit comment surveiller une instance de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin de déterminer si les taux d'utilisation de l'unité centrale restent dans des limites normales.|[Surveiller l'utilisation de l'UC](monitor-cpu-usage.md)|  
-|Décrit comment surveiller une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour vous assurer que l'utilisation de la mémoire reste dans des limites normales.|[Surveiller l'utilisation de la mémoire](monitor-memory-usage.md)|  
+|Décrit comment surveiller les compteurs de disque afin de déterminer l'activité des disque et la quantité d'E/S générées par leurs composants SQL Server.|[Surveiller l’utilisation du disque](monitor-disk-usage.md)|  
+|Décrit comment surveiller une instance de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin de déterminer si les taux d'utilisation de l'unité centrale restent dans des limites normales.|[Surveiller l’utilisation de l’UC](monitor-cpu-usage.md)|  
+|Décrit comment surveiller une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour vous assurer que l'utilisation de la mémoire reste dans des limites normales.|[Surveiller l’utilisation de la mémoire](monitor-memory-usage.md)|  
 |Décrit comment créer une alerte qui est émise lorsque la valeur seuil d'un compteur du Moniteur système est atteinte.|[Créer une alerte de base de données SQL Server](create-a-sql-server-database-alert.md)|  
 |Décrit comment créer des graphiques, des alertes, des journaux et des rapports pour surveiller une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Créer des graphiques, des alertes, des journaux et des rapports](create-charts-alerts-logs-and-reports.md)|  
 |Répertorie les objets et compteurs utilisés pour analyser l'activité des ordinateurs exécutant une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Utiliser des objets SQL Server](use-sql-server-objects.md)|  
-|Répertorie les objets et les compteurs que le Moniteur système utilise pour analyser l'activité de l'OLTP en mémoire.|[XTP &#40;In-Memory OLTP&#41; les compteurs de performances](../../integration-services/performance/performance-counters.md)|  
+|Répertorie les objets et les compteurs que le Moniteur système utilise pour analyser l'activité de l'OLTP en mémoire.|[Les compteurs de performances de l’OLTP en mémoire &#40;de XTP&#41;](../../integration-services/performance/performance-counters.md)|  
   
   

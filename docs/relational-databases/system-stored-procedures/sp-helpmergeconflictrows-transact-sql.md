@@ -16,18 +16,18 @@ ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b72a821c56f35e1ea7f3542b5746c234012c2da0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68137773"
 ---
-# <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
+# <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Renvoie les lignes de la table de conflits spécifiée. Cette procédure stockée est exécutée sur l'ordinateur qui héberge la table de conflits.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,39 +41,39 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, avec une valeur par défaut **%** . Si la publication est spécifiée, tous les conflits qualifiés par la publication sont renvoyés. Par exemple, si le **MSmerge_conflict_Customers** table a des lignes de conflits pour les **WA** et le **autorité de certification** publications, en passant un nom de publication **autorité de certification**  récupère les conflits qui se rapportent à la **autorité de certification** publication.  
+`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **%** **type sysname**, avec la valeur par défaut. Si la publication est spécifiée, tous les conflits qualifiés par la publication sont renvoyés. Par exemple, si la table **MSmerge_conflict_Customers** contient des lignes conflictuelles pour les publications **wa** et **ca** , le passage d’un nom de publication **ca** récupère les conflits qui se rapportent à la publication de l' **autorité de certification** .  
   
-`[ @conflict_table = ] 'conflict_table'` Est le nom de la table de conflits. *conflict_table* est **sysname**, sans valeur par défaut. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures, les tables de conflits sont nommés en utilisant les noms de format avec **MSmerge_conflict\__publication\_article_** , avec une table pour chaque article publié.  
+`[ @conflict_table = ] 'conflict_table'`Nom de la table de conflits. *conflict_table* est de **type sysname**, sans valeur par défaut. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures, les tables de conflits sont nommées en utilisant les noms de format avec **\_MSmerge_conflict article de publication\_**, avec une table pour chaque article publié.  
   
-`[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @publisher_db = ] 'publisher_db'` Est le nom de la base de données du serveur de publication. *publisher_db* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'`Nom de la base de données du serveur de publication. *publisher_db* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @logical_record_conflicts = ] logical_record_conflicts` Indique si le jeu de résultats contient des informations sur les conflits d’enregistrement logique. *logical_record_conflicts* est **int**, valeur par défaut est 0. **1** signifie que les informations de conflit d’enregistrement logique sont retournées.  
+`[ @logical_record_conflicts = ] logical_record_conflicts`Indique si le jeu de résultats contient des informations sur les conflits d’enregistrements logiques. *logical_record_conflicts* est de **type int**, avec 0 comme valeur par défaut. **1** signifie que des informations sur les conflits d’enregistrements logiques sont retournées.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- **sp_helpmergeconflictrows** renvoie un jeu de résultats composé de la structure de table de base et de ces colonnes supplémentaires.  
+ **sp_helpmergeconflictrows** retourne un jeu de résultats composé de la structure de la table de base et de ces colonnes supplémentaires.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**origin_datasource**|**varchar(255)**|Origine du conflit.|  
-|**conflict_type**|**int**|Code indiquant le type de conflit :<br /><br /> **1** = conflit mise à jour : Le conflit est détecté au niveau des lignes.<br /><br /> **2** = conflit de mise à jour de colonne : Le conflit est détecté au niveau des colonnes.<br /><br /> **3** = conflit de mise à jour Delete Wins : La suppression gagne le conflit.<br /><br /> **4** = conflit de suppression / mise à jour : Le rowguid supprimé qui perd le conflit est enregistré dans cette table.<br /><br /> **5** = échouée de l’insertion du téléchargement : L’insertion provenant de l’abonné n’a pas pu être appliquée sur le serveur de publication.<br /><br /> **6** = échouée de l’insertion du téléchargement : L’insertion provenant du serveur de publication n’a pas pu être appliquée sur l’abonné.<br /><br /> **7** = échouée de la suppression du téléchargement : La suppression appliquée à l’abonné n’a pas pu être téléchargée vers le serveur de publication.<br /><br /> **8** = échouée de la suppression du téléchargement : La suppression appliquée au serveur de publication n’a pas pu être téléchargée à l’abonné.<br /><br /> **9** = mise à jour de téléchargement a échoué : La mise à jour à l’abonné n’a pas pu être appliquée sur le serveur de publication.<br /><br /> **10** = mise à jour de téléchargement a échoué : La mise à jour au serveur de publication n’a pas pu être appliquée à l’abonné.<br /><br /> **12** = suppression / de mise à jour enregistrement logique : L’enregistrement logique supprimé qui perd le conflit est enregistré dans cette table.<br /><br /> **13** = enregistrement logique conflit insertion mise à jour : Insérer un conflits d’enregistrement logique avec une mise à jour.<br /><br /> **14** = conflit de mise à jour / suppression d’enregistrement logique : L’enregistrement logique mis à jour qui perd le conflit est enregistré dans cette table.|  
+|**origin_datasource**|**varchar(255**|Origine du conflit.|  
+|**conflict_type**|**int**|Code indiquant le type de conflit :<br /><br /> **1** = conflit de mise à jour : le conflit est détecté au niveau de la ligne.<br /><br /> **2** = conflit de mise à jour de colonne : conflit détecté au niveau de la colonne.<br /><br /> **3** = conflit de suppression de la mise à jour : la suppression gagne le conflit.<br /><br /> **4** = mise à jour du conflit de suppression WINS : le rowguid supprimé qui perd le conflit est enregistré dans cette table.<br /><br /> **5** = échec de l’insertion du téléchargement : l’insertion à partir de l’abonné n’a pas pu être appliquée au serveur de publication.<br /><br /> **6** = échec du téléchargement de l’insertion : l’insertion à partir du serveur de publication n’a pas pu être appliquée au niveau de l’abonné.<br /><br /> **7** = échec du chargement de la suppression : la suppression sur l’abonné n’a pas pu être téléchargée sur le serveur de publication.<br /><br /> **8** = échec de la suppression du téléchargement : la suppression sur le serveur de publication n’a pas pu être téléchargée sur l’abonné.<br /><br /> **9** = échec de la mise à jour du téléchargement : la mise à jour sur l’abonné n’a pas pu être appliquée au serveur de publication.<br /><br /> **10** = échec de la mise à jour du téléchargement : la mise à jour sur le serveur de publication n’a pas pu être appliquée à l’abonné.<br /><br /> **12** = suppression WINS des enregistrements logiques : l’enregistrement logique supprimé qui perd le conflit est enregistré dans cette table.<br /><br /> **13** = conflit d’enregistrements logiques insertion d’une mise à jour : l’insertion sur un enregistrement logique est en conflit avec une mise à jour.<br /><br /> **14** = conflit de suppression de la mise à jour WINS de l’enregistrement logique : l’enregistrement logique mis à jour qui perd le conflit est enregistré dans cette table.|  
 |**reason_code**|**int**|Code d'erreur pouvant dépendre du contexte.|  
-|**reason_text**|**varchar(720)**|Description de l'erreur qui peut dépendre du contexte.|  
+|**reason_text**|**varchar (720)**|Description de l'erreur qui peut dépendre du contexte.|  
 |**pubid**|**uniqueidentifier**|Identificateur de publication.|  
-|**MSrepl_create_time**|**datetime**|Moment où l'information sur les conflits a été ajoutée.|  
+|**MSrepl_create_time**|**DATETIME**|Moment où l'information sur les conflits a été ajoutée.|  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
  **sp_helpmergeconflictrows** est utilisé dans la réplication de fusion.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe le **db_owner** rôle de base de données fixe et le **replmonitor** du rôle dans la base de données de distribution peuvent exécuter **sp_helpmergeconflictrows**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** , du rôle de base de données fixe **db_owner** et du rôle **replmonitor** dans la base de données de distribution peuvent exécuter **sp_helpmergeconflictrows**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher les informations relatives aux conflits pour les Publications de fusion &#40;programmation Transact-SQL&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)   
+ [Afficher les informations de conflit pour les publications de fusion &#40;la programmation Transact-SQL de la réplication&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)   
  [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

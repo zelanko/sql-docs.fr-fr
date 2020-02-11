@@ -24,10 +24,10 @@ ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 98e784be4bbe4e939ed4413a33d6a3ed36872558
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902809"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67902809"
 
   Crée un objet qui envoie des informations sur un événement de base de données ou de serveur à un service Service Broker. Les notifications d'événements sont créées uniquement au moyen d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -132,7 +132,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 >   
 >  Pour copier et exécuter ces exemples, vous devez remplacer ce GUID par un GUID de votre ordinateur et de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Comme expliqué dans la section Arguments ci-dessus, vous pouvez acquérir **'** _broker\_instance\_specifier_ **'** en interrogeant la colonne service_broker_guid de la vue de catalogue sys.databases.  
   
-### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. Création d'une notification d'événement dont l'étendue correspond au serveur  
+### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>R. Création d'une notification d'événement dont l'étendue correspond au serveur  
  L'exemple suivant crée les objets nécessaires pour configurer un service cible à l'aide de [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Le service cible fait référence au type de message et de contrat du service à l'origine de l'initialisation spécifique aux notifications d'événements La notification d'événement est ensuite créée sur le service cible qui envoie une notification chaque fois qu'un événement de trace `Object_Created` se produit sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```sql  

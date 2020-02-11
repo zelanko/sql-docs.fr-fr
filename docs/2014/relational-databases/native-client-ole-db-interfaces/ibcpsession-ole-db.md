@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 142f6ac339e437877c485588333fabb04e0bd66b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63241350"
 ---
 # <a name="ibcpsession-ole-db"></a>IBCPSession (OLE DB)
@@ -29,22 +29,22 @@ ms.locfileid: "63241350"
 > [!NOTE]  
 >  Le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client prend en charge les opérations de copie en bloc basées sur mémoire par le biais de l'interface [IRowsetFastLoad](irowsetfastload-ole-db.md) .  
   
- Pour plus d’informations sur l’utilisation de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client pour les opérations de copie en bloc, consultez [effectuant des opérations de copie en bloc](../native-client/features/performing-bulk-copy-operations.md).  
+ Pour plus d’informations sur l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisation du fournisseur de OLE DB Native Client pour les opérations de copie en bloc, consultez [exécution d’opérations de copie en bloc](../native-client/features/performing-bulk-copy-operations.md).  
   
- Pour obtenir un exemple montrant comment utiliser le **IBCPSession** l’interface, consultez [IBCPSession::BCPDone &#40;OLE DB&#41;](ibcpsession-bcpdone-ole-db.md).  
+ Pour obtenir un exemple illustrant l’utilisation de l’interface **IBCPSession** , consultez [IBCPSession :: BCPDone &#40;OLE DB&#41;](ibcpsession-bcpdone-ole-db.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
 |Méthode|Description|  
 |------------|-----------------|  
-|[IBCPSession::BCPColFmt &#40;OLE DB&#41;](ibcpsession-bcpcolfmt-ole-db.md)|Crée une liaison entre des variables de programme et des colonnes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|[IBCPSession::BCPColumns &#40;OLE DB&#41;](ibcpsession-bcpcolumns-ole-db.md)|Définit le nombre de champs qui doivent être liés aux colonnes dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|[IBCPSession::BCPControl &#40;OLE DB&#41;](ibcpsession-bcpcontrol-ole-db.md)|Définit les options pour une opération de copie en bloc.|  
-|[IBCPSession::BCPDone &#40;OLE DB&#41;](ibcpsession-bcpdone-ole-db.md)|Valide les lignes restantes à envoyer à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[IBCPSession::BCPExec &#40;OLE DB&#41;](ibcpsession-bcpexec-ole-db.md)|Effectue l'opération de copie en bloc.|  
-|[IBCPSession::BCPInit &#40;OLE DB&#41;](ibcpsession-bcpinit-ole-db.md)|Initialise la structure de copie en bloc, effectue une vérification des erreurs, vérifie que les données et les noms de fichiers de format sont corrects, puis les ouvre.|  
-|[IBCPSession::BCPReadFmt &#40;OLE DB&#41;](ibcpsession-bcpreadfmt-ole-db.md)|Lit les informations de format pour chaque colonne à partir du fichier de format.|  
-|[IBCPSession::BCPWriteFmt &#40;OLE DB&#41;](ibcpsession-bcpwritefmt-ole-db.md)|Écrit les informations de format pour chaque colonne dans le fichier de format.|  
+|[IBCPSession :: BCPColFmt &#40;OLE DB&#41;](ibcpsession-bcpcolfmt-ole-db.md)|Crée une liaison entre des variables de programme et des colonnes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[IBCPSession :: BCPColumns &#40;OLE DB&#41;](ibcpsession-bcpcolumns-ole-db.md)|Définit le nombre de champs qui doivent être liés aux colonnes dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[IBCPSession :: BCPControl &#40;OLE DB&#41;](ibcpsession-bcpcontrol-ole-db.md)|Définit les options pour une opération de copie en bloc.|  
+|[IBCPSession :: BCPDone &#40;OLE DB&#41;](ibcpsession-bcpdone-ole-db.md)|Valide les lignes restantes à envoyer à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[IBCPSession :: BCPExec &#40;OLE DB&#41;](ibcpsession-bcpexec-ole-db.md)|Effectue l'opération de copie en bloc.|  
+|[IBCPSession :: BCPInit &#40;OLE DB&#41;](ibcpsession-bcpinit-ole-db.md)|Initialise la structure de copie en bloc, effectue une vérification des erreurs, vérifie que les données et les noms de fichiers de format sont corrects, puis les ouvre.|  
+|[IBCPSession :: BCPReadFmt &#40;OLE DB&#41;](ibcpsession-bcpreadfmt-ole-db.md)|Lit les informations de format pour chaque colonne à partir du fichier de format.|  
+|[IBCPSession :: BCPWriteFmt &#40;OLE DB&#41;](ibcpsession-bcpwritefmt-ole-db.md)|Écrit les informations de format pour chaque colonne dans le fichier de format.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Interfaces &#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)  

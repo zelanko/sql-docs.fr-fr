@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5aebada2f962e2b90f96a9822dbbe76e796f23e5
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811046"
 ---
 # <a name="understanding-the-database-schemas"></a>Présentation des schémas de base de données
@@ -46,7 +46,7 @@ ms.locfileid: "68811046"
  Colonnes  
  L'Assistant génère une colonne pour les liaisons associées à chaque attribut de la dimension sur laquelle la table de dimension est basée, par exemple les liaisons pour les propriétés `KeyColumns`, `NameColumn`, `ValueColumn`, `CustomRollupColumn`, `CustomRollupPropertiesColumn` et `UnaryOperatorColumn` de chaque attribut.  
   
- Relationships  
+ Relations  
  L'Assistant génère une relation entre la colonne de chaque attribut parent et la clé primaire de la table de dimension.  
   
  L'Assistant crée également, s'il y a lieu, une relation à la clé primaire de chaque table de dimension supplémentaire définie comme dimension référencée du cube.  
@@ -68,7 +68,7 @@ ms.locfileid: "68811046"
   
  L'Assistant génère également une colonne pour chaque colonne d'attribut de granularité de chaque relation de dimension régulière du groupe de mesures et, s'il y a lieu, une ou plusieurs colonnes pour les liaisons associées à chaque attribut d'une dimension qui entretient une relation de dimension de fait avec le groupe de mesures sur lequel cette table est basée.  
   
- Relationships  
+ Relations  
  L'Assistant génère une relation pour chaque relation de dimension régulière de la table de faits à l'attribut de granularité de la table de la dimension. Si la granularité est basée sur l'attribut clé de la table de dimension, la relation est créée dans la base de données et dans la vue de source de données. Si la granularité est basée sur un autre attribut, la relation n'est créée que dans la vue de source de données.  
   
  Si vous avez choisi de générer des index dans l’Assistant, un index non-cluster est généré pour chacune de ces colonnes de relation.  
@@ -82,7 +82,7 @@ ms.locfileid: "68811046"
  L'Assistant génère une table séparée pour stocker les valeurs traduites de toute propriété du groupe de mesures qui nécessite une colonne de traduction. L'Assistant crée également une colonne séparée pour chacune des langues requises.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>Conversion de type de données et longueurs par défaut  
- L’Assistant génération de schéma ignore les types de données dans tous les cas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’exception des colonnes qui utilisent le `wchar` type de données. Le type de données `wchar` se traduit directement en type de données `nvarchar`. Toutefois, si la longueur spécifiée d'une colonne utilisant le type `wchar` dépasse 4 000 octets, l'Assistant Génération de schéma produit une erreur.  
+ L’Assistant génération de schéma ignore les types de données dans tous les cas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` à l’exception des colonnes qui utilisent le type de données. Le type de données `wchar` se traduit directement en type de données `nvarchar`. Toutefois, si la longueur spécifiée d'une colonne utilisant le type `wchar` dépasse 4 000 octets, l'Assistant Génération de schéma produit une erreur.  
   
  Le tableau suivant indique la longueur par défaut de la colonne si un élément de données, par exemple la liaison d'un attribut, n'a pas de longueur spécifiée.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "68811046"
 |UnaryOperatorColumn|1|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Présentation de la génération incrémentielle](understanding-incremental-generation.md)   
+ [Fonctionnement de la génération incrémentielle](understanding-incremental-generation.md)   
  [Gérer des modifications dans les vues de source de données et les sources de données](manage-changes-to-data-source-views-and-data-sources.md)  
   
   

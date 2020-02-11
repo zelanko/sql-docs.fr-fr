@@ -1,5 +1,5 @@
 ---
-title: Présentation du contrôle de source | Microsoft Docs
+title: Notions de base sur le contrôle de code source | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bce3bd6862e612a8cefa35d1c981d608bf2c341c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62842983"
 ---
 # <a name="source-control-basics"></a>Présentation du contrôle de code source
@@ -52,8 +52,8 @@ ms.locfileid: "62842983"
 |||  
 |-|-|  
 |**Tâche**|**Rubrique**|  
-|Définir les options de contrôle de code Source|[Définir les options du contrôle de code source](../../2014/database-engine/set-source-control-options.md)|  
-|Modifier le contrôle de code source connexions|[Modifier les connexions du contrôle de code source](../../2014/database-engine/change-source-control-connections.md)|  
-|Exclure des fichiers de contrôle de code source|[Exclure des fichiers du contrôle de code source](../../2014/database-engine/exclude-files-from-source-control.md)|  
+|Définir les options de contrôle de code source|[Définir les options du contrôle de code source](../../2014/database-engine/set-source-control-options.md)|  
+|Modifier les connexions du contrôle de code source|[Modifier les connexions du contrôle de code source](../../2014/database-engine/change-source-control-connections.md)|  
+|Exclure des fichiers du contrôle de code source|[Exclure des fichiers du contrôle de code source](../../2014/database-engine/exclude-files-from-source-control.md)|  
   
   

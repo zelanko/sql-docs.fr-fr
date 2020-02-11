@@ -21,14 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127052"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Raccourcis clavier dans SQL Server Management Studio
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] propose deux schémas de clavier. Par défaut, il utilise le schéma [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] avec les raccourcis clavier basés sur [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offre également un schéma de clavier semblable au schéma standard de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Pour modifier le schéma de clavier ou ajouter d'autres raccourcis clavier, cliquez dans le menu **Outils** sur **Options**. Sélectionnez le schéma de clavier désiré dans la page **Environnement**, **Clavier** .  
+  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] propose deux schémas de clavier. Par défaut, il utilise le [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] schéma, avec les raccourcis clavier basés [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sur 2010. 
+  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offre également un schéma de clavier semblable au schéma standard de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Pour modifier le schéma de clavier ou ajouter d'autres raccourcis clavier, cliquez dans le menu **Outils** sur **Options**. Sélectionnez le schéma de clavier désiré dans la page **Environnement**, **Clavier** .  
   
 > [!NOTE]  
 >  Pour afficher uniquement les titres, cliquez sur **Réduire tout** en haut de cette page.  
@@ -42,21 +44,21 @@ ms.locfileid: "63127052"
 |Afficher le menu contextuel|Maj+F10|Maj+F10|  
 |Afficher la boîte de dialogue **Nouveau fichier** pour créer un fichier|Ctrl+N|Ctrl+N|  
 |Afficher la boîte de dialogue **Nouveau projet** pour créer un projet|Ctrl+Maj+N|Ctrl+Maj+N|  
-|Afficher la boîte de dialogue **Ouvrir un fichier** pour ouvrir un fichier existant|Ctrl+O<br /><br /> ou Gestionnaire de configuration<br /><br /> CTRL+SHIFT+G|Ctrl+O|  
-|Afficher la boîte de dialogue **Ouvrir un projet** pour ouvrir un projet existant|Ctrl+Maj+O|Ctrl+Maj+O|  
+|Afficher la boîte de dialogue **Ouvrir un fichier** pour ouvrir un fichier existant|Ctrl+O<br /><br /> or<br /><br /> CTRL+SHIFT+G|Ctrl+O|  
+|Afficher la boîte de dialogue **Ouvrir un projet** pour ouvrir un projet existant|Ctrl+Maj+ O|Ctrl+Maj+ O|  
 |Afficher la boîte de dialogue **Ajouter un nouvel élément** pour ajouter un nouveau fichier au projet actif|Ctrl+Maj+A|Ctrl+Maj+A|  
 |Afficher la boîte de dialogue **Ajouter un élément existant** pour ajouter un fichier existant au projet actif|Maj+Alt+A|Maj+Alt+A|  
 |Afficher le Concepteur de requêtes|Ctrl+Maj+Q|Ctrl+Maj+Q|  
-|Annuler l'action en fermant un menu ou une boîte de dialogue|Échap|Échap|  
+|Annuler l'action en fermant un menu ou une boîte de dialogue|ÉCHAP|ÉCHAP|  
   
 ## <a name="windows-management-and-toolbar-keyboard-shortcuts"></a>Raccourcis clavier des barres d'outils et pour la gestion des fenêtres  
   
 |Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Fermer la fenêtre enfant MDI active|Ctrl+F4|Ctrl+F4|  
-|Fermer un menu ou une boîte de dialogue, annuler une opération en cours, ou afficher la fenêtre de document actuelle|Échap|Échap|  
-|Imprimer|Ctrl+P|Ctrl+P|  
-|Quitter|Alt+F4|Alt+F4|  
+|Fermer un menu ou une boîte de dialogue, annuler une opération en cours, ou afficher la fenêtre de document actuelle|ÉCHAP|ÉCHAP|  
+|Print|Ctrl+P|Ctrl+P|  
+|Quitter|ALT+F4|ALT+F4|  
 |Basculer vers le mode plein écran|Maj+Alt+Entrée|Maj+Alt+Entrée|  
 |Fermer la fenêtre Outil active|Maj+Échap|Maj+Échap|  
 |Afficher les fenêtres enfants MDI suivantes|Ctrl+F6|Ctrl+Tab|  
@@ -65,10 +67,10 @@ ms.locfileid: "63127052"
 |Déplace le point d'insertion sur la barre déroulante située en haut de l'éditeur de code lorsque l'éditeur est dans la vue de code ou dans la vue de code de serveur|Ctrl+F2|Pas d'équivalent|  
 |Atteindre la barre d'outils de la fenêtre Outil active|Maj+Alt|Maj+Alt|  
 |Afficher le navigateur IDE avec la première fenêtre d'outil sélectionnée|ALT+F7|Pas d'équivalent|  
-|Atteindre la fenêtre Outil suivante|Alt+F6<br /><br /> ou Gestionnaire de configuration<br /><br /> F6 dans l'éditeur de requête du [!INCLUDE[ssDE](../includes/ssde-md.md)]|Alt+F6|  
+|Atteindre la fenêtre Outil suivante|Alt+F6<br /><br /> or<br /><br /> F6 dans l'éditeur de requête du [!INCLUDE[ssDE](../includes/ssde-md.md)]|Alt+F6|  
 |Atteindre la fenêtre Outil précédente|Maj+Alt+F7|Maj+Alt+F7|  
 |Se placer dans le volet suivant d'un document comportant plusieurs volets d'un seul document|F6|F6|  
-|Atteindre la fenêtre précédemment sélectionnée|Maj+Alt+F6<br /><br /> ou Gestionnaire de configuration<br /><br /> Maj+F6 dans l'éditeur de requête du [!INCLUDE[ssDE](../includes/ssde-md.md)]|Maj+Alt+F6|  
+|Atteindre la fenêtre précédemment sélectionnée|Maj+Alt+F6<br /><br /> or<br /><br /> Maj+F6 dans l'éditeur de requête du [!INCLUDE[ssDE](../includes/ssde-md.md)]|Maj+Alt+F6|  
 |Déplacement vers le volet précédent d'une vue comportant plusieurs volets d'un seul document|Maj+F6|F6|  
 |Afficher le menu d'ancrage|Alt+Signe moins (-)|Pas d'équivalent|  
 |Afficher une liste contextuelel de toutes les fenêtres actives|Ctrl+Alt+Flèche bas|Pas d'équivalent|  
@@ -80,14 +82,14 @@ ms.locfileid: "63127052"
 |Afficher la fenêtre Résumé|F7|F7|  
 |Afficher la fenêtre Propriétés|F4|F4|  
 |Afficher la fenêtre **Sortie**|Ctrl+Alt+O|Pas d'équivalent|  
-|Afficher la fenêtre **Liste des tâches**|CTRL+\\, T<br /><br /> ou Gestionnaire de configuration<br /><br /> CTRL+\\, CTRL+T|Ctrl+Alt+K|  
+|Afficher la fenêtre **Liste des tâches**|CTRL+\\, T<br /><br /> or<br /><br /> CTRL+\\, CTRL+T|Ctrl+Alt+K|  
 |Basculer entre le mode Liste Détails de l'Explorateur d'objets et le volet de propriétés Détails de l'Explorateur d'objets.|F6|F6|  
 |Contrôler la barre de fractionnement qui sépare le mode Liste Détails de l'Explorateur d'objets et le volet de propriétés Détails de l'Explorateur d'objets pour ajuster la taille du volet d'informations.|TAB, puis flèche haut ou flèche bas|TAB, puis flèche haut ou flèche bas|  
 |Afficher la boîte à outils|Ctrl+Alt+X|Ctrl+Alt+X|  
 |Afficher la fenêtre Signets|CTRL+K, CTRL+W|CTRL+K, CTRL+W|  
 |Afficher la fenêtre Explorateur|Ctrl+Alt+R|Ctrl+Alt+R|  
 |Afficher un menu de balise active des commandes communes pour les contrôles de serveur Web dans le concepteur HTML|Maj+Alt+F10|Pas d'équivalent|  
-|Afficher la fenêtre Liste d'erreurs (éditeur[!INCLUDE[tsql](../includes/tsql-md.md)] uniquement)|CRTL+\\, CTRL+E<br /><br /> ou Gestionnaire de configuration<br /><br /> CTRL+\\, E|CRTL+\\, CTRL+E|  
+|Afficher la fenêtre Liste d'erreurs (éditeur[!INCLUDE[tsql](../includes/tsql-md.md)] uniquement)|CRTL+\\, CTRL+E<br /><br /> or<br /><br /> CTRL+\\, E|CRTL+\\, CTRL+E|  
 |Aller à l'entrée suivante dans la fenêtre Liste d'erreurs (l'éditeur[!INCLUDE[tsql](../includes/tsql-md.md)] uniquement)|Ctrl+Maj+F12|Ctrl+Maj+F12|  
 |Afficher la page précédente dans l'historique d'affichage. Disponible uniquement dans la fenêtre du navigateur Web|Alt+Flèche gauche|Pas d'équivalent|  
 |Afficher la page suivante de l'historique d'affichage. Disponible uniquement dans la fenêtre du navigateur Web|Alt+Flèche droite|Pas d'équivalent|  
@@ -97,7 +99,7 @@ ms.locfileid: "63127052"
 |Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Déplacer le curseur vers la gauche|Gauche|Gauche|  
-|Déplacer le curseur vers la droite|Flèche droite|Flèche droite|  
+|Déplacer le curseur vers la droite|FLÈCHE DROITE|FLÈCHE DROITE|  
 |Déplacer le curseur vers le haut|Flèche haut|Flèche haut|  
 |Déplacer le curseur vers le bas|Bas|Bas|  
 |Placer le curseur au début de la ligne|Origine|Origine|  
@@ -119,10 +121,10 @@ ms.locfileid: "63127052"
 |Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Sélectionner le texte à partir du curseur et jusqu'au début du document|Ctrl+Maj+Origine|Ctrl+Maj+Origine|  
-|Sélectionner le texte à partir du curseur et jusqu'à la fin du document|CTRL+MAJ+FIN|CTRL+MAJ+FIN|  
-|Sélectionner le texte à partir du curseur et jusqu'au début de la ligne active|MAJ+ORIGNE|MAJ+ORIGNE|  
+|Sélectionner le texte à partir du curseur et jusqu'à la fin du document|Ctrl+Maj+Fin|Ctrl+Maj+Fin|  
+|Sélectionner le texte à partir du curseur et jusqu'au début de la ligne active|Maj+Origine|Maj+Origine|  
 |Déplace le curseur au début de la ligne en cours et étend la sélection des colonnes|Maj+Alt+Origine|Pas d'équivalent|  
-|Sélectionner le texte à partir du curseur et jusqu'à la fin de la ligne active|MAJ+FIN|MAJ+FIN|  
+|Sélectionner le texte à partir du curseur et jusqu'à la fin de la ligne active|Maj+Fin|Maj+Fin|  
 |Déplace le curseur à la fin de la ligne et étend la sélection des colonnes.|Maj+Alt+Fin|Pas d'équivalent|  
 |Sélectionner le texte ligne par ligne vers le bas à partir du curseur|Maj+Flèche bas|Maj+Flèche bas|  
 |Déplace le curseur d'une ligne et étend la sélection des colonnes|Maj+Ctrl+Maj+Suppr||  
@@ -180,13 +182,13 @@ ms.locfileid: "63127052"
 |Basculer vers l'affichage plein écran|Maj+Alt+Entrée|Maj+Alt+Entrée|  
 |Faire défiler le texte d'une ligne vers le haut|Ctrl+Haut|Ctrl+Haut|  
 |Faire défiler le texte d'une ligne vers le bas|Ctrl+Flèche bas|Ctrl+Flèche bas|  
-|Annuler la dernière modification|Ctrl+Z<br /><br /> ou Gestionnaire de configuration<br /><br /> Alt+Retour arrière|Ctrl+Z|  
-|Rétablir la modification précédemment annulée|Ctrl+Maj+Z<br /><br /> ou Gestionnaire de configuration<br /><br /> Ctrl+Y<br /><br /> ou Gestionnaire de configuration<br /><br /> Alt+Maj+Ret. arr|Ctrl+Maj+Z<br /><br /> ou Gestionnaire de configuration<br /><br /> Ctrl+Y<br /><br /> ou Gestionnaire de configuration<br /><br /> Alt+Maj+Ret. arr|  
+|Annuler la dernière modification|Ctrl+Z<br /><br /> or<br /><br /> Alt+Retour arrière|Ctrl+Z|  
+|Rétablir la modification précédemment annulée|Ctrl+Maj+Z<br /><br /> or<br /><br /> Ctrl+Y<br /><br /> or<br /><br /> Alt+Maj+Ret. arr|Ctrl+Maj+Z<br /><br /> or<br /><br /> Ctrl+Y<br /><br /> or<br /><br /> Alt+Maj+Ret. arr|  
 |Enregistrer l'élément sélectionné|Ctrl+S|Ctrl+S|  
 |Enregistrer tout|Ctrl+Maj+S|Ctrl+Maj+S|  
-|Fermer|Ctrl+F4|Ctrl+F4|  
-|Imprimer|Ctrl+P|Ctrl+P|  
-|Quitter|Alt+F4|Alt+F4|  
+|fermez|Ctrl+F4|Ctrl+F4|  
+|Print|Ctrl+P|Ctrl+P|  
+|Quitter|ALT+F4|ALT+F4|  
 |Ouvrir le fichier actuel dans un navigateur|Ctrl+Maj+W|Pas d'équivalent|  
 |Supprimer tout le texte du fichier actif|Ctrl+Maj+Suppr|Ctrl+Maj+Suppr|  
 |Afficher la boîte de dialogue **Atteindre la ligne**|Ctrl+G|Ctrl+G|  
@@ -200,20 +202,20 @@ ms.locfileid: "63127052"
 |Ouvrir une nouvelle requête avec la connexion active|Ctrl+N|Ctrl+N|  
 |Ouvrir une base de données dans l'Explorateur d'objets|Alt+F8|Alt+F8|  
 |Spécifier des valeurs pour les paramètres de modèles|Ctrl+Maj+M|Ctrl+Maj+M|  
-|Exécuter la partie sélectionnée de l'éditeur de requête ou tout l'éditeur de requête si aucune partie n'est sélectionnée|F5<br /><br /> ou Gestionnaire de configuration<br /><br /> Ctrl+Maj+E|F5<br /><br /> ou Gestionnaire de configuration<br /><br /> Ctrl+E<br /><br /> ou Gestionnaire de configuration<br /><br /> Alt+X|  
+|Exécuter la partie sélectionnée de l'éditeur de requête ou tout l'éditeur de requête si aucune partie n'est sélectionnée|F5<br /><br /> or<br /><br /> Ctrl+Maj+E|F5<br /><br /> or<br /><br /> Ctrl+E<br /><br /> or<br /><br /> Alt+X|  
 |Analyser la partie sélectionnée de l'éditeur de requête ou tout l'éditeur de requête si aucune partie n'est sélectionnée|Ctrl+F5|Ctrl+F5|  
 |Afficher le plan d'exécution estimé|Ctrl+Maj+Alt+L|Ctrl+L|  
 |Annuler l'exécution de la requête|Alt+Pause|Alt+Pause|  
 |Inclure le plan d'exécution actuel dans le résultat de la requête|Ctrl+Maj+Alt+M|Ctrl+M|  
 |Afficher les résultats dans une grille|Ctrl+Maj+D|Ctrl+D|  
-|Afficher les résultats dans un format texte|Ctrl+T|Ctrl+T|  
+|Afficher les résultats dans un format texte|CTRL+T|CTRL+T|  
 |Afficher les résultats dans un fichier|Ctrl+Maj+T|Ctrl+Maj+F|  
 |Afficher ou masquer la fenêtre Résultats de la requête|Ctrl+R|Ctrl+R|  
 |Afficher le volet des résultats de la requête|Ctrl+Maj+Alt+R||  
 |Passer de la fenêtre Requête à la fenêtre Résultats|F6|F6|  
 |Copier la grille et les en-têtes des résultats dans le presse-papiers|Ctrl+Maj+C|Pas d'équivalent|  
 |Passer à la fenêtre active suivante dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]|Alt+F6|Alt+F6|  
-|Ouvrir [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|Ctrl+Alt+P|Ctrl+Alt+P|  
+|Ouvrez [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|Ctrl+Alt+P|Ctrl+Alt+P|  
 |Afficher la boîte de dialogue du concepteur de requêtes de la fenêtre de l'éditeur de requête|Ctrl+Maj+Q|Pas d'équivalent|  
 |Exécuter la procédure stockée système `sp_help`|Alt+F1|Alt+F1|  
 |Exécuter la procédure stockée système `sp_who`|Ctrl+1|Ctrl+1|  
@@ -233,9 +235,9 @@ ms.locfileid: "63127052"
 |Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Insérer une nouvelle ligne|Entrée ou Maj+Entrée|Entrée ou Maj+Entrée|  
-|Permuter les caractères situés de part et d'autre du curseur (ne s'applique pas à l'éditeur SQL)|Ctrl+T|Ctrl+T|  
+|Permuter les caractères situés de part et d'autre du curseur (ne s'applique pas à l'éditeur SQL)|CTRL+T|CTRL+T|  
 |Supprimer un caractère situé à droite du curseur|Suppression|Suppression|  
-|Supprimer le caractère situé à gauche du curseur|Ret.arr<br /><br /> ou Gestionnaire de configuration<br /><br /> Maj+<br /><br /> Ret.arr|Ret.arr<br /><br /> ou Gestionnaire de configuration<br /><br /> Maj+<br /><br /> Ret.arr|  
+|Supprimer le caractère situé à gauche du curseur|Ret.arr<br /><br /> or<br /><br /> Maj+<br /><br /> Ret.arr|Ret.arr<br /><br /> or<br /><br /> Maj+<br /><br /> Ret.arr|  
 |Supprimer l'espace blanc dans la sélection, ou supprimer l'espace blanc en regard du curseur si aucune sélection|Ctrl+K, C|Pas d'équivalent|  
 |Insérer le nombre d'espaces configuré pour l'éditeur|Tab|Tab|  
 |Insérer une ligne vierge au-dessus du curseur|Ctrl+Entrée|Ctrl+Entrée|  
@@ -278,7 +280,7 @@ ms.locfileid: "63127052"
 |Définir l'instruction suivante|Ctrl+3 0|Pas d'équivalent|  
 |Afficher l'instruction suivante|Alt+NUM|Pas d'équivalent|  
 |Implémenter la commande **Exécuter jusqu'au curseur**|Ctrl+F10|Ctrl+F10|  
-|Afficher la boîte de dialogue **Espion express**|Ctrl+Alt+Q<br /><br /> ou Gestionnaire de configuration<br /><br /> Maj+F9|Ctrl+Alt+Q|  
+|Afficher la boîte de dialogue **Espion express**|Ctrl+Alt+Q<br /><br /> or<br /><br /> Maj+F9|Ctrl+Alt+Q|  
 |Basculer le point d'arrêt|F9|F9|  
 |Activer le point d'arrêt|Ctrl+F9|Pas d'équivalent|  
 |Supprimer un point d'arrêt Disponible uniquement dans la fenêtre **Points d'arrêt**|Alt+F9, D|Pas d'équivalent|  
@@ -303,8 +305,8 @@ ms.locfileid: "63127052"
   
 |Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|Répertorier les membres|Ctrl+J|Ctrl+ESPACE<br /><br /> ou Gestionnaire de configuration<br /><br /> Ctrl+J|  
-|Compléter le mot|Ctrl+ESPACE<br /><br /> ou Gestionnaire de configuration<br /><br /> Alt+Flèche droite|Alt+Flèche droite|  
+|Répertorier les membres|CTRL+J|Ctrl+ESPACE<br /><br /> or<br /><br /> CTRL+J|  
+|Compléter le mot|Ctrl+ESPACE<br /><br /> or<br /><br /> Alt+Flèche droite|Alt+Flèche droite|  
 |Afficher des informations rapides|Ctrl+K, Ctrl+I|Pas d'équivalent|  
 |Afficher les informations de paramètre|Ctrl+Maj+ESPACE|Ctrl+Maj+ESPACE|  
 |Copier le paramètre conseillé|Ctrl+Maj+Alt+C|Pas d'équivalent|  
@@ -327,7 +329,7 @@ ms.locfileid: "63127052"
 |Se placer dans le volet précédent d'un document comportant plusieurs volets de fractionnement|Maj+F6|Maj+F6|  
 |Afficher la page précédente dans l'historique d'affichage|Alt+Gauche|Alt+Gauche|  
 |Afficher la page suivante de l'historique d'affichage|Alt+Flèche droite|Alt+Flèche droite|  
-|Ferme un menu ou une boîte de dialogue, annule une opération en cours, ou affiche la fenêtre de document actuelle|Échap|Pas d'équivalent|  
+|Ferme un menu ou une boîte de dialogue, annule une opération en cours, ou affiche la fenêtre de document actuelle|ÉCHAP|Pas d'équivalent|  
   
 ## <a name="solution-explorer-keyboard-shortcuts"></a>Raccourcis clavier de l'Explorateur de solutions  
   
@@ -343,7 +345,7 @@ ms.locfileid: "63127052"
   
 |Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|Aide|F1<br /><br /> ou Gestionnaire de configuration<br /><br /> Maj+F1|F1|  
+|Aide|F1<br /><br /> or<br /><br /> Maj+F1|F1|  
 |Afficher la Documentation en ligne de SQL Server|Ctrl+F1|Pas d'équivalent|  
 |Ouvrir le gestionnaire de bibliothèque d'aide|Ctrl+Alt+F1|Pas d'équivalent|  
 |Afficher la page Web du centre de ressources SQL Server|Ctrl+Alt+F2|Pas d'équivalent|  
@@ -375,17 +377,17 @@ ms.locfileid: "63127052"
 |Arrêter la recherche **Rechercher dans les fichiers**|Alt+F3, S|Alt+F3, S|  
 |Activer ou désactiver l'option **Mot entier** dans **Rechercher et remplacer**|Alt+F3, W|Alt+F3, W|  
 |Activer ou désactiver l'option **Caractère générique** dans **Rechercher et remplacer**|Alt+F3, P|Alt+F3, P|  
-|Placer le signe d'insertion dans la zone de recherche/commande de la barre d'outils standard|Ctrl+/|Pas d'équivalent|  
+|Placer le signe d'insertion dans la zone de recherche/commande de la barre d'outils standard|CTRL + /|Pas d'équivalent|  
   
 ## <a name="cut-and-paste-keyboard-shortcuts"></a>Raccourcis clavier pour copier et coller  
   
 |Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|Couper (supprimer l'élément actuellement sélectionné et le placer dans le Presse-papiers)|Ctrl+X<br /><br /> ou Gestionnaire de configuration<br /><br /> SHIFTRLT+DELETE|Ctrl+X<br /><br /> ou Gestionnaire de configuration<br /><br /> Maj+Suppr|  
-|Coupe toutes les lignes sélectionnées, ou la ligne active si aucune ligne n'est sélectionnée.|Ctrl+L<br /><br /> ou Gestionnaire de configuration<br /><br /> Ctrl+Maj+L|Pas d'équivalent|  
-|Copier dans le Presse-papiers|CTRL+C<br /><br /> ou Gestionnaire de configuration<br /><br /> Ctrl+Insert|CTRL+C<br /><br /> ou Gestionnaire de configuration<br /><br /> Ctrl+Insert|  
-|Coller à partir du Presse-papiers au point d'insertion|Ctrl+V<br /><br /> ou Gestionnaire de configuration<br /><br /> Maj+Insert|Ctrl+V<br /><br /> ou Gestionnaire de configuration<br /><br /> Maj+Insert|  
-|Colle un élément de la boucle du presse-papiers au point d'insertion et sélectionne automatiquement l'élément collé|Ctrl+Maj+V<br /><br /> ou Gestionnaire de configuration<br /><br /> Ctrl+enseSHIFT+Insert|Pas d'équivalent|  
+|Couper (supprimer l'élément actuellement sélectionné et le placer dans le Presse-papiers)|Ctrl+X<br /><br /> or<br /><br /> SHIFTRLT+DELETE|Ctrl+X<br /><br /> or<br /><br /> Maj+Suppr|  
+|Coupe toutes les lignes sélectionnées, ou la ligne active si aucune ligne n'est sélectionnée.|Ctrl+L<br /><br /> or<br /><br /> Ctrl+Maj+L|Pas d'équivalent|  
+|Copier dans le Presse-papiers|Ctrl+C<br /><br /> or<br /><br /> Ctrl+Insert|Ctrl+C<br /><br /> or<br /><br /> Ctrl+Insert|  
+|Coller à partir du Presse-papiers au point d'insertion|Ctrl+V<br /><br /> or<br /><br /> Maj+Insert|Ctrl+V<br /><br /> or<br /><br /> Maj+Insert|  
+|Colle un élément de la boucle du presse-papiers au point d'insertion et sélectionne automatiquement l'élément collé|Ctrl+Maj+V<br /><br /> or<br /><br /> Ctrl+enseSHIFT+Insert|Pas d'équivalent|  
   
 ## <a name="log-viewer-keyboard-shortcuts"></a>Raccourcis clavier de la Visionneuse du journal  
   
@@ -393,7 +395,7 @@ ms.locfileid: "63127052"
 |------------|-----------------------------|---------------------------------|  
 |Actualiser|Pas d'équivalent|F5|  
 |Se déplacer entre les volets **Sélectionner les journaux** et **Résumé du fichier journal**|Pas d'équivalent|F6|  
-|Se placer dans le volet **Résumé du fichier journal**|Pas d'équivalent|Alt+S|  
+|Se placer dans le volet **Résumé du fichier journal**|Pas d'équivalent|ALT + S|  
 |Charger un nouveau journal|Pas d'équivalent|Ctrl+Maj+L|  
 |Exporter un journal|Pas d'équivalent|Ctrl+Maj+E|  
 |Filtrer un journal|Pas d'équivalent|Ctrl+Maj+F|  
@@ -409,8 +411,8 @@ ms.locfileid: "63127052"
 |Filtrer l'affichage du moniteur|Ctrl+Maj+F|Ctrl+Maj+F|  
 |Afficher les panneaux|F6|F6|  
 |Développer ou réduire le volet sélectionné|Ctrl et + ou -|Ctrl et + ou -|  
-|Développer ou réduire tous les volets|+ ou -|+ ou -|  
-|Copie la ligne entière sélectionnée dans la grille|CTRL+C|CTRL+C|  
+|Développer ou réduire tous les volets|+ ou -|+ ou -|  
+|Copie la ligne entière sélectionnée dans la grille|Ctrl+C|Ctrl+C|  
 |Copier une cellule|Ctrl+Maj+C|Ctrl+Maj+C|  
 |Liste déroulante pour le filtrage dans la grille|Alt+Bas|Alt+Bas|  
 |Faire défiler vers le haut ou vers le bas dans le Moniteur d'activité|Ctrl+Alt+Haut/Bas|Ctrl+Alt+Haut/Bas|  
@@ -420,7 +422,7 @@ ms.locfileid: "63127052"
 |Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Actualiser|F5|F5|  
-|Ouvrir une fenêtre de détails à partir d'une grille|Entrée|Entrée|  
+|Ouvrir une fenêtre de détails à partir d'une grille|ENTRÉE|ENTRÉE|  
   
 ## <a name="replication-conflict-viewer-keyboard-shortcuts"></a>Raccourcis clavier de la Visionneuse des conflits de réplication  
   
@@ -434,7 +436,7 @@ ms.locfileid: "63127052"
   
 |Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|Annule ou arrête la requête en cours de exécution|Ctrl+T|Ctrl+T|  
+|Annule ou arrête la requête en cours de exécution|CTRL+T|CTRL+T|  
 |Affiche le volet du diagramme du **Concepteur de requêtes**|Ctrl+1|Ctrl+1|  
 |Affiche le volet des critères du **Concepteur de requêtes**|Ctrl+2|Ctrl+2|  
 |Affiche le volet SQL du **Concepteur de requêtes**|Ctrl+3|Ctrl+3|  
@@ -449,7 +451,7 @@ ms.locfileid: "63127052"
 |------------|-----------------------------|---------------------------------|  
 |Déplace le contrôle sélectionné vers le bas par incréments de 8 sur l'aire de conception|Bas|Pas d'équivalent|  
 |Déplace le contrôle sélectionné à gauche par incréments de 8 sur l'aire de conception|Gauche|Pas d'équivalent|  
-|Déplace le contrôle sélectionné à droite par incréments de 8 sur l'aire de conception|Flèche droite|Pas d'équivalent|  
+|Déplace le contrôle sélectionné à droite par incréments de 8 sur l'aire de conception|FLÈCHE DROITE|Pas d'équivalent|  
 |Déplace le contrôle sélectionné vers le haut par incréments de 8 sur l'aire de conception|Flèche haut|Pas d'équivalent|  
 |Augmente la hauteur du contrôle sélectionné par incréments de 8|Maj+Flèche bas|Pas d'équivalent|  
 |Réduit la largeur du contrôle sélectionné par incréments de 8|Maj+Flèche gauche|Pas d'équivalent|  
@@ -457,7 +459,7 @@ ms.locfileid: "63127052"
 |Réduit la hauteur du contrôle sélectionné par incréments de 8|Maj+Flèche haut|Pas d'équivalent|  
 |Accède au contrôle suivant dans la page|Tab|Pas d'équivalent|  
 |Accède au contrôle précédent dans la page|Maj+Tab|Pas d'équivalent|  
-|Affiche la grille sur l'aire de conception|Entrée|Pas d'équivalent|  
+|Affiche la grille sur l'aire de conception|ENTRÉE|Pas d'équivalent|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Personnaliser des menus et des touches de raccourci](customize-menus-and-shortcut-keys.md)  

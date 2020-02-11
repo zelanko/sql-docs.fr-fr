@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca9343fe8a6f9e89ba9f26dbbbb12dd7362aff91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033601"
 ---
 # <a name="set-job-execution-shutdown-sql-server-management-studio"></a>Définir l'arrêt de l'exécution d'un travail (SQL Server Management Studio)
-  Cette rubrique explique comment définir le délai pendant lequel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent doit attendre la fin de l'exécution des travaux avant la fin de l'exécution de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent lui-même dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  Cette rubrique explique comment définir le délai pendant lequel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agent doit attendre la fin de l’exécution des travaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avant la fin de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] l’exécution [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de l’agent lui-même dans à l’aide de.  
   
  **Dans cette rubrique**  
   
@@ -31,7 +31,7 @@ ms.locfileid: "63033601"
   
      [Sécurité](#Security)  
   
--   **Pour définir une heure d'arrêt pour un travail de SQL Server Agent, utilisez :**  
+-   **Pour définir une heure d’arrêt pour un travail de SQL Server Agent, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   

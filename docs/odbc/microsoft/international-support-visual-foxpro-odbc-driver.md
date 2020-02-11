@@ -1,5 +1,5 @@
 ---
-title: Prise en charge internationale (pilote ODBC de Visual FoxPro) | Microsoft Docs
+title: Prise en charge internationale (pilote ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,25 +19,25 @@ ms.assetid: cd3fab32-13f1-4a86-abc4-5e18667669fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e987c224f2d716fcab3bf898b1cb276e922e48ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085503"
 ---
 # <a name="international-support-visual-foxpro-odbc-driver"></a>Prise en charge internationale (pilote ODBC Visual FoxPro)
-Le pilote ODBC Visual FoxPro Microsoft prend en charge :  
+Le pilote ODBC Microsoft Visual FoxPro prend en charge les éléments suivants :  
   
--   Les caractères codés sur deux définit (DBCS)  
+-   Jeux de caractères codés sur deux octets (DBCS)  
   
 -   Plusieurs séquences de classement  
   
- Définit un ordre de tri le *ordre de tri* pour les données stockées dans une table Visual FoxPro ou d’une base de données. Par défaut, le pilote est configuré pour utiliser des séquences de classement qui prennent en charge la version de langue de votre système d’exploitation.  
+ Une séquence de classement définit l' *ordre de tri* des données stockées dans une table ou une base de données Visual FoxPro. Par défaut, le pilote est configuré pour utiliser les séquences de classement qui prennent en charge la version linguistique de votre système d’exploitation.  
   
- Pour obtenir la liste de séquences de classement pris en charge, consultez [définir COLLATE](../../odbc/microsoft/set-collate-command.md).  
+ Pour obtenir la liste des séquences de classement prises en charge, consultez [Set COLLATE](../../odbc/microsoft/set-collate-command.md).  
   
-## <a name="locale"></a>paramètres régionaux  
- L’ensemble d’informations qui correspondant à un langage donné et un pays/région. Paramètres régionaux indique des paramètres spécifiques tels que les séparateurs décimaux, de date et de formats d’heure et d’ordre de tri des caractères.  
+## <a name="locale"></a>local  
+ Ensemble d’informations qui correspond à une langue et à un pays ou une région donnés. Les paramètres régionaux indiquent des paramètres spécifiques tels que les séparateurs décimaux, les formats de date et d’heure et l’ordre de tri des caractères.  
   
 ## <a name="sort-order"></a>ordre de tri  
- Ordres de tri incorporent les règles de tri de différentes *paramètres régionaux*s, ce qui vous permet de trier correctement les données dans ces langues. Dans Visual FoxPro, l’ordre de tri actuelle détermine les résultats des comparaisons d’expression de caractères et l’ordre dans lequel les enregistrements apparaissent dans indexé ou triées de tables.
+ Les ordres de tri incorporent les règles de tri des différents *paramètres régionaux*, ce qui vous permet de trier correctement les données dans ces langues. Dans Visual FoxPro, l’ordre de tri actuel détermine les résultats des comparaisons d’expressions de caractères et l’ordre dans lequel les enregistrements s’affichent dans les tables indexées ou triées.

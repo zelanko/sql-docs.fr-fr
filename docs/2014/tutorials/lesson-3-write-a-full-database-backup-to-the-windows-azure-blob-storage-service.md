@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 3 : Écrire une sauvegarde de base de données complète dans le service de stockage d’objets BLOB Azure | Microsoft Docs'
+title: 'Leçon 3 : écrire une sauvegarde de base de données complète dans le service de stockage d’objets BLOB Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 1d5a749c61a3bc97de841e1149dd1539cbc990f2
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70153475"
 ---
-# <a name="lesson-3-write-a-full-database-backup-to-the-azure-blob-storage-service"></a>Leçon 3 : Écrire une sauvegarde de base de données complète dans le service de stockage d’objets BLOB Azure
+# <a name="lesson-3-write-a-full-database-backup-to-the-azure-blob-storage-service"></a>Leçon 3 : Écrire une sauvegarde de base de données complète dans le service Stockage Blob Azure
   Cette leçon illustre l’utilisation de l’instruction TSQL pour effectuer une sauvegarde de base de données complète dans le service de stockage d’objets BLOB Azure.  
   
 ## <a name="perform-a-full-database-backup-to-the-azure-blob-storage-service"></a>Effectuer une sauvegarde de base de données complète dans le service de stockage d’objets BLOB Azure  
@@ -44,6 +44,6 @@ ms.locfileid: "70153475"
 5.  Dans l'Explorateur d'objets, connectez-vous au stockage Azure. Recherchez le conteneur et les fichiers de sauvegarde récemment créés.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 4 : Effectuez une restauration à partir d’une sauvegarde](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)complète de base de données.  
+ [Leçon 4 : effectuer une restauration à partir d’une sauvegarde complète de base de données](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md).  
   
   

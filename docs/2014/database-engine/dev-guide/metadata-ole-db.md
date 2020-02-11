@@ -1,5 +1,5 @@
 ---
-title: Metadata (OLE DB) | Microsoft Docs
+title: Métadonnées (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,23 +14,23 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 27511f209dbf73906f77c0c5b1721d3cceec287f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780893"
 ---
 # <a name="metadata-ole-db"></a>Métadonnées (OLE DB)
   Cette section décrit les métadonnées de paramètre, les métadonnées de colonne de jeu de résultats et les métadonnées d'ensemble de lignes de schéma.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Métadonnées de paramètre et d’ensemble de lignes](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)  
+ [Métadonnées de paramètre et d'ensemble de lignes](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)  
  Fournit des informations sur les structures et les commandes en rapport avec les améliorations de date et d'heure OLE DB.  
   
- [Date / heure et ensembles de lignes de schéma](../../relational-databases/native-client-ole-db-date-time/metadata-date-and-time-and-schema-rowsets.md)  
+ [Ensembles de lignes de date et d’heure et de schéma](../../relational-databases/native-client-ole-db-date-time/metadata-date-and-time-and-schema-rowsets.md)  
  Contient des informations sur les mises à jour des ensembles de lignes de schéma OLE DB.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Améliorations des types de données de date et d’heure &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [Améliorations de la date et de l’heure &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

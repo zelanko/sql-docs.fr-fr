@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriel : Créer un rapport principal et un rapport d’extraction (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : création d’un rapport principal et d’un rapport d’extraction (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b074195ecda842e0270f3cadce790be30fdce7cc
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892386"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutoriel : Création de rapports d’extraction et principaux (Générateur de rapports)
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Didacticiel : création d'un rapport principal et d'un rapport d'extraction (Générateur de rapports)
   Ce didacticiel vous apprend comment créer deux types de rapports : un rapport d'extraction et un rapport principal. Les exemples de données de ventes utilisés dans ces rapports sont récupérés d'un cube Analysis Services. L'illustration suivante montre les rapports que vous allez créer.  
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
@@ -27,39 +27,39 @@ ms.locfileid: "68892386"
  ![rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "rs_DrillthroughCubeTutorialParmExpr")  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
- **Dans le rapport d’extraction, vous allez apprendre à:**  
+ **Dans le rapport d'extraction, vous allez apprendre à :**  
   
-1.  [Créer un rapport de matrice d’extraction et un DataSet à partir de l’Assistant tableau ou matrice](#DMatrixAndDataset)  
+1.  [Créer un rapport de matrice d'extraction et un dataset à partir de l'Assistant Tableau ou matrice](#DMatrixAndDataset)  
   
     1.  [Spécifier une connexion de données](#DConnection)  
   
     2.  [Créer une requête MDX](#DMDXQuery)  
   
-    3.  [Organiser les données en groupes style](#DLayout)  
+    3.  [Organiser les données dans des groupes Style](#DLayout)  
   
     4.  [Ajouter des sous-totaux et des totaux](#DTotals)  
   
     5.  [Choisir un style](#DStyle)  
   
-2.  [Mettre en forme les données en tant que devise](#DFormat)  
+2.  [Mettre en forme les données en tant que devises](#DFormat)  
   
-3.  [Ajouter des colonnes pour afficher les valeurs des ventes dans les graphiques sparkline](#DSparkline)  
+3.  [Ajouter des colonnes pour afficher des valeurs de vente dans des graphiques sparkline](#DSparkline)  
   
-4.  [Ajouter un titre de rapport avec le nom de catégorie de produit](#DReportTitle)  
+4.  [Ajouter un titre de rapport avec le nom d'une catégorie de produit](#DReportTitle)  
   
-5.  [Mettre à jour les propriétés des paramètres](#DParameter)  
+5.  [Mettre à jour des propriétés de paramètre](#DParameter)  
   
 6.  [Enregistrer le rapport dans une bibliothèque SharePoint](#DSave)  
   
- **Dans le rapport principal, vous allez apprendre à:**  
+ **Dans le rapport principal, vous allez apprendre à :**  
   
-1.  [Créer le rapport de matrice principal et le jeu de données à partir de l’Assistant tableau ou matrice](#MMatrixAndDataset)  
+1.  [Créer le rapport de matrice principal et un dataset à partir de l'Assistant Tableau ou matrice](#MMatrixAndDataset)  
   
     1.  [Spécifier une connexion de données](#MConnection)  
   
     2.  [Créer une requête MDX](#MMDXQuery)  
   
-    3.  [Organiser les données en groupes](#MLayout)  
+    3.  [Organiser les données dans des groupes](#MLayout)  
   
     4.  [Ajouter des sous-totaux et des totaux](#MTotals)  
   
@@ -67,29 +67,29 @@ ms.locfileid: "68892386"
   
 2.  [Supprimer la ligne de total général](#MGrandTotal)  
   
-3.  [Configurer une action de zone de texte pour l’extraction](#MDrillthrough)  
+3.  [Configurer une action de zone de texte pour l'extraction](#MDrillthrough)  
   
 4.  [Remplacer des valeurs numériques par des indicateurs](#MIndicators)  
   
-5.  [Mettre à jour les propriétés des paramètres](#MParameter)  
+5.  [Mettre à jour des propriétés de paramètre](#MParameter)  
   
 6.  [Ajouter un titre de rapport](#MTitle)  
   
 7.  [Enregistrer le rapport dans une bibliothèque SharePoint](#MSave)  
   
-8.  [Exécuter les rapports principal et d’extraction](#MRunReports)  
+8.  [Exécuter les rapports principal et d'extraction](#MRunReports)  
   
- Durée estimée pour effectuer ce didacticiel: 30 minutes.  
+ Durée estimée pour effectuer ce didacticiel : 30 minutes.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Pour suivre ce didacticiel, vous avez besoin d'accéder au cube Contoso Sales. Cette condition s'applique à la fois aux rapports principal et d'extraction. Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="DMatrixAndDataset"></a> 1. Créer un rapport d'extraction à partir de l'Assistant Tableau ou matrice  
+##  <a name="DMatrixAndDataset"></a>1. créer un rapport d’extraction à partir de l’Assistant tableau ou matrice  
  Dans la boîte de dialogue Prise en main, créez un rapport de matrice à l’aide de **l’Assistant Tableau ou matrice**. Deux modes sont disponibles dans l'assistant : création de rapport et création de dataset partagé. Dans ce didacticiel, vous allez utiliser le mode création de rapport.  
   
 #### <a name="to-create-a-new-report"></a>Pour créer un rapport  
   
-1.  Cliquez sur **Démarrer**, pointez sur **programmes** [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] , sur **Générateur de rapports**, puis cliquez sur **Générateur de rapports**.  
+1.  Cliquez sur **Démarrer**, pointez sur **programmes**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] sur **Générateur de rapports**, puis cliquez sur **Générateur de rapports**.  
   
      La boîte de dialogue **prise en main** s’ouvre. S’il n’apparaît pas, à partir du bouton **Générateur de rapports** , cliquez sur **nouveau**.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "68892386"
   
 3.  Dans le volet droit, vérifiez que **Assistant Tableau ou matrice** est sélectionné.  
   
-##  <a name="DConnection"></a> 1a. Spécifier une connexion de données  
+##  <a name="DConnection"></a>1a. Spécifier une connexion de données  
  Une connexion de données contient les informations nécessaires pour se connecter à une source de données externe telle qu'un cube Analysis Services ou une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour spécifier une connexion de données, vous pouvez utiliser une source de données partagée sur le serveur de rapports ou créer une source de données incorporée utilisée uniquement dans ce rapport. Dans ce didacticiel, vous allez utiliser une source de données incorporée. Pour en savoir plus sur l’utilisation d’une source de données partagée, consultez [Autres manières d’obtenir une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### <a name="to-create-an-embedded-data-source"></a>Pour créer une source de données incorporée  
@@ -110,7 +110,7 @@ ms.locfileid: "68892386"
   
 4.  Dans **Sélectionner un type de connexion**, sélectionnez **Microsoft SQL Server Analysis Services**, puis cliquez sur **Générer**.  
   
-5.  Dans **Source de données**, vérifiez que la source de données est **Microsoft SQL Server Analysis Services (AdomdClient)** .  
+5.  Dans **Source de données**, vérifiez que la source de données est **Microsoft SQL Server Analysis Services (AdomdClient)**.  
   
 6.  Dans **Nom du serveur**, tapez le nom d’un serveur où est installée une instance d’Analysis Services.  
   
@@ -124,7 +124,8 @@ ms.locfileid: "68892386"
     Data Source=<servername>; Initial Catalog = Contoso  
     ```  
   
-     `<servername>` est le nom d'une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] où est installé Analysis Services.  
+     
+  `<servername>` est le nom d'une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] où est installé Analysis Services.  
   
 10. Cliquez sur **Type d’informations d’identification**.  
   
@@ -135,25 +136,25 @@ ms.locfileid: "68892386"
   
      La page **Choisir une connexion à une source de données** s’affiche.  
   
-12. Pour vérifier que vous pouvez vous connecter à la source de données, cliquez sur **Tester la connexion**.  
+12. Pour vous assurer que vous pouvez vous connecter à la source de données, cliquez sur **Tester la connexion**.  
   
-     Le message **La connexion a été correctement créée** s’affiche.  
+     Le message la **connexion a été créée** s’affiche.  
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 14. Cliquez sur **Suivant**.  
   
-##  <a name="DMDXQuery"></a> 1b. Créer une requête MDX  
+##  <a name="DMDXQuery"></a>ter. Créer une requête MDX  
  Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requête prédéfinie, ou vous pouvez créer un dataset incorporé utilisable uniquement dans votre rapport. Dans ce didacticiel, vous allez créer un dataset incorporé.  
   
 #### <a name="to-create-query-filters"></a>Pour créer des filtres de requête  
   
-1.  Dans la page **Créer une requête**, dans le volet Métadonnées, cliquez sur le bouton **(...)** .  
+1.  Dans la page **Créer une requête**, dans le volet Métadonnées, cliquez sur le bouton **(...)**.  
   
-2.  Dans la boîte de dialogue **Sélection de cube** , cliquez sur Sales, puis sur **OK**.  
+2.  Dans la boîte de dialogue **Sélection de cube**, cliquez sur Sales, puis sur **OK**.  
   
     > [!TIP]  
-    >  Si vous ne souhaitez pas générer la requête MDX manuellement, cliquez sur l’icône ![Basculer en mode Conception](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Basculer en mode Conception"), basculez le concepteur de requêtes en mode Requête, collez la requête MDX complète dans le concepteur de requêtes, puis passez à l’étape 6 de la section [Pour créer le dataset](#DSkip).  
+    >  Si vous ne souhaitez pas générer la requête MDX manuellement, cliquez sur l’icône ![Passer en mode Création](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Passer en mode Création"), basculez le concepteur de requêtes en mode Requête, collez la requête MDX complète dans le concepteur de requêtes, puis passez à l’étape 6 de la section [Pour créer le jeu de données](#DSkip).  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -167,7 +168,7 @@ ms.locfileid: "68892386"
   
 5.  Dans la liste d’expression de filtre, développez **All Channel**, cliquez sur **Online**, sur **Reseller**, puis sur **OK**.  
   
-     La requête inclut maintenant un filtre pour inclure uniquement ces canaux: En ligne et revendeur.  
+     La requête inclut maintenant un filtre ne comportant que les canaux suivants : Online (en ligne) et Reseller (revendeur).  
   
 6.  Développez la dimension Sales Territory, puis faites glisser Sales Territory Group vers la colonne **Hierarchy** , sous **Channel Name**.  
   
@@ -208,11 +209,11 @@ ms.locfileid: "68892386"
   
 5.  Faites glisser la mesure Sales Amount vers le volet de données, puis placez-la à droite de Product Subcategory Name.  
   
-6.  Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter (!)** .  
+6.  Dans la barre d’outils du concepteur de requêtes, cliquez sur **exécuter ( !)**.  
   
 7.  Cliquez sur **Suivant**.  
   
-##  <a name="DLayout"></a> 1c. Organiser les données dans des groupes  
+##  <a name="DLayout"></a>1C. Organiser les données dans des groupes  
  Lorsque vous sélectionnez les champs dans lesquels regrouper les données, vous concevez une matrice dont les lignes et les colonnes affichent des données de détail et des données agrégées.  
   
 #### <a name="to-organize-data-into-groups"></a>Pour organiser les données en groupes  
@@ -238,7 +239,7 @@ ms.locfileid: "68892386"
   
 6.  Cliquez sur **Suivant**.  
   
-##  <a name="DTotals"></a> 1d. Ajouter des sous-totaux et des totaux  
+##  <a name="DTotals"></a>1D. Ajouter des sous-totaux et des totaux  
  Après avoir créé des groupes, vous pouvez ajouter et mettre en forme les lignes dans lesquelles afficher les valeurs d'agrégat des champs. Vous pouvez également afficher toutes les données ou laisser l'utilisateur développer/réduire les données regroupées de manière interactive.  
   
 #### <a name="to-add-subtotals-and-totals"></a>Pour ajouter des sous-totaux et des totaux  
@@ -249,7 +250,7 @@ ms.locfileid: "68892386"
   
 2.  Cliquez sur **Suivant**.  
   
-##  <a name="DStyle"></a> 1e. Choisir un style  
+##  <a name="DStyle"></a>1La. Choisir un style  
  Un style spécifie un style de police, un jeu de couleurs et un style de bordure.  
   
 #### <a name="to-specify-a-style"></a>Pour spécifier un style  
@@ -260,9 +261,9 @@ ms.locfileid: "68892386"
   
      Le tableau est ajouté à l'aire de conception.  
   
-3.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)** .  
+3.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)**.  
   
-##  <a name="DFormat"></a> 2. Mettre en forme les données en tant que devises  
+##  <a name="DFormat"></a>2. mettre en forme les données en tant que devise  
  Appliquez une mise en forme de devise aux champs de montant des ventes dans le rapport d'extraction.  
   
 #### <a name="to-format-data-as-currency"></a>Pour mettre en forme les données en tant que devise  
@@ -273,7 +274,7 @@ ms.locfileid: "68892386"
   
 3.  Sous l’onglet **Accueil** , dans le groupe **Nombre** , cliquez sur **Devise**.  
   
-##  <a name="DSparkline"></a> 3. Ajouter des colonnes pour afficher des valeurs de vente dans des graphiques sparkline  
+##  <a name="DSparkline"></a>3. ajouter des colonnes pour afficher les valeurs des ventes dans les graphiques sparkline  
  Au lieu d'afficher les ventes et les retours de ventes sous forme de valeurs monétaires, le rapport affiche les valeurs dans un graphique sparkline.  
   
 #### <a name="to-add-sparklines-to-columns"></a>Pour ajouter des graphiques sparkline à des colonnes  
@@ -304,9 +305,9 @@ ms.locfileid: "68892386"
   
 12. Dans le volet Données du graphique, cliquez sur l’icône **Ajouter un champ** , puis sur Sales_Return_Amount.  
   
-13. Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)** .  
+13. Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)**.  
   
-##  <a name="DReportTitle"></a> 4. Ajouter un titre de rapport avec le nom d'une catégorie de produit  
+##  <a name="DReportTitle"></a>4. Ajouter un titre de rapport avec le nom de catégorie de produit  
  Un titre de rapport s'affiche dans la partie supérieure du rapport. Vous pouvez placer le titre du rapport dans un en-tête de rapport, ou si le rapport n'en utilise pas, dans une zone de texte située en haut du corps du rapport. Dans ce didacticiel, vous allez utiliser la zone de texte placée automatiquement en haut du corps du rapport.  
   
 #### <a name="to-add-a-report-title"></a>Pour ajouter un titre de rapport  
@@ -315,7 +316,7 @@ ms.locfileid: "68892386"
   
 2.  Dans l'aire de conception, cliquez sur **Cliquez pour ajouter un titre**.  
   
-3.  Tapez **Sales and Returns for Category:** .  
+3.  Tapez **Sales and Returns for Category:**.  
   
 4.  Cliquez avec le bouton droit, puis sélectionnez **Créer un espace réservé**.  
   
@@ -329,11 +330,11 @@ ms.locfileid: "68892386"
     =First(Fields!Product_Category_Name.Value, "DataSet1")  
     ```  
   
-7.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)** .  
+7.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)**.  
   
  Le titre du rapport inclut le nom de la première catégorie de produit. Par la suite, après avoir exécuté ce rapport en tant que rapport d'extraction, le nom de la catégorie de produit changera de manière dynamique afin de refléter le nom de la catégorie de produit sur lequel l'utilisateur a cliqué dans le rapport principal.  
   
-##  <a name="DParameter"></a> 5. Mettre à jour des propriétés de paramètre  
+##  <a name="DParameter"></a>5. mettre à jour les propriétés des paramètres  
  Par défaut, les paramètres sont visibles, ce qui n'est pas approprié pour ce rapport. Vous allez mettre à jour les propriétés de paramètre pour le rapport d'extraction.  
   
 #### <a name="to-hide-a-parameter"></a>Pour masquer un paramètre  
@@ -356,7 +357,7 @@ ms.locfileid: "68892386"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="DSave"></a> 6. Enregistrer le rapport dans une bibliothèque SharePoint  
+##  <a name="DSave"></a>6. enregistrer le rapport dans une bibliothèque SharePoint  
  Vous pouvez enregistrer le rapport dans une bibliothèque SharePoint, sur un serveur de rapports ou sur votre ordinateur. Si vous enregistrez le rapport sur votre ordinateur, plusieurs fonctionnalités de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] telles que les parties de rapports et les sous-rapports ne sont pas disponibles. Dans ce didacticiel, vous allez enregistrer le rapport dans une bibliothèque SharePoint.  
   
 #### <a name="to-save-the-report"></a>Pour enregistrer le rapport  
@@ -378,7 +379,7 @@ ms.locfileid: "68892386"
   
 4.  Cliquez sur **Enregistrer**.  
   
-     La liste**Sites et serveurs récents** répertorie les bibliothèques sur le site SharePoint.  
+     **Sites et serveurs récents** répertorie les bibliothèques sur le site SharePoint.  
   
 5.  Accédez à la bibliothèque où vous souhaitez enregistrer le rapport.  
   
@@ -389,16 +390,16 @@ ms.locfileid: "68892386"
   
 7.  Cliquez sur **Enregistrer**.  
   
-##  <a name="MMatrixAndDataset"></a> 1. Créer un rapport à partir de l’Assistant tableau ou matrice  
- Dans la boîte de dialogue **Prise en main** , créez un rapport de matrice à l’aide de **l’Assistant Tableau ou matrice**.  
+##  <a name="MMatrixAndDataset"></a>1. créer un rapport à partir de l’Assistant tableau ou matrice  
+ Dans la boîte de dialogue **prise en main** , créez un rapport de matrice à l’aide de l' **Assistant tableau ou matrice**.  
   
 #### <a name="to-create-a-new-report"></a>Pour créer un rapport  
   
-1.  Cliquez sur **Démarrer**, pointez sur **programmes** [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] , sur **Générateur de rapports**, puis cliquez sur **Générateur de rapports**.  
+1.  Cliquez sur **Démarrer**, pointez sur **programmes**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] sur **Générateur de rapports**, puis cliquez sur **Générateur de rapports**.  
   
 2.  Dans la boîte de dialogue **Prise en main** , vérifiez que **Nouveau rapport** est sélectionné, puis cliquez sur **Assistant Tableau ou matrice**.  
   
-##  <a name="MConnection"></a> 1a. Spécifier une connexion de données  
+##  <a name="MConnection"></a>1a. Spécifier une connexion de données  
  Vous allez ajouter une source de données incorporée au rapport principal.  
   
 #### <a name="to-create-an-embedded-data-source"></a>Pour créer une source de données incorporée  
@@ -411,9 +412,9 @@ ms.locfileid: "68892386"
   
 4.  Dans **Sélectionner un type de connexion**, sélectionnez **Microsoft SQL Server Analysis Services**, puis cliquez sur **Générer**.  
   
-5.  Dans **Source de données**, vérifiez que la source de données est **Microsoft SQL Server Analysis Services (AdomdClient)** .  
+5.  Dans **Source de données**, vérifiez que la source de données est **Microsoft SQL Server Analysis Services (AdomdClient)**.  
   
-6.  Dans **Nom du serveur**, tapez le nom d’un serveur où est installée une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+6.  Dans **nom du serveur**, tapez le nom d’un serveur sur lequel une [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance de est installée.  
   
 7.  Dans **Sélectionner ou entrer un nom de base de données**, sélectionnez le cube Contoso.  
   
@@ -437,17 +438,17 @@ ms.locfileid: "68892386"
   
 14. Cliquez sur **Suivant**.  
   
-##  <a name="MMDXQuery"></a> 1b. Créer une requête MDX  
+##  <a name="MMDXQuery"></a>ter. Créer une requête MDX  
  À présent, créez un dataset incorporé. Pour ce faire, vous allez utiliser le concepteur de requêtes afin de créer des filtres, des paramètres et des membres calculés, ainsi que le dataset lui-même.  
   
 #### <a name="to-create-query-filters"></a>Pour créer des filtres de requête  
   
-1.  Dans la page **Créer une requête**, dans le volet Métadonnées, dans la section du cube, cliquez sur le bouton de sélection **(...)** .  
+1.  Dans la page **Créer une requête**, dans le volet Métadonnées, dans la section du cube, cliquez sur le bouton de sélection **(...)**.  
   
-2.  Dans la boîte de dialogue **Sélection de cube** , cliquez sur Sales, puis sur **OK**.  
+2.  Dans la boîte de dialogue **Sélection de cube**, cliquez sur Sales, puis sur **OK**.  
   
     > [!TIP]  
-    >  Si vous ne souhaitez pas générer la requête MDX manuellement, cliquez sur l’icône ![Basculer en mode Conception](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Basculer en mode Conception"), basculez le concepteur de requêtes en mode Requête, collez la requête MDX complète dans le concepteur de requêtes, puis passez à l’étape 5 de la section [Pour créer le dataset](#MSkip).  
+    >  Si vous ne souhaitez pas générer la requête MDX manuellement, cliquez sur l’icône ![Passer en mode Création](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Passer en mode Création"), basculez le concepteur de requêtes en mode Requête, collez la requête MDX complète dans le concepteur de requêtes, puis passez à l’étape 5 de la section [Pour créer le jeu de données](#MSkip).  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
@@ -461,9 +462,9 @@ ms.locfileid: "68892386"
   
 5.  Dans la liste Expression de filtre, développez **All Channel**, cliquez sur **Online** et **Reseller**, puis sur **OK**.  
   
-     La requête inclut maintenant un filtre pour inclure uniquement ces canaux: En ligne et revendeur.  
+     La requête inclut maintenant un filtre ne comportant que les canaux suivants : Online (en ligne) et Reseller (revendeur).  
   
-6.  Développez la dimension Sales Territory, puis faites glisser Sales Territory Group vers la colonne **Hierarchy** , sous **Channel Name**.  
+6.  Développez la dimension Sales secteur, puis faites glisser Sales secteur Group vers la colonne **Hierarchy** , sous **Channel Name**.  
   
 7.  Ouvrez la liste **Expression de filtre** , développez **All Sales Territory**, cliquez sur **North America**, puis sur **OK**.  
   
@@ -507,7 +508,7 @@ ms.locfileid: "68892386"
   
 5.  Cliquez avec le bouton droit sur **Membres calculés**, puis sélectionnez **Nouveau membre calculé**.  
   
-6.  Dans le volet Métadonnées, développez **Mesures**, puis Sales.  
+6.  Dans le volet métadonnées, développez **mesures**, puis Sales.  
   
 7.  Faites glisser la mesure Sales Amount vers la zone **Expression** , tapez le caractère de soustraction (-), puis faites glisser la mesure Sales Return Amount vers la zone **Expression** ; placez-la après le caractère de soustraction.  
   
@@ -517,7 +518,7 @@ ms.locfileid: "68892386"
     [Measures].[Sales Amount] - [Measures].[Sales Return Amount]  
     ```  
   
-8.  Dans la zone **Nom** , tapez  **Net Sales**, puis cliquez sur **OK**. Le volet Membres calculés contient le membre calculé **Net Sales** .  
+8.  Dans la zone **Nom**, tapez **Net Sales**, puis cliquez sur **OK**. Le volet Membres calculés contient le membre calculé **Net Sales**.  
   
 ###  <a name="MSkip"></a>Pour créer le DataSet  
   
@@ -529,13 +530,13 @@ ms.locfileid: "68892386"
   
 4.  À partir de Membres calculés, faites glisser Net Sales vers le volet de données, puis placez-le à droite de `Net QTY`.  
   
-5.  Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter (!)** .  
+5.  Dans la barre d’outils du concepteur de requêtes, cliquez sur **exécuter ( !)**.  
   
      Passez en revue le jeu de résultats de la requête.  
   
 6.  Cliquez sur **Suivant**.  
   
-##  <a name="MLayout"></a> 1c. Organiser les données dans des groupes  
+##  <a name="MLayout"></a>1C. Organiser les données dans des groupes  
  Lorsque vous sélectionnez les champs dans lesquels regrouper des données, vous concevez une matrice dont les lignes et les colonnes affichent des données de détail et des données agrégées.  
   
 #### <a name="to-organize-data-into-groups"></a>Pour organiser les données en groupes  
@@ -546,7 +547,8 @@ ms.locfileid: "68892386"
   
 3.  Faites glisser `Net_QTY` vers **Valeurs**.  
   
-     `Net_QTY` est agrégé automatiquement par la fonction Sum, l’agrégat par défaut des champs numériques. La valeur est `[Sum(Net_QTY)]`.  
+     
+  `Net_QTY` est agrégé automatiquement par la fonction Sum, l’agrégat par défaut des champs numériques. La valeur est `[Sum(Net_QTY)]`.  
   
      Pour consulter les autres fonctions d'agrégation disponibles, ouvrez la liste déroulante. Ne modifiez pas la fonction d'agrégation.  
   
@@ -554,18 +556,18 @@ ms.locfileid: "68892386"
   
      Les étapes 3 et 4 spécifient les données à afficher dans la matrice.  
   
-##  <a name="MTotals"></a> 1d. Ajouter des sous-totaux et des totaux  
+##  <a name="MTotals"></a>1D. Ajouter des sous-totaux et des totaux  
  Vous pouvez afficher des sous-totaux et des totaux généraux dans les rapports. Les données dans le rapport principal s'affichent sous la forme d'un indicateur ; vous allez supprimer le total général après avoir exécuté l'assistant.  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>Pour ajouter des sous-totaux et des totaux généraux  
   
 1.  Dans la page **Choisir la disposition** , sous **Options**, vérifiez que **Afficher les sous-totaux et les totaux généraux** est sélectionné.  
   
-     Le volet Aperçu de l'Assistant affiche une matrice avec quatre lignes.  Lorsque vous exécutez le rapport, chaque ligne est affichée de la manière suivante : La première ligne est le groupe de colonnes, la deuxième ligne contient les en-têtes de colonne, la troisième ligne contient les données`[Sum(Net_ QTY)]` de `[Sum(Net_Sales)]`catégorie de produit (et, et la quatrième ligne contient les totaux.  
+     Le volet Aperçu de l'Assistant affiche une matrice avec quatre lignes.  Lorsque vous exécutez le rapport, chaque ligne s'affiche de la manière suivante : la première ligne correspond au groupe de colonnes, la seconde ligne aux titres de colonnes, la troisième ligne contient les données de catégories de produits (`[Sum(Net_ QTY)]` et `[Sum(Net_Sales)]`, tandis que la quatrième ligne indique les totaux.  
   
 2.  Cliquez sur **Suivant**.  
   
-##  <a name="MStyle"></a> 1e. Choisir un style  
+##  <a name="MStyle"></a>1La. Choisir un style  
  Appliquez le style Ardoise au rapport. Il s'agit du même style que celui utilisé par le rapport d'extraction.  
   
 #### <a name="to-specify-a-style"></a>Pour spécifier un style  
@@ -574,9 +576,9 @@ ms.locfileid: "68892386"
   
 2.  Cliquez sur **Terminer**.  
   
-3.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)** .  
+3.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)**.  
   
-##  <a name="MGrandTotal"></a> 2. Supprimer la ligne de total général  
+##  <a name="MGrandTotal"></a>2. supprimer la ligne de total général  
  Les valeurs de données sont affichées sous forme d'états d'indicateur, avec les totaux des groupes de colonnes. Supprimez la ligne qui affiche le total général.  
   
 #### <a name="to-remove-the-grand-total-row"></a>Pour supprimer la ligne de total général  
@@ -585,9 +587,9 @@ ms.locfileid: "68892386"
   
 2.  Cliquez sur la ligne Total (la dernière ligne dans la matrice), cliquez avec le bouton droit, puis cliquez sur **Supprimer les lignes**.  
   
-3.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)** .  
+3.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)**.  
   
-##  <a name="MDrillthrough"></a> 3. Configurer une action de zone de texte pour l'extraction  
+##  <a name="MDrillthrough"></a>3. configurer l’action de zone de texte pour l’extraction  
  Pour activer l'extraction, spécifiez une action sur une zone de texte dans le rapport principal.  
   
 #### <a name="to-enable-an-action"></a>Pour activer une action  
@@ -596,7 +598,7 @@ ms.locfileid: "68892386"
   
 2.  Cliquez avec le bouton droit dans la cellule qui contient Product_Category_Name, puis sélectionnez **Propriétés de la zone de texte**.  
   
-3.  Cliquez sur l’onglet **Action** .  
+3.  Cliquez sur l'onglet **Action**.  
   
 4.  Sélectionnez **Atteindre le rapport**.  
   
@@ -606,7 +608,7 @@ ms.locfileid: "68892386"
   
 7.  Dans la liste **Nom** , sélectionnez ProductProductCategoryName.  
   
-8.  Dans **Valeur**, tapez `[Product_Category_Name.UniqueName]`.  
+8.  Dans la zone **Valeur**, tapez `[Product_Category_Name.UniqueName]`.  
   
      Product_Category_Name est un champ du dataset.  
   
@@ -631,7 +633,7 @@ ms.locfileid: "68892386"
   
  Les noms des catégories de produits présentent le format de lien courant (bleu et souligné).  
   
-##  <a name="MIndicators"></a> 4. Remplacer des valeurs numériques par des indicateurs  
+##  <a name="MIndicators"></a>4. remplacer des valeurs numériques par des indicateurs  
  Utilisez des indicateurs pour afficher l'état de quantités et de ventes pour les canaux en ligne et les revendeurs.  
   
 #### <a name="to-add-an-indicator-for-net-qty-values"></a>Pour ajouter un indicateur pour les valeurs de quantité nette  
@@ -644,7 +646,7 @@ ms.locfileid: "68892386"
   
 4.  Cliquez sur le type **3 Signes** , puis sur **OK**.  
   
-5.  Cliquez avec le bouton droit sur l’indicateur et, dans le volet Données de la jauge, cliquez sur la flèche vers le bas en regard de **(Non spécifié)** . Sélectionnez `Net_QTY`.  
+5.  Cliquez avec le bouton droit sur l’indicateur et, dans le volet Données de la jauge, cliquez sur la flèche vers le bas en regard de **(Non spécifié)**. Sélectionnez `Net_QTY`.  
   
 6.  Répétez les étapes 2 à 5 pour la cellule `[Sum(Net QTY)]` dans le groupe de lignes `[Product_Category_Name]` dans **Total**.  
   
@@ -656,13 +658,13 @@ ms.locfileid: "68892386"
   
 3.  Cliquez sur le type **3 Signes** , puis sur **OK**.  
   
-4.  Cliquez avec le bouton droit sur l’indicateur et, dans le volet Données de la jauge, cliquez sur la flèche vers le bas en regard de **(Non spécifié)** . Sélectionnez `Net_Sales`.  
+4.  Cliquez avec le bouton droit sur l’indicateur et, dans le volet Données de la jauge, cliquez sur la flèche vers le bas en regard de **(Non spécifié)**. Sélectionnez `Net_Sales`.  
   
 5.  Répétez les étapes 1 à 4 pour la cellule `[Sum(Net_Sales)]` dans le groupe de lignes `[Product_Category_Name]` dans **Total**.  
   
 6.  Cliquez sur **Exécuter**pour afficher un aperçu du rapport.  
   
-##  <a name="MParameter"></a> 5. Mettre à jour des propriétés de paramètre  
+##  <a name="MParameter"></a>5. mettre à jour les propriétés des paramètres  
  Par défaut, les paramètres sont visibles, ce qui n'est pas approprié pour ce rapport. Vous allez mettre à jour les propriétés de paramètre afin de rendre ce dernier interne au rapport.  
   
 #### <a name="to-make-the-parameter-internal"></a>Pour rendre le paramètre interne  
@@ -677,14 +679,14 @@ ms.locfileid: "68892386"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="MTitle"></a> 6. Ajouter un titre de rapport  
+##  <a name="MTitle"></a>6. Ajouter un titre de rapport  
  Ajoutez un titre au rapport principal.  
   
 #### <a name="to-add-a-report-title"></a>Pour ajouter un titre de rapport  
   
 1.  Dans l'aire de conception, cliquez sur **Cliquez pour ajouter un titre**.  
   
-2.  Tapez **2009 Product Category Sales: Online and Reseller Category:** .  
+2.  Tapez **2009 Product Category Sales: Online and Reseller Category:**.  
   
 3.  Sélectionnez le texte que vous avez tapé.  
   
@@ -692,7 +694,7 @@ ms.locfileid: "68892386"
   
 5.  Cliquez sur **Exécuter**pour afficher un aperçu du rapport.  
   
-##  <a name="MSave"></a> 7. Enregistrer le rapport principal dans une bibliothèque SharePoint  
+##  <a name="MSave"></a>7. enregistrer le rapport principal dans une bibliothèque SharePoint  
  Enregistrez le rapport principal dans une bibliothèque SharePoint.  
   
 #### <a name="to-save-the-report"></a>Pour enregistrer le rapport  
@@ -718,7 +720,7 @@ ms.locfileid: "68892386"
   
 7.  Cliquez sur **Enregistrer**.  
   
-##  <a name="MRunReports"></a> 8. Exécuter les rapports principal et d'extraction  
+##  <a name="MRunReports"></a>8. exécuter les rapports principal et d’extraction  
  Exécutez le rapport principal, puis cliquez sur des valeurs dans la colonne de catégorie de produit afin d'exécuter le rapport d'extraction.  
   
 #### <a name="to-run-the-reports"></a>Pour exécuter les rapports  
@@ -738,6 +740,6 @@ ms.locfileid: "68892386"
 5.  Explorez éventuellement les autres catégories de produits en cliquant sur leur nom.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Didacticiels &#40;générateur de rapports&#41;](report-builder-tutorials.md)  
+ [Didacticiels &#40;Générateur de rapports&#41;](report-builder-tutorials.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_host_info (Transact-SQL) | Microsoft Docs
+title: sys. dm_os_host_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/10/2017
 ms.prod: sql
@@ -20,40 +20,40 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 052402d3a394e8da3e08828992127d3cd89b95ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67900165"
 ---
-# <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact-SQL)
+# <a name="sysdm_os_host_info-transact-sql"></a>sys. dm_os_host_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Retourne une ligne qui affiche des informations de version de système d’exploitation.  
+Retourne une ligne qui affiche les informations sur la version du système d’exploitation.  
   
 |Nom de la colonne |Type de données |Description |  
 |-----------------|---------------|-----------------|  
-|**host_platform** |**nvarchar (256)** |Le type de système d’exploitation : Windows ou Linux |
+|**host_platform** |**nvarchar (256)** |Type de système d’exploitation : Windows ou Linux |
 |**host_distribution** |**nvarchar (256)** |Description du système d’exploitation. |
-|**host_release**|**nvarchar (256)**|Version du système d'exploitation [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (numéro de version). Pour obtenir la liste de valeurs et les descriptions, consultez [Version de système d’exploitation (Windows)](/windows/desktop/SysInfo/operating-system-version). <br> Pour Linux, retourne une chaîne vide. |  
+|**host_release**|**nvarchar (256)**|Version du système d'exploitation [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (numéro de version). Pour obtenir la liste des valeurs et des descriptions, consultez [version du système d’exploitation (Windows)](/windows/desktop/SysInfo/operating-system-version). <br> Pour Linux, retourne une chaîne vide. |  
 |**host_service_pack_level**|**nvarchar (256)**|Niveau du Service Pack du système d'exploitation Windows. <br> Pour Linux, retourne une chaîne vide. |  
-|**host_sku**|**Int**|ID de référence (SKU) Windows. Pour obtenir la liste des ID de référence (SKU) et des descriptions, consultez [GetProductInfo, fonction](https://msdn.microsoft.com/library/ms724358.aspx). Autorise la valeur NULL. <br> Pour Linux, retourne la valeur NULL. |  
-|**os_language_version**|**int**|Identificateur des paramètres régionaux (LCID) du système d'exploitation. Pour obtenir la liste des valeurs LCID et des descriptions, consultez [ID de paramètres régionaux assignés par Microsoft](https://go.microsoft.com/fwlink/?LinkId=208080). Ne peut pas avoir la valeur null.|  
+|**host_sku**|**int**|ID de référence (SKU) Windows. Pour obtenir la liste des ID et des descriptions des références SKU, consultez [fonction GetProductInfo](https://msdn.microsoft.com/library/ms724358.aspx). Autorise la valeur NULL. <br> Pour Linux, retourne la valeur NULL. |  
+|**os_language_version**|**int**|Identificateur des paramètres régionaux (LCID) du système d'exploitation. Pour obtenir la liste des valeurs et des descriptions des LCID, consultez [ID de paramètres régionaux attribués par Microsoft](https://go.microsoft.com/fwlink/?LinkId=208080). Ne peut pas avoir la valeur null.|  
 
 ## <a name="remarks"></a>Notes  
-Cette vue est similaire à [sys.dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md), ajout de colonnes pour différencier Windows et Linux.
+Cette vue est similaire à [sys. dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md), qui ajoute des colonnes pour différencier Windows et Linux.
   
 ## <a name="security"></a>Sécurité  
   
 ### <a name="permissions"></a>Autorisations  
-Le `SELECT` autorisation sur `sys.dm_os_host_info` est accordé à la `public` rôle par défaut. Si révoqué, nécessite `VIEW SERVER STATE` autorisation sur le serveur.   
+L' `SELECT` autorisation sur `sys.dm_os_host_info` est accordée par défaut `public` au rôle. En cas de révocation `VIEW SERVER STATE` , nécessite l’autorisation sur le serveur.   
  
 > [!CAUTION]
->  Depuis la version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.3, [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] version 17 nécessite `SELECT` autorisation sur `sys.dm_os_host_info` pour vous connecter à [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Si `SELECT` autorisation est révoquée sur `public`, seuls les utilisateurs avec `VIEW SERVER STATE` autorisation peut se connecter avec la version la plus récente de SSMS. (Autres outils, tels que `sqlcmd.exe` peut se connecter sans `SELECT` autorisation sur `sys.dm_os_host_info`.)
+>  Depuis la version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1,3, [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] la version 17 `SELECT` requiert une `sys.dm_os_host_info` autorisation pour se connecter à [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Si `SELECT` l’autorisation est révoquée `public`de, seules les connexions `VIEW SERVER STATE` avec l’autorisation peuvent se connecter à la version la plus récente de SSMS. (D’autres outils, tels `sqlcmd.exe` que, peuvent `SELECT` se connecter `sys.dm_os_host_info`sans autorisation sur.)
 
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant retourne toutes les colonnes à partir de la **sys.dm_os_host_info** vue.  
+ L’exemple suivant retourne toutes les colonnes de la vue **sys. dm_os_host_info** .  
   
 ```  
 SELECT host_platform, host_distribution, host_release, 
@@ -61,13 +61,13 @@ SELECT host_platform, host_distribution, host_release,
 FROM sys.dm_os_host_info;  
 ```  
 
-Voici un exemple de résultat défini sur Windows :
+Voici un exemple de jeu de résultats sur Windows :
  
  |host_platform |host_distribution |host_release |host_service_pack_level |host_sku |os_language_version |
  |----- |----- |----- |----- |----- |----- |
  |Windows   |Windows Server 2012 R2 Standard    |6.3    |   |7  |1033 |  
 
-Voici un exemple jeu de résultats sur Linux :
+Voici un exemple de jeu de résultats sur Linux :
  
  |host_platform |host_distribution |host_release |host_service_pack_level |host_sku |os_language_version |
  |----- |----- |----- |----- |----- |----- |

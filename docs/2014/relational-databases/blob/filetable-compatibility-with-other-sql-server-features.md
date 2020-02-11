@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8ea6a5fcfe99926c264fc2116a637f8d30c05df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010152"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Compatibilité de FileTable avec d'autres fonctionnalités SQL Server
@@ -80,14 +80,14 @@ ms.locfileid: "66010152"
 -   Un arrêt anormal de descripteurs Win32, comme la suppression explicite de descripteurs Win32 par un administrateur OU un incident de base de données, n'exécute pas de déclencheurs d'utilisateur au cours des opérations de récupération, bien que le contenu FILESTREAM ait pu être modifié par l'application Win32 arrêtée anormalement.  
   
 ##  <a name="OtherViews"></a> Vues et FileTables  
- **Vues**  
+ **Views**  
  Une vue peut être créée sur un FileTable comme sur toute autre table. Toutefois, les considérations suivantes s'appliquent à une vue créée sur un FileTable :  
   
 -   La vue n'aura pas de sémantique FileTable. autrement dit les colonnes de l’affichage (notamment les colonnes d’attributs de fichier) se comportent comme des colonnes d’affichage normales sans sémantique spéciale. Ceci est également vrai pour les lignes qui représentent des fichiers/répertoires.  
   
 -   La vue peut être modifiable selon la sémantique de la « vue modifiable », mais les contraintes de table sous-jacentes peuvent refuser les mises à jour comme dans la table.  
   
--   Le chemin d'accès à un fichier peut être visualisé dans la vue en l'ajoutant en tant que colonne explicite dans la vue. Exemple :  
+-   Le chemin d'accès à un fichier peut être visualisé dans la vue en l'ajoutant en tant que colonne explicite dans la vue. Par exemple :  
   
      `CREATE VIEW MP3FILES AS SELECT column1, column2, ..., GetFileNamespacePath() AS PATH, column3,...  FROM Documents`  
   

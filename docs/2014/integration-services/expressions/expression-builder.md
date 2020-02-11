@@ -15,13 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c2aa59b0806cc0ede01fa728636ab9d90479f14b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898847"
 ---
-# <a name="expression-builder"></a>Générateur d'expressions
+# <a name="expression-builder"></a>Générateur d’expressions
   Utilisez la boîte de dialogue **Générateur d’expressions** pour créer et modifier l’expression d’une propriété ou écrire l’expression qui définit la valeur d’une variable à l’aide d’une interface graphique utilisateur qui affiche la liste des variables et fournit une référence intégrée aux fonctions, aux conversions de type et aux opérateurs que contient le langage d’expression [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Une expression de propriété est une expression qui est affectée à une propriété. Lorsque l'expression est évaluée, la propriété est mise à jour de manière dynamique pour utiliser le résultat d'évaluation de l'expression. De la même manière, une expression utilisée dans une variable permet à la valeur de la variable d'être mise à jour avec le résultat de l'évaluation de l'expression.  
@@ -48,7 +48,7 @@ ms.locfileid: "62898847"
   
 ## <a name="see-also"></a>Voir aussi  
  [Page Expressions](expressions-page.md)   
- [Éditeur d'expressions de la propriété](property-expressions-editor.md)   
+ [Éditeur d’expressions de la propriété](property-expressions-editor.md)   
  [Variables Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
  [Variables système](../system-variables.md)  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7f916e8acf45c822439a116bc5ad1ff40a11d2de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107695"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>Imprimer des rapports (Générateur de rapports et SSRS)
@@ -46,7 +46,7 @@ ms.locfileid: "66107695"
  Explique comment imprimer des rapports exportés vers une autre application.  
   
  [Imprimer un rapport &#40;Générateur de rapports et SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
- Explique pas à pas comment imprimer un rapport, contrôler les marges sur une page et spécifier le format du papier des rapports qui seront affichés par les convertisseurs de saut de page manuel : PDF, image ou impression.  
+ Fournit des instructions détaillées sur la façon d'imprimer un rapport, sur la façon de contrôler les marges dans une page et sur la façon de spécifier le format du papier pour les rapports qui seront affichés par les convertisseurs de saut de page manuel : PDF, image ou impression.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exportation de rapports &#40;Générateur de rapports et SSRS&#41;](export-reports-report-builder-and-ssrs.md)   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c04742d0e0a84dd35e300bace9107685685ef75b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228900"
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Outils et applications utilisés dans Analysis Services
@@ -43,7 +43,7 @@ ms.locfileid: "75228900"
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  Management Studio est l'outil d'administration principal de toutes les fonctionnalités SQL Server, y compris Analysis Services. SQL Server Management Studio est un composant facultatif. Si vous ne le voyez pas parmi les autres applications SQL Server dans la page Applications de Windows Server 2012, exécutez le programme d'installation de SQL Server pour l'ajouter à votre installation.  
   
-### <a name="sql-server-profiler"></a>Générateur de profils SQL Server  
+### <a name="sql-server-profiler"></a>SQL Server Profiler  
  Bien qu'il soit officiellement déconseillé, SQL Server Profiler permet de surveiller facilement les connexions, l'exécution des requêtes MDX, ainsi que d'autres opérations relatives au serveur. SQL Server Profiler est installé par défaut. Vous le trouverez parmi les applications SQL Server dans la page Applications de Windows Server 2012.  
   
 ### <a name="powershell"></a>PowerShell  

@@ -1,5 +1,5 @@
 ---
-title: Paramètres (chargement d’objets système) du projet (OracleToSQL) | Microsoft Docs
+title: Paramètres du projet (chargement des objets système) (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,39 +11,39 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: a5e8feb6c083c787d877cbc5491c533b8a35d740
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266609"
 ---
 # <a name="project-settingsloading-system-objects-oracletosql"></a>Paramètres du projet (Chargement d’objets système) (OracleToSQL)
-La page de chargement des objets de système de la **paramètres du projet** boîte de dialogue vous permet de spécifier les objets de système Oracle SSMA convertit et les charge dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+La page chargement des objets système de la boîte de dialogue **paramètres du projet** vous permet de spécifier les objets système Oracle que SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]convertit et charge dans.  
   
-Le volet du chargement des objets système n’est disponible dans le **paramètres du projet** et **par défaut des paramètres de projet** boîtes de dialogue :  
+Le volet chargement des objets système est disponible dans les boîtes de dialogue **paramètres du projet** et **paramètres du projet par défaut** :  
   
--   Pour spécifier les paramètres pour tous les projets SSMA, sur le **outils** menu, sélectionnez **par défaut des paramètres de projet**, sélectionnez le type de projet de migration pour lequel les paramètres sont requis pour être affichées ou modifiées à partir de **Version cible de migration** déroulante cliquez **général** en bas du volet gauche, puis cliquez sur **le chargement des objets système**.  
+-   Pour spécifier les paramètres de tous les projets SSMA, dans le menu **Outils** , sélectionnez **paramètres du projet par défaut**, sélectionnez le type de projet de migration pour lequel les paramètres doivent être affichés ou modifiés dans la liste déroulante cible de la **migration** , cliquez sur **général** en bas du volet gauche, puis cliquez sur **chargement des objets système**.  
   
--   Pour spécifier les paramètres pour le projet actuel, sur le **outils** menu, sélectionnez **paramètres du projet**, cliquez sur **général** en bas du volet gauche, puis cliquez sur **Du chargement des objets système**.  
+-   Pour spécifier les paramètres du projet actif, dans le menu **Outils** , sélectionnez **paramètres du projet**, cliquez sur **général** en bas du volet gauche, puis cliquez sur **chargement des objets système**.  
   
 ## <a name="default-settings"></a>Paramètres par défaut  
-Conversion d’objets système consomme des ressources système et prend du temps. Pour améliorer les performances, SSMA sélectionne uniquement les objets système plus fréquemment utilisées, comme indiqué dans la liste suivante :  
+La conversion d’objets système consomme des ressources système et prend du temps. Pour améliorer les performances, SSMA sélectionne uniquement les objets système les plus fréquemment utilisés, comme indiqué dans la liste suivante :  
   
--   SYS.DBMS_OUTPUT  
+-   Table. DBMS_OUTPUT  
   
--   SYS.DBMS_PIPE  
+-   Table. DBMS_PIPE  
   
--   SYS.DBMS_UTILITY  
+-   Table. DBMS_UTILITY  
   
--   SYS. STANDARD  
+-   Table. HIVER  
   
--   SYS. UTL_FILE  
+-   Table. UTL_FILE  
   
--   SYS.DBMS_LOB  
+-   Table. DBMS_LOB  
   
--   SYS.DBMS_SQL  
+-   Table. DBMS_SQL  
   
--   SYS.DBMS_SESSION  
+-   Table. DBMS_SESSION  
   
-Si vos objets Oracle font référence aux objets système supplémentaires, vous devez sélectionner ces objets. Si vous ne sélectionnez pas les objets système qui sont référencés par vos objets de base de données Oracle, SSMA signale les erreurs de conversion. Si vous recevez des erreurs de conversion dus à l’absence d’objets système, sélectionnez les objets manquants dans cette boîte de dialogue. Vous pouvez ensuite répéter la conversion en fonction des besoins.  
+Si vos objets Oracle font référence à des objets système supplémentaires, vous devez sélectionner ces objets. Si vous ne sélectionnez pas les objets système qui sont référencés par vos objets de base de données Oracle, SSMA signale des erreurs de conversion. Si vous recevez des erreurs de conversion causées par des objets système manquants, sélectionnez les objets manquants dans cette boîte de dialogue. Vous pouvez ensuite répéter la conversion si nécessaire.  
   

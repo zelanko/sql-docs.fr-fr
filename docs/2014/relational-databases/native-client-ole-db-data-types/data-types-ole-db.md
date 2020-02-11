@@ -16,20 +16,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e9371f053f95754cdcb7107559f9e0bc3eca2e9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63062137"
 ---
 # <a name="data-types-ole-db"></a>Types de données (OLE DB)
-  Afin d’exécuter [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions et traiter les résultats à l’aide de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client, vous devez savoir comment la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maps du fournisseur OLE DB Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des types de données aux types de données OLE DB lors de la liaison paramètres ou colonnes dans un ensemble de lignes, et lorsqu’il utilise le **ITableDefinition** interface pour créer une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Pour exécuter [!INCLUDE[tsql](../../includes/tsql-md.md)] des instructions et traiter les résultats à l’aide [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du fournisseur OLE DB Native Client, vous devez savoir comment [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le fournisseur de OLE DB Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client mappe les types de données aux types de données OLE DB lors de la liaison de paramètres ou de colonnes dans un ensemble de lignes, et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]lorsqu’il utilise l’interface **ITableDefinition** pour créer une table dans.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Mappage de types de données dans les ensembles de lignes et les paramètres](data-type-mapping-in-rowsets-and-parameters.md)  
+-   [Mappage de type de données dans les ensembles de lignes et les paramètres](data-type-mapping-in-rowsets-and-parameters.md)  
   
--   [Mappage de types de données dans ITableDefinition](data-type-mapping-in-itabledefinition.md)  
+-   [Mappage de type de données dans ITableDefinition](data-type-mapping-in-itabledefinition.md)  
   
 -   [Structure SSVARIANT](ssvariant-structure.md)  
   

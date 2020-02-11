@@ -19,18 +19,18 @@ ms.assetid: 9c2b0990-1d3d-4a59-94a0-3cca6fef4681
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5ae8cb259f1dfa424de37c7342cf1f6081a8c8b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68000908"
 ---
-# <a name="spsyscollectordeletecollectionitem-transact-sql"></a>sp_syscollector_delete_collection_item (Transact-SQL)
+# <a name="sp_syscollector_delete_collection_item-transact-sql"></a>sp_syscollector_delete_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime un élément de collecte d’un jeu d’éléments de collecte.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,13 +42,13 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
   
 ## <a name="arguments"></a>Arguments  
  [ @collection_item_id = ] *collection_item_id*  
- Identificateur unique de l'élément de collecte. *collection_item_id* est **int** avec NULL comme valeur par défaut. *collection_item_id* doit avoir une valeur si *nom* est NULL.  
+ Identificateur unique de l'élément de collecte. *collection_item_id* est de **type int** avec NULL comme valeur par défaut. *collection_item_id* doit avoir une valeur si le *nom* est null.  
   
- [ @name =] '*nom*'  
- Nom de l'élément de collecte. *nom* est **sysname** avec une valeur par défaut NULL. *nom* doit avoir une valeur si *collection_item_id* a la valeur NULL.  
+ [ @name = ] '*nom*'  
+ Nom de l'élément de collecte. *Name* est de **type sysname** avec NULL comme valeur par défaut. le *nom* doit avoir une valeur si *collection_item_id* a la valeur null.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
  sp_syscollector_delete_collection_item doit être exécuté dans le contexte de la base de données système msdb. Il est impossible de supprimer des éléments de collecte de jeux d'éléments de collecte système.  

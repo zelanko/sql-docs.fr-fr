@@ -1,5 +1,5 @@
 ---
-title: Options (éditeur de texte - toutes les langues-Page des onglets) | Microsoft Docs
+title: Options (éditeur de texte-toutes les langues-page onglets) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 377ca16075a86c366fcfa8d9d96bcfa989efec4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089904"
 ---
 # <a name="options-text-editor---all-languages--tabs-page"></a>Options (Éditeur de texte - Toutes les langues - Page Onglets)
@@ -24,7 +24,7 @@ ms.locfileid: "66089904"
  Vous devez utilisez les boîtes de dialogue **Tous les langages** pour définir les options des éditeurs DMX, MDX et SQL Server Compact. Les options définies ici s'appliquent aussi aux éditeurs de texte brut, Transact-SQL et XML, mais vous pouvez définir les options de ces éditeurs séparément en développant les sous-dossiers de ces langages et en sélectionnant leur page d'options. Certains langages ne prennent pas en charge toutes les options de tabulation.  
   
 > [!CAUTION]  
->  Si vous définissez une option à l'aide de cette boîte de dialogue, mais que vous voulez un paramétrage différent pour les éditeurs de texte brut, Transact-SQL ou XML, vous devrez définir les options de ces éditeurs après avoir appliqué les sélections effectuées dans la boîte de dialogue **Tous les langages** .  
+>  Si vous définissez une option à l’aide de cette boîte de dialogue, mais que vous voulez un paramétrage différent pour les éditeurs de texte brut, Transact-SQL ou XML, vous devrez définir les options de ces éditeurs après avoir appliqué les sélections effectuées dans la boîte de dialogue **Tous les langages**.  
   
  Le message « Les paramètres de mise en retrait (ou de tabulation) pour les formats de texte individuels sont en conflit » s'affiche lorsque différents paramètres ont été sélectionnés pour des éditeurs particuliers. Ce rappel s'affiche notamment si l'option **Mise en retrait** est sélectionnée pour **Texte brut**, et **Aucun** pour **XML**.  
   
@@ -32,14 +32,14 @@ ms.locfileid: "66089904"
  **Aucun**  
  Lorsque cette option est activée, la nouvelle ligne créée grâce à la touche ENTRÉE n'est pas mise en retrait. Le curseur est placé au niveau de la première colonne de la nouvelle ligne.  
   
- **Block**  
+ **Plage**  
  Lorsque cette option est activée, la nouvelle ligne créée grâce à la touche ENTRÉE est automatiquement mise en retrait à la même distance que la ligne précédente.  
   
- **Smart**  
+ **Intelligente**  
  Lorsque cette option est activée, la nouvelle ligne créée grâce à la touche ENTRÉE est positionnée en fonction du contexte.  
   
-## <a name="tabs"></a>Tabulations  
- **Taille des tabulations**  
+## <a name="tabs"></a>Onglets  
+ **Taille des tabulation**  
  Définit la distance en espaces entre les taquets de tabulation. La valeur par défaut est quatre espaces.  
   
  **Taille du retrait**  

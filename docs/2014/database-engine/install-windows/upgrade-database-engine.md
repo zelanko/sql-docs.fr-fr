@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774970"
 ---
 # <a name="upgrade-database-engine"></a>Mettre à niveau le moteur de base de données
@@ -37,13 +37,13 @@ ms.locfileid: "62774970"
 -   Tâches postérieures à la mise à niveau et observations  
   
 ## <a name="known-upgrade-issues"></a>Problèmes de mise à niveau connus  
- Avant la mise à niveau du [!INCLUDE[ssDE](../../includes/ssde-md.md)], consultez la rubrique [Compatibilité descendante du moteur de base de données SQL Server](../sql-server-database-engine-backward-compatibility.md). Pour plus d’informations sur les scénarios de mise à niveau pris en charge et les problèmes de mise à niveau connus, consultez [Mises à niveau de la version et de l’édition prises en charge](supported-version-and-edition-upgrades.md). Pour plus d’informations sur la compatibilité descendante des autres composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Compatibilité descendante](../../getting-started/backward-compatibility.md).  
+ Avant d'effectuer la mise à niveau du [!INCLUDE[ssDE](../../includes/ssde-md.md)], consultez [SQL Server Database Engine Backward Compatibility](../sql-server-database-engine-backward-compatibility.md). Pour plus d’informations sur les scénarios de mise à niveau pris en charge et les problèmes de mise à niveau connus, consultez [Mises à niveau de la version et de l’édition prises en charge](supported-version-and-edition-upgrades.md). Pour plus d'informations sur la compatibilité descendante des autres composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Backward Compatibility](../../getting-started/backward-compatibility.md).  
   
 > [!IMPORTANT]  
 >  Avant toute mise à niveau d'une édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers une autre, vérifiez que la fonctionnalité en cours d'utilisation est prise en charge dans l'édition vers laquelle vous effectuez la mise à niveau.  
   
 > [!NOTE]  
->  Lorsque vous mettez à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à partir d’une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition, choisissez entre Enterprise Edition : Licence par cœur et Enterprise Edition. Ces éditions Enterprise se différencient uniquement par leur mode de licences. Pour plus d'informations, consultez [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+>  Lorsque vous effectuez la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] d'une version antérieure de l'édition Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , choisissez entre Enterprise Edition : contrat de licence selon le nombre de cœurs et Enterprise Edition. Ces éditions Enterprise se différencient uniquement par leur mode de licences. Pour plus d’informations, consultez [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
 ## <a name="pre-upgrade-checklist"></a>Liste de contrôle préalable à la mise à niveau  
  La mise à niveau vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'une version précédente est prise en charge par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez également migrer les bases de données à partir de versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La migration peut être effectuée à partir d'une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers une autre instance située vers le même ordinateur ou à partir d'une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers un autre ordinateur. Les options de migration incluent l'utilisation de l'Assistant Copie de base de données, de la fonctionnalité de sauvegarde et de restauration, ainsi que l'utilisation de l'Assistant Importation et exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et des méthodes d'importation et d'exportation en bloc.  
@@ -62,7 +62,7 @@ ms.locfileid: "62774970"
   
 -   Consultez [Utiliser Distributed Replay Utility pour préparer des mises à niveau](../../sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md).  
   
--   Consultez [Compatibilité descendante du moteur de base de données SQL Server](../sql-server-database-engine-backward-compatibility.md).  
+-   Consultez [SQL Server Database Engine Backward Compatibility](../sql-server-database-engine-backward-compatibility.md).  
   
 -   Consultez [Migrer des plans de requête](change-the-database-compatibility-mode-and-use-the-query-store.md).  
   
@@ -70,13 +70,13 @@ ms.locfileid: "62774970"
   
 -   Lors de la mise à niveau des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] où l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est inscrit dans les relations MSX/TSX, mettez à niveau les serveurs cibles avant de mettre à niveau les serveurs maîtres. Si vous mettez à niveau les serveurs maîtres avant les serveurs cibles, l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne sera pas en mesure de se connecter aux instances principales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Quand vous procédez à une mise à niveau à partir d’une version 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers une version 64 bits de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous devez mettre à niveau [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] avant de mettre à niveau le [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+-   Lorsque vous procédez à une mise à niveau à partir d'une version 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers une version 64 bits de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous devez mettre à niveau [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] avant de mettre à niveau le [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 -   Sauvegardez tous les fichiers de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de l'instance à mettre à niveau, afin de pouvoir les restaurer, si besoin est.  
   
 -   Exécutez les commandes DBCC (Database Console Commands) appropriées sur les bases de données à mettre à niveau afin de vérifier leur cohérence.  
   
--   Estimez l'espace disque requis pour mettre à niveau les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ainsi que les bases de données utilisateur. Pour connaître l’espace disque nécessaire par les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+-   Estimez l'espace disque requis pour mettre à niveau les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ainsi que les bases de données utilisateur. Pour connaître l'espace disque requis par les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 -   Vérifiez que les bases de données système de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - master, model, msdb et tempdb - sont configurées pour s'accroître automatiquement et vérifiez qu'elles disposent pour cela d'un espace disque suffisant.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62774970"
   
 -   Désactivez toutes les procédures stockées de démarrage, car le processus de mise à niveau arrête et démarre les services sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cours de mise à niveau. Les procédures stockées traitées au moment du démarrage pourraient bloquer le processus de mise à niveau.  
   
--   Assurez-vous que la réplication est activée et arrêtez la réplication.  
+-   Assurez-vous que la réplication est activé et arrêtez la réplication.  
   
 -   Quittez toutes les applications, y compris tous les services ayant des dépendances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La mise à niveau peut échouer si les applications locales sont connectées à l'instance en cours de mise à niveau.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62774970"
  Vous pouvez mettre à niveau le [!INCLUDE[ssDE](../../includes/ssde-md.md)] en utilisant l'Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ### <a name="database-compatibility-level-after-upgrade"></a>Niveau de compatibilité des bases de données après une mise à niveau  
- Les niveaux de compatibilité de la `tempdb`, `model`, `msdb` et **ressource** bases de données sont définis à 120 après la mise à niveau. La base de données système `master` conserve le niveau de compatibilité qu'elle avait avant la mise à niveau.  
+ Les niveaux de compatibilité des `tempdb`bases `model`de `msdb` données de **ressources** , et sont définis sur 120 après la mise à niveau. La base de données système `master` conserve le niveau de compatibilité qu'elle avait avant la mise à niveau.  
   
  Si le niveau de compatibilité d'une base de données utilisateur est à 100 ou supérieur avant la mise à niveau, il reste le même après la mise à niveau. Si le niveau de compatibilité était à 90 avant la mise à niveau, dans la base de données mise à niveau, le niveau de compatibilité est défini à 100, ce qui correspond au niveau de compatibilité le plus bas pris en charge dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -124,7 +124,8 @@ ms.locfileid: "62774970"
   
 -   Alimentez à nouveau les catalogues de texte intégral pour garantir la cohérence sémantique dans les résultats de la requête.  
   
-     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installe de nouveaux analyseurs lexicaux pour la recherche en texte intégral et sémantique. Les analyseurs lexicaux sont utilisés au moment de l'indexation et au moment de la requête. Si vous ne reconstruisez pas les catalogues de texte intégral, vos résultats de recherche peuvent être incohérents. Si vous exécutez une requête de texte intégral qui recherche une expression qui est divisée différemment par l'analyseur lexical dans une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l'analyseur lexical actuel, une ligne ou un document contenant l'expression peut ne pas être extrait. Cela est dû au fait que les expressions indexées ont été divisées à l'aide d'une logique différente de celle de la requête utilise. La solution consiste à réalimenter (reconstruire) les catalogues de texte intégral avec les nouveaux analyseurs lexicaux afin que le temps d'indexation et le comportement de cette requête soient identiques.  
+     
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installe de nouveaux analyseurs lexicaux pour la recherche en texte intégral et sémantique. Les analyseurs lexicaux sont utilisés au moment de l'indexation et au moment de la requête. Si vous ne reconstruisez pas les catalogues de texte intégral, vos résultats de recherche peuvent être incohérents. Si vous exécutez une requête de texte intégral qui recherche une expression qui est divisée différemment par l'analyseur lexical dans une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l'analyseur lexical actuel, une ligne ou un document contenant l'expression peut ne pas être extrait. Cela est dû au fait que les expressions indexées ont été divisées à l'aide d'une logique différente de celle de la requête utilise. La solution consiste à réalimenter (reconstruire) les catalogues de texte intégral avec les nouveaux analyseurs lexicaux afin que le temps d'indexation et le comportement de cette requête soient identiques.  
   
      Pour plus d’informations, consultez [sp_fulltext_catalog &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql).  
   
@@ -132,9 +133,10 @@ ms.locfileid: "62774970"
   
 -   Validez ou supprimez les indicateurs USE PLAN générés par [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et appliqués aux requêtes sur les tables partitionnées et les index.  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modifie la manière dont sont traitées les requêtes sur les tables partitionnées et les index. Les requêtes sur les objets partitionnés qui utilisent l'indicateur USE PLAN pour un plan généré par [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] peuvent contenir un plan non utilisable dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Nous recommandons les procédures suivantes après la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+     
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modifie la manière dont sont traitées les requêtes sur les tables partitionnées et les index. Les requêtes sur les objets partitionnés qui utilisent l'indicateur USE PLAN pour un plan généré par [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] peuvent contenir un plan non utilisable dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Nous recommandons les procédures suivantes après la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-     **Lorsque l’indicateur USE PLAN est spécifié directement dans une requête :**  
+     **Lorsque l'indicateur USE PLAN conseil est spécifié directement dans une requête :**  
   
     1.  Supprimez l'indicateur USE PLAN de la requête.  
   
@@ -142,7 +144,7 @@ ms.locfileid: "62774970"
   
     3.  Si l'optimiseur ne sélectionne pas un plan approprié, réglez la requête, puis envisagez de spécifier l'indicateur USE PLAN avec le plan de requête désiré.  
   
-     **Lorsque l’indicateur USE PLAN est spécifié dans un repère de plan :**  
+     **Lorsque l'indicateur USE PLAN conseil est spécifié dans un repère de plan :**  
   
     1.  Utilisez la fonction sys.fn_validate_plan_guide pour vérifier la validité du repère de plan. Vous pouvez aussi surveiller les repères de plan non valides en utilisant l'événement Plan Guide Unsuccessful dans [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
@@ -156,7 +158,7 @@ ms.locfileid: "62774970"
 EXEC sp_fulltext_service 'pause_indexing', 1;  
 ```  
   
- Pour reprendre l'alimentation de l'index de recherche en texte intégral, exécutez l'instruction suivante :  
+ Pour reprendre l'alimentation de l'index de recherche en texte intégral, exécutez l'instruction suivante :  
   
 ```  
 EXEC sp_fulltext_service 'pause_indexing', 0;  
@@ -164,7 +166,7 @@ EXEC sp_fulltext_service 'pause_indexing', 0;
   
 ## <a name="see-also"></a>Voir aussi  
  [Mises à niveau de la version et de l'édition prises en charge](supported-version-and-edition-upgrades.md)   
- [Travailler avec plusieurs Versions et Instances de SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
+ [Utiliser plusieurs versions et instances de SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
  [Compatibilité descendante](../../getting-started/backward-compatibility.md)   
  [Mettre à niveau des bases de données répliquées](upgrade-replicated-databases.md)  
   

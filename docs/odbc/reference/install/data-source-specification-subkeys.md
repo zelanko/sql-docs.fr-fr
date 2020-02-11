@@ -1,5 +1,5 @@
 ---
-title: Sous-clés de spécification de la Source de données | Microsoft Docs
+title: Sous-clés de spécification de source de données | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,27 +15,27 @@ ms.assetid: d7e88a07-e6ab-4258-a45d-1ca21234fbec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fae642b46b4c652583622ec4832b3217d0b1681c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068562"
 ---
 # <a name="data-source-specification-subkeys"></a>Sous-clés de spécification de source de données
-Chaque source de données répertoriée dans la sous-clé de Sources de données ODBC a une sous-clé de son propre. Cette sous-clé a le même nom que la valeur correspondante sous la sous-clé de Sources de données ODBC. Les valeurs sous cette sous-clé doivent répertorier la DLL du pilote et peuvent indiquer une description de la source de données. Si le pilote prend en charge les traducteurs, les valeurs peuvent répertorier le nom d’un convertisseur de valeur par défaut, la DLL de traduction par défaut et l’option de traduction par défaut. Les valeurs peuvent également énumérer les autres informations requises par le pilote pour se connecter à la source de données. Par exemple, le pilote peut nécessiter un nom de serveur, le nom de la base de données ou le nom de schéma.  
+Chaque source de données figurant dans la sous-clé de sources de données ODBC possède sa propre sous-clé. Cette sous-clé porte le même nom que la valeur correspondante dans la sous-clé de sources de données ODBC. Les valeurs sous cette sous-clé doivent répertorier la DLL du pilote et peuvent répertorier une description de la source de données. Si le pilote prend en charge les traducteurs, les valeurs peuvent répertorier le nom d’un convertisseur par défaut, la DLL de traduction par défaut et l’option de traduction par défaut. Les valeurs peuvent également répertorier d’autres informations requises par le pilote pour la connexion à la source de données. Par exemple, le pilote peut nécessiter un nom de serveur, un nom de base de données ou un nom de schéma.  
   
- Les formats des valeurs sont comme indiqué dans le tableau suivant. Seule la valeur du pilote est requise.  
+ Les formats des valeurs sont répertoriés dans le tableau suivant. Seule la valeur Driver est requise.  
   
 |Name|Type de données|Données|  
 |----------|---------------|----------|  
 |Description|REG_SZ|*description*|  
-|Pilote|REG_SZ|*chemin de DLL de pilote*|  
-|TranslationDLL|REG_SZ|*chemin de DLL de traduction*|  
-|TranslationName|REG_SZ|*translator-name*|  
-|TranslationOption|REG_SZ|*translation-option*|  
-|*opt-value-name*|*opt-value-type*|*opt-value-data*|  
+|Pilote|REG_SZ|*Driver-DLL-Path*|  
+|TranslationDLL|REG_SZ|*Traducteur-DLL-chemin*|  
+|TranslationName|REG_SZ|*Traducteur-nom*|  
+|TranslationOption|REG_SZ|*option de traduction*|  
+|*opt-Value-Name*|*opt-value-type*|*opt-value-Data*|  
   
- Par exemple, le pilote SQL Server nécessite le nom du serveur et un indicateur pour OEM pour la conversion ANSI et définit les valeurs de serveur et OEMTOANSI pour ceux-ci. Supposons également que la source de données d’inventaire utilise le traducteur de Page de Code Microsoft® pour la translation entre le Windows® Latin 1 (1250) et les pages de codes multilingue (850). Les valeurs sous la sous-clé de stock peuvent être comme suit :  
+ Supposons, par exemple, que le pilote SQL Server nécessite le nom du serveur et un indicateur pour la conversion OEM en ANSI et définit les valeurs Server et OEMTOANSI pour celles-ci. Supposons également que la source de données d’inventaire utilise le traducteur de pages de codes Microsoft® pour effectuer la conversion entre les pages de codes Windows® latin 1 (1250) et multilingue (850). Les valeurs sous la sous-clé Inventory peuvent être les suivantes :  
   
 ```  
 Description : REG_SZ : Inventory database on server InvServ  

@@ -15,13 +15,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 67e09713fdec72313bde6ba81e1cc169467fda0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211195"
 ---
-# <a name="tutorial-writing-transact-sql-statements"></a>Tutoriel : Écriture d’instructions Transact-SQL
+# <a name="tutorial-writing-transact-sql-statements"></a>Didacticiel : écriture d'instructions Transact-SQL
   Bienvenue dans le didacticiel d'écriture d'instructions [!INCLUDE[tsql](../includes/tsql-md.md)] . Ce didacticiel s'adresse aux utilisateurs qui débutent dans l'écriture d'instructions SQL. Il permet aux nouveaux utilisateurs de débuter en passant en revue certaines instructions de base destinées à créer des tables et à insérer des données. Ce didacticiel utilise [!INCLUDE[tsql](../includes/tsql-md.md)], l'implémentation [!INCLUDE[msCoName](../includes/msconame-md.md)] de la norme SQL. Ce didacticiel constitue une brève introduction au langage [!INCLUDE[tsql](../includes/tsql-md.md)] mais ne remplace pas un cours de formation sur [!INCLUDE[tsql](../includes/tsql-md.md)] . Les instructions de ce didacticiel sont volontairement simples et n'ont pas pour objectif de traduire la complexité propre à une base de données de production type.  
   
 > [!NOTE]  
@@ -35,27 +35,28 @@ ms.locfileid: "68211195"
   
  Ce didacticiel est divisé en trois leçons :  
   
- [Leçon 1 : Création des objets de base de données](lesson-1-creating-database-objects.md)  
+ [Leçon 1 : Création des objets de base de données](lesson-1-creating-database-objects.md)  
  Dans cette leçon, vous allez créer une base de données, créer une table dans la base de données, insérer des données dans la table, mettre à jour et lire les données.  
   
- [Leçon 2 : Configuration des autorisations sur des objets de base de données](lesson-2-configuring-permissions-on-database-objects.md)  
+ [Leçon 2 : Configuration des autorisations sur des objets de base de données](lesson-2-configuring-permissions-on-database-objects.md)  
  Dans cette leçon, vous allez créer une connexion et un utilisateur. Vous allez également créer une vue et une procédure stockée, puis octroyer à l'utilisateur l'autorisation sur la procédure stockée.  
   
- [Leçon 3 : Suppression des objets de base de données](lesson-3-1-deleting-database-objects.md)  
+ [Leçon 3 : Suppression des objets de base de données](lesson-3-1-deleting-database-objects.md)  
  Dans cette leçon, vous allez supprimer l'accès aux données, supprimer des données d'une table, supprimer la table, puis supprimer la base de données.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Pour suivre ce didacticiel jusqu'à la fin, il n'est pas nécessaire de connaître le langage SQL mais vous devez avoir une connaissance de base des concepts propres aux bases de données, tels que les tables. Au cours de ce didacticiel, vous allez créer une base de données et créer un utilisateur Windows. Ces tâches demandent un niveau élevé d'autorisations, c'est pourquoi vous devez vous connecter à l'ordinateur en tant qu'administrateur.  
   
  Les programmes suivants doivent être installés sur votre système :  
   
 -   Toute édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou Management Studio Express.  
+-   
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou Management Studio Express.  
   
 -   Internet Explorer 6 ou version ultérieure.  
   
 > [!NOTE]  
->  Lorsque vous parcourez les didacticiels, nous vous recommandons d’ajouter le **suivant** et **précédent** boutons à la barre d’outils Visionneuse de document.  
+>  Lorsque vous passez en revue les didacticiels, nous vous recommandons d’ajouter les boutons **suivant** et **précédent** dans la barre d’outils de la visionneuse de documents.  
   
   

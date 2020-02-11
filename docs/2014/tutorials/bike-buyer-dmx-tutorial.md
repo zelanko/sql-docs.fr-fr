@@ -1,5 +1,5 @@
 ---
-title: Bike Buyer DMX Tutorial | Microsoft Docs
+title: Didacticiel DMX pour les acheteurs de vélos | Microsoft Docs
 ms.custom: ''
 ms.date: 10/19/2018
 ms.prod: sql-server-2014
@@ -17,19 +17,21 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3cf9a0c9e6059330c0b8edbd8228f617ba093564
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140544"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Didacticiel DMX Bike Buyer
   Dans ce didacticiel, vous allez apprendre à créer, assimiler et explorer des modèles d'exploration de données à l'aide du langage de requête DMX (Data Mining Extensions). Vous utiliserez ensuite ces modèles pour créer des tâches de prédiction déterminant si un client envisage ou non d'acheter un vélo.  
   
- Les modèles d'exploration de données seront créés à partir des données de la société fictive [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] stockées dans l'exemple de base de données [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] est une importante société de fabrication multinationale. L'entreprise fabrique et vend des vélos métalliques et des vélos en alliage sur les marchés nord-américain, européen et asiatique. Son siège qui compte 290 employés est situé à Bothell dans l'état de Washington aux États-Unis ; elle dispose de plusieurs équipes commerciales réparties dans diverses régions du monde constituant son marché de base.  
+ Les modèles d'exploration de données seront créés à partir des données de la société fictive [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] stockées dans l'exemple de base de données [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. 
+  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] est une importante société de fabrication multinationale. L'entreprise fabrique et vend des vélos métalliques et des vélos en alliage sur les marchés nord-américain, européen et asiatique. Son siège qui compte 290 employés est situé à Bothell dans l'état de Washington aux États-Unis ; elle dispose de plusieurs équipes commerciales réparties dans diverses régions du monde constituant son marché de base.  
   
 ## <a name="tutorial-scenario"></a>Scénario du didacticiel  
- [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] a décidé d'étendre l'analyse de ses données en créant une application personnalisée qui exploite des fonctionnalités d'exploration de données. Son application personnalisée vise les objectifs suivants :  
+ 
+  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] a décidé d'étendre l'analyse de ses données en créant une application personnalisée qui exploite des fonctionnalités d'exploration de données. Son application personnalisée vise les objectifs suivants :  
   
 -   Recueillir en guise de données les caractéristiques spécifiques d'un client potentiel et déterminer son intention ou non d'acheter un vélo.  
   
@@ -39,7 +41,7 @@ ms.locfileid: "63140544"
   
  Qui plus est, le service marketing demande s'il est possible de regrouper des clients existants par catégories selon diverses caractéristiques, notamment le lieu de résidence, le nombre d'enfants à charge et la distance parcourue pour se rendre au travail et en revenir. Les responsables de ce service souhaitent savoir s'il est possible d'utiliser ces clusters pour cibler des catégories précises de clients. Cette recherche exige un autre modèle d'exploration de données.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit plusieurs outils qui peuvent être utilisées pour accomplir ces tâches :  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit plusieurs outils qui peuvent être utilisés pour accomplir ces [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tâches :  
   
 -   Langage de requête DMX  
   
@@ -49,7 +51,7 @@ ms.locfileid: "63140544"
   
  Le langage de requête DMX (Data Mining Extensions) fourni par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] permet de créer et d'utiliser des modèles d'exploration de données. L'algorithme MDT ( [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees) permet de créer des modèles que vous pouvez utiliser pour prévoir les intentions d'achat de vélo d'une personne. Le modèle obtenu permet d'exploiter un seul client ou un ensemble de clients en guise de données. L'algorithme [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering permet de créer des groupes de clients sur la base de caractéristiques communes. L'objectif de ce didacticiel est de fournir des scripts DMX à utiliser dans l'application personnalisée.  
   
- **Pour plus d'informations, consultez :** [Solutions d’exploration de données](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
+ **Pour plus d’informations : solutions d'** [exploration de données](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>Structure et modèles d'exploration de données  
  Avant de créer des instructions DMX, il est primordial de comprendre les objets principaux auxquels [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fait appel pour créer des modèles d'exploration de données. La structure d'exploration de données est une structure de données qui définit le domaine de données à partir duquel les modèles d'exploration de données sont créés. Une structure d'exploration de données unique peut contenir plusieurs de ces modèles partageant le même domaine. Un modèle d'exploration applique un algorithme de modèle d'exploration aux données qui sont représentées par une structure d'exploration de données.  
@@ -68,38 +70,38 @@ ms.locfileid: "63140544"
  ALTER MINING STRUCTURE  
  Utilisez cette instruction pour ajouter un modèle d'exploration de données à une structure d'exploration de données existant déjà sur le serveur. Cette instruction est utile si vous souhaitez créer une structure d'exploration de données abritant plusieurs modèles d'exploration de données différents. Plusieurs raisons peuvent vous inciter à ajouter plusieurs modèles d'exploration de données dans une structure d'exploration de données unique. Par exemple, vous pouvez créer plusieurs modèles d'exploration de données utilisant différents algorithmes pour savoir lequel fonctionne le mieux. Vous pouvez créer plusieurs modèles d'exploration de données utilisant le même algorithme, mais avec un paramètre défini différemment pour chaque modèle, afin de trouver la meilleure définition pour ce paramètre.  
   
- Pour plus d’informations, consultez [ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016).  
+ Pour plus d’informations, consultez [ALTER Mining STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016).  
   
  Puisque vous allez créer une structure d'exploration de données dotée de plusieurs modèles d'exploration de données, vous devrez adopter la deuxième méthode de ce didacticiel.  
   
- **Pour plus d’informations**  
+ **Pour plus d'informations**  
   
- [Data Mining Extensions &#40;DMX&#41; référence](/sql/dmx/data-mining-extensions-dmx-reference), [présentation de l’instruction DMX instruction Select](/sql/dmx/understanding-the-dmx-select-statement), [Structure et utilisation des requêtes de prédiction DMX](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
+ [Informations de référence sur les extensions DMX (Data Mining Extensions &#40;dmx&#41;](/sql/dmx/data-mining-extensions-dmx-reference), [Présentation de l’instruction DMX Select](/sql/dmx/understanding-the-dmx-select-statement), de la [structure et de l’utilisation des requêtes de prédiction DMX](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
  Ce didacticiel contient les leçons suivantes :  
   
- [Leçon 1 : Création de la Structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)  
+ [Leçon 1 : Création de la structure d'exploration de données Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `CREATE` pour créer des structures d'exploration de données.  
   
- [Leçon 2 : Ajout des modèles d’exploration de données à la Structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
+ [Leçon 2 : Ajout de modèles d'exploration de données à la structure d'exploration de données Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `ALTER` pour ajouter des modèles d'exploration de données à une structure d'exploration de données.  
   
- [Leçon 3 : Traitement de la Structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
+ [Leçon 3 : traitement de la structure d'exploration de données Bike Buyer](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `INSERT INTO` pour traiter des structures d'exploration de données et les modèles qui y sont associés.  
   
- [Leçon 4 : Exploration des modèles d’exploration de données Bike Buyer](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
+ [Leçon 4 : Exploration des modèles d'exploration de données Bike Buyer](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `SELECT` pour explorer le contenu des modèles d'exploration de données.  
   
- [Leçon 5 : L’exécution de requêtes de prédiction](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
+ [Leçon 5 : exécution des requêtes de prédiction](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `PREDICTION JOIN` pour établir des prédictions par rapport à des modèles d'exploration de données.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Avant d'entamer ce didacticiel, assurez-vous que les éléments suivants sont installés :  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)], [!INCLUDE[ssASversion10](../includes/ssasversion10-md.md)], [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)], ou [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)], [!INCLUDE[ssASversion10](../includes/ssasversion10-md.md)], [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]ou [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
 -   La base de données [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] . Pour des raisons de sécurité, les bases de données exemples ne sont pas installées par défaut. Pour installer des exemples de bases de données officielles pour [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visitez la page d' [exemples de bases de données Microsoft SQL](https://go.microsoft.com/fwlink/?LinkId=88417) (en anglais) et sélectionnez les bases de données que vous voulez installer.  
   
@@ -107,7 +109,7 @@ ms.locfileid: "63140544"
 >  Lorsque vous parcourez les didacticiels, il est recommandé d'ajouter les boutons **Rubrique suivante** et **Rubrique précédente** dans la barre d'outils de l'afficheur de document.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Didacticiel DMX Market Basket](../../2014/tutorials/market-basket-dmx-tutorial.md)   
- [Tutoriel sur l’exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ [Didacticiel DMX sur le panier de marché](../../2014/tutorials/market-basket-dmx-tutorial.md)   
+ [Didacticiel d’exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
   

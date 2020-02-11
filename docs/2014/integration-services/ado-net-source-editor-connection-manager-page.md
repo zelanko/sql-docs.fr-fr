@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Source ADO NET (Page Gestionnaire de connexions) | Microsoft Docs
+title: Éditeur de source ADO NET (page Gestionnaire de connexions) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3d9d2270603c3f38189478ccaaf48510085907f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061689"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>Éditeur de source ADO NET (page Gestionnaire de connexions)
@@ -47,8 +47,8 @@ ms.locfileid: "66061689"
 |Table ou vue|Permet de récupérer les données d’une table ou d’une vue dans la source de données [!INCLUDE[vstecado](../includes/vstecado-md.md)] .|  
 |Commande SQL|Permet de récupérer les données auprès de la source de données [!INCLUDE[vstecado](../includes/vstecado-md.md)] à l’aide d’une requête SQL.|  
   
- **Aperçu**  
- Affichez un aperçu des résultats à partir de la boîte de dialogue **Vue de données** . Le mode**Aperçu** peut afficher jusqu’à 200 lignes.  
+ **Préversion**  
+ Affichez un aperçu des résultats à partir de la boîte de dialogue **Vue de données** . L' **Aperçu** peut afficher jusqu’à 200 lignes.  
   
 > [!NOTE]  
 >  Lorsque vous affichez l'aperçu des données, les colonnes ayant un type CLR défini par l'utilisateur ne contiennent pas de données. Les valeurs \<valeur trop grande pour être affichée> ou System.Byte[] s’affichent à la place. La première s'affiche lorsque le fournisseur [!INCLUDE[vstecado](../includes/vstecado-md.md)] accède à la source de données ; la seconde lorsque vous utilisez le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -63,15 +63,15 @@ ms.locfileid: "66061689"
  **Texte de la commande SQL**  
  Entrez le texte d’une requête SQL, générez la requête en cliquant sur **Générer une requête**ou recherchez le fichier qui contient le texte de la requête en cliquant sur **Parcourir**.  
   
- **Construire une requête**  
+ **Générer la requête**  
  Utilisez la boîte de dialogue **Générateur de requêtes** pour construire la requête SQL visuellement.  
   
  **Parcourir**  
  Dans la boîte de dialogue **Ouvrir** , localisez le fichier qui contient le texte de la requête SQL.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de source ADO NET &#40;page Colonnes&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
- [Éditeur de source ADO NET &#40;page Sortie d’erreur&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
+ [Éditeur de source ADO NET &#40;page colonnes&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
+ [Éditeur de source ADO NET &#40;page sortie d’erreur&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [Gestionnaire de connexions ADO.NET](connection-manager/ado-net-connection-manager.md)  
   
   

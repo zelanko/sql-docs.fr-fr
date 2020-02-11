@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9d862ac509af3936a9f09cadd01667cbe81a679c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104849"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Spécifier un intervalle d'axe (Générateur de rapports et SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66104849"
 > [!NOTE]  
 >  L'axe des abscisses est généralement l'axe horizontal, ou axe des X. Toutefois, pour les graphiques à barres, l'axe des abscisses est l'axe vertical, ou axe des Y.  
   
- Un exemple de graphique spécifiant des intervalles d'axe différents est disponible sous la forme d'un exemple de rapport. Pour plus d'informations sur le téléchargement de cet exemple de rapport et d'autres rapports, consultez [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Exemples de rapports du Générateur de rapports et du Concepteur de rapports](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ Un exemple de graphique spécifiant des intervalles d'axe différents est disponible sous la forme d'un exemple de rapport. Pour plus d’informations sur le téléchargement de cet exemple de rapport [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]et d’autres, consultez [Générateur de rapports et concepteur de rapports des exemples de rapports](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -36,7 +36,7 @@ ms.locfileid: "66104849"
   
 1.  Cliquez avec le bouton droit sur l'axe des abscisses, puis cliquez sur **Propriétés de l'axe**. La boîte de dialogue **Propriétés de l'axe** s'ouvre.  
   
-2.  Dans **Options de l’axe**, affectez la valeur `Interval` à **1**. Chaque étiquette de groupe de catégories est affichée. Si vous souhaitez afficher une étiquette de groupe de catégories sur deux sur l'axe des abscisses, tapez **2**.  
+2.  Dans **options**de l’axe `Interval` , affectez à la valeur **1**. Chaque étiquette de groupe de catégories est affichée. Si vous souhaitez afficher une étiquette de groupe de catégories sur deux sur l'axe des abscisses, tapez **2**.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -45,9 +45,9 @@ ms.locfileid: "66104849"
   
 ### <a name="to-enable-a-variable-interval-calculation-on-an-axis"></a>Pour activer un calcul d'intervalle variable sur un axe  
   
-1.  Cliquez avec le bouton droit sur l'axe de graphique à modifier, puis cliquez sur **Propriétés de l'axe**. La boîte de dialogue **Propriétés de l'axe** s'ouvre.  
+1.  Cliquez avec le bouton droit sur l’axe de graphique à modifier, puis cliquez sur **Propriétés de l’axe**. La boîte de dialogue **Propriétés de l'axe** s'ouvre.  
   
-2.  Dans **Options de l’axe**, affectez la valeur `Interval` à **automatique**. Le graphique affiche le nombre optimal d'étiquettes de catégories qui peuvent s'ajuster le long de l'axe.  
+2.  Dans **options**de l’axe `Interval` , définissez sur **auto**. Le graphique affiche le nombre optimal d’étiquettes de catégorie qui peuvent s’ajuster le long de l’axe.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

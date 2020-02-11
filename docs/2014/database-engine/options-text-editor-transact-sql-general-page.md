@@ -1,5 +1,5 @@
 ---
-title: Options (éditeur de texte - Page de Transact-SQL-général) | Microsoft Docs
+title: Options (éditeur de texte-Transact-SQL-page général) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: f32377fffb26ac622dc4045d108e491adc2b0342
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089169"
 ---
-# <a name="options-text-editor---transact-sql--general-page"></a>Options (éditeur de texte - Page de Transact-SQL-général)
+# <a name="options-text-editor---transact-sql--general-page"></a>Options (éditeur de texte-Transact-SQL-page général)
   Utilisez la boîte de dialogue d’options **Général** pour modifier le comportement d’édition général de l’Éditeur de requête [!INCLUDE[ssDE](../includes/ssde-md.md)], qui permet de modifier des scripts [!INCLUDE[tsql](../includes/tsql-md.md)]. Pour afficher ces paramètres, cliquez sur **Options** dans le menu **Outils**, développez le sous-dossier **Transact-SQL**, puis cliquez sur **Général**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Définition d'options en plusieurs emplacements  
- Les options de l’Éditeur de requête [!INCLUDE[ssDE](../includes/ssde-md.md)] peuvent également être définies dans la boîte de dialogue **Tous les langages Général**. Si vous utilisez les boîtes de dialogue **Tous les langages** pour définir des options différentes pour les autres éditeurs [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], comme les éditeurs DMX ou MDX, vous devez réinitialiser les options de l’Éditeur de requête [!INCLUDE[ssDE](../includes/ssde-md.md)] à l’aide de cette boîte de dialogue.  
+ Les options de [!INCLUDE[ssDE](../includes/ssde-md.md)] l’éditeur de requête peuvent également être définies dans la boîte de dialogue **tous les langages général** . Si vous utilisez les boîtes de dialogue **tous les langages** pour définir des options [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] différentes pour les autres éditeurs, comme les éditeurs DMX ou MDX, vous [!INCLUDE[ssDE](../includes/ssde-md.md)] devez réinitialiser les options de l’éditeur de requête à l’aide de cette boîte de dialogue.  
   
 ## <a name="statement-completion"></a>Compléter automatiquement les instructions  
  **Répertorier automatiquement les membres**  
@@ -38,16 +38,16 @@ ms.locfileid: "66089169"
  Lorsque cette case à cocher est activée, les informations de paramètres sont affichées pour une procédure stockée ou une fonction située juste à gauche du point d'insertion (curseur). Les informations incluent une liste des paramètres disponibles avec leurs noms et types de données.  
   
 ## <a name="settings"></a>Paramètres  
- **Activer l’espace virtuel**  
+ **Activer l'espace virtuel**  
  Lorsque cette case à cocher est activée, vous pouvez cliquer au-delà de la fin d'une ligne de code et taper du texte. Activez cette case à cocher pour placer des commentaires à un point cohérent, en regard de votre code. Activer cette case à cocher désactive la case à cocher **Retour automatique à la ligne**.  
   
- **Le retour automatique à**  
+ **Retour automatique à la ligne**  
  Lorsque cette case à cocher est activée, toute partie d'une ligne qui s'étend horizontalement au-delà de la zone visible de l'éditeur est affichée automatiquement à la ligne suivante. Cocher cette case coche la case **Afficher des glyphes visuels pour le retour automatique à la ligne** et décoche la case **Activer l’espace virtuel**.  
   
- **Afficher des glyphes visuels pour le retour automatique à**  
+ **Afficher des glyphes visuels pour le retour automatique à la ligne**  
  Lorsque cette case à cocher est activée, une flèche retour est affichée si une ligne longue nécessite un retour automatique à la ligne suivante.  
   
- **Appliquer les commandes Couper ou copier aux lignes vides lors de l’absence de sélection**  
+ **Appliquer les commandes Couper ou Copier aux lignes vides en l'absence de sélection**  
  Cette case à cocher définit le comportement de l'éditeur lorsque vous placez le point d'insertion sur une ligne vide, n'effectuez aucune sélection et cliquez sur **Copier** ou **Couper**.  
   
  Lorsque cette case à cocher est activée, la ligne vide est copiée ou coupée. Si vous cliquez ensuite sur **Coller**, une nouvelle ligne vide est insérée.  
@@ -63,7 +63,7 @@ ms.locfileid: "66089169"
 > [!NOTE]  
 >  Ces numéros de ligne ne sont pas ajoutés à votre code et ne s'impriment pas. Ils servent de référence uniquement.  
   
- **Activer la navigation dans les URL simple clic**  
+ **Activer la navigation dans les URL par simple clic**  
  Lorsque cette case à cocher est activée, le curseur est remplacé par une main avec un doigt tendu lorsqu'il passe sur une URL dans l'éditeur. Vous pouvez alors cliquer sur l'URL pour afficher la page correspondante dans votre navigateur Web.  
   
  **Barre de navigation**  

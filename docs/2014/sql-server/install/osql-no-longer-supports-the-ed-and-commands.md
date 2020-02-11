@@ -1,5 +1,5 @@
 ---
-title: osql ne prend plus en charge les commands | Microsoft Docs
+title: osql ne prend plus en charge les commandes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,22 +15,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ce7bfa0bbeec5c5ca83b7139f0ff28e3994021d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093717"
 ---
 # <a name="osql-no-longer-supports-the-ed-and--commands"></a>osql ne prend plus en charge les commandes
-  Le **osql** utilitaire ne prend pas en charge la **ED** et **!!** commandes.  
+  L’utilitaire **osql** ne prend pas en charge les **Ed** et **!!** commandes.  
   
 ## <a name="corrective-action"></a>Action corrective  
- Supprimer les références à la **ED** et **!!** commandes à partir de vos scripts.  
+ Supprimez les références aux **Ed** et **!!** commandes de vos scripts.  
   
- Si vous souhaitez utiliser le **ED** et **!!** commandes, utilisez le **sqlcmd** utilitaire au lieu de **osql**.  
+ Si vous souhaitez utiliser le **Ed** et **!!** des commandes, utilisez l’utilitaire **sqlcmd** au lieu de **osql**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Problèmes de mise à niveau du moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
+ [Problèmes de mise à niveau Moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Le conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: À l’aide de WQL langages et de script avec le fournisseur WMI pour la gestion de Configuration | Microsoft Docs
+title: Utilisation des langages WQL et de script avec le fournisseur WMI pour la gestion de la configuration | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cc9994d4429e82f2bdd4f40797df1c5f628c6500
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195826"
 ---
 # <a name="using-wql-and-scripting-languages-with-the-wmi-provider-for-configuration-management"></a>Utilisation des langages WQL et de script avec le fournisseur WMI pour la gestion de configuration
@@ -32,12 +32,12 @@ ms.locfileid: "68195826"
   
 -   à l'aide d'un langage de script, tel que VBScript.  
   
- Les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les paramètres de réseau peuvent être gérés par programme également à l'aide des objets managés WMI dans SMO. Pour plus d’informations sur la programmation WMI des objets gérés, consultez [la gestion des Services et des paramètres de réseau en utilisant le fournisseur WMI](../server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md).  
+ Les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les paramètres de réseau peuvent être gérés par programme également à l'aide des objets managés WMI dans SMO. Pour plus d’informations sur la programmation des objets gérés par WMI, consultez [gestion des services et des paramètres réseau à l’aide du fournisseur WMI](../server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md).  
   
- Le fournisseur WMI pour la gestion de configuration peut être accédé en utilisant le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console. Pour plus d’informations sur l’accès au fournisseur WMI à partir d’une interface utilisateur, consultez [la gestion des Services procédures &#40;Gestionnaire de Configuration SQL Server&#41;](../../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md).  
+ Le fournisseur WMI pour la gestion de configuration peut être accédé en utilisant le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console. Pour plus d’informations sur l’accès au fournisseur WMI à partir d’une interface utilisateur, consultez [rubriques de procédures relatives à la gestion des Services &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Accéder au fournisseur de WMI pour la gestion de Configuration à l’aide de WQL](access-wmi-provider-for-configuration-management-using-wql.md)   
- [Modifier les propriétés avancées du service SQL Server à l’aide de VBScript](access-wmi-provider-for-configuration-management-using-vbscript.md)  
+ [Accéder au fournisseur WMI pour la gestion de la configuration à l’aide de WQL](access-wmi-provider-for-configuration-management-using-wql.md)   
+ [Modifier les propriétés avancées du service SQL Server à l'aide de VBScript](access-wmi-provider-for-configuration-management-using-vbscript.md)  
   
   

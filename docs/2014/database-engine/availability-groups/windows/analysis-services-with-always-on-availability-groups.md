@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a0ccca3f8c9f6307f9715286a3496002dd7e1278
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889226"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services avec les groupes de disponibilité Always On
@@ -23,14 +23,14 @@ ms.locfileid: "68889226"
  Le traitement et l'exécution des requêtes sont des charges de travail en lecture seule. Vous pouvez améliorer les performances en déchargeant ces charges de travail vers un réplica secondaire lisible. Une configuration supplémentaire est requise pour ce scénario. Utilisez la liste de contrôle de cette rubrique pour vous assurer que vous suivez toutes les étapes.  
   
   
-##  <a name="bkmk_prereq"></a> Conditions préalables  
+##  <a name="bkmk_prereq"></a>Conditions préalables  
  Vous devez avoir compte de connexion SQL Server sur tous les réplicas. Vous devez être un **sysadmin** pour configurer des groupes de disponibilité, des écouteurs et des bases de données, mais les utilisateurs n’ont besoin que d’autorisations **db_datareader** pour accéder à la base de données d’un client Analysis Services.  
   
  Utilisez un fournisseur de données qui prend en charge la version 7.4 du protocole TDS (Tabular Data Stream) ou une version plus récente, telle que SQL Server Native Client 11.0 ou le Fournisseur de données pour SQL Server dans .NET Framework 4.02.  
   
- **(Pour les charges de travail en lecture seule)** . Le rôle de réplica secondaire doit être configuré pour les connexions en lecture seule, le groupe de disponibilité doit avoir une liste de routage et la connexion dans la source de données Analysis Services doit spécifier l'écouteur du groupe de disponibilité. Les instructions sont fournies dans cette rubrique.  
+ **(Pour les charges de travail en lecture seule)**. Le rôle de réplica secondaire doit être configuré pour les connexions en lecture seule, le groupe de disponibilité doit avoir une liste de routage et la connexion dans la source de données Analysis Services doit spécifier l'écouteur du groupe de disponibilité. Les instructions sont fournies dans cette rubrique.  
   
-##  <a name="bkmk_UseSecondary"></a> Liste de vérification : Utiliser un réplica secondaire pour les opérations en lecture seule  
+##  <a name="bkmk_UseSecondary"></a>Liste de vérification : utiliser un réplica secondaire pour les opérations en lecture seule  
  À moins que votre solution Analysis Services inclue l'écriture différée, vous pouvez configurer une connexion de source de données pour utiliser un réplica secondaire lisible. Si votre connexion réseau est rapide, le réplica secondaire a une latence de données très faible et fournit des données pratiquement identiques au réplica principal. En utilisant le réplica secondaire pour les opérations Analysis Services, vous pouvez réduire les conflits de lecture-écriture sur le réplica principal et optimiser l'utilisation des réplicas secondaires dans votre groupe de disponibilité.  
   
  Par défaut, l'accès en lecture/écriture et d'intention de lecture sont autorisés sur le réplica principal et aucune connexion n'est autorisée sur les réplicas secondaires. Une configuration supplémentaire est requise pour configurer une connexion cliente en lecture seule sur un réplica secondaire. La configuration requiert la configuration de propriétés sur le réplica et l'exécution d'un script T-SQL qui définit une liste de routage en lecture seule. Utilisez les procédures suivantes pour vous assurer que vous avez effectué les deux étapes.  
@@ -38,7 +38,7 @@ ms.locfileid: "68889226"
 > [!NOTE]  
 >  Les étapes suivantes présument l'existance d'un groupe de disponibilité et de bases de données AlwaysOn. Si vous configurez un nouveau groupe, utilisez l'Assistant Nouveau groupe de disponibilité pour créer le groupe et pour joindre les bases de données. L'Assistant vérifie les composants requis, fournit de l'aide pour chaque étape et exécute la synchronisation initiale. Pour plus d’informations, consultez [Utiliser l’Assistant Groupe de disponibilité &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md).  
   
-#### <a name="step-1-configure-access-on-an-availability-replica"></a>Étape 1 : Configurer l’accès sur un réplica de disponibilité  
+#### <a name="step-1-configure-access-on-an-availability-replica"></a>Étape 1 : Configurer l'accès sur un réplica de disponibilité  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance de serveur qui héberge le réplica principal et développez l'arborescence du serveur.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68889226"
   
     -   Dans la liste déroulante **Secondaire accessible en lecture** , sélectionnez **Intention de lecture uniquement**.  
   
-    -   Dans la liste déroulante **Connexions en rôle principal** , sélectionnez **Autoriser toutes les connexions**. Il s'agit du paramètre par défaut.  
+    -   Dans la liste déroulante **Connexions en rôle principal** , sélectionnez **Autoriser toutes les connexions**. Il s’agit de la valeur par défaut.  
   
     -   Éventuellement, dans la liste déroulante **Mode de disponibilité** , sélectionnez **Validation synchrone**. Cette étape n'est pas obligatoire, mais elle permet de garantir qu'il existe une parité des données entre le réplica primaire et le réplica secondaire.  
   
@@ -148,10 +148,10 @@ ms.locfileid: "68889226"
   
  La source de données est maintenant définie. Vous pouvez maintenant créer un modèle, en commençant par la vue de source de données ou, dans le cas de modèles tabulaires, en créant des relations. Lorsque vous arrivez au stade où les données doivent être récupérées de la base de données de disponibilité (par exemple lorsque vous êtes prêt à traiter ou déployer la solution), vous pouvez tester la configuration pour vérifier que les données sont accessibles à partir du réplica secondaire.  
   
-##  <a name="bkmk_test"></a> Tester la configuration  
+##  <a name="bkmk_test"></a>Tester la configuration  
  Après avoir configuré le réplica secondaire et créez une connexion à la source de données dans Analysis Services, vous pouvez vérifier que le traitement et les commandes de requête sont redirigées vers le réplica secondaire. Vous pouvez également effectuer un basculement manuel planifié afin de vérifier votre plan de récupération pour ce scénario.  
   
-#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>Étape 1 : Vérifier que la connexion à la source de données est redirigée vers le réplica secondaire  
+#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>Étape 1 : Vérifier que la connexion à la source de données est redirigé vers le réplica secondaire  
   
 1.  Démarrez le Générateur de profils SQL Server et connectez-vous à l'instance SQL Server qui héberge le réplica secondaire.  
   
@@ -198,10 +198,10 @@ ms.locfileid: "68889226"
   
 9. Répétez le traitement ou la commande de requête dans la solution Analysis Services, puis affichez les traces côte à côte dans le Générateur de profils SQL Server. Vous devez voir le traitement sur l'autre instance, qui est désormais le nouveau réplica secondaire.  
   
-##  <a name="bkmk_whathappens"></a> Que se passe-t-il après un basculement  
+##  <a name="bkmk_whathappens"></a>Que se passe-t-il après un basculement ?  
  Lors d'un basculement, un réplica secondaire adopte le rôle principal et l'ancien réplica principal joue le rôle secondaire. Toutes les connexions clientes sont terminées, la propriété de l’écouteur du groupe de disponibilité passe avec le rôle de réplica principal à une nouvelle instance de SQL Server, et le point de terminaison de l’écouteur est lié aux adresses IP virtuelles et aux ports TCP de la nouvelle instance. Pour plus d’informations, consultez [À propos de l’accès de la connexion client aux réplicas de disponibilité &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md).  
   
- Si un basculement a lieu pendant le processus, l’erreur suivante se produit dans Analysis Services et s’affiche dans la fenêtre de sortie ou le fichier journal : « Erreur OLE DB : Erreur OLE DB ou ODBC : Échec du lien de communication ; 08S01 ; Fournisseur TPC : une connexion existante a dû être fermée par l’hôte distant. ; 08S01. »  
+ Si le basculement se produit lors du traitement, l’erreur suivante apparaît dans Analysis Services dans le fichier journal ou la fenêtre de sortie : « Erreur OLE DB : Erreur OLE DB ou ODBC : Échec de la liaison de communication ; 08S01 ; Fournisseur de TPC : Une connexion existante a dû être fermée par l’hôte distant. ; 08S01. »  
   
  Cette erreur devrait être résolue si vous attendez une minute avant de recommencer. Si le groupe de disponibilité est configuré correctement pour le réplica secondaire lisible, le traitement continue sur le nouveau réplica secondaire lorsque vous réexécutez le traitement.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "68889226"
 ##  <a name="bkmk_writeback"></a>Écriture différée avec une base de données de disponibilité AlwaysOn  
  L'écriture différée est une fonctionnalité Analysis Services qui prend en charge l'analyse Scénario dans Excel. Elle est généralement utilisée pour budgéter et prévoir des tâches dans des applications personnalisées.  
   
- La prise en charge de l'écriture différée nécessite une connexion cliente READWRITE. Dans Excel, si vous tentez une réécriture sur une connexion en lecture seule, l’erreur suivante se produit : « Impossible de récupérer les données de la source de données externe. » « Impossible de récupérer les données de la source de données externe. »  
+ La prise en charge de l'écriture différée nécessite une connexion cliente READWRITE. Dans Excel, si vous tentez d’écrire en différé sur une connexion en lecture seule, l’erreur suivante se produit : « Impossible de récupérer les données de la source de données externe. ». « Impossible de récupérer les données de la source de données externe. »  
   
  Si vous avez configuré une connexion pour accéder toujours à un réplica secondaire lisible, vous devez maintenant configurer une connexion qui utilise une connexion READWRITE au réplica principal.  
   
@@ -218,9 +218,9 @@ ms.locfileid: "68889226"
   
 ## <a name="see-also"></a>Voir aussi  
  [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
- [Secondaires actifs : Réplicas secondaires &#40;accessibles en lecture groupes de disponibilité AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [Stratégies AlwaysOn pour les problèmes &#40;opérationnels avec groupes de disponibilité AlwaysOn SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
- [Créer une source de données &#40;SSAS Multidimensionnel&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
- [Activer l’écriture différée de la dimension](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  
+ [Secondaires actifs : réplicas secondaires accessibles en lecture &#40;groupes de disponibilité AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [Stratégies AlwaysOn pour les problèmes opérationnels avec groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
+ [Créer une source de données &#40;SSAS multidimensionnel&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
+ [Activer l'écriture différée de la dimension](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  
   
   

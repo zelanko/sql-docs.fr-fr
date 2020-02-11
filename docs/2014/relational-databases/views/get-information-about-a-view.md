@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f439a52c1f2d13ed3d3d7fc96030df9c6e020b2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211642"
 ---
 # <a name="get-information-about-a-view"></a>Obtenir des informations au sujet d'une vue
@@ -109,7 +109,7 @@ ms.locfileid: "68211642"
      **(Nom)**  
      Nom de la vue actuelle.  
   
-     **Nom de la base de données**  
+     **Database Name**  
      Nom de la base de données contenant cette vue.  
   
      **Description**  
@@ -118,7 +118,7 @@ ms.locfileid: "68211642"
      **Schéma**  
      Affiche le schéma propriétaire de la vue.  
   
-     **Nom du serveur**  
+     **Nom de serveur**  
      Nom de l'instance actuelle du serveur.  
   
      **Lier au schéma**  
@@ -151,7 +151,7 @@ ms.locfileid: "68211642"
      **Pourcentage**  
      Indique que la requête doit contenir une clause **TOP** , qui ne retourne que les n premiers pour cent des lignes du jeu de résultats.  
   
-     **With Ties**  
+     **Avec liens**  
      Spécifie que la vue inclura une clause **WITH TIES** . **WITH TIES** est utile si une vue inclut une clause **ORDER BY** et une clause **TOP** basée sur un pourcentage. Si cette option est activée et si le pourcentage s'arrête au milieu d'un groupe de lignes auxquelles correspondent des valeurs identiques dans la clause **ORDER BY** , la vue est agrandie de façon à inclure ces lignes.  
   
      **Spécification de mise à jour**  
@@ -179,7 +179,7 @@ ms.locfileid: "68211642"
   
 #### <a name="to-get-the-definition-and-properties-of-a-view"></a>Pour obtenir la définition et les propriétés d'une vue  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "68211642"
   
 #### <a name="to-get-the-dependencies-of-a-view"></a>Pour obtenir les dépendances d'une vue  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

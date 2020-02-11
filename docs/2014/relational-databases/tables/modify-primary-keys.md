@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e9e19d6d6453acedff16e46dbd2d90d92a3b9587
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211824"
 ---
 # <a name="modify-primary-keys"></a>Modifier des clés primaires
@@ -52,14 +52,14 @@ ms.locfileid: "68211824"
   
 3.  Effectuez l'une des actions décrites dans le tableau suivant :  
   
-    |Pour|Procédez comme suit|  
+    |À|Procédez comme suit|  
     |--------|------------------------|  
     |Renommer la clé primaire|Tapez un nouveau nom dans la zone **Nom** . Assurez-vous que le nouveau nom n’existe pas déjà dans la liste **Index ou clé unique/primaire sélectionné(e)** .|  
     |Définir l'option clustered|Pour créer un index cluster pour la clé primaire, sélectionnez **Créer comme CLUSTERED**, puis sélectionnez l’option dans la zone de liste déroulante. Il ne peut exister qu'un seul index cluster par table. Si cette option n'est pas disponible pour votre index, désactivez d'abord ce paramètre sur l'index cluster existant.<br /><br /> Si cette option n'est pas sélectionnée, un index non-cluster unique est créé.|  
     |Définir un taux de remplissage|Développez la catégorie **Spécification du remplissage** et tapez un entier compris entre 0 et 100 dans la zone **Taux de remplissage** . Pour plus d’informations sur les facteurs de remplissage et leurs utilisations, consultez [Spécifier un facteur de remplissage pour un index](../indexes/specify-fill-factor-for-an-index.md).|  
     |Changer l'ordre des colonnes|Sélectionnez **Colonnes**, puis cliquez sur le bouton de sélection **(...)** situé à droite de la propriété. Dans la boîte de dialogue  **Colonnes d'index** , supprimez les colonnes de la clé primaire. Rajoutez-les ensuite dans l'ordre voulu. Pour supprimer une colonne clé, retirez simplement le nom de la colonne de la liste **Nom de la colonne** .|  
   
-4.  Dans le menu **Fichier** , cliquez sur **Enregistrer**_nom de la table_.  
+4.  Dans le menu **Fichier**, cliquez sur **Enregistrer**_nom de la table_.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour modifier une clé primaire**  

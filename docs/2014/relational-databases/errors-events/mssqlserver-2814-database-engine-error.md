@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4c8def0fad1ae7eddb9de2e7206923b872c41ed2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67046774"
 ---
-# <a name="mssqlserver2814"></a>MSSQLSERVER_2814
+# <a name="mssqlserver_2814"></a>MSSQLSERVER_2814
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|2814|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|2814|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|PR_POSSIBLE_INFINITE_RECOMPILE|  
 |Texte du message|Recompilation infinie détectée pour SQLHANDLE %hs, PlanHandle %hs, décalage de début %d, décalage de fin %d. Dernière raison de la recompilation : %d.|  
@@ -76,6 +76,6 @@ ms.locfileid: "67046774"
 3.  Si le problème persiste, contactez les services d'assistance Microsoft.  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL:StmtRecompile Event Class](../event-classes/sql-stmtrecompile-event-class.md)  
+ [Classe d'événements SQL:StmtRecompile](../event-classes/sql-stmtrecompile-event-class.md)  
   
   

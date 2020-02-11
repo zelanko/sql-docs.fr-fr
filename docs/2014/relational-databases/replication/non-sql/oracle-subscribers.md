@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022224"
 ---
 # <a name="oracle-subscribers"></a>Abonnés Oracle
@@ -31,7 +31,7 @@ ms.locfileid: "63022224"
   
 1.  Installez et configurez le logiciel réseau client Oracle et le fournisseur OLE DB Oracle sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , afin que le serveur de distribution puisse se connecter à l'Abonné Oracle. Le logiciel réseau client Oracle doit être la version la plus récente. Oracle recommande aux utilisateurs d'installer les versions les plus récentes des logiciels clients. Par conséquent, il est fréquent que le logiciel client soit plus récent que le logiciel de base de données. La façon la plus simple d'installer le logiciel consiste à utiliser le programme d'installation Oracle Universal Installer sur le disque Oracle Client. Dans Oracle Universal Installer, vous devez fournir les informations suivantes :  
   
-    |Informations|Description|  
+    |Information|Description|  
     |-----------------|-----------------|  
     |Oracle Home|Chemin d'accès du répertoire d'installation des logiciels Oracle. Acceptez le chemin par défaut (C:\oracle\ora90 ou équivalent) ou entrez un autre chemin. Pour plus d'informations sur Oracle Home, consultez la section « Considérations sur Oracle Home » plus loin dans cette rubrique.|  
     |Nom d'Oracle Home|Alias pour le chemin du répertoire d'origine Oracle Home.|  
@@ -62,7 +62,7 @@ ms.locfileid: "63022224"
   
 2.  Tapez `cmd` puis cliquez sur **OK**.  
   
-3.  À l'invite de commandes, tapez :  
+3.  À l’invite de commandes, tapez :  
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   

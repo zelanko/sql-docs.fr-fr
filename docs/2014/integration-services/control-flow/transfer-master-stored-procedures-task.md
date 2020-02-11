@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b7cef1e64ab9c499c52ac3bbc0364a05bfcc812
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829485"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Tâche de transfert de procédures stockées de master
@@ -64,7 +64,7 @@ ms.locfileid: "62829485"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de tâche de transfert de procédures stockées de master &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur de tâche de transfert de procédures stockées de Master &#40;page général&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Éditeur de tâche de transfert de procédures stockées de master &#40;page Procédures stockées&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62829485"
 -   [Définir les propriétés d'une tâche ou d'un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâche de transfert d'objets SQL Server](transfer-sql-server-objects-task.md)   
+ [Tâche de transfert d’objets SQL Server](transfer-sql-server-objects-task.md)   
  [Tâches Integration Services](integration-services-tasks.md)   
  [Flux de contrôle](control-flow.md)  
   

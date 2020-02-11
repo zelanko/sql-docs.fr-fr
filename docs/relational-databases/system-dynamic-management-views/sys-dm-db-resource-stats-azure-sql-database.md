@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 1dd66834788896e6952a0352eb2a19fd1a828513
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245962"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (base de données Azure SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "75245962"
   
 |Colonnes|Type de données|Description|  
 |-------------|---------------|-----------------|  
-|end_time|**Date/heure**|Heure UTC indiquant la fin de l'intervalle de rapports actuel.|  
+|end_time|**DATETIME**|Heure UTC indiquant la fin de l'intervalle de rapports actuel.|  
 |avg_cpu_percent|**décimal (5, 2)**|Utilisation moyenne du calcul en pourcentage de la limite de la couche de service.|  
 |avg_data_io_percent|**décimal (5, 2)**|Utilisation moyenne des e/s de données en pourcentage de la limite du niveau de service. Pour les bases de données Hyperscale, consultez [e/s de données dans statistiques d’utilisation des ressources](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics).|  
 |avg_log_write_percent|**décimal (5, 2)**|Moyenne des écritures du journal des transactions (en Mbits/s) en pourcentage de la limite du niveau de service.|  
@@ -41,12 +41,12 @@ ms.locfileid: "75245962"
 |xtp_storage_percent|**décimal (5, 2)**|Utilisation du stockage pour l’OLTP en mémoire en pourcentage de la limite du niveau de service (à la fin de l’intervalle de création de rapports). Cela comprend la mémoire utilisée pour le stockage des objets OLTP en mémoire suivants : les tables optimisées en mémoire, les index et les variables de table. Il comprend également la mémoire utilisée pour le traitement des opérations ALTER TABLE.<br /><br /> Retourne 0 si l’OLTP en mémoire n’est pas utilisé dans la base de données.|  
 |max_worker_percent|**décimal (5, 2)**|Nombre maximal de threads de travail simultanés (demandes) en pourcentage de la limite du niveau de service de la base de données.|  
 |max_session_percent|**décimal (5, 2)**|Nombre maximal de sessions simultanées en pourcentage de la limite du niveau de service de la base de données.|  
-|dtu_limit|**tiers**|Paramètre DTU maximal de la base de données actuelle pour cette base de données au cours de cet intervalle. Pour les bases de données utilisant le modèle vCore, cette colonne a la valeur NULL.|
+|dtu_limit|**int**|Paramètre DTU maximal de la base de données actuelle pour cette base de données au cours de cet intervalle. Pour les bases de données utilisant le modèle vCore, cette colonne a la valeur NULL.|
 |cpu_limit|**décimal (5, 2)**|Nombre de vCores pour cette base de données au cours de cet intervalle. Pour les bases de données utilisant le modèle basé sur DTU, cette colonne a la valeur NULL.|
 |avg_instance_cpu_percent|**décimal (5, 2)**|Utilisation moyenne du processeur de base de données en pourcentage du processus de base de données SQL.|
 |avg_instance_memory_percent|**décimal (5, 2)**|Utilisation moyenne de la mémoire de la base de données en pourcentage du processus de base de données SQL.|
 |avg_login_rate_percent|**décimal (5, 2)**|Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.|
-|replica_role|**tiers**|Représente le rôle du réplica actuel avec 0 comme principal, 1 comme secondaire et 2 comme redirecteur (principal de géo-secondaire). La valeur « 1 » s’affiche lorsque vous êtes connecté avec l’intention de lecture seule pour tous les réplicas secondaires lisibles. Si vous vous connectez à une géo-secondaire sans spécifier d’intention en lecture seule, vous devez voir « 2 » (connexion au redirecteur).|
+|replica_role|**int**|Représente le rôle du réplica actuel avec 0 comme principal, 1 comme secondaire et 2 comme redirecteur (principal de géo-secondaire). La valeur « 1 » s’affiche lorsque vous êtes connecté avec l’intention de lecture seule pour tous les réplicas secondaires lisibles. Si vous vous connectez à une géo-secondaire sans spécifier d’intention en lecture seule, vous devez voir « 2 » (connexion au redirecteur).|
 |||
   
 > [!TIP]  
@@ -55,7 +55,7 @@ ms.locfileid: "75245962"
 ## <a name="permissions"></a>Autorisations  
  Cette vue nécessite l'autorisation VIEW DATABASE STATE.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les données retournées par **sys. dm_db_resource_stats** sont exprimées sous la forme d’un pourcentage des limites maximales autorisées pour le niveau de service/niveau de performances que vous exécutez.
  
  Si la base de données a basculé vers un autre serveur lors des 60 dernières minutes, l’affichage retourne uniquement les données pour le temps durant lequel elle est la base de données primaire, depuis ce basculement.  

@@ -14,23 +14,23 @@ ms.assetid: 70667410-c582-4369-8e06-9d98e21cd2bf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f67d313f5a1261dba1f88e9ef3a70d30c1cd503
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019179"
 ---
 # <a name="constraints-of-the-gregorian-calendar"></a>Contraintes du calendrier grégorien
-Types de données date et datetime et les champs à droite de types de données interval, doivent être conforme aux contraintes du calendrier grégorien. Ces contraintes sont les suivantes :  
+Les types de données date et DateTime, et les champs de fin des types de données Interval, doivent être conformes aux contraintes du calendrier grégorien. Ces contraintes sont les suivantes :  
   
--   La valeur du champ mois doit être comprise entre 1 et 12, inclus.  
+-   La valeur du champ month doit être comprise entre 1 et 12, inclus.  
   
--   La valeur du champ jour doit être dans la plage comprise entre 1 et le nombre de jours du mois. Le nombre de jours du mois est déterminé à partir des valeurs des champs année et mois et peut être 28, 29, 30 ou 31. (Le nombre de jours du mois peut également dépendre s’il s’agit d’une année bissextile.)  
+-   La valeur du champ jour doit être comprise entre 1 et le nombre de jours du mois. Le nombre de jours du mois est déterminé à partir des valeurs des champs année et mois et peut être 28, 29, 30 ou 31. (Le nombre de jours du mois peut également dépendre du fait qu’il s’agit d’une année bissextile ou non).  
   
--   La valeur du champ heures doit être comprise entre 0 et 23 inclus.  
+-   La valeur du champ heure doit être comprise entre 0 et 23 inclus.  
   
 -   La valeur du champ minute doit être comprise entre 0 et 59 inclus.  
   
--   Pour la fin du champ des secondes de types de données interval, la valeur du champ secondes doit être comprise entre 0 et 59,9 (*n*), inclusivement, où *n* est le nombre de chiffres dans la précision en fractions de seconde.  
+-   Pour le champ secondes de fin des types de données Interval, la valeur du champ seconds doit être comprise entre 0 et 59,9 (*n*), inclus, où *n* est le nombre de chiffres dans la précision en fractions de seconde.  
   
--   Pour la fin du champ des secondes de types de données de date/heure, la valeur du champ secondes doit être comprise entre 0 et 61.9 (*n*), inclusivement, où *n* Spécifie le nombre de chiffres « 9 » et la valeur de *n*  est la précision en fractions de seconde. (La plage des secondes autorise jusqu'à deux secondes intercalaires maintenir la synchronisation de temps de sidereal.)
+-   Pour le champ des secondes de fin des types de données DateTime, la valeur du champ seconds doit être comprise entre 0 et 61,9 (*n*), inclus, où *n* spécifie le nombre de chiffres « 9 » et la valeur de *n* est la précision en fractions de seconde. (La plage de secondes autorise jusqu’à deux secondes bissextiles pour maintenir la synchronisation du temps de SIDEREAL.)

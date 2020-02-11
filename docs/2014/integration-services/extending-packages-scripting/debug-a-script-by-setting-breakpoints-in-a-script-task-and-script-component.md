@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97c41b4ca75336f70b049239112132c89b05fba5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768485"
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>Déboguer un script en définissant des points d'arrêt dans une tâche de script et un composant de script
@@ -26,7 +26,7 @@ ms.locfileid: "62768485"
  Après avoir défini les points d’arrêt dans le script, la boîte de dialogue **Définir les points d’arrêt - \<nom_objet>** donne la liste des points d’arrêt avec les points d’arrêt intégrés.  
   
 > [!IMPORTANT]  
->  Dans certains cas, les points d'arrêt de la tâche de script et le composant de script sont ignorés. Pour plus d’informations, consultez le **débogage de la tâche de Script** section [codage et débogage de la tâche de Script](../control-flow/script-task.md) et **débogage du composant Script** section dans [codage et débogage du composant Script] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  
+>  Dans certains cas, les points d'arrêt de la tâche de script et le composant de script sont ignorés. Pour plus d’informations, consultez la section **débogage de la tâche de script** dans [codage et débogage de la tâche de script](../control-flow/script-task.md) et la section **débogage du composant script** dans [codage et débogage du composant Script] (.. /extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  
   
 ### <a name="to-set-a-breakpoint-in-script"></a>Pour définir un point d'arrêt dans un script  
   

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a74ab896e974410e8357a22546cb63ed7365a149
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833154"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Tâche DDL d'exécution de SQL Server Analysis Services
@@ -33,12 +33,12 @@ ms.locfileid: "62833154"
   
 -   [Tâche de traitement d’Analysis Services](analysis-services-processing-task.md)  
   
--   [Tâche de requête d'exploration de données](data-mining-query-task.md)  
+-   [Tâche de requête d’exploration de données](data-mining-query-task.md)  
   
 ## <a name="ddl-statements"></a>Instructions DDL  
  Les instructions DDL sont représentées en tant qu'instructions en langage ASSL ( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language) et insérées dans une commande XMLA (XML for Analysis).  
   
--   Le langage ASSL permet de définir et de décrire une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , ainsi que les bases de données et les objets de base de données qu’elle contient. Pour plus d’informations, consultez [Analysis Services Scripting Language &#40;ASSL&#41; référence](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla).  
+-   Le langage ASSL permet de définir et de décrire une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , ainsi que les bases de données et les objets de base de données qu’elle contient. Pour plus d’informations, consultez [Analysis Services Scripting Language &#40;ASSL&#41; Reference](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla).  
   
 -   XMLA est un langage de commande qui permet d'envoyer des commandes d'action, telles que Create, Alter ou Process, à une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour plus d’informations, consultez [Référence XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference).  
   
@@ -218,9 +218,9 @@ ms.locfileid: "62833154"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de tâche DDL d’exécution Analysis Services &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Analysis Services éditeur de tâche DDL d’exécution &#40;page général&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Éditeur de tâche DDL d’exécution Analysis Services &#40;page DDL&#41;](../analysis-services-execute-ddl-task-editor-ddl-page.md)  
+-   [Analysis Services éditeur de tâche DDL d’exécution &#40;page DDL&#41;](../analysis-services-execute-ddl-task-editor-ddl-page.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   
@@ -229,7 +229,7 @@ ms.locfileid: "62833154"
 -   [Définir les propriétés d'une tâche ou d'un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-the-analysis-services-execute-ddl-task"></a>Configuration par programmation de la tâche DDL d'exécution d'Analysis Services  
- Pour plus d'informations sur la définition par programme de ces propriétés, cliquez sur la rubrique suivante :  
+ Pour plus d'informations sur la définition par programmation de ces propriétés, cliquez sur la rubrique suivante :  
   
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.ASExecuteDDLTask>  
   

@@ -1,5 +1,5 @@
 ---
-title: Architecture d’accès de base de données | Microsoft Docs
+title: Architecture d’accès aux bases de données | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ ms.assetid: 3811599f-48cb-4205-9fe5-5ab4b240047d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1fba8cf4f3f3553fafd2296e294db3a9105de330
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135556"
 ---
 # <a name="database-access-architecture"></a>Architecture de l’accès aux bases de données
-L’une des questions dans le développement d’ODBC a été quelle partie de l’architecture d’accès de base de données afin de normaliser. Les interfaces de programmation SQL décrit dans la section précédente - embedded SQL, les modules SQL et CLI - est uniquement une partie de cette architecture. En fait, étant donné que ODBC a été principalement destiné à se connecter les applications basées sur les ordinateur personnel et ses grands systèmes SGBD, comportait également un nombre de composants réseau, certains d'entre eux peuvent être normalisé.  
+L’une des questions du développement d’ODBC était la partie de l’architecture d’accès à la base de données à normaliser. Les interfaces de programmation SQL décrites dans la section précédente (Embedded SQL, modules SQL et CLI) ne sont qu’une partie de cette architecture. En fait, dans la mesure où ODBC était principalement conçu pour connecter des applications basées sur un ordinateur personnel à des SGBD mini-ordinateurs et mainframe, il existait également un certain nombre de composants réseau, dont certains pourraient être standardisés.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Accès aux bases de données de réseau](../../odbc/reference/network-database-access.md)  
   

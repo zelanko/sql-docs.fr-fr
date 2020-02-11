@@ -11,14 +11,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a4484f9ccb76ea31c95a5392570e18df2c4b0ff5
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67792916"
 ---
 # <a name="create-the-finance-name-policy"></a>Créer la stratégie Nom financier
-  Dans cette tâche, vous allez créer une base de données nommée Finance, puis créer une condition qui exige que toutes les tables commencent par les lettres **fintbl**. Ensuite, vous allez créer une stratégie et une catégorie de stratégies afin d'appliquer une norme d'affectation de noms pour les tables dans la base de données Finance.  
+  Dans cette tâche, vous allez créer une base de données nommée finance, puis créer une condition qui exige que toutes les tables commencent par les lettres **fintbl**. Ensuite, vous allez créer une stratégie et une catégorie de stratégies afin d'appliquer une norme d'affectation de noms pour les tables dans la base de données Finance.  
   
 ### <a name="to-create-the-finance-database"></a>Pour créer la base de données Finance  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67792916"
   
 3.  Dans la liste **Facette** , sélectionnez **Nom en plusieurs parties**.  
   
-4.  Dans le **Expression** zone, dans le **champ** boîte, sélectionnez  **\@nom**; dans le **opérateur** boîte, sélectionnez  **Comme**; puis, dans le **valeur** , tapez **'% fintbl'** pour forcer tous les noms de tables commencent par les lettres **fintbl**.  
+4.  Dans la zone **expression** , dans la zone **champ** , sélectionnez ** \@nom**; dans la zone **opérateur** , sélectionnez **comme**; et dans la zone **valeur** , tapez **'fintbl% '** pour forcer tous les noms de tables à commencer par les lettres **fintbl**.  
   
 5.  Dans la page **Description** , tapez **Les noms des tables de finance doivent commencer par fintbl**, puis cliquez sur **OK** pour créer la condition.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "67792916"
   
 6.  Dans la boîte de dialogue **Créer une nouvelle condition** , dans la zone **Nom** , tapez **Base de données de finance**.  
   
-7.  Dans le **Expression** boîte, complétez l’expression à inclure  **\@nom = 'Finance'** , puis cliquez sur **OK** pour fermer la page de condition.  
+7.  Dans la zone **expression** , complétez l’expression pour inclure ** \@Name = « finance »**, puis cliquez sur **OK** pour fermer la page de condition.  
   
     > [!NOTE]  
     >  Vous devrez peut-être quitter la zone **Valeur** pour activer le bouton **OK** .  
@@ -74,7 +74,7 @@ ms.locfileid: "67792916"
   
 1.  Dans l’Explorateur d’objets, développez **Gestion**, cliquez avec le bouton droit sur **Gestion de la stratégie**, puis cliquez sur **Gérer les catégories**.  
   
-2.  Dans le **gérer les catégories de stratégie** boîte de dialogue **nom**, type `Finance` dans la zone vierge, puis décochez **abonnements à la base de données**. **Abonnements à la base de données autorisée** force chaque base de données de l’instance à s’abonner aux stratégies appartenant à cette catégorie de stratégie. Dans le cadre de cette leçon, seule la base de données Finance doit s'abonner à la stratégie Nom financier.  
+2.  Dans la boîte de dialogue **gérer les catégories de stratégie** , sous `Finance` **nom**, tapez dans la zone vide, puis désactivez abonnements à la **base de données**autorisée. Les **abonnements de base de données mandat** forcent chaque base de données de l’instance à s’abonner aux stratégies appartenant à cette catégorie de stratégie. Dans le cadre de cette leçon, seule la base de données Finance doit s'abonner à la stratégie Nom financier.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

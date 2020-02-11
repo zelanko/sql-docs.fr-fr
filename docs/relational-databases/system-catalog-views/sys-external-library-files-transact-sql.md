@@ -19,13 +19,13 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d7af0a7fcb639ae3beab6216e77f9b7b95a398da
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68471093"
 ---
-# <a name="sysexternallibraryfiles-transact-sql"></a>sys. external_library_files (Transact-SQL)  
+# <a name="sysexternal_library_files-transact-sql"></a>sys.external_library_files (Transact-SQL)  
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Répertorie une ligne pour chaque fichier qui compose une bibliothèque externe.
@@ -33,9 +33,9 @@ Répertorie une ligne pour chaque fichier qui compose une bibliothèque externe.
 |Nom de la colonne |Type de données |Description|
 |------|------|-----|
 |external_library_id | int |ID de l’objet de bibliothèque externe. |
-|content |varbinary(max) |Contenu de l’artefact du fichier de bibliothèque externe. |
-|plateforme |tinyint |ID de la plateforme hôte sur laquelle SQL Server est installé. |
-|platform_desc | nvarchar(60) |Nom de la plateforme hôte. Les valeurs valides sont «WINDOWS», «LINUX». |
+|Contenu |varbinary(max) |Contenu de l’artefact du fichier de bibliothèque externe. |
+|plateforme |TINYINT |ID de la plateforme hôte sur laquelle SQL Server est installé. |
+|platform_desc | nvarchar(60) |Nom de la plateforme hôte. Les valeurs valides sont « WINDOWS », « LINUX ». |
 
 ### <a name="see-also"></a>Voir aussi  
 

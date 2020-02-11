@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 49b121f776ec6a9d363236fab03a1da2228311a6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244799"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Correspondance automatique des paires de syntaxe
@@ -36,9 +36,9 @@ ms.locfileid: "75244799"
 |Séparateur de début|Séparateur de fin|  
 |--------------------|-----------------------|  
 |**(**|**)**|  
-|**COMMENCER**|**EFFET**|  
-|**COMMENCER L’ESSAI**|**END TRY**|  
-|**DÉBUT DE L’INTERCEPTION**|**FIN DE CAPTURE**|  
+|**BEGIN**|**END**|  
+|**BEGIN TRY**|**END TRY**|  
+|**BEGIN CATCH**|**END CATCH**|  
   
  La correspondance automatique des séparateurs ne reconnaît pas les séparateurs pour les identificateurs entre parenthèses ([ObjectName]) ou les identificateurs entre guillemets ("ObjectName"). La correspondance des paires ne fonctionne pas pour les séparateurs à guillemet simple des littéraux de chaîne ('chaîne') parce que le codage de couleur donne déjà une indication sur le fait que la chaîne a été délimitée ou pas.  
   

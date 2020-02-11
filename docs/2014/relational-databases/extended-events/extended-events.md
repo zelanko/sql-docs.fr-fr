@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62990704"
 ---
 # <a name="extended-events"></a>Événements étendus
@@ -26,7 +26,7 @@ ms.locfileid: "62990704"
  Vous pouvez rechercher plus d'informations sur les événements étendus sur le Web sur le site [Événements étendus SQL Server](https://blogs.msdn.com/b/extended_events/).  
   
 ## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>Avantages des événements étendus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Les événements étendus sont un système léger d'analyse des performances qui utilise très peu de ressources de performances. Les événements étendus fournissent deux interfaces utilisateur graphiques (**Assistant Nouvelle session** et **Nouvelle session**) permettant de créer, modifier, afficher et analyser vos données de session.  
+ Les événements étendus sont un système léger d'analyse des performances qui utilise très peu de ressources de performances. Les événements étendus fournissent deux interfaces utilisateur graphiques (**Assistant nouvelle session** et **nouvelle session**) pour créer, modifier, afficher et analyser vos données de session.  
   
 ## <a name="extended-events-concepts"></a>Concepts liés aux événements étendus  
  Les événements étendus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’appuient sur des concepts existants, tels qu’un événement ou un consommateur d’événements, utilisent les concepts provenant du suivi d’événements pour Windows et introduisent de nouveaux concepts.  
@@ -36,7 +36,7 @@ ms.locfileid: "62990704"
 |Rubrique|Description|  
 |-----------|-----------------|  
 |[Packages d’événements étendus SQL Server](sql-server-extended-events-packages.md)|Décrit les packages des Événements étendus qui contiennent les objets utilisés pour obtenir et traiter les données au cours d'une session Événements étendus.|  
-|[Cibles des événements étendus SQL Server](../../database-engine/sql-server-extended-events-targets.md)|Décrit les consommateurs d'événements qui peuvent recevoir des données au cours d'une session d'événements.|  
+|[Cibles des Événements étendus SQL Server](../../database-engine/sql-server-extended-events-targets.md)|Décrit les consommateurs d'événements qui peuvent recevoir des données au cours d'une session d'événements.|  
 |[Moteur des événements étendus SQL Server](sql-server-extended-events-engine.md)|Décrit le moteur qui implémente et gère une session Événements étendus.|  
 |[Sessions d’événements étendus SQL Server](sql-server-extended-events-sessions.md)|Décrit la session d'événements étendus.|  
   
@@ -82,10 +82,10 @@ ms.locfileid: "62990704"
 |----------------------|-----------|  
 |Utilisez l' **Explorateur d'objets** pour gérer les sessions d'événements.|[Gérer les sessions d’événements dans l’Explorateur d’objets](../../ssms/object/object-explorer.md)|  
 |Explique comment créer une session d'événements étendus.|[Créer une session d’événements étendus](../../database-engine/create-an-extended-events-session.md)|  
-|Explique comment afficher et actualiser des données cibles.|[Afficher des données de session d’événements](../../database-engine/view-event-session-data.md)|  
+|Explique comment afficher et actualiser des données cibles.|[Afficher des données de session d'événements](../../database-engine/view-event-session-data.md)|  
 |Explique comment utiliser des outils d'événements étendus pour créer et gérer vos sessions d'événements étendus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Outils associés aux événements étendus](extended-events-tools.md)|  
 |Explique comment altérer une session d'événements étendus.|[Modifier une session d’événements étendus](alter-an-extended-events-session.md)|  
-|Explique comment copier ou exporter des données cibles.|[Copier ou exporter des données cibles](../../database-engine/copy-or-export-target-data.md)|  
+|Explique comment copier ou exporter des données cibles.|[Copie ou exporter des données cibles](../../database-engine/copy-or-export-target-data.md)|  
 |Explique comment modifier votre vue des résultats de trace pour personnaliser la façon dont vous souhaitez analyser vos données.|[Modifier la vue des résultats de trace](../../database-engine/modify-the-trace-results-view.md)|  
 |Explique comment obtenir des informations sur les champs associés aux événements.|[Obtenir les champs pour tous les événements](../../database-engine/get-the-fields-for-all-events.md)|  
 |Explique comment déterminer quels sont les événements disponibles dans les packages enregistrés.|[Consulter les événements pour les packages enregistrés](../../database-engine/view-the-events-for-registered-packages.md)|  
@@ -98,11 +98,11 @@ ms.locfileid: "62990704"
 |Explique comment utiliser les événements étendus avec le suivi d'événements pour Windows pour surveiller l'activité système.|[Surveiller l’activité système à l’aide d’événements étendus](monitor-system-activity-using-extended-events.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Applications de la couche Données](../data-tier-applications/data-tier-applications.md)   
+ [Applications de la couche données](../data-tier-applications/data-tier-applications.md)   
  [Prise en charge DAC pour les objets et versions SQL Server](../data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
- [Déployer une application de la couche Données](../data-tier-applications/deploy-a-data-tier-application.md)   
- [Analyser les applications de la couche Données](../data-tier-applications/monitor-data-tier-applications.md)   
+ [Déployer une application de la couche données](../data-tier-applications/deploy-a-data-tier-application.md)   
+ [Surveiller les applications de la couche données](../data-tier-applications/monitor-data-tier-applications.md)   
  [Vues de gestion dynamique des Événements étendus](../views/views.md)   
- [Étendue des affichages catalogue des événements &#40;Transact-SQL&#41;] (~/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql  
+ [Affichages catalogue des événements étendus &#40;&#41; Transact-SQL] (~/Relational-databases/System-Catalog-views/Extended-Events-Catalog-views-Transact-SQL  
   
   

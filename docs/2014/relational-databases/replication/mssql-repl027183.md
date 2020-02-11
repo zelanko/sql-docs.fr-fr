@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 87adf79d9420f70e132fd9a6c41a9ddacf298fa7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022715"
 ---
-# <a name="mssqlrepl027183"></a>MSSQL_REPL027183
+# <a name="mssql_repl027183"></a>MSSQL_REPL027183
     
 ## <a name="message-details"></a>Détails du message  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|27183|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|27183|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique||  
 |Texte du message|Le processus de fusion n'a pas pu énumérer les modifications apportées aux articles via le filtre de lignes paramétrable. Si le problème persiste, augmentez le délai de requête du processus, réduisez la période de rétention de la publication, puis améliorez les index des tables publiées.|  
@@ -44,9 +44,9 @@ ms.locfileid: "63022715"
 -   Tables filtrées qui ne sont pas jointes sur une clé unique, et filtres de jointures qui impliquent un grand nombre de tables.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
- Pour résoudre ce problème :  
+ Pour résoudre le problème :  
   
--   Augmentez la valeur du paramètre **-QueryTimeOut** pour l’Agent de fusion afin de permettre au processus de se poursuivre pendant que vous résolvez les problèmes sous-jacents qui provoquent cette erreur. Les paramètres des agents peuvent être spécifiés dans des profils d'agent et sur la ligne de commande. Pour plus d'informations, consultez :  
+-   Augmentez la valeur du paramètre **-QueryTimeOut** pour l’Agent de fusion afin de permettre au processus de se poursuivre pendant que vous résolvez les problèmes sous-jacents qui provoquent cette erreur. Les paramètres des agents peuvent être spécifiés dans des profils d'agent et sur la ligne de commande. Pour plus d'informations, consultez les pages suivantes :  
   
     -   [Utiliser des profils d’agent de réplication](agents/replication-agent-profiles.md)  
   
@@ -58,11 +58,11 @@ ms.locfileid: "63022715"
   
 -   Spécifiez la valeur la plus basse possible pour la période de rétention de la publication, parce que la réplication ne peut pas nettoyer les métadonnées de la publication et des bases de données d'abonnement tant que la période de rétention n'est pas achevée. Pour plus d’informations, voir [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   
--   Dans le cadre de la gestion de la réplication de fusion, contrôlez le développement des tables système associées à la réplication de fusion : **MSmerge_contents**, **MSmerge_genhistory**, **MSmerge_tombstone**, **MSmerge_current_partition_mappings** et **MSmerge_past_partition_mappings**. Réindexez périodiquement ces tables. Pour plus d’informations, consultez [Réorganiser et reconstruire des index](../indexes/indexes.md).  
+-   Dans le cadre de la gestion d'une réplication de fusion, contrôlez de temps en temps le développement des tables système associées à cette réplication : **MSmerge_contents**, **MSmerge_genhistory**, **MSmerge_tombstone**, **MSmerge_current_partition_mappings**et **MSmerge_past_partition_mappings**. Réindexez périodiquement ces tables. Pour plus d’informations, consultez [Réorganiser et reconstruire des index](../indexes/indexes.md).  
   
 -   Assurez-vous que les colonnes utilisées pour le filtrage sont correctement indexées et le cas échéant rebâtissez les index. Pour plus d’informations, consultez [Réorganiser et reconstruire des index](../indexes/indexes.md).  
   
--   Définissez la propriété **join_unique_key** sur les filtres de jointure qui sont basés sur des colonnes uniques Pour plus d’informations, consultez [Join Filters](merge/join-filters.md).  
+-   Définissez la propriété **join_unique_key** sur les filtres de jointure qui sont basés sur des colonnes uniques Pour plus d’informations, voir [Join Filters](merge/join-filters.md).  
   
 -   Limitez le nombre de tables dans la hiérarchie du filtre de jointure. Si vous générez des filtres de jointure pour au moins cinq tables, envisagez d'autres solutions : ne filtrez pas les petites tables, les tables qui ne changent pas ou les tables de recherche principales. Utilisez des filtres de jointure seulement entre des tables qui doivent être partitionnées entre des abonnements.  
   

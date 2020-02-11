@@ -1,5 +1,5 @@
 ---
-title: Insérer la fonction, boîte de dialogue (SSAS) | Microsoft Docs
+title: Insérer une fonction, boîte de dialogue (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e925358f8ce09ebdf2b2470e364016c951ef120b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080412"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>Insérer une fonction, boîte de dialogue (SSAS)
@@ -25,14 +25,14 @@ ms.locfileid: "66080412"
 |||  
 |-|-|  
 |Élément|Description|  
-|**Sélectionnez une catégorie**|Si vous avez une idée générale du type de fonction dont vous avez besoin, sélectionnez une catégorie dans la liste ; sinon, sélectionnez **Tout** pour afficher une liste alphabétique des fonctions.|  
+|**Sélectionner une catégorie**|Si vous avez une idée générale du type de fonction dont vous avez besoin, sélectionnez une catégorie dans la liste ; sinon, sélectionnez **Tout** pour afficher une liste alphabétique des fonctions.|  
 |**Sélectionner une fonction**|Affiche une liste des fonctions dans la catégorie sélectionnée.|  
 |**Description**|Affiche une description de ce que fait la fonction, avec tous les arguments obligatoires ou facultatifs, tels que les noms de colonnes et les expressions.|  
   
 ## <a name="function-categories"></a>Catégories de fonctions  
  DAX (Data Analysis Expressions) fournit les types de catégories de fonctions ci-après dans la boîte de dialogue **Insérer une fonction** .  
   
- All  
+ Tous  
   
  Date et heure  
   
@@ -44,12 +44,12 @@ ms.locfileid: "66080412"
   
  Statistique  
   
- Text  
+ Texte  
   
 ## <a name="measures-and-formulas"></a>Mesures et formules  
  La boîte de dialogue **Insérer une fonction** est disponible uniquement lorsque vous générez une formule. Vous pouvez créer des calculs dans une colonne calculée, un tableau croisé dynamique ou un graphique croisé dynamique. Les formules que vous générez spécifiquement pour une utilisation dans un tableau croisé dynamique sont également appelées *mesures*. Pour plus d’informations, consultez [Créer une colonne calculée &#40;SSAS Tabulaire&#41;](tabular-models/ssas-calculated-columns-create-a-calculated-column.md) et [Créer et gérer des mesures &#40;SSAS Tabulaire&#41;](tabular-models/measures-ssas-tabular.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Calculs &#40;SSAS Tabulaire&#41;](tabular-models/calculations-ssas-tabular.md)  
+ [Calculs &#40;&#41;tabulaire SSAS](tabular-models/calculations-ssas-tabular.md)  
   
   

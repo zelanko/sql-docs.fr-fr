@@ -1,5 +1,5 @@
 ---
-title: Options (éditeur de texte - XML - divers Page) | Microsoft Docs
+title: Options (éditeur de texte-XML-page divers) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eb3422b859ce4e58fc05564357876c5fe09fcdff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089207"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>Options (Éditeur de texte - XML - Page Divers)
@@ -25,13 +25,13 @@ La boîte de dialogue **Options** vous permet de modifier les paramètres de sai
  **Balises de fermeture**  
  L'Éditeur de texte ajoute des balises de fin lors de la création d'éléments XML. Si la balise de début d'un élément est sélectionnée, l'Éditeur insère la balise de fin correspondante avec un préfixe d'espace de noms équivalent. Cette case à cocher est activée par défaut.  
   
- **Guillemets d’attribut**  
- Lors de la création d’attributs XML, l’Éditeur insère les caractères `="``"` et place le signe insertion ( **^)** à l’intérieur des guillemets. Cette case à cocher est activée par défaut.  
+ **Guillemets d'attribut**  
+ Lors de la création d’attributs XML, l’Éditeur insère les caractères `="``"` et place le signe insertion (**^)** à l’intérieur des guillemets. Cette case à cocher est activée par défaut.  
   
- **Déclarations de Namespace**  
+ **Déclarations d’espaces de noms**  
  L'Éditeur insère automatiquement les déclarations d'espace de noms là où elles sont requises. Cette case à cocher est activée par défaut.  
   
- **Autre balisage (commentaires, CDATA)**  
+ **Autre balisage (Commentaires, CDATA)**  
  Les éléments CDATA, DOCTYPE, les commentaires, les instructions de traitement et autre balisage sont entrés automatiquement. Cette case à cocher est activée par défaut.  
   
 ## <a name="network"></a>Réseau  
@@ -39,9 +39,9 @@ La boîte de dialogue **Options** vous permet de modifier les paramètres de sai
  Les schémas et les définitions de type de document (DTD) sont automatiquement téléchargés à partir d'emplacements HTTP. Cette fonctionnalité utilise System.Net avec détection de serveur de proxy automatique. Cette case à cocher est activée par défaut.  
   
 ## <a name="outlining"></a>Mode Plan  
- **Passer en mode plan ouverture des fichiers**  
+ **Passer en mode Plan à l'ouverture des fichiers**  
  Active la fonctionnalité mode Plan lorsqu'un fichier est ouvert. Cette case à cocher est activée par défaut.  
   
 ## <a name="caching"></a>Mise en cache  
  **Schémas**  
- Indique l'emplacement du cache des schémas. Le bouton Parcourir (...) ouvre l'emplacement actuel du cache des schémas dans une nouvelle fenêtre. L’emplacement par défaut est  *\<répertoire d’installation de Management Studio >* \Xml\Schemas.  
+ Indique l'emplacement du cache des schémas. Le bouton Parcourir (...) ouvre l'emplacement actuel du cache des schémas dans une nouvelle fenêtre. L’emplacement par défaut est * \<Management Studio répertoire d’installation>* \Xml\Schemas.  

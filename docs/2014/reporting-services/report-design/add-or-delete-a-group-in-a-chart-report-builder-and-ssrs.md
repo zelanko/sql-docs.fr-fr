@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1828f0f76963cea8cf792c17a251c843a93b5b0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106558"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>Ajouter ou supprimer un groupe dans un graphique (Générateur de rapports et SSRS)
-  Cliquez dans la région de données de graphique pour afficher le **données du graphique** volet. Créez des groupes en faisant glisser des champs de dataset vers les zones **Groupes de séries** et **Groupes de catégories** . Pour ajouter des groupes imbriqués, ajoutez plusieurs champs à la zone.  
+  Cliquez dans la région de données de graphique pour afficher le volet **données du graphique** . Créez des groupes en faisant glisser des champs de dataset vers les zones **Groupes de séries** et **Groupes de catégories** . Pour ajouter des groupes imbriqués, ajoutez plusieurs champs à la zone.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -56,6 +56,6 @@ ms.locfileid: "66106558"
 2.  Cliquez avec le bouton droit sur le groupe dans la zone **Groupes de catégories** ou **Groupes de séries** , puis sélectionnez **Supprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [Graphiques (Générateur de rapports et SSRS)](charts-report-builder-and-ssrs.md)  
   
   

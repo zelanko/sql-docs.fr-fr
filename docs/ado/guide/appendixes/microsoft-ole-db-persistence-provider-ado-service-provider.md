@@ -15,40 +15,40 @@ ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2bd341a3af2d1fdb076312b4c0993184fb4fae39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926766"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Présentation du fournisseur de persistance Microsoft OLE DB
-Le fournisseur de persistance Microsoft OLE DB vous permet d’enregistrer un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) l’objet dans un fichier et de restaurer ultérieurement qui **Recordset** objet à partir du fichier. Informations de schéma, les données et les modifications en attente sont conservés.
+Le fournisseur de persistance Microsoft OLE DB vous permet d’enregistrer un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dans un fichier et de restaurer ultérieurement cet objet **Recordset** à partir du fichier. Les informations de schéma, les données et les modifications en attente sont conservées.
 
- Vous pouvez enregistrer le **Recordset** dans le format de données Table Gram ADTG (Advanced) propriétaire ou le format de langage XML (Extensible Markup) ouvert.
+ Vous pouvez enregistrer le **Recordset** au format ADTG (Advanced Data table) propriétaire ou au format Open Extensible Markup Language (XML).
 
-## <a name="provider-keyword"></a>Mot clé de fournisseur
- Pour appeler ce fournisseur, spécifiez le mot clé et la valeur suivante dans la chaîne de connexion.
+## <a name="provider-keyword"></a>Mot clé Provider
+ Pour appeler ce fournisseur, spécifiez le mot clé et la valeur suivants dans la chaîne de connexion.
 
 ```vb
 "Provider=MSPersist"
 ```
 
-## <a name="errors"></a>Errors
- Les erreurs suivantes émises par ce fournisseur peuvent être détectés dans votre application.
+## <a name="errors"></a>Erreurs
+ Les erreurs suivantes émises par ce fournisseur peuvent être détectées dans votre application.
 
-|Constante|Description|
+|Constant|Description|
 |--------------|-----------------|
-|E_BADSTREAM|Le fichier ouvert n’a pas un format valide (autrement dit, le format n’est pas ADTG ou XML).|
-|E_CANTPERSISTROWSET|Le **Recordset** objet enregistré présente des caractéristiques qui l’empêchent d’être stocké.|
+|E_BADSTREAM|Le format du fichier ouvert n’est pas valide (autrement dit, le format n’est pas ADTG ou XML).|
+|E_CANTPERSISTROWSET|L’objet **Recordset** enregistré possède des caractéristiques qui empêchent son stockage.|
 
 ## <a name="remarks"></a>Notes
- Le fournisseur de persistance Microsoft OLE DB n’expose aucuns propriétés dynamiques.
+ Le fournisseur de persistance Microsoft OLE DB n’expose aucune propriété dynamique.
 
- Uniquement paramétrables actuellement, hiérarchique **Recordset** objets ne peut pas être enregistrés.
+ Actuellement, seuls les objets **Recordset** hiérarchiques paramétrables ne peuvent pas être enregistrés.
 
- Pour plus d’informations sur le stockage persistant des **Recordset** , consultez [persistance des recordsets](../../../ado/guide/data/more-about-recordset-persistence.md).
+ Pour plus d’informations sur le stockage permanent d’objets **Recordset** , consultez [persistance des recordsets](../../../ado/guide/data/more-about-recordset-persistence.md).
 
- Lorsqu’un flux est utilisé pour ouvrir un **Recordset,** qu’il ne doit y avoir aucun paramètre spécifié autre que le *Source* paramètre de la **ouvrir** (méthode).
+ Lorsqu’un flux est utilisé pour ouvrir un **jeu d’enregistrements,** aucun paramètre ne doit être spécifié autre que le paramètre *source* de la méthode **Open** .
 
 ## <a name="see-also"></a>Voir aussi
 [Fournisseur de persistance Microsoft OLE DB (fournisseur de services ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)

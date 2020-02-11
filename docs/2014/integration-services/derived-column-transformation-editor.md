@@ -1,5 +1,5 @@
 ---
-title: Dérivés d’éditeur de Transformation de colonne | Microsoft Docs
+title: Éditeur de transformation de colonne dérivée | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4fc2701ad53cd0071be40100d168d5d5571d2958
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059570"
 ---
 # <a name="derived-column-transformation-editor"></a>Éditeur de transformation de colonne dérivée
@@ -44,7 +44,7 @@ ms.locfileid: "66059570"
   
  Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.  
   
- **Rubriques connexes** : [Expressions Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md), [Opérateurs &#40;expression SSIS&#41;](expressions/operators-ssis-expression.md) et [Fonctions &#40;expression SSIS&#41;](expressions/functions-ssis-expression.md)  
+ **Rubriques connexes**: [Integration Services &#40;expressions de&#41; ssis](expressions/integration-services-ssis-expressions.md), [opérateurs &#40;&#41;d’expression SSIS ](expressions/operators-ssis-expression.md)et [fonctions &#40;Expression SSIS&#41;](expressions/functions-ssis-expression.md)  
   
  **Type de données**  
  Si vous ajoutez des données à une nouvelle colonne, la boîte de dialogue **Éditeur de transformation de colonne dérivée** évalue automatiquement l’expression et définit correctement le type de données. La valeur de cette colonne est en lecture seule. Pour plus d’informations, consultez [Types de données Integration Services](data-flow/integration-services-data-types.md).  
@@ -61,7 +61,7 @@ ms.locfileid: "66059570"
  **Page de codes**  
  Si vous ajoutez des données à une nouvelle colonne, la boîte de dialogue **Éditeur de transformation de colonne dérivée** définit automatiquement la page de codes pour le type de données DT_STR. Vous pouvez mettre à jour **Page de codes**.  
   
- **Configurer l'affichage des erreurs**  
+ **Configurer la sortie d’erreur**  
  Spécifiez comment gérer les erreurs dans la boîte de dialogue [Configurer la sortie d’erreur](../../2014/integration-services/configure-error-output.md) .  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa11481ed3c446becf2519a2ed149867456ac94a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101924"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] fournit des fonctionnalités de sécurité intégrées qui vous permettent d’accéder aux éléments de serveur de rapports à partir des sites et des bibliothèques SharePoint. Si vous avez déjà affecté des autorisations aux utilisateurs, ces derniers auront accès aux éléments et opérations de serveur de rapport dès que vous aurez configuré les paramètres d'intégration entre [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] et un serveur de rapports. Les autorisations existantes vous permettent de télécharger des définitions de rapport et d'autres documents, d'afficher des rapports, de créer des abonnements et de gérer des éléments.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPF2010](../../includes/spf2010-md.md)] fournit des fonctionnalités de sécurité intégrées que vous pouvez utiliser pour accorder l’accès aux éléments du serveur de rapports auxquels vous accédez à partir de sites et de bibliothèques SharePoint. Si vous avez déjà affecté des autorisations aux utilisateurs, ces derniers auront accès aux éléments et opérations de serveur de rapport dès que vous aurez configuré les paramètres d'intégration entre [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] et un serveur de rapports. Les autorisations existantes vous permettent de télécharger des définitions de rapport et d'autres documents, d'afficher des rapports, de créer des abonnements et de gérer des éléments.  
   
  Si vous n'avez pas attribué d'autorisations ou si vous ne connaissez pas les fonctionnalités de sécurité dans [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], suivez les instructions suivantes :  
   
@@ -42,11 +42,13 @@ ms.locfileid: "66101924"
   
 -   Les objets sécurisables comprennent des sites, des listes, des bibliothèques, des dossiers et des documents.  
   
--   Une autorisation permet d'effectuer une tâche spécifique. [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] fournit 33 autorisations prédéfinies que vous pouvez associer dans un niveau d'autorisations.  
+-   Une autorisation permet d'effectuer une tâche spécifique. 
+  [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] fournit 33 autorisations prédéfinies que vous pouvez associer dans un niveau d'autorisations.  
   
 -   Un niveau d'autorisation est un ensemble d'autorisations qui peuvent être accordées à des utilisateurs ou à des groupes SharePoint sur un objet sécurisable tel qu'un site, une bibliothèque, une liste, un dossier, un élément ou un document. Il correspond à une définition de rôle dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Il existe cinq niveaux d'autorisation prédéfinis. Vous pouvez les personnaliser ou en créer de nouveaux si nécessaire.  
   
--   Un groupe SharePoint est un groupe d'utilisateurs que vous pouvez créer sur un site SharePoint pour gérer des autorisations au site et fournir une liste de distribution par messagerie pour les membres du site. Un groupe SharePoint comprend des comptes d'utilisateurs et de groupes Windows ou des connexions utilisateur si vous utilisez l'authentification par formulaire. [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] fournit trois groupes. Vous pouvez les personnaliser ou en créer de nouveaux si nécessaire.  
+-   Un groupe SharePoint est un groupe d'utilisateurs que vous pouvez créer sur un site SharePoint pour gérer des autorisations au site et fournir une liste de distribution par messagerie pour les membres du site. Un groupe SharePoint comprend des comptes d'utilisateurs et de groupes Windows ou des connexions utilisateur si vous utilisez l'authentification par formulaire. 
+  [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] fournit trois groupes. Vous pouvez les personnaliser ou en créer de nouveaux si nécessaire.  
   
 -   L'héritage des autorisations permet aux sous-sites, aux listes et aux bibliothèques ainsi qu'aux éléments d'hériter les paramètres de sécurité du site parent. Les autorisations héritées vous permettent d'accéder aux éléments de serveur de rapports stockés dans une bibliothèque SharePoint. L'utilisation de l'héritage des autorisations et des groupes SharePoint prédéfinis vous permet de simplifier votre déploiement et fournit un accès immédiat à la plupart des opérations de serveur de rapports.  
   
@@ -81,17 +83,17 @@ ms.locfileid: "66101924"
  [Référence autorisations de sites et de listes SharePoint pour des éléments de serveur de rapports](sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
  Fournit une référence de l'ensemble des autorisations de produit SharePoint permettant d'accéder aux opérations de serveur de rapports.  
   
- [Définir des autorisations pour les opérations de serveur de rapports dans une application Web SharePoint](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
+ [Définir des autorisations pour les opérations de serveur de rapports dans une application web SharePoint](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
  Décrit les autorisations requises pour la génération d'états ad hoc et offre des stratégies de mise à disposition des fonctionnalités.  
   
- [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
+ [Comparer des rôles et des tâches dans Reporting Services avec les autorisations et les groupes SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
  Fournit une brève comparaison des groupes SharePoint avec les définitions de rôles prédéfinis dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Définir les autorisations sur les éléments de serveur de rapports sur un site SharePoint &#40;Reporting Services en mode intégré SharePoint&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+ [Définir les autorisations sur les éléments du serveur de rapports sur un site SharePoint &#40;Reporting Services en mode intégré SharePoint&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
  Contient des instructions pour la création de nouveaux groupes SharePoint autorisés à démarrer le Générateur de rapports et à définir la sécurité des éléments d'un modèle. Cette rubrique contient aussi des instructions générales sur la définition d'autorisations personnalisées pour des opérations ou des éléments de serveur de rapports.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir les autorisations sur les éléments de serveur de rapports sur un site SharePoint &#40;Reporting Services en mode intégré SharePoint&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [Définir des autorisations pour les éléments de serveur de rapports sur un site SharePoint &#40;Reporting Services en mode intégré SharePoint&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Sécurité et protection de Reporting Services](reporting-services-security-and-protection.md)  
   
   

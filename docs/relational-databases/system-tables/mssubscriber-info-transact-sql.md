@@ -18,33 +18,33 @@ ms.assetid: 5ca22f41-6020-4f72-8110-e69baf3447cb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 45065f7cde525d65997df2c97c972d684cadd90f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139820"
 ---
-# <a name="mssubscriberinfo-transact-sql"></a>MSsubscriber_info (Transact-SQL)
+# <a name="mssubscriber_info-transact-sql"></a>MSsubscriber_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Le **MSsubscriber_info** table contient une ligne pour chaque paire serveur de publication/abonné qui l’objet d’abonnements envoyé à partir d’un serveur de distribution local. Cette table est stockée dans la base de données de distribution.  
+  La table **MSsubscriber_info** contient une ligne pour chaque paire serveur de publication/abonné faisant l’objet d’un push d’abonnements à partir du serveur de distribution local. Cette table est stockée dans la base de données de distribution.  
   
- **Remarque** cette table système a été déconseillée et est maintenue pour prendre en charge les versions précédentes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ **Remarque** Cette table système est déconseillée et est en cours de maintenance pour prendre en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]charge les versions antérieures de.  
   
 ## <a name="definition"></a>Définition  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**publisher** (serveur de publication)|**sysname**|Le nom du serveur de publication.|  
-|**subscriber** (Abonné)|**sysname**|Nom de l'Abonné.|  
-|**type**|**tinyint**|Type d'abonné :<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonné.<br /><br /> **1** = source de données ODBC.|  
-|**login**|**sysname**|Connexion pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Stocké sous forme chiffrée si l'Abonné est ajouté à l'aide du mode d'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**password**|**nvarchar(524)**|Mot de passe pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Stocké sous forme chiffrée si l'Abonné est ajouté à l'aide du mode d'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**publication**|**sysname**|Nom du serveur de publication.|  
+|**côté**|**sysname**|Nom de l'Abonné.|  
+|**entrer**|**tinyint**|Type d'abonné :<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonné.<br /><br /> **1** = source de données ODBC.|  
+|**connexion**|**sysname**|Connexion pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Stocké sous forme chiffrée si l'Abonné est ajouté à l'aide du mode d'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**de**|**nvarchar (524)**|Mot de passe pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Stocké sous forme chiffrée si l'Abonné est ajouté à l'aide du mode d'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**description**|**nvarchar(255)**|Description de l'abonné.|  
-|**security_mode**|**int**|Mode de sécurité implémenté :<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] l’authentification Windows.|  
+|**security_mode**|**int**|Mode de sécurité implémenté :<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification.<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] authentification Windows.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vues de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
