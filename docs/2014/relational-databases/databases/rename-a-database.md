@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f014cb37c6c28a0c9a91bd811b9e94d734167e1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916769"
 ---
 # <a name="rename-a-database"></a>Modifier le nom d'une base de données
@@ -31,7 +31,7 @@ ms.locfileid: "62916769"
   
      [Sécurité](#Security)  
   
--   **Pour renommer une base de données, utilisez :**  
+-   **Pour renommer une base de données, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62916769"
   
 #### <a name="to-rename-a-database"></a>Pour renommer une base de données  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], puis développez-la.  
+1.  Dans **l’Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], puis développez-la.  
   
 2.  Vérifiez que personne n’utilise la base de données, puis [configurez la base de données en mode mono-utilisateur](set-a-database-to-single-user-mode.md).  
   
@@ -81,7 +81,7 @@ GO
 ```  
   
 ###  <a name="TsqlExample"></a>   
-##  <a name="FollowUp"></a> Suivi : Après avoir renommé une base de données  
+##  <a name="FollowUp"></a>Suivi : après avoir renommé une base de données  
  Après avoir renommé une base de données, sauvegardez la base de données **master** .  
   
 ## <a name="see-also"></a>Voir aussi  

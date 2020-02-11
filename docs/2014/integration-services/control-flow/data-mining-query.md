@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07373f17838fa387fe6ee22e31312a3933307fa3
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890328"
 ---
 # <a name="data-mining-query"></a>Requête d'exploration de données
@@ -26,17 +26,17 @@ ms.locfileid: "68890328"
  Bouton de basculement entre les vues  
  Cliquez sur une icône pour basculer entre le volet de conception et le volet de requête. Par défaut, le volet de conception est ouvert.  
   
- Pour basculer vers le volet de conception, cliquez sur l’icône ![Icône de conception](../media/ssis-designicon.gif "Icône de conception").  
+ Pour basculer vers le volet de conception, cliquez sur l’icône ![icône de conception](../media/ssis-designicon.gif "Icône de conception") .  
   
- Pour basculer vers le volet de requête, cliquez sur l’icône ![Icône SQL](../media/ssis-queryicon.gif "Icône SQL").  
+ Pour basculer vers le volet de requête, cliquez sur l’icône de l' ![icône SQL](../media/ssis-queryicon.gif "Icône SQL") .  
   
- **Modèle d'exploration de données**  
+ **Modèle d’exploration de données**  
  Choisissez le modèle d'exploration de données sur lequel vous souhaitez baser vos prévisions.  
   
  **Sélectionner un modèle**  
  Ouvre la boîte de dialogue **Sélectionnez un modèle d’exploration de données** .  
   
- **Colonnes d'entrée**  
+ **Colonnes d’entrée**  
  Affiche les colonnes d'entrée sélectionnées utilisées pour générer les prévisions.  
   
  **Source**  
@@ -53,17 +53,17 @@ ms.locfileid: "68890328"
  **Afficher**  
  Sélectionnez cette option pour retourner la colonne ou pour utiliser la colonne uniquement dans la clause WHERE.  
   
- **Grouper**  
+ **Groupe**  
  Utilisez cette option avec la colonne **et/ou** pour regrouper les expressions. Par exemple, (expr1 OU expr2) ET expr3.  
   
- **et/ou**  
+ **Et/ou**  
  Utilisez cette option pour créer une requête logique. Par exemple, (expr1 OU expr2) ET expr3.  
   
- **Critères/Argument**  
+ **Critères/argument**  
  Spécifiez une condition ou une expression utilisateur qui s'applique à la colonne. Les colonnes des tables contenant le modèle d'exploration de données et les colonnes d'entrée peuvent être glissées et déplacées sur la cellule.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Interfaces de requête d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
- [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
+ [Informations de référence sur les instructions DMX&#41; &#40;Data Mining Extensions](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

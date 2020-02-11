@@ -1,5 +1,5 @@
 ---
-title: CompareBookmarks, méthode-exemple (VB) | Microsoft Docs
+title: CompareBookmarks, exemple de méthode (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6f14ad9d6605747b78109e517636e5864847881f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919604"
 ---
 # <a name="comparebookmarks-method-example-vb"></a>CompareBookmarks, exemple de méthode (VB)
-Cet exemple montre la [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) (méthode). La valeur relative de signets est rarement nécessaire, sauf si un signet particulier présente une caractéristique spécial.  
+Cet exemple illustre la méthode [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) . La valeur relative des signets est rarement nécessaire, sauf si un signet particulier est spécial.  
   
- Désignez une ligne aléatoire d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dérivées de la ***auteurs*** table comme cible d’une recherche. Affichez ensuite la position de chaque ligne par rapport à cette cible.  
+ Désigne une ligne aléatoire d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) dérivé de la table ***Authors*** comme cible d’une recherche. Affiche ensuite la position de chaque ligne par rapport à cette cible.  
   
 ```  
 'BeginCompareBookmarksVB  

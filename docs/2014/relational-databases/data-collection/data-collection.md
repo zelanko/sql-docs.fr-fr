@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd38517c80eb5a1eca697bbc1705880132f4ea62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919049"
 ---
 # <a name="data-collection"></a>Collecte de données
@@ -40,19 +40,20 @@ ms.locfileid: "62919049"
   
 -   Travail  
   
--   Étape du travail  
+-   Étape de travail  
   
 -   Planification du travail  
   
--   Sous-système  
+-   Subsystem  
   
 -   Comptes proxy  
   
  Pour plus d’informations, consultez [Tâches d’administration automatisée &#40;SQL Server Agent&#41;](../../ssms/agent/sql-server-agent.md).  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) permet d’exécuter des packages qui collectent des données provenant de fournisseurs de données individuels. Vous devez maîtriser les outils et les concepts [!INCLUDE[ssIS](../../includes/ssis-md.md)] suivants :  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) permet d’exécuter des packages qui collectent des données provenant de fournisseurs de données individuels. Vous devez maîtriser les outils et les concepts [!INCLUDE[ssIS](../../includes/ssis-md.md)] suivants :  
   
--   Package [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)]Packages  
   
 -   Configuration de package [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
   
@@ -60,7 +61,7 @@ ms.locfileid: "62919049"
   
 ## <a name="data-collector-terminology"></a>Terminologie relative au collecteur de données  
  target  
- Une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans une édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prend en charge la collecte de données. Pour plus d’informations sur les éditions prises en charge, consultez la section « Simplicité de gestion » de [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans une édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prend en charge la collecte de données. Pour plus d’informations sur les éditions prises en charge, consultez la section « simplicité de gestion » des [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Une *racine cible* définit une sous-arborescence dans la hiérarchie cible. Un *jeu de cibles* désigne le groupe de cibles obtenu après l’application d’un filtre à une sous-arborescence définie par une racine cible. Une racine cible peut être une base de données, une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou une instance d'ordinateur.  
   
@@ -111,8 +112,8 @@ ms.locfileid: "62919049"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Décrit comment gérer différents aspects de la collecte de données, telles que l’activation ou désactivation de la collecte de données, modification d’une collection jeu configuration ou la consultation des données dans l’entrepôt de données de gestion.|[Gérer la collecte de données](manage-data-collection.md)|  
-|Explique comment utiliser ces rapports pour obtenir des informations afin de contrôler la capacité système et de résoudre les problèmes de performances système.|[Rapports de jeux d’éléments de collecte de données système](system-data-collection-set-reports.md)|  
-|Explique comment utiliser l'entrepôt de données de gestion pour collecter des données d'un serveur qui est une cible de collecte de données.|[Entrepôt de données de gestion](management-data-warehouse.md)|  
+|Explique comment gérer différents aspects de la collecte de données, tels que l'activation ou la désactivation de la collecte de données, la modification de la configuration d'un jeu d'éléments de collecte ou la consultation des données dans l'entrepôt de données de gestion.|[Gérer la collecte de données](manage-data-collection.md)|  
+|Explique comment utiliser ces rapports pour obtenir des informations afin de contrôler la capacité système et de résoudre les problèmes de performances système.|[Rapports de jeux d'éléments de collecte de données système](system-data-collection-set-reports.md)|  
+|Explique comment utiliser l'entrepôt de données de gestion pour collecter des données d'un serveur qui est une cible de collecte de données.|[entrepôt de données de gestion](management-data-warehouse.md)|  
   
   

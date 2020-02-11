@@ -19,10 +19,10 @@ ms.assetid: 83afa0ca-707e-4468-a888-228268ed4e10
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 090236bd5e0bd0429985ff9c54039a576950ec84
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75322094"
 ---
 # <a name="mspeer_conflictdetectionconfigrequest-transact-sql"></a>MSpeer_conflictdetectionconfigrequest (Transact-SQL)
@@ -32,16 +32,16 @@ ms.locfileid: "75322094"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|id|**tiers**|Identifie une demande de configuration en conflit. La colonne request_id dans [MSpeer_conflictdetectionconfigresponse](../../relational-databases/system-tables/mspeer-conflictdetectionconfigresponse-transact-sql.md) utilise cette valeur.|  
+|id|**int**|Identifie une demande de configuration en conflit. La colonne request_id dans [MSpeer_conflictdetectionconfigresponse](../../relational-databases/system-tables/mspeer-conflictdetectionconfigresponse-transact-sql.md) utilise cette valeur.|  
 |publication|**sysname**|Nom de la publication d'où provient la demande de configuration de conflit.|  
-|sent_date|**Date/heure**|Date et heure d'émission de la demande de configuration de conflit.|  
-|timeout|**tiers**|Durée d'attente d'une procédure avant le retour des informations de conflit par les homologues.|  
-|modified_date|**Date/heure**|Date et heure d'achèvement d'une phase.|  
+|sent_date|**DATETIME**|Date et heure d'émission de la demande de configuration de conflit.|  
+|timeout|**int**|Durée d'attente d'une procédure avant le retour des informations de conflit par les homologues.|  
+|modified_date|**DATETIME**|Date et heure d'achèvement d'une phase.|  
 |progress_phase|**nvarchar (32)**|Identifie la phase actuelle du traitement en utilisant l'une des valeurs suivantes :<br /><br /> Démarré<br /><br /> Navigation de la topologie<br /><br /> Collecte de l'état<br /><br /> État collecté|  
-|phase_timed_out|**64bits**|Indique si la phase actuelle a connu un dépassement du délai d'attente.|  
+|phase_timed_out|**bit**|Indique si la phase actuelle a connu un dépassement du délai d'attente.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Vues de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [Vues de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
