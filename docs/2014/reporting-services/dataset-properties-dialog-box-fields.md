@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Propriétés de DataSet, champs | Microsoft Docs
+title: Boîte de dialogue Propriétés du DataSet, champs | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 133d905958f0613d9b7ecf2d28c439c15a59eedb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109396"
 ---
 # <a name="dataset-properties-dialog-box-fields"></a>Boîte de dialogue Propriétés du dataset, Champs
@@ -30,10 +30,10 @@ ms.locfileid: "66109396"
  **Supprimer**  
  Supprimez le champ sélectionné du dataset.  
   
- **Nom de champ**  
+ **Nom du champ**  
  Tapez le nom du champ. Ce champ doit être unique dans le dataset. Pour chaque champ existant dans la requête de dataset, le nom est pré-rempli.  
   
- **Champ Source**  
+ **Champ source**  
  Entrez une valeur pour le champ.  
   
  Pour un champ calculé, la source du champ doit être le nom d'un champ existant récupéré par la requête de dataset ou une expression que vous créez. Par exemple, pour créer un champ qui représente 10 fois la valeur du champ de requête Sales, utilisez l'expression `=10 * Fields!Sales.Value`.  

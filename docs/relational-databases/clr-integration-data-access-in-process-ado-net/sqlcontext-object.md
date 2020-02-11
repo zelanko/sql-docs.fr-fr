@@ -15,37 +15,37 @@ ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 746ce8cec228b6fe9a9d36c4e0287ad7c2f3c517
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67951678"
 ---
 # <a name="sqlcontext-object"></a>Objet SqlContext
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Vous appelez le code managé dans le serveur lorsque vous appelez une procédure ou une fonction, lorsque vous appelez une méthode sur un type CLR défini par l'utilisateur ou lorsque votre action active un déclencheur défini dans l'un des langages du [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Comme l'exécution de ce code est demandée dans le cadre d'une connexion utilisateur, l'accès au contexte de l'appelant à partir du code en cours d'exécution dans le serveur est requis. De plus, certaines opérations d'accès aux données ne peuvent être valides que si elles sont exécutées sous le contexte de l'appelant. Par exemple, l'accès à des pseudo-tables insérées et supprimées utilisées dans les opérations de déclencheur n'est valide que sous le contexte de l'appelant.  
   
- Le contexte de l’appelant est abstrait dans un **SqlContext** objet. Pour plus d’informations sur la **SqlTriggerContext** méthodes et propriétés, consultez le **Microsoft.SqlServer.Server.SqlTriggerContext** classe documentation de référence dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
+ Le contexte de l’appelant est abstrait dans un objet **SqlContext** . Pour plus d’informations sur les méthodes et propriétés **SqlTriggerContext** , consultez la documentation de référence sur la classe **Microsoft. SqlServer. Server. SqlTriggerContext** dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Kit de développement logiciel (SDK).  
   
  **SqlContext** fournit l’accès aux composants suivants :  
   
--   **SqlPipe**: Le **SqlPipe** objet représente le « canal » via les résultats sont envoyés au client. Pour plus d’informations sur la **SqlPipe** d’objets, consultez [objet SqlPipe](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md).  
+-   **SqlPipe**: l’objet **SqlPipe** représente le « canal » dans lequel les résultats sont transmis au client. Pour plus d’informations sur l’objet **SqlPipe** , consultez l' [objet SqlPipe](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md).  
   
--   **SqlTriggerContext**: Le **SqlTriggerContext** objet peut uniquement être récupéré à partir d’un déclencheur CLR. Il fournit des informations sur l'opération qui a provoqué l'activation du déclencheur et un mappage des colonnes mises à jour. Pour plus d’informations sur la **SqlTriggerContext** d’objets, consultez [objet SqlTriggerContext](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md).  
+-   **SqlTriggerContext**: l’objet **SqlTriggerContext** peut uniquement être récupéré à partir d’un déclencheur CLR. Il fournit des informations sur l'opération qui a provoqué l'activation du déclencheur et un mappage des colonnes mises à jour. Pour plus d’informations sur l’objet **SqlTriggerContext** , consultez [objet SqlTriggerContext](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md).  
   
--   **IsAvailable**: Le **IsAvailable** propriété est utilisée pour déterminer la disponibilité du contexte.  
+-   **IsAvailable**: la propriété **IsAvailable** est utilisée pour déterminer la disponibilité du contexte.  
   
--   **WindowsIdentity**: Le **WindowsIdentity** propriété est utilisée pour récupérer l’identité Windows de l’appelant.  
+-   **WindowsIdentity**: la propriété **WindowsIdentity** est utilisée pour récupérer l’identité Windows de l’appelant.  
   
 ## <a name="determining-context-availability"></a>Détermination de la disponibilité du contexte  
- Requête la **SqlContext** classe pour voir si le code en cours d’exécution est en cours d’exécution dans le processus. Pour ce faire, vérifiez la **IsAvailable** propriété de la **SqlContext** objet. Le **IsAvailable** propriété est en lecture seule et retourne **True** si le code appelant s’exécute à l’intérieur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et si d’autres **SqlContext** membres sont accessibles. Si le **IsAvailable** retourne de la propriété **False**, toutes les autres **SqlContext** membres lèvent une **InvalidOperationException**, le cas échéant . Si **IsAvailable** retourne **False**, toute tentative d’ouverture d’un objet de connexion qui a « connexion contextuelle = true » dans la chaîne de connexion échoue.  
+ Interrogez la classe **SqlContext** pour voir si le code en cours d’exécution s’exécute in-process. Pour ce faire, vérifiez la propriété **IsAvailable** de l’objet **SqlContext** . La propriété **IsAvailable** est en lecture seule et retourne la **valeur true** si le code appelant s’exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans et si d’autres membres **SqlContext** sont accessibles. Si la propriété **IsAvailable** retourne la **valeur false**, tous les autres membres **SqlContext** lèvent une **exception InvalidOperationException**, si elle est utilisée. Si **IsAvailable** retourne la **valeur false**, toute tentative d’ouverture d’un objet de connexion ayant « context connection = true » dans la chaîne de connexion échoue.  
   
 ## <a name="retrieving-windows-identity"></a>Extraction de l'identité Windows  
- Le code CLR qui s'exécute à l'intérieur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est toujours appelé dans le contexte du compte de processus. Si le code doit exécuter certaines actions à l’aide de l’identité de l’utilisateur appelant, au lieu du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identité de processus, un jeton d’emprunt d’identité doit être obtenu via la **WindowsIdentity** propriété de la  **SqlContext** objet. Le **WindowsIdentity** propriété retourne un **WindowsIdentity** instance représentant le [!INCLUDE[msCoName](../../includes/msconame-md.md)] identité Windows de l’appelant, ou null si le client a été authentifié à l’aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentification. Seuls les assemblys marqués avec **EXTERNAL_ACCESS** ou **UNSAFE** autorisations peuvent accéder à cette propriété.  
+ Le code CLR qui s'exécute à l'intérieur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est toujours appelé dans le contexte du compte de processus. Si le code doit exécuter certaines actions à l’aide de l’identité de l’utilisateur appelant, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au lieu de l’identité du processus, un jeton d’emprunt d’identité doit être obtenu via la propriété **WindowsIdentity** de l’objet **SqlContext** . La propriété **WindowsIdentity** retourne une instance **WindowsIdentity** représentant l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] identité Windows de l’appelant, ou null si le client a été authentifié à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’aide de l’authentification. Seuls les assemblys marqués avec des autorisations **EXTERNAL_ACCESS** ou **unsafe** peuvent accéder à cette propriété.  
   
- Après avoir obtenu le **WindowsIdentity** de l’objet, les appelants peuvent emprunter l’identité du compte client et effectuer des actions en leur nom.  
+ Après avoir obtenu l’objet **WindowsIdentity** , les appelants peuvent emprunter l’identité du compte client et effectuer des actions en leur nom.  
   
- L’identité de l’appelant est disponible uniquement via **SqlContext.WindowsIdentity** si le client ayant lancé l’exécution de la procédure stockée ou une fonction est connecté au serveur à l’aide de l’authentification Windows. Si l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été utilisé à la place, cette propriété a la valeur Null et le code ne peut pas emprunter l'identité de l'appelant.  
+ L’identité de l’appelant est disponible uniquement via **SqlContext. WindowsIdentity** si le client qui a initié l’exécution de la procédure stockée ou de la fonction s’est connecté au serveur à l’aide de l’authentification Windows. Si l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été utilisé à la place, cette propriété a la valeur Null et le code ne peut pas emprunter l'identité de l'appelant.  
   
 ### <a name="example"></a>Exemple  
  L'exemple suivant montre comment obtenir l'identité Windows du client appelant et emprunter l'identité du client.  
@@ -129,7 +129,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet SqlPipe](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)   
+ [SqlPipe, objet](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)   
  [Objet SqlTriggerContext](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md)   
  [Déclencheurs CLR](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)   
  [Extensions spécifiques in-process de SQL Server à ADO.NET](../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  

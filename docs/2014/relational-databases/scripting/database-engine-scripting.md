@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0b092c85ea678ce05c3b9c8bbff4f78d47589bdb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244961"
 ---
 # <a name="database-engine-scripting"></a>Scripts du moteur de base de données
@@ -78,12 +78,12 @@ ms.locfileid: "75244961"
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
 |Explique comment utiliser le code et les éditeurs de texte dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour développer, déboguer, et exécuter interactivement des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Éditeurs de texte et de requête &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)|  
-|Explique comment utiliser l'utilitaire `sqlcmd` pour exécuter des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] à partir de l'invite de commandes, notamment la possibilité de développer interactivement des scripts.|[Rubriques de procédures relatives à sqlcmd](../../database-engine/sqlcmd-how-to-topics.md)|  
+|Explique comment utiliser l'utilitaire `sqlcmd` pour exécuter des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] à partir de l'invite de commandes, notamment la possibilité de développer interactivement des scripts.|[Rubriques de procédures liées à sqlcmd](../../database-engine/sqlcmd-how-to-topics.md)|  
 |Explique comment intégrer les composants SQL Server dans un environnement Windows PowerShell 2.0 et générer des scripts PowerShell pour gérer des instances et des objets SQL Server.|[SQL Server PowerShell](../../powershell/sql-server-powershell.md)|  
 |Explique comment utiliser l’Assistant **Générer et publier des scripts** pour créer des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] qui recréent un ou plusieurs objets d’une base de données.|[Générer des scripts &#40;SQL Server Management Studio&#41;](generate-scripts-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilitaire sqlcmd](../../tools/sqlcmd-utility.md)   
- [Didacticiel : écriture d’instructions Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [Didacticiel : écriture d'instructions Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

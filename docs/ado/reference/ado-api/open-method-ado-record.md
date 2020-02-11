@@ -1,5 +1,5 @@
 ---
-title: Open, méthode (objet Record ADO) | Microsoft Docs
+title: Open, méthode (ADO record) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97c7f1c143c83dd35ca5ff17e9776d79fb734ff9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917922"
 ---
 # <a name="open-method-ado-record"></a>Open, méthode (objet Record ADO)
-Ouvre une existante [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) de l’objet ou crée un nouvel élément représenté par le **enregistrement**, par exemple un fichier ou répertoire.  
+Ouvre un objet [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) existant ou crée un nouvel élément représenté par l' **enregistrement**, tel qu’un fichier ou un répertoire.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,49 +35,49 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
   
 #### <a name="parameters"></a>Paramètres  
  *Source*  
- facultatif. Un **Variant** qui peut représenter l’URL de l’entité pour être représenté par ce **enregistrement** objet, un **commande**, ouvert [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ou un autre **enregistrement** objet, une chaîne qui contient une instruction SQL SELECT ou un nom de table.  
+ facultatif. **Variante** qui peut représenter l’URL de l’entité à représenter par cet objet **Record** , une **commande**, un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ouvert ou un autre objet **Record** , une chaîne qui contient une instruction SQL SELECT ou un nom de table.  
   
  *ActiveConnection*  
- facultatif. Un **Variant** qui représente la chaîne de connexion ou ouvrez [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet.  
+ facultatif. **Variant** qui représente la chaîne de connexion ou l’objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) ouvert.  
   
  *Mode*  
- facultatif. Un [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) valeur qui spécifie le mode d’accès pour le résultant **enregistrement** objet. Valeur par défaut est **adModeUnknown**.  
+ facultatif. Valeur [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) qui spécifie le mode d’accès pour l’objet **enregistrement** obtenu. La valeur par défaut est **adModeUnknown**.  
   
  *CreateOptions*  
- facultatif. Un [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) valeur qui spécifie si un fichier ou répertoire existant doit être ouvert ou un nouveau fichier ou un répertoire doit être créée. Valeur par défaut est **adFailIfNotExists**. Si la valeur est la valeur par défaut, le mode d’accès est obtenu à partir de la [Mode](../../../ado/reference/ado-api/mode-property-ado.md) propriété. Ce paramètre est ignoré lors de la *Source* paramètre ne contient pas une URL.  
+ facultatif. Valeur de [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) qui spécifie si un fichier ou un répertoire existant doit être ouvert ou si un nouveau fichier ou répertoire doit être créé. La valeur par défaut est **adFailIfNotExists**. Si la valeur par défaut est définie, le mode d’accès est obtenu à partir de la propriété [mode](../../../ado/reference/ado-api/mode-property-ado.md) . Ce paramètre est ignoré lorsque le paramètre *source* ne contient pas d’URL.  
   
  *Options*  
- facultatif. Un [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) valeur qui spécifie les options pour l’ouverture du **enregistrement**. Valeur par défaut est **adOpenRecordUnspecified**. Ces valeurs peuvent être combinées.  
+ facultatif. Valeur de [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) qui spécifie les options d’ouverture de l' **enregistrement**. La valeur par défaut est **adOpenRecordUnspecified**. Ces valeurs peuvent être combinées.  
   
- *UserName*  
- Facultatif. Un **chaîne** valeur qui contient l’ID utilisateur, si nécessaire, autorise l’accès *Source*.  
+ *Nom d’utilisateur*  
+ facultatif. Valeur de **chaîne** qui contient l’ID d’utilisateur qui, s’il est requis, autorise l’accès à la *source*.  
   
  *Mot de passe*  
- Facultatif. Un **chaîne** valeur qui contient le mot de passe, si nécessaire, vérifie *nom d’utilisateur*.  
+ facultatif. Valeur de **chaîne** qui contient le mot de passe qui, le cas échéant, vérifie le *nom d’utilisateur*.  
   
 ## <a name="remarks"></a>Notes  
- *Source* peut être :  
+ La *source* peut être :  
   
--   UNE URL. Si le protocole de l’URL est http, le fournisseur Internet sera appelé par défaut. Si l’URL pointe vers un nœud qui contient un script exécutable (comme un. Page ASP), un **enregistrement** qui contient la source au lieu de l’objet exécuté contenu s’ouvre par défaut. Utilisez le *Options* argument pour modifier ce comportement.  
+-   URL. Si le protocole de l’URL est http, le fournisseur Internet est appelé par défaut. Si l’URL pointe vers un nœud qui contient un script exécutable (tel qu’un. ASP), un **enregistrement** qui contient la source à la place du contenu exécuté est ouvert par défaut. Utilisez l’argument *options* pour modifier ce comportement.  
   
--   Un **enregistrement** objet. Un **enregistrement** objet ouvert à partir d’un autre **enregistrement** clone d’origine **enregistrement** objet.  
+-   Objet **enregistrement** . Un objet **Record** ouvert à partir d’un autre **enregistrement** clone l’objet **enregistrement** d’origine.  
   
--   Un **commande** objet. Le texte ouvert **enregistrement** objet représente la ligne unique retournée par l’exécution de la **commande**. Si les résultats contiennent plus d’une seule ligne, le contenu de la première ligne est placé dans l’enregistrement et une erreur peut être ajoutée à la **erreurs** collection.  
+-   Objet **Command** . L’objet **Record** ouvert représente la ligne unique retournée par l’exécution de la **commande**. Si les résultats contiennent plusieurs lignes, le contenu de la première ligne est placé dans l’enregistrement et une erreur peut être ajoutée à la collection d' **Erreurs** .  
   
--   Une instruction SQL SELECT. Le texte ouvert **enregistrement** objet représente la ligne unique retournée par l’exécution du contenu de la chaîne. Si les résultats contiennent plus d’une seule ligne, le contenu de la première ligne est placé dans l’enregistrement et une erreur peut être ajoutée à la **erreurs** collection.  
+-   Instruction SQL SELECT. L’objet **Record** ouvert représente la ligne unique retournée en exécutant le contenu de la chaîne. Si les résultats contiennent plusieurs lignes, le contenu de la première ligne est placé dans l’enregistrement et une erreur peut être ajoutée à la collection d' **Erreurs** .  
   
--   Un nom de table.  
+-   Nom de la table.  
   
- Si le **enregistrement** objet représente une entité qui n’est pas accessible avec une URL (par exemple, une ligne d’un **Recordset** dérivé d’une base de données), les valeurs des deux le [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md)propriété et le champ accédé avec la **adRecordURL** constante sont null.  
+ Si l’objet **Record** représente une entité qui n’est pas accessible à l’aide d’une URL (par exemple, une ligne d’un **jeu d’enregistrements** dérivé d’une base de données), les valeurs de la propriété [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md) et du champ accessible avec la constante **adRecordURL** sont null.  
   
 > [!NOTE]
->  URL à l’aide du modèle http appellent automatiquement le [fournisseur Microsoft OLE DB pour la publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Pour plus d’informations, consultez [URL absolues et relatives](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  Les URL utilisant le schéma http appellera automatiquement le [fournisseur Microsoft OLE DB pour la publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Pour plus d’informations, consultez [URL absolues et relatives](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>S'applique à  
  [Record, objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Open, méthode (objet Connection ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
+ [Open, méthode (connexion ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Open, méthode (objet Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Open, méthode (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
+ [Open, méthode (objet Stream ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [OpenSchema, méthode](../../../ado/reference/ado-api/openschema-method.md)

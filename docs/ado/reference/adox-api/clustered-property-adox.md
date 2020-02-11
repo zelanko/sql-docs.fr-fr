@@ -20,22 +20,22 @@ ms.assetid: 9b62fb35-de43-425a-83ca-77af4e33fea9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c66bca375951ec78593bafc2c2eff950e3282e4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966996"
 ---
 # <a name="clustered-property-adox"></a>Clustered, propriété (ADOX)
-Indique si l’index est groupé.  
+Indique si l’index est ordonné en clusters.  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Définit et renvoie un **booléenne** valeur.  
+ Définit et retourne une valeur **booléenne** .  
   
 ## <a name="remarks"></a>Notes  
  La valeur par défaut est **False**.  
   
- Cette propriété est en lecture seule sur [Index](../../../ado/reference/adox-api/index-object-adox.md) les objets qui ont déjà été ajoutés à une collection.  
+ Cette propriété est en lecture seule sur les objets d' [index](../../../ado/reference/adox-api/index-object-adox.md) qui ont déjà été ajoutés à une collection.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Index, objet (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  

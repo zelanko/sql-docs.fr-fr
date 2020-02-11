@@ -16,23 +16,24 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206963"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objet Deprecated Features
-  L'objet SQLServer:Deprecated Features de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un compteur permettant de contrôler les fonctionnalités désignées comme dépréciées. Dans tous les cas, le compteur fournit un nombre d'utilisations indiquant combien de fois la fonctionnalité déconseillée a été rencontrée depuis le dernier démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  L'objet SQLServer:Deprecated Features de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un compteur permettant de contrôler les fonctionnalités désignées comme dépréciées. Dans tous les cas, le compteur fournit un nombre d'utilisations indiquant combien de fois la fonctionnalité dépréciée a été rencontrée depuis le dernier démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Le tableau suivant décrit les instances du compteur de l'objet SQL Server : Fonctionnalités déconseillées.  
+ Le tableau suivant décrit les instances du compteur de l'objet SQL Server Deprecated Features.  
   
 |Instances du compteur de l'objet SQL Server Deprecated Features|Description|  
 |------------------------------------------------------|-----------------|  
 |'#' et '##' comme nom des tables temporaires et procédures stockées|Un identifiant ne contenant pas d'autres caractères que # a été rencontré. Utilisez au moins un caractère supplémentaire. Se produit une fois par compilation.|  
-|Syntaxe d'appel de fonction '::'|La syntaxe d'appel de fonction :: a été rencontrée pour une fonction table. Remplacez par `SELECT column_list FROM`  *\< nom_fonction >* `()`. Par exemple, remplacez `SELECT * FROM ::fn_virtualfilestats(2,1)`par `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produit une fois par compilation.|  
-|\@ et noms commençant par \@\@ comme identificateurs [!INCLUDE[tsql](../../includes/tsql-md.md)]|Un identificateur commençant par \@ ou \@\@ a été trouvé. N’utilisez pas \@, \@\@ ou des noms commençant par \@\@ comme identificateurs. Se produit une fois par compilation.|  
-|ADDING TAPE DEVICE|La fonctionnalité déconseillée sp_addumpdevice'`tape`' a été rencontrée. Utilisez sp_addumpdevice'`disk`' à la place. Se produit une fois par utilisation.|  
+|Syntaxe d'appel de fonction '::'|La syntaxe d'appel de fonction :: a été rencontrée pour une fonction table. Remplacez par `SELECT column_list FROM` * \< function_name>* `()`. Par exemple, remplacez `SELECT * FROM ::fn_virtualfilestats(2,1)`par `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produit une fois par compilation.|  
+|
+  \@ et noms commençant par \@\@ comme identificateurs [!INCLUDE[tsql](../../includes/tsql-md.md)]|Un identificateur commençant par \@ ou \@\@ a été trouvé. N’utilisez pas \@, \@\@ ou des noms commençant par \@\@ comme identificateurs. Se produit une fois par compilation.|  
+|ADDING TAPE DEVICE|La fonctionnalité déconseillée sp_addumpdevice`tape`' 'a été rencontrée. Utilisez sp_addumpdevice'`disk`'à la place. Se produit une fois par utilisation.|  
 |Autorisation ALL|Nombre total de fois où la syntaxe GRANT ALL, DENY ALL ou REVOKE ALL a été rencontrée. Modifiez la syntaxe pour refuser des autorisations spécifiques. Se produit une fois par requête.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Nombre total d'utilisations de l'option TORN_PAGE_DETECTION de la fonctionnalité déconseillée ALTER DATABASE depuis le démarrage de l'instance du serveur. Utilisez à la place la syntaxe PAGE_VERIFY. Se produit une fois par utilisation dans une instruction DDL.|  
 |ALTER LOGIN WITH SET CREDENTIAL|La syntaxe de fonctionnalité déconseillée ALTER LOGIN WITH SET CREDENTIAL ou ALTER LOGIN WITH NO CREDENTIAL a été rencontrée. Utilisez à la place la syntaxe ADD ou DROP CREDENTIAL. Se produit une fois par compilation.|  
@@ -47,7 +48,7 @@ ms.locfileid: "68206963"
 |CREATE_DROP_DEFAULT|La syntaxe CREATE DEFAULT ou DROP DEFAULT a été rencontrée. Réécrivez la commande en utilisant l'option DEFAULT de CREATE TABLE ou ALTER TABLE. Se produit une fois par compilation.|  
 |CREATE_DROP_RULE|La syntaxe CREATE RULE a été rencontrée. Réécrivez la commande en utilisant des contraintes. Se produit une fois par compilation.|  
 |Types de données text, ntext ou image|Un type de données `text`, `ntext` ou `image` a été rencontré. Réécrivez les applications de manière à utiliser le type de données `varchar(max)` et à supprimer les types de données `text`, `ntext` et `image` de la syntaxe. Se produit une fois par requête.|  
-|Niveau de compatibilité 80 de la base de données|Nombre total de fois où le niveau de compatibilité 80 a été appliqué à une base de données. Projetez de mettre à niveau la base de données et l'application avant la prochaine version. Se produit également lorsqu’une base de données présentant le niveau de compatibilité 80 est démarrée.|  
+|Niveau de compatibilité 80 de la base de données|Nombre total de fois où le niveau de compatibilité 80 a été appliqué à une base de données. Projetez de mettre à niveau la base de données et l'application avant la prochaine version. Se produit également lorsqu’une base de données présentant le niveau de compatibilité 80 est démarrée.|  
 |Niveau de compatibilité 90 de la base de données|Nombre total de fois où le niveau de compatibilité 90 a été appliqué à une base de données. Projetez de mettre à niveau la base de données et l'application avant la prochaine version. Se produit également lorsqu'une base de données ayant le niveau de compatibilité 90 est démarrée.|  
 |DATABASE_MIRRORING|Des références à la fonctionnalité de mise en miroir de bases de données ont été rencontrées. Prévoyez d'effectuer une mise à niveau vers des groupes de disponibilité AlwaysOn, ou si vous exécutez une édition de SQL Server qui ne prend pas en charge les groupes de disponibilité AlwaysOn, planifiez une migration vers la copie des journaux de transaction.|  
 |database_principal_aliases|Des références à la fonctionnalité déconseillée sys.database_principal_aliases ont été rencontrées. Utilisez des rôles à la place d'alias. Se produit une fois par compilation.|  
@@ -102,7 +103,7 @@ ms.locfileid: "68206963"
 |INSERT_HINTS||  
 |Korean_Wansung_Unicode|L'événement se produit une fois par démarrage de base de données et une fois par utilisation de classement. Prévoyez de modifier les applications qui utilisent ce classement.|  
 |Lithuanian_Classic|L'événement se produit une fois par démarrage de base de données et une fois par utilisation de classement. Prévoyez de modifier les applications qui utilisent ce classement.|  
-|Macedonian|L'événement se produit une fois par démarrage de base de données et une fois par utilisation de classement. Prévoyez de modifier les applications qui utilisent ce classement. Utilisez à la place Macedonian_FYROM_90.|  
+|Macédonien|L'événement se produit une fois par démarrage de base de données et une fois par utilisation de classement. Prévoyez de modifier les applications qui utilisent ce classement. Utilisez à la place Macedonian_FYROM_90.|  
 |MODIFY FILEGROUP READONLY|La syntaxe MODIFY FILEGROUP READONLY a été rencontrée. Réécrivez les instructions de manière à utiliser la syntaxe READ_ONLY. Se produit une fois par compilation.|  
 |MODIFY FILEGROUP READWRITE|La syntaxe MODIFY FILEGROUP READWRITE a été rencontrée. Réécrivez les instructions de manière à utiliser la syntaxe READ_WRITE. Se produit une fois par compilation.|  
 |Nom de la colonne à plus de deux parties|Une requête a utilisé un nom en 3 ou 4 parties dans la liste de colonnes. Modifiez la requête de manière à utiliser des noms en 2 parties conformes au standard. Se produit une fois par compilation.|  
@@ -112,14 +113,14 @@ ms.locfileid: "68206963"
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|Des références à la fonctionnalité déconseillée sys.numbered_procedure_parameters ont été rencontrées. Ne pas utiliser. Se produit une fois par compilation.|  
 |numbered_procedures|Des références à la fonctionnalité déconseillée sys.numbered_procedures ont été rencontrées. Ne pas utiliser. Se produit une fois par compilation.|  
-|Ancien style RAISEERROR|La syntaxe RAISERROR dépréciée (Format : chaîne d’entier RAISERROR) a été rencontrée. Réécrivez l'instruction en utilisant la syntaxe RAISERROR actuelle. Se produit une fois par compilation.|  
+|Ancien style RAISEERROR|La syntaxe RAISERROR déconseillée (Format : RAISERROR entier chaîne) a été rencontrée. Réécrivez l'instruction en utilisant la syntaxe RAISERROR actuelle. Se produit une fois par compilation.|  
 |OLEDB pour les connexions ad hoc|Le fournisseur SQLOLEDB n'est pas pris en charge. Utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client pour les connexions ad hoc.|  
 |PERMISSIONS|Des références à la fonction intrinsèque PERMISSIONS ont été rencontrées. Interrogez à la place sys.fn_my_permissions. Se produit une fois par requête.|  
 |ProcNums|La syntaxe déconseillée ProcNums a été rencontrée. Réécrivez les instructions de manière à supprimer ces références. Se produit une fois par compilation.|  
 |READTEXT|La syntaxe READTEXT a été rencontrée. Réécrivez les applications de manière à utiliser le type de données `varchar(max)` et à supprimer le type de données `text`. Se produit une fois par requête.|  
-|RESTORE DATABASE ou LOG WITH DBO_ONLY|La syntaxe RESTORE ... WITH DBO_ONLY a été rencontrée. Utilisez plutôt RESTORE … RESTRICTED_USER.|  
-|RESTORE DATABASE ou LOG WITH MEDIAPASSWORD|La syntaxe RESTORE ... WITH MEDIAPASSWORD a été rencontrée. WITH MEDIAPASSWORD fournit un faible niveau de sécurité et doit être supprimé.|  
-|RESTORE DATABASE ou LOG WITH PASSWORD|La syntaxe RESTORE ... WITH PASSWORD a été rencontrée. WITH PASSWORD fournit un faible niveau de sécurité et doit être supprimé.|  
+|RESTORE DATABASE ou LOG WITH DBO_ONLY|La restauration... AVEC DBO_ONLY syntaxe a été rencontrée. Utiliser la restauration... RESTRICTED_USER à la place.|  
+|RESTORE DATABASE ou LOG WITH MEDIAPASSWORD|La restauration... La syntaxe MEDIAPASSWORD a été rencontrée. WITH MEDIAPASSWORD fournit un faible niveau de sécurité et doit être supprimé.|  
+|RESTORE DATABASE ou LOG WITH PASSWORD|La restauration... Une syntaxe de mot de passe a été rencontrée. WITH PASSWORD fournit un faible niveau de sécurité et doit être supprimé.|  
 |Le déclencheur retourne des résultats|Cet événement se produit une fois par appel de déclencheur. Réécrivez le déclencheur de manière à ce qu'il ne retourne pas de jeux de résultats.|  
 |ROWGUIDCOL|La syntaxe ROWGUIDCOL a été rencontrée. Réécrivez les instructions de manière à utiliser la syntaxe $rowguid. Se produit une fois par compilation.|  
 |SET ANSI_NULLS OFF|La syntaxe SET ANSI_NULLS OFF a été rencontrée. Supprimez cette syntaxe déconseillée. Se produit une fois par compilation.|  
@@ -162,7 +163,7 @@ ms.locfileid: "68206963"
 |sp_control_dbmasterkey_password|La procédure stockée sp_control_dbmasterkey_password ne vérifie pas s'il existe une clé principale. Cette opération est autorisée à des fins de compatibilité descendante, mais affiche un avertissement. Ce comportement est déconseillé. Dans une version ultérieure, la clé principale doit exister et le mot de passe utilisé dans la procédure stockée sp_control_dbmasterkey_password doit être identique à un des mots de passe utilisés pour chiffrer la clé principale de la base de données.|  
 |sp_create_removable|La procédure sp_create_removable a été rencontrée. Utilisez à la place CREATE DATABASE. Se produit une fois par requête.|  
 |sp_db_vardecimal_storage_format|Le format de stockage `vardecimal` a été rencontré. Utilisez à la place la compression de données.|  
-|sp_dbcmptlevel|La procédure sp_dbcmptlevel a été rencontrée. Utilisez ALTER DATABASE ... SET COMPATIBILITY_LEVEL. Se produit une fois par requête.|  
+|sp_dbcmptlevel|La procédure sp_dbcmptlevel a été rencontrée. Utiliser ALTER DATABASE... Définissez COMPATIBILITY_LEVEL à la place. Se produit une fois par requête.|  
 |sp_dbfixedrolepermission|La procédure sp_dbfixedrolepermission a été rencontrée. Ne pas utiliser. Se produit une fois par requête.|  
 |sp_dboption|La procédure sp_dboption a été rencontrée. Utilisez à la place ALTER DATABASE et DATABASEPROPERTYEX. Se produit une fois par compilation.|  
 |sp_dbremove|La procédure sp_dbremove a été rencontrée. Utilisez à la place DROP DATABASE. Se produit une fois par requête.|  
@@ -238,7 +239,7 @@ ms.locfileid: "68206963"
 |sysobjects|Des références à sysobjects ont été rencontrées. Utilisez à la place sys.objects. Se produit une fois par compilation.|  
 |sysoledbusers|Des références à sysoledbusers ont été rencontrées. Utilisez à la place sys.linked_logins. Se produit une fois par compilation.|  
 |sysopentapes|Des références à sysopentapes ont été rencontrées. Utilisez à la place sys.dm_io_backup_tapes. Se produit une fois par compilation.|  
-|sysperfinfo|Des références à sysperfinfo ont été rencontrées. Utilisez à la place sys.dm_os_performance_counters. . Se produit une fois par compilation.|  
+|sysperfinfo|Des références à sysperfinfo ont été rencontrées. Utilisez à la place sys.dm_os_performance_counters. à la place. Se produit une fois par compilation.|  
 |syspermissions|Des références à syspermissions ont été rencontrées. Utilisez à la place sys.database_permissions et sys.server_permissions. Se produit une fois par compilation.|  
 |sysprocesses|Des références à sysprocesses ont été rencontrées. Utilisez à la place sys.dm_exec_connections, sys.dm_exec_sessions et sys.dm_exec_requests. Se produit une fois par compilation.|  
 |sysprotects|Des références à sysprotects ont été rencontrées. Utilisez à la place sys.database_permissions et sys.server_permissions. Se produit une fois par compilation.|  
@@ -251,7 +252,7 @@ ms.locfileid: "68206963"
 |Option de table text in row|Des références à l'option de table 'text in row' ont été rencontrées. Utilisez à la place sp_tableoption 'large value types out of row'. Se produit une fois par requête.|  
 |TEXTPTR|Des références à la fonction TEXTPTR ont été rencontrées. Réécrivez les applications de manière à utiliser le type de données `varchar(max)` et à supprimer les types de données `text`, `ntext` et `image` de la syntaxe. Se produit une fois par requête.|  
 |TEXTVALID|Des références à la fonction TEXTVALID ont été rencontrées. Réécrivez les applications de manière à utiliser le type de données `varchar(max)` et à supprimer les types de données `text`, `ntext` et `image` de la syntaxe. Se produit une fois par requête.|  
-|TIMESTAMP|Nombre total des fois où le type de données `timestamp` déconseillé a été rencontré dans une instruction DDL. Utilisez à la place le type de données `rowversion`.|  
+|timestamp|Nombre total des fois où le type de données `timestamp` déconseillé a été rencontré dans une instruction DDL. Utilisez à la place le type de données `rowversion`.|  
 |UPDATETEXT ou WRITETEXT|L'instruction UPDATETEXT ou WRITETEXT a été rencontrée. Réécrivez les applications de manière à utiliser le type de données `varchar(max)` et à supprimer les types de données `text`, `ntext` et `image` de la syntaxe. Se produit une fois par requête.|  
 |USER_ID|Des références à la fonction USER_ID ont été rencontrées. Utilisez à la place la fonction DATABASE_PRINCIPAL_ID. Se produit une fois par compilation.|  
 |Utilisation d'OLEDB pour les serveurs liés||  
@@ -259,16 +260,16 @@ ms.locfileid: "68206963"
 |XMLDATA|La syntaxe FOR XML a été rencontrée. Utilisez la génération XSD en modes RAW et AUTO. Il n'y a aucun remplacement pour le mode explicite. Se produit une fois par compilation.|  
 |XP_API|Une instruction de procédure stockée étendue a été rencontrée. Ne pas utiliser.|  
 |xp_grantlogin|La procédure xp_grantlogin a été rencontrée. Utilisez à la place CREATE LOGIN. Se produit une fois par compilation.|  
-|xp_loginconfig|La procédure xp_loginconfig a été rencontrée. Utilisez à la place l'argument IsIntegratedSecurityOnly de SERVERPROPERTY. Se produit une fois par requête.|  
+|xp_loginConfig|La procédure xp_loginconfig a été rencontrée. Utilisez à la place l'argument IsIntegratedSecurityOnly de SERVERPROPERTY. Se produit une fois par requête.|  
 |xp_revokelogin|La procédure xp_revokelogin a été rencontrée. Utilisez à la place ALTER LOGIN DISABLE ou DROP LOGIN. Se produit une fois par compilation.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctionnalités du moteur de base de données déconseillées dans SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
+ [Fonctionnalités de Moteur de base de données dépréciées dans SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [Fonctionnalités de recherche en texte intégral déconseillées dans SQL Server 2014](../search/deprecated-full-text-search-features-in-sql-server-2016.md)   
- [Classe d'événements Deprecation Announcement](../event-classes/deprecation-announcement-event-class.md)   
- [Classe d'événements Deprecation Final Support](../event-classes/deprecation-final-support-event-class.md)   
- [Fonctionnalités du moteur de base de données supprimées dans SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [Recherche en texte intégral fonctionnalités abandonnées dans SQL Server 2014](../../database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)   
+ [Classe d’événements dispréciation Announcement](../event-classes/deprecation-announcement-event-class.md)   
+ [Dépréciation final support (classe d’événements)](../event-classes/deprecation-final-support-event-class.md)   
+ [Fonctionnalités de Moteur de base de données abandonnées dans SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
+ [Fonctionnalités de recherche en texte intégral supprimées dans SQL Server 2014](../../database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)   
  [Utiliser des objets SQL Server](use-sql-server-objects.md)  
   
   

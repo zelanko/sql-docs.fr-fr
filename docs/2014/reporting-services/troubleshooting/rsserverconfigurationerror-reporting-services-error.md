@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 19778bce64e5779471e78b8c4305e1bd6315c0ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099208"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Erreur Reporting Services
@@ -26,8 +26,8 @@ ms.locfileid: "66099208"
 |||  
 |-|-|  
 |Nom du produit|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|ID d'événement|rsServerConfiguration|  
-|Source de l'événement|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings|  
+|ID de l’événement|rsServerConfiguration|  
+|Source de l’événement|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings|  
 |Composant|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |Texte du message|Le serveur de rapports a rencontré une erreur de configuration.|  
   
@@ -47,12 +47,12 @@ ms.locfileid: "66099208"
 ## <a name="user-action"></a>Action de l'utilisateur  
  Si cette erreur a commencé à se produire après que vous avez modifié manuellement un fichier de configuration, supprimez vos modifications et entrez la valeur précédente, ou restaurez une version précédente si vous disposez d'une sauvegarde.  
   
- Pour passer en revue les informations de message d’erreur supplémentaires qui accompagnent le `rsServerConfiguration` erreur, passez en revue les rapport trace fichiers journaux du serveur qui se trouvent dans \Microsoft SQL Server\MSRS12.\< nom_instance > \Reporting Services\LogFiles. Pour plus d’informations, consultez [Fichiers journaux et sources de Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
+ Pour consulter des informations supplémentaires sur les messages d’erreur `rsServerConfiguration` qui accompagnent l’erreur, examinez les fichiers journaux de trace du serveur de rapports, qui se trouvent dans \Microsoft SQL Server\MSRS12. \<nom_instance > \Reporting Services\LogFiles. Pour plus d’informations, consultez [Fichiers journaux et sources de Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
   
 ## <a name="internal-only"></a>Interne uniquement  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fichiers de configuration Reporting Services](../report-server/reporting-services-configuration-files.md)   
+ [Fichiers de configuration de Reporting Services](../report-server/reporting-services-configuration-files.md)   
  [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
   
   

@@ -16,10 +16,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f82c330e2d18f05d0f358171a4ffeabc63ac9c3c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246594"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introduction à l'utilisation des requêtes XPath (SQLXML 4.0)
@@ -59,7 +59,7 @@ ms.locfileid: "75246594"
   
      SQLXML 4.0 ne prend pas en charge la requête racine (/). Chaque requête XPath doit commencer à un ElementType de niveau ** \<supérieur>** dans le schéma.  
   
--   **Rapports d’erreurs**  
+-   **Signalement d’erreurs**  
   
      La spécification XPath W3C ne définit pas de conditions d'erreur. Les requêtes XPath qui ne sélectionnent aucun nœud retournent un élément node-set vide. Dans SQLXML 4.0, une requête peut retourner de nombreux types de messages d'erreur.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "75246594"
 ## <a name="supported-functionality"></a>Fonctionnalités prises en charge  
  Le tableau suivant indique les fonctionnalités du langage XPath implémentées dans SQLXML 4.0.  
   
-|Fonctionnalité|Item|Lien aux exemples de requêtes|  
+|Fonctionnalité|Élément|Lien aux exemples de requêtes|  
 |-------------|----------|----------------------------|  
 |Axes|**attribut**, **enfant**, **parent**et **auto** -axes|[Spécification d’axes dans les requêtes XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |Prédicats à valeurs booléennes, y compris les prédicats consécutifs et imbriqués||[La spécification d’opérateurs arithmétiques dans des requêtes XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
@@ -105,7 +105,7 @@ ms.locfileid: "75246594"
 ## <a name="unsupported-functionality"></a>Fonctionnalités non prises en charge  
  Le tableau suivant indique les fonctionnalités du langage XPath non implémentées dans SQLXML 4.0.  
   
-|Fonctionnalité|Item|  
+|Fonctionnalité|Élément|  
 |-------------|----------|  
 |Axes|**ancêtre**, **ancêtre-or-self**, **descendant**, **descendant-ou-self (//)**, **suivant**, **frère suivant**, **espace de noms**, **précédent**, **frère précédent**|  
 |Prédicats à valeurs numériques||  

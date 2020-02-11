@@ -13,13 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7fb33e6ccb5afbdee1bf6c3673a24548d6fe9961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102121"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Configurer des connexions SSL sur un serveur de rapports en mode natif
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Le mode natif utilise le service HTTP SSL (Secure Sockets Layer) pour définir des connexions chiffrées à un serveur de rapports. Si le fichier de certificat (.cer) est installé dans un magasin de certificats local sur le serveur de rapports, vous pouvez lier le certificat à une réservation d’URL [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour prendre en charge des connexions de serveur de rapports sur un canal chiffré.  
   
 > [!TIP]  
@@ -28,7 +29,8 @@ ms.locfileid: "66102121"
  Comme Internet Information Services utilise aussi HTTP SSL, cela entraîne des problèmes d’interopérabilité significatifs que vous devez connaître si vous exécutez IIS et [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur le même ordinateur. Veillez à consulter la section Problèmes d'interopérabilité avec IIS pour des informations sur la manière de traiter ces problèmes.  
   
 ## <a name="server-certificate-requirements"></a>Conditions requises des certificats de serveur  
- Vous devez installer un certificat de serveur sur l'ordinateur (les certificats clients ne sont pas pris en charge). Les services de rapports n'offrent pas de fonctionnalité pour demander, générer, télécharger ou installer un certificat. [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] fournit un composant logiciel enfichable de certificat que vous pouvez utiliser pour demander un certificat à une autorité de certification approuvée.  
+ Vous devez installer un certificat de serveur sur l'ordinateur (les certificats clients ne sont pas pris en charge). Les services de rapports n'offrent pas de fonctionnalité pour demander, générer, télécharger ou installer un certificat. 
+  [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] fournit un composant logiciel enfichable de certificat que vous pouvez utiliser pour demander un certificat à une autorité de certification approuvée.  
   
  Vous pouvez créer un certificat localement à des fins de tests. Si vous employez l’utilitaire **MakeCert** et l’exemple de commande comme modèle, veillez à spécifier le nom de votre serveur comme hôte et à supprimer tous les sauts de ligne avant d’exécuter la commande. Si vous exécutez la commande dans une fenêtre DOS, vous devrez peut-être augmenter la taille de la mémoire tampon de la fenêtre pour prendre en compte toute la commande.  
   
@@ -54,7 +56,8 @@ ms.locfileid: "66102121"
   
 2.  Cliquez sur **URL du service Web**.  
   
-3.  Développez la liste des certificats SSL. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] détecte les certificats d’authentification des serveurs dans le magasin local. Si vous avez installé un certificat et qu'il ne figure pas dans la liste, vous devrez peut-être redémarrer le service. Vous pouvez utiliser les boutons **Arrêter** et **Démarrer** dans la page **État de Report Server** dans l’outil de configuration de Reporting Services pour redémarrer le service.  
+3.  Développez la liste des certificats SSL. 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] détecte les certificats d’authentification des serveurs dans le magasin local. Si vous avez installé un certificat et qu'il ne figure pas dans la liste, vous devrez peut-être redémarrer le service. Vous pouvez utiliser les boutons **Arrêter** et **Démarrer** dans la page **État de Report Server** dans l’outil de configuration de Reporting Services pour redémarrer le service.  
   
 4.  Sélectionnez le certificat.  
   
@@ -84,13 +87,14 @@ ms.locfileid: "66102121"
   
  Les liaisons SSL sont une ressource partagée dans Microsoft Windows. Les modifications apportées par le Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou d’autres outils, tels que le Gestionnaire des services IIS, peuvent avoir une incidence sur d’autres applications sur le même ordinateur. Il est recommandé d'utiliser le même outil pour modifier les liaisons que celui utilisé pour les créer.  Par exemple, si vous avez créé des liaisons SSL à l'aide du Gestionnaire de configuration, il est recommandé d'utiliser cet outil pour gérer le cycle de vie des liaisons. Si vous utilisez le Gestionnaire des services IIS pour créer des liaisons, il est recommandé d'utiliser cet outil pour gérer le cycle de vie des liaisons. Si IIS a été installé sur l'ordinateur avant [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , il est recommandé de vérifier la configuration SSL dans IIS avant de configurer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Si vous supprimez des liaisons SSL pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à l’aide du Gestionnaire de configuration Reporting Services, il se peut que SSL ne fonctionne plus pour les sites web sur un serveur exécutant Internet Information Services (IIS) ou sur un autre serveur HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Le Gestionnaire de configuration supprime la clé de Registre suivante. Lorsque cette clé de Registre est supprimée, la liaison SSL pour IIS l'est également. Sans cette liaison, SSL n'est pas fourni pour le protocole HTTPS. Pour diagnostiquer ce problème, utilisez le Gestionnaire des services IIS ou l'utilitaire en ligne de commande HTTPCFG.exe. Pour résoudre le problème, restaurez la liaison SSL pour vos sites Web en utilisant le Gestionnaire des services IIS. Pour éviter ce problème dans le futur, utilisez le Gestionnaire des services IIS pour restaurer la liaison pour les sites Web souhaités. Pour plus d’informations, consultez l’article de la Base de connaissances [SSL ne fonctionne plus après la suppression d’une liaison SSL (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n).  
+ Si vous supprimez des liaisons SSL pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à l’aide du Gestionnaire de configuration Reporting Services, il se peut que SSL ne fonctionne plus pour les sites web sur un serveur exécutant Internet Information Services (IIS) ou sur un autre serveur HTTP.SYS. 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Le Gestionnaire de configuration supprime la clé de Registre suivante. Lorsque cette clé de Registre est supprimée, la liaison SSL pour IIS l'est également. Sans cette liaison, SSL n'est pas fourni pour le protocole HTTPS. Pour diagnostiquer ce problème, utilisez le Gestionnaire des services IIS ou l'utilitaire en ligne de commande HTTPCFG.exe. Pour résoudre le problème, restaurez la liaison SSL pour vos sites Web en utilisant le Gestionnaire des services IIS. Pour éviter ce problème dans le futur, utilisez le Gestionnaire des services IIS pour restaurer la liaison pour les sites Web souhaités. Pour plus d’informations, consultez l’article de la Base de connaissances [SSL ne fonctionne plus après la suppression d’une liaison SSL (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Authentification avec le serveur de rapports](authentication-with-the-report-server.md)   
  [Configurer et administrer un serveur de rapports &#40;SSRS en mode natif&#41;](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Fichier de Configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
- [Gestionnaire de Configuration de Reporting Services &#40;del&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Fichier de configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
+ [Gestionnaire de configuration de Reporting Services &#40;del&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

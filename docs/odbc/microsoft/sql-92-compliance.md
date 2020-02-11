@@ -16,32 +16,32 @@ ms.assetid: 50c8c7df-df01-4f4d-ad62-d059cf29d73a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5d8ed2818b466d16591be8b70478221d7ac84df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063370"
 ---
 # <a name="sql-92-compliance"></a>Conformité à SQL-92
-Les pilotes de base de données ODBC Desktop et le moteur Microsoft Jet sous-jacente ne sont pas conformes SQL-92. Ils prennent en charge de nombreuses fonctionnalités qui ont été définies dans SQL-92. Certaines fonctionnalités prises en charge dans le pilote ne sont pas pris en charge dans SQL-92. Pour plus d’informations, consultez le *-Guide du programmeur moteur Microsoft Jet de base de données*. Voici les principales différences entre les deux :  
+Les pilotes de base de données de bureau ODBC et le moteur Microsoft Jet sous-jacent ne sont pas conformes à SQL-92. Ils prennent en charge de nombreuses fonctionnalités qui ont été définies dans SQL-92. Certaines fonctionnalités prises en charge dans le pilote ne sont pas prises en charge dans SQL-92. Pour plus d’informations, consultez le *Guide du programmeur Microsoft Jet moteur de base de données*. Voici les principales différences entre les deux :  
   
--   Le SQL utilisé par les pilotes de base de données Desktop prend en charge des expressions plus puissantes que ceux spécifiés par SQL-92.  
+-   Le SQL utilisé par les pilotes de base de données de bureau prend en charge des expressions plus puissantes que celles spécifiées par SQL-92.  
   
 -   Différentes règles s’appliquent au prédicat BETWEEN.  
   
--   Le SQL utilisé par les pilotes de base de données de bureau et ANSI SQL prend en charge les mots clés différents.  
+-   Le SQL utilisé par les pilotes de base de données de bureau et ANSI SQL prend en charge des mots clés différents.  
   
- Les fonctionnalités de SQL-92 suivantes ne sont pas pris en charge par Microsoft Jet SQL :  
+ Les fonctionnalités SQL-92 suivantes ne sont pas prises en charge par Microsoft Jet SQL :  
   
--   Instructions de sécurité, telles que GRANT et de verrouillage.  
+-   Instructions de sécurité, telles que GRANT et LOCK.  
   
--   DISTINCT avec des références de la fonction d’agrégation.  
+-   DISTINCT avec références à la fonction d’agrégation.  
   
- Les fonctionnalités suivantes sont des améliorations dans le SQL utilisé par les pilotes de base de données de bureau qui ne sont pas spécifiées par SQL-92 :  
+ Les fonctionnalités suivantes sont des améliorations de SQL utilisées par les pilotes de base de données de bureau qui ne sont pas spécifiés par SQL-92 :  
   
--   L’instruction de transformation prise en charge pour les requêtes d’analyse croisée.  
+-   Instruction de transformation qui prend en charge les requêtes d’analyse croisée.  
   
--   Fonctions d’agrégation supplémentaires (**StDev** et **VarP**).  
+-   Fonctions d’agrégation supplémentaires (**ECARTYPE** et **VarP**).  
   
 > [!NOTE]  
->  Les pilotes de base de données Desktop prend en charge la syntaxe ANSI standard (pourcentage) et _ (caractère de soulignement) pas * (astérisque) et ? (point d’interrogation).
+>  Les pilotes de base de données de bureau prennent en charge la syntaxe ANSI standard pour% (percent) et _ (trait de soulignement), et non * (astérisque) et ? (point d’interrogation).

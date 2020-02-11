@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ab6242348f3020b5b9719c41c7cb7563b0c30729
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761713"
 ---
 # <a name="fetching-rows"></a>Extraction de lignes
@@ -54,7 +54,7 @@ ms.locfileid: "73761713"
   
  Pour récupérer (fetch) les lignes de la base de données, le consommateur appelle une méthode, telle que **IRowset::GetNextRows** ou **IRowsetLocate::GetRowsAt**. Ces opérations d'extraction placent les données de ligne du serveur dans le tampon de ligne du fournisseur. Le consommateur ne peut pas accéder directement au tampon de ligne du fournisseur. Le consommateur utilise **IRowset::GetData** pour copier les données de la mémoire tampon du fournisseur vers la mémoire tampon du consommateur, et **IRowsetChange::SetData** pour copier les modifications de données de la mémoire tampon du consommateur vers la mémoire tampon de fournisseur.  
   
- Le consommateur appelle la méthode **GetData** et passe le descripteur à une ligne, le descripteur à un accesseur et un pointeur vers une mémoire tampon allouée par le consommateur. **GetData** convertit les données et retourne les colonnes comme spécifié dans les liaisons utilisées pour créer l’accesseur. Le consommateur peut appeler **GetData** plusieurs fois pour une même ligne, à l’aide de différents accesseurs et mémoires tampon. Par conséquent, le consommateur peut obtenir plusieurs copies des mêmes données.  
+ Le consommateur appelle la méthode **GetData** et passe le descripteur à une ligne, le descripteur à un accesseur et un pointeur vers une mémoire tampon allouée par le consommateur. **GetData** convertit les données et retourne les colonnes telles qu’elles sont spécifiées dans les liaisons utilisées pour créer l’accesseur. Le consommateur peut appeler **GetData** plusieurs fois pour une même ligne, à l’aide de différents accesseurs et mémoires tampon. Par conséquent, le consommateur peut obtenir plusieurs copies des mêmes données.  
   
  Les données de colonnes de longueur variable peuvent être traitées de plusieurs façons. En premier lieu, ces colonnes peuvent être liées à une section limitée de la structure du consommateur. Il s'ensuit une troncation quand la longueur des données dépasse la longueur de la mémoire tampon. Le consommateur peut déterminer que la troncation a eu lieu en vérifiant l'état DBSTATUS_S_TRUNCATED. La longueur retournée est toujours la véritable longueur en octets, afin que le consommateur puisse également déterminer la quantité de données tronquées.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "73761713"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Prochaine position d’extraction](../../relational-databases/native-client-ole-db-rowsets/fetching-rows-next-fetch-position.md)  
+-   [Prochaine position d'extraction](../../relational-databases/native-client-ole-db-rowsets/fetching-rows-next-fetch-position.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ensembles de lignes](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  

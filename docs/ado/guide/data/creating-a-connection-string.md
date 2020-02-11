@@ -14,43 +14,43 @@ ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c9d81ef7be98f3c65167de24b3ff59ac6f05df5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925766"
 ---
 # <a name="creating-a-connection-string"></a>Création d’une chaîne de connexion
-Une chaîne de connexion se compose d’une liste de paires de valeur d’argument (autrement dit, les paramètres), séparée par des points-virgules. Exemple :  
+Une chaîne de connexion se compose d’une liste de paires argument/valeur (c’est-à-dire des paramètres), séparées par des points-virgules. Par exemple :  
   
 ```syntax
 "arg1=val1; arg2=val2; ... argN=valN;"  
 ```  
   
- Tous les paramètres doivent être reconnues par ADO ou le fournisseur spécifié.  
+ Tous les paramètres doivent être reconnus par ADO ou par le fournisseur spécifié.  
   
- ADO reconnaît les cinq arguments dans une chaîne de connexion suivantes.  
+ ADO reconnaît les cinq arguments suivants dans une chaîne de connexion.  
   
 |Argument|Description|  
 |--------------|-----------------|  
 |*Fournisseur*|Spécifie le nom d’un fournisseur à utiliser pour la connexion.|  
-|*Nom de fichier*|Spécifie le nom d’un fichier spécifique au fournisseur (par exemple, un objet de source de données persistantes) contenant des informations de connexion prédéfinies.|  
-|*URL*|Spécifie la chaîne de connexion comme une URL absolue identifiant une ressource, comme un fichier ou répertoire.|  
+|*Nom de fichier*|Spécifie le nom d’un fichier spécifique au fournisseur (par exemple, un objet de source de données persistant) contenant les informations de connexion prédéfinies.|  
+|*URL*|Spécifie la chaîne de connexion comme une URL absolue identifiant une ressource, telle qu’un fichier ou un répertoire.|  
 |*Fournisseur distant*|Spécifie le nom d’un fournisseur à utiliser lors de l’ouverture d’une connexion côté client. (Service de données distant uniquement.)|  
-|*Serveur distant*|Spécifie le nom de chemin d’accès du serveur à utiliser lors de l’ouverture d’une connexion côté client. (Service de données distant uniquement.)|  
+|*Serveur distant*|Spécifie le nom du chemin d’accès du serveur à utiliser lors de l’ouverture d’une connexion côté client. (Service de données distant uniquement.)|  
   
- Autres arguments sont passés au fournisseur nommé dans le *fournisseur* argument, sans aucun traitement par ADO.  
+ Les autres arguments sont passés au fournisseur nommé dans l’argument *Provider* , sans aucun traitement par ADO.  
   
- L’application HelloData dans [HelloData : Une Application ADO Simple](../../../ado/guide/data/hellodata-a-simple-ado-application.md) utilisé la chaîne de connexion suivante :  
+ L’application HelloData dans [HelloData : une simple application ADO](../../../ado/guide/data/hellodata-a-simple-ado-application.md) utilisait la chaîne de connexion suivante :  
   
 ```vb
 m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _  
              "Initial Catalog=Northwind;Integrated Security='SSPI';"  
 ```  
   
- Dans cette chaîne de connexion ADO reconnaît uniquement les `"Provider=SQLOLEDB"` paramètre qui spécifie le fournisseur Microsoft OLE DB pour SQL Server comme source de données ADO. Le reste des paires valeur / d’argument, `"Data Source=MySqlServer; Initial Catalog=Northwind;Integrated Security='SSPI';"`, sont passés à ce fournisseur textuelle. Le type et la validité de ces paramètres sont spécifiques au fournisseur. Pour plus d’informations sur les paramètres valides qui peuvent être passés dans la chaîne de connexion, la documentation du fournisseur individuelles.  
+ Dans cette chaîne de connexion, ADO reconnaît uniquement `"Provider=SQLOLEDB"` le paramètre, qui spécifie le fournisseur Microsoft OLE DB pour SQL Server comme source de données ADO. Le reste des paires argument/valeur, `"Data Source=MySqlServer; Initial Catalog=Northwind;Integrated Security='SSPI';"`, est passé textuellement à ce fournisseur. Le type et la validité de ces paramètres sont spécifiques au fournisseur. Pour plus d’informations sur les paramètres valides qui peuvent être transmis dans la chaîne de connexion, consultez la documentation de chaque fournisseur.  
   
- Selon le fournisseur OLE DB pour la documentation de SQL Server, vous pouvez remplacer « Server » pour le *Source de données* paramètre et « Database » pour le *Initial Catalog* paramètre. Par conséquent, la chaîne de connexion suivante produirait des résultats identiques à celui illustré ci-dessus :  
+ Selon la documentation du fournisseur de OLE DB pour SQL Server, vous pouvez remplacer le paramètre de *source de données* « Server » par « Server » par le paramètre de *catalogue initial* . Ainsi, la chaîne de connexion suivante produit des résultats identiques à ceux ci-dessus :  
   
 ```vb
 m_sConnStr = "Provider=SQLOLEDB;Server=MySqlServer;" & _  

@@ -1,5 +1,5 @@
 ---
-title: Options (concepteurs-Table et Page concepteurs de base de données) | Microsoft Docs
+title: Options (concepteurs-page concepteurs de tables et de bases de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e0157b94227a36db7f1f961ab0b0a69518a8163b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283657"
 ---
-# <a name="options-designers-table-and-database-designers-page"></a>Options (concepteurs-Table et Page concepteurs de base de données)
+# <a name="options-designers-table-and-database-designers-page"></a>Options (concepteurs-page concepteurs de bases de données et de tables)
   Utilisez cette page pour déterminer le comportement par défaut du concepteur. Pour accéder aux paramètres, dans le menu **Outils** , cliquez sur **Options**, développez le dossier **Concepteurs** , puis cliquez sur **Concepteur de bases de données et de tables**.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
@@ -73,7 +73,7 @@ ms.locfileid: "63283657"
   
      Affiche uniquement l'en-tête de la table avec son nom.  
   
--   **Custom**  
+-   **Personnalisée**  
   
      Permet de choisir les colonnes à afficher.  
   

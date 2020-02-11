@@ -13,19 +13,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6af26cafd4f8dd9bf874ae7860c4f796bef48ae1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892751"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Enregistrer le package SSIS (Assistant Importation et Exportation SQL Server)
-  Utilisez le **enregistrer le Package SSIS** page pour nommer, décrire et enregistrer un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) du package pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` de base de données ou à un fichier qui contient le .dtsx extension.  
+  Utilisez la **page enregistrer le package SSIS** pour nommer, décrire et enregistrer un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] package Integration Services[!INCLUDE[ssIS](../../includes/ssis-md.md)]() dans la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` base de données ou dans un fichier portant l’extension. dtsx.  
   
 > [!NOTE]  
 >  Dans [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], l'option permettant d'enregistrer le package créé par l'Assistant n'est pas disponible.  
   
- Pour en savoir plus sur cet Assistant, consultez [Assistant Importation et Exportation SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Pour en savoir plus sur les options de démarrage de l’Assistant et sur les autorisations requises pour exécuter l’Assistant avec succès, consultez [exécuter le SQL Server Assistant Importation et exportation](start-the-sql-server-import-and-export-wizard.md).  
+ Pour en savoir plus sur cet Assistant, consultez [Assistant Importation et Exportation SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Pour en savoir plus sur les options de démarrage de l’Assistant et sur les autorisations requises pour exécuter correctement l’Assistant, consultez [exécuter l’Assistant importation et exportation SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
  La fonction de l'Assistant Importation et Exportation SQL Server est de copier des données d'une source vers une destination. L'Assistant peut également créer une base de données de destination et des tables de destination à votre intention. Toutefois, si vous devez copier plusieurs tables ou bases de données, ou autres types d'objets de bases de données, vous devez plutôt utiliser l'Assistant Copie de base de données. Pour plus d'informations, consultez [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62892751"
  **Description**  
  Permet de décrire le package. En règle générale, décrivez le package par rapport à sa fonction pour le rendre descriptif et faciliter sa gestion.  
   
- **Cible**  
+ **Indicatif**  
  Permet d'afficher la cible ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou fichier) définie préalablement pour le fichier de destination.  
   
 ## <a name="target-dynamic-options"></a>Options dynamiques de la cible  
@@ -45,7 +45,7 @@ ms.locfileid: "62892751"
  **Nom du serveur**  
  Lorsque vous sélectionnez une destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tapez ou sélectionnez le nom du serveur de destination.  
   
- **Utiliser l'authentification Windows**  
+ **Utiliser l’authentification Windows**  
  Lorsque vous sélectionnez une destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], indiquez si la connexion au serveur utilise l'authentification intégrée Windows. Il s'agit de la méthode d'authentification conseillée.  
   
  **Utiliser l’authentification SQL Server**  
@@ -59,10 +59,10 @@ ms.locfileid: "62892751"
   
 ### <a name="target--file-system"></a>Cible = Système de fichiers  
  **Nom de fichier**  
- Lorsque vous avez sélectionné une destination de fichier, tapez le chemin d’accès du fichier de destination, ou utiliser le **Parcourir** bouton.  
+ Lorsque vous avez sélectionné une destination de fichier, tapez le chemin d’accès au fichier de destination ou utilisez le bouton **Parcourir** .  
   
  **Parcourir**  
- Lorsque vous avez sélectionné une destination de fichier, recherchez le fichier de destination à l’aide de la **enregistrer le Package** boîte de dialogue.  
+ Lorsque vous avez sélectionné une destination de fichier, accédez au fichier de destination à l’aide de la boîte de dialogue **enregistrer le package** .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Enregistrer des packages](../save-packages.md)  

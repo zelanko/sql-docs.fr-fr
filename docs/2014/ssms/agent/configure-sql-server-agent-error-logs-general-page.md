@@ -13,23 +13,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 96d0105faad9fb4c2c3213eaa90da464ccd90bd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63253883"
 ---
-# <a name="configure-sql-server-agent-error-logs-general-page"></a>Configurer les journaux d’erreurs de SQL Server Agent (page Général)
+# <a name="configure-sql-server-agent-error-logs-general-page"></a>Configurer les journaux d'erreurs de l'Agent SQL Server (page Général)
   Utilisez cet écran pour afficher et mettre à jour les paramètres du journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="options"></a>Options  
  **Fichier journal des erreurs**  
- Spécifie le nom du fichier dans lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent consigne les erreurs.  
+ Spécifie le nom du fichier dans lequel l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consigne les erreurs.  
   
  **...**  
  Permet de parcourir l'arborescence à la recherche du fichier journal des erreurs.  
   
- **Écrire dans le fichier journal des erreurs OEM**  
+ **Écrire le journal des erreurs OEM**  
  Écrit le fichier journal des erreurs comme un fichier non-Unicode. Cela réduit l'espace disque utilisé par le fichier journal. Toutefois, si vous activez cette option, sachez que les messages incluant des données Unicode peuvent être plus difficiles à lire.  
   
  **Erreurs**  
@@ -38,10 +38,10 @@ ms.locfileid: "63253883"
  **Avertissements**  
  Écrit uniquement les avertissements et les messages d'information dans le fichier journal.  
   
- **Informations**  
+ **Information**  
  Écrit uniquement les messages d'information dans le fichier journal.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Journal des erreurs de l'Agent SQL Server](sql-server-agent-error-log.md)  
+ [Journal des erreurs de SQL Server Agent](sql-server-agent-error-log.md)  
   
   

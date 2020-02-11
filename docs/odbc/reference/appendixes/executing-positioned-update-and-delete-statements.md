@@ -1,5 +1,5 @@
 ---
-title: L’exécution positionné instructions Update et Delete | Microsoft Docs
+title: Exécution d’instructions Update et DELETE positionnées | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,51 +16,51 @@ ms.assetid: 1d64f309-2a6e-4ad1-a6b5-e81145549c56
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2c69f784c2ce7c29cb49c81bf23f34a9cad12089
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67913620"
 ---
 # <a name="executing-positioned-update-and-delete-statements"></a>Exécution d’instructions de mise à jour et de suppression positionnées
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans tout nouveau développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande d’utiliser les fonctionnalités de curseur du pilote.  
+>  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande l’utilisation de la fonctionnalité de curseur du pilote.  
   
- Une fois une application a extrait un bloc de données avec **SQLFetchScroll**, il peut mettre à jour ou supprimer les données dans le bloc. Pour exécuter une mise à jour positionnée ou delete, l’application :  
+ Une fois qu’une application a extrait un bloc de données avec **SQLFetchScroll**, elle peut mettre à jour ou supprimer les données du bloc. Pour exécuter une mise à jour ou une suppression positionnée, l’application :  
   
-1.  Appels **SQLSetPos** pour positionner le curseur sur la ligne d’être mis à jour ou supprimées.  
+1.  Appelle **SQLSetPos** pour positionner le curseur sur la ligne à mettre à jour ou à supprimer.  
   
-2.  Construit une mise à jour positionnée ou une instruction delete avec la syntaxe suivante :  
+2.  Construit une instruction UPDATE ou DELETE positionnée avec la syntaxe suivante :  
   
-     **Mise à jour** *nom de la table*  
+     **Mettre à jour** *le nom de la table*  
   
-     **Définissez** *identificateur de colonne* **=** {*expression* &#124; **NULL**}  
+     **Set** *Column-identifier* **=** {*expression* &#124; **null**}  
   
-     [ **,** *identificateur de colonne* **=** {*expression* &#124; **NULL**}]  
+     [**,** *identificateur de colonne* **=** {*expression* &#124; **null**}]  
   
-     **WHERE CURRENT OF** *nom de curseur*  
+     **Où Current de** *Cursor-Name*  
   
-     **DELETE FROM** *nom de la table* **WHERE CURRENT OF** *nom de curseur*  
+     **Supprimer de** la *table-nom* **où Current de** *Cursor-Name*  
   
-     Le moyen le plus simple pour construire le **définir** clause dans une instruction de mise à jour positionnée consiste à utiliser des marqueurs de paramètres pour chaque colonne pour être mis à jour et utiliser **SQLBindParameter** pour lier ces aux mémoires tampons de l’ensemble de lignes pour le ligne à mettre à jour. Dans ce cas, le type de données C du paramètre doit être le même que le type de données C de la mémoire tampon d’ensemble de lignes.  
+     Le moyen le plus simple de construire la clause **Set** dans une instruction de mise à jour positionnée consiste à utiliser des marqueurs de paramètres pour chaque colonne à mettre à jour et à utiliser **SQLBindParameter** pour les lier aux mémoires tampons de l’ensemble de lignes à mettre à jour. Dans ce cas, le type de données C du paramètre sera le même que le type de données C de la mémoire tampon de l’ensemble de lignes.  
   
-3.  Met à jour les mémoires tampons d’ensemble de lignes de la ligne actuelle si elle doit être exécutée une instruction de mise à jour positionnée. Après avoir exécuté une instruction de mise à jour positionnée, la bibliothèque de curseurs copie les valeurs de chaque colonne dans la ligne actuelle à son cache.  
-  
-    > [!CAUTION]  
-    >  Si l’application ne met pas à jour les mémoires tampons d’ensemble de lignes avant d’exécuter une instruction de mise à jour positionnée correctement, les données dans le cache seront incorrectes après que l’instruction est exécutée.  
-  
-4.  Exécute la mise à jour positionnée ou une instruction delete à l’aide d’une instruction autre que l’instruction associée le curseur.  
+3.  Met à jour les mémoires tampons d’ensemble de lignes pour la ligne actuelle si elle exécute une instruction Update positionnée. Après l’exécution réussie d’une instruction Update positionnée, la bibliothèque de curseurs copie les valeurs de chaque colonne de la ligne actuelle dans son cache.  
   
     > [!CAUTION]  
-    >  Le **où** clause construit par la bibliothèque de curseurs pour identifier la ligne actuelle peut échouer pour identifier toutes les lignes, identifier une ligne différente ou identifier plusieurs lignes. Pour plus d’informations, consultez [construisant des instructions recherché](../../../odbc/reference/appendixes/constructing-searched-statements.md).  
+    >  Si l’application ne met pas correctement à jour les mémoires tampons d’ensembles de lignes avant d’exécuter une instruction de mise à jour positionnée, les données du cache sont incorrectes après l’exécution de l’instruction.  
   
- Tous les positionné mise à jour et des instructions de suppression nécessitent un nom de curseur. Pour spécifier le nom du curseur, une application appelle **SQLSetCursorName** avant l’ouverture du curseur. Pour utiliser le nom de curseur généré par le pilote, une application appelle **SQLGetCursorName** après l’ouverture du curseur.  
+4.  Exécute l’instruction UPDATE ou DELETE positionnée à l’aide d’une instruction différente de celle de l’instruction associée au curseur.  
   
- Après le curseur bibliothèque exécute une mise à jour positionnée ou instruction delete, le tableau d’état, mémoires tampons d’ensemble de lignes et cache maintenu par la bibliothèque de curseurs contiennent les valeurs indiquées dans le tableau suivant.  
+    > [!CAUTION]  
+    >  La clause **Where** construite par la bibliothèque de curseurs pour identifier la ligne actuelle peut ne pas pouvoir identifier de lignes, identifier une autre ligne ou identifier plusieurs lignes. Pour plus d’informations, consultez [construction d’instructions recherchées](../../../odbc/reference/appendixes/constructing-searched-statements.md).  
+  
+ Toutes les instructions Update et DELETE positionnées requièrent un nom de curseur. Pour spécifier le nom du curseur, une application appelle **SQLSetCursorName** avant l’ouverture du curseur. Pour utiliser le nom de curseur généré par le pilote, une application appelle **SQLGetCursorName** après l’ouverture du curseur.  
+  
+ Une fois que la bibliothèque de curseurs a exécuté une instruction UPDATE ou DELETE positionnée, le tableau d’État, les mémoires tampons d’ensemble de lignes et le cache gérés par la bibliothèque de curseurs contiennent les valeurs indiquées dans le tableau suivant.  
   
 |Instruction utilisée|Valeur dans le tableau d’état de ligne|Valeurs dans<br /><br /> mémoires tampons d’ensemble de lignes|Valeurs dans<br /><br /> mémoires tampons de cache|  
 |--------------------|-------------------------------|----------------------------------|---------------------------------|  
 |Mise à jour positionnée|SQL_ROW_UPDATED|Nouvelles valeurs [1]|Nouvelles valeurs [1]|  
 |Suppression positionnée|SQL_ROW_DELETED|Anciennes valeurs|Anciennes valeurs|  
   
- [1] l’application doit mettre à jour les valeurs dans les mémoires tampons d’ensemble de lignes avant d’exécuter l’instruction de mise à jour positionnée ; après l’exécution de l’instruction de mise à jour positionnée, la bibliothèque de curseurs copie les valeurs dans les mémoires tampons d’ensemble de lignes à son cache.
+ [1] l’application doit mettre à jour les valeurs dans les mémoires tampons de l’ensemble de lignes avant d’exécuter l’instruction de mise à jour positionnée. après l’exécution de l’instruction Update positionnée, la bibliothèque de curseurs copie les valeurs des tampons de l’ensemble de lignes dans son cache.

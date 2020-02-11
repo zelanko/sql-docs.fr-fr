@@ -1,5 +1,5 @@
 ---
-title: Architecture physique (Analysis Services - Exploration de données) | Microsoft Docs
+title: Architecture physique (Analysis Services-exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81c9ee3db0a05107913d3b75fba20ebe8607f941
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083197"
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>Architecture physique (Analysis Services - Exploration de données)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise des composants serveur et des composants clients pour apporter des fonctionnalités d’exploration de données aux applications Business Intelligence :  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise des composants serveur et client pour fournir des fonctionnalités d’exploration de données pour les applications décisionnelles :  
   
 -   Le composant serveur est implémenté comme un service Microsoft Windows. Vous pouvez avoir plusieurs instances sur le même ordinateur, chaque instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] étant implémentée comme une instance séparée du service Windows.  
   
@@ -41,16 +41,17 @@ ms.locfileid: "66083197"
 > [!WARNING]  
 >  DSO est déconseillé. Vous ne devez pas utiliser DSO pour développer des solutions.  
   
- ![Diagramme d’Architecture de Analysis Services](../dev-guide/media/analysisservicessystemarchitecture.gif "Analysis Services diagramme d’Architecture")  
+ ![Schéma de l'architecture système Analysis Services](../dev-guide/media/analysisservicessystemarchitecture.gif "Schéma de l'architecture système Analysis Services")  
   
 ## <a name="server-configuration"></a>Configuration du serveur  
  Une instance de serveur peut prendre en charge plusieurs bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , chacune avec sa propre instance du service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui répond aux demandes des clients et traite les objets.  
   
- Des instances distinctes doivent être installées si vous souhaitez utiliser les modèles tabulaires et l'exploration de données et/ou les modèles multidimensionnels. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge l’installation côte à côte des instances s’exécutant en mode tabulaire (qui utilise le moteur d’analyse en mémoire xVelocity (VertiPaq)) et des instances s’exécutant dans l’une des configurations standard OLAP, MOLAP ou ROLAP. Pour plus d’informations, consultez [Déterminer le mode serveur d’une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+ Des instances distinctes doivent être installées si vous souhaitez utiliser les modèles tabulaires et l'exploration de données et/ou les modèles multidimensionnels. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge l’installation côte à côte des instances s’exécutant en mode tabulaire (qui utilise le moteur d’analyse en mémoire xVelocity (VertiPaq)) et des instances s’exécutant dans l’une des configurations standard OLAP, MOLAP ou ROLAP. Pour plus d’informations, consultez [Déterminer le mode serveur d’une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
  Toutes les communications entre un client et le serveur Analysis Services utilisent la spécification XMLA, qui est un protocole indépendant de la plateforme et de la langue. Lorsqu'une demande est reçue d'un client, Analysis Services détermine si elle est liée à OLAP ou à l'exploration de données, avant de l'acheminer de manière appropriée. Pour plus d’informations, consultez [Composants serveur du moteur OLAP](../multidimensional-models/olap-physical/olap-engine-server-components.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Architecture logique &#40;Analysis Services - Exploration de données&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [Architecture logique &#40;Analysis Services d’exploration de données&#41;](logical-architecture-analysis-services-data-mining.md)  
   
   

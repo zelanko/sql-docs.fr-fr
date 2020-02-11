@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0ec9f519b6326b0c2188663b558ff099cac75c78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63058085"
 ---
-# <a name="spcacheremove-event-class"></a>SP:CacheRemove, classe d'événements
+# <a name="spcacheremove-event-class"></a>Classe d'événements SP:CacheRemove
   La classe d'événements SP:CacheRemove indique que la procédure stockée a été supprimée du cache de plan.  
   
 ## <a name="spcacheremove-event-class-data-columns"></a>Colonnes de la classe d'événements SP:CacheRemove  
@@ -31,10 +31,10 @@ ms.locfileid: "63058085"
 |ApplicationName|`nvarchar`|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette colonne est remplie avec les valeurs passées par l'application plutôt que par le nom affiché du programme.|10|Oui|  
 |ClientProcessID|`int`|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  
 |DatabaseID|`int`|ID de la base de données dans laquelle la procédure stockée est en cours d'exécution. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
-|DatabaseName|`nvarchar`|Nom de la base de données dans laquelle la procédure stockée est en cours d'exécution.|35|Oui|  
+|nom_base_de_données|`nvarchar`|Nom de la base de données dans laquelle la procédure stockée est en cours d'exécution.|35|Oui|  
 |EventClass|`int`|Type d’événement = 36.|27|Non|  
 |EventSequence|`int`|Séquence d'un événement donné au sein de la demande.|51|Non|  
-|EventSubClass|`int`|Type de sous-classe d'événements.<br /><br /> 1 = Compplan Remove. Un plan de requête compilé a été supprimé du cache.<br /><br /> 2 = Proc Cache Flush. Toutes les entrées ont été supprimées du cache de procédures.|21|Oui|  
+|EventSubClass|`int`|Type de sous-classe d'événements.<br /><br /> 1 = accès plan supprimer. Un plan de requête compilé a été supprimé du cache.<br /><br /> 2 = vidage du cache de procédure. Toutes les entrées ont été supprimées du cache de procédures.|21|Oui|  
 |GroupID|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |HostName|`nvarchar`|Nom de l'ordinateur sur lequel le client est exécuté. La colonne de données est remplie si le client fournit le nom de l'hôte. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |IsSystem|`int`|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Oui|  

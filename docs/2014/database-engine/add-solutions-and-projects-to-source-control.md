@@ -1,5 +1,5 @@
 ---
-title: Ajouter des Solutions et des projets au contrôle de code Source | Microsoft Docs
+title: Ajouter des solutions et des projets au contrôle de code source | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6d9cc15f79235e225dc6589a16b48c373479e639
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62792089"
 ---
 # <a name="add-solutions-and-projects-to-source-control"></a>Ajouter des solutions et des projets au contrôle de code source

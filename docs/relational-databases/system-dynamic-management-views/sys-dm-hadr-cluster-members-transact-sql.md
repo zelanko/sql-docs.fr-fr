@@ -1,5 +1,5 @@
 ---
-title: sys.dm_hadr_cluster_members (Transact-SQL) | Microsoft Docs
+title: sys. dm_hadr_cluster_members (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2019
 ms.prod: sql
@@ -23,16 +23,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8b28b708aabfdf3ec4e569aab6d8a95e2330b370
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67900769"
 ---
-# <a name="sysdmhadrclustermembers-transact-sql"></a>sys.dm_hadr_cluster_members (Transact-SQL)
+# <a name="sysdm_hadr_cluster_members-transact-sql"></a>sys.dm_hadr_cluster_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Si le nœud WSFC qui héberge une instance locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activée pour [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] possède un quorum WSFC, retourne une ligne pour chacun des membres qui constituent le quorum et l'état de chacun d'eux. Cela inclut tous les nœuds du cluster (retournés avec le type CLUSTER_ENUM_NODE par la **Clusterenum** (fonction)) et le témoin de disque ou partage de fichiers, le cas échéant. La ligne retournée pour un membre donné contient des informations sur l'état de ce membre. Par exemple, pour un cluster à cinq nœuds avec un quorum de nœud majoritaire dans lequel un nœud est arrêté, lorsque **sys.dm_hadr_cluster_members** sont interrogées à partir d’une instance de serveur est activé pour [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] qui réside sur un nœud avec quorum, **sys.dm_hadr_cluster_members** reflète l’état du nœud arrêté en tant que « NODE_DOWN ».  
+  Si le nœud WSFC qui héberge une instance locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activée pour [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] possède un quorum WSFC, retourne une ligne pour chacun des membres qui constituent le quorum et l'état de chacun d'eux. Cela comprend tous les nœuds du cluster (retournés avec CLUSTER_ENUM_NODE type par la fonction **Clusterenum** ) et le disque ou le témoin de partage de fichiers, le cas échéant. La ligne retournée pour un membre donné contient des informations sur l'état de ce membre. Par exemple, pour un cluster à cinq nœuds avec quorum de nœud majoritaire dans lequel un nœud est défaillant, lorsque **sys. dm_hadr_cluster_members** est interrogé à partir d’une instance de serveur qui [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] est activée pour qui réside sur un nœud avec quorum, **sys. dm_hadr_cluster_members** reflète l’état du nœud descendant comme « NODE_DOWN ».  
   
  Si le nœud WSFC n'a aucun quorum, aucune ligne n'est retournée.  
   
@@ -43,16 +43,16 @@ ms.locfileid: "67900769"
 -   Combien d'échecs de plus le cluster WSFC peut-il tolérer avant de perdre le quorum dans le cas d'un nœud majoritaire ?  
 
  > [!TIP]
- > À compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], cette vue de gestion dynamique prend en charge le basculement Instances de Cluster AlwaysOn en plus des groupes de disponibilité AlwaysOn.  
+ > À compter [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]de, cette vue de gestion dynamique prend en charge les instances de cluster de basculement Always on en plus des groupes de disponibilité Always on.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**MEMBER_NAME**|**nvarchar(128)**|Nom de membre, qui peut être un nom d'ordinateur, une lettre de lecteur ou un chemin d'accès de partage de fichiers.|  
-|**member_type**|**tinyint**|Type du membre. Peut prendre une des valeurs suivantes :<br /><br /> 0 = Nœud WSFC<br /><br /> 1 = Disque témoin<br /><br /> 2 = Témoin de partage de fichiers<br /><br /> 3 = témoin cloud|  
-|**member_type_desc**|**nvarchar(50)**|Description de **member_type**, l’un des :<br /><br /> CLUSTER_NODE<br /><br /> DISK_WITNESS<br /><br /> FILE_SHARE_WITNESS<br /><br /> CLOUD_WITNESS|  
+|**member_name**|**nvarchar(128)**|Nom de membre, qui peut être un nom d'ordinateur, une lettre de lecteur ou un chemin d'accès de partage de fichiers.|  
+|**member_type**|**tinyint**|Type du membre. Peut prendre une des valeurs suivantes :<br /><br /> 0 = Nœud WSFC<br /><br /> 1 = Disque témoin<br /><br /> 2 = Témoin de partage de fichiers<br /><br /> 3 = témoin Cloud|  
+|**member_type_desc**|**nvarchar(50)**|Description de **MEMBER_TYPE**, parmi :<br /><br /> CLUSTER_NODE<br /><br /> DISK_WITNESS<br /><br /> FILE_SHARE_WITNESS<br /><br /> CLOUD_WITNESS|  
 |**member_state**|**tinyint**|État du membre. Peut prendre une des valeurs suivantes :<br /><br /> 0 = Hors connexion<br /><br /> 1 = En ligne|  
-|**member_state_desc**|**nvarchar(60)**|Description de **member_state**, l’un des :<br /><br /> UP<br /><br /> VERS LE BAS|  
-|**number_of_quorum_votes**|**tinyint**|Nombre de votes de quorum détenus par ce membre de quorum. Pour aucune majorité : Quorums seul disque, cette valeur par défaut est 0. Pour les autres types de quorum, cette valeur est par défaut 1.|  
+|**member_state_desc**|**nvarchar (60)**|Description de **member_state**, parmi :<br /><br /> UP<br /><br /> INACTIF|  
+|**number_of_quorum_votes**|**tinyint**|Nombre de votes de quorum détenus par ce membre de quorum. Pour les quorums Non majoritaire - Disque uniquement, cette valeur est par défaut 0. Pour les autres types de quorum, cette valeur est par défaut 1.|  
   
 ## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d958fa21380272aa770a9880e294a86fede29de
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493985"
 ---
 # <a name="browsing-the-deployed-cube"></a>Exploration du cube déployé
@@ -22,7 +22,7 @@ ms.locfileid: "69493985"
   
 ### <a name="to-browse-the-deployed-cube"></a>Pour parcourir le cube déployé  
   
-1.  Pour basculer dans le Concepteur de cube dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], double-cliquez sur le cube **[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial** dans le dossier **Cubes** de l'Explorateur de solutions.  
+1.  Pour basculer vers le concepteur [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]de cube dans, double-cliquez sur le ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cube Tutorial** dans le dossier **cubes** de l’Explorateur de solutions.  
   
 2.  Ouvrez l'onglet **Navigateur** , puis cliquez sur le bouton **Reconnecter** dans la barre d'outils du Concepteur.  
   
@@ -45,6 +45,6 @@ ms.locfileid: "69493985"
      ![Ventes sur Internet par région et ligne de produits](../../2014/tutorials/media/l3-cube-browser-finish.gif "Ventes sur Internet par région et ligne de produits")  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 4 : Définition des attributs avancés et des propriétés de dimension](lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+ [Leçon 4 : Définition des attributs avancés et des propriétés de dimension](lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
   
   

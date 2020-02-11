@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler procédures stockées (Transact-SQL) | Microsoft Docs
+title: Procédures stockées SQL Server Profiler (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,16 @@ ms.assetid: 8c99c3db-0b04-46c3-aa59-d6f680522fdd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: dd242370cc3d2c200e4d8b3983d47e396be3004a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106647"
 ---
 # <a name="sql-server-profiler-stored-procedures-transact-sql"></a>Procédures stockées du Générateur de profils SQL Server (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les procédures stockées ci-après utilisées par [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour contrôler l'activité et les performances.  
   
 |||  

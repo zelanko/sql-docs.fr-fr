@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151044"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Évaluation de la cardinalité (SQL Server)
@@ -32,22 +32,22 @@ ms.locfileid: "63151044"
   
  Pour obtenir les meilleures performances des requêtes, utilisez ces recommandations pour tester votre charge de travail avec le nouvel estimateur de cardinalité avant de l'activer sur votre système de production.  
   
-1.  Mettez à niveau toutes les bases de données existantes pour utiliser le nouvel estimateur de la cardinalité. Pour ce faire, utilisez [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) pour définir le niveau de compatibilité de base de données à 120.  
+1.  Mettez à niveau toutes les bases de données existantes pour utiliser le nouvel estimateur de la cardinalité. Pour ce faire, utilisez le [niveau de compatibilité ALTER database &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) pour définir le niveau de compatibilité de la base de données sur 120.  
   
 2.  Exécutez votre test de charge de travail avec le nouvel estimateur de cardinalité, puis résolvez les nouveaux problèmes de performances de la même façon que les problèmes de performances.  
   
 3.  Une fois que votre charge de travail s’exécute avec le nouvel estimateur de cardinalité (niveau de compatibilité de la base de données 120, SQL Server 2014) et qu’une requête spécifique a régressé, exécutez la requête avec l’indicateur de trace 9481 pour utiliser la version de l’estimateur de cardinalité fournie dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et les versions ultérieures. Pour exécuter une requête avec un indicateur de trace, consultez l'article de la Base de connaissances [Activer un plan affectant le comportement de l'optimiseur de requête SQL Server qui peut être contrôlé par des indicateurs de trace différents à un niveau spécifique à une requête](https://support.microsoft.com/kb/2801413).  
   
-4.  Si vous ne pouvez pas modifier toutes les bases de données à la fois pour utiliser le nouvel estimateur de cardinalité, vous pouvez utiliser l’estimateur de cardinalité précédent pour toutes les bases de données à l’aide de [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) à définir le niveau de compatibilité de base de données à 110.  
+4.  Si vous ne pouvez pas modifier toutes les bases de données à la fois pour utiliser le nouvel estimateur de cardinalité, vous pouvez utiliser l’estimateur de cardinalité précédent pour toutes les bases de données en utilisant le [niveau de compatibilité ALTER database &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) pour définir le niveau de compatibilité de la base de données sur 110.  
   
 5.  Si votre charge de travail s’exécute avec le niveau de compatibilité de la base de données 110 et que vous voulez tester ou exécuter une requête spécifique avec le nouvel estimateur de cardinalité, exécutez la requête avec l’indicateur de trace 2312 pour utiliser la version SQL Server 2014 de l’estimateur de cardinalité.  Pour exécuter une requête avec un indicateur de trace, consultez l'article de la Base de connaissances [Activer un plan affectant le comportement de l'optimiseur de requête SQL Server qui peut être contrôlé par des indicateurs de trace différents à un niveau spécifique à une requête](https://support.microsoft.com/kb/2801413).  
   
 ## <a name="new-xevents"></a>Nouveaux XEvents  
  Il y a deux nouveaux XEvents query_optimizer_estimate_cardinality pour prendre en charge les nouveaux plans de requête.  
   
--   *query_optimizer_estimate_cardinality* se produit lorsque l'optimiseur de requête estime la cardinalité sur une expression relationnelle.  
+-   *query_optimizer_estimate_cardinality* se produit lorsque l’optimiseur de requête estime la cardinalité sur une expression relationnelle.  
   
--   *query_optimizer_force_both_cardinality_estimation*_behaviors se produit lorsque les deux indicateurs de trace 2312 et 9481 sont activés, tentant de forcer l'ancien et le nouveau comportement d'estimation de cardinalité en même temps.  
+-   *query_optimizer_force_both_cardinality_estimation*_behaviors se produit lorsque les deux éléments TraceFlags 2312 et 9481 sont activés, tentant de forcer l’ancien et le nouveau comportement d’estimation de la cardinalité en même temps.  
   
 ## <a name="examples"></a>Exemples  
  Les exemples suivants illustrent certaines des modifications apportées aux nouvelles estimations de cardinalité. Le code d'estimation de la cardinalité a été réécrit. La logique est complexe et il est impossible de fournir une liste exhaustive de toutes les modifications.  
@@ -67,15 +67,15 @@ SELECT item, category, amount FROM dbo.Sales AS s WHERE Date = '2013-12-19';
  Ce comportement a changé. Maintenant, même si les statistiques n'ont pas été mises à jour pour les données croissantes les plus récentes ajoutées depuis la dernière mise à jour des statistiques, le nouvel estimateur de cardinalité suppose que les valeurs existent et utilise la cardinalité moyenne de chaque valeur dans la colonne comme estimation de la cardinalité.  
   
 ### <a name="example-b-new-cardinality-estimates-assume-filtered-predicates-on-the-same-table-have-some-correlation"></a>Exemple B. Les nouvelles estimations de cardinalité supposent que les prédicats filtrés sur la même table ont une certaine corrélation.  
- Pour cet exemple, supposons que la table Cars contient 1 000 lignes, la colonne Make contient 200 correspondances pour « Honda », la colonne Model contient 50 correspondances pour « Civic » et que tous les modèles Civic sont de marque Honda. Par conséquent, 20 % des valeurs de la colonne Make correspondent à « Honda », 5 % des valeurs de la colonne Model correspondent à « Civic » et le nombre réel de Civic honda est 50. Les estimations de cardinalité précédentes supposent que les valeurs des colonnes Make et Model sont indépendantes. L’optimiseur de requête précédent estime il y a 10 Honda Civic (.05 *.20 \* 1000 lignes = 10 lignes).  
+ Pour cet exemple, supposons que la table Cars contient 1 000 lignes, la colonne Make contient 200 correspondances pour « Honda », la colonne Model contient 50 correspondances pour « Civic » et que tous les modèles Civic sont de marque Honda. Par conséquent, 20 % des valeurs de la colonne Make correspondent à « Honda », 5 % des valeurs de la colonne Model correspondent à « Civic » et le nombre réel de Civic honda est 50. Les estimations de cardinalité précédentes supposent que les valeurs des colonnes Make et Model sont indépendantes. L’optimiseur de requête précédent estime 10 Honda civiques (. 05 *. 20 \* 1000 lignes = 10 lignes).  
   
 ```  
 SELECT year, purchase_price FROM dbo.Cars WHERE Make = 'Honda' AND Model = 'Civic';  
 ```  
   
- Ce comportement a changé. Maintenant, les nouvelles estimations de cardinalité supposent que les colonnes Make et Model ont une *certaine* corrélation. L'optimiseur de requête estime une cardinalité plus élevée en ajoutant un composant exponentiel à l'équation d'estimation. L’optimiseur de requête estime maintenant que 22,36 lignes (.05 * SQRT(.20) \* 1000 lignes = 22,36 lignes) correspondent au prédicat. Pour ce scénario et cette distribution de données spécifique, 22,36 lignes est le résultat le proche des 50 lignes réelles qui sera retourné par la requête.  
+ Ce comportement a changé. Maintenant, les nouvelles estimations de cardinalité supposent que les colonnes Make et Model ont une *certaine* corrélation. L'optimiseur de requête estime une cardinalité plus élevée en ajoutant un composant exponentiel à l'équation d'estimation. L’optimiseur de requête estime désormais que 22,36 lignes (0,05 * SQRT (. 20 \* ) 1000 lignes = 22,36 lignes) correspondent au prédicat. Pour ce scénario et cette distribution de données spécifique, 22,36 lignes est le résultat le proche des 50 lignes réelles qui sera retourné par la requête.  
   
- Notez que la logique du nouvel estimateur de cardinalité trie les sélectivités de prédicat et augmente l'exposant. Par exemple, si les sélectivités de prédicat.05,.20 et. 25, l’estimation de cardinalité est (.05 * SQRT(.20) \* SQRT(SQRT(.25))).  
+ Notez que la logique du nouvel estimateur de cardinalité trie les sélectivités de prédicat et augmente l'exposant. Par exemple, si les sélectivités de prédicat étaient 0,05,. 20 et 0,25, l’estimation de cardinalité est (. 05 * SQRT (. 20) \* SQRT (sqrt (. 25))).  
   
 ### <a name="example-c-new-cardinality-estimates-assume-filtered-predicates-on-different-tables-are-independent"></a>Exemple C. Les nouvelles estimations de cardinalité supposent que les prédicats filtrés sur les tables sont indépendants.  
  Pour cet exemple, l'estimateur de cardinalité précédent suppose que les filtres de prédicat s.type et r.date sont corrélés. Toutefois, les résultats du test sur les charges de travail modernes indiquent que les filtres de prédicat sur les colonnes de différentes tables ne sont généralement pas corrélés.  

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 94ad81913071a3bbd4aad33515c27c68b9e268e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482672"
 ---
 # <a name="model-object-permissions-master-data-services"></a>Autorisations d'objet de modèle (Master Data Services)
@@ -27,14 +27,14 @@ ms.locfileid: "65482672"
   
  Pour déterminer la sécurité affectée sur chaque valeur d'attribut individuelle, les autorisations d'objet modèle sont associées aux autorisations des membres de la hiérarchie, qui déterminent les membres auxquels un utilisateur peut accéder.  
   
- Pour autoriser un utilisateur à une zone fonctionnelle autre que **Explorer**, l’utilisateur doit être un administrateur de modèle, ce qui implique également l’attribution des autorisations d’objet de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+ Pour accorder à un utilisateur l’accès à une zone fonctionnelle autre que l' **Explorateur**, l’utilisateur doit être un administrateur de modèle, ce qui implique également l’attribution d’autorisations d’objet de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
- Les autorisations d’objet modèle sont affectées dans l’interface utilisateur [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], dans la zone fonctionnelle **Autorisations d’accès** sous l’onglet **Modèles**. Sous cet onglet, le modèle est représenté comme une arborescence. Lorsque vous affectez une autorisation à un objet dans l'arborescence, tous les objets suivants héritent de cette autorisation. Vous pouvez remplacer cet héritage en affectant l'autorisation à des objets individuels.  
+ Les autorisations d’objet de modèle sont [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] affectées dans l’interface utilisateur, dans la zone fonctionnelle **autorisations d’accès** sous l’onglet **modèles** . Sous cet onglet, le modèle est représenté sous la forme d’une arborescence. Lorsque vous affectez une autorisation à un objet dans l'arborescence, tous les objets suivants héritent de cette autorisation. Vous pouvez remplacer cet héritage en affectant l'autorisation à des objets individuels.  
   
- Vous pouvez affecter **en lecture seule**, **mise à jour**, ou **Deny** autorisation aux objets de modèle. Si vous n'affectez aucune autorisation sous l'onglet **Modèles** , l'utilisateur ne peut pas afficher les modèles ou données dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
+ Vous pouvez assigner des autorisations de **lecture**seule, de **mise à jour**ou de **refus** à des objets de modèle. Si vous n'affectez aucune autorisation sous l'onglet **Modèles** , l'utilisateur ne peut pas afficher les modèles ou données dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
 ## <a name="best-practice"></a>Bonne pratique  
- En général, vous devez attribuer **mise à jour** autorisation sur l’objet de modèle, puis attribuer explicitement l’autorisation aux objets en dessous. Si vous n'affectez pas d'autorisation aux objets en dessous, les autorisations sont héritées et l'utilisateur est un administrateur.  
+ En général, vous devez attribuer l’autorisation **mettre à jour** à l’objet de modèle, puis attribuer explicitement l’autorisation aux objets situés sous. Si vous n'affectez pas d'autorisation aux objets en dessous, les autorisations sont héritées et l'utilisateur est un administrateur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Affecter des autorisations d’objet de modèle &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
