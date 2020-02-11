@@ -1,5 +1,5 @@
 ---
-title: Utilisation d’index Columnstore non-cluster | Microsoft Docs
+title: Utilisation d’index ColumnStore non cluster | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e97aed3a5a4f5b49e482479b58928d2092a314f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773785"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>Utilisation d'index columnstore non cluster
@@ -24,21 +24,21 @@ ms.locfileid: "62773785"
   
  Pour plus d'informations sur les index columnstore cluster, consultez [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
   
-## <a name="contents"></a>Sommaire  
+## <a name="contents"></a>Contents  
   
--   [Créer un Index Columnstore non-cluster](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#load)  
+-   [Créer un index columnstore non cluster](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#load)  
   
--   [Modifier les données dans un Index Columnstore non-cluster](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)  
+-   [Modifier les données dans un index ColumnStore non cluster](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)  
   
-##  <a name="load"></a> Créer un Index Columnstore non-cluster  
- Pour charger des données dans un index non cluster, première charger des données dans une table rowstore traditionnelle stockée comme un segment de mémoire ou en cluster d’index et ensuite utiliser [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) pour créer un index ColumnStore.  
+##  <a name="load"></a>Créer un index ColumnStore non cluster  
+ Pour charger des données dans un index ColumnStore non cluster, chargez d’abord les données dans une table rowstore traditionnelle stockée en tant que segment de mémoire ou index cluster, puis utilisez [Create COLUMNSTORE index &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) pour créer un index ColumnStore.  
   
- ![Chargement des données dans un index columnstore](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "le chargement des données dans un index columnstore")  
+ ![Chargement de données dans un index columnstore](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "Chargement de données dans un index columnstore")  
   
-##  <a name="change"></a> Modifier les données dans un Index Columnstore non-cluster  
+##  <a name="change"></a>Modifier les données dans un index ColumnStore non cluster  
  Une fois que vous avez créé un index columnstore non cluster sur une table, vous ne pouvez pas modifier directement les données dans cette table. Une requête avec INSERT, UPDATE, DELETE ou MERGE échouera et renverra un message d'erreur. Pour ajouter ou modifier les données de la table, effectuez les tâches suivantes :  
   
--   Désactiver l’index columnstore. Vous pourrez ensuite mettre à jour les données de la table. Si vous désactivez l'index columnstore, vous pouvez le reconstruire lorsque vous avez fini de mettre à jour les données. Exemple :  
+-   Désactivez l’index ColumnStore. Vous pourrez ensuite mettre à jour les données de la table. Si vous désactivez l'index columnstore, vous pouvez le reconstruire lorsque vous avez fini de mettre à jour les données. Par exemple :  
   
     ```  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  
@@ -46,7 +46,7 @@ ms.locfileid: "62773785"
     ALTER INDEX mycolumnstoreindex on mytable REBUILD  
     ```  
   
--   Supprimez l’index columnstore, mettre à jour la table, puis recréez l’index columnstore avec CREATE COLUMNSTORE INDEX. Exemple :  
+-   Supprimez l’index ColumnStore, mettez à jour la table, puis recréez l’index ColumnStore avec CREATe COLUMNSTORE INDEX. Par exemple :  
   
     ```  
     DROP INDEX mycolumnstoreindex ON mytable  

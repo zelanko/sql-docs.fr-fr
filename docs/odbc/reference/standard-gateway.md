@@ -18,13 +18,13 @@ ms.assetid: b8341492-2141-4bab-80bd-f2752223079e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8120f3cda584240b0b58ed5d6758621b18fe44d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68070479"
 ---
 # <a name="standard-gateway"></a>Passerelle standard
-Un *passerelle* est un logiciel qui provoque un SGBD ressemble à un autre. Autrement dit, la passerelle accepte l’interface de programmation, la syntaxe SQL et protocole de SGBD unique de flux de données et le traduit à l’interface de programmation, grammaire SQL, et protocole du SGBD masqué de flux de données. Par exemple, les applications écrites pour utiliser Microsoft® SQL Server™ peuvent également accéder à des données de DB2 via la passerelle de DB2 Decisionware Micro ; Ce produit entraîne DB2 ressemble à SQL Server. Lorsque les passerelles sont utilisés, une autre passerelle doit être écrites pour chaque base de données cible.  
+Une *passerelle* est un élément logiciel qui fait qu’un SGBD ressemble à un autre SGBD. Autrement dit, la passerelle accepte l’interface de programmation, la grammaire SQL et le protocole de flux de données d’un seul SGBD et la convertit en l’interface de programmation, la grammaire SQL et le protocole de flux de données du SGBD masqué. Par exemple, les applications écrites pour utiliser Microsoft® SQL Server™ peuvent également accéder aux données DB2 par le biais de la passerelle DB2 de micro-décision. ce produit a pour effet que DB2 ressemble à SQL Server. Lorsque les passerelles sont utilisées, une autre passerelle doit être écrite pour chaque base de données cible.  
   
- Bien que les passerelles sont limités par les différences architecturales entre le SGBD, ils sont un bon candidat pour la normalisation. Toutefois, si tous les SGBD sont à une standardisation sur l’interface de programmation, grammaire SQL et protocole data stream de SGBD unique dont SGBD doit être choisi comme la norme ? Aucun fournisseur de SGBD commerciale n’est certainement susceptible de normaliser sur un produit concurrent. Et si une interface de programmation standard, la grammaire SQL et le protocole de flux de données sont développés, aucune passerelle n’est nécessaire.
+ Bien que les passerelles soient limitées par les différences architecturales entre les SGBD, elles sont un bon candidat à la normalisation. Toutefois, si tous les SGBD doivent se normaliser sur l’interface de programmation, la grammaire SQL et le protocole de flux de données d’un SGBD unique, dont le SGBD est choisi comme standard ? Certainement, aucun fournisseur de SGBD commercial n’est susceptible d’accepter de standardiser le produit d’un concurrent. Et si une interface de programmation standard, une grammaire SQL et un protocole de flux de données sont développés, aucune passerelle n’est nécessaire.

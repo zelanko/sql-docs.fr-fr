@@ -1,5 +1,5 @@
 ---
-title: Annuler des extractions | Microsoft Docs
+title: Annulation des extractions | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,24 +17,24 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2057c78f953645c9b1a5915b9912ab99263cb005
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773395"
 ---
 # <a name="undo-checkouts"></a>Annuler des extractions
-  Vous pouvez utiliser la **annuler l’extraction** commande pour annuler une extraction existante. Cette opération s'avère particulièrement utile lorsque vous avez modifié et enregistré un fichier et que vous devez par la suite annuler vos modifications.  
+  Vous pouvez utiliser la commande **Annuler l’extraction** pour annuler une extraction existante. Cette opération s'avère particulièrement utile lorsque vous avez modifié et enregistré un fichier et que vous devez par la suite annuler vos modifications.  
   
- Selon les options que vous définissez dans le **annuler les Options d’extraction avancées** boîte de dialogue, l’environnement Studio laisse la copie de l’élément de travail sur votre disque local ou le remplace par la dernière version de contrôle de code source. Si un utilisateur a modifié l'élément en dehors du contexte du système de contrôle de code source, la version extraite peut ne pas être la toute dernière.  
+ En fonction des options que vous avez définies dans la boîte de dialogue **Annuler l’extraction options avancées** , l’environnement Studio conserve la copie de travail de l’élément sur votre disque local ou le remplace par la dernière version sous contrôle de code source. Si un utilisateur a modifié l'élément en dehors du contexte du système de contrôle de code source, la version extraite peut ne pas être la toute dernière.  
   
 ### <a name="to-undo-a-checkout"></a>Pour annuler une extraction  
   
-1.  Dans l'Explorateur de solutions, sélectionnez le projet.  
+1.  Dans l’Explorateur de solutions, sélectionnez le projet.  
   
-2.  Sur le **fichier** menu, pointez sur **contrôle de code Source**, puis cliquez sur **annuler l’extraction**.  
+2.  Dans le menu **fichier** , pointez sur **contrôle de code source**, puis cliquez sur **Annuler l’extraction**.  
   
-3.  Dans le **annuler l’extraction** boîte de dialogue, sélectionnez les options appropriées, puis cliquez sur le **annuler l’extraction** bouton.  
+3.  Dans la boîte de dialogue **Annuler l’extraction** , sélectionnez les options appropriées, puis cliquez sur le bouton **Annuler l’extraction** .  
   
      **Colonnes**  
      Identifiez les colonnes à afficher et l'ordre dans lequel elles s'affichent.  
@@ -48,17 +48,17 @@ ms.locfileid: "62773395"
      **Options**  
      Affiche les options d'annulation d'extraction spécifiques au plug-in de contrôle de code source lorsque vous cliquez sur la flèche à droite du bouton.  
   
-     **Sort**  
+     **Trier**  
      Permet d'ordonner les colonnes d'affichage.  
   
-     **Vue d’arborescence**  
+     **Arborescence**  
      Permet d'afficher la hiérarchie des dossiers et des éléments pour les éléments dont vous annulez l'extraction.  
   
-     **Annuler l’extraction**  
+     **Annuler l'extraction**  
      Permet d'annuler l'extraction, en supprimant toutes les modifications apportées au fichier extrait.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Extraire des fichiers](../../2014/database-engine/check-out-files.md)   
+ [Extraire les fichiers](../../2014/database-engine/check-out-files.md)   
  [Gérer les extractions](../../2014/database-engine/manage-checkouts.md)  
   
   

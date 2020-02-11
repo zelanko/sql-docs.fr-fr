@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 1 : Création d’une série chronologique de modèle d’exploration de données et la Structure d’exploration de données | Microsoft Docs'
+title: 'Leçon 1 : création d’un modèle et d’une structure d’exploration de données de série chronologique | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62678450"
 ---
-# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Leçon 1 : Création d’une structure d’exploration de données et de modèle d’exploration de données de série chronologique
+# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Leçon 1 : création d'une structure d'exploration de données et de modèle d'exploration de données de série chronologique
   Dans cette leçon, vous allez créer un modèle d'exploration de données qui vous permet de prédire des valeurs dans le temps à partir de données historiques. Lorsque vous créez le modèle, la structure sous-jacente est générée automatiquement et peut servir de base pour les modèles d'exploration de données supplémentaires.  
   
  Cette leçon suppose que vous connaissez les modèles de prévision et les spécifications de l'algorithme MTS (Microsoft Time Series). Pour plus d’informations, consultez [Algorithme MTS (Microsoft Time Series)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md).  
   
 ## <a name="create-mining-model-statement"></a>Instruction CREATE MINING MODEL  
- Pour créer un modèle d’exploration de données directement et générer automatiquement la structure d’exploration de données sous-jacente, vous utilisez le [CREATE MINING MODEL &#40;DMX&#41; ](/sql/dmx/create-mining-model-dmx) instruction. Le code dans l’instruction peut être divisé en parties suivantes :  
+ Pour créer un modèle d’exploration de données directement et générer automatiquement la structure d’exploration de données sous-jacente, vous utilisez l’instruction [Create Mining model &#40;DMX&#41;](/sql/dmx/create-mining-model-dmx) . Le code de l’instruction peut être divisé en plusieurs parties :  
   
 -   Attribution d'un nom au modèle  
   
@@ -51,9 +51,9 @@ WITH DRILLTHROUGH
 CREATE MINING MODEL [Mining Model Name]  
 ```  
   
- Le service Analysis Services génère un nom pour la structure sous-jacente en annexant "_structure" au nom du modèle, ce qui garantit l'unicité du nom de la structure dans le nom du modèle. Pour plus d’informations sur l’appellation d’un objet dans DMX, consultez [identificateurs &#40;DMX&#41;](/sql/dmx/identifiers-dmx).  
+ Le service Analysis Services génère un nom pour la structure sous-jacente en annexant "_structure" au nom du modèle, ce qui garantit l'unicité du nom de la structure dans le nom du modèle. Pour plus d’informations sur l’attribution d’un nom à un objet dans DMX, consultez [identificateurs &#40;dmx&#41;](/sql/dmx/identifiers-dmx).  
   
- La ligne suivante du code définit la colonne clé pour le modèle d'exploration de données qui dans le cas d'un modèle de série chronologique identifie de manière unique une étape dans les données sources. L’étape est identifié par le `KEY TIME` mots clés après les types de données et le nom de colonne. Si le modèle de série chronologique a une clé de série séparée, il est identifié à l'aide du mot clé `KEY`.  
+ La ligne suivante du code définit la colonne clé pour le modèle d'exploration de données qui dans le cas d'un modèle de série chronologique identifie de manière unique une étape dans les données sources. L’étape de temps est identifiée `KEY TIME` par les mots clés après le nom de colonne et les types de données. Si le modèle de série chronologique a une clé de série séparée, il est identifié à l'aide du mot clé `KEY`.  
   
 ```  
 <key columns>  
@@ -66,7 +66,7 @@ CREATE MINING MODEL [Mining Model Name]
 ```  
   
 ## <a name="lesson-tasks"></a>Tâches de la leçon  
- Vous allez effectuer les tâches suivantes dans cette leçon :  
+ Dans cette leçon, vous allez effectuer les tâches suivantes :  
   
 -   créer une requête vide ;  
   
@@ -81,9 +81,9 @@ CREATE MINING MODEL [Mining Model Name]
   
 1.  Ouvrez [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-2.  Dans le **se connecter au serveur** boîte de dialogue pour **type de serveur**, sélectionnez **Analysis Services**. Dans **nom du serveur**, type `LocalHost`, ou le nom de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que vous souhaitez vous connecter à pour cette leçon. Cliquer sur **Se connecter**.  
+2.  Dans la boîte de dialogue **se connecter au serveur** , pour **type de serveur**, sélectionnez **Analysis Services**. Dans **nom du serveur**, `LocalHost`tapez ou le nom de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à laquelle vous souhaitez vous connecter pour cette leçon. Cliquez sur **Connecter**.  
   
-3.  Dans **Explorateur d’objets**, avec le bouton droit de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
+3.  Dans l' **Explorateur d’objets**, cliquez avec le bouton [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]droit sur l’instance de, pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
   
      L'Éditeur de requête s'ouvre et contient une nouvelle requête vide.  
   
@@ -172,33 +172,33 @@ CREATE MINING MODEL [Mining Model Name]
   
     ```  
   
-6.  Sur le **fichier** menu, cliquez sur **enregistrer DMXQuery1.dmx sous**.  
+6.  Dans le menu **fichier** , cliquez sur **Enregistrer DMXQuery1. DMX sous**.  
   
-7.  Dans le **enregistrer en tant que** boîte de dialogue, accédez au dossier approprié et nommez le fichier `Forecasting_MIXED.dmx`.  
+7.  Dans la boîte de dialogue **Enregistrer sous** , accédez au dossier approprié et nommez le fichier `Forecasting_MIXED.dmx`.  
   
-## <a name="executing-the-query"></a>L’exécution de la requête  
- La dernière étape concerne l'exécution de la requête. Après sa création et son enregistrement, la requête doit être exécutée pour permettre la création sur le serveur de sa structure d'exploration de données et du modèle d'exploration de données. Pour plus d’informations sur l’exécution de requêtes dans l’éditeur de requête, consultez [éditeur de requête du moteur de base de données &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md).  
+## <a name="executing-the-query"></a>Exécution de la requête  
+ La dernière étape concerne l'exécution de la requête. Après sa création et son enregistrement, la requête doit être exécutée pour permettre la création sur le serveur de sa structure d'exploration de données et du modèle d'exploration de données. Pour plus d’informations sur l’exécution de requêtes dans l’éditeur de requête, consultez [moteur de base de données l’éditeur de requête &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md).  
   
 #### <a name="to-execute-the-query"></a>Pour exécuter la requête  
   
--   Dans l’éditeur de requête, dans la barre d’outils, cliquez sur **Execute**.  
+-   Dans l’éditeur de requête, dans la barre d’outils, cliquez sur **exécuter**.  
   
-     L’état de la requête est affiché dans le **Messages** onglet en bas de l’éditeur de requête une fois l’instruction terminée l’exécution. Les messages doivent révéler le texte suivant :  
+     L’état de la requête s’affiche dans l’onglet **messages** en bas de l’éditeur de requête à la fin de l’exécution de l’instruction. Les messages doivent révéler le texte suivant :  
   
     ```  
     Executing the query   
     Execution complete  
     ```  
   
-     Une nouvelle structure appelée **Forecasting_MIXED_Structure** existe maintenant sur le serveur, ainsi que le modèle d’exploration de données connexes **Forecasting_MIXED**.  
+     Une nouvelle structure nommée **Forecasting_MIXED_Structure** existe désormais sur le serveur, ainsi que le modèle d’exploration de données associé **Forecasting_MIXED**.  
   
- Dans la leçon suivante, vous allez ajouter un modèle d’exploration de données pour le **Forecasting_MIXED** structure d’exploration de données que vous venez de créer.  
+ Dans la leçon suivante, vous allez ajouter un modèle d’exploration de données à la structure d’exploration de données **Forecasting_MIXED** que vous venez de créer.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : Ajout de modèles d’exploration de données à la Structure d’exploration de données de série chronologique](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
+ [Leçon 2 : Ajout de modèles d'exploration de données à la structure d'exploration de données de série chronologique](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu du modèle pour les modèles de série chronologique d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de série chronologique &#40;Analysis Services d’exploration de données&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   
  [Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   
   

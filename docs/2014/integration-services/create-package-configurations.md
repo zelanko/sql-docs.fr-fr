@@ -1,5 +1,5 @@
 ---
-title: Créer des Configurations de Package | Microsoft Docs
+title: Créer des configurations de package | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -19,20 +19,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 287ac1a5631cf2e3925e5895db7f04bb7b89bf5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060167"
 ---
 # <a name="create-package-configurations"></a>Créer des configurations de package
   Vous pouvez créer des configurations de package à l'aide de la boîte de dialogue **Bibliothèque des configurations du package** et de l'Assistant Configuration de package. Pour accéder à ces outils, cliquez sur **Configurations du package** dans le menu **SSIS** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 > [!NOTE]  
->  Vous pouvez également accéder à la **Bibliothèque des configurations du package**, en cliquant sur le bouton de sélection (points de suspension) en regard de la propriété **Configuration** . La propriété Configuration apparaît dans la fenêtre des propriétés du package.  
+>  Vous pouvez également accéder à l' **organiseur de configuration de package**en cliquant sur le bouton de sélection en regard de la propriété de **configuration** . La propriété Configuration apparaît dans la fenêtre des propriétés du package.  
   
 > [!NOTE]  
->  Des configurations sont disponibles pour le modèle de déploiement de package. Les paramètres sont utilisés à la place des configurations pour le modèle de déploiement de projet. Le modèle de déploiement de projet vous permet de déployer des projets [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Pour plus d'informations sur les modèles de déploiement, consultez [Déploiement de projets et de packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  
+>  Des configurations sont disponibles pour le modèle de déploiement de package. Les paramètres sont utilisés à la place des configurations pour le modèle de déploiement de projet. Le modèle de déploiement de projet vous permet de déployer des projets [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Pour plus d'informations sur les modèles de déploiement, consultez [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  Dans la boîte de dialogue **Bibliothèque des configurations du package** , vous pouvez permettre aux packages d'utiliser des configurations, ajouter et supprimer des configurations et définir l'ordre souhaité dans lequel sont chargées les configurations.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66060167"
   
  À partir de la boîte de dialogue **Bibliothèque des configurations du package** , vous pouvez exécuter l'Assistant Configuration de package, qui vous guide à travers les étapes de création d'une configuration. Pour exécuter l'Assistant Configuration de package, ajoutez une nouvelle configuration dans la boîte de dialogue **Bibliothèque des configurations du package** ou modifiez une configuration existante. Sur les pages de l'Assistant, vous choisissez un type de configuration, vous choisissez si vous souhaitez accéder directement à la configuration ou utiliser des variables d'environnement, et vous sélectionnez les propriétés à enregistrer dans la configuration.  
   
- L'exemple suivant illustre les propriétés cibles d'une variable et d'un package telles qu'elles apparaissent dans la page Fin de l'Assistant de l'Assistant Configuration de package :  
+ L'exemple suivant illustre les propriétés cibles d'une variable et d'un package telles qu'elles apparaissent dans la page Fin de l'Assistant de l'Assistant Configuration de package :  
   
  \Package.Variables[User::TodaysDate].Properties[RaiseChangedEvent]  
   
@@ -69,11 +69,11 @@ ms.locfileid: "66060167"
  Une fois l'Assistant terminé, la nouvelle configuration est ajoutée à la liste des configurations dans la boîte de dialogue **Bibliothèque des configurations du package** .  
   
 > [!NOTE]  
->  La dernière page de l'Assistant Configuration de package, Fin de l'Assistant, répertorie les propriétés cibles dans la configuration. Si vous souhaitez mettre à jour des propriétés pendant l’exécution de packages à l’aide de l’utilitaire d’invite de commandes **dtexec**, vous pouvez générer les chaînes qui représentent les chemins d’accès aux propriétés en exécutant l’Assistant Configuration de package, puis les copier et les coller dans la fenêtre d’invite de commandes pour les utiliser avec l’option set de **dtexec**.  
+>  La dernière page de l'Assistant Configuration de package, Fin de l'Assistant, répertorie les propriétés cibles dans la configuration. Si vous souhaitez mettre à jour des propriétés pendant l’exécution de packages à l’aide de l’utilitaire d’invite de commandes **dtexec** , vous pouvez générer les chaînes qui représentent les chemins d’accès aux propriétés en exécutant l’Assistant Configuration de package, puis les copier et les coller dans la fenêtre d’invite de commandes pour les utiliser avec l’option set de **dtexec**.  
   
  Le tableau suivant décrit les colonnes dans la liste des configurations de la boîte de dialogue **Bibliothèque des configurations du package** .  
   
-|colonne|Description|  
+|Colonne|Description|  
 |------------|-----------------|  
 |**Nom de la configuration**|Le nom de la configuration.|  
 |**Type de configuration**|Le type de la configuration.|  
@@ -95,9 +95,9 @@ ms.locfileid: "66060167"
   
 6.  Sur la page d'accueil de l'Assistant Configuration de package, cliquez sur **Suivant**.  
   
-7.  Sur la page Sélectionner le type de configuration, spécifiez le type de configuration, puis définissez les propriétés se rapportant au type de configuration. Pour plus d’informations, voir [Référence de l'interface utilisateur de l'Assistant Configuration de package](../../2014/integration-services/package-configuration-wizard-ui-reference.md).  
+7.  Sur la page Sélectionner le type de configuration, spécifiez le type de configuration, puis définissez les propriétés se rapportant au type de configuration. Pour plus d’informations, voir [Package Configuration Wizard UI Reference](../../2014/integration-services/package-configuration-wizard-ui-reference.md).  
   
-8.  Dans la page Sélectionner les propriétés à exporter, sélectionnez les propriétés des objets de package à inclure dans la configuration. Si le type de configuration ne prend en charge qu'une seule propriété, le titre de cette page de l'Assistant est Sélectionner la propriété cible. Pour plus d’informations, voir [Référence de l'interface utilisateur de l'Assistant Configuration de package](../../2014/integration-services/package-configuration-wizard-ui-reference.md).  
+8.  Dans la page Sélectionner les propriétés à exporter, sélectionnez les propriétés des objets de package à inclure dans la configuration. Si le type de configuration ne prend en charge qu'une seule propriété, le titre de cette page de l'Assistant est Sélectionner la propriété cible. Pour plus d’informations, voir [Package Configuration Wizard UI Reference](../../2014/integration-services/package-configuration-wizard-ui-reference.md).  
   
     > [!NOTE]  
     >  Seuls les types de configuration **Fichier de configuration XML** et **SQL Server** prennent en charge l’inclusion de plusieurs propriétés dans une configuration.  
@@ -110,15 +110,15 @@ ms.locfileid: "66060167"
   
 ## <a name="external-resources"></a>Ressources externes  
   
--   Article technique, [Présentation des configurations de packages Integration Services.](https://go.microsoft.com/fwlink/?LinkId=165643), sur msdn.microsoft.com  
+-   Article technique, [Understanding Integration Services Package Configurations](https://go.microsoft.com/fwlink/?LinkId=165643), sur msdn.microsoft.com  
   
--   Entrée de blog, [création de packages dans le code - Configurations de Package](https://go.microsoft.com/fwlink/?LinkId=217663), sur www.sqlis.com.  
+-   Entrée de blog, [création de packages dans le code-configurations de package](https://go.microsoft.com/fwlink/?LinkId=217663), sur www.SQLIS.com.  
   
--   Entrée de blog, [exemple API - ajouter par programmation un fichier de configuration à un package](https://go.microsoft.com/fwlink/?LinkId=217664), sur blogs.msdn.com.  
+-   Entrée de blog, [exemple d’API-ajouter par programmation un fichier de configuration à un package](https://go.microsoft.com/fwlink/?LinkId=217664), sur blogs.msdn.com.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurations du package](../../2014/integration-services/package-configurations.md)   
- [Déploiement du package &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
+ [Déploiement de packages &#40;&#41;SSIS](packages/legacy-package-deployment-ssis.md)   
  [Utilisation de variables par programmation](building-packages-programmatically/working-with-variables-programmatically.md)  
   
   

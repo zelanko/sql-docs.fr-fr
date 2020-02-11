@@ -1,5 +1,5 @@
 ---
-title: 'Étape 2 : Création d’un fichier endommagé | Microsoft Docs'
+title: 'Étape 2 : Création d’un fichier endommagé | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767381"
 ---
-# <a name="step-2-creating-a-corrupted-file"></a>Étape 2 : Création d’un fichier corrompu
+# <a name="step-2-creating-a-corrupted-file"></a>Étape 2 : Création d'un fichier corrompu
   Afin de démontrer l'utilisation des fonctions de configuration et de gestion des erreurs de transformation, vous allez devoir créer un exemple de fichier plat qui, lors de son traitement, entraîne l'échec d'un composant.  
   
  Au cours de cette tâche, vous allez créer une copie d'un fichier plat existant. Vous ouvrirez ensuite ce fichier dans le Bloc-notes et modifierez la colonne **CurrencyID** pour vous assurer qu'aucune correspondance ne peut être établie au cours de la recherche de transformations. Lors du traitement du nouveau fichier, l'échec de la recherche provoquera à son tour l'échec de la transformation Lookup Currency Key et, par conséquent, celui du reste du package. Une fois le fichier exemple corrompu créé, vous exécuterez le package pour examiner son échec.  
@@ -34,12 +34,12 @@ ms.locfileid: "62767381"
   
     3.  Cliquez sur le fichier SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
-2.  Utilisez Rechercher l’éditeur de texte et remplacer pour retrouver toutes les instances de `VEB` et remplacez-les par `BAD`.  
+2.  Utilisez la fonctionnalité Rechercher et remplacer de l’éditeur de texte pour rechercher toutes `VEB` les instances de et `BAD`les remplacer par.  
   
-3.  Dans le même dossier que les autres fichiers de données d’exemple, enregistrez le fichier modifié en tant que `Currency_BAD.txt`.  
+3.  Dans le même dossier que les autres exemples de fichiers de données, enregistrez le fichier `Currency_BAD.txt`modifié sous.  
   
     > [!IMPORTANT]  
-    >  Assurez-vous que l’option `Currency_BAD.txt` est enregistré le même dossier que les autres fichiers de données d’exemple.  
+    >  Assurez- `Currency_BAD.txt` vous que est enregistré dans le même dossier que les autres exemples de fichiers de données.  
   
 4.  Fermez l'éditeur de texte.  
   
@@ -61,6 +61,6 @@ ms.locfileid: "62767381"
     >  Le nombre 27 désigne l'ID du composant. Cette valeur est attribuée lors de la création du flux de données ; la valeur définie dans votre package peut être différente.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- [Étape 3 : Ajout de Redirection de flux d’erreurs](lesson-4-3-adding-error-flow-redirection.md)  
+ [Étape 3 : Ajout de redirection de flux d'erreurs](lesson-4-3-adding-error-flow-redirection.md)  
   
   

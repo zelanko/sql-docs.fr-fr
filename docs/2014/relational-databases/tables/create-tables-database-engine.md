@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b909160a11dbcced44a0c81d92fd28ce02a50906
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761606"
 ---
 # <a name="create-tables-database-engine"></a>Créer des tables (moteur de base de données)
@@ -31,7 +31,7 @@ ms.locfileid: "62761606"
   
      [Sécurité](#Security)  
   
--   **Pour créer une table, à l’aide de :**  
+-   **Pour créer une table à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62761606"
   
      Pour plus d'informations sur les schémas, consultez [Create a Database Schema](../security/authentication-access/create-a-database-schema.md).  
   
-9. Dans le menu **Fichier** , choisissez **Enregistrer** *nom de la table*.  
+9. Dans le menu **fichier** , choisissez **Enregistrer** *nom*de la table.  
   
 10. Dans la boîte de dialogue **Choisir un nom** , tapez un nom pour la table et cliquez sur **OK**.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "62761606"
   
 #### <a name="to-create-a-table-in-the-query-editor"></a>Pour créer une table dans l'éditeur de requête  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

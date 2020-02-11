@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76ccc4271877b81ae103a89b5df727b74017d9ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62688667"
 ---
-# <a name="bcpreadfmt"></a>bcp_readfmt
+# <a name="bcp_readfmt"></a>bcp_readfmt
   Lit la définition du format du fichier de données à partir du fichier de format spécifié.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -49,17 +49,17 @@ szFormatFile
  *szFormatFile*  
  Chemin d'accès et nom du fichier contenant les valeurs de format du fichier de données.  
   
-## <a name="returns"></a>Valeur renvoyée  
+## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
 ## <a name="remarks"></a>Notes  
- Après avoir `bcp_readfmt` lit les valeurs de format, il effectue les appels appropriés aux [bcp_columns](bcp-columns.md) et [bcp_colfmt](bcp-colfmt.md). Vous n'avez nul besoin d'analyser un fichier de format et d'exécuter ces appels.  
+ Après `bcp_readfmt` avoir lu les valeurs de format, il effectue les appels appropriés à [bcp_columns](bcp-columns.md) et [bcp_colfmt](bcp-colfmt.md). Vous n'avez nul besoin d'analyser un fichier de format et d'exécuter ces appels.  
   
- Pour rendre un fichier de format persistant, appelez [bcp_writefmt](bcp-writefmt.md). Les appels à `bcp_readfmt` peuvent référencer des formats enregistrés. Pour plus d'informations, consultez [bcp_init](bcp-init.md).  
+ Pour rendre un fichier de format persistant, appelez [bcp_writefmt](bcp-writefmt.md). Les appels `bcp_readfmt` à peuvent référencer des formats enregistrés. Pour plus d'informations, consultez [bcp_init](bcp-init.md).  
   
- Vous pouvez également l’utilitaire de copie en bloc (**bcp**) peut enregistrer les formats de données défini par l’utilisateur dans les fichiers qui peuvent être référencées par `bcp_readfmt`. Pour plus d’informations sur la **bcp** utilitaire et la structure de **bcp** fichiers de format de données, consultez [importation et exportation de données &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md).  
+ L’utilitaire de copie en bloc (**BCP**) peut également enregistrer des formats de données définis par l’utilisateur dans des fichiers qui peuvent être `bcp_readfmt`référencés par. Pour plus d’informations sur l’utilitaire **BCP** et la structure des fichiers de format de données **BCP** , consultez [importation et exportation en bloc de données &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md).  
   
- Le `BCPDELAYREADFMT` valeur de la *eOption* paramètre de [bcp_control](bcp-control.md) modifie le comportement de bcp_readfmt.  
+ La `BCPDELAYREADFMT` valeur du paramètre *eOption* de [bcp_control](bcp-control.md) modifie le comportement de bcp_readfmt.  
   
 > [!NOTE]  
 >  Le fichier de format a dû être produit par la version 4.2 ou version ultérieure de l'utilitaire **bcp** .  
@@ -110,6 +110,6 @@ if (bcp_exec(hdbc, &nRowsProcessed) == SUCCEED)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions de copie en bloc](sql-server-driver-extensions-bulk-copy-functions.md)  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

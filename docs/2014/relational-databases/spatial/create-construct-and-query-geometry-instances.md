@@ -14,10 +14,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: cb99c2ff07f30d268980c5c1c4d43a34904cdec9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014313"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Créer, construire et interroger des instances geometry
@@ -129,7 +129,7 @@ ms.locfileid: "66014313"
   
   
 ###  <a name="gml"></a> Construction d'une instance geometry à partir d'une entrée texte GML  
- Le `geometry` type de données fournit une méthode qui génère un `geometry` instance à partir de GML, une représentation XML d’objets géométriques. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge un sous-ensemble de GML.  
+ Le `geometry` type de données fournit une méthode qui génère `geometry` une instance à partir de GML, une représentation XML d’objets géométriques. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge un sous-ensemble de GML.  
   
  **Pour construire tout type d'instance geometry à partir d'une entrée GML**  
  [GeomFromGml &#40;type de données geometry&#41;](/sql/t-sql/spatial-geometry/geomfromgml-geometry-data-type)  
@@ -156,7 +156,7 @@ ms.locfileid: "66014313"
   
   
 ##  <a name="querying"></a> Interrogation des propriétés et comportements des instances geometry  
- Tous les `geometry` instances ont un nombre de propriétés qui peuvent être récupérées via des méthodes qui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit. Les rubriques suivantes définissent les propriétés et comportements de types geometry et les méthodes permettant de les interroger.  
+ Toutes `geometry` les instances ont un certain nombre de propriétés qui peuvent être récupérées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais des méthodes fournies par. Les rubriques suivantes définissent les propriétés et comportements de types geometry et les méthodes permettant de les interroger.  
   
 ###  <a name="valid"></a> Informations sur la validité, le type d'instance et GeometryCollection  
  Une fois qu'une instance `geometry` est construite, vous pouvez utiliser les méthodes suivantes pour déterminer si elle est formée correctement, retourner le type d'instance ou, s'il s'agit d'une instance de collection, retourner une instance `geometry` spécifique.  
@@ -182,7 +182,8 @@ ms.locfileid: "66014313"
   
   
 ###  <a name="number"></a> Nombre de points  
- Tous les non vide `geometry` instances sont constitués de *points*. Ces points représentent les coordonnées X et Y de latitude et de longitude du plan sur lequel les géométries sont dessinées. `geometry` fournit de nombreuses méthodes intégrées pour interroger les points d'une instance.  
+ Toutes les instances `geometry` non vides sont constituées de *points*. Ces points représentent les coordonnées X et Y de latitude et de longitude du plan sur lequel les géométries sont dessinées. 
+  `geometry` fournit de nombreuses méthodes intégrées pour interroger les points d'une instance.  
   
  **Pour retourner le nombre de points qui composent une instance**  
  [STNumPoints &#40;type de données geometry&#41;](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type)  
@@ -225,7 +226,7 @@ ms.locfileid: "66014313"
   
   
 ###  <a name="empty"></a> Vide  
- Un *vide* `geometry` instance n’a pas de tous les points. La longueur des instances `LineString, CircularString`, `CompoundCurve` et `MultiLineString` vides est nulle. La surface des instances `Polygon`, `CurvePolygon` et `MultiPolygon` vides est 0.  
+ Une instance *vide* `geometry` n’a aucun point. La longueur des instances `LineString, CircularString`, `CompoundCurve` et `MultiLineString` vides est nulle. La surface des instances `Polygon`, `CurvePolygon` et `MultiPolygon` vides est 0.  
   
  **Pour déterminer si une instance est vide**  
  [STIsEmpty](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type).  
@@ -233,7 +234,7 @@ ms.locfileid: "66014313"
   
   
 ###  <a name="simple"></a> Simple  
- Pour un `geometry` de l’instance à être *simple*, se conformer à ces deux exigences :  
+ Pour qu' `geometry` une de l’instance soit *simple*, elle doit remplir les deux conditions requises suivantes :  
   
 -   Chaque graphique de l'instance ne doit pas se croiser lui-même, sauf à ses points de terminaison.  
   
@@ -248,7 +249,7 @@ ms.locfileid: "66014313"
   
   
 ###  <a name="boundary"></a> Limite, intérieur et extérieur  
- Le *intérieurs* d’un `geometry` instance est l’espace occupé par l’instance et le *extérieur* est l’espace pas qu’elle n’occupe.  
+ L' *intérieur* d’une `geometry` instance est l’espace occupé par l’instance et l' *extérieur* est l’espace qui n’est pas occupé.  
   
  Une limite (*Boudary* à est définie par l’OGC comme suit :  
   
@@ -276,7 +277,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="envelope"></a> Enveloppe  
- Le *enveloppe* d’un `geometry` de l’instance, également connu sous le *englobant*, est le rectangle aligné sur l’axe formé par le minimales et maximales (X, Y) des coordonnées de l’instance.  
+ L' *enveloppe* d’une `geometry` instance, également appelée *zone englobante*, est le rectangle aligné sur l’axe formé par les coordonnées minimales et maximales (X, Y) de l’instance.  
   
  **Pour retourner l'enveloppe d'une instance**  
  [STEnvelope](/sql/t-sql/spatial-geometry/stenvelope-geometry-data-type)  
@@ -284,7 +285,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="closure"></a> Fermeture  
- Un *fermé* `geometry` instance est un graphique les points dont le démarrage et de points de terminaison sont les mêmes. Les instances `Polygon` sont considérées comme fermées. Les instances `Point` ne sont pas fermées.  
+ Une instance *fermée* `geometry` est une figure dont les points de début et de fin sont identiques. Les instances `Polygon` sont considérées comme fermées. Les instances `Point` ne sont pas fermées.  
   
  Un anneau est une instance `LineString` simple et fermée.  
   
@@ -359,7 +360,7 @@ SELECT @g.STBoundary().ToString();
 ##  <a name="examples"></a> Exemples  
  Les deux exemples suivants montrent comment ajouter et interroger des données géométriques.  
   
--   Le premier exemple crée une table avec une colonne d'identité et une colonne `geometry` `GeomCol1`. Une troisième colonne restitue la colonne `geometry` dans sa représentation OGC (Open Geospatial Consortium) WKT (Well-Known Text) et utilise la méthode `STAsText()` . Deux lignes sont ensuite insérées : une ligne contient une instance `LineString` de `geometry`et une ligne contient une instance `Polygon` .  
+-   Le premier exemple crée une table avec une colonne d'identité et une colonne `geometry``GeomCol1`. Une troisième colonne restitue la colonne `geometry` dans sa représentation OGC (Open Geospatial Consortium) WKT (Well-Known Text) et utilise la méthode `STAsText()` . Deux lignes sont ensuite insérées : une ligne contient une instance `LineString` de `geometry`et une ligne contient une instance `Polygon` .  
   
     ```  
     IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   

@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Source OLE DB (Page colonnes) | Microsoft Docs
+title: Éditeur de source de OLE DB (page colonnes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 453bed2f366c4b2bd51fd706d5d56ea6ccf01f01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057028"
 ---
 # <a name="ole-db-source-editor-columns-page"></a>Éditeur de source OLE DB (page Colonnes)
@@ -38,9 +38,9 @@ ms.locfileid: "66057028"
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de source OLE DB &#40;page Gestionnaire de connexions&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
- [Éditeur de source OLE DB &#40;page Sortie d’erreur&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
- [Extraire des données à l'aide de la source OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
+ [Éditeur de source de OLE DB &#40;page Gestionnaire de connexions&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
+ [Éditeur de source de OLE DB &#40;page sortie d’erreur&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
+ [Extraire des données à l’aide de la source de OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
  [Gestionnaire de connexions OLE DB](connection-manager/ole-db-connection-manager.md)  
   
   

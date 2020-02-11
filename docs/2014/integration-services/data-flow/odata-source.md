@@ -13,17 +13,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b6b4aeb4059ba659a3188712b1ce76f10efd030
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771035"
 ---
 # <a name="odata-source"></a>Source OData
   Utilisez le composant source OData dans un package SSIS pour consommer les données provenant de services OData (Open Data Protocol). Le composant prend en charge les protocoles OData v2 et v3, ainsi que formats de données et ATOM de JSON.  
   
 > [!NOTE]  
->  La source OData peut être utilisée pour lire des listes SharePoint. Pour afficher toutes les listes sur votre serveur SharePoint, utilisez l’URL suivante : http://\<serveur > / listData.svc. Pour plus d'informations sur les conventions d'URL SharePoint, consultez [Interface REST de SharePoint Foundation](https://msdn.microsoft.com/library/ff521587.aspx).  
+>  La source OData peut être utilisée pour lire des listes SharePoint. Pour afficher toutes les listes sur votre serveur SharePoint, utilisez l’URL suivante :\<http://Server>/_vti_bin/listdata.svc. Pour plus d'informations sur les conventions d'URL SharePoint, consultez [Interface REST de SharePoint Foundation](https://msdn.microsoft.com/library/ff521587.aspx).  
   
 ## <a name="odata-format"></a>Format OData  
  La plupart des services ODatas retournent les résultats dans plusieurs formats. Vous pouvez spécifier le format du jeu de résultats à l'aide de l'option de requête $format. Les formats comme JSON et JSON Light sont plus efficaces qu'ATOM/XML, et peuvent offrir de meilleures performances en cas de transfert d'un grand volume de données. Le tableau suivant fournit les résultats des tests. Comme vous pouvez le voir, un gain de performances de 30-53 % a été enregistré en passant d'ATOM à JSON, et un gain de performances de 67 % a été constaté en passant d'ATOM au nouveau format JSON Light (disponible dans WCF Data Services 5.1).  
@@ -39,17 +39,17 @@ ms.locfileid: "62771035"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Installer et désinstaller le composant Source OData](../install-and-uninstall-odata-source-component.md)  
+-   [Installer et désinstaller le composant source OData](../install-and-uninstall-odata-source-component.md)  
   
--   [Tutoriel : À l’aide de la Source OData &#91;SSIS&#93;](tutorial-using-the-odata-source.md)  
+-   [Didacticiel : utilisation de la source OData &#91;&#93;SSIS](tutorial-using-the-odata-source.md)  
   
--   [Modifier la requête de la source OData à l’exécution](modify-odata-source-query-at-runtime.md)  
+-   [Modifier la requête de la source OData à l'exécution](modify-odata-source-query-at-runtime.md)  
   
--   [Éditeur de la source OData &#40;page Connexion&#41;](../odata-source-editor-connection-page.md)  
+-   [Éditeur de source OData &#40;page connexion&#41;](../odata-source-editor-connection-page.md)  
   
--   [Éditeur de la source OData &#40;page Colonnes&#41;](../odata-source-editor-columns-page.md)  
+-   [Éditeur de source OData &#40;page colonnes&#41;](../odata-source-editor-columns-page.md)  
   
--   [Éditeur de la source OData &#40;page Sortie d’erreur&#41;](../odata-source-editor-error-output-page.md)  
+-   [Éditeur de source OData &#40;page sortie d’erreur&#41;](../odata-source-editor-error-output-page.md)  
   
 -   [Propriétés de la source OData](odata-source-properties.md)  
   

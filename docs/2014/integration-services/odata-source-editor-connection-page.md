@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Source OData (Page connexion) | Microsoft Docs
+title: Éditeur de source OData (page connexion) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e36c0a3449566db9a2acee360243c77ee548f92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057317"
 ---
 # <a name="odata-source-editor-connection-page"></a>Éditeur de source OData (page Connexion)
@@ -29,7 +29,7 @@ ms.locfileid: "66057317"
  **Nouveau**  
  Créez un gestionnaire de connexions à l’aide de la boîte de dialogue **Éditeur du gestionnaire de connexions OData** .  
   
- **Utilisez une collection ou un chemin d'accès de ressource.**  
+ **Utiliser le chemin d’accès de la collection ou de la ressource**  
  Spécifiez la méthode de sélection des données dans la source.  
   
 |Option|Description|  
@@ -40,25 +40,25 @@ ms.locfileid: "66057317"
  **Options de requête**  
  Permet d'indiquer les options de la requête.  Par exemple : $top=5  
   
- **URL du flux**  
+ **Feed url**  
  Affiche l'URL du flux en lecture seule en fonction des options sélectionnées dans la boîte de dialogue.  
   
- **Aperçu**  
- Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Aperçu** . L’**Aperçu** peut afficher jusqu’à 20 lignes.  
+ **Préversion**  
+ Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Aperçu** . L' **Aperçu** peut afficher jusqu’à 20 lignes.  
   
 ## <a name="dynamic-options"></a>Options dynamiques  
   
 ### <a name="use-collection-or-resource-path--collection"></a>Utilisez une collection ou un chemin d'accès de ressource = Collection.  
- **Collection**  
+ **Collecte**  
  Sélectionnez une collection dans la liste déroulante.  
   
 ### <a name="use-collection-or-resource-path--resource-path"></a>Utilisez une collection ou un chemin d'accès de ressource = Resource Path.  
- **Resource path**  
- Type de chemin d'accès de ressource. Exemple : Employees  
+ **Chemin de la ressource**  
+ Type de chemin d'accès de ressource. Par exemple : Employees  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de source OData &#40;page Colonnes&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
- [Éditeur de source OData &#40;page Sortie d’erreur&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
- [OData Connection Manager](connection-manager/odata-connection-manager.md)  
+ [Éditeur de source OData &#40;page colonnes&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
+ [Éditeur de source OData &#40;page sortie d’erreur&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
+ [Gestionnaire de connexions OData](connection-manager/odata-connection-manager.md)  
   
   

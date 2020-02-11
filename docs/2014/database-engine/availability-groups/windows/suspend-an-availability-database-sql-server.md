@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c428d9141acfaca3e8ec7876e62b733c30ec161
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797961"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Interrompre une base de données de disponibilité (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "72797961"
   
 |Base de données interrompue|Effet de la commande d'interruption|  
 |------------------------|-------------------------------|  
-|Base de données secondaire|Seule la base de données secondaire locale est interrompue et son état de synchronisation devient NOT SYNCHRONIZING. Les autres bases de données secondaires ne sont pas affectées. La base de données interrompue cesse de recevoir et d'appliquer des données (enregistrements de journal) et commence à se situer en retrait par rapport à la base de données principale. Les connexions existantes sur le réplica secondaire accessible en lecture restent utilisables. Les nouvelles connexions à la base de données suspendue sur le réplica secondaire accessible en lecture ne sont pas autorisées tant que le déplacement des données n'a pas repris.<br /><br /> La base de données primaire reste disponible. Si vous interrompez chaque base de données secondaire correspondante, la base de données principale est exposée.<br /><br /> **\*\* Important \*\*** Quand une base de données secondaire est suspendue, la file d’attente d’envoi de la base de données primaire correspondante accumule des enregistrements du journal des transactions non envoyés. Les connexions au réplica secondaire retournent des données qui étaient disponibles lorsque le déplacement des données a été suspendu.|  
+|Base de données secondaire|Seule la base de données secondaire locale est interrompue et son état de synchronisation devient NOT SYNCHRONIZING. Les autres bases de données secondaires ne sont pas affectées. La base de données interrompue cesse de recevoir et d'appliquer des données (enregistrements de journal) et commence à se situer en retrait par rapport à la base de données principale. Les connexions existantes sur le réplica secondaire accessible en lecture restent utilisables. Les nouvelles connexions à la base de données suspendue sur le réplica secondaire accessible en lecture ne sont pas autorisées tant que le déplacement des données n'a pas repris.<br /><br /> La base de données primaire reste disponible. Si vous interrompez chaque base de données secondaire correspondante, la base de données principale est exposée.<br /><br /> ** \* Important \* \* ** Lorsqu’une base de données secondaire est suspendue, la file d’attente d’envoi de la base de données primaire correspondante accumule les enregistrements du journal des transactions non envoyés. Les connexions au réplica secondaire retournent des données qui étaient disponibles lorsque le déplacement des données a été suspendu.|  
 |Base de données principale|La base de données principale cesse le déplacement des données vers chaque base de données secondaire connectée. La base de données principale continue à s'exécuter, en mode exposé. La base de données principale reste à la disposition des clients, les connexions existantes sur un réplica secondaire accessible en lecture restent utilisables et de nouvelles connexions peuvent être établies.|  
   
 > [!NOTE]  
@@ -47,7 +47,7 @@ ms.locfileid: "72797961"
   
      [Sécurité](#Security)  
   
--   **Pour interrompre une base de données à l'aide de :**  
+-   **Pour interrompre une base de données, utilisez :**  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -55,16 +55,16 @@ ms.locfileid: "72797961"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **Suivi :** [Comment éviter un journal des transactions plein](#FollowUp)  
+-   **Suivi :** [éviter un journal des transactions complet](#FollowUp)  
   
--   [Tâches connexes](#RelatedTasks)  
+-   [Tâches associées](#RelatedTasks)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
  Une commande SUSPEND retourne dès qu'elle est acceptée par le réplica qui héberge la base de données cible, mais en réalité, l'interruption de la base de données se produit de façon asynchrone.  
   
-###  <a name="Prerequisites"></a> Conditions préalables requises  
+###  <a name="Prerequisites"></a>Conditions préalables  
  Vous devez être connecté à l'instance de serveur qui héberge la base de données que vous souhaitez interrompre. Pour interrompre une base de données primaire et les bases de données secondaires correspondantes, connectez-vous à l'instance de serveur qui héberge le réplica principal. Pour interrompre une base de données secondaire tout en laissant la base de données primaire disponible, connectez-vous au réplica secondaire.  
   
 ###  <a name="Recommendations"></a> Recommandations  
@@ -72,7 +72,7 @@ ms.locfileid: "72797961"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation ALTER sur la base de données.  
   
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
@@ -102,7 +102,7 @@ ms.locfileid: "72797961"
   
 2.  Interrompez la base de données à l’aide de l’instruction [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-hadr)suivante :  
   
-     ALTER DATABASE *nom_base_de_données* SET HADR SUSPEND  
+     ALTER DATABASE *database_name* Set Hadr suspend  
   
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Pour interrompre une base de données**  
@@ -118,31 +118,31 @@ ms.locfileid: "72797961"
     ```  
   
     > [!NOTE]  
-    >  Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour plus d’informations, consultez [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
--   [fournisseur PowerShell SQL Server](../../../powershell/sql-server-powershell-provider.md)  
+-   [Fournisseur SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Follow Up: Avoiding a Full Transaction Log  
+##  <a name="FollowUp"></a>Suivi : éviter un journal des transactions complet  
  En général, lorsqu'un point de contrôle automatique est effectué sur une base de données, son journal des transactions est tronqué jusqu'à ce point de contrôle après la sauvegarde du journal suivante. Toutefois, pendant qu'une base de données secondaire est interrompue, tous les enregistrements de journal en cours restent actifs sur la base de données primaire. Si le journal des transactions est saturé (soit parce qu'il a atteint sa taille maximale, soit parce que l'instance de serveur manque de place), la base de données ne peut plus effectuer de mises à jour.  
   
  Pour éviter ce problème, vous devez procédez de l'une des manières suivantes :  
   
 -   Ajoutez davantage d'espace de journal pour la base de données primaire.  
   
--   Reprenez la base de données secondaire avant que le journal ne soit saturé. Pour plus d'informations, consultez [Resume an Availability Database &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md).  
+-   Reprenez la base de données secondaire avant que le journal ne soit saturé. Pour plus d'informations, consultez [Reprendre une base de données de disponibilité &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md).  
   
 -   Supprimez la base de données secondaire. Pour plus d’informations, consultez [Supprimer une base de données secondaire d’un groupe de disponibilité &#40;SQL Server&#41;](remove-a-secondary-database-from-an-availability-group-sql-server.md).  
   
- **Pour résoudre les problèmes liés à la saturation du journal des transactions**  
+ **Pour résoudre les problèmes liés à un journal des transactions complet**  
   
 -   [Résoudre les problèmes liés à un journal des transactions saturé &#40;erreur SQL Server 9002&#41;](../../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
-##  <a name="RelatedTasks"></a> Tâches connexes  
+##  <a name="RelatedTasks"></a> Tâches associées  
   
 -   [Reprendre une base de données de disponibilité &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble &#40;de&#41; groupes de disponibilité AlwaysOn SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
+ [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Reprendre une base de données de disponibilité &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  

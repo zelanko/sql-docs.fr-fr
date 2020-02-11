@@ -1,5 +1,5 @@
 ---
-title: À l’aide des propriétés de membre (MDX) | Microsoft Docs
+title: Utilisation des propriétés de membre (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c0326d45af68db966f120fa12e35eb59f30becc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074162"
 ---
 # <a name="using-member-properties-mdx"></a>Utilisation des propriétés de membre (MDX)
@@ -40,10 +40,10 @@ ms.locfileid: "66074162"
   
  Pour plus d’informations, consultez [Propriétés de membre définies par l’utilisateur &#40;MDX&#41;](mdx-member-properties-user-defined-member-properties.md).  
   
- Les deux propriétés de membre intrinsèques et définies par l’utilisateur peuvent être récupérées à l’aide de la `PROPERTIES` mot clé ou le [propriétés](/sql/mdx/properties-mdx) (fonction).  
+ Les propriétés de membre intrinsèques et définies par l’utilisateur peuvent être récupérées à `PROPERTIES` l’aide du mot clé ou de la fonction [Properties](/sql/mdx/properties-mdx) .  
   
 ## <a name="using-the-properties-keyword"></a>Utilisation du mot clé PROPERTIES  
- Le mot clé `PROPERTIES` spécifie les propriétés de membre à utiliser pour une dimension donnée d'un axe. Le `PROPERTIES` mot clé est compris dans le `<axis specification>` clause du code MDX [sélectionnez](/sql/mdx/mdx-data-manipulation-select) instruction :  
+ Le mot clé `PROPERTIES` spécifie les propriétés de membre à utiliser pour une dimension donnée d'un axe. Le `PROPERTIES` mot clé est enfoui dans `<axis specification>` la clause de l’instruction MDX [Select](/sql/mdx/mdx-data-manipulation-select) :  
   
 ```  
 SELECT [<axis_specification>  
@@ -69,11 +69,11 @@ SELECT [<axis_specification>
   
  Le détail de la syntaxe de `<property>` varie en fonction de la propriété interrogée :  
   
--   Les propriétés de membre intrinsèques sensibles au contexte doivent être précédées du nom de la dimension ou du niveau. Par contre, les propriétés de membre intrinsèques non sensibles au contexte ne peuvent pas être spécifiées à l'aide du nom de la dimension ou du niveau. Pour plus d’informations sur l’utilisation de la `PROPERTIES` mot clé avec les propriétés de membre intrinsèques, consultez [propriétés de membre intrinsèques &#40;MDX&#41;](mdx-member-properties-intrinsic-member-properties.md).  
+-   Les propriétés de membre intrinsèques sensibles au contexte doivent être précédées du nom de la dimension ou du niveau. Par contre, les propriétés de membre intrinsèques non sensibles au contexte ne peuvent pas être spécifiées à l'aide du nom de la dimension ou du niveau. Pour plus d’informations sur l’utilisation du `PROPERTIES` mot clé avec des propriétés de membre intrinsèques, consultez [Propriétés de membre intrinsèques &#40;&#41;MDX ](mdx-member-properties-intrinsic-member-properties.md).  
   
--   Les propriétés de membre définies par l'utilisateur doivent être précédées du nom du niveau dans lequel elles résident. Pour plus d’informations sur l’utilisation de la `PROPERTIES` mot clé avec des propriétés de membre définies par l’utilisateur, consultez [propriétés de membre définies par l’utilisateur &#40;MDX&#41;](mdx-member-properties-user-defined-member-properties.md).  
+-   Les propriétés de membre définies par l'utilisateur doivent être précédées du nom du niveau dans lequel elles résident. Pour plus d’informations sur l’utilisation du `PROPERTIES` mot clé avec des propriétés de membre définies par l’utilisateur, consultez [Propriétés de membre définies par l’utilisateur &#40;&#41;MDX ](mdx-member-properties-user-defined-member-properties.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création et utilisation de valeurs de propriétés &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)  
+ [Création et utilisation de valeurs de propriété &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)  
   
   

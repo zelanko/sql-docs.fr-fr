@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 381007cb26f74cdf945900436d8a9fcea5a4ef39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714716"
 ---
 # <a name="filter-a-trace"></a>Filtrer une trace
@@ -62,7 +62,7 @@ ms.locfileid: "62714716"
   
 |Opérateur relationnel|Symbole d'opérateur|Description|  
 |-------------------------|---------------------|-----------------|  
-|Correspond à|Correspond à|Indique que les données d'événements de trace doivent correspondre au texte entré. Autorise plusieurs valeurs.|  
+|Correspond à|LIKE|Indique que les données d'événements de trace doivent correspondre au texte entré. Autorise plusieurs valeurs.|  
 |Ne correspond pas à|Ne correspond pas à|Indique que les données d'événements de trace ne doivent pas correspondre au texte entré. Autorise plusieurs valeurs.|  
 |Égal à|=|Indique que les données d'événements de trace doivent être égales à la valeur entrée. Autorise plusieurs valeurs.|  
 |Différent de|<>|Indique que les données d'événements de trace ne doivent pas être égales à la valeur entrée. Autorise plusieurs valeurs.|  
@@ -81,13 +81,13 @@ ms.locfileid: "62714716"
 |**BinaryData**|Utilisez le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour filtrer les événements de cette colonne de données. Pour plus d’informations, consultez [Filtrer des traces avec SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**ClientProcessID**|=, <>, >=, <=|  
 |**ColumnPermissions**|=, <>, >=, <=|  
-|**Unité centrale**|=, <>, >=, <=|  
+|**UC**|=, <>, >=, <=|  
 |**DatabaseID**|=, <>, >=, <=|  
 |**DatabaseName**|LIKE, NOT LIKE|  
 |**DBUserName**|LIKE, NOT LIKE|  
-|**Duration**|=, <>, >=, \<=|  
+|**Durée**|=, <>, >=, \<=|  
 |**EndTime**|>=, <=|  
-|**Erreur**|=, <>, >=, <=|  
+|**Error**|=, <>, >=, <=|  
 |**EventSubClass**|=, <>, >=, <=|  
 |**FileName**|LIKE, NOT LIKE|  
 |**GUID**|Utilisez le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour filtrer les événements de cette colonne de données. Pour plus d’informations, consultez [Filtrer des traces avec SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
@@ -114,20 +114,20 @@ ms.locfileid: "62714716"
 |**OwnerID**|=, <>, >=, <=|  
 |**OwnerName**|LIKE, NOT LIKE|  
 |**ParentName**|LIKE, NOT LIKE|  
-|**Autorisations**|=, <>, >=, <=|  
+|**autorisations**|=, <>, >=, <=|  
 |**ProviderName**|LIKE, NOT LIKE|  
 |**Reads**|=, <>, >=, <=|  
 |**RequestID**|=, <>, >=, <=|  
 |**RoleName**|LIKE, NOT LIKE|  
 |**RowCounts**|=, <>, >=, <=|  
 |**SessionLoginName**|LIKE, NOT LIKE|  
-|**Severity**|=, <>, >=, <=|  
+|**Niveau de gravité**|=, <>, >=, <=|  
 |**SourceDatabaseID**|=, <>, >=, <=|  
 |**SPID**|=, <>, >=, \<=|  
 |**SqlHandle**|Utilisez le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour filtrer les événements de cette colonne de données. Pour plus d’informations, consultez [Filtrer des traces avec SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**StartTime**|>=, <=|  
-|**État**|=, <>, >=, <=|  
-|**Réussi**|=, <>, >=, <=|  
+|**State**|=, <>, >=, <=|  
+|**Success**|=, <>, >=, <=|  
 |**TargetLoginName**|LIKE, NOT LIKE|  
 |**TargetLoginSid**|Utilisez le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour filtrer les événements de cette colonne de données. Pour plus d’informations, consultez [Filtrer des traces avec SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**TargetUserName**|LIKE, NOT LIKE|  
@@ -137,7 +137,7 @@ ms.locfileid: "62714716"
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- <sup>1</sup> si le traçage des événements à partir de la **osql** utilitaire ou le **sqlcmd** utilitaire, toujours ajouter **%** aux filtres de la **TextData**  colonne de données.  
+ <sup>1</sup> si vous tracez des événements à partir de l’utilitaire **osql** ou de **%** l’utilitaire **sqlcmd** , ajoutez toujours aux filtres sur la colonne de données **TextData** .  
   
  En tant que mécanisme de sécurité, le Générateur de profils SQL omet automatiquement de la trace les procédures stockées de sécurité qui affectent les mots de passe. Ce mécanisme de sécurité n'est pas configurable et est toujours actif. Il empêche les utilisateurs, qui par ailleurs ont l'autorisation de tracer l'ensemble de l'activité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], d'intercepter les mots de passe.  
   

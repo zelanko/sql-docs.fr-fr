@@ -1,5 +1,5 @@
 ---
-title: Extraire automatiquement des fichiers lors de leur modification | Microsoft Docs
+title: Extraire automatiquement des fichiers lors de la modification | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0cb5bacaeab817c491ae72018630cf88e62b3b7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62791739"
 ---
 # <a name="automatically-check-out-files-upon-edit"></a>Extraire automatiquement des fichiers lors de leur modification
@@ -32,7 +32,7 @@ ms.locfileid: "62791739"
 3.  Dans la zone **Modification** , sélectionnez **Extraire automatiquement**, puis cliquez sur **OK**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Extraire des fichiers](../../2014/database-engine/check-out-files.md)   
+ [Extraire les fichiers](../../2014/database-engine/check-out-files.md)   
  [Gérer les extractions](../../2014/database-engine/manage-checkouts.md)  
   
   

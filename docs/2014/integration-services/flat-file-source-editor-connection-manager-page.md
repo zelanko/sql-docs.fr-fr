@@ -1,5 +1,5 @@
 ---
-title: Flat File Source Editor (Page Gestionnaire de connexions) | Microsoft Docs
+title: Éditeur de source de fichier plat (page Gestionnaire de connexions) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3c729faa93cf445e7e0aff46fa94258bc7ea7a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058693"
 ---
 # <a name="flat-file-source-editor-connection-manager-page"></a>Éditeur de source de fichier plat (page Gestionnaire de connexions)
@@ -33,22 +33,22 @@ ms.locfileid: "66058693"
  Pour en savoir plus sur la source de fichier plat, consultez [Flat File Source](data-flow/flat-file-source.md).  
   
 ## <a name="options"></a>Options  
- **Flat file connection manager**  
+ **Gestionnaire de connexions de fichiers plats**  
  Sélectionnez un gestionnaire de connexions existant dans la liste ou créez un gestionnaire de connexions en cliquant sur **Nouveau**.  
   
  **Nouveau**  
  Créez un gestionnaire de connexions à l’aide de la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** .  
   
- **Conserver les valeurs NULL de la source comme valeurs NULL dans le flux de données**  
+ **Conserver les valeurs null de la source comme valeurs NULL dans le workflow**  
  Indique s'il faut conserver les valeurs NULL lorsque les données sont extraites. La valeur par défaut de cette propriété est **false**. Lorsque cette propriété a la valeur `alse`, la source de fichier plat remplace les valeurs NULL des données sources par les valeurs par défaut appropriées pour chaque colonne, par exemple des chaînes vides pour les colonnes de chaînes et zéro pour les colonnes numériques.  
   
- **Aperçu**  
- Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Vue de données** . L'aperçu peut afficher jusqu'à 200 lignes.  
+ **Préversion**  
+ Affichez un aperçu des résultats à partir de la boîte de dialogue **Vue de données** . L'aperçu peut afficher jusqu'à 200 lignes.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de source de fichier plat &#40;page Colonnes&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
- [Éditeur de source de fichier plat &#40;page Sortie d’erreur&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
+ [Éditeur de source de fichier plat &#40;page colonnes&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
+ [Éditeur de source de fichier plat &#40;page sortie d’erreur&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
  [Gestionnaire de connexions de fichiers plats](connection-manager/file-connection-manager.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Mapper des paramètres de requête à des Variables dans une tâche d’exécution SQL | Microsoft Docs
+title: Mapper des paramètres de requête à des variables dans une tâche d’exécution SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8863de6fc0418dbf502492ac20f7c5c846696aea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057795"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>Mapper des paramètres de requête à des variables dans une tâche d'exécution SQL
@@ -38,7 +38,7 @@ ms.locfileid: "66057795"
   
 3.  Cliquez sur l'onglet **Flux de contrôle** .  
   
-4.  Si le package ne contient pas déjà une tâche d'exécution SQL, ajoutez-en une au flux de contrôle du package. Pour plus d’informations, consultez [ajouter ou supprimer une tâche ou un conteneur dans un flux de contrôle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+4.  Si le package ne contient pas déjà une tâche d'exécution SQL, ajoutez-en une au flux de contrôle du package. Pour plus d’informations, consultez [Ajouter ou supprimer une tâche ou un conteneur dans un workflow de contrôle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   .  
   
 5.  Double-cliquez sur la tâche d'exécution SQL.  
@@ -105,7 +105,7 @@ ms.locfileid: "66057795"
   
 ## <a name="see-also"></a>Voir aussi  
  [Exécution de requêtes SQL, tâche](control-flow/execute-sql-task.md)   
- [Paramètres et Codes de retour dans la tâche d’exécution SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
+ [Paramètres et codes de retour dans la tâche d’exécution SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
  [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQLXMLOLEDB Provider (SQLXML 4.0) | Microsoft Docs
+title: Fournisseur SQLXMLOLEDB (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -17,20 +17,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ee86e6d70949da906767f18890df235fd229dbf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780288"
 ---
 # <a name="sqlxmloledb-provider-sqlxml-40"></a>Fournisseur SQLXMLOLEDB (SQLXML 4.0)
   Le fournisseur SQLXMLOLEDB est un fournisseur OLE DB qui expose les fonctionnalités [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML par le biais d'objets ADO.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Présentation du fournisseur SQLXMLOLEDB &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/introduction-to-the-sqlxmloledb-provider-sqlxml-4-0.md)  
+ [Présentation du fournisseur SQLXMLOLEDB &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/introduction-to-the-sqlxmloledb-provider-sqlxml-4-0.md)  
  Fournit des informations de base sur le fournisseur SQLXMLOLEDB et répertorie les propriétés spécifiques à SQLXMLOLEDB.  
   
- [Utilisation du fournisseur SQLXMLOLEDB &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/using-the-sqlxmloledb-provider-sqlxml-4-0.md)  
+ [Utilisation du fournisseur SQLXMLOLEDB &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/using-the-sqlxmloledb-provider-sqlxml-4-0.md)  
  Fournit des exemples de différentes tâches pouvant être réalisées avec le fournisseur SQLXMLOLEDB.  
   
 ## <a name="see-also"></a>Voir aussi  

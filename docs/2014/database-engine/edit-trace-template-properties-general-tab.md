@@ -1,5 +1,5 @@
 ---
-title: Modifier les propriétés du modèle de Trace (onglet Général) | Microsoft Docs
+title: Modifier les propriétés du modèle de trace (onglet général) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,20 +15,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 20f4376d6cd2eee3702596f5db60ae501d0ecc33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064899"
 ---
 # <a name="edit-trace-template-properties-general-tab"></a>Modifier les propriétés du modèle de trace (onglet Général)
-  Utilisez l'onglet **Général** de la boîte de dialogue **Propriétés du modèle de trace** pour consulter ou modifier les modèles de trace existants en utilisant les options suivantes. Pour accéder à cette boîte de dialogue, dans le menu **Fichier** de [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], pointez sur **Modèles**, puis cliquez sur **Modifier le modèle**.  
+  Utilisez l'onglet **Général** de la boîte de dialogue **Propriétés du modèle de trace** pour consulter ou modifier les modèles de trace existants en utilisant les options suivantes. Pour accéder à cette boîte de dialogue, dans le menu [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **de** , pointez sur **Modèles**, puis cliquez sur **Modifier le modèle**.  
   
 ## <a name="options"></a>Options  
- **Sélectionnez le type de serveur**  
+ **Sélectionner un type de serveur**  
  Indiquez le type de serveur sur lequel ce modèle va être utilisé.  
   
- **Sélectionnez le nom du modèle**  
+ **Sélectionner un nom de modèle**  
  Sélectionnez le modèle que vous souhaitez modifier.  
   
  **Utiliser comme modèle par défaut pour le type de serveur sélectionné**  

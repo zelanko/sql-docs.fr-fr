@@ -1,5 +1,5 @@
 ---
-title: Référence de l’interface utilisateur de la boîte de dialogue rôles de package | Microsoft Docs
+title: Informations de référence sur l’interface utilisateur de la boîte de dialogue rôles de package | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 71eabff4c4caf79718fee8e29c675636b6034205
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056813"
 ---
 # <a name="package-roles-dialog-box-ui-reference"></a>Référence de l'interface utilisateur de la boîte de dialogue Rôles de package
-  Utilisez la boîte de dialogue **Rôles de package**, disponible dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], pour spécifier les rôles au niveau de la base de données qui possèdent un accès en lecture au package et les rôles au niveau de la base de données qui possèdent un accès en écriture au package. Les rôles au niveau de la base de données s’appliquent uniquement aux packages stockés dans la base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **msdb**.  
+  Utilisez la boîte de dialogue **Rôles de package** , disponible dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], pour spécifier les rôles au niveau de la base de données qui possèdent un accès en lecture au package et les rôles au niveau de la base de données qui possèdent un accès en écriture au package. Les rôles au niveau de la base de données s’appliquent uniquement aux packages stockés dans la base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **msdb** .  
   
  Pour en savoir plus sur les rôles au niveau de la base de données [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et leurs autorisations, consultez [Rôles Integration Services &#40;Service SSIS&#41;](security/integration-services-roles-ssis-service.md).  
   
@@ -34,10 +34,10 @@ ms.locfileid: "66056813"
  **Nom du package**  
  Spécifiez le nom du package.  
   
- **Rôle Lecteur**  
+ **Rôle de lecteur**  
  Sélectionnez un rôle dans la liste.  
   
- **Rôle Rédacteur**  
+ **Rôle de rédacteur**  
  Sélectionnez un rôle dans la liste.  
   
 ## <a name="see-also"></a>Voir aussi  

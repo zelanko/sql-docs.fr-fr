@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ca7d915b940296e6de6689e666401b0c3534c9d
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782728"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>Utiliser des chemins d'accès PowerShell SQL Server
@@ -22,7 +22,7 @@ ms.locfileid: "72782728"
   
 1.  [Avant de commencer](#BeforeYouBegin)  
   
-2.  **Pour travailler sur un nœud de chemin d'accès :**  [Affichage de la liste des méthodes et des propriétés](#ListPropMeth), [Utilisation des méthodes et des propriétés](#UsePropMeth)  
+2.  **Pour travailler sur un nœud de chemin d’accès :**  [liste des méthodes et des propriétés](#ListPropMeth), [utilisation des méthodes et des propriétés](#UsePropMeth)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  Après avoir accédé à un nœud dans un chemin d'accès de fournisseur du [!INCLUDE[ssDE](../includes/ssde-md.md)] , vous pouvez effectuer deux types d'actions :  
@@ -31,7 +31,7 @@ ms.locfileid: "72782728"
   
 -   Vous pouvez appeler les méthodes du modèle objet SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects) associé, tel que SMO. Par exemple, si vous accédez au nœud Databases dans un chemin d’accès, vous pouvez utiliser les méthodes et propriétés de la classe <xref:Microsoft.SqlServer.Management.Smo.Database> .  
   
- Le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est utilisé pour gérer les objets dans une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)]. Il n'est pas utilisé pour travailler avec les données de bases de données. Si vous avez accédé à une table ou une vue, vous ne pouvez pas utiliser le fournisseur pour sélectionner, insérer, mettre à jour ou supprimer des données. Utilisez l'applet de commande **Invoke-Sqlcmd** pour interroger ou modifier des données dans des tables et des vues à partir de l'environnement Windows PowerShell. Pour plus d’informations, consultez [Invoke-Sqlcmd (applet de commande)](../database-engine/invoke-sqlcmd-cmdlet.md).  
+ Le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est utilisé pour gérer les objets dans une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)]. Il n'est pas utilisé pour travailler avec les données de bases de données. Si vous avez accédé à une table ou une vue, vous ne pouvez pas utiliser le fournisseur pour sélectionner, insérer, mettre à jour ou supprimer des données. Utilisez l’applet de commande **Invoke-Sqlcmd** pour interroger ou modifier des données dans des tables et des vues à partir de l’environnement Windows PowerShell. Pour plus d’informations, consultez [Invoke-Sqlcmd (applet de commande)](../database-engine/invoke-sqlcmd-cmdlet.md).  
   
 ##  <a name="ListPropMeth"></a> Affichage de la liste des méthodes et des propriétés
   
@@ -46,7 +46,7 @@ $MyDBVar | Get-Member -Type Methods
 $MyDBVar | Get-Member -Type Properties  
 ```  
   
- Vous pouvez également utiliser **Get-Member** pour répertorier les méthodes et les propriétés associées au nœud de fin d'un chemin d'accès Windows PowerShell.  
+ Vous pouvez également utiliser **Get-Member** pour répertorier les méthodes et les propriétés associées au nœud de fin d’un chemin d’accès Windows PowerShell.  
   
  L'exemple suivant accède au nœud Databases d'un chemin d'accès SQLSERVER: et répertorie les propriétés de collection :  
   
@@ -74,7 +74,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Table
 Get-ChildItem | Where {$_.Schema -eq "Sales"}  
 ```  
   
- Cet exemple utilise la méthode SMO **script** pour générer un script qui contient les instructions `CREATE VIEW` que vous devez avoir pour recréer les vues dans AdventureWorks2012 :  
+ Cet exemple utilise la méthode SMO **script** pour générer un script qui contient les `CREATE VIEW` instructions que vous devez avoir pour recréer les vues dans AdventureWorks2012 :  
   
 ```powershell
 Remove-Item C:\PowerShell\CreateViews.sql  
@@ -94,7 +94,7 @@ $MyDBVar.State
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [fournisseur PowerShell SQL Server](sql-server-powershell-provider.md)   
  [Parcourir les chemins d'accès PowerShell SQL Server](navigate-sql-server-powershell-paths.md)   
  [Convertir des URN en chemins d'accès de fournisseur SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

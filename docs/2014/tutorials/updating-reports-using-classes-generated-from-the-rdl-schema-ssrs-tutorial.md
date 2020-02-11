@@ -1,5 +1,5 @@
 ---
-title: La mise à jour des rapports à l’aide des Classes générées à partir du schéma RDL (didacticiel SSRS) | Microsoft Docs
+title: Mise à jour des rapports à l’aide de classes générées à partir du schéma RDL (didacticiel SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,21 +15,21 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 313a5268b754089d4ca8964328d53cb23ec6edd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62746113"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>Mise à jour des rapports à l'aide des classes générées à partir du schéma RDL (didacticiel SSRS)
-  Ce didacticiel illustre comment utiliser le XML Schema Definition Tool (Xsd.exe) pour générer des classes qui vous permettent de sérialiser et désérialiser les fichiers de définition de rapport (.rdl et .rdlc) avec le [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer> classe.  
+  Ce didacticiel explique comment utiliser l’outil XML Schema Definition (XSD. exe) pour générer des classes qui vous permettent de sérialiser et de désérialiser des fichiers de définition de rapport (. rdl et. rdlc [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer> ) avec la classe.  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
  Au cours de l'étude de ce didacticiel, vous allez effectuer les opérations suivantes :  
   
--   Créer une application qui utilise le [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] modèle de projet Application Console.  
+-   Créez une application à l' [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] aide du modèle de projet d’application console.  
   
--   Générer des classes du schéma de langage RDL (Report Definition) à l’aide de la **xsd** outil.  
+-   Générez des classes à partir du schéma Report Definition Language (RDL) à l’aide de l’outil **xsd** .  
   
 -   Se connecter à un serveur de rapports et extraire une définition de rapport.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62746113"
 > [!NOTE]  
 >  Les exemples de code fournis dans ce didacticiel risquent d'échouer pour les rapports ne comportant aucune description. L'échec s'explique par l'absence de la propriété de description pour les rapports pour lesquels aucune description n'est spécifiée.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Pour exécuter ce didacticiel, vous devez disposer des éléments suivants :  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -58,22 +58,22 @@ ms.locfileid: "62746113"
 > [!NOTE]  
 >  Les exemples ne sont pas installés automatiquement, mais peuvent l'être à tout moment. Pour plus d’informations sur les exemples, consultez [SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887).  
   
- **Durée estimée pour effectuer le tutoriel :** 30 minutes  
+ **Durée estimée pour effectuer ce didacticiel :** 30 minutes  
   
 ## <a name="tasks"></a>Tâches  
- [Leçon 1 : Créer le projet Visual Studio du schéma RDL](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  
+ [Leçon 1 : Création du projet Visual Studio du schéma RDL](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  
   
- [Leçon 2 : Générer des Classes à partir du schéma RDL à l’aide de l’outil xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)  
+ [Leçon 2 : génération de classes à partir du schéma RDL à l'aide de l'outil xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)  
   
- [Leçon 3 : Charger une définition de rapport du serveur de rapports](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)  
+ [Leçon 3 : chargement d'une définition de rapport à partir du serveur de rapports](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)  
   
- [Leçon 4 : Mettre à jour la définition de rapport par programme](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)  
+ [Leçon 4 : Mise à jour par programme de la définition du rapport](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)  
   
- [Leçon 5 : Publier la définition de rapport sur le serveur de rapports](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)  
+ [Leçon 5 : publication de la définition du rapport sur le serveur de rapports](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)  
   
- [Leçon 6 : Exécutez l’Application du schéma RDL &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)  
+ [Leçon 6 : exécuter l’application de schéma RDL &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [RDL (Report Definition Language) &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
+ [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

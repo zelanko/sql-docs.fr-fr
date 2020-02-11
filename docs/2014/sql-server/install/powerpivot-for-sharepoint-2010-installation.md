@@ -11,13 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 0bb88370db889eac44e3ce71ad498779e55e4d7d
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952053"
 ---
-# <a name="powerpivot-for-sharepoint-2010-installation"></a>Installation de PowerPivot pour SharePoint 2010
+# <a name="powerpivot-for-sharepoint-2010-installation"></a>PowerPivot for SharePoint 2010 Installation
+  
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est une collection de composants serveur qui fournissent le traitement des requêtes et le contrôle de gestion pour les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que vous publiez sur SharePoint. Les services incluent le moteur Analysis Services et le service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 > [!NOTE]  
@@ -25,7 +26,7 @@ ms.locfileid: "71952053"
 >   
 >  -   La section « SQL Server 2012 SP1 » de la rubrique [vue d’ensemble de l’installation de SQL Server maintenance](../../../2014/sql-server/install/overview-of-sql-server-servicing-installation.md).  
   
- Analysis Services fournit le traitement côté serveur pour les classeurs Excel qui contiennent des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le service système[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] fonctionne avec Analysis Services, et ajoute l'intégration SharePoint, l'équilibrage de charge et la gestion des connexions. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] étend Excel Services en associant sa capacité de traitement de données à grande échelle aux services de rendu de données fournis par Excel.  
+ Analysis Services fournit le traitement côté serveur pour les classeurs Excel qui contiennent des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le service système[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] fonctionne avec Analysis Services, et ajoute l'intégration SharePoint, l'équilibrage de charge et la gestion des connexions. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]étend Excel Services en associant sa capacité de traitement de données à grande échelle aux services de rendu de données fournis par Excel.  
   
  Pour installer [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], utilisez le support d'installation de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
@@ -34,21 +35,21 @@ ms.locfileid: "71952053"
 ## <a name="in-this-section"></a>Dans cette section  
  [Installer PowerPivot pour SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  
   
- [Installer le fournisseur OLE DB Analysis Services sur des serveurs SharePoint](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)  
+ [Installer le fournisseur OLE DB Analysis Services sur les serveurs SharePoint](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)  
   
- [Installer ADOMD.NET sur des serveurs web frontaux exécutant Administration centrale](../../../2014/sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md)  
+ [Installer ADOMD.NET sur des serveurs Web frontaux exécutant l'Administration centrale](../../../2014/sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md)  
   
- [Installer ADO.NET Data Services pour prendre en charge les exportations de flux de données des listes SharePoint](../../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)  
+ [Installation d'ADO.NET Data Services pour prendre en charge les exportations de flux de données des listes SharePoint](../../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)  
   
- [Installer PowerPivot à partir de l’invite de commandes](../../../2014/sql-server/install/install-powerpivot-from-the-command-prompt.md)  
+ [Installer PowerPivot à partir de l'invite de commandes](../../../2014/sql-server/install/install-powerpivot-from-the-command-prompt.md)  
   
  [Désinstaller PowerPivot pour SharePoint](../../../2014/sql-server/install/uninstall-power-pivot-for-sharepoint.md)  
   
  [Réparer PowerPivot pour SharePoint](../../../2014/sql-server/install/repair-powerpivot-for-sharepoint.md)  
   
- [Configuration &#40;initiale PowerPivot pour SharePoint&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)  
+ [Configuration initiale &#40;PowerPivot pour SharePoint&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administration et configuration d’un serveur PowerPivot dans l’Administration centrale](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)  
+ [Administration et configuration d'un serveur PowerPivot dans l'Administration centrale](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)  
   
   

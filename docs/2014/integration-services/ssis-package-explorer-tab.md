@@ -1,5 +1,5 @@
 ---
-title: Onglet Explorateur de Package SSIS | Microsoft Docs
+title: Onglet Explorateur de package SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ab5c3112bfeddd41c9c877365e36780e32b4241e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055388"
 ---
 # <a name="ssis-package-explorer-tab"></a>Onglet Explorateur de package SSIS
@@ -25,7 +25,7 @@ ms.locfileid: "66055388"
  Cliquez avec le bouton droit sur un élément du package, puis cliquez sur **Propriétés** pour afficher les propriétés de l’élément dans la fenêtre **Propriétés** , ou cliquez sur **Supprimer** pour supprimer l’élément.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher les objets de Package](view-package-objects.md)   
+ [Afficher les objets de package](view-package-objects.md)   
  [Concepteur SSIS](ssis-designer.md)  
   
   

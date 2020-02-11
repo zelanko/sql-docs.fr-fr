@@ -1,5 +1,5 @@
 ---
-title: Importer la référence de l’interface utilisateur de la boîte de dialogue Package | Microsoft Docs
+title: Informations de référence sur l’interface utilisateur de la boîte de dialogue Importer le package | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3e36fae15f6f4220565bcc3d14c0e125ca6818f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058082"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>Référence de l'interface utilisateur de la boîte de dialogue Importer un package
@@ -34,7 +34,7 @@ ms.locfileid: "66058082"
   
  **Magasin de packages SSIS**  
   
- **Server**  
+ **Serveur**  
  Tapez le nom d’un serveur ou sélectionnez-en un dans la liste.  
   
  **Authentification**  
@@ -43,7 +43,7 @@ ms.locfileid: "66058082"
 > [!IMPORTANT]  
 >  Dans la mesure du possible, utilisez l’authentification Windows.  
   
- **Type d'authentification**  
+ **Type d’authentification**  
  Sélectionnez un type d'authentification.  
   
  **Nom d'utilisateur**  
@@ -63,7 +63,7 @@ ms.locfileid: "66058082"
   
 ## <a name="see-also"></a>Voir aussi  
  [Enregistrer une copie du package](../../2014/integration-services/save-copy-of-package.md)   
- [Référence de l'interface utilisateur de la boîte de dialogue Exporter un package](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
+ [Référence de l’interface utilisateur de la boîte de dialogue Exporter le package](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [Enregistrer des packages](save-packages.md)   
  [Importer et exporter des packages &#40;service SSIS&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   

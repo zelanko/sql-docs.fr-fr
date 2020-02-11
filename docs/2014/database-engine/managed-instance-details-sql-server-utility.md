@@ -1,5 +1,5 @@
 ---
-title: Géré les détails de l’Instance (utilitaire SQL Server) | Microsoft Docs
+title: Détails du Managed Instance (Utilitaire SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774341"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Détails de l'instance gérée (utilitaire SQL Server)
@@ -26,29 +26,29 @@ ms.locfileid: "62774341"
   
  Les icônes d'état d'intégrité fournissent un résumé de l'état de chaque instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] par catégorie d'utilisation :  
   
--   Coche verte (![](../../2014/database-engine/media/well-utilized.gif "Correctement exploité")) : nombre d’instances gérées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui ne violent pas les stratégies d’utilisation des ressources. Les ressources sont bien utilisées.  
+-   Coche verte : ![](../../2014/database-engine/media/well-utilized.gif "Well_utilized") - Nombre d'instances managées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui ne violent pas les stratégies d'utilisation des ressources. Les ressources sont bien utilisées.  
   
--   Flèche bas verte (![](../../2014/database-engine/media/utility-down-arrow.gif "Utilitaire, flèche bas")) : les ressources sont sous-exploitées.  
+-   Flèche bas verte : ![](../../2014/database-engine/media/utility-down-arrow.gif "Utility_down_arrow") - les ressources sont sous-exploitées.  
   
--   Flèche haut rouge (![](../../2014/database-engine/media/utility-up-arrow.gif "Utilitaire, flèche haut")) : les ressources sont surexploitées.  
+-   Flèche haut rouge : ![](../../2014/database-engine/media/utility-up-arrow.gif "Utility_up_arrow") - les ressources sont surexploitées.  
   
  La séquence des colonnes en mode Liste peut être modifiée en les faisant glisser vers la gauche ou la droite. Les colonnes en mode Liste peuvent être ajoutées ou supprimées en cliquant avec le bouton droit sur leurs en-tête et en les sélectionnant ou désélectionnant. Le menu contextuel offre également des options de tri. Le tri peut également être activé en cliquant en haut d'un nom de colonne.  
   
- Pour accéder aux options de filtre du mode Liste de l’utilitaire, cliquez avec le bouton droit sur le nœud **Instances managées** dans le volet de navigation de l’Explorateur de l’utilitaire et sélectionnez **Filtre**. Une fois que les paramètres de filtrage sont implémentés, le nœud **Instances managées** de l’Explorateur de l’utilitaire est étiqueté **Instances managées (filtré)** . Pour plus d’informations, consultez [Paramètres de filtre &#40;Explorateur d’objets et Explorateur de l’utilitaire&#41;](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
+ Pour accéder aux options de filtre du mode Liste de l’utilitaire, cliquez avec le bouton droit sur le nœud **Instances managées** dans le volet de navigation de l’Explorateur de l’utilitaire et sélectionnez **Filtre**. Une fois que les paramètres de filtrage sont implémentés, le nœud **Instances managées** de l’Explorateur de l’utilitaire est étiqueté **Instances managées (filtré)**. Pour plus d’informations, consultez [Paramètres de filtre &#40;Explorateur d’objets et Explorateur de l’utilitaire&#41;](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
   
  Par défaut, les colonnes suivantes affichent des informations sur l'état d'intégrité de chaque instance managée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   Processeur de l’instance : affiche l’état d’intégrité de l’utilisation du processeur alloué à cette instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. L'état d'intégrité de ce paramètre est déterminé d'après la stratégie d'utilisation du processeur définie pour l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et le paramètre de configuration de la stratégie d'évaluation des ressources volatiles. Pour plus d’informations, consultez [Réduire le bruit dans les stratégies d’utilisation du processeur &#40;utilitaire SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   Processeur de l’instance : affiche l’état d’intégrité de l’utilisation du processeur alloué à cette instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. L'état d'intégrité de ce paramètre est déterminé d'après la stratégie d'utilisation du processeur définie pour l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et le paramètre de configuration de la stratégie d'évaluation des ressources volatiles. Pour plus d’informations, consultez [réduire le bruit dans les stratégies d’utilisation du processeur &#40;Utilitaire SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      Pour consulter l’historique de l’utilisation du processeur pour cette instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ou afficher ou modifier les limites de la stratégie, cliquez sur l’onglet **Utilisation du processeur**.  
   
--   Processeur de l'ordinateur : affiche l'état d'intégrité de l'utilisation du processeur de l'ordinateur. L'état d'intégrité de ce paramètre est déterminé en fonction de la stratégie d'utilisation du processeur définie pour l'ordinateur et du paramètre de configuration de la stratégie d'évaluation des ressources volatiles. Pour plus d’informations, consultez [Réduire le bruit dans les stratégies d’utilisation du processeur &#40;utilitaire SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   Processeur de l'ordinateur : affiche l'état d'intégrité de l'utilisation du processeur de l'ordinateur. L'état d'intégrité de ce paramètre est déterminé en fonction de la stratégie d'utilisation du processeur définie pour l'ordinateur et du paramètre de configuration de la stratégie d'évaluation des ressources volatiles. Pour plus d’informations, consultez [réduire le bruit dans les stratégies d’utilisation du processeur &#40;Utilitaire SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      Pour consulter l’historique de l’utilisation du processeur pour cette instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ou afficher ou modifier les limites de la stratégie, cliquez sur l’onglet **Utilisation du processeur**.  
   
--   Espace de fichier : affiche un résumé de l’état d’intégrité de l’utilisation de l’espace de fichier pour toutes les bases de données appartenant à l’instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]sélectionnée. Si l'état d'intégrité de l'une des bases de données est surexploité, l'état d'intégrité de l'espace de fichier sera signalé en mode Liste comme étant surexploité. Si l'état d'intégrité de l'une des bases de données est sous-exploité et qu'aucune base de données n'est surexploitée, l'état d'intégrité de l'espace de fichier sera signalé en mode Liste comme étant sous-exploité. Sinon, l'état d'intégrité de l'espace du fichier sera signalé en mode Liste comme étant correctement utilisé. Pour afficher ou modifier les limites de la stratégie, cliquez sur l’onglet **Utilisation du stockage** .  
+-   Espace de fichier : affiche un résumé de l’état d’intégrité de l’utilisation de l’espace de fichier pour toutes les bases de données appartenant à l’instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]sélectionnée. Si l'état d'intégrité de l'une des bases de données est surexploité, l'état d'intégrité de l'espace de fichier sera signalé en mode Liste comme étant surexploité. Si l'état d'intégrité de l'une des bases de données est sous-exploité et qu'aucune base de données n'est surexploitée, l'état d'intégrité de l'espace de fichier sera signalé en mode Liste comme étant sous-exploité. Sinon, l'état d'intégrité de l'espace du fichier sera signalé en mode Liste comme étant correctement utilisé. Pour afficher ou modifier les limites de la stratégie, cliquez sur l'onglet **Utilisation du stockage**.  
   
--   Espace de volume : affiche un résumé des états d'intégrité de l'utilisation du volume pour tous les volumes contenant des bases de données qui appartiennent à l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]sélectionnée. Si l'état d'intégrité d'un des volumes est surexploité, l'état d'intégrité de l'espace de volume sera signalé en mode Liste comme étant surexploité. Si l'état d'intégrité d'un des volumes de données est sous-exploité et qu'aucun volume n'est surexploité, l'état d'intégrité de l'espace de volume sera signalé en mode Liste comme étant sous-exploité. Sinon, l'état d'intégrité de l'espace de volume sera signalé en mode Liste comme étant correctement utilisé. Pour afficher ou modifier les limites de la stratégie, cliquez sur l’onglet **Utilisation du stockage** .  
+-   Espace de volume : affiche un résumé des états d'intégrité de l'utilisation du volume pour tous les volumes contenant des bases de données qui appartiennent à l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]sélectionnée. Si l'état d'intégrité d'un des volumes est surexploité, l'état d'intégrité de l'espace de volume sera signalé en mode Liste comme étant surexploité. Si l'état d'intégrité d'un des volumes de données est sous-exploité et qu'aucun volume n'est surexploité, l'état d'intégrité de l'espace de volume sera signalé en mode Liste comme étant sous-exploité. Sinon, l'état d'intégrité de l'espace de volume sera signalé en mode Liste comme étant correctement utilisé. Pour afficher ou modifier les limites de la stratégie, cliquez sur l'onglet **Utilisation du stockage**.  
   
 -   Type de stratégie : indique si des stratégies « Globales » par défaut ou des stratégies de « Substitution » personnalisées sont appliquées pour l'instance managée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
@@ -68,17 +68,17 @@ ms.locfileid: "62774341"
   
 -   Édition de SQL Server :  
   
--   Cluster : (True ou False)  
+-   Cluster : (True ou False)  
   
 -   Répertoire de sauvegarde :  
   
 -   Classement :  
   
--   En respectant la casse : (True ou False)  
+-   Respecter la casse : (True ou False)  
   
--   Langue :  
+-   Language :  
   
--   Dernière heure signalée : Cette colonne indique la date locales du processeur et l’heure à l’aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) dans la documentation en ligne de SQL Server. Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) dans la documentation en ligne de SQL Server.  
+-   Dernière heure signalée : cette colonne affiche l'heure et la date locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) dans la documentation en ligne de SQL Server. Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) dans la documentation en ligne de SQL Server.  
   
  Onglet Utilisation du processeur  
  L’onglet d’utilisation du processeur affiche côte à côte des graphiques de données d’historique pour l’instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et l’utilisation du processeur de l’ordinateur.  
@@ -142,7 +142,7 @@ ms.locfileid: "62774341"
   
  Si le fichier n'est pas configuré pour s'agrandir automatiquement, alors la capacité effective sera la quantité d'espace allouée au fichier. Si le fichier est configuré pour s'agrandir automatiquement, la capacité effective sera la somme de la quantité d'espace actuellement allouée au fichier et de la quantité d'espace libre actuellement disponible sur le volume.  
   
- Les stratégies d'utilisation du stockage peuvent être configurées pour les fichiers de données et pour les fichiers journaux. Pour afficher ou modifier les seuils de la stratégie d’utilisation du stockage pour les fichiers, cliquez sur le lien **Stratégie Fichiers** au bas du volet Utilisation du stockage. Pour afficher ou modifier les seuils de la stratégie d’utilisation du stockage pour un volume de stockage, cliquez sur le lien **Stratégie Volumes** au bas du volet Utilisation du stockage.  
+ Les stratégies d'utilisation du stockage peuvent être configurées pour les fichiers de données et pour les fichiers journaux. Pour afficher ou modifier les seuils de la stratégie d'utilisation du stockage pour les fichiers, cliquez sur le lien **Stratégie Fichiers** au bas du volet Utilisation du stockage. Pour afficher ou modifier les seuils de la stratégie d'utilisation du stockage pour un volume de stockage, cliquez sur le lien **Stratégie Volumes** au bas du volet Utilisation du stockage.  
   
  Pour remplacer les seuils de stratégie par défaut, cliquez sur la case d’option pour **Remplacer la stratégie par défaut**, spécifiez des valeurs pour les limites supérieures et inférieures, puis cliquez sur **OK**.  
   
@@ -165,19 +165,19 @@ ms.locfileid: "62774341"
   
 -   Édition de SQL Server :  
   
--   Cluster : (True ou False)  
+-   Cluster : (True ou False)  
   
 -   Répertoire de sauvegarde :  
   
 -   Classement :  
   
--   En respectant la casse : (True ou False)  
+-   Respecter la casse : (True ou False)  
   
--   Langue :  
+-   Language :  
   
 ## <a name="see-also"></a>Voir aussi  
  [Détails des applications de la couche Données déployées &#40;utilitaire SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
- [Tableau de bord utilitaire &#40;utilitaire SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
+ [Tableau de bord de l’utilitaire &#40;Utilitaire SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [Surveiller des instances de SQL Server dans l'utilitaire SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [Fonctionnalités et tâches de l'utilitaire SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Résolution des problèmes liés à l’utilitaire SQL Server](../../2014/database-engine/troubleshoot-the-sql-server-utility.md)  

@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 60aa1e7f4e671540d8ece08a24696a3a46998c82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832629"
 ---
 # <a name="control-flow"></a>Flux de contrôle
-  Un package est constitué d'un flux de contrôle et, éventuellement, d'un ou de plusieurs flux de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit trois types différents d’éléments de flux de contrôle : des conteneurs qui structurent les packages, des tâches qui fournissent des fonctionnalités et des contraintes de précédence qui connectent les exécutables, les conteneurs et les tâches pour former un flux de contrôle ordonné.  
+  Un package est constitué d'un flux de contrôle et, éventuellement, d'un ou de plusieurs flux de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit trois types différents d’éléments de workflow de contrôle : des conteneurs qui fournissent des structures dans des packages, des tâches qui fournissent des fonctionnalités et des contraintes de précédence qui connectent les exécutables, les conteneurs et les tâches dans un workflow de contrôle ordonné.  
   
  Pour plus d’informations, consultez [Contraintes de précédence](precedence-constraints.md), [Conteneurs Integration Services](integration-services-containers.md)et [Tâches Integration Services](integration-services-tasks.md).  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62832629"
   
  Le diagramme qui suit montre le flux de contrôle d'un package simple dans le concepteur de flux de contrôle. Le flux de contrôle représenté dans le diagramme est constitué de trois tâches de niveau package et d'un conteneur de niveau package contenant trois tâches. Les tâches et le conteneur sont connectés à l'aide de contraintes de précédence.  
   
- ![Capture d’écran du concepteur de flux de contrôle avec le package](../media/samplecontrolflow.gif "Capture d’écran du concepteur de flux de contrôle avec le package")  
+ ![Capture d'écran du concepteur de flux de contrôle avec le package](../media/samplecontrolflow.gif "Capture d'écran du concepteur de flux de contrôle avec le package")  
   
  La création d'un flux de contrôle comprend les tâches suivantes :  
   
@@ -47,7 +47,8 @@ ms.locfileid: "62832629"
   
 -   ajout des tâches qui prennent en charge les flux de données, préparent les données, réalisent les fonctions de flux de travail et de Business Intelligence et implémentent le script ;  
   
-     [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] propose différentes tâches que vous pouvez utiliser pour créer un flux de contrôle répondant aux besoins du package. Si le package doit utiliser des données, le flux de contrôle doit contenir au moins une tâche de flux de données. Par exemple, un package devra peut-être extraire des données, agréger des valeurs de données, puis écrire les résultats dans une source de données.  Pour plus d’informations, consultez [Tâches Integration Services](integration-services-tasks.md) et [Ajouter ou supprimer une tâche ou un conteneur dans un flux de contrôle](add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
+     
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] propose différentes tâches que vous pouvez utiliser pour créer un flux de contrôle répondant aux besoins du package. Si le package doit utiliser des données, le flux de contrôle doit contenir au moins une tâche de flux de données. Par exemple, un package devra peut-être extraire des données, agréger des valeurs de données, puis écrire les résultats dans une source de données.  Pour plus d’informations, consultez [Tâches Integration Services](integration-services-tasks.md) et [Ajouter ou supprimer une tâche ou un conteneur dans un flux de contrôle](add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
 -   connexion des conteneurs et des tâches à l'aide de contraintes de précédence pour former un flux de contrôle ordonné.  
   

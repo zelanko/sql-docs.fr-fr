@@ -1,5 +1,5 @@
 ---
-title: Classe ServerNetworkProtocol | Microsoft Docs
+title: ServerNetworkProtocol, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b40f40cea8e4f9c36b74ea87b22c5c2a6633e077
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62659941"
 ---
 # <a name="servernetworkprotocol-class"></a>Classe ServerNetworkProtocol
-  La [classe ServerNetworkProtocol] servernetworkprotocol-class.md) représente les protocoles réseau installés sur une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui permet la communication avec les clients sur un réseau.  
+  [ServerNetworkProtocol Class] ServerNetworkProtocol-Class.MD) représente les protocoles réseau installés sur une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui permet la communication avec les clients sur un réseau.  
   
- Avec le-class.md de servernetworkprotocol de [classe ServerNetworkProtocol]), vous pouvez :  
+ Avec [ServerNetworkProtocol Class] ServerNetworkProtocol-class.md), vous pouvez :  
   
 -   vérifier les nom, version, fichier .dll, nombre de propriétés et nom complet du protocole réseau serveur référencé ;  
   

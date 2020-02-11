@@ -1,5 +1,5 @@
 ---
-title: sys.plan_guides (Transact-SQL) | Microsoft Docs
+title: sys. plan_guides (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 19b78ff53b5640d74b49d2e5956c39aa1df2e230
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068070"
 ---
-# <a name="sysplanguides-transact-sql"></a>sys.plan_guides (Transact-SQL)
+# <a name="sysplan_guides-transact-sql"></a>sys.plan_guides (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Contient une ligne pour chaque repère de plan dans la base de données.  
@@ -35,17 +35,17 @@ ms.locfileid: "68068070"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**plan_guide_id**|**int**|Identificateur unique du repère de plan dans la base de données.|  
-|**name**|**sysname**|Nom du repère de plan.|  
-|**create_date**|**datetime**|Date et heure de création du repère de plan.|  
-|**modify_date**|**DateTime**|Date de la dernière modification du repère de plan.|  
+|**nomme**|**sysname**|Nom du repère de plan.|  
+|**create_date**|**DATETIME**|Date et heure de création du repère de plan.|  
+|**modify_date**|**Date/heure**|Date de la dernière modification du repère de plan.|  
 |**is_disabled**|**bit**|1 = Repère de plan désactivé.<br /><br /> 0 = Repère de plan activé.|  
 |**query_text**|**nvarchar(max)**|Texte de la requête utilisé pour créer le repère de plan.|  
 |**scope_type**|**tinyint**|Identifie l'étendue du repère de plan.<br /><br /> 1 = OBJECT<br /><br /> 2 = SQL<br /><br /> 3 = TEMPLATE|  
-|**scope_type_desc**|**nvarchar(60)**|Description de l'étendue du repère de plan.<br /><br /> OBJECT<br /><br /> SQL<br /><br /> TEMPLATE|  
-|**scope_object_id**|**Int**|object_id de l'objet définissant l'étendue du repère de plan, si celle-ci est OBJECT.<br /><br /> NULL si le repère de plan ne s'étend pas à OBJECT.|  
-|**scope_batch**|**nvarchar(max)**|Texte du traitement, si **scope_type** est SQL.<br /><br /> NULL si le type du traitement n'est pas SQL.<br /><br /> Si la valeur NULL et **scope_type** est SQL, la valeur de **query_text** s’applique.|  
-|**parameters**|**nvarchar(max)**|Chaîne définissant la liste des paramètres associés au repère de plan.<br /><br /> NULL = Aucune liste de paramètres n'est associée au repère de plan.|  
-|**hints**|**nvarchar(max)**|Indicateurs de la clause OPTION associés au repère de plan.|  
+|**scope_type_desc**|**nvarchar (60)**|Description de l'étendue du repère de plan.<br /><br /> OBJECT<br /><br /> SQL<br /><br /> TEMPLATE|  
+|**scope_object_id**|**Tiers**|object_id de l'objet définissant l'étendue du repère de plan, si celle-ci est OBJECT.<br /><br /> NULL si le repère de plan ne s'étend pas à OBJECT.|  
+|**scope_batch**|**nvarchar(max)**|Texte du lot, si **scope_type** est SQL.<br /><br /> NULL si le type du traitement n'est pas SQL.<br /><br /> Si NULL et **scope_type** est SQL, la valeur de **query_text** s’applique.|  
+|**paramètres**|**nvarchar(max)**|Chaîne définissant la liste des paramètres associés au repère de plan.<br /><br /> NULL = Aucune liste de paramètres n'est associée au repère de plan.|  
+|**indicateurs**|**nvarchar(max)**|Indicateurs de la clause OPTION associés au repère de plan.|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

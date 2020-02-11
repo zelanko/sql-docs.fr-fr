@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ff9340d7c9fb768f9e057d00868a9e238421a5f4
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798204"
 ---
 # <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
-  Cette rubrique explique comment définir des options de notification dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou de SQL Server Management Objects, de sorte que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent puisse envoyer des notifications aux opérateurs à propos des travaux.  
+  Cette rubrique explique comment définir des options de notification [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dans à [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]l' [!INCLUDE[tsql](../../includes/tsql-md.md)]aide de, ou SQL Server Management Objects [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , de sorte que agent puisse envoyer des notifications aux opérateurs à propos des travaux.  
   
  **Dans cette rubrique**  
   
@@ -33,7 +33,7 @@ ms.locfileid: "72798204"
   
      [Sécurité](#Security)  
   
--   **Pour notifier l'état d'un travail à un opérateur, utilisez :**  
+-   **Pour notifier l’état d’un travail à un opérateur, utilisez :**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "72798204"
   
 #### <a name="to-notify-an-operator-of-job-status"></a>Pour notifier l'état d'un travail à un opérateur  
   
-1.  Dans **l’Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
+1.  Dans l' [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **Explorateur d’objets,** Connectez-vous à une instance du, puis développez cette instance.  
   
 2.  Développez **Agent SQL Server**, puis **Travaux**, cliquez avec le bouton droit sur le travail à modifier et sélectionnez **Propriétés**.  
   
@@ -58,33 +58,33 @@ ms.locfileid: "72798204"
   
 4.  Pour avertir un opérateur par e-mail, cochez la case **Messagerie électronique**, sélectionnez un opérateur dans la liste, puis l’une des options suivantes :  
   
-    -   **Lors de la réussite du travail** pour avertir l'opérateur quand le travail s'est effectué avec succès ;  
+    -   **Lors de la réussite du travail** pour avertir l’opérateur quand le travail s’est terminé avec succès.  
   
-    -   **Lors de l'échec du travail** pour avertir l'opérateur quand le travail a échoué.  
+    -   **Lorsque le travail échoue** pour notifier l’opérateur quand le travail ne s’est pas terminé correctement.  
   
-    -   **Lorsque le travail est terminé** pour avertir l'opérateur, quel que soit l'état du travail à son achèvement.  
+    -   **Lorsque le travail est terminé** pour avertir l’opérateur, quel que soit l’état d’achèvement.  
   
 5.  Pour avertir un opérateur par radiomessagerie, activez la case à cocher **Radiomessagerie**, sélectionnez un opérateur dans la liste, puis l'une des options suivantes :  
   
-    -   **Lors de la réussite du travail** pour avertir l'opérateur quand le travail s'est effectué avec succès ;  
+    -   **Lors de la réussite du travail** pour avertir l’opérateur quand le travail s’est terminé avec succès.  
   
-    -   **Lors de l'échec du travail** pour avertir l'opérateur quand le travail a échoué.  
+    -   **Lorsque le travail échoue** pour notifier l’opérateur quand le travail ne s’est pas terminé correctement.  
   
-    -   **Lorsque le travail est terminé** pour avertir l'opérateur, quel que soit l'état du travail à son achèvement.  
+    -   **Lorsque le travail est terminé** pour avertir l’opérateur, quel que soit l’état d’achèvement.  
   
 6.  Pour avertir un opérateur par envoi réseau, activez la case à cocher **Envoi réseau**, sélectionnez un opérateur dans la liste, puis l'une des options suivantes :  
   
-    -   **Lors de la réussite du travail** pour avertir l'opérateur quand le travail s'est effectué avec succès ;  
+    -   **Lors de la réussite du travail** pour avertir l’opérateur quand le travail s’est terminé avec succès.  
   
-    -   **Lors de l'échec du travail** pour avertir l'opérateur quand le travail a échoué.  
+    -   **Lorsque le travail échoue** pour notifier l’opérateur quand le travail ne s’est pas terminé correctement.  
   
-    -   **Lorsque le travail est terminé** pour avertir l'opérateur, quel que soit l'état du travail à son achèvement.  
+    -   **Lorsque le travail est terminé** pour avertir l’opérateur, quel que soit l’état d’achèvement.  
   
 ##  <a name="TSQL"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-notify-an-operator-of-job-status"></a>Pour notifier l'état d'un travail à un opérateur  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -102,9 +102,9 @@ ms.locfileid: "72798204"
     GO  
     ```  
   
- Pour plus d’informations, [consultez &#40;SP_ADD_NOTIFICATION Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql).  
+ Pour plus d’informations, consultez [sp_add_notification &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql).  
   
 ##  <a name="SMO"></a>Utilisation de SQL Server Management Objects  
- **Pour notifier l'état d'un travail à un opérateur**  
+ **Pour notifier l’état d’un travail à un opérateur**  
   
- Utilisez la classe `Job` à l'aide d'un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
+ Utilisez la classe `Job` à l'aide d'un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell. Pour plus d'informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  

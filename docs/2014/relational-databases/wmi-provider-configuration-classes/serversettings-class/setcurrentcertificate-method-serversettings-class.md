@@ -1,5 +1,5 @@
 ---
-title: Setcurrentcertificate, méthode (classe ServerSettings) | Microsoft Docs
+title: Méthode SetCurrentCertificate (classe ServerSettings) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a485cc23a399496a4c86cc2eab0e8d26b360066e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62735884"
 ---
 # <a name="setcurrentcertificate-method-serversettings-class"></a>Méthode SetCurrentCertificate (classe ServerSettings)
@@ -40,8 +40,8 @@ SHA
 ```  
   
 ## <a name="parts"></a>Éléments  
- *object*  
- Un serversettings [classe ServerSettings]-class.md) objet qui représente le paramètre du serveur sur une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ *dessin*  
+ Objet [ServerSettings Class] ServerSettings-class.md) qui représente le paramètre du serveur sur une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 #### <a name="parameters"></a>Paramètres  
   

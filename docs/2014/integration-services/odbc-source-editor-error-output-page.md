@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Source ODBC (Page sortie d’erreur) | Microsoft Docs
+title: Éditeur de source ODBC (page sortie d’erreur) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b19a94e71eaef45184c1777ce299809b2b2d7f8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057129"
 ---
 # <a name="odbc-source-editor-error-output-page"></a>Éditeur de source ODBC (page Sortie d'erreur)
@@ -38,7 +38,7 @@ ms.locfileid: "66057129"
 ### <a name="inputoutput"></a>Entrée/sortie  
  Affichez le nom de la source de données.  
   
-### <a name="column"></a>colonne  
+### <a name="column"></a>Colonne  
  Non utilisé.  
   
 ### <a name="error"></a>Error  

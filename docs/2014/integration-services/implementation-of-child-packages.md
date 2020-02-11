@@ -1,5 +1,5 @@
 ---
-title: Implémentation de Packages enfants | Microsoft Docs
+title: Implémentation des packages enfants | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f9eb6860a40f6c47e65beb3fe109255d333d628
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058190"
 ---
 # <a name="implementation-of-child-packages"></a>Implémentation de packages enfants
@@ -41,7 +41,7 @@ ms.locfileid: "66058190"
   
 -   Exportation des packages à l'aide de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
--   Déploiement de packages en créant un utilitaire de déploiement pour le projet qui contient les packages que vous voulez déployer, puis en exécutant l'Assistant Installation de package pour installer les packages sur le système de fichiers ou sur une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [déploiement de Package &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
+-   Déploiement de packages en créant un utilitaire de déploiement pour le projet qui contient les packages que vous voulez déployer, puis en exécutant l'Assistant Installation de package pour installer les packages sur le système de fichiers ou sur une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [déploiement de packages &#40;&#41;SSIS ](packages/legacy-package-deployment-ssis.md).  
   
  Vous devez recommencer le déploiement sur chaque serveur distant à utiliser.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66058190"
 ## <a name="debugging-the-sql-server-agent-jobs-and-child-packages"></a>Débogage des travaux de SQL Server Agent et des packages enfants.  
  Vous pouvez tester les travaux de SQL Server Agent et leurs packages enfants à l'aide de l'une des méthodes suivantes :  
   
--   Exécution de chaque package enfant dans le concepteur SSIS, en cliquant sur **Déboguer** / **Exécuter sans débogage**.  
+-   Exécution de chaque package enfant dans le concepteur SSIS, en cliquant sur **Déboguer** / **exécuter sans débogage**.  
   
 -   Exécution du travail individuel de SQL Server Agent sur l’ordinateur distant à l’aide de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], pour vérifier que le package fonctionne.  
   
@@ -67,8 +67,8 @@ ms.locfileid: "66058190"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Entrée de blog, [SSIS : L’accès aux variables dans un package parent](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), sur andyleonard.blog.  
+-   Entrée de blog, [SSIS : accès aux variables dans un package parent](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), sur andyleonard. blog.  
   
--   Article, [tâche Exécuter Package](../integration-services/control-flow/execute-package-task.md).  
+-   Article, [tâche d’exécution de package](../integration-services/control-flow/execute-package-task.md).  
   
   

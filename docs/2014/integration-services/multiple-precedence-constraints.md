@@ -1,5 +1,5 @@
 ---
-title: Plusieurs contraintes de précédence | Microsoft Docs
+title: Contraintes de précédence multiples | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c0b75b96f30d2fe7f104e8f59aa03d7de6202e6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057411"
 ---
 # <a name="multiple-precedence-constraints"></a>Contraintes de précédence multiples
@@ -32,9 +32,9 @@ ms.locfileid: "66057411"
 ## <a name="logicaland-property"></a>Propriété LogicalAnd  
  Si une tâche ou un conteneur comporte plusieurs contraintes, la propriété `LogicalAnd` indique si une contrainte de précédence est évaluée seule ou de concert avec les autres contraintes.  
   
- Vous pouvez définir le `LogicalAnd` à l’aide de la propriété le **éditeur de contrainte de précédence** dans [!INCLUDE[ssIS](../includes/ssis-md.md)] concepteur, ou dans la fenêtre de propriétés qui [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] fournit.  
+ Vous pouvez définir la `LogicalAnd` propriété à l’aide de l **'éditeur de contrainte de précédence** dans [!INCLUDE[ssIS](../includes/ssis-md.md)] le [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] concepteur ou dans le fenêtre Propriétés qui fournit.  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Définir les propriétés d’une contrainte de précédence](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)  
+ [Définir les propriétés d'une contrainte de précédence](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)  
   
   

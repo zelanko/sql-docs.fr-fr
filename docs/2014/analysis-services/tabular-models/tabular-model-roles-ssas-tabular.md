@@ -1,5 +1,5 @@
 ---
-title: Rôles de modèles tabulaires (SSAS tabulaire) | Microsoft Docs
+title: Rôles de modèle tabulaire (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 433dc3dcde3a0cee2652baa5f1a59997ec7bf55b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066450"
 ---
 # <a name="tabular-model-roles-ssas-tabular"></a>Rôles de modèles tabulaires (SSAS Tabulaire)
@@ -26,6 +26,6 @@ ms.locfileid: "66066450"
   
 |Tâche|Description|  
 |----------|-----------------|  
-|[Gérer les rôles à l’aide de SSMS &#40;SSAS Tabulaire&#41;](manage-roles-by-using-ssms-ssas-tabular.md)|Décrit comment créer des rôles, ajouter et supprimer les membres d'un rôle, modifier des autorisations pour un rôle et ajouter, modifier ou supprimer les filtres au niveau des lignes avec DAX.|  
+|[Gérer les rôles à l’aide de SSMS &#40;la&#41;tabulaire SSAS](manage-roles-by-using-ssms-ssas-tabular.md)|Décrit comment créer des rôles, ajouter et supprimer les membres d'un rôle, modifier des autorisations pour un rôle et ajouter, modifier ou supprimer les filtres au niveau des lignes avec DAX.|  
   
   

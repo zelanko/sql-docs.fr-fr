@@ -1,5 +1,5 @@
 ---
-title: "Une erreur s'est produite lors de la tentative de connexion à la source de données externe. Les connexions suivantes n'ont pas pu s'actualiser : Les données PowerPivot | Microsoft Docs"
+title: "Une erreur s'est produite lors de la tentative de connexion à la source de données externe. Échec de l’actualisation des connexions suivantes : données PowerPivot | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c09c8984e964b4bdfa93b0fcebae2e613d484892
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071951"
 ---
-# <a name="an-error-occurred-during-an-attempt-to-establish-a-connection-to-the-external-data-source-the-following-connections-failed-to-refresh-powerpivot-data"></a>Une erreur s'est produite lors de la tentative de connexion à la source de données externe. Les connexions suivantes n'ont pas pu s'actualiser : données PowerPivot
+# <a name="an-error-occurred-during-an-attempt-to-establish-a-connection-to-the-external-data-source-the-following-connections-failed-to-refresh-powerpivot-data"></a>Une erreur s'est produite lors de la tentative de connexion à la source de données externe. Échec de l'actualisation des connexions suivantes : Données PowerPivot
   Cette erreur se produit si vous interrogez des données PowerPivot sur un serveur sur lequel PowerPivot pour SharePoint n'est pas installé. Se produit également si le service SQL Server Analysis Services (PowerPivot) est arrêté, ou si vous essayez d'afficher des données PowerPivot d'une version antérieure.  
   
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
-|S'applique à|PowerPivot pour SharePoint|  
+|S’applique à|PowerPivot pour SharePoint|  
 |Version du produit|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
-|Cause|La connexion de données a échoué.|  
-|Texte du message|Une erreur s'est produite lors de la tentative de connexion à la source de données externe. Les connexions suivantes n'ont pas pu s'actualiser : données PowerPivot|  
+|Cause :|La connexion de données a échoué.|  
+|Texte du message|Une erreur s'est produite lors de la tentative de connexion à la source de données externe. Échec de l'actualisation des connexions suivantes : Données PowerPivot|  
   
 ## <a name="explanation"></a>Explication  
  Excel Services retourne cette erreur lorsque vous interrogez des données PowerPivot dans un classeur Excel qui est publié dans SharePoint et que l'environnement SharePoint ne dispose pas d'un serveur PowerPivot pour SharePoint, ou si le service SQL Server Analysis Services (PowerPivot) est arrêté.  
@@ -42,6 +42,6 @@ ms.locfileid: "66071951"
  Pour les classeurs PowerPivot créés dans une version SQL Server 2008 R2 PowerPivot pour Excel, vous devez installer la version SQL Server 2008 R2 du fournisseur OLE DB Analysis Services. Cette erreur se produira si vous avez installé le fournisseur, mais n'avez pas enregistré le fichier Microsoft.AnalysisServices.ChannelTransport.dll. Pour plus d’informations sur l’enregistrement du fichier, consultez [Installer le fournisseur OLE DB Analysis Services sur les serveurs SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [La connexion de données utilise l’authentification Windows, et les informations d’identification utilisateur n’ont pas pu être déléguées. Les connexions suivantes n'ont pas pu s'actualiser : Données PowerPivot](the-data-connection-user-could-not-be-delegated.md)  
+ [La connexion de données utilise l’authentification Windows et les informations d’identification de l’utilisateur n’ont pas pu être déléguées. Échec de l’actualisation des connexions suivantes : données PowerPivot](the-data-connection-user-could-not-be-delegated.md)  
   
   

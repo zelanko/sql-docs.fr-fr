@@ -22,14 +22,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666934"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Afficher l'état des publications et des abonnements dans le Moniteur de réplication
-  Le moniteur de réplication[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] présente des informations sur l'état des publications et des abonnements :  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Le moniteur de réplication affiche des informations d’État pour les publications et les abonnements :  
   
 -   L'état d'une publication est déterminé par l'état de la priorité la plus élevée de ses abonnements. Par exemple, si un abonnement à une publication comporte une erreur et qu'un autre présente un problème de performances, un état d'erreur est affiché pour la publication.  
   
@@ -51,20 +51,20 @@ ms.locfileid: "62666934"
   
  Outre l'état des publications et des abonnements, la réplication de fusion fournit des statistiques au niveau de l'article qui donnent des informations détaillées sur : la durée d'achèvement d'une phase de fusion, le temps passé pour traiter un article donné, le type de connexion utilisé par un Abonné et bien d'autres informations encore. Les statistiques sont affichées dans la fenêtre de l'Agent de fusion dans le moniteur de réplication. La réplication d'instantané et la réplication transactionnelle fournissent des informations détaillées sur le traitement de l'Agent de distribution.  
   
- **Pour afficher l'état des publications et des abonnements**  
+ **Pour afficher l’état de la publication et de l’abonnement**  
   
--   Moniteur de réplication : [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).
+-   Moniteur de réplication : [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).
   
   
 ## <a name="publication-status-values"></a>Valeurs d'état des publications  
  Le tableau suivant montre les valeurs d'état des publications et leurs icônes correspondantes dans l'ordre de la priorité.  
   
-|État|Icône|  
+|Statut|Icône|  
 |------------|----------|  
-|Error|![Icône d’interface utilisateur : erreur](../media/repl-icon-error.gif "Icône d’interface utilisateur : erreur")|  
-|Critique pour les performances|![Icône d’interface utilisateur : avertissement](../media/repl-icon-warn.gif "Icône d’interface utilisateur : avertissement")|  
-|Nouvelle tentative de la commande qui a échoué|![Icône d’interface utilisateur : nouvelle tentative de l’agent de réplication](../media/repl-icon-retry.gif "Icône d’interface utilisateur : nouvelle tentative de l’agent de réplication")|  
-|OK|none|  
+|Error|![Icône d'IU : erreur](../media/repl-icon-error.gif "Icône d'IU : erreur")|  
+|Critique pour les performances|![Icône d'IU : avertissement](../media/repl-icon-warn.gif "Icône d'IU : avertissement")|  
+|Nouvelle tentative de la commande qui a échoué|![Icône d'interface utilisateur : nouvelle tentative de l'agent de réplication](../media/repl-icon-retry.gif "Icône d'interface utilisateur : nouvelle tentative de l'agent de réplication")|  
+|OK|Aucun|  
   
 ## <a name="subscription-status-values"></a>Valeurs d'état des abonnements  
  Les tableaux suivants montrent les valeurs d'état des abonnements et leurs icônes correspondantes dans l'ordre de la priorité. Un abonnement peut avoir deux états en même temps (par exemple, **Expire bientôt/Expiré** et **Nouvelle tentative de la commande qui a échoué**) ; l'état de haute priorité est affiché.  
@@ -73,39 +73,39 @@ ms.locfileid: "62666934"
   
 ### <a name="transactional-subscriptions"></a>Abonnements transactionnels  
   
-|État|Icône|  
+|Statut|Icône|  
 |------------|----------|  
-|Error|![Icône d’interface utilisateur : erreur](../media/repl-icon-error.gif "Icône d’interface utilisateur : erreur")|  
-|Critique pour les performances|![Icône d’interface utilisateur : avertissement](../media/repl-icon-warn.gif "Icône d’interface utilisateur : avertissement")|  
-|Expire bientôt/Expiré|![Icône d’interface utilisateur : avertissement](../media/repl-icon-warn.gif "Icône d’interface utilisateur : avertissement")|  
-|Abonnement non initialisé|![Icône d’interface utilisateur : avertissement](../media/repl-icon-warn.gif "Icône d’interface utilisateur : avertissement")|  
-|Nouvelle tentative de la commande qui a échoué|![Icône d’interface utilisateur : nouvelle tentative de l’agent de réplication](../media/repl-icon-retry.gif "Icône d’interface utilisateur : nouvelle tentative de l’agent de réplication")|  
-|Non exécuté|![Icône d’interface utilisateur : agent de réplication arrêté](../media/repl-icon-stopped.gif "Icône d’interface utilisateur : agent de réplication arrêté")|  
-|Exécution en cours|![Icône d’interface utilisateur : agent de réplication en cours d’exécution](../media/repl-icon-running.gif "Icône d’interface utilisateur : agent de réplication en cours d’exécution")|  
+|Error|![Icône d'IU : erreur](../media/repl-icon-error.gif "Icône d’IU : erreur")|  
+|Critique pour les performances|![Icône d'IU : avertissement](../media/repl-icon-warn.gif "Icône d’IU : avertissement")|  
+|Expire bientôt/Expiré|![Icône d'IU : avertissement](../media/repl-icon-warn.gif "Icône d'IU : avertissement")|  
+|Abonnement non initialisé|![Icône d'IU : avertissement](../media/repl-icon-warn.gif "Icône d'IU : avertissement")|  
+|Nouvelle tentative de la commande qui a échoué|![Icône d'interface utilisateur : nouvelle tentative de l'agent de réplication](../media/repl-icon-retry.gif "Icône d'interface utilisateur : nouvelle tentative de l'agent de réplication")|  
+|Non exécuté|![Icône d'interface utilisateur : agent de réplication arrêté](../media/repl-icon-stopped.gif "Icône d'interface utilisateur : agent de réplication arrêté")|  
+|Exécution en cours|![Icône d'interface utilisateur : agent de réplication en cours d'exécution](../media/repl-icon-running.gif "Icône d'interface utilisateur : agent de réplication en cours d'exécution")|  
   
 ### <a name="merge-subscriptions"></a>Abonnements de fusion  
   
-|État|Icône|  
+|Statut|Icône|  
 |------------|----------|  
-|Error|![Icône d’interface utilisateur : erreur](../media/repl-icon-error.gif "Icône d’interface utilisateur : erreur")|  
-|Critique pour les performances|![Icône d’interface utilisateur : avertissement](../media/repl-icon-warn.gif "Icône d’interface utilisateur : avertissement")|  
-|Fusion longue|![Icône d’interface utilisateur : avertissement](../media/repl-icon-warn.gif "Icône d’interface utilisateur : avertissement")|  
-|Expire bientôt/Expiré|![Icône d’interface utilisateur : avertissement](../media/repl-icon-warn.gif "Icône d’interface utilisateur : avertissement")|  
-|Abonnement non initialisé|![Icône d’interface utilisateur : avertissement](../media/repl-icon-warn.gif "Icône d’interface utilisateur : avertissement")|  
-|Nouvelle tentative de la commande qui a échoué|![Icône d’interface utilisateur : nouvelle tentative de l’agent de réplication](../media/repl-icon-retry.gif "Icône d’interface utilisateur : nouvelle tentative de l’agent de réplication")|  
-|Synchronisation|![Icône d’interface utilisateur : agent de réplication en cours d’exécution](../media/repl-icon-running.gif "Icône d’interface utilisateur : agent de réplication en cours d’exécution")|  
-|Sans synchronisation|![Icône d’interface utilisateur : agent de réplication arrêté](../media/repl-icon-stopped.gif "Icône d’interface utilisateur : agent de réplication arrêté")|  
+|Error|![Icône d'IU : erreur](../media/repl-icon-error.gif "Icône d'IU : erreur")|  
+|Critique pour les performances|![Icône d'IU : avertissement](../media/repl-icon-warn.gif "Icône d'IU : avertissement")|  
+|Fusion longue|![Icône d'IU : avertissement](../media/repl-icon-warn.gif "Icône d'IU : avertissement")|  
+|Expire bientôt/Expiré|![Icône d'IU : avertissement](../media/repl-icon-warn.gif "Icône d'IU : avertissement")|  
+|Abonnement non initialisé|![Icône d'IU : avertissement](../media/repl-icon-warn.gif "Icône d’IU : avertissement")|  
+|Nouvelle tentative de la commande qui a échoué|![Icône d'interface utilisateur : nouvelle tentative de l'agent de réplication](../media/repl-icon-retry.gif "Icône d'interface utilisateur : nouvelle tentative de l'agent de réplication")|  
+|Synchronisation|![Icône d'interface utilisateur : agent de réplication en cours d'exécution](../media/repl-icon-running.gif "Icône d'interface utilisateur : agent de réplication en cours d'exécution")|  
+|Sans synchronisation|![Icône d'interface utilisateur : agent de réplication arrêté](../media/repl-icon-stopped.gif "Icône d'interface utilisateur : agent de réplication arrêté")|  
   
 ### <a name="snapshot-subscriptions"></a>Abonnements d'instantanés  
   
-|État|Icône|  
+|Statut|Icône|  
 |------------|----------|  
-|Error|![Icône d’interface utilisateur : erreur](../media/repl-icon-error.gif "Icône d’interface utilisateur : erreur")|  
-|Expire bientôt/Expiré|![Icône d’interface utilisateur : avertissement](../media/repl-icon-warn.gif "Icône d’interface utilisateur : avertissement")|  
-|Abonnement non initialisé|![Icône d’interface utilisateur : avertissement](../media/repl-icon-warn.gif "Icône d’interface utilisateur : avertissement")|  
-|Nouvelle tentative de la commande qui a échoué|![Icône d’interface utilisateur : nouvelle tentative de l’agent de réplication](../media/repl-icon-retry.gif "Icône d’interface utilisateur : nouvelle tentative de l’agent de réplication")|  
-|Synchronisation|![Icône d’interface utilisateur : agent de réplication en cours d’exécution](../media/repl-icon-running.gif "Icône d’interface utilisateur : agent de réplication en cours d’exécution")|  
-|Sans synchronisation|![Icône d’interface utilisateur : agent de réplication arrêté](../media/repl-icon-stopped.gif "Icône d’interface utilisateur : agent de réplication arrêté")|  
+|Error|![Icône d'IU : erreur](../media/repl-icon-error.gif "Icône d'IU : erreur")|  
+|Expire bientôt/Expiré|![Icône d'IU : avertissement](../media/repl-icon-warn.gif "Icône d'IU : avertissement")|  
+|Abonnement non initialisé|![Icône d'IU : avertissement](../media/repl-icon-warn.gif "Icône d'IU : avertissement")|  
+|Nouvelle tentative de la commande qui a échoué|![Icône d'interface utilisateur : nouvelle tentative de l'agent de réplication](../media/repl-icon-retry.gif "Icône d'interface utilisateur : nouvelle tentative de l'agent de réplication")|  
+|Synchronisation|![Icône d'interface utilisateur : agent de réplication en cours d'exécution](../media/repl-icon-running.gif "Icône d'interface utilisateur : agent de réplication en cours d'exécution")|  
+|Sans synchronisation|![Icône d'interface utilisateur : agent de réplication arrêté](../media/repl-icon-stopped.gif "Icône d'interface utilisateur : agent de réplication arrêté")|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Surveillance de la réplication](../monitoring-replication.md)  

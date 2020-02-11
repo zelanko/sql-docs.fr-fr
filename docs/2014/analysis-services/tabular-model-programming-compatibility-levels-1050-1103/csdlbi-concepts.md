@@ -1,5 +1,5 @@
 ---
-title: Concepts CSDLBI | Microsoft Docs
+title: Concepts de CSDLBI | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7bf73822e8872397499bdfbc04bab6747035fbec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757949"
 ---
 # <a name="csdlbi-concepts"></a>Concepts CSDLBI
@@ -22,14 +22,15 @@ ms.locfileid: "62757949"
   
  Cette section explique comment la représentation CSDLBI mappe aux modèles de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (tabulaires ou multidimensionnels), et fournit des exemples de chaque type de modèle.  
   
- Les exemples utilisés pour illustrer ces concepts proviennent de l'exemple de base de données AdventureWorks, disponible sur Codeplex. Pour plus d’informations sur les exemples, consultez [exemples Adventure Works pour SQL Server](https://go.microsoft.com/fwlink/?linkID=220093).  
+ Les exemples utilisés pour illustrer ces concepts proviennent de l'exemple de base de données AdventureWorks, disponible sur Codeplex. Pour plus d’informations sur les exemples, consultez [Adventure Works samples pour SQL Server](https://go.microsoft.com/fwlink/?linkID=220093).  
   
 ## <a name="structure-of-a-tabular-model-in-csdlbi"></a>Structure d'un modèle tabulaire en CSDLBI  
  Document CSDLBI qui décrit un modèle de rapport. Ses données commencent par l'instruction XSD, suivie de la définition d'un modèle.  
   
  Le modèle est un espace de noms qui contient les entités, les associations et les propriétés principales suivantes :  
   
--   `EntityContainer` répertorie les tables contenues dans le modèle.  
+-   
+  `EntityContainer` répertorie les tables contenues dans le modèle.  
   
 -   Chaque table apparaît avec `EntityContainer` comme `EntitySet`.  
   
@@ -83,11 +84,11 @@ ms.locfileid: "62757949"
  Pour limiter la taille du document CSDLBI généré, les propriétés qui apparaissent plus d'une fois dans une entité sont spécifiées par une référence à une propriété existante, afin que la propriété soit répertoriée une seule fois pour l'`EntityType`. L'application cliente peut obtenir la valeur de la propriété en recherchant l'`EntityType` qui représente l'`OriginEntityType`.  
   
 ### <a name="relationships"></a>Relations  
- Dans l’Entity Data Framework, les relations sont définies comme *associations* entre des entités.  
+ Dans Entity Data Framework, les relations sont définies en tant qu' *associations* entre des entités.  
   
- Les associations ont toujours exactement deux terminaisons, chacune pointant sur un champ ou colonne dans une table. Par conséquent, plusieurs relations sont possibles entre deux tables, si les relations ont des points de terminaison différents. Un rôle de nom est affecté aux points de terminaison de l'association, et indique comment l'association est utilisée dans le contexte du modèle de données. Un exemple de nom de rôle peut être **ShipTo**, lorsqu’il est appliqué à un ID de client qui est lié à l’ID de client dans une table de commandes.  
+ Les associations ont toujours exactement deux terminaisons, chacune pointant sur un champ ou colonne dans une table. Par conséquent, plusieurs relations sont possibles entre deux tables, si les relations ont des points de terminaison différents. Un rôle de nom est affecté aux points de terminaison de l'association, et indique comment l'association est utilisée dans le contexte du modèle de données. Un exemple de nom de rôle peut être **ShipTo**, lorsqu’il est appliqué à un ID de client associé à l’ID de client dans une table Orders.  
   
- La représentation CSDLBI du modèle contient également les attributs de l’association qui déterminent la façon dont les entités sont mappées entre eux en termes de la *multiplicité* de l’association. La pluralité indique si l'attribut ou la colonne au point de terminaison d'une relation entre des tables se trouve du côté « un » d'une relation ou du côté « plusieurs ». Il n'y a aucune valeur distincte pour les relations un-à-un. Les annotations CSDLBI prennent en charge la pluralité 0 (ce qui signifie que l'entité n'est associée à aucun élément) ou bien 0..1, ce qui indique soit une relation un-à-un, soit une relation un-à-plusieurs.  
+ La représentation CSDLBI du modèle contient également des attributs sur l’Association qui déterminent la façon dont les entités sont mappées entre elles en termes de *multiplicité* de l’Association. La pluralité indique si l'attribut ou la colonne au point de terminaison d'une relation entre des tables se trouve du côté « un » d'une relation ou du côté « plusieurs ». Il n'y a aucune valeur distincte pour les relations un-à-un. Les annotations CSDLBI prennent en charge la pluralité 0 (ce qui signifie que l'entité n'est associée à aucun élément) ou bien 0..1, ce qui indique soit une relation un-à-un, soit une relation un-à-plusieurs.  
   
  L'exemple suivant représente la sortie CSDLBI d'une relation entre les tables, Date et ProductInventory, où les deux tables sont jointes sur la colonne DateAlternateKey. Notez que, par défaut, le nom de l'`AssociationSet` est le nom complet des colonnes impliquées dans la relation. Toutefois, vous pouvez modifier ce comportement lorsque vous concevez le modèle et utiliser un format de nom différent.  
   
@@ -123,27 +124,27 @@ ms.locfileid: "62757949"
 ## <a name="additions-to-support-multidimensional-models"></a>Ajouts pour prendre en charge les modèles multidimensionnels  
  La version 1.0 des annotations CSDLBI prenait uniquement en charge les modèles tabulaires. Dans la version 1.1., la prise en charge a été ajoutée pour les modèles multidimensionnels (cubes OLAP) créés à l'aide des outils de développement Business Intelligence traditionnels. Par conséquent, vous pouvez maintenant émettre une demande XML dans un modèle multidimensionnel et recevoir une définition CSDLBI du modèle, à utiliser lors de la création de rapports.  
   
- **Cubes :** Un serveur SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données tabulaire peut contenir qu’un seul mode. En revanche, chaque base de données multidimensionnelle peut contenir plusieurs cubes, chaque base de données étant associée à un cube par défaut. Par conséquent, lorsque vous exécutez une requête XML sur un serveur multidimensionnel, vous devez spécifier le cube ; sinon, le code XML du cube par défaut est retourné.  
+ **Cubes :** Une base [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de données tabulaire SQL Server ne peut contenir qu’un seul mode. En revanche, chaque base de données multidimensionnelle peut contenir plusieurs cubes, chaque base de données étant associée à un cube par défaut. Par conséquent, lorsque vous exécutez une requête XML sur un serveur multidimensionnel, vous devez spécifier le cube ; sinon, le code XML du cube par défaut est retourné.  
   
  La représentation d'un cube est similaire à celle d'une base de données model tabulaire. Le nom du cube et le cube correspondent au nom de la base de données tabulaire et à l'identificateur de la base de données.  
   
- **Dimensions :** Une dimension est représentée en CSDLBI en tant qu’entité (table) avec des colonnes et des propriétés. Notez que, même si elle n'est pas incluse dans une perspective, une dimension qui est incluse dans le modèle est représentée dans la sortie CSDL, marquée comme étant `Hidden`.  
+ **Dimensions :** Une dimension est représentée dans CSDLBI sous la forme d’une entité (table) avec des colonnes et des propriétés. Notez que, même si elle n'est pas incluse dans une perspective, une dimension qui est incluse dans le modèle est représentée dans la sortie CSDL, marquée comme étant `Hidden`.  
   
- **Perspectives :** Un client peut demander CSDL pour des perspectives individuelles. Pour plus d’informations, consultez [ensemble de lignes DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
+ **Perspectives :** Un client peut demander le langage CSDL pour des perspectives individuelles. Pour plus d’informations, consultez [DISCOVER_CSDL_METADATA rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
   
- **Hiérarchies :** Hiérarchies sont pris en charge et représentées en CSDLBI en tant qu’ensemble de niveaux.  
+ **Hiérarchies :** Les hiérarchies sont prises en charge et représentées dans CSDLBI sous la forme d’un ensemble de niveaux.  
   
- **Membres :** Prise en charge pour le membre par défaut a été ajoutée et les valeurs par défaut sont automatiquement ajoutées à la sortie CSDLBI.  
+ **Membres :** La prise en charge du membre par défaut a été ajoutée et les valeurs par défaut sont automatiquement ajoutées à la sortie CSDLBI.  
   
- **Membres calculés :** Les modèles multidimensionnels prennent en charge les membres calculés pour l’enfant de **tous les** avec un membre réel unique.  
+ **Membres calculés :** Les modèles multidimensionnels prennent en charge les membres calculés pour l’enfant de **tous les** éléments avec un seul membre réel.  
   
- **Attributs de dimension :** Dans la sortie CSDLBI, les attributs de dimension sont pris en charge et automatiquement marquées comme non regroupable.  
+ **Attributs de la dimension :** Dans la sortie CSDLBI, les attributs de dimension sont pris en charge et automatiquement marqués comme ne pouvant pas être regroupés.  
   
- **Indicateurs de performance clés :** Indicateurs de performance clés étaient pris en charge en CSDLBI version 1.1, mais la représentation a changé. Avant, un indicateur de performance clé était la propriété d'une mesure. Dans la version 1.1, l’élément KPI peut être ajouté à une mesure  
+ **Indicateurs de performance clés :** Les KPI étaient pris en charge dans CSDLBI version 1,1, mais la représentation a changé. Avant, un indicateur de performance clé était la propriété d'une mesure. Dans la version 1,1, l’élément KPI peut être ajouté à une mesure  
   
- **Nouvelles propriétés :** Les attributs supplémentaires ont été ajoutés pour prendre en charge les modèles DirectQuery.  
+ **Nouvelles propriétés :** Des attributs supplémentaires ont été ajoutés pour prendre en charge les modèles DirectQuery.  
   
- **Limitations :** Sécurité de cellule n’est pas prise en charge.  
+ **Limitations :** La sécurité de cellule n’est pas prise en charge.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Annotations CSDL pour Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  

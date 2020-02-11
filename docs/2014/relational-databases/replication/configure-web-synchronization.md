@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721651"
 ---
 # <a name="configure-web-synchronization"></a>Configurer la synchronisation Web
@@ -101,7 +101,8 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
  Si vous utilisez un serveur de publication pour la première fois, vous devez également configurer un serveur de distribution et un partage de fichiers d'instantanés. L'Agent de fusion de chaque Abonné doit disposer d'autorisations de lecture sur le partage d'instantanés. Pour plus d’informations, consultez [Configurer la distribution](configure-distribution.md) et [Sécuriser le dossier d’instantanés](security/secure-the-snapshot-folder.md).  
   
- `gen` est un mot réservé dans les fichiers XML de websync. Ne pas tentez de publier des tables contenant des colonnes nommées `gen`.  
+ 
+  `gen` est un mot réservé dans les fichiers XML de websync. Ne pas tentez de publier des tables contenant des colonnes nommées `gen`.  
   
 ## <a name="configuring-the-subscription"></a>Configuration de l'abonnement  
  Après avoir activé une publication et configuré IIS, créez un abonnement par extraction et spécifiez que cet abonnement doit être synchronisé à l'aide d'IIS. (La synchronisation Web est prise en charge uniquement pour les abonnements par extraction de données.)  
@@ -124,7 +125,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
 -   Si vous répliquez d'importants volumes de données, vous pouvez être amené à ajuster la taille de lot de l'Agent de fusion.  
   
- La taille de lot pour la réplication de fusion est mesurée en *générations*, lesquelles sont des collections de modifications par article. Le nombre de générations dans un lot est spécifié à l’aide de la -`DownloadGenerationsPerBatch` et -`UploadGenerationsPerBatch` paramètres de l’Agent de fusion. Pour plus d’informations, voir [Replication Merge Agent](agents/replication-merge-agent.md).  
+ La taille de lot pour la réplication de fusion est mesurée en *générations*, lesquelles sont des collections de modifications par article. Le nombre de générations dans un lot est spécifié à l’aide des`DownloadGenerationsPerBatch` paramètres-`UploadGenerationsPerBatch` et-de la agent de fusion. Pour plus d’informations, voir [Replication Merge Agent](agents/replication-merge-agent.md).  
   
  Pour d'importants volumes de données, spécifiez un petit nombre pour chaque paramètre de traitement par lot. Nous vous recommandons de commencer avec une valeur de 10, puis d'ajuster cette valeur selon les besoins et les performances des applications. En général, ces paramètres sont spécifiés dans un profil d'agent. Pour plus d'informations sur ces profils, consultez [Replication Agent Profiles](agents/replication-agent-profiles.md).  
   
@@ -144,7 +145,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
      Pour plus d'informations sur les autorisations requises par les agents, consultez [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
--   Spécifiez le même compte de domaine que celui utilisé par l'Agent de fusion lorsque vous indiquez un compte et un mot de passe dans la page **Informations sur le serveur Web** de l'Assistant Nouvel abonnement ou lorsque vous indiquez des valeurs pour les paramètres **@internet_url** et **@internet_login** de [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Ce compte doit disposer d'autorisations en lecture pour le partage des instantanés.  
+-   Spécifiez le même compte de domaine que celui utilisé par le Agent de fusion lorsque vous spécifiez un compte et un mot de passe dans la page informations sur le **serveur Web** de l’Assistant nouvel **@internet_url** abonnement **@internet_login** ou lorsque vous spécifiez des valeurs pour les paramètres et de [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Ce compte doit disposer d'autorisations en lecture pour le partage des instantanés.  
   
 -   Chaque publication doit utiliser un répertoire virtuel distinct pour IIS.  
   

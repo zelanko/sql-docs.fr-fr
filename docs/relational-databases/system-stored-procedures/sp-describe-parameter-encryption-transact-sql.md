@@ -19,16 +19,16 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c4a4cfe5c86d39766bcd322b879172b00b33eb68
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73593704"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Analyse l’instruction de [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifiée et ses paramètres, afin de déterminer quels paramètres correspondent aux colonnes de base de données qui sont protégées à l’aide de la fonctionnalité de Always Encrypted. Retourne les métadonnées de chiffrement pour les paramètres qui correspondent aux colonnes chiffrées.  
+  Analyse l’instruction spécifiée [!INCLUDE[tsql](../../includes/tsql-md.md)] et ses paramètres pour déterminer les paramètres qui correspondent aux colonnes de base de données qui sont protégées à l’aide de la fonctionnalité Always Encrypted. Retourne les métadonnées de chiffrement pour les paramètres qui correspondent aux colonnes chiffrées.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,21 +40,21 @@ sp_describe_parameter_encryption
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [\@TSQL =] 'Transact-SQL_batch'  
+ [ \@TSQL =] 'Transact-SQL_batch'  
  Une ou plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] Transact-SQL_batch peut être de type nvarchar (n) ou nvarchar (max).  
   
- [\@params =] N'parameters'  
- *\@params* fournit une chaîne de déclaration pour les paramètres du lot Transact-SQL, qui est similaire à sp_executesql. Les paramètres peuvent être de type nvarchar (n) ou nvarchar (max).  
+ [ \@params =] N'parameters'  
+ params fournit une chaîne de déclaration pour les paramètres du lot Transact-SQL, qui est similaire à sp_executesql. * \@* Les paramètres peuvent être de type nvarchar (n) ou nvarchar (max).  
   
- Est une chaîne qui contient les définitions de tous les paramètres qui ont été incorporés dans le _batch [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cette chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. *n* est un espace réservé qui indique des définitions de paramètres supplémentaires. Chaque paramètre spécifié dans l’instruction doit être défini dans *\@params*. Si l’instruction ou le lot [!INCLUDE[tsql](../../includes/tsql-md.md)] dans l’instruction ne contient pas de paramètres, *\@* paramètres n’est pas requis. NULL est la valeur par défaut de ce paramètre.  
+ Est une chaîne qui contient les définitions de tous les paramètres qui ont été incorporés [!INCLUDE[tsql](../../includes/tsql-md.md)]dans le _batch. Cette chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. *n* est un espace réservé qui indique des définitions de paramètres supplémentaires. Chaque paramètre spécifié dans l’instruction doit être défini dans * \@params*. Si l' [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot dans l’instruction ne contient pas de paramètres, * \@params* n’est pas obligatoire. La valeur par défaut de ce paramètre est NULL.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  0 indique une réussite. Tout autre indicateur indique un échec.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  **sp_describe_parameter_encryption** retourne deux jeux de résultats :  
   
--   Ensemble de résultats décrivant les clés de chiffrement configurées pour les colonnes de base de données, les paramètres de l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifiée correspondent à.  
+-   Ensemble de résultats décrivant les clés de chiffrement configurées pour les colonnes de [!INCLUDE[tsql](../../includes/tsql-md.md)] base de données, les paramètres de l’instruction spécifiée correspondent à.  
   
 -   Jeu de résultats décrivant le mode de chiffrement des paramètres particuliers. Ce jeu de résultats fait référence aux clés décrites dans le premier jeu de résultats.  
   
@@ -64,10 +64,10 @@ sp_describe_parameter_encryption
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_ordinal**|**int**|ID de la ligne dans le jeu de résultats.|  
 |**database_id**|**int**|ID de la base de données.|  
-|**column_encryption_key_id**|**int**|ID de la clé de chiffrement de colonne. Remarque : cet ID désigne une ligne dans la vue de catalogue [sys. &#40;column_encryption_keys Transact-&#41; SQL](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) .|  
-|**column_encryption_key_version**|**int**|Réservé à un usage ultérieur. Actuellement, contient toujours 1.|  
-|**column_encryption_key_metadata_version**|**binary(8)**|Horodateur représentant l’heure de création de la clé de chiffrement de colonne.|  
-|**column_encryption_key_encrypted_value**|**varbinary(4000)**|Valeur chiffrée de la clé de chiffrement de colonne.|  
+|**column_encryption_key_id**|**int**|ID de la clé de chiffrement de colonne. Remarque : cet ID désigne une ligne dans la vue de catalogue [sys. column_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) .|  
+|**column_encryption_key_version**|**int**|réservé à une utilisation future. Actuellement, contient toujours 1.|  
+|**column_encryption_key_metadata_version**|**Binary(8**|Horodateur représentant l’heure de création de la clé de chiffrement de colonne.|  
+|**column_encryption_key_encrypted_value**|**varbinary (4000)**|Valeur chiffrée de la clé de chiffrement de colonne.|  
 |**column_master_key_store_provider_name**|**sysname**|Nom du fournisseur du magasin de clés qui contient la clé principale de colonne, qui a été utilisé pour produire la valeur chiffrée de la clé de chiffrement de colonne.|  
 |**column_master_key_path**|**nvarchar(4000)**|Chemin d’accès de clé de la clé principale de colonne, qui a été utilisé pour produire la valeur chiffrée de la clé de chiffrement de colonne.|  
 |**column_encryption_key_encryption_algorithm_name**|**sysname**|Nom de l’algorithme de chiffrement utilisé pour produire la valeur de chiffrement de la clé de chiffrement de colonne.|  
@@ -77,14 +77,14 @@ sp_describe_parameter_encryption
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|ID de la ligne dans le jeu de résultats.|  
-|**parameter_name**|**sysname**|Nom de l’un des paramètres spécifiés dans l’argument *\@params* .|  
+|**parameter_name**|**sysname**|Nom de l’un des paramètres spécifiés dans * \@* l’argument params.|  
 |**column_encryption_algorithm**|**tinyint**|Code indiquant l’algorithme de chiffrement configuré pour la colonne, le paramètre correspond à. Les valeurs actuellement prises en charge sont les suivantes : 2 pour **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
-|**column_encryption_type**|**tinyint**|Code indiquant le type de chiffrement configuré pour la colonne, le paramètre correspond à. Les valeurs prises en charge sont les suivantes :<br /><br /> 0-texte en clair (la colonne n’est pas chiffrée)<br /><br /> 1-chiffrement aléatoire<br /><br /> 2-chiffrement déterministe.|  
+|**column_encryption_type**|**tinyint**|Code indiquant le type de chiffrement configuré pour la colonne, le paramètre correspond à. Les valeurs prises en charge sont les suivantes :<br /><br /> 0-texte en clair (la colonne n’est pas chiffrée)<br /><br /> 1-chiffrement aléatoire<br /><br /> 2-chiffrement déterministe.|  
 |**column_encryption_key_ordinal**|**int**|Code de la ligne dans le premier jeu de résultats. La ligne référencée décrit la clé de chiffrement de colonne configurée pour la colonne, le paramètre correspond à.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|Numéro de version de l’algorithme de normalisation de type.|  
   
 ## <a name="remarks"></a>Notes  
- Une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote client, prenant en charge Always Encrypted, appelle automatiquement **sp_describe_parameter_encryption** pour récupérer les métadonnées de chiffrement pour les requêtes paramétrables, émises par l’application. Par la suite, le pilote utilise les métadonnées de chiffrement pour chiffrer les valeurs des paramètres qui correspondent aux colonnes de base de données protégées par Always Encrypted et substitue les valeurs de paramètre de texte en clair, soumises par l’application, à l’aide du chiffrement valeurs de paramètre, avant d’envoyer la requête au moteur de base de données.  
+ Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote client, prenant en charge Always Encrypted, appelle automatiquement **sp_describe_parameter_encryption** pour récupérer les métadonnées de chiffrement pour les requêtes paramétrables, émises par l’application. Par la suite, le pilote utilise les métadonnées de chiffrement pour chiffrer les valeurs des paramètres qui correspondent aux colonnes de base de données protégées par Always Encrypted et substitue les valeurs de paramètre de texte en clair, soumises par l’application, à l’aide du chiffrement valeurs de paramètre, avant d’envoyer la requête au moteur de base de données.  
   
 ## <a name="permissions"></a>Autorisations  
  Exigez les autorisations **afficher une définition de clé de chiffrement de colonne** et **afficher toutes les définitions de clé principale de colonne** dans la base de données.  

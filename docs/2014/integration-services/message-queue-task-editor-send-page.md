@@ -1,5 +1,5 @@
 ---
-title: Éditeur de tâche MSMQ (Page Envoyer) | Microsoft Docs
+title: Éditeur de tâche MSMQ (page Envoyer) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66323ccdb91076496f9796245c368697d9ebc8c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057602"
 ---
 # <a name="message-queue-task-editor-send-page"></a>Éditeur de tâche MSMQ (page Envoyer)
@@ -28,7 +28,7 @@ ms.locfileid: "66057602"
   
 ## <a name="options"></a>Options  
  **UseEncryption**  
- Indiquez si le message doit être chiffré. La valeur par défaut est `False`.  
+ Indiquez si le message doit être chiffré. Par défaut, il s’agit de `False`.  
   
  **EncryptionAlgorithm**  
  Si vous utilisez le chiffrement, définissez le nom de l'algorithme de chiffrement à utiliser. La tâche MSMQ peut utiliser les algorithmes RC2 et RC4. La valeur par défaut est **RC2**.  
@@ -42,10 +42,10 @@ ms.locfileid: "66057602"
  **MessageType**  
  Sélectionnez le type de message : Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**Message de fichiers de données**|Le message est stocké dans un fichier. La sélection de cette valeur affiche l'option dynamique **DataFileMessage**.|  
-|**Message de type variable**|Le message est stocké dans une variable. Cette valeur affiche l'option dynamique **VariableMessage**.|  
+|**Message de fichier de données**|Le message est stocké dans un fichier. La sélection de cette valeur affiche l'option dynamique **DataFileMessage**.|  
+|**Message de variable**|Le message est stocké dans une variable. Cette valeur affiche l'option dynamique **VariableMessage**.|  
 |**Message de type chaîne**|Le message est stocké dans la tâche MSMQ. Cette valeur affiche l'option dynamique **StringMessage**.|  
   
 ## <a name="messagetype-dynamic-options"></a>Options dynamiques MessageType  
@@ -66,8 +66,8 @@ ms.locfileid: "66057602"
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tâche MSMQ &#40;page Général&#41;](general-page-of-integration-services-designers-options.md)   
- [Éditeur de tâche MSMQ &#40;page Recevoir&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
+ [Éditeur de tâche MSMQ &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
+ [Éditeur de tâche MSMQ &#40;page de réception&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
  [Page Expressions](expressions/expressions-page.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Installation de SQL Server 2014 à l’aide de SysPrep | Microsoft Docs
+title: Installer SQL Server 2014 à l’aide de SysPrep | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,34 +11,36 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6470cd60eb3b5491b8941685dcae00a49b4e967c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775302"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>Installation de SQL Server 2014 à l'aide de SysPrep
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep sont accessibles via le Centre d'installation. La Page **Avancé** du **Centre d’installation** a deux options : **Préparation de l’image d’une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** et **Finalisation d’image d’une instance autonome préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Les sections [Préparer](#prepare) et [Finaliser](#complete) décrivent la procédure d'installation en détail. Pour plus d'informations, consultez [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
   
- Vous pouvez également préparer et finaliser une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de l'invite de commandes ou d'un fichier de configuration. Pour plus d'informations, consultez :  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep sont accessibles via le Centre d'installation. La Page **Avancé** du **Centre d’installation** a deux options : **Préparation de l’image d’une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** et **Finalisation d’image d’une instance autonome préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Les sections [Préparer](#prepare) et [Finaliser](#complete) décrivent la procédure d'installation en détail. Pour plus d’informations, consultez [Considérations relatives à l’installation de SQL Server à l’aide de SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
   
--   [Installer SQL Server 2014 à partir de l’invite de commandes](install-sql-server-from-the-command-prompt.md)  
+ Vous pouvez également préparer et finaliser une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de l'invite de commandes ou d'un fichier de configuration. Pour plus d'informations, consultez les pages suivantes :  
   
--   [Installer SQL Server 2014 à l’aide d’un fichier de configuration](install-sql-server-using-a-configuration-file.md)  
+-   [Installer SQL Server 2014 à partir de l'invite de commandes](install-sql-server-from-the-command-prompt.md)  
   
-## <a name="prerequisites"></a>Prérequis  
+-   [Installer SQL Server 2014 à l'aide d'un fichier de configuration](install-sql-server-using-a-configuration-file.md)  
+  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Avant d’installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez les rubriques dans [Planification d’une installation SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
   
- Pour plus d’informations sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] éditions et les exigences matérielles et logicielles, consultez [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+ Pour plus d’informations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur les éditions de et la configuration matérielle et logicielle requise, consultez [configurations matérielle et logicielle requises pour l’installation de SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep ne prend pas en charge ce qui suit :  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep ne prend pas en charge ce qui suit :  
 >   
 >  Installations WOW64 : fonctionnalité de l'édition 64 bits de Windows qui permet aux applications 32 bits de s'exécuter de façon native en mode 32 bits.  
   
  Cette section décrit les procédures suivantes :  
   
--   [Prise en charge de cluster SQL Server SysyPrep](#sysprep)  
+-   [Prise en charge des clusters SysyPrep SQL Server](#sysprep)  
   
 -   [Préparer une instance autonome de SQL Server](#prepare)  
   
@@ -46,13 +48,13 @@ ms.locfileid: "62775302"
   
 -   [Ajouter des fonctionnalités à une instance préparée de SQL Server](#AddFeatures)  
   
--   [Supprimer des fonctionnalités d'une instance préparée de SQL Server](#RemoveFeatures)  
+-   [Supprimer des fonctionnalités d’une instance préparée de SQL Server](#RemoveFeatures)  
   
--   [Désinstallation d'une instance préparée](install-sql-server-using-sysprep.md#Uninstall)  
+-   [Désinstallation d’une instance préparée](install-sql-server-using-sysprep.md#Uninstall)  
   
--   [Modification ou désinstallation d'une instance finalisée de SQL Server.](install-sql-server-using-sysprep.md#bk_Modifying_Uninstalling)  
+-   [Modification ou désinstallation d’une instance terminée de SQL Server.](install-sql-server-using-sysprep.md#bk_Modifying_Uninstalling)  
   
-##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep  
+##  <a name="sysprep"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Prise en charge du cluster Sysprep  
  À compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SysPrep prend en charge les instances cluster de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans les installations via la ligne de commande. Pour plus d'informations, consultez [Qu'est-ce que Sysprep ?](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx).  
   
 #### <a name="to-prepare-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>Pour préparer un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (sans assistance)  
@@ -69,7 +71,7 @@ ms.locfileid: "62775302"
   
 3.  Créez le cluster de basculement Windows.  
   
-4.  Exécutez setup.exe avec `/ACTION=PrepareFailoverCluster` sur tous les nœuds. Exemple :  
+4.  Exécutez setup.exe avec `/ACTION=PrepareFailoverCluster` sur tous les nœuds. Par exemple :  
   
     ```  
     setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
@@ -105,51 +107,54 @@ ms.locfileid: "62775302"
   
 3.  L'Outil d'analyse de configuration système effectue une opération de découverte sur votre ordinateur. Pour continuer, cliquez sur **OK**. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**.  
   
-4.  Dans la page Mises à jour du produit, les dernières mises à jour disponibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'affichent. Si vous ne souhaitez pas inclure les mises à jour, décochez la case **Inclure les mises à jour du produit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Si aucune mise à jour du produit n'est découverte, le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'affiche pas cette page et passe automatiquement à la page **Installer les fichiers d'installation** .  
+4.  Dans la page Mises à jour du produit, les dernières mises à jour disponibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'affichent. Si vous ne souhaitez pas inclure les mises à jour, décochez la case **Inclure les mises à jour du produit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Si aucune mise à jour du produit n'est découverte, le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'affiche pas cette page et passe automatiquement à la page **Installer les fichiers d'installation** .  
   
 5.  Sur la page Installer les fichiers d'installation, le programme d'installation fournit la progression du téléchargement, de l'extraction et de l'installation des fichiers d'installation. Si une mise à jour de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est trouvée, et est spécifiée pour être incluse, cette mise à jour est également installée.  
   
 6.  L'outil d'analyse de configuration système vérifie l'état système de votre ordinateur avant que le programme d'installation ne se poursuive. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**.  
   
-7.  Dans la page **Préparer le type d’image**, sélectionnez **Préparer une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** .  
+7.  Dans la page **Préparer le type d’image**, sélectionnez **Préparer une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**.  
   
      La page **Préparer le type d’image** est affichée uniquement quand vous avez une instance existante, préparée et non configurée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l’ordinateur. Vous pouvez choisir de préparer une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d'ajouter des fonctionnalités prises en charge par sys prep à une instance préparée existante de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l'ordinateur. Pour plus d'informations sur l'ajout de fonctionnalités à une instance préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Ajouter des fonctionnalités à une instance préparée](#AddFeatures).  
   
-8.  Dans la page **Termes du contrat de licence** , prenez connaissance du contrat de licence, puis activez la case à cocher indiquant que vous en acceptez les termes et conditions. Pour aider à améliorer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez également activer l'option d'utilisation des fonctionnalités et envoyer des rapports à [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+8.  Sur la page **termes** du contrat de licence, lisez le contrat de licence, puis activez la case à cocher pour accepter les termes et conditions du contrat de licence. Pour aider à améliorer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez également activer l'option d'utilisation des fonctionnalités et envoyer des rapports à [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
-9. Dans la page **Sélection de fonctionnalités** , sélectionnez les composants que vous voulez installer :  
+9. Dans la page **sélection de fonctionnalités** , sélectionnez les composants de votre installation :  
   
     |||  
     |-|-|  
-    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SysPrep|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Réplication<br /><br /> Fonctionnalités de texte intégral<br /><br /> Data Quality Services<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Fonctionnalités redistribuables<br /><br /> Fonctionnalités partagées|  
+    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Utilitaire|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]La<br /><br /> Fonctionnalités de texte intégral<br /><br /> Data Quality Services<br /><br /> 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Fonctionnalités redistribuables<br /><br /> Fonctionnalités partagées|  
   
      Une description de chaque groupe de composants apparaît dans le volet droit lorsque vous sélectionnez le nom de la fonctionnalité. Vous pouvez choisir n'importe quelle combinaison de cases à cocher. Pour plus d’informations, consultez [éditions et composants de SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) et [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
-     Les composants requis pour les fonctionnalités sélectionnées sont affichés dans le volet droit. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe les composants requis qui n'ont pas déjà été installés lors de l'étape d'installation décrite plus loin dans cette procédure.  
+     Les composants requis pour les fonctionnalités sélectionnées sont affichés dans le volet droit. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe les composants requis qui n'ont pas déjà été installés lors de l'étape d'installation décrite plus loin dans cette procédure.  
   
 10. Dans la page **Règles de préparation d'image** , l'outil d'analyse de configuration système vérifie l'état système de votre ordinateur avant que le programme d'installation ne se poursuive. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**.  
   
 11. Dans la page Configuration de l'instance, spécifiez l'ID d'instance. Cliquez sur **Suivant** pour continuer.  
   
-     **ID d’instance** : l’ID d’instance permet d’identifier les répertoires d’installation et les clés de registre de votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tel est le cas pour les instances par défaut et les instances nommées. Si l'instance préparée est finalisée en tant qu'instance par défaut pendant l'étape Finaliser, le nom de l'instance est remplacé par MSSQLSERVER. L'ID d'instance reste identique à celui spécifié.  
+     **ID d’instance** : l’ID d’instance permet d’identifier les répertoires d’installation et les clés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de registre de votre instance de. Tel est le cas pour les instances par défaut et les instances nommées. Si l'instance préparée est finalisée en tant qu'instance par défaut pendant l'étape Finaliser, le nom de l'instance est remplacé par MSSQLSERVER. L'ID d'instance reste identique à celui spécifié.  
   
-     **Répertoire racine de l’instance** : par défaut, le répertoire racine de l’instance est [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]. Pour spécifier un répertoire racine non défini par défaut, utilisez le champ fourni ou cliquez sur **Parcourir** pour rechercher un dossier d’installation. Le répertoire spécifié à l'étape de préparation sera utilisé durant la configuration à l'étape Finaliser.  
+     **Répertoire racine** de l’instance-par défaut, le répertoire racine [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]de l’instance est. Pour spécifier un répertoire racine non défini par défaut, utilisez le champ fourni ou cliquez sur **Parcourir** pour rechercher un dossier d’installation. Le répertoire spécifié à l'étape de préparation sera utilisé durant la configuration à l'étape Finaliser.  
   
      Tous les Service Packs et mises à niveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'appliqueront à chaque composant d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     **Instances installées** : la grille affiche les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui se trouvent sur l’ordinateur où le programme d’installation s’exécute.  
+     **Instances installées** -la grille affiche les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances de qui se trouvent sur l’ordinateur où le programme d’installation s’exécute.  
   
-12. La page **Espace disque nécessaire** calcule l'espace disque nécessaire pour les fonctionnalités que vous spécifiez. Elle compare ensuite cet espace à l'espace disque disponible.  
+12. La page **espace disque** nécessaire calcule l’espace disque requis pour les fonctionnalités que vous spécifiez. Elle compare ensuite cet espace à l'espace disque disponible.  
   
 13. L'Outil d'analyse de configuration système exécutera des règles de préparation d'image pour valider la configuration de votre ordinateur avec les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous avez spécifiées. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**.  
   
-14. La page **Prêt à préparer l'image** affiche une arborescence des options d'installation spécifiées durant l'exécution du programme d'installation. Dans cette page, le programme d'installation indique si la fonctionnalité de mise à jour du produit est activée ou désactivée et la version de la mise à jour finale. Pour continuer, cliquez sur **Préparer**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe d'abord les composants requis pour les fonctionnalités sélectionnées, puis installe les fonctionnalités.  
+14. La page **Prêt à préparer l'image** affiche une arborescence des options d'installation spécifiées durant l'exécution du programme d'installation. Dans cette page, le programme d'installation indique si la fonctionnalité de mise à jour du produit est activée ou désactivée et la version de la mise à jour finale. Pour continuer, cliquez sur **Préparer**. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe d'abord les composants requis pour les fonctionnalités sélectionnées, puis installe les fonctionnalités.  
   
 15. Au cours de l'installation, la page **Progression de la préparation de l'image** fournit des informations d'état de sorte que vous puissiez contrôler la progression de l'installation au fil de l'exécution du programme d'installation.  
   
 16. Après l'installation, la page **Terminé** fournit un lien vers le fichier journal résumé de l'installation et d'autres remarques importantes. Pour terminer le processus d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cliquez sur **Fermer**.  
   
-17. Redémarrez l'ordinateur si vous êtes invité à le faire. Il est important de lire le message affiché par l'Assistant Installation à la fin de l'installation. Pour plus d'informations, consultez [View and Read SQL Server Setup Log Files](view-and-read-sql-server-setup-log-files.md).  
+17. Redémarrez l'ordinateur si vous êtes invité à le faire. Il est important de lire le message affiché par l'Assistant Installation à la fin de l'installation. Pour plus d’informations, consultez [afficher et lire SQL Server fichiers journaux d’installation](view-and-read-sql-server-setup-log-files.md).  
   
 18. L'étape de préparation est maintenant terminée. Vous pouvez finaliser l'image ou déployer l'image préparée comme décrit dans [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
   
@@ -161,13 +166,13 @@ ms.locfileid: "62775302"
   
 2.  L'Outil d'analyse de configuration système effectue une opération de découverte sur votre ordinateur. Pour continuer, cliquez sur **OK**. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**.  
   
-3.  Dans la page **Fichiers de support du programme d'installation** , cliquez sur **Installer** pour installer les fichiers de support du programme d'installation.  
+3.  Sur la page **fichiers de support du programme d’installation** , cliquez sur **installer** pour installer les fichiers de support du programme d’installation.  
   
 4.  L'outil d'analyse de configuration système vérifie l'état système de votre ordinateur avant que le programme d'installation ne se poursuive. Lorsque la vérification est terminée, cliquez sur **Suivant** pour poursuivre. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**.  
   
 5.  Dans la page **Clé du produit** , sélectionnez une case d'option pour indiquer si vous installez une édition gratuite de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou une version de production du produit qui a une clé PID. Pour plus d’informations, consultez [éditions et composants de SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md). Si vous installez l'édition Evaluation, la période d'essai de 180 jours démarre lorsque vous terminez cette étape.  
   
-6.  Dans la page **Termes du contrat de licence** , prenez connaissance du contrat de licence, puis activez la case à cocher indiquant que vous en acceptez les termes et conditions. Pour aider à améliorer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez également activer l'option d'utilisation des fonctionnalités et envoyer des rapports à [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+6.  Sur la page **termes** du contrat de licence, lisez le contrat de licence, puis activez la case à cocher pour accepter les termes et conditions du contrat de licence. Pour aider à améliorer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez également activer l'option d'utilisation des fonctionnalités et envoyer des rapports à [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 7.  Dans la page **Sélectionner une instance préparée** , sélectionnez l'instance préparée que vous souhaitez finaliser dans la zone de liste déroulante. Sélectionnez l’instance non configurée dans la liste **ID de l’instance** .  
   
@@ -176,27 +181,28 @@ ms.locfileid: "62775302"
 8.  Dans la page **Vérification des fonctionnalités** sont répertoriés les fonctionnalités et composants sélectionnés inclus dans l'installation pendant l'étape de préparation. Si vous souhaitez ajouter davantage de fonctionnalités à votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non incluses dans l'instance préparée, vous devez d'abord effectuer cette étape pour finaliser l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puis ajouter les fonctionnalités à partir de **Ajouter des fonctionnalités** dans le **Centre d'installation**.  
   
     > [!NOTE]  
-    >  Vous pouvez ajouter des fonctionnalités qui sont disponibles pour la version du produit que vous installez. Pour plus d'informations, consultez [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+    >  Vous pouvez ajouter des fonctionnalités qui sont disponibles pour la version du produit que vous installez. Pour plus d’informations, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
 9. Dans la page Configuration de l'instance, spécifiez le nom de l'instance préparée. Il s'agit du nom de l'instance une fois que vous avez achevé la configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cliquez sur **Suivant** pour continuer.  
   
-     **ID d’instance** : l’ID d’instance permet d’identifier les répertoires d’installation et les clés de registre de votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tel est le cas pour les instances par défaut et les instances nommées. Si l'instance préparée est finalisée en tant qu'instance par défaut pendant l'étape Finaliser, le nom de l'instance est remplacé par MSSQLSERVER. L'ID d'instance reste identique à celui spécifié pendant l'étape Préparer.  
+     **ID d’instance** : l’ID d’instance permet d’identifier les répertoires d’installation et les clés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de registre de votre instance de. Tel est le cas pour les instances par défaut et les instances nommées. Si l'instance préparée est finalisée en tant qu'instance par défaut pendant l'étape Finaliser, le nom de l'instance est remplacé par MSSQLSERVER. L'ID d'instance reste identique à celui spécifié pendant l'étape Préparer.  
   
-     **Répertoire racine de l’instance** : le répertoire spécifié à l’étape de préparation sera utilisé et ne peut pas être modifié lors de cette étape.  
+     **Répertoire racine** de l’instance-le répertoire spécifié dans l’étape de préparation sera utilisé et ne pourra pas être modifié à cette étape.  
   
      Tous les Service Packs et mises à niveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'appliqueront à chaque composant d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     **Instances installées** : la grille affiche les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui se trouvent sur l’ordinateur où le programme d’installation s’exécute.  
+     **Instances installées** -la grille affiche les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances de qui se trouvent sur l’ordinateur où le programme d’installation s’exécute.  
   
 10. Le flux de travail du reste de cette rubrique dépend des fonctionnalités sélectionnées durant l'étape de préparation. Il est possible que les pages ne soient pas toutes visibles ; cela dépend des sélections effectuées.  
   
-11. Dans la page **Configuration du serveur** - Comptes de service, spécifiez les comptes de connexion des services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les services réels configurés dans cette page dépendent des fonctionnalités que vous avez choisi d'installer.  
+11. Dans la page **configuration du serveur** -comptes de service, spécifiez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les comptes de connexion des services. Les services réels configurés dans cette page dépendent des fonctionnalités que vous avez choisi d'installer.  
   
-     Vous pouvez attribuer le même compte de connexion à tous les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou configurer chaque compte de service individuellement. Vous pouvez également spécifier si les services démarrent automatiquement, sont démarrés manuellement ou sont désactivés. [!INCLUDE[msCoName](../../includes/msconame-md.md)] vous recommande de configurer les comptes de service individuellement afin d'octroyer le moins de privilèges à chaque service, sachant que les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disposent des autorisations minimales requises pour effectuer leurs tâches. Pour plus d’informations, consultez [Configuration du serveur - Comptes de service](../../sql-server/install/server-configuration-service-accounts.md) et [Configurer les comptes de service Windows et les autorisations](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     Vous pouvez attribuer le même compte de connexion à tous les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou configurer chaque compte de service individuellement. Vous pouvez également spécifier si les services démarrent automatiquement, sont démarrés manuellement ou sont désactivés. 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] vous recommande de configurer les comptes de service individuellement afin d'octroyer le moins de privilèges à chaque service, sachant que les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disposent des autorisations minimales requises pour effectuer leurs tâches. Pour plus d’informations, consultez [Configuration du serveur - Comptes de service](../../sql-server/install/server-configuration-service-accounts.md) et [Configurer les comptes de service Windows et les autorisations](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      Pour spécifier le même compte d'ouverture de session pour tous les comptes de service dans cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], fournissez les informations d'identification dans les champs en bas de page.  
   
-     **Remarque relative à la sécurité** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+     **Note de sécurité**[!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
      Lorsque vous avez terminé de spécifier les informations de connexion pour les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cliquez sur **Suivant**.  
   
@@ -208,7 +214,8 @@ ms.locfileid: "62775302"
   
          Lorsque la connexion d'un périphérique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]est établie, le mécanisme de sécurité est le même pour l'authentification Windows et le mode mixte. Pour plus d'informations, consultez [Database Engine Configuration - Account Provisioning](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administrateurs : vous devez spécifier au moins un administrateur système pour l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour ajouter le compte sous lequel le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute, cliquez sur **Ajouter l'utilisateur actuel**. Pour ajouter ou supprimer des comptes dans la liste des administrateurs système, cliquez sur **Ajouter** ou sur **Supprimer**, puis modifiez la liste des utilisateurs, groupes ou ordinateurs qui disposeront des privilèges d'administrateur pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Database Engine Configuration - Account Provisioning](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
+    -   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administrateurs : vous devez spécifier au moins un administrateur système pour l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour ajouter le compte sous lequel le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute, cliquez sur **Ajouter l'utilisateur actuel**. Pour ajouter ou supprimer des comptes dans la liste des administrateurs système, cliquez sur **Ajouter** ou sur **Supprimer**, puis modifiez la liste des utilisateurs, groupes ou ordinateurs qui disposeront des privilèges d'administrateur pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Database Engine Configuration - Account Provisioning](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
   
      Lorsque vous avez fini de modifier la liste, cliquez sur **OK**. Vérifiez la liste d'administrateurs dans la boîte de dialogue de configuration. Une fois la liste complète, cliquez sur **Suivant**.  
   
@@ -223,7 +230,7 @@ ms.locfileid: "62775302"
   
 16. Utilisez la page Configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour spécifier le type d'installation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à créer. Pour plus d’informations sur les modes de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Options de configuration Reporting Services &#40;SSRS&#41;](../../sql-server/install/reporting-services-configuration-options-ssrs.md).  
   
-17. Dans la page **Création de rapports d'erreurs** , spécifiez les informations que vous souhaitez envoyer à [!INCLUDE[msCoName](../../includes/msconame-md.md)] afin d'aider à améliorer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les options de création de rapports d'erreurs sont activées par défaut.  
+17. Sur la page **rapport d’erreurs** , spécifiez les informations que vous souhaitez envoyer [!INCLUDE[msCoName](../../includes/msconame-md.md)] à qui pourront être [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]améliorées. Les options de création de rapports d'erreurs sont activées par défaut.  
   
 18. Dans la page **Règles de finalisation d'image** , l'outil d'analyse de configuration système exécutera les règles de finalisation d'image pour valider la configuration de votre ordinateur avec les configurations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous avez spécifiées. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**.  
   
@@ -233,11 +240,11 @@ ms.locfileid: "62775302"
   
 21. Après l'installation, la page **Terminé** fournit un lien vers le fichier journal résumé de l'installation et d'autres remarques importantes. Pour terminer le processus d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cliquez sur **Fermer**.  
   
-22. Redémarrez l'ordinateur si vous êtes invité à le faire. Il est important de lire le message affiché par l'Assistant Installation à la fin de l'installation. Pour plus d'informations, consultez [View and Read SQL Server Setup Log Files](view-and-read-sql-server-setup-log-files.md).  
+22. Redémarrez l'ordinateur si vous êtes invité à le faire. Il est important de lire le message affiché par l'Assistant Installation à la fin de l'installation. Pour plus d’informations, consultez [afficher et lire SQL Server fichiers journaux d’installation](view-and-read-sql-server-setup-log-files.md).  
   
 23. Cette étape achève la configuration de l'instance préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et termine l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="AddFeatures"></a> Add Features to a Prepared Instance  
+##  <a name="AddFeatures"></a>Ajouter des fonctionnalités à une instance préparée  
   
 #### <a name="add-features-to-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Ajouter des fonctionnalités à une instance préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -249,11 +256,12 @@ ms.locfileid: "62775302"
   
 4.  Sur la page Fichiers de support du programme d'installation, cliquez sur **Installer** pour installer les fichiers de support du programme d'installation.  
   
-5.  Dans la page **Préparer le type d’image**, sélectionnez l’option **Ajouter des fonctionnalités à une instance préparée existante de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Sélectionnez l'instance préparée spécifique à laquelle vous souhaitez ajouter des fonctionnalités dans la zone de liste déroulante d'instances préparées disponibles.  
+5.  Dans la page **Préparer le type d’image**, sélectionnez l’option **Ajouter des fonctionnalités à une instance préparée existante de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Sélectionnez l'instance préparée spécifique à laquelle vous souhaitez ajouter des fonctionnalités dans la zone de liste déroulante d'instances préparées disponibles.  
   
 6.  Dans la page **Sélection de composant** , spécifiez les fonctionnalités que vous souhaitez ajouter à l'instance préparée spécifiée.  
   
-     Les composants requis pour les fonctionnalités sélectionnées sont affichés dans le volet droit. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe les composants requis qui n'ont pas déjà été installés lors de l'étape d'installation décrite plus loin dans cette procédure.  
+     Les composants requis pour les fonctionnalités sélectionnées sont affichés dans le volet droit. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe les composants requis qui n'ont pas déjà été installés lors de l'étape d'installation décrite plus loin dans cette procédure.  
   
 7.  Dans la page **Règles de préparation d'image** , l'outil d'analyse de configuration système vérifie l'état système de votre ordinateur avant que le programme d'installation ne se poursuive. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**.  
   
@@ -261,15 +269,16 @@ ms.locfileid: "62775302"
   
 9. Dans la page **Règles de préparation d'image** , l'outil d'analyse de configuration système exécutera des règles de préparation d'image pour valider la configuration de votre ordinateur avec les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous avez spécifiées. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**.  
   
-10. La page **Prêt à préparer l'image** affiche une arborescence des options d'installation spécifiées durant l'exécution du programme d'installation. Pour continuer, cliquez sur **Installer**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe d'abord les composants requis pour les fonctionnalités sélectionnées, puis installe les fonctionnalités.  
+10. La page **Prêt à préparer l'image** affiche une arborescence des options d'installation spécifiées durant l'exécution du programme d'installation. Pour continuer, cliquez sur **Installer**. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe d'abord les composants requis pour les fonctionnalités sélectionnées, puis installe les fonctionnalités.  
   
 11. Au cours de l'installation, la page **Progression de la préparation de l'image** fournit des informations d'état de sorte que vous puissiez contrôler la progression de l'installation au fil de l'exécution du programme d'installation.  
   
 12. Après l'installation, la page **Terminé** fournit un lien vers le fichier journal résumé de l'installation et d'autres remarques importantes. Pour terminer le processus d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cliquez sur **Fermer**.  
   
-13. Redémarrez l'ordinateur si vous êtes invité à le faire. Il est important de lire le message affiché par l'Assistant Installation à la fin de l'installation. Pour plus d'informations, consultez [View and Read SQL Server Setup Log Files](view-and-read-sql-server-setup-log-files.md).  
+13. Redémarrez l'ordinateur si vous êtes invité à le faire. Il est important de lire le message affiché par l'Assistant Installation à la fin de l'installation. Pour plus d’informations, consultez [afficher et lire SQL Server fichiers journaux d’installation](view-and-read-sql-server-setup-log-files.md).  
   
-##  <a name="RemoveFeatures"></a> Supprimer des fonctionnalités d'une instance préparée  
+##  <a name="RemoveFeatures"></a>Supprimer des fonctionnalités d’une instance de préparation  
   
 #### <a name="removing-features-from-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Suppression de fonctionnalités d'une instance préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -277,7 +286,7 @@ ms.locfileid: "62775302"
   
 2.  Double-cliquez sur le composant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à désinstaller, puis cliquez sur **Supprimer**.  
   
-3.  Les règles de support d'installation seront exécutées pour vérifier la configuration de votre ordinateur. Pour continuer, cliquez sur **OK** .  
+3.  Les règles de support d'installation seront exécutées pour vérifier la configuration de votre ordinateur. Cliquez sur **OK** pour continuer.  
   
 4.  Dans la page **Sélectionner une instance** , sélectionnez l'instance préparée que vous souhaitez modifier. Le nom de l'instance préparée sera affiché comme « ID_instance_préparée non configurée » où ID_instance_préparée est l'instance que vous sélectionnez.  
   
@@ -291,7 +300,7 @@ ms.locfileid: "62775302"
   
 9. Dans la page **Finaliser** , vous pouvez examiner l'état d'achèvement de l'opération. Cliquez sur **Fermer** pour quitter l'Assistant Installation.  
   
-##  <a name="Uninstall"></a> Désinstallation d'une instance préparée  
+##  <a name="Uninstall"></a>Désinstallation d’une instance préparée  
   
 #### <a name="uninstall-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Désinstaller une instance préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -299,7 +308,7 @@ ms.locfileid: "62775302"
   
 2.  Double-cliquez sur le composant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à désinstaller, puis cliquez sur **Supprimer**.  
   
-3.  Les règles de support d'installation seront exécutées pour vérifier la configuration de votre ordinateur. Pour continuer, cliquez sur **OK** .  
+3.  Les règles de support d'installation seront exécutées pour vérifier la configuration de votre ordinateur. Cliquez sur **OK** pour continuer.  
   
 4.  Dans la page **Sélectionner une instance** , sélectionnez l'instance préparée que vous souhaitez modifier. Le nom de l'instance préparée sera affiché comme « ID_instance_préparée non configurée » où ID_instance_préparée est l'instance que vous sélectionnez.  
   
@@ -315,13 +324,13 @@ ms.locfileid: "62775302"
   
 10. Répétez les étapes 1 à 9 jusqu'à ce que tous les composants de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aient été supprimés.  
   
-##  <a name="bk_Modifying_Uninstalling"></a> Modification ou désinstallation d'une instance finalisée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Le processus d'ajout ou de suppression de fonctionnalités ou de désinstallation d'une instance finalisée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est semblable au processus applicable à une instance installée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez les rubriques suivantes :  
+##  <a name="bk_Modifying_Uninstalling"></a>Modification ou désinstallation d’une instance terminée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Le processus d'ajout ou de suppression de fonctionnalités ou de désinstallation d'une instance finalisée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est semblable au processus applicable à une instance installée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, voir les rubriques suivantes :  
   
--   [Ajouter des fonctionnalités à une Instance de SQL Server 2014 &#40;le programme d’installation&#41;](add-features-to-an-instance-of-sql-server-setup.md)  
+-   [Ajouter des fonctionnalités à une instance de SQL Server 2014 &#40;de l’installation&#41;](add-features-to-an-instance-of-sql-server-setup.md)  
   
 -   [Désinstaller une instance existante de SQL Server &#40;programme d’installation&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Qu'est-ce que Sysprep ?](https://go.microsoft.com/fwlink/?LinkId=143546)   
- [Fonctionnement de Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143547)  
+ [Présentation de Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143546)   
+ [Comment Windows Sysprep](https://go.microsoft.com/fwlink/?LinkId=143547)  

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bcf52745a984d049db92e8255ba7984b6b52a71a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483123"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>Supprimer une hiérarchie dérivée (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "65483123"
 > [!NOTE]  
 >  La suppression d'une hiérarchie dérivée n'a aucun effet sur les relations d'attributs sur lesquelles la hiérarchie est basée.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -37,13 +37,13 @@ ms.locfileid: "65483123"
   
 1.  Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cliquez sur **Administration de système**.  
   
-2.  Sur le **vue de modèle** page, dans la barre de menus, pointez sur **gérer** et cliquez sur **hiérarchies dérivées**.  
+2.  Dans la page **vue du modèle** , dans la barre de menus, pointez sur **gérer** , puis cliquez sur **hiérarchies dérivées**.  
   
 3.  Dans la page **Maintenance de la hiérarchie dérivée** , dans la liste **Modèle** , sélectionnez un modèle.  
   
 4.  Sélectionnez la ligne de la hiérarchie dérivée à supprimer.  
   
-5.  Cliquez sur **supprimer la hiérarchie sélectionnée**.  
+5.  Cliquez sur **Supprimer la hiérarchie sélectionnée**.  
   
 6.  Dans la boîte de dialogue de confirmation, cliquez sur **OK**.  
   

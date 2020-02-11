@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 et la sécurité | Microsoft Docs
+title: Considérations relatives à la sécurité de SQLXML 4,0 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6f9a2380ae4ab5b59fa974093d81a09266ebd8c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010530"
 ---
 # <a name="sqlxml-40-security-considerations"></a>Considérations relatives à la sécurité SQLXML 4.0
@@ -27,16 +27,16 @@ ms.locfileid: "66010530"
  [Considérations de base relatives à la sécurité SQLXML](core-sqlxml-security-considerations.md)  
  Fournit des indications de sécurité sur l'utilisation de SQLXML pour accéder aux données.  
   
- [Considérations de sécurité de mise à jour &#40;SQLXML 4.0&#41;](updategram-security-considerations-sqlxml-4-0.md)  
+ [Considérations sur la sécurité mise à jour &#40;SQLXML 4,0&#41;](updategram-security-considerations-sqlxml-4-0.md)  
  Fournit des indications de sécurité sur l'utilisation des codes de mise à jour (updategrams) avec SQLXML 4.0.  
   
- [Annoté considérations de sécurité de schéma &#40;SQLXML 4.0&#41;](annotated-schema-security-considerations-sqlxml-4-0.md)  
+ [Considérations sur la sécurité des schémas annotés &#40;SQLXML 4,0&#41;](annotated-schema-security-considerations-sqlxml-4-0.md)  
  Fournit des indications de sécurité sur l'utilisation des schémas annotés avec SQLXML 4.0.  
   
- [XML en matière de sécurité &#40;SQLXML 4.0&#41;](for-xml-security-considerations-sqlxml-4-0.md)  
+ [Considérations relatives à la sécurité XML &#40;SQLXML 4,0&#41;](for-xml-security-considerations-sqlxml-4-0.md)  
  Fournit des indications de sécurité sur l'utilisation de FOR XML avec SQLXML 4.0.  
   
- [En bloc charge les considérations de sécurité &#40;SQLXML 4.0&#41;](bulk-load-security-considerations-sqlxml-4-0.md)  
+ [Considérations sur la sécurité du chargement en masse &#40;SQLXML 4,0&#41;](bulk-load-security-considerations-sqlxml-4-0.md)  
  Fournit des indications de sécurité sur l'utilisation du chargement en masse XML avec SQLXML 4.0.  
   
   

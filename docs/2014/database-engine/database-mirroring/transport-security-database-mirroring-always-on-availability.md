@@ -1,5 +1,5 @@
 ---
-title: Sécurité du transport pour la mise en miroir de base de données et de groupes de disponibilité AlwaysOn (SQL Server) | Microsoft Docs
+title: Sécurité de transport pour la mise en miroir de bases de données et groupes de disponibilité AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 18b52163cb1e8c6be0cf7fdea37861662d6e4830
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754298"
 ---
 # <a name="transport-security-for-database-mirroring-and-alwayson-availability-groups-sql-server"></a>Sécurité du transport de la mise en miroir de bases de données et des groupes de disponibilité AlwaysOn (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "62754298"
 ##  <a name="Authentication"></a> Authentification  
  L'authentification est le processus qui permet de vérifier qu'un utilisateur est la personne qu'il prétend être. Les connexions entre les points de terminaison de mise en miroir de bases de données requièrent une authentification. Les demandes de connexion éventuellement formulées par un partenaire ou un témoin doivent être authentifiées.  
   
- Le type d'authentification utilisé pour la mise en miroir de bases de données ou [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] par une instance de serveur est une propriété du point de terminaison de la mise en miroir. Deux types de sécurité de transport sont disponibles pour les points de terminaison de mise en miroir de bases de données : l’authentification Windows (SSPI, Security Support Provider Interface) et l’authentification basée sur les certificats.  
+ Le type d'authentification utilisé pour la mise en miroir de bases de données ou [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] par une instance de serveur est une propriété du point de terminaison de la mise en miroir. Deux types de sécurité de transport sont disponibles pour les points de terminaison de mise en miroir de bases de données : l'Authentification Windows (SSPI, Security Support Provider Interface) et l'authentification basée sur les certificats.  
   
 ### <a name="windows-authentication"></a>Authentification Windows  
  Avec l'authentification Windows, chaque instance de serveur se connecte à l'autre partie à l'aide des informations d'identification Windows du compte d'utilisateur Windows sous lequel le processus est en cours d'exécution. L'authentification Windows peut nécessiter une configuration manuelle des comptes de connexion, comme suit :  
@@ -43,19 +43,19 @@ ms.locfileid: "62754298"
   
 -   Si les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonctionnent comme des services sous des comptes de domaine différents (dans les mêmes domaines ou dans des domaines approuvés), la connexion de chaque compte doit être créée en **maître** sur chacune des autres instances de serveur, et cette connexion doit disposer d’autorisations CONNECT sur le point de terminaison.  
   
--   Si les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonctionnent comme le compte de service réseau, la connexion de chaque compte d’ordinateur hôte (*nom_domaine***\\***nom_ordinateur$* ) doit être créée en **maître** sur chacun des autres serveurs, et cette connexion doit disposer d’autorisations CONNECT sur le point de terminaison. En effet, une instance de serveur s'exécutant sous le compte de service réseau s'authentifie à l'aide du compte de domaine de l'ordinateur hôte.  
+-   Si les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonctionnent comme le compte de service réseau, la connexion de chaque compte d’ordinateur hôte (*DomainName***\\***ComputerName$*) doit être créée en **maître** sur chacun des autres serveurs, et cette connexion doit disposer d’autorisations CONNECT sur le point de terminaison. En effet, une instance de serveur s'exécutant sous le compte de service réseau s'authentifie à l'aide du compte de domaine de l'ordinateur hôte.  
   
 > [!NOTE]  
->  Pour obtenir un exemple de configuration d’une session de mise en miroir de bases de données utilisant l’authentification Windows, consultez [Exemple : Configuration de la mise en miroir de bases de données à l’aide de l’authentification Windows &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
+>  Pour obtenir un exemple de configuration d’une session de mise en miroir de bases de données utilisant l’authentification Windows, consultez [Exemple : configurer la mise en miroir de bases de données à l’aide de l’authentification Windows &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
   
 ### <a name="certificates"></a>Certificats  
  Dans certaines situations, par exemple lorsque les instances de serveur ne se trouvent pas dans des domaines approuvés ou que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d'exécution en tant que service local, l'authentification Windows n'est pas disponible. Dans ces cas, ce ne sont pas des informations d'identification utilisateur, mais des certificats, qui sont nécessaires pour authentifier les demandes de connexion. Le point de terminaison de mise en miroir de chaque instance de serveur doit être configuré avec son propre certificat créé localement.  
   
- La méthode de chiffrement est établie lorsque le certificat est créé. Pour plus d’informations, consultez [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md). Gérez avec précaution les certificats que vous utilisez.  
+ La méthode de chiffrement est établie lorsque le certificat est créé. Pour plus d’informations, consultez [Autoriser un point de terminaison de mise en miroir de bases de données à utiliser des certificats pour les connexions sortantes &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md). Gérez avec précaution les certificats que vous utilisez.  
   
  Une instance de serveur utilise la clé privée de son propre certificat pour établir son identité lors de la configuration d'une connexion. L'instance de serveur qui reçoit la demande de connexion utilise la clé publique du certificat de l'émetteur pour authentifier l'identité de celui-ci. Par exemple, considérons deux instances de serveur, en l'occurrence Serveur_A et Serveur_B. Serveur_A utilise sa clé privée pour chiffrer l'en-tête de connexion avant d'envoyer une demande de connexion à Serveur_B. Serveur_B utilise la clé publique du certificat de Serveur_A pour déchiffrer l'en-tête de connexion. Si l'en-tête déchiffré est correct, Serveur_B sait que l'en-tête a été chiffré par Serveur_A et la connexion est authentifiée. Si l'en-tête déchiffré est incorrect, Serveur_B sait que la demande de connexion n'est pas authentique et refuse la connexion.  
   
-##  <a name="DataEncryption"></a> Chiffrement des données  
+##  <a name="DataEncryption"></a>Chiffrement des données  
  Par défaut, un point de terminaison de mise en miroir de bases de données requiert le chiffrement des données envoyées via les connexions de mise en miroir. Dans ce cas, le point de terminaison ne peut se connecter qu'aux points de terminaison utilisant également le chiffrement. Sauf si vous pouvez garantir que votre réseau est sécurisé, il est recommandé d'imposer le chiffrement des connexions de mise en miroir de bases de données. Toutefois, vous pouvez désactiver le chiffrement ou le rendre disponible sans qu'il soit nécessaire. Si le chiffrement est désactivé, les données ne sont jamais chiffrées et le point de terminaison ne peut pas se connecter à un point de terminaison qui requiert le chiffrement. Si le chiffrement est pris en charge, les données ne sont chiffrées que si le point de terminaison opposé prend en charge ou requiert le chiffrement.  
   
 > [!NOTE]  
@@ -65,7 +65,8 @@ ms.locfileid: "62754298"
   
 |valeur ALGORITHM|Description|  
 |---------------------|-----------------|  
-|RC4|Indique que le point de terminaison doit utiliser l'algorithme RC4. Il s'agit du paramètre par défaut.<br /><br /> Remarque : L'algorithme RC4 est déconseillé. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Nous vous recommandons d'utiliser AES.|  
+|RC4|Indique que le point de terminaison doit utiliser l'algorithme RC4. Il s’agit de la valeur par défaut.<br /><br /> Remarque : l’algorithme RC4 est déconseillé. 
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Nous vous recommandons d'utiliser AES.|  
 |AES|Indique que le point de terminaison doit utiliser l'algorithme AES.|  
 |AES RC4|Indique que les deux points de terminaison négocieront un algorithme de chiffrement avec ce point de terminaison, en donnant la préférence à l'algorithme AES.|  
 |RC4 AES|Indique que les deux points de terminaison négocieront un algorithme de chiffrement avec ce point de terminaison, en donnant la préférence à l'algorithme RC4.|  
@@ -80,7 +81,7 @@ ms.locfileid: "62754298"
  Pour plus d’informations sur la syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] permettant de définir le chiffrement, consultez [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql).  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
- **Pour configurer la sécurité du transport pour un point de terminaison de mise en miroir de bases de données**  
+ **Pour configurer la sécurité de transport pour un point de terminaison de mise en miroir de bases de données**  
   
 -   [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
@@ -94,12 +95,12 @@ ms.locfileid: "62754298"
  [Choisir un algorithme de chiffrement](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
  [DROP ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-endpoint-transact-sql)   
- [Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
+ [Security Center pour SQL Server Moteur de base de données et Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
- [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)   
- [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)   
+ [sys. database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)   
+ [sys. dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)   
  [Résolution des problèmes de configuration de mise en miroir de bases de données &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Résoudre les problèmes de Configuration des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;supprimé](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)
+ [Résoudre les problèmes de configuration de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;supprimé](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)
   
   

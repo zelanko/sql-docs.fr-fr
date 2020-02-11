@@ -18,21 +18,21 @@ ms.assetid: e58684d1-c394-48de-906e-da6ee91100c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: de01ffe595a636356bf5b82ed2c5540cc3f5a092
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056501"
 ---
-# <a name="spdroplogin-transact-sql"></a>sp_droplogin (Transact-SQL)
+# <a name="sp_droplogin-transact-sql"></a>sp_droplogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ceci empêche l'accès à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous ce nom de connexion.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md) à la place.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez à la place [Drop login](../../t-sql/statements/drop-login-transact-sql.md) .  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,13 +42,13 @@ sp_droplogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @loginame = ] 'login'` Est la connexion à supprimer. *connexion* est **sysname**, sans valeur par défaut. *connexion* doit déjà exister dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+`[ @loginame = ] 'login'`Nom de connexion à supprimer. *login* est de **type sysname**, sans valeur par défaut. la *connexion* doit déjà exister [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dans.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_droplogin** appelle DROP LOGIN.  
+ **sp_droplogin** appelle Drop login.  
   
  **sp_droplogin** ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
   
@@ -56,7 +56,7 @@ sp_droplogin [ @loginame = ] 'login'
  Nécessite l'autorisation ALTER ANY LOGIN sur le serveur.  
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant utilise `DROP LOGIN` pour supprimer la connexion `Victoria` d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette méthode est recommandée.  
+ L'exemple suivant utilise `DROP LOGIN` pour supprimer la connexion `Victoria` d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ceci est la méthode privilégiée.  
   
 ```  
 DROP LOGIN Victoria;  

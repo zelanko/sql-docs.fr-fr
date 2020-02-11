@@ -1,5 +1,5 @@
 ---
-title: Spécifiez une Version comme étant la dernière Version | Microsoft Docs
+title: Spécifier une version comme étant la dernière version | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f34631e979ded7a329939c23a758ccc0c9aea959
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773475"
 ---
 # <a name="specify-a-version-as-the-latest-version"></a>Désigner une version comme étant la dernière version
@@ -28,7 +28,7 @@ ms.locfileid: "62773475"
   
  Vous pouvez désigner une version comme étant la dernière version en procédant comme suit :  
   
--   **L’épinglage d’une version**. Lorsque vous mettez une version de fichier en attente, les versions ultérieures à la version en attente ne sont pas supprimées. Vous pouvez par ailleurs annuler la mise en attente d'un fichier préalablement définie. Lorsque vous effectuez cette opération, la toute dernière version archivée du fichier devient la dernière version. Vous ne pouvez toutefois pas extraire un fichier en attente.  
+-   **Épinglage d’une version**. Lorsque vous mettez une version de fichier en attente, les versions ultérieures à la version en attente ne sont pas supprimées. Vous pouvez par ailleurs annuler la mise en attente d'un fichier préalablement définie. Lorsque vous effectuez cette opération, la toute dernière version archivée du fichier devient la dernière version. Vous ne pouvez toutefois pas extraire un fichier en attente.  
   
 -   **Restauration d’une version spécifiée**. Lorsque vous restaurez une version, toutes les versions ultérieures à la version que vous avez restaurée sont supprimées du contrôle de code source. Vous pouvez alors extraire la dernière version restante.  
   
@@ -38,9 +38,9 @@ ms.locfileid: "62773475"
   
 2.  Dans l'Explorateur de solutions, sélectionnez le fichier que vous souhaitez désigner comme étant la dernière version.  
   
-3.  Sur le **fichier** menu, pointez sur **contrôle de code Source** et cliquez sur **ViewHistory**.  
+3.  Dans le menu **fichier** , pointez sur **contrôle de code source** , puis cliquez sur **ViewHistory**.  
   
-4.  Dans le **historique de** \<fichier > boîte de dialogue, sélectionnez la version que vous souhaitez spécifier en tant que la dernière version, puis cliquez sur **Pin**.  
+4.  Dans la boîte **de dialogue historique du** \<fichier>, sélectionnez la version que vous souhaitez spécifier comme la plus récente, puis cliquez sur **épingler**.  
   
      Un symbole de mise en attente s'affiche à côté de la version sélectionnée, indiquant qu'il s'agit de la version en cours du fichier. En cas de chargement d'une version différente dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], le système vous demande de recharger le fichier.  
   
@@ -50,11 +50,11 @@ ms.locfileid: "62773475"
   
 2.  Dans l'Explorateur de solutions, sélectionnez l'élément que vous souhaitez désigner comme étant la dernière version.  
   
-3.  Sur le **fichier** menu, pointez sur **contrôle de code Source** et cliquez sur **historique**.  
+3.  Dans le menu **fichier** , pointez sur **contrôle de code source** , puis cliquez sur **historique**.  
   
-4.  Dans le **Options d’historique** boîte de dialogue, cliquez sur **OK** pour afficher le **historique du fichier** boîte de dialogue.  
+4.  Dans la boîte de dialogue **options d’historique** , cliquez sur **OK** pour afficher la boîte **de dialogue historique du fichier** .  
   
-5.  Dans le **historique du fichier** , sélectionnez la version que vous voulez spécifier comme étant la dernière version, puis cliquez sur **restauration**.  
+5.  Dans la zone **historique du fichier** , sélectionnez la version que vous souhaitez spécifier comme version la plus récente, puis cliquez sur **restaurer**.  
   
      Un message, vous notifiant que toutes les versions ultérieures à la version que vous avez sélectionnée seront supprimées, s'affiche.  
   

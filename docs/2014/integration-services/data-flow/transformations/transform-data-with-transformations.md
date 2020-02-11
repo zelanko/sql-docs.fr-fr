@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9fb4014688f1899e813d1df3e677caf9ad7bfbf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770299"
 ---
 # <a name="transform-data-with-transformations"></a>Transformer des données avec des transformations
@@ -26,7 +26,7 @@ ms.locfileid: "62770299"
   
  Le schéma suivant illustre un flux de données simple qui possède une source, deux transformations et une destination.  
   
- ![Data flow](../../media/mw-dts-08.gif "Data flow")  
+ ![Data flow](../../media/mw-dts-08.gif "Flux de données") (Flux de données)  
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Les transformations procurent la fonctionnalité suivante :  
   
@@ -59,9 +59,9 @@ ms.locfileid: "62770299"
 -   [Définir les propriétés d’un composant de flux de données](../set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [tâche de flux de données](../../control-flow/data-flow-task.md)   
+ [Tâche de flux de données](../../control-flow/data-flow-task.md)   
  [Flux de données](../data-flow.md)   
- [Connecter des composants avec des chemins d’accès](../../connect-components-with-paths.md)   
+ [Connecter des composants avec des chemins](../../connect-components-with-paths.md)   
  [Gestion des erreurs dans les données](../error-handling-in-data.md)   
  [Flux de données](../data-flow.md)  
   

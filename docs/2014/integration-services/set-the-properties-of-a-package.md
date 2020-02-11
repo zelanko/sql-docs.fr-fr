@@ -1,5 +1,5 @@
 ---
-title: Définir les propriétés d’un Package | Microsoft Docs
+title: Définir les propriétés d’un package | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f105a7f30d2d1c42bfb31f1555bb976745bbbe4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055800"
 ---
 # <a name="set-the-properties-of-a-package"></a>Définir les propriétés d’un package
-  Cette procédure décrit comment configurer les propriétés d’un package dans la fenêtre **Propriétés**.  
+  Cette procédure décrit comment configurer les propriétés d’un package dans la fenêtre **Propriétés** .  
   
 > [!NOTE]  
 >  Le package doit être ouvert dans le concepteur SSIS pour que la fenêtre Propriétés affiche la liste des propriétés que vous pouvez définir pour configurer un package.  
@@ -47,6 +47,6 @@ ms.locfileid: "66055800"
   
 ## <a name="see-also"></a>Voir aussi  
  [Packages Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
- [Définir les propriétés d’un package](set-package-properties.md)  
+ [Définir les propriétés d'un package](set-package-properties.md)  
   
   

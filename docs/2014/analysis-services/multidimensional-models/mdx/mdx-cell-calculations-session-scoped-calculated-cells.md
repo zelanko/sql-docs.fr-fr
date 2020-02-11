@@ -1,5 +1,5 @@
 ---
-title: Création d’une Session spécifique de cellules calculées | Microsoft Docs
+title: Création de cellules calculées au niveau de la session | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4388ef278c0762184859162dc55f656aae1c9a15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074425"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>Création de cellules calculées au niveau de la session
@@ -31,7 +31,7 @@ ms.locfileid: "66074425"
 > [!IMPORTANT]  
 >  Cette syntaxe est déconseillée. Il est conseillé d'utiliser plutôt les assignations MDX. Pour plus d’informations sur les assignations, consultez [Script MDX de base &#40;MDX&#41;](the-basic-mdx-script-mdx.md).  
   
- Utilisez la syntaxe suivante pour définir une cellule calculée au niveau de la session à l'aide de l'instruction CREATE CELL CALCULATION :  
+ Utilisez la syntaxe suivante pour définir une cellule calculée au niveau de la session à l'aide de l'instruction CREATE CELL CALCULATION :  
   
 ```  
 CREATE CELL CALCULATION Cube_Expression.<CREATE CELL CALCULATION body clause>  
@@ -55,7 +55,7 @@ CREATE CELL CALCULATION Cube_Expression.<CREATE CELL CALCULATION body clause>
 > [!IMPORTANT]  
 >  Cette syntaxe est déconseillée. Il est conseillé d'utiliser plutôt les assignations MDX. Pour plus d’informations sur les assignations, consultez [Script MDX de base &#40;MDX&#41;](the-basic-mdx-script-mdx.md).  
   
- Utilisez la syntaxe suivante pour définir une cellule calculée au niveau de la session à l'aide de l'instruction ALTER CUBE :  
+ Utilisez la syntaxe suivante pour définir une cellule calculée au niveau de la session à l'aide de l'instruction ALTER CUBE :  
   
 ```  
 ALTER CUBE Cube_Identifier CREATE CELL CALCULATION  
@@ -79,10 +79,10 @@ FOR String_Expression AS 'MDX_Expression'
 |--------------|-----------------|  
 |Jeu vide|Expression de jeu MDX qui prend la valeur d'un ensemble vide. Dans ce cas, la portée de la cellule calculée est l'intégralité du cube.|  
 |Jeu à un seul membre|Expression de jeu MDX qui prend la valeur d'un seul membre.|  
-|Jeu de membres de niveau|Expression de jeu MDX qui prend la valeur des membres d'un même niveau. Un exemple de ceci est le *Level_Expression*.`Members` Fonction MDX. Pour inclure des membres calculés, utilisez le *Level_Expression*.`AllMembers` Fonction MDX.<br /><br /> Pour plus d’informations, consultez [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx).|  
-|Jeu de descendants|Expression de jeu MDX qui prend la valeur des descendants d'un membre spécifié. Un exemple de ceci est le `Descendants`(*Member_Expression*, *Level_Expression*, *Desc_Flag*) fonction MDX.<br /><br /> Pour plus d’informations, consultez [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
+|Jeu de membres de niveau|Expression de jeu MDX qui prend la valeur des membres d'un même niveau. L' *Level_Expression*en est un exemple.`Members` Fonction MDX. Pour inclure des membres calculés, utilisez l' *Level_Expression*.`AllMembers` Fonction MDX.<br /><br /> Pour plus d’informations, consultez [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx).|  
+|Jeu de descendants|Expression de jeu MDX qui prend la valeur des descendants d'un membre spécifié. Par `Descendants`exemple, la fonction MDX (*Member_Expression*, *Level_Expression*, *Desc_Flag*).<br /><br /> Pour plus d’informations, consultez [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création de calculs de cellules à l’aide de la syntaxe MDX &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
+ [Génération de calculs de cellules dans MDX &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
   
   

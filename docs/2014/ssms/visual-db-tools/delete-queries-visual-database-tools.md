@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e046aef7cd5fb4049b4bfb92c99272f625224c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62670472"
 ---
 # <a name="delete-queries-visual-database-tools"></a>Supprimer des requêtes (Visual Database Tools)
@@ -39,9 +39,9 @@ ms.locfileid: "62670472"
 >  Si vous souhaitez éliminer la requête du projet sans la supprimer, cliquez sur **Enlever**. Ensuite, vous pouvez cliquer avec le bouton droit sur le dossier de requête et choisir **Ajouter un élément** pour rechercher et rajouter la requête ultérieurement.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Effacer les résultats de requête &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Effacer les résultats de la requête &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Abandonner les modifications apportées aux requêtes &#40;Visual Database Tools&#41;](discard-changes-made-to-queries-visual-database-tools.md)   
- [Concevoir des requêtes et des vues des rubriques de procédures &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [Effectuer des opérations de base concernant les requêtes &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

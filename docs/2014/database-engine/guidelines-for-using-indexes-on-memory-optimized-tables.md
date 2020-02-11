@@ -1,5 +1,5 @@
 ---
-title: Instructions d’utilisation des index sur les Tables mémoire optimisées | Microsoft Docs
+title: Instructions relatives à l’utilisation d’index sur des tables optimisées en mémoire | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779223"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>Instructions pour utiliser les index sur les tables optimisées en mémoire
@@ -28,9 +28,9 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  S'il n'y a pas d'index sur la colonne c1, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] doit analyser la totalité de la table t, puis filtrer sur les lignes qui répondent à la condition c1=1. Toutefois, si t a un index sur la colonne c1, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut rechercher directement la valeur 1 et récupérer les lignes.  
   
- Lorsque vous recherchez des enregistrements ayant une valeur spécifique, ou une plage de valeurs, dans une ou plusieurs colonnes de la table, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut utiliser un index sur ces colonnes pour localiser rapidement les enregistrements correspondants. Les tables sur disque et optimisées en mémoire tirent parti des index. Il existe, toutefois, certaines différences entre les structures d'index, dont il faut tenir compte lorsqu'on utilise des tables optimisées en mémoire. (Les index sur les tables mémoire optimisées sont appelés index optimisés en mémoire.) Certaines des principales différences sont :  
+ Lorsque vous recherchez des enregistrements ayant une valeur spécifique, ou une plage de valeurs, dans une ou plusieurs colonnes de la table, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut utiliser un index sur ces colonnes pour localiser rapidement les enregistrements correspondants. Les tables sur disque et optimisées en mémoire tirent parti des index. Il existe, toutefois, certaines différences entre les structures d'index, dont il faut tenir compte lorsqu'on utilise des tables optimisées en mémoire. (Les index sur les tables optimisées en mémoire sont appelés des index optimisés en mémoire.) Voici quelques-unes des principales différences :  
   
--   Index optimisés en mémoire doivent être créés avec [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql). Les index sur disque peuvent être créés avec `CREATE TABLE` et `CREATE INDEX`.  
+-   Les index à mémoire optimisée doivent être créés avec [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql). Les index sur disque peuvent être créés avec `CREATE TABLE` et `CREATE INDEX`.  
   
 -   Les index optimisés en mémoire existent uniquement en mémoire. Les structures d'index ne sont pas conservées sur le disque et les opérations d'index ne sont pas consignées dans le journal des transactions. La structure de l'index est créée lorsque la table optimisée en mémoire est créée dans la mémoire, au cours de CREATE TABLE et lors du démarrage de la base de données.  
   
@@ -50,7 +50,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  Chaque index consomme de la mémoire. Les index de hachage consomment une quantité fixe de mémoire, en fonction du nombre de compartiments. Pour les index non cluster, la consommation de mémoire est une fonction du nombre de lignes et de la taille des colonnes clés d'index, avec une surcharge supplémentaire dépendant de la charge de travail. La mémoire pour les index optimisés en mémoire est en plus et est distincte de la mémoire utilisée pour stocker les lignes dans les tables optimisées en mémoire.  
   
- Les valeurs de clé en double partagent le même compartiment de hachage. Si un index de hachage contient plusieurs clés en double, les chaînes de hachage longues qui en résulte auront un impact sur les performances. Les collisions de hachage, qui se produisent dans un index de hachage, réduisent également les performances dans ce scénario. Pour cette raison, si le nombre de clés d’index uniques est au moins 100 fois plus petit que le nombre de lignes, vous pouvez réduire le risque de collisions de hachage en rendant le compartiment compter beaucoup plus volumineux (au moins huit fois le nombre de clés d’index uniques ; consultez [déterminer le Nombre de compartiments correct pour les index de hachage](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md) pour plus d’informations) ou vous pouvez éliminer les collisions de hachage en utilisant un index non cluster.  
+ Les valeurs de clé en double partagent le même compartiment de hachage. Si un index de hachage contient plusieurs clés en double, les chaînes de hachage longues qui en résulte auront un impact sur les performances. Les collisions de hachage, qui se produisent dans un index de hachage, réduisent également les performances dans ce scénario. Pour cette raison, si le nombre de clés d’index uniques est au moins de 100 fois plus petit que le nombre de lignes, vous pouvez réduire le risque de collisions de hachage en rendant le nombre de compartiments plus grand (au moins huit fois le nombre de clés d’index uniques. pour plus d’informations, consultez [détermination du nombre de compartiments correct pour les index de hachage](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md) )  
   
 ## <a name="determining-which-indexes-to-use-for-a-memory-optimized-table"></a>Détermination des index à utiliser pour une table optimisée en mémoire  
  Chaque table optimisée en mémoire doit avoir au moins un index. Notez que chaque contrainte PRIMARY KEY crée implicitement un index. Par conséquent, si une table possède une clé primaire, elle possède un index. Une clé primaire est requise pour une table optimisée en mémoire durable.  
@@ -71,13 +71,13 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
 |Analyse d'index, récupère toutes les lignes de la table.|Oui|Oui|Oui|  
 |Recherche d'index sur les prédicats d'égalité (=).|Oui<br /><br /> (Clé complète requise.)|Oui <sup>1</sup>|Oui|  
-|Recherche d’index sur les prédicats d’inégalité (>, <, \<=, > =, BETWEEN).|Non (résulte dans une analyse d'index)|Oui <sup>1</sup>|Oui|  
+|Recherche d’index sur les prédicats d’inégalité (> \<, <, =, >=, between).|Non (résulte dans une analyse d'index)|Oui <sup>1</sup>|Oui|  
 |Récupérez les lignes selon un ordre de tri qui correspond à la définition de l'index.|Non|Oui|Oui|  
 |Récupérez les lignes selon un ordre de tri inverse par rapport à la définition de l'index.|Non|Non|Oui|  
   
  Dans la table, Oui signifie que l'index peut traiter la demande et Non signifie que l'index ne peut pas être utilisé pour répondre à cette demande.  
   
- <sup>1</sup> pour un index non cluster optimisé en mémoire, la clé complète n’est pas nécessaire pour effectuer une recherche d’index. Même si, en fonction de l'ordre des colonnes de la clé d'index, une analyse se produit si une valeur d'une colonne vient après une colonne manquante.  
+ <sup>1</sup> pour un index optimisé en mémoire non cluster, la clé complète n’est pas requise pour effectuer une recherche d’index. Même si, en fonction de l'ordre des colonnes de la clé d'index, une analyse se produit si une valeur d'une colonne vient après une colonne manquante.  
   
 ## <a name="index-count"></a>Nombre d'index  
  Une table optimisée en mémoire peut avoir jusqu'à 8 index, y compris l'index créé avec la clé primaire.  
@@ -90,7 +90,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
      Le nettoyage de la mémoire fonctionne mieux si tous les index de la table sont utilisés fréquemment. Les index rarement utilisés peuvent entraîner un fonctionnement non optimal du système de nettoyage de la mémoire pour les anciennes versions de ligne.  
   
-## <a name="creating-a-memory-optimized-index-code-samples"></a>Création d’un Index optimisé en mémoire : Exemples de code  
+## <a name="creating-a-memory-optimized-index-code-samples"></a>Création d'un index mémoire optimisé : exemples de code  
  Index de hachage au niveau des colonnes :  
   
 ```sql  
@@ -173,8 +173,8 @@ go
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Index des Tables optimisées en mémoire](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
- [Déterminer le nombre de compartiments Correct pour les index de hachage](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md)   
+ [Index sur les tables optimisées en mémoire](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
+ [Détermination du nombre de compartiments correct pour les index de hachage](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md)   
  [Index de hachage](hash-indexes.md)  
   
   

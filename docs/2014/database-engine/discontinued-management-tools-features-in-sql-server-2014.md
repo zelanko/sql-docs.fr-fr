@@ -1,5 +1,5 @@
 ---
-title: Supprimées de fonctionnalités dans SQL Server 2014 des outils d’administration | Microsoft Docs
+title: Fonctionnalités des outils d’administration supprimées dans SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c966c3e4388588810438d7e91a9ae0356ef60c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780348"
 ---
 # <a name="discontinued-management-tools-features-in-sql-server-2014"></a>Fonctionnalités des outils d'administration supprimées dans SQL Server 2014
@@ -31,7 +31,7 @@ ms.locfileid: "62780348"
 ### <a name="activex-subsystem-for-sql-server-agent"></a>Sous-système ActiveX de SQL Server Agent  
  Le sous-système ActiveX de SQL Server Agent a été supprimé de cette version. Il n'existe aucune fonctionnalité de remplacement.  
   
-### <a name="spaddtask-spdeletetask-spupdatetask"></a>sp_addtask, sp_deletetask, sp_updatetask  
+### <a name="sp_addtask-sp_deletetask-sp_updatetask"></a>sp_addtask, sp_deletetask, sp_updatetask  
  Sp_addtask, sp_deletetask et sp_updatetask ont été supprimées de cette version. N'utilisez pas cette fonctionnalité dans les applications, qu'elles soient nouvelles ou mises à jour.  
   
 ### <a name="net-send-and-pager-notification"></a>Envoi réseau et notification de radiomessagerie  

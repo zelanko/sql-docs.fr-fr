@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af82c187fce638ddd1f28ab98a5109898f7cad25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768705"
 ---
 # <a name="token--ssis-expression"></a>TOKEN  (expression SSIS)
@@ -36,7 +36,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
  *occurrence*  
  Entier signé ou non signé qui spécifie le jeton à retourner. Par exemple, si vous spécifiez 3 comme valeur pour ce paramètre, le troisième jeton de la chaîne est retourné.  
   
-## <a name="result-types"></a>Types de résultats  
+## <a name="result-types"></a>Types des résultats  
  DT_WSTR  
   
 ## <a name="remarks"></a>Notes  

@@ -1,5 +1,5 @@
 ---
-title: Jeux de résultats de la carte à des Variables dans une tâche d’exécution SQL | Microsoft Docs
+title: Mapper des ensembles de résultats à des variables dans une tâche d’exécution SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 995afe55c1cd1b7d925c9267ba5dfa3aed038358
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057756"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Mapper des ensembles de résultats à des variables dans une tâche d’exécution SQL
@@ -30,11 +30,11 @@ ms.locfileid: "66057756"
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] contenant le package souhaité.  
   
-2.  Dans **l’Explorateur de solutions**, double-cliquez sur le package pour l’ouvrir.  
+2.  Dans **Explorateur de solutions**, double-cliquez sur le package pour l’ouvrir.  
   
 3.  Cliquez sur l'onglet **Flux de contrôle** .  
   
-4.  Si le package ne contient pas déjà une tâche d'exécution SQL, ajoutez-en une au flux de contrôle du package. Pour plus d’informations, consultez [ajouter ou supprimer une tâche ou un conteneur dans un flux de contrôle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+4.  Si le package ne contient pas déjà une tâche d'exécution SQL, ajoutez-en une au flux de contrôle du package. Pour plus d’informations, consultez [Ajouter ou supprimer une tâche ou un conteneur dans un workflow de contrôle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   .  
   
 5.  Double-cliquez sur la tâche d'exécution SQL.  
@@ -61,11 +61,11 @@ ms.locfileid: "66057756"
   
 ## <a name="see-also"></a>Voir aussi  
  [Exécution de requêtes SQL, tâche](control-flow/execute-sql-task.md)   
- [Ensembles de résultats dans la tâche d’exécution SQL](result-sets-in-the-execute-sql-task.md)   
- [Tâche Exécuter Package](control-flow/execute-package-task.md)   
+ [Jeux de résultats dans la tâche d’exécution SQL](result-sets-in-the-execute-sql-task.md)   
+ [Tâche d’exécution de package](control-flow/execute-package-task.md)   
  [Configurations du package](../../2014/integration-services/package-configurations.md)   
  [Créer des configurations de package](../../2014/integration-services/create-package-configurations.md)   
- [Utiliser les valeurs des Variables et des paramètres dans un Package enfant](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
+ [Utiliser les valeurs des variables et des paramètres dans un package enfant](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
  [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)  
   
   

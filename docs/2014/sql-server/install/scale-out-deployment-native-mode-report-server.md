@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: a9fe82102df73ddfa77b4636dd29793ac2694949
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952417"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Déploiement avec montée en puissance parallèle (serveur de rapports en mode natif)
   Utilisez la page **Déploiement avec montée en puissance parallèle** dans le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour afficher l'état d'initialisation d'un déploiement avec montée en puissance parallèle ou pour joindre un serveur de rapports à un déploiement avec montée en puissance parallèle. Un *déploiement avec montée en puissance* fait référence à deux ou plusieurs instances de serveurs de rapports qui partagent une même base de données de serveur de rapports.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode natif.  
   
  Un *serveur de rapports initialisé* décrit un serveur qui peut chiffrer et déchiffrer les données sensibles stockées dans une base de données de serveur de rapports (par exemple, les informations d'identification et les chaînes de connexion). L'initialisation d'un serveur de rapports est nécessaire à son fonctionnement.  
   
@@ -37,10 +37,10 @@ ms.locfileid: "71952417"
  Pour ouvrir la page, démarrez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et sélectionnez **Déploiement avec montée en puissance parallèle** dans le volet de navigation. Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Options  
- **Nom de l’SQL Server**  
- Spécifiez le nom de l’instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui héberge la base de données du serveur de rapports.  
+ **Nom du serveur SQL Server**  
+ Spécifiez le nom de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] l’instance qui héberge la base de données du serveur de rapports.  
   
- **Database Name**  
+ **Nom de la base de données**  
  Spécifie le nom de la base de données à laquelle l'instance de serveur de rapports est connectée.  
   
  **Mode serveur**  
@@ -63,20 +63,20 @@ ms.locfileid: "71952417"
   
      Pour un serveur de rapports qui fait déjà partie d'un déploiement avec montée en puissance parallèle, vous pouvez utiliser cette page pour ajouter ou supprimer des nœuds.  
   
- **Initialize**  
+ **Initialiser**  
  Cliquez sur **Initialiser** pour ajouter un serveur de rapports au déploiement avec montée en puissance parallèle. Cette étape configure un serveur de rapports de telle sorte qu'il utilise une clé symétrique dans une base de données de serveur de rapports partagée. Vous pouvez utiliser **Initialiser** pour ajouter une instance de serveur de rapports à un déploiement avec montée en puissance parallèle ou pour résoudre un problème de migration ou d'installation.  
   
  Une instance de serveur de rapports est disponible uniquement si vous avez précédemment configuré une connexion à une base de données de serveur de rapports partagée. De plus, vous devez effectuer l'initialisation à partir d'un serveur de rapports qui est déjà initialisé pour utiliser la base de données du serveur de rapports.  
   
- **Supprimer**  
+ **Remove**  
  Cliquez sur **Supprimer** pour supprimer de la base de données du serveur de rapports les clés de chiffrement de l'instance sélectionnée du serveur de rapports. Vous pouvez supprimer des clés pour retirer un serveur de rapports d'un déploiement avec montée en puissance parallèle ou pour résoudre un problème de migration ou d'installation. Avec cette option, seules les clés de chiffrement de l'instance spécifiée du serveur de rapports sont supprimées. Les données chiffrées dans la base de données du serveur de rapports ne sont pas concernées.  
   
  Par précaution, veillez à créer une copie de sauvegarde de la clé symétrique avant de la supprimer. Après avoir supprimé de la liste les clés de chiffrement du dernier serveur de rapports, vous introduisez de nouvelles conditions sur toutes les initialisations ultérieures de serveur de rapports pour cette base de données. En effet, après avoir initialisé un serveur de rapports, vous devez restaurer une copie de sauvegarde de la clé symétrique. La restauration de la clé symétrique est nécessaire pour pouvoir accéder aux données chiffrées actuellement présentes dans la base de données du serveur de rapports.  
   
- Si vous n'avez plus besoin des données chiffrées ou si vous ne possédez pas de copie de sauvegarde de la clé, vous devez supprimer les données chiffrées. Pour plus d’informations, consultez [clés &#40;de chiffrement&#41;SSRS en mode natif](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
+ Si vous n'avez plus besoin des données chiffrées ou si vous ne possédez pas de copie de sauvegarde de la clé, vous devez supprimer les données chiffrées. Pour plus d’informations, consultez [clés de chiffrement &#40;SSRS en mode natif&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Initialiser un serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [Initialiser un serveur de rapports &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
  [Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
   

@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 1f0cea859e9465eebefebc061ee51107dc7844aa
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71713310"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>Installation des composants SSMA sur SQL Server (OracleToSQL)
@@ -26,28 +26,28 @@ Outre l’installation de SSMA, vous devez également installer les composants s
   
 ## <a name="ssma-for-oracle-extension-pack"></a>SSMA pour le pack d’extension Oracle
 
-Le pack d’extension SSMA ajoute les bases de données **sysdb** et **ssmatesterdb** à l’instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La base de données **sysdb** contient les tables et les procédures stockées requises pour migrer des données et les fonctions définies par l’utilisateur qui émulent les fonctions système Oracle. La base de données **ssmatesterdb** contient les tables et les procédures requises par le composant testeur.  
+Le pack d’extension SSMA ajoute les bases de données **sysdb** et **ssmatesterdb** à l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]spécifiée de. La base de données **sysdb** contient les tables et les procédures stockées requises pour migrer des données et les fonctions définies par l’utilisateur qui émulent les fonctions système Oracle. La base de données **ssmatesterdb** contient les tables et les procédures requises par le composant testeur.  
   
-En outre, lorsque vous migrez des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA crée des travaux d’agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsque le moteur de migration de données côté serveur est utilisé pour la migration des données.  
+En outre, lorsque vous migrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , SSMA crée des travaux de l’agent lorsque le moteur de migration de données côté serveur est utilisé pour la migration des données.  
   
-### <a name="prerequisites"></a>Prérequis
+### <a name="prerequisites"></a>Conditions préalables requises
 
-Avant d’installer les composants de serveur SSMA pour Oracle sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], assurez-vous que le système répond aux exigences suivantes :  
+Avant d’installer les composants SSMA pour Oracle Server sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], assurez-vous que le système répond aux exigences suivantes :  
   
-- l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installée. SSMA ne prend pas en charge SQL Server édition Express 2008.
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l’instance est installée. SSMA ne prend pas en charge SQL Server édition Express 2008.
   
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3,1 ou une version ultérieure.  
+- [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3,1 ou une version ultérieure.  
   
 - Le fournisseur client Oracle ou le fournisseur de OLE DB pour Oracle, ainsi que la connectivité à la base de données Oracle que vous souhaitez migrer. Vous pouvez installer des fournisseurs à partir du support produit Oracle ou d’un site Web Oracle.  
   
-- Le service Browser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être en cours d’exécution pendant l’installation. Cette valeur est utilisée pour remplir une liste des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans l’Assistant installation. Vous pouvez désactiver le service Browser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] après l’installation.  
+- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Browser doit être en cours d’exécution pendant l’installation. Cette valeur est utilisée pour remplir une liste des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans l’Assistant installation. Vous pouvez désactiver le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Browser après l’installation.  
   
     > [!NOTE]  
-    > Si le service Browser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d’exécution, mais que vous ne voyez toujours pas la liste des instances dans le programme d’installation, vous devez débloquer le port UDP 1434. Vous pouvez utiliser le pare-feu Windows pour débloquer temporairement le port, ou vous pouvez désactiver temporairement le pare-feu Windows. Vous devrez peut-être également désactiver temporairement le logiciel antivirus. Veillez à activer les pare-feu et les logiciels antivirus après l’installation.  
+    > Si le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Browser est en cours d’exécution, mais que vous ne voyez toujours pas la liste des instances dans le programme d’installation, vous devez débloquer le port UDP 1434. Vous pouvez utiliser le pare-feu Windows pour débloquer temporairement le port, ou vous pouvez désactiver temporairement le pare-feu Windows. Vous devrez peut-être également désactiver temporairement le logiciel antivirus. Veillez à activer les pare-feu et les logiciels antivirus après l’installation.  
   
 ### <a name="installing-the-extension-pack"></a>Installation du pack d’extension
 
-Vous pouvez installer le pack d’extension à tout moment avant de migrer les données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Vous pouvez installer le pack d’extension à tout moment avant de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]migrer des données vers.  
   
 > [!IMPORTANT]  
 > Pour installer le pack d’extension, vous devez être membre du rôle de serveur **sysadmin** sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -58,21 +58,21 @@ Vous pouvez installer le pack d’extension à tout moment avant de migrer les d
   
     Selon la version de WinZip que vous possédez, vous pouvez double-cliquer sur le fichier ou cliquer avec le bouton droit sur le fichier, puis sélectionner **extraire tout** ou **ouvrir dans WinZip**. Suivez les instructions de l’interface utilisateur WinZip pour extraire les fichiers.  
   
-2. Copier **SSMA pour le pack d’extension Oracle. *n*. Install. exe** (où *n* est le numéro de Build) sur l’ordinateur qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+2. Copier **SSMA pour le pack d’extension Oracle.* n*. Install. exe** (où *n* est le numéro de Build) sur l’ordinateur qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-3. Double-cliquez sur **SSMA pour le pack d’extension Oracle. *n*. Installez. exe**.  
+3. Double-cliquez sur **SSMA pour le pack d’extension Oracle.* n*. Installez. exe**.  
   
-4. Dans la page **Bienvenue** , sélectionnez **suivant**.  
+4. Sur la page d’**accueil**, sélectionnez **Suivant**.  
   
 5. Sur la page **contrat de licence utilisateur final** , lisez le contrat de licence. Si vous acceptez, activez la case à cocher **J’accepte les termes du contrat de licence** , puis sélectionnez **suivant**.  
   
 6. Dans la page **choisir le type d’installation** , sélectionnez **standard**.  
   
-7. Dans la page **Prêt pour l'installation** , sélectionnez **Installer**.  
+7. Sur la page **prêt pour l’installation** , sélectionnez **installer**.  
   
 8. Dans la page **fin de la première étape de l’installation** , sélectionnez **suivant**.  
   
-    Une nouvelle boîte de dialogue s’affiche, dans laquelle vous sélectionnez l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour l’installation du pack d’extension.  
+    Une nouvelle boîte de dialogue s’affiche, dans laquelle vous sélectionnez l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de pour l’installation du pack d’extension.  
   
 9. Sélectionnez l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers laquelle vous allez migrer des schémas Oracle, puis sélectionnez **suivant**.  
   
@@ -80,7 +80,7 @@ Vous pouvez installer le pack d’extension à tout moment avant de migrer les d
   
 10. Sur la page connexion, sélectionnez la méthode d’authentification, puis cliquez sur **suivant**.  
   
-    L’authentification Windows utilise vos informations d’identification Windows pour essayer de vous connecter à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous sélectionnez l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez entrer un nom de connexion et un mot de passe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    L’authentification Windows utilise vos informations d’identification Windows pour essayer de vous connecter à l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de. Si vous sélectionnez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification, vous devez entrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un nom de connexion et un mot de passe.  
   
 11. Sur la page suivante, sélectionnez **installer la base de données des utilitaires** *n*, où *n* est le numéro de version, puis sélectionnez **suivant**.  
   
@@ -88,7 +88,7 @@ Vous pouvez installer le pack d’extension à tout moment avant de migrer les d
   
     Si l’option **installer la base de données du testeur** est cochée, la base de données **ssmatesterdb** du testeur est créée.  
   
-12. Pour installer les utilitaires sur une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sélectionnez **Oui**, puis **suivant**, ou pour quitter l’Assistant, sélectionnez **non**.  
+12. Pour installer les utilitaires sur une autre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de, sélectionnez **Oui**, puis cliquez sur **suivant**, ou pour quitter l’Assistant, sélectionnez **non**.  
   
 13. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou à l’aide de l’utilitaire sqlcmd, exécutez le script suivant pour activer le CLR :  
   
@@ -99,17 +99,17 @@ Vous pouvez installer le pack d’extension à tout moment avant de migrer les d
     GO  
     ```
 
-    Si le CLR n’est pas activé, vous recevrez l’erreur suivante lorsque SSMA se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
+    Si le CLR n’est pas activé, vous recevrez l’erreur suivante lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SSMA se connecte à :  
   
     SSMA n’a pas pu récupérer les informations de version de l’assembly du pack d’extension. Réinstallez le pack d’extension sur le serveur de base de données.  
   
 ### <a name="sql-server-database-objects"></a>SQL Server les objets de base de données  
 
-Une fois que vous avez installé le pack d’extension, une table **ssma_oracle. bcp _migration_packages** apparaît dans la base de données **sysdb** .
+Une fois que vous avez installé le pack d’extension, une table **ssma_oracle. bcp_migration_packages** apparaît dans la base de données **sysdb** .
 
-Chaque fois que vous migrez des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA crée un travail d’agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ces travaux sont nommés **ssma_oracle Data migration package {GUID}** et sont visibles dans le nœud [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dans le dossier Jobs.  
+Chaque fois que vous migrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]des données vers, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA crée un travail de l’agent. Ces travaux sont nommés **ssma_oracle package de migration de données {GUID}** et sont visibles dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le nœud agent [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] de dans le dossier travaux.  
   
 ## <a name="see-also"></a>Voir aussi
 
-[Installation de SSMA pour Oracle &#40;client OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
-[Migration de bases de données Oracle &#40;vers SQL Server OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[Installation de SSMA pour Oracle client &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
+[Migration de bases de données Oracle vers SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

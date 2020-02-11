@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Transformation de regroupement probable (onglet Avancé) | Microsoft Docs
+title: Éditeur de transformation de regroupement probable (onglet Avancé) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,22 +15,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dcebe499eb80fbe01b9aa36a4e07785846eaf621
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058371"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>Éditeur de transformation de regroupement probable (onglet Avancé).
   Utilisez l'onglet **Avancé** de la boîte de dialogue **Éditeur de transformation de regroupement probable** pour spécifier les colonnes d'entrée et de sortie, définir des seuils de similarité et des séparateurs.  
   
 > [!NOTE]  
->  Le `Exhaustive` et `MaxMemoryUsage` propriétés de la transformation de regroupement probable ne sont pas disponibles dans le **éditeur de Transformation de regroupement probable**, mais peut être définie à l’aide de la **éditeur avancé**. Pour plus d'informations sur ces propriétés, consultez la section Transformation de regroupement approximatif dans [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
+>  Les `Exhaustive` `MaxMemoryUsage` propriétés et de la transformation de regroupement approximatif ne sont pas disponibles dans l **'éditeur de transformation de regroupement probable**, mais elles peuvent être définies à l’aide de l' **éditeur avancé**. Pour plus d'informations sur ces propriétés, consultez la section Transformation de regroupement approximatif dans [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
   
  Pour en savoir plus sur la transformation de regroupement approximatif, consultez [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md).  
   
 ## <a name="options"></a>Options  
- **Nom de la colonne clé d'entrée**  
+ **Nom de la colonne clé d’entrée**  
  Spécifiez le nom d'une colonne de sortie qui contient l'identificateur unique de chaque ligne d'entée. La colonne `_key_in` a un nom qui identifie chaque ligne de manière unique.  
   
  **Nom de la colonne clé de sortie**  
@@ -42,7 +42,7 @@ ms.locfileid: "66058371"
  **Seuil de similarité**  
  Définissez le seuil de similarité au moyen du curseur. Plus le seuil est proche de 1, plus la similarité entre les lignes est grande pour se qualifier comme lignes dupliquées. L'augmentation du seuil peut accélérer les recherches du fait que moins de candidats doivent être évalués.  
   
- **Séparateurs de jetons**  
+ **Délimiteurs de jetons**  
  La transformation fournit un ensemble de séparateurs par défaut pour marquer des données, mais vous devez ajouter ou supprimer des séparateurs en modifiant la liste en fonction des besoins.  
   
 ## <a name="see-also"></a>Voir aussi  

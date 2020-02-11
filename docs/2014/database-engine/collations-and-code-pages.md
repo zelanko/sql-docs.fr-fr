@@ -1,5 +1,5 @@
 ---
-title: Classements et Pages de codes | Microsoft Docs
+title: Classements et pages de codes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786734"
 ---
 # <a name="collations-and-code-pages"></a>Classements et pages de codes
+  
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] est limité au niveau des pages de codes prises en charge pour les colonnes (var)char dans les tables mémoire optimisées et les classements pris en charge utilisés dans des index et des procédures stockées compilées en mode natif.  
   
  La page de codes d'une valeur (var)char détermine le mappage entre les caractères et la représentation en octets stockée dans la table. Par exemple, dans la page de codes Windows Latin 1 (1252 ; valeur par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ), le caractère « a » correspond à l'octet 0x61.  
@@ -82,7 +83,7 @@ GO
   
 -   Toutes les expressions et les opérations de tri à l'intérieur des procédures stockées compilées en mode natif doivent utiliser les classements BIN2. La conséquence est que toutes les comparaisons et les opérations de tri sont basées sur les points de code Unicode des caractères (représentations binaires). Par exemple, tous les tris respectent la casse (« Z » vient avant « a »). Si nécessaire, utilisez le [!INCLUDE[tsql](../includes/tsql-md.md)] interprété pour le tri et la comparaison insensibles à la casse.  
   
--   La troncation des données UTF-16 n'est pas prise en charge dans les procédures stockées compilées en mode natif. Cela signifie que char n (var) (*n*) valeurs ne peut pas être convertis en type n (var) char (*je*), si *je* < *n*, si le classement possède la propriété _SC. Par exemple, ce qui suit n'est pas pris en charge :  
+-   La troncation des données UTF-16 n'est pas prise en charge dans les procédures stockées compilées en mode natif. Cela signifie que les valeurs n (var) char (*n*) ne peuvent pas être converties en type n (var) char (*i*), si *i* < *n*, si le classement a _SC propriété. Par exemple, ce qui suit n'est pas pris en charge :  
   
     ```sql  
     -- column definition using an _SC collation  

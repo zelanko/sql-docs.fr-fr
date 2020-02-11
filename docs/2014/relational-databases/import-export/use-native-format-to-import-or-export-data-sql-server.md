@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a2e91899172dfc6d640df0c33c77e32de3c1c21c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011662"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Utiliser le format natif pour importer ou exporter des données (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "66011662"
  L'utilisation d'un format natif entre tables identiques permet de gagner du temps et de l'espace puisque les conversions superflues des types de données à partir de et vers le format caractère sont éliminées. Pour atteindre la vitesse de transfert optimale, quelques contrôles sont effectués au niveau du formatage des données. Pour empêcher que des problèmes ne surviennent au niveau des données chargées, tenez compte des restrictions suivantes.  
   
 ## <a name="restrictions"></a>Restrictions  
- Pour importer des données au format natif, veillez à ce que les conditions suivantes soient réunies :  
+ Pour importer des données au format natif, veillez à ce que les conditions suivantes soient réunies :  
   
 -   Le fichier de données doit être au format natif.  
   
@@ -57,12 +57,12 @@ ms.locfileid: "66011662"
   
 -   Données `char` ou `varchar`  
   
-     Au début de chaque `char` ou `varchar` champ, **bcp** ajoute la longueur du préfixe.  
+     Au début de chaque `char` champ ou `varchar` , **BCP** ajoute la longueur du préfixe.  
   
     > [!IMPORTANT]  
-    >  En mode natif, l'utilitaire **bcp** convertit par défaut les caractères de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en caractères OEM avant de les copier dans un fichier de données. **L’utilitaire bcp** convertit les caractères d’un fichier de données en caractères ANSI avant de les importer en bloc dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Au cours de ces conversions, il est possible que des données caractères étendus soient perdues. Dans le cas de caractères étendus, vous devez soit utiliser le format natif Unicode, soit spécifier une page de codes.  
+    >  Lorsque le mode natif est utilisé, par défaut, l’utilitaire **BCP** convertit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les caractères de en caractères OEM avant de les copier dans un fichier de données. L’utilitaire **BCP** convertit les caractères d’un fichier de données en caractères ANSI avant de les importer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en bloc dans une table. Au cours de ces conversions, il est possible que des données caractères étendus soient perdues. Dans le cas de caractères étendus, vous devez soit utiliser le format natif Unicode, soit spécifier une page de codes.  
   
--   Données `sql_variant`  
+-   `sql_variant`métadonnée  
   
      Si des données `sql_variant` sont stockées en tant que SQLVARIANT dans un fichier de données au format natif, elles conservent l'ensemble de leurs caractéristiques. Les métadonnées qui enregistrent le type de données de chaque valeur de données sont stockées en même temps que celle-ci. Elles sont employées pour recréer la valeur de données avec le même type de données dans une colonne `sql_variant` de destination.  
   
@@ -71,16 +71,16 @@ ms.locfileid: "66011662"
      Pour plus d’informations sur la conversion de données, consultez [Conversion de types de données &#40;moteur de base de données&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine).  
   
 ## <a name="command-options-for-native-format"></a>Options de commande pour le format natif  
- Vous pouvez importer des données au format natif dans une table à l’aide de l’utilitaire **bcp** ou des instructions BULK INSERT ou INSERT ... SELECT \* FROM OPENROWSET(BULK...). Si vous utilisez une commande **bcp** ou une instruction BULK INSERT, vous pouvez spécifier le format de données dans la ligne de commande. Pour une instruction INSERT ... SELECT * FROM OPENROWSET(BULK...), vous devez spécifier le format de données dans un fichier de format.  
+ Vous pouvez importer des données au format natif dans une table à l’aide de la commande **BCP**, Bulk Insert ou Insert... SELECT \* from OPENROWSET (BULK...). Pour une commande **BCP** ou une instruction BULK INSERT, vous pouvez spécifier le format de données sur la ligne de commande. Pour une instruction INSERT... SELECT * FROM OPENROWSET(BULK...) , vous devez spécifier le format de données dans un fichier de format.  
   
  Le format natif est pris en charge par les options de ligne de commande suivantes :  
   
-|Command|Option|Description|  
+|Commande|Option|Description|  
 |-------------|------------|-----------------|  
-|**bcp**|**-n**|Provoque le **bcp** utilitaire à utiliser les types de données natif des données.<sup> 1</sup>|  
-|BULK INSERT|DATAFILETYPE **=’** native **’**|Utilise les types de données native ou widenative des données. Notez que DATAFILETYPE n'est pas nécessaire si un fichier de format spécifie les types de données.|  
+|**BCP**|**-n**|Fait en sorte que l’utilitaire **BCP** utilise les types de données natifs des données. <sup>1</sup>|  
+|BULK INSERT|DATAFILETYPE **= '** native **'**|Utilise les types de données native ou widenative des données. Notez que DATAFILETYPE n'est pas nécessaire si un fichier de format spécifie les types de données.|  
   
- <sup>1</sup> charger natif ( **- n**) les données dans un format compatible avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des clients, utilisez le **-V** basculer. Pour plus d’informations, consultez [Importer des données au format natif et caractère à partir de versions antérieures de SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ <sup>1</sup> pour charger des données natives (**-n**) dans un format compatible avec les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions antérieures des clients, utilisez le commutateur **-V** . Pour plus d’informations, consultez [Importer des données au format natif et caractère à partir de versions antérieures de SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
  Pour plus d’informations, consultez [Utilitaire bcp](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) ou [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
@@ -121,7 +121,7 @@ SELECT Col1,Col2,Col3 FROM myTestNativeData
 |Qualificateurs|Description|  
 |----------------|-----------------|  
 |**-n**|Spécifie les types de données natifs.|  
-|**-T**|Spécifie que l'utilitaire **bcp** se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec une connexion approuvée qui utilise la sécurité intégrée. Si **-T** n’est pas spécifié, vous devez indiquer **-U** et **-P** pour vous connecter.|  
+|**-T**|Spécifie que l'utilitaire **bcp** se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec une connexion approuvée qui utilise la sécurité intégrée. Si **-T** n’est pas spécifié, vous devez spécifier **-U** et **-P** pour vous connecter avec succès.|  
   
  Dans l'exemple suivant, des données sont exportées en bloc au format natif de la table `myTestNativeData` vers un nouveau fichier de données nommé `myTestNativeData-n.Dat`. À l'invite de commandes [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, entrez :  
   
@@ -146,23 +146,23 @@ GO
 ```  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
- **Pour utiliser des formats de données pour l'importation ou l'exportation en bloc**  
+ **Pour utiliser des formats de données pour l’importation en bloc ou l’exportation en bloc**  
   
--   [Importer des données au format natif et caractère à partir de versions antérieures de SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
+-   [Importer des données au format natif et caractère à partir de versions antérieures de SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [Utiliser le format caractère pour importer ou exporter des données &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utilisez le format caractère pour importer ou exporter des données &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Utiliser le format caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utilisez le format caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Utiliser le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [Utilisez le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilitaire bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [Types de données &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
  [sql_variant &#40;Transact-SQL&#41;](/sql/t-sql/data-types/sql-variant-transact-sql)   
  [Importer des données au format natif et caractère à partir de versions antérieures de SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [Utiliser le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+ [Utilisez le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
   

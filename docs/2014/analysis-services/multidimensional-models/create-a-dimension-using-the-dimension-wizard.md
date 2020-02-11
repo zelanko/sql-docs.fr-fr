@@ -1,5 +1,5 @@
 ---
-title: Créer une Dimension à l’aide de l’Assistant Dimension | Microsoft Docs
+title: Créer une dimension à l’aide de l’Assistant Dimension | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e23d4af96b5ce7c740f1b29893e6ee760104b871
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076424"
 ---
 # <a name="create-a-dimension-using-the-dimension-wizard"></a>Créer une dimension à l'aide de l'Assistant Dimension
@@ -24,7 +24,7 @@ ms.locfileid: "66076424"
   
 ### <a name="to-create-a-new-dimension"></a>Pour créer une dimension  
   
-1.  Dans l’ **Explorateur de solutions**, cliquez avec le bouton droit sur **Dimensions**, puis cliquez sur **Nouvelle dimension**.  
+1.  Dans **Explorateur de solutions**, cliquez avec le bouton droit sur **dimensions**, puis cliquez sur **nouvelle dimension**.  
   
 2.  Dans la page **Sélectionner la méthode de création** de l’Assistant Dimension, sélectionnez **Utiliser une table existante**, puis cliquez sur **Suivant**.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66076424"
   
          Si la liste **Colonnes clés** contient plusieurs colonnes clés, vous devez spécifier une colonne de nom qui fournit les valeurs d’un membre pour l’attribut de clé. Pour cela, vous pouvez créer un calcul nommé dans la vue de source de données et l'utiliser comme colonne de nom.  
   
-    5.  Cliquer sur **Suivant**.  
+    5.  Cliquez sur **Suivant**.  
   
 4.  Dans la page **Sélectionner les tables associées** , sélectionnez les tables associées à inclure dans votre dimension, puis cliquez sur **Suivant**.  
   

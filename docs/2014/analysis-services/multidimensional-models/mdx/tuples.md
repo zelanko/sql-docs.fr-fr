@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5025d76d439933f7392d55661ca52d3f33992db8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073768"
 ---
 # <a name="tuples"></a>Tuples
@@ -29,7 +29,7 @@ ms.locfileid: "66073768"
 (Measures.[Reseller Sales Amount])  
 ```  
   
- L'exemple ci-dessus identifie de manière unique la cellule composée du membre Reseller Sales Amount (volume de vente du revendeur) de la dimension de mesures et du membre par défaut de chaque hiérarchie d'attribut au sein du cube. Le membre par défaut est le membre (All) de chaque hiérarchie d'attribut autre que la hiérarchie d'attribut Destination Currency (devise de destination). Le membre par défaut de la hiérarchie d'attribut Destination Currency est le membre US Dollar (membre par défaut défini dans le script MDX du cube Adventure Works).  
+ L'exemple ci-dessus identifie de manière unique la cellule composée du membre Reseller Sales Amount (volume de vente du revendeur) de la dimension de mesures et du membre par défaut de chaque hiérarchie d'attribut au sein du cube. Le membre par défaut est le membre (All) de chaque hiérarchie d'attribut autre que la hiérarchie d'attribut Destination Currency (devise de destination). Le membre par défaut de la hiérarchie d'attribut Destination Currency est le membre US Dollar (membre par défaut défini dans le script MDX du cube Adventure Works).  
   
  La requête suivante retourne la valeur de la cellule référencée par le tuple spécifié dans l'exemple précédent ($80,450.596.98).  
   
@@ -40,7 +40,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Lorsque vous spécifiez un axe pour un jeu (composé ici d'un tuple unique) dans une requête, vous devez commencer par spécifier un jeu pour l'axe des colonnes avant de préciser un jeu pour l'axe des lignes. On peut également utiliser le terme *Axes(0)* ou simplement *0* pour désigner l’axe des colonnes. Pour plus d’informations sur les requêtes MDX, consultez [Requête MDX de base &#40;MDX&#41;](mdx-query-the-basic-query.md).  
+>  Lorsque vous spécifiez un axe pour un jeu (composé ici d'un tuple unique) dans une requête, vous devez commencer par spécifier un jeu pour l'axe des colonnes avant de préciser un jeu pour l'axe des lignes. On peut également utiliser le terme *Axes(0)* ou simplement *0*pour désigner l’axe des colonnes. Pour plus d’informations sur les requêtes MDX, consultez [Requête MDX de base &#40;MDX&#41;](mdx-query-the-basic-query.md).  
   
 ### <a name="tuples-as-values-or-member-references"></a>Tuples qui référencent des valeurs ou des membres  
  Vous pouvez utiliser un tuple dans une requête pour retourner la valeur que référence le tuple dans la cellule, comme dans l'exemple précédent. Vous pouvez aussi recourir à un tuple dans une expression pour désigner de manière explicite les membres spécifiés dans ce tuple. La requête ou l'expression peut alors se servir de fonctions qui permettent de retourner ou de consommer des tuples. Vous pouvez faire appel à un tuple pour soit désigner la valeur de la cellule que le tuple spécifie, soit spécifier une combinaison de membres à utiliser dans le cadre d'une fonction.  
@@ -63,7 +63,7 @@ FROM [Adventure Works]
 >  Vous pouvez désigner un membre d'attribut selon son nom ou sa clé de membre. Dans l'exemple précédent, vous pouviez remplacer la référence à [CY 2004] par &[2004].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts clés de MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [Concepts clés dans MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Espace du cube](cube-space.md)   
  [Autoexists](autoexists.md)   
  [Utilisation de membres, de tuples et de jeux &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)  

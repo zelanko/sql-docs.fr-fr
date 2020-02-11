@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 794dfea63b193ff79fb5831cb3a4e519d7d5f63e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62691384"
 ---
 # <a name="set-the-max-degree-of-parallelism-option-for-optimal-performance"></a>Définir l'option max degree of parallelism pour des performances optimales
@@ -26,9 +26,9 @@ ms.locfileid: "62691384"
  Définissez l'option max degree of parallelism sur 8 ou une valeur supérieure à l'aide de sp_configure.  
   
 ## <a name="for-more-information"></a>Pour plus d'informations  
- [Article 329204 de la Base de connaissances Microsoft](https://go.microsoft.com/fwlink/?linkid=117786)  
+ [Article 329204 de la base de connaissances Microsoft](https://go.microsoft.com/fwlink/?linkid=117786)  
   
- [Configurer l'option de configuration du serveur Degré maximal de parallélisme](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)  
+ [Configurer l’option de configuration de serveur max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)  
   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   

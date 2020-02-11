@@ -1,5 +1,5 @@
 ---
-title: Déployer des projets sur le serveur Integration Services | Microsoft Docs
+title: Déployer des projets sur Integration Services Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e260825532f66205e301628f60d68d93f8e7c04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059580"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Déployer des projets sur le serveur Integration Services
@@ -23,13 +23,13 @@ ms.locfileid: "66059580"
  Pour plus d’informations sur les environnements, consultez [Créer et mapper un environnement serveur](../../2014/integration-services/create-and-map-a-server-environment.md).  
   
 > [!NOTE]  
->  À l’instar des versions antérieures d’ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], la version actuelle vous permet aussi de déployer vos packages sur une instance de SQL Server et d’utiliser le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pour exécuter et gérer les packages. Utilisez le modèle de déploiement de package. Pour plus d’informations, consultez [déploiement de Package &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
+>  À l’instar des versions antérieures d’ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], la version actuelle vous permet aussi de déployer vos packages sur une instance de SQL Server et d’utiliser le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pour exécuter et gérer les packages. Utilisez le modèle de déploiement de package. Pour plus d’informations, consultez [déploiement de packages &#40;&#41;SSIS ](packages/legacy-package-deployment-ssis.md).  
   
  Pour déployer un projet sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , effectuez les tâches suivantes :  
   
 1.  Créez un catalogue SSISDB, si vous ne l’avez pas encore fait. Pour plus d’informations, consultez [Créer le catalogue SSIS](catalog/ssis-catalog.md).  
   
-2.  Convertissez le projet en modèle de déploiement de projet en exécutant **l’Assistant Conversion de projet Integration Services** . Pour plus d’informations, consultez les instructions ci-dessous : [Pour convertir un projet en modèle de déploiement de projet](#convert)  
+2.  Convertissez le projet en modèle de déploiement de projet en exécutant **l’Assistant Conversion de projet Integration Services** . Pour plus d’informations, consultez les instructions ci-dessous : [Pour convertir un projet en modèle de déploiement de projet](#convert).  
   
     -   Si vous avez créé le projet dans [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)], par défaut, le projet utilise le modèle de déploiement de projet.  
   
@@ -50,21 +50,21 @@ ms.locfileid: "66059580"
   
      Pour plus d’informations sur la mise à niveau des packages, consultez [Mettre à niveau des packages Integration Services](install-windows/upgrade-integration-services-packages.md) et [Mettre à niveau des packages Integration Services à l’aide de l’Assistant Mise à niveau de packages SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
-3.  Déployez le projet sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Pour plus d’informations, consultez les instructions ci-dessous : [Pour déployer un projet sur le serveur Integration Services](#deploy).  
+3.  Déployez le projet sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Pour plus d’informations, consultez les instructions ci-dessous : [Pour déployer un projet sur le serveur Integration Services](#deploy).  
   
 4.  (Facultatif) Créez un environnement pour le projet déployé. Pour plus d’informations, consultez [Créer et mapper un environnement serveur](../../2014/integration-services/create-and-map-a-server-environment.md).  
   
-##  <a name="convert"></a> Pour convertir un projet en modèle de déploiement de projet  
+##  <a name="convert"></a>Pour convertir un projet en modèle de déploiement de projet  
   
-1.  Ouvrez le projet dans [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]puis, dans l’Explorateur de solutions, cliquez avec le bouton droit sur le projet et cliquez sur **Convertir en modèle de déploiement de projet**.  
+1.  Ouvrez le projet dans [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], puis dans l’Explorateur de solutions, cliquez avec le bouton droit sur le projet et sélectionnez **Convertir en modèle de déploiement de projet**.  
   
      -ou-  
   
-     Dans l’Explorateur d’objets de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], cliquez avec le bouton droit sur le nœud **Projets** et sélectionnez **Importer les packages**.  
+     Depuis l’Explorateur d’objets dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], cliquez avec le bouton droit sur le nœud **Projets** et sélectionnez **Importer les packages**.  
   
 2.  Terminez l'Assistant. Pour plus d’informations, consultez [Assistant Conversion de projet Integration Services](../../2014/integration-services/integration-services-project-conversion-wizard.md).  
   
-##  <a name="deploy"></a> Pour déployer un projet sur le serveur Integration Services  
+##  <a name="deploy"></a>Pour déployer un projet sur le serveur Integration Services  
   
 1.  Ouvrez le projet dans [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]puis, dans le menu **Projet** , sélectionnez **Déployer** pour lancer **l’Assistant Déploiement d’Integration Services**.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66059580"
   
 2.  Dans la page **Sélectionner une source** , cliquez sur **Fichier de déploiement de projet** pour sélectionner le fichier de déploiement du projet.  
   
-     -ou-  
+     OU  
   
      Cliquez sur **Catalogue Integration Services** pour sélectionner un projet qui a déjà été déployé dans le catalogue SSISDB.  
   

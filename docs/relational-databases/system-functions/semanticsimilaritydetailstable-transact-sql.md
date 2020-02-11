@@ -18,10 +18,10 @@ ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 34473e6eb173a0aabc5c2067e50aeeec27ce5636
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067738"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68067738"
   
  Cette fonction d’ensemble de lignes peut être référencée dans la clause FROM d’une instruction SELECT 
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,7 +47,7 @@ SEMANTICSIMILARITYDETAILSTABLE
 ```  
   
 ##  <a name="Arguments"></a> Arguments  
- **table**  
+ **Tableau**  
  Nom d'une table dont l'indexation sémantique et de texte intégral est activée.  
   
  Ce nom peut être en une à quatre parties, mais un nom de serveur distant n'est pas autorisé.  
@@ -71,13 +71,13 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## <a name="table-returned"></a>Table retournée  
  Le tableau suivant décrit les informations sur les expressions clés renvoyées par cette fonction d'ensemble de lignes.  
   
-|Column_name|type|Description|  
+|Column_name|Type|Description|  
 |------------------|----------|-----------------|  
 |**keyphrase**|**NVARCHAR**|Expression clé qui contribue à la similarité entre le document source et le document correspondant.|  
-|**score**|**REAL**|Valeur relative de cette expression clé dans sa relation à toutes les autres expressions clés qui sont semblables dans les deux documents.<br /><br /> La valeur est une valeur décimale fractionnaire comprise dans la plage de [0.0, 1.0] dans laquelle un score élevé représente une pondération plus élevée, 1.0 étant le score parfait.|  
+|**enjeu**|**NON**|Valeur relative de cette expression clé dans sa relation à toutes les autres expressions clés qui sont semblables dans les deux documents.<br /><br /> La valeur est une valeur décimale fractionnaire comprise dans la plage de [0.0, 1.0] dans laquelle un score élevé représente une pondération plus élevée, 1.0 étant le score parfait.|  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
- Pour plus d’informations, consultez [trouver Documents similaires ou connexes avec la recherche sémantique](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
+ Pour plus d’informations, consultez [Rechercher des documents similaires et connexes avec la recherche sémantique](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
   
 ## <a name="metadata"></a>Métadonnées  
  Pour obtenir des informations et connaître l'état relatif à l'extraction de ressemblance sémantique et au remplissage, interrogez les vues de gestion dynamique suivantes :  
@@ -92,7 +92,7 @@ SEMANTICSIMILARITYDETAILSTABLE
  Requiert des autorisations SELECT sur la table de base sur laquelle les index sémantiques et de recherche en texte intégral ont été créés.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant récupère les 5 expressions clés qui avaient le score de similarité le plus élevé parmi les candidats spécifiés dans **HumanResources.JobCandidate** table de la base de données AdventureWorks2012. Le @CandidateId et @MatchedID variables représentent des valeurs de la colonne clé de l’index de recherche en texte intégral.  
+ L’exemple suivant récupère les 5 expressions clés qui ont le score de similarité le plus élevé parmi les candidats spécifiés dans la table **HumanResources. JobCandidate** de l’exemple de base de données AdventureWorks2012. Les @CandidateId variables @MatchedID et représentent des valeurs de la colonne clé de l’index de recherche en texte intégral.  
   
 ```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  

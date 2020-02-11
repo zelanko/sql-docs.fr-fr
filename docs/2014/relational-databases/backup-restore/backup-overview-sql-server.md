@@ -23,26 +23,26 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bf284ffce044e0efa1f855e0e504a1f92dc7e3da
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175982"
 ---
-# <a name="backup-overview-sql-server"></a>Vue d'ensemble de la sauvegarde (SQL Server)
+# <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   Cette rubrique présente le composant de sauvegarde de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La sauvegarde de votre base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est essentielle pour protéger vos données. Cette discussion couvre les types de sauvegardes et les restrictions liées aux sauvegardes. La rubrique présente également les unités et les supports de sauvegarde de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
 -   [Composants et concepts](#TermsAndDefinitions)  
   
--   [Compression de sauvegarde](#BackupCompression)  
+-   [Compression de la sauvegarde](#BackupCompression)  
   
 -   [Restrictions sur les opérations de sauvegarde dans SQL Server](#Restrictions)  
   
--   [Tâches connexes](#RelatedTasks)  
+-   [Tâches associées](#RelatedTasks)  
   
-##  <a name="TermsAndDefinitions"></a> Composants et concepts  
+##  <a name="TermsAndDefinitions"></a>Composants et concepts  
  sauvegarder [verbe]  
  Copie les données ou les enregistrements de journal d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de son journal des transactions sur une unité de sauvegarde, telle qu'un disque, pour créer une sauvegarde de données ou de journal.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "70175982"
  [mode de récupération](recovery-models-sql-server.md)  
  Propriété de base de données qui contrôle la maintenance du journal des transactions sur une base de données. Il existe trois modes de récupération : simple, complète et utilisant les journaux de transactions. Le mode de récupération de base de données détermine les spécifications de sauvegarde et de restauration.  
   
- [restauration](restore-and-recovery-overview-sql-server.md)  
+ [tabli](restore-and-recovery-overview-sql-server.md)  
  Processus à plusieurs phases qui copie toutes les données et les pages des journaux à partir d'une sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifiée dans une base de données spécifiée, puis restaure toutes les transactions journalisées dans la sauvegarde en appliquant les modifications journalisées pour rétablir un état ultérieur des données.  
   
  **Types de sauvegardes**  
@@ -86,7 +86,7 @@ ms.locfileid: "70175982"
  **Termes et définitions des supports de sauvegarde**  
   
  [unité de sauvegarde](backup-devices-sql-server.md)  
- Unité de disque ou de bande sur laquelle les sauvegardes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont écrites et à partir de laquelle elles peuvent être restaurées. Les sauvegardes SQL Server peuvent également être écrites dans un service de stockage d’objets blob Azure, et le format d’ **URL** est utilisé pour spécifier la destination et le nom du fichier de sauvegarde. Pour plus d’informations, consultez [SQL Server la sauvegarde et la restauration avec le service de stockage d’objets BLOB Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Unité de disque ou de bande sur laquelle les sauvegardes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont écrites et à partir de laquelle elles peuvent être restaurées. Les sauvegardes SQL Server peuvent également être écrites dans un service de stockage Blob Azure, et le format d’ **URL** est utilisé pour spécifier la destination et le nom du fichier de sauvegarde. Pour plus d’informations, voir [SQL Server Backup and Restore with Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)(en anglais).  
   
  [support de sauvegarde](media-sets-media-families-and-backup-sets-sql-server.md)  
  Une ou plusieurs bandes ou un ou plusieurs fichiers disque sur lesquels une ou plusieurs sauvegardes ont été écrites.  
@@ -97,14 +97,15 @@ ms.locfileid: "70175982"
  [famille de supports](media-sets-media-families-and-backup-sets-sql-server.md)  
  Sauvegardes créées sur une seule unité qui n'est pas mise en miroir ou sur un ensemble d'unités en miroir dans un jeu de supports  
   
- [jeu de supports](media-sets-media-families-and-backup-sets-sql-server.md)  
+ [support de sauvegarde](media-sets-media-families-and-backup-sets-sql-server.md)  
  Ensemble ordonné de supports de sauvegarde (bandes ou fichiers disque) sur lequel une ou plusieurs opérations de sauvegarde ont été écrites en utilisant un type et un nombre fixes d'unités de sauvegarde.  
   
  [jeu de supports mis en miroir](mirrored-backup-media-sets-sql-server.md)  
  Plusieurs copies (miroirs) d'un jeu de supports.  
   
 ##  <a name="BackupCompression"></a>Compression de la sauvegarde  
- [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] et les versions ultérieures prennent en charge la compression des sauvegardes. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures peuvent restaurer une sauvegarde compressée. Pour plus d’informations, consultez [Compression de sauvegardes &#40;SQL Server&#41;](backup-compression-sql-server.md).  
+ 
+  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] et les versions ultérieures prennent en charge la compression des sauvegardes. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures peuvent restaurer une sauvegarde compressée. Pour plus d’informations, consultez [Compression de sauvegardes &#40;SQL Server&#41;](backup-compression-sql-server.md).  
   
 ##  <a name="Restrictions"></a>Restrictions sur les opérations de sauvegarde dans SQL Server  
  La sauvegarde peut être effectuée si la base de données est en ligne et en cours d'utilisation. Cependant, les restrictions suivantes existent.  
@@ -123,7 +124,8 @@ ms.locfileid: "70175982"
  En règle générale, une sauvegarde de journal aboutit même si un ou plusieurs fichiers de données ne sont pas disponibles. Cependant, si un fichier contient des modifications journalisées en bloc et effectuées en mode de récupération utilisant les journaux de transactions, tous les fichiers doivent être en ligne pour que la sauvegarde aboutisse.  
   
 ### <a name="concurrency-restrictions-during-backup"></a>Restrictions d'accès concurrentiel lors d'une sauvegarde  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recourt à un processus de sauvegarde en ligne pour permettre qu'une base de données soit sauvegardée alors qu'elle est encore utilisée. Lors d'une sauvegarde, la plupart des opérations sont possibles ; par exemple, les instructions INSERT, UPDATE et DELETE sont autorisées. Cependant, si vous tentez une opération de sauvegarde pendant qu'un fichier de base de données est en cours de création ou de suppression, l'opération de sauvegarde attend que la création ou la suppression soit terminée ou que le délai d'attente de la sauvegarde expire.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recourt à un processus de sauvegarde en ligne pour permettre qu'une base de données soit sauvegardée alors qu'elle est encore utilisée. Lors d'une sauvegarde, la plupart des opérations sont possibles ; par exemple, les instructions INSERT, UPDATE et DELETE sont autorisées. Cependant, si vous tentez une opération de sauvegarde pendant qu'un fichier de base de données est en cours de création ou de suppression, l'opération de sauvegarde attend que la création ou la suppression soit terminée ou que le délai d'attente de la sauvegarde expire.  
   
  Parmi les opérations qui ne peuvent pas être effectuées lors d'une sauvegarde de base de données ou d'une sauvegarde du journal des transactions, citons :  
   
@@ -135,35 +137,35 @@ ms.locfileid: "70175982"
   
  Si une opération de sauvegarde chevauche une opération de compactage ou de gestion des fichiers, un conflit se produit. Quelle que soit l’opération en conflit qui a commencé en premier, la deuxième opération attend que le verrou défini par la première opération expire. (Le délai d’attente est contrôlé par un paramètre de délai d’expiration de session.) Si le verrou est libéré au cours du délai d’attente, la deuxième opération continue. Si le verrou expire, la seconde opération échoue.  
   
-##  <a name="RelatedTasks"></a> Tâches connexes  
- **Pour travailler avec des unités de sauvegarde et des supports de sauvegarde**  
+##  <a name="RelatedTasks"></a> Tâches associées  
+ **Pour utiliser des unités et supports de sauvegarde**  
   
 -   [Définir une unité de sauvegarde logique pour un fichier de disque &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
 -   [Définir une unité de sauvegarde logique pour un lecteur de bande &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
--   [Spécifier un disque ou une bande comme destination de sauvegarde &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [Spécifiez un disque ou une bande comme destination de sauvegarde &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
 -   [Supprimer une unité de sauvegarde &#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   
--   [Définir la date d’expiration d’une sauvegarde &#40;SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
+-   [Définir la date d’expiration sur un &#40;de sauvegarde SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
   
 -   [Afficher le contenu d’un fichier ou d’une bande de sauvegarde &#40;SQL Server&#41;](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
--   [Afficher les fichiers de données et les fichiers journaux dans un jeu de sauvegarde &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
+-   [Affichez les fichiers de données et les fichiers journaux dans un jeu de sauvegarde &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
 -   [Afficher les propriétés et le contenu d’une unité de sauvegarde logique &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
 -   [Restaurer une sauvegarde à partir d’une unité &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
--   [Didacticiel : SQL Server la sauvegarde et la restauration dans le service de stockage d’objets BLOB Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Didacticiel : Sauvegarde et restauration SQL Server dans le service Stockage Blob Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **Pour créer une sauvegarde**  
   
 > [!NOTE]  
 >  Pour réaliser des sauvegardes partielles ou de copie uniquement, vous devez utiliser l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](/sql/t-sql/statements/backup-transact-sql) avec l’option PARTIAL ou COPY_ONLY, respectivement.  
   
--   [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
+-   [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
 -   [Sauvegarder un journal des transactions &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
@@ -177,12 +179,12 @@ ms.locfileid: "70175982"
   
 -   [Spécifier si une opération de sauvegarde ou de restauration continue ou s’arrête après la survenue d’une erreur &#40;SQL Server&#41;](specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
--   [Utiliser Resource Governor pour limiter l’utilisation de l’UC par compression de la sauvegarde &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
+-   [Utilisez Resource Governor pour limiter l’utilisation de l’UC par compression de sauvegarde &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [Didacticiel : SQL Server la sauvegarde et la restauration dans le service de stockage d’objets BLOB Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Didacticiel : Sauvegarde et restauration SQL Server dans le service Stockage Blob Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sauvegarde et restauration des bases de données SQL Server](back-up-and-restore-of-sql-server-databases.md)   
+ [Sauvegarder et restaurer des bases de données SQL Server](back-up-and-restore-of-sql-server-databases.md)   
  [Vue d’ensemble de la restauration et de la récupération &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [Plans de maintenance](../maintenance-plans/maintenance-plans.md)   
  [Journal des transactions &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   

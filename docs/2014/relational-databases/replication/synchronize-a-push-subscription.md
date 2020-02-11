@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 60fdfbecf617f0a4aa92b40b72b1b5e969f69388
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745879"
 ---
-# <a name="synchronize-a-push-subscription"></a>Synchroniser un abonnement par émission de données
+# <a name="synchronize-a-push-subscription"></a>Synchroniser un abonnement par émission (push)
   Cette rubrique explique comment synchroniser un abonnement par émission de données (push) dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], d' [agents de réplication](agents/replication-agents-overview.md)ou d'objets RMO (Replication Management Objects).  
   
   
@@ -40,7 +40,7 @@ ms.locfileid: "62745879"
   
 4.  Cliquez avec le bouton droit sur l'abonnement à synchroniser, puis cliquez sur **Afficher l'état de synchronisation**.  
   
-5.  Dans la boîte de dialogue **Afficher l’état de synchronisation - \<Abonné> : \<Base_de_données_Abonnement>** , cliquez sur **Démarrer**. Lorsque la synchronisation est terminée, le message **Synchronisation terminée** s'affiche.  
+5.  Dans la boîte de dialogue **Afficher l’état de synchronisation - \<Abonné> : \<Base_de_données_Abonnement>**, cliquez sur **Démarrer**. Lorsque la synchronisation est terminée, le message **Synchronisation terminée** s'affiche.  
   
 6.  Cliquez sur **Fermer**.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62745879"
   
 4.  Un message sur l'établissement d'une connexion avec le serveur de distribution s'affiche. Cliquez sur **OK**.  
   
-5.  Dans la boîte de dialogue **Afficher l’état de synchronisation - \<Abonné> : \<Base_de_données_Abonnement>** , cliquez sur **Démarrer**. Lorsque la synchronisation est terminée, le message **Synchronisation terminée** s'affiche.  
+5.  Dans la boîte de dialogue **Afficher l’état de synchronisation - \<Abonné> : \<Base_de_données_Abonnement>**, cliquez sur **Démarrer**. Lorsque la synchronisation est terminée, le message **Synchronisation terminée** s'affiche.  
   
 6.  Cliquez sur **Fermer**.  
   
@@ -68,20 +68,20 @@ ms.locfileid: "62745879"
   
 4.  Pour afficher l'avancement de la synchronisation, cliquez avec le bouton droit sur l'abonnement, puis cliquez sur **Afficher les détails**.  
   
-##  <a name="ReplProg"></a> Utilisation des Agents de réplication  
+##  <a name="ReplProg"></a>Utilisation des agents de réplication  
  Les abonnements par envoi de données (push) peuvent être synchronisés par le biais de la programmation et à la demande en appelant le fichier exécutable de l'Agent de réplication approprié à partir de l'invite de commandes. Le fichier exécutable de l'Agent de réplication qui est appelé dépend du type de publication à laquelle l'abonnement par envoi de données (push) appartient.  
   
 #### <a name="to-start-the-distribution-agent-to-synchronize-a-push-subscription-to-a-transactional-publication"></a>Pour démarrer l'Agent de distribution et synchroniser un abonnement par envoi de données (push) vers une publication transactionnelle  
   
 1.  À partir de l'invite de commandes ou dans un fichier de commandes sur le serveur de distribution, exécutez **distrib.exe**. Spécifiez les arguments suivants sur la ligne de commande :  
   
-    -   **-Publisher**  
+    -   **-Serveur de publication**  
   
     -   **-PublisherDB**  
   
-    -   **-Distributor**  
+    -   **-Serveur de distribution**  
   
-    -   **-Subscriber**  
+    -   **-Abonné**  
   
     -   **-SubscriberDB**  
   
@@ -114,15 +114,15 @@ ms.locfileid: "62745879"
   
 1.  À partir de l'invite de commandes ou dans un fichier de commandes sur le serveur de distribution, exécutez **replmerg.exe**. Spécifiez les arguments suivants sur la ligne de commande :  
   
-    -   **-Publisher**  
+    -   **-Serveur de publication**  
   
     -   **-PublisherDB**  
   
     -   **-Publication**  
   
-    -   **-Distributor**  
+    -   **-Serveur de distribution**  
   
-    -   **-Subscriber**  
+    -   **-Abonné**  
   
     -   **-SubscriberDB**  
   
@@ -151,7 +151,7 @@ ms.locfileid: "62745879"
         > [!IMPORTANT]  
         >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-###  <a name="TsqlExample"></a> Exemples (Agents de réplication)  
+###  <a name="TsqlExample"></a>Exemples (agents de réplication)  
  L'exemple suivant démarre l'Agent de distribution pour synchroniser un abonnement par envoi de données (push).  
   
  
@@ -271,8 +271,8 @@ REM -- The following command must be supplied without line breaks.
  [!code-vb[HowTo#rmo_vb_SyncMergePushSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_syncmergepushsub)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts liés à Replication Management Objects](concepts/replication-management-objects-concepts.md)   
+ [Concepts liés à RMO (Replication Management Objects)](concepts/replication-management-objects-concepts.md)   
  [Synchroniser les données](synchronize-data.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)  
+ [Bonnes pratiques en matière de sécurité de la réplication](security/replication-security-best-practices.md)  
   
   

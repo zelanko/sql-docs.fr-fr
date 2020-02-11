@@ -15,19 +15,19 @@ ms.assetid: 0a8ccb80-c573-4418-84e5-f04a2b0e2ac1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4d6d54d1fc7c7742bf94e91d7370f356e28b5624
-ms.sourcegitcommit: 816ff47eeab157c66e0f75f18897a63dc8033502
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71207686"
 ---
 # <a name="odbc-data-sources-subkey"></a>Sous-clé de sources de données ODBC
 
 Les valeurs sous la `ODBC Data Sources` sous-clé répertorient les sources de données. Le format de ces valeurs est indiqué dans le tableau suivant.
 
-| Nom | Type de données | Données |
+| Name | Type de données | Données |
 | :--- | :-------- | :--- |
-| *data-source-name* | REG_SZ | *driver-description* |
+| *nom de la source de données* | REG_SZ | *Description du pilote* |
 | &nbsp; | &nbsp; | &nbsp; |
 
 La valeur de *nom de la source de données* est définie par le programme d’administration (qui invite habituellement l’utilisateur) et la *Description du pilote* est définie par le développeur du pilote (il s’agit généralement du nom du SGBD associé au pilote).

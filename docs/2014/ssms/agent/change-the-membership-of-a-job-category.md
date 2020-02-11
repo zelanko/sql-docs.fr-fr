@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5ed0e086f5743f6759ed8b317750eefcb377180
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782789"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Modifier l'appartenance d'une catégorie de travaux
@@ -33,7 +33,7 @@ ms.locfileid: "72782789"
   
      [Sécurité](#Security)  
   
--   **Pour modifier l'appartenance d'une catégorie de travaux, utilisez :**  
+-   **Pour modifier l’appartenance à une catégorie de travaux, utilisez :**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -52,23 +52,23 @@ ms.locfileid: "72782789"
   
 1.  Dans l' **Explorateur d'objets**, cliquez sur le signe plus (+) pour développer le serveur sur lequel vous souhaitez modifier une catégorie de travaux.  
   
-2.  Cliquez sur le signe plus (+) pour développer **SQL Server Agent**.  
+2.  Cliquez sur le signe plus (+) pour développer **Agent SQL Server**.  
   
 3.  Cliquez avec le bouton droit sur le dossier **Travaux** et sélectionnez **Gérer les catégories de travaux**.  
   
-4.  Dans la boîte de dialogue **Gérer les catégories de travaux**_nom_serveur_ , sélectionnez la catégorie de travaux que vous souhaitez modifier, puis cliquez sur **Afficher les travaux**.  
+4.  Dans la boîte de dialogue **gérer les catégories de travaux**_SERVER_NAME_ , sélectionnez la catégorie de travaux que vous souhaitez modifier, puis cliquez sur **afficher les travaux**.  
   
 5.  Sélectionnez la case à cocher **Afficher tous les travaux** .  
   
 6.  Pour ajouter un travail à la catégorie, dans la grille principale, sélectionnez la case à cocher correspondant au travail dans la colonne **Sélectionner** . Pour supprimer un travail de la catégorie, désactivez la case à cocher correspondante. Lorsque vous avez terminé, cliquez sur **OK**.  
   
-7.  Fermez la boîte de dialogue **Gérer les catégories de travaux**_nom_serveur_ .  
+7.  Fermez la boîte de dialogue **gérer les catégories de travaux**_SERVER_NAME_ .  
   
 ##  <a name="TSQL"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-change-the-membership-of-a-job-category"></a>Pour modifier l'appartenance d'une catégorie de travaux  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -84,9 +84,9 @@ ms.locfileid: "72782789"
     GO  
     ```  
   
- Pour plus d’informations, [consultez &#40;SP_UPDATE_JOB Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql).  
+ Pour plus d’informations, consultez [sp_update_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql).  
   
 ##  <a name="SMO"></a>Utilisation de SQL Server Management Objects  
- **Pour modifier l'appartenance d'une catégorie de travaux**  
+ **Pour modifier l’appartenance à une catégorie de travaux**  
   
  Utilisez la classe `JobCategory` à l'aide d'un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell.  

@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 175c1f5b1f507078f461a07e30c62fb68f7cfb02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62678993"
 ---
 # <a name="advanced-save-options"></a>Options d’enregistrement avancées
-  Utilisez cette boîte de dialogue pour sélectionner un schéma d'encodage linguistique et spécifier les caractères à insérer à la fin de chaque ligne. Pour accéder à la **Options d’enregistrement avancées** boîte de dialogue le **fichier** menu, cliquez sur **enregistrer** \<nom de la requête > **.sql comme** à Ouvrez le **enregistrer le fichier sous** boîte de dialogue, cliquez sur la flèche bas sur le **enregistrer** bouton, puis cliquez sur **enregistrer avec encodage**.  
+  Utilisez cette boîte de dialogue pour sélectionner un schéma d'encodage linguistique et spécifier les caractères à insérer à la fin de chaque ligne. Pour accéder à la boîte de dialogue **options d’enregistrement avancées** , dans le menu **fichier** , cliquez sur **Enregistrer** \<le nom de la requête>**. SQL en tant que** pour ouvrir la boîte de dialogue **enregistrer le fichier sous** , cliquez sur la flèche vers le bas sur le bouton **Enregistrer** , puis cliquez sur **enregistrer avec l’encodage**.  
   
 ## <a name="options"></a>Options  
  **Encodage**  

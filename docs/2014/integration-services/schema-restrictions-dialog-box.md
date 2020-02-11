@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3da112ff268e824792bdd29160ec97331e5b0f7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056150"
 ---
 # <a name="schema-restrictions-dialog-box"></a>Restrictions de schéma, boîte de dialogue
@@ -29,15 +29,15 @@ ms.locfileid: "66056150"
  Sélectionnez les contraintes à appliquer au schéma.  
   
  **Variable**  
- Utilisez une variable pour définir les restrictions. Sélectionnez une variable dans la liste ou cliquez sur **Nouvelle variable...** pour en créer une.  
+ Utilisez une variable pour définir les restrictions. Sélectionnez une variable dans la liste ou cliquez sur **nouvelle variable...** pour créer une variable.  
   
- **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md)  
+ **Rubriques connexes :** [Integration Services &#40;les variables de&#41; SSIS](integration-services-ssis-variables.md) , [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   
  **Text**  
  Entrez le texte qui définit les restrictions.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de boucle foreach &#40;Page de Collection&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
+ [Éditeur de boucle foreach &#40;page de collection&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Conteneur de boucles Foreach](control-flow/foreach-loop-container.md)  
   
   

@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa12421f39119fbbb5e40c8c2b6dc7f103cd9a45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676880"
 ---
 # <a name="add-or-edit-filter"></a>Ajouter un filtre ou Modifier le filtre
-  Les boîtes de dialogue **Ajouter un filtre** et **Modifier le filtre** permettent d'ajouter et de modifier des filtres de lignes statiques ou paramétrés.  
+  Les boîtes de dialogue **Ajouter un filtre** et **modifier le filtre** permettent d’ajouter et de modifier des filtres de lignes statiques et des filtres de lignes paramétrables.  
   
 > [!NOTE]  
 >  Pour pouvoir modifier un filtre dans une publication existante, vous devez procéder au préalable à un nouvel instantané de la publication. Si cette dernière dispose d'abonnements, ces abonnements doivent alors être réinitialisés. Pour plus d’informations sur les modifications de propriétés, consultez [Changer des propriétés de publication et d’article](publish/change-publication-and-article-properties.md).  
@@ -32,7 +32,7 @@ ms.locfileid: "62676880"
 ## <a name="options"></a>Options  
  Cette boîte de dialogue lance un processus en deux étapes pour les publications transactionnelles et d'instantané d'une part et un processus en trois étapes dans le cas des publications de fusion d'autre part. Quel que soit le type de publication choisi, vous devez choisir une table à filtrer ainsi qu'une ou plusieurs colonnes à ajouter au filtre ; le filtre est défini en tant que clause WHERE standard.  
   
-1.  **Sélectionnez la table à filtrer**  
+1.  **Sélectionner la table à filtrer**  
   
      Si vous modifiez un filtre existant, sachez que vous ne pouvez pas changer de table choisie. Si vous ajoutez un nouveau filtre, sélectionnez alors une table à partir de la zone de liste déroulante. Les tables n'y apparaissent que si elles ont été sélectionnées sur la page **Articles** et ne possèdent pas déjà un filtre de lignes. Dans ce dernier cas, vous pouvez toujours en définir un nouveau de la façon suivante :  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62676880"
   
     3.  Modifiez un filtre existant dans la boîte de dialogue **Modifier le filtre** .  
   
-2.  **Complétez l'instruction de filtrage pour identifier les lignes de table que les abonnés doivent recevoir**  
+2.  **Complétez l’instruction de filtrage pour identifier les lignes de table que les abonnés doivent recevoir**  
   
      Définissez une nouvelle instruction de filtrage ou modifiez-en une existante. La zone de liste déroulante **Colonnes** répertorie toutes les colonnes que vous publiez à partir de la table à choisir dans **Sélectionnez la table à filtrer**. La zone de texte **Instruction de filtrage** comprend un texte par défaut, qui est de la forme suivante :  
   
@@ -53,9 +53,9 @@ ms.locfileid: "62676880"
     > [!IMPORTANT]  
     >  Pour optimiser les performances, nous vous recommandons de ne pas appliquer de fonctions aux noms de colonnes dans des clauses de filtre de lignes paramétrés pour des publications de fusion, comme `LEFT([MyColumn]) = SUSER_SNAME()`. Si vous utilisez HOST_NAME dans une clause de filtrage puis en remplacez la valeur, il peut s'avérer judicieux de convertir les types de données avec la fonction CONVERT. Pour plus d'informations sur la conduite à adopter dans cette situation, consultez la section « Substitution de la valeur de HOST_NAME » de la rubrique [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
-3.  **Spécifiez combien d'abonnements recevront des données de cette table**  
+3.  **Spécifiez le nombre d’abonnements qui recevront des données de cette table**  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Réplication de fusion uniquement. La réplication de fusion vous permet d'indiquer le type de partitions répondant au mieux à vos données et votre application. Si vous sélectionnez **Une ligne de cette table ira à un seul abonnement**, la réplication de fusion définit l'option de non-chevauchement des partitions. Cette option, qui fonctionne avec les partitions précalculées pour améliorer les performances, permet de réduire au minimum le coût de téléchargement associé aux partitions précalculées. Le gain de performances lié au non-chevauchement des partitions est plus flagrant lorsque les filtres paramétrés et les filtres de jointure utilisés sont plus complexes. Si vous sélectionnez cette option, vous devez veiller à ce que les données soient partitionnées de telle sorte qu'une ligne ne puisse pas être répliquée vers plusieurs abonnés. Pour plus d'informations, consultez la section « Définition de « partition options » » dans la rubrique [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement ; réplication de fusion uniquement. La réplication de fusion vous permet d'indiquer le type de partitions répondant au mieux à vos données et votre application. Si vous sélectionnez **Une ligne de cette table ira à un seul abonnement**, la réplication de fusion définit l'option de non-chevauchement des partitions. Cette option, qui fonctionne avec les partitions précalculées pour améliorer les performances, permet de réduire au minimum le coût de téléchargement associé aux partitions précalculées. Le gain de performances lié au non-chevauchement des partitions est plus flagrant lorsque les filtres paramétrés et les filtres de jointure utilisés sont plus complexes. Si vous sélectionnez cette option, vous devez veiller à ce que les données soient partitionnées de telle sorte qu'une ligne ne puisse pas être répliquée vers plusieurs abonnés. Pour plus d'informations, consultez la section « Définition de « partition options » » dans la rubrique [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  Après avoir ajouté ou modifié un filtre, cliquez sur **OK** pour enregistrer les modifications et fermer ainsi la boîte de dialogue. Le filtre que vous spécifiez est ensuite analysé et exécuté sur la table indiquée dans la clause SELECT. Si l'instruction de filtrage contient des erreurs de syntaxe ou rencontre tout autre problème, vous en êtes alors informé pour vous donner la possibilité de modifier l'instruction de filtrage.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62676880"
  [Afficher et modifier les propriétés d’une publication](publish/view-and-modify-publication-properties.md)   
  [Filtrer des données publiées](publish/filter-published-data.md)   
  [Filtres de jointure](merge/join-filters.md)   
- [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
+ [Filtres de lignes paramétrés](merge/parameterized-filters-parameterized-row-filters.md)   
  [Publier des données et des objets de base de données](publish/publish-data-and-database-objects.md)  
   
   

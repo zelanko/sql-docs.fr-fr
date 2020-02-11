@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c9b5ca361cbfb5de42341fad8625f10d7ce3c2fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099810"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilitaire rskeymgmt (SSRS)
@@ -76,16 +76,17 @@ ms.locfileid: "66099810"
  Configure une instance de serveur de rapports distante de manière à partager la base de données de serveur de rapports qui est utilisée par l'instance de serveur de rapports locale.  
   
  **-r**  *installationID*  
- Supprime les informations de clé symétrique pour une instance de serveur de rapports spécifique, supprimant de ce fait le serveur de rapports d'un déploiement évolutif. *installationID* est une valeur GUID se trouvant dans le fichier RSReportserver.config.  
+ Supprime les informations de clé symétrique pour une instance de serveur de rapports spécifique, supprimant de ce fait le serveur de rapports d'un déploiement évolutif. 
+  *installationID* est une valeur GUID se trouvant dans le fichier RSReportserver.config.  
   
- `-f`  *file*  
+ `-f`  *txt*  
  Définit un chemin d'accès complet au fichier qui stocke une copie de sauvegarde des clés symétriques.  
   
  Pour **rskeymgmt -e**, la clé symétrique est écrite dans le fichier que vous spécifiez.  
   
  Pour **rskeymgmt -a**, la valeur de clé symétrique stockée dans le fichier est appliquée à l’instance du serveur de rapports.  
   
- `-p`  *password*  
+ `-p`  *de*  
  (Requis pour `-f`) Spécifie le mot de passe utilisé pour sauvegarder ou appliquer une clé symétrique. Cette valeur ne peut pas être vide.  
   
  `-i`  
@@ -97,10 +98,10 @@ ms.locfileid: "66099810"
  `-n`  
  Spécifie le nom de l'instance de serveur de rapports sur un ordinateur distant. Cet argument est facultatif si vous avez installé le serveur de rapports sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut (la valeur par défaut de `-n` est MSSQLSERVER). Si vous avez installé le serveur de rapports en tant qu'instance nommée, `-n` est requis.  
   
- `-u`  *useraccount*  
+ `-u`  *UserAccount*  
  Spécifie le compte d'administrateur sur l'ordinateur distant que vous joignez au déploiement évolutif. Si un compte n'est pas spécifié, les informations d'identification de l'utilisateur actuel sont employées.  
   
- `-v`  *password*  
+ `-v`  *de*  
  (Requis pour `-u`) Spécifie le mot de passe d'un compte d'administrateur sur l'ordinateur distant que vous souhaitez joindre au déploiement évolutif.  
   
  **-t**  *trace*  
@@ -147,9 +148,9 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  Un déploiement évolutif de serveur de rapports se réfère à un modèle de déploiement où plusieurs instances de serveur de rapports partagent la même base de données de serveur de rapports. Une base de données de serveur de rapports peut être utilisée par n'importe quelle instance de serveur de rapports qui stocke ses clés symétriques dans la base de données. Par exemple, si une base de données de serveurs de rapport contient des informations clés pour trois instances de serveur de rapports, les trois instances sont considérées comme étant membres du même déploiement évolutif.  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>Jonction d'instances de serveur de rapports sur un même ordinateur  
- Vous pouvez créer un déploiement évolutif à partir de plusieurs instances de serveur de rapports installées sur un même ordinateur. Ne définissez pas les arguments `-u` et `-v` si vous joignez des instances de serveur de rapports installées localement. Utilisez les arguments `-u` et `-v` uniquement lorsque vous joignez une instance d'un ordinateur distant. Si vous spécifiez ces arguments, vous obtiendrez l’erreur suivante : « Informations d’identification de l’utilisateur ne peut pas être utilisées pour les connexions locales ».  
+ Vous pouvez créer un déploiement évolutif à partir de plusieurs instances de serveur de rapports installées sur un même ordinateur. Ne définissez pas les arguments `-u` et `-v` si vous joignez des instances de serveur de rapports installées localement. Utilisez les arguments `-u` et `-v` uniquement lorsque vous joignez une instance d'un ordinateur distant. Si vous spécifiez ces arguments, l'erreur suivante s'affiche : « Les références utilisateur ne peuvent pas être utilisées pour des connexions locales ».  
   
- L'exemple suivant illustre la syntaxe de création d'un déploiement évolutif à l'aide de plusieurs instances locales. Dans cet exemple, <`initializedinstance`> est le nom d’une instance est déjà initialisé pour utiliser la base de données du serveur de rapports, et <`newinstance`> est le nom de l’instance que vous souhaitez ajouter au déploiement :  
+ L'exemple suivant illustre la syntaxe de création d'un déploiement évolutif à l'aide de plusieurs instances locales. Dans cet exemple, <`initializedinstance`> est le nom d’une instance qui est déjà initialisée pour utiliser la base de données du serveur de `newinstance` rapports, et <> est le nom de l’instance que vous souhaitez ajouter au déploiement :  
   
 ```  
 rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>  
@@ -165,7 +166,7 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>Emplacement du fichier  
- Rskeymgmt.exe se trouve dans **\<*lecteur*>:\Program Files\Microsoft SQL Server\110\Tools\Binn** ou dans **\<*lecteur*>:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn**. Vous pouvez exécuter l'utilitaire à partir de n'importe quel dossier de votre système de fichiers.  
+ Rskeymgmt. exe se trouve dans ** \<le *lecteur*> : \Program Files\Microsoft SQL Server\110\Tools\Binn** ou sur ** \<le *lecteur*> : \Program Files (x86) \Microsoft SQL Server\110\Tools\Binn**. Vous pouvez exécuter l'utilitaire à partir de n'importe quel dossier de votre système de fichiers.  
   
 ## <a name="remarks"></a>Notes  
  Un serveur de rapports chiffre les informations d'identification et les informations de connexion stockées. Une clé publique et une clé symétrique sont utilisées pour chiffrer les données. La base de données d'un serveur de rapports doit posséder les clés valides pour que le serveur de rapports puisse s'exécuter. Vous pouvez utiliser **rskeymgmt** pour sauvegarder, supprimer ou restaurer des clés. Si les clés ne peuvent pas être restaurées, cet outil permet de supprimer un contenu chiffré qui ne peut plus être utilisé.  
@@ -176,8 +177,8 @@ rskeymgmt -r <installationID>
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer un déploiement avec montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
- [Serveur de rapports Reporting Services &#40;mode natif&#41;](../report-server/reporting-services-report-server-native-mode.md)   
- [Utilitaires d’invite de commandes du serveur de rapports &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
+ [Reporting Services serveur de rapports &#40;le mode natif&#41;](../report-server/reporting-services-report-server-native-mode.md)   
+ [Utilitaires de ligne de commande du serveur de rapports &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
  [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

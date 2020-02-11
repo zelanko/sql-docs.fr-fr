@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 293bfe1f270d32bc64d4344c5363a0be2cd74b84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105520"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>Régions de données imbriquées (Générateur de rapports et SSRS)
@@ -36,13 +36,13 @@ ms.locfileid: "66105520"
   
  L'étendue des cellules des zones de tableau matriciel suivantes est décrite dans la liste ci-dessous :  
   
--   **Angle de tableau matriciel** L’étendue correspond aux données de la région de données liée à la région de données de tableau matriciel, une fois les expressions de filtre et de tri appliquées au dataset et au tableau matriciel externe.  
+-   **Angle** de tableau matriciel L’étendue correspond aux données de la région de données liées à la région de données de tableau matriciel, une fois les expressions de filtre et de tri appliquées au DataSet et au tableau matriciel externe.  
   
--   **Groupe de colonnes de tableau matriciel** Données figurant dans le groupe de colonnes le plus profond, une fois les expressions de filtre et de tri appliquées au dataset, au tableau matriciel externe et aux groupes de colonnes.  
+-   **Groupe de colonnes** de tableau matriciel Les données du groupe de colonnes le plus profond, après les expressions de filtre et de tri pour le DataSet, le tableau matriciel externe et les groupes de colonnes sont appliqués.  
   
--   **Groupe de lignes de tableau matriciel** Données figurant dans le groupe de lignes le plus profond, une fois les expressions de filtre et de tri appliquées au dataset, au tableau matriciel externe et aux groupes de lignes.  
+-   **Groupe de lignes de tableau matriciel** Les données du groupe de lignes le plus profond, une fois les expressions de filtre et de tri du DataSet, du tableau matriciel externe et des groupes de lignes appliquées.  
   
--   **Corps de tableau matriciel** Données figurant dans le groupe le plus profond représenté par l’intersection des groupes de lignes et des groupes de colonnes, une fois les expressions de filtre et de tri appliquées au dataset, au tableau matriciel externe et aux groupes de lignes et de colonnes.  
+-   **Corps** de tableau matriciel Les données dans le groupe le plus profond représenté par l’intersection des groupes de lignes et des groupes de colonnes, après les expressions de filtre et de tri pour le DataSet, le tableau matriciel externe et les groupes de lignes et de colonnes sont appliqués.  
   
  Pour plus d’informations, consultez [Zones de région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md).  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66105520"
  [Jauges &#40;Générateur de rapports et SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Mise en forme des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)   
- [Tutoriel : Ajouter un indicateur de performance clé à un rapport &#40;Générateur de rapports&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [Didacticiel : ajout d’un indicateur de performance clé à un rapport &#40;Générateur de rapports&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
  [Mise en forme des échelles sur une jauge &#40;Générateur de rapports et SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Les propriétés qui peuvent être définies en utilisant des Expressions de flux de données | Microsoft Docs
+title: Propriétés du workflow qui peuvent être définies à l’aide d’expressions | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f70a956834108c21dd7b17bb9f3e04db38f29bfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059942"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Propriétés du flux de données pouvant être définies à l’aide d’expressions
@@ -35,7 +35,7 @@ ms.locfileid: "66059942"
   
  Pour spécifier une expression de propriété pour une des propriétés d’objets de flux de données répertoriées dans cette rubrique, affichez la fenêtre **Propriétés** pour la tâche de flux de données en la sélectionnant sur l’aire **Flux de contrôle** du concepteur ou en sélectionnant l’onglet **Flux de données** du concepteur sans sélectionner de composant ou de chemin individuel. Sélectionnez la propriété **Expressions** , puis cliquez sur les points de suspension (...) pour afficher la boîte de dialogue de **l’Éditeur d’expressions de la propriété** . Déroulez la liste **Propriété** pour sélectionner une propriété, puis entrez une expression dans la zone de texte **Expression** ou cliquez sur les points de suspension (...) pour afficher la boîte de dialogue **Générateur d’expressions** .  
   
- La liste **Propriété** affiche les propriétés disponibles uniquement pour les objets de flux de données que vous avez déjà placés sur l’aire **Flux de données** du concepteur. Par conséquent, vous ne pouvez pas utiliser la liste **Propriété** pour consulter toutes les propriétés possibles des objets de flux de données qui prennent en charge les expressions de propriété. Par exemple, si vous avez placé une source Ado.net sur l’aire du concepteur, le **propriété** liste contient une entrée pour le `[ADO NET Source].[SqlCommand]` propriété. La liste affiche également de nombreuses propriétés de la tâche de flux de données elle-même.  
+ La liste **Propriété** affiche les propriétés disponibles uniquement pour les objets de flux de données que vous avez déjà placés sur l’aire **Flux de données** du concepteur. Par conséquent, vous ne pouvez pas utiliser la liste **Propriété** pour consulter toutes les propriétés possibles des objets de flux de données qui prennent en charge les expressions de propriété. Par exemple, si vous avez placé une source ADO .net sur l’aire du concepteur, la liste de **Propriétés** contient une entrée `[ADO NET Source].[SqlCommand]` pour la propriété. La liste affiche également de nombreuses propriétés de la tâche de flux de données elle-même.  
   
 ## <a name="properties-of-data-flow-objects-that-support-property-expressions"></a>Propriétés des objets de flux de données qui prennent en charge les expressions de propriété  
  Les valeurs des propriétés de la liste suivante peuvent être spécifiées à l'aide d'expressions de propriété.  
@@ -70,8 +70,8 @@ ms.locfileid: "66059942"
 |----------------------|--------------|  
 |Destination ADO NET|Propriété TableOrViewName<br /><br /> Propriété BatchSize<br /><br /> Propriété CommandTimeout|  
 |Destination de fichier plat|Propriété Header|  
-|Destination [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact|Propriété TableName|  
-|Destination [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Propriété BulkInsertTableName<br /><br /> Propriété BulkInsertFirstRow<br /><br /> Propriété BulkInsertLastRow<br /><br /> Propriété BulkInsertOrder<br /><br /> Propriété Timeout|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Destination compact|Propriété TableName|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]destination|Propriété BulkInsertTableName<br /><br /> Propriété BulkInsertFirstRow<br /><br /> Propriété BulkInsertLastRow<br /><br /> Propriété BulkInsertOrder<br /><br /> Propriété Timeout|  
   
 ## <a name="related-tasks"></a>Tâches associées  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66059942"
 ## <a name="see-also"></a>Voir aussi  
  [Expressions de propriété dans des packages](expressions/use-property-expressions-in-packages.md)   
  [Propriétés communes](../../2014/integration-services/common-properties.md)   
- [Propriétés personnalisées de transformation](data-flow/transformations/transformation-custom-properties.md)   
+ [Transformation, propriétés personnalisées](data-flow/transformations/transformation-custom-properties.md)   
  [Propriétés du chemin](../../2014/integration-services/path-properties.md)  
   
   

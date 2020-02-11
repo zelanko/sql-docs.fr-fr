@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 451b7ca4cc06269f116c62be2ef7f01f0e33abd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721886"
 ---
 # <a name="replication-agent-executables-concepts"></a>Concepts des exécutables de l'agent de réplication
@@ -34,7 +34,7 @@ ms.locfileid: "62721886"
   
  Il est possible d'exécuter des instances des agents de réplication suivants à l'aide de fichiers exécutables.  
   
--   [Agent de distribution de réplication](../agents/replication-distribution-agent.md)  
+-   [Replication Distribution Agent](../agents/replication-distribution-agent.md)  
   
 -   [Agent de lecture du journal des réplications](../agents/replication-log-reader-agent.md)  
   

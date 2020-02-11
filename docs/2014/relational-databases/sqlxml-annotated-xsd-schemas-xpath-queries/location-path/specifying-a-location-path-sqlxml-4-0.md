@@ -1,5 +1,5 @@
 ---
-title: En spécifiant un chemin d’accès d’emplacement (SQLXML 4.0) | Microsoft Docs
+title: Spécification d’un chemin d’accès d’emplacement (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 795e27c020c9ea4c80c858da734ebd315d56615c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012655"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Spécification d'un chemin d'accès d'emplacement (SQLXML 4.0)
@@ -29,44 +29,44 @@ ms.locfileid: "66012655"
 ## <a name="types-of-location-paths"></a>Types de chemin d'accès d'emplacement  
  Un chemin d'accès d'emplacement peut adopter l'une ou l'autre des formes suivantes :  
   
--   **Chemin d’accès d’emplacement absolu**  
+-   **Chemin d'accès d'emplacement absolu**  
   
      Un chemin d'accès d'emplacement absolu démarre au nœud racine du document. Il se compose d'une barre oblique (/) suivie éventuellement d'un chemin d'accès relatif. La barre oblique (/) sélectionne le nœud racine du document.  
   
--   **Chemin d’accès relatif**  
+-   **Chemin d'accès relatif de l'emplacement**  
   
-     Un chemin d'accès relatif de l'emplacement démarre au nœud de contexte dans le document. Un chemin d'accès d'emplacement consiste en une séquence d'une ou plusieurs étapes d'emplacement séparées par une barre oblique (/). Chaque étape sélectionne un ensemble de nœuds associés au nœud de contexte. La première séquence d'étapes sélectionne un ensemble de nœuds associés à un nœud de contexte. Chaque nœud dans cet ensemble est utilisé comme un nœud de contexte pour l'étape suivante. Les ensembles de nœuds identifiés par cette étape sont joints. Par exemple, **child::Order/child::OrderDetail** sélectionne le  **\<OrderDetail >** éléments enfants de la  **\<ordre >** élément enfants du nœud de contexte.  
+     Un chemin d'accès relatif de l'emplacement démarre au nœud de contexte dans le document. Un chemin d'accès d'emplacement consiste en une séquence d'une ou plusieurs étapes d'emplacement séparées par une barre oblique (/). Chaque étape sélectionne un ensemble de nœuds associés au nœud de contexte. La première séquence d'étapes sélectionne un ensemble de nœuds associés à un nœud de contexte. Chaque nœud dans cet ensemble est utilisé comme un nœud de contexte pour l'étape suivante. Les ensembles de nœuds identifiés par cette étape sont joints. Par exemple, **Child :: Order/Child :: OrderDetail** sélectionne le ** \<OrderDetail>** élément Children de l' ** \<ordre>** enfants de l’élément du nœud de contexte.  
   
     > [!NOTE]  
-    >  Dans l'implémentation SQLXML 4.0 de XPath, chaque requête XPath démarre au contexte racine, même si la requête XPath n'est pas explicitement absolue. Par exemple, une requête XPath commençant par « Customer » (Client) est traitée comme « /Customer ». Dans la requête XPath **Customer [Order]** , Customer démarre au contexte racine mais Order démarre au contexte Customer. Pour plus d’informations, consultez [Introduction à l’aide de requêtes XPath &#40;SQLXML 4.0&#41;](../introduction-to-using-xpath-queries-sqlxml-4-0.md).  
+    >  Dans l'implémentation SQLXML 4.0 de XPath, chaque requête XPath démarre au contexte racine, même si la requête XPath n'est pas explicitement absolue. Par exemple, une requête XPath commençant par « Customer » (Client) est traitée comme « /Customer ». Dans la requête XPath **Customer [Order]**, Customer commence au contexte racine, mais l’ordre commence dans le contexte du client. Pour plus d’informations, consultez [Introduction à l’utilisation de requêtes XPath &#40;SQLXML 4,0&#41;](../introduction-to-using-xpath-queries-sqlxml-4-0.md).  
   
 ## <a name="location-steps"></a>Étapes d'emplacement  
  Un chemin d'accès d'emplacement (absolu ou relatif) est composé d'étapes d'emplacement contenant trois parties :  
   
--   **Axis**  
+-   **Axe**  
   
      L'axe spécifie la relation d'arborescence entre les nœuds sélectionnés par l'étape d'emplacement et le nœud de contexte. Les axes `parent`, `child`, `attribute` et `self` sont pris en charge. Si un axe `child` est spécifié dans le chemin d'accès d'emplacement, tous les nœuds sélectionnés par la requête sont les enfants du nœud de contexte. Si un axe `parent` est spécifié, le nœud sélectionné est le nœud parent du nœud de contexte. Si un axe `attribute` est spécifié, les nœuds choisis sont les attributs du nœud de contexte.  
   
--   **test de nœud**  
+-   **Test de nœud**  
   
-     Un test de nœud spécifie le type de nœud sélectionné par le niveau d'emplacement. Chaque axe (`child`, `parent`, `attribute` et `self`) possède un type de nœud principal. Pour le `attribute` axe, le type de nœud principal est  **\<attribut >** . Pour le `parent`, `child`, et `self` axes, le type de nœud principal est  **\<élément >** .  
+     Un test de nœud spécifie le type de nœud sélectionné par le niveau d'emplacement. Chaque axe (`child`, `parent`, `attribute` et `self`) possède un type de nœud principal. Pour l' `attribute` axe, le type de nœud principal est ** \<attribute>**. Pour les `parent`axes `child`, et `self` , le type de nœud principal est ** \<l’élément>**.  
   
-     Par exemple, si le chemin d’accès d’emplacement spécifie **child::Customer**, le  **\<client >** éléments enfants du nœud de contexte sont sélectionnés. Étant donné que le `child` axe a  **\<élément >** en tant que type de nœud principal, le test de nœud, Customer, a la valeur TRUE si Customer est un  **\<élément >** nœud.  
+     Par exemple, si le chemin d’accès d’emplacement spécifie **Child :: Customer**, les ** \<** enfants de l’élément Customer>du nœud de contexte sont sélectionnés. Étant donné `child` que l’axe a ** \<un élément>** en tant que type de nœud principal, le test de nœud, Customer, a la valeur true si Customer est un ** \<élément>** nœud.  
   
--   **Prédicats de sélection (zéro ou plus)**  
+-   **Prédicats de sélection (aucun ou plusieurs)**  
   
      Un prédicat permet de filtrer un élément node-set par rapport à un axe. La définition de prédicats de sélection dans une expression XPath équivaut à spécifier une clause WHERE dans une instruction SELECT. Le prédicat est spécifié entre crochets. L'application du test spécifié dans les prédicats de sélection permet de filtrer les nœuds retournés par le test de nœud. Pour chaque nœud de l'élément node-set à filtrer, l'expression de prédicat est évaluée avec ce nœud en tant que nœud de contexte et avec le nombre de nœuds de l'élément node-set en tant que taille de contexte. Si l'expression de prédicat prend la valeur TRUE pour ce nœud, ce dernier est inclus dans l'élément node-set obtenu.  
   
-     La syntaxe d'une étape d'emplacement se compose du nom de l'axe et du test de nœud séparé par deux signes deux-points (::), suivis d'aucune ou plusieurs expressions, chacune entre crochets. Par exemple, l’expression XPath (chemin d’accès d’emplacement) **child::Customer [@CustomerID= 'ALFKI']** sélectionne tous les  **\<client >** éléments enfants du nœud de contexte. Le test dans le prédicat est appliqué à l’élément node-set, qui retourne uniquement la  **\<client >** nœuds d’élément avec l’attribut valeur 'ALFKI' pour son **CustomerID** attribut.  
+     La syntaxe d'une étape d'emplacement se compose du nom de l'axe et du test de nœud séparé par deux signes deux-points (::), suivis d'aucune ou plusieurs expressions, chacune entre crochets. Par exemple, l’expression XPath (chemin d’accès d’emplacement) **Child :@CustomerID: Customer [= 'ALFKI']** sélectionne tous les ** \<utilisateurs>** élément enfant du nœud de contexte. Le test dans le prédicat est ensuite appliqué à l’ensemble de nœuds, qui retourne uniquement le ** \<client>** nœuds d’élément avec la valeur d’attribut « ALFKI » pour son attribut **CustomerID** .  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Spécification d’un axe &#40;SQLXML 4.0&#41;](specifying-an-axis-sqlxml-4-0.md)  
+ [Spécification d’un axe &#40;SQLXML 4,0&#41;](specifying-an-axis-sqlxml-4-0.md)  
  Fournit des exemples de spécification d'un axe.  
   
- [Spécification d’un Test de nœud dans le chemin d’accès de l’emplacement &#40;SQLXML 4.0&#41;](specifying-a-node-test-in-the-location-path-sqlxml-4-0.md)  
+ [Spécification d’un test de nœud dans le chemin d’accès de l’emplacement &#40;SQLXML 4,0&#41;](specifying-a-node-test-in-the-location-path-sqlxml-4-0.md)  
  Fournit des exemples de spécification d'un test de nœud.  
   
- [Sélection de spécification de prédicats dans le chemin d’accès de l’emplacement &#40;SQLXML 4.0&#41;](specifying-selection-predicates-in-the-location-path-sqlxml-4-0.md)  
+ [Spécification de prédicats de sélection dans le chemin d’accès de l’emplacement &#40;SQLXML 4,0&#41;](specifying-selection-predicates-in-the-location-path-sqlxml-4-0.md)  
  Fournit des exemples de spécification de prédicats de sélection.  
   
   

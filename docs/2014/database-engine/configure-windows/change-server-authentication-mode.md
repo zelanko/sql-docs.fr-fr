@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43919e335700a23a4174eb1bdf42c36c0c08fe2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812295"
 ---
 # <a name="change-server-authentication-mode"></a>Changer le mode d'authentification du serveur
@@ -58,7 +58,7 @@ ms.locfileid: "62812295"
   
 #### <a name="to-enable-the-sa-login"></a>Pour activer la connexion sa  
   
-1.  Dans l’Explorateur d’objets, développez **sécurité**, puis connexions, avec le bouton droit `sa`, puis cliquez sur **propriétés**.  
+1.  Dans l’Explorateur d’objets, développez **sécurité**, puis connexions, cliquez `sa`avec le bouton droit sur, puis cliquez sur **Propriétés**.  
   
 2.  Sur la page **Général** , vous devrez peut-être créer et confirmer un mot de passe pour la connexion.  
   
@@ -85,6 +85,6 @@ ms.locfileid: "62812295"
  [Mots de passe forts](../../relational-databases/security/strong-passwords.md)   
  [Considérations sur la sécurité pour une installation SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)   
- [Se connecter à SQL Server lorsque les administrateurs système n’y ont plus accès](connect-to-sql-server-when-system-administrators-are-locked-out.md)  
+ [Se connecter à SQL Server lorsque les administrateurs système n'y ont plus accès](connect-to-sql-server-when-system-administrators-are-locked-out.md)  
   
   

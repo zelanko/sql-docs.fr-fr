@@ -1,5 +1,5 @@
 ---
-title: Sélectionner des Tables et vues (Assistant vue de Source de données) (Analysis Services) | Microsoft Docs
+title: Sélectionner des tables et des vues (Assistant vue de source de données) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f4b940d5cb3c91cc8257ef1a3e6828286bc1c240
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069248"
 ---
 # <a name="select-tables-and-views-data-source-view-wizard-analysis-services"></a>Sélectionner des tables et des vues (Assistant Vue de source de données) (Analysis Services)
@@ -38,21 +38,21 @@ ms.locfileid: "66069248"
   
  Vous pouvez inclure n'importe où dans la chaîne de caractères les caractères génériques indiqués dans la liste ci-dessous.  
   
-|Caractère générique|Value|  
+|Caractère générique|Valeur|  
 |------------------------|-----------|  
 |**\***|N'importe quelle chaîne de caractères|  
 |**%**|N'importe quelle chaîne de caractères|  
 |**?**|Un seul caractère|  
-|**"** *chaîne* **"**|Chaîne de caractères littérale. Ce caractère générique correspond à toute sous-chaîne figurant dans le nom de l'objet.|  
+|**«** *chaîne* **»**|Chaîne de caractères littérale. Ce caractère générique correspond à toute sous-chaîne figurant dans le nom de l'objet.|  
   
  **Afficher les objets système**  
  Affiche les objets système dans **Objets disponibles**. Cette option est disponible uniquement si le fournisseur de la source des données expose les objets système. La suppression d’un objet système de la liste **Objets inclus** sélectionne automatiquement cette option.  
   
- **Ajouter des tables connexes**  
+ **Ajouter des tables associées**  
  Ajoute toutes les tables associées à celles figurant dans la liste **Objets inclus**. Cette option n'ajoute pas de vues. Néanmoins, elle ajoute des tables partitionnées. Si vous sélectionnez des critères de correspondance des noms dans la page **Correspondance de noms** de l’Assistant, cette option inclut également les tables logiquement selon les critères sélectionnés. Les tables sont également incluses si elles sont associées à des tables récemment ajoutées et si leur structure est identique à celle de la table d'origine.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide F1 de données Source vue Assistant &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
+ [Aide (F1) de l’Assistant vue de source de données &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
  [Vues de sources de données dans les modèles multidimensionnels](multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

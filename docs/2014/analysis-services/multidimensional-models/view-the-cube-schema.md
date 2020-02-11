@@ -1,5 +1,5 @@
 ---
-title: Afficher le schéma de Cube | Microsoft Docs
+title: Afficher le schéma de cube | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b094e27a8b7c51afec21fcc4807d3ee6e8b22c37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072507"
 ---
 # <a name="view-the-cube-schema"></a>Afficher le schéma de cube
@@ -24,7 +24,7 @@ ms.locfileid: "66072507"
   
  Lorsque vous créez un cube, le diagramme affiché dans le volet **Vue de source de données** de l'onglet **Structure de cube** est initialement le même que le diagramme **Afficher toutes les tables** dans la vue de source de données du projet ou de la base de données. Vous pouvez remplacer ce diagramme par un diagramme existant dans la vue de source de données et effectuer des ajustements dans le volet **Vue de source de données** .  
   
- Lorsque vous travaillez avec le diagramme dans le **Concepteur de cube**, les commandes qui agissent sur l'onglet ou sur n'importe quel objet sélectionné dans l'onglet sont disponibles dans le menu **Vue de source de données** . Vous pouvez également cliquer avec le bouton droit sur l'arrière-plan du diagramme ou sur n'importe quel objet de ce diagramme afin d'utiliser les commandes qui agissent sur le diagramme ou l'objet sélectionné. Vous pouvez :  
+ Lorsque vous travaillez avec le diagramme dans le **Concepteur de cube**, les commandes qui agissent sur l'onglet ou sur n'importe quel objet sélectionné dans l'onglet sont disponibles dans le menu **Vue de source de données** . Vous pouvez également cliquer avec le bouton droit sur l'arrière-plan du diagramme ou sur n'importe quel objet de ce diagramme afin d'utiliser les commandes qui agissent sur le diagramme ou l'objet sélectionné. Vous pouvez :  
   
 -   Basculer entre le diagramme et les formats d'arborescence.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66072507"
   
  En outre, vous pouvez effectuer les actions répertoriées dans le tableau suivant :  
   
-|Pour|Action|  
+|À|Action|  
 |--------|-------------|  
 |Utilisez un diagramme de la vue de source de données du cube|Dans le menu **Vue de source de données** , pointez sur **Copier le schéma à partir de**, puis cliquez sur le diagramme de vue de source de données que vous souhaitez utiliser.<br /><br /> - ou -<br /><br /> Cliquez avec le bouton droit sur l’arrière-plan du volet **Vue de source de données** , pointez sur **Copier le schéma à partir de**, puis cliquez sur le diagramme dans la vue de source de données de votre choix. Cette méthode crée une copie distincte du diagramme ; par conséquent, toutes les modifications que vous apportez sur l'onglet **Générateur de cube** n'apparaissent pas dans le diagramme d'origine.|  
 |Afficher uniquement les tables utilisées dans le cube|Dans le menu **Vue de source de données** , cliquez sur **Afficher seulement les tables utilisées**.<br /><br /> - ou -<br /><br /> Cliquez avec le bouton droit sur l’arrière-plan du volet **Vue de source de données** , puis sélectionnez **Afficher seulement les tables utilisées**.|  

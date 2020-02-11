@@ -21,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 37a148393d66a7434fda4461b704ee81b7e05223
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798082"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Inscrire une instance de SQL Server (utilitaire SQL Server)
-  Inscrivez une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existant pour surveiller ses performances et sa configuration comme une instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le point de contrôle de l'utilitaire (UCP) recueille des informations sur la configuration et les performances des instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] toutes les 15 minutes. Ces informations sont stockées dans l'entrepôt de données de gestion de l'utilitaire (UMDW) sur l'UCP ; le nom de fichier UMDW est sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont comparées aux stratégies afin d'aider à identifier les opportunités de consolidation et les goulots d'étranglement de performances.  
+  Inscrivez une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existant pour surveiller ses performances et sa configuration comme une instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le point de contrôle de l'utilitaire (UCP) recueille des informations sur la configuration et les performances des instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] toutes les 15 minutes. Ces informations sont stockées dans l'entrepôt de données de gestion de l'utilitaire (UMDW) sur l'UCP ; le nom de fichier UMDW est sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont comparées aux stratégies afin d'aider à identifier les opportunités de consolidation et les goulots d'étranglement de performances.  
   
  Dans cette version, l'UCP et toutes les instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent respecter les conditions suivantes :  
   
@@ -67,7 +67,7 @@ ms.locfileid: "72798082"
  Pour plus d’informations sur les concepts de l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](sql-server-utility-features-and-tasks.md).  
   
 > [!IMPORTANT]  
->  Le jeu d'éléments de collecte de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est pris en charge côte à côte avec les jeux d'éléments de collecte d'utilitaires non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Autrement dit, une instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être surveillée par d'autres jeux d'éléments de collecte bien qu'elle soit membre d'un utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Notez, toutefois, que tous les jeux d'éléments de collecte sur l'instance gérée téléchargent leurs données à l'entrepôt de données de gestion de l'utilitaire. Pour plus d’informations, consultez [Considérations sur l’exécution de jeux d’éléments de collecte de l’utilitaire et non-utilitaire sur la même instance de SQL Server](run-utility-and-non-utility-collection-sets-on-same-sql-instance.md) et [Configurer votre entrepôt de données de point de contrôle de l’utilitaire &#40;utilitaire SQL Server&#41;](configure-your-utility-control-point-data-warehouse-sql-server-utility.md).  
+>  Le jeu d'éléments de collecte de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est pris en charge côte à côte avec les jeux d'éléments de collecte d'utilitaires non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Autrement dit, une instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être surveillée par d'autres jeux d'éléments de collecte bien qu'elle soit membre d'un utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Notez, toutefois, que tous les jeux d'éléments de collecte sur l'instance gérée téléchargent leurs données à l'entrepôt de données de gestion de l'utilitaire. Pour plus d’informations, consultez [Considérations sur l’exécution de jeux d’éléments de collecte de l’utilitaire et non-utilitaire sur la même instance de SQL Server](run-utility-and-non-utility-collection-sets-on-same-sql-instance.md) et [Configurer votre entrepôt de données de point de contrôle de l’utilitaire &#40;utilitaire SQL Server&#41;](configure-your-utility-control-point-data-warehouse-sql-server-utility.md).  
   
 ## <a name="wizard-steps"></a>Étapes de l'Assistant  
  Les sections suivantes contiennent des informations détaillées sur chaque page du flux de travail de l'Assistant. Cliquez sur un lien pour accéder aux détails d'une page dans l'Assistant. Pour plus d'informations sur un script PowerShell de cette opération, consultez l' [exemple](#PowerShell_enroll)PowerShell.  
@@ -92,11 +92,11 @@ ms.locfileid: "72798082"
  Pour continuer, cliquez sur **Suivant**.  
   
 ##  <a name="Instance_name"></a> Spécifiez l'instance de SQL Server.  
- Pour sélectionner une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de la boîte de dialogue connexion, cliquez sur **se connecter...** . Indiquez le nom de l’ordinateur et le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nom de l’instance au format Nomordinateur\nominstance. Pour plus d’informations, consultez [Se connecter au serveur &#40;moteur de base de données&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
+ Pour sélectionner une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de la boîte de dialogue de connexion, cliquez sur **Se connecter…** . Indiquez le nom de l’ordinateur et le nom de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au format NomOrdinateur\NomInstance. Pour plus d’informations, consultez [Se connecter au serveur &#40;moteur de base de données&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
  Pour continuer, cliquez sur **Suivant**.  
   
-##  <a name="Connection_dialog"></a> Dialogue de connexion  
+##  <a name="Connection_dialog"></a> Boîte de dialogue Connexion  
  Dans la boîte de dialogue Se connecter au serveur, vérifiez les informations type de serveur, nom de l'ordinateur et nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Se connecter au serveur &#40;moteur de base de données&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
 > [!NOTE]  
@@ -125,14 +125,14 @@ ms.locfileid: "72798082"
 |L'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas déjà être un UCP.|Si l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous spécifiez est déjà un UCP différent de l'UCP auquel vous êtes connecté, vous ne pouvez pas l'inscrire dans cet UCP.|  
 |L'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit avoir des jeux d'éléments de collecte de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installés.|Réinstallez l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |Les jeux d'éléments de collecte sur l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent être interrompus.|Interrompez les jeux d'éléments de collecte préexistants sur l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si le collecteur de données est désactivé, activez-le, interrompez tous jeux d'éléments de collecte en cours d'exécution, puis réexécutez des règles de validation pour l'opération Créer un UCP.<br /><br /> Pour activer le collecteur de données :<br /><br /> Dans l'Explorateur d'objets, développez le nœud **Gestion** .<br /><br /> Cliquez avec le bouton droit sur **Collecte de données**, puis cliquez sur **Activer la collecte de données**.<br /><br /> Pour arrêter un jeu d'éléments de collecte :<br /><br /> Dans l'Explorateur d'objets, développez le nœud Gestion et développez **Collecte de données**, puis **Jeux d'éléments de collecte de données système**.<br /><br /> Cliquez avec le bouton droit sur le jeu d’éléments de collecte à arrêter, puis cliquez sur **Arrêter le jeu d’éléments de collecte de données**.<br /><br /> Une zone de message affiche les résultats de cette action et un cercle rouge sur l'icône du jeu d'éléments de collecte indique que celui-ci s'est arrêté.|  
-|Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sur l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être démarré.|Démarrez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sur l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est une instance du cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configurez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour démarrer manuellement. Sinon, configurez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour démarrer automatiquement.|  
+|Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sur l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être démarré.|Démarrez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sur l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si l’instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est une instance du cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configurez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour démarrer manuellement. Sinon, configurez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour démarrer automatiquement.|  
 |Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sur l'UCP doit être démarré.|Démarrez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sur l'UCP. Si l'UCP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est une instance du cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configurez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour démarrer manuellement. Sinon, configurez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour démarrer automatiquement.|  
 |WMI doit être correctement configuré.|Pour résoudre les problèmes de configuration de WMI, consultez [Résolution des problèmes liés à l’utilitaire SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md).|  
 |Le compte proxy de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être un compte de domaine Windows valide sur l'UCP.|Spécifiez un compte de domaine Windows valide. Pour vous assurer que le compte est valide, ouvrez une session sur l'UCP à l'aide du compte de domaine Windows.|  
-|Si vous sélectionnez l'option de compte proxy, le compte proxy de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être un compte de domaine Windows valide sur l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Spécifiez un compte de domaine Windows valide. Pour vous assurer que le compte est valide, ouvrez une session sur l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du compte de domaine Windows.|  
-|Le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ne peut pas être un compte intégré, comme Service réseau.|Réattribuez le compte à un compte de domaine Windows. Pour vous assurer que le compte est valide, ouvrez une session sur l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du compte de domaine Windows.|  
+|Si vous sélectionnez l'option de compte proxy, le compte proxy de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être un compte de domaine Windows valide sur l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Spécifiez un compte de domaine Windows valide. Pour vérifier que le compte est valide, ouvrez une session sur l’instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide du compte de domaine Windows.|  
+|Le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ne peut pas être un compte intégré, comme Service réseau.|Réattribuez le compte à un compte de domaine Windows. Pour vérifier que le compte est valide, ouvrez une session sur l’instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide du compte de domaine Windows.|  
 |Le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent doit être un compte de domaine Windows valide sur l'UCP.|Spécifiez un compte de domaine Windows valide. Pour vous assurer que le compte est valide, ouvrez une session sur l'UCP à l'aide du compte de domaine Windows.|  
-|Si vous sélectionnez l'option de compte service, le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent doit être un compte de domaine Windows valide sur l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Spécifiez un compte de domaine Windows valide. Pour vous assurer que le compte est valide, ouvrez une session sur l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du compte de domaine Windows.|  
+|Si vous sélectionnez l'option de compte service, le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent doit être un compte de domaine Windows valide sur l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Spécifiez un compte de domaine Windows valide. Pour vérifier que le compte est valide, ouvrez une session sur l’instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide du compte de domaine Windows.|  
   
  Si vous trouvez des erreurs dans les résultats de validation, corrigez les problèmes bloquants puis cliquez sur **Réexécuter la validation** pour vérifier la configuration de l'ordinateur.  
   
@@ -145,9 +145,9 @@ ms.locfileid: "72798082"
   
  Paramètres de l'instance gérée :  
   
--   Nom de l'instance de SQL Server: ComputerName\InstanceName  
+-   Nom de l’instance SQL Server : NomOrdinateur\NomInstance  
   
--   Compte de jeu d'éléments de collecte de l'utilitaire : DomainName\UserName  
+-   Compte du jeu d’éléments de collecte de l’utilitaire : NomDomaine\NomUtilisateur  
   
  Pour continuer, cliquez sur **Suivant**.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "72798082"
 >   
 >  Une exception s'est produite lors de l'exécution d'une instruction ou d'un lot Transact-SQL ou lot. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Informations supplémentaires : Impossible d’obtenir des informations sur l’utilisateur ou le groupe Windows NT « \<Nom_Domaine\Nom_Compte> », code d’erreur 0x5. (Microsoft SQL Server, erreur : 15404)  
+>  Informations supplémentaires :  Impossible d’obtenir des informations sur l’utilisateur ou le groupe Windows NT '\<DomainName\AccountName>', code d’erreur 0x5. (Microsoft SQL Server, erreur : 15404)  
 >   
 >  Pour plus d’informations sur la résolution de ce problème, consultez [Résolution des problèmes liés à l’utilitaire SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md).  
   
@@ -195,8 +195,8 @@ $ManagedInstance = $Utility.EnrollInstance($InstanceConnection, "ProxyAccount", 
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctionnalités et tâches de l’utilitaire SQL Server](sql-server-utility-features-and-tasks.md)   
+ [Fonctionnalités et tâches de l'utilitaire SQL Server](sql-server-utility-features-and-tasks.md)   
  [Surveiller des instances de SQL Server dans l'utilitaire SQL Server](monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [Résolution des problèmes liés à l'utilitaire SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md)  
+ [Résolution des problèmes liés à l’utilitaire SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md)  
   
   

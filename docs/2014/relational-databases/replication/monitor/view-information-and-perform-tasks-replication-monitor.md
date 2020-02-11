@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 400db44d053caf131ef13947adbd0154875995cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667128"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication
@@ -30,18 +30,18 @@ Le moniteur de réplication fournit un certain nombre d’onglets et d’options
 
   Le moniteur de réplication comporte plusieurs onglets contenant des informations relatives à la publication sélectionnée :  
   
--   **Tous les abonnements** -cet onglet affiche des informations sur tous les abonnements à la publication sélectionnée.  
+-   **Tous les abonnements** : cet onglet affiche des informations sur tous les abonnements à la publication sélectionnée.  
   
--   **Agents** -cet onglet affiche des informations sur tous les agents utilisés par une publication :  
+-   **Agents** : cet onglet affiche des informations sur tous les agents utilisés par une publication :  
   
     -   Agent d'instantané, utilisé par toutes les publications    
     -   Agent de lecture du journal, utilisé par toutes les publications transactionnelles    
     -   Agent de lecture de la file d'attente, utilisé par les publications transactionnelles qui possèdent des abonnements mis à jour en attente  
   
--   **Avertissements** (pour les serveurs de distribution qui exécutent [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et ultérieurement)   
+-   **Avertissements** (pour les serveurs [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] de distribution exécutant et versions ultérieures)   
     -   Cet onglet permet de spécifier des avertissements et des alertes pour les agents.  
   
--   **Jetons de suivi** (uniquement pour la réplication transactionnelle, sur les serveurs de distribution qui exécutent [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et version ultérieure)  
+-   **Jetons** de suivi (réplication transactionnelle uniquement, pour les serveurs de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] distribution exécutant et versions ultérieures)  
   
      Cet onglet permet de mesurer la latence, à savoir le temps écoulé entre la validation d'une transaction sur le serveur de publication et la validation de la transaction correspondante sur l'Abonné.  
   
@@ -53,20 +53,20 @@ Le moniteur de réplication fournit un certain nombre d’onglets et d’options
 2.  Pour afficher et modifier les propriétés de la publication, cliquez avec le bouton droit sur celle-ci puis cliquez sur **Propriétés**.    
 3.  Pour afficher des informations sur les abonnements, cliquez sur l'onglet **Tous les abonnements** .  
   
-     Pour afficher et modifier les propriétés de l'abonnement, cliquez avec le bouton droit sur celui-ci puis cliquez sur **Propriétés**. Vous pouvez également accéder à des informations plus détaillées et effectuer certaines tâches dans cet onglet. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).  
+     Pour afficher et modifier les propriétés de l'abonnement, cliquez avec le bouton droit sur celui-ci puis cliquez sur **Propriétés**. Vous pouvez également accéder à des informations plus détaillées et effectuer des tâches dans cet onglet. Pour plus d’informations, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).  
   
-4.  Pour consulter les informations sur les agents, cliquez sur l'onglet **Agents** . Vous pouvez également accéder à des informations plus détaillées et effectuer certaines tâches dans cet onglet. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).    
-5.  Pour afficher les informations sur les avertissements d'agent et les seuils, cliquez sur l'onglet **Avertissements** . Pour plus d’informations, voir [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).   
-6.  Pour afficher des informations sur les jetons de suivi, cliquez sur l'onglet **Jetons de suivi** . Pour plus d'informations sur l'utilisation des jetons de suivi, consultez [Mesurer la latence et valider les connexions pour la réplication transactionnelle](measure-latency-and-validate-connections-for-transactional-replication.md).  
+4.  Pour afficher des informations sur les agents, cliquez sur l’onglet **agents** . Vous pouvez également accéder à des informations plus détaillées et effectuer des tâches dans cet onglet. Pour plus d’informations, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).    
+5.  Pour afficher des informations sur les seuils et les avertissements de l’agent, cliquez sur l’onglet **avertissements** . Pour plus d’informations, consultez [définir des seuils et des avertissements dans le moniteur de réplication](set-thresholds-and-warnings-in-replication-monitor.md).   
+6.  Pour afficher des informations sur les jetons de suivi, cliquez sur l’onglet **jetons** de suivi. Pour plus d’informations sur l’utilisation des jetons de suivi, consultez [mesurer la latence et valider les connexions pour la réplication transactionnelle](measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 ## <a name="for-a-publisher"></a>Pour un serveur de publication
   Le moniteur de réplication contient les onglets ci-après qui donnent des informations sur le serveur de publication sélectionné :  
   
--   **Publications** -cet onglet affiche des informations sur toutes les publications sur le serveur de publication sélectionné.  
+-   **Publications** : cet onglet affiche des informations sur toutes les publications sur le serveur de publication sélectionné.  
   
--   **Liste de suivi** -cet onglet est destiné à afficher des informations sur les abonnements à partir de toutes les publications disponibles sur le serveur de publication sélectionné qui ont des erreurs, avertissements ou les performances les plus faibles. Cet onglet n'est pas affiché pour les serveurs de distribution exécutant des versions antérieures à [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+-   **Liste de suivi des abonnements** : cet onglet est destiné à afficher des informations sur les abonnements de toutes les publications disponibles sur le serveur de publication sélectionné qui présentent des erreurs, des avertissements ou les performances les plus faibles. Cet onglet n’est pas affiché pour les serveurs de distribution [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]exécutant des versions antérieures à.  
   
--   **Agents** onglet - cet onglet affiche des informations détaillées sur les agents et les travaux qui sont utilisés par tous les types de réplication. L'onglet permet également de démarrer et d'arrêter chaque agent ou travail.  
+-   Onglet **agents** : cet onglet affiche des informations détaillées sur les agents et les travaux utilisés par tous les types de réplication. L'onglet permet également de démarrer et d'arrêter chaque agent ou travail.  
   
  Pour plus d'informations sur les options proposées dans chaque onglet, cliquez sur l'onglet dans le volet droit, puis sur **Aide** dans la barre de menus. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](start-the-replication-monitor.md).  
   
@@ -74,12 +74,12 @@ Le moniteur de réplication fournit un certain nombre d’onglets et d’options
   
 1.  Développez un groupe de serveurs de publication dans le volet gauche, puis développez un serveur de publication.    
 2.  Pour afficher des informations sur toutes les publications, cliquez sur l'onglet **Publications** .    
-3.  Pour consulter des informations sur les abonnements, cliquez sur l'onglet **Liste de suivi des abonnements** . Vous pouvez également accéder à des informations plus détaillées et effectuer des tâches à partir de cet onglet :    
+3.  Pour afficher des informations sur les abonnements, cliquez sur l’onglet **liste de suivi des abonnements** . Vous pouvez également accéder à des informations plus détaillées et effectuer des tâches à partir de cet onglet :    
     -   Pour afficher des informations détaillées sur l'agent associé à un abonnement, cliquez avec le bouton droit sur l'abonnement, puis cliquez sur **Afficher les détails**.    
     -   Pour afficher les propriétés d'un abonnement, cliquez avec le bouton droit sur l'abonnement, puis cliquez sur **Propriétés**.    
     -   Pour synchroniser un abonnement par envoi de données (push), cliquez avec le bouton droit sur l'abonnement, puis cliquez sur **Démarrer la synchronisation**.    
     -   Pour réinitialiser un abonnement, cliquez avec le bouton droit sur l'abonnement, puis cliquez sur **Réinitialiser l'abonnement**.   
-4.  Pour consulter les informations sur les agents, cliquez sur l'onglet **Agents** . Vous pouvez aussi accéder à des informations plus détaillées et effectuer des tâches sur cet onglet :    
+4.  Pour afficher des informations sur les agents, cliquez sur l’onglet **agents** . Vous pouvez également accéder à des informations plus détaillées et effectuer des tâches sur cet onglet :    
     -   Pour afficher des informations détaillées sur un agent (telles que des messages d'informations et des messages d'erreur), cliquez avec le bouton droit sur l'agent, puis cliquez sur **Afficher les détails**.    
     -   Pour afficher des informations détaillées sur le travail qui exécute l'agent (par exemple, des détails sur la planification, les étapes de travail, etc.), cliquez avec le bouton droit sur l'agent, puis cliquez sur **Propriétés**.    
     -   Pour gérer des profils pour l'agent, cliquez avec le bouton droit sur l'agent, puis cliquez sur **Profils d'agent**. Pour plus d’informations, voir [Utiliser des profils d’Agent de réplication](../agents/replication-agent-profiles.md).    
@@ -90,35 +90,35 @@ Le moniteur de réplication fournit un certain nombre d’onglets et d’options
 
   Le Moniteur de réplication propose les onglets suivants, qui comportent des informations sur les abonnements :  
   
--   **Tous les abonnements** -cet onglet affiche des informations sur tous les abonnements à la publication sélectionnée.  
+-   **Tous les abonnements** : cet onglet affiche des informations sur tous les abonnements à la publication sélectionnée.  
   
--   **Liste de suivi** -cet onglet est destiné à afficher des informations sur les abonnements à partir de toutes les publications disponibles sur le serveur de publication sélectionné qui ont des erreurs, avertissements ou les performances les plus faibles. Cet onglet n'est pas affiché pour les serveurs de distribution exécutant des versions antérieures à [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+-   **Liste de suivi des abonnements** : cet onglet est destiné à afficher des informations sur les abonnements de toutes les publications disponibles sur le serveur de publication sélectionné qui présentent des erreurs, des avertissements ou les performances les plus faibles. Cet onglet ne s’affiche pas pour les serveurs de distribution exécutant des versions antérieures à [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
  Pour plus d'informations sur les options de chaque onglet, cliquez sur l'onglet dans le volet de droite puis cliquez sur l'option **Aide** dans la barre de menus. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](start-the-replication-monitor.md).  
   
-### <a name="all-subscriptions-tab"></a>Onglet Abonnements tout  
+### <a name="all-subscriptions-tab"></a>Onglet tous les abonnements  
   
 1.  Développez un groupe de serveurs de publication dans le volet gauche, développez un serveur de publication, puis cliquez sur une publication.   
 2.  Pour afficher des informations sur les abonnements, cliquez sur l'onglet **Tous les abonnements** . Pour n'afficher que les abonnements qui se trouvent dans un état donné, par exemple en cours de synchronisation, sélectionnez une option dans la liste déroulante **Afficher** .   
-3.  Pour afficher et modifier les propriétés de l'abonnement, cliquez avec le bouton droit sur celui-ci puis cliquez sur **Propriétés**. Vous pouvez également accéder à des informations plus détaillées et effectuer certaines tâches dans cet onglet. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).  
+3.  Pour afficher et modifier les propriétés de l'abonnement, cliquez avec le bouton droit sur celui-ci puis cliquez sur **Propriétés**. Vous pouvez également accéder à des informations plus détaillées et effectuer des tâches dans cet onglet. Pour plus d’informations, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).  
   
 ### <a name="subscription-watch-list-tab"></a>Onglet Liste de suivi des abonnements  
   
 1.  Développez un groupe de serveurs de publication dans le volet gauche, puis développez un serveur de publication.   
 2.  Pour consulter des informations sur les abonnements, cliquez sur l'onglet **Liste de suivi des abonnements** .  
 3.  Sélectionnez le type d’abonnement à afficher dans la liste déroulante **Afficher les abonnements \<Type_abonnement>** . Pour n'afficher que les abonnements qui se trouvent dans un état donné, par exemple en cours de synchronisation, sélectionnez une option dans la liste déroulante **Afficher** .    
-4.  Pour afficher et modifier les propriétés de l'abonnement, cliquez avec le bouton droit sur celui-ci puis cliquez sur **Propriétés**. Vous pouvez également accéder à des informations plus détaillées et effectuer certaines tâches dans cet onglet. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).  
+4.  Pour afficher et modifier les propriétés de l'abonnement, cliquez avec le bouton droit sur celui-ci puis cliquez sur **Propriétés**. Vous pouvez également accéder à des informations plus détaillées et effectuer des tâches dans cet onglet. Pour plus d’informations, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).  
 
 ## <a name="for-publication-agents"></a>Pour les Agents de publication
 
-  Le moniteur de réplication fournit l'onglet **Agents** qui contient des informations sur les agents associés à la publication sélectionnée. L’Agent de Distribution et l’Agent de fusion sont associés à des abonnements ; Pour plus d’informations, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).  
+  Le moniteur de réplication fournit l'onglet **Agents** qui contient des informations sur les agents associés à la publication sélectionnée. Les Agent de distribution et les Agent de fusion sont associés aux abonnements ; Pour plus d’informations, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).  
   
  Cet onglet affiche des informations sur les agents suivants :    
 -   Agent d'instantané, utilisé par toutes les publications    
 -   Agent de lecture du journal, utilisé par toutes les publications transactionnelles    
 -   Agent de lecture de la file d'attente, utilisé par les publications transactionnelles qui possèdent des abonnements mis à jour en attente  
   
- Pour afficher plus d'informations sur les options de cet onglet, sélectionnez **Aide** sur la barre de menus. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](start-the-replication-monitor.md).  
+ Pour afficher des informations supplémentaires sur les options de cet onglet, cliquez sur **aide** dans la barre de menus. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](start-the-replication-monitor.md).  
   
 ### <a name="view-information-and-perform-tasks"></a>Afficher des informations et effectuer des tâches 
   
@@ -136,9 +136,9 @@ Le moniteur de réplication fournit un certain nombre d’onglets et d’options
 ### <a name="view-information-and-perform-tasks"></a>Afficher des informations et effectuer des tâches
   Le moniteur de réplication contient deux onglets qui permettent d'accéder à des informations sur le ou les agents associés à un abonnement :  
   
--   **Tous les abonnements** -cet onglet affiche des informations sur tous les abonnements à la publication sélectionnée.  
+-   **Tous les abonnements** : cet onglet affiche des informations sur tous les abonnements à la publication sélectionnée.  
   
--   **Liste de suivi** -cet onglet est destiné à afficher des informations sur les abonnements à partir de toutes les publications disponibles sur le serveur de publication sélectionné qui ont des erreurs, avertissements ou les performances les plus faibles. Cet onglet n'est pas affiché pour les serveurs de distribution exécutant des versions antérieures à [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+-   **Liste de suivi des abonnements** : cet onglet est destiné à afficher des informations sur les abonnements de toutes les publications disponibles sur le serveur de publication sélectionné qui présentent des erreurs, des avertissements ou les performances les plus faibles. Cet onglet ne s’affiche pas pour les serveurs de distribution exécutant des versions antérieures à [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
  Pour plus d'informations sur les options de chaque onglet, cliquez sur l'onglet dans le volet de droite puis cliquez sur l'option **Aide** dans la barre de menus. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](start-the-replication-monitor.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Implémentation de colonnes LOB dans une Table mémoire optimisée | Microsoft Docs
+title: Implémentation de colonnes LOB dans une table optimisée en mémoire | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e347d942bf6541de9c16f34075e2d66817c3e347
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62778920"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>Implémentation de colonnes LOB dans une table mémoire optimisée
-  Tables optimisées en mémoire n’ont pas de stockage d’objets hors ligne ou de grande taille (LOB) (cette limitation a été supprimée dans SQL Server 2016 et ultérieur - voir [pris en charge les Types de données pour OLTP en mémoire](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)), et la limite de taille de ligne est de 8 060 octets. Le stockage de valeurs de chaîne de caractères ou LOB peut être effectué de deux manières différentes :  
+  Les tables mémoire optimisées n’ont pas de stockage hors ligne ou LOB (cette limitation a été supprimée dans SQL Server 2016 et versions ultérieures). consultez [types de données pris en charge pour l’OLTP en mémoire](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md), et la limite de taille de ligne est de 8060 octets. Le stockage de valeurs de chaîne de caractères ou LOB peut être effectué de deux manières différentes :  
   
 -   Fractionnez la valeur LOB en plusieurs lignes.  
   

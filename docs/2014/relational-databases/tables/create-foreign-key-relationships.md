@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761613"
 ---
 # <a name="create-foreign-key-relationships"></a>Créer des relations de clé étrangère
@@ -30,7 +30,7 @@ ms.locfileid: "62761613"
   
      [Sécurité](#Security)  
   
--   **Pour créer des relations de clé étrangère à l’aide de :**  
+-   **Pour créer des relations de clé étrangère, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62761613"
   
 #### <a name="to-create-a-foreign-key-relationship-in-table-designer"></a>Pour créer une relation de clé étrangère dans le Concepteur de tables  
   
-1.  Dans l'Explorateur d'objets, cliquez avec le bouton droit sur la table qui se trouve du côté clé étrangère de la relation et cliquez sur **Conception**.  
+1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur la table qui se trouve du côté clé étrangère de la relation et cliquez sur **Conception**.  
   
      La table s'ouvre dans le **Concepteur de tables**.  
   
@@ -83,13 +83,13 @@ ms.locfileid: "62761613"
   
 4.  Cliquez sur la relation dans la liste **Relation sélectionnée** .  
   
-5.  Cliquez sur **Spécification de tables et colonnes** dans la grille affichée à droite et cliquez sur le bouton de sélection ( **...** ), à droite de la propriété.  
+5.  Cliquez sur **Spécification de tables et colonnes** dans la grille affichée à droite et cliquez sur le bouton de sélection (**...**), à droite de la propriété.  
   
 6.  Dans la liste déroulante **Clé primaire** de la boîte de dialogue **Tables et colonnes** , choisissez la table qui sera du côté clé primaire de la relation.  
   
 7.  Dans la grille située au-dessous, choisissez les colonnes qui participent à la clé primaire de la table. Dans la cellule de la grille située à gauche de chaque colonne, choisissez la colonne clé étrangère correspondante dans la table de clé étrangère.  
   
-     Le**Concepteur de tables** propose un nom pour la relation. Pour changer ce nom, modifiez le contenu de la zone de texte **Nom de la relation** .  
+     **Concepteur de tables** suggère un nom pour la relation. Pour changer ce nom, modifiez le contenu de la zone de texte **Nom de la relation** .  
   
 8.  Choisissez **OK** pour créer la relation.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "62761613"
   
 #### <a name="to-create-a-foreign-key-in-a-new-table"></a>Pour créer une clé étrangère dans une nouvelle table  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -118,11 +118,11 @@ ms.locfileid: "62761613"
   
 #### <a name="to-create-a-foreign-key-in-an-existing-table"></a>Pour créer une clé étrangère dans une table existante  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. L'exemple crée une clé étrangère sur la colonne `TempID` et référence la colonne `SalesReasonID` dans la table `Sales.SalesReason`.  
+3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. L'exemple crée une clé étrangère sur la colonne `TempID` et référence la colonne `SalesReasonID` dans la table `Sales.SalesReason` .  
   
     ```  
     USE AdventureWorks2012;  

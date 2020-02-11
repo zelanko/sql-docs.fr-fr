@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue « Paramètres de serveur de distribution » | Microsoft Docs
+title: Boîte de dialogue « Paramètres du serveur de distribution » | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,20 +15,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d910cdb4baf1d65f67ece14c20a1f384af2a843b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721351"
 ---
-# <a name="sql-server-replication-distributor-settings-dialog-box"></a>Boîte de dialogue les paramètres de serveur de distribution de réplication SQL Server
+# <a name="sql-server-replication-distributor-settings-dialog-box"></a>Réplication SQL Server boîte de dialogue « Paramètres du serveur de distribution »
   La boîte de dialogue **Paramètres du serveur de distribution** permet de changer les paramètres des serveurs de distribution ajoutés dans le volet de gauche du Moniteur de réplication.  
   
 ## <a name="options"></a>Options  
  **Se connecter automatiquement au démarrage du Moniteur de réplication**  
  Sélectionnez cette option pour permettre au Moniteur de réplication de se connecter au serveur de distribution  et d'extraire les informations d'état.  
   
- **Connexion**  
+ **Connection**  
  Cliquez pour ouvrir la boîte de dialogue **Se connecter au serveur** . Cela vous permet d'afficher et de modifier les propriétés de connexion et les informations d'identification que le Moniteur de réplication utilisent pour se connecter au serveur de distribution.  
   
  **Actualiser automatiquement le statut de ce serveur de distribution et de ses publications**  

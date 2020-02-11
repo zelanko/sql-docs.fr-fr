@@ -1,5 +1,5 @@
 ---
-title: Sélectionnez une boîte de dialogue de colonne (vue de Structure d’exploration de données) | Microsoft Docs
+title: Boîte de dialogue Sélectionner une colonne (vue structure d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7ee69724fbcacad78c6053c1bbdf9c3465482665
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069915"
 ---
 # <a name="select-a-column-dialog-box-mining-structure-view"></a>Boîte de dialogue Sélectionner une colonne (vue Structure d'exploration de données)
@@ -35,7 +35,7 @@ ms.locfileid: "66069915"
   
  Cette option est utilisée uniquement pour les modèles d'exploration de données relationnels.  
   
- **Afficher les types de colonne**  
+ **Afficher les types de colonnes**  
  Liste des types disponibles de colonnes de données. Sélectionnez ou effacez les types de données pour filtrer la liste des colonnes dans **Colonne source**. Seules les colonnes qui correspondent aux types de données cochés sont affichées dans la liste **Colonne source** .  
   
  Cette option est utilisée uniquement pour les modèles d'exploration de données relationnels.  
@@ -46,7 +46,7 @@ ms.locfileid: "66069915"
  Cette option est utilisée uniquement pour les modèles d'exploration de données OLAP.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue de Structure d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-structure-view-data-mining-model-designer.md)   
- [Ajouter des colonnes à une structure d’exploration de données](data-mining/add-columns-to-a-mining-structure.md)  
+ [Vue structure d’exploration de données &#40;le concepteur de modèle d’exploration de données&#41;](mining-structure-view-data-mining-model-designer.md)   
+ [ajouter des colonnes à une structure d'exploration de données](data-mining/add-columns-to-a-mining-structure.md)  
   
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ef64ee84a90a74d2206fa8cc766e45b1a691566
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059283"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>Activer la journalisation des packages dans les outils de données SQL Server
@@ -43,7 +43,7 @@ ms.locfileid: "66059283"
   
     -   Pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], utilisez un gestionnaire de connexions OLE DB. Pour plus d’informations, consultez [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md).  
   
-    -   Pour le journal des événements Windows, ne faites rien : [!INCLUDE[ssIS](../includes/ssis-md.md)] crée automatiquement le journal.  
+    -   Pour le journal des événements Windows, ne faites rien : [!INCLUDE[ssIS](../includes/ssis-md.md)]crée automatiquement le journal.  
   
     -   Pour les fichiers XML, utilisez un gestionnaire de connexions de fichiers.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66059283"
 11. Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Journalisation Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)   
+ [Integration Services &#40;la journalisation SSIS&#41;](performance/integration-services-ssis-logging.md)   
  [Journalisation Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
   
   

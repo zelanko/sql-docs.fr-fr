@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c8dfb41890049918799bb3638f52dc222fc5dcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100640"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Utiliser une source de données externe pour les données des abonnés (abonnements pilotés par les données)
@@ -60,7 +60,7 @@ ms.locfileid: "66100640"
 -   Le serveur de rapports créera une remise de rapport pour chaque ligne du jeu de résultats. Si le premier jeu de résultats est composé de trois cents lignes, le serveur de rapports tentera de remettre trois cents rapports.  
   
 ## <a name="setting-delivery-options-using-variable-data-from-a-subscriber-database"></a>Définition des options de remise à l'aide de données de variable d'une base de données d'abonnés  
- Vous pouvez utiliser les données de la base de données d'abonnés pour personnaliser les options de remise de chaque destinataire. Le type d'extension de remise que vous utilisez détermine les options disponibles. Si vous utilisez l'extension de remise par messagerie électronique du serveur de rapports, la requête doit contenir une adresse de messagerie pour chaque abonné. Si vous utilisez une extension de remise par partage de fichiers, les données d'abonnés doivent inclure des valeurs pouvant être utilisées pour créer des fichiers de rapports spécifiques aux abonnés ou pour fournir une destination pour la remise. Pour plus d’informations, consultez [File Share Delivery in Reporting Services](file-share-delivery-in-reporting-services.md) et [remise du courrier électronique dans Reporting Services](e-mail-delivery-in-reporting-services.md).  
+ Vous pouvez utiliser les données de la base de données d'abonnés pour personnaliser les options de remise de chaque destinataire. Le type d'extension de remise que vous utilisez détermine les options disponibles. Si vous utilisez l'extension de remise par messagerie électronique du serveur de rapports, la requête doit contenir une adresse de messagerie pour chaque abonné. Si vous utilisez une extension de remise par partage de fichiers, les données d'abonnés doivent inclure des valeurs pouvant être utilisées pour créer des fichiers de rapports spécifiques aux abonnés ou pour fournir une destination pour la remise. Pour plus d’informations, consultez [remise par partage de fichiers dans Reporting Services](file-share-delivery-in-reporting-services.md) et [remise par courrier électronique dans Reporting Services](e-mail-delivery-in-reporting-services.md).  
   
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>Transmission de valeurs de paramètres de la base de données d'abonnés au rapport  
  Si vous créez un abonnement piloté par les données pour un rapport paramétrable, vous pouvez utiliser des valeurs de paramètres de variable pour personnaliser la production de chaque rapport. Par exemple, une base de données d'abonnés peut contenir des numéros d'identification d'employés, des dates d'embauche, des postes et des adresses de lieux de travail dont vous pouvez vous servir pour filtrer les données du rapport. Si le rapport accepte des paramètres basés sur ces données de colonnes, vous pouvez mapper le paramètre à la colonne appropriée.  

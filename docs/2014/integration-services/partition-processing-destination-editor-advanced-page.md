@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Destination de traitement de partition (Page avancé) | Microsoft Docs
+title: Éditeur de destination de traitement de partition (page avancé) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: de7c84a463d15e3260cc64c53ba1f82c6808dd93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056775"
 ---
 # <a name="partition-processing-destination-editor-advanced-page"></a>Éditeur de destination de traitement de partition (page Avancé)
@@ -30,13 +30,13 @@ ms.locfileid: "66056775"
 >  Les tâches décrites ici ne s’appliquent pas aux modèles tabulaires Analysis Services.  Vous ne pouvez pas mapper des colonnes d’entrée aux colonnes de partition pour les modèles tabulaires. Vous pouvez en revanche utiliser la tâche DDL d'exécution [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md) d'Analysis Services pour traiter la partition.  
   
 ## <a name="options"></a>Options  
- **Utiliser la configuration d'erreur par défaut**  
+ **Utilisez la configuration d’erreur par défaut.**  
  Indiquez si vous voulez utiliser la gestion des erreurs par défaut d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Par défaut, cette valeur est définie sur `True`.  
   
- **Action pour l'erreur de clé**  
+ **Action de l’erreur de clé**  
  Indiquez comment traiter les enregistrements dont les valeurs de clé ne sont pas acceptables.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|Convertir la valeur de clé non acceptable en valeur inconnue (Unknown).|  
 |**DiscardRecord**|Ignorer l'enregistrement.|  
@@ -44,16 +44,16 @@ ms.locfileid: "66056775"
  **Ignorer les erreurs**  
  Spécifiez que les erreurs doivent être ignorées.  
   
- **Arrêter en cas d'erreur**  
+ **Arrêter en cas d’erreur**  
  Spécifiez que le traitement doit s'arrêter lorsqu'une erreur se produit.  
   
- **Nombre d'erreurs**  
+ **Nombre d’erreurs**  
  Spécifiez le nombre maximal d’erreurs au-delà duquel le traitement doit s’arrêter, si vous avez sélectionné **Arrêter en cas d’erreur**.  
   
- **Action pour l'erreur**  
+ **Action en cas d’erreur**  
  Indiquez l’action à appliquer lorsque le nombre maximal d’erreurs est atteint, si vous avez sélectionné **Arrêter en cas d’erreur**.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**StopProcessing**|Arrêter le traitement.|  
 |**StopLogging**|Arrêter d'enregistrer les erreurs.|  
@@ -61,7 +61,7 @@ ms.locfileid: "66056775"
  **Clé introuvable**  
  Indiquez l'action à appliquer en cas d'erreur de clé introuvable. Par défaut, cette valeur est définie sur **ReportAndContinue**.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignorer l'erreur et continuer le traitement.|  
 |**ReportAndContinue**|Signaler l'erreur et continuer le traitement.|  
@@ -70,31 +70,31 @@ ms.locfileid: "66056775"
  **Clé dupliquée**  
  Indiquez l'action à appliquer en cas d'erreur de clé dupliquée. Par défaut, cette valeur est définie sur **IgnoreError**.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignorer l'erreur et continuer le traitement.|  
 |**ReportAndContinue**|Signaler l'erreur et continuer le traitement.|  
 |**ReportAndStop**|Signaler l'erreur et arrêter le traitement.|  
   
- **Clé NULL convertie en clé inconnue**  
+ **Clé null convertie en clé inconnue**  
  Indiquez l'action à appliquer lorsqu'une clé NULL a été convertie en clé inconnue (Unknown). Par défaut, cette valeur est définie sur **IgnoreError**.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignorer l'erreur et continuer le traitement.|  
 |**ReportAndContinue**|Signaler l'erreur et continuer le traitement.|  
 |**ReportAndStop**|Signaler l'erreur et arrêter le traitement.|  
   
- **Clé NULL non autorisée**  
+ **Clé null non autorisée**  
  Indiquez l'action à appliquer si une clé NULL est trouvée alors que les clés NULL ne sont pas autorisées. Par défaut, cette valeur est définie sur **ReportAndContinue**.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignorer l'erreur et continuer le traitement.|  
 |**ReportAndContinue**|Signaler l'erreur et continuer le traitement.|  
 |**ReportAndStop**|Signaler l'erreur et arrêter le traitement.|  
   
- **Chemin d'accès du journal des erreurs**  
+ **Chemin du journal des erreurs**  
  Tapez le chemin du journal des erreurs ou sélectionnez une destination à l’aide du bouton Parcourir **(...)** .  
   
  **Parcourir (...)**  

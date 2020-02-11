@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ba973e51a7d3c86b9f1a15075b0a86ac94502cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62662844"
 ---
 # <a name="deprecation-event-category"></a>catégorie d'événement Deprecation
@@ -28,7 +28,7 @@ ms.locfileid: "62662844"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Classe d'événements Deprecation Announcement](deprecation-announcement-event-class.md)|Indique qu'une fonctionnalité sera retirée dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[Classe d'événements Deprecation Final Support](deprecation-final-support-event-class.md)|Indique qu'une fonctionnalité sera retirée à compter de la prochaine version majeure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Deprecation Announcement, classe d’événements](deprecation-announcement-event-class.md)|Indique qu'une fonctionnalité sera retirée dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Deprecation Final Support, classe d’événements](deprecation-final-support-event-class.md)|Indique qu'une fonctionnalité sera retirée à compter de la prochaine version majeure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
   

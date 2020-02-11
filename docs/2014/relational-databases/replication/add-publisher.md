@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue « Ajouter un serveur de publication »
+title: Boîte de dialogue’ajouter un serveur de publication'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 735162edb8e7eda06e99d69ed74d4752b7f0d950
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676918"
 ---
-# <a name="sql-server-replication-add-publisher-dialog-box"></a>Boîte de dialogue « Ajouter le serveur de publication » de la réplication SQL Server 
-  La boîte de dialogue **Ajouter un serveur de publication** permet d'ajouter des serveurs de publication dans le volet de gauche du Moniteur de réplication. Après avoir ajouté un serveur de publication, sélectionnez le serveur de publication dans le volet de gauche pour afficher les informations sur ce dernier dans le volet de droite.  
+# <a name="sql-server-replication-add-publisher-dialog-box"></a>Réplication SQL Server boîte de dialogue « Ajouter un serveur de publication » 
+  La boîte de dialogue Ajouter un serveur de **publication** permet d’ajouter à un ou plusieurs serveurs de publication dans le volet gauche du moniteur de réplication. Après avoir ajouté un serveur de publication, sélectionnez le serveur de publication dans le volet de gauche pour afficher les informations sur ce dernier dans le volet de droite.  
   
 ## <a name="options"></a>Options  
  **Ajouter**  
- Cliquez pour sélectionner un type de serveur de publication à ajouter, afin d'ouvrir la boîte de dialogue **Se connecter au serveur** . Les options sont :  
+ Cliquez pour sélectionner un type de serveur de publication à ajouter, afin d'ouvrir la boîte de dialogue **Se connecter au serveur** . Les options sont :  
   
 -   **Ajouter un serveur de publication SQL Server...**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62676918"
 > [!NOTE]  
 >  Le serveur de distribution et le serveur de publication sont généralement exécutés sur la même instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais le serveur de distribution peut être exécuté sur une autre instance (cette configuration s'appelle un serveur de distribution distant).  
   
- **Supprimer**  
+ **Remove**  
  Sélectionnez un serveur de publication dans la grille située dans la partie supérieure de la boîte de dialogue et cliquez sur **Supprimer** pour supprimer le serveur de publication de la liste des serveurs de publication à ajouter.  
   
 > [!NOTE]  

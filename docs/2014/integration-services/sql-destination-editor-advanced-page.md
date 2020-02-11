@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Destination SQL (Page avancé) | Microsoft Docs
+title: Éditeur de destination SQL (page avancé) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 087f32510b65d7ea505bc4bf816a5ca9edcfe82d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055462"
 ---
 # <a name="sql-destination-editor-advanced-page"></a>Éditeur de destination SQL (page Avancé)
@@ -27,10 +27,10 @@ ms.locfileid: "66055462"
  Pour en savoir plus sur la destination pour SQL Server, consultez [SQL Server Destination](data-flow/sql-server-destination.md).  
   
 ## <a name="options"></a>Options  
- **Conserver l'identité**  
+ **Conserver l’identité**  
  Spécifie si la tâche doit insérer des valeurs dans les colonnes d'identité. La valeur par défaut de cette propriété est `False`.  
   
- **Conserver les valeurs NULL**  
+ **Conserver les valeurs null**  
  Spécifie si la tâche doit conserver les valeurs NULL. La valeur par défaut de cette propriété est `False`.  
   
  **Verrou de table**  
@@ -39,7 +39,7 @@ ms.locfileid: "66055462"
  **Contraintes de validation**  
  Spécifie si la tâche doit vérifier les contraintes. La valeur par défaut de cette propriété est `True`.  
   
- **Exécuter les déclencheurs**  
+ **Déclencher les déclencheurs**  
  Spécifie si l'insertion en bloc doit exécuter les déclencheurs sur les tables. La valeur par défaut de cette propriété est `False`.  
   
  **Première ligne**  
@@ -54,7 +54,7 @@ ms.locfileid: "66055462"
 > [!NOTE]  
 >  Effacez la zone de texte dans **l’Éditeur de destination SQL** pour indiquer que vous ne voulez pas assigner de valeur à cette propriété. Utilisez -1 dans la fenêtre **Propriétés** , **l’Éditeur avancé**et le modèle objet.  
   
- **Nombre maximum d'erreurs**  
+ **Nombre maximal d’erreurs**  
  Spécifie le nombre d'erreurs au-delà duquel l'insertion en bloc s'arrête. La valeur par défaut de cette propriété est **-1**, ce qui signifie qu’aucune valeur ne lui a été assignée.  
   
 > [!NOTE]  
@@ -63,13 +63,13 @@ ms.locfileid: "66055462"
  **Délai d'expiration**  
  Spécifie le nombre de secondes pouvant s'écouler avant l'expiration de l'insertion en bloc.  
   
- **Ordre des colonnes**  
+ **Classer les colonnes**  
  Tapez le nom des colonnes de tri. Chaque colonne peut être triée par ordre croissant ou décroissant. Si vous utilisez plusieurs colonnes de tri, délimitez la liste par des virgules.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de destination SQL &#40;page Gestionnaire de connexions&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
  [Éditeur de destination SQL &#40;page Mappages&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
- [Charger des données en masse à l’aide de la destination SQL Server](data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
+ [Charger des données en masse à l'aide de la destination SQL Server](data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
   

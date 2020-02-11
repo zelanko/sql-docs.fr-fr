@@ -1,5 +1,5 @@
 ---
-title: Créer une Session d’événements étendus à l’aide de la boîte de dialogue Nouvelle Session | Microsoft Docs
+title: Créer une session d’événements étendus à l’aide de la boîte de dialogue nouvelle session | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39dd8c4f333df1528f3894ffc6dfe01a48a91f2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065014"
 ---
 # <a name="create-an-extended-events-session-using-the-new-session-dialog"></a>Créer une session Événements étendus à l'aide de la boîte de dialogue Nouvelle session
@@ -58,7 +58,7 @@ ms.locfileid: "66065014"
   
 6.  Dans la section **Suivi de la causalité** , cochez la case **Assurer le suivi des liens entre les événements** pour suivre un travail sur plusieurs tâches.  
   
-     Pour plus d’informations sur le suivi de causalité, consultez « Session contenu et caractéristiques » dans le [Sessions d’événements étendus SQL Server](../relational-databases/extended-events/sql-server-extended-events-sessions.md) rubrique.  
+     Pour plus d’informations sur le suivi de causalité, consultez « contenu et caractéristiques de la session » dans la rubrique [sessions d’événements étendus SQL Server](../relational-databases/extended-events/sql-server-extended-events-sessions.md) .  
   
      Pour ajouter des événements à votre session, dans la section **Sélectionner une page** , cliquez sur **Événements**.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66065014"
   
 2.  Dans la page **Événements** , cliquez sur **Sélectionner** (le bouton **Sélectionner** est estompé si vous êtes déjà au niveau de l’écran **Sélectionner les événements à capturer** ).  
   
-     Vous pouvez rechercher un mot dans la table en entrant le texte à rechercher dans la zone **Bibliothèque d'événements** . Par exemple, si vous voulez rechercher l’événement **lock_acquired** , vous pouvez entrer **lock** ou **lock acquire**.  
+     Vous pouvez rechercher un mot dans la table en entrant le texte à rechercher dans la zone **Bibliothèque d'événements** . Par exemple, si vous souhaitez Rechercher l’événement **lock_acquired** , vous pouvez entrer **Lock** ou **Lock Acquire**.  
   
 3.  Dans la section **Bibliothèque d’événements** , sélectionnez la manière de rechercher les événements à capturer dans la liste déroulante. Par exemple, vous pouvez rechercher des noms d'événements ou des noms d'événements et leurs descriptions. Entrez vos critères de recherche dans la zone **Rechercher** .  
   
@@ -104,7 +104,7 @@ ms.locfileid: "66065014"
   
 -   **event_file**. Permet d'enregistrer sur le disque les résultats d'une session d'événements stockés en mémoire tampon.  
   
--   **histogram**. À utiliser pour comptabiliser le nombre d'occurrences d'un événement donné, en fonction d'une colonne d'événement ou d'une action définie.  
+-   **histogramme**. À utiliser pour comptabiliser le nombre d'occurrences d'un événement donné, en fonction d'une colonne d'événement ou d'une action définie.  
   
 -   **pair_matching**. Permet de savoir si un événement jumelé n'entre pas dans le cadre d'une correspondance.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "66065014"
      Les événements contiennent plusieurs champs qui sont toujours recueillis, lesquels sont affichés sous l’onglet **Champs d’événements** sans case à cocher. Un événement peut également avoir des champs facultatifs qui ne sont pas recueillis par défaut (par exemple, les champs facultatifs chers ne sont pas sélectionnés). Les champs facultatifs apparaissent également sous l’onglet **Champs d’événements** avec des cases à cocher. Pour recueillir un champ facultatif, activez la case à cocher devant le champ facultatif.  
   
     > [!NOTE]  
-    >  Les options de champ d'événement afficheront des champs qui seront capturés et affichés dans les résultats de trace. (Les événements étendus affichent seulement des types de données de champs d'événements. Par exemple, les champs d'événements en lecture seule ne sont pas affichés.) Si vous sélectionnez deux événements ou plus, la boîte de dialogue Nouvelle session affiche un espace sous l’onglet **Champs d’événements**.  
+    >  Les options de champ d'événement afficheront des champs qui seront capturés et affichés dans les résultats de trace. (Les événements étendus affichent seulement des types de données de champs d'événements. Par exemple, les champs d'événements en lecture seule ne sont pas affichés.) Si vous sélectionnez deux événements ou plus, la boîte de dialogue Nouvelle session affiche un espace sous l’onglet **Champs d’événements** .  
   
 5.  Pour ajouter des cibles à une session d’événements, dans la section **Sélectionner une page**, sélectionnez **Stockage de données**.  
   
@@ -161,12 +161,12 @@ ms.locfileid: "66065014"
   
     |Cible|Propriétés cibles|  
     |------------|-----------------------|  
-    |**etw_classic_sync_target**|**Nom du fichier journal de la session sur le serveur**. Entrez le nom du fichier journal et le répertoire sur le serveur, ou cliquez sur **Parcourir** pour rechercher et sélectionner le fichier journal.<br /><br /> **Taille maximale du fichier journal**. Entrez la taille maximale du fichier journal pour l'événement du Suivi d'événements pour Windows (ETW). La valeur par défaut est 20 mégaoctets (Mo). Vous pouvez sélectionner une unité différente de stockage dans la liste déroulante.<br /><br /> **Taille de la mémoire tampon**. Entrez la taille de la mémoire tampon pour la session d'événements. La valeur par défaut est 128 kilo-octets (Ko). Vous pouvez sélectionner une unité différente de stockage dans la liste déroulante.<br /><br /> **Nom de session**. Entrez un nom de session ETW explicite.<br /><br /> **Réessayer en cas d’erreur d’écriture dans le suivi des événements ETW**. Activez cette case à cocher pour effectuer une nouvelle tentative de publication de l'événement dans le sous-système ETW.<br /><br /> **Nombre maximal de tentatives**. Entrez le nombre maximal de nouvelles tentatives de publication de l'événement dans le sous-système ETW avant la suppression de l'événement. Le nombre de tentatives par défaut est zéro (0). Pour cette propriété cible, zéro (0) signifie aucune tentative.|  
+    |**etw_classic_sync_target**|**Nom du fichier journal de la session sur le serveur**. Entrez le nom du fichier journal et le répertoire sur le serveur, ou cliquez sur **Parcourir** pour rechercher et sélectionner le fichier journal.<br /><br /> **Taille maximale du fichier journal**. Entrez la taille maximale du fichier journal pour l'événement du Suivi d'événements pour Windows (ETW). La valeur par défaut est 20 mégaoctets (Mo). Vous pouvez sélectionner une unité différente de stockage dans la liste déroulante.<br /><br /> **Taille de la mémoire tampon**. Entrez la taille de la mémoire tampon pour la session d'événements. La valeur par défaut est 128 kilo-octets (Ko). Vous pouvez sélectionner une unité différente de stockage dans la liste déroulante.<br /><br /> **Nom de session**. Entrez un nom de session ETW explicite.<br /><br /> **Réessayer en cas d’erreur lors de l’écriture dans ETW**. Activez cette case à cocher pour effectuer une nouvelle tentative de publication de l'événement dans le sous-système ETW.<br /><br /> **Nombre maximal de nouvelles tentatives**. Entrez le nombre maximal de nouvelles tentatives de publication de l'événement dans le sous-système ETW avant la suppression de l'événement. Le nombre de tentatives par défaut est zéro (0). Pour cette propriété cible, zéro (0) signifie aucune tentative.|  
     |**event_counter**|Il n'y a pas de propriété cible pour le compteur d'événements.|  
-    |**event_file**|**Nom du fichier sur le serveur**. Entrez le répertoire et le nom du fichier cible sur le serveur, ou cliquez sur **Parcourir** pour rechercher et sélectionner le fichier cible.<br /><br /> **Taille de fichier maximale**. Spécifiez la taille de fichier maximale pour la cible de fichier. Si vous ne spécifiez pas de taille de fichier maximale, la taille du fichier augmente jusqu'à ce que le disque soit saturé. La taille de fichier par défaut est 1 gigaoctet (Go). Vous pouvez sélectionner une unité différente de stockage dans la liste déroulante.<br /><br /> **Activer la substitution de fichier**. Activez cette case à cocher pour permettre la substitution de fichier pour la cible de fichier.<br /><br /> **Nombre maximal de fichiers**. Entrez le nombre maximal de fichiers à conserver dans le système de fichiers.|  
-    |**histogram**|**Événement sur lequel filtrer**. Sélectionnez l'événement sur lequel vous souhaitez filtrer dans la liste déroulante. Vous pouvez appliquer un filtre sur tout événement qui existe dans la session d'événements. Vous pouvez également sélectionner  **\<None >** dans la liste déroulante pour inclure tous les événements et compartiments de base sur l’action.<br /><br /> **Baser les compartiments sur : Action**. Sélectionnez cette option pour baser les compartiments sur le nom d'action utilisé comme source de données, puis sélectionnez l'action dans la liste déroulante.<br /><br /> **Baser les compartiments sur : Champ**. Sélectionnez cette option pour baser les compartiments sur le champ d'événement utilisé comme source de données, puis sélectionnez le champ dans la liste déroulante.<br /><br /> **Nombre maximal de compartiments**. Entrez le nombre maximal de compartiments à conserver. Lorsque cette valeur est atteinte, la session d'événements ignore tous les nouveaux événements qui n'appartiennent pas aux compartiments existants.|  
-    |**pair_matching**|**Événements : Commencer par**. Sélectionnez le nom d'événement dans la liste déroulante qui spécifie l'événement de début dans une séquence appariée.<br /><br /> **Événements : Se terminer par**. Sélectionnez le nom d'événement dans la liste déroulante qui spécifie l'événement de fin dans une séquence appariée.<br /><br /> **Champs et actions : Commencer par**. Sélectionnez le champ de début et/ou l'action dans une séquence appariée dans la liste déroulante.<br /><br /> **Champs et actions : Se terminer par**. Sélectionnez le champ de fin et/ou l'action dans une séquence appariée dans la liste déroulante.<br /><br /> **Ignorer les nouveaux événements non appariés en cas de sollicitation de la mémoire**. Activez cette case à cocher pour cesser de collecter des événements dans la cible pair_matching lorsque la mémoire de l'ordinateur est sollicitée. Lorsque la mémoire ne sera plus sollicitée, la collecte des événements reprendra.<br /><br /> **Nombre maximal d’événements orphelins**. Spécifiez le nombre maximal d'événements orphelins à conserver dans la mémoire.|  
-    |**ring_buffer**|**Nombre d’événements à conserver**. Utilisez les flèches haut et bas pour spécifier le nombre d'événements à conserver. La valeur par défaut est 1000.<br /><br /> **Taille maximale de la mémoire tampon**. Entrez la quantité de mémoire maximale à utiliser. Les événements existants sont supprimés lorsque cette valeur est atteinte. La taille de la mémoire par défaut est 0 mégaoctet (Mo), c'est-à-dire, illimitée. Vous pouvez sélectionner une unité différente de stockage dans la liste déroulante.<br /><br /> **Conserver un nombre spécifique d’événements (par type) lorsque la mémoire tampon est saturée**. Sélectionnez cette option pour conserver un nombre spécifique d'événements de chaque type dans la mémoire tampon.<br /><br /> **Nombre d’événements à conserver (par type)** . Entrez le nombre par défaut d'événements de chaque type à conserver dans la mémoire tampon.|  
+    |**event_file**|**Nom de fichier sur le serveur**. Entrez le répertoire et le nom du fichier cible sur le serveur, ou cliquez sur **Parcourir** pour rechercher et sélectionner le fichier cible.<br /><br /> **Taille de fichier maximale**. Spécifiez la taille de fichier maximale pour la cible de fichier. Si vous ne spécifiez pas de taille de fichier maximale, la taille du fichier augmente jusqu'à ce que le disque soit saturé. La taille de fichier par défaut est 1 gigaoctet (Go). Vous pouvez sélectionner une unité différente de stockage dans la liste déroulante.<br /><br /> **Activez la substitution de fichier**. Activez cette case à cocher pour permettre la substitution de fichier pour la cible de fichier.<br /><br /> **Nombre maximal de fichiers**. Entrez le nombre maximal de fichiers à conserver dans le système de fichiers.|  
+    |**histogramme**|**Événement sur lequel filtrer**. Sélectionnez l'événement sur lequel vous souhaitez filtrer dans la liste déroulante. Vous pouvez appliquer un filtre sur tout événement qui existe dans la session d'événements. Vous pouvez également sélectionner ** \<aucun>** dans la liste déroulante pour inclure tous les événements et les compartiments de base sur l’action.<br /><br /> **Baser les compartiments sur : action**. Sélectionnez cette option pour baser les compartiments sur le nom d'action utilisé comme source de données, puis sélectionnez l'action dans la liste déroulante.<br /><br /> **Baser les compartiments sur : champ**. Sélectionnez cette option pour baser les compartiments sur le champ d'événement utilisé comme source de données, puis sélectionnez le champ dans la liste déroulante.<br /><br /> **Nombre maximal de compartiments**. Entrez le nombre maximal de compartiments à conserver. Lorsque cette valeur est atteinte, la session d'événements ignore tous les nouveaux événements qui n'appartiennent pas aux compartiments existants.|  
+    |**pair_matching**|**Événements : commencer par**. Sélectionnez le nom d'événement dans la liste déroulante qui spécifie l'événement de début dans une séquence appariée.<br /><br /> **Événements : se terminer par**. Sélectionnez le nom d'événement dans la liste déroulante qui spécifie l'événement de fin dans une séquence appariée.<br /><br /> **Champs et actions : commencer par**. Sélectionnez le champ de début et/ou l'action dans une séquence appariée dans la liste déroulante.<br /><br /> **Champs et actions : se terminer par**. Sélectionnez le champ de fin et/ou l'action dans une séquence appariée dans la liste déroulante.<br /><br /> **Ignorer les nouveaux événements non appariés en cas de sollicitation de la mémoire**. Activez cette case à cocher pour cesser de collecter des événements dans la cible pair_matching lorsque la mémoire de l'ordinateur est sollicitée. Lorsque la mémoire ne sera plus sollicitée, la collecte des événements reprendra.<br /><br /> **Nombre maximal d’événements orphelins**. Spécifiez le nombre maximal d'événements orphelins à conserver dans la mémoire.|  
+    |**ring_buffer**|**Nombre d’événements à conserver**. Utilisez les flèches haut et bas pour spécifier le nombre d'événements à conserver. La valeur par défaut est 1000.<br /><br /> **Taille maximale de la mémoire tampon**. Entrez la quantité de mémoire maximale à utiliser. Les événements existants sont supprimés lorsque cette valeur est atteinte. La taille de la mémoire par défaut est 0 mégaoctet (Mo), c'est-à-dire, illimitée. Vous pouvez sélectionner une unité différente de stockage dans la liste déroulante.<br /><br /> **Conserver un nombre spécifié d’événements (par type) lorsque la mémoire tampon est saturée**. Sélectionnez cette option pour conserver un nombre spécifique d'événements de chaque type dans la mémoire tampon.<br /><br /> **Nombre d’événements à conserver (par type)**. Entrez le nombre par défaut d'événements de chaque type à conserver dans la mémoire tampon.|  
   
 5.  Si vous voulez définir des propriétés de configuration avancées, sélectionnez **Avancé** dans la section **Sélectionner une page** .  
   
@@ -192,7 +192,7 @@ ms.locfileid: "66065014"
   
     1.  **En secondes**. Sélectionnez cette option pour prolonger ou raccourcir la latence de répartition maximale. Utilisez les flèches haut et bas pour spécifier la latence de répartition maximale en secondes.  
   
-    2.  **Illimitée**. Sélectionnez cette option si vous souhaitez distribuer les événements uniquement lorsque la mémoire tampon est saturée.  
+    2.  **Illimité**. Sélectionnez cette option si vous souhaitez distribuer les événements uniquement lorsque la mémoire tampon est saturée.  
   
 4.  Dans la zone **Taille de la mémoire maximale** , entrez la taille de mémoire maximale. Les événements existants sont supprimés lorsque cette valeur est atteinte. Vous pouvez sélectionner une unité différente de stockage dans la liste déroulante.  
   
@@ -200,7 +200,7 @@ ms.locfileid: "66065014"
   
 6.  Pour spécifier les options **Mode de partition mémoire** pour la session d’événements, procédez comme suit :  
   
-    1.  **None**. Sélectionnez cette option si vous ne souhaitez pas de mode de partition de la mémoire.  
+    1.  **Aucun**. Sélectionnez cette option si vous ne souhaitez pas de mode de partition de la mémoire.  
   
     2.  **Par nœud**. Sélectionnez cette option si vous souhaitez partitionner la mémoire par nœud.  
   
@@ -209,8 +209,8 @@ ms.locfileid: "66065014"
  Pour restaurer les valeurs par défaut de configuration pour les propriétés de session précédentes, cliquez sur **Paramètres par défaut**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer une Session d’événements étendus à l’aide de l’éditeur de requête](../../2014/database-engine/create-an-extended-events-session-using-query-editor.md)   
- [Créer une Session d’événements étendus à l’aide de l’Assistant &#40;Explorateur d’objets&#41;](../ssms/object/object-explorer.md)   
- [Générer un script de session d’événements étendus](../../2014/database-engine/script-an-extended-event-session.md)  
+ [Créer une session d’événements étendus à l’aide de l’éditeur de requête](../../2014/database-engine/create-an-extended-events-session-using-query-editor.md)   
+ [Créez une session d’événements étendus à l’aide de l’Assistant &#40;l’Explorateur d’objets&#41;](../ssms/object/object-explorer.md)   
+ [Générer un script de session d'événements étendus](../../2014/database-engine/script-an-extended-event-session.md)  
   
   

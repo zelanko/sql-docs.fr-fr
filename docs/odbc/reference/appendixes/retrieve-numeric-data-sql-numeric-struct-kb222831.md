@@ -1,6 +1,6 @@
 ---
 title: Récupérer des données numériques avec SQL_NUMERIC_STRUCT | Microsoft Docs
-description: C /C++ à l’aide de ODBC récupère le type de données numériques de SQL Server à l’aide de SQL_NUMERIC_STRUCT, liés à SQL_C_NUMERIC.
+description: C/C++ utilisant ODBC récupère le SQL Server type de données numérique à l’aide de SQL_NUMERIC_STRUCT, en rapport avec SQL_C_NUMERIC.
 editor: ''
 ms.prod: sql
 ms.technology: ''
@@ -11,27 +11,27 @@ ms.date: 07/13/2017
 ms.author: genemi
 author: MightyPen
 ms.openlocfilehash: 296a6bd9b5e0ab64fe7ecc7d78924a02e5fda9cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057190"
 ---
-# <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>Récupérer des données numériques avec SQL\_numérique\_STRUCT
+# <a name="retrieve-numeric-data-with-sql_numeric_struct"></a>Récupérer des données numériques avec\_un\_struct numérique SQL
 
-Cet article décrit comment récupérer des données numériques à partir du pilote ODBC SQL Server dans une structure numérique. Il décrit également comment obtenir les valeurs correctes à l’aide de la précision spécifique et de mettre à l’échelle de valeurs.
+Cet article explique comment récupérer des données numériques à partir de la SQL Server pilote ODBC dans une structure numérique. Elle explique également comment récupérer les valeurs correctes à l’aide de valeurs spécifiques de précision et d’échelle.
 
-Ce type de données permet aux applications gérer directement les données numériques. Autour de l’année 2003, ODBC 3.0 introduit un nouveau type de données ODBC C, identifié par **SQL\_C\_numérique**. Ce type de données est toujours applicables à compter de 2017.
+Ce type de données permet aux applications de gérer directement des données numériques. À l’année 2003, ODBC 3,0 a introduit un nouveau type de données c ODBC, **identifié\_par\_SQL c Numeric**. Ce type de données est toujours applicable à partir du 2017.
 
-Le tampon C utilisé dispose de la définition du type de **SQL\_numérique\_STRUCT**. Cette structure a des champs pour stocker la précision, échelle, l’authentification et à la valeur des données numériques. La valeur elle-même est stockée comme un entier à l’échelle avec le moins significatif d’octets commençant à la position la plus à gauche. 
+La mémoire tampon C utilisée a la définition de type de **la\_structure\_numérique SQL**. Cette structure contient des champs pour le stockage de la précision, de l’échelle, du signe et de la valeur des données numériques. La valeur elle-même est stockée sous la forme d’un entier mis à l’échelle avec l’octet le moins significatif, en commençant par la position la plus à gauche. 
 
-L’article [les Types de données C](c-data-types.md) fournit plus d’informations sur le format et l’utilisation de SQL\_numérique\_STRUCT. En règle générale le [annexe D](appendix-d-data-types.md) traite des types de données de référence du programmeur 3.0 de ODBC.
-
-
-## <a name="sqlnumericstruct-overview"></a>SQL\_numérique\_vue d’ensemble STRUCT
+Les [types de données](c-data-types.md) de l’article C fournissent des informations supplémentaires sur le format\_et\_l’utilisation du struct numérique SQL. En général, l' [annexe D](appendix-d-data-types.md) de la référence du programmeur ODBC 3,0 traite des types de données.
 
 
-Le code SQL\_numérique\_STRUCT est défini dans le fichier d’en-tête sqltypes.h comme suit :
+## <a name="sql_numeric_struct-overview"></a>Vue\_d'\_ensemble des structs numériques SQL
+
+
+Le struct\_numérique\_SQL est défini dans le fichier d’en-tête SqlTypes. h comme suit :
 
 
 ```c
@@ -46,22 +46,22 @@ typedef struct tagSQL_NUMERIC_STRUCT
 ```
 
             
-Les champs de précision et l’échelle de la structure numérique ne sont jamais utilisés pour l’entrée à partir d’une application, uniquement pour la sortie à partir du pilote à l’application.
+Les champs de précision et d’échelle de la structure numérique ne sont jamais utilisés pour l’entrée d’une application, uniquement pour la sortie du pilote vers l’application.
 
-Le pilote utilise la précision par défaut (définies par le pilote) et l’échelle par défaut (0) chaque fois que le renvoi de données à l’application. À moins que l’application spécifie les valeurs des facettes precision et scale, le pilote part du principe que la valeur par défaut et tronque la partie décimale des données numériques.
+Le pilote utilise la précision par défaut (définie par le pilote) et l’échelle par défaut (0) chaque fois que les données sont retournées à l’application. À moins que l’application spécifie des valeurs pour la précision et l’échelle, le pilote utilise la valeur par défaut et tronque la partie décimale des données numériques.
 
-## <a name="sqlnumericstruct-code-sample"></a>SQL\_numérique\_exemple de code STRUCT
+## <a name="sql_numeric_struct-code-sample"></a>Exemple\_de\_code de struct numérique SQL
 
-Cet exemple de code montre comment à :
+Cet exemple de code montre comment :
 
 - Définissez la précision.
-- Définir l’échelle.
-- Récupérer les valeurs correctes. 
+- Définissez l’échelle.
+- Récupérez les valeurs correctes. 
 
 > [!Note]
-> L’UTILISATION QUE VOUS AVEZ DU CODE FOURNI DANS CET ARTICLE EST À VOS RISQUES ET PÉRILS. 
+> TOUTE UTILISATION DU CODE FOURNI DANS CET ARTICLE EST À VOS RISQUES ET PÉRILS. 
 >
-> Microsoft fournit ces exemples de code « en l’état » sans garantie d’aucune sorte, expresse ou implicite, y compris de manière non limitative, les garanties implicites de qualité marchande et d’adéquation à un usage particulier.
+> Microsoft fournit ces exemples de code « en l’État », sans garantie d’aucune sorte, expresse ou implicite, y compris, mais sans s’y limiter, les garanties implicites de qualité marchande et/ou d’adéquation à un usage particulier.
 
 ```c
 #include <stdio.h>
@@ -226,17 +226,17 @@ while((retcode =SQLFetch(hstmt1)) != SQL_NO_DATA)
 ```
 
 
-Dans la structure numérique, le champ val est un tableau de caractères de 16 éléments. Par exemple, 25.212 est ajustée aux 25212 et l’échelle est 3. Au format hexadécimal, ce nombre serait 627 C.
+Dans la structure numérique, le champ Val est un tableau de caractères de 16 éléments. Par exemple, 25,212 est mis à l’échelle à 25212 et l’échelle est 3. Au format hexadécimal, ce nombre est 627C.
 
 Le pilote retourne les éléments suivants :
 
-- Le caractère équivalent de 7C, qui est « | » (diriger) dans le premier élément du tableau de caractères.
-- L’équivalent de 62, qui est « b » dans le deuxième élément.
-- Les restes des éléments du tableau contiennent des zéros non significatifs, par conséquent, la mémoire tampon contient ' | b\0 ».
+- Caractère équivalent de 7C, qui est' | ' (barre verticale) dans le premier élément du tableau de caractères.
+- Équivalent de 62, qui est’b’dans le deuxième élément.
+- Les restes des éléments de tableau contiennent des zéros, donc la mémoire tampon contient « | B\0 ».
 
-Maintenant le défi consiste à construire l’entier à l’échelle en dehors de ce tableau de chaînes. Chaque caractère de la chaîne correspond à deux chiffres hexadécimaux, par exemple, chiffre le moins significatif (LSD) et chiffre le plus significatif (MSD). La valeur entière à l’échelle peut être générée en multipliant chaque chiffre (LSD & MSD) avec un multiple de 16, en commençant par 1.
+À présent, le défi consiste à construire l’entier mis à l’échelle à partir de ce tableau de chaînes. Chaque caractère de la chaîne correspond à deux chiffres hexadécimaux, par exemple le chiffre le moins significatif (LSD) et le chiffre le plus significatif (MSD). La valeur de l’entier mis à l’échelle peut être générée en multipliant chaque chiffre (LSD & MSD) par un multiple de 16, à partir de 1.
 
-Code qui implémente la conversion du mode endian peu à l’entier à l’échelle. Il incombe au développeur de l’application pour implémenter cette fonctionnalité. L’exemple de code suivant est simplement une des nombreuses façons.
+Code qui implémente la conversion du mode Little endian à l’entier mis à l’échelle. Il revient au développeur d’applications d’implémenter cette fonctionnalité. L’exemple de code suivant n’est qu’une des nombreuses façons possibles.
 
 
 ```c
@@ -265,21 +265,21 @@ long strtohextoval()
 ### <a name="applies-to-versions"></a>S’applique aux versions
 
 
-Les informations précédentes sur SQL\_numérique\_STRUCT s’applique aux versions de produit suivantes :
+Les informations précédentes sur la\_structure\_numérique SQL s’appliquent aux versions de produit suivantes :
 
-- Pilote Microsoft ODBC pour Microsoft SQL Server 3.7
-- Microsoft Data Access Components 2.1
-- Microsoft Data Access Components 2.5
-- Microsoft Data Access Components 2.6
-- Microsoft Data Access Components 2.7
-
-
-## <a name="sqlcnumeric-overview"></a>SQL\_C\_numérique vue d’ensemble
+- Pilote Microsoft ODBC pour Microsoft SQL Server 3,7
+- Microsoft Data Access Components 2,1
+- Microsoft Data Access Components 2,5
+- Microsoft Data Access Components 2,6
+- Microsoft Data Access Components 2,7
 
 
-L’exemple de programme suivant illustre l’utilisation de SQL\_C\_numérique, en insérant 123,45 dans une table. Dans la table, la colonne est définie comme une valeur numérique ou un nombre décimal, avec une précision de 5 et avec la mise à l’échelle 2.
+## <a name="sql_c_numeric-overview"></a>Vue\_d'\_ensemble de la valeur numérique SQL C
 
-Le pilote ODBC que vous utilisez pour exécuter ce programme doit prendre en charge la fonctionnalité ODBC 3.0.
+
+L’exemple de programme suivant illustre l’utilisation de la\_valeur\_numérique SQL C, en insérant 123,45 dans une table. Dans le tableau, la colonne est définie sous la forme d’une valeur numérique ou décimale, avec une précision de 5 et une échelle de 2.
+
+Le pilote ODBC que vous utilisez pour exécuter ce programme doit prendre en charge les fonctionnalités ODBC 3,0.
 
 
 ```c

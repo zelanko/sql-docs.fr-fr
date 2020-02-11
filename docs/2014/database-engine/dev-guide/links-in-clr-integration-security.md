@@ -1,5 +1,5 @@
 ---
-title: Liens de la sécurité de l’intégration CLR | Microsoft Docs
+title: Liens dans sécurité de l’intégration du CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 37aa64129658128bd7297f147f317166917e05a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781068"
 ---
 # <a name="links-in-clr-integration-security"></a>Liens dans la sécurité d'intégration du CLR
@@ -32,7 +32,7 @@ ms.locfileid: "62781068"
  Les liens d'accès de table correspondent à l'extraction ou à la modification de valeurs dans une table, une vue ou une fonction table. Ils sont semblables aux liens d'appel, mais offrent un contrôle d'accès affiné en ce qui concerne les autorisations SELECT, INSERT, UPDATE et DELETE.  
   
 ## <a name="gated-links"></a>Liens contrôlés  
- Les liens contrôlés signifient que pendant l'exécution, les autorisations ne sont pas vérifiées dans toute la relation d'objet une fois qu'elle a été établie. Lorsqu'il y a un lien contrôlé entre deux objets (par exemple, l'objet **x** et l'objet **y**), les autorisations sur l'objet **y** et autres objets accédés à partir de l'objet **y** sont vérifiés uniquement au moment de la création de l'objet **x**. Au moment de la création de l’objet **x**, `REFERENCE` autorisation est vérifiée sur **y** par rapport au propriétaire de **x**. Lors de l'exécution (par exemple, lorsque quelqu'un appelle l'objet **x**), il n'y a aucune autorisation vérifiée par rapport à **y** ou autres objets auquel il fait  référence de manière statique. Lors de l'exécution, une autorisation appropriée est vérifiée par rapport à l'objet **x** lui-même.  
+ Les liens contrôlés signifient que pendant l'exécution, les autorisations ne sont pas vérifiées dans toute la relation d'objet une fois qu'elle a été établie. Lorsqu'il y a un lien contrôlé entre deux objets (par exemple, l'objet **x** et l'objet **y**), les autorisations sur l'objet **y** et autres objets accédés à partir de l'objet **y** sont vérifiés uniquement au moment de la création de l'objet **x**. À l’heure de création de **** l’objet `REFERENCE` x, l’autorisation est vérifiée sur **y** par rapport au propriétaire de **x**. Lors de l'exécution (par exemple, lorsque quelqu'un appelle l'objet **x**), il n'y a aucune autorisation vérifiée par rapport à **y** ou autres objets auquel il fait  référence de manière statique. Lors de l'exécution, une autorisation appropriée est vérifiée par rapport à l'objet **x** lui-même.  
   
  Les liens contrôlés sont toujours utilisés conjointement à une dépendance de métadonnées entre deux objets. Cette dépendance de métadonnées est une relation établie dans les catalogues [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui empêche un objet d'être supprimé tant qu'un autre objet dépend de lui.  
   
@@ -50,6 +50,6 @@ ms.locfileid: "62781068"
 4.  L'autorisation est contrôlée par rapport au contexte d'exécution actuel. Il est possible de créer des procédures et fonctions avec un contexte d'exécution différent de l'appelant. Un assembly est toujours créé avec le contexte d'exécution de la procédure, de la fonction ou du déclencheur défini contre lui.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sécurité de l’intégration du CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
+ [Sécurité de l'intégration du CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

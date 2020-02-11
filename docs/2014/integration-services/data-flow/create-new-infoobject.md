@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1c57974bc671802d3ade3263d8650883683c846e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827909"
 ---
 # <a name="create-new-infoobject"></a>Créer un nouvel InfoObject
   Utilisez la boîte de dialogue **Créer un nouvel InfoObject** pour créer un InfoObject dans le système SAP Netweaver BW.  
   
- Vous pouvez ouvrir la boîte de dialogue **Créer un nouvel InfoObject** à partir de la page **Gestionnaire de connexions** de **l’Éditeur de destination SAP BW**. Pour en savoir plus sur la destination SAP BW, consultez [SAP BW Destination](sap-bw-destination.md).  
+ Vous pouvez ouvrir la boîte de dialogue **Créer un nouvel InfoObject** à partir de la page **Gestionnaire de connexions** de **l’Éditeur de destination SAP BW**. Pour en savoir plus sur la destination SAP BW, consultez [Destination SAP BW](sap-bw-destination.md).  
   
 > [!IMPORTANT]  
 >  La documentation de Microsoft Connector 1.1 pour SAP BW suppose que vous êtes familiarisé avec l'environnement SAP Netweaver BW. Pour plus d'informations sur SAP Netweaver BW, ou sur la configuration des objets et des processus SAP Netweaver BW objets, consultez la documentation SAP.  
@@ -61,7 +61,7 @@ ms.locfileid: "62827909"
  **Nom de l'InfoObject**  
  Entrez le nom de l'InfoObject.  
   
- **Description courte**  
+ **Brève description**  
  Entrez une brève description pour l'InfoObject.  
   
  **Description longue**  
@@ -129,11 +129,11 @@ ms.locfileid: "62827909"
  **Type d'InfoObject**  
  Affichez le type de l'InfoObject. Le tableau suivant répertorie les valeurs possibles pour le type.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |CHA|Caractéristiques|  
 |KYF|Chiffres clés|  
-|UNI|Unités|  
+|UNI|Units|  
 |TIM|Caractéristiques de temps|  
   
 ### <a name="attributes-options"></a>Options des attributs  
@@ -149,7 +149,7 @@ ms.locfileid: "62827909"
   
  Pour créer et ajouter un nouvel InfoObject, cliquez sur Nouveau, puis utilisez une nouvelle instance de la boîte de dialogue **Créer un nouvel InfoObject** pour créer l’InfoObject.  
   
- **Supprimer**  
+ **Remove**  
  Supprimez l’InfoObject sélectionné de la liste **Attributs** .  
   
 ## <a name="see-also"></a>Voir aussi  

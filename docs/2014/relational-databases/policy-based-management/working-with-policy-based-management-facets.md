@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 037eb57f53bf583195efdf1f91fcd55f94ebaddc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676904"
 ---
 # <a name="working-with-policy-based-management-facets"></a>Utiliser les facettes de la gestion basée sur des stratégies
@@ -33,9 +33,9 @@ ms.locfileid: "62676904"
  Les procédures de cette rubrique nécessite l’appartenance au rôle PolicyAdministratorRole dans la base de données msdb.  
   
 ## <a name="viewing-and-copying-facet-states"></a>Affichage et copie d'états de facette  
- [Afficher les facettes de gestion basée sur des stratégies sur un objet SQL Server](view-the-policy-based-management-facets-on-a-sql-server-object.md)  
+ [Afficher les facettes de la gestion basée sur des stratégies sur un objet SQL Server](view-the-policy-based-management-facets-on-a-sql-server-object.md)  
   
- [Copier un état de facette de gestion basée sur des stratégies dans un fichier XML](copy-a-policy-based-management-facet-state-to-an-xml-file.md)  
+ [Copier un état de facette de la gestion basée sur des stratégies dans un fichier XML](copy-a-policy-based-management-facet-state-to-an-xml-file.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Administrer des serveurs à l'aide de la Gestion basée sur des stratégies](administer-servers-by-using-policy-based-management.md)  

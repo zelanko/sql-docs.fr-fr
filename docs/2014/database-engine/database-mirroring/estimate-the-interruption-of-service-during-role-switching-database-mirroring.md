@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b9830334843fd2c350091f7dc2af5493141bcfb1
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874444"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Estimer l'interruption de service au cours d'un basculement de rôle (mise en miroir de bases de données)
@@ -75,7 +75,7 @@ ms.locfileid: "70874444"
  ![Détection d’erreur et temps de basculement](../media/dbm-failovauto-time.gif "Détection d’erreur et temps de basculement")  
   
 ## <a name="see-also"></a>Voir aussi  
- [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)   
+ [Modes de fonctionnement de la mise en miroir de bases de données](database-mirroring-operating-modes.md)   
  [Basculement de rôle durant une session de mise en miroir de bases de données &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Surveillance de la mise en miroir de bases de données &#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)  
   

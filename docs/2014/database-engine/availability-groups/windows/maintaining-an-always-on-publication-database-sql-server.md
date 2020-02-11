@@ -1,5 +1,5 @@
 ---
-title: Maintenance d’une base de données de Publication AlwaysOn (SQL Server) | Microsoft Docs
+title: Maintenance d’une base de données de publication AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62791985"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>Gestion d'une base de données de publication AlwaysOn (SQL Server)
@@ -32,17 +32,17 @@ ms.locfileid: "62791985"
   
 -   Le moniteur de réplication affiche toujours les informations de publication sous le serveur de publication d'origine. Toutefois, ces informations peuvent être consultées dans le moniteur de réplication à partir de tout réplica en ajoutant le serveur de publication d'origine comme serveur.  
   
--   Si vous faites appel aux procédures stockées ou aux Replication Management Objects pour gérer la réplication sur le principal actuel, vous devez spécifier comme serveur de publication le nom de l'instance où la base de données est activée pour la réplication (le serveur de publication d'origine). Pour déterminer le nom approprié, utilisez la fonction `PUBLISHINGSERVERNAME`. Lorsqu'une base de données de publication joint un groupe de disponibilité, les métadonnées de réplication stockées dans les réplicas de bases de données secondaires sont identiques à celles du principal. Par conséquent, en cas de bases de données de publication activées pour la réplication sur le principal, le nom d'instance du serveur de publication stocké dans les tables système du serveur secondaire est celui du serveur principal, et non du serveur secondaire. Cela affecte la configuration et l'administration de la réplication si la base de données de publication bascule sur un serveur secondaire. Par exemple, si vous configurez la réplication avec des procédures stockées sur un serveur secondaire après le basculement, et vous souhaitez un abonnement par extraction à une base de données de publication qui a été activée sur un réplica différent, vous devez spécifier le nom du serveur de publication d’origine au lieu de la serveur de publication actuel comme le *@publisher* paramètre de `sp_addpullsubscription` ou `sp_addmergepulllsubscription`. Toutefois, si vous activez une base de données de publication après un basculement, le nom de l'instance du serveur de publication stocké dans les tables système est le nom de l'hôte principal actuel. Dans ce cas, vous devez utiliser le nom d'hôte du réplica principal actuel pour le paramètre *@publisher* .  
+-   Si vous faites appel aux procédures stockées ou aux Replication Management Objects pour gérer la réplication sur le principal actuel, vous devez spécifier comme serveur de publication le nom de l'instance où la base de données est activée pour la réplication (le serveur de publication d'origine). Pour déterminer le nom approprié, utilisez la fonction `PUBLISHINGSERVERNAME`. Lorsqu'une base de données de publication joint un groupe de disponibilité, les métadonnées de réplication stockées dans les réplicas de bases de données secondaires sont identiques à celles du principal. Par conséquent, en cas de bases de données de publication activées pour la réplication sur le principal, le nom d'instance du serveur de publication stocké dans les tables système du serveur secondaire est celui du serveur principal, et non du serveur secondaire. Cela affecte la configuration et l'administration de la réplication si la base de données de publication bascule sur un serveur secondaire. Par exemple, si vous configurez la réplication avec des procédures stockées sur un serveur secondaire après le basculement et que vous souhaitez un abonnement par extraction à une base de données de publication qui a été activée sur un autre réplica, vous devez spécifier le nom *@publisher* du serveur `sp_addpullsubscription` de `sp_addmergepulllsubscription`publication d’origine au lieu du serveur de publication actuel comme paramètre de ou. Toutefois, si vous activez une base de données de publication après un basculement, le nom de l'instance du serveur de publication stocké dans les tables système est le nom de l'hôte principal actuel. Dans ce cas, vous devez utiliser le nom d’hôte du réplica principal actuel pour le *@publisher* paramètre.  
   
     > [!NOTE]  
-    >  Dans certaines procédures, tel que `sp_addpublication`, le *@publisher* paramètre est pris en charge uniquement pour les serveurs de publication qui ne sont pas des instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; dans ce cas, il n’est pas pertinent pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn.  
+    >  Pour certaines procédures, telles que `sp_addpublication`, le *@publisher* paramètre est pris en charge uniquement pour les serveurs de publication [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]qui ne sont pas des instances de ; dans ce cas, il n’est pas pertinent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour AlwaysOn.  
   
 -   Pour synchroniser un abonnement dans [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] après un basculement, synchronisez les abonnements par extraction à partir de l'abonné, puis synchronisez les abonnements par émission de données à partir du serveur de publication actif.  
   
 ##  <a name="RemovePublDb"></a> Suppression d'une base de données publiée d'un groupe de disponibilité  
  Considérez les points suivants lorsqu'une base de données publiée est supprimée d'un groupe de disponibilité, ou lorsqu'un groupe de disponibilité avec une base de données membre publiée est supprimé.  
   
--   Si la base de données de publication sur le serveur de publication d’origine est supprimé d’un réplica principal de groupe de disponibilité, vous devez exécuter `sp_redirect_publisher` sans spécifier de valeur pour le *@redirected_publisher* paramètre afin de pouvoir supprimer le redirection pour la paire serveur de publication/base de données.  
+-   Si la base de données de publication sur le serveur de publication d’origine est supprimée d’un réplica `sp_redirect_publisher` principal de groupe de disponibilité, *@redirected_publisher* vous devez exécuter sans spécifier de valeur pour le paramètre pour supprimer la redirection pour la paire serveur de publication/base de données.  
   
     ```  
     EXEC sys.sp_redirect_publisher   
@@ -68,7 +68,7 @@ ms.locfileid: "62791985"
     > [!NOTE]  
     >  Lorsqu'un groupe de disponibilité comportant des bases de données membres publiées est supprimé, ou lorsqu'une base de données publiée est est supprimée d'un groupe de disponibilité, toutes les copies des bases de données publiées sont laissées à l'état de récupération. Si elles sont restaurées, chacune apparaîtra comme une base de données publiée. Une seule copie doit être conservée avec les métadonnées de publication. Pour désactiver la réplication d'une copie de base de données publiée, commencez par supprimer tous les abonnements et toutes les publications de la base de données.  
   
-     Exécutez `sp_dropsubscription` pour supprimer les abonnements de publication. Veillez à affecter la valeur 1 au paramètre *@ignore_distributributor* pour conserver les métadonnées de la base de données de publication active sur le serveur de distribution.  
+     Exécutez `sp_dropsubscription` pour supprimer les abonnements de publication. Veillez à définir le paramètre *@ignore_distributributor* sur 1 pour conserver les métadonnées de la base de données de publication active sur le serveur de distribution.  
   
     ```  
     USE MyDBName;  
@@ -81,7 +81,7 @@ ms.locfileid: "62791985"
         @ignore_distributor = 1;  
     ```  
   
-     Exécutez `sp_droppublication` pour supprimer toutes les publications. De nouveau, affectez la valeur 1 au paramètre *@ignore_distributor* pour conserver les métadonnées de la base de données de publication active sur le serveur de distribution.  
+     Exécutez `sp_droppublication` pour supprimer toutes les publications. Là encore, affectez *@ignore_distributor* la valeur 1 au paramètre pour conserver les métadonnées de la base de données de publication active sur le serveur de distribution.  
   
     ```  
     EXEC sys.sp_droppublication   
@@ -104,16 +104,16 @@ ms.locfileid: "62791985"
   
 -   [Configurer la réplication pour les groupes de disponibilité AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md)  
   
--   [Réplication, le suivi des modifications, Capture de données modifiées et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)  
+-   [Réplication, Change Tracking, capture de données modifiées et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)  
   
 -   [FAQ sur l’administration de la réplication](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
 -   [Abonnés de réplication et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Conditions préalables, Restrictions et recommandations pour les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
- [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Groupes de disponibilité AlwaysOn : Interopérabilité (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
+ [Conditions préalables requises, restrictions et recommandations pour groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Groupes de disponibilité AlwaysOn : interopérabilité (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
  [Réplication SQL Server](../../../relational-databases/replication/sql-server-replication.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Exécuter le serveur SQL Server Assistant Importation et exportation | Microsoft Docs
+title: Exécuter l’Assistant importation et exportation SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -16,32 +16,32 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768031"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>Exécuter l'Assistant Importation et Exportation SQL Server
-  L'Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] constitue la méthode la plus simple pour copier des données entre des sources de données et pour construire des packages de base. Pour plus d’informations sur l’Assistant, consultez [SQL Server Assistant Importation et exportation](import-and-export-data-with-the-sql-server-import-and-export-wizard.md).  
+  L'Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] constitue la méthode la plus simple pour copier des données entre des sources de données et pour construire des packages de base. Pour plus d’informations sur l’Assistant, consultez [SQL Server Assistant importation et exportation](import-and-export-data-with-the-sql-server-import-and-export-wizard.md).  
   
- Pour une vidéo qui montre comment utiliser le SQL Server Assistant Importation et exportation pour créer un package qui exporte des données à partir d’une base de données SQL Server vers une feuille de calcul Microsoft Excel, consultez [exportation de données SQL Server vers Excel (vidéo SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131024).  
+ Pour obtenir une vidéo qui montre comment utiliser l’Assistant importation et exportation SQL Server pour créer un package qui exporte des données à partir d’une base de données SQL Server vers une feuille de calcul Microsoft Excel, consultez [exportation de données SQL Server vers Excel (SQL Server vidéo)](https://go.microsoft.com/fwlink/?LinkId=131024).  
   
 ### <a name="to-start-the-sql-server-import-and-export-wizard"></a>Pour démarrer l'Assistant Importation et Exportation SQL Server  
   
--   Sur le **Démarrer** menu, pointez sur **tous les programmes**, pointez sur**Microsoft SQL Server** , puis cliquez sur **importer et exporter des données**.  
+-   Dans le menu **Démarrer** , pointez sur **tous les programmes**, pointez sur**Microsoft SQL Server** , puis cliquez sur **Importer et exporter des données**.  
   
      -ou-  
   
-     Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], avec le bouton droit le **Packages SSIS** dossier, puis cliquez sur **SSISImport et l’Assistant Exportation de**.  
+     Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], cliquez avec le bouton droit sur le dossier **packages SSIS** , puis cliquez sur **Assistant SSISImport et exportation**.  
   
      -ou-  
   
-     Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dans le **projet** menu, cliquez sur **SSISImport et l’Assistant Exportation de**.  
+     Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dans le menu **projet** , cliquez sur **Assistant SSISImport et exportation**.  
   
      -ou-  
   
-     Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], se connecter à la [!INCLUDE[ssDE](../../includes/ssde-md.md)] type de serveur, développez bases de données, cliquez sur une base de données, pointez sur **tâches**, puis cliquez sur **importer des données** ou **exporter des données**.  
+     Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous [!INCLUDE[ssDE](../../includes/ssde-md.md)] au type de serveur, développez bases de données, cliquez avec le bouton droit sur une base de données, pointez sur **tâches**, puis cliquez sur **importer des données** ou **exporter des données**.  
   
      -ou-  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62768031"
   
     -   Indiquez s'il faut créer une base de données et définir ses propriétés. Les propriétés suivantes ne peuvent pas être configurées et l'Assistant utilise les valeurs par défaut spécifiées :  
   
-        |Propriété|Value|  
+        |Propriété|Valeur|  
         |--------------|-----------|  
         |Classement|Latin1_General_CS_AS_KS_WS|  
         |mode de récupération|Complète|  
@@ -117,9 +117,9 @@ ms.locfileid: "62768031"
   
 6.  Enregistrez et exécutez un package.  
   
-     Si l'Assistant est démarré à partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de l'invite de commandes, le package peut s'exécuter immédiatement. Vous pouvez éventuellement enregistrer le package à le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** base de données ou au système de fichiers. Pour plus d’informations sur la **msdb** de base de données, consultez [gestion des packages &#40;Service SSIS&#41;](../service/package-management-ssis-service.md).  
+     Si l'Assistant est démarré à partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de l'invite de commandes, le package peut s'exécuter immédiatement. Vous pouvez éventuellement enregistrer le package dans la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données **msdb** ou dans le système de fichiers. Pour plus d’informations sur la base de données **msdb** , consultez [Package Management &#40;service SSIS&#41;](../service/package-management-ssis-service.md).  
   
-     Lorsque vous enregistrez le package, vous pouvez définir son niveau de protection et, si ce niveau utilise un mot de passe, fournir celui-ci. Pour plus d’informations sur les niveaux de protection de package, consultez [contrôle d’accès pour les données sensibles dans les Packages](../security/access-control-for-sensitive-data-in-packages.md).  
+     Lorsque vous enregistrez le package, vous pouvez définir son niveau de protection et, si ce niveau utilise un mot de passe, fournir celui-ci. Pour plus d’informations sur les niveaux de protection des packages, consultez [Access Control pour obtenir des données sensibles dans des packages](../security/access-control-for-sensitive-data-in-packages.md).  
   
      Si l'Assistant est démarré à partir d'un projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous ne pouvez pas exécuter le package à partir de l'Assistant. Au lieu de cela, le package est ajouté au projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à partir duquel vous avez démarré l'Assistant. Vous pouvez ensuite exécuter le package dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -127,7 +127,7 @@ ms.locfileid: "62768031"
     >  Dans [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], l'option permettant d'enregistrer le package créé par l'Assistant n'est pas disponible.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Assistant Importation et Exportation SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
+ [Assistant importation et exportation SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
  [Créer des packages dans les outils de données SQL Server](../create-packages-in-sql-server-data-tools.md)  
   
   

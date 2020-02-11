@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72785cffa01da7bf00248d442b1d3ce4103c45a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771365"
 ---
 # <a name="create-the-sql-server-change-database"></a>Créer la base de données de modification SQL Server
@@ -35,16 +35,16 @@ ms.locfileid: "62771365"
  **Instance Oracle CDC**  
  Entrez les informations suivantes sur l'instance CDC que vous créez.  
   
--   **Nom**: nom du nouveau service. Ce sera également le nom de la nouvelle base de données modifiée.  
+-   **Nom**: tapez le nom du nouveau service. Ce sera également le nom de la nouvelle base de données modifiée.  
   
--   **Description** : description de la nouvelle instance permettant de l’identifier plus facilement. Ce paramètre est facultatif.  
+-   **Description**: tapez une description de la nouvelle instance pour vous aider à l'identifier. Ce paramètre est facultatif.  
   
  **Base de données modifiée SQL Server**  
  Cette section est utilisée pour créer la base de données.  
   
-1.  **Modifier la base de données** : nom de la nouvelle base de données modifiée. Le nom de la base de données est identique au nom donné à l'instance. Ce champ en lecture seule affiche le chemin d'accès complet à la base de données.  
+1.  **Modifier la base de données**: nom de la nouvelle base de données modifiée. Le nom de la base de données est identique au nom donné à l'instance. Ce champ en lecture seule affiche le chemin d'accès complet à la base de données.  
   
-2.  **Créer une base de données** : cliquez sur **Créer une base de données** pour créer la base de données.  
+2.  **Créer une base de données**: cliquez sur **Créer une base de données** pour créer la base de données.  
   
      Pour créer la base de données, la connexion doit posséder le rôle serveur `sysasmin` . Pour plus d'informations, consultez la remarque sur la sécurité ci-dessus.  
   

@@ -25,14 +25,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81d51c8778cfbc6e3891dfb3b6783db48f0c65a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62728515"
 ---
 # <a name="attribute-relationships"></a>Relations d’attributs
-  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], attributs au sein d’une dimension sont toujours liés directement ou indirectement à l’attribut clé. Quand vous définissez une dimension basée sur un schéma en étoile, c'est-à-dire quand tous les attributs de la dimension sont dérivés de la même table relationnelle, une relation d'attribut est automatiquement définie entre l'attribut clé et chaque attribut non-clé de la dimension. Quand vous définissez une dimension basée sur un schéma en flocon, où les attributs de la dimension sont dérivés de plusieurs tables liées, une relation d'attribut est automatiquement définie comme suit :  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les attributs d’une dimension sont toujours liés directement ou indirectement à l’attribut de clé. Quand vous définissez une dimension basée sur un schéma en étoile, c'est-à-dire quand tous les attributs de la dimension sont dérivés de la même table relationnelle, une relation d'attribut est automatiquement définie entre l'attribut clé et chaque attribut non-clé de la dimension. Quand vous définissez une dimension basée sur un schéma en flocon, où les attributs de la dimension sont dérivés de plusieurs tables liées, une relation d'attribut est automatiquement définie comme suit :  
   
 -   entre l'attribut clé et chaque attribut non-clé lié aux colonnes de la table de dimension principale ;  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62728515"
   
 -   entre l'attribut lié à la clé étrangère de la table secondaire et chaque attribut non-clé lié aux colonnes de la table secondaire.  
   
- Cependant, pour plusieurs raisons, vous pouvez souhaiter modifier ces relations d'attributs par défaut. Par exemple, vous voulez définir une hiérarchie naturelle, un ordre de tri personnalisé ou une granularité de dimension basée sur un attribut non-clé. Pour plus d’informations, consultez [Dimension Attribute Properties Reference](../multidimensional-models/dimension-attribute-properties-reference.md).  
+ Cependant, pour plusieurs raisons, vous pouvez souhaiter modifier ces relations d'attributs par défaut. Par exemple, vous voulez définir une hiérarchie naturelle, un ordre de tri personnalisé ou une granularité de dimension basée sur un attribut non-clé. Pour plus d’informations, consultez [référence des propriétés d’attribut de dimension](../multidimensional-models/dimension-attribute-properties-reference.md).  
   
 > [!NOTE]  
 >  Les relations d'attributs sont appelées propriétés de membre dans les expressions MDX (Multidimensional Expressions).  
@@ -54,13 +54,13 @@ ms.locfileid: "62728515"
   
 -   Age  
   
--   Gender  
+-   Sexe  
   
 -   Email  
   
--   Ville  
+-   City  
   
--   Pays  
+-   Country  
   
 -   Région  
   
@@ -78,11 +78,11 @@ ms.locfileid: "62728515"
   
 -   l'attribut City en tant que relation d'attribut de l'attribut Customer.  
   
- Pour parcourir les données dans le cube, vous pouvez également créer une hiérarchie définie par l’utilisateur qui ne représente pas une hiérarchie naturelle dans les données (qui est appelée un *ad hoc* ou *reporting* hiérarchie). Par exemple, vous pouvez créer une hiérarchie définie par l'utilisateur basée sur `{Age, Gender}`. Les utilisateurs ne voient pas aucune différence dans la façon dont les deux hiérarchies se comportent, bien que la hiérarchie naturelle bénéficie d’agrégation et l’indexation des structures - masqués à partir de l’utilisateur : ce compte pour les relations naturelles de la source de données.  
+ Pour parcourir les données du cube, vous pouvez également créer une hiérarchie définie par l’utilisateur qui ne représente pas une hiérarchie naturelle dans les données (appelée hiérarchie *ad hoc* ou de *création de rapports* ). Par exemple, vous pouvez créer une hiérarchie définie par l'utilisateur basée sur `{Age, Gender}`. Les utilisateurs ne voient aucune différence quant à la façon dont les deux hiérarchies se comportent, bien que la hiérarchie naturelle bénéficie de structures d’agrégation et d’indexation, qui sont masquées par l’utilisateur, ce qui compte pour les relations naturelles dans les données sources.  
   
  La propriété `SourceAttribute` d'un niveau détermine l'attribut utilisé pour décrire le niveau. La propriété `KeyColumns` de l'attribut spécifie la colonne de la vue de source de données qui fournit les membres. La propriété `NameColumn` de l'attribut peut spécifier une colonne de nom différente pour les membres.  
   
- Pour définir un niveau dans une hiérarchie définie par l’utilisateur à l’aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le **Concepteur de dimensions** vous permet de sélectionner un attribut de dimension, une colonne dans une table de dimension ou une colonne d’une table associée incluse dans la vue de source de données pour le cube. Pour plus d’informations sur la création de hiérarchies définies par l’utilisateur, consultez [les hiérarchies définies par l’utilisateur](../multidimensional-models/user-defined-hierarchies-create.md).  
+ Pour définir un niveau dans une hiérarchie définie par l’utilisateur [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]à l’aide de, le **Concepteur de dimensions** vous permet de sélectionner un attribut de dimension, une colonne dans une table de dimension ou une colonne d’une table associée incluse dans la vue de source de données pour le cube. Pour plus d’informations sur la création de hiérarchies définies par l’utilisateur, consultez [créer des hiérarchies définies par l’utilisateur](../multidimensional-models/user-defined-hierarchies-create.md).  
   
  Dans Analysis Services, une hypothèse est généralement faite à propos du contenu des membres. Les membres feuilles n'ont pas de descendants et contiennent des données dérivées des sources de données sous-jacentes. Les membres non-feuilles ont des descendants et contiennent des données dérivées des agrégations effectuées sur les membres enfants. Dans les niveaux agrégés, les membres sont basés sur les agrégations des niveaux inférieurs. Par conséquent, quand la propriété `IsAggregatable` est définie à `False` sur un attribut source pour un niveau, aucun attribut pouvant faire l'objet d'une agrégation ne peut être ajouté en tant que niveau au dessus de cet attribut.  
   
@@ -90,12 +90,12 @@ ms.locfileid: "62728515"
  La principale contrainte lorsque vous créez une relation d'attribut consiste à veiller à ce que l'attribut auquel la relation d'attribut fait référence ne dispose que d'une seule valeur pour chaque membre de l'attribut auquel la relation d'attribut appartient. Par exemple, si vous définissez une relation entre un attribut City (Ville) et un attribut State (État), chaque Ville ne peut être liée qu'à un seul État.  
   
 ## <a name="attribute-relationship-queries"></a>Requêtes de relations d'attributs  
- Vous pouvez utiliser des requêtes MDX pour extraire des données des relations d'attributs, sous forme de propriétés, avec le mot clé `PROPERTIES` de l'instruction MDX `SELECT`. Pour plus d’informations sur la façon d’utiliser MDX pour récupérer les propriétés de membre, consultez [à l’aide des propriétés de membre &#40;MDX&#41;](../multidimensional-models/mdx/mdx-member-properties.md).  
+ Vous pouvez utiliser des requêtes MDX pour extraire des données des relations d'attributs, sous forme de propriétés, avec le mot clé `PROPERTIES` de l'instruction MDX `SELECT`. Pour plus d’informations sur l’utilisation de MDX pour récupérer des propriétés de membre, consultez [utilisation de propriétés de membre &#40;&#41;MDX ](../multidimensional-models/mdx/mdx-member-properties.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Attributs et hiérarchies d'attributs](attributes-and-attribute-hierarchies.md)   
+ [Attributs et hiérarchies d’attributs](attributes-and-attribute-hierarchies.md)   
  [Référence des propriétés d’attribut de dimension](../multidimensional-models/dimension-attribute-properties-reference.md)   
  [Hiérarchies utilisateur](user-hierarchies.md)   
- [Propriétés de la hiérarchie utilisateur](user-hierarchies-properties.md)  
+ [Propriétés de la hiérarchie définie par l'utilisateur](user-hierarchies-properties.md)  
   
   

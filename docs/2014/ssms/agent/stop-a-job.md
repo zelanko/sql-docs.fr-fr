@@ -15,22 +15,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b55ca5e8f2e57e85a75f610efe4115ced0dce365
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798150"
 ---
 # <a name="stop-a-job"></a>Arrêter un travail
-  Cette rubrique explique comment arrêter un travail de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Un travail est une suite d'actions effectuées par SQL Server Agent.  
+  Cette rubrique explique comment arrêter un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] travail de l’agent. Un travail est une suite d'actions effectuées par SQL Server Agent.  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :** ,  
   
      [Limitations et restrictions](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour arrêter un travail, utilisez :**  
+-   **Pour arrêter un travail, utilisez :**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "72798150"
   
 #### <a name="to-stop-a-job"></a>Pour arrêter un travail  
   
-1.  Dans **l’Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
+1.  Dans l' [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **Explorateur d’objets,** Connectez-vous à une instance du, puis développez cette instance.  
   
 2.  Développez **SQL Server Agent**, **Travaux**, cliquez avec le bouton droit sur le travail à arrêter, puis cliquez sur **Arrêter le travail**.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "72798150"
   
 ### <a name="to-stop-a-job"></a>Pour arrêter un travail  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -79,10 +79,10 @@ ms.locfileid: "72798150"
     GO  
     ```  
   
- Pour plus d’informations, [consultez &#40;SP_STOP_JOB Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-stop-job-transact-sql).  
+ Pour plus d’informations, consultez [sp_stop_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-stop-job-transact-sql).  
   
 ##  <a name="SMO"></a>Utilisation de SQL Server Management Objects  
 
 ### <a name="to-stop-a-job"></a>Pour arrêter un travail
   
- Appelez la méthode `Stop` de la classe `Job` à l'aide d'un langage de programmation tel que Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
+ Appelez la méthode `Stop` de la classe `Job` à l'aide d'un langage de programmation tel que Visual Basic, Visual C# ou PowerShell. Pour plus d'informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a99a98fd0d471e8cb0f8ab880ae1a6c55e1b121
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655504"
 ---
 # <a name="regenerate-custom-transactional-procedures-to-reflect-schema-changes"></a>Régénérer des procédures transactionnelles personnalisées pour refléter des modifications de schéma
@@ -28,17 +28,17 @@ ms.locfileid: "62655504"
   
 -   La première option consiste à utiliser une procédure de script personnalisée pour remplacer les procédures par défaut utilisées par la réplication :  
   
-    1.  Lors de l’exécution de [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql), assurez-vous que le bit 0x02 de **@schema_option** ait la valeur **true**.  
+    1.  Lors de l’exécution de [sp_addarticle &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql), **@schema_option** Assurez-vous que le bit 0x02 a la **valeur true**.  
   
-    2.  Exécutez [sp_register_custom_scripting &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql) et spécifiez la valeur 'insert', 'update' ou 'delete' pour le paramètre **@type** et le nom de la procédure de script personnalisée pour le paramètre **@value** .  
+    2.  Exécutez [sp_register_custom_scripting &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql) et spécifiez la valeur’Insert', 'Update’ou’Delete’pour le paramètre **@type** et le nom de la procédure de script personnalisée pour le paramètre. **@value**  
   
      La prochaine fois qu'une modification de schéma est effectuée, la réplication appelle cette procédure stockée pour générer le script de la définition de la nouvelle procédure stockée personnalisée définie par l'utilisateur, puis propage la procédure à chaque Abonné.  
   
 -   La deuxième option consiste à utiliser un script qui contient une nouvelle définition de procédure personnalisée :  
   
-    1.  Lors de l’exécution de [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql), affectez au bit 0x02 de **@schema_option** la valeur **false**, de façon à ce que la réplication ne génère pas automatiquement des procédures personnalisées sur l’Abonné.  
+    1.  Lors de l’exécution de [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql), **@schema_option** affectez la valeur **false** au bit 0x02 afin que la réplication ne génère pas automatiquement de procédures personnalisées sur l’abonné.  
   
-    2.  Avant chaque modification de schéma, créez un nouveau fichier de script et inscrivez le script avec la réplication en exécutant [sp_register_custom_scripting &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql). Spécifiez la valeur 'custom_script' pour le paramètre **@type** et le chemin d'accès au script sur le serveur de publication pour le paramètre **@value** .  
+    2.  Avant chaque modification de schéma, créez un nouveau fichier de script et inscrivez le script avec la réplication en exécutant [sp_register_custom_scripting &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql). Spécifiez la valeur « custom_script » pour le paramètre **@type** et le chemin d’accès au script sur le serveur de publication **@value**pour le paramètre.  
   
      La prochaine fois qu'une modification de schéma pertinente est effectuée, ce script s'exécutera sur chaque Abonné au sein de la même transaction que la commande DDL. Quand la modification de schéma est effectuée, le script est désinscrit. Vous devez réinscrire le script pour qu'il soit exécuté après une modification de schéma ultérieure.  
   

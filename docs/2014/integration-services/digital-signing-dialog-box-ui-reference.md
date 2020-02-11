@@ -1,5 +1,5 @@
 ---
-title: Référence de l’interface utilisateur de la boîte de dialogue de signature numérique | Microsoft Docs
+title: Référence de l’interface utilisateur de la boîte de dialogue signature numérique | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7e676368ccdd28a195f3a50208e3ca1c0703214
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059447"
 ---
 # <a name="digital-signing-dialog-box-ui-reference"></a>Référence de l'interface utilisateur de la boîte de dialogue Signature numérique
@@ -27,10 +27,10 @@ ms.locfileid: "66059447"
  Pour plus d’informations, consultez [Identifier la source de packages à l’aide de signatures numériques](security/identify-the-source-of-packages-with-digital-signatures.md) et [Signer un package à l’aide d’un certificat numérique](../../2014/integration-services/sign-a-package-by-using-a-digital-certificate.md).  
   
 ## <a name="options"></a>Options  
- **Signe**  
+ **Expéditeur**  
  Cliquez sur cette option pour ouvrir la boîte de dialogue **Sélectionner un certificat** et sélectionner le certificat à utiliser.  
   
- **Supprimer**  
+ **Remove**  
  Cliquez sur cette option pour supprimer la signature numérique.  
   
 ## <a name="see-also"></a>Voir aussi  

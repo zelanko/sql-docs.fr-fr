@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Transformation de recherche floue (onglet Table de référence) | Microsoft Docs
+title: Éditeur de transformation de recherche floue (onglet table de référence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4c9fb11308ae60cf061f184ade467d814d6a10fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058305"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>Éditeur de transformation de recherche floue (onglet Table de référence)
@@ -28,7 +28,7 @@ ms.locfileid: "66058305"
 >  La transformation de recherche floue crée une copie de travail de la table de référence. Les index décrits ci-dessous sont créés dans cette table de travail en utilisant une table spéciale et non un index [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] standard. La transformation ne modifie pas les tables sources existantes si vous ne sélectionnez pas **Conserver l’index stocké**. Dans ce cas, elle crée un déclencheur dans la table de référence qui met à jour la table de travail et la table d'index de recherche en fonction des modifications apportées à la table de référence.  
   
 > [!NOTE]  
->  Le `Exhaustive` et `MaxMemoryUsage` propriétés de la transformation de recherche floue ne sont pas disponibles dans le **éditeur de Transformation de recherche floue**, mais peut être définie à l’aide de la **éditeur avancé**. En outre, une valeur supérieure à 100 pour `MaxOutputMatchesPerInput` peut uniquement être spécifiée dans le **éditeur avancé**. Pour plus d’informations sur ces propriétés, consultez la section Transformation de recherche floue dans [Propriétés personnalisées des transformations](data-flow/transformations/transformation-custom-properties.md).  
+>  Les `Exhaustive` `MaxMemoryUsage` propriétés et de la transformation de recherche floue ne sont pas disponibles dans l **'éditeur de transformation de recherche floue**, mais elles peuvent être définies à l’aide de l' **éditeur avancé**. De plus, une valeur supérieure à 100 pour `MaxOutputMatchesPerInput` ne peut être spécifiée que dans le **éditeur avancé**. Pour plus d’informations sur ces propriétés, consultez la section Transformation de recherche floue dans [Propriétés personnalisées des transformations](data-flow/transformations/transformation-custom-properties.md).  
   
  Pour en savoir plus sur la transformation de recherche floue, consultez [Fuzzy Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66058305"
  **Nouveau**  
  Crée une connexion en utilisant la boîte de dialogue **Configurer le gestionnaire de connexions OLE DB** .  
   
- **Créer un nouvel index**  
+ **Générer un nouvel index**  
  Indiquez que la transformation doit créer un nouvel index à utiliser pour la recherche.  
   
  **Nom de la table de référence**  
@@ -48,21 +48,21 @@ ms.locfileid: "66058305"
  **Stocker un nouvel index**  
  Sélectionnez cette option pour enregistrer le nouvel index de recherche.  
   
- **Nom du nouvel index**  
+ **Nouveau nom d’index**  
  Si vous avez décidé d'enregistrer le nouvel index de recherche, tapez un nom descriptif.  
   
  **Conserver l’index stocké**  
  Si vous avez décidé d'enregistrer le nouvel index de recherche, indiquez si vous voulez également que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] conserve l'index.  
   
 > [!NOTE]  
->  Quand vous sélectionnez **Conserver l’index stocké** sous l’onglet **Table de référence** de **l’Éditeur de transformation de recherche floue**, la transformation utilise des procédures stockées gérées pour tenir l’index à jour. Ces procédures stockées managées utilisent la fonctionnalité d’intégration du Common Language Runtime (CLR) dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Par défaut, l'intégration CLR dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est désactivée. Pour utiliser la fonctionnalité **Conserver l’index stocké** , vous devez activer l’intégration du CLR. Pour plus d’informations, consultez [Activation de l’intégration du CLR](../relational-databases/clr-integration/clr-integration-enabling.md).  
+>  Lorsque vous sélectionnez **Conserver l’index stocké** sous l’onglet **Table de référence** de **l’Éditeur de transformation de recherche floue**, la transformation utilise des procédures stockées managées pour maintenir l’index. Ces procédures stockées managées utilisent la fonctionnalité d’intégration du Common Language Runtime (CLR) dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Par défaut, l'intégration CLR dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est désactivée. Pour utiliser la fonctionnalité **Conserver l’index stocké** , vous devez activer l’intégration du CLR. Pour plus d’informations, consultez [Activation de l’intégration du CLR](../relational-databases/clr-integration/clr-integration-enabling.md).  
 >   
->  L’option **Conserver l’index stocké** nécessitant l’intégration du CLR, cette fonctionnalité n’est effective que quand vous sélectionnez une table de référence dans une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour laquelle l’intégration du CLR est activée.  
+>  Dans la mesure où l’option **Conserver l’index stocké** requiert l’intégration du CLR, cette fonctionnalité n’est effective que lorsque vous sélectionnez une table de référence dans une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour laquelle l’intégration du CLR est activée.  
   
- **Utiliser l'index existant**  
+ **Utiliser un index existant**  
  Indiquez que la transformation doit utiliser un index de recherche existant.  
   
- **Nom d'un index existant**  
+ **Nom d’un index existant**  
  Dans la liste, sélectionnez un index de recherche existant.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -1,5 +1,5 @@
 ---
-title: Configuration de l’intégration des Services Service (Service SSIS) | Microsoft Docs
+title: Configuration du service Integration Services (service SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 600858e3d7b2ea29a30541c559aa764b4085f7cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060497"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>Configuration du service Integration Services (Service SSIS)
     
 > [!IMPORTANT]  
->  Cette rubrique présente le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un service Windows qui permet de gérer les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] prend en charge le service pour la compatibilité avec les versions antérieures de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], vous pouvez gérer des objets tels que des packages sur le serveur Integration Services.  
+>  Cette rubrique présente le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un service Windows qui permet de gérer les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]prend en charge le service pour la compatibilité descendante [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]avec les versions antérieures de. À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], vous pouvez gérer des objets tels que des packages sur le serveur Integration Services.  
   
- Le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dépend d'un fichier de configuration pour ses paramètres. Par défaut, le nom de ce fichier de configuration est MsDtsSrvr.ini.xml, et le fichier se trouve dans le dossier %ProgramFiles%\Microsoft SQL Server\120\DTS\Binn.  
+ Le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dépend d'un fichier de configuration pour ses paramètres. Par défaut, le nom de ce fichier de configuration est MsDtsSrvr. ini. xml, et le fichier se trouve dans le dossier%ProgramFiles%\Microsoft SQL Server\120\DTS\Binn.  
   
  Généralement, il n'est pas nécessaire d'apporter des modifications à ce fichier de configuration, ni de modifier l'emplacement par défaut du fichier. Cependant, si vos packages sont stockés dans une instance nommée ou une instance distante du [!INCLUDE[ssDE](../includes/ssde-md.md)]ou dans plusieurs instances du [!INCLUDE[ssDE](../includes/ssde-md.md)], vous devez modifier le fichier de configuration. De plus, si vous déplacez le fichier de configuration vers un emplacement autre que l'emplacement par défaut, vous devez modifier la clé de Registre qui spécifie l'emplacement de fichier.  
   
@@ -38,9 +38,9 @@ ms.locfileid: "66060497"
   
 -   Les dossiers racine à afficher pour [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dans l'Explorateur d'objets de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sont les dossiers MSDB et File System.  
   
--   Les packages dans le système de fichiers qui le [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service gère se trouvent dans %ProgramFiles%\Microsoft SQL Server\120\DTS\Packages.  
+-   Les packages du système de fichiers gérés par [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] le service se trouvent dans%ProgramFiles%\Microsoft SQL Server\120\DTS\Packages.  
   
- Ce fichier de configuration spécifie également quelle base de données msdb contient les packages que le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] gère. Par défaut, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est configuré pour gérer les packages dans la base de données msdb de l’instance du [!INCLUDE[ssDE](../includes/ssde-md.md)] qui est installée au même moment que [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Si aucune instance du [!INCLUDE[ssDE](../includes/ssde-md.md)] n’est installée au même moment, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est configuré pour gérer les packages dans la base de données msdb de l’instance locale par défaut du [!INCLUDE[ssDE](../includes/ssde-md.md)].  
+ Ce fichier de configuration spécifie également quelle base de données msdb contient les packages que le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] gère. Par défaut, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est configuré pour gérer les packages dans la base de données msdb de l’instance du [!INCLUDE[ssDE](../includes/ssde-md.md)] qui est installée au même moment que [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Si une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)] n’est pas installée au même moment, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est configuré pour gérer les packages dans la base de données msdb de l’instance locale par défaut du [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 ### <a name="default-configuration-file-example"></a>Exemple de fichier de configuration par défaut  
  L'exemple suivant présente un fichier de configuration par défaut qui spécifie les paramètres suivants :  
@@ -73,10 +73,10 @@ ms.locfileid: "66060497"
 ```  
   
 ## <a name="modification-of-the-configuration-file"></a>Modification du fichier de configuration  
- Vous pouvez modifier le fichier de configuration de manière à permettre aux packages de poursuivre leur exécution en cas d'arrêt du service, à afficher des dossiers racine supplémentaires dans l'Explorateur d'objets ou à spécifier un dossier différent ou des dossiers supplémentaires dans le système de fichiers que doit gérer le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Par exemple, vous pouvez créer des dossiers racine supplémentaires de type `SqlServerFolder`, pour gérer les packages dans les bases de données msdb d’instances supplémentaires de [!INCLUDE[ssDE](../includes/ssde-md.md)].  
+ Vous pouvez modifier le fichier de configuration de manière à permettre aux packages de poursuivre leur exécution en cas d'arrêt du service, à afficher des dossiers racine supplémentaires dans l'Explorateur d'objets ou à spécifier un dossier différent ou des dossiers supplémentaires dans le système de fichiers que doit gérer le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Par exemple, vous pouvez créer des dossiers racine supplémentaires de type `SqlServerFolder`,, pour gérer les packages dans les bases de données msdb d' [!INCLUDE[ssDE](../includes/ssde-md.md)]instances supplémentaires de.  
   
 > [!NOTE]  
->  Certains caractères ne sont pas valides dans les noms de dossiers. Les caractères valides des noms de dossiers sont déterminés par la classe [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] **System.IO.Path** et le champ **GetInvalidFilenameChars** . Le champ **GetInvalidFilenameChars** fournit un tableau de caractères propre à la plateforme, qui ne peuvent pas être spécifiés dans des arguments de chaîne de chemin transmis aux membres de la classe **Path** . Le jeu des caractères non valides peut varier selon le système de fichiers. En général, les caractères non valides sont le guillemet ("), le caractère « inférieur à » (<) et la barre verticale (|).  
+>  Certains caractères ne sont pas valides dans les noms de dossiers. Les caractères valides des noms de dossiers sont déterminés par la classe [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]**System.IO.Path** et le champ **GetInvalidFilenameChars** . Le champ **GetInvalidFilenameChars** fournit un tableau de caractères propre à la plateforme, qui ne peuvent pas être spécifiés dans des arguments de chaîne de chemin transmis aux membres de la classe **Path** . Le jeu des caractères non valides peut varier selon le système de fichiers. En général, les caractères non valides sont le guillemet ("), le caractère « inférieur à » (<) et la barre verticale (|).  
   
  Cependant, pour gérer des packages stockés dans une instance nommée ou une instance distante du [!INCLUDE[ssDE](../includes/ssde-md.md)], vous devez modifier le fichier de configuration. Si vous ne mettez pas à jour le fichier de configuration, vous ne pouvez pas utiliser **l’Explorateur d’objets** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour consulter des packages stockés dans la base de données msdb sur l’instance nommée ou l’instance distante. Si vous essayez d'utiliser l' **Explorateur d'objets** pour consulter ces packages, le message d'erreur suivant apparaît :  
   
@@ -118,11 +118,12 @@ ms.locfileid: "66060497"
 ```  
   
 ## <a name="modification-of-the-configuration-file-location"></a>Modification de l'emplacement du fichier de configuration  
-La clé de Registre **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS\ServiceConfigFile** Spécifie l’emplacement et le nom pour la configuration du fichier [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service utilise. La valeur par défaut de la clé de Registre est **C:\Program Files\Microsoft SQL Server\120\DTS\Binn\MsDtsSrvr.ini.xml**. Vous pouvez mettre à jour la valeur de la clé de Registre pour utiliser un nom et un emplacement différents pour le fichier de configuration. Notez que le numéro de version dans le chemin d’accès (120 pour SQL Server [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]) varie selon la version de SQL Server. 
+La clé de Registre **HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\120\SSIS\ServiceConfigFile** spécifie l’emplacement et le nom du fichier [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de configuration utilisé par le service. La valeur par défaut de la clé de Registre est **C:\Program Files\Microsoft SQL Server\120\DTS\Binn\MsDtsSrvr.ini.xml**. Vous pouvez mettre à jour la valeur de la clé de Registre pour utiliser un nom et un emplacement différents pour le fichier de configuration. Notez que le numéro de version dans le chemin d’accès ( [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]120 pour SQL Server) varie en fonction de la version de SQL Server. 
   
   
 > [!CAUTION]  
->  La modification incorrecte du Registre peut entraîner de graves problèmes et nécessiter la réinstallation du système d'exploitation. [!INCLUDE[msCoName](../includes/msconame-md.md)] ne garantit pas que les problèmes résultant d'une modification incorrecte du Registre peuvent être résolus. Avant de modifier le Registre, sauvegardez toutes vos données importantes. Pour plus d'informations sur la méthode de sauvegarde, de restauration et de modification du Registre, consultez l'article [!INCLUDE[msCoName](../includes/msconame-md.md)] Description du Registre de Microsoft Windows [de la Base de connaissances](https://support.microsoft.com/kb/256986).  
+>  La modification incorrecte du Registre peut entraîner de graves problèmes et nécessiter la réinstallation du système d'exploitation. 
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] ne garantit pas que les problèmes résultant d'une modification incorrecte du Registre peuvent être résolus. Avant de modifier le Registre, sauvegardez toutes vos données importantes. Pour plus d'informations sur la méthode de sauvegarde, de restauration et de modification du Registre, consultez l'article [!INCLUDE[msCoName](../includes/msconame-md.md)] Description du Registre de Microsoft Windows [de la Base de connaissances](https://support.microsoft.com/kb/256986).  
   
  Lorsqu'il démarre, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] charge le fichier de configuration. Toute modification de l'entrée de Registre nécessite le redémarrage du service.  
   

@@ -1,5 +1,5 @@
 ---
-title: Vue d’ensemble d’attributs personnalisés de l’intégration de CLR | Microsoft Docs
+title: Vue d’ensemble des attributs personnalisés d’intégration du CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8df7881dd5f38935628cb6653d57763a8846e60f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781104"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>Vue d'ensemble des attributs personnalisés de l'intégration du CLR
   Le CLR (Common Language Runtime) du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] autorise l'utilisation de mots clés descriptifs, appelés attributs. Ces attributs fournissent des informations supplémentaires sur de nombreux éléments, comme les méthodes et les classes. Ils sont enregistrés dans l'assembly avec les métadonnées de l'objet et peuvent être utilisés pour décrire votre code à d'autres outils de développement ou pour affecter le comportement au moment de l'exécution au sein de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Lorsque vous enregistrez une routine CLR avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ce dernier dérive un jeu de propriétés relatives à la routine. Ces propriétés déterminent les fonctionnalités de la routine, notamment sa capacité d'indexation. Par exemple, l'affectation de la valeur `DataAccess` à la propriété `DataAccessKind.Read` vous permet d'accéder aux données des tables utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au sein d'une fonction CLR. L’exemple suivant illustre un cas simple dans lequel le `DataAccess` propriété est définie pour faciliter l’accès aux données à partir d’une table utilisateur **table1**.  
+ Lorsque vous enregistrez une routine CLR avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ce dernier dérive un jeu de propriétés relatives à la routine. Ces propriétés déterminent les fonctionnalités de la routine, notamment sa capacité d'indexation. Par exemple, l'affectation de la valeur `DataAccess` à la propriété `DataAccessKind.Read` vous permet d'accéder aux données des tables utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au sein d'une fonction CLR. L’exemple suivant montre un cas simple dans lequel la `DataAccess` propriété est définie pour faciliter l’accès aux données à partir d’une table utilisateur **table1**.  
   
 ```csharp  
 using System;  

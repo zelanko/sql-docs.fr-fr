@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fafb116e1e5c02d27ad3242edd27064ffae6e401
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010370"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Éviter les conflits avec les opérations de base de données dans les applications FILESTREAM
@@ -27,7 +27,7 @@ ms.locfileid: "66010370"
 |instructions Transact-SQL|Ouvert pour la lecture|Ouvert pour l'écriture|  
 |------------------------------|---------------------|----------------------|  
 |Instructions DDL qui fonctionnent avec des métadonnées de base de données, telles que CREATE TABLE, CREATE INDEX, DROP TABLE et ALTER TABLE.|Autorisé|Sont bloquées et échouent à la suite d'un délai d'expiration.|  
-|Instructions DML qui fonctionnent avec les données qui sont stockées dans la base de données, telles qu'UPDATE, DELETE et INSERT.|Autorisé|Refusées|  
+|Instructions DML qui fonctionnent avec les données qui sont stockées dans la base de données, telles qu'UPDATE, DELETE et INSERT.|Autorisé|Refusée|  
 |SELECT|Autorisé|Autorisé|  
 |COMMIT TRANSACTION|Refusées*|Refusées*|  
 |SAVE TRANSACTION|Refusées*|Refusées*|  
@@ -38,7 +38,7 @@ ms.locfileid: "66010370"
 ## <a name="examples"></a>Exemples  
  Les exemples suivants illustrent comment les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] et l’accès FILESTREAM Win32 peut provoquer des conflits.  
   
-### <a name="a-opening-a-filestream-blob-for-write-access"></a>A. Ouverture d'un BLOB FILESTREAM pour un accès en écriture  
+### <a name="a-opening-a-filestream-blob-for-write-access"></a>R. Ouverture d'un BLOB FILESTREAM pour un accès en écriture  
  L'exemple suivant montre l'effet d'ouverture d'un fichier pour un accès uniquement en écriture.  
   
 ```  

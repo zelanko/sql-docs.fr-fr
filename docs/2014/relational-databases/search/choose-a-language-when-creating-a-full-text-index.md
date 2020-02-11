@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5f045933735d2a26b1e9007868f96680bef4fc47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012731"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Choisir une langue lors de la création d'un index de recherche en texte intégral
@@ -36,7 +36,8 @@ ms.locfileid: "66012731"
  Cette section fournit une introduction aux analyseurs lexicaux et aux générateur de formes dérivées et indique comment la recherche en texte intégral utilise le LCID de la langue de la colonne.  
   
 ### <a name="introduction-to-word-breakers-and-stemmers"></a>Introduction aux analyseurs lexicaux et aux générateurs de formes dérivées  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures incluent une nouvelle famille complète d'analyseurs lexicaux et de générateurs de formes dérivées qui sont considérablement plus performants que ceux précédemment disponibles dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ 
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures incluent une nouvelle famille complète d'analyseurs lexicaux et de générateurs de formes dérivées qui sont considérablement plus performants que ceux précédemment disponibles dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  Le Microsoft Natural Language Group (MS NLG) a implémenté et prend en charge ces nouveaux composants linguistiques.  
@@ -49,7 +50,7 @@ ms.locfileid: "66012731"
   
 -   Sécurité  
   
-     Les nouveaux analyseurs lexicaux sont activés par défaut dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] grâce aux améliorations de sécurité dans les composants linguistiques. Nous recommandons vivement que les composants externes tels que les analyseurs lexicaux et filtres soient signés afin d'améliorer la sécurité globale et la robustesse de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Vous pouvez configurer le texte intégral pour vérifier que ces composants sont signés comme suit :  
+     Les nouveaux analyseurs lexicaux sont activés par défaut [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans grâce aux améliorations de sécurité apportées aux composants linguistiques. Nous recommandons vivement que les composants externes tels que les analyseurs lexicaux et filtres soient signés afin d'améliorer la sécurité globale et la robustesse de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Vous pouvez configurer le texte intégral pour vérifier que ces composants sont signés comme suit :  
   
     ```  
     EXEC sp_fulltext_service 'verify_signature';  
@@ -61,7 +62,7 @@ ms.locfileid: "66012731"
   
 -   Pour couvrir une longue liste de langues, les analyseurs lexicaux sont inclus d'office dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et sont activés par défaut.  
   
- Pour obtenir la liste des langues pour lesquelles [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comprend des analyseurs lexicaux et générateurs de formes dérivées, consultez [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
+ Pour obtenir la liste des langues pour lesquelles [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comprend un analyseur lexical et des générateurs de formes dérivées, consultez [sys. fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
   
 
   
@@ -108,7 +109,7 @@ ms.locfileid: "66012731"
 ##  <a name="type"></a> Effet du type de colonne sur la recherche en texte intégral  
  Un autre point à prendre en considération dans le choix de la langue est lié au mode de représentation des données. Pour les données non stockées dans une colonne `varbinary(max)`, aucun filtrage particulier n'est effectué. À la place, le texte est généralement traité tel quel par le composant de séparation des mots.  
   
- Les analyseurs lexicaux sont, aussi, principalement conçus pour traiter le texte écrit. Par conséquent, si votre texte contient un balisage quelconque (par exemple du code HTML), vous risquez de ne pas obtenir une précision linguistique importante durant l'indexation et la recherche. Dans la mesure où vous disposez de deux choix, à savoir le préféré cas, méthode consiste simplement à stocker les données de texte dans `varbinary(max)` colonne et pour indiquer le type de document afin qu’il peut être filtrée. Si ce choix ne vous convient pas, utilisez un analyseur lexical neutre et, si possible, ajoutez des données de balisage (par exemple « br » en langage HTML) à vos listes de mots parasites.  
+ Les analyseurs lexicaux sont, aussi, principalement conçus pour traiter le texte écrit. Par conséquent, si votre texte contient un balisage quelconque (par exemple du code HTML), vous risquez de ne pas obtenir une précision linguistique importante durant l'indexation et la recherche. Dans ce cas, vous avez deux possibilités : la méthode recommandée consiste simplement à stocker les données de texte `varbinary(max)` dans la colonne et à indiquer le type de document afin qu’elles puissent être filtrées. Si ce choix ne vous convient pas, utilisez un analyseur lexical neutre et, si possible, ajoutez des données de balisage (par exemple « br » en langage HTML) à vos listes de mots parasites.  
   
 > [!NOTE]  
 >  L'identification de la racine linguistique n'intervient pas lorsque vous spécifiez la langue neutre.  

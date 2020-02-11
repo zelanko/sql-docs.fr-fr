@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 741ea39f6a60d7c9f52fb901a1b038a352e948b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770415"
 ---
 # <a name="merge-transformation"></a>transformation de fusion
@@ -54,7 +54,7 @@ ms.locfileid: "62770415"
  Cette transformation a deux entrées et une sortie. Elle ne prend pas en charge de sortie d'erreur.  
   
 ## <a name="configuration-of-the-merge-transformation"></a>Configuration de la transformation de fusion  
- Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programme.  
   
  Pour plus d’informations sur les propriétés que vous pouvez définir dans la boîte de dialogue **Éditeur de transformation de fusion** , consultez [Éditeur de transformation de fusion](../../merge-transformation-editor.md).  
   

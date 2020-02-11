@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ad13821341291a91a989297f29e1459a40de5afe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62720939"
 ---
 # <a name="setdefaults-method-sinstance-class"></a>Méthode SetDefaults (classe SInstance)
-  Définit toutes les valeurs par défaut pour l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec l’option permettant de remplacer les données existantes.  
+  Définit toutes les valeurs par défaut de l’instance [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de avec l’option permettant de remplacer les données existantes.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,8 +40,8 @@ OverwriteAll
 ```  
   
 ## <a name="parts"></a>Éléments  
- *object*  
- Un [classe SInstance](sinstance-class.md) objet qui représente une instance de serveur.  
+ *dessin*  
+ Objet de [classe SInstance](sinstance-class.md) qui représente une instance de serveur.  
   
 #### <a name="parameters"></a>Paramètres  
   

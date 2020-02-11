@@ -1,5 +1,5 @@
 ---
-title: L’exécution de requêtes XPath avec des espaces de noms (la Classes managées SQLXML) | Microsoft Docs
+title: Exécution de requêtes XPath avec des espaces de noms (classes managées SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,24 +19,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 793107e91425e4fa0df23211a6d4ea42afef8c54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010801"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>Exécution de requêtes XPath avec des espaces de noms (classes managées SQLXML)
   Les requêtes XPath peuvent inclure des espaces de noms. Si les éléments de schéma sont qualifiés par un espace de noms (utilisent un espace de noms cible), les requêtes XPath sur le schéma doivent spécifier cet espace de noms.  
   
- Le caractère générique (*) n'étant pas prise en charge dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0, vous devez spécifier la requête XPath en utilisant un préfixe d'espace de noms. Pour résoudre le préfixe, utilisez la propriété d’espaces de noms pour spécifier la liaison de l’espace de noms.  
+ Le caractère générique (*) n'étant pas prise en charge dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0, vous devez spécifier la requête XPath en utilisant un préfixe d'espace de noms. Pour résoudre le préfixe, utilisez la propriété Namespaces pour spécifier la liaison d’espace de noms.  
   
- Dans l’exemple suivant, la requête XPath spécifie les espaces de noms en utilisant le caractère générique (\*) et les fonctions XPath dépourvue et namespace-uri(). Cette requête XPath retourne tous les éléments pour lesquels le nom local est `Employee` et l'URI d'espace de noms est `urn:myschema:Contacts` :  
+ Dans l’exemple suivant, la requête XPath spécifie des espaces de noms à l’aide\*du caractère générique () et des fonctions XPath local name () et namespace-URI (). Cette requête XPath retourne tous les éléments pour lesquels le nom local est `Employee` et l'URI d'espace de noms est `urn:myschema:Contacts` :  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
 ```  
   
- Dans SQLXML 4.0, spécifiez cette requête XPath avec un préfixe d'espace de noms. `x:Contact` constitue un exemple, où `x` est le préfixe d'espace de noms. Prenons le schéma XSD suivant :  
+ Dans SQLXML 4.0, spécifiez cette requête XPath avec un préfixe d'espace de noms. 
+  `x:Contact` constitue un exemple, où `x` est le préfixe d'espace de noms. Prenons le schéma XSD suivant :  
   
 ```  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  
@@ -54,7 +55,7 @@ ms.locfileid: "66010801"
   
  Comme ce schéma définit l'espace de noms cible, une requête Xpath (telle que « Employee ») sur ce schéma doit inclure l'espace de noms.  
   
- L'exemple d'application C# suivant exécute une requête XPath sur le schéma XSD précédent (MySchema.xml). Pour résoudre le préfixe, spécifiez la liaison de l’espace de noms à l’aide de la propriété d’espaces de noms de l’objet SqlXmlCommand.  
+ L'exemple d'application C# suivant exécute une requête XPath sur le schéma XSD précédent (MySchema.xml). Pour résoudre le préfixe, spécifiez la liaison d’espace de noms à l’aide de la propriété namespaces de l’objet SqlXmlCommand.  
   
 > [!NOTE]  
 >  Dans le code, vous devez fournir le nom de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans la chaîne de connexion.  
@@ -96,7 +97,7 @@ class Test
   
 1.  Enregistrez dans un dossier le schéma XSD (MySchema.xml) fourni dans cet exemple.  
   
-2.  Enregistrez le code c# (DocSample.cs) fourni dans cet exemple dans le même dossier dans lequel le schéma est stocké. (Si vous stockez les fichiers dans un dossier différent, vous devrez modifier le code et spécifier le chemin d'accès approprié au répertoire pour le schéma de mappage.)  
+2.  Enregistrez le code C# (DocSample.cs) fourni dans cet exemple dans le même dossier que celui dans lequel le schéma est stocké. (Si vous stockez les fichiers dans un dossier différent, vous devrez modifier le code et spécifier le chemin d'accès approprié au répertoire pour le schéma de mappage.)  
   
 3.  Compilez le code. Pour compiler le code à l'invite de commandes, utilisez :  
   

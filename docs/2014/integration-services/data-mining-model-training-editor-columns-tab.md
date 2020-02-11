@@ -1,5 +1,5 @@
 ---
-title: Éditeur d’apprentissage du modèle de données d’exploration de données (onglet colonnes) | Microsoft Docs
+title: Éditeur d’apprentissage du modèle d’exploration de données (onglet colonnes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9c081064f3a0bcb2733f58df7e1b5550bf135c2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059890"
 ---
 # <a name="data-mining-model-training-editor-columns-tab"></a>Éditeur d'apprentissage du modèle d'exploration de données (onglet Colonnes)
@@ -36,7 +36,7 @@ ms.locfileid: "66059890"
  **Colonne d'entrée**  
  Affiche les colonnes d'entrée sélectionnées dans le tableau ci-dessus. Pour modifier ou supprimer une sélection de mappage, utilisez la liste **Colonnes d'entrée disponibles**.  
   
- **Colonnes de structure d’exploration de données**  
+ **Colonnes de structure d'exploration de données**  
  Affiche chaque colonne de destination disponible, qu’elle soit mappée ou non.  
   
 ## <a name="see-also"></a>Voir aussi  

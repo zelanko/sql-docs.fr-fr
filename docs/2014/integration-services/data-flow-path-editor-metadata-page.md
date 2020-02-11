@@ -1,5 +1,5 @@
 ---
-title: Éditeur du chemin d’accès (Page métadonnées) de flux de données | Microsoft Docs
+title: Éditeur du chemin d’accès au workflow (page métadonnées) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0a1897ded7e3d266d701bd4a587c03c252105bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059987"
 ---
 # <a name="data-flow-path-editor-metadata-page"></a>Éditeur du chemin d'accès au flux de données (Page Métadonnées)
   Utilisez la page **Métadonnées** de la boîte de dialogue **Éditeur du chemin d'accès au flux de données** pour afficher les métadonnées des colonnes du chemin d'accès.  
   
 ## <a name="options"></a>Options  
- **Path metadata**  
+ **Métadonnées du chemin**  
  Affiche la liste des métadonnées des colonnes. Cliquez sur les en-têtes de colonne pour trier les données des colonnes.  
   
  **Nom**  
@@ -62,8 +62,8 @@ ms.locfileid: "66059987"
  Copie les données de la colonne dans le Presse-papiers. Par défaut, toutes les lignes de métadonnées sont copiées dans l'ordre de tri actuellement affiché.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur du chemin d’accès de flux de données &#40;Page Général&#41;](general-page-of-integration-services-designers-options.md)   
- [Éditeur du chemin d’accès de flux de données &#40;Page visionneuses de données&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
+ [Éditeur du chemin d’accès au Data Flow &#40;&#41;de page général](general-page-of-integration-services-designers-options.md)   
+ [Éditeur du chemin d’accès au workflow &#40;page des visionneuses de données&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
  [Flux de données](data-flow/data-flow.md)   
  [Utiliser des annotations dans les packages](use-annotations-in-packages.md)  
   

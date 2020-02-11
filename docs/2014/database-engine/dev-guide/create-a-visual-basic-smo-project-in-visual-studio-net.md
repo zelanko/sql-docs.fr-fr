@@ -1,5 +1,5 @@
 ---
-title: Créer un projet SMO Visual Basic dans Visual Studio .NET | Microsoft Docs
+title: Créer un projet Visual Basic SMO dans Visual Studio .NET | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 662916720b9953e0374bedb29890a36ced0cfac0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753338"
 ---
 # <a name="create-a-visual-basic-smo-project-in-visual-studio-net"></a>Créer un projet SMO Visual Basic dans Visual Studio .NET
   Cette section décrit comment élaborer une application de console SMO simple.  
   
- Cet exemple importe des espaces de noms, qui permettent au programme de référencer des types SMO. L'importation de l'espace de noms `Agent` est facultative. Utilisez-le lorsque vous écrivez un programme qui utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. L'espace de noms `Common` est requis pour établir une connexion sécurisée avec l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'espace de noms `SqlClient` est utilisé pour traiter les erreurs d'exception SQL.  
+ Cet exemple importe des espaces de noms, qui permettent au programme de référencer des types SMO. L'importation de l'espace de noms `Agent` est facultative. Utilisez-le quand vous écrivez un programme qui utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’agent. L'espace de noms `Common` est requis pour établir une connexion sécurisée avec l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'espace de noms `SqlClient` est utilisé pour traiter les erreurs d'exception SQL.  
   
 ### <a name="creating-a-visual-basic-smo-project-in-visual-studionet"></a>Création d'un projet SMO Visual Basic dans Visual Studio.NET  
   
@@ -32,15 +32,15 @@ ms.locfileid: "62753338"
   
 2.  Dans le menu **Fichier**, cliquez sur **Nouveau projet**. La boîte de dialogue **Nouveau projet** s'affiche.  
   
-3.  Dans **Types de projets** boîte de dialogue, sélectionnez **Visual Basic**, puis sélectionnez **Windows**. Dans le [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] volet Modèles installés, sélectionnez **Application Console.**  
+3.  Dans la boîte de dialogue **types de projets** , sélectionnez **Visual Basic**, puis sélectionnez **Windows**. Dans le [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] volet Modèles installés, sélectionnez **application console.**  
   
-4.  (Facultatif) Dans le **nom** , tapez le nom de la nouvelle application.  
+4.  Facultatif Dans le champ **nom** , tapez le nom de la nouvelle application.  
   
-5.  Cliquez sur **OK** pour charger le [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] modèle d’application console.  
+5.  Cliquez sur **OK** pour charger [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] le modèle application console.  
   
 6.  Dans le menu **Projet**, sélectionnez **Ajouter une référence**. La boîte de dialogue **Ajouter une référence** s’affiche.  
   
-7.  Cliquez sur **Parcourir**, recherchez les assemblys SMO dans le dossier C:\Program Files\Microsoft SQL Server\120\SDK\Assemblies, puis sélectionnez les fichiers suivants. Il s'agit des fichiers minimum requis pour générer une application SMO :  
+7.  Cliquez sur **Parcourir**, recherchez les assemblys Smo dans le dossier C:\Program Files\Microsoft SQL Server\120\SDK\Assemblies, puis sélectionnez les fichiers suivants. Il s'agit des fichiers minimum requis pour générer une application SMO :  
   
      Microsoft.SqlServer.ConnectionInfo.dll  
   
@@ -59,9 +59,9 @@ ms.locfileid: "62753338"
   
 9. Cliquez sur **Ouvrir**.  
   
-10. Sur le **vue** menu, cliquez sur **Code**. - ou - sélectionnez la fenêtre Module1.vb pour afficher la fenêtre de code.  
+10. Dans le menu **affichage** , cliquez sur **code**.-ou-sélectionnez la fenêtre Module1. vb pour afficher la fenêtre de code.  
   
-11. Dans le code, avant les déclarations, tapez la commande suivante **importations** instructions pour qualifier les types dans l’espace de noms SMO.  
+11. Dans le code, avant les déclarations, tapez les instructions **Imports** suivantes pour qualifier les types dans l’espace de noms Smo.  
   
     ```  
     Imports Microsoft.SqlServer.Management.Smo  

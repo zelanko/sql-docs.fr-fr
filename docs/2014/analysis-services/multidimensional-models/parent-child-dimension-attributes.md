@@ -1,5 +1,5 @@
 ---
-title: Attributs dans les hiérarchies Parent-enfant | Microsoft Docs
+title: Attributs dans les hiérarchies parent-enfant | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,27 +20,27 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35521a8f12d3e5c16e63ba883a2b5d561bde4c96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073478"
 ---
 # <a name="attributes-in-parent-child-hierarchies"></a>Attributs dans des hiérarchies de type parent-enfant
-  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], le contenu des membres d’une dimension repose habituellement sur l’hypothèse générale suivante. Les membres feuilles contiennent des données directement dérivées des sources de données sous-jacentes, et les membres non-feuilles contiennent des données dérivées d'agrégations effectuées sur les membres enfants.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], une hypothèse générale est généralement prise sur le contenu des membres d’une dimension. Les membres feuilles contiennent des données directement dérivées des sources de données sous-jacentes, et les membres non-feuilles contiennent des données dérivées d'agrégations effectuées sur les membres enfants.  
   
  Toutefois, dans une hiérarchie parent-enfant, certains membres non-feuilles peuvent contenir des données issues de sources de données sous-jacentes en plus des données d'agrégation issues des membres enfants. Pour ces membres non-feuilles de la hiérarchie parent-enfant, des membres enfants spéciaux créés par le système contiennent les données des tables de faits sous-jacentes. Appelés *membres de données*, ces membres contiennent une valeur directement associée à un membre non-feuille et indépendante de la valeur agrégée calculée à partir des descendants du membre non-feuille.  
   
  Les membres de données ne sont disponibles que dans les dimensions dotées de hiérarchies parent-enfant et ne sont visibles que si l'attribut parent le permet. Vous pouvez utiliser le Concepteur de dimensions pour contrôler la visibilité des membres de données. Pour exposer les membres de données, affectez à la propriété `MembersWithData` de l'attribut parent la valeur `NonLeafDataVisible.` Pour masquer les membres de données contenus dans l'attribut parent, affectez à la propriété `MembersWithData` de l'attribut parent la valeur `NonLeafDataHidden`.  
   
- Cette configuration ne supplante pas le fonctionnement normal de l'agrégation pour les membres non-feuilles ; le membre de données est toujours inclus comme un membre enfant pour les besoins de l'agrégation. Cependant, une formule de cumul personnalisée peut être utilisée pour remplacer le fonctionnement normal de l'agrégation. Le MDX (Multidimensional Expressions) [DataMember](/sql/mdx/datamember-mdx) fonction vous donne la possibilité d’accéder à la valeur du membre de données associé quelle que soit la valeur de la `MembersWithData` propriété.  
+ Cette configuration ne supplante pas le fonctionnement normal de l'agrégation pour les membres non-feuilles ; le membre de données est toujours inclus comme un membre enfant pour les besoins de l'agrégation. Cependant, une formule de cumul personnalisée peut être utilisée pour remplacer le fonctionnement normal de l'agrégation. La fonction MDX (Multidimensional Expressions) [DataMember](/sql/mdx/datamember-mdx) vous donne la possibilité d’accéder à la valeur du membre de données associé, quelle que soit la `MembersWithData` valeur de la propriété.  
   
  La propriété `MembersWithDataCaption` de l'attribut parent fournit à [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] le modèle de nom utilisé pour générer les noms des membres de données.  
   
 ## <a name="using-data-members"></a>Utilisation des membres de données  
  Les membres de données sont utiles lors de l'agrégation de mesures selon des dimensions d'organisation avec des hiérarchies parent-enfant. Par exemple, l'illustration suivante représente une dimension (volume brut des ventes de produits) qui comprend trois niveaux. Le premier niveau montre le volume brut des ventes, tous commerciaux confondus. Le volume brut des ventes est regroupé par directeur commercial dans le deuxième niveau et par commercial dans le troisième niveau.  
   
- ![Dimension du volume des ventes avec trois niveaux](../media/agdatamember1.gif "dimension du volume des ventes avec trois niveaux")  
+ ![Dimension du volume du chiffre d'affaires brut avec trois niveaux](../media/agdatamember1.gif "Dimension du volume du chiffre d'affaires brut avec trois niveaux")  
   
  Habituellement, pour le membre Directeur commercial 1, la valeur est déduite de l'agrégation des valeurs des membres Commercial 1 et Commercial 2. Cependant, comme Directeur commercial 1 a aussi l'occasion de vendre des produits, ce membre peut contenir en plus des données issues de la table des faits dans la mesure où des ventes peuvent être attribuées à Directeur commercial 1.  
   

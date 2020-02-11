@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721781"
 ---
 # <a name="article-properties---ltarticlegt"></a>Propriétés de l’article - &lt;Article&gt;
@@ -71,7 +71,7 @@ ms.locfileid: "62721781"
  Cette option ne peut pas être modifiée pour les articles des publications activées pour la réplication transactionnelle d'égal à égal.  
   
  **Gérer automatiquement les plages d'identité**  
- Par défaut, la réplication gère toutes les colonnes d'identité au niveau du serveur de publication et de chaque abonné. Chaque nœud de réplication est affecté d'une plage de valeurs d'identité (définie avec les options **Taille de la plage sur le serveur de publication** et **Taille de la plage sur l'Abonné** ) pour qu'une valeur donnée soit utilisée uniquement sur un nœud. Pour plus d’informations, consultez [Répliquer des colonnes d’identité](publish/replicate-identity-columns.md).  
+ Par défaut, la réplication gère toutes les colonnes d'identité au niveau du serveur de publication et de chaque abonné. Chaque nœud de réplication est affecté d'une plage de valeurs d'identité (définie avec les options **Taille de la plage sur le serveur de publication** et **Taille de la plage sur l'Abonné** ) pour qu'une valeur donnée soit utilisée uniquement sur un nœud. Pour plus d’informations, consultez [ Répliquer des colonnes d’identité](publish/replicate-identity-columns.md).  
   
 ## <a name="options-for-transactional-publications"></a>Options des publications transactionnelles  
  **Copie des procédures stockées INSERT, UPDATE et DELETE**  
@@ -84,11 +84,11 @@ ms.locfileid: "62721781"
   
  Pour plus d’informations, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
- **Répliquer**  
- Cette option s'applique uniquement aux procédures stockées. Elle permet d'indiquer si vous voulez répliquer la définition de la procédure stockée (instruction CREATE PROCEDURE) ou son exécution. Si vous répliquez l'exécution de la procédure, la définition de la procédure est répliquée vers l'Abonné lors de l'initialisation de l'abonnement. Lorsque la procédure est exécutée sur le serveur de publication, la réplication exécute la procédure correspondante au niveau de l'Abonné. Ceci peut améliorer les performances de manière significative lorsque des opérations de traitement par lot volumineuses sont exécutées. Pour plus d’informations, voir [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
+ **Réplication**  
+ Cette option s'applique uniquement aux procédures stockées. Elle permet d'indiquer si vous voulez répliquer la définition de la procédure stockée (instruction CREATE PROCEDURE) ou son exécution. Si vous répliquez l'exécution de la procédure, la définition de la procédure est répliquée vers l'Abonné lors de l'initialisation de l'abonnement. Lorsque la procédure est exécutée sur le serveur de publication, la réplication exécute la procédure correspondante au niveau de l'Abonné. Ceci peut améliorer les performances de manière significative lorsque des opérations de traitement par lot volumineuses sont exécutées. Pour plus d’informations, consultez [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="options-for-merge-publications"></a>Options des publications de fusion  
- La boîte de dialogue **Propriétés de l’article** des publications de fusion contient deux onglets : **Propriétés** et **Résolveur**.  
+ La boîte de dialogue **Propriétés de l'article** des publications de fusion contient deux onglets : **Propriétés** et **Résolveur**.  
   
 ### <a name="properties-tab"></a>Onglet Propriétés  
  **Direction de la synchronisation**  
@@ -124,18 +124,18 @@ ms.locfileid: "62721781"
  Si vous sélectionnez le résolveur par défaut, les conflits sont résolus en fonction de la priorité affectée à chaque abonné ou de la première modification écrite sur le serveur de publication, selon le type d'abonnement utilisé. Pour plus d’informations, consulter [Détecter et résoudre des conflits de réplication de fusion](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  **Utiliser un résolveur personnalisé (inscrit sur le serveur de distribution)**  
- Si vous décidez d'utiliser un résolveur d'article (fourni par [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou que vous avez écrit), vous devez sélectionner un résolveur dans la zone de liste. Pour plus d’informations, voir [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+ Si vous décidez d'utiliser un résolveur d'article (fourni par [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou que vous avez écrit), vous devez sélectionner un résolveur dans la zone de liste. Pour plus d’informations, consultez [Détection et résolution avancées des conflits de réplication de fusion](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  Si le résolveur nécessite une entrée, définissez-la dans la zone de texte **Entrez les informations requises par le résolveur** . Pour plus d'informations sur l'entrée nécessaire aux résolveurs personnalisés [!INCLUDE[msCoName](../../includes/msconame-md.md)] , consultez [Microsoft COM-Based Resolvers](merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
  **Autoriser l'Abonné à résoudre les conflits de manière interactive au cours de la synchronisation à la demande**  
- Sélectionnez cette option si les abonnés utilisent la synchronisation à la demande (synchronisation par défaut de la réplication de fusion) et que vous voulez résoudre les conflits de manière interactive. Spécifiez la synchronisation à la demande dans la page **Planification de synchronisation** de l'Assistant Nouvel abonnement. Pour résoudre les conflits de manière interactive, utilisez l'interface utilisateur Résolveur interactif. Pour plus d’informations, voir [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md).  
+ Sélectionnez cette option si les abonnés utilisent la synchronisation à la demande (synchronisation par défaut de la réplication de fusion) et que vous voulez résoudre les conflits de manière interactive. Spécifiez la synchronisation à la demande dans la page **Planification de synchronisation** de l'Assistant Nouvel abonnement. Pour résoudre les conflits de manière interactive, utilisez l'interface utilisateur Résolveur interactif. Pour plus d’informations, consultez [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
  **Exiger la vérification d'une signature numérique avant la fusion**  
  Tous les résolveurs COM fournis par [!INCLUDE[msCoName](../../includes/msconame-md.md)] sont signés. Sélectionnez cette option pour vérifier que le résolveur est valide lors de la synchronisation.  
   
 ## <a name="options-for-oracle-publications"></a>Options des publications Oracle  
- La boîte de dialogue **Propriétés de l’article** des publications Oracle contient deux onglets : **Propriétés** et **Mappage de données**. Les publications Oracle ne prennent pas en charge toutes les propriétés que prennent en charge les publications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, voir [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
+ La boîte de dialogue **Propriétés de l'article** des publications Oracle contient deux onglets : **Propriétés** et **Mappage de données**. Les publications Oracle ne prennent pas en charge toutes les propriétés que prennent en charge les publications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, voir [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
   
 ### <a name="properties-tab"></a>Onglet Propriétés  
  **Copie des procédures stockées INSERT, UPDATE et DELETE**  
@@ -159,7 +159,7 @@ ms.locfileid: "62721781"
  Pour plus d’informations, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
 ### <a name="data-mapping-tab"></a>Onglet Mappage de données  
- **Nom de colonne**  
+ **Nom de la colonne**  
  Nom de la colonne du serveur de publication (en lecture seule).  
   
  **Type de données du serveur de publication**  
@@ -170,7 +170,7 @@ ms.locfileid: "62721781"
   
 -   Pour certains types de données, il existe uniquement une seule possibilité de mappage dans laquelle la colonne de la grille de propriétés est en lecture seule.  
   
--   Pour certains types, vous pouvez sélectionner plus d'un type. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d'utiliser le mappage par défaut si l'application ne nécessite pas un mappage différent. Pour plus d’informations, voir [Data Type Mapping for Oracle Publishers](non-sql/data-type-mapping-for-oracle-publishers.md).  
+-   Pour certains types, vous pouvez sélectionner plus d'un type. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d'utiliser le mappage par défaut si l'application ne nécessite pas un mappage différent. Pour plus d'informations, voir [Data Type Mapping for Oracle Publishers](non-sql/data-type-mapping-for-oracle-publishers.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Create a Publication](publish/create-a-publication.md)   

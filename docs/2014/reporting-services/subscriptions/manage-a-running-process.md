@@ -28,14 +28,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0c465a50547d8ca45947dc5db5c56221a8a4538
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100820"
 ---
 # <a name="manage-a-running-process"></a>Gérer un processus en cours d'exécution
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] analyse l'état des travaux qui s'exécutent sur le serveur de rapports. À intervalles réguliers, le serveur de rapports procède à une analyse des travaux en cours et transmet des informations d'état à la base de données du serveur de rapports ou aux bases de données d'application de service pour le mode SharePoint. Un travail est en cours si l'un des processus suivants est en cours : exécution de la requête sur un serveur de base de données distant ou local, traitement des rapports et rendu de rapport.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] analyse l’état des travaux en cours d’exécution sur le serveur de rapports. À intervalles réguliers, le serveur de rapports procède à une analyse des travaux en cours et transmet des informations d'état à la base de données du serveur de rapports ou aux bases de données d'application de service pour le mode SharePoint. Un travail est en cours si l'un des processus suivants est en cours : exécution de la requête sur un serveur de base de données distant ou local, traitement des rapports et rendu de rapport.  
   
  Vous pouvez gérer à la fois les *travaux utilisateur* et les *travaux système*.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66100820"
   
 -   Abonnements standard détenus par des utilisateurs individuels.  
   
- L'annulation d'un travail supprime uniquement les processus qui s'exécutent sur le serveur de rapports. Le serveur de rapports ne gère pas le traitement des données sur d'autres ordinateurs ; par conséquent, vous devez annuler manuellement les processus de requête qui se retrouvent par la suite orphelins sur d'autres systèmes. Envisagez la possibilité d'affecter des valeurs au délai d'expiration des requêtes afin de clore automatiquement les requêtes dont l'exécution est trop longue. Pour plus d’informations, consultez [Définition des valeurs de délai d’attente pour le traitement d’un rapport et d’un dataset partagé &#40;SSRS&#41;](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Pour plus d’informations sur l’interruption momentanée d’un rapport, consultez [Pause Report and Subscription Processing](disable-or-pause-report-and-subscription-processing.md).  
+ L'annulation d'un travail supprime uniquement les processus qui s'exécutent sur le serveur de rapports. Le serveur de rapports ne gère pas le traitement des données sur d'autres ordinateurs ; par conséquent, vous devez annuler manuellement les processus de requête qui se retrouvent par la suite orphelins sur d'autres systèmes. Envisagez la possibilité d'affecter des valeurs au délai d'expiration des requêtes afin de clore automatiquement les requêtes dont l'exécution est trop longue. Pour plus d’informations, consultez [Définition des valeurs de délai d’attente pour le traitement d’un rapport et d’un dataset partagé &#40;SSRS&#41;](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Pour plus d’informations sur la suspension temporaire d’un rapport, consultez [suspendre le traitement des rapports et des abonnements](disable-or-pause-report-and-subscription-processing.md).  
   
 > [!NOTE]  
 >  Dans de rares cas, vous serez peut-être amené à redémarrer le serveur pour annuler un processus. Pour le mode SharePoint, vous devrez peut-être redémarrer le pool d'applications hébergeant l'application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [Démarrer et arrêter le service Report Server](../report-server/start-and-stop-the-report-server-service.md).  
@@ -66,10 +66,10 @@ ms.locfileid: "66100820"
   
 -   [Gestion des travaux par programmation](#bkmk_programmatically)  
   
-##  <a name="bkmk_native"></a> Afficher et annuler les travaux (mode natif)  
- Vous pouvez utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour afficher ou annuler un travail qui est en cours d'exécution sur le serveur de rapports. Vous devez actualiser la page afin de récupérer la liste des travaux en cours d'exécution ou d'obtenir l'état mis à jour des travaux à partir de la base de données du serveur de rapports. Lorsque vous vous connectez à un serveur de rapports dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vous pouvez ouvrir un dossier Jobs pour consulter la liste des rapports en cours de traitement sur le serveur de rapports. Les informations d'état de chaque travail sont affichées dans la page Propriétés du travail. Vous pouvez afficher les informations d'état de tous les travaux en ouvrant la boîte de dialogue Annuler les travaux du serveur de rapports.  
+##  <a name="bkmk_native"></a>Afficher et annuler les travaux (mode natif)  
+ Vous pouvez utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour afficher ou annuler un travail en cours d’exécution sur le serveur de rapports. Vous devez actualiser la page afin de récupérer la liste des travaux en cours d'exécution ou d'obtenir l'état mis à jour des travaux à partir de la base de données du serveur de rapports. Lorsque vous vous connectez à un serveur de rapports dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vous pouvez ouvrir un dossier Jobs pour consulter la liste des rapports en cours de traitement sur le serveur de rapports. Les informations d'état de chaque travail sont affichées dans la page Propriétés du travail. Vous pouvez afficher les informations d'état de tous les travaux en ouvrant la boîte de dialogue Annuler les travaux du serveur de rapports.  
   
- Vous pouvez utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour afficher ou annuler un travail qui est en cours d'exécution sur le serveur de rapports. Vous devez actualiser la page afin de récupérer la liste des travaux en cours d'exécution ou d'obtenir l'état mis à jour des travaux à partir de la base de données du serveur de rapports. Lorsque vous vous connectez à un serveur de rapports dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vous pouvez ouvrir un dossier Jobs pour consulter la liste des rapports en cours de traitement sur le serveur de rapports. Les informations d'état de chaque travail sont affichées dans la page Propriétés du travail. Vous pouvez afficher les informations d'état de tous les travaux en ouvrant la boîte de dialogue Annuler les travaux du serveur de rapports.  
+ Vous pouvez utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour afficher ou annuler un travail en cours d’exécution sur le serveur de rapports. Vous devez actualiser la page afin de récupérer la liste des travaux en cours d'exécution ou d'obtenir l'état mis à jour des travaux à partir de la base de données du serveur de rapports. Lorsque vous vous connectez à un serveur de rapports dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vous pouvez ouvrir un dossier Jobs pour consulter la liste des rapports en cours de traitement sur le serveur de rapports. Les informations d'état de chaque travail sont affichées dans la page Propriétés du travail. Vous pouvez afficher les informations d'état de tous les travaux en ouvrant la boîte de dialogue Annuler les travaux du serveur de rapports.  
   
  Vous ne pouvez pas utiliser [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour répertorier ou annuler la génération de modèle, le traitement de modèle ou les abonnements pilotés par les données. Reporting Services n'offre aucun moyen d'annuler le traitement ou la génération de modèle. Toutefois, vous pouvez annuler les abonnements pilotés par les données à l'aide des instructions fournies dans cette rubrique.  
   
@@ -89,40 +89,40 @@ ms.locfileid: "66100820"
   
 3.  Affectez-lui la valeur `False`.  
   
-4.  Enregistrez le fichier.  
+4.  Enregistrez le fichier .  
   
 5.  Dans le Gestionnaire de rapports, supprimez l’abonnement piloté par les données sous l’onglet Abonnements du rapport ou dans **Mes abonnements**.  
   
 6.  Après avoir supprimé l'abonnement, dans le fichier RSReportServer.config, recherchez `IsNotificationService` et affectez-lui la valeur `True`.  
   
-7.  Enregistrez le fichier.  
+7.  Enregistrez le fichier .  
   
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>Configuration des paramètres de fréquence pour la récupération de l'état des travaux  
  Un travail en cours d'exécution est stocké dans la base de données temporaire du serveur de rapports. Vous pouvez modifier les paramètres de configuration dans le fichier RSReportServer.config pour contrôler la fréquence d'analyse du serveur de rapports sur les travaux en cours et le laps de temps à la suite duquel l'état d'un travail passe de « nouveau » à « en cours d'exécution ». Le paramètre `RunningRequestsDbCycle` spécifie la périodicité suivant laquelle le serveur de rapports procède à l'analyse des processus en cours d'exécution. Par défaut, les informations d'état sont enregistrées toutes les 60 secondes. Le paramètre `RunningRequestsAge` précise la durée suite à laquelle l'état d'un nouveau travail évolue vers l'état d'exécution en cours.  
   
-##  <a name="bkmk_sharepoint"></a> Afficher et annuler les travaux (mode SharePoint)  
+##  <a name="bkmk_sharepoint"></a>Afficher et annuler les travaux (mode SharePoint)  
  La gestion des travaux d'un déploiement en mode SharePoint s'effectue via l'Administration centrale de SharePoint, pour chaque application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 #### <a name="to-manage-jobs-in-sharepoint-mode"></a>Pour gérer des travaux en mode SharePoint  
   
-1.  Dans l'Administration centrale de SharePoint, cliquez sur **Gérer les applications de service**.  
+1.  Dans l’administration centrale de SharePoint, cliquez sur **gérer les applications de service**.  
   
 2.  Recherchez le nom de votre application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , puis cliquez dessus pour ouvrir la page de gestion des applications.  
   
-3.  Cliquez sur **Gérer les travaux**  
+3.  Cliquez sur **gérer les travaux**  
   
 4.  Cliquez sur **ID de travail** pour afficher les détails du travail.  
   
 5.  Ou cliquez sur la zone correspondant à votre travail, puis cliquez sur **Supprimer** pour annuler le travail. La suppression du travail n'entraîne pas de suppression de l'abonnement.  
   
-##  <a name="bkmk_programmatically"></a> Gestion des travaux par programmation  
+##  <a name="bkmk_programmatically"></a>Gestion des travaux par programmation  
  Vous pouvez gérer des travaux par programmation ou au moyen d'un script. Pour plus d’informations, consultez <xref:ReportService2010.ReportingService2010.ListJobs%2A>, <xref:ReportService2010.ReportingService2010.CancelJob%2A>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Annuler les travaux du serveur de rapports &#40;Management Studio&#41;](../tools/cancel-report-server-jobs-management-studio.md)   
  [Propriétés du travail &#40;Management Studio&#41;](../tools/job-properties-management-studio.md)   
- [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [Fichier de Configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
+ [Modifier un fichier de configuration Reporting Services &#40;RSreportserver. config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Fichier de configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../report-manager-ssrs-native-mode.md)   
  [Analyse des performances d'un serveur de rapports](../report-server/monitoring-report-server-performance.md)  
   

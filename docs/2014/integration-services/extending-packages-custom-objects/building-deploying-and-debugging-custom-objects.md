@@ -13,35 +13,35 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 131f86336c2eecb4995304fc87e15a7b910833ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768985"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Génération, déploiement et débogage d'objets personnalisés
   Après avoir écrit le code d'un objet personnalisé pour [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous devez générer l'assembly, le déployer, l'intégrer dans le Concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] pour le rendre disponible dans les packages, le tester et le déboguer.  
   
-##  <a name="top"></a> Étapes du processus de génération, déploiement et débogage d’un objet personnalisé pour Integration Services  
+##  <a name="top"></a>Étapes de la génération, du déploiement et du débogage d’un objet personnalisé pour Integration Services  
  Vous avez déjà écrit les fonctionnalités personnalisées de votre objet. À présent, vous devez les tester et les rendre disponibles aux utilisateurs. Les étapes sont très similaires pour tous les types d'objets personnalisés que vous pouvez créer pour [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  Voici les étapes à suivre pour les générer, les déployer et les déboguer :  
   
-1.  [Signez](#signing) l’assembly à générer à l’aide d’un nom fort.  
+1.  [Signez](#signing) l’assembly à générer avec un nom fort.  
   
 2.  [Générez](#building) l’assembly.  
   
-3.  [Déployez](#deploying) l’assembly en le déplaçant ou en le copiant dans le dossier [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] approprié.  
+3.  [Déployez](#deploying) l’assembly en le déplaçant ou en [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] le copiant dans le dossier approprié.  
   
-4.  [Installez](#installing) l’assembly dans le Global Assembly Cache (GAC).  
+4.  [Installez](#installing) l’assembly dans le global assembly cache (GAC).  
   
      L'objet est automatiquement ajouté à la boîte à outils.  
   
-5.  [Résolvez les problèmes](#troubleshooting) liés au déploiement, si nécessaire.  
+5.  [Dépannez](#troubleshooting) le déploiement, si nécessaire.  
   
 6.  [Testez](#testing) et déboguez votre code.  
   
-##  <a name="signing"></a> Signature de l’assembly  
+##  <a name="signing"></a>Signature de l’assembly  
  Lorsqu'un assembly est destiné à être partagé, il doit être installé dans le Global Assembly Cache. Une fois que l'assembly est ajouté au Global Assembly Cache, il peut être utilisé par des applications telles que [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Une exigence du Global Assembly Cache stipule que l'assembly doit être signé avec un nom fort, lequel garantit qu'un assembly est globalement unique. Un assembly avec nom fort possède un nom qualifié complet qui comprend son nom, sa culture, sa clé publique et son numéro de version. Le runtime utilise ces informations pour rechercher l'assembly et le distinguer des autres assemblys portant le même nom.  
   
  Pour signer un assembly avec un nom fort, vous devez d'abord avoir ou créer une paire de clés publique/privée. Cette paire de clés de chiffrement publique et privée est utilisée au moment de la génération pour créer un assembly avec nom fort.  
@@ -54,9 +54,9 @@ ms.locfileid: "62768985"
   
 -   Signature d'un assembly avec un nom fort  
   
- Vous pouvez signer facilement votre assembly avec un nom fort dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] au moment de la génération. Dans la boîte de dialogue **Propriétés du projet**, sélectionnez l’onglet **Signature**. Sélectionnez l’option **Signer l’assembly** et indiquez le chemin du fichier de clé (.snk).  
+ Vous pouvez signer facilement votre assembly avec un nom fort dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] au moment de la génération. Dans la boîte de dialogue **Propriétés du projet** , sélectionnez l’onglet **signature** . Sélectionnez l’option **signer l’assembly** , puis spécifiez le chemin d’accès au fichier de clé (. snk).  
   
-##  <a name="building"></a> Génération de l’assembly  
+##  <a name="building"></a>Génération de l’assembly  
  Après avoir signé le projet, vous devez générer ou regénérer le projet ou la solution en utilisant les commandes disponibles dans le menu **Générer** de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Votre solution peut contenir un projet séparé d' interface utilisateur personnalisée, lequel doit également être signé avec un nom fort et peut être généré en même temps.  
   
  La méthode la plus pratique pour effectuer les deux étapes suivantes, à savoir le déploiement de l’assembly et son installation dans le Global Assembly Cache, consiste à écrire le script de ces étapes sous la forme d’un événement post-build dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Les événements de génération sont disponibles sur la page **Compiler** des propriétés d’un projet [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] et sur la page **Événements de génération** d’un projet C#. Le chemin complet est requis pour les utilitaires d’invite de commandes tels que **gacutil.exe**. Les guillemets sont requis à la fois autour des chemins d'accès qui contiennent des espaces et autour des macros telles que $(TargetPath) qui s'étendent aux chemins d'accès qui contiennent des espaces.  
@@ -69,8 +69,8 @@ ms.locfileid: "62768985"
 copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProviders "  
 ```  
   
-##  <a name="deploying"></a> Déploiement de l’assembly  
- Le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] localise les objets personnalisés disponibles dans les packages en énumérant les fichiers trouvés dans une série de dossiers créés lors de l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Lorsque la valeur par défaut [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] paramètres d’installation sont utilisés, cet ensemble de dossiers se trouve sous **C:\Program Files\Microsoft SQL Server\120\DTS**. Toutefois si vous créez un programme d’installation pour votre objet personnalisé, vous devez vérifier la valeur de la **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS\Setup\DtsPath** pour vérifier l’emplacement de cette clé de Registre dossier.  
+##  <a name="deploying"></a>Déploiement de l’assembly  
+ Le [!INCLUDE[ssIS](../../includes/ssis-md.md)] concepteur localise les objets personnalisés pouvant être utilisés dans les packages en énumérant les fichiers trouvés dans une série de dossiers créés lors [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de l’installation de. Lorsque les paramètres [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’installation par défaut sont utilisés, cet ensemble de dossiers se trouve sous **C:\Program Files\Microsoft SQL Server\120\DTS**. Toutefois, si vous créez un programme d’installation pour votre objet personnalisé, vous devez vérifier la valeur de la HKEY_LOCAL_MACHINE clé de Registre **\SOFTWARE\MICROSOFT\MICROSOFT SQL Server\120\SSIS\Setup\DtsPath** pour vérifier l’emplacement de ce dossier.  
   
  Vous pouvez placer l'assembly dans le dossier de deux manières :  
   
@@ -90,7 +90,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 > [!NOTE]  
 >  Les assemblys sont copiés vers ces dossiers pour prendre en charge l'énumération des tâches, gestionnaires de connexions, etc. disponibles. Par conséquent, vous ne devez pas déployer des assemblys qui contiennent uniquement l'interface utilisateur personnalisée des objets personnalisés vers ces dossiers.  
   
-##  <a name="installing"></a> Installation de l’assembly dans le Global Assembly Cache  
+##  <a name="installing"></a>Installation de l’assembly dans le global assembly cache  
  Pour installer l’assembly de tâche dans le Global Assembly Cache (GAC), utilisez l’outil en ligne de commande **gacutil.exe** ou faites glisser les assemblys vers le répertoire `%system%\assembly`. Par commodité, vous pouvez également inclure l’appel de **gacutil.exe** dans un événement post-build.  
   
  La commande suivante installe un composant nommé *MyTask.dll* dans le GAC en utilisant **gacutil.exe**.  
@@ -101,7 +101,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
  Pour plus d'informations sur le Global Assembly Cache, consultez Global Assembly Cache Tool (Gactutil.exe) dans [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Tools.  
   
-##  <a name="troubleshooting"></a> Résolution des problèmes liés au déploiement  
+##  <a name="troubleshooting"></a>Résolution des problèmes liés au déploiement  
  Si votre objet personnalisé apparaît dans la **boîte à outils** ou la liste des objets disponibles, mais que vous n’êtes pas en mesure de l’ajouter à un package, essayez la procédure suivante :  
   
 1.  Recherchez plusieurs versions de votre composant dans le Global Assembly Cache. S'il existe plusieurs versions du composant dans le Global Assembly Cache, il est possible que le concepteur ne soit pas en mesure de charger votre composant. Supprimez toutes les instances de l'assembly dans le Global Assembly Cache et ajoutez de nouveau l'assembly.  
@@ -112,10 +112,10 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 4.  Attachez [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] à **devenv.exe** et définissez un point d’arrêt pour parcourir pas à pas votre code d’initialisation afin de vérifier qu’aucune exception ne se produit.  
   
-##  <a name="testing"></a> Test et débogage du code  
+##  <a name="testing"></a>Test et débogage de votre code  
  L’approche la plus simple pour déboguer les méthodes d’exécution d’un objet personnalisé consiste à démarrer **dtexec.exe** à partir de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] après avoir généré votre objet personnalisé et à exécuter un package qui utilise le composant.  
   
- Si vous souhaitez déboguer les méthodes du composant au moment du design, telles que la `Validate` (méthode), ouvrez un package qui utilise le composant dans une deuxième instance de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]et l’attacher à son **devenv.exe** processus.  
+ Si vous souhaitez déboguer les méthodes au moment du design du composant, telles `Validate` que la méthode, ouvrez un package qui utilise le composant dans une deuxième [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]instance de et attachez-le à son processus **devenv. exe** .  
   
  Si vous souhaitez également déboguer les méthodes d’exécution du composant lorsqu’un package est ouvert et en cours d’exécution dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)], vous devez forcer une pause dans l’exécution du package afin de pouvoir également effectuer un attachement au processus **DtsDebugHost.exe**.  
   
@@ -123,9 +123,9 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 1.  Signez et générez votre projet dans la configuration de débogage, déployez-le et installez-le dans le Global Assembly Cache comme indiqué dans cette rubrique.  
   
-2.  Sur le **déboguer** onglet de **propriétés du projet**, sélectionnez **démarrer le programme externe** en tant que le **Action de démarrage**, puis recherchez  **DTExec.exe**, qui est installé par défaut dans C:\Program Files\Microsoft SQL Server\120\DTS\Binn.  
+2.  Sous l’onglet **Déboguer** des **Propriétés du projet**, sélectionnez Démarrer le **programme externe** comme **action de démarrage**, puis localisez **dtexec. exe**, qui est installé par défaut dans C:\Program Files\Microsoft SQL Server\120\DTS\Binn.  
   
-3.  Dans la zone de texte **Options de ligne de commande**, sous **Options de démarrage**, entrez les arguments de ligne de commande requis pour exécuter un package qui utilise votre composant. Souvent, l'argument de ligne de commande sera consitué du commutateur /F[ILE] suivi du chemin d'accès et du nom du fichier .dtsx. Pour plus d’informations, voir [dtexec Utility](../packages/dtexec-utility.md).  
+3.  Dans la zone de texte **Options de ligne de commande**, sous **Options de démarrage**, entrez les arguments de ligne de commande requis pour exécuter un package qui utilise votre composant. Souvent, l'argument de ligne de commande sera consitué du commutateur /F[ILE] suivi du chemin d'accès et du nom du fichier .dtsx. Pour plus d’informations, consultez l' [utilitaire dtexec](../packages/dtexec-utility.md).  
   
 4.  Définissez des points d'arrêt dans le code source aux emplacements appropriés dans les méthodes d'exécution de votre composant.  
   
@@ -151,7 +151,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 3.  Revenez au package mis en pause et passez le point d’arrêt, ou cliquez sur **OK** pour fermer le message généré par la tâche de script, puis continuez l’exécution et le débogage du package.  
   
-![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône de Integration Services (petite)](../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Développement d’objets personnalisés pour Integration Services](developing-custom-objects-for-integration-services.md)   

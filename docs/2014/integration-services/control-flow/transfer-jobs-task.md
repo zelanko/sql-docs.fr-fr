@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 03913242246fcdaf11e9272e827cd8e06951a108
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829895"
 ---
 # <a name="transfer-jobs-task"></a>Tâche de transfert de travaux
@@ -39,11 +39,11 @@ ms.locfileid: "62829895"
 ## <a name="transferring-jobs-between-instances-of-sql-server"></a>Transfert de travaux entre des instances de SQL Server  
  La tâche de transfert de travaux prend en charge une source et une destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Chacune des versions peut être utilisée indifféremment comme source ou comme destination.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Événements  
  La tâche de transfert de travaux génère un événement d'information qui indique le nombre de travaux transférés et un événement d'avertissement quand un travail est remplacé. La tâche n'indique pas les stades intermédiaires de l'avancement du transfert de travaux ; elle ne signale qu'une réalisation à 0 % ou à 100 %.  
   
 ## <a name="execution-value"></a>Valeur d'exécution  
- La valeur de l’exécution, définie dans le `ExecutionValue` propriété de la tâche, retourne le nombre de travaux sont transférés. En affectant une variable définie par l'utilisateur à la propriété `ExecValueVariable` de la tâche de transfert de travaux, les informations sur le transfert de travaux peuvent être rendues disponibles pour d'autres objets du package. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](../use-variables-in-packages.md).  
+ La valeur d’exécution, définie dans `ExecutionValue` la propriété de la tâche, retourne le nombre de travaux qui sont transférés. En affectant une variable définie par l'utilisateur à la propriété `ExecValueVariable` de la tâche de transfert de travaux, les informations sur le transfert de travaux peuvent être rendues disponibles pour d'autres objets du package. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Entrées du journal  
  La tâche de transfert de travaux comporte les entrées du journal personnalisées suivantes :  
@@ -64,7 +64,7 @@ ms.locfileid: "62829895"
   
 -   [Éditeur de tâche de transfert de travaux &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Éditeur de tâche de transfert de travaux &#40;page Travaux&#41;](../transfer-jobs-task-editor-jobs-page.md)  
+-   [Éditeur de tâche de transfert de travaux &#40;page travaux&#41;](../transfer-jobs-task-editor-jobs-page.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   

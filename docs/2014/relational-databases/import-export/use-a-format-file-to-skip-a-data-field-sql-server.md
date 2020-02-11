@@ -14,23 +14,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f880dcacbd4571c188d0368a0378a89c45787af2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011717"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>Utiliser un fichier de format pour ignorer un champ de données (SQL Server)
   Le nombre de champs contenus dans un fichier de données peut être supérieur au nombre de colonnes dans la table. Cette rubrique explique comment modifier les fichiers de format non-XML et XML en mappant les colonnes de la table avec les champs de données correspondants et en ignorant les champs supplémentaires afin de prendre en charge un fichier de données contenant davantage de champs.  
   
 > [!NOTE]  
->  Vous pouvez utiliser un fichier de format non-XML ou XML pour importer en bloc un fichier de données dans la table à l’aide d’une commande **bcp**, d’une instruction BULK INSERT ou d’une instruction INSERT... SELECT * FROM OPENROWSET(BULK...). Pour plus d’informations, consultez [Utiliser un fichier de format pour importer des données en bloc &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md).  
+>  Vous pouvez utiliser un fichier de format non-XML ou XML pour importer en bloc un fichier de données dans la table à l’aide d’une commande **BCP** , d’une instruction BULK INSERT ou d’une instruction INSERT... SELECT * FROM OPENROWSET (BULK...). Pour plus d’informations, consultez [Utiliser un fichier de format pour importer des données en bloc &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md).  
   
 ## <a name="sample-data-file-and-table"></a>Exemples de fichier de données et de table  
  Les fichiers de format modifiés pris en exemple dans cette rubrique sont fondés sur la table et le fichier de données suivants.  
   
 ### <a name="sample-table"></a>Exemple de table  
- Une table nommée `myTestSkipField` doit être créée dans l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sous le schéma `dbo`. Pour créer cette table, dans l’Éditeur de requêtes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], exécutez le code suivant :  
+ Une table nommée `myTestSkipField` doit être créée dans l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sous le schéma `dbo`. Pour créer cette table, dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] l’éditeur de requête, exécutez le code suivant :  
   
 ```  
 USE AdventureWorks2012;  
@@ -45,7 +45,7 @@ GO
 ```  
   
 ### <a name="sample-data-file"></a>Fichier de données d'exemple  
- Le fichier de données, `myTestSkipField-c.dat`, contient les enregistrements suivants :  
+ Le fichier de données, `myTestSkipField-c.dat`, contient les enregistrements suivants :  
   
 ```  
 1,Skipme,DataField3,DataField4  
@@ -53,7 +53,7 @@ GO
 1,Skipme,DataField3,DataField4  
 ```  
   
- Pour effectuer l'importation en bloc de données de `myTestSkipField-c.dat` dans la table `myTestSkipField`, le fichier de format doit effectuer les tâches suivantes :  
+ Pour effectuer l’importation en bloc de données de `myTestSkipField-c.dat` dans la table `myTestSkipField` , le fichier de format doit effectuer les tâches suivantes :  
   
 -   mapper le premier champ des données à la première colonne, `PersonID`;  
   
@@ -82,7 +82,7 @@ GO
 >  Pour plus d’informations sur la syntaxe des fichiers de format non-XML, consultez [Fichiers de format non-XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ### <a name="examples"></a>Exemples  
- Cet exemple fait appel à `INSERT ... SELECT * FROM OPENROWSET(BULK...)` et utilise le fichier de format `myTestSkipField.fmt`. Dans cet exemple, le fichier de données `myTestSkipField-c.dat` est importé en bloc dans la table `myTestSkipField`. Pour créer l'exemple de fichier de données et de table, consultez la section « Exemples de fichier de données et de table », plus haut dans cette rubrique.  
+ Cet exemple fait appel à `INSERT ... SELECT * FROM OPENROWSET(BULK...)` et utilise le fichier de format `myTestSkipField.fmt`. Dans cet exemple, le fichier de données `myTestSkipField-c.dat` est importé en bloc dans la table `myTestSkipField` . Pour créer l'exemple de fichier de données et de table, consultez la section « Exemples de fichier de données et de table », plus haut dans cette rubrique.  
   
  Dans l'Éditeur de requête [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], exécutez le code suivant :  
   
@@ -122,7 +122,7 @@ GO
 ```  
   
 ### <a name="examples"></a>Exemples  
- Cet exemple fait appel à `INSERT ... SELECT * FROM OPENROWSET(BULK...)` et utilise le fichier de format `myTestSkipField.Xml`. Dans cet exemple, le fichier de données `myTestSkipField-c.dat` est importé en bloc dans la table `myTestSkipField`. Pour créer l'exemple de fichier de données et de table, consultez la section « Exemples de fichier de données et de table », plus haut dans cette rubrique.  
+ Cet exemple fait appel à `INSERT ... SELECT * FROM OPENROWSET(BULK...)` et utilise le fichier de format `myTestSkipField.Xml`. Dans cet exemple, le fichier de données `myTestSkipField-c.dat` est importé en bloc dans la table `myTestSkipField` . Pour créer l'exemple de fichier de données et de table, consultez la section « Exemples de fichier de données et de table », plus haut dans cette rubrique.  
   
  Dans l'Éditeur de requête [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], exécutez le code suivant :  
   
@@ -142,10 +142,10 @@ GO
 >  Pour plus d’informations sur la syntaxe du schéma XML et pour d’autres exemples de fichiers de format XML, consultez [Fichiers de format XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilitaire bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [Utiliser un fichier de format pour ignorer une colonne de table &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
- [Utiliser un fichier de format pour mapper les colonnes d’une table aux champs d’un fichier de données &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+ [Utilisez un fichier de format pour ignorer une colonne de table &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
+ [Utiliser un fichier de format pour mapper les colonnes d’une table sur les champs d’un fichier de données &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b038c1132cf8c1ccd31da2a5a1e2a600f2505624
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011959"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>Exemple de table HumanResources.myTeam (SQL Server)
@@ -29,12 +29,12 @@ ms.locfileid: "66011959"
   
  La table **myTeam** contient les colonnes suivantes.  
   
-|colonne|Type de données|Possibilité de valeurs nulles|Description|  
+|Colonne|Type de données|Possibilité de valeurs nulles|Description|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|`smallint`|Non Null|Clé primaire des lignes. EmployeeID d'un membre de l'équipe.|  
 |**Nom**|`nvarchar(50)`|Non Null|Name est un membre de l'équipe.|  
-|**Title**|`nvarchar(50)`|Nullable|Fonction occupée par l'employé au sein de l'équipe.|  
-|**Arrière-plan**|`nvarchar(50)`|Non Null|Date et heure de dernière mise à jour de la ligne (Par défaut)|  
+|**Titre**|`nvarchar(50)`|Nullable|Fonction occupée par l'employé au sein de l'équipe.|  
+|**Contexte**|`nvarchar(50)`|Non Null|Date et heure de dernière mise à jour de la ligne (Par défaut)|  
   
  **Pour créer HumanResources.myTeam**  
   

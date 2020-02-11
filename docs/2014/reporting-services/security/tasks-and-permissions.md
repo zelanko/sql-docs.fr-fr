@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 01cbf00850c5dd57e7ca1575a1a0cb826c009714
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101462"
 ---
 # <a name="tasks-and-permissions"></a>Tâches et autorisations
@@ -45,7 +45,7 @@ Diagramme Autorisations et tâches
   
 ## <a name="see-also"></a>Voir aussi  
  [Définitions de rôles](role-definitions.md)   
- [Predefined Roles](role-definitions-predefined-roles.md)   
+ [Rôles prédéfinis](role-definitions-predefined-roles.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](granting-permissions-on-a-native-mode-report-server.md)  
   
   

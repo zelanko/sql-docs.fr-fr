@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 21bda8729c30df9493c4f969c5af05b6dd80386f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058218"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Implémenter une stratégie de signature en définissant une valeur du Registre
@@ -34,7 +34,7 @@ ms.locfileid: "66058218"
   
  Le tableau suivant répertorie les valeurs valides des données DWORD et leur stratégie associée.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |0|Pas de restriction administrative.|  
 |1|Bloquer les signatures non valides.<br /><br /> Ce paramètre ne bloque pas les packages non signés.|  
@@ -48,7 +48,7 @@ ms.locfileid: "66058218"
   
 1.  Dans le menu **Démarrer** , cliquez sur **Exécuter**.  
   
-2.  Dans la boîte de dialogue Exécuter, tapez `Regedit`, puis cliquez sur **OK**.  
+2.  Dans la boîte de dialogue Exécuter, `Regedit`tapez, puis cliquez sur **OK**.  
   
 3.  Localisez la clé de registre HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66058218"
   
 5.  Remplacez le nom de la nouvelle valeur par `BlockedSignatureStates`.  
   
-6.  Avec le bouton droit `BlockedSignatureStates` et cliquez sur **modifier**.  
+6.  Cliquez `BlockedSignatureStates` avec le bouton droit et cliquez sur **modifier**.  
   
 7.  Dans la boîte de dialogue **Édition de la valeur DWORD** , tapez la valeur 0, 1, 2 ou 3.  
   

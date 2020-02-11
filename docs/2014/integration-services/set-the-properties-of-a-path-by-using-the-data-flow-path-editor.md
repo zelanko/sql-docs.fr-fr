@@ -1,5 +1,5 @@
 ---
-title: Définir les propriétés d’un chemin d’accès à l’aide de l’éditeur de chemin d’accès de flux de données | Microsoft Docs
+title: Définir les propriétés d’un chemin d’accès à l’aide de l’éditeur du chemin d’accès du Workflow | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1172143ebfa44deb19d15bf596db1df0e9399ed0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055730"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>Définir les propriétés d'un chemin d'accès à l'aide de l'Éditeur du chemin d'accès au flux de données

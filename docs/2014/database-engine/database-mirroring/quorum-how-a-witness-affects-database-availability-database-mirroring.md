@@ -1,5 +1,5 @@
 ---
-title: 'Quorum : Effets d’un témoin sur la disponibilité de la base de données (mise en miroir de bases de données) | Microsoft Docs'
+title: "Quorum : effets d'un témoin sur la disponibilité de la base de données (mise en miroir de bases de données) | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,13 +22,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 26abcc214c4f4304019bbc855379b56cab7cfc96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754421"
 ---
-# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum : Effets d’un témoin sur la disponibilité de la base de données (mise en miroir de bases de données)
+# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum : effets d'un témoin sur la disponibilité de la base de données (mise en miroir de bases de données)
   Chaque fois qu’un témoin est défini pour une session de mise en miroir de base de données, un *quorum* est nécessaire. Le quorum désigne une relation où deux ou plusieurs instances de serveur dans une session de mise en miroir de base de données sont connectées. En règle générale, le quorum implique trois instances de serveurs interconnectées. Lorsqu'un témoin est défini, un quorum est requis pour rendre la base de données disponible. Conçu pour les sessions en mode haute sécurité avec basculement automatique, un quorum garantit qu'une base de données appartient à un seul partenaire à la fois.  
   
  Si une instance de serveur spécifique est déconnectée d'une session de mise en miroir, l'instance perd le quorum. Si aucune instance de serveur n'est connectée, la session perd le quorum et la base de données n'est plus disponible. Trois types de quorum sont possibles :  
@@ -69,7 +69,7 @@ ms.locfileid: "62754421"
   
     -   Le serveur principal est perdu et le serveur témoin et le serveur miroir conservent le quorum.  
   
-         Dans ce cas, le basculement automatique intervient. Pour plus d'informations, voir [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
+         Dans ce cas, le basculement automatique intervient. Pour en savoir plus, voir [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
   
     -   Toutes les instances de serveur perdent le quorum, mais le miroir et le témoin se reconnectent par la suite. La base de données ne sera pas utilisée dans ce cas.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "62754421"
  [Modes de fonctionnement de la mise en miroir de bases de données](database-mirroring-operating-modes.md)   
  [Basculement de rôle durant une session de mise en miroir de bases de données &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Témoin de mise en miroir de base de données](database-mirroring-witness.md)   
- [Défaillances possibles pendant la mise en miroir de bases de données](possible-failures-during-database-mirroring.md)   
+ [Échecs possibles pendant la mise en miroir de bases de données](possible-failures-during-database-mirroring.md)   
  [États de la mise en miroir &#40;SQL Server&#41;](mirroring-states-sql-server.md)  
   
   

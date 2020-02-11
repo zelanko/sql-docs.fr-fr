@@ -1,5 +1,5 @@
 ---
-title: Éditeur du chemin d’accès (Page Général) de flux de données | Microsoft Docs
+title: Éditeur du chemin d’accès au Data Flow (page général) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e044d001c88edef9d1e8d4ab453b85853994cf7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059954"
 ---
 # <a name="data-flow-path-editor-general-page"></a>Éditeur du chemin d'accès au flux de données (Page Général)
@@ -30,7 +30,7 @@ ms.locfileid: "66059954"
  **Nom**  
  Donnez un nom unique au chemin d'accès.  
   
- **ID**  
+ **IDENTIFI**  
  Identificateur de lignage du chemin d'accès. Cette propriété est en lecture seule.  
   
  **IdentificationString**  
@@ -49,8 +49,8 @@ ms.locfileid: "66059954"
  Affiche la sortie qui représente le début du chemin d'accès.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur du chemin d’accès de flux de données &#40;Page métadonnées&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
- [Éditeur du chemin d’accès de flux de données &#40;Page visionneuses de données&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
+ [Éditeur du chemin d’accès de données &#40;page de métadonnées&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
+ [Éditeur du chemin d’accès au workflow &#40;page des visionneuses de données&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
  [Flux de données](data-flow/data-flow.md)   
  [Utiliser des annotations dans les packages](use-annotations-in-packages.md)  
   

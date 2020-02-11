@@ -1,5 +1,5 @@
 ---
-title: Les fichiers de base de données source | Microsoft Docs
+title: Fichiers de base de données source | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac7d4b590fa5c3efccd16deebf3bafab83b74f6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055535"
 ---
 # <a name="source-database-files"></a>Fichiers de la base de données source
@@ -25,14 +25,14 @@ ms.locfileid: "66055535"
  Pour remplir cette boîte de dialogue avec le nom et l'emplacement des fichiers de base de données sur le serveur source, spécifiez d'abord **SourceConnection** et **SourceDatabaseName** dans la page **Bases de données** de la boîte de dialogue **Éditeur de tâche de transfert de bases de données** .  
   
 ## <a name="options"></a>Options  
- **Source File**  
- Nom des fichiers de base de données sur le serveur source qui seront transférés. Le**Fichier source** est en lecture seule.  
+ **Fichier source**  
+ Nom des fichiers de base de données sur le serveur source qui seront transférés. Le **fichier source** est en lecture seule.  
   
  **Dossier source**  
- Dossier du serveur source où se trouvent les fichiers de base de données à transférer. Le**Dossier source** est en lecture seule.  
+ Dossier du serveur source où se trouvent les fichiers de base de données à transférer. Le **dossier source** est en lecture seule.  
   
  **Partage de fichiers réseau**  
- Dossier réseau partagé du serveur source à partir duquel les fichiers de base de données seront transférés. Utilisez le **Partage de fichiers réseau** lors du transfert d'une base de données en mode hors connexion en spécifiant **DatabaseOffline** pour **Méthode** dans la page **Bases de données** de la boîte de dialogue **Éditeur de tâche de transfert de bases de données** .  
+ Dossier réseau partagé du serveur source à partir duquel les fichiers de base de données seront transférés. Utilisez **le partage de fichiers réseau** lorsque vous transférez une base de données en mode hors connexion en spécifiant **DatabaseOffline** pour la **méthode** dans la page **bases de données** de la boîte de dialogue **éditeur de tâche de transfert de base de données** .  
   
  Entrez l’emplacement du partage de fichiers réseau ou cliquez sur le bouton Parcourir **(...)** pour le rechercher.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66055535"
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tâche de transfert de bases de données &#40;Page Général&#41;](general-page-of-integration-services-designers-options.md)   
- [Éditeur de tâche de transfert de bases de données &#40;page Bases de données&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
+ [Éditeur de tâche de transfert de bases de données &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
+ [Éditeur de tâche de transfert de bases de données &#40;page bases de données&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
   
   

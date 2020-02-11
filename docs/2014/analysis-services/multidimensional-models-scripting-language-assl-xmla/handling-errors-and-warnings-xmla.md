@@ -1,5 +1,5 @@
 ---
-title: Gestion des erreurs et avertissements (XMLA) | Microsoft Docs
+title: Gestion des erreurs et des avertissements (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,23 +21,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 856886a5edfa5dcae604b44f5c2dca356ba0addb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62702132"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Gestion des erreurs et des avertissements (XMLA)
-  Gestion des erreurs est requises lorsqu’un document XML for Analysis (XMLA) [Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) ou [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) appel de méthode n’est pas exécuté, s’exécute correctement mais génère des erreurs ou avertissements, ou s’exécute correctement mais retourne des résultats qui contient des erreurs.  
+  La gestion des erreurs est requise quand un appel de méthode de [découverte](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) ou d' [exécution](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) de XML for Analysis (XMLA) ne s’exécute pas, s’exécute correctement mais génère des erreurs ou des avertissements, ou s’exécute correctement mais retourne des résultats qui contiennent des erreurs.  
   
-|Error|Signalement|  
+|Error|Reporting|  
 |-----------|---------------|  
-|L'appel de méthode XMLA ne s'exécute pas|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Retourne un message d’erreur SOAP qui contient les détails de l’échec.<br /><br /> Pour plus d’informations, consultez la section [gestion des erreurs SOAP](#handling_soap_faults).|  
-|Erreurs ou avertissements sur un appel de méthode ayant abouti|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclut un [erreur](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/error-element-xmla) ou [avertissement](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/warning-element-xmla) élément pour chaque erreur ou avertissement, respectivement, dans le [Messages](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/messages-element-xmla) propriété de la [racine](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/root-element-xmla) élément qui contient les résultats de l’appel de méthode.<br /><br /> Pour plus d’informations, consultez la section [gestion des erreurs et avertissements](#handling_errors_and_warnings).|  
-|Erreurs dans les résultats d'un appel de méthode ayant abouti|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclut un inline `error` ou `warning` élément pour l’erreur ou l’avertissement, respectivement, dans le texte approprié [cellule](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla) ou [ligne](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/row-element-xmla) élément des résultats de l’appel de méthode.<br /><br /> Pour plus d’informations, consultez la section [gestion des erreurs d’Inline et les avertissements](#handling_inline_errors_and_warnings).|  
+|L'appel de méthode XMLA ne s'exécute pas|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne un message d’erreur SOAP qui contient les détails de l' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] échec.<br /><br /> Pour plus d’informations, consultez la section [gestion des erreurs SOAP](#handling_soap_faults).|  
+|Erreurs ou avertissements sur un appel de méthode ayant abouti|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]inclut un élément d' [erreur](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/error-element-xmla) ou d' [Avertissement](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/warning-element-xmla) pour chaque erreur ou avertissement, respectivement, dans la propriété [messages](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/messages-element-xmla) de l’élément [racine](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/root-element-xmla) qui contient les résultats de l’appel de la méthode.<br /><br /> Pour plus d’informations, consultez la section [gestion des erreurs et des avertissements](#handling_errors_and_warnings).|  
+|Erreurs dans les résultats d'un appel de méthode ayant abouti|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]comprend un élément ou `error` `warning` Inline pour l’erreur ou l’avertissement, respectivement, dans la [cellule](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla) ou l’élément de [ligne](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/row-element-xmla) approprié des résultats de l’appel de méthode.<br /><br /> Pour plus d’informations, consultez la section [gestion des erreurs inline et des avertissements](#handling_inline_errors_and_warnings).|  
   
-##  <a name="handling_soap_faults"></a> Gestion des erreurs SOAP  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retourne une erreur SOAP lorsque les situations suivantes se présentent :  
+##  <a name="handling_soap_faults"></a>Gestion des erreurs SOAP  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retourne une erreur SOAP lorsque les situations suivantes se présentent :  
   
 -   le message SOAP qui contient la méthode XMLA n'était pas correctement formé ou n'a pas pu être validé par l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ;  
   
@@ -50,7 +51,7 @@ ms.locfileid: "62702132"
 ### <a name="fault-code-information"></a>Informations de code d'erreur  
  Le tableau suivant présente les informations de code d'erreur XMLA contenues dans la section détaillée de la réponse SOAP. Les colonnes représentent les attributs d'une erreur dans la section détaillée d'une erreur SOAP.  
   
-|Nom de colonne|type|Description|Null autorisé<sup>1</sup>|  
+|Nom de la colonne|Type|Description|Null autorisé<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
 |`ErrorCode`|`UnsignedInt`|Code de retour qui indique le succès ou l'échec de la méthode. La valeur hexadécimale doit être convertie en valeur `UnsignedInt`.|Non|  
 |`WarningCode`|`UnsignedInt`|Code de retour qui indique une condition d'avertissement. La valeur hexadécimale doit être convertie en valeur `UnsignedInt`.|Oui|  
@@ -58,7 +59,7 @@ ms.locfileid: "62702132"
 |`Source`|`String`|Nom du composant qui a généré l'erreur ou l'avertissement.|Oui|  
 |`HelpFile`|`String`|Chemin d'accès ou URL menant au fichier ou à la rubrique d'aide qui décrit l'erreur ou l'avertissement.|Oui|  
   
- <sup>1</sup> indique si les données est obligatoire et doivent être retournées, ou si les données sont facultatives et une chaîne null est autorisée si la colonne ne s’applique pas.  
+ <sup>1</sup> indique si les données sont obligatoires et doivent être retournées, ou si les données sont facultatives et une chaîne NULL est autorisée si la colonne ne s’applique pas.  
   
  Voici un exemple d'erreur SOAP qui s'est produite à l'occasion d'un échec d'appel de méthode :  
   
@@ -82,8 +83,9 @@ HelpFile="" />
 </SOAP-ENV:Envelope>  
 ```  
   
-##  <a name="handling_errors_and_warnings"></a> Gestion des erreurs et avertissements  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retourne la propriété `Messages` dans l'élément `root` d'une commande si les situations suivantes se présentent à la suite de l'exécution de cette commande :  
+##  <a name="handling_errors_and_warnings"></a>Gestion des erreurs et des avertissements  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retourne la propriété `Messages` dans l'élément `root` d'une commande si les situations suivantes se présentent à la suite de l'exécution de cette commande :  
   
 -   la méthode proprement dite n'a pas échoué, mais un échec s'est produit dans l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] après que l'appel de méthode a abouti ;  
   
@@ -91,17 +93,18 @@ HelpFile="" />
   
  La propriété `Messages` suit toutes les autres propriétés contenues dans l'élément `root` et peut contenir un ou plusieurs éléments `Message`. De leur côté, les éléments `Message` peut chacun contenir un élément `error` ou `warning` décrivant, respectivement, les erreurs ou les avertissements qui se sont produits pour la commande spécifiée.  
   
- Pour plus d’informations sur les erreurs et avertissements qui sont contenus dans le `Messages` propriété, consultez [élément Messages &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/messages-element-xmla).  
+ Pour plus d’informations sur les erreurs et les avertissements contenus dans `Messages` la propriété, consultez [élément messages &#40;&#41;XMLA ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/messages-element-xmla).  
   
 ### <a name="handling-errors-during-serialization"></a>Gestion des erreurs pendant la sérialisation  
- Si une erreur se produit après la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance a déjà commencé à sérialiser la sortie d’une commande exécutée avec succès, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retourne un [Exception](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/exception-element-xmla) élément dans un espace de noms différent au moment de l’erreur. L'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ferme alors tous les éléments ouverts de telle sorte que le document XML envoyé au client soit un document valide. L'instance retourne également un élément `Messages` qui contient la description de l'erreur.  
+ Si une erreur se produit après [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que l’instance a déjà commencé la sérialisation de la sortie d’une commande [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exécutée avec succès, retourne un élément d' [exception](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/exception-element-xmla) dans un espace de noms différent au moment de l’erreur. L'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ferme alors tous les éléments ouverts de telle sorte que le document XML envoyé au client soit un document valide. L'instance retourne également un élément `Messages` qui contient la description de l'erreur.  
   
-##  <a name="handling_inline_errors_and_warnings"></a> Gestion des erreurs insérées et avertissements  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retourne un élément inséré `error` ou `warning` pour une commande si la méthode XMLA proprement dite n'a pas échoué, mais qu'une erreur spécifique à un élément de données contenu dans les résultats retournés par la méthode s'est produite dans l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] après que l'appel de méthode XMLA a abouti.  
+##  <a name="handling_inline_errors_and_warnings"></a>Gestion des erreurs et des avertissements Inline  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retourne un élément inséré `error` ou `warning` pour une commande si la méthode XMLA proprement dite n'a pas échoué, mais qu'une erreur spécifique à un élément de données contenu dans les résultats retournés par la méthode s'est produite dans l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] après que l'appel de méthode XMLA a abouti.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit inline `error` et `warning` éléments si les problèmes spécifiques à une cellule ou à d’autres données qui sont contenus dans un `root` à l’aide de l’élément le [MDDataSet](https://docs.microsoft.com/bi-reference/xmla/xml-data-types/mddataset-data-type-xmla) type de données se produisent, par exemple une sécurité erreur ou la mise en forme Erreur d’une cellule. Dans ces cas, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retourne un élément `error` ou `warning` dans l'élément `Cell` ou `row` qui contient, respectivement, l'erreur ou l'avertissement.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]`error` fournit des `warning` éléments Inline si des problèmes spécifiques à une cellule ou à d’autres données contenues dans `root` un élément à l’aide du type de données [MDDataSet](https://docs.microsoft.com/bi-reference/xmla/xml-data-types/mddataset-data-type-xmla) se produisent, par exemple une erreur de sécurité ou une erreur de mise en forme pour une cellule. Dans ces cas, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retourne un élément `error` ou `warning` dans l'élément `Cell` ou `row` qui contient, respectivement, l'erreur ou l'avertissement.  
   
- L’exemple suivant illustre un jeu de résultats qui contient une erreur dans l’ensemble de lignes retournée à partir d’un `Execute` à l’aide de la méthode la [instruction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) commande.  
+ L’exemple suivant illustre un jeu de résultats qui contient une erreur dans l’ensemble de lignes retourné `Execute` à partir d’une méthode à l’aide de la commande d' [instruction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) .  
   
 ```  
 <return>  

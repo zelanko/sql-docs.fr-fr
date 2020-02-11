@@ -1,5 +1,5 @@
 ---
-title: Sélectionner des Variables | Microsoft Docs
+title: Sélectionner des variables | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89e166be7ee2100945cc430a78e725630b1e8f6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055916"
 ---
 # <a name="select-variables"></a>Sélectionner des variables
@@ -34,7 +34,7 @@ ms.locfileid: "66055916"
  **Flèches vers la droite**  
  Déplacez les variables sélectionnées dans la liste **Variables sélectionnées** .  
   
- **Flèches vers la gauche**  
+ **Flèches gauche**  
  Replacez les variables sélectionnées dans la liste **Variables disponibles** .  
   
  **Nouvelle variable**  
@@ -43,6 +43,6 @@ ms.locfileid: "66055916"
  **Rubriques connexes :** [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâche MSMQ](control-flow/message-queue-task.md)  
+ [Message Queue Task](control-flow/message-queue-task.md)  
   
   

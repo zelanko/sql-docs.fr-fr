@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f355527002ed6d3637a3d1d895eb776c620c971d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060367"
 ---
 # <a name="connect-to-integration-services"></a>Se connecter à Integration Services
@@ -30,6 +30,6 @@ ms.locfileid: "66060367"
   
 4.  Dans la boîte de dialogue **Se connecter au serveur** , entrez un nom de serveur. Vous pouvez utiliser un point ( . ), (local) ou `localhost` pour indiquer le serveur local.  
   
-5.  Cliquer sur **Se connecter**.  
+5.  Cliquez sur **Connecter**.  
   
   
