@@ -1,5 +1,5 @@
 ---
-title: Instr (MDX) | Microsoft Docs
+title: InStr (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 201580b71086dfe39e669966070dae2dca72e3eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105299"
 ---
 # <a name="instr-mdx"></a>InStr (MDX)
@@ -27,22 +27,22 @@ InStr([start, ]searched_string, search_string[, compare])
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *start*  
+ *activer*  
  (Facultatif) Expression numérique qui définit la position de début de chaque recherche. Si cette valeur est omise, la recherche démarre au niveau du premier caractère. Si start est Null, la valeur de retour de fonction n'est pas définie.  
   
  *searched_string*  
- L’expression de chaîne à rechercher.  
+ Expression de chaîne à rechercher.  
   
  *search_string*  
  Expression de chaîne à rechercher.  
   
- *Compare*  
- (facultatif) Valeur entière. Cet argument est toujours ignoré. Il est défini pour la compatibilité avec d’autres **Instr** fonctions dans d’autres langages.  
+ *Compar*  
+ (facultatif) Valeur entière. Cet argument est toujours ignoré. Elle est définie pour la compatibilité avec d’autres fonctions **InStr** dans d’autres langages.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Une valeur entière avec la position de départ de *String2* dans *String1*.  
+ Valeur entière avec la position de départ de *Chaîne2* dans *Chaîne1*.  
   
- En outre, **InStr** fonction retourne les valeurs répertoriées dans le tableau suivant en fonction de la condition :  
+ En outre, la fonction **InStr** retourne les valeurs indiquées dans le tableau suivant en fonction de la condition :  
   
 |Condition|Valeur retournée|  
 |---------------|------------------|  
@@ -56,10 +56,10 @@ InStr([start, ]searched_string, search_string[, compare])
 ## <a name="remarks"></a>Notes  
   
 > [!WARNING]  
->  **InStr** effectue toujours une comparaison respectant la casse.  
+>  **InStr** effectue toujours une comparaison qui ne respecte pas la casse.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant illustre l’utilisation de la **Instr** fonction et affiche différents scénarios de résultat.  
+ L’exemple suivant illustre l’utilisation de la fonction **InStr** et affiche des scénarios de résultats différents.  
   
 ```  
 with   
@@ -102,9 +102,9 @@ from [Adventure Works]
 |majuscules trouvées dans la chaîne en minuscules|16|  
 |la chaîne de recherche est vide|0|  
 |la chaîne de recherche est Null|Non défini|  
-|chaîne de recherche est vide|1|  
+|la chaîne de recherche est vide|1|  
 |la chaîne de recherche est start 10 vide|10|  
-|chaîne de recherche est null|Non défini|  
+|la chaîne de recherche est null|Non défini|  
 |trouvé à partir de start 10|16|  
 |introuvable à partir de start 17|0|  
 |start Null|Non défini|  

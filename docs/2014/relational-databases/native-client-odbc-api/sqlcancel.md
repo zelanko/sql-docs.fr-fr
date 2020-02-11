@@ -13,17 +13,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8bad2cc35a30f5c6f5855292ff73635cef6072b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067836"
 ---
 # <a name="sqlcancel"></a>SQLCancel
-  Le [SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516) rubrique indique que dans ODBC 2.x, si une application appelle `SQLCancel` lorsque aucun traitement n’est effectuée sur l’instruction, `SQLCancel` a le même effet que `SQLFreeStmt` avec la `SQL_CLOSE` option ; cela le comportement est défini uniquement par souci d’exhaustivité et les applications doivent appeler `SQLFreeStmt` ou `SQLCloseCursor` de fermeture des curseurs. Mais même si votre application [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client définit 3.5.x ou version ultérieure pour l'API ODBC, la fonction `SQLCancel` utilisera le comportement ODBC 2.x.  
+  La rubrique [SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516) indique que dans ODBC 2. x, si une application appelle `SQLCancel` quand aucun traitement n’est effectué sur l’instruction, `SQLCancel` a le même effet qu' `SQLFreeStmt` avec l' `SQL_CLOSE` option ; ce comportement est défini uniquement pour l’exhaustivité et les applications `SQLFreeStmt` doivent `SQLCloseCursor` appeler ou pour fermer les curseurs. Mais même si votre application [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client définit 3.5.x ou version ultérieure pour l'API ODBC, la fonction `SQLCancel` utilisera le comportement ODBC 2.x.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516)   
- [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

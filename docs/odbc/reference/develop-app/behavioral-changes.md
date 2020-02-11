@@ -15,35 +15,35 @@ ms.assetid: a17ae701-6ab6-4eaf-9e46-d3b9cd0a3a67
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fc9f8dcc3782204c8bf1c9add1200e451edcf127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68103874"
 ---
 # <a name="behavioral-changes"></a>Changements de comportement
-Changements de comportement sont ces modifications pour lequel le *syntaxe* de l’interface reste la même, mais le *sémantique* ont été modifiés. Pour que ces modifications, les fonctionnalités utilisées dans ODBC 2. *x* se comporte différemment de la même fonctionnalité dans ODBC 3. *x*.  
+Les changements de comportement sont les modifications pour lesquelles la *syntaxe* de l’interface reste la même, mais la *sémantique* a changé. Pour ces modifications, fonctionnalités utilisées dans ODBC 2. *x* se comporte différemment de la même fonctionnalité dans ODBC 3. *x*.  
   
- Si une application présente un ODBC 2. *x* comportement ou ODBC 3. *x* comportement est déterminé par l’attribut d’environnement SQL_ATTR_ODBC_VERSION. Cette valeur de 32 bits est définie à SQL_OV_ODBC2 à présenter ODBC 2. *x* comportement et SQL_OV_ODBC3 à présenter ODBC 3. *x* comportement.  
+ Si une application présente ODBC 2. comportement *x* ou ODBC 3. le comportement *x* est déterminé par l’attribut d’environnement SQL_ATTR_ODBC_VERSION. Cette valeur 32 bits est définie sur SQL_OV_ODBC2 pour exposer ODBC 2. le comportement *x* et SQL_OV_ODBC3 d’exposer ODBC 3. comportement *x* .  
   
- L’attribut d’environnement SQL_ATTR_ODBC_VERSION est définie par un appel à **SQLSetEnvAttr**. Une fois une application appelle **SQLAllocHandle** pour allouer un handle d’environnement, il doit appeler**SQLSetEnvAttr** immédiatement pour définir le comportement qu’elles dévoilent. (Par conséquent, il est un nouvel état de l’environnement pour décrire le handle d’environnement dans allouée, mais pour un logiciel, état.) Pour plus d’informations, consultez [annexe b : Tableaux des transitions d’état ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ L’attribut d’environnement SQL_ATTR_ODBC_VERSION est défini par un appel à **SQLSetEnvAttr**. Une fois qu’une application a appelé **SQLAllocHandle** pour allouer un handle d’environnement, elle doit appeler**SQLSetEnvAttr** immédiatement pour définir le comportement qu’elle présente. (Par conséquent, il existe un nouvel état d’environnement pour décrire le descripteur d’environnement dans un État alloué, mais sans version.) Pour plus d’informations, consultez [annexe B : tables de transition d’État ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
- Une application indique quel comportement qu’elles dévoilent avec l’attribut d’environnement SQL_ATTR_ODBC_VERSION, mais l’attribut n’a aucun effet sur la connexion de l’application avec une API ODBC 2. *x* ou ODBC 3. *x* pilote. Une application ODBC 3. *x* application peut se connecter à l’un ODBC 2. *x* ou 3. *x* pilote, quel que soit le paramètre de l’attribut de l’environnement.  
+ Une application indique le comportement qu’elle présente avec l’attribut d’environnement SQL_ATTR_ODBC_VERSION, mais l’attribut n’a aucun effet sur la connexion de l’application avec ODBC 2. *x* ou ODBC 3. pilote *x* . ODBC 3. *x* l’application peut se connecter à ODBC 2. *x* ou 3. *x* , quel que soit le paramètre de l’attribut d’environnement.  
   
- ODBC 3. *x* jamais les applications doivent appeler **SQLAllocEnv**. Par conséquent, si le Gestionnaire de pilote reçoit un appel à **SQLAllocEnv**, il reconnaît l’application comme un ODBC 2. *x* application.  
+ ODBC 3. *x* les applications ne doivent jamais appeler **SQLAllocEnv**. Par conséquent, si le gestionnaire de pilotes reçoit un appel à **SQLAllocEnv**, il reconnaît l’application comme ODBC 2. application *x* .  
   
- L’attribut SQL_ATTR_ODBC_VERSION affecte des trois différents aspects d’un ODBC 3. *x* comportement du pilote :  
+ L’attribut SQL_ATTR_ODBC_VERSION affecte trois aspects différents d’un ODBC 3. comportement du pilote *x* :  
   
 -   Codes SQLSTATE  
   
--   Types de données pour la date, time et timestamp  
+-   Types de données pour date, Time et timestamp  
   
--   Le *CatalogName* argument dans **SQLTables** accepte les modèles de recherche dans ODBC 3. *x*, mais pas dans ODBC 2. *x*  
+-   L’argument *nomcatalogue* dans **SQLTables** accepte les modèles de recherche dans ODBC 3. *x*, mais pas dans ODBC 2. *x*  
   
- Le paramètre de l’attribut d’environnement SQL_ATTR_ODBC_VERSION n’affecte pas **SQLSetParam** ou **SQLBindParam**. **SQLColAttribute** n’est également pas affectée par ce bit. Bien que **SQLColAttribute** retourne les attributs qui sont affectés par la version d’ODBC (type de date, précision, échelle et longueur), le comportement prévu est déterminé par la valeur de la *FieldIdentifier*argument. Lorsque *FieldIdentifier* est égal à SQL_DESC_TYPE, **SQLColAttribute** retourne le ODBC 3. *x* codes pour la date, time et timestamp ; lorsque *FieldIdentifier* est égal à SQL_COLUMN_TYPE, **SQLColAttribute** retourne ODBC 2. *x* codes pour la date, time et timestamp.  
+ Le paramètre de l’attribut d’environnement SQL_ATTR_ODBC_VERSION n’affecte pas **SQLSetParam,** ou **SQLBindParam**. **SQLColAttribute** n’est pas non plus affecté par ce bit. Bien que **SQLColAttribute** retourne des attributs qui sont affectés par la version d’ODBC (type date, précision, échelle et longueur), le comportement prévu est déterminé par la valeur de l’argument *FieldIdentifier* . Lorsque *FieldIdentifier* est égal à SQL_DESC_TYPE, **SQLColAttribute** retourne ODBC 3. codes *x* pour date, Time et timestamp ; Lorsque *FieldIdentifier* est égal à SQL_COLUMN_TYPE, **SQLColAttribute** retourne ODBC 2. codes *x* pour date, Time et timestamp.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
--   [Mappages de SQLSTATE](../../../odbc/reference/develop-app/sqlstate-mappings.md)  
+-   [Mappages SQLSTATE](../../../odbc/reference/develop-app/sqlstate-mappings.md)  
   
 -   [Changements dans le type de données datetime](../../../odbc/reference/develop-app/datetime-data-type-changes.md)

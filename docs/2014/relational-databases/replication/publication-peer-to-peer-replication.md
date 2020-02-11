@@ -13,17 +13,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 09aea8e66b76103c27bdc44ade4df48a1e505e7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021629"
 ---
 # <a name="publication-peer-to-peer-replication"></a>Publication (réplication d'égal à égal)
   La page **Publication** contient les publications transactionnelles activées pour la réplication d'égal à égal. Les publications sont activées dans la page **Options d'abonnement** de la boîte de dialogue **Propriétés de la publication** .  
   
 ## <a name="options"></a>Options  
- **Serveur de publication**  
+ **Publisher**  
  Affiche le serveur de publication auquel vous êtes connecté. Pour vous connecter à un serveur différent, sélectionnez **Rechercher un serveur de publication SQL**.  
   
  **Bases de données et publications**  
