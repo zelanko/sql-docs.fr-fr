@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: b1cbdc63907933f173c7d32a2dde3151dd4db7af
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399877"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys. pdw_nodes_column_store_row_groups (Transact-SQL)
@@ -26,20 +26,20 @@ ms.locfileid: "74399877"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**tiers**|ID de la table sous-jacente. Il s’agit de la table physique sur le nœud de calcul, et non de la object_id de la table logique sur le nœud de contrôle. Par exemple, object_id ne correspond pas à la object_id dans sys. tables.<br /><br /> Pour effectuer une jointure avec sys. tables, utilisez sys. pdw_index_mappings.|  
-|**index_id**|**tiers**|ID de l’index ColumnStore cluster sur *object_id* table.|  
-|**partition_number**|**tiers**|ID de la partition de table qui contient les *row_group_id*de groupe de lignes. Vous pouvez utiliser *partition_number* pour joindre cette DMV à sys. partitions.|  
-|**row_group_id**|**tiers**|ID de ce groupe de lignes. Cet ID est unique dans la partition.|  
+|**object_id**|**int**|ID de la table sous-jacente. Il s’agit de la table physique sur le nœud de calcul, et non de la object_id de la table logique sur le nœud de contrôle. Par exemple, object_id ne correspond pas à la object_id dans sys. tables.<br /><br /> Pour effectuer une jointure avec sys. tables, utilisez sys. pdw_index_mappings.|  
+|**index_id**|**int**|ID de l’index ColumnStore cluster sur *object_id* table.|  
+|**partition_number**|**int**|ID de la partition de table qui contient les *row_group_id*de groupe de lignes. Vous pouvez utiliser *partition_number* pour joindre cette DMV à sys. partitions.|  
+|**row_group_id**|**int**|ID de ce groupe de lignes. Cet ID est unique dans la partition.|  
 |**dellta_store_hobt_id**|**bigint**|hobt_id des groupes de lignes delta, ou NULL si le type de groupe de lignes n'est pas delta. Un groupe de lignes delta est un groupe de lignes en lecture/écriture qui reçoit des enregistrements. Un groupe de lignes Delta a l’état **ouvert** . Un groupe de lignes delta est toujours au format rowstore et n'a pas été compressé au format columnstore.|  
-|**Département**|**sa**|Numéro d'ID associé à state_description.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
+|**Département**|**tinyint**|Numéro d'ID associé à state_description.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
 |**state_desccription**|**nvarchar (60)**|Description de l'état permanent du groupe de lignes :<br /><br /> OUVRIR : groupe de lignes en lecture/écriture qui accepte les nouveaux enregistrements. Un groupe de lignes ouvert est toujours au format rowstore et n'a pas été compressé au format columnstore.<br /><br /> CLOSEd : groupe de lignes qui a été rempli, mais pas encore compressé par le processus du moteur de Tuple.<br /><br /> Compressed : groupe de lignes qui a été rempli et compressé.|  
 |**total_rows**|**bigint**|Nombre total de lignes stockées physiquement dans le groupe de lignes. Certaines peuvent avoir été supprimées, mais elles sont toujours stockées. Le nombre maximal de lignes d'un groupe de lignes est 1 048 576 (hexadécimal FFFFF).|  
 |**deleted_rows**|**bigint**|Nombre de lignes physiquement stockées dans le groupe de lignes qui sont marquées pour suppression.<br /><br /> Toujours 0 pour les groupes de lignes DELTA.|  
-|**size_in_bytes**|**tiers**|Taille combinée, en octets, de toutes les pages de ce groupe de lignes. Cette taille n’inclut pas la taille requise pour stocker les métadonnées ou les dictionnaires partagés.|  
-|**pdw_node_id**|**tiers**|ID unique d’un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nœud.|  
-|**distribution_id**|**tiers**|ID unique de la distribution.|
+|**size_in_bytes**|**int**|Taille combinée, en octets, de toutes les pages de ce groupe de lignes. Cette taille n’inclut pas la taille requise pour stocker les métadonnées ou les dictionnaires partagés.|  
+|**pdw_node_id**|**int**|ID unique d’un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nœud.|  
+|**distribution_id**|**int**|ID unique de la distribution.|
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Retourne une ligne pour chaque groupe de lignes columnstore pour chaque table ayant un index columnstore cluster ou non cluster.  
   
  Utilisez **sys. pdw_nodes_column_store_row_groups** pour déterminer le nombre de lignes incluses dans le groupe de lignes et la taille du groupe de lignes.  

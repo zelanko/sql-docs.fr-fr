@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 1 : Créer le projet Visual Studio du schéma RDL | Microsoft Docs'
+title: 'Leçon 1 : créer le projet Visual Studio du schéma RDL | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c34062acefc2dfd847790a39cea35b03727f49ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62678517"
 ---
-# <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>Leçon 1 : Créer le projet Visual Studio du schéma RDL
-  Dans ce didacticiel, vous allez créer une application console simple. Il est supposé que vous utilisez [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]pour le développement.  
+# <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>Leçon 1 : Création du projet Visual Studio du schéma RDL
+  Dans ce didacticiel, vous allez créer une application console simple. Ce didacticiel part du principe que vous développez dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)].  
   
 > [!NOTE]  
->  Lorsque vous accédez au service Web Report Server qui s'exécute sur [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services, vous devez ajouter "_SQLExpress" au chemin d'accès "ReportServer". Exemple :  
+>  Lorsque vous accédez au service Web Report Server qui s'exécute sur [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services, vous devez ajouter "_SQLExpress" au chemin d'accès "ReportServer". Par exemple :  
 >   
 >  `http://myserver/reportserver_sqlexpress/reportservice2010.asmx"`  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62678517"
   
 5.  Dans la zone **Emplacement** , entrez le chemin d'accès de l'emplacement où vous voulez enregistrer le projet, ou cliquez sur **Parcourir** pour rechercher le dossier.  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] Une vue réduite de votre projet apparaît dans l’Explorateur de solutions.  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]Une vue réduite de votre projet s’affiche dans Explorateur de solutions.  
   
 7.  Dans le menu **Projet** , cliquez sur **Ajouter un élément existant**.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62678517"
   
      Dans la boîte de dialogue **Ajouter une référence** , dans l'onglet **.NET** , sélectionnez **System.Web.Services**, puis cliquez sur **OK**.  
   
-     Pour plus d’informations sur la connexion au service Web Report Server, consultez [création d’Applications à l’aide du Service Web et le .NET Framework](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
+     Pour plus d’informations sur la façon de se connecter au service Web Report Server, consultez [génération d’applications à l’aide du service Web et du .NET Framework](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
   
 10. Dans l'Explorateur de solutions, développez le nœud du projet. Un fichier de code portant le nom par défaut Program.cs (Module1.vb pour [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) a été ajouté à votre projet.  
   
@@ -197,10 +197,10 @@ ms.locfileid: "62678517"
     ```  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- Dans la prochaine leçon, vous allez utiliser l'outil de définition de schéma XML (Xsd.exe) pour générer des classes à partir du schéma RDL et les inclure dans votre projet. Consultez [Leçon 2 : Générer des Classes à partir du schéma RDL à l’aide de l’outil xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md).  
+ Dans la prochaine leçon, vous allez utiliser l'outil de définition de schéma XML (Xsd.exe) pour générer des classes à partir du schéma RDL et les inclure dans votre projet. Consultez [Lesson 2: Generate Classes from the RDL Schema using the xsd Tool](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [La mise à jour des rapports à l’aide des Classes générées à partir du schéma RDL &#40;didacticiel SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
- [RDL (Report Definition Language) &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
+ [Mise à jour des rapports à l’aide de classes générées à partir du schéma RDL &#40;didacticiel SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+ [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Boîte de boîte de dialogue de propriétés de Source de données partagée, général | Microsoft Docs
+title: Boîte de dialogue Propriétés de la source de données partagée, général | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb7e3caa1fedf1e8a398a1c5abd91fdaa2263ba2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101316"
 ---
 # <a name="shared-data-source-properties-dialog-box-general"></a>Boîte de dialogue Propriétés de la source de données partagée, Général
@@ -34,8 +34,8 @@ ms.locfileid: "66101316"
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Créer une Source de données incorporée ou partagée &#40;SSRS&#41;](../../2014/reporting-services/create-an-embedded-or-shared-data-source-ssrs.md)   
- [Connexions de données, Sources de données et chaînes de connexion dans Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Propriétés de la source de données partagée, boîte de dialogue (Informations d’identification)](../../2014/reporting-services/shared-data-source-properties-dialog-box-credentials.md)  
+ [Créer une source de données incorporée ou partagée &#40;SSRS&#41;](../../2014/reporting-services/create-an-embedded-or-shared-data-source-ssrs.md)   
+ [Connexions de données, sources de données et chaînes de connexion dans Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Boîte de dialogue Propriétés de la source de données partagée, Informations d'identification](../../2014/reporting-services/shared-data-source-properties-dialog-box-credentials.md)  
   
   

@@ -19,18 +19,18 @@ ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bd8c82a401f78f4907bb891ede845017c00ac5ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68032634"
 ---
-# <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
+# <a name="sp_syscollector_create_collector_type-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Crée un type de collecteur pour le collecteur de données. Un type de collecteur est un wrapper logique autour du [!INCLUDE[ssIS](../../includes/ssis-md.md)] les packages qui fournissent le mécanisme de collecte de données et les télécharger dans l’entrepôt de données de gestion.  
+  Crée un type de collecteur pour le collecteur de données. Un type de collecteur est un wrapper logique [!INCLUDE[ssIS](../../includes/ssis-md.md)] autour des packages qui fournissent le mécanisme réel pour la collecte des données et leur téléchargement dans l’entrepôt de données de gestion.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,26 +46,26 @@ sp_syscollector_create_collector_type
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @collector_type_uid =] '*collector_type_uid*'  
- Est le GUID pour le type de collecteur. *collector_type_uid* est **uniqueidentifier** et si sa valeur est NULL, il sera automatiquement créée et retournée en tant que sortie.  
+ [ @collector_type_uid = ] '*collector_type_uid*'  
+ GUID du type de collecteur. *collector_type_uid* est de type **uniqueidentifier** et, s’il a la valeur null, il est automatiquement créé et retourné comme sortie.  
   
- [ @name =] '*nom*'  
- Nom du type de collecteur. *nom* est **sysname** et doit être spécifié.  
+ [ @name = ] '*nom*'  
+ Nom du type de collecteur. *Name* est de **type sysname** et doit être spécifié.  
   
- [ @parameter_schema =] '*parameter_schema*'  
- Schéma XML pour ce type de collecteur. *parameter_schema* est **xml** avec NULL comme valeur par défaut.  
+ [ @parameter_schema = ] '*parameter_schema*'  
+ Schéma XML pour ce type de collecteur. *parameter_schema* est de type **XML** avec NULL comme valeur par défaut.  
   
- [ @parameter_formatter =] '*parameter_formatter*'  
- Modèle à utiliser pour transformer le XML utilisé dans la page de propriétés du jeu d'éléments de collecte. *parameter_formatter* est **xml** avec NULL comme valeur par défaut.  
+ [ @parameter_formatter = ] '*parameter_formatter*'  
+ Modèle à utiliser pour transformer le XML utilisé dans la page de propriétés du jeu d'éléments de collecte. *parameter_formatter* est de type **XML** avec NULL comme valeur par défaut.  
   
  [@collection_package_id = ] *collection_package_id*  
  Identificateur unique local qui pointe vers le package de collection [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilisé par le jeu d'éléments de collecte. *collection_package_id* est **uniqueidentifer** et est obligatoire.  
   
  [@upload_package_id = ] *upload_package_id*  
- Identificateur unique local qui pointe vers le package de téléchargement [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilisé par le jeu d'éléments de collecte. *upload_package_id* est **uniqueidentifier** et est obligatoire.  
+ Identificateur unique local qui pointe vers le package de téléchargement [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilisé par le jeu d'éléments de collecte. *upload_package_id* est de type **uniqueidentifier** et est requis.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert l'appartenance au rôle de base de données fixe dc_admin (avec autorisation EXECUTE) pour exécuter cette procédure.  

@@ -1,5 +1,5 @@
 ---
-title: Écrire des Messages de Trace d’exécution dans le journal des erreurs SQL Server Agent (SQL Server Management Studio) | Microsoft Docs
+title: Écrire des messages de trace d’exécution dans le journal des erreurs SQL Server Agent (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fd21f4b08bf53d4715f2b99eefed523f3853c033
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245440"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Écrire des messages de trace d'exécution dans le journal des erreurs de SQL Server Agent (SQL Server Management Studio)
-  Cette rubrique indique comment configurer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour inclure des messages de trace d'exécution dans le journal des erreurs dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  Cette rubrique explique comment configurer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’agent pour inclure des messages de trace d’exécution dans le [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] journal des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]erreurs dans à l’aide de.  
   
  **Dans cette rubrique**  
   
@@ -34,7 +34,7 @@ ms.locfileid: "63245440"
   
      [Sécurité](#Security)  
   
--   [Pour écrire des messages de trace d’exécution dans le journal des erreurs SQL Server Agent à l’aide de SQL Server Management Studio](#SSMSProcedure)  
+-   [Pour écrire des messages de trace d'exécution dans le journal des erreurs de SQL Server Agent à l'aide de SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -57,7 +57,7 @@ ms.locfileid: "63245440"
   
 -   Changer les quotas de mémoire d'un processus (SeIncreaseQuotaPrivilege)  
   
- Pour plus d’informations sur les autorisations Windows requises pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte de service de l’Agent, consultez [sélectionner un compte pour le Service SQL Server Agent](select-an-account-for-the-sql-server-agent-service.md) et [configurer les comptes de Service Windows et Autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Pour plus d’informations sur les autorisations Windows requises pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le compte de service de l’agent, consultez [Sélectionner un compte pour le service SQL Server Agent](select-an-account-for-the-sql-server-agent-service.md) et [configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ##  <a name="SSMSProcedure"></a>   
 #### <a name="to-write-execution-trace-messages-to-the-sql-server-agent-error-log"></a>Pour écrire des messages de trace d'exécution dans le journal des erreurs de SQL Server Agent  
@@ -66,7 +66,7 @@ ms.locfileid: "63245440"
   
 2.  Cliquez avec le bouton droit sur **SQL Server Agent** , puis sélectionnez **Propriétés**.  
   
-3.  Dans le **propriétés de l’Agent SQL Server -** _nom_serveur_ boîte de dialogue **journal des erreurs** sur le **général** , sélectionnez le **Inclure les messages de trace d’exécution** case à cocher.  
+3.  Dans la boîte de dialogue Propriétés de la **SQL Server Agent-**_SERVER_NAME_ , sous **Journal des erreurs** dans la page **général** , activez la case à cocher inclure les messages de **trace d’exécution** .  
   
 4.  Cliquez sur **OK**.  
   

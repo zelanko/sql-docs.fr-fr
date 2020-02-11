@@ -18,26 +18,26 @@ ms.assetid: 90d447de-3a4a-4f3e-aeab-e8fff6348361
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8a589583eeef4974a1e3a59bdaec8b63cedb36bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68129579"
 ---
-# <a name="msdistributionstatus-transact-sql"></a>MSdistribution_status (Transact-SQL)
+# <a name="msdistribution_status-transact-sql"></a>MSdistribution_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Le **MSdistribution_status** vue expose des informations supplémentaires sur les commandes d’état dans la base de données de distribution. Cette vue est stockée dans la base de données de distribution.  
+  La vue **MSdistribution_status** expose des informations supplémentaires sur les commandes d’État dans la base de données de distribution. Cette vue est stockée dans la base de données de distribution.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**article_id**|**int**|Identifie un article.|  
 |**agent_id**|**int**|Identifie un Agent de réplication.|  
-|**UndelivCmdsInDistDB**|**Int**|Nombre de commandes en attente de remise aux Abonnés.|  
+|**UndelivCmdsInDistDB**|**int**|Nombre de commandes en attente de remise aux Abonnés.|  
 |**DelivCmdsInDistDB**|**int**|Nombre de commandes remises aux Abonnés.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vues de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

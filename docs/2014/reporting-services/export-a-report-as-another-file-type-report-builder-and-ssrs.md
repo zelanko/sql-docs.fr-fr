@@ -1,5 +1,5 @@
 ---
-title: Exporter un rapport en tant que Type d’un autre fichier (Générateur de rapports et SSRS) | Microsoft Docs
+title: Exporter un rapport dans un autre type de fichier (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6da8c1190c07d3df930a2d83937e3a5ec39da32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109181"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>Exporter un rapport dans un autre type de fichier (Générateur de rapports et SSRS)
@@ -27,11 +27,11 @@ ms.locfileid: "66109181"
   
 1.  Affichez l'aperçu du rapport.  
   
-2.  Cliquez sur **Exporter**dans le ruban.  
+2.  Dans le ruban, cliquez sur **Exporter**.  
   
 3.  Sélectionnez le format que vous souhaitez utiliser.  
   
-     La boîte de dialogue **Enregistrer sous** s'affiche. Par défaut, le nom du fichier correspond à celui du rapport que vous avez exporté. Vous pouvez éventuellement modifier le nom du fichier.  
+     La boîte de dialogue **Enregistrer sous** s'ouvre. Par défaut, le nom du fichier correspond à celui du rapport que vous avez exporté. Vous pouvez éventuellement modifier le nom du fichier.  
   
 4.  Accédez à l'emplacement où vous avez enregistré le rapport exporté et ouvrez-le.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66109181"
   
      À l'aide de l'application associée au format que vous avez choisi, le rapport est affiché ou enregistré. Si vous cliquez sur **Enregistrer**, vous devrez indiquer un emplacement pour enregistrer votre rapport.  
   
-     **Remarque** Si le programme ne peut pas ouvrir le rapport dans le format que vous avez choisi car vous ne disposez pas d'un programme associé à ce type de fichier, vous serez invité à enregistrer le rapport exporté ou à rechercher un programme en ligne pour ouvrir le rapport.  
+     **Remarque** Si le programme ne peut pas ouvrir le rapport dans le format que vous avez choisi, car vous n’avez pas de programme associé à ce type de fichier, vous êtes invité à enregistrer le rapport exporté ou à rechercher un programme en ligne pour ouvrir le rapport.  
   
 ### <a name="to-export-a-report-as-another-file-type-in-a-sharepoint-library"></a>Pour exporter un rapport dans un autre type de fichier dans une bibliothèque SharePoint  
   
@@ -82,11 +82,11 @@ ms.locfileid: "66109181"
   
      Modifiez éventuellement le nom de fichier du rapport exporté.  
   
-     **Remarque** Si le programme ne peut pas ouvrir le rapport dans le format que vous avez choisi car vous ne disposez pas d'un programme associé à ce type de fichier, vous serez invité à enregistrer le rapport exporté ou à rechercher un programme en ligne pour ouvrir le rapport.  
+     **Remarque** Si le programme ne peut pas ouvrir le rapport dans le format que vous avez choisi, car vous n’avez pas de programme associé à ce type de fichier, vous êtes invité à enregistrer le rapport exporté ou à rechercher un programme en ligne pour ouvrir le rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exportation de rapports &#40;Générateur de rapports et SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Fonctionnalité interactive des différentes Extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](report-builder/interactive-functionality-different-report-rendering-extensions.md)  
+ [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](report-builder/interactive-functionality-different-report-rendering-extensions.md)  
   
   

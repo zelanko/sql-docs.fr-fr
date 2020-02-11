@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 07f94c3ed850af10120b1de7d95941bc5c90e826
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088222"
 ---
 # <a name="openingperiod-mdx"></a>OpeningPeriod (MDX)
@@ -37,14 +37,14 @@ OpeningPeriod( [ Level_Expression [ , Member_Expression ] ] )
 ## <a name="remarks"></a>Notes  
  Cette fonction a principalement été conçue pour être exploitée avec la dimension Time (dimension de temps) mais peut également être utilisée avec n'importe quelle dimension.  
   
--   Si une expression de niveau est spécifiée, le **OpeningPeriod** fonction utilise la hiérarchie qui contient le niveau spécifié et retourne le premier frère parmi les descendants du membre par défaut au niveau spécifié.  
+-   Si une expression de niveau est spécifiée, la fonction **OpeningPeriod** utilise la hiérarchie qui contient le niveau spécifié et retourne le premier frère parmi les descendants du membre par défaut au niveau spécifié.  
   
--   Si une expression de niveau et une expression de membre sont spécifiés, le **OpeningPeriod** fonction retourne le premier frère parmi les descendants du membre spécifié au niveau spécifié dans la hiérarchie contenant le texte spécifié niveau.  
+-   Si une expression de niveau et une expression de membre sont spécifiées, la fonction **OpeningPeriod** retourne le premier frère parmi les descendants du membre spécifié au niveau spécifié dans la hiérarchie contenant le niveau spécifié.  
   
--   Si une expression de niveau, ni une expression de membre est spécifiée, le **OpeningPeriod** fonction utilise le niveau par défaut et le membre de la dimension avec un type de temps.  
+-   Si aucune expression de niveau ni aucune expression de membre n’est spécifiée, la fonction **OpeningPeriod** utilise le niveau et le membre par défaut de la dimension avec un type de temps.  
   
 > [!NOTE]  
->  Le [ClosingPeriod](../mdx/closingperiod-mdx.md) fonction est similaire à la **OpeningPeriod** fonctionner, à ceci près que le **ClosingPeriod** fonction retourne le dernier frère au lieu du premier frère.  
+>  La fonction [ClosingPeriod](../mdx/closingperiod-mdx.md) est similaire à la fonction **OpeningPeriod** , à ceci près que la fonction **ClosingPeriod** retourne le dernier frère au lieu du premier frère.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple ci-dessous retourne la valeur de la mesure par défaut pour le membre FY2002 de la dimension Date (dimension de type Time). Ce membre est retourné parce que le niveau Fiscal Year (année fiscale) est le premier descendant du niveau [All], la hiérarchie Fiscal est la hiérarchie par défaut parce qu'elle est la première hiérarchie définie par l'utilisateur dans la collection des hiérarchies, et le membre FY2002 est le premier frère de cette hiérarchie à ce niveau.  
@@ -80,8 +80,8 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [TopCount &#40;MDX&#41;](../mdx/topcount-mdx.md)   
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [FirstSibling &#40;MDX&#41;](../mdx/firstsibling-mdx.md)  
+ [&#40;&#41;MDX](../mdx/topcount-mdx.md)   
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)   
+ [FirstSibling&#41;MDX &#40;](../mdx/firstsibling-mdx.md)  
   
   

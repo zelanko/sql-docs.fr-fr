@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_cryptographic_provider_keys (Transact-SQL) | Microsoft Docs
+title: sys. dm_cryptographic_provider_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: 5a8c1421-c56b-44b5-96e5-4f01782a0c7c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 44ee5c5ff44928c2f2b9e775eae41aea77fed87a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086217"
 ---
-# <a name="sysdmcryptographicproviderkeys-transact-sql"></a>sys.dm_cryptographic_provider_keys (Transact-SQL)
+# <a name="sysdm_cryptographic_provider_keys-transact-sql"></a>sys.dm_cryptographic_provider_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne des informations sur les clés fournies par un fournisseur de gestion de clés extensible (EKM).  
 
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,11 +49,11 @@ dm_cryptographic_provider_keys ( provider_id )
 |-----------------|---------------|-----------------|  
 |**key_id**|**int**|Numéro d'identification de la clé sur le fournisseur.|  
 |**key_name**|**nvarchar(512)**|Nom de la clé sur le fournisseur.|  
-|**key_thumbprint**|**varbinary(32)**|Empreinte numérique du fournisseur de la clé.|  
+|**key_thumbprint**|**varbinary (32)**|Empreinte numérique du fournisseur de la clé.|  
 |**algorithm_id**|**int**|Numéro d'identification de l'algorithme sur le fournisseur.|  
-|**algorithm_tag**|**Int**|Balise de l'algorithme sur le fournisseur.|  
-|**key_type**|**nchar(256)**|Type de clé sur le fournisseur.|  
-|**key_length**|**Int**|Longueur de la clé sur le fournisseur.|  
+|**algorithm_tag**|**int**|Balise de l'algorithme sur le fournisseur.|  
+|**key_type**|**nchar (256)**|Type de clé sur le fournisseur.|  
+|**key_length**|**int**|Longueur de la clé sur le fournisseur.|  
   
 ## <a name="permissions"></a>Autorisations  
  Lorsque cette vue est interrogée, elle authentifie le contexte utilisateur auprès du fournisseur et énumère toutes les clés visibles à l'utilisateur.  

@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 744ab7a10db83cffa098bc97aa0ceb2c615481fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63057119"
 ---
-# <a name="mssqleng020554"></a>MSSQL_ENG020554
+# <a name="mssql_eng020554"></a>MSSQL_ENG020554
     
 ## <a name="message-details"></a>Détails du message  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|20554|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|20554|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique||  
 |Texte du message|L'agent de réplication n'a enregistré aucun message d'état d'avancement en %ld minutes. Il se peut que l'agent ne réponde pas ou que l'activité du système soit élevée. Vérifiez que les enregistrements sont répliqués vers la destination et que les connexions à l'Abonné, au serveur de publication et au serveur de distribution sont toujours actives.|  
@@ -52,9 +52,9 @@ ms.locfileid: "63057119"
   
      Vérifiez les détails de l'erreur dans le moniteur de réplication, puis redémarrez l'agent s'il s'est arrêté. Les détails de l'erreur devraient fournir des informations supplémentaires sur la raison pour laquelle l'agent ne fonctionnait pas correctement. Si l'agent ne fonctionne pas, n'arrêtez pas et ne redémarrez pas l'agent car cela peut aggraver le problème. Pour des informations sur l'affichage de l'état et des informations détaillées des erreurs des agents dans le moniteur de réplication, consultez les rubriques suivantes :  
   
-    -   Pour l’Agent d’instantané, Agent de lecture du journal et Agent de lecture de file d’attente, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](monitor/view-information-and-perform-tasks-replication-monitor.md).  
+    -   Pour la Agent d’instantané, l’agent de lecture du journal et Agent de lecture de la file d’attente, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
-    -   Pour l’Agent de Distribution et l’Agent de fusion, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](monitor/view-information-and-perform-tasks-replication-monitor.md).  
+    -   Pour les Agent de distribution et les Agent de fusion, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Si l'erreur est signalée fréquemment parce que l'agent est occupé :  
   
@@ -64,7 +64,7 @@ ms.locfileid: "63057119"
   
 -   Si un agent ne peut pas se connecter à un des ordinateurs de la topologie :  
   
-     Il est recommandé de définir **-LoginTimeOut** sur une valeur inférieure à celle de l’intervalle auquel le travail de vérification des agents de réplication s’exécute. Dans certains cas, **-LoginTimeOut** est défini sur une valeur supérieure en raison de problèmes réseau entraînant l’expiration du délai d’attente des connexions. Si **-LoginTimeOut** est défini sur une valeur inférieure, la réplication peut signaler des erreurs plus spécifiques, ce qui vous permet de résoudre des problèmes de connexion pouvant eux-mêmes découler de problèmes d’autorisations, réseau ou autres. Les paramètres des agents peuvent être spécifiés dans des profils d'agent et sur la ligne de commande. Pour plus d'informations, consultez :  
+     Il est recommandé de définir **-LoginTimeOut** sur une valeur inférieure à celle de l’intervalle auquel le travail de vérification des agents de réplication s’exécute. Dans certains cas, la valeur de **-LoginTimeout** est définie plus haut en raison de problèmes réseau qui entraînent l’expiration du délai d’attente de connexion. Si **-LoginTimeout est défini sur une** valeur inférieure, la réplication peut signaler des erreurs plus spécifiques, ce qui vous permet de résoudre les problèmes de connexion qui peuvent être causés par des autorisations, des problèmes de réseau ou d’autres problèmes. Les paramètres des agents peuvent être spécifiés dans des profils d'agent et sur la ligne de commande. Pour plus d'informations, consultez les pages suivantes :  
   
     -   [Utiliser des profils d’agent de réplication](agents/replication-agent-profiles.md)  
   
@@ -75,10 +75,10 @@ ms.locfileid: "63057119"
 ## <a name="see-also"></a>Voir aussi  
  [Administration de l’Agent de réplication](agents/replication-agent-administration.md)   
  [Guide de référence des erreurs et des événements &#40;réplication&#41;](errors-and-events-reference-replication.md)   
- [Agent de distribution de réplication](agents/replication-distribution-agent.md)   
- [Agent de lecture du journal de réplication](agents/replication-log-reader-agent.md)   
- [Agent de fusion de réplication](agents/replication-merge-agent.md)   
- [Agent de lecture de la file d’attente de réplication](agents/replication-queue-reader-agent.md)   
- [Agent d'instantané de réplication](agents/replication-snapshot-agent.md)  
+ [Replication Distribution Agent](agents/replication-distribution-agent.md)   
+ [Replication Log Reader Agent](agents/replication-log-reader-agent.md)   
+ [Replication Merge Agent](agents/replication-merge-agent.md)   
+ [Agent de lecture de la file d'attente de réplication](agents/replication-queue-reader-agent.md)   
+ [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
   
   

@@ -14,11 +14,11 @@ ms.assetid: b2760517-b0cb-4268-905d-bb1e1f9d902a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c8ea017c7b463a0287e6b6f4437549db667bd251
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: c0c0ad4d5c375b537f4bc0fd4efb820395a8d6e1
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889214"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Ajouter-supprimer des tables (Analysis Services-données multidimensionnelles)
@@ -35,9 +35,9 @@ ms.locfileid: "68889214"
  **Objets disponibles**  
  Permet d'afficher les objets accompagnés de leur type dans la source de données pour ceux qui ne sont pas déjà inclus dans la vue de source de données.  
   
- Cliquez sur **>>** pour transférer tous les objets répertoriés dans **Objets disponibles** vers **Objets inclus**, ou sélectionnez un ou plusieurs objets, puis cliquez sur **>** pour transférer les objets sélectionnés vers **Objets inclus**.  
+ Cliquez **>>** pour transférer tous les objets répertoriés dans **objets disponibles** vers **objets inclus**, ou sélectionnez un ou plusieurs objets **>** et cliquez sur pour transférer les objets sélectionnés vers **objets inclus**.  
   
- **Filtrer**  
+ **Filter**  
  Entrez le filtre à utiliser pour limiter la liste des objets affichés dans **Objets disponibles**, puis cliquez sur le bouton pour filtrer les objets de la liste.  
   
  **Afficher les objets système**  
@@ -46,13 +46,13 @@ ms.locfileid: "68889214"
  **Objets inclus**  
  Permet d'afficher les objets ajoutés à la vue de source de données ainsi que leur type.  
   
- Cliquez sur **<<** pour transférer tous les objets répertoriés dans **Objets inclus** vers **Objets disponibles**, ou sélectionnez un ou plusieurs objets, puis cliquez sur **<** pour transférer les objets sélectionnés vers **Objets disponibles**.  
+ Cliquez **<<** pour transférer tous les objets répertoriés dans **objets inclus** vers **objets disponibles**, ou sélectionnez un ou plusieurs objets **<** et cliquez sur pour transférer les objets sélectionnés vers **objets disponibles**.  
   
  **Ajouter des tables associées**  
  Cliquez sur ce bouton pour ajouter toutes les tables associées aux tables sélectionnées dans **Objets inclus**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Analysis Services les concepteurs et &#40;boîtes de dialogue données multidimensionnelles&#41;](https://docs.microsoft.com/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data)   
- [Concepteur de vue de source de données &#40;Analysis Services - Données multidimensionnelles&#41;](https://docs.microsoft.com/analysis-services/data-source-view-designer-analysis-services-multidimensional-data)  
+ [Analysis Services les concepteurs et les boîtes de dialogue &#40;les données multidimensionnelles&#41;](../analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Concepteur de vue de source de données &#40;Analysis Services-données multidimensionnelles&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

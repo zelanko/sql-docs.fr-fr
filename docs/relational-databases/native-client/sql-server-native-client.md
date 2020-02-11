@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 48a335f4cf3dc3990cbcf6bbf68e82ce76a9e54f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73759355"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
@@ -29,13 +29,13 @@ SNAC, ou SQL Server Native Client, est un terme qui a été utilisé de façon i
 > Pour plus d’informations et pour télécharger les pilotes SNAC ou ODBC, consultez le billet de [blog SNAC Lifecycle explication](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/).
 > Pour plus d’informations sur le pilote ODBC pour SQL Server, consultez [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).  
 
- Pour plus d’informations sur les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client publiées avec [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], la dernière version disponible de SQL Server Native Client :
+ Informations sur les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonctionnalités Native Client publiées avec [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], la dernière version disponible de SQL Server Native Client :
 
--   [Prise en charge de SQL Server Native Client pour la base de données locale](../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)  
+-   [Prise en charge de SQL Server Native Client pour LocalDB](../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)  
 
--   [Détection des métadonnées](../../relational-databases/native-client/features/metadata-discovery.md)  
+-   [Découverte des métadonnées](../../relational-databases/native-client/features/metadata-discovery.md)  
 
--   [Prise en charge de UTF-16 dans SQL Server Native Client 11.0](../../relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md)  
+-   [Prise en charge de UTF-16 dans SQL Server Native Client 11.0](../../relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md)  
 
 -   [Prise en charge des fonctionnalités de récupération d'urgence, haute disponibilité par SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
 
@@ -47,7 +47,7 @@ ODBC dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Clien
 
 -   C. Extensibilité du type de données Pour plus d’informations, consultez [types de données C dans ODBC](https://go.microsoft.com/fwlink/?LinkID=191495).  
 
-     Pour prendre en charge cette fonctionnalité dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, SQLGetDescField peut retourner **SQL_C_SS_TIME2** (pour les types de **temps** ) ou **SQL_C_SS_TIMESTAMPOFFSET** (pour **DateTimeOffset**) au lieu de **SQL_C_BINARY**, si votre application utilise ODBC 3,8. Pour plus d’informations, consultez [prise en charge des types de données pour les améliorations de date et d’heure ODBC](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md).  
+     Pour prendre en charge cette [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonctionnalité dans Native Client, SQLGetDescField peut retourner **SQL_C_SS_TIME2** (pour les types de **temps** ) ou **SQL_C_SS_TIMESTAMPOFFSET** (pour **DateTimeOffset**) au lieu de **SQL_C_BINARY**, si votre application utilise ODBC 3,8. Pour plus d’informations, consultez [prise en charge des types de données pour les améliorations de date et d’heure ODBC](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md).  
 
 -   Appel de **SQLGetData** avec une mémoire tampon de petite taille plusieurs fois pour récupérer une valeur de paramètre élevée. Pour plus d’informations, consultez [récupération des paramètres de sortie à l’aide de SQLGetData](https://go.microsoft.com/fwlink/?LinkID=191494).  
 

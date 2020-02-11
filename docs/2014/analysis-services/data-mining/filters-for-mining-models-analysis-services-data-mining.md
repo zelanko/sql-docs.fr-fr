@@ -1,5 +1,5 @@
 ---
-title: Filtres pour les modèles d’exploration de données (Analysis Services - Exploration de données) | Microsoft Docs
+title: Filtres pour les modèles d’exploration de données (Analysis Services-exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44e60d60764396361122ed16a4e34f76fc3a6ab6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084429"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtres pour les modèles d'exploration de données (Analysis Services - Exploration de données)
@@ -43,14 +43,14 @@ ms.locfileid: "66084429"
   
 -   En utilisant l’onglet **Modèles d’exploration de données** du Concepteur d’exploration de données pour générer les conditions à l’aide des boîtes de dialogue de l’Éditeur de filtre.  
   
--   Taper une expression de filtre directement dans le `Filter` propriété du modèle d’exploration de données.  
+-   Saisie directe d’une expression de filtre `Filter` dans la propriété du modèle d’exploration de données.  
   
 -   En définissant des conditions de filtrage sur un modèle par programmation, à l’aide d’AMO.  
   
 ### <a name="creating-model-filters-using-data-mining-designer"></a>Création des filtres de modèle à l'aide du Concepteur d'exploration de données  
  Vous filtrez un modèle dans le Concepteur d'exploration de données en modifiant la propriété `Filter` du modèle d'exploration de données. Vous pouvez taper directement une expression de filtre dans le volet **Propriétés** ou ouvrir une boîte de dialogue de filtre pour créer des conditions.  
   
- Il existe deux boîtes de dialogue de filtre. La première permet de créer des conditions appliquées à la table de cas. Si la source de données contient plusieurs tables, sélectionnez d'abord une table, puis sélectionnez une colonne et spécifiez les opérateurs et les conditions qui s'appliquent à cette colonne. Vous pouvez lier plusieurs conditions à l’aide de `AND` / `OR` opérateurs. Les opérateurs disponibles pour définir les valeurs varient selon que la colonne contient des valeurs discrètes ou continues. Par exemple, vous pouvez utiliser les opérateurs `greater than` et `less than` avec les valeurs continues. Toutefois, vous pouvez utiliser uniquement les opérateurs `= (equal to)`, `!= (not equal to)` et `is null` avec les valeurs discrètes.  
+ Il existe deux boîtes de dialogue de filtre. La première permet de créer des conditions appliquées à la table de cas. Si la source de données contient plusieurs tables, sélectionnez d'abord une table, puis sélectionnez une colonne et spécifiez les opérateurs et les conditions qui s'appliquent à cette colonne. Vous pouvez lier plusieurs conditions à l' `AND` / `OR` aide d’opérateurs. Les opérateurs disponibles pour définir les valeurs varient selon que la colonne contient des valeurs discrètes ou continues. Par exemple, vous pouvez utiliser les opérateurs `greater than` et `less than` avec les valeurs continues. Toutefois, vous pouvez utiliser uniquement les opérateurs `= (equal to)`, `!= (not equal to)` et `is null` avec les valeurs discrètes.  
   
 > [!NOTE]  
 >  Le mot clé `LIKE` n'est pas pris en charge. Si vous souhaitez inclure plusieurs attributs discrets, vous devez créer des conditions séparées et les lier avec l'opérateur `OR`.  
@@ -82,7 +82,7 @@ ms.locfileid: "66084429"
 ### <a name="how-can-i-tell-whether-a-filter-is-being-used"></a>Comment puis-je savoir si un filtre est utilisé ?  
  Il existe plusieurs méthodes pour déterminer si un filtre est appliqué à un modèle :  
   
--   Dans le concepteur, cliquez sur le **les modèles d’exploration de données** onglet, ouvrez **propriétés**et afficher le `Filter` propriété du modèle d’exploration de données.  
+-   Dans le concepteur, cliquez sur l’onglet **modèles d’exploration de données** , ouvrez **Propriétés**, puis affichez la `Filter` propriété du modèle d’exploration de données.  
   
 -   La vue de gestion dynamique DMSCHEMA_MINING_MODELS affiche une colonne contenant le texte du filtre. Utilisez la requête suivante sur une vue de gestion dynamique pour retourner les noms des modèles et leurs filtres.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66084429"
 ### <a name="how-can-i-save-a-filter"></a>Comment puis-je enregistrer un filtre ?  
  L'expression de filtre est enregistrée en tant que script stocké avec la table imbriquée ou le modèle d'exploration de données associé. Si vous supprimez le texte de filtre, il ne peut être restauré qu'en recréant manuellement l'expression de filtre. Par conséquent, si vous créez des expressions de filtre complexes, vous devez créer une copie de sauvegarde du texte de filtre.  
   
-### <a name="why-cant-i-see-any-effects-from-the-filter"></a>Pourquoi ne puis-je pas voir tous les effets du filtre ?  
+### <a name="why-cant-i-see-any-effects-from-the-filter"></a>Pourquoi ne puis-je pas voir les effets du filtre ?  
  Chaque fois que vous changez ou ajoutez une expression de filtre, vous devez retraiter la structure et le modèle avant de pouvoir consulter les résultats du filtre.  
   
 ### <a name="why-do-i-see-filtered-attributes-in-prediction-query-results"></a>Pourquoi y a-t-il des attributs filtrés dans les résultats de la requête de prédiction ?  
@@ -115,13 +115,13 @@ ms.locfileid: "66084429"
   
 -   Réduisez les valeurs exclues dans une catégorie lors de la définition de la structure d'exploration de données.  
   
-## <a name="related-resources"></a>Ressources connexes  
- Pour plus d’informations sur la syntaxe des filtres et obtenir des exemples d’expressions de filtre, consultez [Model Filter Syntax and Examples &#40;Analysis Services - Data Mining&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md).  
+## <a name="related-resources"></a>Ressources associées  
+ Pour plus d’informations sur la syntaxe des filtres et obtenir des exemples d’expressions de filtre, consultez [Syntaxe de filtre de modèle et exemples &#40;Analysis Services - Exploration de données&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md).  
   
  Pour plus d’informations sur l’utilisation des filtres de modèle lorsque vous testez un modèle d’exploration de données, consultez [Choisir un type de graphique d’analyse de précision et définir des options de graphique](choose-an-accuracy-chart-type-and-set-chart-options.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Syntaxe de filtre de modèle et exemples &#40;Analysis Services - Exploration de données&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Test et validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)  
+ [Syntaxe de filtre de modèle et exemples &#40;Analysis Services d’exploration de données&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
+ [Test et validation &#40;l’exploration de données&#41;](testing-and-validation-data-mining.md)  
   
   

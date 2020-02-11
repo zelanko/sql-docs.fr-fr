@@ -24,14 +24,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4561c7b8979a919ea144bab6d9b42f722b089e48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874078"
 ---
 # <a name="data-access-from-clr-database-objects"></a>Accès aux données à partir d'objets de base de données CLR
-  Une routine du common language runtime (CLR) peut accéder facilement aux données stockées dans l’instance de [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] dans laquelle elle s’exécute, ainsi que des données stockées dans les instances distantes. Les données particulières auxquelles la routine peut accéder sont déterminées par le contexte utilisateur dans lequel le code s'exécute. Accéder aux données à partir d’un objet de base de données CLR à l’aide du fournisseur de données .NET Framework pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les données à partir de clients gérés et les applications de couche intermédiaire. C'est la raison pour laquelle vous pouvez tirer parti de vos connaissances d'ADO.NET et de `SqlClient` dans les applications clientes managées et de couche intermédiaire.  
+  Une routine de common language runtime (CLR) peut accéder facilement aux données stockées dans l' [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] instance de dans laquelle elles s’exécutent, ainsi qu’aux données stockées dans des instances distantes. Les données particulières auxquelles la routine peut accéder sont déterminées par le contexte utilisateur dans lequel le code s'exécute. Accédez aux données à partir d’un objet de base de données CLR à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l’aide de la .NET Framework fournisseur de données pour les données du client géré et des applications de couche intermédiaire. C'est la raison pour laquelle vous pouvez tirer parti de vos connaissances d'ADO.NET et de `SqlClient` dans les applications clientes managées et de couche intermédiaire.  
   
 > [!NOTE]  
 >  Les méthodes de type défini par l'utilisateur et les fonctions définies par l'utilisateur ne sont pas autorisées à effectuer un accès aux données par défaut. Vous devez définir la propriété `DataAccess` de `SqlMethodAttribute` ou `SqlFunctionAttribute` à `DataAccessKind.Read` pour permettre l'accès aux données en lecture seule à partir des méthodes de type défini par l'utilisateur ou des fonctions définies par l'utilisateur. Les opérations de modification des données ne sont pas autorisées à partir des types définis par l'utilisateur ou des fonctions définies par l'utilisateur ; par ailleurs, elles lèvent des exceptions au moment de l'exécution, à la moindre tentative.  
@@ -43,7 +43,7 @@ ms.locfileid: "62874078"
  [Connexion contextuelle](context-connection.md)  
  Décrit la connexion contextuelle à SQL Server.  
   
- [Emprunt d’identité et informations d’identification pour les connexions](impersonation-and-credentials-for-connections.md)  
+ [Emprunt d'identité et informations d'identification pour les connexions](impersonation-and-credentials-for-connections.md)  
  Décrit l'emprunt d'identité et les informations d'identification des connexions.  
   
  [Extensions spécifiques in-process de SQL Server à ADO.NET](../../clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  

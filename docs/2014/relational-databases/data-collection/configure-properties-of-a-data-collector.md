@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 37df9ccdd0bc2b44384bb9fd3d130c8d3bf8ca36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873430"
 ---
 # <a name="configure-properties-of-a-data-collector"></a>Configurer les propriétés d'un collecteur de données
@@ -29,7 +29,7 @@ ms.locfileid: "62873430"
  **Activer la collecte de données**  
  Sélectionnez cette option pour activer la collecte de données. Cela équivaut à exécuter la procédure stockée sp_syscollector_enable_collector. La désactivation de cette case à cocher désactive la collecte de données et équivaut à exécuter la procédure stockée p_syscollector_disable_collector.  
   
- **Server**  
+ **Serveur**  
  Affiche le nom du serveur qui hébergera l'entrepôt de données de gestion  
   
  **Nom de la base de données**  

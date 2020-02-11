@@ -1,5 +1,5 @@
 ---
-title: Utiliser l’extraction des visionneuses de modèle | Microsoft Docs
+title: Utiliser l’extraction à partir des visionneuses de modèle | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebb910af4a9c01784fb74195ad6eed0f7f96db71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082835"
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>Utiliser l'extraction des visionneuses de modèle
@@ -28,7 +28,7 @@ ms.locfileid: "66082835"
   
 2.  Cliquez avec le bouton droit sur un nœud dans le graphique d’arbre, puis sélectionnez **Extraire**.  
   
-3.  Sélectionnez l'une des options suivantes : **Colonnes de modèle uniquement** ou **modéliser et de colonnes de Structure**. Si vous n'avez pas d'autorisations, une option peut ne pas être disponible.  
+3.  Sélectionnez une des options suivantes : **Colonnes de modèle uniquement** ou **Colonnes de structure et de modèle**. Si vous n'avez pas d'autorisations, une option peut ne pas être disponible.  
   
 4.  La boîte de dialogue **Extraire** s’ouvre, affichant les données de cas et/ou de structure. La barre de titre de la boîte de dialogue contient également une description qui identifie le nœud dont la requête d'extraction a été exécutée.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66082835"
   
 2.  Sous l’onglet **Cluster** , cliquez avec le bouton droit sur n’importe quel nœud.  
   
-3.  Sélectionnez **extraction**, puis sélectionnez une des options suivantes : **Colonnes de modèle uniquement** ou **modéliser et de colonnes de Structure**. Si vous n'avez pas d'autorisations, une option peut ne pas être disponible.  
+3.  Sélectionnez **Extraire**, puis sélectionnez une des options suivantes : **Colonnes de modèle uniquement** ou **Colonnes de structure et de modèle**. Si vous n'avez pas d'autorisations, une option peut ne pas être disponible.  
   
 4.  La boîte de dialogue **Extraire** s’ouvre, affichant les données de cas et/ou de structure. La barre de titre de la boîte de dialogue contient également une description qui identifie le cluster pour les cas.  
   
@@ -48,11 +48,11 @@ ms.locfileid: "66082835"
   
 ### <a name="use-drillthrough-in-the-microsoft-association-rules-viewer"></a>Utiliser l'extraction dans la Visionneuse de l'algorithme MAR (Microsoft Association Rules)  
   
-1.  Dans le Concepteur d'exploration de données, sélectionnez un modèle d'association, puis sélectionnez **Parcourir le modèle** pour ouvrir le modèle dans la **Visionneuse de l'algorithme MAR (Microsoft Association Rules)** . Dans SQL Server Management Studio, cliquez avec le bouton droit sur le modèle, puis sélectionnez **Parcourir**.  
+1.  Dans le Concepteur d'exploration de données, sélectionnez un modèle d'association, puis sélectionnez **Parcourir le modèle** pour ouvrir le modèle dans la **Visionneuse de l'algorithme MAR (Microsoft Association Rules)**. Dans SQL Server Management Studio, cliquez avec le bouton droit sur le modèle, puis sélectionnez **Parcourir**.  
   
 2.  Sous l’onglet **Règles** , cliquez avec le bouton droit sur une ligne qui représente une règle. Dans l'onglet **Jeux d'éléments** , cliquez sur n'importe quelle ligne qui contient un jeu d'éléments.  
   
-3.  Sélectionnez **extraction**, puis sélectionnez une des options suivantes : **Colonnes de modèle uniquement** ou **modéliser et de colonnes de Structure**. Si vous n'avez pas d'autorisations, une option peut ne pas être disponible.  
+3.  Sélectionnez **Extraire**, puis sélectionnez une des options suivantes : **Colonnes de modèle uniquement** ou **Colonnes de structure et de modèle**. Si vous n'avez pas d'autorisations, une option peut ne pas être disponible.  
   
 4.  La boîte de dialogue **Extraire** s’ouvre, affichant les données de cas et/ou de structure. La barre de titre de la boîte de dialogue contient également une description qui identifie le nom de la règle.  
   
@@ -64,15 +64,15 @@ ms.locfileid: "66082835"
   
 2.  Sous l’onglet **Diagramme de cluster**, cliquez avec le bouton droit sur n’importe quel nœud qui représente un cluster. Dans l'onglet **Profils du cluster** , cliquez n'importe où dans un profil de cluster ou dans le cluster représentant la totalité de la population du modèle.  
   
-3.  Sélectionnez **extraction**, puis sélectionnez une des options suivantes : **Colonnes de modèle uniquement** ou **modéliser et de colonnes de Structure**. Si vous n'avez pas d'autorisations, une option peut ne pas être disponible.  
+3.  Sélectionnez **Extraire**, puis sélectionnez une des options suivantes : **Colonnes de modèle uniquement** ou **Colonnes de structure et de modèle**. Si vous n'avez pas d'autorisations, une option peut ne pas être disponible.  
   
 4.  La boîte de dialogue **Extraire** s’ouvre, affichant les données de cas et/ou de structure. La barre de titre de la boîte de dialogue contient également une description qui identifie le cluster pour les cas.  
   
 5.  Cliquez avec le bouton droit n’importe où dans les résultats et sélectionnez **Copier tout** pour enregistrer les résultats dans le Presse-papiers. Si le modèle contient une colonne de table imbriquée, seul le nom de la colonne de table imbriquée est collé ; pour extraire les valeurs de données de la colonne de table imbriquée pour chaque cas vous devez créer une requête sur le contenu.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches de la visionneuse de modèle d'exploration de données et procédures](mining-model-viewer-tasks-and-how-tos.md)   
- [Extraction sur des modèles d'exploration de données](drillthrough-on-mining-models.md)   
+ [Tâches de la visionneuse de modèle d’exploration de données et procédures](mining-model-viewer-tasks-and-how-tos.md)   
+ [Extraction sur les modèles d’exploration de données](drillthrough-on-mining-models.md)   
  [Extraction sur des structures d'exploration de données](drillthrough-on-mining-structures.md)  
   
   

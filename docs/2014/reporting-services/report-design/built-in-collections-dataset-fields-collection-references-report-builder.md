@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 659fade9e10edc32c2444bf024fd475ea78a5d1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106452"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>Références à une collection de champs de dataset (Générateur de rapports et SSRS)
@@ -40,10 +40,10 @@ ms.locfileid: "66106452"
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>Détection de champs manquants pour les requêtes dynamiques au moment de l'exécution  
- Par défaut, les éléments de la collection Champs disposent de deux propriétés : Value et IsMissing. La propriété IsMissing indique si un champ défini pour un dataset au moment de la conception figure dans les champs récupérés au moment de l’exécution. Par exemple, votre requête peut appeler une procédure stockée dans laquelle le jeu de résultats varie en fonction d’un paramètre d’entrée, ou votre requête peut être `SELECT * FROM` *\<table>* où la définition de table a changé.  
+ Par défaut, les éléments de la collection Fields disposent de deux propriétés : Value et IsMissing. La propriété IsMissing indique si un champ défini pour un dataset au moment de la conception figure dans les champs récupérés au moment de l’exécution. Par exemple, votre requête peut appeler une procédure stockée dans laquelle le jeu de résultats varie en fonction d’un paramètre d’entrée, ou votre requête peut être `SELECT * FROM` *\<table>* où la définition de table a changé.  
   
 > [!NOTE]  
->  IsMissing détecte les modifications du schéma de dataset entre le moment de la conception et celui de l’exécution pour tout type de source de données. IsMissing ne peut pas être utilisée pour détecter des membres vides dans un cube multidimensionnel et n’est pas liée aux concepts de langage de requête MDX de `EMPTY` et `NON EMPTY`.  
+>  IsMissing détecte les modifications du schéma de dataset entre le moment de la conception et celui de l’exécution pour tout type de source de données. IsMissing ne peut pas être utilisé pour détecter des membres vides dans un cube multidimensionnel et n’est pas lié aux concepts de langage `EMPTY` de `NON EMPTY`requête MDX de et.  
   
  Vous pouvez tester la propriété IsMissing dans le code personnalisé pour déterminer si un champ est présent dans le jeu de résultats. Vous ne pouvez pas tester sa présence à l'aide d'une expression avec un appel de fonction [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], par exemple `IIF` ou `SWITCH`, car [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] évalue tous les paramètres dans l'appel à la fonction, ce qui provoque une erreur lorsque la référence au champ manquant est évaluée.  
   
