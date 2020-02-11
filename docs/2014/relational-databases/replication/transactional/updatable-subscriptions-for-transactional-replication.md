@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655495"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
@@ -55,8 +55,8 @@ ms.locfileid: "62655495"
   
  **Pour basculer d'un mode de mise à jour vers un autre**  
   
- Pour basculer d'un mode à l'autre, vous devez activer la publication et l'abonnement pour les deux modes de mise à jour puis basculer d'un mode à l'autre, le cas échéant. Pour plus d'informations, consultez  
-[Switch Between Update Modes for an Updatable Transactional Subscription](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
+ Pour basculer d'un mode à l'autre, vous devez activer la publication et l'abonnement pour les deux modes de mise à jour puis basculer d'un mode à l'autre, le cas échéant. Pour plus d'informations, consultez la rubrique  
+[Basculer entre les modes de mise à jour d'un abonnement transactionnel pouvant être mis à jour](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>Considérations sur l'utilisation des abonnements pouvant être mis à jour  
   
@@ -108,9 +108,11 @@ ms.locfileid: "62655495"
   
 -   Pour les colonnes de type de données `SQL_VARIANT` : quand des données sont insérées ou mises à jour sur l’abonné, elles sont mappées de la façon suivante par l’Agent de lecture de la file d’attente quand elles sont copiées de l’abonné vers la file d’attente :  
   
-    -   `BIGINT`, `DECIMAL`, `NUMERIC`, `MONEY` et `SMALLMONEY` sont mappés à `NUMERIC`.  
+    -   
+  `BIGINT`, `DECIMAL`, `NUMERIC`, `MONEY` et `SMALLMONEY` sont mappés à `NUMERIC`.  
   
-    -   `BINARY` et `VARBINARY` sont mappés aux données `VARBINARY`.  
+    -   
+  `BINARY` et `VARBINARY` sont mappés aux données `VARBINARY`.  
   
 ### <a name="conflict-detection-and-resolution"></a>Détection et résolution des conflits  
   
@@ -123,7 +125,7 @@ ms.locfileid: "62655495"
     -   Si des confits sont prévisibles : vous ne devez pas utiliser des contraintes de clés étrangères sur le serveur de publication ou l'abonné si vous optez pour la résolution de conflit où l'abonné prime ; vous ne devez pas utiliser des contraintes de clés étrangères sur l'abonné si vous utilisez la résolution de conflit où le serveur de publication prime.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Réplication transactionnelle d’égal à égal](peer-to-peer-transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)   
  [Réplication transactionnelle](transactional-replication.md)   
  [Publier des données et des objets de base de données](../publish/publish-data-and-database-objects.md)   
  [S'abonner à des publications](../subscribe-to-publications.md)  

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 024f079d28c5ce144282bf09fff675fd308a8173
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243141"
 ---
 # <a name="transact-sql-breakpoints"></a>Points d'arrêt Transact-SQL
@@ -31,15 +31,15 @@ ms.locfileid: "75243141"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Explique comment spécifier l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suite à laquelle vous souhaitez que le débogueur soit suspendu.|[Basculer un point d'arrêt](../spatial/point.md)|  
+|Explique comment spécifier l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suite à laquelle vous souhaitez que le débogueur soit suspendu.|[Basculer un point d’arrêt](../spatial/point.md)|  
 |Explique comment désactiver temporairement un point d'arrêt et le réactiver ultérieurement. Explique également comment supprimer un point d'arrêt.|[Activer, désactiver et supprimer des points d’arrêt](enable-disable-and-delete-breakpoints.md)|  
-|Explique comment spécifier une condition qui définit si le point d'arrêt entraîne un arrêt d'après l'évaluation d'une expression Transact-SQL spécifiée.|[Spécifier une condition de point d'arrêt](specify-a-breakpoint-condition.md)|  
-|Explique comment spécifier un nombre d'accès qui provoque uniquement l'arrêt d'un point d'arrêt lorsque l'instruction contenant le point d'arrêt a été exécutée un nombre spécifié de fois.|[Spécifier un nombre d'accès](specify-a-hit-count.md)|  
-|Explique comment spécifier un filtre qui provoque uniquement l'arrêt d'un point d'arrêt pour les processus ou les threads spécifiés.|[Spécifier un filtre de point d'arrêt](specify-a-breakpoint-filter.md)|  
-|Explique comment spécifier une action **Lorsqu’il est atteint** , c’est-à-dire une opération personnalisée qui est effectuée lors de l’exécution de l’instruction de point d’arrêt. Citons en exemple l'impression d'un message.|[Spécifier une action de point d'arrêt](specify-a-breakpoint-action.md)|  
-|Explique comment modifier l'emplacement d'un point d'arrêt.|[Modifier un emplacement de point d'arrêt](edit-a-breakpoint-location.md)|  
+|Explique comment spécifier une condition qui définit si le point d'arrêt entraîne un arrêt d'après l'évaluation d'une expression Transact-SQL spécifiée.|[Spécifier une condition de point d’arrêt](specify-a-breakpoint-condition.md)|  
+|Explique comment spécifier un nombre d'accès qui provoque uniquement l'arrêt d'un point d'arrêt lorsque l'instruction contenant le point d'arrêt a été exécutée un nombre spécifié de fois.|[Spécifier un nombre d’accès](specify-a-hit-count.md)|  
+|Explique comment spécifier un filtre qui provoque uniquement l'arrêt d'un point d'arrêt pour les processus ou les threads spécifiés.|[Pour spécifier un filtre de point d’arrêt](specify-a-breakpoint-filter.md)|  
+|Explique comment spécifier une action **Lorsqu’il est atteint** , c’est-à-dire une opération personnalisée qui est effectuée lors de l’exécution de l’instruction de point d’arrêt. Citons en exemple l'impression d'un message.|[Spécifier une action de point d’arrêt](specify-a-breakpoint-action.md)|  
+|Explique comment modifier l'emplacement d'un point d'arrêt.|[Modifier un emplacement de point d’arrêt](edit-a-breakpoint-location.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations sur le débogueur Transact-SQL](transact-sql-debugger-information.md)  
+ [Informations du débogueur Transact-SQL](transact-sql-debugger-information.md)  
   
   

@@ -23,13 +23,13 @@ ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 28628ee5dc8ff1bde7906dfea7fca60470720e11
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108223"
 ---
-# <a name="spdbvardecimalstorageformat-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
+# <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne l'état du format de stockage vardecimal actuel d'une base de données ou active une base de données pour le format de stockage vardecimal.  Depuis [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], les bases de données utilisateur sont toujours activées. L'activation des bases de données pour le format de stockage vardecimal est nécessaire uniquement dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
@@ -47,19 +47,20 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @dbname=] '*database_name*'  
- Nom de la base de données dont le format de stockage doit être modifié. *database_name* est **sysname**, sans valeur par défaut. Si le nom de la base de données est omis, l'état du format de stockage vardecimal de toutes les bases de données dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est retourné.  
+ [ @dbname= ] '*database_name*'  
+ Nom de la base de données dont le format de stockage doit être modifié. *database_name* est de **type sysname**, sans valeur par défaut. Si le nom de la base de données est omis, l'état du format de stockage vardecimal de toutes les bases de données dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est retourné.  
   
- [ @vardecimal_storage_format=] {'ON' |' DÉSACTIVER '}  
- Spécifie si le format de stockage vardecimal est activé. @vardecimal_storage_format peut prendre la valeur ON ou OFF (activé ou désactivé). Le paramètre est **varchar(3)** , sans valeur par défaut. Si un nom de base de données est indiqué mais que @vardecimal_storage_format est omis, le paramètre actuel de la base de données spécifiée est retourné. Cet argument n'a aucun effet sur [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou les versions ultérieures.  
+ [ @vardecimal_storage_format= ] {'SUR' | ' OFF'}  
+ Spécifie si le format de stockage vardecimal est activé. 
+  @vardecimal_storage_format peut prendre la valeur ON ou OFF (activé ou désactivé). Le paramètre est de type **varchar (3)**, sans valeur par défaut. Si un nom de base de données est indiqué mais que @vardecimal_storage_format est omis, le paramètre actuel de la base de données spécifiée est retourné. Cet argument n'a aucun effet sur [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou les versions ultérieures.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  Si le format de stockage de la base de données ne peut pas être modifié, sp_db_vardecimal_storage_format retourne une erreur. Si la base de données est déjà dans l'état spécifié, la procédure stockée est sans effet.  
   
- Si le @vardecimal_storage_format argument n’est pas fourni, retourne les colonnes nom de la base de données et l’état Vardecimal.  
+ Si l' @vardecimal_storage_format argument n’est pas fourni, retourne le nom de la base de données Columns et l’État vardecimal.  
   
 ## <a name="remarks"></a>Notes  
  sp_db_vardecimal_storage_format retourne l'état vardecimal mais ne peut pas le modifier.  
@@ -109,6 +110,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées du moteur de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

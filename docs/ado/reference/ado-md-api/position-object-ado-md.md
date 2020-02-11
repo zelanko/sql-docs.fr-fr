@@ -16,29 +16,29 @@ ms.assetid: 91eab784-3ce9-41d6-a840-9b0939ca0608
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 299df229489a9000c1dc2e97f7d7c489c490aed4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949250"
 ---
 # <a name="position-object-ado-md"></a>Position, objet (ADO MD)
-Représente un ensemble d’un ou plusieurs membres de différentes dimensions qui définit un point le long d’un axe.  
+Représente un ensemble d’un ou plusieurs membres de dimensions différentes qui définissent un point le long d’un axe.  
   
 ## <a name="remarks"></a>Notes  
- Avec les propriétés et les collections d’un **Position** objet vous pouvez procédez comme suit :  
+ Avec les propriétés et les collections d’un objet **position** , vous pouvez effectuer les opérations suivantes :  
   
--   Utilisez le **ordinale** propriété pour retourner la position ordinale de la **Position** le long de la [axe](../../../ado/reference/ado-md-api/axis-object-ado-md.md).  
+-   Utilisez la propriété **ordinal** pour retourner la position ordinale de la **position** le long de l' [axe](../../../ado/reference/ado-md-api/axis-object-ado-md.md).  
   
--   Utilisez le [membres](../../../ado/reference/ado-md-api/members-collection-ado-md.md) collection pour retourner les membres qui composent la position le long de la **axe**.  
+-   Utilisez la collection [members](../../../ado/reference/ado-md-api/members-collection-ado-md.md) pour retourner les membres qui composent la position le long de l' **axe**.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient la rubrique suivante.  
   
 -   [Propriétés, méthodes et événements](../../../ado/reference/ado-md-api/position-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemple avec Axis (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
- [Axis, objet (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
- [Cellule, objet (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [Members, Collection (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
+ [AXIS, exemple (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
+ [AXIS, objet (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
+ [Cell, objet (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
+ [Collection Members (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
  [Positions, collection (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)

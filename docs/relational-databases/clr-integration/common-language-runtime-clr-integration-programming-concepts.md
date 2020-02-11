@@ -17,10 +17,10 @@ ms.assetid: 951bf851-3e6e-4361-ae6a-2bcd5b837ebd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c314745122f0735b2b26ac2bb021f20f637b2a28
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75256192"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>Concepts de programmation pour l'intégration du CLR
@@ -58,7 +58,7 @@ ms.locfileid: "75256192"
  [Déploiement d'objets de base de données CLR](../../relational-databases/clr-integration/deploying-clr-database-objects.md)  
  Décrit le déploiement des assemblys sur les serveurs de production.  
   
- [Gestion des assemblys d’intégration du CLR](../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
+ [Gestion des assemblys d'intégration du CLR](../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
  Explique comment créer et supprimer des assemblys d'intégration du CLR.  
   
  [Surveillance et dépannage des objets de base de données managés](../../relational-databases/clr-integration/monitoring-and-troubleshooting-managed-database-objects.md)  

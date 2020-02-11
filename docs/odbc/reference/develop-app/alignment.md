@@ -13,24 +13,24 @@ ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b8b5a107f5ed8cd1c6c45317e60cc515a2601316
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077267"
 ---
-# <a name="alignment"></a>Alignement
-Les problèmes d’alignement dans une application ODBC sont généralement pas de différence entre elles se trouvent dans n’importe quel autre application. Autrement dit, la plupart des applications ODBC ont peu ou pas des problèmes avec l’alignement. Les pénalités pour aligner ne pas les adresses varient selon le matériel et le système d’exploitation et peuvent être aussi mineure que légèrement les performances ou comme majeures comme une erreur d’exécution irrécupérable. Par conséquent, les applications ODBC et les applications ODBC portables en particulier, prudence aligner correctement les données.  
+# <a name="alignment"></a>Alignment
+Les problèmes d’alignement dans une application ODBC ne sont généralement pas différents de ceux d’une autre application. Autrement dit, la plupart des applications ODBC n’ont que peu ou pas de problèmes d’alignement. Les pénalités pour ne pas aligner les adresses varient en fonction du matériel et du système d’exploitation et peuvent être aussi mineures qu’une légère baisse des performances ou d’une erreur d’exécution irrécupérable. Par conséquent, les applications ODBC et les applications ODBC portables en particulier doivent veiller à aligner correctement les données.  
   
- Un exemple de lorsque les applications ODBC rencontrent des problèmes d’alignement est lorsqu’ils allouer un grand bloc de mémoire et lier les différentes parties de cette mémoire pour les colonnes dans un jeu de résultats. Il s’agit probablement de se produire lorsqu’une application générique doit déterminer la forme d’un jeu de résultats au moment de l’exécution et allouer et lier de mémoire en conséquence.  
+ Un exemple de cas où des applications ODBC rencontrent des problèmes d’alignement consiste à allouer un grand bloc de mémoire et à lier différentes parties de cette mémoire aux colonnes d’un jeu de résultats. Cela peut se produire lorsqu’une application générique doit déterminer la forme d’un jeu de résultats au moment de l’exécution et allouer et lier la mémoire en conséquence.  
   
- Par exemple, une application exécute un **sélectionnez** instruction entré par l’utilisateur et extrait les résultats de cette instruction. Étant donné que la forme de ce jeu de résultats n’est pas connue lorsque le programme est écrit, l’application doit déterminer le type de chaque colonne une fois que le jeu de résultats est créé et lier de mémoire en conséquence. Pour ce faire, le plus simple consiste à allouer un grand bloc de mémoire et de lier des adresses différentes dans ce bloc à chaque colonne. Pour accéder aux données dans une colonne, l’application effectue un cast de la mémoire liée à cette colonne.  
+ Par exemple, supposons qu’une application exécute une instruction **Select** entrée par l’utilisateur et récupère les résultats de cette instruction. Étant donné que la forme de ce jeu de résultats n’est pas connue lors de l’écriture du programme, l’application doit déterminer le type de chaque colonne après la création du jeu de résultats et la liaison de la mémoire en conséquence. Le moyen le plus simple consiste à allouer un grand bloc de mémoire et à lier différentes adresses dans ce bloc à chaque colonne. Pour accéder aux données d’une colonne, l’application convertit la mémoire liée à cette colonne.  
   
- Le diagramme suivant montre un exemple de résultat défini et comment un bloc de mémoire peut être lié à l’aide du type de données C par défaut pour chaque type de données SQL. Chaque « X » représente un seul octet de mémoire. (Cet exemple montre uniquement les mémoires tampons de données qui sont liées aux colonnes. Pour cela, par souci de simplicité. Dans le code réel, les mémoires tampon de longueur / d’indicateur doivent également être alignées.)  
+ Le diagramme suivant montre un exemple de jeu de résultats et la façon dont un bloc de mémoire peut être lié à celui-ci à l’aide du type de données C par défaut pour chaque type de données SQL. Chaque « X » représente un seul octet de mémoire. (Cet exemple montre uniquement les mémoires tampons de données qui sont liées aux colonnes. Cette opération est effectuée pour des raisons de simplicité. Dans le code réel, les tampons de longueur/indicateur doivent également être alignés.  
   
- ![Liaison par type de données C par défaut pour le type de données SQL](../../../odbc/reference/develop-app/media/pr24.gif "pr24")  
+ ![Liaison par défaut du type de données C au type de données SQL](../../../odbc/reference/develop-app/media/pr24.gif "pr24")  
   
- En supposant que les adresses liées sont stockés dans le *adresse* array, l’application utilise les expressions suivantes d’accéder à la mémoire associée à chaque colonne :  
+ En supposant que les adresses liées sont stockées dans le tableau d' *adresses* , l’application utilise les expressions suivantes pour accéder à la mémoire liée à chaque colonne :  
   
 ```  
 (SQLCHAR *)       Address[0]  
@@ -38,12 +38,12 @@ Les problèmes d’alignement dans une application ODBC sont généralement pas 
 (SQLINTEGER *)    Address[2]  
 ```  
   
- Notez que les adresses lié à la deuxième et troisième colonnes démarrer sur octets impaire, et que l’adresse lié à la troisième colonne n’est pas divisible par quatre, qui est la taille d’un SDWORD. Sur certains ordinateurs, il s’agit pas d’un problème ; sur d’autres, elle entraîne une baisse des performances légères ; sur d’autres, cela entraînera une erreur d’exécution irrécupérable. Une meilleure solution consisterait à aligner chaque adresse liée sur son alignement naturel de limite. En supposant que la valeur est 1 pour un UCHAR, 2 pour un mot de passe et 4 pour un SDWORD, cela donnerait le résultat illustré dans l’illustration suivante, où un « X » représente un octet de mémoire qui est utilisée et un « O » représente un octet de mémoire qui n’est pas utilisé.  
+ Notez que les adresses liées aux deuxième et troisième colonnes commencent sur les octets impair et que l’adresse liée à la troisième colonne n’est pas divisible par quatre, ce qui correspond à la taille d’un SDWORD. Sur certains ordinateurs, cela ne pose pas de problème. sur d’autres, cela entraîne une légère baisse des performances ; sur d’autres encore, cela entraîne une erreur d’exécution irrécupérable. Une meilleure solution consisterait à aligner chaque adresse liée sur sa limite d’alignement naturelle. En supposant que cette valeur est 1 pour un UCHAR, 2 pour un épée et 4 pour un SDWORD, cela donne le résultat indiqué dans l’illustration suivante, où « X » représente un octet de mémoire utilisé et un « O » représente un octet de mémoire qui n’est pas utilisé.  
   
  ![Liaison par alignement naturel de limite](../../../odbc/reference/develop-app/media/pr25.gif "pr25")  
   
- Bien que cette solution n’utilise pas toutes de la mémoire de l’application, elle ne rencontre pas de problèmes d’alignement. Malheureusement, il prend une grande quantité de code pour implémenter cette solution, chaque colonne doit être aligné individuellement en fonction de son type. Une solution plus simple consiste à aligner toutes les colonnes de la taille de la plus grande limite d’alignement, qui est de 4 dans l’exemple illustré dans l’illustration suivante.  
+ Bien que cette solution n’utilise pas toute la mémoire de l’application, elle ne rencontre pas de problèmes d’alignement. Malheureusement, il faut un peu de code pour implémenter cette solution, car chaque colonne doit être alignée individuellement en fonction de son type. Une solution plus simple consiste à aligner toutes les colonnes sur la taille de la plus grande limite d’alignement, soit 4 dans l’exemple présenté dans l’illustration suivante.  
   
- ![Liaison par alignement plus grande limite](../../../odbc/reference/develop-app/media/pr26.gif "pr26")  
+ ![Liaison par alignement de la plus grande limite](../../../odbc/reference/develop-app/media/pr26.gif "pr26")  
   
- Bien que cette solution laisse trous plus volumineux, le code à son implémentation est relativement simple et rapide. Dans la plupart des cas, cela compense la pénalité payée dans la mémoire inutilisée. Pour obtenir un exemple qui utilise cette méthode, consultez [à l’aide de SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).
+ Bien que cette solution laisse des trous plus importants, le code permettant de l’implémenter est relativement simple et rapide. Dans la plupart des cas, cela décale la pénalité payée dans la mémoire inutilisée. Pour obtenir un exemple qui utilise cette méthode, consultez [utilisation de SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).

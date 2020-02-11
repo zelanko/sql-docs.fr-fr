@@ -1,5 +1,5 @@
 ---
-title: Data Set filtre or Model filtre Dialog Box | Microsoft Docs
+title: Boîte de dialogue filtre de jeu de données ou filtre de modèle | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 89ba538c3ac3dfd7a262e4ae17cb9ddd6cf7265c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082609"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>Boîte de dialogue Filtre de jeu de données ou Filtre de modèle
@@ -31,18 +31,18 @@ ms.locfileid: "66082609"
 > [!TIP]  
 >  Pour tester la précision sur un sous-ensemble des données d’apprentissage d’origine, vous pouvez ajouter la vue de source de données utilisée pour définir le jeu d’apprentissage en tant que données de test externes, puis ajouter des conditions dans la grille **Filtre de jeu de données**.  
   
- **Pour plus d'informations, consultez :** [Test et validation &#40;exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Pour plus d’informations :** [test et validation &#40;l’exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>Options  
- **Conditions**  
+ **Problèmes**  
  Affiche des noms de table, suivis de noms de colonne avec des conditions.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**et/ou**|Choisissez un opérateur pour joindre plusieurs conditions.|  
-|**Colonne de Structure d’exploration de données**|Cliquez pour sélectionner une source de données, puis cliquez sur des lignes consécutives dans la grille pour ajouter des colonnes de la source de données.<br /><br /> La première ligne de la grille spécifie la vue de source de données. Une fois que vous avez sélectionné une vue de source de données, la zone **Colonne de la structure d’exploration de données** affiche une icône de table et le champ **Valeur** affiche la combinaison de tous les critères que vous avez définis pour cette source de données.<br /><br /> Une fois que vous avez sélectionné une source de données, la zone **Colonne de la structure d’exploration de données** propose une liste déroulante de colonnes individuelles contenues dans la source de données.|  
+|**Et/ou**|Choisissez un opérateur pour joindre plusieurs conditions.|  
+|**Colonne de la structure d'exploration de données**|Cliquez pour sélectionner une source de données, puis cliquez sur des lignes consécutives dans la grille pour ajouter des colonnes de la source de données.<br /><br /> La première ligne de la grille spécifie la vue de source de données. Une fois que vous avez sélectionné une vue de source de données, la zone **Colonne de la structure d’exploration de données** affiche une icône de table et le champ **Valeur** affiche la combinaison de tous les critères que vous avez définis pour cette source de données.<br /><br /> Une fois que vous avez sélectionné une source de données, la zone **Colonne de la structure d’exploration de données** propose une liste déroulante de colonnes individuelles contenues dans la source de données.|  
 |**Opérateur**|Sélectionnez un opérateur dans la liste.|  
-|**Valeur**|Pour les tables, le champ **Valeur** affiche la combinaison de tous les filtres appliqués à la source de données. Vous pouvez également cliquer sur la build **(...)**  situé à droite de la zone de texte pour ouvrir le **filtre** boîte de dialogue et générer une condition.|  
+|**Valeur**|Pour les tables, le champ **Valeur** affiche la combinaison de tous les filtres appliqués à la source de données. Vous pouvez également cliquer sur le bouton Générer **(...)** à droite de la zone de texte pour ouvrir la boîte de dialogue **filtre** et générer une condition.|  
   
  **Expression**  
  Affiche l'ensemble de critères que vous avez définis à l'aide de la grille.  
@@ -51,13 +51,13 @@ ms.locfileid: "66082609"
  Modifie le mode de modification de filtre afin que vous puissiez directement taper une expression de filtre dans la zone de texte **Expression** .  
   
 > [!NOTE]  
->  Une fois que vous avez apporté des modifications manuelles à l’expression de filtre, vous ne pouvez pas revenir au mode de modification de grille, même après avoir enregistré l’expression dans la zone **Expression de filtre** sous l’onglet **Sélection d’entrée** . Si vous souhaitez générer une expression en utilisant la grille, vous devez supprimer l'expression de filtre existante et reprendre depuis le début.  
+>  Une fois que vous avez apporté des modifications manuelles à l’expression de filtre, vous ne pouvez pas revenir au mode de modification de grille, même après avoir enregistré l’expression dans la zone **expression de filtre** sous l’onglet **sélection d’entrée** . Si vous souhaitez générer une expression à l’aide de la grille, vous devez supprimer l’expression de filtre existante et recommencer.  
   
- **Rétablir les modifications**  
+ **Rétablir les modifications apportées à la requête**  
  Rétablit l'état précédent de la grille et annule toutes les modifications apportées à l'expression de filtre.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Test et des tâches de Validation et des procédures &#40;exploration de données&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Concepteur graphique d’analyse de précision d’exploration de données &#40;exploration de données&#41;](mining-accuracy-chart-designer-data-mining.md)  
+ [Tâches de test et de validation et &#40;d’exploration de données&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Concepteur graphique d’analyse de précision de l’exploration de données &#40;&#41;](mining-accuracy-chart-designer-data-mining.md)  
   
   

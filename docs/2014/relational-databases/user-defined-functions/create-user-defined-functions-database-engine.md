@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 37a6846d8c185549bd6c54f32cb5ab02eb564d1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211710"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Créer des fonctions définies par l'utilisateur (moteur de base de données)
@@ -34,11 +34,11 @@ ms.locfileid: "68211710"
   
      [Sécurité](#Security)  
   
--   **Pour créer une fonction définie par l’utilisateur :**  
+-   **Pour créer une fonction définie par l'utilisateur :**  
   
-     [Créez une fonction scalaire](#Scalar)  
+     [Créer une fonction scalaire](#Scalar)  
   
-     [Créer une Table-valued Function](#TVF)  
+     [Créer une fonction table](#TVF)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68211710"
   
 -   Les fonctions définies par l'utilisateur ne peuvent pas renvoyer plusieurs jeux de résultats. Utilisez une procédure stockée si vous devez renvoyer plusieurs jeux de résultats.  
   
--   La gestion des erreurs est restreinte dans une fonction définie par l'utilisateur. Une fonction UDF ne prend pas en charge TRY... CATCH, @ERROR ou RAISERROR.  
+-   La gestion des erreurs est restreinte dans une fonction définie par l'utilisateur. Une fonction UDF ne prend pas en charge les tentatives... CATCH @ERROR ou RAISERROR.  
   
 -   Les fonctions définies par l'utilisateur ne peuvent pas appeler une procédure stockée, mais elles peuvent appeler une procédure stockée étendue.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "68211710"
 ####  <a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation CREATE FUNCTION dans la base de données et l'autorisation ALTER sur le schéma dans lequel la fonction est en cours de création. Si la fonction spécifie un type défini par l'utilisateur, elle requiert l'autorisation EXECUTE sur le type.  
   
-##  <a name="Scalar"></a> Fonctions scalaires  
+##  <a name="Scalar"></a>Fonctions scalaires  
  L'exemple suivant illustre la création d'une fonction scalaire à instructions multiples dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . À partir d'une valeur d'entrée unique ( `ProductID`), la fonction retourne une valeur de donnée unique, en l'occurrence, la quantité totale du produit spécifié en stock.  
   
 ```  
@@ -115,7 +115,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
   
 ```  
   
-##  <a name="TVF"></a> Fonctions table  
+##  <a name="TVF"></a>Fonctions table  
  L'exemple suivant crée une fonction table en ligne dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . À partir d'un paramètre d'entrée unique (storeID), la fonction retourne les colonnes `ProductID`, `Name`, ainsi que le total cumulé des ventes ( `YTD Total` ) pour chaque produit vendu au magasin du client.  
   
 ```  

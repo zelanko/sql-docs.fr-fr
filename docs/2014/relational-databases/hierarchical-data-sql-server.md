@@ -18,14 +18,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63065701"
 ---
 # <a name="hierarchical-data-sql-server"></a>Données hiérarchiques (SQL Server)
-  Intégrés `hierarchyid` type de données rend plus facile de stocker et interroger des données hiérarchiques. `hierarchyid` est optimisé pour représenter les arborescences, qui sont du type de données hiérarchiques le plus courant.  
+  Le type de `hierarchyid` données intégré facilite le stockage et l’interrogation des données hiérarchiques. `hierarchyid`est optimisé pour représenter les arborescences, qui sont le type le plus courant de données hiérarchiques.  
   
  Les données hiérarchiques sont définies comme un jeu d'éléments de données liés entre eux par des relations hiérarchiques. Des relations hiérarchiques existent dans lesquelles un élément de données est le parent d'un autre élément. Voici quelques exemples de données hiérarchiques communément stockées dans les bases de données :  
   
@@ -50,7 +50,7 @@ ms.locfileid: "63065701"
   
 -   La comparaison est effectuée dans l'ordre à profondeur prioritaire  
   
-     Étant donné deux `hierarchyid` valeurs **un** et **b**, **un < b** signifie un se situe avant b dans un parcours à profondeur prioritaire de l’arborescence. Les index sur les types de données `hierarchyid` sont dans l'ordre à profondeur prioritaire, et les nœuds proches les uns des autres dans un parcours à profondeur prioritaire sont stockés les uns à côté des autres. Par exemple, les enfants d'un enregistrement sont stockés à côté de cet enregistrement.  
+     Avec deux `hierarchyid` valeurs **a** et **b**, **un<b** signifie que a est avant b dans un parcours à profondeur prioritaire de l’arborescence. Les index sur les types de données `hierarchyid` sont dans l'ordre à profondeur prioritaire, et les nœuds proches les uns des autres dans un parcours à profondeur prioritaire sont stockés les uns à côté des autres. Par exemple, les enfants d'un enregistrement sont stockés à côté de cet enregistrement.  
   
 -   Prise en charge des insertions et suppressions arbitraires  
   
@@ -74,7 +74,8 @@ ms.locfileid: "63065701"
   
 -   XML  
   
- `hierarchyid` est généralement supérieur à ces alternatives. Toutefois, il existe certaines situations spécifiques, détaillées ci-dessous, pour lesquelles ces alternatives peuvent s'avérer supérieures.  
+ 
+  `hierarchyid` est généralement supérieur à ces alternatives. Toutefois, il existe certaines situations spécifiques, détaillées ci-dessous, pour lesquelles ces alternatives peuvent s'avérer supérieures.  
   
 ### <a name="parentchild"></a>Parent/enfant  
  Lors de l'utilisation de l'approche de parent/enfant, chaque ligne contient une référence au parent. La table suivante définit une table classique qui est utilisée pour contenir les lignes parent et enfant dans une relation parent/enfant :  
@@ -108,7 +109,7 @@ GO
   
 -   Les requêtes portent rarement sur plusieurs sections de la hiérarchie. En d'autres termes, les requêtes portent habituellement sur un seul point de la hiérarchie. Dans ces cas, la co-location n'est pas importante. Par exemple, parent/enfant est supérieur lorsque la table d'organisation est utilisée uniquement pour le traitement des salaires d'employés individuels.  
   
--   Les sous-arborescences qui ne sont pas au niveau du nœud terminal sont fréquemment déplacées et les performances sont importantes. Dans une représentation parent/enfant, la modification de l'emplacement d'une ligne dans une hiérarchie affecte une seule ligne. Modification de l’emplacement d’une ligne dans un `hierarchyid` utilisation affecte *n* lignes, où *n* est le nombre de nœuds dans la sous-arborescence déplacée.  
+-   Les sous-arborescences qui ne sont pas au niveau du nœud terminal sont fréquemment déplacées et les performances sont importantes. Dans une représentation parent/enfant, la modification de l'emplacement d'une ligne dans une hiérarchie affecte une seule ligne. La modification de l’emplacement d’une ligne `hierarchyid` dans une utilisation affecte *n* lignes, où *n* est le nombre de nœuds dans la sous-arborescence qui est déplacée.  
   
      Si les sous-arborescences qui ne sont pas au niveau du nœud terminal sont fréquemment déplacées et que les performances sont importantes, mais que la plupart des déplacements se font à un niveau bien défini de la hiérarchie, envisagez le fractionnement des niveaux supérieurs et inférieurs en deux hiérarchies. Tous les déplacements se font ainsi dans les niveaux du nœud terminal de la hiérarchie supérieure. Prenons par exemple une hiérarchie de sites Web hébergés par un service. Les sites contiennent de nombreuses pages organisées de façon hiérarchique. Les sites hébergés peuvent être déplacés vers d'autres emplacements dans la hiérarchie de site, mais les pages subordonnées sont rarement réorganisées. Cela peut être représenté de la manière suivante :  
   
@@ -122,7 +123,7 @@ GO
   
   
 ### <a name="xml"></a>XML  
- Un document XML est une arborescence. Par conséquent, une instance de type de données XML unique peut représenter la totalité d'une hiérarchie. Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] lorsqu’un index XML est créé, `hierarchyid` valeurs sont utilisées en interne pour représenter la position dans la hiérarchie.  
+ Un document XML est une arborescence. Par conséquent, une instance de type de données XML unique peut représenter la totalité d'une hiérarchie. Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , lorsqu’un index XML est créé `hierarchyid` , les valeurs sont utilisées en interne pour représenter la position dans la hiérarchie.  
   
  Il peut être préférable d'utiliser le type de données XML lorsque les conditions suivantes sont réunies :  
   
@@ -157,9 +158,9 @@ GO
   
      Un index à largeur prioritaire stocke les lignes en regroupant les niveaux de la hiérarchie. Par exemple, les enregistrements des employés ayant le même supérieur direct sont stockés à proximité les uns des autres.  
   
-     Dans un index à largeur prioritaire, tous les enfants directs d'un nœud sont colocalisés. Les index à largeur prioritaire sont par conséquent efficaces pour répondre aux requêtes sur les enfants immédiats, telle que « Rechercher tous les employés dont ce responsable est le supérieur direct ».  
+     Dans un index à largeur prioritaire, tous les enfants directs d'un nœud sont colocalisés. Les index à largeur prioritaire sont par conséquent efficaces pour répondre aux requêtes sur les enfants immédiats, telle que « Rechercher tous les employés dont ce responsable est le supérieur direct ».  
   
- Le choix entre profondeur prioritaire, largeur prioritaire ou les deux, et la sélection de l'un d'eux comme clé de clustering (si nécessaire) dépend de l'importance relative des types de requêtes ci-dessus et de l'importance relative de SELECT par rapport aux opérations DML. Pour obtenir un exemple détaillé de stratégies d’indexation, consultez [Tutoriel : Utilisation du type de données hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ Le choix entre profondeur prioritaire, largeur prioritaire ou les deux, et la sélection de l'un d'eux comme clé de clustering (si nécessaire) dépend de l'importance relative des types de requêtes ci-dessus et de l'importance relative de SELECT par rapport aux opérations DML. Pour un exemple détaillé de stratégies d'indexation, consultez [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ### <a name="creating-indexes"></a>Création des index  
@@ -265,7 +266,7 @@ VALUES ('/', 'Earth', 'Planet');
 ##  <a name="tasks"></a> Tâches associées  
   
 ###  <a name="migrating"></a> Migration de parent/enfant vers hierarchyid  
- La plupart des arborescences sont représentées à l'aide de parent/enfant. La méthode la plus simple pour effectuer une migration d'une structure parent/enfant vers une table à l'aide de `hierarchyid` consiste à utiliser une colonne ou une table temporaire pour conserver une trace du nombre de nœuds à chaque niveau de la hiérarchie. Pour obtenir un exemple de migration de table parent/enfant, consultez la leçon 1 de [Tutoriel : Utilisation du type de données hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ La plupart des arborescences sont représentées à l'aide de parent/enfant. La méthode la plus simple pour effectuer une migration d'une structure parent/enfant vers une table à l'aide de `hierarchyid` consiste à utiliser une colonne ou une table temporaire pour conserver une trace du nombre de nœuds à chaque niveau de la hiérarchie. Pour voir un exemple de migration de table parent/enfant, consultez la leçon 1 de [Didacticiel : utilisation du type de données hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> Gestion d'une arborescence à l'aide de hierarchyid  
@@ -319,7 +320,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>Exemple utilisant une transaction sérialisable  
- Les limites du type de données **Org_BreadthFirst** garantit que la détermination de **@last_child** utilise une recherche de plage. En plus des autres cas d’erreur qu’une application peut être amenée à vérifier, une violation de clé en double après l’insertion indique une tentative d’ajouter plusieurs employés ayant le même ID. Par conséquent, **@last_child** doit être recalculé. Le code suivant utilise une transaction sérialisable et un index à largeur prioritaire pour calculer la nouvelle valeur de nœud :  
+ Les limites du type de données **Org_BreadthFirst** garantit que la détermination de **@last_child** utilise une recherche de plage. En plus des autres cas d’erreur qu’une application peut souhaiter vérifier, une violation de clé dupliquée après l’insertion indique une tentative d’ajout de plusieurs employés ayant le même **@last_child** ID et doit donc être recalculée. Le code suivant utilise une transaction sérialisable et un index à largeur prioritaire pour calculer la nouvelle valeur de nœud :  
   
 ```  
 CREATE TABLE Org_T2  
@@ -497,7 +498,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="BKMK_MovingSubtrees"></a> Déplacement de sous-arborescences  
- Une autre opération courante concerne le déplacement de sous-arborescences. La procédure suivante prend la sous-arborescence de **@oldMgr** pour en faire une sous-arborescence de **@oldMgr** (en y incluant **@newMgr** .  
+ Une autre opération courante concerne le déplacement de sous-arborescences. La procédure ci-dessous prend la sous **@oldMgr** -arborescence de et la **@oldMgr**fait (y compris) **@newMgr**une sous-arborescence de.  
   
 ```  
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  
@@ -525,7 +526,7 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence de méthodes de type de données hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
- [Tutoriel : Utilisation du type de données hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   
   

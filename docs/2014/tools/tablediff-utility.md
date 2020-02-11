@@ -1,5 +1,5 @@
 ---
-title: tablediff Utility | Microsoft Docs
+title: Utilitaire tablediff | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68185975"
 ---
 # <a name="tablediff-utility"></a>tablediff (utilitaire)
   L’utilitaire **tablediff** sert à comparer les données dans deux tables et à identifier une non-convergence. Il est particulièrement utile pour résoudre des problèmes de non-convergence dans une topologie de réplication. Cet utilitaire peut être employé à partir de l'invite de commandes ou dans un fichier de commandes pour effectuer les tâches suivantes :  
   
--   Une comparaison ligne par ligne entre une table source dans une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agissant comme serveur de publication de réplication et la table de destination dans une ou plusieurs instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agissant comme abonnés de réplication.  
+-   Une comparaison ligne par ligne entre une table source dans une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agissant comme serveur de publication de réplication et la table de destination sur une [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou plusieurs instances de agissant comme abonnés de réplication.  
   
 -   Comparaison rapide se limitant à la comparaison du nombre de lignes et du schéma.  
   
@@ -76,8 +76,8 @@ ms.locfileid: "68185975"
  [ **-?** ]  
  Retour de la liste des paramètres pris en charge.  
   
- **-sourceserver** *source_server_name*[ **\\** _instance_name_]  
- Nom du serveur source. Spécifiez _source\_server\_nom_ pour l’instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Spécifiez _source\_server\_nom_ **\\** _instance\_nom_ pour une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-SourceServer** *source_server_name*[**\\**_instance_name_]  
+ Nom du serveur source. Spécifiez le _nom du serveur\_\_source_ pour l' [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]instance par défaut de. Spécifiez le nom de l'_instance\__ du nom**\\**du _serveur\_\_source_pour une instance nommée de. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
  **-sourcedatabase** *source_database*  
  Nom de la base de données source.  
@@ -100,8 +100,8 @@ ms.locfileid: "68185975"
  **-sourcelocked**  
  Durant la comparaison, la table source est verrouillée à l'aide des indicateurs de table TABLOCK et HOLDLOCK.  
   
- **-destinationserver** *destination_server_name*[ **\\** _instance\_nom_]  
- Nom du serveur de destination. Spécifiez *destination_server_name* pour l’instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Spécifiez _destination\_server\_nom_ **\\** _instance\_nom_ pour une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-DestinationServer** *destination_server_name*[**\\**_nom\__ de l’instance]  
+ Nom du serveur de destination. Spécifiez *destination_server_name* pour l’instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Spécifiez le nom de l'_instance\__ du nom**\\**du _serveur\_\_de destination_pour une instance nommée de. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
  **-destinationdatabase** *subscription_database*  
  Nom de la base de données de destination.  
@@ -112,7 +112,7 @@ ms.locfileid: "68185975"
  **-destinationschema** *destination_schema_name*  
  Le propriétaire du schéma de la table de destination. Par défaut, le propriétaire de la table est supposé être dbo.  
   
- **-destinationpassword** *destination_password*  
+ **-destinationpassword cas** *destination_password*  
  Mot de passe de la connexion utilisée pour établir une connexion au serveur de destination avec l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
@@ -125,7 +125,7 @@ ms.locfileid: "68185975"
  Durant la comparaison, la table de destination est verrouillée à l'aide des indicateurs de table TABLOCK et HOLDLOCK.  
   
  **-b** *large_object_bytes*  
- Nombre d'octets à comparer pour des colonnes de types de données d'objet volumineuses, notamment : `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)` et `varbinary(max)`. *large_object_bytes* a comme valeur par défaut la taille de la colonne. Toutes les données au-dessus de *large_object_bytes* ne sont pas comparées.  
+ Nombre d'octets à comparer pour des colonnes de types de données d'objet volumineuses, notamment : `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)` et `varbinary(max)`. *large_object_bytes* a pour valeur par défaut la taille de la colonne. Toutes les données au-dessus de *large_object_bytes* ne sont pas comparées.  
   
  **-bf**  *number_of_statements*  
  Nombre d’instructions [!INCLUDE[tsql](../includes/tsql-md.md)] à écrire dans le fichier de script [!INCLUDE[tsql](../includes/tsql-md.md)] actuel lorsque l’option **-f** est utilisée. Quand le nombre d’instructions [!INCLUDE[tsql](../includes/tsql-md.md)] dépasse *number_of_statements*, un fichier de script [!INCLUDE[tsql](../includes/tsql-md.md)] est créé.  
@@ -133,7 +133,7 @@ ms.locfileid: "68185975"
  **-c**  
  Compare les différences au niveau des colonnes.  
   
- **-dt**  
+ **-DT**  
  Supprime la table de résultats spécifiée par *table_name*si la table existe déjà.  
   
  **-et** *table_name*  
@@ -162,14 +162,14 @@ ms.locfileid: "68185975"
   
 ## <a name="return-value"></a>Valeur de retour  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**0**|Opération réussie|  
+|**0**|Succès|  
 |**1**|Erreur critique|  
 |**2**|Tables différentes|  
   
 ## <a name="remarks"></a>Notes  
- L’utilitaire **tablediff** ne peut pas être utilisé avec des serveurs non-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+ L’utilitaire **tablediff** ne peut pas être utilisé avec[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] des serveurs non-.  
   
  Les tables comprenant des colonnes de types de données `sql_variant` ne sont pas prises en charge.  
   
@@ -177,8 +177,8 @@ ms.locfileid: "68185975"
   
 |Type de données sources|Type de données de destination|  
 |----------------------|---------------------------|  
-|`tinyint`|`smallint`, `int` ou `bigint`|  
-|`smallint`|`int` ou `bigint`|  
+|`tinyint`|`smallint`, `int`ou`bigint`|  
+|`smallint`|`int`ni`bigint`|  
 |`int`|`bigint`|  
 |`timestamp`|`varbinary`|  
 |`varchar(max)`|`text`|  
@@ -202,7 +202,7 @@ ms.locfileid: "68185975"
   
 -   `timestamp`  
   
--   **xml**  
+-   **langage**  
   
 -   `text`  
   
@@ -220,6 +220,6 @@ ms.locfileid: "68185975"
  Pour utiliser l’option **-o** ou **-f** , vous devez disposer d’autorisations d’écriture sur l’emplacement du répertoire de fichiers spécifié.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Comparer des tables répliquées pour identifier les différences &#40;programmation de réplication&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
+ [Comparer les tables répliquées pour les différences &#40;la programmation de la réplication&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   

@@ -18,18 +18,18 @@ ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fcc4a42307ccb11923460bb9c01c5cf7bdd8f8df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68133678"
 ---
-# <a name="sphelpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
+# <a name="sp_helpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fournit des informations sur les groupes Windows ayant un compte dans la base de données active.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,9 +39,9 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @ntname = ] 'name'` Est le nom du groupe Windows. *nom* est **sysname**, avec NULL comme valeur par défaut. *nom* doit être un groupe Windows valid ayant accès à la base de données actuelle. Si *nom* n’est pas spécifié, tous les groupes Windows ayant accès à la base de données active sont inclus dans la sortie.  
+`[ @ntname = ] 'name'`Nom du groupe Windows. *Name* est de **type sysname**, avec NULL comme valeur par défaut. le *nom* doit être un groupe Windows valide ayant accès à la base de données actuelle. Si le *nom* n’est pas spécifié, tous les groupes Windows ayant accès à la base de données active sont inclus dans la sortie.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -54,7 +54,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 |**HasDbAccess**|**int**|1 = le groupe Windows a une autorisation d'accès à la base de données.|  
   
 ## <a name="remarks"></a>Notes  
- Pour afficher la liste de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rôles dans la base de données actuelle, utilisez **sp_helprole**.  
+ Pour afficher la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] liste des rôles dans la base de données active, utilisez **sp_helprole**.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  

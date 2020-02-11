@@ -20,10 +20,10 @@ ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: d76cc006e2f8638de9b6d3c21660806239022ec0
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73657376"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>Utilisation du fournisseur WMI pour la gestion de la configuration
@@ -32,7 +32,7 @@ ms.locfileid: "73657376"
 
 Cet article fournit des conseils sur la façon de programmer avec le fournisseur WMI pour la gestion de l’ordinateur.
 
-## <a name="binding"></a>Binding  
+## <a name="binding"></a>Liaison  
  Le fournisseur WMI pour la gestion de la configuration est un modèle objet COM qui prend en charge les liaisons anticipées et tardives. Avec la liaison tardive, vous pouvez utiliser des langages de script, tels que VBScript, pour manipuler par programme les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les paramètres réseau et les alias.  
   
 ## <a name="specifying-a-connection-string"></a>Spécification d'une chaîne de connexion
@@ -45,7 +45,7 @@ L’espace de noms est par défaut au format suivant. Dans le format, `VV` est l
 \\.\root\Microsoft\SqlServer\ComputerManagementVV
 ```
 
-Lorsque vous vous connectez à l’aide de PowerShell, le `\\.\` de début doit être supprimé. Par exemple, le code PowerShell suivant répertorie toutes les classes WMI pour une SQL Server 2016, qui est la version majeure de la version 13.
+Lorsque vous vous connectez à l’aide de PowerShell `\\.\` , le début doit être supprimé. Par exemple, le code PowerShell suivant répertorie toutes les classes WMI pour une SQL Server 2016, qui est la version majeure de la version 13.
 
 ```powershell
 Get-WmiObject -Namespace 'root\Microsoft\SqlServer\ComputerManagement13' -List
@@ -69,7 +69,7 @@ Vous pouvez utiliser le code PowerShell suivant pour interroger tous les espaces
 gwmi -ns 'root\Microsoft\SqlServer' __NAMESPACE | ? {$_.name -match 'ComputerManagement' } | select name
 ```
 
- **Remarque :** Si vous vous connectez par le biais du pare-feu Windows, vous devez vous assurer que vos ordinateurs sont correctement configurés. Consultez l’article « connexion via le pare-feu Windows » dans la documentation Windows Management Instrumentation sur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [site Web](https://go.microsoft.com/fwlink/?linkid=15426)MSDN.  
+ **Remarque :** Si vous vous connectez par le biais du pare-feu Windows, vous devez vous assurer que vos ordinateurs sont correctement configurés. Consultez l’article « connexion via le pare-feu Windows » dans la [!INCLUDE[msCoName](../../includes/msconame-md.md)] documentation Windows Management Instrumentation sur le [site Web](https://go.microsoft.com/fwlink/?linkid=15426)MSDN.  
   
 ## <a name="permissions-and-server-authentication"></a>Autorisations et authentification serveur  
  Pour accéder au fournisseur WMI pour la gestion de la configuration, le script de gestion WMI client doit s'exécuter dans le contexte d'un administrateur sur l'ordinateur cible. Vous devez être membre du groupe Administrateurs Windows local sur l'ordinateur à gérer.  

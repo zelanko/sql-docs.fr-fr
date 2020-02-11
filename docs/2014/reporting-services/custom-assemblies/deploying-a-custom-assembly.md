@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: abaa60d696975616631aea210c32bfcea63f6767
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63264729"
 ---
 # <a name="deploying-a-custom-assembly"></a>Déploiement d'un assembly personnalisé
-  Pour déployer un assembly personnalisé dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], placez-le dans les dossiers d’application du Concepteur de rapports et du serveur de rapports. L'autorisation `Execution` dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est accordée par défaut aux assemblys personnalisés. Pour accorder des privilèges d’assemblys personnalisés supérieurs à l’autorisation Execute, vous devez modifier le fichier de configuration rssrvpolicy.config pour le serveur de rapports et le fichier de configuration rspreviewpolicy.config pour la fenêtre d’aperçu du Concepteur de rapports. Une autre solution consiste à installer votre assembly personnalisé dans le Global Assembly Cache (GAC).  
+  Pour déployer un assembly personnalisé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]dans, placez-le dans les dossiers d’application des concepteur de rapports et du serveur de rapports. L'autorisation `Execution` dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est accordée par défaut aux assemblys personnalisés. Pour accorder des privilèges d’assemblys personnalisés supérieurs à l’autorisation Execute, vous devez modifier le fichier de configuration rssrvpolicy.config pour le serveur de rapports et le fichier de configuration rspreviewpolicy.config pour la fenêtre d’aperçu du Concepteur de rapports. Une autre solution consiste à installer votre assembly personnalisé dans le Global Assembly Cache (GAC).  
   
 > [!NOTE]  
 >  Il existe deux modes d'aperçu pour le Générateur de rapports : l'onglet Aperçu et la fenêtre d'aperçu contextuelle, qui s'affiche lorsque votre projet de rapport démarre en mode `DebugLocal`. L'onglet Aperçu exécute toutes les expressions de rapport à l'aide de l'autorisation `FullTrust` définie et n'applique pas de paramètres de stratégie de sécurité. La fenêtre d'aperçu contextuelle a pour but de simuler les fonctionnalités du serveur de rapports ; par conséquent, elle dispose d'un fichier de configuration de stratégie qu'un administrateur ou vous-même devez modifier pour utiliser des assemblys dans le Générateur de rapports. Cet aperçu contextuel verrouille également l'assembly personnalisé. Par conséquent, vous devez fermer la fenêtre d'aperçu afin de modifier ou mettre à jour le code de votre assembly personnalisé.  
@@ -62,7 +62,7 @@ ms.locfileid: "63264729"
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation d'assemblys personnalisés avec des rapports](using-custom-assemblies-with-reports.md)   
- [Utilisation d’assemblys et du Global Assembly Cache](https://go.microsoft.com/fwlink/?LinkId=63912)  
+ [Utilisation d’assemblys personnalisés avec des rapports](using-custom-assemblies-with-reports.md)   
+ [Utilisation d’assemblys et du global assembly cache](https://go.microsoft.com/fwlink/?LinkId=63912)  
   
   

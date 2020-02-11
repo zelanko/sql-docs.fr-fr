@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4f1b4823db4ae961024ac2a786c948d8349f31be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919632"
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>Possibilité de valeur Null et comparaisons logiques de trois valeurs
@@ -36,15 +36,15 @@ ms.locfileid: "62919632"
  L'espace de noms `System.Data.SqlTypes` introduit un type `SqlBoolean` pour représenter cette logique à 3 valeurs. Les comparaisons entre des `SqlTypes` retournent un type de valeur `SqlBoolean`. La valeur UNKNOWN est représentée par la valeur Null du type `SqlBoolean`. Les propriétés `IsTrue`, `IsFalse` et `IsNull` sont fournies afin de vérifier la valeur d'un type `SqlBoolean`.  
   
 ## <a name="operations-functions-and-null-values"></a>Opérations, fonctions et valeurs Null  
- Tous les opérateurs arithmétiques (+, -, \*, /, %), opérateurs au niveau du bit (~, &, et |), et la plupart des fonctions retournent NULL si un des opérandes ou arguments de `SqlTypes` ont la valeur NULL. La propriété `IsNull` retourne toujours une valeur true ou false.  
+ Tous les opérateurs arithmétiques (+, \*-,,/,%), les opérateurs de bits (~, & et |) et la plupart des fonctions retournent Null si l’un `SqlTypes` des opérandes ou arguments de est null. La propriété `IsNull` retourne toujours une valeur true ou false.  
   
-## <a name="precision"></a>Précision  
+## <a name="precision"></a>Precision  
  Les types de données décimaux dans le CLR [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ont des valeurs maximales différentes de celles des types de données numériques et décimaux dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. De plus, dans le CLR [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], les types de données décimaux supposent la précision maximale. Dans le CLR pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en revanche, `SqlDecimal` fournit les mêmes échelle et précision maximale, ainsi que la même sémantique que le type de données décimal dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="overflow-detection"></a>Détection de dépassement de capacité  
  Dans le CLR [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], l'addition de deux très grands nombres peut ne pas lever d'exception. Au lieu de cela, si aucun opérateur de contrôle n'a été utilisé, le résultat retourné peut être « enveloppé » en tant qu'entier négatif. Dans `System.Data.SqlTypes`, des exceptions sont levées pour toutes les erreurs de dépassement de capacité et de dépassement de précision et pour les erreurs de division par zéro.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données SQL Server dans .NET Framework](sql-server-data-types-in-the-net-framework.md)  
+ [Types de données SQL Server dans le .NET Framework](sql-server-data-types-in-the-net-framework.md)  
   
   

@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be20c79c4c44d65b4d6b1177d06cea5ef66c164b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242056"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>Didacticiels pour SQL Server 2014
@@ -43,10 +43,10 @@ ms.locfileid: "75242056"
   
 |Technology|Description|  
 |----------------|-----------------|  
-|[Didacticiels de Analysis Services &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Apprenez à développer et à déployer des modèles tabulaires ou multidimensionnels [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Apprenez également à utiliser des outils tels que PowerPivot pour analyser les données dans les modèles.|  
-|[Didacticiels de Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Découvrez comment créer des rapports de base et des abonnements.|  
-|[Didacticiels de Integration Services](../integration-services/integration-services-tutorials.md)|Découvrez comment créer et déployer des packages [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
-|[Didacticiels de Moteur de base de données](../relational-databases/database-engine-tutorials.md)|Apprenez à vous connecter à une instance du moteur de base de données, puis à créer et à exécuter des instructions Transact-SQL.|  
-|[Didacticiels de réplication](../relational-databases/replication/replication-tutorials.md)|Apprenez comment installer et exécuter les topologies de réplication à l'aide de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
-|[Didacticiels sur la gestion des informations d’entreprise](../../2014/tutorials/enterprise-information-management-tutorials.md)|Apprenez comment gérer les informations dans une entreprise à l'aide des technologies Microsoft EIM.|  
+|[Didacticiels pour Analysis Services &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Apprenez à développer et à déployer des modèles tabulaires ou multidimensionnels [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Apprenez également à utiliser des outils tels que PowerPivot pour analyser les données dans les modèles.|  
+|[Didacticiels sur Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Découvrez comment créer des rapports de base et des abonnements.|  
+|[Didacticiels sur Integration Services](../integration-services/integration-services-tutorials.md)|Découvrez comment créer et déployer des packages [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
+|[Didacticiels sur le moteur de base de données](../relational-databases/database-engine-tutorials.md)|Apprenez à vous connecter à une instance du moteur de base de données, puis à créer et à exécuter des instructions Transact-SQL.|  
+|[Didacticiels sur la réplication](../relational-databases/replication/replication-tutorials.md)|Apprenez comment installer et exécuter les topologies de réplication à l'aide de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
+|[Didacticiels sur la Gestion des informations d'entreprise](../../2014/tutorials/enterprise-information-management-tutorials.md)|Apprenez comment gérer les informations dans une entreprise à l'aide des technologies Microsoft EIM.|  
   

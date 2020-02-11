@@ -1,5 +1,5 @@
 ---
-title: Les objets de Source de données persistants | Microsoft Docs
+title: Objets de source de données persistants | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,17 +16,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a5d50163f439ec3fabd219761f0749c88745c58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63231454"
 ---
 # <a name="persisted-data-source-objects"></a>Objets source de données persistants
-  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client prend en charge les objets de source de données persistant avec la **IPersistFile** interface.  
+  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client prend en charge les objets de source de données persistants avec l’interface **IPersistFile** .  
   
 ## <a name="examples"></a>Exemples  
- **A. Rendre persistante l’initialisation d’une source de données :**  
+ **A. Rendre persistante l'initialisation de la source de données :**  
   
  Cet exemple illustre une fonction qui rend persistantes les propriétés d'initialisation de la source de données définissant un serveur, une base de données et l'utilisation du mode d'authentification Windows pour la connexion. Le nom du serveur et de la base de données sont reçus dans les paramètres *pLocation* et *pDatasource* de la fonction.  
   
@@ -137,7 +137,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. Utiliser l’initialisation persistante de la source de données :**  
+ **B. Utiliser l'initialisation persistante de la source de données :**  
   
  Cet exemple utilise un objet source de données persistant avec des propriétés d'initialisation supplémentaires qui fournissent un nom de connexion et un mot de passe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -228,6 +228,6 @@ HRESULT InitFromPersistedDS
  La méthode **IPersistFile::Save** peut être appelée avant ou après l’appel de **IDBInitialize::Initialize**. Le fait d’appeler cette méthode après un retour réussi de **IDBInitialize::Initialize** garantit qu’une spécification de source de données valide est rendue persistante.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objets Source de données &#40;OLE DB&#41;](data-source-objects-ole-db.md)  
+ [Objets de source de données &#40;OLE DB&#41;](data-source-objects-ole-db.md)  
   
   

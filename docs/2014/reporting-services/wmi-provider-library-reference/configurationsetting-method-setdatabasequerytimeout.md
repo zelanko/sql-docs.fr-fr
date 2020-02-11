@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff1b75e942de46309df68707cc3acec976adb991
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098070"
 ---
-# <a name="setdatabasequerytimeout-method-wmi-msreportserverconfigurationsetting"></a>Méthode SetDatabaseQueryTimeout (WMI MSReportServer_ConfigurationSetting)
+# <a name="setdatabasequerytimeout-method-wmi-msreportserver_configurationsetting"></a>Méthode SetDatabaseQueryTimeout (WMI MSReportServer_ConfigurationSetting)
   Spécifie la valeur de délai par défaut pour les requêtes sur la base de données du serveur de rapports.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -44,14 +44,14 @@ public void SetDatabaseQueryTimeout (Int32 LogonTimeout,
  *LogonTimeout*  
  Valeur de délai par défaut, en secondes, pour les requêtes sur la base de données du serveur de rapports.  
   
- *HRESULT*  
+ *SIGNÉ*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Retourne un paramètre *HRESULT* qui indique si l'appel de la méthode a réussi ou a échoué. Une valeur 0 indique que l'appel de méthode a réussi. Une valeur différente de zéro indique qu'une erreur s'est produite.  
   
-## <a name="requirements"></a>Configuration requise  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+## <a name="requirements"></a>Spécifications  
+ **Espace de noms :**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

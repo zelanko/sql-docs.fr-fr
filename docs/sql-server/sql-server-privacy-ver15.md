@@ -11,10 +11,10 @@ author: MsSQLGirl
 ms.author: jukoesma
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: bbb8a21ee63e0a14778ee57874ba0ef385ac6cba
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71150292"
 ---
 # <a name="sql-server-2019-privacy-supplement"></a>Avenant à la déclaration de confidentialité de SQL Server 2019
@@ -27,7 +27,7 @@ Cet article résume les fonctionnalités Internet qui peuvent collecter et envoy
 - [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio
-- Database Migration Assistant
+- Assistant Migration de base de données
 - Assistant Migration SQL Server
 - Extension MS-SQL
 
@@ -124,7 +124,7 @@ Données reçues d’une organisation ou générées par son utilisation du prod
 -   Nom de l’organisation (par exemple : Microsoft Corp.)
 
 ### <a name="permitted-usage-scenarios"></a>Scénarios d’usages autorisés
-|Scénario  |Restrictions d'accès  |Conditions de rétention|
+|Scénario  |Restrictions d’accès  |Conditions de rétention|
 |---------|---------|---------|
 | Microsoft peut collecter des données d’utilisation génériques des instances SQL Server s’exécutant dans Machines virtuelles Azure, dans le but exprès de fournir aux clients des avantages facultatifs dans Azure pour l’utilisation de SQL Server dans Machines virtuelles Azure. | Microsoft peut exposer les données au client, par exemple via le portail Azure, afin d’aider les clients qui exécutent SQL Server dans Machines virtuelles Azure à accéder aux avantages spécifiques à l’exécution de SQL Server dans Azure. | 90 jours minimum, 3 ans maximum |
 
@@ -151,7 +151,7 @@ Microsoft examine les valeurs de nom d’application définies par d’autres pr
 
 ### <a name="permitted-usage-scenarios"></a>Scénarios d’usages autorisés
 
-|Scénario  |Restrictions d'accès  |Conditions de rétention|
+|Scénario  |Restrictions d’accès  |Conditions de rétention|
 |---------|---------|---------|
 |Peut être utilisé par Microsoft pour améliorer les fonctionnalités ou corriger les bogues dans les fonctionnalités actuelles.|Limité à un usage interne Microsoft sans accès à des tiers. |90 jours minimum, 3 ans maximum |
 |Peut être utilisé pour faire des suggestions au client.  Par exemple, « D’après votre utilisation du produit, utilisez la fonctionnalité *X* pour obtenir de meilleures performances ». |Microsoft peut exposer les données au client d’origine, par exemple, à travers des tableaux de bord. |Journaux de sécurité des données client : 3 ans min - 6 ans max |

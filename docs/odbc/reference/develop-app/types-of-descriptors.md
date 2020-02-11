@@ -13,40 +13,40 @@ ms.assetid: ec20e446-e540-41ad-8559-d9c0a5b8358f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d9d4a7572131afeeb0017d3773b72d899052b32
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087791"
 ---
 # <a name="types-of-descriptors"></a>Types de descripteurs
 Un descripteur est utilisé pour décrire l’un des éléments suivants :  
   
--   Un ensemble de zéro ou plusieurs paramètres. Un descripteur de paramètre peut être utilisé pour décrire :  
+-   Ensemble de zéro ou plusieurs paramètres. Un descripteur de paramètre peut être utilisé pour décrire les éléments suivants :  
   
-    -   Le *tampon de paramètre d’application,* qui contient les arguments dynamiques d’entrée en tant que jeu par l’application ou les arguments dynamique de sortie après l’exécution d’un **appeler** instruction SQL.  
+    -   La *mémoire tampon de paramètres d’application,* qui contient soit les arguments dynamiques d’entrée définis par l’application, soit les arguments dynamiques de sortie après l’exécution d’une instruction **Call** de SQL.  
   
-    -   Le *mémoire tampon de paramètre de mise en œuvre*. Pour les arguments d’entrée dynamiques, il contient les mêmes arguments que le tampon de paramètre d’application, après toute conversion de données que l’application peut spécifier. Pour les arguments de sortie dynamique, il contient les arguments retournés, avant toute conversion de données que l’application peut spécifier.  
+    -   *Mémoire tampon des paramètres d’implémentation*. Pour les arguments dynamiques d’entrée, cela contient les mêmes arguments que la mémoire tampon de paramètres d’application, après toute conversion de données que l’application peut spécifier. Pour les arguments dynamiques de sortie, contient les arguments retournés, avant toute conversion de données que l’application peut spécifier.  
   
-     Pour les arguments d’entrée dynamiques, l’application doit fonctionner sur un descripteur de paramètre d’application avant d’exécuter une instruction SQL qui contient des marqueurs de paramètres dynamiques. Pour les arguments d’entrée et de sortie de dynamiques, l’application peut spécifier différents types de données de celles figurant dans le descripteur de paramètre de mise en œuvre pour atteindre la conversion de données.  
+     Pour les arguments dynamiques d’entrée, l’application doit fonctionner sur un descripteur de paramètre d’application avant d’exécuter une instruction SQL qui contient des marqueurs de paramètres dynamiques. Pour les arguments dynamiques d’entrée et de sortie, l’application peut spécifier des types de données différents de ceux du descripteur de paramètre d’implémentation pour permettre la conversion des données.  
   
--   Une seule ligne de base de données. Un descripteur de ligne peut être utilisé pour décrire :  
+-   Une seule ligne de données de base de données. Un descripteur de ligne peut être utilisé pour décrire les éléments suivants :  
   
-    -   Le *tampon de ligne d’implémentation,* qui contient la ligne à partir de la base de données. (Ces mémoires tampons sur le plan conceptuel contiennent des données écrites dans ou lire à partir de la base de données. Toutefois, le formulaire stocké de base de données n’est pas spécifié. Une base de données peut effectuer de conversion supplémentaire sur les données à partir de sa forme dans la mémoire tampon d’implémentation.)  
+    -   La *mise en mémoire tampon de ligne d’implémentation,* qui contient la ligne de la base de données. (Ces mémoires tampons contiennent conceptuellement des données écrites ou lues dans la base de données. Toutefois, le formulaire stocké des données de la base de données n’est pas spécifié. Une base de données peut effectuer une conversion supplémentaire sur les données à partir de son formulaire dans la mémoire tampon d’implémentation.)  
   
-    -   Le *tampon de ligne d’application,* qui contient la ligne de données, tel que présenté à l’application, en suivant toute conversion de données que l’application peut spécifier.  
+    -   La *mémoire tampon de ligne de l’application,* qui contient la ligne de données telle qu’elle est présentée à l’application, à la suite de la conversion de données que l’application peut spécifier.  
   
-     L’application fonctionne sur le descripteur de ligne d’application dans tous les cas où les données de la colonne à partir de la base de données doivent apparaître dans les variables d’application. Pour obtenir la conversion des données de colonne de données, l’application peut spécifier différents types de données de celles figurant dans le descripteur de ligne d’implémentation.  
+     L’application fonctionne sur le descripteur de ligne d’application dans tous les cas où les données de colonne de la base de données doivent apparaître dans les variables d’application. Pour permettre la conversion des données de colonne, l’application peut spécifier des types de données différents de ceux du descripteur de ligne d’implémentation.  
   
- Les types de descripteur sont résumées dans le tableau suivant.  
+ Les types de descripteurs sont résumés dans le tableau suivant.  
   
-|Type de tampon|Lignes|Paramètres dynamiques|  
+|Type de mémoire tampon|Lignes|Paramètres dynamiques|  
 |-----------------|----------|------------------------|  
-|**Mémoire tampon d’application**|descripteur de ligne d’application (ARD)|descripteur de paramètre d’application (APD)|  
-|**Mémoire tampon d’implémentation**|descripteur de ligne d’implémentation (IRD)|descripteur de paramètre d’implémentation (IPD)|  
+|**Mémoire tampon d’application**|Descripteur de ligne d’application (ARD)|Descripteur de paramètre d’application (APD)|  
+|**Mémoire tampon d’implémentation**|Descripteur de ligne d’implémentation (IRD)|Descripteur de paramètre d’implémentation (IPD)|  
   
- Pour le paramètre ou les mémoires tampons de ligne, si l’application spécifie les différents types de données dans les enregistrements correspondants des descripteurs de mise en œuvre et d’application, le pilote effectue conversion de données lorsqu’il utilise les descripteurs. Par exemple, il peut convertir des valeurs numériques et datetime au format de chaîne de caractères. (Pour les conversions valides, consultez [annexe d : Types de données](../../../odbc/reference/appendixes/appendix-d-data-types.md).)  
+ Pour le paramètre ou les mémoires tampons de ligne, si l’application spécifie des types de données différents dans les enregistrements correspondants des descripteurs d’implémentation et d’application, le pilote effectue la conversion des données lorsqu’il utilise les descripteurs. Par exemple, il peut convertir des valeurs numériques et DateTime en format de chaîne de caractères. (Pour les conversions valides, consultez l' [annexe D : types de données](../../../odbc/reference/appendixes/appendix-d-data-types.md).)  
   
- Un descripteur peut effectuer des rôles différents. Instructions différentes peuvent partager le descripteur de l’application alloue explicitement. Un descripteur de ligne dans une seule instruction peut servir d’un descripteur de paramètre dans une autre instruction.  
+ Un descripteur peut exécuter différents rôles. Différentes instructions peuvent partager n’importe quel descripteur que l’application alloue explicitement. Un descripteur de ligne dans une instruction peut servir de descripteur de paramètre dans une autre instruction.  
   
- Il est toujours connue si un descripteur donné est un descripteur d’application ou un descripteur d’implémentation, même si le descripteur n’a pas encore été utilisé dans une opération de base de données. Pour les descripteurs de l’implémentation alloue implicitement, l’implémentation enregistre la ligne prédéfinie par rapport au descripteur d’instruction. Descripteur qui alloue de l’application en appelant **SQLAllocHandle** est un descripteur d’application.
+ Il est toujours connu si un descripteur donné est un descripteur d’application ou un descripteur d’implémentation, même si le descripteur n’a pas encore été utilisé dans une opération de base de données. Pour les descripteurs que l’implémentation alloue implicitement, l’implémentation enregistre la ligne prédéfinie par rapport au descripteur d’instruction. Tout descripteur que l’application alloue en appelant **SQLAllocHandle** est un descripteur d’application.

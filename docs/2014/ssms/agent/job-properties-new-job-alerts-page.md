@@ -1,5 +1,5 @@
 ---
-title: 'Propriétés du travail : Nouveau travail (Page alertes) | Microsoft Docs'
+title: 'Propriétés du travail : nouveau travail (page alertes) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,26 +13,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1853281863fe3d1e6f4fcc6b36f228f7df523bda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189280"
 ---
 # <a name="job-properties-new-job-alerts-page"></a>Propriétés du travail : Nouveau travail (page Alertes)
-  Cette page vous permet d'afficher et d'organiser les alertes pour un travail de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Utilisez cette page pour afficher et organiser les alertes pour un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] travail de l’agent.  
   
 ## <a name="options"></a>Options  
- **Liste d'alertes**  
+ **Liste des alertes**  
  Répertorie les alertes pour ce travail.  
   
  **Ajouter**  
  Permet de créer une nouvelle alerte pour le travail.  
   
- **Edition**  
+ **Modifier**  
  Permet de modifier la définition de l'alerte.  
   
- **Supprimer**  
+ **Remove**  
  Permet de supprimer l'alerte sélectionnée du travail et de supprimer l'alerte.  
   
 ## <a name="see-also"></a>Voir aussi  

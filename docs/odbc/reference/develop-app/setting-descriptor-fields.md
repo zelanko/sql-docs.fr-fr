@@ -13,17 +13,17 @@ ms.assetid: d735dc64-370f-48ab-a59f-6cef9bc4e1e8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 34c4a6e3d98b6711c77fb50d7156207de148881a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094253"
 ---
 # <a name="setting-descriptor-fields"></a>Définition des champs de descripteur
-Pour modifier les champs d’un descripteur, une application peut appeler **SQLSetDescField**. Certains champs sont en lecture seule et ne peut pas être définies. (Consultez le [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) description de fonction.)  
+Pour modifier les champs d’un descripteur, une application peut appeler **SQLSetDescField**. Certains champs sont en lecture seule et ne peuvent pas être définis. (Voir la description de la fonction [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) .)  
   
- Champs d’enregistrement descripteur sont définis avec un numéro d’enregistrement (*RecNumber*) de 1 ou version ultérieure, while champs d’en-tête de descripteur sont définis avec un numéro d’enregistrement de 0. Un numéro d’enregistrement de 0 est également utilisé pour définir les champs de signet, conformément à la convention que les signets sont contenus dans la colonne 0. Cela peut laisser l’impression que les champs de signet sont contenus dans l’en-tête de descripteur, mais cela n’est pas le cas. Champs de signet sont distincts de champs d’en-tête.  
+ Les champs d’enregistrement du descripteur sont définis avec un numéro d’enregistrement (*recnumber*) égal ou supérieur à 1, tandis que les champs d’en-tête de descripteur sont définis avec un numéro d’enregistrement égal à 0. Le numéro d’enregistrement 0 est également utilisé pour définir les champs de signet, conformément à la Convention selon laquelle les signets sont contenus dans la colonne 0. Cela peut entraîner l’impression que les champs de signet sont contenus dans l’en-tête du descripteur, mais ce n’est pas le cas. Les champs de signet sont distincts des champs d’en-tête.  
   
- Lors de la définition des champs individuellement, votre application doit respecter l’ordre défini dans [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Définition de certains champs provoque le pilote définir d’autres champs. Cela garantit que le descripteur est toujours prêt à utiliser une fois que l’application a spécifié un type de données. Lorsque l’application définit le champ SQL_DESC_TYPE, le pilote vérifie que les autres champs qui spécifient le type sont valides et cohérentes.  
+ Lors de la définition des champs individuellement, l’application doit suivre la séquence définie dans [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Si vous définissez certains champs, le pilote définit d’autres champs. Cela garantit que le descripteur est toujours prêt à être utilisé une fois que l’application a spécifié un type de données. Lorsque l’application définit le champ SQL_DESC_TYPE, le pilote vérifie que les autres champs qui spécifient le type sont valides et cohérents.  
   
- Si un appel de fonction qui définirait un champ de descripteur échoue, le contenu du champ de descripteur est non défini après l’appel de fonction qui a échoué.
+ Si un appel de fonction qui définit un champ de descripteur échoue, le contenu du champ descripteur n’est pas défini après l’appel de la fonction failed.

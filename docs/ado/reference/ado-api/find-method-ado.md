@@ -1,5 +1,5 @@
 ---
-title: Rechercher, méthode (ADO) | Microsoft Docs
+title: Find, méthode (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f394d5e3b3021ca240675d6979152c63b903190
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918626"
 ---
 # <a name="find-method-ado"></a>Find, méthode (ADO)
-Recherche un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) pour la ligne répondant aux critères spécifiés. Si vous le souhaitez, la direction de recherche, de ligne de début et de décalage à partir de la ligne initiale peut être spécifiée. Si les critères sont satisfaits, la position de ligne actuelle est définie sur l’enregistrement est trouvé ; Sinon, la position est définie à la fin (ou le début) de la **Recordset**.  
+Recherche dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) la ligne qui répond aux critères spécifiés. Éventuellement, la direction de la recherche, la ligne de départ et le décalage à partir de la ligne de départ peuvent être spécifiés. Si les critères sont satisfaits, la position de ligne actuelle est définie sur l’enregistrement trouvé ; dans le cas contraire, la position est définie à la fin (ou au début) du **Recordset**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,39 +35,39 @@ Find (Criteria, SkipRows, SearchDirection, Start)
   
 #### <a name="parameters"></a>Paramètres  
  *Critères*  
- Un **chaîne** valeur qui contient une instruction en spécifiant le nom de colonne, un opérateur de comparaison et une valeur à utiliser dans la recherche.  
+ Valeur de **chaîne** qui contient une instruction spécifiant le nom de colonne, l’opérateur de comparaison et la valeur à utiliser dans la recherche.  
   
  *SkipRows*  
- facultatif. Un **Long** valeur, dont la valeur par défaut est égale à zéro, ce qui spécifie l’offset de ligne à partir de la ligne actuelle ou *Démarrer* signet pour commencer la recherche. Par défaut, la recherche démarre sur la ligne actuelle.  
+ facultatif. Valeur de **type long** , dont la valeur par défaut est zéro, qui spécifie l’offset de ligne à partir de la ligne actuelle ou du signet de *début* pour commencer la recherche. Par défaut, la recherche commence sur la ligne actuelle.  
   
  *SearchDirection*  
- facultatif. Un [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) valeur qui spécifie si la recherche doit commencer sur la ligne actuelle ou de la ligne suivante disponible dans la direction de la recherche. Une recherche s’arrête à la fin de la **Recordset** si la valeur est **adSearchForward**. Une recherche s’arrête au début de la **Recordset** si la valeur est **adSearchBackward**.  
+ facultatif. Valeur de [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) qui spécifie si la recherche doit commencer sur la ligne actuelle ou sur la ligne suivante disponible dans le sens de la recherche. Une recherche ayant échoué s’arrête à la fin de l’ensemble d' **enregistrements** si la valeur est **adSearchForward**. Une recherche ayant échoué s’arrête au début de l’ensemble d' **enregistrements** si la valeur est **adSearchBackward**.  
   
- *Démarrer*  
- Facultatif. Un **Variant** signet qui indique la position de départ pour la recherche.  
+ *Start*  
+ facultatif. Signet de **variante** qui fonctionne comme position de départ pour la recherche.  
   
 ## <a name="remarks"></a>Notes  
  Seul un nom de colonne unique peut être spécifié dans *critères*. Cette méthode ne prend pas en charge les recherches sur plusieurs colonnes.  
   
- L’opérateur de comparaison dans *critères* peut être « **>** « (supérieur à), » **\<** » (inférieur à), « = » (égal), « > = » (supérieur ou égal à), « < = » (inférieur ou égal à), « <> » (non égal), ou « like » (critères spéciaux).  
+ L’opérateur de comparaison dans les *critères* peut**>** être "" (supérieur à)**\<**, "" (inférieur à), "=" (égal à), ">=" (supérieur ou égal à), "<=" (inférieur ou égal à), "<>" (non égal à) ou "like" (critères spéciaux).  
   
- La valeur dans *critères* peut être une chaîne, un nombre à virgule flottante ou une date. Valeurs de chaîne sont délimitées par des guillemets simples ou « # » (signe dièse) (par exemple, « état = 'WA' » ou « état = #WA # »). Valeurs de date sont séparés par des signes « # » (signe dièse) (par exemple, « start_date > #7/22/97 # »). Ces valeurs peuvent contenir des heures, minutes et secondes pour indiquer la date et heure indiquées, mais ne doivent pas contenir de millisecondes ou des erreurs se produisent.  
+ La valeur dans *Criteria* peut être une chaîne, un nombre à virgule flottante ou une date. Les valeurs de chaîne sont délimitées par des guillemets simples ou par des signes dièse (#) (par exemple, "State = 'WA" "ou" state = #WA # "). Les valeurs de date sont délimitées par des signes « # » (dièse) (par exemple, « start_date > #7/22/97 # »). Ces valeurs peuvent contenir des heures, des minutes et des secondes pour indiquer des horodatages, mais elles ne doivent pas contenir de millisecondes ou des erreurs se produisent.  
   
- Si l’opérateur de comparaison est « like », la valeur de chaîne peut contenir un astérisque (*) pour rechercher une ou plusieurs occurrences de n’importe quel caractère ou une sous-chaîne. Par exemple, « state like'm\*' » correspond à Maine et du Massachusetts. Vous pouvez également utiliser des astérisques de début et de fin pour rechercher une sous-chaîne contenue dans les valeurs. Par exemple, « état comme '\*comme\*' » correspond à Alaska, Arkansas et Massachusetts.  
+ Si l’opérateur de comparaison est « like », la valeur de chaîne peut contenir un astérisque (*) pour rechercher une ou plusieurs occurrences de n’importe quel caractère ou sous-chaîne. Par exemple, « État comme «\*m »» correspond à Maine et Massachusetts. Vous pouvez également utiliser des astérisques de début et de fin pour rechercher une sous-chaîne contenue dans les valeurs. Par exemple, « State like\*\*» correspond à Alaska, Arkansas et Massachusetts.  
   
- Astérisques peuvent être utilisés uniquement à la fin d’une chaîne de critères ou au début et à la fin d’une chaîne de critères, comme indiqué ci-dessus. Vous ne pouvez pas utiliser l’astérisque comme caractère générique de début ('* str'), ou comme un s embedded\*r »). Cela entraîne une erreur.  
-  
-> [!NOTE]
->  Une erreur se produit si une position de ligne actuelle n’est pas définie avant d’appeler **trouver**. Toute méthode qui définit la position de ligne, tel que [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), doit être appelée avant d’appeler **trouver**.  
+ Les astérisques peuvent être utilisés uniquement à la fin d’une chaîne de critères, ou au début et à la fin d’une chaîne de critères, comme indiqué ci-dessus. Vous ne pouvez pas utiliser l’astérisque comme caractère générique de début (« * STR »), ni comme caractère générique\*incorporé (r). Cela génère une erreur.  
   
 > [!NOTE]
->  Si vous appelez le **trouver** méthode sur un jeu d’enregistrements et la position actuelle dans le jeu d’enregistrements est au dernier enregistrement ou à la fin du fichier (EOF), vous ne trouverez pas quoi que ce soit. Vous devez appeler la **MoveFirst** méthode pour définir la position/le curseur actuel au début de l’ensemble d’enregistrements.  
+>  Une erreur se produit si une position de ligne actuelle n’est pas définie avant l’appel de **Find**. Toute méthode qui définit la position de ligne, par exemple [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), doit être appelée avant l’appel de **Find**.  
+  
+> [!NOTE]
+>  Si vous appelez la méthode **Find** sur un Recordset et que la position actuelle dans le jeu d’enregistrements se trouve au dernier enregistrement ou fin de fichier (EOF), vous ne trouverez rien. Vous devez appeler la méthode **MoveFirst** pour définir la position/le curseur actuel au début du Recordset.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rechercher l’exemple de méthode (VB)](../../../ado/reference/ado-api/find-method-example-vb.md)   
- [Propriété index](../../../ado/reference/ado-api/index-property.md)   
+ [Find, exemple de méthode (VB)](../../../ado/reference/ado-api/find-method-example-vb.md)   
+ [Propriété d’index](../../../ado/reference/ado-api/index-property.md)   
  [Optimize, propriété dynamique (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
  [Seek, méthode](../../../ado/reference/ado-api/seek-method.md)

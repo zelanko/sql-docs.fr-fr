@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6e938e3212e519ab51be1faf3f18e28957ef3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62782277"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>Activer l'option Verrouiller les pages en mémoire (Windows)
@@ -29,7 +29,7 @@ ms.locfileid: "62782277"
   
 ### <a name="to-enable-the-lock-pages-in-memory-option"></a>Pour activer l'option Verrouiller les pages en mémoire  
   
-1.  Dans le menu **Démarrer** , cliquez sur **Exécuter**. Dans le **Open** , tapez `gpedit.msc`.  
+1.  Dans le menu **Démarrer** , cliquez sur **Exécuter**. Dans la zone **ouvrir** , tapez `gpedit.msc`.  
   
 2.  Sur la console **Éditeur de stratégie de groupe locale** , développez **Configuration ordinateur**, puis **Paramètres Windows**.  
   
@@ -48,6 +48,6 @@ ms.locfileid: "62782277"
 8.  Fermez la session, puis rouvrez-la pour que cette modification prenne effet.  
   
 ## <a name="see-also"></a>Voir aussi  
- [server memory (options de configuration du serveur)](server-memory-server-configuration-options.md)  
+ [server memory (options de configuration de serveur)](server-memory-server-configuration-options.md)  
   
   

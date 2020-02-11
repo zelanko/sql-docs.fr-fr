@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 83bcd95d6eb946d15884d57550b826bc7379fb64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041694"
 ---
 # <a name="predictvariance-dmx"></a>PredictVariance (DMX)
@@ -31,7 +31,7 @@ PredictVariance(<scalar column reference>)
  Colonne scalaire  
   
 ## <a name="return-type"></a>Type de retour  
- Une valeur scalaire du type spécifié par  *\<référence de colonne scalaire >* .  
+ Valeur scalaire du type qui est spécifié par * \<la référence de colonne scalaire>*.  
   
 ## <a name="remarks"></a>Notes  
  Si la référence de colonne est discrète, la fonction **PredictVariance** retourne 0 car la variance ne peut être calculée à partir de valeurs discrètes.  
@@ -54,8 +54,8 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Informations de référence sur les fonctions DMX&#41; Data Mining Extensions &#40;](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Fonctions &#40;&#41;DMX](../dmx/functions-dmx.md)   
+ [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 6 : Vérifiez que l’attribut basé sur un domaine est créé à l’aide de Master Data Manager | Microsoft Docs'
+title: 'Tâche 6 : vérifier que l’attribut basé sur un domaine est créé à l’aide de la Data Manager maître | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: fe3f404d4f41e2977ef389216dcbc9106327266a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65488951"
 ---
-# <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Tâche 6 : Tâche 6 : Vérification que l’attribut basé sur un domaine est créé à l’aide de Master Data Manager
+# <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Tâche 6 : Vérifier que l'attribut basé sur un domaine est créé à l'aide de Master Data Manager
   Dans cette tâche, vous allez vérifier que l’entité **État** est créée dans **MDS** et que l’attribut **État** de l’entité **Fournisseur** est un attribut basé sur un domaine qui dépend de l’entité **État** à l’aide de **Master Data Manager**.  
   
 1.  Basculez vers l’application web **Master Data Manger**.  
@@ -26,9 +26,9 @@ ms.locfileid: "65488951"
   
 3.  Vérifiez que le modèle **Fournisseurs** est sélectionné et cliquez sur **Explorateur**. Vous pouvez actualiser la page si **l’Explorateur** est déjà ouvert.  
   
-4.  Pointez votre souris sur **entités** sur la barre de menus et notez qu’à présent, il existe deux entités : **Fournisseur** et **état**.  
+4.  Pointez votre souris sur **Entités** dans la barre de menus et notez qu’il y a maintenant deux entités : **Fournisseur** et **État**.  
   
-     ![Menu entités avec état et fournisseur](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-01.jpg "Menu entités avec état et fournisseur")  
+     ![Menu Entités avec État et Fournisseur](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-01.jpg "Menu Entités avec État et Fournisseur")  
   
 5.  Cliquez sur **État** si l’entité n’est pas déjà ouverte.  
   
@@ -38,9 +38,9 @@ ms.locfileid: "65488951"
   
 8.  Répétez les étapes précédentes pour les autres États.  
   
-    |Code|Nom|  
+    |Code|Name|  
     |----------|----------|  
-    |CA|California|  
+    |CA|Californie|  
     |CO|Colorado|  
     |IL|Illinois|  
     |DC|District de Columbia|  
@@ -56,9 +56,9 @@ ms.locfileid: "65488951"
     |NY|New York|  
     |OH|Ohio|  
     |OK|Oklahoma|  
-    |\- ou -|Oregon|  
+    |OR|Oregon|  
     |PA|Pennsylvanie|  
-    |SC|Caroline du Nord|  
+    |SC|Caroline du Sud|  
     |KS|Kansas|  
     |TN|Tennessee|  
     |TX|Texas|  
@@ -66,7 +66,7 @@ ms.locfileid: "65488951"
     |VA|Virginie|  
     |WA|Washington|  
     |WI|Wisconsin|  
-    |HI|Hawaï|  
+    |HI|Hawaii|  
     |MD|Maryland|  
     |CT|Connecticut|  
   
@@ -76,9 +76,9 @@ ms.locfileid: "65488951"
   
 11. Maintenant, notez qu’une valeur du champ **État** peut être modifiée dans le volet **Détails** à l’aide de la liste déroulante. Remarquez également que, dans la liste à gauche et dans la liste déroulante du volet **Détails**, le code est affiché en premier, suivi par le nom entre accolades. Vous pouvez également modifier d’autres valeurs dans le volet **Détails**.  
   
-     ![Attribut avec le Code mis à jour et les noms d’état](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-02.jpg "attribut avec le Code mis à jour et les noms d’état")  
+     ![Attribute d'état avec codes et noms mis au jour](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-02.jpg "Attribute d'état avec codes et noms mis au jour")  
   
-## <a name="next-step"></a>Étape suivante  
- [Tâche 7 : Affichage des mises à jour effectuées à l’aide de Master Data Manager dans Excel](../../2014/tutorials/task-7-viewing-updates-made-using-master-data-manager-in-excel.md)  
+## <a name="next-step"></a>étape suivante  
+ [Tâche 7 : Affichage des mises à jour effectuées à l'aide de Master Data Manager dans Excel](../../2014/tutorials/task-7-viewing-updates-made-using-master-data-manager-in-excel.md)  
   
   

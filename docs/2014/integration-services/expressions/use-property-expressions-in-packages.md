@@ -20,16 +20,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dd78d7fb5f80b766dc7c51ae077d2a241c34d59c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768849"
 ---
 # <a name="use-property-expressions-in-packages"></a>Expressions de propriété dans des packages
   Une expression de propriété est une expression affectée à une propriété pour permettre la mise à jour dynamique de la propriété au moment de l'exécution. Par exemple, une expression de propriété peut mettre à jour la ligne À utilisée par une tâche Envoyer un message en insérant une adresse électronique qui est stockée dans une variable.  
   
- Une expression peut être ajoutée à un package, une tâche, une boucle Foreach, une boucle For, une séquence, un énumérateur Foreach, un gestionnaire d'événements, un gestionnaire de connexions aux niveaux des packages ou du projet, ou un module fournisseur d'informations. Toute propriété de ces objets qui est en lecture/écriture peut implémenter une expression de propriété. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] prend également en charge l'utilisation d'expressions de propriété dans certaines propriétés personnalisées de composants de flux de données. Les variables et les contraintes de précédence ne prennent pas en charge les expressions de propriété, mais elles incluent des propriétés spéciales dans lesquelles vous pouvez utiliser des expressions.  
+ Une expression peut être ajoutée à un package, une tâche, une boucle Foreach, une boucle For, une séquence, un énumérateur Foreach, un gestionnaire d'événements, un gestionnaire de connexions aux niveaux des packages ou du projet, ou un module fournisseur d'informations. Toute propriété de ces objets qui est en lecture/écriture peut implémenter une expression de propriété. 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] prend également en charge l'utilisation d'expressions de propriété dans certaines propriétés personnalisées de composants de flux de données. Les variables et les contraintes de précédence ne prennent pas en charge les expressions de propriété, mais elles incluent des propriétés spéciales dans lesquelles vous pouvez utiliser des expressions.  
   
  Les expressions de propriété peuvent être mises à jour de différentes manières :  
   
@@ -41,7 +42,7 @@ ms.locfileid: "62768849"
   
 -   Les variables dans les expressions peuvent être mises à jour par les scripts exécutés par la tâche de script et le composant de script.  
   
- Les expressions sont générées à l'aide du langage d'expression [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Les expressions peuvent utiliser des variables système ou définies par l'utilisateur, ainsi que des opérateurs, des fonctions et des conversions de type fournis par le langage d'expressions.  
+ Les expressions sont générées à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] l’aide du langage d’expression. Les expressions peuvent utiliser des variables système ou définies par l'utilisateur, ainsi que des opérateurs, des fonctions et des conversions de type fournis par le langage d'expressions.  
   
 > [!NOTE]  
 >  Les noms des variables définies par l'utilisateur et des variables système respectent la casse.  
@@ -55,7 +56,8 @@ ms.locfileid: "62768849"
  Certaines propriétés sont définies à l'aide de valeurs provenant d'énumérateurs. Lorsque vous faites référence au membre d'énumérateur dans une expression de propriété, vous devez utiliser la valeur numérique équivalant au nom convivial du membre de l'énumérateur. Par exemple, si une expression de propriété définit la propriété `LoggingMode` qui utilise une valeur de l'énumération `DTSLoggingMode`, l'expression de la propriété doit utiliser 0, 1 ou 2 à la place des noms conviviaux `Enabled`, `Disabled` ou `UseParentSetting`. Pour plus d’informations, consultez la page [Constantes énumérées dans des expressions de propriété](enumerated-constants-in-property-expressions.md).  
   
 ## <a name="property-expression-user-interface"></a>Interface utilisateur de l'expression de propriété  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit un ensemble d'outils pour la création et la gestion d'expressions de propriété.  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit un ensemble d'outils pour la création et la gestion d'expressions de propriété.  
   
 -   La page **Expressions** , trouvée dans les éditeurs personnalisés pour les tâches, le conteneur de boucles For et les conteneurs Foreach. La page **Expressions** vous permet de modifier des expressions et d'afficher une liste des expressions de propriété utilisées par une tâche, une boucle For ou une boucle Foreach.  
   
@@ -67,7 +69,7 @@ ms.locfileid: "62768849"
   
  Le schéma suivant montre les interfaces utilisateur que vous pouvez utiliser pour ajouter, modifier et supprimer des expressions de propriété.  
   
- ![Interface utilisateur pour les expressions de propriété](../media/ssis-propertyexpressionui.gif "Interface utilisateur pour les expressions de propriété")  
+ ![Interface utilisateur des expressions de propriété](../media/ssis-propertyexpressionui.gif "Interface utilisateur des expressions de propriété")  
   
  Dans la fenêtre **Propriétés** et dans la page **Expressions**, cliquez sur le bouton de navigation **(...)** au niveau de la collection **Expressions** pour ouvrir la boîte de dialogue **Éditeur d’expressions de la propriété**. L'Éditeur d'expressions de la propriété permet de mapper une propriété à une expression et de taper une expression de propriété. Si vous souhaitez utiliser les outils d’expression graphique pour créer, puis valider l’expression, cliquez sur le bouton de navigation **(...)** au niveau de l’expression pour ouvrir la boîte de dialogue **Générateur d’expressions**, puis créez ou modifiez et éventuellement validez l’expression.  
   
@@ -92,7 +94,7 @@ ms.locfileid: "62768849"
  Les expressions de propriété sont chargées après le chargement des configurations de package. Par exemple, les variables sont d'abord mises à jour par leurs configurations, puis les expressions de propriété qui utilisent les variables sont évaluées et chargées. Cela signifie que les expressions de propriété utilisent toujours les valeurs de variables qui sont définies par des configurations.  
   
 > [!NOTE]  
->  Vous ne pouvez pas utiliser le `Set` possibilité du **dtexec** utilitaire pour remplir une expression de propriété.  
+>  Vous ne pouvez pas `Set` utiliser l’option de l’utilitaire **dtexec** pour remplir une expression de propriété.  
   
  Le tableau suivant indique à quel moment les expressions de propriété d' [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sont évaluées et chargées.  
   
@@ -114,7 +116,7 @@ ms.locfileid: "62768849"
  Les exemples d'expression suivants montrent comment utiliser les variables système, les opérateurs, les fonctions et les littéraux de chaîne dans les expressions de propriété.  
   
 ### <a name="property-expression-for-the-loggingmode-property-of-a-package"></a>Expression de propriété pour la propriété LoggingMode d'un package  
- L’expression de propriété suivante peut être utilisée pour définir la propriété LoggingMode d’un package. L'expression utilise les fonctions DAY et GETDATE pour obtenir un entier qui représente la partie jour d'une date. Si le jour est le premier ou le 15, la journalisation est activée ; sinon, elle est désactivée. La valeur 1 est l’entier équivalent de membre d’énumérateur LoggingMode `Enabled`, et la valeur 2 est l’entier équivalent du membre `Disabled`. Vous devez utiliser la valeur numérique à la place du nom du membre d'énumérateur dans l'expression.  
+ L’expression de propriété suivante peut être utilisée pour définir la propriété LoggingMode d’un package. L'expression utilise les fonctions DAY et GETDATE pour obtenir un entier qui représente la partie jour d'une date. Si le jour est le premier ou le 15, la journalisation est activée ; sinon, elle est désactivée. La valeur 1 est l’équivalent entier du membre `Enabled`de l’énumérateur LoggingMode, et la valeur 2 est l’équivalent entier du membre `Disabled`. Vous devez utiliser la valeur numérique à la place du nom du membre d'énumérateur dans l'expression.  
   
  `DAY((DT_DBTIMESTAMP)GETDATE())==1||DAY((DT_DBTIMESTAMP)GETDATE())==15?1:2`  
   
@@ -125,7 +127,7 @@ ms.locfileid: "62768849"
   
  Si le nom du package est EmailRowCountPP, s'il a été exécuté le 03/04/2005 et que la durée de l'exécution était de 9 secondes, l'expression s'évalue à la chaîne.  
   
- PExpression-->Package : (EmailRowCountPP) Début : 3/4/2005 11:06:18 Durée : 9 secondes.  
+ PExpression-->Package: (EmailRowCountPP) Started:3/4/2005 11:06:18 AM Duration:9 seconds.  
   
 ### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>Expression de propriété pour le message d'un message électronique  
  L’expression de propriété suivante peut être utilisée pour définir la propriété MessageSource d’une tâche d’envoi de message. L'expression utilise une combinaison de littéraux de chaîne, de variables définies par l'utilisateur et l'opérateur de concaténation (+). Les variables définies par l’utilisateur sont appelées `nasdaqrawrows`, `nyserawrows`et `amexrawrows`. La chaîne "\n" indique un retour chariot.  
@@ -136,11 +138,11 @@ ms.locfileid: "62768849"
   
  Lignes traitées :  
   
- NASDAQ : 7058  
+ NASDAQ: 7058  
   
- NYSE : 3528  
+ NYSE: 3528  
   
- AMEX : 1102  
+ AMEX: 1102  
   
 ### <a name="property-expression-for-the-executable-property-of-an-execute-process-task"></a>Expression de propriété pour la propriété exécutable d'une tâche d'exécution de processus  
  L’expression de propriété suivante peut être utilisée pour définir la propriété Executable d’une tâche d’exécution de processus. L'expression utilise une combinaison de littéraux de chaîne, d'opérateurs et de fonctions. L'expression utilise les fonctions DATEPART et GETDATE et l'opérateur conditionnel.  
@@ -167,7 +169,7 @@ ms.locfileid: "62768849"
   
 ## <a name="external-resources"></a>Ressources externes  
   
--   [Expression and Configuration Highlighter (projet CodePlex)](https://go.microsoft.com/fwlink/?LinkId=146625)  
+-   [Sélecteur d’expression et de configuration (projet CodePlex)](https://go.microsoft.com/fwlink/?LinkId=146625)  
   
 -   Article technique, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), sur social.technet.microsoft.com  
   

@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 018ca302bf4d5fe8271369008ffbfec7d228cfbf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245740"
 ---
 # <a name="connect-to-server-database-engine"></a>Se connecter au serveur (Moteur de base de données)
-  Utilisez cette boîte de dialogue pour afficher ou spécifier des options de connexion à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Dans la plupart des cas, vous pouvez vous connecter en entrant le nom d’ordinateur du serveur de base de données dans la zone **Nom du serveur** et en cliquant sur **Se connecter**. Si vous vous connectez à [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], utilisez le nom d’ordinateur suivi de **\sqlexpress**.  
+  Utilisez cette boîte de dialogue pour afficher ou spécifier les options [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]de connexion à. Dans la plupart des cas, vous pouvez vous connecter en entrant le nom d’ordinateur du serveur de base de données dans la zone **Nom du serveur** et en cliquant sur **Se connecter**. Si vous vous connectez à [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], utilisez le nom d’ordinateur suivi de **\sqlexpress**.  
   
  De nombreux facteurs affectent votre capacité à vous connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -40,10 +40,11 @@ ms.locfileid: "63245740"
 >  Pour vous connecter à une instance utilisateur active de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , utilisez le protocole des canaux nommés en spécifiant le nom du canal, par exemple np:\\\\.\pipe\3C3DF6B1-2262-47\tsql\query. Pour plus d’informations, consultez la documentation de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] .  
   
  **Authentification**  
- Deux modes d’authentification sont disponibles lors de la connexion à une instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Deux modes d’authentification sont disponibles lors de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]connexion à une instance du.  
   
- **Mode d'authentification Windows (authentification Windows)**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Le mode d’authentification Windows permet à l’utilisateur de se connecter au moyen d’un compte d’utilisateur Windows.  
+ **Mode d’authentification Windows (authentification Windows)**  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Le mode d’authentification Windows permet à l’utilisateur de se connecter au moyen d’un compte d’utilisateur Windows.  
   
  **Authentification SQL Server**  
  Quand un utilisateur se connecte avec un nom d’accès et un mot de passe spécifiés à partir d’une connexion non autorisée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réalise l’authentification en vérifiant si un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été défini et si le mot de passe spécifié correspond à celui enregistré précédemment. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne possède pas de compte de connexion, l'authentification échoue et un message d'erreur est envoyé à l'utilisateur.  
@@ -60,7 +61,7 @@ ms.locfileid: "63245740"
  **Mot de passe**  
  Entrez le mot de passe utilisé avec la connexion. Ce mot de passe ne peut être modifié que si vous avez choisi la connexion avec l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Se connecter**  
+ **Connexion**  
  Cliquez sur cette option pour vous connecter au serveur sélectionné.  
   
  **Options**  

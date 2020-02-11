@@ -19,18 +19,18 @@ ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4ed53c6a72b201129cf9f75214261bbdd47d6fb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108151"
 ---
-# <a name="spdbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
+# <a name="sp_dbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crée un travail de surveillance de la mise en miroir de bases de données qui met régulièrement à jour l'état de mise en miroir de chaque base de données en miroir sur l'instance du serveur.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,19 +46,19 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 > [!NOTE]  
 >  Si la valeur attribuée à la période de mise à jour est trop basse, le temps de réponse peut augmenter pour les clients.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- Aucun  
+## <a name="return-code-values"></a>Codet de retour  
+ None  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  Cette procédure ne fonctionne que si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est autorisé à s'exécuter sur l'instance du serveur. En outre, le travail de surveillance de la mise en miroir de bases de données ne peut s'exécuter que si l'agent est lui-même en cours d'exécution.  
   
- Si la mise en miroir de base de données est démarrée à partir [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], le **sp_dbmmonitoraddmonitoring** procédure est exécutée automatiquement. Si vous démarrez la mise en miroir manuellement à l’aide d’instructions ALTER DATABASE, pour surveiller la mise en miroir de base de données sur l’instance de serveur, vous devez exécuter **sp_dbmmonitoraddmonitoring** manuellement.  
+ Si la mise en miroir de bases [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de données est démarrée à partir de, la procédure **sp_dbmmonitoraddmonitoring** est exécutée automatiquement. Si vous démarrez la mise en miroir manuellement à l’aide des instructions ALTER DATABASE, pour surveiller la base de données mise en miroir sur l’instance de serveur, vous devez exécuter **sp_dbmmonitoraddmonitoring** manuellement.  
   
 > [!NOTE]  
->  Si vous exécutez **sp_dbmmonitoraddmonitoring** avant de configurer la mise en miroir de base de données, le travail de surveillance s’exécute mais ne met pas à jour la table d’état dans la base de données mise en miroir de l’historique du moniteur est stocké.  
+>  Si vous exécutez **sp_dbmmonitoraddmonitoring** avant de configurer la mise en miroir de bases de données, le travail de surveillance s’exécute mais ne met pas à jour la table d’État dans laquelle l’historique du moniteur de mise en miroir de bases de données est stocké.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  

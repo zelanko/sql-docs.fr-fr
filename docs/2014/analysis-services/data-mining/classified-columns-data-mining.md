@@ -1,5 +1,5 @@
 ---
-title: Classé colonnes (exploration de données) | Microsoft Docs
+title: Colonnes classifiées (exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c96ee3cbaa5ae25404d61054dccd1860c6596f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085684"
 ---
 # <a name="classified-columns-data-mining"></a>Colonnes classifiées (exploration de données)
@@ -40,10 +40,10 @@ ms.locfileid: "66085684"
   
  La liste suivante décrit les types de contenu pris en charge par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour les colonnes classifiées.  
   
- **PROBABILITY**  
+ **RISQUE**  
  La valeur de la colonne représente la probabilité de la valeur associée et est comprise entre 0 et 1.  
   
- **VARIANCE**  
+ **TABLEAUX**  
  La valeur de la colonne représente la variance de la valeur associée.  
   
  **STDEV**  
@@ -55,12 +55,12 @@ ms.locfileid: "66085684"
  **PROBABILITY_STDEV**  
  La valeur de la colonne représente l'écart type de la probabilité de la valeur associée.  
   
- **SUPPORT**  
+ **SUPPORTER**  
  La valeur de la colonne représente le poids, ou facteur de réplication de cas, de la valeur associée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de contenu &#40;Exploration de données&#41;](content-types-data-mining.md)   
- [Structures d’exploration de données &#40;Analysis Services – Exploration de données&#41;](mining-structures-analysis-services-data-mining.md)   
- [Types de données &#40;exploration de données&#41;](data-types-data-mining.md)  
+ [Types de contenu &#40;l’exploration de données&#41;](content-types-data-mining.md)   
+ [Structures d’exploration de données &#40;Analysis Services d’exploration de données&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Types de données &#40;&#41;d’exploration de données](data-types-data-mining.md)  
   
   

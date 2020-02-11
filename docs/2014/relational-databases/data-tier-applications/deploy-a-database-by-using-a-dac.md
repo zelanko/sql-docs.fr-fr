@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873030"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Déployer une base de données à l'aide d'une DAC
@@ -78,49 +78,49 @@ ms.locfileid: "62873030"
   
     -   [Résultats](#Results)  
   
-##  <a name="Introduction"></a> Page Introduction  
+##  <a name="Introduction"></a>Page Introduction  
  Cette page décrit les étapes de l'Assistant **Déploiement de base de données**  
   
  **Options**  
   
 -   **Ne plus afficher cette page.** - Activez la case à cocher pour ne plus afficher la page Introduction à l'avenir.  
   
--   **Suivant** : passe à la page **Paramètres de déploiement** .  
+-   **Suivant** -passe à la page **paramètres de déploiement** .  
   
--   **Annuler** - Annule l’opération et ferme l’Assistant.  
+-   **Annuler** -annule l’opération et ferme l’Assistant.  
   
-##  <a name="Deployment_settings"></a> Page Paramètres de déploiement  
+##  <a name="Deployment_settings"></a>Page Paramètres de déploiement  
  Utilisez cette page pour spécifier le serveur de destination et fournir des détails sur votre nouvelle base de données.  
   
- **Hôte local :**  
+ **Hôte local :**  
   
--   **Connexion serveur** - Spécifiez les détails de connexion au serveur, puis cliquez sur **Se connecter** pour vérifier la connexion.  
+-   **Connexion au serveur** : spécifiez les détails de connexion au serveur, puis cliquez sur **se connecter** pour vérifier la connexion.  
   
--   **Nouveau nom de la base de données** - Spécifiez un nom pour la nouvelle base de données.  
+-   **Nom de la nouvelle base de données** : spécifiez un nom pour la nouvelle base de données.  
   
- **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] :**  
+ **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]paramètres de base de données :**  
   
--   **Édition [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** - Sélectionnez l’édition de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] dans le menu déroulant.  
+-   édition : sélectionnez l’édition de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] dans le menu déroulant. ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] **  
   
--   **Taille maximale de base de données** - Sélectionnez la taille maximale de la base de données dans le menu déroulant.  
+-   **Taille maximale de la base de données** : sélectionnez la taille maximale de la base de données dans le menu déroulant.  
   
- **Autres paramètres :**  
+ **Autres paramètres :**  
   
 -   Spécifiez un répertoire local pour le fichier temporaire, qui est le fichier d'archive BACPAC. Notez que le fichier est créé à l'emplacement spécifié et qu'il y reste une fois l'opération terminée.  
   
-##  <a name="Summary"></a> Page Résumé  
- Utilisez cette page pour passer en revue la source spécifiée et les paramètres cibles de l'opération. Pour terminer le déploiement à l'aide des paramètres spécifiés, cliquez sur **Terminer**. Pour annuler le déploiement et quitter l'Assistant, cliquez sur **Annuler**.  
+##  <a name="Summary"></a>Page Résumé  
+ Utilisez cette page pour passer en revue la source spécifiée et les paramètres cibles de l'opération. Pour terminer le déploiement à l'aide des paramètres spécifiés, cliquez sur **Terminer**. Pour annuler l’opération de déploiement et quitter l’Assistant, cliquez sur **Annuler**.  
   
-##  <a name="Progress"></a> Page Progression  
+##  <a name="Progress"></a>Page progression  
  Cette page affiche une barre de progression indiquant l'état de l'opération. Pour afficher l'état détaillé, cliquez sur l'option **Afficher les détails** .  
   
-##  <a name="Results"></a> Page Résultats  
+##  <a name="Results"></a>Page résultats  
  Cette page signale la réussite ou l'échec de l'opération de déploiement, affichant les résultats de chaque action. Toute action pour laquelle une erreur s'est produite aura un lien dans la colonne **Résultat** . Cliquez sur le lien pour consulter le rapport d'erreur de cette action.  
   
- Cliquez sur **Terminer** pour fermer l'Assistant.  
+ Cliquez sur **Terminer** pour fermer l’Assistant.  
   
 ## <a name="using-a-net-framework-application"></a>Utilisation d'une application .Net Framework  
- **Pour déployer une base de données à l’aide des méthodes DacStore, Export() et Import() dans une application .NET Framework.**  
+ **Pour déployer une base de données à l’aide des méthodes DacStoreExport () et Import () dans une application .NET Framework.**  
   
  Pour afficher un exemple de code, téléchargez l'exemple d'application DAC sur [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)  
   
@@ -137,8 +137,8 @@ ms.locfileid: "62873030"
 6.  Utilisez la méthode `Import` de type `Microsoft.SqlServer.Management.Dac.DacStore` pour importer le fichier BACPAC. Spécifiez le fichier BACPAC créé par l'exportation.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Applications de la couche Données](data-tier-applications.md)   
- [Exporter une application de la couche Données](export-a-data-tier-application.md)   
+ [Applications de la couche données](data-tier-applications.md)   
+ [Exporter une application de la couche données](export-a-data-tier-application.md)   
  [Importer un fichier BACPAC pour créer une nouvelle base de données utilisateur](import-a-bacpac-file-to-create-a-new-user-database.md)  
   
   

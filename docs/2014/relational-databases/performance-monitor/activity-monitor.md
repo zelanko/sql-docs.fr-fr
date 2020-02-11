@@ -13,19 +13,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f2420a4df5b971ae2190b2a66f24b226f472fee2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63249338"
 ---
 # <a name="activity-monitor"></a>Moniteur d'activité
   Le Moniteur d'activité affiche des informations sur les processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et sur la façon dont ces processus affectent l'instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="benefits-of-activity-monitor"></a>Avantages du Moniteur d'activité  
- Moniteur d’activité est une fenêtre de document à onglets qui compose les volets extensibles et réductibles suivants : **Vue d’ensemble**, **Tâches utilisateur actives**, **Attentes de ressources**, **E/S du fichier de données** et **Requêtes coûteuses récentes**. Lorsqu'un volet est développé, le Moniteur d'activité interroge l'instance pour obtenir des informations. Lorsqu'un volet est réduit, toutes les activités d'interrogation cessent pour ce volet. Vous pouvez également développer en même temps un ou plusieurs volets pour afficher différents types d'activité sur l'instance.  
+ Le moniteur d’activité est une fenêtre de document avec onglets qui contient les volets extensibles et réductibles suivants : **vue d’ensemble**, **tâches utilisateur actives**, **attentes de ressources**, **e/s de fichier de données**et **requêtes coûteuses récentes**. Lorsqu'un volet est développé, le Moniteur d'activité interroge l'instance pour obtenir des informations. Lorsqu'un volet est réduit, toutes les activités d'interrogation cessent pour ce volet. Vous pouvez également développer en même temps un ou plusieurs volets pour afficher différents types d'activité sur l'instance.  
   
- Pour les colonnes qui sont inclus dans le **tâches utilisateur actives**, **attentes de ressources**, **e/s de fichier de données**, et **requêtes coûteuses récentes** volets, vous pouvez personnaliser l’affichage de plusieurs manières :  
+ Pour les colonnes incluses dans les volets **tâches utilisateur actives**, **attentes de ressources**, **e/s de fichier de données**et **requêtes coûteuses récentes** , vous pouvez personnaliser l’affichage des manières suivantes :  
   
 1.  Pour réorganiser l'ordre des colonnes, cliquez sur l'en-tête de colonne et faites-le glisser vers un autre emplacement dans le ruban de titre.  
   

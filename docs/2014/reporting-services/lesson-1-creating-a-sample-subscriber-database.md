@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 1 : Création d’une base de données exemple abonné | Microsoft Docs'
+title: 'Leçon 1 : création d’un exemple de base de données de l’abonné | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9e68650b21ee8cddc6258ab64b874bcf51ec1a83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108540"
 ---
-# <a name="lesson-1-creating-a-sample-subscriber-database"></a>Leçon 1 : Création d’un exemple de base de données d’abonnés
+# <a name="lesson-1-creating-a-sample-subscriber-database"></a>Leçon 1 : Création d'un exemple de base de données de l'abonné
   Avant de pouvoir définir un abonnement piloté par les données, vous devez disposer d'une source de données qui fournit les données d'abonnement. Au cours de cette étape, vous allez créer une petite base de données pour y stocker les données d'abonnement qui seront utilisées dans ce didacticiel. Ensuite, une fois l'abonnement traité, le serveur de rapports extrait ces données et les utilise pour personnaliser le résultat du rapport, les options de remise et le format de présentation du rapport.  
   
- Cette leçon suppose que vous utilisez [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] pour créer un [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] base de données.  
+ Cette leçon suppose que vous utilisez [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] pour créer une [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] base de données.  
   
 ### <a name="to-create-a-sample-subscriber-database"></a>Pour créer une base de données d'abonnés exemple  
   
@@ -28,7 +28,7 @@ ms.locfileid: "66108540"
   
 2.  Cliquez avec le bouton droit sur Bases de données, puis sélectionnez **Nouvelle base de données**.  
   
-3.  Dans la boîte de dialogue Nouvelle base de données, dans le nom de la base de données, tapez *abonnés*. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+3.  Dans la boîte de dialogue nouvelle base de données, dans nom de la base de données, tapez *abonnés*. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 4.  Cliquez sur le bouton **Nouvelle requête** dans la barre d’outils.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66108540"
 7.  Utilisez une instruction SELECT pour vérifier que votre table comporte bien trois lignes de données. Par exemple : `select * from OrderInfo`  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Vous avez créé les données d'abonnement sur lesquelles seront basées la distribution des rapports et en fonction desquelles les résultats des rapports varieront pour chaque abonné. Ensuite, vous allez modifier les propriétés de la source de données du rapport que vous distribuerez aux abonnés. La modification des propriétés de la source de données est destinée à préparer le rapport pour la remise de l'abonnement piloté par les données. Vous allez également modifier la conception du rapport afin d'inclure un paramètre que l'abonnement utilisera avec les données d'abonné. [Leçon 2 : Propriétés de la modification des données de rapport Source](lesson-2-modifying-the-report-data-source-properties.md).  
+ Vous avez créé les données d'abonnement sur lesquelles seront basées la distribution des rapports et en fonction desquelles les résultats des rapports varieront pour chaque abonné. Ensuite, vous allez modifier les propriétés de la source de données du rapport que vous distribuerez aux abonnés. La modification des propriétés de la source de données est destinée à préparer le rapport pour la remise de l'abonnement piloté par les données. Vous allez également modifier la conception du rapport afin d'inclure un paramètre que l'abonnement utilisera avec les données d'abonné. [Leçon 2 : modification des propriétés de la source de données du rapport](lesson-2-modifying-the-report-data-source-properties.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   

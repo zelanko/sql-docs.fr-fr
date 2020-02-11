@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5dac84fe42185806ae468593876a6bd439c1c689
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890643"
 ---
 # <a name="data-mining-model-training-destination"></a>Destination d’apprentissage du modèle d’exploration de données
@@ -35,7 +35,7 @@ ms.locfileid: "68890643"
   
  La destination comporte une entrée et aucune sortie.  
   
- La destination d’apprentissage du modèle d’exploration de données utilise un gestionnaire de connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour se connecter au projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou à l’instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui contient la structure et les modèles d’exploration de données dont la destination assure l’apprentissage. Pour plus d'informations, consultez [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md).  
+ La destination d’apprentissage du modèle d’exploration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de données utilise un gestionnaire de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] connexions pour se connecter au [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projet ou à l’instance de qui contient la structure d’exploration de données et les modèles d’exploration de données que la destination contrainne. Pour plus d'informations, consultez [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md).  
   
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68890643"
   
 -   [Éditeur d’apprentissage du modèle d’exploration de données &#40;onglet Connexion&#41;](../data-mining-model-training-editor-connection-tab.md)  
   
--   [Éditeur d’apprentissage du modèle d’exploration de données &#40;onglet Colonnes&#41;](../data-mining-model-training-editor-columns-tab.md)  
+-   [Éditeur d’apprentissage du modèle d’exploration de données &#40;onglet colonnes&#41;](../data-mining-model-training-editor-columns-tab.md)  
   
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
@@ -51,6 +51,6 @@ ms.locfileid: "68890643"
   
 -   [Propriétés personnalisées de la destination d'apprentissage du modèle d'exploration de données](data-mining-model-training-destination-custom-properties.md)  
   
- Pour plus d’informations sur la définition des propriétés, consultez [Définir les propriétés d’un composant de flux de données](set-the-properties-of-a-data-flow-component.md).  
+ Pour plus d’informations sur la façon de définir les propriétés, consultez [Définir les propriétés d’un composant de flux de données](set-the-properties-of-a-data-flow-component.md).  
   
   

@@ -18,13 +18,13 @@ ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 60bb289f0fd6d7b7dd1034630929998d32cc59d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68115059"
 ---
-# <a name="spaddnotification-transact-sql"></a>sp_add_notification (Transact-SQL)
+# <a name="sp_add_notification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Définit une notification pour une alerte.  
@@ -40,40 +40,41 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @alert_name = ] 'alert'` L’alerte pour cette notification. *alerte* est **sysname**, sans valeur par défaut.  
+`[ @alert_name = ] 'alert'`Alerte pour cette notification. *alerte* est de **type sysname**, sans valeur par défaut.  
   
-`[ @operator_name = ] 'operator'` L’opérateur à notifier lorsque l’alerte se produit. *opérateur* est **sysname**, sans valeur par défaut.  
+`[ @operator_name = ] 'operator'`Opérateur à notifier lorsque l’alerte se produit. l' *opérateur* est de **type sysname**et n’a pas de valeur par défaut.  
   
-`[ @notification_method = ] notification_method` La méthode utilisée pour avertir l’opérateur. *méthode_de_notification* est **tinyint**, sans valeur par défaut. *méthode_de_notification* peut être une ou plusieurs des valeurs suivantes associées à un **OR** opérateur logique.  
+`[ @notification_method = ] notification_method`Méthode par laquelle l’opérateur est notifié. *notification_method* est de **type tinyint**, sans valeur par défaut. *notification_method* peut être une ou plusieurs de ces valeurs associées à un opérateur logique **or** .  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**1**|Messagerie électronique|  
-|**2**|Radiomessagerie|  
-|**4**|**net send**|  
+|**2**|Récepteur de radiomessagerie|  
+|**4**|**envoi réseau**|  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
- **sp_add_notification** doit être exécuté à partir de la **msdb** base de données.  
+ **sp_add_notification** doit être exécuté à partir de la base de données **msdb** .  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil simple, basé sur une interface graphique, qui permet de gérer le système d'alertes dans sa totalité. L’utilisation de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] est recommandée pour configurer l’infrastructure d’alertes.  
+ 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil simple, basé sur une interface graphique, qui permet de gérer le système d'alertes dans sa totalité. L’utilisation de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] est recommandée pour configurer l’infrastructure d’alertes.  
   
  Pour envoyer une notification en réponse à une alerte, vous devez d'abord configurer l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour l'envoi de messages électroniques.  
   
  En cas d’échec au moment de l’envoi d’un message par e-mail ou d’une notification par radiomessagerie, l’échec est consigné dans le journal des erreurs du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_add_notification**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_add_notification**.  
   
 ## <a name="examples"></a>Exemples  
  Cet exemple ajoute une notification envoyée par courrier électronique pour l'alerte spécifiée (`Test Alert`).  
   
-> **REMARQUE :** Cet exemple suppose que `Test Alert` existe déjà et que `François Ajenstat` est un nom d’opérateur valide.  
+> **Remarque :** Cet exemple suppose que `Test Alert` existe déjà et qu' `François Ajenstat` il s’agit d’un nom d’opérateur valide.  
   
 ```  
 USE msdb ;  

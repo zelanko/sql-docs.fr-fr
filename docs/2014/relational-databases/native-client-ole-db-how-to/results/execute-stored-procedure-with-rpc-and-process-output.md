@@ -1,5 +1,5 @@
 ---
-title: Exécuter une procédure stockée (avec la syntaxe RPC) et traiter des Codes de retour et des paramètres de sortie (OLE DB) | Microsoft Docs
+title: Exécuter une procédure stockée (à l’aide de la syntaxe RPC) et traiter les codes de retour et les paramètres de sortie (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e00adccfa6e75434fe398e21faafccc22f99914e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206684"
 ---
 # <a name="execute-a-stored-procedure-using-rpc-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>Exécuter une procédure stockée (avec la syntaxe RPC) et traiter des codes de retour et des paramètres de sortie (OLE DB)
@@ -34,7 +34,8 @@ ms.locfileid: "68206684"
   
 3.  Créez un jeu de liaisons (une pour chaque fabricant de paramètre) en utilisant un tableau de structures DBBINDING.  
   
-4.  Créez un accesseur pour les paramètres définis à l'aide de la méthode `IAccessor::CreateAccessor`. `CreateAccessor` crée un accesseur à partir d'un jeu de liaisons.  
+4.  Créez un accesseur pour les paramètres définis à l'aide de la méthode `IAccessor::CreateAccessor`. 
+  `CreateAccessor` crée un accesseur à partir d'un jeu de liaisons.  
   
 5.  Remplissez la structure DBPARAMS.  
   

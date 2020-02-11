@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 46b1155878aae6cc7f667965cfae065ed1a9cacc
-ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74564743"
 ---
 # <a name="sysdm_pdw_resource_waits-transact-sql"></a>sys. dm_pdw_resource_waits (Transact-SQL)
@@ -29,14 +29,14 @@ ms.locfileid: "74564743"
 |wait_id|**bigint**|Position de la demande dans la liste d’attente.|ordinal de base 0. Cela n’est pas unique pour toutes les entrées d’attente.|  
 |session_id|**nvarchar (32)**|ID de la session dans laquelle l’état d’attente s’est produit.|Consultez session_id dans [sys. dm_pdw_exec_sessions &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
 |type|**nvarchar(255)**|Type d’attente représenté par cette entrée.|Valeurs possibles :<br /><br /> Connexion<br /><br /> Concurrence des requêtes locales<br /><br /> Concurrence des requêtes distribuées<br /><br /> Concurrence DMS<br /><br /> Concurrence de sauvegarde|  
-|object_type|**nvarchar(255)**|Type d’objet affecté par l’attente.|Valeurs possibles :<br /><br /> **DESSIN**<br /><br /> **DATABASE**<br /><br /> **REQUISE**<br /><br /> **SCHÉMA**<br /><br /> **OEUVRE**|  
+|object_type|**nvarchar(255)**|Type d’objet affecté par l’attente.|Valeurs possibles :<br /><br /> **DESSIN**<br /><br /> **DATABASE**<br /><br /> **REQUISE**<br /><br /> **SCHEMA**<br /><br /> **OEUVRE**|  
 |object_name|**nvarchar(386**|Nom ou GUID de l’objet spécifié qui a été affecté par l’attente.|Les tables et les vues sont affichées avec des noms en trois parties.<br /><br /> Les index et les statistiques sont affichés avec des noms en quatre parties.<br /><br /> Les noms, les principaux et les bases de données sont des noms de chaîne.|  
 |request_id|**nvarchar (32)**|ID de la demande sur laquelle l’état d’attente s’est produit.|Identificateur QID de la demande.<br /><br /> Identificateur GUID pour les demandes de chargement.|  
-|request_time|**Date/heure**|Heure à laquelle le verrou ou la ressource a été demandé.||  
-|acquire_time|**Date/heure**|Heure à laquelle le verrou ou la ressource a été acquis (e).||  
+|request_time|**DATETIME**|Heure à laquelle le verrou ou la ressource a été demandé.||  
+|acquire_time|**DATETIME**|Heure à laquelle le verrou ou la ressource a été acquis (e).||  
 |state|**nvarchar(50)**|État de l’état d’attente.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|priority|**tiers**|Priorité de l’élément en attente.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|concurrency_slots_used|**tiers**|Interne|Voir les [attentes des ressources de surveillance](#monitor-resource-waits) ci-dessous|  
+|priority|**int**|Priorité de l’élément en attente.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|concurrency_slots_used|**int**|Interne|Voir les [attentes des ressources de surveillance](#monitor-resource-waits) ci-dessous|  
 |resource_class|**nvarchar(20**|Interne |Voir les [attentes des ressources de surveillance](#monitor-resource-waits) ci-dessous|  
   
 ## <a name="monitor-resource-waits"></a>Surveiller les attentes des ressources 

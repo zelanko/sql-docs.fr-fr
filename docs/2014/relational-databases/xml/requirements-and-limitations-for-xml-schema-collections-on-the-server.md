@@ -25,10 +25,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 245b844872070ee16104a90ecc0734462bdad3b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63241259"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Spécifications et limitations relatives aux collections de schémas XML sur le serveur
@@ -41,13 +41,15 @@ ms.locfileid: "63241259"
 |**\<xsd:include>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend actuellement pas en charge cet élément. Les schémas XML incluant cet élément seront rejetés par le serveur.<br /><br /> En guise de solution, les schémas XML qui comportent la directive **\<xsd:include>** peuvent être prétraités de façon à copier et fusionner le contenu de tous les schémas inclus dans un seul et unique schéma à charger vers le serveur. Pour plus d’informations, consultez [Prétraiter un schéma pour fusionner des schémas inclus](preprocess-a-schema-to-merge-included-schemas.md).|  
 |**\<xsd:key>** , **\<xsd:keyref>** et **\<xsd:unique>**|Actuellement, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge ces contraintes basées sur XSD pour appliquer l'unicité ou établir des clés ou des références de clés. Les schémas XML contenant ces éléments ne peuvent pas être inscrits.|  
 |**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend actuellement pas en charge cet élément. Pour obtenir des informations sur une autre façon de mettre à jour des schémas, consultez [Élément &#60;xsd:redefine&#62;](the-xsd-redefine-element.md)y sont abordées.|  
-|**Valeurs \<xsd:simpleType>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend uniquement en charge la précision à la milliseconde pour les types simples comportant un composant seconde autre que `xs:time` et `xs:dateTime`, et une précision de 100 nanosecondes pour `xs:time` et `xs:dateTime`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impose des limites à toutes les énumérations de types simples XSD reconnus.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge l’utilisation de la valeur « NaN » dans les déclarations **\<xsd:simpleType>** .<br /><br /> Pour plus d’informations, consultez[Valeurs pour les déclarations &#60;xsd:simpleType&#62;](values-for-xsd-simpletype-declarations.md)y sont abordées.|  
-|**xsi:schemaLocation** et **xsi:noNamespaceSchemaLocation**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignore ces attributs s'ils sont présents dans les données d'instance XML insérées dans une colonne ou une variable de type de données `xml`.|  
+|**Valeurs \<xsd:simpleType>**|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend uniquement en charge la précision à la milliseconde pour les types simples comportant un composant seconde autre que `xs:time` et `xs:dateTime`, et une précision de 100 nanosecondes pour `xs:time` et `xs:dateTime`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impose des limites à toutes les énumérations de types simples XSD reconnus.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge l’utilisation de la valeur « NaN » dans les déclarations **\<xsd:simpleType>** .<br /><br /> Pour plus d’informations, consultez[Valeurs pour les déclarations &#60;xsd:simpleType&#62;](values-for-xsd-simpletype-declarations.md)y sont abordées.|  
+|**xsi:schemaLocation** et **xsi:noNamespaceSchemaLocation**|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignore ces attributs s'ils sont présents dans les données d'instance XML insérées dans une colonne ou une variable de type de données `xml`.|  
 |**xs:QName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge les types dérivés de **xs:QName** utilisant un élément de restriction de schéma XML.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge les types union avec **xs:QName** en tant qu'élément de membre.<br /><br /> Pour plus d’informations, consultez [The xs:QName Type](the-xs-qname-type.md).|  
 |Ajout de membres à un groupe de substitution existant|Vous ne pouvez pas ajouter des membres à un groupe de substitution existant dans une collection de schémas XML. Un groupe de substitution dans un schéma XML est restreint en cela que l’élément de tête et tous les éléments membres doivent être définis dans la même instruction {CREATE &#124; ALTER} XML SCHEMA COLLECTION.|  
 |Formes canoniques et restrictions de modèle|La représentation canonique d'une valeur ne peut enfreindre la restriction de modèle pour son type. Pour plus d’informations, consultez [Canonical Forms and Pattern Restrictions](canonical-forms-and-pattern-restrictions.md).|  
 |Facettes d'énumération|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge les schémas XML avec des types présentant des facettes de modèles ou des énumérations enfreignant ces facettes.|  
-|Longueur de facette|Le **longueur**, **minLength**, et **maxLength** facettes sont stockés en tant qu’un `long` type. type codé sur 32 bits. Par conséquent, la plage de valeurs acceptables pour ces valeurs est 2<sup>^</sup>31.|  
+|Longueur de facette|Les facettes **Length**, **minLength**et **MaxLength** sont stockées en tant que `long` type. type codé sur 32 bits. Par conséquent, la plage de valeurs acceptables pour ces valeurs<sup>^</sup>est 2 31.|  
 |Attribut d'ID|Chaque composant de schéma XML peut avoir un attribut d'ID. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applique l’unicité des déclarations **\<xsd:attribute>** de type **ID**, mais il ne stocke pas ces valeurs. L’étendue pour l’application de l’unicité est l’instruction {CREATE &#124; ALTER} XML SCHEMA COLLECTION.|  
 |Type ID|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge les éléments de type **xs:ID**, **xs:IDREF**ou **xs:IDREFS**. Un schéma peut ne pas déclarer les éléments de ce type, ou les éléments dérivés par restriction ou par extension de ce type.|  
 |Espace de noms local|L’espace de noms local doit être spécifié explicitement pour l’élément **\<xsd:any>** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejette les schémas qui utilisent une chaîne vide ("") comme valeur de l’attribut d’espace de noms. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nécessite en lieu et place l'utilisation explicite de « ##local » pour indiquer qu'un élément ou un attribut non qualifié sera utilisé en tant qu'instance du caractère générique.|  
@@ -64,13 +66,13 @@ ms.locfileid: "63241259"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Canonical Forms and Pattern Restrictions](canonical-forms-and-pattern-restrictions.md)|Explique les formes canoniques et restrictions de modèle.|  
+|[Formes canoniques et restrictions de modèle](canonical-forms-and-pattern-restrictions.md)|Explique les formes canoniques et restrictions de modèle.|  
 |[Composants génériques et validation de contenu](wildcard-components-and-content-validation.md)|Décrit les limitations liées à l'utilisation des caractères génériques, de la validation de type lax et des éléments anyType avec des collections de schémas XML.|  
 |[Élément &#60;xsd:redefine&#62;](the-xsd-redefine-element.md)|Explique la limitation liée à l’utilisation de l’élément \<xsd:redefine> et décrit une solution de contournement.|  
-|[Type xs:QName](the-xs-qname-type.md)|Décrit la limitation relative au type xs:QName.|  
+|[The xs:QName Type](the-xs-qname-type.md)|Décrit la limitation relative au type xs:QName.|  
 |[Valeurs pour les déclarations &#60;xsd:simpleType&#62;](values-for-xsd-simpletype-declarations.md)|Décrit les restrictions appliquées aux déclarations \<xsd:simpleType>.|  
-|[Facettes d’énumération](enumeration-facets.md)|Décrit la limitation relative aux facettes d'énumération.|  
-|[Mixed Type and Simple Content](mixed-type-and-simple-content.md)|Décrit la limitation relative à la restriction d'un type mixte à un contenu simple.|  
+|[Enumeration Facets](enumeration-facets.md)|Décrit la limitation relative aux facettes d'énumération.|  
+|[Type mixte et contenu simple](mixed-type-and-simple-content.md)|Décrit la limitation relative à la restriction d'un type mixte à un contenu simple.|  
 |[Collections de schémas XML volumineuses et conditions de mémoire insuffisante](large-xml-schema-collections-and-out-of-memory-conditions.md)|Fournit des solutions pour la condition de mémoire insuffisante qui se produit parfois avec les grandes collections de schémas.|  
 |[Modèles de contenu non déterministes](non-deterministic-content-models.md)|Décrit les limitations relatives aux modèles de contenu non déterministes.|  
   

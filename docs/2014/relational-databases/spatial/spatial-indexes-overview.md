@@ -12,22 +12,23 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 67f7ac024c2a2b779518a0a775705f17b423ecf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014022"
 ---
 # <a name="spatial-indexes-overview"></a>Vue d'ensemble des index spatiaux
+  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les données spatiales et les index spatiaux. Un *index spatial* est un type d'index étendu qui vous permet d'indexer une colonne spatiale. Une colonne spatiale est une colonne de table qui contient des données d'un type de données spatiales, tel que `geometry` ou `geography`.  
   
 > [!IMPORTANT]  
 >  Pour obtenir une description détaillée et des exemples des fonctionnalités spatiales introduites dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], notamment les fonctionnalités qui affectent les index spatiaux, téléchargez le livre blanc [New Spatial Features in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)(Nouvelles fonctionnalités spatiales de SQL Server 2012).  
   
-##  <a name="about"></a> À propos des index spatiaux  
+##  <a name="about"></a>À propos des index spatiaux  
   
-###  <a name="decompose"></a> Décomposition de l'espace indexé en une hiérarchie de grille  
- Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les index spatiaux sont construits à l'aide d'arbres B (B-trees), ce qui signifie que les index doivent représenter les données spatiales bidimensionnelles dans l'ordre linéaire d'arbres B. Par conséquent, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implémente une décomposition uniforme hiérarchique de l'espace avant de lire des données dans un index spatial. Le processus de création d’index *décompose* l’espace en une *hiérarchie de grille*à quatre niveaux. Ces niveaux sont appelés *niveau 1* (niveau supérieur), *niveau 2*, *niveau 3*et *niveau 4*.  
+###  <a name="decompose"></a>Décomposition de l’espace indexé en une hiérarchie de grille  
+ Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les index spatiaux sont construits à l'aide d'arbres B (B-trees), ce qui signifie que les index doivent représenter les données spatiales bidimensionnelles dans l'ordre linéaire d'arbres B. Par conséquent, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implémente une décomposition uniforme hiérarchique de l'espace avant de lire des données dans un index spatial. Le processus de création d’index *décompose* l’espace en une hiérarchie de *grille*à quatre niveaux. Ces niveaux sont appelés *niveau 1* (niveau supérieur), *niveau 2*, *niveau 3*et *niveau 4*.  
   
  Chaque niveau consécutif décompose davantage le niveau supérieur ; chaque cellule de niveau supérieur contient donc une grille complète au niveau suivant. Sur un niveau donné, toutes les grilles ont le même nombre de cellules le long des deux axes (par exemple, 4x4 ou 8x8) et les cellules sont toutes d'une seule taille.  
   
@@ -45,7 +46,7 @@ ms.locfileid: "66014022"
 #### <a name="grid-density"></a>Densité de grille  
  Le nombre de cellules le long des axes d'une grille détermine sa *densité*: plus le nombre est élevé, plus la grille est dense. Par exemple, une grille 8x8 (qui produit 64 cellules) est plus dense qu'une grille 4x4 (qui produit 16 cellules). La densité de grille est définie sur la base de chaque niveau.  
   
- L'instruction [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] prend en charge une clause GRIDS qui vous permet de spécifier des densités de grille différentes à des niveaux différents. La densité de grille pour un niveau donné est spécifiée à l'aide de l'un des mots clés suivants.  
+ L’instruction [Create spatial index](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] prend en charge une clause GRIDS qui vous permet de spécifier des densités de grille différentes à différents niveaux. La densité de grille pour un niveau donné est spécifiée à l'aide de l'un des mots clés suivants.  
   
 |Mot clé|Configuration de grille|Nombre de cellules|  
 |-------------|------------------------|---------------------|  
@@ -58,9 +59,9 @@ ms.locfileid: "66014022"
  Vous pouvez contrôler le processus de décomposition en spécifiant des densités de grille autres que les densités par défaut. Par exemple, différentes densités de grille sur différents niveaux peuvent être utiles pour le réglage fin d'un index en fonction de la taille de l'espace indexé et des objets contenus dans la colonne spatiale.  
   
 > [!NOTE]  
->  Les densités de grille d’un index spatial sont visibles dans les colonnes level_1_grid, level_2_grid, level_3_grid et level_4_grid de l’affichage catalogue [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) quand le niveau de compatibilité de la base de données est défini à 100 ou à une valeur inférieure. Le `GEOMETRY_AUTO_GRID` / `GEOGRAPHY_AUTO_GRID` options de schéma de pavage ne remplissent pas ces colonnes. catalogue sys.spatial_index_tessellations présente `NULL` valeurs pour ces colonnes lorsque les options de grille automatique sont utilisées.  
+>  Les densités de grille d’un index spatial sont visibles dans les colonnes level_1_grid, level_2_grid, level_3_grid et level_4_grid de l’affichage catalogue [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) quand le niveau de compatibilité de la base de données est défini à 100 ou à une valeur inférieure. Les `GEOMETRY_AUTO_GRID` / `GEOGRAPHY_AUTO_GRID` options de schéma de pavage ne remplissent pas ces colonnes. l’affichage catalogue sys. spatial_index_tessellations `NULL` a des valeurs pour ces colonnes lorsque les options de grille automatique sont utilisées.  
   
-###  <a name="tessellation"></a> Pavage  
+###  <a name="tessellation"></a>Mosaïque  
  Après la décomposition d'un espace indexé en une hiérarchie de grille, l'index spatial lit les données de la colonne spatiale, ligne par ligne. Après avoir lu les données pour un objet spatial (ou une instance), l’index spatial exécute un *processus de pavage* pour cet objet. Le processus de pavage place l’objet dans la hiérarchie de grille en associant l’objet à un ensemble de cellules de grille qu’il touche (*cellules touchées*). En partant du niveau 1 de la hiérarchie de grille, le processus de pavage continue *dans le sens de la largeur* à travers le niveau. Potentiellement, le processus peut se poursuivre à travers les quatre niveaux, un niveau à la fois.  
   
  La sortie du processus de pavage est un jeu de cellules touchées enregistrées dans l'index spatial pour l'objet. En faisant référence à ces cellules enregistrées, l'index spatial peut localiser l'objet dans l'espace relativement à d'autres objets dans la colonne spatiale qui sont également stockés dans l'index.  
@@ -98,7 +99,7 @@ ms.locfileid: "66014022"
   
  Par exemple, considérez l'illustration précédente, qui montre un octogone qui s'adapte parfaitement à la cellule 15 de la grille de niveau 1. Dans l'illustration, la cellule 15 a été pavée, l'octogone ayant été disséqué en neuf cellules de niveau 2. Cette illustration suppose que la limite de cellules par objet est supérieure ou égale à 9. Si la limite de cellules par objet était inférieure ou égale à 8, la cellule 15 ne serait pas pavée et seule cette cellule 15 serait comptée pour l'objet.  
   
- Par défaut, la limite de cellules par objet est de 16, ce qui constitue un compromis satisfaisant entre l'espace et la précision pour la plupart des index spatiaux. Toutefois, le [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruction prend en charge un CELLS_PER_OBJECT`=`*n* clause qui vous permet de spécifier une limite de cellules par objet comprise entre 1 et 8192, inclusif.  
+ Par défaut, la limite de cellules par objet est de 16, ce qui constitue un compromis satisfaisant entre l'espace et la précision pour la plupart des index spatiaux. Toutefois, l’instruction [Create spatial index](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] prend en`=`charge une clause CELLS_PER_OBJECT*n* qui vous permet de spécifier une limite de cellules par objet comprise entre 1 et 8192 inclus.  
   
 > [!NOTE]  
 >  Le paramètre **cells_per_object** d’un index spatial est visible dans l’affichage catalogue [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) .  
@@ -106,16 +107,16 @@ ms.locfileid: "66014022"
 #### <a name="deepest-cell-rule"></a>Règle de cellule la plus profonde  
  La règle de cellule la plus profonde exploite le fait que chaque cellule de niveau inférieur appartient à la cellule située au-dessus d'elle : une cellule de niveau 4 appartient à une cellule de niveau 3, une cellule de niveau 3 appartient à une cellule de niveau 2 et une cellule de niveau 2 appartient à une cellule de niveau 1. Par exemple, un objet qui appartient à la cellule 1.1.1.1 appartient également à la cellule 1.1.1, à la cellule 1.1 et à la cellule 1. La connaissance de telles relations de hiérarchie de cellule est intégrée au processeur de requêtes. Par conséquent, seules les cellules les plus profondes doivent être enregistrées dans l'index, ce qui réduit la quantité d'informations que l'index doit stocker.  
   
- Dans l'illustration suivante, un polygone en losange relativement petit est pavé. L'index utilise la limite de cellules par objet par défaut de 16, qui n'est pas atteinte pour ce petit objet. Par conséquent, le pavage continue jusqu'au niveau 4. Le polygone réside dans les cellules du niveau 1 au niveau 3 suivantes : 4, 4.4 et 4.4.10 et 4.4.14. Toutefois, avec la règle de cellule la plus profonde, le pavage compte uniquement les douze cellules de niveau 4 : 4.4.10.13-15 et 4.4.14.1-3, 4.4.14.5-7 et 4.4.14.9-11.  
+ Dans l'illustration suivante, un polygone en losange relativement petit est pavé. L'index utilise la limite de cellules par objet par défaut de 16, qui n'est pas atteinte pour ce petit objet. Par conséquent, le pavage continue jusqu'au niveau 4. Le polygone réside dans les cellules suivantes du niveau 1 au niveau 3 : 4, 4.4 et 4.4.10 et 4.4.14. Toutefois, avec la règle de cellule la plus profonde, le pavage compte uniquement les douze cellules de niveau 4 : 4.4.10.13-15 et 4.4.14.1-3, 4.4.14.5-7 et 4.4.14.9-11.  
   
  ![Optimisation de la cellule la plus profonde](../../database-engine/media/spndx-opt-deepest-cell.gif "Optimisation de la cellule la plus profonde")  
   
-###  <a name="schemes"></a> Schémas de pavage  
+###  <a name="schemes"></a>Schémas de pavage  
  Le comportement d'un index spatial dépend en partie de son *schéma de pavage*. Le schéma de pavage est spécifique au type de données. Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les index spatiaux prennent en charge deux schémas de pavage :  
   
--   *Pavage de grille géométrique*, qui est le schéma pour le `geometry` type de données.  
+-   *Pavage de grille géométrique*, qui est le schéma pour `geometry` le type de données.  
   
--   *Pavage de grille géographique*, qui s’applique aux colonnes de la `geography` type de données.  
+-   Le `geography` *pavage de grille géographique*, qui s’applique aux colonnes du type de données.  
   
 > [!NOTE]  
 >  Le paramètre **tessellation_scheme** d’un index spatial est visible dans l’affichage catalogue [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) .  
@@ -124,27 +125,27 @@ ms.locfileid: "66014022"
  Le pavage GEOMETRY_AUTO_GRID est le schéma de pavage par défaut pour le type de données `geometry`, pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et versions ultérieures.  Le pavage GEOMETRY_GRID est le seul schéma de pavage disponible pour les types de données de géométrie dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Cette section traite des aspects du pavage de grille géométrique qui sont pertinents à l'utilisation d'index spatiaux : méthodes prises en charge et zones englobantes.  
   
 > [!NOTE]  
->  Vous pouvez spécifier explicitement ce schéma de pavage à l’aide de la clause USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) de l’instruction [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
+>  Vous pouvez spécifier explicitement ce schéma de pavage à l’aide de la clause using (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) de l’instruction [Create spatial index](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
 ##### <a name="the-bounding-box"></a>Cadre englobant  
- Les données géométriques occupent un plan qui peut être infini. Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], toutefois, un index spatial requiert un espace fini. Pour établir un espace fini pour la décomposition, le schéma de pavage de grille géométrique requiert un *cadre englobant*rectangulaire. La zone englobante est définie par quatre coordonnées, `(` _x-min_ **,** _y-min_ `)` et `(` _max.x_ **,** _max. y_`)`, qui sont stockés en tant que propriétés de l’index spatial. Ces coordonnées représentent les éléments suivants :  
+ Les données géométriques occupent un plan qui peut être infini. Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], toutefois, un index spatial requiert un espace fini. Pour établir un espace fini pour la décomposition, le schéma de pavage de grille géométrique requiert un *cadre englobant*rectangulaire. Le cadre englobant est défini par quatre coordonnées, `(` _x-min_**,**_y-min_ `)` et `(` _x-max_**,**_y-max_`)`, qui sont stockées en tant que propriétés de l’index spatial. Ces coordonnées représentent les éléments suivants :  
   
--   *x-min* est la coordonnée x de l’angle inférieur gauche du cadre englobant.  
+-   *x-min* est la coordonnée x de l’angle inférieur gauche du rectangle englobant.  
   
 -   *y-min* est la coordonnée y de l’angle inférieur gauche.  
   
 -   *x-max* est la coordonnée x de l’angle supérieur droit.  
   
--   *x-max* est la coordonnée y de l’angle supérieur droit.  
+-   *y-max* est la coordonnée y de l’angle supérieur droit.  
   
 > [!NOTE]  
->  Ces coordonnées sont spécifiées par la clause BOUNDING_BOX de l’instruction [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
+>  Ces coordonnées sont spécifiées par la clause BOUNDING_BOX de l’instruction [Create spatial index](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
- Le `(` _x-min_ **,** _y-min_ `)` et `(` _x-max_ **,** _max. y_ `)` coordonnées déterminent la position et les dimensions du rectangle englobant. L'espace en dehors du cadre englobant est traité comme une cellule unique affectée du numéro 0.  
+ Les `(` _coordonnées x-min_**,**_y-min_ `)` et `(` _x-max_**,**_y-max_ `)` déterminent la position et les dimensions du cadre englobant. L'espace en dehors du cadre englobant est traité comme une cellule unique affectée du numéro 0.  
   
  L'index spatial décompose l'espace à l'intérieur du cadre englobant. La grille de niveau 1 de la hiérarchie de grille remplit le cadre englobant. Pour placer un objet géométrique dans la hiérarchie de grille, l'index spatial compare les coordonnées de l'objet à celles du cadre englobant.  
   
- L’illustration suivante montre les points définis par le `(` _x-min_ **,** _y-min_ `)` et `(` _x-max_  **,** _max. y_ `)` coordonnées du rectangle englobant. Le niveau supérieur de la hiérarchie de grille est illustré comme une grille 4x4. À des fins d'illustration, les niveaux inférieurs sont omis. L'espace en dehors de la zone englobante est indiqué par un zéro (0). Notez que l'objet 'A' s'étend en partie au-delà du cadre et que l'objet 'B' se trouve complètement à l'extérieur du cadre dans la cellule 0.  
+ L’illustration suivante montre les points définis par les `(` _x-min_**,**_y-min_ `)` et `(` _x-max_**,**_y-max_ `)` du cadre englobant. Le niveau supérieur de la hiérarchie de grille est illustré comme une grille 4x4. À des fins d'illustration, les niveaux inférieurs sont omis. L'espace en dehors de la zone englobante est indiqué par un zéro (0). Notez que l'objet 'A' s'étend en partie au-delà du cadre et que l'objet 'B' se trouve complètement à l'extérieur du cadre dans la cellule 0.  
   
  ![Rectangle englobant affichant les coordonnées et la cellule 0.](../../database-engine/media/spndx-bb-4x4-objects.gif "Rectangle englobant affichant les coordonnées et la cellule 0.")  
   
@@ -157,7 +158,7 @@ ms.locfileid: "66014022"
  Ce schéma de pavage s'applique uniquement à une colonne `geography`. Cette section résume les méthodes qui sont prises en charge par le pavage de grille géographique et discute de la manière dont l'espace géodésique est projeté sur un plan, qui est ensuite décomposé en une hiérarchie de grille.  
   
 > [!NOTE]  
->  Vous pouvez spécifier explicitement ce schéma de pavage à l’aide de la clause USING (GEOGRAPHY_AUTO_GRID/GEOGRAPHY_GRID de l’instruction [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
+>  Vous pouvez spécifier explicitement ce schéma de pavage à l’aide de la clause using (GEOGRAPHY_AUTO_GRID/GEOGRAPHY_GRID) de l’instruction [Create spatial index](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
 ##### <a name="projection-of-the-geodetic-space-onto-a-plane"></a>Projection de l'espace géodésique sur un plan  
  Les calculs sur les instances (objets) `geography` traitent l'espace qui contient les objets comme une ellipsoïde géodésique. Pour décomposer cet espace, le schéma de pavage de grille géographique divise la surface de l'ellipsoïde en ses hémisphères supérieur et inférieur puis effectue les étapes suivantes :  
@@ -170,55 +171,55 @@ ms.locfileid: "66014022"
   
  L'illustration suivante montre une vue schématique du processus de décomposition en trois étapes. Dans les pyramides, les traits pointillés représentent les limites des quatre facettes de chaque pyramide. Les étapes 1 et 2 illustrent l'ellipsoïde géodésique, avec une ligne horizontale verte pour représenter la ligne de longitude équatoriale et une série de lignes verticales vertes pour représenter plusieurs lignes de latitude. L'étape 1 illustre la projection des pyramides sur les deux hémisphères. L'étape 2 illustre l'aplatissement des pyramides. L'étape 3 illustre les pyramides aplaties, après qu'elles ont été combinées de façon à former un plan, avec plusieurs lignes de longitude projetées. Remarquez que ces lignes projetées sont tendues et que leur longueur varie en fonction de l'emplacement où elles sont sur les pyramides.  
   
- ![Projection de l’ellipsoïde sur un plan](../../database-engine/media/spndx-geodetic-projection.gif "Projection de l’ellipsoïde sur un plan")  
+ ![Projection de l'ellipsoïde sur un plan](../../database-engine/media/spndx-geodetic-projection.gif "Projection de l'ellipsoïde sur un plan")  
   
  Une fois l'espace projeté sur le plan, celui-ci est décomposé en une hiérarchie de grille à quatre niveaux. Différents niveaux peuvent utiliser différentes densités de grille. L'illustration suivante montre le plan après qu'il a été décomposé en une grille 4x4 de niveau 1. À des fins d'illustration, les niveaux inférieurs de la hiérarchie de grille sont omis. En réalité, le plan est décomposé entièrement en une hiérarchie de grille à quatre niveaux. Une fois le processus de décomposition terminé, les données géographiques sont lues, ligne par ligne, à partir de la colonne géographique et le processus de pavage est effectué pour chaque objet l'un après l'autre.  
   
- ![Grille géographique de niveau 1](../../database-engine/media/spndx-geodetic-level1grid.gif "Grille géographique de niveau 1")  
+ ![Grille géographique de niveau 1](../../database-engine/media/spndx-geodetic-level1grid.gif "Grille géographique de niveau 1")  
   
-##  <a name="methods"></a> Méthodes prises en charge par les index spatiaux  
+##  <a name="methods"></a>Méthodes prises en charge par les index spatiaux  
   
-###  <a name="geometry"></a> Méthodes géométriques prises en charge par les index spatiaux  
- Les index spatiaux prennent en charge les méthodes de géométrie basées sur les ensembles suivantes sous certaines conditions : STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() et STWithin(). Pour être prises en charge par un index spatial, ces méthodes doivent être utilisées dans la clause WHERE ou JOIN ON d'une requête et elles doivent se produire dans un prédicat de la forme générale suivante :  
+###  <a name="geometry"></a>Méthodes géométriques prises en charge par les index spatiaux  
+ Les index spatiaux prennent en charge les méthodes géométriques suivantes basées sur les ensembles sous certaines conditions : STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() et STWithin(). Pour être prises en charge par un index spatial, ces méthodes doivent être utilisées dans la clause WHERE ou JOIN ON d'une requête et elles doivent se produire dans un prédicat de la forme générale suivante :  
   
- *geometry1*.*method_name*(*geometry2*)*comparison_operator**valid_number*  
+ *Geometry1*. *method_name*(*Geometry2*)*comparison_operator * * valid_number*  
   
  Pour retourner un résultat non Null, *geometry1* et *geometry2* doivent avoir le même [identificateur de référence spatiale (SRID)](../spatial/spatial-reference-identifiers-srids.md). Sinon, la méthode renvoie NULL.  
   
  Les index spatiaux prennent en charge les formes de prédicat suivantes :  
   
--   *geometry1*.[STContains](/sql/t-sql/spatial-geometry/stcontains-geometry-data-type)(*geometry2*) = 1  
+-   *Geometry1*. [STContains](/sql/t-sql/spatial-geometry/stcontains-geometry-data-type)(*Geometry2*) = 1  
   
--   *geometry1*.[STDistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)(*geometry2*) < *nombre*  
+-   *Geometry1*. [STDistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)(*Geometry2*) < *nombre*  
   
--   *geometry1*.[STDistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)(*geometry2*) <= *nombre*  
+-   *Geometry1*. [STDistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)(*Geometry2*) <= *nombre*  
   
--   *geometry1*.[STEquals](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)(*geometry2*)= 1  
+-   *Geometry1*. [STEquals](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)(*Geometry2*) = 1  
   
--   *geometry1*.[STIntersects](/sql/t-sql/spatial-geometry/stintersects-geometry-data-type)(*geometry2*)= 1  
+-   *Geometry1*. [STIntersects](/sql/t-sql/spatial-geometry/stintersects-geometry-data-type)(*Geometry2*) = 1  
   
--   *geometry1.* [STOverlaps](/sql/t-sql/spatial-geometry/stoverlaps-geometry-data-type) *(geometry2) = 1*  
+-   *Geometry1.* [STOverlaps](/sql/t-sql/spatial-geometry/stoverlaps-geometry-data-type) *(Geometry2) = 1*  
   
--   *geometry1*.[STTouches](/sql/t-sql/spatial-geometry/sttouches-geometry-data-type)(*geometry2*) = 1  
+-   *Geometry1*. [STTouches](/sql/t-sql/spatial-geometry/sttouches-geometry-data-type)(*Geometry2*) = 1  
   
--   *geometry1*.[STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*geometry2*)= 1  
+-   *Geometry1*. [STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*Geometry2*) = 1  
   
-###  <a name="geography"></a> Méthodes géographiques prises en charge par les index spatiaux  
- Sous certaines conditions, les index spatiaux prennent en charge les méthodes de géographie basées sur les ensembles suivantes : STIntersects(),STEquals() et STDistance(). Pour être prises en charge par un index spatial, ces méthodes doivent être utilisées dans la clause WHERE d'une requête et elles doivent se produire dans un prédicat de la forme générale suivante :  
+###  <a name="geography"></a>Méthodes géographiques prises en charge par les index spatiaux  
+ Sous certaines conditions, les index spatiaux prennent en charge les méthodes géographiques suivantes basées sur les ensembles : STIntersects(),STEquals(), and STDistance(). Pour être prises en charge par un index spatial, ces méthodes doivent être utilisées dans la clause WHERE d'une requête et elles doivent se produire dans un prédicat de la forme générale suivante :  
   
- *geography1*.*method_name*(*geography2*)*comparison_operator**valid_number*  
+ *geography1*. *method_name*(*geography2*)*comparison_operator * * valid_number*  
   
  Pour retourner un résultat non Null, *geography1* et *geography2* doivent avoir le même [identificateur de référence spatiale (SRID)](../spatial/spatial-reference-identifiers-srids.md). Sinon, la méthode renvoie NULL.  
   
  Les index spatiaux prennent en charge les formes de prédicat suivantes :  
   
--   *geography1*.[STIntersects](/sql/t-sql/spatial-geography/stintersects-geography-data-type)(*geography2*)= 1  
+-   *geography1*. [STIntersects](/sql/t-sql/spatial-geography/stintersects-geography-data-type)(*geography2*) = 1  
   
--   *geography1*.[STEquals](/sql/t-sql/spatial-geography/stequals-geography-data-type)(*geography2*)= 1  
+-   *geography1*. [STEquals](/sql/t-sql/spatial-geography/stequals-geography-data-type)(*geography2*) = 1  
   
--   *geography1*.[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) < *nombre*  
+-   *geography1*. [STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) < *nombre*  
   
--   *geography1*.[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *nombre*  
+-   *geography1*. [STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *nombre*  
   
 ### <a name="queries-that-use-spatial-indexes"></a>Requêtes qui utilisent des index spatiaux  
  Les index spatiaux sont pris en charge uniquement dans les requêtes qui comprennent un opérateur spatial indexé dans la clause `WHERE`. Par exemple, la syntaxe :  

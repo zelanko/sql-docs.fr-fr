@@ -18,18 +18,18 @@ ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 77275ee539a6367d7e2e04d03354155a5eff721d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68116642"
 ---
-# <a name="xplogevent-transact-sql"></a>xp_logevent (Transact-SQL)
+# <a name="xp_logevent-transact-sql"></a>xp_logevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Enregistre un message défini par l’utilisateur dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fichier journal et dans l’Observateur d’événements Windows. xp_logevent peut être utilisé pour envoyer une alerte sans envoyer de message au client.  
+  Enregistre un message défini par l’utilisateur dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le fichier journal et dans le observateur d’événements Windows. xp_logevent peut être utilisé pour envoyer une alerte sans envoyer de message au client.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,9 +46,9 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  Chaîne de caractères d'une longueur maximale de 2048 caractères.  
   
  **«** *gravité* **»**  
- Est une des trois chaînes de caractères : INFORMATION, avertissement ou erreur. *gravité* est facultatif, avec INFORMATIONAL comme valeur par défaut.  
+ Une des trois chaînes de caractères INFORMATIONAL, WARNING ou ERROR. *Severity* est facultatif, avec Informational comme valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -57,7 +57,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  `The command(s) completed successfully.`  
   
 ## <a name="remarks"></a>Notes  
- Lorsque vous envoyez des messages à partir de [!INCLUDE[tsql](../../includes/tsql-md.md)] procédures, déclencheurs, lots et ainsi de suite, utilisent l’instruction RAISERROR au lieu de xp_logevent. xp_logevent ne pas appeler un gestionnaire de messages d’un client ou@ERROR. Pour écrire des messages dans l'Observateur d'événements Windows et dans le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], exécutez l'instruction RAISERROR.  
+ Lorsque vous envoyez des messages [!INCLUDE[tsql](../../includes/tsql-md.md)] à partir de procédures, de déclencheurs, de lots, etc., utilisez l’instruction RAISERROR au lieu de xp_logevent. xp_logevent n’appelle pas de gestionnaire de messages d’un client ou de@ERRORSet @. Pour écrire des messages dans l'Observateur d'événements Windows et dans le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], exécutez l'instruction RAISERROR.  
   
 ## <a name="permissions"></a>Autorisations  
  Il faut appartenir au rôle de base de données fixe db_owner de la base de données master ou au rôle serveur fixe sysadmin.  
@@ -77,9 +77,9 @@ EXEC xp_logevent 60000, @@MESSAGE, informational;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
+ [&#40;d’impression&#41;Transact-SQL](../../t-sql/language-elements/print-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Procédures stockées étendues générales &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
+ [Procédures stockées étendues générales &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

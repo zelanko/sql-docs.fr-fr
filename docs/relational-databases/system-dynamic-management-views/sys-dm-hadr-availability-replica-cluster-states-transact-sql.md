@@ -21,10 +21,10 @@ ms.assetid: 2e0dd780-6a71-4f4b-b7f7-6e063bec71d6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e3e2fccaed2b3c001fdcc8a0d7938f0a75a8f10d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246350"
 ---
 # <a name="sysdm_hadr_availability_replica_cluster_states-transact-sql"></a>sys.dm_hadr_availability_replica_cluster_states (Transact-SQL)
@@ -37,9 +37,9 @@ ms.locfileid: "75246350"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**replica_id**|**uniqueidentifier**|Identificateur unique du réplica de disponibilité.|  
-|**replica_server_name**|**nvarchar(256)**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge le réplica.|  
+|**replica_server_name**|**nvarchar (256)**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge le réplica.|  
 |**group_id**|**uniqueidentifier**|Identificateur unique du groupe de disponibilité.|  
-|**join_state**|**sa**|0 = Non attachée<br /><br /> 1 = joint, autonome<br /><br /> 2 = Instance de cluster de basculement attachée|  
+|**join_state**|**tinyint**|0 = Non attachée<br /><br /> 1 = joint, autonome<br /><br /> 2 = Instance de cluster de basculement attachée|  
 |**join_state_desc**|**nvarchar (60)**|NOT_JOINED<br /><br /> JOINED_STANDALONE<br /><br /> JOINED_FAILOVER_CLUSTER_INSTANCE|  
   
 ## <a name="security"></a>Sécurité  
@@ -48,6 +48,6 @@ ms.locfileid: "75246350"
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Surveiller les groupes de disponibilité &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
+ [Surveiller des groupes de disponibilité &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   

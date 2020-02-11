@@ -15,13 +15,13 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: ec8ededac012ccb2b3d4b62fc40d84132a6fb882
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056650"
 ---
-# <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Évaluer une entreprise et consolider les rapports d’évaluation avec DMA
+# <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Évaluer une entreprise et consolider les rapports d’évaluation à l’aide de DMA
 
 Les instructions pas à pas suivantes vous aident à utiliser le Assistant Migration de données pour effectuer une évaluation à l’échelle réussie pour la mise à niveau d’un SQL Server local ou d’un SQL Server s’exécutant sur des machines virtuelles Azure, ou pour la migration vers Azure SQL Database.
 
@@ -71,7 +71,7 @@ Avant d’exécuter le script PowerShell pour évaluer vos serveurs SQL, vous de
 Cet inventaire peut être de l’une des deux formes suivantes :
 
 - Fichier CSV Excel
-- Table SQL Server
+- Table SQL Server
 
 ### <a name="if-using-a-csv-file"></a>Si vous utilisez un fichier CSV
 
@@ -94,7 +94,7 @@ Créez une base de données appelée **EstateInventory** et une table appelée *
 
 - ServerName
 - InstanceName
-- DatabaseName
+- nom_base_de_données
 - AssessmentFlag
 
 ![Contenu de la table SQL Server](../dma/media//dma-consolidatereports/dma-sql-server-table-contents.png)
@@ -121,7 +121,7 @@ Les paramètres associés à la fonction dmaDataCollector sont décrits dans le 
 |**databaseName** | Base de données hébergeant la table d’inventaire. |
 |**AssessmentName** | Nom de l’évaluation DMA. |
 |**TargetPlatform** | Type de cible d’évaluation que vous souhaitez effectuer.  Les valeurs possibles sont **AzureSQLDatabase**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**et **ManagedSqlServer**. |
-|**AuthenticationMethod** | La méthode d’authentification pour la connexion aux cibles de SQL Server que vous souhaitez évaluer. Les valeurs possibles sont SQLAuth **et l'** interversion. |
+|**AuthenticationMethod** | La méthode d’authentification pour la connexion aux cibles de SQL Server que vous souhaitez évaluer. Les valeurs possibles **** sont SQLAuth **et l'** interversion. |
 |**OutputLocation** | Répertoire dans lequel stocker le fichier de sortie de l’évaluation JSON. En fonction du nombre de bases de données en cours d’évaluation et du nombre d’objets dans les bases de données, les évaluations peuvent prendre beaucoup de temps. Le fichier sera écrit une fois toutes les évaluations terminées. |
 
 S’il y a une erreur inattendue, la fenêtre de commande qui est lancée par ce processus va être arrêtée.  Examinez le journal des erreurs pour déterminer la raison de l’échec.
@@ -187,9 +187,9 @@ Vous pouvez également utiliser le script LoadWarehouse pour fournir les instruc
 Pour utiliser des rapports DMA, utilisez des signets et des segments pour filtrer par :
 
 - Types d’évaluation (Azure SQL DB, Azure SQL MI, SQL en local) 
-- Nom d'instance
+- Nom de l’instance
 - Nom de la base de données
-- Nom de l’équipe
+- Nom de l'équipe
 
 Pour accéder au panneau signets et filtres, sélectionnez le signet filtres dans la page principale du rapport :
 
@@ -263,7 +263,7 @@ Cette section est la partie principale du rapport, qui indique la disponibilité
 
 - InstanceDatabase
 - ChangeCategory
-- Title
+- Intitulé
 - ObjectType
 - ImpactedObjectName
 

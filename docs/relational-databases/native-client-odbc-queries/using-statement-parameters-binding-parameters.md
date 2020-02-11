@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 340a3a0f44201c81eafe8717962b2894709eb65d
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779533"
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>Utilisation de paramètres d’instruction - Liaison de paramètres
@@ -49,19 +49,20 @@ ms.locfileid: "73779533"
   
      La liaison selon les lignes est spécifiée en appelant **SQLSetStmtAttr** avec l' *attribut* défini sur SQL_ATTR_PARAM_BIND_TYPE et *ValuePtr* défini sur la taille de la structure contenant les variables de programme.  
   
- Lorsque le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client envoie des paramètres de chaîne de caractères ou binaires au serveur, il remplit les valeurs à la longueur spécifiée dans le paramètre **SQLBindParameter** *Columns* . Si une application ODBC 2. x spécifie 0 pour *Column*, le pilote remplit la valeur de paramètre avec la précision du type de données. La précision est 8000 lors d'une connexion à des serveurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 255 lors d'une connexion à des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La *colonne Columns* est en octets pour les colonnes de type Variant.  
+ Lorsque le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC native client envoie des paramètres de chaîne de caractères ou binaires au serveur, il remplit les valeurs à la longueur spécifiée dans le paramètre **SQLBindParameter** *Columns* . Si une application ODBC 2. x spécifie 0 pour *Column*, le pilote remplit la valeur de paramètre avec la précision du type de données. La précision est 8000 lors d'une connexion à des serveurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 255 lors d'une connexion à des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La *colonne Columns* est en octets pour les colonnes de type Variant.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la définition de noms pour les paramètres de procédure stockée. ODBC 3.5 a également introduit la prise en charge des paramètres nommés utilisés lors de l'appel de procédures stockées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette prise en charge peut être utilisée pour :  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la définition de noms pour les paramètres de procédure stockée. ODBC 3.5 a également introduit la prise en charge des paramètres nommés utilisés lors de l'appel de procédures stockées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette prise en charge peut être utilisée pour :  
   
 -   appeler une procédure stockée et fournir des valeurs pour un sous-ensemble des paramètres définis pour la procédure stockée ;  
   
 -   spécifier les paramètres dans un ordre différent dans l'application de l'ordre spécifié quand la procédure stockée a été créée.  
   
- Les paramètres nommés sont pris en charge uniquement lors de l’utilisation de l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] **Execute** ou de la séquence d’échappement ODBC Call pour exécuter une procédure stockée.  
+ Les paramètres nommés sont pris en charge uniquement [!INCLUDE[tsql](../../includes/tsql-md.md)] lors de l’utilisation de l’instruction **Execute** ou de la séquence d’échappement ODBC Call pour exécuter une procédure stockée.  
   
- Si **SQL_DESC_NAME** est définie pour un paramètre de procédure stockée, tous les paramètres de procédure stockée dans la requête doivent également définir **SQL_DESC_NAME**.  Si des littéraux sont utilisés dans les appels de procédure stockée, où les paramètres ont **SQL_DESC_NAME** défini, les littéraux doivent utiliser le format *'Name*=*value*', où *Name* est le nom du paramètre de procédure stockée (par exemple, @p1). Pour plus d’informations, consultez [liaison de paramètres par nom (paramètres nommés)](https://go.microsoft.com/fwlink/?LinkId=167215).  
+ Si **SQL_DESC_NAME** est définie pour un paramètre de procédure stockée, tous les paramètres de procédure stockée dans la requête doivent également définir **SQL_DESC_NAME**.  Si des littéraux sont utilisés dans les appels de procédure stockée, où les paramètres ont **SQL_DESC_NAME** défini, les littéraux doivent utiliser le format *'Name*=*value*', où *Name* est le nom du paramètre @p1de procédure stockée (par exemple,). Pour plus d’informations, consultez [liaison de paramètres par nom (paramètres nommés)](https://go.microsoft.com/fwlink/?LinkId=167215).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation de paramètres d’instruction](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  
+ [Utilisation de paramètres d'instruction](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  
   
   

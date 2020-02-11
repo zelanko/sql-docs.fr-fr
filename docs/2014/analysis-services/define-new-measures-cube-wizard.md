@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f526c1327f67bdcf84dce44e670eb195de9a96a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082113"
 ---
 # <a name="define-new-measures-cube-wizard"></a>Définir de nouvelles mesures (Assistant Cube)
@@ -55,7 +55,7 @@ ms.locfileid: "66082113"
   
  Pour le modifier, cliquez sur celui-ci, puis sélectionnez un nouveau type dans la liste.  
   
- **Agrégation**  
+ **Agréger**  
  Affiche l'agrégation de la mesure.  
   
  Pour la modifier, cliquez sur celle-ci, puis sélectionnez un nouveau type de données dans la liste.  
@@ -83,7 +83,7 @@ ms.locfileid: "66082113"
   
  Pour le modifier, cliquez sur celui-ci, puis sélectionnez un nouveau type dans la liste.  
   
- **Agrégation**  
+ **Agréger**  
  Affiche l'agrégation de la mesure.  
   
  Pour la modifier, cliquez sur celle-ci, puis sélectionnez un nouveau type de données dans la liste.  
@@ -94,8 +94,8 @@ ms.locfileid: "66082113"
  Pour supprimer une nouvelle mesure d'un cube, cliquez sur le bouton **X** de cette mesure.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide F1 de l’Assistant Cube](cube-wizard-f1-help.md)   
- [Objets de cube &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+ [Aide (F1) de l’Assistant Cube](cube-wizard-f1-help.md)   
+ [Objets de cube &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Cubes dans les modèles multidimensionnels](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Dimensions dans les modèles multidimensionnels](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

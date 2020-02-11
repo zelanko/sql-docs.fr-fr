@@ -1,5 +1,5 @@
 ---
-title: Création d’une Application de fournisseur SQL Server Native Client OLE DB | Microsoft Docs
+title: Création d’une application de fournisseur d’OLE DB SQL Server Native Client | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0e422ac6535900a287ae610a85241dc67172c4f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209759"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>Création d'une application de fournisseur OLE DB de SQL Server Native Client
-  Création d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implique l’application du fournisseur OLE DB Native Client comme suit :  
+  La création [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’une application de fournisseur OLE DB Native Client implique les étapes suivantes :  
   
 1.  Établissement d'une connexion à une source de données.  
   
@@ -35,13 +35,13 @@ ms.locfileid: "63209759"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Établissement d’une connexion à une source de données](establishing-a-connection-to-a-data-source.md)  
+-   [Établissement d'une connexion à une source de données](establishing-a-connection-to-a-data-source.md)  
   
--   [Exécution d’une commande](executing-a-command.md)  
+-   [Exécution d'une commande](executing-a-command.md)  
   
 -   [Traitement des résultats](processing-results.md)  
   
--   [Présentation des propriétés OLE DB](about-ole-db-properties.md)  
+-   [À propos des propriétés OLE DB](about-ole-db-properties.md)  
   
 -   [Utilisation de la clause OUTPUT avec OLE DB dans SQL Server Native Client](using-the-output-clause-with-ole-db-in-sql-server-native-client.md)  
   

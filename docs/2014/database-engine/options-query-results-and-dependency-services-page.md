@@ -1,5 +1,5 @@
 ---
-title: Options (résultats de la requête et de la Page Services de dépendance) | Microsoft Docs
+title: Options (page résultats de la requête et services de dépendance) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,31 +13,31 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b9200880a9581b3903985c16fc2af129d19aceec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481205"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>Options (Résultats de la requête et Page Services de dépendance)
-  Utilisez cette page pour spécifier le serveur auquel se connecter pour les services de dépendance. Les services de dépendance vous permettent d'extraire des informations à propos des dépendances entre des objets [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stockés sur des serveurs différents. Afficher les dépendances d’objets à l’aide de la **dépendances d’objets** boîte de dialogue dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
+  Utilisez cette page pour spécifier le serveur auquel se connecter pour les services de dépendance. Les services de dépendance vous permettent d'extraire des informations à propos des dépendances entre des objets [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stockés sur des serveurs différents. Vous pouvez afficher les dépendances d’objets à l’aide de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]la boîte de dialogue **dépendances d’objets** dans.  
   
  **Que voulez-vous faire ?**  
   
-1.  [Ouvrez la boîte de dialogue Options (Page de requête résultats/dépendance Services)](#open_dialog)  
+1.  [Ouvrir la boîte de dialogue d'options (Résultats de la requête/page Services de dépendance)](#open_dialog)  
   
 2.  [Configurer les options](#options)  
   
-##  <a name="open_dialog"></a> Ouvrez la boîte de dialogue Options (Page de requête résultats/dépendance Services)  
+##  <a name="open_dialog"></a>Ouvrir la boîte de dialogue Options (résultats de la requête/page services de dépendance)  
   
-1.  Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], cliquez sur **Options** sur le **outils** menu.  
+1.  Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], cliquez sur **options** dans le menu **Outils** .  
   
 2.  Développez **Résultats de la requête**, puis cliquez sur **Services de dépendance**.  
   
 ##  <a name="options"></a> Configurer les options  
   
 ### <a name="options"></a>Options  
- **Serveur de Services de dépendance**  
+ **Serveur de services de dépendance**  
  Spécifiez le serveur sur lequel les services de dépendance sont installés.  
   
  **Authentification**  
@@ -51,5 +51,5 @@ ms.locfileid: "65481205"
  **Mot de passe**  
  Si vous utilisez l'authentification SQL Server, entrez un mot de passe.  
   
- **Tester**  
+ **Test**  
  Cliquez pour vérifier la connexion.

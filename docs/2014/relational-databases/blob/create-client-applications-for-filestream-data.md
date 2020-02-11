@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 77f7144231bda8be36334513584df16cf9c0e22b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010180"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>Créer des applications clientes pour les données FILESTREAM
@@ -31,33 +31,34 @@ ms.locfileid: "66010180"
 > [!NOTE]  
 >  Les exemples de cette rubrique nécessitent la base de données compatible FILESTREAM et la table qui sont créées dans [Créer une base de données compatible FILESTREAM](create-a-filestream-enabled-database.md) et [Créer une table pour le stockage de données FILESTREAM](create-a-table-for-storing-filestream-data.md).  
   
-##  <a name="func"></a> Fonctions permettant d'utiliser les données FILESTREAM  
+##  <a name="func"></a>Fonctions permettant d’utiliser des données FILESTREAM  
  Lorsque vous utilisez FILESTREAM pour stocker des données d'objet blob, vous pouvez utiliser des API Win32 pour travailler avec les fichiers. Pour prendre en charge l'utilisation de données d'objet blob FILESTREAM dans les applications Win32, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit les fonctions et API suivantes :  
   
--   [PathName](/sql/relational-databases/system-functions/pathname-transact-sql) retourne un chemin d'accès en tant que jeton à un objet blob. Une application utilise ce jeton pour obtenir un descripteur Win32 et traiter des données BLOB.  
+-   [Pathname](/sql/relational-databases/system-functions/pathname-transact-sql) retourne un chemin d’accès en tant que jeton à un objet BLOB. Une application utilise ce jeton pour obtenir un descripteur Win32 et traiter des données BLOB.  
   
      Lorsque la base de données qui contient des données FILESTREAM appartient à un groupe de disponibilité AlwaysOn, la fonction de chemin d'accès retourne un nom de réseau virtuel (VNN) au lieu d'un nom d'ordinateur.  
   
 -   [GET_FILESTREAM_TRANSACTION_CONTEXT ()](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql) retourne un jeton qui représente la transaction actuelle d’une session. Une application utilise ce jeton pour lier des opérations de diffusion en continu de système de fichiers FILESTREAM à la transaction.  
   
--   L' [API OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md) obtient un descripteur de fichier Win32. L’application utilise le descripteur pour diffuser les données FILESTREAM et peut ensuite le passer aux API Win32 suivantes : [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426), ou [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Si l'application appelle toute autre API en utilisant le descripteur, une erreur ERROR_ACCESS_DENIED est retournée. L'application doit fermer le descripteur à l'aide de [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428).  
+-   L' [API OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md) obtient un descripteur de fichier Win32. L'application utilise le descripteur pour transmettre en continu les données FILESTREAM et peut ensuite passer le descripteur aux API Win32 suivantes : [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)ou [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Si l'application appelle toute autre API en utilisant le descripteur, une erreur ERROR_ACCESS_DENIED est retournée. L'application doit fermer le descripteur à l'aide de [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428).  
   
- Tout accès au conteneur de données FILESTREAM est exécuté dans une transaction [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[tsql](../../includes/tsql-md.md)] peuvent être exécutées dans la même transaction afin de maintenir la cohérence entre les données SQL et les données FILESTREAM.  
+ Tout accès au conteneur de données FILESTREAM est exécuté dans une transaction [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] peuvent être exécutées dans la même transaction afin de maintenir la cohérence entre les données SQL et les données FILESTREAM.  
   
-##  <a name="steps"></a> Étapes à suivre pour accéder aux données FILESTREAM  
+##  <a name="steps"></a>Étapes d’accès aux données FILESTREAM  
   
-###  <a name="path"></a> Lecture du chemin d'accès au fichier FILESTREAM  
+###  <a name="path"></a>Lecture du chemin d’accès du fichier FILESTREAM  
  Chaque cellule d'une table FILESTREAM est associée à un chemin d'accès au fichier. Pour lire le chemin d'accès, utilisez la propriété `PathName` d'une colonne `varbinary(max)` dans une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'exemple suivant montre comment lire le chemin d'accès d'une colonne `varbinary(max)`.  
   
  [!code-sql[FILESTREAM#FS_PathName](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_pathname)]  
   
-###  <a name="trx"></a> Lecture du contexte de transaction  
+###  <a name="trx"></a>Lecture du contexte de transaction  
  Pour obtenir le contexte de transaction actuel, utilisez la fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] [GET_FILESTREAM_TRANSACTION_CONTEXT()](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql) . L'exemple suivant montre comment commencer une transaction et lire le contexte de transaction actuel.  
   
  [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_get_transaction_context)]  
   
-###  <a name="handle"></a> Obtention d'un descripteur de fichier Win32  
- Pour obtenir un descripteur de fichier Win32, appelez l’API OpenSqlFilestream. Cette API est exportée à partir du fichier sqlncli.dll. Le descripteur renvoyé peut être passé à chacune des API Win32 suivantes : [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426), ou [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Les exemples suivants montrent comment obtenir un descripteur de fichier Win32 et l'utiliser pour lire et écrire des données dans un BLOB FILESTREAM.  
+###  <a name="handle"></a>Obtention d’un descripteur de fichier Win32  
+ Pour obtenir un descripteur de fichier Win32, appelez l’API OpenSqlFilestream. Cette API est exportée à partir du fichier sqlncli.dll. Le descripteur retourné peut être passé à chacune des API Win32 suivantes : [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)ou [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Les exemples suivants montrent comment obtenir un descripteur de fichier Win32 et l'utiliser pour lire et écrire des données dans un BLOB FILESTREAM.  
   
  [!code-csharp[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../snippets/tsql/SQL15/tsql/filestream/cs/filestream.cs#fs_cs_readandwriteblob)]  
   
@@ -65,7 +66,7 @@ ms.locfileid: "66010180"
   
  [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../snippets/tsql/SQL15/tsql/filestream/cpp/filestream.cpp#fs_cpp_writeblob)]  
   
-##  <a name="best"></a> Meilleures pratiques pour la conception et l'implémentation d'applications  
+##  <a name="best"></a>Meilleures pratiques pour la conception et l’implémentation d’applications  
   
 -   Lorsque vous concevez et implémentez des applications qui utilisent FILESTREAM, prenez en compte les recommandations suivantes :  
   

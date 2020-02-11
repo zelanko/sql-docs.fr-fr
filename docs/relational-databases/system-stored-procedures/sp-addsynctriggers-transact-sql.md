@@ -16,21 +16,21 @@ ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2b9bdabcc11c900ae0a1cbe71280b64efb6ccdaf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096207"
 ---
-# <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
+# <a name="sp_addsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crée des déclencheurs sur l'Abonné, utilisés avec tous les types d'abonnements pouvant être mis à jour (mise à jour immédiate, mise à jour en attente et mise à jour immédiate avec mise à jour en attente sous forme de basculement). Cette procédure stockée est exécutée sur la base de données d'abonnement de l'Abonné.  
   
 > [!IMPORTANT]  
->  Le [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) procédure doit être utilisée à la place de **sp_addsynctrigger**. [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) génère un script qui contienne le **sp_addsynctrigger** appels.  
+>  La procédure [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) doit être utilisée à la place de **sp_addsynctrigger**. [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) génère un script qui contient les appels de **sp_addsynctrigger** .  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -57,50 +57,50 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @sub_table = ] 'sub_table'` Est le nom de la table Subscriber. *table_d* est **sysname**, sans valeur par défaut.  
+`[ @sub_table = ] 'sub_table'`Nom de la table de l’abonné. *sub_table* est de **type sysname**, sans valeur par défaut.  
   
-`[ @sub_table_owner = ] 'sub_table_owner'` Est le nom du propriétaire de la table de l’abonné. *propriétaire_de_table_d* est **sysname**, sans valeur par défaut.  
+`[ @sub_table_owner = ] 'sub_table_owner'`Nom du propriétaire de la table de l’abonné. *sub_table_owner* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *serveur de publication* est **sysname**, sans valeur par défaut.  
+`[ @publisher = ] 'publisher'`Est le nom du serveur de publication. *Publisher* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publisher_db = ] 'publisher_db'` Est le nom de la base de données du serveur de publication. *publisher_db* est **sysname**, sans valeur par défaut. Si NULL est spécifié, la base de données active est utilisée.  
+`[ @publisher_db = ] 'publisher_db'`Nom de la base de données du serveur de publication. *publisher_db* est de **type sysname**, sans valeur par défaut. Si NULL est spécifié, la base de données active est utilisée.  
   
-`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'`Nom de la publication. *Publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @ins_proc = ] 'ins_proc'` Est le nom de la procédure stockée qui prend en charge les insertions de transactions synchrones sur le serveur de publication. *proc_màj* est **sysname**, sans valeur par défaut.  
+`[ @ins_proc = ] 'ins_proc'`Nom de la procédure stockée qui prend en charge les insertions de transactions synchrones sur le serveur de publication. *ins_proc* est de **type sysname**, sans valeur par défaut.  
   
-`[ @upd_proc = ] 'upd_proc'` Est le nom de la procédure stockée qui prend en charge les mises à jour de transactions synchrones sur le serveur de publication. *proc_màj* est **sysname**, sans valeur par défaut.  
+`[ @upd_proc = ] 'upd_proc'`Nom de la procédure stockée qui prend en charge les mises à jour de transactions synchrones sur le serveur de publication. *ins_proc* est de **type sysname**, sans valeur par défaut.  
   
-`[ @del_proc = ] 'del_proc'` Est le nom de la procédure stockée qui prend en charge les suppressions de transactions synchrones sur le serveur de publication. *proc_màj* est **sysname**, sans valeur par défaut.  
+`[ @del_proc = ] 'del_proc'`Nom de la procédure stockée qui prend en charge les suppressions de transactions synchrones sur le serveur de publication. *ins_proc* est de **type sysname**, sans valeur par défaut.  
   
-`[ @cftproc = ] 'cftproc'` Est le nom de la procédure générée automatiquement utilisée par les publications qui autorisent la mise à jour en file d’attente. *cftproc* est **sysname**, sans valeur par défaut. Pour les publications autorisant la mise à jour immédiate, cette valeur est NULL. Ce paramètre s'applique aux publications qui autorisent la mise à jour en attente (mise à jour en attente et mise à jour immédiate avec mise à jour en attente sous forme de basculement).  
+`[ @cftproc = ] 'cftproc'`Nom de la procédure générée automatiquement utilisée par les publications qui autorisent la mise à jour en attente. *cftproc* est de **type sysname**, sans valeur par défaut. Pour les publications autorisant la mise à jour immédiate, cette valeur est NULL. Ce paramètre s'applique aux publications qui autorisent la mise à jour en attente (mise à jour en attente et mise à jour immédiate avec mise à jour en attente sous forme de basculement).  
   
-`[ @proc_owner = ] 'proc_owner'` Spécifie le compte d’utilisateur dans le serveur de publication sous lequel toutes les procédures stockées générées automatiquement pour la mise à jour de publication (en file d’attente et/ou immédiate) ont été créés. *proc_owner* est **sysname** sans valeur par défaut.  
+`[ @proc_owner = ] 'proc_owner'`Spécifie le compte d’utilisateur dans le serveur de publication sous lequel toutes les procédures stockées générées automatiquement pour la publication de mise à jour (en file d’attente et/ou immédiate) ont été créées. *proc_owner* est de **type sysname** et n’a pas de valeur par défaut.  
   
-`[ @identity_col = ] 'identity_col'` Est le nom de la colonne d’identité sur le serveur de publication. *identity_col* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @identity_col = ] 'identity_col'`Nom de la colonne d’identité sur le serveur de publication. *identity_col* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @ts_col = ] 'timestamp_col'` Est le nom de la **timestamp** colonne sur le serveur de publication. *l’argument timestamp_col* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @ts_col = ] 'timestamp_col'`Nom de la colonne **timestamp** sur le serveur de publication. *timestamp_col* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @filter_clause = ] 'filter_clause'` Est une restriction clause (WHERE) qui définit un filtre horizontal. Lorsque vous entrez la clause de restriction, omettez le mot clé où. *filter_clause*est **nvarchar (4000)** , avec NULL comme valeur par défaut.  
+`[ @filter_clause = ] 'filter_clause'`Clause de restriction (WHERE) qui définit un filtre horizontal. Quand vous entrez la clause de restriction, omettez le mot clé WHERE. *filter_clause*est de type **nvarchar (4000)**, avec NULL comme valeur par défaut.  
   
-`[ @primary_key_bitmap = ] 'primary_key_bitmap'` Est un bitmap de la clé primaire dans la table. *bitmap_clé_primaire* est **varbinary (4000)** , sans valeur par défaut.  
+`[ @primary_key_bitmap = ] 'primary_key_bitmap'`Est une table de bits des colonnes clés primaires dans la table. *primary_key_bitmap* est de type **varbinary (4000)**, sans valeur par défaut.  
   
-`[ @identity_support = ] identity_support` Active et désactive la gestion des plages d’identités automatique lors de la mise à jour en file d’attente est utilisée. *identity_support* est un **bits**, avec une valeur par défaut **0**. **0** signifie qu’il n’existe aucune identité de la plage prise en charge, **1** permet une gestion de plage d’identité automatique.  
+`[ @identity_support = ] identity_support`Active et désactive la gestion automatique des plages d’identité lorsque la mise à jour en file d’attente est utilisée. *identity_support* est un **bit**, avec **0**comme valeur par défaut. **0** signifie qu’il n’existe aucune prise en charge de plage d’identité, **1** active la gestion automatique des plages d’identité.  
   
-`[ @independent_agent = ] independent_agent` Indique s’il existe un Agent de Distribution unique (agent indépendant) pour cette publication, ou un Agent de Distribution par publication de base de données et d’abonnement paire base de données (un agent partagé). Cette valeur reflète la valeur de la propriété independent_agent de la publication définie sur le serveur de publication. *independent_agent* est un peu avec une valeur par défaut **0**. Si **0**, l’agent est un Agent partagé. Si **1**, l’agent est un agent indépendant.  
+`[ @independent_agent = ] independent_agent`Indique s’il existe une seule Agent de distribution (un agent indépendant) pour cette publication, ou une Agent de distribution par base de données de publication et par paire de bases de données d’abonnement (un agent partagé). Cette valeur reflète la valeur de la propriété independent_agent de la publication définie sur le serveur de publication. *independent_agent* est un bit avec **0**comme valeur par défaut. Si la **valeur est 0**, l’agent est un agent partagé. Si la condition est **1**, l’agent est un agent indépendant.  
   
-`[ @distributor = ] 'distributor'` Est le nom du serveur de distribution. *serveur de distribution* est **sysname**, sans valeur par défaut.  
+`[ @distributor = ] 'distributor'`Nom du serveur de distribution. *Distributor* est de **type sysname**, sans valeur par défaut.  
   
-`[ @pubversion = ] pubversion` Indique la version du serveur de publication. *pubversion* est **int**, avec 1 comme valeur par défaut. **1** signifie que la version du serveur de publication est [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 ou version antérieure ; **2** signifie que le serveur de publication est [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 3 (SP3) ou version ultérieure. *pubversion* doit être définie explicitement sur **2** lorsque la version du serveur de publication est [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 ou version ultérieure.  
+`[ @pubversion = ] pubversion`Indique la version du serveur de publication. *pubversion* est de **type int**, avec 1 comme valeur par défaut. **1** signifie que la version du serveur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] de publication est Service Pack 2 ou version antérieure ; **2** signifie que le serveur de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] publication est Service Pack 3 (SP3) ou version ultérieure. *pubversion* doit avoir la valeur **2** explicitement lorsque la version du serveur [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] de publication est SP3 ou ultérieure.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_addsynctriggers** est utilisé par l’Agent de Distribution dans le cadre de l’abonnement. Cette procédure stockée n'est généralement pas exécutée par les utilisateurs mais peut s'avérer utile s'ils doivent configurer manuellement un abonnement sans synchronisation.  
+ **sp_addsynctriggers** est utilisé par le agent de distribution dans le cadre de l’initialisation de l’abonnement. Cette procédure stockée n'est généralement pas exécutée par les utilisateurs mais peut s'avérer utile s'ils doivent configurer manuellement un abonnement sans synchronisation.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_addsynctriggers**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_addsynctriggers**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   

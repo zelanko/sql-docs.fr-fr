@@ -14,10 +14,10 @@ ms.assetid: b4cf4404-40f3-46fb-801d-cbf80a95448c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: cc3b79de19795ec13fd8720b68c827d9b964084e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727840"
 ---
 # <a name="unlock-a-version-master-data-services"></a>Déverrouiller une version (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "73727840"
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], déverrouillez une version d'un modèle pour permettre que des modifications soient apportées aux membres du modèle et à leurs attributs.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle **Gestion des versions** .  
@@ -35,7 +35,7 @@ ms.locfileid: "73727840"
   
 -   L’état de la version doit être **Verrouillé**. Pour plus d’informations, consultez [Verrouiller une version &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md).  
   
--   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle Gestion des versions. Pour plus d’informations, consultez [Autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle Gestion des versions. Pour plus d’informations, consultez [autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
 ### <a name="to-unlock-a-version"></a>Pour déverrouiller une version  
   

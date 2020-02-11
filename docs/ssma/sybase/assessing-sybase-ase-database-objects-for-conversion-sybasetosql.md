@@ -1,5 +1,5 @@
 ---
-title: Évaluation des objets de base de données SAP ASE pour la Conversion (SybaseToSQL) | Microsoft Docs
+title: Évaluation des objets de base de données SAP ASE pour la conversion (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2017
 ms.prod: sql
@@ -10,72 +10,72 @@ ms.assetid: eb996b7c-1eef-4f73-b5e6-2fa6faf7336c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c65c19ee3b95303afb0e1ae0a950efe548c8f0af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083536"
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>Évaluation des objets de base de données SAP ASE pour la conversion (SybaseToSQL)
-Avant de charger des objets et de migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, vous devez déterminer comment la complexité de la migration et combien de temps il vous faudra. SSMA peut créer un rapport d’évaluation qui affiche le pourcentage des objets et des procédures qui seront correctement converties en [!INCLUDE[tsql](../../includes/tsql-md.md)]. SSMA vous permet également d’afficher les problèmes spécifiques qui peuvent entraîner des échecs de conversion.  
+Avant de charger des objets et de migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL, vous devez déterminer la complexité de la migration et le temps nécessaire. SSMA peut créer un rapport d’évaluation qui indique le pourcentage d’objets et de procédures qui seront correctement convertis [!INCLUDE[tsql](../../includes/tsql-md.md)]en. SSMA vous permet également de consulter les problèmes spécifiques qui peuvent provoquer des échecs de conversion.  
   
 ## <a name="create-assessment-reports"></a>Créer des rapports d’évaluation  
-Lors de la création de ce rapport d’évaluation, SSMA convertit les objets de base de données SAP Adaptive Server Enterprise (ASE) sélectionnés vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou syntaxe SQL d’Azure, puis affiche les résultats.  
+Lors de la création de ce rapport d’évaluation, SSMA convertit les objets de base de données SAP Adaptive Server Enterprise (ASE) sélectionnés en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou la syntaxe SQL Azure, puis affiche les résultats.  
   
 **Pour créer un rapport d’évaluation**  
   
-1.  Dans l’Explorateur de métadonnées de Sybase, sélectionnez les bases de données que vous souhaitez évaluer.  
+1.  Dans l’Explorateur de métadonnées Sybase, sélectionnez les bases de données que vous souhaitez évaluer.  
   
-2.  Pour omettre des objets individuels, désactivez les cases à cocher en regard des objets que vous ne souhaitez pas évaluer.  
+2.  Pour omettre des objets spécifiques, désactivez les cases à cocher en regard des objets que vous ne souhaitez pas évaluer.  
   
-3.  Avec le bouton droit **bases de données**, puis sélectionnez **créer un rapport**.  
+3.  Cliquez avec le bouton droit sur **bases de données**, puis sélectionnez **créer un rapport**.  
   
-    Vous pouvez également analyser les objets individuels en double-cliquant sur un objet, puis en sélectionnant **créer un rapport**.  
+    Vous pouvez également analyser des objets individuels en cliquant avec le bouton droit sur un objet, puis en sélectionnant **créer un rapport**.  
   
-    SSMA affiche la progression dans la barre d’état en bas de la fenêtre. Si le volet de sortie est visible, vous verrez également les messages connexes.  
+    SSMA affiche la progression dans la barre d’État en bas de la fenêtre. Si le volet de sortie est visible, vous verrez également tous les messages associés.  
   
-    Une fois l’évaluation terminée, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant pour Sybase : Fenêtre de rapport d’évaluation s’affiche.  
+    Une fois l’évaluation terminée, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fenêtre rapport de Assistant Migration pour Sybase : évaluation s’affiche.  
   
-## <a name="use-assessment-reports"></a>Utiliser des rapports d’évaluation  
-La fenêtre de rapport d’évaluation contient trois volets :  
+## <a name="use-assessment-reports"></a>Utiliser les rapports d’évaluation  
+La fenêtre rapport d’évaluation contient trois volets :  
   
--   Le volet gauche contient la hiérarchie des objets qui sont inclus dans le rapport d’évaluation. Vous pouvez parcourir la hiérarchie et sélectionner des objets et des catégories d’objet pour afficher le code et les statistiques de conversion.  
+-   Le volet gauche contient la hiérarchie des objets inclus dans le rapport d’évaluation. Vous pouvez parcourir la hiérarchie et sélectionner des objets et des catégories d’objets pour afficher les statistiques et le code de conversion.  
   
--   Le contenu du volet droit varie en fonction de l’élément est sélectionné dans le volet gauche.  
+-   Le contenu du volet droit varie en fonction de l’élément sélectionné dans le volet gauche.  
   
-    Si un groupe d’objets (par exemple, un schéma) ou d’une table est sélectionné, le volet droit affiche deux volets. Le **des statistiques de Conversion** volet affiche les statistiques de conversion pour les objets sélectionnés. Le **les objets par catégories** volet affiche les statistiques de conversion pour l’objet ou les catégories d’objets.  
+    Si un groupe d’objets (tel qu’un schéma) ou une table est sélectionné, le volet droit affiche deux volets. Le volet **statistiques de conversion** affiche les statistiques de conversion pour les objets sélectionnés. Le volet **objets par catégorie** affiche les statistiques de conversion pour l’objet ou les catégories d’objets.  
   
-    Si une procédure stockée, une vue ou un déclencheur est sélectionnée, le volet de droite contient des statistiques, de code source et de code cible.  
+    Si une procédure stockée, une vue ou un déclencheur est sélectionné, le volet droit contient des statistiques, du code source et du code cible.  
   
-    -   La zone supérieure affiche les statistiques globales pour l’objet. Vous devrez peut-être développer **statistiques** pour afficher ces informations. 
-    -   La zone Source montre le code source de l’objet qui est sélectionné dans le volet gauche. Les zones en surbrillance affichent le code source problématiques.  
-    -   La zone cible montre le code converti. Texte rouge indique les messages d’erreur et de code problématiques.  
+    -   La zone supérieure affiche les statistiques globales de l’objet. Vous devrez peut-être développer les **statistiques** pour afficher ces informations. 
+    -   La zone source affiche le code source de l’objet sélectionné dans le volet gauche. Les zones mises en surbrillance indiquent un code source problématique.  
+    -   La zone cible affiche le code converti. Le texte en rouge montre le code et les messages d’erreur les plus problématiques.  
   
--   Le volet inférieur affiche les messages de la conversion, regroupés par numéro de message. Sélectionnez **erreurs**, **avertissements**, ou **Info** pour afficher les catégories de messages, puis développez un groupe de messages. Cliquez sur un message individuel pour sélectionner l’objet dans le volet gauche puis affichez les détails dans le volet droit.  
+-   Le volet inférieur affiche des messages de conversion, regroupés par numéro de message. Sélectionnez **Erreurs**, **avertissements**ou **informations** pour afficher les catégories de messages, puis développez un groupe de messages. Cliquez sur un message pour sélectionner l’objet dans le volet gauche, puis affichez les détails dans le volet droit.  
   
 ## <a name="analyze-conversion-problems-by-using-the-assessment-report"></a>Analyser les problèmes de conversion à l’aide du rapport d’évaluation  
-Le **volets de statistiques de Conversion** affichent les statistiques de conversion. Si le pourcentage pour n’importe quelle catégorie est inférieure à 100 %, vous devez déterminer pourquoi la conversion n’a pas réussie.  
+Les **volets des statistiques de conversion** affichent les statistiques de conversion. Si le pourcentage pour une catégorie est inférieur à 100%, vous devez déterminer la raison pour laquelle la conversion a échoué.  
   
 **Pour afficher les problèmes de conversion**  
   
-1.  Créer le rapport d’évaluation en suivant les instructions dans la procédure précédente.  
+1.  Créez le rapport d’évaluation à l’aide des instructions de la procédure précédente.  
   
-2.  Dans le volet gauche, développez les schémas ou des dossiers qui ont une icône d’erreur rouge. Continuez à développer les éléments jusqu'à ce que vous sélectionnez un élément individuel qui Échec de la conversion.  
+2.  Dans le volet gauche, développez schémas ou dossiers présentant une icône d’erreur rouge. Continuez à développer les éléments jusqu’à ce que vous ayez sélectionné un élément individuel qui n’a pas pu être converti.  
   
-3.  En haut du volet Source, sélectionnez **problème suivant**.  
-    Le code problématique est mis en surbrillance, voici le code connexe dans le **cible Navigation** volet.  
+3.  En haut du volet source, sélectionnez **problème suivant**.  
+    Le code problématique est mis en surbrillance, tout comme le code connexe dans le volet de **navigation cible** .  
   
-4.  Passez en revue les messages d’erreur et déterminer ce que vous voulez faire avec l’objet qui a provoqué le problème de conversion :  
+4.  Passez en revue les messages d’erreur, puis déterminez ce que vous souhaitez faire avec l’objet qui a provoqué le problème de conversion :  
   
-    -   Mettre à jour de la syntaxe de l’ASE dans SSMA. Vous pouvez mettre à jour la syntaxe uniquement pour les procédures stockées et déclencheurs. Pour mettre à jour la syntaxe, sélectionnez l’objet dans le volet Explorateur de métadonnées de Sybase, cliquez sur le **SQL** onglet et modifiez le code SQL. Lorsque vous quittez l’élément, vous êtes invité à enregistrer la syntaxe de la mise à jour. Afficher les erreurs signalées pour l’objet sur le **rapport** onglet.  
+    -   Mettez à jour la syntaxe ASE dans SSMA. Vous pouvez mettre à jour la syntaxe uniquement pour les procédures stockées et les déclencheurs. Pour mettre à jour la syntaxe, sélectionnez l’objet dans le volet de l’Explorateur de métadonnées Sybase, cliquez sur l’onglet **SQL** , puis modifiez le code SQL. Lorsque vous quittez l’élément, vous êtes invité à enregistrer la syntaxe mise à jour. Affichez les erreurs signalées pour l’objet sous l’onglet **rapport** .  
   
-    -   Dans l’environnement ASE, vous pouvez modifier l’objet de l’ASE pour supprimer ou de réviser le code problématique. Pour charger le code mis à jour dans SSMA, vous devrez mettre à jour les métadonnées. Pour plus d’informations, consultez [connexion à Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
+    -   Dans ASE, vous pouvez modifier l’objet ASE pour supprimer ou réviser le code problématique. Pour charger le code mis à jour dans SSMA, vous devez mettre à jour les métadonnées. Pour plus d’informations, consultez [connexion à Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
   
-    -   Vous pouvez exclure l’objet de la migration. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de l’Explorateur de métadonnées SQL Azure et l’Explorateur de métadonnées de Sybase, désactivez la case à cocher en regard de l’élément avant de charger les objets vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure et migrer des données à partir de l’ASE.
+    -   Vous pouvez exclure l’objet de la migration. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou dans l’Explorateur de métadonnées Azure SQL et l’Explorateur de métadonnées Sybase, désactivez la case [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à cocher en regard de l’élément avant de charger les objets dans ou Azure SQL et migrer les données à partir de ASE.
   
 ## <a name="next-steps"></a>Étapes suivantes  
-[Convertir des objets de base de données ASE SAP &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
+[Conversion d’objets de base de données SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Migration SAP ASE bases de données SQL Server - Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Migration de bases de données SAP ASE vers SQL Server-Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

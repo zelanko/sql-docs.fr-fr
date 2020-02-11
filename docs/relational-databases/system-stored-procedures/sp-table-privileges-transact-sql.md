@@ -18,19 +18,19 @@ ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 595f8adb46602109751b1912feed99ae4702fb55
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68702845"
 ---
-# <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
+# <a name="sp_table_privileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retourne la liste des autorisations de table (telles que INSERT, DELETE, UPDATE, SELECT, REFERENCES) pour la ou les tables spécifiées.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,22 +43,22 @@ sp_table_privileges [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @table_name=] '*nom_table*'  
- Table utilisée pour retourner les informations de catalogue. *table_name* est de type **nvarchar (** 384 **)** , sans valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge.  
+ [ @table_name= ] '*table_name*'  
+ Table utilisée pour retourner les informations de catalogue. *table_name* est de type **nvarchar (** 384 **)**, sans valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge.  
   
- [ @table_owner=] '*TABLE_OWNER*'  
- Propriétaire de la table utilisée pour retourner les informations de catalogue. *TABLE_OWNER*est de type **nvarchar (** 384 **)** , avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si le propriétaire n'est pas précisé, les règles par défaut définissant la visibilité des tables du SGBD sous-jacent sont utilisées.  
+ [ @table_owner= ] '*TABLE_OWNER*'  
+ Propriétaire de la table utilisée pour retourner les informations de catalogue. *TABLE_OWNER*est de type **nvarchar (** 384 **)**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si le propriétaire n'est pas précisé, les règles par défaut définissant la visibilité des tables du SGBD sous-jacent sont utilisées.  
   
- Si l'utilisateur actuel est propriétaire d'une table portant le nom spécifié, les colonnes de cette table sont renvoyées. Si *owner* n’est pas spécifié et que l’utilisateur actuel ne possède pas de table portant le *nom*spécifié, cette procédure recherche une table avec le *nom_table* spécifié, appartenant au propriétaire de la base de données. Si la recherche de la table aboutit, ce sont les colonnes de cette dernière qui sont retournées.  
+ Si l'utilisateur actuel est propriétaire d'une table portant le nom spécifié, les colonnes de cette table sont renvoyées. Si *owner* n’est pas spécifié et que l’utilisateur actuel ne possède pas de table portant le *nom*spécifié, cette procédure recherche une table avec la *table_name* spécifiée détenue par le propriétaire de la base de données. Si la recherche de la table aboutit, ce sont les colonnes de cette dernière qui sont retournées.  
   
- [ @table_qualifier=] '*TABLE_QUALIFIER*'  
+ [ @table_qualifier= ] '*TABLE_QUALIFIER*'  
  Nom du qualificateur de la table. *TABLE_QUALIFIER* est de **type sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge les noms de table en trois parties (*qualifier.Owner.Name*). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
- [ @fUsePattern= ] '*fUsePattern*'  
+ [ @fUsePattern= ] «*fUsePattern*»  
  Détermine si les caractères de soulignement (_), de pourcentage (%) et de crochets ([ou]) sont interprétés comme des caractères génériques. Les valeurs valides sont 0 (critères spéciaux désactivés) et 1 (critères spéciaux activés). *fUsePattern* est de **bits**, avec 1 comme valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- Aucun  
+## <a name="return-code-values"></a>Codet de retour  
+ None  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -89,7 +89,7 @@ EXEC sp_table_privileges
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures &#40;stockées de catalogue Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Procédures stockées de catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 9c508bc5-c7a4-4db1-b3bf-c7098c66435a
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 056185a68e7657b261ec6d4c5ae659eaa54b22a8
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660829"
 ---
 # <a name="numberofprops-property-clientnetworkprotocol-class"></a>Propriété NumberOfProps (classe ClientNetworkProtocol)
@@ -36,8 +36,8 @@ object.NumberOfProps [= value]
 ```  
   
 ## <a name="parts"></a>Éléments  
- *object*  
- Objet de [classe ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) qui représente le protocole réseau utilisé par le client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ *dessin*  
+ A [classe ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) qui représente le protocole réseau utilisé par le client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur uint32 qui spécifie le nombre de propriétés du protocole réseau client.  

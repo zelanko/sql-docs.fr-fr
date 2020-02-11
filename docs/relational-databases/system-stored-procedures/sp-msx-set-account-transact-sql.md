@@ -18,18 +18,18 @@ ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 22372412f9c3f905b8978741b556724ca880568c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108018"
 ---
-# <a name="spmsxsetaccount-transact-sql"></a>sp_msx_set_account (Transact-SQL)
+# <a name="sp_msx_set_account-transact-sql"></a>sp_msx_set_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Définit le nom du compte et le mot de passe du serveur maître de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sur le serveur cible.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,23 +39,24 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @credential_name = ] 'credential_name'` Le nom de l’information d’identification à utiliser pour vous connecter au serveur maître. Ce nom doit être celui d'informations d'identification existantes. Soit *credential_name* ou *credential_id* doit être spécifié.  
+`[ @credential_name = ] 'credential_name'`Nom des informations d’identification à utiliser pour se connecter au serveur maître. Ce nom doit être celui d'informations d'identification existantes. *Credential_name* ou *credential_id* doivent être spécifiés.  
   
-`[ @credential_id = ] credential_id` L’identificateur pour les informations d’identification à utiliser pour vous connecter au serveur maître. Il doit désigner des informations d'identification existantes. Soit *credential_name* ou *credential_id* doit être spécifié.  
+`[ @credential_id = ] credential_id`Identificateur des informations d’identification à utiliser pour se connecter au serveur maître. Il doit désigner des informations d'identification existantes. *Credential_name* ou *credential_id* doivent être spécifiés.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune.  
+ Aucun.  
   
 ## <a name="remarks"></a>Notes  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des informations d'identification pour stocker le nom d'utilisateur et le mot de passe qu'un serveur cible utilise pour se connecter à un serveur maître. Cette procédure définit les informations d'identification utilisées par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de ce serveur cible pour se connecter au serveur maître.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des informations d'identification pour stocker le nom d'utilisateur et le mot de passe qu'un serveur cible utilise pour se connecter à un serveur maître. Cette procédure définit les informations d'identification utilisées par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de ce serveur cible pour se connecter au serveur maître.  
   
- Il doit s'agir d'informations d'identification existantes. Pour plus d’informations sur la création d’une information d’identification, consultez [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md).  
+ Il doit s'agir d'informations d'identification existantes. Pour plus d’informations sur la création d’informations d’identification, consultez [Create credential &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorisations  
- Les autorisations d’exécution **sp_msx_set_account** par défaut aux membres de la **sysadmin** rôle serveur fixe.  
+ Les autorisations d’exécution pour **sp_msx_set_account** par défaut aux membres du rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant configure ce serveur afin qu'il utilise les informations d'identification `MsxAccount` pour la connexion au serveur maître.  
@@ -69,7 +70,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de SQL Server Agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [SQL Server Agent des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sp_msx_get_account &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-get-account-transact-sql.md)  
   

@@ -13,27 +13,27 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c52c1d38e115e4064e106175bb49d0a3ecb4318d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913779"
 ---
-# <a name="mssqlserver701"></a>MSSQLSERVER_701
+# <a name="mssqlserver_701"></a>MSSQLSERVER_701
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|701|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|701|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|NOSYSMEM|  
 |Texte du message|Mémoire système insuffisante pour exécuter cette requête.|  
   
 ## <a name="explanation"></a>Explication  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'a pas réussi à allouer suffisamment de mémoire pour exécuter la requête. Cela peut être dû à plusieurs causes, notamment aux paramètres du système d'exploitation, à la mémoire physique disponible ou aux limites de la mémoire sur la charge de travail courante. La plupart du temps, la transaction qui échoue n'est pas la cause de l'erreur.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'a pas réussi à allouer suffisamment de mémoire pour exécuter la requête. Cela peut être dû à diverses raisons, notamment des paramètres de système d’exploitation, une disponibilité de mémoire physique ou des limites de mémoire sur la charge de travail en cours. Dans la plupart des cas, la transaction qui a échoué n’est pas la cause de cette erreur.  
   
  Les requêtes de diagnostic, telles que les instructions DBCC, peuvent échouer parce que la mémoire du serveur est insuffisante.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62913779"
   
 1.  Vérifiez si d'autres applications ou services consomment de la mémoire sur ce serveur. Reconfigurez les applications ou les services moins importants pour consommer moins de mémoire.  
   
-2.  Commencer à collecter les compteurs d’analyseur de performances pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Gestionnaire de tampons**, **SQL Server : Gestionnaire de mémoire**.  
+2.  Commencez la collecte des compteurs de l’analyseur de performances pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  **: Buffer Manager**, **SQL Server : Memory Manager**.  
   
 3.  Vérifiez les paramètres de configuration de la mémoire de SQL Server suivants :  
   

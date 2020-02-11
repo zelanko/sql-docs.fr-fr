@@ -1,5 +1,5 @@
 ---
-title: À l’aide d’un objet Recordset | Microsoft Docs
+title: Utilisation d’un objet Recordset | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ ms.assetid: 01c630d8-eb35-4bd0-a99f-7c0f85316cc1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dda89464598ddc4ecfee0078b36aadd01b4486f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923633"
 ---
 # <a name="using-a-recordset-object"></a>Utilisation d’un objet Recordset
-Vous pouvez également utiliser **Recordset.Open** pour établir une connexion implicitement et d’émettre une commande sur la connexion en une seule opération. Par exemple, dans Visual Basic :  
+Vous pouvez également utiliser **Recordset. Open** pour établir implicitement une connexion et émettre une commande sur cette connexion en une seule opération. Par exemple, dans Visual Basic :  
   
 ```  
 Dim oRs As ADODB.Recordset  
@@ -47,4 +47,4 @@ oRs.Close
 Set oRs = Nothing  
 ```  
   
- Notez que **oRs.Open** prend une chaîne de connexion (*sConn*), au lieu d’un **connexion** objet (*oConn*), comme valeur de son  **ActiveConnection** paramètre. Également le type de curseur côté client est appliqué en définissant le **CursorLocation** propriété sur le **Recordset** objet. Là encore, Ceci contraste avec le **HelloData** exemple.
+ Notez que **ors. Open** prend une chaîne de connexion (*sConn*), à la place d’un objet de **connexion** (*oConn*), en tant que valeur de son paramètre **ActiveConnection** . Le type de curseur côté client est également appliqué en définissant la propriété **CursorLocation** sur l’objet **Recordset** . Là encore, Comparez ceci avec l’exemple de **HelloData** .

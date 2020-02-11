@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d9fb152507979232d27308d107278d4b6d3bccb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243195"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>Exécuter des fichiers de script Transact-SQL à l'aide de sqlcmd
@@ -51,7 +51,7 @@ ms.locfileid: "75243195"
   
 2.  Dans la fenêtre d’invite de commandes, entrez ce qui suit : `sqlcmd -S myServer\instanceName -i C:\myScript.sql`  
   
-3.  Appuyez sur ENTRÉE.  
+3.  Appuyez sur Entrée.  
   
  La liste des noms et des adresses des employés de la société [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] apparaît dans la fenêtre d'invite de commandes.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "75243195"
   
 2.  Dans la fenêtre d’invite de commandes, entrez ce qui suit : `sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt`  
   
-3.  Appuyez sur ENTRÉE.  
+3.  Appuyez sur Entrée.  
   
  Aucun résultat n'est retourné dans la fenêtre d'invite de commandes. Le résultat est au contraire envoyé dans le fichier EmpAdds.txt. Vous pouvez vérifier ce résultat en ouvrant le fichier EmpAdds.txt.  
   

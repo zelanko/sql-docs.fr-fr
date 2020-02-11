@@ -11,17 +11,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a0bc7e2d99190e142647ab8732e2d2d48b3ea2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255125"
 ---
 # <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>Programmabilité du composant WebPart Visionneuse de rapports dans l'intégration SharePoint
   Le composant WebPart de la visionneuse de rapports est un contrôle serveur `T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart` qui contient un ensemble d'interfaces de programmation d'applications publiques (API) permettant aux développeurs de créer des applications SharePoint personnalisées. Vous pouvez créer des composants WebPart personnalisés qui fournissent les paramètres et le chemin du rapport au composant WebPart Visionneuse de rapports à l’aide de connexions de composants WebPart. Vous pouvez également incorporer le composant WebPart dans une page WebPart SharePoint personnalisée et le personnaliser en utilisant l'API publique.  
   
 ## <a name="connecting-to-report-viewer-web-part-with-custom-web-parts"></a>Connexion au composant WebPart Visionneuse de rapports avec des composants WebPart personnalisés  
- Le composant WebPart Visionneuse de rapports est un consommateur de connexions aux composants WebPart SharePoint qui implémentent <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> ou `T:Microsoft.SharePoint.WebPartPages.IFilterValues`. Un composant WebPart <xref:System.Web.UI.WebControls.WebParts.IWebPartRow>, tel que le composant WebPart **Documents**, peut fournir le chemin d’un rapport à un composant WebPart Visionneuse de rapports s’il est placé dans la même page de composant WebPart que le composant WebPart Visionneuse de rapports. De même, un `T:Microsoft.SharePoint.WebPartPages.IFilterValues` WebPart, telles que la **filtre de texte** ou **filtre choix**, peut fournir un paramètre de rapport à une partie Web de visionneuse de rapport lorsqu’elle est placée sur la même page de composant WebPart que le Web de visionneuse de rapports Partie.  
+ Le composant WebPart Visionneuse de rapports est un consommateur de connexions aux composants WebPart SharePoint qui implémentent <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> ou `T:Microsoft.SharePoint.WebPartPages.IFilterValues`. Un composant WebPart <xref:System.Web.UI.WebControls.WebParts.IWebPartRow>, tel que le composant WebPart **Documents**, peut fournir le chemin d’un rapport à un composant WebPart Visionneuse de rapports s’il est placé dans la même page de composant WebPart que le composant WebPart Visionneuse de rapports. De même, `T:Microsoft.SharePoint.WebPartPages.IFilterValues` un composant WebPart, tel que le **filtre de texte** ou le **filtre de choix**, peut fournir un paramètre de rapport à un composant WebPart Visionneuse de rapports lorsqu’il est placé sur la même page de composant WebPart que le composant WebPart Visionneuse de rapports.  
   
 ### <a name="implementing-a-report-path-provider-with-iwebpartrow"></a>Implémentation d'un fournisseur de chemins d'accès au rapport avec IWebPartRow  
  Pour fournir un chemin d'accès au rapport au composant WebPart Visionneuse de rapports via des connexions WebPart, procédez comme suit :  

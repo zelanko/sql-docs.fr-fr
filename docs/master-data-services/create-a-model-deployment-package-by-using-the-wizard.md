@@ -15,10 +15,10 @@ ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 5771fb5db586726d19d965ca18aa27f3dab16bd8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729592"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>Créer un package de déploiement de modèle à l'aide de l'Assistant
@@ -27,7 +27,7 @@ ms.locfileid: "73729592"
 
   Utilisez l'Assistant Déploiement de modèle de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] pour créer un package d'objets de modèle uniquement. Si vous avez besoin d’inclure des données dans un package, consultez [Créer un package de déploiement de modèle à l’aide de MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Dans l’application web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , vous devez avoir l’autorisation d’accéder à la zone fonctionnelle **Administration de système** .  
@@ -50,9 +50,9 @@ ms.locfileid: "73729592"
   
 6.  Cliquez sur **Télécharger**.  
   
-7.  Enregistrez le fichier.  
+7.  Enregistrez le fichier .  
   
-8.  Pour fermer l'Assistant, cliquez sur **Fermer** .  
+8.  Cliquez sur **Fermer** pour quitter l'Assistant.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
   

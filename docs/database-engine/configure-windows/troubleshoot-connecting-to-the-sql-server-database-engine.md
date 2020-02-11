@@ -14,10 +14,10 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b2394fc73483b78e5e90a4ccffa9ce45205dc237
-ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74542313"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Résoudre les problèmes de connexion au moteur de base de données SQL Server
@@ -198,6 +198,6 @@ Une fois que vous pouvez vous connecter à l’aide de TCP sur le même ordinate
 
 4. Une fois que vous pouvez vous connecter en utilisant le nom de l’ordinateur et en forçant une connexion TCP, tentez de vous connecter en utilisant le nom de l’ordinateur, mais sans forcer la connexion TCP. Par exemple, pour une instance par défaut, utilisez simplement le nom de l’ordinateur comme `CCNT27` . Pour une instance nommée, utilisez le nom de l’ordinateur et le nom de l’instance comme `ACCNT27\PAYROLL` . Si vous pouvez vous connecter en forçant une connexion TCP, mais pas sans forcer la connexion TCP, le client utilise probablement un autre protocole (par exemple, des canaux nommés).
 
-    1. Sur l’ordinateur client, à l’aide du Gestionnaire de configuration SQL Server, dans le volet gauche, développez ****Configuration** de SQL Native Client** *version*, puis sélectionnez **Protocoles clients**.
+    1. Sur l’ordinateur client, à l’aide du Gestionnaire de configuration SQL Server, dans le volet gauche, développez **Configuration** de **SQL Native Client** *version*, puis sélectionnez **Protocoles clients**.
     2. Dans le volet droit, vérifiez que TCP/IP est activé. Si TCP/IP est désactivé, cliquez avec le bouton droit sur **TCP/IP** , puis cliquez sur **Activer**.
     3. Vérifiez que l’ordre des protocoles pour TCP/IP est un nombre inférieur aux protocoles de canaux nommés (ou VIA sur des versions plus anciennes). En règle générale, vous devez laisser la mémoire partagée en 1 et TCP/IP en 2. La mémoire partagée est utilisée uniquement quand le client et SQL Server sont en cours d’exécution sur le même ordinateur. Tous les protocoles activés sont essayés dans l’ordre jusqu’à ce que l’un d’eux réussisse, sauf que la mémoire partagée est ignorée quand la connexion n’est pas sur le même ordinateur.

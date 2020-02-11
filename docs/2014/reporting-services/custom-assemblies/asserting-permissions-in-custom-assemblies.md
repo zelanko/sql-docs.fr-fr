@@ -19,16 +19,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f66896479ec06d78b94d6fe084ff806e3af67727
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265382"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>Déclaration d'autorisations dans les assemblys personnalisés
   Par défaut, le code d’assembly personnalisé s’exécute avec le jeu d’autorisations limité **Execution**. Dans certaines situations, vous voudrez peut-être implémenter un assembly personnalisé qui effectue des appels sécurisés à des ressources protégées au sein de votre système de sécurité (comme un fichier ou le Registre). Pour ce faire, vous devez procéder comme suit :  
   
-1.  Identifiez les autorisations exactes dont votre code a besoin pour effectuer l'appel sécurisé. Si cette méthode fait partie d’une bibliothèque [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], ces informations doivent être incluses dans la documentation de la méthode.  
+1.  Identifiez les autorisations exactes dont votre code a besoin pour effectuer l'appel sécurisé. Si cette méthode fait partie d’une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] bibliothèque, ces informations doivent être incluses dans la documentation de la méthode.  
   
 2.  Modifiez les fichiers de configuration de stratégie du serveur de rapports de manière à accorder les autorisations requises à l'assembly personnalisé. Pour plus d’informations sur les fichiers de configuration de stratégie de sécurité, consultez [Utilisation des fichiers de stratégie de sécurité Reporting Services](../extensions/secure-development/using-reporting-services-security-policy-files.md).  
   

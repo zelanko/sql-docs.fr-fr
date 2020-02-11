@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4f86c02acfcefba4972769367649cfd6b2075107
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103621"
 ---
 # <a name="process-large-reports"></a>Traiter les rapports volumineux
@@ -70,8 +70,8 @@ ms.locfileid: "66103621"
   
 ## <a name="see-also"></a>Voir aussi  
  [Abonnements et remise &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Définir les propriétés de traitement d'un rapport](set-report-processing-properties.md)   
- [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Définir les propriétés de traitement d’un rapport](set-report-processing-properties.md)   
+ [Spécifier les informations d’identification et de connexion pour les sources de données de rapport](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](report-server-content-management-ssrs-native-mode.md)   
  [Précharger le cache &#40;Gestionnaire de rapports&#41;](preload-the-cache-report-manager.md)  
   

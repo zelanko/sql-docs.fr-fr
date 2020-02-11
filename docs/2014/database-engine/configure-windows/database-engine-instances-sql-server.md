@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2e38b572535011737f33ba1e4c438540ecdd6849
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811230"
 ---
 # <a name="database-engine-instances-sql-server"></a>Instances du moteur de base de données (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "62811230"
 |Explique comment effectuer des tâches de configuration réseau client, telles que la configuration des protocoles clients et la création ou la suppression d'un alias de serveur.|[Configuration du réseau client](client-network-configuration.md)|  
 |Décrit les éditeurs de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] que vous pouvez utiliser pour concevoir, déboguer et exécuter des scripts tels que des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] . Explique également comment coder des scripts Windows PowerShell de manière à ce qu'ils fonctionnent avec les composants SQL Server.|[Scripts du moteur de base de données](../../relational-databases/scripting/database-engine-scripting.md)|  
 |Explique comment utiliser des plans de maintenance pour spécifier un flux de travail concernant les tâches d'administration communes pour une instance. Les flux de travail incluent des tâches telles que la sauvegarde des bases de données et la mise à jour des statistiques pour améliorer les performances.|[Plans de maintenance](../../relational-databases/maintenance-plans/maintenance-plans.md)|  
-|Explique comment utiliser Resource Governor pour gérer la consommation des ressources et les charges de travail en limitant le temps processeur et la mémoire à disposition des demandes d'applications.|[Resource Governor](../../relational-databases/resource-governor/resource-governor.md)|  
+|Explique comment utiliser Resource Governor pour gérer la consommation des ressources et les charges de travail en limitant le temps processeur et la mémoire à disposition des demandes d'applications.|[gouverneur de ressources](../../relational-databases/resource-governor/resource-governor.md)|  
 |Explique comment les applications de base de données peuvent utiliser la messagerie de base de données pour envoyer des messages électroniques à partir du [!INCLUDE[ssDE](../../includes/ssde-md.md)].|[Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)|  
 |Explique comment utiliser les événements étendus pour capturer des données de performances afin de générer des lignes de base de performances ou diagnostiquer des problèmes de performances. Les événements étendus sont un système léger très évolutif permettant de collecter des données de performances.|[Événements étendus](../../relational-databases/extended-events/extended-events.md)|  
 |Explique comment utiliser Trace SQL pour générer un système personnalisé pour capturer et enregistrer les événements dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)].|[Trace SQL](../../relational-databases/sql-trace/sql-trace.md)|  

@@ -1,5 +1,5 @@
 ---
-title: Sys.system_sql_modules (Transact-SQL) | Microsoft Docs
+title: sys. system_sql_modules (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,21 +21,21 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fe249cd389e71fa5565e2877fba46b47cf0a4f38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108784"
 ---
-# <a name="syssystemsqlmodules-transact-sql"></a>sys.system_sql_modules (Transact-SQL)
+# <a name="syssystem_sql_modules-transact-sql"></a>sys.system_sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Renvoie une ligne par objet système qui contient un module défini par le langage SQL. Les objets système de type FN, IF, P, PC, TF, V sont associés à un module SQL. Pour identifier l’objet conteneur, vous pouvez joindre cette vue à [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md).  
+  Renvoie une ligne par objet système qui contient un module défini par le langage SQL. Les objets système de type FN, IF, P, PC, TF, V sont associés à un module SQL. Pour identifier l’objet conteneur, vous pouvez joindre cette vue à [sys. system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md).  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Numéro d'identification de l'objet conteneur, unique dans une base de données.|  
-|**definition**|**nvarchar(max)**|Texte SQL qui définit ce module.|  
+|**définition**|**nvarchar(max)**|Texte SQL qui définit ce module.|  
 |**uses_ansi_nulls**|**bit**|1 = Le module a été créé lorsque l'option de base de données SET ANSI_NULLS était activée (ON).<br /><br /> Retourne toujours 1.|  
 |**uses_quoted_identifier**|**bit**|1 = Le module a été créé avec l'instruction SET QUOTED_IDENTIFIER ON.<br /><br /> Retourne toujours 1.|  
 |**is_schema_bound**|**bit**|0 = Le module n'a pas été créé avec l'option SCHEMABINDING.<br /><br /> Retourne toujours 0.|  
@@ -49,8 +49,8 @@ ms.locfileid: "68108784"
   
 ## <a name="see-also"></a>Voir aussi  
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [Sys.all_sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql.md)   
+ [sys. all_sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql.md)   
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Affichages catalogue de l’objet &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
+ [Affichages catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

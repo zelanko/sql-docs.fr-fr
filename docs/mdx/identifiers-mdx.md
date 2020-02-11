@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c11561ac71aa72469a809ea25297d62133aa93da
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891221"
 ---
 # <a name="identifiers-mdx"></a>Identificateurs (MDX)
@@ -44,7 +44,7 @@ ms.locfileid: "68891221"
   
     -   Le trait de soulignement (_).  
   
-3.  L'identificateur ne doit pas être un mot réservé MDX. En effet, ils ne respectent pas la casse dans la syntaxe MDX. Pour plus d’informations, consultez [syntaxe &#40;&#41;MDX des mots clés réservés](../mdx/reserved-keywords-mdx-syntax.md).  
+3.  L'identificateur ne doit pas être un mot réservé MDX. En effet, ils ne respectent pas la casse dans la syntaxe MDX. Pour plus d’informations, consultez [Mots clés réservés &#40;syntaxe MDX&#41;](../mdx/reserved-keywords-mdx-syntax.md).  
   
 4.  Les espaces incorporés ou les caractères spéciaux ne sont pas autorisés.  
   
@@ -123,8 +123,8 @@ ms.locfileid: "68891221"
  En outre, l'identificateur Measures de l'exemple précédent a été délimité pour illustrer la délimitation de plusieurs identificateurs.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence du langage MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [Principes de base des requêtes MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
- [MDX, éléments &#40;de syntaxe MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [Référence du langage MDX &#40;&#41;MDX](../mdx/mdx-language-reference-mdx.md)   
+ [Notions de base des requêtes MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
+ [Éléments de syntaxe MDX &#40;&#41;MDX](../mdx/mdx-syntax-elements-mdx.md)  
   
   

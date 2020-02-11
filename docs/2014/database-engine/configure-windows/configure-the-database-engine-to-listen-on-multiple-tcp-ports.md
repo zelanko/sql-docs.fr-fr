@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5f3c354a36f5a3a62120ecc40a815420393648c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811543"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Configurer le moteur de base de données de manière à écouter sur plusieurs ports TCP
@@ -82,7 +82,7 @@ ms.locfileid: "62811543"
   
 4.  Cliquez avec le bouton droit sur **IPAll**, puis cliquez sur **Propriétés**.  
   
-5.  Dans la zone **Port TCP** , tapez les ports sur lesquels le [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit écouter, en les séparant par des virgules. Dans notre exemple, si le port par défaut 1433 est répertorié, tapez `,1500` afin que la zone affiche `1433,1500`, puis cliquez sur **OK**.  
+5.  Dans la zone **Port TCP** , tapez les ports sur lesquels le [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit écouter, en les séparant par des virgules. Dans notre exemple, si le port par défaut 1433 est listé, `,1500` tapez afin que la `1433,1500`zone soit lue, puis cliquez sur **OK**.  
   
     > [!NOTE]  
     >  Si vous n'activez pas le port sur toutes les adresses IP, configurez le port supplémentaire dans la zone des propriétés pour uniquement l'adresse de votre choix. Ensuite, dans le volet de la console, cliquez avec le bouton droit sur **TCP/IP**, cliquez sur **Propriétés**puis, dans la zone **Écouter tout** , sélectionnez **Non**.  

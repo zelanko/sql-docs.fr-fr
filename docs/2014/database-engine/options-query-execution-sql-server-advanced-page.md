@@ -1,5 +1,5 @@
 ---
-title: 'Options (requête d’exécution : SQL Server : Page avancé) | Microsoft Docs'
+title: 'Options (exécution de la requête : SQL Server : page avancé) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5323054b77ed26a3ada816f44c1bf6764ded931d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089371"
 ---
 # <a name="options-query-executionsql-serveradvanced-page"></a>Options (Exécution de la requête : SQL Server : Page Avancé)
-  Plusieurs options sont disponibles lors de l'utilisation de la commande SET. Cette page vous permet de spécifier une option **set** pour l'exécution des requêtes [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans l'éditeur de requête SQL Server. Elles n'ont aucun effet sur les autres éditeurs de code. Les modifications de ces options sont appliquées uniquement aux nouvelles requêtes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour modifier les options des requêtes en cours, cliquez sur **Options de requête** dans le menu **Requête** ou dans le menu contextuel de la fenêtre Requête de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Sous **Exécution**, cliquez sur **Avancé**. Pour plus d'informations sur chaque option, consultez la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+  Plusieurs options sont disponibles lors de l'utilisation de la commande SET. Cette page vous permet de spécifier une option **set** pour l'exécution des requêtes [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans l'éditeur de requête SQL Server. Elles n'ont aucun effet sur les autres éditeurs de code. Les modifications de ces options sont appliquées uniquement aux nouvelles requêtes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour modifier les options des requêtes en cours, cliquez sur **Options de requête** dans le menu **Requête** ou dans le menu contextuel de la fenêtre Requête de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Sous **Exécution**, cliquez sur **Avancé**. Pour plus d'informations sur chaque option, consultez la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Options  
  **SET NOCOUNT**  
@@ -29,22 +29,22 @@ ms.locfileid: "66089371"
  **SET NOEXEC**  
  N'exécute pas la requête. Cette case à cocher est désactivée par défaut.  
   
- **SET PARSEONLY**  
+ **DÉFINIR PARSEONLY**  
  Vérifie la syntaxe de chaque requête, mais n'exécute pas les requêtes. Cette case à cocher est désactivée par défaut.  
   
- **SET CONCAT_NULL_YIELDS_NULL**  
+ **DÉFINIR CONCAT_NULL_YIELDS_NULL**  
  Lorsque cette case à cocher est activée, les requêtes qui concatènent une valeur existante avec une valeur NULL, retournent toujours une valeur NULL comme résultat. Lorsque cette case à cocher est désactivée, une valeur existante concaténée avec une valeur NULL, retourne la valeur existante. Cette case à cocher est activée par défaut.  
   
  **SET ARITHABORT**  
  Si cette case à cocher est activée, lorsqu'une instruction INSERT, DELETE ou UPDATE rencontre une erreur arithmétique (dépassement de capacité, division par zéro ou erreur de domaine) au cours de l'évaluation de l'expression, le programme met fin à la requête ou au traitement. Lorsque cette case à cocher est désactivée, une valeur NULL est fournie pour cette valeur, si possible, la requête se poursuit et un message est inclus avec le résultat. Pour plus d’informations, consultez [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql). Cette case à cocher est activée par défaut.  
   
- **SET SHOWPLAN_TEXT**  
+ **DÉFINIR SHOWPLAN_TEXT**  
  Lorsque cette case à cocher est activée, le plan de requête est retourné au format texte avec chaque requête. Cette case à cocher est désactivée par défaut.  
   
- **SET STATISTICS TIME**  
+ **DÉFINIR L’HEURE DES STATISTIQUES**  
  Lorsque cette case à cocher est activée, les statistiques de temps sont retournées avec chaque requête. Cette case à cocher est désactivée par défaut.  
   
- **SET STATISTICS IO**  
+ **DÉFINIR LES STATISTIQUES D’E/S**  
  Lorsque cette case à cocher est activée, les statistiques d'entrée/sortie sont retournées avec chaque requête. Cette case à cocher est désactivée par défaut.  
   
  **SET TRANSACTION ISOLATION LEVEL**  
@@ -55,10 +55,10 @@ SET TRANSACTION ISOLATION LEVEL SNAPSHOT;
 GO  
 ```  
   
- **PRIORITÉ DE BLOCAGE DE JEU**  
+ **SET DEADLOCK PRIORITY**  
  La valeur par défaut de Normal permet à chaque requête de disposer de la même priorité lorsqu'un blocage se produit. Sélectionnez une priorité Basse, si vous voulez que cette requête perde tout conflit de blocage et soit sélectionnée comme requête à interrompre.  
   
- **DÉLAI D’ATTENTE DU VERROU DE JEU**  
+ **SET LOCK TIMEOUT**  
  La valeur par défaut -1 indique que les verrous sont maintenus tant que les transactions ne sont pas achevées. Une valeur égale à 0 signifie que l'instruction n'attendra pas et qu'elle retournera un message dès qu'un verrou sera localisé. Spécifiez une valeur supérieure à 0 milliseconde pour mettre fin à une transaction si les verrous de cette transaction doivent être maintenus plus longtemps que cette valeur.  
   
  **SET QUERY_GOVERNOR_COST_LIMIT**  
@@ -67,7 +67,7 @@ GO
  **Supprimer les en-têtes de message de fournisseur**  
  Lorsque cette case à cocher est activée, les messages d'état provenant du fournisseur (tel que le fournisseur SQLClient) ne sont pas affichés. Cette case à cocher est activée par défaut. Désactivez cette case à cocher pour afficher les messages du fournisseur lors de la résolution des problèmes en cas d'échec des requêtes au niveau du fournisseur.  
   
- **Déconnecter après l’exécution de la requête**  
+ **Déconnecter après l'exécution de la requête**  
  Lorsque cette case à cocher est activée, il est mis fin à la connexion à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] une fois la requête terminée. Cette case à cocher est désactivée par défaut.  
   
  **Rétablir les valeurs par défaut**  

@@ -1,5 +1,5 @@
 ---
-title: cdc.ddl_history (Transact-SQL) | Microsoft Docs
+title: CDC. ddl_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,30 +18,30 @@ ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1855120dde6e6f4e9037a6f14832cd24f310d77b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079224"
 ---
-# <a name="cdcddlhistory-transact-sql"></a>cdc.ddl_history (Transact-SQL)
+# <a name="cdcddl_history-transact-sql"></a>cdc.ddl_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque modification du langage de définition de données (DDL) apportée aux tables qui sont activées pour la capture des données modifiées. Vous pouvez utiliser cette table pour déterminer le moment où une modification DDL a eu lieu sur une table source et identifier cette modification. Les tables sources qui n'ont pas subi de modifications DDL n'auront pas d'entrées dans cette table.  
   
- Nous vous recommandons de ne pas interroger les tables système directement. À la place, exécutez le [sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) procédure stockée.  
+ Nous vous recommandons de ne pas interroger les tables système directement. Au lieu de cela, exécutez la procédure stockée [sys. sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) .  
    
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**source_object_id**|**int**|Identificateur de la table source à laquelle la modification DDL a été appliquée.|  
-|**object_id**|**Int**|ID de la table de modifications associée à une instance de capture pour la table source.|  
+|**object_id**|**int**|ID de la table de modifications associée à une instance de capture pour la table source.|  
 |**required_column_update**|**bit**|Indique que le type de données d'une colonne capturée a été modifié dans la table source. Ce changement a modifié la colonne dans la table de modifications.|  
 |**ddl_command**|**nvarchar(max)**|Instruction DDL appliquée à la table source.|  
-|**ddl_lsn**|**binary(10)**|Numéro séquentiel dans le journal associé à la validation de la modification DDL.|  
-|**ddl_time**|**datetime**|Date et heure auxquelles la modification DDL a été apportée à la table source.|  
+|**ddl_lsn**|**binaire (10)**|Numéro séquentiel dans le journal associé à la validation de la modification DDL.|  
+|**ddl_time**|**DATETIME**|Date et heure auxquelles la modification DDL a été apportée à la table source.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
- [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
+ [sys. sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [CDC. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

@@ -19,18 +19,18 @@ ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 998794fd2e5fe5521587ebbb2a88c61c80cff39e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67927825"
 ---
-# <a name="spdropdevice-transact-sql"></a>sp_dropdevice (Transact-SQL)
+# <a name="sp_dropdevice-transact-sql"></a>sp_dropdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Supprime un périphérique de base de données ou d’une unité de sauvegarde à partir d’une instance de la [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)], suppression de l’entrée à partir de **master.dbo.sysdevices**.  
+  Supprime une unité de base de données ou une unité de sauvegarde [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)]d’une instance du, en supprimant l’entrée de **Master. dbo. sysdevices**.  
    
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,24 +41,24 @@ sp_dropdevice [ @logicalname = ] 'device'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @logicalname = ] 'device'` Est le nom de l’unité de base de données ou d’une unité de sauvegarde logique comme indiqué dans **master.dbo.sysdevices.name**. *APPAREIL* est **sysname**, sans valeur par défaut.  
+`[ @logicalname = ] 'device'`Nom logique de l’unité de base de données ou de l’unité de sauvegarde, comme indiqué dans **Master.dbo.sysdevices.Name**. l' *unité* est de **type sysname**, sans valeur par défaut.  
   
-`[ @delfile = ] 'delfile'` Spécifie si le fichier de l’unité de sauvegarde physique doit être supprimé. *delfile* est **varchar(7)** . S’il est spécifié en tant que **DELFILE**, le fichier de disque d’unité de sauvegarde physique est supprimé.  
+`[ @delfile = ] 'delfile'`Spécifie si le fichier de l’unité de sauvegarde physique doit être supprimé. *delfile* est **de type varchar (7)**. S’il est spécifié en tant que **delfile**, le fichier de disque physique de l’unité de sauvegarde est supprimé.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
- **sp_dropdevice** ne peut pas être utilisé dans une transaction.  
+ **sp_dropdevice** ne peut pas être utilisé au sein d’une transaction.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe **diskadmin** .  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant supprime le `tapedump1` unité de sauvegarde sur bande à partir de la [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ L’exemple suivant supprime l' `tapedump1` unité de vidage sur bande [!INCLUDE[ssDE](../../includes/ssde-md.md)]de l'.  
   
 ```  
 EXEC sp_dropdevice 'tapedump1';  

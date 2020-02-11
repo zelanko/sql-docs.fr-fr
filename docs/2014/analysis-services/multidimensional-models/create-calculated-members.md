@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f6b7ca79cefee4d19593d20320da13b4253a89ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076274"
 ---
 # <a name="create-calculated-members"></a>Créer des membres calculés
@@ -47,7 +47,7 @@ ms.locfileid: "66076274"
   
 -   les expressions de données qui représentent les composants de cube tels que les dimensions, les niveaux, les mesures, et ainsi de suite ;  
   
--   les opérateurs arithmétiques ;  
+-   Opérateurs arithmétiques  
   
 -   Nombres  
   

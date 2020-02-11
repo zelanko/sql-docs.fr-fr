@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_outstanding_batches (Transact-SQL) | Microsoft Docs
+title: sys. dm_fts_outstanding_batches (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -22,37 +22,37 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2f0e03483ab0e2470df24fa2a00e6b7965b2199f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68265892"
 ---
-# <a name="sysdmftsoutstandingbatches-transact-sql"></a>sys.dm_fts_outstanding_batches (Transact-SQL)
+# <a name="sysdm_fts_outstanding_batches-transact-sql"></a>sys.dm_fts_outstanding_batches (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retourne des informations à propos de chaque lot d'indexation de texte intégral.  
   
   |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|**Int**|ID de la base de données|  
+|database_id|**int**|ID de la base de données|  
 |catalog_id|**int**|ID du catalogue de texte intégral|  
-|table_id|**Int**|ID de l'ID de table qui contient l'index de texte intégral|  
-|batch_id|**Int**|ID de lot|  
-|memory_address|**varbinary(8)**|Adresse mémoire de l'objet de lot|  
-|crawl_memory_address|**varbinary(8)**|Adresse mémoire de l'objet d'analyse (objet parent)|  
-|memregion_memory_address|**varbinary(8)**|Adresse mémoire de la région mémoire de la mémoire de partage sortante de l'hôte de démon de filtre (fdhost.exe)|  
+|table_id|**int**|ID de l'ID de table qui contient l'index de texte intégral|  
+|batch_id|**int**|ID de lot|  
+|memory_address|**varbinary (8)**|Adresse mémoire de l'objet de lot|  
+|crawl_memory_address|**varbinary (8)**|Adresse mémoire de l'objet d'analyse (objet parent)|  
+|memregion_memory_address|**varbinary (8)**|Adresse mémoire de la région mémoire de la mémoire de partage sortante de l'hôte de démon de filtre (fdhost.exe)|  
 |hr_batch|**int**|Code d'erreur le plus récent pour le lot|  
 |is_retry_batch|**bit**|Indique s'il s'agit d'une nouvelle tentative de lot :<br /><br /> 0 = Non<br /><br /> 1 = Oui|  
-|retry_hints|**Int**|Type de nouvelle tentative nécessaire pour le lot :<br /><br /> 0 = pas de nouvelle tentative<br /><br /> 1 = nouvelle tentative multithread<br /><br /> 2 = nouvelle tentative à thread unique<br /><br /> 3 = nouvelle tentative à thread unique et multithread<br /><br /> 5 = dernière tentative multithread<br /><br /> 6 = dernière tentative à thread unique<br /><br /> 7 = dernière tentative à thread unique et multithread|  
-|retry_hints_description|**nvarchar(120)**|Description du type de nouvelle tentative nécessaire :<br /><br /> pas de nouvelle tentative<br /><br /> nouvelle tentative multithread<br /><br /> nouvelle tentative à thread unique<br /><br /> nouvelle tentative à thread unique et multithread<br /><br /> dernière tentative multithread<br /><br /> dernière tentative à thread unique<br /><br /> dernière tentative à thread unique et multithread|  
+|retry_hints|**int**|Type de nouvelle tentative nécessaire pour le lot :<br /><br /> 0 = pas de nouvelle tentative<br /><br /> 1 = nouvelle tentative multithread<br /><br /> 2 = nouvelle tentative à thread unique<br /><br /> 3 = nouvelle tentative à thread unique et multithread<br /><br /> 5 = dernière tentative multithread<br /><br /> 6 = dernière tentative à thread unique<br /><br /> 7 = dernière tentative à thread unique et multithread|  
+|retry_hints_description|**nvarchar (120)**|Description du type de nouvelle tentative nécessaire :<br /><br /> pas de nouvelle tentative<br /><br /> nouvelle tentative multithread<br /><br /> nouvelle tentative à thread unique<br /><br /> nouvelle tentative à thread unique et multithread<br /><br /> dernière tentative multithread<br /><br /> dernière tentative à thread unique<br /><br /> dernière tentative à thread unique et multithread|  
 |doc_failed|**bigint**|Nombre de documents ayant échoué dans le lot|  
-|batch_timestamp|**timestamp**|Valeur d'horodatage obtenue lorsque le lot a été créé|  
+|batch_timestamp|**confirmé**|Valeur d'horodatage obtenue lorsque le lot a été créé|  
   
 ## <a name="permissions"></a>Autorisations  
 
-Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou un **administrateur Azure Active Directory** compte.   
+Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiert `VIEW SERVER STATE` l’autorisation.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant recherche le nombre de lots traités actuellement pour chaque table dans l'instance de serveur.  
@@ -63,7 +63,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Recherche en texte intégral et les fonctions et vues de gestion dynamique de la recherche sémantique &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
+ [Fonctions et vues de gestion dynamique de la recherche en texte intégral et de la recherche sémantique &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [Recherche en texte intégral](../../relational-databases/search/full-text-search.md)  
   
   

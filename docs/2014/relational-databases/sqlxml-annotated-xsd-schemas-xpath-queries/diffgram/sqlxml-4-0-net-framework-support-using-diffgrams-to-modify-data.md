@@ -1,5 +1,5 @@
 ---
-title: À l’aide de DiffGrams pour modifier des données dans SQLXML 4.0 | Microsoft Docs
+title: Utilisation de DiffGrams pour modifier des données dans SQLXML 4,0 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,14 +26,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e704688537684c367bf4d8f2eec95db2affcc0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012701"
 ---
 # <a name="using-diffgrams-to-modify-data-in-sqlxml-40"></a>Utilisation de DiffGrams pour modifier des données dans SQLXML 4.0
-  Le format DiffGram est introduit dans le **DataSet** composant de la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Dans le .NET Framework, vous pouvez créer des DiffGrams et les utiliser pour modifier des données dans les tables d'une base de données Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Le format DiffGram est introduit dans le composant **DataSet** du [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Dans le .NET Framework, vous pouvez créer des DiffGrams et les utiliser pour modifier des données dans les tables d'une base de données Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  Cette section fournit présente brièvement les DiffGrams et donne des exemples illustrant leur utilisation. Elle suppose que vous connaissez bien les DiffGrams dans le .NET Framework. Cette documentation porte principalement sur les problèmes liés aux DiffGrams spécifiques à SQLXML.  
@@ -42,13 +42,13 @@ ms.locfileid: "66012701"
  [Introduction aux DiffGrams dans SQLXML 4.0](introduction-to-diffgrams-in-sqlxml-4-0.md)  
  Fournit des informations de base sur les Diffgrams.  
   
- [Exemples de DiffGrams &#40;SQLXML 4.0&#41;](diffgram-examples-sqlxml-4-0.md)  
+ [Exemples DiffGram &#40;SQLXML 4,0&#41;](diffgram-examples-sqlxml-4-0.md)  
  Fournit des exemples d'utilisation de Diffgrams.  
   
- [Exécution d’un DiffGram à l’aide d’ADO &#40;SQLXML 4.0&#41;](executing-a-diffgram-by-using-ado-sqlxml-4-0.md)  
+ [Exécution d’un DiffGram à l’aide d’ADO &#40;SQLXML 4,0&#41;](executing-a-diffgram-by-using-ado-sqlxml-4-0.md)  
  Fournit un exemple d'exécution d'un Diffgram avec des objets ADO (ActiveX Data Object).  
   
- [Exécution d’un DiffGram à l’aide des classes managées SQLXML](../net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)  
+ [Exécution d'un DiffGram à l'aide des classes managées SQLXML](../net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)  
  Fournit un exemple d'exécution d'un Diffgram avec des classes managées SQLXML.  
   
   

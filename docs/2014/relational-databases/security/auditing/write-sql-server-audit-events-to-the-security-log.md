@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd272abda4b22f220e3fc599111d10cb4979f42e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211977"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Écrire des événements d'audit SQL Server dans le journal de sécurité
@@ -47,13 +47,13 @@ ms.locfileid: "68211977"
   
      [Sécurité](#Security)  
   
--   **Pour écrire des événements d'audit SQL Server dans le journal de sécurité :**  
+-   **Pour écrire des événements d’audit SQL Server dans le journal de sécurité :**  
   
-     [Configurer le paramètre Auditer l'accès aux objets dans Windows à l'aide de l'outil auditpol](#auditpolAccess)  
+     [Configurer le paramètre Auditer l’accès aux objets dans Windows à l’aide d’Auditpol](#auditpolAccess)  
   
-     [Configurer le paramètre Auditer l'accès aux objets dans Windows à l'aide de l'outil secpol](#secpolAccess)  
+     [Configurer le paramètre Auditer l’accès aux objets dans Windows à l’aide de secpol](#secpolAccess)  
   
-     [Octroyer l'autorisation Générer des audits de sécurité à un compte à l'aide de l'outil secpol](#secpolPermission)  
+     [Accorder l’autorisation générer des audits de sécurité à un compte à l’aide de secpol](#secpolPermission)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -118,6 +118,6 @@ ms.locfileid: "68211977"
 7.  Fermez l'outil Stratégie de sécurité locale.  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Audit &#40Moteur de base de données&#41;](sql-server-audit-database-engine.md)  
+ [SQL Server Audit &#40moteur de base de données&#41;](sql-server-audit-database-engine.md)  
   
   
