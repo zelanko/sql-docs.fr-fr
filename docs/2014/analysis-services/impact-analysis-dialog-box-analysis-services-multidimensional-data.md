@@ -1,5 +1,5 @@
 ---
-title: Avoir un impact sur la boîte de dialogue Analyse (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Boîte de dialogue analyse d’impact (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c08690cd2f5b77471392cab3aad1587b4cb0f9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080752"
 ---
 # <a name="impact-analysis-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Analyse d'impact (Analysis Services - Données multidimensionnelles)
@@ -26,7 +26,7 @@ ms.locfileid: "66080752"
 >  Un objet apparaît plusieurs fois s'il est affecté de différentes manières.  
   
 ## <a name="options"></a>Options  
- **Liste d'objets**  
+ **Liste d’objets**  
  Affiche la liste des objets dépendants dans une grille. Cette grille comporte les colonnes suivantes :  
   
  **Nom de l’objet**  
@@ -35,23 +35,23 @@ ms.locfileid: "66080752"
  **Type**  
  Affiche le type des objets dépendants qui devront peut-être être traités.  
   
- **Type d’impact**  
+ **Type d'impact**  
  Affiche l’effet que le traitement des objets mentionnés dans la boîte de dialogue **Traiter** aura sur l’objet dépendant. Le tableau suivant répertorie les effets possibles du traitement et indique si chaque traitement génère un avertissement ou une erreur.  
   
-|Impact|`Message`|  
+|Impact|Message|  
 |------------|-------------|  
-|L'objet sera exclu (non traité)|Warning|  
+|L'objet sera exclu (non traité)|Avertissement|  
 |L'objet serait non valide|Error|  
-|L'agrégation serait supprimée|Warning|  
-|L'agrégation flexible serait supprimée|Warning|  
-|Les index vont être supprimés|Warning|  
-|L'objet non enfant va être traité|Warning|  
+|L'agrégation serait supprimée|Avertissement|  
+|L'agrégation flexible serait supprimée|Avertissement|  
+|Les index vont être supprimés|Avertissement|  
+|L'objet non enfant va être traité|Avertissement|  
   
- **Objet de processus**  
+ **Traiter l'objet**  
  Sélectionnez les objets dépendants à traiter. Les objets dépendants non sélectionnés doivent être traités une fois le traitement terminé. Sinon, ils ne pourront pas être utilisés.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Boîte de dialogue traiter &#40;Analysis Services - données multidimensionnelles&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
+ [Analysis Services les concepteurs et les boîtes de dialogue &#40;les données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Boîte de dialogue traiter &#40;Analysis Services-données multidimensionnelles&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   
   

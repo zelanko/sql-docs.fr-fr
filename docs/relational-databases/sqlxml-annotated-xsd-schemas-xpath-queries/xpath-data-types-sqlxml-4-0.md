@@ -29,10 +29,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 089b2b006d0159c63e480c8627762ac37dec98b8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247092"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Types de données XPath (SQLXML 4.0)
@@ -75,7 +75,7 @@ ms.locfileid: "75247092"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne procède à aucune sélection positionnelle sur les éléments node-set : par exemple, la requête XPath `Customer[3]` désigne le troisième client ; ce type de sélection positionnelle n'est pas pris en charge dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par conséquent, les conversions node-set-to-**String** ou node-set-to-**Number** , comme décrit dans la spécification XPath, ne sont pas implémentées. 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise une sémantique « quelconque » partout où la recommandation XPath spécifie la « première » sémantique. Par exemple, en fonction de la spécification XPath du W3C, la `Order[OrderDetail/@UnitPrice > 10.0]` requête XPath sélectionne les commandes avec le premier **OrderDetail** dont la valeur **UnitPrice** est supérieure à 10,0. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette requête XPath sélectionne les commandes avec un **OrderDetail** dont la valeur **UnitPrice** est supérieure à 10,0.  
   
- La conversion en **valeur booléenne** génère un test d’existence ; par conséquent, la requête `Products[@Discontinued=true()]` XPath équivaut à l’expression SQL « Products. Discontinued is not null », et non à l’expression SQL « Products. Discontinued = 1 ». Pour que la requête soit équivalente à la dernière expression SQL, convertissez d’abord node-set en type non**booléen** , tel que **Number**. Par exemple, `Products[number(@Discontinued) = true()]`.  
+ La conversion en **valeur booléenne** génère un test d’existence ; par conséquent, la requête `Products[@Discontinued=true()]` XPath équivaut à l’expression SQL « Products. Discontinued is not null », et non à l’expression SQL « Products. Discontinued = 1 ». Pour que la requête soit équivalente à la dernière expression SQL, convertissez d’abord node-set en type non**booléen** , tel que **Number**. Par exemple : `Products[number(@Discontinued) = true()]`.  
   
  Du fait que la plupart des opérateurs sont définis pour être vrais (TRUE) s'ils le sont pour un nœud quelconque ou l'un des nœuds de l'élément node-set, ces opérations prennent toujours la valeur FALSE si l'élément node-set est vide. Ainsi donc, si A est vide, `A = B` et `A != B` ont tous les deux la valeur FALSE et `not(A=B)` et `not(A!=B)` ont la valeur TRUE.  
   
@@ -91,12 +91,12 @@ ms.locfileid: "75247092"
   
 |Type de données XDR|Équivalent<br /><br /> Type de données XPath|Conversion SQL Server utilisée|  
 |-------------------|------------------------------------|--------------------------------|  
-|Nonebin.base64bin.hex|Non applicable|NoneEmployeeID|  
+|Nonebin.base64bin.hex|N/A|NoneEmployeeID|  
 |boolean|boolean|CONVERT(bit, EmployeeID)|  
-|number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|number|CONVERT(float(53), EmployeeID)|  
+|number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|nombre|CONVERT(float(53), EmployeeID)|  
 |id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|string|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|N/A (aucun type de données XPath n'équivaut au type de données XDR fixed14.4)|CONVERT(money, EmployeeID)|  
-|date|string|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
+|Date|string|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
 |time<br /><br /> time.tz|string|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
  Les conversions de date et d’heure sont conçues pour fonctionner, que la valeur soit stockée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la base de données à l’aide du type de données **DateTime** ou d’une **chaîne**. Notez que le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de données **DateTime** n’utilise pas **TimeZone** et a une précision inférieure à celle du type de données **Time** XML. Pour inclure le type de données **TimeZone** ou une précision supplémentaire, stockez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les données dans à l’aide d’un type **chaîne** .  

@@ -1,5 +1,5 @@
 ---
-title: Fonction de référence de l’API de DLL de programme d’installation | Microsoft Docs
+title: Fonction de référence de l’API DLL du programme d’installation | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: 47fcadc3-f102-4989-9ee7-a1c65233142a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4478595fe34e81919a67c37a7f0a714329a5ea44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67906213"
 ---
 # <a name="installer-dll-api-reference-function"></a>Informations de référence sur les fonctions de l’API de la DLL d’installation
-Cette section décrit la syntaxe des fonctions dans le programme d’installation des API de DLL. Le programme d’installation que DLL API se compose de 20 fonctions. Trois de ces fonctions, **SQLGetTranslator**, **SQLRemoveDSNFromIni**, et **SQLWriteDSNToIni**, sont appelés uniquement par le programme d’installation DLL. Les autres fonctions sont appelées par les programmes d’installation et administration.  
+Cette section décrit la syntaxe des fonctions dans l’API DLL du programme d’installation. L’API DLL du programme d’installation se compose de 20 fonctions. Trois de ces fonctions, **SQLGetTranslator**, **SQLRemoveDSNFromIni**et **SQLWriteDSNToIni**, sont appelées uniquement par les dll d’installation. Les autres fonctions sont appelées par les programmes d’installation et d’administration.  
   
- Chaque fonction est étiquetée avec la version d’ODBC dans lequel il a été introduit.  
+ Chaque fonction est étiquetée avec la version ODBC dans laquelle elle a été introduite.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
--   [SQLConfigDataSource, fonction](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)  
+-   [Fonction SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)  
   
 -   [SQLConfigDriver, fonction](../../../odbc/reference/syntax/sqlconfigdriver-function.md)  
   
@@ -50,7 +50,7 @@ Cette section décrit la syntaxe des fonctions dans le programme d’installatio
   
 -   [SQLInstallTranslatorEx, fonction](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)  
   
--   [SQLManageDataSources (fonction)](../../../odbc/reference/syntax/sqlmanagedatasources.md)  
+-   [SQLManageDataSources fonction)](../../../odbc/reference/syntax/sqlmanagedatasources.md)  
   
 -   [SQLPostInstallerError, fonction](../../../odbc/reference/syntax/sqlpostinstallererror-function.md)  
   

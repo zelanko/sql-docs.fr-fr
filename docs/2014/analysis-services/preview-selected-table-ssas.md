@@ -1,5 +1,5 @@
 ---
-title: Aperçu de la Table (SSAS) sélectionnée | Microsoft Docs
+title: Aperçu de la table sélectionnée (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a0f168dabd237fe685eb90d2caeeba0db4eed97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070718"
 ---
 # <a name="preview-selected-table-ssas"></a>Aperçu de la table sélectionnée (SSAS)
@@ -29,13 +29,13 @@ ms.locfileid: "66070718"
  L'apparence des données dans cette page ne garantit pas que l'importation réussira. Si le nom d'utilisateur spécifié dans la page Informations d'emprunt d'identité n'a pas de privilèges suffisants pour lire la base de données sélectionnée, l'importation échouera.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
- **Case à cocher dans l’en-tête de colonne**  
+ **Case à cocher dans l'en-tête de colonne**  
  Activez la case à cocher pour inclure la colonne lors de l'importation des données. Désactivez la case à cocher pour supprimer la colonne lors de l'importation de données.  
   
- **Bouton de flèche vers le bas dans l’en-tête de colonne**  
+ **Bouton Flèche vers le bas dans l'en-tête de colonne**  
  Filtrez les données dans la colonne.  
   
- **Effacer les filtres de lignes**  
+ **Désactiver les filtres de lignes**  
  Supprimez tous les filtres appliqués aux données dans les colonnes.  
   
   

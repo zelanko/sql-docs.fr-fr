@@ -1,5 +1,5 @@
 ---
-title: Réétiqueter (SQL Server Data Mining Add-ins) | Microsoft Docs
+title: Renommer (SQL Server les compléments d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5471720cbd3084c661dec93d9c7f4f680e066b86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070403"
 ---
 # <a name="relabel-sql-server-data-mining-add-ins"></a>Réétiqueter (Compléments d'exploration de données SQL Server)
-  ![Icône Office 13 pour l’outil Réétiqueter](media/dm13-relabel.gif "icône Office 13 pour l’outil Réétiqueter")  
+  ![Icône Office 13 pour l'outil Réétiqueter](media/dm13-relabel.gif "Icône Office 13 pour l'outil Réétiqueter")  
   
  Le client d'exploration de données pour Excel vous permet de créer de nouvelles étiquettes pour les données afin de faciliter la compréhension des résultats de l'analyse.  
   
@@ -52,17 +52,17 @@ ms.locfileid: "66070403"
   
 5.  Tapez une nouvelle valeur dans la ligne sous **Nouvelles étiquettes**. Vous pouvez également choisir une valeur dans la liste de valeurs existantes. À mesure que vous entrez des nouvelles valeurs, elles sont disponibles en vue de leur réutilisation.  
   
-6.  Lorsque vous avez entré suffisamment de lignes, cliquez sur **suivant**, puis, dans le **sélectionner la Destination** page, sélectionnez où vous allez enregistrer les données réétiquetées.  
+6.  Une fois que vous avez entré suffisamment de lignes, cliquez sur **suivant**, puis dans la page **Sélectionner la destination** , choisissez l’emplacement où vous allez enregistrer les données réparties.  
   
-    -   **Ajouter en tant que nouvelle colonne à la feuille de calcul en cours**  
+    -   **Ajouter en tant que nouvelle colonne dans la feuille de calcul active**  
   
          Cliquez pour ajouter une nouvelle colonne au tableau qui contient les nouvelles valeurs.  
   
-    -   **Copier des données de feuille avec les modifications apportées à une feuille de calcul**  
+    -   **Copier les données de la feuille comportant les modifications dans une nouvelle feuille de calcul**  
   
          Cliquez pour créer une nouvelle feuille de calcul qui contient les données mises à jour.  
   
-    -   **Modifier les données en place**  
+    -   **Changer les données de place**  
   
          Cliquez pour remplacer les données d'origine par les nouvelles valeurs.  
   

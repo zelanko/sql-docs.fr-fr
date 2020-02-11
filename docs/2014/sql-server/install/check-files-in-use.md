@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34b51b26454766498ee601baae3ccc52cd1c5768
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096529"
 ---
 # <a name="check-files-in-use"></a>Vérifier les fichiers en cours d'utilisation
@@ -26,7 +26,7 @@ ms.locfileid: "66096529"
   
  Pour vous éviter d'avoir à redémarrer votre ordinateur après l'installation, le programme d'installation affiche la liste des processus qui verrouillent des fichiers. Arrêtez les processus et les applications de la liste. Cliquez sur **Actualiser la vérification** pour réexécuter la vérification. Cliquez sur **Arrêter la vérification** pour mettre fin à une vérification en cours d'exécution. Si aucun fichier verrouillé n'est détecté, le tableau est vide. Une fois que tous les processus bloquants ont été arrêtés, cliquez sur **Suivant** pour continuer.  
   
- Le programme d'installation enregistre les informations dans le fichier journal. Pour plus d’informations sur la façon d’afficher les fichiers journaux, consultez [afficher et lire les fichiers journaux d’installation de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md) et [Comment : Lire un fichier de journal d’installation SQL Server](https://go.microsoft.com/fwlink/?LinkID=134490).  
+ Le programme d'installation enregistre les informations dans le fichier journal. Pour plus d’informations sur la consultation des fichiers journaux, consultez [Afficher et lire les fichiers journaux d’installation de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md) et [Procédure : lire un fichier journal d’installation de SQL Server](https://go.microsoft.com/fwlink/?LinkID=134490).  
   
  Les informations suivantes sont contenues dans le fichier journal :  
   
@@ -38,17 +38,17 @@ ms.locfileid: "66096529"
   
 -   Compte sous lequel le processus est en cours d'exécution  
   
--   ID de processus  
+-   ID du processus  
   
 -   Nom du fichier verrouillé  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|Traiter|Affiche le nom complet du processus qui utilise les fichiers à mettre à jour.|  
-|type|Affiche le type de processus.|  
+|Procédure|Affiche le nom complet du processus qui utilise les fichiers à mettre à jour.|  
+|Type|Affiche le type de processus.|  
 |Compte|Affiche le compte sous lequel le processus est en cours d'exécution.|  
-|ID de processus|Affiche l'ID de processus.|  
+|ID du processus|Affiche l'ID de processus.|  
   
   

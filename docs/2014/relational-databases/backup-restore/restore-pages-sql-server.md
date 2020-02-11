@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921039"
 ---
 # <a name="restore-pages-sql-server"></a>Restaurer des pages (SQL Server)
@@ -62,7 +62,7 @@ ms.locfileid: "62921039"
   
     -   Journal des transactions  
   
-    -   Pages d’allocation : Les pages GAM (Allocation Map) global, les pages SGAM Shared Global Allocation Map () et gratuit espace pages PFS (Page).  
+    -   Pages d'allocation : pages GAM (Global Allocation Map), pages SGAM(Shared Global Allocation Map) et pages PFS (Page Free Space).  
   
     -   Page 0 de tous les fichiers de données (page de démarrage des fichiers)  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62921039"
 ####  <a name="Permissions"></a> Autorisations  
  Si la base de données restaurée n'existe pas, l'utilisateur doit posséder les autorisations CREATE DATABASE afin de pouvoir exécuter RESTORE. Si la base de données existe, les autorisations RESTORE reviennent par défaut aux membres des rôles serveur fixe **sysadmin** et **dbcreator** et au propriétaire (**dbo**) de la base de données (pour l’option FROM DATABASE_SNAPSHOT, la base de données existe toujours).  
   
- Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas quand RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
+ Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas lorsque RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  À compter de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] prend en charge les restaurations de pages.  
@@ -115,7 +115,7 @@ ms.locfileid: "62921039"
   
 3.  Cliquez avec le bouton droit sur la base de données, pointez sur **Tâches**, pointez sur **Restaurer**, puis cliquez sur **Page**, pour ouvrir la boîte de dialogue **Restaurer la page** .  
   
-     **Restore**  
+     **Restauration**  
      Cette section effectue la même fonction que **Restaurer sur** dans la page [Restaurer la base de données (page Général)](../../integration-services/general-page-of-integration-services-designers-options.md).  
   
      **Sauvegarde de la base de données**  
@@ -130,12 +130,12 @@ ms.locfileid: "62921039"
      **Jeux de sauvegarde**  
      Cette section affiche les jeux de sauvegarde impliqués dans la restauration.  
   
-    |Header|Valeurs|  
+    |En-tête|Valeurs|  
     |------------|------------|  
     |**Nom**|Nom du jeu de sauvegarde.|  
-    |**Composant**|Le composant sauvegardé : **Base de données**, **Fichier** ou **\<vide>** (pour des journaux de transactions).|  
-    |**Type**|Le type de sauvegarde effectué : **Complète**, **Différentielle** ou **Journal des transactions**.|  
-    |**Server**|Nom de l'instance [!INCLUDE[ssDE](../../includes/ssde-md.md)] du moteur de base de données qui a effectué l'opération de sauvegarde.|  
+    |**Composant**|Composant sauvegardé : **Base de données**, **Fichier** ou **\<vide>** (pour les journaux des transactions).|  
+    |**Type**|Type de sauvegarde effectué : **Complète**, **Différentielle**ou **Journal des transactions**.|  
+    |**Serveur**|Nom de l'instance [!INCLUDE[ssDE](../../includes/ssde-md.md)] du moteur de base de données qui a effectué l'opération de sauvegarde.|  
     |**Sauvegarde de la base de données**|Nom de la base de données impliquée dans la sauvegarde.|  
     |**Position**|La position du jeu de sauvegarde dans le volume.|  
     |**Premier NSE**|Numéro séquentiel dans le journal (LSN) correspondant à la première transaction dans le jeu de sauvegarde. Vide pour les sauvegardes de fichiers.|  
@@ -145,7 +145,7 @@ ms.locfileid: "62921039"
     |**Date de début**|Date et heure de lancement de l'opération de sauvegarde, présentée conformément aux paramètres régionaux du client.|  
     |**Date de fin**|Date et heure de fin de l'opération de sauvegarde, exprimée d'après les paramètres régionaux du client.|  
     |**Taille**|Taille du jeu de sauvegarde, exprimée en octets.|  
-    |**Nom d'utilisateur**|Nom de l'utilisateur qui a exécuté l'opération de sauvegarde.|  
+    |**Nom d’utilisateur**|Nom de l'utilisateur qui a exécuté l'opération de sauvegarde.|  
     |**Expiration**|La date et l'heure d'expiration du jeu de sauvegarde.|  
   
      Cliquez sur **Vérifier** pour vérifier l'intégrité des fichiers de sauvegarde nécessaires pour effectuer l'opération de restauration de pages.  
@@ -221,6 +221,6 @@ GO
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Appliquer les sauvegardes du journal des transactions &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [Gérer la table suspect_pages &#40;SQL Server&#41;](manage-the-suspect-pages-table-sql-server.md)   
- [Sauvegarde et restauration des bases de données SQL Server](back-up-and-restore-of-sql-server-databases.md)  
+ [Sauvegarder et restaurer des bases de données SQL Server](back-up-and-restore-of-sql-server-databases.md)  
   
   

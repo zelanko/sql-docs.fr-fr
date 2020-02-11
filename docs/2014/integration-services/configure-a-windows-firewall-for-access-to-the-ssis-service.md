@@ -1,5 +1,5 @@
 ---
-title: Configurer un pare-feu Windows pour l’accès au Service SSIS | Microsoft Docs
+title: Configurer un pare-feu Windows pour l’accès au service SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -19,23 +19,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b2c6a19eb44b1d53fe87bef0183bdafbb3ec105b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060853"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>Configurer un Pare-feu Windows pour l'accès au service SSIS
     
 > [!IMPORTANT]  
->  Cette rubrique présente le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un service Windows qui permet de gérer les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] prend en charge le service pour la compatibilité avec les versions antérieures de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], vous pouvez gérer des objets tels que des packages sur le serveur Integration Services.  
+>  Cette rubrique présente le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un service Windows qui permet de gérer les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]prend en charge le service pour la compatibilité descendante [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]avec les versions antérieures de. À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], vous pouvez gérer des objets tels que des packages sur le serveur Integration Services.  
   
  Le système de pare-feu Windows (windowsfirewall) permet d'empêcher l'accès non autorisé à des ressources informatiques sur une connexion réseau. Pour accéder à [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] à travers ce pare-feu, vous devez configurer le pare-feu de façon à autoriser l’accès.  
   
 > [!IMPORTANT]  
->  Pour gérer des packages stockés sur un serveur distant, vous ne devez pas vous connecter à l’instance du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur ce serveur distant. Au lieu de cela, modifiez le fichier de configuration du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] afin que [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] affiche les packages stockés sur le serveur distant. Pour plus d’informations, consultez [Configuring the Integration Services Service &#40;SSIS Service&#41;](configuring-the-integration-services-service-ssis-service.md).  
+>  Pour gérer des packages stockés sur un serveur distant, vous ne devez pas vous connecter à l’instance du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur ce serveur distant. Au lieu de cela, modifiez le fichier de configuration du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] afin que [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] affiche les packages stockés sur le serveur distant. Pour plus d’informations, consultez [Configuration du service Integration Services &#40;Service SSIS&#41;](configuring-the-integration-services-service-ssis-service.md).  
   
- Le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utilise le protocole DCOM. Pour plus d’informations sur le fonctionne du protocole DCOM à travers des pare-feu, consultez l’article «[Using Distributed COM with Firewalls](https://manualzz.com/doc/19762578/using-distributed-com-with-firewalls-by-michael-nelson-in...)».  
+ Le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utilise le protocole DCOM. Pour plus d’informations sur le fonctionnement du protocole DCOM via des pare-feu, consultez l’article «[utilisation de com distribués avec des pare-feu](https://manualzz.com/doc/19762578/using-distributed-com-with-firewalls-by-michael-nelson-in...)».  
   
  De nombreux systèmes de pare-feu sont disponibles. Si vous exécutez un pare-feu différent du pare-feu Windows (windowsfirewall), consultez la documentation de votre pare-feu pour obtenir des informations spécifiques au système utilisé.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "66060853"
   
 #### <a name="to-configure-a-windowsfirewall-using-the-command-prompt-window"></a>Pour configurer un Pare-feu Windows (windowsfirewall) à l'aide de la fenêtre d'invite de commandes  
   
-1.  Exécutez la commande suivante : `netsh firewall add portopening protocol=TCP port=135 name="RPC (TCP/135)" mode=ENABLE scope=SUBNET`  
+1.  Exécutez la commande `netsh firewall add portopening protocol=TCP port=135 name="RPC (TCP/135)" mode=ENABLE scope=SUBNET`  
   
-2.  Exécutez la commande suivante : `netsh firewall add allowedprogram program="%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn\MsDtsSrvr.exe" name="SSIS Service" scope=SUBNET`  
+2.  Exécutez la commande `netsh firewall add allowedprogram program="%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn\MsDtsSrvr.exe" name="SSIS Service" scope=SUBNET`  
   
     > [!NOTE]  
     >  Pour ouvrir le pare-feu pour tous les ordinateurs et également pour ceux sur Internet, remplacez scope=SUBNET par scope=ALL.  
@@ -74,7 +74,8 @@ ms.locfileid: "66060853"
 5.  Dans la boîte de dialogue **Ajouter un port** , tapez **RPC(TCP/135)** ou un autre nom descriptif dans la zone **Nom**, tapez **135** dans la zone **Numéro de port** , puis sélectionnez **TCP**.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Le service utilise toujours le port 135. Vous ne pouvez pas spécifier un autre port.  
+    >  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Le service utilise toujours le port 135. Vous ne pouvez pas spécifier un autre port.  
   
 6.  Dans la boîte de dialogue **Ajouter un port** , vous pouvez éventuellement cliquer sur **Modifier l’étendue** pour modifier l’étendue par défaut.  
   
@@ -88,7 +89,7 @@ ms.locfileid: "66060853"
     >  Pour configurer le Pare-feu Windows, cette procédure utilise l’élément **Pare-feu Windows** dans le Panneau de configuration. L’élément **Pare-feu Windows** configure uniquement le pare-feu du profil d’emplacement réseau actuel. Toutefois, vous pouvez configurer également le Pare-feu Windows à l’aide de l’outil en ligne de commande **netsh** ou du composant logiciel enfichable MMC ( [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console) appelé Pare-feu Windows avec fonctions avancées de sécurité. Pour plus d’informations sur ces outils, consultez [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configuration du service Integration Services &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md)   
+ [Configuration du service Integration Services &#40;service SSIS&#41;](service/integration-services-service-ssis-service.md)   
  [Service Integration Services &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md)  
   
   

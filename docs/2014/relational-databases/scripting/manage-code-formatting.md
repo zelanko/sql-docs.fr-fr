@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e25a5438eb147cfe5e3c7e4df3d3fe504cfcda48
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242022"
 ---
 # <a name="manage-code-formatting"></a>Gérer la mise en forme du code
@@ -51,11 +51,11 @@ ms.locfileid: "75242022"
   
 5.  Cliquez sur l'une des options suivantes :  
   
-    -   **Aucune**. Le curseur se positionne au début de la ligne suivante.  
+    -   **Aucun**. Le curseur se positionne au début de la ligne suivante.  
   
     -   **Bloquer**. Le curseur aligne la ligne suivante sur la ligne précédente.  
   
-    -   **Intelligent** (par défaut). Le service du langage détermine le style de mise en retrait approprié à utiliser.  
+    -   **Intelligente** (par défaut). Le service du langage détermine le style de mise en retrait approprié à utiliser.  
   
     > [!NOTE]  
     >  Certains langages n'offrent pas toutes ces options de mise en retrait.  

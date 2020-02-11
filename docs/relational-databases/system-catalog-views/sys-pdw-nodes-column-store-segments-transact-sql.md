@@ -14,10 +14,10 @@ ms.author: jrasnick
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: bea8e0d51b2918d7280f4afdb8b9d02f6b757827
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401670"
 ---
 # <a name="syspdw_nodes_column_store_segments-transact-sql"></a>sys. pdw_nodes_column_store_segments (Transact-SQL)
@@ -30,21 +30,21 @@ Contient une ligne pour chaque colonne dans un index columnstore.
 | :-------------------------- | :--------- | :----------------------------------------------------------- |
 | **partition_id**            | **bigint** | Indique l'ID de partition. Unique dans une base de données.     |
 | **hobt_id**                 | **bigint** | ID du segment ou de l'index d'arbre B (B-tree) pour la table ayant cet index columnstore. |
-| **column_id**               | **tiers**    | ID de la colonne columnstore.                                |
-| **segment_id**              | **tiers**    | Retourne le segment de la colonne. Pour la compatibilité descendante, le nom de colonne continue d’être appelé segment_id même s’il s’agit de l’ID rowgroup. Vous pouvez identifier un segment de manière unique à l’aide de <hobt_id, partition_id, column_id>, <segment_id>. |
-| **Version**                 | **tiers**    | Version du format de segment de colonne.                        |
-| **encoding_type**           | **tiers**    | Type d’encodage utilisé pour ce segment :<br /><br /> 1 = VALUE_BASED non chaîne/binaire sans dictionnaire (semblable à 4 avec certaines variations internes)<br /><br /> 2 = VALUE_HASH_BASED-colonne non chaîne/binaire avec des valeurs communes dans le dictionnaire<br /><br /> 3 = STRING_HASH_BASED-chaîne/colonne binaire avec des valeurs communes dans le dictionnaire<br /><br /> 4 = STORE_BY_VALUE_BASED-non-chaîne/binaire sans dictionnaire<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED chaîne/binaire sans dictionnaire<br /><br /> Tous les encodages tirent parti de l’encodage de bits et de la longueur d’exécution lorsque cela est possible. |
-| **row_count**               | **tiers**    | Nombre de lignes dans le groupe de lignes.                             |
-| **has_nulls**               | **tiers**    | 1 si le segment de colonne a des valeurs NULL.                     |
+| **column_id**               | **int**    | ID de la colonne columnstore.                                |
+| **segment_id**              | **int**    | Retourne le segment de la colonne. Pour la compatibilité descendante, le nom de colonne continue d’être appelé segment_id même s’il s’agit de l’ID rowgroup. Vous pouvez identifier un segment de manière unique à l’aide de <hobt_id, partition_id, column_id>, <segment_id>. |
+| **Version**                 | **int**    | Version du format de segment de colonne.                        |
+| **encoding_type**           | **int**    | Type d’encodage utilisé pour ce segment :<br /><br /> 1 = VALUE_BASED non chaîne/binaire sans dictionnaire (semblable à 4 avec certaines variations internes)<br /><br /> 2 = VALUE_HASH_BASED-colonne non chaîne/binaire avec des valeurs communes dans le dictionnaire<br /><br /> 3 = STRING_HASH_BASED-chaîne/colonne binaire avec des valeurs communes dans le dictionnaire<br /><br /> 4 = STORE_BY_VALUE_BASED-non-chaîne/binaire sans dictionnaire<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED chaîne/binaire sans dictionnaire<br /><br /> Tous les encodages tirent parti de l’encodage de bits et de la longueur d’exécution lorsque cela est possible. |
+| **row_count**               | **int**    | Nombre de lignes dans le groupe de lignes.                             |
+| **has_nulls**               | **int**    | 1 si le segment de colonne a des valeurs NULL.                     |
 | **base_id**                 | **bigint** | ID de la valeur de base si le type d’encodage 1 est utilisé.  Si le type d’encodage 1 n’est pas utilisé, base_id a la valeur 1. |
-| **magnitude**               | **dissocié**  | Magnitude si le type d’encodage 1 est utilisé.  Si le type d’encodage 1 n’est pas utilisé, l’argument magnitude a la valeur 1. |
-| **primary__dictionary_id**  | **tiers**    | ID du dictionnaire principal. Une valeur différente de zéro pointe vers le dictionnaire local de cette colonne dans le segment actuel (c’est-à-dire, rowgroup). La valeur-1 indique qu’il n’existe aucun dictionnaire local pour ce segment. |
-| **secondary_dictionary_id** | **tiers**    | ID du dictionnaire secondaire. Une valeur différente de zéro pointe vers le dictionnaire local de cette colonne dans le segment actuel (c’est-à-dire, rowgroup). La valeur-1 indique qu’il n’existe aucun dictionnaire local pour ce segment. |
+| **magnitude**               | **float**  | Magnitude si le type d’encodage 1 est utilisé.  Si le type d’encodage 1 n’est pas utilisé, l’argument magnitude a la valeur 1. |
+| **primary__dictionary_id**  | **int**    | ID du dictionnaire principal. Une valeur différente de zéro pointe vers le dictionnaire local de cette colonne dans le segment actuel (c’est-à-dire, rowgroup). La valeur-1 indique qu’il n’existe aucun dictionnaire local pour ce segment. |
+| **secondary_dictionary_id** | **int**    | ID du dictionnaire secondaire. Une valeur différente de zéro pointe vers le dictionnaire local de cette colonne dans le segment actuel (c’est-à-dire, rowgroup). La valeur-1 indique qu’il n’existe aucun dictionnaire local pour ce segment. |
 | **min_data_id**             | **bigint** | ID de données minimal dans le segment de colonne.                       |
 | **max_data_id**             | **bigint** | ID de données maximal dans le segment de colonne.                       |
 | **null_value**              | **bigint** | Valeur utilisée pour représenter les valeurs NULL.                               |
 | **on_disk_size**            | **bigint** | Taille de segment en octets.                                    |
-| **pdw_node_id**             | **tiers**    | Identificateur unique d’un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nœud. |
+| **pdw_node_id**             | **int**    | Identificateur unique d’un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nœud. |
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]

@@ -25,16 +25,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3aa122e19d890b0b994e4403dcc59b3131571d7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629692"
 ---
 # <a name="subscribe-to-publications"></a>S'abonner à des publications
   Un abonnement est une demande de copie de données et d'objets de base de données d'une publication. Il définit la publication qui sera reçue, où et quand elle sera reçue. Lorsque vous planifiez des abonnements, pensez à l'endroit où vous voulez qu'ait lieu le traitement de l'agent. Le type d'abonnement choisi détermine l'emplacement d'exécution de l'agent. Avec un abonnement par envoi de données (push), l'Agent de fusion ou l'Agent de distribution s'exécute sur le serveur de distribution tandis qu'avec un abonnement par extraction de données (pull), les agents s'exécutent sur les Abonnés. Il n'est plus possible de modifier le type d'un abonnement une fois celui-ci créé.  
   
-|Abonnement|Caractéristiques|Cas d'utilisation|  
+|Subscription|Caractéristiques|Cas d'utilisation|  
 |------------------|---------------------|--------------|  
 |Abonnement envoyé|Avec un abonnement par envoi de données, le serveur de publication propage les modifications à un Abonné sans que ce dernier en ait fait la demande. Les modifications peuvent être envoyées à des Abonnés à la demande, en continu ou selon un horaire planifié. L'Agent de distribution ou l'Agent de fusion s'exécute sur le serveur de distribution.|Les données sont censées être synchronisées de façon permanente ou à intervalles fréquents et périodiques.<br /><br /> La publication nécessite un transfert en temps réel (ou presque) des données.<br /><br /> L'augmentation de la charge imposée au processeur d'un serveur de distribution n'affecte pas les performances.<br /><br /> Le plus souvent utilisé avec la réplication d'instantané et la réplication transactionnelle.|  
 |Abonnement extrait|Dans le cas d'un abonnement par extraction, l'Abonné demande à recevoir les modifications apportées sur le serveur de publication. Ce type d'abonnement permet à l'utilisateur sur l'Abonné de déterminer le moment où les modifications sont synchronisées. L'Agent de distribution ou l'Agent de fusion s'exécute sur l'Abonné.|Avec ce type d'abonnement, les données sont en général synchronisées à la demande ou selon un horaire planifié plutôt qu'en continu.<br /><br /> La publication compte un grand nombre d'Abonnés et l'exécution de tous les agents sur un seul site ou sur le serveur de distribution entraînerait une consommation excessive des ressources.<br /><br /> Les abonnés sont autonomes, non connectés et/ou mobiles. Ils déterminent à quel moment ils se connectent et synchronisent les modifications.<br /><br /> Le plus souvent utilisé avec la réplication de fusion.|  
@@ -64,7 +64,7 @@ ms.locfileid: "62629692"
   
  **Pour créer un abonnement envoyé**  
   
- [Créer un abonnement par émission (push)](create-a-push-subscription.md)  
+ [Créer un abonnement par émission de données](create-a-push-subscription.md)  
   
  **Pour afficher ou modifier les propriétés d'un abonnement par envoi de données**  
   
@@ -72,14 +72,14 @@ ms.locfileid: "62629692"
   
  **Pour supprimer un abonnement par envoi de données**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Supprimer un abonnement par émission (push)](delete-a-push-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] : [Supprimer un abonnement par émission de données](delete-a-push-subscription.md)  
   
 > [!NOTE]  
 >  La suppression d'un abonnement n'entraîne pas la suppression des objets publiés sur l'Abonné.  
   
  **Pour créer un abonnement par extraction de données**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Créer un abonnement par extraction de données (pull)](create-a-pull-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] : [Créer un abonnement par extraction (pull)](create-a-pull-subscription.md)  
   
  **Pour afficher ou modifier les propriétés d'un abonnement extrait**  
   
@@ -87,7 +87,7 @@ ms.locfileid: "62629692"
   
  **Pour supprimer un abonnement extrait**  
   
- [Supprimer un abonnement par extraction](delete-a-pull-subscription.md)  
+ [Supprimer un abonnement par extraction (pull)](delete-a-pull-subscription.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécuriser l’abonné](security/secure-the-subscriber.md)   

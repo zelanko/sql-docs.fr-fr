@@ -1,5 +1,5 @@
 ---
-title: À l’aide d’Expressions de Dimension | Microsoft Docs
+title: Utilisation d’expressions de dimension | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0373bbda2d0c97946f15e048b7cc49175ca66669
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097165"
 ---
 # <a name="using-dimension-expressions"></a>Utilisation d'expressions de dimension
@@ -20,7 +20,7 @@ ms.locfileid: "68097165"
 
   Vous utilisez généralement des expressions de dimension et de hiérarchie lorsque vous passez des paramètres à des fonctions dans MDX (Multidimensional Expressions) pour retourner des membres, des jeux ou des tuples à partir d'une hiérarchie.  
   
- Les expressions de dimension peuvent être uniquement des expressions simples car elles sont des identificateurs d'objet. Consultez [Expressions &#40;MDX&#41; ](../mdx/expressions-mdx.md) pour une explication des expressions simples et complexes.  
+ Les expressions de dimension peuvent être uniquement des expressions simples car elles sont des identificateurs d'objet. Pour une explication des expressions simples et complexes, consultez [expressions &#40;&#41;MDX](../mdx/expressions-mdx.md) .  
   
 ## <a name="dimension-expressions"></a>Expressions de dimension  
  Une expression de dimension contient un identificateur de dimension ou une fonction de dimension.  
@@ -58,7 +58,7 @@ ms.locfileid: "68097165"
   
  `FROM [Adventure Works]`  
   
- Un identificateur de hiérarchie apparaît sous la forme *Dimension_Name.Hierarchy_Name* dans la notation BNF utilisée pour décrire des instructions MDX.  
+ Un identificateur de hiérarchie apparaît comme *Dimension_Name. hierarchy_name* dans la notation BNF utilisée pour décrire des instructions MDX.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)  

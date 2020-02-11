@@ -14,25 +14,25 @@ ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eaaa72c302c9218810ce653ea59fe5ff29a54ef0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963876"
 ---
 # <a name="internettimeout-property-rds"></a>InternetTimeout, propriété (RDS)
-Indique le nombre de millisecondes à attendre avant l’expiration d’une requête.  
+Indique le nombre de millisecondes à attendre avant l’expiration d’une demande.  
   
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Définit ou retourne un **Long** valeur qui représente le nombre de millisecondes avant qu’une requête arrive à expiration.  
+ Définit ou retourne une valeur de **type long** qui représente le nombre de millisecondes avant l’expiration d’une demande.  
   
 ## <a name="remarks"></a>Notes  
- Cette propriété s’applique uniquement aux demandes envoyées avec les protocoles HTTP ou HTTPS.  
+ Cette propriété s’applique uniquement aux requêtes envoyées avec les protocoles HTTP ou HTTPs.  
   
- Demandes dans un environnement à trois niveaux peuvent prendre quelques minutes. Cette propriété permet de spécifier plus de temps pour les requêtes longues.  
+ L’exécution des requêtes dans un environnement à trois niveaux peut prendre plusieurs minutes. Utilisez cette propriété pour spécifier une durée supplémentaire pour les requêtes de longue durée.  
   
 ## <a name="applies-to"></a>S'applique à  
   
@@ -41,7 +41,7 @@ Indique le nombre de millisecondes à attendre avant l’expiration d’une requ
 |[DataControl, objet (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataSpace, objet (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [InternetTimeout, propriété-Exemple (VB)](../../../ado/reference/rds-api/internettimeout-property-example-vb.md)   
+ [InternetTimeout, exemple de propriété (VB)](../../../ado/reference/rds-api/internettimeout-property-example-vb.md)   
  [InternetTimeout, exemple de propriété (VC++)](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)   
  
 

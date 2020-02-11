@@ -1,5 +1,5 @@
 ---
-title: Gestion des Exceptions SMO | Microsoft Docs
+title: Gestion des exceptions SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 595da161660b60845c02d71e22411a2a4eba009c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192099"
 ---
 # <a name="handling-smo-exceptions"></a>Gestion des exceptions SMO
@@ -33,17 +33,17 @@ ms.locfileid: "63192099"
  Les exceptions peuvent être générales ou spécifiques. Les exceptions générales contiennent un jeu d'exceptions spécifiques. Plusieurs instructions `Catch` peuvent être utilisées pour gérer les erreurs anticipées et faire passer les erreurs restantes au code de gestion des exceptions générales. Les exceptions se produisent souvent dans une séquence en cascade. Il arrive fréquemment qu'une exception SMO soit provoquée par une exception SQL. Pour le savoir, utilisez successivement la propriété `InnerException` pour déterminer l'exception d'origine ayant provoqué l'exception finale de niveau supérieur.  
   
 > [!NOTE]  
->  Le `SQLException` exception est déclarée dans le **System.Data.SqlClient** espace de noms.  
+>  L' `SQLException` exception est déclarée dans l’espace de noms **System. Data. SqlClient** .  
   
- ![Un diagramme qui montre les niveaux à partir de laquelle un excp](../../../database-engine/dev-guide/media/exception-flow.gif "un diagramme qui montre les niveaux à partir de laquelle un excp")  
+ ![Diagramme illustrant les niveaux à partir desquels une exception s'est produite](../../../database-engine/dev-guide/media/exception-flow.gif "Diagramme illustrant les niveaux à partir desquels une exception s'est produite")  
   
  Le diagramme affiche le flux d'exceptions à travers les couches de l'application.  
   
 ## <a name="example"></a>Exemple  
- Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md) ou [créer un projet SMO Visual Basic dans Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md).  
+ Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet Visual C&#35; Smo dans Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md) ou [créer un projet Visual Basic Smo dans Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md).  
   
 ## <a name="catching-an-exception-in-visual-basic"></a>Interception d'une exception en Visual Basic  
- Cet exemple de code montre comment utiliser l'instruction [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]`Try...Catch...Finally` pour intercepter une exception SMO. Toutes les exceptions SMO possèdent le type SmoException et sont répertoriées dans la référence SMO. La séquence d'exceptions internes est affichée pour indiquer la racine de l'erreur. Pour plus d'informations, consultez la documentation [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
+ Cet exemple de code montre comment utiliser l'instruction `Try...Catch...Finally`[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] pour intercepter une exception SMO. Toutes les exceptions SMO possèdent le type SmoException et sont répertoriées dans la référence SMO. La séquence d'exceptions internes est affichée pour indiquer la racine de l'erreur. Pour plus d'informations, consultez la documentation [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBExceptions1](SMO How to#SMO_VBExceptions1)]  -->  
   

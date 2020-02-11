@@ -1,5 +1,5 @@
 ---
-title: Assistant Déploiement d’Integration Services | Microsoft Docs
+title: Assistant Déploiement de Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,31 +13,31 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 721953c31a44a2ea02f480c9830e6347adfd4eb3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058007"
 ---
 # <a name="integration-services-deployment-wizard"></a>Assistant Déploiement d’Integration Services
   L'Assistant Déploiement d'[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] déploie des projets dans le catalogue SSISDB sur une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à l'aide du modèle de déploiement de projet.  
   
- Pour démarrer le [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Assistant de déploiement à partir d’un projet ouvert dans [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], sélectionnez **déployer** à partir de la **projet** menu. Pour démarrer l’Assistant [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], développez le **catalogues Integration Services** > **SSISDB** nœud dans l’Explorateur d’objets, cliquez sur le **projets** dossier, puis cliquez sur **déployer le projet**.  
+ Pour démarrer l' [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Assistant déploiement à partir d’un projet [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ouvert dans, sélectionnez **déployer** dans le menu **projet** . Pour démarrer l’Assistant dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], développez le nœud **Integration Services catalogues** > **SSISDB** dans l’Explorateur d’objets, cliquez avec le bouton droit sur le dossier **projets** , puis cliquez sur **déployer le projet**.  
   
- L'Assistant effectue les quatre étapes ci-après. Cliquez sur **suivant** à passer à l’étape suivante, ou **précédent** pour revenir à l’étape précédente.  
+ L'Assistant effectue les quatre étapes ci-après. Cliquez sur **suivant** pour passer à l’étape suivante, ou sur **précédent** pour revenir à l’étape précédente.  
   
-1.  **Sélectionnez Source** : sélectionnez le [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projet que vous souhaitez déployer.  
+1.  **Sélectionnez source** -sélectionnez le [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projet que vous souhaitez déployer.  
   
-2.  **Sélectionner la Destination** -sélectionner la destination du projet.  
+2.  **Sélectionner** la destination : sélectionnez la destination du projet.  
   
-3.  **Révision** -affiche vos sélections.  
+3.  **Consulter** : affiche vos sélections.  
   
-4.  **Déployer/résultats** - déploie le projet et affiche les résultats.  
+4.  **Déployer/résultats** -déploie le projet et affiche les résultats.  
   
-## <a name="select-source"></a>Sélectionner une source  
- Pour déployer un fichier de déploiement de projet que vous avez créé, sélectionnez **fichier de déploiement de projet** et entrez le chemin d’accès du fichier .ispac ou cliquez sur **Parcourir** à trouver dans le [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] dossier du projet. Pour déployer un projet qui réside dans le catalogue [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , sélectionnez **Catalogue Integration Services**, puis entrez le nom du serveur et le chemin d'accès au projet au sein du catalogue.  
+## <a name="select-source"></a>Sélectionner la source  
+ Pour déployer un fichier de déploiement de projet que vous avez créé, sélectionnez **fichier de déploiement de projet** , puis entrez le chemin d’accès au fichier. ISPAC ou cliquez sur **Parcourir** pour le trouver dans le dossier du [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projet. Pour déployer un projet qui réside dans le catalogue [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , sélectionnez **Catalogue Integration Services**, puis entrez le nom du serveur et le chemin d'accès au projet au sein du catalogue.  
   
- Si vous démarrez l'Assistant dans [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], l'Assistant sélectionne ensuite par défaut le projet ouvert en tant que source et ignore cette étape. Pour revenir à cette étape et sélectionner une autre source, cliquez sur **précédent** ou cliquez sur **sélectionner une Source** dans le volet gauche.  
+ Si vous démarrez l'Assistant dans [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], l'Assistant sélectionne ensuite par défaut le projet ouvert en tant que source et ignore cette étape. Pour revenir à cette étape et sélectionner une autre source, cliquez sur **précédent** ou sur **Sélectionner une source** dans le volet gauche.  
   
 ## <a name="select-destination"></a>Sélectionner la destination  
  Pour sélectionner le dossier de destination du projet dans le catalogue [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , entrez l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou cliquez sur **Parcourir** pour sélectionner un serveur dans une liste de serveurs. Entrez le chemin d'accès au projet dans SSISDB ou cliquez sur **Parcourir** pour le sélectionner.  
@@ -48,12 +48,12 @@ ms.locfileid: "66058007"
  L'Assistant vous permet de vérifier les paramètres que vous avez sélectionnés avant de déployer le projet. Vous pouvez modifier vos sélections en cliquant sur **Précédent**ou en cliquant sur l'une des étapes dans le volet gauche.  
   
 ## <a name="deployresults"></a>Déployer/Résultats  
- Lorsque vous cliquez sur **déployer** à partir de la **révision** page, le projet est déployé et le **résultats** page affiche la réussite ou l’échec de chaque action. Si l'action échoue, cliquez sur **Échec** dans la colonne **Résultat** pour afficher une explication de l'erreur. Cliquez sur **enregistrer le rapport...**  pour enregistrer les résultats dans un fichier XML.  
+ Lorsque vous cliquez sur **déployer** à partir de la page **vérifier** , le projet est déployé et la page **résultats** affiche la réussite ou l’échec de chaque action. Si l'action échoue, cliquez sur **Échec** dans la colonne **Résultat** pour afficher une explication de l'erreur. Cliquez sur **enregistrer le rapport...** pour enregistrer les résultats dans un fichier XML.  
   
  Cliquez sur **Fermer** pour quitter l’Assistant.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Déployer des projets sur le serveur Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
+ [Déployer des projets sur Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
  [Déploiement de projets et de packages](packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
   

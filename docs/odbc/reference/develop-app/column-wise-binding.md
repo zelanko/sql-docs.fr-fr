@@ -15,20 +15,20 @@ ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6f91dca1ac20173f9c10b4a52adf292e7abc45d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083384"
 ---
 # <a name="column-wise-binding"></a>Liaison selon les colonnes
-Lorsque vous utilisez la liaison, une application lie des tableaux de trois, un ou deux ou dans certains cas à chaque colonne pour laquelle les données doit être retourné. Le premier tableau conserve les valeurs de données, et le deuxième tableau conserve les mémoires tampons de longueur / d’indicateur. Indicateurs et des valeurs de longueur peuvent être stockées dans les mémoires tampons distinctes en définissant les champs de descripteur SQL_DESC_INDICATOR_PTR et SQL_DESC_OCTET_LENGTH_PTR sur des valeurs différentes ; Si cette opération est effectuée, un troisième tableau est lié. Chaque tableau contient autant d’éléments qu’il existe des lignes dans l’ensemble de lignes.  
+Lors de l’utilisation d’une liaison selon les colonnes, une application lie un ou deux, ou dans certains cas, trois tableaux à chaque colonne pour laquelle les données doivent être retournées. Le premier tableau contient les valeurs de données, tandis que le second tableau contient des mémoires tampons de longueur/indicateur. Les indicateurs et les valeurs de longueur peuvent être stockés dans des mémoires tampons distinctes en affectant des valeurs différentes aux champs SQL_DESC_INDICATOR_PTR et SQL_DESC_OCTET_LENGTH_PTR descripteur ; Si c’est le cas, un troisième tableau est lié. Chaque tableau contient autant d’éléments qu’il y a de lignes dans l’ensemble de lignes.  
   
- L’application déclare qu’il utilise la liaison avec l’attribut d’instruction SQL_ATTR_ROW_BIND_TYPE, qui détermine le type de liaison pour les mémoires tampons d’ensemble de lignes au lieu du paramètre défini des mémoires tampons. Le pilote retourne les données pour chaque ligne dans les éléments consécutifs de chaque tableau. L’illustration suivante montre comment la liaison fonctionne.  
+ L’application déclare qu’elle utilise une liaison selon les colonnes avec l’attribut d’instruction SQL_ATTR_ROW_BIND_TYPE, qui détermine le type de liaison pour les mémoires tampons d’ensemble de lignes plutôt que les tampons de jeu de paramètres. Le pilote retourne les données pour chaque ligne dans des éléments successifs de chaque tableau. L’illustration suivante montre le fonctionnement de la liaison selon les colonnes.  
   
- ![Colonne&#45;liaison en termes de trois colonnes](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
+ ![Liaison de colonne&#45;de trois colonnes](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
   
- Par exemple, le code suivant lie des tableaux de 10 éléments pour les colonnes OrderID, commercial et l’état :  
+ Par exemple, le code suivant lie les tableaux à 10 éléments aux colonnes OrderID, SalesPerson et Status :  
   
 ```  
 #define ROW_ARRAY_SIZE 10  

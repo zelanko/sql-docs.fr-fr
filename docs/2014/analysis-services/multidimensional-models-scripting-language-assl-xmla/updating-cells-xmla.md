@@ -17,27 +17,27 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 71279981c5fd3879d633e0fdd8cdec74bed6deac
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68887711"
 ---
 # <a name="updating-cells-xmla"></a>Mise à jour de cellules (XMLA)
-  Vous pouvez utiliser la commande [UpdateCells](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/updatecells-element-xmla) pour modifier la valeur d’une ou plusieurs cellules dans un cube activé pour l’écriture différée de cube. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stockelesinformationsmisesàjourdansunetabled’écrituredifféréedistinctepourchaquepartitionquicontientdescellules[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à mettre à jour.  
+  Vous pouvez utiliser la commande [UpdateCells](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/updatecells-element-xmla) pour modifier la valeur d’une ou plusieurs cellules dans un cube activé pour l’écriture différée de cube. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stocke les informations mises à jour dans une table d’écriture différée distincte pour chaque partition qui contient des cellules à mettre à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] jour.  
   
 > [!NOTE]  
->  La commande `UpdateCells` ne prend pas en charge les allocations pendant l'écriture différée du cube. Pour utiliser l’écriture différée allouée, vous devez utiliser la commande [Statement](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) pour envoyer une instruction Update MDX (Multidimensional Expressions). Pour plus d’informations, consultez [Update cube &#40;Statement&#41;MDX](/sql/mdx/mdx-data-manipulation-update-cube).  
+>  La commande `UpdateCells` ne prend pas en charge les allocations pendant l'écriture différée du cube. Pour utiliser l’écriture différée allouée, vous devez utiliser la commande [Statement](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) pour envoyer une instruction Update MDX (Multidimensional Expressions). Pour plus d’informations, consultez [instruction UPDATE CUBE &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-update-cube).  
   
 ## <a name="specifying-cells"></a>Spécification de cellules  
  La propriété de [cellule](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla) de `UpdateCells` la commande contient les cellules à mettre à jour. Vous pouvez identifier chaque cellule dans la propriété `Cell` en utilisant leur nombre ordinal. D’un plan [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] conceptuel, les cellules d’un cube sont numérotées comme si le cube était un tableau de dimensions *p*, où *p* est le nombre d’axes. Les cellules sont traitées dans l'ordre ligne-champ. L'illustration suivante présente la formule permettant de calculer le nombre ordinal d'une cellule.  
   
- ![Formule permettant de calculer la position ordinale de la cellule](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cellordinalformula.gif "Formule permettant de calculer la position ordinale de la cellule")  
+ ![Formule de calcul de position ordinale de cellule](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cellordinalformula.gif "Formule de calcul de position ordinale de cellule")  
   
  Une fois que vous connaissez le nombre ordinal d’une cellule, vous pouvez indiquer la valeur prévue de la cellule dans la propriété [value](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/value-element-xmla) de la propriété de [cellule](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla) .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Élément &#40;de mise à jour XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)   
+ [Élément Update &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)   
  [Développement avec XMLA dans Analysis Services](../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

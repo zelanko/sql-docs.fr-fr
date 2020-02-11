@@ -1,5 +1,5 @@
 ---
-title: 'C en SQL : Horodatage | Microsoft Docs'
+title: 'C en SQL : horodateur | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,31 +15,31 @@ ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aa75299f4d8e8f15293064d0bf3fb3979fe382d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037705"
 ---
-# <a name="c-to-sql-timestamp"></a>C en SQL : Timestamp
-L’identificateur pour le type de données ODBC C timestamp est :  
+# <a name="c-to-sql-timestamp"></a>C en SQL : horodatage
+L’identificateur pour le type de données ODBC C d’horodatage est :  
   
  SQL_C_TYPE_TIMESTAMP  
   
- Le tableau suivant présente les types de données à laquelle les données timestamp C peuvent être converties à ODBC SQL. Pour obtenir une explication des colonnes et des termes dans la table, consultez [conversion des données à partir de C en Types de données SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
+ Le tableau suivant présente les types de données SQL ODBC dans lesquels les données timestamp C peuvent être converties. Pour obtenir une explication des colonnes et des termes du tableau, consultez [conversion de données de C en types de données SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
   
-|Identificateur de type SQL|Tester|SQLSTATE|  
+|Identificateur de type SQL|Test|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Longueur d’octet de colonne > = longueur d’octet de caractère<br /><br /> 19 < = longueur d’octet de colonne < longueur d’octet de caractère<br /><br /> Colonne de longueur d’octet < 19<br /><br /> Valeur de données n’est pas une date valide|N/A<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Longueur de colonne caractère > = longueur de caractères de données<br /><br /> 19 < = longueur de colonne caractère < longueur des données de caractères<br /><br /> Colonne de longueur < 19 caractères<br /><br /> Valeur de données n’est pas une date valide|N/A<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
-|SQL_TYPE_DATE|Champs d’heure sont égales à zéro<br /><br /> Champs d’heure sont différentes de zéro<br /><br /> Valeur de données ne contient pas une date valide|N/A<br /><br /> 22008<br /><br /> 22007|  
-|SQL_TYPE_TIME|Champs de fractions de seconde sont égales à zéro [a]<br /><br /> Champs de fractions de seconde sont différentes de zéro [a]<br /><br /> Valeur de données ne contient-elle pas une heure valide|N/A<br /><br /> 22008<br /><br /> 22007|  
-|SQL_TYPE_TIMESTAMP|Champs de fractions de secondes ne sont pas tronqués.<br /><br /> Champs de fractions de seconde sont tronquées<br /><br /> Valeur de données n’est pas une date valide|N/A<br /><br /> 22008<br /><br /> 22007|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Longueur d’octet de colonne >= longueur d’octet de caractère<br /><br /> 19 <= longueur d’octet de colonne < longueur d’octet de caractère<br /><br /> Longueur d’octet de colonne < 19<br /><br /> La valeur des données n’est pas un horodateur valide|n/a<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Longueur de caractère de colonne >= longueur de caractère des données<br /><br /> 19 <= longueur de caractère de colonne < longueur de caractère des données<br /><br /> Longueur des caractères de la colonne < 19<br /><br /> La valeur des données n’est pas un horodateur valide|n/a<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
+|SQL_TYPE_DATE|Les champs d’heure sont nuls<br /><br /> Les champs d’heure sont non nuls<br /><br /> La valeur des données ne contient pas de date valide|n/a<br /><br /> 22008<br /><br /> 22007|  
+|SQL_TYPE_TIME|Les champs de fractions de seconde sont nuls [a]<br /><br /> Les champs de fractions de seconde sont différents de zéro [a]<br /><br /> La valeur des données ne contient pas d’heure valide|n/a<br /><br /> 22008<br /><br /> 22007|  
+|SQL_TYPE_TIMESTAMP|Les champs de fractions de seconde ne sont pas tronqués<br /><br /> Les champs de fractions de seconde sont tronqués<br /><br /> La valeur des données n’est pas un horodateur valide|n/a<br /><br /> 22008<br /><br /> 22007|  
   
- [a] la date, les champs de la structure d’horodatage sont ignorés.  
+ [a] les champs de date de la structure d’horodatage sont ignorés.  
   
- Pour plus d’informations sur les valeurs qui sont valides dans une structure SQL_C_TIMESTAMP, consultez [les Types de données C](../../../odbc/reference/appendixes/c-data-types.md), plus haut dans cette annexe.  
+ Pour plus d’informations sur les valeurs qui sont valides dans une structure SQL_C_TIMESTAMP, consultez [types de données C](../../../odbc/reference/appendixes/c-data-types.md), plus haut dans cette annexe.  
   
- Lorsque les données timestamp C sont converties en données de caractères SQL, les données de caractères résultant sont dans la «*aaaa*-*mm*-*jj* *hh*:*mm*:*ss*[.*f...* ] « format.  
+ Lorsque les données timestamp C sont converties en données SQL de type caractère, les données de type caractère obtenues sont au format «*yyyy*-*mm*-*DD* *hh*:*mm*:*SS*[.* f...*]» format.  
   
- Le pilote ignore la valeur de longueur/indicateur lors de la conversion des données à partir du type de données timestamp C et suppose que la taille du tampon de données est la taille du type de données timestamp C. La valeur de longueur / d’indicateur est passée dans le *StrLen_or_Ind* argument dans **SQLPutData** et dans la mémoire tampon spécifiée avec la *StrLen_or_IndPtr* argument dans **SQLBindParameter**. Le tampon de données est spécifié avec la *DataPtr* argument dans **SQLPutData** et *ParameterValuePtr* argument dans **SQLBindParameter**.
+ Le pilote ignore la valeur de longueur/indicateur lors de la conversion des données du type de données timestamp C et suppose que la taille de la mémoire tampon de données est égale à la taille du type de données timestamp C. La valeur de longueur/indicateur est passée dans l’argument *StrLen_Or_Ind* dans **SQLPutData** et dans la mémoire tampon spécifiée avec l’argument *StrLen_or_IndPtr* dans **SQLBindParameter**. La mémoire tampon de données est spécifiée avec l’argument *DataPtr* dans **SQLPutData** et l’argument *ParameterValuePtr* dans **SQLBindParameter**.

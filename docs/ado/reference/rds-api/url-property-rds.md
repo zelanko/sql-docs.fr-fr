@@ -14,19 +14,19 @@ ms.assetid: 8c56b233-1be8-442c-8d0e-a4c96465bc99
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c88b8029ee5d96986cf9b366bd8faee53ca1393b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963228"
 ---
 # <a name="url-property-rds"></a>URL, propriété (RDS)
 Indique une chaîne qui contient une URL relative ou absolue.  
   
- Vous pouvez définir le **URL** propriété au moment du design dans le [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) de l’objet de balise ou au moment de l’exécution dans le code de script.  
+ Vous pouvez définir la propriété **URL** au moment de la conception dans la balise Object de l’objet [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) , ou au moment de l’exécution dans le code de script.  
   
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,15 +38,15 @@ Run time: DataControl.URL="Server"
   
 #### <a name="parameters"></a>Paramètres  
  *Serveur*  
- Un **chaîne** valeur qui contient une URL valide.  
+ Valeur de **chaîne** qui contient une URL valide.  
   
  *DataControl*  
- Une variable objet qui représente un **DataControl** objet.  
+ Variable objet qui représente un objet **DataControl** .  
   
 ## <a name="remarks"></a>Notes  
- En règle générale, l’URL identifie un fichier ASP (.asp) qui peut produire et renvoyer un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Par conséquent, l’utilisateur peut obtenir un **Recordset** sans avoir à invoquer le côté serveur [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) de l’objet, ou bien programmer un objet métier personnalisé.  
+ En règle générale, l’URL identifie un fichier de page de Active Server (. asp) qui peut produire et retourner un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md). Par conséquent, l’utilisateur peut obtenir un **jeu d’enregistrements** sans avoir à appeler l’objet [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) côté serveur, ou à programmer un objet métier personnalisé.  
   
- Si le **URL** propriété a été définie, [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) soumettra des modifications à l’emplacement spécifié par l’URL.  
+ Si la propriété **URL** a été définie, [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) envoie les modifications à l’emplacement spécifié par l’URL.  
   
 ## <a name="applies-to"></a>S'applique à  
  [DataControl, objet (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

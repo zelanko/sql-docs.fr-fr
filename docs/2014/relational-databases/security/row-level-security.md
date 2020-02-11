@@ -17,22 +17,22 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8e5167948e456b721ba831bd8a3d637bb7ea3d3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62985762"
 ---
 # <a name="row-level-security"></a>Sécurité au niveau des lignes
-  La sécurité au niveau des lignes permet aux clients de contrôler l'accès aux lignes d'une table de base de données en fonction des caractéristiques de l'utilisateur exécutant une requête (appartenance à un groupe ou contexte d'exécution, par exemple). La sécurité au niveau de la ligne est désormais disponible dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016. Consultez [Sécurité au niveau de la ligne](https://msdn.microsoft.com/library/dn765131.aspx) dans la documentation qui fournit la description actuelle de cette fonctionnalité.  
+  La sécurité au niveau des lignes permet aux clients de contrôler l’accès aux lignes d’une table de base de données en fonction des caractéristiques de l’utilisateur qui exécute une requête (par exemple, appartenance à un groupe ou contexte d’exécution). La sécurité au niveau de la ligne est désormais disponible dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016. Consultez [Sécurité au niveau de la ligne](https://msdn.microsoft.com/library/dn765131.aspx) dans la documentation qui fournit la description actuelle de cette fonctionnalité.  
   
 ## <a name="see-also"></a>Voir aussi  
- [CRÉER une stratégie de sécurité &#40;base de données SQL Azure&#41;](/sql/t-sql/statements/create-security-policy-transact-sql)   
- [STRATÉGIE de sécurité ALTER &#40;base de données SQL Azure&#41;](/sql/t-sql/statements/alter-security-policy-transact-sql)   
- [STRATÉGIE de sécurité DROP &#40;base de données SQL Azure&#41;](/sql/t-sql/statements/drop-security-policy-transact-sql)   
- [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)   
- [Sys.security_policies &#40;base de données SQL Azure&#41;](/sql/relational-databases/system-catalog-views/sys-security-policies-transact-sql)   
- [Sys.security_predicates &#40;base de données SQL Azure&#41;](/sql/relational-databases/system-catalog-views/sys-security-predicates-transact-sql)   
+ [CRÉER une stratégie de sécurité &#40;Azure SQL Database&#41;](/sql/t-sql/statements/create-security-policy-transact-sql)   
+ [&#40;Azure SQL Database de la stratégie de sécurité ALTER&#41;](/sql/t-sql/statements/alter-security-policy-transact-sql)   
+ [SUPPRIMER les &#40;de la stratégie de sécurité Azure SQL Database&#41;](/sql/t-sql/statements/drop-security-policy-transact-sql)   
+ [CREATe FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)   
+ [sys. security_policies &#40;Azure SQL Database&#41;](/sql/relational-databases/system-catalog-views/sys-security-policies-transact-sql)   
+ [sys. security_predicates &#40;Azure SQL Database&#41;](/sql/relational-databases/system-catalog-views/sys-security-predicates-transact-sql)   
  [Créer des fonctions définies par l’utilisateur &#40;moteur de base de données&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md)  
   
   

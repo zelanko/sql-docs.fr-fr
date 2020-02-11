@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 733827ecace64ef86b54831f63fd8c2889203919
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478962"
 ---
 # <a name="model-permissions-master-data-services"></a>Autorisations de modèle (Master Data Services)
@@ -26,11 +26,11 @@ ms.locfileid: "65478962"
 > [!NOTE]  
 >  Si l'utilisateur est administrateur de modèle, le modèle est affiché dans toutes les zones fonctionnelles de l'interface utilisateur. Sinon, le modèle est affiché uniquement dans la zone fonctionnelle **Explorateur** . Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
-|Permission|Description|  
+|Autorisation|Description|  
 |----------------|-----------------|  
-|**Lecture seule**|Dans **Explorer**, le modèle est affiché, mais l’utilisateur ne peut pas ajouter ou supprimer des membres et ne peut pas mettre à jour les valeurs d’attribut, les appartenances de hiérarchie ou les appartenances à la collection.|  
-|**Update**|Dans **Explorer**, le modèle est affiché et l’utilisateur peut ajouter et supprimer des membres, peut mettre à jour les valeurs d’attribut, les appartenances de hiérarchie et les appartenances à la collection.|  
-|**Refuser**|Le modèle n’est pas affiché.|  
+|**Lecture seule**|Dans l' **Explorateur**, le modèle est affiché, mais l’utilisateur ne peut pas ajouter ou supprimer des membres et ne peut pas mettre à jour les valeurs d’attribut, les appartenances de hiérarchie ou les appartenances de collection.|  
+|**Mise à jour**|Dans l' **Explorateur**, le modèle est affiché et l’utilisateur peut ajouter et supprimer des membres, peut mettre à jour les valeurs d’attribut, les appartenances de hiérarchie et les appartenances de collection.|  
+|**Deny**|Le modèle n’est pas affiché.|  
   
  Lorsque vous affectez l'autorisation à un modèle, l'utilisateur obtient l'accès à toutes les versions du modèle. Vous ne pouvez pas affecter d'autorisation à une version individuelle.  
   

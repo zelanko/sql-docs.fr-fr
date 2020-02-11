@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7aecff691139b1041a928c42c3df2987c992cd91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68199316"
 ---
-# <a name="set-the-compatibility-level-for-merge-publications"></a>Définir le niveau de compatibilité des publications de fusion
+# <a name="set-the-compatibility-level-for-merge-publications"></a>Définir le niveau de compatibilité pour les publications de fusion
   Cette rubrique explique comment définir le niveau de compatibilité pour les publications de fusion dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La réplication de fusion utilise le niveau de compatibilité de publication pour déterminer les fonctionnalités qui peuvent être utilisées par des publications dans une base de données particulière.  
   
  **Dans cette rubrique**  
@@ -51,11 +51,11 @@ ms.locfileid: "68199316"
   
 #### <a name="to-set-the-publication-compatibility-level-for-a-merge-publication"></a>Pour définir le niveau de compatibilité d'une publication de fusion  
   
-1.  Sur le serveur de publication, exécutez [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql), en spécifiant une valeur pour **@publication_compatibility_level** afin de rendre la publication compatible avec des versions antérieures de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, voir [Create a Publication](create-a-publication.md).  
+1.  Sur le serveur de publication, exécutez [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql), en spécifiant une valeur pour **@publication_compatibility_level** pour que la publication soit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]compatible avec les versions antérieures de. Pour plus d’informations, voir [Create a Publication](create-a-publication.md).  
   
 #### <a name="to-change-the-publication-compatibility-level-of-a-merge-publication"></a>Pour modifier le niveau de compatibilité d'une publication de fusion  
   
-1.  Exécutez [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), en spécifiant **publication_compatibility_level** pour **@property** et le niveau de compatibilité de publication approprié pour **@value** .  
+1.  Exécutez [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), en **** spécifiant **@property** publication_compatibility_level pour et le niveau de compatibilité **@value**de publication approprié pour.  
   
 #### <a name="to-determine-the-publication-compatibility-level-of-a-merge-publication"></a>Pour déterminer le niveau de compatibilité d'une publication de fusion  
   
@@ -129,6 +129,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Create a Publication](create-a-publication.md)  
+ [Créer une publication](create-a-publication.md)  
   
   

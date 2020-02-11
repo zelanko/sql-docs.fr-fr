@@ -16,21 +16,21 @@ ms.assetid: 20809f5f-941d-427f-8f0c-de7a6c487584
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a6745589616dec5b129992cc555e1238cd62b545
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771588"
 ---
-# <a name="spreplflush-transact-sql"></a>sp_replflush (Transact-SQL)
+# <a name="sp_replflush-transact-sql"></a>sp_replflush (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Vide le cache d'article. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
 > [!IMPORTANT]  
->  Vous ne devriez pas à avoir à exécuter cette procédure manuellement. **sp_replflush** doit être utilisé uniquement pour résoudre les problèmes de réplication, comme indiqué par un professionnel expérimenté du support de la réplication.  
+>  Vous ne devriez pas à avoir à exécuter cette procédure manuellement. **sp_replflush** ne doit être utilisé que pour résoudre les problèmes de réplication, comme indiqué par un professionnel expérimenté du support de la réplication.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68771588"
 sp_replflush  
 ```  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
@@ -47,7 +47,7 @@ sp_replflush
   
  Les définitions d'articles sont stockées dans le cache pour plus d'efficacité. **sp_replflush** est utilisé par d’autres procédures stockées de réplication chaque fois qu’une définition d’article est modifiée ou supprimée.  
   
- Seule une connexion cliente peut avoir un accès de lecteur de journal à une base de données spécifique. Si un client dispose d’un accès de lecture de journal à une base de données, l’exécution de **sp_replflush** entraîne la libération de son accès par le client. D’autres clients peuvent ensuite analyser le journal des transactions à l’aide de **sp_replcmds** ou **sp_replshowcmds**.  
+ Seule une connexion cliente peut avoir un accès de lecteur de journal à une base de données spécifique. Si un client dispose d’un accès de lecture de journal à une base de données, l’exécution de **sp_replflush** amène le client à libérer son accès. Les autres clients peuvent ensuite analyser le journal des transactions à l’aide de **sp_replcmds** ou **sp_replshowcmds**.  
   
 ## <a name="permissions"></a>Autorisations  
  Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_replflush**.  

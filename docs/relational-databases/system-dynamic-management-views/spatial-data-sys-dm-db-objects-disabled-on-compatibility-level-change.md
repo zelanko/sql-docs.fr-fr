@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,18 +21,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 30c3a5d7358e49c1e1762fbb9851066bdaf30871
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68809903"
 ---
-# <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>Données spatiales-sys. DM _db_objects_disabled_on_compatibility_level_change
+# <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>Données spatiales-sys. dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Répertorie les index et les contraintes qui seront désactivés suite à la modification du niveau de compatibilité dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les index et les contraintes qui contiennent des colonnes calculées persistantes dont les expressions utilisent des types définis par l'utilisateur spatiaux sont désactivés après une mise à niveau ou une modification du niveau de compatibilité. Utilisez cette fonction de gestion dynamique pour déterminer l'impact d'un changement de niveau de compatibilité.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,11 +48,11 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**class**|**Int**|1 = contraintes<br /><br /> 7 = index et segments|  
-|**class_desc**|**nvarchar(60)**|OBJECT ou COLUMN pour les contraintes<br /><br /> INDEX pour les index et les segments|  
+|**type**|**int**|1 = contraintes<br /><br /> 7 = index et segments|  
+|**class_desc**|**nvarchar (60)**|OBJECT ou COLUMN pour les contraintes<br /><br /> INDEX pour les index et les segments|  
 |**major_id**|**int**|OBJECT ID des contraintes<br /><br /> OBJECT ID de la table qui contient des index et des segments|  
-|**minor_id**|**Int**|NULL pour les contraintes<br /><br /> Index_id pour les index et les segments|  
-|**dépendance**|**nvarchar(60)**|Description de la dépendance qui provoque la désactivation de la contrainte ou de l'index. Les mêmes valeurs sont également utilisées dans les avertissements générés pendant la mise à niveau. En voici quelques exemples :<br /><br /> « space » pour un type intrinsèque<br /><br /> « geometry » pour un type défini par l'utilisateur système<br /><br /> « geography::Parse » pour une méthode d'un type défini par l'utilisateur système|  
+|**minor_id**|**int**|NULL pour les contraintes<br /><br /> Index_id pour les index et les segments|  
+|**dépendance**|**nvarchar (60)**|Description de la dépendance qui provoque la désactivation de la contrainte ou de l'index. Les mêmes valeurs sont également utilisées dans les avertissements générés pendant la mise à niveau. En voici quelques exemples :<br /><br /> « space » pour un type intrinsèque<br /><br /> « geometry » pour un type défini par l'utilisateur système<br /><br /> « geography::Parse » pour une méthode d'un type défini par l'utilisateur système|  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  Les colonnes calculées persistantes qui utilisent des fonctions intrinsèques sont désactivées lorsque le niveau de compatibilité est modifié. En outre, les colonnes calculées persistantes qui utilisent une méthode de type geometry ou geography sont désactivées lorsqu'une base de données est mise à niveau.  
@@ -66,58 +66,58 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 -   **Soundex**  
   
--   **Zone géographique:: GeomFromGML**  
+-   **Geography:: GeomFromGML**  
   
--   **Zone géographique:: STGeomFromText**  
+-   **Geography:: STGeomFromText**  
   
--   **Zone géographique:: STLineFromText**  
+-   **Geography :: STLineFromText**  
   
--   **Zone géographique:: STPolyFromText**  
+-   **Geography:: STPolyFromText**  
   
--   **Zone géographique:: STMPointFromText**  
+-   **Geography:: STMPointFromText**  
   
--   **Zone géographique:: STMLineFromText**  
+-   **Geography:: STMLineFromText**  
   
--   **Zone géographique:: STMPolyFromText**  
+-   **Geography:: STMPolyFromText**  
   
--   **Zone géographique:: STGeomCollFromText**  
+-   **Geography:: STGeomCollFromText**  
   
--   **Zone géographique:: STGeomFromWKB**  
+-   **Geography:: STGeomFromWKB**  
   
--   **Zone géographique:: STLineFromWKB**  
+-   **Geography:: STLineFromWKB**  
   
--   **Zone géographique:: STPolyFromWKB**  
+-   **Geography:: STPolyFromWKB**  
   
--   **Zone géographique:: STMPointFromWKB**  
+-   **Geography:: STMPointFromWKB**  
   
--   **Zone géographique:: STMLineFromWKB**  
+-   **Geography:: STMLineFromWKB**  
   
--   **Zone géographique:: STMPolyFromWKB**  
+-   **Geography:: STMPolyFromWKB**  
   
--   **Zone géographique:: STUnion**  
+-   **Geography:: STUnion**  
   
--   **Zone géographique:: STIntersection**  
+-   **Geography:: STIntersection**  
   
--   **Zone géographique:: STDifference**  
+-   **Geography:: STDifference**  
   
--   **Zone géographique:: STSymDifference**  
+-   **Geography:: STSymDifference**  
   
--   **Zone géographique:: STBuffer**  
+-   **Geography:: STBuffer**  
   
--   **Zone géographique:: BufferWithTolerance**  
+-   **Geography:: BufferWithTolerance**  
   
--   **Zone géographique:: Analys**  
+-   **Geography :: parse**  
   
--   **Zone géographique:: Abaisse**  
+-   **Geography:: Reduce**  
   
 ### <a name="behavior-of-the-disabled-objects"></a>Comportement des objets désactivés  
  **Index**  
   
- Si l’index cluster est désactivé, ou si un index non cluster est forcé, l’erreur suivante se produit: « Le processeur de requêtes ne peut pas créer de plan car l’index ' %. \*%.ls sur la table ou la vue ' %. \*%.ls est désactivé. » Pour réactiver ces objets, reconstruisez les index après la mise **à niveau en appelant ALTER index on... REBUILD**.  
+ Si l’index cluster est désactivé, ou si un index non cluster est forcé, l’erreur suivante est générée : « le processeur de requêtes ne peut pas créer de plan car l’index «% ». \*ls’sur la table ou la vue'%. \*ls’est désactivé. " Pour réactiver ces objets, reconstruisez les index après la mise à niveau en appelant **ALTER index on... Régénération**.  
   
  **Tas**  
   
- Si une table avec un segment désactivé est utilisée, l'erreur suivante est levée. Pour réactiver ces objets, régénérez après la **mise à niveau en appelant ALTER index All on... REBUILD**.  
+ Si une table avec un segment désactivé est utilisée, l'erreur suivante est levée. Pour réactiver ces objets, régénérez après la mise à niveau en appelant **ALTER index All on... Régénération**.  
   
 ```  
 // ErrorNumber: 8674  
@@ -134,7 +134,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  **Contraintes de validation et clés étrangères**  
   
- Les contraintes de validation et les clés étrangères désactivées ne déclenchent pas d'erreur. Toutefois, les contraintes ne sont pas appliquées lorsque des lignes sont modifiées. Pour réactiver ces objets, vérifiez les contraintes après la mise à niveau **en appelant ALTER TABLE... CONTRAINTE**DE VALIDATION.  
+ Les contraintes de validation et les clés étrangères désactivées ne déclenchent pas d'erreur. Toutefois, les contraintes ne sont pas appliquées lorsque des lignes sont modifiées. Pour réactiver ces objets, vérifiez les contraintes après la mise à niveau en appelant **ALTER TABLE... CONTRAINTE de validation**.  
   
  **Colonnes calculées persistantes**  
   
@@ -146,7 +146,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
  Requiert l'autorisation VIEW DATABASE STATE.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant illustre une requête sur **sys. DM _db_objects_disabled_on_compatibility_level_change** pour rechercher les objets affectés en modifiant le niveau de compatibilité sur 120.  
+ L’exemple suivant illustre une requête sur **sys. dm_db_objects_disabled_on_compatibility_level_change** pour rechercher les objets affectés en modifiant le niveau de compatibilité sur 120.  
   
 ```sql  
 SELECT * FROM sys.dm_db_objects_disabled_on_compatibility_level_change(120);  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 78b78021f32faed097a4faf29ea139dd85f429e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015641"
 ---
 # <a name="delete-a-stored-procedure"></a>Supprimer une procédure stockée
@@ -27,7 +27,7 @@ ms.locfileid: "63015641"
   
 -   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [sécurité](#Security)  
   
--   **Pour supprimer une procédure, à l’aide de :**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Pour supprimer une procédure avec :**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -95,7 +95,7 @@ ms.locfileid: "63015641"
  [Modifier une procédure stockée](modify-a-stored-procedure.md)   
  [Renommer une procédure stockée](rename-a-stored-procedure.md)   
  [Afficher la définition d'une procédure stockée](view-the-definition-of-a-stored-procedure.md)   
- [Afficher les dépendances d'une procédure stockée](view-the-dependencies-of-a-stored-procedure.md)   
+ [Afficher les dépendances d’une procédure stockée](view-the-dependencies-of-a-stored-procedure.md)   
  [DROP PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)  
   
   

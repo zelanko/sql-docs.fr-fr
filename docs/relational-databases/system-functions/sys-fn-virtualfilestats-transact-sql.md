@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_virtualfilestats (Transact-SQL) | Microsoft Docs
+title: sys. fn_virtualfilestats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/16/2016
 ms.prod: sql
@@ -22,18 +22,18 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: aade9e02515e0d18e4edae188d72e5edafebbd3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68059190"
 ---
-# <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
+# <a name="sysfn_virtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne des statistiques sur les entrées/sorties (E/S) des fichiers de base de données, notamment sur les fichiers journaux. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ces informations sont également disponibles à partir de la [sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) vue de gestion dynamique.  
+  Retourne des statistiques sur les entrées/sorties (E/S) des fichiers de base de données, notamment sur les fichiers journaux. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ces informations sont également disponibles à partir de la vue de gestion dynamique [sys. dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) .  
 
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,11 +43,11 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *database_id* | VALEUR NULL  
- Est l’ID de la base de données. *database_id* est de type **int**, sans valeur par défaut. Spécifiez NULL pour retourner des informations concernant toutes les bases de données de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ *database_id* | NUL  
+ ID de la base de données. *database_id* est de **type int**, sans valeur par défaut. Spécifiez NULL pour retourner des informations concernant toutes les bases de données de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- *FILE_ID* | VALEUR NULL  
- Identificateur du fichier. *FILE_ID* est **int**, sans valeur par défaut. Spécifiez NULL pour retourner les informations de tous les fichiers de la base de données.  
+ *file_id* | NUL  
+ Identificateur du fichier. *file_id* est de **type int**, sans valeur par défaut. Spécifiez NULL pour retourner les informations de tous les fichiers de la base de données.  
   
 ## <a name="table-returned"></a>Table retournée  
   
@@ -55,19 +55,19 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|ID de la base de données.|  
 |**FileId**|**smallint**|ID de fichier.|  
-|**TimeStamp**|**bigint**|Horodateur de prélèvement des données de base de données **int** dans les versions antérieures [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. |  
+|**Confirmé**|**bigint**|Horodateur de prélèvement des données de base de données **int** dans les versions [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]antérieures à. |  
 |**NumberReads**|**bigint**|Nombre de lectures effectuées sur le fichier.|  
 |**BytesRead**|**bigint**|Nombre d'octets lus sur le fichier|  
 |**IoStallReadMS**|**bigint**|Durée totale (en millisecondes) d'exécution des E/S de lecture sur le fichier|  
 |**NumberWrites**|**bigint**|Nombre d'écritures effectuées sur le fichier|  
 |**BytesWritten**|**bigint**|Nombre d'octets écrits sur le fichier|  
 |**IoStallWriteMS**|**bigint**|Durée totale (en millisecondes) d'exécution des E/S d'écriture sur le fichier|  
-|**IoStallMS**|**bigint**|Somme des **IoStallReadMS** et **IoStallWriteMS**.|  
+|**IoStallMS**|**bigint**|Somme de **IoStallReadMS** et **IoStallWriteMS**.|  
 |**FileHandle**|**bigint**|Valeur du handle de fichier.|  
-|**BytesOnDisk**|**bigint**|Taille physique du fichier sur le disque (en octets).<br /><br /> Pour les fichiers de base de données, il s’agit la même valeur que **taille** dans **sys.database_files**, mais est exprimée en octets plutôt que des pages.<br /><br /> Dans le cas des fichiers partiellement alloués d'instantané de base de données, il s'agit de l'espace qu'utilise le système d'exploitation pour ceux-ci.|  
+|**BytesOnDisk**|**bigint**|Taille physique du fichier sur le disque (en octets).<br /><br /> Pour les fichiers de base de données, il s’agit de la même valeur que la **taille** dans **sys. database_files**, mais est exprimé en octets plutôt que sous forme de pages.<br /><br /> Dans le cas des fichiers partiellement alloués d'instantané de base de données, il s'agit de l'espace qu'utilise le système d'exploitation pour ceux-ci.|  
   
 ## <a name="remarks"></a>Notes  
- **fn_virtualfilestats** est un système de fonction table qui fournit des informations statistiques, telles que le nombre total d’e/s effectuée sur un fichier. Cette fonction vous permet d'enregistrer et de suivre la durée d'attente de l'utilisateur avant de pouvoir lire ou écrire dans un fichier. Cette fonction permet également d'identifier les fichiers dont l'activité est intense au niveau des entrées/sorties (E/S).  
+ **fn_virtualfilestats** est une fonction table système qui fournit des informations statistiques, telles que le nombre total d’e/s effectuées sur un fichier. Cette fonction vous permet d'enregistrer et de suivre la durée d'attente de l'utilisateur avant de pouvoir lire ou écrire dans un fichier. Cette fonction permet également d'identifier les fichiers dont l'activité est intense au niveau des entrées/sorties (E/S).  
   
 ## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
@@ -84,7 +84,7 @@ GO
 ```  
   
 ### <a name="b-displaying-statistical-information-for-a-named-database-and-file"></a>B. Affichage des informations statistiques d'une base de données et d'un fichier nommés  
- L'exemple suivant affiche les informations statistiques du fichier journal de l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. La fonction système `DB_ID` est utilisé pour spécifier le *database_id* paramètre.  
+ L'exemple suivant affiche les informations statistiques du fichier journal de l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. La fonction `DB_ID` système est utilisée pour spécifier le paramètre *database_id* .  
   
 ```sql  
 SELECT *  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 401a11a10f190cda8efeaffa04e1025ef7f4e681
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105234"
 ---
 # <a name="isgeneration-mdx"></a>IsGeneration (MDX)
@@ -35,7 +35,7 @@ IsGeneration(Member_Expression, Generation_Number)
  Expression numérique valide qui précise la génération par rapport à laquelle le membre spécifié est évalué.  
   
 ## <a name="remarks"></a>Notes  
- Le **IsGeneration** fonction renvoie **true** si le membre spécifié se trouve dans le numéro de génération spécifié. Sinon, la fonction retourne **false**. Également, si le membre spécifié prend la valeur d’un membre vide, le **IsGeneration** fonction renvoie **false**.  
+ La fonction **IsGeneration** retourne la **valeur true** si le membre spécifié se trouve dans le numéro de génération spécifié. Dans le cas contraire, la fonction retourne **false**. En outre, si le membre spécifié est évalué en tant que membre vide, la fonction **IsGeneration** retourne la **valeur false**.  
   
  Pour des besoins d'indexation des générations, les membres feuilles portent l'index de génération 0. Pour déterminer l'index de génération des membres non feuilles, prenez tout d'abord l'index de génération le plus élevé à partir de l'union de tous les membres enfants du membre spécifié, puis ajoutez 1 à cet index. En raison du mode de détermination de l'index de génération des membres non feuilles, un membre non feuille spécifique peut appartenir à plusieurs générations.  
   
@@ -53,6 +53,6 @@ IsGeneration(Member_Expression, Generation_Number)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

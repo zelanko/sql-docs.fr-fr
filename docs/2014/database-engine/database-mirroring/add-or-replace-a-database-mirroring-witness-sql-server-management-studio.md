@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4bc9f0865ed5ff00099f121f254d17aafc298f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807452"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>Ajouter ou remplacer un témoin de mise en miroir de base de données (SQL Server Management Studio)
@@ -40,15 +40,15 @@ ms.locfileid: "62807452"
   
 6.  Dans la boîte de dialogue **Inclure un serveur témoin** , cliquez sur **Oui**, puis sur **Suivant**.  
   
-7.  Dans la boîte de dialogue **Choisir les serveurs à configurer** , la case **Instance de serveur témoin** est automatiquement cochée. Cliquer sur **Suivant**.  
+7.  Dans la boîte de dialogue **Choisir les serveurs à configurer** , la case **Instance de serveur témoin** est automatiquement cochée. Cliquez sur **Suivant**.  
   
-8.  Dans la boîte de dialogue **Instance de serveur principal** , conservez le port et le point de terminaison existants. Cliquer sur **Suivant**.  
+8.  Dans la boîte de dialogue **Instance de serveur principal** , conservez le port et le point de terminaison existants. Cliquez sur **Suivant**.  
   
 9. Dans la boîte de dialogue **Instance de serveur témoin** , cliquez sur **Se connecter**.  
   
-10. Dans la boîte de dialogue **Se connecter au serveur** , indiquez l’instance du serveur témoin dans le champ **Nom du serveur** et utilisez l’authentification Windows (valeur par défaut). Cliquer sur **Se connecter**.  
+10. Dans la boîte de dialogue **Se connecter au serveur** , indiquez l’instance du serveur témoin dans le champ **Nom du serveur** et utilisez l’authentification Windows (valeur par défaut). Cliquez sur **Connecter**.  
   
-11. Une fois qu’une connexion a été établie, le port d’écoute et le point de terminaison de mise en miroir de bases de données de l’instance du serveur témoin s’affichent dans la boîte de dialogue **Instance de serveur témoin** . Cliquer sur **Suivant**.  
+11. Une fois qu’une connexion a été établie, le port d’écoute et le point de terminaison de mise en miroir de bases de données de l’instance du serveur témoin s’affichent dans la boîte de dialogue **Instance de serveur témoin** . Cliquez sur **Suivant**.  
   
 12. La boîte de dialogue **Comptes de service** contient les champs des comptes de service de domaine des instances du serveur témoin, miroir et principal.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62807452"
   
          Le nom de domaine doit être indiqué en majuscules.  
   
-     Cliquer sur **Suivant**.  
+     Cliquez sur **Suivant**.  
   
 13. Dans l’écran récapitulatif **Terminer l’Assistant** , vérifiez éventuellement la configuration du témoin, puis cliquez sur **Terminer**.  
   

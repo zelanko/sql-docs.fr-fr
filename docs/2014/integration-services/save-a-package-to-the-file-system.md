@@ -1,5 +1,5 @@
 ---
-title: Enregistrer un Package dans le système de fichiers | Microsoft Docs
+title: Enregistrer un package dans le système de fichiers | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07077fabaca18170496a1b4e972da7b7e34cd4fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056254"
 ---
 # <a name="save-a-package-to-the-file-system"></a>Enregistrer un package dans le système de fichiers
@@ -32,13 +32,13 @@ ms.locfileid: "66056254"
   
 2.  Dans l'Explorateur de solutions, cliquez sur le package à enregistrer.  
   
-3.  Dans le menu **Fichier** , cliquez sur **Enregistrer les éléments sélectionnés**.  
+3.  Dans le menu **Fichier**, cliquez sur **Enregistrer les éléments sélectionnés**.  
   
     > [!NOTE]  
     >  Vous pouvez vérifier le chemin d'accès et le nom de fichier dans lequel le package a été enregistré dans la fenêtre Propriétés.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Packages Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
- [Enregistrer une copie d’un package](../../2014/integration-services/save-a-copy-of-a-package.md)  
+ [Enregistrer une copie d'un package](../../2014/integration-services/save-a-copy-of-a-package.md)  
   
   

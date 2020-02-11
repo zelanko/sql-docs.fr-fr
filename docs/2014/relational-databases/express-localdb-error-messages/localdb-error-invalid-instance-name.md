@@ -11,21 +11,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: adbdae062c0c69816cf57a7c7a6d73906fbd8d7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62990470"
 ---
-# <a name="localdberrorinvalidinstancename"></a>LOCALDB_ERROR_INVALID_INSTANCE_NAME
+# <a name="localdb_error_invalid_instance_name"></a>LOCALDB_ERROR_INVALID_INSTANCE_NAME
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|283|  
-|Source de l'événement|Runtime de base de données locale SQL Server 12.0|  
+|ID de l’événement|283|  
+|Source de l’événement|Runtime de base de données locale SQL Server 12.0|  
 |Composant|API d'exécution de la base de données locale|  
 |Texte du message|Le nom de l'instance contient des caractères non valides ou est trop long. Consultez la documentation de l'API.|  
   

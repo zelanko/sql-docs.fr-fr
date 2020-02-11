@@ -1,5 +1,5 @@
 ---
-title: Ajouter des filtres de Dataset, filtres de régions de données et les filtres de groupe (Générateur de rapports et SSRS) | Microsoft Docs
+title: Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0baf05aa9c38882aea1423fa56c2d7eb0ea940be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106629"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes (Générateur de rapports et SSRS)
@@ -47,26 +47,26 @@ ms.locfileid: "66106629"
   
 -   **Sur les groupes de séries ou de catégories d’une région de données de graphique** : définissez un filtre sur un groupe de séries ou de catégories quand vous souhaitez inclure ou exclure certaines valeurs dans une expression de groupe afin de contrôler les valeurs qui s’affichent dans le graphique.  
   
-##  <a name="FilterEquations"></a> Fonctionnement d'une équation de filtre  
+##  <a name="FilterEquations"></a>Fonctionnement d’une équation de filtre  
  Au moment de l'exécution, le processeur de rapports convertit la valeur dans le type de données spécifié, puis utilise l'opérateur spécifié pour comparer l'expression et la valeur. La liste suivante décrit chaque élément de l'équation de filtre :  
   
--   **Expression** : définit ce sur quoi vous filtrez. En général, il s'agit d'un champ de dataset.  
+-   **Expression** Définit ce que vous filtrez. En général, il s'agit d'un champ de dataset.  
   
--   **Type de données** : spécifie le type de données à utiliser quand l’équation de filtre est évaluée au moment de l’exécution par le processeur de rapports. Le type de données sélectionné doit être pris en charge par le schéma de définition de rapport.  
+-   **Type de données** Spécifie le type de données à utiliser lorsque l’équation de filtre est évaluée au moment de l’exécution par le processeur de rapports. Le type de données sélectionné doit être pris en charge par le schéma de définition de rapport.  
   
--   **Opérateur** : définit comment comparer les deux parties de l’équation de filtre.  
+-   **Opérateur** Définit comment comparer les deux parties de l’équation de filtre.  
   
--   `Value` Définit l’expression à utiliser dans la comparaison.  
+-   `Value`Définit l’expression à utiliser dans la comparaison.  
   
  Les sections suivantes décrivent chaque élément de l'équation de filtre :  
   
 ### <a name="expression"></a>Expression  
- Lorsque l'équation de filtre est évaluée par le processeur de rapports au moment de l'exécution, les types de données pour l'expression et la valeur doivent être identiques. Le type de données du champ sélectionné pour **Expression** est déterminé par l’extension de traitement des données ou le fournisseur de données utilisée pour extraire les données de la source de données. Le type de données de l’expression que vous entrez pour `Value` est déterminée par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] valeurs par défaut. Les choix proposés pour le type de données sont déterminés par les types de données pris en charge pour une définition de rapport. Les valeurs de la base de données peuvent être converties par le fournisseur de données en un type CLR.  
+ Lorsque l'équation de filtre est évaluée par le processeur de rapports au moment de l'exécution, les types de données pour l'expression et la valeur doivent être identiques. Le type de données du champ sélectionné pour **Expression** est déterminé par l’extension de traitement des données ou le fournisseur de données utilisée pour extraire les données de la source de données. Le type de données de l’expression que vous entrez `Value` pour est déterminé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] par les valeurs par défaut. Les choix proposés pour le type de données sont déterminés par les types de données pris en charge pour une définition de rapport. Les valeurs de la base de données peuvent être converties par le fournisseur de données en un type CLR.  
   
 ### <a name="data-type"></a>Type de données  
  Pour que le processeur de rapports puisse comparer deux valeurs, les types de données doivent être identiques. Le tableau suivant répertorie le mappage entre les types de données CLR et les types de données de définition de rapport. Les données que vous récupérez à partir d'une source de données peuvent être converties en un type de données différent lorsqu'il s'agit de données de rapport.  
   
-|**Type de données de schéma de définition de rapport**|**Type CLR**|  
+|**Type de données de schéma de définition de rapport**|**Type (s) CLR**|  
 |--------------------------------------------|-----------------------|  
 |`Boolean`|`Boolean`|  
 |`DateTime`|`DateTime`, `DateTimeOffset`|  
@@ -81,13 +81,13 @@ ms.locfileid: "66106629"
   
 |Opérateur|Action|  
 |--------------|------------|  
-|**Equal, Like, NotEqual, GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual**|Compare l'expression à une valeur.|  
-|**TopN, BottomN**|Compare l'expression à une valeur `Integer`.|  
-|**TopPercent, BottomPercent**|Compare l'expression à une valeur `Integer` ou `Float`.|  
-|**Entre**|Teste si l'expression est comprise entre deux valeurs (y compris ces valeurs).|  
+|**EQUAL, like, NotEqual, GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual**|Compare l'expression à une valeur.|  
+|**TopN, Basn**|Compare l'expression à une valeur `Integer`.|  
+|**Pourcentage, BottomPercent**|Compare l'expression à une valeur `Integer` ou `Float`.|  
+|**Différents**|Teste si l'expression est comprise entre deux valeurs (y compris ces valeurs).|  
 |**Dans**|Teste si l'expression est contenue dans un jeu de valeurs.|  
   
-### <a name="value"></a>Value  
+### <a name="value"></a>Valeur  
  L’expression Valeur spécifie la dernière partie de l’équation de filtre. Le processeur de rapports convertit l'expression évaluée dans le type de données que vous avez spécifié, puis évalue l'équation de filtre entière pour déterminer si les données spécifiées dans le champ Expression sont filtrées ou non.  
   
  Pour effectuer une conversion dans un type de données autre que CLR standard, vous devez modifier l'expression afin de procéder à une conversion explicite dans un type de données spécifique. Vous pouvez utiliser les fonctions de conversion répertoriées dans la boîte de dialogue **Expression** sous **Fonctions communes**, **Conversion**. Par exemple, pour un champ `ListPrice` qui représente les données stockées avec un type de données **monétaire** sur une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l’extension de traitement des données retourne la valeur du champ en utilisant le type de données <xref:System.Decimal> . Pour définir qu’un filtre doit utiliser seulement des valeurs supérieures à **50000,00 $** dans la devise du rapport, convertissez la valeur en Décimal en utilisant l’expression `=CDec(50000.00)`.  

@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 015c52194ce17e70a25bfe627aaf6822acda3ce3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205011"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>Prise en charge de FOR XML pour le type de données XML
   Si une requête FOR XML spécifie une colonne de type `xml` dans la clause SELECT, les valeurs de la colonne sont mappées comme éléments dans le code XML retourné, que vous spécifiiez ou non la directive ELEMENTS. Toute déclaration XML dans la colonne de type `xml` n'est pas sérialisée.  
   
- Par exemple, la requête suivante récupère des informations de contact client, telles que la `BusinessEntityID`, `FirstName`, et `LastName` colonnes et les numéros de téléphone à partir de la `AdditionalContactInfo` colonne de `xml` type.  
+ Par exemple, la requête suivante récupère des informations de contact client, telles `BusinessEntityID`que `FirstName`les colonnes `LastName` , et, ainsi que les numéros de `AdditionalContactInfo` téléphone de `xml` la colonne de type.  
   
 ```  
 USE AdventureWorks2012;  
@@ -71,7 +71,7 @@ FOR XML AUTO, TYPE;
 ...  
 ```  
   
- Si vous spécifiez un alias de colonne pour la colonne XML générée par la requête XQuery, cet alias est utilisé pour ajouter un élément wrapper autour du code XML généré par la requête XQuery. Par exemple, la requête suivante spécifie `MorePhoneNumbers` comme alias de colonne :  
+ Si vous spécifiez un alias de colonne pour la colonne XML générée par la requête XQuery, cet alias est utilisé pour ajouter un élément wrapper autour du code XML généré par la requête XQuery. Par exemple, la requête suivante spécifie `MorePhoneNumbers` comme alias de colonne :  
   
 ```  
 SELECT BusinessEntityID, FirstName, LastName, AdditionalContactInfo.query('  
@@ -204,6 +204,6 @@ select @x;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Prise en charge FOR XML des différents types de données SQL Server](for-xml-support-for-various-sql-server-data-types.md)  
+ [Prise en charge de FOR XML pour différents types de données SQL Server](for-xml-support-for-various-sql-server-data-types.md)  
   
   

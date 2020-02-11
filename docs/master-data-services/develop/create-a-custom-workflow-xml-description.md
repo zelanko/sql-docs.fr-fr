@@ -11,10 +11,10 @@ ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: eb5beeb5115c3a68ab34313ea9125c65a4f4e185
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729308"
 ---
 # <a name="create-a-custom-workflow---xml-description"></a>Créer un flux de travail personnalisé - Description du code XML
@@ -65,20 +65,22 @@ ms.locfileid: "73729308"
   
  Le tableau suivant décrit quelques-unes des balises contenues dans ce code XML :  
   
-|Balise|Description|  
+|Tag|Description|  
 |---------|-----------------|  
-|\<Type>|Texte que vous avez entré dans la zone de texte **Type de flux de travail** dans [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] pour identifier quels assemblys personnalisés de flux de travail doivent être chargés.|  
-|\<SendData>|Valeur booléenne contrôlée par la case à cocher **Inclure les données de membre dans le message** dans [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. La valeur 1 indique que la section \<MemberData> est envoyée ; sinon la section \<MemberData> n’est pas envoyée.|  
+|\<> de type|Texte que vous avez entré dans la zone de texte **Type de flux de travail** dans [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] pour identifier quels assemblys personnalisés de flux de travail doivent être chargés.|  
+|
+  \<SendData>|Valeur booléenne contrôlée par la case à cocher **Inclure les données de membre dans le message** dans [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. La valeur 1 indique que la section \<MemberData> est envoyée ; sinon la section \<MemberData> n’est pas envoyée.|  
 |<Server_URL>|Texte que vous avez entré dans la zone de texte **Site du flux de travail** dans [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  
 |<Action_ID>|Texte que vous avez entré dans la zone de texte **Nom du flux de travail** dans [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  
-|\<MemberData>|Contient les données du membre qui a déclenché l'action de flux de travail. Cela est inclus uniquement si la valeur de \<SendData> est 1.|  
-|\<Enter*xxx*>|Cet ensemble de balises contient des métadonnées sur la création du membre, comme sa date de création et la personne qui l'a créé.|  
+|
+  \<MemberData>|Contient les données du membre qui a déclenché l'action de flux de travail. Cela est inclus uniquement si la valeur de \<SendData> est 1.|  
+|\<Entrez*xxx*>|Cet ensemble de balises contient des métadonnées sur la création du membre, comme sa date de création et la personne qui l'a créé.|  
 |\<LastChg*xxx*>|Cet ensemble de balises contient des métadonnées sur la dernière modification apportée au membre, comme la date de la modification et la personne qui l'a effectuée.|  
-|\<Name>|Premier attribut du membre qui a été modifié. Cet exemple de membre contient uniquement des attributs Name et Code.|  
-|\<Code>|Attribut suivant du membre qui a été modifié. Si cet exemple de membre contenait plus d'attributs, ils suivraient celui-ci.|  
+|\<Nom>|Premier attribut du membre qui a été modifié. Cet exemple de membre contient uniquement des attributs Name et Code.|  
+|\<> de code|Attribut suivant du membre qui a été modifié. Si cet exemple de membre contenait plus d'attributs, ils suivraient celui-ci.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer un flux de travail personnalisé &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)   
+ [Créer un &#40;de flux de travail personnalisé Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)   
  [Exemple de flux de travail personnalisé &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)  
   
   

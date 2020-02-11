@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9334e4d44663f5d0637d6933eb7a72eae74d4a84
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243647"
 ---
 # <a name="search-an-active-document-incrementally"></a>Effectuer une recherche incrémentielle dans un document actif
@@ -48,9 +48,9 @@ ms.locfileid: "75243647"
 >  Pour obtenir la liste complète des touches de raccourci clavier, consultez [Raccourcis clavier dans SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rechercher et remplacer](search-and-replace.md)   
- [Rechercher des documents de manière interactive](search-documents-interactively.md)   
- [Rechercher des documents à l’aide des listes de résultats](search-documents-using-results-lists.md)   
+ [Recherche et remplacement](search-and-replace.md)   
+ [Effectuer une recherche de façon interactive dans des documents](search-documents-interactively.md)   
+ [Effectuer une recherche dans des documents à l'aide des listes de résultats](search-documents-using-results-lists.md)   
  [Rechercher du texte avec des caractères génériques](search-text-with-wildcards.md)   
  [Rechercher du texte avec des expressions régulières](search-text-with-regular-expressions.md)  
   

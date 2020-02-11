@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0afebe3d8e974ac4920a6f75bf544a13027b360e
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811000"
 ---
 # <a name="mssql_eng014114"></a>MSSQL_ENG014114
@@ -26,8 +26,8 @@ ms.locfileid: "68811000"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|14114|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|14114|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique||  
 |Texte du message|'%1!' n'est pas configuré en tant que distributeur.|  
@@ -40,17 +40,17 @@ ms.locfileid: "68811000"
  La réplication n'est pas prise en charge si vous avez inscrit une des instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par adresse IP ou par nom de domaine pleinement qualifié (FQDN). Si vous aviez une des instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inscrites par adresse IP ou par nom de domaine pleinement qualifié dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] quand vous avez configuré la réplication, cette erreur a pu se produire.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
- Si le message d'erreur spécifie une instance particulière, configurez le serveur comme serveur de distribution. Pour plus d’informations, consultez [Configurer la distribution](configure-distribution.md).  
+ Si le message d'erreur spécifie une instance particulière, configurez le serveur comme serveur de distribution. Pour plus d'informations, voir [Configure Distribution](configure-distribution.md).  
   
  Si le message d'erreur ne spécifie pas d'instance particulière ('null'), vérifiez que l'instance du serveur de distribution est inscrit correctement. Si le nom réseau de l'ordinateur et le nom de l'instance SQL Server diffèrent, effectuez une des actions suivantes :  
   
--   Ajoutez le nom de l'instance SQL Server comme nom réseau valide. Pour définir un autre nom réseau, une méthode possible consiste à l'ajouter au fichier hosts local. Le fichier hosts local est installé par défaut dans le répertoire WINDOWS\system32\drivers\etc ou WINNT\system32\drivers\etc. Pour plus d'informations, consultez la documentation Windows.  
+-   Ajoutez le nom de l'instance SQL Server comme nom réseau valide. Pour définir un autre nom réseau, une méthode possible consiste à l'ajouter au fichier hosts local. Le fichier hosts local est installé par défaut dans le répertoire WINDOWS\system32\drivers\etc ou WINNT\system32\drivers\etc. Pour plus d'informations, reportez-vous à la documentation Windows.  
   
-     Si, par exemple, le nom d'ordinateur est comp1, l'adresse IP de l'ordinateur 10.193.17.129 et le nom de l'instance inst1/nominst, ajoutez l'entrée suivante au fichier des hôtes :  
+     Si, par exemple, le nom d'ordinateur est comp1, l'adresse IP de l'ordinateur 10.193.17.129 et le nom de l'instance inst1/nominst, ajoutez l'entrée suivante au fichier des hôtes :  
   
      10.193.17.129 inst1  
   
--   Désactivez la distribution, inscrivez l'instance puis réactivez la distribution. Si la valeur de @@SERVERNAME n’est pas correcte pour une instance non cluster, procédez comme suit:  
+-   Désactivez la distribution, inscrivez l'instance puis réactivez la distribution. Si la valeur de @@SERVERNAME n’est pas correcte pour une instance non-cluster, effectuez les étapes suivantes :  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  

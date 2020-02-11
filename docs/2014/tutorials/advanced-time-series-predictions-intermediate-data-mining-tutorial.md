@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ca144d1d473f7df49f73d5ed170052c61ce6107d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893688"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>Prédictions de série chronologique avancées (Didacticiel intermédiaire sur l'exploration de données)
@@ -26,19 +26,19 @@ ms.locfileid: "68893688"
   
  **Étapes**  
   
-1.  [Préparer les données de ventes étendues (pour la prédiction)](#bkmk_newExtendData)  
+1.  [Préparez les données de ventes étendues (pour la prédiction)](#bkmk_newExtendData)  
   
-2.  [Préparer les données agrégées (pour générer le modèle)](#bkmk_newReplaceData)  
+2.  [Préparez les données cumulées (pour générer le modèle)](#bkmk_newReplaceData)  
   
-3.  [Préparer les données de la série (pour la prédiction croisée)](#bkmk_CrossData2)  
+3.  [Préparez les données de la série (pour la prédiction croisée)](#bkmk_CrossData2)  
   
-4.  [Prédire l’utilisation de EXTEND](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
+4.  [Effectuez les prédictions à l'aide d'EXTEND](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
   
-5.  [Créer le modèle de prédiction croisée](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
+5.  [Créez le modèle de prédiction croisée](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
   
-6.  [Prédire l’utilisation de Replace](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
+6.  [Effectuez les prédictions à l'aide de REPLACE](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
   
-7.  [Passer en revue les nouvelles prédictions](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
+7.  [Examinez les nouvelles prédictions](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
   
 ##  <a name="bkmk_newExtendData"></a>Création des nouvelles données de ventes étendues  
  Pour mettre à jour vos données de ventes, vous devez obtenir les derniers chiffres de vente. Les données qui viennent d'arriver de la région Pacific sont d'un intérêt particulier car cette région a lancé une promotion commerciale régionale pour attirer l'attention sur les nouveaux magasins et pour attiser la conscience de leurs produits.  
@@ -101,7 +101,7 @@ ms.locfileid: "68893688"
   
      **Source de données**:[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **Sélectionner des tables et des vues**: Sélectionnez la table que vous venez de créer, NewSalesData.  
+     **Sélectionner des tables et des vues**: sélectionnez la table que vous venez de créer, NewSalesData.  
   
 3.  Cliquez sur **Terminer**.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "68893688"
 >  Vous allez utiliser ces données uniquement pour la prédiction, donc il n'est pas important que ces données soient incomplètes.  
   
 ##  <a name="bkmk_CrossData2"></a>Création des données pour le modèle de prédiction croisée  
- Les données qui ont été utilisées dans le modèle de prévision d’origine ont déjà été regroupées de quelque façon que ce soit par la vue vTimeSeries, qui a réduit plusieurs modèles de vélos dans un plus petit nombre de catégories et les résultats fusionnés de pays dans des régions. Pour créer un modèle qui peut être utilisé pour les projections internationales, vous allez créer des agrégations simples supplémentaires directement dans le Concepteur de vue de source de données. La nouvelle vue de source de données ne contiendra qu'une somme et une moyenne des ventes de tous les produits pour toutes les régions.  
+ Les données utilisées dans le modèle de prévision d'origine ont déjà été groupées, dans une certaine mesure, par la vue vTimeSeries qui a réduit plusieurs modèles de vélos en un plus petit nombre de catégories et fusionné les résultats de différents pays en régions. Pour créer un modèle qui peut être utilisé pour les projections internationales, vous allez créer des agrégations simples supplémentaires directement dans le Concepteur de vue de source de données. La nouvelle vue de source de données ne contiendra qu'une somme et une moyenne des ventes de tous les produits pour toutes les régions.  
   
  Après avoir créé la source de données utilisée pour le modèle, vous devez créer une nouvelle vue de source de données pour la prédiction. Par exemple, si vous souhaitez prédire des ventes pour l'Europe à l'aide du nouveau modèle international, vous devez charger uniquement les données de la région Europe. Vous allez définir une nouvelle vue de source de données qui filtre les données d'origine et modifier la condition de filtre pour chaque ensemble de requêtes de prédiction.  
   
@@ -152,9 +152,9 @@ ms.locfileid: "68893688"
   
      **Source de données**:[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **Sélectionner des tables et des vues**: Ne sélectionnez pas de tables  
+     **Sélectionner des tables et des vues**: ne pas sélectionner de tables  
   
-     **Nom** : `T1000 Pacific Region`  
+     **Nom**:`T1000 Pacific Region`  
   
 3.  Cliquez sur **Terminer**.  
   
@@ -162,9 +162,9 @@ ms.locfileid: "68893688"
   
      La boîte de dialogue **Créer une requête nommée** s'affiche. Retapez le nom, puis ajoutez la description suivante :  
   
-     **Nom** : `T1000 Pacific Region`  
+     **Nom**:`T1000 Pacific Region`  
   
-     **Description** : **Filtrer`vTimeSeries`par région et modèle**  
+     **Description**: **Filtrer`vTimeSeries`par région et par modèle**  
   
 5.  Dans le volet Texte, tapez la requête suivante et cliquez sur OK :  
   
@@ -182,11 +182,11 @@ ms.locfileid: "68893688"
      Vous utiliserez ces données comme entrée au modèle lors de la création des requêtes de prédiction croisée.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Prédictions de série chronologique utilisant &#40;des données mises à jour didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
+ [Prédictions de série chronologique utilisant des données mises à jour &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithme MTS (Microsoft Time Series)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Références techniques relatives à l'algorithme MTS (Microsoft Time Series)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
+ [Référence technique de l’algorithme MTS (Microsoft Time Series)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Vues de sources de données dans les modèles multidimensionnels](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)  
   
   
