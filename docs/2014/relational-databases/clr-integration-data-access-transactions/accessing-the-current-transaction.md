@@ -1,5 +1,5 @@
 ---
-title: Accès à la Transaction actuelle | Microsoft Docs
+title: Accès à la transaction en cours | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad369e49298c4d39a7e936ce8acf47ca2035c8f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920020"
 ---
 # <a name="accessing-the-current-transaction"></a>Accès à la transaction actuelle
@@ -43,7 +43,7 @@ ms.locfileid: "62920020"
   
 -   La procédure ou fonction managée peut renvoyer une valeur en utilisant un paramètre de sortie. La procédure [!INCLUDE[tsql](../../includes/tsql-md.md)] appelante peut vérifier la valeur renvoyée et, le cas échéant, exécuter `ROLLBACK TRANSACTION`.  
   
--   La procédure ou fonction managée peut lever une exception personnalisée. L’appel [!INCLUDE[tsql](../../includes/tsql-md.md)] procédure peut intercepter l’exception levée par la procédure ou fonction managée dans un bloc try/catch et exécuter `ROLLBACK TRANSACTION`.  
+-   La procédure ou fonction managée peut lever une exception personnalisée. La procédure [!INCLUDE[tsql](../../includes/tsql-md.md)] appelante peut intercepter l’exception levée par la procédure ou fonction managée dans un bloc try/ `ROLLBACK TRANSACTION`catch et exécuter.  
   
 -   La procédure ou fonction managée peut annuler la transaction actuelle en appelant la méthode `Transaction.Rollback` si une certaine condition est remplie.  
   
@@ -64,7 +64,7 @@ The context transaction which was active before entering user defined routine, t
  Cette exception est également attendue et, pour que l'exécution continue, vous devez avoir un bloc try/catch autour de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui effectue l'action qui active le déclencheur. Malgré les deux exceptions levées, la transaction est restaurée et les modifications ne sont pas validées.  
   
 ### <a name="example"></a>Exemple  
- Voici un exemple de transaction restaurée à partir d'une procédure managée à l'aide de la méthode `Transaction.Rollback`. Remarquez le bloc try/catch autour de la méthode `Transaction.Rollback` dans le code managé. Le script [!INCLUDE[tsql](../../includes/tsql-md.md)] crée un assembly et une procédure stockée managée. N’oubliez pas que la `EXEC uspRollbackFromProc` instruction est englobée dans un bloc try/catch, afin que l’exception levée lorsque la procédure managée termine l’exécution est interceptée.  
+ Voici un exemple de transaction restaurée à partir d'une procédure managée à l'aide de la méthode `Transaction.Rollback`. Remarquez le bloc try/catch autour de la méthode `Transaction.Rollback` dans le code managé. Le script [!INCLUDE[tsql](../../includes/tsql-md.md)] crée un assembly et une procédure stockée managée. Sachez que l' `EXEC uspRollbackFromProc` instruction est encapsulée dans un bloc try/catch, afin que l’exception levée lorsque l’exécution de la procédure managée se termine est interceptée.  
   
 ```csharp  
 using System;  
