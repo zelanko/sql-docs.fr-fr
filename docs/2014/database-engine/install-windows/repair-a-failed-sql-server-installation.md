@@ -1,5 +1,5 @@
 ---
-title: Réparer une Installation de SQL Server 2014 | Microsoft Docs
+title: Réparer une installation SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0d9486134e0a9103239853d8378e29aea688c7fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67046667"
 ---
 # <a name="drop-a-sql-server-2014-installation"></a>Ignorer une installation de SQL Server 2014
@@ -76,7 +76,7 @@ ms.locfileid: "67046667"
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher et lire les fichiers journaux d'installation de SQL Server](view-and-read-sql-server-setup-log-files.md)   
- [Rubriques de procédures relatives à l’installation](../../sql-server/install/installation-how-to-topics.md)  
+ [Afficher et lire les fichiers journaux d’installation de SQL Server](view-and-read-sql-server-setup-log-files.md)   
+ [Rubriques de procédures relatives à l'installation](../../sql-server/install/installation-how-to-topics.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 019ca09c83b0b3011e9940d9a4c988ce223e192f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107119"
 ---
 # <a name="add-data-to-a-report-report-builder-and-ssrs"></a>Ajouter des données à un rapport (Générateur de rapports et SSRS)
@@ -38,12 +38,12 @@ ms.locfileid: "66107119"
   
  Vous pouvez également ajouter des datasets à un rapport en ajoutant des parties de rapports qui contiennent les datasets dont elles dépendent. [!INCLUDE[ssRBrptparts](../../../includes/ssrbrptparts-md.md)]  
   
- Pour savoir comment créer un rapport qui affiche les données d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de base de données, consultez [didacticiel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../tutorial-creating-a-basic-table-report-report-builder.md). Pour générer un rapport qui inclut ses propres données, consultez [didacticiel : Créer un rapport de graphique rapide en mode hors connexion &#40;Générateur de rapports&#41;](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+ Pour savoir comment créer un rapport qui affiche les données d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../tutorial-creating-a-basic-table-report-report-builder.md). Pour générer un rapport qui inclue ses propres données, consultez [Didacticiel : créer un rapport de graphique rapide en mode hors connexion &#40;Générateur de rapports&#41;](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Methods"></a> Ajout de données de rapport  
+##  <a name="Methods"></a>Ajout de données de rapport  
  Dans le Générateur de rapports, vous pouvez ajouter des données de rapport comme suit :  
   
 -   Ajoutez des parties de rapports d'un serveur de rapports à votre rapport. Chaque partie de rapport est autonome et inclut des datasets dépendants. Les datasets sont prédéfinis.  
@@ -73,11 +73,11 @@ ms.locfileid: "66107119"
   
 -   [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
--   [Publication de parties de rapports &#40;Générateur de rapports et SSRS&#41;](../report-parts-report-builder-and-ssrs.md)  
+-   [Parties de rapports &#40;Générateur de rapports et SSRS&#41;](../report-parts-report-builder-and-ssrs.md)  
   
 -   [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
 
-##  <a name="QuickStart"></a> Ajout de données avec des parties de rapports  
+##  <a name="QuickStart"></a>Ajout de données avec des parties de rapports  
  Les parties de rapports contiennent les datasets dont elles dépendent. Ces datasets reposent sur les sources de données partagées qui sont disponibles sur le serveur de rapports. Dans le Générateur de rapports, lorsque vous ajoutez une partie de rapport à votre rapport, les datasets dépendants sont ajoutés à votre rapport, comme si vous les aviez ajoutés manuellement. Par exemple, un graphique prédéfini contient un dataset. Pour afficher les données, affichez un aperçu du rapport.  
   
 > [!NOTE]  
@@ -87,33 +87,33 @@ ms.locfileid: "66107119"
   
 -   Pour plus d’informations, consultez [Publication de parties de rapports &#40;Générateur de rapports et SSRS&#41;](../report-parts-report-builder-and-ssrs.md) et [Parties de rapports dans le Concepteur de rapports &#40;SSRS&#41;](../report-design/report-parts-in-report-designer-ssrs.md).  
 
-##  <a name="Queries"></a> Requêtes et concepteurs de requêtes  
+##  <a name="Queries"></a>Requêtes et concepteurs de requêtes  
  Pour spécifier les données qui vous intéressent à partir d'une source de données, générez une commande de requête. Chaque type de source de données fournit un *concepteur de requêtes* associé pour vous aider à générer la requête. Le concepteur de requêtes peut être graphique ou textuel. Dans un concepteur de requêtes graphique, vous affichez des métadonnées qui représentent les données sur la source de données externe et générez de façon interactive une requête en faisant glisser des champs ou des entités vers l'aire de conception de la requête. Dans un concepteur de requêtes textuel, vous écrivez ou importez des requêtes dans la syntaxe de requête prise en charge par la source de données externe.  
   
  Dans le concepteur de requêtes, vous pouvez exécuter la requête pour afficher des exemples de données et valider la syntaxe de commande de requête. Les noms des colonnes dans le jeu de résultats deviennent les noms des champs affichés dans le volet Données du rapport. Le jeu de résultats doit être un jeu de lignes et de colonnes unique où le même nombre de valeurs existe pour chaque ligne de données. Plusieurs jeux de résultats d'une même requête ne sont pas pris en charge. Les hiérarchies déséquilibrées, qui n'ont pas un nombre constant de colonnes et peuvent produire un nombre différent de valeurs de données pour chaque ligne, ne sont pas prises en charge.  
   
- Pour exécuter une requête, vous devez disposer d'informations d'identification au moment de la conception. Pour plus d’informations, consultez [spécifier les informations d’identification dans le Générateur de rapports](../specify-credentials-in-report-builder.md) et [des connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+ Pour exécuter une requête, vous devez disposer d'informations d'identification au moment de la conception. Pour plus d’informations, consultez [spécifier des informations d’identification dans des générateur de rapports](../specify-credentials-in-report-builder.md) et des connexions de [données, des sources de données et des chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
  La communication entre une extension de données et la source de données externe est gérée par les fournisseurs de données. La prise en charge de la syntaxe de commande de requête, des paramètres de requête et des types de données pour les valeurs dans le jeu de résultats est déterminée par chaque fournisseur de données. Pour plus d’informations, consultez la rubrique correspondant au type spécifique d’extension de données et [Concepteurs de requêtes&#40;Générateur de rapports&#41;](../query-designers-report-builder.md).  
 
 ##  <a name="HowTo"></a> Rubriques de procédures  
- [Ajouter et vérifier une connexion de données ou d’une Source de données &#40;Générateur de rapports et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Ajouter et vérifier une connexion de données ou une source de données &#40;Générateur de rapports et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
  [Ajouter, modifier ou actualiser des champs dans le volet des données de rapport &#40;Générateur de rapports et SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
- [Générer une requête dans le concepteur de requêtes relationnelles &#40;Générateur de rapports et SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
+ [Créer une requête dans le concepteur de requêtes relationnelles &#40;Générateur de rapports et SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
   
- [Afficher des datasets masqués pour les valeurs de paramètres des données multidimensionnelles &#40;Générateur de rapports et SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
+ [Afficher les datasets masqués pour les valeurs de paramètres des données multidimensionnelles &#40;Générateur de rapports et SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
   
- [Ajouter un filtre à un dataset &#40;Générateur de rapports et SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [Ajouter un filtre à un jeu de données &#40;Générateur de rapports et SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
  [Définir un message d’absence de données pour une région de données &#40;Générateur de rapports et SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
  [Associer un paramètre de requête à un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
   
- [Définir des paramètres dans le Concepteur de requêtes MDX pour Analysis Services &#40;Générateur de rapports et SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
+ [Définir des paramètres dans le concepteur de requêtes MDX pour Analysis Services &#40;Générateur de rapports et SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
 
 ##  <a name="Section"></a> Dans cette section  
  [Parties de rapports et datasets dans le Générateur de rapports](report-parts-and-datasets-in-report-builder.md)  
@@ -122,10 +122,10 @@ ms.locfileid: "66107119"
   
  [Spécifier des informations d’identification dans le Générateur de rapports](../specify-credentials-in-report-builder.md)  
   
- [Datasets incorporés dans les rapports et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
 
 ## <a name="see-also"></a>Voir aussi  
- [Mode Conception de rapport &#40;Générateur de rapports&#41;](../report-builder/report-design-view-report-builder.md)   
- [Concepts de création de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Vue Conception de rapport &#40;Générateur de rapports&#41;](../report-builder/report-design-view-report-builder.md)   
+ [Concepts de création de rapports &#40;Générateur de rapports et SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  

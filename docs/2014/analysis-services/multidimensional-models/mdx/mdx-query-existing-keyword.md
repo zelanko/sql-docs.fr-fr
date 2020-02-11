@@ -1,5 +1,5 @@
 ---
-title: EXISTING Keyword (MDX) | Microsoft Docs
+title: Mot clé EXISTing (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6c5e8dbe3e1b1ad44286bcbb79132010cad618a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073964"
 ---
 # <a name="existing-keyword-mdx"></a>Mot clé EXISTING (MDX)
@@ -39,7 +39,7 @@ Existing Set_Expression
  Par défaut, les jeux sont évalués dans le contexte du cube qui contient les membres de ce jeu. Le mot clé `Existing` contraint un jeu spécifié à être évalué dans le contexte actuel à la place.  
   
 ## <a name="example"></a>Exemple  
- L'exemple ci-dessous retourne le nombre de revendeurs dont les ventes ont baissé sur la période précédente en se basant sur les valeurs de membres State-Province (état-province) sélectionnées par l'utilisateur et évaluées à l'aide de la fonction `Aggregate`. Le mot clé [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) et [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) sont utilisées pour retourner des valeurs de ventes en baisse concernant les catégories de produits inscrites dans la dimension Product. Le `Existing` mot clé force le jeu dans le `Filter` fonction à évaluer dans le contexte actuel, autrement dit, pour les membres Washington et Oregon de la hiérarchie d’attribut State-Province.  
+ L'exemple ci-dessous retourne le nombre de revendeurs dont les ventes ont baissé sur la période précédente en se basant sur les valeurs de membres State-Province (état-province) sélectionnées par l'utilisateur et évaluées à l'aide de la fonction `Aggregate`. Le mot clé [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) et [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) sont utilisées pour retourner des valeurs de ventes en baisse concernant les catégories de produits inscrites dans la dimension Product. Le `Existing` mot clé force le jeu dans `Filter` la fonction à être évalué dans le contexte actuel, c’est-à-dire, pour les membres de Washington et Oregon de la hiérarchie d’attribut State-Province.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  
@@ -77,13 +77,13 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Count &#40;Set&#41; &#40;MDX&#41;](/sql/mdx/count-set-mdx)   
- [AddCalculatedMembers &#40;MDX&#41;](/sql/mdx/addcalculatedmembers-mdx)   
- [Aggregate &#40;MDX&#41;](/sql/mdx/aggregate-mdx)   
- [Filter &#40;MDX&#41;](/sql/mdx/filter-mdx)   
+ [Nombre &#40;défini&#41; &#40;&#41;MDX](/sql/mdx/count-set-mdx)   
+ [AddCalculatedMembers&#41;MDX &#40;](/sql/mdx/addcalculatedmembers-mdx)   
+ [&#41;MDX &#40;Aggregate](/sql/mdx/aggregate-mdx)   
+ [Filtre &#40;&#41;MDX](/sql/mdx/filter-mdx)   
  [Propriétés &#40;MDX&#41;](/sql/mdx/properties-mdx)   
- [DrilldownLevel &#40;MDX&#41;](/sql/mdx/drilldownlevel-mdx)   
- [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx)   
- [Informations de référence sur les fonctions MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
+ [DrilldownLevel&#41;MDX &#40;](/sql/mdx/drilldownlevel-mdx)   
+ [Hierarchize&#41;MDX &#40;](/sql/mdx/hierarchize-mdx)   
+ [Référence des fonctions MDX &#40;&#41;MDX](/sql/mdx/mdx-function-reference-mdx)  
   
   

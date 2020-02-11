@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 1 : Création d’un projet Report Server (Reporting Services) | Microsoft Docs'
+title: 'Leçon 1 : création d’un projet Report Server (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,26 +11,26 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3f97834b5df61df836b7cfd4cc4d890877f8855a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108530"
 ---
-# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Leçon 1 : Création d'un projet Report Server (Reporting Services)
+# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Leçon 1 : Création d'un projet Report Server (Reporting Services)
   Pour créer un rapport dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vous devez commencer par créer un projet Report Server dans lequel vous allez enregistrer votre fichier de définition de rapport (.rdl), ainsi que les autres fichiers de ressources dont vous avez besoin pour votre rapport. Puis, vous créez le fichier réel de définition du rapport, et définissez une source de données pour votre rapport, un dataset et la mise en page du rapport. Quand vous exécutez le rapport, les données réelles sont extraites et combinées avec la mise en page, puis restituées sur votre écran, à partir duquel vous pouvez les exporter, les imprimer ou les enregistrer.  
   
- Dans cette leçon, vous allez apprendre à créer un projet Report Server dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Un projet Report Server permet de créer des rapports qui s'exécutent sur un serveur de rapports.  
+ Dans cette leçon, vous allez apprendre à créer un projet Report Server dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Un projet Report Server permet de créer des rapports qui s'exécutent sur un serveur de rapports.  
   
 ### <a name="to-create-a-report-server-project"></a>Pour créer un projet Report Server  
   
-1.  Cliquez sur **Démarrer**, pointez sur **tous les programmes**, pointez sur [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], puis cliquez sur **SQL Server Data Tools**. Si c’est la première fois que vous avez ouvert [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], cliquez sur **paramètres Business Intelligence** pour les paramètres d’environnement par défaut.  
+1.  Cliquez sur **Démarrer**, pointez sur **tous les programmes**, sur [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], puis cliquez sur **SQL Server Data Tools**. S’il s’agit de la première fois que [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]vous ouvrez, cliquez sur **paramètres Business Intelligence** pour les paramètres d’environnement par défaut.  
   
 2.  Dans le menu **Fichier** , pointez sur **Nouveau**, puis cliquez sur **Projet**.  
   
-3.  Dans la liste **Modèles installés** , cliquez sur **Business Intelligence**.  
+3.  Dans la liste **Modèles installés**, cliquez sur **Business Intelligence**.  
   
-4.  Cliquez sur **projet de serveur de rapports**.  
+4.  Cliquez sur **projet Report Server**.  
   
 5.  Dans la zone **Nom**, tapez **Didacticiel**.  
   
@@ -40,20 +40,20 @@ ms.locfileid: "66108530"
   
 ### <a name="to-create-a-new-report-definition-file"></a>Pour créer un nouveau fichier de définition de rapport  
   
-1.  Dans l’Explorateur de solutions, cliquez sur **rapports**, pointez sur **ajouter**, puis cliquez sur **un nouvel élément**.  
+1.  Dans Explorateur de solutions, cliquez avec le bouton droit sur **rapports**, pointez sur **Ajouter**, puis cliquez sur **nouvel élément**.  
   
     > [!NOTE]  
-    >  Si la fenêtre **Explorateur de solutions** n’est pas visible, dans le menu **Affichage** , cliquez sur **Explorateur de solutions**.  
+    >  Si la fenêtre **Explorateur de solutions** n’est pas visible, dans le menu **Affichage**, cliquez sur **Explorateur de solutions**.  
   
-2.  Dans le **ajouter un nouvel élément** boîte de dialogue **modèles**, cliquez sur **rapport**.  
+2.  Dans la boîte de dialogue **Ajouter un nouvel élément** , sous **modèles**, cliquez sur **rapport**.  
   
 3.  Dans la zone **Nom**, tapez **Sales Orders.rdl** , puis cliquez sur **Ajouter**.  
   
      Le Concepteur de rapports s'ouvre et affiche le nouveau fichier .rdl en mode Conception.  
   
- Le Concepteur de rapports est un composant [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] qui s'exécute dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Il dispose de deux vues : **Conception** et **Aperçu**. Cliquez sur chacun des onglets pour passer d'une vue à une autre.  
+ Le Concepteur de rapports est un composant [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] qui s'exécute dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Il comporte deux vues : **Conception** et **Aperçu**. Cliquez sur chacun des onglets pour passer d'une vue à une autre.  
   
- Vous définissez vos données dans le volet **Données du rapport** . Vous définissez la mise en page de votre rapport en mode **Conception** . Vous pouvez exécuter le rapport et visualiser son aspect en mode **Aperçu** .  
+ Vous définissez vos données dans le volet **Données du rapport** . Vous définissez la mise en page de votre rapport en mode **Conception** . Vous pouvez exécuter le rapport et visualiser son aspect en mode **Aperçu**.  
   
 ## <a name="next-task"></a>Tâche suivante  
  Vous avez créé avec succès un projet de rapport appelé « Didacticiel » et ajouté un fichier de définition de rapport (.rdl) au projet de rapport. Vous allez ensuite spécifier la source de données à utiliser pour le rapport. Consultez [Leçon 2 : Spécification des informations de connexion &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md).  

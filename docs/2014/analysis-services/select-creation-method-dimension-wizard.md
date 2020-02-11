@@ -1,5 +1,5 @@
 ---
-title: Sélectionnez la méthode de création (Assistant Dimension) | Microsoft Docs
+title: Sélectionner la méthode de création (Assistant Dimension) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d44afc5bb4c352a2cb5dfd39030a52db990e3a0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069598"
 ---
 # <a name="select-creation-method-dimension-wizard"></a>Sélectionner la méthode de création (Assistant Dimension)
   La page **Sélectionner la méthode de création** permet de choisir la méthode de création de la dimension.  
   
- **Pour ouvrir l’Assistant Dimension**  
+ **Pour ouvrir l'Assistant Dimension**  
   
 -   Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur le dossier **Dimensions** pour un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , puis cliquez sur **Nouvelle dimension**.  
   
@@ -62,8 +62,8 @@ ms.locfileid: "66069598"
 >  Cette option est disponible uniquement quand l’option **Générer une table non temporelle dans la source de données** a été sélectionnée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide F1 de l’Assistant Dimension](dimension-wizard-f1-help.md)   
- [Dimensions &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Aide (F1) de l’Assistant Dimension](dimension-wizard-f1-help.md)   
+ [Dimensions &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensions dans les modèles multidimensionnels](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

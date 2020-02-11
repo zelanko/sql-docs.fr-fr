@@ -1,5 +1,5 @@
 ---
-title: Définir une relation plusieurs-à-plusieurs et les propriétés de relation plusieurs-à-plusieurs | Microsoft Docs
+title: Définir une relation plusieurs-à-plusieurs et les propriétés d’une relation plusieurs-à-plusieurs | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f679387dd1282dba3a4521f40bd11a2e0ba4b26f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075780"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Définir une relation plusieurs à plusieurs et les propriétés d’une relation plusieurs à plusieurs
@@ -43,11 +43,11 @@ ms.locfileid: "66075780"
   
  Visuellement, une relation plusieurs-à-plusieurs n'est pas indiquée dans un diagramme de cube. Utilisez plutôt l'onglet Utilisation de la dimension pour identifier rapidement toutes les relations plusieurs-à-plusieurs dans un modèle. Une relation plusieurs-à-plusieurs est indiquée par l'icône suivante.  
   
- ![Icône plusieurs-à-plusieurs dans l’utilisation de la dimension](../media/ssas-m2m-icondimusage.png "plusieurs-à-plusieurs icône dans l’utilisation de la dimension")  
+ ![Icône d'une dimension plusieurs-à-plusieurs dans l'utilisation de la dimension](../media/ssas-m2m-icondimusage.png "Icône d'une dimension plusieurs-à-plusieurs dans l'utilisation de la dimension")  
   
  Cliquez sur le bouton pour ouvrir la boîte de dialogue Définir une relation, vérifier si le type de la relation est plusieurs-à-plusieurs, et pour voir quel groupe de mesures intermédiaire est utilisé dans la relation.  
   
- ![Bouton de relation de définir dans l’utilisation de la dimension](../media/ssas-m2m-btndimusage.png "bouton Définir une relation dans l’utilisation de la dimension")  
+ ![Bouton définir une relation dans l’utilisation de la dimension](../media/ssas-m2m-btndimusage.png "Bouton définir une relation dans l’utilisation de la dimension")  
   
  Dans les sections suivantes, vous découvrirez comment configurer une dimension plusieurs-à-plusieurs et tester les comportements du modèle. Si vous souhaitez obtenir davantage d'informations, ou commencer par un didacticiel, reportez-vous à la section **En savoir plus** à la fin de cet article.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66075780"
   
  Pour illustrer les étapes de création d'une relation plusieurs-à-plusieurs, cette procédure recrée l'une des relations plusieurs-à-plusieurs dans l'exemple de cube Adventure Works. Si les données sources (c'est-à-dire, l'entrepôt de données d'exemple Adventure Works) sont installées sur une instance de moteur de base de données relationnelle, suivez les étapes suivantes.  
   
-#### <a name="step-1-verify-dsv-relationships"></a>Étape 1 : Vérifier les relations de la vue DSV  
+#### <a name="step-1-verify-dsv-relationships"></a>Étape 1 - Vérifier les relations de la vue de gestion dynamique  
   
 1.  Dans SQL Server Data Tools, dans un projet multidimensionnel, créez une source de données sur l'entrepôt de données Adventure Works DW 2012, hébergé sur une instance de moteur de base de données SQL Server.  
   
@@ -79,9 +79,9 @@ ms.locfileid: "66075780"
   
      L'exemple suivant confirme que les tables utilisées dans cette procédure sont liées à l'aide de clés primaires.  
   
-     ![Vue DSV affichant les tables associées](../media/ssas-m2m-dsvpkeys.PNG "DSV affichant les tables associées")  
+     ![Vue de source de données affichant les tables associées](../media/ssas-m2m-dsvpkeys.PNG "Vue de source de données affichant les tables associées")  
   
-#### <a name="step-2-create-dimensions-and-measure-groups"></a>Étape 2 : Créer des dimensions et de groupes de mesures  
+#### <a name="step-2-create-dimensions-and-measure-groups"></a>Étape 2 - Créer des dimensions et des groupes de mesures  
   
 1.  Dans SQL Server Data Tools, dans un projet multidimensionnel, cliquez avec le bouton droit sur **Dimensions** et sélectionnez **Nouvelle dimension**.  
   
@@ -89,21 +89,21 @@ ms.locfileid: "66075780"
   
      Sélectionnez tous les attributs.  
   
-     ![Liste des attributs dans la nouvelle dimension](../media/ssas-m2m-dimsalesreason.PNG "liste des attributs dans la nouvelle dimension")  
+     ![Liste des attributs dans une nouvelle dimension](../media/ssas-m2m-dimsalesreason.PNG "Liste des attributs dans une nouvelle dimension")  
   
 3.  Créez une seconde dimension basée sur la table existante, Fact Internet Sales. Bien qu'il s'agisse d'une table de faits, elle contient des informations de commande (Sales Order). Nous allons l'utiliser pour créer une dimension Sales Order.  
   
 4.  Dans Spécifier des informations sur la source, un avertissement indique que la colonne de nom doit être spécifiée. Choisissez **SalesOrderNumber** comme nom.  
   
-     ![Dimension de commande affichant la colonne nom](../media/ssas-m2m-dimsalesordersource.PNG "dimension Sales Order affichant la colonne de nom")  
+     ![Dimension de commande affichant la colonne de nom](../media/ssas-m2m-dimsalesordersource.PNG "Dimension de commande affichant la colonne de nom")  
   
 5.  Dans la page suivante de l'Assistant, choisissez les attributs. Dans cet exemple, sélectionnez uniquement **SalesOrderNumber**.  
   
-     ![Liste d’attributs de commande client dimension montrant](../media/ssas-m2m-dimsalesorderattrib.PNG "liste d’attributs montrant dimension Sales order")  
+     ![Dimension de commande affichant la liste d'attributs](../media/ssas-m2m-dimsalesorderattrib.PNG "Dimension de commande affichant la liste d'attributs")  
   
 6.  Renommez la dimension sous la forme **Dim Sales Orders**afin de disposer d’une convention d’affectation de noms cohérente pour les dimensions.  
   
-     ![Page de l’Assistant affichant le changement de nom de dimension](../media/ssas-m2m-dimsalesorders.PNG "page de l’Assistant affichant le changement de nom de dimension")  
+     ![Page de l'Assistant affichant le changement de nom de la dimension](../media/ssas-m2m-dimsalesorders.PNG "Page de l'Assistant affichant le changement de nom de la dimension")  
   
 7.  Cliquez avec le bouton droit sur **Cubes** , puis sélectionnez **Nouveau cube**.  
   
@@ -113,7 +113,8 @@ ms.locfileid: "66075780"
   
 9. Choisissez les mesures pour chaque table de faits.  
   
-     Pour simplifier votre modèle, effacez toutes les mesures, puis sélectionnez uniquement **Sales Amount** et **Fact Internet Sales Count** au bas de la liste. **FactInternetSalesReason** ne comporte qu’une seule mesure, qui est donc automatiquement sélectionnée.  
+     Pour simplifier votre modèle, effacez toutes les mesures, puis sélectionnez uniquement **Sales Amount** et **Fact Internet Sales Count** au bas de la liste. 
+  **FactInternetSalesReason** ne comporte qu’une seule mesure, qui est donc automatiquement sélectionnée.  
   
 10. La liste des dimensions devrait contenir **Dim Sales Reason** et **Dim Sales Orders**.  
   
@@ -121,17 +122,17 @@ ms.locfileid: "66075780"
   
 11. Nommez le cube et cliquez sur **Terminer**.  
   
-#### <a name="step-3-define-many-to-many-relationship"></a>Étape 3 : Définir plusieurs-à-plusieurs relation  
+#### <a name="step-3-define-many-to-many-relationship"></a>Étape 3 - Définir une relation plusieurs-à-plusieurs  
   
-1.  Dans le concepteur de cube, cliquez sur l'onglet Utilisation de la dimension. Notez qu’il existe déjà une relation plusieurs à plusieurs entre **Dim Sales Reason** et **Fact Internet Sales**. Rappelez-vous que l'icône suivante indique une relation plusieurs-à-plusieurs.  
+1.  Dans le concepteur de cube, cliquez sur l’onglet utilisation de la dimension. Notez qu’il existe déjà une relation plusieurs-à-plusieurs entre la **raison des ventes** et le **fait Internet Sales**. Rappelez-vous que l'icône suivante indique une relation plusieurs-à-plusieurs.  
   
-     ![Icône plusieurs-à-plusieurs dans l’utilisation de la dimension](../media/ssas-m2m-icondimusage.png "plusieurs-à-plusieurs icône dans l’utilisation de la dimension")  
+     ![Icône d'une dimension plusieurs-à-plusieurs dans l'utilisation de la dimension](../media/ssas-m2m-icondimusage.png "Icône d'une dimension plusieurs-à-plusieurs dans l'utilisation de la dimension")  
   
 2.  Cliquez sur la cellule à l’intersection entre **Dim Sales Reason** et **Fact Internet Sales**, puis cliquez sur le bouton pour ouvrir la boîte de dialogue Définir une relation.  
   
      Notez que cette boîte de dialogue est utilisée pour spécifier une relation plusieurs-à-plusieurs. Si vous deviez ajouter des dimensions avec une relation normale, vous utiliseriez cette boîte de dialogue pour la modifier en relation plusieurs-à-plusieurs.  
   
-     ![Bouton de relation de définir dans l’utilisation de la dimension](../media/ssas-m2m-btndimusage.png "bouton Définir une relation dans l’utilisation de la dimension")  
+     ![Bouton définir une relation dans l’utilisation de la dimension](../media/ssas-m2m-btndimusage.png "Bouton définir une relation dans l’utilisation de la dimension")  
   
 3.  Déployez le projet dans une instance multidimensionnelle d'Analysis Services. Au cours de la prochaine étape, vous allez explorer le cube dans Excel pour vérifier ses comportements.  
   
@@ -142,21 +143,21 @@ ms.locfileid: "66075780"
   
 1.  Déployez le projet, puis parcourez le cube pour vérifier que les agrégations sont valides.  
   
-2.  Dans Excel, cliquez sur **Données** | **À partir d’autres sources** | **À partir d’Analysis Services**. Entrez le nom du serveur, puis choisissez la base de données et le cube.  
+2.  Dans Excel, cliquez sur **données** | **à partir d’autres sources** | **à partir de Analysis Services**. Entrez le nom du serveur, puis choisissez la base de données et le cube.  
   
 3.  Créez un tableau croisé dynamique qui utilise les éléments suivants :  
   
-    -   **Sales Amount** pour la valeur  
+    -   **Montant des ventes** en tant que valeur  
   
-    -   **Sales Reason Name** pour les colonnes  
+    -   **Nom du motif de vente** sur les colonnes  
   
-    -   **Sales Order Number** pour les lignes  
+    -   **Numéro de commande** sur les lignes  
   
 4.  Analyser les résultats. Étant donné que nous utilisons des exemples de données, l'impression initiale est que toutes les commandes ont des valeurs identiques. Toutefois, si vous faites défiler le tableau, vous commencez à voir des différences.  
   
      À la moitié du tableau, repérez le montant de vente et le motif de vente de la commande **SO5382**. Le total global de cette commande est de **539,99**, et les motifs de vente attribués à cette commande comprennent Promotion, Other et Price.  
   
-     ![Feuille de calcul Excel affichant plusieurs-à-plusieurs agrégations](../media/ssas-m2m-excel.png "feuille de calcul Excel affichant les agrégations plusieurs-à-plusieurs")  
+     ![Feuille de calcul Excel affichant les agrégations plusieurs-à-plusieurs](../media/ssas-m2m-excel.png "Feuille de calcul Excel affichant les agrégations plusieurs-à-plusieurs")  
   
      Notez que le montant de vente est correctement calculé pour la commande, soit **539,99** pour la totalité de la commande. Bien que la valeur **539,99** soit indiquée pour chaque motif, cette valeur n’est pas additionnée pour les trois motifs, car cela gonflerait incorrectement le total global.  
   
@@ -164,7 +165,7 @@ ms.locfileid: "66075780"
   
 5.  Faites défiler la feuille jusqu'en bas. Nous pouvons maintenant voir que le prix est le principal motif d'achat des clients, par rapport aux autres motifs, et par rapport au total global.  
   
-     ![Classeur Excel affichant les totaux dans plusieurs-à-plusieurs](../media/ssas-m2m-excelgrandtotal.png "classeur Excel affichant les totaux dans plusieurs-à-plusieurs")  
+     ![Classeur Excel affichant les totaux dans une dimension plusieurs-à-plusieurs](../media/ssas-m2m-excelgrandtotal.png "Classeur Excel affichant les totaux dans une dimension plusieurs-à-plusieurs")  
   
 #### <a name="tips-for-handling-unexpected-query-results"></a>Astuces en cas de résultats de requête inattendu  
   
@@ -176,18 +177,18 @@ ms.locfileid: "66075780"
   
 4.  Évitez d'utiliser des groupes de mesures liés dans des relations plusieurs-à-plusieurs, en particulier lorsque ces relations sont dans des cubes différents. Cela peut entraîner des agrégations ambiguës. Pour plus d’informations, consultez [Quantités incorrectes de mesures liées dans les cubes contenant des relations plusieurs-à-plusieurs](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx).  
   
-##  <a name="bkmk_Learn"></a> Learn more  
+##  <a name="bkmk_Learn"></a>Pour en savoir plus  
  Consultez les liens suivants pour obtenir davantage d'informations sur ces concepts.  
   
- [Comment définir une dimension plusieurs-à-plusieurs dans Analysis Services](../lesson-5-3-defining-a-many-to-many-relationship.md)  
+ [Comment définir des dimensions plusieurs-à-plusieurs dans Analysis Services ?](../lesson-5-3-defining-a-many-to-many-relationship.md)  
   
- [La révolution 2.0 des relations plusieurs-à-plusieurs](https://go.microsoft.com/fwlink/?LinkId=324760)  
+ [Révolution plusieurs-à-plusieurs 2,0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [Tutoriel : Exemple d’une dimension plusieurs-à-plusieurs pour SQL Server Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324761)  
+ [Didacticiel : exemple de dimension plusieurs-à-plusieurs pour SQL Server Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Relations de dimension](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Installer les exemples de données et de projets pour le didacticiel sur la modélisation multidimensionnelle Analysis Services](../install-sample-data-and-projects.md)   
+ [Installer des exemples de données et des projets pour le Analysis Services didacticiel sur la modélisation multidimensionnelle](../install-sample-data-and-projects.md)   
  [Déployer des projets Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)   
  [Perspectives dans les modèles multidimensionnels](perspectives-in-multidimensional-models.md)  
   

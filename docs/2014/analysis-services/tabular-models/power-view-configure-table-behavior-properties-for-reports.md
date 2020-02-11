@@ -1,5 +1,5 @@
 ---
-title: Configurer les propriétés de comportement de Table pour les rapports Power View (SSAS tabulaire) | Microsoft Docs
+title: Configurer les propriétés de comportement de table pour les rapports Power View (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f6ade5a39c974af7a87bb33aab6da490e0c3ae0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066839"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Configurer les propriétés de comportement de table pour les rapports Power View (SSAS Tabulaire)
   Si vous utilisez un modèle tabulaire comme modèle de données pour [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], vous pouvez définir les propriétés de comportement de table qui exposent les lignes de détails à un niveau plus granulaire. La définition des propriétés de comportement de table modifie le comportement de regroupement des lignes de détail et produit un meilleur placement par défaut des informations d'identification (tels que les noms, les cartes d'identité avec photo ou les images de logo) dans les mises en page de mosaïque, de carte et de graphique.  
   
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] diffère des autres applications de création de rapports en ceci qu'il groupe automatiquement les éléments lors de la conception de rapports en évaluant les colonnes que vous avez placées dans la liste des champs du rapport en fonction du format de présentation que vous utilisez. Dans la plupart des cas, le regroupement par défaut produit un résultat optimal. Mais pour certaines tables, en particulier celles qui contiennent des données de détail, le comportement de regroupement par défaut regroupe parfois des lignes qui ne devraient pas l'être. Pour ces tables, vous pouvez définir des propriétés qui modifient la manière dont les groupes sont évalués.  
+ 
+  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] diffère des autres applications de création de rapports en ceci qu'il groupe automatiquement les éléments lors de la conception de rapports en évaluant les colonnes que vous avez placées dans la liste des champs du rapport en fonction du format de présentation que vous utilisez. Dans la plupart des cas, le regroupement par défaut produit un résultat optimal. Mais pour certaines tables, en particulier celles qui contiennent des données de détail, le comportement de regroupement par défaut regroupe parfois des lignes qui ne devraient pas l'être. Pour ces tables, vous pouvez définir des propriétés qui modifient la manière dont les groupes sont évalués.  
   
  La définition des propriétés de comportement de table est recommandée pour les tables dans lesquelles les lignes individuelles sont particulièrement importantes, notamment les enregistrements d'employés ou de clients. Par opposition, parmi les tables qui ne profitent pas de ces propriétés, figurent celles qui agissent comme table de recherche (par exemple, une table de date, une table de catégorie de produit ou une table de service, où la table consiste en un nombre relativement réduit de lignes et de colonnes) ou les tables de synthèse contenant des lignes qui sont uniquement intéressantes une fois résumées (par exemple, les données de recensement regroupées par sexe, par âge ou par situation géographique). Pour les tables de recherche et de synthèse, le comportement de regroupement par défaut produit un résultat optimal.  
   
@@ -31,16 +32,16 @@ ms.locfileid: "66066839"
   
  Les propriétés de comportement de table sont les suivantes :  
   
--   **Identificateur de ligne** : spécifie une colonne qui contient seulement des valeurs uniques et permet l'utilisation de cette colonne comme clé de regroupement interne.  
+-   **Identificateur de ligne** ─ spécifie une colonne qui contient uniquement des valeurs uniques, ce qui permet d’utiliser cette colonne comme clé de regroupement interne.  
   
--   **Conserver les lignes uniques** : spécifie les colonnes qui fournissent des valeurs qui doivent être traitées comme uniques même en cas de doublons (par exemple, prénom et nom de l’employé, dans le cas où deux employés ou plus portent le même nom).  
+-   **Conserver les lignes uniques** ─ spécifie les colonnes qui fournissent des valeurs qui doivent être traitées comme uniques même s’il s’agit de doublons (par exemple, prénom et nom de l’employé, dans les cas où deux employés ou plus portent le même nom).  
   
 -   **Étiquette par défaut** : spécifie la colonne qui fournit un nom d’affichage pour représenter les données de ligne (par exemple, nom de l’employé dans un enregistrement d’employé).  
   
--   **Image par défaut** : spécifie la colonne qui fournit une image représentant les données de ligne (par exemple, une pièce d’identité avec photo dans un enregistrement d’employé).  
+-   **Image par défaut** ─ spécifie la colonne qui fournit une image représentant les données de ligne (par exemple, un ID de photo dans un enregistrement d’employé).  
   
 > [!NOTE]  
->  Consultez la section suivante pour considérer les optimisations de mise en page du point de vue d’un format de présentation particulier :  [Optimisation pour les dispositions spécifiques](#bkmk_optimizeforlayout).  
+>  Consultez la section suivante pour considérer les optimisations de mise en page du point de vue d’un format de présentation particulier :  [Optimisation pour les dispositions spécifiques](#bkmk_optimizeforlayout).  
   
 ## <a name="opening-the-table-behavior-dialog-box"></a>Ouverture de la boîte de dialogue Comportement de la table  
   
@@ -51,11 +52,11 @@ ms.locfileid: "66066839"
 3.  Dans la boîte de dialogue **Comportement de la table** , définissez **Identificateur de ligne**, puis spécifiez d'autres propriétés dans cette boîte de dialogue.  
   
 ## <a name="setting-the-row-identifier-property"></a>Définition de la propriété Identificateur de ligne  
- Dans la table, l'identificateur de ligne spécifie une colonne unique qui contient seulement des valeurs uniques et aucune valeur vide. La propriété identificateur de ligne est utilisée pour modifier le regroupement de sorte qu’un groupe n’est pas basé sur la composition de champ d’une ligne, mais plutôt sur une colonne fixe est toujours utilisée pour identifier de manière unique une ligne, indépendamment des champs utilisés dans une disposition de rapport particulier.  
+ Dans la table, l'identificateur de ligne spécifie une colonne unique qui contient seulement des valeurs uniques et aucune valeur vide. La propriété identificateur de ligne est utilisée pour modifier le regroupement de sorte qu’un groupe ne soit pas basé sur la composition de champ d’une ligne, mais plutôt sur une colonne fixe qui est toujours utilisée pour identifier une ligne de manière unique, quels que soient les champs utilisés dans une mise en page de rapport particulière.  
   
  La définition de cette propriété modifie le comportement de regroupement par défaut, qui passe d'un regroupement dynamique basé sur les colonnes présentes dans la zone de dessin à un comportement de regroupement fixe qui effectue la synthèse en fonction de l'identificateur de ligne. Modifier le comportement de regroupement par défaut est approprié pour les mises en page de rapport, telles qu'une matrice qui, autrement, regrouperaient les données (ou afficherait les sous-totaux) pour chaque colonne dans la ligne.  
   
- Dans [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], définition d’un identificateur de ligne active les propriétés supplémentaires suivantes : **Conserver les lignes uniques** propriété, **étiquette par défaut** propriété, et **Image par défaut** propriété.  
+ Dans [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], la définition d'un identificateur de ligne active les propriétés supplémentaires suivantes : propriété **Conserver les lignes uniques** , propriété **Étiquette par défaut** et propriété **Image par défaut** .  
   
  Vous pouvez également utiliser **Identificateur de ligne** seul, en tant que propriété autonome, pour activer ce qui suit :  
   
@@ -86,13 +87,13 @@ ms.locfileid: "66066839"
 > [!NOTE]  
 >  Les images peuvent provenir d'adresses URL pointant vers un fichier image sur un serveur Web, ou de données binaires incorporées dans le classeur. Si l'image est basée sur une URL, veillez à définir également la colonne comme type d'image afin que [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] récupère l'image au lieu d'afficher l'URL comme données texte dans le rapport.  
   
-##  <a name="bkmk_optimizeforlayout"></a> Optimisation pour les dispositions spécifiques  
+##  <a name="bkmk_optimizeforlayout"></a>Optimisation pour les dispositions spécifiques  
  Cette section décrit l'impact de la définition des propriétés de comportement de table du point de vue d'un format de présentation particulier, ainsi que les caractéristiques des données. Si vous essayez d'améliorer la présentation d'un rapport de matrice, vous pouvez par exemple utiliser ces informations pour apprendre à améliorer une présentation de matrice à l'aide des propriétés de comportement de table du modèle.  
   
 ### <a name="images-are-missing"></a>Des images sont manquantes  
  Les propriétés que vous définissez dans le modèle déterminent si les images sont visualisées dans un rapport, ou représentées comme des valeurs texte dans le rapport.  
   
- ![URL des images affichées sous forme de texte dans un rapport](../media/ssas-rptprop-noimageurl.gif "URL des images affichées sous forme de texte dans un rapport")  
+ ![URL des images affichées comme texte dans un rapport](../media/ssas-rptprop-noimageurl.gif "URL des images affichées comme texte dans un rapport")  
   
  Par défaut, le texte dans le modèle est interprété comme du texte dans le rapport. Si une colonne de texte est une adresse URL pointant vers une image de rapport, n'oubliez pas de définir la propriété **URL de l'image** afin que [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] récupère le fichier image. Pour les images binaires, n'oubliez pas de définir la propriété **Identificateur de ligne** .  
   
@@ -101,37 +102,37 @@ ms.locfileid: "66066839"
   
  Toutefois, par exemple, vous pouvez souhaiter afficher plusieurs instances d'une ligne parce que les lignes sous-jacentes contiennent en réalité des données relatives à des entités différentes. Dans cet exemple, supposons que deux de vos clients s’appellent **Jon Yang**. Avec le comportement de regroupement par défaut, une seule instance de **Jon Yang** s’affiche dans le rapport. De plus, étant donné qu’une seule instance s’affiche dans la liste, la mesure **Résultat annuel** est la somme de cette valeur pour les deux clients.  
   
- ![Groupe par défaut qui rassemble 2 en 1](../media/ssas-jonyang-norowid.gif "groupe par défaut qui rassemble 2 en 1")  
+ ![Groupe par défaut qui rassemble 2 en 1](../media/ssas-jonyang-norowid.gif "Groupe par défaut qui rassemble 2 en 1")  
   
  Pour modifier le comportement de regroupement par défaut, définissez les propriétés **Identificateur de ligne** et **Conserver les lignes uniques** . Dans **Conserver les lignes uniques**, choisissez la colonne Nom de sorte que cette valeur soit répétée pour une ligne, même si elle figure déjà dans une autre ligne. Après avoir modifié les propriétés et republié le classeur, vous pouvez créer le même rapport, seulement cette fois-ci, vous verrez les deux clients nommés **Jon Yang**, avec un **Résultat annuel** correctement affecté à chacun.  
   
- ![Ligne de données contenant les doublons en fonction des ID de ligne](../media/ssas-jonyang.gif "contenant des doublons basées sur les ID de ligne de données de ligne")  
+ ![Données de ligne contenant des doublons basées sur un ID de ligne](../media/ssas-jonyang.gif "Données de ligne contenant des doublons basées sur un ID de ligne")  
   
 ### <a name="matrix-layout-is-too-crowded"></a>La disposition de la matrice est surchargée  
  Lorsque vous présentez une table de détail sous forme de matrice, le regroupement par défaut fournit une valeur de synthèse pour chaque colonne. En fonction de vos objectifs, le niveau de synthèse peut être supérieur à ce que vous souhaitez. Pour modifier ce comportement, vous pouvez définir l' **Identificateur de ligne**. Aucune propriété supplémentaire ne doit être définie ; il vous suffit de définir l'identificateur de ligne pour modifier le regroupement de sorte que les synthèses soient calculées pour chaque ligne en fonction de son identificateur de ligne unique.  
   
  Comparez les images avant et après suivantes qui illustrent l'incidence de la définition de cette propriété sur une présentation en matrice.  
   
- **Avant : Regroupement par défaut basé sur les champs dans la matrice**  
+ **Avant : regroupement par défaut en fonction des champs dans la matrice**  
   
- ![Disposition de matrice regroupés sur un identificateur de ligne](../media/ssas-rptprop-matrixrowid.gif "présentation en matrice regroupés sur un identificateur de ligne")  
+ ![Disposition de matrice avec regroupement par identificateur de ligne](../media/ssas-rptprop-matrixrowid.gif "Disposition de matrice avec regroupement par identificateur de ligne")  
   
- **Après : Regroupement de l’identificateur de ligne**  
+ **Après : regroupement en fonction de l’identificateur de ligne**  
   
- ![Disposition de matrice regroupés sur un identificateur de ligne](../media/ssas-rptprop-matrixrowid.gif "présentation en matrice regroupés sur un identificateur de ligne")  
+ ![Disposition de matrice avec regroupement par identificateur de ligne](../media/ssas-rptprop-matrixrowid.gif "Disposition de matrice avec regroupement par identificateur de ligne")  
   
 ### <a name="chart-showing-too-many-items-and-levels-on-the-axis"></a>Graphique affichant trop d'éléments et de niveaux sur l'axe  
  Les rapports de graphique qui affichent des données de détail doivent utiliser l'identificateur de ligne comme axe. Sans identificateur de ligne, l'axe est indéterminé, ce qui se solde par une mise en page aléatoire qui n'est pas forcément pertinente. Pour modifier ce comportement, vous pouvez définir l' **Identificateur de ligne**. Aucune propriété supplémentaire ne doit être définie ; il vous suffit de définir l'identificateur de ligne pour modifier le regroupement de sorte que les synthèses soient calculées pour chaque ligne en fonction de son identificateur de ligne unique.  
   
  Comparez les images avant et après suivantes qui illustrent l'incidence de la définition de cette propriété sur une présentation en graphique. Il s'agit du même rapport, avec des champs et une présentation identiques. La seule différence est que l'image du bas affiche un rapport après définition de l' **Identificateur de ligne** sur la table Éléments.  
   
- **Avant : Regroupement par défaut en fonction des champs dans un graphique**  
+ **Avant : regroupement par défaut en fonction des champs d’un graphique**  
   
- ![Graphique basé sur le regroupement par défaut au niveau du champ](../media/ssas-rptprop-chartfieldgroup.gif "graphique basé sur le regroupement par défaut au niveau des champs")  
+ ![Graphique basé sur le regroupement par défaut au niveau des champs](../media/ssas-rptprop-chartfieldgroup.gif "Graphique basé sur le regroupement par défaut au niveau des champs")  
   
- **Après : Regroupement de l’identificateur de ligne (identificateur de ligne devient l’axe)**  
+ **Après : regroupement en fonction de l’identificateur de ligne (l’identificateur de ligne devient l’axe)**  
   
- ![Graphique basé sur le regroupement par ID de ligne](../media/ssas-rptprop-chartrowid.gif "graphique basé sur le regroupement par ID de ligne")  
+ ![Graphique basé sur le regroupement par ID de ligne](../media/ssas-rptprop-chartrowid.gif "Graphique basé sur le regroupement par ID de ligne")  
   
 ## <a name="next-steps"></a>Étapes suivantes  
  Après avoir évalué les tables dans votre modèle et défini les propriétés de comportement de table sur celles contenant les lignes de détails qui doivent toujours apparaître comme des éléments individuels, vous pouvez optimiser le modèle à l'aide de propriétés ou de paramètres supplémentaires.  

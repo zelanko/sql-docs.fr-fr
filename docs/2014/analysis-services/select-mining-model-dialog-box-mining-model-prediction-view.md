@@ -1,5 +1,5 @@
 ---
-title: Sélectionnez d’exploration de données Model, boîte de dialogue (vue prévision de modèle d’exploration de données) | Microsoft Docs
+title: Boîte de dialogue Sélectionner le modèle d’exploration de données (vue prévision de modèle d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d6e79a86b4438eeacf5c1184b73a5edf0e9ea9d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069405"
 ---
 # <a name="select-mining-model-dialog-box-mining-model-prediction-view"></a>Boîte de dialogue Sélectionnez un modèle d'exploration de données (vue Prévision de modèle d'exploration de données)
@@ -27,8 +27,8 @@ ms.locfileid: "66069405"
  La boîte de dialogue contient une liste sous forme d'arborescence de chaque structure d'exploration de données existant sur la base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et de tous les modèles d'exploration de données associés. Vous pouvez développer chaque structure d'exploration de données pour sélectionner le modèle d'exploration de données approprié.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Générateur de requêtes de prédiction &#40;exploration de données&#41;](prediction-query-builder-data-mining.md)   
+ [Prédiction Générateur de requêtes &#40;l’exploration de données&#41;](prediction-query-builder-data-mining.md)   
  [Interfaces de requête d’exploration de données](data-mining/data-mining-query-tools.md)   
- [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
+ [Informations de référence sur les instructions DMX&#41; &#40;Data Mining Extensions](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

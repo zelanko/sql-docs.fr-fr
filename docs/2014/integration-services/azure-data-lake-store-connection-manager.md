@@ -14,14 +14,14 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c835f42fdbcc43309a0235f8ad862bee9c230e33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66462701"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Gestionnaire de connexions Azure Data Lake Store
-  Le **Gestionnaire de connexions Azure Data Lake Store** permet à un package SSIS pour vous connecter à un service Azure Data Lake Store via deux types d’authentification : Identité de l’utilisateur Azure AD et l’identité de Service Azure AD.  
+  Le **gestionnaire de connexions Azure Data Lake Store** permet à un package SSIS de se connecter à un service Azure Data Lake Store par le biais de deux types d’authentification : Identité de l’utilisateur Azure AD et Identité du service Azure AD.  
 
 ## <a name="configure-the-azure-data-lake-store-connection-manager"></a>Configurer le gestionnaire de connexions Azure Data Lake Store 
   

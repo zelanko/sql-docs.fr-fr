@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6b46b7d020e7a9ebd8bd0ac96d0971b63230c2b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480764"
 ---
 # <a name="data-quality-client-application"></a>Application Data Quality Client
@@ -29,18 +29,18 @@ ms.locfileid: "65480764"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Décrit l'utilisation de l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .|[Exécuter l’application Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md)|  
+|Décrit l'utilisation de l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .|[Exécuter l'application Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md)|  
   
 ## <a name="related-content"></a>Contenu associé  
   
 |Description du contenu|Rubrique|  
 |-------------------------|-----------|  
 |Décrit l'utilisation des bases de connaissances et des domaines dans DQS.|[Bases de connaissances et domaines DQS](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)|  
-|Décrit la procédure de nettoyage de vos données dans DQS.|[Nettoyage de données](../../2014/data-quality-services/data-cleansing.md)|  
+|Décrit la procédure de nettoyage de vos données dans DQS.|[Data Cleansing](../../2014/data-quality-services/data-cleansing.md)|  
 |Décrit la procédure de mise en correspondance dans DQS.|[Correspondance de données](../../2014/data-quality-services/data-matching.md)|  
-|Décrit les procédures d'administration de DQS.|[Administration de DQS](../../2014/data-quality-services/dqs-administration.md)|  
+|Décrit les procédures d'administration de DQS.|[administration de dqs](../../2014/data-quality-services/dqs-administration.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Écran d’accueil de Data Quality Client](../../2014/data-quality-services/data-quality-client-home-screen.md)  
+ [Écran d'accueil de Data Quality Client](../../2014/data-quality-services/data-quality-client-home-screen.md)  
   
   

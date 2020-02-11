@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 208c5608037d99b9dc02f1ab7fefd151cd4bdecf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107426"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Créer un dataset partagé ou incorporé (Générateur de rapports et SSRS)
@@ -56,7 +56,7 @@ ms.locfileid: "66107426"
   
 4.  Dans le Concepteur de requêtes, spécifiez les champs à inclure au dataset.  
   
-5.  Cliquez sur **Exécuter** ( **!** ) pour exécuter la requête.  
+5.  Cliquez sur **exécuter** (**!**) pour exécuter la requête.  
   
 6.  Sur le bouton **Générateur de rapports** , cliquez sur **Enregistrer** ou **Enregistrer sous** pour enregistrer le dataset partagé sur le serveur de rapports.  
   
@@ -114,9 +114,9 @@ ms.locfileid: "66107426"
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
  [Concepteurs de requêtes &#40;Générateur de rapports&#41;](../query-designers-report-builder.md)   
- [Aide du Générateur de rapports pour les boîtes de dialogue, les volets et les Assistants](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [Aide Générateur de rapports pour les boîtes de dialogue, les volets et les assistants](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-datasets-ssrs.md)   
- [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [Connexions de données, sources de données et chaînes de connexion dans Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Datasets incorporés et partagés &#40;Générateur de rapports et SSRS&#41;](embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

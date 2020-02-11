@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3858f73e1b332acfa1a1bbc640007f6f0884abff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63260708"
 ---
 # <a name="omitting-values-for-optional-web-service-objects"></a>Omission de valeurs pour les objets de service Web facultatifs
@@ -28,7 +28,7 @@ ms.locfileid: "63260708"
 > [!IMPORTANT]  
 >  Si vous ne parvenez pas à spécifier une propriété en suivant la procédure mentionnée ci-avant, le comportement du service Web peut se révéler imprévisible.  
   
- Les types de données qui vous obligent généralement à gérer la propriété Specified supplémentaire sont `Boolean`, `DateTime`, et `Enumeration`.  
+ Les types de données qui requièrent généralement la gestion de la propriété spécifiée `Boolean`supplémentaire `DateTime`sont, `Enumeration`et.  
   
  Pour obtenir un exemple, consultez la méthode <xref:ReportService2010.ReportingService2010.CreateDataSource%2A>.  
   

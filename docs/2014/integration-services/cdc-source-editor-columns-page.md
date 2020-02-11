@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Source CDC (Page colonnes) | Microsoft Docs
+title: Éditeur de source CDC (page colonnes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 980b9cf22e2c50cd1de3eb90a06e6496c01cc093
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061029"
 ---
 # <a name="cdc-source-editor-columns-page"></a>Éditeur de source CDC (page Colonnes)
@@ -25,7 +25,7 @@ ms.locfileid: "66061029"
  Pour en savoir plus sur la source CDC, consultez [CDC Source](data-flow/cdc-source.md).  
   
 ## <a name="task-list"></a>Liste des tâches  
- **Pour ouvrir l'Éditeur de source CDC (page Colonnes)**  
+ **Pour ouvrir la page colonnes de l’éditeur de source CDC**  
   
 1.  Dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], ouvrez le package [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] qui possède la source CDC.  
   

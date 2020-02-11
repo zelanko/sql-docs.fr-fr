@@ -14,18 +14,18 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4a913d9a49d2b1af43ea569bf40585c47432ef96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479561"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>Supprimer un groupe d'attributs (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], supprimez un groupe d'attributs lorsque vous n'avez plus besoin de l'onglet à afficher dans la zone fonctionnelle **Explorateur** de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
--   **Remarque** Lorsque les groupes d'attributs existent, les attributs qui n'appartiennent pas à un groupe d'attributs ne sont pas affichés dans l' **Explorateur**. Lorsqu'aucun groupe d'attributs n'existe, tous les attributs sont affichés.  
+-   **Remarque** Lorsque des groupes d’attributs existent, les attributs qui n’appartiennent pas à un groupe d’attributs ne sont pas affichés dans l' **Explorateur**. Lorsqu'aucun groupe d'attributs n'existe, tous les attributs sont affichés.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -36,13 +36,13 @@ ms.locfileid: "65479561"
   
 1.  Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cliquez sur **Administration de système**.  
   
-2.  Sur le **vue de modèle** page, dans la barre de menus, pointez sur **gérer** et cliquez sur **groupes d’attributs**.  
+2.  Dans la page **vue du modèle** , dans la barre de menus, pointez sur **gérer** , puis cliquez sur groupes d' **attributs**.  
   
 3.  Dans la liste **Modèle** , sélectionnez un modèle.  
   
 4.  Dans la liste **Entité** , sélectionnez une entité.  
   
-5.  Cliquez sur le signe plus pour développer **groupes feuille**, **groupes consolidés**, ou **groupes de collections**, selon le type de groupe que vous souhaitez supprimer.  
+5.  Cliquez sur le signe plus (+) pour développer **groupes feuille**, groupes **consolidés**ou **groupes de collections**, selon le type de groupe que vous souhaitez supprimer.  
   
 6.  Cliquez sur le groupe d'attributs à supprimer.  
   

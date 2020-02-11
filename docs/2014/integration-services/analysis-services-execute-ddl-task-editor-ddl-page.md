@@ -1,5 +1,5 @@
 ---
-title: Analysis Services exécuter l’éditeur de tâche DDL (Page DDL) | Microsoft Docs
+title: Éditeur de tâche DDL d’exécution de Analysis Services (page DDL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2b57ad76be3811352bbfb8774fb56c748efa1ac8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061605"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Éditeur de tâche DDL d'exécution d'Analysis Services (page DDL)
@@ -27,15 +27,15 @@ ms.locfileid: "66061605"
  Pour en savoir plus sur cette tâche, consultez [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md).  
   
 ## <a name="static-options"></a>Options statiques  
- **Connexion**  
+ **Connection**  
  Sélectionnez un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou un gestionnaire de connexions [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans la liste, ou cliquez sur <\<**Nouvelle connexion**> et utilisez la boîte de dialogue **Ajout d’un gestionnaire de connexions Analysis Services** pour créer une connexion.  
   
- **Rubriques connexes :** [Informations de référence sur l’interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Gestionnaire de connexions Analysis Services](connection-manager/analysis-services-connection-manager.md)  
+ **Rubriques connexes :** informations de [référence sur l’interface utilisateur de la boîte de dialogue Ajouter un gestionnaire de connexions Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Analysis Services gestionnaire de connexions](connection-manager/analysis-services-connection-manager.md)  
   
  **SourceType**  
  Spécifiez le type de source des instructions DDL. Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Définissez la source de l'instruction DDL enregistrée dans la zone de texte **SourceDirect** . Sélectionnez cette valeur pour afficher l'option dynamique de la section suivante.|  
 |**Connexion de fichiers**|Définissez la source par un fichier qui contient l'instruction DDL. Sélectionnez cette valeur pour afficher l'option dynamique de la section suivante.|  
@@ -45,7 +45,7 @@ ms.locfileid: "66061605"
   
 ### <a name="sourcetype--direct-input"></a>SourceType = Entrée directe  
  **Source**  
- Tapez les instructions DDL ou cliquez sur le bouton représentant des points de suspension **(...)** , puis tapez les instructions dans la boîte de dialogue **Instructions DDL**.  
+ Tapez les instructions DDL ou cliquez sur le bouton représentant des points de suspension **(...)**, puis tapez les instructions dans la boîte de dialogue **Instructions DDL**.  
   
 ### <a name="sourcetype--file-connection"></a>SourceType = Connexion de fichiers  
  **Source**  
@@ -57,14 +57,14 @@ ms.locfileid: "66061605"
  **Source**  
  Sélectionnez une variable dans la liste ou cliquez sur \<**Nouvelle variable**> et utilisez la boîte de dialogue **Ajouter une variable** pour créer une variable.  
   
- **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)  
+ **Rubriques connexes :** [Integration Services &#40;les variables de&#41; SSIS](integration-services-ssis-variables.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tâche DDL d’exécution Analysis Services &#40;page Général&#41;](general-page-of-integration-services-designers-options.md)   
+ [Analysis Services éditeur de tâche DDL d’exécution &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
  [Page Expressions](expressions/expressions-page.md)   
  [Flux de contrôle](control-flow/control-flow.md)   
- [Analysis Services Scripting Language &#40;ASSL&#41; référence](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
- [Référence XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
+ [Analysis Services&#41; référence du langage de script &#40;ASSL](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Référence de&#41; XML for Analysis &#40;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
   
   

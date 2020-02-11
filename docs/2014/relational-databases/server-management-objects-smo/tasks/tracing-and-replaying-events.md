@@ -1,5 +1,5 @@
 ---
-title: Traçage et relecture d’événements | Microsoft Docs
+title: Traçage et relecture des événements | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d478fa9203988d043212e4187792d816a69c0402
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62724788"
 ---
 # <a name="tracing-and-replaying-events"></a>Événements de traçage et de relecture
@@ -51,7 +51,7 @@ ms.locfileid: "62724788"
   
 -   Relire des fichiers ou des tables de trace.  
   
- Les données de trace à partir de la `Trace` et `Replay` objets peuvent être utilisés par l’application SMO ou être examinées manuellement à l’aide de [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md). Les données de trace sont également compatibles avec les procédures stockées [SQL Trace](../../sql-trace/sql-trace.md) qui proposent également des fonctionnalités de suivi.  
+ Les données de trace des `Trace` objets `Replay` et peuvent être utilisées par l’application Smo, ou elles peuvent être examinées manuellement à l’aide de [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md). Les données de trace sont également compatibles avec les procédures stockées [SQL Trace](../../sql-trace/sql-trace.md) qui proposent également des fonctionnalités de suivi.  
   
  Les objets de trace SMO résident dans l'espace de noms <xref:Microsoft.SqlServer.Management.Trace>, qui requiert une référence au fichier Microsoft.SQLServer.ConnectionInfo.dll.  
   

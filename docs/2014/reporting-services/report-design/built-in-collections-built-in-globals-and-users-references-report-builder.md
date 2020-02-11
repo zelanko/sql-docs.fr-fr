@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef0438dfa0750c2a516a801a2d81b5d1c0b49721
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106440"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Références à des champs Globals et Users prédéfinis (Générateur de rapports et SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "66106440"
 |**Membre**|**Type**|**Description**|  
 |----------------|--------------|---------------------|  
 |ExecutionTime|`DateTime`|Date et heure du début de l'exécution du rapport.|  
-|PageNumber|`Integer`|Numéro de page actuel relatif aux sauts de page qui réinitialisent le nombre de pages. Au début du traitement des rapports, la valeur initiale est 1. Le numéro de page est incrémenté pour chaque page rendue.<br /><br /> Pour numéroter les pages au sein des sauts de page pour un rectangle, une région de données, un groupe de régions de données ou une carte, dans la propriété PageBreak, la valeur est la propriété ResetPageNumber `True`. Non pris en charge dans la hiérarchie des groupes de colonnes de tableau matriciel.<br /><br /> PageNumber peut uniquement être utilisé dans une expression figurant dans un en-tête ou un pied de page.|  
+|PageNumber|`Integer`|Numéro de page actuel relatif aux sauts de page qui réinitialisent le nombre de pages. Au début du traitement des rapports, la valeur initiale est 1. Le numéro de page est incrémenté pour chaque page rendue.<br /><br /> Pour numéroter les pages dans les sauts de page d’un rectangle, d’une région de données, d’un groupe de régions de données ou d’un mappage, `True`sur la propriété PageBreak, affectez à la propriété ResetPageNumber la valeur. Non pris en charge dans la hiérarchie des groupes de colonnes de tableau matriciel.<br /><br /> PageNumber peut uniquement être utilisé dans une expression figurant dans un en-tête ou un pied de page.|  
 |ReportFolder|`String`|Chemin d'accès complet au dossier contenant le rapport. Ce chemin n'inclut pas l'URL du serveur de rapports.|  
 |ReportName|`String`|Nom du rapport tel qu'il est stocké dans la base de données du serveur de rapports.|  
 |ReportServerUrl|`String`|URL du serveur de rapports sur lequel le rapport est en cours d'exécution.|  
@@ -44,9 +44,9 @@ ms.locfileid: "66106440"
 ### <a name="renderformat"></a>RenderFormat  
  Le tableau suivant décrit les membres de `RenderFormat`.  
   
-|Membre|type|Description|  
+|Membre|Type|Description|  
 |------------|----------|-----------------|  
-|Nom|`String`|Nom du convertisseur tel qu'il a été inscrit dans le fichier de configuration RSReportServer.<br /><br /> Disponible pendant des parties spécifiques du cycle de traitement/rendu des rapports.|  
+|Name|`String`|Nom du convertisseur tel qu'il a été inscrit dans le fichier de configuration RSReportServer.<br /><br /> Disponible pendant des parties spécifiques du cycle de traitement/rendu des rapports.|  
 |IsInteractive|`Boolean`|Indique si la demande de rendu actuelle utilise un format de rendu interactif.|  
 |DeviceInfo|Collection nom/valeur en lecture seule|Paires clé/valeur pour les paramètres deviceinfo de la demande de rendu actuelle.<br /><br /> Les valeurs de chaîne peuvent être spécifiées en utilisant la clé ou un index dans la collection.|  
   
@@ -57,13 +57,15 @@ ms.locfileid: "66106440"
   
      `=Globals.PageNumber & " of " & Globals.TotalPages`  
   
--   Cette expression fournit le nom du rapport ainsi que l'heure de son exécution. L'heure est mise en forme avec la chaîne de mise en forme [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour la date courte :  
+-   Cette expression fournit le nom du rapport ainsi que l'heure de son exécution. L’heure est mise en forme [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] avec la chaîne de mise en forme pour la date abrégée :  
   
      `=Globals.ReportName & ", dated " & Format(Globals.ExecutionTime, "d")`  
   
 -   Cette expression, placée dans la boîte de dialogue **Visibilité de la colonne** pour une colonne sélectionnée, affiche la colonne uniquement lorsque le rapport est exporté vers Excel. Dans les autres cas, cette colonne est masquée.  
   
-     `EXCELOPENXML` fait référence au format Excel inclus dans Office 2007. `EXCEL` fait référence au format Excel inclus dans Office 2003.  
+     
+  `EXCELOPENXML` fait référence au format Excel inclus dans Office 2007. 
+  `EXCEL` fait référence au format Excel inclus dans Office 2003.  
   
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
@@ -74,7 +76,7 @@ ms.locfileid: "66106440"
   
 |**Membre**|**Type**|**Description**|  
 |----------------|--------------|---------------------|  
-|`Language`|`String`|Langue de l'utilisateur qui exécute le rapport. Par exemple, `en-US`.|  
+|`Language`|`String`|Langue de l'utilisateur qui exécute le rapport. Par exemple : `en-US`.|  
 |`UserID`|`String`|Identificateur de l'utilisateur qui exécute le rapport. Si vous utilisez l'authentification Windows, cette valeur correspond au compte de domaine de l'utilisateur actuel. La valeur est déterminée par l'extension de sécurité de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , qui peut utiliser l'authentification Windows ou une authentification personnalisée.|  
   
  Pour plus d’informations sur la prise en charge de plusieurs langues dans un rapport, consultez « Considérations sur la conception de la solution pour les déploiements multilingues ou globaux » dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne SQL Server](https://go.microsoft.com/fwlink/?LinkId=120955).  
@@ -90,7 +92,7 @@ ms.locfileid: "66106440"
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Boîte de dialogue Expression &#40;Générateur de rapports&#41;](../expression-dialog-box-report-builder.md)   
+ [Boîte de dialogue expression &#40;Générateur de rapports&#41;](../expression-dialog-box-report-builder.md)   
  [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Mise en forme des nombres et des dates &#40;Générateur de rapports et SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  

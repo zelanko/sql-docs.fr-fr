@@ -1,5 +1,5 @@
 ---
-title: Générateur (Assistant Rapport) de requêtes | Microsoft Docs
+title: Générateur de requêtes (Assistant rapport) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8d289466fcff56a78172c54f24a093e0af169484
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107995"
 ---
 # <a name="query-builder-report-wizard"></a>Générateur de requêtes (Assistant Rapport)
@@ -40,13 +40,13 @@ ms.locfileid: "66107995"
  **Importer**  
  Ouvre la boîte de dialogue **Importer une requête** et affiche les fichiers .rdl et .sql de tous les rapports disponibles. Vous pouvez utiliser la requête importée telle quelle ou vous pouvez la modifier dans le générateur de requêtes.  
   
- **\! (Exécuter)**  
+ **! (Exécuter)**  
  Exécute la requête et retourne un jeu de résultats si la requête est valide. Notez que si la requête est une expression, vous ne pouvez pas l'exécuter. Pour vérifier une requête basée sur une expression, vous devez afficher un aperçu du rapport.  
   
  **Type de commande**  
  Spécifie le type Text, StoredProcedure ou TableDirect. La disponibilité d'un type de commande dépend de l'extension pour le traitement des données spécifiée.  
   
- **Volet de requête**  
+ **Volet requête**  
  Tapez la requête  
   
  **Volet résultats**  
@@ -54,6 +54,6 @@ ms.locfileid: "66107995"
   
 ## <a name="see-also"></a>Voir aussi  
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Aide de l’Assistant Rapport](../../2014/reporting-services/report-wizard-help.md)  
+ [Aide de l'Assistant Rapport](../../2014/reporting-services/report-wizard-help.md)  
   
   

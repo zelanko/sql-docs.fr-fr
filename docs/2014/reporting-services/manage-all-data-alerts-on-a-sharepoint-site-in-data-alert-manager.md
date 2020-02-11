@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: debf7415a6364a358bb92066d53b840bcecd5930
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108343"
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>Gérer toutes les alertes de données sur un site SharePoint dans le Gestionnaire des alertes de données
   Les administrateurs d'alertes SharePoint peuvent consulter la liste des alertes de données que tous les utilisateurs du site ont créées et les informations sur les alertes. Ils peuvent également supprimer des alertes. L'illustration suivante montre les fonctionnalités disponibles aux administrateurs d'alertes dans le Gestionnaire des alertes de données.  
   
- ![Gestionnaire d’alertes pour les administrateurs du site SharePoint](media/rs-alertmanagersite.gif "Gestionnaire d’alertes pour les administrateurs du site SharePoint")  
+ ![Gestionnaire d'alertes pour les administrateurs du site SharePoint](media/rs-alertmanagersite.gif "Gestionnaire d'alertes pour les administrateurs du site SharePoint")  
   
 ### <a name="to-view-a-list-of-alerts-created-by-a-site-user"></a>Pour consulter la liste des alertes créées par un utilisateur du site  
   

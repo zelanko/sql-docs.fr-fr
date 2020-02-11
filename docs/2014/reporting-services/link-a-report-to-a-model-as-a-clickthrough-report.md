@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 45b7695a9cd259d10155036ce1f9367a71e2fe72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108373"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>Lier un rapport à un modèle en tant que rapport généré interactif
@@ -31,7 +31,7 @@ ms.locfileid: "66108373"
   
 1.  Ouvrez [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 6.0 ou version ultérieure.  
   
-2.  Dans la barre d'adresses du navigateur Web, tapez l'URL du Gestionnaire de rapports. Par défaut, l’URL est http://\<*ComputerName*> / reports.  
+2.  Dans la barre d'adresses du navigateur Web, tapez l'URL du Gestionnaire de rapports. Par défaut, l’URL est http://\<*ComputerName*>/Reports.  
   
 ### <a name="to-create-a-customized-clickthrough-report"></a>Pour créer un rapport consultable à l'aide de clics  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5a839fb7253c2e66e024872b74fadc114cd58ecf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106488"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Graphiques à barres (Générateur de rapports et SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66106488"
   
 -   **Empilé**. Graphique à barres où plusieurs séries sont empilées verticalement. Si votre graphique ne représente qu'une seule série, le graphique à barres empilées affichera la même chose qu'un graphique à barres.  
   
--   **Empilé 100 %**. Graphique à barres où plusieurs séries sont empilées verticalement pour occuper 100 % de la zone de graphique. Si le graphique ne comporte qu'une seule série, toutes les barres s'ajusteront à 100 % de la zone de graphique.  
+-   **Empilé 100 %** . Graphique à barres où plusieurs séries sont empilées verticalement pour occuper 100 % de la zone de graphique. Si le graphique ne comporte qu'une seule série, toutes les barres s'ajusteront à 100 % de la zone de graphique.  
   
 -   **Groupé 3D**. Graphiques à barres qui affiche les séries individuelles en lignes séparées sur un graphique 3D.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66106488"
  [Mise en forme des étiquettes des axes sur un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Mise en forme de la légende sur un graphique &#40;Générateur de rapports et SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [Ajouter des styles de biseau, de relief et de texture à un graphique &#40;Générateur de rapports et SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [Tutoriel : Ajouter un graphique à barres à un rapport (Générateur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198052)   
- [Tutoriel : Ajouter un graphique à barres à un rapport](https://go.microsoft.com/fwlink/?LinkId=198042)  
+ [Didacticiel : ajout d’un graphique à barres à un rapport (Générateur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Didacticiel : ajout d’un graphique à barres à un rapport](https://go.microsoft.com/fwlink/?LinkId=198042)  
   
   

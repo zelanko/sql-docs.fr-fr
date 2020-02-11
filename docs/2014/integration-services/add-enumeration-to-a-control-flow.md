@@ -1,5 +1,5 @@
 ---
-title: Ajouter une énumération à un flux de contrôle | Microsoft Docs
+title: Ajouter une énumération à un contrôle Flow | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cad9c6a3537fb523a13f0206eed6c8eee837ed06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061907"
 ---
 # <a name="add-enumeration-to-a-control-flow"></a>Ajouter une énumération à un flux de contrôle
+  
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclut le conteneur de boucles Foreach, un élément de flux de contrôle qui permet de facilement inclure une construction de boucle énumérant les fichiers et objets du flux de contrôle d’un package. Pour plus d’informations, consultez [Conteneur de boucles Foreach](control-flow/foreach-loop-container.md).  
   
  Le conteneur de boucles Foreach n'offre aucune fonctionnalité ; il ne fournit que la structure dans laquelle vous créez le flux de contrôle répété, spécifiez un type d'énumérateur et configurez l'énumérateur. Pour fournir une fonctionnalité de conteneur, vous devez inclure au moins une tâche dans le conteneur de boucles Foreach. Pour plus d’informations, consultez [Tâches Integration Services](control-flow/integration-services-tasks.md).  
@@ -32,10 +33,10 @@ ms.locfileid: "66061907"
   
 ### <a name="to-implement-a-foreach-loop-container-in-a-control-flow"></a>Pour implémenter un conteneur de boucles Foreach dans un flux de contrôle  
   
-1.  Ajoutez le conteneur de boucles Foreach au package. Pour plus d’informations, consultez [ajouter ou supprimer une tâche ou un conteneur dans un flux de contrôle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+1.  Ajoutez le conteneur de boucles Foreach au package. Pour plus d’informations, consultez [Ajouter ou supprimer une tâche ou un conteneur dans un workflow de contrôle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   .  
   
-2.  Ajoutez des tâches et des conteneurs au conteneur de boucles Foreach. Pour plus d’informations, consultez [ajouter ou supprimer une tâche ou un conteneur dans un flux de contrôle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+2.  Ajoutez des tâches et des conteneurs au conteneur de boucles Foreach. Pour plus d’informations, consultez [Ajouter ou supprimer une tâche ou un conteneur dans un workflow de contrôle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   .  
   
 3.  Connectez les tâches et les conteneurs du conteneur de boucles Foreach à l'aide de contraintes de précédence. Pour plus d’informations, consultez [Connecter des tâches et des conteneurs à l’aide d’une contrainte de précédence par défaut](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md).  
@@ -44,9 +45,9 @@ ms.locfileid: "66061907"
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajouter ou supprimer une tâche ou un conteneur dans un flux de contrôle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [Groupe ou dissocier des composants](group-or-ungroup-components.md)   
+ [Grouper ou dissocier des composants](group-or-ungroup-components.md)   
  [Contraintes de précédence](control-flow/precedence-constraints.md)   
- [Ajouter une itération à un flux de contrôle](add-iteration-to-a-control-flow.md)   
+ [Ajouter une itération à un workflow de contrôle](add-iteration-to-a-control-flow.md)   
  [Flux de contrôle](control-flow/control-flow.md)  
   
   

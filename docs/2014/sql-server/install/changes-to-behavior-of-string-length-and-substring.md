@@ -1,5 +1,5 @@
 ---
-title: Modifications apportées au comportement de string-length et substring | Microsoft Docs
+title: Modifications du comportement de String-Length et substring | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 18643dfc11d2b1b1d875a19c478f9ec8cbdd5be6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66428849"
 ---
 # <a name="changes-to-behavior-of-string-length-and-substring"></a>Modifications du comportement de string-length et substring
-  Le [fonction string-length &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-string-length) et [substring (fonction) &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-substring) fonctions peuvent renvoyer des résultats différents lorsqu’il est utilisé avec les bases de données XML contenant caractères de substitution.  
+  La [fonction de longueur de chaîne &#40;xquery&#41;](/sql/xquery/functions-on-string-values-string-length) et la [fonction de sous-chaîne &#40;fonctions XQuery&#41;](/sql/xquery/functions-on-string-values-substring) peuvent retourner des résultats différents lorsqu’elles sont utilisées avec des bases de données XML qui contiennent des caractères de substitution.  
   
 ## <a name="description"></a>Description  
- Quand une base de données est définie pour être compatible avec [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le comportement de la [fonction string-length &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-string-length) et [substring (fonction) &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-substring) fonctions change lors du traitement de caractères Unicode supplémentaires. Chaque caractère Unicode supplémentaire, qui est défini en ayant un point de code supérieur à U+FFFF, est compté comme un caractère par ces fonctions au lieu de deux, comme c'était le cas dans les versions précédentes.  
+ Lorsqu’une base de données est configurée pour [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]être compatible avec, le comportement de la [fonction de longueur de chaîne &#40;XQuery&#41;](/sql/xquery/functions-on-string-values-string-length) et la [fonction de sous-chaîne &#40;fonctions de&#41;XQuery](/sql/xquery/functions-on-string-values-substring) change lors du traitement de caractères Unicode supplémentaires. Chaque caractère Unicode supplémentaire, qui est défini en ayant un point de code supérieur à U+FFFF, est compté comme un caractère par ces fonctions au lieu de deux, comme c'était le cas dans les versions précédentes.  
   
  Pour plus d'informations sur les caractères de substitution, consultez [Surrogates and Supplementary Characters (en anglais)](https://go.microsoft.com/fwlink/?LinkId=178317).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Problèmes de mise à niveau du moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](https://docs.microsoft.com/sql/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Problèmes de mise à niveau Moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Le conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](https://docs.microsoft.com/sql/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

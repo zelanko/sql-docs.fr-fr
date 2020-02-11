@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 26edefab1a81aebaa9bf63e69e24067428266de1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67906039"
 ---
 # <a name="extract-mdx"></a>Extract (MDX)
@@ -29,7 +29,7 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
   
 ## <a name="arguments"></a>Arguments  
  *Set_Expression*  
- Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
+ Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
  *Hierarchy_Expression1*  
  Expression MDX (Multidimensional Expressions) valide qui retourne une hiérarchie.  
@@ -38,12 +38,12 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
  Expression MDX (Multidimensional Expressions) valide qui retourne une hiérarchie.  
   
 ## <a name="remarks"></a>Notes  
- Le **extraire** fonction retourne un jeu composé de tuples à partir des éléments de hiérarchie extraits. Pour chaque tuple du jeu spécifié, les membres des hiérarchies concernées sont extraits vers de nouveaux tuples dans l'ensemble de résultats. Cette fonction supprime toujours les tuples dupliqués.  
+ La fonction **extract** retourne un jeu qui se compose de tuples à partir des éléments de hiérarchie extraits. Pour chaque tuple du jeu spécifié, les membres des hiérarchies concernées sont extraits vers de nouveaux tuples dans l'ensemble de résultats. Cette fonction supprime toujours les tuples dupliqués.  
   
- Le **extraire** fonction effectue l’action inverse de la [Crossjoin](../mdx/crossjoin-mdx.md) (fonction).  
+ La fonction **extract** effectue l’action inverse de la fonction [CrossJoin](../mdx/crossjoin-mdx.md) .  
   
 ## <a name="examples"></a>Exemples  
- La requête suivante montre comment utiliser le **extraire** fonction sur un jeu de tuples retournés par la **NonEmpty** fonction :  
+ La requête suivante montre comment utiliser la fonction **extract** sur un jeu de tuples retourné par la fonction non **vide** :  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
   
@@ -78,6 +78,6 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

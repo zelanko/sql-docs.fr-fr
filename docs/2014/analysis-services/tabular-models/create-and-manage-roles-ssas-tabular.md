@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 10e5e26142cd1819e4f2c5f884af9c2f2af10812
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284902"
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>Créer et gérer des rôles (SSAS Tabulaire)
@@ -28,7 +28,7 @@ ms.locfileid: "67284902"
 ## <a name="tasks"></a>Tâches  
  Pour créer, modifier, copier et supprimer des rôles, utilisez la boîte de dialogue **Gestionnaire de rôles** . Pour consulter la boîte de dialogue **Gestionnaire de rôles** , dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], cliquez sur le menu **Modèle** , puis sur **Gestionnaire de rôles**.  
   
-###  <a name="bkmk_new_role"></a> Pour créer un rôle  
+###  <a name="bkmk_new_role"></a>Pour créer un nouveau rôle  
   
 1.  Dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], cliquez sur le menu **Modèle** , puis sur **Gestionnaire de rôles**.  
   
@@ -42,13 +42,13 @@ ms.locfileid: "67284902"
   
 4.  Dans le champ **Autorisations** , cliquez sur la flèche Bas, puis sélectionnez un des types d'autorisation suivants :  
   
-    |Permission|Description|  
+    |Autorisation|Description|  
     |----------------|-----------------|  
     |**Aucun**|Les membres ne peuvent pas apporter de modifications au schéma de modèle et ne peuvent pas interroger les données.|  
-    |**Lecture**|Les membres sont autorisés à interroger des données (selon les filtres de lignes) mais ne peuvent pas apporter de modifications au schéma de modèle.|  
+    |**Lire**|Les membres sont autorisés à interroger des données (selon les filtres de lignes) mais ne peuvent pas apporter de modifications au schéma de modèle.|  
     |**Lire et traiter**|Les membres sont autorisés à interroger des données (selon les filtres au niveau de la ligne) et à exécuter toutes les opérations Traiter et Traiter tout, mais ils ne peuvent pas apporter de modifications au schéma de modèle.|  
-    |**Traiter**|Les membres peuvent exécuter les opérations Traiter et Traiter tout. Impossible de modifier le schéma de modèle et d'interroger les données.|  
-    |**Administrateur**|Les membres peuvent apporter des modifications au schéma de modèle et peuvent interroger toutes les données.|  
+    |**Procédure**|Les membres peuvent exécuter des processus et traiter toutes les opérations. Ils ne peuvent pas modifier le schéma de modèle et ne peuvent pas interroger les données.|  
+    |**Il**|Les membres peuvent apporter des modifications au schéma de modèle et peuvent interroger toutes les données.|  
   
 5.  Pour entrer une description du rôle, cliquez sur le champ **Description** et tapez une description.  
   
@@ -64,10 +64,10 @@ ms.locfileid: "67284902"
 9. Cliquez sur **OK**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rôles &#40;SSAS tabulaire&#41;](roles-ssas-tabular.md)   
- [Perspectives &#40;SSAS Tabulaire&#41;](perspectives-ssas-tabular.md)   
- [Analyser dans Excel &#40;SSAS Tabulaire&#41;](analyze-in-excel-ssas-tabular.md)   
- [Fonction USERNAME &#40;DAX&#41;](/dax/username-function-dax)   
- [Fonction CUSTOMDATA &#40;DAX&#41;](/dax/customdata-function-dax)  
+ [Rôles &#40;&#41;tabulaire SSAS](roles-ssas-tabular.md)   
+ [Perspectives &#40;&#41;tabulaire SSAS](perspectives-ssas-tabular.md)   
+ [Analyser dans Excel &#40;la&#41;tabulaire SSAS](analyze-in-excel-ssas-tabular.md)   
+ [Fonction USERNAME &#40;&#41;DAX](/dax/username-function-dax)   
+ [Fonction CUSTOMDATA &#40;&#41;DAX](/dax/customdata-function-dax)  
   
   

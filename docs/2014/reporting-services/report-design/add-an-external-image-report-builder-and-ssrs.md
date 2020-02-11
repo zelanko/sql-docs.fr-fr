@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 236600f0a4ff2b77daaab2266b7e927e6858447b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106725"
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>Ajouter une image externe (Générateur de rapports et SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "66106725"
   
 ### <a name="to-add-an-external-image"></a>Pour ajouter une image externe  
   
-1.  En mode de conception de rapport, sous l’onglet **Insérer** , cliquez sur **Image**.  
+1.  En mode Création de rapport, sous l’onglet **Insérer** , cliquez sur **Image**.  
   
 2.  Cliquez sur l'aire de conception, puis faites glisser la souris pour créer une zone de la taille voulue pour l'image.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66106725"
   
      Pour une image située sur un serveur de rapports en mode natif, tapez le chemin relatif de l’image dans la zone **Utiliser cette image**, par exemple ../images/image1.jpg.  
   
-     Pour une image sur un serveur de rapports en mode intégré SharePoint, ou un autre site Web, tapez une URL complète vers l’image dans le **utiliser cette image** boîte-par exemple, http://\<Nom_serveur_sharepoint > /\<site > / Documents/images/image1.jpg.  
+     Pour une image sur un serveur de rapports en mode intégré SharePoint, ou tout autre site Web, tapez une URL complète vers l’image dans la zone **utiliser cette image** , par exemple,\<http://SharePointservername>\</site>/documents/images/image1.jpg.  
   
      Pour plus d’informations, consultez [Spécification de chemins d’accès à des éléments externes &#40;Générateur de rapports et SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   

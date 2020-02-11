@@ -1,5 +1,5 @@
 ---
-title: Spécifier les informations Source (Assistant Dimension) | Microsoft Docs
+title: Spécifier les informations sur la source (Assistant Dimension) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30234275a724dddce95cdad66e5e37a382a25e62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068178"
 ---
 # <a name="specify-source-information-dimension-wizard"></a>Spécifier des informations sur la source (Assistant Dimension)
   La page **Sélectionner la table de dimension principale** permet de sélectionner la vue de source de données, la table de dimension principale, les colonnes clés et la colonne des noms de membre pour la dimension à créer.  
   
- **Pour ouvrir l’Assistant Dimension**  
+ **Pour ouvrir l'Assistant Dimension**  
   
 -   Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur le dossier **Dimensions** pour un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , puis cliquez sur **Nouvelle dimension**.  
   
@@ -43,8 +43,8 @@ ms.locfileid: "66068178"
  Sélectionnez la colonne de la table spécifiée dans **Table principale** qui fournit les noms de membres pour la dimension. Une colonne de nom doit être spécifiée lorsqu'une clé composite est utilisée. Pour créer une colonne de nom pour une clé composite, il est recommandé de créer un calcul nommé dans la vue de source de données qui concatène les colonnes clés spécifiées. Lorsqu'une clé unique est utilisée, la colonne de nom est facultative.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide F1 de l’Assistant Dimension](dimension-wizard-f1-help.md)   
- [Dimensions &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Aide (F1) de l’Assistant Dimension](dimension-wizard-f1-help.md)   
+ [Dimensions &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensions dans les modèles multidimensionnels](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

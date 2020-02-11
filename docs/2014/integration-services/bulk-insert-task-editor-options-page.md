@@ -1,5 +1,5 @@
 ---
-title: En bloc éditeur de tâche d’insertion (Page Options) | Microsoft Docs
+title: Éditeur de tâche d’insertion en bloc (page Options) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,19 +15,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7cb19e3ba2f58a39ffd87bdabc6eb1ad18a1d18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061191"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>Éditeur de tâche d'insertion en bloc (page Options)
-  Utilisez la page **Options** de la boîte de dialogue **Éditeur de tâche d'insertion en bloc** afin de définir les propriétés de l'opération d'insertion en bloc. La tâche d'insertion en bloc copie des volumes importants de données dans une table ou une vue [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+  Utilisez la page **Options** de la boîte de dialogue **Éditeur de tâche d'insertion en bloc** afin de définir les propriétés de l'opération d'insertion en bloc. La tâche d’insertion en bloc copie de grandes quantités de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] données dans une table ou une vue.  
   
  Pour en savoir plus sur l’utilisation des insertions en bloc, consultez [Tâche d’insertion en bloc](control-flow/bulk-insert-task.md) et [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
 ## <a name="options"></a>Options  
- **CodePage**  
+ **Courante**  
  Permet d'indiquer la page de codes des données dans le fichier de données.  
   
  **DataFileType**  
@@ -46,13 +46,13 @@ ms.locfileid: "66061191"
  |Terme|Définition|  
 |----------|----------------|  
 |**Contraintes de validation**|Permet de vérifier les contraintes s'appliquant à la table et aux colonnes.|  
-|**Conserver les valeurs NULL**|Permet de conserver les valeurs Null pendant l'opération d'insertion en bloc au lieu d'insérer des valeurs par défaut dans les colonnes vides.|  
-|**Activer l'insertion d'identité**|Permet d'insérer des valeurs existantes dans une colonne d'identité.|  
+|**Conserver les valeurs null**|Permet de conserver les valeurs Null pendant l'opération d'insertion en bloc au lieu d'insérer des valeurs par défaut dans les colonnes vides.|  
+|**Activer l’insertion d’identité**|Permet d'insérer des valeurs existantes dans une colonne d'identité.|  
 |**Verrou de table**|Permet de verrouiller la table lors de l'opération d'insertion en bloc.|  
-|**Exécuter les déclencheurs**|Lance tout déclencheur d'insertion, de mise à jour ou de suppression sur la table.|  
+|**Déclencher les déclencheurs**|Lance tout déclencheur d'insertion, de mise à jour ou de suppression sur la table.|  
   
  **SortedData**  
- Implique l'ajout de la clause ORDER BY dans l'instruction d'insertion en bloc. Le nom de colonne que vous fournissez doit être celui d'une colonne valide pour la table de destination. La valeur par défaut est `false`. En d'autres termes, les données ne sont pas triées par une clause ORDER BY.  
+ Implique l'ajout de la clause ORDER BY dans l'instruction d'insertion en bloc. Le nom de colonne que vous fournissez doit être celui d'une colonne valide pour la table de destination. Par défaut, il s’agit de `false`. En d'autres termes, les données ne sont pas triées par une clause ORDER BY.  
   
  **MaxErrors**  
  Permet de spécifier le nombre maximal d'erreurs tolérées avant l'annulation de l'opération d'insertion en bloc. La valeur 0 indique qu'un nombre illimité d'erreurs est autorisé.  
@@ -62,8 +62,8 @@ ms.locfileid: "66061191"
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tâche d’insertion en bloc &#40;page Général&#41;](general-page-of-integration-services-designers-options.md)   
- [Éditeur de tâche d’insertion en bloc &#40;page Connexion&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
+ [Éditeur de tâche d’insertion en bloc &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
+ [Éditeur de tâche d’insertion en bloc &#40;page connexion&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
  [Page Expressions](expressions/expressions-page.md)   
  [Flux de contrôle](control-flow/control-flow.md)  
   

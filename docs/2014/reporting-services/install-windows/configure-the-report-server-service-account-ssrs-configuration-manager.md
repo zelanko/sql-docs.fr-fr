@@ -10,19 +10,20 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
 ms.openlocfilehash: cb867bfdfc8d9ecb686d3ecc52c48c80bc60d9cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63261069"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurer le compte de service Report Server (Gestionnaire de configuration de SSRS)
 
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est implémenté en tant que service unique qui contient un service Web Report Server, le Gestionnaire de rapports et une application de traitement en arrière-plan utilisée pour le traitement des rapports planifié et la remise d'abonnement. Cette rubrique explique comment le compte de service est configuré initialement et comment modifier le compte ou le mot de passe à l'aide de l'outil de configuration de Reporting Services.  
   
 ## <a name="initial-configuration"></a>Configuration initiale
 
- Le compte de service Report Server est défini pendant l'installation. Vous pouvez exécuter le service au moyen d'un compte d'utilisateur de domaine ou d'un compte intégré tel que `NetworkService`. Il n’existe aucun compte par défaut. le compte que vous spécifiez dans le [Configuration du serveur - comptes de Service](../../sql-server/install/server-configuration-service-accounts.md) page de l’Assistant Installation devient le compte initial du service de serveur de rapports.  
+ Le compte de service Report Server est défini pendant l'installation. Vous pouvez exécuter le service au moyen d'un compte d'utilisateur de domaine ou d'un compte intégré tel que `NetworkService`. Il n’existe pas de compte par défaut ; quel que soit le compte que vous spécifiez dans la page [configuration du serveur-comptes de service](../../sql-server/install/server-configuration-service-accounts.md) de l’Assistant Installation devient le compte initial du service Report Server.  
   
 > [!IMPORTANT]
 > Bien que le service Web Report Server et le Gestionnaire de rapports soient des applications [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)], elles ne s'exécutent pas sous le compte [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. L'architecture de service unique exécute les deux applications ASP.NET dans la même identité de processus Report Server. Il s'agit d'une modification importante par rapport aux versions précédentes, dans lesquelles le service Web Report Server et le Gestionnaire de rapports s'exécutaient sous l'identité du processus de travail [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] spécifiée dans les services Internet (IIS).
@@ -33,7 +34,7 @@ ms.locfileid: "63261069"
   
 - Il ajoute automatiquement le nouveau compte au groupe de serveurs de rapports créés sur l'ordinateur local. Ce groupe est spécifié dans les listes de contrôle d'accès qui assurent la sécurité des fichiers de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-- Il met à jour automatiquement les autorisations de connexion sur l’instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilisée pour héberger la base de données du serveur de rapports. Le nouveau compte est ajouté au rôle **RSExecRole**.  
+- Met à jour automatiquement les autorisations de connexion sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] l’instance utilisée pour héberger la base de données du serveur de rapports. Le nouveau compte est ajouté au rôle **RSExecRole**.  
   
      La connexion de base de données pour l'ancien compte n'est pas supprimée automatiquement. Assurez-vous de supprimer les comptes qui ne sont plus utilisés. Pour plus d’informations, consultez [Administrer une base de données du serveur de rapports &#40;SSRS en mode natif&#41;](../report-server/report-server-database-ssrs-native-mode.md) dans la documentation en ligne de SQL Server.  
   
@@ -44,7 +45,7 @@ ms.locfileid: "63261069"
     > [!NOTE]  
     > Si le serveur de rapports est intégré au déploiement avec montée en puissance parallèle, seul le serveur de rapports en cours de mise à jour est affecté. Il n'y a aucune incidence sur les clés de chiffrement des autres serveurs de rapports de ce déploiement.  
   
- Pour obtenir des instructions sur la façon de définir le compte, consultez [configurer un compte de Service &#40;Gestionnaire de Configuration de SSRS&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md).  
+ Pour obtenir des instructions sur la façon de définir le compte, consultez [configurer un compte de Service &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md).  
   
 ## <a name="choosing-an-account"></a>Choix d'un compte
 
@@ -62,11 +63,11 @@ ms.locfileid: "63261069"
   
  Les instructions et les liens suivants de cette section peuvent vous aider à choisir l'approche la plus appropriée pour votre déploiement.  
   
-- [Compte de service &#40;SSRS en Mode natif&#41;](../../sql-server/install/service-account-ssrs-native-mode.md).  
+- [Compte de Service &#40;&#41;en mode natif SSRS ](../../sql-server/install/service-account-ssrs-native-mode.md).  
   
-- [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) dans la documentation en ligne de SQL Server.  
+- [Configurez les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) dans documentation en ligne de SQL Server.  
   
-- [Guide de planification de la sécurité des services et des comptes de service](http://usergroup.doubletake.com/file_cabinet/download/0x000021733).  
+- [Guide de planification de la sécurité des services et comptes de service](http://usergroup.doubletake.com/file_cabinet/download/0x000021733).  
   
 ## <a name="updating-an-expired-password"></a>Mise à jour d'un mot de passe  expiré
 
@@ -74,11 +75,11 @@ ms.locfileid: "63261069"
   
  Pour réinitialiser le mot de passe, procédez comme suit :  
   
-1. Sur le **Démarrer** menu, pointez sur **le panneau de configuration**, pointez sur **outils d’administration**, puis cliquez sur **Services**.  
+1. Dans le menu **Démarrer** , pointez sur **panneau de configuration**, pointez sur outils d' **administration**, puis cliquez sur **services**.  
   
-2. Avec le bouton droit **SQL Server Reporting Services**, sélectionnez **propriétés**.  
+2. Cliquez avec le bouton droit sur **SQL Server Reporting Services**, puis sélectionnez **Propriétés**.  
   
-3. Cliquez sur **ouverture de session**, tapez le nouveau mot de passe.  
+3. Cliquez sur **ouvrir une session**, puis tapez le nouveau mot de passe.  
   
 4. Après avoir mis à jour le mot de passe, démarrez l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et mettez à jour le mot de passe dans la page Compte de service. Cette étape supplémentaire est nécessaire pour mettre à jour les informations de compte stockées de manière interne par le serveur de rapports.  
   
@@ -94,11 +95,11 @@ ms.locfileid: "63261069"
   
  Une fois les informations d'accès à la base de données réinitialisées, vous devez redémarrer le service [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] pour vous assurer que l'ancienne connexion n'est plus utilisée.  
   
-1. Dans **outils d’administration**, cliquez sur **Administration centrale de SharePoint 2010**.  
+1. Dans **Outils d’administration**, cliquez sur **administration centrale de SharePoint 2010**.  
   
 2. Cliquez sur **gestion des applications**.  
   
-3. Dans la section Reporting Services, cliquez sur **accorder l’accès de base de données**.  
+3. Dans la section Reporting Services, cliquez sur **accorder l’accès à la base de données**.  
   
 4. Cliquez sur **OK**. La boîte de dialogue Entrer les informations d'identification s'affiche.  
   
@@ -106,9 +107,9 @@ ms.locfileid: "63261069"
   
 6. Pour redémarrer le service, cliquez sur **opérations**.  
   
-7. Dans la topologie et Services, cliquez sur **Services sur le serveur**.  
+7. Dans topologie et services, cliquez sur **services sur le serveur**.  
   
-8. Pour l’Application Web de Windows SharePoint Services, cliquez sur **arrêter**.  
+8. Pour application Web Windows SharePoint Services, cliquez sur **arrêter**.  
   
 9. Attendez que le service s'arrête.  
   
@@ -119,4 +120,4 @@ ms.locfileid: "63261069"
   
 ## <a name="next-steps"></a>Étapes suivantes
 
- [Configurer un compte de Service &#40;Gestionnaire de Configuration de SSRS&#41; ](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md) [compte de Service &#40;SSRS en Mode natif&#41; ](../../sql-server/install/service-account-ssrs-native-mode.md) [configurer des URL de serveur de rapports &#40;Configuration SSRS Gestionnaire&#41; ](configure-report-server-urls-ssrs-configuration-manager.md) [Gestionnaire de Configuration de Reporting Services &#40;en Mode natif&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)
+ [Configurez un compte de service &#40;ssrs Configuration Manager&#41;compte de](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md) [service &#40;SSRS en mode natif&#41;](../../sql-server/install/service-account-ssrs-native-mode.md) [configurer des url de serveur de rapports &#40;SSRS Configuration Manager](configure-report-server-urls-ssrs-configuration-manager.md)&#41;gestionnaire de configuration de Reporting Services &#40;[en mode natif](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)&#41;

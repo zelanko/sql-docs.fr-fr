@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue des lignes Delete | Microsoft Docs
+title: Boîte de dialogue Supprimer les lignes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,17 +16,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2fbc640573d6d897205e11dbc40d40210502ee60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109307"
 ---
 # <a name="delete-rows-dialog-box"></a>Boîte de dialogue Supprimer les lignes
   Utilisez la boîte de dialogue **Supprimer les lignes** pour supprimer des lignes d'une région de données de table, de matrice ou de liste. Lorsque des lignes sont associées à des groupes, vous pouvez également supprimer les définitions de groupe.  
   
 ## <a name="options"></a>Options  
- **Supprimer les lignes et groupes associés**  
+ **Supprimer les lignes et les groupes associés**  
  Choisissez cette option pour supprimer les lignes et les définitions de groupe associées.  
   
  **Supprimer les lignes uniquement**  

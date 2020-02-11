@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d7afc644d96c895164aa954cc4813762cc4ef32d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107840"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Génération de flux de données à partir de rapports (Générateur de rapports et SSRS)
-  L'extension de rendu [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom génère un document de service Atom qui répertorie les flux de données disponibles d'un rapport et les flux de données des régions de données d'un rapport. Cette extension est utilisée pour générer des flux de données compatibles avec Atom pouvant être lus et échangés avec des applications qui prennent en charge les flux de données générés à partir de rapports. Par exemple, vous pouvez utiliser l'extension de rendu Atom pour générer des flux de données que vous pourrez ensuite utiliser dans le client [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+  L'extension de rendu [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom génère un document de service Atom qui répertorie les flux de données disponibles d'un rapport et les flux de données des régions de données d'un rapport. Cette extension est utilisée pour générer des flux de données compatibles avec Atom pouvant être lus et échangés avec des applications qui prennent en charge les flux de données générés à partir de rapports. Par exemple, vous pouvez utiliser l’extension de rendu Atom pour générer des flux de données que vous pouvez ensuite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] utiliser dans le client.  
   
  Le document de service Atom répertorie au moins un flux de données pour chaque région de données d'un rapport. Selon le type de région de données et les données affichées par cette région, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] peut générer plusieurs flux de données à partir d'une région de données. Par exemple, une matrice ou un graphique peut fournir plusieurs flux de données. Lorsque l'extension de rendu Atom crée le document de service Atom, un identificateur unique est créé pour chaque flux de données et vous utilisez cet identificateur dans l'URL pour accéder au contenu du flux de données.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "66107840"
   
  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportDataAsDataFeeds"></a> Rapports en tant que flux de données  
+##  <a name="ReportDataAsDataFeeds"></a>Rapports en tant que flux de données  
  Vous pouvez exporter un rapport de production en tant que flux de données ou créer un rapport dont l'objectif principal est de fournir des données, sous forme de flux de données, aux applications. L'utilisation de rapports en tant que flux de données vous offre une méthode supplémentaire pour fournir des données aux applications lorsque ces données ne sont pas facilement accessibles via des fournisseurs de données clients, ou lorsque vous préférez masquer la complexité de la source de données et faciliter l'utilisation des données. Un autre avantage de l'utilisation des données de rapport en tant que flux de données est que vous pouvez utiliser des fonctionnalités [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] telles que le Gestionnaire de rapports, la sécurité, la planification et les instantanés de rapport pour gérer les rapports à l'origine des flux de données.  
   
  Pour tirer au mieux profit de l'extension de rendu Atom, vous devez comprendre comment le rapport est restitué dans des flux de données. Si vous utilisez des rapports existants, il est utile de pouvoir prévoir quels flux de données seront générés par les rapports ; si vous écrivez un rapport spécifiquement en vue d'une utilisation en tant que flux de données, la capacité d'inclure les données et d'ajuster la mise en page du rapport pour optimiser l'utilité des flux de données constitue également un avantage précieux.  
@@ -41,7 +41,7 @@ ms.locfileid: "66107840"
   
 
   
-##  <a name="AtomServiceDocument"></a> Document de service Atom (fichier .atomsvc)  
+##  <a name="AtomServiceDocument"></a>Document de service Atom (fichier. atomsvc)  
  Un document de service Atom spécifie une connexion à un ou plusieurs flux de données. Au minimum, la connexion est une URL simple vers le service de données qui génère le flux.  
   
  Lorsque vous restituez les données de rapport à l'aide de l'extension de rendu Atom, le document de service Atom répertorie les flux de données disponibles pour un rapport. Le document répertorie au moins un flux de données pour chaque région de données du rapport. Les tables et jauges génèrent chacune un seul flux de données, mais les matrices, listes et graphiques peuvent en générer plusieurs en fonction des données qu'ils affichent.  
@@ -56,13 +56,13 @@ ms.locfileid: "66107840"
   
  ![RS_Atom_PeerDynamicColumns](../media/rs-atom-peerdynamiccolumns.gif "RS_Atom_PeerDynamicColumns")  
   
- Le document de service Atom généré à partir de ce rapport inclut deux flux, un pour chacune des colonnes homologues dynamiques : Territory et Year. Le diagramme ci-dessous illustre le contenu de chaque flux.  
+ Le document de service Atom généré à partir de ce rapport inclut deux flux, un pour chacune des colonnes homologues dynamiques : Territory et Year. Le diagramme ci-dessous illustre le contenu de chaque flux.  
   
  ![RS_Atom_PeerDynamicDataFeeds](../media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   
 
   
-##  <a name="DataFeeds"></a> Flux de données  
+##  <a name="DataFeeds"></a>Flux de données  
  Un flux est un fichier XML ayant un format tabulaire cohérent qui ne varie pas dans le temps et des données variables qui peuvent être différentes chaque fois que le rapport est exécuté. Les flux de données générés par [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ont le même format que ceux générés par ADO.NET Data Services.  
   
  Un flux de données contient deux sections : l'en-tête et les données. La spécification Atom définit les éléments de chaque section. L'en-tête inclut des informations telles que le schéma d'encodage de caractères à utiliser avec les flux de données.  
@@ -79,13 +79,13 @@ ms.locfileid: "66107840"
  `<updated>2009-05-08T23:09:58Z</updated>`  
   
 ### <a name="data-section"></a>Section de données  
- La section de données de flux de données contient un <`entry`>, élément pour chaque ligne dans l’ensemble de lignes aplati généré par l’extension de rendu Atom.  
+ La section de données des flux de données contient un `entry` <élément> pour chaque ligne de l’ensemble de lignes aplati généré par l’extension de rendu Atom.  
   
  Le diagramme suivant illustre un rapport utilisant des groupes et des totaux.  
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- Le code XML suivant montre un <`entry`> élément de ce rapport dans un flux de données. Notez que le <`entry`> élément inclut les totaux des ventes et des commandes pour le groupe et les totaux des ventes et des commandes pour tous les groupes. Le <`entry`> élément inclut toutes les valeurs dans le rapport.  
+ Le code XML suivant montre un `entry` élément <> à partir de ce rapport dans un flux de données. Notez que l’élément `entry` <> comprend les totaux des ventes et des commandes pour le groupe et les totaux des ventes et des commandes pour tous les groupes. L’élément `entry` <> comprend toutes les valeurs du rapport.  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   
@@ -114,11 +114,11 @@ ms.locfileid: "66107840"
   
  Les lignes de données pour les régions de données imbriquées sont en général larges, particulièrement si les tables et matrices imbriquées incluent des groupes et des totaux. Vous souhaiterez peut-être exporter le rapport vers un flux de données et afficher celui-ci pour vérifier que les données générées correspondent bien à vos attentes.  
   
- Lorsque l'extension de rendu Atom crée le document de service Atom, un identificateur unique est créé pour le flux de données et vous utilisez cet identificateur dans l'URL pour afficher le contenu du flux de données. L’exemple document de service Atom ci-dessus, inclut l’URL <http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1>" . L'URL identifie le rapport (Product Sales Summary), le format de rendu Atom (ATOM) et le nom du flux de données (xAx0x1).  
+ Lorsque l'extension de rendu Atom crée le document de service Atom, un identificateur unique est créé pour le flux de données et vous utilisez cet identificateur dans l'URL pour afficher le contenu du flux de données. L’exemple de document de service Atom, indiqué ci-dessus <http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1>, comprend l’URL «. L'URL identifie le rapport (Product Sales Summary), le format de rendu Atom (ATOM) et le nom du flux de données (xAx0x1).  
   
  Les noms des éléments de rapport sont par défaut les noms d'élément RDL (Report Definition Language) des éléments de rapport et, souvent, ils ne sont pas intuitifs ni faciles à mémoriser. Par exemple, le nom par défaut de la première matrice placés dans un rapport est Tablix 1. Les flux de données utilisent ces noms.  
   
- Pour simplifier l’utilisation du flux de données, vous pouvez utiliser la propriété DataElementName de la région de données pour attribuer des noms conviviaux. Si vous fournissez une valeur pour DataElementName sous-élément du flux de données <`d`> sera place le nom de région de données par défaut. Par exemple, si le nom par défaut d’une région de données est Tablix1 et que DataElementName a défini SalesByTerritoryYear, le <`d`> dans les données de flux utilise SalesByTerritoryYear. Si les régions de données ont deux flux de données tels que le rapport de matrice décrit ci-dessus, les noms utilisés dans les flux de données seront SalesByTerritoryYear _Territory et SalesByTerritoryYear _Year.  
+ Pour simplifier l’utilisation du flux de données, vous pouvez utiliser la propriété DataElementName de la région de données pour attribuer des noms conviviaux. Si vous fournissez une valeur pour DataElementName, le sous-élément `d` du flux de données <> utiliser est, à la place du nom de la région de données par défaut. Par exemple, si le nom par défaut d’une région de données est Tablix1 et DataElementName défini SalesByTerritoryYear, `d` le <> dans le flux de données utilise SalesByTerritoryYear. Si les régions de données ont deux flux de données tels que le rapport de matrice décrit ci-dessus, les noms utilisés dans les flux de données seront SalesByTerritoryYear _Territory et SalesByTerritoryYear _Year.  
   
  Si vous comparez les données affichées dans le rapport à celles du flux de données, vous remarquerez certainement quelques différences. Les rapports affichent souvent les données numériques et d'heure/date avec une mise en forme, tandis que le flux de données contient des données non mises en forme.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "66107840"
   
 
   
-##  <a name="FlatteningReportData"></a> Données de rapport aplaties  
+##  <a name="FlatteningReportData"></a>Aplatissement des données de rapport  
  L'extension de rendu Atom fournit les données de rapport sous forme d'ensembles de lignes aplatis au format XML. Les règles pour aplatir des tables de données sont identiques à celles de l'extension de rendu CSV, avec quelques exceptions :  
   
 -   Les éléments dans l'étendue sont aplatis au niveau de détail. Contrairement au rendu CSV, les zones de texte du niveau supérieur s'affichent dans chaque entrée écrite dans le flux de données.  
@@ -149,7 +149,7 @@ ms.locfileid: "66107840"
   
 
   
-##  <a name="AtomRendering"></a> Règles de rendu Atom  
+##  <a name="AtomRendering"></a>Règles de rendu Atom  
  L'extension de rendu Atom ignore les informations suivantes lors du rendu d'un flux de données :  
   
 -   mise en forme et mise en page ;  
@@ -175,15 +175,15 @@ ms.locfileid: "66107840"
 |Élément|Comportement de rendu|  
 |----------|------------------------|  
 |Table de charge de travail|Effectue le rendu en développant la table et en créant une ligne et une colonne pour chaque ligne et colonne au niveau de détails le plus bas. Les colonnes et les lignes de sous-total ne comprennent pas de titres de colonne ou de ligne. Les rapports d'extraction ne sont pas pris en charge.|  
-|Matrice|Effectue le rendu en développant la matrice et en créant une ligne et une colonne pour chaque ligne et colonne au niveau de détails le plus bas. Les colonnes et les lignes de sous-total ne comprennent pas de titres de colonne ou de ligne.|  
-|Liste|Effectue le rendu d'un enregistrement pour chaque instance ou ligne de détails dans la liste.|  
+|Matrix|Effectue le rendu en développant la matrice et en créant une ligne et une colonne pour chaque ligne et colonne au niveau de détails le plus bas. Les colonnes et les lignes de sous-total ne comprennent pas de titres de colonne ou de ligne.|  
+|List|Effectue le rendu d'un enregistrement pour chaque instance ou ligne de détails dans la liste.|  
 |Sous-rapport|L'élément parent est répété pour chaque instance du contenu.|  
 |Graphique|Effectue le rendu d'un enregistrement avec toutes les étiquettes de graphiques pour chaque valeur de graphique. Les étiquettes de séries et de catégories dans les hiérarchies sont aplaties et incluses dans la ligne pour une valeur de graphique.|  
 |Barre de données|Effectue le rendu comme un graphique. En règle générale, une barre de données n'inclut pas de hiérarchies ou d'étiquettes.|  
 |Graphique sparkline|Effectue le rendu comme un graphique. En règle générale, un graphique sparkline n'inclut pas de hiérarchies ou d'étiquettes.|  
 |Jauge|Effectue le rendu en tant qu'enregistrement unique avec les valeurs maximale et minimale de l'échelle linéaire, les valeurs de début et de fin de la plage et la valeur du pointeur.|  
 |Indicateur|Effectue le rendu en tant qu'enregistrement unique avec le nom de l'état actif, les états disponibles et la valeur de données.|  
-|Carte|Génère un flux de données pour chaque région de données cartographiques. Si plusieurs couches utilisent la même région de données, le flux de données les inclut toutes. Le flux de données inclut un enregistrement avec les étiquettes et les valeurs pour chaque membre cartographique de la couche.|  
+|Mappage|Génère un flux de données pour chaque région de données cartographiques. Si plusieurs couches utilisent la même région de données, le flux de données les inclut toutes. Le flux de données inclut un enregistrement avec les étiquettes et les valeurs pour chaque membre cartographique de la couche.|  
   
 
   

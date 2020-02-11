@@ -1,5 +1,5 @@
 ---
-title: (SSAS) sur la modélisation multidimensionnelle | Microsoft Docs
+title: Modélisation multidimensionnelle (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2839ecff951a9f1547a05b60f6957ed5976bee9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073492"
 ---
 # <a name="multidimensional-modeling-ssas"></a>Modélisation multidimensionnelle (SSAS)
@@ -28,9 +28,9 @@ ms.locfileid: "66073492"
 ## <a name="in-this-section"></a>Dans cette section  
  [Solutions de modèles multidimensionnels &#40;SSAS&#41;](multidimensional-model-solutions-ssas.md)  
   
- [Bases de données de modèle multidimensionnel &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
+ [Bases de données de modèle multidimensionnels &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
   
- [Traitement des objets de modèle multidimensionnel](processing-a-multidimensional-model-analysis-services.md)  
+ [Traitement des objets de modèles multidimensionnels](processing-a-multidimensional-model-analysis-services.md)  
   
  [Rôles et autorisations &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)  
   

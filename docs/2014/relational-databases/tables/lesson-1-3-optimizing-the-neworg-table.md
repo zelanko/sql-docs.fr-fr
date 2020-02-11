@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 952043d5d001fe4fe65e6dd1aa7bb2001290429e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110070"
 ---
 # <a name="optimizing-the-neworg-table"></a>Optimisation de la table NewOrg
-  Le **NewOrd** table que vous avez créé dans le [remplissage d’une Table avec des données hiérarchiques existantes](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) tâche contient toutes les informations des employés et représente la structure hiérarchique à l’aide d’un `hierarchyid`type de données. Cette tâche ajoute de nouveaux index pour prendre en charge les recherches sur la colonne `hierarchyid`.  
+  La table **NewOrd** que vous avez créée dans la tâche [remplissage d’une table avec des données hiérarchiques existantes](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) contient toutes les informations relatives aux employés et représente la structure hiérarchique `hierarchyid` à l’aide d’un type de données. Cette tâche ajoute de nouveaux index pour prendre en charge les recherches sur la colonne `hierarchyid`.  
   
 ## <a name="clustered-index"></a>Index cluster  
- Le `hierarchyid` colonne (**OrgNode**) est la clé primaire pour la **NewOrg** table. Quand la table a été créée, elle contenait un index cluster nommé **PK_NewOrg_OrgNode** pour forcer l’unicité de la colonne **OrgNode** . Cet index cluster prend également en charge une recherche à profondeur prioritaire de la table.  
+ La `hierarchyid` colonne (**OrgNode**) est la clé primaire de la table **NewOrg** . Quand la table a été créée, elle contenait un index cluster nommé **PK_NewOrg_OrgNode** pour forcer l’unicité de la colonne **OrgNode** . Cet index cluster prend également en charge une recherche à profondeur prioritaire de la table.  
   
 ## <a name="nonclustered-index"></a>Index non cluster  
  Cette étape crée deux index non cluster pour prendre en charge des recherches typiques.  
@@ -71,7 +71,7 @@ ms.locfileid: "66110070"
   
      [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-     Index à profondeur prioritaire : Enregistrements d’employés sont stockés adjacente à son responsable.  
+     Index à profondeur prioritaire : les enregistrements d'employés sont stockés à proximité de leur responsable.  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -95,7 +95,7 @@ ms.locfileid: "66110070"
   
      `/2/2/       0x6B40       2         8      norint`  
   
-     **EmployeeID**-tout d’abord d’index : Lignes sont stockées dans **EmployeeID** séquence.  
+     Index **EmployeeID**-First : les lignes sont stockées dans la séquence **EmployeeID** .  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -159,6 +159,6 @@ ms.locfileid: "66110070"
     ```  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Résumé : Conversion d’une Table en une Structure hiérarchique](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
+ [Résumé : Conversion d'une table en une structure hiérarchique](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 4 : L’exécution de prédictions Market Basket | Microsoft Docs'
+title: 'Leçon 4 : exécution des prédictions du panier de marché | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3b49fc242eb8b2242269c5af33cc094937bbe0de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63312111"
 ---
 # <a name="lesson-4-executing-market-basket-predictions"></a>Leçon 4 : Exécution de prédictions Market Basket
-  Dans cette leçon, vous allez utiliser l’instruction DMX `SELECT` instruction pour créer des prédictions basées sur l’association des modèles que vous avez créé dans [leçon 2 : Ajout des modèles d’exploration de données à la Structure d’exploration de données Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Une requête de prédiction est créée en utilisant l'instruction DMX `SELECT` et en ajoutant une clause `PREDICTION JOIN` Pour plus d’informations sur la syntaxe d’une jointure de prédiction, consultez [SELECT FROM &#60;modèle&#62; jointure de prédiction &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx).  
+  Dans cette leçon, vous allez utiliser l’instruction `SELECT` DMX pour créer des prédictions basées sur les modèles d’association que vous avez créés au cours de la [leçon 2 : ajout de modèles d’exploration de données à la structure d’exploration de données Market panier](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Une requête de prédiction est créée en utilisant l'instruction DMX `SELECT` et en ajoutant une clause `PREDICTION JOIN` Pour plus d’informations sur la syntaxe d’une jointure de prédiction, consultez [SELECT FROM &#60;model&#62; Prediction join &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx).  
   
- Le **SELECT FROM \<modèle > PREDICTION JOIN** formulaire de la `SELECT` instruction composé de trois parties :  
+ Le formulaire **Select \<from Model> PREDICTION JOIN** de l' `SELECT` instruction contient trois parties :  
   
 -   Liste des colonnes du modèle d'exploration de données et des fonctions de prédiction renvoyées dans l'ensemble de résultats. Cette liste peut également contenir les colonnes d'entrée issues des données source.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "63312111"
  Vous pouvez également faire appel au générateur de requêtes de prédiction disponible dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer des requêtes de prédiction.  
   
 ## <a name="singleton-prediction-join-statement"></a>Instruction singleton PREDICTION JOIN  
- La première étape consiste à créer une requête singleton, à l’aide de la **SELECT FROM \<modèle > PREDICTION JOIN** syntaxe et en fournissant un ensemble unique de valeurs en tant qu’entrée. L'exemple générique suivant utilise l'instruction singleton :  
+ La première étape consiste à créer une requête singleton, en utilisant la syntaxe **Select \<from Model> PREDICTION JOIN** et en fournissant un ensemble unique de valeurs comme entrée. L'exemple générique suivant utilise l'instruction singleton :  
   
 ```  
 SELECT <select list>  
@@ -68,17 +68,17 @@ SELECT <select list> FROM [<mining model>]
 ```  
   
 ## <a name="lesson-tasks"></a>Tâches de la leçon  
- Vous allez effectuer les tâches suivantes dans cette leçon :  
+ Dans cette leçon, vous allez effectuer les tâches suivantes :  
   
--   Créer une requête qui prédit les autres éléments, un client est susceptible d’acheter, en fonction des éléments existants dans leur panier d’achat. Vous allez créer cette requête en utilisant le modèle d’exploration de données avec la valeur par défaut *MINIMUM_PROBABILITY*.  
+-   Créez une requête qui prédit les autres éléments qu’un client est susceptible d’acheter, en fonction des éléments déjà présents dans le panier. Vous allez créer cette requête à l’aide du modèle d’exploration de données avec le *MINIMUM_PROBABILITY*par défaut.  
   
--   créer une requête pour prédire quels autres articles un client est susceptible d'acheter, en vous basant sur des articles déjà présents dans son panier d'achat. Cette requête est basée sur un modèle différent, dans lequel *MINIMUM_PROBABILITY* a été défini sur 0.01. Étant donné que la valeur par défaut pour *MINIMUM_PROBABILITY* dans les modèles d’association étant égale à 0.3, la requête sur ce modèle doit retourner davantage d’éléments possibles que la requête sur le modèle par défaut.  
+-   créer une requête pour prédire quels autres articles un client est susceptible d'acheter, en vous basant sur des articles déjà présents dans son panier d'achat. Cette requête est basée sur un modèle différent, dans lequel *MINIMUM_PROBABILITY* a été défini sur 0,01. Étant donné que la valeur par défaut pour *MINIMUM_PROBABILITY* dans les modèles d’association est 0,3, la requête sur ce modèle doit retourner plus d’éléments possibles que la requête sur le modèle par défaut.  
   
-## <a name="create-a-prediction-by-using-a-model-with-the-default-minimumprobability"></a>Création d'une prédiction à l'aide d'un modèle avec le paramètre MINIMUM_PROBABILITY par défaut  
+## <a name="create-a-prediction-by-using-a-model-with-the-default-minimum_probability"></a>Création d'une prédiction à l'aide d'un modèle avec le paramètre MINIMUM_PROBABILITY par défaut  
   
 #### <a name="to-create-an-association-query"></a>Pour créer une requête Association  
   
-1.  Dans **Explorateur d’objets**, avec le bouton droit de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX** pour ouvrir l’éditeur de requête.  
+1.  Dans l' **Explorateur d’objets**, cliquez avec le bouton [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]droit sur l’instance de, pointez sur **nouvelle requête**, puis cliquez sur **DMX** pour ouvrir l’éditeur de requête.  
   
 2.  Copiez l'exemple générique de l'instruction `PREDICTION JOIN` dans la requête vide.  
   
@@ -94,7 +94,7 @@ SELECT <select list> FROM [<mining model>]
     PREDICT([Default Association].[Products],INCLUDE_STATISTICS,3)  
     ```  
   
-     Vous pourriez inclure le nom de colonne [Products], mais à l’aide de la [Predict &#40;DMX&#41; ](/sql/dmx/predict-dmx) (fonction), vous pouvez limiter le nombre de produits qui sont retournées par l’algorithme à trois. Vous pouvez également utiliser l'instruction `INCLUDE_STATISTICS` pour vous procurer des informations supplémentaires sur chaque produit, notamment sur la prise en charge, la probabilité et la probabilité ajustée. Ces statistiques vous aident à évaluer la précision de la prédiction.  
+     Vous pouvez simplement inclure le nom de colonne [Products], mais à l’aide de la fonction [Predict &#40;DMX&#41;](/sql/dmx/predict-dmx) , vous pouvez limiter le nombre de produits retournés par l’algorithme à trois. Vous pouvez également utiliser l'instruction `INCLUDE_STATISTICS` pour vous procurer des informations supplémentaires sur chaque produit, notamment sur la prise en charge, la probabilité et la probabilité ajustée. Ces statistiques vous aident à évaluer la précision de la prédiction.  
   
 4.  Remplacez le code suivant :  
   
@@ -140,19 +140,19 @@ SELECT <select list> FROM [<mining model>]
       UNION SELECT 'Mountain-200' AS [Model]) AS [Products]) AS t  
     ```  
   
-6.  Sur le **fichier** menu, cliquez sur **enregistrer DMXQuery1.dmx sous**.  
+6.  Dans le menu **fichier** , cliquez sur **Enregistrer DMXQuery1. DMX sous**.  
   
-7.  Dans le **enregistrer en tant que** boîte de dialogue, accédez au dossier approprié et nommez le fichier `Association Prediction.dmx`.  
+7.  Dans la boîte de dialogue **Enregistrer sous** , accédez au dossier approprié et nommez le fichier `Association Prediction.dmx`.  
   
-8.  Dans la barre d’outils, cliquez sur le **Execute** bouton.  
+8.  Dans la barre d’outils, cliquez sur le bouton **exécuter** .  
   
-     La requête retourne une table qui contient trois produits : HL Mountain Tire, Fender Set - Mountain et ML Mountain Tire. La table répertorie ces produits retournés par ordre de probabilité. Le produit retourné le plus susceptible d'être inclus dans le même panier d'achat que les trois produits spécifiés dans la requête apparaît en haut de la table. Les deux produits qui suivent sont les produits suivants les plus susceptibles d'être inclus dans le panier d'achat. La table renferme également des statistiques indiquant la précision de la prédiction.  
+     La requête retourne une table qui contient trois produits : HL Mountain Tire, Fender Set – Mountain et ML Mountain Tire. La table répertorie ces produits retournés par ordre de probabilité. Le produit retourné le plus susceptible d'être inclus dans le même panier d'achat que les trois produits spécifiés dans la requête apparaît en haut de la table. Les deux produits qui suivent sont les produits suivants les plus susceptibles d'être inclus dans le panier d'achat. La table renferme également des statistiques indiquant la précision de la prédiction.  
   
-## <a name="create-a-prediction-by-using-a-model-with-a-minimumprobability-of-001"></a>Création d'une prédiction à l'aide d'un modèle avec un paramètre MINIMUM_PROBABILITY de 0.01  
+## <a name="create-a-prediction-by-using-a-model-with-a-minimum_probability-of-001"></a>Création d'une prédiction à l'aide d'un modèle avec un paramètre MINIMUM_PROBABILITY de 0.01  
   
 #### <a name="to-create-an-association-query"></a>Pour créer une requête Association  
   
-1.  Dans **Explorateur d’objets**, avec le bouton droit de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX** pour ouvrir l’éditeur de requête.  
+1.  Dans l' **Explorateur d’objets**, cliquez avec le bouton [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]droit sur l’instance de, pointez sur **nouvelle requête**, puis cliquez sur **DMX** pour ouvrir l’éditeur de requête.  
   
 2.  Copiez l'exemple générique de l'instruction `PREDICTION JOIN` dans la requête vide.  
   
@@ -212,22 +212,22 @@ SELECT <select list> FROM [<mining model>]
       UNION SELECT 'Mountain-200' AS [Model]) AS [Products]) AS t  
     ```  
   
-6.  Sur le **fichier** menu, cliquez sur **enregistrer DMXQuery1.dmx sous**.  
+6.  Dans le menu **fichier** , cliquez sur **Enregistrer DMXQuery1. DMX sous**.  
   
-7.  Dans le **enregistrer en tant que** boîte de dialogue, accédez au dossier approprié et nommez le fichier `Modified Association Prediction.dmx`.  
+7.  Dans la boîte de dialogue **Enregistrer sous** , accédez au dossier approprié et nommez le fichier `Modified Association Prediction.dmx`.  
   
-8.  Dans la barre d’outils, cliquez sur le **Execute** bouton.  
+8.  Dans la barre d’outils, cliquez sur le bouton **exécuter** .  
   
-     La requête retourne une table qui contient trois produits : HL Mountain Tire, Water Bottle et Fender Set - Mountain. La table répertorie ces produits par ordre de probabilité. Le produit affiché en haut de la table est le produit le plus susceptible d'être inclus dans le même panier d'achat que les trois produits spécifiés dans la requête. Les produits restants sont les produits suivants les plus susceptibles d'être inclus dans le panier d'achat. La table renferme également des statistiques qui indiquent la précision de la prédiction.  
+     La requête retourne une table qui contient trois produits : HL Mountain Tire, Water Bottle et Fender Set – Mountain. La table répertorie ces produits par ordre de probabilité. Le produit affiché en haut de la table est le produit le plus susceptible d'être inclus dans le même panier d'achat que les trois produits spécifiés dans la requête. Les produits restants sont les produits suivants les plus susceptibles d'être inclus dans le panier d'achat. La table renferme également des statistiques qui indiquent la précision de la prédiction.  
   
-     Vous pouvez le voir dans les résultats de cette requête que la valeur de la *MINIMUM_PROBABILITY* paramètre affecte les résultats retournés par la requête.  
+     Vous pouvez voir à partir des résultats de cette requête que la valeur du paramètre *MINIMUM_PROBABILITY* affecte les résultats retournés par la requête.  
   
  C'est la dernière étape du didacticiel Market Basket. Vous disposez à présent d'un ensemble de modèles à l'aide desquels il vous est possible de prévoir les produits que les clients sont susceptibles d'acheter en même temps.  
   
- Pour savoir comment utiliser DMX dans un autre scénario prédictif, consultez [Bike Buyer DMX Tutorial](../../2014/tutorials/bike-buyer-dmx-tutorial.md).  
+ Pour en savoir plus sur l’utilisation de DMX dans un autre scénario prédictif, consultez le [didacticiel DMX Buyer](../../2014/tutorials/bike-buyer-dmx-tutorial.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemples de requêtes de modèle d'association](../../2014/analysis-services/data-mining/association-model-query-examples.md)   
- [Interface de requête d’exploration de données](../../2014/analysis-services/data-mining/data-mining-query-tools.md)  
+ [Exemples de requêtes de modèle d’association](../../2014/analysis-services/data-mining/association-model-query-examples.md)   
+ [Interface de requête d'exploration de données](../../2014/analysis-services/data-mining/data-mining-query-tools.md)  
   
   

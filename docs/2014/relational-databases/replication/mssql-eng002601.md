@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a3994aa8a442f0ec1522bdf2314e0d6023e94bcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667063"
 ---
-# <a name="mssqleng002601"></a>MSSQL_ENG002601
+# <a name="mssql_eng002601"></a>MSSQL_ENG002601
     
 ## <a name="message-details"></a>Détails du message  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|2601|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|2601|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique|N/A|  
-|Texte du message|Impossible d’insérer une ligne de clé en double dans l’objet '%.*ls' avec un index unique '%.\*ls'.|  
+|Texte du message|Impossible d’insérer une ligne de clé en double dans l’objet '%1!' avec un index unique '%.\*ls'.|  
   
 ## <a name="explanation"></a>Explication  
  C'est une erreur générale qui peut être déclenchée qu'une base de données soit répliquée ou non. Dans les bases de données répliquées, l'erreur est généralement déclenchée car les clés primaires n'ont pas été gérés de manière appropriée à travers la topologie. Dans un environnement distribué, il est primordial de s'assurer que la même valeur n'est pas insérée dans une colonne de clé primaire ou toute autre colonne unique sur plus d'un seul nœud. Les raisons peuvent être les suivantes :  
@@ -41,7 +41,7 @@ ms.locfileid: "62667063"
   
 -   Une table avec une colonne d'identité est utilisée, mais la colonne n'est par gérée de façon appropriée.  
   
--   Dans la réplication de fusion, cette erreur peut également se produire lors d’une insertion dans la table système **MSmerge_contents**; l’erreur déclenchée est similaire à : Impossible d’insérer une ligne de clé en double dans l’objet « MSmerge_contents » avec un index unique « ucl1SycContents ».  
+-   Dans la réplication de fusion, cette erreur peut également se produite lors d'une insertion dans une table système **MSmerge_contents**; l'erreur déclenchée est similaire à : impossible d'insérer une ligne de clé dupliquée dans l'objet « MSmerge_contents » d'index unique « ucl1SycContents ».  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
  L'action requise dépend de la raison du déclenchement de l'erreur :  
@@ -60,7 +60,7 @@ ms.locfileid: "62667063"
   
 -   L'erreur se produit pendant l'insertion dans une table système **MSmerge_contents**.  
   
-     Cette erreur peut se produire en raison d'une valeur incorrecte pour la propriété du filtre de jointure **join_unique_key**. Cette propriété doit être définie avec la valeur TRUE seulement si la colonne de jointure dans la table parente est unique. Si la propriété est définie avec la valeur TRUE mais que la colonne n'est pas unique, cette erreur est déclenchée. Pour plus d’informations sur la définition de cette propriété, consultez [définir et modifier un Join Filter Between Merge Articles](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+     Cette erreur peut se produire en raison d'une valeur incorrecte pour la propriété du filtre de jointure **join_unique_key**. Cette propriété doit être définie avec la valeur TRUE seulement si la colonne de jointure dans la table parente est unique. Si la propriété est définie avec la valeur TRUE mais que la colonne n'est pas unique, cette erreur est déclenchée. Pour plus d'informations sur la définition de cette propriété, consultez [Définir et modifier un filtre de jointure entre des articles de fusion](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des événements &#40;réplication&#41;](errors-and-events-reference-replication.md)  

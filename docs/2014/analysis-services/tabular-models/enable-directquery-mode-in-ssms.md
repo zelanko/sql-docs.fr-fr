@@ -1,5 +1,5 @@
 ---
-title: Configurer l’accès de DirectQuery pour une base de données de modèle tabulaire ou de In-Memory | Microsoft Docs
+title: Configurer l’accès en mémoire ou DirectQuery pour une base de données model tabulaire | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 55a1a296e6a7b2a2155dea590be9321b22e73451
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067186"
 ---
 # <a name="configure-in-memory-or-directquery-access-for-a-tabular-model-database"></a>Configurer l'accès In-Memory ou DirectQuery pour une base de données model tabulaire
   Cette rubrique explique comment modifier les propriétés de connexion d'un modèle tabulaire qui a déjà été déployé afin d'activer l'utilisation du modèle en mode de requête directe.  
   
- Pour plus d’informations sur ces propriétés et la configuration pour les scénarios les plus courants, consultez [les scénarios de déploiement DirectQuery &#40;tabulaire SSAS&#41;](../directquery-deployment-scenarios-ssas-tabular.md).  
+ Pour plus d’informations sur ces propriétés et sur la configuration pour les scénarios les plus courants, consultez [DirectQuery Deployment scenarios &#40;SSAS tabulaire&#41;](../directquery-deployment-scenarios-ssas-tabular.md).  
   
-## <a name="requirements"></a>Configuration requise  
- L'activation de l'utilisation du mode de requête directe sur un modèle tabulaire est un processus qui implique plusieurs étapes. Il le faut :  
+## <a name="requirements"></a>Spécifications  
+ L'activation de l'utilisation du mode de requête directe sur un modèle tabulaire est un processus qui implique plusieurs étapes. Vous devez respecter les consignes suivantes :  
   
 1.  Vérifiez que le modèle n'a pas de fonctionnalités susceptibles de provoquer des erreurs de validation en mode de requête directe.  
   
@@ -41,9 +41,9 @@ ms.locfileid: "66067186"
   
 1.  Dans SQL Server Management Studio, ouvrez l'instance sur laquelle vous avez déployé le modèle.  
   
-2.  Dans l’Explorateur d’objets, cliquez sur le nom de la base de données de modèle, puis sélectionnez **propriétés**.  
+2.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur le nom de la base de données model, puis sélectionnez **Propriétés**.  
   
-3.  Recherchez la propriété, **DirectQueryMode**. Pour activer l'utilisation de la source de données relationnelles, cette propriété doit être définie avec l'une des valeurs suivantes :  
+3.  Recherchez la propriété **DirectQueryMode**. Pour activer l'utilisation de la source de données relationnelles, cette propriété doit être définie avec l'une des valeurs suivantes :  
   
     -   **DirectQuery**  
   

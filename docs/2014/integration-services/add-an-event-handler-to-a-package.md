@@ -1,5 +1,5 @@
 ---
-title: Ajoutez un gestionnaire d’événements à un Package | Microsoft Docs
+title: Ajouter un gestionnaire d’événements à un package | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 589d90b52647241b22929473efc9c6e54eb3b75f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062028"
 ---
 # <a name="add-an-event-handler-to-a-package"></a>Ajouter un gestionnaire d'événements à un package
@@ -38,7 +38,7 @@ ms.locfileid: "66062028"
   
 3.  Cliquez sur l’onglet **Gestionnaires d’événements** .  
   
-     ![Capture d’écran de l’aire de conception avec le gestionnaire d’événements](media/eventhandlers.gif "Capture d’écran de l’aire de conception avec le gestionnaire d’événements")  
+     ![Capture d'écran de l'aire de conception avec le gestionnaire d'événements](media/eventhandlers.gif "Capture d'écran de l'aire de conception avec le gestionnaire d'événements")  
   
      La création du flux de contrôle et des flux de données dans le gestionnaire d'événements est identique à la création du flux de contrôle et des flux de données dans un package. Pour plus d’informations, consultez [Flux de contrôle](control-flow/control-flow.md) et [Flux de données](data-flow/data-flow.md).  
   

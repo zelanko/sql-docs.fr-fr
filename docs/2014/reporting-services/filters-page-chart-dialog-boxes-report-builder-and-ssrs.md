@@ -18,20 +18,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 268ca47f33e8e2514b297c2bb2a30eb77b7a8f08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109140"
 ---
 # <a name="filters-page-chart-dialog-boxes-report-builder-and-ssrs"></a>Page Filtres, boîtes de dialogue Graphique (Générateur de rapports et SSRS)
-  Cliquez sur **filtres** dans le :  
+  Cliquez sur **filtres** dans :  
   
--   la boîte de dialogue**Propriétés du groupe de catégories** pour filtrer les points de données dans une série regroupée par catégorie ;  
+-   Boîte de dialogue **Propriétés du groupe de catégories** pour filtrer les points de données dans une série regroupée par catégorie.  
   
--   la boîte de dialogue**Propriétés du graphique** pour définir les options de filtrage du graphique ;  
+-   Boîte de dialogue **Propriétés du graphique** pour définir les options de filtrage du graphique.  
   
--   la boîte de dialogue**Propriétés du groupe de séries** pour limiter le nombre de séries dans le groupe sélectionné.  
+-   Boîte de dialogue **Propriétés du groupe de séries** pour limiter le nombre de séries dans le groupe sélectionné.  
   
 ## <a name="options"></a>Options  
  **Ajouter**  
@@ -47,9 +47,9 @@ ms.locfileid: "66109140"
  Cliquez pour déplacer le filtre sélectionné vers le bas dans la liste.  
   
  **Expression**  
- Tapez ou choisissez l'expression à laquelle vous souhaitez appliquer un filtre. Cliquez sur le bouton Expression (**fx**) pour modifier l’expression.  
+ Tapez ou choisissez l'expression à laquelle vous souhaitez appliquer un filtre. Cliquez sur le bouton Expression (**FX**) pour modifier l’expression.  
   
- **Data type**  
+ **Type de données**  
  Sélectionnez le type de données du champ **Valeur**. Lorsque cela est possible, sélectionnez un type de données correspondant à celui du champ **Expression**.  
   
  Les valeurs dans **Expression** et **Valeur** doivent s’évaluer au même type de données. Par exemple, si **Expression** a pour valeur un champ du type de données System.Int32 et que **Valeur** a pour valeur 7, sélectionnez **Entier**dans la liste déroulante.  

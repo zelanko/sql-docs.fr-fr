@@ -1,5 +1,5 @@
 ---
-title: Entrez la boîte de dialogue d’informations d’identification de Source de données | Microsoft Docs
+title: Boîte de dialogue entrer les informations d’identification de la source de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e7fa4658b0a784b854023975234218d1a58f936c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109234"
 ---
 # <a name="enter-data-source-credentials-dialog-box"></a>Boîte de dialogue Entrez les informations d'identification pour la source de données
-  Utilisez le **Entrez les informations d’identification de données Source** boîte de dialogue pour fournir votre [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] afin que vous pouvez récupérer des données à partir de la source de données des informations d’identification.  
+  Utilisez la boîte de dialogue **entrer les informations d’identification** de la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] source de données pour fournir vos informations d’identification afin que vous puissiez récupérer les données de la source de données.  
   
 ## <a name="options"></a>Options  
  **Nom d'utilisateur**  
@@ -31,7 +31,7 @@ ms.locfileid: "66109234"
  Tapez le mot de passe pour la connexion à la source de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Connexions de données, Sources de données et chaînes de connexion dans Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Connexions de données, sources de données et chaînes de connexion dans Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Aide sur le concepteur de rapports via la touche F1](tools/report-designer-f1-help.md)  
   
   

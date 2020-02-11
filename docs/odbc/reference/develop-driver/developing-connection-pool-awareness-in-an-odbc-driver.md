@@ -1,5 +1,5 @@
 ---
-title: Développement de la reconnaissance des pools de connexion dans un pilote ODBC | Microsoft Docs
+title: Développement de la reconnaissance des pools de connexions dans un pilote ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 02577370218a799faf86a7f8986859c415962f5a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67897736"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Développement de la reconnaissance des pools de connexions dans un pilote ODBC
-Cette rubrique décrit les détails du développement d’un pilote ODBC qui contient des informations sur la façon dont le pilote doit fournir des services de regroupement de connexion.  
+Cette rubrique décrit en détail le développement d’un pilote ODBC qui contient des informations sur la façon dont le pilote doit fournir des services de regroupement de connexions.  
   
-## <a name="enabling-driver-aware-connection-pooling"></a>Activer le regroupement de connexions prenant en charge de pilote  
- Un pilote doit implémenter les fonctions d’Interface de fournisseur de Service ODBC (SPI) suivantes :  
+## <a name="enabling-driver-aware-connection-pooling"></a>Activation du regroupement de connexions prenant en charge les pilotes  
+ Un pilote doit implémenter les fonctions SPI (Service Provider Interface) ODBC suivantes :  
   
 -   SQLSetConnectAttrForDbcInfo  
   
@@ -37,62 +37,62 @@ Cette rubrique décrit les détails du développement d’un pilote ODBC qui con
   
 -   SQLCleanupConnectionPoolID  
   
- Consultez [référence de l’Interface de fournisseur de Service ODBC (SPI)](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md) pour plus d’informations.  
+ Pour plus d’informations, consultez informations de référence sur l' [interface SPI (Service Provider Interface) ODBC](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md) .  
   
- Un pilote doit également implémenter les fonctions existantes suivantes afin que le pilote prenant en charge le regroupement peut être activé :  
+ Un pilote doit également implémenter les fonctions existantes suivantes afin que le regroupement reconnaissant les pilotes puisse être activé :  
   
-|Fonction|Fonctionnalités supplémentaires|  
+|Fonction|Fonctionnalités ajoutées|  
 |--------------|-------------------------|  
-|[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|Prise en charge le nouveau type de handle : SQL_HANDLE_DBC_INFO_TOKEN (voir la description ci-dessous).|  
-|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|Prise en charge le nouvel attribut de connexion uniquement : SQL_ATTR_DBC_INFO_TOKEN permettant de réinitialiser la connexion (voir la description ci-dessous).|  
+|[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|Prenez en charge le nouveau type de handle : SQL_HANDLE_DBC_INFO_TOKEN (voir la description ci-dessous).|  
+|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|Prise en charge du nouvel attribut de connexion Set-only : SQL_ATTR_DBC_INFO_TOKEN pour réinitialiser la connexion (voir la description ci-dessous).|  
   
 > [!NOTE]  
->  Fonctions déconseillées comme **SQLError** et **SQLSetConnectOption** ne sont pas pris en charge pour le regroupement de connexions prenant en charge de pilote.  
+>  Les fonctions déconseillées telles que **SQLError** et **SQLSetConnectOption** ne sont pas prises en charge pour le regroupement de connexions prenant en charge les pilotes.  
   
-## <a name="the-pool-id"></a>L’ID du Pool  
- L’ID du pool est un ID de spécifiques au pilote de longueur de pointeur pour représenter un groupe particulier de connexions qui peuvent être utilisés indifféremment. Étant donné un ensemble d’informations de connexion, un pilote doit pouvoir rapidement déduire l’ID de pool correspondant.  
+## <a name="the-pool-id"></a>L’ID du pool  
+ L’ID du pool est un ID spécifique au pilote de longueur du pointeur qui représente un groupe particulier de connexions qui peuvent être utilisées indifféremment. En raison d’un ensemble d’informations de connexion, un pilote doit être en mesure de déduire rapidement l’ID de pool correspondant.  
   
- Par exemple, l’ID du pool doit encoder les informations de nom et les informations d’identification du serveur. Toutefois, le nom de la base de données n’est pas nécessaire, car un pilote peut être en mesure de réutiliser une connexion, puis modifier la base de données dans moins de temps que la création d’une nouvelle connexion.  
+ Par exemple, l’ID du pool doit encoder le nom du serveur et les informations d’identification. Toutefois, le nom de la base de données n’est pas nécessaire car un pilote peut être en mesure de réutiliser une connexion, puis de modifier la base de données en moins de temps que d’établir une nouvelle connexion.  
   
- Un pilote doit définir un ensemble d’attributs de clé, qui constitueront l’ID de pool. La valeur de ces attributs clés peut provenir des attributs de connexion, de chaîne de connexion et de source de données. Dans le cas où il existe des conflits de ces sources, la stratégie de résolution existant, spécifiques au pilote doit être utilisée pour la compatibilité descendante.  
+ Un pilote doit définir un ensemble d’attributs de clé, qui comprendra l’ID du pool. La valeur de ces attributs clés peut provenir des attributs de connexion, de la chaîne de connexion et du DSN. En cas de conflit dans ces sources, la stratégie de résolution propre au pilote existante doit être utilisée pour la compatibilité descendante.  
   
- Le Gestionnaire de pilotes utilise un autre pool pour différents ID de pool. Toutes les connexions dans le même pool sont réutilisables. Le Gestionnaire de pilotes ne seront jamais réutiliser une connexion avec un ID de pool différent.  
+ Le gestionnaire de pilotes utilisera un pool différent pour les différents ID de pool. Toutes les connexions dans le même pool sont réutilisables. Le gestionnaire de pilotes ne réutilisera jamais une connexion avec un ID de pool différent.  
   
- Par conséquent pilotes doivent affecter un ID de pool unique pour chaque groupe de connexions avec la même valeur dans leurs attributs de clé définies. Si un pilote utilise le même ID de pool pour les deux connexions avec des valeurs différentes dans leurs attributs de clé, le Gestionnaire de pilotes seront toujours placez-les dans le même pool (le Gestionnaire de pilotes ne sait rien sur les attributs de clé spécifiques au pilote). Cela signifie que le pilote a besoin signaler au Gestionnaire de pilote qui n’est pas réutilisable à l’intérieur d’une connexion avec un autre ensemble d’attributs clés [sqlrateconnection, fonction](../../../odbc/reference/syntax/sqlrateconnection-function.md). Cela peut réduire les performances, et cela n’est pas recommandé.  
+ Par conséquent, les pilotes doivent affecter un ID de pool unique pour chaque groupe de connexions ayant la même valeur dans leurs attributs de clé définis. Si un pilote utilise le même ID de pool pour deux connexions avec des valeurs différentes dans leurs attributs de clé, le gestionnaire de pilotes les placera toujours dans le même pool (le gestionnaire de pilotes ne sait rien des attributs de clé spécifiques au pilote). Cela signifie que le pilote doit signaler au gestionnaire de pilotes qu’une connexion avec un ensemble différent d’attributs de clé n’est pas réutilisable dans la [fonction SQLRateConnection](../../../odbc/reference/syntax/sqlrateconnection-function.md). Cela peut réduire les performances, ce qui n’est pas recommandé.  
   
- Le Gestionnaire de pilotes réutilise pas une connexion allouée à partir d’un autre environnement de pilote, même si toutes les informations de connexion correspond à. Le Gestionnaire de pilotes est destiné à un autre pool autre environnement, même lorsque les connexions ont le même ID de pool. Par conséquent, l’ID du pool est propre à son environnement pilote.  
+ Le gestionnaire de pilotes ne réutilise pas une connexion allouée à partir d’un autre environnement de pilote, même si toutes les informations de connexion correspondent. Le gestionnaire de pilotes utilise un autre pool pour différents environnements, même lorsque les connexions ont le même ID de pool. Par conséquent, l’ID de pool est local à son environnement de pilote.  
   
- La fonction permettant d’obtenir l’ID du pool à partir du pilote est [sqlgetpoolid, fonction](../../../odbc/reference/syntax/sqlgetpoolid-function.md).  
+ La fonction permettant d’obtenir l’ID du pool à partir du pilote est [SQLGetPoolID](../../../odbc/reference/syntax/sqlgetpoolid-function.md).  
   
 ## <a name="the-connection-rating"></a>L’évaluation de la connexion  
- Par rapport à l’établissement d’une nouvelle connexion, vous pouvez obtenir de meilleures performances en réinitialisant certaines informations de connexion (par exemple, la base de données) dans une connexion regroupée. Par conséquent, vous souhaiterez peut-être pas le nom de base de données dans votre jeu d’attributs de clé. Sinon, vous pouvez avoir un pool distinct pour chaque base de données, qui ne peut être appropriée dans les applications de niveau intermédiaire, où les clients utilisent différentes chaînes de connexion différents.  
+ Par rapport à l’établissement d’une nouvelle connexion, vous pouvez obtenir de meilleures performances en réinitialisant certaines informations de connexion (telles que la base de données) dans une connexion regroupée. Par conséquent, il est possible que vous ne souhaitiez pas que le nom de la base de données se trouve dans votre ensemble d’attributs de clé. Dans le cas contraire, vous pouvez avoir un pool distinct pour chaque base de données, ce qui peut ne pas être correct dans les applications de niveau intermédiaire, où les clients utilisent différentes chaînes de connexion.  
   
- Chaque fois que vous réutilisez une connexion qui a une incompatibilité d’attribut, vous devez réinitialiser les attributs qui ne correspondent pas, en fonction de la nouvelle requête de l’application, afin que la connexion retournée est identique à la demande d’application (voir la discussion de l’attribut SQL_ATTR _DBC_INFO_TOKEN dans [fonction SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59368)). Toutefois, la réinitialisation de ces attributs peut diminuer les performances. Par exemple, la réinitialisation d’une base de données nécessite un appel de réseau au serveur. Par conséquent, réutiliser une connexion qui est parfaitement mis en correspondance, si celle-ci est disponible.  
+ Chaque fois que vous réutilisez une connexion qui a des incompatibilités d’attributs, vous devez réinitialiser les attributs incompatibles en fonction de la nouvelle demande de l’application, afin que la connexion retournée soit identique à celle de la demande d’application (voir la discussion de l’attribut SQL_ATTR_DBC_INFO_TOKEN dans la [fonction SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59368)). Toutefois, la réinitialisation de ces attributs peut réduire les performances. Par exemple, la réinitialisation d’une base de données nécessite un appel réseau vers le serveur. Par conséquent, réutilisez une connexion qui est parfaitement mise en correspondance, si celle-ci est disponible.  
   
- Une fonction de contrôle d’accès dans le pilote peut évaluer une connexion existante avec une nouvelle demande de connexion. Par exemple, la fonction de contrôle d’accès du pilote peut déterminer :  
+ Une fonction d’évaluation dans le pilote peut évaluer une connexion existante avec une nouvelle demande de connexion. Par exemple, la fonction Rating du pilote peut déterminer les éléments suivants :  
   
--   Si la connexion existante est parfaitement mis en correspondance avec la demande.  
+-   Si la connexion existante est parfaitement mise en correspondance avec la requête.  
   
--   S’il existe uniquement certains non significatifs incompatibilités, telles que le délai de connexion, qui ne nécessitent pas de communication avec le serveur à réinitialiser.  
+-   S’il n’existe que des incompatibilités non significatives, telles que le délai de connexion, qui ne nécessitent pas de communication avec le serveur pour être réinitialisé.  
   
--   S’il existe certains attributs incompatibles qui nécessitent une communication avec le serveur à réinitialiser mais entraînent encore de meilleures performances que l’établissement d’une nouvelle connexion.  
+-   S’il existe des attributs incompatibles qui requièrent une communication avec le serveur pour être réinitialisés, mais qui continueraient à améliorer les performances par rapport à l’établissement d’une nouvelle connexion.  
   
--   Si l’incompatibles s’est produite pour un attribut qui prend beaucoup de temps à réinitialiser (le développeur du pilote peut prendre en compte l’ajout de cet attribut dans l’ensemble des attributs de clé, qui est utilisé pour générer l’ID du pool).  
+-   Si le problème s’est produit pour un attribut qui est très long à réinitialiser (le développeur du pilote peut envisager d’ajouter cet attribut dans le jeu d’attributs de clé, qui est utilisé pour générer l’ID de pool).  
   
- Un score compris entre 0 et 100 est possible, où 0 signifie ne réutilisez pas et 100 signifie que parfaitement mis en correspondance. [SQLRateConnection](../../../odbc/reference/syntax/sqlrateconnection-function.md) est la fonction d’évaluation d’une connexion.  
+ Un score compris entre 0 et 100 est possible, où 0 signifie qu’il n’y a pas de réutilisation et que 100 signifie une correspondance parfaite. [SQLRateConnection](../../../odbc/reference/syntax/sqlrateconnection-function.md) est la fonction permettant d’évaluer une connexion.  
   
-## <a name="new-odbc-handle---sqlhandledbcinfotoken"></a>Nouveau Handle ODBC - SQL_HANDLE_DBC_INFO_TOKEN  
- Pour prendre en charge le regroupement de connexions prenant en charge les pilotes, le pilote a besoin des informations de connexion pour calculer l’ID de Pool. Le pilote doit également les informations de connexion à comparer les nouvelles demandes de connexion avec les connexions dans le pool.  Chaque fois qu’aucune connexion dans le pool ne peut être réutilisée, le pilote doit établir une nouvelle connexion, ce qui nécessite des informations de connexion.  
+## <a name="new-odbc-handle---sql_handle_dbc_info_token"></a>Nouveau handle ODBC-SQL_HANDLE_DBC_INFO_TOKEN  
+ Pour prendre en charge le regroupement de connexions prenant en charge les pilotes, le pilote a besoin des informations de connexion pour calculer l’ID du pool. Le pilote a également besoin des informations de connexion pour comparer les nouvelles demandes de connexion aux connexions dans le pool.  Chaque fois qu’aucune connexion dans le pool ne peut être réutilisée, le pilote doit établir une nouvelle connexion, ce qui nécessite des informations de connexion.  
   
- Dans la mesure où les informations de connexion peuvent provenir de plusieurs sources (chaîne de connexion, les attributs de connexion et DSN), le pilote peut-être analyser la chaîne de connexion et de résoudre le conflit entre ces sources dans chacun de l’appel de fonction ci-dessus.  
+ Étant donné que les informations de connexion peuvent provenir de plusieurs sources (chaîne de connexion, attributs de connexion et DSN), le pilote peut être amené à analyser la chaîne de connexion et à résoudre le conflit entre ces sources dans chacun des appels de fonction ci-dessus.  
   
- Par conséquent, un nouveau handle ODBC est introduit : SQL_HANDLE_DBC_INFO_TOKEN. Avec SQL_HANDLE_DBC_INFO_TOKEN, un pilote est inutile analyser la chaîne de connexion et de résoudre les conflits dans les informations de connexion plusieurs fois. Dans la mesure où il s’agit d’une structure de données spécifique au pilote, le pilote peut stocker des données telles que les informations de connexion ou ID de pool.  
+ Par conséquent, un nouveau descripteur ODBC est introduit : SQL_HANDLE_DBC_INFO_TOKEN. Avec SQL_HANDLE_DBC_INFO_TOKEN, un pilote n’a pas besoin d’analyser la chaîne de connexion et de résoudre plusieurs fois les conflits dans les informations de connexion. Étant donné qu’il s’agit d’une structure de données spécifique au pilote, le pilote peut stocker des données telles que des informations de connexion ou un ID de pool.  
   
- Ce handle est uniquement utilisé comme une interface entre le Gestionnaire de pilotes et le pilote. Une application ne peut pas allouer ce handle directement.  
+ Ce descripteur est utilisé uniquement en tant qu’interface entre le gestionnaire de pilotes et le pilote. Une application ne peut pas allouer directement ce descripteur.  
   
- Handle parent de ce handle est de type SQL_HANDLE_ENV, ce qui signifie que le pilote peut obtenir les informations d’environnement à partir du handle HENV lors de la résolution des informations de connexion.  
+ Le handle parent de ce descripteur est de type SQL_HANDLE_ENV, ce qui signifie que le pilote peut obtenir les informations d’environnement à partir du handle HENV pendant la résolution des informations de connexion.  
   
- Quand elle reçoit une nouvelle demande de connexion, le Gestionnaire de pilotes alloue un descripteur de type SQL_HANDLE_DBC_INFO_TOKEN pour stocker les informations de connexion, une fois que cela confirme que le pilote prend en charge la reconnaissance des pools de connexion. Une fois à l’aide de la poignée (mais avant de renvoyer certains codes différent de SQL_STILL_EXECUTING à partir de retour [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) ou [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)), le Gestionnaire de pilotes permettra de libérer le handle. Par conséquent, le handle est créé après l’appel de SQLAllocHandle et détruit après l’appel de SQLFreeHandle. Le Gestionnaire de pilotes garantit que le handle sera libéré avant de libérer son HENV associé (lorsque [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) ou [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) retourne une erreur).  
+ À chaque fois qu’il reçoit une nouvelle demande de connexion, le gestionnaire de pilotes alloue un descripteur de type SQL_HANDLE_DBC_INFO_TOKEN pour le stockage des informations de connexion, après avoir confirmé que le pilote prend en charge la reconnaissance des pools de connexions. Lorsque vous avez terminé d’utiliser le descripteur (mais avant de retourner des codes de retour autres que SQL_STILL_EXECUTING de [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) ou [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)), le gestionnaire de pilotes libère le descripteur. Par conséquent, le handle est créé après l’appel SQLAllocHandle et détruit après l’appel de SQLFreeHandle. Le gestionnaire de pilotes garantit que le descripteur sera libéré avant de libérer son HENV associé (quand [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) ou [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) retourne une erreur).  
   
  Le pilote doit modifier les fonctions suivantes pour accepter le nouveau type de handle SQL_HANDLE_DBC_INFO_TOKEN :  
   
@@ -104,47 +104,47 @@ Cette rubrique décrit les détails du développement d’un pilote ODBC qui con
   
 4.  [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)  
   
- Le Gestionnaire de pilotes garantit que plusieurs threads n’utilisent pas le même handle SQL_HANDLE_DBC_INFO_TOKEN simultanément. Par conséquent, le modèle de synchronisation de ce handle peut être très simple à l’intérieur du pilote. Le Gestionnaire de pilotes ne prendra pas un verrou de l’environnement avant l’allocation et libération de SQL_HANDLE_DBC_INFO_TOKEN.  
+ Le gestionnaire de pilotes garantit que plusieurs threads n’utiliseront pas simultanément le même SQL_HANDLE_DBC_INFO_TOKEN descripteur. Par conséquent, le modèle de synchronisation de ce descripteur peut être très simple dans le pilote. Le gestionnaire de pilotes ne prend pas de verrou d’environnement avant d’allouer et de libérer des SQL_HANDLE_DBC_INFO_TOKEN.  
   
- Le Gestionnaire de pilotes **SQLAllocHandle** et **SQLFreeHandle** n’acceptera pas de ce nouveau type de handle.  
+ Le gestionnaire de pilotes **SQLAllocHandle** et **SQLFreeHandle** n’accepte pas ce nouveau type de handle.  
   
- SQL_HANDLE_DBC_INFO_TOKEN peut contenir des informations confidentielles telles que des informations d’identification. Par conséquent, un pilote doit effacer en toute sécurité de la mémoire tampon (à l’aide de [SecureZeroMemory](https://msdn.microsoft.com/library/windows/desktop/aa366877\(v=vs.85\).aspx)) qui contient les informations sensibles avant de libérer ce handle avec **SQLFreeHandle**. Chaque fois que le handle d’environnement d’une application est fermée, tous les pools de connexion associée va être fermées.  
+ SQL_HANDLE_DBC_INFO_TOKEN peut contenir des informations confidentielles telles que des informations d’identification. Par conséquent, un pilote doit effacer en toute sécurité la mémoire tampon (à l’aide de [SecureZeroMemory](https://msdn.microsoft.com/library/windows/desktop/aa366877\(v=vs.85\).aspx)) qui contient les informations sensibles avant de libérer ce handle avec **SQLFreeHandle**. Chaque fois qu’un descripteur d’environnement de l’application est fermé, tous les pools de connexions associés sont fermés.  
   
-## <a name="driver-manager-connection-pool-rating-algorithm"></a>Pool de connexions du Gestionnaire de pilotes Rating algorithme  
- Cette section décrit l’algorithme de classement pour le regroupement de connexions de gestionnaire de pilotes. Les développeurs de pilotes peuvent implémenter le même algorithme pour la compatibilité descendante. Cet algorithme ne peut pas être le mieux adapté. Vous devez affiner cette algorithme en fonction de votre implémentation (dans le cas contraire, il est inutile d’implémenter cette fonctionnalité).  
+## <a name="driver-manager-connection-pool-rating-algorithm"></a>Algorithme de classification du pool de connexions du gestionnaire de pilotes  
+ Cette section traite de l’algorithme d’évaluation pour le regroupement de connexions du gestionnaire de pilotes. Les développeurs de pilotes peuvent implémenter le même algorithme à des fins de compatibilité descendante. Cet algorithme n’est peut-être pas le meilleur. Vous devez affiner cet algorithme en fonction de votre implémentation (sinon, il n’y a aucune raison d’implémenter cette fonctionnalité).  
   
- Le Gestionnaire de pilotes retournera une évaluation intégrale à partir de 0 à 100 pour chaque connexion à partir du pool. 0 signifie que la connexion ne peuvent pas être réutilisée et 100 indique une correspondance de la solution idéale. Supposons que la demande de connexion est nommée hRequest et la connexion existante à partir du pool est nommée en tant que hCandidate. Si l’une des conditions suivantes a la valeur false, la connexion regroupée hCandidate ne peut pas être réutilisé pour hRequest (le Gestionnaire de pilotes affectera une évaluation égale à 0).  
+ Le gestionnaire de pilotes renvoie une évaluation intégrale comprise entre 0 et 100 pour chaque connexion à partir du pool. 0 signifie que la connexion ne peut pas être réutilisée et 100 indique une correspondance parfaite. Supposons que la demande de connexion est nommée hRequest et que la connexion existante à partir du pool est nommée hCandidate. Si l’une des conditions suivantes est false, la hCandidate de connexion regroupée ne peut pas être réutilisée pour hRequest (le gestionnaire de pilotes attribuera une évaluation de 0).  
   
--   hCandidate et hRequest proviennent de l’API de UNICODE (par exemple, SQLDriverConnectW) ou les API ANSI (par exemple, SQLDriverConnectA). (Pilotes UNICODE peuvent le comportement différent, étant donné les API ANSI et UNICODE API (voir l’attribut de connexion SQL_ATTR_ANSI_APP).)  
+-   hCandidate et hRequest proviennent de l’API UNICODE (telle que SQLDriverConnectW) ou de l’API ANSI (comme SQLDriverConnectA). (Les pilotes UNICODE peuvent avoir un comportement différent de l’API ANSI donnée et de l’API UNICODE (Voir l’attribut de connexion SQL_ATTR_ANSI_APP).)  
   
--   hCandidate et hRequest sont créés par la même fonction ; SQLDriverConnect ou SQLConnect.  
+-   hCandidate et hRequest sont créés par la même fonction. SQLDriverConnect ou SQLConnect.  
   
 -   La chaîne de connexion utilisée pour ouvrir hCandidate doit être identique à hRequest, lorsque SQLDriverConnect est utilisé.  
   
--   Le nom d’utilisateur ServerName (ou DSN), et le mot de passe utilisé pour ouvrir hCandidate doit être identique à celui utilisé pour ouvrir hRequest lorsque SQLConnect est utilisé.  
+-   Le nom de serveur (ou DSN), le nom d’utilisateur et le mot de passe utilisés pour ouvrir hCandidate doivent être les mêmes que ceux utilisés pour ouvrir hRequest lorsque SQLConnect est utilisé.  
   
--   L’identificateur de sécurité (SID) du thread actuel doit être le même que le SID est utilisé pour ouvrir hCandidate.  
+-   L’identificateur de sécurité (SID) du thread actuel doit être le même que le SID utilisé pour ouvrir hCandidate.  
   
--   Pour le pilote est coûteuse inscrire et désinscrire (consultez la discussion de SQL_DTC_TRANSITION_COST dans [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)), réutilisation *hRequest* ne doit pas nécessiter une inscription supplémentaire ou un unenlistment.  
+-   Pour le pilote qui est coûteux à inscrire et à désinscrire (voir la discussion de SQL_DTC_TRANSITION_COST dans [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)), la réutilisation de *hRequest* ne doit pas nécessiter d’inscription ou d’annulation d’inscription supplémentaire.  
   
- Le tableau suivant présente l’affectation de score pour différents scénarios.  
+ Le tableau suivant montre l’attribution du score pour différents scénarios.  
   
-|Comparaison sur des attributs de connexion entre la demande et de la connexion regroupée|Aucune inscription / unenlistment|Exiger l’inscription supplémentaire / Unenlistment|  
+|Comparaison des attributs de connexion entre la connexion regroupée et la demande|Aucune inscription/désinscription|Exiger une inscription/désinscription supplémentaire|  
 |---------------------------------------------------------------------------------------|-----------------------------------|----------------------------------------------|  
-|Catalogue (SQL_ATTR_CURRENT_CATALOG) est différent|60|50|  
+|Le catalogue (SQL_ATTR_CURRENT_CATALOG) est différent|60|50|  
 |Certains attributs de connexion sont différents, mais le catalogue est le même|90|70|  
-|Tous les attributs de connexion parfaitement mis en correspondance.|100|80|  
+|Tous les attributs de connexion sont parfaitement mis en correspondance|100|80|  
   
 ## <a name="sequence-diagram"></a>Diagramme de séquence  
- Ce diagramme de séquence montre le mécanisme de regroupement base décrit dans cette rubrique. Il affiche uniquement l’utilisation de [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) mais le [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) cas est similaire.  
+ Ce diagramme de séquence montre le mécanisme de regroupement de base décrit dans cette rubrique. Il illustre uniquement l’utilisation de [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) , mais le cas [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) est similaire.  
   
  ![Diagramme de séquence](../../../odbc/reference/develop-driver/media/odbc_seq_dia.gif "odbc_seq_dia")  
   
 ## <a name="state-diagram"></a>Diagramme d'état  
- Ce diagramme d’état indique l’objet info jeton de connexion, décrit dans cette rubrique. Le diagramme montre uniquement [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) mais le [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) cas est similaire. Étant donné que le Gestionnaire de pilotes devrez peut-être gérer les erreurs à tout moment, le Gestionnaire de pilotes peut appeler [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md) pour n’importe quel état.  
+ Ce diagramme d’état affiche l’objet de jeton d’informations de connexion, décrit dans cette rubrique. Le diagramme affiche uniquement [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) , mais le cas [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) est similaire. Étant donné que le gestionnaire de pilotes peut avoir besoin de gérer des erreurs à tout moment, le gestionnaire de pilotes peut appeler [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md) pour n’importe quel état.  
   
- ![Diagramme d’état](../../../odbc/reference/develop-driver/media/odbc_state_diagram.gif "odbc_state_diagram")  
+ ![Diagramme d’État](../../../odbc/reference/develop-driver/media/odbc_state_diagram.gif "odbc_state_diagram")  
   
 ## <a name="see-also"></a>Voir aussi  
- [Le regroupement de connexions prenant en charge de pilote](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
+ [Regroupement de connexions prenant en charge les pilotes](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Informations de référence sur l’interface SPI ODBC](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)

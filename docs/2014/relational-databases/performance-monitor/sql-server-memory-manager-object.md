@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 822cb494b7dce35ea965a2a53cab36785a38bc75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250628"
 ---
 # <a name="sql-server-memory-manager-object"></a>Objet SQLServer:Memory Manager
@@ -35,16 +35,16 @@ ms.locfileid: "63250628"
 |**Mémoire de connexion (Ko)**|Spécifie la quantité totale de mémoire dynamique utilisée par le serveur pour maintenir les connexions.|  
 |**Mémoire du cache de base de données (Ko)**|Spécifie la quantité de mémoire actuellement utilisée par le serveur pour le cache de la base de données.|  
 |**Mémoire disponible (Ko)**|Spécifie la quantité de mémoire allouée actuellement non utilisée par le serveur.|  
-|**Mémoire réservée de l'espace de travail (Ko)**|Spécifie la quantité totale de mémoire actuellement réservée à l'exécution de processus tels que les opérations de hachage, de tri, de copie en bloc et de créations d'index.|  
+|**Mémoire de l’espace de travail autorisée (Ko)**|Spécifie la quantité totale de mémoire actuellement réservée à l'exécution de processus tels que les opérations de hachage, de tri, de copie en bloc et de créations d'index.|  
 |**Blocs de verrous**|Spécifie le nombre actuel de blocs de verrous utilisés sur le serveur (mis à jour régulièrement). Un bloc de verrous représente une ressource individuelle verrouillée, comme une table, une page ou une ligne.|  
 |**Blocs de verrous alloués**|Spécifie le nombre actuel de blocs de verrous alloués. Au démarrage du serveur, le nombre de blocs de verrous alloués plus le nombre de blocs propriétaires de verrous alloués dépendent de l'option de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **de** . Si un plus grand nombre de blocs de verrous est nécessaire, cette valeur augmente.|  
-|**Mémoire des verrous (Ko)**|Spécifie la quantité totale de mémoire dynamique qu'utilise le serveur pour les verrous.|  
+|**Mémoire de verrouillage (Ko)**|Spécifie la quantité totale de mémoire dynamique qu'utilise le serveur pour les verrous.|  
 |**Blocs propriétaires de verrous**|Spécifie le nombre actuel de blocs propriétaires de verrous utilisés sur le serveur (mis à jour régulièrement). Un bloc propriétaire de verrous représente l'appropriation d'un objet par un verrou via un thread individuel. Par conséquent, si trois threads disposent chacun d'un verrou partagé sur une page, il y aura trois blocs propriétaires de verrous.|  
 |**Blocs propriétaires de verrous alloués**|Spécifie le nombre actuel de blocs propriétaires de verrous alloués. Au démarrage du serveur, le nombre de blocs propriétaires de verrous alloués plus le nombre de blocs de verrous alloués dépendent de l'option de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **de** . Si un plus grand nombre de blocs propriétaires de verrous est nécessaire, cette valeur augmente dynamiquement.|  
-|**Mémoire maximale de l'espace de travail (Ko)**|Indique la quantité maximale de mémoire disponible pour exécuter des processus, tels que les opérations de hachage, de tri, de copie en bloc et de création d'index.|  
-|**Demandes de mémoire satisfaites**|Spécifie le nombre total de processus qui ont acquis avec succès une allocation de mémoire de l'espace de travail.|  
-|**Demandes de mémoire en attente**|Spécifie le nombre total de processus en attente d'une allocation de mémoire de l'espace de travail.|  
-|**Mémoire de l'optimiseur (Ko)**|Spécifie la quantité totale de mémoire dynamique utilisée par le serveur pour l'optimisation des requêtes.|  
+|**Mémoire maximale de l’espace de travail (Ko)**|Indique la quantité maximale de mémoire disponible pour exécuter des processus, tels que les opérations de hachage, de tri, de copie en bloc et de création d'index.|  
+|**Allocations de mémoire en attente**|Spécifie le nombre total de processus qui ont acquis avec succès une allocation de mémoire de l'espace de travail.|  
+|**Allocations de mémoire en attente**|Spécifie le nombre total de processus en attente d'une allocation de mémoire de l'espace de travail.|  
+|**Mémoire de l’optimiseur (Ko)**|Spécifie la quantité totale de mémoire dynamique utilisée par le serveur pour l'optimisation des requêtes.|  
 |**Mémoire réservée du serveur (Ko)**|Indique la quantité de mémoire réservée par le serveur pour un usage futur. Ce compteur affiche la quantité actuellement inutilisée de **Mémoire réservée de l’espace de travail (Ko)** octroyée initialement.|  
 |**Mémoire du cache SQL (Ko)**|Spécifie la quantité totale de mémoire dynamique utilisée par le serveur pour le cache SQL dynamique.|  
 |**Mémoire détournée du serveur (Ko)**|Spécifie la quantité de mémoire utilisée par le serveur à d'autres fins que les pages de bases de données.|  
@@ -54,6 +54,6 @@ ms.locfileid: "63250628"
 ## <a name="see-also"></a>Voir aussi  
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](monitor-resource-usage-system-monitor.md)   
  [SQL Server, objet Gestionnaire de tampons](sql-server-buffer-manager-object.md)   
- [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)  
+ [sys. dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)  
   
   

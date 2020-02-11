@@ -14,16 +14,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c4a2f747192b1cddefeac256d4470a2b345305de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479947"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>Créer une vue d'abonnement (Master Data Services)
-  Créer une vue d’abonnement lorsque vous souhaitez créer une vue de vos données dans le [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de données pour une utilisation par des systèmes d’abonnement.  
+  Créez une vue d’abonnement lorsque vous souhaitez créer une vue de vos données dans la [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de données afin qu’elles soient utilisées par les systèmes d’abonnement.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Gestion de l'intégration** .  
@@ -36,18 +36,18 @@ ms.locfileid: "65479947"
   
 2.  Dans la barre de menus, cliquez sur **Créer des vues**.  
   
-3.  Sur le **vues d’abonnement** , cliquez sur **ajouter une vue d’abonnement**.  
+3.  Sur la page **vues d’abonnement** , cliquez sur Ajouter une vue d' **abonnement**.  
   
-4.  Dans le **créer une vue d’abonnement** volet, dans le **nom de vue d’abonnement** , tapez un nom pour la vue.  
+4.  Dans le volet **créer une vue d’abonnement** , dans la zone nom de la vue d' **abonnement** , tapez un nom pour la vue.  
   
 5.  Dans la liste **Modèle** , sélectionnez un modèle.  
   
-6.  Sélectionnez le **Version** ou **indicateur de Version** option, puis sélectionnez dans la liste correspondante.  
+6.  Sélectionnez l’option **version** ou **indicateur de version** , puis sélectionnez dans la liste correspondante.  
   
     > [!TIP]  
     >  Créez une vue d'abonnement selon un indicateur de version. Lorsque vous verrouillez une version, vous pouvez réaffecter l'indicateur à une version ouverte sans mettre à jour la vue d'abonnement.  
   
-7.  Sélectionnez le **entité** ou **hiérarchie dérivée** option, puis sélectionnez dans la liste correspondante.  
+7.  Sélectionnez l’option **entité** ou **hiérarchie dérivée** , puis sélectionnez dans la liste correspondante.  
   
 8.  Dans la liste **Format** , sélectionnez un format de vue d'abonnement.  
   

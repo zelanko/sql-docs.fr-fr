@@ -13,18 +13,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 16da6af99af021185c8965dccd087e1c8420e50a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107661"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>Boîte de dialogue Ouverture de session Reporting Services (Générateur de rapports)
   Utilisez la boîte de dialogue **Ouverture de session Reporting Services** pour fournir les informations d'identification nécessaires à la publication de rapports sur le serveur de rapports. Pour obtenir de l'aide sur ces informations d'identification, contactez l'administrateur de votre serveur de rapports.  
   
 ## <a name="options"></a>Options  
- **Server**  
- Affiche le nom du serveur de rapports. Par exemple, `http://localhost/reportserver`. Pour les serveurs de rapports qui utilisent un autre port que le port par défaut 80, incluez le numéro de port. Par exemple, `http://localhost:8080/reportserver`.  
+ **Serveur**  
+ Affiche le nom du serveur de rapports. Par exemple : `http://localhost/reportserver`. Pour les serveurs de rapports qui utilisent un autre port que le port par défaut 80, incluez le numéro de port. Par exemple : `http://localhost:8080/reportserver`.  
   
  **Nom d'utilisateur**  
  Tapez le nom d'utilisateur pour la connexion au service Web.  
@@ -33,6 +33,6 @@ ms.locfileid: "66107661"
  Tapez le mot de passe pour la connexion au service Web.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide du Générateur de rapports pour les boîtes de dialogue, les volets et les Assistants](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Aide Générateur de rapports pour les boîtes de dialogue, les volets et les assistants](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

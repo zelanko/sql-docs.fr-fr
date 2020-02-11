@@ -1,5 +1,5 @@
 ---
-title: Traitement des Options de la Page de propriétés (Gestionnaire de rapports) | Microsoft Docs
+title: Page de propriétés options de traitement (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f91cd8a93571b62f57933ff7556004f8c7b42a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108040"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>Page de propriétés Options de traitement (Gestionnaire de rapports)
@@ -48,22 +48,22 @@ ms.locfileid: "66108040"
   
  Une planification vous permet également de définir une fréquence d'expiration pour un rapport. Pour qu'un rapport mis en cache expire en fin de journée, par exemple, vous pouvez sélectionner une heure durant la nuit après laquelle la copie expire.  
   
- **Afficher ce rapport à partir d’un instantané d’exécution de rapport**  
+ **Effectuer le rendu de ce rapport à partir d'un instantané d'exécution de rapport**  
  Utilisez cette option pour récupérer un rapport qui été stocké comme un instantané au moment de la planification. Lorsque vous choisissez cette option, vous pouvez planifier l'exécution du traitement des données pendant les heures creuses. Contrairement aux copies mises en cache créées lorsqu'un utilisateur ouvre le rapport, un instantané est créé, puis actualisé, suivant une planification. Les instantanés n'expirent pas. Ils restent en service jusqu'à ce qu'ils soient remplacés par de nouvelles versions.  
   
  Les instantanés générés par les paramètres d'exécution de rapport ont les mêmes caractéristiques que les instantanés d'historique de rapport. La seule différence réside dans le fait qu'il n'existe qu'un seul instantané d'exécution de rapport et plusieurs instantanés d'historique de rapport. Les instantanés d'historique de rapport sont accessibles à partir de la page Historique du rapport, qui stocke de nombreuses instances d'un rapport à différents moments. Les utilisateurs ont accès aux instantanés d'exécution de rapport à partir des dossiers (comme pour les rapports actifs). Dans le cas d'instantanés d'exécution de rapport, rien n'indique aux utilisateurs que le rapport est un instantané.  
   
  Sélectionnez l'option connexe **Créer un instantané du rapport lorsque vous cliquez sur le bouton Appliquer de cette page** pour créer un instantané de rapport lorsque vous cliquez sur Appliquer. Ainsi, vous générez immédiatement l'instantané de rapport pour le rendre disponible avant l'heure de début planifiée.  
   
- **Délai d’exécution de rapport**  
+ **Délai d'expiration de l'exécution des rapports**  
  Spécifie si le traitement d'un rapport expire après un certain nombre de secondes. Si vous choisissez le paramètre par défaut, le paramètre du délai d'expiration spécifié dans la page Paramètres du site est utilisé pour le rapport.  
   
  Cette valeur s'applique au traitement du rapport sur le serveur de rapports. Elle ne définit aucun délai d'attente pour le traitement des données sur le serveur de base de données qui fournit les données pour le rapport. Toutefois, la valeur que vous spécifiez doit être suffisante pour terminer le traitement des données et du rapport. Le nombre pour le traitement du rapport commence lorsque le rapport est sélectionné et se termine lors de l'ouverture du rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir les propriétés de traitement d'un rapport](report-server/set-report-processing-properties.md)   
+ [Définir les propriétés de traitement d’un rapport](report-server/set-report-processing-properties.md)   
  [Mise en cache de rapports &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
  [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)   
- [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Aide F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

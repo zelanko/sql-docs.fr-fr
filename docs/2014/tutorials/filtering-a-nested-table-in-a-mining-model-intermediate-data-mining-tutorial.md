@@ -1,5 +1,5 @@
 ---
-title: Filtrage d’une Table imbriquée dans un modèle d’exploration de données (didacticiel d’exploration de données intermédiaire) | Microsoft Docs
+title: Filtrage d’une table imbriquée dans un modèle d’exploration de données (didacticiel sur l’exploration de données intermédiaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,65 +11,66 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f57d691587d658e968cd79cf4f4ab4731db29915
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63267479"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>Filtrage d'une table imbriquée dans un modèle d'exploration de données (Didacticiel sur l'exploration de données intermédiaire)
   Après avoir créé et exploré le modèle, vous décidez de vous concentrer sur un sous-ensemble des données des clients. Par exemple, vous pouvez souhaiter analyser uniquement les paniers qui contiennent un article spécifique ou les caractéristiques démographiques des clients qui n'ont rien acheté pendant une certaine période.  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] permet de filtrer les données utilisées dans un modèle d'exploration de données. Cette fonctionnalité est utile, car vous n’avez pas besoin configurer une nouvelle vue de source de données à utiliser des données différentes. Dans le didacticiel sur l'exploration de données de base, vous avez appris à filtrer des données provenant d'une table plate en appliquant des conditions à la table de cas. Au cours de cette tâche, vous allez créer un filtre qui s'applique à une table imbriquée.  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] permet de filtrer les données utilisées dans un modèle d'exploration de données. Cette fonctionnalité est utile, car vous n’avez pas besoin de configurer une nouvelle vue de source de données pour utiliser des données différentes. Dans le didacticiel sur l'exploration de données de base, vous avez appris à filtrer des données provenant d'une table plate en appliquant des conditions à la table de cas. Au cours de cette tâche, vous allez créer un filtre qui s'applique à une table imbriquée.  
   
-## <a name="filters-on-nested-vs-case-tables"></a>Filtres sur les tables imbriquées ou. Tables de cas  
+## <a name="filters-on-nested-vs-case-tables"></a>Filtres sur des tables imbriquées ou des tables de cas  
  Si votre vue de source de données contient une table de cas et une table imbriquée, à l'instar de la vue de source de données utilisée dans le modèle Association, vous pouvez effectuer un filtrage sur les valeurs de la table de cas, sur la présence ou l'absence d'une valeur dans la table imbriquée ou sur une combinaison des deux.  
   
  Au cours de cette tâche, vous allez d'abord effectuer une copie du modèle Association, puis ajouter les attributs IncomeGroup et Region au nouveau modèle associé, afin de pouvoir filtrer ces attributs dans la table de cas.  
   
 #### <a name="to-create-and-modify-a-copy-of-the-association-model"></a>Pour créer et modifier une copie du modèle Association  
   
-1.  Dans le **des modèles d’exploration de données** onglet de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], avec le bouton droit le `Association` de modèle, puis sélectionnez **nouveau modèle d’exploration de données**.  
+1.  Sous l' **onglet modèles d’exploration de données** de, cliquez `Association` avec le bouton droit sur le modèle, puis sélectionnez **nouveau modèle d’exploration**de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]données.  
   
-2.  Pour **Nom_modèle**, type `Association Filtered`. Pour **nom de l’algorithme**, sélectionnez **Microsoft Association Rules**. Cliquez sur **OK**.  
+2.  Pour le **nom**du modèle `Association Filtered`, tapez. Pour **nom de l’algorithme**, sélectionnez **règles d’association Microsoft**. Cliquez sur **OK**.  
   
-3.  Dans la colonne pour le modèle Association avec filtre, cliquez sur la ligne IncomeGroup et remplacez la valeur **ignorer** à **entrée**.  
+3.  Dans la colonne du modèle Association filtrée, cliquez sur la ligne IncomeGroup et remplacez la valeur **Ignorer** par **entrée**.  
   
  Ensuite, vous allez créer un filtre sur la table de cas dans le nouveau modèle Association. Le filtre va passer au modèle uniquement les clients inclus dans la région cible ou possédant le niveau de revenu cible. Ensuite, vous allez ajouter un deuxième jeu de conditions de filtre pour spécifier que le modèle utilise uniquement les clients dont les paniers ont contenu au moins un article.  
   
 #### <a name="to-add-a-filter-to-a-mining-model"></a>Pour ajouter un filtre à un modèle d'exploration de données  
   
-1.  Dans le **des modèles d’exploration de données** onglet, cliquez sur le modèle Association avec filtre et sélectionnez **définir le filtre de modèle**.  
+1.  Dans l’onglet **modèles d’exploration de données** , cliquez avec le bouton droit sur l’Association de modèle filtrée, puis sélectionnez définir le filtre de **modèle**.  
   
 2.  Dans la boîte de dialogue **Filtre de modèle** , cliquez sur la ligne supérieure dans la grille, dans la zone de texte **Colonne de la structure d'exploration de données** .  
   
-3.  Dans le **colonne de Structure d’exploration de données** zone de texte, sélectionnez IncomeGroup.  
+3.  Dans la zone de texte colonne de la **structure d’exploration de données** , sélectionnez IncomeGroup.  
   
      L'icône située à gauche de la zone de texte change pour indiquer que l'élément sélectionné est une colonne.  
   
-4.  Cliquez sur le **opérateur** zone de texte, puis sélectionnez le **=** opérateur dans la liste.  
+4.  Cliquez sur la zone de texte **opérateur** et **=** sélectionnez l’opérateur dans la liste.  
   
-5.  Cliquez sur le **valeur** zone de texte et tapez `High` dans la zone.  
+5.  Cliquez sur la zone de texte **valeur** , `High` puis tapez dans la zone.  
   
 6.  Cliquez sur la ligne suivante dans la grille.  
   
-7.  Cliquez sur le **et/ou** zone de texte dans la ligne suivante de la grille et sélectionnez **ou**.  
+7.  Cliquez sur la zone de texte **and/or** dans la ligne suivante de la grille, puis sélectionnez **ou**.  
   
-8.  Dans le **colonne de Structure d’exploration de données** zone de texte, sélectionnez IncomeGroup. Dans le **valeur** zone de texte, tapez `Moderate`.  
+8.  Dans la zone de texte colonne de la **structure d’exploration de données** , sélectionnez IncomeGroup. Dans la zone de texte **valeur** , `Moderate`tapez.  
   
-     La condition de filtre que vous avez créé est automatiquement ajoutée à la **Expression** zone de texte et doit apparaître comme suit :  
+     La condition de filtre que vous avez créée est automatiquement ajoutée à la zone de texte de l' **expression** et doit apparaître comme suit :  
   
      `[IncomeGroup] = 'High' OR [IncomeGroup] = 'Moderate'`  
   
-9. Cliquez sur la ligne suivante dans la grille, en laissant l’opérateur en tant que la valeur par défaut, **AND**.  
+9. Cliquez sur la ligne suivante dans la grille, en laissant l’opérateur comme valeur par défaut **et**.  
   
-10. Pour **opérateur**, laissez la valeur par défaut, **Contains**. Cliquez sur le **valeur** zone de texte.  
+10. Pour **opérateur**, laissez la valeur par défaut, **contient**. Cliquez sur la zone de texte **valeur** .  
   
-11. Dans le **filtre** boîte de dialogue, dans la première ligne sous **colonne de Structure d’exploration de données**, sélectionnez `Model`.  
+11. Dans la boîte de dialogue **filtre** , dans la première ligne sous colonne de la structure `Model`d’exploration de **données**, sélectionnez.  
   
-12. Pour **opérateur**, sélectionnez **IS NOT NULL**. Laissez le **valeur** zone de texte vide. Cliquez sur **OK**.  
+12. Pour l' **opérateur**, SELECT **n’a pas la valeur null**. Laissez la zone de texte **valeur** vide. Cliquez sur **OK**.  
   
-     La condition de filtre dans le **Expression** zone de texte de la **filtre de modèle** boîte de dialogue est automatiquement mis à jour pour inclure la nouvelle condition sur la table imbriquée. L'expression complétée se présente comme suit :  
+     La condition de filtre dans la zone de texte **expression** de la boîte de dialogue **filtre de modèle** est automatiquement mise à jour pour inclure la nouvelle condition sur la table imbriquée. L'expression complétée se présente comme suit :  
   
      `[IncomeGroup] = 'High' OR [IncomeGroup] = 'Moderate' AND EXISTS SELECT * FROM [vAssocSeqLineItems] WHERE [Model] <> NULL).`  
   
@@ -77,17 +78,17 @@ ms.locfileid: "63267479"
   
 #### <a name="to-enable-drillthrough-and-to-process-the-filtered-model"></a>Pour activer l'extraction et traiter le modèle filtré  
   
-1.  Dans le **des modèles d’exploration de données** onglet, cliquez sur le `Association Filtered` de modèle, puis sélectionnez **propriétés**.  
+1.  Dans l’onglet **modèles d’exploration de données** , cliquez `Association Filtered` avec le bouton droit sur le modèle, puis sélectionnez **Propriétés**.  
   
-2.  Modifier le **AllowDrillThrough** propriété **True**.  
+2.  Remplacez la valeur de la propriété **AllowDrillThrough** par **true**.  
   
-3.  Cliquez sur le `Association Filtered` modèle d’exploration de données, puis sélectionnez **modèle de processus**.  
+3.  Cliquez avec le bouton `Association Filtered` droit sur le modèle d’exploration de données, puis sélectionnez **traiter le modèle**.  
   
-4.  Cliquez sur **Oui** dans le message d’erreur pour déployer le nouveau modèle pour le [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de données.  
+4.  Cliquez sur **Oui** dans le message d’erreur pour déployer le nouveau modèle [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans la base de données.  
   
-5.  Dans le **traiter la Structure d’exploration de données** boîte de dialogue, cliquez sur **exécuter**.  
+5.  Dans la boîte de dialogue **traiter la structure d’exploration de données** , cliquez sur **exécuter**.  
   
-6.  Lorsque le traitement est terminé cliquez sur **fermer** pour quitter le **progression du traitement** boîte de dialogue, puis cliquez sur **fermer** pour quitter le **traiter la Structure d’exploration de données**  boîte de dialogue.  
+6.  Une fois le traitement terminé, cliquez sur **Fermer** pour quitter la boîte de dialogue **État d’avancement** du traitement, puis cliquez de nouveau sur **Fermer** pour quitter la boîte de dialogue traiter la structure d' **exploration de données** .  
   
  Vous pouvez vérifier que le modèle filtré contient moins de cas que le modèle d'origine en utilisant la visionneuse de l'arborescence de contenu générique Microsoft et en recherchant la valeur de NODE_SUPPORT.  
   
@@ -107,10 +108,10 @@ ms.locfileid: "63267479"
 >  Vous ne pouvez pas utiliser l'opérateur LIKE dans un filtre de table imbriquée.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Prédiction d’Associations &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/predicting-associations-intermediate-data-mining-tutorial.md)  
+ [Prédiction d’associations &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/predicting-associations-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Syntaxe de filtre de modèle et exemples &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [Syntaxe de filtre de modèle et exemples &#40;Analysis Services d’exploration de données&#41;](../../2014/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
+ [Filtres pour les modèles d’exploration de données &#40;Analysis Services d’exploration de données&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

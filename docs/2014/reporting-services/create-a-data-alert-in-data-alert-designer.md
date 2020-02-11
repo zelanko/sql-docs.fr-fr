@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e2b54bbbd6b989890c1d31a545c95117c4b6cbe2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109705"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Créer une alerte de données dans le Concepteur d’alertes
@@ -35,12 +35,12 @@ ms.locfileid: "66109705"
   
      L’image suivante affiche le menu **Actions** .  
   
-     ![Ouvrir le Concepteur d’alertes à partir de la bibliothèque SharePoint](media/rs-openalertdesigneriw.gif "Ouvrir le Concepteur d’alertes à partir de la bibliothèque SharePoint")  
+     ![Ouvrir le Concepteur d'alertes à partir de la bibliothèque SharePoint](media/rs-openalertdesigneriw.gif "Ouvrir le Concepteur d'alertes à partir de la bibliothèque SharePoint")  
   
      Le Concepteur d'alertes de données s'ouvre et affiche les 100 premières lignes du premier flux de données que le rapport génère dans une table.  
   
     > [!NOTE]  
-    >  Si vous ne voyez pas l’option **Nouvelle alerte de données** , le service d’alerte n’est pas configuré sur le site SharePoint ou l’édition d’ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’inclut pas les alertes de données. Pour plus d’informations, consultez [Service Reporting Services SharePoint et applications de service](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md).  
+    >  Si vous ne voyez pas l’option **Nouvelle alerte de données** , le service d’alerte n’est pas configuré sur le site SharePoint ou l’édition d’ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’inclut pas les alertes de données. Pour plus d’informations, consultez [Services Reporting Services SharePoint et applications de service](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md).  
     >   
     >  Si l’option **Nouvelle alerte de données** est grisée, la source de données du rapport est configurée pour utiliser les informations d’identification de sécurité intégrée ou pour demander les informations d’identification. Pour rendre l’option **Nouvelle alerte de données** disponible, vous devez mettre à jour la source de données afin d’utiliser les informations d’identification stockées ou aucune information d’identification.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66109705"
   
      Selon le type de données de la colonne sélectionnée, des opérateurs de comparaison différents apparaissent. Si la colonne a un type de données « date », l'icône du calendrier s'affiche en regard de la valeur de seuil pour la règle. Vous pouvez entrer des données en cliquant sur une date dans le calendrier ou en tapant la date.  
   
-     Le concepteur d’alertes de données offre deux modes de comparaison : **Mode de saisie de valeur** et **Mode de sélection de champ**. Le mode par défaut est **Mode de saisie de valeur**. Vous pouvez ajouter des clauses OR uniquement quand vous travaillez en **Mode de saisie de valeur** et vous utilisez la comparaison **is** .  
+     Le Concepteur d’alertes de données fournit deux modes de comparaison : **Mode de saisie de valeur** et **Mode de sélection de champ**. Le mode par défaut est **Mode de saisie de valeur**. Vous pouvez ajouter des clauses OR uniquement quand vous travaillez en **Mode de saisie de valeur** et vous utilisez la comparaison **is** .  
   
 9. Pour ajouter une clause OR, cliquez sur la flèche vers le bas, puis sur **Mode de saisie de valeur**.  
   
@@ -116,8 +116,8 @@ ms.locfileid: "66109705"
 22. Cliquez sur **Enregistrer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteur d'alertes de données](../../2014/reporting-services/data-alert-designer.md)   
- [Gestionnaire des alertes de données pour les administrateurs d'alertes](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+ [Concepteur d’alertes de données](../../2014/reporting-services/data-alert-designer.md)   
+ [Gestionnaire des alertes de données pour les administrateurs d’alertes](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Alertes de données Reporting Services](../ssms/agent/alerts.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : Spécification de la directive XMLTEXT | Microsoft Docs'
+title: 'Exemple : spécification de la directive XMLTEXT | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 56ccb1e8a25b7d9f138c2900422d301919fef039
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67597545"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>Exemple : Spécification de la directive XMLTEXT
+# <a name="example-specifying-the-xmltext-directive"></a>Exemple : spécification de la directive XMLTEXT
   Cet exemple illustre l'adressage des informations contenues dans la colonne de dépassement de capacité à l'aide de la directive `XMLTEXT` dans une instruction `SELECT` utilisant le mode EXPLICIT.  
   
  Soit la table `Person` . Cette table possède une colonne nommée `Overflow` , qui stocke les données non consommées du document XML.  
@@ -46,13 +46,13 @@ FROM Person
 FOR XML EXPLICIT;  
 ```  
   
- Dans le document XML obtenu :  
+ Dans le document XML obtenu :  
   
 -   Comme *AttributeName* n’est pas spécifié pour la colonne `Overflow` et que la directive `xmltext` est spécifiée, les attributs de l’élément <`overflow`> sont ajoutés à la liste d’attributs de l’élément englobant <`Parent`>.  
   
 -   En raison du conflit entre l’attribut `PersonID` de l’élément <`xmltext`> et l’attribut `PersonID` extrait du même niveau d’éléments, l’attribut de l’élément <`xmltext`> est ignoré, même si `PersonID` a la valeur NULL. En général, un attribut remplace un attribut de même nom dans les données en excès.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  `<Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>`  
   
@@ -86,7 +86,7 @@ FROM Person
 FOR XML EXPLICIT;  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  `<Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>`  
   
@@ -100,7 +100,7 @@ FOR XML EXPLICIT;
   
  Si *AttributeName* est spécifié avec la directive `xmltext`, les attributs de l’élément <`overflow`> sont ajoutés en tant qu’attributs des sous-éléments de l’élément englobant <`Parent`>. Le nom spécifié pour *AttributeName* devient le nom du sous-élément.  
   
- Dans cette requête, *AttributeName*, <`overflow`>, est spécifié avec la `xmltext` directive :  
+ Dans cette requête, *AttributeName*, <`overflow`>, est spécifié en même temps `xmltext` que la directive :  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  
@@ -112,7 +112,7 @@ FROM Person
 FOR XML EXPLICIT  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  `<Parent PersonID="P1" PersonName="Joe">`  
   
@@ -136,7 +136,7 @@ FOR XML EXPLICIT
   
  `</Parent>`  
   
- Dans l’élément de requête suivant, l’argument *directive* est spécifié pour l’attribut `PersonName`. Par conséquent, `PersonName` est ajouté en tant que sous-élément de l'élément englobant <`Parent`>. Les attributs de <`xmltext`> sont néanmoins ajoutés à l'élément englobant <`Parent`>. Le contenu de l'élément <`overflow`>, les sous-éléments, sont ajoutés avant les autres sous-éléments des éléments englobants <`Parent`>.  
+ Dans l’élément de requête suivant, l’argument *directive* est spécifié pour l’attribut `PersonName` . Par conséquent, `PersonName` est ajouté en tant que sous-élément de l'élément englobant <`Parent`>. Les attributs de <`xmltext`> sont néanmoins ajoutés à l'élément englobant <`Parent`>. Le contenu de l'élément <`overflow`>, les sous-éléments, sont ajoutés avant les autres sous-éléments des éléments englobants <`Parent`>.  
   
 ```  
 SELECT 1      AS Tag, NULL as parent,  
@@ -147,7 +147,7 @@ FROM Person
 FOR XML EXPLICIT;  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  `<Parent PersonID="P1" attr1="data">content<PersonName>Joe</PersonName>`  
   
@@ -167,7 +167,7 @@ FOR XML EXPLICIT;
   
  `</Parent>`  
   
- Si les données de la colonne `XMLTEXT` contiennent des attributs sur l'élément racine, ces attributs ne sont pas montrés dans le schéma de données XML et l'analyseur MSXML ne valide pas le fragment de document XML obtenu. Exemple :  
+ Si les données de la colonne `XMLTEXT` contiennent des attributs sur l'élément racine, ces attributs ne sont pas montrés dans le schéma de données XML et l'analyseur MSXML ne valide pas le fragment de document XML obtenu. Par exemple :  
   
 ```  
 SELECT 1 AS Tag,  

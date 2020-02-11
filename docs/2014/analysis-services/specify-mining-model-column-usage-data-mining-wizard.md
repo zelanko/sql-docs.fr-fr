@@ -1,5 +1,5 @@
 ---
-title: Spécifier l’utilisation des colonnes (Assistant exploration de données) modèle d’exploration de données | Microsoft Docs
+title: Spécifier l’utilisation des colonnes du modèle d’exploration de données (Assistant Exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb9f57e7918e7ef283255bf8ff947cc4493e9a87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068360"
 ---
 # <a name="specify-mining-model-column-usage-data-mining-wizard"></a>Spécifier l'utilisation des colonnes du modèle d'exploration de données (Assistant Exploration de données)
@@ -25,27 +25,27 @@ ms.locfileid: "66068360"
 > [!NOTE]  
 >  Cette page s’affiche uniquement si vous avez sélectionné **À partir d’un cube existant** dans la page **Sélectionner la méthode de définition** de l’Assistant.  
   
- **Pour plus d’informations :** [Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [créer une Structure d’exploration de données relationnelles](data-mining/create-a-relational-mining-structure.md)  
+ **Pour plus d’informations :** [Assistant exploration de données &#40;Analysis Services des&#41;d’exploration de données ](data-mining/data-mining-wizard-analysis-services-data-mining.md), [créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Options  
- **Tables/colonnes**  
+ **Tables/Colonnes**  
  Affiche le nom des tables et des colonnes précédemment définies dans l'Assistant.  
   
- **Entrée**  
+ **Input**  
  Sélectionnez cette option pour utiliser la table ou la colonne comme entrée dans le modèle d'exploration de données.  
   
- **Prévisibles**  
+ **Prédictible**  
  Sélectionnez cette option pour prévoir les valeurs de la table ou de la colonne à l’aide de la table ou des colonnes **Entrée** .  
   
- **Ajouter des Tables imbriquées**  
+ **Ajouter des tables imbriquées**  
  Cliquez sur ce bouton pour ajouter une table dans la boîte de dialogue **Ajouter une nouvelle table imbriquée** .  
   
  **Supprimer des tables imbriquées**  
  Cliquez sur ce bouton pour supprimer la table imbriquée sélectionnée. Ce bouton est activé uniquement si une table imbriquée est sélectionnée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Données d’aide F1 de l’Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Colonnes de niveau de cas, sélectionnez &#40;Assistant exploration de données&#41;](select-case-level-columns-data-mining-wizard.md)   
- [Spécifier le contenu et le Type de données de la colonne &#40;Assistant exploration de données&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
+ [Aide (F1) de l’Assistant Exploration de données &#40;Analysis Services-exploration de données&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Sélectionner les colonnes de niveau de cas &#40;l’Assistant Exploration de données&#41;](select-case-level-columns-data-mining-wizard.md)   
+ [Spécifiez le contenu et le type de données de la colonne &#40;l’Assistant Exploration de données&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

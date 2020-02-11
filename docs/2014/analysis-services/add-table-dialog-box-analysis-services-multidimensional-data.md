@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue de Table (Analysis Services - données multidimensionnelles) ajouter | Microsoft Docs
+title: Ajouter une table, boîte de dialogue (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,30 +15,30 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b429f115eff1692495e1ded58fb6afadc6e5ee8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062811"
 ---
 # <a name="add-table-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Ajouter une table (Analysis Services - Données multidimensionnelles)
-  Utilisez la boîte de dialogue **Ajouter une table** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour ajouter une table lors de la création d’une requête dans la boîte de dialogue **Créer une requête nommée**, **Créer la requête d’interrogation** ou **Créer la requête de traitement**. Vous pouvez afficher la boîte de dialogue **Ajouter une table** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] en cliquant sur **Ajouter une table** dans le volet **Barre d’outils** de la boîte de dialogue **Créer une requête nommée**, **Créer la requête d’interrogation** ou **Créer la requête de traitement**.  
+  Utilisez la boîte de dialogue **Ajouter une table** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour ajouter une table lors de la création d’une requête dans la boîte de dialogue **Créer une requête nommée** , **Créer la requête d’interrogation** ou **Créer la requête de traitement** . Vous pouvez afficher la boîte de dialogue **Ajouter une table** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] en cliquant sur **Ajouter une table** dans le volet **Barre d’outils** de la boîte de dialogue **Créer une requête nommée** , **Créer la requête d’interrogation** ou **Créer la requête de traitement** .  
   
 ## <a name="options"></a>Options  
   
 |Terme|Définition|  
 |----------|----------------|  
 |**Tables**|L’onglet **Tables** permet d’afficher et de sélectionner une table à ajouter.|  
-|**Vues**|L’onglet **Vue** s permet d’afficher et de sélectionner une vue à ajouter.|  
+|**Views**|L’onglet **Vue** s permet d’afficher et de sélectionner une vue à ajouter.|  
 |**Fonctions**|L’onglet **Fonctions** permet d’afficher et de sélectionner une fonction ou une procédure stockée à ajouter.|  
 |**Synonymes**|L’onglet **Synonymes** sert à afficher et à sélectionner un synonyme à ajouter.|  
 |**Actualiser**|Permet de recharger tous les onglets de la boîte de dialogue.|  
 |**Ajouter**|Permet d'ajouter l'élément actuellement sélectionné. **Remarque :**  Cette option est activée uniquement si un élément est sélectionné.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Créer ou modifier la boîte de dialogue requête nommée &#40;Analysis Services - données multidimensionnelles&#41;](create-or-edit-named-query-dialog-box-analysis-services-multidimensional-data.md)   
- [Créer d’interrogation de boîte de dialogue requête &#40;Analysis Services - données multidimensionnelles&#41;](create-polling-query-dialog-box-analysis-services-multidimensional-data.md)   
- [Créer la boîte de dialogue requête de traitement &#40;Analysis Services - données multidimensionnelles&#41;](create-processing-query-dialog-box-analysis-services-multidimensional-data.md)  
+ [Analysis Services les concepteurs et les boîtes de dialogue &#40;les données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Boîte de dialogue créer ou modifier une requête nommée &#40;Analysis Services-données multidimensionnelles&#41;](create-or-edit-named-query-dialog-box-analysis-services-multidimensional-data.md)   
+ [Créer une requête d’interrogation, boîte de dialogue &#40;Analysis Services-données multidimensionnelles&#41;](create-polling-query-dialog-box-analysis-services-multidimensional-data.md)   
+ [Boîte de dialogue créer la requête de traitement &#40;Analysis Services-données multidimensionnelles&#41;](create-processing-query-dialog-box-analysis-services-multidimensional-data.md)  
   
   

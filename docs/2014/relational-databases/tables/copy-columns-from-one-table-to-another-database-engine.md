@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67df7c541b0c664f200f6cf77affc0c809dbc719
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736352"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>Copier des colonnes d'une table vers une autre (Moteur de base de données)
@@ -31,7 +31,7 @@ ms.locfileid: "62736352"
   
      [Sécurité](#Security)  
   
--   **Pour copier des colonnes à l'aide de :**  
+-   **Pour copier des des colonnes, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62736352"
      Si vous copiez des lignes au sein d'une même table, vous pouvez ajouter la table source comme table de destination.  
   
     > [!NOTE]  
-    >  Le**Concepteur de requêtes** ne peut pas déterminer à l'avance les tables et vues qu'il est possible de mettre à jour. Par conséquent, la liste des tables fournie dans la boîte de dialogue **Choisir la table cible pour la requête Insérer les résultats** affiche toutes les tables et vues disponibles dans la connexion de données sur laquelle porte la requête, même celles vers lesquelles il est impossible de copier des lignes.  
+    >  Le **Concepteur de requêtes** ne peut pas déterminer à l’avance les tables et les vues que vous pouvez mettre à jour. Par conséquent, la liste des tables fournie dans la boîte de dialogue **Choisir la table cible pour la requête Insérer les résultats** affiche toutes les tables et vues disponibles dans la connexion de données sur laquelle porte la requête, même celles vers lesquelles il est impossible de copier des lignes.  
   
 5.  Cliquez avec le bouton droit dans le corps du volet Schéma et, dans le menu contextuel, cliquez sur **Add Table to Diagram**.  
   
@@ -93,11 +93,11 @@ ms.locfileid: "62736352"
   
      Si vous ne spécifiez pas de condition de recherche, toutes les lignes de la table source seront copiées vers la table de destination.  
   
-10. Si vous souhaitez copier des informations de synthèse, spécifiez des options **Grouper par** . Pour plus d’informations, consultez [Synthétiser ou regrouper des valeurs de toutes les lignes d’une table &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools.md).  
+10. Si vous souhaitez copier des informations de synthèse, spécifiez **des options Group by** . Pour plus d’informations, consultez [Synthétiser ou regrouper des valeurs de toutes les lignes d’une table &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools.md).  
   
 11. Cliquez sur le bouton **Exécuter SQL** pour exécuter la requête.  
   
-     Lorsque vous exécutez une requête Insert Values, aucun résultat n'apparaît dans le [volet Résultats](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). En fait, un message indiquant le nombre de lignes copiées s'affiche.  
+     Lorsque vous exécutez une requête Insert Results, aucun résultat n’est signalé dans le [volet résultats](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). En fait, un message indiquant le nombre de lignes copiées s'affiche.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
@@ -107,7 +107,7 @@ ms.locfileid: "62736352"
   
 #### <a name="to-copy-data-from-one-table-to-another"></a>Pour copier des données d'une table vers une autre  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

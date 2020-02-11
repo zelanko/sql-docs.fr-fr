@@ -16,10 +16,10 @@ helpviewer_keywords:
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 00b1caa2f68da0a3a38d98cf35f959f83257b99e
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67413118"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>ajout d'un instantané à un historique de rapport (Gestionnaire de rapports)
@@ -63,7 +63,7 @@ Les instantanés de rapport ne sont pas enregistrés dans un format de rendu par
   
 3. Cliquez sur **Options d’instantanés**.  
   
-4. Cochez la case **Utilisez la planification ci-dessous pour ajouter des instantanés à l’historique de rapport**. Effectuez l'une des opérations suivantes :  
+4. Cochez la case **Utilisez la planification ci-dessous pour ajouter des instantanés à l’historique de rapport**. Effectuez une des opérations suivantes :  
   
     - Sélectionnez **Planification spécifique aux rapports**. Indiquez les détails de la planification, sélectionnez des dates de début et de fin pour cette opération, puis cliquez sur **OK**.  
   

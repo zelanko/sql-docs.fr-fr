@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 94faa6587f69f5944f29f6ec17f3899a6632b49a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109559"
 ---
 # <a name="data-alert-designer"></a>Concepteur d’alertes de données
@@ -44,14 +44,14 @@ ms.locfileid: "66109559"
 > [!NOTE]  
 >  Les alertes de données [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sont disponibles uniquement si vous installez [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint. Le rapport qui fait l’objet de l’alerte doit donc être enregistré, déployé ou chargé dans une bibliothèque de documents SharePoint.  
 >   
->  Les alertes de données ne peuvent pas être créées sur des rapports qui utilisent l'authentification intégrée Windows ou les invites pour les informations d'identification. Les rapports doivent utiliser des informations d'identification stockées. Pour plus d’informations, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
+>  Les alertes de données ne peuvent pas être créées sur des rapports qui utilisent l'authentification intégrée Windows ou les invites pour les informations d'identification. Les rapports doivent utiliser des informations d'identification stockées. Pour plus d’informations, consultez [spécifier des informations d’identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
  Pour ouvrir le Concepteur d’alertes de données, cliquez sur l’option **Nouvelle alerte de données** dans le menu **Actions** de la barre d’outils Rapport. Si vous ne voyez pas l’option **Nouvelle alerte de données** , cela signifie que le rapport n’est pas configuré pour utiliser les informations d’identification stockées. Vous pouvez mettre à jour le type d'informations d'identification en mettant à jour la source des données de rapport depuis la bibliothèque SharePoint.  
   
-##  <a name="AlertDesigner"></a> Interface utilisateur du Concepteur d'alertes de données  
+##  <a name="AlertDesigner"></a>Interface utilisateur du concepteur d’alertes de données  
  Le Concepteur d'alertes de données est divisé en zones. La zone où vous sélectionnez le flux des données de rapport, la zone où vous créez des conditions simples ou complexes en ajoutant des règles aux conditions, et ainsi de suite. L'image suivante affiche les zones du Concepteur d'alertes de données.  
   
- ![Zones dans l’interface utilisateur du Concepteur alertes](media/rs-alertdesigner.gif "Zones dans l’interface utilisateur du Concepteur alertes")  
+ ![Zones dans l'interface utilisateur du Concepteur alertes](media/rs-alertdesigner.gif "Zones dans l'interface utilisateur du Concepteur alertes")  
    
   
 ### <a name="alert-data"></a>Données d'alerte  
@@ -67,7 +67,7 @@ ms.locfileid: "66109559"
   
  Certains rapports comportent des millions de lignes de données. Le tableau montre uniquement les 100 premières lignes de données dans le flux.  
   
-### <a name="alert-name"></a>Nom de l'alerte  
+### <a name="alert-name"></a>Nom de l’alerte  
  Par défaut, la définition d'alerte a le même nom que le rapport. Vous pouvez remplacer le nom de l'alerte par un autre nom plus explicite. Cela permet de simplifier la gestion de vos alertes et de déterminer quelles alertes doivent être mises à jour, supprimées et ainsi de suite.  
   
  Vous pouvez créer plusieurs alertes sur un rapport. Il est possible d'avoir plusieurs définitions d'alerte avec le même nom, mais il est recommandé de donner un nom unique à l'alerte. Cela facilite la différenciation et la gestion des définitions d'alerte. Vous pouvez consulter la liste de toutes les alertes que vous avez créées dans le Gestionnaire des alertes de données. Pour plus d’informations, consultez [Gestionnaire des alertes de données pour les administrateurs d’alertes](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) et [Gérer mes alertes de données dans le Gestionnaire des alertes de données](manage-my-data-alerts-in-data-alert-manager.md).  
@@ -75,9 +75,9 @@ ms.locfileid: "66109559"
 ### <a name="rules-and-clauses"></a>Règles et clauses  
  L'étendue des modifications apportées aux données et les règles de l'alerte définissent les modifications qui déclenchent l'alerte. Les types de modifications apportées aux données sont les suivants :  
   
--   **Au moins une donnée a** indique qu’au moins une valeur dans les données suit les règles spécifiées dans la condition.  
+-   **Toutes les données ont**au moins une valeur dans les données respecte les règles que la condition spécifie.  
   
--   **Aucune donnée n’a** indique qu’aucune valeur ne suit les règles spécifiées dans la condition.  
+-   **Aucune donnée n’a**-aucune valeur dans les données n’a respecté les règles que la condition spécifie.  
   
  Une règle contient zéro, une, ou plusieurs clauses. Plusieurs règles sont combinées par l'opérateur logique AND. Une règle peut inclure plusieurs clauses combinées par l'opérateur OR si la colonne a le type de données de chaîne. Voici des règles de base qui utilisent une seule clause, plusieurs règles combinées à l'aide de l'opérateur AND et plusieurs règles ayant une ou plusieurs clauses OR.  
   
@@ -89,25 +89,25 @@ ms.locfileid: "66109559"
   
 -   Le nom de la société **n’est pas** Contoso  
   
- **Règles combinées par l'opérateur AND**  
+ **Règles combinées par l’opérateur AND**  
   
 -   Le montant des ventes **est supérieur à** 1 500,00  
   
-     **et** le nombre d’unités vendues **est inférieur à** 500  
+     **et** Les unités vendues **sont inférieures à** 500  
   
      La date de retour **est avant le** 1/1/2010  
   
 -   Le montant des ventes **est supérieur ou égal à** 1 500,00  
   
-     **et** la date de retour **est après le** 1/1/2010  
+     **et** La date de retour **est ultérieure** à 1/1/2010  
   
-     **et** le nombre d’unités vendues **est supérieur à** 500  
+     **et** Les unités vendues **sont supérieures à** 500  
   
 -   Le nom de la promotion **contient** la chaîne Spring  
   
-     **et** le nombre d’unités vendues **est supérieur à** 500  
+     **et** Les unités vendues **sont supérieures à** 500  
   
-     **et** le nombre d’invendus **est**  0  
+     **et** Retourne **la valeur 0**  
   
  **Règles avec clauses OR**  
   
@@ -119,11 +119,11 @@ ms.locfileid: "66109559"
   
 -   La date de retour **est après le** 1/1/2010  
   
-     **et** le secteur de vente **est**  Centre  
+     **et** Le secteur de vente **est** central  
   
-     **Ou**  Sud  
+     **Ou**  Asie  
   
-     **Ou**  Nord  
+     **Ou**  Du Nord  
   
  Selon le type de données du champ, le Concepteur d'alertes de données propose différentes comparaisons. Le Concepteur d'alertes de données fournit les comparaisons adaptées au type de données du champ auquel les valeurs sont comparées. Voici les comparaisons disponibles pour les différents types de données. Le type de données `Boolean` n'est pas pris en charge dans les règles.  
   
@@ -146,13 +146,13 @@ ms.locfileid: "66109559"
 ### <a name="schedule-settings"></a>Paramètres de planification  
  La planification que vous définissez pour l'alerte de données définit la périodicité d'envoi du message d'alerte et le début et la fin de l'envoi des messages d'alerte. Les modèles sont : une seule fois, toutes les minutes, une fois par jour et une fois par semaine. Bien qu'une alerte n'ait q'une seule planification possible, vous pouvez créer des périodicités complexes répondant à la plupart des exigences opérationnelles à l'aide de ces intervalles. Voici quelques exemples de périodicités communément utilisées dans les planifications :  
   
--   **Une fois par jour, tous les 10 jours** : envoie une alerte une fois par jour, tous les 10 jours.  
+-   **Quotidiennement tous les 10** jours : envoie des alertes une fois par jour, tous les 10 jours.  
   
--   **Une fois par semaine, toutes les 2 semaines, le lundi** : envoie une alerte toutes les deux semaines, uniquement le lundi.  
+-   **Hebdomadaire toutes les 2 semaines le lundi** -envoie des alertes toutes les deux semaines le lundi uniquement.  
   
--   **Toutes les 12 heures** : envoie une alerte toutes les 12 heures.  
+-   **Toutes les 12** heures, toutes les heures-envoie des alertes toutes les 12 heures.  
   
--   **Toutes les 30 minutes** : envoie une alerte toutes les 30 minutes.  
+-   **Minute toutes les 30** minutes : envoie des alertes toutes les 30 minutes.  
   
  La périodicité spécifie quand l'alerte est envoyée. Si les règles sont satisfaites au cours de l'intervalle spécifié par le modèle, l'alerte n'est envoyée qu'à la fil de l'intervalle.  
   
@@ -161,24 +161,24 @@ ms.locfileid: "66109559"
 > [!IMPORTANT]  
 >  Il est recommandé de ne pas utiliser une périodicité plus fréquente que la périodicité quotidienne, sauf si cela est requis par votre entreprise. Le traitement de la définition d'alerte de données en temps réel n'est pas un scénario pris en charge. Si le traitement des définitions d’alerte de données est trop fréquent, cela peut affecter les performances du serveur de rapports et du déploiement global de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
-### <a name="email-settings"></a>Paramètres de messagerie  
+### <a name="email-settings"></a>Paramètres de courrier électronique  
  Utilisez l’option **Destinataire(s)** pour spécifier les adresses e-mail des destinataires à qui envoyer les messages d’alerte de données par e-mail. Séparez les adresses de messagerie par des points-virgules, comme vous le feriez dans un courrier électronique Microsoft Office Outlook. Vous pouvez également spécifier des groupes de distribution comme destinataires, pour simplifier et accélérer la gestion de la liste des destinataires. Si SharePoint peut déterminer votre adresse de messagerie lorsque vous créez une définition d'alerte, celle-ci est ajoutée automatiquement aux destinataires répertoriés ; sinon, vous devez vous ajouter explicitement comme destinataire.  
   
- L’objet par défaut de l’e-mail est **Alerte de données pour \<nom_alerte>** . Vous pouvez changer l'objet selon vos besoins.  
+ L’objet par défaut de l’e-mail est **Alerte de données pour \<nom_alerte>**. Vous pouvez changer l'objet selon vos besoins.  
   
  Vous pouvez aussi fournir une description à l’aide de l’option **Description** . Cette description sera incluse dans le message d’alerte de données. En incluant une description, surtout si vous avez créé des alertes de données similaires, vous aidera à différencier rapidement les messages d'alerte et à mieux les comprendre. En plus du message d'alerte envoyé lorsque les données du rapport suivent les règles spécifiées, un message d'alerte est envoyé à tous les destinataires lorsqu'une erreur se produit. Pour plus d’informations, consultez [Data Alert Messages](../../2014/reporting-services/data-alert-messages.md).  
   
  Pour plus d’informations sur la façon dont l’e-mail est généré, consultez [Alertes de données Reporting Services](../ssms/agent/alerts.md).  
   
-##  <a name="CreateAlert"></a> Créer une définition d'alerte de données  
+##  <a name="CreateAlert"></a>Créer une définition d’alerte de données  
  Si vous avez accordé des autorisations permettant de consulter des éléments et de créer des alertes dans SharePoint, vous pouvez créer une définition d'alerte de données pour tout rapport que vous êtes autorisé à afficher, tant que le rapport utilise des informations d'identification stockées ou bien aucune information d'identification. Vous exécutez le rapport à partir d'une bibliothèque SharePoint. Les données que vous pouvez utiliser dans le Concepteur d'alertes de données proviennent du rapport. Si le rapport est paramétré, vous devrez peut-être exécuter le rapport en utilisant des valeurs de paramètre différentes pour vous assurer que les données qui vous intéressent s'affichent dans le rapport. Après avoir ouvert le rapport, cliquez sur l’option **Nouvelle alerte de données** dans le menu **Actions** de la barre d’outils Rapport pour ouvrir le Concepteur d’alertes de données. L'image suivante vous indique comment ouvrir le Concepteur d'alertes de données.  
   
- ![Ouvrir le Concepteur d’alertes à partir de la bibliothèque SharePoint](media/rs-openalertdesigneriw.gif "Ouvrir le Concepteur d’alertes à partir de la bibliothèque SharePoint")  
+ ![Ouvrir le Concepteur d'alertes à partir de la bibliothèque SharePoint](media/rs-openalertdesigneriw.gif "Ouvrir le Concepteur d'alertes à partir de la bibliothèque SharePoint")  
   
  Pour plus d’informations, consultez [Créer une alerte de données dans le Concepteur d’alertes](create-a-data-alert-in-data-alert-designer.md).  
   
   
-##  <a name="SaveAlert"></a> Enregistrer une définition d'alerte de données  
+##  <a name="SaveAlert"></a>Enregistrer une définition d’alerte de données  
  Le Concepteur d'alertes de données affiche l'URL du site où la définition d'alerte de données sera enregistrée. Les définitions d'alerte de données sont toujours enregistrées sur le même site en tant que rapports.  
   
 > [!NOTE]  
@@ -187,12 +187,12 @@ ms.locfileid: "66109559"
  Avant que la définition d'alerte soit enregistrée, elle est validée. Vous devez corriger toutes les erreurs avant de pouvoir enregistrer la définition d'alerte. Pour plus d’informations, consultez [Créer une alerte de données dans le Concepteur d’alertes](create-a-data-alert-in-data-alert-designer.md).  
   
   
-##  <a name="EditAlert"></a> Modifier une définition d'alerte de données  
+##  <a name="EditAlert"></a>Modifier une définition d’alerte de données  
  Une fois que vous avez enregistré votre définition d'alerte de données, vous pouvez la rouvrir pour la modifier dans le Concepteur d'alertes de données. Vous pouvez ajouter, modifier ou supprimer des règles et des clauses et modifier la planification et les paramètres des courriers électroniques. Si le flux de données du rapport utilisé par l'alerte a changé et ne contient plus les champs référencés par les règles de l'alerte, ou si les types de données ou d'autres métadonnées des champs ont été modifiés, la définition d'alerte n'est plus valide et vous devez la corriger avant de pouvoir l'enregistrer de nouveau. Si vous souhaitez utiliser un flux de données différent, vous devez créer une nouvelle définition d'alerte.  
   
  Pour modifier une définition d’alerte de données, cliquez avec le bouton droit dans le Gestionnaire des alertes de données et sélectionnez **Modifier**. L'image suivante montre le menu contextuel d'une alerte de données dans le Gestionnaire des alertes de données.  
   
- ![Ouvrir le Concepteur d’alertes de données en cliquant sur Modifier](media/rs-alertmanageriwopendesigner.gif "Ouvrir le Concepteur d’alertes de données en cliquant sur Modifier")  
+ ![Ouvrir le Concepteur d'alertes de données en cliquant sur Modifier](media/rs-alertmanageriwopendesigner.gif "Ouvrir le Concepteur d'alertes de données en cliquant sur Modifier")  
   
  Pour plus d’informations, consultez [Modifier une alerte de données dans le Concepteur d’alertes](edit-a-data-alert-in-alert-designer.md).  
   
@@ -200,13 +200,13 @@ ms.locfileid: "66109559"
 ##  <a name="HowTo"></a> Tâches associées  
  Cette section répertorie les procédures qui vous indiquent comment créer et modifier des alertes.  
   
--   [Modifier une alerte de données dans le Concepteur d’alertes](edit-a-data-alert-in-alert-designer.md)  
+-   [Modifier une alerte de données dans le Concepteur d'alertes](edit-a-data-alert-in-alert-designer.md)  
   
--   [Créer une alerte de données dans le concepteur d’alertes de données](create-a-data-alert-in-data-alert-designer.md)  
+-   [Créer une alerte de données dans le Concepteur d’alertes](create-a-data-alert-in-data-alert-designer.md)  
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Alertes de données Reporting Services](../ssms/agent/alerts.md)   
- [Gestionnaire des alertes de données pour les administrateurs d’alertes](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)  
+ [Reporting Services les alertes de données](../ssms/agent/alerts.md)   
+ [Gestionnaire des alertes de données pour les administrateurs d'alertes](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)  
   
   

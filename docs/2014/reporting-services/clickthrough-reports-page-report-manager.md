@@ -1,5 +1,5 @@
 ---
-title: Page (Gestionnaire de rapports) rapports générés interactifs | Microsoft Docs
+title: Page rapports générés interactifs (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d996463baaed3095b6866fa2da88ed811745878d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109794"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>Page Rapports générés interactifs (Gestionnaire de rapports)
@@ -47,10 +47,10 @@ ms.locfileid: "66109794"
 4.  Sélectionnez l'onglet **Rapports générés interactifs** .  
   
 ## <a name="options"></a>Options  
- **Hiérarchie de l’élément de modèle**  
+ **Hiérarchie des éléments du modèle**  
  Affiche les entités, dossiers et éléments de l'espace de noms du modèle pour lesquels vous pouvez fournir un rapport personnalisé.  
   
- **Rapport d’instance unique**  
+ **Rapport à une seule instance**  
  Spécifie le rapport personnalisé à utiliser lorsque la navigation par l'utilisateur nécessite une vue des données à instance unique. Cliquez sur le bouton Parcourir pour sélectionner le rapport à utiliser.  
   
  **Rapport à plusieurs instances**  

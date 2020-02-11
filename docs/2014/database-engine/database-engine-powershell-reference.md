@@ -11,17 +11,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ed2e407b724f57d6ded518b864e3b1d78b4c489e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064967"
 ---
 # <a name="database-engine-powershell-reference"></a>Référence de PowerShell (Moteur de base de données)
+  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inclut un jeu d'applets de commande Windows PowerShell 2.0 pour effectuer des actions courantes dans le [!INCLUDE[ssDE](../includes/ssde-md.md)]. En outre, les expressions de requête et les noms URN (Uniform Resource Names) peuvent être convertis en chemins d'accès SQL Server PowerShell, ou être utilisés pour spécifier un ou plusieurs objets dans le [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 ## <a name="database-engine-cmdlets"></a>Applets de commande du moteur de base de données  
- [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] inclut relativement peu d’applets de commande pour le [!INCLUDE[ssDE](../includes/ssde-md.md)]. La plupart des scripts PowerShell compatibles avec le [!INCLUDE[ssDE](../includes/ssde-md.md)] utilisent le fournisseur SQL Server PowerShell et les modèles d'objet de gestion. Pour plus d’informations, consultez [Fournisseur PowerShell SQL Server](../powershell/sql-server-powershell-provider.md).  
+ 
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] inclut relativement peu d’applets de commande pour le [!INCLUDE[ssDE](../includes/ssde-md.md)]. La plupart des scripts PowerShell compatibles avec le [!INCLUDE[ssDE](../includes/ssde-md.md)] utilisent le fournisseur SQL Server PowerShell et les modèles d'objet de gestion. Pour plus d’informations, consultez [Fournisseur PowerShell SQL Server](../powershell/sql-server-powershell-provider.md).  
   
  Pour savoir comment obtenir de l’aide sur les applets de commande SQL Server dans un environnement Windows PowerShell, consultez [Obtenir de l’aide sur SQL Server PowerShell](../powershell/sql-server-powershell.md).  
   
@@ -30,7 +32,7 @@ ms.locfileid: "66064967"
   
 |Description|Applet de commande|  
 |-----------------|------------|  
-|Exécute les scripts Transact-SQL et XQuery, tels que les scripts qui peuvent être exécutés à l'aide de l'utilitaire `sqlcmd`.|[Invoke-Sqlcmd, applet de commande](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)|  
+|Exécute les scripts Transact-SQL et XQuery, tels que les scripts qui peuvent être exécutés à l'aide de l'utilitaire `sqlcmd`.|[Invoke-Sqlcmd (applet de commande)](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)|  
 |Évalue si un objet du moteur de base de données est conforme à une stratégie de gestion basée sur des stratégies.|[Invoke-PolicyEvaluation (applet de commande)](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)|  
   
 ### <a name="information-about-other-cmdlets"></a>Informations sur d'autres applets de commande  

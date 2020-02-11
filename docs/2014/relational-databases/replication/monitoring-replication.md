@@ -19,24 +19,26 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e2b3441d98bc9226abce3a49fd28820df6ec99ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666865"
 ---
 # <a name="monitoring-replication"></a>Surveillance (réplication)
   L'analyse d'une topologie de réplication est un aspect important du déploiement de la réplication. L'activité de la réplication étant distribuée, il est essentiel de faire le suivi de cette activité et des états à travers tous les ordinateurs impliqués dans la réplication. Les outils suivants peuvent être utilisés pour surveiller la réplication :  
   
--   Moniteur de réplication de[!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]  
+-   [!INCLUDE[msCoName](../../includes/msCoName-md.md)][!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] Moniteur de réplication  
   
      Le moniteur de réplication est l'outil le plus important pour la surveillance de la réplication ; il donne une vision orientée serveur de publication de toute l'activité de réplication. Pour plus d’informations, consultez [analyser les performances avec le moniteur de réplication](monitor/monitor-performance-with-replication-monitor.md).  
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssManStudioFull-md.md)]  
   
-     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] donne accès au moniteur de réplication. Il vous permet aussi d’afficher l’état actuel et le dernier message journalisé par les agents suivants ; il vous permet également de démarrer et d’arrêter chaque agent : Agent de lecture du journal, Agent d’instantané, Agent de fusion et Agent de Distribution. Pour plus d’informations, voir [Monitor Replication Agents](monitor/monitor-replication-agents.md).  
+     
+  [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] donne accès au moniteur de réplication. Il vous permet aussi d'afficher l'état actuel et le dernier message consigné par les agents suivants ; il vous permet également de démarrer et d'arrêter chaque agent : Agent de lecture du journal, Agent d'instantané, Agent de fusion et Agent de distribution. Pour plus d’informations, voir [Monitor Replication Agents](monitor/monitor-replication-agents.md).  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] et Replication Management Objects  
+-   
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] et Replication Management Objects  
   
      Les deux interfaces vous permettent de surveiller tous les types de réplication à partir du serveur de distribution. La réplication de fusion donne également la possibilité de surveiller la réplication à partir de l'Abonné.  
   

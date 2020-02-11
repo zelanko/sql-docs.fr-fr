@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ab3d9e9e4178b1ee2e10e5be63f0ea9252fd4a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62679160"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Propriétés SQL Server (onglet Paramètres de démarrage)
@@ -69,7 +69,7 @@ ms.locfileid: "62679160"
 > [!CAUTION]  
 >  Certains paramètres facultatifs peuvent modifier le comportement du serveur et affecter les performances.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L'utilisation de cette page est limitée aux utilisateurs qui peuvent modifier les entrées associées dans le Registre. Notamment :  
   
 -   les membres du groupe Administrateurs local ;  
@@ -77,6 +77,6 @@ ms.locfileid: "62679160"
 -   Le compte de domaine utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] est configuré pour l'exécution sous un compte de domaine.  
   
 ## <a name="books-online-references"></a>Références de la documentation en ligne  
- Pour plus d'informations sur les paramètres de démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez « Procédure : Configurer les Options de démarrage du serveur ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager) » dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne.  
+ Pour plus d’informations sur les paramètres de démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez « Procédure : configurer les options de démarrage du serveur (Gestionnaire de configuration[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   

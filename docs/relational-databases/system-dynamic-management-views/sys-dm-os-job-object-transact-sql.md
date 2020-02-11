@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_job_object (Azure SQL Database) | Microsoft Docs
+title: sys. dm_os_job_object (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/17/2018
 ms.service: sql-database
@@ -20,40 +20,40 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 43063bb56607d1b5a21ae04b40ee4c7a17825521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67900133"
 ---
-# <a name="sysdmosjobobject-azure-sql-database"></a>Sys.dm_os_job_object (Azure SQL Database)
+# <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-Retourne une ligne unique décrivant la configuration de l’objet de travail qui gère le processus SQL Server, ainsi que certaines statistiques de consommation de ressources au niveau de l’objet de travail. Retourne un jeu vide si SQL Server n’est pas en cours d’exécution dans un objet de tâche. 
+Retourne une ligne unique décrivant la configuration de l’objet de traitement qui gère le processus de SQL Server, ainsi que certaines statistiques de consommation des ressources au niveau de l’objet du travail. Retourne un jeu vide si SQL Server n’est pas en cours d’exécution dans un objet de traitement. 
 
-Un objet de tâche est une construction de Windows qui implémente la gouvernance des ressources processeur, mémoire et d’e/s au niveau du système d’exploitation. Pour plus d’informations sur les objets de travail, consultez [objets travail](/windows/desktop/ProcThread/job-objects). 
+Un objet de traitement est une construction Windows qui implémente la gouvernance des ressources du processeur, de la mémoire et de l’e/s au niveau du système d’exploitation. Pour plus d’informations sur les objets de traitement, consultez [objets de traitement](/windows/desktop/ProcThread/job-objects). 
   
 |Colonnes|Type de données|Description|  
 |-------------|---------------|-----------------|  
-|cpu_rate|**int**|Spécifie la partie de cycles de processeur que les threads SQL Server peuvent utiliser pendant chaque intervalle de planification. La valeur est indiquée sous forme de pourcentage de cycles disponibles dans un intervalle de planification du cycle de 10000. Par exemple, la valeur 100 signifie que les threads peuvent utiliser des cœurs de processeur est à leur capacité maximale.|
-|cpu_affinity_mask|**bigint**|Un masque de bits qui décrit les processeurs logiques du processus SQL Server peut utiliser au sein du groupe de processeur. Par exemple, cpu_affinity_mask 255 (1111 1111 en binaire) signifie que les huit premiers processeurs logiques peuvent être utilisés.|
-|cpu_affinity_group|**int**|Le numéro du groupe de processeur qui est utilisé par SQL Server.|
-|memory_limit_mb|**bigint**|La quantité maximale de mémoire allouée, en Mo, que tous les processus de l’objet de travail, y compris SQL Server, permettent de manière cumulative.| 
-|process_memory_limit_mb |**bigint**|La quantité maximale de mémoire allouée, en Mo, qu’un seul processus de l’objet de travail, telles que SQL Server, peut utiliser.|
-|workingset_limit_mb |**bigint**|La quantité maximale de mémoire, en Mo, qui permet de la plage de travail de SQL Server.|
-|non_sos_mem_gap_mb|**bigint**|La quantité de mémoire, en Mo, réserver pour les piles de threads, des DLL et des autres allocations de mémoire non SOS. Mémoire cible de SOS est la différence entre `process_memory_limit_mb` et `non_sos_mem_gap_mb`.| 
-|low_mem_signal_threshold_mb|**bigint**|Un seuil de mémoire, en Mo. Lorsque la quantité de mémoire disponible pour l’objet de traitement est inférieure à ce seuil, un signal de notification de mémoire insuffisante est envoyé au processus SQL Server. |
-|total_user_time|**bigint**|Le nombre total de graduations ns 100 threads au sein de l’objet de traitement ayant passé en mode utilisateur, étant donné que l’objet de traitement a été créé. |
-|total_kernel_time |**bigint**|Le nombre total de graduations ns 100 threads au sein de l’objet de traitement ayant passé en mode noyau, étant donné que l’objet de traitement a été créé. |
-|write_operation_count |**bigint**|Le nombre total d’opérations d’écriture d’e/s sur les disques locaux émis par SQL Server dans la mesure où l’objet de traitement a été créé. |
-|read_operation_count |**bigint**|Le nombre total d’e/s des opérations de lecture sur les disques locaux émis par SQL Server dans la mesure où l’objet de traitement a été créé. |
-|peak_process_memory_used_mb|**bigint**|La quantité maximale de mémoire, en Mo, ce qui a un seul processus de l’objet de travail, telles que SQL Server, a utilisé dans la mesure où l’objet de traitement a été créé.| 
-|peak_job_memory_used_mb|**bigint**|La quantité maximale de mémoire, en Mo, que tous les processus dans l’objet de traitement ont utilisé cumulativement étant donné que l’objet de travail a été créée.|
+|cpu_rate|**int**|Spécifie la partie des cycles de processeur que les threads de SQL Server peuvent utiliser lors de chaque intervalle de planification. La valeur est indiquée sous la forme d’un pourcentage de cycles disponibles dans un intervalle de planification de cycle de 10000. Par exemple, la valeur 100 signifie que les threads peuvent utiliser des cœurs de processeur comme leur capacité totale.|
+|cpu_affinity_mask|**bigint**|Masque de bits décrivant les processeurs logiques que le processus de SQL Server peut utiliser dans le groupe de processeurs. Par exemple, cpu_affinity_mask 255 (1111 1111 en binaire) signifie que les huit premiers processeurs logiques peuvent être utilisés.|
+|cpu_affinity_group|**int**|Numéro du groupe de processeurs utilisé par SQL Server.|
+|memory_limit_mb|**bigint**|Quantité maximale de mémoire allouée, en Mo, que tous les processus de l’objet de traitement, y compris les SQL Server, peuvent utiliser de façon cumulative.| 
+|process_memory_limit_mb |**bigint**|Quantité maximale de mémoire allouée, en Mo, qu’un seul processus de l’objet de traitement, tel que SQL Server, peut utiliser.|
+|workingset_limit_mb |**bigint**|Quantité maximale de mémoire, en Mo, que peut utiliser la plage de travail du SQL Server.|
+|non_sos_mem_gap_mb|**bigint**|Quantité de mémoire, en Mo, réservée aux piles de threads, dll et autres allocations de mémoire non SOS. La mémoire cible SOS correspond à la `process_memory_limit_mb` différence `non_sos_mem_gap_mb`entre et.| 
+|low_mem_signal_threshold_mb|**bigint**|Seuil de mémoire, en Mo. Lorsque la quantité de mémoire disponible pour l’objet de traitement est inférieure à ce seuil, un signal de notification de mémoire insuffisante est envoyé au processus de SQL Server. |
+|total_user_time|**bigint**|Nombre total de battements de 100 ns que les threads de l’objet de traitement ont passé en mode utilisateur, depuis la création de l’objet de traitement. |
+|total_kernel_time |**bigint**|Nombre total de battements de 100 ns que les threads de l’objet de traitement ont passé en mode noyau, depuis la création de l’objet de traitement. |
+|write_operation_count |**bigint**|Nombre total d’opérations d’e/s en écriture sur les disques locaux émises par SQL Server depuis la création de l’objet de traitement. |
+|read_operation_count |**bigint**|Nombre total d’opérations d’e/s de lecture sur les disques locaux émis par SQL Server depuis la création de l’objet de traitement. |
+|peak_process_memory_used_mb|**bigint**|La quantité de mémoire maximale, en MÉGAOCTETs, qu’un seul processus de l’objet de traitement, tel que SQL Server, a été utilisé depuis la création de l’objet de traitement.| 
+|peak_job_memory_used_mb|**bigint**|Quantité de mémoire maximale, en Mo, que tous les processus de l’objet de traitement ont utilisé de façon cumulative depuis la création de l’objet de traitement.|
   
 ## <a name="permissions"></a>Autorisations  
-Sur SQL Database Managed Instance nécessite `VIEW SERVER STATE` autorisation. Sur SQL Database, requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.  
+Sur SQL Database Managed Instance, requiert `VIEW SERVER STATE` l’autorisation. Sur SQL Database, requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.  
  
 ## <a name="see-also"></a>Voir aussi  
 
-Pour plus d’informations sur les Instances gérées, consultez [SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
+Pour plus d’informations sur les instances gérées, consultez [SQL Database Managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
   

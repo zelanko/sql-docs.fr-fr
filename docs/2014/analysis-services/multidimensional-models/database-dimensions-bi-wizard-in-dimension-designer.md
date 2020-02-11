@@ -1,5 +1,5 @@
 ---
-title: Démarrer l’Assistant Business Intelligence dans le Concepteur de dimensions | Microsoft Docs
+title: Démarrer l’Assistant Business Intelligence dans le concepteur de dimensions | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f09e8b4e31d9826d0988b293e2236676125fc7d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076048"
 ---
 # <a name="start-the-business-intelligence-wizard-in-dimension-designer"></a>Démarrer l'Assistant Business Intelligence dans le Concepteur de dimensions
-  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous créez des opérateurs de cumul personnalisés et des formules de membre personnalisées, et vous configurez des dimensions pour l'écriture différée à l'aide de l'Assistant Business Intelligence ou du Concepteur de dimensions. Vous pouvez démarrer l'Assistant Business Intelligence à partir de l'Explorateur de solutions ou du Concepteur de cube dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Le Concepteur de dimensions est accessible à partir de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous créez des opérateurs de cumul personnalisés et des formules de membre personnalisées et configurez des dimensions pour l’écriture différée à l’aide de l’Assistant Business Intelligence ou du concepteur de dimensions. Vous pouvez démarrer l'Assistant Business Intelligence à partir de l'Explorateur de solutions ou du Concepteur de cube dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Le Concepteur de dimensions est accessible à partir de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-start-the-business-intelligence-wizard"></a>Pour démarrer l'Assistant Business Intelligence  
   

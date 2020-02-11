@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 60b081b96ae54885a6f1968706903b13fb7505a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106393"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>Références à la collection ReportItems (Générateur de rapports et SSRS)
@@ -24,15 +24,15 @@ ms.locfileid: "66106393"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-reportitems-value-property"></a>Utilisation de la propriété Value de ReportItems  
- Éléments de la `ReportItems` collection n'avoir qu’une seule propriété : Valeur. La valeur d'un élément de `ReportItems` peut être utilisée pour afficher ou pour calculer des données provenant d'un autre champ du rapport. Pour accéder à la valeur de la zone de texte actuelle, vous pouvez utiliser l’entité [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] globale intégrée Me.Value ou simplement Value. Dans les fonctions de rapport telles que First et les fonctions d'agrégation, il convient toutefois d'utiliser la syntaxe complète.  
+ Les éléments de la collection `ReportItems` ont une seule propriété : Value. La valeur d'un élément de `ReportItems` peut être utilisée pour afficher ou pour calculer des données provenant d'un autre champ du rapport. Pour accéder à la valeur de la zone de texte actuelle, vous pouvez utiliser l’entité [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] globale intégrée Me.Value ou simplement Value. Dans les fonctions de rapport telles que First et les fonctions d'agrégation, il convient toutefois d'utiliser la syntaxe complète.  
   
- Exemple :  
+ Par exemple :  
   
 -   Cette expression, placée dans une zone de texte, affiche la valeur d'une zone de texte `ReportItem` nommée `Textbox1` :  
   
      `=ReportItems!Textbox1.Value`  
   
--   Cette expression, placée dans un `ReportItem` la zone de texte propriété de couleur, affiche le texte en noir lorsque la valeur est > 0 ; sinon, la valeur est affichée en rouge :  
+-   Cette expression, placée dans une `ReportItem` propriété de couleur de zone de texte, affiche le texte en noir lorsque la valeur est > 0 ; dans le cas contraire, la valeur est affichée en rouge :  
   
      `=IIF(Me.Value > 0,"Black","Red")`  
   

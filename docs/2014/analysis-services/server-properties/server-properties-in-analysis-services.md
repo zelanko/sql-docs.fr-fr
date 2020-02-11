@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31c05bbc1be8376144eb191ff28a9cdc6eebdd8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068899"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Configurer les propriétés du serveur dans Analysis Services
@@ -32,15 +32,15 @@ ms.locfileid: "66068899"
   
  Cette rubrique contient les sections suivantes :  
   
- [Configurer les propriétés de serveur (Instance)](#bkmk_config)  
+ [Configurer les propriétés du serveur (instance)](#bkmk_config)  
   
- [Référence des propriétés de serveur](#bkmk_ref)  
+ [Référence de propriété de serveur](#bkmk_ref)  
   
-##  <a name="bkmk_config"></a> Configurer les propriétés de serveur (Instance)  
+##  <a name="bkmk_config"></a>Configurer les propriétés du serveur (instance)  
  Les pages de propriétés de SQL Server Management Studio contiennent un sous-ensemble des propriétés disponibles, à savoir celles qui sont le plus susceptible d'être modifiées. Le jeu complet des propriétés se trouve dans le fichier msmdsrv.ini.  
   
 > [!NOTE]  
->  Cette rubrique ne documente pas les propriétés de configuration de déploiement dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations sur la configuration de déploiement, consultez [spécifiant les paramètres de Configuration pour le déploiement de la Solution](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).  
+>  Cette rubrique ne documente pas les propriétés de configuration de déploiement dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations sur la configuration du déploiement, consultez [spécification des paramètres de configuration pour le déploiement de solutions](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).  
   
 #### <a name="view-or-set-configuration-properties-in-management-studio"></a>Afficher ou définir les propriétés de configuration dans Management Studio  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66068899"
   
 #### <a name="view-or-edit-configuration-properties-in-the-msmdsrvini-file"></a>Afficher ou modifier manuellement les propriétés de configuration dans le fichier msmdsrv.ini  
   
-1.  Avant de commencer, vérifiez le **DataDir** propriété dans la page de propriétés générales de Management Studio pour vérifier l’emplacement des fichiers programme Analysis Services, y compris le fichier msmdsrv.ini. Vous serez ainsi certain de modifier le bon fichier.  
+1.  Avant de commencer, vérifiez la propriété **datadir** de la page de propriétés général dans Management Studio pour vérifier l’emplacement des fichiers programme de Analysis Services, y compris le fichier msmdsrv. ini. Vous serez ainsi certain de modifier le bon fichier.  
   
     > [!NOTE]  
     >  Dans une installation par défaut, ce fichier se trouve dans le dossier \Program Files\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config.  
@@ -72,7 +72,7 @@ ms.locfileid: "66068899"
   
 4.  Après avoir enregistré le fichier, vous devez redémarrer le service.  
   
-##  <a name="bkmk_ref"></a> Référence de propriété de serveur  
+##  <a name="bkmk_ref"></a>Référence de propriété de serveur  
  Les propriétés de configuration de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sont importantes pour le réglage précis de votre système. Par exemple, vous pouvez adapter le comportement du journal des requêtes à vos besoins en définissant les propriétés pertinentes.  
   
  Les rubriques suivantes expliquent les diverses propriétés de configuration de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] :  
@@ -83,7 +83,7 @@ ms.locfileid: "66068899"
 |[Propriétés de l'exploration de données](data-mining-properties.md)|Les propriétés d'exploration de données déterminent les algorithmes d'exploration de données à activer ou à désactiver. Par défaut, tous les algorithmes sont activés.|  
 |DSO|DSO n'est plus pris en charge. Les propriétés DSO sont ignorées.|  
 |[Propriétés de fonctionnalité](feature-properties.md)|Les propriétés de fonctionnalité se rapportent à des fonctionnalités de produit, le plus souvent de caractère avancé. Il s'agit notamment de propriétés qui contrôlent les liaisons entre les instances de serveur.|  
-|[Propriétés du cache de fichiers](filestore-properties.md)|Les propriétés du stockage de fichiers s'adressent uniquement aux utilisateurs expérimentés. Elles contiennent des paramètres avancés de gestion de la mémoire.|  
+|[FileStore, propriété](filestore-properties.md)|Les propriétés du stockage de fichiers s'adressent uniquement aux utilisateurs expérimentés. Elles contiennent des paramètres avancés de gestion de la mémoire.|  
 |[Propriétés du gestionnaire de verrous](lock-manager-properties.md)|Les propriétés du gestionnaire de verrous définissent les comportements du serveur en matière de verrouillage et de délais d'attente. La plupart de ces propriétés s'adressent uniquement aux utilisateurs expérimentés.|  
 |[Propriétés du journal](log-properties.md)|Les propriétés du journal contrôlent si des événements sont enregistrés sur le serveur et, dans l'affirmative, à quel emplacement et de quelle façon. Il s'agit en particulier de l'enregistrement des erreurs, des exceptions et des requêtes, de la boîte noire SQL et des traces.|  
 |[Propriétés de mémoire](memory-properties.md)|Les propriétés de la mémoire contrôlent la façon dont le serveur utilise la mémoire. Elles s'adressent essentiellement aux utilisateurs expérimentés.|  
@@ -93,7 +93,7 @@ ms.locfileid: "66068899"
 |[Propriétés du pool de threads](thread-pool-properties.md)|Les propriétés du pool de threads contrôlent le nombre de threads que crée le serveur. Il s'agit essentiellement de propriétés avancées.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestion d'instances Analysis Services](../instances/analysis-services-instance-management.md)   
+ [Gestion des instances de Analysis Services](../instances/analysis-services-instance-management.md)   
  [Spécification de paramètres de configuration pour le déploiement de solutions](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   

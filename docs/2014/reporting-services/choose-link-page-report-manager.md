@@ -1,5 +1,5 @@
 ---
-title: Page Choisir un lien (Gestionnaire de rapports) | Microsoft Docs
+title: Page choisir un lien (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 910b06a5cd7af69cc668fb3054dfdfd98c3ae036
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109889"
 ---
 # <a name="choose-link-page-report-manager"></a>Page Choisir un lien (Gestionnaire de rapports)
@@ -36,15 +36,15 @@ ms.locfileid: "66109889"
 4.  Dans l'onglet **Général** , dans la page de propriétés, cliquez sur **Changer le lien**.  
   
 ## <a name="options"></a>Options  
- **Emplacement**  
+ **Location**  
  Spécifiez le nom complet du rapport publié, notamment le chemin d'accès au dossier et le nom du rapport. Vous pouvez taper le nom complet du rapport ou utiliser l'arborescence pour naviguer jusqu'au rapport que vous souhaitez utiliser.  
   
- **Vue d’arborescence**  
+ **Arborescence**  
  Affiche tous les dossiers de l'arborescence des dossiers du serveur de rapports. Pour utiliser l'arborescence afin de remplir le champ **Emplacement** , cliquez sur le nom du rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Page Propriétés générales, Rapports &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [Page Nouveau rapport lié &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
- [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Page Propriétés générales, rapports &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [Page nouveau rapport lié &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
+ [Aide F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Contrôler la Distribution des rapports | Microsoft Docs
+title: Contrôler la distribution des rapports | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -19,17 +19,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: de8a27801ef89f10bf303cee17d1c2d0e1081c5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109699"
 ---
 # <a name="control-report-distribution"></a>Contrôler la distribution des rapports
   Vous pouvez configurer un serveur de rapports de façon à réduire les risques de sécurité associés à la remise par messagerie électronique ou dans un partage de fichiers.  
   
 ## <a name="securing-reports"></a>Sécurisation des rapports  
- La première étape du contrôle de la distribution des rapports consiste à sécuriser le rapport contre les accès non autorisés. Pour être utilisé dans un abonnement, un rapport doit utiliser un ensemble stocké d'informations d'identification qui ne varie pas pour les remises individuelles. Tout utilisateur pouvant accéder à un rapport sur le serveur de rapports peut l'exécuter et éventuellement le distribuer. Pour empêcher cela, vous devez limiter l'accès au rapport aux seuls utilisateurs qui en ont besoin. Pour plus d’informations, consultez [sécuriser des rapports et des ressources](security/secure-reports-and-resources.md) et [dossiers sécurisés](security/secure-folders.md).  
+ La première étape du contrôle de la distribution des rapports consiste à sécuriser le rapport contre les accès non autorisés. Pour être utilisé dans un abonnement, un rapport doit utiliser un ensemble stocké d'informations d'identification qui ne varie pas pour les remises individuelles. Tout utilisateur pouvant accéder à un rapport sur le serveur de rapports peut l'exécuter et éventuellement le distribuer. Pour empêcher cela, vous devez limiter l'accès au rapport aux seuls utilisateurs qui en ont besoin. Pour plus d’informations, consultez [sécuriser les rapports et les ressources](security/secure-reports-and-resources.md) et [sécuriser les dossiers](security/secure-folders.md).  
   
  Les rapports hautement confidentiels qui utilisent la sécurité de la base de données pour autoriser l'accès ne peuvent pas être distribués par voie d'abonnement.  
   
@@ -47,8 +47,8 @@ ms.locfileid: "66109699"
  La remise par partage de fichiers permet d'envoyer un rapport à un fichier sur un disque dur. Une fois le fichier enregistré sur disque, il n'est plus soumis au modèle de sécurité basée sur les rôles que le serveur de rapports utilise pour contrôler l'accès utilisateur. Pour protéger un rapport qui a été distribué sur un disque, placez des ACL (Access Control Lists) sur le fichier lui-même ou sur le dossier qui le contient. D'autres options de sécurité sont disponibles en fonction de votre système d'exploitation.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer un serveur de rapports pour la remise du courrier électronique &#40;Gestionnaire de Configuration de SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
+ [Configurer un serveur de rapports pour la remise par messagerie &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
  [Abonnements et remise &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Créer et gérer des abonnements pour les serveurs de rapports en mode Natif](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)  
+ [Créer et gérer des abonnements pour les serveurs de rapports en mode natif](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)  
   
   

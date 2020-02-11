@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ada58ff37b3fb7dd2760427483b0935d9bc47cb
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67727740"
 ---
-# <a name="mssqlserver1505"></a>MSSQLSERVER_1505
+# <a name="mssqlserver_1505"></a>MSSQLSERVER_1505
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|1505|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|1505|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DUP_KEY|  
 |Texte du message|L’instruction CREATE UNIQUE INDEX a été interrompue, car une clé dupliquée a été trouvée pour l’objet '%.\*ls' et l’index '%.\*ls'.  Valeur de clé dupliquée : %ls.|  
@@ -50,7 +50,7 @@ ms.locfileid: "67727740"
   
  Le message d'erreur 1505 retourne la première ligne qui enfreint la contrainte d'unicité. La table peut contenir d'autres lignes dupliquées. Pour les trouver toutes, interrogez la table spécifiée et utilisez les clauses GROUP BY et HAVING pour signaler les lignes dupliquées. Par exemple, la requête suivante retourne les lignes de la table **Employee** qui présentent des noms (LastName) et prénoms (FirstName) en double.  
   
- Sélectionnez LastName, FirstName, nombre (\*) à partir de dbo. Employé groupe par LastName, FirstName ayant un nombre (\*) > 1 ;  
+ Sélectionnez LastName, FirstName, Count (\*) dans dbo. Employee GROUP BY LastName, FirstName ayant Count\*() > 1 ;  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
  Réfléchissez aux solutions ci-dessous.  
@@ -59,7 +59,7 @@ ms.locfileid: "67727740"
   
 -   Lors de la sélection des colonnes d'un index unique ou d'une contrainte unique, sélectionnez donc les colonnes qui n'acceptent pas par définition les valeurs NULL. La possibilité d'une violation d'unicité provoquée lorsque plusieurs lignes contiennent NULL dans les valeurs de clés est ainsi écartée.  
   
--   Lorsque les valeurs dupliquées sont issues d'erreurs de saisie des données, corrigez manuellement les données, puis créez l'index ou la contrainte. Pour plus d’informations sur la suppression de lignes en double d’une table, consultez l’article 139444 de la Base de connaissances : [Comment faire pour supprimer des lignes en double d’une table dans SQL Server](https://support.microsoft.com/kb/139444).  
+-   Lorsque les valeurs dupliquées sont issues d'erreurs de saisie des données, corrigez manuellement les données, puis créez l'index ou la contrainte. Pour plus d’informations sur la suppression des lignes dupliquées d’une table, consultez l’article 139444 de la Base de connaissances : [Comment faire pour supprimer des lignes en double d’une table dans SQL Server](https://support.microsoft.com/kb/139444).  
   
 ## <a name="see-also"></a>Voir aussi  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   

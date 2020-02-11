@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 48b2f38635e77f58388cc6d3b04beedd7fdc470c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106621"
 ---
 # <a name="add-html-into-a-report-report-builder-and-ssrs"></a>Ajouter du code HTML à un rapport (Générateur de rapports et SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "66106621"
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise en forme des nombres et des dates &#40;Générateur de rapports et SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [Mise en forme des lignes, couleurs et images &#40;Générateur de rapports et SSRS&#41;](images-report-builder-and-ssrs.md)   
- [Boîte de dialogue Propriétés de l’espace réservé, Général &#40;Générateur de rapports et SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md){0}  
+ [Mise en forme des lignes, des couleurs et des images &#40;Générateur de rapports et SSRS&#41;](images-report-builder-and-ssrs.md)   
+ [Boîte de dialogue Propriétés de l’espace réservé, Général &#40;Générateur de rapports et SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

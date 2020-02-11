@@ -1,5 +1,5 @@
 ---
-title: Enregistrer les données d’exploration de données boîte de dialogue résultat de requête (vue prévision de modèle d’exploration de données) | Microsoft Docs
+title: Boîte de dialogue Enregistrer le résultat de la requête d’exploration de données (vue prévision de modèle d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97b391e24f98b230dbfe352e0cf1a574c7549984
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070018"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>Boîte de dialogue Enregistrer le résultat de la requête d'exploration de données (vue Prévision de modèle d'exploration de données)
@@ -36,7 +36,7 @@ ms.locfileid: "66070018"
  **Nom de la table**  
  Tapez un nom pour la nouvelle table.  
   
- **Remplacer si existe**  
+ **Remplacer en cas d'existence**  
  Sélectionnez cette option pour remplacer une table existante portant le même nom.  
   
  Remplacer la table existante est nécessaire si l'une des conditions suivantes est vraie :  
@@ -49,14 +49,14 @@ ms.locfileid: "66070018"
   
  Si plusieurs colonnes portent le même nom (par exemple, plusieurs colonnes dérivées peuvent porter le nom de colonne par défaut **Expression**), vous devez créer un alias pour chaque colonne ayant un nom dupliqué. Si les colonnes n'ont pas de noms uniques, une erreur est générée lorsque le concepteur tente d'enregistrer les résultats dans SQL Server, car les colonnes d'une table doivent porter des noms uniques.  
   
- **Ajouter à la vue DSV**  
+ **Ajouter à la vue de source de données**  
  (Facultatif) Sélectionnez une vue de source de données contenue dans le projet si vous souhaitez ajouter la table à une source de données existante.  
   
- Cette option est utile si vous souhaitez conserver toutes les tables associées pour un modèle, tels que les données d’apprentissage, de source de données de prédiction et de requête des résultats de la même source de données.  
+ Cette option est utile si vous souhaitez conserver toutes les tables associées pour un modèle, telles que les données d’apprentissage, les données sources de prédiction et les résultats de la requête, dans la même source de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Générateur de requêtes de prédiction &#40;exploration de données&#41;](prediction-query-builder-data-mining.md)   
+ [Prédiction Générateur de requêtes &#40;l’exploration de données&#41;](prediction-query-builder-data-mining.md)   
  [Interfaces de requête d’exploration de données](data-mining/data-mining-query-tools.md)   
- [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
+ [Informations de référence sur les instructions DMX&#41; &#40;Data Mining Extensions](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

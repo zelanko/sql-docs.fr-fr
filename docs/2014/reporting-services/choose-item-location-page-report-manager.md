@@ -1,5 +1,5 @@
 ---
-title: Page choisir l’élément emplacement (Gestionnaire de rapports) | Microsoft Docs
+title: Page choisir l’emplacement de l’élément (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8fd750b8c83816caf775fd508d892ff2511ce67f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109903"
 ---
 # <a name="choose-item-location-page-report-manager"></a>Page Choisir l'emplacement de l'élément (Gestionnaire de rapports)
@@ -52,17 +52,17 @@ ms.locfileid: "66109903"
 4.  Dans l'onglet **Général** , dans la page de propriétés, cliquez sur **Modifier l'emplacement** pour ouvrir la page Choisir l'emplacement de l'élément.  
   
 ## <a name="options"></a>Options  
- **Emplacement**  
+ **Location**  
  Spécifiez le nom du dossier qui doit contenir l'élément que vous êtes en train de créer. Vous pouvez taper le nom complet du chemin d'accès ou utiliser l'arborescence pour naviguer jusqu'au dossier désiré.  
   
- **Vue d’arborescence**  
+ **Arborescence**  
  Affiche la structure des dossiers de l'espace de noms du serveur de rapports. Cliquez sur un nom de dossier pour ajouter le chemin d'accès complet dans la zone **Emplacement** .  
   
  Cliquez sur les icônes de développement (+) et de réduction (-) dans l'arborescence pour ouvrir et fermer les dossiers sans ajouter les noms des dossiers dans le champ **Emplacement** . Pour ajouter un nom de dossier dans le champ **Emplacement** , cliquez sur le nom du dossier.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Page Nouveau rapport lié &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
- [Page nouveau modèle &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/new-model-page-report-manager.md)   
- [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Page nouveau rapport lié &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
+ [Page nouveau modèle &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/new-model-page-report-manager.md)   
+ [Aide F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

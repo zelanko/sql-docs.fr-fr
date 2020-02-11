@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Paramètres de stockage (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Boîte de dialogue Paramètres de stockage (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,22 +14,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ecd796d2fb2bc37c4c2ad6d9fac00ef4258ec038
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068026"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Paramètres de stockage (Analysis Services - Données multidimensionnelles)
-  Utilisez la boîte de dialogue **Paramètres de stockage** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour définir les paramètres de mise en cache proactive, de stockage et de notification d’une dimension, d’un cube, d’un groupe de mesures ou d’une partition. Vous pouvez afficher la boîte de dialogue **Paramètres de stockage** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] en :  
+  Utilisez la boîte de dialogue **Paramètres de stockage** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour définir les paramètres de mise en cache proactive, de stockage et de notification d'une dimension, d'un cube, d'un groupe de mesures ou d'une partition. Vous pouvez afficher la boîte de dialogue **Paramètres de stockage** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] en :  
   
--   En cliquant sur le bouton de sélection ( **...** ) pour le `ProactiveCaching` valeur de propriété d’une dimension, cube, groupe de mesures, partition ou dans le **propriétés** fenêtre de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+-   Cliquez sur le bouton de sélection (**...**) `ProactiveCaching` pour la valeur de propriété d’une dimension, d’un cube, d’un groupe de mesures [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ou d’une partition dans la fenêtre **Propriétés** de.  
   
--   développant un groupe de mesures sous l’onglet **Partitions** du **Concepteur de cube** et en cliquant sur **Paramètres de stockage**;  
+-   développant un groupe de mesures dans l'onglet **Partitions** du **Concepteur de cube** et en cliquant sur **Paramètres de stockage** ;  
   
--   développant un groupe de mesures et en sélectionnant une partition dans la grille du groupe de mesures sous l’onglet **Partitions** du **Concepteur de cube** et en cliquant sur **Paramètres de stockage**;  
+-   développant un groupe de mesures et en sélectionnant une partition dans la grille du groupe de mesures dans l'onglet **Partitions** du **Concepteur de cube** et en cliquant sur **Paramètres de stockage** ;  
   
--   développant un groupe de mesures et en sélectionnant une partition dans la grille du groupe de mesures sous l’onglet **Partitions** du **Concepteur de cube** et en cliquant sur **Paramètres de stockage** dans le volet **Barre d’outils** de l’onglet **Partitions** du **Concepteur de cube**.  
+-   développant un groupe de mesures et en sélectionnant une partition dans la grille du groupe de mesures dans l'onglet **Partitions** du **Concepteur de cube** et en cliquant sur **Paramètres de stockage** dans le volet **Barre d'outils** de l'onglet **Partitions** du **Concepteur de cube**.  
   
 ## <a name="options"></a>Options  
   
@@ -47,8 +47,8 @@ ms.locfileid: "66068026"
 |**Options**|Affiche la boîte de dialogue **Options de stockage** qui permet de définir explicitement les options du mode de stockage, de la mise en cache proactive et de notification. Pour plus d’informations sur la boîte de dialogue **Options de stockage**, consultez [Boîte de dialogue Options de stockage &#40;Analysis Services - Données multidimensionnelles&#41;](storage-options-dialog-box-analysis-services-multidimensional-data.md).||  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Mise en cache proactive &#40;Partitions&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
- [Stockage de cube &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)  
+ [Analysis Services les concepteurs et les boîtes de dialogue &#40;les données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Mise en cache proactive &#40;les partitions&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
+ [Stockage cube &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)  
   
   

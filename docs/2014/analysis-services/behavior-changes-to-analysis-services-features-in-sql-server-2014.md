@@ -1,5 +1,5 @@
 ---
-title: Changements de comportement pour Analysis Services des fonctionnalités dans SQL Server 2014 | Microsoft Docs
+title: Changements de comportement des fonctionnalités de Analysis Services dans SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,44 +11,44 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a5525984fa4b1f1823f526097d271780a072bd4
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284808"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>Modifications de comportement des fonctionnalités Analysis Services dans SQL Server 2014
   Cette rubrique décrit les modifications de comportement dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pour les déploiements Multidimensionnel, Tabulaire, Exploration de données et [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] . Les modifications de comportement affectent le mode de fonctionnement ou d’interaction des fonctionnalités dans la version actuelle de SQL Server par rapport aux versions précédentes.  
   
 > [!NOTE]  
->  En revanche, une modification avec rupture empêche un modèle de données ou une application intégrée à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de s’exécuter. Pour en savoir plus, consultez [Modifications avec rupture dans les fonctionnalités Analysis Services de SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md).  
+>  En revanche, une modification avec rupture empêche un modèle de données ou une application intégrée à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de s’exécuter. Pour en savoir plus, consultez [Breaking Changes to Analysis Services Features in SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md).  
   
  Dans cette rubrique :  
   
 -   [Changements de comportement dans SQL Server 2014](#bkmk_sql2014)  
   
--   [Changements de comportement dans SQL Server 2012 SP1](#bkmk_sql2012sp1)  
+-   [Changements de comportement dans SQL Server 2012 SP1](#bkmk_sql2012sp1)  
   
--   [Changements de comportement dans SQL Server 2012](#bkmk_sql2012)  
+-   [Changements de comportement dans SQL Server 2012](#bkmk_sql2012)  
   
-##  <a name="bkmk_sql2014"></a> Changements de comportement dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+##  <a name="bkmk_sql2014"></a>Changements de comportement dans[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  Les fonctionnalités des modes Tabulaire, Multidimensionnel, Exploration de données ou [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] de cette version ne font l’objet d’aucune nouvelle modification de comportement.  Toutefois, compte tenu de la forte similitude entre  [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] et les versions [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] et [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] , les modifications de comportement des deux versions précédentes sont fournies ici à titre informatif au cas où votre mise à niveau porterait sur [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
-##  <a name="bkmk_sql2012sp1"></a> Changements de comportement dans [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]  
+##  <a name="bkmk_sql2012sp1"></a>Changements de comportement dans[!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]  
  Cette section documente les modifications de comportement signalées pour les fonctionnalités de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]. Ces modifications s’appliquent également à [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 |Problème|Description|  
 |-----------|-----------------|  
-|Les classeurs PowerPivot SQL Server 2008 R2 ne mettent pas à niveau et n'actualisent pas silencieusement les modèles lorsqu'ils sont utilisés dans SQL Server 2012 SP1 PowerPivot pour SharePoint 2013. Par conséquent, les actualisations de données planifiée ne fonctionnent pas pour les classeurs PowerPivot SQL Server 2008 R2.|Les classeurs SQL Server 2008 R2 s’ouvrent dans [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)], mais les actualisations planifiées ne fonctionnent pas. Si vous observez l'historique d'actualisation, vous pouvez voir un message d'erreur semblable au message suivant :<br /> « Le classeur contient un modèle PowerPivot non pris en charge. Le modèle PowerPivot dans le classeur est au format SQL Server 2008 R2 PowerPivot pour Excel 2010. Les modèles PowerPivot pris en charge sont les suivants : <br />SQL Server 2012 PowerPivot pour Excel 2010<br />SQL Server 2012 PowerPivot pour Excel 2013 »<br /><br /> **La mise à niveau un classeur :** L’actualisation planifiée ne fonctionne pas jusqu'à ce que vous mettez à niveau le classeur vers un classeur 2012. Pour mettre à niveau le classeur et le modèle qu'il contient, procédez de l'une des façons suivantes :<br /><br /> Téléchargez et ouvrez le classeur dans Microsoft Excel 2010 avec le complément SQL Server 2012 PowerPivot pour Excel installé. Ensuite, enregistrez le classeur et republiez-le sur le serveur SharePoint.<br /><br /> Téléchargez et ouvrez le classeur dans Microsoft Excel 2013. Ensuite, enregistrez le classeur et republiez-le sur le serveur SharePoint.<br /><br /> <br /><br /> Pour plus d’informations sur la mise à niveau du classeur, consultez [mettre les classeurs et l’actualisation planifiée des données &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).|  
+|Les classeurs PowerPivot SQL Server 2008 R2 ne mettent pas à niveau et n'actualisent pas silencieusement les modèles lorsqu'ils sont utilisés dans SQL Server 2012 SP1 PowerPivot pour SharePoint 2013. Par conséquent, les actualisations de données planifiée ne fonctionnent pas pour les classeurs PowerPivot SQL Server 2008 R2.|Les classeurs SQL Server 2008 R2 s’ouvrent dans [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)], mais les actualisations planifiées ne fonctionnent pas. Si vous observez l'historique d'actualisation, vous pouvez voir un message d'erreur semblable au message suivant :<br /> «Le classeur contient un modèle PowerPivot non pris en charge. Le modèle PowerPivot dans le classeur est au format SQL Server 2008 R2 PowerPivot pour Excel 2010. Les modèles PowerPivot pris en charge sont les suivants : <br />SQL Server 2012 PowerPivot pour Excel 2010<br />SQL Server 2012 PowerPivot pour Excel 2013»<br /><br /> **Comment mettre à niveau un classeur :** L’actualisation planifiée ne fonctionne pas tant que vous n’avez pas mis à niveau le classeur vers un classeur 2012. Pour mettre à niveau le classeur et le modèle qu'il contient, procédez de l'une des façons suivantes :<br /><br /> Téléchargez et ouvrez le classeur dans Microsoft Excel 2010 avec le complément SQL Server 2012 PowerPivot pour Excel installé. Ensuite, enregistrez le classeur et republiez-le sur le serveur SharePoint.<br /><br /> Téléchargez et ouvrez le classeur dans Microsoft Excel 2013. Ensuite, enregistrez le classeur et republiez-le sur le serveur SharePoint.<br /><br /> <br /><br /> Pour plus d’informations sur la mise à niveau des classeurs, consultez [mettre à niveau les classeurs et l’actualisation planifiée des données &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).|  
 |Modification du comportement dans la [ALL Function](/dax/all-function-dax)DAX|Avant [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)], si vous spécifiez une colonne [Date] dans Marquer en tant que table de dates, en vue d'une utilisation dans Time Intelligence, et la colonne [Date] est passée en tant qu'argument à la fonction ALL, qui à sont tour, est passée en tant que filtre à une fonction CALCULATE, tous les filtres de toutes les colonnes de la table sont ignorés, quel que soit le segment de la colonne de dates.<br /><br /> Par exemple,<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> Avant [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)], tous les filtres sont ignorés pour toutes les colonnes de DateTable, quel que soit la colonne [Date] passée en tant qu'argument à la fonction ALL.<br /><br /> Dans [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] et dans PowerPivot dans Excel 2013, les filtres ne sont ignorés que pour la colonne spécifiée passée en tant qu'argument à la fonction ALL.<br /><br /> Pour contourner le nouveau comportement, ignorer toutes les colonnes passées en tant que filtre pour l'intégralité de la table, excluez la colonne [Date] de l'argument, par exemple.<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> Le résultat obtenu sera identique à celui du comportement antérieur à [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)].|  
   
-##  <a name="bkmk_sql2012"></a> Changements de comportement dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+##  <a name="bkmk_sql2012"></a>Changements de comportement dans[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  Cette section documente les changements de comportement signalés pour les fonctionnalités de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Ces modifications s’appliquent également à [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 ### <a name="analysis-services-multidimensional-mode"></a>Analysis Services, mode multidimensionnel  
   
 #### <a name="nullprocessing-option-set-to-preserve-is-no-longer-supported-for-distinct-count-measures"></a>L’option NullProcessing avec la valeur Preserve n’est plus prise en charge pour les mesures de comptage de valeurs  
- Antérieures à [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], il était possible de définir [NullProcessing élément &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/properties/nullprocessing-element-assl) à `Preserve` pour les mesures de comptage.  Malheureusement, cette pratique entraînait souvent des résultats non valides, voire dans certains cas le blocage du travail de traitement. Cette configuration n’est donc plus valide dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Toute tentative d’utilisation il entraîne l’erreur de validation suivante se produise : « Erreurs dans le Gestionnaire de métadonnées. Preserve n’est pas une valeur NullProcessing valide pour le \<measurename > mesure de comptage de valeurs. »  
+ Avant [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], il était possible de définir l' [élément NullProcessing &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/nullprocessing-element-assl) sur `Preserve` pour les mesures de comptage de valeurs.  Malheureusement, cette pratique entraînait souvent des résultats non valides, voire dans certains cas le blocage du travail de traitement. Cette configuration n’est donc plus valide dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Toute tentative d’utilisation de cette configuration génère l’erreur de validation suivante : « Erreurs dans le gestionnaire de métadonnées. Preserve n’est pas une valeur NullProcessing valide pour \<la mesure MeasureName> distinct Count.»  
   
 #### <a name="cube-browser-in-management-studio-and-cube-designer-has-been-removed"></a>L'explorateur de cube dans Management Studio et le Concepteur de cube a été supprimé  
  Le contrôle explorateur de cube qui vous permet d'effectuer un glisser-déplacer des champs sur une structure de tableau croisé dynamique dans Management Studio ou le Concepteur de cube a été supprimé du produit. Le contrôle était un composant OWC (Office Web Control). OWC a été déconseillé par Office et n'est plus disponible.  
@@ -60,7 +60,7 @@ ms.locfileid: "67284808"
   
  Dans cette version, les spécifications relatives aux autorisations ont changé pour les classeurs Excel qui restituent des données PowerPivot à partir d'un fichier externe. Dans cette version, vous devez avoir des autorisations **Lire** (ou plus spécifiquement, l'autorisation **Ouvrir les éléments** ) pour vous connecter à un classeur PowerPivot externe à partir d'une application cliente. Des autorisations supplémentaires spécifient qu'un utilisateur dispose de droits de téléchargement pour consulter les données sources incorporées dans le classeur. Les autorisations supplémentaires reflètent le fait que les données de modèle sont entièrement accessibles par l'application cliente ou le classeur lié à celle-ci, avec pour résultat un meilleur alignement entre les spécifications d'autorisation et le comportement réel de connexion des données.  
   
- Pour continuer à utiliser un classeur PowerPivot comme source de données externe, vous devez élargir les autorisations SharePoint des utilisateurs qui se connectent aux données PowerPivot externes. Jusqu'à ce que vous modifiiez les autorisations, les utilisateurs obtiennent l’erreur suivante s’ils tentent d’accéder à des classeurs PowerPivot dans une connexion de source de données : « Le service PowerPivot Web a retourné une erreur (accès refusé. Le document que vous avez demandée n’existe pas ou vous n’êtes pas autorisé à ouvrir le fichier.) »  
+ Pour continuer à utiliser un classeur PowerPivot comme source de données externe, vous devez élargir les autorisations SharePoint des utilisateurs qui se connectent aux données PowerPivot externes. Tant que vous n’avez pas modifié les autorisations, les utilisateurs obtiendront l’erreur suivante s’ils essaient d’accéder aux classeurs PowerPivot dans une connexion de source de données : «le service Web PowerPivot a retourné une erreur (accès refusé. Le document que vous avez demandé n’existe pas ou vous n’avez pas l’autorisation d’ouvrir le fichier.)»  
   
 > [!WARNING]  
 >  Les étapes suivantes expliquent comment arrêter l'héritage des autorisation au niveau de la bibliothèque et changer les autorisations des utilisateurs de **Vue seule** à **Lire** pour les documents spécifiques de cette bibliothèque. Avant de continuer, examinez attentivement les autorisations existantes et les documents et vérifiez que ces étapes sont appropriées pour votre site.  
@@ -86,7 +86,7 @@ ms.locfileid: "67284808"
   
 6.  Choisissez les autorisations de **Lecture** , puis cliquez sur **OK**.  
   
-#### <a name="powerpivot-gallery-new-rules-for-snapshot-generation-for-some-powerpivot-workbooks"></a>Galerie PowerPivot : Nouvelles règles pour la génération d’instantanés pour certains classeurs PowerPivot  
+#### <a name="powerpivot-gallery-new-rules-for-snapshot-generation-for-some-powerpivot-workbooks"></a>Galerie PowerPivot : nouvelles règles pour la génération d'instantanés pour certains classeurs PowerPivot  
  Cette version prévoit une nouvelle configuration requise pour la génération d'images d'instantané dans la Galerie PowerPivot et élimine la source d'une potentielle divulgation d'informations (à savoir, afficher un instantané de données d'une source de données que vous n'avez pas l'autorisation d'afficher). Cette configuration s'applique uniquement aux classeurs PowerPivot qui se connectent aux sources de données externes chaque fois que vous les consultez. Si vous utilisez uniquement des classeurs qui visualisent les données PowerPivot incorporées, vous ne constaterez aucun changement de comportement pour la génération d'instantanés dans la Galerie PowerPivot.  
   
  Pour un classeur qui actualise ses données chaque fois qu'il s'ouvre, la nouvelle configuration requise pour la génération d'instantanés est la suivante :  
@@ -102,10 +102,10 @@ ms.locfileid: "67284808"
 #### <a name="new-default-setting-for-load-balancing-requests-changed-from-round-robin-to-health-based"></a>Le nouveau paramètre par défaut pour les demandes d'équilibrage de la charge a été modifié de Tourniquet (round robin) à Selon l'intégrité  
  Une application de service PowerPivot possède des paramètres par défaut qui déterminent la façon dont les demandes de données PowerPivot sont réparties entre plusieurs serveurs PowerPivot pour SharePoint dans une batterie. Dans la version précédente, le paramètre par défaut était **Tourniquet (round robin)** et les demandes étaient distribuées séquentiellement entre les serveurs disponibles. Dans cette version, la valeur par défaut est **Selon l'intégrité.** L'application de service PowerPivot utilise des statistiques d'intégrité du serveur, telles que la mémoire ou l'UC disponible, pour déterminer quelle instance de serveur obtient la demande xt.  
   
- Si vous avez mis à niveau votre serveur à partir de la version précédente, l'application de service PowerPivot conserve le paramètre par défaut précédent (**Tourniquet (round robin)**). Pour utiliser le paramètre de la méthode d'allocation **Selon l'intégrité** , vous devez modifier les paramètres de configuration. Pour plus d’informations, consultez [Créer et configurer une application de service PowerPivot](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md).  
+ Si vous avez mis à niveau votre serveur à partir de la version précédente, l'application de service PowerPivot conserve le paramètre par défaut précédent (**Tourniquet (round robin)**). Pour utiliser le paramètre de la méthode d'allocation **Selon l'intégrité** , vous devez modifier les paramètres de configuration. Pour plus d’informations, consultez [Create and Configure a PowerPivot Service Application in Central Administration](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Compatibilité descendante](../../2014/getting-started/backward-compatibility.md)   
- [Modifications avec rupture Analysis Services des fonctionnalités dans SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md)  
+ [Modifications avec rupture dans les fonctionnalités Analysis Services de SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md)  
   
   

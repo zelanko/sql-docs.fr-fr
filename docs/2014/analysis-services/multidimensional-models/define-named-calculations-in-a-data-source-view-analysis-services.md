@@ -1,5 +1,5 @@
 ---
-title: Définir des calculs nommés dans une vue de Source de données (Analysis Services) | Microsoft Docs
+title: Définir des calculs nommés dans une vue de source de données (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a69d5194c6eea3bc81676e8c0c3b1cac1d06270c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075564"
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>Définir des calculs nommés dans une vue de source de données (Analysis Services)
-  Un calcul nommé est une expression SQL représentée sous la forme d'une colonne calculée. Cette expression apparaît et se comporte comme une colonne dans la table. Un calcul nommé vous permet d'étendre le schéma relationnel des tables ou vues existantes dans une vue de source de données sans modifier les tables ou vues dans la source de données sous-jacente. Observez les exemples suivants :  
+  Un calcul nommé est une expression SQL représentée sous la forme d'une colonne calculée. Cette expression apparaît et se comporte comme une colonne dans la table. Un calcul nommé vous permet d'étendre le schéma relationnel des tables ou vues existantes dans une vue de source de données sans modifier les tables ou vues dans la source de données sous-jacente. Penchez-vous sur les exemples suivants :  
   
 -   Créez un seul calcul nommé dérivé de plusieurs colonnes dans une table de faits (par exemple, en créant le montant des taxes en multipliant un taux de taxe par un prix de vente).  
   
@@ -63,10 +63,10 @@ FROM
   
 3.  Cliquez avec le bouton droit sur la table dans laquelle vous voulez définir le calcul nommé dans le volet **Tables** ou **Diagramme** , puis cliquez sur **Nouveau calcul nommé**. Veillez à cliquer avec le bouton droit sur le nom de la table, et non sur un attribut. Le menu doit ressembler à ce qui suit :  
   
-     ![Capture d’écran de l’espace de travail de diagramme, le menu contextuel](../media/ssas-olapdsv-diagram.gif "capture d’écran de l’espace de travail de diagramme, le menu contextuel.")  
+     ![Capture d'écran du menu contextuel de l'espace de travail du diagramme](../media/ssas-olapdsv-diagram.gif "Capture d'écran du menu contextuel de l'espace de travail du diagramme")  
   
     > [!NOTE]  
-    >  Pour rechercher une table ou une vue, vous pouvez utiliser l’option **Rechercher une table** en cliquant sur le menu **Vue de source de données** ou en cliquant avec le bouton droit dans une zone ouverte du volet **Tables** ou **Diagramme** .  
+    >  Pour rechercher une table ou une vue, vous pouvez utiliser l’option **Rechercher une table** en cliquant sur le menu vue de **source de données** ou en cliquant avec le bouton droit dans une zone ouverte du volet **tables** ou **diagramme** .  
   
 4.  Dans la boîte de dialogue **Créer un calcul nommé** , procédez comme suit :  
   

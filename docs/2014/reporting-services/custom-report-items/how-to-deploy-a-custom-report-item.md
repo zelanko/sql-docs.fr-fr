@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Déployer un élément de rapport personnalisé | Microsoft Docs'
+title: 'Procédure : déployer un élément de rapport personnalisé | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2b41519ee6a6d31be33d92c8fbdf2ab503c93ec1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265081"
 ---
-# <a name="how-to-deploy-a-custom-report-item"></a>Procédure : Déployer un élément de rapport personnalisé
+# <a name="how-to-deploy-a-custom-report-item"></a>Procédure : déployer un élément de rapport personnalisé
   Pour déployer un élément de rapport personnalisé dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous devez d'abord modifier les fichiers de configuration du serveur de rapports, puis copier les assemblys correspondant aux composants de conception et d'exécution dans les dossiers d'application appropriés, et ce à la fois pour le Concepteur de rapports et le serveur de rapports.  
   
 ### <a name="to-deploy-a-custom-report-item"></a>Pour déployer un élément de rapport personnalisé  
   
-1.  Modifiez le fichier Rsreportdesigner.config afin de configurer les composants de conception et d'exécution de l'élément de rapport personnalisé à utiliser dans le concepteur. N'oubliez pas que l'entrée `ReportItemName` doit correspondre à l'attribut `CustomReportItemAttribute` utilisé dans la classe `CustomReportItemDesigner`. Exemple :  
+1.  Modifiez le fichier Rsreportdesigner.config afin de configurer les composants de conception et d'exécution de l'élément de rapport personnalisé à utiliser dans le concepteur. N'oubliez pas que l'entrée `ReportItemName` doit correspondre à l'attribut `CustomReportItemAttribute` utilisé dans la classe `CustomReportItemDesigner`. Par exemple :  
   
     ```  
     <ReportItems>  
@@ -38,7 +38,7 @@ ms.locfileid: "63265081"
     </ReportItemConverter>  
     ```  
   
-2.  Modifiez le fichier Rsreportserver.config pour inscrire le composant d'exécution de l'élément de rapport personnalisé. Exemple :  
+2.  Modifiez le fichier Rsreportserver.config pour inscrire le composant d'exécution de l'élément de rapport personnalisé. Par exemple :  
   
     ```  
     <ReportItems>  
@@ -46,7 +46,7 @@ ms.locfileid: "63265081"
     </ReportItems>  
     ```  
   
-3.  Modifiez le fichier Rssrvpolicy.config pour ajouter un `CodeGroup` octroyant les autorisations adéquates à l'élément de rapport personnalisé. Exemple :  
+3.  Modifiez le fichier Rssrvpolicy.config pour ajouter un `CodeGroup` octroyant les autorisations adéquates à l'élément de rapport personnalisé. Par exemple :  
   
     ```  
     <CodeGroup   

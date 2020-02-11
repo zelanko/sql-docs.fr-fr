@@ -15,23 +15,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e3ba4d9ee2e0b92617c2d2bcadae3bf87c8b5414
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108637"
 ---
 # <a name="upgrade-a-report-server-database"></a>Mettre à niveau une base de données du serveur de rapports
   La base de données du serveur de rapports offre un espace de stockage pour une ou plusieurs instances du serveur de rapports. Comme le schéma de base de données du serveur de rapports peut changer à chaque nouvelle version de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], il est nécessaire que la version de la base de données corresponde à la version de l'instance du serveur de rapports que vous utilisez. Dans la plupart des cas, une base de données du serveur de rapports peut être mise à niveau automatiquement sans aucune intervention de votre part.  
   
- **Mode natif :** Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif, la base de données de serveur de rapports est en fait composé de deux bases de données qui ont des noms par défaut « ReportServer et ReportServerTempDB ».  
+ **Mode natif :** En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mode natif, la base de données du serveur de rapports est constituée de deux bases de données dont les noms par défaut sont « ReportServer et ReportServerTempDB ».  
   
- **Mode SharePoint :** Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mode SharePoint la base de données de serveur de rapports est une collection de bases de données qui est créée pour chaque instance de la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application de service.  
+ **Mode SharePoint :** En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mode SharePoint, la base de données du serveur de rapports est en fait une collection de bases de données créée [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour chaque instance de l’application de service.  
   
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>Méthodes de mise à niveau d'une base de données de serveur de rapports en mode natif  
  La liste suivante identifie toutes les conditions selon lesquelles une base de données du serveur de rapports est mise à niveau :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] met à niveau une instance unique d'un serveur de rapports. Le schéma de base de données du serveur de rapports est mis à niveau automatiquement après le démarrage de service et le serveur de rapports détermine que la version du schéma de base de données ne correspond pas à la version du serveur.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] met à niveau une instance unique d'un serveur de rapports. Le schéma de base de données du serveur de rapports est mis à niveau automatiquement après le démarrage de service et le serveur de rapports détermine que la version du schéma de base de données ne correspond pas à la version du serveur.  
   
      Au démarrage du service, le serveur de rapports vérifie la version du schéma de base de données pour s'assurer qu'elle correspond à la version du serveur. Si la version du schéma de base de données est antérieure, elle est automatiquement mise à niveau vers la version du schéma requise par le serveur de rapports. La mise à niveau automatique est particulièrement utile si vous avez restauré ou joint une base de données du serveur de rapports plus ancienne. Un message est entré dans le fichier journal de suivi du serveur de rapports, indiquant que la version du schéma de base de données a été mise à niveau.  
   
@@ -48,7 +49,7 @@ ms.locfileid: "66108637"
   
 2.  Les descripteurs de sécurité sont mis à niveau lors la première utilisation de la base de données de serveur de rapports après la mise à jour du schéma.  
   
-3.  Les rapports publiés et les instantanés de rapports compilés sont mis à jour lors de la première utilisation. Pour plus d'informations, consultez [Upgrade Reports](upgrade-reports.md).  
+3.  Les rapports publiés et les instantanés de rapports compilés sont mis à jour lors de la première utilisation. Pour plus d'informations, consultez [Mettre à niveau des rapports](upgrade-reports.md).  
   
  Outre la base de données de serveur de rapports, un serveur de rapports utilise également une base de données temporaire. La base de données temporaire est mise à niveau automatiquement lors de la mise à niveau de la base de données de serveur de rapports.  
   
@@ -67,8 +68,8 @@ ms.locfileid: "66108637"
 ## <a name="see-also"></a>Voir aussi  
  [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Créer une base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
- [Modifier la base de données Assistant &#40;SSRS en Mode natif&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
- [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md)   
- [Faire migrer une installation Reporting Services &#40;mode natif&#41;](migrate-a-reporting-services-installation-native-mode.md)  
+ [Assistant modification de base de données &#40;le mode natif SSRS&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
+ [Mettre à niveau et migrer Reporting Services](upgrade-and-migrate-reporting-services.md)   
+ [Migrer une installation Reporting Services &#40;en mode natif&#41;](migrate-a-reporting-services-installation-native-mode.md)  
   
   

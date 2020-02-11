@@ -1,5 +1,5 @@
 ---
-title: Définition d’un contexte de Cube dans une requête (MDX Multidimensional) | Microsoft Docs
+title: Établissement d’un contexte de cube dans une requête (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9f0f960c531fac8bae8f03479bacd507ffc3078
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074601"
 ---
 # <a name="establishing-cube-context-in-a-query-mdx"></a>Définition d'un contexte de cube dans une requête (MDX)
@@ -45,7 +45,7 @@ ms.locfileid: "66074601"
   
  Dans cette syntaxe, notez que c'est la clause `<SELECT subcube clause>` qui décrit le cube ou le sous-cube sur lequel s'exécute l'instruction SELECT.  
   
- Un exemple simple de clause FROM pourrait s'exécuter sur l'ensemble du cube Adventure Works. Une telle clause FROM aurait le format suivant :  
+ Un exemple simple de clause FROM pourrait s'exécuter sur l'ensemble du cube Adventure Works. Une telle clause FROM aurait le format suivant :  
   
 ```  
 FROM [Adventure Works]  
@@ -59,6 +59,6 @@ FROM [Adventure Works]
  Vous pouvez utiliser la fonction [LookupCube](/sql/mdx/lookupcube-mdx) MDX pour récupérer des données de cubes en dehors du contexte des cubes. De plus, il existe des fonctions telles que [Filter](/sql/mdx/filter-mdx) qui permettent de restreindre temporairement le contexte durant l’évaluation de la requête.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Principes de base des requêtes MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Notions de base des requêtes MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

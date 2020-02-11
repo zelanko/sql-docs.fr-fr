@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Source ADO NET (Page colonnes) | Microsoft Docs
+title: Éditeur de source ADO NET (page colonnes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1eba4cb2f1f5c8825e9cae5751fe230fbe45a835
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061699"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>Éditeur de source ADO NET (page Colonnes)
@@ -44,7 +44,7 @@ ms.locfileid: "66061699"
   
 ## <a name="see-also"></a>Voir aussi  
  [Éditeur de source ADO NET &#40;page Gestionnaire de connexions&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
- [Éditeur de source ADO NET &#40;page Sortie d’erreur&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
+ [Éditeur de source ADO NET &#40;page sortie d’erreur&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [Gestionnaire de connexions ADO.NET](connection-manager/ado-net-connection-manager.md)  
   
   

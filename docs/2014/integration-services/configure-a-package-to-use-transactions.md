@@ -1,5 +1,5 @@
 ---
-title: Configurer un Package pour utiliser des Transactions | Microsoft Docs
+title: Configurer un package pour utiliser des transactions | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 16d1f0f4c24f18327ee31da1fb85a74d19588384
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060859"
 ---
 # <a name="configure-a-package-to-use-transactions"></a>Configurer un package pour l'utilisation de transactions
-  Lorsque vous configurez un package pour l'utilisation de transactions, vous avez le choix entre deux options :  
+  Lorsque vous configurez un package pour l'utilisation de transactions, vous avez le choix entre deux options :  
   
 -   Avoir une transaction unique pour le package. Dans ce cas, le package *lance* lui-même cette transaction, alors que les tâches et les conteneurs individuels dans le package participent à cette transaction unique.  
   
@@ -29,9 +29,9 @@ ms.locfileid: "66060859"
  Les procédures ci-dessous montrent comment configurer ces deux options.  
   
 ## <a name="configuring-a-single-transaction"></a>Configuration d'une transaction unique  
- Dans cette option, le package lui-même lance une transaction unique. Vous configurez le package pour lancer cette transaction en définissant la propriété TransactionOption du package à `Required`.  
+ Dans cette option, le package lui-même lance une transaction unique. Vous configurez le package pour lancer cette transaction en affectant à `Required`la propriété TransactionOption du package la valeur.  
   
- Ensuite, vous inscrivez des tâches et des conteneurs spécifiques dans cette transaction unique. Pour inscrire une tâche ou un conteneur dans une transaction, vous définissez la propriété TransactionOption de cette tâche ou le conteneur à `Supported`.  
+ Ensuite, vous inscrivez des tâches et des conteneurs spécifiques dans cette transaction unique. Pour inscrire une tâche ou un conteneur dans une transaction, vous affectez à `Supported`la propriété TransactionOption de cette tâche ou de ce conteneur la valeur.  
   
 #### <a name="to-configure-a-package-to-use-a-single-transaction"></a>Pour configurer un package de façon à utiliser une transaction unique  
   
@@ -43,11 +43,11 @@ ms.locfileid: "66060859"
   
 4.  Cliquez avec le bouton droit n’importe où dans l’arrière-plan de la surface de dessin du flux de contrôle, puis cliquez sur **Propriétés**.  
   
-5.  Dans le **propriétés** fenêtre, définissez la propriété TransactionOption `Required`.  
+5.  Dans la fenêtre **Propriétés** , affectez à `Required`la propriété TransactionOption la valeur.  
   
 6.  Sur la surface de dessin de l’onglet **Flux de contrôle** , cliquez avec le bouton droit sur la tâche ou le conteneur que vous souhaitez inscrire dans la transaction, puis cliquez sur **Propriétés**.  
   
-7.  Dans le **propriétés** fenêtre, définissez la propriété TransactionOption `Supported`.  
+7.  Dans la fenêtre **Propriétés** , affectez à `Supported`la propriété TransactionOption la valeur.  
   
     > [!NOTE]  
     >  Pour inscrire une connexion dans une transaction, inscrivez les tâches qui utilisent la connexion dans la transaction. Pour plus d’informations, consultez [Connexions Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).  
@@ -55,9 +55,9 @@ ms.locfileid: "66060859"
 8.  Répétez les étapes 6 et 7 pour chaque tâche et conteneur que vous voulez inscrire dans la transaction.  
   
 ## <a name="configuring-multiple-transactions"></a>Configuration de plusieurs transactions  
- Dans cette option, le package lui-même prend en charge les transactions mais ne démarre pas une transaction. Vous configurez le package pour prendre en charge des transactions en définissant la propriété TransactionOption du package à `Supported`.  
+ Dans cette option, le package lui-même prend en charge les transactions mais ne démarre pas une transaction. Vous configurez le package pour prendre en charge les transactions en affectant à `Supported`la propriété TransactionOption du package la valeur.  
   
- Ensuite, vous configurez les tâches et les conteneurs de votre choix au sein du package pour lancer des transactions ou y participer. Pour configurer une tâche ou un conteneur pour lancer une transaction, vous définissez la propriété TransactionOption de cette tâche ou le conteneur à `Required`.  
+ Ensuite, vous configurez les tâches et les conteneurs de votre choix au sein du package pour lancer des transactions ou y participer. Pour configurer une tâche ou un conteneur pour lancer une transaction, vous affectez à `Required`la propriété TransactionOption de cette tâche ou de ce conteneur la valeur.  
   
 #### <a name="to-configure-a-package-to-use-multiple-transactions"></a>Pour configurer un package de façon à utiliser plusieurs transactions  
   
@@ -69,18 +69,18 @@ ms.locfileid: "66060859"
   
 4.  Cliquez avec le bouton droit n’importe où dans l’arrière-plan de la surface de dessin du flux de contrôle, puis cliquez sur **Propriétés**.  
   
-5.  Dans le **propriétés** fenêtre, définissez la propriété TransactionOption `Supported`.  
+5.  Dans la fenêtre **Propriétés** , affectez à `Supported`la propriété TransactionOption la valeur.  
   
     > [!NOTE]  
     >  Le package prend en charge les transactions, mais les transactions sont démarrées par la tâche ou des conteneurs dans le package.  
   
 6.  Sur la surface de dessin de l’onglet **Flux de contrôle** , cliquez avec le bouton droit sur la tâche ou le conteneur du package pour lequel vous souhaitez commencer une transaction, puis cliquez sur **Propriétés**.  
   
-7.  Dans le **propriétés** fenêtre, définissez la propriété TransactionOption `Required`.  
+7.  Dans la fenêtre **Propriétés** , affectez à `Required`la propriété TransactionOption la valeur.  
   
 8.  Si une transaction est commencée par un conteneur, cliquez avec le bouton droit sur la tâche ou le conteneur que vous souhaitez inscrire dans la transaction, puis cliquez sur **Propriétés**.  
   
-9. Dans le **propriétés** fenêtre, définissez la propriété TransactionOption `Supported`.  
+9. Dans la fenêtre **Propriétés** , affectez à `Supported`la propriété TransactionOption la valeur.  
   
     > [!NOTE]  
     >  Pour inscrire une connexion dans une transaction, inscrivez les tâches qui utilisent la connexion dans la transaction. Pour plus d’informations, consultez [Connexions Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).  

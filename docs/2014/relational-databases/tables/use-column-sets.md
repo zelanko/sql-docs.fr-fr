@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63298641"
 ---
 # <a name="use-column-sets"></a>Utiliser des jeux de colonnes
@@ -106,10 +106,10 @@ GO
   
  Dans cet exemple, aucune valeur n'a été spécifiée pour le `i`de colonne, mais la valeur `0` a été insérée.  
   
-## <a name="using-the-sqlvariant-data-type"></a>Utilisation du Type de données sql_variant  
+## <a name="using-the-sql_variant-data-type"></a>Utilisation du Type de données sql_variant  
  Le type de données `sql_variant` peut stocker plusieurs types de données différents, tels que `int`, `char` et `date`. Les jeux de colonnes retournent les informations de type de données telles que l'échelle, la précision et les informations relatives aux paramètres régionaux associées à une valeur `sql_variant` sous la forme d'attributs dans la colonne XML générée. Si vous essayez de fournir ces attributs dans une instruction XML générée de manière personnalisée en tant qu'entrée pour une opération d'insertion ou de mise à jour sur un jeu de colonnes, certains de ces attributs sont requis et une valeur par défaut est assignée à certains d'entre eux. Le tableau suivant répertorie les types de données et les valeurs par défaut générées par le serveur lorsque la valeur n'est pas fournie.  
   
-|Type de données|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Longueur maximale|Précision|Échelle|  
+|Type de données|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Longueur maximale|Precision|Scale|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
 |`char`, `varchar`, `binary`|-1|'Par défaut'|0|0|8000|Non applicable**|Non applicable|  
 |`nvarchar`|-1|'Par défaut'|0|0|4000|Non applicable|Non applicable|  
@@ -121,7 +121,8 @@ GO
 |`money`, `smallmoney`|Non applicable|Non applicable|Non applicable|Non applicable|Non applicable|Non applicable|Non applicable|  
 |`time`|Non applicable|Non applicable|Non applicable|Non applicable|Non applicable|Non applicable|7|  
   
- \*  localeID -1 correspond aux paramètres régionaux par défaut. Les paramètres régionaux pour l'anglais sont 1033.  
+ 
+  \*  localeID -1 correspond aux paramètres régionaux par défaut. Les paramètres régionaux pour l'anglais sont 1033.  
   
  ** Non applicable = Aucune valeur n’est sortie pour ces attributs durant une opération de sélection sur le jeu de colonnes. Génère une erreur lorsqu'une valeur est spécifiée pour cet attribut par l'appelant dans la représentation XML fournie pour un jeu de colonnes dans une opération d'insertion ou de mise à jour.  
   
@@ -139,7 +140,7 @@ GO
 ## <a name="examples"></a>Exemples  
  Dans les exemples suivants, une table de documents contient le jeu de colonnes commun `DocID` et `Title`. Le groupe Production souhaite avoir une colonne `ProductionSpecification` et `ProductionLocation` pour tous les documents de production. Le groupe Marketing souhaite avoir une colonne `MarketingSurveyGroup` pour les documents de marketing.  
   
-### <a name="a-creating-a-table-that-has-a-column-set"></a>A. Création d'une table qui a un jeu de colonnes  
+### <a name="a-creating-a-table-that-has-a-column-set"></a>R. Création d'une table qui a un jeu de colonnes  
  L'exemple suivant crée la table qui utilise des colonnes éparses et inclut le jeu de colonnes `SpecialPurposeColumns`. L'exemple insère deux lignes dans la table, puis sélectionne des données de la table.  
   
 > [!NOTE]  

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e0f635cc6eb6d985bb75f87583397d6f4c2baa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245791"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personnaliser des menus et des touches de raccourci
@@ -55,7 +55,7 @@ ms.locfileid: "63245791"
   
 1.  Cliquez sur le bouton dans la barre d'outils.  
   
-2.  Dans la boîte de dialogue **Personnaliser**, sous l’onglet **Commandes**, cliquez sur **Modifier la sélection**.  
+2.  Dans la boîte de dialogue **Personnaliser** , sous l’onglet **Commandes** , cliquez sur **Modifier la sélection**.  
   
 3.  Dans la zone **Nom** du menu contextuel, tapez le nom du bouton de la barre d’outils en plaçant le signe & devant la lettre que vous souhaitez comme touche d’accès rapide.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63245791"
   
 2.  Cliquez sur la commande du menu.  
   
-3.  Dans la boîte de dialogue **Personnaliser**, cliquez sur **Modifier la sélection**.  
+3.  Dans la boîte de dialogue **Personnaliser** , cliquez sur **Modifier la sélection**.  
   
 4.  Dans la zone **Nom** du menu contextuel, tapez le nom de la commande du menu en plaçant le signe & devant la lettre que vous souhaitez comme touche d’accès rapide.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "63245791"
   
 4.  Appuyez sur Tab pour accéder à la liste **Contrôles** et utilisez les touches de direction pour sélectionner le bouton que vous souhaitez modifier.  
   
-5.  Appuyez sur **Alt+M** pour sélectionner **Modifier la sélection**.  
+5.  Appuyez sur **Alt+M**pour sélectionner **Modifier la sélection**.  
   
 6.  Appuyez sur Tab pour accéder à la zone **Nom** du menu contextuel, tapez le nom du bouton de la barre d’outils en plaçant le signe & devant la lettre que vous souhaitez comme touche d’accès rapide.  
   

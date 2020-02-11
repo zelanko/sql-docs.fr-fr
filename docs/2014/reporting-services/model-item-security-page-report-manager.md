@@ -1,5 +1,5 @@
 ---
-title: Page sécurité (Gestionnaire de rapports) de l’élément de modèle | Microsoft Docs
+title: Page sécurité de l’élément de modèle (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f45169a2fdc8fdc4d56cb27a8bf6348a3c3c1a29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108228"
 ---
 # <a name="model-item-security-page-report-manager"></a>Page Sécurité de l'élément de modèle (Gestionnaire de rapports)
@@ -61,17 +61,17 @@ ms.locfileid: "66108228"
 4.  Sélectionnez l'onglet **Sécurité de l'élément de modèle** .  
   
 ## <a name="options"></a>Options  
- **Sécuriser les éléments de modèles individuels indépendamment pour ce modèle**  
+ **Sécuriser les éléments de modèles de manière indépendante pour ce modèle**  
  Activez cette case à cocher pour activer la sécurité des éléments de modèle.  
   
- **Spécifiez la sécurité pour les éléments de modèles dans le mode**  
+ **Spécifiez la sécurité pour chaque élément du modèle**  
  Affiche tous les éléments d'un modèle. Vous pouvez parcourir l'espace de noms du modèle pour sélectionner l'élément à sécuriser. Vous ne pouvez sélectionner qu'un seul élément à la fois. Veillez à créer la première attribution de rôle au niveau du nœud racine avant de passer aux autres entités et dossiers.  
   
- **Hériter des autorisations de l’élément parent**  
+ **Hériter les autorisations de l'élément parent**  
  Sélectionnez cette option pour hériter des paramètres de sécurité de l'élément parent.  
   
- **Affecter une autorisation de lecture pour les utilisateurs et groupes suivants (séparés par des points-virgules)**  
- Sélectionnez cette option pour spécifier le compte d'utilisateur ou de groupe pour lequel vous définissez l'accès. Si vous utilisez la sécurité par défaut, les comptes d'utilisateur et de groupe sont des comptes de domaine Windows. Spécifiez les comptes sous ce format :  *\<domaine >\\< compte\>* .  
+ **Affecter l'autorisation d'accès en lecture aux utilisateurs et groupes suivants (séparés par des points-virgules)**  
+ Sélectionnez cette option pour spécifier le compte d'utilisateur ou de groupe pour lequel vous définissez l'accès. Si vous utilisez la sécurité par défaut, les comptes d'utilisateur et de groupe sont des comptes de domaine Windows. Spécifiez les comptes au format suivant : * \<domaine \\><\>compte*.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Aide du serveur de rapports dans Management Studio via la touche F1](tools/report-server-in-management-studio-f1-help.md)  

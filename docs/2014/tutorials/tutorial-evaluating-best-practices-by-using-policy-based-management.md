@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriel : Évaluation des meilleures pratiques à l’aide de gestion basée sur des stratégies | Microsoft Docs'
+title: 'Didacticiel : évaluation des meilleures pratiques à l’aide de la gestion basée sur des stratégies | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,33 +19,33 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c41edcfc545e69e6e8174003ca765a4c2f1d551b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064432"
 ---
-# <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Tutoriel : Évaluation des bonnes pratiques à l’aide de la Gestion basée sur des stratégies
+# <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Didacticiel : évaluation des meilleures pratiques à l'aide de la Gestion basée sur des stratégies
   Bienvenue dans le didacticiel d'évaluation des meilleures pratiques à l'aide de la Gestion basée sur des stratégies. Ce didacticiel est destiné aux utilisateurs familiarisés avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mais ne connaissant pas la Gestion basée sur des stratégies. Le système de gestion basée sur des stratégies permet de définir des stratégies qui peuvent être utilisées pour appliquer des normes d'administration de site. Il comprend un jeu de stratégies des meilleures pratiques que vous pouvez utiliser pour analyser une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] afin de déterminer si l'instance répond aux indications et recommandations des meilleures pratiques.  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
- Dans ce didacticiel, vous allez apprendre à évaluer les stratégies des meilleures pratiques pour la [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] de manière à la demande (ou « ad hoc »), ou selon une planification.  
+ Dans ce didacticiel, vous allez apprendre à évaluer les stratégies des meilleures pratiques pour [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] le sur une base à la demande (ou « ad hoc ») ou selon une planification.  
   
  Ce didacticiel est divisé en deux leçons :  
   
- [Leçon 1 : Évaluez les recommandations de manière à la demande](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
+ [Leçon 1 : évaluer les meilleures pratiques en fonction des demandes](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
  Dans cette leçon, vous effectuez une évaluation à la demande des stratégies sur une ou plusieurs instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- [Leçon 2 : Évaluer les stratégies des meilleures pratiques de manière planifiée](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [Leçon 2 : évaluer les stratégies des meilleures pratiques de façon planifiée](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
  Dans cette leçon, vous configurez l'exécution des stratégies des meilleures pratiques de façon planifiée. La leçon indique comment configurer des stratégies planifiées sur une instance unique et comment déployer des stratégies planifiées d'un emplacement centralisé vers plusieurs instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Cette leçon requiert une connaissance élémentaire des bases de données et une compréhension des notions fondamentales de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
  Pour utiliser ce didacticiel, [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] doit être installé sur le serveur.  
   
 ## <a name="start-the-tutorial"></a>Démarrer le didacticiel  
- [Leçon 1 : Évaluez les recommandations de manière à la demande](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
+ [Leçon 1 : évaluer les meilleures pratiques en fonction des demandes](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Administrer des serveurs à l'aide de la Gestion basée sur des stratégies](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

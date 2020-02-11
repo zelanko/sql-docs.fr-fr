@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5f289257d64a691a93d44d63d2a30991227802e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110109"
 ---
 # <a name="reordering-data-in-a-hierarchical-table-using-hierarchical-methods"></a>Réorganisation de données dans une table hiérarchique à l'aide de méthodes hiérarchiques
   La réorganisation d'une hiérarchie est une tâche de maintenance courante. Dans cette tâche, nous utiliserons une instruction UPDATE avec la méthode [GetReparentedValue](/sql/t-sql/data-types/getreparentedvalue-database-engine) pour déplacer en premier lieu une seule ligne vers un nouvel emplacement dans la hiérarchie. Puis, nous déplacerons la totalité d'une sous-arborescence vers un nouvel emplacement.  
   
- La méthode `GetReparentedValue` accepte deux arguments. Le premier argument décrit la partie de la hiérarchie à modifier. Par exemple, si une hiérarchie est **/1/4/2/3/** et que vous souhaitez modifier la section **/1/4/** , la hiérarchie devient **/2/1/2/3/** , laissant les deux derniers nœuds (**2/3 /** ) inchangés. Les nœuds à modifier ( **/1/4/** ) doivent être spécifiés comme premier argument. Le deuxième argument fournit le nouveau niveau de hiérarchie, dans notre exemple **/2/1/** . Les deux arguments ne doivent pas nécessairement contenir le même nombre de niveaux.  
+ La méthode `GetReparentedValue` accepte deux arguments. Le premier argument décrit la partie de la hiérarchie à modifier. Par exemple, si une hiérarchie est **/1/4/2/3/** et que vous souhaitez modifier la section **/1/4/** , la hiérarchie devient **/2/1/2/3/**, laissant les deux derniers nœuds (**2/3 /**) inchangés. Les nœuds à modifier (**/1/4/**) doivent être spécifiés comme premier argument. Le deuxième argument fournit le nouveau niveau de hiérarchie, dans notre exemple **/2/1/**. Les deux arguments ne doivent pas nécessairement contenir le même nombre de niveaux.  
   
 ### <a name="to-move-a-single-row-to-a-new-location-in-the-hierarchy"></a>Pour déplacer une ligne unique vers un nouvel emplacement dans la hiérarchie  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66110109"
     GO  
     ```  
   
-     Wanida se trouve maintenant au nœud **/3/1/** .  
+     Wanida se trouve maintenant au nœud **/3/1/**.  
   
 ### <a name="to-reorganize-a-section-of-a-hierarchy"></a>Pour réorganiser une section d'une hiérarchie  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66110109"
     GO  
     ```  
   
-2.  Kevin est désormais le subalterne de Wanida, elle-même subalterne de Jill, elle-même subalterne de David. Cela signifie que Kevin est au niveau **/3/1/1/** . Pour déplacer tous les subalternes de Jill vers un nouveau responsable, nous allons mettre à jour tous les nœuds qui ont **/3/** comme valeur **OrgNode** vers une nouvelle valeur. Exécutez le code suivant pour mettre à jour Wanida de sorte que Sariya soit sa supérieure, en conservant Kevin comme subalterne de Wanida :  
+2.  Kevin est désormais le subalterne de Wanida, elle-même subalterne de Jill, elle-même subalterne de David. Cela signifie que Kevin est au niveau **/3/1/1/**. Pour déplacer tous les subalternes de Jill vers un nouveau responsable, nous allons mettre à jour tous les nœuds qui ont **/3/** comme valeur **OrgNode** vers une nouvelle valeur. Exécutez le code suivant pour mettre à jour Wanida de sorte que Sariya soit sa supérieure, en conservant Kevin comme subalterne de Wanida :  
   
     ```  
     DECLARE @OldParent hierarchyid, @NewParent hierarchyid  
@@ -123,6 +123,6 @@ Text_OrgNode OrgNode OrgLevel EmployeeID EmpName Title
  Pour obtenir une procédure stockée qui réorganise une section d’une hiérarchie, consultez la section « Déplacement de sous-arborescences » de [Déplacement de sous-arborescences](../hierarchical-data-sql-server.md#BKMK_MovingSubtrees).  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Résumé : La gestion des données dans une Table hiérarchique](lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
+ [Résumé : Gestion de données dans une table hiérarchique](lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
   
   

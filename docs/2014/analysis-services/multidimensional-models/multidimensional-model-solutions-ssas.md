@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 703080418566b761741575c69fb6be6a7572988e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073568"
 ---
 # <a name="multidimensional-model-solutions-ssas"></a>Solutions de modèles multidimensionnels (SSAS)
@@ -25,7 +25,7 @@ ms.locfileid: "66073568"
 ## <a name="in-this-section"></a>Dans cette section  
  Les rubriques suivantes fournissent des instructions sur la conception d’objets multidimensionnels de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- [Bases de données de modèle multidimensionnel &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
+ [Bases de données de modèle multidimensionnels &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
  Décrit comment définir une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  [Sources de données prises en charge &#40;SSAS multidimensionnel&#41;](supported-data-sources-ssas-multidimensional.md)  
@@ -40,10 +40,10 @@ ms.locfileid: "66073568"
  [Cubes dans les modèles multidimensionnels](cubes-in-multidimensional-models.md)  
  Décrit comment concevoir des objets de cube [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- [Assistant Génération de schéma &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
+ [Assistant génération de schéma &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
  Explique comment concevoir des objets multidimensionnels de base de données sans schéma relationnel existant.  
   
  [Extensions de personnalisation Analysis Services](extending-olap/analysis-services-personalization-extensions.md)  
- Décrit comment concevoir des extensions de personnalisation pour [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ Décrit comment concevoir des extensions de personnalisation [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]pour.  
   
   

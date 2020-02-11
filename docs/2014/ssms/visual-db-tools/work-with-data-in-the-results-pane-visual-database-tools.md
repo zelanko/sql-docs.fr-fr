@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d5f3dffc7661fc5843dcd220f27beb1117a85729
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63313769"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Utiliser des données du volet de résultats (Visual Database Tools)
@@ -115,12 +115,12 @@ ms.locfileid: "63313769"
 ### <a name="what-can-not-be-represented-fully"></a>Ce qui ne peut pas être représenté pleinement  
  Ce qui est retourné au volet Résultats par la base de données est étroitement contrôlé par le fournisseur pour la source de données que vous utilisez. Le volet Résultats ne peut pas toujours traduire les données de tous les systèmes de gestion de base de données. Voici quelques exemples où c'est le cas.  
   
--   Les types de données binary sont souvent inutiles pour ceux qui travaillent dans le volet Résultats, et leur téléchargement peut être très long. Ils sont donc représentés par  *\<données binaires >* ou *Null*.  
+-   Les types de données binary sont souvent inutiles pour ceux qui travaillent dans le volet Résultats, et leur téléchargement peut être très long. Elles sont donc représentées par des * \<données binaires>* ou *null*.  
   
--   Les valeurs Precision et Scale ne peuvent pas toujours être conservées. Par exemple, le volet Résultats prend en charge une précision de 27. Si les données sont d’un type de données avec une précision supérieure, les données peuvent être tronquées ou représentées par  *\<Impossible de lire des données >* .  
+-   Les valeurs Precision et Scale ne peuvent pas toujours être conservées. Par exemple, le volet Résultats prend en charge une précision de 27. Si les données sont d’un type de données avec une précision supérieure, les données peuvent être tronquées ou peuvent être représentées par * \<l’impossibilité de lire des données>*.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Effectuer des opérations de base avec des requêtes &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
+ [Effectuer des opérations de base avec les requêtes &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
  [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

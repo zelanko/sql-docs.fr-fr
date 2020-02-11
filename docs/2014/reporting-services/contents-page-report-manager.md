@@ -1,5 +1,5 @@
 ---
-title: Contenu de la Page (Gestionnaire de rapports) | Microsoft Docs
+title: Page contenu (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6d64754328954becb328a70a09fca8d2a6472050
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109724"
 ---
 # <a name="contents-page-report-manager"></a>Page Contenu (Gestionnaire de rapports)
@@ -26,7 +26,7 @@ ms.locfileid: "66109724"
  **Nouveau dossier**  
  Cliquez pour ouvrir la page Nouveau dossier, qui permet de créer un dossier sous le dossier actif.  
   
- **Nouvelle Source de données**  
+ **Nouvelle source de données**  
  Cliquez pour ouvrir la page Nouvelle source de données, qui permet de créer un élément de source de données partagée.  
   
  **Générateur de rapports**  
@@ -35,7 +35,7 @@ ms.locfileid: "66109724"
  **Paramètres du dossier**  
  Cliquez pour ouvrir et gérer les propriétés du dossier actif.  
   
- **Télécharger le fichier**  
+ **Télécharger un fichier**  
  Cliquez pour ouvrir la page Télécharger un fichier, qui permet de copier un fichier du système de fichiers sur un serveur de rapports. Vous pouvez télécharger des fichiers pour ajouter des rapports et des ressources (telles que des graphiques, des documents ou tout autre type de contenu secondaire que vous souhaitez conserver avec un rapport). Les fichiers téléchargés sont stockés dans une base de données du serveur de rapports qui les gère. Pour télécharger un rapport, sélectionnez un fichier doté de l'extension .rdl.  
   
  **Mode Détails**  
@@ -43,7 +43,7 @@ ms.locfileid: "66109724"
   
  Pointez sur un élément et cliquez sur la flèche déroulante pour ouvrir le menu déroulant à partir duquel vous pouvez accéder aux propriétés de l'élément sélectionné et les configurer.  
   
- **Affichage en mosaïque**  
+ **Mode Mosaïque**  
  Cliquez pour afficher la page Contenu sans détails comme dans **Mode Détails**. Mode Liste est la vue par défaut lorsque vous ouvrez un dossier ou accédez à la page d'accueil du Gestionnaire de rapports.  
   
  Pointez sur un élément et cliquez sur la flèche déroulante pour ouvrir le menu déroulant à partir duquel vous pouvez accéder aux propriétés de l'élément sélectionné et les configurer.  
@@ -57,6 +57,6 @@ ms.locfileid: "66109724"
 ## <a name="see-also"></a>Voir aussi  
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
- [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Aide F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

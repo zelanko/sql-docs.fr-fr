@@ -1,5 +1,5 @@
 ---
-title: À l’aide d’écriture différée de cubes (MDX) | Microsoft Docs
+title: Utilisation d’écritures différées de cube (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a79e98375c27c6a3570b2fafcf424965d7a97c8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074217"
 ---
 # <a name="using-cube-writebacks-mdx"></a>Utilisation de l'écriture différée de cubes (MDX)
-  Pour mettre à jour un cube, vous pouvez utiliser l’instruction [UPDATE CUBE](/sql/mdx/mdx-data-manipulation-update-cube). Celle-ci permet de mettre à jour un tuple avec une valeur spécifique. Pour utiliser efficacement l'instruction UPDATE CUBE afin de mettre à jour un cube, vous devez comprendre la syntaxe de l'instruction, les conditions d'erreur susceptibles de se produire, ainsi que les effets potentiels des mises à jour sur un cube.  
+  Pour mettre à jour un cube, vous pouvez utiliser l’instruction [UPDATE CUBE](/sql/mdx/mdx-data-manipulation-update-cube) . Celle-ci permet de mettre à jour un tuple avec une valeur spécifique. Pour utiliser efficacement l'instruction UPDATE CUBE afin de mettre à jour un cube, vous devez comprendre la syntaxe de l'instruction, les conditions d'erreur susceptibles de se produire, ainsi que les effets potentiels des mises à jour sur un cube.  
   
 ## <a name="update-cube-statement-syntax"></a>Syntaxe de l'instruction UPDATE CUBE  
  La syntaxe suivante décrit l'instruction UPDATE CUBE :  
@@ -41,7 +41,7 @@ UPDATE [CUBE] <Cube_Name> SET <tuple>.VALUE = <value> [,<tuple>.VALUE = <value>.
  Vous pouvez considérer l'instruction UPDATE CUBE comme une sous-routine générant une série d'opérations d'écriture différée isolées sur des cellules atomiques. Toutes ces opérations d'écriture différée sont ensuite regroupées dans la somme spécifiée.  
   
 > [!NOTE]  
->  Lorsque les cellules mises à jour ne se chevauchent pas, la propriété de chaîne de connexion `Update Isolation Level` peut être utilisée pour améliorer les performances pour UPDATE CUBE. Pour plus d'informations, consultez <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>.  
+>  Lorsque les cellules mises à jour ne se chevauchent pas, la propriété de chaîne de connexion `Update Isolation Level` peut être utilisée pour améliorer les performances pour UPDATE CUBE. Pour plus d’informations, consultez <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>.  
   
 ## <a name="example"></a>Exemple  
  Pour tester l'instruction UPDATE CUBE, utilisez le groupe de mesures Cibles de ventes dans le cube Adventure Works. Ce groupe de mesures est constitué de mesures regroupées par SUM, qui est une condition requise pour l'instruction UPDATE CUBE.  
@@ -81,10 +81,10 @@ SET ([Measures].[Sales Amount Quota], [Employee].[Employee Department].[Departme
 USE_EQUAL_ALLOCATION  
 ```  
   
-## <a name="error-conditions"></a>Conditions d'erreur  
+## <a name="error-conditions"></a>Conditions d’erreur  
  Le tableau suivant décrit à la fois les éléments pouvant entraîner l'échec d'écritures différées et le résultat de ces erreurs.  
   
-|Condition d'erreur|Résultat|  
+|Condition d'erreur|Résultats|  
 |---------------------|------------|  
 |La mise à jour comprend les membres de la même dimension qui n'existent pas l'un avec l'autre.|La mise à jour échoue. L'espace du cube ne contient pas la cellule référencée.|  
 |La mise à jour comprend une mesure provenant d'une mesure de type non signé.|La mise à jour échoue. Les incréments exigent que la mesure puisse accepter une valeur négative.|  
@@ -117,6 +117,6 @@ USE_EQUAL_ALLOCATION
 -   modification de la granularité d'une dimension comprise dans l'écriture différée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modification de données &#40;MDX&#41;](mdx-data-modification-modifying-data.md)  
+ [Modification des données &#40;MDX&#41;](mdx-data-modification-modifying-data.md)  
   
   

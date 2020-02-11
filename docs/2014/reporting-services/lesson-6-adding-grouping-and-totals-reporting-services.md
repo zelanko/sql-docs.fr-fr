@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 6 : Ajouter un regroupement et des totaux (Reporting Services) | Microsoft Docs'
+title: 'Leçon 6 : ajout d’un regroupement et de totaux (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5607dfb046e7f50eb3a015e1f4f13711256435a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108413"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Leçon 6 : Ajout de regroupement et totaux (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
   Ajoutez un regroupement et des totaux à votre rapport pour organiser et synthétiser vos données.  
   
- Pour plus d’informations sur l’ajout de totaux cumulés à des rapports, consultez : [Ajout de totaux à des rapports Reporting Services (SSRS)](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/).  
+ Pour plus d’informations sur l’ajout de totaux cumulés à des rapports, voir : [Ajout de totaux à des rapports Reporting Services (SSRS)](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/).  
   
  **Dans cette rubrique :**  
   
--   [Pour regrouper les données dans un rapport](#bkmk_groupdata)  
+-   [Pour regrouper des données dans un rapport](#bkmk_groupdata)  
   
 -   [Pour ajouter des totaux à un rapport](#bkmk_addtotals)  
   
@@ -34,23 +34,23 @@ ms.locfileid: "66108413"
   
 -   [Pour publier le rapport sur le serveur de rapports (facultatif)](#bkmk_publishreport)  
   
-##  <a name="bkmk_groupdata"></a> Pour regrouper les données dans un rapport  
+##  <a name="bkmk_groupdata"></a>Pour regrouper des données dans un rapport  
   
 1.  Cliquez sur l'onglet **Conception** .  
   
-2.  Si vous ne voyez pas le volet **Groupes de lignes** , cliquez avec le bouton droit sur l'aire de conception, puis sélectionnez **Vue** et cliquez sur **Regroupement**.  
+2.  Si vous ne voyez pas le volet **groupes de lignes** , cliquez avec le bouton droit sur l’aire de conception, cliquez sur **Afficher** , puis sur **regroupement**.  
   
-3.  Faites glisser le champ `Date` du volet **Données du rapport** vers le volet **Groupes de lignes**. Placez-le au-dessus de la ligne appelée **(Details)** .  
+3.  Faites glisser le champ ** du volet **Données du rapport`Date` vers le volet **Groupes de lignes**. Placez-le au-dessus de la ligne appelée **(Details)**.  
   
      Notez que le descripteur de ligne comporte maintenant un crochet, qui indique un groupe. En outre, le tableau présente désormais deux colonnes Date, placées de part et d'autre d'une ligne verticale en pointillé.  
   
      ![](../../2014/tutorials/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
   
-4.  Faites glisser le champ `Order` du volet **Données du rapport** vers le volet **Groupes de lignes**. Placez-le au-dessous du champ Date et au-dessus de la ligne **(Details)** .  
+4.  Faites glisser le champ ** du volet **Données du rapport`Order` vers le volet **Groupes de lignes**. Placez-le au-dessous du champ Date et au-dessus de la ligne **(Details)**.  
   
-     Notez que le descripteur de ligne comporte maintenant deux crochets, qui indiquent deux groupes. Le tableau présente désormais deux `Order` colonnes, trop.  
+     Notez que le descripteur de ligne comporte maintenant deux crochets, qui indiquent deux groupes. La table comporte désormais deux `Order` colonnes.  
   
-5.  Supprimer les colonnes de Date et l’ordre d’origine à la **droit** du double trait. Cette opération supprime les différentes valeurs d'enregistrement afin que seule la valeur de groupe soit affichée. Sélectionnez les descripteurs des deux colonnes, cliquez avec le bouton droit, puis cliquez sur **Supprimer les colonnes**.  
+5.  Supprimez les colonnes Date et Order d’origine, à **droite** du double trait. Cette opération supprime les différentes valeurs d'enregistrement afin que seule la valeur de groupe soit affichée. Sélectionnez les descripteurs des deux colonnes, cliquez avec le bouton droit, puis cliquez sur **Supprimer les colonnes**.  
   
      ![Sélectionnez les colonnes à supprimer](../../2014/tutorials/media/rs-basictablegroupsdeletecols.gif "Sélectionnez les colonnes à supprimer")  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66108413"
   
      ![Table regroupée par date, puis par commande](../../2014/tutorials/media/rs-basictablegroupspreview.gif "Table regroupée par date, puis par commande")  
   
-##  <a name="bkmk_addtotals"></a> Pour ajouter des totaux à un rapport  
+##  <a name="bkmk_addtotals"></a>Pour ajouter des totaux à un rapport  
   
 1.  Basculez en mode Conception.  
   
@@ -78,15 +78,15 @@ ms.locfileid: "66108413"
   
 6.  Dans le menu **Format** , cliquez sur **Couleur d'arrière-plan**, sur **Gris clair**, puis sur **OK**.  
   
-     ![Mode conception : Table de base avec total des commandes](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "Mode Création : Table de base avec total des commandes")  
+     ![Mode Conception : table de base avec total des commandes](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "Mode Conception : table de base avec total des commandes")  
   
-##  <a name="bkmk_adddailytotal"></a> Pour ajouter un total quotidien à un rapport  
+##  <a name="bkmk_adddailytotal"></a>Pour ajouter un total quotidien à un rapport  
   
-1.  Avec le bouton droit de la cellule Order, pointez sur **ajouter un Total**, puis cliquez sur **après**.  
+1.  Cliquez avec le bouton droit dans la cellule Order , pointez sur **Ajouter un total**, puis cliquez sur **Après**.  
   
-     Cette opération ajoute une nouvelle ligne contenant la somme des quantités et en dollars pour chaque jour et l’étiquette «**Total**» dans la colonne Order.  
+     Cela ajoute une nouvelle ligne contenant les sommes des quantités et des montants en dollars pour chaque jour, et l’étiquette «**total**» dans la colonne Order.  
   
-2.  Tapez le mot **quotidien** après le mot **Total** dans la même cellule. Vous obtenez : **Total quotidien**.  
+2.  Tapez le mot **quotidiennement** avant le mot **total** dans la même cellule, afin qu’il Lise le **total quotidien**.  
   
 3.  Sélectionnez la cellule **Total quotidien** , les deux cellules de **somme** et la cellule vide qui les sépare.  
   
@@ -94,11 +94,11 @@ ms.locfileid: "66108413"
   
      ![](../../2014/tutorials/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
   
-##  <a name="bkmk_addgrandtotal"></a> Pour ajouter un total général à un rapport  
+##  <a name="bkmk_addgrandtotal"></a>Pour ajouter un total général à un rapport  
   
 1.  Cliquez avec le bouton droit dans la cellule Date, pointez sur **Ajouter un total**, puis cliquez sur **Après**.  
   
-     Cette opération ajoute une nouvelle ligne contenant la somme de la quantité de quantité et en dollars pour l’intégralité du rapport et le **Total** étiquette dans le `Date` colonne.  
+     Cette opération ajoute une nouvelle ligne contenant la somme des quantités et des montants en dollars pour l’intégralité du **** rapport, ainsi que `Date` l’étiquette totale de la colonne.  
   
 2.  Tapez le mot **général** après le mot **Total** dans la même cellule. Vous obtenez : **Total général**.  
   
@@ -106,33 +106,33 @@ ms.locfileid: "66108413"
   
 4.  Dans le menu **Format** , cliquez sur **Couleur d'arrière-plan**, sur **Bleu clair**, puis sur **OK**.  
   
-     ![Mode conception : Total général dans une table de base](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "Mode Création : Total général dans une table de base")  
+     ![Mode Conception : total général dans table de base](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "Mode Conception : total général dans table de base")  
   
 5.  Cliquez sur Aperçu.  
   
      La dernière page doit avoir l'aspect suivant :  
   
-     ![Aperçu : Table de base avec total général](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "Aperçu : Table de base avec total général")  
+     ![Aperçu : table de base avec total général](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "Aperçu : table de base avec total général")  
   
-##  <a name="bkmk_publishreport"></a> Pour publier le rapport sur le serveur de rapports (facultatif)  
+##  <a name="bkmk_publishreport"></a>Pour publier le rapport sur le serveur de rapports (facultatif)  
   
 1.  Une étape facultative consiste à publier le rapport terminé sur le serveur de rapports en mode natif afin de pouvoir consulter le rapport à partir du Gestionnaire de rapports.  
   
 2.  Dans la barre d'outils, cliquez sur **Projet** , puis sur **Propriétés du didacticiel...**  
   
-3.  Dans le **TargetServerURL** tapez le nom du nom de votre serveur de rapports, par exemple **http://\<servername > / reportserver**  
+3.  Dans **TargetServerURL** , tapez le nom du serveur de rapports, par exemple **http://\<ServerName>/ReportServer** .  
   
-4.  Cliquez sur **OK**  
+4.  Cliquez sur **OK** .  
   
 5.  Dans la barre d'outils, cliquez sur **Générer** , puis sur **Déployer le didacticiel**.  
   
      Si vous voyez un message semblable à ce qui suit dans la fenêtre de sortie, c'est que le déploiement a été réalisé avec succès.  
   
-    > ---Début de la génération : Project: tutorial, Configuration: Débogage---ignorée « Sales Orders.rdl ». Élément est à jour. Génération terminée--0 erreur, 0 avertissements---déployer en route : Project: tutorial, Configuration: Débogage---déploiement vers http://\<nom du serveur > / /reportserverdeploying report '/ tutorial/Sales Orders'. Fin du déploiement--0 erreur, 0 avertissement === générer : 1 a réussi ou est à jour, 0 a échoué, 0 a été ignoré === déployer : 1 succeeded, 0 failed, 0 skipped ==========  
+    > ------ Création démarrée : Projet : didacticiel, Configuration : débogage ------« Sales Orders.rdl » ignoré. L’élément est à jour. Fin de la génération--0 erreur, 0 avertissement------le déploiement a démarré : projet : didacticiel, configuration : déboguer------déployant sur le nom du serveur http://\<>/reportserverdeploying rapport « /Tutorial/Sales Orders ». Fin du déploiement--0 erreur, 0 AVERTISSEMENT = = = = = = = = = = Build : 1 a réussi ou à jour, 0 a échoué, 0 a été ignoré = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =  
   
      Si un message d'erreur semblable au suivant s'affiche, vérifiez que vous disposez d'autorisations sur le serveur de rapports et que vous avez démarré [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] avec des privilèges d'administrateur.  
   
-    > « Les autorisations accordées à l’utilisateur « XXXXXXXX\\< votre nom d’utilisateur\>' sont insuffisantes pour effectuer cette opération »  
+    > « Les autorisations accordées à l’utilisateur\\ «xxxxxxxx<votre\>nom d’utilisateur » ne sont pas suffisantes pour effectuer cette opération»  
   
 6.  Démarrez le Gestionnaire de rapports avec des privilèges d'administrateur ; cliquez, par exemple, avec le bouton droit sur l'icône d'Internet Explorer et sélectionnez **Exécuter en tant qu'administrateur**.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Nouvelle planification : Modifier la planification Page (Gestionnaire de rapports) | Microsoft Docs'
+title: 'Nouvelle planification : page modifier la planification (Gestionnaire de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea1eed70c3eac8bac1c4141628e72ce0af8099c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108146"
 ---
-# <a name="new-schedule-edit-schedule-page-report-manager"></a>Nouvelle planification : Modifier la Page de planification (Gestionnaire de rapports)
+# <a name="new-schedule-edit-schedule-page-report-manager"></a>Nouvelle planification : page modifier la planification (Gestionnaire de rapports)
   La page Nouvelle planification / Modifier la planification permet de créer une planification pour un rapport. Les planifications sont utilisées avec des abonnements. Elles permettent en outre d'actualiser des rapports mis en cache et de créer des instantanés en tant qu'éléments autonomes ou dans un historique de rapport.  
   
 > [!NOTE]  
 >  Cette fonctionnalité n'est pas disponible dans toutes les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour obtenir une liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consultez [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- Vous ne pouvez créer des planifications que pour les rapports qui peuvent s'exécuter sans assistance. L'exécution d'un rapport sans assistance requiert que vous stockiez les informations d'identification de la source de données de rapport dans la base de données du serveur de rapports. Pour plus d’informations, consultez [Page de propriétés de Sources de données &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md).  
+ Vous ne pouvez créer des planifications que pour les rapports qui peuvent s'exécuter sans assistance. L'exécution d'un rapport sans assistance requiert que vous stockiez les informations d'identification de la source de données de rapport dans la base de données du serveur de rapports. Pour plus d’informations, consultez la [page Propriétés des sources de données &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md).  
   
  Toutes les combinaisons de fréquence ne peuvent pas être prises en charge dans une seule planification. Par exemple, si vous souhaitez exécuter un rapport à 12:00 et 16:00 ous les vendredis, vous devez créer deux planifications quotidiennes qui spécifient le vendredi comme jour d'exécution mais avec une heure de début de 12:00 pour l'une et une heure de début de 16:00 pour la seconde.  
   
@@ -76,15 +76,15 @@ ms.locfileid: "66108146"
  **Détails de la planification**  
  Sélectionnez les options qui déterminent la fréquence et le moment d'exécution d'un rapport. Les options de fréquence sont en couche. Le premier ensemble d'options spécifie une catégorie de fréquences (toutes les heures, tous les jours, toutes les semaines, etc.) Le second ensemble d'options qui apparaît dépend de votre sélection initiale.  
   
--   **Heure** définit une planification qui s'exécute toutes les heures. Utilisez la section **Dates de début et de fin** pour spécifier le jour d'exécution de la planification.  
+-   L' **heure** définit une planification qui s’exécute toutes les heures. Utilisez la section **Dates de début et de fin** pour spécifier le jour d'exécution de la planification.  
   
--   **Jour** définit une planification qui s'exécute les jours sélectionnés à une heure spécifique. Vous pouvez spécifier les jours comme suit : Chaque \< *jour*>, tous les jours ouvrables et chaque \< *nombre*> jours. La sélection d'une option rend les autres inapplicables même si d'autres jours semblent sélectionnés.  
+-   **Day** définit une planification qui s’exécute les jours sélectionnés à une heure et une minute spécifiques. Vous pouvez spécifier les jours des façons suivantes : chaque \< *jour*>, tous les jours ouvrables \<et tous les *nombres*> jour. La sélection d'une option rend les autres inapplicables même si d'autres jours semblent sélectionnés.  
   
--   **Semaine** définit une planification qui s'exécute toutes les semaines à une heure spécifique. L'intervalle peut correspondre à des semaines entières (toutes les deux semaines, par exemple) ou à des jours compris dans la semaine.  
+-   La **semaine** définit une planification qui s’exécute à intervalles hebdomadaires à une heure et une minute spécifiques. L'intervalle peut correspondre à des semaines entières (toutes les deux semaines, par exemple) ou à des jours compris dans la semaine.  
   
--   **Mois** définit une planification qui s'exécute tous les mois. Dans un mois, vous pouvez choisir un jour basé sur un modèle (le dernier dimanche de chaque mois, par exemple) ou des dates spécifiques (tels que 1 et 15 pour indiquer le 1er et le 15e jour de chaque mois). À l'aide de virgules et de tirets, vous pouvez spécifier plusieurs jours et plages (1, 5, 7-12, 21, par exemple).  
+-   **Mois** définit une planification qui s’exécute sur une base mensuelle. Dans un mois, vous pouvez choisir un jour basé sur un modèle (le dernier dimanche de chaque mois, par exemple) ou des dates spécifiques (tels que 1 et 15 pour indiquer le 1er et le 15e jour de chaque mois). À l'aide de virgules et de tirets, vous pouvez spécifier plusieurs jours et plages (1, 5, 7-12, 21, par exemple).  
   
--   **Une fois** définit une planification qui s'exécute une seule fois. Utilisez la section **Dates de début et de fin** pour spécifier le jour d'exécution de la planification. La planification expire dès qu'elle a été traitée.  
+-   Une **fois** définit une planification qui s’exécute une seule fois. Utilisez la section **Dates de début et de fin** pour spécifier le jour d'exécution de la planification. La planification expire dès qu'elle a été traitée.  
   
  **Dates de début et de fin**  
  Spécifie une date de début qui détermine à quel moment la planification prend effet et une date de fin qui détermine à quel moment la planification expire.  
@@ -94,6 +94,6 @@ ms.locfileid: "66108146"
 ## <a name="see-also"></a>Voir aussi  
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)   
- [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Aide F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

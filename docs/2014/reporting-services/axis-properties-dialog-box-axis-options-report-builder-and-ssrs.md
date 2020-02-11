@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Propriétés de l’axe, Options de l’axe (Générateur de rapports et SSRS) | Microsoft Docs
+title: Boîte de dialogue Propriétés de l’axe, options de l’axe (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff9f3281e47cf6dfdf8a189c653d0e061f4a761d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109959"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés de l'axe, Options de l'axe (Générateur de rapports et SSRS)
-  Sélectionnez **Options de l’axe** sur le **Horizontal** ou **propriétés de l’axe vertical** boîte de dialogue pour définir l’apparence de l’axe spécifié du graphique. Dans les versions précédentes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], le graphique affichait par défaut toutes les étiquettes sur l'axe des abscisses. En revanche, dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008, le graphique ignore les étiquettes pour produire une image plus lisible et éviter les collisions d'étiquette. Pour plus d’informations, consultez [Mise en forme des points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
+  Sélectionnez **options** de l’axe dans la boîte de dialogue Propriétés **horizontales** ou **l’axe vertical** pour définir l’apparence de l’axe spécifié du graphique. Dans les versions précédentes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], le graphique affichait par défaut toutes les étiquettes sur l'axe des abscisses. En revanche, dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008, le graphique ignore les étiquettes pour produire une image plus lisible et éviter les collisions d'étiquette. Pour plus d’informations, consultez [Mise en forme des points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Options  
  **Activer les séparations d’échelle**  
@@ -30,7 +30,7 @@ ms.locfileid: "66109959"
  **Inverser la direction**  
  Sélectionnez cette option pour inverser le sens du graphique. Par exemple, par défaut, un histogramme affiche l'axe des Y à gauche du graphique, et les catégories de gauche à droite. Lorsque cette option est sélectionnée, l'histogramme affiche l'axe des Y à droite du graphique, et les catégories de droite à gauche.  
   
- **Utiliser la couleur d’entrelacement**  
+ **Utiliser la couleur d'entrelacement**  
  Sélectionnez cette option pour ajouter des franges au graphique, puis sélectionnez une couleur ou tapez une expression. Les franges sont des bandes ombrées sur la zone de graphique qui affichent une alternance de zones claires et sombres entre les lignes du quadrillage. Ces franges sont utiles pour mettre en surbrillance les séquencés répétées sur un axe.  
   
  **Toujours inclure le zéro**  
@@ -44,16 +44,16 @@ ms.locfileid: "66109959"
   
  Dans la zone, tapez la base logarithmique à utiliser lorsque l'axe est défini pour utiliser une échelle logarithmique. Par défaut, le graphique utilise une base 10 pour l'échelle logarithmique d'un axe. Cette option est uniquement disponible sur l'axe des Y si l'axe est numérique.  
   
- **Minimum**  
+ **Minimale**  
  Tapez une expression ou une valeur pour la valeur minimale de l'axe des x. En l'absence d'indication, la valeur minimale est déterminée par les données retournées par le dataset.  
   
- **Maximum**  
+ **Valeurs**  
  Tapez une expression ou une valeur pour la valeur maximale de l'axe des x. En l'absence d'indication, la valeur maximale est déterminée par les données retournées par le dataset.  
   
- **Intervalle**  
+ **Défini**  
  Tapez une expression ou une valeur pour l'intervalle entre les étiquettes d'axe. Par exemple, tapez 1 pour afficher chaque étiquette de catégorie sur l'axe. Tapez 2 pour afficher toutes les autres étiquettes de catégorie. Si ce paramètre n'est pas spécifié, les étiquettes sont calculées automatiquement à partir des valeurs du dataset.  
   
- **Type d’intervalle**  
+ **Type d'intervalle**  
  Tapez une expression ou une valeur pour le type d'intervalle de l'intervalle spécifié. Par exemple, pour définir un intervalle de deux jours, spécifiez **2** comme intervalle et choisissez **Jours** comme type d’intervalle.  
   
  **Marges latérales**  

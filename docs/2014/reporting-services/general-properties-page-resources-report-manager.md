@@ -1,5 +1,5 @@
 ---
-title: Page des propriétés générales, ressources (Gestionnaire de rapports) | Microsoft Docs
+title: Page Propriétés générales, ressources (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 23c920f436ae48c8eb4abd8ccd69097a06557907
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109117"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>Page Propriétés générales, Ressources (Gestionnaire de rapports)
@@ -35,12 +35,12 @@ ms.locfileid: "66109117"
   
 ## <a name="options"></a>Options  
  **Nom**  
- Spécifie le nom de la ressource. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et quelques symboles. N'utilisez pas les caractères ; ? : \@ & = +, $ / * \< > | "ou / lorsque vous spécifiez un nom.  
+ Spécifie le nom de la ressource. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et quelques symboles. N'utilisez pas les caractères ; ? : \@ & = +, $/* \< > | "ou/lorsque vous spécifiez un nom.  
   
  **Description**  
  Tapez une description de la ressource. Cette description apparaît dans la page Contenu. Elle est visible par les utilisateurs qui sont autorisés à accéder à la ressource.  
   
- **Masquer en mode liste**  
+ **Masquer en mode Liste**  
  Activez cette option pour masquer la ressource pour les utilisateurs qui utilisent le mode de visualisation Liste dans le Gestionnaire de rapports. Le mode Liste est le format d'affichage par défaut lorsque vous parcourez l'arborescence des dossiers du serveur de rapports. En mode Liste, les noms et les descriptions des éléments sont affichés sur la largeur de la page. Un autre format d'affichage, le mode Détails, est également disponible. En mode Détails, les descriptions ne sont pas affichées, mais cette vue fournit d'autres informations sur l'élément. Vous pouvez masquer un élément en mode Liste, mais pas en mode Détails. Pour restreindre l'accès à un élément, vous devez créer une attribution de rôle.  
   
  **Type**  
@@ -55,13 +55,13 @@ ms.locfileid: "66109117"
  **Déplacer**  
  Cliquez pour déplacer une ressource dans l'arborescence des dossiers du serveur de rapports. Un clic sur ce bouton permet d'ouvrir la page Déplacer les éléments dans laquelle vous pouvez parcourir les dossiers pour sélectionner un nouvel emplacement.  
   
- **Remplacer**  
+ **Lieu**  
  Cliquez pour ouvrir la page Importer une ressource, qui permet de sélectionner un fichier de ressources à partir d'un partage de fichiers.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Page vue, ressources &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
- [F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
- [Propriétés de sécurité, éléments de la page &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
+ [Page de vue, ressources &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
+ [Aide (F1) Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Page Propriétés de sécurité, éléments &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
   
   

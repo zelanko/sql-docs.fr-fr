@@ -29,10 +29,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2d1e804282459972b21303cf795a9c3a88ea93d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107037"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Spécifier des informations d'identification et de connexion pour les sources de données de rapport
@@ -41,7 +41,7 @@ ms.locfileid: "66107037"
 > [!NOTE]  
 >  Les informations d'identification permettent également d'authentifier les utilisateurs qui accèdent à un serveur de rapports. Des informations supplémentaires sur l'authentification des utilisateurs sur un serveur de rapports sont fournies dans une autre rubrique.  
   
- La connexion à une source de données externe est définie lorsque vous créez le rapport. Elle peut être gérée séparément une fois le rapport publié. Vous pouvez spécifier une expression ou une chaîne de connexion statique qui autorise les utilisateurs à sélectionner une source de données à partir d'une liste dynamique. Pour plus d’informations sur la façon de spécifier une chaîne de connexion et de type de source de données, consultez [des connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+ La connexion à une source de données externe est définie lorsque vous créez le rapport. Elle peut être gérée séparément une fois le rapport publié. Vous pouvez spécifier une expression ou une chaîne de connexion statique qui autorise les utilisateurs à sélectionner une source de données à partir d'une liste dynamique. Pour plus d’informations sur la spécification d’un type de source de données et d’une chaîne de connexion, consultez [connexions de données, sources de données et chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
 ## <a name="using-remote-data-sources"></a>Utilisation de sources de données distantes  
  Si le rapport récupère des données à partir d'un serveur de base de données distant, vérifiez les éléments suivants :  
@@ -95,7 +95,7 @@ ms.locfileid: "66107037"
   
 3.  Dans le volet d’informations, cliquez avec le bouton droit sur **Permettre l’ouverture d’une session locale** , puis cliquez avec le bouton droit sur **Propriétés**.  
   
-4.  Cliquez sur **Ajouter un groupe ou un utilisateur**.  
+4.  Cliquez sur **Ajouter un utilisateur ou un groupe**.  
   
 5.  Cliquez sur **Emplacements**, spécifiez un domaine ou un autre emplacement à rechercher, puis cliquez sur **OK**.  
   
@@ -126,22 +126,22 @@ ms.locfileid: "66107037"
   
  Dans ces conditions, le serveur de rapports se connecte à une source de données distante à l'aide du compte d'exécution sans assistance qui doit être défini à l'avance. Étant donné que le serveur de rapports ne se connecte pas à un serveur distant en utilisant ses informations d'identification de service, vous devez spécifier un compte que le serveur de rapports peut utiliser pour établir la connexion. Pour plus d’informations sur la création de ce compte, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
-##  <a name="DataSourceConfigurationConnections"></a> Configuration d’une source de données et connexions réseau  
+##  <a name="DataSourceConfigurationConnections"></a>Configuration de la source de données et connexions réseau  
  Le tableau suivant montre comment les connexions sont établies pour des combinaisons spécifiques de types d'informations d'identification et d'extensions de traitement de données. Si vous utilisez une extension de traitement de données personnalisée, consultez [Spécifier des connexions pour des extensions de traitement de données personnalisées](specify-connections-for-custom-data-processing-extensions.md).  
   
-|**Type**|**Contexte de connexion réseau**|**Types de source de données**<br /><br /> **(SQL Server, Oracle, ODBC, OLE DB, Analysis Services, XML, SAP NetWeaver BI, Hyperion Essbase)**|  
+|**Type**|**Contexte de connexion réseau**|**Types de sources de données**<br /><br /> **(SQL Server, Oracle, ODBC, OLE DB, Analysis Services, XML, SAP NetWeaver BI, Hyperion Essbase)**|  
 |--------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|  
 |Sécurité intégrée|Emprunter l'identité de l'utilisateur actuel.|Pour tous les types de sources de données, se connecter en utilisant le compte d'utilisateur actuel.|  
 |Informations d'identification Windows|Emprunter l'identité de l'utilisateur spécifié.|Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC et OLE DB : connectez-vous à l'aide du compte d'utilisateur avec emprunt d'identité.|  
-|Informations d'identification de la base de données|Emprunter l'identité du compte d'exécution sans assistance ou du compte de service.<br /><br /> (Reporting Services supprime les autorisations d'administrateur lors de l'envoi d'une demande de connexion utilisant l'identité du service).|Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC et OLE DB :<br /><br /> Ajouter le nom d'utilisateur et le mot de passe à la chaîne de connexion.<br /><br /> Pour [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> La connexion aboutit si vous utilisez le protocole TCP/IP, sinon elle échoue.<br /><br /> Pour XML :<br /><br /> La connexion échoue sur le serveur de rapports si des informations d'identification de base de données sont utilisées.|  
-|None|Emprunter l'identité du compte d'exécution sans assistance.|Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC et OLE DB :<br /><br /> Utiliser les informations d'identification définies dans la chaîne de connexion. La connexion échoue sur le serveur de rapports si le compte d'exécution sans assistance n'est pas défini.<br /><br /> Pour [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> La connexion échoue toujours si aucune information d'identification n'est spécifiée, même si le compte d'exécution sans assistance est défini.<br /><br /> Pour XML :<br /><br /> Se connecter comme utilisateur anonyme si le compte d'exécution sans assistance est défini ; sinon, la connexion échoue.|  
+|Informations d’identification de la base de données|Emprunter l'identité du compte d'exécution sans assistance ou du compte de service.<br /><br /> (Reporting Services supprime les autorisations d'administrateur lors de l'envoi d'une demande de connexion utilisant l'identité du service).|Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC et OLE DB :<br /><br /> Ajouter le nom d'utilisateur et le mot de passe à la chaîne de connexion.<br /><br /> Pour [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] :<br /><br /> La connexion aboutit si vous utilisez le protocole TCP/IP, sinon elle échoue.<br /><br /> Pour XML :<br /><br /> La connexion échoue sur le serveur de rapports si des informations d'identification de base de données sont utilisées.|  
+|None|Emprunter l'identité du compte d'exécution sans assistance.|Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC et OLE DB :<br /><br /> Utiliser les informations d'identification définies dans la chaîne de connexion. La connexion échoue sur le serveur de rapports si le compte d'exécution sans assistance n'est pas défini.<br /><br /> Pour [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] :<br /><br /> La connexion échoue toujours si aucune information d'identification n'est spécifiée, même si le compte d'exécution sans assistance est défini.<br /><br /> Pour XML :<br /><br /> Se connecter comme utilisateur anonyme si le compte d'exécution sans assistance est défini ; sinon, la connexion échoue.|  
   
 ## <a name="setting-credentials-programmatically"></a>Définition des informations d'identification par programme  
  Vous pouvez définir des informations d'identification dans votre code pour contrôler l'accès aux rapports et au serveur de rapports. Pour plus d’informations, consultez [Sources de données et méthodes de connexion](../report-server-web-service/methods/data-sources-and-connection-methods.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [Connexions de données, Sources de données et chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Connexions de données, sources de données et chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Gérer des sources de données de rapports](../../integration-services/connection-manager/data-sources.md)   
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../report-manager-ssrs-native-mode.md)   
  [Créer, supprimer ou modifier une source de données partagée &#40;Gestionnaire de rapports&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   

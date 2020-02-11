@@ -1,5 +1,5 @@
 ---
-title: Définition des Options de suivi | Microsoft Docs
+title: Définition des options de suivi | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,52 +15,52 @@ ms.assetid: 44404a79-b716-4bc1-9ffb-70cd8239d237
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13e8caf9f3a9643f8063d6227258245a603f1665
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901632"
 ---
 # <a name="setting-tracing-options"></a>Définition des options de suivi
-Le **suivi** onglet de la **administrateur de sources de données ODBC** boîte de dialogue vous permet de configurer la manière dont les appels de fonctions ODBC sont suivis.  
+L’onglet **suivi** de la boîte de dialogue **administrateur de sources de données ODBC** vous permet de configurer la façon dont les appels de fonction ODBC sont suivis.  
   
-## <a name="how-tracing-works"></a>Le fonctionnement du suivi  
- Lorsque vous démarrez le suivi par le **suivi** onglet, le Gestionnaire de pilotes enregistrera tous les appels de fonction ODBC pour toutes les exécuter par la suite d’applications. Appels de fonction ODBC à partir d’applications qui s’exécutent avant le démarrage de suivi ne sont pas enregistrés. Appels de fonctions ODBC sont enregistrées dans un fichier journal que vous spécifiez.  
+## <a name="how-tracing-works"></a>Fonctionnement du suivi  
+ Lorsque vous démarrez le suivi à partir de l’onglet **suivi** , le gestionnaire de pilotes enregistre tous les appels de fonction ODBC pour toutes les applications d’exécution ultérieures. Les appels de fonction ODBC à partir d’applications qui s’exécutent avant le démarrage du suivi ne sont pas journalisés. Les appels de fonction ODBC sont enregistrés dans un fichier journal que vous spécifiez.  
   
- Le suivi s’arrête uniquement après avoir cliqué sur **arrêter le traçage maintenant**. N’oubliez pas que, bien que le suivi est activé, le fichier journal continue d’augmenter et que cela affecte les performances de toutes vos applications ODBC.  
+ Le suivi s’arrête uniquement lorsque vous cliquez sur **arrêter le suivi maintenant**. N’oubliez pas que si le suivi est activé, le fichier journal continue d’augmenter et cela affecte les performances de toutes vos applications ODBC.  
   
- Pour plus d’informations sur le suivi, consultez [suivi](../../odbc/reference/develop-app/tracing.md).  
+ Pour plus d’informations sur le suivi, consultez [traçage](../../odbc/reference/develop-app/tracing.md).  
   
-### <a name="changes-in-odbc-tracing"></a>Modifications dans le traçage ODBC  
- Avant MDAC 2.7 SP2, le traçage ODBC est uniquement autorisé à se produire sur un ordinateur à l’échelle, dans lequel trace capture des détails exposés sur toutes les applications ODBC exécutées sous des identités. Cette partie le suivi de l’activité liée à ODBC qui peut-être se produire pour les processus créés ou exécuter pour le compte d’autres comptes d’utilisateurs locaux et les principaux de sécurité intégrés tels que le Service Local et Service réseau.  
+### <a name="changes-in-odbc-tracing"></a>Modifications du traçage ODBC  
+ Avant MDAC 2,7 SP2, le suivi ODBC était uniquement autorisé à se produire à l’échelle de l’ordinateur, dans lequel trace capture des détails sur toutes les applications ODBC s’exécutant sous des identités. Cela inclut le suivi pour les activités liées à ODBC qui peuvent se produire pour les processus créés ou exécutés pour le compte d’autres comptes d’utilisateurs locaux et des principaux de sécurité intégrés, tels que le service local et le service réseau.  
   
- Par défaut, ODBC, le traçage utilise désormais le mode utilisateur unique. Si vous êtes un administrateur local, vous pouvez toutefois, toujours activer le suivi de l’ordinateur à l’aide de l’administrateur de sources de données ODBC.  
+ Par défaut, le traçage ODBC utilise désormais le mode par utilisateur. Toutefois, si vous êtes administrateur local, vous pouvez toujours activer le suivi à l’ensemble de l’ordinateur à l’aide de l’administrateur de la source de données ODBC.  
   
- Pour configurer le mode de suivi ODBC :  
+ Pour configurer le mode de traçage ODBC :  
   
-1.  S’il est nécessaire, connectez-vous à l’aide d’un compte qui est membre du groupe Administrateurs Local.  
+1.  Si nécessaire, connectez-vous à l’aide d’un compte qui est membre du groupe Administrateurs local.  
   
-2.  À partir d’outils d’administration, ouvrez l’administrateur de sources de données ODBC.  
+2.  Dans outils d’administration, ouvrez l’administrateur de la source de données ODBC.  
   
-3.  Cliquez sur le **suivi** onglet.  
+3.  Cliquez sur l’onglet **suivi** .  
   
-4.  Configurer le mode de suivi à l’aide de la **le suivi de l’ordinateur pour toutes les identités utilisateur** case à cocher :  
+4.  Configurez le mode de suivi à l’aide de la case à cocher **suivi au niveau de l’ordinateur pour toutes les identités utilisateur** :  
   
-5.  Pour activer le suivi de l’ordinateur, sélectionnez la case à cocher.  
+5.  Pour activer le suivi à l’ensemble de l’ordinateur, activez la case à cocher.  
   
 6.  Pour revenir au suivi par utilisateur, désactivez la case à cocher.  
   
 7.  Cliquez sur **Appliquer**.  
   
 > [!NOTE]  
->  Si vous avez déjà commencé le suivi dans un mode, vous devez arrêter le suivi et basculez vers l’autre mode pour le mode à être modifié avec succès.  
+>  Si vous avez déjà démarré le suivi dans un mode, vous devez arrêter le suivi et basculer vers l’autre mode pour que le mode soit correctement modifié.  
   
 > [!IMPORTANT]  
->  Le suivi de l’ordinateur ne doit être activé que lorsque cela est nécessaire ; Sinon, elle doit rester désactivée.  
+>  Le suivi au niveau de l’ordinateur ne doit être activé que si nécessaire. dans le cas contraire, il doit être désactivé.  
   
-## <a name="visual-studio-analyzer-tracing"></a>Suivi de Visual Studio Analyzer  
+## <a name="visual-studio-analyzer-tracing"></a>Suivi des Visual Studio Analyzer  
   
 > [!IMPORTANT]  
->  Prise en charge pour Visual Studio Analyzer a été supprimée à compter de 8 Windows (Visual Studio Analyzer a été inclus uniquement dans les versions antérieures de Visual Studio.). Pour un autre mécanisme de résolution des problèmes, utilisez le suivi.  
+>  La prise en charge de Visual Studio Analyzer a été supprimée depuis Windows 8 (Visual Studio Analyzer n’était inclus que dans les versions antérieures de Visual Studio). Pour un autre mécanisme de résolution des problèmes, utilisez le suivi des enchères.  
   
- Suivi de Visual Studio® Analyzer fournit des performances et des informations de débogage sur la couche ODBC. Tous les événements sortants seront déclenchés à l’interface de niveau supérieur pour présenter une image exacte que possible concernant temps passé dans les composants ODBC. Visual Studio Analyser requiert n’importe quelle source d’événement à s’inscrire durant la source est configurée. Pour plus d’informations sur ce type de traçage, consultez la documentation de Visual Studio.
+ Le suivi de l’analyseur de® Visual Studio fournit des informations sur les performances et le débogage de la couche ODBC. Tous les événements sortants seront déclenchés au niveau de l’interface de niveau supérieur pour présenter une image aussi précise que possible concernant le temps passé dans les composants ODBC. Visual Studio Analyzer le suivi nécessite que toute source d’événement soit inscrite lorsque la source est configurée. Pour plus d’informations sur ce type de suivi, consultez la documentation de Visual Studio.

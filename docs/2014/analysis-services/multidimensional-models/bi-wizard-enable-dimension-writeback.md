@@ -1,5 +1,5 @@
 ---
-title: Activer l’écriture différée de Dimension | Microsoft Docs
+title: Activer l’écriture différée de la dimension | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6051f62caac2878b689a50e5773b047cb8df7afe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076852"
 ---
 # <a name="enable-dimension-writeback"></a>Activer l'écriture différée de la dimension
@@ -46,11 +46,11 @@ ms.locfileid: "66076852"
 > [!WARNING]  
 >  Si vous utilisez SQL Azure comme source de données pour effectuer une écriture différée dans une base de données Analysis Services, l'opération échoue. Il s'agit d'un comportement par défaut, car l'option de fournisseur qui active plusieurs jeux de résultats actifs MARS n'est pas activée par défaut.  
 >   
->  La solution consiste à ajouter le paramètre suivant dans la chaîne de connexion, afin de prendre en charge MARS et d'activer l'écriture différée :  
+>  La solution consiste à ajouter le paramètre suivant dans la chaîne de connexion, afin de prendre en charge MARS et d'activer l'écriture différée :  
 >   
 >  `"MultipleActiveResultSets=True"`  
 >   
->  Pour plus d’informations, consultez [Utilisation de MARS &#40;Multiple Active Result Sets&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
+>  Pour plus d’informations, consultez [utilisation de plusieurs jeux de résultats actifs &#40;&#41;mars ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Dimensions activées en écriture](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  

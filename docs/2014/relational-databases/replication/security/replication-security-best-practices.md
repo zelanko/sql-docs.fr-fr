@@ -16,20 +16,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7db85ce6d63cd6c3eb458434357fa5a2d8127dec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63268673"
 ---
-# <a name="replication-security-best-practices"></a>Bonnes pratiques en matière de sécurité de la réplication
+# <a name="replication-security-best-practices"></a>Méthodes préconisées en matière de sécurité de réplication
   La réplication permet de déplacer des données d'environnements distribués qui englobent tant des intranets sur un domaine unique que des applications accédant à des données entre des domaines non approuvés et sur Internet. Il est important de bien connaître toutes les méthodes de sécurisation des connexions de réplication afin de choisir celle qui répond le mieux à la situation.  
   
  Les informations suivantes concernent la réplication dans tous les environnements :  
   
 -   Chiffrez les connexions entre des ordinateurs d'une topologie de réplication à l'aide d'une méthode standard dans l'industrie, telle que les réseaux privés virtuels (VPN, Virtual Private Networks), SSL (Secure Sockets Layer) et IPSEC (IP Security). Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md). Pour plus d'informations sur l'utilisation des réseaux VPN et de SSL pour répliquer les données sur Internet, consultez [Securing Replication Over the Internet](securing-replication-over-the-internet.md).  
   
-     Si vous utilisez SSL pour sécuriser les connexions entre ordinateurs dans une topologie de réplication, spécifiez la valeur **1** ou **2** pour le paramètre **-EncryptionLevel** de chaque agent de réplication (la valeur **2** est recommandée). La valeur **1** spécifie que le chiffrement est utilisé, mais que l'agent ne vérifie pas si le certificat de serveur SSL est signé par un émetteur fiable ; la valeur **2** indique que le certificat est vérifié. Les paramètres des agents peuvent être spécifiés dans des profils d'agent et sur la ligne de commande. Pour plus d'informations, consultez :  
+     Si vous utilisez SSL pour sécuriser les connexions entre ordinateurs dans une topologie de réplication, spécifiez la valeur **1** ou **2** pour le paramètre **-EncryptionLevel** de chaque agent de réplication (la valeur **2** est recommandée). La valeur **1** spécifie que le chiffrement est utilisé, mais que l'agent ne vérifie pas si le certificat de serveur SSL est signé par un émetteur fiable ; la valeur **2** indique que le certificat est vérifié. Les paramètres des agents peuvent être spécifiés dans des profils d'agent et sur la ligne de commande. Pour plus d'informations, consultez les pages suivantes :  
   
     -   [Utiliser des profils d’agent de réplication](../agents/replication-agent-profiles.md)  
   
@@ -71,8 +71,8 @@ ms.locfileid: "63268673"
  [Activer les connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Réplication sur Internet](../replication-over-the-internet.md)   
  [Sécuriser l’abonné](secure-the-subscriber.md)   
- [Sécuriser le serveur de distribution](secure-the-distributor.md)   
+ [Protéger le serveur de distribution](secure-the-distributor.md)   
  [Sécuriser le serveur de publication](secure-the-publisher.md)   
- [Sécurité de la réplication SQL Server](view-and-modify-replication-security-settings.md)  
+ [Sécurité Réplication SQL Server](view-and-modify-replication-security-settings.md)  
   
   

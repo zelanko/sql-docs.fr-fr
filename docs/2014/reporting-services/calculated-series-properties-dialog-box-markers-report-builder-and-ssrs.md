@@ -1,5 +1,5 @@
 ---
-title: Calculé la boîte de dialogue Propriétés de série, marqueurs (Générateur de rapports et SSRS) | Microsoft Docs
+title: Boîte de dialogue Propriétés de la série calculée, marqueurs (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a3cbe076564d1ce24cbe606485462cbfe012407
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109884"
 ---
 # <a name="calculated-series-properties-dialog-box-markers-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés de la série calculée, Marqueurs (Générateur de rapports et SSRS)
-  Sélectionnez **Marqueurs** dans la boîte de dialogue **Propriétés de la série calculée** pour définir le mode d'affichage des marqueurs sur chaque point de données d'une série. Les marqueurs ne sont disponibles que pour certains types de graphique. Les types de graphique suivants prennent en charge les marqueurs : Zone, barre, colonne, ligne, polaire et à nuages de points. Pour plus d’informations sur les fonctionnalités des graphiques, consultez [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](report-design/chart-types-report-builder-and-ssrs.md).  
+  Sélectionnez **Marqueurs** dans la boîte de dialogue **Propriétés de la série calculée** pour définir le mode d'affichage des marqueurs sur chaque point de données d'une série. Les marqueurs ne sont disponibles que pour certains types de graphique. Les types de graphique suivants prennent en charge les marqueurs : en aires, à barres, histogramme, en courbes, polaire et nuage de points. Pour plus d’informations sur les fonctionnalités des graphiques, consultez [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](report-design/chart-types-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Options  
  **Type de marqueur**  
@@ -30,13 +30,13 @@ ms.locfileid: "66109884"
  **Taille de marqueur**  
  Sélectionnez la taille du marqueur à afficher sur les points de données.  
   
- **Couleur du marqueur**  
+ **Couleur de marqueur**  
  Sélectionnez la couleur des marqueurs à afficher sur les points de données.  
   
  **Largeur de bordure du marqueur**  
  Sélectionnez la largeur de bordure des marqueurs à afficher sur les points de données.  
   
- **Couleur de bordure de marqueur**  
+ **Couleur de bordure du marqueur**  
  Sélectionnez la couleur de bordure des marqueurs à afficher sur les points de données.  
   
 ## <a name="see-also"></a>Voir aussi  

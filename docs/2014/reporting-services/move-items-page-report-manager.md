@@ -1,5 +1,5 @@
 ---
-title: Déplacer les éléments de Page (Gestionnaire de rapports) | Microsoft Docs
+title: Page déplacer les éléments (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f64a9e9efe180c2db776c38553403e5f7cdfac9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108220"
 ---
 # <a name="move-items-page-report-manager"></a>Page Déplacer les éléments (Gestionnaire de rapports)
@@ -66,10 +66,10 @@ ms.locfileid: "66108220"
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Page propriétés générales, dossiers &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
- [Page Propriétés générales, Rapports &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [Page propriétés générales, ressources &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-resources-report-manager.md)   
- [Page propriétés générales, des Sources de données partagées &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-shared-data-sources-report-manager.md)   
- [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Page Propriétés générales, dossiers &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
+ [Page Propriétés générales, rapports &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [Page Propriétés générales, ressources &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-resources-report-manager.md)   
+ [Page Propriétés générales, sources de données partagées &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-shared-data-sources-report-manager.md)   
+ [Aide F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

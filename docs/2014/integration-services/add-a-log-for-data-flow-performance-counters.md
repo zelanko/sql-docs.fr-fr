@@ -1,5 +1,5 @@
 ---
-title: Ajouter un journal pour les compteurs de performances de flux de données | Microsoft Docs
+title: Ajouter un journal pour les compteurs de performances de workflow de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76c85de1e9e8c294ab9db1f887f2b417b321d663
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062057"
 ---
 # <a name="add-a-log-for-data-flow-performance-counters"></a>Ajouter un journal pour les compteurs de performances de flux de données
   Cette procédure décrit comment ajouter un journal pour les compteurs de performances fournis par le moteur de flux de données.  
   
 > [!NOTE]  
->  Si vous installez [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur un ordinateur qui exécute [!INCLUDE[winxpsvr](../includes/winxpsvr-md.md)], puis que vous mettez à niveau cet ordinateur vers [!INCLUDE[firstref_longhorn](../includes/firstref-longhorn-md.md)], le processus de mise à niveau supprime les compteurs de performances [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de l’ordinateur. Pour restaurer les compteurs de performances de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur l’ordinateur, exécutez le programme d’installation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en mode réparation.  
+>  Si vous installez [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur un ordinateur qui exécute [!INCLUDE[winxpsvr](../includes/winxpsvr-md.md)], puis que vous mettez à niveau cet ordinateur vers [!INCLUDE[firstref_longhorn](../includes/firstref-longhorn-md.md)], le processus de mise à niveau supprime les compteurs de performances de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de l’ordinateur. Pour restaurer les compteurs de performances de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur l’ordinateur, exécutez l’installation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en mode réparation.  
   
 ### <a name="to-add-logging-of-performance-counters"></a>Pour ajouter un journal des compteurs de performances  
   
@@ -64,6 +64,6 @@ ms.locfileid: "66062057"
   
 ## <a name="see-also"></a>Voir aussi  
  [Compteurs de performances](performance/performance-counters.md)   
- [Afficher les entrées de journal dans la fenêtre Journaux d'événements](../../2014/integration-services/view-log-entries-in-the-log-events-window.md)  
+ [Afficher les entrées de journal dans la fenêtre Journaux d’événements](../../2014/integration-services/view-log-entries-in-the-log-events-window.md)  
   
   

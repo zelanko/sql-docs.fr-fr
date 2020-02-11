@@ -1,5 +1,5 @@
 ---
-title: Définissez le Type de données d’une colonne (SSAS tabulaire) | Microsoft Docs
+title: Définir le type de données d’une colonne (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9240218b05af2c642ff374cb7e14d2a6c5dd616
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066610"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Définir le type de données d'une colonne (SSAS Tabulaire)
@@ -50,7 +50,7 @@ ms.locfileid: "66066610"
   
 |Types de données de modèle|  
 |----------------------|  
-|Texte<br /><br /> Nombre décimal<br /><br /> Nombre entier<br /><br /> Currency<br /><br /> TRUE/FALSE<br /><br /> Date|  
+|Texte<br /><br /> Nombre décimal<br /><br /> Nombre entier<br /><br /> Devise<br /><br /> TRUE/FALSE<br /><br /> Date|  
   
  Si vous pensez que vos données ont un type de données incorrect, ou du moins un type différent de ce que vous souhaitiez, vous avez plusieurs options :  
   
@@ -65,9 +65,9 @@ ms.locfileid: "66066610"
   
  Si le type de données est pris en charge, mais que le générateur de modèles détecte des valeurs non prises en charge dans le nouveau type de données, vous obtiendrez une autre erreur et devrez corriger les valeurs des données avant de continuer.  
   
- Pour obtenir des informations détaillées sur les types de données utilisés dans des modèles sémantiques Business Intelligence, sur la façon dont ils sont convertis implicitement et sur la manière d’utiliser des types de données différents dans les formules, consultez [Data Types Supported &#40;SSAS Tabular&#41;](data-types-supported-ssas-tabular.md).  
+ Pour obtenir des informations détaillées sur les types de données utilisés dans des modèles sémantiques Business Intelligence, sur la façon dont ils sont convertis implicitement et sur la manière d’utiliser des types de données différents dans les formules, consultez [Types de données pris en charge &#40;SSAS Tabulaire&#41;](data-types-supported-ssas-tabular.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données pris en charge &#40;SSAS Tabulaire&#41;](data-types-supported-ssas-tabular.md)  
+ [Types de données pris en charge &#40;&#41;tabulaire SSAS](data-types-supported-ssas-tabular.md)  
   
   

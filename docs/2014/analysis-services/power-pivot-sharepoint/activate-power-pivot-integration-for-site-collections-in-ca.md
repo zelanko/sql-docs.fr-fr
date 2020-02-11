@@ -1,5 +1,5 @@
 ---
-title: Activer la fonctionnalité d’intégration PowerPivot pour les Collections de sites dans l’Administration centrale | Microsoft Docs
+title: Activer l’intégration des fonctionnalités PowerPivot pour les collections de sites dans l’administration centrale | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c5a8e3f2930d7975f8c75c8f89ab90b78461a650
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072006"
 ---
 # <a name="activate-powerpivot-feature-integration-for-site-collections-in-central-administration"></a>Activer la fonctionnalité d'intégration PowerPivot pour des collections de sites dans l'Administration centrale
@@ -24,28 +24,28 @@ ms.locfileid: "66072006"
   
  Vous devez activer l'intégration de PowerPivot pour chaque collection de sites qui prend en charge le traitement des requêtes PowerPivot.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Vous devez être administrateur de collection de sites.  
   
 ## <a name="activate-powerpivot-features"></a>Activer les fonctionnalités PowerPivot  
   
 1.  Sur un site SharePoint, cliquez sur **Actions du site**.  
   
-     Par défaut, les applications Web SharePoint sont accessibles via le port 80. Cela signifie que vous pouvez souvent accéder à un site SharePoint en entrant http://\<nom_ordinateur > pour ouvrir la collection de sites racine.  
+     Par défaut, les applications Web SharePoint sont accessibles via le port 80. Cela signifie que vous pouvez souvent accéder à un site SharePoint en entrant\<http://nom d’ordinateur> pour ouvrir la collection de sites racine.  
   
 2.  Cliquez sur **Paramètres du site**.  
   
 3.  Dans Administration de la collection de sites, cliquez sur **Fonctionnalités de la collection de sites**.  
   
-4.  Défilement vers le bas de la page jusqu'à ce que vous trouviez **fonctionnalité de Collection de sites PowerPivot intégration**.  
+4.  Faites défiler la page jusqu’à ce que vous trouviez la **fonctionnalité de collection de sites d’intégration PowerPivot**.  
   
 5.  Cliquez sur **Activer**.  
   
-6.  Répétez ces étapes pour les collections de sites supplémentaires en ouvrant chaque site et en cliquant sur **Actions du site**.  
+6.  Répétez cette opération pour les collections de sites supplémentaires en ouvrant chaque site et en cliquant sur **actions du site**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administration de serveur PowerPivot et de Configuration dans l’Administration centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)   
+ [Administration et configuration du serveur PowerPivot dans l’administration centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Configuration initiale &#40;PowerPivot pour SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)   
- [Installation de PowerPivot pour SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
+ [PowerPivot for SharePoint 2010 Installation](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 9 : Générer et exécuter l’Application | Microsoft Docs'
+title: 'Leçon 9 : générer et exécuter l’application | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 321075631a48570a80e8294f992e8ddb17d50bd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108381"
 ---
-# <a name="lesson-9-build-and-run-the-application"></a>Leçon 9 : Générer et exécuter l'application
+# <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
   Après avoir créé un filtre de données pour la table de données, l'étape suivante consiste à générer et à exécuter l'application de site Web.  
   
 ### <a name="to-build-and-run-the-application"></a>Pour générer et exécuter l'application  
@@ -34,7 +34,7 @@ ms.locfileid: "66108381"
   
 4.  Cliquez sur l'icône **Revenir au rapport parent**, dans la barre d'outils de **ReportViewer** pour revenir au rapport **Parent** .  
   
-     ![SSRS permet d’accéder à l’aide de ReportViewer](../../2014/tutorials/media/ssrs-drillthrough-report.png "ssrs permet d’accéder à l’aide de ReportViewer")  
+     ![extraction SSRS à l’aide de ReportViewer](../../2014/tutorials/media/ssrs-drillthrough-report.png "extraction SSRS à l’aide de ReportViewer")  
   
 5.  Fermez le navigateur.  
   

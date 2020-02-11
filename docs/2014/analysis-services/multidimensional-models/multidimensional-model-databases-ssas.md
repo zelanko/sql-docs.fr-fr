@@ -1,5 +1,5 @@
 ---
-title: Bases de données de modèle multidimensionnel (SSAS) | Microsoft Docs
+title: Bases de données model multidimensionnelles (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5da033881d2a993ea4be6674dcf8b228cad80bf8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073523"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>Bases de données de modèle multidimensionnel (SSAS)
@@ -36,7 +36,8 @@ ms.locfileid: "66073523"
   
 -   Créez une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vide dans une instance d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], puis connectez-vous directement à cette base de données à l’aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et créez des objets dans cette dernière (plutôt que dans un projet). Si vous utilisez une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de cette façon, les modifications apportées aux objets prennent effet dans la base de données à laquelle vous vous connectez lorsque vous enregistrez l'objet modifié.  
   
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilise l'intégration avec le logiciel de contrôle de code source pour prendre en charge plusieurs développeurs qui utilisent différents objets simultanément dans un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Un développeur peut également interagir directement avec une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , plutôt que dans un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Cependant, les objets d'une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peuvent devenir désynchronisés avec le projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui a été utilisé pour son déploiement. Une fois le déploiement effectué, vous pouvez administrer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez également apporter certaines modifications à une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], notamment aux partitions et aux rôles. Cela peut également entraîner la désynchronisation des objets d'une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] avec le projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui a été utilisé pour son déploiement.  
+ 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilise l'intégration avec le logiciel de contrôle de code source pour prendre en charge plusieurs développeurs qui utilisent différents objets simultanément dans un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Un développeur peut également interagir directement avec une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , plutôt que dans un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Cependant, les objets d'une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peuvent devenir désynchronisés avec le projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui a été utilisé pour son déploiement. Une fois le déploiement effectué, vous pouvez administrer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez également apporter certaines modifications à une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], notamment aux partitions et aux rôles. Cela peut également entraîner la désynchronisation des objets d'une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] avec le projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui a été utilisé pour son déploiement.  
   
 ## <a name="related-tasks"></a>Tâches associées  
  [Attacher et détacher des bases de données Analysis Services](attach-and-detach-analysis-services-databases.md)  
@@ -51,16 +52,16 @@ ms.locfileid: "66073523"
   
  [Renommer une base de données multidimensionnelle &#40;Analysis Services&#41;](rename-a-multidimensional-database-analysis-services.md)  
   
- [Définir la compatibilité de niveau d’une base de données multidimensionnelle &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)  
+ [Définir le niveau de compatibilité d’une base de données multidimensionnelle &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)  
   
- [Définir les propriétés de base de données multidimensionnelle &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
+ [Définir les propriétés d’une base de données multidimensionnelle &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
   
- [Synchroniser des bases de données Analysis Services](synchronize-analysis-services-databases.md)  
+ [Synchroniser des base de données Analysis Services](synchronize-analysis-services-databases.md)  
   
  [Basculer une base de données Analysis Services entre les modes ReadOnly et ReadWrite](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Connexion en mode en ligne à une base de données Analysis Services](connect-in-online-mode-to-an-analysis-services-database.md)   
+ [Se connecter en mode en ligne à une base de données Analysis Services](connect-in-online-mode-to-an-analysis-services-database.md)   
  [Créer un projet Analysis Services &#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)   
  [Interrogation de données multidimensionnelles à l'aide de MDX](mdx/querying-multidimensional-data-with-mdx.md)  
   

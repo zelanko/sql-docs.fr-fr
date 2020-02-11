@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Supprimer le groupe | Microsoft Docs
+title: Boîte de dialogue supprimer le groupe | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85b9387b5e60cdcdfd7af17bc3268f5ee475b739
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109316"
 ---
 # <a name="delete-group-dialog-box"></a>Boîte de dialogue Supprimer le groupe
@@ -33,7 +33,7 @@ ms.locfileid: "66109316"
  Choisissez cette option pour supprimer uniquement la définition de groupe.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide sur le Concepteur de rapports accessible à l’aide de la touche F1](tools/report-designer-f1-help.md)   
+ [Aide (F1) Concepteur de rapports](tools/report-designer-f1-help.md)   
  [Fonctionnement des groupes &#40;Générateur de rapports et SSRS&#41;](report-design/understanding-groups-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

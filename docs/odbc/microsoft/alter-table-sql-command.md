@@ -1,5 +1,5 @@
 ---
-title: ALTER TABLE, commande SQL | Microsoft Docs
+title: ALTER TABLE-commande SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8c78d3f20e5a03fc80029549318c9c53662e4121
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901370"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE, commande SQL
@@ -69,49 +69,49 @@ ALTER TABLE TableName1
  ALTER [colonne] *FieldName1*  
  Spécifie le nom d’un champ existant à modifier.  
   
- *FieldType* [( *nFieldWidth* [, *nPrecision*]])  
- Spécifie le type de champ, de la largeur de champ et de la précision du champ (nombre de décimales) pour un champ de nouveaux ou modifié.  
+ *FieldType* [( *NFieldWidth* [, *nPrecision*]])  
+ Spécifie le type de champ, la largeur de champ et la précision de champ (nombre de décimales) d’un champ nouveau ou modifié.  
   
- *FieldType* est une lettre unique qui indique le champ [type de données](../../odbc/microsoft/visual-foxpro-field-data-types.md). Certains types de données de champ nécessitent que vous spécifiez *nFieldWidth* ou *nPrecision* ou les deux.  
+ *FieldType* est une lettre unique qui indique le type de [données](../../odbc/microsoft/visual-foxpro-field-data-types.md)du champ. Certains types de données de champ requièrent que vous spécifiiez *nFieldWidth* ou *nPrecision* , ou les deux.  
   
- *nFieldWidth* et *nPrecision* sont ignorés pour D, G, I, L, M, P, T et Y types. Par défaut, *nPrecision* n’est zéro (aucun décimales) si *nPrecision* n’est pas inclus pour les types B, F ou N.  
+ *nFieldWidth* et *nPrecision* sont ignorés pour les types D, G, I, L, M, P, T et Y. Par défaut, *nPrecision* est égal à zéro (pas de décimale) si *nPrecision* n’est pas inclus pour les types B, F ou N.  
   
  NULL &#124; NOT NULL  
- Autorise ou empêche des valeurs null dans le champ.  
+ Autorise ou empêche les valeurs NULL dans le champ.  
   
- Si vous omettez la valeur NULL et NOT NULL, la valeur actuelle de SET NULL détermine si les valeurs null sont autorisées dans le champ. Toutefois, si vous omettez la valeur NULL et non NULL et incluez la clé primaire ou une clause UNIQUE, le paramètre actuel de la valeur NULL est ignoré et le champ n’est pas NULL par défaut.  
+ Si vous omettez NULL et NOT NULL, la valeur actuelle de SET NULL détermine si les valeurs NULL sont autorisées dans le champ. Toutefois, si vous omettez NULL et NOT NULL et que vous incluez la clause PRIMARY KEY ou UNIQUE, la valeur actuelle de SET NULL est ignorée et le champ n’est pas NULL par défaut.  
   
- Vérifiez *lExpression1*  
- Spécifie une règle de validation pour le champ. *lExpression1* doit correspondre à une expression logique et peut être une fonction définie par l’utilisateur ou une procédure stockée. Dès qu’un enregistrement vide est ajouté, la règle de validation est activée. Une erreur est générée si la règle de validation n’autorise pas une valeur de champ vide dans un enregistrement ajouté.  
+ VÉRIFIER *lExpression1*  
+ Spécifie une règle de validation pour le champ. *lExpression1* doit correspondre à une expression logique et peut être une fonction définie par l’utilisateur ou une procédure stockée. Chaque fois qu’un enregistrement vide est ajouté, la règle de validation est vérifiée. Une erreur est générée si la règle de validation n’autorise pas la présence d’une valeur de champ vide dans un enregistrement ajouté.  
   
  ERREUR *cMessageText1*  
  Spécifie le message d’erreur affiché lorsque la règle de validation de champ génère une erreur.  
   
- Par défaut *eExpression1*  
- Spécifie une valeur par défaut pour le champ. Le type de données de *eExpression1* doit être le même que le type de données pour le champ.  
+ *EExpression1* par défaut  
+ Spécifie une valeur par défaut pour le champ. Le type de données de *eExpression1* doit être le même que celui du champ.  
   
  PRIMARY KEY  
- Crée une balise de l’index primaire. La balise d’index porte le même nom que le champ.  
+ Crée une balise d’index primaire. La balise d’index porte le même nom que le champ.  
   
  UNIQUE  
- Crée une balise d’index de candidat avec le même nom que le champ.  
+ Crée une balise d’index candidat portant le même nom que le champ.  
   
 > [!NOTE]  
->  Candidat index (créés en incluant l’option UNIQUE, fournie pour la compatibilité ANSI dans ALTER TABLE ou CREATE TABLE) diffèrent des index créés à l’aide de l’option UNIQUE dans la commande de l’INDEX. Un index créé à l’aide de UNIQUE dans la commande de l’INDEX autorise les clés d’index en double ; index candidats n’autorisent pas les clés d’index en double.  
+>  Les index candidats (créés avec l’option UNIQUE, fournie pour la compatibilité ANSI dans ALTER TABLE ou CREATE TABLE) diffèrent des index créés à l’aide de l’option UNIQUE dans la commande INDEX. Un index créé à l’aide de l’option UNIQUE dans la commande INDEX autorise les clés d’index dupliquées ; les index candidats n’autorisent pas les clés d’index en double.  
   
- Les valeurs NULL et les enregistrements en double ne sont pas autorisées dans un champ qui est utilisé pour un index primaire ou candidate.  
+ Les valeurs NULL et les enregistrements en double ne sont pas autorisés dans un champ utilisé pour un index principal ou candidat.  
   
- Si vous créez un nouveau champ à l’aide d’ajouter une colonne, Visual FoxPro ne générera pas une erreur si vous créez un index primaire ou candidate pour un champ qui prend en charge les valeurs null. Toutefois, Visual FoxPro génère une erreur si vous essayez d’entrer une valeur null ou en double dans un champ qui est utilisé pour un index primaire ou candidate.  
+ Si vous créez un nouveau champ à l’aide de l’ajout d’une colonne, Visual FoxPro ne génère pas d’erreur si vous créez un index principal ou candidat pour un champ qui prend en charge les valeurs NULL. Toutefois, Visual FoxPro génère une erreur si vous essayez d’entrer une valeur null ou dupliquée dans un champ utilisé pour un index principal ou candidat.  
   
- Si vous modifiez un champ existant et le site principal ou expression d’index candidats se compose de champs dans la table, Visual FoxPro vérifie les champs pour voir si elles contiennent des valeurs null ou des enregistrements en double. S’ils le font, Visual FoxPro génère une erreur et la table n’est pas modifiée.  
+ Si vous modifiez un champ existant et si l’expression d’index principale ou candidat est composée de champs dans la table, Visual FoxPro vérifie les champs pour déterminer s’ils contiennent des valeurs null ou des enregistrements en double. Si c’est le cas, Visual FoxPro génère une erreur et la table n’est pas modifiée.  
   
- RÉFÉRENCES *TableName2* balise *TagName1*  
- Spécifie la table parente à laquelle une relation persistante est établie. BALISE *TagName1* spécifie la balise d’index de la table parent sur laquelle repose la relation. Noms de balise d’index peuvent contenir jusqu'à 10 caractères.  
+ RÉFÉRENCE *TableName2* balise *TagName1*  
+ Spécifie la table parente à laquelle une relation persistante est établie. TAG *TagName1* spécifie la balise d’index de la table parente sur laquelle la relation est basée. Les noms de balises d’index peuvent contenir jusqu’à 10 caractères.  
   
  NOCPTRANS  
- Empêche la traduction vers différentes pages de codes pour les champs de caractère et Mémo. Si la table est convertie en une autre page de codes, les champs pour lesquels NOCPTRANS a été spécifié ne sont pas traduits. NOCPTRANS peut être spécifié uniquement pour les champs de caractère et Mémo.  
+ Empêche la traduction vers une page de codes différente pour les champs de type caractère et mémo. Si la table est convertie en une autre page de codes, les champs pour lesquels NOCPTRANS a été spécifié ne sont pas traduits. NOCPTRANS peut être spécifié uniquement pour les champs de type caractère et mémo.  
   
- L’exemple suivant crée une table nommée mytable qui contient deux champs de caractère et deux champs de type Mémo. Le deuxième champ de caractère, char2 et le deuxième champ de type Mémo, memo2, inclure NOCPTRANS pour empêcher la traduction.  
+ L’exemple suivant crée une table nommée MyTable qui contient deux champs de caractères et deux champs Mémo. Le deuxième champ de caractère, Char2, et le deuxième champ MEMO, memo2, incluent NOCPTRANS pour empêcher la traduction.  
   
 ```  
 CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;  
@@ -121,76 +121,76 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  ALTER [colonne] *FieldName2*  
  Spécifie le nom d’un champ existant à modifier.  
   
- DÉFINIR par défaut *eExpression2*  
- Spécifie une nouvelle valeur par défaut pour un champ existant. Le type de données de *eExpression2* doit être le même que le type de données pour le champ.  
+ DÉFINIR la valeur par défaut *eExpression2*  
+ Spécifie une nouvelle valeur par défaut pour un champ existant. Le type de données de *eExpression2* doit être le même que celui du champ.  
   
- VÉRIFICATION de l’ensemble *lExpression2*  
+ DÉFINIR la vérification *lExpression2*  
  Spécifie une nouvelle règle de validation pour un champ existant. *lExpression2* doit correspondre à une expression logique et peut être une fonction définie par l’utilisateur ou une procédure stockée.  
   
  ERREUR *cMessageText2*  
- Spécifie le message d’erreur affiché lorsque la règle de validation de champ génère une erreur. Le message s’affiche uniquement lorsque les données sont modifiées dans une fenêtre de navigation ou de modification.  
+ Spécifie le message d’erreur affiché lorsque la règle de validation de champ génère une erreur. Le message s’affiche uniquement lorsque les données sont modifiées dans une fenêtre Parcourir ou modifier.  
   
  DROP DEFAULT  
- Supprime la valeur par défaut pour un champ existant.  
+ Supprime la valeur par défaut d’un champ existant.  
   
- VÉRIFICATION DE LA LISTE  
+ DÉPOSER LA VÉRIFICATION  
  Supprime la règle de validation pour un champ existant.  
   
- DROP [COLUMN] *FieldName3*  
- Spécifie un champ à supprimer de la table. Suppression d’un champ de la table supprime également la valeur de la valeur par défaut et la règle de validation de champ.  
+ DROP [colonne] *FieldName3*  
+ Spécifie un champ à supprimer de la table. La suppression d’un champ de la table supprime également le paramètre de valeur par défaut et la règle de validation de champ du champ.  
   
- Si l’index clé ou déclencheur expressions font référence au champ, les expressions deviennent non valides lorsque le champ est supprimé. Dans ce cas, une erreur n’est pas générée lorsque le champ est supprimé, mais les expressions de clé ou d’un déclencheur des index non valide génère des erreurs au moment de l’exécution.  
+ Si la clé d’index ou les expressions de déclencheur référencent le champ, les expressions ne sont pas valides lorsque le champ est supprimé. Dans ce cas, aucune erreur n’est générée lorsque le champ est supprimé, mais que la clé d’index ou les expressions de déclencheur non valides génèrent des erreurs au moment de l’exécution.  
   
- VÉRIFICATION de l’ensemble *lExpression3*  
+ DÉFINIR la vérification *lExpression3*  
  Spécifie la règle de validation de table. *lExpression3* doit correspondre à une expression logique et peut être une fonction définie par l’utilisateur ou une procédure stockée.  
   
  ERREUR *cMessageText3*  
- Spécifie le message d’erreur affiché lorsque la règle de validation de table génère une erreur. Le message s’affiche uniquement lorsque les données sont modifiées dans une fenêtre de navigation ou de modification.  
+ Spécifie le message d’erreur affiché lorsque la règle de validation de table génère une erreur. Le message s’affiche uniquement lorsque les données sont modifiées dans une fenêtre Parcourir ou modifier.  
   
- VÉRIFICATION DE LA LISTE  
+ DÉPOSER LA VÉRIFICATION  
  Supprime la règle de validation de la table.  
   
- Ajouter une clé primaire *eExpression3*balise *TagName2*  
- Ajoute un index primaire à la table. *eExpression3* Spécifie l’expression de clé de l’index primaire, et *TagName2* Spécifie le nom de la balise de l’index primaire. Noms de balise d’index peuvent contenir jusqu'à 10 caractères. Si balise *TagName2* est omis et *eExpression3* est un champ unique, la balise de l’index primaire porte le même nom que le champ spécifié dans *eExpression3*.  
+ Ajouter une balise *eExpression3*de clé primaire *TagName2*  
+ Ajoute un index primaire à la table. *eExpression3* spécifie l’expression de clé d’index primaire et *TagName2* spécifie le nom de la balise d’index primaire. Les noms de balises d’index peuvent contenir jusqu’à 10 caractères. Si la BALIse *TagName2* est omise et que *eExpression3* est un champ unique, la balise d’index primaire porte le même nom que le champ spécifié dans *eExpression3*.  
   
  SUPPRIMER LA CLÉ PRIMAIRE  
- Supprime l’index primaire et sa balise de l’index. Une table peut avoir qu’une seule clé primaire, il n’est pas nécessaire de spécifier le nom de la clé primaire. Suppression de l’index primaire supprime également toutes les relations persistantes en fonction de la clé primaire.  
+ Supprime l’index primaire et sa balise d’index. Étant donné qu’une table ne peut avoir qu’une seule clé primaire, il n’est pas nécessaire de spécifier le nom de la clé primaire. La suppression de l’index principal supprime également toutes les relations persistantes en fonction de la clé primaire.  
   
- Ajouter UNIQUE *eExpression4*[balise *TagName3*]  
- Ajoute un index de candidat à la table. *eExpression4* Spécifie l’expression d’index clé candidate, et *TagName3* Spécifie le nom de la balise d’index candidats. Noms de balise d’index peuvent contenir jusqu'à 10 caractères. Si vous omettez la balise *TagName3* et si *eExpression4* est un champ unique, la balise d’index de candidat a le même nom que le champ spécifié dans *eExpression4*.  
+ ADD UNIQUE *eExpression4*[tag *TagName3*]  
+ Ajoute un index candidat à la table. *eExpression4* spécifie l’expression de clé d’index candidat et *TagName3* spécifie le nom de la balise d’index candidat. Les noms de balises d’index peuvent contenir jusqu’à 10 caractères. Si vous omettez TAG *TagName3* et si *eExpression4* est un champ unique, la balise d’index candidat a le même nom que le champ spécifié dans *eExpression4*.  
   
- BALISE UNIQUE DROP *TagName4*  
- Supprime l’index de candidat et sa balise de l’index. Comme une table peut avoir plusieurs clés candidates, vous devez spécifier le nom de la balise d’index candidats.  
+ SUPPRIMER la BALIse UNIQUE *TagName4*  
+ Supprime l’index candidat et sa balise d’index. Étant donné qu’une table peut avoir plusieurs clés candidates, vous devez spécifier le nom de la balise d’index candidat.  
   
- Ajouter une clé étrangère [ *eExpression5*] balise *TagName4*  
- Ajoute un index (non essentielles) étrangère à la table. *eExpression5* Spécifie l’expression de clé étrangère d’index, et *TagName4* Spécifie le nom de la balise de l’index étranger. Noms de balise d’index peuvent contenir jusqu'à 10 caractères.  
+ Ajouter une balise de clé étrangère [ *eExpression5*] *TagName4*  
+ Ajoute un index étranger (non primaire) à la table. *eExpression5* spécifie l’expression de clé d’index étrangère et *TagName4* spécifie le nom de la balise d’index étrangère. Les noms de balises d’index peuvent contenir jusqu’à 10 caractères.  
   
- RÉFÉRENCES *TableName2*[balise *TagName5*]  
- Spécifie la table parente à laquelle une relation persistante est établie. Inclure la balise *TagName5* pour établir une relation basée sur une balise d’index existante pour la table parente. Noms de balise d’index peuvent contenir jusqu'à 10 caractères. Si vous omettez la balise *TagName5*, la relation est établie à l’aide de la balise d’index primaire de la table parente.  
+ REFERENCEs *TableName2*[tag *TagName5*]  
+ Spécifie la table parente à laquelle une relation persistante est établie. Incluez la BALIse *TagName5* pour établir une relation basée sur une balise d’index existante pour la table parente. Les noms de balises d’index peuvent contenir jusqu’à 10 caractères. Si vous omettez la BALIse *TagName5*, la relation est établie à l’aide de la balise d’index primaire de la table parente.  
   
- BALISE de clé étrangère DROP *TagName6*[Enregistrer]  
- Supprime une clé étrangère dont l’étiquette index est *TagName6*. Si vous omettez d’enregistrement, la balise de l’index est supprimée de l’index structurel. Inclure enregistrer pour empêcher la suppression de la balise de l’index de l’index structurel.  
+ SUPPRIMER la BALIse de clé étrangère *TagName6*[Enregistrer]  
+ Supprime une clé étrangère dont la balise d’index est *TagName6*. Si vous omettez SAVE, la balise d’index est supprimée de l’index structurel. Incluez enregistrer pour empêcher la suppression de la balise d’index de l’index structurel.  
   
- COLONNE de changement de nom *FieldName4*à *FieldName5*  
- Vous permet de modifier le nom d’un champ dans la table. *FieldName4* Spécifie le nom du champ qui est renommé. *FieldName5* Spécifie le nouveau nom du champ.  
+ Renommer la colonne *FieldName4*en *FieldName5*  
+ Vous permet de modifier le nom d’un champ dans la table. *FieldName4* spécifie le nom du champ qui est renommé. *FieldName5* spécifie le nouveau nom du champ.  
   
 > [!CAUTION]  
->  Soyez vigilant lorsque vous renommez des champs de la table, car les expressions d’index, les règles de validation de champ et de table, les commandes et les fonctions peuvent référencer les noms de champ d’origine.  
+>  Soyez vigilant lorsque vous renommez des champs de table, car les expressions d’index, les règles de validation de champ et de table, les commandes et les fonctions peuvent référencer les noms de champs d’origine.  
   
  NOVALIDATE  
- Spécifie que Visual FoxPro autorise les modifications à apporter à la structure de la table ; ces modifications peuvent violer l’intégrité des données dans la table. Par défaut, Visual FoxPro empêche l’apport de modifications qui enfreignent l’intégrité des données dans la table de ALTER TABLE. Inclure NOVALIDATE pour remplacer ce comportement par défaut.  
+ Spécifie que Visual FoxPro permet d’apporter des modifications à la structure de la table. Ces modifications peuvent violer l’intégrité des données dans la table. Par défaut, Visual FoxPro empêche ALTER TABLE d’apporter des modifications qui enfreignent l’intégrité des données dans la table. Incluez novalidate pour remplacer ce comportement par défaut.  
   
 ## <a name="remarks"></a>Notes  
- ALTER TABLE peut être utilisée pour modifier la structure d’une table qui n’a pas été ajoutée à une base de données. Toutefois, Visual FoxPro génère une erreur si vous incluez par défaut, FOREIGN KEY, PRIMARY KEY, références ou clauses SET lors de la modification d’une table gratuite.  
+ ALTER TABLE peut être utilisé pour modifier la structure d’une table qui n’a pas été ajoutée à une base de données. Toutefois, Visual FoxPro génère une erreur si vous incluez la clause par défaut, la clé étrangère, la clé primaire, les références ou les clauses SET lors de la modification d’une table libre.  
   
- ALTER TABLE peut reconstruire la table en créant un nouvel en-tête de table et en ajoutant des enregistrements à l’en-tête du tableau. Par exemple, la modification d’un champ de type ou de la largeur peut entraîner la table à reconstruire.  
+ ALTER TABLE peut reconstruire la table en créant un nouvel en-tête de table et en ajoutant des enregistrements à l’en-tête de la table. Par exemple, la modification du type ou de la largeur d’un champ peut entraîner la reconstruction de la table.  
   
- Une fois une table est reconstruite, les règles de validation de champ sont exécutés pour tous les champs dont la largeur ou type sont modifiés. Si vous modifiez le type ou la largeur de n’importe quel champ de la table, la règle de la table est exécutée.  
+ Une fois qu’une table est reconstruite, des règles de validation de champ sont exécutées pour tous les champs dont le type ou la largeur est modifié. Si vous modifiez le type ou la largeur de n’importe quel champ de la table, la règle de table est exécutée.  
   
- Si vous modifiez des règles de validation de champ ou une table pour une table comportant des enregistrements, Visual FoxPro teste les règles de validation du champ ou les nouvelles sur les données existantes et émet un avertissement sur la première occurrence d’une règle de validation de champ ou une table ou d’une violation du déclencheur.  
+ Si vous modifiez des règles de validation de champ ou de table pour une table qui contient des enregistrements, Visual FoxPro teste les nouvelles règles de validation de champ ou de table par rapport aux données existantes et émet un avertissement sur la première occurrence d’une règle de validation de champ ou de table ou d’une violation de déclencheur.  
   
- Si la table que vous modifiez est dans une base de données, ALTER TABLE - SQL requiert une utilisation exclusive de la base de données. Pour ouvrir une base de données pour un usage exclusif, inclure exclusif dans ouvrir la base de données.  
+ Si la table que vous modifiez se trouve dans une base de données, ALTER TABLE-SQL requiert l’utilisation exclusive de la base de données. Pour ouvrir une base de données en vue d’une utilisation exclusive, incluez EXCLUSIVE dans la base de données ouverte.  
   
 ## <a name="see-also"></a>Voir aussi  
- [CREATE TABLE, commande SQL](../../odbc/microsoft/create-table-sql-command.md)   
+ [CREATE TABLE-commande SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [INDEX, commande](../../odbc/microsoft/index-command.md)

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 43ee3cc999d227931e53c6faa89465315f52e4e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066341"
 ---
 # <a name="tabular-model-projects-ssas-tabular"></a>Projets de modèles tabulaires (SSAS Tabulaire)
@@ -25,7 +25,7 @@ ms.locfileid: "66066341"
 |Rubrique|Description|  
 |-----------|-----------------|  
 |[Créer un projet de modèle tabulaire &#40;SSAS tabulaire&#41;](create-a-new-tabular-model-project-analysis-services.md)|Cette rubrique décrit la procédure de création d'un nouveau projet de modèle tabulaire vide.|  
-|[Importer à partir d’Analysis Services &#40;SSAS Tabulaire&#41;](import-from-analysis-services-ssas-tabular.md)|Cette rubrique décrit la procédure de création d'un nouveau projet de modèle tabulaire basé sur un modèle existant déjà dans Analysis Services. Les métadonnées du modèle existant sont extraites et utilisées pour créer le modèle.|  
-|[Importation à partir de PowerPivot &#40;SSAS tabulaire&#41;](import-from-power-pivot-ssas-tabular.md)|Cette rubrique décrit comment créer un projet de modèle tabulaire en extrayant les métadonnées et les données à partir d'un fichier PowerPivot pour Excel (.xlsx).|  
+|[Importation à partir de Analysis Services &#40;SSAS tabulaire&#41;](import-from-analysis-services-ssas-tabular.md)|Cette rubrique décrit la procédure de création d'un nouveau projet de modèle tabulaire basé sur un modèle existant déjà dans Analysis Services. Les métadonnées du modèle existant sont extraites et utilisées pour créer le modèle.|  
+|[Importer à partir de PowerPivot &#40;&#41;tabulaires SSAS](import-from-power-pivot-ssas-tabular.md)|Cette rubrique décrit comment créer un projet de modèle tabulaire en extrayant les métadonnées et les données à partir d'un fichier PowerPivot pour Excel (.xlsx).|  
   
   

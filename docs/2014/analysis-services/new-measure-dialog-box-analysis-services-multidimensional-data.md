@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Nouvelle mesure (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Boîte de dialogue nouvelle mesure (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 07970f55cea06e319ed937aa3937d49bc45363b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072339"
 ---
 # <a name="new-measure-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Nouvelle mesure (Analysis Services - Données multidimensionnelles)
@@ -29,7 +29,7 @@ ms.locfileid: "66072339"
 -   cliquant avec le bouton droit de la souris sur un groupe de mesures ou une mesure dans le volet **Mesures** de l’onglet **Structure du cube** du Concepteur de cube et en sélectionnant **Nouvelle mesure** dans le menu contextuel.  
   
 ## <a name="options"></a>Options  
- **Usage**  
+ **Utilisation**  
  Sélectionnez la fonction d'agrégation que doit utiliser la nouvelle mesure.  
   
  **Table source**  
@@ -42,7 +42,7 @@ ms.locfileid: "66072339"
  Sélectionnez cette option pour afficher toutes les colonnes de la table de faits du groupe de mesures dans lequel la nouvelle mesure doit être créée. Si vous ne la sélectionnez pas, **Colonne source** affiche uniquement les colonnes numériques non utilisées comme clés primaires logiques ou impliquées dans des relations.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Structure de cube &#40;Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Structure de cube &#40;concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Analysis Services les concepteurs et les boîtes de dialogue &#40;les données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

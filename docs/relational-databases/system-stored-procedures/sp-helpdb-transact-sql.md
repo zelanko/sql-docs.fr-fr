@@ -18,18 +18,18 @@ ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7acc14d3950e0e2d1004727b2efbffd2e4963a2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67903018"
 ---
-# <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
+# <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Affiche des informations sur une base de données précise ou sur toutes les bases de données.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,43 +39,43 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @dbname = ] 'name'` Est le nom de la base de données pour lequel les informations sont signalées. *nom* est **sysname**, sans valeur par défaut. Si *nom* n’est pas spécifié, **sp_helpdb** des rapports sur toutes les bases de données dans le **sys.databases** vue de catalogue.  
+`[ @dbname = ] 'name'`Nom de la base de données pour laquelle les informations sont signalées. *Name* est de **type sysname**, sans valeur par défaut. Si le *nom* n’est pas spécifié, **sp_helpdb** des rapports sur toutes les bases de données de l’affichage catalogue **sys. databases** .  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Nom de la base de données.|  
-|**db_size**|**nvarchar(13)**|Taille totale de la base de données.|  
-|**Propriétaire**|**sysname**|Base de données propriétaire, tel que **sa**.|  
+|**nomme**|**sysname**|Nom de la base de données.|  
+|**db_size**|**nvarchar (13)**|Taille totale de la base de données.|  
+|**du**|**sysname**|Propriétaire de la base de données, tel que **sa**.|  
 |**dbid**|**smallint**|ID de la base de données.|  
-|**created**|**nvarchar(11)**|Date de création de la base de données.|  
-|**status**|**nvarchar(600)**|Liste de valeurs, séparées par des virgules, d'options de base de données actuellement définies pour la base de données.<br /><br /> Les options définies par des valeurs booléennes ne sont affichées que si elles sont activées. Les options non booléennes sont répertoriées avec leurs valeurs correspondantes sous la forme de *option_name*=*valeur*.<br /><br /> Pour plus d’informations, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
-|**compatibility_level**|**tinyint**|Niveau de compatibilité de base de données : 60, 65, 70, 80 ou 90.|  
+|**créer**|**nvarchar(11)**|Date de création de la base de données.|  
+|**statu**|**nvarchar (600)**|Liste de valeurs, séparées par des virgules, d'options de base de données actuellement définies pour la base de données.<br /><br /> Les options définies par des valeurs booléennes ne sont affichées que si elles sont activées. Les options non booléennes sont répertoriées avec leurs valeurs correspondantes sous la forme d' *option_name*=*valeur*.<br /><br /> Pour plus d’informations, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
+|**compatibility_level**|**tinyint**|Niveau de compatibilité de la base de données : 60, 65, 70, 80 ou 90.|  
   
- Si *nom* est spécifié, il est un jeu de résultats supplémentaire qui indique l’allocation de fichier pour la base de données spécifié.  
+ Si *nom* est spécifié, un jeu de résultats supplémentaire indique l’allocation de fichiers pour la base de données spécifiée.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**nchar(128)**|Nom de fichier logique.|  
-|**fileid**|**smallint**|ID de fichier.|  
-|**filename**|**nchar(260)**|Nom de fichier du système d'exploitation (nom de fichier physique).|  
-|**filegroup**|**nvarchar(128)**|Groupe de fichiers auquel le fichier appartient.<br /><br /> NULL = Il s'agit d'un fichier journal. Ils ne font jamais partie d'un groupe de fichiers.|  
-|**size**|**nvarchar(18)**|Taille du fichier exprimée en mégaoctets.|  
-|**maxsize**|**nvarchar(18)**|Taille maximale du fichier. La valeur UNLIMITED indique que le fichier peut augmenter jusqu'à ce que le disque soit plein.|  
-|**growth**|**nvarchar(18)**|Incrément de croissance du fichier. Ce compteur indique la quantité d’espace ajoutée au fichier que chaque nouvel espace de temps est nécessaire.|  
-|**Utilisation**|**varchar(9)**|Utilisation du fichier. Pour un fichier de données, la valeur est **'données uniquement'** et pour le fichier journal est la valeur **journal uniquement**.|  
+|**nomme**|**nchar (128)**|Nom de fichier logique.|  
+|**combinaison**|**smallint**|ID de fichier.|  
+|**extension**|**nchar (260)**|Nom de fichier du système d'exploitation (nom de fichier physique).|  
+|**fichiers**|**nvarchar(128)**|Groupe de fichiers auquel le fichier appartient.<br /><br /> NULL = Il s'agit d'un fichier journal. Ils ne font jamais partie d'un groupe de fichiers.|  
+|**corps**|**nvarchar (18)**|Taille du fichier exprimée en mégaoctets.|  
+|**MaxSize**|**nvarchar (18)**|Taille maximale du fichier. La valeur UNLIMITED indique que le fichier peut augmenter jusqu'à ce que le disque soit plein.|  
+|**future**|**nvarchar (18)**|Incrément de croissance du fichier. Cela indique la quantité d’espace ajoutée au fichier chaque fois que de l’espace supplémentaire est nécessaire.|  
+|**syntaxe**|**varchar (9)**|Utilisation du fichier. Pour un fichier de données, la valeur est **« données uniquement »** et, pour le fichier journal, la valeur est **« Journal uniquement »**.|  
   
 ## <a name="remarks"></a>Notes  
- Le **état** rapports quelles options ont été définies à ON dans la base de données du jeu de colonnes dans le résultat. Toutes les options de base de données ne sont pas signalées par le **état** colonne. Pour afficher une liste complète des paramètres d’option de base de données actuelle, utilisez la **sys.databases** vue de catalogue.  
+ La colonne **État** dans le jeu de résultats indique les options qui ont été activées dans la base de données. Toutes les options de base de données ne sont pas signalées par la colonne **État** . Pour afficher la liste complète des paramètres d’option de base de données actuels, utilisez l’affichage catalogue **sys. databases** .  
   
 ## <a name="permissions"></a>Autorisations  
- Lorsqu’une base de données est spécifié, l’appartenance à la **public** rôle dans la base de données est nécessaire. Lorsque aucune base de données n’est spécifié, l’appartenance à la **public** rôle dans le **master** base de données est requis.  
+ Lorsqu’une base de données unique est spécifiée, l’appartenance au rôle **public** dans la base de données est requise. Si aucune base de données n’est spécifiée, l’appartenance au rôle **public** dans la base de données **Master** est requise.  
   
- Si une base de données n’est pas accessible, **sp_helpdb** affiche l’erreur message 15622 et autant d’informations sur la base de données que possible.  
+ Si une base de données n’est pas accessible, **sp_helpdb** affiche le message d’erreur 15622 et autant d’informations que possible sur la base de données.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -95,13 +95,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées du moteur de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys. databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys. FileGroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sys. master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Nouveau d’exploration de données Model, boîte de dialogue (vue de Structure d’exploration de données) | Microsoft Docs
+title: Boîte de dialogue Nouveau modèle d’exploration de données (vue structure d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 62df5e05019b8b00fa5297bc3c7c3291a6c0f918
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072181"
 ---
 # <a name="new-mining-model-dialog-box-mining-structure-view"></a>Boîte de dialogue Nouveau modèle d'exploration de données (vue Structure d'exploration de données)
@@ -30,7 +30,7 @@ ms.locfileid: "66072181"
  Sélectionnez l'algorithme sur lequel le nouveau modèle d'exploration de données doit être basé.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue de Structure d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-structure-view-data-mining-model-designer.md)   
- [Ajouter un modèle d’exploration de données à une structure d’exploration de données existante](data-mining/add-a-mining-model-to-an-existing-mining-structure.md)  
+ [Vue structure d’exploration de données &#40;le concepteur de modèle d’exploration de données&#41;](mining-structure-view-data-mining-model-designer.md)   
+ [Ajouter un modèle d'exploration de données à une structure d'exploration de données existante](data-mining/add-a-mining-model-to-an-existing-mining-structure.md)  
   
   

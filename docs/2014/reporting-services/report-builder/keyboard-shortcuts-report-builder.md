@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 040d49e66e9feed4f8bc213c8189c8d41486b77d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107779"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Raccourcis clavier (Générateur de rapports)
@@ -34,13 +34,13 @@ ms.locfileid: "66107779"
   
 |Description|Combinaison de touches|  
 |-----------------|---------------------|  
-|Ouvrir le menu du Générateur de rapports.|Alt+F|  
+|Ouvrir le menu du Générateur de rapports.|ALT + F|  
 |Créer un rapport.|Ctrl+N|  
 |Ouvrez un rapport.|Ctrl+O|  
 |Enregistrer un rapport.|Ctrl+S, Alt+S|  
 |Passer d'une zone à une autre dans le Générateur de rapports, à savoir, le ruban, l'aire de conception, le volet Regroupement, le volet Propriétés et le volet Données.|F6, Maj+F6|  
 |Accéder au ruban.|Alt|  
-|Accéder à l'onglet Accueil sur le ruban.|Alt+H|  
+|Accéder à l'onglet Accueil sur le ruban.|ALT + H|  
 |Accéder à l'onglet Insérer sur le ruban.|Alt+I|  
 |Accéder à l'onglet Affichage sur le ruban.|Alt+V|  
 |Activer les barres de division entre les zones, notamment la barre séparant le volet Regroupement et l'aire de conception.|Tab|  
@@ -92,8 +92,8 @@ ms.locfileid: "66107779"
 |Mode d'accélérateur pour les fonctions de panoramique et de zoom avant sur la zone de la vue cartographique lorsqu'un point de vue de la carte est sélectionné.|Ctrl+clic gauche|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Générateur de rapports dans SQL Server 2014](report-builder-in-sql-server-2016.md)   
+ [Générateur de rapports SQL Server 2014](report-builder-in-sql-server-2016.md)   
  [Vue Conception de rapport &#40;Générateur de rapports&#41;](report-design-view-report-builder.md)   
- [Glossaire &#40;Générateur de rapports&#41;](glossary-report-builder.md)  
+ [&#40;du Glossaire Générateur de rapports&#41;](glossary-report-builder.md)  
   
   

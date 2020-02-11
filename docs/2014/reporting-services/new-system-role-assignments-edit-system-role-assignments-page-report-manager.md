@@ -1,5 +1,5 @@
 ---
-title: 'Nouvelles attributions de rôle système : Modifier la Page attributions de rôle système (Gestionnaire de rapports) | Microsoft Docs'
+title: 'Nouvelle attribution de rôle système : page modifier les attributions de rôles système (Gestionnaire de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 661ae0cafe5b484839bbee2531f82f3b62f72c75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108130"
 ---
-# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Nouvelles attributions de rôle système : Modifier la Page attributions de rôle système (Gestionnaire de rapports)
+# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Page Nouvelle attribution de rôle système : Modifier les attributions de rôles système (Gestionnaire de rapports)
   La page Nouvelle attribution de rôle système ou Modifier les attributions de rôle système vous permet de définir la sécurité pour le serveur de rapports. La sécurité est définie par l'intermédiaire des attributions de rôle qui mappent des groupes ou des utilisateurs spécifiques aux tâches qu'ils peuvent effectuer. La liste des tâches est représentée sous la forme d'une définition de rôle que vous sélectionnez lors de l'attribution de rôle.  
   
  Au niveau système, les attributions de rôle que vous créez ou modifiez s'appliquent à l'ensemble du serveur de rapports. Par exemple, la possibilité de créer des planifications partagées est spécifiée au niveau système, car celles-ci sont utilisées par tout le système.  
@@ -37,25 +37,25 @@ ms.locfileid: "66108130"
   
 2.  En haut de la page, dans l'angle droit, cliquez sur **Paramètres du site**. La page des propriétés générales du site s'ouvre.  
   
-3.  Sélectionnez l'onglet **Sécurité** . Vous devez disposer des autorisations de gestionnaire de contenu et d'administrateur système pour accéder à cette page.  
+3.  Sélectionnez l’onglet **sécurité** . Vous devez disposer des autorisations de gestionnaire de contenu et d’administrateur système pour accéder à cette page.  
   
 4.  Pour créer une attribution de rôle, cliquez sur **Nouvelle attribution de rôle** dans la barre d'outils. Pour modifier une attribution de rôle existante, cliquez sur **Modifier** en regard d'un groupe ou utilisateur dans la page de propriétés Sécurité.  
   
 ## <a name="options"></a>Options  
  **Groupe ou utilisateur**  
- Tapez le nom d'un compte d'utilisateur ou de groupe dans votre domaine. Si le serveur de rapports s'exécute sous un compte local, vous devez spécifier les utilisateurs ou les groupes locaux. S'il s'exécute sous un compte de domaine, vous devez spécifier les utilisateurs ou les groupes de domaine. Entrez le compte sous ce format : \<domaine >\\< compte\>.  
+ Tapez le nom d'un compte d'utilisateur ou de groupe dans votre domaine. Si le serveur de rapports s'exécute sous un compte local, vous devez spécifier les utilisateurs ou les groupes locaux. S'il s'exécute sous un compte de domaine, vous devez spécifier les utilisateurs ou les groupes de domaine. Entrez le compte au format suivant : \<domaine>\\<compte\>.  
   
 > [!NOTE]  
 >  Cette case est disponible uniquement dans la page Nouvelle attribution de rôle.  
   
- **Roles**  
+ **Rôles**  
  Fournit une liste de rôles au niveau du système que vous pouvez attribuer à d'autres utilisateurs. Vous pouvez spécifier plusieurs rôles pour une attribution de rôle unique.  
   
  Le Gestionnaire de rapports n'affiche pas les tâches dans chaque rôle ni ne propose de façon d'ajouter ou de modifier les tâches. Vous devez utiliser les rôles comme ils sont définis. Pour créer, modifier ou supprimer des rôles, utilisez [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Pour plus d’informations, consultez [Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
   
  Notez que, si vous utilisez [!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)] with Advanced Services, vous devez utiliser les rôles par défaut fournis.  
   
- **Descriptions**  
+ **Arguments**  
  Affiche des informations supplémentaires sur le rôle. Pour les rôles prédéfinis, tels que Utilisateur système ou Administrateur système, la description résume les tâches que chaque rôle prend en charge.  
   
  **Supprimer l’attribution de rôle**  
@@ -65,7 +65,7 @@ ms.locfileid: "66108130"
 >  Ce bouton est disponible uniquement dans la page Modifier l'attribution de rôle.  
   
 ## <a name="see-also"></a>Voir aussi  
- [F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Aide (F1) Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
  [Attributions de rôles](security/role-assignments.md)   
  [Définitions de rôles](security/role-definitions.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Ajouter des Points vides au graphique (Générateur de rapports et SSRS) | Microsoft Docs
+title: Ajouter des points vides au graphique (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59c79d4824c7df4709c571d5d46476fd89f3cbe4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106609"
 ---
 # <a name="add-empty-points-to-the-chart-report-builder-and-ssrs"></a>Ajouter des points vides au graphique (Générateur de rapports et SSRS)
@@ -53,7 +53,7 @@ ms.locfileid: "66106609"
 ## <a name="see-also"></a>Voir aussi  
  [Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes &#40;Générateur de rapports et SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
- [Ajouter des séparations d’échelle à un graphique &#40;Générateur de rapports et SSRS&#41;](add-scale-breaks-to-a-chart-report-builder-and-ssrs.md)   
+ [Ajouter des séparateurs d’échelle à un graphique &#40;Générateur de rapports et SSRS&#41;](add-scale-breaks-to-a-chart-report-builder-and-ssrs.md)   
  [Graphiques (Générateur de rapports et SSRS)](charts-report-builder-and-ssrs.md)  
   
   

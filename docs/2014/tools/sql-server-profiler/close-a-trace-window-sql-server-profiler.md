@@ -1,5 +1,5 @@
 ---
-title: Fermer une fenêtre de Trace (SQL Server Profiler) | Microsoft Docs
+title: Fermer une fenêtre de trace (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 19e4ca323ff61f9a5629706e3dcfad7cb7c51688
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63316201"
 ---
 # <a name="close-a-trace-window-sql-server-profiler"></a>Fermer une fenêtre de trace (SQL Server Profiler)
@@ -27,7 +27,7 @@ ms.locfileid: "63316201"
   
 1.  Sélectionnez la fenêtre de trace que vous voulez fermer.  
   
-2.  Dans le menu **Fichier** , cliquez sur **Fermer**.  
+2.  Dans le menu **Fichier**, cliquez sur **Fermer**.  
   
 > [!IMPORTANT]  
 >  Si la trace est en cours d'exécution, la fermeture d'une fenêtre de trace provoque l'arrêt de la trace associée.  

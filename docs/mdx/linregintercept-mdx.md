@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 30d3fd98995c24498af9376db19087b2018394e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905584"
 ---
 # <a name="linregintercept-mdx"></a>LinRegIntercept (MDX)
 
 
-  Calcule la régression linéaire d’un jeu et retourne la valeur de l’interception de x dans la ligne de régression y = ax + b.  
+  Calcule la régression linéaire d’un jeu et retourne la valeur de l’interception x dans la droite de régression, y = ax + b.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -29,7 +29,7 @@ LinRegIntercept(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
   
 ## <a name="arguments"></a>Arguments  
  *Set_Expression*  
- Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
+ Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
  *Numeric_Expression_y*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre représentant les valeurs de l'axe des ordonnées.  
@@ -38,16 +38,16 @@ LinRegIntercept(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre représentant les valeurs de l'axe des abscisses.  
   
 ## <a name="remarks"></a>Notes  
- La régression linéaire qui utilise la méthode des moindres carrés calcule l'équation d'une droite de régression (c'est-à-dire de la meilleure ligne pour une série de points). La ligne de régression a l’équation suivante, où un représente la pente et b est l’interception :  
+ La régression linéaire qui utilise la méthode des moindres carrés calcule l'équation d'une droite de régression (c'est-à-dire de la meilleure ligne pour une série de points). La ligne de régression présente l’équation suivante, où a est la pente et b est l’intersection :  
   
  y = ax+b  
   
- Le **LinRegIntercept** fonction évalue le jeu spécifié par rapport à la première expression numérique pour obtenir les valeurs de l’axe y. La fonction évalue ensuite le jeu spécifié par rapport à la deuxième expression numérique, si spécifiée, pour extraire les valeurs de l'axe des abscisses. Si la deuxième expression numérique n’est pas spécifiée, la fonction utilise le contexte actuel des cellules dans le jeu spécifié en tant que valeurs pour l’axe des abscisses. Il est fréquent de ne pas spécifier l'argument de l'axe des abscisses avec la dimension Time.  
+ La fonction **LinRegIntercept** évalue le jeu spécifié par rapport à la première expression numérique pour obtenir les valeurs de l’axe y. La fonction évalue ensuite le jeu spécifié par rapport à la deuxième expression numérique, si spécifiée, pour extraire les valeurs de l'axe des abscisses. Si la deuxième expression numérique n’est pas spécifiée, la fonction utilise le contexte actuel des cellules dans le jeu spécifié comme valeurs pour l’axe des x. Il est fréquent de ne pas spécifier l'argument de l'axe des abscisses avec la dimension Time.  
   
- Après avoir obtenu l’ensemble de points, le **LinRegIntercept** fonction retourne l’intersection de la ligne de régression (b dans l’équation précédente).  
+ Une fois l’ensemble de points obtenu, la fonction **LinRegIntercept** retourne l’interception de la droite de régression (b dans l’équation précédente).  
   
 > [!NOTE]  
->  Le **LinRegIntercept** fonction ignore les cellules vides ou les cellules qui contiennent du texte ou des valeurs logiques. Cependant, elle tient compte des cellules dont la valeur est zéro.  
+>  La fonction **LinRegIntercept** ignore les cellules vides ou les cellules qui contiennent du texte ou des valeurs logiques. Cependant, elle tient compte des cellules dont la valeur est zéro.  
   
 ## <a name="example"></a>Exemple  
  L'exemple ci-dessous retourne l'intersection d'une droite de régression pour les mesures des ventes par unité et par magasin.  
@@ -57,6 +57,6 @@ LinRegIntercept(LastPeriods(10),[Measures].[Unit Sales],[Measures].[Store Sales]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

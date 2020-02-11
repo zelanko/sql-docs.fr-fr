@@ -1,5 +1,5 @@
 ---
-title: Aide F1 du Générateur de rapports | Microsoft Docs
+title: Aide (F1) de Générateur de rapports | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -17,17 +17,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97cb83d54694a1c8334ef7a9f5dd9cd2bddc5d6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107733"
 ---
 # <a name="report-builder-f1-help"></a>Aide du Générateur de rapports obtenue via la touche F1
-  Cette section contient l’aide d’Assistants, vues, volets et boîtes de dialogue Générateur de rapports. Vous pouvez également ouvrir l’aide en appuyant sur F1 ou en cliquant sur le bouton Aide dans une boîte de dialogue.  
+  Cette section contient de l’aide sur les assistants, les affichages, les volets et les boîtes de dialogue de Générateur de rapports. Vous pouvez également ouvrir l’aide en appuyant sur la touche F1 ou en cliquant sur le bouton aide dans une boîte de dialogue.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide pour les boîtes de dialogue, volets et les Assistants (F1)](../report-builder-help-for-dialog-boxes-panes-and-wizards.md) [mode Création de rapport &#40;Générateur de rapports&#41;](report-design-view-report-builder.md)   
+ [Aide pour les boîtes de dialogue, les volets et les assistants (F1)](../report-builder-help-for-dialog-boxes-panes-and-wizards.md) en [mode création de rapport &#40;générateur de rapports&#41;](report-design-view-report-builder.md)   
  [Assistant Carte et Assistant Couche &#40;Générateur de rapports et SSRS&#41;](../report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [Résolution des problèmes liés au Générateur de rapports](../troubleshoot-report-builder.md)  
   

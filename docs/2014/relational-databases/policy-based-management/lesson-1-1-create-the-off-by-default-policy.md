@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c96443d7f46dee539fd7d39a91a168b3ed5a0d8c
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67792934"
 ---
 # <a name="create-the-off-by-default-policy"></a>Créer la stratégie Désactivé par défaut
@@ -28,7 +28,7 @@ ms.locfileid: "67792934"
   
 3.  Dans la zone **Facette** , vérifiez que la facette **Configuration de la surface d’exposition** est sélectionnée.  
   
-4.  Dans le **Expression** zone, dans le **champ** boîte, sélectionnez  **\@DatabaseMailEnabled**, dans le **opérateur** zone Sélectionnez **=** , puis, dans le **valeur** sélectionnez **False**.  
+4.  Dans la zone **Expression**, dans la zone **Champ**, sélectionnez **\@DatabaseMailEnabled** ; ensuite, dans la zone **Opérateur**, sélectionnez **=**  ; enfin, dans **Valeur**, sélectionnez **Faux**.  
   
 5.  Dans la page **Description** , entrez une description de la condition, puis cliquez sur **OK** pour créer la condition.  
   

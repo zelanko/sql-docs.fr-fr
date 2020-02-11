@@ -15,26 +15,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c83ebac20a86cd490fbfdf2dbd099e103d404ced
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650534"
 ---
 # <a name="query-notifications-event-category"></a>Catégorie d'événement Notifications de requêtes
   La catégorie d’événement **Notifications de requêtes** contient des classes d’événements chargées de fournir des informations que les développeurs et les administrateurs peuvent exploiter pour contrôler les notifications de requêtes et résoudre les problèmes qui en découlent.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Classe d'événements QN:Dynamics](qn-dynamics-event-class.md)  
+ [QN:Dynamics, classe d’événements](qn-dynamics-event-class.md)  
  Fournit des informations sur l’activité en arrière-plan que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] effectue pour la prise en charge des notifications de requêtes.  
   
- [Classe d'événements QN:Parameter Table](qn-parameter-table-event-class.md)  
+ [QN:Parameter Table, classe d’événements](qn-parameter-table-event-class.md)  
  Fournit des informations sur les opérations requises pour créer, maintenir et supprimer les tables internes stockant les informations de paramètre des abonnements.  
   
- [Classe d'événements QN:Subscription](qn-subscription-event-class.md)  
+ [QN:Subscription, classe d’événements](qn-subscription-event-class.md)  
  Fournit des informations sur les abonnements aux notifications.  
   
- [Classe d'événements QN:Template](qn-template-event-class.md)  
+ [QN:Template, classe d’événements](qn-template-event-class.md)  
  Fournit des informations sur l'usage interne des modèles de requête.  
   
 ## <a name="see-also"></a>Voir aussi  

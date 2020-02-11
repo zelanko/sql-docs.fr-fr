@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a053eb55547da9030eebe9036667cca2e14606f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63264969"
 ---
 # <a name="custom-report-item-architecture"></a>Architecture des éléments de rapports personnalisés
@@ -25,7 +25,7 @@ ms.locfileid: "63264969"
 ## <a name="the-run-time-component"></a>Composant d’exécution  
  Le composant d'exécution pour un élément de rapport personnalisé est appelé par le processeur de rapports au moment de l'exécution. Le composant d'exécution accepte les données passées par le processeur de rapports au moment de l'exécution, traite ces données, puis retourne une image contenant l'élément de rapport personnalisé rendu.  
   
- ![Composant au moment de l’exécution des éléments de rapports personnalisés](../../../2014/reporting-services/media/customreportitemrun-timecomponentarchitecture.gif "Composant au moment de l’exécution des éléments de rapports personnalisés")  
+ ![Composant au moment de l'exécution des éléments de rapports personnalisés](../../../2014/reporting-services/media/customreportitemrun-timecomponentarchitecture.gif "Composant au moment de l'exécution des éléments de rapports personnalisés")  
   
 ## <a name="the-design-time-component"></a>Composant de conception  
  Le composant de conception autorise la définition et la manipulation de l'élément de rapport personnalisé dans l'interface du Concepteur de rapports dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Le composant de conception comprend plusieurs sous-contrôles qui contrôlent l'apparence et les propriétés de l'élément de rapport personnalisé dans l'environnement de conception.  
@@ -33,8 +33,8 @@ ms.locfileid: "63264969"
  ![Composant au moment de la conception des éléments de rapports personnalisés](../../../2014/reporting-services/media/customreportitemdesign-timecomponentarchitecture.gif "Composant au moment de la conception des éléments de rapports personnalisés")  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création d’un composant d’exécution d’éléments de rapport personnalisé](../custom-report-items/creating-a-custom-report-item-run-time-component.md)   
- [Création d’un composant au moment de la conception d’éléments de rapport personnalisé](../custom-report-items/creating-a-custom-report-item-design-time-component.md)   
- [Procédure : déployer un élément de rapport personnalisé](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [Création d’un composant d’exécution d’élément de rapport personnalisé](../custom-report-items/creating-a-custom-report-item-run-time-component.md)   
+ [Création d’un composant au moment de la conception d’éléments de rapport personnalisés](../custom-report-items/creating-a-custom-report-item-design-time-component.md)   
+ [Procédure : déployer un élément de rapport personnalisé](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   

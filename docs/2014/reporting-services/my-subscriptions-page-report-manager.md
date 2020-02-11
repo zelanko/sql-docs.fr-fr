@@ -1,5 +1,5 @@
 ---
-title: Page Mes abonnements (Gestionnaire de rapports) | Microsoft Docs
+title: Page mes abonnements (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 75d662f677ee2b6bbab8e445804ca7f142b5c034
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108188"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>Page Mes abonnements (Gestionnaire de rapports)
-  La page Mes abonnements vous permet d'afficher tous vos abonnements à un seul emplacement. À partir de cette page, vous pouvez accéder à vos propres abonnements et les modifier ou les supprimer. Vous ne possédez que les abonnements que vous créez. En revanche, vous ne pouvez pas accéder aux abonnements des autres utilisateurs ou à ceux que vous utilisez mais dont vous n'êtes pas propriétaire (par exemple, si votre nom a été ajouté à un abonnement existant défini par un autre utilisateur). Vous ne pouvez pas créer d'abonnements à partir de cette page. Pour plus d’informations sur la création d’abonnements, consultez le [nouvel abonnement ou modifier la Page d’abonnement &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md).  
+  La page Mes abonnements vous permet d'afficher tous vos abonnements à un seul emplacement. À partir de cette page, vous pouvez accéder à vos propres abonnements et les modifier ou les supprimer. Vous ne possédez que les abonnements que vous créez. En revanche, vous ne pouvez pas accéder aux abonnements des autres utilisateurs ou à ceux que vous utilisez mais dont vous n'êtes pas propriétaire (par exemple, si votre nom a été ajouté à un abonnement existant défini par un autre utilisateur). Vous ne pouvez pas créer d'abonnements à partir de cette page. Pour plus d’informations sur la création d’abonnements, consultez la [page nouvel abonnement ou modifier l’abonnement &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md).  
   
  Par défaut, les abonnements sont triés par ordre alphabétique (par nom de rapport). Cliquez sur un autre en-tête de colonne pour modifier l'ordre de tri des abonnements. Si vous ne possédez pas d'abonnements ou si vous n'êtes pas autorisé à créer ou gérer des abonnements, aucun abonnement n'apparaît dans la page.  
   
@@ -44,16 +44,16 @@ ms.locfileid: "66108188"
  **Modifier**  
  Cliquez pour afficher ou modifier la description.  
   
- **Rapport**  
+ **Report**  
  Affiche le rapport défini dans l'abonnement. Cliquez sur le nom du rapport pour afficher ce dernier.  
   
  **Description**  
  Affiche une description de l'abonnement. Cliquez sur la description pour afficher ou modifier les informations sur l'abonnement du rapport.  
   
- **Dossier**  
+ **Folder**  
  Affiche le dossier qui contient le rapport défini dans l'abonnement. Cliquez sur le nom du dossier pour afficher le contenu de ce dernier.  
   
- **Déclencheur**  
+ **Stead**  
  Identifie les critères qui entraînent l'exécution de l'abonnement. Un déclencheur **TimedSubscription** est basé sur une planification qui définit à quel moment l'abonnement s'exécute. Un déclencheur **SnapshotUpdated** est basé sur une mise à jour d'un instantané de rapport.  
   
  **Dernière exécution**  
@@ -68,6 +68,6 @@ ms.locfileid: "66108188"
   
 ## <a name="see-also"></a>Voir aussi  
  [Abonnements et remise &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Aide F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

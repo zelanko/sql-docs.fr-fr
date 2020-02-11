@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4963a309f6c54998ece968f8a5393e818fd30d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110150"
 ---
 # <a name="viewing-tuning-reports"></a>Affichage des rapports de paramétrage
@@ -30,22 +30,22 @@ ms.locfileid: "66110150"
   
      Double-cliquez sur **MySession** dans le volet **Moniteur de session** . L'Assistant Paramétrage du moteur de base de données charge les informations de la session à partir de cette session.  
   
-2.  Cliquez sur l'onglet **Rapports** .  
+2.  Cliquez sur l'onglet **Rapports**.  
   
 3.  Dans le volet **Résumé de paramétrage** , vous pouvez visualiser les informations relatives à cette session de paramétrage. Utilisez la barre de défilement pour visualiser tout le contenu du volet. Notez les informations des zones **Pourcentage d'amélioration attendu** et **Espace occupé par la recommandation**. Il est possible de limiter l'espace utilisé par la recommandation lorsque vous définissez les options de paramétrage. Sous l'onglet **Options de paramétrage** , sélectionnez **Options avancées**. Activez **Définir une quantité d'espace max. pour les recommandations** , et spécifiez, en mégaoctets, l'espace maximal qu'une configuration recommandée peut utiliser. Utilisez le bouton **Précédent** dans l'aide de votre navigateur pour revenir au didacticiel.  
   
 4.  Dans le volet **Rapports de paramétrage** , sélectionnez **Rapport de coût d'instruction** dans la liste **Sélectionnez un rapport** . Si vous souhaitez disposer de davantage d'espace pour afficher le rapport, faites glisser le bord du volet **Moniteur de session** vers la gauche. Chaque instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui s'exécute sur une table de votre base de données est associée à un coût de performance. Ce coût de performance peut être réduit par la création d'index efficaces sur les colonnes qui font souvent l'objet d'accès dans une table. Ce rapport montre le pourcentage d'amélioration estimé entre le coût de départ pour l'exécution d'une instruction dans la charge de travail et le coût si la recommandation de paramétrage est appliquée. Notez que la quantité d'informations contenues dans le rapport est fonction de la longueur et de la complexité de la charge de travail.  
   
-5.  Cliquez avec le bouton droit sur le volet **Rapport de coût d’instruction** dans la grille et cliquez sur **Exporter vers le fichier**. Enregistrer le rapport en tant que `MyReport`. Une extension .xml est ajoutée automatiquement au nom du fichier. Vous pouvez ouvrir le fichier MyReport.xml dans votre éditeur XML favoris ou dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour afficher le contenu du rapport.  
+5.  Cliquez avec le bouton droit sur le volet **Rapport de coût d’instruction** dans la grille et cliquez sur **Exporter vers le fichier**. Enregistrez le rapport sous `MyReport`. Une extension .xml est ajoutée automatiquement au nom du fichier. Vous pouvez ouvrir le fichier MyReport.xml dans votre éditeur XML favoris ou dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour afficher le contenu du rapport.  
   
 6.  Revenez à l’onglet **Rapports** de l’Assistant Paramétrage du moteur de base de données et recliquez avec le bouton droit sur **Rapport de coût d’instruction** . Passez en revue les autres options disponibles. Notez que vous pouvez modifier la police du rapport affiché. Si vous modifiez la police ici, la police est également modifiée dans les autres pages à onglet.  
   
 7.  Sélectionnez d'autres rapports dans la liste **Sélectionnez un rapport** pour vous familiariser avec eux.  
   
-## <a name="summary"></a>Récapitulatif  
+## <a name="summary"></a>Résumé  
  Vous avez parcouru l'onglet **Rapports** de l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données pour la session de paramétrage MySession. Vous pouvez suivre ces mêmes étapes pour parcourir les rapports générés pour la session de paramétrage EvaluateMySession (ÉvaluerMaSession). Double-cliquez sur **EvaluateMySession** dans le volet **Moniteur de session** pour commencer.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 3 : À l’aide de l’utilitaire d’invite de commandes dta](lesson-3-using-the-dta-command-prompt-utility.md)  
+ [Leçon 3 : Utilisation de l’utilitaire de ligne de commande dta](lesson-3-using-the-dta-command-prompt-utility.md)  
   
   

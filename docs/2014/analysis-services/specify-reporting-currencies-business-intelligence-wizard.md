@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1be12aae3f4b4907fe7464aab1ea4bef6ff5f8dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068208"
 ---
 # <a name="specify-reporting-currencies-business-intelligence-wizard"></a>Spécifier les devises pour les rapports (Assistant Business Intelligence)
@@ -32,8 +32,8 @@ ms.locfileid: "66068208"
  Sélectionnez un membre spécifique pour l'inclure dans la dimension de devise pour les rapports. Désactivez l'option pour exclure le membre.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide (F1) de l'Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
- [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Concepteur de dimensions &#40;Analysis Services - données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [Aide (F1) de l’Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Concepteur de cube &#40;Analysis Services-données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Concepteur de dimensions &#40;Analysis Services-données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Éditeur de formulaire d’action (onglet Actions, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Éditeur de formulaire d’action (onglet actions, concepteur de cube) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7c0a9b232a30fbaa4358bf9b23eb28ff16d79b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062957"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Éditeur de formulaire d'action (onglet Actions, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -26,17 +26,17 @@ ms.locfileid: "66062957"
  **Nom**  
  Tapez le nom de l'action.  
   
- **Cible d'action**  
+ **Cible d’action**  
  Développez pour afficher les options **Type de cible** et **Objet cible** .  
   
  **Type de cible**  
  Sélectionnez le type d'objet auquel l'action doit être associée. Le serveur retourne au client uniquement les actions qui s'appliquent à l'objet du type spécifié. L’action est disponible pour le client si la **Condition** est remplie et si les objets spécifiés dans le tableau suivant sont sélectionnés.  
   
-|Value|Objet sélectionné|  
+|Valeur|Objet sélectionné|  
 |-----------|---------------------|  
 |Membres d'attribut|Un membre est sélectionné d’après un niveau qui dépend de l’attribut **Objet cible**.|  
 |Cellules|L’ensemble nommé dans **Objet cible** est sélectionné. Sélectionnez **Toutes les cellules** pour sélectionner toutes les cellules du cube.|  
-|Cube|Le cube dans **Objet cible** est sélectionné. Sélectionnez CURRENTCUBE pour utiliser le cube actif.<br /><br /> Remarque : À l’aide de CURRENTCUBE fournit la portabilité supplémentaire dans les cas où le cube peut être renommé ou l’action copiée dans d’autres cubes. Il est recommandé d'utiliser l'option CURRENTCUBE pour représenter le cube actif.|  
+|Cube|Le cube dans **Objet cible** est sélectionné. Sélectionnez CURRENTCUBE pour utiliser le cube actif.<br /><br /> Remarque : l’utilisation de CURRENTCUBE améliore la portabilité lorsque le cube peut être éventuellement renommé ou l’action copiée dans d’autres cubes. Il est recommandé d'utiliser l'option CURRENTCUBE pour représenter le cube actif.|  
 |Membres de dimension|Un membre de la dimension dans **Objet cible** est sélectionné.|  
 |Hierarchy|La hiérarchie dans **Objet cible** est sélectionnée.|  
 |Membres de hiérarchie|Un membre de la hiérarchie dans **Objet cible** est sélectionné.|  
@@ -51,13 +51,13 @@ ms.locfileid: "66062957"
   
  Faites glisser les éléments sélectionnés du volet **Outils de calcul** dans cette option pour inclure la syntaxe MDX de l'élément sélectionné.  
   
- **Contenu d'action**  
+ **Contenu de l’action**  
  Développez pour afficher les options **Type** et **Expression d’action** .  
   
  **Type**  
  Sélectionnez le type d'action à effectuer lorsque l'action est exécutée. Les types d'actions suivants sont disponibles :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |Dataset|Retourne une instruction MDX (Multidimensional Expressions) qui représente un jeu de données multidimensionnel que l'application cliente doit exécuter et afficher.|  
 |Propriétaire|Retourne une chaîne propriétaire que peuvent interpréter les applications clientes associées au paramètre **Application** de cette action.|  
@@ -67,13 +67,13 @@ ms.locfileid: "66062957"
   
  Pour plus d’informations sur les types d’actions, consultez [Actions &#40;Analysis Services - Données multidimensionnelles&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md).  
   
- **Expression d’action**  
+ **Expression d'action**  
  Tapez l'expression MDX (Multidimensional Expressions) qui retourne dans l'application cliente la chaîne de caractères retournée par l'action pour exécution.  
   
  **Propriétés supplémentaires**  
  Développez pour afficher les options **Invocation**, **Application**, **Description**, **Légende**et **La légende est MDX** .  
   
- **Invocation**  
+ **Appel**  
  Sélectionnez le paramètre qui indique le moment où l'action doit être effectuée.  
   
 > [!NOTE]  
@@ -81,10 +81,10 @@ ms.locfileid: "66062957"
   
  Le tableau suivant décrit les paramètres disponibles.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|Traitement|L’action doit s’exécuter dans le cadre d’une opération par lot ou d’une tâche [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
-|Interactif|L'action s'exécute lorsque l'utilisateur l'invoque.|  
+|Batch|L’action doit s’exécuter dans le cadre d’une opération par lot ou d’une tâche [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
+|Interactive|L'action s'exécute lorsque l'utilisateur l'invoque.|  
 |À l’ouverture|L'action s'exécute à la première ouverture du cube.|  
   
  **Application**  
@@ -98,7 +98,7 @@ ms.locfileid: "66062957"
  **Description**  
  Tapez une description facultative de l'action.  
   
- **Légende**  
+ **Caption**  
  Entrez la légende à afficher pour l’action dans l’application cliente si l’option **La légende est MDX** a la valeur **False**.  
   
  Entrez l’expression MDX (Multidimensional Expressions) qui retourne une chaîne pour la légende si l’option **La légende est MDX** a la valeur **True**.  
@@ -109,11 +109,11 @@ ms.locfileid: "66062957"
  Sélectionnez **True** pour indiquer que la **Légende** contient une expression MDX qui retourne une chaîne représentant une légende à afficher pour l’action dans l’application cliente. L'expression MDX doit être résolue avant que l'action soit retournée à l'application cliente.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Actions &#40;Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
- [Barre d’outils &#40;onglet Actions, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Organisateur d’action &#40;onglet Actions, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [Outils de calcul &#40;onglet Actions, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
- [Éditeur de formulaire d’Action d’extraction &#40;onglet Actions, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Report Action Form Editor &#40;onglet Actions, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
+ [Actions &#40;le concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [Barre d’outils &#40;onglet actions, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Organisateur d’action &#40;onglet actions, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
+ [Outils de calcul &#40;onglet actions, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [Éditeur de formulaire d’action d’extraction &#40;onglet actions, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Éditeur de formulaire d’action de rapport &#40;onglet actions, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
   
   

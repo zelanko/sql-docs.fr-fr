@@ -1,5 +1,5 @@
 ---
-title: Spécifiez le Type de Dimension (Assistant Dimension) | Microsoft Docs
+title: Spécifier le type de dimension (Assistant Dimension) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6de1b056942673d358cec4768c6854a6966d139e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068367"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>Spécifier le type de la dimension (Assistant Dimension)
@@ -29,20 +29,20 @@ ms.locfileid: "66068367"
  **Type de dimension**  
  Sélectionnez le type de la dimension. Le tableau suivant répertorie les types de dimensions disponibles.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Comptes (Accounts)**|Les dimensions de compte contiennent des données et métadonnées qui représentent une liste de comptes.<br /><br /> Pour plus d’informations sur les dimensions de compte, consultez [Créer un compte Finance de la dimension de type parent-enfant](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).|  
 |**BillOfMaterials**|Les dimensions de nomenclature sont des dimensions régulières dans lesquelles les données et métadonnées représentent des informations sur le stock ou la fabrication (par ex., listes de pièces pour des produits).<br /><br /> Pour plus d’informations sur les dimensions régulières, consultez [Types de dimensions](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
-|**Channel**|Les dimensions de canal sont des dimensions régulières dans lesquelles les données et métadonnées représentent des informations sur les canaux.<br /><br /> Pour plus d’informations sur les dimensions régulières, consultez [Types de dimensions](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
-|**Monétaire (Currency)**|Les dimensions de devise contiennent des données et métadonnées qui représentent des informations sur les devises.<br /><br /> Pour plus d’informations sur les dimensions de devise, consultez [Créer une dimension de type devise](multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).|  
-|**Customers**|Les dimensions de client sont des dimensions régulières dans lesquelles les données et métadonnées représentent des informations sur les clients ou contacts.<br /><br /> Pour plus d’informations sur les dimensions régulières, consultez [Types de dimensions](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
-|**Geography**|Les dimensions de zone géographique sont des dimensions régulières dans lesquelles les données et métadonnées représentent des informations géographiques, telles que les villes et codes postaux.<br /><br /> Pour plus d’informations sur les dimensions régulières, consultez [Types de dimensions](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
-|**Organisation**|Les dimensions d'organisation sont des dimensions régulières dans lesquelles les données et métadonnées représentent des informations organisationnelles, telles que les employés et filiales.<br /><br /> Pour plus d’informations sur les dimensions régulières, consultez [Types de dimensions](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**Canal**|Les dimensions de canal sont des dimensions régulières dans lesquelles les données et métadonnées représentent des informations sur les canaux.<br /><br /> Pour plus d’informations sur les dimensions régulières, consultez [Types de dimensions](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**Accès**|Les dimensions de devise contiennent des données et métadonnées qui représentent des informations sur les devises.<br /><br /> Pour plus d’informations sur les dimensions de devise, consultez [Créer une dimension de type devise](multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).|  
+|**Acheteurs**|Les dimensions de client sont des dimensions régulières dans lesquelles les données et métadonnées représentent des informations sur les clients ou contacts.<br /><br /> Pour plus d’informations sur les dimensions régulières, consultez [Types de dimensions](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**Région**|Les dimensions de zone géographique sont des dimensions régulières dans lesquelles les données et métadonnées représentent des informations géographiques, telles que les villes et codes postaux.<br /><br /> Pour plus d’informations sur les dimensions régulières, consultez [Types de dimensions](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**Dernière**|Les dimensions d'organisation sont des dimensions régulières dans lesquelles les données et métadonnées représentent des informations organisationnelles, telles que les employés et filiales.<br /><br /> Pour plus d’informations sur les dimensions régulières, consultez [Types de dimensions](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Produits**|Les dimensions de produit sont des dimensions régulières dans lesquelles les données et métadonnées représentent des informations sur les produits.<br /><br /> Pour plus d’informations sur les dimensions régulières, consultez [Types de dimensions](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
-|**Promotion**|Les dimensions de promotion sont des dimensions régulières dans lesquelles les données et métadonnées représentent des informations sur la promotion commerciale.<br /><br /> Pour plus d’informations sur les dimensions régulières, consultez [Types de dimensions](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
-|**Quantitative**|Les dimensions quantitatives sont des dimensions régulières dans lesquelles les données et métadonnées représentent des informations quantitatives.<br /><br /> Pour plus d’informations sur les dimensions régulières, consultez [Types de dimensions](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
-|**Tarifs**|Les dimensions de taux contiennent des données et métadonnées qui représentent des informations sur le taux de change et la conversion monétaire.|  
-|**Regular**|Les dimensions régulières sont le type le plus fréquent utilisé dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].<br /><br /> Pour plus d’informations sur les dimensions régulières, consultez [Types de dimensions](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**Promu**|Les dimensions de promotion sont des dimensions régulières dans lesquelles les données et métadonnées représentent des informations sur la promotion commerciale.<br /><br /> Pour plus d’informations sur les dimensions régulières, consultez [Types de dimensions](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**Applicables**|Les dimensions quantitatives sont des dimensions régulières dans lesquelles les données et métadonnées représentent des informations quantitatives.<br /><br /> Pour plus d’informations sur les dimensions régulières, consultez [Types de dimensions](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**Rates**|Les dimensions de taux contiennent des données et métadonnées qui représentent des informations sur le taux de change et la conversion monétaire.|  
+|**Réguliers**|Les dimensions régulières sont le type de dimension le [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]plus courant utilisé dans.<br /><br /> Pour plus d’informations sur les dimensions régulières, consultez [Types de dimensions](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Scénario**|Les dimensions de scénario sont des dimensions régulières dans lesquelles les données et métadonnées représentent des informations sur la planification ou l'analyse stratégique.<br /><br /> Pour plus d’informations sur les dimensions régulières, consultez [Types de dimensions](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Time**|Les dimensions de temps contiennent des données et métadonnées relatives au temps.<br /><br /> Pour plus d’informations sur les dimensions de temps, consultez [Créer une dimension de type date](multidimensional-models/database-dimensions-create-a-date-type-dimension.md).|  
 |**Utilitaire**|Les dimensions d'utilitaire sont des dimensions régulières dans lesquelles les données et métadonnées représentent des informations qui ne correspondent pas vraiment à un autre type de dimension.<br /><br /> Pour plus d’informations sur les dimensions régulières, consultez [Types de dimensions](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
@@ -52,7 +52,7 @@ ms.locfileid: "66068367"
 > [!NOTE]  
 >  Les options de cette section sont uniquement disponibles si le **type de dimension** sélectionné est associé à des types d'attributs spéciaux. Tous les types de dimensions ne sont pas associés à des types d'attributs spéciaux.  
   
- **Include**  
+ **Inclusion**  
  Permet d'inclure le type d'attribut dans la dimension.  
   
  **Type d’attribut**  
@@ -62,8 +62,8 @@ ms.locfileid: "66068367"
  Sélectionnez l’attribut de dimension auquel l’Assistant Dimension affectera le type d’attribut spécial indiqué dans le champ **Type d’attribut**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide F1 de l’Assistant Dimension](dimension-wizard-f1-help.md)   
- [Dimensions &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Aide (F1) de l’Assistant Dimension](dimension-wizard-f1-help.md)   
+ [Dimensions &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensions dans les modèles multidimensionnels](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

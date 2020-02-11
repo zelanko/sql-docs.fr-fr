@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 763d39ef4804a986fb190c3b5e9d8039a827bd63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106580"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>Ajouter ou supprimer un indicateur (Générateur de rapports et SSRS)
@@ -24,9 +24,9 @@ ms.locfileid: "66106580"
   
  Lorsque vous ajoutez un indicateur pour la première fois, il est configuré par défaut pour utiliser des pourcentages comme unités de mesure. Les plages de pourcentage sont réparties uniformément entre les membres du jeu d'indicateurs, et l'étendue de valeurs indiquée par l'indicateur correspond au parent de l'indicateur tel qu'une table ou une matrice.  
   
- Vous pouvez mettre à jour les valeurs et les états d'indicateurs. Pour plus d’informations, consultez les rubriques suivantes :  
+ Vous pouvez mettre à jour les valeurs et les états d'indicateurs. Pour plus d'informations, voir les rubriques suivantes :  
   
--   [Modifier les icônes d’indicateur et jeux d’indicateurs &#40;Générateur de rapports et SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [Modifier les icônes d’indicateur et les jeux d’indicateurs &#40;Générateur de rapports et SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
 -   [Définir et configurer des unités de mesure &#40;Générateur de rapports et SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   

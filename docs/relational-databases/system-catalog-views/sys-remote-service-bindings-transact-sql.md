@@ -1,5 +1,5 @@
 ---
-title: sys.remote_service_bindings (Transact-SQL) | Microsoft Docs
+title: sys. remote_service_bindings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,21 +20,21 @@ ms.assetid: 4e1a885d-eed1-4993-9c87-e6fd781f437d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c326a5dd3a964209af0cc4834b91bca9071da9e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67904583"
 ---
-# <a name="sysremoteservicebindings-transact-sql"></a>sys.remote_service_bindings (Transact-SQL)
+# <a name="sysremote_service_bindings-transact-sql"></a>sys.remote_service_bindings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cet affichage catalogue contient une ligne pour chaque liaison de service distant. 
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Nom de la liaison de service distant. Cette colonne n'accepte pas la valeur NULL.|  
-|**remote_service_binding_id**|**Int**|Identificateur de la liaison de service distant. Cette colonne n'accepte pas la valeur NULL.|  
+|**nomme**|**sysname**|Nom de la liaison de service distant. Cette colonne n'accepte pas la valeur NULL.|  
+|**remote_service_binding_id**|**int**|Identificateur de la liaison de service distant. Cette colonne n'accepte pas la valeur NULL.|  
 |**principal_id**|**int**|Identificateur du principal de base de données qui est propriétaire de la liaison de service distant. Accepte la valeur NULL.|  
 |**remote_service_name**|**nvarchar (256)**|Nom du service distant auquel cette liaison s'applique. Accepte la valeur NULL.|  
 |**service_contract_id**|**int**|Identificateur du contrat auquel cette liaison s'applique. La valeur 0 est un caractère générique signifiant que la liaison s'applique à tous les contrats associés au service. Cette colonne n'accepte pas la valeur NULL.|  

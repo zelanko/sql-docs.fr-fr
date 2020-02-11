@@ -1,5 +1,5 @@
 ---
-title: Analyser dans Excel (onglet navigateur, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Analyser dans Excel (onglet navigateur, concepteur de cube) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b2833fb2ecbbac269442ce149cd5673abedcf83c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062364"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Analyser dans Excel (onglet Explorateur, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
-  La fonctionnalité**Analyser dans Excel** permet au développeur du cube de vérifier rapidement la façon dont un projet est présenté à l'utilisateur final. La fonctionnalité **Analyser dans Excel** ouvre l'application Microsoft Excel, crée une connexion de source de données à la base de données de l'espace de travail, puis ajoute automatiquement un tableau croisé dynamique à la feuille de calcul. Cette fonction remplace le composant Office Web Control qui fournissait un tableau croisé dynamique incorporé dans l'onglet Navigateur dans les versions précédentes.  
+  **Analyser dans Excel** offre au développeur de cube un moyen d’examiner rapidement l’aspect d’un projet à l’utilisateur final. La fonctionnalité **Analyser dans Excel** ouvre l'application Microsoft Excel, crée une connexion de source de données à la base de données de l'espace de travail, puis ajoute automatiquement un tableau croisé dynamique à la feuille de calcul. Cette fonction remplace le composant Office Web Control qui fournissait un tableau croisé dynamique incorporé dans l'onglet Navigateur dans les versions précédentes.  
   
- **Pour afficher les données du cube :**  
+ **Pour afficher les données du cube :**  
   
 1.  Dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans l’Explorateur de solutions, double-cliquez sur un cube pour l’ouvrir dans le Concepteur de cube.  
   
@@ -44,16 +44,16 @@ ms.locfileid: "66062364"
   
  Pour plus d'informations sur la fonctionnalité **Analyser dans Excel** , consultez ces ressources.  
   
- [Analyser dans Excel &#40;SSAS Tabulaire&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [Analyser dans Excel &#40;la&#41;tabulaire SSAS](tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [Analyser un modèle tabulaire dans Excel &#40;SSAS Tabulaire&#41;](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
+ [Analyser un modèle tabulaire dans Excel &#40;la&#41;tabulaire SSAS](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
   
  [Parcourir les données et métadonnées de cube](multidimensional-models/browse-data-and-metadata-in-cube.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Navigateur &#40;Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Barre d’outils &#40;onglet navigateur, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Métadonnées &#40;onglet navigateur, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Interroger et filtrer &#40;onglet navigateur, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)  
+ [Navigateur &#40;concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Barre d’outils &#40;onglet navigateur, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Onglets du navigateur &#40;de métadonnées, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Requête et filtrage &#40;onglet navigateur, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)  
   
   

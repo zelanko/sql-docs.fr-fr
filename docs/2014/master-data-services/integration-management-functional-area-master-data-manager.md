@@ -11,23 +11,23 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e3aec7e136b656b7f33646d50b746e410263059a
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284991"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>Zone fonctionnelle Gestion de l'intégration (Master Data Manager)
   Dans la zone fonctionnelle Gestion de l'intégration, les administrateurs peuvent importer les données des tables de mise en lots et créer des vues d'abonnement à utiliser pour les systèmes d'abonnement. Pour plus d’informations sur les administrateurs, consultez [Administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ## <a name="import-data"></a>Importer des données  
- [Importation de données &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
+ [&#40;d’importation de données Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
- [Charger ou mettre à jour des membres dans Master Data Services à l’aide du processus de site](add-update-and-delete-data-master-data-services.md)  
+ [Charger ou mettre à jour des membres dans Master Data Services à l'aide du processus de site](add-update-and-delete-data-master-data-services.md)  
   
- [Déplacer des membres de hiérarchie explicite à l’aide du processus de site &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)  
+ [Déplacer des membres de hiérarchie explicites à l’aide du processus de site &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)  
   
- [Afficher les erreurs qui se produisent pendant le processus de mise en lots &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)  
+ [Affichez les erreurs qui se produisent pendant le processus de site &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)  
   
  [Résolution des problèmes liés au processus de site (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   

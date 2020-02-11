@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 54a899036513854d8a091165646b6fb4a955c962
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480825"
 ---
 # <a name="create-term-based-relations"></a>Créer des relations à base de termes
@@ -52,7 +52,7 @@ ms.locfileid: "65480825"
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a>Conditions préalables  
  Pour créer des relations à base de termes, vous devez avoir un domaine ouvert dans l'activité de gestion de l'arborescence du domaine.  
   
 ###  <a name="Security"></a> Sécurité  
@@ -60,9 +60,9 @@ ms.locfileid: "65480825"
 ####  <a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour créer des relations à base de termes.  
   
-##  <a name="Create"></a> Créer des relations à base de termes  
+##  <a name="Create"></a>Créer des relations à base de termes  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’application Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , ouvrez ou créez une base de connaissances. Sélectionnez **Gestion de l'arborescence du domaine** comme activité, puis cliquez sur **Ouvrir** ou **Créer**. Pour plus d’informations, consultez [Créer une base de connaissances](../../2014/data-quality-services/create-a-knowledge-base.md) ou [Ouvrir une base de connaissances](../../2014/data-quality-services/open-a-knowledge-base.md).  
   
@@ -90,7 +90,7 @@ ms.locfileid: "65480825"
   
     6.  Recherchez une valeur dans la table Relations en entrant un ou plusieurs chiffres dans la zone de texte **Rechercher** . Les correspondances exactes pour la chaîne sont mises en surbrillance. Utilisez les flèches haut et bas pour vous déplacer vers différentes instances de la chaîne dans la table.  
   
-    7.  **Vérificateur d’orthographe** : si une valeur dans la colonne **Valeur** ou **Corriger vers** comporte un trait de soulignement ondulé rouge, le vérificateur d’orthographe suggère une correction pour la valeur. Cliquez avec le bouton droit sur la valeur comportant un trait de soulignement, puis sélectionnez l'une des valeurs proposées par le vérificateur d'orthographe. Ou bien, vous pouvez cliquer sur **Ajouter** dans le menu contextuel pour utiliser la valeur d'origine. Pour plus d'informations, consultez [Utiliser le vérificateur d'orthographe DQS](../../2014/data-quality-services/use-the-dqs-speller.md) et [Définir les propriétés du domaine](../../2014/data-quality-services/set-domain-properties.md).  
+    7.  **Vérificateur d’orthographe**: si une valeur dans la colonne **valeur** ou **corriger vers** a un trait de soulignement ondulé rouge, le vérificateur d’orthographe suggère une correction de la valeur. Cliquez avec le bouton droit sur la valeur comportant un trait de soulignement, puis sélectionnez l'une des valeurs proposées par le vérificateur d'orthographe. Ou bien, vous pouvez cliquer sur **Ajouter** dans le menu contextuel pour utiliser la valeur d'origine. Pour plus d'informations, consultez [Utiliser le vérificateur d'orthographe DQS](../../2014/data-quality-services/use-the-dqs-speller.md) et [Définir les propriétés du domaine](../../2014/data-quality-services/set-domain-properties.md).  
   
         > [!NOTE]  
         >  Pour utiliser le vérificateur d'orthographe, vous pouvez l'activer dans la page **Propriétés du domaine** ou, s'il est désactivé, dans la page **Propriétés du domaine** , vous pouvez cliquer sur l'icône **Activer/désactiver le vérificateur d'orthographe** dans la page **Relations à base de termes** pour l'activer sur cette page.  
@@ -99,7 +99,7 @@ ms.locfileid: "65480825"
   
 7.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Suivi : après la création de relations à base de termes  
+##  <a name="FollowUp"></a>Suivi : après la création de relations à base de termes  
  Après avoir créé les relations à base de termes, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../../2014/data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

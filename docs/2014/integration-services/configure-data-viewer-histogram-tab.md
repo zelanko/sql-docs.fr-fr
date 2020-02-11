@@ -1,5 +1,5 @@
 ---
-title: Configurer la visionneuse de données (onglet Histogramme) | Microsoft Docs
+title: Configurer la visionneuse de données (onglet histogramme) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3df1a27d94c3da63e1760e890654dba4045b2f94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060708"
 ---
 # <a name="configure-data-viewer-histogram-tab"></a>Configurer la Visionneuse de données (onglet Histogramme)
@@ -29,11 +29,11 @@ ms.locfileid: "66060708"
  Sélectionnez la colonne à visualiser sous forme d'histogramme.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer la visionneuse de données &#40;onglet Général&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
+ [Configurer la visionneuse de données &#40;onglet général&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
  [Configurer la visionneuse de données &#40;onglet graphique en colonnes&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
  [Configurer la visionneuse de données &#40;onglet grille&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
- [Configurer la visionneuse de données &#40;onglet à nuages de points&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
+ [Configurer la visionneuse de données &#40;onglet nuage de points&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
  [Flux de données](data-flow/data-flow.md)   
- [Débogage d'un flux de données](troubleshooting/debugging-data-flow.md)  
+ [Débogage d’un flux de données](troubleshooting/debugging-data-flow.md)  
   
   

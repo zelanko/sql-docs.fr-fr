@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4219830c82710861ee7b079ce78d1b5859681753
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479538"
 ---
 # <a name="entity-permissions-master-data-services"></a>Autorisations d'entité (Master Data Services)
@@ -37,8 +37,8 @@ ms.locfileid: "65479538"
 |Autorisation|Description|  
 |----------------|-----------------|  
 |**Lecture seule**|L'entité est affichée, mais l'utilisateur ne peut pas ajouter, supprimer ni modifier des membres.|  
-|**Update**|L'entité est affichée et l'utilisateur peut ajouter, supprimer et modifier des membres.|  
-|**Refuser**|L'entité n'est pas affichée.|  
+|**Mise à jour**|L'entité est affichée et l'utilisateur peut ajouter, supprimer et modifier des membres.|  
+|**Deny**|L'entité n'est pas affichée.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Affecter des autorisations d’objet de modèle &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cd0371497067f754166c33fb18022fe058cb88e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109751"
 ---
 # <a name="configure-general-properties-for-a-report-report-manager"></a>Configurer les propriétés générales d'un rapport (Gestionnaire de rapports)
@@ -28,35 +28,35 @@ ms.locfileid: "66109751"
   
 2.  Dans le Gestionnaire de rapports, parcourez l'arborescence jusqu'à la page **Contenu** . Localisez le rapport pour lequel vous voulez configurer les propriétés générales et ouvrez-le.  
   
-3.  Cliquez sur l’onglet **Propriétés** .  
+3.  Cliquez sur l’onglet **Propriétés**.  
   
-     Ou, si le **contenu** page est en mode Détails, cliquez sur l’icône de page de propriétés :  
+     Ou, si la page **contenu** est en mode Détails, cliquez sur l’icône de la page de propriétés :  
   
-     ![Icône page de propriétés](media/prop.gif "icône page de propriétés")  
+     ![Icône de la page de propriétés](media/prop.gif "Icône de la page de propriétés")  
   
-4.  Le **général** page de propriétés s’affiche et vous pouvez configurer les propriétés comme suit :  
+4.  La page Propriétés **générales** s’affiche et vous pouvez configurer les propriétés comme suit :  
   
-    -   Dans le **propriétés** section, vous pouvez modifier le nom du rapport et la description.  
+    -   Dans la section **Propriétés** , vous pouvez modifier le nom et la description du rapport.  
   
-    -   Vous pouvez sélectionner le **masquer en mode liste** case à cocher pour masquer l’élément lorsque la page est ouverte dans la disposition de page par défaut (mode liste) qui organise les éléments horizontalement et verticalement dans la page.  
+    -   Vous pouvez activer la case à cocher **Masquer en mode liste** pour masquer l’élément lorsque la page est ouverte dans la mise en page par défaut (mode liste) qui réorganise les éléments sur la page.  
   
-    -   Dans le **définition de rapport** , cliquez sur **modifier** pour extraire une copie de la définition de rapport. Les modifications que vous apportez localement à la définition de rapport ne sont pas enregistrées sur le serveur de rapports.  
+    -   Dans la section **définition de rapport** , cliquez sur **modifier** pour extraire une copie de la définition de rapport. Les modifications que vous apportez localement à la définition de rapport ne sont pas enregistrées sur le serveur de rapports.  
   
-         Ou, pour mettre à jour la définition de rapport à partir d’un fichier .rdl, cliquez sur **mettre à jour**.  
+         Ou, pour mettre à jour la définition de rapport à partir d’un fichier. rdl, cliquez sur **mettre à jour**.  
   
         > [!NOTE]  
         >  Si vous procédez à la mise à jour d'une définition de rapport, redéfinissez les paramètres de la source de données une fois cette opération terminée.  
   
-    -   Utilisez le **supprimer** ou **déplacer** boutons pour supprimer ou déplacer le rapport.  
+    -   Utilisez les boutons **supprimer** ou **déplacer** pour supprimer ou déplacer le rapport.  
   
     -   Vous pouvez également créer un rapport lié.  
   
-5.  Lorsque vous avez terminé la configuration des propriétés générales pour le rapport, cliquez sur **appliquer**.  
+5.  Lorsque vous avez terminé de configurer les propriétés générales du rapport, cliquez sur **appliquer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Déplacer ou supprimer un élément &#40;le Gestionnaire de rapports&#41;](report-server/move-or-delete-an-item-report-manager.md)   
- [Page Contenu &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Déplacer ou supprimer un élément &#40;Gestionnaire de rapports&#41;](report-server/move-or-delete-an-item-report-manager.md)   
+ [Page contenu &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Page de propriétés générales, rapports &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)  
+ [Page Propriétés générales, rapports &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)  
   
   

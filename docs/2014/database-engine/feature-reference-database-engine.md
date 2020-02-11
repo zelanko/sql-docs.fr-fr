@@ -14,24 +14,25 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 408b6b605e14fd5e7aa52cd0df7fba13b225c20c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064829"
 ---
 # <a name="feature-reference-database-engine"></a>Références relatives aux fonctionnalités (moteur de base de données)
+  
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] contient plusieurs outils et applications qui permettent de créer, gérer et afficher des données et des objets de base de données. En outre, vous pouvez utiliser certains outils pour surveiller et résoudre les problèmes relatifs aux performances du serveur et de la base de données, activer et désactiver des fonctionnalités, des services et des protocoles réseaux. Les rubriques de cette section décrivent les boîtes de dialogue de ces outils et applications.  
   
  Pour accéder à une rubrique de l'interface utilisateur pendant l'exécution de l'outil ou de l'application, appuyez sur F1 ou cliquez sur Aide lorsque la boîte de dialogue, la page Web ou l'Assistant est ouvert.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Démarrer et utiliser l’Assistant Paramétrage du moteur de base de données](../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](../relational-databases/performance/database-engine-tuning-advisor.md)  
  Fournit une aide pour l'Assistant Paramétrage du [!INCLUDE[ssDE](../includes/ssde-md.md)] et les boîtes de dialogue connexes.  
   
  Fournit une aide pour les outils, les Assistants et les services fournis avec [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
   
- [Vue d'ensemble du moniteur SQL Server](configure-windows/sql-server-monitor-overview.md)  
+ [Vue d'ensemble du moniteur SQL Server](configure-windows/sql-server-monitor-overview.md)  
  Fournit une aide pour le moniteur de mise en miroir de bases de données et le moniteur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  [Aide (F1) du Générateur de profils SQL](../tools/sql-server-profiler/sql-server-profiler-f1-help.md)  

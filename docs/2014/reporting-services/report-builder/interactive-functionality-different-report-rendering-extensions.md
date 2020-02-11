@@ -1,5 +1,5 @@
 ---
-title: Fonctionnalité interactive des différentes Extensions (Générateur de rapports et SSRS) de rendu de rapport | Microsoft Docs
+title: Fonctionnalités interactives pour différentes extensions de rendu de rapport (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c66e8e8ce302044cac8caf488ca27a0c0c07651e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107798"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>Fonctionnalité interactive des différentes extensions de rendu de rapport (Générateur de rapports et SSRS)
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des fonctionnalités de création de rapports interactives permettant de travailler sur un rapport au moment de l'exécution. Certains formats de rendu de rapport ne prennent pas en charge toutes les fonctionnalités interactives. Le tableau suivant permet de comprendre le fonctionnement de chaque fonctionnalité interactive dans des formats de rendu spécifiques.  
   
 > [!NOTE]  

@@ -1,5 +1,5 @@
 ---
-title: Page de sélection (Gestionnaire de rapports) Source de données | Microsoft Docs
+title: Page de sélection de la source de données (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bb8790496efb1701baf1636e5c16769e6430aa0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109435"
 ---
 # <a name="data-source-selection-page-report-manager"></a>Page Sélection de la source de données (Gestionnaire de rapports)
@@ -36,10 +36,10 @@ ms.locfileid: "66109435"
 5.  Dans le panneau Propriétés, sélectionnez **Source de données partagée** puis cliquez sur **Parcourir**.  
   
 ## <a name="options"></a>Options  
- **Emplacement**  
+ **Location**  
  Spécifie le chemin d'accès complet à l'élément de source de données partagée, en commençant par le nom du dossier racine. Vous pouvez taper le nom du chemin d'accès ou utiliser l'arborescence pour naviguer jusqu'à la source de données partagée désirée.  
   
- **Vue d’arborescence**  
+ **Arborescence**  
  Affiche la structure des dossiers de l'espace de noms du serveur de rapports. Cliquez sur un élément de source de données partagée pour ajouter le chemin d'accès complet dans la zone **Emplacement** .  
   
  **OK**  
@@ -47,9 +47,9 @@ ms.locfileid: "66109435"
   
 ## <a name="see-also"></a>Voir aussi  
  [Gérer des sources de données de rapports](report-data/manage-report-data-sources.md)   
- [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Page des propriétés des sources de données &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
- [Page Nouvelle source de données &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
- [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Spécifier les informations d’identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Page de propriétés des sources de données &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
+ [Page nouvelle source de données &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
+ [Aide F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

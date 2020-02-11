@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 295a40bc7964e50e5fc0c4a9ea0294b593fdde18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109391"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>Boîte de dialogue Propriétés du dataset, Paramètres (Générateur de rapports)
-  Sélectionnez **paramètres** sur le **propriétés du Dataset** boîte de dialogue pour ajouter, modifier et supprimer des paramètres de requête.  
+  Sélectionnez **paramètres** dans la boîte de dialogue **Propriétés du DataSet** pour ajouter, modifier et supprimer des paramètres de requête.  
   
  Pour un dataset incorporé, les options s'appliquent au dataset dans la définition de rapport.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66109391"
  **Nom du paramètre**  
  Tapez le nom d’un paramètre de requête que vous avez ajouté au dataset sous l’onglet **Requête** de la boîte de dialogue **Propriétés du dataset** .  
   
- **Valeur du paramètre**  
+ **Valeur de paramètre**  
  Pour les datasets incorporés uniquement.  
   
  Entrez une valeur pour le paramètre de requête. Il peut s'agir d'une valeur statique ou d'une expression faisant référence à un objet présent dans le rapport ; toutefois, elle ne peut pas faire référence à des éléments de rapport ou des champs. Par défaut, **Valeur** contient une expression qui pointe vers un paramètre de rapport.  
@@ -76,10 +76,10 @@ ms.locfileid: "66109391"
  Sélectionnez cette option lorsqu'une référence à un paramètre de rapport figure dans une expression dans le filtre de dataset partagé et pas dans la requête. Lorsque vous sélectionnez cette option, vous n'avez pas besoin de spécifier une valeur par défaut pour ce paramètre lors de l'exécution de la requête.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide du Générateur de rapports pour les boîtes de dialogue, les volets et les Assistants](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Boîte de dialogue Propriétés de DataSet, requête &#40;Générateur de rapports&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
+ [Aide Générateur de rapports pour les boîtes de dialogue, les volets et les assistants](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [Boîte de dialogue Propriétés du DataSet, requête &#40;Générateur de rapports&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
- [Tutoriel : Ajouter un paramètre à votre rapport &#40;Générateur de rapports&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Didacticiel : ajouter un paramètre à un rapport &#40;Générateur de rapports&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Concepteurs de requêtes &#40;Générateur de rapports&#41;](../../2014/reporting-services/query-designers-report-builder.md)   

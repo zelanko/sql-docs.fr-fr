@@ -15,40 +15,40 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d6070f32cd8990a2be58db4c900da61681304cb
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284942"
 ---
 # <a name="technical-reference-ssas"></a>Références techniques (SSAS)
   Recherchez les outils, les langues et la documentation de référence de PowerShell pour utiliser ou administrer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- ![Icône de dossier petit fichier](../../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") **stockées référence de procédure**  
- [Procédures stockées d’exploration de données &#40;Analysis Services - Exploration de données&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ ![Petite icône de dossier de fichiers](../../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") **référence de procédure stockée**  
+ [Procédures stockées d’exploration de données &#40;Analysis Services d’exploration de données&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
- ![Icône de dossier petit fichier](../../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") **référence d’erreurs et événements**  
- [Erreurs et événements référence &#40;PowerPivot pour SharePoint&#41;](../power-pivot-sharepoint/errors-and-events-reference-power-pivot-for-sharepoint.md)  
+ ![Petite icône de dossier de fichiers](../../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") **erreur et référence d’événement**  
+ [Informations de référence sur les erreurs et les événements &#40;PowerPivot pour SharePoint&#41;](../power-pivot-sharepoint/errors-and-events-reference-power-pivot-for-sharepoint.md)  
   
- ![Icône de dossier petit fichier](../../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") **référence de PowerShell**  
+ ![Petite icône de dossier de fichiers](../../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") **référence PowerShell**  
  [PowerShell Analysis Services](../analysis-services-powershell.md)  
   
  [Référence PowerShell pour PowerPivot pour SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   
- ![Icône de dossier petit fichier](../../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") **de requêtes et de référence de langage d’Expression**  
- [Référence MDX &#40;Multidimensional Expressions&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ ![Petite icône de dossier de fichiers](../../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") **Référence du langage des requêtes et expressions**  
+ [Expressions multidimensionnelles &#40;référence de&#41; MDX](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
- [Data Analysis Expressions &#40;DAX&#41; référence](/dax/data-analysis-expressions-dax-reference)  
+ [Expressions d’analyse de données &#40;référence de&#41; DAX](/dax/data-analysis-expressions-dax-reference)  
   
- [Informations de référence sur le langage DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Informations de référence sur la&#41; DMX &#40;Data Mining Extensions](/sql/dmx/data-mining-extensions-dmx-reference)  
   
- ![Icône de dossier petit fichier](../../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") **référence de l’Interface utilisateur**  
- [Référence de l’Interface utilisateur &#40;Analysis Services&#41;](../user-interface-reference-analysis-services.md)  
+ ![Petite icône de dossier de fichiers](../../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") **référence de l’interface utilisateur**  
+ [Référence de l’interface utilisateur &#40;Analysis Services&#41;](../user-interface-reference-analysis-services.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide du développeur &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)   
- [Analysis Services Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)   
- [Analysis Services Scripting Language &#40;ASSL&#41; référence](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
- [Référence XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
+ [Ensembles de lignes de schéma Analysis Services](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)   
+ [Analysis Services&#41; référence du langage de script &#40;ASSL](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Référence de&#41; XML for Analysis &#40;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
   
   

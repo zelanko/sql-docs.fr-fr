@@ -1,5 +1,5 @@
 ---
-title: Gestion des assemblys de modèle multidimensionnel | Microsoft Docs
+title: Gestion des assemblys de modèles multidimensionnels | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,14 +22,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c4f57e12754fc8e32fba8f483a2dfc360d7edc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073529"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Gestion des assemblys de modèles multidimensionnels
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre de nombreuses fonctions intrinsèques à utiliser avec les langages MDX (Multidimensional Expressions) et DMX (Data Mining Extensions). Ces fonctions sont conçues pour effectuer toutes les opérations possibles, des calculs statistiques standard au parcours des membres d’une hiérarchie. Cependant, comme dans tout autre produit complexe et robuste, il est toujours nécessaire d'étendre la fonctionnalité de ce type d'outil.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un grand nombre de fonctions intrinsèques à utiliser avec les langages MDX (Multidimensional Expressions) et DMX (Data Mining Extensions), conçus pour effectuer toutes les opérations, des calculs statistiques standard au parcours des membres d’une [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] hiérarchie. Cependant, comme dans tout autre produit complexe et robuste, il est toujours nécessaire d'étendre la fonctionnalité de ce type d'outil.  
   
  Par conséquent, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous permet d'ajouter des assemblys à une base de données ou à une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Les assemblys vous permettent de créer des fonctions externes définies par l'utilisateur à l'aide de tout langage CLR (Common Language Runtime), tel que Microsoft Visual Basic .NET ou Microsoft Visual C#. Vous pouvez aussi utiliser des langages d'automatisation COM (Component Object Model) tels que Microsoft Visual Basic ou Microsoft Visual C++.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66073529"
   
  Un assembly avec les nouvelles procédures et les fonctions peut être ajouté au serveur. Vous pouvez utiliser des assemblys pour améliorer ou ajouter des fonctionnalités personnalisées qui ne sont pas fournies par le serveur. En utilisant des assemblys, vous pouvez ajouter de nouvelles fonctions aux expressions MDX (Multidimensional Expressions), aux Extensions DMX (Data Mining Extensions) ou aux procédures stockées. Les assemblys sont chargés à partir de l'emplacement où l'application personnalisée est exécutée, et une copie du fichier binaire d'assembly est enregistrée avec les données de base de données dans le serveur. Lorsqu'un assembly est supprimé, l'assembly copié est également supprimé du serveur.  
   
- Assemblys peuvent être de deux types différents : COM et CLR. Les assemblys CLR sont de assemblys développés dans les langages de programmation du .NET Framework tels que C#, Visual Basic .NET, C++ managé. Les assemblys COM sont des bibliothèques COM qui doivent être enregistrées dans le serveur.  
+ Les assemblys peuvent être de deux types différents : COM et CLR. Les assemblys CLR sont de assemblys développés dans les langages de programmation du .NET Framework tels que C#, Visual Basic .NET, C++ managé. Les assemblys COM sont des bibliothèques COM qui doivent être enregistrées dans le serveur.  
   
  Les assemblys peuvent être ajoutés aux objets <xref:Microsoft.AnalysisServices.Server> ou <xref:Microsoft.AnalysisServices.Database> . Les assemblys de serveur peuvent être appelés par tout utilisateur connecté au serveur ou tout objet dans le serveur. Les assemblys de base de données peuvent être appelés uniquement par les objets <xref:Microsoft.AnalysisServices.Database> ou les utilisateurs connectés à la base de données.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66073529"
   
  Les caractéristiques de sécurité incluent le jeu d'autorisations et l'emprunt d'identité utilisés pour exécuter l'assembly.  
   
-## <a name="calling-user-defined-functions"></a>appel de fonctions définies par l’utilisateur  
+## <a name="calling-user-defined-functions"></a>Appel de fonctions définies par l'utilisateur  
  L'appel d'une fonction définie par l'utilisateur dans un assembly est semblable à l'appel d'une fonction intrinsèque, excepté que vous devez utiliser un nom complet. Par exemple, une fonction définie par l'utilisateur qui renvoie un type attendu par MDX est insérée comme ceci dans une requête MDX :  
   
 ```  
@@ -69,22 +69,23 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  Pour appeler une fonction définie par l'utilisateur depuis un assembly CLR spécifique, la fonction définie par l'utilisateur est précédée du nom de l'assembly, du nom complet de la classe et du nom de la procédure, comme dans l'exemple suivant :  
   
- *AssemblyName*.*FullClassName*.*ProcedureName*(*Argument1*, *Argument2*, ...)  
+ *AssemblyName*. *FullClassName*. *Nomprocédure*(*argument1*, *argument2*,...)  
   
  Pour assurer la compatibilité amont avec les versions antérieures de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], la syntaxe suivante est également acceptable :  
   
- *AssemblyName*!*FullClassName*!*ProcedureName*(*Argument1*, *Argument2*, ...)  
+ *AssemblyName*! *FullClassName*! *Nomprocédure*(*argument1*, *argument2*,...)  
   
  Si une bibliothèque COM prend en charge plusieurs interfaces, l'identificateur d'interface peut également être utilisé pour résoudre le nom de la procédure, comme dans cet exemple :  
   
- *AssemblyName*!*InterfaceID*!*ProcedureName*(*Argument1*, *Argument2*, ...)  
+ *AssemblyName*! *InterfaceId*! *Nomprocédure*(*argument1*, *argument2*,...)  
   
 ## <a name="security"></a>Sécurité  
  La sécurité des assemblys est basée sur le modèle de sécurité de .NET Framework, qui est un modèle de sécurité d'accès du code. .NET Framework prend en charge un mécanisme de sécurité d'accès du code qui suppose que le module d'exécution peut héberger à la fois du code d'un niveau de confiance total et d'un niveau de confiance partiel. Les ressources qui sont protégées par la sécurité d'accès du code de .NET Framework sont généralement intégrées à du code managé qui demande l'autorisation correspondante avant d'autoriser l'accès à la ressource. La demande d'autorisation est satisfaite seulement si tous les appelants (au niveau de l'assembly) de la pile d'appels ont l'autorisation pour la ressource correspondante.  
   
  Pour les assemblys, l'autorisation d'exécution est passée avec la propriété `PermissionSet` sur l'objet `Assembly`. Les autorisations reçues par le code managé sont déterminées par la stratégie de sécurité effective. Il existe déjà trois niveaux de stratégie effectifs dans un environnement hébergé non-[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : entreprise, ordinateur et utilisateur. La liste effective des autorisations reçues par le code est déterminée par l'intersection des autorisations obtenues par ces trois niveaux.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit une stratégie de sécurité au niveau de l’hôte au CLR (Common Language Runtime) quand il l’héberge. Cette stratégie est un niveau de stratégie supplémentaire sous les trois niveaux de stratégie qui sont toujours effectifs. Cette stratégie est définie pour chaque domaine d'application qui est créé par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit une stratégie de sécurité au niveau de l’hôte au CLR (Common Language Runtime) quand il l’héberge. Cette stratégie est un niveau de stratégie supplémentaire sous les trois niveaux de stratégie qui sont toujours effectifs. Cette stratégie est définie pour chaque domaine d'application qui est créé par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  La stratégie de niveau hôte de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est une combinaison de la stratégie fixe de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour les assemblys système et de la stratégie spécifiée par l’utilisateur pour les assemblys utilisateur. La partie spécifiée par l'utilisateur de la stratégie d'hôte d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est basée sur le propriétaire de l'assembly spécifiant un des trois compartiments d'autorisation pour chaque assembly :  
   
@@ -105,15 +106,16 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
 -   S'il y a une instruction EXECUTE AS intermédiaire qui a changé le contexte relativement à celui de l'appelant d'origine, la tentative d'accès à une ressource externe échoue.  
   
- La propriété `ImpersonationMode` doit être définie à `ImpersonateCurrentUser` ou à `ImpersonateAnonymous`. Le paramètre par défaut, `ImpersonateCurrentUser`, exécute un assembly sous le compte de connexion réseau de l'utilisateur en cours. Si le `ImpersonateAnonymous` paramètre est utilisé, le contexte d’exécution correspond au compte utilisateur de connexion Windows IUSER_*nom_serveur* sur le serveur. Il s'agit du compte Invité Internet, qui a des droits limités sur le serveur. Un assembly s'exécutant dans ce contexte peut seulement accéder à des ressources limitées sur le serveur local.  
+ La propriété `ImpersonationMode` doit être définie à `ImpersonateCurrentUser` ou à `ImpersonateAnonymous`. Le paramètre par défaut, `ImpersonateCurrentUser`, exécute un assembly sous le compte de connexion réseau de l'utilisateur en cours. Si le `ImpersonateAnonymous` paramètre est utilisé, le contexte d’exécution correspond au compte d’utilisateur de connexion Windows IUSER_*ServerName* sur le serveur. Il s'agit du compte Invité Internet, qui a des droits limités sur le serveur. Un assembly s'exécutant dans ce contexte peut seulement accéder à des ressources limitées sur le serveur local.  
   
 ### <a name="application-domains"></a>Domaines d'application  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] n’expose pas directement les domaines d’application. Grâce à un ensemble d'assemblys s'exécutant dans le même domaine d'application, les domaines d'application sont capables de se découvrir les uns les autres au moment de l'exécution à l'aide de l'espace de noms `System.Reflection` dans .NET Framework ou par d'autres moyens, et ils sont capables d'y faire des appels en mode de liaison tardive. De tels appels font l'objet des vérifications d'autorisations utilisées par la sécurité basée sur les autorisations de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] n’expose pas directement les domaines d’application. Grâce à un ensemble d'assemblys s'exécutant dans le même domaine d'application, les domaines d'application sont capables de se découvrir les uns les autres au moment de l'exécution à l'aide de l'espace de noms `System.Reflection` dans .NET Framework ou par d'autres moyens, et ils sont capables d'y faire des appels en mode de liaison tardive. De tels appels font l'objet des vérifications d'autorisations utilisées par la sécurité basée sur les autorisations de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  Il est recommandé de ne pas se baser sur la recherche d'assemblys dans le même domaine d'application, dans la mesure où la limite du domaine d'application et les assemblys qui vont dans chacun des domaines sont définis par la mise en œuvre.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définition de la sécurité pour les procédures stockées](../multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
+ [Définition de la sécurité des procédures stockées](../multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
  [Définition de procédures stockées](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   

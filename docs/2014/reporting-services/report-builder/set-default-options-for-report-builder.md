@@ -1,5 +1,5 @@
 ---
-title: Le Générateur de rapports Options, boîte de dialogue, paramètres (Générateur de rapports) | Microsoft Docs
+title: Boîte de dialogue Options de Générateur de rapports, paramètres (Générateur de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107614"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>Boîte de dialogue Options du Générateur de rapports, Paramètres (Générateur de rapports)
-  Cliquez sur le **le Générateur de rapports** bouton, puis cliquez sur **Options** pour définir les options d’affichage des connexions et des fichiers récents. Vous pouvez également modifier le serveur de rapports par défaut ou en ajouter un si vous n'en avez pas déjà spécifié un.  
+  Cliquez sur le bouton **Générateur de rapports** , puis sur **options** pour définir les options d’indication des fichiers et des connexions récents. Vous pouvez également modifier le serveur de rapports par défaut ou en ajouter un si vous n'en avez pas déjà spécifié un.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
  **Utiliser ce serveur de rapports ou site SharePoint par défaut**  
@@ -46,6 +46,6 @@ ms.locfileid: "66107614"
  Effacez les listes actuelles de serveurs et de sites récents, de documents, de datasets partagés et de connexions à des sources de données partagées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide du Générateur de rapports pour les boîtes de dialogue, les volets et les Assistants](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Aide Générateur de rapports pour les boîtes de dialogue, les volets et les assistants](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

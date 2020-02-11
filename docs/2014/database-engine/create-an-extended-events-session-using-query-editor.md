@@ -1,5 +1,5 @@
 ---
-title: Créer une Session d’événements étendus à l’aide de l’éditeur de requête | Microsoft Docs
+title: Créer une session d’événements étendus à l’aide de l’éditeur de requête | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a541c86029be9a438492a851c0eb16d18120f75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065030"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>Créer une session d'événements étendus à l'aide de l'éditeur de requête
-  Vous pouvez créer une session d'événements étendus à l'aide de l'éditeur de requête, ou vous pouvez créer une session dans l'Explorateur d'objets. Dans l’Explorateur d’objets, les événements étendus fournissent deux interfaces utilisateur que vous pouvez utiliser pour créer, modifier et afficher les données de session d’événement : un Assistant qui vous guide à travers le processus de création d’événements session et une nouvelle interface utilisateur de Session qui fournit des options de configuration plus avancées. Vous pouvez créer des sessions d'événements étendus pour diagnostiquer le suivi SQL Server, qui vous permet de résoudre des problèmes tels que :  
+  Vous pouvez créer une session d'événements étendus à l'aide de l'éditeur de requête, ou vous pouvez créer une session dans l'Explorateur d'objets. Dans l’Explorateur d’objets, les événements étendus fournissent deux interfaces utilisateur que vous pouvez utiliser pour créer, modifier et afficher des données de session d’événements : un assistant qui vous guide tout au long du processus de création de la session d’événements et une interface utilisateur de nouvelle session qui fournit des options de configuration plus avancées. Vous pouvez créer des sessions d'événements étendus pour diagnostiquer le suivi SQL Server, qui vous permet de résoudre des problèmes tels que :  
   
 -   Rechercher les requêtes les plus onéreuses  
   
@@ -92,7 +92,7 @@ ms.locfileid: "66065030"
     ADD EVENT package_name.event_name  
     ```  
   
-     Exemple :  
+     Par exemple :  
   
     ```  
     ADD EVENT sqlserver.file_read_completed,  
@@ -129,7 +129,7 @@ ms.locfileid: "66065030"
         AND column_type = 'data'  
         ```  
   
-         Exemple :  
+         Par exemple :  
   
         ```  
         SELECT *   
@@ -156,7 +156,7 @@ ms.locfileid: "66065030"
         WHERE package0.counter <= 5  
         ```  
   
-5.  Ajoutez la cible souhaitée, où les données d'événement seront traitées et consommées. Utilisez le format suivant :  
+5.  Ajoutez la cible souhaitée, où les données d'événement seront traitées et consommées. Utilisez le format suivant :  
   
     ```  
     ADD TARGET package_name.target_name  

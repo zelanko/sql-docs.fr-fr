@@ -1,5 +1,5 @@
 ---
-title: Ajouter et vérifier une connexion de données ou d’une Source de données (Générateur de rapports et SSRS) | Microsoft Docs
+title: Ajouter et vérifier une connexion de données ou une source de données (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca1e5d039a7ea7aacd930f47eb99f854cbce8cac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107522"
 ---
 # <a name="add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs"></a>Ajouter et vérifier une connexion de données ou une source de données (Générateur de rapports et SSRS)
@@ -24,14 +24,14 @@ ms.locfileid: "66107522"
   
  Pour créer une source de données incorporée, vous devez disposer des informations de connexion à la source de données externe et connaître les autorisations dont vous avez besoin pour accéder aux données. Ces informations proviennent généralement du propriétaire de la source de données. Vous pouvez tester la connexion pour vérifier que les informations d'identification spécifiées sont suffisantes.  
   
- Pour plus d’informations, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md) ou [Spécifier des informations d’identification dans le Générateur de rapports](../specify-credentials-in-report-builder.md).  
+ Pour plus d’informations, consultez [connexions de données, sources de données et chaînes de connexion dans générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md) et [spécifier des informations d’identification dans générateur de rapports](../specify-credentials-in-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ### <a name="to-create-a-reference-to-a-shared-data-source"></a>Pour créer une référence à une source de données partagée  
   
-1.  Dans la barre d’outils du volet des données de rapport, cliquez sur **Nouveau**, puis sur **Source de données**. La boîte de dialogue **Propriétés de la source de données** s'ouvre.  
+1.  Dans la barre d’outils du volet des données de rapport, cliquez sur **nouveau,** puis sur **source de données**. La boîte de dialogue **Propriétés de la source de données** s'ouvre.  
   
 2.  Dans la zone de texte **Nom** , tapez le nom de la source de données.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66107522"
   
 ### <a name="to-create-an-embedded-data-source"></a>Pour créer une source de données incorporée  
   
-1.  Dans la barre d'outils du volet Données du rapport, cliquez sur **Nouveau**, puis sur **Source de données**. La boîte de dialogue **Propriétés de la source de données** s'ouvre.  
+1.  Dans la barre d’outils du volet des données de rapport, cliquez sur **nouveau**, puis sur **source de données**. La boîte de dialogue **Propriétés de la source de données** s'ouvre.  
   
 2.  Dans la zone de texte **Nom** , tapez un nom pour la source de données ou acceptez la valeur par défaut.  
   
@@ -80,9 +80,9 @@ ms.locfileid: "66107522"
   
 2.  Cliquez sur **Tester la connexion**.  
   
-3.  Si la connexion est établie, le message suivant apparaît : « Connexion créée avec succès ». [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Si la connexion a abouti, le message suivant apparaît : « La connexion a été correctement créée ». [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-4.  Si la connexion n’est pas établie, le message suivant apparaît : « Impossible de se connecter à la source de données. »  
+4.  Si la connexion n'a pas abouti, le message suivant s'affiche : « Impossible de se connecter à la source de données ».  
   
 5.  Cliquez sur **Détails**et utilisez les informations pour corriger le problème.  
   

@@ -1,5 +1,5 @@
 ---
-title: Ajouter la nouvelle boîte de dialogue Destination | Microsoft Docs
+title: Boîte de dialogue Ajouter une nouvelle destination | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa37f7c80f2aa3c371ad823bb7c22ee2ad4819ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061858"
 ---
 # <a name="add-new-destination-dialog-box"></a>Boîte de dialogue Ajouter une nouvelle destination
@@ -26,11 +26,11 @@ ms.locfileid: "66061858"
 |Option|Description|  
 |------------|-----------------|  
 |Types|Sélectionnez le type de destination auquel vous voulez vous connecter.|  
-|Gestionnaires de connexions|Sélectionnez un gestionnaire de connexions existant ou cliquez sur **\<Nouveau>** pour en créer un.|  
+|Gestionnaires de connexions|Sélectionnez un gestionnaire de connexions existant ou cliquez sur ** \<nouveau>** pour créer un gestionnaire de connexions.|  
 |Afficher les éléments installés uniquement|Spécifiez s'il faut afficher uniquement les destinations installées.|  
 |OK|Cliquez pour enregistrer vos modifications et ouvrir les boîtes de dialogue suivantes permettant de configurer des options supplémentaires.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter une destination à l’aide de l’Assistant Destination](data-flow/destination-assistant.md)  
+ [Ajouter une destination à l'aide de l'Assistant Destination](data-flow/destination-assistant.md)  
   
   

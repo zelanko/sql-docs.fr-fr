@@ -1,5 +1,5 @@
 ---
-title: Créer une Session d’événements étendus | Microsoft Docs
+title: Créer une session d’événements étendus | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e54caf8ec3e99fe4076ae50cb0b8015c8330ddb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065083"
 ---
 # <a name="create-an-extended-events-session"></a>Créer une session d'événements étendus
-  Vous pouvez créer une session d'événements étendus à l'aide de l'éditeur de requête, ou vous pouvez créer une session dans l'Explorateur d'objets. Dans l’Explorateur d’objets, les événements étendus fournissent deux interfaces utilisateur que vous pouvez utiliser pour créer, modifier et afficher les données de session d’événement : un Assistant qui vous guide à travers le processus de création d’événements session et une nouvelle interface utilisateur de Session qui fournit des options de configuration plus avancées. Vous pouvez créer des sessions d'événements étendus pour diagnostiquer le suivi SQL Server, qui vous permet de résoudre des problèmes tels que :  
+  Vous pouvez créer une session d'événements étendus à l'aide de l'éditeur de requête, ou vous pouvez créer une session dans l'Explorateur d'objets. Dans l’Explorateur d’objets, les événements étendus fournissent deux interfaces utilisateur que vous pouvez utiliser pour créer, modifier et afficher des données de session d’événements : un assistant qui vous guide tout au long du processus de création de la session d’événements et une interface utilisateur de nouvelle session qui fournit des options de configuration plus avancées. Vous pouvez créer des sessions d'événements étendus pour diagnostiquer le suivi SQL Server, qui vous permet de résoudre des problèmes tels que :  
   
 -   Rechercher les requêtes les plus onéreuses  
   
@@ -33,8 +33,8 @@ ms.locfileid: "66065083"
 ## <a name="in-this-section"></a>Dans cette section  
  [Créer une session d'événements étendus à l'aide de l'éditeur de requête](../../2014/database-engine/create-an-extended-events-session-using-query-editor.md)  
   
- [Créer une Session d’événements étendus à l’aide de l’Assistant &#40;Explorateur d’objets&#41;](../ssms/object/object-explorer.md)  
+ [Créez une session d’événements étendus à l’aide de l’Assistant &#40;l’Explorateur d’objets&#41;](../ssms/object/object-explorer.md)  
   
- [Créer une session Événements étendus à l’aide de la boîte de dialogue Nouvelle session](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)  
+ [Créer une session Événements étendus à l'aide de la boîte de dialogue Nouvelle session](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)  
   
   

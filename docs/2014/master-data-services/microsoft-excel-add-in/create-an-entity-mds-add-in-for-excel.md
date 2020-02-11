@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4dfabea6ba2b8785e4c55b74099d9e4b0cd824ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478919"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>Créer une entité (Complément MDS pour Excel)
   Dans [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], les administrateurs peuvent créer des entités pour stocker des données. Lorsque vous créez une entité, vous devez charger au moins un échantillonnage des données que vous souhaitez stocker.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder aux zones fonctionnelles **Administration de système** et **Explorateur** .  
@@ -29,7 +29,7 @@ ms.locfileid: "65478919"
   
 -   Vous devez disposer d'un modèle existant dans lequel créer l'entité. Pour plus d’informations, consultez [Créer un modèle &#40;Master Data Services&#41;](../create-a-model-master-data-services.md).  
   
--   Assurez-vous que vos données répondent aux exigences suivantes :  
+-   Assurez-vous que vos données répondent aux exigences suivantes :  
   
     -   Les données doivent avoir une ligne d'en-tête.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "65478919"
   
 10. Dans la liste **Code** , sélectionnez la colonne qui contient les identificateurs uniques ou générez les codes automatiquement.  
   
-11. Facultatif. Dans la liste **Nom** , sélectionnez une colonne qui contient le nom de chaque membre.  
+11. facultatif. Dans la liste **Nom** , sélectionnez une colonne qui contient le nom de chaque membre.  
   
 12. Cliquez sur **OK**. Lorsque l'entité a été correctement créée, une nouvelle ligne d'en-tête est affichée, les cellules sont mises en surbrillance et le nom de la feuille est mis à jour pour correspondre au nom de l'entité.  
   
@@ -76,6 +76,6 @@ ms.locfileid: "65478919"
 -   Vérifiez que les attributs ont été créés avec le type de données escompté.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer un attribut basé sur un domaine &#40;complément MDS pour Excel&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)  
+ [Créer un attribut basé sur un domaine &#40;Complément MDS pour Excel&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)  
   
   

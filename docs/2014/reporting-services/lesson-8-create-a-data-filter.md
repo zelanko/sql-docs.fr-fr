@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 8 : Créer un filtre de données | Microsoft Docs'
+title: 'Leçon 8 : créer un filtre de données | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5204cab43e3c801acf80113ec92c51e00c0f9d13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108392"
 ---
-# <a name="lesson-8-create-a-data-filter"></a>Leçon 8 : Créer un filtre de données
+# <a name="lesson-8-create-a-data-filter"></a>Leçon 8 : créer un filtre de données
   Après avoir ajouté une action d'extraction dans le rapport parent, l'étape suivante consiste à créer un filtre de données pour la table de données que vous avez définie pour le rapport enfant.  
   
  Vous pouvez créer un filtre de table **ou** un filtre de requête pour le rapport d’extraction. Cette leçon contient des instructions pour ces deux options.  
@@ -35,17 +35,17 @@ ms.locfileid: "66108392"
   
 1.  Ouvrez le rapport enfant.  
   
-2.  Sélectionnez un en-tête de colonne dans le tableau matriciel, cliquez sur la cellule grise qui apparaît au-dessus de l’en-tête de colonne et puis cliquez sur **propriétés du tableau matriciel**.  
+2.  Sélectionnez un en-tête de colonne dans le tableau matriciel, cliquez avec le bouton droit sur la cellule grise qui se trouve au-dessus de l’en-tête de colonne, puis cliquez sur Propriétés du tableau **matriciel**.  
   
-3.  Cliquez sur le **filtres** page, puis cliquez sur **ajouter**.  
+3.  Cliquez sur la page **filtres** , puis sur **Ajouter**.  
   
-4.  Dans le **Expression** archivé, cliquez sur `ProductID` dans la liste déroulante. Il s'agit de la colonne à laquelle vous appliquez le filtre.  
+4.  Dans l' **expression** classée, `ProductID` cliquez dans la liste déroulante. Il s'agit de la colonne à laquelle vous appliquez le filtre.  
   
-5.  Cliquez sur l’égalité ( **=** ) opérateur dans le **opérateur** liste déroulante.  
+5.  Cliquez sur l’opérateur**=** EQUAL () dans la liste déroulante **opérateur** .  
   
-6.  Cliquez sur le bouton expression en regard du **valeur** , cliquez sur **paramètres** dans le **catégorie** zone, puis double-cliquez sur `productid` dans le  **Valeurs** zone. Le **définir l’expression pour : Valeur** champ doit maintenant contenir une expression semblable à **= paramètres ! productid. Valeur**.  
+6.  Cliquez sur le bouton expression en regard du champ **valeur** , cliquez sur **paramètres** dans la zone **catégorie** , puis double- `productid` cliquez dans la zone **valeurs** . Le champ **Définir l’expression pour : Valeur** doit maintenant contenir une expression semblable à **=Parameters!productid.Value**.  
   
-7.  Cliquez sur **OK,** et **OK** à nouveau dans le **propriétés du tableau matriciel** boîte de dialogue.  
+7.  Cliquez sur **OK,** puis de nouveau sur **OK** dans la boîte de dialogue Propriétés du tableau **matriciel** .  
   
 8.  Enregistrez le fichier .rdlc.  
   
@@ -53,11 +53,11 @@ ms.locfileid: "66108392"
   
 1.  Dans l'Explorateur de solutions, développez Default.aspx, puis double-cliquez sur Default.aspx.cs.  
   
-2.  Créez une fonction qui accepte un paramètre, `productid`, de type entier et retourne un `datatable` de l’objet et effectue les opérations suivantes.  
+2.  Créez une nouvelle fonction qui accepte un paramètre, `productid`, de type entier et retourne un `datatable` objet, puis effectue les opérations suivantes.  
   
-    1.  Crée une instance du jeu de données, `DataSet2`, lequel a été créée à l’étape 2 de [leçon 4 : Définir une connexion de données et la Table de données pour le rapport enfant](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Crée une instance du DataSet, `DataSet2`, qui a été créé à l’étape 2 de la [leçon 4 : définir une connexion de données et une table de données pour le rapport enfant](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
-    2.  Créer une connexion à la base de données SqlServer pour exécuter la requête définie dans **leçon 4 : Définir un données connexion et un objet DataTable pour le rapport enfant**.  
+    2.  Crée une connexion à la base de données SqlServer pour exécuter la requête définie dans la **Leçon 4 : Définir une connexion de données et une table de données pour le rapport enfant**.  
   
     3.  La requête retourne des données non filtrées.  
   
@@ -105,11 +105,11 @@ ms.locfileid: "66108392"
   
 1.  Ouvrez Default.aspx.  
   
-2.  Cliquez avec le bouton droit sur le contrôle ReportViewer, puis cliquez sur **propriétés.**  
+2.  Cliquez avec le bouton droit sur le contrôle ReportViewer, puis cliquez sur **Propriétés.**  
   
-3.  Sur le **propriétés** , cliquez sur le **événements** icône.  
+3.  Sur la page **Propriétés** , cliquez sur l’icône **événements** .  
   
-4.  Double-cliquez sur le **extraction** événement.  
+4.  Double-cliquez sur l’événement d' **extraction** .  
   
      Cette opération permet d'ajouter une section du gestionnaire d'événements dans le code, qui doit ressembler au bloc ci-dessous.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66108392"
   
     1.  Extraire la référence d’objet de rapport enfant du paramètre *DrillthroughEventArgs* .  
   
-    2.  Appeler la fonction, `GetPurchaseOrderDetail`  
+    2.  Appelez la fonction.`GetPurchaseOrderDetail`  
   
     3.  Liez l'objet DataTable `PurchaseOrderDetail` à la source de données correspondante du rapport.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "66108392"
             }  
         ```  
   
-6.  Enregistrez le fichier.  
+6.  Enregistrez le fichier .  
   
 ## <a name="query-filter"></a>Filtre de requête  
  Vous devez effectuer les tâches suivantes pour implémenter un filtre de requête.  
@@ -165,9 +165,9 @@ ms.locfileid: "66108392"
   
 2.  Créez une fonction qui accepte un paramètre, `productid`, de type entier et retourne un objet `datatable`, puis procédez comme suit.  
   
-    1.  Crée une instance du jeu de données, `DataSet2`, lequel a été créée à l’étape 2 de [leçon 4 : Définir une connexion de données et la Table de données pour le rapport enfant](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Crée une instance du DataSet, `DataSet2`, qui a été créé à l’étape 2 de la [leçon 4 : définir une connexion de données et une table de données pour le rapport enfant](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
-    2.  Créer une connexion à la base de données SqlServer pour exécuter la requête définie **leçon 4 : Définir un données connexion et un objet DataTable pour le rapport enfant**.  
+    2.  Créez une connexion à la base de données SqlServer pour exécuter la requête définie dans la **Leçon 4 : Définir une connexion de données et une table de données pour le rapport enfant**.  
   
     3.  La requête inclut un paramètre, `productid`, pour vérifier que les données retournées sont filtrées en fonction de l'élément `ProductID` sélectionné dans le rapport parent.  
   
@@ -216,11 +216,11 @@ ms.locfileid: "66108392"
   
 1.  Ouvrez Default.aspx.  
   
-2.  Cliquez sur le contrôle ReportViewer, puis cliquez sur **propriétés**.  
+2.  Cliquez avec le bouton droit sur le contrôle ReportViewer, puis cliquez sur **Propriétés**.  
   
-3.  Sur le **propriétés** volet, cliquez sur le **événements** icône.  
+3.  Dans le volet **Propriétés** , cliquez sur l’icône **événements** .  
   
-4.  Double-cliquez sur le **extraction** événement.  
+4.  Double-cliquez sur l’événement d' **extraction** .  
   
      Cette opération permet d'ajouter une section du gestionnaire d'événements dans le code, qui doit ressembler à ce qui suit.  
   
@@ -240,7 +240,7 @@ ms.locfileid: "66108392"
   
     4.  Appelez la fonction, `GetPurchaseOrderDetail`, puis passez la valeur pour le paramètre `ProductID`.  
   
-    5.  Lier le `PurchaseOrderDetail` DataTable avec le rapport correspondant d’une source de données.  
+    5.  Liez le `PurchaseOrderDetail` DataTable à la source de données correspondante du rapport.  
   
          Le code exécuté du gestionnaire d'événements doit ressembler à ce qui suit.  
   
@@ -281,7 +281,7 @@ ms.locfileid: "66108392"
             }  
         ```  
   
-6.  Enregistrez le fichier.  
+6.  Enregistrez le fichier .  
   
 ## <a name="next-task"></a>Tâche suivante  
  Vous venez de créer un filtre de données pour la table de données que vous avez définie pour le rapport enfant. Vous allez à présent générer et exécuter l'application de site Web.  

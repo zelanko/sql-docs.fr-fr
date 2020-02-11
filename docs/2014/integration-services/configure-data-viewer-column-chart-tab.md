@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bd32f9e2bfdac3655acb9d12c8fd0c070aa599fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060729"
 ---
 # <a name="configure-data-viewer-column-chart-tab"></a>Configurer la Visionneuse de données (onglet Graphique en colonnes)
@@ -29,11 +29,11 @@ ms.locfileid: "66060729"
  Sélectionnez une colonne à afficher dans l'histogramme.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer la visionneuse de données &#40;onglet Général&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
+ [Configurer la visionneuse de données &#40;onglet général&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
  [Configurer la visionneuse de données &#40;onglet grille&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
- [Configurer la visionneuse de données &#40;onglet Histogramme&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   
- [Configurer la visionneuse de données &#40;onglet à nuages de points&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
+ [Configurer la visionneuse de données &#40;onglet histogramme&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   
+ [Configurer la visionneuse de données &#40;onglet nuage de points&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
  [Flux de données](data-flow/data-flow.md)   
- [Débogage d'un flux de données](troubleshooting/debugging-data-flow.md)  
+ [Débogage d’un flux de données](troubleshooting/debugging-data-flow.md)  
   
   

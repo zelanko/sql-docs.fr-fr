@@ -1,5 +1,5 @@
 ---
-title: Sauvegarder et restaurer des Applications de Service SharePoint Services création de rapports | Microsoft Docs
+title: Sauvegarder et restaurer des applications de service Reporting Services SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e061ea2394c2fdad1e7d37f56016c73d7787eda0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109951"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Applications de service SharePoint de sauvegarde et de restauration Reporting Services
@@ -22,16 +22,17 @@ ms.locfileid: "66109951"
   
 -   [Limitations et restrictions](#bkmk_Restrictions)  
   
--   [Sauvegarder l'application de service](#bkmk_backup)  
+-   [Sauvegarder l’application de service](#bkmk_backup)  
   
--   [Restaurer l'application de service](#bkmk_restore)  
+-   [Restaurer l’application de service](#bkmk_restore)  
   
 ##  <a name="bkmk_BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="bkmk_Restrictions"></a> Limitations et restrictions  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] peuvent partiellement être sauvegardées et restaurées à l'aide de la fonctionnalité de sauvegarde et de restauration SharePoint. **Des étapes supplémentaires sont nécessaires** ; celles-ci sont documentées dans cette rubrique. Actuellement, le processus de sauvegarde **ne permet pas** de sauvegarder les clés de chiffrement et les informations d’identification pour les comptes d’exécution sans assistance (UEA) ou l’authentification Windows à la base de données [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
+>  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] peuvent partiellement être sauvegardées et restaurées à l'aide de la fonctionnalité de sauvegarde et de restauration SharePoint. Des **étapes supplémentaires sont requises** et les étapes sont documentées dans cette rubrique. Actuellement, le processus de sauvegarde **ne permet pas** de sauvegarder les clés de chiffrement et les informations d’identification pour les comptes d’exécution sans assistance (UEA) ou l’authentification Windows à la base de données [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
 ###  <a name="bkmk_recommendations"></a> Recommandations  
   
@@ -41,7 +42,7 @@ ms.locfileid: "66109951"
   
 -   Vérifiez que le journal de sauvegarde SharePoint est créé dans le même dossier que le fichier de sauvegarde. Le fichier est généralement nommé **spbackup.log**.  
   
-##  <a name="bkmk_backup"></a> Sauvegarder l'application de service  
+##  <a name="bkmk_backup"></a>Sauvegarder l’application de service  
  Exécutez les étapes suivantes dans l'ordre :  
   
 1.  Sauvegarder les clés de chiffrement  
@@ -53,37 +54,37 @@ ms.locfileid: "66109951"
 ### <a name="backup-the-encryption-keys-using-central-administration"></a>Sauvegarder les clés de chiffrement à l'aide de l'Administration centrale  
  Pour plus d’informations sur la sauvegarde des clés de chiffrement [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consultez la section Clés de chiffrement de l’article [Gérer une application de service SharePoint Reporting Services](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).  
   
-###  <a name="bkmk_centraladmin"></a> Sauvegarde de l'application de service à l'aide de l'Administration centrale de SharePoint  
+###  <a name="bkmk_centraladmin"></a>Sauvegarder l’application de service à l’aide de l’administration centrale de SharePoint  
  Pour sauvegarder l'application de service, procédez comme suit :  
   
 1.  Dans l'Administration centrale de SharePoint, cliquez sur **Effectuer une sauvegarde** dans le groupe **Sauvegarde et restauration** .  
   
 2.  Sous le nœud **Services partagés** , développez **Applications de services partagés** et sélectionnez votre application de service. Elle sera du type **Application de service SQL Server Reporting Services**.  
   
-3.  Cliquer sur **Suivant**.  
+3.  Cliquez sur **Suivant**.  
   
-4.  Tapez le chemin d'accès pour l' **Emplacement de sauvegarde :** et cliquez sur **Démarrer la sauvegarde**.  
+4.  Tapez le chemin d'accès pour l'**Emplacement de sauvegarde :** et cliquez sur **Démarrer la sauvegarde**.  
   
 5.  Répétez le processus ci-dessus mais au lieu de sélectionner l'application de service, développez le nœud **Proxys de services partagés** , puis sélectionnez le proxy de l'application de service. Elle sera du type **Proxy d'application de service SQL Server Reporting Services**.  
   
  Pour plus d'informations, consultez les rubriques suivantes dans la documentation de SharePoint :  
   
- [Enregistrer une application de service (SharePoint Foundation 2010) dans la documentation SharePoint](https://msdn.microsoft.com/library/ee748601.aspx).  
+ [Sauvegarder une application de service (SharePoint Foundation 2010) dans le documentation SharePoint](https://msdn.microsoft.com/library/ee748601.aspx).  
   
- [Enregistrer une application de service (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
+ [Sauvegarder une application de service (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
   
 ### <a name="verify-execution-account-and-database-authentication"></a>Vérifier le compte d'exécution et l'authentification de la base de données  
- **Compte d’exécution :** Pour vérifier si votre application de service est à l’aide d’un compte d’exécution :  
+ **Compte d’exécution :** Pour vérifier si votre application de service utilise un compte d’exécution :  
   
 1.  Dans l'Administration Centrale de SharePoint, sous le groupe **Gestion des applications** , cliquez sur **Gérer les applications de service** .  
   
-2.  Cliquez sur le nom de votre application de service et cliquez sur **Gérer** dans le ruban SharePoint.  
+2.  Cliquez sur le nom de votre application de service, puis cliquez sur **gérer** dans le ruban SharePoint.  
   
 3.  Cliquez sur **Compte d'exécution**.  
   
 4.  Si un compte d'exécution est configuré, vous devez connaître les informations d'identification lorsqu'il est temps de restaurer la sauvegarde de l'application de service. N'effectuez pas la procédure de sauvegarde et restauration avant de connaître les informations d'identification correctes.  
   
- **Authentification de base de données :** Pour vérifier si votre application de service est à l’aide de l’authentification Windows pour l’authentification de base de données :  
+ **Authentification de base de données :** Pour vérifier si votre application de service utilise l’authentification Windows pour l’authentification de base de données :  
   
 1.  Dans l'Administration Centrale de SharePoint, sous le groupe **Gestion des applications** , cliquez sur **Gérer les applications de service** .  
   
@@ -93,7 +94,7 @@ ms.locfileid: "66109951"
   
 4.  Si l'authentification Windows est configurée, vous devez connaître les informations d'identification pour que vous puissiez configurer l'application de service après l'avoir restaurée. N'effectuez pas la procédure de sauvegarde et restauration avant de connaître les informations d'identification correctes.  
   
-##  <a name="bkmk_restore"></a> Restaurer l'application de service  
+##  <a name="bkmk_restore"></a>Restaurer l’application de service  
  Exécutez les étapes suivantes dans l'ordre :  
   
 1.  Restaurez l'application de service [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -132,7 +133,7 @@ ms.locfileid: "66109951"
   
 1.  Dans l'Administration Centrale de SharePoint, sous le groupe **Gestion des applications** , cliquez sur **Gérer les applications de service** .  
   
-2.  Cliquez sur le nom de votre application de service et cliquez sur **Gérer** dans le ruban SharePoint.  
+2.  Cliquez sur le nom de votre application de service, puis cliquez sur **gérer** dans le ruban SharePoint.  
   
 3.  Cliquez sur **Compte d'exécution**.  
   
@@ -140,7 +141,7 @@ ms.locfileid: "66109951"
   
 5.  Cliquez sur **OK**.  
   
- **Authentification de base de données :** Si votre application de service utilisait l’authentification Windows pour l’authentification de base de données complète comme suit :  
+ **Authentification de base de données :** Si votre application de service utilisait l’authentification Windows pour l’authentification de base de données, procédez comme suit :  
   
 1.  Dans l'Administration Centrale de SharePoint, sous le groupe **Gestion des applications** , cliquez sur **Gérer les applications de service** .  
   
@@ -152,6 +153,6 @@ ms.locfileid: "66109951"
   
 5.  Tapez le compte et le mot de passe. Sélectionnez **Utiliser comme informations d'identification Windows** si nécessaire.  
   
-6.  Cliquez sur **OK**  
+6.  Cliquez sur **OK** .  
   
   

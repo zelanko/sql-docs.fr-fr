@@ -1,5 +1,5 @@
 ---
-title: Restriction de la requête avec les Axes de requête et segment (MDX) | Microsoft Docs
+title: Restriction de la requête avec des axes de requête et de secteur (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3290bc5892280cda5e8042de79ff581b305e8ec3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074038"
 ---
 # <a name="restricting-the-query-with-query-and-slicer-axes-mdx"></a>Restriction de la requête avec des axes de requête et de secteur (MDX)
   Lors de la formulation d'une instruction SELECT MDX (Multidimensional Expressions), une application examine généralement un cube et divise le jeu de hiérarchies en deux sous-ensembles :  
   
--   **Axes de requête**-l’ensemble des hiérarchies à partir de laquelle les données sont extraites pour plusieurs membres. Pour plus d’informations sur les axes de requête, consultez [Spécification du contenu d’un axe de requête &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md).  
+-   **Axes de requête**: ensemble des hiérarchies à partir desquelles les données sont extraites pour plusieurs membres. Pour plus d’informations sur les axes de requête, consultez [Spécification du contenu d’un axe de requête &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md).  
   
--   **Axe de secteur**-l’ensemble des hiérarchies à partir de laquelle les données sont extraites pour un seul membre. Pour plus d’informations sur l’axe de secteur, consultez [Spécification du contenu d’un axe de secteur &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md).  
+-   **Axe de secteur**: ensemble des hiérarchies à partir desquelles les données sont récupérées pour un seul membre. Pour plus d’informations sur l’axe de secteur, consultez [Spécification du contenu d’un axe de secteur &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md).  
   
  Dans la mesure où les axes de requête et de secteur peuvent être construits à partir de plusieurs hiérarchies du cube à interroger, ces termes permettent de différencier les hiérarchies utilisées par le cube devant faire l'objet d'une interrogation par rapport aux hiérarchies créées dans le cube retourné par une requête MDX.  
   
@@ -35,6 +35,6 @@ ms.locfileid: "66074038"
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation de membres, de tuples et de jeux &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
- [Principes de base des requêtes MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Notions de base des requêtes MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

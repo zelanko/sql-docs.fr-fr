@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue de Dimension de Cube (Analysis Services - données multidimensionnelles) ajouter | Microsoft Docs
+title: Boîte de dialogue Ajouter une dimension de cube (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f147c438e16c00e0e1b979f2d3e2fe6e16cf7428
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062946"
 ---
 # <a name="add-cube-dimension-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Ajouter une dimension de cube (Analysis Services - Données multidimensionnelles)
@@ -41,6 +41,6 @@ ms.locfileid: "66062946"
 >  Si vous ajoutez à un cube plusieurs dimensions de cube basées sur la même dimension de base de données, les dimensions de cube supplémentaires s'appellent des dimensions de rôle actif.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Analysis Services les concepteurs et les boîtes de dialogue &#40;les données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

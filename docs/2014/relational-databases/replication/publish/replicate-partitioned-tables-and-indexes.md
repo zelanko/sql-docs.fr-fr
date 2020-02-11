@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2201be33df4346ab2afa812828ab9655b0ed2be
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67793292"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Répliquer des tables et des index partitionnés
-  Le partitionnement facilite la gestion des tables et des index de grande taille, car il permet de gérer et d'accéder rapidement et efficacement à des sous-ensembles de données, tout en conservant l'intégrité d'une collecte de données. Pour plus d'informations, consultez [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md). La réplication prend en charge le partitionnement en fournissant un ensemble de propriétés qui indiquent comment les tables et les index partitionnés doivent être traités.  
+  Le partitionnement facilite la gestion des tables et des index de grande taille, car il permet de gérer et d'accéder rapidement et efficacement à des sous-ensembles de données, tout en conservant l'intégrité d'une collecte de données. Pour plus d’informations, consultez [Tables et index partitionnés](../../partitions/partitioned-tables-and-indexes.md). La réplication prend en charge le partitionnement en fournissant un ensemble de propriétés qui indiquent comment les tables et les index partitionnés doivent être traités.  
   
 ## <a name="article-properties-for-transactional-and-merge-replication"></a>Propriétés d'article pour la réplication transactionnelle et de fusion  
  Le tableau suivant répertorie les objets utilisés pour partitionner des données.  
@@ -32,12 +32,12 @@ ms.locfileid: "67793292"
 |Object|Créé en utilisant|  
 |------------|----------------------|  
 |Table ou index partitionné|CREATE TABLE ou CREATE INDEX|  
-|Partition (fonction)|CREATE PARTITION FUNCTION|  
+|Fonction de partition|CREATE PARTITION FUNCTION|  
 |Schéma de partition|CREATE PARTITION SCHEME|  
   
  Le premier ensemble de propriétés en rapport avec le partitionnement correspond aux options de schéma d'article qui déterminent si le partitionnement d'objets doit être copié vers l'Abonné. Ces options de schéma peuvent être définies de plusieurs façons :  
   
--   Sur la page **Propriétés de l'article** de l'Assistant Nouvelle publication ou la boîte de dialogue Propriétés de la publication. Pour copier les objets répertoriés dans le tableau précédent, spécifiez une valeur de `true` pour les propriétés **copier les schémas de partitionnement de table** et **copier les schémas de partition d’index**. Pour plus d’informations sur la façon d’accéder à la page **Propriétés de l’article**, consultez [Afficher et modifier des propriétés de publication](view-and-modify-publication-properties.md).  
+-   Sur la page **Propriétés de l'article** de l'Assistant Nouvelle publication ou la boîte de dialogue Propriétés de la publication. Pour copier les objets listés dans le tableau précédent, spécifiez la `true` valeur pour les propriétés **copier les schémas de partition de table** et copier les schémas de partition d' **index**. Pour plus d’informations sur la façon d’accéder à la page **Propriétés de l’article**, consultez [Afficher et modifier des propriétés de publication](view-and-modify-publication-properties.md).  
   
 -   En utilisant le paramètre *schema_option* de l'une des procédures stockées suivantes :  
   
@@ -49,7 +49,7 @@ ms.locfileid: "67793292"
   
  La réplication copie les objets vers l'Abonné pendant la synchronisation initiale. Si le schéma de partition utilise des groupes de fichiers autres que le groupe de fichiers PRIMARY, ces groupes de fichiers doivent exister sur l'Abonné avant la synchronisation initiale.  
   
- Après avoir initialisé l'Abonné, les modifications de données sont propagées à l'Abonné et appliquées aux partitions appropriées. Toutefois, les modifications apportées au schéma de partition ne sont pas prises en charge. Réplication transactionnelle et de fusion ne prennent pas en charge la réplication des commandes suivantes : ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME ou l’instruction REBUILD WITH PARTITION d’ALTER INDEX.  Les modifications associées ne sont pas automatiquement répliquées sur l’Abonné. Il incombe à l'utilisateur d'apporter des modifications similaires manuellement sur l'Abonné.  
+ Après avoir initialisé l'Abonné, les modifications de données sont propagées à l'Abonné et appliquées aux partitions appropriées. Toutefois, les modifications apportées au schéma de partition ne sont pas prises en charge. La réplication transactionnelle et de fusion ne prend pas en charge la réplication des commandes suivantes : ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME ou l’instruction REBUILD WITH PARTITION d’ALTER INDEX.  Les modifications associées ne sont pas automatiquement répliquées sur l’Abonné. Il incombe à l'utilisateur d'apporter des modifications similaires manuellement sur l'Abonné.  
   
 ## <a name="replication-support-for-partition-switching"></a>Prise en charge de la réplication pour le basculement de partition  
  La possibilité de déplacer rapidement et efficacement des sous-ensembles de données entre des partitions constitue l'un des principaux avantages du partitionnement de table. Les données sont déplacées à l'aide de la commande SWITCH PARTITION. Par défaut, lorsqu'une table est activée pour la réplication, les opérations SWITCH PARTITION sont bloquées pour les raisons suivantes :  
@@ -70,9 +70,9 @@ ms.locfileid: "67793292"
 ### <a name="enabling-partition-switching"></a>Activation du basculement de partition  
  Les propriétés suivantes pour les publications transactionnelles permettent aux utilisateurs de contrôler le comportement de l'insertion de partition dans un environnement répliqué :  
   
--   **\@allow_partition_switch**, lorsque la valeur `true`, SWITCH PARTITION peut être exécutée sur la base de données de publication.  
+-   allow_partition_switch, si la valeur `true`est, Switch partition peut être exécuté sur la base de données de publication. ** \@**  
   
--   **\@replicate_partition_switch** détermine si l’instruction SWITCH PARTITION DDL doit être répliquée vers les abonnés. Cette option est valide uniquement lorsque  **\@allow_partition_switch** est défini sur `true`.  
+-   replicate_partition_switch détermine si l’instruction switch partition DDL doit être répliquée sur les abonnés. ** \@** Cette option est valide uniquement lorsque ** \@allow_partition_switch** a la valeur `true`.  
   
  Vous pouvez définir ces propriétés en utilisant [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) lors de la création de la publication, ou en utilisant [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) après la création de la publication. Comme indiqué précédemment, la réplication de fusion ne prend pas en charge le basculement de partition. Pour exécuter SWITCH PARTITION sur une table qui est activée pour la réplication de fusion, supprimez la table de la publication.  
   

@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 935e60e0dadb55268fc31d92592d21b0c1df41cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63260828"
 ---
 # <a name="report-server-system-properties"></a>Propriétés système de Report Server
   Les noms de propriétés système suivants sont réservés. Vous ne pouvez pas créer des propriétés définies par l'utilisateur du même nom. Vous pouvez lire ou modifier nombre de ces propriétés à l'aide des méthodes de service Web.  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>Propriétés  
   
 |Propriété|Description|  
 |--------------|-----------------|  
@@ -36,10 +36,14 @@ ms.locfileid: "63260828"
 |MyReportsRole|Nom du rôle utilisé lors de la création des stratégies de sécurité sur le dossier Mes rapports de l'utilisateur. La valeur par défaut est `My Reports Role`.|  
 |EnableExecutionLogging|Indique si la journalisation de l'exécution des rapports est activée. La valeur par défaut est `true`.|  
 |ExecutionLogDaysKept|Nombre de jours pendant lesquels conserver les informations sur l'exécution du rapport dans le journal des exécutions. Les valeurs valides pour cette propriété sont comprises entre `0` et `2` `147` `483` `647`. Si la valeur est égale à `0`, les entrées ne sont pas supprimées de la table du journal des exécutions. La valeur par défaut est `60`.|  
-|SnapshotCompression|Définit le mode de compression des instantanés. La valeur par défaut est `SQL`. Les valeurs valides sont les suivantes :<br /><br /> `SQL` = les instantanés sont compressés lorsqu'ils sont stockés dans la base de données du serveur de rapports. Il s'agit du comportement actuel.<br /><br /> **None** = les instantanés ne sont pas compressés.<br /><br /> `All` = les instantanés sont compressés pour toutes les options de stockage, qui incluent la base de données du serveur de rapports ou le système de fichiers.|  
-|EnableClientPrinting|Détermine si le contrôle ActiveX RSClientPrint peut être téléchargé à partir du serveur de rapports. Les valeurs valides sont `true` et `false`. La valeur par défaut est `true`. Pour plus d’informations sur les paramètres supplémentaires nécessaires pour ce contrôle, consultez [Activer et désactiver l’impression côté client pour Reporting Services](../../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).|  
-|EnableIntegratedSecurity|Détermine si la sécurité intégrée est prise en charge pour les connexions à la source de données de rapports. La valeur par défaut est `True`. Les valeurs valides sont les suivantes :<br /><br /> `True` = la sécurité intégrée est activée.<br /><br /> `False` = la sécurité intégrée n'est pas activée. Les sources de données de rapports qui sont configurées de manière à utiliser la sécurité intégrée ne seront pas exécutées.|  
-|EnableRemoteErrors|Inclut les informations externes sur l'erreur (par exemple, les informations d'erreur relatives aux sources de données de rapport) avec les messages d'erreur retournés pour les utilisateurs qui demandent des rapports à partir d'ordinateurs distants. Les valeurs possibles sont `true` et `false`. La valeur par défaut est `false`. Pour plus d’informations, consultez [Activer les erreurs distantes &#40;Reporting Services&#41;](../../report-server/enable-remote-errors-reporting-services.md).|  
+|SnapshotCompression|Définit le mode de compression des instantanés. La valeur par défaut est `SQL`. Les valeurs valides sont les suivantes :<br /><br /> 
+  `SQL` = les instantanés sont compressés lorsqu'ils sont stockés dans la base de données du serveur de rapports. Il s'agit du comportement actuel.<br /><br /> **None** = les instantanés ne sont pas compressés.<br /><br /> 
+  `All` = les instantanés sont compressés pour toutes les options de stockage, qui incluent la base de données du serveur de rapports ou le système de fichiers.|  
+|EnableClientPrinting|Détermine si le contrôle ActiveX RSClientPrint peut être téléchargé à partir du serveur de rapports. Les valeurs valides `true` sont `false`et. La valeur par défaut est `true`. Pour plus d’informations sur les paramètres supplémentaires nécessaires pour ce contrôle, consultez [Activer et désactiver l’impression côté client pour Reporting Services](../../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).|  
+|EnableIntegratedSecurity|Détermine si la sécurité intégrée est prise en charge pour les connexions à la source de données de rapports. Par défaut, il s’agit de `True`. Les valeurs valides sont les suivantes :<br /><br /> 
+  `True` = la sécurité intégrée est activée.<br /><br /> 
+  `False` = la sécurité intégrée n'est pas activée. Les sources de données de rapports qui sont configurées de manière à utiliser la sécurité intégrée ne seront pas exécutées.|  
+|EnableRemoteErrors|Inclut les informations externes sur l'erreur (par exemple, les informations d'erreur relatives aux sources de données de rapport) avec les messages d'erreur retournés pour les utilisateurs qui demandent des rapports à partir d'ordinateurs distants. Les valeurs valides sont `true` et `false`. La valeur par défaut est `false`. Pour plus d’informations, consultez [Activer les erreurs distantes &#40;Reporting Services&#41;](../../report-server/enable-remote-errors-reporting-services.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:ReportService2010.ReportingService2010.GetSystemProperties%2A>   

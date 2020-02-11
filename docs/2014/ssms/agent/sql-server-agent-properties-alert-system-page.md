@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00e3643a1beb3f69f8b370715001317e536c42e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245751"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>Propriétés de SQL Server Agent (page Système d'alerte)
-  Cette page vous permet d’afficher et de modifier les paramètres des messages envoyés par les alertes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Utilisez cette page pour afficher et modifier les paramètres des messages envoyés par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les alertes de l’agent.  
   
 ## <a name="options"></a>Options  
  **Session de messagerie**  
@@ -35,34 +35,34 @@ ms.locfileid: "63245751"
 > [!NOTE]  
 >  Une fois que vous avez changé le système de messagerie, vous devez redémarrer le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour que la modification soit prise en compte.  
   
- **Profil de la messagerie**  
- Définit le profil que doit utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Vous pouvez également sélectionner **\<nouveau profil de messagerie de base de données...>** pour créer un profil.  
+ **Profil de messagerie**  
+ Définit le profil que doit utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Vous pouvez également sélectionner ** \<nouveau Database mail profil... >** pour créer un nouveau profil.  
   
  **Messages de radiomessagerie**  
  Les options de cette section vous permettent de configurer les messages électroniques envoyés à des adresses de radiomessagerie pour qu'ils fonctionnent avec votre système de radiomessagerie.  
   
- **Format d'adresse pour les messages de radiomessagerie**  
+ **Format d’adresse pour les messages de radiomessagerie**  
  Cette section vous permet de spécifier le format des adresses et la ligne Objet incluse dans les messages de radiomessagerie.  
   
- **Ligne À**  
+ **À la ligne**  
  Spécifie les options relatives à la ligne **À** du message.  
   
  **Préfixe**  
  Tapez le texte prédéfini, requis par votre système au début de la ligne **À** des messages envoyés à un récepteur de radiomessagerie.  
   
- **Radiomessagerie**  
+ **Destinés**  
  Inclut l'adresse de messagerie du message entre le préfixe et le suffixe.  
   
- **Suffixee**  
+ **Suffixe**  
  Tapez le texte prédéfini, requis par votre système de radiomessagerie à la fin de la ligne **À** des messages envoyés à un récepteur de radiomessagerie.  
   
- **Ligne Cc**  
+ **Ligne CC**  
  Spécifie les options relatives à la ligne **Cc** du message.  
   
  **Préfixe**  
  Tapez le texte prédéfini, requis par votre système au début de la ligne **Cc** des messages envoyés à un récepteur de radiomessagerie.  
   
- **Récepteur de radiomessagerie**  
+ **Destinés**  
  Inclut l'adresse de messagerie du message entre le préfixe et le suffixe.  
   
  **Suffixe**  
@@ -71,19 +71,19 @@ ms.locfileid: "63245751"
  **Objet**  
  Spécifie les options relatives à l'objet du message  
   
- **Prefix**  
+ **Préfixe**  
  Tapez le texte prédéfini, requis par votre système de radiomessagerie au début de la ligne **Objet** des messages envoyés à un récepteur de radiomessagerie.  
   
  **Suffixe**  
  Tapez le texte prédéfini, requis par votre système de radiomessagerie à la fin de la ligne **Objet** des messages envoyés à un récepteur de radiomessagerie.  
   
- **Inclure le corps du message dans le message de notification**  
+ **Inclure le corps du message électronique dans le message de notification**  
  Inclut le corps du message électronique dans le message envoyé au récepteur de radiomessagerie.  
   
  **Opérateur de prévention de défaillance**  
  Cette section vous permet de spécifier les options relatives à l'opérateur de prévention de défaillance.  
   
- **Activer l'opérateur de prévention de défaillance**  
+ **Activer l’opérateur de prévention de défaillance**  
  Spécifie un opérateur de prévention de défaillance.  
   
  **Opérateur**  
@@ -92,11 +92,11 @@ ms.locfileid: "63245751"
  **Notifier en utilisant**  
  Définit la méthode à utiliser pour notifier l'opérateur de prévention de défaillance.  
   
- **Remplacement des jetons**  
+ **Remplacement de jeton**  
  Cette section vous permet d'activer des jetons d'étapes de travail utilisables dans les travaux exécutés par les alertes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour plus d’informations sur les jetons d’étapes de travail, consultez [Utiliser des jetons dans les étapes d’un travail](use-tokens-in-job-steps.md).  
   
 > [!IMPORTANT]  
->  Tout utilisateur Windows doté d'autorisations d'accès en écriture sur le Journal des événements Windows peut accéder aux étapes de travail qui sont activées par les alertes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour éviter ce risque de sécurité, les jetons de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent qui peuvent être utilisés dans des travaux activés par des alertes sont désactivés par défaut. Il s’agit des jetons suivants : **$(A-DBN)** , **$(A-SVR)** , **$(A-ERR)** , **$(A-SEV)** et **$(A-MSG)** .  
+>  Tout utilisateur Windows doté d'autorisations d'accès en écriture sur le Journal des événements Windows peut accéder aux étapes de travail qui sont activées par les alertes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour éviter ce risque de sécurité, les jetons de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent qui peuvent être utilisés dans des travaux activés par des alertes sont désactivés par défaut. Il s’agit des jetons suivants : **$(A-DBN)**, **$(A-SVR)**, **$(A-ERR)**, **$(A-SEV)** et **$(A-MSG)**.  
 >   
 >  Si vous avez besoin de les utiliser, assurez-vous avant de les activer que seuls les membres des groupes de sécurité Windows approuvés, tels que le groupe Administrateurs, possèdent des autorisations d'accès en écriture sur le Journal des événements de l'ordinateur sur lequel réside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -104,8 +104,8 @@ ms.locfileid: "63245751"
  Activez cette case à cocher pour permettre le remplacement des jetons pour les travaux qui sont activés par les alertes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Opérateurs](operators.md)   
- [Configurer la messagerie de l’Agent SQL Server pour utiliser la messagerie de base de données](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)   
+ [Operator](operators.md)   
+ [Configurez SQL Server Agent mail pour utiliser Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)   
  [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)  
   
   

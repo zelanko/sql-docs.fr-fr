@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_hadr_name_id_map (Transact-SQL) | Microsoft Docs
+title: sys. dm_hadr_name_id_map (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,20 +20,20 @@ ms.assetid: e07bb8a9-37de-4a39-a257-950d7c3ae8fb
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4fc446efc410ff13d5697c7ab195e3e3895b4839
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67900431"
 ---
-# <a name="sysdmhadrnameidmap-transact-sql"></a>sys.dm_hadr_name_id_map (Transact-SQL)
+# <a name="sysdm_hadr_name_id_map-transact-sql"></a>sys.dm_hadr_name_id_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Montre le mappage des groupes de disponibilité Always On que l’instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a joint à trois identificateurs uniques : un groupe de disponibilité ID de groupe, un ID de ressource WSFC et un ID de groupe WSFC. L'objectif de ce mappage est de gérer le scénario dans lequel la ressource/le groupe WSFC est renommé.  
+  Affiche le mappage des groupes de disponibilité Always On que l’instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a joint à trois ID uniques : un ID de groupe de disponibilité, un ID de ressource WSFC et un ID de groupe WSFC. L'objectif de ce mappage est de gérer le scénario dans lequel la ressource/le groupe WSFC est renommé.  
    
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**ag_name**|**nvarchar (256)**|Nom du groupe de disponibilité. Il s’agit d’un nom spécifié par l’utilisateur qui doit être unique au sein du cluster de basculement Windows Server Cluster ().|  
+|**ag_name**|**nvarchar (256)**|Nom du groupe de disponibilité. Il s’agit d’un nom spécifié par l’utilisateur qui doit être unique au sein du cluster de cluster de basculement Windows Server (WSFC).|  
 |**ag_id**|**uniqueidentifier**|Identificateur unique (GUID) du groupe de disponibilité.|  
 |**ag_resource_id**|**nvarchar (256)**|ID unique du groupe de disponibilité en tant que ressource dans le cluster WSFC.|  
 |**ag_group_id**|**nvarchar (256)**|Identificateur unique du groupe WSFC du groupe de disponibilité.|  

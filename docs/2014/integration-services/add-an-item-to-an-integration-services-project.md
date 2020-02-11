@@ -1,5 +1,5 @@
 ---
-title: Ajouter un élément à une intégration Services projet | Microsoft Docs
+title: Ajouter un élément à un projet de Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66b23e65542cd4f87818d6cc719dca59a9a4adec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062023"
 ---
 # <a name="add-an-item-to-an-integration-services-project"></a>Ajouter un élément à un projet Integration Services
-  Cette procédure décrit comment ajouter des éléments nouveaux et existants à un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+  Cette procédure décrit comment ajouter des éléments nouveaux et existants à un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 ### <a name="to-add-an-item-to-an-integration-services-project"></a>Pour ajouter un élément à un projet Integration Services  
   

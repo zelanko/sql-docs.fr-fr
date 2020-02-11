@@ -13,18 +13,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 617a4e01b3fd4f8dcbc6d929c2a26d483f2fa1ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108863"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurer une URL (Gestionnaire de configuration de SSRS)
-  Avant de pouvoir utiliser le Gestionnaire de rapports ou le service Web Report Server, vous devez configurer au moins une URL pour chaque application. La configuration des URL est obligatoire si vous avez installé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode « fichiers uniquement » (autrement dit, en sélectionnant l'option **Installer mais ne pas configurer le serveur** sur la page Options d'installation du serveur de rapports dans l'Assistant Installation). Si vous avez installé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la configuration par défaut, les URL sont déjà configurées pour chaque application. Si vous disposez d'un serveur de rapports configuré pour s'exécuter en mode intégré SharePoint et que vous mettez à jour l'URL du service Web Report Server à l'aide de l'outil de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous devez également mettre à jour l'URL dans l'Administration centrale de SharePoint.  
+  Avant de pouvoir utiliser le Gestionnaire de rapports ou le service Web Report Server, vous devez configurer au moins une URL pour chaque application. La configuration des URL est obligatoire si vous avez installé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode « fichiers uniquement » (autrement dit, en sélectionnant l’option **Installer mais ne pas configurer le serveur** dans la page Options d’installation du serveur de rapports dans l’Assistant Installation). Si vous avez installé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la configuration par défaut, les URL sont déjà configurées pour chaque application. Si vous disposez d'un serveur de rapports configuré pour s'exécuter en mode intégré SharePoint et que vous mettez à jour l'URL du service Web Report Server à l'aide de l'outil de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous devez également mettre à jour l'URL dans l'Administration centrale de SharePoint.  
   
  Utilisez l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour configurer les URL. Toutes les parties de l'URL sont définies dans cet outil. Contrairement aux versions précédentes, les sites Web IIS (Internet Information Services) ne fournissent plus l'accès aux applications [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit les valeurs par défaut qui fonctionnent bien dans la plupart des scénarios de déploiement, y compris les déploiements côte à côte avec les autres applications et services web. Les URL par défaut incorporent les noms d'instance, réduisant le risque de conflits d'URL si vous exécutez plusieurs instances de serveur de rapports sur le même ordinateur.  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit les valeurs par défaut qui fonctionnent bien dans la plupart des scénarios de déploiement, y compris les déploiements côte à côte avec les autres applications et services web. Les URL par défaut incorporent les noms d'instance, réduisant le risque de conflits d'URL si vous exécutez plusieurs instances de serveur de rapports sur le même ordinateur.  
   
  Cette rubrique fournit des instructions relatives aux tâches suivantes :  
   
@@ -34,9 +35,9 @@ ms.locfileid: "66108863"
   
 -   Définir les propriétés URL avancées pour définir des URL supplémentaires.  
   
- Pour plus d’informations sur comment les URL sont stockés et gérés ou des problèmes d’interopérabilité, consultez [sur les réservations d’URL et l’inscription &#40;Gestionnaire de Configuration de SSRS&#41; ](about-url-reservations-and-registration-ssrs-configuration-manager.md) et [Install Reporting Services et Internet Information Services côte à côte &#40;SSRS en Mode natif&#41;](install-reporting-and-internet-information-services-side-by-side.md)dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne. Pour obtenir des exemples d'URL souvent utilisées dans une installation Reporting Services, consultez [Exemples d'URL](#URLExamples) dans cette rubrique.  
+ Pour plus d’informations sur la façon dont les URL sont stockées et gérées ou les problèmes d’interopérabilité, consultez [à propos des réservations et de l’inscription d’url &#40;ssrs Configuration Manager&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md) et [installer Reporting Services et Internet Information Services côte à côte &#40;SSRS en mode natif ](install-reporting-and-internet-information-services-side-by-side.md)&#41;dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour obtenir des exemples d'URL souvent utilisées dans une installation Reporting Services, consultez [Exemples d'URL](#URLExamples) dans cette rubrique.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Avant de créer ou de modifier une URL, souvenez-vous des points suivants :  
   
 -   Vous devez être membre du groupe Administrateurs local sur le serveur de rapports.  
@@ -63,15 +64,15 @@ ms.locfileid: "66108863"
   
 4.  Spécifiez l'adresse IP qui identifie de façon unique le serveur de rapports sur le réseau. Si vous souhaitez spécifier un en-tête de l'hôte ou définir des URL supplémentaires pour la même instance d'application, vous devez cliquer sur **Avancé**. Pour obtenir des instructions sur la façon de définir les propriétés avancées sur l'URL, consultez les instructions plus loin dans cette rubrique. Sinon, utilisez la page **URL du service Web** pour effectuer une sélection parmi les valeurs suivantes :  
   
-    -   **Assigné** spécifie que chacune des adresses IP assignées à l'ordinateur peut être utilisée dans une URL qui pointe sur une application du serveur de rapports. Cette valeur comprend également les noms d'hôte conviviaux (tels que les noms d'ordinateur) qui peuvent être résolus par un serveur de noms de domaine en une adresse IP assignée à l'ordinateur. Il s'agit de la valeur par défaut pour une URL [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+    -   **All Assigned** indique que les adresses IP qui sont affectées à l’ordinateur peuvent être utilisées dans une URL pointant vers une application du serveur de rapports. Cette valeur comprend également les noms d'hôte conviviaux (tels que les noms d'ordinateur) qui peuvent être résolus par un serveur de noms de domaine en une adresse IP assignée à l'ordinateur. Il s'agit de la valeur par défaut pour une URL [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-    -   **Non assigné** spécifie que le serveur de rapports reçoit une demande qui n'a pas été gérée par une autre application. Il est recommandé d'éviter cette option. Si vous sélectionnez cette option, il devient possible pour une autre application qui possède une réservation d'URL plus forte d'intercepter les demandes prévues pour le serveur de rapports.  
+    -   Non **assigné** spécifie que le serveur de rapports recevra toute demande qui n’a pas été gérée par une autre application. Il est recommandé d'éviter cette option. Si vous sélectionnez cette option, il devient possible pour une autre application qui possède une réservation d'URL plus forte d'intercepter les demandes prévues pour le serveur de rapports.  
   
-    -   **127.0.0.1** est l'adresse IPv4 utilisée pour l'accès à localhost. Cette valeur prend en charge l'administration locale sur le serveur de rapports. Si vous sélectionnez uniquement cette valeur, seuls les utilisateurs qui se connectent localement au serveur de rapports ont accès à l'application.  
+    -   **127.0.0.1** est l’adresse IPv4 utilisée pour accéder à localhost. Cette valeur prend en charge l'administration locale sur le serveur de rapports. Si vous sélectionnez uniquement cette valeur, seuls les utilisateurs qui se connectent localement au serveur de rapports ont accès à l'application.  
   
-    -   **::1** désigne l'adresse de bouclage au format IPv6.  
+    -   **:: 1** est l’adresse de bouclage au format IPv6.  
   
-    -   Les adresses IP spécifiques apparaissent également dans cette liste. Les adresses IP peuvent être aux formats IPv4 et IPv6. *Nnn.nnn.nnn.nnn* est l’adresse IPv4 32 bits d’une carte réseau sur votre ordinateur. Les adresses IPv6 ont une taille de 128 bits et sont formées de huit champs de 4 octets séparés par le signe deux-points : <préfixe\<:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
+    -   Les adresses IP spécifiques apparaissent également dans cette liste. Les adresses IP peuvent être aux formats IPv4 et IPv6. *Nnn. nnn. nnn. nnn* est l’adresse IPv4 32 bits d’une carte réseau sur votre ordinateur. Les adresses IPv6 ont une taille de 128 bits et sont formées de huit champs de 4 octets séparés par le signe deux-points : <préfixe\<:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
   
          Si vous avez plusieurs cartes ou si votre réseau prend en charge les adresses IPv4 et les adresses IPv6, vous visualisez plusieurs adresses IP. Si vous sélectionnez une seule adresse IP, elle limitera l'accès de l'application à la seule adresse IP (et à tout nom d'hôte qu'un serveur de noms de domaine mappe sur cette adresse). Vous ne pouvez pas utiliser localhost pour accéder à un serveur de rapports, et vous ne pouvez pas utiliser les adresses IP des autres cartes réseau installées sur le serveur de rapports. En général, si vous sélectionnez cette valeur, c'est parce que vous configurez plusieurs réservations d'URL qui spécifient aussi des adresses IP explicites ou des noms d'hôte (par exemple, un premier pour une carte réseau utilisée pour les connexions intranet et un second utilisé pour les connexions extranet).  
   
@@ -95,7 +96,7 @@ ms.locfileid: "66108863"
   
 10. Testez l'URL en cliquant sur le lien dans la section **URL** de la page. Notez que la base de données du serveur de rapports doit être créée et configurée avant que vous puissiez tester l'URL. Pour obtenir des instructions, consultez [Créer une base de données du serveur de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
-11. De plus, si votre serveur de rapports est configuré pour utiliser le mode intégré SharePoint, configurez l'URL du service Web Report Server dans l'Administration centrale de SharePoint. Pour plus d’informations sur comment mettre à jour l’URL du service Web Report Server dans l’Administration centrale de SharePoint, consultez [Configuration et Administration d’un serveur de rapports &#40;Reporting Services SharePoint Mode&#41; ](../configure-administer-report-server-reporting-services-sharepoint-mode.md) et [Reporting Services Report Server &#40;Mode SharePoint&#41;](../reporting-services-report-server-sharepoint-mode.md).  
+11. De plus, si votre serveur de rapports est configuré pour utiliser le mode intégré SharePoint, configurez l'URL du service Web Report Server dans l'Administration centrale de SharePoint. Pour plus d’informations sur la façon de mettre à jour l’URL du service Web Report Server dans l’administration centrale de SharePoint, consultez [configuration et administration d’un serveur de rapports &#40;Reporting Services mode sharepoint&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md) et [Reporting Services serveur de rapports &#40;mode SharePoint&#41;](../reporting-services-report-server-sharepoint-mode.md).  
   
 ### <a name="to-create-a-url-reservation-for-report-manager"></a>Pour créer une réservation d'URL pour le Gestionnaire de rapports  
   
@@ -103,7 +104,7 @@ ms.locfileid: "66108863"
   
 2.  Cliquez sur **URL du Gestionnaire de rapports**.  
   
-3.  Spécifiez le répertoire virtuel. Le Gestionnaire de rapports écoute sur la même adresse IP et le même port que le service Web Report Server. Si vous avez configuré le Gestionnaire de rapports pour pointer sur un service Web Report Server différent, vous devez modifier les paramètres d'URL du Gestionnaire de rapports dans le fichier RSReportServer.config. Pour obtenir des instructions, consultez [configurer le Gestionnaire de rapports &#40;en Mode natif&#41; ](../report-server/configure-web-portal.md) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne.  
+3.  Spécifiez le répertoire virtuel. Le Gestionnaire de rapports écoute sur la même adresse IP et le même port que le service Web Report Server. Si vous avez configuré le Gestionnaire de rapports pour pointer sur un service Web Report Server différent, vous devez modifier les paramètres d'URL du Gestionnaire de rapports dans le fichier RSReportServer.config. Pour obtenir des instructions, consultez [configurer gestionnaire de rapports mode natif &#40;&#41;](../report-server/configure-web-portal.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 4.  Si vous avez installé un certificat SSL, vous pouvez le sélectionner pour exiger que toutes les demandes adressées au Gestionnaire de rapports soient acheminées via le protocole HTTPS.  
   
@@ -139,7 +140,7 @@ ms.locfileid: "66108863"
 ## <a name="urls-for-multiple-report-server-instances-on-the-same-computer"></a>URL de plusieurs instances de Report Server sur le même ordinateur  
  Si vous réservez les URL pour plusieurs instances de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous devez suivre les conventions d'affectation de noms afin d'éviter les conflits de noms. Pour plus d’informations, consultez [Réservations d’URL pour les déploiements de serveur de rapports multi-instance &#40;Gestionnaire de configuration de SSRS&#41;](url-reservations-for-multi-instance-report-server-deployments.md).  
   
-##  <a name="URLExamples"></a> Exemples de configurations d'URL  
+##  <a name="URLExamples"></a>Exemples de configurations d’URL  
  La liste suivante présente quelques exemples d'URL de serveur de rapports :  
   
 -   http://localhost/reportserver  

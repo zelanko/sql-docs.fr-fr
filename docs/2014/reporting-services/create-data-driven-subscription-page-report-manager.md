@@ -1,5 +1,5 @@
 ---
-title: Créer la Page abonnement piloté par les données (Gestionnaire de rapports) | Microsoft Docs
+title: Page créer un abonnement piloté par les données (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 130027d60f5458b451d4f853a79228510c5e7d66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109619"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Page Créer un abonnement piloté par les données (Gestionnaire de rapports)
@@ -36,7 +36,7 @@ ms.locfileid: "66109619"
   
 2.  Pointez sur le rapport et cliquez sur la flèche déroulante.  
   
-3.  Dans le menu déroulant, cliquez sur **Gérer**. La page des propriétés **générales** pour le rapport s'ouvre.  
+3.  Dans le menu déroulant, cliquez sur **Gérer**. Cela ouvre la page des propriétés **générales** du rapport.  
   
 4.  Sélectionnez l'onglet **Abonnements** , puis cliquez sur **Nouvel abonnement piloté par les données**.  
   
@@ -47,16 +47,16 @@ ms.locfileid: "66109619"
  **Description**  
  Fournit une description de l'abonnement. Cette description apparaît dans les listes d'abonnements, sous **Mes abonnements** et l'onglet **Abonnements** du rapport.  
   
- **Spécifiez le mode de notification des destinataires**  
+ **Spécifier le mode de notification des destinataires**  
  Sélectionnez l'extension de remise à utiliser pour distribuer le rapport. Une seule extension de remise peut être utilisée pour chaque abonnement. Les options suivantes sont disponibles :  
   
--   Sélectionnez **Partage de fichiers du serveur de rapports** pour remettre les rapports à un partage de fichiers. Le rapport sera remis en tant que fichier statique, déconnecté du serveur de rapports. Pour plus d’informations, voir [File Share Delivery in Reporting Services](subscriptions/file-share-delivery-in-reporting-services.md).  
+-   Sélectionnez **Partage de fichiers du serveur de rapports** pour remettre les rapports à un partage de fichiers. Le rapport sera remis en tant que fichier statique, déconnecté du serveur de rapports. Pour plus d'informations, consultez [File Share Delivery in Reporting Services](subscriptions/file-share-delivery-in-reporting-services.md).  
   
--   Sélectionnez **Messagerie Report Server** pour remettre les rapports à une boîte de réception de messagerie. Pour plus d’informations, voir [E-Mail Delivery in Reporting Services](subscriptions/e-mail-delivery-in-reporting-services.md).  
+-   Sélectionnez **Messagerie Report Server** pour remettre les rapports à une boîte de réception de messagerie. Pour plus d’informations, consultez [Remise par courrier électronique dans Reporting Services](subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 -   Sélectionnez **Fournisseur de remise Null** pour remettre les rapports à la base de données du serveur de rapports. Cette option crée des instantanés de rapport. Choisissez cette option lorsque vous souhaitez précharger le serveur de rapports avec des instantanés de rapport spécifiques à l'utilisateur ou paramétrés, suivant une planification spécifique. Pour plus d’informations, consultez [Mise en cache de rapports &#40;SSRS&#41;](report-server/caching-reports-ssrs.md).  
   
- **Spécifiez une source de données qui contient les informations de destinataire**  
+ **Spécifier une source de données qui contient des informations de destinataire**  
  Spécifiez la définition de la connexion à la source de données. Vous pouvez choisir une source de données partagée si vous en possédez une qui contient les informations de connexion dont vous avez besoin. Vous pouvez également spécifier ces informations directement dans cet abonnement.  
   
  La source de données fournit les données des abonnés. Il peut s'agir de noms d'employés, d'ID d'employés, d'adresses de messagerie et de préférences relatives aux formats d'exportation (tels que HTML ou PDF). Si vous utilisez l'extension de remise par messagerie du serveur de rapports, la source de données doit contenir des adresses de messagerie.  
@@ -70,12 +70,12 @@ ms.locfileid: "66109619"
  **Chaîne de connexion**  
  Tapez une chaîne de connexion à utiliser pour vous connecter à la source de données.  
   
- **Se connecter à l’aide de**  
+ **Se connecter avec**  
  Tapez les informations d'identification à utiliser lors de la connexion à la source de données. Les informations d'identification sont stockées sous forme de valeurs chiffrées dans la base de données du serveur de rapports.  
   
  Si la source de données utilise l'authentification Windows, sélectionnez **Utiliser comme informations d'identification Windows** lorsque vous spécifiez la connexion.  
   
- Si vous utilisez une source de données qui n'authentifie pas les connexions utilisateur (par exemple, si la source de données est un fichier XML), sélectionnez Informations d'identification non requises. Cette option requiert que vous ayez précédemment configuré le compte d'exécution sans assistance. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ Si vous utilisez une source de données qui n'authentifie pas les connexions utilisateur (par exemple, si la source de données est un fichier XML), sélectionnez Informations d'identification non requises. Cette option requiert que vous ayez précédemment configuré le compte d'exécution sans assistance. Pour plus d’informations, consultez [configurer le compte d’exécution sans assistance &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="specify-a-query-page-3"></a>Spécification d'une requête (page 3)  
  Utilisez cette page pour entrer la requête qui récupère les données d'abonné. Pour un résultat optimal, exécutez d'abord la requête dans SQL Server Management Studio avant de l'utiliser dans l'abonnement piloté par les données. Vous pouvez ensuite examiner les résultats pour vérifier qu'ils contiennent les informations requises. Les points importants à noter sur les résultats de la requête sont les suivants :  
@@ -96,7 +96,7 @@ ms.locfileid: "66109619"
 ## <a name="set-delivery-options-page-4"></a>Définition d'options de remise (page 4)  
  Dans la quatrième page, vous devez spécifier les options des extensions de remise. Les options qui apparaissent dans la page sont dérivées de l'extension de remise. La façon dont vous spécifiez ces options peut varier considérablement selon leur présentation par l'extension de remise. Si l'extension ne contient aucun paramètre, aucune option n'apparaît dans cette page.  
   
-|Sélectionnez cette option|Pour effectuer cette opération|  
+|Sélectionnez cette option|Action à réaliser|  
 |-----------------|----------------|  
 |**Spécifier une valeur statique**|Utiliser une valeur de constante pour le paramètre de remise. Certaines extensions de remise fournissent des valeurs statiques que vous pouvez sélectionner. Par exemple, la remise par courrier électronique à un serveur de rapports fournit des valeurs pour **Inclure un rapport**, **Format du rendu**, **Priorité**et **Inclure un lien**.|  
 |**Obtenir la valeur de la base de données**|Utiliser une valeur du jeu de résultats. Les colonnes du jeu de résultats peuvent être utilisées pour fournir des données d'abonné et des valeurs des paramètres de rapport.|  
@@ -108,8 +108,8 @@ ms.locfileid: "66109619"
  **Nom de fichier**  
  Spécifie le nom de fichier du rapport. L'extension de remise par partage de fichiers remet un rapport en tant que fichier d'application statique dans un dossier partagé. Dans la plupart des cas, vous devez utiliser une valeur de la base de données pour créer le nom de fichier. Selon la façon dont vous définissez le mode écriture, l'utilisation d'une valeur statique provoquera le remplacement de la remise précédente par chaque nouvelle remise.  
   
- **Chemin d'accès**  
- Spécifiez un dossier partagé accessible via une connexion réseau. Pour vérifier que le dossier est accessible, cliquez sur **exécuter** dans le menu Démarrer et entrez le chemin du dossier dans ce format : \\ \\< nom_ordinateur\>\\< NomDossierPartagé\>.  
+ **Chemin d’accès**  
+ Spécifiez un dossier partagé accessible via une connexion réseau. Pour vérifier que le dossier est accessible, cliquez sur **exécuter** dans le menu Démarrer, puis entrez le chemin d’accès \\ \\ au dossier\> \\ au format\>suivant :<ComputerName<NomDossierPartagé.  
   
  **Format de rendu**  
  Spécifiez le format de sortie du fichier. Le serveur de rapports peut écrire le fichier dans des formats d'application des extensions de rendu installées sur le serveur de rapports.  
@@ -121,7 +121,7 @@ ms.locfileid: "66109619"
  Spécifiez True pour ajouter une extension de fichier qui correspond au format de rendu que vous avez sélectionné.  
   
  **Nom d'utilisateur**  
- Entrez le compte d’utilisateur de domaine qui a l’autorisation d’ajouter des fichiers dans le dossier partagé au format suivant : \<domaine >\\< nom d’utilisateur\>.  
+ Entrez le compte d’utilisateur de domaine qui a l’autorisation d’ajouter des fichiers au dossier partagé au \<format suivant \\ : domaine\>><nom d’utilisateur.  
   
  **Mot de passe**  
  Entrez le mot de passe du compte.  
@@ -129,34 +129,34 @@ ms.locfileid: "66109619"
 ## <a name="set-parameters-page-5"></a>Définition de paramètres (page 5)  
  Si un rapport contient des paramètres, vous devez spécifier les valeurs de paramètres à utiliser. Les valeurs de paramètres peuvent être obtenues à partir de la source de données de l'abonné (par exemple, si vous possédez un rapport sur les ventes régionales paramétré sur base d'un code de région, vous pouvez obtenir des informations de région pour chaque employé si celles-ci sont stockées dans la base de données de l'employé).  
   
-|Sélectionnez cette option|Pour effectuer cette opération|  
+|Sélectionnez cette option|Action à réaliser|  
 |-----------------|----------------|  
 |**Spécifier une valeur statique**|Utiliser une valeur de constante pour le paramètre si vous souhaitez utiliser le même paramètre pour tous les abonnés. Si le paramètre comporte plusieurs valeurs, vous pouvez choisir une valeur dans la liste.|  
-|**Par défaut**|Certains rapports contiennent une valeur par défaut pour l'ensemble ou certains des paramètres. Si le paramètre de rapport a une valeur par défaut, cliquez sur cette case à cocher pour l'utiliser.|  
+|**Utiliser la valeur par défaut**|Certains rapports contiennent une valeur par défaut pour l'ensemble ou certains des paramètres. Si le paramètre de rapport a une valeur par défaut, cliquez sur cette case à cocher pour l'utiliser.|  
 |**Obtenir la valeur de la base de données**|Utiliser une valeur du jeu de résultats. Les colonnes du jeu de résultats peuvent être sélectionnées comme une source d'une valeur de données à utiliser avec chaque instance d'abonnement.|  
   
 ## <a name="specify-a-trigger-page-6"></a>Spécification d'un déclencheur (page 6)  
  Sélectionnez un événement qui démarre le traitement des abonnements.  
   
-|Sélectionnez cette option|Pour effectuer cette opération|  
+|Sélectionnez cette option|Action à réaliser|  
 |-----------------|----------------|  
-|**Lorsque les données du rapport sont mis à jour sur le serveur de rapports**|Si le rapport est configuré pour s'exécuter comme un instantané d'exécution de rapport, vous pouvez spécifier que l'abonnement est exécuté lorsque l'instantané est actualisé.|  
+|**Lorsque les données du rapport sont mises à jour sur le serveur de rapports**|Si le rapport est configuré pour s'exécuter comme un instantané d'exécution de rapport, vous pouvez spécifier que l'abonnement est exécuté lorsque l'instantané est actualisé.|  
 |**Suivant une planification créée pour cet abonnement**|Exécuter l'abonnement à une date et une heure spécifiques.|  
 |**Suivant une planification partagée**|Exécuter l'abonnement à l'aide des informations de planification fournies par l'intermédiaire d'une planification partagée.|  
   
 ## <a name="schedule-a-subscription-page-7"></a>Planification d'un abonnement (page 7)  
  Si vous planifiez l'abonnement, vous devez spécifier la fréquence de remise du rapport. Le premier ensemble d'options spécifie une catégorie de fréquences (toutes les heures, tous les jours, toutes les semaines, etc.) Le second ensemble d'options qui apparaît dépend de votre sélection initiale.  
   
- **Toutes les heures**  
+ **Horaire**  
  Définit une planification qui s'exécute toutes les heures.  
   
  **Quotidienne**  
- Définit une planification qui s'exécute les jours sélectionnés à une heure spécifique. Vous pouvez spécifier les jours comme suit : Chaque  *\<jour >* , tous les jours ouvrables et chaque  *\<nombre >* jours. La sélection d'une option rend les autres inapplicables même si d'autres jours semblent sélectionnés.  
+ Définit une planification qui s'exécute les jours sélectionnés à une heure spécifique. Vous pouvez spécifier les jours des façons suivantes : chaque * \<jour>*, tous les jours ouvrables et tous * \<les nombres>* jour. La sélection d'une option rend les autres inapplicables même si d'autres jours semblent sélectionnés.  
   
  **Hebdomadaire**  
  Définit une planification qui s'exécute de façon hebdomadaire à une heure spécifique. L'intervalle peut correspondre à des semaines entières (toutes les deux semaines, par exemple) ou à des jours compris dans la semaine.  
   
- **Mensuel**  
+ **Chaque**  
  Définit une planification qui s'exécute tous les mois. Dans un mois, vous pouvez choisir un jour basé sur un modèle (le dernier dimanche de chaque mois, par exemple) ou des dates spécifiques (tels que 1 et 15 pour indiquer le 1er et le 15e jour de chaque mois). À l'aide de virgules et de tirets, vous pouvez spécifier plusieurs jours et plages (1, 5, 7-12, 21, par exemple).  
   
  **Une fois**  
@@ -172,8 +172,8 @@ ms.locfileid: "66109619"
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
- [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Spécifier les informations d’identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Abonnements et remise &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Aide F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

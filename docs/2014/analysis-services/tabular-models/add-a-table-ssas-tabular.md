@@ -1,5 +1,5 @@
 ---
-title: Ajouter une Table (SSAS tabulaire) | Microsoft Docs
+title: Ajouter une table (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81c1d3d2f0a0098fea271a782af10fbd26245a28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067787"
 ---
 # <a name="add-a-table-ssas-tabular"></a>Ajouter une table (SSAS Tabulaire)
@@ -39,7 +39,7 @@ ms.locfileid: "66067787"
 >  Lorsque vous importez plusieurs tables simultanément à partir d'une seule source de données, les relations entre ces tables à la source sont automatiquement créées dans le modèle. Si vous ajoutez une table ultérieurement, toutefois, vous devrez peut-être créer manuellement des relations dans le modèle entre les tables récemment ajoutées et les tables précédemment importées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Importer des données &#40;SSAS Tabulaire&#41;](../import-data-ssas-tabular.md)   
- [Supprimer une table &#40;SSAS Tabulaire&#41;](delete-a-table-ssas-tabular.md)  
+ [Importer des données &#40;&#41;tabulaire SSAS](../import-data-ssas-tabular.md)   
+ [Supprimer une table &#40;&#41;tabulaire SSAS](delete-a-table-ssas-tabular.md)  
   
   

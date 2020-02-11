@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6e6d8da7a5813f7e99c022e19f18de2800598885
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67906010"
 ---
 # <a name="head-mdx"></a>Head (MDX)
@@ -29,16 +29,16 @@ Head(Set_Expression [ ,Count ] )
   
 ## <a name="arguments"></a>Arguments  
  *Set_Expression*  
- Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
+ Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Compter*  
+ *Saut*  
  Expression numérique valide qui précise le nombre de tuples à retourner.  
   
 ## <a name="remarks"></a>Notes  
- Le **Head** fonction retourne le nombre spécifié de tuples à partir du début du jeu spécifié. L'ordre des éléments est conservé. La valeur par défaut de Count est 1. Si le nombre de tuples spécifié est inférieur à 1, le **Head** fonction retourne un jeu vide. Si le nombre de tuples spécifié dépasse le nombre de tuples dans le jeu, la fonction retourne le jeu d'origine.  
+ La fonction **Head** retourne le nombre spécifié de tuples à partir du début de l’ensemble spécifié. L'ordre des éléments est conservé. La valeur par défaut de Count est 1. Si le nombre de tuples spécifié est inférieur à 1, la fonction **Head** retourne un ensemble vide. Si le nombre de tuples spécifié dépasse le nombre de tuples dans le jeu, la fonction retourne le jeu d'origine.  
   
 ## <a name="example"></a>Exemple  
- L'exemple ci-dessous retourne les cinq premières sous-catégories de vente de produits, quelle que soit la hiérarchie et conformément à la mesure Reseller Gross Profit (marge brute du revendeur). Le **Head** fonction est utilisée pour retourner uniquement les 5 premiers jeux dans le résultat une fois que le résultat est trié à l’aide de la **ordre** (fonction).  
+ L'exemple ci-dessous retourne les cinq premières sous-catégories de vente de produits, quelle que soit la hiérarchie et conformément à la mesure Reseller Gross Profit (marge brute du revendeur). La fonction **Head** est utilisée pour retourner uniquement les 5 premiers jeux dans le résultat une fois que le résultat est ordonné à l’aide de la fonction **Order** .  
   
 ```  
 SELECT   
@@ -55,10 +55,10 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tail &#40;MDX&#41;](../mdx/tail-mdx.md)   
+ [&#41;MDX &#40;](../mdx/tail-mdx.md)   
  [Élément &#40;Tuple&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)   
- [Élément &#40;membre&#41; &#40;MDX&#41;](../mdx/item-member-mdx.md)   
- [Rank &#40;MDX&#41;](../mdx/rank-mdx.md)   
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Élément &#40;&#41; &#40;MDX&#41;](../mdx/item-member-mdx.md)   
+ [Classement &#40;&#41;MDX](../mdx/rank-mdx.md)   
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

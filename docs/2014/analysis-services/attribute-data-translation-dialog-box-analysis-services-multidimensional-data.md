@@ -1,5 +1,5 @@
 ---
-title: Attribut de boîte de dialogue traduction de données (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Boîte de dialogue traduction de données d’attribut (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2304f664178ab1f5d3718cccdcb4b1775a72948e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66063068"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Traduction de données d'attribut (Analysis Services - Données multidimensionnelles)
@@ -29,7 +29,7 @@ ms.locfileid: "66063068"
 -   soit cliquer avec le bouton droit sur le volet des **détails des traductions** de l’onglet **Traductions** du **Concepteur de dimensions** et sélectionner **Nouvelle colonne de légende** ou **Modifier la colonne de légende**.  
   
 ## <a name="options"></a>Options  
- **Attribute**  
+ **Attribut**  
  Affiche l'attribut sélectionné.  
   
  **Langage**  
@@ -44,7 +44,7 @@ ms.locfileid: "66063068"
  **Indicateur de classement**  
  Définit l'indicateur de classement pour l'attribut sélectionné. Le classement Windows est sélectionné par défaut. Cliquez sur la flèche vers le bas pour effectuer votre sélection parmi les classements disponibles.  
   
- **Binaire**  
+ **Binaire2**  
  Sélectionnez cette option pour trier et comparer les données en fonction des modèles des bits définis pour chaque caractère. L'ordre de tri binaire respecte la casse, c'est-à-dire que les minuscules précèdent les majuscules ; il respecte également les accents. Il s'agit de l'ordre de tri le plus rapide.  
   
  Si cette option n'est pas activée, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] respecte les règles de tri et de comparaison définies dans les dictionnaires pour la langue ou l'alphabet associé.  
@@ -52,18 +52,18 @@ ms.locfileid: "66063068"
 > [!NOTE]  
 >  Si cette option est sélectionnée, les options **Respecter la casse**, **Respecter les accents**, **Respecter le jeu de caractères Kana**et **Respecter la largeur** sont désactivées.  
   
- **Respecte la casse**  
+ **Respecter la casse**  
  Sélectionnez cette option pour trier et comparer les données d'après les règles du dictionnaire de la langue ou de l'alphabet associé et pour faire la distinction entre les majuscules et les minuscules.  
   
- Si cette option n’est pas sélectionnée, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considère qu’il n’y a pas de différences entre les lettres majuscules et minuscules. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ne définit pas si les lettres minuscules doivent être triées avant ou après en majuscules les lettres quand **respect de la casse** n’est pas sélectionnée.  
+ Si cette option n’est pas sélectionnée, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considère qu’il n’y a pas de différences entre les lettres majuscules et minuscules. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ne définit pas si les lettres minuscules sont triées en minuscules ou supérieures par rapport aux majuscules lorsque la **casse** n’est pas sélectionnée.  
   
- **Respectent les accents**  
+ **respectent les accents**  
  Sélectionnez cette option pour trier et comparer les données d'après les règles du dictionnaire de la langue ou de l'alphabet associé et pour faire la distinction entre les lettres accentuées ou non. Par exemple, « a » n'est pas équivalent à « á ».  
   
  Si l’option est désactivée, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considère qu’il n’y a pas de différences entre les lettres accentuées et non accentuées.  
   
- **Kana sensibles**  
- Sélectionnez cette option pour trier et comparer les données selon les règles du dictionnaire pour la langue associée ou l’alphabet et faire la distinction entre les deux types de caractères japonais kana : Hiragana et Katakana.  
+ **Respecter le jeu de caractères Kana**  
+ Sélectionnez cette option pour trier et comparer les données d'après les règles du dictionnaire de la langue ou de l'alphabet associé et pour faire la distinction entre les deux types de caractères japonais Kana : Hiragana et Katakana.  
   
  Si l'option est désactivée, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considère qu'il n'y a pas de différences entre les caractères Hiragana et Katakana.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66063068"
  Si l'option est désactivée, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considère qu'il n'y a pas de différences de représentation entre les caractères codés sur un ou deux octets.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Détails des traductions &#40;onglet traductions, Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Analysis Services les concepteurs et les boîtes de dialogue &#40;les données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Détails de la traduction &#40;onglet traductions, concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

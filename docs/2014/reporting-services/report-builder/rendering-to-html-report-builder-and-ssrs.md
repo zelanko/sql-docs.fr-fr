@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 26f2b31728fec77a6b94a64f35d0fb37096a1b41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107722"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Rendu au format HTML (Générateur de rapports et SSRS)
@@ -26,15 +26,15 @@ ms.locfileid: "66107722"
   
  Dans certains scénarios, les paramètres de rapport peuvent être utilisés pour lancer des attaques par injection de script lors du rendu de rapports en HTML. Pour plus d’informations sur la sécurisation des rapports, consultez [Sécurisation des rapports et des ressources](../security/secure-reports-and-resources.md).  
   
- Pour plus d’informations sur les navigateurs, consultez [planification pour Reporting Services et la prise en charge du navigateur Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md).  
+ Pour plus d’informations sur les navigateurs, consultez [planification de la prise en charge des navigateurs Reporting Services et Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RenderingMHTML"></a> Rendu au format MHTML  
+##  <a name="RenderingMHTML"></a>Rendu dans MHTML  
  L'extension de rendu HTML peut également rendre des rapports au format MHTML (MIME Encapsulation of Aggregate HTML Documents). MHTML étend HTML pour intégrer des objets encodés, comme les images, dans le document HTML. Avec l'extension de rendu MHTML, vous pouvez incorporer dans un fichier unique des ressources telles que des images, des documents ou d'autres fichiers binaires en tant que structures MIME dans le rapport HTML. L'incorporation de rapports MHTML dans des messages électroniques se révèle également utile, car toutes les ressources sont incluses dans le rapport. Bien que ce soit en fait l'extension de rendu HTML qui assure le rendu MHTML, cette fonctionnalité peut également être appelée extension de rendu MHTML.  
   
-##  <a name="BrowserSupport"></a> Prise en charge des navigateurs  
+##  <a name="BrowserSupport"></a>Prise en charge des navigateurs  
  Cette extension de rendu prend en charge les versions de navigateur suivantes :  
   
 -   Internet Explorer 5.5 et versions ultérieures  
@@ -45,7 +45,7 @@ ms.locfileid: "66107722"
   
  En raison des spécificités des navigateurs, le rapport rendu peut varier légèrement d'un navigateur à l'autre. Par exemple, la zone de texte contient une propriété nommée WritingMode. Cette propriété n'est pas prise en charge dans Firefox.  
   
-##  <a name="HTMLSpecificRenderingRules"></a> Règles de rendu spécifiques à HTML  
+##  <a name="HTMLSpecificRenderingRules"></a>Règles de rendu spécifiques à HTML  
  Les règles spécifiques à HTML suivantes s'appliquent lors du rendu :  
   
 -   Le convertisseur génère une structure de table HTML destinée à contenir tous les éléments de chaque collection `ReportItems`, s'il en existe plusieurs.  

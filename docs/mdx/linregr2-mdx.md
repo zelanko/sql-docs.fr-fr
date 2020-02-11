@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2e38df1a24b76ee40aae3a5ab3c28dd9bca2b310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905518"
 ---
 # <a name="linregr2-mdx"></a>LinRegR2 (MDX)
@@ -29,7 +29,7 @@ LinRegR2(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
   
 ## <a name="arguments"></a>Arguments  
  *Set_Expression*  
- Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
+ Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
  *Numeric_Expression_y*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre représentant les valeurs de l'axe des ordonnées.  
@@ -38,25 +38,25 @@ LinRegR2(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre représentant les valeurs de l'axe des abscisses.  
   
 ## <a name="remarks"></a>Notes  
- La régression linéaire qui utilise la méthode des moindres carrés calcule l'équation d'une droite de régression (c'est-à-dire de la meilleure ligne pour une série de points). La ligne de régression a l’équation suivante, où un représente la pente et b est l’interception :  
+ La régression linéaire qui utilise la méthode des moindres carrés calcule l'équation d'une droite de régression (c'est-à-dire de la meilleure ligne pour une série de points). La ligne de régression présente l’équation suivante, où a est la pente et b est l’intersection :  
   
  y = ax+b  
   
- Le **LinRegR2** fonction évalue la setagainst spécifiée la première expressionto numérique obtenir les valeurs de l’axe des ordonnées. La fonction évalue ensuite le jeu spécifié par rapport à la deuxième expression numérique, si spécifiée, pour extraire les valeurs de l'axe des abscisses. Si le deuxième expressionis numérique pas spécifié, la fonction utilise le contexte actuel des cellules dans le jeu spécifié en tant que les valeurs de l’axe des abscisses. Ne pas spécifier le x-axisargument est fréquemment utilisé avec la dimension de temps.  
+ La fonction **LinRegR2** évalue le setagainst spécifié la première expressionto numérique obtient les valeurs de l’axe y. La fonction évalue ensuite le jeu spécifié par rapport à la deuxième expression numérique, si spécifiée, pour extraire les valeurs de l'axe des abscisses. Si la deuxième expression numérique n’est pas spécifiée, la fonction utilise le contexte actuel des cellules dans le jeu spécifié comme valeurs de l’axe des abscisses. Il est fréquent de ne pas spécifier l'argument de l'axe des abscisses avec la dimension Time.  
   
- Après avoir obtenu l’ensemble de points, le **LinRegR2** fonction retourne le R statistique<sup>2</sup> qui décrit l’adéquation entre l’équation linéaire et les points.  
+ Une fois l’ensemble de points obtenu, la fonction **LinRegR2** retourne le R<sup>2</sup> statistique qui décrit l’adéquation entre l’équation linéaire et les points.  
   
 > [!NOTE]  
->  Le **LinRegR2** fonction ignore les cellules vides ou les cellules qui contiennent du texte ou des valeurs logiques. Cependant, elle tient compte des cellules dont la valeur est zéro.  
+>  La fonction **LinRegR2** ignore les cellules vides ou les cellules qui contiennent du texte ou des valeurs logiques. Cependant, elle tient compte des cellules dont la valeur est zéro.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant retourne le R statistique<sup>2</sup> qui décrit le degré d’ajustement de l’équation de régression linéaire pour les points de ventes par unité et les mesures de ventes du magasin.  
+ L’exemple suivant retourne le R<sup>2</sup> statistique qui décrit l’adéquation entre l’équation de régression linéaire et les points pour les mesures Sales unitaire et sales Store.  
   
 ```  
 LinRegR2(LastPeriods(10), [Measures].[Unit Sales],[Measures].[Store Sales])  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

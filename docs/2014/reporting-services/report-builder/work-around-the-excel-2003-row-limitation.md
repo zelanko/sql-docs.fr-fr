@@ -1,5 +1,5 @@
 ---
-title: Pour contourner la Limitation de la ligne Excel | Microsoft Docs
+title: Contourner la limitation des lignes Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84f01e85a0a93ef1f2a14b2b01b4180143153865
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107550"
 ---
 # <a name="work-around-the-excel-row-limitation"></a>Contournement de la limite d'Excel
@@ -26,9 +26,9 @@ ms.locfileid: "66107550"
   
 1.  Ouvrez un rapport dans [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] ou le Gestionnaire de rapports.  
   
-2.  Cliquez avec le bouton droit sur la ligne de données dans la table, pointez sur **Ajouter un groupe** > **Groupe parent** pour ajouter un groupe de tables externe.  
+2.  Cliquez avec le bouton droit sur la ligne de données dans la table, puis cliquez sur **Ajouter** > le groupe**parent** du groupe pour ajouter un groupe de tables externe.  
   
-     ![Sélectionner Groupe parent](../media/datarow-selectparentgroup.png "Sélectionner Groupe parent")  
+     ![Sélectionner le groupe parent](../media/datarow-selectparentgroup.png "Sélectionner le groupe parent")  
   
 3.  Entrez la formule suivante dans la zone d'expression **Regrouper par** , puis cliquez sur **OK** pour ajouter le groupe parent.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66107550"
   
 5.  Cliquez avec le bouton droit sur **Groupe 1** dans la section **Groupes de lignes** , puis cliquez sur **Propriétés du groupe**.  
   
-     ![Afficher les propriétés du groupe](../media/groupproperties-updated.png "Afficher les propriétés de groupe")  
+     ![Afficher les propriétés de groupe](../media/groupproperties-updated.png "Afficher les propriétés de groupe")  
   
 6.  Dans la page **Tri** de la boîte de dialogue **Propriétés du groupe** , sélectionnez l'option de tri par défaut et cliquez sur **Supprimer**.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66107550"
   
 7.  Dans la page **Sauts de page** , cliquez sur **Entre chaque instance d'un groupe** , puis cliquez sur **OK**.  
   
-     ![Définir des sauts de page](../media/groupproperties-pagebreaks-updated.png "Définir des sauts de page")  
+     ![Définir les sauts de page](../media/groupproperties-pagebreaks-updated.png "Définir les sauts de page")  
   
 8.  Enregistrez le rapport. Lors de l'exportation vers Excel, plusieurs feuilles de calcul sont créées, chacune contenant un maximum de 65 000 lignes.  
   

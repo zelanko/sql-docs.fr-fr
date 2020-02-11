@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b174f9ad33ee38c2f47ffc8a684cddd7ea4376bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107362"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>Boîte de dialogue Propriétés du dataset, Options (Générateur de rapports)
@@ -45,13 +45,13 @@ ms.locfileid: "66107362"
  Sélectionnez une valeur qui détermine le respect de la largeur. Cette option indique si les données respectent la largeur et peut prendre les valeurs **True**, **False**ou **Auto**. La valeur par défaut, **Auto**, indique que le serveur de rapports doit tenter de dériver la valeur à partir du fournisseur de données, lors de l’exécution du rapport. Si le fournisseur de données ne prend pas en charge le type de respect de la largeur, le rapport s’exécute comme si la valeur était **False**. Si vous connaissez la valeur et savez qu’elle est prise en charge, choisissez **True**.  
   
  **Interpréter les sous-totaux comme des lignes de détails**  
- Sélectionnez une valeur qui indique si vous souhaitez que les lignes de sous-total soient interprétées comme des lignes de détails au lieu de lignes agrégées. La valeur par défaut, **automatique**, indique que les lignes de sous-total doivent être traitées comme des lignes de détail si le rapport n’utilise pas le `Aggregate`(fonction) () pour accéder aux champs du jeu de données. Si vous souhaitez que les lignes de sous-total soient interprétées comme lignes agrégées, choisissez **False**. Si vous souhaitez que les lignes de sous-total soient interprétées comme lignes de détails et que vous savez qu’elles n’utilisent pas le `Aggregate`() de fonction, choisissez **True**.  
+ Sélectionnez une valeur qui indique si vous souhaitez que les lignes de sous-total soient interprétées comme des lignes de détails au lieu de lignes agrégées. La valeur par défaut, **auto**, indique que les lignes de sous-total doivent être traitées comme des lignes de détails si `Aggregate`le rapport n’utilise pas la fonction () pour accéder à tous les champs du jeu de données. Si vous souhaitez que les lignes de sous-total soient interprétées comme lignes agrégées, choisissez **False**. Si vous souhaitez que les lignes de sous-total soient interprétées comme des lignes de détails et que vous `Aggregate`sachiez qu’elles n’utilisent pas la fonction (), choisissez **true**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide du Générateur de rapports pour les boîtes de dialogue, les volets et les Assistants](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [Aide Générateur de rapports pour les boîtes de dialogue, les volets et les assistants](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Fonction d’agrégation &#40;Générateur de rapports et SSRS&#41;](../report-design/report-builder-functions-aggregate-function.md)   
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Boîte de dialogue Propriétés du dataset, Requête &#40;Générateur de rapports&#41;](dataset-properties-dialog-box-query-report-builder.md)  
+ [Boîte de dialogue Propriétés du DataSet, requête &#40;Générateur de rapports&#41;](dataset-properties-dialog-box-query-report-builder.md)  
   
   

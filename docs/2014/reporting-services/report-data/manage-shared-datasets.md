@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c498917b7f4f293d1721d09e68d1ba40672c1dc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107212"
 ---
 # <a name="manage-shared-datasets"></a>Gérer des datasets partagés
@@ -47,7 +47,7 @@ ms.locfileid: "66107212"
 |-|-|  
 |Modifier le nom|Modifiez le nom du dataset partagé. Toutes les références d'éléments dépendants continueront de fonctionner.|  
 |Modifier la description|Modifiez la description du dataset partagé.|  
-|Modifier le délai d'attente d'exécution de la requête|Définissez le délai d'attente d'exécution de la requête en secondes. Zéro (0) seconde signifie aucun délai d'attente. Détermine le nombre de secondes avant l'expiration de la requête du dataset. Pour ne spécifier aucune valeur de délai d'attente, utilisez 0. Pour plus d’informations, consultez [Définition des valeurs de délai d’attente pour le traitement d’un rapport et d’un dataset partagé &#40;SSRS&#41;](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md).|  
+|Modifier le délai d'attente d'exécution de la requête|Définissez le délai d'attente d'exécution de la requête en secondes. Zéro (0) seconde signifie qu’il n’y a pas de délai d’attente. Détermine le nombre de secondes avant l’expiration du délai d’attente de la requête de DataSet. Pour ne spécifier aucune valeur de délai d’attente, utilisez 0. Pour plus d’informations, consultez [Définition des valeurs de délai d’attente pour le traitement d’un rapport et d’un dataset partagé &#40;SSRS&#41;](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md).|  
 |Afficher les éléments dépendants|Affichez les éléments qui utilisent ce dataset partagé : parties de rapport publiées, sources de données partagées et rapports.|  
   
  Les propriétés de dataset partagées supplémentaires suivantes sont configurées automatiquement :  
@@ -71,29 +71,29 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
 ## <a name="controlling-access-to-the-shared-dataset-definition"></a>Contrôle de l'accès à la définition du dataset partagé  
  Par défaut, les tâches suivantes s'appliquent aux opérations sur les datasets partagés.  
   
--   **Afficher les rapports** Afficher les éléments de dataset partagés et les propriétés d’élément.  
+-   **Afficher les rapports** Affichez les éléments de DataSet partagés et les propriétés d’élément.  
   
--   **Lire les rapports** Lire les définitions de dataset partagé.  
+-   **Utiliser des rapports** Lire les définitions de dataset partagé.  
   
--   **Gérer les rapports** Créer et supprimer les datasets partagés et modifier les propriétés de dataset partagé.  
+-   **Gérer les rapports** Créer et supprimer des datasets partagés et modifier les propriétés de dataset partagé.  
   
--   **Définir la sécurité sur les éléments** Afficher et modifier les paramètres de sécurité pour les datasets partagés.  
+-   **Définir la sécurité sur les éléments** Affichez et modifiez les paramètres de sécurité pour les datasets partagés.  
   
  Pour plus d’informations sur quelles tâches et autorisations contrôlent l’accès aux propriétés de la source des données sur un serveur de rapports en mode natif, consultez [Sécuriser les éléments de dataset partagés](../security/secure-shared-dataset-items.md).  
   
- Les autorisations d'afficher et de modifier les propriétés des éléments dans une bibliothèque SharePoint sont déterminées par l'administrateur de site. Pour plus d’informations, consultez [Article de référence sur les autorisations de site SharePoint et de listes pour les éléments de serveur de rapports](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
+ Les autorisations d'afficher et de modifier les propriétés des éléments dans une bibliothèque SharePoint sont déterminées par l'administrateur de site. Pour plus d’informations, consultez [référence des autorisations de site et de liste SharePoint pour les éléments de serveur de rapports](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
 ## <a name="how-to-work-with-shared-dataset-properties-on-a-report-server"></a>Comment utiliser les propriétés des datasets partagés sur un serveur de rapports  
  Vous pouvez utiliser divers outils pour travailler avec les datasets partagés. Le tableau suivant résume les approches et les outils, et fournit un lien vers des instructions supplémentaires.  
   
-|Tâche|Tool|Lien|  
+|Tâche|Outil|Lien|  
 |----------|----------|----------|  
-|Ajouter un dataset partagé ou modifier les propriétés de la définition du dataset partagé.|Enregistrer dans le Générateur de rapports.<br /><br /> Déployer dans le Concepteur de rapports.<br /><br /> Télécharger un fichier .rsd dans le Gestionnaire de rapports|[Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) dans la [documentation du Générateur de rapports ](https://go.microsoft.com/fwlink/?LinkId=154494) sur msdn.microsoft.com.<br /><br /> [Page Charger un fichier &#40;Gestionnaire de rapports&#41;](../upload-file-page-report-manager.md)<br /><br /> Si vous téléchargez un dataset partagé avant que la source de données partagée dont il dépend soit publiée, vous devez lier manuellement le dataset partagé à la source de données partagée. Pour plus d’informations, consultez [Page Propriétés générales, Datasets partagés &#40;Gestionnaire de rapports&#41;](../general-properties-page-shared-datasets-report-manager.md).|  
-|Modifier les propriétés d'élément de dataset partagé.|Gestionnaire de rapports|[Page Propriétés générales, Datasets partagés &#40;Gestionnaire de rapports&#41;](../general-properties-page-shared-datasets-report-manager.md)|  
+|Ajouter un dataset partagé ou modifier les propriétés de la définition du dataset partagé.|Enregistrer dans le Générateur de rapports.<br /><br /> Déployer dans le Concepteur de rapports.<br /><br /> Télécharger un fichier .rsd dans le Gestionnaire de rapports|[Datasets incorporés dans le rapport et datasets partagés &#40;générateur de rapports et SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) dans la [documentation générateur de rapports](https://go.microsoft.com/fwlink/?LinkId=154494) sur MSDN.Microsoft.com<br /><br /> [Page charger un fichier &#40;Gestionnaire de rapports&#41;](../upload-file-page-report-manager.md)<br /><br /> Si vous téléchargez un dataset partagé avant que la source de données partagée dont il dépend soit publiée, vous devez lier manuellement le dataset partagé à la source de données partagée. Pour plus d’informations, consultez [Page Propriétés générales, Datasets partagés &#40;Gestionnaire de rapports&#41;](../general-properties-page-shared-datasets-report-manager.md).|  
+|Modifier les propriétés d'élément de dataset partagé.|Gestionnaire de rapports|[Page Propriétés générales, datasets partagés &#40;Gestionnaire de rapports&#41;](../general-properties-page-shared-datasets-report-manager.md)|  
 |Spécifier des propriétés de dataset partagé supplémentaires pour une instance de dataset partagé dans un rapport.|Générateur de rapports Concepteur de rapports|[Boîte de dialogue Propriétés du dataset, Requête](../dataset-properties-dialog-box-query.md)|  
-|Créer une liaison avec une source de données partagée différente pour un dataset partagé.|Gestionnaire de rapports|[Page Sélection de la source de données &#40;Gestionnaire de rapports&#41;](../data-source-selection-page-report-manager.md)|  
-|Vérifiez les valeurs par défaut pour les paramètres de dataset.|Ouvrez dans le Générateur de rapports ou utilisez la syntaxe de l'accès URL.|Exemple :<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
-|Activer la mise en cache|Gestionnaire de rapports|[Mettre en cache les datasets partagés &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)<br /><br /> [Page Mise en cache, datasets partagés &#40;Gestionnaire de rapports&#41;](../caching-page-shared-datasets-report-manager.md)|  
+|Créer une liaison avec une source de données partagée différente pour un dataset partagé.|Gestionnaire de rapports|[Page de sélection de la source de données &#40;Gestionnaire de rapports&#41;](../data-source-selection-page-report-manager.md)|  
+|Vérifiez les valeurs par défaut pour les paramètres de dataset.|Ouvrez dans le Générateur de rapports ou utilisez la syntaxe de l'accès URL.|Par exemple :<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
+|Activer la mise en cache|Gestionnaire de rapports|[Mettre en cache les datasets partagés &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)<br /><br /> [Page mise en cache, datasets partagés &#40;Gestionnaire de rapports&#41;](../caching-page-shared-datasets-report-manager.md)|  
 |Créer ou modifier un plan d'actualisation du cache|Gestionnaire de rapports|[Options d’actualisation du cache &#40;Gestionnaire de rapports&#41;](../cache-refresh-options-report-manager.md)|  
 |Consulter le schéma de définition de dataset partagé.|Gestionnaire de rapports|`http://<reportserver>/shareddatasetdefinition.xsd`|  
 |En mode intégré SharePoint, synchroniser la définition de dataset partagé entre le serveur de rapports et le site SharePoint|Pages d’application SharePoint|Modifier les propriétés d'élément de dataset partagé<br /><br /> Modifier les options du cache<br /><br /> Modifier la source de données partagée|  

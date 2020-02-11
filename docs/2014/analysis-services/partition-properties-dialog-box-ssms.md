@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue de propriétés (SSMS) de partition | Microsoft Docs
+title: Boîte de dialogue Propriétés de partition (SSMS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bfc0de04be668ea3d1ab5633049e6f81d971b4cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072158"
 ---
 # <a name="partition-properties-dialog-box-ssms"></a>Boîte de dialogue Propriétés de partition (SSMS)
@@ -28,16 +28,16 @@ ms.locfileid: "66072158"
   
 ## <a name="pages"></a>Pages  
   
-|Radiomessagerie|Description|  
+|Page|Description|  
 |----------|-----------------|  
 |**Sélection**|Utilisez la page **Sélection** pour sélectionner la partition dans le groupe de mesures dont vous voulez afficher ou modifier les propriétés. Pour plus d’informations sur cette page, consultez [Sélection &#40;Boîte de dialogue Propriétés de partition&#41; &#40;SSMS&#41;](selection-partition-properties-dialog-box-ssms.md).|  
 |**Général**|Utilisez la page **Général** pour afficher et modifier les propriétés générales de la partition sélectionnée dans la page **Sélection** . Pour plus d’informations sur cette page, consultez [Général &#40;Boîte de dialogue Propriétés de partition&#41; &#40;SSMS&#41;](general-partition-properties-dialog-box-ssms.md).|  
 |**Mise en cache proactive**|Utilisez la page **Mise en cache proactive** pour afficher et modifier les paramètres de stockage et de mise en cache proactive de la partition sélectionnée dans la page **Sélection** . Pour plus d’informations sur cette page, consultez [Mise en cache proactive &#40;Boîte de dialogue Propriétés de partition&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md).|  
-|**Configuration d’erreur**|Utilisez la page **Configuration d'erreur** pour afficher et modifier les paramètres de configuration des erreurs de traitement de la partition sélectionnée dans la page **Sélection** . Pour plus d’informations sur cette page, consultez [Configuration d’erreur pour le traitement des cubes, des partitions et des dimensions &#40;SSAS - Multidimensionnel&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md).|  
+|**Configuration d'erreur**|Utilisez la page **Configuration d'erreur** pour afficher et modifier les paramètres de configuration des erreurs de traitement de la partition sélectionnée dans la page **Sélection** . Pour plus d’informations sur cette page, consultez [Configuration d’erreur pour le traitement des cubes, des partitions et des dimensions &#40;SSAS - Multidimensionnel&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Partitions &#40;Analysis Services - Données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Partitions &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Partitions distantes](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Analysis Services les concepteurs et les boîtes de dialogue &#40;les données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

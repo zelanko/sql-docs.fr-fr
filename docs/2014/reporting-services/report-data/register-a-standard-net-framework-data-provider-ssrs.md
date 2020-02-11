@@ -18,16 +18,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 208b1363de6b1c6892ba8f265365b1d304b6ceab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107158"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Inscrire un fournisseur de données .NET Framework standard (SSRS)
   Pour utiliser un fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] tiers afin d’extraire des données pour un dataset de rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous devez déployer et inscrire l’assembly de fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] à deux emplacements : sur le client de création de rapports et sur le serveur de rapports. Sur le client de création de rapports, vous devez inscrire le fournisseur de données comme type de source des données et l'associer à un concepteur de requêtes. Vous pouvez ensuite sélectionner ce fournisseur de données comme type de source des données lorsque vous créez un dataset de rapport. Le concepteur de requêtes associé s'ouvre pour vous permettre de créer des requêtes pour ce type de source de données. Sur le serveur de rapports, vous devez inscrire le fournisseur de données comme type de source de données. Vous pouvez ensuite traiter les rapports publiés qui extraient les données d'une source de données à l'aide de ce fournisseur de données.  
   
- Les fournisseurs de données tiers ne prennent pas nécessairement en charge toutes les fonctionnalités fournies par les extensions pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md). Pour en savoir plus sur l’extension des fonctionnalités d’un[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fournisseur de données, consultez [Implémentation d’une extension pour le traitement des données](../extensions/data-processing/implementing-a-data-processing-extension.md).  
+ Les fournisseurs de données tiers ne prennent pas nécessairement en charge toutes les fonctionnalités fournies par les extensions pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md). Pour en savoir plus sur l’extension des fonctionnalités d’un[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fournisseur de données, consultez [implémentation d’une extension pour le traitement des données](../extensions/data-processing/implementing-a-data-processing-extension.md).  
   
  Vous devez disposer des informations d'identification de l'administrateur pour installer et inscrire des fournisseurs de données.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66107158"
   
 4.  Ajoutez une entrée pour le fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
-    |Attribute|Description|  
+    |Attribut|Description|  
     |---------------|-----------------|  
     |`Name`|Donnez un nom unique au fournisseur de données, par exemple, **MyNETDataProvider**. La longueur maximale de l'attribut `Name` s'élève à 255 caractères. Le nom doit être unique au sein de toutes les entrées de l'élément `Extension` d'un fichier de configuration. La valeur que vous insérez à cet emplacement s’affiche dans la liste déroulante des types de source de données quand vous créez une source de données.|  
     |`Type`|Entrez une liste séparée par des virgules qui comprend l’espace de noms complet de la classe qui implémente l’interface <xref:System.Data.IDbConnection> suivie du nom de l’assembly du fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (sans compter l’extension de nom de fichier .dll).|  
@@ -69,7 +69,7 @@ ms.locfileid: "66107158"
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     si vous chargez votre assembly dans le GAC (Global Assembly Cache), vous devez fournir les propriétés de nom fort. Exemple :  
+     si vous chargez votre assembly dans le GAC (Global Assembly Cache), vous devez fournir les propriétés de nom fort. Par exemple :  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly,Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  
@@ -79,7 +79,7 @@ ms.locfileid: "66107158"
   
 1.  Faites une copie de sauvegarde du fichier rssrvpolicy.config dans le répertoire parent ReportServer du répertoire bin.  
   
-2.  Ouvrez rssrvpolicy.config. Vous pouvez ouvrir le fichier de configuration à l'aide de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou à l'aide d'un simple éditeur de texte tel que le Bloc-notes.  
+2.  Ouvrez fichier rssrvpolicy. config. Vous pouvez ouvrir le fichier de configuration [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] avec ou un simple éditeur de texte tel que le bloc-notes.  
   
 3.  Localisez l'élément `CodeGroup` dans le fichier rssrvpolicy.config.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "66107158"
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-designer-client"></a>Pour installer un assembly de fournisseur de données sur le client du Concepteur de rapports  
   
-1.  Accédez à l’emplacement par défaut du répertoire PrivateAssemblies sur le client du Concepteur de rapports sur lequel vous souhaitez utiliser le fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . L’emplacement par défaut du répertoire PrivateAssemblies est *\<lecteur>* :\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
+1.  Accédez à l’emplacement par défaut du répertoire PrivateAssemblies sur le client du Concepteur de rapports sur lequel vous souhaitez utiliser le fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . L’emplacement par défaut du répertoire PrivateAssemblies est * \<lecteur>*: \Program Files\Microsoft Visual Studio 9.0 \ Common7\IDE\PrivateAssemblies.  
   
 2.  Copiez votre assembly à partir de votre emplacement sur le répertoire PrivateAssemblies du client du Concepteur de rapports. Une autre solution consiste à charger votre assembly dans le Global Assembly Cache (GAC). Pour plus d’informations, consultez [Utilisation d’assemblys et du Global Assembly Cache](https://go.microsoft.com/fwlink/?linkid=63912) dans la documentation du SDK [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] sur MSDN.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "66107158"
   
 4.  Ajoutez une entrée pour le fournisseur de données.  
   
-    |Attribute|Description|  
+    |Attribut|Description|  
     |---------------|-----------------|  
     |`Name`|Donnez un nom unique au fournisseur de données, par exemple, **MyNETDataProvider**. La longueur maximale de l'attribut `Name` s'élève à 255 caractères. Le nom doit être unique au sein de toutes les entrées de l'élément `Extension` d'un fichier de configuration. La valeur que vous insérez à cet emplacement s'affiche dans la liste déroulante des types de source de données lorsque vous créez une nouvelle source de données.|  
     |`Type`|Entrez une liste séparée par des virgules qui comprend l’espace de noms complet de la classe qui implémente l’interface <xref:System.Data.IDbConnection> suivie du nom de l’assembly du fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (sans compter l’extension de nom de fichier .dll).|  
@@ -142,7 +142,7 @@ ms.locfileid: "66107158"
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     si vous chargez votre assembly dans le GAC, vous devez fournir les propriétés de nom fort. Exemple :  
+     si vous chargez votre assembly dans le GAC, vous devez fournir les propriétés de nom fort. Par exemple :  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly, Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  
@@ -196,7 +196,8 @@ ms.locfileid: "66107158"
 ## <a name="platform-considerations"></a>Considérations relatives à la plateforme  
  Sur une plateforme 64 bits (x64), [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] s'exécute en mode WOW 32 bits. Lorsque vous publiez des rapports sur une plateforme x64, vous devez disposer de fournisseurs de données 32 bits sur le client de création de rapports pour prévisualiser vos rapports. Si vous publiez le rapport sur le même système, il vous faut des fournisseurs de données x64 pour prévisualiser le rapport à l'aide du Gestionnaire de rapports.  
   
- [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] n’est pas pris en charge pour les plateformes [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)].  
+ 
+  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] n’est pas pris en charge pour les plateformes [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)].  
   
  Les extensions pour le traitement des données installées à l’aide de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] doivent être compilées en mode natif pour chaque plateforme et installées dans les emplacements corrects. Si vous inscrivez un fournisseur de données personnalisé ou un fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] standard, celui-ci doit être compilé en mode natif pour la plateforme appropriée et installé dans les emplacements corrects. Si votre système s'exécute sur une plateforme 32 bits, le fournisseur de données doit être compilé pour une plateforme 32 bits. Si votre système s'exécute sur une plateforme 64 bits, le fournisseur de données doit être compilé pour la plateforme 64 bits. Si vous ne pouvez pas utiliser de fournisseur de données 32 bits intégré à des interfaces 64 bits sur une plateforme 64 bits. Vérifiez les informations sur votre logiciel tiers pour déterminer si le fournisseur de données fonctionne sur la plateforme installée. Pour plus d’informations sur les fournisseurs de données et la prise en charge de plateforme, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
