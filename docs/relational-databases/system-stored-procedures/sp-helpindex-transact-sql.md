@@ -19,18 +19,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 17e43f9739b0306a42c4c454cf93fdf92b255177
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122529"
 ---
-# <a name="sphelpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
+# <a name="sp_helpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Affiche des informations sur les index d'une table ou d'une vue.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,9 +40,9 @@ sp_helpindex [ @objname = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @objname = ] 'name'` Est le nom qualifié ou non d’une table définie par l’utilisateur ou une vue. Les guillemets ne sont nécessaires que si un nom qualifié de table ou de vue est spécifié. Si un nom qualifié complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données active. *nom* est **nvarchar(776)** , sans valeur par défaut.  
+`[ @objname = ] 'name'`Nom qualifié ou non qualifié d’une table ou d’une vue définie par l’utilisateur. Les guillemets ne sont nécessaires que si un nom qualifié de table ou de vue est spécifié. Si un nom qualifié complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données active. *Name* est de type **nvarchar (776)**, sans valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -50,15 +50,15 @@ sp_helpindex [ @objname = ] 'name'
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**index_name**|**sysname**|Nom de l’index.|  
-|**index_description**|**varchar(210)**|Description d'index incluant le groupe de fichiers sur lequel il est situé.|  
-|**index_keys**|**nvarchar(2078)**|Colonnes de table ou de vue sur lesquelles est construit l'index.|  
+|**index_description**|**varchar (210)**|Description d'index incluant le groupe de fichiers sur lequel il est situé.|  
+|**index_keys**|**nvarchar (2078)**|Colonnes de table ou de vue sur lesquelles est construit l'index.|  
   
  Le nom d'une colonne indexée décroissante apparaît dans l'ensemble de résultats, suivi du signe moins (-) ; une colonne indexée croissante (l'ordre de tri par défaut) apparaît sous son seul nom.  
   
 ## <a name="remarks"></a>Notes  
- Si l’index ont été définis à l’aide de l’option NORECOMPUTE de UPDATE STATISTICS, ces informations sont incluses dans le **index_description** colonne.  
+ Si des index ont été définis à l’aide de l’option NORECOMPUTE de UPDATE STATISTICs, ces informations sont incluses dans la colonne **index_description** .  
   
- **sp_helpindex** expose uniquement les colonnes d’index pouvant être ordonnées ; par conséquent, elle n’expose pas d’informations sur les index XML ou spatiaux.  
+ **sp_helpindex** expose uniquement les colonnes d’index ordonnées ; par conséquent, il n’expose pas d’informations sur les index XML ou les index spatiaux.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
@@ -74,7 +74,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées du moteur de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

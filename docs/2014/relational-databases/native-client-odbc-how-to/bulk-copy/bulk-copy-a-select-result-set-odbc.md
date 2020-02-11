@@ -1,5 +1,5 @@
 ---
-title: Un jeu de résultats SELECT (ODBC) de copie en bloc | Microsoft Docs
+title: Copier en bloc un jeu de résultats SELECT (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a90937eafc531612968ac4248b329ba7a0a47d83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225529"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>Copier en bloc un jeu de résultats SELECT (ODBC)
   Cet exemple montre comment utiliser les fonctions de copie en bloc pour copier en bloc le jeu de résultats d'une instruction SELECT. Cet exemple a été développé pour la version 3.0 d'ODBC ou une version ultérieure.  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez conserver des informations d’identification, vous devez les chiffrer avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-bulk-copy-out-the-result-set-of-a-select-statement"></a>Pour copier en bloc le jeu de résultats d'une instruction SELECT  
   
@@ -37,22 +37,22 @@ ms.locfileid: "63225529"
   
 4.  Appelez [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) pour définir les informations suivantes :  
   
-    -   Spécifiez NULL pour le *szTable* paramètre.  
+    -   Spécifiez NULL pour le paramètre *szTable* .  
   
     -   Nom du fichier de données recevant les données du jeu de résultats.  
   
     -   Nom d'un fichier de données devant recevoir tous les messages d'erreur de copie en bloc (spécifiez NULL si vous ne souhaitez pas de fichier de message).  
   
-    -   La direction de la copie : DB_OUT.  
+    -   Direction de la copie : DB_OUT.  
   
-5.  Appelez [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), définissez eOption avec la valeur BCPHINTS et placez dans iValue un pointeur vers un tableau SQLTCHAR contenant l’instruction SELECT.  
+5.  Appelez [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), affectez à eOption la valeur valeur BCPHINTS et placez dans iValue un pointeur vers un tableau SQLTCHAR contenant l’instruction SELECT.  
   
 6.  Appelez [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) pour exécuter l’opération de copie en bloc.  
   
- Durant ces étapes, le fichier est créé au format natif. Vous pouvez convertir les valeurs de données à d’autres types de données à l’aide de [bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Pour plus d’informations, consultez [créer un fichier de Format de copie en bloc &#40;ODBC&#41;](create-a-bulk-copy-format-file-odbc.md).  
+ Durant ces étapes, le fichier est créé au format natif. Vous pouvez convertir les valeurs de données en d’autres types de données à l’aide de [bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Pour plus d’informations, consultez [créer un fichier de format de copie en bloc &#40;ODBC&#41;](create-a-bulk-copy-format-file-odbc.md).  
   
 ## <a name="example"></a>Exemple  
- Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’accueil des [exemples et projets de communautés Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).) Cette source de données doit être basée sur le pilote ODBC fourni par le système d'exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
+ Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’hébergement [exemples et projets de la communauté Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .) Cette source de données doit être basée sur le pilote ODBC fourni par le système d’exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
@@ -163,6 +163,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Copie en bloc avec les SQL Server ODBC Driver procédures &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+ [Rubriques de procédures relatives à la copie en bloc avec le SQL Server ODBC Driver &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: DELETE, méthode (Collection de paramètres ADO) | Microsoft Docs
+title: Delete, méthode (collection Parameters ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 160c575e-df63-4ade-a2d3-5fd8f72e70cc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 965ef1bc84961e3358c530180bfe4e99249b0bc7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933175"
 ---
 # <a name="delete-method-ado-parameters-collection"></a>Delete, méthode (collection Parameters ADO)
-Supprime un objet à partir de la [paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md) collection.  
+Supprime un objet de la collection de [paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md) .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,16 +34,16 @@ Parameters.Delete Index
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *Index*  
- Un **chaîne** valeur qui contient le nom de l’objet que vous souhaitez supprimer, ou position ordinale de l’objet (index) dans la collection.  
+ *Évaluer*  
+ Valeur de **chaîne** qui contient le nom de l’objet à supprimer ou la position ordinale (index) de l’objet dans la collection.  
   
 ## <a name="remarks"></a>Notes  
- À l’aide de la **supprimer** méthode sur une collection vous permet de supprimer un des objets dans la collection. Cette méthode est uniquement disponible sur le **paramètres** collection d’un [commande](../../../ado/reference/ado-api/command-object-ado.md) objet. Vous devez utiliser le [paramètre](../../../ado/reference/ado-api/parameter-object.md) l’objet [nom](../../../ado/reference/ado-api/name-property-ado.md) propriété ou son index de collection lorsque vous appelez le **supprimer** variable méthode un objet n’est pas un argument valide.  
+ L’utilisation de la méthode **Delete** sur une collection vous permet de supprimer l’un des objets de la collection. Cette méthode est uniquement disponible dans la collection **Parameters** d’un objet [Command](../../../ado/reference/ado-api/command-object-ado.md) . Vous devez utiliser la propriété [Name](../../../ado/reference/ado-api/name-property-ado.md) de l’objet [Parameter](../../../ado/reference/ado-api/parameter-object.md) ou son index de collection lors de l’appel de la méthode **Delete** . une variable objet n’est pas un argument valide.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Parameters, collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [DELETE, méthode (Collection de champs ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
- [DELETE, méthode (objet Recordset ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
+ [Delete, méthode (collection Fields ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
+ [Delete, méthode (objet Recordset ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [DeleteRecord, méthode (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)

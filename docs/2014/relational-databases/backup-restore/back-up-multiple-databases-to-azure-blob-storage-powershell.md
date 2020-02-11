@@ -11,17 +11,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 701928a722e14cf3eb5c1e678a1dd764597f46ec
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783087"
 ---
 # <a name="use-powershell-to-backup-multiple-databases-to-azure-blob-storage-service"></a>Utiliser PowerShell pour sauvegarder plusieurs bases de données dans le service Stockage Blob Azure
   Cette rubrique fournit des exemples de script pouvant être utilisés pour automatiser les sauvegardes dans le service Stockage Blob Azure à l’aide d’applets de commande PowerShell.  
   
 ## <a name="overview-of-powershell-cmdlets-for-backup-and-restore"></a>Présentation des applets de commande PowerShell pour la sauvegarde et la restauration  
- `Backup-SqlDatabase` et `Restore-SqlDatabase` sont les deux principales applets de commande disponibles pour effectuer des opérations de sauvegarde et de restauration. De plus, d’autres applets de commande peuvent être nécessaires pour automatiser les sauvegardes dans le service Stockage Blob Azure, comme l’ensemble d’applets de commande **SqlCredential**. Voici une liste des applets de commande PowerShell disponibles dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , qui sont utilisées dans les opérations de sauvegarde et de restauration :  
+ 
+  `Backup-SqlDatabase` et `Restore-SqlDatabase` sont les deux principales applets de commande disponibles pour effectuer des opérations de sauvegarde et de restauration. De plus, d’autres applets de commande peuvent être nécessaires pour automatiser les sauvegardes dans le service Stockage Blob Azure, comme l’ensemble d’applets de commande **SqlCredential**. Voici une liste des applets de commande PowerShell disponibles dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , qui sont utilisées dans les opérations de sauvegarde et de restauration :  
   
  Backup-SqlDatabase  
  Cette applet de commande permet de créer une sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -49,7 +50,7 @@ ms.locfileid: "72783087"
   
  Voici quelques observations concernant les exemples de script :  
   
-1.  **Parcourir les chemins d'accès PowerShell SQL Server :** Windows PowerShell implémente des applets de commande pour parcourir la structure de chemin d'accès qui représente la hiérarchie des objets pris en charge par un fournisseur PowerShell. Une fois que vous avez accédé à un nœud dans le chemin d'accès, vous pouvez utiliser d'autres applets de commande pour exécuter des opérations de base sur l'objet actif.  
+1.  **Navigation SQL Server PowerShell chemins d’accès :** Windows PowerShell implémente des applets de commande pour parcourir la structure de chemin d’accès qui représente la hiérarchie des objets pris en charge par un fournisseur PowerShell. Une fois que vous avez accédé à un nœud dans le chemin d'accès, vous pouvez utiliser d'autres applets de commande pour exécuter des opérations de base sur l'objet actif.  
   
 2.  Applet de commande `Get-ChildItem` : Les informations retournées par `Get-ChildItem` dépendent de l'emplacement dans un chemin d'accès PowerShell SQL Server. Par exemple, si l'emplacement est au niveau de l'ordinateur, cette applet de commande retourne toutes les instances du moteur de base de données SQL Server installées sur l'ordinateur. Si l'emplacement est au niveau de l'objet, tel que des bases de données, cette applet de commande retourne une liste d'objets de base de données.  Par défaut, l'applet de commande `Get-ChildItem` ne retourne pas d'objets système.  Pour afficher les objets système, utilisez le paramètre -Force.  
   

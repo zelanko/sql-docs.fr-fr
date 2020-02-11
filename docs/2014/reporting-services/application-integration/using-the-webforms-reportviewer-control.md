@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa1b5f0cc1e4952523f53f02e219db42aa5b3c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63238218"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Utilisation du contrôle WebForms ReportViewer
@@ -24,9 +24,9 @@ ms.locfileid: "63238218"
   
 ###### <a name="to-use-the-reportviewer-control-in-a-web-application"></a>Pour utiliser le contrôle ReportViewer dans une application Web  
   
-1.  Créez un site web [!INCLUDE[msCoName](../../includes/msconame-md.md)] ASP.NET à l’aide de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] ou de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Créez un nouveau [!INCLUDE[msCoName](../../includes/msconame-md.md)] site Web ASP.net à l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] aide [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]de ou de.  
   
-     \- Ou -  
+     \-Ni  
   
      Ouvrez un site Web ASP.NET existant et ajoutez un nouveau Web Form.  
   
@@ -38,11 +38,12 @@ ms.locfileid: "63238218"
   
      Le contrôle **ReportViewer** nommé reportViewer1 est ajouté au formulaire.  
   
- Une fois le contrôle ajouté au formulaire, la balise active **Tâches ReportViewer** s’affiche et vous invite à sélectionner un rapport. Si le rapport que vous souhaitez afficher a été déployé sur un serveur de rapports, sélectionnez l’option **\<Rapport du serveur>** dans la liste déroulante **Choisir un rapport**. Une fois l’option **\<Rapport du serveur>** sélectionnée, deux propriétés supplémentaires apparaissent : **URL de Report Server** et **Chemin d’accès au rapport**. **L’URL de Report Server** correspond à l’adresse du serveur de rapports et le **Chemin d’accès au rapport** correspond au chemin complet du rapport à afficher.  
+ Une fois le contrôle ajouté au formulaire, la balise active **Tâches ReportViewer** s’affiche et vous invite à sélectionner un rapport. Si le rapport que vous souhaitez afficher a été déployé sur un serveur de rapports, ** \<** sélectionnez l’option>de rapport du serveur dans la liste déroulante **choisir un rapport** . Une fois l’option de ** \<>de rapport du serveur** sélectionnée, deux propriétés supplémentaires s’affichent : URL du serveur de **rapports** et **chemin d’accès au rapport**. 
+  **L’URL de Report Server** correspond à l’adresse du serveur de rapports et le **Chemin d’accès au rapport** correspond au chemin complet du rapport à afficher.  
   
  Si vous souhaitez afficher un rapport en mode local, sélectionnez l’option **Concevoir un nouveau rapport** afin de lancer le Concepteur de rapports, ou sélectionnez un rapport déjà inclus dans le projet existant. Après avoir sélectionné un rapport, veillez à entrer le nom du fichier de définition de rapport RDLC dans la propriété **ReportPath** du contrôle ReportViewer. Cette propriété apparaît sous le nœud **LocalReport** dans le volet **Propriétés**.  
   
- Vous avez l'option de masquer un ou plusieurs éléments dans la barre d'outils ReportViewer lorsque le rapport est rendu. Par exemple, vous pouvez masquer le bouton d'impression. Pour masquer les éléments de barre d’outils, définissez les propriétés ReportViewer suivantes `False` dans le **propriétés** volet.  
+ Vous avez l'option de masquer un ou plusieurs éléments dans la barre d'outils ReportViewer lorsque le rapport est rendu. Par exemple, vous pouvez masquer le bouton d'impression. Pour masquer les éléments de la barre d’outils, définissez `False` les propriétés ReportViewer suivantes sur dans le volet **Propriétés** .  
   
 -   `ShowBackButton`  
   
@@ -61,7 +62,7 @@ ms.locfileid: "63238218"
 ## <a name="viewing-reports-in-remote-processing-mode"></a>Affichage de rapports en mode de traitement à distance  
  L'exemple suivant montre comment effectuer un rendu d'un rapport qui a été déployé sur un serveur de rapports. Cet exemple utilise le rapport Sales Order Detail inclus avec le projet d'exemples de rapports [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
- L'exemple utilise l'authentification Windows intégrée. Vous devez par conséquent commencer par activer l'emprunt d'identité. Pour faire cela, insérez la ligne suivante dans le `web.config` fichier :  
+ L'exemple utilise l'authentification Windows intégrée. Vous devez par conséquent commencer par activer l'emprunt d'identité. Pour ce faire, insérez la ligne suivante dans `web.config` le fichier :  
   
 ```  
 <!-- Web.config file. -->  
@@ -157,7 +158,7 @@ End Class
   
 5.  Cliquez avec le bouton droit sur le fichier Sales Order Detail.rdl dans l’Explorateur de solutions et sélectionnez **Renommer**. Renommez le rapport en **Sales Order Detail.rdlc** et appuyez sur Entrée.  
   
-     Si l’Explorateur de solutions n’est pas visible, vous pouvez l’ouvrir à partir du menu **Affichage** en sélectionnant Explorateur de solutions.  
+     Si Explorateur de solutions n’est pas visible, vous pouvez l’ouvrir à partir du menu **affichage** en sélectionnant Explorateur de solutions.  
   
  L'exemple de code suivant permet de créer un dataset pour les données de commande client et d'effectuer un rendu du rapport Sales Order Detail (détail de la commande) en mode local.  
   
@@ -479,6 +480,6 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Intégration de Reporting Services à l’aide des contrôles ReportViewer](integrating-reporting-services-using-reportviewer-controls.md)  
+ [Intégration de Reporting Services à l'aide des contrôles ReportViewer](integrating-reporting-services-using-reportviewer-controls.md)  
   
   

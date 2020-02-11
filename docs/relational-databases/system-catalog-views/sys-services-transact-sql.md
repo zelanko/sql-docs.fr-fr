@@ -1,5 +1,5 @@
 ---
-title: Sys.Services (Transact-SQL) | Microsoft Docs
+title: sys. services (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,10 +20,10 @@ ms.assetid: 16d0b0c5-5cce-469b-aa3d-4b9248e0c085
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c19e65117a03de6b473eced3c7c1379943c851a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078659"
 ---
 # <a name="sysservices-transact-sql"></a>sys.services (Transact-SQL)
@@ -33,9 +33,9 @@ ms.locfileid: "68078659"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Nom du service qui respecte la casse, unique au sein de la base de données. Cette colonne n'accepte pas la valeur NULL.|  
+|**nomme**|**sysname**|Nom du service qui respecte la casse, unique au sein de la base de données. Cette colonne n'accepte pas la valeur NULL.|  
 |**service_id**|**int**|ID du service. Cette colonne n'accepte pas la valeur NULL.|  
-|**principal_id**|**Int**|Identificateur du principal de base de données qui est propriétaire du service. Accepte la valeur NULL.|  
+|**principal_id**|**int**|Identificateur du principal de base de données qui est propriétaire du service. Accepte la valeur NULL.|  
 |**service_queue_id**|**int**|Identificateur d'objet associé à la file d'attente utilisée par le service. Cette colonne n'accepte pas la valeur NULL.|  
   
 ## <a name="permissions"></a>Autorisations  

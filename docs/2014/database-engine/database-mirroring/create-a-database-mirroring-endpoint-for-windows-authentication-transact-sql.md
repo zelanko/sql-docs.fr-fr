@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43bb7fdd5b9c8cf8a73c423ac21e8ba7f779ec79
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797925"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Créer un point de terminaison de mise en miroir de bases de données pour l'authentification Windows (Transact-SQL)
@@ -31,9 +31,9 @@ ms.locfileid: "72797925"
   
  **Dans cette rubrique**  
   
--   **Before you begin:**  [Security](#Security)  
+-   **Avant de commencer :**  [sécurité](#Security)  
   
--   **Pour créer un point de terminaison de mise en miroir de bases de données, utilisez :**  [Transact-SQL](#TsqlProcedure)  
+-   **Pour créer un point de terminaison de mise en miroir de bases de données, utilisez :**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -41,10 +41,11 @@ ms.locfileid: "72797925"
  Les méthodes d'authentification et de chiffrement d'instance de serveur sont établies par l'administrateur système.  
   
 > [!IMPORTANT]  
->  L'algorithme RC4 est déconseillé. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Nous vous recommandons d'utiliser AES.  
+>  L'algorithme RC4 est déconseillé. 
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Nous vous recommandons d'utiliser AES.  
   
-####  <a name="Permissions"></a> Permissions  
- Requiert l'autorisation CREATE ENDPOINT ou l'appartenance au rôle serveur fixe sysadmin. Pour plus d’informations, consultez [GRANT – Octroi d’autorisations de point de terminaison &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql).  
+####  <a name="Permissions"></a> Autorisations  
+ Requiert l'autorisation CREATE ENDPOINT ou l'appartenance au rôle serveur fixe sysadmin. Pour plus d’informations, consultez [Autorisations de point de terminaison GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql).  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
@@ -63,39 +64,39 @@ ms.locfileid: "72797925"
     > [!IMPORTANT]  
     >  S'il existe déjà un point de terminaison de mise en miroir de base de données pour l'instance de serveur, utilisez-le pour toutes les autres sessions établies sur l'instance de serveur.  
   
-4.  Pour utiliser Transact-SQL afin de créer un point de terminaison qui sera utilisé avec l'authentification Windows, utilisez une instruction CREATE ENDPOINT. L'instruction prend la forme générale suivante :  
+4.  Pour utiliser Transact-SQL afin de créer un point de terminaison qui sera utilisé avec l'authentification Windows, utilisez une instruction CREATE ENDPOINT. L'instruction prend la forme générale suivante :  
   
-     CREATE ENDPOINT *\<nom_point_de_terminaison>*  
+     Créer un point de terminaison * \<EndpointName>*  
   
      STATE=STARTED  
   
-     AS TCP ( LISTENER_PORT = *\<liste_ports_écoute>* )  
+     As TCP (LISTENER_PORT = * \<listenerPortList>* )  
   
      FOR DATABASE_MIRRORING  
   
      (  
   
-     [ AUTHENTICATION = **WINDOWS** [ *\<méthode_autorisation>* ]  
+     [Authentication = **Windows** [ * \<authorizationMethod>* ]  
   
      ]  
   
-     [ [ **,** ] ENCRYPTION = **REQUIRED**  
+     [ [**,**] ENCRYPTION = **REQUIRED**  
   
-     [ ALGORITHM { *\<algorithme>* } ]  
+     [Algorithm { * \<Algorithm>* }]  
   
      ]  
   
-     [ **,** ] ROLE = *\<rôle>*  
+     [**,**] ROLE = *\<rôle>*  
   
      )  
   
-     où  
+     where  
   
-    -   *\<nom_point_de_terminaison>* est un nom unique pour le point de terminaison de mise en miroir de bases de données de l’instance de serveur.  
+    -   EndpointName>est un nom unique pour le point de terminaison de mise en miroir de bases de données de l’instance de serveur. * \<*  
   
     -   STARTED spécifie que le point de terminaison doit être démarré et commencer à écouter les connexions. Un point de terminaison de mise en miroir de base de données est en général créé dans l'état STARTED. D'une autre manière, vous pouvez démarrer une session dans un état STOPPED (par défaut) ou DISABLED.  
   
-    -   *\<liste_ports_écoute>* est un numéro de port unique (*nnnn*) sur lequel le serveur doit écouter les messages de mise en miroir de bases de données. Seul le protocole TCP est autorisé ; la spécification d'un autre protocole produit une erreur.  
+    -   listenerPortList>est un numéro de port unique (*nnnn*) sur lequel le serveur doit écouter les messages de mise en miroir de bases de données. * \<* Seul le protocole TCP est autorisé ; la spécification d'un autre protocole produit une erreur.  
   
          Un numéro de port peut servir une fois seulement pour chaque ordinateur. Un point de terminaison de mise en miroir de bases de données peut utiliser n'importe quel point disponible sur le système local lors de la création du point de terminaison. Pour identifier les ports en cours d'utilisation par les points de terminaison TCP, utilisez l'instruction Transact-SQL suivante :  
   
@@ -106,7 +107,7 @@ ms.locfileid: "72797925"
         > [!IMPORTANT]  
         >  Chaque instance de serveur nécessite un port d'écoute et un seul.  
   
-    -   Pour l'authentification Windows, l'option AUTHENTICATION est facultative, à moins que vous vouliez que le point de terminaison utilise uniquement NTLM ou Kerberos pour authentifier les connexions. *\<méthode_autorisation>* spécifie la méthode utilisée pour authentifier les connexions comme l’une des suivantes : NTLM, KERBEROS ou NEGOTIATE. NEGOTIATE, méthode par défaut, impose au point de terminaison d'utiliser le protocole de négociation Windows pour choisir NTLM ou Kerberos. La négociation active les connexions avec ou sans authentification, selon le niveau d'authentification du point de terminaison opposé.  
+    -   Pour l'authentification Windows, l'option AUTHENTICATION est facultative, à moins que vous vouliez que le point de terminaison utilise uniquement NTLM ou Kerberos pour authentifier les connexions. authorizationMethod>spécifie la méthode utilisée pour authentifier les connexions comme l’une des suivantes : NTLM, Kerberos ou Negotiate. * \<* NEGOTIATE, méthode par défaut, impose au point de terminaison d'utiliser le protocole de négociation Windows pour choisir NTLM ou Kerberos. La négociation active les connexions avec ou sans authentification, selon le niveau d'authentification du point de terminaison opposé.  
   
     -   ENCRYPTION est défini sur REQUIRED par défaut. En d'autres termes, toutes les connexions à ce point de terminaison doivent utiliser le chiffrement. Toutefois, vous pouvez désactiver le chiffrement ou le rendre facultatif sur un point de terminaison. Les alternatives sont les suivantes :  
   
@@ -114,18 +115,19 @@ ms.locfileid: "72797925"
         |-----------|----------------|  
         |DISABLED|Spécifie que les données envoyées sur une connexion ne sont pas chiffrées.|  
         |SUPPORTED|Spécifie que les données sont chiffrées uniquement si le point de terminaison opposé spécifie SUPPORTED ou REQUIRED.|  
-        |REQUIRED|Spécifie que les données envoyées sur une connexion doivent être chiffrées.|  
+        |OBLIGATOIRE|Spécifie que les données envoyées sur une connexion doivent être chiffrées.|  
   
          Si un point de terminaison exige un chiffrement, l'autre point de terminaison doit avoir l'instruction ENCRYPTION définie sur SUPPORTED ou REQUIRED.  
   
-    -   *\<algorithme>* propose la possibilité de spécifier les normes de chiffrement du point de terminaison. La valeur pour *\<algorithme>* peut être l’un des algorithmes ou combinaisons d’algorithmes suivants : RC4, AES, AES RC4 ou RC4 AES.  
+    -   l’algorithme>permet de spécifier les normes de chiffrement pour le point de terminaison. * \<* La valeur de * \<l’algorithme>* peut être l’un des algorithmes ou combinaisons d’algorithmes suivants : RC4, AES, AES RC4 ou RC4 AES.  
   
          AES RC4 spécifie que ce point de terminaison va négocier l'algorithme de chiffrement et donner la préférence à l'algorithme AES. RC4 AES spécifie que ce point de terminaison va négocier l'algorithme de chiffrement et donner la préférence à l'algorithme RC4. Si les deux points de terminaison spécifient les deux algorithmes mais dans des ordres différents, le point de terminaison acceptant la connexion a le dernier mot.  
   
         > [!NOTE]  
-        >  L'algorithme RC4 est déconseillé. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Nous vous recommandons d'utiliser AES.  
+        >  L'algorithme RC4 est déconseillé. 
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Nous vous recommandons d'utiliser AES.  
   
-    -   *\<rôle>* définit le ou les rôles que le serveur peut endosser. La spécification de ROLE est obligatoire. Toutefois, le rôle du point de terminaison concerne uniquement la mise en miroir de bases de données. Pour [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], le rôle du point de terminaison est ignoré.  
+    -   le rôle>définit le ou les rôles que le serveur peut effectuer. * \<* La spécification de ROLE est obligatoire. Toutefois, le rôle du point de terminaison concerne uniquement la mise en miroir de bases de données. Pour [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], le rôle du point de terminaison est ignoré.  
   
          Pour qu'une instance de serveur puisse occuper un rôle pour une session de mise en miroir de base de données et un rôle différent pour une autre session, spécifiez ROLE=ALL. Pour restreindre la fonction d'une instance de serveur à partenaire ou témoin, spécifiez ROLE=PARTNER ou ROLE=WITNESS respectivement.  
   
@@ -137,7 +139,7 @@ ms.locfileid: "72797925"
     > [!NOTE]  
     >  Pour modifier un point de terminaison existant, utilisez [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql).  
   
-###  <a name="TsqlExample"></a> Exemple : Création de points de terminaison pour prendre en charge la mise en miroir de bases de données (Transact-SQL)  
+###  <a name="TsqlExample"></a>Exemple : création de points de terminaison pour la prise en charge de la mise en miroir de bases de données (Transact-SQL)  
  L'exemple suivant crée des points de terminaison de mise en miroir de bases de données pour les instances de serveur par défaut sur trois systèmes informatiques distincts :  
   
 |Rôle de l'instance de serveur|Nom de l'ordinateur hôte|  
@@ -177,11 +179,11 @@ CREATE ENDPOINT endpoint_mirroring
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> Tâches connexes  
+##  <a name="RelatedTasks"></a> Tâches associées  
 
 ### <a name="to-configure-a-database-mirroring-endpoint"></a>Pour configurer un point de terminaison de mise en miroir de bases de données
   
--   [Créer un point de terminaison de mise en &#40;miroir de bases de données pour groupes de disponibilité AlwaysOn SQL Server PowerShell&#41;](../availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Créer un point de terminaison de mise en miroir de bases de données pour groupes de disponibilité AlwaysOn &#40;SQL Server PowerShell&#41;](../availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Utiliser des certificats pour un point de terminaison de mise en miroir de bases de données &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
@@ -201,6 +203,6 @@ GO
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
  [Choisir un algorithme de chiffrement](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   
- [Spécifier une adresse réseau de serveur &#40;mise en miroir de bases de données&#41;](specify-a-server-network-address-database-mirroring.md)   
- [Exemple : Configurer la mise en miroir de bases de données à l’aide de l’authentification Windows &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
+ [Spécifiez une adresse réseau de serveur &#40;&#41;de mise en miroir de bases de données](specify-a-server-network-address-database-mirroring.md)   
+ [Exemple : configuration de la mise en miroir de bases de données à l’aide de l’authentification Windows &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
  [Point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)  

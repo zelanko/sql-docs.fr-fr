@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_filestream_file_io_handles (Transact-SQL) | Microsoft Docs
+title: sys. dm_filestream_file_io_handles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,34 +19,34 @@ ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a96bcedaa3922ebb0691ac949f9eb15ed28336b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68103297"
 ---
-# <a name="sysdmfilestreamfileiohandles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
+# <a name="sysdm_filestream_file_io_handles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Affiche les descripteurs de fichiers connus par le propriétaire de l'espace de noms (NSO, Namespace Owner). Handles de FileStream un client obtient à l’aide **OpenSqlFilestream** sont affichés par cette vue.  
+  Affiche les descripteurs de fichiers connus par le propriétaire de l'espace de noms (NSO, Namespace Owner). Les handles FileStream qu’un client a obtenu à l’aide de **OpenSqlFilestream** sont affichés par cet affichage.  
   
-|colonne|type|Description|  
+|Colonne|Type|Description|  
 |------------|----------|-----------------|  
-|**handle_context_address**|**varbinary(8)**|Affiche l’adresse de la structure NSO interne associée au handle du client. Autorise la valeur NULL.|  
+|**handle_context_address**|**varbinary (8)**|Affiche l’adresse de la structure NSO interne associée au handle du client. Autorise la valeur NULL.|  
 |**creation_request_id**|**int**|Affiche un champ de la requête d'E/S REQ_PRE_CREATE utilisé pour créer ce handle. N'accepte pas la valeur NULL.|  
 |**creation_irp_id**|**int**|Affiche un champ de la requête d'E/S REQ_PRE_CREATE utilisé pour créer ce handle. N'accepte pas la valeur NULL|  
-|**handle_id**|**Int**|Affiche l'ID unique de ce handle qui est attribué par le pilote. N'accepte pas la valeur NULL.|  
-|**creation_client_thread_id**|**varbinary(8)**|Affiche un champ de la requête d'E/S REQ_PRE_CREATE utilisé pour créer ce handle. Autorise la valeur NULL.|  
-|**creation_client_process_id**|**varbinary(8)**|Affiche un champ de la requête d'E/S REQ_PRE_CREATE utilisé pour créer ce handle. Autorise la valeur NULL.|  
-|**filestream_transaction_id**|**varbinary(128)**|Affiche l'ID de la transaction associée au handle donné. C’est la valeur retournée par la **get_filestream_transaction_context** (fonction). Ce champ permet de joindre à la **sys.dm_filestream_file_io_requests** vue. Autorise la valeur NULL.|  
-|**access_type**|**nvarchar(60)**|N'accepte pas la valeur NULL.|  
-|**logical_path**|**nvarchar (256)**|Affiche le nom de chemin d'accès logique du fichier ouvert par ce handle. Il s’agit du même chemin d’accès qui est retourné par la **. Chemin d’accès** méthode de **varbinary**(**max**) filestream. Autorise la valeur NULL.|  
-|**chemin physique**|**nvarchar (256)**|Affiche le nom de chemin d'accès NTFS réel du fichier. Il s’agit du même chemin d’accès retourné par la **. PhysicalPathName** méthode de la **varbinary**(**max**) filestream. Il est activé par l'indicateur de suivi 5556. Autorise la valeur NULL.|  
+|**handle_id**|**int**|Affiche l'ID unique de ce handle qui est attribué par le pilote. N'accepte pas la valeur NULL.|  
+|**creation_client_thread_id**|**varbinary (8)**|Affiche un champ de la requête d'E/S REQ_PRE_CREATE utilisé pour créer ce handle. Autorise la valeur NULL.|  
+|**creation_client_process_id**|**varbinary (8)**|Affiche un champ de la requête d'E/S REQ_PRE_CREATE utilisé pour créer ce handle. Autorise la valeur NULL.|  
+|**filestream_transaction_id**|**varbinary (128)**|Affiche l'ID de la transaction associée au handle donné. Il s’agit de la valeur retournée par la fonction **GET_FILESTREAM_TRANSACTION_CONTEXT** . Utilisez ce champ pour effectuer une jointure à la vue **sys. dm_filestream_file_io_requests** . Autorise la valeur NULL.|  
+|**access_type**|**nvarchar (60)**|N'accepte pas la valeur NULL.|  
+|**logical_path**|**nvarchar (256)**|Affiche le nom de chemin d'accès logique du fichier ouvert par ce handle. Il s’agit du même chemin d’accès que celui retourné par **. Méthode PathName** de **varbinary**(**Max**) FileStream. Autorise la valeur NULL.|  
+|**physical_path**|**nvarchar (256)**|Affiche le nom de chemin d'accès NTFS réel du fichier. Il s’agit du même nom de chemin d’accès retourné par **. Méthode PhysicalPathName** de **varbinary**(**Max**) FileStream. Il est activé par l'indicateur de suivi 5556. Autorise la valeur NULL.|  
   
 ## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [FileStream et des vues de gestion dynamique FileTable &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)  
+ [Vues de gestion dynamique FileStream et filetable &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Valeur de propriété, exemple (VB) | Microsoft Docs
+title: Value, exemple de propriété (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ebc1b9fcd12f17679787985d5653de01ebbdd435
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938781"
 ---
 # <a name="value-property-example-vb"></a>Value, exemple de propriété (VB)
-Cet exemple montre la [valeur](../../../ado/reference/ado-api/value-property-ado.md) propriété avec [champ](../../../ado/reference/ado-api/field-object.md) et [propriété](../../../ado/reference/ado-api/property-object-ado.md) objets en affichant les valeurs de champ et de propriété pour le ***employés*** table.  
+Cet exemple illustre la propriété [value](../../../ado/reference/ado-api/value-property-ado.md) avec des objets [Field](../../../ado/reference/ado-api/field-object.md) et [Property](../../../ado/reference/ado-api/property-object-ado.md) en affichant les valeurs des champs et des propriétés de la table ***Employees*** .  
   
 ```  
 'BeginValueVB  
@@ -101,6 +101,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet de champ](../../../ado/reference/ado-api/field-object.md)   
- [Objet de propriété (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
+ [Field, objet](../../../ado/reference/ado-api/field-object.md)   
+ [Property, objet (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Value, propriété (ADO)](../../../ado/reference/ado-api/value-property-ado.md)

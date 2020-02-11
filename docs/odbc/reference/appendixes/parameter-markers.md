@@ -14,29 +14,29 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.openlocfilehash: acb8d5f9687798bc0efa514ee8646b16140fcd36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100580"
 ---
 # <a name="parameter-markers"></a>Marqueurs de paramètres
-Conformément à la spécification SQL-92, une application ne peut pas placer des marqueurs de paramètres dans les emplacements suivants. Pour une liste plus complète, consultez la spécification de SQL-92.  
+Conformément à la spécification SQL-92, une application ne peut pas placer de marqueurs de paramètres aux emplacements suivants. Pour obtenir une liste plus complète, consultez la spécification SQL-92.  
   
--   Dans un **sélectionnez** liste  
+-   Dans une liste de **sélection**  
   
--   À la fois comme *expressions* dans un *prédicat de comparaison*  
+-   À la fois en tant qu' *expressions* dans un *prédicat de comparaison*  
   
--   En tant que les deux opérandes d’un opérateur binaire  
+-   Comme opérandes d’un opérateur binaire  
   
--   En tant que les deux les premier et deuxième opérandes d’un **BETWEEN** opération  
+-   En tant que premier et deuxième opérandes d’une opération **between**  
   
--   Comme le premier et le troisième opérandes d’un **BETWEEN** opération  
+-   Comme les premier et troisième opérandes d’une opération **between**  
   
--   En tant que l’expression et la première valeur d’un **IN** opération  
+-   À la fois l’expression et la première valeur d’une opération **in**  
   
--   Comme opérande d’un opérateur unaire + ou - opération  
+-   Comme opérande d’une opération + or unaire  
   
--   Comme l’argument d’un *référence de jeu (fonction)*  
+-   En tant qu’argument d’une *fonction Set-Function-Reference*  
   
- Pour plus d’informations sur les marqueurs de paramètres, consultez la spécification de SQL-92. Pour plus d’informations sur les paramètres, consultez [paramètres d’instruction](../../../odbc/reference/develop-app/statement-parameters.md).
+ Pour plus d’informations sur les marqueurs de paramètres, consultez la spécification SQL-92. Pour plus d’informations sur les paramètres, consultez [paramètres d’instruction](../../../odbc/reference/develop-app/statement-parameters.md).

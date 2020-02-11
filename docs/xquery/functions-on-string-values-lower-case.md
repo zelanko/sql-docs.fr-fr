@@ -1,5 +1,5 @@
 ---
-title: Fonction LOWER-case (XQuery) | Microsoft Docs
+title: Fonction en minuscules (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a80d869afe67317476a1d68c28afa5456a4a7366
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077667"
 ---
 # <a name="functions-on-string-values---lower-case"></a>Fonctions sur les valeurs de chaîne : lower-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  La fonction LOWER-case convertit chaque caractère dans *$arg* son équivalent en minuscules. La conversion de casse binaire de Microsoft Windows pour les points de code Unicode spécifie le mode de conversion des caractères en minuscules. Cette norme n'est pas identique au mappage de la norme des points de code Unicode.  
+  La fonction en minuscules convertit chaque caractère de *$arg* en son équivalent en minuscules. La conversion de casse binaire de Microsoft Windows pour les points de code Unicode spécifie le mode de conversion des caractères en minuscules. Cette norme n'est pas identique au mappage de la norme des points de code Unicode.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,7 +47,7 @@ fn:lower-case($arg as xs:string?) as xs:string
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>R. Conversion d'une chaîne en majuscules.  
- L’exemple suivant modifie la chaîne d’entrée ' abcDEF ! @4» en minuscules.  
+ L’exemple suivant modifie la chaîne d’entrée’abcDEF ! '. @4'en minuscules.  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  
@@ -58,7 +58,7 @@ SELECT @x.value('fn:lower-case(/text()[1])', 'nvarchar(10)');
   
  `abcdef!@4`  
   
-### <a name="b-search-for-a-specific-character-string"></a>B. Pour rechercher une chaîne de caractères spécifique  
+### <a name="b-search-for-a-specific-character-string"></a>B. Rechercher une chaîne de caractères spécifique  
  Cet exemple montre comment utiliser la fonction lower-case pour effectuer une recherche non sensible à la casse.  
   
 ```  

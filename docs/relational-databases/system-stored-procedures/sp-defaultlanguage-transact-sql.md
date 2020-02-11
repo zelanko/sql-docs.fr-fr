@@ -18,21 +18,21 @@ ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: af2402ce4f1e49ee572a9d271497c2798d679070
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68120092"
 ---
-# <a name="spdefaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
+# <a name="sp_defaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Modifie la langue par défaut d'une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) à la place.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez à la place [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) .  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,27 +43,27 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @loginame = ] 'login'` Est le nom de connexion. *connexion* est **sysname**, sans valeur par défaut. *connexion* peut être un existant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou un utilisateur de Windows ou un groupe.  
+`[ @loginame = ] 'login'`Nom de la connexion. *login* est de **type sysname**, sans valeur par défaut. la *connexion* peut être une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion existante ou un utilisateur ou un groupe Windows.  
   
-`[ @language = ] 'language'` Est la langue par défaut de la connexion. *langage* est **sysname**, avec NULL comme valeur par défaut. *langage* doit être une langue valide sur le serveur. Si *langage* n’est pas spécifié, *langage* est définie sur la langue par défaut du serveur ; langue par défaut est définie par le **sp_configure** variable de configuration **langue par défaut**. Le changement de la langue par défaut du serveur n'affecte pas la langue par défaut des connexions existantes.  
+`[ @language = ] 'language'`Est la langue par défaut de la connexion. *Language* est de **type sysname**, avec NULL comme valeur par défaut. la *langue* doit être une langue valide sur le serveur. Si la *langue* n’est pas spécifiée, la *langue* est définie sur la langue par défaut du serveur. la langue par défaut est définie **** par la sp_configure **langue par défaut**de la variable de configuration. Le changement de la langue par défaut du serveur n'affecte pas la langue par défaut des connexions existantes.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_defaultlanguage** appelle ALTER LOGIN, qui prend en charge des options supplémentaires. Pour plus d’informations sur la modification des autres valeurs par défaut de la connexion, consultez [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
+ **sp_defaultlanguage** appelle ALTER LOGIN, qui prend en charge des options supplémentaires. Pour plus d’informations sur la modification d’autres paramètres de connexion par défaut, consultez [ALTER login &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
   
- Utilisez l'instruction SET LANGUAGE pour modifier la langue de la session active. Utilisez le @@LANGUAGE (fonction) pour afficher le paramètre de langue actuel.  
+ Utilisez l'instruction SET LANGUAGE pour modifier la langue de la session active. Utilisez la fonction@LANGUAGE @ pour afficher le paramètre de langue actuel.  
   
  Si la langue par défaut d'une connexion est supprimée du serveur, cette connexion utilise la langue par défaut du serveur. **sp_defaultlanguage** ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
   
- Pour plus d’informations sur les langues installées sur le serveur sont visibles dans le **sys.syslanguages** vue de catalogue.  
+ Les informations sur les langues installées sur le serveur sont visibles dans l’affichage catalogue **sys. syslanguages** .  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER ANY LOGIN.  
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant utilise `ALTER LOGIN` pour changer la langue par défaut de la connexion `Fathima` et choisir l'arabe. Cette méthode est recommandée.  
+ L'exemple suivant utilise `ALTER LOGIN` pour changer la langue par défaut de la connexion `Fathima` et choisir l'arabe. Ceci est la méthode privilégiée.  
   
 ```  
 ALTER LOGIN Fathima WITH DEFAULT_LANGUAGE = Arabic;  
@@ -75,7 +75,7 @@ GO
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
+ [sys. syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

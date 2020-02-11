@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 90780c16c2ba4b94b4e4a88c6f2c249176ef072b
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632719"
 ---
 # <a name="lesson-1-creating-database-objects"></a>Leçon 1 : Création des objets de base de données
@@ -34,17 +34,17 @@ ms.locfileid: "73632719"
   
  Cette leçon contient les rubriques suivantes :  
   
--   [Création d’une base de données &#40;Didacticiel&#41;](lesson-1-1-creating-a-database.md)  
+-   [Didacticiel de création d’un &#40;de base de données&#41;](lesson-1-1-creating-a-database.md)  
   
--   [Création d’une table &#40;Didacticiel&#41;](lesson-1-2-creating-a-table.md)  
+-   [Création d’une table &#40;didacticiel&#41;](lesson-1-2-creating-a-table.md)  
   
--   [Insertion et mise à jour des données dans une table &#40;Didacticiel&#41;](lesson-1-3-inserting-and-updating-data-in-a-table.md)  
+-   [Insertion et mise à jour des données dans une table &#40;didacticiel&#41;](lesson-1-3-inserting-and-updating-data-in-a-table.md)  
   
--   [Lecture des données dans une table &#40;Didacticiel&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
+-   [Lecture des données dans une table &#40;didacticiel&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
   
 -   [Résumé : Création des objets de base de données](lesson-1-5-summary-creating-database-objects.md)  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Création d’une base de données &#40;Didacticiel&#41;](lesson-1-1-creating-a-database.md)  
+ [Didacticiel de création d’un &#40;de base de données&#41;](lesson-1-1-creating-a-database.md)  
   
   

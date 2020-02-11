@@ -16,18 +16,18 @@ ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1b0a20e2bc7a167698353db31e7c0411fb1a6961
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68769142"
 ---
-# <a name="spaddmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
+# <a name="sp_addmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Ajoute un abonnement par extraction de données (pull) à une publication de fusion. Cette procédure stockée est exécutée sur la base de données d'abonnement de l'Abonné.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,16 +51,16 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
   
 `[ @subscriber_type = ] 'subscriber_type'`Type de l’abonné. *subscriber_type* est de type **nvarchar (15)** et peut être **Global**, **local** ou **anonyme**. Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures, les abonnements locaux sont appelés abonnements client et les abonnements globaux sont appelés abonnements serveur.  
   
-`[ @subscription_priority = ] subscription_priority`Priorité de l’abonnement. *subscription_priority*est de type **Real**, avec NULL comme valeur par défaut. Pour les abonnements locaux et anonymes, la priorité est **0,0**. La priorité est utilisée par le résolveur par défaut pour déterminer un gagnant lorsque des conflits sont détectés. Pour les abonnés globaux, la priorité de l'abonnement doit être inférieure à 100, qui correspond à la priorité du serveur de publication.  
+`[ @subscription_priority = ] subscription_priority`Priorité de l’abonnement. *subscription_priority*est **Real**, avec NULL comme valeur par défaut. Pour les abonnements locaux et anonymes, la priorité est **0,0**. La priorité est utilisée par le résolveur par défaut pour déterminer un gagnant lorsque des conflits sont détectés. Pour les abonnés globaux, la priorité de l'abonnement doit être inférieure à 100, qui correspond à la priorité du serveur de publication.  
   
-`[ @sync_type = ] 'sync_type'`Type de synchronisation de l’abonnement. *sync_type*est de type **nvarchar (15)** , avec **Automatic**comme valeur par défaut. Peut être **automatique** ou **aucun**. Si la valeur est **Automatic**, le schéma et les données initiales des tables publiées sont transférés en premier vers l’abonné. Si **aucun**, il est supposé que l’abonné possède déjà le schéma et les données initiales pour les tables publiées. Les données et les tables système sont toujours transférées.  
+`[ @sync_type = ] 'sync_type'`Type de synchronisation de l’abonnement. *sync_type*est de type **nvarchar (15)**, avec **Automatic**comme valeur par défaut. Peut être **automatique** ou **aucun**. Si la valeur est **Automatic**, le schéma et les données initiales des tables publiées sont transférés en premier vers l’abonné. Si **aucun**, il est supposé que l’abonné possède déjà le schéma et les données initiales pour les tables publiées. Les données et les tables système sont toujours transférées.  
   
 > [!NOTE]  
 >  Nous vous déconseillons de spécifier une valeur **None**.  
   
-`[ @description = ] 'description'`Brève description de cet abonnement par extraction. *Description*est de type **nvarchar (255)** , avec NULL comme valeur par défaut. Cette valeur est affichée par le moniteur de réplication dans la colonne **nom convivial** , qui peut être utilisée pour trier les abonnements pour une publication analysée.  
+`[ @description = ] 'description'`Brève description de cet abonnement par extraction. *Description*est de type **nvarchar (255)**, avec NULL comme valeur par défaut. Cette valeur est affichée par le moniteur de réplication dans la colonne **nom convivial** , qui peut être utilisée pour trier les abonnements pour une publication analysée.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
@@ -77,7 +77,7 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
  Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_addmergepullsubscription**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer un abonnement par extraction de données ](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [S’abonner aux Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
  [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   

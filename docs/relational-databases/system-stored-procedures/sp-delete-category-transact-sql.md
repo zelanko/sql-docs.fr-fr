@@ -18,19 +18,19 @@ ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a9a6812e12366900dfc1c5808eaede727c05f958
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68120047"
 ---
-# <a name="spdeletecategory-transact-sql"></a>sp_delete_category (Transact-SQL)
+# <a name="sp_delete_category-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime la catégorie spécifiée de travaux, alertes ou opérateurs du serveur courant.  
   
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,29 +40,29 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @class = ] 'class'` La classe de la catégorie. *classe* est **varchar(8)** , sans valeur par défaut et doit avoir une des valeurs suivantes.  
+`[ @class = ] 'class'`Classe de la catégorie. la classe est de *type* **varchar (8)**, sans valeur par défaut et doit avoir l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**JOB**|Supprime une catégorie de travaux.|  
-|**ALERTE**|Supprime une catégorie d'alertes.|  
-|**OPÉRATEUR**|Supprime une catégorie d'opérateurs.|  
+|**ATTENTE**|Supprime une catégorie de travaux.|  
+|**NOTIFICATION**|Supprime une catégorie d'alertes.|  
+|**AND**|Supprime une catégorie d'opérateurs.|  
   
-`[ @name = ] 'name'` Le nom de la catégorie à supprimer. *nom* est **sysname**, sans valeur par défaut.  
+`[ @name = ] 'name'`Nom de la catégorie à supprimer. *Name* est de **type sysname**, sans valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
- **sp_delete_category** doit être exécuté à partir de la **msdb** base de données.  
+ **sp_delete_category** doit être exécuté à partir de la base de données **msdb** .  
   
  Lorsque vous supprimez une catégorie, tous ses travaux, alertes et opérateurs sont réaffectés à la catégorie par défaut de la classe.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe peut exécuter cette procédure.  
+ Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant supprime la catégorie de travail nommée `AdminJobs`.  

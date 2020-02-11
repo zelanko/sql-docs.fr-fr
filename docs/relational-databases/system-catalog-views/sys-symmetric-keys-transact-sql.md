@@ -1,5 +1,5 @@
 ---
-title: sys.symmetric_keys (Transact-SQL) | Microsoft Docs
+title: sys. symmetric_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -21,30 +21,30 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5b4607c5873889c17e9934cc4f24465fe4e83007
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108933"
 ---
-# <a name="syssymmetrickeys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
+# <a name="syssymmetric_keys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Renvoie une ligne pour chaque clé symétrique créée avec l'instruction CREATE SYMMETRIC KEY.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Nom de la clé. Unique dans la base de données.|  
-|**principal_id**|**Int**|ID du principal de la base de données propriétaire de la clé.|  
-|**symmetric_key_id**|**Int**|ID de la clé. Unique dans la base de données.|  
+|**nomme**|**sysname**|Nom de la clé. Unique dans la base de données.|  
+|**principal_id**|**int**|ID du principal de la base de données propriétaire de la clé.|  
+|**symmetric_key_id**|**int**|ID de la clé. Unique dans la base de données.|  
 |**key_length**|**int**|Longueur de la clé en bits.|  
-|**key_algorithm**|**char(2)**|Algorithme utilisé avec la clé :<br /><br /> R2 = RC2<br /><br /> R4 = RC4<br /><br /> D = DES<br /><br /> D3 = Triple DES<br /><br /> DT = TRIPLE_DES_3KEY<br /><br /> DX = DESX<br /><br /> A1 = AES 128<br /><br /> A2 = AES 192<br /><br /> A3 = AES 256<br /><br /> NA = EKM Key|  
-|**algorithm_desc**|**nvarchar(60)**|Description de l'algorithme utilisé avec la clé :<br /><br /> RC2<br /><br /> RC4<br /><br /> DES<br /><br /> Triple_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256<br /><br /> NULL (algorithmes de gestion de clés extensible uniquement)|  
-|**create_date**|**datetime**|Date de création de la clé.|  
-|**modify_date**|**datetime**|Date de modification de la clé.|  
+|**key_algorithm**|**Char (2)**|Algorithme utilisé avec la clé :<br /><br /> R2 = RC2<br /><br /> R4 = RC4<br /><br /> D = DES<br /><br /> D3 = Triple DES<br /><br /> DT = TRIPLE_DES_3KEY<br /><br /> DX = DESX<br /><br /> A1 = AES 128<br /><br /> A2 = AES 192<br /><br /> A3 = AES 256<br /><br /> NA = EKM Key|  
+|**algorithm_desc**|**nvarchar (60)**|Description de l'algorithme utilisé avec la clé :<br /><br /> RC2<br /><br /> RC4<br /><br /> DES<br /><br /> Triple_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256<br /><br /> NULL (algorithmes de gestion de clés extensible uniquement)|  
+|**create_date**|**DATETIME**|Date de création de la clé.|  
+|**modify_date**|**DATETIME**|Date de modification de la clé.|  
 |**key_guid**|**uniqueidentifier**|GUID (Globally Unique Identifier) associé à la clé. Il est créé automatiquement pour les clés persistantes. Les GUID des clés provisoires sont dérivées de la phrase secrète fournie par l'utilisateur.|  
 |**key_thumbprint**|**sql_variant**|Hachage SHA-1 de la clé. Hachage globalement unique. Pour les clés non-EKM (Gestion de clés extensible), cette valeur sera NULL.|  
-|**provider_type**|**nvarchar(120)**|Type du fournisseur de chiffrement.<br /><br /> CRYPTOGRAPHIC PROVIDER = Clés EKM (Gestion de clés extensible)<br /><br /> NULL = Clés non-EKM (Gestion de clés extensible)|  
+|**provider_type**|**nvarchar (120)**|Type du fournisseur de chiffrement.<br /><br /> CRYPTOGRAPHIC PROVIDER = Clés EKM (Gestion de clés extensible)<br /><br /> NULL = Clés non-EKM (Gestion de clés extensible)|  
 |**cryptographic_provider_guid**|**uniqueidentifier**|GUID du fournisseur de chiffrement. Pour les clés non-EKM (Gestion de clés extensible), cette valeur sera NULL.|  
 |**cryptographic_provider_algid**|**sql_variant**|ID d'algorithme pour le fournisseur de chiffrement. Pour les clés non-EKM (Gestion de clés extensible), cette valeur sera NULL.|  
   

@@ -1,5 +1,5 @@
 ---
-title: Propriété Status (objet Field ADO) | Microsoft Docs
+title: Status, propriété (champ ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,35 +18,35 @@ ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d90eff53ef998a009aecd4d82fc3b502a487c01d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930833"
 ---
 # <a name="status-property-ado-field"></a>Status, propriété (objet Field ADO)
-Indique l’état d’un [champ](../../../ado/reference/ado-api/field-object.md) objet.  
+Indique l’état d’un objet de [champ](../../../ado/reference/ado-api/field-object.md) .  
   
 ## <a name="return-value"></a>Valeur de retour  
- Retourne un [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) valeur. La valeur par défaut est **adFieldOK**.  
+ Retourne une valeur [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) . La valeur par défaut est **adFieldOK**.  
   
 ## <a name="remarks"></a>Notes  
   
-## <a name="record-field-status"></a>Champ État de l’enregistrement  
- Modifications apportées à la valeur d’un **champ** objet dans la collection de champs d’un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet sont mis en cache jusqu'à ce que l’objet [mise à jour](../../../ado/reference/ado-api/update-method.md) méthode est appelée. À ce stade, si la modification à la valeur du champ a provoqué une erreur, OLE DB génère l’erreur **DB_E_ERRORSOCCURRED** (2147749409). La propriété Status d’un de la **champ** des objets dans le **champs** collection qui a provoqué l’erreur contiendra une valeur comprise entre le [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) décrivant la cause de le problème.  
+## <a name="record-field-status"></a>État du champ d’enregistrement  
+ Les modifications apportées à la valeur d’un objet **champ** dans la collection Fields d’un objet [Record](../../../ado/reference/ado-api/record-object-ado.md) sont mises en cache jusqu’à ce que la méthode [Update](../../../ado/reference/ado-api/update-method.md) de l’objet soit appelée. À ce stade, si la modification de la valeur du champ est à l’origine d’une erreur, OLE DB génère l’erreur **DB_E_ERRORSOCCURRED** (2147749409). La propriété Status de l’un des objets **Field** de la collection **Fields** à l’origine de l’erreur contient une valeur du [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) décrivant la cause du problème.  
   
- Pour améliorer les performances, les ajouts et les suppressions à la [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collections de la **enregistrement** objet sont mis en cache jusqu'à ce que le **mise à jour** méthode est appelée et ensuite les modifications sont effectuées dans une mise à jour optimiste de traitement par lots. Si le **mise à jour** méthode n’est pas appelée, le serveur n’est pas mis à jour. Si les mises à jour échouent, une erreur du fournisseur OLE DB (DB_E_ERRORSOCCURRED) est retournée et le **état** propriété indique les valeurs combinées du code d’état de fonctionnement et d’erreur. Par exemple, **adFieldPendingInsert ou supprimé**. Le **état** propriété pour chaque **champ** peut être utilisé pour déterminer pourquoi le **champ** a été pas ajouté, modifié ou supprimé.  
+ Pour améliorer les performances, les ajouts et les suppressions dans les collections [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) de l’objet **Record** sont mis en cache jusqu’à ce que la méthode **Update** soit appelée, puis les modifications sont apportées dans une mise à jour optimiste par lot. Si la méthode **Update** n’est pas appelée, le serveur n’est pas mis à jour. Si des mises à jour échouent, une erreur de fournisseur de OLE DB (DB_E_ERRORSOCCURRED) est retournée et la propriété **Status** indique les valeurs combinées de l’opération et du code d’état d’erreur. Par exemple, **ADFIELDPENDINGINSERT ou adFieldPermissionDenied**. La propriété **Status** de chaque **champ** peut être utilisée pour déterminer la raison pour laquelle le **champ** n’a pas été ajouté, modifié ou supprimé.  
   
- Nombreux types de problèmes rencontrés lors de l’ajout, modification ou suppression d’un **champ** sont signalées par le biais du **état** propriété. Par exemple, si l’utilisateur supprime un **champ**, elle est marquée pour suppression à partir de la **champs** collection. Si le **mise à jour** renvoie une erreur car l’utilisateur a tenté de supprimer un **champ** pour lesquels ils n’ont pas d’autorisation, le **champ** aura un  **État** de **adFieldPermissionDenied OR adFieldPendingDelete**. Appelant le [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) méthode restaure les valeurs d’origine et affecte le **état** à **adFieldOK**.  
+ De nombreux types de problèmes rencontrés lors de l’ajout, de la modification ou de la suppression d’un **champ** sont signalés via la propriété **Status** . Par exemple, si l’utilisateur supprime un **champ**, il est marqué pour suppression de la collection de **champs** . Si la **mise à jour** suivante retourne une erreur parce que l’utilisateur a tenté de supprimer un **champ** pour lequel il n’a pas d’autorisation, le **champ** aura l' **État** **adFieldPermissionDenied ou adFieldPendingDelete**. L’appel de la méthode [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) restaure les valeurs d’origine et définit l' **État** sur **adFieldOK**.  
   
- De même, le **mise à jour** méthode peut retourner une erreur, car un nouveau **champ** a été ajouté et affecter une valeur inappropriée. Dans ce cas, la nouvelle **champ** se trouvent dans le **champs** collection et un état de **adFieldPendingInsert** et, éventuellement, **stocké** (en fonction de votre fournisseur). Vous pouvez fournir une valeur appropriée pour le nouveau **champ** et appelez **mise à jour** à nouveau.  
+ De même, la méthode **Update** peut retourner une erreur, car un nouveau **champ** a été ajouté et une valeur incorrecte lui est affectée. Dans ce cas, le nouveau **champ** se trouve dans la collection de **champs** et a l’état **AdFieldPendingInsert** et peut-être **adFieldCantCreate** (selon votre fournisseur). Vous pouvez fournir une valeur appropriée pour le nouveau **champ** et appeler **à nouveau Update** .  
   
-## <a name="recordset-field-status"></a>État du champ de jeu d’enregistrements  
- Modifications apportées à la valeur d’un **champ** objet dans la collection de champs de l’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sont mis en cache jusqu'à ce que l’objet [mise à jour](../../../ado/reference/ado-api/update-method.md) méthode est appelée. À ce stade, si la modification à la valeur du champ a provoqué une erreur, OLE DB génère l’erreur **DB_E_ERRORSOCCURRED** (2147749409). La propriété Status d’un de la **champ** des objets dans le **champs** collection qui a provoqué l’erreur contiendra une valeur comprise entre le [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) décrivant la cause de le problème.  
+## <a name="recordset-field-status"></a>État du champ du Recordset  
+ Les modifications apportées à la valeur d’un objet **champ** dans la collection Fields d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sont mises en cache jusqu’à ce que la méthode [Update](../../../ado/reference/ado-api/update-method.md) de l’objet soit appelée. À ce stade, si la modification de la valeur du champ est à l’origine d’une erreur, OLE DB génère l’erreur **DB_E_ERRORSOCCURRED** (2147749409). La propriété Status de l’un des objets **Field** de la collection **Fields** à l’origine de l’erreur contient une valeur du [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) décrivant la cause du problème.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Field, objet](../../../ado/reference/ado-api/field-object.md)  
+ [Objet Field](../../../ado/reference/ado-api/field-object.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Status, exemple de propriété (objet Field) (VB)](../../../ado/reference/ado-api/status-property-example-field-vb.md)   
+ [Status, exemple de propriété (Field) (VB)](../../../ado/reference/ado-api/status-property-example-field-vb.md)   
  [Status, exemple de propriété (VC++)](../../../ado/reference/ado-api/status-property-example-vc.md)   

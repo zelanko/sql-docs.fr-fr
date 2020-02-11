@@ -18,13 +18,13 @@ ms.assetid: a8c043ec-b504-4929-ac0e-8babaa99d989
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 83a40c9070db1c997f30db71a6cff226cd0430d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108264"
 ---
-# <a name="spdbincreasedpartitions"></a>sp_db_increased_partitions
+# <a name="sp_db_increased_partitions"></a>sp_db_increased_partitions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Active ou désactive la prise en charge de 15 000 partitions maximum pour la base de données spécifiée.  
@@ -32,7 +32,7 @@ ms.locfileid: "68108264"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,13 +44,13 @@ sp_dp_increased_partitions
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @dbname=] '*database_name*'  
- Nom de la base de données. *dbname* est **sysname** avec une valeur par défaut NULL. Si *dbname* n’est pas spécifié, la base de données actuelle est utilisée.  
+ [ @dbname= ] '*database_name*'  
+ Nom de la base de données. *dbname* est de **type sysname** , avec NULL comme valeur par défaut. Si *dbname* n’est pas spécifié, la base de données active est utilisée.  
   
- [ @increased_partitions=] '*increased_partitions*'  
- Active ou désactive la prise en charge de 15 000 partitions sur la base de données spécifiée. *increased_partitions* est **varchar(6)** avec NULL comme valeur par défaut. Les valeurs acceptées sont ON ou TRUE pour activer la prise en charge et OFF ou FALSE pour la désactiver. Si *increased_partitions* n’est pas spécifié, la procédure retourne 1 pour indiquer la prise en charge est activée pour la base de données spécifiée ou 0 pour indiquer la prise en charge est désactivée.  
+ [ @increased_partitions= ] '*increased_partitions*'  
+ Active ou désactive la prise en charge de 15 000 partitions sur la base de données spécifiée. *increased_partitions* est de type **varchar (6)** avec NULL comme valeur par défaut. Les valeurs acceptées sont ON ou TRUE pour activer la prise en charge et OFF ou FALSE pour la désactiver. Si *increased_partitions* n’est pas spécifié, la procédure retourne la valeur 1 pour indiquer que la prise en charge est activée pour la base de données spécifiée ou 0 pour indiquer que la prise en charge est désactivée.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="permissions"></a>Autorisations  

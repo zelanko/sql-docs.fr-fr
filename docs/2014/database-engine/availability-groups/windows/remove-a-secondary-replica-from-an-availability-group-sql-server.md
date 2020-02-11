@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b927483f5e57272460f1c2f0f1c4b1bca56a3abe
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782937"
 ---
 # <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>Supprimer un réplica secondaire d'un groupe de disponibilité (SQL Server)
@@ -33,7 +33,7 @@ ms.locfileid: "72782937"
   
      [Sécurité](#Security)  
   
--   **Pour supprimer un réplica secondaire, utilisez :**  
+-   **Pour supprimer un réplica secondaire, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "72782937"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **Suivi :**  [Après avoir supprimé un réplica secondaire](#PostBestPractices)  
+-   **Suivi :**  [après la suppression d’un réplica secondaire](#PostBestPractices)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -51,13 +51,13 @@ ms.locfileid: "72782937"
   
 -   Seul un réplica secondaire peut être supprimé d'un groupe de disponibilité.  
   
-###  <a name="Prerequisites"></a> Conditions préalables requises  
+###  <a name="Prerequisites"></a>Conditions préalables  
   
 -   Vous devez être connecté à l'instance de serveur qui héberge le réplica principal du groupe de disponibilité.  
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -88,7 +88,7 @@ ms.locfileid: "72782937"
   
      ALTER AVAILABILITY GROUP *nom_groupe* REMOVE REPLICA ON '*nom_instance*' [,...*n*]  
   
-     où *group_name* est le nom du groupe de disponibilité et *instance_name* est l'instance de serveur où se trouve le réplica secondaire.  
+     où *nom_groupe* est le nom du groupe de disponibilité et *nom_instance* est l'instance de serveur où se trouve le réplica secondaire.  
   
      L’exemple suivant supprime un réplica secondaire du groupe de disponibilité *MyAG* . Le réplica secondaire cible se trouve sur une instance de serveur nommée *HADR_INSTANCE* sur un ordinateur nommé *COMPUTER02*.  
   
@@ -110,18 +110,18 @@ ms.locfileid: "72782937"
     ```  
   
     > [!NOTE]  
-    >  Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour plus d’informations, consultez [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
--   [fournisseur PowerShell SQL Server](../../../powershell/sql-server-powershell-provider.md)  
+-   [Fournisseur SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="PostBestPractices"></a> Suivi : Après avoir supprimé un réplica secondaire  
+##  <a name="PostBestPractices"></a>Suivi : après la suppression d’un réplica secondaire  
  Si vous spécifiez un réplica qui n'est pas disponible actuellement, lorsque le réplica est mis en ligne, on découvre qu'il a été supprimé.  
   
  La suppression d'un réplica provoque l'arrêt de la réception des données. Après qu'un réplica secondaire a confirmé qu'il a été supprimé du magasin global, le réplica supprime les paramètres de groupe de disponibilité de ses bases de données, lesquelles demeurent sur l'instance de serveur locale dans l'état RECOVERING.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble &#40;de&#41; groupes de disponibilité AlwaysOn SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
- [Ajouter un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)   
+ [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Ajoutez un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)   
  [Supprimer un groupe de disponibilité &#40;SQL Server&#41;](remove-an-availability-group-sql-server.md)  

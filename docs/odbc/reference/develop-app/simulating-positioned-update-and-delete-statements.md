@@ -1,5 +1,5 @@
 ---
-title: Simulation positionné instructions Update et Delete | Microsoft Docs
+title: Simulation des instructions Update et DELETE positionnées | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ ms.assetid: b24ed59f-f25b-4646-a135-5f3596abc1a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85d7642620d510ebba050a3fbc4348898e070070
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107534"
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>Simulation d’instructions de mise à jour et de suppression positionnées
-Si la source de données ne pas prendre en charge la mise à jour positionnée et supprimer des instructions, le pilote peut simuler ces. Par exemple, la bibliothèque de curseurs ODBC simule la mise à jour positionnée et supprimer des instructions. La stratégie générale pour simuler une mise à jour positionnée instructions et suppression consiste à convertir les instructions positionnées à ceux recherchés. Cela est effectué en remplaçant le **WHERE CURRENT OF** clause avec une recherche **où** clause qui identifie la ligne actuelle.  
+Si la source de données ne prend pas en charge les instructions Update et DELETE positionnées, le pilote peut les simuler. Par exemple, la bibliothèque de curseurs ODBC simule les instructions Update et DELETE positionnées. La stratégie générale de simulation des instructions de mise à jour et de suppression positionnées consiste à convertir les instructions positionnées en recherches. Pour ce faire, remplacez la clause **Where Current of** par une clause **Where** recherchée qui identifie la ligne actuelle.  
   
- Par exemple, étant donné que la colonne CustID identifie de façon unique chaque ligne dans la table Customers, la positionnées instruction delete  
+ Par exemple, étant donné que la colonne CustID identifie de manière unique chaque ligne dans la table Customers, l’instruction DELETE positionnée  
   
 ```  
 DELETE FROM Customers WHERE CURRENT OF CustCursor  
@@ -38,57 +38,57 @@ DELETE FROM Customers WHERE CURRENT OF CustCursor
 DELETE FROM Customers WHERE (CustID = ?)  
 ```  
   
- Le pilote peut utiliser une de ces *d’identificateurs de lignes* dans le **où** clause :  
+ Le pilote peut utiliser l’un des *identificateurs de ligne* suivants dans la clause **Where** :  
   
--   Colonnes dont les valeurs servent à identifier de façon unique chaque ligne dans la table. Par exemple, l’appel **SQLSpecialColumns** avec SQL_BEST_ROWID retourne la colonne ou jeu optimal de colonnes qui correspondent à cet effet.  
+-   Colonnes dont les valeurs servent à identifier de manière unique chaque ligne dans la table. Par exemple, l’appel de **SQLSpecialColumns** avec SQL_BEST_ROWID retourne la colonne ou l’ensemble de colonnes optimal à cet effet.  
   
--   Pseudo-colonnes, fournis par certaines sources de données, à des fins d’identifiant de manière unique chaque ligne. Il ne peuvent également être récupérés en appelant **SQLSpecialColumns**.  
+-   Les pseudo-colonnes, fournies par certaines sources de données, à des fins d’identification unique de chaque ligne. Elles peuvent également être récupérées en appelant **SQLSpecialColumns**.  
   
--   Un index unique, si elle est disponible.  
+-   Index unique, s’il est disponible.  
   
 -   Toutes les colonnes du jeu de résultats.  
   
- Exactement quelles colonnes un pilote doit utiliser dans le **où** clause il construit dépend du pilote. Sur certaines données sources, de déterminer un identificateur de ligne peuvent être coûteuses. Toutefois, il est plus rapide d’exécuter et garantit qu’une instruction simulée met à jour ou supprime une ligne au plus. Selon les capacités du SGBD sous-jacent, à l’aide d’un identificateur de ligne peut être coûteux à configurer. Toutefois, il est plus rapide d’exécuter et garantit qu’une instruction simulée sera mise à jour ou supprimer qu’une seule ligne. La possibilité d’utiliser toutes les colonnes du jeu de résultats est généralement beaucoup plus facile à configurer. Toutefois, il est plus lent à exécuter et, si les colonnes n’identifient pas une ligne, peut entraîner des lignes ne soient involontairement mis à jour ou supprimées, en particulier lorsque la liste de sélection pour le résultat de la valeur ne contient-elle pas toutes les colonnes qui existent dans la table sous-jacente.  
+ Les colonnes précises qu’un pilote doit utiliser dans la clause **Where** qu’il construit dépend du pilote. Sur certaines sources de données, la détermination d’un identificateur de ligne peut être coûteuse. Toutefois, il est plus rapide d’exécuter et garantit qu’une instruction simulée est mise à jour ou supprimée au plus une ligne. Selon les capacités du SGBD sous-jacent, l’utilisation d’un identificateur de ligne peut être coûteuse à configurer. Toutefois, il est plus rapide de s’exécuter et garantit qu’une instruction simulée met à jour ou supprime une seule ligne. L’option d’utilisation de toutes les colonnes dans le jeu de résultats est généralement beaucoup plus facile à configurer. Toutefois, l’exécution est plus lente et, si les colonnes n’identifient pas de manière unique une ligne, peut entraîner la mise à jour ou la suppression de lignes involontairement, en particulier lorsque la liste de sélection du jeu de résultats ne contient pas toutes les colonnes qui existent dans la table sous-jacente.  
   
- En fonction de laquelle des stratégies précédentes le pilote prend en charge, une application peut choisir quelle stratégie qu’il veut le pilote à utiliser avec l’attribut d’instruction SQL_ATTR_SIMULATE_CURSOR. Bien qu’il peut sembler étrange pour une application à courir le risque involontairement la mise à jour ou suppression d’une ligne, l’application peut supprimer ce risque en veillant à ce que les colonnes du jeu de résultats identifient de manière unique chaque ligne du jeu de résultats. Cela permet d’économiser le pilote l’effort d’avoir à le faire.  
+ Selon les stratégies précédentes prises en charge par le pilote, une application peut choisir la stratégie qu’elle souhaite que le pilote utilise avec l’attribut d’instruction SQL_ATTR_SIMULATE_CURSOR. Bien qu’il puisse paraître étrange pour une application de mettre à jour ou de supprimer involontairement une ligne, l’application peut supprimer ce risque en s’assurant que les colonnes du jeu de résultats identifient de manière unique chaque ligne dans le jeu de résultats. Cela évite au pilote d’avoir à le faire.  
   
- Si le pilote choisit d’utiliser un identificateur de ligne, il intercepte la **SELECT FOR UPDATE** instruction qui crée le jeu de résultats. Si les colonnes dans la liste select n’identifient pas efficacement une ligne, le pilote ajoute les colonnes nécessaires à la fin de la liste de sélection. Certaines sources de données ont une colonne unique qui identifie le toujours une ligne, telles que la colonne ROWID dans Oracle. Si une telle colonne est disponible, le pilote utilise ceci. Sinon, le pilote appelle **SQLSpecialColumns** pour chaque table dans le **FROM** clause pour récupérer une liste des colonnes qui identifient de façon unique chaque ligne. Une restriction du common qui résulte de cette technique est que la simulation de curseur échoue s’il existe plusieurs tables dans le **FROM** clause.  
+ Si le pilote choisit d’utiliser un identificateur de ligne, il intercepte l’instruction **Select for Update** qui crée le jeu de résultats. Si les colonnes de la liste de sélection n’identifient pas efficacement une ligne, le pilote ajoute les colonnes nécessaires à la fin de la liste de sélection. Certaines sources de données ont une seule colonne qui identifie toujours de façon unique une ligne, telle que la colonne ROWID dans Oracle ; Si une colonne de ce type est disponible, le pilote utilise cette. Dans le cas contraire, le pilote appelle **SQLSpecialColumns** pour chaque table de la clause **from** pour récupérer une liste des colonnes qui identifient de manière unique chaque ligne. Une restriction courante qui résulte de cette technique est que la simulation de curseur échoue s’il existe plusieurs tables dans la clause **from** .  
   
- Quelle que soit la façon dont le pilote identifie les lignes, il supprime généralement la **FOR UPDATE OF** clause désactivé le **SELECT FOR UPDATE** instruction avant de les envoyer à la source de données. Le **pour mettre à jour de** clause est utilisée uniquement avec positionné mise à jour et supprimer des instructions. Sources de données ne prenant pas en charge positionné mise à jour et instructions delete généralement ne pas en charge.  
+ Quelle que soit la façon dont le pilote identifie les lignes, il supprime généralement le **pour la mise à jour de** la clause de l’instruction **Select for Update** avant de l’envoyer à la source de données. La clause **for Update of** est utilisée uniquement avec les instructions Update et DELETE positionnées. Les sources de données qui ne prennent pas en charge les instructions de mise à jour et de suppression positionnées ne la prennent généralement pas en charge.  
   
- Lorsque l’application envoie une mise à jour positionnée ou une instruction delete pour l’exécution, le pilote remplace le **WHERE CURRENT OF** clause avec un **où** clause contenant l’identificateur de ligne. Les valeurs de ces colonnes sont récupérées à partir d’un cache géré par le pilote pour chaque colonne, il utilise dans les **où** clause. Une fois que le pilote a remplacé le **où** clause, il envoie l’instruction à la source de données pour l’exécution.  
+ Lorsque l’application envoie une instruction UPDATE ou DELETE positionnée pour exécution, le pilote remplace la clause **Where Current of** par une clause **Where** contenant l’identificateur de ligne. Les valeurs de ces colonnes sont extraites d’un cache conservé par le pilote pour chaque colonne utilisée dans la clause **Where** . Une fois que le pilote a remplacé la clause **Where** , il envoie l’instruction à la source de données pour exécution.  
   
- Par exemple, supposons que l’application soumet l’instruction suivante pour créer un jeu de résultats :  
+ Supposons, par exemple, que l’application envoie l’instruction suivante pour créer un jeu de résultats :  
   
 ```  
 SELECT Name, Address, Phone FROM Customers FOR UPDATE OF Phone, Address  
 ```  
   
- Si l’application a la valeur SQL_ATTR_SIMULATE_CURSOR pour demander une garantie d’unicité et si la source de données ne fournit pas une pseudo-colonne qui identifie le toujours une ligne, le pilote appelle **SQLSpecialColumns** pour le Table Customers, découvre que CustID est la clé à la table Customers et il ajoute à la liste de sélection et supprime la **FOR UPDATE OF** clause :  
+ Si l’application a défini SQL_ATTR_SIMULATE_CURSOR pour demander une garantie d’unicité et que la source de données ne fournit pas de Pseudo-colonne qui identifie toujours une ligne de manière unique, le pilote appelle **SQLSpecialColumns** pour la table Customers, découvre que CustID est la clé de la table Customers et l’ajoute à la liste de sélection, et supprime le **pour la mise à jour de** la clause :  
   
 ```  
 SELECT Name, Address, Phone, CustID FROM Customers  
 ```  
   
- Si l’application n’a pas demandé une garantie d’unicité, le pilote supprime uniquement le **FOR UPDATE OF** clause :  
+ Si l’application n’a pas demandé de garantie d’unicité, le pilote supprime uniquement les éléments **pour la mise à jour de** la clause :  
   
 ```  
 SELECT Name, Address, Phone FROM Customers  
 ```  
   
- Supposons que l’application fait défile le jeu de résultats et soumet l’instruction de mise à jour positionnée suivante pour l’exécution, où le client est le nom du curseur sur le jeu de résultats :  
+ Supposons que l’application fait défiler le jeu de résultats et envoie l’instruction de mise à jour positionnée suivante pour exécution, où cust est le nom du curseur sur le jeu de résultats :  
   
 ```  
 UPDATE Customers SET Address = ?, Phone = ? WHERE CURRENT OF Cust  
 ```  
   
- Si l’application n’a pas demandé une garantie d’unicité, le pilote remplace le **où** clause et lie le paramètre CustID à la variable dans son cache :  
+ Si l’application n’a pas demandé de garantie d’unicité, le pilote remplace la clause **Where** et lie le paramètre CustID à la variable dans son cache :  
   
 ```  
 UPDATE Customers SET Address = ?, Phone = ? WHERE (CustID = ?)  
 ```  
   
- Si l’application n’a pas demandé une garantie d’unicité, le pilote remplace le **où** clause et lie les paramètres de nom, adresse et téléphone dans cette clause pour les variables dans son cache :  
+ Si l’application n’a pas demandé de garantie d’unicité, le pilote remplace la clause **Where** et lie les paramètres Name, Address et Phone dans cette clause aux variables dans son cache :  
   
 ```  
 UPDATE Customers SET Address = ?, Phone = ?  

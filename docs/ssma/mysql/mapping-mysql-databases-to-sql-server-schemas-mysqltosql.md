@@ -1,5 +1,5 @@
 ---
-title: Mappage des bases de données MySQL à des schémas SQL Server (MySQLToSQL) | Microsoft Docs
+title: Mappage de bases de données MySQL à des schémas de SQL Server (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,64 +13,64 @@ ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 215833c96fae02ae7877e00173fb5a920a47ee0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67908980"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Mappage de bases de données MySQL à des schémas SQL Server (MySQLToSQL)
-Par défaut, SSMA pour MySQL migre tous les objets dans un schéma de MySQL vers un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou nommé pour le schéma de la base de données SQL Azure. Toutefois, vous pouvez personnaliser le mappage entre les schémas de MySQL et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou bases de données SQL Azure.  
+Par défaut, SSMA pour MySQL migre tous les objets d’un schéma MySQL vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] une base de données ou SQL Azure nommée pour le schéma. Toutefois, vous pouvez personnaliser le mappage entre les schémas MySQL et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les bases de données SQL Azure.  
   
-## <a name="mysql-and-sql-server-or-sql-azure-schemas"></a>MySQL et SQL Server ou SQL Azure schémas  
-Le concept de MySQL d’un schéma mappe au concept d’une base de données et d’un des ses schémas SQL Server. SSMA fait référence à la combinaison de SQL Server de la base de données et le schéma en tant que schéma.  
+## <a name="mysql-and-sql-server-or-sql-azure-schemas"></a>Schémas MySQL et SQL Server ou SQL Azure  
+Le concept MySQL d’un schéma correspond au concept SQL Server d’une base de données et à l’un de ses schémas. SSMA fait référence à la combinaison de SQL Server de base de données et de schéma en tant que schéma.  
   
-Le concept de MySQL d’un schéma mappe au concept d’une base de données et d’un des ses schémas SQL Server. Par exemple, MySQL peut avoir un schéma nommé **HR**. Une instance de SQL Server peut avoir une base de données nommée **HR**, et au sein de cette base de données sont les schémas. Un schéma est le **dbo** (ou le propriétaire de la base de données) schéma. Par défaut, le schéma MySQL **HR** sera mappé à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données et le schéma **HR.dbo**. SSMA fait référence à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinaison de la base de données et le schéma en tant que schéma.  
+Le concept MySQL d’un schéma correspond au concept SQL Server d’une base de données et à l’un de ses schémas. Par exemple, MySQL peut avoir un schéma nommé **HR**. Une instance de SQL Server peut avoir une base de données nommée **HR**et au sein de cette base de données sont des schémas. Un schéma est le schéma **dbo** (ou propriétaire de la base de données). Par défaut, le schéma MySQL **HR** est mappé à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données et au schéma **hr. dbo**. SSMA fait référence à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la combinaison base de données et schéma en tant que schéma.  
   
-Vous pouvez modifier le mappage entre MySQL et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou schémas Azure.  
+Vous pouvez modifier le mappage entre MySQL et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les schémas Azure.  
   
-## <a name="modifying-the-target-database-and-schema"></a>Modification de la base de données cible et le schéma  
-Dans SSMA, vous pouvez mapper un schéma de MySQL vers toute disponible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou schéma de SQL Azure.  
+## <a name="modifying-the-target-database-and-schema"></a>Modification de la base de données et du schéma cibles  
+Dans SSMA, vous pouvez mapper un schéma MySQL à n’importe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quel schéma disponible ou SQL Azure.  
   
 **Pour modifier la base de données et le schéma**  
   
-1.  Dans l’Explorateur de métadonnées de MySQL, sélectionnez **schémas**.  
+1.  Dans l’Explorateur de métadonnées MySQL, sélectionnez **schémas**.  
   
-    Le **mappage de schéma** onglet est également disponible quand vous sélectionnez les schémas individuels. La liste dans le **mappage de schéma** onglet personnalisé pour l’objet sélectionné.  
+    L’onglet **mappage de schéma** est également disponible lorsque vous sélectionnez des schémas individuels. La liste de l’onglet **mappage de schéma** est personnalisée pour l’objet sélectionné.  
   
-2.  Dans le volet droit, cliquez sur le **mappage de schéma** onglet.  
+2.  Dans le volet droit, cliquez sur l’onglet **mappage de schéma** .  
   
-    Vous verrez une liste de tous les schémas de MySQL, suivie d’une valeur cible. Cette cible est représentée dans une notation de deux parties (*database.schema*) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure où vos objets et les données seront migrées.  
+    Vous verrez une liste de tous les schémas MySQL, suivis d’une valeur cible. Cette cible est indiquée dans une notation en deux parties (*Database. Schema*) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure où vos objets et vos données seront migrés.  
   
 3.  Sélectionnez la ligne qui contient le mappage que vous souhaitez modifier, puis cliquez sur **modifier**.  
   
-    Dans le **choisir un schéma cible** boîte de dialogue, vous pouvez accéder pour la base de données cibles disponibles et de schéma ou de type de la base de données et le schéma nom dans la zone de texte dans une notation de deux parties (database.schema) puis cliquez sur **OK**.  
+    Dans la boîte de dialogue **choisir un schéma cible** , vous pouvez rechercher le schéma et la base de données cible disponibles, ou taper le nom de la base de données et du schéma dans la zone de texte en deux parties (Database. Schema), puis cliquer sur **OK**.  
   
-4.  La cible sont modifiées sur le **mappage de schéma** onglet.  
+4.  Les modifications apportées à la cible sous l’onglet **mappage de schéma** .  
   
 **Modes de mappage**  
   
--   Mappage vers SQL Server  
+-   Mappage à SQL Server  
   
-Vous pouvez mapper la base de données source vers une base de données cible. Par défaut la base de données source est mappée à la cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données avec laquelle vous vous êtes connecté à l’aide de SSMA. Si la base de données cible qui est mappé est inexistant sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puis vous serez invité avec un message **» la base de données et/ou le schéma n’existe pas dans la cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] métadonnées. Il est créé pendant la synchronisation. Voulez-vous continuer ? »** Cliquez sur Oui. De même, vous pouvez mapper le schéma au schéma de non existant sous cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données qui sera créé pendant la synchronisation.  
+Vous pouvez mapper une base de données source à une base de données cible. Par défaut, la base de données source est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mappée à la base de données cible avec laquelle vous vous êtes connecté à l’aide de SSMA. Si la base de données cible mappée n’est pas existante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sur, vous êtes invité à entrer un message **«la base de données et/ou le schéma n’existe pas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans les métadonnées cibles. Il serait créé au cours de la synchronisation. Voulez-vous continuer ?»** Cliquez sur Oui. De même, vous pouvez mapper le schéma à un schéma non existant sous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la base de données cible, qui sera créé lors de la synchronisation.  
   
 -   Mappage à SQL Azure  
   
-Vous pouvez mapper la base de données source vers la cible connectée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données ou à n’importe quel schéma dans la cible connectée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données. Si vous mappez la source de schéma à aucun schéma n’existent pas sous la base de données connectée cible, vous serez invité avec un message **« schéma n’existe pas dans les métadonnées de la cible. Il est créé pendant la synchronisation. Voulez-vous continuer ? "** Cliquez sur Oui.  
+Vous pouvez mapper la base de données source à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données cible connectée ou au schéma de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’importe quel schéma dans la base de données cible connectée. Si vous mappez le schéma source à un schéma non existant dans une base de données cible connectée, vous êtes invité à entrer un message **«le schéma n’existe pas dans les métadonnées cibles. Il serait créé au cours de la synchronisation. Voulez-vous continuer ? «** Cliquez sur Oui.  
   
-## <a name="reverting-to-the-default-database-and-schema"></a>Retour à la base de données par défaut et le schéma  
-Si vous personnalisez le mappage entre un schéma de MySQL et un schéma de SQL Server, vous pouvez rétablir le mappage vers les valeurs par défaut.  
+## <a name="reverting-to-the-default-database-and-schema"></a>Rétablissement de la base de données et du schéma par défaut  
+Si vous personnalisez le mappage entre un schéma MySQL et un schéma SQL Server, vous pouvez rétablir les valeurs par défaut du mappage.  
   
-**Pour rétablir la base de données par défaut et le schéma**  
+**Pour rétablir la base de données et le schéma par défaut**  
   
-1.  Sous l’onglet mappage de schéma, sélectionnez n’importe quelle ligne, puis cliquez sur **rétablir par défaut** pour rétablir la base de données par défaut et le schéma.  
+1.  Sous l’onglet Mappage de schéma, sélectionnez n’importe quelle ligne et cliquez sur **rétablir les valeurs par défaut** pour rétablir la base de données et le schéma par défaut.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
-Si vous souhaitez analyser la conversion d’objets de MySQL dans des objets SQL Server ou SQL Azure, vous pouvez [créer un rapport de conversion](assessing-mysql-databases-for-conversion-mysqltosql.md) dans le cas contraire, vous pouvez [convertir les définitions d’objets de base de données MySQL](converting-mysql-databases-mysqltosql.md) en SQL Schémas Server ou SQL Azure  
+Si vous souhaitez analyser la conversion d’objets MySQL en objets SQL Server ou SQL Azure, vous pouvez [créer un rapport de conversion](assessing-mysql-databases-for-conversion-mysqltosql.md) , sinon vous pouvez [convertir les définitions d’objet de base de données mysql](converting-mysql-databases-mysqltosql.md) en schémas SQL Server ou SQL Azure  
   
 ## <a name="see-also"></a>Voir aussi  
-[Paramètres du projet &#40;Conversion&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
-[Connexion à la base de données SQL Azure &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
-[Bases de données de migration de MySQL vers SQL Server - Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Paramètres du projet &#40;conversion&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
+[Connexion à Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
+[Migration de bases de données MySQL vers SQL Server-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
 [Connexion à SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   

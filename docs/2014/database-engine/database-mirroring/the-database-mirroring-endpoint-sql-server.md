@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1afac17b04c968c6685e356e3bbc8101161a36b3
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797900"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>Point de terminaison de mise en miroir de bases de données (SQL Server)
@@ -40,14 +40,14 @@ ms.locfileid: "72797900"
   
  L'illustration suivante montre comment deux instances de serveur sur un même serveur sont identifiées de manière univoque. Les adresses réseau du serveur des deux instances de serveur contiennent le même nom de système ( `MYSYSTEM`) et le même nom de domaine ( `Adventure-Works.MyDomain.com`). Afin de permettre au système de diriger les connexions vers une instance de serveur, l'adresse réseau de serveur comprend le numéro de port associé au point de terminaison de mise en miroir d'une instance de serveur spécifique.  
   
- ![Adresses réseau du serveur d’une instance par défaut](../media/dbm-2-instances-ports-1-system.gif "Adresses réseau du serveur d’une instance par défaut")  
+ ![Adresses réseau de serveur d’une instance par défaut](../media/dbm-2-instances-ports-1-system.gif "Adresses réseau de serveur d’une instance par défaut")  
   
  Par défaut, une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne contient pas de point de terminaison de mise en miroir de bases de données. Les points de terminaison doivent être créés manuellement lors de la configuration d'une session de mise en miroir de bases de données. L'administrateur système doit créer un point de terminaison distinct dans chaque instance de serveur participant à la mise en miroir de bases de données. Notez que si plusieurs instances de serveur sur un ordinateur donné requièrent un point de terminaison de mise en miroir de bases de données, vous devez spécifier un numéro de port différent pour chaque point de terminaison.  
   
 > [!IMPORTANT]  
 >  Si l'ordinateur exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comme pare-feu, la configuration de celui-ci doit autoriser les connexions entrantes et sortantes pour le port spécifié dans le point de terminaison.  
   
- Pour la mise en miroir de bases de données et [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], l'authentification et le chiffrement sont configurés sur le point de terminaison. Pour plus d’informations, consultez [sécurité de transport pour la mise en &#40;miroir&#41;de bases de données et groupes de disponibilité AlwaysOn SQL Server](transport-security-database-mirroring-always-on-availability.md).  
+ Pour la mise en miroir de bases de données et [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], l'authentification et le chiffrement sont configurés sur le point de terminaison. Pour plus d’informations, consultez [sécurité de transport pour la mise en miroir de bases de données et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
   
 > [!IMPORTANT]  
 >  Ne reconfigurez pas un point de terminaison de mise en miroir de base de données en cours d'utilisation. Les instances de serveurs utilisent les points de terminaison des autres instances pour connaître l'état des autres systèmes. Si le point de terminaison est reconfiguré, il est possible qu'il redémarre, ce qui peut être perçu comme une erreur par les autres instances de serveurs. Cela est particulièrement important pour le mode de basculement automatique, où la reconfiguration du point de terminaison sur un partenaire peut déclencher un basculement.  
@@ -58,7 +58,7 @@ ms.locfileid: "72797900"
   
 -   Si chaque instance de serveur s'exécute sous un compte de service de domaine, vous pouvez utiliser l'authentification Windows pour vos points de terminaison de mise en miroir de bases de données. Si toutes les instances de serveur s’exécutent sous le même compte d’utilisateur de domaine, les noms de connexion d’utilisateur corrects existent automatiquement dans les deux bases de données **master** . Cela simplifie la configuration de sécurité des bases de données de disponibilité et est recommandé.  
   
-     Si les instances de serveur qui hébergent les réplicas de disponibilité pour un groupe de disponibilité s’exécutent en tant que comptes différents, la connexion de chaque compte doit être créée dans **master** sur l’autre instance de serveur. Ensuite, cette connexion doit se voir accorder des autorisations CONNECT pour pouvoir se connecter au point de terminaison de mise en miroir de bases de données de cette instance de serveur. Pour plus d’informations, [configurez les comptes de connexion pour la &#40;mise&#41;en miroir de bases de données ou groupes de disponibilité AlwaysOn SQL Server](set-up-login-accounts-database-mirroring-always-on-availability.md).  
+     Si les instances de serveur qui hébergent les réplicas de disponibilité pour un groupe de disponibilité s’exécutent en tant que comptes différents, la connexion de chaque compte doit être créée dans **master** sur l’autre instance de serveur. Ensuite, cette connexion doit se voir accorder des autorisations CONNECT pour pouvoir se connecter au point de terminaison de mise en miroir de bases de données de cette instance de serveur. Pour plus d’informations, [configurez les comptes de connexion pour la mise en miroir de bases de données ou groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md).  
   
      Si vos instances de serveur utilisent l'authentification Windows, vous pouvez créer des points de terminaison de mise en miroir de bases de données à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)], PowerShell ou de l'Assistant Nouveau groupe de disponibilité.  
   
@@ -67,10 +67,10 @@ ms.locfileid: "72797900"
   
 -   Si une instance de serveur s'exécute sous un compte intégré, tel que Système local, Service local ou Service réseau, ou un compte qui n'appartient pas au domaine, vous devez utiliser des certificats pour l'authentification de point de terminaison. Si vous utilisez des certificats pour vos points de terminaison de mise en miroir de bases de données, votre administrateur système doit configurer chaque instance de serveur pour utiliser des certificats sur les connexions sortantes et entrantes.  
   
-     Il n'existe aucune méthode automatisée permettant de configurer la sécurité de la mise en miroir de bases de données à l'aide de certificats. Vous devez utiliser l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ENDPOINT ou l'applet de commande `New-SqlHadrEndpoint` PowerShell. Pour plus d’informations, consultez [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql). Pour plus d’informations sur l’activation de l’authentification par certificat sur une instance de serveur, consultez [utiliser &#40;des certificats pour&#41;un point de terminaison de mise en miroir de bases de données Transact-SQL](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
+     Il n'existe aucune méthode automatisée permettant de configurer la sécurité de la mise en miroir de bases de données à l'aide de certificats. Vous devez utiliser l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ENDPOINT ou l'applet de commande `New-SqlHadrEndpoint` PowerShell. Pour plus d’informations, consultez [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql). Pour plus d’informations sur l’activation de l’authentification par certificat sur une instance de serveur, consultez [utiliser des certificats pour un point de terminaison de mise en miroir de bases de données &#40;&#41;Transact-SQL ](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
   
-##  <a name="RelatedTasks"></a> Tâches connexes  
+##  <a name="RelatedTasks"></a> Tâches associées  
 
 ### <a name="to-configure-a-database-mirroring-endpoint"></a>Pour configurer un point de terminaison de mise en miroir de bases de données
   
@@ -94,7 +94,7 @@ ms.locfileid: "72797900"
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Sécurité de transport pour la mise en miroir &#40;de&#41; bases de données et les groupes de disponibilité AlwaysOn SQL Server](transport-security-database-mirroring-always-on-availability.md)   
- [Résoudre des problèmes de configuration de mise en miroir de bases de données &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [sys.dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
- [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
+ [Sécurité de transport pour la mise en miroir de bases de données et les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [Résolution des problèmes de configuration de mise en miroir de bases de données &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
+ [sys. dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
+ [sys. dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  

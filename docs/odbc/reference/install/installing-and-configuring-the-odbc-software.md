@@ -16,17 +16,17 @@ ms.assetid: e2580f7d-d614-4e14-a9a3-804e8061b00e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9bc3770140d6ff5befbafefc26cb8936e14b494a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094033"
 ---
 # <a name="installing-and-configuring-the-odbc-software"></a>Installation et configuration du logiciel ODBC
 > [!NOTE]  
->  ODBC à partir de Windows XP et Windows Server 2003, est inclus dans le système d’exploitation Windows. Vous devez explicitement uniquement installer ODBC dans les versions antérieures de Windows.  
+>  À compter de Windows XP et de Windows Server 2003, ODBC est inclus dans le système d’exploitation Windows. Vous devez uniquement installer explicitement ODBC sur les versions antérieures de Windows.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Installation des composants ODBC](../../../odbc/reference/install/installing-odbc-components.md)  
   

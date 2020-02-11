@@ -16,18 +16,18 @@ ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0196993f863d973e14834f7eb3b93b797a825ac4
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72907325"
 ---
 # <a name="sp_mergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Doit être utilisé uniquement dans les topologies de réplication qui incluent des serveurs exécutant des versions de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1. **sp_mergecleanupmetadata** permet aux administrateurs de nettoyer les métadonnées dans les tables système **MSmerge_genhistory**, **MSmerge_contents** et **MSmerge_tombstone** . Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
+  Doit être utilisé uniquement dans les topologies de réplication qui incluent des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveurs exécutant [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] des versions de antérieures au Service Pack 1. **sp_mergecleanupmetadata** permet aux administrateurs de nettoyer les métadonnées dans les tables système **MSmerge_genhistory**, **MSmerge_contents** et **MSmerge_tombstone** . Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,27 +38,27 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'` est le nom de la publication. *publication* est de **type sysname**, avec la valeur par défaut **%** , qui nettoie les métadonnées de toutes les publications. La publication doit déjà exister si elle est spécifiée de manière explicite.  
+`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **%** **type sysname**, avec la valeur par défaut, qui nettoie les métadonnées de toutes les publications. La publication doit déjà exister si elle est spécifiée de manière explicite.  
   
-`[ @reinitialize_subscriber = ] 'subscriber'` spécifie s’il faut réinitialiser l’abonné. *Subscriber* est de type **nvarchar (5)** , peut avoir la valeur **true** ou **false**, avec **true**comme valeur par défaut. Si la **valeur est true**, les abonnements sont marqués pour la réinitialisation. Si la **valeur est false**, les abonnements ne sont pas marqués pour la réinitialisation.  
+`[ @reinitialize_subscriber = ] 'subscriber'`Spécifie s’il faut réinitialiser l’abonné. *Subscriber* est de type **nvarchar (5)**, peut avoir la valeur **true** ou **false**, avec **true**comme valeur par défaut. Si la **valeur est true**, les abonnements sont marqués pour la réinitialisation. Si la **valeur est false**, les abonnements ne sont pas marqués pour la réinitialisation.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_mergecleanupmetadata** doit être utilisé uniquement dans les topologies de réplication qui incluent des serveurs exécutant des versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1. Les topologies qui incluent uniquement [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 ou une version ultérieure doivent utiliser la rétention automatique basée sur le nettoyage des métadonnées. Lorsque vous exécutez cette procédure stockée, soyez conscient de l'importance de la croissance nécessaire et potentielle du fichier journal sur l'ordinateur sur lequel la procédure stockée est exécutée.  
+ **sp_mergecleanupmetadata** doit être utilisé uniquement dans les topologies de réplication qui incluent des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveurs exécutant [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] des versions de antérieures au Service Pack 1. Les topologies qui incluent uniquement [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 ou une version ultérieure doivent utiliser la rétention automatique basée sur le nettoyage des métadonnées. Lorsque vous exécutez cette procédure stockée, soyez conscient de l'importance de la croissance nécessaire et potentielle du fichier journal sur l'ordinateur sur lequel la procédure stockée est exécutée.  
   
 > [!CAUTION]
 >  Après l’exécution de **sp_mergecleanupmetadata** , par défaut, tous les abonnements sur les abonnés des publications qui ont des métadonnées stockées dans **MSmerge_genhistory**, **MSmerge_contents** et **MSmerge_tombstone** sont marqués pour la réinitialisation, les modifications en attente sur l’abonné sont perdues et l’instantané actuel est marqué comme obsolète.  
 > 
 > [!NOTE]
->  S’il existe plusieurs publications dans une base de données et que l’une de ces publications utilise une période de rétention de publication infinie ( **\@rétention**=**0**), l’exécution de **sp_mergecleanupmetadata** ne nettoie pas les métadonnées de suivi des modifications de réplication de fusion pour la base de données. C'est pour cette raison qu'il faut utiliser la période de rétention infinie avec prudence.  
+>  S’il existe plusieurs publications dans une base de données, et que l’une de ces publications utilise une période de rétention de publication infinie (**\@rétention**=**0**), l’exécution de **sp_mergecleanupmetadata** ne nettoie pas les métadonnées de suivi des modifications de réplication de fusion pour la base de données. C'est pour cette raison qu'il faut utiliser la période de rétention infinie avec prudence.  
   
- Lors de l’exécution de cette procédure stockée, vous pouvez choisir de réinitialiser les abonnés en définissant le paramètre **\@reinitialize_subscriber** sur **true** (valeur par défaut) ou **false**. Si **sp_mergecleanupmetadata** est exécutée avec le paramètre **\@Reinitialize_subscriber** défini sur **true**, un instantané est réappliqué sur l’abonné même si l’abonnement a été créé sans instantané initial (par exemple, si les données et le schéma de l’instantané ont été appliqués manuellement ou existent déjà sur l’abonné). L’affectation de la **valeur false** au paramètre doit être utilisée avec précaution, car si la publication n’est pas réinitialisée, vous devez vous assurer que les données sur le serveur de publication et l’abonné sont synchronisées.  
+ Lors de l’exécution de cette procédure stockée, vous pouvez choisir de réinitialiser les abonnés en affectant la **valeur true** au ** \@paramètre reinitialize_subscriber** (valeur par défaut) ou **false**. Si **sp_mergecleanupmetadata** est exécutée avec le paramètre ** \@reinitialize_subscriber** ayant la valeur **true**, un instantané est réappliqué sur l’abonné même si l’abonnement a été créé sans instantané initial (par exemple, si les données et le schéma de l’instantané ont été appliqués manuellement ou existent déjà sur l’abonné). L’affectation de la **valeur false** au paramètre doit être utilisée avec précaution, car si la publication n’est pas réinitialisée, vous devez vous assurer que les données sur le serveur de publication et l’abonné sont synchronisées.  
   
- Quelle que soit la valeur de **\@reinitialize_subscriber**, **sp_mergecleanupmetadata** échoue si des processus de fusion en cours tentent de charger des modifications sur un serveur de publication ou sur un abonné de republication au moment de l’appel de la procédure stockée.  
+ Quelle que soit la valeur de ** \@reinitialize_subscriber**, **sp_mergecleanupmetadata** échoue s’il existe des processus de fusion en cours qui tentent de charger des modifications sur un serveur de publication ou un abonné de republication au moment de l’appel de la procédure stockée.  
   
- **Exécution de sp_mergecleanupmetadata avec \@reinitialize_subscriber = TRUE :**  
+ **Exécution de sp_mergecleanupmetadata avec \@REINITIALIZE_SUBSCRIBER = true :**  
   
 1.  Bien qu'il ne soit pas nécessaire d'arrêter toutes les mises à jour des bases de données d'abonnement et de publication, cette opération est recommandée. Si les mises à jour se poursuivent, toute mise à jour réalisée sur un abonné depuis la dernière fusion est perdue lorsque la publication est réinitialisée, mais les données de convergence sont conservées.  
   
@@ -74,7 +74,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 7.  Sauvegardez la base de données de publication. car sans cela, une opération de fusion peut échouer après la restauration de la base de données de publication.  
   
- **Exécution de sp_mergecleanupmetadata avec \@reinitialize_subscriber = FALSe :**  
+ **Exécution de sp_mergecleanupmetadata avec \@REINITIALIZE_SUBSCRIBER = false :**  
   
 1.  Arrêtez **toutes les** mises à jour des bases de données de publication et d’abonnement.  
   
@@ -88,7 +88,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 6.  Sauvegardez la base de données de publication. car sans cela, une opération de fusion peut échouer après la restauration de la base de données de publication.  
 
- **Considérations spéciales pour les fusions en mode continu**  
+ **Remarques importantes concernant les fusions en mode continu**  
   
  Si vous exécutez des fusions en mode continu, vous devez :  
   
@@ -100,7 +100,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
     EXEC central..sp_changemergepublication @publication = 'dynpart_pubn', @property = 'status', @value = 'inactive'  
     ```  
   
- Lorsque vous avez terminé l’étape 3 de l’exécution de **sp_mergecleanupmetadata**, reprenez les fusions en mode continu en fonction de la façon dont vous les avez arrêtées. Vous pouvez :  
+ Lorsque vous avez terminé l’étape 3 de l’exécution de **sp_mergecleanupmetadata**, reprenez les fusions en mode continu en fonction de la façon dont vous les avez arrêtées. Au choix :   
   
 -   Rajoutez le paramètre **-Continuous** pour le agent de fusion.  
   

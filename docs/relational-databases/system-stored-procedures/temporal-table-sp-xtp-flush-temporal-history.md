@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5c579d8d31daff1b03db4c82bcd33642c02f85c5
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72251277"
 ---
 # <a name="sp_xtp_flush_temporal_history-transact-sql"></a>sp_xtp_flush_temporal_history (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "72251277"
 
   Appelle la tâche de vidage des données pour déplacer toutes les lignes validées de la table de mise en lots en mémoire vers la table de l’historique sur disque.  
 
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,8 +47,8 @@ sys.sp_xtp_flush_temporal_history @schema_name, @object_name
  *\@object_name*  
  Nom de la table actuelle ou temporelle  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- 0 (succès) ou > 0 (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ 0 (succès) ou >0 (échec)  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert db_owner autorisations.  

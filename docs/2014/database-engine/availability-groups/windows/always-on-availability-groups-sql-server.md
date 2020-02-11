@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e040fb9c05683be9d737ea134710c03d36317cd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229009"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Groupes de disponibilité Always On (SQL Server)
-  La fonctionnalité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] est une solution de haute disponibilité et de récupération d'urgence qui fournit une alternative au niveau de l'entreprise à la mise en miroir de bases de données. Introduite dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] optimise la disponibilité d'un ensemble de bases de données utilisateur pour l'entreprise. Un *groupe de disponibilité* prend en charge un environnement de basculement pour un ensemble discret de bases de données utilisateur, appelées *bases de données de disponibilité*, qui basculent ensemble. Un groupe de disponibilité prend en charge un ensemble de bases de données primaires en lecture-écriture et un à huit ensembles de bases de données secondaires correspondantes. Éventuellement, les bases de données secondaires peuvent être rendues disponibles pour l'accès en lecture seule et/ou certaines opérations de sauvegarde.  
+  La fonctionnalité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] est une solution de haute disponibilité et de récupération d'urgence qui fournit une alternative au niveau de l'entreprise à la mise en miroir de bases de données. Introduite dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] optimise la disponibilité d'un ensemble de bases de données utilisateur pour l'entreprise. Un *groupe de disponibilité* prend en charge un environnement de basculement pour un ensemble discret de bases de données utilisateur, appelées *bases de données de disponibilité*, qui basculent de concert. Un groupe de disponibilité prend en charge un ensemble de bases de données primaires en lecture-écriture et un à huit ensembles de bases de données secondaires correspondantes. Éventuellement, les bases de données secondaires peuvent être rendues disponibles pour l'accès en lecture seule et/ou certaines opérations de sauvegarde.  
   
  Un groupe de disponibilité bascule au niveau d'un réplica de disponibilité. Les basculements ne sont pas dus à des problèmes de base de données, tels qu'une base de données devenant suspecte en raison de la perte d'un fichier de données, de la suppression d'une base de données ou de l'altération d'un journal des transactions.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "75229009"
   
     -   Applets de commande PowerShell. Pour plus d’informations, consultez [vue d’ensemble des applets de commande PowerShell pour les groupes de disponibilité Always on. SQL Server ;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md).  
   
-##  <a name="TermsAndDefinitions"></a>Termes et définitions  
+##  <a name="TermsAndDefinitions"></a> Termes et définitions  
  groupe de disponibilité  
  Conteneur d’un ensemble de bases de données ( *bases de données de disponibilité*) qui basculent ensemble.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "75229009"
   
 -   [À propos de Change Tracking ; SQL Server ;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)  
   
--   [Bases de données à relation contenant-contenu](../../../relational-databases/databases/contained-databases.md)  
+-   [Bases de données autonomes](../../../relational-databases/databases/contained-databases.md)  
   
 -   [Chiffrement de base de données](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
@@ -136,36 +136,36 @@ ms.locfileid: "75229009"
   
 -   [Magasin d'objets blob distants (RBS)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)  
   
--   [La](../../install-windows/install-sql-server-replication.md)  
+-   [Réplication](../../install-windows/install-sql-server-replication.md)  
   
 -   [Service Broker](../../configure-windows/sql-server-service-broker.md)  
   
 -   [SQL Server Agent](../../../ssms/agent/sql-server-agent.md)  
   
--   [Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
+-   [Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
   
 > [!WARNING]  
 >  Pour plus d’informations sur les restrictions et les limitations relatives [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]à l’utilisation d’autres fonctionnalités avec, consultez [Always on des groupes de disponibilité : interopérabilité ; SQL Server ;](always-on-availability-groups-interoperability-sql-server.md).  
   
-##  <a name="RelatedTasks"></a>Tâches associées  
+##  <a name="RelatedTasks"></a> Tâches associées  
   
 -   [Prise en main avec les groupes de disponibilité Always On ; SQL Server ;](getting-started-with-always-on-availability-groups-sql-server.md)  
   
-##  <a name="RelatedContent"></a>Contenu connexe  
+##  <a name="RelatedContent"></a> Contenu associé  
   
--   **Blogs**  
+-   **Blogs :**  
   
      [Blogs de l’équipe de SQL Server Always On : le blog officiel de l’équipe SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Blogs des ingénieurs SQL Servers CSS](https://blogs.msdn.com/b/psssql/)  
+     [Blogs des ingénieurs du Service clientèle et du Support technique de SQL Server](https://blogs.msdn.com/b/psssql/)  
   
--   **Vidéos**  
+-   **Vidéos :**  
   
-     [Microsoft SQL Server nom de code « Denali » Always On série, partie 1 : présentation de la solution haute disponibilité de nouvelle génération](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1: Introducing the Next Generation High Availability Solution (Présentation de la solution haute disponibilité de nouvelle génération)](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Microsoft SQL Server nom de code « Denali » Always On série, partie 2 : génération d’une solution haute disponibilité stratégique à l’aide d’AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **Livres**  
+-   **Livres blancs :**  
   
      [Guide de solutions Microsoft SQL Server Always On pour la haute disponibilité et la récupération d’urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

@@ -17,43 +17,43 @@ ms.assetid: c901b60c-9f84-407a-b3d1-b4d301a71370
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 73880171493555a7d30e5c0c5419d02338961e9b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096531"
 ---
 # <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>Création d’étiquettes de publipostage dans Microsoft Word avec des données Visual FoxPro
-Vous pouvez utiliser des données Visual FoxPro dans Microsoft Word pour Windows 95 ou Windows 98 document. Par exemple, vous souhaiterez peut-être créer des étiquettes de publipostage à partir des informations client stockées dans une table Visual FoxPro.  
+Vous pouvez utiliser les données Visual FoxPro dans un document Microsoft Word pour Windows 95 ou Windows 98. Par exemple, vous souhaiterez peut-être créer des étiquettes de publipostage à partir des informations client stockées dans une table Visual FoxPro.  
   
 ### <a name="to-create-mailing-labels"></a>Pour créer des étiquettes de publipostage  
   
 1.  Dans Microsoft Word, créez un nouveau document vierge.  
   
-2.  Dans le menu Outils, choisissez le publipostage.  
+2.  Dans le menu Outils, choisissez publipostage.  
   
-3.  Dans l’application auxiliaire de publipostage, sélectionnez Créer, puis sélectionnez les étiquettes de publipostage.  
+3.  Dans l’aide à la fusion et publipostage, choisissez créer, puis sélectionnez étiquettes de publipostage.  
   
-4.  Sous Document principal, choisissez la fenêtre Active.  
+4.  Sous document principal, choisissez fenêtre active.  
   
-5.  Sous la Source de données, choisissez d’obtenir des données, puis sélectionnez Open Source de données.  
+5.  Sous source de données, choisissez accéder aux données, puis sélectionnez Ouvrir la source de données.  
   
-6.  Dans la boîte de dialogue Open Source de données, choisissez MS Query.  
+6.  Dans la boîte de dialogue Ouvrir la source de données, choisissez MS Query.  
   
-7.  Dans la boîte de dialogue Sélectionner une Source de données, sélectionnez une source de données Visual FoxPro, puis sur utilisation.  
+7.  Dans la boîte de dialogue Sélectionner une source de données, sélectionnez une source de données Visual FoxPro, puis cliquez sur utiliser.  
   
-8.  Si la base de données accédé par votre source de données comprend des tables, sélectionnez une table dans la boîte de dialogue Ajouter des Tables. Microsoft Query affiche la table ajoutée dans la partie supérieure du Concepteur de requêtes.  
+8.  Si la base de données accessible par votre source de données comprend des tables, sélectionnez une table dans la boîte de dialogue Ajouter des tables. Microsoft Query affiche la table ajoutée dans la moitié supérieure du concepteur de requêtes.  
   
-9. Sélectionnez les champs de votre requête en les faisant glisser à partir de la table vers le bas la moitié du concepteur.  
+9. Sélectionnez les champs de votre requête en les faisant glisser de la table vers la moitié inférieure du concepteur.  
   
-10. Dans le menu fichier, choisissez renvoyer des données vers Microsoft Word. Microsoft Query se ferme et les données que vous avez sélectionné ne seront disponibles pour une utilisation dans votre document de fusion.  
+10. Dans le menu fichier, choisissez renvoyer les données à Microsoft Word. Microsoft Query se ferme et les données que vous avez sélectionnées peuvent être utilisées dans votre document de fusion et publipostage.  
   
-11. Sous Document principal, choisissez le programme d’installation.  
+11. Sous document principal, choisissez Setup.  
   
-12. Dans la boîte de dialogue Options d’étiquette, sélectionnez les informations de l’imprimante et étiquette puis cliquez sur OK.  
+12. Dans la boîte de dialogue Options d’étiquette, sélectionnez les informations d’imprimante et d’étiquette souhaitées, puis cliquez sur OK.  
   
-13. Dans la boîte de dialogue Créer des étiquettes, sélectionnez les champs que vous souhaitez imprimer sur les étiquettes de publipostage, puis cliquez sur OK.  
+13. Dans la boîte de dialogue créer des étiquettes, sélectionnez les champs que vous souhaitez imprimer sur les étiquettes de publipostage, puis cliquez sur OK.  
   
-14. Dans l’application auxiliaire de fusion et publipostage, sous la fusionner les données avec le Document, cliquez sur Fusionner.  
+14. Dans l’aide au publipostage, sous fusionner les données avec le document, cliquez sur fusionner.  
   
-15. Dans la boîte de dialogue de fusion, sélectionnez les options souhaitées, puis cliquez sur Fusionner.
+15. Dans la boîte de dialogue Fusionner, sélectionnez les options souhaitées, puis cliquez sur fusionner.

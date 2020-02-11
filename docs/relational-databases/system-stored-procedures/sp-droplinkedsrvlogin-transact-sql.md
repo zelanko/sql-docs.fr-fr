@@ -18,18 +18,18 @@ ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ff6abaef6fc19a1bc646aab7ff30e4fcf6e13380
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097666"
 ---
-# <a name="spdroplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
+# <a name="sp_droplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime un mappage existant entre une connexion du serveur local exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et une connexion sur le serveur lié.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,19 +40,19 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @rmtsrvname = ] 'rmtsrvname'` Est le nom d’un serveur lié qui le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’applique le mappage de connexion. *nom_du_serveur_distant* est **sysname**, sans valeur par défaut. *nom_du_serveur_distant* doit déjà exister.  
+`[ @rmtsrvname = ] 'rmtsrvname'`Nom d’un serveur lié auquel s’applique le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mappage de connexion. *rmtsrvname* est de **type sysname**, sans valeur par défaut. *rmtsrvname* doit déjà exister.  
   
-`[ @locallogin = ] 'locallogin'` Est le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion sur le serveur local qui possède un mappage au serveur lié *nom_du_serveur_distant*. *LocalLogin* est **sysname**, sans valeur par défaut. Un mappage pour *locallogin* à *nom_du_serveur_distant* doit déjà exister. Si NULL, le mappage par défaut créé par **sp_addlinkedserver**, qui mappe toutes les connexions sur le serveur local aux connexions sur le serveur lié, est supprimé.  
+`[ @locallogin = ] 'locallogin'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Nom de connexion sur le serveur local qui a un mappage au serveur lié *rmtsrvname*. *LocalLogin* est de **type sysname**, sans valeur par défaut. Un mappage de *LocalLogin* à *rmtsrvname* doit déjà exister. Si la valeur est NULL, le mappage par défaut créé par **sp_addlinkedserver**, qui mappe toutes les connexions sur le serveur local aux connexions sur le serveur lié, est supprimé.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- Lorsque le mappage existant pour une connexion est supprimé, le serveur local utilise le mappage par défaut créé par **sp_addlinkedserver** quand il se connecte au serveur lié pour le compte de cette connexion. Pour modifier le mappage par défaut, utilisez **sp_addlinkedsrvlogin**.  
+ Lorsque le mappage existant pour une connexion est supprimé, le serveur local utilise le mappage par défaut créé par **sp_addlinkedserver** lorsqu’il se connecte au serveur lié pour le compte de cette connexion. Pour modifier le mappage par défaut, utilisez **sp_addlinkedsrvlogin**.  
   
- Si le mappage par défaut est également supprimé, seules les connexions qui ont explicitement reçues un mappage de connexion au serveur lié, à l’aide de **sp_addlinkedsrvlogin**, peut accéder au serveur lié.  
+ Si le mappage par défaut est également supprimé, seules les connexions qui ont été explicitement affectées à un mappage de connexion au serveur lié, à l’aide de **sp_addlinkedsrvlogin**, peuvent accéder au serveur lié.  
   
- **sp_droplinkedsrvlogin** ne peut pas être exécutée à partir d’une transaction définie par l’utilisateur.  
+ les **sp_droplinkedsrvlogin** ne peuvent pas être exécutées à partir d’une transaction définie par l’utilisateur.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER ANY LOGIN sur le serveur.  

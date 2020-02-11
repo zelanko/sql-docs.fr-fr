@@ -14,22 +14,22 @@ ms.assetid: 75e4adb3-3d43-49c5-8c5e-8df96310d912
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7c541bf28c1d4c7ec2e2041201bd7c168625bb34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083262"
 ---
-# <a name="concurrency-control"></a>Contrôle d'accès concurrentiel
-*Accès concurrentiel* est la possibilité de deux transactions utilisent les mêmes données en même temps, et avec accrue des transactions isolation est généralement une concurrence réduite. Il s’agit, car l’isolation des transactions est généralement implémentée par verrouillage de lignes et car plus de lignes sont verrouillés, moins de transactions peuvent être effectuées au moins temporairement bloqué par une ligne verrouillée. Pendant une concurrence réduite est généralement considérée comme un compromis pour les plus élevées niveaux d’isolement nécessaires pour maintenir l’intégrité de base de données, il peut devenir un problème dans les applications interactives avec une activité élevée en lecture/écriture qui utilisent des curseurs.  
+# <a name="concurrency-control"></a>Contrôle d’accès concurrentiel
+La *concurrence* est la capacité de deux transactions à utiliser les mêmes données en même temps, et l’isolation des transactions augmente généralement la concurrence. Cela est dû au fait que l’isolation des transactions est généralement implémentée par le verrouillage des lignes, et lorsque davantage de lignes sont verrouillées, moins de transactions peuvent être effectuées sans être bloquées au moins temporairement par une ligne verrouillée. Bien que la concurrence réduite soit généralement acceptée en tant que compromis pour les niveaux d’isolation de transactions les plus élevés nécessaires au maintien de l’intégrité de la base de données, cela peut devenir un problème dans les applications interactives avec une forte activité de lecture/écriture qui utilise des curseurs.  
   
- Par exemple, une application exécute l’instruction SQL **sélectionnez \* à partir de commandes**. Il appelle **SQLFetchScroll** pour faire défiler le résultat défini et autorise l’utilisateur à mettre à jour, supprimer ou insérer des commandes. Une fois que l’utilisateur met à jour, supprime ou insère une commande, l’application valide la transaction.  
+ Supposons, par exemple, qu’une application exécute l’instruction SQL **Select \* from Orders**. Elle appelle **SQLFetchScroll** pour faire défiler le jeu de résultats et permet à l’utilisateur de mettre à jour, supprimer ou insérer des commandes. Une fois que l’utilisateur a mis à jour, supprime ou inséré une commande, l’application valide la transaction.  
   
- Si le niveau d’isolement est Repeatable Read, la transaction - selon la façon dont il a été implémentée - bloquer chaque ligne retournée par **SQLFetchScroll**. Si le niveau d’isolement est Serializable, la transaction peut verrouiller la table Orders entière. Dans les deux cas, la transaction libère ses verrous uniquement lorsqu’elle est validée ou restaurée. Par conséquent, si l’utilisateur passe beaucoup de temps à lire les commandes et très peu de temps la mise à jour, suppression, ou en les insérant, la transaction n’a pu facilement verrouiller un grand nombre de lignes, ce qui les rend indisponibles à d’autres utilisateurs.  
+ Si le niveau d’isolation est lecture renouvelable, la transaction peut dépendre de la façon dont elle est implémentée-verrouiller chaque ligne retournée par **SQLFetchScroll**. Si le niveau d’isolation est sérialisable, la transaction peut verrouiller l’intégralité de la table Orders. Dans les deux cas, la transaction libère ses verrous uniquement lorsqu’elle est validée ou restaurée. Par conséquent, si l’utilisateur passe beaucoup de temps à lire les commandes et à mettre à jour, supprimer ou insérer très peu de temps, la transaction peut facilement verrouiller un grand nombre de lignes, ce qui les rend indisponibles pour les autres utilisateurs.  
   
- Il s’agit d’un problème même si le curseur est en lecture seule et l’application permet à l’utilisateur à lire uniquement les commandes existantes. Dans ce cas, l’application valide la transaction et libère les verrous, lorsqu’il appelle **SQLCloseCursor** (en mode de validation automatique) ou **SQLEndTran** (en mode de validation manuelle).  
+ Il s’agit d’un problème même si le curseur est en lecture seule et que l’application permet à l’utilisateur de lire uniquement les commandes existantes. Dans ce cas, l’application valide la transaction et libère les verrous lorsqu’elle appelle **SQLCloseCursor** (en mode de validation automatique) ou **SQLEndTran** (en mode de validation manuelle).  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Types d’accès concurrentiels](../../../odbc/reference/develop-app/concurrency-types.md)  
   

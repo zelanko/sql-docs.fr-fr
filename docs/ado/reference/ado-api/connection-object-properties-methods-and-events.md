@@ -1,5 +1,5 @@
 ---
-title: Propriétés d’objet de connexion, méthodes et événements | Microsoft Docs
+title: Propriétés, méthodes et événements de l’objet Connection | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,19 +13,19 @@ ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd6c95c7c761e2aadf9d42befcd4e2f740877196
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919510"
 ---
-# <a name="connection-object-properties-methods-and-events"></a>Événements, méthodes et propriétés d’objet de connexion
-## <a name="propertiescollections"></a>Propriétés et des Collections  
+# <a name="connection-object-properties-methods-and-events"></a>Propriétés, méthodes et événements de l’objet Connection
+## <a name="propertiescollections"></a>Propriétés/collections  
  [Attributes, propriété](../../../ado/reference/ado-api/attributes-property-ado.md)  
   
  [CommandTimeout, propriété](../../../ado/reference/ado-api/commandtimeout-property-ado.md)  
   
- [ConnectionString, propriété](../../../ado/reference/ado-api/connectionstring-property-ado.md)  
+ [Propriété ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)  
   
  [ConnectionTimeout, propriété](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)  
   
@@ -37,15 +37,15 @@ ms.locfileid: "67919510"
   
  [IsolationLevel, propriété](../../../ado/reference/ado-api/isolationlevel-property.md)  
   
- [Propriété de mode](../../../ado/reference/ado-api/mode-property-ado.md)  
+ [Mode (propriété)](../../../ado/reference/ado-api/mode-property-ado.md)  
   
- [Collection de propriétés](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Collection Properties](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [Propriété du fournisseur](../../../ado/reference/ado-api/provider-property-ado.md)  
+ [Propriété Provider](../../../ado/reference/ado-api/provider-property-ado.md)  
   
- [State, propriété](../../../ado/reference/ado-api/state-property-ado.md)  
+ [Propriété State](../../../ado/reference/ado-api/state-property-ado.md)  
   
- [Propriété version](../../../ado/reference/ado-api/version-property-ado.md)  
+ [Propriété Version](../../../ado/reference/ado-api/version-property-ado.md)  
   
 ## <a name="methods"></a>Méthodes  
  [BeginTrans, CommitTrans et RollbackTrans, méthodes](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)  
@@ -60,18 +60,18 @@ ms.locfileid: "67919510"
   
  [OpenSchema, méthode](../../../ado/reference/ado-api/openschema-method.md)  
   
-## <a name="events"></a>Events  
- [BeginTransComplete, CommitTransComplete et RollbackTransComplete, événements](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
+## <a name="events"></a>Événements  
+ [Événements BeginTransComplete, CommitTransComplete et RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
   
- [ConnectComplete et Disconnect, événements](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
+ [Événements ConnectComplete et Disconnect](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
   
  [ExecuteComplete, événement](../../../ado/reference/ado-api/executecomplete-event-ado.md)  
   
  [InfoMessage, événement](../../../ado/reference/ado-api/infomessage-event-ado.md)  
   
- [WillConnect, événement](../../../ado/reference/ado-api/willconnect-event-ado.md)  
+ [Événement WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md)  
   
- [WillExecute, événement](../../../ado/reference/ado-api/willexecute-event-ado.md)  
+ [Événement WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Connection, objet (ADO MD)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

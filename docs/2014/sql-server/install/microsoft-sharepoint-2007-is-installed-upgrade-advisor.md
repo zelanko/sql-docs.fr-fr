@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 84672ddf6a9b2912f3d53eef8d40727369376ba5
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952091"
 ---
 # <a name="microsoft-sharepoint-2007-is-installed-upgrade-advisor"></a>Microsoft SharePoint 2007 installé (Conseiller de mise à niveau)
@@ -22,13 +22,13 @@ ms.locfileid: "71952091"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mode SharePoint.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Mode SharePoint.|  
   
 ## <a name="component"></a>Composant  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Description  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne sera pas mis à niveau ou installé sur SharePoint 2007. La mise à niveau est bloquée.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne sera pas mis à niveau ou installé sur SharePoint 2007. La mise à niveau est bloquée.  
   
 ## <a name="corrective-action"></a>Action corrective  
  Pour continuer la mise à niveau, vous devez désinstaller SharePoint 2007 ou procéder à la mise à niveau de SharePoint 2007 vers un produit SharePoint 2010. Une fois votre installation de SharePoint mise à jour, relancez le Conseiller de mise à niveau pour confirmer qu'il n'y a pas d'autre problèmes de mise à niveau.  
@@ -36,6 +36,6 @@ ms.locfileid: "71952091"
  Il n'est pas possible de mettre directement à niveau SharePoint 2007 vers SharePoint 2013. mais vous pouvez faire ce que l’on appelle une attachement de base de données « double saut » pour effectuer une mise à niveau d’Office SharePoint Server 2007 vers SharePoint Server 2010, puis de SharePoint Server 2010 vers SharePoint Server 2013.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Conseiller de mise &#40;à niveau des problèmes de mise à niveau Reporting Services&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+ [Problèmes de mise à niveau de Reporting Services &#40;conseiller de mise à niveau&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

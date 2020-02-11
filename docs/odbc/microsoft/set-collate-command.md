@@ -13,14 +13,14 @@ ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8a7701edd4c1902399f1d040ae9027365bdf04ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997751"
 ---
 # <a name="set-collate-command"></a>SET COLLATE, commande
-Spécifie une séquence de classement pour les champs caractères dans les opérations de tri et de l’indexation suivantes.  
+Spécifie une séquence de classement pour les champs caractère dans les opérations de tri et d’indexation ultérieures.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,45 +33,45 @@ SET COLLATE TO cSequenceName
  *cSequenceName*  
  Spécifie une séquence de classement. Les options de séquence de classement disponibles sont décrites dans le tableau suivant.  
   
-|Options|Langue|  
+|Options|Langage|  
 |-------------|--------------|  
-|NÉERLANDAIS|Néerlandais|  
-|GENERAL|Anglais, Français, allemand, Espagnol moderne, portugais et autres langues d’Europe occidentale|  
-|ALLEMAND|Commande allemand annuaire téléphonique (DIN)|  
-|ISLANDE|Islandais|  
-|MACHINE|Machine (la séquence de classement par défaut pour les versions antérieures de FoxPro)|  
+|Néerlandais|Néerlandais|  
+|GENERAL|Anglais, français, allemand, espagnol moderne, portugais et autres langues d’Europe occidentale|  
+|Allemand|Ordre de l’annuaire allemand (DIN)|  
+|Islande|Islandais|  
+|USINAGE|Machine (séquence de classement par défaut pour les versions antérieures de FoxPro)|  
 |NORDAN|Norvégien, danois|  
-|ESPAGNOL|Espagnol traditionnel|  
+|Espagnol|Espagnol traditionnel|  
 |SWEFIN|Suédois, finnois|  
 |UNIQWT|Poids unique|  
   
 > [!NOTE]  
->  Lorsque vous spécifiez l’option espagnole, *ch* est une lettre unique qui effectue un tri entre *c* et *d*, et *ll* trie entre  *l* et *m*.  
+>  Lorsque vous spécifiez l’option espagnol, *ch* est une lettre unique qui effectue un tri entre *c* et *d*, et *ll* effectue un tri entre *l* et *m*.  
   
- Si vous spécifiez une option de séquence de classement en tant que caractère littéral chaîne, veillez à placer l’option de guillemets :  
+ Si vous spécifiez une option de séquence de classement en tant que chaîne de caractères littéraux, veillez à placer l’option entre guillemets :  
   
 ```  
 SET COLLATE TO "SWEFIN"  
 ```  
   
- MACHINE est l’option de séquence de classement par défaut et que les utilisateurs de Xbase séquence sont familiarisés avec. Caractères sont classés comme ils apparaissent dans la page de codes actuelle.  
+ MACHINE est l’option de séquence de classement par défaut et est celle qui est familière pour les utilisateurs de Sequence xbase. Les caractères sont ordonnés tels qu’ils apparaissent dans la page de codes actuelle.  
   
- GÉNÉRAL peut être préférable pour les utilisateurs des États-Unis et Europe de l’ouest. Caractères sont classés comme ils apparaissent dans la page de codes actuelle. Dans les versions de FoxPro antérieurs à 2.5, index peuvent avoir été créés à l’aide de la **supérieur**() ou **inférieure**fonctions () pour convertir les champs de caractère à un incident cohérent. Dans les versions de FoxPro 2.5 au plus tard, vous pouvez spécifier l’option de séquence de classement général et omettez la **supérieur**conversion de ().  
+ GÉNÉRAL peut être préférable pour les États-Unis et les utilisateurs européens de l’Ouest. Les caractères sont ordonnés tels qu’ils apparaissent dans la page de codes actuelle. Dans les versions FoxPro antérieures à 2,5, les index peuvent avoir été créés à l’aide des fonctions **Upper**() ou **Lower**() pour convertir les champs de caractères en un cas cohérent. Dans les versions FoxPro ultérieures à 2,5, vous pouvez spécifier à la place l’option de séquence de classement général et omettre la conversion **supérieure**().  
   
- Si vous spécifiez une option de séquence de classement autre que l’ordinateur et si vous créez un fichier .idx, un .idx compact est toujours créé.  
+ Si vous spécifiez une option de séquence de classement autre que MACHINE et que vous créez un fichier. idx, un compact. idx est toujours créé.  
   
- Utilisez SET("COLLATE") pour retourner la séquence de classement actuel.  
+ Utilisez SET (« COLLATE ») pour retourner la séquence de classement actuelle.  
   
- Vous pouvez spécifier un ordre de tri pour une source de données à l’aide de la [boîte de dialogue d’installation ODBC Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md) ou en utilisant le mot clé Collate dans votre chaîne de connexion avec [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md). Cela est identique à l’émission de la commande suivante :  
+ Vous pouvez spécifier une séquence de classement pour une source de données à l’aide de la [boîte de dialogue installation de Visual FoxPro ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md) ou du mot clé COLLATE dans votre chaîne de connexion avec [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md). Cela est identique à l’émission de la commande suivante :  
   
 ```  
 SET COLLATE TO cSequenceName  
 ```  
   
 ## <a name="remarks"></a>Notes  
- Définissez COLLATE vous permet d’ordonner les tables contenant les caractères accentués pour toutes les langues prises en charge. Modification du paramètre de valeur COLLATE n’affecte pas l’ordre de tri des index précédemment ouverts. Visual FoxPro gère automatiquement les index existants, en offrant la flexibilité nécessaire pour créer différents types d’index, même pour le même champ.  
+ SET COLLATE vous permet de classer les tables contenant des caractères accentués pour n’importe quelle langue prise en charge. La modification de la valeur de SET COLLATE n’affecte pas la séquence de classement des index précédemment ouverts. Visual FoxPro gère automatiquement les index existants, ce qui vous permet de créer de nombreux types d’index différents, même pour le même champ.  
   
- Par exemple, si un index est créé avec la valeur COLLATE général la valeur et le paramètre de valeur COLLATE est changé ultérieurement vers l’espagnol, l’index conserve la séquence de classement général.  
+ Par exemple, si un index est créé avec SET COLLATE défini sur général et que le paramètre SET COLLATE est ensuite remplacé par l’espagnol, l’index conserve la séquence de classement générale.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configuration d’ODBC pour Visual FoxPro, boîte de dialogue](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

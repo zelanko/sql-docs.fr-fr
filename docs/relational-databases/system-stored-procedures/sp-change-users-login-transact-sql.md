@@ -18,19 +18,19 @@ ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0594066f044288757e5e31f8e078fabb4c2f3775
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68120230"
 ---
-# <a name="spchangeuserslogin-transact-sql"></a>sp_change_users_login (Transact-SQL)
+# <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Mappe un utilisateur de base de données existant à un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) à la place.  
+  Mappe un utilisateur de base de données existant à un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez à la place [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) .  
   
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,27 +44,27 @@ sp_change_users_login [ @Action = ] 'action'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @Action=] '*action*'  
- Décrit l'action à effectuer par la procédure. *action* est **varchar (10)** . *action* peut avoir l’une des valeurs suivantes.  
+ [ @Action= ] «*action*»  
+ Décrit l'action à effectuer par la procédure. *action* est **de type varchar (10)**. l' *action* peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**Auto_Fix**|Lie une entrée d'utilisateur de l'affichage catalogue système sys.database_principals de la base de données active à une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du même nom. Le compte de connexion de même nom est créé s'il n'existe pas déjà. Examinez les résultats de la **Auto_Fix** instruction pour confirmer que la liaison correcte est effectuée. Évitez d’utiliser **Auto_Fix** dans les situations sensibles à la sécurité.<br /><br /> Lorsque vous utilisez **Auto_Fix**, vous devez spécifier *utilisateur* et *mot de passe* si la connexion n’existe pas déjà, sinon vous devez spécifier *utilisateur*mais *mot de passe* sera ignoré. *connexion* doit être NULL. *utilisateur* doit être un utilisateur valide dans la base de données actuelle. Le compte de connexion ne doit être associé à aucun autre utilisateur.|  
-|**Rapport**|Dresse la liste des utilisateurs qui ne sont pas liés à un compte de connexion dans la base de données active et indique les identificateurs de sécurité (SID) correspondants. *utilisateur*, *connexion*, et *mot de passe* doit être NULL ou non spécifié.<br /><br /> Pour remplacer l’option de rapport avec une requête en utilisant les tables système, comparer les entrées de **sys.server_prinicpals** avec les entrées dans **sys.database_principals**.|  
-|**Update_One**|Lie le spécifié *utilisateur* dans la base de données actuelle à un existant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *connexion*. *utilisateur* et *connexion* doit être spécifié. *mot de passe* doit être NULL ou non spécifié.|  
+|**Auto_Fix**|Lie une entrée d'utilisateur de l'affichage catalogue système sys.database_principals de la base de données active à une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du même nom. Le compte de connexion de même nom est créé s'il n'existe pas déjà. Examinez le résultat de l’instruction **Auto_Fix** pour confirmer que le lien correct est effectivement effectué. Évitez d’utiliser des **Auto_Fix** dans des situations de sécurité.<br /><br /> Lorsque vous utilisez **Auto_Fix**, vous devez spécifier l' *utilisateur* et le *mot de passe* si la connexion n’existe pas déjà, sinon vous devez spécifier l' *utilisateur* , mais le *mot de passe* sera ignoré. la *connexion* doit avoir la valeur null. l' *utilisateur* doit être un utilisateur valide dans la base de données actuelle. Le compte de connexion ne doit être associé à aucun autre utilisateur.|  
+|**Report**|Dresse la liste des utilisateurs qui ne sont pas liés à un compte de connexion dans la base de données active et indique les identificateurs de sécurité (SID) correspondants. l' *utilisateur*, la *connexion*et le *mot de passe* doivent avoir la valeur null ou ne pas être spécifiés.<br /><br /> Pour remplacer l’option de rapport par une requête qui utilise les tables système, comparez les entrées dans **sys. server_prinicpals** avec les entrées dans **sys. database_principals**.|  
+|**Update_One**|Lie l' *utilisateur* spécifié dans la base de données active à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] une *connexion*existante. l' *utilisateur* et la *connexion* doivent être spécifiés. le *mot de passe* doit avoir la valeur null ou n’est pas spécifié.|  
   
- [ @UserNamePattern=] '*utilisateur*'  
- Nom d'un utilisateur dans la base de données active. *utilisateur* est **sysname**, avec NULL comme valeur par défaut.  
+ [ @UserNamePattern= ] '*utilisateur*'  
+ Nom d'un utilisateur dans la base de données active. *User* est de **type sysname**, avec NULL comme valeur par défaut.  
   
- [ @LoginName=] '*connexion*'  
- Est le nom d'un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* est de type **sysname**, avec NULL comme valeur par défaut.  
+ [ @LoginName= ] «*connexion*»  
+ Est le nom d'un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* est de **type sysname**, avec NULL comme valeur par défaut.  
   
- [ @Password=] '*mot de passe*'  
- Mot de passe affecté à un nouveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion qui est créée en spécifiant **Auto_Fix**. Si une connexion correspondante existe déjà, l’utilisateur est mappé sur et *mot de passe* est ignoré. Si une connexion correspondante n’existe pas, sp_change_users_login crée une nouvelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion et lui affecte *mot de passe* comme mot de passe pour la nouvelle connexion. *mot de passe* est **sysname**, et ne doit pas être NULL.  
+ [ @Password= ] «*mot de passe*»  
+ Mot de passe affecté à une nouvelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion créée en spécifiant **Auto_Fix**. Si une connexion correspondante existe déjà, l’utilisateur et la connexion sont mappés et le *mot de passe* est ignoré. S’il n’existe pas de connexion correspondante, sp_change_users_login crée une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nouvelle connexion et attribue *le mot de* passe à la nouvelle connexion. *Password est de* **type sysname**et ne doit pas avoir la valeur null.  
   
 > **IMPORTANT** Utilisez toujours un [mot de passe fort !](../../relational-databases/security/strong-passwords.md)
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -75,7 +75,7 @@ sp_change_users_login [ @Action = ] 'action'
 |UserSID|**varbinary(85)**|Identificateur de sécurité de l'utilisateur.|  
   
 ## <a name="remarks"></a>Notes  
- Utilisez sp_change_users_login pour lier un utilisateur de la base de données active à une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si le compte de connexion d'un utilisateur a changé, utilisez sp_change_users_login pour lier l'utilisateur au nouveau compte de connexion sans perdre les autorisations de l'utilisateur. La nouvelle *connexion* ne peut pas être sa et le *utilisateur*ne peut pas être dbo, guest ou un utilisateur INFORMATION_SCHEMA.  
+ Utilisez sp_change_users_login pour lier un utilisateur de la base de données active à une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si le compte de connexion d'un utilisateur a changé, utilisez sp_change_users_login pour lier l'utilisateur au nouveau compte de connexion sans perdre les autorisations de l'utilisateur. La nouvelle *connexion* ne peut pas être sa et l' *utilisateur*ne peut pas être dbo, guest ou un utilisateur INFORMATION_SCHEMA.  
   
  La procédure sp_change_users_login ne peut pas être utilisée pour mapper des utilisateurs de base de données sur des principaux, des certificats ou des clés asymétriques de niveau Windows.  
   
@@ -84,7 +84,7 @@ sp_change_users_login [ @Action = ] 'action'
  La procédure sp_change_users_login ne peut pas être exécutée dans une transaction définie par l'utilisateur.  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l'appartenance au rôle de base de données fixe db_owner. Seuls les membres du rôle serveur fixe sysadmin peuvent spécifier le **Auto_Fix** option.  
+ Nécessite l'appartenance au rôle de base de données fixe db_owner. Seuls les membres du rôle serveur fixe sysadmin peuvent spécifier l’option **Auto_Fix** .  
   
 ## <a name="examples"></a>Exemples  
   
@@ -110,7 +110,7 @@ GO
 ```  
   
 ### <a name="c-automatically-mapping-a-user-to-a-login-creating-a-new-login-if-it-is-required"></a>C. Mappage automatique d'un utilisateur à une connexion en créant une nouvelle connexion si nécessaire  
- L’exemple suivant montre comment utiliser `Auto_Fix` pour mapper un utilisateur existant à une connexion du même nom, ou pour créer le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion `Mary` qui a le mot de passe `B3r12-3x$098f6` si la connexion `Mary` n’existe pas.  
+ L’exemple suivant `Auto_Fix` montre comment utiliser pour mapper un utilisateur existant à un compte de connexion du même nom, ou pour créer la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion `Mary` avec le mot de `B3r12-3x$098f6` passe si la `Mary` connexion n’existe pas.  
   
 ```  
 USE AdventureWorks2012;  
@@ -121,7 +121,7 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [CRÉER une connexion &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
  [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

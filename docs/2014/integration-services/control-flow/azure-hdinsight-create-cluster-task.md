@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 88ab6a4e91b98a2e6551f6a01cbca29738513b61
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69028636"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Tâche de création d’un cluster Azure HDInsight
@@ -40,7 +40,7 @@ Le tableau suivant décrit les champs de cette boîte de dialogue.
 |ResourceGroup|Spécifiez le groupe de ressources Azure dans lequel le cluster HDInsight sera créé.|
 |Location|Spécifiez l’emplacement du cluster HDInsight. Le cluster doit être créé au même emplacement que le compte de stockage Azure spécifié.|  
 |ClusterName|Spécifiez un nom pour le cluster HDInsight à créer.|  
-|ClusterSize|Spécifiez le nombre de nœuds à créer dans le cluster.|  
+|clusterSize|Spécifiez le nombre de nœuds à créer dans le cluster.|  
 |BlobContainer|Spécifiez le nom du conteneur de stockage par défaut à associer au cluster HDInsight.|  
 |UserName|Spécifiez le nom d’utilisateur à utiliser pour la connexion au cluster HDInsight.|  
 |Mot de passe|Spécifiez le mot de passe à utiliser pour la connexion au cluster HDInsight.|

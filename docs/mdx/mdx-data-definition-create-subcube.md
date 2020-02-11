@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f137e8c377c94a60fdcfd8f1534069cef4b28f66
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68887434"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>Définition de données MDX - CREATE SUBCUBE
@@ -35,7 +35,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
  *Select_Statement*  
  Expression MDX (Multidimensional Expressions) SELECT valide qui ne contient pas de clauses WITH, NON EMPTY ou HAVING et ne nécessite pas de propriétés de dimension ou de cellule.  
   
- Consultez l' [instruction &#40;Select&#41; MDX](../mdx/mdx-data-manipulation-select.md) pour obtenir une explication détaillée de la syntaxe sur les instructions SELECT et la clause **non visuelle** .  
+ Consultez [instruction select &#40;&#41;MDX](../mdx/mdx-data-manipulation-select.md) pour obtenir une explication détaillée de la syntaxe sur les instructions SELECT et la clause **non visuelle** .  
   
 ## <a name="remarks"></a>Notes  
  Lorsque les membres par défaut sont exclus de la définition d'un sous-cube, les coordonnées changent de façon correspondante. Pour les attributs qui peuvent être agrégés, le membre par défaut est déplacé vers le membre [All]. Pour les attributs qui ne peuvent pas être agrégés, le membre par défaut est déplacé vers un membre existant dans le sous-cube. Le tableau ci-dessous donne des exemples de combinaisons de sous-cubes et de membres par défaut.  
@@ -52,10 +52,10 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  Les objets de session créés dans le contexte d'un sous-cube sont supprimés lorsque le sous-cube est supprimé.  
   
- Pour plus d’informations sur les sous-cubes, consultez [création de sous &#40;-&#41;cubes dans MDX MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx).  
+ Pour plus d’informations sur les sous-cubes, consultez [création de sous-cubes dans mdx &#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx).  
   
 ## <a name="example"></a>Exemple  
- L'exemple ci-dessous crée un sous-cube qui limite l'espace apparent du cube aux membres existants pour le Canada. Il utilise ensuite la fonction Members pour retourner tous les membres du niveau Country de la hiérarchie définie par l’utilisateur Geography, en retournant uniquement le pays du Canada.  
+ L'exemple ci-dessous crée un sous-cube qui limite l'espace apparent du cube aux membres existants pour le Canada. Il utilise ensuite la fonction **members** pour retourner tous les membres du niveau Country de la hiérarchie définie par l’utilisateur Geography, en retournant uniquement le pays du Canada.  
   
 ```  
 CREATE SUBCUBE [Adventure Works] AS  
@@ -92,9 +92,9 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
 |||||  
 |-|-|-|-|  
 ||All Products|Accessories|Clothing|  
-|All Resellers|$2,031,079.39|506 172,45 $|1 524 906,93 $|  
-|Value Added Reseller|$767,388.52|175 002,81 $|592 385,71 $|  
-|Warehouse|$1,263,690.86|331 169,64 $|932 521,23 $|  
+|All Resellers|$2 031 079,39|506 172,45 $|1 524 906,93 $|  
+|Value Added Reseller|$767 388,52|175 002,81 $|592 385,71 $|  
+|Warehouse|$1 263 690,86|331 169,64 $|932 521,23 $|  
   
  La suppression et la recréation du sous-cube à l'aide de la clause NON VISUAL créera un sous-cube conservant les totaux réels pour tous les membres de Products.Category et Resellers.[Business Type], qu'ils soient visibles ou pas dans le sous-cube.  
   
@@ -128,9 +128,9 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  Les parties [All Products] et [All Resellers], colonne et ligne respectivement, contiennent des totaux pour tous les membres et pas seulement pour ceux qui sont visibles.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts clés de MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
- [MDX (instructions &#40;de script MDX)&#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [DROP (instruction &#40;de sous-cube MDX)&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
- [Instruction SELECT &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
+ [Concepts clés dans MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
+ [Instructions de script MDX &#40;&#41;MDX](../mdx/mdx-scripting-statements-mdx.md)   
+ [Instruction DROP SUBCUBE &#40;&#41;MDX](../mdx/mdx-data-definition-drop-subcube.md)   
+ [Instruction SELECT &#40;&#41;MDX](../mdx/mdx-data-manipulation-select.md)  
   
   

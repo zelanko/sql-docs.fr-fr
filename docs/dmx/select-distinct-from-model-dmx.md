@@ -1,5 +1,5 @@
 ---
-title: Select distinct from &lt;Model &gt; (DMX) | Microsoft Docs
+title: SELECT DISTINCT FROM &lt;Model &gt; (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 67ed5236aad0549fa6850114280ee15d8cebcaeb
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892530"
 ---
-# <a name="select-distinct-from-ltmodel-gt-dmx"></a>Select distinct from &lt;Model &gt; (DMX)
+# <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;Model &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retourne tous les états possibles de la colonne sélectionnée dans le modèle. Les valeurs qui sont retournées varient selon que la colonne spécifiée contient des valeurs discrètes, des valeurs numériques discrétisées ou des valeurs numériques continues.  
@@ -41,21 +41,21 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  *liste de conditions*  
  Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
- *expression*  
+ *formule*  
  facultatif. Expression qui retourne une valeur scalaire.  
   
 ## <a name="remarks"></a>Notes  
  L’instruction **Select distinct from** ne fonctionne qu’avec une seule colonne ou avec un ensemble de colonnes associées. Cette clause ne fonctionne pas avec un ensemble de colonnes non associées.  
   
- L’instruction **Select distinct from** vous permet de référencer directement une colonne à l’intérieur d’une table imbriquée. Exemple :  
+ L’instruction **Select distinct from** vous permet de référencer directement une colonne à l’intérieur d’une table imbriquée. Par exemple :  
   
 ```  
 <model>.<table column reference>.<column reference>  
 ```  
   
- Les résultats de l’instruction **Select distinct \<from Model >** varient en fonction du type de colonne. Le tableau ci-dessous décrit les types de colonnes pris en charge et le résultat de l'instruction.  
+ Les résultats de l’instruction **Select distinct \<from Model>** varient en fonction du type de colonne. Le tableau ci-dessous décrit les types de colonnes pris en charge et le résultat de l'instruction.  
   
-|Type de colonne|Sortie|  
+|Type de colonne|Output|  
 |-----------------|------------|  
 |Discret|Valeurs uniques de la colonne|  
 |Discrétisé|Point milieu de chaque compartiment discrétisé de la colonne.|  
@@ -69,9 +69,9 @@ SELECT DISTINCT [Gender]
 FROM [TM Decision Tree]  
 ```  
   
- Résultats de l'exemple :  
+ Résultats de l’exemple :  
   
-|Gender|  
+|Sexe|  
 |------------|  
 ||  
 |F|  
@@ -89,7 +89,7 @@ SELECT DISTINCT [Age] AS [Midpoint Age],
 FROM [TM Decision Tree]  
 ```  
   
- Résultats de l'exemple :  
+ Résultats de l’exemple :  
   
 |Midpoint Age|Minimum Age|Maximum Age|  
 |------------------|-----------------|-----------------|  
@@ -111,16 +111,16 @@ SELECT DISTINCT [Yearly Income] AS [Bucket Average],
 FROM [TM Decision Tree]  
 ```  
   
- Résultats de l'exemple :  
+ Résultats de l’exemple :  
   
 |Bucket Average|Bucket Minimum|Bucket Maximum|  
 |--------------------|--------------------|--------------------|  
 ||||  
-|24610.7|10000|39221.41|  
-|55115.73|39221.41|71010.05|  
-|84821.54|71010.05|98633.04|  
-|111633.9|98633.04|124634.7|  
-|147317.4|124634.7|170000|  
+|24610,7|10000|39221,41|  
+|55115,73|39221,41|71010,05|  
+|84821,54|71010,05|98633,04|  
+|111633,9|98633,04|124634,7|  
+|147317,4|124634,7|170000|  
   
  Vous constatez que les valeurs de la colonne [Yearly Income] ont été discrétisées dans cinq compartiments, plus une ligne supplémentaire de valeurs Null pour représenter les valeurs manquantes.  
   
@@ -128,14 +128,14 @@ FROM [TM Decision Tree]
   
  Par exemple, si vous parcourez le modèle en utilisant la Visionneuse d'arbre de décision et que vous cliquez sur un nœud qui contient des clients regroupés par revenu, les propriétés de nœud suivantes s'affichent dans l'info-bulle :  
   
- Âge > = 69 et revenus annuels < 39221,41  
+ Âge >= 69 et revenus annuels < 39221,41  
   
 > [!NOTE]  
 >  La valeur minimale du compartiment minimal et la valeur maximale du compartiment maximal correspondent aux valeurs observées la plus élevée et la moins élevée. Les valeurs hors de cette plage observée sont supposées appartenir aux compartiments minimaux et maximaux.  
   
 ## <a name="see-also"></a>Voir aussi  
- [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [Instructions de manipulation &#40;de&#41; données DMX des extensions d’exploration de données](../dmx/dmx-statements-data-manipulation.md)   
- [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [SÉLECTIONNER &#40;&#41;DMX](../dmx/select-dmx.md)   
+ [Data Mining Extensions &#40;les instructions de manipulation de données DMX&#41;](../dmx/dmx-statements-data-manipulation.md)   
+ [Informations de référence sur les instructions DMX&#41; &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

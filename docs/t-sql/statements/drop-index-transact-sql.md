@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dbee99748718d88ce678d78cfa64849f8e5bbc5d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982163"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "73982163"
 > [!IMPORTANT]
 >  La syntaxe définie dans `<drop_backward_compatible_index>` sera supprimée dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser cette syntaxe dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Utilisez plutôt la syntaxe spécifiée sous `<drop_relational_or_xml_index>`. Les index XML ne peuvent pas être supprimés à l'aide d'une syntaxe à compatibilité descendante.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -108,7 +108,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
   
 ## <a name="arguments"></a>Arguments  
  *IF EXISTS*  
- **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Supprime, de manière conditionnelle, l’index uniquement s’il existe déjà.  
   
@@ -162,7 +162,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
   
  Indique si les tables sous-jacentes et les index associés sont disponibles pour les requêtes et la modification de données pendant l'opération d'index. La valeur par défaut est OFF.  
   
- ON  
+ ACTIVÉ  
  Les verrous de table à long terme ne sont pas maintenus. Cela permet aux requêtes ou mises à jour de la table sous-jacente de continuer.  
   
  OFF  
@@ -268,7 +268,7 @@ Lorsqu'un index cluster est supprimé HORS CONNEXION, seuls les niveaux supérie
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-dropping-an-index"></a>A. Suppression d'un index  
+### <a name="a-dropping-an-index"></a>R. Suppression d'un index  
  L’exemple suivant supprime l’index `IX_ProductVendor_VendorID` sur la table `ProductVendor` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  

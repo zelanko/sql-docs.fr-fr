@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a0462af67afbf5ac25c52ded8523ca26678699b9
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796958"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>Création, modification et suppression de clés étrangères
@@ -27,7 +27,7 @@ ms.locfileid: "72796958"
  Les colonnes qui représentent la clé étrangère sont répertoriées dans la propriété d'objet `Columns` de l'objet <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>. La clé primaire référencée par la clé étrangère est représentée par la propriété <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> qui figure dans la table spécifiée dans la propriété <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A>.  
   
 ## <a name="example"></a>Exemple  
- Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet Visual Basic Smo dans Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [créer un projet&#35; Smo Visual C dans Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet Visual Basic Smo dans Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [créer un projet Visual C&#35; Smo dans Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-basic"></a>Création, modification et suppression d'une clé étrangère en Visual Basic  
  Cet exemple de code montre comment créer une relation de clé étrangère entre une ou plusieurs colonnes d'une table et une colonne de clé primaire d'une autre table.  
@@ -93,7 +93,7 @@ $fk.Create()
 ```  
   
 ## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>Exemple : les colonnes Clés étrangères, Clés primaires et Contrainte unique  
- Cet exemple illustre les thèmes suivants :  
+ Cet exemple montre :  
   
 -   Trouver une clé étrangère sur un objet existant.  
   

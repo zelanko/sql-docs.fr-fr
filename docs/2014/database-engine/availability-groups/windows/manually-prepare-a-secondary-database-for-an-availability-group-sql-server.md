@@ -19,27 +19,27 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 927d0fd7b108718daffe86a6534ca40492429d34
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797654"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>Préparer manuellement une base de données secondaire pour un groupe de disponibilité (SQL Server)
   Cette rubrique explique comment préparer une base de données secondaire pour un groupe de disponibilité AlwaysOn dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell. La préparation d'une base de données secondaire s'effectue en deux étapes : (1) restauration d'une sauvegarde de base de données récente de la base de données primaire et des sauvegardes de journaux suivantes sur chaque instance de serveur qui héberge le réplica secondaire, à l'aide de RESTORE WITH NORECOVERY, et (2) attachement de la base de données restaurée au groupe de disponibilité.  
   
 > [!TIP]  
->  Si vous disposez d'une configuration de copie des journaux de transaction, vous pouvez peut-être convertir la base de données principale pour la copie des journaux de transaction et une ou plusieurs de ses bases de données secondaires en base de données principale AlwaysOn et une ou plusieurs bases de données secondaires AlwaysOn. Pour plus d’informations, consultez [Configuration requise pour la migration de la copie des &#40;journaux&#41;de session vers groupes de disponibilité AlwaysOn SQL Server](prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
+>  Si vous disposez d'une configuration de copie des journaux de transaction, vous pouvez peut-être convertir la base de données principale pour la copie des journaux de transaction et une ou plusieurs de ses bases de données secondaires en base de données principale AlwaysOn et une ou plusieurs bases de données secondaires AlwaysOn. Pour plus d’informations, consultez [Configuration requise pour la migration de la copie des journaux de session vers groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
   
 -   **Avant de commencer :**  
   
-     [Conditions préalables requises et restrictions](#Prerequisites)  
+     [Conditions préalables et restrictions](#Prerequisites)  
   
      [Recommandations](#Recommendations)  
   
      [Sécurité](#Security)  
   
--   **Pour préparer une base de données secondaire, utilisez :**  
+-   **Pour préparer une base de données secondaire, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -47,9 +47,9 @@ ms.locfileid: "72797654"
   
      [PowerShell](#PowerShellProcedure)  
   
--   [Tâches connexes de sauvegarde et de restauration](#RelatedTasks)  
+-   [Tâches de sauvegarde et de restauration connexes](#RelatedTasks)  
   
--   **Suivi :** [Après avoir préparé une base de données secondaire](#FollowUp)  
+-   **Suivi :** [après avoir préparé une base de données secondaire](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -74,9 +74,9 @@ ms.locfileid: "72797654"
 -   Avant de préparer vos bases de données secondaires, il est fortement recommandé d'interrompre les sauvegardes de fichiers journaux planifiées sur les bases de données dans le groupe de disponibilité jusqu'à ce que l'initialisation des réplicas secondaires soit terminée.  
   
 ###  <a name="Security"></a> Sécurité  
- Lorsqu'une base de données est sauvegardée, la valeur OFF est attribuée à la propriété [TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md) de la base de données. Par conséquent, la propriété TRUSTWORTHY d'une base de données nouvellement restaurée a toujours la valeur OFF.  
+ Lorsqu’une base de données est sauvegardée, la valeur OFF est attribuée à la [Propriété Trustworthy de la base de données](../../../relational-databases/security/trustworthy-database-property.md) . Par conséquent, la propriété TRUSTWORTHY d'une base de données nouvellement restaurée a toujours la valeur OFF.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Les autorisations BACKUP DATABASE et BACKUP LOG reviennent par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_backupoperator** . Pour plus d’informations, consultez [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
  Lorsque la base de données en cours de restauration n'existe pas dans l'instance de serveur, l'instruction RESTORE nécessite des autorisations CREATE DATABASE. Pour plus d’informations, consultez [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
@@ -94,29 +94,29 @@ ms.locfileid: "72797654"
   
 3.  Sur l'instance de serveur qui héberge le réplica secondaire, restaurez la sauvegarde complète de la base de données primaire (et éventuellement une sauvegarde différentielle) suivies de toutes les sauvegardes de journaux suivantes.  
   
-     Dans la page **Options de RESTORE DATABASE** , sélectionnez **Laisser la base de données non opérationnelle, et ne pas restaurer les transactions non validées. Les journaux des transactions supplémentaires peuvent être restaurés. (RESTORE WITH NORECOVERY)** .  
+     Dans la page **Options de RESTORE DATABASE** , sélectionnez **Laisser la base de données non opérationnelle, et ne pas restaurer les transactions non validées. Les journaux des transactions supplémentaires peuvent être restaurés. (RESTORE WITH NORECOVERY)**.  
   
-     Si les chemins d'accès de fichier de la base de données primaire et de la base de données secondaire diffèrent, par exemple, si la base de données primaire se trouve sur le lecteur « F: », mais que l'instance de serveur qui héberge le réplica secondaire ne dispose pas de lecteur F:, incluez l'option MOVE dans votre clause WITH.  
+     Si les chemins d'accès de fichier de la base de données primaire et de la base de données secondaire diffèrent, par exemple, si la base de données primaire se trouve sur le lecteur « F: », mais que l'instance de serveur qui héberge le réplica secondaire ne dispose pas de lecteur F:, incluez l'option MOVE dans votre clause WITH.  
   
 4.  Pour terminer la configuration de la base de données secondaire, vous devez attacher la base de données secondaire au groupe de disponibilité. Pour plus d’informations, consultez [Joindre une base de données secondaire à un groupe de disponibilité &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
 > [!NOTE]  
 >  Pour plus d'informations sur l'exécution de ces opérations de sauvegarde et de restauration, consultez [Tâches connexes de sauvegarde et de restauration](#RelatedTasks), plus loin dans cette section.  
   
-###  <a name="RelatedTasks"></a> Tâches connexes de sauvegarde et de restauration  
+###  <a name="RelatedTasks"></a>Tâches de sauvegarde et de restauration connexes  
  **Pour créer une sauvegarde de base de données**  
   
--   [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
+-   [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
 -   [Créer une sauvegarde différentielle de base de données &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
   
- **Pour créer une sauvegarde du journal**  
+ **Pour créer une sauvegarde de fichier journal**  
   
 -   [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
  **Pour restaurer des sauvegardes**  
   
--   [Restaurer une sauvegarde &#40;de base de données SQL Server Management Studio&#41;](../../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
+-   [Restaurer une sauvegarde de base de données &#40;SQL Server Management Studio&#41;](../../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
 -   [Restaurer une sauvegarde différentielle de base de données &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-differential-database-backup-sql-server.md)  
   
@@ -134,7 +134,7 @@ ms.locfileid: "72797654"
   
 2.  Sur l'instance de serveur qui héberge le réplica secondaire, restaurez la sauvegarde complète de la base de données primaire (et éventuellement une sauvegarde différentielle) suivies de toutes les sauvegardes de journaux suivantes. Utilisez WITH NORECOVERY pour chaque opération de restauration.  
   
-     Si les chemins d'accès de fichier de la base de données primaire et de la base de données secondaire diffèrent, par exemple, si la base de données primaire se trouve sur le lecteur « F: », mais que l'instance de serveur qui héberge le réplica secondaire ne dispose pas de lecteur F:, incluez l'option MOVE dans votre clause WITH.  
+     Si les chemins d'accès de fichier de la base de données primaire et de la base de données secondaire diffèrent, par exemple, si la base de données primaire se trouve sur le lecteur « F: », mais que l'instance de serveur qui héberge le réplica secondaire ne dispose pas de lecteur F:, incluez l'option MOVE dans votre clause WITH.  
   
 3.  Si des sauvegardes de journal ont été effectuées sur la base de données primaire après la sauvegarde du journal requise, vous devez également les copier sur l'instance de serveur qui héberge le réplica secondaire et appliquer chacune de ces sauvegardes de journal à la base de données secondaire, en commençant par la première et en utilisant systématiquement RESTORE WITH NORECOVERY.  
   
@@ -144,10 +144,10 @@ ms.locfileid: "72797654"
 4.  Pour terminer la configuration de la base de données secondaire, vous devez attacher la base de données secondaire au groupe de disponibilité. Pour plus d’informations, consultez [Joindre une base de données secondaire à un groupe de disponibilité &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
 > [!NOTE]  
->  Pour plus d’informations sur l’exécution de ces opérations de sauvegarde et de restauration, consultez [Tâches connexes de sauvegarde et de restauration](#RelatedTasks), plus loin dans cette rubrique.  
+>  Pour plus d'informations sur l'exécution de ces opérations de sauvegarde et de restauration, consultez [Tâches connexes de sauvegarde et de restauration](#RelatedTasks), plus loin dans cette rubrique.  
   
-###  <a name="ExampleTsql"></a> Exemple Transact-SQL  
- L'exemple suivant prépare une base de données secondaire. L'exemple suivant utilise l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] qui emploie par défaut le mode de récupération simple.  
+###  <a name="ExampleTsql"></a>Exemple Transact-SQL  
+ L'exemple suivant prépare une base de données secondaire. L'exemple suivant utilise la base de données d'exemple [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] qui emploie par défaut le mode de récupération simple.  
   
 1.  Pour utiliser la base de données [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] , modifiez-la afin qu'elle utilise le mode de récupération complète :  
   
@@ -177,7 +177,7 @@ ms.locfileid: "72797654"
   
 4.  Restaurez la sauvegarde complète, à l'aide de RESTORE WITH NORECOVERY, sur l'instance de serveur qui héberge le réplica secondaire. La commande de restauration varie selon que les chemins d'accès des bases de données primaire et secondaire sont identiques ou non.  
   
-    -   **Si les chemins d'accès sont identiques :**  
+    -   **Si les chemins d’accès sont identiques :**  
   
          Sur l'ordinateur qui héberge le réplica secondaire, restaurez la sauvegarde complète comme suit :  
   
@@ -188,7 +188,7 @@ ms.locfileid: "72797654"
         GO  
         ```  
   
-    -   **Si les chemins d'accès sont différents :**  
+    -   **Si les chemins d’accès sont différents :**  
   
          Si le chemin d'accès de la base de données secondaire n'est pas le même que celui de la base de données primaire (lettres de lecteurs différentes, par exemple), la création de la base de données secondaire requiert l'intégration d'une clause MOVE dans l'opération de restauration.  
   
@@ -254,15 +254,15 @@ ms.locfileid: "72797654"
 4.  Pour restaurer la base de données et les sauvegardes de journaux de chaque base de données primaire, utilisez l'applet de commande `restore-SqlDatabase`, en spécifiant le paramètre de restauration `NoRecovery`. Si les chemins d'accès de fichier diffèrent entre les ordinateurs qui hébergent le réplica principal et le réplica secondaire cible, utilisez également le paramètre de restauration `RelocateFile`.  
   
     > [!NOTE]  
-    >  Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour plus d’informations, consultez [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 5.  Pour terminer la configuration de la base de données secondaire, vous devez l'attacher au groupe de disponibilité. Pour plus d’informations, consultez [Joindre une base de données secondaire à un groupe de disponibilité &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
--   [fournisseur PowerShell SQL Server](../../../powershell/sql-server-powershell-provider.md)  
+-   [Fournisseur SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
-###  <a name="ExamplePSscript"></a> Exemple de commande et de script de sauvegarde et restauration  
+###  <a name="ExamplePSscript"></a>Exemple de commande et de script de sauvegarde et de restauration  
  Les commandes PowerShell suivantes effectuent une sauvegarde complète de base de données et de son journal des transactions dans un partage réseau et restaurent ces sauvegardes depuis ce partage. Dans cet exemple, on suppose que le chemin d'accès de fichier dans lequel la base de données est restaurée est identique au chemin d'accès de fichier dans lequel la base de données a été sauvegardée.  
   
 ```powershell
@@ -276,12 +276,12 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.bak" -N
 Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery -ServerInstance "DestinationMachine\Instance"
 ```  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir préparé une base de données secondaire  
+##  <a name="FollowUp"></a>Suivi : après avoir préparé une base de données secondaire  
  Pour terminer la configuration de la base de données secondaire, attachez la base de données nouvellement restaurée au groupe de disponibilité. Pour plus d’informations, consultez [Joindre une base de données secondaire à un groupe de disponibilité &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble &#40;de&#41; groupes de disponibilité AlwaysOn SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
+ [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Arguments RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Résoudre les problèmes liés à l’échec &#40;d’une opération d’ajout de fichier groupes de disponibilité AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+ [Résoudre les problèmes liés à l’échec d’une opération d’ajout de fichier &#40;groupes de disponibilité AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3d4d307ea18127586ac46b0f6afb973ef62cf6ba
-ms.sourcegitcommit: ede04340adbf085e668a2536d4f7114abba14a0c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74761478"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes (Transact-SQL)
@@ -34,32 +34,32 @@ ms.locfileid: "74761478"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**tiers**|ID de l'objet auquel appartient cet index.|  
+|**object_id**|**int**|ID de l'objet auquel appartient cet index.|  
 |**nomme**|**sysname**|Nom de l’index. le **nom** est unique dans l’objet.<br /><br /> NULL = Segment|  
-|**index_id**|**tiers**|Identificateur de l'index. **index_id** n’est unique que dans l’objet.<br /><br /> 0 = Segment de mémoire<br /><br /> 1 = index cluster<br /><br /> > 1 = Index non-cluster|  
-|**entrer**|**sa**|Type de l'index :<br /><br /> 0 = Segment de mémoire<br /><br /> 1 = Clustered<br /><br /> 2 = Non cluster<br /><br /> 3 = XML<br /><br /> 4 = Spatial<br /><br /> 5 = index cluster ColumnStore. **S’applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> 6 = index ColumnStore non cluster. **S’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> 7 = index de hachage non cluster. **S’applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.|  
-|**type_desc**|**nvarchar (60)**|Description du type d'index :<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> Clustered COLUMNSTORE : **s’applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> COLUMNSTORE non cluster : **s’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> HACHAGE non-CLUSTER : les index de hachage non CLUSTER sont pris en charge uniquement sur les tables optimisées en mémoire. La vue sys.hash_indexes indique les index de hachage actuels et les propriétés de hachage. Pour plus d’informations, consultez [sys. hash_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md). **S’applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.|  
-|**is_unique**|**64bits**|1 = L'index est unique.<br /><br /> 0 = L'index n'est pas unique.<br /><br /> Toujours 0 pour des index columnstore cluster.|  
-|**data_space_id**|**tiers**|ID de l'espace de données de cet index. L'espace de données est soit un groupe de fichiers, soit un schéma de partition.<br /><br /> 0 = **object_id** est une fonction table ou un index en mémoire.|  
-|**ignore_dup_key**|**64bits**|1 = IGNORE_DUP_KEY est ON.<br /><br /> 0 = IGNORE_DUP_KEY est OFF.|  
-|**is_primary_key**|**64bits**|1 = L'index fait partie d'une contrainte PRIMARY KEY.<br /><br /> Toujours 0 pour des index columnstore cluster.|  
-|**is_unique_constraint**|**64bits**|1 = L'index fait partie d'une contrainte UNIQUE.<br /><br /> Toujours 0 pour des index columnstore cluster.|  
-|**fill_factor**|**sa**|> 0 = pourcentage de FILLFACTOR utilisé lors de la création ou de la reconstruction de l’index.<br /><br /> 0 = Valeur par défaut<br /><br /> Toujours 0 pour des index columnstore cluster.|  
-|**is_padded**|**64bits**|1 = PADINDEX est ON.<br /><br /> 0 = PADINDEX est OFF.<br /><br /> Toujours 0 pour des index columnstore cluster.|  
-|**is_disabled**|**64bits**|1 = L'index est désactivé.<br /><br /> 0 = L'index n'est pas désactivé.|  
-|**is_hypothetical**|**64bits**|1 = L'index est hypothétique et ne peut être utilisé directement comme un chemin d'accès aux données. Les index hypothétiques conservent des statistiques au niveau des colonnes.<br /><br /> 0 = L'index n'est pas hypothétique.|  
-|**allow_row_locks**|**64bits**|1 = Index autorisant les verrous de ligne<br /><br /> 0 = Index n'autorisant pas les verrous de ligne<br /><br /> Toujours 0 pour des index columnstore cluster.|  
-|**allow_page_locks**|**64bits**|1 = Index autorisant les verrous de page<br /><br /> 0 = Index n'autorisant pas les verrous de page<br /><br /> Toujours 0 pour des index columnstore cluster.|  
-|**has_filter**|**64bits**|1 = Index disposant d'un filtre et contenant uniquement les lignes qui satisfont la définition du filtre.<br /><br /> 0 = Index ne disposant pas de filtre.|  
+|**index_id**|**int**|Identificateur de l'index. **index_id** n’est unique que dans l’objet.<br /><br /> 0 = Segment de mémoire<br /><br /> 1 = index cluster<br /><br /> > 1 = Index non-cluster|  
+|**entrer**|**tinyint**|Type de l'index :<br /><br /> 0 = Segment de mémoire<br /><br /> 1 = Clustered<br /><br /> 2 = Non cluster<br /><br /> 3 = XML<br /><br /> 4 = Spatial<br /><br /> 5 = index cluster ColumnStore. **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> 6 = index ColumnStore non cluster. **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> 7 = index de hachage non cluster. **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.|  
+|**type_desc**|**nvarchar (60)**|Description du type d'index :<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> Clustered COLUMNSTORE : **s’applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> COLUMNSTORE non cluster : **s’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> HACHAGE non-CLUSTER : les index de hachage non CLUSTER sont pris en charge uniquement sur les tables optimisées en mémoire. La vue sys.hash_indexes indique les index de hachage actuels et les propriétés de hachage. Pour plus d’informations, consultez [sys. hash_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md). **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.|  
+|**is_unique**|**bit**|1 = L'index est unique.<br /><br /> 0 = L'index n'est pas unique.<br /><br /> Toujours 0 pour des index columnstore cluster.|  
+|**data_space_id**|**int**|ID de l'espace de données de cet index. L'espace de données est soit un groupe de fichiers, soit un schéma de partition.<br /><br /> 0 = **object_id** est une fonction table ou un index en mémoire.|  
+|**ignore_dup_key**|**bit**|1 = IGNORE_DUP_KEY est ON.<br /><br /> 0 = IGNORE_DUP_KEY est OFF.|  
+|**is_primary_key**|**bit**|1 = L'index fait partie d'une contrainte PRIMARY KEY.<br /><br /> Toujours 0 pour des index columnstore cluster.|  
+|**is_unique_constraint**|**bit**|1 = L'index fait partie d'une contrainte UNIQUE.<br /><br /> Toujours 0 pour des index columnstore cluster.|  
+|**fill_factor**|**tinyint**|> 0 = pourcentage de FILLFACTOR utilisé lors de la création ou de la reconstruction de l’index.<br /><br /> 0 = Valeur par défaut<br /><br /> Toujours 0 pour des index columnstore cluster.|  
+|**is_padded**|**bit**|1 = PADINDEX est ON.<br /><br /> 0 = PADINDEX est OFF.<br /><br /> Toujours 0 pour des index columnstore cluster.|  
+|**is_disabled**|**bit**|1 = L'index est désactivé.<br /><br /> 0 = L'index n'est pas désactivé.|  
+|**is_hypothetical**|**bit**|1 = L'index est hypothétique et ne peut être utilisé directement comme un chemin d'accès aux données. Les index hypothétiques conservent des statistiques au niveau des colonnes.<br /><br /> 0 = L'index n'est pas hypothétique.|  
+|**allow_row_locks**|**bit**|1 = Index autorisant les verrous de ligne<br /><br /> 0 = Index n'autorisant pas les verrous de ligne<br /><br /> Toujours 0 pour des index columnstore cluster.|  
+|**allow_page_locks**|**bit**|1 = Index autorisant les verrous de page<br /><br /> 0 = Index n'autorisant pas les verrous de page<br /><br /> Toujours 0 pour des index columnstore cluster.|  
+|**has_filter**|**bit**|1 = Index disposant d'un filtre et contenant uniquement les lignes qui satisfont la définition du filtre.<br /><br /> 0 = Index ne disposant pas de filtre.|  
 |**filter_definition**|**nvarchar(max)**|Expression pour le sous-ensemble de lignes inclus dans l'index filtré.<br /><br /> NULL pour un segment de mémoire ou un index non filtré.|  
-|**auto_created**|**64bits**|1 = l’index a été créé par le paramétrage automatique.<br /><br />0 = l’index a été créé par l’utilisateur.
-|**optimize_for_sequential_key**|**64bits**|1 = l’optimisation de l’insertion de la dernière page est activée pour l’index.<br><br>0 = valeur par défaut. L’optimisation de l’insertion de la dernière page de l’index a été désactivée.|
+|**auto_created**|**bit**|1 = l’index a été créé par le paramétrage automatique.<br /><br />0 = l’index a été créé par l’utilisateur.
+|**optimize_for_sequential_key**|**bit**|1 = l’optimisation de l’insertion de la dernière page est activée pour l’index.<br><br>0 = valeur par défaut. L’optimisation de l’insertion de la dernière page de l’index a été désactivée.|
 
 > [!NOTE]
 > Le bit de **optimize_for_sequential_key** est pris en charge uniquement dans les versions SQL Server 2019 CTP 3,1 et ultérieur.
   
 ## <a name="permissions"></a>Autorisations  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Pour plus d’informations, consultez Configuration de la [visibilité des métadonnées](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant retourne tous les index de la table `Production.Product` dans la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de données.  
@@ -89,14 +89,14 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Affichages catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [sys. index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
+ [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys. xml_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
  [sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys. key_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
  [sys. FileGroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [sys. partition_schemes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
  [Interrogation du SQL Server FAQ du catalogue système](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [&#40;de l’optimisation en mémoire de l’OLTP en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+ [OLTP en mémoire &#40;Optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

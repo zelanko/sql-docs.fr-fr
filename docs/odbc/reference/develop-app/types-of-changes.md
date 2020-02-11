@@ -14,17 +14,17 @@ ms.assetid: 6a7db81a-20aa-4915-aed8-429711a36f49
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5f43dbf75754a16b3163bbb8e268400f34d372b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087809"
 ---
 # <a name="types-of-changes"></a>Types de changements
-Trois types de modifications sont apportées dans ODBC *3.x* (et n’importe quelle version d’ODBC). Chacune de ces affecte la compatibilité descendante différemment et est gérée de manière différente. Ces modifications sont décrites dans le tableau suivant.  
+Trois types de modifications sont effectués dans ODBC *3. x* (et n’importe quelle version de ODBC). Chacun d’eux affecte la compatibilité descendante différemment et est géré d’une manière différente. Ces modifications sont décrites dans le tableau suivant.  
   
 |Type de modification|Description|  
 |--------------------|-----------------|  
-|Nouvelles fonctionnalités|Il s’agit des fonctionnalités qui sont nouvelles dans ODBC *3.x*, telles que la liaison hors ligne ou les descripteurs. Celles-ci sont implémentées uniquement lorsque l’application et de pilote, ainsi que le Gestionnaire de pilotes, sont de version *3.x*, donc il n’existe aucune tentative pour établir ces une compatibilité descendante.|  
-|Fonctionnalités en doublon|Il s’agit des fonctionnalités qui existent dans ODBC *2.x* et ODBC *3.x* mais sont implémentées de différentes façons dans chacun. Les fonctions **SQLAllocHandle** et **SQLAllocStmt** sont un exemple. Problèmes de compatibilité descendante pour ces et autres fonctionnalités en double sont principalement gérées par les mappages dans le Gestionnaire de pilotes.|  
-|Changements de comportement|Il s’agit des fonctionnalités qui sont gérées différemment dans ODBC *2.x* et ODBC *3.x*. Une valeur datetime **#define** est un exemple. Ces fonctionnalités sont gérées par ODBC *3.x* pilote basé sur un paramètre d’attribut environnement. (Consultez [des changements de comportement](../../../odbc/reference/develop-app/behavioral-changes.md) pour plus d’informations.)|
+|Nouvelles fonctionnalités|Il s’agit de fonctionnalités nouvelles dans ODBC *3. x*, telles que les liaisons hors ligne ou les descripteurs. Celles-ci sont implémentées uniquement lorsque l’application et le pilote, ainsi que le gestionnaire de pilotes, sont de la version *3. x*, donc aucune tentative de mise à compatibilité descendante n’est effectuée.|  
+|Fonctionnalités dupliquées|Il s’agit de fonctionnalités qui existent dans ODBC *2. x* et ODBC *3. x* , mais qui sont implémentées de manière différente dans chaque. Les fonctions **SQLAllocHandle** et **SQLAllocStmt,** en sont un exemple. Les problèmes de compatibilité descendante pour ces fonctionnalités et d’autres fonctionnalités dupliquées sont principalement gérés par les mappages dans le gestionnaire de pilotes.|  
+|Changements de comportement|Il s’agit de fonctionnalités gérées différemment dans ODBC *2. x* et ODBC *3. x*. Un **#define** DateTime en est un exemple. Ces fonctionnalités sont gérées par le pilote ODBC *3. x* en fonction d’un paramètre d’attribut d’environnement. (Pour plus d’informations, consultez [changements de comportement](../../../odbc/reference/develop-app/behavioral-changes.md) .)|
