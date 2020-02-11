@@ -1,5 +1,5 @@
 ---
-title: Stream propriété | Microsoft Docs
+title: Stream, propriété | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,14 +20,14 @@ ms.assetid: 4a44f9f6-0265-4c00-8def-d85b6af923b1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58bbbc299f13c0d876807476136cede76894bbb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916695"
 ---
 # <a name="stream-property"></a>Stream, propriété
-Obtient ou définit un OLE DB **Stream** objet à partir de/sur un **ADOStreamConstruction** objet.  
+Obtient ou définit un objet de **flux** OLE DB à partir de/sur un objet **ADOStreamConstruction** .  
   
  En lecture/écriture.  
   
@@ -40,13 +40,13 @@ HRESULT put_Stream([in] IUnknown* pStream);
   
 ## <a name="parameters"></a>Paramètres  
  *ppStream*  
- Pointeur vers un OLE DB **Stream** objet.  
+ Pointeur vers un objet de **flux** OLE DB.  
   
  *pStream*  
- OLE DB **Stream** objet.  
+ Objet de **flux** OLE DB.  
   
 ## <a name="return-values"></a>Valeurs de retour  
- Cette méthode de propriété renvoie les valeurs HRESULT standard. Cela inclut S_OK et E_FAIL.  
+ Cette méthode de propriété retourne les valeurs HRESULT standard. Cela comprend les S_OK et les E_FAIL.  
   
 ## <a name="applies-to"></a>S'applique à  
  [ADOStreamConstruction, interface](../../../ado/reference/ado-api/adostreamconstruction-interface.md)

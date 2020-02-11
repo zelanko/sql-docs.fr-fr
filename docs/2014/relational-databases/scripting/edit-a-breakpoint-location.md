@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2b5bb55452333014aa3ccf5a797d19667dca753
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244886"
 ---
 # <a name="edit-a-breakpoint-location"></a>Modifier un emplacement de point d'arrêt
@@ -29,7 +29,7 @@ ms.locfileid: "75244886"
   
 1.  Dans la fenêtre de l’éditeur, cliquez avec le bouton droit sur le glyphe du point d’arrêt, puis cliquez sur **Emplacement** dans le menu contextuel.  
   
-     - ou -  
+     -ou-  
   
      Dans la fenêtre **Points d’arrêt** , cliquez avec le bouton droit sur le glyphe du point d’arrêt, puis cliquez sur **Emplacement** dans le menu contextuel.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "75244886"
      L’option **Permettre que le code source soit différent de la version d’origine** n’a aucun effet lors du débogage de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécifier un nombre d’accès](specify-a-hit-count.md)   
+ [Spécifier un nombre d'accès](specify-a-hit-count.md)   
  [Spécifier une action de point d’arrêt](specify-a-breakpoint-action.md)   
- [Spécifier une condition de point d’arrêt](specify-a-breakpoint-condition.md)   
- [Spécifier un filtre de point d'arrêt](specify-a-breakpoint-filter.md)  
+ [Spécifier une condition de point d'arrêt](specify-a-breakpoint-condition.md)   
+ [Pour spécifier un filtre de point d’arrêt](specify-a-breakpoint-filter.md)  

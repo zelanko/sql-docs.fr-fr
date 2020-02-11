@@ -1,5 +1,5 @@
 ---
-title: Informations de publication, avertissements (Publication de fusion, SQL Server 2005 et versions ultérieur) | Microsoft Docs
+title: Informations de publication, avertissements (publication de fusion, SQL Server 2005 et versions ultérieures) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f849394a4a77091f92ee66857b4d5263875fdea3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021684"
 ---
 # <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>Informations de publication, Avertissements (Publication de fusion, SQL Server 2005 et version ultérieure)
@@ -29,7 +29,7 @@ ms.locfileid: "63021684"
 -   définir des alertes associées aux avertissements ;  
   
 ## <a name="warnings-thresholds-and-alerts"></a>Avertissements, seuils et alertes  
- Le moniteur de réplication affiche par défaut des avertissements relatifs aux abonnements non initialisés : l’état **Abonnement non initialisé** s’affiche en tant qu’avertissement dans la colonne **État** des pages incluant des informations propres aux abonnements. Dans le cas de publications de fusion, vous pouvez indiquer si les conditions complémentaires suivantes constituent un motif pour lancer un avertissement :  
+ Le moniteur de réplication affiche par défaut des avertissements quant aux abonnements non initialisés : l'état **Abonnement non initialisé** s'affiche en tant qu'avertissement dans la colonne **État** des pages incluant des informations propres aux abonnements. Dans le cas de publications de fusion, vous pouvez indiquer si les conditions complémentaires suivantes constituent un motif pour lancer un avertissement :  
   
 -   Expiration d'abonnement imminente.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "63021684"
  **Avertissement**  
  Description de l'avertissement associé à un seuil.  
   
- **Seuil**  
+ **Durée**  
  Permet de spécifier une valeur pour le seuil.  
   
  **Configurer des alertes**  
@@ -73,7 +73,7 @@ ms.locfileid: "63021684"
 > [!NOTE]  
 >  Cliquer sur **Ignorer les modifications** n'affecte en rien les alertes définies dans la boîte de dialogue **Configurer les alertes de réplication** .  
   
- **Enregistrer les modifications**  
+ **Save Changes**  
  Permet d'enregistrer toute modification apportée aux avertissements et aux seuils.  
   
 ## <a name="see-also"></a>Voir aussi  

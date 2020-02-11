@@ -1,5 +1,5 @@
 ---
-title: Création d’une Application de pilote ODBC de SQL Server Native Client | Microsoft Docs
+title: Création d’une application de pilote SQL Server Native Client ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db71e2ca03cbefdccf0bdf879fdb43d775125064
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205266"
 ---
 # <a name="creating-a-sql-server-native-client-odbc-driver-application"></a>Création d'une application de pilote ODBC SQL Server Native Client
@@ -66,7 +66,7 @@ ms.locfileid: "63205266"
   
 -   Effectuer des opérations de copie en bloc  
   
--   Gérer les données de grande taille (**varchar (max)** , **nvarchar (max)** , et **varbinary (max)** colonnes) opérations  
+-   Gérer les opérations de données volumineuses (**varchar (max)**, **nvarchar (max)** et **varbinary (max)** colonnes)  
   
 -   Utiliser la logique de reconnexion pour faciliter le basculement lorsque la mise en miroir de bases de données est configurée  
   
@@ -74,21 +74,21 @@ ms.locfileid: "63205266"
   
  Pour effectuer des appels de fonction ODBC, une application C ou C++ doit inclure les fichiers d'en-tête sql.h, sqlext.h et sqltypes.h. Pour effectuer des appels aux fonctions API du programme d'installation ODBC, une application doit inclure le fichier d'en-tête odbcinst.h. Une application ODBC Unicode doit inclure le fichier d'en-tête sqlucode.h. Les applications ODBC doivent être liées au fichier odbc32.lib. Les applications ODBC qui appellent les fonctions API du programme d'installation ODBC doivent être liées au fichier odbccp32.lib. Ces fichiers sont inclus dans le Kit de développement Platform SDK de Windows.  
   
- De nombreux pilotes ODBC, y compris le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client, offrent les extensions spécifiques au pilote ODBC. Pour tirer parti des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les extensions spécifiques au pilote ODBC Native Client, une application doivent inclure le fichier d’en-tête sqlncli.h. Ce fichier d'en-tête contient :  
+ De nombreux pilotes ODBC, y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] compris le pilote ODBC Native Client, proposent des extensions ODBC spécifiques aux pilotes. Pour tirer parti des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] extensions spécifiques au pilote ODBC Native Client, une application doit inclure le fichier d’en-tête sqlncli. h. Ce fichier d'en-tête contient :  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Attributs de connexion spécifiques au pilote ODBC du Client natifs.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Attributs de connexion spécifiques au pilote ODBC Native Client.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Attributs d’instruction spécifiques au pilote ODBC du Client natifs.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Attributs d’instruction spécifiques au pilote ODBC Native Client.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Attributs de colonne spécifiques aux pilotes ODBC du Client natifs.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Attributs de colonne spécifiques au pilote ODBC Native Client.  
   
 -   Les types de données spécifiques à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   Les types de données définis par l'utilisateur spécifiques à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Natif spécifiques au pilote ODBC du Client [SQLGetInfo](../../native-client-odbc-api/sqlgetinfo.md) types.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Types de [SQLGetInfo](../../native-client-odbc-api/sqlgetinfo.md) spécifiques au pilote ODBC Native Client.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Champs de diagnostic pilote ODBC du Client natifs.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Champs de diagnostic du pilote ODBC Native Client.  
   
 -   Les codes de fonction dynamique de diagnostic spécifiques à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -100,14 +100,14 @@ ms.locfileid: "63205266"
   
 -   Appelez les fonctions API de métadonnées de requête distribuée pour obtenir les listes des serveurs liés et leurs catalogues.  
   
- Toute application ODBC C ou C++ qui utilise la fonctionnalité de copie en bloc de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client doit être lié au fichier sqlncli11.lib. Les applications qui appellent les fonctions API de métadonnées de requête distribuée doivent également être liées à sqlncli11.lib. Les fichiers sqlncli.h et sqlncli11.lib sont distribués dans le cadre de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] outils du développeur. Les répertoires [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Include et Lib doivent correspondre aux chemins d'accès INCLUDE et LIB du compilateur, comme suit :  
+ Toute application ODBC C ou C++ qui utilise la fonctionnalité de copie en bloc [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] du pilote ODBC Native Client doit être liée au fichier SQLNCLI11. lib. Les applications qui appellent les fonctions API de métadonnées de requête distribuée doivent également être liées à sqlncli11.lib. Les fichiers sqlncli. h et SQLNCLI11. lib sont distribués dans le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cadre des outils du développeur. Les répertoires [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Include et Lib doivent correspondre aux chemins d'accès INCLUDE et LIB du compilateur, comme suit :  
   
 ```  
 LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Lib;  
 INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Include;  
 ```  
   
- Une décision de conception à prendre tôt dans le processus de génération d'une application est de savoir si l'application doit avoir plusieurs appels ODBC en attente en même temps. Il existe deux méthodes de prise en charge des appels ODBC concurrents multiples ; elles sont décrites dans les autres rubriques de cette section. Pour plus d’informations, consultez le [de référence du programmeur ODBC](https://go.microsoft.com/fwlink/?LinkId=45250).  
+ Une décision de conception à prendre tôt dans le processus de génération d'une application est de savoir si l'application doit avoir plusieurs appels ODBC en attente en même temps. Il existe deux méthodes de prise en charge des appels ODBC concurrents multiples ; elles sont décrites dans les autres rubriques de cette section. Pour plus d’informations, consultez [Guide de référence du programmeur ODBC](https://go.microsoft.com/fwlink/?LinkId=45250).  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
@@ -116,6 +116,6 @@ INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Micr
 -   [Applications multithread](creating-a-driver-application-multithreaded-applications.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Native Client &#40;ODBC&#41;](sql-server-native-client-odbc.md)  
+ [SQL Server Native Client &#40;&#41;ODBC](sql-server-native-client-odbc.md)  
   
   

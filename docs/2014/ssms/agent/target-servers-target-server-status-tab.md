@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0fc22cd7489294e8623596c1ce1e4f38c90706aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245717"
 ---
 # <a name="target-servers-target-server-status-tab"></a>Serveurs cibles (onglet État du serveur cible)
@@ -38,16 +38,16 @@ ms.locfileid: "63245717"
  **État**  
  Affiche l'état du serveur cible.  
   
- **Forcer l'interrogation**  
+ **Forcer l’interrogation**  
  Cliquez sur ce bouton pour forcer les serveurs cibles sélectionnés à interroger le serveur maître.  
   
  **Forcer la désinscription**  
  Cliquez sur ce bouton pour forcer les serveurs cibles sélectionnés à se désinscrire du serveur maître.  
   
- **Publier les instructions**  
+ **Poster les instructions**  
  Publie les instructions sur les serveurs cibles sélectionnés.  
   
- **Activer l'actualisation automatique**  
+ **Activer l’actualisation automatique**  
  Sélectionnez cette option pour actualiser automatiquement les informations affichées.  
   
  **Actualiser toutes les**  

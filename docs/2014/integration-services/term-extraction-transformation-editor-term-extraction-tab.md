@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Transformation d’Extraction de terme (onglet Extraction de terme) | Microsoft Docs
+title: Éditeur de transformation d’extraction de terme (onglet extraction de terme) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 37d09aa75c3f6c5dd61b257056127ca76b410487
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055135"
 ---
 # <a name="term-extraction-transformation-editor-term-extraction-tab"></a>Éditeur de transformation d'extraction de terme (onglet Extraction de terme)
@@ -33,7 +33,7 @@ ms.locfileid: "66055135"
  **Terme**  
  Fournissez un nom pour la colonne de sortie qui contiendra les termes extraits.  
   
- **Score**  
+ **Enjeu**  
  Fournissez un nom pour la colonne de sortie qui contiendra le score de chaque terme extrait.  
   
  **Configurer la sortie d’erreur**  
@@ -41,8 +41,8 @@ ms.locfileid: "66055135"
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de transformation d’extraction de terme &#40;onglet Exclusion&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
+ [Éditeur de transformation d’extraction de terme &#40;onglet exclusion&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
  [Éditeur de transformation d’extraction de terme &#40;onglet Avancé&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
- [Transformation de recherche de terme](data-flow/transformations/lookup-transformation.md)  
+ [transformation de recherche de terme](data-flow/transformations/lookup-transformation.md)  
   
   

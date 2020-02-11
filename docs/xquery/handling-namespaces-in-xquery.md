@@ -17,10 +17,10 @@ ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 07158d4131c60cf46f49a860721333c78213c982
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004533"
 ---
 # <a name="handling-namespaces-in-xquery"></a>Gestion des espaces de noms dans XQuery
@@ -49,7 +49,7 @@ WHERE ProductModelID=7
 ...  
 ```  
   
- Notez que le **espace de noms** mot clé est utilisé pour définir un nouveau préfixe d’espace de noms, « AWMI : ». Ce préfixe doit ensuite être utilisé dans la requête pour tous les éléments couverts par l'étendue de cet espace de noms.  
+ Notez que le mot clé **namespace** est utilisé pour définir un nouveau préfixe d’espace de noms, « AWMI : ». Ce préfixe doit ensuite être utilisé dans la requête pour tous les éléments couverts par l'étendue de cet espace de noms.  
   
 ### <a name="b-declaring-a-default-namespace"></a>B. Déclaration d'un espace de noms par défaut  
  Dans la requête précédente, un nouveau préfixe d'espace de noms a été défini. Il a fallu ensuite utiliser ce préfixe dans la requête pour sélectionner les structures XML appropriées. Une alternative consiste à déclarer un espace de noms par défaut, comme le montre la requête modifiée suivante :  
@@ -87,7 +87,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
   
@@ -115,7 +115,7 @@ where ProductModelID=19
 ```  
   
 ### <a name="d-construction-using-default-namespaces"></a>D. Construction à l'aide des espaces de noms par défaut  
- Vous pouvez aussi définir un espace de noms par défaut en vue de son utilisation dans le code XML construit. Par exemple, la requête suivante montre comment vous pouvez spécifier un espace de noms par défaut, « SomeNamespace »\\, à utiliser comme la valeur par défaut pour les éléments nommés localement qui sont construites, telles que le `<Result>` élément.  
+ Vous pouvez aussi définir un espace de noms par défaut en vue de son utilisation dans le code XML construit. Par exemple, la requête suivante montre comment vous pouvez spécifier un espace de noms par défaut, « URI\\: SomeNamespace », à utiliser comme valeur par défaut pour les éléments nommés localement qui sont construits `<Result>` , tels que l’élément.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -129,7 +129,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
   

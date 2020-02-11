@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 74bcf1549cdd97752c805f1c6a9cc774ef1a9e52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896029"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>Développement de composants de flux de données avec plusieurs entrées
@@ -54,9 +54,9 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
 > [!NOTE]  
 >  Votre implémentation de la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> ne doit pas appeler les implémentations dans la classe de base. L'implémentation par défaut de cette méthode dans la classe de base lève simplement une `NotImplementedException`.  
   
- Lorsque vous implémentez cette méthode, vous définissez l’état d’un élément dans le tableau booléen *canProcess* pour chacune des entrées du composant. (Les entrées sont identifiées par leur valeur d’ID dans le tableau *inputIDs*.) Lorsque vous définissez la valeur d’un élément dans le *canProcess* tableau `true` pour une entrée, le moteur de flux de données appelle le composant <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> (méthode) et fournit davantage de données pour l’entrée spécifiée.  
+ Lorsque vous implémentez cette méthode, vous définissez l’état d’un élément dans le tableau booléen *canProcess* pour chacune des entrées du composant. (Les entrées sont identifiées par leurs valeurs d’ID dans le tableau *inputIDs* .) Lorsque vous définissez la valeur d’un élément dans le tableau *canProcess* sur `true` pour une entrée, le moteur de workflow appelle la méthode du <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> composant et fournit davantage de données pour l’entrée spécifiée.  
   
- Si plus de données en amont sont disponibles, la valeur de la *canProcess* élément de tableau au moins une entrée doit toujours être `true`, ou le traitement s’arrête.  
+ Alors que davantage de données en amont sont disponibles, la valeur de l’élément de tableau *canProcess* pour au moins une entrée `true`doit toujours être, sinon le traitement s’arrête.  
   
  Le moteur de flux de données appelle la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> avant d'envoyer chaque mémoire tampon de données pour  déterminer quelles entrées attendent de recevoir d'autres données. Lorsque la valeur de retour indique qu'une entrée est bloquée, le moteur de flux de données met temporairement en cache les mémoires tampon supplémentaires de données pour cette entrée au lieu de les envoyer au composant.  
   
@@ -70,9 +70,9 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
   
 -   Le composant n'a pas actuellement de données disponibles pour traiter l'entrée dans les mémoires tampon que le composant a déjà reçues (`inputBuffers[inputIndex].CurrentRow() == null`).  
   
- Si une entrée attend de recevoir davantage de données, le composant de flux de données indique cela en définissant à `true` la valeur de l’élément dans le *canProcess* tableau correspond à cette entrée.  
+ Si une entrée attend de recevoir plus de données, le composant de transmission de données indique cela en `true` définissant sur la valeur de l’élément dans le tableau *canProcess* qui correspond à cette entrée.  
   
- Inversement, lorsque le composant a encore des données disponibles à traiter pour l'entrée, l'exemple interrompt le traitement de l'entrée. L’exemple fait cela en définissant à `false` la valeur de l’élément dans le *canProcess* tableau correspond à cette entrée.  
+ Inversement, lorsque le composant a encore des données disponibles à traiter pour l'entrée, l'exemple interrompt le traitement de l'entrée. L’exemple fait cela en définissant `false` sur la valeur de l’élément dans le tableau *canProcess* qui correspond à cette entrée.  
   
 ```csharp  
 public override void IsInputReady(int[] inputIDs, ref bool[] canProcess)  
@@ -87,7 +87,7 @@ public override void IsInputReady(int[] inputIDs, ref bool[] canProcess)
 }  
 ```  
   
- L'exemple précédent utilise le tableau `inputEOR` booléen pour indiquer si davantage de données en amont sont disponibles pour chaque entrée. `EOR` dans le nom du tableau représente « fin d'ensemble de lignes » et fait référence à la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> de mémoires tampon de flux de données. Dans une partie de l'exemple qui n'est pas inclus ici, la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> vérifie la valeur de la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> pour chaque mémoire tampon des données qu'elle reçoit. Lorsqu'une valeur `true` indique que plus aucune donnée en amont n'est disponible pour une entrée, l'exemple définit la valeur de l'élément de tableau `inputEOR` pour cette entrée à `true`. Cet exemple de la <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> méthode définit la valeur de l’élément correspondant dans le *canProcess* tableau `false` pour une entrée lorsque la valeur de la `inputEOR` élément du tableau indique qu’il n’existe pas plus en amont disponible pour l’entrée de données.  
+ L'exemple précédent utilise le tableau `inputEOR` booléen pour indiquer si davantage de données en amont sont disponibles pour chaque entrée. `EOR` dans le nom du tableau représente « fin d'ensemble de lignes » et fait référence à la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> de mémoires tampon de flux de données. Dans une partie de l'exemple qui n'est pas inclus ici, la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> vérifie la valeur de la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> pour chaque mémoire tampon des données qu'elle reçoit. Lorsqu'une valeur `true` indique que plus aucune donnée en amont n'est disponible pour une entrée, l'exemple définit la valeur de l'élément de tableau `inputEOR` pour cette entrée à `true`. Cet exemple de la <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> méthode définit la valeur de l’élément correspondant dans le tableau *canProcess* sur `false` pour une entrée lorsque la valeur de l' `inputEOR` élément de tableau indique qu’il n’y a plus de données en amont disponibles pour l’entrée.  
   
 ## <a name="implementing-the-getdependentinputs-method"></a>Implémentation de la méthode GetDependentInputs  
  Lorsque votre composant de flux de données personnalisé prend en charge plus de deux entrées, vous devez également fournir une implémentation pour la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> de la classe <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>.  
@@ -95,7 +95,7 @@ public override void IsInputReady(int[] inputIDs, ref bool[] canProcess)
 > [!NOTE]  
 >  Votre implémentation de la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> ne doit pas appeler les implémentations dans la classe de base. L'implémentation par défaut de cette méthode dans la classe de base lève simplement une `NotImplementedException`.  
   
- Le moteur de flux de données appelle seulement la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> lorsque l'utilisateur joint plus de deux entrées au composant. Lorsqu’un composant a uniquement deux entrées et le <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> méthode indique qu’une entrée est bloquée (*canProcess* = `false`), le moteur de flux de données sait que l’autre entrée attend de recevoir plus de données. Toutefois, lorsqu'il y a plus de deux entrées, et que la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> indique qu'une entrée est bloquée, le code supplémentaire dans le <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> identifie quelles entrées attendent de recevoir plus de données.  
+ Le moteur de flux de données appelle seulement la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> lorsque l'utilisateur joint plus de deux entrées au composant. Lorsqu’un composant a uniquement deux entrées, et que <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> la méthode indique qu’une entrée est bloquée (*canProcess* = `false`), le moteur de workflow sait que l’autre entrée attend de recevoir plus de données. Toutefois, lorsqu'il y a plus de deux entrées, et que la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> indique qu'une entrée est bloquée, le code supplémentaire dans le <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> identifie quelles entrées attendent de recevoir plus de données.  
   
 > [!NOTE]  
 >  Vous n'appelez pas les méthodes <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> ou <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> dans votre propre code. Le moteur de flux de données appelle ces méthodes, et les autres méthodes de la classe `PipelineComponent` que vous remplacez, lorsque le moteur de flux de données exécute votre composant.  

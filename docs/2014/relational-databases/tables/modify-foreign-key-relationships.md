@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 116a41ac2eca1f69a98391c9018b8623a10f6047
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196841"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modifier des relations de clé étrangère
@@ -72,7 +72,7 @@ ms.locfileid: "68196841"
      **Ajouter**  
      Crée une nouvelle relation. Une relation valide exige que la **Spécification de tables et colonnes** soit définie.  
   
-     **Delete**  
+     **Supprimer**  
      Supprime la relation sélectionnée dans la liste **Relation sélectionnée** . Pour annuler l'ajout d'une relation, supprimez la relation à l'aide de ce bouton.  
   
      **Catégorie Général**  
@@ -108,7 +108,7 @@ ms.locfileid: "68196841"
      **Catégorie Concepteur de tables**  
      Se développe pour afficher des informations relatives aux options **Vérifier les données existantes à la création ou à la réactivation** et **Appliquer la réplication**.  
   
-     **Enforce For Replication**  
+     **Appliquer la réplication**  
      Indique si la contrainte doit être appliquée lorsqu'un Agent de réplication effectue une requête Insert, Update ou Delete sur cette table.  
   
      **Appliquer la contrainte de clé étrangère**  
@@ -139,7 +139,7 @@ ms.locfileid: "68196841"
   
     -   **Définir la valeur par défaut** Affecte la valeur par défaut définie pour la colonne si toutes les colonnes clés étrangères de la table ont des valeurs par défaut définies.  
   
-4.  Dans le menu **Fichier** , cliquez sur **Enregistrer**_nom_table_.  
+4.  Dans le menu **Fichier**, cliquez sur **Enregistrer**_nom de la table_.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour modifier une clé étrangère**  

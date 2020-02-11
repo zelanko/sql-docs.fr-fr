@@ -1,5 +1,5 @@
 ---
-title: Ajouter une Action Standard | Microsoft Docs
+title: Ajouter une action standard | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f2a4a4eb3ddbf272968485f37fd3ceb25e973864
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077463"
 ---
 # <a name="add-a-standard-action"></a>Ajouter une action standard
@@ -47,24 +47,24 @@ ms.locfileid: "66077463"
   
     -   Dans la liste déroulante **Type** , sélectionnez le type d’action que vous souhaitez créer. Le tableau suivant répertorie les types d'actions disponibles.  
   
-        |type|Description|  
+        |Type|Description|  
         |----------|-----------------|  
         |Dataset|Récupère un dataset.|  
         |Propriétaire|Effectue une opération en utilisant une interface différente de celles répertoriées dans ce tableau.|  
         |Ensemble de lignes|Récupère un ensemble de lignes.|  
-        |Instruction|Exécute une commande OLE DB.|  
+        |.|Exécute une commande OLE DB.|  
         |URL|Affiche une page Web dynamique dans un navigateur Internet.|  
   
     -   Dans **Expression d'action**, créez une expression qui définit l'action. L'expression doit correspondre à une chaîne. Vous pouvez taper l'expression manuellement ou vous pouvez faire glisser des éléments depuis les onglets **Métadonnées** et **Fonctions** .  
   
 3.  (Facultatif.) Développez **Propriétés supplémentaires**, puis effectuez l'une des opérations suivantes :  
   
-    -   Dans la liste déroulante **Invocation**, spécifiez le mode d’appel de l’action. Le tableau suivant décrit les options disponibles pour l'appel d'une action.  
+    -   Dans la liste déroulante **Invocation** , spécifiez le mode d’appel de l’action. Le tableau suivant décrit les options disponibles pour l'appel d'une action.  
   
         |Option|Description|  
         |------------|-----------------|  
-        |Interactif|L'action est générée par l'intervention de l'utilisateur.|  
-        |Traitement|L'action s'exécute en tant que traitement par lots.|  
+        |Interactive|L'action est générée par l'intervention de l'utilisateur.|  
+        |Batch|L'action s'exécute en tant que traitement par lots.|  
         |À l'ouverture|L'action s'exécute lorsqu'un utilisateur ouvre le cube.|  
   
     -   Dans **Application**, tapez le nom de l'application associée à l'action. Par exemple, si vous créez une action qui amène un utilisateur vers un site Web spécifique, l'application associée à cette action doit être Microsoft Internet Explorer ou un autre navigateur Web.  
@@ -72,7 +72,7 @@ ms.locfileid: "66077463"
         > [!NOTE]  
         >  Les actions propriétaires ne sont pas retournées au serveur, sauf si l’application cliente restreint explicitement l’ensemble de lignes du schéma afin de retourner uniquement les actions qui correspondent au nom spécifié dans **Application**.  
   
-    -   Dans **contenu d’Action**, si vous utilisez le type d’URL, placez l’adresse Internet entre guillemets, par exemple, "http://www.adventure-works.com".  
+    -   Dans **contenu**de l’action, si vous utilisez le type d’URL, placez l’adresse Internet entre guillemets, parhttp://www.adventure-works.comexemple, "".  
   
     -   Dans **Description**, tapez la description de l'action.  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6aab8fc0c8e083181779c13654b0d7d42531e50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108169"
 ---
 # <a name="new-linked-report-page-report-manager"></a>Page Nouveau rapport lié (Gestionnaire de rapports)
@@ -45,12 +45,12 @@ ms.locfileid: "66108169"
   
 ## <a name="options"></a>Options  
  **Nom**  
- Spécifie le nom du rapport lié. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et certains symboles. Toutefois, vous ne devez pas utiliser les caractères ; ? : \@ & = +, $ / * \< > | "ou / lorsque vous spécifiez un nom.  
+ Spécifie le nom du rapport lié. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et certains symboles. Toutefois, vous ne devez pas utiliser les caractères ; ? : \@ & = +, $/* \< > | "ou/lorsque vous spécifiez un nom.  
   
  **Description**  
  Tapez une description du contenu du rapport. Cette description apparaît dans la page Contenu. Elle est visible par les utilisateurs qui sont autorisés à accéder au rapport.  
   
- **Emplacement**  
+ **Location**  
  Spécifie le chemin d'accès au dossier qui contient le rapport. Par défaut, les rapports liés sont créés comme des frères du rapport de base. Cliquez sur **Modifier l'emplacement** pour placer le rapport lié dans un autre dossier.  
   
  **OK**  
@@ -58,7 +58,7 @@ ms.locfileid: "66108169"
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer un rapport lié](reports/create-a-linked-report.md)   
- [Page Propriétés générales, Rapports &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Page Propriétés générales, rapports &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [Aide F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

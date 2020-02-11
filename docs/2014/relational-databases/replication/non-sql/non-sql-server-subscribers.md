@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022248"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers
@@ -40,20 +40,20 @@ ms.locfileid: "63022248"
 |Oracle|Toute plateforme prenant en charge Oracle|Fournisseur OLE DB Oracle (fourni par Oracle)|  
 |IBM DB2|MVS, AS400, Unix, Linux, Windows sauf 9.x|Fournisseur OLE DB du serveur HIS Microsoft (Host Integration Server)|  
   
- Pour plus d'informations sur la création d'abonnements à Oracle et IBM DB2, consultez [Oracle Subscribers](oracle-subscribers.md) et [IBM DB2 Subscribers](ibm-db2-subscribers.md).  
+ Pour plus d'informations sur la création d'abonnements à Oracle et IBM DB2, consultez [Abonnés Oracle](oracle-subscribers.md) et [IBM DB2 Subscribers](ibm-db2-subscribers.md).  
   
 ## <a name="considerations-for-non-sql-server-subscribers"></a>Règles des abonnés non-SQL Server  
  Retenez les règles suivantes lors de la réplication sur des abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-### <a name="general-considerations"></a>Considérations générales  
+### <a name="general-considerations"></a>Considérations d’ordre général  
   
 -   La réplication prend en charge la publication des tables et des vues indexées vers des Abonnées non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (les vues indexées ne peuvent pas être répliquées en tant que telles).  
   
--   Lors de la création d'une publication dans l'Assistant Nouvelle publication et de son activation pour les abonnés non-SQL Server à l'aide de la boîte de dialogue Propriétés de la publication, le propriétaire de tous les objets dans la base de données d'abonnement n'est pas spécifié pour les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , alors qu'il est défini en tant que propriétaire de l'objet correspondant dans la base de données de publication pour les abonnés [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+-   Lorsque vous créez une publication dans l’Assistant Nouvelle publication, puis l’activez pour les abonnés non-SQL Server à l’aide de la boîte de dialogue Propriétés de la publication, le propriétaire de tous les objets de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la base de données [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d’abonnement n’est pas spécifié pour les abonnés non-, tandis que pour les abonnés, elle est définie sur le propriétaire de l’objet correspondant dans la base de données  
   
 -   Si une publication a des abonnés [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , la publication doit être activée pour les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avant qu'un abonnement aux abonnés [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne soit créé.  
   
--   Par défaut, les scripts générés par l'Agent d'instantané pour les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisent des identificateurs sans guillemets dans la syntaxe CREATE TABLE. Ainsi, une table publiée nommée « test » est répliquée comme « TEST ». Pour utiliser la même casse que la table dans la base de données de publication, utilisez le paramètre **-QuotedIdentifier** pour l’Agent de distribution. Le paramètre **-QuotedIdentifier** doit également être utilisé si les noms d’objets publiés (tables, colonnes et contraintes) comportent des espaces ou des mots réservés dans la version de la base de données au niveau de l’abonné non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d'informations sur ce paramètre, consultez [Replication Distribution Agent](../agents/replication-distribution-agent.md).  
+-   Par défaut, les scripts générés par l'Agent d'instantané pour les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisent des identificateurs sans guillemets dans la syntaxe CREATE TABLE. Ainsi, une table publiée nommée « test » est répliquée comme « TEST ». Pour utiliser la même casse que la table dans la base de données de publication, utilisez le paramètre **-QuotedIdentifier** pour l’Agent de distribution. Le paramètre **-QuotedIdentifier** doit également être utilisé si les noms d’objets publiés (tables, colonnes et contraintes) comportent des espaces ou des mots réservés dans la version de la base de données au niveau de l’abonné non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d'informations sur ce paramètre, consultez [Agent de distribution de réplication](../agents/replication-distribution-agent.md).  
   
 -   Le compte sous lequel s'exécute l'Agent de distribution doit disposer de droits d'accès au répertoire d'installation du fournisseur OLE DB.  
   
@@ -69,11 +69,11 @@ ms.locfileid: "63022248"
   
 -   Si un article est ajouté ou supprimé d'une publication, les abonnements aux abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doivent être réinitialisés.  
   
--   Les seules contraintes prises en charge pour tous les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont : NULL et NOT NULL. Les contraintes de clés primaires sont répliquées en tant qu'index uniques.  
+-   Les seules contraintes prises en charge pour tous les Abonnés non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont : NULL et NOT NULL. Les contraintes de clés primaires sont répliquées en tant qu'index uniques.  
   
 -   La valeur NULL est traitée différemment par différentes bases de données, ce qui affecte la façon dont une valeur vide, une chaîne vide ou une valeur NULL est représentée. Cela affecte à son tour le comportement des valeurs insérées dans des colonnes où des contraintes uniques sont définies. Par exemple, Oracle autorise plusieurs valeurs NULL dans une colonne considérée comme unique, alors de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'autorise qu'une seule valeur NULL dans une colonne unique.  
   
-     Un autre facteur est la façon dont les valeurs NULL, les chaînes vides ou les valeurs vides sont traitées lorsque la colonne est définie comme NOT NULL. Pour plus d'informations sur la résolution de ce problème pour les abonnés Oracle, consultez [Oracle Subscribers](oracle-subscribers.md).  
+     Un autre facteur est la façon dont les valeurs NULL, les chaînes vides ou les valeurs vides sont traitées lorsque la colonne est définie comme NOT NULL. Pour plus d'informations sur la résolution de ce problème pour les abonnés Oracle, consultez [Abonnés Oracle](oracle-subscribers.md).  
   
 -   Les métadonnées liées à la réplication (table de la séquence de la transaction) ne sont pas supprimées d'abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lorsque l'abonnement est supprimé.  
   
@@ -87,7 +87,8 @@ ms.locfileid: "63022248"
   
 ### <a name="replication-feature-support"></a>Prise en charge de la fonctionnalité de réplication  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offre deux types d'abonnements : les abonnements par émission de données et les abonnements par extraction. Les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doivent utiliser les abonnements par envoi de données (push), dans lesquels l'Agent de distribution est exécuté sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offre deux types d'abonnements : les abonnements par émission de données et les abonnements par extraction. Les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doivent utiliser les abonnements par envoi de données (push), dans lesquels l'Agent de distribution est exécuté sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offre deux formats d'instantanés : le mode bcp natif et le mode caractère. Les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nécessitent des instantanés en mode caractère.  
   

@@ -16,18 +16,18 @@ ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0ba0e2384ec63d29d3a5030c0b018998896dc8cb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68769179"
 ---
-# <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
+# <a name="sp_addmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Ajoute un nouveau filtre de fusion pour créer une partition basée sur une jointure avec une autre table. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,9 +53,9 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 `[ @join_articlename = ] 'join_articlename'`Article parent auquel l’article enfant, spécifié par *l’article*, doit être joint à l’aide de la clause join spécifiée par *join_filterclause*, afin de déterminer les lignes de l’article enfant qui répondent au critère de filtre du filtre de fusion. *join_articlename* est de **type sysname**, sans valeur par défaut. L’article doit figurer dans la publication donnée par *publication*.  
   
-`[ @join_filterclause = ] join_filterclause`Clause de jointure qui doit être utilisée pour joindre l’article enfant spécifié par l'article et l’article parent spécifié par *join_article*, afin de déterminer les lignes qualifiant le filtre de fusion. *join_filterclause* est **de type nvarchar (1000)** .  
+`[ @join_filterclause = ] join_filterclause`Clause de jointure qui doit être utilisée pour joindre l’article enfant spécifié *par l’article et l'* article parent spécifié par *join_article*, afin de déterminer les lignes qualifiant le filtre de fusion. *join_filterclause* est **de type nvarchar (1000)**.  
   
-`[ @join_unique_key = ] join_unique_key`Spécifie si la jointure entre l'article enfant et l’article parent *join_article*est un-à-plusieurs, un-à-un, plusieurs-à-un ou plusieurs-à-plusieurs. *join_unique_key* est de **type int**, avec 0 comme valeur par défaut. **0** indique une jointure plusieurs-à-un ou plusieurs-à-plusieurs. **1** indique une jointure un-à-un ou un-à-plusieurs. Cette valeur est **1** lorsque les colonnes de jointure forment une clé unique dans *join_article*, ou si *join_filterclause* est entre une clé étrangère dans *l’article* et une clé primaire dans *join_article*.  
+`[ @join_unique_key = ] join_unique_key`Spécifie si la jointure entre l' *article enfant et l'* article parent *join_article*est un-à-plusieurs, un-à-un, plusieurs-à-un ou plusieurs-à-plusieurs. *join_unique_key* est de **type int**, avec 0 comme valeur par défaut. **0** indique une jointure plusieurs-à-un ou plusieurs-à-plusieurs. **1** indique une jointure un-à-un ou un-à-plusieurs. Cette valeur est **1** lorsque les colonnes de jointure forment une clé unique dans *join_article*, ou si *join_filterclause* se trouve entre une clé étrangère dans *l’article* et une clé primaire dans *join_article*.  
   
 > [!CAUTION]  
 >  N’affectez la valeur **1** à ce paramètre que si vous avez une contrainte sur la colonne de jointure dans la table sous-jacente pour l’article parent qui garantit l’unicité. Si *join_unique_key* a la valeur **1** de manière incorrecte, la non-convergence des données peut se produire.  
@@ -74,15 +74,15 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 `[ @filter_type = ] filter_type`Spécifie le type de filtre ajouté. *filter_type* est de **type tinyint**et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**1**|Filtre de jointure uniquement. Requis pour prendre [!INCLUDE[ssEW](../../includes/ssew-md.md)] en charge les abonnés.|  
 |**2**|Uniquement relation logique.|  
-|**3**|Filtre de jointure et relation logique.|  
+|**1,3**|Filtre de jointure et relation logique.|  
   
  Pour plus d’informations, consultez [Regrouper les modifications apportées à des lignes connexes à l’aide d’enregistrements logiques](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  

@@ -1,5 +1,5 @@
 ---
-title: Stream, objet-propriétés, méthodes et événements | Microsoft Docs
+title: Propriétés, méthodes et événements de l’objet Stream | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,27 +13,27 @@ ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 326019b8e870739954c059475d851dbac62e0b57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930678"
 ---
-# <a name="stream-object-properties-methods-and-events"></a>Propriétés de l’objet Stream, méthodes et événements
-## <a name="properties"></a>Properties  
- [Propriété de jeu de caractères](../../../ado/reference/ado-api/charset-property-ado.md)  
+# <a name="stream-object-properties-methods-and-events"></a>Propriétés, méthodes et événements de l’objet Stream
+## <a name="properties"></a>Propriétés  
+ [Propriété Charset](../../../ado/reference/ado-api/charset-property-ado.md)  
   
  [EOS, propriété](../../../ado/reference/ado-api/eos-property.md)  
   
  [LineSeparator, propriété](../../../ado/reference/ado-api/lineseparator-property-ado.md)  
   
- [Propriété de mode](../../../ado/reference/ado-api/mode-property-ado.md)  
+ [Mode (propriété)](../../../ado/reference/ado-api/mode-property-ado.md)  
   
- [Propriété de position](../../../ado/reference/ado-api/position-property-ado.md)  
+ [Position, propriété](../../../ado/reference/ado-api/position-property-ado.md)  
   
  [Size, propriété (objet Stream ADO)](../../../ado/reference/ado-api/size-property-ado-stream.md)  
   
- [State, propriété](../../../ado/reference/ado-api/state-property-ado.md)  
+ [Propriété State](../../../ado/reference/ado-api/state-property-ado.md)  
   
  [Type, propriété (objet Stream ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "67930678"
   
  [LoadFromFile, méthode](../../../ado/reference/ado-api/loadfromfile-method-ado.md)  
   
- [Open, méthode (objet Stream ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)  
+ [Open, méthode (Stream ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)  
   
  [Read, méthode](../../../ado/reference/ado-api/read-method.md)  
   
@@ -66,8 +66,8 @@ ms.locfileid: "67930678"
   
  [WriteText, méthode](../../../ado/reference/ado-api/writetext-method.md)  
   
-## <a name="events"></a>Events  
- Aucune.  
+## <a name="events"></a>Événements  
+ Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

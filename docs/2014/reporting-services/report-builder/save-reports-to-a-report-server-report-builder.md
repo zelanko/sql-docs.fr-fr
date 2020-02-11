@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9c94117f277f0d058bd67c61e8dabc609d009337
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107638"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Enregistrer des rapports sur un serveur de rapports (Générateur de rapports)
@@ -25,7 +25,7 @@ ms.locfileid: "66107638"
   
 ### <a name="to-save-a-report-to-a-report-server"></a>Pour enregistrer un rapport sur un serveur de rapports  
   
-1.  À partir du bouton Générateur de rapports, cliquez sur **Enregistrer**. Le **enregistrer en tant que** _\<élément de rapport\>_  boîte de dialogue s’ouvre.  
+1.  À partir du bouton Générateur de rapports, cliquez sur **Enregistrer**. La boîte de dialogue **Enregistrer comme**_\<élément\> de rapport_ s’ouvre.  
   
     > [!NOTE]  
     >  Si vous réenregistrez un rapport, il est automatiquement stocké à son emplacement précédent. Utilisez l'option Enregistrer sous pour modifier l'emplacement.  
@@ -40,7 +40,7 @@ ms.locfileid: "66107638"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>Pour enregistrer un rapport sous un nom différent  
   
-1.  À partir du bouton Générateur de rapports, cliquez sur **Enregistrer sous**. Le **enregistrer en tant que** _\<élément de rapport\>_  boîte de dialogue s’ouvre.  
+1.  À partir du bouton Générateur de rapports, cliquez sur **Enregistrer sous**. La boîte de dialogue **Enregistrer comme**_\<élément\> de rapport_ s’ouvre.  
   
 2.  Naviguez jusqu'à l'emplacement du serveur de rapports ou jusqu'au partage de fichiers où vous souhaitez enregistrer le rapport.  
   

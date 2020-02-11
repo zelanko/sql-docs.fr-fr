@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f0853d7db0664e75140c0e5478af19c233a2517
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761711"
 ---
-# <a name="mssqlserver8689"></a>MSSQLSERVER_8689
+# <a name="mssqlserver_8689"></a>MSSQLSERVER_8689
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|8689|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|8689|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|USEPLAN_ERR_NO_DB|  
 |Texte du message|La base de données '%.*ls' spécifiée dans l'indicateur USE PLAN n'existe pas. Indiquez une base de données existante.|  
@@ -39,7 +39,7 @@ ms.locfileid: "62761711"
  Veillez à ce que toutes les bases de données spécifiées dans l'indicateur USE PLAN existent.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Indicateurs de requête &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
+ [Indicateurs de requête &#40;&#41;Transact-SQL](/sql/t-sql/queries/hints-transact-sql-query)   
  [Repères de plan](../performance/plan-guides.md)  
   
   

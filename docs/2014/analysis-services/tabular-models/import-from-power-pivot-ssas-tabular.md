@@ -1,5 +1,5 @@
 ---
-title: Importation à partir de PowerPivot (SSAS tabulaire) | Microsoft Docs
+title: Importer à partir de PowerPivot (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 941155a5e434457cdf9c79bd25c653c7207937a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067014"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>Importer à partir de PowerPivot (SSAS Tabulaire)
@@ -28,11 +28,11 @@ ms.locfileid: "66067014"
 > [!NOTE]  
 >  Les modèles tabulaires ne prennent pas en charge les tables liées. Lors de l'importation d'un classeur PowerPivot qui contient une table liée, les données de la table liée sont traitées comme des données copiées/collées et stockées dans le fichier Model.bim. Pendant la consultation des propriétés d’une table copiée\collée, la propriété **Données source** est désactivée et la boîte de dialogue **Propriétés de la table** est désactivée dans le menu **Table** .  
 >   
->  Il existe une limite de 10 000 lignes qui peuvent être ajoutées aux données incorporées dans le modèle. Si vous importez un modèle à partir de PowerPivot et rencontrez l’erreur « données tronquées. Les tables collées ne peuvent pas contenir plus de 10000 lignes », vous devez modifier le modèle PowerPivot en déplaçant les données incorporées dans une autre source de données, telle qu’une table dans SQL Server et puis réimporter.  
+>  Il existe une limite de 10 000 lignes qui peuvent être ajoutées aux données incorporées dans le modèle. Si vous importez un modèle à partir de PowerPivot et que vous voyez l’erreur «les données ont été tronquées. Les tables collées ne peuvent pas contenir plus de 10000 lignes. vous devez réviser le modèle PowerPivot en déplaçant les données incorporées dans une autre source de données, telle qu’une table dans SQL Server, puis réimporter.  
   
  Il existe des considérations spéciales selon que la base de données d'espace de travail se trouve dans une instance Analysis Services sur le même ordinateur (local) que [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou dans une instance Analysis Services distante.  
   
- Si la base de données d'espace de travail se trouve sur une instance Analysis Services locale, vous pouvez importer les métadonnées et les données depuis le classeur PowerPivot. Les métadonnées sont copiées depuis le classeur et utilisées pour créer le projet de modèle tabulaire. Les données sont ensuite copiées depuis le classeur et stockées dans la base de données du projet espace de travail (à l’exception des données copiées/collées, qui sont stockées dans le fichier Model.bim).  
+ Si la base de données d'espace de travail se trouve sur une instance Analysis Services locale, vous pouvez importer les métadonnées et les données depuis le classeur PowerPivot. Les métadonnées sont copiées depuis le classeur et utilisées pour créer le projet de modèle tabulaire. Les données sont ensuite copiées à partir du classeur et stockées dans la base de données de l’espace de travail du projet (sauf pour les données copiées/collées, qui sont stockées dans le fichier Model. BIM).  
   
  Si la base de données d'espace de travail se trouve dans une instance Analysis Services distante, vous ne pouvez pas importer de données depuis un classeur PowerPivot pour Excel. Vous pouvez toujours importer les métadonnées de classeur ; toutefois, cela provoque l'exécution d'un script sur l'instance Analysis Services distante. Vous devez uniquement importer des métadonnées d'un classeur PowerPivot approuvé. Les données doivent être importées à partir des sources définies dans les connexions à la source de données. Les données de table liée et copiées/collées dans le classeur PowerPivot doivent être copiées et collées dans le projet de modèle tabulaire.  
   
@@ -40,14 +40,14 @@ ms.locfileid: "66067014"
   
 1.  Dans le menu [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]Fichier **de** , cliquez sur **Nouveau**, puis sur **Projet**.  
   
-2.  Dans le **nouveau projet** boîte de dialogue **modèles installés**, cliquez sur **Business Intelligence**, puis cliquez sur **importation à partir de PowerPivot**.  
+2.  Dans la boîte de dialogue **nouveau projet** , sous **modèles installés**, cliquez sur **Business Intelligence**, puis sur **Importer à partir de PowerPivot**.  
   
-3.  Pour le  **Nom**, tapez un nom pour le projet, puis spécifiez un emplacement et le nom de la solution et cliquez sur **OK**.  
+3.  Dans **nom**, tapez un nom pour le projet, puis spécifiez un emplacement et un nom de solution, puis cliquez sur **OK**.  
   
 4.  Dans la boîte de dialogue **Ouvrir** , sélectionnez le fichier [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] qui contient les données et les métadonnées de modèle que vous souhaitez importer, puis cliquez sur **Ouvrir**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Base de données d’espace de travail &#40;SSAS Tabulaire&#41;](workspace-database-ssas-tabular.md)   
- [Copier et coller des données &#40;SSAS Tabulaire&#41;](../copy-and-paste-data-ssas-tabular.md)  
+ [Base de données d’espace de travail &#40;SSAS tabulaire&#41;](workspace-database-ssas-tabular.md)   
+ [Copier et coller des données &#40;la&#41;tabulaire SSAS](../copy-and-paste-data-ssas-tabular.md)  
   
   

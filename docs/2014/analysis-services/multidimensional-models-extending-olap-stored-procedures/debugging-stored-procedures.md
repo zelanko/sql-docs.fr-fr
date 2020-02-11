@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90b72b0e60550b0b6bdf89e0ba39e6089c5d8de2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727745"
 ---
 # <a name="debugging-stored-procedures"></a>Débogage des procédures stockées
@@ -31,19 +31,19 @@ ms.locfileid: "62727745"
   
 3.  Utilisez Visual Studio pour créer une version debug d'une DLL de procédure stockée.  
   
-4.  Déployez la DLL vers le serveur. Pour plus d’informations sur le déploiement de la DLL vers le serveur, consultez [création de procédures stockées](creating-stored-procedures.md).  
+4.  Déployez la DLL vers le serveur. Pour plus d’informations sur le déploiement de la DLL sur le serveur, consultez [création de procédures stockées](creating-stored-procedures.md).  
   
 5.  Vous avez besoin d'une application qui appelle la procédure stockée que vous voulez tester. Si vous n'avez pas d'application prête à jouer ce rôle, vous pouvez utiliser l'éditeur de requête MDX dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour créer une requête MDX qui appelle la procédure stockée à tester.  
   
 6.  Dans Visual Studio, attachez la DLL au processus [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (Msmdsrv.exe).  
   
-    1.  À partir de la **déboguer** menu, choisissez **attacher toProcess**.  
+    1.  Dans le menu **Déboguer** , choisissez **attacher toProcess**.  
   
-    2.  Dans le **attacher toProcess** boîte de dialogue, sélectionnez **afficher les processus de tous les utilisateurs**.  
+    2.  Dans la boîte de dialogue **attacher toProcess** , sélectionnez **afficher les processus de tous les utilisateurs**.  
   
-    3.  Dans le **processus disponibles** répertorier, dans le **processus** colonne, cliquez sur **Msmdsrv.exe**. S'il y a plus d'une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui s'exécute sur le serveur, vous devez identifier le processus par l'identificateur de l'instance que vous souhaitez utiliser.  
+    3.  Dans la liste **processus disponibles** , dans la colonne **traiter** , cliquez sur **msmdsrv. exe**. S'il y a plus d'une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui s'exécute sur le serveur, vous devez identifier le processus par l'identificateur de l'instance que vous souhaitez utiliser.  
   
-    4.  Dans le **attacher à** texte zone, assurez-vous que le type de programme approprié est sélectionné. Pour une DLL CLR, cliquez sur **sélectionnez**, puis cliquez sur **déboguer ces types de codes**, puis cliquez sur **managé**, puis cliquez sur **OK**. Pour une DLL COM, cliquez sur **sélectionnez**, puis cliquez sur **déboguer ces types de codes**, puis cliquez sur **natif**, puis cliquez sur **OK**.  
+    4.  Dans la zone de texte **attacher à** , assurez-vous que le type de programme approprié est sélectionné. Pour une DLL CLR, cliquez sur **Sélectionner**, puis sur **Déboguer ces types de codes**, sur **géré**, puis sur **OK**. Pour une DLL COM, cliquez sur **Sélectionner**, puis sur **Déboguer ces types de codes**, sur **natif**, puis sur **OK**.  
   
     5.  Cliquez sur **attacher**.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62727745"
  Si le débogage d'une bibliothèque pose des problèmes, vérifiez que le fichier de base de données du programme (fichier PDB) correspondant a été copié vers l'emplacement du déploiement sur le serveur. Si ce fichier n'a pas été copié durant l'inscription ou le déploiement, vous devez le copier manuellement au même endroit que la DLL. Pour le code natif (DLL COM), le fichier PDB réside dans le sous-répertoire \debug. Pour le code managé (DLL CLR), il réside dans le sous-répertoire \WINDEBUG.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestion des assemblys de modèle multidimensionnel](../multidimensional-models/multidimensional-model-assemblies-management.md)   
+ [Gestion des assemblys de modèles multidimensionnels](../multidimensional-models/multidimensional-model-assemblies-management.md)   
  [Définition de procédures stockées](defining-stored-procedures.md)  
   
   

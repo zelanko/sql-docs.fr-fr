@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4406eb225002bbf5df93f8c67385694922d7d2c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482766"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>Modifier le type d'attribut (complément MDS pour Excel)
@@ -25,7 +25,7 @@ ms.locfileid: "65482766"
 > [!NOTE]  
 >  Vous ne pouvez pas mettre à jour le type ou la longueur des colonnes **Nom** ou **Code**.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder aux zones fonctionnelles **Administration de système** et **Explorateur** .  
@@ -51,7 +51,7 @@ ms.locfileid: "65482766"
   
 -   Modifier le type de données de l'attribut.  
   
--   Générer une copie de l’attribut avec le suffixe « _old » qui ne contient pas de n’importe quelle valeur. Il s’agit une **déconseillée** attribut.  
+-   Génère une copie de l’attribut avec le suffixe « _old » qui ne contient aucune valeur. C’est ce que l’on appelle un attribut **déconseillé** .  
   
  Cependant, toutes les dépendances existantes sur l'attribut d'origine pointeront vers l'attribut déconseillé, et non vers celui modifié.  
   
@@ -59,11 +59,11 @@ ms.locfileid: "65482766"
   
 -   Vous devez actualiser les règles d'entreprise pour indiquer l'attribut modifié car la logique peut ne pas être la même avec le nouveau type de données de l'attribut. Vous devrez modifier chaque règle affectée, puis retravailler les expressions pour supprimer les références de l'attribut déconseillé (_old) et utiliser l'attribut mis à jour.  
   
--   Vous devez ouvrir les vues d’abonnement dans la sélection de la gestion de l’intégration, sélectionnez la ligne de vue, ouvrir pour le modifier en cliquant sur l’icône de crayon, puis cliquez sur le **enregistrer disque** icône pour actualiser la définition de vue. Aucune autre modification n'est nécessaire pour régénérer la syntaxe de la vue.  
+-   Vous devez ouvrir toutes les vues d’abonnement dans la sélection gestion de l’intégration, sélectionner la ligne de vue, l’ouvrir pour la modifier en cliquant sur l’icône en forme de crayon, puis cliquer sur l’icône **enregistrer le disque** pour actualiser la définition de la vue. Aucune autre modification n'est nécessaire pour régénérer la syntaxe de la vue.  
   
 -   Les tables intermédiaires qui incluent l'attribut comprendront une colonne d'attribut déconseillé, ce qui signifie que votre code intermédiaire sera affecté. Pour vous débarrasser de l'attribut déconseillé, vous pouvez le supprimer après avoir mis à jour les règles d'entreprise et les vues d'abonnement.  
   
- **Suppression de l’attribut déconseillé**  
+ **Suppression de l'attribut déconseillé**  
   
  Avant de supprimer un attribut déconseillé, vous devez supprimer toutes les références à l'attribut, par exemple, en corrigeant les règles d'entreprise et en régénérant les vues d'abonnement comme décrit plus haut. Sinon, vous obtiendrez une erreur dans la page Web Administration de système lorsque vous tenterez de supprimer l'attribut déconseillé, indiquant que l'attribut ne peut pas être supprimé car il est référencé par un objet.  
   

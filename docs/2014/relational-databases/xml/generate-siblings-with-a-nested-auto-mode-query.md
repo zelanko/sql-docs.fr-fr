@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0db2a84b4be80fffec0f05aed11f39a3bcea7db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287360"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Générer des frères à l'aide d'une requête imbriquée en mode AUTO
@@ -66,7 +66,7 @@ FOR XML AUTO, TYPE
   
 -   Elle interroge l'ensemble de lignes `SalesOrder`, spécifié dans la clause `FROM`. Le résultat est un document XML possédant un ou plusieurs éléments <`SalesOrder`>.  
   
--   Spécifie le mode `AUTO` et la directive `TYPE` . `AUTO` mode transforme le résultat de requête en XML et le `TYPE` directive retourne le résultat sous `xml` type.  
+-   Spécifie le mode `AUTO` et la directive `TYPE` . `AUTO`le mode transforme le résultat de la requête en XML, `TYPE` tandis que la directive `xml` retourne le résultat sous forme de type.  
   
 -   Elle inclut deux instructions `SELECT` imbriquées séparées par une virgule. La première instruction `SELECT` imbriquée extrait les informations sur la commande, l'en-tête et les détails, tandis que la seconde instruction `SELECT` imbriquée extrait les informations sur le vendeur.  
   
@@ -124,7 +124,7 @@ WHERE SalesOrderID=43659 or SalesOrderID=43660
 FOR XML AUTO, TYPE  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Sales.SalesOrderHeader SalesOrderID="43659" SalesPersonID="279" CustomerID="676">  

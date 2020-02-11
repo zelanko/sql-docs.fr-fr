@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 0eff6dca788744b93d2d6d4a0a7175764e263f71
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952546"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>Compte d'exécution (SSRS en mode natif)
@@ -26,7 +26,7 @@ ms.locfileid: "71952546"
   
 -   lorsque le serveur de rapports se connecte à un autre serveur pour extraire des fichiers image externes ou d'autres ressources référencées dans un rapport.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode natif.  
   
  La définition de ce compte est facultative, mais si vous ne définissez pas le compte, l'utilisation des images externes et des connexions à certaines sources de données est limitée. Lorsque vous récupérez des fichiers image externes, le serveur de rapports vérifie si une connexion anonyme peut être établie. Si la connexion est protégée par mot de passe, le serveur de rapports utilise le compte de traitement sans assistance pour se connecter au serveur de rapports. Lors de l'extraction des données pour un rapport, le serveur de rapports emprunte l'identité de l'utilisateur actuel, invite l'utilisateur à fournir des informations d'identification, utilise des d'informations d'identification stockées ou utilise le compte de traitement sans assistance si la connexion de la source de données spécifie **Aucun** comme type d'informations d'identification. Le serveur de rapports n'autorise pas la délégation ou l'emprunt d'identité des informations d'identification de son compte de service lors de la connexion à d'autres ordinateurs. Par conséquent, il doit utiliser le compte de traitement sans assistance si aucune information d'identification n'est disponible.  
   
@@ -40,21 +40,21 @@ ms.locfileid: "71952546"
  Pour ouvrir cette page, démarrez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et sélectionnez **Compte d'exécution** dans le volet de navigation. Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Options  
- **Spécifier un compte d'exécution**  
+ **Spécifier un compte d’exécution**  
  Sélectionnez un compte.  
   
  **Compte**  
- Entrez un compte d'utilisateur de domaine Windows. Utilisez le format suivant : *\<domaine>\\<compte_utilisateur\>* .  
+ Entrez un compte d'utilisateur de domaine Windows. Utilisez le format suivant : * \<domaine \\><compte\>d’utilisateur*.  
   
  **Mot de passe**  
- Tapez le mot de passe.  
+ Saisissez le mot de passe.  
   
  **Confirmer le mot de passe**  
- Tapez de nouveau le mot de passe.  
+ Retapez le mot de passe.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestionnaire de configuration de Reporting Services les &#40;rubriques d’aide F1 en&#41; mode natif SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Stocker des données chiffrées du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Gestionnaire de configuration de Reporting Services les rubriques d’aide F1 &#40;le mode natif SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Stocker les données du serveur de rapports chiffrées &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
   
   

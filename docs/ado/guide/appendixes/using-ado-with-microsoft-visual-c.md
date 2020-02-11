@@ -15,10 +15,10 @@ ms.assetid: 07d25fc0-4958-4e12-b616-36257ead812b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 65a015888223fc94f5bf427b1d0b560d5e888ac5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926533"
 ---
 # <a name="using-ado-with-microsoft-visual-c"></a>Utilisation d’ADO avec Microsoft Visual C++
@@ -36,8 +36,8 @@ Pour plus d’informations sur l’utilisation d’ADO avec Visual C++, consulte
   
 ## <a name="see-also"></a>Voir aussi  
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [INDEX de la syntaxe Visual C++ pour COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)   
- [ADO pour les Index de la syntaxe Visual C++ avec #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
+ [Index de syntaxe ADO for Visual C++ pour COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)   
+ [Index de syntaxe ADO for Visual C++ avec #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
  [Utilisation d’ADO avec Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Utilisation d’ADO avec les langages de script](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)   
  [Extensions Visual C++ pour ADO](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)

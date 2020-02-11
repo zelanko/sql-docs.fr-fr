@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a90d40b158acf786ccb5bcdf962c2d6077c59dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62743165"
 ---
 # <a name="control-transaction-durability"></a>Contrôler la durabilité d'une transaction
@@ -42,7 +42,7 @@ ms.locfileid: "62743165"
   
  **Garanties offertes par la durabilité complète des transactions**  
   
--   Une fois qu'une transaction a été validée, les modifications apportées par la transaction sont visibles par les autres transactions du système. Consultez la rubrique [Transaction Isolation Levels](../../database-engine/transaction-isolation-levels.md) pour plus d’informations.  
+-   Une fois qu'une transaction a été validée, les modifications apportées par la transaction sont visibles par les autres transactions du système. Pour plus d’informations, consultez la rubrique [niveaux d’isolation des transactions](../../database-engine/transaction-isolation-levels.md) .  
   
 -   La durabilité est garantie lors de la validation. Les enregistrements de journal correspondants sont conservés sur le disque jusqu'à ce que la transaction soit validée et que le contrôle soit restitué au client.  
   
@@ -56,20 +56,20 @@ ms.locfileid: "62743165"
     > [!NOTE]  
     >  Vous pouvez toujours assister à une contention d'E/S du journal s'il existe un niveau élevé d'accès concurrentiel, en particulier si vous remplissez le tampon journal plus vite que vous ne le videz.  
   
- **Quand utiliser la durabilité retardée des transactions**  
+ **Circonstances dans lesquelles utiliser la durabilité retardée des transactions**  
   
  Voici quelques-uns des cas dans lesquels vous pouvez tirer parti de l'utilisation de la durabilité retardée des transactions :  
   
- **Vous pouvez tolérer une perte de données.**  
+ **Vous tolérez la perte de certaines données.**   
  Si vous tolérez la perte de certaines données, par exemple des enregistrements qui ne sont pas indispensables tant que vous disposez de la majeure partie des données, il peut être intéressant d'utiliser la durabilité retardée. Si, en revanche, vous ne tolérez aucune perte de données, n'utilisez pas la durabilité retardée des transactions.  
   
- **Vous rencontrez un goulot d’étranglement sur les écritures de journal de transaction.**  
+ **Vous rencontrez un goulot d’étranglement au niveau des écritures du journal de transactions.**   
  Si les problèmes de performances sont attribuables à une latence dans les écritures du journal de transactions, votre application bénéficiera probablement de l'utilisation de la durabilité retardée des transactions.  
   
- **Vos charges de travail présentent une contention élevé.**  
+ **Vos charges de travail présentent un niveau de contention élevé.**   
  Si votre système a des charges de travail présentant un haut degré de contention, beaucoup de temps est perdu à attendre la libération de verrous. La durabilité retardée des transactions réduit la durée de validation. De ce fait, les verrous sont libérés plus rapidement, ce qui se traduit par un débit supérieur.  
   
- **Retardée des garanties de durabilité de Transaction**  
+ **Garanties offertes par la durabilité retardée des transactions**  
   
 -   Une fois qu'une transaction a été validée, les modifications apportées par la transaction sont visibles par les autres transactions du système.  
   
@@ -98,12 +98,12 @@ ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  [Valeur par défaut] Avec ce paramètre, toutes les transactions qui sont validées sur la base de données ont une durabilité complète, quel que soit le paramètre de niveau de validation ([DELAYED_DURABILITY= ON | OFF]). Aucune modification ni recompilation de procédure stockée n'est nécessaire. Cela vous permet de vous assurer que les données ne sont jamais mises en danger par la durabilité retardée.  
   
  `ALLOWED`  
- Avec ce paramètre, la durabilité de chaque transaction est déterminée au niveau de la transaction - DELAYED_DURABILITY = { *OFF* | ON }. Consultez [contrôle au niveau du bloc atomique - Natively Compiled Stored Procedures](#atomic-block-level-control---natively-compiled-stored-procedures) et [contrôle au niveau de validation - Transact-SQL](#commit-level-control---t-sql) pour plus d’informations.  
+ Avec ce paramètre, la durabilité de chaque transaction est déterminée au niveau de la transaction - DELAYED_DURABILITY = { *OFF* | ON }. Pour plus d’informations, consultez [contrôle de niveau de bloc atomique-procédures stockées compilées en mode natif](#atomic-block-level-control---natively-compiled-stored-procedures) et [contrôle de niveau de validation-Transact-SQL](#commit-level-control---t-sql) .  
   
  `FORCED`  
  Avec ce paramètre, chaque transaction qui est validée sur la base de données a une durabilité retardée, même si la transaction spécifie une durabilité complète (DELAYED_DURABILITY = OFF) ou omette toute indication de durabilité. Ce paramètre est utile lorsque la durabilité retardée des transactions a un intérêt pour une base de données, mais que vous ne souhaitez pas modifier le code de l'application.  
   
-### <a name="atomic-block-level-control---natively-compiled-stored-procedures"></a>Contrôle au niveau du bloc atomique - Natively Compiled Stored Procedures  
+### <a name="atomic-block-level-control---natively-compiled-stored-procedures"></a> Contrôle au niveau du bloc atomique - Procédures stockées compilées en mode natif  
  Le code suivant s'insère à l'intérieur du bloc atomique.  
   
 ```sql  
@@ -131,14 +131,14 @@ AS BEGIN ATOMIC WITH
 END  
 ```  
   
-### <a name="table-1-durability-in-atomic-blocks"></a>Tableau 1 : Durabilité dans les blocs atomiques  
+### <a name="table-1-durability-in-atomic-blocks"></a>Tableau 1 : durabilité dans les blocs atomiques  
   
 |Option de durabilité de bloc atomique|Aucune transaction existante|Transaction en cours (à durabilité complète ou retardée)|  
 |------------------------------------|-----------------------------|---------------------------------------------------------|  
 |`DELAYED_DURABILITY = OFF`|Le bloc atomique démarre une nouvelle transaction à durabilité complète.|Le bloc atomique crée un point d'enregistrement dans la transaction existante, puis démarre la nouvelle transaction.|  
 |`DELAYED_DURABILITY = ON`|Le bloc atomique démarre une nouvelle transaction à durabilité retardée.|Le bloc atomique crée un point d'enregistrement dans la transaction existante, puis démarre la nouvelle transaction.|  
   
-### <a name="commit-level-control---t-sql"></a>VALIDER le contrôle au niveau - (T-SQL)
+### <a name="commit-level-control---t-sql"></a>Contrôle de niveau de validation-(T-SQL)
  La syntaxe de l'option COMMIT est étendue pour vous permettre de forcer la durabilité retardée des transactions. Si DELAYED_DURABILITY a la valeur DISABLED ou FORCED au niveau de la base de données (voir ci-dessus), cette option COMMIT est ignorée.  
   
 ```sql  
@@ -169,7 +169,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
   
 -   Exécutez la procédure stockée système `sp_flush_log`. Cette procédure force le vidage sur le disque des enregistrements de journal de toutes les transactions à durabilité retardée déjà validées. Pour plus d’informations, consultez [sys.sp_flush_log &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-flush-log-transact-sql).  
   
-##  <a name="delayed-durability-and-other-sql-server-features"></a>Durabilité retardée et autres fonctionnalités SQL Server  
+##  <a name="delayed-durability-and-other-sql-server-features"></a>Durabilité retardée et autres fonctionnalités de SQL Server  
  **Suivi des modifications et capture de données modifiées**  
  Toutes les transactions avec suivi des modifications ont une durabilité complète. Une transaction présente la propriété de suivi des modifications si elle effectue des opérations d’écriture dans des tables qui sont activées pour le suivi des modifications. L’utilisation de la durabilité différée n’est pas prise en charge pour les bases de données qui utilisent la capture de données modifiées (CDC).   
   
@@ -179,19 +179,19 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **Bases de données croisées et DTC**  
  Les transactions distribuées ou de bases de données croisées ont une durabilité complète, quel que soit le paramètre de validation des bases de données ou des transactions.  
   
- **Toujours sur les groupes de disponibilité et la mise en miroir**  
+ **Groupes de disponibilité Always On et mise en miroir**  
  Les transactions à durabilité retardée ne garantissent aucune durabilité sur le réplica principal ni sur les réplicas secondaires. En outre, elles ne garantissent aucune information sur la transaction au niveau du réplica secondaire. Après une validation (COMMIT), le contrôle est restitué au client avant qu'un accusé de réception (ACK) ne soit reçu d'un réplica synchrone secondaire.  
   
  **Clustering de basculement**  
  Certaines écritures de transactions à durabilité retardée peuvent être perdues.  
   
- **Réplication des transactions**  
+ **Réplication de transaction**  
  Les transactions durables différées ne sont pas prises en charge avec la réplication transactionnelle.  
   
- **Envoi des journaux de transaction**  
+ **Copie des journaux de transaction**  
  Seules les transactions rendues durables sont incluses dans le journal qui est copié.  
   
- **Sauvegarde du journal**  
+ **Sauvegarde de journal**  
  Seules les transactions rendues durables sont incluses dans la sauvegarde.  
   
 ## <a name="when-can-i-lose-data"></a>Quand puis-je perdre des données ?  
@@ -200,11 +200,11 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 ### <a name="catastrophic-events"></a>Événements graves  
  Dans le cas d'événements graves, par exemple une défaillance du serveur, vous pouvez perdre les données de toutes les transactions validées qui n'ont pas été enregistrées sur le disque. Les transactions durables retardées sont enregistrées sur le disque quand une transaction à durabilité complète est exécutée sur une table (durable optimisé en mémoire ou sur disque) dans la base de données, ou quand `sp_flush_log` est appelé. Si vous utilisez des transactions durables retardées, vous pouvez créer une petite table dans la base de données afin de mettre à jour ou d'appeler périodiquement `sp_flush_log` pour enregistrer toutes les transactions validées en attente. Le journal des transactions est également vidé quand il est plein, mais cela est difficile à prévoir et impossible à contrôler.  
   
-### <a name="sql-server-shutdown-and-restart"></a>Redémarrage et arrêt de SQL Server  
+### <a name="sql-server-shutdown-and-restart"></a>SQL Server l’arrêt et le redémarrage  
  Pour une durabilité retardée, il n'y a pas de différence entre un arrêt inattendu et un arrêt/redémarrage attendu de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Comme pour les événements graves, vous devez prévoir une perte de données. Dans un arrêt/redémarrage planifié, certaines transactions qui n'ont pas été écrites sur disque peuvent tout d'abord l'être, mais vous ne pouvez pas planifier cela. La planification comme pour un arrêt/redémarrage, planifiée ou non, entraîne la perte de données comme pour un événement grave.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Niveaux d’Isolation de transaction](../../database-engine/transaction-isolation-levels.md)   
- [Instructions pour les niveaux d’isolement des transactions sur les tables à mémoire optimisée](../in-memory-oltp/memory-optimized-tables.md)  
+ [Niveaux d’isolation des transactions](../../database-engine/transaction-isolation-levels.md)   
+ [Instructions pour les niveaux d'isolement des transactions sur les tables mémoire optimisées](../in-memory-oltp/memory-optimized-tables.md)  
   
   

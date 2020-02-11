@@ -1,5 +1,5 @@
 ---
-title: Options (pilote ODBC pour Oracle) prises en charge | Microsoft Docs
+title: Options prises en charge (pilote ODBC pour Oracle) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ ms.assetid: feefe0fd-5679-4c42-aa9e-e52b83f02544
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8f3a08b400c24308c7466f379ecd4dd6eb6c2b8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67939901"
 ---
 # <a name="supported-options-odbc-driver-for-oracle"></a>Options prises en charge (pilote ODBC pour Oracle)
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Au lieu de cela, utilisez le pilote ODBC fourni par Oracle.  
+>  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Utilisez plutôt le pilote ODBC fourni par Oracle.  
   
- Le pilote ODBC pour Oracle prend en charge les options suivantes pour les fonctions de niveau 1 SQLSetConnectOption () () SQLGetConnectOption :  
+ Le pilote ODBC pour Oracle prend en charge les options suivantes pour les fonctions Sqlgetconnectoption, () et SQLSetConnectOption () Level 1 :  
   
--   SQL_ACCESS_MODE ([SQLGetConnectOption](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)() uniquement)  
+-   SQL_ACCESS_MODE ([sqlgetconnectoption,](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)() uniquement)  
   
 -   [SQL_AUTOCOMMIT](../../odbc/microsoft/connect-options.md)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "67939901"
   
 -   [SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md)  
   
- Le pilote ODBC pour Oracle prend en charge les options suivantes pour les fonctions de niveau 1 SQLSetStmtOption () () SQLGetStmtOption :  
+ Le pilote ODBC pour Oracle prend en charge les options suivantes pour les fonctions SQLGetStmtOption () et SQLSetStmtOption () Level 1 :  
   
 -   [SQL_BIND_TYPE](../../odbc/microsoft/statement-options.md)  
   

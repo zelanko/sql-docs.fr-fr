@@ -19,10 +19,10 @@ ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 9767c68f80c133a31c5ca33053731a399f1048db
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68670560"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>Vues de schémas d’informations système (Transact-SQL)
@@ -34,14 +34,15 @@ Une vue de schémas d'informations est l'une des diverses méthodes que fournit 
 > [!IMPORTANT]
 > Les vues de schémas d'informations ont fait l'objet de certaines modifications qui rompent la compatibilité descendante. Ces modifications sont décrites dans les rubriques spécifiques à chaque vue.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge une convention de dénomination en trois parties pour les références au serveur actif. La norme ISO prend également en charge la convention des noms en trois parties. Cependant, les noms utilisés dans les deux conventions sont différents. Les  vues de schémas d'informations sont définies dans un schéma spécial appelé INFORMATION_SCHEMA. Ce schéma figure dans chaque base de données. Chaque vue de schémas d'informations comprend des métadonnées pour tous les objets de données stockés dans une base de données particulière. Le tableau suivant décrit la relation entre les noms [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les noms standard SQL.
+
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge une convention de dénomination en trois parties pour les références au serveur actif. La norme ISO prend également en charge la convention des noms en trois parties. Cependant, les noms utilisés dans les deux conventions sont différents. Les  vues de schémas d'informations sont définies dans un schéma spécial appelé INFORMATION_SCHEMA. Ce schéma figure dans chaque base de données. Chaque vue de schémas d'informations comprend des métadonnées pour tous les objets de données stockés dans une base de données particulière. Le tableau suivant décrit la relation entre les noms [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les noms standard SQL.
 
 |Nom SQL Server|Nom standard SQL équivalent|
 |---------------------|-----------------------------------------------|
 |Base de données|Catalogue|
-|Schéma|Schéma|
+|schéma|schéma|
 |Object|Object|
-|type de données défini par l'utilisateur|Domaine|
+|type de données défini par l'utilisateur|Domain|
 
 Cette convention de mappage de noms s'applique aux vues compatibles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ISO suivantes.
 
@@ -60,7 +61,7 @@ Cette convention de mappage de noms s'applique aux vues compatibles [!INCLUDE[ss
 
 En outre, certaines vues comprennent des références à d'autres classes de données telles que les données de type caractère ou binaire.
 
-Lorsque vous faites référence aux vues de schémas d'informations, vous devez utiliser un nom qualifié qui inclut le nom de schéma `INFORMATION_SCHEMA`. Exemple :
+Lorsque vous faites référence aux vues de schémas d'informations, vous devez utiliser un nom qualifié qui inclut le nom de schéma `INFORMATION_SCHEMA`. Par exemple :
 
 ```sql
 SELECT TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_DEFAULT
@@ -70,6 +71,6 @@ WHERE TABLE_NAME = N'Product';
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Vues &#40;système Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)
+- [Vues système &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)
 - [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
 - [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) 

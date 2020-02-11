@@ -1,5 +1,5 @@
 ---
-title: Déterminer ce qui est pris en charge | Microsoft Docs
+title: Détermination des éléments pris en charge | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: 65090cba-6d46-4775-8d61-f6838e7752a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc42e9128ccc1ccb43996f554ffe280916884307
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925520"
 ---
 # <a name="determining-what-is-supported"></a>Détermination de ce qui est pris en charge
-Le **prend en charge** méthode est utilisée pour déterminer si une certaine **Recordset** objet prend en charge un type particulier de fonctionnalité. Il présente la syntaxe suivante :  
+La méthode **prend en charge** l’utilisation de la méthode pour déterminer si un objet **Recordset** spécifié prend en charge un type particulier de fonctionnalité. Sa syntaxe est la suivante :  
   
 ```  
   
@@ -29,8 +29,8 @@ boolean = recordset.Supports(CursorOptions )
 ```  
   
 ## <a name="remarks"></a>Notes  
- Le **prend en charge** méthode retourne une valeur booléenne qui indique si le fournisseur prend en charge toutes les fonctionnalités identifiées par l’argument CursorOptions. Vous pouvez utiliser la **prend en charge** méthode pour déterminer les types de fonctionnalités un **Recordset** prend en charge de l’objet. Si le **Recordset** objet prend en charge les fonctionnalités dont les constantes correspondantes se trouvent dans *CursorOptions*, le **prend en charge** méthode retourne **True**. Sinon, elle retourne **False**.  
+ La méthode **supports** retourne une valeur booléenne qui indique si le fournisseur prend en charge toutes les fonctionnalités identifiées par l’argument CursorOptions. Vous pouvez utiliser la méthode **supports** pour déterminer les types de fonctionnalités qu’un objet **Recordset** prend en charge. Si l’objet **Recordset** prend en charge les fonctionnalités dont les constantes correspondantes se trouvent dans *CursorOptions*, la méthode **supports** retourne la **valeur true**. Sinon, elle retourne **false**.  
   
- À l’aide de la **prend en charge** (méthode), vous pouvez vérifier la capacité de la **Recordset** objet à ajouter de nouveaux enregistrements, utiliser des signets, utilisez la **trouver** (méthode), utilisez le défilement, utilisez le  **Index** propriété et d’effectuer des mises à jour par lots. Pour obtenir une liste complète des constantes et leurs significations, consultez [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md).  
+ À l’aide de la méthode **supports** , vous pouvez vérifier la capacité de l’objet **Recordset** à ajouter de nouveaux enregistrements, utiliser des signets, utiliser la méthode **Find** , utiliser le défilement, utiliser la propriété **index** et effectuer des mises à jour par lots. Pour obtenir la liste complète des constantes et leurs significations, consultez [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md).  
   
- Bien que le **prend en charge** méthode peut retourner **True** pour une fonctionnalité donnée, il ne pas garantit que le fournisseur peut proposer la fonctionnalité en toutes circonstances. Le **prend en charge** méthode renvoie simplement si le fournisseur peut prendre en charge la fonctionnalité spécifiée, sous réserve que certaines conditions sont remplies. Par exemple, le **prend en charge** méthode peut indiquer qu’un **Recordset** objet prend en charge les mises à jour, même si le curseur est basé sur une jointure de plusieurs tables - dont certaines colonnes ne sont pas modifiables.
+ Bien que la méthode **supports** puisse retourner la **valeur true** pour une fonctionnalité donnée, elle ne garantit pas que le fournisseur peut rendre la fonctionnalité disponible dans toutes les circonstances. La méthode **supports** retourne simplement une valeur indiquant si le fournisseur peut prendre en charge les fonctionnalités spécifiées, en supposant que certaines conditions sont remplies. Par exemple, la méthode **supports** peut indiquer qu’un objet **Recordset** prend en charge les mises à jour, même si le curseur est basé sur une jointure de plusieurs tables, dont certaines colonnes ne peuvent pas être mises à jour.

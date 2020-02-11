@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_table_memory_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_xtp_table_memory_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d04238e0f476f39b0158fad4aa3350875d471ecc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097940"
 ---
-# <a name="sysdmdbxtptablememorystats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_table_memory_stats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Fournit les statistiques d'utilisation de la mémoire pour chaque table [!INCLUDE[hek_2](../../includes/hek-2-md.md)] (utilisateur et système) dans la base de données active. Les tables système ont des ID d'objet négatifs et sont utilisées pour stocker les informations d'exécution du moteur [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. Contrairement aux objets utilisateur, les tables système sont internes et existent uniquement en mémoire, par conséquent, elles ne sont pas visibles via les affichages catalogue. Les tables système sont utilisées pour stocker des informations telles que des métadonnées pour tous les fichiers de données/delta dans le stockage, les demandes de fusion, les filigranes des fichiers delta pour filtrer les lignes, les tables supprimées, et les informations pertinentes pour la récupération et les sauvegardes. Étant donné que le moteur [!INCLUDE[hek_2](../../includes/hek-2-md.md)] peut avoir jusqu'à 4 096 paires de fichiers de données et delta, pour les bases de données en mémoire volumineuses, la mémoire allouée aux tables système peut être de quelques mégaoctets.  
@@ -213,6 +213,6 @@ used_memory_mb       target_memory_mb
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues de gestion dynamique de Table optimisé en mémoire &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Vues de gestion dynamique des tables optimisées en mémoire &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Barre d’outils (onglet Concepteur relations d’attributs, Concepteur de dimensions) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Barre d’outils (onglet Concepteur de relations d’attributs, concepteur de dimensions) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 580641db4007f5a7e414f641a8a0495030405b38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066225"
 ---
 # <a name="toolbar-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barre d'outils (onglet Concepteur de relations d'attributs, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
@@ -30,7 +30,7 @@ ms.locfileid: "66066225"
   
 -   Modifier l'affichage du diagramme des relations d'attribut.  
   
- **Pour afficher la barre d’outils sous l’onglet relation d’attribut**  
+ **Pour afficher la barre d'outils de l'onglet Relation d'attribut**  
   
 -   Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], dans l’Explorateur de solutions, double-cliquez sur une dimension pour ouvrir le Concepteur de dimensions, puis cliquez sur l’onglet **Relation d’attribut** .  
   
@@ -38,10 +38,10 @@ ms.locfileid: "66066225"
  **Ajouter Business Intelligence**  
  Ouvre **l’Assistant Business Intelligence** et ajoute des fonctionnalités Business Intelligence. Pour plus d’informations, consultez [Utiliser l’Assistant Business Intelligence pour améliorer des dimensions](use-the-business-intelligence-wizard-to-enhance-dimensions.md).  
   
- **Traiter**  
+ **Procédure**  
  Traite l'objet.  
   
- **Nouvelle relation d’attribut**  
+ **Nouvelle relation d'attribut**  
  Ouvre la boîte de dialogue **Créer une relation d’attribut** dans laquelle vous pouvez définir une nouvelle relation d’attribut.  
   
  **Zoom**  

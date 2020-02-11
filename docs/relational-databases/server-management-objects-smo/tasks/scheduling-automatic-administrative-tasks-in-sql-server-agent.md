@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e2c852cd3f64e603f6eeab2f48a688dc733b4719
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74094384"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Planification des tâches administratives automatiques dans l'Agent SQL Server
@@ -38,9 +38,9 @@ ms.locfileid: "74094384"
  Les objets de l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se trouvent dans l'espace de noms <xref:Microsoft.SqlServer.Management.Smo.Agent>.  
   
 ## <a name="examples"></a>Exemples  
- Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet&#35; Smo Visual C dans Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet Visual C&#35; Smo dans Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
-Pour les programmes qui utilisent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] agent, vous devez inclure l’instruction **using** pour qualifier l’espace de noms de l’agent. Insérez l’instruction après les autres instructions **using** , avant toute déclaration dans l’application, par exemple :
+Pour les programmes qui [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisent l’agent, vous devez inclure l’instruction **using** pour qualifier l’espace de noms de l’agent. Insérez l’instruction après les autres instructions **using** , avant toute déclaration dans l’application, par exemple :
   
  ```
 using Microsoft.SqlServer.Management.Smo;
@@ -168,7 +168,7 @@ $jbsch.Create();
   
  **ObjectName | CounterName | Instance | ComparisionOp | CompValue**  
   
- Un opérateur est requis pour la notification d'alerte. Le type de <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> nécessite des parenthèses carrées, car l' **opérateur** est un mot clé [!INCLUDE[csprcs](../../../includes/csprcs-md.md)].  
+ Un opérateur est requis pour la notification d'alerte. Le <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> type requiert des parenthèses, car l' **opérateur** est un [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] mot clé.  
   
 ```csharp  
 {  
@@ -201,7 +201,7 @@ $jbsch.Create();
   
  **ObjectName | CounterName | Instance | ComparisionOp | CompValue**  
   
- Un opérateur est requis pour la notification d'alerte. Le type de <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> nécessite des parenthèses carrées, car l' **opérateur** est un mot clé [!INCLUDE[csprcs](../../../includes/csprcs-md.md)].  
+ Un opérateur est requis pour la notification d'alerte. Le <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> type requiert des parenthèses, car l' **opérateur** est un [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] mot clé.  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807457"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Mise en miroir de bases de données et réplication (SQL Server)
@@ -71,9 +71,9 @@ ms.locfileid: "62807457"
   
 3.  Configurez la distribution pour le miroir. Spécifiez le nom du miroir comme serveur de publication, puis spécifiez le serveur de publication et le dossier d'instantanés que le principal utilise. Par exemple, si vous configurez la réplication par le biais de procédures stockées, exécutez [sp_adddistpublisher](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) sur le serveur de distribution, puis [sp_adddistributor](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) sur le miroir. Pour **sp_adddistpublisher**:  
   
-    -   Donnez au paramètre **@publisher** le nom de réseau du miroir.  
+    -   Définissez la valeur du **@publisher** paramètre sur le nom réseau du miroir.  
   
-    -   Donnez au paramètre **@working_directory** le nom du dossier d’instantanés utilisé par le principal.  
+    -   Définissez la valeur du **@working_directory** paramètre sur le dossier d’instantanés utilisé par le principal.  
   
 4.  Spécifiez le nom du miroir pour le paramètre d’agent **-PublisherFailoverPartner**. Agent Ce paramètre est obligatoire ; il permet aux agents suivants d'identifier le miroir après le basculement :  
   
@@ -85,13 +85,14 @@ ms.locfileid: "62807457"
   
     -   Agent de fusion (pour les abonnements de fusion)  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Écouteur de réplication (replisapi.dll : pour les abonnements de fusion synchronisés via la synchronisation web)  
+    -   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Écouteur de réplication (replisapi.dll : pour les abonnements de fusion synchronisés via la synchronisation web)  
   
     -   Contrôle ActiveX SQL Merge (pour les abonnements de fusion synchronisés à l'aide du contrôle)  
   
      L'agent de distribution et le contrôle ActiveX SQL Distribution n'ont pas ce paramètre puisqu'ils ne se connectent pas au serveur de publication.  
   
-     Les modifications apportées aux paramètres prennent effet au prochain démarrage de l'Agent. Si l'Agent fonctionne en continu, vous devez l'arrêter, puis le redémarrer. Les paramètres peuvent être définis dans les profils d'agent et à l'invite de commandes. Pour plus d'informations, consultez :  
+     Les modifications apportées aux paramètres prennent effet au prochain démarrage de l'Agent. Si l'Agent fonctionne en continu, vous devez l'arrêter, puis le redémarrer. Les paramètres peuvent être définis dans les profils d'agent et à l'invite de commandes. Pour plus d'informations, consultez les pages suivantes :  
   
     -   [Afficher et modifier des paramètres d’invite de commandes d’un Agent de réplication &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
@@ -133,9 +134,9 @@ ms.locfileid: "62807457"
   
 -   Si vous faites appel aux procédures stockées ou aux Replication Management Objects pour gérer la réplication sur le miroir, vous devez spécifier comme serveur de publication le nom de l'instance où la base de données est activée pour la réplication. Pour déterminer le nom approprié, utilisez la fonction [publishingservername](/sql/t-sql/functions/replication-functions-publishingservername).  
   
-     En cas de mise en miroir d'une base de données de publication, les métadonnées de réplication stockées dans la base de données miroir sont identiques à celles de la base de données principale. Par conséquent, en cas de bases de données de publication activées pour la réplication sur le principal, le nom d'instance du serveur de publication stocké dans les tables système du miroir est celui du principal, et non du miroir. Cela affecte la configuration et l'administration de la réplication si la base de données de publication bascule sur le miroir. Supposons, par exemple, que vous configuriez la réplication à l’aide de procédures stockées sur le miroir, une fois le basculement réalisé, et que vous vouliez ajouter un abonnement par extraction de données à une base de données de publication activée au niveau du principal, vous devez alors utiliser le nom principal et non le nom miroir dans le paramètre **@publisher** de **sp_addpullsubscription** ou **sp_addmergepullsubscription**.  
+     En cas de mise en miroir d'une base de données de publication, les métadonnées de réplication stockées dans la base de données miroir sont identiques à celles de la base de données principale. Par conséquent, en cas de bases de données de publication activées pour la réplication sur le principal, le nom d'instance du serveur de publication stocké dans les tables système du miroir est celui du principal, et non du miroir. Cela affecte la configuration et l'administration de la réplication si la base de données de publication bascule sur le miroir. Par exemple, si vous configurez la réplication avec des procédures stockées sur le miroir après un basculement et que vous souhaitez ajouter un abonnement par extraction à une base de données de publication qui a été activée au niveau du principal, vous devez spécifier le **@publisher** nom du principal plutôt que le nom du miroir pour le paramètre de **sp_addpullsubscription** ou **sp_addmergepullsubscription**.  
   
-     Si vous activez une base de données de publication au niveau du miroir, une fois le basculement vers le miroir réalisé, le nom d’instance du serveur de publication stocké dans les tables système est le nom du miroir. Dans ce cas, vous devez utiliser le nom du miroir dans le paramètre **@publisher** .  
+     Si vous activez une base de données de publication sur le miroir après le basculement vers le miroir, le nom de l’instance du serveur de publication stocké dans les tables système est le nom du miroir ; dans ce cas, vous devez utiliser le nom du miroir pour le **@publisher** paramètre.  
   
     > [!NOTE]  
     >  Dans certains cas, comme **sp_addpublication**, le paramètre **@publisher** n’est pris en charge que pour les serveurs de publication non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il ne sert alors à rien en cas de mise en miroir des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -162,6 +163,6 @@ ms.locfileid: "62807457"
   
 ## <a name="see-also"></a>Voir aussi  
  [Réplication SQL Server](../../relational-databases/replication/sql-server-replication.md)   
- [Copie des journaux de transaction et réplication &#40;SQL Server&#41;](../log-shipping/log-shipping-and-replication-sql-server.md)  
+ [&#40;de la copie des journaux de réplication et des SQL Server&#41;](../log-shipping/log-shipping-and-replication-sql-server.md)  
   
   

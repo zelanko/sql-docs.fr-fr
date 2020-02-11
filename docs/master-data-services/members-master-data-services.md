@@ -18,10 +18,10 @@ ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d6e663ef23c472b2a78ec71c58086824adae185e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728008"
 ---
 # <a name="members-master-data-services"></a>Membres (services de données de référence)
@@ -35,7 +35,7 @@ ms.locfileid: "73728008"
   
  Dans cet exemple, la table représente une entité, les lignes de la table des membres et les colonnes de la table des attributs. Chaque cellule représente une valeur d'attribut pour un membre spécifique.  
   
- ![Entité Master Data Services représentée sous forme de table](../master-data-services/media/mds-conc-entity-table.gif "Entité Master Data Services représentée sous forme de table")  
+ ![Entité Master Data Services représentée en tant que table](../master-data-services/media/mds-conc-entity-table.gif "Entité Master Data Services représentée en tant que table")  
   
 ## <a name="member-types"></a>Types de membres  
  Il existe trois types de membres : les membres feuille, les membres consolidés et les membres de collection.  
@@ -53,12 +53,12 @@ ms.locfileid: "73728008"
 -   Dans les hiérarchies explicites, les membres consolidés peuvent être les parents d'autres membres de la hiérarchie, ou être les enfants.  
   
 ## <a name="use-hierarchies-and-collections-to-organize-members"></a>Utiliser des hiérarchies et des collections pour organiser des membres  
- Les hiérarchies et les collections permettent de regrouper des membres pour la création de rapports ou l'analyse. Pour plus d’informations, consultez [Hierarchies &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md) et [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md).  
+ Les hiérarchies et les collections permettent de regrouper des membres pour la création de rapports ou l'analyse. Pour plus d’informations, consultez [Hiérarchies &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md) et [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md).  
   
 ## <a name="member-example"></a>Exemple de membre  
  Dans l'exemple suivant, chaque membre est constitué d'une valeur d'attribut : Name, Code, Subcategory, StandardCost, ListPrice et FilePhoto.  
   
- ![Table d’entité du produit Bike](../master-data-services/media/mds-conc-entity-table-w-data.gif "Table d’entité du produit Bike")  
+ ![Table de l'entité Bike Product](../master-data-services/media/mds-conc-entity-table-w-data.gif "Table de l'entité Bike Product")  
   
 ## <a name="related-tasks"></a>Tâches associées  
   
@@ -68,10 +68,10 @@ ms.locfileid: "73728008"
 |Créez un membre consolidé.|[Créer un membre consolidé &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)|  
 |Supprimez une collection ou un membre existant.|[Supprimer un membre ou une collection &#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)|  
 |Réactivez une collection ou un membre supprimé.|[Réactiver un membre ou une collection &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
-|Mettez à jour les valeurs d'attribut d'un membre.|[Modifier le type d’attribut &#40;Complément MDS pour Excel&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
+|Mettez à jour les valeurs d'attribut d'un membre.|[Modifiez le type d’attribut &#40;Complément MDS pour Excel&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
 
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
   
 -   [Vue d’ensemble de Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
@@ -83,7 +83,7 @@ ms.locfileid: "73728008"
   
 -   [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
--   [Autorisations de feuille &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)  
+-   [Autorisations feuille &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)  
   
  
 -   [Opérateurs de filtre &#40;Master Data Services&#41;](../master-data-services/filter-operators-master-data-services.md)  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 15c80cec67b0a40c8ac4c436a45a4551132858f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105348"
 ---
 # <a name="issibling-mdx"></a>IsSibling (MDX)
@@ -35,7 +35,7 @@ IsSibling(Member_Expression1, Member_Expression2)
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
 ## <a name="remarks"></a>Notes  
- Le **IsSibling** fonction renvoie **true** si le premier membre spécifié est un frère du deuxième membre spécifié. Sinon, la fonction retourne **false**.  
+ La fonction **IsSibling** retourne la **valeur true** si le premier membre spécifié est un frère du deuxième membre spécifié. Dans le cas contraire, la fonction retourne **false**.  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant retourne TRUE si le membre actuel sur la hiérarchie Fiscal de la dimension Date est un frère de July 2002 :  
@@ -51,6 +51,6 @@ IsSibling(Member_Expression1, Member_Expression2)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

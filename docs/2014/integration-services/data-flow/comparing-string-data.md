@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7fe9955ba4f20c4a20e24d99924adce7ff0d992a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828146"
 ---
 # <a name="comparing-string-data"></a>comparaison de données de chaînes
@@ -33,7 +33,7 @@ ms.locfileid: "62828146"
   
 -   La transformation de fractionnement conditionnel peut utiliser des comparaisons de chaînes dans des expressions afin de déterminer à quelle sortie envoyer la ligne de données. Pour plus d'informations, consultez [Conditional Split Transformation](transformations/conditional-split-transformation.md).  
   
--   La transformation de colonne dérivée peut utiliser des comparaisons de chaînes dans des expressions afin de générer de nouvelles valeurs de colonnes. Pour plus d'informations, consultez [Derived Column Transformation](transformations/derived-column-transformation.md).  
+-   La transformation de colonne dérivée peut utiliser des comparaisons de chaînes dans des expressions afin de générer de nouvelles valeurs de colonnes. Pour plus d'informations, consultez [Transformation de colonne dérivée](transformations/derived-column-transformation.md).  
   
  Les variables, les mappages de variables et les contraintes de précédence utilisent également des expressions qui peuvent inclure des comparaisons de chaînes. Pour plus d’informations sur les expressions, consultez [Expressions Integration Services &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md).  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62828146"
  Vous pouvez également spécifier des paramètres régionaux pour un gestionnaire de connexions de fichiers plats et un gestionnaire de connexions de fichiers plats multiples.  
   
 ## <a name="setting-comparison-options"></a>Définition des options de comparaison  
- Les paramètres régionaux déterminent les règles de base pour la comparaison de données chaînes. Ils indiquent par exemple la position de tri de chaque lettre dans l'alphabet. Cependant, ces règles ne suffisent pas toujours dans les comparaisons réalisées par certaines transformations et [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prend en charge un ensemble d'options de comparaison avancées extrapolant les règles de comparaison des paramètres régionaux. Ces options de comparaison sont définies au niveau de la colonne. Une de ces options de comparaison permet par exemple d'ignorer les caractères sans espace. L’effet de cette option consiste à ignorer les signes diacritiques telles que le respect des accents, ce qui rend « a » et « å « identiques à des fins de comparaison.  
+ Les paramètres régionaux déterminent les règles de base pour la comparaison de données chaînes. Ils indiquent par exemple la position de tri de chaque lettre dans l'alphabet. Cependant, ces règles ne suffisent pas toujours dans les comparaisons réalisées par certaines transformations et [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prend en charge un ensemble d'options de comparaison avancées extrapolant les règles de comparaison des paramètres régionaux. Ces options de comparaison sont définies au niveau de la colonne. Une de ces options de comparaison permet par exemple d'ignorer les caractères sans espace. L’effet de cette option est d’ignorer les signes diacritiques tels que l’accent, ce qui rend « a » et « å » identiques à des fins de comparaison.  
   
  Le tableau qui suit décrit les options de comparaison et un style de tri.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62828146"
  La balise de comparaison **FullySensitive** s'affiche dans la boîte de dialogue **Éditeur avancé** pour les transformations de regroupement probable et de recherche floue. Le fait de sélectionner l'indicateur de comparaison **FullySensitive** signifie que toutes les options de comparaison s'appliquent.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données d'Integration Services](integration-services-data-types.md)   
+ [Types de données d’Integration Services](integration-services-data-types.md)   
  [Analyse rapide](../fast-parse.md)   
  [Analyse standard](../standard-parse.md)  
   

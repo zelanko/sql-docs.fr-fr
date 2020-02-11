@@ -1,5 +1,5 @@
 ---
-title: 'Collections (Index de la syntaxe Visual C++ avec #import) | Microsoft Docs'
+title: 'Collections (Visual C++ index de syntaxe avec #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,16 +19,16 @@ ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 77a45203c50555168d2cd163c8b97406b8377694
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919895"
 ---
-# <a name="collections-visual-c-syntax-index-with-import"></a>Collections (Index de la syntaxe Visual C++ avec #import)
-Il est utile de savoir que les collections héritent certaines méthodes et propriétés communes.  
+# <a name="collections-visual-c-syntax-index-with-import"></a>Collections (Visual C++ index de syntaxe avec #import)
+Il est utile de savoir que les collections héritent de certaines méthodes et propriétés communes.  
   
- Toutes les collections héritent le **nombre** propriété et **Actualiser** (méthode) et toutes les collections ajoutent le **élément** propriété. Le **erreurs** collection ajoute le **clair** (méthode). Le **paramètres** hérite de la collection le **Append** et **supprimer** méthodes, tandis que le **champs** collection ajoute la **Append**, **supprimer**, et **mise à jour** méthodes.  
+ Toutes les collections héritent de la propriété **Count** et de la méthode **Refresh** , et toutes les collections ajoutent la propriété **Item** . La collection **Errors** ajoute la méthode **Clear** . La collection **Parameters** hérite des méthodes **Append** et **Delete** , tandis que la collection **Fields** ajoute les méthodes d' **Ajout**, de **suppression**et de **mise à jour** .  
   
 ## <a name="properties-collection"></a>Collection Properties  
   
@@ -38,7 +38,7 @@ Il est utile de savoir que les collections héritent certaines méthodes et prop
 HRESULT Refresh( );  
 ```  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>Propriétés  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  
@@ -54,7 +54,7 @@ HRESULT Clear( );
 HRESULT Refresh( );  
 ```  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>Propriétés  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  
@@ -71,7 +71,7 @@ HRESULT Delete( const _variant_t & Index );
 HRESULT Refresh( );  
 ```  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>Propriétés  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  
@@ -89,7 +89,7 @@ HRESULT Refresh( );
 HRESULT Update( );  
 ```  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>Propriétés  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  
@@ -97,7 +97,7 @@ PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Collection d’erreurs (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Collection de champs (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Collection de paramètres (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [Errors, collection (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
+ [Fields, collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Parameters, collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Properties, collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

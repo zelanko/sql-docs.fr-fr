@@ -1,5 +1,5 @@
 ---
-title: Créer une relation entre deux Tables (SSAS tabulaire) | Microsoft Docs
+title: Créer une relation entre deux tables (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98bd7f6c904207aa6d38f2ae756a207f128707a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067538"
 ---
 # <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>Créer une relation entre deux tables (SSAS Tabulaire)
-  S'il n'existe pas de relations entre les tables de votre source de données ou si vous ajoutez de nouvelles tables, vous pouvez utiliser les outils du générateur de modèles pour créer des relations. Pour plus d’informations sur la façon dont les relations sont utilisées dans les modèles tabulaires, consultez [Relationships &#40;SSAS Tabular&#41;](relationships-ssas-tabular.md).  
+  S'il n'existe pas de relations entre les tables de votre source de données ou si vous ajoutez de nouvelles tables, vous pouvez utiliser les outils du générateur de modèles pour créer des relations. Pour plus d’informations sur la façon dont les relations sont utilisées dans les modèles tabulaires, consultez [Relations &#40;SSAS Tabulaire&#41;](relationships-ssas-tabular.md).  
   
 ## <a name="create-a-relationship-between-two-tables"></a>Créer une relation entre deux tables  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66067538"
   
 6.  Pour **Colonne de recherche associée**, sélectionnez une colonne qui comporte des valeurs uniques qui correspondent aux valeurs dans la colonne que vous avez sélectionnée pour **Colonne**.  
   
-7.  Cliquez sur **Créer**.  
+7.  Cliquez sur **Créer**.  
   
 #### <a name="to-create-a-relationship-between-two-tables-in-data-view"></a>Pour créer une relation entre deux tables dans la vue de données  
   
@@ -67,10 +67,10 @@ ms.locfileid: "66067538"
   
 5.  Pour **Colonne de recherche associée**, sélectionnez une colonne qui comporte des valeurs uniques qui correspondent aux valeurs dans la colonne que vous avez sélectionnée pour **Colonne**.  
   
-6.  Cliquez sur **Créer**.  
+6.  Cliquez sur **Créer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Supprimer des relations &#40;SSAS Tabulaire&#41;](delete-relationships-ssas-tabular.md)   
- [Relations &#40;SSAS Tabulaire&#41;](relationships-ssas-tabular.md)  
+ [Supprimer des relations &#40;&#41;tabulaire SSAS](delete-relationships-ssas-tabular.md)   
+ [Relations &#40;&#41;tabulaires SSAS](relationships-ssas-tabular.md)  
   
   

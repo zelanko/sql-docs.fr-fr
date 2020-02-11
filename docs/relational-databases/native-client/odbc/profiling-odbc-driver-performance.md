@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c15c8920d2a0188a7dbe517149dc369dea95522e
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73760710"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Profilage des performances du pilote ODBC
@@ -71,7 +71,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   Réseau  
   
--   time  
+-   Temps  
   
  Dans le tableau suivant, les descriptions des champs de la structure de données SQLPERF s'appliquent également aux statistiques enregistrées dans le fichier journal de performance.  
   
@@ -100,13 +100,13 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |CurrentStmtCount|Nombre de descripteurs d'instruction ouverts actuellement sur toutes les connexions ouvertes dans le pilote.|  
 |MaxOpenStmt|Nombre maximal de descripteurs d'instruction ouverts simultanément après SQL_PERF_START.|  
 |SumOpenStmt|Nombre de descripteurs d'instruction ouverts après SQL_PERF_START.|  
-|**Statistiques de connexion :**||  
+|**Statistiques relatives à la connexion :**||  
 |CurrentConnectionCount|Nombre actuel de handles de connexion actifs ouverts par l'application sur le serveur.|  
 |MaxConnectionsOpened|Nombre maximal de handles de connexion simultanés ouverts après SQL_PERF_START.|  
 |SumConnectionsOpened|Somme correspondant au nombre de handles de connexion ouverts après SQL_PERF_START.|  
 |SumConnectionTime|Somme correspondant à la durée d'ouverture de toutes les connexions après SQL_PERF_START. Par exemple, si une application a ouvert 10 connexions et a conservé chaque connexion pendant 5 secondes, SumConnectionTime est égal à 50 secondes.|  
 |AvgTimeOpened|Est égal à SumConnectionsOpened/ SumConnectionTime.|  
-|**Statistiques réseau :**||  
+|**Statistiques relatives au réseau :**||  
 |ServerRndTrips|Nombre de fois où le pilote a envoyé des commandes au serveur et a obtenu une réponse.|  
 |BuffersSent|Nombre de paquets TDS (Tabular Data Stream) envoyés à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par le pilote après SQL_PERF_START. Les commandes de taille importante peuvent nécessiter plusieurs mémoires tampons ; par conséquent, si une commande de taille importante est envoyée au serveur et si elle occupe six paquets, ServerRndTrips est incrémenté d'une unité et BuffersSent de six unités.|  
 |BuffersRec|Nombre de paquets TDS reçus par le pilote à partir de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] une fois que l'application a commencé à utiliser le pilote.|  
@@ -121,7 +121,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |msNetworkServerTime|Durée cumulative d'attente des réponses du serveur par le pilote.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Native Client &#40;ODBC&#41; ](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [Rubriques de procédures relatives &#40;au profilage des performances du pilote ODBC ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [SQL Server Native Client &#40;&#41;ODBC](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Rubriques de procédures relatives au profilage des performances du pilote ODBC &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

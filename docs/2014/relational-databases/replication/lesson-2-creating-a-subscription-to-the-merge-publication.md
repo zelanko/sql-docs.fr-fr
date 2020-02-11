@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 2 : Création d’un abonnement à la Publication de fusion | Microsoft Docs'
+title: 'Leçon 2 : Création d’un abonnement à la publication de fusion | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 495fb831490a35043b500caea2c835bfd80b6a8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721026"
 ---
-# <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Leçon 2 : Création d’un abonnement à la Publication de fusion
-  Dans cette leçon, vous allez créer l’abonnement à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Puis, vous définirez les autorisations sur la base de données d'abonnement et génèrerez manuellement l'instantané filtré des données du nouvel abonnement. Cette leçon requiert que vous avez terminé la leçon précédente, [leçon 1 : Publication des données à l’aide de la réplication de fusion](lesson-1-publishing-data-using-merge-replication.md).  
+# <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Leçon 2 : Création d'un abonnement à la publication de fusion
+  Dans cette leçon, vous allez créer l’abonnement à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Puis, vous définirez les autorisations sur la base de données d'abonnement et génèrerez manuellement l'instantané filtré des données du nouvel abonnement. Pour effectuer cette leçon, vous devez avoir terminé la leçon précédente, [Leçon 1 : Publication de données à l’aide de la réplication de fusion](lesson-1-publishing-data-using-merge-replication.md).  
   
 ### <a name="to-create-the-subscription"></a>Pour créer l'abonnement  
   
@@ -36,15 +36,15 @@ ms.locfileid: "62721026"
   
 5.  Dans la page Emplacement de l’Agent de fusion, cliquez sur **Exécuter chaque agent sur son Abonné**, puis cliquez sur **Suivant**.  
   
-6.  Dans la page abonnés, sélectionnez le nom de l’instance de l’abonné et sous **base de données d’abonnement**, sélectionnez  **\<nouvelle base de données >** dans la liste.  
+6.  Sur la page abonnés, sélectionnez le nom de l’instance du serveur de l’abonné, puis, sous **base de données d’abonnement**, sélectionnez ** \<nouvelle base de données>** dans la liste.  
   
 7.  Dans la boîte de dialogue **Nouvelle base de données** , entrez **SalesOrdersReplica** dans la zone **Nom de la base de données** , cliquez sur **OK**, puis cliquez sur **Suivant**.  
   
-8.  Dans la page sécurité de l’Agent de fusion, cliquez sur le bouton de sélection ( **...** ), entrez \< _nom_ordinateur >_ **\repl_merge** dans le **compte de processus** , fournissez le mot de passe pour ce compte, cliquez sur **OK**, cliquez sur **suivant**, puis cliquez sur **suivant** à nouveau.  
+8.  Dans la page sécurité du agent de fusion, cliquez sur le bouton des points de suspension (**...**), entrez \< _Machine_Name>_ **\ repl_merge** dans la zone **compte de processus** , fournissez le mot de passe de ce compte, cliquez sur **OK**, sur **suivant**, puis de nouveau sur **suivant** .  
   
 9. Dans la page Initialiser les abonnements, sélectionnez **Lors de la première synchronisation** dans la liste **À quel moment** , cliquez sur **Suivant**, puis une nouvelle fois sur **Suivant** .  
   
-10. Dans la page valeurs de HOST_NAME, entrez la valeur `adventure-works\pamela0` dans le **valeur de HOST_NAME** , puis cliquez sur **Terminer**.  
+10. Dans la page valeurs de HOST_NAME, entrez une valeur `adventure-works\pamela0` dans la zone **valeur de HOST_NAME** , puis cliquez sur **Terminer**.  
   
 11. Cliquez à nouveau sur **Terminer** et, une fois l’abonnement créé, cliquez sur **Fermer**.  
   
@@ -52,13 +52,13 @@ ms.locfileid: "62721026"
   
 1.  Connectez-vous à l’Abonné dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez **Bases de données**, **SalesOrdersReplica**et **Sécurité**, cliquez avec le bouton droit sur **Utilisateurs**, puis choisissez **Nouvel utilisateur**.  
   
-2.  Sur le **général** , entrez \< _nom_ordinateur >_ **\repl_merge** dans le **nom d’utilisateur** , cliquez sur le bouton de sélection ( **...** ) bouton, cliquez sur **Parcourir**, sélectionnez \< _nom_ordinateur >_ **\repl_merge**, cliquez sur **OK**, cliquez sur **vérifier les noms**, puis cliquez sur **OK**.  
+2.  Sur la page **général** , entrez \< _Machine_Name>_ **\ repl_merge** dans la **zone nom d’utilisateur** , cliquez sur le bouton de sélection (**...**), cliquez sur **Parcourir**, sélectionnez \< _Machine_Name>_ **\ repl_merge**, cliquez sur **OK**, sur **vérifier les noms**, puis sur **OK**.  
   
 3.  Dans **Appartenance au rôle de base de données**, sélectionnez **db_owner**, puis cliquez sur **OK** pour créer l’utilisateur.  
   
 ### <a name="to-create-the-filtered-data-snapshot-for-the-subscription"></a>Pour créer l'instantané filtré des données de l'abonnement  
   
-1.  Connectez-vous au serveur de publication dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puis développez le nœud du serveur et le dossier **Réplication** .  
+1.  Connectez-vous au serveur [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de publication dans, développez le nœud du serveur, puis développez le dossier **réplication** .  
   
 2.  Dans le dossier **Publications locales** , cliquez avec le bouton droit sur la publication **AdvWorksSalesOrdersMerge** , puis cliquez sur **Propriétés**.  
   
@@ -66,16 +66,16 @@ ms.locfileid: "62721026"
   
 3.  Sélectionnez la page **Partitions de données** , puis cliquez sur **Ajouter**.  
   
-4.  Dans le **ajouter une Partition de données** boîte de dialogue, tapez `adventure-works\pamela0` dans le **valeur de HOST_NAME** , puis cliquez sur **OK**.  
+4.  Dans la boîte de dialogue **Ajouter une partition** de `adventure-works\pamela0` données, tapez dans la zone **HOST_NAME valeur** , puis cliquez sur **OK**.  
   
 5.  Sélectionnez la partition nouvellement ajoutée, cliquez sur **Générer les instantanés sélectionnés maintenant**, puis sur **OK**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Vous avez créé avec succès un abonnement à la publication de fusion et généré l'instantané filtré pour la partition de données du nouvel abonnement de telle sorte qu'il soit disponible lors de l'initialisation de l'abonnement. Ensuite, vous allez accorder des droits à l'Agent de fusion sur la base de données d'abonnement et exécuter l'Agent de fusion pour démarrer la synchronisation et initialiser l'abonnement. Voir [Leçon 3 : Synchronisation de l’abonnement à la Publication de fusion](lesson-3-synchronizing-the-subscription-to-the-merge-publication.md).  
+ Vous avez créé avec succès un abonnement à la publication de fusion et généré l'instantané filtré pour la partition de données du nouvel abonnement de telle sorte qu'il soit disponible lors de l'initialisation de l'abonnement. Ensuite, vous allez accorder des droits à l'Agent de fusion sur la base de données d'abonnement et exécuter l'Agent de fusion pour démarrer la synchronisation et initialiser l'abonnement. Consultez [Leçon 3 : Synchronisation de l’abonnement et de la publication de fusion](lesson-3-synchronizing-the-subscription-to-the-merge-publication.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [S’abonner aux Publications](subscribe-to-publications.md)   
- [Créer un abonnement par extraction de données ](create-a-pull-subscription.md)   
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Instantanés des publications de fusion avec des filtres paramétrés](snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   

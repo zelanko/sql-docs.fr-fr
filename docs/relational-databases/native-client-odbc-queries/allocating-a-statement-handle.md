@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5c176536675af707ec2e16fde80028beba8a019a
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779992"
 ---
 # <a name="allocating-a-statement-handle"></a>Allocation d'un descripteur d'instruction
@@ -39,7 +39,7 @@ ms.locfileid: "73779992"
   
  L’appel à **SQLSetStmtAttr** avec *fOption* défini sur SQL_ATTR_QUERY_TIMEOUT définit un intervalle de délai d’attente de requête pour aider à protéger le serveur et l’utilisateur des requêtes de longue durée.  
   
- L’appel à **SQLSetStmtAttr** avec *fOption* défini sur SQL_ATTR_MAX_LENGTH limite la quantité de données de **texte** et d' **image** qu’une instruction individuelle peut récupérer. L’appel à **SQLSetStmtAttr** avec *fOption* défini sur SQL_ATTR_MAX_ROWS limite également un ensemble de lignes aux *n* premières lignes si toutes les applications le requièrent. Notez que la définition de SQL_ATTR_MAX_ROWS oblige le pilote à émettre une instruction SET ROWCOUNT à destination du serveur. Cela affecte toutes les instructions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)], y compris les déclencheurs et les mises à jour.  
+ L’appel à **SQLSetStmtAttr** avec *fOption* défini sur SQL_ATTR_MAX_LENGTH limite la quantité de données de **texte** et d' **image** qu’une instruction individuelle peut récupérer. L’appel à **SQLSetStmtAttr** avec *fOption* défini sur SQL_ATTR_MAX_ROWS limite également un ensemble de lignes aux *n* premières lignes si toutes les applications le requièrent. Notez que la définition de SQL_ATTR_MAX_ROWS oblige le pilote à émettre une instruction SET ROWCOUNT à destination du serveur. Cela affecte toutes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les instructions, y compris les déclencheurs et les mises à jour.  
   
  Soyez prudent lorsque vous définissez ces options. Il est préférable que tous les descripteurs d'instruction d'un handle de connexion aient les mêmes paramètres pour SQL_ATTR_MAX_LENGTH et SQL_ATTR_MAX_ROWS. Si le pilote passe d'un descripteur d'instruction à un autre avec des valeurs différentes pour ces options, il doit générer les instructions SET TEXTSIZE et SET ROWCOUNT appropriées pour modifier les paramètres. Le pilote ne peut pas placer ces instructions dans le même lot que l'instruction SQL utilisateur, car cette dernière peut contenir une instruction qui doit être la première dans un lot. Le pilote doit envoyer les instructions SET TEXTSIZE et SET ROWCOUNT dans un lot séparé, ce qui génère automatiquement un aller-retour supplémentaire au serveur.  
   

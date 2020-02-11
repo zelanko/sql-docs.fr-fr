@@ -19,13 +19,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a380b3c4f27df6ad9d60fc27f14a4f5072c676a0
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874502"
 ---
-# <a name="possible-failures-during-database-mirroring"></a>Défaillances possibles pendant la mise en miroir d'une base de données
+# <a name="possible-failures-during-database-mirroring"></a>Défaillances possibles pendant la mise en miroir d’une base de données
   Des problèmes physiques, de système d'exploitation ou propres à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être responsables de l'échec d'une session de mise en miroir de bases de données. La mise en miroir de bases de données ne contrôle pas régulièrement les composants sur lesquels Sqlservr.exe s'appuie pour vérifier s'ils fonctionnent correctement ou s'ils ont échoué. Toutefois, pour certains types d'échecs, le composant affecté signale une erreur à Sqlservr.exe. Une erreur signalée par un autre composant est appelée *erreur matérielle*. La mise en miroir de bases de données implémente ses propres mécanismes de délai d'attente pour détecter les autres erreurs qui passeraient sinon inaperçues. En cas de délai d’attente de la mise en miroir, une *erreur logicielle*se produit quand la mise en miroir de bases de données détermine qu’une défaillance s’est produite. Toutefois, certaines erreurs qui se produisent au niveau de l'instance SQL Server n'entraîne pas de délai d'attente de la mise en miroir et peuvent ne pas être détectées.  
   
 > [!IMPORTANT]  
@@ -63,7 +63,7 @@ ms.locfileid: "70874502"
   
 -   les câbles sont débranchés ;  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows a un pare-feu qui bloque un port spécifique ;  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows comprend un pare-feu qui bloque un port spécifique ;  
   
 -   l'application de surveillance d'un port ne fonctionne pas ;  
   
@@ -90,7 +90,7 @@ ms.locfileid: "70874502"
   
  Pour garder une connexion ouverte, une instance de serveur doit recevoir un ping sur cette connexion au cours du délai d'attente défini, auquel s'ajoute le temps nécessaire à l'envoi d'un ping supplémentaire. La réception d'un ping au cours du délai d'attente indique que la connexion est toujours ouverte et que les instances de serveur communiquent via celle-ci. À la réception du ping, une instance de serveur réinitialise son compteur de délai d'attente sur cette connexion.  
   
- Si aucune commande ping n’est reçue sur une connexion pendant le délai d’attente, une instance de serveur considère que la connexion a expiré. L’instance de serveur ferme la connexion ayant expiré et gère l’événement d’expiration en fonction de l’État et du mode de fonctionnement de la session.  
+ Si aucun ping n'est reçu sur une connexion durant le délai d'attente, une instance de serveur considère que la connexion a expiré. L'instance de serveur ferme la connexion ayant expiré et traite l'événement d'expiration en fonction de l'état et du mode de fonctionnement de la session.  
   
  Même si l'autre serveur fonctionne en réalité correctement, un dépassement de délai est considéré comme une défaillance. Si la valeur du délai d'attente est trop courte pour la réactivité normale d'un partenaire, des fausses défaillances peuvent se produire. Une fausse défaillance se produit lorsqu'une instance de serveur réussit à contacter une autre instance de serveur dont le temps de réponse est tellement lent que ses pings ne sont pas reçus avant l'expiration du délai d'attente.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "70874502"
   
 ## <a name="see-also"></a>Voir aussi  
  [Estimer l’interruption de service au cours d’un basculement de rôle &#40;mise en miroir de bases de données&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)   
+ [Modes de fonctionnement de la mise en miroir de bases de données](database-mirroring-operating-modes.md)   
  [Basculement de rôle durant une session de mise en miroir de bases de données &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Mise en miroir de bases de données &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f930a2e6f3ce84c330a4b7292ebaaba3b2ab871e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062222"
 ---
 # <a name="active-operations-dialog-box"></a>Boîte de dialogue Opérations actives
@@ -27,7 +27,7 @@ ms.locfileid: "66062222"
   
  **Que voulez-vous faire ?**  
   
-1.  [Ouvrir la boîte de dialogue Opérations actives](#open_dialog)  
+1.  [Ouvrir la boîte de dialogue opérations actives](#open_dialog)  
   
 2.  [Configurer les options](#options)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66062222"
   
 ### <a name="options"></a>Options  
  **Type**  
- Spécifie le type d'opération. Les éléments suivants sont les valeurs possibles pour le **Type** champ et les valeurs correspondantes dans la colonne operations_type de l’instruction Transact-SQL `catalog.operations` vue.  
+ Spécifie le type d'opération. Voici les valeurs possibles pour le champ **type** et les valeurs correspondantes dans la colonne operations_type de la vue Transact-SQL `catalog.operations` .  
   
 |||  
 |-|-|  
@@ -56,9 +56,9 @@ ms.locfileid: "66062222"
 |Arrêter l'opération (arrêt d'une validation ou d'une exécution)|202|  
 |Valider le projet|300|  
 |Valider le package|301|  
-|Configurer le catalogue|1000|  
+|Configurer le catalogue|1 000|  
   
- **Arrêter**  
+ **Stop**  
  Cliquez pour arrêter une opération en cours d'exécution.  
   
   

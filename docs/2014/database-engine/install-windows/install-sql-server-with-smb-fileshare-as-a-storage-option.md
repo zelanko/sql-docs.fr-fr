@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3242f463e24322921b16a513c1b3a6905965b390
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775332"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Installer SQL Server avec le partage de fichiers SMB en tant qu'option de stockage
@@ -32,7 +32,7 @@ ms.locfileid: "62775332"
   
 -   \\\NomServeur\NomPartage  
   
- Pour plus d’informations sur Universal Naming Convention, consultez [UNC](https://go.microsoft.com/fwlink/?LinkId=245534) (https://go.microsoft.com/fwlink/?LinkId=245534).  
+ Pour plus d’informations sur la Convention d’affectation [](https://go.microsoft.com/fwlink/?LinkId=245534) de nomshttps://go.microsoft.com/fwlink/?LinkId=245534)universelle, consultez UNC (.  
   
  Le chemin d'accès UNC de bouclage (chemin d'accès UNC dont le nom du serveur est localhost, 127.0.0.1 ou le nom d'ordinateur local) n'est pas pris en charge. Exemple de cas particulier : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisant le cluster du serveur de fichiers qui est hébergé sur le même nœud sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d'exécution n'est pas non plus pris en charge. Pour éviter cette situation, il est recommandé de créer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et un cluster de serveur de fichiers sur des clusters Windows distincts.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62775332"
   
 6.  [sp_attach_single_file_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql)  
   
-### <a name="installation-options"></a>Options d'installation  
+### <a name="installation-options"></a>Options d’installation  
   
 -   Dans la page « Configuration du moteur de base de données » de l’interface utilisateur de l’installation, sous l’onglet « Répertoires de données », affectez au paramètre « Répertoire de données racine » la valeur « \\\fileserver1\share1\" ».  
   
@@ -79,30 +79,34 @@ ms.locfileid: "62775332"
     setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEPROGRESS /ASSYSADMINACCOUNTS="<DomainName\UserName>" /ASDATADIR=<Drive>:\OLAP\Data /ASLOGDIR=<Drive>:\OLAP\Log /ASBACKUPDIR=<Drive>:\OLAP\Backup /ASCONFIGDIR=<Drive>:\OLAP\Config /ASTEMPDIR=<Drive>:\OLAP\Temp /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'" /FAILOVERCLUSTERNETWORKNAME="<Insert Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /Features=AS,SQL /ASSVCACCOUNT="<DomainName\UserName>" /ASSVCPASSWORD="xxxxxxxxxxx" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="xxxxxxxxxxx" /INSTALLSQLDATADIR="\\FileServer\Share1\" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx" /SQLSYSADMINACCOUNTS="<DomainName\UserName> /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-     Pour plus d’informations sur l’utilisation de diverses options de paramètre de ligne de commande dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consultez [installer SQL Server 2014 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+     Pour plus d’informations sur l’utilisation de diverses options de paramètres de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ligne de commande dans, consultez [installer SQL Server 2014 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>Considérations relatives au système d’exploitation (protocole SMB et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
  Les différents systèmes d'exploitation Windows disposent de différentes versions du protocole SMB, et la version du protocole SMB est transparente pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez connaître les avantages des différentes versions de protocole SMB pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 |Système d'exploitation|Version de protocole SMB2|Avantages de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
-|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2|Performances améliorées par rapport aux versions SMB précédentes.<br /><br /> Durabilité, ce qui aide à la récupération lors de problèmes temporaires du réseau.|  
-|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1, comprenant Server Core|2.1|Prise en charge de MTU volumineuses, ce qui profite aux transferts de données volumineux, par exemple lors d'opérations de sauvegarde et de restauration SQL. Cette fonction doit être activée par l'utilisateur. Pour plus d’informations sur l’activation de cette fonction, consultez [Nouveautés du protocole SMB](https://go.microsoft.com/fwlink/?LinkID=237319) (https://go.microsoft.com/fwlink/?LinkID=237319).<br /><br /> Améliorations significatives des performances, en particulier pour les charges de travail de style SQL OLTP. Ces améliorations de performances requièrent l'application d'un correctif. Pour plus d’informations sur le correctif logiciel, consultez [cet article](https://go.microsoft.com/fwlink/?LinkId=237320) (https://go.microsoft.com/fwlink/?LinkId=237320).|  
-|[!INCLUDE[win8srv](../../includes/win8srv-md.md)], comprenant Server Core|3|Prise en charge du basculement transparent des partages de fichiers ce qui évite tout temps d'arrêt, sans intervention nécessaire de l'administrateur de la base de données SQL ou l'administrateur du serveur de fichiers dans les configurations de cluster de serveurs de fichiers.<br /><br /> Prise en charge d'E/S dans plusieurs interfaces réseau simultanément, ainsi que tolérance à la défaillance de l'interface réseau.<br /><br /> Prise en charge des interfaces réseau avec fonctions RDMA.<br /><br /> Pour plus d’informations sur ces fonctionnalités et le protocole SMB, consultez [Vue d’ensemble du protocole SMB](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Prise en charge de Scale Out File Server (SoFS) avec disponibilité continue.|  
-|[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2, comprenant Server Core|3.2|Prise en charge du basculement transparent des partages de fichiers ce qui évite tout temps d'arrêt, sans intervention nécessaire de l'administrateur de la base de données SQL ou l'administrateur du serveur de fichiers dans les configurations de cluster de serveurs de fichiers.<br /><br /> Prise en charge d'E/S dans plusieurs interfaces réseau simultanément, ainsi que tolérance à la défaillance de l'interface réseau, à l'aide de SMB Multichannel.<br /><br /> Prise en charge des interfaces réseau avec fonctions RDMA à l'aide de SMB Direct.<br /><br /> Pour plus d’informations sur ces fonctionnalités et le protocole SMB, consultez [Vue d’ensemble du protocole SMB](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Prise en charge de Scale Out File Server (SoFS) avec disponibilité continue.<br /><br /> Optimisé pour les E/S de lecture/écriture de petite taille courantes sur OLTP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> MTU (Maximum Transmission Unit) est activé par défaut, ce qui améliore grandement les performances lors des transferts séquentiels de grande taille comme pour l'entrepôt de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et la sauvegarde et la restauration de base de données.|  
+|
+  [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2.0|Performances améliorées par rapport aux versions SMB précédentes.<br /><br /> Durabilité, ce qui aide à la récupération lors de problèmes temporaires du réseau.|  
+|
+  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1, comprenant Server Core|2.1|Prise en charge de MTU volumineuses, ce qui profite aux transferts de données volumineux, par exemple lors d'opérations de sauvegarde et de restauration SQL. Cette fonction doit être activée par l'utilisateur. Pour plus d’informations sur l’activation de cette fonctionnalité, consultez [Nouveautés du protocole SMB](https://go.microsoft.com/fwlink/?LinkID=237319) (https://go.microsoft.com/fwlink/?LinkID=237319).<br /><br /> Améliorations significatives des performances, en particulier pour les charges de travail de style SQL OLTP. Ces améliorations de performances requièrent l'application d'un correctif. Pour plus d’informations sur le correctif, [](https://go.microsoft.com/fwlink/?LinkId=237320) consultez Thishttps://go.microsoft.com/fwlink/?LinkId=237320)(.|  
+|
+  [!INCLUDE[win8srv](../../includes/win8srv-md.md)], comprenant Server Core|3.0|Prise en charge du basculement transparent des partages de fichiers ce qui évite tout temps d'arrêt, sans intervention nécessaire de l'administrateur de la base de données SQL ou l'administrateur du serveur de fichiers dans les configurations de cluster de serveurs de fichiers.<br /><br /> Prise en charge d'E/S dans plusieurs interfaces réseau simultanément, ainsi que tolérance à la défaillance de l'interface réseau.<br /><br /> Prise en charge des interfaces réseau avec fonctions RDMA.<br /><br /> Pour plus d’informations sur ces fonctionnalités et le bloc de message serveur, consultez [vue d’ensemble du SMB (Server Message Block](https://go.microsoft.com/fwlink/?LinkId=253174) ) (https://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Prise en charge de Scale Out File Server (SoFS) avec disponibilité continue.|  
+|
+  [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2, comprenant Server Core|3.2|Prise en charge du basculement transparent des partages de fichiers ce qui évite tout temps d'arrêt, sans intervention nécessaire de l'administrateur de la base de données SQL ou l'administrateur du serveur de fichiers dans les configurations de cluster de serveurs de fichiers.<br /><br /> Prise en charge d'E/S dans plusieurs interfaces réseau simultanément, ainsi que tolérance à la défaillance de l'interface réseau, à l'aide de SMB Multichannel.<br /><br /> Prise en charge des interfaces réseau avec fonctions RDMA à l'aide de SMB Direct.<br /><br /> Pour plus d’informations sur ces fonctionnalités et le bloc de message serveur, consultez [vue d’ensemble du SMB (Server Message Block](https://go.microsoft.com/fwlink/?LinkId=253174) ) (https://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Prise en charge de Scale Out File Server (SoFS) avec disponibilité continue.<br /><br /> Optimisé pour les E/S de lecture/écriture de petite taille courantes sur OLTP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> MTU (Maximum Transmission Unit) est activé par défaut, ce qui améliore grandement les performances lors des transferts séquentiels de grande taille comme pour l'entrepôt de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et la sauvegarde et la restauration de base de données.|  
   
 ## <a name="security-considerations"></a>Considérations relatives à la sécurité  
   
--   Le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le compte de service de l'agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent disposer des autorisations de partage FULL CONTROL et des autorisations NTFS sur les dossiers de partage SMB. Le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être un compte de domaine ou un compte système si un serveur de fichiers SMB est utilisé. Pour plus d’informations sur les autorisations de partage et NTFS, consultez [Autorisations de partage et NTFS sur un serveur de fichiers](https://go.microsoft.com/fwlink/?LinkId=245535) (https://go.microsoft.com/fwlink/?LinkId=245535).  
+-   Le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le compte de service de l'agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent disposer des autorisations de partage FULL CONTROL et des autorisations NTFS sur les dossiers de partage SMB. Le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être un compte de domaine ou un compte système si un serveur de fichiers SMB est utilisé. Pour plus d’informations sur les autorisations de partage et NTFS, consultez [autorisations de partage et NTFS sur un serveur de fichiers](https://go.microsoft.com/fwlink/?LinkId=245535) (https://go.microsoft.com/fwlink/?LinkId=245535).  
   
     > [!NOTE]  
     >  Les autorisations de partage FULL CONTROL et les autorisations NTFS sur les dossiers de partage SMB doivent être limitées : au compte de service de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , au compte de service de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et aux utilisateurs Windows avec des rôles de serveur admin.  
   
-     Il est recommandé d'utiliser le compte de domaine en tant que compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si le compte système est utilisé comme compte de service, accordez les autorisations pour le compte d’ordinateur au format suivant : _<nom_domaine>_ **\\** _<nom_ordinateur>_ **$** .  
+     Il est recommandé d'utiliser le compte de domaine en tant que compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si le compte système est utilisé comme compte de service, accordez les autorisations pour le compte d’ordinateur au format suivant : _<domain_name>_ **\\** _<computer_name _ **$**>.  
   
     > [!NOTE]  
     >  -   Pendant l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez spécifier le compte de domaine en tant que compte de service si le partage de fichiers SMB est indiqué comme option de stockage. Avec le partage de fichiers SMB, le compte système peut être spécifié comme compte de service après l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
-    > -   Les comptes virtuels ne peuvent pas être authentifiés sur un emplacement distant. Tous les comptes virtuels utilisent l'autorisation de compte d'ordinateur. Configurez le compte d’ordinateur au format _<nom_domaine>_ **\\** _<nom_ordinateur>_ **$** .  
+    > -   Les comptes virtuels ne peuvent pas être authentifiés sur un emplacement distant. Tous les comptes virtuels utilisent l'autorisation de compte d'ordinateur. Approvisionnez le compte d’ordinateur au format _<domain_name>_ **\\** _<computer_name _ **$**>.  
   
 -   Le compte utilisé pour installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit avoir des autorisations FULL CONTROL sur le dossier de partage de fichiers SMB utilisé comme répertoire de données, ou tous les autres dossiers de données (répertoire de base de données utilisateur, répertoire du journal de la base de données utilisateur, répertoire TempDB, répertoire du journal TempDB, répertoire de sauvegarde) pendant la configuration des clusters.  
   
@@ -110,11 +114,11 @@ ms.locfileid: "62775332"
   
 ## <a name="known-issues"></a>Problèmes connus  
   
--   Après avoir détaché une base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] qui réside sur le stockage attaché au réseau, vous pouvez rencontrer un problème d'autorisations sur la base de données lorsque vous essaierez de lier à nouveau la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le problème est décrit dans [cet article de la Base de connaissances](https://go.microsoft.com/fwlink/?LinkId=237321) (https://go.microsoft.com/fwlink/?LinkId=237321). Pour le contourner, consultez la section **Plus d'informations** dans l'article de la Base de connaissances.  
+-   Après avoir détaché une base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] qui réside sur le stockage attaché au réseau, vous pouvez rencontrer un problème d'autorisations sur la base de données lorsque vous essaierez de lier à nouveau la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le problème est défini dans [cet article](https://go.microsoft.com/fwlink/?LinkId=237321) de lahttps://go.microsoft.com/fwlink/?LinkId=237321)base de connaissances (. Pour le contourner, consultez la section **Plus d'informations** dans l'article de la Base de connaissances.  
   
--   Certains tiers, tels que NetApp, ne gèrent pas tous les appels d'API SQL Server. Avec ces vous risquez d’obtenir :   
-    2015-06-04 13:14:19.97 spid9s erreur : 17053, Gravité : 16, état : 1.  
-    2015-06-04 13:14:19.97 spid9s DoDevIoCtlOut() GetOverlappedResult() : Erreur de système d’exploitation 1 (fonction incorrecte.) rencontrée.  
+-   Certains tiers, tels que NetApp, ne gèrent pas tous les appels d'API SQL Server. Ces éléments peuvent être les suivants :   
+    2015-06-04 13:14:19.97 spid9s erreur : 17053, gravité : 16, État : 1.  
+    2015-06-04 13:14:19.97 spid9s DoDevIoCtlOut () GetOverlappedResult () : erreur du système d’exploitation 1 (fonction incorrecte.) rencontrée.  
   
      Pour NTFS, l'erreur est sans conséquence.  Par contre, pour ReFS, elle peut entraîner une dégradation significative des performances.  
   
@@ -122,7 +126,7 @@ ms.locfileid: "62775332"
   
     1.  Accordez des autorisations de lecture/écriture sur le partage de fichiers à tous les objets ordinateur dans le cluster.  
   
-    2.  Définissez l'emplacement des journaux de diagnostics dans un chemin d'accès local. Observez l'exemple suivant :  
+    2.  Définissez l'emplacement des journaux de diagnostics dans un chemin d'accès local. Voir l’exemple suivant :  
   
         ```sql  
         ALTER SERVER CONFIGURATION  
@@ -130,7 +134,7 @@ ms.locfileid: "62775332"
         ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Planification d'une installation SQL Server](../../../2014/sql-server/install/planning-a-sql-server-installation.md)   
+ [Planification d’une installation de SQL Server](../../../2014/sql-server/install/planning-a-sql-server-installation.md)   
  [Rubriques de procédures relatives à l’installation](../../../2014/sql-server/install/installation-how-to-topics.md)   
  [Configurer les comptes de service Windows et les autorisations](../configure-windows/configure-windows-service-accounts-and-permissions.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Accès à un enregistrement | Microsoft Docs
+title: Saut à un enregistrement | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,30 +14,30 @@ ms.assetid: 6caf6299-2eea-4d34-9b0e-b75aab07b740
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cead84eed4e7689d6b5df907b6a61ef07ab74e8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924926"
 ---
 # <a name="jumping-to-a-record"></a>Accès à un enregistrement
-Le [déplacer](../../../ado/reference/ado-api/move-method-ado.md) méthode vous permet de faire avancer ou reculer dans le **Recordset** un nombre spécifié d’enregistrements à l’aide de la syntaxe suivante :  
+La méthode [Move](../../../ado/reference/ado-api/move-method-ado.md) vous permet de vous déplacer vers l’avant ou vers l’arrière dans le **jeu** d’enregistrements à l’aide de la syntaxe suivante :  
   
 ```  
 oRs.Move NumRecords, Start  
 ```  
   
 ## <a name="remarks"></a>Notes  
- Le **déplacer** méthode est prise en charge sur tous les **Recordset** objets.  
+ La méthode **Move** est prise en charge sur tous les objets **Recordset** .  
   
- Si le *NbEnregistrements* argument est supérieur à zéro, la position actuelle se déplace vers l’avant (vers la fin de la **Recordset**). Si *NbEnregistrements* est inférieur à zéro, la position actuelle se déplace vers l’arrière (vers le début de la **Recordset**).  
+ Si l’argument *numRecords* est supérieur à zéro, la position actuelle de l’enregistrement se déplace vers l’avant (vers la fin de l’ensemble d' **enregistrements**). Si *numRecords* est inférieur à zéro, la position actuelle de l’enregistrement est déplacée vers l’arrière (vers le début de l’ensemble d' **enregistrements**).  
   
- Si le **déplacer** appel serait déplace la position actuelle vers un point situé avant le premier enregistrement, ADO définit l’enregistrement actif à la position avant le premier enregistrement dans le **Recordset** (**BOF** est **True**). Une tentative de déplacement vers l’arrière quand le **BOF** propriété est déjà **True** génère une erreur.  
+ Si l’appel de **déplacement** déplace la position d’enregistrement active vers un point avant le premier enregistrement, ADO définit l’enregistrement actif à la position précédant le premier enregistrement dans le **jeu d’enregistrements** (**BOF** a la **valeur true**). Une tentative de déplacement vers l’arrière lorsque la propriété **BOF** a déjà la **valeur true** génère une erreur.  
   
- Si le **déplacer** appel déplacerait la position actuelle vers un point après le dernier enregistrement, ADO définit l’enregistrement actif à la position après le dernier enregistrement dans le **Recordset** (**EOF** est **True**). Une tentative de déplacement vers l’avant quand le **EOF** propriété est déjà **True** génère une erreur.  
+ Si l’appel de **déplacement** déplace la position d’enregistrement active vers un point après le dernier enregistrement, ADO définit l’enregistrement actif à la position après le dernier enregistrement dans le **jeu d’enregistrements** (**EOF** a la **valeur true**). Une tentative de déplacement vers l’avant lorsque la propriété **EOF** a déjà la **valeur true** génère une erreur.  
   
- Appel de la **déplacer** méthode à partir de vide **Recordset** objet génère une erreur.  
+ L’appel de la méthode **Move** à partir d’un objet **Recordset** vide génère une erreur.  
   
- Si vous passez un signet dans le *Démarrer* argument, le déplacement est relatif à l’enregistrement avec ce signet, en supposant que le **Recordset** objet prend en charge les signets. Un signet est obtenu en utilisant la [signet](../../../ado/reference/ado-api/bookmark-property-ado.md) propriété. Si non spécifié, le déplacement est relatif à l’enregistrement actif.  
+ Si vous passez un signet dans l’argument *Start* , le déplacement est relatif à l’enregistrement avec ce signet, en supposant que l’objet **Recordset** prend en charge les signets. Un signet est obtenu à l’aide de la propriété [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) . S’il n’est pas spécifié, le déplacement est relatif à l’enregistrement actif.  
   
- Si vous utilisez le **CacheSize** propriété à mettre en cache localement les enregistrements à partir du fournisseur, en passant un *NbEnregistrements* argument qui déplace la position actuelle en dehors du groupe actuel d’enregistrements mis en cache force ADO à récupérer un nouveau groupe d’enregistrements, à partir de l’enregistrement de destination. Le **CacheSize** propriété détermine la taille du groupe qui vient d’être extrait et l’enregistrement de destination est le premier enregistrement récupéré.
+ Si vous utilisez la propriété **CacheSize** pour mettre en cache localement des enregistrements à partir du fournisseur, le passage d’un argument *numRecords* qui déplace la position de l’enregistrement actuel en dehors du groupe actuel d’enregistrements mis en cache force ADO à récupérer un nouveau groupe d’enregistrements, en commençant par l’enregistrement de destination. La propriété **CacheSize** détermine la taille du groupe nouvellement récupéré, et l’enregistrement de destination est le premier enregistrement récupéré.

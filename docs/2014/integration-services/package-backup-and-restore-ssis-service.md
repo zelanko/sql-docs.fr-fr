@@ -1,5 +1,5 @@
 ---
-title: Sauvegarde et restauration de packages (Service SSIS) | Microsoft Docs
+title: Sauvegarde et restauration de packages (service SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -18,26 +18,26 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b5c775393f7815084e8a79aae4be7f0974886f3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056932"
 ---
 # <a name="package-backup-and-restore-ssis-service"></a>Sauvegarde et restauration de packages (Service SSIS)
     
 > [!IMPORTANT]  
->  Cette rubrique présente le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un service Windows qui permet de gérer les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] prend en charge le service pour la compatibilité avec les versions antérieures de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], vous pouvez gérer des objets tels que des packages sur le serveur Integration Services.  
+>  Cette rubrique présente le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un service Windows qui permet de gérer les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]prend en charge le service pour la compatibilité descendante [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]avec les versions antérieures de. À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], vous pouvez gérer des objets tels que des packages sur le serveur Integration Services.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Les packages peuvent être enregistrés dans le système de fichiers ou dans msdb, une base de données système [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Les packages enregistrés dans msdb peuvent être sauvegardés et restaurés à l’aide des fonctionnalités de sauvegarde et de restauration de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] les packages peuvent être enregistrés dans le système de fichiers ou dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb, une base de données système. Les packages enregistrés dans msdb peuvent être sauvegardés et restaurés à l’aide des fonctionnalités de sauvegarde et de restauration de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Pour plus d’informations sur la sauvegarde et la restauration de la base de données msdb, cliquez sur l’une des rubriques suivantes :  
   
--   [Sauvegarde et restauration des bases de données SQL Server](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
+-   [Sauvegarder et restaurer des bases de données SQL Server](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
--   [Sauvegarder et restaurer des bases de données système &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
+-   [Sauvegarde et restauration des bases de données système &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comprend l’utilitaire d’invite de commandes **dtutil** (dtutil.exec) qui permet de gérer les packages. Pour plus d’informations, consultez [dtutil Utility](dtutil-utility.md).  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]comprend l’utilitaire d’invite de commandes **dtutil** (dtutil. exec), que vous pouvez utiliser pour gérer les packages. Pour plus d’informations, consultez [dtutil Utility](dtutil-utility.md).  
   
 ## <a name="configuration-files"></a>Fichiers de configuration  
  Tous les fichiers de configuration inclus dans les packages sont stockés dans le système de fichiers. Ces fichiers ne sont pas sauvegardés en même temps que la base de données msdb. Vous devez donc vérifier que les fichiers de configuration sont sauvegardés régulièrement dans le cadre de votre plan de sécurisation des packages enregistrés dans msdb. Pour inclure les configurations dans la sauvegarde de la base de données msdb, vous devez envisager d’utiliser le type de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à la place des configurations basées sur les fichiers.  

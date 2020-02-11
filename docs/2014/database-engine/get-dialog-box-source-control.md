@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue (contrôle de code Source) | Microsoft Docs
+title: Boîte de dialogue récupérer (contrôle de code source) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 051e3b93761511db07a2f381be5c94ea3247e76a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779006"
 ---
 # <a name="get-dialog-box-source-control"></a>Boîte de dialogue Obtenir (Contrôle de code source)
@@ -49,14 +49,14 @@ ms.locfileid: "62779006"
  **Options**  
  Affiche les options d'obtention spécifiques au plug-in SourceSafe lorsque vous cliquez sur la flèche à droite du bouton.  
   
- **Sort**  
+ **Trier**  
  Trie les colonnes affichées.  
   
- **Vue d’arborescence**  
+ **Arborescence**  
  Affiche la hiérarchie des dossiers et des fichiers pour les éléments que vous êtes en train d'extraire.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Récupérer des fichiers](../../2014/database-engine/retrieve-files.md)   
+ [Récupérer les fichiers](../../2014/database-engine/retrieve-files.md)   
  [Contrôle de code source de l'Explorateur de solutions](../../2014/database-engine/solution-explorer-source-control.md)  
   
   

@@ -17,10 +17,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ee587881b95821c2ae23580b54d298fa496cec15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479168"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Autorisations de feuille (services de données de référence)
@@ -28,34 +28,34 @@ ms.locfileid: "65479168"
   
  Pour les entités sans hiérarchies explicites activées, l'affectation d'une autorisation **Feuille** revient à affecter l'autorisation à l'entité.  
   
- **Remarques :**  
+ **Notes**  
   
 -   Les autorisations de feuille s'appliquent à la zone fonctionnelle **Explorateur** de l'interface utilisateur uniquement.  
   
 -   Les autorisations attribuées à **Nom** et **Code** ne sont pas appliquées.  
   
-|Permission|Description|  
+|Autorisation|Description|  
 |----------------|-----------------|  
 |**Lecture seule**|Les membres feuille sont affichés, mais l'utilisateur ne peut ni les ajouter, ni les supprimer ni les modifier.<br /><br /> Si des membres consolidés existent, les noms et codes sont affichés, mais l'utilisateur ne peut pas les ajouter, les supprimer ni les modifier.|  
-|**Update**|Les membres feuille sont affichés et l'utilisateur peut les ajouter, les supprimer et les modifier.<br /><br /> Si des membres consolidés existent, les noms et codes sont affichés, mais l'utilisateur ne peut pas les ajouter, les supprimer ni les modifier.|  
-|**Refuser**|Les membres feuille pour l'entité ne sont pas affichés.|  
+|**Mise à jour**|Les membres feuille sont affichés et l'utilisateur peut les ajouter, les supprimer et les modifier.<br /><br /> Si des membres consolidés existent, les noms et codes sont affichés, mais l'utilisateur ne peut pas les ajouter, les supprimer ni les modifier.|  
+|**Deny**|Les membres feuille pour l'entité ne sont pas affichés.|  
   
 ## <a name="attribute-permissions"></a>Autorisations d'attribut  
  Les autorisations d’attribut s’appliquent aux valeurs de l’attribut pour l’entité spécifique. Les utilisateurs avec des autorisations d'attribut uniquement ne peuvent pas ajouter ni supprimer des membres.  
   
-|Permission|Description|  
+|Autorisation|Description|  
 |----------------|-----------------|  
 |**Lecture seule**|L'attribut est affiché, mais l'utilisateur ne peut pas modifier les valeurs d'attribut.|  
-|**Update**|L'attribut est affiché et l'utilisateur peut modifier les valeurs d'attribut.|  
-|**Refuser**|L'attribut n'est pas affiché.<br /><br /> Remarque : Vous ne pouvez pas refuser explicitement l’accès aux attributs Name et Code.|  
+|**Mise à jour**|L'attribut est affiché et l'utilisateur peut modifier les valeurs d'attribut.|  
+|**Deny**|L'attribut n'est pas affiché.<br /><br /> Remarque : vous ne pouvez pas refuser explicitement l’accès aux attributs Name et Code.|  
   
 ### <a name="example"></a>Exemple  
  Pour l'entité Product, affectez l'autorisation **Mise à jour** à l'attribut Subcategory. Autorisation refuser à tous les autres attributs.  
   
-|Nom|Code|Subcategory (Mise à jour)|  
+|Name|Code|Subcategory (Mise à jour)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5} Mountain Bikes|  
-|Mountain-100|BK-M201|{5} Mountain Bikes|  
+|Mountain-100|BK-M101|{5}VTT|  
+|Mountain-100|BK-M201|{5}VTT|  
   
  Dans l' **Explorateur**, vous pouvez mettre à jour toute valeur d'attribut de la colonne Subcategory. Si vous n'avez pas d'autorisation sur un attribut, l'attribut n'est pas affiché.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "65479168"
   
 ## <a name="see-also"></a>Voir aussi  
  [Affecter des autorisations d’objet de modèle &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   
- [Consolidés autorisations &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)   
+ [Autorisations consolidées &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)   
  [Autorisations d’objet de modèle &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [Membres &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [Attributs &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  

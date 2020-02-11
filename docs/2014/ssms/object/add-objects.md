@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 15011717f0f2d5ece6666c30aef72eade0faabb3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63276959"
 ---
 # <a name="add-objects"></a>Ajouter des objets
@@ -26,10 +26,10 @@ ms.locfileid: "63276959"
  **Objets spécifiques**  
  Ouvre la boîte de dialogue **Sélectionner des objets** pour vous permettre de définir plus précisément votre recherche d’objets.  
   
- **Tous les objets correspondant aux types**  
+ **Tous les objets des types**  
  Ouvre la boîte de dialogue **Sélectionner les types d’objets** pour vous permettre de spécifier le type d’objets à inclure dans la liste sous-jacente.  
   
- **Le serveur** _\<nom_serveur >_  
+ **Nom du serveur**  _\<>_  
  Ajoute tous les objets appropriés sur le serveur spécifié. Cette option apparaît uniquement quand vous passez par une boîte de dialogue de niveau serveur, par exemple la boîte de dialogue **Nouvelle connexion** .  
   
  **Tous les objets appartenant au schéma**  

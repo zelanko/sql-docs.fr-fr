@@ -19,14 +19,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dfe3796a862b300ae8d2778b5b55437ab9426cc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097770"
 ---
-# <a name="instancename-property-wmi-msreportserverconfigurationsetting"></a>Propriété InstanceName (WMI MSReportServer_ConfigurationSetting)
-  Spécifie le nom d'une instance de serveur de rapports sur un ordinateur spécifique. En lecture seule.  
+# <a name="instancename-property-wmi-msreportserver_configurationsetting"></a>Propriété InstanceName (WMI MSReportServer_ConfigurationSetting)
+  Spécifie le nom d'une instance de serveur de rapports sur un ordinateur spécifique. Lecture seule.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,8 +44,8 @@ public string InstanceName;
 ## <a name="example-code"></a>Exemple de code  
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>Configuration requise  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+## <a name="requirements"></a>Spécifications  
+ **Espace de noms :**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

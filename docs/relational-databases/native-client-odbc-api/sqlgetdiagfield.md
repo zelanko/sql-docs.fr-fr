@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f2a3d8d829794692cff6ecb9879e6f62f0b0b91b
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73786473"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client spécifie les champs de diagnostic supplémentaires suivants pour **SQLGetDiagField**. Ces champs prennent en charge la création de rapports d'erreurs riches pour les applications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et sont disponibles dans tous les enregistrements de diagnostic générés sur les handles de connexion ODBC et les handles d'instructions ODBC connectés. Les champs sont définis dans sqlncli.h.  
+  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC native client spécifie les champs de diagnostic supplémentaires suivants pour **SQLGetDiagField**. Ces champs prennent en charge la création de rapports d'erreurs riches pour les applications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et sont disponibles dans tous les enregistrements de diagnostic générés sur les handles de connexion ODBC et les handles d'instructions ODBC connectés. Les champs sont définis dans sqlncli.h.  
   
 |Champ d'enregistrement de diagnostic|Description|  
 |------------------------------|-----------------|  
@@ -40,10 +40,10 @@ ms.locfileid: "73786473"
   
 |Code de fonction dynamique|Source|  
 |---------------------------|------------|  
-|SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE, instruction|  
+|SQL_DIAG_DFC_SS_ALTER_DATABASE|Instruction ALTER DATABASE|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|CHECKPOINT (instruction)|  
 |SQL_DIAG_DFC_SS_CONDITION|Une erreur est survenue dans les clauses WHERE ou HAVING d'une instruction.|  
-|SQL_DIAG_DFC_SS_CREATE_DATABASE|CREATE DATABASE, instruction|  
+|SQL_DIAG_DFC_SS_CREATE_DATABASE|Instruction CREATE DATABASE|  
 |SQL_DIAG_DFC_SS_CREATE_DEFAULT|CREATE DEFAULT (instruction)|  
 |SQL_DIAG_DFC_SS_CREATE_PROCEDURE|CREATE PROCEDURE (instruction)|  
 |SQL_DIAG_DFC_SS_CREATE_RULE|CREATE RULE (instruction)|  
@@ -75,7 +75,7 @@ ms.locfileid: "73786473"
 |SQL_DIAG_DFC_SS_READTEXT|READTEXT (instruction)|  
 |SQL_DIAG_DFC_SS_RECONFIGURE|RECONFIGURE (instruction)|  
 |SQL_DIAG_DFC_SS_RETURN|Instruction de contrôle de flux RETURN|  
-|SQL_DIAG_DFC_SS_SELECT_INTO|SELECT INTO, instruction|  
+|SQL_DIAG_DFC_SS_SELECT_INTO|Instruction SELECT INTO|  
 |SQL_DIAG_DFC_SS_SET|SET (instruction) (générique, toutes les options)|  
 |SQL_DIAG_DFC_SS_SET_IDENTITY_INSERT|SET IDENTITY_INSERT (instruction)|  
 |SQL_DIAG_DFC_SS_SET_ROW_COUNT|SET ROWCOUNT (instruction)|  
@@ -99,10 +99,10 @@ ms.locfileid: "73786473"
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>SQLGetDiagField et paramètres table  
  SQLGetDiagField peut être utilisé pour récupérer deux champs de diagnostic : SQL_DIAG_SS_TABLE_COLUMN_NUMBER et SQL_DIAG_SS_TABLE_ROW_NUMBER. Ces champs vous aident à déterminer la valeur ayant provoqué l'erreur ou l'avertissement associé à l'enregistrement de diagnostic.  
   
- Pour plus d’informations sur les paramètres table, consultez [ &#40;&#41;ODBC Table-valued Parameters](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Pour plus d’informations sur les paramètres table, consultez [paramètres table &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLGetDiagField, fonction](https://go.microsoft.com/fwlink/?LinkId=59352)   
- [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

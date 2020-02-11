@@ -1,5 +1,5 @@
 ---
-title: BOF, EOF et Bookmark, propriétés-exemple (VC ++) | Microsoft Docs
+title: BOF, EOF et Bookmark, exemple de propriétés (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,16 +17,16 @@ ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b0cc864aa298055796985dd58ec6595961a17841
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920364"
 ---
-# <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF, EOF et Bookmark, propriétés-exemple (VC ++)
-La première fonction dans cet exemple utilise le [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) et [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propriétés pour afficher un message si un utilisateur tente de dépasser le premier ou dernier enregistrement d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Il utilise le [signet](../../../ado/reference/ado-api/bookmark-property-ado.md) propriété pour permettre à l’utilisateur de marquer un enregistrement dans un **Recordset** et y revenir plus tard.  
+# <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF, EOF et Bookmark, exemple de propriétés (VC + +)
+La première fonction de cet exemple utilise les propriétés [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) et [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) pour afficher un message si un utilisateur tente de se déplacer après le premier ou le dernier enregistrement d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md). Elle utilise la propriété [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) pour permettre à l’utilisateur d’indicateur un enregistrement dans un **jeu d’enregistrements** et de revenir ultérieurement.  
   
- La seconde fonction utilise la propriété de signet pour placer le **signet** de tous les enregistrements à partir d’un **Recordset** dans un tableau, puis sur le jeu d’enregistrements à l’aide du tableau de filtres.  
+ La deuxième fonction utilise la propriété Bookmark pour placer le **signet** de chaque autre enregistrement d’un **jeu d’enregistrements** dans un tableau, puis filtre le recordset à l’aide du tableau.  
   
 ## <a name="example"></a>Exemple  
   
@@ -197,7 +197,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 25  
 ```  
   
-## <a name="sample-output"></a>Résultat de l'exemple  
+## <a name="sample-output"></a>Sortie exemple  
   
 ```  
 Authors with 25 percent royalty  

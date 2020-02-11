@@ -1,5 +1,5 @@
 ---
-title: sys.edge_constraint_clauses (Transact-SQL) | Microsoft Docs
+title: sys. edge_constraint_clauses (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/17/2018
 ms.prod: sql
@@ -21,30 +21,30 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 26b347703a632a4147f8dcba369efaa272b4cef9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079352"
 ---
-# <a name="sysedgeconstraintclauses-transact-sql"></a>sys.edge_constraint_clauses (Transact-SQL)
+# <a name="sysedge_constraint_clauses-transact-sql"></a>sys. edge_constraint_clauses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Contient une ligne par la clause d’une contrainte d’arête.
+Contient une ligne par clause d’une contrainte Edge.
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|object_id de la contrainte d’arête.|  
-|**from_object_id**|**Int**|object_id de la table de nœud FROM.|  
-|**to_object_id**|**int**|object_id de la table de nœud de destination.|  
-|**clause_number**|**int**|Index d’entier généré en interne de la clause.|  
+|**object_id**|**int**|object_id de la contrainte Edge.|  
+|**from_object_id**|**int**|object_id de la table à partir du nœud.|  
+|**to_object_id**|**int**|object_id de la table TO node.|  
+|**clause_number**|**int**|Index entier généré en interne de la clause.|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Affichages catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Questions fréquentes (FAQ) sur l’interrogation des catalogues système SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [Questions fréquentes sur l'interrogation des catalogues système de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

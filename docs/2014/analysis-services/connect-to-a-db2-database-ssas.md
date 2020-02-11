@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 50818393a81cf3c6db1b54a0752e6fa098277709
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087382"
 ---
 # <a name="connect-to-a-db2-database-ssas"></a>Connexion à une base de données DB2 (SSAS)
@@ -28,7 +28,7 @@ ms.locfileid: "66087382"
 >  Lors de la sélection d'une base de données dans cette page, les informations d'identification de l'utilisateur spécifiées sont utilisées. Toutefois, l'importation ne réussira pas si l'utilisateur spécifié dans la page Informations d'emprunt d'identité n'a pas de privilèges suffisants pour lire la base de données sélectionnée.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
- **Nom convivial de connexion**  
+ **Nom convivial de la connexion**  
  Tapez un nom unique pour cette connexion à la source de données. Ce champ est obligatoire.  
   
  **Nom du serveur**  
@@ -43,7 +43,7 @@ ms.locfileid: "66087382"
  Spécifiez un mot de passe pour la connexion de base de données.  
   
  **Enregistrer mon mot de passe**  
- Précisez si le mot de passe que vous avez entré dans la zone **Mot de passe** est mémorisé.  
+ Spécifiez si le mot de passe que vous avez entré dans la zone **Mot de passe** est stocké.  
   
  **Nom de la base de données**  
  Sélectionnez une base de données dans la liste.  
@@ -54,8 +54,8 @@ ms.locfileid: "66087382"
  **Schéma par défaut**  
  Spécifiez le nom du schéma par défaut de la base de données sélectionnée.  
   
- **Avancé**  
- Définissez des propriétés de connexion supplémentaires à partir de la boîte de dialogue **Définir les propriétés avancées** .  
+ **Avancée**  
+ Définissez des propriétés de connexion supplémentaires à l’aide de la boîte de dialogue **définir les propriétés avancées** .  
   
  **Tester la connexion**  
  Essayez d'établir une connexion à la source de données à l'aide des paramètres actuels. Un message est affiché pour indiquer si la connexion a abouti.  

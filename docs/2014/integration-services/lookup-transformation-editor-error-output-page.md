@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Transformation de recherche (Page sortie d’erreur) | Microsoft Docs
+title: Éditeur de transformation de recherche (page sortie d’erreur) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12f1a73c1d21986d2089878bfe9d29dd4450f222
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057860"
 ---
 # <a name="lookup-transformation-editor-error-output-page"></a>Éditeur de transformation de recherche (page Sortie d'erreur)
@@ -31,7 +31,7 @@ ms.locfileid: "66057860"
  **Colonne**  
  Non utilisé.  
   
- **Erreur**  
+ **Error**  
  Spécifiez le type d'erreur devant se produire lors de la gestion des lignes sans entrées correspondantes dans le dataset de référence :  
   
 -   ignorer l'échec et diriger les lignes vers une sortie ;  
@@ -42,7 +42,7 @@ ms.locfileid: "66057860"
   
  Cette option n'est pas disponible lorsque vous sélectionnez **Rediriger les lignes vers la sortie sans correspondance** dans la liste **Spécifier comment gérer les lignes sans entrées correspondantes** . Cette liste se trouve dans la page **Général** de la boîte de dialogue **Éditeur de transformation de recherche** .  
   
- **Rubriques connexes :** [Gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
+ **Rubriques connexes :** [gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
   
  **Troncation**  
  Spécifiez ce qui doit se passer lorsqu'une troncation de données a lieu :  
@@ -56,7 +56,7 @@ ms.locfileid: "66057860"
  **Description**  
  Affichez la description de l'opération.  
   
- **Définir cette valeur sur les cellules sélectionnées**  
+ **Définir cette valeur pour les cellules sélectionnées**  
  Indiquez ce qui doit se produire pour toutes les cellules sélectionnées lorsqu'une erreur ou une troncation a lieu :  
   
 -   ignorer l'erreur ;  

@@ -1,5 +1,5 @@
 ---
-title: Propriétés (onglet Général) de la Table de trace | Microsoft Docs
+title: Propriétés de la table de trace (onglet général) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 79976111570e2f9cb153c853567f0f2091f77eb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088738"
 ---
 # <a name="trace-table-properties-general-tab"></a>Propriétés de la table de trace (onglet Général)
@@ -36,7 +36,7 @@ ms.locfileid: "66088738"
  **Type de fournisseur de trace**  
  Affiche le type de serveur qui a fourni la trace.  
   
- **version**  
+ **Version**  
  Affiche la version du serveur qui a fourni la trace.  
   
  **Lignes**  

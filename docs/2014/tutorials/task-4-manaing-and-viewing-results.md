@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8b97b0129a7cc4ffa21b4a82ad0208a2c1890b27
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72313646"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Tâche 4 : Gestion et affichage des résultats
@@ -22,17 +22,17 @@ ms.locfileid: "72313646"
   
 1.  Sélectionnez le domaine de **messagerie du contact** dans la liste des domaines.  
   
-2.  Basculez vers l’onglet **non valide** dans le volet droit. Notez que deux adresses de messagerie manquent de caractère» à la fin. Ces deux e-mails qui ont été jugés non valides par la règle de domaine qui requièrent que toutes les adresses de messagerie se terminent par **\@Adventure-Works.com** (avec’s'). DQS utilise la règle de domaine lors du nettoyage afin de déterminer si une adresse électronique est valide ou non. Cet onglet affiche les valeurs de domaine qui ont été marquées comme non valides dans la base de connaissances, ou celles qui ne respectent pas une règle de domaine. Dans ce cas, ces valeurs ne respectent pas la règle de domaine (validation de l'adresse électronique).  
+2.  Basculez vers l’onglet **non valide** dans le volet droit. Notez que deux adresses de messagerie manquent de caractère» à la fin. Ces deux e-mails qui ont été détectés comme étant non valides par la règle de domaine qui requiert que toutes les adresses de messagerie se terminent par ** \@Adventure-Works.com** (avec’s'). DQS utilise la règle de domaine lors du nettoyage afin de déterminer si une adresse électronique est valide ou non. Cet onglet affiche les valeurs de domaine qui ont été marquées comme non valides dans la base de connaissances, ou celles qui ne respectent pas une règle de domaine. Dans ce cas, ces valeurs ne respectent pas la règle de domaine (validation de l'adresse électronique).  
   
-3.  Dans la colonne **corriger vers** , tapez l’adresse de messagerie appropriée qui se termine par **\@Adventure-Works.com** (avec’s').  
+3.  Dans la colonne **corriger vers** , tapez l’adresse de messagerie appropriée qui se termine par ** \@Adventure-Works.com** (avec’s').  
   
-     ![Corrections des corrections de règle de validation d’adresse](../../2014/tutorials/media/et-managingandviewingresults-01.jpg "de messagerie à partir de la règle de validation d’e-mail")  
+     ![Corrections de la règle de validation du courrier électronique](../../2014/tutorials/media/et-managingandviewingresults-01.jpg "Corrections de la règle de validation du courrier électronique")  
   
 4.  Cliquez sur **approuver** pour que les deux enregistrements approuvent les deux modifications. Lorsque vous approuvez, les enregistrements sont déplacés vers l’onglet **corrigé** . Au lieu d’approuver chaque élément séparément, vous pouvez approuver toutes les modifications à la fois à l’aide du bouton de la barre d’outils **approuver tous les termes** .  
   
 5.  Basculez vers le **nouvel** onglet dans le volet droit. Les valeurs de cet onglet sont les valeurs pour lesquelles DQS ne dispose pas encore de suffisamment d'informations dans la base de connaissances pour déterminer si elles sont correctes. Par conséquent, il ne peut pas modifier ou suggérer des modifications aux valeurs de domaine.  
   
-6.  Passez en revue les valeurs pour confirmer que tous les e-mails se terminent par **\@Adventure-Works.com** et cliquez sur **approuver tous les termes** dans la barre d’outils. Les valeurs approuvées de cet onglet sont déplacées vers l’onglet **correct** .  
+6.  Passez en revue les valeurs pour confirmer que tous les e-mails se terminent par ** \@Adventure-Works.com** et cliquez sur **approuver tous les termes** dans la barre d’outils. Les valeurs approuvées de cet onglet sont déplacées vers l’onglet **correct** .  
   
 7.  Sélectionnez le domaine **Country** dans la liste des domaines.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "72313646"
   
 9. Notez que les **États-Unis** sont corrigés pour **États-Unis** , car il s’agit de synonymes et **États-Unis** est la valeur principale (préférée).  
   
-     ![Corrections basées sur des corrections de synonymes](../../2014/tutorials/media/et-managingandviewingresults-02.jpg "basées sur des synonymes")  
+     ![Corrections basées sur synonymes](../../2014/tutorials/media/et-managingandviewingresults-02.jpg "Corrections basées sur synonymes")  
   
 10. Notez que le bouton **approuver** est déjà sélectionné pour ces valeurs corrigées. Il s'agit du comportement par défaut pour les valeurs corrigées. Vous pouvez refuser une modification et, dans ce cas, la valeur se déplace vers l’onglet **non valide** .  
   
@@ -48,7 +48,7 @@ ms.locfileid: "72313646"
   
 12. Basculez vers l’onglet **corrigé** dans le volet droit.  
   
-     ![Correction]des noms de fournisseurs(../../2014/tutorials/media/et-managingandviewingresults-03.jpg "corrigés")  
+     ![Noms corrigés des fournisseurs](../../2014/tutorials/media/et-managingandviewingresults-03.jpg "Noms corrigés des fournisseurs")  
   
     1.  Notez qu' **un. Datum Corp.** est corrigé en **. Datum Corporation** et la **raison** est définie sur la **relation à base de termes. A. Datum Corporation** est une valeur de domaine connue pour DQS, car elle a été détectée pendant le processus de découverte des connaissances. Par conséquent, DQS est **assuré de 100%** de cette correction.  
   
@@ -72,9 +72,9 @@ ms.locfileid: "72313646"
   
 20. Basculez vers l’onglet **corrigé** .  
   
-21. Notez que l' **État** de l’enregistrement dont la **ville** est **Los Angeles** est défini sur **ca** maintenant. Notez que, dans le champ **raison** , la **règle est corrigée par la règle « régional-State Rule »** .  
+21. Notez que l' **État** de l’enregistrement dont la **ville** est **Los Angeles** est défini sur **ca** maintenant. Notez que, dans le champ **raison** , la **règle est corrigée par la règle « régional-State Rule »**.  
   
-     Correction de la règle d’état de la ![ville correction](../../2014/tutorials/media/et-managingandviewingresults-04.jpg "de la ville")  
+     ![Correction de la règle Ville-Département](../../2014/tutorials/media/et-managingandviewingresults-04.jpg "Correction de la règle Ville-Département")  
   
 22. Notez que la case d’option **approuver** est déjà sélectionnée pour cet élément dans la liste. Il s’agit du comportement par défaut des éléments de l’onglet **corrigé** .  
   
@@ -82,11 +82,11 @@ ms.locfileid: "72313646"
   
 24. **Cliquez sur approuver tous les termes** dans le bouton de la barre d’outils, puis cliquez sur **OK** dans la boîte de message de **confirmation** .  
   
-     ![Bouton approuver tous les termes de la barre d’outils](../../2014/tutorials/media/et-managingandviewingresults-05.jpg "approuver tous les termes barre d’outils")  
+     ![Bouton à la barre d'outils Approuver tous les termes](../../2014/tutorials/media/et-managingandviewingresults-05.jpg "Bouton à la barre d'outils Approuver tous les termes")  
   
 25. Cliquez sur **suivant** pour passer à la page **Exporter** .  
   
-## <a name="next-step"></a>Étape suivante  
+## <a name="next-step"></a>étape suivante  
  [Tâche 5 : Exportation des résultats du nettoyage vers un fichier Excel](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
   
   

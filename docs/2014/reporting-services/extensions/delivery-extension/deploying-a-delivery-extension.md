@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b95fbb99affb91743d5b922f748cae5554736f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63164413"
 ---
 # <a name="deploying-a-delivery-extension"></a>Déploiement d'une extension de remise
@@ -26,14 +26,14 @@ ms.locfileid: "63164413"
   
  Si une extension de remise est remplacée ou mise à niveau, tous les abonnements qui référencent cette extension restent valides.  
   
- Après avoir écrit et compilé votre extension de remise [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] dans une bibliothèque [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], vous devez la copier dans le répertoire approprié et ajouter une entrée au fichier de configuration [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] approprié afin que le serveur de rapports puisse la trouver.  
+ Une fois que vous avez écrit et [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] compilé votre extension de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] remise dans une bibliothèque, vous devez copier l’extension dans le répertoire approprié et ajouter une entrée [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] au fichier de configuration approprié afin que le serveur de rapports puisse la localiser.  
   
 ## <a name="configuration-file-extension-element"></a>Élément Extension du fichier de configuration  
  Les extensions de remise que vous déployez sur le serveur de rapports doivent être entrées sous la forme d'éléments `Extension` dans le fichier de configuration. Le fichier de configuration du serveur de rapports est RSReportServer.config.  
   
  Le tableau suivant décrit les attributs de l'élément `Extension` pour les extensions de remise.  
   
-|Attribute|Description|  
+|Attribut|Description|  
 |---------------|-----------------|  
 |`Name`|Nom unique de l'extension (par exemple, « Messagerie électronique du serveur de rapports » pour l'extension de remise par messagerie ou « Partage de fichiers du serveur de rapports » pour l'extension de remise par partage de fichiers). La longueur maximale de l'attribut `Name` s'élève à 255 caractères. Le nom doit être unique au sein de toutes les entrées de l'élément `Extension` d'un fichier de configuration. Si un nom existe en double, le serveur de rapports retourne une erreur.|  
 |`Type`|Liste séparée par des virgules qui inclut l'espace de noms complet, ainsi que le nom de l'assembly.|  
@@ -46,12 +46,12 @@ ms.locfileid: "63164413"
   
 #### <a name="to-deploy-a-deliver-extension-assembly-to-a-report-server"></a>Pour déployer un assembly d'extension de remise sur un serveur de rapports  
   
-1.  Copiez l'assembly depuis son emplacement vers le répertoire bin du serveur de rapports sur lequel l'extension de remise doit être utilisée. L’emplacement par défaut du répertoire bin de serveur de rapports est %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > \Reporting.  
+1.  Copiez l'assembly depuis son emplacement vers le répertoire bin du serveur de rapports sur lequel l'extension de remise doit être utilisée. L’emplacement par défaut du répertoire bin du serveur de rapports est%ProgramFiles%\Microsoft SQL Server \ MSRS10_50. \<Nom_instance> \Reporting Services\ReportServer\Bin.  
   
     > [!IMPORTANT]  
     >  Si vous essayez de remplacer un assembly d'extension de remise existant, vous devez commencer par arrêter le service Report Server avant de copier l'assembly mis à jour. Redémarrez le service une fois l'assembly copié.  
   
-2.  Une fois le fichier correspondant à l'assembly copié, ouvrez le fichier RSReportServer.config. Le fichier RSReportServer.config se trouve dans %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > \Reporting Services\ReportServer. Vous devez créer une entrée pour le fichier d'assembly d'extension de remise dans le fichier de configuration. Vous pouvez ouvrir le fichier de configuration à l’aide de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou à l’aide d’un simple éditeur de texte, tel que le Bloc-notes.  
+2.  Une fois le fichier correspondant à l'assembly copié, ouvrez le fichier RSReportServer.config. Le fichier RSReportServer. config se trouve dans le répertoire%ProgramFiles%\Microsoft SQL Server \ MSRS10_50. \<Nom_instance> répertoire \Reporting Services\ReportServer. Vous devez créer une entrée pour le fichier d'assembly d'extension de remise dans le fichier de configuration. Vous pouvez ouvrir le fichier de configuration à l’aide de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou à l’aide d’un simple éditeur de texte tel que le Bloc-notes.  
   
 3.  Localisez l'élément `Delivery` dans le fichier RSReportServer.config. Une entrée correspondant à votre nouvelle extension de remise doit être créée à l'emplacement suivant :  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63164413"
   
      La valeur définie pour `Name` correspond au nom unique de l'extension de remise. La valeur définie pour `Type` est une liste séparée par des virgules comportant une entrée pour l'espace de noms complet de la classe qui implémente l'interface <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension>, suivie du nom de votre assembly (sans l'extension de fichier .dll). Par défaut, les extensions de remise sont visibles. Pour masquer ces extensions des interfaces utilisateur, telles que le Gestionnaires de rapports, et ne plus les afficher, ajoutez un attribut `Visible` à l'élément `Extension`, puis attribuez à cet élément la valeur `false`.  
   
-5.  Enfin, ajoutez une groupe de codes pour votre assembly personnalisé qui octroie l'autorisation `FullTrust` à votre extension de remise. Pour cela, en ajoutant le groupe de codes au fichier rssrvpolicy.config qui se trouve par défaut dans %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > \Reporting. Ce groupe de codes peut se présenter comme suit :  
+5.  Enfin, ajoutez une groupe de codes pour votre assembly personnalisé qui octroie l'autorisation `FullTrust` à votre extension de remise. Pour ce faire, ajoutez le groupe de codes au fichier fichier rssrvpolicy. config situé par défaut dans%ProgramFiles%\Microsoft SQL Server \ MSRS10_50. \<Nom_instance> \Reporting Services\ReportServer. Ce groupe de codes peut se présenter comme suit :  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -93,9 +93,9 @@ ms.locfileid: "63164413"
   
 #### <a name="to-deploy-a-deliver-extension-assembly-to-report-manager"></a>Pour déployer un assembly d'extension de remise dans le Gestionnaire de rapports  
   
-1.  Copiez l'assembly depuis son emplacement vers le répertoire bin du Gestionnaire de rapports. L’emplacement par défaut du répertoire bin du Gestionnaire de rapports est %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<Nom_instance > \Reporting Services\ReportManager\bin.  
+1.  Copiez l'assembly depuis son emplacement vers le répertoire bin du Gestionnaire de rapports. L’emplacement par défaut du répertoire bin Gestionnaire de rapports est%ProgramFiles%\Microsoft SQL Server \ MSRS10_50. \<Nom_instance> \Reporting Services\ReportManager\bin.  
   
-2.  Une fois le fichier correspondant à l'assembly copié, ouvrez le fichier RSReportServer.config. Le fichier RSReportServer.config se trouve dans %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > \Reporting Services\ReportServer. Vous devez créer une entrée pour le fichier d'assembly d'extension de remise dans le fichier de configuration. Vous pouvez ouvrir le fichier de configuration avec Visual Studio .NET ou un simple éditeur de texte, tel que le bloc-notes.  
+2.  Une fois le fichier correspondant à l'assembly copié, ouvrez le fichier RSReportServer.config. Le fichier RSReportServer. config se trouve dans le répertoire%ProgramFiles%\Microsoft SQL Server \ MSRS10_50. \<Nom_instance> répertoire \Reporting Services\ReportServer. Vous devez créer une entrée pour le fichier d'assembly d'extension de remise dans le fichier de configuration. Vous pouvez ouvrir le fichier de configuration dans Visual Studio .NET ou simplement à l'aide d'un éditeur de texte, tel que le Bloc-notes.  
   
 3.  Localisez l'élément `DeliveryUI` dans le fichier RSReportServer.config. Une entrée correspondant à votre nouvelle extension de remise doit être créée à l'emplacement suivant :  
   
@@ -118,7 +118,7 @@ ms.locfileid: "63164413"
     > [!IMPORTANT]  
     >  La valeur de l'attribut `Name` doit être identique pour les entrées du fichier de configuration du serveur de rapports et du Gestionnaire de rapports. Si ces valeurs ne sont pas identiques, la configuration de votre serveur n'est pas valide.  
   
-     Enfin, ajoutez une groupe de codes pour votre assembly personnalisé qui octroie l'autorisation `FullTrust` à votre extension de remise. Pour cela, en ajoutant le groupe de codes au fichier RSmgrpolicy.config situé par défaut dans C:\Program Files\Microsoft SQL Server\MSRS10_50. \<Nom_instance > \Reporting Services\ReportManager. Ce groupe de codes peut se présenter comme suit :  
+     Enfin, ajoutez une groupe de codes pour votre assembly personnalisé qui octroie l'autorisation `FullTrust` à votre extension de remise. Pour ce faire, ajoutez le groupe de codes au fichier RSmgrpolicy. config situé par défaut dans C:\Program Files\Microsoft SQL Server \ MSRS10_50. \<Nom_instance> \Reporting Services\ReportManager. Ce groupe de codes peut se présenter comme suit :  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -133,10 +133,10 @@ ms.locfileid: "63164413"
     </CodeGroup>  
     ```  
   
-     L'appartenance URL n'est qu'une des nombreuses conditions d'appartenance que vous pouvez sélectionner pour l'extension de remise. Pour plus d’informations sur la sécurité d’accès du code dans [!INCLUDE[ssRS](../../../includes/ssrs.md)], consultez [Développement sécurisé &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md).  
+     L'appartenance URL n'est qu'une des nombreuses conditions d'appartenance que vous pouvez sélectionner pour l'extension de remise. Pour plus d’informations sur la sécurité d' [!INCLUDE[ssRS](../../../includes/ssrs.md)]accès du code dans, consultez [&#40;de développement sécurisé Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)  
   
 ## <a name="verifying-the-deployment"></a>Vérification du déploiement  
- Vous pouvez vérifier que votre extension de remise a été correctement déployée sur le serveur de rapports en utilisant la méthode <xref:ReportService2010.ReportingService2010.ListExtensions%2A> du service Web. Vous pouvez également ouvrir le Gestionnaire de rapports et vérifier que votre extension est effectivement répertoriée dans la liste des extensions de remise disponibles pour un abonnement. Pour plus d’informations sur le Gestionnaire de rapports et abonnements, consultez [abonnements et remises &#40;Reporting Services&#41;](../../subscriptions/subscriptions-and-delivery-reporting-services.md).  
+ Vous pouvez vérifier que votre extension de remise a été correctement déployée sur le serveur de rapports en utilisant la méthode <xref:ReportService2010.ReportingService2010.ListExtensions%2A> du service Web. Vous pouvez également ouvrir le Gestionnaire de rapports et vérifier que votre extension est effectivement répertoriée dans la liste des extensions de remise disponibles pour un abonnement. Pour plus d’informations sur les Gestionnaire de rapports et les abonnements, consultez [abonnements et remise &#40;Reporting Services&#41;](../../subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Implémentation d’une extension de remise](implementing-a-delivery-extension.md)   

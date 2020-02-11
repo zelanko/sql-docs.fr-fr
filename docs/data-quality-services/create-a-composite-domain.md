@@ -13,10 +13,10 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 89c71bd3864fcaa682d3587a54fc2b32c26e5659
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255594"
 ---
 # <a name="create-a-composite-domain"></a>Créer un domaine composite
@@ -29,14 +29,14 @@ ms.locfileid: "75255594"
   
  Après la création d'un domaine composite, vous pouvez modifier les propriétés du domaine composite, joindre un service de données de référence au domaine, créer des règles inter-domaines ou créer des relations de valeur. Pour ce faire, sélectionnez le domaine composite dans la liste **Domaine** de la page **Gestion de l'arborescence du domaine** , puis sélectionnez l'onglet approprié.  
   
-##  <a name="BeforeYouBegin"></a>Avant de commencer  
+##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Prerequisites"></a>Conditions préalables  
  Pour créer un domaine composite, vous devez avoir créé et ouvert une base de connaissances, et vous devez avoir créé au moins deux domaines uniques à ajouter au domaine composite.  
   
-###  <a name="Security"></a>Caution  
+###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a>Autorisations  
+####  <a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour créer un domaine composite.  
   
 ##  <a name="ParsingKnowledgeDiscoveryActivity"></a>Créer un domaine composite dans l’activité de découverte des connaissances  

@@ -18,10 +18,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e78e31157f62346baf12d58c146ed99aab205408
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482654"
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>Réactiver un membre ou une collection (Master Data Services)
@@ -39,7 +39,7 @@ ms.locfileid: "65482654"
   
  Lorsqu'une collection ou un membre est réactivé, toutes les transactions précédentes sont restaurées.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], vous devez avoir l’autorisation d’accéder à la zone fonctionnelle **Gestion des versions** .  
@@ -63,7 +63,7 @@ ms.locfileid: "65482654"
 7.  Dans la boîte de dialogue de confirmation, cliquez sur **OK**. Une nouvelle transaction est ajoutée, affichant **Activé** dans la colonne **Nouvelle valeur** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Désactiver ou supprimer des membres à l’aide du processus de mise en lots &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
+ [Désactivez ou supprimez des membres à l’aide du processus de site &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
  [Supprimer un membre ou une collection &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
  [Membres &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [Collections &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  

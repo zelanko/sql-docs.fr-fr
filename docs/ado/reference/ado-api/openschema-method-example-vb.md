@@ -1,5 +1,5 @@
 ---
-title: La méthode OpenSchema, exemple (VB) | Microsoft Docs
+title: OpenSchema, exemple de méthode (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a16979e7993fd1ac86679d054508b837a0a08c68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931891"
 ---
 # <a name="openschema-method-example-vb"></a>OpenSchema, exemple de méthode (VB)
-Cet exemple utilise le [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) méthode pour afficher le nom et le type de chaque table dans le ***Pubs*** base de données.  
+Cet exemple utilise la méthode [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) pour afficher le nom et le type de chaque table dans la base de données ***pubs*** .  
   
 ```  
 'BeginOpenSchemaVB  
@@ -78,7 +78,7 @@ End Sub
 'EndOpenSchemaVB  
 ```  
   
- Cet exemple spécifie une contrainte de requête TABLE_TYPE dans le **OpenSchema** méthode ***critères*** argument. Par conséquent, seules les informations de schéma pour les vues spécifié dans le ***Pubs*** base de données sont retournées. L’exemple affiche ensuite le nom et le type de chaque table (s).  
+ Cet exemple spécifie un TABLE_TYPE contrainte de requête dans l’argument de ***critère*** de méthode **OpenSchema** . Par conséquent, seules les informations de schéma pour les vues spécifiées dans la base de données ***pubs*** sont retournées. L’exemple affiche ensuite le (s) nom (s) et le (s) type (s) de chaque table (s).  
   
 ```  
 Attribute VB_Name = "OpenSchema"  

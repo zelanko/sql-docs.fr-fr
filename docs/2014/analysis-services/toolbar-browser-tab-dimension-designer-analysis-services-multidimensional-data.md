@@ -1,5 +1,5 @@
 ---
-title: Barre d’outils (onglet navigateur, Concepteur de dimensions) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Barre d’outils (onglet navigateur, concepteur de dimensions) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f37c34b1b4857ca561b656a773c2cfa71ffb19c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066154"
 ---
 # <a name="toolbar-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barre d'outils (onglet Navigateur, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Barre d’outils** pour effectuer les opérations courantes sous l’onglet **Navigateur** du **Concepteur de dimensions**.  
   
 ## <a name="options"></a>Options  
- **Traiter**  
+ **Procédure**  
  Cliquez pour ouvrir la boîte de dialogue **Traiter** et traiter la dimension sélectionnée.  
   
- **Se reconnecter**  
+ **Reconnexion**  
  Cliquez pour reconnecter l’onglet **Navigateur** à l’instance et à la base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qui contient la dimension si la session de l’onglet **Navigateur** est déconnectée en raison d’une perte de connexion ou de l’expiration du délai d’attente.  
   
  **Actualiser**  
@@ -38,7 +38,7 @@ ms.locfileid: "66066154"
  **Filtrer les membres**  
  Cliquez pour afficher la boîte de dialogue **Filtrer les membres** et pour filtrer les membres affichés dans **Niveau et membres** pour la hiérarchie sélectionnée.  
   
- **Écriture différée**  
+ **Transcription**  
  Configure le volet **Niveau et membres** en mode d’écriture différée de la dimension.  
   
  **Réduire le retrait**  
