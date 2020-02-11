@@ -1,5 +1,5 @@
 ---
-title: Concepts de programmation Common Language Runtime (CLR) Integration | Microsoft Docs
+title: Concepts de programmation de l’intégration du Common Language Runtime (CLR) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ffd706cdb17bd73281ee4a62842362b09c6311ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922553"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>Concepts de programmation pour l'intégration du CLR
@@ -29,42 +29,42 @@ ms.locfileid: "62922553"
  L'espace de noms Microsoft.SqlServer.Server inclut les fonctionnalités principales relatives à la programmation CLR dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Toutefois, l'espace de noms Microsoft.SqlServer.Server est documenté dans le Kit de développement logiciel (SDK) du .NET Framework. Cette documentation n'est pas incluse dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  Par défaut, le .NET Framework est installé avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], alors que le Kit de développement .NET Framework SDK ne l'est pas. Si le Kit de développement .NET Framework SDK n'est pas installé sur votre ordinateur et inclus dans l'ensemble de la documentation en ligne, les liens vers son contenu dans cette section ne fonctionnent pas. Installez le Kit de développement .NET Framework SDK. Une fois installé, ajoutez-le à la collection de la documentation en ligne et de la table des matières en suivant les instructions dans [l’installation de .NET Framework SDK](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx).  
+>  Par défaut, le .NET Framework est installé avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], alors que le Kit de développement .NET Framework SDK ne l'est pas. Si le Kit de développement .NET Framework SDK n'est pas installé sur votre ordinateur et inclus dans l'ensemble de la documentation en ligne, les liens vers son contenu dans cette section ne fonctionnent pas. Installez le Kit de développement .NET Framework SDK. Une fois installé, ajoutez le kit de développement logiciel (SDK) au regroupement et à la table des matières de la documentation en suivant les instructions fournies dans [installation du kit de développement logiciel (SDK) .NET Framework](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx).  
   
  Le tableau suivant décrit les rubriques de cette section.  
   
- [Common Language Runtime &#40;CLR&#41; présentation de l’intégration](common-language-runtime-integration-overview.md)  
+ [Vue d’ensemble de l’intégration du Common Language Runtime &#40;CLR&#41;](common-language-runtime-integration-overview.md)  
  Fournit une brève vue d'ensemble du CLR et explique comment et pourquoi cette technologie a été utilisée dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Décrit les avantages liés à l'utilisation du CLR pour créer des objets de base de données.  
   
- [Assemblys &#40;moteur de base de données&#41;](assemblies-database-engine.md)  
+ [Assemblys &#40;Moteur de base de données&#41;](assemblies-database-engine.md)  
  Décrit l'utilisation d'assemblys dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] afin de déployer des fonctions, des procédures stockées, des déclencheurs, des agrégats définis par l'utilisateur et des types définis par l'utilisateur écrits dans l'un des langages de code managé hébergés par le CLR (Common Language Runtime) [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework, et non écrits en [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- [Création d’objets de base de données avec Common Language Runtime &#40;CLR&#41; intégration](database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
+ [Génération d’objets de base de données avec Common Language Runtime &#40;l’intégration du CLR&#41;](database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
  Décrit les types d'objets qui peuvent être créés à l'aide du CLR et examine les spécifications requises pour générer des objets de base de données CLR.  
   
  [Accès aux données à partir d'objets de base de données CLR](data-access/data-access-from-clr-database-objects.md)  
  Explique comment une routine CLR peut accéder aux données stockées dans une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Sécurité de l’intégration du CLR](security/clr-integration-security.md)  
+ [Sécurité de l'intégration du CLR](security/clr-integration-security.md)  
  Décrit le modèle de sécurité de l'intégration du CLR.  
   
- [Débogage d’objets de base de données CLR](debugging-clr-database-objects.md)  
+ [Débogage d'objets de base de données CLR](debugging-clr-database-objects.md)  
  Décrit les limitations et les exigences relatives au débogage des objets de base de données CLR.  
   
- [Déploiement d’objets de base de données CLR](deploying-clr-database-objects.md)  
+ [Déploiement d'objets de base de données CLR](deploying-clr-database-objects.md)  
  Décrit le déploiement des assemblys sur les serveurs de production.  
   
- [Gestion des assemblys d’intégration du CLR](assemblies/managing-clr-integration-assemblies.md)  
+ [Gestion des assemblys d'intégration du CLR](assemblies/managing-clr-integration-assemblies.md)  
  Explique comment créer et supprimer des assemblys d'intégration du CLR.  
   
  [Surveillance et dépannage des objets de base de données managés](monitoring-and-troubleshooting-managed-database-objects.md)  
  Fournit des informations sur les outils à l'aide desquels vous pouvez surveiller et dépanner les objets de base de données et les assemblys managés s'exécutant dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Scénarios et exemples d’utilisation pour l’intégration du CLR &#40;Common Language Runtime&#41;](../../database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [Scénarios d’utilisation et exemples pour le Common Language Runtime &#40;l’intégration du CLR&#41;](../../database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
  Décrit des scénarios d'usage et des exemples de code à l'aide d'objets CLR.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Assemblys &#40;moteur de base de données&#41;](assemblies-database-engine.md)   
- [Installation du Kit de développement .NET Framework SDK](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
+ [Assemblys &#40;Moteur de base de données&#41;](assemblies-database-engine.md)   
+ [Installation du SDK .NET Framework](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
   
   

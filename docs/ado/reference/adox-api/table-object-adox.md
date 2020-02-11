@@ -16,57 +16,57 @@ ms.assetid: a6d74000-0828-49ba-850a-63da865f8802
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 10f3add3cb243d54643c3294104ec2546e7737d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965168"
 ---
 # <a name="table-object-adox"></a>Table, objet (ADOX)
-Représente une table de base de données, y compris les colonnes, les index et les clés.  
+Représente une table de base de données, notamment des colonnes, des index et des clés.  
   
 ## <a name="remarks"></a>Notes  
- Le code suivant crée un nouveau **Table**:  
+ Le code suivant crée une nouvelle **table**:  
   
 ```  
 Dim obj As New Table  
 ```  
   
- Avec les propriétés et les collections d’un **Table** de l’objet, vous pouvez :  
+ Avec les propriétés et les collections d’un objet **table** , vous pouvez :  
   
--   Identifiez la table avec la [nom de propriété (ADOX)](../../../ado/reference/adox-api/name-property-adox.md) propriété.  
+-   Identifiez la table à l’aide de la propriété nom de la [propriété (ADOX)](../../../ado/reference/adox-api/name-property-adox.md) .  
   
--   Déterminer le type de table avec la [Type, propriété (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md) propriété.  
+-   Déterminez le type de table avec la propriété [type (table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md) .  
   
--   Accéder aux colonnes de base de données de la table contenant la [colonnes Collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md) collection.  
+-   Accédez aux colonnes de base de données de la table à l’aide de la collection [Columns collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md) .  
   
--   Accéder à l’index de la table contenant la [index de Collection (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md).  
+-   Accédez aux index de la table à l’aide de la [collection d’index (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md).  
   
--   Accéder aux clés de la table contenant la [clés de Collection (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md).  
+-   Accédez aux clés de la table à l’aide de la [collection Keys (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md).  
   
--   Spécifier le catalogue auquel appartient la table avec la [ParentCatalog propriété (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md) propriété.  
+-   Spécifiez le catalogue qui possède la table avec la propriété [ParentCatalog Property (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md) .  
   
--   Retourner des informations de date avec la [DateCreated propriété (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md) et [DateModified propriété (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md) propriétés.  
+-   Retournez les informations de date avec les propriétés [DateCreated Property (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md) et [DATEMODIFIED Property (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md) .  
   
--   Accéder aux propriétés spécifiques au fournisseur table avec la [propriétés de Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) collection.  
+-   Accédez aux propriétés de table spécifiques au fournisseur à l’aide de la collection de [Collections Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) .  
   
 > [!NOTE]
->  Votre fournisseur de données, n’acceptent pas toutes les propriétés de **Table** objets. Une erreur se produit si vous avez défini une valeur pour une propriété qui le fournisseur ne prend pas en charge. Pour les nouveaux **Table** objets, l’erreur se produit lorsque l’objet est ajouté à la collection. Pour les objets existants, l’erreur se produit lors de la définition de la propriété.  
+>  Votre fournisseur de données peut ne pas prendre en charge toutes les propriétés des objets de **table** . Une erreur se produit si vous avez défini une valeur pour une propriété que le fournisseur ne prend pas en charge. Pour les nouveaux objets de **table** , l’erreur se produit lorsque l’objet est ajouté à la collection. Pour les objets existants, l’erreur se produit lors de la définition de la propriété.  
 >   
->  Lors de la création **Table** objets, l’existence d’une valeur par défaut appropriée pour une propriété facultative ne garantit pas que votre fournisseur prend en charge la propriété. Pour plus d’informations sur les propriétés de votre fournisseur prend en charge, consultez la documentation du fournisseur.  
+>  Lors de la création d’objets **table** , l’existence d’une valeur par défaut appropriée pour une propriété facultative ne garantit pas que votre fournisseur prenne en charge la propriété. Pour plus d’informations sur les propriétés prises en charge par votre fournisseur, consultez la documentation de votre fournisseur.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient la rubrique suivante.  
   
 -   [Propriétés, méthodes et événements de l’objet Table](../../../ado/reference/adox-api/table-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemple de propriété ActiveConnection de catalogue (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
- [Tables et colonnes ajouter des méthodes, exemple de nom de propriété (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Méthode Close de connexion, exemple de propriété de Type de Table (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Keys Append, méthode, Type de clé, RelatedColumn, RelatedTable et UpdateRule, exemple de propriétés (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [ParentCatalog, propriété-Exemple (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [Columns, Collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Indexes, Collection (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)   
- [Keys, Collection (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)   
- [Collection de propriétés (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
+ [Exemple de propriété ActiveConnection de Catalog (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
+ [Columns et tables Append, méthodes, Name, exemple de propriété (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Connection Close, méthode, table type, exemple de propriété (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
+ [Méthodes Append des clés, type de clé, RelatedColumn, RelatedTable et UpdateRule, exemple de propriétés (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [ParentCatalog, exemple de propriété (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
+ [Columns, collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [Indexes, collection (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)   
+ [Keys, collection (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)   
+ [Properties, collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Tables, collection (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)

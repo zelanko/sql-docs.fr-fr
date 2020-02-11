@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f2c16e66c03eee8c5e1616fdaa0f0d1b154b85e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63143582"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Profilage des performances du pilote ODBC
@@ -41,7 +41,7 @@ ms.locfileid: "63143582"
   
 -   connexion à une source de données qui spécifie l'enregistrement ;  
   
--   Appel [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) pour définir des attributs spécifiques au pilote qui contrôlent le profilage.  
+-   Appel de [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) pour définir des attributs spécifiques au pilote qui contrôlent le profilage.  
   
  Chaque processus d'application obtient sa propre copie du pilote ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ; par ailleurs, le profilage est global pour la combinaison d'une copie du pilote et d'un processus d'application. Lorsque le profilage est activé dans l'application, il enregistre les informations relatives à toutes les connexions actives dans le pilote à partir de cette application. Même les connexions qui n'ont pas demandé spécifiquement de profilage sont incluses.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "63143582"
   
  Si une application démarre le profilage dans un fichier journal et si une seconde application essaie de démarrer le profilage dans le même fichier journal, la seconde application n'est pas en mesure d'enregistrer les données de profilage. Si la seconde application démarre le profilage une fois que la première application a déchargé son pilote, la seconde application remplace le fichier journal de la première application.  
   
- Si une application se connecte à une source de données qui a activé le profilage, le pilote retourne SQL_ERROR si l’application appelle **SQLSetConnectOption** pour démarrer l’enregistrement. Un appel à **SQLGetDiagRec** puis retourne les informations suivantes :  
+ Si une application se connecte à une source de données pour laquelle le profilage est activé, le pilote retourne SQL_ERROR si l’application appelle **SQLSetConnectOption** pour démarrer la journalisation. Un appel à **SQLGetDiagRec** retourne alors ce qui suit :  
   
 ```  
 SQLState: 01000, pfNative = 0  
@@ -68,7 +68,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   Réseau  
   
--   Time  
+-   Temps  
   
  Dans le tableau suivant, les descriptions des champs de la structure de données SQLPERF s'appliquent également aux statistiques enregistrées dans le fichier journal de performance.  
   
@@ -82,9 +82,9 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|Nombre d'instructions SELECT traitées après SQL_PERF_START.|  
 |SQLSelectRows|Nombre de lignes sélectionnées après SQL_PERF_START.|  
 |Transactions|Nombre de transactions utilisateur après SQL_PERF_START, y compris les restaurations. Lorsqu'une application ODBC s'exécute avec SQL_AUTOCOMMIT_ON, chaque commande est considérée comme une transaction.|  
-|SQLPrepares|Nombre de [SQLPrepare, fonction](https://go.microsoft.com/fwlink/?LinkId=59360) appels après SQL_PERF_START.|  
-|ExecDirects|Nombre de **SQLExecDirect** appels après SQL_PERF_START.|  
-|SQLExecutes|Nombre de **SQLExecute** appels après SQL_PERF_START.|  
+|SQLPrepares|Nombre d’appels de [fonction SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) après SQL_PERF_START.|  
+|ExecDirects|Nombre d’appels **SQLExecDirect** après SQL_PERF_START.|  
+|SQLExecutes|Nombre d’appels **SQLExecute** après SQL_PERF_START.|  
 |CursorOpens|Nombre de fois où le pilote a ouvert un curseur côté serveur après SQL_PERF_START.|  
 |CursorSize|Nombre de lignes dans les jeux de résultats ouverts par les curseurs après SQL_PERF_START.|  
 |CursorUsed|Nombre de lignes réellement récupérées par le pilote à partir des curseurs après SQL_PERF_START.|  
@@ -97,13 +97,13 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |CurrentStmtCount|Nombre de descripteurs d'instruction ouverts actuellement sur toutes les connexions ouvertes dans le pilote.|  
 |MaxOpenStmt|Nombre maximal de descripteurs d'instruction ouverts simultanément après SQL_PERF_START.|  
 |SumOpenStmt|Nombre de descripteurs d'instruction ouverts après SQL_PERF_START.|  
-|**Statistiques de connexion :**||  
+|**Statistiques relatives à la connexion :**||  
 |CurrentConnectionCount|Nombre actuel de handles de connexion actifs ouverts par l'application sur le serveur.|  
 |MaxConnectionsOpened|Nombre maximal de handles de connexion simultanés ouverts après SQL_PERF_START.|  
 |SumConnectionsOpened|Somme correspondant au nombre de handles de connexion ouverts après SQL_PERF_START.|  
 |SumConnectionTime|Somme correspondant à la durée d'ouverture de toutes les connexions après SQL_PERF_START. Par exemple, si une application a ouvert 10 connexions et a conservé chaque connexion pendant 5 secondes, SumConnectionTime est égal à 50 secondes.|  
 |AvgTimeOpened|Est égal à SumConnectionsOpened/ SumConnectionTime.|  
-|**Statistiques de réseau :**||  
+|**Statistiques relatives au réseau :**||  
 |ServerRndTrips|Nombre de fois où le pilote a envoyé des commandes au serveur et a obtenu une réponse.|  
 |BuffersSent|Nombre de paquets TDS (Tabular Data Stream) envoyés à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par le pilote après SQL_PERF_START. Les commandes de taille importante peuvent nécessiter plusieurs mémoires tampons ; par conséquent, si une commande de taille importante est envoyée au serveur et si elle occupe six paquets, ServerRndTrips est incrémenté d'une unité et BuffersSent de six unités.|  
 |BuffersRec|Nombre de paquets TDS reçus par le pilote à partir de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] une fois que l'application a commencé à utiliser le pilote.|  
@@ -118,7 +118,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |msNetworkServerTime|Durée cumulative d'attente des réponses du serveur par le pilote.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Native Client &#40;ODBC&#41;](sql-server-native-client-odbc.md)   
- [Rubriques Comment de performances de pilote ODBC de profilage &#40;ODBC&#41;](../../native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [SQL Server Native Client &#40;&#41;ODBC](sql-server-native-client-odbc.md)   
+ [Rubriques de procédures relatives au profilage des performances du pilote ODBC &#40;ODBC&#41;](../../native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

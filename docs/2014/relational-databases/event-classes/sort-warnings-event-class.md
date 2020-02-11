@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 637d06160afba1fc1f93bea0da3aae0a09f954ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63050935"
 ---
-# <a name="sort-warnings-event-class"></a>Sort Warnings, classe d'événements
+# <a name="sort-warnings-event-class"></a>Sort Warnings (classe d'événements)
   La classe d'événements Sort Warnings indique que les opérations de tri ne tiennent pas dans la mémoire. Ceci ne couvre pas les opérations de tri entraînant la création d'index, mais uniquement les opérations de tri effectuées dans une requête (comme une clause ORDER BY utilisée dans une instruction SELECT).  
   
  Si une requête impliquant une opération de tri produit une classe d'événements Sort Warnings avec la valeur 2 dans la colonne de données EventSubClass, les performances de la requête peuvent être affectées, parce que le tri des données requiert plusieurs passes. Examinez la requête de plus près pour déterminer si l'opération de tri peut être éliminée.  
@@ -32,8 +32,8 @@ ms.locfileid: "63050935"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette colonne est remplie avec les valeurs passées par l'application plutôt que par le nom affiché du programme.|10|Oui|  
 |ClientProcessID|`int`|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  
-|DatabaseID|`int`|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
-|DatabaseName|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
+|DatabaseID|`int`|ID de la base de données spécifiée par l’instruction USE *Database* ou la base de données par défaut si aucune instruction USE *Database* n’a été émise pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
+|nom_base_de_données|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |EventClass|`int`|Type d’événement = 69.|27|Non|  
 |EventSequence|`int`|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |EventSubClass|`int`|Type de sous-classe d'événements.<br /><br /> 1 = Passe unique. Lorsque la table de tri a été écrite sur le disque, une seule passe supplémentaire sur les données à trier était nécessaire pour obtenir un résultat trié.<br /><br /> 2 = Plusieurs passes. Lorsque la table de tri a été écrite sur le disque, plusieurs passes sur les données étaient nécessaires pour obtenir le résultat trié.|21|Oui|  

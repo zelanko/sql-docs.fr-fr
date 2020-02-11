@@ -1,5 +1,5 @@
 ---
-title: Sys.database_mirroring_witnesses (Transact-SQL) | Microsoft Docs
+title: sys. database_mirroring_witnesses (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,18 +22,18 @@ ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 10fbd3ac410ee5b6944ffe7b32285008f8b11776
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68033082"
 ---
-# <a name="database-mirroring-witness-catalog-views---sysdatabasemirroringwitnesses"></a>Vues de catalogue du témoin de mise en miroir - de base de données sys.database_mirroring_witnesses
+# <a name="database-mirroring-witness-catalog-views---sysdatabase_mirroring_witnesses"></a>Affichages catalogue du témoin de mise en miroir de bases de données-sys. database_mirroring_witnesses
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Contient une ligne pour chaque rôle de témoin qu'un serveur utilise dans un partenariat de mise en miroir de base de données. 
   
-  Dans une session de mise en miroir de bases de données, le basculement automatique nécessite un serveur témoin. Dans l'idéal, le témoin réside sur un ordinateur distinct du serveur miroir et du principal. Il ne sert pas la base de données, mais contrôle l'état du principal et du serveur miroir. Si le serveur principal échoue, le témoin peut initialiser un basculement automatique vers le serveur miroir. 
+  Dans une session de mise en miroir de bases de données, le basculement automatique nécessite un serveur témoin. Dans l'idéal, le témoin réside sur un ordinateur distinct du serveur miroir et du principal. Il ne sert pas la base de données, mais contrôle l'état du principal et du serveur miroir. En cas de défaillance du serveur principal, le témoin peut lancer un basculement automatique vers le serveur miroir. 
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -41,23 +41,23 @@ ms.locfileid: "68033082"
 |**principal_server_name**|**sysname**|Nom du serveur partenaire dont la copie de la base de données est actuellement la base de données principale.|  
 |**mirror_server_name**|**sysname**|Nom du serveur partenaire dont la copie de la base de données est actuellement la base de données miroir.|  
 |**safety_level**|**tinyint**|Paramètre de sécurité de transaction pour les mises à jour sur la base de données miroir :<br /><br /> 0 = État inconnu<br /><br /> 1 = désactivée (asynchrone)<br /><br /> 2 = totale (synchrone)<br /><br /> L'utilisation d'un témoin pour le basculement automatique nécessite une sécurité de transaction totale, ce qui est la valeur par défaut.|  
-|**safety_level_desc**|**nvarchar(60)**|Description de la garantie de la sécurité des mises à jour sur la base de données miroir :<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL|  
-|**safety_sequence_number**|**int**|Mettre à jour le numéro de séquence pour les modifications apportées aux **safety_level**.|  
+|**safety_level_desc**|**nvarchar (60)**|Description de la garantie de la sécurité des mises à jour sur la base de données miroir :<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL|  
+|**safety_sequence_number**|**int**|Mettez à jour le numéro de séquence des modifications apportées à **safety_level**.|  
 |**role_sequence_number**|**int**|Numéro de séquence de mise à jour pour les modifications apportées aux rôles principaux/miroirs utilisés par les partenaires de la mise en miroir.|  
 |**mirroring_guid**|**uniqueidentifier**|Identificateur du partenariat de mise en miroir.|  
 |**family_guid**|**uniqueidentifier**|Identificateur de la famille de sauvegarde pour la base de données. Sert à détecter les états de restauration concordants.|  
 |**is_suspended**|**bit**|La mise en miroir de la base de données est suspendue.|  
-|**is_suspended_sequence_number**|**int**|Numéro de séquence pour le paramètre **is_suspended**.|  
-|**partner_sync_state**|**tinyint**|État de synchronisation de la session de mise en miroir :<br /><br /> 5 = les serveurs partenaires sont synchronisés. Le basculement est éventuellement possible. Pour plus d’informations sur la configuration requise pour le basculement, consultez [rôle basculement durant une base de données mise en miroir Session &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> 6 = les partenaires ne sont pas synchronisées. Le basculement n'est maintenant pas possible.|  
-|**partner_sync_state_desc**|**nvarchar(60)**|Description de l'état de synchronisation de la session de mise en miroir :<br /><br /> SYNCHRONIZED<br /><br /> UNSYNCHRONIZED|  
+|**is_suspended_sequence_number**|**int**|Numéro de séquence pour la définition de **is_suspended**.|  
+|**partner_sync_state**|**tinyint**|État de synchronisation de la session de mise en miroir :<br /><br /> 5 = les partenaires sont synchronisés. Le basculement est éventuellement possible. Pour plus d’informations sur la configuration requise pour le basculement, consultez [basculement de rôle durant une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> 6 = les partenaires ne sont pas synchronisés. Le basculement n'est maintenant pas possible.|  
+|**partner_sync_state_desc**|**nvarchar (60)**|Description de l'état de synchronisation de la session de mise en miroir :<br /><br /> SYNCHRONIZED<br /><br /> UNSYNCHRONIZED|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Témoin de mise en miroir de base de données](../../database-engine/database-mirroring/database-mirroring-witness.md)   
- [Sys.database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
- [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
- [Questions fréquentes (FAQ) sur l’interrogation des catalogues système SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [sys. database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
+ [sys. database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
+ [Questions fréquentes sur l'interrogation des catalogues système de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

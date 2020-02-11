@@ -17,22 +17,22 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fd73a7498914060757a9ce4e8137638440556ae3
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73770755"
 ---
 # <a name="data-types-ole-db"></a>Types de données (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Pour exécuter des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] et traiter les résultats à l’aide du fournisseur de OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, vous devez savoir comment le fournisseur OLE DB Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mappe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de données aux types de données OLE DB lors de la liaison de paramètres ou de colonnes dans un Rowset, et lorsqu’il utilise l’interface **ITableDefinition** pour créer une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Pour exécuter [!INCLUDE[tsql](../../includes/tsql-md.md)] des instructions et traiter les résultats à l’aide [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du fournisseur OLE DB Native Client, vous devez savoir comment [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le fournisseur de OLE DB Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client mappe les types de données aux types de données OLE DB lors de la liaison de paramètres ou de colonnes dans un ensemble de lignes, et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]lorsqu’il utilise l’interface **ITableDefinition** pour créer une table dans.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Mappage de types de données dans les ensembles de lignes et les paramètres](../../relational-databases/native-client-ole-db-data-types/data-type-mapping-in-rowsets-and-parameters.md)  
+-   [Mappage de type de données dans les ensembles de lignes et les paramètres](../../relational-databases/native-client-ole-db-data-types/data-type-mapping-in-rowsets-and-parameters.md)  
   
--   [Mappage de types de données dans ITableDefinition](../../relational-databases/native-client-ole-db-data-types/data-type-mapping-in-itabledefinition.md)  
+-   [Mappage de type de données dans ITableDefinition](../../relational-databases/native-client-ole-db-data-types/data-type-mapping-in-itabledefinition.md)  
   
 -   [Structure SSVARIANT](../../relational-databases/native-client-ole-db-data-types/ssvariant-structure.md)  
   

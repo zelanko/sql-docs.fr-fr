@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cef657960da876b25003a6fc1017a372abe410a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63074014"
 ---
 # <a name="implement-jobs"></a>Implémenter des travaux
@@ -35,13 +35,13 @@ ms.locfileid: "63074014"
 |-|-|  
 |**Description**|**Rubrique**|  
 |Contient des informations sur la création de travaux et l'affectation de propriétés.|[Créer des travaux](create-jobs.md)|  
-|Contient des informations sur l'organisation des travaux en catégories.|[Organiser les travaux](organize-jobs.md)|  
+|Contient des informations sur l'organisation des travaux en catégories.|[organiser les travaux](organize-jobs.md)|  
 |Contient des informations relatives aux différents types d'étapes de travail que vous pouvez gérer et à la procédure à suivre à cet effet.|[Gérer les étapes de travail](manage-job-steps.md)|  
 |Contient des informations relatives à la planification du démarrage de l'exécution des travaux et à leur fréquence d'exécution.|[Créer des planifications et les attacher à des travaux](create-and-attach-schedules-to-jobs.md)|  
 |Contient des informations relatives à l'exécution manuelle des travaux (sans planification).|[Exécuter des travaux](run-jobs.md)|  
 |Contient des informations relatives à la configuration du comportement de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par rapport aux travaux. Par exemple, vous pouvez configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent de manière à notifier aux administrateurs l'achèvement des travaux.|[Spécifier des réponses à un travail](specify-job-responses.md)|  
 |Contient des informations relatives à la visualisation des travaux existants, à leur historique une fois exécutés et à leur modification.|[Afficher ou modifier les travaux](view-or-modify-jobs.md)|  
-|Contient des informations sur la suppression de travaux.|[Supprimer des travaux](delete-jobs.md)|  
+|Contient des informations sur la suppression de travaux.|[travaux, supprimer](delete-jobs.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Implémenter la sécurité de l'Agent SQL Server](implement-sql-server-agent-security.md)  

@@ -18,13 +18,13 @@ ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 98c986c26c8d0d0cc6e2b8ff3573f0a20d938975
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942264"
 ---
-# <a name="spkillfilestreamnontransactedhandles-transact-sql"></a>sp_kill_filestream_non_transacted_handles (Transact-SQL)
+# <a name="sp_kill_filestream_non_transacted_handles-transact-sql"></a>sp_kill_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ferme des descripteurs de fichiers non transactionnels aux données de FileTable.  
@@ -39,36 +39,36 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @h
  *table_name*  
  Nom de la table dans laquelle fermer des descripteurs non transactionnels.  
   
- Vous pouvez transmettre *table_name* sans *handle_id* pour fermer tous les descripteurs non transactionnels d’ouverts pour le FileTable.  
+ Vous pouvez passer *table_name* sans *handle_id* pour fermer tous les descripteurs non transactionnels ouverts pour le filetable.  
   
- Vous pouvez passer NULL pour la valeur de *table_name* pour fermer tous les descripteurs non transactionnels d’ouverts pour tous les FileTables dans la base de données actuelle. NULL est la valeur par défaut.  
+ Vous pouvez passer NULL pour la valeur de *table_name* pour fermer tous les descripteurs non transactionnels ouverts pour tous les FileTables dans la base de données actuelle. La valeur par défaut est NULL.  
   
  *handle_id*  
- ID facultatif du descripteur individuel à fermer. Vous pouvez obtenir le *handle_id* à partir de la [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) vue de gestion dynamique. Chaque ID est unique dans une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous spécifiez *handle_id*, vous devez également fournir une valeur pour *table_name*.  
+ ID facultatif du descripteur individuel à fermer. Vous pouvez obtenir l' *handle_id* à partir de la vue de gestion dynamique [sys. dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) . Chaque ID est unique dans une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous spécifiez *handle_id*, vous devez également fournir une valeur pour *table_name*.  
   
- Vous pouvez passer NULL pour la valeur de *handle_id* pour fermer tous les descripteurs non transactionnels d’ouverts pour le FileTable spécifié par *table_name*. NULL est la valeur par défaut.  
+ Vous pouvez passer NULL pour la valeur de *handle_id* pour fermer tous les descripteurs non transactionnels ouverts pour le filetable spécifié par *table_name*. La valeur par défaut est NULL.  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-set"></a>Jeu de résultats  
- Aucune.  
+ Aucun.  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
- Le *handle_id* requis par **sp_kill_filestream_non_transacted_handles** n’est pas lié à session_id ni à l’unité de travail qui est utilisé dans d’autres **kill** commandes.  
+ La *handle_id* requise par **sp_kill_filestream_non_transacted_handles** n’est pas liée à la session_id ou à l’unité de travail utilisée dans d’autres commandes **Kill** .  
   
  Pour plus d’informations, consultez [Gérer des FileTables](../../relational-databases/blob/manage-filetables.md).  
   
 ## <a name="metadata"></a>Métadonnées  
- Pour plus d’informations sur les descripteurs de fichiers non transactionnels ouverts, interrogez la vue de gestion dynamique [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).  
+ Pour plus d’informations sur les descripteurs de fichiers non transactionnels ouverts, interrogez la vue de gestion dynamique [sys. dm_filestream_non_transacted_handles &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).  
   
 ## <a name="security"></a>Sécurité  
   
 ### <a name="permissions"></a>Autorisations  
- Vous devez avoir **VIEW DATABASE STATE** autorisation pour obtenir des handles de fichier à partir de la **sys.dm_FILESTREAM_non_transacted_handles** vue de gestion dynamique et d’exécuter **sp_kill_filestream_non_ transacted_handles**.  
+ Vous devez disposer de l’autorisation **View Database State** pour obtenir des descripteurs de fichiers à partir de la vue de gestion dynamique **sys. dm_FILESTREAM_non_transacted_handles** et pour exécuter **sp_kill_filestream_non_transacted_handles**.  
   
 ## <a name="examples"></a>Exemples  
- Les exemples suivants montrent comment appeler **sp_kill_filestream_non_transacted_handles** pour fermer des descripteurs de fichiers non transactionnels pour les données FileTable.  
+ Les exemples suivants montrent comment appeler **sp_kill_filestream_non_transacted_handles** pour fermer les descripteurs de fichiers non transactionnels pour les données filetables.  
   
 ```sql  
 -- Close all open handles in the current database.  
@@ -81,7 +81,7 @@ sp_kill_filestream_non_transacted_handles @table_name = 'myFileTable'
 sp_kill_filestream_non_transacted_handles @table_name = 'myFileTable', @handle_id = 0xFFFAAADD  
 ```  
   
- L’exemple suivant montre comment utiliser un script pour obtenir un *handle_id* et fermez-le.  
+ L’exemple suivant montre comment utiliser un script pour obtenir un *handle_id* et le fermer.  
   
 ```sql  
 DECLARE @handle_id varbinary(16);  
@@ -96,7 +96,7 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Gérer des FileTables](../../relational-databases/blob/manage-filetables.md)  
- [FileStream et les vues de gestion dynamique FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
- <br>[FileStream et les affichages catalogue FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+ [Vues de gestion dynamique FileStream et filetable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
+ <br>[Affichages catalogue FileStream et filetable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
  <br>[sp_filestream_force_garbage_collection (Transact-SQL)](filestream-and-filetable-sp-filestream-force-garbage-collection.md)
   

@@ -1,5 +1,5 @@
 ---
-title: sys.column_store_segments (Transact-SQL) | Microsoft Docs
+title: sys. column_store_segments (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/15/2018
 ms.prod: sql
@@ -20,31 +20,31 @@ ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b8d476e2f21693254eac5fc4712d53ac854e74ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68140003"
 ---
-# <a name="syscolumnstoresegments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
+# <a name="syscolumn_store_segments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-Retourne une ligne pour chaque segment de colonne dans un index columnstore. Il existe un segment de colonne par colonne par groupe de lignes. Par exemple, une table avec 10 groupes de lignes et 34 colonnes retourne des 340 lignes. 
+Retourne une ligne pour chaque segment de colonne dans un index ColumnStore. Il y a un segment de colonne par colonne par rowgroup. Par exemple, une table contenant 10 colonnes RowGroups et 34 renvoie 340 lignes. 
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|Indique l'ID de partition. Unique dans une base de données.|  
 |**hobt_id**|**bigint**|ID du segment ou de l'index d'arbre B (B-tree) pour la table ayant cet index columnstore.|  
-|**column_id**|**Int**|ID de la colonne columnstore.|  
-|**segment_id**|**int**|ID du rowgroup. Pour la compatibilité descendante, le nom de colonne continue à être appelée segment_id même si cela est l’ID de groupe de lignes. Vous pouvez identifier un segment à l’aide \<hobt_id, partition_id, column_id >, < segment_id >.|  
-|**version**|**int**|Version du format de segment de colonne.|  
-|**encoding_type**|**Int**|Type d’encodage utilisé pour ce segment :<br /><br /> 1 = VALUE_BASED - non chaîne/binaire avec aucun dictionnaire (très similaire à 4 avec certaines variantes internes)<br /><br /> 2 = VALUE_HASH_BASED - colonne de type chaîne ou binaire avec des valeurs courantes dans le dictionnaire<br /><br /> 3 = STRING_HASH_BASED - colonne de type chaîne ou binaire avec des valeurs courantes dans le dictionnaire<br /><br /> 4 = STORE_BY_VALUE_BASED - non chaîne/binaire avec aucun dictionnaire<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - chaîne/binaire avec aucun dictionnaire<br /><br /> Tous les encodages de tirer parti de l’encodage de compression de bits et la longueur de l’exécution lorsque cela est possible.|  
+|**column_id**|**int**|ID de la colonne columnstore.|  
+|**segment_id**|**int**|ID du rowgroup. Pour la compatibilité descendante, le nom de colonne continue d’être appelé segment_id même s’il s’agit de l’ID rowgroup. Vous pouvez identifier un segment de manière unique \<à l’aide de hobt_id, partition_id, column_id>, <segment_id>.|  
+|**Version**|**int**|Version du format de segment de colonne.|  
+|**encoding_type**|**int**|Type d’encodage utilisé pour ce segment :<br /><br /> 1 = VALUE_BASED non chaîne/binaire sans dictionnaire (très similaire à 4 avec certaines variations internes)<br /><br /> 2 = VALUE_HASH_BASED-colonne non chaîne/binaire avec des valeurs communes dans le dictionnaire<br /><br /> 3 = STRING_HASH_BASED-chaîne/colonne binaire avec des valeurs communes dans le dictionnaire<br /><br /> 4 = STORE_BY_VALUE_BASED-non-chaîne/binaire sans dictionnaire<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED chaîne/binaire sans dictionnaire<br /><br /> Tous les encodages tirent parti de l’encodage de bits et de la longueur d’exécution lorsque cela est possible.|  
 |**row_count**|**int**|Nombre de lignes dans le groupe de lignes.|  
 |**has_nulls**|**int**|1 si le segment de colonne a des valeurs NULL.|  
-|**base_id**|**bigint**|Id de la valeur de base si le type d’encodage 1 est utilisé.  Si le type d’encodage 1 n'est pas utilisé, ID a la valeur -1.|  
-|**magnitude**|**float**|Grandeur si le type d’encodage 1 est utilisé.  Si le type d’encodage 1 n'est pas utilisé, grandeur a la valeur -1.|  
-|**primary_dictionary_id**|**int**|La valeur 0 représente le dictionnaire global. La valeur -1 indique qu’aucun dictionnaire global créé pour cette colonne est.|  
-|**secondary_dictionary_id**|**int**|Une valeur non nulle pointe vers le dictionnaire local pour cette colonne dans le segment actuel (par exemple, le groupe de lignes). La valeur -1 indique qu’aucun dictionnaire local pour ce segment est.|  
+|**base_id**|**bigint**|ID de la valeur de base si le type d’encodage 1 est utilisé.  Si le type d’encodage 1 n’est pas utilisé, base_id a la valeur-1.|  
+|**magnitude**|**float**|Magnitude si le type d’encodage 1 est utilisé.  Si le type d’encodage 1 n’est pas utilisé, l’argument magnitude a la valeur-1.|  
+|**primary_dictionary_id**|**int**|La valeur 0 représente le dictionnaire global. La valeur-1 indique qu’il n’existe aucun dictionnaire global créé pour cette colonne.|  
+|**secondary_dictionary_id**|**int**|Une valeur différente de zéro pointe vers le dictionnaire local de cette colonne dans le segment actuel (c’est-à-dire, rowgroup). La valeur-1 indique qu’il n’existe aucun dictionnaire local pour ce segment.|  
 |**min_data_id**|**bigint**|ID de données minimum dans le segment de colonne.|  
 |**max_data_id**|**bigint**|ID de données maximum dans le segment de colonne.|  
 |**null_value**|**bigint**|Valeur utilisée pour représenter les valeurs NULL.|  
@@ -67,19 +67,19 @@ GO
 ```  
   
 ## <a name="permissions"></a>Autorisations  
- Toutes les colonnes requièrent au moins **VIEW DEFINITION** autorisation sur la table. Les colonnes suivantes retournent null à moins que l’utilisateur ait également **sélectionnez** autorisation : has_nulls, base_id, magnitude, min_data_id, max_data_id et null_value.  
+ Toutes les colonnes requièrent au moins l’autorisation **View definition** sur la table. Les colonnes suivantes retournent la valeur null, sauf si l’utilisateur a également l’autorisation **Select** : has_nulls, base_id, magnitude, min_data_id, max_data_id et null_value.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Affichages catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Interrogation des catalogues système SQL Server FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [sys.computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
- [Guide des index columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md)    
- [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
+ [Interrogation du SQL Server FAQ du catalogue système](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [sys. Columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [sys. all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys. computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
+ [Guide des index ColumnStore](~/relational-databases/indexes/columnstore-indexes-overview.md)    
+ [sys. column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
   
   
 

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d4a29a8227fc7b0452f17d6da0c1f47d37738ed0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036813"
 ---
 # <a name="stripcalculatedmembers-mdx"></a>StripCalculatedMembers (MDX)
@@ -29,10 +29,10 @@ StripCalculatedMembers(Set_Expression)
   
 ## <a name="arguments"></a>Arguments  
  *Set_Expression*  
- Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
+ Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
 ## <a name="remarks"></a>Notes  
- Le **StripCalculatedMembers** fonction supprime les membres calculés à partir d’un ensemble. Calculé membres peuvent être ajoutés à un ensemble à l’aide de la [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) (fonction), qui retourne les membres calculés qui sont définis sur le serveur, ou des membres calculés qui ont été ajoutées à la requête elle-même à l’aide de WITH Syntaxe de membre.  
+ La fonction **StripCalculatedMembers** supprime les membres calculés d’un jeu. Les membres calculés peuvent être ajoutés à un jeu à l’aide de la fonction [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) , qui retourne les membres calculés définis sur le serveur, ou les membres calculés qui ont été ajoutés dans la requête elle-même à l’aide de la syntaxe de membre with.  
   
 ## <a name="example"></a>Exemple  
  L'exemple ci-dessous supprime tous les membres calculés de la requête.  
@@ -78,6 +78,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

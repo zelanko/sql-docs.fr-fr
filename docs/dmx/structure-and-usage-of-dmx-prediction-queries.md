@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 99d8ef98ad4e86bce0e1beff819a8d140662aaf7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938069"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>Structure et utilisation des requêtes de prédiction DMX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous pouvez utiliser la requête de prédiction dans les Extensions DMX (Data Mining) pour prédire des valeurs de colonne inconnu dans un nouveau jeu de données, en fonction des résultats d’un modèle d’exploration de données.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous pouvez utiliser la requête de prédiction dans les extensions DMX (Data Mining Extensions) pour prédire les valeurs de colonnes inconnues dans un nouveau jeu de données, en fonction des résultats d’un modèle d’exploration de données.  
   
  Le type de requête utilisé dépend des informations que vous souhaitez obtenir d'un modèle. Si vous voulez créer des prédictions simples en temps réel, par exemple pour savoir si un éventuel client sur un site Web correspond au personnage de l'acheteur de bicyclette, vous utilisez une requête singleton. En revanche, si vous souhaitez créer un lot de prédictions à partir d'un ensemble de cas figurant dans une source de données, vous devez utiliser une requête de prédiction standard.  
   
@@ -26,10 +26,10 @@ ms.locfileid: "67938069"
  Dans DMX, vous pouvez créer les types de prédictions suivants :  
   
  Jointure de prédiction  
- Ce type de prédiction permet de créer des prédictions sur des données d'entrée sur la base des schémas qui figurent dans le modèle d'exploration de données. Cette instruction de requête doit être suivie par un **ON** clause qui fournit les conditions de jointure entre les colonnes du modèle d’exploration de données et les colonnes d’entrée.  
+ Ce type de prédiction permet de créer des prédictions sur des données d'entrée sur la base des schémas qui figurent dans le modèle d'exploration de données. Cette instruction de requête doit être suivie d’une clause on qui fournit les conditions **de** jointure entre les colonnes du modèle d’exploration de données et les colonnes d’entrée.  
   
  Jointure de prédiction naturelle  
- Ce type de prédiction permet de créer des prédictions basées sur les noms de colonnes du modèle d'exploration de données qui correspondent exactement aux noms de colonnes de la table sur laquelle vous effectuez la requête. Cette instruction de requête ne nécessite pas un **ON** clause, car la condition de jointure est automatiquement générée en fonction de la correspondance des noms entre les colonnes du modèle d’exploration de données et les colonnes d’entrée.  
+ Ce type de prédiction permet de créer des prédictions basées sur les noms de colonnes du modèle d'exploration de données qui correspondent exactement aux noms de colonnes de la table sur laquelle vous effectuez la requête. Cette instruction de requête ne nécessite pas **de clause on** , car la condition de jointure est automatiquement générée en fonction des noms correspondants entre les colonnes du modèle d’exploration de données et les colonnes d’entrée.  
   
  Jointure de prédiction vide  
  Cette requête permet de découvrir la prédiction la plus probable, sans avoir à fournir de données d'entrée. Elle retourne une prédiction basée uniquement sur le contenu du modèle d'exploration de données.  
@@ -40,42 +40,42 @@ ms.locfileid: "67938069"
 ## <a name="query-structure"></a>Structure de la requête  
  Pour construire une requête de prédiction en DMX, vous devez utiliser une combinaison des éléments suivants :  
   
--   **SÉLECTIONNEZ [APLATI]**  
+-   **SELECT [APLATI]**  
   
--   **TOP**  
+-   **Haut de la page**  
   
--   **À partir de** *\<modèle >* **PREDICTION JOIN**  
+-   **À partir du***\<modèle>* **PREDICTION JOIN**      
   
--   **ON**  
+-   **ACTIVÉ**  
   
 -   **WHERE**  
   
 -   **ORDER BY**  
   
- Le **sélectionnez** élément d’une requête de prédiction définit les colonnes et expressions qui apparaîtront dans le résultat et peuvent inclure les données suivantes :  
+ L’élément **Select** d’une requête de prédiction définit les colonnes et les expressions qui s’affichent dans le jeu de résultats, et peut inclure les données suivantes :  
   
--   **Prédire** ou **PredictOnly** colonnes à partir du modèle d’exploration de données.  
+-   **Prédiction** ou **PredictOnly** des colonnes du modèle d’exploration de données.  
   
 -   Toute colonne des données d'entrée utilisée pour créer les prédictions.  
   
 -   Des fonctions retournant une colonne de données.  
   
- Le **FROM**  *\<modèle >* **PREDICTION JOIN** élément définit les données sources à utiliser pour créer la prédiction. Pour une requête singleton, c'est une série de valeurs affectées aux colonnes. Pour une jointure de prédiction vide, l'élément est vide.  
+ L’élément **from** * \<Model>* **PREDICTION JOIN** définit les données sources à utiliser pour créer la prédiction. Pour une requête singleton, c'est une série de valeurs affectées aux colonnes. Pour une jointure de prédiction vide, l'élément est vide.  
   
- Le **ON** élément mappe les colonnes qui sont définies dans le modèle d’exploration de données aux colonnes dans un jeu de données externe. Il est inutile d'inclure cet élément si vous créez une requête de jointure de prédiction vide ou une jointure de prédiction naturelle.  
+ L’élément **on** mappe les colonnes définies dans le modèle d’exploration de données aux colonnes d’un DataSet externe. Il est inutile d'inclure cet élément si vous créez une requête de jointure de prédiction vide ou une jointure de prédiction naturelle.  
   
- Vous pouvez utiliser la **où** clause pour filtrer les résultats d’une requête de prédiction. Vous pouvez utiliser un **haut** ou **ORDER BY** clause pour sélectionner les prédictions les plus probables. Pour plus d’informations sur l’utilisation de ces clauses, consultez [sélectionnez &#40;DMX&#41;](../dmx/select-dmx.md).  
+ Vous pouvez utiliser la clause **Where** pour filtrer les résultats d’une requête de prédiction. Vous pouvez utiliser une clause **Top** ou **order by** pour sélectionner les prédictions les plus probables. Pour plus d’informations sur l’utilisation de ces clauses, consultez [SELECT &#40;DMX&#41;](../dmx/select-dmx.md).  
   
- Pour plus d’informations sur la syntaxe d’une instruction de prédiction, consultez [SELECT FROM &#60;modèle&#62; PREDICTION JOIN &#40;DMX&#41; ](../dmx/select-from-model-prediction-join-dmx.md) et [SELECT FROM &#60;modèle&#62; &#40;DMX &#41;](../dmx/select-from-model-dmx.md).  
+ Pour plus d’informations sur la syntaxe d’une instruction de prédiction, consultez [Select from &#60;model&#62; PREDICTION JOIN &#40;dmx&#41;](../dmx/select-from-model-prediction-join-dmx.md) et [Select from &#60;model&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Conventions de syntaxe](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Data Mining Extensions &#40;DMX&#41; éléments de syntaxe](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
+ [Informations de référence sur la&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Informations de référence sur les fonctions DMX&#41; Data Mining Extensions &#40;](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Informations de référence sur l’opérateur de&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Informations de référence sur les instructions DMX&#41; &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Conventions de syntaxe du&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Data Mining Extensions &#40;les éléments de la syntaxe DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)   
+ [Présentation de l'instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   

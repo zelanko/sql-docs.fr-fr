@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c583ffad2267a82c39d4ab6c7cd71a1852c7cb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63065457"
 ---
-# <a name="bcpcolfmt"></a>bcp_colfmt
+# <a name="bcp_colfmt"></a>bcp_colfmt
   Spécifie le format source ou cible des données d'un fichier utilisateur. En cas d'utilisation comme format source, **bcp_colfmt** spécifie le format d'un fichier de données existant utilisé comme source de données dans une copie en bloc sur une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En cas d'utilisation comme format cible, le fichier de données est créé à l'aide des formats de colonne spécifiés avec **bcp_colfmt**.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -70,7 +70,7 @@ idxServerCol
  *eUserDataType*  
  Type de données de la colonne dans le fichier utilisateur. Si le type de données est différent de celui de la colonne correspondante dans la table de base de données (*idxServerColumn*), la copie en bloc convertit si possible les données.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a introduit la prise en charge des jetons de type de données SQLXML et SQLUDT dans le *eUserDataType* paramètre.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]a introduit la prise en charge des jetons de type de données SQLXML et SQLUDT dans le paramètre *eUserDataType* .  
   
  Le paramètre *eUserDataType* est énuméré par les jetons de type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans sqlncli.h, et non par les énumérateurs de type de données C ODBC. Par exemple, vous pouvez spécifier une chaîne de caractères, ODBC type SQL_C_CHAR, à l'aide du SQLCHARACTER de type propre à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -78,7 +78,7 @@ idxServerCol
   
  Pour une copie en bloc à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un fichier, lorsque *eUserDataType* est de type SQLDECIMAL ou SQLNUMERIC :  
   
--   Si la colonne source n'est pas **décimale** ou **numérique**, la précision et l'échelle par défaut sont utilisées.  
+-   Si la colonne source n’est pas **décimale** ou **numérique**, la précision et l’échelle par défaut sont utilisées.  
   
 -   Si la colonne source est **décimale** ou **numérique**, sa précision et son échelle propres sont utilisées.  
   
@@ -123,7 +123,7 @@ idxServerCol
   
  Si cette valeur est 0, la copie en bloc ignore la colonne dans le fichier de données.  
   
-## <a name="returns"></a>Valeur renvoyée  
+## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
 ## <a name="remarks"></a>Notes  
@@ -141,26 +141,26 @@ idxServerCol
   
 -   Longueur de la séquence d'octets de fin facultative  
   
- Chaque appel à **bcp_colfmt** spécifie le format pour une colonne du fichier utilisateur. Par exemple, pour modifier les paramètres par défaut de trois colonnes d'un fichier de données utilisateur de cinq colonnes, appelez d'abord [bcp_columns](bcp-columns.md) **(5)** , puis **bcp_colfmt** cinq fois (trois de ces appels définissant votre format personnalisé). Pour les deux appels restants, définissez *eUserDataType* avec la valeur 0 et définissez respectivement *cbIndicator*, *cbUserData*et *cbUserDataTerm* avec les valeurs 0, SQL_VARLEN_DATA et 0. Cette procédure copie les cinq colonnes, trois avec votre format personnalisé et deux avec le format par défaut.  
+ Chaque appel à **bcp_colfmt** spécifie le format pour une colonne du fichier utilisateur. Par exemple, pour modifier les paramètres par défaut de trois colonnes d'un fichier de données utilisateur de cinq colonnes, appelez d'abord [bcp_columns](bcp-columns.md)**(5)**, puis **bcp_colfmt** cinq fois (trois de ces appels définissant votre format personnalisé). Pour les deux appels restants, définissez *eUserDataType* avec la valeur 0 et définissez respectivement *cbIndicator*, *cbUserData*et *cbUserDataTerm* avec les valeurs 0, SQL_VARLEN_DATA et 0. Cette procédure copie les cinq colonnes, trois avec votre format personnalisé et deux avec le format par défaut.  
   
  Pour *cbIndicator*, la valeur 8 pour indiquer un type valeur élevé est désormais valide. Si le préfixe est spécifié pour un champ dont la colonne correspondante est un nouveau type max, il ne peut avoir que la valeur 8. Pour plus d’informations, consultez [bcp_bind](bcp-bind.md).  
   
  La fonction **bcp_columns** doit être appelée avant tout appel de **bcp_colfmt**.  
   
- Vous devez appeler **bcp_colfmt** une fois pour chaque colonne dans le fichier utilisateur.  
+ Vous devez appeler **bcp_colfmt** une fois pour chaque colonne du fichier utilisateur.  
   
- Le fait d'appeler **bcp_colfmt** plus d'une fois pour une colonne de fichier utilisateur génère une erreur.  
+ L’appel de **bcp_colfmt** plusieurs fois pour une colonne de fichier utilisateur génère une erreur.  
   
- Vous n'avez pas besoin de copier toutes les données d'un fichier utilisateur dans la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour ignorer une colonne, spécifiez le format des données de la colonne, en attribuant la valeur 0 au paramètre *idxServerCol* . Pour ignorer une colonne, vous devez spécifier son type.  
+ Vous n'avez pas besoin de copier toutes les données d'un fichier utilisateur dans la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour ignorer une colonne, spécifiez le format des données de la colonne, en affectant la valeur 0 au paramètre *idxServerCol* . Pour ignorer une colonne, vous devez spécifier son type.  
   
  La fonction [bcp_writefmt](bcp-writefmt.md) peut être utilisée pour garantir la persistance du format spécifié.  
   
-## <a name="bcpcolfmt-support-for-enhanced-date-and-time-features"></a>Prise en charge de bcp_colfmt pour les fonctionnalités Date et Heure améliorées  
- Pour des informations aboutt, il tape utilisé avec le *eUserDataType* paramètre pour les types de date/heure, consultez [modifications de copie en bloc pour les Types améliorées de Date / heure &#40;OLE DB et ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+## <a name="bcp_colfmt-support-for-enhanced-date-and-time-features"></a>Prise en charge de bcp_colfmt pour les fonctionnalités Date et Heure améliorées  
+ Pour plus d’informations sur les types utilisés avec le paramètre *eUserDataType* pour les types date/time, consultez [modifications de copie en bloc pour les types de date et d’heure améliorés &#40;OLE DB et ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
- Pour plus d’informations, consultez [améliorations Date / heure &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Pour plus d’informations, consultez améliorations de la [date et de l’heure &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions de copie en bloc](sql-server-driver-extensions-bulk-copy-functions.md)  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3da7fd2ab55ba6ccd5216719fd322e77dfc31f9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916044"
 ---
-# <a name="mssqlserver10787"></a>MSSQLSERVER_10787
+# <a name="mssqlserver_10787"></a>MSSQLSERVER_10787
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|MSSQLSERVER|  
-|ID d'événement|10787|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|10787|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|P3_HASH_INDEX|  
 |Texte du message|« *construction* » « *fonctionnalité* » n’est pas pris en charge avec un index de hachage.|  

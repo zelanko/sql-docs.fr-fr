@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 64910ce8bab155639a16cb065768c43fd86ac737
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127330"
 ---
-# <a name="srvdescribe-extended-stored-procedure-api"></a>srv_describe (API de procédure stockée étendue)
+# <a name="srv_describe-extended-stored-procedure-api"></a>srv_describe (API de procédure stockée étendue)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Utilisez plutôt l’intégration du CLR.  
   
  Définit le nom de colonne et les types de données sources et de destination pour une colonne spécifique.  
   
@@ -99,7 +99,7 @@ srcdata
   
  Si *desttype* est SRVDECIMAL ou SRVNUMERIC, le paramètre *srcdata* doit être un pointeur vers une structure DBNUMERIC ou DBDECIMAL avec les champs de précision et d’échelle de la structure déjà définis aux valeurs que vous souhaitez. Vous pouvez utiliser DEFAULTPRECISION pour spécifier une précision par défaut et DEFAULTSCALE pour spécifier une échelle par défaut.  
   
-## <a name="returns"></a>Valeur renvoyée  
+## <a name="returns"></a>Retours  
  Numéro de la colonne décrite. La première colonne est la colonne 1. Si une erreur se produit, retourne 0.  
   
 ## <a name="remarks"></a>Notes  
@@ -112,7 +112,7 @@ srcdata
  Si le nom de colonne dans votre application est en Unicode, vous devez le convertir en page de codes multioctets du serveur avant d’appeler **srv_describe**. Pour plus d’informations, consultez [Données Unicode et pages de codes du serveur](../extended-stored-procedures-programming/unicode-data-and-server-code-pages.md).  
   
 > [!IMPORTANT]  
->  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
+>  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Voir aussi  
  [srv_sendrow &#40;API de procédure stockée étendue&#41;](srv-sendrow-extended-stored-procedure-api.md)   

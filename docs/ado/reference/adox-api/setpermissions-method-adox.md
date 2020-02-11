@@ -19,14 +19,14 @@ ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 50a609d0cebe70ea5127ed448e57a70881e35097
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965226"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions, méthode (ADOX)
-Spécifie les autorisations pour un [groupe](../../../ado/reference/adox-api/group-object-adox.md) ou [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) sur un objet.  
+Spécifie les autorisations pour un [groupe](../../../ado/reference/adox-api/group-object-adox.md) ou un [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) sur un objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,28 +37,28 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
   
 #### <a name="parameters"></a>Paramètres  
  *Nom*  
- Un **chaîne** valeur qui spécifie le nom de l’objet pour lequel définir des autorisations.  
+ Valeur de **chaîne** qui spécifie le nom de l’objet pour lequel les autorisations doivent être définies.  
   
  *ObjectType*  
- Un **Long** valeur qui peut être une de le [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) constantes, qui spécifie le type de l’objet pour lequel obtenir les autorisations.  
+ Valeur de type **long** qui peut être l’une des constantes [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) , qui spécifie le type de l’objet pour lequel obtenir des autorisations.  
   
  *Action*  
- Un **Long** valeur qui peut être une de le [ActionEnum](../../../ado/reference/adox-api/actionenum.md) constantes qui spécifie le type d’action à effectuer lors de la définition des autorisations.  
+ Valeur de type **long** qui peut être l’une des constantes [ActionEnum](../../../ado/reference/adox-api/actionenum.md) qui spécifient le type d’action à effectuer lors de la définition des autorisations.  
   
- *Droits*  
- Un **Long** valeur qui peut être un masque de bits d’un ou plusieurs de la [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) constantes, qui indique les droits à définir.  
+ *Autorisations*  
+ Valeur de **type long** qui peut être un masque de caractères d’une ou plusieurs des constantes [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) , qui indique les droits à définir.  
   
- *Hériter*  
- facultatif. Un **Long** valeur qui peut être une de le [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) constantes, qui spécifie la façon dont les objets héritent des autorisations. La valeur par défaut est **adInheritNone**.  
+ *Être*  
+ facultatif. Valeur de **type long** qui peut être l’une des constantes [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) , qui spécifie comment les objets hériteront de ces autorisations. La valeur par défaut est **adInheritNone**.  
   
  *ObjectTypeId*  
- facultatif. Un **Variant** valeur qui spécifie le GUID d’un type d’objet de fournisseur qui n’est pas défini par la spécification OLE DB. Ce paramètre est obligatoire si *ObjectType* a la valeur **adPermObjProviderSpecific**; sinon, il n’est pas utilisé.  
+ facultatif. Valeur de **type Variant** qui spécifie le GUID pour un type d’objet fournisseur qui n’est pas défini par la spécification OLE DB. Ce paramètre est obligatoire si *ObjectType* a la valeur **adPermObjProviderSpecific**; dans le cas contraire, il n’est pas utilisé.  
   
 ## <a name="remarks"></a>Notes  
- Une erreur se produit si le fournisseur ne prend pas en charge la définition des droits d’accès pour les groupes ou utilisateurs.  
+ Une erreur se produit si le fournisseur ne prend pas en charge la définition des droits d’accès pour les groupes ou les utilisateurs.  
   
 > [!NOTE]
->  Lors de l’appel **SetPermissions**, au paramètre Actions **adAccessRevoke** remplace tous les paramètres de la *droits* paramètre. Ne définissez pas *Actions* à **adAccessRevoke** si vous souhaitez que les droits spécifiés dans le *droits* paramètre prenne effet.  
+>  Lors de l’appel de **SetPermissions**, la définition des actions sur **adAccessRevoke** remplace tous les paramètres du paramètre *Rights* . Ne définissez pas d' *actions* sur **adAccessRevoke** si vous souhaitez que les droits spécifiés dans le paramètre *Rights* prennent effet.  
   
 ## <a name="applies-to"></a>S'applique à  
   

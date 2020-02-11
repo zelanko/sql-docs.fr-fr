@@ -13,10 +13,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c1668c2b4c96f23283f0eca87fdbac591f52b75f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211603"
 ---
 # <a name="wmi-error-0x8007052f"></a>Erreur WMI 0x8007052f
@@ -26,8 +26,8 @@ ms.locfileid: "68211603"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|0x8007052f|  
-|Source de l'événement|Erreur du fournisseur WMI|  
+|ID de l’événement|0x8007052f|  
+|Source de l’événement|Erreur du fournisseur WMI|  
 |Composant|Gestionnaire de configuration SQL Server|  
 |Nom symbolique|N/D|  
 |Texte du message|Échec d'ouverture de session : restriction de compte d'utilisateur. Parmi les explications possibles figurent les mots de passe vides qui ne sont pas autorisés, les restrictions liées aux heures de connexion ou l'application d'une restriction de stratégie.|  

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cd39b7315903335fe2370ae148579f3fe9d07abc
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637805"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Outils de dépannage pour l'exécution des packages
@@ -38,7 +38,7 @@ ms.locfileid: "73637805"
   
 -   **Renforcez l'intégrité des données à l'aide de transactions**. Pour plus d’informations, consultez [Transactions Integration Services](../integration-services-transactions.md).  
   
--   **Utilisez des points de contrôle pour redémarrer les packages à compter du point de défaillance**. Pour plus d’informations, consultez [Restart Packages by Using Checkpoints](../packages/restart-packages-by-using-checkpoints.md).  
+-   **Utilisez des points de contrôle pour redémarrer les packages à compter du point de défaillance**. Pour plus d'informations, consultez [Redémarrer des packages à l'aide de points de contrôle](../packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>Détecter et traiter les erreurs liées aux packages par le biais de gestionnaires d'événements  
  Vous pouvez répondre aux nombreux événements engagés par le package et les objets de ce dernier par le biais de gestionnaires d'événements.  
@@ -73,7 +73,7 @@ ms.locfileid: "73637805"
   
 -   **Activez la journalisation**. Vous pouvez affiner la sortie de journalisation en choisissant uniquement les événements et les éléments d'information que vous souhaitez capturer. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) et [Journalisation d’Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md).  
   
--   **Sélectionnez l'événement Diagnostic du package pour résoudre les problèmes inhérents au fournisseur.** Il existe des messages de journalisation qui vous permettent de résoudre les problèmes d'interaction d'un package avec des sources de données externes. Pour plus d’informations, voir [Troubleshooting Tools Package Connectivity](troubleshooting-tools-for-package-connectivity.md).  
+-   **Sélectionnez l'événement Diagnostic du package pour résoudre les problèmes inhérents au fournisseur.** Il existe des messages de journalisation qui vous permettent de résoudre les problèmes d'interaction d'un package avec des sources de données externes. Pour plus d’informations, voir [Outils de dépannage de la connectivité des packages](troubleshooting-tools-for-package-connectivity.md).  
   
 -   **Améliorez la sortie de journalisation par défaut**. La journalisation ajoute généralement des lignes à la destination de journalisation à chaque exécution d'un package. Bien que chaque ligne de la sortie de journalisation identifie le package par son nom et son identificateur unique, ainsi que l'exécution du package par un ExecutionID unique, une grande partie de la sortie de journalisation au sein d'une seule liste peut s'avérer difficile à analyser.  
   
@@ -81,11 +81,11 @@ ms.locfileid: "73637805"
   
     1.  **Créez une table parent chargée de consigner chaque exécution d'un package**. Cette table parent dispose d'une seule ligne pour chaque exécution d'un package et utilise l'ExecutionID pour établir un lien avec les enregistrements enfants de la table de journalisation [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Vous pouvez exécuter une tâche d'exécution SQL au début de chaque package pour créer cette nouvelle ligne et enregistrer l'heure de début. Vous pouvez ensuite utiliser une autre tâche d'exécution SQL à la fin du package pour mettre à jour la ligne avec l'heure de fin, la durée et l'état.  
   
-    2.  **Ajoutez des informations d'audit au flux de données**. Vous pouvez utiliser la transformation d'audit pour ajouter aux lignes du flux de données des informations sur l'exécution de package ayant entraîné la création ou la modification de chaque ligne. La transformation d'audit met neuf éléments d'information à disposition, notamment les variables PackageName et ExecutionInstanceGUID. Pour plus d’informations, voir [Audit Transformation](../data-flow/transformations/audit-transformation.md). Si vous disposez d'informations personnalisées que vous aimeriez inclure dans chaque ligne à des fins d'audit, vous pouvez les ajouter aux lignes dans le flux de données à l'aide d'une transformation de colonne dérivée. Pour plus d'informations, consultez [Derived Column Transformation](../data-flow/transformations/derived-column-transformation.md).  
+    2.  **Ajoutez des informations d'audit au flux de données**. Vous pouvez utiliser la transformation d'audit pour ajouter aux lignes du flux de données des informations sur l'exécution de package ayant entraîné la création ou la modification de chaque ligne. La transformation d'audit met neuf éléments d'information à disposition, notamment les variables PackageName et ExecutionInstanceGUID. Pour plus d’informations, voir [Transformation d’Audit](../data-flow/transformations/audit-transformation.md). Si vous disposez d'informations personnalisées que vous aimeriez inclure dans chaque ligne à des fins d'audit, vous pouvez les ajouter aux lignes dans le flux de données à l'aide d'une transformation de colonne dérivée. Pour plus d'informations, consultez [Transformation de colonne dérivée](../data-flow/transformations/derived-column-transformation.md).  
   
     3.  **Si possible, capturez les données sur le nombre de lignes**. Si possible, créez une table séparée pour les informations concernant le nombre de lignes dans laquelle chaque instance d'exécution de package est identifiée par son ExecutionID. Utilisez la transformation de calcul du nombre de lignes pour enregistrer le nombre de lignes dans une série de variables à des étapes critiques du flux de données. À la fin du flux de données, utilisez une tâche d'exécution SQL pour insérer la série de valeurs dans une ligne de la table en vue d'une analyse et d'un rapport ultérieurs.  
   
-     Pour plus d'informations sur cette approche, consultez la section « ETL Auditing and Logging » dans le livre blanc [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582)(en anglais).  
+     Pour plus d'informations sur cette approche, consultez la section « ETL Auditing and Logging » dans le livre blanc [!INCLUDE[msCoName](../../includes/msconame-md.md)][Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582)(en anglais).  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Résoudre les problèmes liés à l'exécution des packages à l'aide de fichiers de vidage du débogage  
  Dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez créer des fichiers de vidage du débogage qui fourniront des informations sur l'exécution d'un package. Pour plus d’informations, voir [Generating Dump Files for Package Execution](generating-dump-files-for-package-execution.md).  
@@ -98,7 +98,7 @@ ms.locfileid: "73637805"
      La propriété `DelayValidation` peut être définie sur une tâche Flux de données mais pas sur des composants de flux de données individuels. Vous pouvez obtenir un résultat similaire en affectant à la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> des composants de flux de données individuels la valeur `false`. Néanmoins, si cette propriété affiche la valeur `false`, le composant n'a pas connaissance des modifications apportées aux métadonnées des sources de données externes. Lorsque la valeur `true` est définie, la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> peut permettre d'éviter des problèmes de blocage provoqués par un verrouillage dans la base de données, surtout lorsque le package utilise des transactions.  
   
 ## <a name="troubleshoot-run-time-permissions-issues"></a>Résoudre les problèmes d'autorisations au moment de l'exécution  
- Si vous rencontrez des erreurs lorsque vous tentez d'exécuter des packages déployés à l'aide de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il est possible que les comptes employés par ce dernier ne disposent pas des autorisations nécessaires. Pour plus d'informations sur la résolution des problèmes liés aux packages que vous exécutez à partir des travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Un package SSIS n'est pas exécuté lorsque vous appelez le package SSIS à partir d'une étape de travail de SQL Server Agent](https://support.microsoft.com/kb/918760). Pour plus d’informations sur l’exécution de packages à partir des travaux de l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Travaux de l’Agent SQL Server pour les packages](../packages/sql-server-agent-jobs-for-packages.md).  
+ Si vous rencontrez des erreurs lorsque vous tentez d'exécuter des packages déployés à l'aide de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il est possible que les comptes employés par ce dernier ne disposent pas des autorisations nécessaires. Pour plus d'informations sur la résolution des problèmes liés aux packages que vous exécutez à partir des travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Un package SSIS n'est pas exécuté lorsque vous appelez le package SSIS à partir d'une étape de travail de SQL Server Agent](https://support.microsoft.com/kb/918760). Pour plus d’informations sur l’exécution de packages à partir des travaux de l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Travaux de l’Agent SQL Server pour les packages](../packages/sql-server-agent-jobs-for-packages.md).  
   
  Pour se connecter à des sources de données Excel ou Access, l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiert un compte doté de l'autorisation de lire, écrire, créer et supprimer des fichiers temporaires dans le dossier spécifié par les variables d'environnement TEMP et TMP.  
   
@@ -110,9 +110,9 @@ ms.locfileid: "73637805"
  Si vous rencontrez une erreur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sans description qui l'accompagne, vous pouvez localiser cette dernière dans le [Guide de référence des erreurs et des messages propres à Integration Services](../integration-services-error-and-message-reference.md) en recherchant l'erreur d'après son numéro. La liste ne comporte actuellement aucune information de dépannage.  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Configurer une sortie d’erreur dans un composant de flux de données](../configure-an-error-output-in-a-data-flow-component.md)  
+ [Configurer une sortie d'erreur dans un composant de flux de données](../configure-an-error-output-in-a-data-flow-component.md)  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  Entrée de blog, [Ajout du nom de la colonne d'erreur à une sortie d'erreur](https://go.microsoft.com/fwlink/?LinkId=261546)sur dougbert.com.  
   
   

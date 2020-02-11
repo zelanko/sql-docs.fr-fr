@@ -1,5 +1,5 @@
 ---
-title: SQL Server Agent procédures stockées (Transact-SQL) | Microsoft Docs
+title: Procédures stockées SQL Server Agent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,16 @@ ms.assetid: 9c8de925-928b-460c-9455-779c4c37b966
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0396823be5a733acc551dc52a96ff642b67076c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67950373"
 ---
 # <a name="sql-server-agent-stored-procedures-transact-sql"></a>Procédures stockées de l'Agent SQL Server (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les procédures stockées système suivantes, qui sont utilisées par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin de gérer les activités planifiées et liées aux événements.  
   
 |||  
@@ -35,8 +36,8 @@ ms.locfileid: "67950373"
 |[sp_add_jobschedule](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)|[sp_help_jobs_in_schedule](../../relational-databases/system-stored-procedures/sp-help-jobs-in-schedule-transact-sql.md)|  
 |[sp_add_jobserver](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)|[sp_help_jobschedule](../../relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql.md)|  
 |[sp_add_jobstep](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)|[sp_help_jobserver](../../relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md)|  
-|[sp_add_notification](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)|[sp_help_jobstep](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)|  
-|[sp_add_operator](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)|[sp_help_jobsteplog](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)|  
+|[sp_addnotification](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)|[sp_help_jobstep](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)|  
+|[sp_addoperator](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)|[sp_help_jobsteplog](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)|  
 |[sp_add_schedule](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|[sp_help_notification](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)|  
 |[sp_add_targetservergroup](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)|[sp_help_operator](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)|  
 |[sp_add_targetsvrgrp_member](../../relational-databases/system-stored-procedures/sp-add-targetsvrgrp-member-transact-sql.md)|[sp_help_proxy](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)|  

@@ -1,5 +1,5 @@
 ---
-title: Informations de publication, jetons de suivi (Publication transactionnelle, SQL Server 2005 et versions ultérieur) | Microsoft Docs
+title: Informations de publication, jetons de suivi (publication transactionnelle, SQL Server 2005 et versions ultérieures) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 287d565947a13621fd3ba39cff6437ff76894c03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021699"
 ---
 # <a name="publication-information-tracer-tokens-transactional-publication-sql-server-2005-and-later"></a>Informations de publication, jetons de suivi (publication transactionnelle, SQL Server 2005 et ultérieur)
-  L'onglet **Jetons de suivi** vous permet de contrôler la validité des connexions mais aussi de paramétrer la mesure du temps de latence d'un système utilisant la réplication transactionnelle. Un jeton (une petite quantité de données) est écrit dans le journal des transactions de la base de données de publication et est marqué comme s'il s'agissait d'une transaction standard répliquée, puis est envoyé dans le système, permettant ainsi le calcul :  
+  L’onglet **jetons** de suivi vous permet de valider les connexions et de mesurer la latence d’un système qui utilise la réplication transactionnelle. Un jeton (une petite quantité de données) est écrit dans le journal des transactions de la base de données de publication et est marqué comme s'il s'agissait d'une transaction standard répliquée, puis est envoyé dans le système, permettant ainsi le calcul :  
   
 -   du temps écoulé entre la validation d'une transaction par le serveur de publication et l'insertion de la commande qui en découle dans la base de données de distribution sur le serveur de distribution ;  
   
@@ -35,20 +35,20 @@ ms.locfileid: "63021699"
 ## <a name="options"></a>Options  
  Pour modifier la façon dont la grille affiche les données, cliquez avec le bouton droit sur la grille, puis cliquez sur l'une des options suivantes :  
   
--   **Trier** : cette option vous permet d’effectuer un tri sur une ou plusieurs colonnes dans la boîte de dialogue **Trier les colonnes**.  
+-   **Trier**: cette option vous permet d'effectuer un tri sur ou plusieurs colonnes dans la boîte de dialogue **Trier les colonnes** .  
   
--   **Choisir les colonnes à afficher** : cette option vous permet de sélectionner les colonnes à afficher et l’ordre d’affichage dans la boîte de dialogue **Choisir les colonnes**.  
+-   **Choisir les colonnes à afficher**: cette option vous permet de sélectionner les colonnes à afficher et l'ordre d'affichage dans la boîte de dialogue **Choisir les colonnes** .  
   
--   **Filtrer** : cette option vous permet de filtrer les lignes dans la grille selon les valeurs de colonne dans la boîte de dialogue **Paramètres du filtre**.  
+-   **Filtre**: cette option vous permet de filtrer les lignes dans la grille selon les valeurs de colonne dans la boîte de dialogue **Paramètres du filtre** .  
   
--   **Effacer le filtre** : cette option vous permet d’effacer tous les paramètres du filtre pour la grille.  
+-   **Effacer le filtre**: cette option vous permet d'effacer tous les paramètres du filtre pour la grille.  
   
  Les paramètres du filtre sont spécifiques à chaque grille. La sélection et le tri des colonnes sont appliqués à toutes les grilles du même type, par exemple la grille de publications pour chaque serveur de publication.  
   
- **Insérer un suivi**  
+ **Insérer un traceur**  
  Permet d'insérer en cliquant sur un jeton de suivi dans le journal des transactions sur le serveur de publication.  
   
- **Heure de l'insertion**  
+ **Heure d’insertion**  
  Permet de spécifier une heure à laquelle un jeton de suivi a été inséré afin d'afficher les informations relatives au temps de latence par rapport à cette heure. Par défaut, les informations du temps le plus récent sont celles affichées.  
   
 > [!NOTE]  
@@ -57,10 +57,10 @@ ms.locfileid: "63021699"
  **Abonnement**  
  Nom de chaque abonnement à la publication.  
   
- **Du serveur de publication vers le serveur de distribution**  
+ **Serveur de publication vers le serveur de distribution**  
  Temps écoulé entre la validation d'une transaction par le serveur de publication et l'insertion de la commande qui en découle dans la base de données de distribution sur le serveur de distribution. La valeur **En attente** indique que le jeton n'est pas encore arrivé au serveur de distribution. Si cet état ne semble pas évoluer, vérifiez que l'Agent de lecture du journal est bien en cours d'exécution.  
   
- **Du serveur de distribution vers l'Abonné**  
+ **Serveur de distribution vers abonné**  
  Temps écoulé entre l'insertion d'une commande dans la base de données de distribution et la validation de la transaction qui en découle au niveau d'un Abonné. La valeur **En attente** indique que le jeton n'est pas encore arrivé à l'Abonné. Si cet état persiste, vérifiez que l'Agent de distribution est bien en cours d'exécution.  
   
  **Latence totale**  
@@ -70,7 +70,7 @@ ms.locfileid: "63021699"
  [Démarrer et arrêter un Agent de réplication &#40;SQL Server Management Studio&#41;](agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
  [Démarrer le Moniteur de réplication](monitor/start-the-replication-monitor.md)   
  [Mesurer la latence et valider les connexions pour la réplication transactionnelle](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
- [Analyser les performances avec le Moniteur de réplication](monitor/monitor-performance-with-replication-monitor.md)   
+ [Analyser les performances avec le moniteur de réplication](monitor/monitor-performance-with-replication-monitor.md)   
  [Surveillance de la réplication](monitoring-replication.md)   
  [Présentation des Agents de réplication](agents/replication-agents-overview.md)  
   

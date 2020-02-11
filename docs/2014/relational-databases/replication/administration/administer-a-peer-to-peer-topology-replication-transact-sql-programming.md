@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0cabfb4cd21de54dad2be1323fd29d8bb3bf076
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629721"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>Administrer une topologie d'égal à égal (programmation Transact-SQL de la réplication)
@@ -37,10 +37,10 @@ ms.locfileid: "62629721"
   
 4.  Copiez manuellement en bloc les données de la nouvelle table sur tous les nœuds à l'aide de l' [utilitaire bcp](../../../tools/bcp-utility.md).  
   
-5.  Exécutez [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) pour créer l’article sur chaque nœud de la topologie. Pour plus d'informations, voir [Define an Article](../publish/define-an-article.md).  
+5.  Exécutez [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) pour créer l'article sur chaque nœud de la topologie. Pour plus d’informations, consultez [définir un Article](../publish/define-an-article.md).  
   
     > [!NOTE]  
-    >  Après l’exécution de [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql), la réplication ajoute automatiquement l’article aux abonnements de la topologie.  
+    >  Après l'exécution de [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) , la réplication ajoute automatiquement l'article aux abonnements de la topologie.  
   
 6.  Redémarrez les Agents de distribution sur chaque nœud de la topologie.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62629721"
   
 ## <a name="see-also"></a>Voir aussi  
  [FAQ sur l’administration de la réplication](frequently-asked-questions-for-replication-administrators.md)   
- [Sauvegarde et restauration des bases de données SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Réplication transactionnelle d’égal à égal](../transactional/peer-to-peer-transactional-replication.md)  
+ [Sauvegarder et restaurer des bases de données SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Peer-to-Peer Transactional Replication](../transactional/peer-to-peer-transactional-replication.md)  
   
   

@@ -23,20 +23,20 @@ ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c248139abfd136d5c79658592e0e49d5e10444aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949394"
 ---
 # <a name="name-property-ado-md"></a>Name, propriété (ADO MD)
 Indique le nom d’un objet.  
   
 ## <a name="return-values"></a>Valeurs de retour  
- Retourne un **chaîne** et est en lecture seule.  
+ Retourne une **chaîne** et est en lecture seule.  
   
 ## <a name="remarks"></a>Notes  
- Vous pouvez récupérer le **nom** propriété d’un objet par référence ordinale, après quoi vous pouvez faire référence à l’objet directement par nom. Par exemple, si `cdf.CubeDefs(0).Name` génère « Vidéo de Bobs Store », vous pouvez vous reporter à [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) comme `cdf.CubeDefs("Bobs Video Store")`.  
+ Vous pouvez récupérer la propriété **Name** d’un objet à l’aide d’une référence ordinale, après laquelle vous pouvez faire référence à l’objet directement par son nom. Par exemple, si `cdf.CubeDefs(0).Name` donne « Bobs Video Store », vous pouvez faire référence à ce [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) en `cdf.CubeDefs("Bobs Video Store")`tant que.  
   
 ## <a name="applies-to"></a>S'applique à  
   
@@ -48,6 +48,6 @@ Indique le nom d’un objet.
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de catalogue (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
- [Caption, propriété (ADO MD)](../../../ado/reference/ado-md-api/caption-property-ado-md.md)   
+ [Propriété Caption (ADO MD)](../../../ado/reference/ado-md-api/caption-property-ado-md.md)   
  [Description, propriété (ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)   
  [UniqueName, propriété (ADO MD)](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5fb76e62e1816be53c312cc263053f854ad3b796
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62625927"
 ---
 # <a name="add-or-edit-join"></a>Ajouter ou modifier une jointure
@@ -67,7 +67,7 @@ ms.locfileid: "62625927"
  [Afficher et modifier les propriétés d’une publication](publish/view-and-modify-publication-properties.md)   
  [Filtrer des données publiées](publish/filter-published-data.md)   
  [Filtres de jointure](merge/join-filters.md)   
- [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
+ [Filtres de lignes paramétrés](merge/parameterized-filters-parameterized-row-filters.md)   
  [Publier des données et des objets de base de données](publish/publish-data-and-database-objects.md)  
   
   

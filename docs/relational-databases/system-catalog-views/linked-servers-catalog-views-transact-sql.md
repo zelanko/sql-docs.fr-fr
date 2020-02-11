@@ -1,5 +1,5 @@
 ---
-title: Serveurs liés catalogue vues (Transact-SQL) | Microsoft Docs
+title: Affichages catalogue des serveurs liés (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 06d53a67-7804-4f1f-8201-3e42dc48ba79
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 03d7058e0e378e3848fe51a2df56886cbb51bcd7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68127884"
 ---
 # <a name="linked-servers-catalog-views-transact-sql"></a>Affichages catalogue des serveurs liés (Transact-SQL)
@@ -34,6 +34,6 @@ ms.locfileid: "68127884"
   
 ## <a name="see-also"></a>Voir aussi  
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Vues système &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Vues système &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

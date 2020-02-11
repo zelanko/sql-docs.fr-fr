@@ -1,5 +1,5 @@
 ---
-title: DateCreated et DateModified, exemples de propriétés (VB) | Microsoft Docs
+title: DateCreated et DateModified, exemple de propriétés (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: d608ea35-6e68-402f-8184-a5041e408678
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 96ca853100baddd94d29331416215278d493388f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966596"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vb"></a>DateCreated et DateModified, exemples de propriétés (VB)
-Cet exemple montre la [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) et [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) propriétés en ajoutant une nouvelle [colonne](../../../ado/reference/adox-api/column-object-adox.md) à un existant [Table](../../../ado/reference/adox-api/table-object-adox.md) et par Création d’un nouveau **Table**. La procédure DateOutput est requise pour exécuter cet exemple.  
+Cet exemple illustre les propriétés [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) et [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) en ajoutant une nouvelle [colonne](../../../ado/reference/adox-api/column-object-adox.md) à une [table](../../../ado/reference/adox-api/table-object-adox.md) existante et en créant une nouvelle **table**. La procédure DateOutput est requise pour que cet exemple s’exécute.  
   
 ```  
 ' BeginDateCreatedVB  
@@ -97,7 +97,7 @@ End Sub
 ## <a name="see-also"></a>Voir aussi  
  [DateCreated, propriété (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)   
  [DateModified, propriété (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)   
- [Objet de procédure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Procedures, Collection (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
- [Objet de vue (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
+ [PROCEDURE, objet (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
+ [Procedures, collection (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
+ [View, objet (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
  [Views, collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

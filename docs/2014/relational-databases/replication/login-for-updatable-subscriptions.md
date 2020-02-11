@@ -13,17 +13,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d8162c7654d99cd2ebab41d290c0a39c6c686686
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63058095"
 ---
 # <a name="login-for-updatable-subscriptions"></a>Nom de connexion pour les abonnements pouvant être mis à jour
-  Si vous avez sélectionné **répliquer** sur le **Updatable Subscriptions** page de cet Assistant, vous devez spécifier un compte sur l’abonné sous lequel les connexions au serveur de publication sont effectuées pour la mise à jour immédiate abonnements. Les connexions sont utilisées par les déclencheurs qui s'exécutent pour l'abonné et propagent les modifications sur le serveur de publication. Ce compte est requis même si vous avez sélectionné **modifications en file d’attente et valider dès que possible** sur le **Updatable Subscriptions** page, car par défaut, l’Assistant Nouvel abonnement configure la mise à jour en file d’attente avec la possibilité de basculer vers une mise à jour immédiate si nécessaire.  
+  Si vous avez sélectionné **répliquer** dans la page **abonnements pouvant être mis à jour** de cet Assistant, vous devez spécifier un compte sur l’abonné sous lequel les connexions au serveur de publication sont effectuées pour les abonnements avec mise à jour immédiate. Les connexions sont utilisées par les déclencheurs qui s'exécutent pour l'abonné et propagent les modifications sur le serveur de publication. Ce compte est requis même si vous avez sélectionné **modifier la file d’attente et valider dès que possible** dans la page **abonnements pouvant être mis** à jour, car par défaut, l’Assistant nouvel abonnement configure la mise à jour en attente avec la possibilité de basculer vers la mise à jour immédiate, si nécessaire.  
   
 > [!IMPORTANT]  
->  Le compte spécifié pour la connexion doit uniquement avoir l'autorisation d'insérer, de mettre à jour et de supprimer des données sur les vues créées par la réplication dans la base de données de publication. Il ne doit pas bénéficier d'autres autorisations. Octroyez des autorisations sur les vues de la base de données de publication qui sont mentionnées dans le panneau **syncobj_** _\<Nombre_hexadécimal>_ pour le compte que vous avez configuré pour chaque abonné.  
+>  Le compte spécifié pour la connexion doit uniquement avoir l'autorisation d'insérer, de mettre à jour et de supprimer des données sur les vues créées par la réplication dans la base de données de publication. Il ne doit pas bénéficier d'autres autorisations. Accordez des autorisations sur les vues de la base de données de publication portant le nom sous la forme **syncobj_**_\<HexadecimalNumber>_ au compte que vous avez configuré sur chaque abonné.  
   
  Trois options sont possibles pour le type de connexion :  
   
@@ -33,14 +33,14 @@ ms.locfileid: "63058095"
   
 -   Un serveur lié créé par la réplication. La connexion se fait à l'aide des informations d'identification de l'utilisateur qui apporte la modification pour l'abonné.  
   
- Vous pouvez spécifier les deux premières options dans cet Assistant. La dernière option peut uniquement être spécifiée à l’aide de [sp_link_publication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql). Indiquez la valeur **1** pour le paramètre **@security_mode** .  
+ Vous pouvez spécifier les deux premières options dans cet Assistant. La dernière option peut uniquement être spécifiée à l’aide de [sp_link_publication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql); Spécifiez la valeur **1** pour le paramètre **@security_mode**.  
   
 ## <a name="options"></a>Options  
- **Créer un serveur lié qui se connecte par une connexion d'authentification SQL Server :**  
+ **Créez un serveur lié qui se connecte à l’aide de la connexion d’authentification SQL Server suivante :**  
  La réplication crée un serveur lié au moyen des informations d'identification spécifiées dans les champs **Connexion** et **Mot de passe** .  
   
  **Connexion**  
- Entrez un nom de connexion [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui bénéficie uniquement des autorisations décrites dans cette rubrique.  
+ Entrez une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion qui dispose uniquement des autorisations décrites dans cette rubrique.  
   
  **Mot de passe**  
  Entrez un mot de passe fort pour la **Connexion**.  
@@ -52,9 +52,9 @@ ms.locfileid: "63058095"
  Cette option nécessite un serveur lié ou distant déjà défini. Pour plus d’informations, consultez [Serveurs liés &#40;moteur de base de données&#41;](../linked-servers/linked-servers-database-engine.md) et [Serveurs distants](../../database-engine/configure-windows/remote-servers.md). Assurez-vous que la connexion utilisée pour le serveur lié ou distant est associée un mot de passe fort et possède uniquement les autorisations décrites dans cette rubrique.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+ [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Afficher et modifier les paramètres de sécurité de la réplication](security/view-and-modify-replication-security-settings.md)   
- [Abonnements pouvant être mis à jour pour la réplication transactionnelle](transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)   
  [S'abonner à des publications](subscribe-to-publications.md)  
   
   

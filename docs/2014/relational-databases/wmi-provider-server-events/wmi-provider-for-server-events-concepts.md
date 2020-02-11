@@ -1,5 +1,5 @@
 ---
-title: Fournisseur WMI pour les Concepts des événements de serveur | Microsoft Docs
+title: Fournisseur WMI pour les concepts des événements de serveur | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,17 +17,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a0ef44b57e092c13b4046b250c99fca5eaea101
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211573"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>Fournisseur WMI pour les concepts des événements de serveur
   Le fournisseur WMI pour les événements SQL Server permet d'utiliser WMI (Windows Management Instrumentation) pour surveiller les événements d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Présentation du fournisseur WMI pour les événements de serveur](understanding-the-wmi-provider-for-server-events.md)  
+ [Présentation du fournisseur WMI pour les événements serveur](understanding-the-wmi-provider-for-server-events.md)  
  Fournit une vue d'ensemble de l'architecture du fournisseur et de la façon dont l'Agent SQL Server peut être programmé pour être utilisé.  
   
  [Utilisation du fournisseur WMI pour les événements de serveur](working-with-the-wmi-provider-for-server-events.md)  
@@ -36,13 +36,13 @@ ms.locfileid: "68211573"
  [Utilisation de WQL avec le fournisseur WMI pour les événements de serveur](using-wql-with-the-wmi-provider-for-server-events.md)  
  Explique la syntaxe WQL (WMI Query Language) et la façon de l'utiliser lorsque vous programmez par rapport au fournisseur.  
   
- [Exemple : Création d’une alerte de l’Agent SQL Server à l’aide du fournisseur WMI pour les événements serveur](sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
+ [Exemple : création d'une alerte de l'Agent SQL Server en utilisant le fournisseur WMI pour les événements de serveur](sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
  Fournit un exemple de l'utilisation du fournisseur WMI pour retourner les informations d'événement de trace sur lesquelles créer une alerte d'Agent SQL Server.  
   
- [Exemple : Utiliser le fournisseur d’événements WMI avec le .NET Framework](sample-using-the-wmi-event-provider-with-the-net-framework.md)  
+ [Exemple : utilisation du fournisseur d'événements WMI avec le .NET Framework](sample-using-the-wmi-event-provider-with-the-net-framework.md)  
  Fournit un exemple de l'utilisation du fournisseur WMI pour retourner les données d'événement dans une application C#.  
   
- [Fournisseur WMI pour les classes et propriétés d’événements de serveur](wmi-provider-for-server-events-classes-and-properties.md)  
+ [Fournisseur WMI pour les classes et propriétés d'événements serveur](wmi-provider-for-server-events-classes-and-properties.md)  
  Introduit les classes d'événements et les propriétés qui composent le mode de programmation du fournisseur.  
   
   

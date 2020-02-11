@@ -1,5 +1,5 @@
 ---
-title: Index et des clés de la boîte de dialogue (Visual Database Tools) | Microsoft Docs
+title: Index et clés, boîte de dialogue (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f0244530672e9db4a43f3dbe80f0c67cc86f8a67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015411"
 ---
 # <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>Index et clés, boîte de dialogue (Visual Database Tools)
@@ -27,7 +27,7 @@ ms.locfileid: "63015411"
 >  Si la table est publiée pour réplication, vous devez apporter vos modifications au schéma à l’aide de l’instruction Transact-SQL [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) ou de SMO (SQL Server Management Objects). Lorsque les modifications sont apportées au diagramme à l’aide du Concepteur de tables ou du Concepteur de diagrammes de base de données, celui-ci tente d’abandonner la table et de la recréer. Toutefois, il est impossible d'abandonner les objets publiés, par conséquent les modifications du schéma échoueront.  
   
 ## <a name="options"></a>Options  
- **Clé ou index Primary/Unique sélectionné**  
+ **Clé ou index Primary/Unique sélectionné (e)**  
  Répertorie les clés primaires ou uniques et les index existants. Sélectionnez un élément pour afficher ses propriétés dans la partie droite de la grille. Si la liste est vide, aucune propriété n'est définie pour la table.  
   
  **Ajouter**  
@@ -55,7 +55,7 @@ ms.locfileid: "63015411"
  Indique le nom de la clé ou de l'index. Lorsqu'un nouvel index ou une nouvelle clé sont créés, ils obtiennent un nom par défaut basé sur la table affichée dans la fenêtre active du Concepteur de tables. Vous pouvez modifier le nom à tout moment.  
   
  **Description**  
- Fournit un endroit auquel décrire la clé ou l'index. Pour écrire une description plus détaillée, cliquez sur **Description**, puis sur le bouton de sélection **(...)** qui apparaît à droite du champ de propriété. Vous obtiendrez une zone d'écriture plus large.  
+ Fournit un endroit auquel décrire la clé ou l'index. Pour écrire une description plus détaillée, cliquez sur **Description**, puis sur le bouton de sélection (**...**) qui s’affiche à droite du champ de propriété. Vous obtiendrez une zone d'écriture plus large.  
   
  **Catégorie Concepteur de tables**  
  Développée, elle affiche des informations pour **Créer comme Clustered**.  
@@ -63,8 +63,8 @@ ms.locfileid: "63015411"
  **Créer comme Clustered**  
  Rend la clé ou l'index cluster. Un seul index cluster est autorisé par table. Les données contenues dans la table sont stockées dans l'ordre de l'index cluster. Pour plus d’informations, consultez [Créer des index cluster](../../relational-databases/indexes/indexes.md) et [Créez des index non-cluster](../../relational-databases/indexes/create-nonclustered-indexes.md).  
   
- **Spécification de l'espace de données**  
- Développée, elle affiche des informations pour **(Type d’espace de données)** , **Nom du schéma de partition ou du groupe de fichiers**et **Liste des colonnes de partition**.  
+ **Spécification de l’espace de données**  
+ Développée, elle affiche des informations pour **(Type d’espace de données)**, **Nom du schéma de partition ou du groupe de fichiers**et **Liste des colonnes de partition**.  
   
  **(Type d’espace de données)**  
  Indique si cet index ou cette clé appartiennent à un groupe de fichiers ou à un schéma de partition.  
@@ -75,17 +75,17 @@ ms.locfileid: "63015411"
  **Liste des colonnes de partition**  
  Affiche une liste avec la virgule comme séparateur des colonnes qui participent à la fonction de la colonne de partition. Non disponible si Groupe de fichiers est sélectionné dans le champ **(Type d’espace de données)** .  
   
- **Spécification du remplissage**  
+ **Spécification de remplissage**  
  Développée, elle affiche des informations sur les options **Taux de remplissage** et **Index Pad**.  
   
- **Taux de remplissage**  
+ **Facteur de remplissage**  
  Spécifie le pourcentage des pages de niveau feuille de l'index que le système peut remplir. Lorsqu'une page est pleine, le système doit fractionner les pages pour ajouter de nouvelles données, ce qui affaiblit les performances.  
   
 -   La valeur 100 signifie que les pages seront entières et occuperont un espace de stockage minimal. Ce paramètre ne doit être utilisé que lorsqu'aucune modification ne sera apportée aux données, par exemple dans un tableau en lecture seule.  
   
 -   Une valeur inférieure laisse davantage d'espace vide sur les ensembles de données, ce qui réduit le besoin de les fractionner à mesure que la taille des index augmente, mais nécessite plus d'espace de stockage.  
   
- **Index Pad**  
+ **Index de remplissage**  
  Indique si, quand la taille des pages intermédiaires de cet index augmente, elles obtiennent le même pourcentage d’espace vide (remplissage) que celui qui est spécifié dans l’option **Taux de remplissage** .  
   
  **Ignorer les clés dupliquées**  
@@ -93,7 +93,7 @@ ms.locfileid: "63015411"
   
 -   **Oui** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] émet un avertissement, ignore la ligne entrante incriminée et tente d’insérer les lignes restantes.  
   
--   **Non** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] affiche un message d’erreur et restaure l’intégralité de l’opération d’insertion en bloc.  
+-   **Non** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] émet un message d’erreur et restaure l’intégralité de l’opération d’insertion en bloc.  
   
  **Colonnes incluses**  
  Affiche une liste avec la virgule comme séparateur des noms de toutes les colonnes constituant la clé d'index. Les colonnes de sous-clés ne peuvent être spécifiées que pour des index non-cluster. Cette propriété est masquée pour les index XML.  
@@ -104,17 +104,17 @@ ms.locfileid: "63015411"
  **Est une clé de texte intégral**  
  Spécifie si cet index est une clé de texte intégral. Pour plus d'informations sur les clés de texte intégral, consultez la documentation en ligne de SQL Server. Cette propriété est masquée pour les index XML.  
   
- **Verrouillage de page autorisé**  
+ **Verrous de page autorisés**  
  Spécifier si le verrouillage au niveau des pages est autorisé dans cet index. L'autorisation ou non du verrouillage au niveau de la page affecte les performances de la base de données. Il est recommandé de choisir le paramètre **Oui**.  
   
  **Recalculer les statistiques**  
  Spécifie si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] sous-jacent calcule de nouvelles statistiques une fois l'index créé. Le recalcul des statistiques ralentit la génération d'index, mais améliorera très probablement les performances des requêtes.  
   
- **Verrouillage de ligne autorisé**  
+ **Verrous de ligne autorisés**  
  Spécifier si le verrouillage au niveau des lignes est autorisé dans cet index. L'autorisation ou non du verrouillage au niveau de la ligne affecte les performances de la base de données. Il est recommandé de choisir le paramètre **Oui**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contraintes uniques et les contraintes Check](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
+ [Contraintes uniques et contraintes de validation](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
  [Contraintes de clé primaire et de clé étrangère](../../relational-databases/tables/primary-and-foreign-key-constraints.md)  
   
   

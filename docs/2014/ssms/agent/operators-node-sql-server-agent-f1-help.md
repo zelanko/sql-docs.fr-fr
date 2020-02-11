@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 96416c673d3dae6497d56c114ff24df70a8e6872
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63125982"
 ---
-# <a name="operators-node-sql-server-agent-f1-help"></a>Nœud Opérateurs – Aide (F1) de SQL Server Agent
-  Cette section contient l'aide (accessible via la touche F1) relative au nœud **Opérateurs** de l'Explorateur d'objets de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+# <a name="operators-node-sql-server-agent-f1-help"></a>Nœud Opérateurs — Aide (F1) de l'Agent SQL Server
+  Cette section contient l’aide (F1) relative au nœud **opérateurs** de l' [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Explorateur d’objets dans.  
   
   

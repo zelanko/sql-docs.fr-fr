@@ -1,5 +1,5 @@
 ---
-title: Propriété SortOrder, exemple (VB) | Microsoft Docs
+title: SortOrder, exemple de propriété (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4fe5c9bc18e0bc84dc8629ebc42227dad01ea3ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965190"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder, exemple de propriété (VB)
-Cet exemple montre la [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) propriété d’un [colonne](../../../ado/reference/adox-api/column-object-adox.md) qui a été ajouté à la [colonnes](../../../ado/reference/adox-api/columns-collection-adox.md) collection d’un [Index](../../../ado/reference/adox-api/index-object-adox.md). Le code ajoute un index croissant à la colonne de pays dans le **employés** table, puis affiche les enregistrements. Puis le code ajoute un index décroissant à la colonne de pays dans le **employés** de table et affiche les enregistrements à nouveau. La différence entre croissant et décroissant d’index s’affiche.  
+Cet exemple illustre la propriété [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) d’une [colonne](../../../ado/reference/adox-api/column-object-adox.md) qui a été ajoutée à la collection [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) d’un [index](../../../ado/reference/adox-api/index-object-adox.md). Le code ajoute un index croissant à la colonne country de la table **Employees** , puis affiche les enregistrements. Ensuite, le code ajoute un index décroissant à la colonne country dans la table **Employees** et affiche à nouveau les enregistrements. La différence entre les index croissant et décroissant est indiquée.  
   
 ```  
 ' BeginSortOrderVB  
@@ -137,7 +137,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet de colonne (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Columns, Collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [Column, objet (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
+ [Columns, collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Index, objet (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [SortOrder, propriété (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)

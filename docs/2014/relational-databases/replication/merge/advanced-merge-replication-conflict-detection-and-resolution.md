@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63000348"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Détection et résolution avancées des conflits de réplication de fusion
@@ -81,7 +81,7 @@ ms.locfileid: "63000348"
   
 -   Un programme de résolution personnalisé basé sur COM  
   
-     La réplication de fusion fournit une API permettant d'écrire des programmes de résolution en tant qu'objets COM dans des langages tels que [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Pour plus d’informations, consultez [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
+     La réplication de fusion fournit une API permettant d’écrire des programmes de résolution en tant qu’objets COM dans des langages tels que [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Pour plus d’informations, consultez [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
 -   Un programme de résolution personnalisé basé sur COM fourni par [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
@@ -94,9 +94,9 @@ ms.locfileid: "63000348"
   
  Pour spécifier un type d'abonnement de fusion et une priorité pour la résolution des conflits, consultez  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Spécifier un type d’abonnement de fusion et une priorité pour la résolution des conflits &#40;SQL Server Management Studio&#41;](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] : [ Spécifier un type d’abonnement de fusion et une priorité pour la résolution des conflits &#40;SQL Server Management Studio&#41;](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   Programmation [!INCLUDE[tsql](../../../includes/tsql-md.md)] de la réplication et programmation RMO (Replication Management Objects) : [Créer un abonnement par extraction de données (pull)](../create-a-pull-subscription.md) et [Créer un abonnement par émission (push)](../create-a-push-subscription.md).  
+-   Programmation [!INCLUDE[tsql](../../../includes/tsql-md.md)] de la réplication et programmation RMO (Replication Management Objects) : [Create a Pull Subscription](../create-a-pull-subscription.md) et [Create a Push Subscription](../create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>Programme de résolution interactif  
  La réplication fournit une interface utilisateur du programme de résolution interactif, exploitable en association avec le programme de résolution de conflits par défaut basé sur les priorités ou avec un programme de résolution d'articles. Lors d'une synchronisation à la demande via le Gestionnaire de synchronisation [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, le programme de résolution interactif affiche les données conflictuelles durant l'exécution et vous permet de choisir le moyen de résoudre les conflits. Pour plus d'informations sur la manière d'activer la résolution interactive et de démarrer le programme de résolution interactif, consultez [Interactive Conflict Resolution](advanced-merge-replication-conflict-interactive-resolution.md).  
@@ -127,9 +127,9 @@ ms.locfileid: "63000348"
   
  **Pour afficher les conflits**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Afficher et résoudre les conflits de données pour les publications de fusion &#40;SQL Server Management Studio&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] : [Afficher et résoudre les conflits de données pour les publications de fusion &#40;SQL Server Management Studio&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   Programmation [!INCLUDE[tsql](../../../includes/tsql-md.md)] de réplication : [Afficher les informations relatives aux conflits pour les publications de fusion &#40;programmation Transact-SQL de la réplication&#41;](../view-conflict-information-for-merge-publications.md)  
+-   Programmation [!INCLUDE[tsql](../../../includes/tsql-md.md)] de la réplication : [Afficher les informations relatives aux conflits pour les publications de fusion &#40;programmation Transact-SQL de la réplication&#41;](../view-conflict-information-for-merge-publications.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Synchroniser les données](../synchronize-data.md)  

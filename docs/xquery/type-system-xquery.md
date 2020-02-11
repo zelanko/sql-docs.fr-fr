@@ -1,5 +1,5 @@
 ---
-title: Type de système (XQuery) | Microsoft Docs
+title: Système de type (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -24,10 +24,10 @@ ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0736bc39ceaa6d9a0aa541d2af3b2b784614322b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946203"
 ---
 # <a name="type-system-xquery"></a>Système de types (XQuery)
@@ -35,22 +35,22 @@ ms.locfileid: "67946203"
 
   XQuery est un langage fortement typé pour les types de schéma et un langage faiblement typé pour les données non typées. Les types prédéfinis de XQuery incluent les suivants :  
   
--   Types intégrés de schéma XML dans le **http://www.w3.org/2001/XMLSchema** espace de noms.  
+-   Types intégrés de schéma XML dans l' **http://www.w3.org/2001/XMLSchema** espace de noms.  
   
--   Types définis dans le **http://www.w3.org/2004/07/xpath-datatypes** espace de noms.  
+-   Types définis dans l' **http://www.w3.org/2004/07/xpath-datatypes** espace de noms.  
   
  Cette rubrique décrit également les éléments suivants :  
   
 -   La valeur typée par rapport à la valeur de chaîne d'un nœud.  
   
--   Le [données fonction &#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md) et le [chaîne fonction &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md).  
+-   La [fonction de données &#40;xquery&#41;](../xquery/data-accessor-functions-data-xquery.md) et la [fonction de chaîne &#40;la&#41;XQuery ](../xquery/data-accessor-functions-string-xquery.md).  
   
 -   Mise en correspondance du type de séquence retourné par une expression.  
   
 ## <a name="built-in-types-of-xml-schema"></a>Types intégrés de schéma XML  
- Les types intégrés de schéma XML possèdent un préfixe d'espace de noms prédéfini, xs. Certains de ces types incluent **xs : Integer** et **xs : String**. Tous ces types intégrés sont pris en charge. Vous pouvez utiliser ces types lorsque vous créez une collection de schémas XML.  
+ Les types intégrés de schéma XML possèdent un préfixe d'espace de noms prédéfini, xs. Parmi ces types, citons **XS : Integer** et **XS : String**. Tous ces types intégrés sont pris en charge. Vous pouvez utiliser ces types lorsque vous créez une collection de schémas XML.  
   
- Lorsque vous interrogez des données XML typées, le type statique et dynamique des nœuds est déterminé par la collection de schémas XML associée à la colonne ou à la variable sur laquelle porte la requête. Pour plus d’informations sur les types statiques et dynamiques, consultez [contexte des expressions et évaluation de la requête &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md). Par exemple, la requête suivante est spécifiée contre un typé **xml** colonne (`Instructions`). L'expression utilise `instance of` pour vérifier que la valeur typée de l'attribut `LotSize` retourné est de type `xs:decimal`.  
+ Lorsque vous interrogez des données XML typées, le type statique et dynamique des nœuds est déterminé par la collection de schémas XML associée à la colonne ou à la variable sur laquelle porte la requête. Pour plus d’informations sur les types statiques et dynamiques, consultez [contexte d’expression et évaluation de requête &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md). Par exemple, la requête suivante est spécifiée par rapport à **** une colonne XML`Instructions`typée (). L'expression utilise `instance of` pour vérifier que la valeur typée de l'attribut `LotSize` retourné est de type `xs:decimal`.  
   
 ```  
 SELECT Instructions.query('  
@@ -64,13 +64,13 @@ WHERE ProductModelID=7
  Cette information de type est fournie par la collection de schémas XML associée à la colonne.  
   
 ## <a name="types-defined-in-xpath-data-types-namespace"></a>Types définis dans l'espace de noms des types de données XPath  
- Les types définis dans le **http://www.w3.org/2004/07/xpath-datatypes** espace de noms ont le préfixe prédéfini de **xdt**. Les règles suivantes s'appliquent à ces types :  
+ Les types définis dans l' **http://www.w3.org/2004/07/xpath-datatypes** espace de noms ont un préfixe prédéfini de **xdt**. Les règles suivantes s'appliquent à ces types :  
   
--   Vous ne pouvez pas utiliser ces types lorsque vous créez une collection de schémas XML. Ces types sont utilisés dans le système de type XQuery et sont utilisés pour [XQuery et le typage statique](../xquery/xquery-and-static-typing.md). Vous pouvez effectuer un cast vers les types atomiques, par exemple, **xdt : untypedAtomic**, dans le **xdt** espace de noms.  
+-   Vous ne pouvez pas utiliser ces types lorsque vous créez une collection de schémas XML. Ces types sont utilisés dans le système de type XQuery et sont utilisés pour [XQuery et le typage statique](../xquery/xquery-and-static-typing.md). Vous pouvez effectuer un cast vers les types atomiques, par exemple **xdt : untypedAtomic**, dans l’espace de noms **xdt** .  
   
--   Lors de l’interrogation des données XML non typées, le type statique et dynamique des nœuds d’élément est **xdt : non typé**, et le type des valeurs d’attribut est **xdt : untypedAtomic**. Le résultat d’une **query()** méthode génère un code XML non typé. Cela signifie que les nœuds XML sont retournées en tant que **xdt : non typé** et **xdt : untypedAtomic**, respectivement.  
+-   Lors de l’interrogation de données XML non typées, le type statique et dynamique des nœuds d’élément est **xdt : non typé**, et le type des valeurs d’attribut est **xdt : untypedAtomic**. Le résultat d’une méthode **query ()** génère du code XML non typé. Cela signifie que les nœuds XML sont retournés en tant que **xdt : untype** et **xdt : untypedAtomic**, respectivement.  
   
--   Le **xdt : daytimeduration** et **xdt : yearmonthduration** types ne sont pas pris en charge.  
+-   Les types **xdt : dayTimeDuration** et **xdt : yearMonthDuration** ne sont pas pris en charge.  
   
  Dans l'exemple suivant, la requête est spécifiée sur une variable de type XML non typé. L'expression, `data(/a[1]`), retourne une séquence d'une valeur atomique. La fonction `data()` retourne la valeur typée de l'élément `<a>`. Comme les données XML interrogées sont non typées, le type de la valeur retournée est `xdt:untypedAtomic`. Par conséquent, `instance of` retourne true.  
   
@@ -96,16 +96,16 @@ SELECT @x.query( '/a[1] instance of element()')
 > [!NOTE]  
 >  Lorsque vous interrogez une instance XML typée et que l'expression de requête inclut l'axe parent, le type statique d'information des nœuds résultants n'est plus disponible. Toutefois, le type dynamique est encore associé aux nœuds.  
   
-## <a name="typed-value-vs-string-value"></a>Valeur typée par rapport. Valeur de chaîne  
+## <a name="typed-value-vs-string-value"></a>Valeur typée par rapport à valeur de chaîne  
  Chaque nœud possède une valeur typée et une valeur de chaîne. Pour les données XML typées, le type de la valeur typée est fourni par la collection de schémas XML associée à la colonne ou à la variable sur laquelle porte la requête. Pour les données XML non typées, le type de la valeur typée est **xdt : untypedAtomic**.  
   
- Vous pouvez utiliser la **data()** ou **string()** fonction pour récupérer la valeur d’un nœud :  
+ Vous pouvez utiliser la fonction **Data ()** ou **String ()** pour récupérer la valeur d’un nœud :  
   
--   Le [données fonction &#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md) retourne la valeur typée d’un nœud.  
+-   La [fonction data &#40;XQuery&#41;](../xquery/data-accessor-functions-data-xquery.md) retourne la valeur typée d’un nœud.  
   
--   Le [chaîne fonction &#40;XQuery&#41; ](../xquery/data-accessor-functions-string-xquery.md) retourne la valeur de chaîne du nœud.  
+-   La [fonction de chaîne &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md) retourne la valeur de chaîne du nœud.  
   
- Dans la collection de schémas XML suivante, le <`root`> élément du type entier est défini :  
+ Dans la collection de schémas XML suivante, l' `root` élément <> du type entier est défini :  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -132,7 +132,7 @@ SET @x='<root>5</root>'
 SELECT @x.query('string(/root[1]) + 3')  
 ```  
   
- L'exemple ci-dessous calcule le total des attributs `LaborHours`. Le `data()` fonction récupère les valeurs typées des `LaborHours` attributs à partir de tous les <`Location`> éléments pour un modèle de produit. Selon le schéma XML associé à la `Instruction` colonne, `LaborHours` est de **xs : decimal** type.  
+ L'exemple ci-dessous calcule le total des attributs `LaborHours`. La `data()` fonction récupère les valeurs typées des `LaborHours` attributs de tous les éléments `Location` de> <pour un modèle de produit. Selon le schéma XML associé à la `Instruction` colonne, `LaborHours` est de type **XS : Decimal** .  
   
 ```  
 SELECT Instructions.query('   
@@ -146,7 +146,7 @@ WHERE ProductModelID=7
  Cette requête retourne un résultat égal à 12,75.  
   
 > [!NOTE]  
->  L’utilisation explicite de la **data()** fonction dans cet exemple est à titre d’illustration uniquement. S’il n’est pas spécifié, **sum()** applique implicitement la **data()** fonction permettant d’extraire les valeurs typées des nœuds.  
+>  L’utilisation explicite de la fonction **Data ()** dans cet exemple est à titre d’illustration uniquement. Si elle n’est pas spécifiée, **Sum ()** applique implicitement la fonction **Data ()** pour extraire les valeurs typées des nœuds.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Modèles et autorisations du générateur de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   

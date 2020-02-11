@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a93eed388f494b7d0aeaac127b95bc0d87c76963
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210691"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>Optimiser les performances de la réplication de fusion avec le suivi conditionnel des suppressions
@@ -46,7 +46,7 @@ ms.locfileid: "68210691"
   
  **Pour spécifier que les suppressions ne doivent pas être suivies**  
   
--   Programmation de la réplication [!INCLUDE[tsql](../../../includes/tsql-md.md)] : [Indiquer que les suppressions ne doivent pas être suivies pour les articles de fusion &#40;programmation Transact-SQL de la réplication&#41;](..//publish/specify-merge-replication-properties.md#tracking-deletes)  
+-   Programmation [!INCLUDE[tsql](../../../includes/tsql-md.md)] de la réplication : [indiquer que les suppressions ne doivent pas être suivies pour les articles de fusion &#40;programmation Transact-SQL de la réplication&#41;](..//publish/specify-merge-replication-properties.md#tracking-deletes)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Options d’articles pour la réplication de fusion](article-options-for-merge-replication.md)   

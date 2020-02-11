@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61f7e509b715b1156b06362f8e9bcd4a634de0c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63020865"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Créer une publication à partir d'une base de données Oracle
@@ -27,9 +27,9 @@ ms.locfileid: "63020865"
   
 -   **Avant de commencer :**  
   
-     [Conditions préalables](#Prerequisites)  
+     [Prérequis](#Prerequisites)  
   
--   **Pour créer une publication à partir d'une base de données Oracle à l'aide de :**  
+-   **Pour créer une publication à partir d’une base de données Oracle, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -37,14 +37,14 @@ ms.locfileid: "63020865"
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a>Conditions préalables  
   
--   Avant de créer une publication, vous devez installer le logiciel Oracle sur le serveur de distribution [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et configurer la base de données Oracle. Pour plus d’informations, consultez [Configurer un serveur de publication Oracle](../non-sql/configure-an-oracle-publisher.md).  
+-   Avant de créer une publication, vous devez installer le logiciel Oracle [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur le serveur de distribution, et vous devez configurer la base de données Oracle. Pour plus d’informations, consultez [Configurer un serveur de publication Oracle](../non-sql/configure-an-oracle-publisher.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Créez une publication transactionnelle ou d'instantané à partir d'une base de données Oracle à l'aide de l'Assistant Nouvelle publication.  
   
- La première fois que vous créez une publication à partir d'une base de données Oracle, vous devez identifier le serveur de publication Oracle sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (ce ne sera plus nécessaire pour les publications suivantes effectuées à partir de la même base de données). Pour identifier le serveur de publication Oracle, ouvrez l’Assistant Nouvelle publication ou la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>**  ; cette rubrique illustre la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>** .  
+ La première fois que vous créez une publication à partir d'une base de données Oracle, vous devez identifier le serveur de publication Oracle sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (ce ne sera plus nécessaire pour les publications suivantes effectuées à partir de la même base de données). Pour identifier le serveur de publication Oracle, ouvrez l’Assistant Nouvelle publication ou la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>**  ; cette rubrique illustre la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>**.  
   
 #### <a name="to-identify-the-oracle-publisher-at-the-sql-server-distributor"></a>Pour identifier le serveur de publication Oracle sur le serveur de distribution SQL Server  
   
@@ -52,7 +52,7 @@ ms.locfileid: "63020865"
   
 2.  Cliquez avec le bouton droit sur le dossier **Réplication** , puis cliquez sur **Propriétés du serveur de distribution**.  
   
-3.  Dans la page **Serveurs de publication** de la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>** , cliquez sur **Ajouter**, puis sur **Ajouter un serveur de publication Oracle**.  
+3.  Dans la page **Serveurs de publication** de la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>**, cliquez sur **Ajouter**, puis sur **Ajouter un serveur de publication Oracle**.  
   
 4.  Dans la boîte de dialogue **Se connecter au serveur** , cliquez sur le bouton **Options** .  
   
@@ -68,9 +68,9 @@ ms.locfileid: "63020865"
   
 6.  Dans l'onglet **Propriétés de la connexion** , sélectionnez un type de serveur de publication ( **Passerelle** ou **Complet**).  
   
-     L’option **Complet** est conçue pour fournir des publications transactionnelles et d’instantané avec l’ensemble complet de fonctionnalités prises en charge pour la publication Oracle. L'option **Passerelle** permet l'optimisation de la conception en améliorant les performances pour les cas où la réplication sert de passerelle entre les systèmes. Vous ne pouvez pas utiliser l'option **Passerelle** si vous envisagez de publier la même table dans plusieurs publications transactionnelles. Une table peut apparaître au maximum dans une publication transactionnelle et dans une ou plusieurs publications d'instantané si vous sélectionnez **Passerelle**.  
+     L’option **complet** est conçue pour fournir des publications transactionnelles et d’instantané avec l’ensemble complet des fonctionnalités prises en charge pour la publication Oracle. L'option **Passerelle** permet l'optimisation de la conception en améliorant les performances pour les cas où la réplication sert de passerelle entre les systèmes. Vous ne pouvez pas utiliser l'option **Passerelle** si vous envisagez de publier la même table dans plusieurs publications transactionnelles. Une table peut apparaître au maximum dans une publication transactionnelle et dans une ou plusieurs publications d'instantané si vous sélectionnez **Passerelle**.  
   
-7.  Cliquez sur **Se connecter**, qui crée une connexion au serveur de publication Oracle et le configure pour la réplication. La boîte de dialogue **Se connecter au serveur** se ferme et vous revenez dans la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>** .  
+7.  Cliquez sur **Se connecter**, qui crée une connexion au serveur de publication Oracle et le configure pour la réplication. La boîte de dialogue **Se connecter au serveur** se ferme et vous revenez dans la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>**.  
   
     > [!NOTE]  
     >  En cas de problème lié à la configuration réseau, vous recevrez un message d'erreur à ce stade. Si vous rencontrez des difficultés pour vous connecter à la base de données Oracle, consultez la section « Connexion impossible du serveur de distribution SQL Server à l'instance de base de données Oracle » dans [Troubleshooting Oracle Publishers](../non-sql/troubleshooting-oracle-publishers.md).  
@@ -101,12 +101,12 @@ ms.locfileid: "63020865"
   
      Pour plus d'informations sur les autorisations requises par chaque Agent, consultez [Replication Agent Security Model](../security/replication-agent-security-model.md) et [Replication Security Best Practices](../security/replication-security-best-practices.md).  
   
-10. Dans la page **Actions de l'Assistant** , créez éventuellement un script de la publication. Pour plus d’informations, consultez [Scripting Replication](../scripting-replication.md).  
+10. Dans la page **Actions de l'Assistant** , créez éventuellement un script de la publication. Pour plus d'informations, voir [Scripting Replication](../scripting-replication.md).  
   
 11. Dans la page **Terminer l'Assistant** , spécifiez un nom pour la publication.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
- Une fois la base de données Oracle configurée comme serveur de publication, vous pouvez créer une publication transactionnelle ou d’instantané de la même manière que depuis un serveur de publication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], en utilisant des procédures stockées système.  
+ Une fois la base de données Oracle configurée en tant que serveur de publication, vous pouvez créer une publication transactionnelle ou d’instantané de la même façon [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que vous le feriez à partir d’un serveur de publication, à l’aide de procédures stockées système.  
   
 #### <a name="to-create-an-oracle-publication"></a>Pour créer une publication Oracle  
   
@@ -114,38 +114,39 @@ ms.locfileid: "63020865"
   
 2.  S'il n'existe pas de serveur de distribution distant, configurez-en un. Pour plus d’informations, consultez [Configure Publishing and Distribution](../configure-publishing-and-distribution.md).  
   
-3.  Sur le serveur de distribution distant que le serveur de publication Oracle utilisera, exécutez [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql). Spécifiez le nom de Transparent Network Substrate (TNS) de l’instance de base de données Oracle pour **@publisher** et la valeur `ORACLE` ou `ORACLE GATEWAY` pour **@publisher_type** . `Specify` le mode de sécurité utilisé lors de la connexion entre le Serveur de publication Oracle et le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] distant parmi les modes suivants :  
+3.  Sur le serveur de distribution distant que le serveur de publication Oracle utilisera, exécutez [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql). Spécifiez le nom TNS (transparent Network substrat) de l’instance de base **@publisher** de données Oracle pour `ORACLE` et `ORACLE GATEWAY` une **@publisher_type**valeur ou pour. 
+  `Specify` le mode de sécurité utilisé lors de la connexion entre le Serveur de publication Oracle et le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] distant parmi les modes suivants :  
   
-    -   Pour utiliser l'authentification standard Oracle (valeur par défaut), affectez la valeur **0** pour **@security_mode** , spécifiez la connexion du schéma utilisateur d'administration de réplication que vous avez créée sur le serveur de publication Oracle au cours de la configuration pour **@login** et le mot de passe pour **@password** .  
+    -   Pour utiliser l'authentification standard Oracle (valeur par défaut), affectez la valeur **0** pour **@security_mode**, spécifiez la connexion du schéma utilisateur d'administration de réplication que vous avez créée sur le serveur de publication Oracle au cours de la configuration pour **@login**et le mot de passe pour **@password**.  
   
         > [!IMPORTANT]  
         >  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous stockez des informations d'identification dans un fichier de script, vous devez sécuriser le fichier pour empêcher tout accès non autorisé.  
   
-    -   Pour utiliser l'authentification Windows, affectez la valeur **1** pour **@security_mode** .  
+    -   Pour utiliser l'authentification Windows, affectez la valeur **1** pour **@security_mode**.  
   
         > [!NOTE]  
         >  Pour utiliser l'authentification Windows, le serveur Oracle doit être configuré pour autoriser les connexions à l'aide des informations d'identification Windows (pour plus d'informations, consultez la documentation Oracle) et vous devez être actuellement connecté avec le même compte Microsoft Windows que celui spécifié pour le schéma utilisateur d'administration de réplication.  
   
 4.  Créez un travail de l'Agent de lecture du journal pour la base de données de publication.  
   
-    -   Si vous ne savez pas si un travail de l’Agent de lecture du journal existe pour une base de données publiée, exécutez [sp_helplogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql) au niveau du serveur de distribution utilisé par le serveur de publication Oracle dans la base de données de distribution. Spécifiez le nom du serveur de publication Oracle pour **@publisher** . Si le jeu de résultats est vide, un travail de l'Agent de lecture du journal doit être créé.  
+    -   Si vous ne savez pas si un travail de l’Agent de lecture du journal existe pour une base de données publiée, exécutez [sp_helplogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql) au niveau du serveur de distribution utilisé par le serveur de publication Oracle dans la base de données de distribution. Spécifiez le nom du serveur de publication **@publisher**Oracle pour. Si le jeu de résultats est vide, un travail de l'Agent de lecture du journal doit être créé.  
   
     -   Si un travail de l'Agent de lecture du journal existe déjà pour la base de données de publication, passez à l'étape 5.  
   
-    -   Dans la base de données de distribution sur le serveur de distribution utilisé par le serveur de publication Oracle, exécutez [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Spécifiez les informations d'identification Windows sous lesquelles l'agent s'exécute pour **@job_login** et **@job_password** .  
+    -   Dans la base de données de distribution sur le serveur de distribution utilisé par le serveur de publication Oracle, exécutez [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Spécifiez les informations d’identification Windows sous lesquelles l’agent **@job_login** s' **@job_password**exécute pour et.  
   
         > [!NOTE]  
-        >  L’option **@job_login** doit correspondre à la connexion fournie à l'étape 3. Ne fournissez pas d'informations de sécurité pour le serveur de publication. L'Agent de lecture du journal se connecte au serveur de publication à l'aide des informations de sécurité fournies à l'étape 3.  
+        >  Le **@job_login** paramètre doit correspondre à la connexion fournie à l’étape 3. Ne fournissez pas d'informations de sécurité pour le serveur de publication. L'Agent de lecture du journal se connecte au serveur de publication à l'aide des informations de sécurité fournies à l'étape 3.  
   
-5.  Dans la base de données de distribution sur le serveur de distribution, exécutez [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) pour créer la publication. Pour plus d’informations, consultez [Create a Publication](create-a-publication.md).  
+5.  Dans la base de données de distribution sur le serveur de distribution, exécutez [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) pour créer la publication. Pour plus d’informations, voir [Create a Publication](create-a-publication.md).  
   
-6.  Dans la base de données de distribution sur le serveur de distribution, exécutez [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Spécifiez le nom de publication utilisé à l'étape 4 pour **@publication** et les informations d'identification Windows sous lesquelles l'Agent d'instantané s'exécute pour **@job_name** et **@password** . Pour utiliser l'authentification standard Oracle lors de la connexion au serveur de publication, vous devez également affecter la valeur **0** pour **@publisher_security_mode** et spécifier les informations de connexion Oracle pour **@publisher_login** et **@publisher_password** . Il s'ensuit la création d'un travail de l'Agent d'instantané pour la publication.  
+6.  Dans la base de données de distribution sur le serveur de distribution, exécutez [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Spécifiez le nom de la publication utilisé à **@publication** l’étape 4 pour et les informations d’identification Windows sous **@job_name** lesquelles **@password**l’agent d’instantané s’exécute pour et. Pour utiliser l'authentification standard Oracle lors de la connexion au serveur de publication, vous devez également affecter la valeur **0** pour **@publisher_security_mode** et spécifier les informations de connexion Oracle pour **@publisher_login** et **@publisher_password**. Il s'ensuit la création d'un travail de l'Agent d'instantané pour la publication.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer un serveur de publication Oracle](../non-sql/configure-an-oracle-publisher.md)   
  [Publier des données et des objets de base de données](publish-data-and-database-objects.md)   
- [Configurer le travail d’un jeu de transactions pour un serveur de publication Oracle &#40;programmation Transact-SQL de la réplication&#41;](../administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
- [Vue d’ensemble de la publication Oracle](../non-sql/oracle-publishing-overview.md)   
- [Script to Grant Oracle Permissions](../non-sql/script-to-grant-oracle-permissions.md)  
+ [Configurer le travail du jeu de transactions pour un serveur de publication Oracle &#40;la programmation Transact-SQL de la réplication&#41;](../administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
+ [Présentation de la publication Oracle](../non-sql/oracle-publishing-overview.md)   
+ [Script pour accorder des autorisations Oracle](../non-sql/script-to-grant-oracle-permissions.md)  
   
   

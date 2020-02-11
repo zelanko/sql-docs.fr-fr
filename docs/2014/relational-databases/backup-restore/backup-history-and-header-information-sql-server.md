@@ -34,10 +34,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b1ab8545714e84c8ecf8ee6c9cb89b7b8c0d3831
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922228"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Historique de sauvegarde et informations d'en-tête (SQL Server)
@@ -67,7 +67,7 @@ ms.locfileid: "62922228"
 ##  <a name="BnRHistoryTables"></a> Tables d'historique de sauvegarde et de restauration  
  Cette section présente les tables d'historique qui stockent les métadonnées de restauration et de sauvegarde dans la base de données système **msdb** .  
   
-|Table d'historique|Description|  
+|Table d’historique|Description|  
 |-------------------|-----------------|  
 |[backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)|Cette table contient une ligne pour chaque fichier de données ou fichier journal sauvegardé.|  
 |[backupfilegroup](/sql/relational-databases/system-tables/backupfilegroup-transact-sql)|Contient une ligne pour chaque groupe de fichiers d'un jeu de sauvegarde.|  
@@ -130,7 +130,7 @@ ms.locfileid: "62922228"
 ##  <a name="CompareMediaHeaderBackupHeader"></a> Comparaison des informations d'en-tête de support et d'en-tête de sauvegarde  
  La tableau suivant donne un exemple des différences entre l’affichage des informations de l’en-tête de sauvegarde et de l’en-tête de support. L'obtention de l'en-tête de support ne nécessite que la récupération des informations au début de la bande. L'obtention de l'en-tête de sauvegarde nécessite d'analyser la bande entière pour examiner l'en-tête de chaque jeu de sauvegarde.  
   
- ![Support de sauvegarde contenant trois jeux de sauvegarde SQL Server](../../database-engine/media/bnr-media-label.gif "Support de sauvegarde contenant trois jeux de sauvegarde SQL Server")  
+ ![Jeu de supports contenant trois jeux de sauvegarde SQL Server](../../database-engine/media/bnr-media-label.gif "Jeu de supports contenant trois jeux de sauvegarde SQL Server")  
   
 > [!NOTE]  
 >  Si vous utilisez des jeux de supports ayant plusieurs familles de supports, l'en-tête de support et le jeu de sauvegarde sont écrits sur toutes les familles. Par conséquent, il suffit de fournir une seule famille de supports pour ces opérations de rapport.  

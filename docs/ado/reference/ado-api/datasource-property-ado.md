@@ -16,23 +16,23 @@ ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd677e29631e53eeb71c43e8174baff553defc85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933246"
 ---
 # <a name="datasource-property-ado"></a>DataSource, propriété (ADO)
-Indique un objet qui contient les données pour être représentée comme un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
+Indique un objet qui contient les données à représenter sous la forme d’un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
 ## <a name="remarks"></a>Notes  
- Cette propriété est utilisée pour créer des contrôles liés aux données avec l’environnement de données. L’environnement de données conserve des collections de données (sources de données) contenant des objets nommés (données membres) qui seront représentés comme un **Recordset** objet.  
+ Cette propriété est utilisée pour créer des contrôles liés aux données avec l’environnement de données. L’environnement de données conserve des collections de données (sources de données) contenant des objets nommés (membres de données) qui seront représentés sous la forme d’un objet **Recordset** .  
   
- Le [DataMember](../../../ado/reference/ado-api/datamember-property.md) et **DataSource** propriétés doivent être utilisées conjointement.  
+ Les propriétés [DataMember](../../../ado/reference/ado-api/datamember-property.md) et **DataSource** doivent être utilisées conjointement.  
   
- L’objet référencé doit implémenter le **IDataSource** interface et doit contenir un **IRowset** interface.  
+ L’objet référencé doit implémenter l’interface **IDataSource** et doit contenir une interface **IRowset** .  
   
-## <a name="usage"></a>Utilisation  
+## <a name="usage"></a>Usage  
   
 ```  
 Dim rs as New ADODB.Recordset  

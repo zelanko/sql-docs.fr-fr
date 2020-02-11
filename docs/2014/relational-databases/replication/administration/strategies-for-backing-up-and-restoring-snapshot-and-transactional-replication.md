@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210774"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Stratégies de sauvegarde et de restauration de la réplication transactionnelle et d'instantané
@@ -71,7 +71,7 @@ ms.locfileid: "68210774"
   
  **Pour définir l'option sync with backup**  
   
--   Programmation de la réplication [!INCLUDE[tsql](../../../includes/tsql-md.md)] : [Activer les sauvegardes coordonnées pour la réplication transactionnelle &#40;programmation Transact-SQL de la réplication&#41;](enable-coordinated-backups-for-transactional-replication.md)  
+-   Programmation [!INCLUDE[tsql](../../../includes/tsql-md.md)] de la réplication : [Activer les sauvegardes coordonnées pour la réplication transactionnelle &#40;programmation Transact-SQL de la réplication&#41;](enable-coordinated-backups-for-transactional-replication.md)  
   
 ## <a name="restoring-databases-involved-in-replication"></a>Restauration des bases de données concernées par la réplication  
  Il est possible de restaurer toutes les bases de données d'une topologie de réplication s'il existe des sauvegardes récentes et si vous respectez la procédure indiquée. Les étapes de restauration de la base de données de publication dépendent du type de réplication et des options utilisées, ce qui n'est pas le cas pour toutes les autres bases de données.  
@@ -101,7 +101,7 @@ ms.locfileid: "68210774"
   
      Pour plus d’informations sur la suppression de la réplication, consultez [sp_removedbreplication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql).  
   
-#### <a name="publication-database-read-only-transactional-replication"></a>Base de données de publication : Réplication transactionnelle en lecture seule  
+#### <a name="publication-database-read-only-transactional-replication"></a>Base de données de publication : réplication transactionnelle en lecture seule  
   
 1.  Restaurez la dernière sauvegarde de la base de données de publication. Passez à l’étape 2.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68210774"
   
          Pour plus d’informations sur l’exécution de l’Agent de distribution, consultez [Démarrer et arrêter un Agent de réplication &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) ou [Concepts des exécutables de l’Agent de réplication](../concepts/replication-agent-executables-concepts.md).  
   
-         Pour plus d’informations sur la vérification des commandes, consultez [afficher les commandes répliquées et autres informations dans la base de données de Distribution &#40;programmation Transact-SQL de la réplication&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) et [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+         Pour plus d’informations sur la vérification des commandes, consultez [afficher les commandes répliquées et d’autres informations dans la base de données de Distribution &#40;la programmation Transact-SQL de la réplication&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) et [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Supprimez la configuration de la réplication sur le serveur de publication, le serveur de distribution et les Abonnés, puis recréez la configuration. Lorsque vous recréez les abonnements, spécifiez que l'Abonné possède déjà les données. La restauration est terminée.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "68210774"
   
          Pour plus d’informations sur l’exécution de l’Agent de distribution, consultez [Démarrer et arrêter un Agent de réplication &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) ou [Concepts des exécutables de l’Agent de réplication](../concepts/replication-agent-executables-concepts.md).  
   
-         Pour plus d’informations sur la vérification des commandes, consultez [afficher les commandes répliquées et autres informations dans la base de données de Distribution &#40;programmation Transact-SQL de la réplication&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) et [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+         Pour plus d’informations sur la vérification des commandes, consultez [afficher les commandes répliquées et d’autres informations dans la base de données de Distribution &#40;la programmation Transact-SQL de la réplication&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) et [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Utilisez l' [utilitaire tablediff](../../../tools/tablediff-utility.md) ou un autre outil pour synchroniser manuellement le serveur de publication avec l'Abonné. Cela vous permet de récupérer les données de la base de données d'abonnement qui ne se trouvaient pas dans la sauvegarde de la base de données de publication. Passez à l'étape c.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "68210774"
   
          Pour plus d'informations sur la manière de spécifier que l'Abonné possède déjà les données, consultez [Initialize a Subscription Manually](../initialize-a-subscription-manually.md).  
   
-#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>Base de données de publication : Réplication transactionnelle avec abonnements mis à jour  
+#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>Base de données de publication : réplication transactionnelle avec des abonnements mis à jour  
   
 1.  Restaurez la dernière sauvegarde de la base de données de publication. Passez à l’étape 2.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "68210774"
   
      Pour plus d’informations sur l’exécution de l’Agent de distribution, consultez [Démarrer et arrêter un Agent de réplication &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) ou [Concepts des exécutables de l’Agent de réplication](../concepts/replication-agent-executables-concepts.md).  
   
-     Pour plus d’informations sur la vérification des commandes, consultez [afficher les commandes répliquées et autres informations dans la base de données de Distribution &#40;programmation Transact-SQL de la réplication&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) et [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Pour plus d’informations sur la vérification des commandes, consultez [afficher les commandes répliquées et d’autres informations dans la base de données de Distribution &#40;la programmation Transact-SQL de la réplication&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) et [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 3.  Si vous utilisez les abonnements mis à jour en attente, connectez-vous à chaque Abonné et supprimez toutes les lignes de la table [MSreplication_queue &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/msreplication-queue-transact-sql) dans la base de données d’abonnement. Passez à l’étape 4.  
   
@@ -205,19 +205,19 @@ ms.locfileid: "68210774"
   
     1.  Recréez la publication sur la base de données **B**. Passez à l'étape b.  
   
-    2.  Recréez l'abonnement de la base de données **B** à la publication de la base de données **A**, en spécifiant que l'abonnement doit être initialisé avec une sauvegarde (valeur **initialize with backup** pour le paramètre **@sync_type** de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Passez à l'étape c.  
+    2.  Recréez l’abonnement de la base de données **B** à la publication de la base de données **a**, en spécifiant que l’abonnement doit être initialisé avec une sauvegarde (valeur **Initialize with backup** pour le **@sync_type** paramètre de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Passez à l'étape c.  
   
-    3.  Recréez l'abonnement de la base de données **A** à la publication de la base de données **B**, en spécifiant que l'abonnement possède déjà les données (valeur **replication support only** pour le paramètre **@sync_type** de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Passez à l’étape 8.  
+    3.  Recréez l’abonnement de la base de données **a** à la publication de la base de données **B**, en spécifiant que l’abonné possède déjà les données ( **@sync_type** valeur de la **prise en charge de la réplication uniquement** pour le paramètre de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Passez à l’étape 8.  
   
 8.  Exécutez les Agents de distribution pour synchroniser les abonnements sur les bases de données **A** et **B**. Si les tables publiées comportent des colonnes d'identité, passez à l'étape 9. Sinon, passez à l’étape 10.  
   
 9. Après la restauration, la plage d’identité assignée à chaque table de la base de données **A** est également utilisée dans la base de données **B**. Vérifiez que la base de données **B** restaurée a reçu toutes les modifications de la base de données **B** défaillante qui ont été propagées aux bases de données **A** et **C**, puis réattribuez une valeur de départ à la plage d’identité de chaque table.  
   
-    1.  Exécutez [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) sur la base de données **B** et récupérez le paramètre de sortie **@request_id** . Passez à l'étape b.  
+    1.  Exécutez [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) à la base de données **B** et récupérez le paramètre **@request_id**de sortie. Passez à l'étape b.  
   
     2.  Par défaut, l'Agent de distribution est configuré pour s'exécuter en continu ; par conséquent, les jetons doivent être envoyés automatiquement à tous les nœuds. Si l'Agent de distribution ne s'exécute pas en mode continu, exécutez l'Agent. Pour plus d’informations, consultez [Concepts des exécutables de l’agent de réplication](../concepts/replication-agent-executables-concepts.md) ou [Démarrer et arrêter un Agent de réplication &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md). Passez à l'étape c.  
   
-    3.  Exécutez [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), en fournissant la valeur **@request_id** récupérée à l'étape b. Attendez que tous les nœuds indiquent qu'ils ont reçu la demande de l'homologue. Passez à l'étape d.  
+    3.  Exécutez [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), en fournissant **@request_id** la valeur récupérée à l’étape b. Attendez que tous les nœuds indiquent qu'ils ont reçu la demande de l'homologue. Passez à l'étape d.  
   
     4.  Utilisez [DBCC CHECKIDENT](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql) pour réattribuer une valeur de départ à chaque table de la base de données **B** et vérifier qu'une plage appropriée est utilisée. Passez à l'étape 10.  
   
@@ -229,11 +229,11 @@ ms.locfileid: "68210774"
   
     1.  Arrêtez toute activité sur les tables publiées dans la topologie d'égal à égal. Passez à l'étape b.  
   
-    2.  Exécutez [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) sur la base de données **B** et récupérez le paramètre de sortie **@request_id** . Passez à l'étape c.  
+    2.  Exécutez [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) à la base de données **B** et récupérez le paramètre **@request_id**de sortie. Passez à l'étape c.  
   
     3.  Par défaut, l'Agent de distribution est configuré pour s'exécuter en continu ; par conséquent, les jetons doivent être envoyés automatiquement à tous les nœuds. Si l'Agent de distribution ne s'exécute pas en mode continu, exécutez l'Agent. Passez à l'étape d.  
   
-    4.  Exécutez [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), en fournissant la valeur **@request_id** récupérée à l'étape b. Attendez que tous les nœuds indiquent qu'ils ont reçu la demande de l'homologue. Passez à l'étape e.  
+    4.  Exécutez [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), en fournissant **@request_id** la valeur récupérée à l’étape b. Attendez que tous les nœuds indiquent qu'ils ont reçu la demande de l'homologue. Passez à l'étape e.  
   
     5.  Recréez l'abonnement de la base de données **B** à la publication de la base de données **C**, en spécifiant que l'Abonné possède déjà les données. Passez à l'étape b.  
   
@@ -243,7 +243,7 @@ ms.locfileid: "68210774"
   
     1.  Sur la base de données **B**, interrogez la table [MSpeer_lsns](/sql/relational-databases/system-tables/mspeer-lsns-transact-sql) pour récupérer le numéro séquentiel dans le journal de la transaction la plus récente que la base de données **B** a reçue de la base de données **C**.  
   
-    2.  Recréez l'abonnement de la base de données **B** à la publication de la base de données **C**, en spécifiant que l'abonnement doit être initialisé en fonction du numéro séquentiel dans le journal (valeur **initialize with backup** pour le paramètre **@sync_type** de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Passez à l'étape b.  
+    2.  Recréez l’abonnement de la base de données **B** à la publication de la base de données **C**, en spécifiant que l’abonnement doit être initialisé en fonction du LSN (valeur **@sync_type** **initialize from LSN** pour le paramètre de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Passez à l'étape b.  
   
     3.  Recréez l'abonnement de la base de données **C** à la publication de la base de données **B**, en spécifiant que l'Abonné possède déjà les données. Passez à l’étape 13.  
   

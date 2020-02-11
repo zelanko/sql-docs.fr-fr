@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7f6f3532165b8e958eb03cdf4954543159309a08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937717"
 ---
 # <a name="isdescendant-dmx"></a>IsDescendant (DMX)
@@ -31,7 +31,7 @@ IsDescendant(<NodeID>)
  Type booléen  
   
 ## <a name="remarks"></a>Notes  
- **IsDescendant** est utilisée uniquement dans [SELECT FROM &#60;modèle&#62;. CONTENU &#40;DMX&#41; ](../dmx/select-from-model-content-dmx.md) et [SELECT FROM &#60;modèle&#62;. DIMENSION_CONTENT &#40;DMX&#41; ](../dmx/select-from-model-dimension-content-dmx.md) requêtes.  
+ **IsDescendant** est utilisé uniquement dans les [&#62; de modèle Select from &#60;. CONTENU &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md) et [sélectionnez &#60;&#62; de modèle. DIMENSION_CONTENT &#40;des requêtes&#41;DMX](../dmx/select-from-model-dimension-content-dmx.md) .  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant retourne tous les cas qui descendent du nœud spécifié dans la fonction IsDescendant.  
@@ -42,8 +42,8 @@ WHERE IsDescendant('00000000100')
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Informations de référence sur les fonctions DMX&#41; Data Mining Extensions &#40;](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Fonctions &#40;&#41;DMX](../dmx/functions-dmx.md)   
+ [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)  
   
   

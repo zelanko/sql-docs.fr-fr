@@ -1,5 +1,5 @@
 ---
-title: Options (SQL Server Explorateur d’objets-commandes) | Microsoft Docs
+title: Options (Explorateur d’objets SQL Server-commandes) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd2aeedcfcb9c4888e730f94c73aabe2cdd6607d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999307"
 ---
-# <a name="options-sql-server-object-explorer-commands"></a>Options (SQL Server Explorateur d’objets-commandes)
+# <a name="options-sql-server-object-explorer-commands"></a>Options (Explorateur d’objets SQL Server-commandes)
   Lorsque vous cliquez avec le bouton droit sur une table ou une vue dans l'Explorateur d'objets, les deux options suivantes relatives à l'affichage des lignes dans la table s'affichent :  
   
 -   **Sélectionner les 1000 lignes du haut**  
@@ -33,16 +33,16 @@ ms.locfileid: "62999307"
  Utilisez la boîte de dialogue **Options de script générales** pour modifier le nombre de lignes qui seront ouvertes.  
   
 ## <a name="general-scripting-options"></a>Options de script générales  
- **Valeur de Select Top \<n > commande l’enregistrement de l’Audit**  
+ **Valeur de la commande \<sélectionner les n premiers n> enregistrement d’audit**  
  Spécifie le nombre de lignes d'audit à retourner. La valeur par défaut est 1000 lignes.  
   
- **Valeur pour modifier les premières \<n > lignes de commande**  
+ **Valeur de la commande \<modifier les n premières lignes>**  
  Spécifie le nombre de lignes à retourner lorsque vous modifiez des lignes dans une table. La valeur par défaut est 200 lignes.  
   
- **Valeur de Select Top \<n > lignes de commande**  
+ **Valeur de la commande \<sélectionner les n premières lignes>**  
  Spécifie le nombre de lignes à retourner qui est spécifié dans le script de l'éditeur de requête créé. La valeur par défaut est 1000 lignes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Audit &#40Moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
+ [SQL Server Audit &#40moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

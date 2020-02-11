@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf8b3b4f00ad2e8a3b9236292ee20948c852b6ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68199554"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Définir et modifier un filtre de jointure entre des articles de fusion
@@ -83,7 +83,7 @@ ms.locfileid: "68199554"
         > [!CAUTION]  
         >  La sélection de cette option indique que la relation entre les tables enfant et parent dans un filtre de jointure correspond à une relation Un à un ou Un à plusieurs. Sélectionnez cette option seulement si vous avez une contrainte sur la colonne de jointure dans la table enfant qui garantit l'unicité. Si vous ne définissez pas correctement l'option, des erreurs de non-convergence de données peuvent se produire.  
   
-    -   Par défaut, la réplication de fusion traite les modifications ligne par ligne lors de la synchronisation. Pour que les modifications dans les lignes de la table filtrée et de la table jointe soient traitées comme une unité, sélectionnez **Enregistrement logique** ([!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et ses versions ultérieures seulement). Cette option est disponible uniquement si les conditions d'article et de publication d'utilisation d'enregistrements logiques sont satisfaites. Pour plus d’informations, consultez la section « Considérations relatives à l’utilisation d’enregistrements logiques » dans [Regrouper les modifications apportées à des lignes connexes à l’aide d’enregistrements logiques](../merge/group-changes-to-related-rows-with-logical-records.md).  
+    -   Par défaut, la réplication de fusion traite les modifications ligne par ligne lors de la synchronisation. Pour que les modifications dans les lignes de la table filtrée et de la table jointe soient traitées comme une unité, sélectionnez **Enregistrement logique** ([!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et ses versions ultérieures uniquement). Cette option est disponible uniquement si les conditions d'article et de publication d'utilisation d'enregistrements logiques sont satisfaites. Pour plus d’informations, consultez la section « Considérations relatives à l’utilisation d’enregistrements logiques » dans [Regrouper les modifications apportées à des lignes connexes à l’aide d’enregistrements logiques](../merge/group-changes-to-related-rows-with-logical-records.md).  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -112,9 +112,9 @@ ms.locfileid: "68199554"
   
     -   Pour un article filtré à l'aide d'un filtre de lignes statique, consultez [Définir et modifier un filtre de lignes statiques](define-and-modify-a-static-row-filter.md)  
   
-2.  Exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) sur la base de données de publication du serveur de publication pour définir un ou plusieurs articles connexes, également appelés « articles enfants », pour la publication. Pour plus d'informations, voir [Define an Article](define-an-article.md).  
+2.  Exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) sur la base de données de publication du serveur de publication pour définir un ou plusieurs articles connexes, également appelés « articles enfants », pour la publication. Pour plus d’informations, consultez [définir un Article](define-an-article.md).  
   
-3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql). Spécifiez **@publication** , le nom unique de ce filtre pour **@filtername** , le nom de l'article enfant créé à l'étape 2 pour **@article** , le nom de l'article parent auquel s'effectue la jointure pour **@join_articlename** et l'une des valeurs suivantes pour **@join_unique_key** :  
+3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql). Spécifiez **@publication**, un nom unique pour ce filtre **@filtername**pour, le nom de l’article enfant créé à l’étape **@article**2 pour, le nom de l’article parent qui est **@join_articlename**joint à pour et l’une des valeurs **@join_unique_key**suivantes pour :  
   
     -   **0** – indique une jointure plusieurs-à-un ou plusieurs-à-plusieurs entre les articles parents et enfants.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "68199554"
      Cela définit un filtre de jointure entre les deux articles.  
   
     > [!CAUTION]  
-    >  Affectez uniquement à **@join_unique_key** la valeur **1** s'il existe une contrainte sur la colonne de jointure dans la table sous-jacente pour l'article parent qui garantit l'unicité. Si **@join_unique_key** se voit affecter la valeur **1** de manière inappropriée, une non-convergence des données peut se produire.  
+    >  Affectez **@join_unique_key** uniquement la valeur **1** si vous avez une contrainte sur la colonne de jointure dans la table sous-jacente pour l’article parent qui garantit l’unicité. Si **@join_unique_key** a la valeur **1** de manière incorrecte, la non-convergence des données peut se produire.  
   
 ###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
  Cet exemple définit un article pour une publication de fusion, où l'article de la table `SalesOrderDetail` est filtré par rapport à la table `SalesOrderHeader` qui est elle-même filtrée à l'aide d'un filtre de ligne statique. Pour plus d'informations, voir [Définir et modifier un filtre de lignes statiques](define-and-modify-a-static-row-filter.md).  
@@ -139,7 +139,7 @@ ms.locfileid: "68199554"
  [Filtres de lignes paramétrés](../merge/parameterized-filters-parameterized-row-filters.md)   
  [Changer les propriétés des publications et des articles](change-publication-and-article-properties.md)   
  [Filtrer des données publiées en vue de la réplication de fusion](../merge/filter-published-data-for-merge-replication.md)   
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [Concepts liés aux procédures stockées système de réplication](../concepts/replication-system-stored-procedures-concepts.md)   
  [Définir une relation d’enregistrement logique entre des articles de table de fusion](define-a-logical-record-relationship-between-merge-table-articles.md)   
  [Définir et modifier un filtre de lignes paramétrable pour un article de fusion](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)  
   

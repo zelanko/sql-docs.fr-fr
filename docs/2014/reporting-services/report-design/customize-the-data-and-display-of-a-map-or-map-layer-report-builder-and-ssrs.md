@@ -24,14 +24,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3cc939ac63f1b53e2d2d24d70edc5fe0798bcc51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106095"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personnaliser des données et l'affichage d'une carte ou d'une couche (Générateur de rapports et SSRS)
-  Après avoir ajouté une carte ou une couche à un rapport à l'aide d'un Assistant, vous souhaiterez peut-être modifier l'apparence de la carte dans le rapport. Vous pouvez apporter des améliorations en considérant les points suivants :  
+  Après avoir ajouté une carte ou une couche à un rapport à l'aide d'un Assistant, vous souhaiterez peut-être modifier l'apparence de la carte dans le rapport. Vous pouvez apporter des améliorations en considérant les points suivants :  
   
 -   Pour aider vos utilisateurs à interpréter l'affichage des données sur une carte, vous pouvez ajouter des légendes et une échelle de couleurs, ainsi que des étiquettes et des info-bulles.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "66106095"
   
  L'expression de groupe spécifie comment les données analytiques en relation avec les données spatiales sont regroupées pour chaque élément cartographique de la couche. Par défaut, l'expression de groupe est le jeu de champs de correspondance spécifié pour la relation entre les données spatiales et les données analytiques. Par exemple, pour une carte à bulles affichant les villes et la taille de la population d'un pays ou d'une région, les champs de correspondance incluent le nom de ville [Ville] et le nom de région [Région] parce que plusieurs villes peuvent avoir le même nom. L'expression de groupe correspondante inclut deux champs : [Ville] et [Région].  
   
- Pour plus d'informations, consultez [Map Tips: How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](https://go.microsoft.com/fwlink/?LinkID=214991).  
+ Pour plus d’informations, consultez [Map Tips: How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](https://go.microsoft.com/fwlink/?LinkID=214991).  
   
  
   
@@ -142,7 +142,7 @@ ms.locfileid: "66106095"
   
 -   actions d'extraction ;  
   
--   options d'affichage.  
+-   les options d’affichage ;  
   
  Les options d'affichage des éléments cartographiques suivent un ordre de priorité basé sur la couche, l'élément cartographique, les règles définies pour l'élément cartographique et les options de remplacement pour les éléments cartographiques incorporés.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "66106095"
   
 -   Options relatives aux points, lignes ou polygones sur chaque couche. Ces options s'appliquent aussi bien si les éléments cartographiques sont récupérés dynamiquement lors du traitement du rapport que s'ils sont incorporés dans la définition de rapport. Par exemple, vous spécifiez une couleur de remplissage pour tous les éléments d'une couche.  
   
--   Règles. Vous pouvez définir des règles pour contrôler la couleur, la taille, la largeur ou le type de marqueur utilisés pour tous les éléments cartographiques d'une couche. Les règles que vous pouvez définir dépendent du type d'élément cartographique.  
+-   Les règles. Vous pouvez définir des règles pour contrôler la couleur, la taille, la largeur ou le type de marqueur utilisés pour tous les éléments cartographiques d'une couche. Les règles que vous pouvez définir dépendent du type d'élément cartographique.  
   
     -   Règles de couleur. Appliquez ces règles aux points, aux lignes, aux polygones, ainsi qu'aux marqueurs utilisés pour les points centraux de polygone.  
   

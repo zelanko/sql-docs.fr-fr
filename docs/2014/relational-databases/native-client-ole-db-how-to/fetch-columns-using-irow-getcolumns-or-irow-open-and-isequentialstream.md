@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca820a8f7f916aa473bdd527e24a9549b7c5195e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467582"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Extraire des colonnes avec IRow::GetColumns (ou IRow::Open) et ISequentialStream
   Les grandes données peuvent être liées ou récupérées à l'aide de l'interface `ISequentialStream`. Pour les colonnes liées, l'indicateur d'état DBSTATUS_S_TRUNCATED indique que les données sont tronquées.  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez conserver des informations d’identification, vous devez les chiffrer avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Pour extraire des colonnes avec IRow::GetColumns (ou IRow::Open) et ISequentialStream  
   
@@ -35,11 +35,12 @@ ms.locfileid: "62467582"
   
 3.  Extrayez les données de la colonne à l'aide de `IRow::Open()` ou `IRow::GetColumns()`.  
   
-    -   `IRow::Open()` peut être utilisé pour ouvrir un objet `ISequentialStream` sur la ligne. Spécifiez DBGUID_STREAM pour indiquer que la colonne contient un flux de données binaires (`IStream` ou `ISequentialStream` peut ensuite être utilisé pour lire les données de la colonne).  
+    -   
+  `IRow::Open()` peut être utilisé pour ouvrir un objet `ISequentialStream` sur la ligne. Spécifiez DBGUID_STREAM pour indiquer que la colonne contient un flux de données binaires (`IStream` ou `ISequentialStream` peut ensuite être utilisé pour lire les données de la colonne).  
   
-    -   Si `IRow::GetColumns()` est utilisé, le **pData** élément de structure DBCOLUMNACCESS est défini pour pointer vers un objet de flux.  
+    -   Si `IRow::GetColumns()` est utilisé, l’élément **pData** de la structure DBCOLUMNACCESS est défini pour pointer vers un objet de flux.  
   
-4.  Utilisez **ISequentialStream::Read()** à plusieurs reprises pour lire le nombre spécifié d’octets dans la mémoire tampon du consommateur.  
+4.  Utilisez **ISequentialStream :: Read ()** à plusieurs reprises pour lire le nombre spécifié d’octets dans la mémoire tampon du consommateur.  
   
 ## <a name="example"></a>Exemple  
  Cet exemple montre comment extraire une seule ligne avec IRow. Dans cet exemple, une colonne est récupérée à la fois de la ligne. Cet exemple illustre l'utilisation de IRow::Open() ainsi que de IRow::GetColumns(). Pour lire les données de la colonne, l'exemple utilise ISequentialStream::Read.  
@@ -670,6 +671,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques de procédures liées à OLE DB](ole-db-how-to-topics.md)  
+ [Rubriques de procédures OLE DB](ole-db-how-to-topics.md)  
   
   

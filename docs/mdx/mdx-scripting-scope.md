@@ -1,5 +1,5 @@
 ---
-title: L’instruction SCOPE (MDX) | Microsoft Docs
+title: SCOPE, instruction (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2f355842999b505a97c3387ab9e51d3b651c3b7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138281"
 ---
 # <a name="mdx-scripting---scope"></a>Écriture de scripts MDX - SCOPE
@@ -78,12 +78,12 @@ Limited_Set ::=
 > [!NOTE]  
 >  Les membres cachés sont exposés dans les instructions SCOPE.  
   
- Instructions SCOPE créent des sous-cubes qui exposent les « trous » quel que soit le **MDX Compatibility** paramètre. Par exemple, l'instruction `Scope( Customer.State.members )` peut inclure les états de pays ou de régions qui n'ont pas d'états, mais dans lesquels des membres d'espace réservés autrement invisibles ont été insérés.  
+ Les instructions SCOPE vont créer des sous-cubes qui exposent les « trous », quel que soit le paramètre de **compatibilité MDX** . Par exemple, l'instruction `Scope( Customer.State.members )` peut inclure les états de pays ou de régions qui n'ont pas d'états, mais dans lesquels des membres d'espace réservés autrement invisibles ont été insérés.  
   
  Les membres calculés et les jeux nommés créés dans le cadre d'une instruction SCOPE ne sont pas affectés par l'instruction SCOPE.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant, à partir du script de calcul MDX dans la société Adventure Works exemple de solution, définit l’étendue actuelle en tant que trimestre fiscal dans l’année fiscale 2005 et la mesure de quota du montant des ventes, puis assigne une valeur aux cellules dans l’étendue actuelle à l’aide de la  **ParallelPeriod** (fonction). L’exemple modifie ensuite l’étendue à l’aide d’une autre instruction SCOPE et qu’il exécute ensuite une autre assignation à l’aide du [This (MDX)](../mdx/this-mdx.md) (fonction).  
+ L’exemple suivant, extrait du script de calcul MDX de l’exemple de solution Adventure Works, définit l’étendue actuelle en tant que trimestre fiscal de l’année fiscale 2005 et la mesure Sales Amount quota, puis affecte une valeur aux cellules de l’étendue actuelle à l’aide de la fonction **ParallelPeriod** . L’exemple modifie ensuite la portée à l’aide d’une autre instruction SCOPE, puis effectue une autre assignation à l’aide de la fonction [This (MDX)](../mdx/this-mdx.md) .  
   
 ```  
 Scope   
@@ -114,6 +114,6 @@ End Scope ;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instructions de script MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
+ [Instructions de script MDX &#40;&#41;MDX](../mdx/mdx-scripting-statements-mdx.md)  
   
   

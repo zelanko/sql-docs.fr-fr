@@ -10,69 +10,69 @@ ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2c9dbd2b42ebde4cdfea602c3ad50c4b7d100bb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67944654"
 ---
 # <a name="sql-modes-mysqltosql"></a>Modes SQL (MySQLToSQL)
-SSMA pour MySQL peut fonctionner dans différents Modes SQL et applique ces modes différemment pour différents clients.  
+SSMA pour MySQL peut fonctionner dans différents modes SQL et peut appliquer ces modes différemment pour différents clients.  
   
-Modes de définissent la syntaxe SQL que MySQL doit prendre en charge, et le genre de validation de données vérifie qu’il doit effectuer. Cela rend plus facile à utiliser MySQL dans différents environnements et à utiliser MySQL avec SQL Server.  
+Les modes définissent la syntaxe SQL que MySQL doit prendre en charge, ainsi que le type de vérification de validation des données qu’il doit effectuer. Cela facilite l’utilisation de MySQL dans différents environnements et l’utilisation de MySQL avec SQL Server.  
   
-## <a name="sql-modes-grid"></a>Grille de Modes SQL :  
+## <a name="sql-modes-grid"></a>Grille des modes SQL :  
   
--   Grille de Modes SQL au niveau racine contient les colonnes suivantes : **Nom du Mode SQL**, **chargé de Modes SQL**, et **Modes SQL efficace**.  
+-   La grille des modes SQL au niveau racine contient les colonnes suivantes : **nom du mode SQL**, **modes SQL chargés**et **modes SQL effectifs**.  
   
--   Grille de Modes SQL sur les bases de données catégorie, base de données, Table catégorie, catégorie d’instructions, catégorie de vues, table, vue, fonctions, procédures, UDF et niveau de l’objet événement contient les colonnes suivantes : **Nom du Mode SQL**, **héritée de Modes SQL**, et **Modes SQL efficace**.  
+-   Grille des modes SQL dans les bases de données catégorie, base de données, catégorie de table, catégorie d’instructions, catégories de vues, table, vue, fonctions, procédures, UDF et niveau d’objet d’événement contient les colonnes suivantes : **nom du mode SQL**, **modes SQL hérités**et **modes SQL effectifs**.  
   
--   Grille de Modes SQL au niveau de la procédure stockée, fonction stockée et déclencheur contient les colonnes suivantes : **Nom du Mode SQL**, **les Modes SQL d’origine**, et **Modes SQL efficace**.  
-  
-> [!NOTE]  
-> Modes de groupe seront affichera en gras, sous la colonne 'Nom de Mode SQL'.  
-  
-## <a name="loaded-sql-modes"></a>Modes SQL chargé  
-Voici les Modes SQL, qui sont définies au niveau de la session ou racine. Les Modes SQL une fois chargés dans la base de données cible ne peut pas être modifiés ou édités.  
-  
-## <a name="inherited-sql-modes"></a>Modes SQL héritées  
-Voici les Modes SQL, qui sont héritées à partir du nœud Parent correspondant.  
-  
-À l’exception de la catégorie de fonctions, procédures, catégorie, catégorie d’événements et les déclencheurs, ces Modes SQL sont présents à tous les niveaux (objet de base de données, Table catégorie, catégorie d’instructions, vues catégorie, table, vue, fonctions, procédures, UDF et événements).  
+-   La grille des modes SQL au niveau des procédures stockées, des fonctions stockées et des déclencheurs contient les colonnes suivantes : **nom du mode SQL**, **modes SQL d’origine**et **modes SQL effectifs**.  
   
 > [!NOTE]  
-> En sélectionnant le **hériter du Parent** case à cocher, héritées des Modes SQL peuvent être héritée à partir du nœud parent. Par défaut, cette case à cocher est sélectionné.  
+> Les modes de groupe sont affichés en gras, sous la colonne « nom du mode SQL ».  
+  
+## <a name="loaded-sql-modes"></a>Modes SQL chargés  
+Il s’agit des modes SQL, qui sont définis au niveau de la session ou de la racine. Les modes SQL qui ont été chargés dans la base de données cible ne peuvent pas être modifiés ou modifiés.  
+  
+## <a name="inherited-sql-modes"></a>Modes SQL hérités  
+Il s’agit des modes SQL, qui sont hérités du nœud parent correspondant.  
+  
+À l’exception de la catégorie des fonctions, des procédures, des catégories d’événements et des déclencheurs, ces modes SQL sont présents à tous les niveaux (base de données, catégorie de table, catégorie d’instructions, catégorie des vues, table, vue, fonctions, procédures, UDF et objet d’événement).  
+  
+> [!NOTE]  
+> En activant la case à cocher **hériter du parent** , les modes SQL hérités peuvent être hérités du nœud parent. Par défaut, cette case à cocher reste activée.  
   
 ## <a name="original-sql-modes"></a>Modes SQL d’origine  
-Voici les Modes SQL présents à uniquement les niveaux de fonction, de procédures et de déclencheur.  
+Il s’agit des modes SQL présents uniquement au niveau de la fonction, de la procédure et du déclencheur.  
   
 > [!NOTE]  
-> En sélectionnant le **utiliser l’original** vérifier la zone, les Modes SQL qui ont été utilisés à l’origine dans la fonction correspondante ou de procédure ou un déclencheur peut être utilisé. Par défaut, cette case à cocher est sélectionné.  
+> En activant la case à cocher **utiliser l’original** , vous pouvez utiliser les modes SQL qui étaient utilisés à l’origine dans la fonction ou le déclencheur correspondant. Par défaut, cette case à cocher reste activée.  
   
-## <a name="effective-sql-modes"></a>Modes SQL efficace  
-Efficace Modes SQL peuvent être définis au différents niveaux de la façon suivante :  
+## <a name="effective-sql-modes"></a>Modes SQL effectifs  
+Les modes SQL efficaces peuvent être définis à différents niveaux de la façon suivante :  
   
 -   **Au niveau de la session :**  
   
-    1.  Tous les Modes SQL chargé peut être appelées, « Modes efficace de SQL ».  
+    1.  Tous les modes SQL chargés peuvent être appelés « modes SQL effectifs ».  
   
-    2.  À ce niveau, les modes SQL effectives peuvent être directement et explicitement modifiées.  
+    2.  À ce niveau, les modes SQL effectifs peuvent être modifiés directement et explicitement.  
   
-    3.  Le Mode de SQL efficace qui est défini explicitement ne sont pas reflété comme Mode de SQL chargé et pour finir, est appliqué à l’objet.  
+    3.  Le mode SQL effectif défini explicitement n’est pas reflété en mode SQL chargé et est enfin appliqué à l’objet.  
   
--   **Au niveau de la fonction ou procédure ou du déclencheur :**  
+-   **Au niveau de la fonction ou de la procédure ou du déclencheur :**  
   
-    1.  Tous les Modes SQL d’origine peut être appelée, « Modes efficace de SQL ».  
+    1.  Tous les modes SQL d’origine peuvent être appelés « modes SQL effectifs ».  
   
-    2.  À ce niveau, le mode SQL effectif peut être modifié explicitement uniquement lorsque la **utiliser l’original** case à cocher est désactivée.  
+    2.  À ce niveau, le mode SQL effectif peut être modifié explicitement uniquement lorsque la case à cocher **utiliser l’original** est désactivée.  
   
-    3.  Le Mode SQL efficace qui est défini explicitement ne sont pas reflété en tant que Mode SQL d’origine et pour finir, est appliqué à l’objet.  
+    3.  Le mode SQL effectif défini explicitement n’est pas reflété en mode SQL d’origine et est enfin appliqué à l’objet.  
   
--   **Sur des nœuds autres que de niveau de la fonction ou procédure ou du déclencheur :**  
+-   **À des nœuds autres que les fonctions, les procédures ou le niveau de déclencheur :**  
   
-    1.  Tous les Modes SQL héritée peut être appelées, « Modes efficace de SQL ».  
+    1.  Tous les modes SQL hérités peuvent être appelés « modes SQL effectifs ».  
   
-    2.  À ce niveau, le mode SQL effectif peut être modifié explicitement uniquement lorsque la **hériter du Parent** case à cocher est désactivée.  
+    2.  À ce niveau, le mode SQL effectif peut être modifié explicitement uniquement lorsque la case à cocher **hériter du parent** est désactivée.  
   
-    3.  Le Mode SQL efficace qui est défini explicitement ne sont pas reflété en tant que Mode hérité de SQL et pour finir, est appliqué à l’objet.  
+    3.  Le mode SQL effectif défini explicitement n’est pas reflété en mode SQL hérité et est enfin appliqué à l’objet.  
   

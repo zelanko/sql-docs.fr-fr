@@ -1,5 +1,5 @@
 ---
-title: Envoi de jeux de résultats au serveur (API de procédure stockée étendu) | Microsoft Docs
+title: Envoi de jeux de résultats au serveur (API de procédure stockée étendue) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,24 +14,24 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a58c8eca585bbbe2c935c524840bc465992d45c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62511844"
 ---
 # <a name="sending-result-sets-to-the-server-extended-stored-procedure-api"></a>Envoi de jeux de résultats au serveur (API de procédure stockée étendue)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Utilisez plutôt l’intégration du CLR.  
   
- Lors de l’envoi d’un jeu de résultats à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la procédure stockée étendue doit appeler l’API appropriée comme suit :  
+ Lors de l’envoi d’un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]jeu de résultats à, la procédure stockée étendue doit appeler l’API appropriée comme suit :  
   
--   Le **srv_sendmsg** fonction peut être appelée dans n’importe quel ordre avant ou après que toutes les lignes (le cas échéant) ont été envoyées avec **srv_sendrow**. Tous les messages doivent être envoyés au client avant que l’état d’achèvement est envoyé avec **srv_senddone**.  
+-   La fonction **srv_sendmsg** peut être appelée dans n’importe quel ordre avant ou après que toutes les lignes (le cas échéant) ont été envoyées avec **srv_sendrow**. Tous les messages doivent être envoyés au client avant que l’état d’achèvement ne soit envoyé avec **srv_senddone**.  
   
--   La fonction **srv_sendrow** est appelée une fois pour chaque ligne envoyée au client. Toutes les lignes doivent être envoyées au client avant que les messages, les valeurs d’état ou états d’achèvement sont envoyées avec **srv_sendmsg**, le **srv_status** argument de **srv_pfield**, ou **srv_senddone**.  
+-   La fonction **srv_sendrow** est appelée une fois pour chaque ligne envoyée au client. Toutes les lignes doivent être envoyées au client avant que les messages, valeurs d’État ou États d’achèvement ne soient envoyés avec **srv_sendmsg**, l’argument **srv_status** de **SRV_PFIELD**ou **srv_senddone**.  
   
--   L’envoi d’une ligne qui n’ont pas été toutes ses colonnes définies avec **srv_describe** oblige l’application à déclencher un message d’erreur d’information et à retourner FAIL au client. Dans ce cas, la ligne n'est pas envoyée.  
+-   L’envoi d’une ligne dont toutes les colonnes n’ont pas été définies avec **srv_describe** amène l’application à déclencher un message d’erreur d’information et à retourner Fail au client. Dans ce cas, la ligne n'est pas envoyée.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création de procédures stockées étendues](creating-extended-stored-procedures.md)  

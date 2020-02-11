@@ -18,10 +18,10 @@ ms.assetid: 987a2671-1801-45c4-93e6-29f883c58720
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: d30807d8d20bc5bf969aafd2e700ed88bc3b8584
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660175"
 ---
 # <a name="getcurrentcertificate-method-securitycertificate-class"></a>Méthode GetCurrentCertificate (classe SecurityCertificate)
@@ -36,14 +36,14 @@ object.GetCurrentCertificate(SHA , SQLInstance)
 ```  
   
 ## <a name="parts"></a>Éléments  
- *object*  
+ *dessin*  
  Objet de [classe SecurityCertificate](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) qui représente un certificat de sécurité.  
   
 #### <a name="parameters"></a>Paramètres  
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|*Tcha*|Valeur de chaîne (paramètre de sortie) qui spécifie l'empreinte numérique SHA du certificat de sécurité actuel une fois la méthode terminée.|  
+|*SHA*|Valeur de chaîne (paramètre de sortie) qui spécifie l'empreinte numérique SHA du certificat de sécurité actuel une fois la méthode terminée.|  
 |*SQLInstance*|Valeur de chaîne qui spécifie l'instance pour laquelle le certificat est requis.|  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
@@ -52,6 +52,6 @@ object.GetCurrentCertificate(SHA , SQLInstance)
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configuration des protocoles réseau du serveur et des bibliothèques Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuration des bibliothèques réseau et des protocoles réseau du serveur](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

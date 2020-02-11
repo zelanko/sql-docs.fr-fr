@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 135d317d74a720d51c966ed92f1c305f8c04b838
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021947"
 ---
 # <a name="other-non-sql-server-subscribers"></a>Autres abonnés non SQL Server
-  Pour obtenir la liste des Abonnés non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pris en charge par [!INCLUDE[msCoName](../../../includes/msconame-md.md)], consultez [Non-SQL Server Subscribers](non-sql-server-subscribers.md). Cette rubrique propose des informations sur la configuration requise des pilotes ODBC et des fournisseurs OLE DB.  
+  Pour obtenir la liste des[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] abonnés non pris en [!INCLUDE[msCoName](../../../includes/msconame-md.md)]charge par, consultez [abonnés non-SQL Server](non-sql-server-subscribers.md). Cette rubrique propose des informations sur la configuration requise des pilotes ODBC et des fournisseurs OLE DB.  
   
 ## <a name="odbc-driver-requirements"></a>Configuration requise des pilotes ODBC  
  Le pilote ODBC :  
@@ -40,15 +40,15 @@ ms.locfileid: "63021947"
 ## <a name="replicating-using-ole-db-interfaces"></a>Réplication à l'aide d'interfaces OLE DB  
  Les fournisseurs OLE DB doivent prendre en charge les objets suivants pour la réplication transactionnelle :  
   
--   Objet**DataSource**  
+-   Objet **DataSource**  
   
--   Objet**Session**  
+-   Objet **session**  
   
--   Objet**Command**  
+-   Objet **Command**  
   
--   Objet**Rowset**  
+-   **Rowset** , objet  
   
--   Objet**Error**  
+-   Objet **Error**  
   
 ### <a name="datasource-object-interfaces"></a>Interfaces de l'objet DataSource  
  Les interfaces suivantes sont nécessaires pour se connecter à une source de données :  
@@ -89,7 +89,7 @@ ms.locfileid: "63021947"
   
 -   **ICommandWithParameters**  
   
- **IAccessor** est nécessaire pour créer des accesseurs de paramètre. Si le fournisseur prend en charge **ColumnRowset**, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise cette interface pour déterminer si une colonne est une colonne d'identité.  
+ **IAccessor** est nécessaire pour créer des accesseurs de paramètre. Si le fournisseur prend **** en charge [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ColumnRowset, utilise cette interface pour déterminer si une colonne est une colonne d’identité.  
   
 ### <a name="rowset-object-interfaces"></a>Interfaces de l'objet Rowset  
  Les interfaces suivantes sont nécessaires :  
@@ -100,7 +100,7 @@ ms.locfileid: "63021947"
   
 -   **IColumnsInfo**  
   
- Une application doit ouvrir un ensemble de lignes sur une table répliquée ayant été créée dans la base de données d'abonnement. **IColumnsInfo** et **IAccessor** sont nécessaires pour accéder aux données de l'ensemble de lignes.  
+ Une application doit ouvrir un ensemble de lignes sur une table répliquée ayant été créée dans la base de données d'abonnement. **IColumnsInfo** et **IAccessor** sont nécessaires pour accéder aux données de l’ensemble de lignes.  
   
 ### <a name="error-object-interfaces"></a>Interfaces de l'objet Error  
  Utilisez les interfaces suivantes pour gérer les erreurs :  

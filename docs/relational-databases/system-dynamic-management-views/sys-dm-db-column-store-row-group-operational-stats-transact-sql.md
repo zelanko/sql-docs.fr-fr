@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_column_store_row_group_operational_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_column_store_row_group_operational_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -14,55 +14,55 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 03e97e38eb396aa24c9779d07f269a60f117ab09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005039"
 ---
-# <a name="sysdmdbcolumnstorerowgroupoperationalstats-transact-sql"></a>sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)
+# <a name="sysdm_db_column_store_row_group_operational_stats-transact-sql"></a>sys. dm_db_column_store_row_group_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Retourne actuel d’e/s, verrouillage, au niveau des lignes et méthode d’accès pour les rowgroups compressés dans un index columnstore. Utilisez **sys.dm_db_column_store_row_group_operational_stats** pour effectuer le suivi de la durée pendant laquelle une requête de l’utilisateur doit attendre pour lire ou écrire dans un rowgroup compressé ou une partition d’un index columnstore et identifier les rowgroups qui se produisent une activité d’e/s importante ou des zones réactives.  
+  Retourne l’activité actuelle des e/s au niveau des lignes, du verrouillage et de la méthode d’accès pour les RowGroups compressés dans un index ColumnStore. Utilisez **sys. dm_db_column_store_row_group_operational_stats** pour suivre la durée pendant laquelle une requête de l’utilisateur doit attendre la lecture ou l’écriture dans un rowgroup ou une partition d’un index ColumnStore compressé, et identifier les RowGroups qui rencontrent une activité d’e/s importante ou des zones réactives.  
   
- Les index columnstore en mémoire n’apparaissent pas dans cette vue DMV.  
+ Les index ColumnStore en mémoire n’apparaissent pas dans cette vue DMV.  
  
  
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|ID de la table contenant l’index columnstore.|  
+|**object_id**|**int**|ID de la table avec l’index ColumnStore.|  
 |**index_id**|**int**|ID de l'index columnstore.|  
-|**partition_number**|**Int**|Numéro de partition (basé sur la valeur 1) au sein de l'index ou du segment de mémoire.|  
-|**row_group_id**|**int**|ID du rowgroup dans l’index columnstore. Il est unique au sein d’une partition.|  
-|**scan_count**|**Int**|Nombre d’analyses via le groupe de lignes depuis le dernier redémarrage SQL.|  
-|**delete_buffer_scan_count**|**Int**|Nombre de fois où que le tampon de suppression a été utilisé pour déterminer les lignes supprimées dans ce groupe de lignes. Cela inclut l’accès à la table de hachage en mémoire et de l’arbre b sous-jacent.|  
-|**index_scan_count**|**int**|Nombre de fois que la partition d’index columnstore a été analysée. Cela est identique pour tous les rowgroups dans la partition.|  
-|**rowgroup_lock_count**|**bigint**|Nombre cumulatif de demandes de verrous pour ce groupe de lignes depuis le dernier redémarrage SQL.|  
-|**rowgroup_lock_wait_count**|**bigint**|Nombre cumulatif de fois où le moteur de base de données a attendu sur ce verrou de groupe de lignes depuis le dernier redémarrage SQL.|  
-|**rowgroup_lock_wait_in_ms**|**bigint**|Nombre cumulatif de millisecondes le moteur de base de données a attendu sur ce verrou de groupe de lignes depuis le dernier redémarrage SQL.|  
+|**partition_number**|**int**|Numéro de partition (basé sur la valeur 1) au sein de l'index ou du segment de mémoire.|  
+|**row_group_id**|**int**|ID de rowgroup dans l’index ColumnStore. Cela est unique au sein d’une partition.|  
+|**scan_count**|**int**|Nombre d’analyses par le biais de rowgroup depuis le dernier redémarrage SQL.|  
+|**delete_buffer_scan_count**|**int**|Nombre de fois où le tampon de suppression a été utilisé pour déterminer les lignes supprimées dans ce rowgroup. Cela comprend l’accès à la Hashtable en mémoire et au BTREE sous-jacent.|  
+|**index_scan_count**|**int**|Nombre de fois où la partition d’index ColumnStore a été analysée. Cela est identique pour tous les RowGroups de la partition.|  
+|**rowgroup_lock_count**|**bigint**|Nombre cumulatif de demandes de verrous pour ce rowgroup depuis le dernier redémarrage SQL.|  
+|**rowgroup_lock_wait_count**|**bigint**|Nombre cumulatif de fois où le moteur de base de données a attendu ce verrou rowgroup depuis le dernier redémarrage SQL.|  
+|**rowgroup_lock_wait_in_ms**|**bigint**|Nombre cumulé de millisecondes pendant lesquelles le moteur de base de données a attendu ce verrou rowgroup depuis le dernier redémarrage SQL.|  
   
 ## <a name="permissions"></a>Autorisations  
  Les autorisations suivantes sont nécessaires :  
   
 -   Autorisation CONTROL sur la table spécifiée par object_id.  
   
--   Autorisation VIEW DATABASE STATE pour retourner des informations sur tous les objets au sein de la base de données, à l’aide de l’objet générique @*object_id* = NULL  
+-   Autorisation VIEW DATABASE STATE pour renvoyer des informations sur tous les objets dans la base de données, en utilisant l’objet générique @*object_id* = null  
   
  L'octroi de l'autorisation VIEW DATABASE STATE autorise le renvoi de tous les objets de la base de données, quelles que soient les autorisations CONTROL refusées sur des objets spécifiques.  
   
- Le refus de l'autorisation VIEW DATABASE STATE interdit le retour de tous les objets de la base de données, quelles que soient les autorisations CONTROL accordées sur des objets spécifiques. Également, lorsque le caractère de base de données générique @*database_id*= NULL est spécifiée, la base de données est omis.  
+ Le refus de l'autorisation VIEW DATABASE STATE interdit le retour de tous les objets de la base de données, quelles que soient les autorisations CONTROL accordées sur des objets spécifiques. En outre, lorsque la base de données générique @*database_id*= null est spécifiée, la base de données est omise.  
   
- Pour plus d’informations, consultez [fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ Pour plus d’informations, consultez [fonctions et vues de gestion dynamique &#40;&#41;Transact-SQL ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Fonctions et vues de gestion dynamique relatives aux index &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Fonctions et vues de gestion dynamique liées aux index &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
- [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
- [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)   
- [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
- [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys. dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
+ [sys. dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)   
+ [sys. dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
+ [sys. allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   

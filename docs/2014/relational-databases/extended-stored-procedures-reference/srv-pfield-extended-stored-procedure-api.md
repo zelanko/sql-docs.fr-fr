@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ed4abfe8914c7f6b1dc3e22de7a321419b8d9cee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127111"
 ---
-# <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield (API de procédure stockée étendue)
+# <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield (API de procédure stockée étendue)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Utilisez plutôt l’intégration du CLR.  
   
  Retourne des informations sur une connexion de base de données.  
   
@@ -55,10 +55,10 @@ len
  *srvproc*  
  Pointeur identifiant une connexion de base de données.  
   
- *field*  
+ *case*  
  Spécifie des données sur la connexion à retourner.  
   
-|Value|Valeur renvoyée|  
+|Valeur|Retours|  
 |-----------|-------------|  
 |SRV_APPLNAME|Nom d'application fourni par le client au moment d'établir la connexion.|  
 |SRV_BCPFLAG|Indicateur possédant la valeur TRUE si le client prépare une opération de copie en bloc ou la valeur FALSE dans le cas contraire.|  
@@ -80,13 +80,13 @@ len
 |SRV_USER|Nom de l'utilisateur de la connexion.|  
 |||  
   
- *len*  
+ *Len*  
  Pointeur vers une variable **int** contenant la longueur de la valeur *field* retournée. Si *len* a la valeur NULL; la longueur de la chaîne n’est pas retournée.  
   
-## <a name="returns"></a>Valeur renvoyée  
+## <a name="returns"></a>Retours  
  Pointeur vers une chaîne terminée par le caractère NULL contenant la valeur actuelle du champ spécifié dans la structure SRV_PROC. Si le champ est vide, un pointeur valide vers une chaîne vide est retourné et *len* contient la valeur 0. Si le champ est inconnu, la valeur NULL est retournée et *len* contient la valeur -1.  
   
 > [!IMPORTANT]  
->  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d’informations sur cet examen et sur les tests de sécurité, consultez le site [TechCenter sur la sécurité](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
+>  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d’informations sur cet examen et sur les tests de sécurité, consultez le site [TechCenter sur la sécurité](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   

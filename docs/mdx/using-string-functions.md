@@ -1,5 +1,5 @@
 ---
-title: À l’aide des fonctions de chaîne | Microsoft Docs
+title: Utilisation des fonctions de chaîne | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 74eec478baad335cb5be6a78ec1faea2d15030ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037995"
 ---
 # <a name="using-string-functions"></a>Utilisation des fonctions de chaîne
@@ -20,7 +20,7 @@ ms.locfileid: "68037995"
 
   Vous pouvez utiliser des fonctions de chaîne sur tous les objets ou presque de la syntaxe MDX (Multidimensional Expressions). Dans les procédures stockées, les fonctions de chaîne sont principalement utilisées pour convertir l'objet en représentation sous forme de chaîne. Les fonctions de chaîne permettent également d'évaluer une expression de chaîne sur un objet afin de retourner une valeur.  
   
- Les fonctions de chaîne plus largement utilisées sont **nom** et **Uniquename**. Ces fonctions retournent respectivement le nom et le nom unique d'un objet. Essentiellement, elles sont utilisées lors du débogage des calculs pour découvrir quel membre une fonction retourne.  
+ Les fonctions de chaîne les plus couramment utilisées sont **Name** et **UniqueName**. Ces fonctions retournent respectivement le nom et le nom unique d'un objet. Essentiellement, elles sont utilisées lors du débogage des calculs pour découvrir quel membre une fonction retourne.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple des requêtes suivant montre comment utiliser ces fonctions :  
@@ -47,7 +47,7 @@ ms.locfileid: "68037995"
   
  `FROM [Adventure Works]`  
   
- Le **générer** fonction peut être utilisée pour exécuter une fonction de chaîne sur chaque membre d’un jeu et concaténer les résultats. Elle est parfois aussi utile lors du débogage des calculs car elle vous permet de visualiser le contenu d'un jeu. L'exemple suivant montre comment l'utiliser comme suit :  
+ La fonction **generate** peut être utilisée pour exécuter une fonction de chaîne sur chaque membre d’un jeu et pour concaténer les résultats. Elle est parfois aussi utile lors du débogage des calculs car elle vous permet de visualiser le contenu d'un jeu. L'exemple suivant montre comment l'utiliser comme suit :  
   
  `WITH`  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68037995"
   
  `FROM [Adventure Works]`  
   
- Un autre groupe de fonctions de chaîne largement utilisées est celles qui vous permettent de convertir une chaîne qui contient le nom unique d'un objet ou une expression qui est résolue en l'objet dans l'objet lui-même. L’exemple de requête suivant montre comment la **StrToMember** et **StrToSet** fonctions cela :  
+ Un autre groupe de fonctions de chaîne largement utilisées est celles qui vous permettent de convertir une chaîne qui contient le nom unique d'un objet ou une expression qui est résolue en l'objet dans l'objet lui-même. L’exemple de requête suivant montre comment les fonctions **StrToMember** et **StrToSet** effectuent les opérations suivantes :  
   
  `SELECT`  
   
@@ -98,15 +98,15 @@ ms.locfileid: "68037995"
  `FROM [Adventure Works]`  
   
 > [!NOTE]  
->  Le **StrToMember** et **StrToSet** fonctions doivent être utilisées avec précaution. Elles peuvent entraîner des performances médiocres de requête si elles sont utilisées dans des définitions de calcul.  
+>  Les fonctions **StrToMember** et **StrToSet** doivent être utilisées avec précaution. Elles peuvent entraîner des performances médiocres de requête si elles sont utilisées dans des définitions de calcul.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Générer &#40;MDX&#41;](../mdx/generate-mdx.md)   
- [Name &#40;MDX&#41;](../mdx/name-mdx.md)   
- [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
+ [Générer &#40;&#41;MDX](../mdx/generate-mdx.md)   
+ [Nom &#40;&#41;MDX](../mdx/name-mdx.md)   
+ [UniqueName &#40;&#41;MDX](../mdx/uniquename-mdx.md)   
  [Fonctions &#40;syntaxe MDX&#41;](../mdx/functions-mdx-syntax.md)   
- [À l’aide de procédures stockées &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)   
- [StrToMember &#40;MDX&#41;](../mdx/strtomember-mdx.md)   
- [StrToSet &#40;MDX&#41;](../mdx/strtoset-mdx.md)  
+ [Utilisation de procédures stockées &#40;&#41;MDX](../mdx/using-stored-procedures-mdx.md)   
+ [StrToMember&#41;MDX &#40;](../mdx/strtomember-mdx.md)   
+ [StrToSet&#41;MDX &#40;](../mdx/strtoset-mdx.md)  
   
   

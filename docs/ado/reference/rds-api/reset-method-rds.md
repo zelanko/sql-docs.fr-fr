@@ -14,17 +14,17 @@ ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 416aaefa95871e909a12117756ea59747c555650
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963493"
 ---
 # <a name="reset-method-rds"></a>Reset, méthode (RDS)
-Exécute le tri ou le filtre sur une côté client **Recordset** basée sur les propriétés de tri et de filtre spécifiées.  
+Exécute le tri ou le filtre sur un **jeu d’enregistrements** côté client en fonction des propriétés de tri et de filtre spécifiées.  
   
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,17 +35,17 @@ DataControl.Reset(value)
   
 #### <a name="parameters"></a>Paramètres  
  *DataControl*  
- Une variable objet qui représente un [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objet.  
+ Variable objet qui représente un objet [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
- *value*  
- Facultatif. Un **booléenne** valeur **True** (valeur par défaut) si vous souhaitez filtrer sur l’ensemble de lignes « filtré » actuel. **False** effectuer le filtrage sur l’ensemble de lignes d’origine, suppression des options de filtre précédentes.  
+ *ajoutée*  
+ facultatif. Valeur **booléenne** qui est **true** (valeur par défaut) si vous souhaitez filtrer sur l’ensemble de lignes « filtré » actuel. **False** indique que vous filtrez sur l’ensemble de lignes d’origine, en supprimant toutes les options de filtre précédentes.  
   
 ## <a name="remarks"></a>Notes  
- Le [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md), et [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)fournissent des propriétés de tri et de filtrage sur le cache côté client. La fonctionnalité de tri trie les enregistrements par les valeurs d’une colonne. La fonctionnalité de filtrage affiche un sous-ensemble des enregistrements selon un critère de recherche, lors de la version complète [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) est conservé dans le cache. Le **réinitialiser** méthode exécute les critères et remplacez actuel **Recordset** avec un actualisable **Recordset**.  
+ Les propriétés [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)et [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md) fournissent des fonctionnalités de tri et de filtrage sur le cache côté client. La fonctionnalité de tri commande les enregistrements par valeurs d’une colonne. La fonctionnalité de filtrage affiche un sous-ensemble d’enregistrements basés sur des critères de recherche, tandis que le [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) complet est conservé dans le cache. La méthode de **réinitialisation** exécute les critères et remplace le **jeu d’enregistrements** actuel par un **jeu d’enregistrements**pouvant être mis à jour.  
   
- Si des modifications sont apportées aux données d’origine qui n’ont pas été envoyées, le **réinitialiser** méthode échoue. Tout d’abord, utilisez le [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) méthode pour enregistrer les modifications dans une lecture/écriture **Recordset**, puis utilisez le **réinitialiser** méthode trier ou filtrer les enregistrements.  
+ Si des modifications ont été apportées aux données d’origine qui n’ont pas été envoyées, la méthode de **réinitialisation** échoue. Tout d’abord, utilisez la méthode [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) pour enregistrer les modifications apportées à un **jeu d’enregistrements**en lecture/écriture, puis utilisez la méthode **Reset** pour trier ou filtrer les enregistrements.  
   
- Si vous souhaitez effectuer plusieurs filtres sur votre ensemble de lignes, vous pouvez utiliser le paramètre facultatif *booléenne* argument avec le **réinitialiser** (méthode). L’exemple suivant montre comment procéder :  
+ Si vous souhaitez exécuter plusieurs filtres sur votre ensemble de lignes, vous pouvez utiliser l’argument *booléen* facultatif avec la méthode de **réinitialisation** . L’exemple suivant vous montre comment procéder :  
   
 ```  
 ADC.SQL = "Select au_lname from authors"  
@@ -74,7 +74,7 @@ ADC.Reset(FALSE)   ' Rowset now has all Last Names > "T".
  [DataControl, objet (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [FilterColumn, FilterCriterion, FilterValue, SortColumn et SortDirection, propriétés et exemple de méthode de réinitialisation (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
+ [FilterColumn, FilterCriterion, FilterValue, SortColumn et SortDirection propriétés et Reset, exemple de méthode (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [SubmitChanges, méthode (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 
 

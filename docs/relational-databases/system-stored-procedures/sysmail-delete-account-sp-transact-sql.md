@@ -18,10 +18,10 @@ ms.assetid: 2adcac78-4a4a-407e-9666-1d9c43c73cc2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4b6adc5f6c02eae49a5f5e2598c6b02e5b00534e
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70211264"
 ---
 # <a name="sysmail_delete_account_sp-transact-sql"></a>sysmail_delete_account_sp (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "70211264"
 
   Supprime un compte SMTP de messagerie de base de données. Vous pouvez aussi utiliser l'Assistant Configuration de la messagerie de base de données pour supprimer un compte.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,15 +39,15 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @account_id = ] account_id` le numéro d’identification du compte à supprimer. *account_id* est de **type int**, sans valeur par défaut. *Account_id* ou *account_name* doivent être spécifiés.  
+`[ @account_id = ] account_id`Numéro d’identification du compte à supprimer. *account_id* est de **type int**, sans valeur par défaut. *Account_id* ou *account_name* doivent être spécifiés.  
   
-`[ @account_name = ] 'account_name'` le nom du compte à supprimer. *account_name* est de **type sysname**, sans valeur par défaut. *Account_id* ou *account_name* doivent être spécifiés.  
+`[ @account_name = ] 'account_name'`Nom du compte à supprimer. *account_name* est de **type sysname**, sans valeur par défaut. *Account_id* ou *account_name* doivent être spécifiés.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  Cette procédure supprime le compte spécifié, qu'il soit ou non utilisé par un profil. Un profil qui ne contient aucun compte ne peut pas envoyer de courrier électronique.  
@@ -68,7 +68,7 @@ EXECUTE msdb.dbo.sysmail_delete_account_sp
 ## <a name="see-also"></a>Voir aussi  
  [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)   
  [Créer un compte Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Database mail les objets de Configuration](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Objets de configuration Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [sysmail_add_account_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md)   
  [sysmail_delete_profile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-profile-sp-transact-sql.md)   
  [sysmail_delete_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-profileaccount-sp-transact-sql.md)   

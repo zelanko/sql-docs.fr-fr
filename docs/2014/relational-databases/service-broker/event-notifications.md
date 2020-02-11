@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1d7c74ee9963d93d289f589115712614a745dad1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68197776"
 ---
 # <a name="event-notifications"></a>Notifications d'événements
@@ -59,7 +59,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |Déclencheurs|Notifications d'événements|  
 |--------------|-------------------------|  
 |Les déclencheurs DML répondent aux événements DML (Data Manipulation Language, ou langage de manipulation de données). Les déclencheurs DDL répondent aux événements DDL (Data Definition Language, ou langage de définition de données).|Les notifications d'événements répondent aux événements DDL et à un sous-ensemble d'événements de Trace SQL.|  
-|Les déclencheurs peuvent exécuter Transact-SQL ou le code managé CLR (Common Language Runtime).|Les notifications d'événements n'exécutent aucun code. Au lieu de cela, ils envoient `xml` messages à un Service service Broker.|  
+|Les déclencheurs peuvent exécuter Transact-SQL ou le code managé CLR (Common Language Runtime).|Les notifications d'événements n'exécutent aucun code. Au lieu de cela `xml` , ils envoient des messages à un service Service Broker.|  
 |Les déclencheurs sont traités de manière synchrone, dans le cadre des transactions qui provoquent leur déclenchement.|Les notifications d'événements peuvent être traitées de manière synchrone, et elles ne sont pas exécutées dans le cadre des transactions qui provoquent leur déclenchement.|  
 |Le consommateur d'un déclencheur est étroitement lié à l'événement qui provoque son déclenchement.|Le consommateur d'une notification d'événement est dissocié de l'événement qui provoque son déclenchement.|  
 |Les déclencheurs doivent être traités sur le serveur local.|Les notifications d'événements peuvent être traitées sur un serveur distant.|  
@@ -67,8 +67,8 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |Les noms de déclencheurs DML ont une portée de schéma. Les noms de déclencheurs DDL sont limités au niveau de la base de données ou du serveur.|Les noms de notifications d'événements sont limités par le serveur ou la base de données. Les notifications d'événements sur un événement QUEUE_ACTIVATION sont limitées à une file d'attente spécifique.|  
 |Les déclencheurs DML sont détenus par le propriétaire des tables sur lesquelles ils sont appliqués.|Le propriétaire d'une notification d'événements sur une file d'attente peut être différent de celui de l'objet auquel la notification est appliquée.|  
 |Les déclencheurs prennent en charge la clause EXECUTE AS.|Les notifications d'événements ne prennent pas en charge la clause EXECUTE AS.|  
-|Informations d’événement déclencheur DDL peuvent être capturées à l’aide de la fonction EVENTDATA, qui retourne un `xml` type de données.|Envoient des notifications d’événements `xml` informations sur les événements à un Service service Broker. Les informations sont mises en forme dans le même schéma que celui de la fonction EVENTDATA.|  
-|Les métadonnées concernant les déclencheurs se trouvent dans les affichages catalogue **sys.triggers** et **sys.server_triggers** .|Les métadonnées concernant les notifications d’événements se trouvent dans les affichages catalogue **sys.event_notifications** et **sys.server_event_notifications**.|  
+|Les informations d’événement de déclencheur DDL peuvent être capturées à l’aide `xml` de la fonction EVENTDATA, qui retourne un type de données.|Les notifications `xml` d’événements envoient des informations d’événement à un service Service Broker. Les informations sont mises en forme dans le même schéma que celui de la fonction EVENTDATA.|  
+|Les métadonnées concernant les déclencheurs se trouvent dans les affichages catalogue **sys.triggers** et **sys.server_triggers** .|Les métadonnées concernant les notifications d’événements se trouvent dans les affichages catalogue **sys.event_notifications** et **sys.server_event_notifications** .|  
   
 ### <a name="event-notifications-vs-sql-trace"></a>Notifications d'événements et Trace SQL  
  Le tableau suivant répertorie les similitudes et les différences dans l'utilisation des notifications d'événements et de Trace SQL dans le cadre de la surveillance des événements de serveur.  

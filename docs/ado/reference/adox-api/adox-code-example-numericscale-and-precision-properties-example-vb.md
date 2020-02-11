@@ -1,5 +1,5 @@
 ---
-title: NumericScale et Precision, propriétés, exemple (VB) | Microsoft Docs
+title: NumericScale et Precision, exemple de propriétés (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: ea2ec614-34c8-41b7-8ebd-063798bd56b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 671e7f144ff70bedf1556b506ead6c51d05ebd08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952165"
 ---
-# <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>Exemple de code ADOX : NumericScale et Precision, exemple de propriétés (VB)
-Cet exemple montre la [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) et [précision](../../../ado/reference/adox-api/precision-property-adox.md) propriétés de la [colonne](../../../ado/reference/adox-api/column-object-adox.md) objet. Ce code affiche leur valeur pour le **Order Details** table de la *Northwind* base de données.  
+# <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>Exemple de Code ADOX : NumericScale et Precision, exemples de propriétés (VB)
+Cet exemple illustre les propriétés [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) et [PRECISION](../../../ado/reference/adox-api/precision-property-adox.md) de l’objet [Column](../../../ado/reference/adox-api/column-object-adox.md) . Ce code affiche la valeur de la table **Order Details** de la base de données *Northwind* .  
   
 ```  
 ' BeginNumericScalePrecVB  
@@ -76,6 +76,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet de colonne (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
+ [Column, objet (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [NumericScale, propriété (ADOX)](../../../ado/reference/adox-api/numericscale-property-adox.md)   
  [Precision, propriété (ADOX)](../../../ado/reference/adox-api/precision-property-adox.md)

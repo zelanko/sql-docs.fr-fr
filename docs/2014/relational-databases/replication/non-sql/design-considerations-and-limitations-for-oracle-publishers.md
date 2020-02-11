@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022511"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Problèmes et limitations de conception des serveurs de publication Oracle
-  En termes de conception, la publication à partir d'une base de données Oracle fonctionne de façon similaire à la publication à partir d'une base de données [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Toutefois, soyez conscient des problèmes et limitations suivants :  
+  La publication à partir d’une base de données Oracle est conçue pour fonctionner de façon similaire à la publication à partir d’une base de données [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Toutefois, soyez conscient des problèmes et limitations suivants :  
   
 -   L'option Oracle Gateway offre de meilleures performances que l'option Oracle Complete ; il n'est cependant pas possible de l'utiliser pour publier la même table dans plusieurs publications transactionnelles. Une table peut faire partie d'un nombre quelconque de publications d'instantané mais d'une seule publication transactionnelle uniquement. Si vous devez publier la même table dans plusieurs publications transactionnelles, choisissez l'option Oracle Complete.  
   
@@ -59,11 +59,11 @@ ms.locfileid: "63022511"
   
 -   Tables imbriquées  
   
--   Affichages  
+-   Les vues  
   
 -   Packages, corps de package, procédures et déclencheurs  
   
--   Files d'attente  
+-   Files d’attente  
   
 -   Séquences  
   
@@ -95,7 +95,7 @@ ms.locfileid: "63022511"
   
 -   Le nombre maximal de colonnes autorisé dans un index de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est 16.  
   
--   Toutes les colonnes incluses dans des contraintes uniques doivent contenir des types de données pris en charge. Pour plus d'informations sur les types de données, consultez [Mappage de type de données pour les serveurs de publication Oracle](data-type-mapping-for-oracle-publishers.md).  
+-   Toutes les colonnes incluses dans des contraintes uniques doivent contenir des types de données pris en charge. Pour plus d'informations sur les types de données, consultez [Data Type Mapping for Oracle Publishers](data-type-mapping-for-oracle-publishers.md).  
   
 -   Toutes les colonnes incluses dans des contraintes uniques doivent être publiées (elles ne peuvent pas être filtrées).  
   
@@ -103,7 +103,7 @@ ms.locfileid: "63022511"
   
  Veillez également à prendre en compte les points suivants :  
   
--   Oracle et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] traitent différemment la valeur NULL : Oracle autorise la présence de plusieurs lignes comportant des valeurs NULL pour les colonnes qui acceptent NULL et sont incluses dans des contraintes ou index uniques. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] applique l'unicité en n'autorisant qu'une seule ligne contenant une valeur NULL pour la même colonne. Vous ne pouvez pas publier une contrainte ou un index unique qui autorise NULL car une violation de contrainte se produit au niveau de l'Abonné si la table publiée contient plusieurs lignes avec des valeurs NULL pour l'une des colonnes incluses dans l'index ou la contrainte.  
+-   Oracle et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] traitent différemment la valeur NULL : Oracle autorise la présence de plusieurs lignes comportant des valeurs NULL pour les colonnes qui acceptent NULL et sont incluses dans des contraintes ou index uniques. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] applique l'unicité en n'autorisant qu'une seule ligne contenant une valeur NULL pour la même colonne. Vous ne pouvez pas publier une contrainte ou un index unique qui autorise NULL car une violation de contrainte se produit au niveau de l'Abonné si la table publiée contient plusieurs lignes avec des valeurs NULL pour l'une des colonnes incluses dans l'index ou la contrainte.  
   
 -   Lors de la vérification de l'unicité, les espaces à droite dans un champ sont ignorés par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mais pas par Oracle.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "63022511"
   
 -   Les publications transactionnelles standard prennent en charge des tables comprenant jusqu'à 1000 colonnes. Les publications transactionnelles Oracle prennent en charge 995 colonnes (la réplication ajoute cinq colonnes à chaque table publiée).  
   
--   Des clauses COLLATE sont ajoutées aux instructions CREATE TABLE pour permettre l'exécution de comparaisons respectant la casse, ce qui est important pour les clés primaires et les contraintes uniques. Ce comportement est contrôlé par l’option de schéma 0x1000, spécifiée avec le paramètre **@schema_option** de [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql).  
+-   Des clauses COLLATE sont ajoutées aux instructions CREATE TABLE pour permettre l'exécution de comparaisons respectant la casse, ce qui est important pour les clés primaires et les contraintes uniques. Ce comportement est contrôlé par l’option de schéma 0x1000, qui est spécifiée avec **@schema_option** le paramètre de [Sp_addarticle &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql).  
   
 -   Si vous utilisez des procédures stockées pour configurer ou gérer un serveur de publication Oracle, ne placez pas les procédures dans une transaction explicite. L'opération n'est pas prise en charge sur le serveur lié utilisé pour la connexion au serveur de publication Oracle.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "63022511"
   
 -   Le compte utilisé par l'Agent d'instantané et l'Agent de lecture du journal pour connecter le serveur de distribution au serveur de publication est spécifié à l'aide de l'une des méthodes suivantes :  
   
-    -   Le paramètre **@security_mode** de [sp_adddistpublisher & #40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) (vous spécifiez également les valeurs de **@login** et **@password** si l’authentification Oracle est utilisée)  
+    -   Le **@security_mode** paramètre de [Sp_adddistpublisher &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) (vous spécifiez également des **@login** valeurs **@password** pour et si l’authentification Oracle est utilisée)  
   
     -   Dans la boîte de dialogue **Se connecter au serveur** de SQL Server Management Studio, que vous utilisez lorsque vous configurez le serveur de publication Oracle sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -157,13 +157,13 @@ ms.locfileid: "63022511"
   
 -   Le compte utilisé par l’Agent d’instantané et l’Agent de lecture du journal pour la connexion ne peut pas être modifié avec [sp_changedistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql) ou via une feuille de propriétés, mais le mot de passe peut l’être.  
   
--   Si vous spécifiez la valeur 1 (Authentification intégrée de Windows) pour le paramètre **@security_mode** de [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) :  
+-   Si vous spécifiez la valeur 1 (authentification intégrée Windows) pour le **@security_mode** paramètre de [Sp_adddistpublisher &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql):  
   
-    -   Le compte de processus et le mot de passe associé qui sont utilisés par les Agents d’instantané et de lecture du journal (paramètres **@job_login** et **@job_password** de [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) et [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)) doivent être identiques au compte et au mot de passe utilisés pour la connexion au serveur de publication Oracle.  
+    -   Le compte de processus et le mot de passe utilisés pour les Agent d’instantané et l’agent **@job_login** de **@job_password** lecture du journal (les paramètres et de [SP_ADDPUBLICATION_SNAPSHOT &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) et [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)) doivent être identiques au compte et au mot de passe utilisés pour se connecter au serveur de publication Oracle.  
   
-    -   Vous ne pouvez pas modifier le paramètre **@job_login** via [sp_changepublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql) ou [sp_changelogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql), mais le mot de passe, oui.  
+    -   Vous ne pouvez pas **@job_login** modifier le paramètre via [sp_changepublication_snapshot &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql) ou [sp_changelogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql), mais le mot de passe peut être modifié.  
   
- Pour plus d’informations sur la sécurité de réplication, consultez [sécurité de réplication SQL Server](../security/view-and-modify-replication-security-settings.md).  
+ Pour plus d’informations sur la sécurité de la réplication, consultez [réplication SQL Server Security](../security/view-and-modify-replication-security-settings.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Considérations sur l’administration des serveurs de publication Oracle](administrative-considerations-for-oracle-publishers.md)   

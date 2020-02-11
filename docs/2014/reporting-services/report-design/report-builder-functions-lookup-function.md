@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93e53646314d211ced489d3538b40c77195f494b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105216"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Fonction Lookup (Générateur de rapports et SSRS)
@@ -32,18 +32,18 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>Paramètres  
  *source_expression*  
- (`Variant`) Expression évaluée dans l'étendue actuelle et qui spécifie le nom ou la clé à rechercher. Par exemple, `=Fields!ProdID.Value`.  
+ (`Variant`) Expression évaluée dans l'étendue actuelle et qui spécifie le nom ou la clé à rechercher. Par exemple : `=Fields!ProdID.Value`.  
   
  *destination_expression*  
- (`Variant`) Expression évaluée pour chaque ligne d'un dataset et qui spécifie le nom ou la clé de correspondance. Par exemple, `=Fields!ProductID.Value`.  
+ (`Variant`) Expression évaluée pour chaque ligne d'un dataset et qui spécifie le nom ou la clé de correspondance. Par exemple : `=Fields!ProductID.Value`.  
   
  *result_expression*  
- (`Variant`) Une expression qui est évaluée pour la ligne dans le jeu de données où *source_expression* = *destination_expression*, et qui spécifie la valeur à récupérer. Par exemple, `=Fields!ProductName.Value`.  
+ (`Variant`) Expression évaluée pour la ligne du DataSet où *source_expression* = *destination_expression*et qui spécifie la valeur à récupérer. Par exemple : `=Fields!ProductName.Value`.  
   
  *dataset*  
  Constante qui spécifie le nom d'un dataset dans le rapport. Par exemple, « Products ».  
   
-## <a name="return"></a>Return  
+## <a name="return"></a>Renvoie  
  Retourne une valeur `Variant`, ou `Nothing` si aucune correspondance n'est trouvée.  
   
 ## <a name="remarks"></a>Notes  
@@ -59,11 +59,11 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   Renvoie la valeur d'expression de résultat.  
   
- Pour récupérer plusieurs valeurs pour un seul champ de nom ou de clé dans lequel une relation un-à-plusieurs existe, utilisez [Fonction LookupSet &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-lookupset-function.md). Pour appeler `Lookup` pour un ensemble de valeurs, utilisez [fonction Multilookup &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-lookup-function.md).  
+ Pour récupérer plusieurs valeurs pour un seul champ de nom ou de clé dans lequel une relation un-à-plusieurs existe, utilisez [Fonction LookupSet &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-lookupset-function.md). Pour appeler `Lookup` pour un ensemble de valeurs, utilisez la [fonction multilookup &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-lookup-function.md).  
   
- Les restrictions suivantes s'appliquent :  
+ Les restrictions suivantes s’appliquent :  
   
--   `Lookup` est évaluée une fois que toutes les expressions de filtre sont appliquées.  
+-   `Lookup`est évalué après que toutes les expressions de filtre ont été appliquées.  
   
 -   Un seul niveau de recherche est pris en charge. Une expression source, destination ou de résultat ne peut pas inclure de référence à une fonction de recherche.  
   
@@ -71,7 +71,8 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   Les expressions source, de destination et de résultat ne peuvent pas inclure de références à des variables de groupe ou de rapport.  
   
--   `Lookup` ne peut pas être utilisé comme expression pour les éléments de rapport suivants :  
+-   
+  `Lookup` ne peut pas être utilisé comme expression pour les éléments de rapport suivants :  
   
     -   des chaînes de connexion dynamiques pour une source de données ;  
   

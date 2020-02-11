@@ -17,24 +17,24 @@ ms.assetid: 5c06451e-06ec-4da6-9a87-2d043469248a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c2c48630a8d8cafc96f192e07d41a6245f86e60c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938426"
 ---
 # <a name="formattedvalue-property-ado-md"></a>FormattedValue, propriété (ADO MD)
-Indique l’affichage de mise en forme d’un [cellule](../../../ado/reference/ado-md-api/cell-object-ado-md.md) valeur.  
+Indique l’affichage mis en forme d’une valeur de [cellule](../../../ado/reference/ado-md-api/cell-object-ado-md.md) .  
   
 ## <a name="return-values"></a>Valeurs de retour  
- Retourne un **chaîne** et est en lecture seule.  
+ Retourne une **chaîne** et est en lecture seule.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le **FormattedValue** propriété pour obtenir la valeur d’affichage mise en forme de la [valeur](../../../ado/reference/ado-md-api/value-property-ado-md.md) propriété d’un [cellule](../../../ado/reference/ado-md-api/cell-object-ado-md.md) objet. Par exemple, si la valeur d’une cellule est 1 056,87 et cette valeur représenté un montant en dollars, **FormattedValue** correspond à $ 1 056,87.  
+ Utilisez la propriété **FormattedValue** pour obtenir la valeur d’affichage mise en forme de la propriété [value](../../../ado/reference/ado-md-api/value-property-ado-md.md) d’un objet [Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md) . Par exemple, si la valeur d’une cellule était 1056,87 et que cette valeur représente un montant en dollars, **FormattedValue** serait $1 056,87.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Cell, objet (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemple avec Cellset (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
+ [CellSet, exemple (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Value, propriété (ADO MD)](../../../ado/reference/ado-md-api/value-property-ado-md.md)

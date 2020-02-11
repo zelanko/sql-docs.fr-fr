@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7ceed5f82af858f6a2dc3a88df7276d5ba2fda3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211206"
 ---
 # <a name="creating-a-login"></a>Création d'une connexion
@@ -26,7 +26,7 @@ ms.locfileid: "68211206"
   
 ### <a name="to-create-a-new-windows-account"></a>Pour créer un nouveau compte Windows  
   
-1.  Cliquez sur **Démarrer**, cliquez sur **exécuter**, dans le **ouvrir** , tapez `%SystemRoot%\system32\compmgmt.msc /s`, puis cliquez sur **OK** pour ouvrir le programme de gestion de l’ordinateur.  
+1.  Cliquez **sur Démarrer**, sur **exécuter**, dans la zone **ouvrir** , `%SystemRoot%\system32\compmgmt.msc /s`tapez, puis cliquez sur **OK** pour ouvrir le programme gestion de l’ordinateur.  
   
 2.  Sous **Outils système**, développez **Utilisateurs et groupes locaux**, cliquez avec le bouton droit sur **Utilisateurs**, puis cliquez sur **Nouvel utilisateur**.  
   
@@ -36,7 +36,8 @@ ms.locfileid: "68211206"
   
 ### <a name="to-create-a-login"></a>Pour créer une connexion  
   
-1.  Dans une fenêtre de l'Éditeur de requête [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], tapez et exécutez le code suivant en remplaçant `computer_name` par le nom de votre ordinateur. `FROM WINDOWS` indique que Windows va authentifier l’utilisateur. L'argument `DEFAULT_DATABASE` facultatif connecte `Mary` à la base de données `TestData` , sauf si sa chaîne de connexion indique une autre base de données. Cette instruction introduit le point-virgule comme arrêt facultatif pour une instruction [!INCLUDE[tsql](../includes/tsql-md.md)] .  
+1.  Dans une fenêtre de l'Éditeur de requête [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], tapez et exécutez le code suivant en remplaçant `computer_name` par le nom de votre ordinateur. 
+  `FROM WINDOWS` indique que Windows va authentifier l’utilisateur. L'argument `DEFAULT_DATABASE` facultatif connecte `Mary` à la base de données `TestData` , sauf si sa chaîne de connexion indique une autre base de données. Cette instruction introduit le point-virgule comme arrêt facultatif pour une instruction [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   
     ```  
     CREATE LOGIN [computer_name\Mary]  
@@ -51,10 +52,10 @@ ms.locfileid: "68211206"
     >  Étant donné que `Mary` n'est pas un compte de domaine, ce nom d'utilisateur ne peut être authentifié que sur cet ordinateur.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Octroi de l’accès à une base de données](lesson-2-2-granting-access-to-a-database.md)  
+ [Octroi de l'accès à une base de données](lesson-2-2-granting-access-to-a-database.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)   
+ [CRÉER une connexion &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)   
  [Choisir un mode d’authentification](../relational-databases/security/choose-an-authentication-mode.md)  
   
   

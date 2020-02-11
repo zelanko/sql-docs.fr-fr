@@ -13,14 +13,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a4f23fd3d6d8208410c520676ee4e0c8bbe00fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922140"
 ---
 # <a name="backup-device-general-page"></a>Unité de sauvegarde (page Général)
-  Utilisez la page **Général** pour spécifier ou afficher les propriétés générales d'une unité logique de sauvegarde.  
+  Utilisez la page **général** pour spécifier ou afficher les propriétés générales d’une unité de sauvegarde logique.  
   
  **Pour utiliser SQL Server Management Studio pour afficher le contenu d'une unité de sauvegarde**  
   
@@ -29,11 +29,11 @@ ms.locfileid: "62922140"
 -   [Afficher les propriétés et le contenu d’une unité de sauvegarde logique &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
 ## <a name="options"></a>Options  
- **Nom du périphérique**  
+ **Nom de l’appareil**  
  Permet d'afficher le nom d'une unité logique de sauvegarde existante ou de spécifier le nom d'une nouvelle unité logique de sauvegarde.  
   
  **Bande**  
- Permet d’afficher ou de sélectionner l’unité à bande de destination dans la liste **Bande** . Cette option est disponible uniquement si un lecteur de bande est connecté à l'ordinateur qui exécute l'instance du moteur de base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+ Permet d’afficher ou de sélectionner l’unité à bande de destination dans la liste **Bande** . Cette option est disponible uniquement si un lecteur de bande est attaché à l’ordinateur qui exécute l’instance du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 > [!NOTE]  
 >  Les unités de sauvegarde sur bande situées sur des ordinateurs distants ne sont pas des destinations de sauvegarde valides.  
@@ -63,15 +63,15 @@ ms.locfileid: "62922140"
   
 -   [Définir une unité de sauvegarde logique pour un lecteur de bande &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
--   [Spécifier un disque ou une bande comme destination de sauvegarde &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [Spécifiez un disque ou une bande comme destination de sauvegarde &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
 -   [Supprimer une unité de sauvegarde &#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   
--   [Définir la date d’expiration d’une sauvegarde &#40;SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
+-   [Définir la date d’expiration sur un &#40;de sauvegarde SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
   
 -   [Afficher le contenu d’un fichier ou d’une bande de sauvegarde &#40;SQL Server&#41;](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
--   [Afficher les fichiers de données et les fichiers journaux dans un jeu de sauvegarde &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
+-   [Affichez les fichiers de données et les fichiers journaux dans un jeu de sauvegarde &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
 -   [Afficher les propriétés et le contenu d’une unité de sauvegarde logique &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   

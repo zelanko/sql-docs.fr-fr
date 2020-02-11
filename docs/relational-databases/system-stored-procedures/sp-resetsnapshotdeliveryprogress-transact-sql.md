@@ -16,18 +16,18 @@ ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cc6205eb5487b89db55488bcdf36fbb036595d57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68129650"
 ---
-# <a name="spresetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
+# <a name="sp_resetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Réinitialise le processus de livraison de l'instantané pour un abonnement par extraction de données (pull), afin de permettre le redémarrage de ce processus. Exécuté sur la base de données d'abonnement de l'abonné.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,18 +38,18 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @verbose_level = ] verbose_level` Spécifie la quantité d’informations renvoyées. *verbose_level*est **int**, avec une valeur par défaut **1**. La valeur **1** signifie qu’une erreur est renvoyée si les verrous nécessaires ne peuvent pas être obtenues sur le **MSsnapshotdeliveryprogress** table, et **0** signifie qu’aucune erreur n’est retournée.  
+`[ @verbose_level = ] verbose_level`Spécifie la quantité d’informations retournées. *verbose_level*est de **type int**, avec **1**comme valeur par défaut. La valeur **1** signifie qu’une erreur est retournée si les verrous nécessaires ne peuvent pas être obtenus sur la table **MSsnapshotdeliveryprogress** , et **0** signifie qu’aucune erreur n’est retournée.  
   
-`[ @drop_table = ] 'drop_table'` S’il faut supprimer ou tronquer les table contenant des informations sur la progression de la capture instantanée est. *drop_table* est **nvarchar (5)** , avec une valeur par défaut **FALSE**. FALSE signifie que la table est tronquée tandis que TRUE indique que la table est supprimée.  
+`[ @drop_table = ] 'drop_table'`Indique s’il faut supprimer ou tronquer la table contenant des informations sur la progression de l’instantané. *DROP_TABLE* est de type **nvarchar (5)**, avec **false**comme valeur par défaut. FALSE signifie que la table est tronquée tandis que TRUE indique que la table est supprimée.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_resetsnapshotdeliveryprogress** supprime toutes les lignes dans le **MSsnapshotdeliveryprogress** table. Elle supprime efficacement toutes les métadonnées laissées sur la base de données d'abonnement par les progressions précédentes des processus de livraison d'instantanés.  
+ **sp_resetsnapshotdeliveryprogress** supprime toutes les lignes de la table **MSsnapshotdeliveryprogress** . Elle supprime efficacement toutes les métadonnées laissées sur la base de données d'abonnement par les progressions précédentes des processus de livraison d'instantanés.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou le **db_owner** rôle de base de données fixe peuvent exécuter **sp_resetsnapshotdeliveryprogress**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_resetsnapshotdeliveryprogress**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

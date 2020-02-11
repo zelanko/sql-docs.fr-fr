@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f5fc8fdc9b522ad79e67a7769ba2571b7a80af9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63023912"
 ---
-# <a name="mssqleng024070"></a>MSSQL_ENG024070
+# <a name="mssql_eng024070"></a>MSSQL_ENG024070
     
 ## <a name="message-details"></a>Détails du message  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|24070|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|24070|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique||  
 |Texte du message|Le client ne dispose pas d'un privilège qui est obligatoire.|  
@@ -35,7 +35,7 @@ ms.locfileid: "63023912"
 ## <a name="explanation"></a>Explication  
  C'est une erreur générale qui peut être déclenchée qu'une réplication soit utilisée ou non. Dans le cas d'un serveur appartenant à une topologie de réplication, l'erreur est généralement déclenchée car le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est modifié à l'aide du Gestionnaire de contrôle des services [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows et non du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Lorsque vous essayez d'exécuter un travail d'agent après avoir modifié le compte de service, le travail peut échouer avec un message d'erreur similaire au message suivant :  
   
- « Exécuter en tant qu’utilisateur : \<UserAccount >. Sous-système d’instantané de réplication de la réplication : agent \<Nom_agent > a échoué. Exécuté en tant qu’utilisateur : \<UserAccount >. Le client ne dispose pas d'un privilège qui est obligatoire. L'étape a échoué. `[SQLSTATE 42000] (Error 14151)` . L'étape a échoué. »  
+ «Exécuté en tant qu' \<utilisateur : UserAccount>. Réplication-sous-système d’instantané \<de réplication : échec de l'> de l’agent AgentName. Exécuté en tant qu' \<utilisateur : UserAccount>. Le client ne dispose pas d'un privilège qui est obligatoire. L'étape a échoué. `[SQLSTATE 42000] (Error 14151)`. L'étape a échoué. »  
   
  Ce problème est dû au fait que le Gestionnaire de contrôle des services Windows ne peut pas accorder les autorisations requises au nouveau compte de service pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

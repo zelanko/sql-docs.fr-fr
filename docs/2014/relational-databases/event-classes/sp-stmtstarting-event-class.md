@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7acd72b5386eed5e78ddcd2fe1cd0344905fa833
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63050975"
 ---
-# <a name="spstmtstarting-event-class"></a>SP:StmtStarting, classe d'événements
+# <a name="spstmtstarting-event-class"></a>SP:StmtStarting (classe d'événements)
   La classe d'événements SP:StmtStarting indique qu'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] à l'intérieur d'une procédure stockée a démarré.  
   
 ## <a name="spstmtstarting-event-class-data-columns"></a>Colonnes de données de la classe d'événements SP:StmtStarting  
@@ -31,7 +31,7 @@ ms.locfileid: "63050975"
 |ApplicationName|`nvarchar`|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette colonne est remplie avec les valeurs passées par l'application plutôt que par le nom affiché du programme.|10|Oui|  
 |ClientProcessID|`int`|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  
 |DatabaseID|`int`|ID de la base de données dans laquelle la procédure stockée est en cours d'exécution. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
-|DatabaseName|`nvarchar`|Nom de la base de données dans laquelle la procédure stockée est en cours d'exécution.|35|Oui|  
+|nom_base_de_données|`nvarchar`|Nom de la base de données dans laquelle la procédure stockée est en cours d'exécution.|35|Oui|  
 |EventClass|`int`|Type d’événement = 44.|27|Non|  
 |EventSequence|`int`|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |GroupID|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
@@ -54,7 +54,7 @@ ms.locfileid: "63050975"
 |SourceDatabaseID|`int`|ID de la base de données dans laquelle se trouve l'objet.|62|Oui|  
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|État|`int`|Indique si l'instruction est exécutée après une recompilation.<br /><br /> 1=Recompilé|30|Oui|  
+|State|`int`|Indique si l'instruction est exécutée après une recompilation.<br /><br /> 1=Recompilé|30|Oui|  
 |TextData|`ntext`|Valeur texte qui dépend de la classe d'événements capturée dans la trace.|1|Oui|  
 |TransactionID|`bigint`|ID affecté par le système à la transaction.|4|Oui|  
 |XactSequence|`bigint`|Jeton utilisé pour décrire la transaction en cours.|50|Oui|  

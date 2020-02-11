@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e7d89c05ebd0b181b63f66fa0e0e0db99d54b952
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916143"
 ---
-# <a name="mssqlserver10737"></a>MSSQLSERVER_10737
+# <a name="mssqlserver_10737"></a>MSSQLSERVER_10737
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|MSSQLSERVER|  
-|ID d'événement|10737|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|10737|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|REBUILD_PARTITION_ALL_NOT_SPECIFIED|  
 |Texte du message|Dans une instruction ALTER TABLE REBUILD ou ALTER INDEX REBUILD, lorsqu'une partition est spécifiée dans une clause DATA_COMPRESSION, PARTITION=ALL est obligatoire. La clause PARTITION=ALL permet d'imposer que toutes les partitions de la table ou de l'index soient régénérées, même si un seul sous-ensemble est spécifié dans la clause DATA_COMPRESSION.|  

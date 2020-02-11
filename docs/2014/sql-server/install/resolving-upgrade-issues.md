@@ -31,10 +31,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85de606ecea93aba80714d4266e9897dd856879f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092498"
 ---
 # <a name="resolving-upgrade-issues"></a>Résolution de problèmes de mise à niveau
@@ -42,7 +42,7 @@ ms.locfileid: "66092498"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Dernières informations sur les problèmes de mise à niveau](../../../2014/sql-server/install/late-breaking-upgrade-issues.md)  
+-   [Informations les plus récentes concernant les problèmes de mise à niveau](../../../2014/sql-server/install/late-breaking-upgrade-issues.md)  
   
 -   [Problèmes de mise à niveau du moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
@@ -50,25 +50,25 @@ ms.locfileid: "66092498"
   
 -   [Problèmes de mise à niveau de la réplication](../../../2014/sql-server/install/replication-upgrade-issues.md)  
   
--   [Problèmes de mise à niveau Reporting Services &#40;Conseiller de mise à niveau&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+-   [Problèmes de mise à niveau de Reporting Services &#40;conseiller de mise à niveau&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
--   [Problèmes de mise à niveau de SQL Server Agent](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
+-   [Problèmes de mise à niveau de l'Agent SQL Server](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
   
 ## <a name="issues-that-prevent-upgrading"></a>Problèmes qui empêchent la mise à niveau  
- Quelques configurations ou paramètres d'une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent vous empêcher d'effectuer une mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Si le programme d’installation détecte ces problèmes lorsque vous installez [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], le programme d’installation arrête le processus de mise à niveau et demande que vous exécutez le Conseiller de mise à niveau et résolvez les problèmes de blocage.  
+ Quelques configurations ou paramètres d'une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent vous empêcher d'effectuer une mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Si le programme d’installation détecte ces problèmes lors [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]de l’installation de, le programme d’installation arrête le processus de mise à niveau et demande que vous exécutiez le conseiller de mise à niveau et corrige les éventuels problèmes de blocage.  
   
 ### [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
  Si les tâches suivantes sont répertoriées dans le rapport de mise à niveau du [!INCLUDE[ssDE](../../includes/ssde-md.md)], vous devez effectuer les actions requises avant de procéder à la mise niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] :  
   
--   [Détacher l’ID de base de données 32767](../../../2014/sql-server/install/detach-database-id-32767.md)  
+-   [Détacher l'ID de base de données 32767](../../../2014/sql-server/install/detach-database-id-32767.md)  
   
--   [Renommer les connexions correspondant aux noms de rôles serveur fixes](../../../2014/sql-server/install/rename-logins-matching-fixed-server-role-names.md)  
+-   [Renommer les accès correspondant aux noms de rôles serveur fixes](../../../2014/sql-server/install/rename-logins-matching-fixed-server-role-names.md)  
   
--   [Renommer l’utilisateur système](../../../2014/sql-server/install/rename-user-sys.md)  
+-   [Renommer l'utilisateur système](../../../2014/sql-server/install/rename-user-sys.md)  
   
--   [Utiliser sp_rename pour renommer le nom d’index en double](../../../2014/sql-server/install/use-sp-rename-to-rename-duplicate-index-name.md)  
+-   [Utiliser sp_rename pour renommer le nom d'index en double](../../../2014/sql-server/install/use-sp-rename-to-rename-duplicate-index-name.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
+ [Le conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

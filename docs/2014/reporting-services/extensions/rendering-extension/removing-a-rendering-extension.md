@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 77a8a9ac44b35f338f978913985617e4f264ddb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62988065"
 ---
 # <a name="removing-a-rendering-extension"></a>Suppression d'une extension de rendu
-  Pour supprimer un [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] extension de rendu, supprimez simplement le `Extension` élément pour votre extension de rendu à partir du fichier rsreportserver.config, situé dans **%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\< Nom de l’instance > \Reporting** dossier. Si vous avez apporté des entrées pour un concepteur de rapports ainsi que sur un serveur de rapports, supprimez le `Extension` élément à partir de la [fichier de Configuration RSReportDesigner](../../report-server/rsreportdesigner-configuration-file.md) également. Une fois les informations de configuration supprimées, l'extension de rendu n'est plus accessible au composant.  
+  Pour supprimer une [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] extension de rendu, supprimez `Extension` simplement l’élément pour votre extension de rendu du fichier RSReportServer. config, situé dans **%ProgramFiles%\Microsoft SQL Server \\< MSRS10_50. Nom de l’instance> dossier \Reporting Services\ReportServer** . Si vous avez créé des entrées pour un Concepteur de rapports, ainsi qu’un serveur de rapports `Extension` , supprimez également l’élément du [fichier de configuration RSReportDesigner](../../report-server/rsreportdesigner-configuration-file.md) . Une fois les informations de configuration supprimées, l'extension de rendu n'est plus accessible au composant.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fichiers de configuration de Reporting Services](../../report-server/reporting-services-configuration-files.md)   

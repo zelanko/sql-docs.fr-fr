@@ -20,18 +20,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a5f699f21b1f28537da2e2f0033fe6b17908186a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002465"
 ---
-# <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
+# <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Met à jour les métadonnées Always Encrypted pour les paramètres de la procédure non liées au schéma spécifié, fonction définie par l’utilisateur, vue, DML déclencheur, déclencheur DDL au niveau de la base de données ou déclencheur DDL de niveau serveur dans la base de données actuelle. 
+Met à jour les métadonnées de Always Encrypted pour les paramètres de la procédure stockée non liée au schéma, la fonction définie par l’utilisateur, la vue, le déclencheur DML, le déclencheur DDL au niveau de la base de données ou le déclencheur DDL au niveau du serveur spécifié dans la base de données actuelle. 
 
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,45 +46,46 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>Arguments
 
-`[ @name = ] 'module_name'` Est le nom de la procédure stockée, fonction définie par l’utilisateur, vue, déclencheur DML, déclencheur DDL au niveau de la base de données ou déclencheur DDL au niveau du serveur. *nom_module* ne peut pas être un common language runtime (CLR) procédure stockée ou une fonction CLR. *nom_module* ne peut pas être liée au schéma. *nom_module* est `nvarchar`, sans valeur par défaut. *nom_module* peut être un identificateur multipartie, mais ne peut faire référence aux objets dans la base de données actuelle.
+`[ @name = ] 'module_name'`Nom de la procédure stockée, fonction définie par l’utilisateur, vue, déclencheur DML, déclencheur DDL au niveau de la base de données ou déclencheur DDL au niveau du serveur. *module_name* ne peut pas être une procédure stockée Common Language Runtime (CLR) ou une fonction CLR. *module_name* ne peut pas être lié à un schéma. *module_name* est `nvarchar`de, sans valeur par défaut. *module_name* peut être un identificateur en plusieurs parties, mais ne peut faire référence qu’à des objets de la base de données active.
 
-`[ @namespace = ] ' < class > '` Est la classe du module spécifié. Lorsque *nom_module* est un déclencheur DDL, `<class>` est requis. `<class>` a la valeur `nvarchar(20)`. Les entrées valides sont `DATABASE_DDL_TRIGGER` et `SERVER_DDL_TRIGGER`.    
+`[ @namespace = ] ' < class > '`Classe du module spécifié. Lorsque *module_name* est un déclencheur DDL `<class>` , est requis. 
+  `<class>` a la valeur `nvarchar(20)`. Les entrées `DATABASE_DDL_TRIGGER` valides `SERVER_DDL_TRIGGER`sont et.    
 
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
 
 0 (réussite) ou un nombre différent de zéro (échec)
 
 
 ## <a name="remarks"></a>Notes
 
-Les métadonnées de chiffrement pour les paramètres d’un module peuvent devenir obsolète, si :   
-* Propriétés de chiffrement d’une colonne dans une table de références de module, ont été mis à jour. Par exemple, une colonne a été supprimée et une nouvelle colonne portant le même nom, mais un type de chiffrement, clé de chiffrement ou un algorithme de chiffrement a été ajoutée.  
+Les métadonnées de chiffrement pour les paramètres d’un module peuvent devenir obsolètes, si :   
+* Les propriétés de chiffrement d’une colonne dans une table référencée par le module, ont été mises à jour. Par exemple, une colonne a été supprimée et une nouvelle colonne portant le même nom, mais un type de chiffrement différent, une clé de chiffrement ou un algorithme de chiffrement a été ajouté.  
 * Le module fait référence à un autre module avec les métadonnées de chiffrement de paramètre obsolètes.  
 
-Lorsque les propriétés de chiffrement d’une table sont modifiées, `sp_refresh_parameter_encryption` doit être exécutée pour tous les modules directement ou indirectement référence à la table. Cette procédure stockée peut être appelée sur ces modules dans n’importe quel ordre, sans que l’utilisateur à la première actualisation le module interne avant de passer à ses appelants.
+Lorsque les propriétés de chiffrement d’une table `sp_refresh_parameter_encryption` sont modifiées, doit être exécutée pour tous les modules qui référencent directement ou indirectement la table. Cette procédure stockée peut être appelée sur ces modules dans n’importe quel ordre, sans qu’il soit nécessaire à l’utilisateur d’actualiser d’abord le module interne avant de passer à ses appelants.
 
-`sp_refresh_parameter_encryption` n’affecte pas les autorisations, propriétés étendues, ou `SET` options qui sont associées à l’objet. 
+`sp_refresh_parameter_encryption`n’affecte pas les autorisations, les propriétés étendues `SET` ou les options associées à l’objet. 
 
 Pour actualiser un déclencheur DDL au niveau du serveur, exécutez cette procédure stockée à partir du contexte de toute base de données.
 
 > [!NOTE]
->  Les signatures qui sont associés à l’objet sont supprimées lorsque vous exécutez `sp_refresh_parameter_encryption`.
+>  Toutes les signatures associées à l’objet sont supprimées lorsque vous exécutez `sp_refresh_parameter_encryption`.
 
 ## <a name="permissions"></a>Autorisations
 
-Requiert `ALTER` autorisation sur le module et `REFERENCES` autorisation sur les types CLR définis par l’utilisateur et les collections de schémas XML qui sont référencées par l’objet.   
+Nécessite `ALTER` l’autorisation sur le module `REFERENCES` et l’autorisation sur les types CLR définis par l’utilisateur et les collections de schémas XML référencés par l’objet.   
 
-Lorsque le module spécifié est un déclencheur DDL de niveau de base de données, nécessite `ALTER ANY DATABASE DDL TRIGGER` autorisation dans la base de données actuelle.    
+Lorsque le module spécifié est un déclencheur DDL au niveau de la `ALTER ANY DATABASE DDL TRIGGER` base de données, nécessite l’autorisation dans la base de données actuelle.    
 
-Lorsque le module spécifié est un déclencheur DDL de niveau serveur, nécessite `CONTROL SERVER` autorisation.
+Lorsque le module spécifié est un déclencheur DDL au niveau du serveur `CONTROL SERVER` , requiert l’autorisation.
 
-Pour les modules qui sont définies avec la `EXECUTE AS` clause, `IMPERSONATE` autorisation est requise sur le principal spécifié. En règle générale, l’actualisation d’un objet ne change pas son `EXECUTE AS` principal, sauf si le module a été défini avec `EXECUTE AS USER` et le nom d’utilisateur du principal maintenant résout à un autre utilisateur que c’était le cas au moment où le module a été créé.
+Pour les modules définis avec la `EXECUTE AS` clause, `IMPERSONATE` une autorisation est requise sur le principal spécifié. En règle générale, l’actualisation d’un objet `EXECUTE AS` ne modifie pas son principal, sauf si `EXECUTE AS USER` le module a été défini avec et que le nom d’utilisateur du principal se résout maintenant en un utilisateur différent de celui de la création du module.
  
 ## <a name="examples"></a>Exemples
 
-L’exemple suivant crée une table et une procédure référençant la table, configure Always Encrypted, puis illustre la modification de la table et en cours d’exécution le `sp_refresh_parameter_encryption` procédure.  
+L’exemple suivant crée une table et une procédure référençant la table, configure Always Encrypted, puis illustre la modification de la table et l’exécution `sp_refresh_parameter_encryption` de la procédure.  
 
-Tout d’abord créer la table initiale et une procédure stockée faisant référence à la table.
+Commencez par créer la table initiale et une procédure stockée faisant référence à la table.
 ```sql
 CREATE TABLE [Patients]([PatientID] [int] IDENTITY(1,1) NOT NULL,
     [SSN] [char](11), 
@@ -113,7 +114,7 @@ END;
 GO
 ```
 
-Définissez ensuite les clés Always Encrypted.
+Configurez ensuite Always Encrypted clés.
 ```sql
 CREATE COLUMN MASTER KEY [CMK1]
 WITH
@@ -135,7 +136,7 @@ GO
 ```
 
 
-Enfin, nous remplacer la colonne SSN par la colonne chiffrée, puis exécute le `sp_refresh_parameter_encryption` procédure pour mettre à jour les composants Always Encrypted.
+Enfin, nous remplaçons la colonne SSN par la colonne Encrypted, puis `sp_refresh_parameter_encryption` j’exécute la procédure pour mettre à jour les composants Always Encrypted.
 ```sql
 ALTER TABLE [Patients] DROP COLUMN [SSN];
 GO
@@ -156,5 +157,5 @@ GO
 ## <a name="see-also"></a>Voir aussi 
 
 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
-[Assistant Chiffrement intégral.](../../relational-databases/security/encryption/always-encrypted-wizard.md)   
+[Assistant Always Encrypted](../../relational-databases/security/encryption/always-encrypted-wizard.md)   
 

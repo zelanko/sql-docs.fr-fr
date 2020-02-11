@@ -19,19 +19,19 @@ ms.assetid: 660f2749-392f-46bf-89f3-27764d848507
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 80462381e058c4cb9107aa4ac07138e42d27e677
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010631"
 ---
-# <a name="spsyscollectorsetcachewindow-transact-sql"></a>sp_syscollector_set_cache_window (Transact-SQL)
+# <a name="sp_syscollector_set_cache_window-transact-sql"></a>sp_syscollector_set_cache_window (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Définit le nombre de tentatives de téléchargement de données en cas d'échec. Une nouvelle tentative de téléchargement en cas d'échec atténue le risque de perdre les données recueillies.  
 
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,19 +42,19 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
   
 ## <a name="arguments"></a>Arguments  
  [ @cache_window = ] *cache_window*  
- Nombre de tentatives de téléchargement de données dans l'entrepôt de données de gestion en cas d'échec sans perte de données. *cache_window* est **int** avec une valeur par défaut de 1. *cache_window* peut avoir l’une des valeurs suivantes :  
+ Nombre de tentatives de téléchargement de données dans l'entrepôt de données de gestion en cas d'échec sans perte de données. *cache_window* est de **type int** avec 1 comme valeur par défaut. *cache_window* peut prendre l’une des valeurs suivantes :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |-1|Mise en cache de toutes les données de téléchargement des échecs de téléchargement précédents.|  
 |0|Ne pas mettre en cache de données après un échec de téléchargement.|  
-|*n*|Mettre en cache les données des n échecs de téléchargement précédents, où *n* > = 1.|  
+|*n*|Mettez en cache les données des n échecs de téléchargement précédents, où *n* >= 1.|  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- Vous devez désactiver le collecteur de données avant de modifier la configuration de la fenêtre de mise en cache. Cette procédure stockée échoue si le collecteur de données est activé. Pour plus d’informations, consultez [activer ou désactiver la collecte de données](../../relational-databases/data-collection/enable-or-disable-data-collection.md), et [gérer la collecte de données](../../relational-databases/data-collection/manage-data-collection.md).  
+ Vous devez désactiver le collecteur de données avant de modifier la configuration de la fenêtre de mise en cache. Cette procédure stockée échoue si le collecteur de données est activé. Pour plus d’informations, consultez [activer ou désactiver la collecte de données](../../relational-databases/data-collection/enable-or-disable-data-collection.md)et gérer la collecte de [données](../../relational-databases/data-collection/manage-data-collection.md).  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert l'appartenance au rôle de base de données fixe dc_admin (avec autorisation EXECUTE) pour exécuter cette procédure.  

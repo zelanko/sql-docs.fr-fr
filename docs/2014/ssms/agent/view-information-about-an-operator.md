@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9d1cab01b6fc496de90975966bfcf29b70e041fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68188748"
 ---
 # <a name="view-information-about-an-operator"></a>Afficher des informations relatives à un opérateur
-  Cette rubrique explique comment afficher des infou demations sur un opérateur de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Cette rubrique explique comment afficher des informations sur un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] opérateur de l' [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] agent dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] à [!INCLUDE[tsql](../../includes/tsql-md.md)]l’aide de ou de.  
   
  **Dans cette rubrique**  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68188748"
   
      [Sécurité](#Security)  
   
--   **Pour afficher des informations relatives à un opérateur, utilisez :**  
+-   **Pour afficher des informations sur un opérateur, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "68188748"
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](sql-server-agent-fixed-database-roles.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
@@ -66,13 +66,13 @@ ms.locfileid: "68188748"
   
 4.  Cliquez avec le bouton droit sur l’opérateur à afficher, puis sélectionnez **Propriétés**.  
   
-     Pour plus d’informations sur les options disponibles contenues dans la boîte de dialogue _Propriétés de_**nom_opérateur** , consultez :  
+     Pour plus d’informations sur les options disponibles contenues dans la boîte de dialogue**Propriétés** de la _operator_name_, consultez :  
   
-    -   [Propriétés de l’opérateur et opérateur New &#40;Page Général&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [Propriétés de l’opérateur et nouvel opérateur &#40;&#41;page général](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [Propriétés de l’opérateur : Nouvel opérateur &#40;Page Notifications&#41;](operator-properties-new-operator-notifications-page.md)  
+    -   [Propriétés de l’opérateur : nouvel opérateur &#40;page notifications&#41;](operator-properties-new-operator-notifications-page.md)  
   
-    -   [Propriétés Opérateur &#40;page Historique&#41;](operator-properties-history-page.md)  
+    -   [Propriétés de l’opérateur &#40;page historique&#41;](operator-properties-history-page.md)  
   
 5.  Lorsque vous avez terminé, cliquez sur **OK**.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "68188748"
   
 #### <a name="to-view-information-about-an-operator"></a>Pour afficher des informations relatives à un opérateur  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

@@ -1,5 +1,5 @@
 ---
-title: Vues (Transact-SQL) de la messagerie de base de données | Microsoft Docs
+title: Vues de Database Mail (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ ms.assetid: ab8728e0-803f-4b6f-b66f-9880ec37a49e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e077668f870bf7b9de1c2203272aa48b07910f2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68033112"
 ---
 # <a name="database-mail-views-transact-sql"></a>Vues de la messagerie de base de données (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  La messagerie de base de données propose les vues suivantes pour afficher le contenu des messages électroniques, l'état des messages électroniques ainsi que les messages reçus, tels que les messages d'erreur qu'elle a enregistrés. Ces vues sont dans le **msdb** base de données.  
+  La messagerie de base de données propose les vues suivantes pour afficher le contenu des messages électroniques, l'état des messages électroniques ainsi que les messages reçus, tels que les messages d'erreur qu'elle a enregistrés. Ces vues se trouvent dans la base de données **msdb** .  
   
 |||  
 |-|-|  
@@ -39,7 +39,7 @@ ms.locfileid: "68033112"
   
 ## <a name="see-also"></a>Voir aussi  
  [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)   
- [Objets de Configuration de messagerie de base de données](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Procédures stockées de messagerie de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Objets de configuration Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Database Mail des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

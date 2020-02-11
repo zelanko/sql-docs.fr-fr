@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196709"
 ---
 # <a name="table-properties"></a>Propriétés de la table
@@ -80,10 +80,10 @@ ms.locfileid: "68196709"
  DISABLE  
  Empêche l'escalade de verrous dans la plupart des cas. Les verrous de niveau table ne sont pas totalement interdits. Par exemple, lorsque vous analysez une table ne contenant aucun index cluster sous le niveau d'isolement sérialisable, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit prendre un verrou de table pour protéger l'intégrité des données.  
   
- **Table répliquée**  
+ **La table est répliquée**  
  Indique lorsqu'une table est répliquée vers une autre base de données à l'aide de la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les valeurs possibles sont `True` ou `False`.  
   
-##  <a name="ChangeTracking"></a> Page de suivi des modifications  
+##  <a name="ChangeTracking"></a>Page Change Tracking  
  **Suivi des modifications**  
  Indique si le suivi des modifications est activé pour la table. La valeur par défaut est `False`.  
   
@@ -96,24 +96,24 @@ ms.locfileid: "68196709"
   
  Pour plus d’informations sur le suivi des modifications, consultez [À propos du suivi des modifications &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md).  
   
-##  <a name="FileTable"></a> Page FileTable  
+##  <a name="FileTable"></a>Page filetable  
  Affiche les propriétés de la table associée aux FileTables. Pour plus d’informations, consultez [FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md).  
   
- **Classement de la colonne de noms de FileTable**  
+ **Classement de la colonne de nom filetable**  
  Classement appliqué à la colonne **Nom** dans un FileTable. La colonne de **nom** contient des noms de fichier et de répertoire.  
   
- **Nom du répertoire FileTable**  
+ **Nom du répertoire filetable**  
  Dossier racine pour le FileTable.  
   
- **Espace de noms FileTable activé**  
+ **Espace de noms filetable activé**  
  Lorsque `True` est défini, cette valeur indique que la table est un FileTable. Si vous remplacez cette valeur par `False`, vous modifiez le FileTable pour en faire une table utilisateur ordinaire. Si vous souhaitez ultérieurement remodifier la table pour en faire un FileTable, la table devra réussir la vérification de cohérence de FileTable pour la conversion puisse aboutir.  
   
-##  <a name="Storage"></a> Page de stockage  
+##  <a name="Storage"></a>Page de stockage  
  Affiche les propriétés de stockage de la table sélectionnée.  
   
 ### <a name="compression"></a>Compression  
  **Type de compression**  
- Type de compression de la table. Cette propriété est disponible uniquement pour les tables qui ne sont pas partitionnées. Pour plus d’informations, consultez [Compression de données](../data-compression/data-compression.md).  
+ Type de compression de la table. Cette propriété est disponible uniquement pour les tables qui ne sont pas partitionnées. Pour plus d’informations, consultez [Data Compression](../data-compression/data-compression.md).  
   
  **Partitions utilisant la compression de page**  
  Numéros des partitions qui utilisent la compression de page. Cette propriété est disponible uniquement pour les tables partitionnées.  
@@ -125,25 +125,25 @@ ms.locfileid: "68196709"
  Numéros des partitions qui utilisent la compression de ligne. Cette propriété est disponible uniquement pour les tables partitionnées.  
   
 ### <a name="filegroup"></a>Groupe de fichiers  
- **Groupe de fichiers de texte**  
+ **Groupe de fichiers texte**  
  Nom du groupe de fichiers qui contient les données texte de la table.  
   
- **Groupe de fichiers**  
+ **Fichiers**  
  Nom du groupe de fichiers contenant la table.  
   
- **Table partitionnée**  
+ **La table est partitionnée**  
  Les valeurs possibles sont `True` et `False`.  
   
- **Groupe de fichiers Filestream**  
+ **Groupe de fichiers FILESTREAM**  
  Indiquez le nom du groupe de fichiers de données FILESTREAM si la table contient une colonne `varbinary(max)` avec l'attribut FILESTREAM. La valeur par défaut est le groupe de fichiers de données FILESTREAM par défaut.  
   
  Si la table ne contient pas de données FILESTREAM, ce champ est vierge.  
   
-### <a name="general"></a>Généralités  
- **Le format de stockage VarDecimal est activé**  
- Lorsque `True`, cette valeur en lecture seule indique que `decimal` et `numeric` des types de données sont stockées en utilisant le format de stockage vardecimal. Pour modifier cette option, utilisez le `vardecimal storage format` option de [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). Le format de stockage vardecimal est déconseillé. Utilisez plutôt la compression ROW.  
+### <a name="general"></a>Général  
+ **Le format de stockage vardecimal est activé**  
+ Lorsque `True`la valeur est, cette valeur en lecture `decimal` seule `numeric` indique que les types de données et sont stockés à l’aide du format de stockage vardecimal. Pour modifier cette option, utilisez l' `vardecimal storage format` option de [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). Le format de stockage vardecimal est déconseillé. Utilisez plutôt la compression ROW.  
   
- **Espace d'index**  
+ **Espace d’index**  
  Quantité d'espace occupée par les index dans la table, en mégaoctets. Cette valeur n'inclut pas l'utilisation de l'espace des index XML pour la table. Si les index XML appartiennent à la table, utilisez plutôt [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) .  
   
  **Nombre de lignes**  
@@ -153,7 +153,7 @@ ms.locfileid: "68196709"
  Quantité d'espace occupée par les données dans la table, en mégaoctets.  
   
 ### <a name="partitioning"></a>Partitionnement  
- Cette section est disponible uniquement si la table est partitionnée. Pour plus d’informations, consultez [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).  
+ Cette section est disponible uniquement si la table est partitionnée. Pour plus d’informations, consultez [Tables et index partitionnés](../partitions/partitioned-tables-and-indexes.md).  
   
  **Colonne de partition**  
  Nom de la colonne sur laquelle la table est partitionnée.  
@@ -170,7 +170,7 @@ ms.locfileid: "68196709"
  Le schéma de partition FILESTREAM doit être symétrique avec le schéma spécifié dans l'option **Schéma de partition** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher la définition de table](view-the-table-definition.md)   
- [Modifier des colonnes &#40;moteur de base de données&#41;](../tables/modify-columns-database-engine.md)  
+ [Afficher la définition de la table](view-the-table-definition.md)   
+ [Modifier les colonnes &#40;Moteur de base de données&#41;](../tables/modify-columns-database-engine.md)  
   
   

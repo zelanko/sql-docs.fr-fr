@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bba5156d159c87ad6ad0e011268bc655b45a5c37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032415"
 ---
 # <a name="object-dependencies"></a>Dépendances d'objet
@@ -27,14 +27,14 @@ ms.locfileid: "63032415"
  Utilisez cette boîte de dialogue pour comprendre les dépendances avant de modifier ou de supprimer l'objet sélectionné.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
- **Les objets qui dépendent de** _\<objet sélectionné >_  
+ **Objets qui dépendent de**  _\<l’objet sélectionné>_  
  Cliquez sur ce bouton pour afficher la liste des objets dont les dépendances sont suivies et qui dépendent de l'objet sélectionné.  
   
- **Objets dont dépend** _\<objet sélectionné >_ **dépend**  
+ **Objets**dont **dépend** l'_\<objet sélectionné>_      
  Cliquez sur ce bouton pour afficher la liste des objets dont les dépendances sont suivies et dont dépend l'objet sélectionné.  
   
- **Dépendances**  
- Si **les objets qui dépendent de**  _\<objet sélectionné >_ est activé, il affiche une vue hiérarchique des objets qui dépendent de l’objet sélectionné. Si **objets dont**  _\<objet sélectionné >_ **varie** est activé, il affiche une vue hiérarchique des objets dont dépend l’objet sélectionné .  
+ **Dépendent**  
+ Si l’utilisateur clique sur **des objets qui dépendent de** _ \<l’objet sélectionné>_ , cette option affiche une vue hiérarchique des objets qui dépendent de l’objet sélectionné. Si vous cliquez sur **objets sur lesquels** _ \<l’objet sélectionné>_ **dépend** , vous affichez une vue hiérarchique des objets dont dépend l’objet sélectionné.  
   
  **Nom**  
  Affiche le nom de l'objet sélectionné dans l'arborescence **Dépendances** affichée plus haut.  
@@ -52,7 +52,7 @@ ms.locfileid: "63032415"
  > [!NOTE]  
 >  Cette option est disponible uniquement dans la page **Général** .  
   
- Affiche le type de dépendance entre deux objets. Les valeurs possibles sont les suivantes :  
+ Affiche le type de dépendance entre deux objets. Il peut s'agir d'une des méthodes suivantes :  
   
 -   Dépendance liée au schéma  
   

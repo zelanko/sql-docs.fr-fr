@@ -1,5 +1,5 @@
 ---
-title: 'Étape 3 : Test des packages déployés | Microsoft Docs'
+title: 'Étape 3 : Test des packages déployés | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 92055ceb4226406fe26d7ce23491c81606f292c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891808"
 ---
-# <a name="step-3-testing-the-deployed-packages"></a>Étape 3 : Test des packages déployés
+# <a name="step-3-testing-the-deployed-packages"></a>Étape 3 : Test des packages déployés
   Dans cette tâche, vous allez tester les packages que vous avez déployés vers une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Dans d'autres didacticiels [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , vous avez exécuté des packages dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], l'environnement de développement pour [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], à l'aide de l'option **Démarrer le débogage** du menu **Débogage** . Vous allez cette fois exécuter les packages différemment.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit plusieurs outils que vous pouvez utiliser pour exécuter des packages dans l'environnement de production et de test : l'utilitaire d'invite de commandes `dtexec` et l'utilitaire d'exécution de package. Cet utilitaire est un outil graphique qui repose sur `dtexec`. Ces deux outils exécutent le package immédiatement. De plus, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit un sous-système de SQL Server Agent conçu spécifiquement pour planifier l'exécution de package comme une étape d'un travail de SQL Server Agent.  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit plusieurs outils que vous pouvez utiliser pour exécuter des packages dans l'environnement de production et de test : l'utilitaire d'invite de commandes `dtexec` et l'utilitaire d'exécution de package. Cet utilitaire est un outil graphique qui repose sur `dtexec`. Ces deux outils exécutent le package immédiatement. De plus, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit un sous-système de SQL Server Agent conçu spécifiquement pour planifier l'exécution de package comme une étape d'un travail de SQL Server Agent.  
   
  Vous allez utiliser l'utilitaire d'exécution de package pour exécuter les packages déployés. Les packages sont utilisés tel quel ; par conséquent, vous n'avez pas à mettre à jour les informations sur les pages de la boîte de dialogue. Vous allez exécuter les packages à partir de la page Général, la première page de l'utilitaire d'exécution de package. Si vous le souhaitez, vous pouvez cliquer sur les autres pages pour consulter les informations destinées à chaque package.  
   
@@ -71,7 +72,7 @@ ms.locfileid: "62891808"
   
 2.  Dans la boîte de dialogue **Se connecter au serveur** , sélectionnez **Moteur de base de données** dans la liste **Type du serveur** , fournissez le nom du serveur sur lequel vous avez installé les packages du didacticiel ou tapez (local) dans la zone **Nom du serveur** , et sélectionnez un mode d’authentification. Si vous utilisez l'authentification SQL Server, vous devez fournir un nom d'utilisateur et un mot de passe.  
   
-3.  Cliquer sur **Se connecter**.  
+3.  Cliquez sur **Connecter**.  
   
 4.  Dans la fenêtre de requêtes, tapez ou collez l'instruction SQL suivante :  
   
@@ -91,7 +92,7 @@ ms.locfileid: "62891808"
   
 2.  Si vous êtes invité à vous reconnecter, dans la boîte de dialogue **Se connecter au serveur** , sélectionnez **Moteur de base de données** dans la liste **Type du serveur** , fournissez le nom du serveur sur lequel vous avez installé les packages du didacticiel ou tapez (local) dans la zone **Nom du serveur** , et sélectionnez un mode d’authentification. Si vous utilisez l'authentification SQL Server, vous devez fournir un nom d'utilisateur et un mot de passe.  
   
-3.  Cliquer sur **Se connecter**.  
+3.  Cliquez sur **Connecter**.  
   
 4.  Dans la fenêtre de requêtes, tapez ou collez l'instruction SQL suivante :  
   
@@ -103,7 +104,7 @@ ms.locfileid: "62891808"
   
      La requête retourne 21 lignes de données. Le résultat retourné comprend les lignes provenant du fichier de données XML, orders.xml. Chaque ligne est une synthèse par pays/région ; la ligne répertorie le nom d'un pays/d'une région, le nombre de commandes par pays/région, ainsi que les dates des commandes les plus récentes et les plus anciennes.  
   
-![Icône Integration Services (petite)](media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône de Integration Services (petite)](media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilitaire dtexec](packages/dtexec-utility.md)  

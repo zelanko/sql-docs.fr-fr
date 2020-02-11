@@ -1,5 +1,5 @@
 ---
-title: Fonctions acceptant des paramètres de chaîne | Microsoft Docs
+title: Fonctions acceptant les paramètres de chaîne | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ ms.assetid: 869b8421-f71e-4dfd-adce-691bd3012b16
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4165dd51437f143351835bc1739ffb8279bd04ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952483"
 ---
 # <a name="functions-accepting-string-parameters"></a>Fonctions acceptant des paramètres de type chaîne
-Toutes les fonctions qui prennent des paramètres de chaîne seront converties au format Unicode. (La forme « W » de la fonction est exportée.) Nombre d’octets est converti en nombre de caractères de ces API ODBC applicable. Cela s’applique aux fonctions suivantes :  
+Toutes les fonctions qui acceptent des paramètres de chaîne seront converties en Unicode. (Le formulaire « W » de la fonction sera exporté.) Le nombre d’octets est converti en nombre de caractères pour les API ODBC applicables. Cela s’applique aux fonctions suivantes :  
   
 -   **SQLConnect**  
   
@@ -46,11 +46,11 @@ Toutes les fonctions qui prennent des paramètres de chaîne seront converties a
   
 -   **SQLGetInfo**  
   
--   **SQLGetStmtOption** (becomes **SQLGetStmtAttr**)  
+-   **SQLGetStmtOption** (devient **SQLGetStmtAttr**)  
   
--   **SQLSetStmtOption** (becomes **SQLSetStmtAttr**)  
+-   **SQLSetStmtOption** (devient **SQLSetStmtAttr**)  
   
--   **SQLGetConnectOption**  
+-   **Sqlgetconnectoption,**  
   
 -   **SQLSetConnectOption**  
   

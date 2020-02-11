@@ -1,5 +1,5 @@
 ---
-title: Configuration de SQL Native Client 11.0 | Microsoft Docs
+title: Configuration de SQL Native Client 11,0 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 52d059977481236883be931a78a302c249f43ae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137555"
 ---
 # <a name="sql-native-client-110-configuration"></a>Configuration de SQL Server Native Client 11.0
-  Cette section contient les rubriques d'aide accessibles au moyen de la touche F1, relatives aux boîtes de dialogue de **Configuration de SQL Server Native Client** du Gestionnaire de configuration [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client est la bibliothèque réseau que les ordinateurs clients utilisent pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], à compter de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Cette section contient les rubriques d'aide accessibles au moyen de la touche F1, relatives aux boîtes de dialogue de **Configuration de SQL Server Native Client** du Gestionnaire de configuration [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client est la bibliothèque réseau que les ordinateurs clients utilisent pour se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]connecter à, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]à compter de.  
   
  Les paramètres définis dans la configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sont utilisés sur l'ordinateur exécutant le programme client. Lorsqu'ils sont configurés sur l'ordinateur exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ils n'affectent que les programmes clients en cours d'exécution sur le serveur.  
   
@@ -28,28 +28,28 @@ ms.locfileid: "63137555"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Propriétés de la configuration de SQL Server Native Client &#40;onglet Indicateurs&#41;](../../../2014/tools/configuration-manager/sql-server-native-client-configuration-properties-flags-tab.md)  
+-   [SQL Server Native Client propriétés de configuration &#40;onglet indicateurs&#41;](../../../2014/tools/configuration-manager/sql-server-native-client-configuration-properties-flags-tab.md)  
   
 -   [Protocoles clients &#40;Gestionnaire de configuration SQL Server&#41;](../../relational-databases/sql-server-configuration-manager.md)  
   
-    -   [Propriétés de protocoles clients &#40;onglet Ordre&#41;](../../../2014/tools/configuration-manager/client-protocols-properties-order-tab.md)  
+    -   [Propriétés des protocoles clients &#40;onglet ordre&#41;](../../../2014/tools/configuration-manager/client-protocols-properties-order-tab.md)  
   
-    -   [Protocoles clients - Propriétés de Mémoire partagée &#40;onglet Protocole&#41;](../../../2014/tools/configuration-manager/client-protocols-shared-memory-properties-protocol-tab.md)  
+    -   [Protocoles clients-propriétés de mémoire partagée &#40;onglet protocole&#41;](../../../2014/tools/configuration-manager/client-protocols-shared-memory-properties-protocol-tab.md)  
   
-    -   [Protocoles clients - TCP et les propriétés IP &#40;onglet de protocole&#41;](../../../2014/tools/configuration-manager/client-protocols-tcp-and-ip-properties-protocol-tab.md)  
+    -   [Protocoles clients-propriétés TCP et IP &#40;onglet protocole&#41;](../../../2014/tools/configuration-manager/client-protocols-tcp-and-ip-properties-protocol-tab.md)  
   
-    -   [Protocoles clients - Propriétés de Canaux nommés &#40;onglet Protocole&#41;](../../../2014/tools/configuration-manager/client-protocols-named-pipes-properties-protocol-tab.md)  
+    -   [Protocoles clients-propriétés des canaux nommés &#40;onglet protocole&#41;](../../../2014/tools/configuration-manager/client-protocols-named-pipes-properties-protocol-tab.md)  
   
 -   [Alias &#40;Gestionnaire de configuration SQL Server&#41;](../../../2014/tools/configuration-manager/aliases-sql-server-configuration-manager.md)  
   
-    -   [Nouvel alias &#40;onglet Alias&#41;](../../../2014/tools/configuration-manager/new-alias-alias-tab.md)  
+    -   [Nouvel alias &#40;onglet alias&#41;](../../../2014/tools/configuration-manager/new-alias-alias-tab.md)  
   
-    -   [Propriétés d’&#60;alias&#62; &#40;onglet Alias&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
+    -   [&#60;&#62; propriétés alias &#40;onglet alias&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
   
     -   [Création d'une chaîne de connexion valide à l'aide du protocole de mémoire partagée](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)  
   
     -   [Création d’une chaîne de connexion valide à l’aide du protocole TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
   
-    -   [Création d'une chaîne de connexion valide à l'aide de canaux nommés](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-named-pipes.md)  
+    -   [Création d’une chaîne de connexion valide avec des canaux nommés](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-named-pipes.md)  
   
   

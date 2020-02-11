@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 38ac7a3f4c966f9496f5ff9a0855960da8a38fb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135880"
 ---
 # <a name="currentordinal-mdx"></a>CurrentOrdinal (MDX)
@@ -29,13 +29,13 @@ Set_Expression.CurrentOrdinal
   
 ## <a name="arguments"></a>Arguments  
  *Set_Expression*  
- Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
+ Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
 ## <a name="remarks"></a>Notes  
- Lors de l’itération via un ensemble, comme avec la [Filter (MDX)](../mdx/filter-mdx.md) ou [Generate (MDX)](../mdx/generate-mdx.md) fonctions, le **CurrentOrdinal** fonction retourne le numéro d’itération.  
+ Lors d’une itération dans un jeu, par exemple avec les fonctions [Filter (MDX)](../mdx/filter-mdx.md) ou [Generate (MDX)](../mdx/generate-mdx.md) , la fonction **CurrentOrdinal** retourne le numéro d’itération.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple simple suivant illustre comment **CurrentOrdinal** peut être utilisé avec **générer** pour retourner une chaîne contenant le nom de chaque élément dans un jeu, ainsi que sa position dans le jeu :  
+ L’exemple simple suivant montre comment **CurrentOrdinal** peut être utilisé avec **generate** pour retourner une chaîne contenant le nom de chaque élément d’un jeu, ainsi que sa position dans le jeu :  
   
  `WITH SET MySet AS [Customer].[Customer Geography].[Country].MEMBERS`  
   
@@ -47,7 +47,7 @@ Set_Expression.CurrentOrdinal
   
  `FROM [Adventure Works]`  
   
- L'utilisation pratique de CurrentOrdinal est limitée aux calculs très complexes. L’exemple suivant retourne le nombre de produits dans le jeu qui sont uniques, à l’aide de la **ordre** fonction pour classer les tuples non vides avant d’utiliser le **filtre** (fonction). Le **CurrentOrdinal** fonction est utilisée pour comparer et éliminer les liens.  
+ L'utilisation pratique de CurrentOrdinal est limitée aux calculs très complexes. L’exemple suivant retourne le nombre de produits dans le jeu qui sont uniques, à l’aide de la fonction **Order** pour ordonner les tuples non vides avant d’utiliser la fonction **Filter** . La fonction **CurrentOrdinal** est utilisée pour comparer et éliminer les liens.  
   
 ```  
 WITH MEMBER [Measures].[PrdTies] AS Count  
@@ -82,6 +82,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

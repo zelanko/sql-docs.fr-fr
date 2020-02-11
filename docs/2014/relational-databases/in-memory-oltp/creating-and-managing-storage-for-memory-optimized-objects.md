@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1d6bb42e4b35a74ef2bd6eefb85ea81b0ed18e40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63073844"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>Création et gestion du stockage des objets mémoire optimisés
@@ -30,11 +30,11 @@ ms.locfileid: "63073844"
   
 -   Les données sont placées dans la mémoire (le pool de mémoires tampons) en fonction des besoins et les pages modifiées ou créées sont écrites de façon asynchrone sur le disque, générant essentiellement des E/S aléatoires.  
   
- Le stockage des tables mémoire optimisées contient les attributs de clé suivants :  
+ Les principales caractéristiques du stockage des tables optimisées en mémoire sont les suivantes :  
   
 -   Toutes les tables mémoire optimisées sont mappées à un groupe de fichiers mémoire optimisé. Ce groupe de fichiers est créé à l'aide du groupe de fichiers de flux de fichier.  
   
--   Il n'y a pas de pages et les données sont conservées en tant que ligne.  
+-   Il n’y a aucune page et les données sont conservées sur une ligne.  
   
 -   Toutes les modifications apportées aux tables optimisées en mémoire sont stockées à la fin des fichiers actifs. La lecture et l’écriture des fichiers sont séquentielles.  
   
@@ -42,13 +42,13 @@ ms.locfileid: "63073844"
   
 -   Contrairement aux tables sur disque, le stockage des tables optimisées en mémoire n’est pas compressé. Lors de la migration d’une table sur disque (ligne ou page) compressée vers une table optimisée en mémoire, vous devez prendre en compte la modification de taille.  
   
--   Une table mémoire optimisée peut être durable ou non durable. Vous devez simplement configurer le stockage des tables mémoire optimisées durables.  
+-   Une table optimisée en mémoire peut être durable ou non durable. Vous devez simplement configurer le stockage des tables mémoire optimisées durables.  
   
  Cette section décrit les paires de fichiers de point de contrôle d'autres aspects du stockage des données dans des tables mémoire optimisées.  
   
  Rubriques de cette section :  
   
--   [Configuration du stockage des tables mémoire optimisées](configuring-storage-for-memory-optimized-tables.md)  
+-   [Configuration du stockage des tables à mémoire optimisée](configuring-storage-for-memory-optimized-tables.md)  
   
 -   [Groupe de fichiers mémoire optimisé](the-memory-optimized-filegroup.md)  
   

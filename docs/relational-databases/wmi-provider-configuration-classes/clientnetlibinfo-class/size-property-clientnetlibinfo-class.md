@@ -18,10 +18,10 @@ ms.assetid: 66f7264e-2c18-40f5-8091-b5dd83d5716f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: eda80b5efcee562050539bf9d50f46cc507f280e
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659151"
 ---
 # <a name="size-property-clientnetlibinfo-class"></a>Propriété Size (classe ClientNetLibInfo)
@@ -36,7 +36,7 @@ object.Size [= value]
 ```  
   
 ## <a name="parts"></a>Éléments  
- *object*  
+ *dessin*  
  Objet de [classe ClientNetLibInfo](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md) qui représente des informations sur la bibliothèque réseau cliente.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  

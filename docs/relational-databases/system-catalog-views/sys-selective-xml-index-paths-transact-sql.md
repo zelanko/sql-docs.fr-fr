@@ -1,5 +1,5 @@
 ---
-title: sys.selective_xml_index_paths (Transact-SQL) | Microsoft Docs
+title: sys. selective_xml_index_paths (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 9ff85273a1e970b3bb891d1816a96019dd4f3ae5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135191"
 ---
-# <a name="sysselectivexmlindexpaths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
+# <a name="sysselective_xml_index_paths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Disponible à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1, chaque ligne dans sys.selective_xml_index_paths représente un chemin d'accès promu pour un index XML sélectif spécifique.  
@@ -48,11 +48,11 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**object_id**|**int**|ID de table avec une colonne XML.|  
 |**index_id**|**int**|ID unique de l'index XML sélectif.|  
 |**path_id**|**int**|ID du chemin d'accès XML promu.|  
-|**path**|**nvarchar(4000)**|Chemin d'accès promu. Par exemple, '/a/b/c/d/e'.|  
-|**name**|**sysname**|Chemin d'accès.|  
+|**d**|**nvarchar(4000)**|Chemin d'accès promu. Par exemple, '/a/b/c/d/e'.|  
+|**nomme**|**sysname**|Chemin d'accès.|  
 |**path_type**|**tinyint**|0 = XQUERY<br /><br /> 1 = SQL|  
-|**path_type_desc**|**sysname**|Selon **path_type** valeur 'XQUERY' ou 'SQL'.|  
-|**xml_component_id**|**Int**|ID unique du composant de schéma XML dans la base de données.|  
+|**path_type_desc**|**sysname**|Basé sur **path_type** valeur’XQuery’ou’SQL'.|  
+|**xml_component_id**|**int**|ID unique du composant de schéma XML dans la base de données.|  
 |**xquery_type_description**|**nvarchar(4000)**|Nom du type xsd spécifié.|  
 |**is_xquery_type_inferred**|**bit**|1 = le type est déduit.|  
 |**xquery_max_length**|**smallint**|Longueur maximale (en caractères du type xsd).|  
@@ -60,7 +60,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**is_node**|**bit**|0 = l'indicateur node() n'est pas présent.<br /><br /> 1 = l'indicateur d'optimisation node() est appliqué.|  
 |**system_type_id**|**tinyint**|ID du type de système de la colonne.|  
 |**user_type_id**|**tinyint**|ID du type d'utilisateur de la colonne.|  
-|**max_length**|**smallint**|Length maximale (en octets) du type.<br /><br /> -1 = le type de données de colonne est varchar(max), nvarchar(max), varbinary(max) ou xml.|  
+|**max_length**|**smallint**|Longueur maximale (en octets) du type.<br /><br /> -1 = le type de données de colonne est varchar(max), nvarchar(max), varbinary(max) ou xml.|  
 |**precision**|**tinyint**|Précision maximale du type s'il est basé sur un nombre. Sinon, 0.|  
 |**scale**|**tinyint**|Échelle maximale du type s'il est basé sur un nombre. Sinon, il prend la valeur 0.|  
 |**collation_name**|**sysname**|Nom du classement du type s'il est de type caractère. Sinon, NULL.|  
@@ -71,6 +71,6 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
   
 ## <a name="see-also"></a>Voir aussi  
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Schémas XML &#40;système de Type XML&#41; affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
+ [Schémas XML &#40;les affichages catalogue du système de type XML&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

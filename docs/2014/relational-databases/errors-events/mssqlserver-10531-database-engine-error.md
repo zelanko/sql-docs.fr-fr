@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7324979238eda7f3ee63a709c199878350edb82d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916196"
 ---
-# <a name="mssqlserver10531"></a>MSSQLSERVER_10531
+# <a name="mssqlserver_10531"></a>MSSQLSERVER_10531
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|10531|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|10531|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|PG_NO_ELIGIBLE_STMT|  
 |Texte du message|Impossible de créer le repère de plan '%.*ls' à partir du cache, car l'utilisateur ne dispose pas des autorisations nécessaires. Accordez l'autorisation VIEW SERVER STATE à l'utilisateur qui crée le repère de plan.|  

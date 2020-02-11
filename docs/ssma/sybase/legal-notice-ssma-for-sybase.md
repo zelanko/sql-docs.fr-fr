@@ -1,5 +1,5 @@
 ---
-title: Mention légale (SSMA pour Sybase) | Microsoft Docs
+title: Notice légale (SSMA pour Sybase) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,10 +10,10 @@ ms.assetid: fe086e53-e2a9-4bb8-9534-94369d32ab41
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c65cc8fa51061ba9f8886bf81e0fa80d53781f91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68028949"
 ---
 # <a name="legal-notice-ssma-for-sybase"></a>Mentions légales (SSMA pour Sybase)
@@ -21,7 +21,7 @@ Cette documentation, ainsi que les exemples d’applications qu’elle contient,
   
 Un exemple présenté dans cette documentation sert principalement à illustrer un concept ou l’utilisation raisonnable d’une instruction ou d’une clause particulière. La plupart des exemples ne reprennent pas la totalité du code normalement utilisé dans un système en production puisque certaines parties de la validation des données et de la gestion des erreurs sont retirées pour mettre l’accent sur un concept ou une instruction particulière. Aucun support technique n’est disponible pour ces exemples, ni pour le code source fourni.  
   
-Sauf mention contraire, les exemples de sociétés, d'organisations, de produits, de noms de domaine, d'adresses de messagerie, de personnes, de lieux et d'événements sont fictifs et toute ressemblance avec des sociétés, des organisations, des produits, des noms de domaine, des adresses de messagerie, des personnes, des lieux ou des événements réels serait tout à fait fortuite. L'utilisateur est tenu d'observer la réglementation relative aux droits d'auteur applicable dans son pays. Aucune partie de cette documentation ne peut être reproduite, stockée ou introduite dans un système de restitution, ou transmise à quelque fin ou par quelque moyen que ce soit (électronique, mécanique, photocopie, enregistrement ou autre) sans la permission expresse et écrite de Microsoft Corporation.  
+Sauf mention contraire, les exemples de sociétés, d'organisations, de produits, de noms de domaine, d'adresses de messagerie, de personnes, de lieux et d'événements sont fictifs et toute ressemblance avec des sociétés, des organisations, des produits, des noms de domaine, des adresses de messagerie, des personnes, des lieux ou des événements réels serait tout à fait fortuite. L’utilisateur est tenu d’observer la réglementation relative aux droits d’auteur applicable dans son pays. Aucune partie de cette documentation ne peut être reproduite, stockée ou introduite dans un système de restitution, ou transmise à quelque fin ou par quelque moyen que ce soit (électronique, mécanique, photocopie, enregistrement ou autre) sans la permission expresse et écrite de Microsoft Corporation.  
   
 Les produits mentionnés dans cette documentation peuvent faire l’objet de brevets, de dépôts de brevets en cours, de marques, de droits d’auteur ou d’autres droits de propriété intellectuelle et industrielle de Microsoft. Sauf stipulation expresse contraire d’un contrat de licence écrit de Microsoft, la fourniture de cette documentation n’a pas pour effet de vous concéder une licence sur ces brevets, marques, ni de vous céder des droits d’auteur ou autres droits de propriété intellectuelle quels qu’ils soient.  
   
@@ -34,7 +34,7 @@ SAP NetWeaver est une marque déposée de SAP AG en Allemagne et dans plusieur
 Toutes les autres marques sont la propriété de leurs propriétaires respectifs.  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>Usage de la documentation pour le support et la mise à niveau de SQL Server  
-Le contenu qui se trouve dans la documentation de SQL Server est publié uniquement après avoir été suffisamment testé. Documentation du produit - documentation en ligne de SQL Server, fichiers Lisez-moi, documents relatifs aux problèmes connus et articles de la Base de connaissances - contient des informations sur les fonctionnalités de SQL Server qui est suffisamment robuste pour être sûr pour une utilisation générale par tous les clients. Ceci s’applique à la totalité de la documentation SQL Server, y compris aux fichiers Lisez-moi des versions et des service packs (dans la mesure où les fichiers Lisez-moi sont considérés comme des extensions de la documentation en ligne).  
+Le contenu qui se trouve dans la documentation de SQL Server est publié uniquement après avoir été suffisamment testé. Documentation produit : Documentation en ligne de SQL Server, fichiers Lisez-moi, documents de problèmes connus et Articles de la base de connaissances-contient du contenu concernant les fonctionnalités de SQL Server et les fonctionnalités qui sont suffisamment fiables pour être utilisées de manière générale par tous les clients. Ceci s’applique à la totalité de la documentation SQL Server, y compris aux fichiers Lisez-moi des versions et des service packs (dans la mesure où les fichiers Lisez-moi sont considérés comme des extensions de la documentation en ligne).  
   
 Il peut arriver qu’une fonctionnalité donnée ne doive pas être utilisée directement par les clients. Dans ce cas, elle n’est pas documentée. Le contenu de documentations ou sites web tiers n’est pas pris en charge par le support technique Microsoft et ne doit pas être utilisé dans des applications ou des bases de données de production, sauf si ladite fonctionnalité est également traitée dans la documentation SQL Server publiée par Microsoft.  
   

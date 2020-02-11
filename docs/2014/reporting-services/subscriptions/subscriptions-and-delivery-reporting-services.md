@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f598946ec6231d1ca5edacf1810431beb4638f88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100670"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Abonnements et remise (Reporting Services)
@@ -33,49 +33,50 @@ ms.locfileid: "66100670"
   
  Vous pouvez créer plusieurs abonnements pour un seul rapport afin de varier les options d'abonnement. Vous pouvez ainsi spécifier différentes valeurs de paramètres pour générer trois versions du même rapport, par exemple un rapport des ventes pour la région Ouest, un autre pour la région Est et un autre pour toutes les ventes.  
   
- ![exemple de flux d’abonnement ssrs](../media/ssrs-subscription-example-flow.png "exemple de flux d’abonnement ssrs")  
+ ![exemple de flux d'abonnement ssrs](../media/ssrs-subscription-example-flow.png "exemple de flux d'abonnement ssrs")  
   
  Les abonnements ne sont pas disponibles dans toutes les éditions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour obtenir une liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 > [!NOTE]
->  Depuis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vous pouvez transférer par programme la propriété d'un abonnement. Aucune interface utilisateur ne permet de transférer la propriété des abonnements. Pour plus d’informations, consultez <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>et [utiliser PowerShell pour la modification et liste Reporting Services Subscription Owners et exécuter un abonnement](manage-subscription-owners-and-run-subscription-powershell.md).  
+>  Depuis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vous pouvez transférer par programme la propriété d'un abonnement. Aucune interface utilisateur ne permet de transférer la propriété des abonnements. Pour plus d’informations, <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>consultez et [Utiliser PowerShell pour modifier et répertorier Reporting Services propriétaires d’abonnement et exécuter un abonnement](manage-subscription-owners-and-run-subscription-powershell.md).  
   
  **Dans cette rubrique :**  
   
--   [Abonnement et les scénarios de remise](#bkmk_subscription_scenarios)  
+-   [Scénarios d’abonnement et de remise](#bkmk_subscription_scenarios)  
   
 -   [Abonnements standard et pilotés par les données](#bkmk_standard_and_datadriven)  
   
--   [Conditions requises des abonnements](#bkmk_subscription_requirements)  
+-   [Conditions requises pour l’abonnement](#bkmk_subscription_requirements)  
   
 -   [Extensions de remise](#bkmk_delivery_extensions)  
   
--   [Composants d’un abonnement](#bkmk_parts_of_subscription)  
+-   [Parties d’un abonnement](#bkmk_parts_of_subscription)  
   
--   [Traitement des abonnements](#bkmk_subscription_processing)  
+-   [Mode de traitement des abonnements](#bkmk_subscription_processing)  
   
--   [Traitement des abonnements](#bkmk_subscription_processing)  
+-   [Mode de traitement des abonnements](#bkmk_subscription_processing)  
   
- **Rubriques de cette section :**  
+ **Rubriques de cette section :**  
   
--   [Remise par courrier électronique dans Reporting Services](e-mail-delivery-in-reporting-services.md) Décrit le fonctionnement et la configuration de la remise par partage de fichiers du serveur de rapports.  
+-   [Remise par courrier électronique dans Reporting Services](e-mail-delivery-in-reporting-services.md) Décrit l’opération et la configuration de la remise du courrier électronique du serveur de rapports.  
   
--   [File Share Delivery in Reporting Services](file-share-delivery-in-reporting-services.md) Décrit le fonctionnement et la configuration de la remise par partage de fichiers du serveur de rapports.  
+-   [Remise par partage de fichiers dans Reporting Services](file-share-delivery-in-reporting-services.md) Décrit l’opération de remise et la configuration du partage de fichiers du serveur de rapports.  
   
--   [SharePoint Library Delivery in Reporting Services](sharepoint-library-delivery-in-reporting-services.md) Décrit la remise d'abonnements dans une bibliothèque SharePoint.  
+-   [Remise de la bibliothèque SharePoint dans Reporting Services](sharepoint-library-delivery-in-reporting-services.md) Décrit la remise d’abonnement à une bibliothèque SharePoint.  
   
--   [Abonnements pilotés par les données](data-driven-subscriptions.md) Fournit des informations sur l’utilisation d’abonnements pilotés par les données pour personnaliser la sortie des rapports au moment de l’exécution.  
+-   [Abonnements pilotés par les données](data-driven-subscriptions.md) Fournit des informations sur l’utilisation des abonnements pilotés par les données pour personnaliser la sortie du rapport au moment de l’exécution.  
   
--   [Créer et gérer des abonnements pour les serveurs de rapports en mode Natif](../create-manage-subscriptions-native-mode-report-servers.md)  
+-   [Créer et gérer des abonnements pour les serveurs de rapports en mode natif](../create-manage-subscriptions-native-mode-report-servers.md)  
   
--   [Créer et gérer des abonnements pour les serveurs de rapports en mode Sharepoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
+-   [Créer et gérer des abonnements pour des serveurs de rapports en mode SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
 -   [Analyser les abonnements Reportions Services](monitor-reporting-services-subscriptions.md)  
   
 -   [Utiliser PowerShell pour modifier et répertorier les propriétaires d’abonnements Reporting Services, et exécuter un abonnement](manage-subscription-owners-and-run-subscription-powershell.md)  
   
-##  <a name="bkmk_subscription_scenarios"></a> Abonnement et les scénarios de remise  
- Pour chaque abonnement, vous configurez les options de remise et les options disponibles sont déterminées par l'extension de remise que vous choisissez. Une extension de remise est un module qui prend en charge un mode quelconque de distribution. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] comprend plusieurs extensions de remise et d’autres extensions peuvent vous être proposées par des fournisseurs tiers.  
+##  <a name="bkmk_subscription_scenarios"></a>Scénarios d’abonnement et de remise  
+ Pour chaque abonnement, vous configurez les options de remise et les options disponibles sont déterminées par l'extension de remise que vous choisissez. Une extension de remise est un module qui prend en charge un mode quelconque de distribution. 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] comprend plusieurs extensions de remise et d’autres extensions peuvent vous être proposées par des fournisseurs tiers.  
   
  Si vous êtes un développeur, vous pouvez créer des extensions de remise personnalisées pour prendre en charge des scénarios supplémentaires. Pour plus d'informations, consultez [Implémentation d'une extension de remise](../extensions/delivery-extension/implementing-a-delivery-extension.md).  
   
@@ -88,30 +89,31 @@ ms.locfileid: "66100670"
 |Cache de pré-chargement|Si vous disposez de plusieurs instances d'un rapport paramétré ou qu'un grand nombre d'utilisateurs de rapports visionnent des rapports, vous pouvez précharger les rapports dans le cache pour réduire le temps de traitement requis pour afficher le rapport.|  
 |Rapports pilotés par les données|Utilisez les abonnements pilotés par les données pour personnaliser le résultat d'un rapport, les options de remise, ainsi que les paramètres d'un rapport au moment de l'exécution. L'abonnement utilise une requête pour obtenir les valeurs d'entrée d'une source de données au moment de l'exécution. Vous pouvez utiliser les abonnements pilotés par les données pour effectuer une opération de publipostage qui envoie un rapport à une liste d'abonnés déterminée au moment où l'abonnement est traité.|  
   
-##  <a name="bkmk_standard_and_datadriven"></a> Abonnements standard et pilotés par les données  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] prend en charge deux types d’abonnements : les abonnements **standard** et les abonnements **pilotés par les données**. Les abonnements standard sont créés et gérés par des utilisateurs individuels. Un abonnement standard se compose de valeurs statiques qui ne peuvent pas changer au cours du traitement. Pour chaque abonnement standard, il y a exactement un jeu d'options de présentation des rapports, d'options de remise et de paramètres de rapport.  
+##  <a name="bkmk_standard_and_datadriven"></a>Abonnements standard et pilotés par les données  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]prend en charge deux types d’abonnements : **standard** et **piloté par les données**. Les abonnements standard sont créés et gérés par des utilisateurs individuels. Un abonnement standard se compose de valeurs statiques qui ne peuvent pas changer au cours du traitement. Pour chaque abonnement standard, il y a exactement un jeu d'options de présentation des rapports, d'options de remise et de paramètres de rapport.  
   
- Les abonnements pilotés par les données obtiennent les informations d'abonnement au moment de l'exécution en interrogeant une source de données externe qui fournit les valeurs utilisées pour spécifier un destinataire, des paramètres de rapport ou un format d'application. Vous pouvez utiliser des abonnements pilotés par les données si la taille de votre liste de destinataires est très importante ou si vous voulez modifier la sortie du rapport pour chaque destinataire. Pour cela, vous devez savoir créer des requêtes et comprendre comment les paramètres sont utilisés. En règle générale, les administrateurs de serveur de rapports se chargent de créer et de gérer ces abonnements. Pour plus d'informations, consultez les documents suivants :  
+ Les abonnements pilotés par les données obtiennent les informations d'abonnement au moment de l'exécution en interrogeant une source de données externe qui fournit les valeurs utilisées pour spécifier un destinataire, des paramètres de rapport ou un format d'application. Vous pouvez utiliser des abonnements pilotés par les données si la taille de votre liste de destinataires est très importante ou si vous voulez modifier la sortie du rapport pour chaque destinataire. Pour cela, vous devez savoir créer des requêtes et comprendre comment les paramètres sont utilisés. En règle générale, les administrateurs de serveur de rapports se chargent de créer et de gérer ces abonnements. Pour plus d’informations, consultez les rubriques suivantes :  
   
 -   [Abonnements pilotés par les données](data-driven-subscriptions.md)  
   
 -   [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)  
   
-##  <a name="bkmk_subscription_requirements"></a> Conditions requises des abonnements  
+##  <a name="bkmk_subscription_requirements"></a>Conditions requises pour l’abonnement  
  Avant de pouvoir créer un abonnement à un rapport, les conditions préalables requises suivantes doivent être remplies :  
   
 |Condition requise|Description|  
 |-----------------|-----------------|  
 |Autorisations|Vous devez avoir accès au rapport. Avant de pouvoir vous abonner à un rapport, vous devez être autorisé à l'afficher.<br /><br /> Votre attribution de rôle doit inclure la tâche « Gérer les abonnements individuels ».|  
-|Informations d'identification stockées|Pour créer un abonnement, il faut que le rapport utilise des informations d'identification stockées ou qu'il n'en utilise pas du tout pour être en mesure d'extraire les données au moment de l'exécution. Vous ne pouvez pas vous abonner à un rapport configuré pour utiliser les informations d'identification empruntées ou déléguées à partir de l'utilisateur actuel pour vous connecter à une source de données externe. Les informations d'identification stockées peuvent être un compte Windows ou un compte d'utilisateur de base de données. Pour plus d’informations, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../report-data/specify-credential-and-connection-information-for-report-data-sources.md).<br /><br /> Vous devez être autorisé à afficher le rapport et à créer des abonnements individuels. L'option**Événements programmés et remise du rapport** doit être activée sur le serveur de rapports. Pour plus d’informations, consultez [Créer et gérer des abonnements pour les serveurs de rapports en mode natif](../create-manage-subscriptions-native-mode-report-servers.md).|  
+|Informations d'identification stockées|Pour créer un abonnement, il faut que le rapport utilise des informations d'identification stockées ou qu'il n'en utilise pas du tout pour être en mesure d'extraire les données au moment de l'exécution. Vous ne pouvez pas vous abonner à un rapport configuré pour utiliser les informations d'identification empruntées ou déléguées à partir de l'utilisateur actuel pour vous connecter à une source de données externe. Les informations d'identification stockées peuvent être un compte Windows ou un compte d'utilisateur de base de données. Pour plus d’informations, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../report-data/specify-credential-and-connection-information-for-report-data-sources.md).<br /><br /> Vous devez être autorisé à afficher le rapport et à créer des abonnements individuels. La **scheduled Events et la remise de rapport** doivent être activées sur le serveur de rapports. Pour plus d’informations, consultez [créer et gérer des abonnements pour les serveurs de rapports en mode natif](../create-manage-subscriptions-native-mode-report-servers.md).|  
 |Valeurs dépendantes de l'utilisateur dans un rapport|Pour les abonnements standard uniquement, vous pouvez créer des abonnements à des rapports qui intègrent des informations de compte d'utilisateur dans un filtre ou sous forme de texte qui apparaît dans le rapport. Dans le rapport, le nom de compte d'utilisateur est spécifié par le biais d'une expression `User!UserID` qui correspond à l'utilisateur actuel. Lorsque vous créez un abonnement, l'utilisateur qui crée l'abonnement est considéré comme l'utilisateur actuel.|  
 |Aucune sécurité de l'élément de modèle|Vous ne pouvez pas vous abonner à un rapport du Générateur de rapports qui utilise un modèle comme source de données si le modèle contient des paramètres de sécurité de l'élément de modèle. Seuls les rapports qui utilisent la sécurité de l'élément de modèle sont inclus dans cette restriction.|  
-|Valeurs de paramètre|Si le rapport utilise des paramètres, une valeur de paramètre doit être spécifiée avec le rapport lui-même ou dans l'abonnement que vous définissez. Si des valeurs par défaut ont été définies dans le rapport, vous pouvez configurer la valeur de paramètre pour les utiliser.|  
+|Valeurs de paramètres|Si le rapport utilise des paramètres, une valeur de paramètre doit être spécifiée avec le rapport lui-même ou dans l'abonnement que vous définissez. Si des valeurs par défaut ont été définies dans le rapport, vous pouvez configurer la valeur de paramètre pour les utiliser.|  
   
-##  <a name="bkmk_delivery_extensions"></a> Extensions de remise  
+##  <a name="bkmk_delivery_extensions"></a>Extensions de remise  
  Les abonnements sont traités sur le serveur de rapports et sont distribués via les extensions de remise déployées sur le serveur. Par défaut, vous pouvez créer des abonnements qui envoient des rapports vers un dossier partagé ou une adresse de messagerie. Si le serveur de rapports est configuré en mode intégré SharePoint, vous pouvez également envoyer un rapport vers une bibliothèque SharePoint.  
   
- Lors de la création d'un abonnement, l'utilisateur peut choisir l'une des extensions de remise disponibles pour déterminer le mode de remise du rapport. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] comprend les extensions de remise suivantes.  
+ Lors de la création d'un abonnement, l'utilisateur peut choisir l'une des extensions de remise disponibles pour déterminer le mode de remise du rapport. 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] comprend les extensions de remise suivantes.  
   
 |Extension de remise|Description|  
 |------------------------|-----------------|  
@@ -123,7 +125,7 @@ ms.locfileid: "66100670"
 > [!NOTE]  
 >  La remise de rapports est un module extensible de l'architecture de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . D'autres fournisseurs peuvent créer des extensions de remise personnalisée pour acheminer les rapports vers des emplacements ou des périphériques différents. Pour plus d'informations sur les extensions de remise personnalisées, consultez [Implémentation d’une extension de remise](../extensions/delivery-extension/implementing-a-delivery-extension.md).  
   
-##  <a name="bkmk_parts_of_subscription"></a> Composants d’un abonnement  
+##  <a name="bkmk_parts_of_subscription"></a>Parties d’un abonnement  
  Une définition d'abonnement se compose des éléments suivants :  
   
 -   Pointeur vers un rapport capable de s'exécuter sans assistance (c'est-à-dire un rapport qui utilise des informations d'identification stockées ou qui n'utilise aucune information d'identification).  
@@ -142,8 +144,9 @@ ms.locfileid: "66100670"
   
  Les informations d'abonnement sont stockées individuellement avec les rapports dans une base de données du serveur de rapports. Vous ne pouvez pas gérer les abonnements indépendamment des rapports auxquels ils sont associés. Notez que les abonnements ne peuvent pas être étendus pour inclure des descriptions, du texte personnalisé ou d'autres éléments. Ils ne peuvent contenir que les éléments indiqués ci-dessus.  
   
-##  <a name="bkmk_subscription_processing"></a> Traitement des abonnements  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] comprend un processeur de planification et de livraison qui permet de planifier les rapports et d'assurer leur remise aux utilisateurs. Le serveur de rapports répond aux événements qu'il analyse en permanence. Lorsqu'un événement qui se produit correspond aux conditions définies d'un abonnement, le serveur de rapports lit l'abonnement afin de déterminer comment traiter et remettre le rapport. Le serveur de rapports demande l'extension de remise qui est spécifiée dans l'abonnement. Lorsque l'extension de remise s'exécute, le serveur de rapports extrait les informations de remise de l'abonnement et les transmet à l'extension de remise pour le traitement.  
+##  <a name="bkmk_subscription_processing"></a>Mode de traitement des abonnements  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] comprend un processeur de planification et de livraison qui permet de planifier les rapports et d'assurer leur remise aux utilisateurs. Le serveur de rapports répond aux événements qu'il analyse en permanence. Lorsqu'un événement qui se produit correspond aux conditions définies d'un abonnement, le serveur de rapports lit l'abonnement afin de déterminer comment traiter et remettre le rapport. Le serveur de rapports demande l'extension de remise qui est spécifiée dans l'abonnement. Lorsque l'extension de remise s'exécute, le serveur de rapports extrait les informations de remise de l'abonnement et les transmet à l'extension de remise pour le traitement.  
   
  L'extension de remise effectue le rendu du rapport dans le format défini dans l'abonnement, puis remet le rapport ou la notification au destinataire spécifié. Si un rapport ne peut pas être remis, une entrée est consignée dans le fichier journal du serveur de rapports. Si vous voulez prendre en charge plusieurs tentatives, vous pouvez configurer le serveur de rapports de manière à ce qu'il réessaie de remettre le rapport en cas d'échec de la première tentative.  
   
@@ -173,7 +176,7 @@ ms.locfileid: "66100670"
 ## <a name="see-also"></a>Voir aussi  
  [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Planifications](schedules.md)   
- [Serveur de rapports Reporting Services &#40;mode natif&#41;](../report-server/reporting-services-report-server-native-mode.md)   
+ [Reporting Services serveur de rapports &#40;le mode natif&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [Créer et gérer des abonnements pour les serveurs de rapports en mode natif](../create-manage-subscriptions-native-mode-report-servers.md)   
  [Analyser les abonnements Reportions Services](monitor-reporting-services-subscriptions.md)  
   

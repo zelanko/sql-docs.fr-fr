@@ -1,5 +1,5 @@
 ---
-title: Connexion Close, méthode, exemple de propriété de Type de Table (VB) | Microsoft Docs
+title: Connection Close, méthode, table type, exemple de propriété (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4559a8d46852f37f2e828ce8f4abbd0e40845744
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966702"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Close, méthode de l’objet Connection, Type (exemple de propriété de l’objet Table) (VB)
-Définition de la [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) propriété **rien** doit fermer la connexion au catalogue. Regroupements associés sera vides. Tous les objets qui ont été créés à partir des objets de schéma dans le catalogue sont orphelins. Toutes les propriétés sur les objets qui ont été mis en cache seront toujours disponibles, mais une tentative de lecture des propriétés qui nécessite un appel au fournisseur échouera.  
+L’affectation de la valeur **Nothing** à la propriété [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) doit fermer la connexion au catalogue. Les regroupements associés seront vides. Tous les objets qui ont été créés à partir d’objets de schéma dans le catalogue sont orphelins. Toutes les propriétés de ces objets qui ont été mises en cache seront toujours disponibles, mais une tentative de lecture des propriétés nécessitant un appel au fournisseur échouera.  
   
 ```  
 ' BeginCloseConnectionVB  
@@ -66,7 +66,7 @@ End Sub
 ' EndCloseConnectionVB  
 ```  
   
- Fermeture d’un [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet qui a été utilisée pour ouvrir le catalogue doit avoir le même effet que le paramètre le **ActiveConnection** propriété **rien**.  
+ La fermeture d’un objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) qui a été utilisé pour ouvrir le catalogue doit avoir le même effet que l’affectation de la valeur **Nothing**à la propriété **ActiveConnection** .  
   
 ```  
 Attribute VB_Name = "Connection"  
@@ -75,8 +75,8 @@ Attribute VB_Name = "Connection"
 ## <a name="see-also"></a>Voir aussi  
  [ActiveConnection, propriété (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Catalog, objet (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Objet de colonne (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Columns, Collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [Column, objet (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
+ [Columns, collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Table, objet (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Tables, Collection (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
+ [Tables, collection (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
  [Type, propriété (table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

@@ -14,48 +14,48 @@ ms.assetid: 4fa548dc-e8b0-4179-92ff-81d6a79d10c3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e744d3de177197923540fc3101c58dcbb4d3490
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990731"
 ---
 # <a name="numeric-functions"></a>Fonctions numériques
-Le tableau suivant décrit les fonctions numériques qui sont incluses dans le jeu de fonction scalaire ODBC. En appelant **SQLGetInfo** avec un *d’informations, tapez* de SQL_NUMERIC_FUNCTIONS, une application peut déterminer les fonctions numériques sont pris en charge par un pilote.  
+Le tableau suivant décrit les fonctions numériques incluses dans le jeu de fonctions scalaires ODBC. En appelant **SQLGetInfo** avec un *type d’informations* SQL_NUMERIC_FUNCTIONS, une application peut déterminer quelles fonctions numériques sont prises en charge par un pilote.  
   
- Fonctions numériques toutes les valeurs de retour du type de données SQL_FLOAT à l’exception de ABS, ROUND, TRUNCATE, signe, FLOOR et CEILING, qui retournent des valeurs des données mêmes type que les paramètres d’entrée.  
+ Toutes les fonctions numériques retournent des valeurs de type de données SQL_FLOAT à l’exception de ABS, ROUND, Truncate, SIGN, FLOOR et CEILING, qui retournent des valeurs du même type de données que les paramètres d’entrée.  
   
- Arguments indiqués par *positions numeric_exp* peut être le nom d’une colonne, le résultat d’une autre fonction scalaire, ou un *numérique-litera*l, où le type de données sous-jacent peut être représenté en tant que SQL_NUMERIC, SQL_ DECIMAL, SQL_TINYINT, SQL_SMALLINT, SQL_INTEGER, SQL_BIGINT, SQL_FLOAT, SQL_REAL ou SQL_DOUBLE.  
+ Les arguments dénotés comme *numeric_exp* peuvent être le nom d’une colonne, le résultat d’une autre fonction scalaire ou *Numeric-literala*, où le type de données sous-jacent peut être représenté sous la forme SQL_NUMERIC, SQL_DECIMAL, SQL_TINYINT, SQL_SMALLINT, SQL_INTEGER, SQL_BIGINT, SQL_FLOAT, SQL_REAL ou SQL_DOUBLE.  
   
- Arguments indiqués par *exp_float* peut être le nom d’une colonne, le résultat d’une autre fonction scalaire, ou un *littéral numérique*, où le type de données sous-jacent peut être représenté comme SQL_FLOAT.  
+ Les arguments dénotés comme *float_exp* peuvent être le nom d’une colonne, le résultat d’une autre fonction scalaire ou un *littéral numérique*, où le type de données sous-jacent peut être représenté comme SQL_FLOAT.  
   
- Arguments indiqués par *integer_exp* peut être le nom d’une colonne, le résultat d’une autre fonction scalaire, ou un *littéral numérique*, où le type de données sous-jacent peut être représenté en tant que SQL_TINYINT, SQL_ SMALLINT, SQL_INTEGER ou SQL_BIGINT.  
+ Les arguments dénotés comme *integer_exp* peuvent être le nom d’une colonne, le résultat d’une autre fonction scalaire ou un *littéral numérique*, où le type de données sous-jacent peut être représenté sous la forme SQL_TINYINT, SQL_SMALLINT, SQL_INTEGER ou SQL_BIGINT.  
   
- Les fonctions scalaires CURRENT_DATE, CURRENT_TIME et CURRENT_TIMESTAMP ont été ajoutées dans ODBC 3.0 pour les aligner avec SQL-92.  
+ Les fonctions scalaires CURRENT_DATE, CURRENT_TIME et CURRENT_TIMESTAMP ont été ajoutées dans ODBC 3,0 pour s’aligner sur SQL-92.  
   
 |Fonction|Description|  
 |--------------|-----------------|  
-|**ABS (** _positions numeric_exp_ **)** (ODBC version 1.0)|Retourne la valeur absolue de *positions numeric_exp*.|  
-|**ACOS (** _exp_float_ **)** (ODBC version 1.0)|Retourne l’arc cosinus de *exp_float* à un angle exprimé en radians.|  
-|**ASIN (** _exp_float_ **)** (ODBC version 1.0)|Retourne l’arc sinus de *exp_float* à un angle exprimé en radians.|  
-|**ATAN (** _exp_float_ **)** (ODBC version 1.0)|Retourne l’arc tangente de *exp_float* à un angle exprimé en radians.|  
-|**ATAN2 (** _exp_float1_, _exp_float2_ **)** (ODBC 2.0)|Retourne l’arc tangente de le *x* et *y* coordonnées, spécifiées par *exp_float1* et *exp_float2*, respectivement, sous la forme d’un angle. exprimé en radians.|  
-|**CEILING (** _positions numeric_exp_ **)** (ODBC version 1.0)|Retourne le plus petit entier supérieur ou égal à *positions numeric_exp*. La valeur de retour est du même type de données en tant que le paramètre d’entrée.|  
-|**COS (** _exp_float_ **)** (ODBC version 1.0)|Retourne le cosinus de *exp_float*, où *exp_float* est un angle exprimé en radians.|  
-|**COT (** _exp_float_ **)** (ODBC version 1.0)|Renvoie la cotangente de *exp_float*, où *exp_float* est un angle exprimé en radians.|  
-|**DEGRÉS (** _positions numeric_exp_ **)** (ODBC 2.0)|Retourne le nombre de degrés convertis à partir de *positions numeric_exp* radians.|  
-|**EXP (** _exp_float_ **)** (ODBC version 1.0)|Retourne la valeur exponentielle de *exp_float*.|  
-|**FLOOR (** _positions numeric_exp_ **)** (ODBC version 1.0)|Retourne le plus grand entier inférieur ou égal à *positions numeric_exp*. La valeur de retour est du même type de données en tant que le paramètre d’entrée.|  
-|**JOURNAL (** _exp_float_ **)** (ODBC version 1.0)|Retourne le logarithme népérien de *exp_float*.|  
-|**LOG10 (** _exp_float_ **)** (ODBC 2.0)|Logarithme de base 10 de retourne de *exp_float*.|  
-|**MOD (** _exp_entier1_, _exp_entier2_ **)** (ODBC 1.0)|Retourne le reste (modulo) de *exp_entier1* divisé par *exp_entier2*.|  
-|**PI( )**  (ODBC 1.0)|Retourne la valeur constante de pi sous la forme d’une valeur à virgule flottante.|  
-|**POWER (** _positions numeric_exp_, _integer_exp_ **)** (ODBC 2.0)|Retourne la valeur de *positions numeric_exp* à la puissance de *integer_exp*.|  
-|**RADIANS (** _positions numeric_exp_ **)** (ODBC 2.0)|Retourne le nombre de radians convertis à partir de *positions numeric_exp* degrés.|  
-|**RAND(** [*integer_exp*] **)**  (ODBC 1.0)|Retourne une valeur à virgule flottante aléatoire à l’aide *integer_exp* en tant que la valeur de départ facultative.|  
-|**ROUND (** _positions numeric_exp_, _integer_exp_ **)** (ODBC 2.0)|Retourne *positions numeric_exp* arrondi à *integer_exp* place droite de la virgule décimale. Si *integer_exp* est négatif, *positions numeric_exp* est arrondi à &#124; *integer_exp* &#124; place à gauche de la virgule décimale.|  
-|**SIGNE (** _positions numeric_exp_ **)** (ODBC version 1.0)|Retourne un indicateur du signe de *positions numeric_exp*. Si *positions numeric_exp* est inférieur à zéro, -1 est retournée. Si *positions numeric_exp* est égal à zéro, 0 est retournée. Si *positions numeric_exp* est supérieure à zéro, 1 est retourné.|  
-|**SIN (** _exp_float_ **)** (ODBC version 1.0)|Retourne le sinus de *exp_float*, où *exp_float* est un angle exprimé en radians.|  
-|**SQRT (** _exp_float_ **)** (ODBC version 1.0)|Retourne la racine carrée de *exp_float*.|  
-|**TAN (** _exp_float_ **)** (ODBC version 1.0)|Retourne la tangente de *exp_float*, où *exp_float* est un angle exprimé en radians.|  
-|**TRUNCATE (** _positions numeric_exp_, _integer_exp_ **)** (ODBC 2.0)|Retourne *positions numeric_exp* tronqué à *integer_exp* place droite de la virgule décimale. Si *integer_exp* est négatif, *positions numeric_exp* est tronqué à &#124; *integer_exp* &#124; place à gauche de la virgule décimale.|
+|**ABS (** _numeric_exp_ **)** (ODBC 1,0)|Retourne la valeur absolue de *numeric_exp*.|  
+|**ACOS (** _float_exp_ **)** (ODBC 1,0)|Retourne l’arc cosinus de *float_exp* sous la forme d’un angle exprimé en radians.|  
+|**ASIN (** _float_exp_ **)** (ODBC 1,0)|Retourne l’arc sinus de *float_exp* en tant qu’angle exprimé en radians.|  
+|**ATAN (** _float_exp_ **)** (ODBC 1,0)|Retourne l’arc tangente de *float_exp* en tant qu’angle, exprimé en radians.|  
+|**Atan2 (** _float_exp1_, _float_exp2_**)** (ODBC 2,0)|Retourne l’arc tangente des coordonnées *x* et *y* , spécifié par *float_exp1* et *float_exp2*, respectivement, en tant qu’angle, exprimé en radians.|  
+|**Ceiling (** _numeric_exp_ **)** (ODBC 1,0)|Retourne le plus petit entier supérieur ou égal à *numeric_exp*. La valeur de retour est du même type que le paramètre d’entrée.|  
+|**Cos (** _float_exp_ **)** (ODBC 1,0)|Retourne le cosinus de *float_exp*, où *float_exp* est un angle exprimé en radians.|  
+|**Cot (** _float_exp_ **)** (ODBC 1,0)|Retourne la cotangente de *float_exp*, où *float_exp* est un angle exprimé en radians.|  
+|**Degrés (** _numeric_exp_ **)** (ODBC 2,0)|Retourne le nombre de degrés convertis à partir de *numeric_exp* radians.|  
+|**Exp (** _float_exp_ **)** (ODBC 1,0)|Retourne la valeur exponentielle de *float_exp*.|  
+|**Floor (** _numeric_exp_ **)** (ODBC 1,0)|Retourne le plus grand entier inférieur ou égal à *numeric_exp*. La valeur de retour est du même type que le paramètre d’entrée.|  
+|**Log (** _float_exp_ **)** (ODBC 1,0)|Retourne le logarithme népérien de *float_exp*.|  
+|**Log10 (** _float_exp_ **)** (ODBC 2,0)|Retourne le logarithme de base 10 de *float_exp*.|  
+|**Mod (** _integer_exp1_, _integer_exp2_**)** (ODBC 1,0)|Retourne le reste (modulo) de *integer_exp1* divisé par *integer_exp2*.|  
+|**Pi ()** (ODBC 1,0)|Retourne la valeur constante de pi sous la forme d’une valeur à virgule flottante.|  
+|**Power (** _numeric_exp_, _integer_exp_**)** (ODBC 2,0)|Retourne la valeur de *numeric_exp* à la puissance de *integer_exp*.|  
+|**Radians (** _numeric_exp_ **)** (ODBC 2,0)|Retourne le nombre de radians convertis à partir de *numeric_exp* degrés.|  
+|**Rand (**[*integer_exp*]**)** (ODBC 1,0)|Retourne une valeur à virgule flottante aléatoire à l’aide de *integer_exp* comme valeur de départ facultative.|  
+|**Round (** _numeric_exp_, _integer_exp_**)** (ODBC 2,0)|Retourne *numeric_exp* arrondi à *integer_exp* place à droite de la virgule décimale. Si *integer_exp* est négatif, *numeric_exp* est arrondi à &#124;*integer_exp*&#124; place à gauche de la virgule décimale.|  
+|**Sign (** _numeric_exp_ **)** (ODBC 1,0)|Retourne un indicateur du signe de *numeric_exp*. Si *numeric_exp* est inférieur à zéro,-1 est retourné. Si *numeric_exp* est égal à zéro, 0 est retourné. Si *numeric_exp* est supérieur à zéro, 1 est retourné.|  
+|**Sin (** _float_exp_ **)** (ODBC 1,0)|Retourne le sinus de *float_exp*, où *float_exp* est un angle exprimé en radians.|  
+|**Sqrt (** _float_exp_ **)** (ODBC 1,0)|Retourne la racine carrée de *float_exp*.|  
+|**Tan (** _float_exp_ **)** (ODBC 1,0)|Retourne la tangente de *float_exp*, où *float_exp* est un angle exprimé en radians.|  
+|**Truncate (** _numeric_exp_, _integer_exp_**)** (ODBC 2,0)|Retourne *numeric_exp* tronqué à *integer_exp* emplacements à droite de la virgule décimale. Si *integer_exp* est négatif, *numeric_exp* est tronqué en &#124;*integer_exp*&#124; place à gauche de la virgule décimale.|

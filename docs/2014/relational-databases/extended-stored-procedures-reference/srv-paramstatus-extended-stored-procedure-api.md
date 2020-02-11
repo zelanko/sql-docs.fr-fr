@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 57e5ed3215391d3a1b134db471e2f4f0393f4443
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127123"
 ---
 # <a name="srv_paramstatus-extended-stored-procedure-api"></a>srv_paramstatus (API de procédure stockée étendue)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Utilisez plutôt l’intégration du CLR.  
   
  Retourne l'état d'un paramètre d'appel d'une procédure stockée distante particulière.  
   
@@ -55,8 +55,8 @@ n
  *n*  
  Indique le numéro du paramètre. Le premier paramètre est le numéro 1.  
   
-## <a name="returns"></a>Valeur renvoyée  
- Un `int` qui contient les indicateurs d'état du paramètre. Il existe actuellement qu’un seul indicateur : Si le bit 0 est défini sur 1, le paramètre est un paramètre de retour. En l’absence du *n*ième paramètre ou d’une procédure stockée distante, la valeur -1 est retournée.  
+## <a name="returns"></a>Retours  
+ Un `int` qui contient les indicateurs d'état du paramètre. Actuellement, il existe un seul indicateur: Si le bit 0 est défini sur 1, le paramètre est un paramètre de retour. En l’absence du *n*ième paramètre ou d’une procédure stockée distante, la valeur -1 est retournée.  
   
 ## <a name="remarks"></a>Notes  
  Cette routine retourne les indicateurs d'état pour un paramètre d'appel d'une procédure stockée distante.  

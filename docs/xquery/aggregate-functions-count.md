@@ -1,5 +1,5 @@
 ---
-title: Fonction Count (XQuery) | Microsoft Docs
+title: Fonction count (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a359251dbb2bd2a2685e5d9fb91d5c1603950c25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67986302"
 ---
 # <a name="aggregate-functions---count"></a>Fonctions d’agrégation : count
@@ -42,7 +42,7 @@ fn:count($arg as item()*) as xs:integer
  Retourne 0 si *$arg* est une séquence vide.  
   
 ## <a name="examples"></a>Exemples  
- Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type dans la base de données AdventureWorks.  
+ Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
 ### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>R. Utilisation de la fonction XQuery count() pour déterminer le nombre de sites de production impliqués dans la fabrication d'un modèle de produit  
  La requête suivante détermine le nombre de sites de production impliqués dans la fabrication d'un modèle de produit (ProductModelID=7).  
@@ -62,13 +62,13 @@ WHERE Production.ProductModel.ProductModelID=7
   
  Notez les points suivants dans la requête précédente :  
   
--   Le **espace de noms** mot clé dans [prologue XQuery](../xquery/modules-and-prologs-xquery-prolog.md) définit un préfixe d’espace de noms. Le préfixe est ensuite utilisé dans le corps XQuery.  
+-   Le mot clé **namespace** dans le [prologue XQuery](../xquery/modules-and-prologs-xquery-prolog.md) définit un préfixe d’espace de noms. Le préfixe est ensuite utilisé dans le corps XQuery.  
   
--   La requête construit le document XML qui comprend le <`NoOfWorkStations`> élément.  
+-   La requête construit le code XML qui comprend l' `NoOfWorkStations` élément <>.  
   
--   Le **count()** fonctionner dans le corps XQuery détermine le nombre de <`Location`> éléments.  
+-   La fonction **Count ()** dans le corps XQuery compte le nombre de <`Location`> éléments.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID   Name                 WorkCtrCount       
@@ -91,14 +91,14 @@ FROM Production.ProductModel
 WHERE Production.ProductModel.ProductModelID= 7  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <NoOfWorkStations ProductModelID="7"   
                   ProductModelName="HL Touring Frame">6</NoOfWorkStations>  
 ```  
   
- Comme le montre la requête ci-après, vous pouvez renvoyer ces valeurs en tant que type non-xml, plutôt que sous la forme de données XML. La requête utilise le [méthode value() (type de données xml)](../t-sql/xml/value-method-xml-data-type.md) pour récupérer le nombre.  
+ Comme le montre la requête ci-après, vous pouvez renvoyer ces valeurs en tant que type non-xml, plutôt que sous la forme de données XML. La requête utilise la [méthode value () (type de données XML)](../t-sql/xml/value-method-xml-data-type.md) pour récupérer le nombre d’emplacements de poste de travail.  
   
 ```  
 SELECT  ProductModelID,   
@@ -109,7 +109,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID    Name            WorkCtrCount  

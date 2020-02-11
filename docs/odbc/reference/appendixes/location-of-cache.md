@@ -1,5 +1,5 @@
 ---
-title: Emplacement du Cache | Microsoft Docs
+title: Emplacement du cache | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ ms.assetid: 240d6162-4da6-4b1f-96c7-f379f4ecb16f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2a925b66b0d09a9beb32e4441d62bc4fa9296313
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990740"
 ---
 # <a name="location-of-cache"></a>Emplacement du cache
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans tout nouveau développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande d’utiliser les fonctionnalités de curseur du pilote.  
+>  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande l’utilisation de la fonctionnalité de curseur du pilote.  
   
- La bibliothèque de curseurs met en cache les données en mémoire et dans les fichiers temporaires Windows®. Cela limite la taille du jeu de résultats que la bibliothèque de curseurs peut gérer uniquement par un espace disque disponible. Un fichier temporaire est utilisé lorsque les données à mettre en cache seraient dépassent la limite de segment si inséré à la fin du cache de bibliothèque de curseur. Au lieu de cela, les données à mettre en cache sont ajoutées à la place le bloc du dernier enregistrement de données dans le cache. Le bloc du dernier enregistrement de données est enregistré dans un fichier temporaire. Si la bibliothèque de curseurs s’est terminé anormalement, comme en cas d’échec de la puissance, peut laisser des fichiers temporaires Windows sur le disque. Ceux-ci sont nommés ~ CTT*nnnn*.tmp et sont créés dans le répertoire actif.  
+ La bibliothèque de curseurs met en cache les données en mémoire et dans les fichiers temporaires Windows®. Cela limite la taille du jeu de résultats que la bibliothèque de curseurs peut gérer uniquement par l’espace disque disponible. Un fichier temporaire est utilisé lorsque les données à mettre en cache franchissent les limites du segment si elles sont insérées à la fin du cache de la bibliothèque de curseurs. Au lieu de cela, les données à mettre en cache sont ajoutées à la place du dernier bloc de données enregistré dans le cache. Le dernier bloc de données enregistré est enregistré dans un fichier temporaire. Si la bibliothèque de curseurs se termine anormalement, par exemple en cas de panne de courant, elle peut conserver les fichiers temporaires Windows sur le disque. Celles-ci sont nommées ~ CTT*nnnn*. tmp et sont créées dans le répertoire actif.  
   
 > [!NOTE]  
->  Si la bibliothèque de curseurs dans Microsoft® WindowsNT®/Windows 2000 tente en cache des données dans un fichier temporaire sur le répertoire actif pendant l’exécution de l’application à partir d’un partage en lecture seule ou un disque compact (par exemple, un exemple de bibliothèque Microsoft Foundation Class), SQLSTATE HY000 (général Error-Unable de créer une mémoire tampon de fichier) s’affichera.
+>  Si la bibliothèque de curseurs dans Microsoft® Windows NT®/Windows2000 tente de mettre en cache des données dans un fichier temporaire sur le répertoire actif pendant que l’application s’exécute à partir d’un partage en lecture seule ou d’un disque compact (tel qu’un exemple bibliothèque MFC (Microsoft Foundation Class)), SQLSTATE HY000 (erreur générale-impossible de créer un tampon de fichier) est retourné.

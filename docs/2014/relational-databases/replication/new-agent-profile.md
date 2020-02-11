@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12fc3e7e7b67b9f02f2a9744d4af2af175ce0812
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022664"
 ---
 # <a name="new-agent-profile"></a>Nouveau profil de l'Agent
@@ -40,7 +40,7 @@ ms.locfileid: "63022664"
   
 -   [Replication Distribution Agent](agents/replication-distribution-agent.md)  
   
--   [Agent de fusion de réplication](agents/replication-merge-agent.md)  
+-   [Replication Merge Agent](agents/replication-merge-agent.md)  
   
 -   [Agent de lecture de la file d’attente de réplication](agents/replication-queue-reader-agent.md)  
   

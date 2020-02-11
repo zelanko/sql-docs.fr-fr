@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022591"
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurer un serveur de publication Oracle
@@ -26,7 +26,7 @@ ms.locfileid: "63022591"
   
 2.  S'agissant des tables à publier, attribuez directement l'autorisation SELECT à chacune d'elles (et non un rôle) à l'utilisateur administratif Oracle que vous avez créé à l'étape 1.  
   
-3.  Installez le logiciel client Oracle et le fournisseur OLE DB Oracle sur le serveur de distribution [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , puis arrêtez et redémarrez l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si le serveur de distribution s'exécute sur une plateforme 64 bits, vous devez utiliser la version 64 bits du fournisseur OLE DB Oracle.  
+3.  Installez le logiciel client Oracle et le fournisseur de OLE DB [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur le serveur de distribution, puis arrêtez [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et redémarrez l’instance. Si le serveur de distribution s'exécute sur une plateforme 64 bits, vous devez utiliser la version 64 bits du fournisseur OLE DB Oracle.  
   
 4.  Configurez la base de données Oracle en tant que serveur de publication sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63022591"
 > [!NOTE]  
 >  La suppression du synonyme public **MSSQLSERVERDISTRIBUTOR** et de l’utilisateur de réplication Oracle configuré à l’aide de l’option **CASCADE** supprime tous les objets de réplication du serveur de publication Oracle.  
   
- Un exemple de script est fourni pour vous aider à configurer le schéma utilisateur de réplication Oracle. Ce script est disponible dans le répertoire suivant, après l’installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] : *\<lecteur>* :\\\Program Files\Microsoft SQL Server\\ *\<Nom_Instance>* \MSSQL\Install\oracleadmin.sql. Il est également fourni dans la rubrique [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md).  
+ Un exemple de script est fourni pour vous aider à configurer le schéma utilisateur de réplication Oracle. Le script est disponible dans le répertoire suivant après l’installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]de : * \<lecteur>*:\\\Program Files\Microsoft\\SQL Server*\<nom_instance>* \MSSQL\Install\oracleadmin.Sql. Il est également fourni dans la rubrique [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md).  
   
  Connectez-vous à la base de données Oracle à l'aide d'un compte possédant des droits DBA, puis exécutez le script. Ce script vous invite à entrer le nom d'utilisateur et le mot de passe du schéma utilisateur administratif de réplication, ainsi que l'espace de table par défaut dans lequel créer les objets (l'espace de table doit déjà exister dans la base de données Oracle). Pour plus d’informations sur la spécification d’autres espaces de table pour des objets, consultez [Gérer des espaces disque logiques Oracle](manage-oracle-tablespaces.md). Choisissez un nom d'utilisateur et un mot de passe fort et n'oubliez pas de les noter car ces informations vous seront demandées par la suite lorsque vous configurerez la base de données Oracle en tant que serveur de publication. Il est recommandé de n'utiliser le schéma que pour les objets requis par la réplication et de ne pas y créer de tables à publier.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63022591"
   
  Dans Oracle Universal Installer, vous devez fournir les informations suivantes :  
   
-|Informations|Description|  
+|Information|Description|  
 |-----------------|-----------------|  
 |Oracle Home|Chemin d'accès du répertoire d'installation des logiciels Oracle. Acceptez le chemin par défaut (C:\oracle\ora90 ou équivalent) ou entrez un autre chemin. Pour plus d'informations sur Oracle Home, consultez la section « Considérations sur Oracle Home » plus loin dans cette rubrique.|  
 |Nom d'Oracle Home|Alias pour le chemin du répertoire d'origine Oracle Home.|  
@@ -101,7 +101,7 @@ ms.locfileid: "63022591"
   
 2.  Tapez `cmd` puis cliquez sur **OK**.  
   
-3.  À l'invite de commandes, tapez :  
+3.  À l’invite de commandes, tapez :  
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
@@ -122,7 +122,7 @@ ms.locfileid: "63022591"
 > [!NOTE]  
 >  Un serveur de publication Oracle ne peut pas porter le même nom que son serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou que les serveurs de publication [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisant le même serveur de distribution.  
   
- Lorsque vous identifiez la base de données Oracle en tant qu’éditeur, vous devez choisir une option de publication Oracle : Complète ou Oracle Gateway. Une fois qu'un serveur de publication est identifié, vous ne pouvez pas modifier cette option sans supprimer et reconfigurer ce serveur. L'option Complète fournit aux publications d'instantané et aux publications transactionnelles l'ensemble complet des fonctionnalités prises en charge pour la publication Oracle. L'option Oracle Gateway fournit des optimisations de conception spécifiques, destinées à améliorer les performances lorsque la réplication sert de passerelle entre des systèmes.  
+ Lorsque vous identifiez la base de données Oracle en tant que serveur de publication, vous devez choisir une option de publication Oracle : Complète (Complete) ou Oracle Gateway. Une fois qu'un serveur de publication est identifié, vous ne pouvez pas modifier cette option sans supprimer et reconfigurer ce serveur. L'option Complète fournit aux publications d'instantané et aux publications transactionnelles l'ensemble complet des fonctionnalités prises en charge pour la publication Oracle. L'option Oracle Gateway fournit des optimisations de conception spécifiques, destinées à améliorer les performances lorsque la réplication sert de passerelle entre des systèmes.  
   
  Lorsque le serveur de publication Oracle a été identifié sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , la réplication crée un serveur lié portant le même nom que le service TNS de la base de données Oracle. Ce serveur lié ne peut être utilisé que par la réplication. Si vous devez vous connecter au serveur de publication Oracle par l’intermédiaire d’une connexion de serveur lié, créez un autre nom de service TNS puis utilisez ce nom lors de l’appel de [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).  
   
@@ -130,7 +130,7 @@ ms.locfileid: "63022591"
   
 ## <a name="see-also"></a>Voir aussi  
  [Considérations sur l’administration des serveurs de publication Oracle](administrative-considerations-for-oracle-publishers.md)   
- [Mappage de type de données pour les serveurs de publication Oracle](data-type-mapping-for-oracle-publishers.md)   
+ [Data Type Mapping for Oracle Publishers](data-type-mapping-for-oracle-publishers.md)   
  [Glossaire des termes de la publication Oracle](glossary-of-terms-for-oracle-publishing.md)   
  [Vue d’ensemble de la publication Oracle](oracle-publishing-overview.md)  
   

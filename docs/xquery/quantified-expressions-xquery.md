@@ -1,5 +1,5 @@
 ---
-title: Quantifiée Expressions (XQuery) | Microsoft Docs
+title: Expressions quantifiées (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,10 @@ ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1cdbff23d2158dec00b6b8d050d6a4a90341bd23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946373"
 ---
 # <a name="quantified-expressions-xquery"></a>Expressions quantifiées (XQuery)
@@ -46,9 +46,9 @@ ms.locfileid: "67946373"
 ( some | every ) <variable> in <Expression> (,...) satisfies <Expression>  
 ```  
   
- Vous pouvez utiliser ces expressions dans une requête pour appliquer explicitement une quantification existentielle ou universelle à une expression sur une ou plusieurs séquences. Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l'expression de la clause `satisfies` doit aboutir à l'un des résultats suivants : une séquence de nœuds, une séquence vide ou une valeur booléenne. La valeur booléenne effective du résultat de cette expression est utilisée dans la quantification. La quantification existentielle qui utilise **certains** renvoie la valeur True si au moins une des valeurs liées par le quantificateur possède un résultat True dans l’expression de satisfaction. La quantification universelle qui utilise **chaque** doit avoir la valeur True pour toutes les valeurs liées par le quantificateur.  
+ Vous pouvez utiliser ces expressions dans une requête pour appliquer explicitement une quantification existentielle ou universelle à une expression sur une ou plusieurs séquences. Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l'expression de la clause `satisfies` doit aboutir à l'un des résultats suivants : une séquence de nœuds, une séquence vide ou une valeur booléenne. La valeur booléenne effective du résultat de cette expression est utilisée dans la quantification. La quantification existentiel qui utilise **some** retourne la valeur true si au moins une des valeurs liées par le quantificateur a un résultat true dans l’expression de satisfaction. La quantification universelle qui utilise **chaque** doit avoir la valeur true pour toutes les valeurs liées par le quantificateur.  
   
- Par exemple, la requête suivante vérifie chaque \<emplacement > élément pour voir si elle possède un attribut LocationID.  
+ Par exemple, la requête suivante vérifie chaque \<emplacement> élément pour voir s’il a un attribut LocationID.  
   
 ```  
 SELECT Instructions.query('  
@@ -64,13 +64,13 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Étant donné que LocationID est un attribut requis de le \<emplacement > élément, vous obtenez le résultat attendu :  
+ Étant donné que LocationID est un attribut requis \<de l’emplacement> élément, vous obtenez le résultat attendu :  
   
 ```  
 <Result>All work centers have Location ID</Result>   
 ```  
   
- Au lieu d’utiliser le [méthode query()](../t-sql/xml/query-method-xml-data-type.md), vous pouvez utiliser la [méthode value()](../t-sql/xml/value-method-xml-data-type.md) pour retourner le résultat à l’univers relationnel, comme indiqué dans la requête suivante. La requête renvoie True si tous les sites de production possèdent l'attribut LocationID. Sinon, elle renvoie False.  
+ Au lieu d’utiliser la [méthode Query ()](../t-sql/xml/query-method-xml-data-type.md), vous pouvez utiliser la [méthode value ()](../t-sql/xml/value-method-xml-data-type.md) pour retourner le résultat dans le monde relationnel, comme illustré dans la requête suivante. La requête renvoie True si tous les sites de production possèdent l'attribut LocationID. Sinon, elle renvoie False.  
   
 ```  
 SELECT Instructions.value('  

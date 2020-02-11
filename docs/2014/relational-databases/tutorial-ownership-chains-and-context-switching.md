@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriel : Chaînes de propriétés et changement de contexte | Microsoft Docs'
+title: 'Didacticiel : chaînes de propriétés et changement de contexte | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1ae566345f722399982c909244e77c564abb7b53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524365"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutoriel : Chaînes de propriétés et changement de contexte
@@ -48,7 +48,7 @@ ms.locfileid: "62524365"
  Chaque bloc de code dans cet exemple est présenté sous forme de lignes. Pour copier l'exemple tout entier, consultez la section [Exemple complet](#CompleteExample) à la fin de ce didacticiel.  
   
 ## <a name="1-configure-the-environment"></a>1. Configurez l'environnement  
- Utilisez [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et le code ci-dessous pour ouvrir la base de données `AdventureWorks2012` ; ensuite, à l'aide de l'instruction `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)], vérifiez que l'utilisateur dbo est affiché dans le contexte.  
+ Utilisez [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et le code suivant pour ouvrir la `AdventureWorks2012` base de données et utilisez `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] l’instruction pour vérifier que l’utilisateur dbo est affiché comme contexte.  
   
 ```  
 USE AdventureWorks2012;  
@@ -80,7 +80,8 @@ GO
   
  Pour plus d’informations sur l’instruction CREATE USER, consultez [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql). Pour plus d’informations sur l’instruction CREATE LOGIN, consultez [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
- Utilisez le code suivant pour modifier la propriété du schéma `Purchasing` du compte `TestManagerUser` . Le compte peut alors exploiter l'accès à toutes les instructions DML (Data Manipulation Language, langage de manipulation de données), notamment les autorisations `SELECT` et `INSERT` , sur les objets qu'il contient. `TestManagerUser` se voit également octroyer la possibilité de créer des procédures stockées.  
+ Utilisez le code suivant pour modifier la propriété du schéma `Purchasing` du compte `TestManagerUser` . Le compte peut alors exploiter l'accès à toutes les instructions DML (Data Manipulation Language, langage de manipulation de données), notamment les autorisations `SELECT` et `INSERT` , sur les objets qu'il contient. 
+  `TestManagerUser` se voit également octroyer la possibilité de créer des procédures stockées.  
   
 ```  
 /* Change owner of the Purchasing Schema to TestManagerUser */  
@@ -95,7 +96,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
- Pour plus d’informations sur l’instruction GRANT, consultez [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql). Pour plus d’informations sur les procédures stockées, consultez [Procédures stockées &#40;moteur de base de données&#41;](stored-procedures/stored-procedures-database-engine.md). Pour obtenir une affiche de toutes les autorisations du [!INCLUDE[ssDE](../includes/ssde-md.md)], consultez [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142).  
+ Pour plus d’informations sur l’instruction GRANT, consultez [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql). Pour plus d’informations sur les procédures stockées, consultez [Procédures stockées &#40;moteur de base de données&#41;](stored-procedures/stored-procedures-database-engine.md). Pour obtenir une affiche de [!INCLUDE[ssDE](../includes/ssde-md.md)] toutes les autorisations [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142), consultez.  
   
 ## <a name="2-create-a-stored-procedure-to-access-data"></a>2. Créer une procédure stockée pour accéder aux données  
  Pour basculer le contexte dans une base de données, utilisez l’instruction EXECUTE AS. EXECUTE AS nécessite des autorisations IMPERSONATE.  
@@ -156,7 +157,8 @@ GO
  Pour plus d’informations sur l’instruction REVERT, consultez [REVERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/revert-transact-sql).  
   
 ## <a name="3-access-data-through-the-stored-procedure"></a>3. Accéder aux données par le biais de la procédure stockée  
- `TestEmployeeUser` ne dispose d’aucune autorisation pour les objets de la base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] en dehors d’une connexion et des droits attribués au rôle de base de données public. Le code suivant retourne une erreur lorsque `TestEmployeeUser` tente d'accéder aux tables de base.  
+ 
+  `TestEmployeeUser` ne dispose d’aucune autorisation pour les objets de la base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] en dehors d’une connexion et des droits attribués au rôle de base de données public. Le code suivant retourne une erreur lorsque `TestEmployeeUser` tente d'accéder aux tables de base.  
   
 ```  
 EXECUTE AS LOGIN = 'TestEmployeeUser'  
@@ -200,7 +202,7 @@ DROP LOGIN TestManagerUser;
 GO  
 ```  
   
-##  <a name="CompleteExample"></a> Exemple complet  
+##  <a name="CompleteExample"></a>Exemple complet  
  Cette section affiche l'exemple de code dans son intégralité.  
   
 > [!NOTE]  
@@ -322,6 +324,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

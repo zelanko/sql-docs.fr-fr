@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01f9e53c4ae42f981b1b579294954a965ef8c376
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140691"
 ---
-# <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Modifier les informations de planification pour un travail maître SQL Server Agent
+# <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Change the Scheduling Details for a SQL Server Agent Master Job
   Cette rubrique explique comment modifier les informations de planification pour une définition de travail dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
@@ -28,7 +28,7 @@ ms.locfileid: "63140691"
   
      [Sécurité](#Security)  
   
--   **Pour modifier les détails de planification d'une définition de travail à l'aide de :**  
+-   **Pour modifier les détails de planification d’une définition de travail, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "63140691"
   
 4.  Cliquez avec le bouton droit sur le travail dont vous souhaitez modifier la planification, puis sélectionnez **Propriétés**.  
   
-5.  Dans le **propriétés du travail -** _nom_travail_ boîte de dialogue **sélectionner une page**, sélectionnez **planifications**. Pour plus d’informations sur les options disponibles sur cette page, consultez [propriétés du travail : Nouveau travail &#40;Page planifications&#41;](job-properties-new-job-schedules-page.md).  
+5.  Dans la boîte de dialogue **Propriétés du travail-**_Job_name_ , sous **Sélectionner une page**, sélectionnez **planifications**. Pour plus d’informations sur les options disponibles sur cette page, consultez [Propriétés du travail : nouvelle tâche &#40;les planifications&#41;](job-properties-new-job-schedules-page.md).  
   
 6.  Lorsque vous avez terminé, cliquez sur **OK**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "63140691"
   
 #### <a name="to-change-the-scheduling-details-for-a-job-definition"></a>Pour modifier les détails de planification d'une définition de travail  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

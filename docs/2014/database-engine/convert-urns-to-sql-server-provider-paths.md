@@ -11,14 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 77b6031e91f59fc691f0b1c055e90464d660d3a9
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797940"
 ---
-# <a name="convert-urns-to-sql-server-provider-paths"></a>Convertir des URN en chemins d'accès de fournisseur SQL Server
-  Le modèle objet SMO ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects) génère des URN (Uniform Resource Names) pour ses objets. Chaque URN identifie de façon unique un objet SMO et peut être converti en chemin d'accès du fournisseur PowerShell SQL Server à l'aide de l'applet de commande `Convert-UrnToPath`.  
+# <a name="convert-urns-to-sql-server-provider-paths"></a>Convertir des URN en chemins de fournisseur SQL Server
+  Le modèle objet SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects) génère des URN (Uniform Resource Names) pour ses objets. Chaque URN identifie de façon unique un objet SMO et peut être converti en chemin d'accès du fournisseur PowerShell SQL Server à l'aide de l'applet de commande `Convert-UrnToPath`.  
   
 ## <a name="converting-urns-to-paths"></a>Conversion d'URN en chemins d'accès  
  Chaque URN a les mêmes informations qu'un chemin d'accès à l'objet, mais sous une forme différente. Voici, par exemple, le chemin d'accès à une table :  
@@ -40,6 +40,6 @@ Get-Help Convert-UrnToPath -Examples
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Expressions de requête et noms URN](../powershell/query-expressions-and-uniform-resource-names.md)   
- [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)   
+ [Expressions de requête et noms de ressource uniformes](../powershell/query-expressions-and-uniform-resource-names.md)   
+ [fournisseur PowerShell SQL Server](../powershell/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)  

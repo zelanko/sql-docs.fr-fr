@@ -13,22 +13,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: d2205465f1fd6f03c67e1fc09ec76a2dfbb2e083
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952044"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Rubriques d'aide (F1) du Gestionnaire de configurations de Reporting Services (SSRS en mode natif)
   Cette section décrit l'aide accessible par la touche F1 du Gestionnaire de configuration de Reporting Services.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode natif.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
 -   [Se connecter à un serveur de rapports](../../../2014/sql-server/install/connect-to-a-native-mode-report-server.md)  
   
--   [État du serveur de rapports](../../../2014/sql-server/install/report-server-status-ssrs-native-mode.md)  
+-   [État de Report Server](../../../2014/sql-server/install/report-server-status-ssrs-native-mode.md)  
   
 -   [Compte de service](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)  
   
@@ -40,13 +40,13 @@ ms.locfileid: "71952044"
   
 -   [Assistant modification de base de données](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)  
   
--   [Assistant modification des informations d’identification](../../../2014/sql-server/install/change-credentials-wizard-ssrs-native-mode.md)  
+-   [Assistant Modification des informations d'identification](../../../2014/sql-server/install/change-credentials-wizard-ssrs-native-mode.md)  
   
 -   [URL de Gestionnaire de rapports](../../../2014/sql-server/install/report-manager-url-ssrs-native-mode.md)  
   
 -   [Paramètres de messagerie](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
   
--   [Compte d'exécution](../../../2014/sql-server/install/execution-account-ssrs-native-mode.md)  
+-   [Compte d’exécution](../../../2014/sql-server/install/execution-account-ssrs-native-mode.md)  
   
 -   [Clés de chiffrement](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)  
   

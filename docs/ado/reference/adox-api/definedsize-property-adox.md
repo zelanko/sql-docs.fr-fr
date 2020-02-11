@@ -20,22 +20,22 @@ ms.assetid: 762b8937-c31c-4e90-bb85-506d991e8280
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4f2777eeb23e7a78a1df757a9054a04c7f6f9df2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966448"
 ---
 # <a name="definedsize-property-adox"></a>DefinedSize, propriété (ADOX)
-Indique la taille maximale définie de la colonne.  
+Indique la taille maximale indiquée de la colonne.  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Définit et renvoie un **Long** valeur qui est la longueur maximale en caractères des valeurs de données.  
+ Définit et retourne une valeur de **type long** qui correspond à la longueur maximale, en caractères, des valeurs de données.  
   
 ## <a name="remarks"></a>Notes  
  La valeur par défaut est zéro (0).  
   
- Cette propriété est en lecture seule pour [colonne](../../../ado/reference/adox-api/column-object-adox.md) objets déjà ajoutés à une collection.  
+ Cette propriété est en lecture seule pour les objets de [colonne](../../../ado/reference/adox-api/column-object-adox.md) déjà ajoutés à une collection.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Column, objet (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  

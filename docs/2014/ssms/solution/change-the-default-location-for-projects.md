@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a772a80e6cb0e51682880c0579ec07914948372b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62956107"
 ---
 # <a name="change-the-default-location-for-projects"></a>Modifier l'emplacement par défaut des projets
@@ -25,7 +25,7 @@ ms.locfileid: "62956107"
   
 ### <a name="to-change-the-default-location-for-projects"></a>Pour modifier l'emplacement par défaut des projets  
   
-1.  Modifiez l'emplacement par défaut en ouvrant ou en enregistrant un fichier ou un projet à partir d'un autre emplacement. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] enregistre l’emplacement du projet ouvert et l’utilise pour la prochaine ouverture ou le prochain enregistrement d’un projet.  
+1.  Modifiez l'emplacement par défaut en ouvrant ou en enregistrant un fichier ou un projet à partir d'un autre emplacement. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stocke l’emplacement du projet précédemment ouvert et l’utilise pour la prochaine ouverture ou l’enregistrement d’un projet.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Explorateur de solutions](solution-explorer.md)  

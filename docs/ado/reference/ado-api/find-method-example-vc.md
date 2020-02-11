@@ -1,5 +1,5 @@
 ---
-title: Rechercher l’exemple de méthode (VC ++) | Microsoft Docs
+title: Find, exemple de méthode (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e6be0edf100501762f6d4eada735ff90caa84df4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932525"
 ---
 # <a name="find-method-example-vc"></a>Find, exemple de méthode (VC++)
-Cet exemple utilise le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) l’objet [trouver](../../../ado/reference/ado-api/find-method-ado.md) méthode pour localiser et compter le nombre de titres de fonctions dans le **Pubs** base de données. L’exemple suppose que le fournisseur sous-jacent ne prend pas en charge des fonctionnalités similaires.  
+Cet exemple utilise la méthode [Find](../../../ado/reference/ado-api/find-method-ado.md) de l’objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) pour rechercher et compter le nombre de titres de l’entreprise dans la base de données **pubs** . L’exemple suppose que le fournisseur sous-jacent ne prend pas en charge les fonctionnalités similaires.  
   
 ```  
 // BeginFindCpp.cpp  
@@ -155,5 +155,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rechercher, méthode (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
+ [Find, méthode (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

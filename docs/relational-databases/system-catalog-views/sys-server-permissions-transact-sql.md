@@ -1,5 +1,5 @@
 ---
-title: sys.server_permissions (Transact-SQL) | Microsoft Docs
+title: sys. server_permissions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/20/2019
 ms.prod: sql
@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cbfa717aa70bb057734a285e2b6d84fdc6f4961a
-ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71163933"
 ---
 # <a name="sysserver_permissions-transact-sql"></a>sys.server_permissions (Transact-SQL)
@@ -34,18 +34,18 @@ ms.locfileid: "71163933"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**class**|**tinyint**|Identifie la classe d'éléments sur laquelle l'autorisation existe.<br /><br /> 100 = serveur<br /><br /> 101 = principal serveur<br /><br /> 105 = point de terminaison|  
-|**class_desc**|**nvarchar(60)**|Description de la classe sur laquelle l'autorisation existe. Une des valeurs suivantes :<br /><br /> **SERVEURS**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
+|**type**|**tinyint**|Identifie la classe d'éléments sur laquelle l'autorisation existe.<br /><br /> 100 = serveur<br /><br /> 101 = principal serveur<br /><br /> 105 = point de terminaison|  
+|**class_desc**|**nvarchar (60)**|Description de la classe sur laquelle l'autorisation existe. L’une des valeurs suivantes :<br /><br /> **SERVEURS**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
 |**major_id**|**int**|ID de l'élément sécurisable sur lequel l'autorisation existe, interprété selon la classe. Il s'agit généralement de l'ID qui s'applique à ce que la classe représente. L'interprétation des éléments non standard s'effectue ainsi :<br /><br /> 100 = toujours 0|  
 |**minor_id**|**int**|ID secondaire d'un élément sur lequel l'autorisation existe, interprété selon la classe.|  
 |**grantee_principal_id**|**int**|ID du principal du serveur auquel les autorisations sont accordées.|  
 |**grantor_principal_id**|**int**|ID du principal du serveur de la personne qui accorde ces autorisations.|  
-|**type**|**char(4)**|Type d'autorisation serveur. Pour obtenir la liste des types d'autorisations, consultez le tableau ci-dessous.|  
+|**entrer**|**Char (4)**|Type d'autorisation serveur. Pour obtenir la liste des types d'autorisations, consultez le tableau ci-dessous.|  
 |**permission_name**|**nvarchar(128)**|Nom de l’autorisation.|  
-|**state**|**char(1)**|État de l'autorisation :<br /><br /> D = Refusée<br /><br /> R = Révoquée<br /><br /> G = Accordée<br /><br /> W = GRANT WITH GRANT OPTION|  
-|**state_desc**|**nvarchar(60)**|Description de l'état de l'autorisation :<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
+|**Département**|**Char(1**|État de l'autorisation :<br /><br /> D = Refusée<br /><br /> R = Révoquée<br /><br /> G = Accordée<br /><br /> W = GRANT WITH GRANT OPTION|  
+|**state_desc**|**nvarchar (60)**|Description de l'état de l'autorisation :<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
   
-|Type d'autorisation|Nom de l’autorisation|S'applique à l'élément sécurisable|  
+|Type d'autorisation|Nom de l'autorisation|S'applique à l'élément sécurisable|  
 |---------------------|---------------------|--------------------------|  
 |AAES|ALTER ANY EVENT SESSION|SERVER|
 |ADBO|ADMINISTER BULK OPERATIONS|SERVER|  
@@ -70,14 +70,14 @@ ms.locfileid: "71163933"
 |CL|CONTROL SERVER|SERVER|  
 |CO|CONNECT|ENDPOINT|  
 |COSQ|CONNECT SQL|SERVER|
-|CRAC|CREATE AVAILABILITY GROUP|SERVER|  
+|CRAC|Créer un groupe de disponibilité|SERVER|  
 |CRDB|CREATE ANY DATABASE|SERVER|  
 |CRDE|CREATE DDL EVENT NOTIFICATION|SERVER|  
 |CRHE|CREATE ENDPOINT|SERVER|
 |CRSR|CREATE SERVER ROLE|SERVER|  
 |CRTE|CREATE TRACE EVENT NOTIFICATION|SERVER|
 |IAL|IMPERSONATE ANY LOGIN|SERVER|  
-|IM|IMPERSONATE|LOGIN|  
+|IM|IMPERSONATE|Connexion|  
 |SHDN|SHUTDOWN|SERVER|
 |SUS|SELECT ALL USER SECURABLES|SERVER|
 |TO|TAKE OWNERSHIP|ENDPOINT|  
@@ -109,7 +109,7 @@ JOIN sys.server_permissions AS pe
   
 ## <a name="see-also"></a>Voir aussi  
  [Affichages catalogue de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Securables](../../relational-databases/security/securables.md)   
+ [Éléments sécurisables](../../relational-databases/security/securables.md)   
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [Autorisations &#40;Moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Hiérarchie des autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  

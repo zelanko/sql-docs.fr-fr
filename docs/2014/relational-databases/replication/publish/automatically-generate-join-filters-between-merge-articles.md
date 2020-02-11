@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66c32615b3fd9f417eab27f156b2645c2c89593b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63020975"
 ---
 # <a name="automatically-generate-a-set-of-join-filters-between-merge-articles-sql-server-management-studio"></a>générer automatiquement un ensemble de filtres de jointure entre des articles de fusion (SQL Server Management Studio)
-  Générez automatiquement un ensemble de filtres de jointure sur la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md).  
+  Générez automatiquement un ensemble de filtres de jointure dans la page **Filtrer les lignes** de la table de l’Assistant Nouvelle publication ou la page **Filtrer les lignes** de la boîte de dialogue Propriétés de la publication ** \<->de publication** . Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md).  
   
 > [!NOTE]  
 >  Si vous générez automatiquement un ensemble de filtres de jointure dans la boîte de dialogue **Propriétés de la publication - \<Publication>** une fois les abonnements à la publication initialisés, vous devez générer un nouvel instantané et réinitialiser tous les abonnements après avoir effectué la modification. Pour plus d’informations sur les exigences relatives aux changements de propriétés, consultez [Changer les propriétés des publications et des articles](change-publication-and-article-properties.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "63020975"
   
 ### <a name="to-automatically-generate-a-set-of-join-filters-between-merge-articles"></a>Pour générer automatiquement un ensemble de filtres de jointure entre articles de fusion  
   
-1.  Sur la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication, ou la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la Publication - \<Publication>** , cliquez sur **Ajouter**, puis sur **Générer automatiquement des filtres**.  
+1.  Sur la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication, ou la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la Publication - \<Publication>**, cliquez sur **Ajouter**, puis sur **Générer automatiquement des filtres**.  
   
     > [!NOTE]  
     >  La génération automatique de filtres supprime tout filtre de lignes ou de jointure existant dans la publication. Vous pouvez ajouter des filtres après avoir généré automatiquement un ensemble de filtres.  
@@ -57,7 +57,7 @@ ms.locfileid: "63020975"
   
     3.  Spécifiez les options de filtre.  
   
-         Sélectionnez l'option qui correspond aux données qui seront partagées entre des Abonnés : **Une ligne de cette table ira à plusieurs abonnements** ou **une ligne de cette table ira à un seul abonnement**. Si vous sélectionnez **Filtre paramétré créant des partitions qui ne se chevauchent pas, avec un seul abonnement par partition**, la réplication de fusion peut optimiser les performances en stockant et en traitant moins de métadonnées. Cependant, vous devez vérifier que les données sont partitionnées de telle façon qu'une ligne ne peut pas être répliquée sur plus d'un Abonné. Pour plus d'informations, consultez la section « Définition de « partition options » » dans la rubrique [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+         Sélectionnez l'option correspondant à la façon dont les données seront partagées parmi les abonnés : **Une ligne de cette table ira à plusieurs abonnements** ou **Une ligne de cette table ira à un seul abonnement**. Si vous sélectionnez **Filtre paramétré créant des partitions qui ne se chevauchent pas, avec un seul abonnement par partition**, la réplication de fusion peut optimiser les performances en stockant et en traitant moins de métadonnées. Cependant, vous devez vérifier que les données sont partitionnées de telle façon qu'une ligne ne peut pas être répliquée sur plus d'un Abonné. Pour plus d'informations, consultez la section « Définition de « partition options » » dans la rubrique [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -69,7 +69,7 @@ ms.locfileid: "63020975"
   
 ### <a name="to-modify-a-filter-that-was-automatically-generated"></a>Pour modifier un filtre généré automatiquement  
   
-1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez un filtre dans le volet **Tables filtrées**, puis cliquez sur **Modifier**.  
+1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou dans la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez un filtre dans le volet **Tables filtrées**, puis cliquez sur **Modifier**.  
   
 2.  Modifiez le filtre dans la boîte de dialogue **Modifier le filtre** ou **Modifier une jointure** .  
   
@@ -80,7 +80,7 @@ ms.locfileid: "63020975"
 1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez un filtre dans le volet **Tables filtrées**, puis cliquez sur **Supprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Join Filters](../merge/join-filters.md)   
+ [Filtres de jointure](../merge/join-filters.md)   
  [Filtres de lignes paramétrés](../merge/parameterized-filters-parameterized-row-filters.md)  
   
   

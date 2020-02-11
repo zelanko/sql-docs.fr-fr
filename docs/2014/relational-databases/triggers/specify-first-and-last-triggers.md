@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a851a19a7f00afd055bb2ee8f00eaf4621a1e98f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524135"
 ---
 # <a name="specify-first-and-last-triggers"></a>Spécifier les premier et dernier déclencheurs
@@ -32,7 +32,7 @@ ms.locfileid: "62524135"
 |------------|-----------------|  
 |**Première**|Spécifie que le déclencheur DML est le premier déclencheur AFTER activé dans le cadre d'une action de déclenchement.|  
 |**Dernière**|Spécifie que le déclencheur DML est le dernier déclencheur AFTER activé dans le cadre d'une action de déclenchement.|  
-|**Aucune**|Spécifie qu'il n'existe aucun ordre spécifique pour l'activation du déclencheur DML. Cette option est principalement destinée à réinitialiser un déclencheur qui était le premier ou le dernier déclencheur.|  
+|**Aucun**|Spécifie qu'il n'existe aucun ordre spécifique pour l'activation du déclencheur DML. Cette option est principalement destinée à réinitialiser un déclencheur qui était le premier ou le dernier déclencheur.|  
   
  L’exemple suivant illustre l’utilisation de la procédure stockée **sp_settriggerorder**:  
   

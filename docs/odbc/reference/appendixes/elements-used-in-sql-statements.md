@@ -15,92 +15,92 @@ ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: caf8f68221c1ac14649bf10be0105e1e691c7482
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68129958"
 ---
 # <a name="elements-used-in-sql-statements"></a>Éléments utilisés dans les instructions SQL
 Les éléments suivants sont utilisés dans les instructions SQL répertoriées précédemment.  
   
 ## <a name="element"></a>Élément  
- *identificateur de table de base de* :: = *nom défini par l’utilisateur*  
+ *base-table-identifier* :: = *nom défini par l’utilisateur*  
   
- *nom de table de base de* :: = *identificateur de table de base*  
+ *base-table-Name* :: = *base-table-identifier*  
   
- *valeur booléenne-facteur* :: = [NOT] *principal de la valeur booléenne*  
+ *Boolean-Factor* :: = [not] *booléen-Primary*  
   
- *boolean-primary* ::= comparison *-predicate* &#124; ( *search-condition* )  
+ *Boolean-Primary* :: = comparaison *-prédicat* &#124; ( *condition de recherche* )  
   
- *valeur booléenne-terme* :: = *facteur booléen* [AND *terme de valeur booléenne*]  
+ *Boolean-term* :: = *Boolean-Factor* [et *Boolean-term*]  
   
- *littéral de chaîne de caractères* :: = '' {*caractère*}... » (*caractère* est n’importe quel caractère dans le jeu de caractères de la source de données/pilote. Pour inclure un caractère de guillemet littéral (") dans un littéral de chaîne de caractères, utilisez deux caractères de guillemet littéral ['' '].)  
+ *caractère-String-Literal* :: = ' ' {*caractère*}... ' ' (le*caractère* est n’importe quel caractère dans le jeu de caractères du pilote/de la source de données. Pour inclure un guillemet littéral simple (' ') dans un littéral de chaîne de caractères, utilisez deux guillemets littéraux [' ' ' '].)  
   
- *identificateur de colonne* :: = *nom défini par l’utilisateur*  
+ *Column-identifier* :: = *nom défini par l’utilisateur*  
   
- *nom de la colonne* :: = [*nom de la table*.] *identificateur de colonne*  
+ *Column-Name* :: = [*table-Name*.] *identificateur de colonne*  
   
- *comparison-operator* ::= < &#124; > &#124; \<= &#124; >= &#124; = &#124; <>  
+ *Comparison-opérateur* :: = < &#124; > &#124; \<= &#124; >= &#124; = &#124; <>  
   
- *prédicat de comparaison* :: = *expression* expression d’opérateur de comparaison  
+ *comparaison-prédicat* :: = *expression* Comparison-opérateur expression  
   
- *type de données* :: = *de type de chaîne de caractères* (*de type de chaîne de caractères* est n’importe quel type de données pour laquelle la colonne « « DATA_TYPE » » dans le jeu de résultats retourné par SQLGetTypeInfo est soit SQL_CHAR ou SQL_VARCHAR.)  
+ *Data-type* :: = *character-string-type* (*caractère-String-type* est un type de données pour lequel la colonne « data_type » dans le jeu de résultats renvoyé par SQLGetTypeInfo est SQL_CHAR ou SQL_VARCHAR.)  
   
- *digit* ::= 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9  
+ *digit* :: = 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9  
   
  *paramètre dynamique* :: = ?  
   
- *expression* :: = terme &#124; expression {+&#124;-} terme  
+ *expression* :: = terme &#124; expression {+&#124;-} term  
   
- *factor* ::= [ *+* &#124; *-* ]*primary*  
+ *facteur* :: = [*+*&#124;*-*]*principal*  
   
- *insert-value* ::=  
+ *Insert-value* :: =  
   
  *paramètre dynamique*  
   
- &#124; *literal*  
+ *Littéral* &#124;  
   
  &#124; NULL  
   
- &#124;UTILISATEUR  
+ UTILISATEUR &#124;  
   
- *lettre* :: = *minuscule scénarios lettres &#124; -supérieur-lettre*  
+ *Letter ::* = *minuscule-case-minuscule &#124; lettre majuscule*  
   
- *littéral* :: = *littéral de chaîne de caractères*  
+ *Literal* :: = *caractère-String-Literal*  
   
- *lettre de scénarios minuscule* :: = un &#124; b &#124; c &#124; d &#124; e &#124; f &#124; g &#124; h &#124; je &#124; j &#124; k &#124; l &#124; m &#124; n &#124; o &#124; p &#124; q &#124; r &#124; s &#124; t &#124; u &#124; v &#124; w &#124; x &#124; y &#124; z  
+ *minuscules ::* = a &#124; b &#124; c &#124; d &#124; e &#124; f &#124; g &#124; h &#124; i &#124; j &#124; k &#124; l &#124; m &#124; n &#124; o &#124; p &#124; q &#124; r &#124; s &#124; t &#124; u &#124; v &#124; w &#124; x &#124; y &#124; z  
   
- *clause Order by* :: = ORDER BY *spécification de tri* [, *spécification de tri*]...  
+ *commande par clause* :: = Order par *sort-Specification* [, *sort-Specification*]...  
   
- *principal* :: = *nom de colonne*  
+ *principal* :: = *Column-Name*  
   
- &#124; *dynamic-parameter*  
+ &#124; *paramètre dynamique*  
   
- &#124; *literal*  
+ *Littéral* &#124;  
   
  &#124; ( *expression* )  
   
- *condition de recherche* :: = *terme de valeur booléenne* [ou *condition de recherche*]  
+ *recherche-condition* :: = *Boolean-term* [ou *condition de recherche*]  
   
- *liste de sélection* :: = \* &#124; *sélectionnez-sous-liste* [, *sélectionnez-sous-liste*]...  (*liste de sélection* ne peut pas contenir de paramètres.)  
+ *Select-List* :: = \* &#124; *Select-List* [, *Select-Sublist*]...  (*Select-List* ne peut pas contenir de paramètres.)  
   
- *Sélectionnez-sous-liste* :: = *expression*  
+ *Select-Sublist* :: = *expression*  
   
- *spécification de tri* :: = {*entier non signé &#124; nom-colonne*} [*ASC &#124; DESC*]  
+ *sort-Specification* :: = {*unsigned-Integer &#124; nom-colonne*} [*ASC &#124; DESC*]  
   
- *identificateur de la table* :: = *nom défini par l’utilisateur*  
+ *table-identifier* :: = *nom défini par l’utilisateur*  
   
- *nom de la table* :: = *identificateur de table*  
+ *table-Name* :: = *table-identifier*  
   
- *référence de table* :: = *-nom de la table*  
+ *table-Reference* :: = *table-Name*  
   
- *liste de références de table* :: = *référence de table* [,*référence de table*]...  
+ *table-reference-list* :: = *table-Reference* [,*table-Reference*]...  
   
- *terme* :: = *facteur* &#124; *terme* {\*&#124; */* } *facteur*  
+ *terme* :: = *facteur* &#124; *terme* {\*&#124;*/*} **  
   
- *entier non signé* :: = {*chiffre*}  
+ *unsigned-entier* :: = {*digit*}  
   
- *lettre de cas supérieur* :: = *A &#124; B &#124; C &#124; D &#124; E &#124; F &#124; G &#124; H &#124; je &#124; J &#124; K &#124; L &#124; M &#124; N &#124; O &#124; P &#124;Q &#124; R &#124; S &#124; T &#124; U &#124; V &#124; W &#124; X &#124; Y &#124; Z*  
+ *majuscule-* majuscule :: = *A &#124; B &#124; C &#124; D &#124; E &#124; F &#124; G &#124; H &#124; I &#124; J &#124; K &#124; L &#124; M &#124; N &#124; o &#124; P &#124; Q &#124; R &#124; S &#124; T &#124; U &#124; V &#124; W &#124; X &#124; Y &#124; Z*  
   
- *nom défini par l’utilisateur* :: = *lettre*[*chiffre* &#124; *lettre* &#124; *_* ]...
+ *nom défini par l’utilisateur* :: = *lettre*[*chiffre* &#124; *lettre* &#124; *_*]...

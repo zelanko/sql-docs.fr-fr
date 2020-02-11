@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb523d8e9b1dbbb136475d0aa739491935f755ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922154"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>Restaurations complètes de bases de données (mode de récupération complète)
@@ -32,13 +32,13 @@ ms.locfileid: "62922154"
  Lorsque vous restaurez une base de données, en particulier en mode de restauration complète ou de récupération utilisant les journaux des transactions, vous devez utiliser une séquence de restauration unique. Une *séquence de restauration* consiste en une ou plusieurs opérations de restauration déplaçant des données entre une ou plusieurs phases de restauration.  
   
 > [!IMPORTANT]  
->  Nous vous recommandons de ne pas attacher ni restaurer de bases de données provenant de sources inconnues ou non approuvées. Ces bases de données peuvent contenir du code malveillant qui peut exécuter du code [!INCLUDE[tsql](../../includes/tsql-md.md)] imprévisible ou causer des erreurs en modifiant le schéma ou la structure physique de la base de données. Avant d’utiliser une base de données issue d’une source inconnue ou non approuvée, exécutez [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) sur la base de données sur un serveur autre qu’un serveur de production et examinez également le code, notamment les procédures stockées ou tout autre code défini par l’utilisateur, de la base de données.  
+>  Nous vous recommandons de ne pas attacher ni restaurer de bases de données provenant de sources inconnues ou non approuvées. Ces bases de données peuvent contenir du code malveillant qui peut exécuter du code [!INCLUDE[tsql](../../includes/tsql-md.md)] imprévisible ou causer des erreurs en modifiant le schéma ou la structure physique de la base de données. Avant d’utiliser une base de données provenant d’une source inconnue ou non approuvée, exécutez [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) sur la base de données sur un serveur qui n’est pas un serveur de production et examinez également le code, tel que les procédures stockées ou un autre code défini par l’utilisateur, dans la base de données.  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
--   [Restauration d'une base de données jusqu'au point de défaillance](#PointOfFailure)  
+-   [Restauration d’une base de données jusqu’au point de défaillance](#PointOfFailure)  
   
--   [Restauration d'une base de données jusqu'à un point dans une sauvegarde de fichier journal](#PointWithinBackup)  
+-   [Restauration d’une base de données jusqu’à un point dans une sauvegarde de fichier journal](#PointWithinBackup)  
   
 -   [Tâches associées](#RelatedTasks)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62922154"
   
  L'illustration suivante montre cette séquence de restauration. Après une défaillance (1), une sauvegarde de la fin du journal est créée (2). Ensuite, la base de données est restaurée jusqu'au point de défaillance. Cela implique la restauration d'une sauvegarde de base de données suivie d'une sauvegarde différentielle, ainsi que de chaque sauvegarde de journal effectuée après la sauvegarde différentielle, y compris la sauvegarde de la fin du journal.  
   
- ![Restauration de base de données complète au moment d’une défaillance](../../database-engine/media/bnrr-rmfull1-db-failure-pt.gif "Restauration de base de données complète au moment d’une défaillance")  
+ ![Restauration de base de données complète au moment d'une défaillance](../../database-engine/media/bnrr-rmfull1-db-failure-pt.gif "Restauration de base de données complète au moment d'une défaillance")  
   
 > [!NOTE]  
 >  Quand vous restaurez une sauvegarde de base de données sur une instance de serveur différente, consultez [Copier des bases de données avec la sauvegarde et la restauration](../databases/copy-databases-with-backup-and-restore.md).  
@@ -85,7 +85,7 @@ ms.locfileid: "62922154"
   
 4.  RESTORE DATABASE *database* WITH RECOVERY;  
   
-###  <a name="ExampleToPoFTsql"></a> Exemple : récupération jusqu’au point de défaillance (Transact-SQL)  
+###  <a name="ExampleToPoFTsql"></a> Exemple : récupération jusqu'au point de défaillance (Transact-SQL)  
  L'exemple [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant indique les principales options d'une séquence de restauration qui restaure la base de données jusqu'au point de défaillance. L'exemple crée une sauvegarde de la fin du journal de la base de données. Ensuite, il restaure une sauvegarde complète de base de données et une sauvegarde de fichier journal, puis restaure la sauvegarde de la fin du journal. L'exemple récupère la base de données dans une dernière étape séparée.  
   
 > [!NOTE]  

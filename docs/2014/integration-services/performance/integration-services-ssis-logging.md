@@ -25,14 +25,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889800"
 ---
 # <a name="integration-services-ssis-logging"></a>Journalisation d'Integration Services (SSIS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contient des modules fournisseur d'informations que vous pouvez utiliser pour implémenter la journalisation dans les packages, les conteneurs et les tâches. Avec la journalisation, vous pouvez capturer des informations d'exécution sur un package qui vous aideront à auditer et à résoudre les problèmes d'un package à chaque exécution. Un journal peut ainsi capturer le nom de l'opérateur ayant exécuté le package et l'heure à laquelle le package a débuté et s'est terminé.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend les modules fournisseurs d’informations que vous pouvez utiliser pour implémenter la journalisation dans les packages, les conteneurs et les tâches. Avec la journalisation, vous pouvez capturer des informations d'exécution sur un package qui vous aideront à auditer et à résoudre les problèmes d'un package à chaque exécution. Un journal peut ainsi capturer le nom de l'opérateur ayant exécuté le package et l'heure à laquelle le package a débuté et s'est terminé.  
   
  Vous pouvez configurer l'étendue des informations enregistrées lors d'une exécution de package sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour plus d’informations, consultez [Activer la journalisation des exécutions de package sur le serveur SSIS](../enable-logging-for-package-execution-on-the-ssis-server.md).  
   
@@ -43,7 +43,8 @@ ms.locfileid: "62889800"
   
  Lorsque vous ajoutez le journal à un package, vous choisissez le module fournisseur d'informations et l'emplacement du journal. Le module fournisseur d'informations spécifie le format des données du journal, par exemple, une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou un fichier texte.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend les modules fournisseurs d'informations suivants :  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend les modules fournisseurs d'informations suivants :  
   
 -   Le module fournisseur d'informations pour les fichiers texte, qui enregistre les entrées du journal dans des fichiers texte ASCII au format CSV. L'extension de nom de fichier par défaut de ce fournisseur est .log.  
   
@@ -52,7 +53,7 @@ ms.locfileid: "62889800"
     > [!NOTE]  
     >  Vous ne pouvez pas utiliser le module fournisseur d’informations [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] dans un package exécuté en mode 64 bits.  
   
--   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] module fournisseur d’informations, qui enregistre les entrées de journal pour le `sysssislog` table dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Module fournisseur d’informations qui écrit des entrées de journal `sysssislog` dans la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’une base de données.  
   
 -   Le module fournisseur d'informations pour les événements Windows, qui enregistre les entrées du journal des applications dans le journal des événements Windows sur l'ordinateur local.  
   
@@ -96,7 +97,7 @@ ms.locfileid: "62889800"
 |Opérateur|L'identité de l'utilisateur ayant lancé le package.|  
 |SourceName|Le nom du conteneur ou de la tâche dans laquelle l'événement du journal est survenu.|  
 |SourceID|L'identificateur unique du package ; la boucle Foreach, la boucle For ou le conteneur de séquences ; ou la tâche dans laquelle l'événement du journal est survenu.|  
-|ExecutionID|L'identificateur global unique (GUID) de l'instance d'exécution du package.<br /><br /> Remarque : L'exécution d'un package unique peut créer des entrées de journal avec des valeurs différentes pour l'élément ExecutionID. Par exemple, lorsque vous exécutez un package dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], la phase de validation peut créer des entrées de journal avec un élément ExecutionID correspondant à [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Toutefois, la phase d'exécution peut créer des entrées de journal avec un élément ExecutionID correspondant à dtshost.exe. Autre exemple : lorsque vous exécutez un package qui contient des tâches d'exécution de package, chacune de ces tâches exécute un package enfant. Ces packages enfants peuvent créer des entrées de journal comportant un élément ExecutionID différent de celui des entrées de journal créées par le package parent.|  
+|ExecutionID|L'identificateur global unique (GUID) de l'instance d'exécution du package.<br /><br /> Remarque : l’exécution d’un package unique peut créer des entrées de journal avec des valeurs différentes pour l’élément ExecutionID. Par exemple, lorsque vous exécutez un package dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], la phase de validation peut créer des entrées de journal avec un élément ExecutionID correspondant à [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Toutefois, la phase d'exécution peut créer des entrées de journal avec un élément ExecutionID correspondant à dtshost.exe. Autre exemple : lorsque vous exécutez un package qui contient des tâches d'exécution de package, chacune de ces tâches exécute un package enfant. Ces packages enfants peuvent créer des entrées de journal comportant un élément ExecutionID différent de celui des entrées de journal créées par le package parent.|  
 |MessageText|Un message associé à l'entrée de journal.|  
 |DataBytes|Un tableau d'octets spécifique à l'entrée du journal. La signification de ce champ varie en fonction de l'entrée du journal.|  
   
@@ -109,17 +110,18 @@ ms.locfileid: "62889800"
 |DataCode|Valeur entière facultative qui contient généralement une valeur de l’énumération <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> qui indique le résultat de l’exécution du conteneur ou de la tâche :<br /><br /> 0 - Succès<br /><br /> 1 - Échec<br /><br /> 2 - Terminée<br /><br /> 3 - Annulée|  
   
 ##### <a name="log-entries"></a>Entrées du journal  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prend en charge les entrées de journal sur des événements prédéfinis et fournit des entrées de journal personnalisées pour de nombreux objets [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La boîte de dialogue **Configurer les journaux SSIS** du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] répertorie ces événements et ces entrées de journal personnalisées.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prend en charge les entrées de journal sur des événements prédéfinis et fournit des entrées de journal personnalisées pour de nombreux objets [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La boîte de dialogue **Configurer les journaux SSIS** du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] répertorie ces événements et ces entrées de journal personnalisées.  
   
  Le tableau suivant décrit les événements prédéfinis qui peuvent être activés pour écrire des entrées de journal lorsque des événements générés à l'exécution surviennent. Ces entrées de journal s'appliquent aux exécutables, au package et aux conteneurs et tâches inclus dans le package. Le nom de l'entrée de journal est le même que l'événement généré à l'exécution et qui a provoqué l'écriture de l'entrée de journal.  
   
-|Events|Description|  
+|Événements|Description|  
 |------------|-----------------|  
 |**OnError**|Écrit une entrée de journal lorsqu'une erreur se produit.|  
 |**OnExecStatusChanged**|Écrit une entrée de journal lorsqu'une tâche (et non un conteneur) est interrompue ou reprise pendant le débogage.|  
 |**OnInformation**|Écrit une entrée de journal pendant la validation et l'exécution d'un exécutable pour rapporter des informations.|  
 |**OnPostExecute**|Écrit une entrée de journal immédiatement après la fin de l'exécution de l'exécutable.|  
-|**OnPostValidate**|Écrit une entrée de journal lorsque la validation de l'exécutable est terminée.|  
+|**L’OnPostValidate**|Écrit une entrée de journal lorsque la validation de l'exécutable est terminée.|  
 |**OnPreExecute**|Écrit une entrée de journal immédiatement avant le début de l'exécution de l'exécutable.|  
 |**OnPreValidate**|Écrit une entrée de journal lorsque la validation de l'exécutable débute.|  
 |**OnProgress**|Écrit une entrée de journal lorsqu'une progression quantifiable a été réalisée par l'exécutable.|  
@@ -143,18 +145,18 @@ ms.locfileid: "62889800"
 ### <a name="logging-templates"></a>Modèles de journalisation  
  Dans la boîte de dialogue **Configurer les journaux SSIS** , vous pouvez également créer et enregistrer comme modèles les configurations de journalisation fréquemment utilisées, puis utiliser ces modèles dans différents packages. Cette procédure facilite l'application d'une stratégie de journalisation cohérente à différents packages et la modification des paramètres de journaux par la mise à jour et l'application des modèles. Les modèles sont stockés sous forme de fichiers XML.  
   
- **Pour configurer la journalisation à l'aide de la boîte de dialogue Configurer les journaux SSIS**  
+ **Pour configurer la journalisation à l’aide de la boîte de dialogue Configurer les journaux SSIS**  
   
 1.  Activez le package et ses tâches pour la journalisation. La journalisation peut s'effectuer au niveau du package, du conteneur et de la tâche. Vous pouvez spécifier différents journaux pour les packages, conteneurs et tâches.  
   
-2.  Sélectionnez un module fournisseur d'informations et ajoutez un journal pour le package. Les journaux ne peuvent être créés qu'au niveau du package, et une tâche ou un conteneur doit utiliser un des journaux créés pour le package. Chaque journal est associé à l'un des modules fournisseurs d'informations suivants : Fichier texte, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], journal des événements Windows ou fichier XML. Pour plus d’informations, consultez [Activer la journalisation des packages dans les outils de données SQL Server](../enable-package-logging-in-sql-server-data-tools.md).  
+2.  Sélectionnez un module fournisseur d'informations et ajoutez un journal pour le package. Les journaux ne peuvent être créés qu'au niveau du package, et une tâche ou un conteneur doit utiliser un des journaux créés pour le package. Chaque journal est associé à l'un des modules fournisseurs d'informations suivants : fichier texte, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], journal des événements Windows ou fichier XML. Pour plus d’informations, consultez [Activer la journalisation des packages dans SQL Server Data Tools](../enable-package-logging-in-sql-server-data-tools.md).  
   
 3.  Sélectionnez les événements et les informations de schéma de journal pour chaque événement que vous voulez capturer dans le journal. Pour plus d’informations, consultez [Configurer la journalisation à l’aide d’un fichier de configuration enregistré](../configure-logging-by-using-a-saved-configuration-file.md).  
   
 ### <a name="configuration-of-log-provider"></a>Configuration du module fournisseur d'informations  
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
- Un module fournisseur d'informations est créé et configuré dans le cadre de l'implémentation d'un package. Pour plus d’informations, consultez [journalisation des Services d’intégration](integration-services-ssis-logging.md).  
+ Un module fournisseur d'informations est créé et configuré dans le cadre de l'implémentation d'un package. Pour plus d’informations, consultez [Integration Services Logging](integration-services-ssis-logging.md).  
   
  Après avoir créé un module fournisseur d'informations, vous pouvez l'afficher et modifier ses propriétés dans la fenêtre Propriétés de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -164,7 +166,8 @@ ms.locfileid: "62889800"
  La tâche de flux de données fournit un grand nombre d'entrées de journal personnalisées à l'aide desquelles vous pouvez analyser et améliorer les performances. Vous pouvez, par exemple, analyser les composants susceptibles de provoquer des fuites de mémoire ou contrôler le temps nécessaire à l'exécution d'une tâche en particulier. Pour obtenir une liste de ces entrées de journal personnalisées et un exemple de sortie de journalisation, consultez [Data Flow Task](../control-flow/data-flow-task.md).  
   
 #### <a name="use-the-pipelinecomponenttime-event"></a>Utiliser l'événement PipelineComponentTime  
- L'entrée de journal personnalisée la plus utile est peut-être l'événement PipelineComponentTime. Cette entrée de journal signale le nombre de millisecondes que chaque composant dans le flux de données passe sur chacune des cinq étapes de traitement majeures. Le tableau suivant décrit ces étapes de traitement. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Les développeurs reconnaîtront ces étapes comme étant les méthodes principales d’un <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>.  
+ L'entrée de journal personnalisée la plus utile est peut-être l'événement PipelineComponentTime. Cette entrée de journal signale le nombre de millisecondes que chaque composant dans le flux de données passe sur chacune des cinq étapes de traitement majeures. Le tableau suivant décrit ces étapes de traitement. 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Les développeurs reconnaîtront ces étapes comme étant les méthodes principales d’un <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>.  
   
 |Étape|Description|  
 |----------|-----------------|  
@@ -203,16 +206,16 @@ ms.locfileid: "62889800"
 ## <a name="related-tasks"></a>Tâches associées  
  La liste suivante contient des liens vers les rubriques qui indiquent comment effectuer les tâches relatives à la fonctionnalité de journalisation.  
   
--   [Boîte de dialogue Configurer les journaux SSIS](../configure-ssis-logs-dialog-box.md)  
+-   [Configurer les journaux SSIS (boîte de dialogue)](../configure-ssis-logs-dialog-box.md)  
   
 -   [Activer la journalisation des packages dans les outils de données SQL Server](../enable-package-logging-in-sql-server-data-tools.md)  
   
 -   [Activer la journalisation des exécutions de package sur le serveur SSIS](../enable-logging-for-package-execution-on-the-ssis-server.md)  
   
--   [Afficher les entrées de journal dans la fenêtre Journaux d'événements](../view-log-entries-in-the-log-events-window.md)  
+-   [Afficher les entrées de journal dans la fenêtre Journaux d’événements](../view-log-entries-in-the-log-events-window.md)  
   
 ## <a name="related-content"></a>Contenu associé  
- [Outil DTLoggedExec pour un enregistrement complet et détaillé (projet CodePlex)](https://go.microsoft.com/fwlink/?LinkId=150579)  
+ [Outil DTLoggedExec pour la journalisation complète et détaillée (projet CodePlex)](https://go.microsoft.com/fwlink/?LinkId=150579)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Afficher les entrées de journal dans la fenêtre Journaux d’événements](../view-log-entries-in-the-log-events-window.md)  

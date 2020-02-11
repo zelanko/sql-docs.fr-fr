@@ -1,5 +1,5 @@
 ---
-title: Objets (OLE DB) Source de données | Microsoft Docs
+title: Objets de source de données (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,22 +19,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b602695720e0d6567e44e4fbe8fd06b6d496a6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63130599"
 ---
 # <a name="data-source-objects-ole-db"></a>Objets source de données (OLE DB)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client utilise la terme source de données pour l’ensemble des interfaces OLE DB utilisé pour établir un lien vers un magasin de données, tel que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Création d’une instance de l’objet de source de données du fournisseur est la première tâche d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consommateur de Native Client.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client utilise le terme source de données pour l’ensemble des interfaces de OLE DB utilisées pour établir un lien vers un magasin de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tel que. La création d’une instance de l’objet source de données du fournisseur est la première tâche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’un consommateur Native Client.  
   
- Chaque fournisseur OLE DB déclare un identificateur de classe (CLSID) pour lui-même. Le CLSID de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif est le C /C++ GUID CLSID_SQLNCLI10 (le symbole SQLNCLI_CLSID est converti correct progid dans le fichier sqlncli.h que vous référencez). Avec le CLSID, le consommateur utilise la fonction OLE **CoCreateInstance** pour fabriquer une instance de l’objet source de données.  
+ Chaque fournisseur OLE DB déclare un identificateur de classe (CLSID) pour lui-même. Le CLSID du fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB Native Client est le GUID C/C++ CLSID_SQLNCLI10 (le symbole SQLNCLI_CLSID sera résolu en ProgID correct dans le fichier sqlncli. h que vous référencez). Avec le CLSID, le consommateur utilise la fonction OLE **CoCreateInstance** pour fabriquer une instance de l’objet source de données.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client est un serveur in-process. Instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets de fournisseur OLE DB Native Client sont créés à l’aide de la macro CLSCTX_INPROC_SERVER de manière à indiquer le contexte exécutable.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client est un serveur in-process. Les instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des objets Native Client OLE DB fournisseur sont créées à l’aide de la macro CLSCTX_INPROC_SERVER pour indiquer le contexte de l’exécutable.  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objet de source de données de fournisseur OLE DB Native Client expose les interfaces d’initialisation OLE DB qui permettent au consommateur de se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données.  
+ L' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objet de source de données du fournisseur OLE DB Native Client expose les interfaces d’initialisation OLE DB qui permettent au consommateur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se connecter aux bases de données existantes.  
   
- Chaque connexion établie via la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif définit automatiquement les options suivantes :  
+ Chaque connexion effectuée via le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client définit automatiquement ces options :  
   
 -   SET ANSI_WARNINGS ON  
   
@@ -48,7 +48,7 @@ ms.locfileid: "63130599"
   
 -   SET CONCAT_OF_NULL_YIELDS_NULL ON  
   
- Cet exemple utilise la macro d’identificateur de classe pour créer un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objet source de données du fournisseur OLE DB Native Client et obtenir une référence à son **IDBInitialize** interface.  
+ Cet exemple utilise la macro d’identificateur de classe pour créer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un objet Native Client OLE DB fournisseur de source de données et obtenir une référence à son interface **IDBInitialize** .  
   
 ```  
 IDBInitialize*   pIDBInitialize;  
@@ -69,9 +69,9 @@ else
 }  
 ```  
   
- Avec la création réussie d’une instance d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objet de source de données de fournisseur de Native Client OLE DB, l’application de consommateur peut continuer en initialisant la source de données et de création de sessions. Les sessions OLE DB présentent des interfaces qui permettent d'accéder à des données et de les manipuler.  
+ Avec la réussite de la création d’une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance d’un objet Native Client OLE DB fournisseur de source de données, l’application consommateur peut continuer en initialisant la source de données et en créant des sessions. Les sessions OLE DB présentent des interfaces qui permettent d'accéder à des données et de les manipuler.  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif établit sa première connexion à une instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en tant que partie d’une initialisation de source de données réussie. La connexion est maintenue tant qu’une référence est conservée dans toutes les interfaces d’initialisation de source de données, ou jusqu’à l’appel de la méthode **IDBInitialize::Uninitialize**.  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client établit sa première connexion à une instance spécifiée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dans le cadre de l’initialisation réussie de la source de données. La connexion est maintenue tant qu’une référence est conservée dans toutes les interfaces d’initialisation de source de données, ou jusqu’à l’appel de la méthode **IDBInitialize::Uninitialize**.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
@@ -79,7 +79,7 @@ else
   
 -   [Propriétés des informations de la source de données](data-source-information-properties.md)  
   
--   [Propriétés d’initialisation et d’autorisation](initialization-and-authorization-properties.md)  
+-   [Propriétés d'initialisation et d'autorisation](initialization-and-authorization-properties.md)  
   
 -   [Sessions](sessions.md)  
   
