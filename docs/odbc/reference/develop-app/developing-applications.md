@@ -1,5 +1,5 @@
 ---
-title: Développement d’Applications | Microsoft Docs
+title: Développement d’applications | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: 0dd1a3b6-69dc-462f-9290-12ebee2b4a2a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a9cdf20fa57da4b6085fc0e2fab61a23f3fed83e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039913"
 ---
 # <a name="developing-applications"></a>Développement d’applications
 Cette section contient des informations sur le développement d’applications qui utilisent l’interface ODBC et les pilotes qui l’implémentent.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Principes de base d’ODBC](../../../odbc/reference/develop-app/odbc-fundamentals.md)  
   
@@ -36,7 +36,7 @@ Cette section contient des informations sur le développement d’applications q
   
 -   [Instructions SQL](../../../odbc/reference/develop-app/sql-statements.md)  
   
--   [L’exécution d’instructions](../../../odbc/reference/develop-app/executing-statements-odbc.md)  
+-   [Exécution d’instructions](../../../odbc/reference/develop-app/executing-statements-odbc.md)  
   
 -   [Récupération des résultats (de base)](../../../odbc/reference/develop-app/retrieving-results-basic.md)  
   
@@ -52,7 +52,7 @@ Cette section contient des informations sur le développement d’applications q
   
 -   [Interopérabilité](../../../odbc/reference/develop-app/interoperability.md)  
   
--   [Considérations sur la programmation](../../../odbc/reference/develop-app/programming-considerations.md)  
+-   [Éléments de programmation à prendre en considération](../../../odbc/reference/develop-app/programming-considerations.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence du programmeur ODBC](../../../odbc/reference/odbc-programmer-s-reference.md)

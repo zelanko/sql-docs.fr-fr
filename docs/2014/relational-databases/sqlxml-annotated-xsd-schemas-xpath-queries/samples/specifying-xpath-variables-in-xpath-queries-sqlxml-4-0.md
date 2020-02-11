@@ -1,5 +1,5 @@
 ---
-title: Spécification de Variables XPath dans les requêtes XPath (SQLXML 4.0) | Microsoft Docs
+title: Spécification de variables XPath dans les requêtes XPath (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 25e6c96ccbe51ccc0d2d88c4b119c08538d37fcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010692"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>Spécification de variables XPath dans les requêtes XPath (SQLXML 4.0)
-  Les exemples suivants expliquent comment des variables XPath sont passées dans des requêtes XPath. Les requêtes XPath de ces exemples sont spécifiées par rapport au schéma de mappage contenu dans SampleSchema1.xml. Pour plus d’informations sur cet exemple de schéma, consultez [exemple de schéma XSD annoté pour les exemples XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  Les exemples suivants expliquent comment des variables XPath sont passées dans des requêtes XPath. Les requêtes XPath de ces exemples sont spécifiées par rapport au schéma de mappage contenu dans SampleSchema1.xml. Pour plus d’informations sur cet exemple de schéma, consultez [exemple de schéma XSD annoté pour les exemples XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-use-the-xpath-variables"></a>A. Utilisation des variables XPath  
- Un exemple de modèle se compose de deux requêtes XPath. Chacune des requêtes XPath accepte un paramètre. Le modèle spécifie également les valeurs par défaut de ces paramètres. Les valeurs par défaut sont utilisées si les valeurs des paramètres ne sont pas spécifiées. Deux paramètres avec des valeurs par défaut sont spécifiées dans  **\<sql:header >** .  
+### <a name="a-use-the-xpath-variables"></a>R. Utilisation des variables XPath  
+ Un exemple de modèle se compose de deux requêtes XPath. Chacune des requêtes XPath accepte un paramètre. Le modèle spécifie également les valeurs par défaut de ces paramètres. Les valeurs par défaut sont utilisées si les valeurs des paramètres ne sont pas spécifiées. Deux paramètres avec des valeurs par défaut sont spécifiés dans ** \<SQL : header>**.  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -45,7 +45,7 @@ ms.locfileid: "66010692"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Pour tester la requête XPath par rapport au schéma de mappage  
   
-1.  Copie le [exemple de code de schéma](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) et collez-le dans un fichier texte. Enregistrez ce fichier sous le nom SampleSchema1.xml.  
+1.  Copiez l' [exemple de code de schéma](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) et collez-le dans un fichier texte. Enregistrez ce fichier sous le nom SampleSchema1.xml.  
   
 2.  Créez le modèle suivant (XPathVariables.xml) et enregistrez-le dans le répertoire où :  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66010692"
     mapping-schema="C:\MyDir\SampleSchema1.xml"  
     ```  
   
-3.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le modèle. Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+3.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le modèle. Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 > [!NOTE]  
 >  Dans cet exemple, aucun paramètre n'est passé. Ce sont donc les valeurs de paramètre par défaut qui sont utilisées.  

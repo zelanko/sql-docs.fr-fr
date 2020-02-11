@@ -11,17 +11,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 81985b3a16d5ac271a22f0ae62d73b3a518bae94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891854"
 ---
 # <a name="integration-services-tutorials"></a>Didacticiels sur Integration Services
   Cette section contient des didacticiels pour [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
--   [Tutoriel SSIS : Création d’un Package ETL Simple](ssis-how-to-create-an-etl-package.md)  
+-   [Didacticiel SSIS : Création d'un package ETL simple](ssis-how-to-create-an-etl-package.md)  
   
--   [Tutoriel SSIS : Déploiement de Packages](../integration-services/deploy-packages-with-ssis.md)  
+-   [Didacticiel SSIS : déploiement de packages](../integration-services/deploy-packages-with-ssis.md)  
   
   

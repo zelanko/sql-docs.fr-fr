@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bb14d7809eba496ede8c8e0aa6e7133c2ad9c524
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243180"
 ---
 # <a name="use-the-sqlcmd-utility"></a>Utiliser l'utilitaire sqlcmd
@@ -69,7 +69,7 @@ ms.locfileid: "75243180"
     sqlcmd -S <ComputerName>\<InstanceName>  
     ```  
   
-     ou  
+     or  
   
     ```  
     sqlcmd -S .\<InstanceName>  

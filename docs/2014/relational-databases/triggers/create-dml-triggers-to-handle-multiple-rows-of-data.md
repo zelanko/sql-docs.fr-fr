@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d960ae015bb2e52daa183e1f55d6ff119f234b18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676460"
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>Créer de déclencheurs DML pour gérer plusieurs lignes de données
@@ -35,7 +35,7 @@ ms.locfileid: "62676460"
 ## <a name="examples"></a>Exemples  
  Les déclencheurs DML des exemples suivants sont conçus pour stocker le total cumulé d'une colonne dans une autre table de l'exemple de bases de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
-### <a name="a-storing-a-running-total-for-a-single-row-insert"></a>A. Stockage d'un total cumulé pour l'insertion d'une seule ligne  
+### <a name="a-storing-a-running-total-for-a-single-row-insert"></a>R. Stockage d'un total cumulé pour l'insertion d'une seule ligne  
  La première version du déclencheur DML fonctionne correctement pour l'insertion d'une seule ligne, lorsqu'une ligne de données est chargée dans la table `PurchaseOrderDetail` . Le déclencheur DML est activé par une instruction INSERT et la nouvelle ligne est chargée dans la table **inserted** pendant la durée d’exécution du déclencheur. L'instruction `UPDATE` lit la valeur de la colonne `LineTotal` correspondant à la ligne et l'ajoute à la valeur existante dans la colonne `SubTotal` de la table `PurchaseOrderHeader` . La clause `WHERE` garantit que la ligne mise à jour dans la table `PurchaseOrderDetail` correspond à la valeur `PurchaseOrderID` de la ligne dans la table **inserted** .  
   
 ```  

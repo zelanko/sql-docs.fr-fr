@@ -1,5 +1,5 @@
 ---
-title: Core.sp_create_snapshot (Transact-SQL) | Microsoft Docs
+title: Core. sp_create_snapshot (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ef2bce1ff84172d01b1304a416f84865f1cb36bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078219"
 ---
-# <a name="corespcreatesnapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
+# <a name="coresp_create_snapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Insère une ligne dans la vue core.snapshots de l'entrepôt de données de gestion. Cette procédure est appelée chaque fois qu'un package de téléchargement commence à télécharger des données dans l'entrepôt de données de gestion.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,26 +47,26 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @collection_set_uid =] '*collection_set_uid*'  
- GUID du jeu d'éléments de collecte. *collection_set_uid* est **uniqueidentifier** sans valeur par défaut. Pour obtenir le GUID, interrogez la vue dbo.syscollector_collection_sets dans la base de données msdb.  
+ [ @collection_set_uid = ] '*collection_set_uid*'  
+ GUID du jeu d'éléments de collecte. *collection_set_uid* est de type **uniqueidentifier** et n’a pas de valeur par défaut. Pour obtenir le GUID, interrogez la vue dbo.syscollector_collection_sets dans la base de données msdb.  
   
- [ @collector_type_uid =] '*collector_type_uid*'  
- GUID d'un type de collecteur. *collector_type_uid* est **uniqueidentifier** sans valeur par défaut. Pour obtenir le GUID, interrogez la vue dbo.syscollector_collector_types dans la base de données msdb.  
+ [ @collector_type_uid = ] '*collector_type_uid*'  
+ GUID d'un type de collecteur. *collector_type_uid* est de type **uniqueidentifier** et n’a pas de valeur par défaut. Pour obtenir le GUID, interrogez la vue dbo.syscollector_collector_types dans la base de données msdb.  
   
- [ @machine_name=] '*Nom_Ordinateur*'  
- Nom du serveur sur lequel réside le jeu d'éléments de collecte. *Nom_Ordinateur* est **sysname**, sans valeur par défaut.  
+ [ @machine_name= ] '*machine_name*'  
+ Nom du serveur sur lequel réside le jeu d'éléments de collecte. *machine_name* est de **type sysname**, sans valeur par défaut.  
   
- [ @named_instance=] '*instance_nommée*'  
- Nom de l'instance pour le jeu d'éléments de collecte. *instance_nommée* est **sysname**, sans valeur par défaut.  
+ [ @named_instance= ] '*named_instance*'  
+ Nom de l'instance pour le jeu d'éléments de collecte. *named_instance* est de **type sysname**, sans valeur par défaut.  
   
- [ @log_id =] *log_id*  
- Identificateur unique mappé au journal des événements de jeu d'éléments de collecte sur le serveur qui a collecté les données. *log_id* est **bigint** sans valeur par défaut. Pour obtenir la valeur de *log_id*, interrogez la vue dbo.syscollector_execution_log dans la base de données msdb.  
+ [ @log_id = ] *log_id*  
+ Identificateur unique mappé au journal des événements de jeu d'éléments de collecte sur le serveur qui a collecté les données. *log_id* est de type **bigint** sans valeur par défaut. Pour obtenir la valeur de *log_id*, interrogez la vue dbo. syscollector_execution_log dans la base de données msdb.  
   
  [ @snapshot_id = ] *snapshot_id*  
- Identificateur unique pour une ligne est insérée dans la vue core.snapshots. *snapshot_id* est **int** et est retourné en tant que sortie.  
+ Identificateur unique d’une ligne qui est insérée dans la vue Core. snapshots. *snapshot_id* est de **type int** et est retourné en tant que sortie.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
  Chaque fois qu'un package de téléchargement commence à télécharger des données dans l'entrepôt de données de gestion, le composant runtime du collecteur de données appelle core.sp_create_snapshot.  
@@ -80,7 +80,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  Si l'une des vérifications précédentes échoue, la procédure échoue et retourne une erreur.  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l’appartenance dans le **mdw_writer** (avec autorisation EXECUTE) rôle fixe de base de données.  
+ Requiert l’appartenance au rôle de base de données fixe **mdw_writer** (avec autorisation EXECUTE).  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée un instantané pour le jeu d'éléments de collecte Utilisation du disque, l'ajoute à l'entrepôt de données de gestion, puis retourne l'identificateur de l'instantané. Dans l'exemple, l'instance par défaut est utilisée.  
@@ -100,6 +100,6 @@ EXEC core.sp_create_snapshot
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procédures stockées du collecteur de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Entrepôt de données de gestion](../../relational-databases/data-collection/management-data-warehouse.md)  
+ [entrepôt de données de gestion](../../relational-databases/data-collection/management-data-warehouse.md)  
   
   

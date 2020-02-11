@@ -1,5 +1,5 @@
 ---
-title: 'Étape 2 : Ajout et configuration de la journalisation | Microsoft Docs'
+title: 'Étape 2 : Ajout et configuration de la journalisation | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef4f5d42ae3451d4199e84480a5672e437d7ca5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892435"
 ---
-# <a name="step-2-adding-and-configuring-logging"></a>Étape 2 : Activation et configuration du mode d’écriture dans un journal
+# <a name="step-2-adding-and-configuring-logging"></a>Étape 2 : Ajout et configuration de la journalisation
   Dans cette tâche, vous allez activer la journalisation pour le flux de données dans le package Lesson 3.dtsx. Vous allez ensuite configurer un module fournisseur d'informations pour les fichiers texte, pour enregistrer les événements PipelineExecutionPlan et PipelineExecuteTrees. Le module fournisseur d'informations pour les fichiers texte crée des journaux faciles à créer et à déplacer. La simplicité de ces fichiers journaux les rend particulièrement utiles pendant la phase de test de base d'un package. Vous pouvez également consulter les entrées du journal dans la fenêtre Journaux d'événements du Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 ### <a name="to-add-logging-to-the-package"></a>Pour activer le mode d'écriture dans un journal pour le package  
@@ -28,17 +28,17 @@ ms.locfileid: "62892435"
   
 3.  Sous l’onglet **Fournisseurs et journaux** , dans la zone **Type de fournisseur** , sélectionnez **Module fournisseur d’informations SSIS pour les fichiers texte**, puis cliquez sur **Ajouter**.  
   
-     Integration Services ajoute un nouveau module fournisseur d’informations pour les fichiers texte au package avec le nom par défaut : **Module fournisseur d’informations SSIS pour les fichiers texte**. Vous pouvez maintenant configurer le nouveau module fournisseur d'informations.  
+     Integration Services ajoute un nouveau module fournisseur d’informations de journalisation de fichier texte au package avec le nom par défaut module **fournisseur d’informations SSIS pour les fichiers texte**. Vous pouvez maintenant configurer le nouveau module fournisseur d'informations.  
   
-4.  Dans le **nom** colonne, tapez `Lesson 3 Log File`.  
+4.  Dans la colonne **nom** , tapez `Lesson 3 Log File`.  
   
 5.  Modifiez éventuellement les informations figurant dans **Description**.  
   
-6.  Dans le **Configuration** colonne, cliquez sur  **\<nouvelle connexion >** pour spécifier la destination vers lequel les informations du journal sont écrit.  
+6.  Dans la colonne **configuration** , cliquez sur ** \<nouvelle connexion>** pour spécifier la destination dans laquelle les informations du journal sont écrites.  
   
      Dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers** , pour **Type d’utilisation**, sélectionnez **Créer un fichier**, puis cliquez sur **Parcourir**. Par défaut, la boîte de dialogue **Sélectionner un fichier** qui s’affiche présente le dossier du projet, mais il est possible d’enregistrer les informations de journal n’importe où ailleurs.  
   
-7.  Dans le **sélectionner le fichier** boîte de dialogue le **nom de fichier** zone, tapez `TutorialLog.log`, puis cliquez sur **Open**.  
+7.  Dans la boîte de dialogue **Sélectionner le fichier** , dans la zone nom `TutorialLog.log`de **fichier** , tapez, puis cliquez sur **ouvrir**.  
   
 8.  Cliquez sur **OK** pour fermer la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers** .  
   
@@ -53,11 +53,11 @@ ms.locfileid: "62892435"
   
 12. Cliquez sur **De base** pour masquer les catégories d’informations.  
   
-13. Sur le **fournisseurs et journaux** sous l’onglet le **nom** colonne, sélectionnez `Lesson 3 Log File`. Une fois que vous avez créé un module fournisseur d'informations pour votre package, vous pouvez éventuellement le désélectionner temporairement pour désactiver la journalisation, sans avoir à supprimer puis à recréer un module fournisseur d'informations.  
+13. Sous l’onglet **fournisseur et journaux** , dans la colonne **nom** , sélectionnez `Lesson 3 Log File`. Une fois que vous avez créé un module fournisseur d'informations pour votre package, vous pouvez éventuellement le désélectionner temporairement pour désactiver la journalisation, sans avoir à supprimer puis à recréer un module fournisseur d'informations.  
   
 14. Cliquez sur **OK**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- [Étape 3 : Test de la leçon 3 du Package du didacticiel](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+ [Étape 3 : Test de la leçon 3 du package du didacticiel](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
   

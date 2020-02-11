@@ -1,5 +1,5 @@
 ---
-title: Appel de fonctions d’agrégation définies par l’utilisateur CLR | Microsoft Docs
+title: Appel de fonctions d’agrégation CLR définies par l’utilisateur | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8f70a2df2fd824d8a0021a0985d6f75e79efce48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919605"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>Appel de fonctions d'agrégation CLR définies par l'utilisateur
@@ -34,9 +34,9 @@ ms.locfileid: "62919605"
   
 -   Les agrégats définis par l'utilisateur doivent être appelés à l'aide d'un nom en deux parties, sous la forme *nom_schéma.nom_udagg*.  
   
--   Type d’argument de l’agrégat défini par l’utilisateur doit correspondre ou être implicitement convertible dans le *input_type* de l’agrégat, tel que défini dans le `CREATE AGGREGATE` instruction.  
+-   Le type d’argument de l’agrégat défini par l’utilisateur doit correspondre ou être implicitement convertible en *INPUT_TYPE* de l’agrégat, comme défini dans `CREATE AGGREGATE` l’instruction.  
   
--   Le type de retour de l’agrégat défini par l’utilisateur doit correspondre à la *return_type* dans le `CREATE AGGREGATE` instruction.  
+-   Le type de retour de l’agrégat défini par l’utilisateur doit ** correspondre à la `CREATE AGGREGATE` return_type dans l’instruction.  
   
 ## <a name="example-1"></a>Exemple 1  
  Voici un exemple de fonction d'agrégation définie par l'utilisateur qui concatène un jeu de valeurs de chaîne extraites d'une colonne de table :  
@@ -442,6 +442,6 @@ go
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Agrégats CLR définis par l’utilisateur](clr-user-defined-aggregates.md)  
+ [Agrégats CLR définis par l'utilisateur](clr-user-defined-aggregates.md)  
   
   

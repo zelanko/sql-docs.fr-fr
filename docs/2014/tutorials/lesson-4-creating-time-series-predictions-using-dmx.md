@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 4 : Création de prédictions de série chronologique à l’aide de DMX | Microsoft Docs'
+title: 'Leçon 4 : création de prédictions de série chronologique à l’aide de DMX | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 772e5f5f71ca82dd18fec48730522c80e907414f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63312092"
 ---
-# <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>Leçon 4 : Création de prédictions de série chronologique à l’aide d’extensions DMX
-  Dans cette leçon et la leçon suivante, vous allez utiliser des Extensions DMX (Data Mining) pour créer différents types de prédictions basées sur les modèles de série chronologique que vous avez créé dans [leçon 1 : Création d’une série chronologique de modèle d’exploration de données et la Structure d’exploration de données](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md) et [leçon 2 : Ajout des modèles d’exploration de données à la Structure d’exploration de données de série chronologique](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md).  
+# <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>Leçon 4 : Création de prédictions de série chronologique à l'aide d'extensions DMX
+  Dans cette leçon et dans la leçon suivante, vous allez utiliser les extensions DMX (Data Mining Extensions) pour créer différents types de prédictions en fonction des modèles de série chronologique que vous avez créés au cours de la [leçon 1 : création d’un modèle](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md) d’exploration de données de série chronologique et d’une structure d’exploration de données, ainsi que [leçon 2 : ajout de modèles d’exploration de](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)données  
   
  Avec un modèle de série chronologique, de nombreuses options sont à votre disposition pour élaborer des prédictions :  
   
@@ -31,22 +31,22 @@ ms.locfileid: "63312092"
  La syntaxe permettant d'effectuer ces types de prédictions est résumée ci-dessous :  
   
  Prédiction de série chronologique par défaut  
- Utilisez [PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx) pour retourner le nombre spécifié de prédictions à partir du modèle d’exploration de données formé.  
+ Utilisez [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx) pour retourner le nombre spécifié de prédictions à partir du modèle d’exploration de données formé.  
   
- Par exemple, consultez [PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx) ou [Time Series Model Query Examples](../../2014/analysis-services/data-mining/time-series-model-query-examples.md).  
+ Par exemple, consultez [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx) ou [exemples de requêtes de modèle de série chronologique](../../2014/analysis-services/data-mining/time-series-model-query-examples.md).  
   
  EXTEND_MODEL_CASES  
- Utilisez [PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx) avec l’argument EXTEND_MODEL_CASES pour ajouter de nouvelles données, étendez la série et créer des prédictions basées sur le modèle d’exploration de données mis à jour.  
+ Utilisez [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx) avec l’argument EXTEND_MODEL_CASES pour ajouter de nouvelles données, étendre la série et créer des prédictions basées sur le modèle d’exploration de données mis à jour.  
   
  Ce didacticiel contient un exemple de la manière d'utiliser EXTEND_MODEL_CASES.  
   
  REPLACE_MODEL_CASES  
- Utilisez [PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx) avec l’argument REPLACE_MODEL_CASES pour remplacer les données d’origine avec une nouvelle série de données, puis créer des prédictions basées sur l’application des modèles dans le modèle d’exploration de données pour les nouvelles données série.  
+ Utilisez [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx) avec l’argument REPLACE_MODEL_CASES pour remplacer les données d’origine par une nouvelle série de données, puis créez des prédictions en fonction de l’application des modèles dans le modèle d’exploration de données à la nouvelle série de données.  
   
- Pour obtenir un exemple montrant comment utiliser REPLACE_MODEL_CASES, consultez [leçon 2 : Création d’un scénario de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
+ Pour obtenir un exemple d’utilisation de REPLACE_MODEL_CASES, consultez [leçon 2 : génération d’un scénario de prévision &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
 ## <a name="lesson-tasks"></a>Tâches de la leçon  
- Vous allez effectuer les tâches suivantes dans cette leçon :  
+ Dans cette leçon, vous allez effectuer les tâches suivantes :  
   
 -   créer une requête pour obtenir les prédictions par défaut basées sur des données existantes.  
   
@@ -65,11 +65,11 @@ FROM [<mining model name>]
 WHERE [<criteria>]  
 ```  
   
- La liste de sélection peut contenir des colonnes à partir du modèle, tel que le nom du produit en ligne que vous créez les prédictions, ou les fonctions de prédiction, tel que [Lag &#40;DMX&#41; ](/sql/dmx/lag-dmx) ou [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx), qui sont spécifiquement adaptées aux modèles d’exploration de données de série chronologique.  
+ La liste de sélection peut contenir des colonnes du modèle, telles que le nom de la gamme de produits pour laquelle vous créez les prédictions ou des fonctions de prédiction, telles que le [décalage &#40;dmx&#41;](/sql/dmx/lag-dmx) ou [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx), qui sont spécifiquement pour les modèles d’exploration de données de série chronologique.  
   
 #### <a name="to-create-a-simple-time-series-prediction-query"></a>Pour créer une requête de prédiction de série chronologique simple  
   
-1.  Dans **Explorateur d’objets**, avec le bouton droit de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
+1.  Dans l' **Explorateur d’objets**, cliquez avec le bouton [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]droit sur l’instance de, pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
   
      L'Éditeur de requête s'ouvre et contient une nouvelle requête vide.  
   
@@ -133,23 +133,23 @@ WHERE [<criteria>]
     [ModelRegion] = 'M200 Pacific'  
     ```  
   
-6.  Sur le **fichier** menu, cliquez sur **enregistrer DMXQuery1.dmx sous**.  
+6.  Dans le menu **fichier** , cliquez sur **Enregistrer DMXQuery1. DMX sous**.  
   
-7.  Dans le **enregistrer en tant que** boîte de dialogue, accédez au dossier approprié et nommez le fichier `SimpleTimeSeriesPrediction.dmx`.  
+7.  Dans la boîte de dialogue **Enregistrer sous** , accédez au dossier approprié et nommez le fichier `SimpleTimeSeriesPrediction.dmx`.  
   
-8.  Dans la barre d’outils, cliquez sur le **Execute** bouton.  
+8.  Dans la barre d’outils, cliquez sur le bouton **exécuter** .  
   
      La requête renvoie 6 prédictions pour chacune des deux combinaisons de produit et région spécifiées dans la clause `WHERE`.  
   
  Dans la leçon suivante, vous allez créer une requête qui fournit de nouvelles données au modèle, puis comparer les résultats de cette prédiction avec celle que vous venez de créer.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Leçon 5 : Extension de la série chronologique de modèle](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
+ [Leçon 5 : Extension du modèle de série chronologique](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)   
- [Lag &#40;DMX&#41;](/sql/dmx/lag-dmx)   
+ [PredictTimeSeries&#41;DMX &#40;](/sql/dmx/predicttimeseries-dmx)   
+ [Retard &#40;&#41;DMX](/sql/dmx/lag-dmx)   
  [Exemples de requêtes de modèle de série chronologique](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [Leçon 2 : Création d’un scénario de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [Leçon 2 : génération d’un scénario de prévision &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
   

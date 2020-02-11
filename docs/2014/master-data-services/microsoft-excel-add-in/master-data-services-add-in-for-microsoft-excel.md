@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d8bac9ba8afafa6b5141d90c51f8029f596ba8f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482626"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Complément Master Data Services pour Microsoft Excel
-  Avec le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], listes de données de référence de référence peuvent être distribués à tous les utilisateurs de votre organisation qui utilise Excel. La sécurité détermine quels utilisateurs peuvent afficher et mettre à jour les données.  
+  Avec, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]les listes principales de données de référence peuvent être distribuées à tous les membres de votre organisation qui utilisent Excel. La sécurité détermine quels utilisateurs peuvent afficher et mettre à jour les données.  
   
  Vous pouvez charger les listes filtrées de données MDS dans Excel, et les utiliser comme de la même façon que d'autres données. Lorsque vous avez terminé, vous pouvez de nouveau publier les données sur MDS, où elles sont stockées de manière centralisée.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "65482626"
   
 -   Le *référentiel MDS* est l'emplacement où toutes les données de référence sont stockées. Il s'agit d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurée pour stocker des données MDS. Pour manipuler des données à partir du référentiel, vous devez les charger dans Excel, puis quand vous avez terminé votre travail, vous pouvez publier vos modifications dans le référentiel. Les administrateurs peuvent ajouter de nouvelles entités et de nouveaux attributs au référentiel.  
   
--   Les données*gérées par MDS* sont les données stockées dans le référentiel MDS que vous chargez dans Excel, les données étant affichées sous la forme de lignes en surbrillance. Vous pouvez ajouter des données non managées MDS à votre feuille de calcul, dans ce cas, celles-ci ne seront pas concernées par l'actualisation des données managées MDS.  
+-   Les *données managées MDS* sont des données stockées dans le référentiel MDS et que vous chargez dans Excel, où les données sont affichées sous forme de lignes en surbrillance. Vous pouvez ajouter des données non managées MDS à votre feuille de calcul, dans ce cas, celles-ci ne seront pas concernées par l'actualisation des données managées MDS.  
   
 -   Un *modèle* est un conteneur de données. Plusieurs versions de ces conteneurs peuvent être créées, généralement la dernière version est aussi la plus récente. Pour plus d’informations, consultez [Modèles &#40;Master Data Services&#41;](../models-master-data-services.md).  
   
@@ -42,37 +42,37 @@ ms.locfileid: "65482626"
   
 -   Un *member* est une ligne de données. Chaque entité contient des membres. Un membre est **Bleu**. Pour plus d’informations, consultez [Membres &#40;Master Data Services&#41;](../members-master-data-services.md).  
   
--   Un *attribut* est une colonne de données. Chaque membre possède des attributs. Par exemple, l’attribut **Code** pour le membre **Bleu** est **B**. Pour plus d’informations sur les attributs, consultez [Attributs &#40;Master Data Services&#41;](../attributes-master-data-services.md).  
+-   Un *attribut* est une colonne de données. Chaque membre possède des attributs. Par exemple, l’attribut de **code** pour le membre **bleu** est **B**. Pour plus d’informations sur les attributs, consultez [attributs &#40;Master Data Services&#41;](../attributes-master-data-services.md).  
   
 ## <a name="related-tasks"></a>Tâches associées  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Créez une connexion à un référentiel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|[Se connecter à un référentiel MDS &#40;Complément MDS pour Excel&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
+|Créez une connexion à un référentiel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|[Connectez-vous à un référentiel MDS &#40;Complément MDS pour Excel&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
 |Chargez les données managées MDS dans Excel.|[Charger des données MDS dans Excel](export-data-to-excel-from-master-data-services.md)|  
-|Enregistrez une requête de raccourci que vous pouvez utiliser à l'avenir pour ouvrir les données managées MDS actuellement affichées.|[Enregistrer un fichier de requête de raccourci &#40;Complément MDS pour Excel#41;](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
-|Partager des raccourcis avec d'autres utilisateurs.|[Envoyer par e-mail un fichier de requête de raccourci &#40;Complément MDS pour Excel#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
-|Afficher toutes les modifications apportées à un membre.|[Afficher toutes les annotations ou transactions pour un membre &#40;Complément MDS pour Excel&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
-|Avant de publier de nouvelles données, vérifier si certaines sont dupliquées.|[Mettre en correspondance les données similaires &#40;Complément MDS pour Excel&#41;](match-similar-data-mds-add-in-for-excel.md)|  
-|Publier les données d'une feuille de calcul dans le référentiel MDS.|[Publier des données à partir d’Excel dans MDS &#40;complément MDS pour Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
+|Enregistrez une requête de raccourci que vous pouvez utiliser à l'avenir pour ouvrir les données managées MDS actuellement affichées.|[Enregistrer un fichier de requête de raccourci &#40;Complément MDS pour Excel&#41;](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|Partager des raccourcis avec d'autres utilisateurs.|[Envoyer par courrier électronique un fichier de requête de raccourci &#40;Complément MDS pour Excel&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|Afficher toutes les modifications apportées à un membre.|[Affichez toutes les annotations ou transactions pour un membre &#40;Complément MDS pour Excel&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
+|Avant de publier de nouvelles données, vérifier si certaines sont dupliquées.|[Faire correspondre les données similaires &#40;Complément MDS pour Excel&#41;](match-similar-data-mds-add-in-for-excel.md)|  
+|Publier les données d'une feuille de calcul dans le référentiel MDS.|[Publier des données d’Excel dans MDS &#40;Complément MDS pour Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
 |Créer une nouvelle entité avec les données dans la feuille de calcul. (Administrateurs uniquement.)|[Créer une entité &#40;Complément MDS pour Excel&#41;](create-an-entity-mds-add-in-for-excel.md)|  
 |Créez un attribut basé sur un domaine, également appelé une liste contrainte. (Administrateurs uniquement.)|[Créer un attribut basé sur un domaine &#40;Complément MDS pour Excel&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)|  
 |Définissez les propriétés de chargement et de publication des données dans le complément Master Data Services pour Excel. (Administrateurs uniquement.)|[Définition des propriétés pour le complément Master Data Services pour Excel](setting-properties-for-master-data-services-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Contenu associé  
   
--   [Connexions &#40;Complément MDS pour Excel#41;](connections-mds-add-in-for-excel.md)  
+-   [Connexions &#40;Complément MDS pour Excel&#41;](connections-mds-add-in-for-excel.md)  
   
--   [Le chargement des données &#40;complément MDS pour Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+-   [Chargement de données &#40;Complément MDS pour Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
 -   [Fichiers de requête de raccourci &#40;Complément MDS pour Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
--   [Mise en correspondance de la qualité des données dans le complément MDS pour Excel](data-quality-matching-in-the-mds-add-in-for-excel.md)  
+-   [Correspondance de la qualité des données dans le Complément MDS pour Excel](data-quality-matching-in-the-mds-add-in-for-excel.md)  
   
--   [Publication de données &#40;complément MDS pour Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [Publication des Complément MDS pour Excel de &#40;de données&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
 -   [Génération d’un modèle &#40;Complément MDS pour Excel&#41;](building-a-model-mds-add-in-for-excel.md)  
   
--   [Sécurité &#40;Master Data Services&#41;](../security-master-data-services.md)  
+-   [&#40;de sécurité Master Data Services&#41;](../security-master-data-services.md)  
   
   

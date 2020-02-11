@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cbdf233af3c0c27d6b4e95d18dc2c438d5307e7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479484"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>Déployer un package de déploiement de modèle à l'aide de l'Assistant
@@ -26,7 +26,7 @@ ms.locfileid: "65479484"
 > [!IMPORTANT]  
 >  Les packages peuvent être déployés uniquement dans l'édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans laquelle ils ont été créés. Cela signifie que les packages créés dans [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ne peuvent pas être déployés sur [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** dans l'environnement [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] cible.  
@@ -47,7 +47,7 @@ ms.locfileid: "65479484"
   
 5.  Recherchez votre package de déploiement (fichier .pkg), puis cliquez sur **Ouvrir**.  
   
-6.  Cliquer sur **Suivant**.  
+6.  Cliquez sur **Suivant**.  
   
 7.  Une fois le package chargé, cliquez sur **Suivant**.  
   
@@ -55,9 +55,9 @@ ms.locfileid: "65479484"
   
 9. Cliquez sur **Terminer** pour quitter l'Assistant.  
   
- **Remarques :**  
+ **Notes**  
   
--   Si une vue d’abonnement dans le package a le même nom qu’une vue d’abonnement dans un modèle existant, la vue est créée en tant que *modelname.subscriptionviewname*. Si ce nom existe déjà, la vue d'abonnement n'est pas créée.  
+-   Si une vue d’abonnement dans le package a le même nom qu’une vue d’abonnement dans un modèle existant, la vue est créée en tant que *modelname. subscriptionviewname*. Si ce nom existe déjà, la vue d'abonnement n'est pas créée.  
   
 -   Le processus de déploiement comporte quatre étapes :  
   
@@ -74,7 +74,7 @@ ms.locfileid: "65479484"
      Lorsque vous mettez à jour un modèle, si le processus échoue au cours des trois premières étapes, il s'arrête ; toutefois, les modifications qui sont déjà effectuées ne sont pas annulées. Si le processus échoue à l'étape 4, les membres qui peuvent être mis à jour sont mis à jour.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Les métadonnées définies par l'utilisateur, les attributs de fichier et les autorisations d'accès ne sont pas inclus dans les packages de déploiement de modèle. Après avoir déployé un modèle, vous devez les mettre à jour manuellement. Pour plus d'informations, consultez :  
+ Les métadonnées définies par l'utilisateur, les attributs de fichier et les autorisations d'accès ne sont pas inclus dans les packages de déploiement de modèle. Après avoir déployé un modèle, vous devez les mettre à jour manuellement. Pour plus d'informations, consultez les pages suivantes :  
   
 -   [Ajouter des métadonnées &#40;Master Data Services&#41;](../../2014/master-data-services/add-metadata-master-data-services.md)  
   

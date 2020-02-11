@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fd4153aaaf0fdffe32ce48db872a43cb5dbb84c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894793"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codage et débogage du composant Script
@@ -59,9 +59,9 @@ ms.locfileid: "62894793"
   
     -   Une classe de collection `Connections` qui contient des références aux connexions sélectionnées dans la page Gestionnaire de connexions de l'Éditeur de transformation de script.  
   
-    -   Un `Variables` classe de collection qui contient des références aux variables entrées dans le `ReadOnlyVariable` et `ReadWriteVariables` propriétés sur le **Script** page de la **éditeur de Transformation de Script**.  
+    -   Classe `Variables` de collection qui contient des références aux variables entrées dans les `ReadOnlyVariable` propriétés `ReadWriteVariables` et de la page **script** de l **'éditeur de transformation de script**.  
   
--   Le `BufferWrapper` élément de projet contient une classe qui hérite de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> pour chaque entrée et sortie configurée sur le **entrées et sorties** page de la **éditeur de Transformation de Script**. Chacune de ces classes contient des propriétés d'accesseur typées qui correspondent aux colonnes d'entrée et de sortie configurées, ainsi que des tampons de flux de données qui contiennent les colonnes.  
+-   L' `BufferWrapper` élément de projet contient une classe qui hérite <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> de pour chaque entrée et sortie configurée dans la page **entrées et sorties** de l **'éditeur de transformation de script**. Chacune de ces classes contient des propriétés d'accesseur typées qui correspondent aux colonnes d'entrée et de sortie configurées, ainsi que des tampons de flux de données qui contiennent les colonnes.  
   
  Pour plus d’informations sur la manière d’utiliser ces objets, méthodes et propriétés, consultez [Présentation du modèle objet du composant Script](understanding-the-script-component-object-model.md). Pour plus d’informations sur l’utilisation des méthodes et des propriétés de ces classes dans un type de composant Script particulier, consultez la section [Autres exemples de composants Script](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md). Les rubriques d'exemples contiennent également des exemples de code complets.  
   
@@ -166,11 +166,11 @@ public class ScriptMain : UserComponent
   
  Les éléments de projet générés automatiquement dans le projet de composant Script fournissent les objets, méthodes et propriétés ci-après pour interagir avec le package.  
   
-|Fonctionnalité du package|Méthode d'accès|  
+|Fonctionnalité du package|Méthode d’accès|  
 |---------------------|-------------------|  
 |Variables|Utilisez les propriétés d'accesseur typées et nommées de la classe de collection `Variables` incluse dans l'élément de projet `ComponentWrapper`, exposées via la propriété `Variables` de la classe `ScriptMain`.<br /><br /> La méthode `PreExecute` ne peut accéder qu'à des variables en lecture seule. La méthode `PostExecute` peut accéder à des variables en lecture seule et en lecture/écriture.|  
 |Connexions|Utilisez les propriétés d'accesseur typées et nommées de la classe de collection `Connections` incluse dans l'élément de projet `ComponentWrapper`, exposées via la propriété `Connections` de la classe `ScriptMain`.|  
-|Events|Déclencher des événements à l’aide de la <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> propriété de la `ScriptMain` classe et le **incendie\<X >** méthodes de la <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> interface.|  
+|Événements|Déclenchez des événements à <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> l’aide de `ScriptMain` la propriété de la classe et des méthodes **>Fire\<X** de l' <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> interface.|  
 |Journalisation|Effectuez la journalisation à l'aide de la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> de la classe `ScriptMain`.|  
   
 ## <a name="debugging-the-script-component"></a>Débogage du composant Script  
@@ -184,7 +184,7 @@ public class ScriptMain : UserComponent
   
  Vous pouvez également surveiller l'exécution du composant Script en utilisant les méthodes suivantes :  
   
--   Interrompez l’exécution et affichez un message modal en utilisant le `MessageBox.Show` méthode dans le **System.Windows.Forms** espace de noms. (Supprimez ce code une fois que vous avez terminé le processus de débogage.)  
+-   Interrompez l’exécution et affichez un message modal `MessageBox.Show` en utilisant la méthode de l’espace de noms **System. Windows. Forms** . (Supprimez ce code une fois que vous avez terminé le processus de débogage.)  
   
 -   Déclenchez des événements pour les messages d'information, les avertissements et les erreurs. Les méthodes FireInformation, FireWarning et FireError affichent la description des événements dans la fenêtre **Sortie** de Visual Studio. Toutefois, les méthodes FireProgress, Console.Write et Console.WriteLine n’affichent aucune information dans la fenêtre **Sortie**. Les messages de l’événement FireProgress apparaissent sous l’onglet **Progression** du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Pour plus d’informations, consultez [Déclenchement d’événements dans le composant Script](../../data-flow/transformations/script-component.md).  
   
@@ -198,7 +198,7 @@ public class ScriptMain : UserComponent
  [Présentation du modèle objet du composant Script](understanding-the-script-component-object-model.md)  
  Explique comment utiliser les objets, méthodes et propriétés disponibles dans le composant Script.  
   
- [Référencement d’autres assemblys dans les solutions de script](../referencing-other-assemblies-in-scripting-solutions.md)  
+ [Référencement d'autres assemblys dans les solutions de script](../referencing-other-assemblies-in-scripting-solutions.md)  
  Explique comment référencer des objets de la bibliothèque de classes [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] dans le composant Script.  
   
  [Simulation d'une sortie d'erreur pour le composant Script](../../extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)  
@@ -208,9 +208,9 @@ public class ScriptMain : UserComponent
   
 -   Entrée de blog, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](https://go.microsoft.com/fwlink/?LinkId=215661), sur blogs.msdn.com.  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône de Integration Services (petite)](../../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configuration du composant Script dans l’éditeur de composant de script](configuring-the-script-component-in-the-script-component-editor.md)  
+ [Configuration du composant Script dans l'éditeur de composant de script](configuring-the-script-component-in-the-script-component-editor.md)  
   
   

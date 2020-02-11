@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Déboguer des assemblys personnalisés | Microsoft Docs'
+title: 'Procédure : déboguer des assemblys personnalisés | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 64a61e044c7ff6efe051eb316cb9f653f0993b68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265062"
 ---
-# <a name="how-to-debug-custom-assemblies"></a>Procédure : Déboguer des assemblages personnalisés
-  Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] propose différents outils de débogage qui peuvent vous aider à analyser le code de votre assembly personnalisé et à trouver les éventuelles erreurs qu’il contient. Vous devez choisir un outil en fonction de ce que vous essayez d'accomplir. Cet exemple utilise [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)].  
+# <a name="how-to-debug-custom-assemblies"></a>Procédure : déboguer des assemblys personnalisés
+  Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fournit plusieurs outils de débogage qui peuvent vous aider à analyser votre code d’assembly personnalisé et à localiser les erreurs qu’il contient. Vous devez choisir un outil en fonction de ce que vous essayez d'accomplir. Cet exemple utilise [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)].  
   
  La méthode recommandée pour concevoir, développer et tester des assemblys personnalisés pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consiste à créer une solution contenant à la fois vos rapports de test et votre assembly personnalisé.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63265062"
   
 3.  Dans l'Explorateur de solutions, sélectionnez la solution de votre choix.  
   
-4.  Dans le menu **vue**, cliquez sur **Pages de propriétés**.  
+4.  Dans le menu **Affichage**, cliquez sur **Pages de propriétés**.  
   
      La boîte de dialogue **Pages de propriétés de Solution** s’affiche.  
   
@@ -46,13 +46,13 @@ ms.locfileid: "63265062"
   
 7.  Dans l'Explorateur de solutions, sélectionnez votre projet d'assembly personnalisé.  
   
-8.  Dans le menu **vue**, cliquez sur **Pages de propriétés**.  
+8.  Dans le menu **Affichage**, cliquez sur **Pages de propriétés**.  
   
      La boîte de dialogue **Pages de propriétés de Projet** s’affiche.  
   
 9. Cliquez sur l’onglet **Générer** si vous travaillez sur un projet C# ou sur l’onglet **Compiler** s’il s’agit d’un projet [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
-10. Dans la page **Générer**/**Compiler**, entrez le chemin du dossier Concepteur de rapports. Par défaut, il s’agit de C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE dans la zone de texte **Chemin de sortie**. Une version mise à jour de votre assembly personnalisé est alors générée et déployée directement dans le Concepteur de rapports avant exécution de votre rapport.  
+10. Dans la page **générer**/la**compilation** , entrez le chemin d’accès au dossier concepteur de rapports. Par défaut, il s’agit de C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE dans la zone de texte **Chemin de sortie**. Une version mise à jour de votre assembly personnalisé est alors générée et déployée directement dans le Concepteur de rapports avant exécution de votre rapport.  
   
 11. Une fois votre rapport généré et votre assembly personnalisé développé, définissez des points d'arrêt dans le code de votre assembly personnalisé.  
   

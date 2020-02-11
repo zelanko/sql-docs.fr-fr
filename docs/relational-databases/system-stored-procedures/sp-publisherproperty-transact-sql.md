@@ -16,18 +16,18 @@ ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0d3ba6552861f162a8ba0755dc37e30bc965e2a4
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73962377"
 ---
 # <a name="sp_publisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Affiche ou modifie les propriétés du serveur de publication non [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette procédure stockée est exécutée sur le serveur de distribution.  
+  Affiche ou modifie les propriétés du serveur de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication qui ne sont pas des serveurs de publication. Cette procédure stockée est exécutée sur le serveur de distribution.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,9 +39,9 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publisher = ] 'publisher'` est le nom du serveur de publication hétérogène. *Publisher* est de **type sysname**, sans valeur par défaut.  
+`[ @publisher = ] 'publisher'`Nom du serveur de publication hétérogène. *Publisher* est de **type sysname**, sans valeur par défaut.  
   
-`[ @propertyname = ] 'propertyname'` est le nom de la propriété qui est définie. *PropertyName* est de **type sysname**et peut prendre l’une des valeurs suivantes.  
+`[ @propertyname = ] 'propertyname'`Nom de la propriété en cours de définition. *PropertyName* est de **type sysname**et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -58,14 +58,14 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**propertyname**|**sysname**|Retourne les propriétés de publication suivantes qui peuvent être définies :<br /><br /> **xactsetbatching**<br /><br /> **xactsetjob**<br /><br /> **xactsetjobinterval**|  
+|**PropertyName**|**sysname**|Retourne les propriétés de publication suivantes qui peuvent être définies :<br /><br /> **xactsetbatching**<br /><br /> **xactsetjob**<br /><br /> **xactsetjobinterval**|  
 |**Balis**|**sysname**|Est le paramètre actuel de la propriété dans la colonne **PropertyName** .|  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_publisherproperty** est utilisé dans la réplication transactionnelle pour les serveurs de publication non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ **sp_publisherproperty** est utilisé dans la réplication transactionnelle pour les serveurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de publication non-.  
   
  Lorsque seul le serveur de *publication* est spécifié, le jeu de résultats comprend les paramètres actuels de toutes les propriétés qui peuvent être définies.  
   
@@ -79,7 +79,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
  Seuls les membres du rôle serveur fixe **sysadmin** sur le serveur de distribution peuvent exécuter **sp_publisherproperty**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer le travail d’un jeu de transactions pour un serveur de publication Oracle &#40;programmation Transact-SQL de la réplication&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
+ [Configurer le travail du jeu de transactions pour un serveur de publication Oracle &#40;la programmation Transact-SQL de la réplication&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

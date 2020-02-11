@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 51b69c7092a81fd84cc586e79dbb201c69c668ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62912596"
 ---
-# <a name="mssqlserver8680"></a>MSSQLSERVER_8680
+# <a name="mssqlserver_8680"></a>MSSQLSERVER_8680
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|8680|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|8680|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|REMOTE_ERR|  
-|Texte du message|Erreur interne du processeur de requêtes : le processeur de requêtes a rencontré une erreur inattendue pendant le traitement d’une phase de la requête distante.|  
+|Texte du message|Erreur interne du processeur de requêtes : le processeur de requêtes a rencontré une erreur inattendue pendant le traitement d'une phase de la requête distante.|  
   
 ## <a name="explanation"></a>Explication  
  Erreur interne du processeur de requêtes.  
