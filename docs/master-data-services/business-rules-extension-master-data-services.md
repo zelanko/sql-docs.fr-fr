@@ -1,5 +1,5 @@
 ---
-title: Extension de règles d’entreprise
+title: Business Rules Extension
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 24df0fcbece66a86786550e81f3e385d6454f4b5
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728679"
 ---
 # <a name="business-rules-extension-master-data-services"></a>Extension de règles d’entreprise (Master Data Services)
@@ -65,7 +65,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 |||  
 |-|-|  
-|**Schéma**|**Autorisations**|  
+|**Schéma**|**autorisations**|  
 |mdm|SELECT|  
 |stg.|SELECT, UPDATE, DELETE, EXECUTE, INSERT|  
 |usr|FULL|  
@@ -75,7 +75,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 -   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle Administration de système.  
   
--   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
   
 -   Des scripts définis par l’utilisateur avaient été ajoutés à la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
@@ -114,7 +114,7 @@ CREATE PROCEDURE [usr].[YourAction]
     3.  Cliquez sur **Enregistrer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
+ [&#40;des règles d’entreprise Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Conditions de règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
  [Actions de règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)  
   

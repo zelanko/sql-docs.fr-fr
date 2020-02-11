@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 92e3b7b2099aabaa763fb6f6642bcc6267ebe6f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63277431"
 ---
 # <a name="connect-to-an-instance-from-object-explorer"></a>Se connecter à une instance à partir de l’Explorateur d’objets
@@ -24,11 +24,11 @@ ms.locfileid: "63277431"
  Pour pouvoir utiliser l'Explorateur d'objets, vous devez le connecter à un serveur. Cliquez sur **Se connecter** dans la barre d’outils de l’Explorateur d’objets, puis choisissez le type du serveur dans la liste déroulante. La boîte de dialogue **Se connecter au serveur** s'ouvre. Pour établir la connexion, vous devez fournir au moins le nom du serveur et les informations correctes d'authentification.  
   
 ## <a name="optional-object-explorer-connection-settings"></a>Paramètres de connexion facultatifs de l'Explorateur d'objets  
- Quand vous vous connectez à un serveur, vous pouvez fournir d’autres informations de connexion dans la boîte de dialogue **Se connecter au serveur**. Cette boîte de dialogue conserve les derniers paramètres utilisés (les nouvelles connexions, telles que des nouvelles fenêtres d’éditeur de code, utiliseront ces paramètres).  
+ Quand vous vous connectez à un serveur, vous pouvez fournir d’autres informations de connexion dans la boîte de dialogue **Se connecter au serveur**. La boîte **de dialogue se connecter au serveur** conservera les derniers paramètres utilisés et les nouvelles connexions, telles que les nouvelles fenêtres de l’éditeur de code, utiliseront ces paramètres.  
   
  Pour définir des paramètres de connexion facultatifs, procédez comme suit :  
   
-1.  Cliquez sur **Se connecter** dans la barre d’outils de l’Explorateur d’objets, puis sur le type du serveur auquel se connecter. La boîte de dialogue **Se connecter au serveur** s'ouvre.  
+1.  Cliquez sur **Se connecter** dans la barre d’outils de l’Explorateur d’objets, puis sur le type du serveur auquel se connecter. La boîte de dialogue **Se connecter au serveur** s’affiche.  
   
 2.  Dans la zone **Nom du serveur** , tapez le nom de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63277431"
   
     |Paramètre|Description|  
     |-------------|-----------------|  
-    |**Se connecter à la base de données**|Choisissez une base de données parmi les bases de données disponibles sur le serveur. Cette liste affiche uniquement les bases de données que vous êtes autorisé à afficher.|  
+    |**Connecter à la base de données**|Choisissez une base de données parmi les bases de données disponibles sur le serveur. Cette liste affiche uniquement les bases de données que vous êtes autorisé à afficher.|  
     |**Protocole réseau**|Sélectionnez Mémoire partagée, TCP/IP ou Canaux nommés.|  
     |**Taille du paquet réseau**|Utilisez des octets pour la configuration. Le paramètre par défaut est 4 096 octets.|  
     |**Délai de connexion**|Utilisez des secondes pour la configuration. Le paramètre par défaut est 15 secondes.|  

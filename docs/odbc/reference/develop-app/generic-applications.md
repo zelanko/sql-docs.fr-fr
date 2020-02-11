@@ -15,13 +15,13 @@ ms.assetid: dda2a3c4-76ef-40a6-b3a1-9e95bed61618
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f6b1544f5562468db03a649c263993039a722a3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139297"
 ---
 # <a name="generic-applications"></a>Applications génériques
-Applications génériques exécutent parfois une tâche codées en dur, par exemple une extraction de données à partir d’une base de données de feuille de calcul. Ils peuvent également effectuer diverses tâches définies par l’utilisateur, telle qu’une application de requête générique permettant à l’utilisateur entrer et exécuter une instruction SQL. Les applications génériques ont en commun est qu’ils doivent travailler avec un large éventail de SGBD différents et que le développeur ne sait pas au préalable ces SGBD sera.  
+Les applications génériques effectuent parfois une tâche codée en dur, telle qu’une feuille de calcul qui récupère les données d’une base de données. Ils peuvent également effectuer diverses tâches définies par l’utilisateur, telles qu’une application de requête générique permettant à l’utilisateur d’entrer et d’exécuter une instruction SQL. Les applications génériques sont en commun : elles doivent fonctionner avec différents SGBD et que le développeur ne sache pas à l’avance ce que seront les SGBD.  
   
- Par conséquent, les applications génériques doivent être hautement interopérable. Le développeur doit effectuer des choix nombreux ajustant l’interopérabilité des fonctionnalités et doit écrire du code qui attend des pilotes pour prendre en charge un large éventail de fonctionnalités. Tandis que les applications génériques peuvent être paramétrées pour fonctionner avec SGBD courants, ils contiennent rarement code spécifiques au pilote ou propres au SGBD.
+ Par conséquent, les applications génériques doivent être très interopérables. Le développeur doit faire de nombreux choix, commercialiser l’interopérabilité pour les fonctionnalités et écrire du code qui s’attend à ce que les pilotes prennent en charge un large éventail de fonctionnalités. Alors que les applications génériques peuvent être paramétrées pour fonctionner avec des SGBD répandus, elles contiennent rarement du code spécifique au pilote ou au SGBD.

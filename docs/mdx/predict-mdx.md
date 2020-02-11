@@ -1,5 +1,5 @@
 ---
-title: Predict (MDX) | Microsoft Docs
+title: Prédiction (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 165d03b886ad8e9beeb09bf5a835c879cc23a2a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68055587"
 ---
 # <a name="predict-mdx"></a>Predict (MDX)
@@ -41,7 +41,7 @@ Predict(Mining_Model_Name,String_Expression)
  Expression de chaîne valide qui prend la valeur d'une expression DMX valide pour le modèle d'exploration de données spécifié.  
   
 ## <a name="remarks"></a>Notes  
- Le **Predict** fonction évalue l’expression de chaîne spécifiée dans le contexte du modèle d’exploration de données spécifié.  
+ La fonction **Predict** évalue l’expression de chaîne spécifiée dans le contexte du modèle d’exploration de données spécifié.  
   
  La syntaxe et les fonctions d'exploration de données sont documentées dans les références MDX (Multidimensional Expressions).  
   
@@ -59,6 +59,6 @@ WHERE([Customer].[Customer Geography].[Customer].&[12012])
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

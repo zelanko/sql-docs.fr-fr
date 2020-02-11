@@ -18,18 +18,18 @@ ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 36731206770b324bf4387143ef2c98b0532475ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67902892"
 ---
-# <a name="sysmailupdateprofilesp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
+# <a name="sysmail_update_profile_sp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Modifie la description ou le nom d'un profil de messagerie de base de données.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,27 +40,27 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @profile_id = ] profile_id` Id de profil à mettre à jour. *profile_id* est **int**, avec NULL comme valeur par défaut. Au moins une des *profile_id* ou *profile_name* doit être spécifié. Si les deux arguments sont indiqués, la procédure modifie le nom du profil.  
+`[ @profile_id = ] profile_id`ID de profil à mettre à jour. *profile_id* est de **type int**, avec NULL comme valeur par défaut. Au moins un des *profile_id* ou *profile_name* doit être spécifié. Si les deux arguments sont indiqués, la procédure modifie le nom du profil.  
   
-`[ @profile_name = ] 'profile_name'` Le nom du profil à mettre à jour ou le nouveau nom pour le profil. *nom_profil* est **sysname**, avec NULL comme valeur par défaut. Au moins une des *profile_id* ou *profile_name* doit être spécifié. Si les deux arguments sont indiqués, la procédure modifie le nom du profil.  
+`[ @profile_name = ] 'profile_name'`Nom du profil à mettre à jour ou nouveau nom pour le profil. *profile_name* est de **type sysname**, avec NULL comme valeur par défaut. Au moins un des *profile_id* ou *profile_name* doit être spécifié. Si les deux arguments sont indiqués, la procédure modifie le nom du profil.  
   
-`[ @description = ] 'description'` Nouvelle description pour le profil. *Description* est **nvarchar (256)** , avec NULL comme valeur par défaut.  
+`[ @description = ] 'description'`Nouvelle description du profil. *Description* est de type **nvarchar (256)**, avec NULL comme valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
  Lorsque l'identificateur et le nom du profil sont tous les deux spécifiés, la procédure remplace le nom du profil par celui qui est fourni et met à jour la description. Lorsqu'un seul de ces arguments est indiqué, la procédure met simplement à jour la description du profil.  
   
- La procédure stockée **sysmail_update_profile_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
+ La procédure stockée **sysmail_update_profile_sp** se trouve dans la base de données **msdb** et appartient au schéma **dbo** . La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
 ## <a name="permissions"></a>Autorisations  
- Autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
+ Les autorisations d’exécution pour cette procédure sont octroyées par défaut aux membres du rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
- **A. Modification de la description d’un profil**  
+ **A. Modification de la description d'un profil**  
   
- L’exemple suivant modifie la description pour le profil nommé `AdventureWorks Administrator` dans le **msdb** base de données.  
+ L’exemple suivant modifie la description du profil nommé `AdventureWorks Administrator` dans la base de données **msdb** .  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_profile_sp  
@@ -68,7 +68,7 @@ EXECUTE msdb.dbo.sysmail_update_profile_sp
     ,@description = 'Administrative mail profile.';  
 ```  
   
- **B. Modification du nom et la description d’un profil**  
+ **B. Modification du nom et de la description d'un profil**  
   
  L'exemple suivant modifie le nom et la description du profil à l'aide de l'ID de profil `750`.  
   
@@ -81,8 +81,8 @@ EXECUTE msdb.dbo.sysmail_update_profile_sp
   
 ## <a name="see-also"></a>Voir aussi  
  [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)   
- [Objets de Configuration de messagerie de base de données](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Créer un compte de messagerie de base de données](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Procédures stockées de messagerie de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Objets de configuration Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Créer un compte Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Database Mail des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

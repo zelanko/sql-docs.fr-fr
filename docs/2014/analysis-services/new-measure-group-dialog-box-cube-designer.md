@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Nouveau groupe de mesures (Concepteur de Cube) | Microsoft Docs
+title: Boîte de dialogue Nouveau groupe de mesures (Concepteur de cube) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 760a02da5fd98e558c6463d428d5018ccf65a5fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072267"
 ---
 # <a name="new-measure-group-dialog-box-cube-designer"></a>Boîte de dialogue Nouveau groupe de mesures (Concepteur de cube)
@@ -29,11 +29,11 @@ ms.locfileid: "66072267"
 -   cliquant avec le bouton droit sur le nom d’un groupe de mesures ou d’une mesure dans le volet **Mesures** de l’onglet **Structure du cube** du Concepteur de cube et en sélectionnant **Nouveau groupe de mesures** dans le menu contextuel.  
   
 ## <a name="options"></a>Options  
- **Sélectionnez une table dans la vue de source de données**  
+ **Sélectionner une table à partir de la vue de source de données**  
  Sélectionnez la table de faits du nouveau groupe de mesures. Vous ne pouvez pas utiliser plusieurs fois les tables comme tables de faits dans un même cube.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Structure de cube &#40;Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Structure de cube &#40;concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Analysis Services les concepteurs et les boîtes de dialogue &#40;les données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

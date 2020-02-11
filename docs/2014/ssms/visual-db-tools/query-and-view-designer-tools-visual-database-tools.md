@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 639e6b7640f3463bfe100345d044437d619a5546
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63459997"
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>Outils du concepteur de requêtes et de vues (Visual Database Tools)
@@ -48,8 +48,8 @@ ms.locfileid: "63459997"
  Pour masquer ou afficher un volet, cliquez avec le bouton droit sur la surface de design, pointez sur **Volet**, puis cliquez sur le nom du volet. Si le Concepteur de requêtes et de vues est ouvert en mode Concepteur de requêtes, le volet **Résultats** n’est pas disponible.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concevoir des requêtes et des vues des rubriques de procédures &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [Ouvrez le Concepteur de requêtes et vue &#40;Visual Database Tools&#41;](open-the-query-and-view-designer-visual-database-tools.md)   
+ [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Ouvrez le concepteur de requêtes et de vues &#40;Visual Database Tools&#41;](open-the-query-and-view-designer-visual-database-tools.md)   
  [Éditeur SQL &#40;Visual Database Tools&#41;](sql-editor-visual-database-tools.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Data Source View Assistant F1 (Analysis Services) | Microsoft Docs
+title: Aide (F1) de l’Assistant vue de source de données (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01074111cd4944f9b74137dd371e00343e37f15b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082507"
 ---
 # <a name="data-source-view-wizard-f1-help-analysis-services"></a>Aide (F1) de l'Assistant Vue de source de données (Analysis Services)
   Utilisez l'Assistant Vue de source de données pour créer une vue de source de données à utiliser dans les projets Business Intelligence suivants dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]:  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Project  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Projet  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Project  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Projet  
   
 -   Projet de modèle de rapport  
   
@@ -38,19 +38,19 @@ ms.locfileid: "66082507"
   
 -   attribution d'un nom à la vue de source de données et enregistrement de celle-ci.  
   
- Après avoir créé une vue de source de données, vous pouvez utiliser le Concepteur de vue de source de données pour modifier les propriétés de la vue dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Pour plus d’informations sur le Concepteur de vue de source de données, consultez [Concepteur de vue de source de données &#40;Analysis Services - Données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
+ Après avoir créé une vue de source de données, vous pouvez utiliser le Concepteur de vue de source de données pour modifier les propriétés de la vue dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Pour plus d’informations sur le Concepteur de vue de source de données, consultez [Concepteur de vue de source de données &#40;Analysis Services – Données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Sélectionnez une Source de données &#40;Assistant vue de Source de données&#41; &#40;Analysis Services&#41;](select-a-data-source-data-source-view-wizard-analysis-services.md)  
+-   [Sélectionnez une source de données &#40;Assistant vue de source de données&#41; &#40;Analysis Services&#41;](select-a-data-source-data-source-view-wizard-analysis-services.md)  
   
--   [Correspondance de noms &#40;Assistant vue de Source de données&#41; &#40;Analysis Services&#41;](name-matching-data-source-view-wizard-analysis-services.md)  
+-   [Correspondance de noms &#40;Assistant vue de source de données&#41; &#40;Analysis Services&#41;](name-matching-data-source-view-wizard-analysis-services.md)  
   
--   [Sélectionner des Tables et vues &#40;Assistant vue de Source de données&#41; &#40;Analysis Services&#41;](select-tables-and-views-data-source-view-wizard-analysis-services.md)  
+-   [Sélectionner des tables et des vues &#40;Assistant vue de source de données&#41; &#40;Analysis Services&#41;](select-tables-and-views-data-source-view-wizard-analysis-services.md)  
   
--   [Fin de l’Assistant &#40;Assistant vue de Source de données&#41; &#40;Analysis Services&#41;](completing-the-wizard-data-source-view-wizard-analysis-services.md)  
+-   [Fin de l’Assistant &#40;de l’Assistant vue de source de données&#41; &#40;Analysis Services&#41;](completing-the-wizard-data-source-view-wizard-analysis-services.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Assistants Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [Analysis Services assistants &#40;&#41;de données multidimensionnelles](analysis-services-wizards-multidimensional-data.md)  
   
   

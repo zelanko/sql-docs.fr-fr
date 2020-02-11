@@ -11,23 +11,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57a7a9597be4b7a662fddd9550fdf341be44f922
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074791"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Membres calculés dans les sous-sélections et les sous-cubes
   Dans les versions précédentes, les membres calculés n'étaient pas autorisés dans les sous-sélections ou les sous-cubes. Toutefois, à partir de SQL Server 2008, ils sont autorisés et activés par une propriété de connexion. De plus, un nouveau comportement pour les membres calculés, dans les sous-sélections et les sous-cubes, a été introduit dans SQL Server 2008 R2.  
   
 ## <a name="calculated-members-in-subselects-and-subcubes"></a>Membres calculés dans les sous-sélections et les sous-cubes  
- Le `SubQueries` propriété de chaîne de connexion dans <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> ou `DBPROPMSMDSUBQUERIES` propriété dans [propriétés XMLA prises en charge &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) définit le comportement ou l’autorisation des membres calculés ou calculés définit les sous-sélections ou les sous-cubes. Dans le cadre de ce document, sauf indication contraire, la sous-sélection fait référence aux sous-sélections et aux sous-cubes.  
+ La `SubQueries` propriété de chaîne de <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> connexion dans `DBPROPMSMDSUBQUERIES` ou la propriété dans les [propriétés XMLA prises en charge &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) définit le comportement ou l’allocation des membres calculés ou des jeux calculés sur les sous-sélections ou les sous-cubes. Dans le cadre de ce document, sauf indication contraire, la sous-sélection fait référence aux sous-sélections et aux sous-cubes.  
   
  La propriété SubQueries autorise les valeurs suivantes.  
   
 |||  
 |-|-|  
-|Value|Description|  
+|Valeur|Description|  
 |0|Les membres calculés ne sont pas autorisés dans les sous-sélections ou les sous-cubes.<br /><br /> Une erreur est déclenchée lors de l'évaluation de la sous-sélection ou du sous-cube si un membre calculé est référencé.|  
 |1|Les membres calculés sont autorisés dans les sous-sélections ou les sous-cubes mais aucun membre ascendant n'est introduit dans le sous-espace retourné.|  
 |2|Les membres calculés sont autorisés dans les sous-sélections et les sous-cubes mais aucun membre ascendant n'est introduit dans le sous-espace retourné. Par ailleurs, la granularité mixte est autorisée dans la sélection des membres calculés.|  
@@ -81,7 +81,7 @@ Where [Measures].[Reseller Sales Amount]
 |-|-|-|-|-|-|  
 ||All Periods|CY 2001|CY 2002|CY 2003|CY 2004|  
 |All Geographies|(Null)|(Null)|(Null)|(Null)|(Null)|  
-|United States|(Null)|(Null)|(Null)|(Null)|(Null)|  
+|États-Unis|(Null)|(Null)|(Null)|(Null)|(Null)|  
 |Washington|(Null)|(Null)|(Null)|(Null)|(Null)|  
 |Seattle Metro Agg|2 383 545,69 $|291 248,93 $|763 557,02 $|915 832,36 $|412 907,37 $|  
   
@@ -107,7 +107,7 @@ Where [Measures].[Reseller Sales Amount]
 |-|-|-|-|-|-|  
 ||All Periods|CY 2001|CY 2002|CY 2003|CY 2004|  
 |All Geographies|$235,171.62|$419.46|$4,996.25|$131,788.82|$97,967.09|  
-|United States|$235,171.62|$419.46|$4,996.25|$131,788.82|$97,967.09|  
+|États-Unis|$235,171.62|$419.46|$4,996.25|$131,788.82|$97,967.09|  
 |Oregon|$30,968.25|$419.46|$4,996.25|$17,442.97|$8,109.56|  
 |Portland|$30,968.25|$419.46|$4,996.25|$17,442.97|$8,109.56|  
 |97205|$30,968.25|$419.46|$4,996.25|$17,442.97|$8,109.56|  
@@ -123,7 +123,7 @@ Where [Measures].[Reseller Sales Amount]
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
- [Instructions de sous-sélection dans les requêtes](subselects-in-queries.md)   
- [Propriétés XMLA prises en charge &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
+ [Sous-sélections dans les requêtes](subselects-in-queries.md)   
+ [Propriétés XMLA prises en charge &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
   
   

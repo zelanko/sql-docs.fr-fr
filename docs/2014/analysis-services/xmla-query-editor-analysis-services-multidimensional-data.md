@@ -1,5 +1,5 @@
 ---
-title: Éditeur de requête XMLA (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Éditeur de requête XMLA (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1939ea9e1de7b0b7858ad09ad26bc3b4fbf008c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065311"
 ---
 # <a name="xmla-query-editor-analysis-services---multidimensional-data"></a>Éditeur de requête XMLA (Analysis Services - Données multidimensionnelles)
@@ -42,28 +42,28 @@ ms.locfileid: "66065311"
   
 |Terme|Définition|  
 |----------|----------------|  
-|**Se connecter**|Ouvre la boîte de dialogue **Se connecter au serveur** pour établir une connexion à une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
-|**Déconnecter**|Déconnecte l'Éditeur de requête XMLA d'une instance d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
+|**Connexion**|Ouvre la boîte de dialogue **Se connecter au serveur** pour établir une connexion à une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
+|**Connect**|Déconnecte l'Éditeur de requête XMLA d'une instance d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
 |**Modifier la connexion**|Ouvre la boîte de dialogue **Se connecter au serveur** pour établir une connexion à une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] différente.|  
 |**Nouvelle requête avec la connexion actuelle**|Ouvre une nouvelle fenêtre d'Éditeur de requête XMLA, avec les informations de connexion issues de la fenêtre active.|  
 |**Bases de données disponibles**|Se connecte à une base de données différente [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sur la même instance.|  
-|**Exécuter**|Exécute le code sélectionné. Si aucun code n'est sélectionné, cette option exécute le code entier dans l'Éditeur de requête XMLA.|  
+|**Effectue**|Exécute le code sélectionné. Si aucun code n'est sélectionné, cette option exécute le code entier dans l'Éditeur de requête XMLA.|  
 |**Analyser**|Contrôle la syntaxe du code sélectionné. Si aucun code n'est sélectionné, cette option vérifie la syntaxe de toute la fenêtre de l'Éditeur de requête XMLA.|  
-|**Annuler l'exécution de la requête**|Envoie une demande d'annulation au serveur. Certaines requêtes ne peuvent pas être annulées immédiatement et doivent attendre une condition d'annulation appropriée. Une fois les requêtes annulées, un certain délai peut exister au cours de l'annulation des transactions.|  
+|**Annuler l’exécution de la requête**|Envoie une demande d'annulation au serveur. Certaines requêtes ne peuvent pas être annulées immédiatement et doivent attendre une condition d'annulation appropriée. Une fois les requêtes annulées, un certain délai peut exister au cours de l'annulation des transactions.|  
   
 ## <a name="xmla-query-editor-window"></a>Fenêtre Éditeur de requête XMLA  
  Les options suivantes sont disponibles dans l'Éditeur de requête XMLA :  
   
 |Terme|Définition|  
 |----------|----------------|  
-|**Fenêtre Éditeur de requête**|Tapez les instructions et les scripts XMLA à exécuter par l'Éditeur de requête XMLA.<br /><br /> Le menu contextuel de l'éditeur de requête contient les options suivantes :<br /><br /> **Couper**: Copie la sélection actuelle vers le Presse-papiers et supprime la sélection de la fenêtre de l'éditeur de requête.<br />**Copier**: Copie la sélection actuelle vers le Presse-papiers.<br />**Coller**: Colle le contenu du Presse-papiers vers la sélection actuelle.<br />**Connecter**: Ouvre la boîte de dialogue **Se connecter au serveur** pour établir une connexion à une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .<br />**Déconnecter**: Déconnecte l'éditeur de requête actuel d'une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .<br />**Déconnecter toutes les requêtes**: Déconnecte tous les éditeurs de requête ouverts.<br />**Modifier la connexion**: Ouvre la boîte de dialogue **Se connecter au serveur** pour établir une connexion à une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] différente.<br />**Ouvrir le serveur dans l’Explorateur d’objets**: Ouvre la boîte de dialogue [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à laquelle l’éditeur de requête actuel est connecté dans l’ **Explorateur d’objets**.<br />**Exécuter**: Exécute le code sélectionné. Si aucun code n'est sélectionné, cette option exécute le code entier dans l'éditeur de requête actuel.<br />**Fenêtre Propriétés**: Affiche la fenêtre **Propriétés** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour la fenêtre de requête active.<br />**Options de requête**: Affiche la boîte de dialogue **Options de requête** .|  
-|**Fenêtre des résultats**|Affiche les résultats d'une instruction ou d'un script XMLA sous forme de texte.|  
-|**Fenêtre de messages**|Affiche des informations sur l'exécution d'une instruction ou d'un script XMLA. Cette fenêtre, par exemple, contient les erreurs détectées lors de l'exécution ou le nombre de cellules extraites après l'exécution.|  
+|**Fenêtre d'éditeur de requête**|Tapez les instructions et les scripts XMLA à exécuter par l'Éditeur de requête XMLA.<br /><br /> Le menu contextuel de l'éditeur de requête contient les options suivantes :<br /><br /> **Couper**: copie la sélection actuelle dans le presse-papiers et supprime la sélection de la fenêtre de l’éditeur de requête.<br />**Copier**: copie la sélection actuelle dans le presse-papiers.<br />**Coller**: colle le contenu du presse-papiers dans la sélection actuelle.<br />**Se connecter**: ouvre la boîte de dialogue **se connecter au serveur** pour établir une connexion [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à une instance.<br />**Déconnecter**: déconnecte l’éditeur de requête actuel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] d’une instance.<br />Déconnecter **toutes les requêtes**: déconnecte tous les éditeurs de requête ouverts.<br />**Modifier la connexion**: ouvre la boîte de dialogue **se connecter au serveur** pour établir une connexion à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] une autre instance.<br />**Ouvrir le serveur dans l’Explorateur d’objets**: ouvre l' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance à laquelle l’éditeur de requête actuel est connecté dans l' **Explorateur d’objets**.<br />**Execute**: exécute le code sélectionné, ou si aucun code n’est sélectionné, exécute l’ensemble du code dans l’éditeur de requête actuel.<br />**Fenêtre Propriétés**: affiche la fenêtre **Propriétés** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour la fenêtre de requête actuelle.<br />**Options de requête**: affiche la boîte de dialogue **options de requête** .|  
+|**Fenêtre de résultats**|Affiche les résultats d'une instruction ou d'un script XMLA sous forme de texte.|  
+|**Fenêtre des messages**|Affiche des informations sur l'exécution d'une instruction ou d'un script XMLA. Cette fenêtre, par exemple, contient les erreurs détectées lors de l'exécution ou le nombre de cellules extraites après l'exécution.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de requête MDX &#40;Analysis Services - données multidimensionnelles&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)   
- [Éditeur de requête DMX &#40;Analysis Services - Exploration de données&#41;](dmx-query-editor-analysis-services-data-mining.md)   
- [Les éditeurs de texte et de requête &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)   
+ [Éditeur de requête MDX &#40;Analysis Services-données multidimensionnelles&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)   
+ [Éditeur de requête DMX &#40;Analysis Services d’exploration de données&#41;](dmx-query-editor-analysis-services-data-mining.md)   
+ [Éditeurs de texte et de requête &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)   
  [Raccourcis clavier dans SQL Server Management Studio](../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

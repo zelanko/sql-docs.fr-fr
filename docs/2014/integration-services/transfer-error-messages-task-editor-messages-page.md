@@ -1,5 +1,5 @@
 ---
-title: Éditeur de tâche de Messages d’erreur (Page Messages) transfert | Microsoft Docs
+title: Éditeur de tâche de transfert de messages d’erreur (page messages) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,21 +15,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f753aaddbd2647b1d8874b0d34db415f75aa99b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055037"
 ---
 # <a name="transfer-error-messages-task-editor-messages-page"></a>Éditeur de tâche de transfert de messages d'erreur (page Messages)
-  Utilisez la page **Messages** de la boîte de dialogue **Éditeur de tâche de transfert de messages d’erreur** pour spécifier les propriétés de copie d’un ou plusieurs messages d’erreur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]définis par l’utilisateur d’une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]à une autre. Pour plus d'informations sur cette tâche, consultez [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md).  
+  Utilisez la page **Messages** de la boîte de dialogue **Éditeur de tâche de transfert de messages d’erreur** pour spécifier les propriétés de copie d’un ou plusieurs messages d’erreur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] définis par l’utilisateur d’une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à une autre. Pour plus d'informations sur cette tâche, consultez [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md).  
   
 ## <a name="options"></a>Options  
- **SourceConnection**  
- Sélectionnez un gestionnaire de connexions SMO dans la liste ou cliquez sur **\<Nouvelle connexion...>** pour créer une connexion au serveur source.  
+ **Abord SourceConnection**  
+ Sélectionnez un gestionnaire de connexions Smo dans la liste ou cliquez sur ** \<nouvelle connexion... >** pour créer une connexion au serveur source.  
   
  **DestinationConnection**  
- Sélectionnez un gestionnaire de connexions SMO dans la liste, ou cliquez sur **\<Nouvelle connexion...>** pour créer une connexion au serveur de destination.  
+ Sélectionnez un gestionnaire de connexions Smo dans la liste ou cliquez sur ** \<nouvelle connexion... >** pour créer une connexion au serveur de destination.  
   
  **IfObjectExists**  
  Déterminez si la tâche doit remplacer les messages d'erreur définis par l'utilisateur existants, ignorer les messages existants ou échouer si des messages d'erreur du même nom existent déjà sur le serveur de destination.  
@@ -39,7 +39,7 @@ ms.locfileid: "66055037"
   
  Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**True**|Copie tous les messages définis par l'utilisateur.|  
 |**False**|Copie uniquement les messages définis par l'utilisateur spécifiés.|  
@@ -59,9 +59,9 @@ ms.locfileid: "66055037"
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tâches Integration Services](control-flow/integration-services-tasks.md)   
- [Éditeur de tâche de transfert de messages d’erreur &#40;page Général&#41;](general-page-of-integration-services-designers-options.md)   
+ [Éditeur de tâche de transfert de messages d’erreur &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
  [Gestionnaire de connexions SMO](connection-manager/smo-connection-manager.md)   
- [Éditeur de tâche de transfert de messages d’erreur &#40;page Général&#41;](general-page-of-integration-services-designers-options.md)   
+ [Éditeur de tâche de transfert de messages d’erreur &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
  [Gestionnaire de connexions SMO](connection-manager/smo-connection-manager.md)  
   
   

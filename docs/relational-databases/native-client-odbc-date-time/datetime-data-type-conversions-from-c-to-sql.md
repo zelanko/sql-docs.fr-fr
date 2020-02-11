@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 07a53f979e721463c0f2cf95df1b79487e471579
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783948"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>Conversions du type de données datetime de C en SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Cette rubrique répertorie les problèmes à prendre en compte lors de la conversion de types C en types de date/heure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Cette rubrique répertorie les problèmes à prendre en compte lors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conversion de types C en types date/heure.  
   
- Les conversions décrites dans le tableau suivant s'appliquent aux conversions effectuées sur le client. Dans les cas où le client spécifie la précision de fraction de seconde pour un paramètre qui diffère de celui défini sur le serveur, la conversion du client peut échouer, mais le serveur retourne une erreur lorsque **SQLExecute** ou **SQLExecuteDirect** est appelé. En particulier, ODBC traite toute troncation des fractions de seconde comme une erreur, tandis que le comportement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est d’arrondir. par exemple, l’arrondi se produit lorsque vous passez de **datetime2 (6)** à **datetime2 (2)** . Les colonnes datetime sont arrondies au 1/300ème de seconde et les secondes des colonnes smalldatetime sont définies avec la valeur zéro (0) par le serveur.  
+ Les conversions décrites dans le tableau suivant s'appliquent aux conversions effectuées sur le client. Dans les cas où le client spécifie la précision de fraction de seconde pour un paramètre qui diffère de celui défini sur le serveur, la conversion du client peut échouer, mais le serveur retourne une erreur lorsque **SQLExecute** ou **SQLExecuteDirect** est appelé. En particulier, ODBC traite toute troncation des fractions de seconde comme une erreur, tandis que le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportement est d’arrondir. par exemple, l’arrondi se produit lorsque vous passez de **datetime2 (6)** à **datetime2 (2)**. Les colonnes datetime sont arrondies au 1/300ème de seconde et les secondes des colonnes smalldatetime sont définies avec la valeur zéro (0) par le serveur.  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
@@ -33,21 +33,21 @@ ms.locfileid: "73783948"
 |SQL_C_DATE|1|-|-|1,6|1,5,6|1,13|1,13|  
 |SQL_C_TIME|-|1|1|1,7|1, 5, 7|1,13|1,13|  
 |SQL_C_SS_TIME2|-|1,3|1,10|1,7|1, 5, 7|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|Néant|Néant|1,10,11|Néant|Néant|Néant|Néant|  
+|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|N/A|N/A|1,10,11|N/A|N/A|N/A|N/A|  
 |SQL_C_TYPE_TIMESTAMP|1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  
 |SQL_C_SS_TIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10|1,10|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|Néant|Néant|Néant|Néant|1,10,11|Néant|Néant|  
-|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9,6|9,5,6|Néant|Néant|  
-|SQL_C_CHAR/SQL_WCHAR (time2)|9|9, 3|9,10|9,7,10|9,5,7,10|Néant|Néant|  
-|SQL_C_CHAR/SQL_WCHAR (datetime)|9,2|9, 3, 4|9,4,10|9,10|9,5,10|Néant|Néant|  
-|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9,2,8|9, 3, 4, 8|9,4,8,10|9,8,10|9,10|Néant|Néant|  
-|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|Néant|Néant|Néant|Néant|Néant|Néant|  
-|SQL_C_BINARY(SQL_TIME_STRUCT)|Néant|Néant|Néant|Néant|Néant|Néant|Néant|  
-|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|Néant|Néant|Néant|Néant|Néant|Néant|Néant|  
+|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|N/A|N/A|N/A|N/A|1,10,11|N/A|N/A|  
+|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9,6|9,5,6|N/A|N/A|  
+|SQL_C_CHAR/SQL_WCHAR (time2)|9|9, 3|9,10|9,7,10|9,5,7,10|N/A|N/A|  
+|SQL_C_CHAR/SQL_WCHAR (datetime)|9,2|9, 3, 4|9,4,10|9,10|9,5,10|N/A|N/A|  
+|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9,2,8|9, 3, 4, 8|9,4,8,10|9,8,10|9,10|N/A|N/A|  
+|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|N/A|N/A|N/A|N/A|N/A|N/A|  
+|SQL_C_BINARY(SQL_TIME_STRUCT)|N/A|N/A|N/A|N/A|N/A|N/A|N/A|  
+|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|N/A|N/A|N/A|N/A|N/A|N/A|N/A|  
   
 ## <a name="key-to-symbols"></a>Liste des symboles  
   
--   **-** : aucune conversion n’est prise en charge. Un enregistrement de diagnostic est généré avec SQLSTATE 07006 et le message « Violation de l'attribut de type de données restreint ».  
+-   **-**: Aucune conversion n’est prise en charge. Un enregistrement de diagnostic est généré avec SQLSTATE 07006 et le message « Violation de l'attribut de type de données restreint ».  
   
 -   **1**: si les données fournies ne sont pas valides, un enregistrement de diagnostic est généré avec SQLSTATE 22007 et le message « format DateTime non valide ».  
   
@@ -90,9 +90,9 @@ ms.locfileid: "73783948"
   
      Une taille de colonne égale à zéro implique une taille illimitée pour les types de caractères de longueur variable en ODBC (9 chiffres, à moins que la règle des 3 chiffres pour SQL_C_TYPE_TIMESTAMP ne s'applique). La spécification d'une taille de colonne égale à zéro avec un type de caractère de longueur fixe constitue une erreur.  
   
--   **N/A**: les [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] existantes et les comportements antérieurs sont conservés.  
+-   Non **applicable : le**comportement [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] existant et antérieur est conservé.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Améliorations &#40;de la date et de l’heure ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Améliorations de la date et de l’heure &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

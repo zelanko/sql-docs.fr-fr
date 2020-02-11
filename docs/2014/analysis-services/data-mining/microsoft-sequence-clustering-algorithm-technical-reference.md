@@ -1,5 +1,5 @@
 ---
-title: Microsoft Sequence Clustering des références techniques relatives aux algorithmes | Microsoft Docs
+title: Informations techniques de référence sur l’algorithme Microsoft Sequence Clustering | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6ae48fe00fb9c24e2d6d0ddde61302cff3ceba0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083836"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MSC (Microsoft Sequence Clustering)
@@ -46,9 +46,9 @@ ms.locfileid: "66083836"
 ### <a name="feature-selection-in-a-sequence-clustering-model"></a>Sélection des fonctionnalités dans un modèle Sequence Clustering  
  La sélection des fonctionnalités n'est pas appelée lors de la génération de séquences. Toutefois, elle s'applique à l'étape de clustering.  
   
-|Type du modèle|Méthode de sélection des fonctionnalités|Commentaires|  
+|Type de modèle|Méthode de sélection des fonctionnalités|Commentaires|  
 |----------------|------------------------------|--------------|  
-|Sequence Clustering|Non utilisée|La sélection des fonctionnalités n'est pas appelée. Toutefois, vous pouvez contrôler le comportement de l'algorithme en définissant la valeur des paramètres MINIMUM_SUPPORT et MNIMUM_PROBABILITY.|  
+|Sequence Clustering|Non utilisé|La sélection des fonctionnalités n'est pas appelée. Toutefois, vous pouvez contrôler le comportement de l'algorithme en définissant la valeur des paramètres MINIMUM_SUPPORT et MNIMUM_PROBABILITY.|  
 |Clustering|Score d'intérêt et de pertinence|Bien que l'algorithme de clustering puisse utiliser des algorithmes discrets ou discrétisés, le score de chaque attribut est calculé en tant que distance et est continu. Par conséquent, le score d'intérêt et de pertinence est utilisé.|  
   
  Pour plus d'informations, consultez [Feature Selection](../../sql-server/install/feature-selection.md).  
@@ -81,7 +81,7 @@ ms.locfileid: "66083836"
  CLUSTER_COUNT  
  Spécifie le nombre approximatif de clusters que l'algorithme doit générer. S'il est impossible de générer ce nombre approximatif de clusters à partir des données, l'algorithme génère autant de clusters que possible. Si le paramètre CLUSTER_COUNT est défini sur 0, l'algorithme utilise l'heuristique pour déterminer de manière optimale le nombre de clusters à générer.  
   
- La valeur par défaut est 10.  
+ La valeur par défaut est de 10.  
   
 > [!NOTE]  
 >  Lorsqu'un nombre différent de zéro est spécifié, l'algorithme cherche à trouver le nombre spécifié, mais peut  trouver un nombre plus ou moins élevé.  
@@ -89,7 +89,7 @@ ms.locfileid: "66083836"
  MINIMUM_SUPPORT  
  Spécifie le nombre minimal de cas requis pour la prise en charge un attribut en vue de créer un cluster.  
   
- La valeur par défaut est 10.  
+ La valeur par défaut est de 10.  
   
  MAXIMUM_SEQUENCE_STATES  
  Spécifie le nombre maximal d'états qu'une séquence peut posséder.  
@@ -99,9 +99,9 @@ ms.locfileid: "66083836"
  La valeur par défaut est 64.  
   
  MAXIMUM_STATES  
- Spécifie le nombre maximal d'états pour un attribut non-séquence que l'algorithme prend en charge. Si le nombre d’états pour un attribut non-séquence est supérieur au nombre maximal d’états, l’algorithme utilise les États les plus utilisés de l’attribut et traite les autres États `Missing`.  
+ Spécifie le nombre maximal d'états pour un attribut non-séquence que l'algorithme prend en charge. Si le nombre d’États pour un attribut non-séquence est supérieur au nombre maximal d’États, l’algorithme utilise les États les plus populaires de l’attribut et traite les autres `Missing`États comme.  
   
- La valeur par défaut est 100.  
+ La valeur par défaut est 100.  
   
 ### <a name="modeling-flags"></a>Indicateurs de modélisation  
  Les indicateurs de modélisation suivants sont pris en charge pour une utilisation avec l'algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering.  
@@ -118,7 +118,7 @@ ms.locfileid: "66083836"
   
  Pour plus d’informations sur l’utilisation de valeurs manquantes dans les modèles d’exploration de données et pour savoir comment les valeurs manquantes affectent les scores de probabilité, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](missing-values-analysis-services-data-mining.md).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  La table de cas doit avoir une colonne d'ID de cas. La table de cas peut éventuellement contenir d'autres colonnes qui stockent des attributs  propos du cas.  
   
  L'algorithme MSC (Microsoft Sequence Clustering) requiert des informations de séquence, stockées en tant que table imbriquée. La table imbriquée doit avoir une seule colonne Key Sequence. Une colonne `Key Sequence` peut contenir tout type de données pouvant être triées, y compris les types de données de chaîne, mais la colonne doit contenir des valeurs uniques pour chaque cas. De plus, avant de traiter le modèle, vous devez vérifier que la table de cas et la table imbriquée sont toutes les deux triées par ordre croissant sur la clé qui associe les tables.  
@@ -127,24 +127,24 @@ ms.locfileid: "66083836"
 >  Si vous créez un modèle qui utilise l'algorithme Microsost Sequence mais n'utilise pas de colonne de séquence, le modèle résultant ne contient pas de séquences, mais groupe simplement des cas selon d'autres attributs inclus dans le modèle.  
   
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
- L'algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering prend en charge les colonnes d'entrée et les colonnes prédictibles répertoriées dans le tableau suivant. Pour plus d’informations sur la signification des types de contenu utilisés dans un modèle d’exploration de données, consultez [Types de contenu &#40;exploration de données&#41;](content-types-data-mining.md).  
+ L'algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering prend en charge les colonnes d'entrée et les colonnes prédictibles répertoriées dans le tableau suivant. Pour plus d’informations sur la signification des types de contenu en cas d’utilisation dans un modèle d’exploration de données, consultez [Types de contenu &#40;Exploration de données&#41;](content-types-data-mining.md).  
   
-|colonne|Types de contenu|  
+|Colonne|Types de contenu|  
 |------------|-------------------|  
 |Attribut d'entrée|Continu, cyclique, discret, discrétisé, clé, séquence de clés, table et trié|  
 |Attribut prédictible|Continu, cyclique, discret, discrétisé, table et trié|  
   
 ## <a name="remarks"></a>Notes  
   
--   Utilisez la fonction [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) pour la prédiction des séquences. Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prennent en charge la prédiction de séquence, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+-   Utilisez la fonction [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) pour la prédiction des séquences. Pour plus d’informations sur les éditions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de qui prennent en charge la prédiction de séquence, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 -   L’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering ne prend pas en charge l’utilisation du langage PMML (Predictive Model Markup Language) pour créer des modèles d’exploration de données.  
   
 -   L'algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering prend en charge l'extraction, l'utilisation de modèles d'exploration de données OLAP et l'utilisation de dimensions d'exploration de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
- [Sequence Clustering Model Query Examples](clustering-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles Sequence Clustering &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [Algorithme Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm.md)   
+ [Exemples de requêtes de modèle Sequence Clustering](clustering-model-query-examples.md)   
+ [Contenu du modèle d’exploration de données pour les modèles Sequence Clustering &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

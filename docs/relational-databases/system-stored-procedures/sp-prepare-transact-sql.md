@@ -19,18 +19,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: acadb311dac786d9f1c5dbcc86fac9b2609fb959
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085805"
 ---
-# <a name="spprepare-transact-sql"></a>sp_prepare (Transact SQL)
+# <a name="sp_prepare-transact-sql"></a>sp_prepare (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-Prépare une paramétrable [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction et retourne une instruction *gérer* pour l’exécution.  `sp_prepare` est appelé en spécifiant ID = 11 dans un paquet data stream (TDS).  
+Prépare une [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction paramétrable et retourne un *handle* d’instruction pour l’exécution.  `sp_prepare` est appelé en spécifiant ID = 11 dans un paquet TDS (Tabular Data Stream).  
   
- ![Icône Lien de l’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien d’article](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,19 +39,19 @@ sp_prepare handle OUTPUT, params, stmt, options
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *handle*  
- Généré par SQL Server *handle préparé* identificateur. *gérer* est un paramètre obligatoire avec une **int** valeur de retour.  
+ *traitée*  
+ Est un identificateur de *handle préparé* généré par SQL Server. *handle* est un paramètre obligatoire avec une valeur de retour **int** .  
   
  *params*  
- Identifie des instructions paramétrables. Le *params* définition de variables est substituée aux marqueurs de paramètre dans l’instruction. *params* est un paramètre obligatoire qui demande un **ntext**, **nchar**, ou **nvarchar** valeur d’entrée. Entrez une valeur NULL si l'instruction n'est pas paramétrable.  
+ Identifie des instructions paramétrables. La définition *params* des variables est substituée aux marqueurs de paramètres dans l’instruction. *params* est un paramètre obligatoire qui requiert une valeur d’entrée **ntext**, **nchar**ou **nvarchar** . Entrez une valeur NULL si l'instruction n'est pas paramétrable.  
   
- *stmt*  
- Définit le jeu de résultats de curseur. Le *stmt* paramètre est obligatoire et demande pour un **ntext**, **nchar**, ou **nvarchar** valeur d’entrée.  
+ *Insert*  
+ Définit le jeu de résultats de curseur. Le paramètre *stmt* est requis et appelle une valeur d’entrée **ntext**, **nchar**ou **nvarchar** .  
   
- *options*  
- Paramètre optionnel qui retourne une description des colonnes du jeu de résultats du curseur. *options* requiert la valeur d’entrée int suivante :  
+ *Options*  
+ Paramètre optionnel qui retourne une description des colonnes du jeu de résultats du curseur. les *options* requièrent la valeur d’entrée int suivante :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
@@ -67,7 +67,7 @@ EXEC sp_execute @P1, N'tempdb', N'ONLINE';
 EXEC sp_unprepare @P1;  
 ```
 
-B. L’exemple suivant prépare une instruction dans la base de données AdventureWorks2016 et exécute ensuite à l’aide de la poignée.
+B. L’exemple suivant prépare une instruction dans la base de données AdventureWorks2016, puis l’exécute par la suite à l’aide du descripteur.
 
 ```sql
 -- Prepare query
@@ -93,7 +93,7 @@ GO
 (1 row affected)
 ```
 
-Puis l’application exécute la requête deux fois à l’aide de la valeur du handle 1, avant de supprimer le plan préparé.
+L’application exécute ensuite la requête à deux reprises à l’aide de la valeur de handle 1, avant d’ignorer le plan préparé.
 
 ```sql
 EXEC sp_execute 1, 49879;  

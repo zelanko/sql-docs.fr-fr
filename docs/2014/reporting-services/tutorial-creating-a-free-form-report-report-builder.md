@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriel : création d’un rapport au format libre (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : création d’un rapport au format libre (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 332c67f47c8096cbeb5a94c4e2a288cd532038cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098949"
 ---
-# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutoriel : Création d’un rapport de forme libre (Générateur de rapports)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Didacticiel : création d'un rapport au format libre (Générateur de rapports)
   Ce didacticiel vous apprend à créer un rapport de forme libre SSRS qui ressemble à une lettre type. Vous pouvez organiser les éléments du rapport pour créer un formulaire avec des zones de texte, des images et autres régions de données.  
   
  Le rapport que vous créez dans ce didacticiel est basé sur des exemples de données de vente incluses dans le didacticiel. Le rapport regroupe les informations par secteur de vente et affiche le nom du directeur des ventes pour le secteur, ainsi que des informations détaillées et de synthèse sur les ventes. Vous allez utiliser la région de données de liste comme base du rapport de forme libre, puis ajouterez un panneau décoratif avec une image, du texte statique avec des données insérées, un tableau pour afficher les informations détaillées, et éventuellement, un graphique à secteurs et un histogramme pour afficher les informations de synthèse.  
   
-##  <a name="BackToTop"></a> Ce que vous allez apprendre  
- Dans ce didacticiel, vous apprendrez à effectuer les tâches suivantes :  
+##  <a name="BackToTop"></a>Ce que vous allez apprendre  
+ Ce didacticiel vous apprendra à effectuer les opérations suivantes :  
   
--   [Créer un rapport vide, une Source de données et un Dataset](#BlankReport)  
+-   [Créer un rapport, une source de données et un dataset vides](#BlankReport)  
   
 -   [Ajouter et configurer une liste](#List)  
   
@@ -33,9 +33,9 @@ ms.locfileid: "66098949"
   
 -   [Ajouter du texte de forme libre](#Text)  
   
--   [Ajouter une Table pour afficher les détails](#Table)  
+-   [Ajouter un tableau pour afficher les détails](#Table)  
   
--   [Données de format](#Format)  
+-   [Mettre en forme les données](#Format)  
   
 -   [Enregistrer le rapport](#Save)  
   
@@ -45,12 +45,12 @@ ms.locfileid: "66098949"
   
 -   [Ajouter la visualisation des données de synthèse](#Visualization)  
   
- Durée estimée pour effectuer ce didacticiel : 20 minutes.  
+ Durée estimée pour effectuer le didacticiel : 20 minutes.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="BlankReport"></a> 1. Créer un rapport, une source de données et un dataset vides  
+##  <a name="BlankReport"></a>1. créer un rapport vide, une source de données et un jeu de données  
   
 > [!NOTE]  
 >  Dans ce didacticiel, la requête contient les valeurs de données, afin que le rapport n'ait pas besoin d'une source de données externe. L'utilisation de ce type de données internes est très utile à des fins pédagogiques, mais l'approche rend la requête longue. .  
@@ -68,25 +68,25 @@ ms.locfileid: "66098949"
   
 #### <a name="to-create-a-new-data-source"></a>Pour créer une source de données  
   
-1.  Dans le volet des données de rapport, cliquez sur **Nouveau**, puis sur **Source de données**.  
+1.  Dans le volet données du rapport, cliquez sur **nouveau**, puis sur **source de données**.  
   
-2.  Dans le `Name` , tapez : **ListDataSource**  
+2.  Dans la `Name` zone, tapez : **ListDataSource**  
   
 3.  Cliquez sur **Utiliser une connexion incorporée dans mon rapport**.  
   
-4.  Vérifiez que le type de connexion est bien Microsoft SQL Server puis, dans la zone **Chaîne de connexion** , tapez : **Source de données = \<nom_serveur>**  
+4.  Vérifiez que le type de connexion est Microsoft SQL Server, puis, dans la zone **Chaîne de connexion**, tapez **Data Source = \<nom_serveur>**  
   
-     \<servername >, par exemple rapport001, spécifie un ordinateur sur lequel une instance du moteur de base de données SQL Server est installée. Dans la mesure où les données du rapport ne sont pas extraites d'une base de données SQL Server, vous n'avez pas besoin d'inclure le nom d'une base de données. La base de données par défaut sur le serveur spécifié est utilisée pour analyser la requête.  
+     \<ServerName>, par exemple Rapport001, spécifie un ordinateur sur lequel une instance du SQL Server Moteur de base de données est installée. Dans la mesure où les données du rapport ne sont pas extraites d'une base de données SQL Server, vous n'avez pas besoin d'inclure le nom d'une base de données. La base de données par défaut sur le serveur spécifié est utilisée pour analyser la requête.  
   
 5.  Cliquez sur **Informations d'identification**, puis entrez les informations d'identification requises pour se connecter à l'instance du moteur de base de données SQL Server.  
   
 6.  Cliquez sur **OK**.  
   
-#### <a name="to-create-a-new-dataset"></a>Pour créer un dataset  
+#### <a name="to-create-a-new-dataset"></a>Création d’un jeu de données  
   
-1.  Dans le volet des données de rapport, cliquez sur **Nouveau**, puis sur **Dataset**.  
+1.  Dans le volet données du rapport, cliquez sur **nouveau**, puis sur **DataSet**.  
   
-2.  Dans le `Name` , tapez : **ListDataset.**  
+2.  Dans la `Name` zone, tapez : **ListDataset.**  
   
 3.  Cliquez sur **Utiliser un dataset incorporé dans mon rapport**, puis vérifiez que la source de données est **ListDataSource**.  
   
@@ -137,10 +137,11 @@ ms.locfileid: "66098949"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="List"></a> 2. Ajouter et configurer une liste  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit trois modèles de région de données : tableau, matrice et liste. Ces modèles sont tous basés sur une région de données de tableau matriciel.  
+##  <a name="List"></a>2. Ajouter et configurer une liste  
+ 
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit trois modèles de région de données : tableau, matrice et liste. Ces modèles sont tous basés sur une région de données de tableau matriciel.  
   
- Dans ce didacticiel, vous allez utiliser une liste pour afficher les informations de ventes pour les secteurs de vente dans un rapport ayant l'apparence d'un bulletin d'informations. Les informations sont regroupées par secteur. Vous allez ajouter un nouveau groupe de lignes qui regroupe les données par secteur, puis supprimerez le groupe de lignes Détails intégré. Le modèle de liste est idéal pour la création de rapports de forme libre. Pour plus d’informations, consultez [répertorie &#40;Générateur de rapports et SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+ Dans ce didacticiel, vous allez utiliser une liste pour afficher les informations de ventes pour les secteurs de vente dans un rapport ayant l'apparence d'un bulletin d'informations. Les informations sont regroupées par secteur. Vous allez ajouter un nouveau groupe de lignes qui regroupe les données par secteur, puis vous supprimerez le groupe de lignes Détails intégré. Le modèle de liste est idéal pour la création de rapports de forme libre. Pour plus d’informations, consultez la page [répertorie &#40;générateur de rapports et les&#41;SSRS ](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  Ce rapport utilise le format de papier Letter (8,5 X 11) et des marges de 1 pouce. Une page de rapport de plus de 9 pouces de haut ou de plus de 6,5 pouces de large peut générer des pages vierges.  
@@ -159,7 +160,7 @@ ms.locfileid: "66098949"
   
 5.  Cliquez avec le bouton droit dans la liste, puis cliquez sur **Propriétés du rectangle**.  
   
-     ![Commande de propriétés de rectangle](../../2014/tutorials/media/tutorial-rectanglepropertiescommand.png "commande des propriétés du Rectangle")  
+     ![Commande des propriétés de rectangle](../../2014/tutorials/media/tutorial-rectanglepropertiescommand.png "Commande des propriétés de rectangle")  
   
 6.  Sous l'onglet **Général** , activez la case à cocher **Insérer un saut de page après** .  
   
@@ -169,7 +170,7 @@ ms.locfileid: "66098949"
   
 1.  Dans le volet Groupes de lignes, cliquez avec le bouton droit sur le groupe Détails, pointez sur **Ajouter un groupe**, puis cliquez sur **Groupe parent**.  
   
-     ![Commande de groupe parent](../../2014/tutorials/media/tutorial-parentgroupcommand.png "commande du groupe Parent")  
+     ![Commande du groupe parent](../../2014/tutorials/media/tutorial-parentgroupcommand.png "Commande du groupe parent")  
   
 2.  Dans la liste déroulante, sélectionnez `[Territory].`  
   
@@ -179,26 +180,26 @@ ms.locfileid: "66098949"
   
 4.  Cliquez avec le bouton droit sur la colonne Territory dans la liste, puis cliquez sur **Supprimer les colonnes**.  
   
-     ![Supprimer des colonnes](../../2014/tutorials/media/tutorial-deletecolumnscommand.png "supprimer des colonnes")  
+     ![Supprimer les colonnes](../../2014/tutorials/media/tutorial-deletecolumnscommand.png "Supprimer les colonnes")  
   
 5.  Sélectionnez **Supprimer les colonnes uniquement**.  
   
-     ![Supprimer la boîte de dialogue colonnes](../../2014/tutorials/media/tutorial-deletecolumnsdialog.png "boîte de dialogue Supprimer les colonnes")  
+     ![Boîte de dialogue Supprimer les colonnes](../../2014/tutorials/media/tutorial-deletecolumnsdialog.png "boîte de dialogue Supprimer les colonnes")  
   
 6.  Dans le volet Groupes de lignes, cliquez avec le bouton droit sur le groupe **Détails** , puis cliquez sur **Supprimer le groupe**.  
   
-     ![Supprimer le groupe de détails](../../2014/tutorials/media/tutorial-deletedetailsgroup.png "supprimer le groupe de détails")  
+     ![Supprimer le groupe des détails](../../2014/tutorials/media/tutorial-deletedetailsgroup.png "Supprimer le groupe des détails")  
   
-7.  Cliquez sur **Supprimer le groupe uniquement**.  
+7.  Cliquez sur **supprimer le groupe uniquement**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Graphics"></a> 3. Ajouter des graphiques  
+##  <a name="Graphics"></a>3. ajouter des graphiques  
  L'un des avantages de l'utilisation d'une région de données de liste est que vous pouvez ajouter des éléments de rapport comme des rectangles et des zones de texte n'importe où, sans être limité par une disposition tabulaire. Vous allez améliorer l'apparence du rapport en ajoutant un graphique (un rectangle rempli avec une couleur).  
   
 #### <a name="to-add-graphic-elements-to-the-report"></a>Pour ajouter des éléments graphiques au rapport  
   
-1.  Sur le **insérer** onglet du ruban, cliquez sur **Rectangle**, puis faites glisser un rectangle dans le coin supérieur gauche de la liste. Définissez la taille du rectangle sur 7 pouces de haut et 1 pouce de large.  
+1.  Sous l’onglet **Insérer** du ruban, cliquez sur **rectangle**, puis faites glisser un rectangle dans l’angle supérieur gauche de la liste. Définissez la taille du rectangle sur 7 pouces de haut et 1 pouce de large.  
   
 2.  Cliquez avec le bouton droit sur le rectangle, puis cliquez sur **Propriétés du rectangle**.  
   
@@ -206,7 +207,7 @@ ms.locfileid: "66098949"
   
 4.  Dans la liste déroulante **Couleur de remplissage** , cliquez sur **Couleurs supplémentaires**, puis sélectionnez la couleur **Gris foncé** .  
   
-     ![Sélectionnez la couleur de remplissage](../../2014/tutorials/media/tutorial-selectfillcolorwithnumbers.png "couleur de remplissage de sélection")  
+     ![Sélectionner la couleur de remplissage](../../2014/tutorials/media/tutorial-selectfillcolorwithnumbers.png "Sélectionner la couleur de remplissage")  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -214,25 +215,25 @@ ms.locfileid: "66098949"
   
  Le côté gauche du rapport a maintenant un graphique vertical formé d'un rectangle gris foncé.  
   
-##  <a name="Text"></a> 4. Ajouter du texte de forme libre  
+##  <a name="Text"></a>4. Ajouter un texte de forme libre  
  Une zone de texte contient du texte statique qui est répété sur chaque page de rapport, ainsi que des champs de données.  
   
-#### <a name="to-add-text-to-the-report"></a>Pour ajouter du texte au rapport.  
+#### <a name="to-add-text-to-the-report"></a>Pour ajouter du texte au rapport  
   
 1.  Cliquez sur **Conception** pour repasser en mode Conception.  
   
 2.  Sous l'onglet **Insertion** du ruban, cliquez sur **Zone de texte**, puis faites glisser une zone de texte en haut à gauche de la liste, à l'intérieur du rectangle que vous avez ajouté précédemment. Définissez la taille de la zone de texte sur environ 3 pouces de haut et 5 pouces de large.  
   
-3.  Placez le curseur dans la partie supérieure de la zone de texte et tapez : **Newsletter for**.  
+3.  Placez le curseur dans la partie supérieure de la zone de texte, puis tapez **Bulletin d'informations pour** .  
   
-     ![Ajouter un texte de titre au bulletin d’informations](../../2014/tutorials/media/tutorial-newsletterfor.png "Ajouter un texte de titre au bulletin d’informations")  
+     ![Ajouter un texte de titre au bulletin d'informations](../../2014/tutorials/media/tutorial-newsletterfor.png "Ajouter un texte de titre au bulletin d'informations")  
   
     > [!NOTE]  
     >  Veillez à inclure l'espace supplémentaire après « pour ». Cet espace sépare le texte du champ que vous allez ajouter à l'étape suivante.  
   
 4.  Faites glisser le champ Territory vers la zone de texte et placez-le après le texte que vous avez tapé à l'étape 3.  
   
-     ![Ajouter un champ territoriale](../../2014/tutorials/media/tutorial-addterritorialfield.png "champ Ajouter territoriale")  
+     ![Ajouter le champ du secteur de vente](../../2014/tutorials/media/tutorial-addterritorialfield.png "Ajouter le champ du secteur de vente")  
   
 5.  Sélectionnez tout le texte, cliquez avec le bouton droit, puis cliquez sur **Propriétés du texte**.  
   
@@ -240,18 +241,18 @@ ms.locfileid: "66098949"
   
 7.  Dans la liste **Police** , sélectionnez **Times New Roman**; dans **Taille** , sélectionnez **20 pt**; dans **Couleur** , sélectionnez **Rouge**.  
   
-     ![Propriétés de texte](../../2014/tutorials/media/tutorial-textpropertieswithnumbers.png "propriétés de texte")  
+     ![Propriétés du texte](../../2014/tutorials/media/tutorial-textpropertieswithnumbers.png "Propriétés du texte")  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. Placez le curseur sous le texte que vous avez tapé dans l’étape 3 et tapez : **Hello** .  
+9. Placez le curseur sous le texte que vous avez tapé à l'étape 3 et tapez **Bonjour** .  
   
     > [!NOTE]  
     >  Veillez à inclure l'espace supplémentaire après « Bonjour ». Cet espace sépare le texte du champ que vous allez ajouter à l'étape suivante.  
   
 10. Faites glisser le champ FullName vers la zone de texte et placez-le après le texte que vous avez tapé à l'étape 9, puis tape une virgule (,).  
   
-     ![Ajouter un champ nom complet](../../2014/tutorials/media/tutorial-addfullnamefield.png "champ Ajouter le nom complet")  
+     ![Ajouter le champ du nom complet](../../2014/tutorials/media/tutorial-addfullnamefield.png "Ajouter le champ du nom complet")  
   
 11. Sélectionnez le texte que vous avez ajouté aux étapes 9 et 10, cliquez avec le bouton droit, puis cliquez sur **Propriétés du texte**.  
   
@@ -276,16 +277,16 @@ ms.locfileid: "66098949"
   
 19. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     ![Ajouter du texte du bulletin d’informations](../../2014/tutorials/media/tutorial-newslettertext.png "ajouter du texte du bulletin d’informations")  
+     ![Ajouter le texte du bulletin d'informations](../../2014/tutorials/media/tutorial-newslettertext.png "Ajouter le texte du bulletin d'informations")  
   
-20. Placez le curseur sous le texte que vous avez collé à étape 15 et tapez : **Félicitations pour votre total de ventes** .  
+20. Placez le curseur sous le texte que vous avez collé à étape 15, puis tapez **Félicitations pour le total de vos ventes,** .  
   
     > [!NOTE]  
     >  Veillez à inclure l'espace supplémentaire après la virgule. Cet espace sépare le texte du champ que vous allez ajouter à l'étape suivante.  
   
 21. Faites glisser le champ Ventes vers la zone de texte, placez-le après le texte que vous avez tapé à l'étape 20, puis tapez un point d'exclamation (!).  
   
-22. Mettez en surbrillance le champ Sales, cliquez sur le champ, puis cliquez sur **Expression**.  
+22. Mettez en surbrillance le champ Sales, cliquez avec le bouton droit sur le champ, puis cliquez sur **expression**.  
   
 23. Dans la zone d'expression, modifiez l'expression pour inclure la fonction Sum comme suit :  
   
@@ -295,7 +296,7 @@ ms.locfileid: "66098949"
   
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     ![Ajouter une expression au champ des ventes](../../2014/tutorials/media/tutorial-addexpressiontosalesfield.png "ajouter une expression au champ des ventes")  
+     ![Ajouter une expression au champ des ventes](../../2014/tutorials/media/tutorial-addexpressiontosalesfield.png "Ajouter une expression au champ des ventes")  
   
 25. Sélectionnez le texte que vous avez ajouté aux étapes 20 à 23, cliquez avec le bouton droit, puis cliquez sur **Propriétés du texte**.  
   
@@ -307,7 +308,7 @@ ms.locfileid: "66098949"
   
 29. Sélectionnez `[Sum(Sales)]` , puis sous l'onglet **Accueil** , dans le groupe **Nombre** , cliquez sur le bouton **Devise** .  
   
-     ![Symbole de devise ajouter](../../2014/tutorials/media/tutorial-addcurrencysymbol.png "symbole ajouter")  
+     ![Ajouter un symbole monétaire](../../2014/tutorials/media/tutorial-addcurrencysymbol.png "Ajouter un symbole monétaire")  
   
 30. Cliquez avec le bouton droit sur la zone de texte contenant le texte « Cliquez pour ajouter un titre », puis cliquez sur **Supprimer**.  
   
@@ -317,9 +318,9 @@ ms.locfileid: "66098949"
   
  Le rapport affiche le texte statique et chaque page du rapport inclut des données relatives à un secteur de vente. Les ventes sont mises en forme en tant que valeurs monétaires.  
   
- ![Version préliminaire de bulletin d’informations](../../2014/tutorials/media/tutorial-newsletters.png "version préliminaire de bulletin d’informations")  
+ ![Aperçu du bulletin d'informations](../../2014/tutorials/media/tutorial-newsletters.png "Aperçu du bulletin d'informations")  
   
-##  <a name="Table"></a> 5. Ajouter un tableau pour afficher les détails des ventes  
+##  <a name="Table"></a>5. Ajouter une table pour afficher les détails des ventes  
  Utilisez l'Assistant Nouveau tableau ou nouvelle matrice pour ajouter un tableau au rapport de forme libre. Après avoir terminé l'Assistant, vous ajouterez manuellement une ligne pour les totaux.  
   
 #### <a name="to-add-a-table"></a>Pour ajouter un tableau  
@@ -328,19 +329,19 @@ ms.locfileid: "66098949"
   
 2.  Dans la page Choisir un dataset, cliquez sur **ListDataset**.  
   
-3.  Cliquer sur **Suivant**.  
+3.  Cliquez sur **Suivant**.  
   
 4.  Dans la page **Organiser les champs** , faites glisser le champ Product de **Champs disponibles** vers **Valeurs**.  
   
 5.  Répétez l'étape 4 pour SalesDate, Quantity et Sales. Placez SalesDate sous Product, Quantity sous SalesDate et Sales sous SalesDate.  
   
-6.  Cliquer sur **Suivant**.  
+6.  Cliquez sur **Suivant**.  
   
 7.  Dans la page **Choisir la disposition** , observez la mise en page de la table.  
   
      Le tableau est très simple. Il comporte cinq colonnes et aucun groupe de lignes ni de colonnes. Dans la mesure où il ne comporte aucun groupe, les options de mise en page relatives aux groupes ne sont pas disponibles. Vous mettrez manuellement à jour le tableau ultérieurement de manière à inclure un total.  
   
-8.  Cliquer sur **Suivant**.  
+8.  Cliquez sur **Suivant**.  
   
 9. Dans la page **Choisir un style** , dans le volet **Styles** , sélectionnez **Ardoise**.  
   
@@ -353,24 +354,24 @@ ms.locfileid: "66098949"
   
 12. Vérifiez que la table est sélectionnée, puis, dans le volet Groupe de lignes, cliquez avec le bouton droit sur Détails, pointez sur **Ajouter un total**, puis cliquez sur **Après**.  
   
-     ![Ajouter le total du rapport](../../2014/tutorials/media/tutorial-addtotal.png "ajouter le total du rapport")  
+     ![Ajouter le total du rapport](../../2014/tutorials/media/tutorial-addtotal.png "Ajouter le total du rapport")  
   
 13. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
  Le rapport affiche un tableau avec les détails des ventes et les totaux.  
   
- ![Total des ventes dans le rapport](../../2014/tutorials/media/tutorial-reportsalestotals.png "totaux des ventes dans le rapport")  
+ ![Total des ventes dans le rapport](../../2014/tutorials/media/tutorial-reportsalestotals.png "Total des ventes dans le rapport")  
   
-##  <a name="Format"></a> 6. Mettre en forme les données  
+##  <a name="Format"></a>6. mettre en forme les données  
  Mettez en forme les données numériques sous forme de valeurs monétaires et les dates sous forme de jour et heure.  
   
 #### <a name="to-format-fields-table"></a>Pour mettre en forme les champs du tableau  
   
-1.  Cliquez sur **Conception** pour basculer en mode Conception.  
+1.  Cliquez sur **conception** pour basculer en mode conception.  
   
 2.  Cliquez sur les cellules du tableau qui contiennent `[Sum(SalesSales)]` et sous l'onglet **Accueil** , dans le groupe **Nombre** , cliquez sur le bouton **Devise** .  
   
-     ![Symbole de devise ajouter à la somme des ventes](../../2014/tutorials/media/tutorial-sumsales-currencysymbol.png "symbole de devise ajouter à la somme des ventes")  
+     ![Ajouter un symbole monétaire à la somme des ventes](../../2014/tutorials/media/tutorial-sumsales-currencysymbol.png "Ajouter un symbole monétaire à la somme des ventes")  
   
 3.  Cliquez sur la cellule qui contient `[SalesDate]` et dans le groupe **Nombre** , dans la liste déroulante, sélectionnez **Date**.  
   
@@ -378,9 +379,9 @@ ms.locfileid: "66098949"
   
  Le rapport affiche maintenant les données mises en forme et est plus facile à lire.  
   
- ![Total des ventes dans le rapport de format](../../2014/tutorials/media/tutorial-reportsalestotals-formatted.png "total des ventes dans le rapport de Format")  
+ ![Mettre en forme le total des ventes dans le rapport](../../2014/tutorials/media/tutorial-reportsalestotals-formatted.png "Mettre en forme le total des ventes dans le rapport")  
   
-##  <a name="Save"></a> 7. Enregistrer le rapport  
+##  <a name="Save"></a>7. enregistrer le rapport  
  Vous pouvez enregistrer les rapports sur un serveur de rapports, dans une bibliothèque SharePoint ou sur l'ordinateur. Vous pouvez également exporter le rapport dans de nombreux formats tels que Word et PDF ; pour ce faire, exécutez le rapport, puis sélectionnez le format dans le menu **Exporter** .  
   
  Dans ce didacticiel, enregistrez le rapport sur un serveur de rapports. Si vous n'avez pas accès à un serveur de rapports, enregistrez le rapport sur votre ordinateur.  
@@ -411,7 +412,7 @@ ms.locfileid: "66098949"
   
 4.  Cliquez sur **Enregistrer**.  
   
-##  <a name="Line"></a> 8. (Facultatif) Ajouter une ligne pour séparer les zones du rapport  
+##  <a name="Line"></a>8. (facultatif) ajouter une ligne pour séparer les zones du rapport  
  Ajoutez une ligne pour séparer la zone éditoriale de la zone de détails dans le rapport.  
   
 #### <a name="to-add-a-line"></a>Pour ajouter une ligne  
@@ -428,9 +429,9 @@ ms.locfileid: "66098949"
   
 6.  Dans la zone **Bordure** , sélectionnez une largeur de **4 1/2** points et la couleur **Rouge**.  
   
-     ![Ajoutez la ligne au rapport](../../2014/tutorials/media/tutorial-reportwithline.png "ajoutez ligne au rapport")  
+     ![Ajouter une ligne au rapport](../../2014/tutorials/media/tutorial-reportwithline.png "Ajouter une ligne au rapport")  
   
-##  <a name="Visualization"></a> 9. (Facultatif) Ajouter la visualisation des données de synthèse  
+##  <a name="Visualization"></a>9. (facultatif) ajouter la visualisation des données de synthèse  
  Les rectangles vous aident à contrôler le rendu du rapport. Placez un graphique à secteurs et un histogramme à l'intérieur d'un rectangle pour vérifier que le rendu du rapport est conforme à vos attentes  
   
 #### <a name="to-add-a-rectangle"></a>Pour ajouter un rectangle  
@@ -461,11 +462,11 @@ ms.locfileid: "66098949"
   
 9. Faites glisser le graphique à l'intérieur du rectangle.  
   
-     ![Ajouter le graphique à secteurs](../../2014/tutorials/media/tutorial-addpiechart.png "ajouter le graphique à secteurs")  
+     ![Ajouter un graphique en secteurs](../../2014/tutorials/media/tutorial-addpiechart.png "Ajouter un graphique en secteurs")  
   
 10. Cliquez avec le bouton droit sur le titre du graphique, puis cliquez sur **Propriétés du titre**.  
   
-11. Dans le **propriétés du titre de graphique** boîte de dialogue, dans le texte de titre, tapez : **Product Quantities Sold**.  
+11. Dans la boîte de dialogue **Propriétés du titre du graphique** , dans le texte du titre, tapez **Quantités de produits vendues**.  
   
 12. Cliquez sur l'onglet **Police** , puis dans la liste **Taille** , cliquez sur **10pt**.  
   
@@ -475,11 +476,11 @@ ms.locfileid: "66098949"
   
 1.  Sous l'onglet **Insertion** du ruban, dans la zone **Visualisations des données** , cliquez sur **Graphique** , puis sur **Assistant Graphique**.  
   
-2.  Dans la page **Choisir un dataset** , cliquez sur **ListDataset**, puis sur **Suivant**.  
+2.  Dans la page **choisir un DataSet** , cliquez sur **ListDataset**, puis sur **suivant**.  
   
 3.  Cliquez sur **Colonne**, puis sur **Suivant**.  
   
-4.  Sur la page Organiser les champs graphique, faites glisser le champ Product vers **catégories**.  
+4.  Dans la page organiser les champs du graphique, faites glisser le champ produit vers **catégories**.  
   
 5.  Faites glisser Sales vers **Valeurs** , puis cliquez sur **Suivant**.  
   
@@ -495,11 +496,11 @@ ms.locfileid: "66098949"
   
 9. Faites glisser le graphique à l'intérieur du rectangle, sous le graphique à secteurs.  
   
-     ![Ajouter un graphique colonne](../../2014/tutorials/media/tutorial-addcolumnchart.png "ajouter histogramme")  
+     ![Ajouter un histogramme](../../2014/tutorials/media/tutorial-addcolumnchart.png "Ajouter un histogramme")  
   
 10. Cliquez avec le bouton droit sur le titre du graphique, puis cliquez sur **Propriétés du titre**.  
   
-11. Dans le **propriétés du titre de graphique** boîte de dialogue, dans le texte de titre, tapez : **Product Sales**.  
+11. Dans la boîte de dialogue **Propriétés du titre du graphique** , dans le texte du titre, tapez **Ventes de produits**.  
   
 12. Cliquez sur l'onglet **Police** , puis dans la liste **Taille** , cliquez sur **10pt**, puis sur **OK**.  
   
@@ -512,7 +513,7 @@ ms.locfileid: "66098949"
     > [!NOTE]  
     >  Le fait de supprimer le titre des axes et la légende rend un petit graphique plus lisible.  
   
- ![Modifier les titres des graphiques et de supprimer le titre de l’axe](../../2014/tutorials/media/tutorial-columnchart-newtitle-noaxistitle.png "modifier les titres des graphiques et de supprimer le titre de l’axe")  
+ ![Changer les titres des graphiques et supprimer le titre de l'axe](../../2014/tutorials/media/tutorial-columnchart-newtitle-noaxistitle.png "Changer les titres des graphiques et supprimer le titre de l'axe")  
   
 #### <a name="to-verify-the-charts-are-inside-the-rectangle"></a>Pour vérifier que les graphiques sont à l'intérieur du rectangle  
   
@@ -520,13 +521,13 @@ ms.locfileid: "66098949"
   
      Dans le volet Propriétés, la propriété `Name` affiche le nom du rectangle.  
   
-     ![Nom du rectangle](../../2014/tutorials/media/tutorial-rectanglename.png "nom du rectangle")  
+     ![Nom du rectangle](../../2014/tutorials/media/tutorial-rectanglename.png "Nom du rectangle")  
   
 2.  Cliquez sur le graphique à secteurs.  
   
-3.  Dans le **propriétés** volet, vérifiez que le `Parent` propriété comporte le nom du rectangle.  
+3.  Dans le volet **Propriétés** , vérifiez que la `Parent` propriété contient le nom du rectangle.  
   
-     ![Propriété pour le graphique à secteurs parente](../../2014/tutorials/media/tutorial-piechart-parentproperty.png "Parent, propriété de graphique à secteurs")  
+     ![Propriété parente du graphique en secteurs](../../2014/tutorials/media/tutorial-piechart-parentproperty.png "Propriété parente du graphique en secteurs")  
   
 4.  Cliquez sur l'histogramme et répétez les étapes 2 et 3.  
   
@@ -539,7 +540,7 @@ ms.locfileid: "66098949"
   
 2.  Les deux graphiques étant sélectionnés, cliquez avec le bouton droit, pointez sur **Disposition**, puis cliquez sur **Uniformiser la largeur**.  
   
-     ![Que les largeurs de graphique la même](../../2014/tutorials/media/tutorial-makechartssamewidth.png "que la même les largeurs des graphiques")  
+     ![Uniformiser les largeurs des graphiques](../../2014/tutorials/media/tutorial-makechartssamewidth.png "Uniformiser les largeurs des graphiques")  
   
     > [!NOTE]  
     >  L'élément sur lequel vous cliquez en premier détermine la largeur de tous les éléments sélectionnés.  
@@ -548,10 +549,10 @@ ms.locfileid: "66098949"
   
  Le rapport affiche maintenant les données de synthèse des ventes dans un graphique à secteurs et un histogramme.  
   
- ![Rapport de forme libre SSRS didacticiel,](../../2014/tutorials/media/tutorial-reportfinal.png "(didacticiel), rapport de forme libre SSRS")  
+ ![Didacticiel SSRS, rapport au format libre](../../2014/tutorials/media/tutorial-reportfinal.png "Didacticiel SSRS, rapport au format libre")  
   
-## <a name="more-information"></a>Informations supplémentaires  
- Pour plus d’informations sur les listes, consultez [Tables, Matrices et listes &#40;Générateur de rapports et SSRS&#41;](report-design/tables-matrices-and-lists-report-builder-and-ssrs.md), [répertorie &#40;Générateur de rapports et SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md), [données de tableau matriciel Zones de région &#40;Générateur de rapports et SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md), et [cellules de région de données de tableau matriciel, lignes et colonnes &#40;Générateur de rapports&#41; et SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
+## <a name="more-information"></a>Informations complémentaires  
+ Pour plus d’informations sur les listes, consultez [tables, matrices et listes &#40;générateur de rapports et ssrs&#41;](report-design/tables-matrices-and-lists-report-builder-and-ssrs.md), [répertorie les &#40;Générateur de rapports et SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md), les zones de région de données de tableau [matriciel &#40;générateur de rapports et SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md), ainsi que les [cellules, lignes et colonnes de région de données de tableau matriciel &#40;générateur de rapports&#41; et SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
  Pour plus d’informations sur les concepteurs de requêtes, consultez [Concepteurs de requêtes &#40;Générateur de rapports&#41;](../../2014/reporting-services/query-designers-report-builder.md) et [Interface utilisateur du concepteur de requêtes textuel &#40;Générateur de rapports&#41;](report-data/text-based-query-designer-user-interface-report-builder.md).  
   

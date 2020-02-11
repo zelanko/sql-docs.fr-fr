@@ -1,5 +1,5 @@
 ---
-title: Liaisons et Conversions (OLE DB) | Microsoft Docs
+title: Liaisons et conversions (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b35583f18cbe590773c6661091186f669e012555
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638206"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>Liaisons et conversions (OLE DB)
@@ -28,20 +28,20 @@ ms.locfileid: "62638206"
   
 -   Le format des chaînes `datetime` et `datetimeoffset` est le suivant :  
   
-     *aaaa*-*mm*-*jj*[ *hh*:*mm*:*ss*[. *9999999*] [ ?? *hh*:*mm*]]  
+     *aaaa*-** mm-*JJ*[ *hh*:*mm*:*SS*[.* 9999999*] [ ?? *hh*:*mm*]]  
   
 -   Le format des chaînes `time` est le suivant :  
   
-     *hh*:*mm*:*ss*[.*9999999*]  
+     *hh*:*mm*:*SS*[.* 9999999*]  
   
 -   Le format des chaînes `date` est le suivant :  
   
-     *aaaa*-*mm*-*jj*  
+     *aaaa*-** mm-*JJ*  
   
 > [!NOTE]  
 >  Les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client et SQLOLEDB autorisaient l'implémentation de conversions OLE en cas d'échec des processus de conversion standard. C'est pourquoi certaines conversions réalisées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 et versions ultérieures diffèrent de la spécification OLE DB.  
   
- Les conversions de chaînes autorisent une souplesse en matière d'espace et de largeur de champ. Pour plus d’informations, consultez les « Formats de données : Section de chaînes et littéraux » dans [prise en charge du Type de données pour les améliorations OLE DB Date / heure](data-type-support-for-ole-db-date-and-time-improvements.md).  
+ Les conversions de chaînes autorisent une souplesse en matière d'espace et de largeur de champ. Pour plus d’informations, consultez la section « formats de données : chaînes et littéraux » dans [type de données prise en charge de OLE DB améliorations de la date et](data-type-support-for-ole-db-date-and-time-improvements.md)de l’heure.  
   
  Les règles suivantes sont les règles générales de conversion :  
   
@@ -69,6 +69,6 @@ ms.locfileid: "62638206"
  Décrit les conversions date/heure effectuées entre [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou version ultérieure) et une application cliente écrite avec le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Améliorations des types de données de date et d’heure &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [Améliorations de la date et de l’heure &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

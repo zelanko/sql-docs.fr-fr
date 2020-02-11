@@ -1,5 +1,5 @@
 ---
-title: Name (MDX) | Microsoft Docs
+title: Nom (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8fd8aa240a72dacc67e7cd09cb058192cddee282
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088378"
 ---
 # <a name="name-mdx"></a>Name (MDX)
@@ -51,7 +51,7 @@ Member_Expression.Name
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
 ## <a name="remarks"></a>Notes  
- Le **nom** fonction retourne le nom de l’objet, pas le nom unique.  
+ La fonction **Name** retourne le nom de l’objet, et non le nom unique.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -81,6 +81,6 @@ from [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

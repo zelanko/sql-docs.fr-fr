@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6056a5136d8aceab338a18b32ecfac35a1af0364
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204713"
 ---
 # <a name="understand-database-diagram-ownership-visual-database-tools"></a>Comprendre la propriété du diagramme de base de données (Visual Database Tools)
-  Pour utiliser le Concepteur de diagrammes de base de données, il doit d’abord être installé par un membre du rôle db_owner (rôle de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) pour contrôler l’accès aux diagrammes. Chaque schéma a un seul propriétaire : l'utilisateur qui l'a créé. Pour plus d’informations sur la configuration des schémas, consultez [Set Up Database Diagram Designer &#40;Visual Database Tools&#41;](visual-database-tools.md).  
+  Pour utiliser le Concepteur de diagrammes de base de données, il doit d’abord être installé par un membre du rôle db_owner (rôle de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) pour contrôler l’accès aux diagrammes. Chaque schéma a un seul propriétaire : l'utilisateur qui l'a créé. Pour plus d’informations sur la configuration de la création de diagrammes, consultez [configurer le concepteur de schémas de base de données &#40;Visual Database Tools&#41;](visual-database-tools.md).  
   
  Voici quelques points à retenir au sujet de la propriété des schémas :  
   
@@ -36,6 +36,6 @@ ms.locfileid: "63204713"
   
 ## <a name="see-also"></a>Voir aussi  
  [Utiliser des schémas de base de données &#40;Visual Database Tools&#41;](work-with-database-diagrams-visual-database-tools.md)   
- [Configurer le Concepteur de schémas de base de données &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [Configurer le concepteur de schémas de base de données &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

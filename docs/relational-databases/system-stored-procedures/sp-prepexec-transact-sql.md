@@ -18,18 +18,18 @@ ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 670b64cb107610fe8b5506654b9e655b0da5fb16
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68794718"
 ---
 # <a name="sp_prepexec-transact-sql"></a>sp_prepexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Prépare et exécute une [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction paramétrable. sp_prepexec combine les fonctions de sp_prepare et sp_execute. Cette action est appelée par ID = 13 dans un paquet tabular data stream (TDS).  
+  Prépare et exécute une [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction paramétrable. sp_prepexec combine les fonctions de sp_prepare et de sp_execute. Cette action est appelée par ID = 13 dans un paquet tabular data stream (TDS).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,20 +40,20 @@ sp_prepexec handle OUTPUT, params , stmt
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *handle*  
- Identificateur de handle généré par. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *handle* est un paramètre obligatoire avec une valeur de retour **int** .  
+ *traitée*  
+ Identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de *handle* généré par. *handle* est un paramètre obligatoire avec une valeur de retour **int** .  
   
  *params*  
  Identifie des instructions paramétrables. La définition *params* des variables est substituée aux marqueurs de paramètres dans l’instruction. *params* est un paramètre obligatoire qui requiert une valeur d’entrée **ntext**, **nchar**ou **nvarchar** . Entrez une valeur NULL si l'instruction n'est pas paramétrable.  
   
- *stmt*  
+ *Insert*  
  Définit le jeu de résultats de curseur. Le paramètre *stmt* est requis et appelle une valeur d’entrée **ntext**, **nchar**ou **nvarchar** .  
   
  *bound_param*  
  Indique l'utilisation facultative de paramètres supplémentaires. *bound_param* appelle une valeur d’entrée de n’importe quel type de données pour désigner les paramètres supplémentaires en cours d’utilisation.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant prépare et exécute une instruction simple:  
+ L’exemple suivant prépare et exécute une instruction simple :  
   
 ```  
 Declare @Out int;  

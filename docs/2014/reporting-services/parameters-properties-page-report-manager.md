@@ -1,5 +1,5 @@
 ---
-title: Page de propriétés de paramètres (Gestionnaire de rapports) | Microsoft Docs
+title: Page de propriétés des paramètres (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 866fe023ff6ca2fe83264d65319618c5def0749a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108118"
 ---
 # <a name="parameters-properties-page-report-manager"></a>Page de propriétés des paramètres (Gestionnaire de rapports)
@@ -33,7 +33,7 @@ ms.locfileid: "66108118"
   
 3.  Dans le menu déroulant, cliquez sur **Gérer**. La page des propriétés générales pour le rapport s'ouvre.  
   
-4.  Sélectionnez l'onglet **Paramètres** . Si l'onglet **Paramètres** n'est pas visible, cela signifie que le rapport ne contient aucun paramètre.  
+4.  Sélectionnez l’onglet **paramètres** . Si l’onglet **paramètres** n’est pas visible, le rapport ne contient pas de paramètres.  
   
 ## <a name="options"></a>Options  
  **Nom du paramètre**  
@@ -42,7 +42,7 @@ ms.locfileid: "66108118"
  **Type de données**  
  Spécifie le type de données du paramètre.  
   
- **A la valeur par défaut**  
+ **Possède une valeur par défaut**  
  Activez cette case à cocher si le paramètre possède une valeur par défaut. L'activation de cette case à cocher entraîne celle de la case à cocher **Valeur par défaut**. Elle active également **Null** si le paramètre de rapport accepte les valeurs Null. Si l'option **Possède une valeur par défaut** n'est pas sélectionnée, vous devez masquer la valeur ou inviter l'utilisateur à fournir une valeur lorsque le rapport s'exécute.  
   
  **Valeur par défaut**  
@@ -55,21 +55,21 @@ ms.locfileid: "66108118"
  **Null**  
  Activez cette case à cocher pour spécifier comme Null la valeur par défaut. Une valeur Null signifie que le rapport s'exécute même si l'utilisateur ne fournit pas de valeur de paramètre. Si cette colonne ne contient aucune case à cocher, cela signifie que le paramètre n'accepte pas les valeurs Null.  
   
- **Hide**  
+ **Masquer**  
  Activez cette case à cocher pour masquer le paramètre dans la zone de paramètres qui s'affiche dans la partie supérieure du rapport. Ce paramètre apparaît toujours dans les pages de définition d'abonnement et peut toujours être spécifié dans l'URL d'un rapport. Il est utile de masquer ce paramètre si vous souhaitez que le rapport soit toujours exécuté avec une valeur par défaut que vous spécifiez.  
   
  Désactivez cette case à cocher si vous souhaitez afficher le paramètre dans le rapport.  
   
- **Inviter l’utilisateur**  
+ **Demander à l'utilisateur**  
  Activez cette case à cocher pour afficher une zone de texte qui demande aux utilisateurs de fournir une valeur de paramètre.  
   
  Désactivez cette case à cocher si vous souhaitez exécuter le rapport en mode sans assistance (par exemple, pour générer des instantanés d'historique de rapport ou d'exécution de rapport), si vous souhaitez utiliser la même valeur de paramètre pour tous les utilisateurs ou si vous n'avez pas besoin d'une entrée utilisateur pour cette valeur.  
   
- **Texte affiché**  
+ **Afficher le texte**  
  Fournit une chaîne de texte qui apparaît en regard de la zone de texte du paramètre. La chaîne contient une étiquette ou une description. Aucune limite n'est imposée quant à la longueur de chaîne. Les chaînes de texte plus longues sont renvoyées à la ligne dans l'espace fourni.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Page Propriétés générales, Rapports &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Page Propriétés générales, rapports &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [Aide F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

@@ -18,18 +18,18 @@ ms.assetid: b55d3898-596d-47a5-a4f0-d65dc736223b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 19c0a4d2a95b81c26b746a8ece9defce61fe712f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68009131"
 ---
-# <a name="spdeletenotification-transact-sql"></a>sp_delete_notification (Transact-SQL)
+# <a name="sp_delete_notification-transact-sql"></a>sp_delete_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime une définition de notification de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour une alerte et un opérateur spécifiques.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,21 +41,21 @@ sp_delete_notification
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @alert_name = ] 'alert'` Le nom de l’alerte. *alerte* est **sysname**, sans valeur par défaut.  
+`[ @alert_name = ] 'alert'`Nom de l’alerte. *alerte* est de **type sysname**, sans valeur par défaut.  
   
-`[ @operator_name = ] 'operator'` Le nom de l’opérateur. *opérateur* est **sysname**, sans valeur par défaut.  
+`[ @operator_name = ] 'operator'`Nom de l’opérateur. l' *opérateur* est de **type sysname**et n’a pas de valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  Lorsque vous supprimez une notification, seule celle-ci est supprimée, tandis que l'alerte et l'opérateur demeurent intacts.  
   
 ## <a name="permissions"></a>Autorisations  
- Pour exécuter cette procédure stockée, les utilisateurs doivent avoir le **sysadmin** rôle serveur fixe.  
+ Pour exécuter cette procédure stockée, les utilisateurs doivent disposer du rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant supprime la notification envoyée à l'opérateur `François Ajenstat` lorsque l'alerte `Test Alert` est générée.  

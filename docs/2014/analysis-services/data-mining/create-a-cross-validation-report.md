@@ -1,5 +1,5 @@
 ---
-title: Créer un rapport de Validation croisée | Microsoft Docs
+title: Créer un rapport de validation croisée | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 29a60a5b14b1d9a73e0a9a1bdc84a314b55cd1f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085525"
 ---
 # <a name="create-a-cross-validation-report"></a>Créer un rapport de validation croisée
@@ -51,7 +51,7 @@ ms.locfileid: "66085525"
   
 ### <a name="set-cross-validation-options"></a>Définir les options de validation croisée  
   
-1.  Sous l'onglet **Validation croisée** , pour **Nombre de replis**, cliquez sur la flèche vers le bas pour sélectionner un nombre entre 1 et 10. La valeur par défaut est 10.  
+1.  Sous l'onglet **Validation croisée** , pour **Nombre de replis**, cliquez sur la flèche vers le bas pour sélectionner un nombre entre 1 et 10. La valeur par défaut est 10.  
   
      Le **Nombre de replis** représente le nombre des partitions qui seront créées dans le jeu de données d'origine. Si vous définissez le Nombre de replis à 1, le jeu d'apprentissage est utilisé sans partitionnement.  
   

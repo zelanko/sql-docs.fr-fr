@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Propriétés du rapport références | Microsoft Docs
+title: Boîte de dialogue Propriétés du rapport, références | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e57e0eb15c8c0ae7e326927ab14493f21c52cc14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104295"
 ---
 # <a name="report-properties-dialog-box-references"></a>Boîte de dialogue Propriétés du rapport, Références
@@ -25,10 +25,10 @@ ms.locfileid: "66104295"
   
 ## <a name="options"></a>Options  
  **Ajouter ou supprimer des assemblys**  
- Répertorie les assemblys référencés par le rapport. L'assembly doit être disponible sur l'ordinateur où est installé l'outil que vous utilisez pour concevoir le rapport, ainsi que sur le serveur de rapports. Le nom de la référence doit correspondre le contenu de  **\<CodeModule >** exactement les balises dans le fichier de langage de définition de rapport (.rdl).  
+ Répertorie les assemblys référencés par le rapport. L'assembly doit être disponible sur l'ordinateur où est installé l'outil que vous utilisez pour concevoir le rapport, ainsi que sur le serveur de rapports. Le nom de la référence doit correspondre exactement au contenu ** \<** des balises CodeModule>dans le fichier Report Definition Language (. rdl).  
   
  **Ajouter**  
- Cliquez pour ajouter un assembly. Cliquez sur le bouton points de suspension (...) pour ouvrir la **ouvrir** boîte de dialogue et sélectionner les assemblys nécessaires pour terminer l’évaluation de traitement et d’expression de rapport.  
+ Cliquez pour ajouter un assembly. Cliquez sur le bouton de sélection (...) pour ouvrir la boîte de dialogue **ouvrir** et sélectionner les assemblys nécessaires pour effectuer le traitement du rapport et l’évaluation de l’expression.  
   
  **Supprimer**  
  Pour supprimer une référence d’assembly de la liste, sélectionnez le nom de l’assembly, puis cliquez sur le bouton **Supprimer** .  
@@ -37,19 +37,19 @@ ms.locfileid: "66104295"
  Répertorie les instances de classes utilisées par le rapport. Cette liste de classes est utilisée uniquement par des membres d'instances, et non par des membres statiques.  
   
  **Ajouter**  
- Cliquez pour ajouter une référence de classe. Cliquez sur le bouton points de suspension (...) pour ouvrir la **ouvrir** boîte de dialogue et sélectionner les classes nécessaires pour terminer l’évaluation de traitement et d’expression de rapport.  
+ Cliquez pour ajouter une référence de classe. Cliquez sur le bouton de sélection (...) pour ouvrir la boîte de dialogue **ouvrir** et sélectionner les classes nécessaires pour effectuer le traitement du rapport et l’évaluation de l’expression.  
   
  **Supprimer**  
  Pour supprimer l’instance de classe, sélectionnez-la et cliquez sur le bouton **Supprimer** .  
   
- **Monter**  
+ **Haut**  
  Pour les classes qui ont des dépendances, vous pouvez faire monter cette référence dans la liste.  
   
- **Descendre**  
+ **Baisse**  
  Pour les classes qui ont des dépendances, vous pouvez faire descendre cette référence dans la liste.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Code personnalisé et références d’assembly dans les expressions du Concepteur de rapports &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
+ [Code personnalisé et références d’assembly dans les expressions de Concepteur de rapports &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
  [Références à des collections de variables de rapport et de groupe &#40;Générateur de rapports et SSRS&#41;](report-design/built-in-collections-report-and-group-variables-references-report-builder.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)  
   

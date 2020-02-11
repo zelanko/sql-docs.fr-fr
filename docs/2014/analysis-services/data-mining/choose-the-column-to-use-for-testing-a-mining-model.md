@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 719e4dc2e934ac430ab4910612265d4b3532ed14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085731"
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>Choisir la colonne à utiliser pour tester un modèle d'exploration de données
@@ -26,13 +26,13 @@ ms.locfileid: "66085731"
   
  La liste suivante décrit des points supplémentaires à prendre en considération pour choisir l'attribut prédictible à utiliser dans le test :  
   
--   Certains types de modèles d’exploration de données peuvent prédire plusieurs attributs, tels que les réseaux neuronaux, qui peuvent Explorer les relations entre de nombreuses attributs.  
+-   Certains types de modèles d’exploration de données peuvent prédire plusieurs attributs, tels que les réseaux neuronaux, qui peuvent explorer les relations entre de nombreux attributs.  
   
--   Autres types de l’exploration des modèles, tels que les modèles de clustering-ne de pas nécessairement un attribut prédictible. Les modèles de clustering ne peuvent être testés que s'ils ont un attribut prédictible.  
+-   D’autres types de modèles d’exploration de données, tels que les modèles de clustering, n’ont pas nécessairement d’attribut prévisible. Les modèles de clustering ne peuvent être testés que s'ils ont un attribut prédictible.  
   
 -   Créer un nuage de points ou mesurer la précision d'un modèle de régression requiert que vous choisissiez un attribut prédictible continu comme résultat. Dans ce cas, vous ne pouvez pas spécifier une valeur cible. Si vous créez autre chose qu’un nuage de points, la colonne de structure d’exploration de données sous-jacente doit également avoir un type de contenu **Discret** ou **Discrétisé**.  
   
--   Si vous choisissez un attribut discret comme résultat prédictible, vous pouvez également spécifier une valeur cible, ou vous pouvez laisser le champ **Prédire la valeur** vide. Si vous incluez un **prédire la valeur**, le graphique mesurera uniquement l’efficacité du modèle dans la prédiction de la valeur cible. Si vous ne spécifiez pas de résultat cible, le modèle est mesuré pour sa précision dans la prédiction de tous les résultats.  
+-   Si vous choisissez un attribut discret comme résultat prédictible, vous pouvez également spécifier une valeur cible, ou vous pouvez laisser le champ **Prédire la valeur** vide. Si vous incluez une **valeur de prédiction**, le graphique mesurera uniquement l’efficacité du modèle lors de la prédiction de la valeur cible. Si vous ne spécifiez pas de résultat cible, le modèle est mesuré pour sa précision dans la prédiction de tous les résultats.  
   
 -   Si vous voulez inclure plusieurs modèles et les comparer dans un graphique d'analyse de précision unique, tous les modèles doivent utiliser la même colonne prédictible.  
   
@@ -56,6 +56,6 @@ ms.locfileid: "66085731"
   
 ## <a name="see-also"></a>Voir aussi  
  [Choisir et mapper les données de test du modèle](choose-and-map-model-testing-data.md)   
- [Choisir un type de graphique d’analyse de précision et définir des options de graphique](choose-an-accuracy-chart-type-and-set-chart-options.md)  
+ [Choisir un type de graphique d'analyse de précision et définir des options de graphique](choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

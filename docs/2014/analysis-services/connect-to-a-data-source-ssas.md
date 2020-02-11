@@ -1,5 +1,5 @@
 ---
-title: Se connecter à une Source de données (SSAS) | Microsoft Docs
+title: Se connecter à une source de données (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1c1114dd63b9082c6be7486ab5e576a6b8270485
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087339"
 ---
 # <a name="connect-to-a-data-source-ssas"></a>Connexion à une source de données (SSAS)
@@ -24,7 +24,8 @@ ms.locfileid: "66087339"
   
  Pour vous connecter à une source de données, vous devez disposer du fournisseur approprié, installé sur votre machine. Le fournisseur approprié doit également être installé sur le serveur de base de données d'espace de travail. Pour les serveurs 32 bits (x86), les fournisseurs 32 bits doivent être installés. Pour les serveurs 64 bits (x64), les fournisseurs 64 bits doivent être installés.  
   
- [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] s'exécute toujours dans un processus 32 bits, indépendamment de l'architecture. Lorsque vous exécutez [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] sur un ordinateur 64 bits, vous devez veiller aux points suivants lors de l'installation des fournisseurs de données :  
+ 
+  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] s'exécute toujours dans un processus 32 bits, indépendamment de l'architecture. Lorsque vous exécutez [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] sur un ordinateur 64 bits, vous devez veiller aux points suivants lors de l'installation des fournisseurs de données :  
   
 -   Pour les fournisseurs qui prennent en charge l'installation côte à côte des fournisseurs 32 bits et 64 bits, vous devez installer les deux fournisseurs.  
   

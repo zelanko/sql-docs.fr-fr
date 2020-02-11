@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a11983c6fc9e1ca2e8917fd2efdaa5c90b4d3c30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828589"
 ---
 # <a name="cdc-flow-components"></a>Composants de flux CDC
@@ -26,11 +26,11 @@ ms.locfileid: "62828589"
   
  Voici les composants de capture de données modifiées (CDC) par Attunity :  
   
- **Composant de flux de contrôle CDC**:  
+ **Composant de workflow de contrôle CDC**:  
   
  [Tâche de contrôle de capture de données modifiées](../control-flow/cdc-control-task.md)  
   
- **Composants de flux de données CDC**:  
+ **Composants de workflow de données CDC**:  
   
  [Source CDC](cdc-source.md)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "62828589"
 ## <a name="getting-started-with-the-change-data-capture-components"></a>Mise en route avec les composants de capture de données modifiées (CDC)  
  Un package CDC classique traite des modifications sur un groupe de tables. La partie relative au flux de contrôle de base de ce type de package CDC est illustrée dans la figure ci-dessous. Ce package est appelé un package de traitement à flux progressif.  
   
- ![Flux de contrôle d’un package de traitement à flux progressif](../media/tricklefeedprocessing.gif "Flux de contrôle d’un package de traitement à flux progressif")  
+ ![Flux de contrôle d'un package de gestion du flux progressif](../media/tricklefeedprocessing.gif "Flux de contrôle d'un package de gestion du flux progressif")  
   
  Ce flux de contrôle [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] contient deux tâches de contrôle CDC et la tâche de flux de données. La première tâche appelée **Obtenir la plage de traitement CDC** définit la plage des numéros séquentiels dans le journal (LSN) pour les modifications traitées dans la tâche de flux de données appelée **Modifications des processus**. Cette plage est établie en fonction de ce qui a été traité pendant la dernière exécution de package et de ce qui a été enregistré dans un magasin persistant.  
   
@@ -87,13 +87,13 @@ ms.locfileid: "62828589"
   
  L'illustration suivante montre le flux de données **Modifications des processus** qui indique sur le plan conceptuel la façon dont les modifications sont traitées.  
   
- ![Flux de données Modifications des processus](../media/processchangesdataflow.gif "Flux de données Modifications des processus")  
+ ![Flux de données des modifications de processus](../media/processchangesdataflow.gif "Flux de données des modifications de processus")  
   
  Les étapes illustrées sont les suivantes :  
   
--   **Modifications pour la table X** est une source CDC qui lit les modifications apportées à la table X dans la plage de traitement CDC déterminée dans le flux de contrôle parent.  
+-   Les **modifications pour la table x** sont une source CDC qui lit les modifications apportées à la table x qui ont été effectuées dans la plage de traitement CDC déterminée dans le workflow de contrôle parent.  
   
--   **Séparateur CDC X** est utilisé pour fractionner les modifications en insertions, suppressions et mises à jour. Dans ce scénario, on suppose que la source CDC est configurée pour produire des modifications nettes afin que des types de modifications différents puissent être traités en parallèle.  
+-   Le séparateur de capture de données **modifiées X** est utilisé pour fractionner les modifications en insertions, suppressions et mises à jour. Dans ce scénario, on suppose que la source CDC est configurée pour produire des modifications nettes afin que des types de modifications différents puissent être traités en parallèle.  
   
 -   Les modifications spécifiques sont traitées en aval par la suite. Dans cette illustration, les modifications sont insérées dans des tables utilisant plusieurs destinations ODBC mais dans des cas réels, le traitement peut être différent.  
   
@@ -171,12 +171,12 @@ ms.locfileid: "62828589"
 ## <a name="cdc-state"></a>État CDC  
  À chaque groupe CDC correspond un état associé qui est représenté par une chaîne avec un format spécifique. Pour plus d'informations, consultez [CDC Control Task](../control-flow/cdc-control-task.md). Le tableau suivant répertorie les valeurs d'état CDC possibles.  
   
-|État|Description|  
+|State|Description|  
 |-----------|-----------------|  
 |0-(INITIAL)|État qui existe avant que tous les packages soient exécutés sur le groupe CDC en cours. Il s'agit également de l'état correspondant à une capture de données modifiées vide.<br /><br /> Pour plus d'informations sur les opérations de la tâche de contrôle CDC, consultez [CDC Control Task](../control-flow/cdc-control-task.md).|  
 |1-ILSTART (Initial-Load-Started)|Il s'agit de l'état qui existe lorsque le package de la charge initiale démarre. Il est constaté après l'appel de l'opération **MarkInitialLoadStart** à la tâche de contrôle CDC.<br /><br /> Pour plus d'informations sur les opérations de la tâche de contrôle CDC, consultez [CDC Control Task](../control-flow/cdc-control-task.md).|  
 |2- ILEND (Initial-Load-Ended)|Il s'agit de l'état qui existe lorsque le package de la charge initiale se termine avec succès. Il est constaté après l'appel de l'opération MarkInitialLoadEnd à la tâche de contrôle CDC.<br /><br /> Pour plus d'informations sur les opérations de la tâche de contrôle CDC, consultez [CDC Control Task](../control-flow/cdc-control-task.md).|  
-|3-ILUPDATE (Initial Load Update)|C'est l'état existant après la première exécution du package de mise à jour, après la charge initiale, alors que le traitement de la plage initiale est encore en cours. Il est constaté après l'appel de l'opération **GetProcessingRange** à la tâche de contrôle CDC.<br /><br /> Si vous utilisez la colonne **_$reprocessing** , elle contient la valeur 1 pour indiquer que le package peut retraiter des lignes qui se trouvent déjà au niveau de la cible.<br /><br /> Pour plus d'informations sur les opérations de la tâche de contrôle CDC, consultez [CDC Control Task](../control-flow/cdc-control-task.md).|  
+|3-ILUPDATE (Initial Load Update)|C'est l'état existant après la première exécution du package de mise à jour, après la charge initiale, alors que le traitement de la plage initiale est encore en cours. Il est constaté après l'appel de l'opération **GetProcessingRange** à la tâche de contrôle CDC.<br /><br /> Si vous utilisez la colonne **_ $ Reprocessing** , elle a la valeur 1 pour indiquer que le package peut retraiter des lignes déjà au niveau de la cible.<br /><br /> Pour plus d'informations sur les opérations de la tâche de contrôle CDC, consultez [CDC Control Task](../control-flow/cdc-control-task.md).|  
 |4-TFEND (Trickle-Feed-Update-Ended)|Il s'agit de l'état attendu pour une exécution CDC normale. Il indique que l'exécution précédente a réussi et qu'une nouvelle exécution avec une nouvelle plage de traitement peut démarrer.|  
 |5-TFSTART (Trickle-Feed-Update-Started)|Il s'agit de l'état constaté pour les exécutions ultérieures du package de mise à jour après l'appel de l'opération **GetProcessingRange** à la tâche de contrôle CDC.<br /><br /> Il indique qu’une exécution CDC normale a démarré mais n’est pas terminée ou ne s’est pas encore terminée correctement (**MarkProcessedRange**).<br /><br /> Pour plus d'informations sur les opérations de la tâche de contrôle CDC, consultez [CDC Control Task](../control-flow/cdc-control-task.md).|  
 |6-TFREDO (Reprocessing-Trickle-Feed-Updates)|Il s'agit de l'état d'un **GetProcessingRange** qui se produit après TFSTART. Il indique que l'exécution précédente ne s'est pas terminée avec succès.<br /><br /> Si vous utilisez la colonne _$reprocessing, elle contient la valeur 1 pour indiquer que le package peut retraiter des lignes qui sont déjà au niveau de la cible.|  
@@ -186,7 +186,7 @@ ms.locfileid: "62828589"
   
  Par exemple, à la fin d'un package de charge initiale, lorsque le système tente de définir l'état sur ILEND, si l'état est TFSTART, alors le groupe CDC est dans un état d'erreur et le package de mise à jour à flux progressif ne s'exécute pas (le package de charge initiale s'exécute).  
   
- ![Diagramme d’état](../media/statediagram.gif "Diagramme d’état")  
+ ![Diagramme d’État](../media/statediagram.gif "Diagramme d'état")  
   
  Une fois le package de charge initiale exécuté avec succès, le package de mise à jour à flux progressif s'exécute de façon répétée selon une planification prédéterminée pour traiter les modifications apportées aux tables sources. Chaque exécution du package de mise à jour à flux progressif est une exécution CDC.  
   
@@ -200,7 +200,7 @@ ms.locfileid: "62828589"
   
 -   [Diriger le flux de capture de données modifiées en fonction du type de modification](direct-the-cdc-stream-according-to-the-type-of-change.md)  
   
--   [Définir une variable d'état](define-a-state-variable.md)  
+-   [Définir une variable d’état](define-a-state-variable.md)  
   
 ## <a name="related-content"></a>Contenu associé  
   

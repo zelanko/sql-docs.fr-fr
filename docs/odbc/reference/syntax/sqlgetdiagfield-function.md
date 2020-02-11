@@ -20,19 +20,19 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 620ccce9a035139482b2d9b4630bb2242f720af8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68103777"
 ---
 # <a name="sqlgetdiagfield-function"></a>Fonction SQLGetDiagField
 
 **Conformité**  
- Version introduite : Conformité aux normes 3.0 de ODBC : ISO 92  
+ Version introduite : ODBC 3,0 conformité aux normes : ISO 92  
   
  **Résumé**  
- **SQLGetDiagField** retourne la valeur actuelle d’un champ d’un enregistrement de la structure de données de diagnostic (associé à un handle spécifié) qui contient des informations d’erreur, d’avertissement et d’état.  
+ **SQLGetDiagField** retourne la valeur actuelle d’un champ d’un enregistrement de la structure de données de diagnostic (associée à un handle spécifié) qui contient des informations d’erreur, d’avertissement et d’État.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,7 +50,7 @@ SQLRETURN SQLGetDiagField(
   
 ## <a name="arguments"></a>Arguments  
  *HandleType*  
- [Entrée] Un identificateur de type de handle qui décrit le type de handle pour lequel les tests de diagnostic sont requises. Doit prendre l'une des valeurs suivantes :  
+ Entrée Identificateur de type de handle qui décrit le type de handle pour lequel les diagnostics sont requis. Doit prendre l'une des valeurs suivantes :  
   
 -   SQL_HANDLE_DBC  
   
@@ -62,163 +62,163 @@ SQLRETURN SQLGetDiagField(
   
 -   SQL_HANDLE_STMT  
   
- Handle SQL_HANDLE_DBC_INFO_TOKEN est utilisée uniquement par le Gestionnaire de pilotes et le pilote. Applications ne doivent pas utiliser ce type de handle. Pour plus d’informations sur SQL_HANDLE_DBC_INFO_TOKEN, consultez [développer la reconnaissance des pools de connexion dans un pilote ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
+ SQL_HANDLE_DBC_INFO_TOKEN descripteur est utilisé uniquement par le gestionnaire de pilotes et le pilote. Les applications ne doivent pas utiliser ce type de handle. Pour plus d’informations sur la SQL_HANDLE_DBC_INFO_TOKEN, consultez [développement de la reconnaissance des pools de connexions dans un pilote ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
   
- *Handle*  
- [Entrée] Un handle pour la structure de données de diagnostic, du type indiqué par *HandleType*. Si *HandleType* est SQL_HANDLE_ENV, *gérer* peut être partagé ou un handle d’environnement non partagé.  
+ *Traitée*  
+ Entrée Handle pour la structure de données de diagnostic, du type indiqué par *comme HandleType*. Si *comme HandleType* a la valeur SQL_HANDLE_ENV, *descripteur* peut être un handle d’environnement partagé ou non partagé.  
   
  *RecNumber*  
- [Entrée] Indique que l’enregistrement de l’état à partir de laquelle l’application cherche des informations. Enregistrements d’état sont numérotées de 1. Si le *DiagIdentifier* argument indique n’importe quel champ de l’en-tête de diagnostics, *RecNumber* est ignoré. Si ce n’est pas le cas, il doit être supérieure à 0.  
+ Entrée Indique l’enregistrement d’État à partir duquel l’application recherche des informations. Les enregistrements d’État sont numérotés à partir de 1. Si l’argument *DiagIdentifier* indique un champ de l’en-tête de diagnostic, *recnumber* est ignoré. Si ce n’est pas le cas, il doit être supérieur à 0.  
   
  *DiagIdentifier*  
- [Entrée] Indique le champ du diagnostic dont la valeur doit être retournée. Pour plus d’informations, consultez le «*DiagIdentifier* Argument « section dans « Commentaires ».  
+ Entrée Indique le champ du diagnostic dont la valeur doit être retournée. Pour plus d’informations, consultez la section « argument*DiagIdentifier* » dans « Comments ».  
   
  *DiagInfoPtr*  
- [Sortie] Pointeur vers une mémoire tampon dans lequel retourner les informations de diagnostic. Le type de données dépend de la valeur de *DiagIdentifier*. Si *DiagInfoPtr* est de type entier, les applications doivent utiliser une mémoire tampon de SQLULEN et initialiser la valeur 0 avant d’appeler cette fonction, en tant que certains pilotes peut-être uniquement écrire la plus faible 32 ou 16 bits d’une mémoire tampon et laissez l’ordre le plus élevé- bit inchangé.  
+ Sortie Pointeur vers une mémoire tampon dans laquelle retourner les informations de diagnostic. Le type de données dépend de la valeur de *DiagIdentifier*. Si *DiagInfoPtr* est un type entier, les applications doivent utiliser une mémoire tampon de SQLULEN et initialiser la valeur à 0 avant d’appeler cette fonction, car certains pilotes peuvent uniquement écrire le plus petit 32 bits ou 16 bits d’une mémoire tampon et ne pas modifier le bit d’ordre supérieur.  
   
- Si *DiagInfoPtr* est NULL, *StringLengthPtr* retournera toujours le nombre total d’octets (sans le caractère de fin de la valeur null pour les données de type caractère) disponibles à renvoyer dans la mémoire tampon vers laquelle pointée  *DiagInfoPtr*.  
+ Si *DiagInfoPtr* a la valeur null, *StringLengthPtr* retourne toujours le nombre total d’octets (à l’exception du caractère de fin null pour les données de type caractère) disponibles pour retourner dans la mémoire tampon vers laquelle pointe *DiagInfoPtr*.  
   
  *BufferLength*  
- [Entrée] Si *DiagIdentifier* est un diagnostic définie par ODBC et *DiagInfoPtr* pointe vers une chaîne de caractères ou une mémoire tampon binaire, cet argument doit être la longueur de \* *DiagInfoPtr* . Si *DiagIdentifier* est un champ défini par ODBC et \* *DiagInfoPtr* est un entier, *BufferLength* est ignoré. Si la valeur dans  *\*DiagInfoPtr* est une chaîne Unicode (lors de l’appel **SQLGetDiagFieldW**), la *BufferLength* argument doit être un nombre pair.  
+ Entrée Si *DiagIdentifier* est un diagnostic défini par ODBC et que *DiagInfoPtr* pointe vers une chaîne de caractères ou une mémoire tampon binaire, cet argument doit être \*la longueur de *DiagInfoPtr*. Si *DiagIdentifier* est un champ défini par ODBC et \* *DiagInfoPtr* est un entier, *BufferLength* est ignoré. Si la valeur de * \*DiagInfoPtr* est une chaîne Unicode (lors de l’appel de **SQLGetDiagFieldW**), l’argument *BufferLength* doit être un nombre pair.  
   
- Si *DiagIdentifier* est un champ défini par le pilote, l’application indique la nature du champ pour le Gestionnaire de pilotes en définissant le *BufferLength* argument. *BufferLength* peut avoir les valeurs suivantes :  
+ Si *DiagIdentifier* est un champ défini par le pilote, l’application indique la nature du champ au gestionnaire de pilotes en définissant l’argument *BufferLength* . *BufferLength* peut avoir les valeurs suivantes :  
   
--   Si *DiagInfoPtr* est un pointeur vers une chaîne de caractères, *BufferLength* est la longueur de la chaîne ou le SQL_NTS.  
+-   Si *DiagInfoPtr* est un pointeur vers une chaîne de caractères, *BufferLength* est la longueur de la chaîne ou SQL_NTS.  
   
--   Si *DiagInfoPtr* est un pointeur vers une mémoire tampon binaire, les emplacements de l’application le résultat de la SQL_LEN_BINARY_ATTR (*longueur*) macro dans *BufferLength*. Cela place une valeur négative dans *BufferLength*.  
+-   Si *DiagInfoPtr* est un pointeur vers une mémoire tampon binaire, l’application place le résultat de la macro SQL_LEN_BINARY_ATTR (*longueur*) dans *BufferLength*. Cela place une valeur négative dans *BufferLength*.  
   
--   Si *DiagInfoPtr* est un pointeur vers une valeur autre qu’une chaîne de caractère ou binaire, *BufferLength* doit avoir la valeur SQL_IS_POINTER.  
+-   Si *DiagInfoPtr* est un pointeur vers une valeur autre qu’une chaîne de caractères ou une chaîne binaire, *BufferLength* doit avoir la valeur SQL_IS_POINTER.  
   
--   Si  *\*DiagInfoPtr* contient un type de données de longueur fixe, *BufferLength* est SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT ou SQL_IS_USMALLINT, comme il convient.  
+-   Si * \*DiagInfoPtr* contient un type de données de longueur fixe, *BufferLength* est SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT ou SQL_IS_USMALLINT, selon le cas.  
   
  *StringLengthPtr*  
- [Sortie] Pointeur vers une mémoire tampon dans lequel retourner le nombre total d’octets (à l’exclusion du nombre d’octets requis pour le caractère de fin de la valeur null) disponibles à renvoyer dans \* *DiagInfoPtr*, pour les données caractères. Si le nombre d’octets à retourner est supérieur ou égal à *BufferLength*, le texte dans \* *DiagInfoPtr* est tronqué à *BufferLength* moins la longueur d’un caractère du caractère nul de terminaison.  
+ Sortie Pointeur vers une mémoire tampon dans laquelle retourner le nombre total d’octets (à l’exception du nombre d’octets requis pour le caractère de fin null) disponibles pour \*retourner dans *DiagInfoPtr*, pour les données de type caractère. Si le nombre d’octets disponibles à retourner est supérieur ou égal à *BufferLength*, le texte de \* *DiagInfoPtr* est tronqué à *BufferLength* moins la longueur d’un caractère de fin null.  
   
-## <a name="returns"></a>Valeur renvoyée  
+## <a name="returns"></a>Retours  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE ou SQL_NO_DATA.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- **SQLGetDiagField** ne valide pas les enregistrements de diagnostic pour lui-même. Il utilise les valeurs de retournés suivantes pour signaler le résultat de sa propre exécution :  
+ **SQLGetDiagField** ne publie pas d’enregistrements de diagnostic pour lui-même. Elle utilise les valeurs de retour suivantes pour signaler le résultat de sa propre exécution :  
   
--   SQL_SUCCESS : La fonction retournée avec succès les informations de diagnostic.  
+-   SQL_SUCCESS : la fonction a retourné des informations de diagnostic.  
   
--   SQL_SUCCESS_WITH_INFO : \**DiagInfoPtr* était trop petite pour contenir le champ de diagnostic demandé. Par conséquent, les données dans le champ de diagnostic a été tronquées. Pour déterminer qu’une troncation s’est produite, l’application doit comparer *BufferLength* au nombre réel d’octets disponibles, ce qui est écrite dans **StringLengthPtr*.  
+-   SQL_SUCCESS_WITH_INFO : \* *DiagInfoPtr* est trop petit pour contenir le champ de diagnostic demandé. Par conséquent, les données du champ diagnostic ont été tronquées. Pour déterminer qu’une troncation s’est produite, l’application doit comparer *BufferLength* au nombre réel d’octets disponibles, qui est écrit dans **StringLengthPtr*.  
   
--   SQL_INVALID_HANDLE : Le handle a indiqué par *HandleType* et *gérer* n’était pas un handle valide.  
+-   SQL_INVALID_HANDLE : le handle indiqué par *comme HandleType* et *handle* n’est pas un handle valide.  
   
--   SQL_ERROR : Parmi les options suivantes s’est produite :  
+-   SQL_ERROR : l’un des éléments suivants s’est produit :  
   
-    -   *Le DiagIdentifier* argument n’est pas une des valeurs valides.  
+    -   *L’argument DiagIdentifier* ne faisait pas partie des valeurs valides.  
   
-    -   *Le DiagIdentifier* argument a été SQL_DIAG_CURSOR_ROW_COUNT, SQL_DIAG_DYNAMIC_FUNCTION, SQL_DIAG_DYNAMIC_FUNCTION_CODE ou SQL_DIAG_ROW_COUNT, mais *gérer* n’était pas un descripteur d’instruction. (Le Gestionnaire de pilotes retourne ce diagnostic.)  
+    -   *L’argument DiagIdentifier* a été SQL_DIAG_CURSOR_ROW_COUNT, SQL_DIAG_DYNAMIC_FUNCTION, SQL_DIAG_DYNAMIC_FUNCTION_CODE ou SQL_DIAG_ROW_COUNT, mais *handle* n’était pas un descripteur d’instruction. (Le gestionnaire de pilotes retourne ce diagnostic.)  
   
-    -   *Le RecNumber* argument était négatif ou égal à 0 lorsque *DiagIdentifier* indiqué un champ à partir d’un enregistrement de diagnostic. *RecNumber* est ignoré pour les champs d’en-tête.  
+    -   *L’argument recnumber* était négatif ou égal à 0 lorsque *DiagIdentifier* indiquait un champ d’un enregistrement de diagnostic. *Recnumber* est ignoré pour les champs d’en-tête.  
   
     -   La valeur demandée était une chaîne de caractères et *BufferLength* était inférieur à zéro.  
   
-    -   Lorsque vous utilisez la notification asynchrone, l’opération asynchrone sur le handle n’est pas complète.  
+    -   Lors de l’utilisation d’une notification asynchrone, l’opération asynchrone sur le descripteur n’est pas terminée.  
   
--   SQL_NO_DATA: *RecNumber* a été supérieur au nombre d’enregistrements de diagnostics qui existaient pour le handle spécifié dans *gérer.* La fonction retourne également SQL_NO_DATA pour n’importe quel résultat positif *RecNumber* si aucun enregistrement de diagnostic pour *gérer*.  
+-   SQL_NO_DATA : *recnumber* est supérieur au nombre d’enregistrements de diagnostics qui existaient pour le descripteur spécifié dans *descripteur.* La fonction retourne également SQL_NO_DATA pour tout *recnumber* positif s’il n’y a pas d’enregistrements de diagnostic pour *descripteur*.  
   
 ## <a name="comments"></a>Commentaires  
- Une application appelle généralement **SQLGetDiagField** pour accomplir une des trois objectifs :  
+ Une application appelle généralement **SQLGetDiagField** pour accomplir l’un des trois objectifs suivants :  
   
-1.  Pour obtenir une erreur spécifique ou avertissement lorsqu’un appel de fonction a renvoyé SQL_ERROR ou SQL_SUCCESS_WITH_INFO (ou SQL_NEED_DATA pour le **SQLBrowseConnect** fonction).  
+1.  Pour obtenir des informations d’erreur ou d’avertissement spécifiques lorsqu’un appel de fonction a retourné SQL_ERROR ou SQL_SUCCESS_WITH_INFO (ou SQL_NEED_DATA pour la fonction **SQLBrowseConnect** ).  
   
-2.  Pour déterminer le nombre de lignes dans la source de données ont été affectées lorsque les opérations d’insertion, suppression ou mise à jour ont été effectuées par un appel à **SQLExecute**, **SQLExecDirect**,  **SQLBulkOperations**, ou **SQLSetPos** (à partir du champ d’en-tête SQL_DIAG_ROW_COUNT), ou pour déterminer le nombre de lignes qui existent dans le curseur ouvert actuel, si le pilote peut fournir ces informations (à partir de la Champ d’en-tête SQL_DIAG_CURSOR_ROW_COUNT).  
+2.  Pour déterminer le nombre de lignes dans la source de données qui ont été affectées lorsque des opérations d’insertion, de suppression ou de mise à jour ont été effectuées avec un appel à **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** (à partir du champ d’en-tête SQL_DIAG_ROW_COUNT), ou pour déterminer le nombre de lignes qui existent dans le curseur ouvert actuel, si le pilote peut fournir ces informations (à SQL_DIAG_CURSOR_ROW_COUNT partir  
   
-3.  Pour déterminer quelle fonction a été exécutée par un appel à **SQLExecDirect** ou **SQLExecute** (à partir des champs d’en-tête SQL_DIAG_DYNAMIC_FUNCTION et SQL_DIAG_DYNAMIC_FUNCTION_CODE).  
+3.  Pour déterminer la fonction qui a été exécutée par un appel à **SQLExecDirect** ou **SQLExecute** (à partir des champs d’en-tête SQL_DIAG_DYNAMIC_FUNCTION et SQL_DIAG_DYNAMIC_FUNCTION_CODE).  
   
- Toute fonction ODBC peut valider zéro ou plusieurs enregistrements de diagnostic chaque fois qu’elle est appelée, donc une application peut appeler **SQLGetDiagField** après un appel de fonction ODBC. Il n’existe aucune limite au nombre d’enregistrements de diagnostic qui peuvent être stockés à tout moment. **SQLGetDiagField** récupère uniquement les informations de diagnostic plus récemment associées à la structure de données de diagnostic spécifiée dans le *gérer* argument. Si l’application appelle une fonction ODBC autre que **SQLGetDiagField** ou **SQLGetDiagRec**, des informations de diagnostic à partir d’un appel précédent avec le même handle sont perdues.  
+ Toute fonction ODBC peut poster zéro, un ou plusieurs enregistrements de diagnostic chaque fois qu’elle est appelée, de sorte qu’une application peut appeler **SQLGetDiagField** après n’importe quel appel de fonction ODBC. Le nombre d’enregistrements de diagnostic pouvant être stockés à un moment donné n’est pas limité. **SQLGetDiagField** récupère uniquement les informations de diagnostic récemment associées à la structure de données de diagnostic spécifiée dans l’argument de *handle* . Si l’application appelle une fonction ODBC autre que **SQLGetDiagField** ou **SQLGetDiagRec**, toutes les informations de diagnostic d’un appel précédent avec le même handle sont perdues.  
   
- Une application peut analyser tous les enregistrements de diagnostics en incrémentant *RecNumber*, tant que **SQLGetDiagField** retourne SQL_SUCCESS. Le nombre d’enregistrements d’état est indiqué dans le champ d’en-tête SQL_DIAG_NUMBER. Les appels à **SQLGetDiagField** sont non destructives aux champs d’en-tête et un enregistrement. L’application peut appeler **SQLGetDiagField** ultérieurement pour récupérer un champ d’un enregistrement, tant qu’une fonction autres que les fonctions de Diagnostics n’a pas été appelée en attendant, ce qui serait de validation des enregistrements sur le même handle.  
+ Une application peut analyser tous les enregistrements de diagnostic en incrémentant *recnumber*, à condition que **SQLGetDiagField** retourne SQL_SUCCESS. Le nombre d’enregistrements d’État est indiqué dans le champ d’en-tête SQL_DIAG_NUMBER. Les appels à **SQLGetDiagField** sont non destructifs pour les champs d’en-tête et d’enregistrement. L’application peut appeler **SQLGetDiagField** à nouveau ultérieurement pour récupérer un champ d’un enregistrement, tant qu’une fonction autre que les fonctions de diagnostic n’a pas été appelée en attente, ce qui représenterait les enregistrements sur le même handle.  
   
- Une application peut appeler **SQLGetDiagField** pour retourner n’importe quel champ de diagnostic à tout moment, à l’exception SQL_DIAG_CURSOR_ROW_COUNT ou SQL_DIAG_ROW_COUNT, qui retourne SQL_ERROR si *gérer* n’est pas un descripteur d’instruction. Si tout autre champ de diagnostic n’est pas défini, l’appel à **SQLGetDiagField** retourne SQL_SUCCESS (fournie par aucun autre diagnostic n’est rencontrée) et une valeur non définie est retournée pour le champ.  
+ Une application peut appeler **SQLGetDiagField** pour retourner n’importe quel champ de diagnostic à tout moment, à l’exception de SQL_DIAG_CURSOR_ROW_COUNT ou SQL_DIAG_ROW_COUNT, qui retournera SQL_ERROR si *handle* n’est pas un descripteur d’instruction. Si un autre champ de diagnostic n’est pas défini, l’appel à **SQLGetDiagField** retourne SQL_SUCCESS (à condition qu’aucun autre diagnostic n’ait été détecté) et qu’une valeur non définie soit retournée pour le champ.  
   
- Pour plus d’informations, consultez [à l’aide de SQLGetDiagRec et de SQLGetDiagField](../../../odbc/reference/develop-app/using-sqlgetdiagrec-and-sqlgetdiagfield.md) et [implémentation de SQLGetDiagRec et de SQLGetDiagField](../../../odbc/reference/develop-app/implementing-sqlgetdiagrec-and-sqlgetdiagfield.md).  
+ Pour plus d’informations, consultez [utilisation de SQLGetDiagRec et SQLGetDiagField](../../../odbc/reference/develop-app/using-sqlgetdiagrec-and-sqlgetdiagfield.md) et [implémentation de SQLGetDiagRec et SQLGetDiagField](../../../odbc/reference/develop-app/implementing-sqlgetdiagrec-and-sqlgetdiagfield.md).  
   
- Appel d’une API autre que celui qui est en cours d’exécution en mode asynchrone générera HY010 « Erreur de séquence de fonction ». Toutefois, l’enregistrement d’erreur ne peut pas être récupéré avant la fin de l’opération asynchrone.  
+ L’appel d’une API autre que celle qui est exécutée de manière asynchrone génère HY010 « erreur de séquence de fonction ». Toutefois, l’enregistrement d’erreur ne peut pas être récupéré avant la fin de l’opération asynchrone.  
   
-## <a name="handletype-argument"></a>Argument de HandleType  
- Chaque type de handle peut avoir des informations de diagnostic associées. Le *HandleType* argument indique le type de handle de *gérer*.  
+## <a name="handletype-argument"></a>Argument comme HandleType  
+ Chaque type de handle peut être associé à des informations de diagnostic. L’argument *comme HandleType* indique le type de handle du *descripteur*.  
   
- Certains champs d’en-tête et d’enregistrement ne peut pas être retournés pour environnement, connexion, instruction ou descripteur de handles. Ces handles pour lesquels un champ n’est pas applicable sont indiquées dans les sections « Champs d’en-tête » et « Champs de l’enregistrement » suivantes.  
+ Certains champs d’en-tête et d’enregistrement ne peuvent pas être renvoyés pour les handles d’environnement, de connexion, d’instruction et de descripteur. Les descripteurs pour lesquels un champ n’est pas applicable sont indiqués dans les sections champs d’en-tête et champs d’enregistrement ci-après.  
   
- Si *HandleType* est SQL_HANDLE_ENV, *gérer* peut être soit un handle d’environnement partagé ou non partagé.  
+ Si *comme HandleType* a la valeur SQL_HANDLE_ENV, *descripteur* peut être un handle d’environnement partagé ou non partagé.  
   
- Aucun des champs de diagnostic spécifiques au pilote en-tête ne doivent être associés à un handle d’environnement.  
+ Aucun champ de diagnostic d’en-tête spécifique au pilote ne doit être associé à un handle d’environnement.  
   
- Les champs d’en-tête uniquement de diagnostic qui sont définis pour un handle de descripteur sont SQL_DIAG_NUMBER et SQL_DIAG_RETURNCODE.  
+ Les seuls champs d’en-tête de diagnostic définis pour un handle de descripteur sont SQL_DIAG_NUMBER et SQL_DIAG_RETURNCODE.  
   
-## <a name="diagidentifier-argument"></a>Argument de DiagIdentifier  
- Cet argument indique l’identificateur de champ requis à partir de la structure de données de diagnostic. Si *RecNumber* est supérieur ou égal à 1, les données dans le champ décrivent les informations de diagnostic retournées par une fonction. Si *RecNumber* est 0, le champ est dans l’en-tête de la structure de données de diagnostic et par conséquent, contient les données se rapportant à l’appel de fonction qui a retourné les informations de diagnostic, pas à des informations spécifiques.  
+## <a name="diagidentifier-argument"></a>Argument DiagIdentifier  
+ Cet argument indique l’identificateur du champ requis à partir de la structure de données de diagnostic. Si *recnumber* est supérieur ou égal à 1, les données du champ décrivent les informations de diagnostic retournées par une fonction. Si *recnumber* a la valeur 0, le champ se trouve dans l’en-tête de la structure de données de diagnostic et contient par conséquent des données relatives à l’appel de fonction qui a retourné les informations de diagnostic, et non pas aux informations spécifiques.  
   
- Pilotes peuvent définir en-tête spécifique au pilote et des champs d’enregistrement dans la structure de données de diagnostic.  
+ Les pilotes peuvent définir des champs d’en-tête et d’enregistrement spécifiques au pilote dans la structure de données de diagnostic.  
   
- Un ODBC 3 *.x* application fonctionne avec un ODBC 2 *.x* pilote sera en mesure d’appeler **SQLGetDiagField** uniquement avec un *DiagIdentifier* argument de SQL_DIAG_CLASS_ORIGIN, SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_NUMBER, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME ou SQL_DIAG_SQLSTATE. Tous les autres champs de diagnostic retourne SQL_ERROR.  
+ Une application ODBC 3 *. x* fonctionnant avec un pilote ODBC 2 *. x* pourra appeler **SQLGetDiagField** uniquement avec un argument *DiagIdentifier* de SQL_DIAG_CLASS_ORIGIN, SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_NUMBER, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME ou SQL_DIAG_SQLSTATE. Tous les autres champs de diagnostic retournent SQL_ERROR.  
   
 ## <a name="header-fields"></a>Champs d’en-tête  
- Les champs d’en-tête répertoriés dans le tableau suivant peuvent être inclus dans le *DiagIdentifier* argument.  
+ Les champs d’en-tête répertoriés dans le tableau suivant peuvent être inclus dans l’argument *DiagIdentifier* .  
   
-|DiagIdentifier|Type de retour|Valeur renvoyée|  
+|DiagIdentifier|Type de retour|Retours|  
 |--------------------|-----------------|-------------|  
-|SQL_DIAG_CURSOR_ROW_COUNT|SQLLEN|Ce champ contient le nombre de lignes du curseur. Sa sémantique dépend de la **SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES2 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2, SQL_KEYSET_CURSOR_ATTRIBUTES2 et SQL_STATIC_CURSOR_ATTRIBUTES2, qui indiquent les types d’informations nombre de lignes est disponibles pour chaque type de curseur (dans les bits SQL_CA2_CRC_EXACT et SQL_CA2_CRC_APPROXIMATE).<br /><br /> Le contenu de ce champ est défini uniquement pour les descripteurs d’instruction et uniquement après avoir **SQLExecute**, **SQLExecDirect**, ou **SQLMoreResults** a été appelée. Appel **SQLGetDiagField** avec un *DiagIdentifier* de SQL_DIAG_CURSOR_ROW_COUNT sur autre qu’une instruction handle retourne SQL_ERROR.|  
-|SQL_DIAG_DYNAMIC_FUNCTION|SQLCHAR *|Il s’agit d’une chaîne qui décrit l’instruction SQL qui a exécuté la fonction sous-jacente. (Consultez « Valeurs des champs de la fonction dynamique, », plus loin dans cette section, des valeurs spécifiques.) Le contenu de ce champ est défini uniquement pour les descripteurs d’instruction et uniquement après un appel à **SQLExecute**, **SQLExecDirect**, ou **SQLMoreResults**. Appel **SQLGetDiagField** avec un *DiagIdentifier* de SQL_DIAG_DYNAMIC_FUNCTION sur autre qu’une instruction handle retourne SQL_ERROR. La valeur de ce champ n’est pas définie avant un appel à **SQLExecute** ou **SQLExecDirect**.|  
-|SQL_DIAG_DYNAMIC_FUNCTION_CODE|SQLINTEGER|Il s’agit d’un code numérique qui décrit l’instruction SQL qui a été exécutée par la fonction sous-jacente. (Consultez « Valeurs de la dynamique fonction champs, » plus loin dans cette section, pour une valeur spécifique.) Le contenu de ce champ est défini uniquement pour les descripteurs d’instruction et uniquement après un appel à **SQLExecute**, **SQLExecDirect**, ou **SQLMoreResults**. Appel **SQLGetDiagField** avec un *DiagIdentifier* de SQL_DIAG_DYNAMIC_FUNCTION_CODE sur autre qu’une instruction handle retourne SQL_ERROR. La valeur de ce champ n’est pas définie avant un appel à **SQLExecute** ou **SQLExecDirect**.|  
-|SQL_DIAG_NUMBER|SQLINTEGER|Le nombre d’enregistrements d’état qui sont disponibles pour le handle spécifié.|  
-|SQL_DIAG_RETURNCODE|SQLRETURN|Code de retour retournée par la fonction. Pour obtenir la liste des codes de retour, consultez [Codes de retour](../../../odbc/reference/develop-app/return-codes-odbc.md). Le pilote ne doit pas implémenter SQL_DIAG_RETURNCODE ; Il est toujours implémenté par le Gestionnaire de pilotes. Si aucune fonction n’a encore été appelée sur le *gérer*, SQL_SUCCESS est retournée pour SQL_DIAG_RETURNCODE.|  
-|SQL_DIAG_ROW_COUNT|SQLLEN|Le nombre de lignes affectées par un insert, delete ou mise à jour effectuée par **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos**. Elle est définie par le pilote après un *spécification de curseur* a été exécutée. Le contenu de ce champ est défini uniquement pour les descripteurs d’instruction. Appel **SQLGetDiagField** avec un *DiagIdentifier* de SQL_DIAG_ROW_COUNT sur autre qu’une instruction handle retourne SQL_ERROR. Les données dans ce champ sont également renvoyées dans le *RowCountPtr* argument de **SQLRowCount**. Les données dans ce champ sont réinitialisées après chaque appel de fonction nondiagnostic, tandis que le nombre de lignes retournées par **SQLRowCount** reste la même jusqu'à ce que l’instruction est rétablie à l’état alloué ou préparé.|  
+|SQL_DIAG_CURSOR_ROW_COUNT|SQLLEN|Ce champ contient le nombre de lignes dans le curseur. Sa sémantique dépend des types d’informations **SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES2, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2, SQL_KEYSET_CURSOR_ATTRIBUTES2 et SQL_STATIC_CURSOR_ATTRIBUTES2, qui indiquent les nombres de lignes disponibles pour chaque type de curseur (dans les bits SQL_CA2_CRC_EXACT et SQL_CA2_CRC_APPROXIMATE).<br /><br /> Le contenu de ce champ est défini uniquement pour les descripteurs d’instruction et seulement après l’appel de **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** . L’appel de **SQLGetDiagField** avec un *DiagIdentifier* de SQL_DIAG_CURSOR_ROW_COUNT sur un autre qu’un descripteur d’instruction retourne SQL_ERROR.|  
+|SQL_DIAG_DYNAMIC_FUNCTION|SQLCHAR|Il s’agit d’une chaîne qui décrit l’instruction SQL exécutée par la fonction sous-jacente. (Consultez « valeurs des champs de fonction dynamique », plus loin dans cette section, pour obtenir des valeurs spécifiques.) Le contenu de ce champ est défini uniquement pour les descripteurs d’instruction et uniquement après un appel à **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults**. L’appel de **SQLGetDiagField** avec un *DiagIdentifier* de SQL_DIAG_DYNAMIC_FUNCTION sur un autre qu’un descripteur d’instruction retourne SQL_ERROR. La valeur de ce champ est non définie avant un appel à **SQLExecute** ou à **SQLExecDirect**.|  
+|SQL_DIAG_DYNAMIC_FUNCTION_CODE|SQLINTEGER|Il s’agit d’un code numérique qui décrit l’instruction SQL exécutée par la fonction sous-jacente. (Consultez « valeurs des champs de fonction dynamique », plus loin dans cette section, pour obtenir une valeur spécifique.) Le contenu de ce champ est défini uniquement pour les descripteurs d’instruction et uniquement après un appel à **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults**. L’appel de **SQLGetDiagField** avec un *DiagIdentifier* de SQL_DIAG_DYNAMIC_FUNCTION_CODE sur un autre qu’un descripteur d’instruction retourne SQL_ERROR. La valeur de ce champ est non définie avant un appel à **SQLExecute** ou à **SQLExecDirect**.|  
+|SQL_DIAG_NUMBER|SQLINTEGER|Nombre d’enregistrements d’état disponibles pour le handle spécifié.|  
+|SQL_DIAG_RETURNCODE|SQLRETURN|Code de retour retourné par la fonction. Pour obtenir la liste des codes de retour, consultez [codes de retour](../../../odbc/reference/develop-app/return-codes-odbc.md). Le pilote n’a pas besoin d’implémenter SQL_DIAG_RETURNCODE ; Il est toujours implémenté par le gestionnaire de pilotes. Si aucune fonction n’a encore été appelée sur le *handle*, SQL_SUCCESS est retourné pour SQL_DIAG_RETURNCODE.|  
+|SQL_DIAG_ROW_COUNT|SQLLEN|Nombre de lignes affectées par une insertion, une suppression ou une mise à jour effectuée par **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos**. Elle est définie par le pilote après l’exécution d’une *spécification de curseur* . Le contenu de ce champ est défini uniquement pour les descripteurs d’instruction. L’appel de **SQLGetDiagField** avec un *DiagIdentifier* de SQL_DIAG_ROW_COUNT sur un autre qu’un descripteur d’instruction retourne SQL_ERROR. Les données de ce champ sont également retournées dans l’argument *RowCountPtr* de **SQLRowCount**. Les données de ce champ sont réinitialisées après chaque appel de fonction non-diagnostic, tandis que le nombre de lignes retourné par **SQLRowCount** reste le même jusqu’à ce que l’instruction soit rétablie à l’État prepared ou allocated.|  
   
 ## <a name="record-fields"></a>Champs d’enregistrement  
- Les champs d’enregistrement répertoriés dans le tableau suivant peuvent être inclus dans le *DiagIdentifier* argument.  
+ Les champs d’enregistrement répertoriés dans le tableau suivant peuvent être inclus dans l’argument *DiagIdentifier* .  
   
-|DiagIdentifier|Type de retour|Valeur renvoyée|  
+|DiagIdentifier|Type de retour|Retours|  
 |--------------------|-----------------|-------------|  
-|SQL_DIAG_CLASS_ORIGIN|SQLCHAR *|Chaîne qui indique le document qui définit la partie de la classe de la valeur SQLSTATE dans cet enregistrement. Sa valeur est « ISO 9075 » pour tous les SQLSTATE définies par Open Group et l’interface de niveau d’appel ISO. Pour SQLSTATE de ODBC spécifiques (tous ceux dont la classe SQLSTATE est « Mi »), sa valeur est « ODBC 3.0 ».|  
-|SQL_DIAG_COLUMN_NUMBER|SQLINTEGER|Si le champ SQL_DIAG_ROW_NUMBER est un numéro de ligne valide dans un ensemble de lignes ou un ensemble de paramètres, ce champ contient la valeur qui représente le numéro de colonne du jeu de résultats ou le numéro de paramètre dans le jeu de paramètres. Jeu de résultats colonne numéros commencent toujours à 1 ; Si cet enregistrement d’état se rapporte à une colonne de signet, le champ peut être zéro. Numéros de paramètres commencent à 1. Il a la valeur SQL_NO_COLUMN_NUMBER si l’enregistrement de l’état n’est pas associé à un numéro de colonne ou paramètre. Si le pilote ne peut pas déterminer le numéro de colonne ou paramètre qui est associé à cet enregistrement, ce champ a la valeur SQL_COLUMN_NUMBER_UNKNOWN.<br /><br /> Le contenu de ce champ est défini uniquement pour les descripteurs d’instruction.|  
-|SQL_DIAG_CONNECTION_NAME|SQLCHAR *|Chaîne qui indique le nom de la connexion concerne l’enregistrement de diagnostic. Ce champ est définie par le pilote. Pour les structures de données de diagnostic associés au handle d’environnement et pour les diagnostics ne sont pas liées à n’importe quelle connexion, ce champ est une chaîne de longueur nulle.|  
-|SQL_DIAG_MESSAGE_TEXT|SQLCHAR *|Un message d’information sur l’erreur ou l’avertissement. Ce champ est mis en forme comme décrit dans [Messages de Diagnostic](../../../odbc/reference/develop-app/diagnostic-messages.md). Il n’existe aucune longueur maximale pour le texte du message de diagnostic.|  
-|SQL_DIAG_NATIVE|SQLINTEGER|Un code d’erreur natif spécifique à la source de données/pilote. S’il n’existe aucun code d’erreur natif, le pilote retourne 0.|  
-|SQL_DIAG_ROW_NUMBER|SQLLEN|Ce champ contient le numéro de ligne dans l’ensemble de lignes, ou le numéro de paramètre dans le jeu de paramètres, à laquelle l’enregistrement de l’état est associé. Les numéros de ligne et de paramètre commencent à 1. Ce champ a la valeur SQL_NO_ROW_NUMBER si cet enregistrement de l’état n’est pas associé à un numéro de ligne ou un numéro de paramètre. Si le pilote ne peut pas déterminer le numéro de ligne ou le numéro de paramètre qui est associé à cet enregistrement, ce champ a la valeur SQL_ROW_NUMBER_UNKNOWN.<br /><br /> Le contenu de ce champ est défini uniquement pour les descripteurs d’instruction.|  
-|SQL_DIAG_SERVER_NAME|SQLCHAR *|Chaîne qui indique le nom du serveur associé à l’enregistrement de diagnostic. Il est identique à la valeur retournée par un appel à **SQLGetInfo** avec l’option SQL_DATA_SOURCE_NAME. Pour les structures de données de diagnostic associés au handle d’environnement et pour les diagnostics ne sont pas liées à n’importe quel serveur, ce champ est une chaîne de longueur nulle.|  
-|SQL_DIAG_SQLSTATE|SQLCHAR *|Un code de diagnostic SQLSTATE cinq caractères. Pour plus d’informations, consultez [SQLSTATEs](../../../odbc/reference/develop-app/sqlstates.md).|  
-|SQL_DIAG_SUBCLASS_ORIGIN|SQLCHAR *|Une chaîne avec le même format et les valeurs valides en tant que SQL_DIAG_CLASS_ORIGIN, qui identifie la partie de définition de la partie de la sous-classe du code SQLSTATE. Voici le SQLSTATE de ODBC spécifique pour lequel « ODBC 3.0 » est retournée :<br /><br /> 01 S 00, 01 S 01, 01 S 02, 01S06, 01 S 07, 07 S 01, 08 S 01, 21S01, 21S02, 25 S 01, 25S02, 25S03, 42S01, 42 S 02, 42S11, 42S12, 42S21, 42S22, HY095, HY097, HY098, HY099, HY100, HY101, HY105, HY107, HY109, HY110, HY111, HYT00, HYT01, IM001, IM002, IM003, IM004, IM005, IM006, IM007, IM008, IM010, IM011, IM012.|  
+|SQL_DIAG_CLASS_ORIGIN|SQLCHAR|Chaîne qui indique le document qui définit la partie classe de la valeur SQLSTATE dans cet enregistrement. Sa valeur est « ISO 9075 » pour toutes les valeurs SQLSTATE définies par Open Group et l’interface ISO au niveau de l’appel. Pour les valeurs SQLSTATE spécifiques à ODBC (toutes celles dont la classe SQLSTATE est « IM »), sa valeur est « ODBC 3,0 ».|  
+|SQL_DIAG_COLUMN_NUMBER|SQLINTEGER|Si le champ SQL_DIAG_ROW_NUMBER est un numéro de ligne valide dans un ensemble de lignes ou un ensemble de paramètres, ce champ contient la valeur qui représente le numéro de colonne dans le jeu de résultats ou le numéro de paramètre dans le jeu de paramètres. Les numéros de colonne du jeu de résultats commencent toujours à 1 ; Si cet enregistrement d’État appartient à une colonne de signets, le champ peut être égal à zéro. Les numéros de paramètres commencent à 1. Elle a la valeur SQL_NO_COLUMN_NUMBER si l’enregistrement d’État n’est pas associé à un numéro de colonne ou à un numéro de paramètre. Si le pilote ne peut pas déterminer le numéro de colonne ou le numéro de paramètre auquel cet enregistrement est associé, ce champ a la valeur SQL_COLUMN_NUMBER_UNKNOWN.<br /><br /> Le contenu de ce champ est défini uniquement pour les descripteurs d’instruction.|  
+|SQL_DIAG_CONNECTION_NAME|SQLCHAR|Chaîne qui indique le nom de la connexion à laquelle l’enregistrement de diagnostic est associé. Ce champ est défini par le pilote. Pour les structures de données de diagnostic associées au handle d’environnement et pour les diagnostics qui ne sont associées à aucune connexion, ce champ est une chaîne de longueur nulle.|  
+|SQL_DIAG_MESSAGE_TEXT|SQLCHAR|Message d’information sur l’erreur ou l’avertissement. Ce champ est mis en forme comme décrit dans la section [messages de diagnostic](../../../odbc/reference/develop-app/diagnostic-messages.md). Il n’y a pas de longueur maximale pour le texte du message de diagnostic.|  
+|SQL_DIAG_NATIVE|SQLINTEGER|Code d’erreur natif propre à la source de données/pilote. S’il n’existe aucun code d’erreur natif, le pilote retourne 0.|  
+|SQL_DIAG_ROW_NUMBER|SQLLEN|Ce champ contient le numéro de ligne dans l’ensemble de lignes, ou le numéro de paramètre dans le jeu de paramètres, avec lequel l’enregistrement d’État est associé. Les numéros de ligne et les numéros de paramètres commencent par 1. Ce champ a la valeur SQL_NO_ROW_NUMBER si cet enregistrement d’État n’est pas associé à un numéro de ligne ou un numéro de paramètre. Si le pilote ne peut pas déterminer le numéro de ligne ou le numéro de paramètre auquel cet enregistrement est associé, la valeur de ce champ est SQL_ROW_NUMBER_UNKNOWN.<br /><br /> Le contenu de ce champ est défini uniquement pour les descripteurs d’instruction.|  
+|SQL_DIAG_SERVER_NAME|SQLCHAR|Chaîne qui indique le nom du serveur auquel l’enregistrement de diagnostic est associé. Il est identique à la valeur retournée pour un appel à **SQLGetInfo** avec l’option SQL_DATA_SOURCE_NAME. Pour les structures de données de diagnostic associées au handle d’environnement et pour les diagnostics qui ne sont associées à aucun serveur, ce champ est une chaîne de longueur nulle.|  
+|SQL_DIAG_SQLSTATE|SQLCHAR|Code de diagnostic SQLSTATE à cinq caractères. Pour plus d’informations, consultez [sqlstates](../../../odbc/reference/develop-app/sqlstates.md).|  
+|SQL_DIAG_SUBCLASS_ORIGIN|SQLCHAR|Chaîne avec le même format et les mêmes valeurs valides que SQL_DIAG_CLASS_ORIGIN, qui identifie la partie de définition de la partie sous-classe du code SQLSTATE. Les SQLSTATEs spécifiques à ODBC pour lesquelles « ODBC 3,0 » est retourné sont les suivantes :<br /><br /> 01S00, 01S01, 01S02 NE, 01S06, 01S07, 07S01, 08S01, 21S01, 21S02, 25S01, 25S02, 25S03, 42S01, 42S02, 42S11, 42S12, 42S21, 42S22, HY095, HY097, HY098, HY099, HY100, HY101, HY105, HY107, HY109, HY110, HY111, HYT00, HYT01, IM001, IM002, IM003, IM004, IM005, IM006, IM007, IM008, IM010, IM011, IM012.|  
   
-## <a name="values-of-the-dynamic-function-fields"></a>Valeurs des champs dynamiques (fonction)  
- Le tableau suivant décrit les valeurs de SQL_DIAG_DYNAMIC_FUNCTION et SQL_DIAG_DYNAMIC_FUNCTION_CODE qui s’appliquent à chaque type d’instruction SQL exécutée par un appel à **SQLExecute** ou **SQLExecDirect**. Le pilote peut ajouter des valeurs définies par le pilote à ceux répertoriés.  
+## <a name="values-of-the-dynamic-function-fields"></a>Valeurs des champs de fonction dynamique  
+ Le tableau suivant décrit les valeurs de SQL_DIAG_DYNAMIC_FUNCTION et SQL_DIAG_DYNAMIC_FUNCTION_CODE qui s’appliquent à chaque type d’instruction SQL exécutée par un appel à **SQLExecute** ou **SQLExecDirect**. Le pilote peut ajouter des valeurs définies par le pilote à celles listées.  
   
-|Instruction SQL<br /><br /> Exécutée|Valeur de<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION|Valeur de<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION_CODE|  
+|Instruction SQL<br /><br /> effectuées|Valeur de <br /><br /> SQL_DIAG_DYNAMIC_FUNCTION|Valeur de <br /><br /> SQL_DIAG_DYNAMIC_FUNCTION_CODE|  
 |--------------------------------|-----------------------------------------------|-----------------------------------------------------|  
-|*domaine-instruction ALTER*|« ALTER DOMAINE »|SQL_DIAG_ALTER_DOMAIN|  
-|*alter-table-statement*|« ALTER TABLE »|SQL_DIAG_ALTER_TABLE|  
-|*assertion-definition*|« CREATE ASSERTION »|SQL_DIAG_CREATE_ASSERTION|  
-|*character-set-definition*|« CRÉER LE JEU DE CARACTÈRES »|SQL_DIAG_CREATE_CHARACTER_SET|  
-|*collation-definition*|« CRÉER UN CLASSEMENT »|SQL_DIAG_CREATE_COLLATION|  
-|*domainn-definition*|« CRÉER UN DOMAINE »|SQL_DIAG_CREATE_DOMAIN|
-|*create-index-statement*|« CREATE INDEX »|SQL_DIAG_CREATE_INDEX|  
-|*create-table-statement*|« CREATE TABLE »|SQL_DIAG_CREATE_TABLE|  
-|*create-view-statement*|« CREATE VIEW »|SQL_DIAG_CREATE_VIEW|  
-|*spécification de curseur*|« SELECT CURSEUR »|SQL_DIAG_SELECT_CURSOR|  
-|*delete-statement-positioned*|« CURSEUR DYNAMIQUE DE SUPPRESSION »|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
-|*delete-statement-searched*|« DELETE WHERE »|SQL_DIAG_DELETE_WHERE|  
-|*drop-assertion-statement*|« DROP ASSERTION »|SQL_DIAG_DROP_ASSERTION|  
-|*drop-character-set-stmt*|« JEU DE CARACTÈRES DE DÉPÔT »|SQL_DIAG_DROP_CHARACTER_SET|  
-|*drop-collation-statement*|« DROP CLASSEMENT »|SQL_DIAG_DROP_COLLATION|  
-|*instruction DROP-domaine*|« DROP DOMAINE »|SQL_DIAG_DROP_DOMAIN|  
-|*drop-index-statement*|« DROP INDEX »|SQL_DIAG_DROP_INDEX|  
-|*drop-schema-statement*|« DROP SCHEMA »|SQL_DIAG_DROP_SCHEMA|  
-|*instruction DROP-table*|« DROP TABLE »|SQL_DIAG_DROP_TABLE|  
-|*drop-translation-statement*|« DÉPÔT TRADUCTION »|SQL_DIAG_DROP_TRANSLATION|  
-|*instruction DROP-vue*|« DROP VIEW »|SQL_DIAG_DROP_VIEW|  
-|*grantstatement*|« GRANT »|SQL_DIAG_GRANT|
-|*instruction d’insertion*|« INSERT »|SQL_DIAG_INSERT|  
-|*Extension de procédure ODBC*|« APPELER »|APPEL DE SQL_DIAG_|  
-|*instruction REVOKE*|« REVOKE »|SQL_DIAG_REVOKE|  
-|*schema-definition*|« CRÉER UN SCHÉMA »|SQL_DIAG_CREATE_SCHEMA|  
-|*translation-definition*|« CRÉER LA TRADUCTION »|SQL_DIAG_CREATE_TRANSLATION|  
-|*update-statement-positioned*|« MISE À JOUR DYNAMIQUE CURSOR »|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
-|*update-statement-searched*|« UPDATE WHERE »|SQL_DIAG_UPDATE_WHERE|  
-|Inconnu|*chaîne vide*|SQL_DIAG_UNKNOWN_STATEMENT|  
+|*ALTER-Domain-Statement*|« ALTER DOMAIN »|SQL_DIAG_ALTER_DOMAIN|  
+|*ALTER-TABLE-Statement*|« ALTER TABLE »|SQL_DIAG_ALTER_TABLE|  
+|*assertion-définition*|« CRÉER UNE ASSERTION »|SQL_DIAG_CREATE_ASSERTION|  
+|*définition de jeu de caractères*|« CRÉER UN JEU DE CARACTÈRES »|SQL_DIAG_CREATE_CHARACTER_SET|  
+|*classement-définition*|« CRÉER UN CLASSEMENT »|SQL_DIAG_CREATE_COLLATION|  
+|*définition de domaine*|« CRÉER UN DOMAINE »|SQL_DIAG_CREATE_DOMAIN|
+|*instruction CREATE-index*|« CRÉER UN INDEX »|SQL_DIAG_CREATE_INDEX|  
+|*instruction CREATE-TABLE*|« CREATE TABLE »|SQL_DIAG_CREATE_TABLE|  
+|*Create-View-Statement*|« CRÉER UNE VUE »|SQL_DIAG_CREATE_VIEW|  
+|*spécification de curseur*|« SÉLECTIONNER UN CURSEUR »|SQL_DIAG_SELECT_CURSOR|  
+|*Delete-instruction-positionnée*|« CURSEUR DE SUPPRESSION DYNAMIQUE »|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
+|*instruction DELETE-recherchée*|« SUPPRIMER OÙ »|SQL_DIAG_DELETE_WHERE|  
+|*Drop-assertion-Statement*|« DROP ASSERTION »|SQL_DIAG_DROP_ASSERTION|  
+|*Drop-Character-Set-stmt*|« SUPPRIMER LE JEU DE CARACTÈRES »|SQL_DIAG_DROP_CHARACTER_SET|  
+|*Drop-collation-Statement*|« SUPPRIMER LE CLASSEMENT »|SQL_DIAG_DROP_COLLATION|  
+|*Drop-Domain-Statement*|« SUPPRIMER UN DOMAINE »|SQL_DIAG_DROP_DOMAIN|  
+|*Drop-Index-Statement*|« DROP INDEX »|SQL_DIAG_DROP_INDEX|  
+|*Drop-Schema-Statement*|« SUPPRIMER LE SCHÉMA »|SQL_DIAG_DROP_SCHEMA|  
+|*drop-table-Statement*|« DROP TABLE »|SQL_DIAG_DROP_TABLE|  
+|*Drop-translation-Statement*|« DROP TRANSLATION »|SQL_DIAG_DROP_TRANSLATION|  
+|*Drop-View-Statement*|« DROP VIEW »|SQL_DIAG_DROP_VIEW|  
+|*grantstatement*|LICENCE|SQL_DIAG_GRANT|
+|*instruction INSERT*|Insérer|SQL_DIAG_INSERT|  
+|*ODBC-Procedure-extension*|INVOQU|APPEL SQL_DIAG_|  
+|*Revoke-Statement*|SUPPRIMÉS|SQL_DIAG_REVOKE|  
+|*définition de schéma*|« CRÉER UN SCHÉMA »|SQL_DIAG_CREATE_SCHEMA|  
+|*traduction-définition*|« CRÉER UNE TRADUCTION »|SQL_DIAG_CREATE_TRANSLATION|  
+|*mise à jour-instruction-positionnée*|« CURSEUR DE MISE À JOUR DYNAMIQUE »|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
+|*Update-instruction-recherchée*|« METTRE À JOUR OÙ »|SQL_DIAG_UPDATE_WHERE|  
+|Unknown|*chaîne vide*|SQL_DIAG_UNKNOWN_STATEMENT|  
 
 <!--
 These two malformed table rows were fixed by educated GUESS only.
@@ -245,34 +245,34 @@ n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
 
 ## <a name="sequence-of-status-records"></a>Séquence d’enregistrements d’état
 
- Enregistrements d’état sont positionnés dans une séquence basée sur le numéro de ligne et le type du diagnostic. Le Gestionnaire de pilotes détermine l’ordre final dans lequel retourner les enregistrements d’état qu’il génère. Le pilote détermine l’ordre final dans lequel retourner les enregistrements d’état qu’il génère.  
+ Les enregistrements d’État sont positionnés dans une séquence basée sur le numéro de ligne et le type de diagnostic. Le gestionnaire de pilotes détermine l’ordre final dans lequel retourner les enregistrements d’État qu’il génère. Le pilote détermine l’ordre final dans lequel retourner les enregistrements d’État qu’il génère.  
   
- Si les enregistrements de diagnostic sont publiées par le Gestionnaire de pilotes et le pilote, le Gestionnaire de pilotes est responsable de leur classement.  
+ Si les enregistrements de diagnostic sont publiés à la fois par le gestionnaire de pilotes et par le pilote, le gestionnaire de pilotes est chargé de les classer.  
   
- S’il existe deux ou plusieurs enregistrements d’état, la séquence des enregistrements est déterminée par le numéro de ligne. Les règles suivantes s’appliquent à la détermination de la séquence des enregistrements de diagnostic en ligne :  
+ S’il y a deux ou plusieurs enregistrements d’État, la séquence des enregistrements est déterminée en premier par numéro de ligne. Les règles suivantes s’appliquent à la détermination de la séquence d’enregistrements de diagnostic par ligne :  
   
--   Les enregistrements qui ne correspondent pas à toutes les lignes apparaissent devant des enregistrements qui correspondent à une ligne particulière, étant donné que SQL_NO_ROW_NUMBER est défini comme étant -1.  
+-   Les enregistrements qui ne correspondent à aucune ligne apparaissent devant les enregistrements qui correspondent à une ligne particulière, car SQL_NO_ROW_NUMBER est défini sur-1.  
   
--   Les enregistrements pour lesquels le nombre de lignes est inconnu apparaissent devant tous les autres enregistrements, étant donné que SQL_ROW_NUMBER_UNKNOWN est défini comme étant -2.  
+-   Les enregistrements pour lesquels le numéro de ligne est inconnu apparaissent devant tous les autres enregistrements, car SQL_ROW_NUMBER_UNKNOWN est défini sur-2.  
   
--   Pour tous les enregistrements qui se rapportent à des lignes spécifiques, les enregistrements sont triés par la valeur dans le champ SQL_DIAG_ROW_NUMBER. Toutes les erreurs et avertissements de la première ligne affectés sont répertoriés, et puis toutes les erreurs et avertissements de la prochaine ligne affectée et ainsi de suite.  
+-   Pour tous les enregistrements qui se rapportent à des lignes spécifiques, les enregistrements sont triés selon la valeur du champ SQL_DIAG_ROW_NUMBER. Toutes les erreurs et tous les avertissements de la première ligne affectée sont répertoriés, puis toutes les erreurs et tous les avertissements de la ligne suivante sont affectés, et ainsi de suite.  
   
 > [!NOTE]
->  Le 3 ODBC *.x* Gestionnaire de pilotes ne trie pas les enregistrements d’état dans la file d’attente diagnostic si 01 s 01 SQLSTATE (erreur de ligne) est retournée par un 2 ODBC *.x* pilote ou si 01 s 01 SQLSTATE (erreur de ligne) est retournée par une application ODBC 3 *.x* pilote lorsque **SQLExtendedFetch** est appelée ou **SQLSetPos** est appelée sur un curseur qui a été placé avec **SQLExtendedFetch** .  
+>  Le gestionnaire de pilotes ODBC 3 *. x* ne commande pas les enregistrements d’État dans la file d’attente de diagnostic si SQLSTATE 01S01 (erreur dans la ligne) est retourné par un pilote ODBC 2 *. x* ou si SQLSTATE 01S01 (erreur dans la ligne) est retourné par un pilote ODBC 3 *. x* quand **SQLExtendedFetch** est appelé ou que **SQLSetPos** est appelé sur un curseur positionné avec **SQLExtendedFetch**.  
   
- Dans chaque ligne, ou pour tous les enregistrements qui ne correspondent pas à une ligne ou pour lesquelles le nombre de lignes est inconnu, ou pour tous les enregistrements avec un nombre de lignes égal à SQL_NO_ROW_NUMBER, le premier enregistrement répertorié est déterminé à l’aide d’un ensemble de règles de tri. Après le premier enregistrement, l’ordre des enregistrements qui affectent une ligne n’est pas défini. Une application ne peut pas supposer que les erreurs précédent avertissements après le premier enregistrement. Applications doivent analyser la structure de données de diagnostic complet pour obtenir des informations complètes sur un appel à une fonction.  
+ Dans chaque ligne, ou pour tous les enregistrements qui ne correspondent pas à une ligne ou pour lesquels le numéro de ligne est inconnu, ou pour tous les enregistrements dont le numéro de ligne est égal à SQL_NO_ROW_NUMBER, le premier enregistrement indiqué est déterminé à l’aide d’un ensemble de règles de tri. Après le premier enregistrement, l’ordre des autres enregistrements affectant une ligne n’est pas défini. Une application ne peut pas supposer que les erreurs précèdent les avertissements après le premier enregistrement. Les applications doivent analyser l’intégralité de la structure de données de diagnostic pour obtenir des informations complètes sur l’échec d’un appel à une fonction.  
   
- Les règles suivantes sont utilisées pour déterminer le premier enregistrement dans une ligne. L’enregistrement avec le rang le plus élevé est le premier enregistrement. La source d’un enregistrement (Gestionnaire de pilotes, pilotes, passerelle et ainsi de suite) constitue toutefois pas lorsque les enregistrements de classement.  
+ Les règles suivantes sont utilisées pour déterminer le premier enregistrement au sein d’une ligne. L’enregistrement avec le rang le plus élevé est le premier enregistrement. La source d’un enregistrement (gestionnaire de pilotes, pilote, passerelle, etc.) n’est pas prise en compte lors du classement des enregistrements.  
   
--   **Erreurs** enregistrements d’état qui décrivent les erreurs ont le rang le plus élevé. Les règles suivantes sont appliquées pour trier les erreurs :  
+-   **Erreurs** Les enregistrements d’État qui décrivent les erreurs ont le rang le plus élevé. Les règles suivantes sont appliquées aux erreurs de tri :  
   
-    -   Les enregistrements qui indiquent un échec de la transaction ou l’échec de la transaction possible outrank tous les autres enregistrements.  
+    -   Les enregistrements qui indiquent un échec de transaction ou un échec de transaction possible dérangent tous les autres enregistrements.  
   
-    -   Si deux ou plusieurs enregistrements décrivent la condition d’erreur, SQLSTATE défini par la spécification Open groupe CLI (classes 03 via HZ) outrank SQLSTATE de ODBC et pilote définis.  
+    -   Si deux ou plusieurs enregistrements décrivent la même condition d’erreur, alors les SQLSTATEs définis par la spécification de l’interface CLI de groupe ouverte (classes 03 à HZ) dérangent les SQLSTATEs définies par ODBC et par le pilote.  
   
--   **Les valeurs de données non défini par l’implémentation** enregistrements d’état qui décrivent les valeurs des données de non définis par le pilote (classe 02) ont la deuxième rang le plus élevé.  
+-   **Aucune valeur de données définie par l’implémentation** Les enregistrements d’État qui décrivent les valeurs de données non définies par le pilote (classe 02) ont le deuxième rang le plus élevé.  
   
--   **Avertissements** enregistrements d’état qui décrivent les avertissements (classe 01) ont le rang le plus bas. Si deux ou plusieurs enregistrements décrivent la même condition d’avertissement, SQLSTATE défini par la spécification Open CLI de groupe, l’avertissement outrank SQLSTATE définies par ODBC et définis par le pilote.  
+-   **Avertissements** Les enregistrements d’État qui décrivent les avertissements (classe 01) ont le rang le plus bas. Si au moins deux enregistrements décrivent la même condition d’avertissement, les SQLSTATE d’avertissement définies par la spécification CLI de groupe ouverte sont prioritaires par rapport aux SQLSTATEs définies par ODBC et par le pilote.  
   
 ## <a name="related-functions"></a>Fonctions connexes  
   
@@ -281,5 +281,5 @@ n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
 |Obtention de plusieurs champs d’une structure de données de diagnostic|[SQLGetDiagRec, fonction](sqlgetdiagrec-function.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence de l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Informations de référence sur l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Fichiers d’en-tête ODBC](../../../odbc/reference/install/odbc-header-files.md)

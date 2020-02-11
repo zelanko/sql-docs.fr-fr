@@ -1,5 +1,5 @@
 ---
-title: Sélectionner des Tables et vues (SSAS) | Microsoft Docs
+title: Sélectionner des tables et des vues (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ff8ada00af8b70659a19f863a52a5f1005e20b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069239"
 ---
 # <a name="select-tables-and-views-ssas"></a>Sélectionner des tables et des vues (SSAS)
@@ -27,7 +27,7 @@ ms.locfileid: "66069239"
  Pour les sources de données qui utilisent l'Authentification Windows, les informations d'identification de l'utilisateur actuel sont utilisées pour extraire les tables et les vues dans la boîte de dialogue Sélectionner des tables et des vues. Pour d'autres sources de données, les informations d'identification fournies dans la chaîne de connexion sont utilisées pour extraire les données.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
- **Server**  
+ **Serveur**  
  Affiche le serveur auquel vous êtes connecté.  
   
  **Sauvegarde de la base de données**  
@@ -48,10 +48,10 @@ ms.locfileid: "66069239"
  **Détails du filtre**  
  Quand un filtre a été appliqué aux données importées, affiche le filtre d’importation de données dans la boîte de dialogue **Détails du filtre**. Pour plus d’informations, consultez [Détails du filtre &#40;SSAS&#41;](filter-details-ssas.md).  
   
- **Aperçu et filtrer**  
+ **Afficher un aperçu et filtrer**  
  Affiche la boîte de dialogue **Aperçu de la table sélectionnée** qui permet d’appliquer un filtre aux données importées. Pour plus d’informations, consultez [Aperçu de la table sélectionnée &#40;SSAS&#41;](preview-selected-table-ssas.md).  
   
- **Sélectionner les Tables associées**  
+ **Sélectionner les tables associées**  
  Sélectionne pour l'importation les tables et les vues associées aux tables et aux vues que vous avez déjà sélectionnées.  
   
   

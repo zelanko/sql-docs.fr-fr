@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 524e6d8e5ec987a20d693cb1f7e06b30bc27c0b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876691"
 ---
 # <a name="backup-device-media-contents-page"></a>Unité de sauvegarde (page Contenu du support)
@@ -31,7 +31,7 @@ ms.locfileid: "62876691"
 ## <a name="options"></a>Options  
  Affichez des informations sur le support individuel, le support de sauvegarde et les jeux de sauvegarde.  
   
- **Support**  
+ **Média**  
  Disque ou jeu de bandes sur lequel sont stockées les informations de sauvegarde.  
   
  **Séquence du support**  
@@ -58,14 +58,14 @@ ms.locfileid: "62876691"
 |En-tête|Valeurs|  
 |------------|------------|  
 |**Nom**|Nom du jeu de sauvegarde.|  
-|**Type**|L’objet sauvegardé : Base de données, fichier, ou  *\<vide >* (pour les journaux des transactions).|  
-|**Composant**|Le type de sauvegarde effectué : Complète, différentielle ou journal des transactions.|  
-|**Server**|Nom de l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui a effectué l'opération de sauvegarde.|  
+|**Type**|Objet sauvegardé : Base de données, Fichier ou *\<vide>* (pour les journaux des transactions).|  
+|**Composant**|Type de sauvegarde effectué : Complète, Différentielle ou Journal des transactions.|  
+|**Serveur**|Nom de l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui a effectué l'opération de sauvegarde.|  
 |**Sauvegarde de la base de données**|Le nom de la base de données qui a été sauvegardée.|  
 |**Position**|La position du jeu de sauvegarde dans le volume.|  
 |**Date**|Date et heure de fin de l'opération de sauvegarde, exprimée d'après les paramètres régionaux du client.|  
 |**Taille**|Taille du jeu de sauvegarde, exprimée en octets.|  
-|**Nom d'utilisateur**|Nom de l'utilisateur qui a exécuté l'opération de sauvegarde.|  
+|**Nom d’utilisateur**|Nom de l'utilisateur qui a exécuté l'opération de sauvegarde.|  
 |**Expiration**|La date et l'heure d'expiration du jeu de sauvegarde.|  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  

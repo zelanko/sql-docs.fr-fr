@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6421b0a7d6703e2a5d126aa83b227166492558a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211150"
 ---
 # <a name="sql-server-browser-properties-service-tab"></a>Propriétés de SQL Server Browser (onglet Service)
-  Le programme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser s'exécute sur le serveur en tant que service. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser est à l'écoute des demandes entrantes pour les ressources [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et fournit des informations sur les instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installées sur l'ordinateur.  
+  Le programme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser s'exécute sur le serveur en tant que service. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser écoute les demandes entrantes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les ressources et fournit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des informations sur les instances installées sur l’ordinateur.  
   
  L'onglet **Service** de la boîte de dialogue **Propriétés de SQL Server Browser** vous permet d'afficher les options suivantes. Toutes les propriétés, à l’exception de **Mode de démarrage** , sont accessibles en lecture seule.  
   
@@ -26,34 +26,34 @@ ms.locfileid: "68211150"
  **Chemin d’accès binaire**  
  Affiche l'emplacement des fichiers programme utilisés par ce service.  
   
- **Contrôle d’erreurs**  
+ **Contrôle d’erreur**  
  1 indique `SERVICE_ERROR_NORMAL`. Si le lancement du service échoue pendant le démarrage de l'ordinateur, le programme de démarrage consigne l'erreur et affiche une boîte de message, mais poursuit l'opération de démarrage. Cette valeur ne peut pas être modifiée.  
   
  **Code de sortie**  
  Lorsqu'une erreur se produit, le numéro d'erreur apparaît dans cette zone. Pour dépanner des incidents, recherchez ce numéro dans la Base de connaissances [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou communiquez-le au personnel en charge du support technique.  
   
- **Host Name**  
+ **Nom d’hôte**  
  Affiche le nom de l’ordinateur ou du cluster exécutant le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser.  
   
  **Nom**  
  Indique le nom d'affichage du service.  
   
- **ID de processus**  
+ **ID du processus**  
  Affiche l'ID de processus Windows.  
   
  **Type de service**  
- Affiche le type de service fourni aux processus appelants. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe plusieurs services.  
+ Affiche le type de service fourni aux processus appelants. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installe plusieurs services.  
   
  **Mode de démarrage**  
  Les options disponibles pour ce service sont les suivantes :  
   
--   Manuelle : Ce service ne démarre pas automatiquement lorsque l’ordinateur démarre. Vous devez démarrer le service à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d'un autre outil.  
+-   Manuel : ce service n'est pas automatiquement lancé au démarrage de l'ordinateur. Vous devez démarrer le service à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d'un autre outil.  
   
--   Automatique : Ce service essaie de se lancer au démarrage de cet ordinateur.  
+-   Automatique : ce service essaie de se lancer au démarrage de cet ordinateur.  
   
--   Désactivé : Ce service ne peut pas être démarré.  
+-   Désactivé : ce service ne peut pas être démarré.  
   
- **État**  
+ **State**  
  Indique si ce service est en cours d'exécution, arrêté ou désactivé. « **…** » indique qu’un changement d’état est en attente.  
   
 ## <a name="see-also"></a>Voir aussi  

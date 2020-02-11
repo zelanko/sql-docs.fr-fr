@@ -15,17 +15,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b8f47fec03c992612f0139904bf869db549ec9b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184556"
 ---
 # <a name="maintenance-plan-design-tab"></a>Plan de maintenance, onglet Conception
   Utilisez **Plan de maintenance (onglet Conception)** pour spécifier les propriétés d’un plan de maintenance et de ses sous-plans. Faites glisser des tâches de la barre d'outils jusqu'au concepteur de plan. Cliquez avec le bouton droit sur des groupes de tâches pour créer des branchements de chemins d'exécution. Les plans de maintenance sont enregistrés en tant que packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui sont exécutés par les travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Options  
- **Ajouter le sous-plan**  
+ **Ajouter un sous-plan**  
  Ajoutez un sous-plan que vous pouvez configurer.  
   
  **Propriétés du sous-plan**  
@@ -40,10 +40,10 @@ ms.locfileid: "63184556"
  **Supprimer la planification**  
  Supprimez une planification dans les planifications sélectionnées.  
   
- **Gérer les connexion**  
+ **Gérer les connexions**  
  Affichez la boîte de dialogue **Gérer les connexions** . Permet d'ajouter des connexions d'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supplémentaires au plan de maintenance. Chaque tâche de maintenance dans l'éditeur de sous-plan peut utiliser ces connexions. Lors de son exécution, le plan de maintenance établit une connexion entre le serveur du plan de maintenance et les serveurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifiés, à l'aide des informations d'identification de connexion.  
   
- **Création de rapport et enregistrement**  
+ **Création de rapports et enregistrement**  
  Affichez la boîte de dialogue **Création de rapport et enregistrement** qui permet de gérer les rapports relatifs à l’activité du plan de maintenance et de configurer l’enregistrement sur le serveur local ou distant.  
   
  **Serveurs**  
@@ -89,25 +89,25 @@ ms.locfileid: "63184556"
  **Modifier**  
  Ouvre la boîte de dialogue de propriétés de la tâche.  
   
- **Désactiver**  
+ **Disable**  
  Rend la tâche provisoirement indisponible.  
   
  **Activer**  
  Restaure une tâche désactivée.  
   
- **Grouper**  
+ **Groupe**  
  Crée un groupe contenant une ou plusieurs tâches.  
   
  **Dissocier**  
  Supprime les tâches d'un groupe.  
   
- **Redimensionnement automatique**  
+ **AutoSize**  
  Dimensionne chaque tâche en utilisant la taille optimale pour cette tâche.  
   
  **Réduire**  
  Masque les tâches au sein d’un groupe.  
   
- **Développer**  
+ **S'**  
  Montre les tâches d’un groupe auparavant masquées à l’aide de l’option **Réduire**.  
   
  **Zoom**  

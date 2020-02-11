@@ -17,14 +17,13 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 0c34eafe153c5361df1945b55094737fa529f617
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957210"
 ---
-# <a name="encryption-hierarchy"></a>Encryption Hierarchy
-  
+# <a name="encryption-hierarchy"></a>Hiérarchie de chiffrement
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] chiffre les données avec un chiffrement hiérarchique et une infrastructure de gestion des clés. Chaque couche chiffre la couche qui se trouve en dessous d'elle à l'aide d'une combinaison de certificats, de clés asymétriques et de clés symétriques. Les clés asymétriques et les clés symétriques peuvent être stockées hors de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans un module de gestion de clés extensible (EKM, Extensible Key Management).  
   
  L'illustration suivante montre que chaque couche de la hiérarchie de chiffrement chiffre la couche qui se trouve en dessous d'elle, et affiche les configurations de chiffrement les plus communes. L'accès au sommet de la hiérarchie est généralement protégé par un mot de passe.  
@@ -56,10 +55,9 @@ ms.locfileid: "74957210"
 -   Les clés symétriques et asymétriques du module EKM peuvent protéger l'accès aux clés symétriques et asymétriques stockées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La ligne en pointillés associée à EKM indique que les clés du module EKM pourraient remplacer les clés symétriques et asymétriques stockées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="encryption-mechanisms"></a>Mécanismes de chiffrement  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit les mécanismes de chiffrement suivants :  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit les mécanismes de chiffrement suivants :  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)]Mission  
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)] fonctions  
   
 -   Clés asymétriques  
   
@@ -67,7 +65,7 @@ ms.locfileid: "74957210"
   
 -   Certificats  
   
--   Chiffrement transparent des données  
+-   chiffrement transparent des données  
   
 ### <a name="transact-sql-functions"></a>Fonctions Transact-SQL  
  Des éléments individuels peuvent être chiffrés dès leur insertion ou mise à jour à l’aide de fonctions [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Pour plus d’informations, consultez [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbypassphrase-transact-sql) et [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbypassphrase-transact-sql).  
@@ -103,13 +101,13 @@ ms.locfileid: "74957210"
 ### <a name="symmetric-keys"></a>Clés symétriques  
  Une clé symétrique est une clé qui est utilisée pour le chiffrement et le déchiffrement. Une clé symétrique permet d'effectuer un chiffrement et un déchiffrement rapides, particulièrement adaptés à l'utilisation courante des données sensibles de la base de données.  
   
-### <a name="transparent-data-encryption"></a>Chiffrement transparent des données  
- Le chiffrement transparent des données est un cas spécial de chiffrement à l'aide d'une clé symétrique. L'ensemble de la base de données est chiffré à l'aide de cette clé symétrique, appelée clé de chiffrement de base de données. La clé de chiffrement de base de données est protégée par d'autres clés ou certificats qui sont eux-mêmes protégés par la clé principale de base de données ou par une clé asymétrique stockée dans un module EKM. Pour plus d’informations, consultez [Chiffrement transparent des données &#40;TDE&#41;](transparent-data-encryption.md).  
+### <a name="transparent-data-encryption"></a>chiffrement transparent des données  
+ Le chiffrement transparent des données est un cas spécial de chiffrement à l'aide d'une clé symétrique. L'ensemble de la base de données est chiffré à l'aide de cette clé symétrique, appelée clé de chiffrement de base de données. La clé de chiffrement de base de données est protégée par d'autres clés ou certificats qui sont eux-mêmes protégés par la clé principale de base de données ou par une clé asymétrique stockée dans un module EKM. Pour plus d’informations, consultez [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md).  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [Sécurisation de SQL Server](../securing-sql-server.md)  
   
- [Fonctions de sécurité &#40;&#41;Transact-SQL](/sql/t-sql/functions/security-functions-transact-sql)  
+ [Fonctions de sécurité &#40;Transact-SQL&#41;](/sql/t-sql/functions/security-functions-transact-sql)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Hiérarchie des autorisations &#40;Moteur de base de données&#41;](../permissions-hierarchy-database-engine.md)   

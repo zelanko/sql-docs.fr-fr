@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39860a2b147a2db392219552ebfd18cbbf7b7992
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63264775"
 ---
 # <a name="custom-report-items"></a>Éléments de rapport personnalisés
@@ -44,7 +44,7 @@ ms.locfileid: "63264775"
  [Création d'un composant au moment de la conception d'éléments de rapport personnalisé](creating-a-custom-report-item-design-time-component.md)  
  Décrit comment créer un composant design d'élément de rapport personnalisé.  
   
- [Procédure : déployer un élément de rapport personnalisé](how-to-deploy-a-custom-report-item.md)  
+ [Procédure : déployer un élément de rapport personnalisé](how-to-deploy-a-custom-report-item.md)  
  Décrit comment déployer un élément de rapport personnalisé.  
   
  [Bibliothèques de classes d'éléments de rapports personnalisés](custom-report-item-class-libraries.md)  

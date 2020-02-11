@@ -1,5 +1,5 @@
 ---
-title: Constantes importantes sont tapées en tant que types de valeur élevée en mode de compatibilité 90 ou ultérieur | Microsoft Docs
+title: Les constantes de grande taille sont typées en tant que types de valeur élevée dans les modes de compatibilité 90 ou ultérieur | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c7aded5577e28d94f42e108e46bb8a9c3cd6020
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094092"
 ---
 # <a name="large-constants-are-typed-as-large-value-types-in-90-or-later-compatibility-modes"></a>Les constantes importantes sont tapées en tant que types à valeur élevée en mode de compatibilité 90 ou ultérieur
@@ -39,7 +39,7 @@ ms.locfileid: "66094092"
  Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou version ultérieure, les fonctions de chaîne, telles que CHARINDEX et PATINDEX, supposent que la taille de la chaîne qui contient la séquence de caractères à rechercher est inférieure à 8 000 octets. C'est pour cette raison que l'erreur 8152 est générée pour CHARINDEX et PATINDEX.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Problèmes de mise à niveau du moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
+ [Problèmes de mise à niveau Moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Le conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

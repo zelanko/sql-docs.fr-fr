@@ -14,20 +14,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c0b0b8236187698917dddd3ca98830add6c3fde9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245665"
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>Configurer WMI pour afficher l'état du serveur dans les outils SQL Server
   Cette rubrique explique comment configurer WMI pour afficher l'état du serveur dans les outils SQL Server dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Lors de la connexion aux serveurs, les composants Serveurs inscrits et Explorateur d'objets de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], ainsi que le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , utilisent WMI (Windows Management Instrumentation) pour obtenir l'état des services [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (MSSQLSERVER) et [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent (MSSQLSERVER). Pour afficher l'état du service, l'utilisateur doit disposer des droits d'accéder à distance à l'objet WMI. Cette autorisation peut être configurée seulement si WMI a été installé sur le serveur.  
   
-##  <a name="SSMSProcedure"></a> Pour configurer les autorisations WMI  
+##  <a name="SSMSProcedure"></a>Pour configurer l’autorisation WMI  
   
 1.  Sur le serveur distant, dans le menu **Démarrer** , cliquez sur **Exécuter**.  
   
-2.  Dans le **Open** zone, tapez `wmimgmt.msc`, puis cliquez sur **OK**.  
+2.  Dans la zone **ouvrir** , `wmimgmt.msc`tapez, puis cliquez sur **OK**.  
   
 3.  Dans le programme **Windows Management Infrastructure** , cliquez avec le bouton droit sur **Contrôle WMI (local)** , puis cliquez sur **Propriétés**.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "63245665"
   
 6.  Ajoutez un groupe ou un utilisateur à la zone **Noms de groupes ou d’utilisateurs** et sélectionnez-le.  
   
-7.  Dans le **autorisations pour** _\<groupe ou utilisateur >_ boîte, sélectionnez le **autoriser** colonne, pour le **appel à distance autorisé** autorisation , pour les utilisateurs dont vous souhaitez à distance pour détectent l’état du service.  
+7.  Dans la zone **autorisations pour**_\<le groupe ou l’utilisateur>_ , sélectionnez la colonne **autoriser** , pour l’autorisation **activation à distance** , pour les utilisateurs pour lesquels vous souhaitez détecter à distance l’état du service.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Démarrer, arrêter ou suspendre le service SQL Server Agent](agent/start-stop-or-pause-the-sql-server-agent-service.md)  

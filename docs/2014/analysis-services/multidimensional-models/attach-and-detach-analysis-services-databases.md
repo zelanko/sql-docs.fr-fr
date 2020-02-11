@@ -19,14 +19,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4447f58baaa5ea88a48c67a9a32fcda77681d8d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077485"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Attacher et détacher des bases de données Analysis Services
-  Il existe souvent des cas où un administrateur de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (dba) souhaite mettre une base de données hors connexion pendant un certain temps, puis la replacer en ligne sur la même (ou une autre) instance de serveur. Ces cas sont souvent motivés par des impératifs d’exploitation, tels que le déplacement de la base de données vers un autre disque afin d’obtenir de meilleures performances, le gain de place afin de permettre la croissance de la base de données, ou la mise à niveau d'un produit. Pour tous ces cas et bien plus encore, le `Attach` et `Detach` commandes activent le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba pour mettre la base de données hors connexion et la mettre en ligne avec peu d’efforts.  
+  Il existe souvent des cas où un administrateur de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (dba) souhaite mettre une base de données hors connexion pendant un certain temps, puis la replacer en ligne sur la même (ou une autre) instance de serveur. Ces cas sont souvent motivés par des impératifs d’exploitation, tels que le déplacement de la base de données vers un autre disque afin d’obtenir de meilleures performances, le gain de place afin de permettre la croissance de la base de données, ou la mise à niveau d'un produit. Pour tous ces cas, et bien plus `Attach` encore `Detach` , les commandes [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et permettent à l’administrateur de base de données de mettre la base de données hors connexion et de la remettre en ligne avec un minimum d’effort.  
   
 ## <a name="attach-and-detach-commands"></a>Commandes Attach et Detach  
  La commande `Attach` permet de mettre en ligne une base de données placée en mode hors connexion. Vous pouvez attacher la base de données à l'instance de serveur d'origine ou à une autre instance. Lorsque vous attachez une base de données, l'utilisateur peut spécifier le paramètre **ReadWriteMode** pour la base de données. La commande `Detach` permet de placer en mode hors connexion une base de données du serveur.  
@@ -46,9 +46,9 @@ ms.locfileid: "66077485"
   
 |Détachement d'une base de données en lecture/écriture|Détachement d'une base de données en lecture seule|  
 |--------------------------------------|-------------------------------------|  
-|1) Le serveur émet une demande de verrou CommitExclusive sur la base de données.<br />2) Le serveur attend que toutes les transactions en cours soient validées ou annulées.<br />3) Le serveur génère toutes les métadonnées dont il a besoin pour détacher la base de données.<br />4) La base de données est marquée comme supprimée.<br />5) Le serveur valide la transaction.|1) La base de données est marquée comme supprimée.<br />2) Le serveur valide la transaction.<br /><br /> <br /><br /> Remarque : Impossible de modifier le mot de passe sert à détacher une base de données en lecture seule. Une erreur est déclenchée si un paramètre de mot de passe est fourni pour une base de données attachée contenant déjà un mot de passe.|  
+|1) Le serveur émet une demande de verrou CommitExclusive sur la base de données.<br />2) Le serveur attend que toutes les transactions en cours soient validées ou annulées.<br />3) Le serveur génère toutes les métadonnées dont il a besoin pour détacher la base de données.<br />4) La base de données est marquée comme supprimée.<br />5) Le serveur valide la transaction.|1) La base de données est marquée comme supprimée.<br />2) Le serveur valide la transaction.<br /><br /> <br /><br /> Remarque : le mot de passe qui sert à détacher la base de données ne peut pas être modifié pour une base de données en lecture seule. Une erreur est déclenchée si un paramètre de mot de passe est fourni pour une base de données attachée contenant déjà un mot de passe.|  
   
- Les commandes `Attach` et `Detach` doivent être exécutées comme de simples opérations. Elles ne peuvent pas être combinées à d'autres opérations de la même transaction. En outre, le `Attach` et `Detach` commandes sont des commandes transactionnelles atomiques. Cela signifie que soit l'opération réussit, soit elle échoue. Aucune base de données ne demeurera dans un état inachevé.  
+ Les commandes `Attach` et `Detach` doivent être exécutées comme de simples opérations. Elles ne peuvent pas être combinées à d'autres opérations de la même transaction. En outre, `Attach` les `Detach` commandes et sont des commandes transactionnelles atomiques. Cela signifie que soit l'opération réussit, soit elle échoue. Aucune base de données ne demeurera dans un état inachevé.  
   
 > [!IMPORTANT]  
 >  Les privilèges administrateur de serveur ou de base de données sont nécessaires pour exécuter la commande `Detach`.  
@@ -60,9 +60,9 @@ ms.locfileid: "66077485"
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Déplacer une base de données Analysis Services](move-an-analysis-services-database.md)   
- [Base de données ReadWriteModes](database-readwritemodes.md)   
+ [ReadWriteModes de base de données](database-readwritemodes.md)   
  [Basculer une base de données Analysis Services entre les modes ReadOnly et ReadWrite](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
- [Élément Detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [Détacher l’élément](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
  [Élément Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)  
   
   

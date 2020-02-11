@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6ec24cd980cbfc71c5b9ba834f01bd17eb422400
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768865"
 ---
 # <a name="-multiply-ssis-expression"></a>* (Multiplication) (expression SSIS)
@@ -35,7 +35,7 @@ numeric_expression1 * numeric_expression2
  *expression_numérique1, expression_numérique2*  
  Toute expression valide d'un type de données numérique. Pour plus d’informations, consultez [Types de données Integration Services](../data-flow/integration-services-data-types.md).  
   
-## <a name="result-types"></a>Types de résultats  
+## <a name="result-types"></a>Types des résultats  
  Déterminés par les types de données des deux arguments. Pour plus d’informations, consultez [Types de données Integration Services dans les expressions](integration-services-data-types-in-expressions.md).  
   
 ## <a name="remarks"></a>Notes  

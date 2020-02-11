@@ -13,14 +13,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 04f4dbeee8c160e968ee4b9df29e96d21d857e58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184385"
 ---
 # <a name="trustworthy-database-property"></a>TRUSTWORTHY, propriété de base de données
-  La propriété de base de données TRUSTWORTHY permet d'indiquer si l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] approuve la base de données et son contenu. Par défaut, cette propriété a la valeur OFF, mais peut être définie sur ON à l'aide de l'instruction ALTER DATABASE. Par exemple, `ALTER DATABASE AdventureWorks2012 SET TRUSTWORTHY ON;`.  
+  La propriété de base de données TRUSTWORTHY permet d'indiquer si l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] approuve la base de données et son contenu. Par défaut, cette propriété a la valeur OFF, mais peut être définie sur ON à l'aide de l'instruction ALTER DATABASE. Par exemple : `ALTER DATABASE AdventureWorks2012 SET TRUSTWORTHY ON;`.  
   
 > [!NOTE]  
 >  Pour définir cette option, vous devez être membre du rôle serveur fixe **sysadmin** .  
@@ -36,7 +36,7 @@ ms.locfileid: "63184385"
  Dans la mesure où il est impossible de faire immédiatement confiance à une base de données qui est attachée à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la base de données n'a pas le droit d'accéder aux ressources au-delà de son étendue tant qu'elle n'a pas été explicitement déclarée fiable. De plus, les modules conçus pour accéder aux ressources extérieures à la base de données et les assemblys dotés des autorisations EXTERNAL_ACCESS ou UNSAFE ont des impératifs supplémentaires à respecter pour pouvoir s'exécuter correctement.  
   
 ## <a name="related-content"></a>Contenu associé  
- [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   

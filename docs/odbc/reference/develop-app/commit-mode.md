@@ -15,16 +15,16 @@ ms.assetid: 963fe470-f7cb-4dbe-a779-05f98d7ff17d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22519e6d3be8ab4474fd88309da1b7e8be0fb49e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083336"
 ---
 # <a name="commit-mode"></a>Mode de validation
-Transactions dans ODBC peuvent être dans un des deux modes : mode de validation automatique ou le mode de validation manuelle.  
+Les transactions dans ODBC peuvent être dans l’un des deux modes : le mode de validation automatique ou le mode de validation manuelle.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Mode de validation automatique](../../../odbc/reference/develop-app/auto-commit-mode.md)  
   

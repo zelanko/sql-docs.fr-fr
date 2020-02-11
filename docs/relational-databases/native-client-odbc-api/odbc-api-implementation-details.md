@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eb05bdc934fe8f42a4f0f6589d0f75d38ca621fc
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73787867"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API Implementation Details
@@ -135,7 +135,7 @@ ms.locfileid: "73787867"
 -   [SQLTables](../../relational-databases/native-client-odbc-api/sqltables.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Native Client &#40;de&#41; référence ODBC](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
- [Génération d'applications avec SQL Server Native Client](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [Référence de&#41; ODBC SQL Server Native Client &#40;](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
+ [Génération d’applications avec SQL Server Native Client](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

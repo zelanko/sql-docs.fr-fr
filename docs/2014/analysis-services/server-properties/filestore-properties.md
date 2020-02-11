@@ -1,5 +1,5 @@
 ---
-title: FILESTORE, propriété | Microsoft Docs
+title: Propriétés du cache de la | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -25,18 +25,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe11b7a9cda6b3e75cb97faa17a381e2b0ea1afe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069087"
 ---
 # <a name="filestore-properties"></a>FileStore, propriété
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés du serveur de cache de fichiers répertoriées dans les tableaux suivants. Toutes ces propriétés sont des propriétés avancées que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Pour plus d'informations sur les autres propriétés de serveur et la façon de les configurer, consultez [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
  **S’applique à :** Mode serveur multidimensionnel et tabulaire  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>Propriétés  
  `MemoryLimit`  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -54,7 +55,7 @@ ms.locfileid: "66069087"
   
  Sur les systèmes haut de gamme, en particulier ceux qui comportent d'importantes ressources de mémoire et plusieurs nœuds NUMA, il peut être avantageux d'utiliser l'accès aléatoire aux fichiers. En mode d'accès aléatoire, Windows ignore les opérations de mappage de page qui lisent des données à partir du disque dans le cache des fichiers système, réduisant ainsi le conflit dans le cache.  
   
- Vous devrez effectuer des tests de comparaison afin de déterminer si les performances de requête sont améliorées lorsque vous modifiez cette propriété. Pour connaître les meilleures pratiques concernant l'exécution de tests de comparaison, y compris l'effacement du cache et les erreurs courantes à éviter, consultez le document [SQL Server 2008 R2 Analysis Services Operations Guide](https://go.microsoft.com/fwlink/?LinkID=225539). Pour plus d’informations sur les inconvénients de l’utilisation de cette propriété, consultez [ https://support.microsoft.com/kb/2549369 ](https://support.microsoft.com/kb/2549369).  
+ Vous devrez effectuer des tests de comparaison afin de déterminer si les performances de requête sont améliorées lorsque vous modifiez cette propriété. Pour connaître les meilleures pratiques concernant l'exécution de tests de comparaison, y compris l'effacement du cache et les erreurs courantes à éviter, consultez le document [SQL Server 2008 R2 Analysis Services Operations Guide](https://go.microsoft.com/fwlink/?LinkID=225539). Pour plus d’informations sur les compromis de l’utilisation de cette propriété [https://support.microsoft.com/kb/2549369](https://support.microsoft.com/kb/2549369), consultez.  
   
  Pour afficher ou modifier cette propriété dans Management Studio, activez la liste des propriétés avancées dans la page des propriétés du serveur. Vous pouvez également modifier la propriété dans le fichier msmdsrv.ini. Le redémarrage du serveur est recommandé après la définition de cette propriété ; sinon, les fichiers déjà ouverts vont continuer à être accessibles selon le mode précédent.  
   
@@ -79,6 +80,6 @@ ms.locfileid: "66069087"
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer les propriétés du serveur dans Analysis Services](server-properties-in-analysis-services.md)   
- [Déterminer le mode serveur d'une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Déterminer le mode serveur d’une instance de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

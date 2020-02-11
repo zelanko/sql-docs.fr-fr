@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0bbd8b256145a9d91e8615aaf7d87a4b8ce7b8b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867893"
 ---
-# <a name="mssqlserver41332"></a>MSSQLSERVER_41332
+# <a name="mssqlserver_41332"></a>MSSQLSERVER_41332
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|ID d'événement|41332|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|41332|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SQL_SNAPSHOT_NOT_SUPPORTED|  
 |Texte du message|Les tables optimisées en mémoire et les procédures stockées compilées en mode natif ne sont pas accessibles ou ne peuvent pas être créées lorsque la session TRANSACTION ISOLATION LEVEL a la valeur SNAPSHOT.|  

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3f7a092b8ad649285417ee7961ac891b90b87674
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898143"
 ---
 # <a name="-bitwise-inclusive-or-ssis-expression"></a>| (OR inclusive au niveau du bit) (expression SSIS)
@@ -37,7 +37,7 @@ integer_expression1 | integer_expression2
  *integer_expression1, integer_expression2*  
  Toute expression valide de type de données signed integer ou unsigned integer. Pour plus d’informations, consultez [Types de données Integration Services](../data-flow/integration-services-data-types.md).  
   
-## <a name="result-types"></a>Types de résultats  
+## <a name="result-types"></a>Types des résultats  
  Déterminés par les types de données des deux arguments. Pour plus d’informations, consultez [Types de données Integration Services dans les expressions](integration-services-data-types-in-expressions.md).  
   
 ## <a name="remarks"></a>Notes  
@@ -94,7 +94,7 @@ ReorderPoint | SafetyStockLevel
   
 ## <a name="see-also"></a>Voir aussi  
  [&#124;&#124; &#40;OR logique&#41; &#40;expression SSIS&#41;](logical-or-ssis-expression.md)   
- [^ &#40;opération OR exclusive au niveau du bit&#41; &#40;expression SSIS&#41;](bitwise-exclusive-or-ssis-expression.md)   
+ [^ &#40;OR exclusif au niveau du bit&#41; &#40;expression SSIS&#41;](bitwise-exclusive-or-ssis-expression.md)   
  [Priorités et associativité des opérateurs](operator-precedence-and-associativity.md)   
  [Opérateurs &#40;expression SSIS&#41;](operators-ssis-expression.md)  
   

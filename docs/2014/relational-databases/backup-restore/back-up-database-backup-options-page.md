@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8030a0005f0f5b949a3eecd12d73f3a3aa709c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876862"
 ---
 # <a name="back-up-database-backup-options-page"></a>Sauvegarder la base de données (page Options de sauvegarde)
@@ -53,7 +53,7 @@ ms.locfileid: "62876862"
   
 |||  
 |-|-|  
-|**After**|Spécifiez le nombre de jours qui doivent s'écouler avant que le jeu de sauvegarde expire et puisse être écrasé. Cette valeur doit être comprise entre 0 et 99999 jours ; une valeur de 0 jour signifie que le jeu de sauvegarde n'expirera jamais.<br /><br /> La valeur par défaut d’expiration de sauvegarde correspond à la valeur définie dans l’option **Délai de rétention par défaut du support de sauvegarde (jours)** . Pour accéder à cette option, cliquez avec le bouton droit sur le nom du serveur dans l’Explorateur d’objets et cliquez sur **Propriétés**; ensuite, cliquez sur la page **Paramètres de base de données** de la boîte de dialogue **Propriétés du serveur** .|  
+|**Après**|Spécifiez le nombre de jours qui doivent s'écouler avant que le jeu de sauvegarde expire et puisse être écrasé. Cette valeur doit être comprise entre 0 et 99999 jours ; une valeur de 0 jour signifie que le jeu de sauvegarde n'expirera jamais.<br /><br /> La valeur par défaut d’expiration de sauvegarde correspond à la valeur définie dans l’option **Délai de rétention par défaut du support de sauvegarde (jours)** . Pour accéder à cette option, cliquez avec le bouton droit sur le nom du serveur dans l’Explorateur d’objets et cliquez sur **Propriétés**; ensuite, cliquez sur la page **Paramètres de base de données** de la boîte de dialogue **Propriétés du serveur** .|  
 |**Actif**|Spécifiez une date spécifique à laquelle le jeu de sauvegarde expire et peut être écrasé.|  
   
 ### <a name="compression"></a>Compression  

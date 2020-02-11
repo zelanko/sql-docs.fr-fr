@@ -1,5 +1,5 @@
 ---
-title: Connexion Close, méthode, exemple de propriété de Type de Table (VC ++) | Microsoft Docs
+title: Connection Close, méthode, table type, exemple de propriété (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4ff8cf50279d9be6b3ed334982e2140f0bd41f4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 980b0eb874781c50f8881f2dc5e4b295d6ba2a87
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966696"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76910506"
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Close, méthode de l’objet Connection, Type (exemple de propriété de l’objet Table) (VC++)
-Définition de la [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) propriété **rien** doit « fermer » le catalogue. Regroupements associés sera vides. Tous les objets qui ont été créés à partir des objets de schéma dans le catalogue sont orphelins. Toutes les propriétés sur les objets qui ont été mis en cache sera toujours disponibles, mais une tentative de lecture des propriétés qui nécessitent un appel au fournisseur échouera.  
+La définition de la propriété [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) sur **Nothing** doit « fermer » le catalogue. Les regroupements associés seront vides. Tous les objets qui ont été créés à partir d’objets de schéma dans le catalogue sont orphelins. Toutes les propriétés de ces objets qui ont été mises en cache seront toujours disponibles, mais la tentative de lecture des propriétés qui nécessitent un appel du fournisseur échouera.  
   
 ```  
 // BeginCloseConnectionCpp.cpp  
@@ -92,7 +92,7 @@ void CloseConnectionByNothingX() {
       printf("\nError\n\tSource :  %s \n\tdescription : %s \n", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in CloseConnectionByNothingX...." << endl;  
+      cout << "Error occurred in CloseConnectionByNothingX...." << endl;  
    }  
 }  
   
@@ -137,7 +137,7 @@ void CloseConnectionX() {
       printf("\nError\n\tSource :  %s \n\tdescription : %s \n", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in CloseConnectionX...." << endl;  
+      cout << "Error occurred in CloseConnectionX...." << endl;  
    }  
 }  
 ```  

@@ -14,24 +14,24 @@ ms.assetid: b1924c33-6820-4566-b716-6897807edd0f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d9f2fc32287df9da61d8eabc1b22445d19a0f027
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090866"
 ---
 # <a name="sqlsetconnectoption-dbase-driver"></a>SQLSetConnectOption (pilote dBASE)
 > [!NOTE]  
->  Cette rubrique fournit des informations de dBASE spécifiques au pilote. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette rubrique fournit des informations spécifiques au pilote dBASE. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
 |fOption|Commentaire|  
 |-------------|-------------|  
-|SQL_ACCESS_MODE|La fOption SQL_ACCESS_MODE peut être définie à SQL_MODE_READ_ONLY ou SQL_MODE_READ_WRITE. Toutefois, le pilote n’empêche pas les mises à jour si SQL_ACCESS_MODE est défini sur SQL_MODE_READ_ONLY.|  
-|SQL_AUTOCOMMIT|Le pilote dBASE prend uniquement en charge SQL_AUTOCOMMIT définie sur (l’état par défaut), car il ne prend pas en charge les transactions.|  
-|SQL_CURRENT_QUALIFIER|Pris en charge.|  
+|SQL_ACCESS_MODE|Le SQL_ACCESS_MODE fOption peut être défini sur SQL_MODE_READ_ONLY ou SQL_MODE_READ_WRITE. Toutefois, le pilote n’empêche pas les mises à jour si SQL_ACCESS_MODE est défini sur SQL_MODE_READ_ONLY.|  
+|SQL_AUTOCOMMIT|Le pilote dBASE prend uniquement en charge les SQL_AUTOCOMMIT ayant la valeur ON (État par défaut), car il ne prend pas en charge les transactions.|  
+|SQL_CURRENT_QUALIFIER| Pris en charge.|  
 |SQL_LOGIN_TIMEOUT|Non pris en charge.|  
-|SQL_OPT_TRACE|Pris en charge.|  
-|SQL_OPT_TRACEFILE|Pris en charge.|  
+|SQL_OPT_TRACE| Pris en charge.|  
+|SQL_OPT_TRACEFILE| Pris en charge.|  
 |SQL_PACKET_SIZE|Non pris en charge.|  
 |SQL_QUIET_MODE|Non pris en charge.|  
 |SQL_TRANSLATE_DLL|Non pris en charge.|  

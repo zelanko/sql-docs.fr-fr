@@ -1,5 +1,5 @@
 ---
-title: Mapper des règles de couleur, boîte de dialogue, général | Microsoft Docs
+title: Boîte de dialogue Règles de couleur de la carte, général | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e97de85cdd57fdb21aa82379243eb6954358ea38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108318"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>Boîte de dialogue Règles de couleur de la carte, Général
@@ -26,10 +26,10 @@ ms.locfileid: "66108318"
  Pour afficher tous les éléments cartographiques d'une couche en spécifiant un dégradé décoratif avec des couleurs primaires et secondaires différentes, utilisez la page **Remplissage** de la boîte de dialogue Propriétés des polygones de la carte. Les règles de couleur ont priorité sur les propriétés d'affichage d'une couche. Pour plus d’informations, consultez [Personnaliser des données et l’affichage d’une carte ou d’une couche &#40;Générateur de rapports et SSRS&#41;](report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Options  
- **Appliquer un style de modèle**  
+ **Appliquer le style de modèle**  
  Sélectionnez cette option pour utiliser une couleur en fonction du thème choisi dans l'Assistant ou définie dans les propriétés de la couche de polygones, de lignes ou de points. Un thème définit des options par défaut pour la couleur, la police et les bordures de la carte. Avec cette option, aucune règle n'est appliquée pour attribuer des couleurs à chaque élément cartographique.  
   
- **Visualiser les données à l’aide de palette de couleurs**  
+ **Visualiser les données à l’aide de la palette de couleurs**  
  Sélectionnez cette option pour visualiser des données analytiques en utilisant des couleurs d'une palette de couleurs spécifique.  
   
  **Visualiser les données à l’aide de plages de couleurs**  

@@ -1,5 +1,5 @@
 ---
-title: Exemples de requêtes de modèle des arbres de décision | Microsoft Docs
+title: Exemples de requêtes de modèle d’arbre de décision | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 009e8d203d9262ee14702b99ad7d0e31d8a16dbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084755"
 ---
 # <a name="decision-trees-model-query-examples"></a>Exemples de requêtes de modèle d’arbre de décision
@@ -28,24 +28,24 @@ ms.locfileid: "66084755"
   
  **Requêtes de contenu**  
   
- [Récupération des paramètres du modèle à partir de l'ensemble de lignes de schéma d'exploration de données](#bkmk_Query1)  
+ [Récupération des paramètres de modèle à partir de l’ensemble de lignes de schéma d’exploration de données](#bkmk_Query1)  
   
- [Obtention de détails à propos des arborescences dans le modèle à l'aide de DMX](#bkmk_Query2)  
+ [Obtention de détails sur les arborescences dans le modèle à l’aide de DMX](#bkmk_Query2)  
   
- [Récupération de sous-arborescences du modèle](#bkmk_Query3)  
+ [Récupération de sous-arborescences à partir du modèle](#bkmk_Query3)  
   
  **Requêtes de prédiction**  
   
  [Retour de prédictions avec des probabilités](#bkmk_Query4)  
   
- [Prédiction d'associations à partir d'un modèle d'arbres de décision](#bkmk_Query5)  
+ [Prédiction d’associations à partir d’un modèle d’arbre de décision](#bkmk_Query5)  
   
- [Récupération d'une formule de régression d'un modèle d'arbres de décision](#bkmk_Query6)  
+ [Récupération d’une formule de régression à partir d’un modèle d’arbre de décision](#bkmk_Query6)  
   
-##  <a name="bkmk_top2"></a> Recherche d'informations à propos d'un modèle d'arbre de décision  
- Pour créer des requêtes explicites sur le contenu d'un modèle d'arbre de décision, vous devez comprendre la structure du contenu du modèle et les types d'informations stockés dans les différents types de nœuds. Pour plus d’informations, consultez [Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services – Exploration de données&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
+##  <a name="bkmk_top2"></a>Recherche d’informations sur un modèle d’arbre de décision  
+ Pour créer des requêtes explicites sur le contenu d'un modèle d'arbre de décision, vous devez comprendre la structure du contenu du modèle et les types d'informations stockés dans les différents types de nœuds. Pour plus d’informations, consultez [Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_Query1"></a> Exemple de requête 1 : Récupération des paramètres du modèle à partir de l'ensemble de lignes de schéma d'exploration de données  
+###  <a name="bkmk_Query1"></a>Exemple de requête 1 : récupération des paramètres de modèle à partir de l’ensemble de lignes de schéma d’exploration de données  
  En interrogeant l'ensemble de lignes de schéma d'exploration de données, vous pouvez rechercher les métadonnées relatives au modèle, par exemple sa date de création, le moment où il a été traité pour la dernière fois, le nom de la structure d'exploration de données sur laquelle il est basé et le nom de la colonne utilisée comme attribut prédictible. Vous pouvez également retourner les paramètres qui ont été utilisés lorsque le modèle a été créé pour la première fois.  
   
 ```  
@@ -60,7 +60,7 @@ WHERE MODEL_NAME = 'TM_Decision Tree'
   
  COMPLEXITY_PENALTY=0.5, MAXIMUM_INPUT_ATTRIBUTES=255,MAXIMUM_OUTPUT_ATTRIBUTES=255,MINIMUM_SUPPORT=10,SCORE_METHOD=4,SPLIT_METHOD=3,FORCE_REGRESSOR=  
   
-###  <a name="bkmk_Query2"></a> Exemple de requête 2 : Retour de détails sur le contenu du modèle à l’aide de DMX  
+###  <a name="bkmk_Query2"></a>Exemple de requête 2 : retour de détails sur le contenu du modèle à l’aide de DMX  
  La requête suivante retourne des informations de base sur les arbres de décision qui ont été créés lors de la génération du modèle dans le [Didacticiel sur l’exploration de données de base](../../tutorials/basic-data-mining-tutorial.md). Chaque arborescence est stockée dans son propre nœud. Étant donné que ce modèle contient un seul attribut prédictible, il n'y a qu'un seul nœud d'arbre. Toutefois, si vous créez un modèle d'association à l'aide de l'algorithme MDT, il peut y avoir des centaines d'arbres, un pour chaque produit.  
   
  Cette requête retourne tous les nœuds de type 2, lesquels sont les nœuds de niveau supérieur d'un arbre qui représente un attribut prédictible particulier.  
@@ -75,11 +75,11 @@ FROM TM_DecisionTrees.CONTENT
 WHERE NODE_TYPE = 2  
 ```  
   
- Résultats de l'exemple :  
+ Résultats de l’exemple :  
   
 |MODEL_NAME|NODE_NAME|NODE_CAPTION|NODE_SUPPORT|CHILDREN_CARDINALITY|  
 |-----------------|----------------|-------------------|-------------------|---------------------------|  
-|TM_DecisionTree|000000001|All|12939|5|  
+|TM_DecisionTree|000000001|Tous|12939|5|  
   
  Que vous indiquent ces résultats ? Dans un modèle d'arbre de décision, la cardinalité d'un nœud particulier vous indique le nombre d'enfants immédiats de ce nœud. La cardinalité de ce nœud est de 5, ce qui signifie que le modèle a divisé la population cible d'acheteurs de bicyclettes potentiels en 5 sous-groupes.  
   
@@ -96,7 +96,7 @@ FROM TM_DecisionTree.CONTENT
 WHERE [PARENT_UNIQUE_NAME] = '000000001'  
 ```  
   
- Résultats de l'exemple :  
+ Résultats de l’exemple :  
   
 |NODE_NAME|NODE_CAPTION|T.ATTRIBUTE_NAME|T.ATTRIBUTE_VALUE|SUPPORT|  
 |----------------|-------------------|-----------------------|------------------------|-------------|  
@@ -109,7 +109,7 @@ WHERE [PARENT_UNIQUE_NAME] = '000000001'
   
  D'après ces résultats, vous pouvez indiquer que parmi les clients qui ont acheté un vélo (`[Bike Buyer]` = 1), 1 067 clients n'avaient pas de voitures et 473 clients 3 voitures.  
   
-###  <a name="bkmk_Query3"></a> Exemple de requête 3 : Récupération de sous-arborescences du modèle  
+###  <a name="bkmk_Query3"></a>Exemple de requête 3 : récupération de sous-arborescences à partir du modèle  
  Imaginons que vous souhaitiez en savoir plus sur les clients qui ont acheté un vélo. Vous pouvez afficher des détails supplémentaires pour chacun des sous-arbres en utilisant la fonction [IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx) dans la requête, comme le montre l’exemple suivant. La requête retourne le nombre d'acheteurs de vélos en extrayant les nœuds terminaux (NODE_TYPE = 4) de l'arbre qui contient les clients âgés de plus de 42 ans. La requête limite les lignes de la table imbriquée à ceux pour lesquels Bike Buyer = 1.  
   
 ```  
@@ -122,7 +122,7 @@ WHERE ISDESCENDANT('0000000010001')
 AND NODE_TYPE = 4  
 ```  
   
- Résultats de l'exemple :  
+ Résultats de l’exemple :  
   
 |NODE_NAME|NODE_CAPTION|t.SUPPORT|  
 |----------------|-------------------|---------------|  
@@ -139,7 +139,7 @@ AND NODE_TYPE = 4
   
 -   extraction de la formule de régression pour une partie d'un arbre de décision où la relation entre l'entrée et la sortie est linéaire.  
   
-###  <a name="bkmk_Query4"></a> Exemple de requête 4 : Retour de prédictions avec des probabilités  
+###  <a name="bkmk_Query4"></a>Exemple de requête 4 : retour de prédictions avec des probabilités  
  L’exemple de requête suivant utilise le modèle d’arbre de décision qui a été créé dans le [Didacticiel sur l’exploration de données de base](../../tutorials/basic-data-mining-tutorial.md). La requête passe dans un nouveau jeu d’exemples de données, de la tabledbo.ProspectiveBuyers dans [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] DW, pour prédire quels clients du nouveau jeu de données achèteront un vélo.  
   
  La requête utilise la fonction de prédiction [PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx), qui retourne une table imbriquée qui contient des informations utiles sur les probabilités découvertes par le modèle. La clause WHERE finale de la requête filtre les résultats afin de retourner uniquement les clients prédits comme acheteurs de vélos potentiels, avec une probabilité supérieure à 0 %.  
@@ -181,7 +181,7 @@ AND PredictProbability([Bike Buyer]) >'.05'
   
  Par défaut, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retourne des tables imbriquées avec l’étiquette de colonne, **Expression**. Vous pouvez modifier cette étiquette en utilisant un alias pour la colonne qui est retournée. En procédant ainsi, l’alias (dans le cas présent, **Results**) est utilisé à la fois comme en-tête de colonne et comme valeur dans la table imbriquée. Vous devez développer la table imbriquée pour afficher les résultats.  
   
- Résultats de l’exemple où Bike Buyer = 1 :  
+ Exemples de résultats où vélo Buyer = 1 :  
   
 |Bike Buyer|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|$VARIANCE|$STDEV|  
 |----------------|--------------|------------------|--------------------------|---------------|------------|  
@@ -189,10 +189,10 @@ AND PredictProbability([Bike Buyer]) >'.05'
 |0|1460|0.364984174579377|0.00661336932550915|0|0|  
 ||0|0.000166583374979177|0.000166583374979177|0|0|  
   
- Si votre fournisseur ne prend pas en charge les ensembles de lignes hiérarchiques tels que ceux présentés ici, vous pouvez utiliser le mot clé FLATTENED dans la requête pour retourner, sous forme de table, les résultats qui contiennent des valeurs Null à la place des valeurs de colonne répétées. Pour plus d’informations, consultez [Tables imbriquées &#40;Analysis Services – Exploration de données&#41;](nested-tables-analysis-services-data-mining.md) ou [Présentation de l’instruction DMX Select ](/sql/dmx/understanding-the-dmx-select-statement).  
+ Si votre fournisseur ne prend pas en charge les ensembles de lignes hiérarchiques tels que ceux présentés ici, vous pouvez utiliser le mot clé FLATTENED dans la requête pour retourner, sous forme de table, les résultats qui contiennent des valeurs Null à la place des valeurs de colonne répétées. Pour plus d’informations, consultez [Tables imbriquées &#40;Analysis Services – Exploration de données&#41;](nested-tables-analysis-services-data-mining.md) ou [Présentation de l’instruction DMX Select ](/sql/dmx/understanding-the-dmx-select-statement).  
   
-###  <a name="bkmk_Query5"></a> Exemple de requête 5 : Prédiction d'associations à partir d'un modèle d'arbres de décision  
- L’exemple de requête suivant est basé sur la structure d’exploration de données Association. Pour pouvoir suivre cet exemple, vous pouvez ajouter un nouveau modèle à cette structure d'exploration de données et sélectionner l'algorithme MDT (Microsoft Decision Trees). Pour plus d’informations sur la création de la structure d’exploration de données Association, consultez [leçon 3 : Génération d’un scénario de panier &#40;didacticiel d’exploration de données intermédiaire&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md).  
+###  <a name="bkmk_Query5"></a>Exemple de requête 5 : prédiction d’associations à partir d’un modèle d’arbre de décision  
+ L’exemple de requête suivant est basé sur la structure d’exploration de données Association. Pour pouvoir suivre cet exemple, vous pouvez ajouter un nouveau modèle à cette structure d'exploration de données et sélectionner l'algorithme MDT (Microsoft Decision Trees). Pour plus d’informations sur la création de la structure d’exploration de données Association, consultez [Leçon 3 : Génération d’un scénario de panier d’achat &#40;Didacticiel d’exploration de données intermédiaire&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md).  
   
  L'exemple de requête suivant est une requête singleton que vous pouvez facilement créer dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] en choisissant des champs, puis en sélectionnant des valeurs pour ces champs dans une liste déroulante.  
   
@@ -231,7 +231,7 @@ NATURAL PREDICTION JOIN
 |Mountain-400-W|  
 |Classic Vest|  
   
-###  <a name="bkmk_Query6"></a> Exemple de requête 6 : Récupération d'une formule de régression d'un modèle d'arbres de décision  
+###  <a name="bkmk_Query6"></a>Exemple de requête 6 : récupération d’une formule de régression à partir d’un modèle d’arbre de décision  
  Lorsque vous créez un modèle d'arbre de décision qui contient une régression sur un attribut continu, vous pouvez utiliser la formule de régression pour effectuer des prédictions, ou extraire des informations relatives à la formule de régression. Pour plus d’informations sur les requêtes sur les modèles de régression, consultez [Exemples de requête de modèle de régression linéaire](linear-regression-model-query-examples.md).  
   
  Si le modèle d'arbre de décision contient un mélange de nœuds de régression et de nœuds qui se divisent sur les plages ou les attributs discrets, vous pouvez créer une requête qui retourne uniquement le nœud de régression. La table NODE_DISTRIBUTION contient les détails de la formule de régression. Dans cet exemple, les colonnes sont aplaties et la table NODE_DISTRIBUTION a un alias afin de faciliter sa lecture. Cependant, dans ce modèle, aucun régresseur n’a été trouvé pour lier le revenu (Income) à d’autres attributs continus. Dans ce cas-là, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retourne la valeur moyenne de l'attribut et la variance totale dans le modèle pour cet attribut.  
@@ -242,9 +242,9 @@ FROM DT_Predict. CONTENT
 WHERE NODE_TYPE = 25  
 ```  
   
- Résultats de l'exemple :  
+ Résultats de l’exemple :  
   
-|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
+|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
 |Yearly Income|Manquant|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
@@ -257,24 +257,24 @@ WHERE NODE_TYPE = 25
   
 |||  
 |-|-|  
-|Fonction de prédiction|Utilisation|  
-|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Détermine si un nœud est un enfant d'un autre nœud dans le modèle.|  
-|[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|Indique si le nœud spécifié contient le cas courant.|  
-|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Retourne la probabilité pondérée.|  
-|[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|Prédit l'appartenance à un dataset associatif.|  
-|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Retourne une table des valeurs associées à la valeur prédite actuelle.|  
-|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|Retourne Node_ID pour chaque cas.|  
-|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|Retourne la probabilité pour la valeur prédite.|  
-|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|Retourne l'écart-type prévu pour la colonne spécifiée.|  
-|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|Retourne la valeur de support pour un état spécifié.|  
-|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|Retourne la variance d'une colonne spécifiée.|  
+|Fonction de prédiction|Usage|  
+|[IsDescendant&#41;DMX &#40;](/sql/dmx/isdescendant-dmx)|Détermine si un nœud est un enfant d'un autre nœud dans le modèle.|  
+|[IsInNode&#41;DMX &#40;](/sql/dmx/isinnode-dmx)|Indique si le nœud spécifié contient le cas courant.|  
+|[PredictAdjustedProbability&#41;DMX &#40;](/sql/dmx/predictadjustedprobability-dmx)|Retourne la probabilité pondérée.|  
+|[PredictAssociation&#41;DMX &#40;](/sql/dmx/predictassociation-dmx)|Prédit l'appartenance à un dataset associatif.|  
+|[&#41;&#40;DMX de PredictHistogram](/sql/dmx/predicthistogram-dmx)|Retourne une table des valeurs associées à la valeur prédite actuelle.|  
+|[PredictNodeId&#41;DMX &#40;](/sql/dmx/predictnodeid-dmx)|Retourne Node_ID pour chaque cas.|  
+|[PredictProbability&#41;DMX &#40;](/sql/dmx/predictprobability-dmx)|Retourne la probabilité pour la valeur prédite.|  
+|[PredictStdev&#41;DMX &#40;](/sql/dmx/predictstdev-dmx)|Retourne l'écart-type prévu pour la colonne spécifiée.|  
+|[PredictSupport&#41;DMX &#40;](/sql/dmx/predictsupport-dmx)|Retourne la valeur de support pour un état spécifié.|  
+|[PredictVariance&#41;DMX &#40;](/sql/dmx/predictvariance-dmx)|Retourne la variance d'une colonne spécifiée.|  
   
  Pour obtenir la liste des fonctions communes à tous les algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)], consultez [Fonctions de prédiction générales &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx). Pour en savoir plus sur la syntaxe de fonctions spécifiques, consultez [Informations de référence sur les fonctions DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Requêtes d'exploration de données](data-mining-queries.md)   
+ [Requêtes d’exploration de données](data-mining-queries.md)   
  [Algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm.md)   
- [Références techniques relatives à l'algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm-technical-reference.md)   
- [Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services – Exploration de données&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Référence technique de l’algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm-technical-reference.md)   
+ [Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

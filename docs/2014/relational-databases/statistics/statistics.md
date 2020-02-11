@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cc9657d8db84b67abe324aea9614dd27c2d9df83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033725"
 ---
 # <a name="statistics"></a>Statistiques
@@ -35,7 +35,7 @@ ms.locfileid: "63033725"
   
 ##  <a name="DefinitionQOStatistics"></a> Composants et concepts  
  Statistiques  
- Les statistiques utilisées dans le cadre de l'optimisation de requête sont des objets qui contiennent des informations statistiques sur la distribution des valeurs dans une ou plusieurs colonnes d'une table ou d'une vue indexée. L'optimiseur de requête utilise ces statistiques pour estimer le nombre de lignes, également appelé *cardinalité*, dans le résultat de la requête. Ces *estimations de cardinalité* permettent à l’optimiseur de requête de créer un plan de requête de haute qualité. Par exemple, l'optimiseur de requête peut utiliser des estimations de cardinalité pour choisir l'opérateur de recherche d'index plutôt que l'opérateur d'analyse d'index, plus vorace en ressources, contribuant ainsi à améliorer les performances des requêtes.  
+ Les statistiques utilisées dans le cadre de l'optimisation de requête sont des objets qui contiennent des informations statistiques sur la distribution des valeurs dans une ou plusieurs colonnes d'une table ou d'une vue indexée. L’optimiseur de requête utilise ces statistiques pour estimer la *cardinalité*, ou le nombre de lignes, dans le résultat de la requête. Ces *estimations de cardinalité* permettent à l’optimiseur de requête de créer un plan de requête de haute qualité. Par exemple, l'optimiseur de requête peut utiliser des estimations de cardinalité pour choisir l'opérateur de recherche d'index plutôt que l'opérateur d'analyse d'index, plus vorace en ressources, contribuant ainsi à améliorer les performances des requêtes.  
   
  Chaque objet de statistiques est créé dans une liste constituée d'une ou de plusieurs colonnes de table et comprend un histogramme présentant la distribution des valeurs dans la première colonne. Les objets de statistiques sur plusieurs colonnes stockent également des informations statistiques sur la corrélation des valeurs entre les colonnes. Ces statistiques de corrélation, également appelées *densités*, sont dérivées du nombre de lignes distinctes de valeurs de colonne. Pour plus d’informations sur les objets de statistiques, consultez [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql).  
   
@@ -68,7 +68,7 @@ ORDER BY s.name;
  L’option AUTO_UPDATE_STATISTICS s’applique aux objets de statistiques créés pour les index, aux colonnes uniques contenues dans les prédicats de requête et aux statistiques créées à l’aide de l’instruction [CREATE STATISTICS](/sql/t-sql/statements/create-statistics-transact-sql) . Cette option s'applique également aux statistiques filtrées.  
   
  AUTO_UPDATE_STATISTICS_ASYNC  
- L'option de mise à jour asynchrone des statistiques AUTO_UPDATE_STATISTICS_ASYNC détermine si l'optimiseur de requête utilise des mises à jour de statistiques synchrones ou asynchrones. Par défaut, l'option de mise à jour asynchrone des statistiques est désactivée, et l'optimiseur de requête met à jour les statistiques en mode synchrone. L’option AUTO_UPDATE_STATISTICS_ASYNC s’applique aux objets de statistiques créés pour les index, aux colonnes uniques contenues dans les prédicats de requête et aux statistiques créées à l’aide de l’instruction [CREATE STATISTICS](/sql/t-sql/statements/create-statistics-transact-sql) .  
+ L'option de mise à jour asynchrone des statistiques AUTO_UPDATE_STATISTICS_ASYNC détermine si l'optimiseur de requête utilise des mises à jour de statistiques synchrones ou asynchrones. Par défaut, l'option de mise à jour asynchrone des statistiques est désactivée, et l'optimiseur de requête met à jour les statistiques en mode synchrone. L’option AUTO_UPDATE_STATISTICS_ASYNC s’applique aux objets de statistiques créés pour les index, aux colonnes uniques des prédicats de requête et aux statistiques créées à l’aide de l’instruction [Create Statistics](/sql/t-sql/statements/create-statistics-transact-sql) .  
   
  La mise à jour des statistiques peut être synchrone (par défaut) ou asynchrone. Dans le cas de la mise à jour synchrone des statistiques, les requêtes sont systématiquement compilées et exécutées avec des statistiques à jour ; si les statistiques sont obsolètes, l'optimiseur de requête attend que les statistiques soient mises à jour avant de compiler et d'exécuter les requêtes. Dans le cas de la mise à jour asynchrone des statistiques, les requêtes sont compilées avec les statistiques existantes, même si celles-ci sont obsolètes ; l'optimiseur de requête peut très bien choisir un plan de requête non optimal si les statistiques sont obsolètes au moment où les requêtes sont compilées. Les requêtes compilées à l'issue d'une mise à jour asynchrone ont l'avantage d'utiliser des statistiques mises à jour.  
   
@@ -87,11 +87,11 @@ ORDER BY s.name;
   
  Si les statistiques par partition ne sont pas prises en charge, l'option est ignorée et un avertissement est généré. Les statistiques incrémentielles ne sont pas prises en charge pour les types de statistiques suivants :  
   
--   statistiques créées avec des index qui ne sont pas alignés sur les partitions avec la table de base ;  
+-   statistiques créées avec des index qui ne sont pas alignés sur les partitions avec la table de base ;  
   
 -   statistiques créées sur les bases de données secondaires lisibles AlwaysOn ;  
   
--   statistiques créées sur les bases de données en lecture seule ;  
+-   statistiques créées sur les bases de données en lecture seule ;  
   
 -   statistiques créées sur les index filtrés ;  
   
@@ -103,9 +103,9 @@ ORDER BY s.name;
   
 ||  
 |-|  
-|**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**S’applique à** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] : [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]jusqu’à.|  
   
-##  <a name="CreateStatistics"></a> Quand créer des statistiques  
+##  <a name="CreateStatistics"></a>Quand créer des statistiques  
  L'optimiseur de requête crée déjà des statistiques selon les méthodes suivantes :  
   
 1.  L'optimiseur de requête crée des statistiques pour les index de tables ou de vues lors de la création des index. Ces statistiques sont créées sur les colonnes de clés de l'index. Si l'index est un index filtré, l'optimiseur de requête crée des statistiques filtrées sur le même sous-ensemble de lignes spécifié pour l'index filtré. Pour plus d’informations sur les index filtrés, consultez [Créer des index filtrés](../indexes/create-filtered-indexes.md) et [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql).  
@@ -152,7 +152,7 @@ GO
 ### <a name="query-selects-from-a-subset-of-data"></a>La requête effectue une sélection dans un sous-ensemble de données  
  Lorsque l'optimiseur de requête crée des statistiques pour des colonnes et des index uniques, il crée les statistiques pour les valeurs contenues dans toutes les lignes. Lorsque les requêtes effectuent une sélection dans un sous-ensemble de lignes et que ce sous-ensemble de lignes présente une distribution de données unique, des statistiques filtrées peuvent améliorer les plans de requête. Vous pouvez créer des statistiques filtrées à l'aide de l'instruction CREATE STATISTICS avec la clause WHERE pour définir l'expression de prédicat de filtre.  
   
- Par exemple, à l’aide de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], chaque produit dans la table Production.Product appartienne à un des quatre catégories de la table Production.ProductCategory : Bikes, Components, Clothing et Accessories. Chacune de ces catégories présente une distribution de données différente pour le poids (Weight) : le poids des bicyclettes (Bikes) varie de 13,77 à 30,0, le poids des composants (Components) varie de 2,12 à 1 050,00 avec quelques valeurs NULL, le poids des vêtements (Clothing) est toujours NULL et le poids des accessoires (Accessories) est également toujours NULL.  
+ Par exemple, dans [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], chaque produit de la table Production.Product appartient à l'une des quatre catégories de la table Production.ProductCategory : Bikes, Components, Clothing et Accessories. Chacune de ces catégories présente une distribution de données différente pour le poids (Weight) : le poids des bicyclettes (Bikes) varie de 13,77 à 30,0, le poids des composants (Components) varie de 2,12 à 1 050,00 avec quelques valeurs NULL, le poids des vêtements (Clothing) est toujours NULL et le poids des accessoires (Accessories) est également toujours NULL.  
   
  Si l'on prend la catégorie Bikes pour exemple, les statistiques filtrées sur tous les poids de bicyclettes fournissent des statistiques plus précises à l'optimisateur de requête et peuvent améliorer la qualité du plan de requête par rapport aux statistiques de table entière ou aux statistiques inexistantes de la colonne Weight (Poids). Si la colonne où figure le poids des bicyclettes constitue un candidat valable pour les statistiques filtrées, tel n'est pas forcément le cas pour un index filtré si le nombre de recherches de poids est relativement faible. Les gains en performances offerts par un index filtré lors des recherches risquent de ne pas compenser les coûts de maintenance et de stockage supplémentaires liés à l'ajout d'un index filtré à la base de données.  
   
@@ -185,17 +185,17 @@ GO
   
 -   créez les statistiques manquantes à l'aide de l'instruction CREATE STATISTICS.  
   
- Lorsque les statistiques sur une base de données en lecture seule ou un instantané en lecture seule sont absentes ou obsolètes, le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] crée et gère les statistiques temporaires dans `tempdb`. Lorsque le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] crée des statistiques temporaires, le nom des statistiques est ajouté avec le suffixe _readonly_database_statistic pour différencier les statistiques temporaires des statistiques permanentes. Le suffixe _readonly_database_statistic est réservé pour les statistiques générées par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Des scripts pour les statistiques temporaires peuvent être créés et reproduits sur une base de données en lecture-écriture. Le cas échéant, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] remplace le suffixe du nom des statistiques _readonly_database_statistic par _readonly_database_statistic_scripted.  
+ Lorsque les statistiques sur une base de données en lecture seule ou un instantané en lecture seule sont absentes ou obsolètes, le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] crée et gère les statistiques temporaires dans `tempdb`. Lorsque le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] crée des statistiques temporaires, le nom des statistiques est ajouté avec le suffixe _readonly_database_statistic pour différencier les statistiques temporaires des statistiques permanentes. Le suffixe _readonly_database_statistic est réservé aux statistiques générées par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Des scripts pour les statistiques temporaires peuvent être créés et reproduits sur une base de données en lecture-écriture. Le cas échéant, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] remplace le suffixe du nom des statistiques _readonly_database_statistic par _readonly_database_statistic_scripted.  
   
  Seul [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut créer et mettre à jour les statistiques temporaires. Toutefois, vous pouvez supprimer des statistiques temporaires et analyser les propriétés des statistiques en utilisant les mêmes outils que ceux que vous utilisez pour les statistiques permanentes :  
   
 -   Supprimez les statistiques temporaires à l’aide de l’instruction [DROP STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-statistics-transact-sql) .  
   
--   Analysez les statistiques à l’aide des affichages catalogue **sys.stats** et **sys.stats_columns** . **sys_stats** inclut la colonne **is_temporary** pour indiquer les statistiques permanentes et temporaires.  
+-   Surveillez les statistiques en utilisant les vues du catalogue **sys.stats** et **sys.stats_columns**. **sys_stats** comprend la colonne **is_temporary** , pour indiquer les statistiques permanentes et temporaires.  
   
  Étant donné que les statistiques temporaires sont stockées dans `tempdb`, un redémarrage du service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provoque la disparition de toutes les statistiques temporaires.  
   
-##  <a name="UpdateStatistics"></a> Quand mettre à jour des statistiques  
+##  <a name="UpdateStatistics"></a>Quand mettre à jour les statistiques  
  L'optimiseur de requête détermine si les statistiques sont obsolètes et les met éventuellement à jour lorsqu'elles sont requises par un plan de requête. Dans certains cas, vous pouvez améliorer le plan de requête et donc les performances des requêtes en mettant à jour les statistiques de façon plus régulière que lorsque l'option AUTO_UPDATE_STATISTICS est activée. Vous pouvez mettre à jour les statistiques à l'aide de l'instruction UPDATE STATISTICS ou de la procédure stockée sp_updatestats.  
   
  La mise à jour des statistiques est l'assurance que les requêtes sont compilées avec des statistiques à jour. Toutefois, la mise à jour des statistiques entraîne une recompilation des requêtes. À ce titre, il est déconseillé de mettre à jour les statistiques de façon trop régulière eu égard aux performances. Un compromis doit être trouvé entre le souhait d'améliorer les plans de requête et le temps nécessaire à la recompilation des requêtes. Ce compromis peut varier en fonction de votre application.  
@@ -225,7 +225,7 @@ GO
   
  Les opérations de reconstruction, de défragmentation ou de réorganisation d'index ne modifient pas la distribution des données. Par conséquent, vous n'avez pas besoin de mettre à jour les statistiques après avoir effectué des opérations ALTER INDEX REBUILD, DBCC REINDEX, DBCC INDEXDEFRAG ou ALTER INDEX REORGANIZE. Si l'optimiseur de requête met effectivement à jour les statistiques lors de la reconstruction d'un index sur une table ou une vue via ALTER INDEX REBUILD ou DBCC DBREINDEX, cette mise à jour des statistiques est une conséquence de la recréation de l'index. L'optimiseur de requête ne met pas à jour les statistiques suite à des opérations DBCC INDEXDEFRAG ou ALTER INDEX REORGANIZE.  
   
-##  <a name="DesignStatistics"></a> Requêtes pour une utilisation efficace des statistiques  
+##  <a name="DesignStatistics"></a>Requêtes qui utilisent les statistiques efficacement  
  Certaines implémentations de requête, telles que les variables locales et les expressions complexes contenues dans le prédicat de requête, peuvent produire des plans de requête non optimaux. Cela peut s'éviter en suivant les recommandations en matière de conception de requêtes pour une utilisation efficace des statistiques. Pour plus d’informations sur les prédicats de requête, consultez [Condition de recherche &#40;Transact-SQL&#41;](/sql/t-sql/queries/search-condition-transact-sql).  
   
  Vous pouvez améliorer les plans de requête en appliquant les recommandations en matière de conception de requêtes pour une utilisation efficace des statistiques. Les *estimations de cardinalité* relatives aux expressions, aux variables et aux fonctions utilisées dans les prédicats de requête s'en trouveront améliorées. Lorsque l'optimiseur de requête ne connaît pas la valeur d'une expression, d'une variable ou d'une fonction, il ne sait pas quelle valeur rechercher dans l'histogramme et ne peut donc pas extraire la meilleure estimation de cardinalité de l'histogramme. Au lieu de cela, l'optimiseur de requête base l'estimation de cardinalité sur le nombre moyen de lignes par valeur distincte pour toutes les lignes échantillonnées dans l'histogramme. Il en résulte des estimations de cardinalité non optimales et une altération potentielle des performances des requêtes.  
@@ -323,7 +323,7 @@ GO
  Pour certaines applications, les recommandations en matière de conception de requêtes peuvent ne pas s'appliquer, soit parce que vous ne pouvez pas modifier la requête, soit parce que l'utilisation de l'indicateur de requête RECOMPILE peut entraîner un nombre trop important de recompilations. Vous pouvez utiliser des repères de plan pour spécifier d'autres indicateurs, tels que USE PLAN, dans le but de contrôler le comportement de la requête, en attendant de trouver une solution avec l'éditeur de l'application. Pour plus d'informations sur les repères de plan, consultez [Plan Guides](../performance/plan-guides.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)   
+ [CRÉER des statistiques &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-statistics-transact-sql)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)   
  [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)   

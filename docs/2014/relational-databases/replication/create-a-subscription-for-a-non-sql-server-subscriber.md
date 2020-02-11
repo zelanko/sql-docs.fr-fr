@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721671"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Créer un abonnement pour un Abonné non-SQL Server
@@ -26,7 +26,7 @@ ms.locfileid: "62721671"
   
  **Dans cette rubrique**  
   
--   **Pour créer une publication destinée à un Abonné non-SQL Server à l'aide de :**  
+-   **Pour créer un abonnement pour un abonné non-SQL Server, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62721671"
   
          Vous devez créer l'instantané après avoir activé la publication pour les Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin de garantir que l'Agent d'instantané génère un instantané et des scripts d'initialisation qui conviennent pour des Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-3.  Activez la publication pour les Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de la boîte de dialogue **Propriétés de la publication - \<nom_publication>** . Consultez [Publication Properties, Subscription Options](publication-properties-subscription-options.md) pour plus d'informations sur cette étape.  
+3.  Activez la publication pour les Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de la boîte de dialogue **Propriétés de la publication - \<nom_publication>**. Consultez [Publication Properties, Subscription Options](publication-properties-subscription-options.md) pour plus d'informations sur cette étape.  
   
 4.  Créez un abonnement avec l'Assistant Nouvel abonnement. Cette rubrique fournit des informations sur cette étape.  
   
@@ -68,7 +68,8 @@ ms.locfileid: "62721671"
     > [!NOTE]  
     >  Le choix de la valeur **True** définit alors la valeur de l'article **pre_creation_cmd** à « drop ». Ce paramètre indique que la réplication doit supprimer une table au niveau de l'Abonné si elle correspond au nom de la table dans l'article. Si vous disposez de tables existantes au niveau de l'Abonné que vous souhaitez conserver, utilisez la procédure stockée [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) pour chaque article ; précisez une valeur 'none' pour **pre_creation_cmd**: `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Vous êtes invité à créer un nouvel instantané de la publication. Si vous ne souhaitez pas le faire immédiatement, vous utiliserez plus tard la procédure décrite plus loin dans la prochaine procédure.  
+5.  
+  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Vous êtes invité à créer un nouvel instantané de la publication. Si vous ne souhaitez pas le faire immédiatement, vous utiliserez plus tard la procédure décrite plus loin dans la prochaine procédure.  
   
 #### <a name="to-create-a-subscription-for-a-non-sql-server-subscriber"></a>Pour créer une publication destinée à un Abonné non-SQL Server  
   
@@ -90,13 +91,13 @@ ms.locfileid: "62721671"
   
      Le nom de la source de données entré à cette étape et les informations de connexion spécifiées à l'étape 9 ne sont pas validés par cet Assistant. Ils ne sont pas utilisés par la réplication avant que l'Agent de distribution ne s'exécute pour l'abonnement. Assurez-vous que toutes les valeurs ont été testées en vous connectant à l'Abonné à l'aide d'un outil client (par exemple **sqlplus** pour Oracle). Pour plus d'informations, consultez [Oracle Subscribers](non-sql/oracle-subscribers.md) et [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md).  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Dans la page **Abonnés** de l'Assistant, l'Abonné s'affiche maintenant dans la colonne **Abonné** avec une **(destination par défaut)** en lecture seule dans la colonne **Base de données d'abonnement** :  
+7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]Sur la page **abonnés** de l’Assistant, l’abonné s’affiche maintenant dans la colonne **abonné** avec une valeur en lecture seule **(destination par défaut)** dans la colonne **base de données d’abonnement** :  
   
     -   Sur Oracle, un serveur a au plus une base de données, il n'est donc pas nécessaire de la spécifier.  
   
     -   Pour IBM DB2, la base de données est spécifiée dans la propriété **Catalogue initial** de la chaîne de connexion DB2, qui peut être entrée dans le champ **Options de connexion supplémentaires** décrit plus loin.  
   
-8.  Dans la page **Sécurité de l’Agent de distribution**, cliquez sur le bouton des propriétés ( **...** ) à côté de l’Abonné pour accéder à la boîte de dialogue **Sécurité de l’Agent de distribution**.  
+8.  Dans la page **Sécurité de l’Agent de distribution**, cliquez sur le bouton des propriétés (**...**) à côté de l’Abonné pour accéder à la boîte de dialogue **Sécurité de l’Agent de distribution**.  
   
 9. Dans la boîte de dialogue **Sécurité de l'Agent de distribution** :  
   
@@ -125,7 +126,7 @@ ms.locfileid: "62721671"
   
     -   Sélectionnez **Immédiatement** dans la liste déroulante de la colonne **À quel moment** pour que l'Agent de distribution transfère les fichiers d'instantanés à l'Abonné lorsque l'Assistant se termine. Sélectionnez **Lors de la première synchronisation** pour que l'Agent transfère les fichiers lors de la prochaine exécution planifiée de l'Agent.  
   
-12. Sur la page **Actions de l'Assistant** , scriptez en option l'abonnement. Pour plus d’informations, consultez [Scripting Replication](scripting-replication.md).  
+12. Sur la page **Actions de l'Assistant** , scriptez en option l'abonnement. Pour plus d'informations, voir [Scripting Replication](scripting-replication.md).  
   
 #### <a name="to-retain-tables-at-the-subscriber"></a>Pour conserver les tables sur l'Abonné  
   
@@ -137,7 +138,7 @@ ms.locfileid: "62721671"
   
 2.  Cliquez avec le bouton droit sur la publication, puis cliquez sur **Afficher l'état de l'Agent d'instantané**.  
   
-3.  Dans la boîte de dialogue **Afficher l’état de l’Agent d’instantané - \<Publication>** , cliquez sur **Démarrer**.  
+3.  Dans la boîte de dialogue **Afficher l’état de l’Agent d’instantané - \<Publication>**, cliquez sur **Démarrer**.  
   
  Lorsque l'Agent d'instantané a terminé, un message s'affiche, par exemple, « [100%] Un instantané de 17 articles a été généré. »  
   
@@ -155,38 +156,38 @@ ms.locfileid: "62721671"
   
     -   Si `enabled_for_het_sub` a la valeur 1, les Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont pris en charge.  
   
-    -   Si la valeur de `enabled_for_het_sub` est 0, exécutez [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), en spécifiant `enabled_for_het_sub` pour **@property** et `true` pour  **@value** .  
+    -   Si la valeur de `enabled_for_het_sub` est 0, exécutez [Sp_changepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), en `enabled_for_het_sub` spécifiant `true` pour **@value** **@property** et pour.  
   
         > [!NOTE]  
         >  Avant de remplacer la valeur de `enabled_for_het_sub` par `true`, vous devez supprimer tout abonnement existant à la publication. Vous ne pouvez pas affecter la valeur `enabled_for_het_sub` à `true` lorsque la publication prend également en charge la mise à jour des abonnements. La modification de `enabled_for_het_sub` affectera d'autres propriétés de publication. Pour plus d’informations, consultez [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
   
-3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Spécifiez **@publication** , **@subscriber** , affectez la valeur **(destination par défaut)** pour **@destination_db** , affectez la valeur **push** pour **@subscription_type** et la valeur 3 à **@subscriber_type** (indique un fournisseur OLE DB).  
+3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). **@publication**Spécifiez **@subscriber**,, la valeur **(destination par défaut)** pour **@destination_db**, la valeur **Push** pour **@subscription_type**et la valeur 3 pour **@subscriber_type** (spécifie un fournisseur OLE DB).  
   
 4.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql). Spécifiez les éléments suivants :  
   
-    -   Les paramètres **@subscriber** et **@publication** .  
+    -   Paramètres **@subscriber**et **@publication** .  
   
-    -   La valeur **(destination par défaut)** pour **@subscriber_db** ,  
+    -   La valeur **(destination par défaut)** pour **@subscriber_db**,  
   
-    -   Les propriétés des sources de données non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour **@subscriber_provider** , **@subscriber_datasrc** , **@subscriber_location** , **@subscriber_provider_string** et **@subscriber_catalog** .  
+    -   Propriétés de la source de données[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non-pour **@subscriber_provider**, **@subscriber_datasrc**, **@subscriber_location** **@subscriber_provider_string**, et **@subscriber_catalog**.  
   
-    -   Les paramètres [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lesquelles l'Agent de distribution est exécuté sur le serveur de distribution pour **@job_login** et **@job_password** .  
+    -   Les [!INCLUDE[msCoName](../../includes/msconame-md.md)] informations d’identification Windows sous lesquelles le agent de distribution sur le serveur de **@job_login** distribution **@job_password**s’exécute pour et.  
   
         > [!NOTE]  
-        >  Les connexions effectuées à l'aide de l'authentification intégrée Windows utilisent toujours les informations d'identification Windows spécifiées par **@job_login** et **@job_password** . L'Agent de distribution crée toujours la connexion locale au serveur de distribution à l'aide de l'authentification intégrée Windows. Par défaut, l'agent se connecte à l'Abonné à l'aide de ces informations.  
+        >  Les connexions effectuées à l’aide de l’authentification intégrée Windows utilisent toujours les **@job_login** informations **@job_password**d’identification Windows spécifiées par et. L'Agent de distribution crée toujours la connexion locale au serveur de distribution à l'aide de l'authentification intégrée Windows. Par défaut, l'agent se connecte à l'Abonné à l'aide de ces informations.  
   
-    -   La valeur **0** pour **@subscriber_security_mode** et les informations de connexion du fournisseur OLE DB pour **@subscriber_login** et **@subscriber_password** .  
+    -   La valeur **0** pour **@subscriber_security_mode** et les informations de connexion du fournisseur OLE DB **@subscriber_login** pour **@subscriber_password**et.  
   
-    -   Planification du travail de l'Agent de distribution pour cet abonnement. Pour plus d’informations, consultez [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
+    -   Planification du travail de l'Agent de distribution pour cet abonnement. Pour plus d’informations, consultez [spécifier des planifications de synchronisation](specify-synchronization-schedules.md).  
   
     > [!IMPORTANT]  
-    >  Lors de la création d'un abonnement par émission de données sur un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées au serveur de distribution en texte brut. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Lors de la création d'un abonnement par émission de données sur un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées au serveur de distribution en texte brut. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [activer les connexions chiffrées dans le Moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md)   
- [Oracle Subscribers](non-sql/oracle-subscribers.md)   
- [Autres abonnés non-SQL Server](non-sql/other-non-sql-server-subscribers.md)   
- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)  
+ [Abonnés IBM DB2](non-sql/ibm-db2-subscribers.md)   
+ [Abonnés Oracle](non-sql/oracle-subscribers.md)   
+ [Autres abonnés non-SQL Server](non-sql/other-non-sql-server-subscribers.md)   
+ [Concepts liés aux procédures stockées système de réplication](concepts/replication-system-stored-procedures-concepts.md)   
+ [Bonnes pratiques en matière de sécurité de la réplication](security/replication-security-best-practices.md)  
   
   

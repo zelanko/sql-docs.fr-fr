@@ -1,5 +1,5 @@
 ---
-title: Ajout d’attributs aux Dimensions | Microsoft Docs
+title: Ajout d’attributs aux dimensions | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a30424ce322ed356870465422c4f82fb8d7d88d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079029"
 ---
 # <a name="adding-attributes-to-dimensions"></a>Ajout d'attributs aux dimensions
@@ -38,7 +38,7 @@ ms.locfileid: "66079029"
   
     -   **MaritalStatus**  
   
-    -   **Gender**  
+    -   **Sexe**  
   
     -   **EmailAddress**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66079029"
   
     -   **NumberCarsOwned**  
   
-    -   **Téléphone**  
+    -   **Numéros**  
   
     -   **DateFirstPurchase**  
   
@@ -64,15 +64,15 @@ ms.locfileid: "66079029"
   
 5.  Faites glisser les colonnes suivantes de la table **Geography** du volet **Vue de source de données** vers le volet **Attributs** :  
   
-    -   **Ville**  
+    -   **City**  
   
     -   **StateProvinceName**  
   
     -   **EnglishCountryRegionName**  
   
-    -   **PostalCode**  
+    -   **Postal**  
   
-6.  Dans le menu Fichier, cliquez sur **Enregistrer tout**.  
+6.  Dans le menu Fichier , cliquez sur **Enregistrer tout**.  
   
 ## <a name="adding-attributes-to-the-product-dimension"></a>Ajout d'attributs à la dimension Product  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66079029"
   
 4.  Faites glisser les colonnes suivantes de la table **Product** du volet **Vue de source de données** vers le volet **Attributs** :  
   
-    -   **StandardCost**  
+    -   **CoûtStandard**  
   
     -   **Color**  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66079029"
   
     -   **SizeRange**  
   
-    -   **Weight**  
+    -   **Poids**  
   
     -   **DaysToManufacture**  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66079029"
   
     -   **DealerPrice**  
   
-    -   **Classe**  
+    -   **Type**  
   
     -   **Style**  
   
@@ -120,12 +120,12 @@ ms.locfileid: "66079029"
   
     -   **État**  
   
-5.  Dans le menu Fichier, cliquez sur **Enregistrer tout**.  
+5.  Dans le menu Fichier , cliquez sur **Enregistrer tout**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
  [Vérification des propriétés de cube et de dimension](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des propriétés d'attribut de dimension](multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Référence des propriétés d’attribut de dimension](multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

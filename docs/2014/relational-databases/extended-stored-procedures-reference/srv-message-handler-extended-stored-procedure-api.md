@@ -21,18 +21,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f597aa6c9ba9759b606501b0bd72a2166b1805e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127405"
 ---
-# <a name="srvmessagehandler-extended-stored-procedure-api"></a>srv_message_handler (API de procédure stockée étendue)
+# <a name="srv_message_handler-extended-stored-procedure-api"></a>srv_message_handler (API de procédure stockée étendue)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Utilisez plutôt l’intégration du CLR.  
   
- Appelle le gestionnaire de messages de l'API de procédure stockée étendue installée. Cette fonction est habituellement utilisée pour appeler [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d’une procédure stockée étendue pour journaliser une erreur (définie par la procédure stockée étendue) dans le fichier du journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou le journal des applications [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+ Appelle le gestionnaire de messages de l'API de procédure stockée étendue installée. Cette fonction est généralement utilisée pour appeler [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d’une procédure stockée étendue afin de consigner une erreur (définie par la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procédure stockée étendue) [!INCLUDE[msCoName](../../includes/msconame-md.md)] dans le fichier journal des erreurs ou le journal des applications Windows.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -76,10 +76,10 @@ oserrtextlen
  *errornum*  
  Numéro d'erreur défini par la procédure stockée étendue. Ce nombre doit être compris entre 50 001 et 2 147 483 647.  
   
- *severity*  
+ *va*  
  Valeur de gravité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] standard pour l'erreur. Ce nombre doit être compris entre 0 et 24.  
   
- *state*  
+ *Département*  
  Valeur d'état [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour l'erreur.  
   
  *oserrnum*  
@@ -97,7 +97,7 @@ oserrtextlen
  *oserrtextlen*  
  Longueur de la chaîne d’erreur du système d’exploitation *oserrtext*.  
   
-## <a name="returns"></a>Valeur renvoyée  
+## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
 ## <a name="remarks"></a>Notes  

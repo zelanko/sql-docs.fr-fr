@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: dcd7f95833695cc5f9f791d83a6221c35e88f58e
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400284"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>Utilisation d’une base de données intermédiaire en parallèle Data Warehouse (PDW)
@@ -61,7 +61,7 @@ For more information, see [Grant Permissions to load data](grant-permissions-to-
   
     -   La taille du journal est généralement similaire à la taille de la table répliquée.  
   
-## <a name="Examples"></a>Illustre  
+## <a name="Examples"></a>Exemples  
   
 ### <a name="a-create-a-staging-database"></a>R. Créer une base de données de mise en lots 
 L’exemple suivant crée une base de données de mise en lots, Stagedb, à utiliser avec toutes les charges sur l’appliance. Supposons que vous estimez que cinq tables répliquées d’une taille de 5 Go chacune sera chargée simultanément. Cette concurrence entraîne l’allocation d’au moins 25 Go pour la taille répliquée. Supposons que vous estimez que six tables distribuées de tailles 100, 200, 400, 500, 500 et 550 Go se chargent simultanément. Cette concurrence entraîne l’allocation d’au moins 2250 Go pour la taille de la table distribuée.  
