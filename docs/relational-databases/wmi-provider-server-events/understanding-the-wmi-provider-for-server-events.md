@@ -15,10 +15,10 @@ ms.assetid: 8fd7bd18-76d0-4b28-8fee-8ad861441ab2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 63cc23d19a6eeb5f3a44cd0bbf62d9bcd87ace0d
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660513"
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>Présentation du fournisseur WMI pour les événements serveur
@@ -29,7 +29,7 @@ ms.locfileid: "73660513"
   
  Lorsqu’un événement qui déclenche la notification d’événement pour envoyer un message se produit, le message est envoyé à un service cible prédéfini dans **msdb** , nommé **SQL/Notifications/ProcessWMIEventProviderNotification/v 1.0**. Le service place l’événement dans une file d’attente prédéfinie dans la base de données **msdb** nommée **WMIEventProviderNotificationQueue**. (Le service et la file d’attente sont créés dynamiquement par le fournisseur lorsqu’il se connecte pour la première fois à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) Le fournisseur lit ensuite les données d’événement de cette file d’attente et les transforme en MOF (Managed Object Format) avant de les retourner à l’application. L'illustration ci-dessous montre ce processus.  
   
- ![Diagramme de flow du fournisseur WMI pour les événements de serveur](../../relational-databases/wmi-provider-server-events/media/wmi-provider-functional-spec.gif "Diagramme de flow du fournisseur WMI pour les événements de serveur")  
+ ![Diagramme de flux du fournisseur WMI pour les événements de serveur](../../relational-databases/wmi-provider-server-events/media/wmi-provider-functional-spec.gif "Diagramme de flux du fournisseur WMI pour les événements de serveur")  
   
  Examinons, par exemple, la requête WQL suivante :  
   
@@ -53,15 +53,16 @@ CREATE EVENT NOTIFICATION SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9
 GO  
 ```  
   
- Dans cet exemple, `SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9` est un identificateur [!INCLUDE[tsql](../../includes/tsql-md.md)] composé du préfixe `SQLWEP_` et d'un GUID. `SQLWEP` crée un GUID pour chaque identificateur. La valeur `A7E5521A-1CA6-4741-865D-826F804E5135` dans la clause `TO SERVICE` est le GUID qui identifie l’instance Broker dans la base de données **msdb** .  
+ Dans cet exemple, `SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9` est un identificateur [!INCLUDE[tsql](../../includes/tsql-md.md)] composé du préfixe `SQLWEP_` et d'un GUID. 
+  `SQLWEP` crée un GUID pour chaque identificateur. La valeur `A7E5521A-1CA6-4741-865D-826F804E5135` dans la `TO SERVICE` clause est le GUID qui identifie l’instance Broker dans la base de données **msdb** .  
   
  Pour plus d’informations sur l’utilisation de WQL, consultez [utilisation de WQL avec le fournisseur WMI pour les événements de serveur](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx).  
   
- Les applications de gestion dirigent le fournisseur WMI pour les événements serveur vers une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en se connectant à un espace de noms WMI défini par le fournisseur. Le service WMI de Windows mappe cet espace de noms à la DLL de fournisseur, Sqlwep.dll, puis la charge en mémoire. Le fournisseur gère un espace de noms WMI pour les événements serveur pour chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et le format est le suivant : \\\\.\\*racine*\Microsoft\SqlServer\ServerEvents\\*instance_name*, où *instance_name* a pour valeur par défaut MSSQLServer. Pour plus d’informations sur la façon de se connecter à un espace de noms WMI pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [utilisation de WQL avec le fournisseur WMI pour les événements de serveur](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx).  
+ Les applications de gestion dirigent le fournisseur WMI pour les événements serveur vers une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en se connectant à un espace de noms WMI défini par le fournisseur. Le service WMI de Windows mappe cet espace de noms à la DLL de fournisseur, Sqlwep.dll, puis la charge en mémoire. Le fournisseur gère un espace de noms WMI pour les événements serveur pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]chaque instance de et le format \\ \\est :. \\ ** \Microsoft\SqlServer\ServerEvents\\racine*instance_name*, où *instance_name* par défaut est MSSQLSERVER. Pour plus d’informations sur la façon de se connecter à un espace de noms [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]WMI pour une instance de, consultez [utilisation de WQL avec le fournisseur WMI pour les événements de serveur](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx).  
   
  La DLL de fournisseur, Sqlwep.dll, est chargée une seule fois dans le service hôte WMI du système d'exploitation du serveur, indépendamment du nombre d'instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] présentes sur le serveur.  
   
- Pour obtenir un exemple d’une application de gestion d’agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui utilise le fournisseur WMI pour les événements de serveur, consultez [exemple : création d’une alerte de SQL Server agent à l’aide du fournisseur WMI pour les événements de serveur](https://technet.microsoft.com/library/ms186385.aspx). Pour obtenir un exemple d’application de gestion qui utilise le fournisseur WMI pour les événements de serveur dans le code managé, consultez [exemple : utilisation du fournisseur d’événements WMI dans du code managé](https://technet.microsoft.com/library/ms179315.aspx). Des informations supplémentaires sont également disponibles sur WMI dans le kit de développement logiciel (SDK) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+ Pour obtenir un exemple d' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] application de gestion d’agent qui utilise le fournisseur WMI pour les événements de serveur, consultez [exemple : création d’une alerte de SQL Server agent à l’aide du fournisseur WMI pour les événements de serveur](https://technet.microsoft.com/library/ms186385.aspx). Pour obtenir un exemple d’application de gestion qui utilise le fournisseur WMI pour les événements de serveur dans le code managé, consultez [exemple : utilisation du fournisseur d’événements WMI dans du code managé](https://technet.microsoft.com/library/ms179315.aspx). Des informations supplémentaires sont également disponibles sur WMI dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] le kit de développement logiciel (SDK).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fournisseur WMI pour les concepts des événements de serveur](https://technet.microsoft.com/library/ms180560.aspx)  

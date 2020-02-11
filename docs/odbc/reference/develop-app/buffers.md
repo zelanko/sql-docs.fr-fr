@@ -18,39 +18,39 @@ ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ad13379552e3a5a576b0aa5cc8720ca6ca1688a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68118741"
 ---
 # <a name="buffers"></a>Mémoires tampons
-Une mémoire tampon est tout bloc de mémoire de l’application utilisée pour passer des données entre l’application et le pilote. Par exemple, mémoires tampons d’application peuvent être associées, ou *lié,* avec les colonnes du jeu de résultats **SQLBindCol**. Comme chaque ligne est extraite, les données sont retournées pour chaque colonne dans ces mémoires tampons. *Entrée de mémoires tampons* sont utilisés pour passer des données à partir de l’application au pilote ; *mémoires tampons de sortie* sont utilisées pour retourner des données à partir du pilote à l’application.  
+Une mémoire tampon est une partie de la mémoire d’application utilisée pour passer des données entre l’application et le pilote. Par exemple, les mémoires tampons d’application peuvent être associées à des colonnes de jeu de résultats, ou *liées à* celles-ci, avec **SQLBindCol**. À mesure que chaque ligne est extraite, les données sont retournées pour chaque colonne dans ces mémoires tampons. Les *mémoires tampons d’entrée* sont utilisées pour transmettre les données de l’application au pilote ; les *mémoires tampons de sortie* sont utilisées pour retourner les données du pilote à l’application.  
   
 > [!NOTE]  
->  Si une fonction ODBC retourne SQL_ERROR, le contenu de tous les arguments sortie à cette fonction n’est pas défini.  
+>  Si une fonction ODBC retourne SQL_ERROR, le contenu de tous les arguments de sortie de cette fonction n’est pas défini.  
   
- Cette discussion s’occupe principalement avec les mémoires tampons de type indéterminé. Les adresses de ces mémoires tampons apparaissent en tant qu’arguments de type SQLPOINTER, telles que la *TargetValuePtr* argument dans **SQLBindCol**. Toutefois, certains des éléments abordées ici, telles que les arguments utilisés avec les mémoires tampons, s’appliquent également aux arguments utilisés pour passer des chaînes au pilote, telles que la *TableName* argument dans **SQLTables**.  
+ Cette discussion s’intéresse principalement aux mémoires tampons de type indéterminé. Les adresses de ces mémoires tampons apparaissent en tant qu’arguments de type SQLPOINTER, tels que l’argument *TargetValuePtr* dans **SQLBindCol**. Toutefois, certains des éléments abordés ici, tels que les arguments utilisés avec les tampons, s’appliquent également aux arguments utilisés pour passer des chaînes au pilote, tel que l’argument *TableName* dans **SQLTables**.  
   
- Ces mémoires tampons sont généralement fournis par paires. *Mémoires tampons de données* sont utilisée pour transmettre les données proprement dites, alors que *mémoires tampon de longueur / d’indicateur* sont utilisés pour passer la longueur des données dans le tampon de données ou une valeur spécifique telle que de SQL_NULL_DATA, ce qui indique que les données sont NULL. La longueur des données dans un tampon de données est différente de la longueur de la mémoire tampon de données elle-même. L’illustration suivante montre la relation entre la mémoire tampon de données et de la mémoire tampon de longueur / d’indicateur.  
+ Ces mémoires tampons sont généralement des paires. Les *tampons de données* sont utilisés pour passer les données elles-mêmes, tandis que les *tampons de longueur/d’indicateur* sont utilisés pour transmettre la longueur des données dans la mémoire tampon de données ou une valeur spéciale telle que SQL_NULL_DATA, ce qui indique que les données sont null. La longueur des données dans une mémoire tampon de données est différente de la longueur de la mémoire tampon de données elle-même. L’illustration suivante montre la relation entre la mémoire tampon de données et la mémoire tampon de longueur/d’indicateur.  
   
- ![Mémoire tampon de données et longueur&#47;tampon d’indicateur](../../../odbc/reference/develop-app/media/pr09.gif "pr09")  
+ ![Mémoire tampon des données et longueur&#47;tampon de l’indicateur](../../../odbc/reference/develop-app/media/pr09.gif "pr09")  
   
- Une mémoire tampon de longueur / d’indicateur est nécessaire chaque fois que le tampon de données contient des données de longueur variable, comme binaire ou caractère. Si la mémoire tampon de données contient des données de longueur fixe, comme une structure entier ou une date, une mémoire tampon de longueur / d’indicateur est nécessaire uniquement pour passer des valeurs d’indicateur, car la longueur des données est déjà connue. Si une application utilise une mémoire tampon de longueur / d’indicateur avec les données de longueur fixe, le pilote ignore les longueurs passés qu’il contient.  
+ Une mémoire tampon de longueur/indicateur est requise chaque fois que le tampon de données contient des données de longueur variable, telles que des données de type caractère ou binaire. Si la mémoire tampon de données contient des données de longueur fixe, telles qu’un entier ou une structure de date, une mémoire tampon de longueur/indicateur est nécessaire uniquement pour passer des valeurs d’indicateur, car la longueur des données est déjà connue. Si une application utilise une mémoire tampon de longueur/d’indicateur avec des données de longueur fixe, le pilote ignore toutes les longueurs qui lui sont passées.  
   
- La longueur de la mémoire tampon de données et les données qu’il contient est mesurée en octets, par opposition aux caractères. Cette distinction est sans importance pour les programmes qui utilisent des chaînes ANSI, car les longueurs en octets et les caractères sont les mêmes.  
+ La longueur de la mémoire tampon de données et des données qu’elle contient est mesurée en octets, par opposition aux caractères. Cette distinction n’est pas importante pour les programmes qui utilisent des chaînes ANSI, car les longueurs en octets et les caractères sont les mêmes.  
   
- Lorsque le tampon de données représente un champ de descripteur définis par le pilote, un champ de diagnostic ou un attribut, l’application doit indiquer la nature de l’argument de fonction qui indique la valeur du champ ou d’un attribut pour le Gestionnaire de pilotes. L’application effectue cela en définissant l’argument de longueur dans n’importe quel appel de fonction qui définit le champ ou un attribut à une des valeurs suivantes. (Le même est vrai pour les fonctions qui récupèrent les valeurs du champ ou de l’attribut, hormis le fait que l’argument pointe vers les valeurs pour la fonction de paramètre dans l’argument lui-même.)  
+ Lorsque le tampon de données représente un champ de descripteur, un champ ou un attribut de diagnostic défini par le pilote, l’application doit indiquer au gestionnaire de pilotes la nature de l’argument de fonction qui indique la valeur du champ ou de l’attribut. Pour ce faire, l’application définit l’argument de longueur dans tout appel de fonction qui définit le champ ou l’attribut sur l’une des valeurs suivantes. (Il en est de même pour les fonctions qui récupèrent les valeurs du champ ou de l’attribut, à l’exception du fait que l’argument pointe vers les valeurs que la fonction de paramètre se trouve dans l’argument lui-même.)  
   
--   Si l’argument de fonction qui indique la valeur du champ ou l’attribut est un pointeur vers une chaîne de caractères, le *longueur* argument est la longueur de la chaîne ou le SQL_NTS.  
+-   Si l’argument de fonction qui indique la valeur du champ ou de l’attribut est un pointeur vers une chaîne de caractères, l’argument de *longueur* est la longueur de la chaîne ou SQL_NTS.  
   
--   Si l’argument de fonction qui indique la valeur du champ ou l’attribut est un pointeur vers une mémoire tampon binaire, l’application place le résultat de la SQL_LEN_BINARY_ATTR (*longueur*) (macro) dans le *longueur* argument. Cela place une valeur négative dans le *longueur* argument.  
+-   Si l’argument de fonction qui indique la valeur du champ ou de l’attribut est un pointeur vers une mémoire tampon binaire, l’application place le résultat de la macro SQL_LEN_BINARY_ATTR (*longueur*) dans l’argument de *longueur* . Cela place une valeur négative dans l’argument de *longueur* .  
   
--   Si l’argument de fonction qui indique la valeur du champ ou l’attribut est un pointeur vers une valeur autre qu’une chaîne de caractères ou une chaîne binaire, le *longueur* argument doit avoir la valeur SQL_IS_POINTER.  
+-   Si l’argument de fonction qui indique la valeur du champ ou de l’attribut est un pointeur vers une valeur autre qu’une chaîne de caractères ou une chaîne binaire, l’argument de *longueur* doit avoir la valeur SQL_IS_POINTER.  
   
--   Si l’argument de fonction qui indique la valeur du champ ou d’un attribut contient une valeur de longueur fixe, le *longueur* argument est SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT ou SQL_ISI_USMALLINT, comme il convient.  
+-   Si l’argument de fonction qui indique la valeur du champ ou de l’attribut contient une valeur de longueur fixe, l’argument de *longueur* est SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT ou SQL_ISI_USMALLINT, selon le cas.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Mémoires tampons différées](../../../odbc/reference/develop-app/deferred-buffers.md)  
   

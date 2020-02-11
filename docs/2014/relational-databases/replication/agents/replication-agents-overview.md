@@ -25,10 +25,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 41775a529d34aa5ca457f92c9d26e327b74705ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721911"
 ---
 # <a name="replication-agents-overview"></a>Présentation des Agents de réplication
@@ -50,7 +50,7 @@ ms.locfileid: "62721911"
  L'Agent de distribution est utilisé dans la réplication d'instantané et dans la réplication transactionnelle. Il applique l'instantané initial sur l'Abonné et déplace les transactions conservées dans la base de données de distribution vers les Abonnés. L'Agent de distribution est exécuté sur le serveur de distribution pour les abonnements envoyés et sur l'Abonné pour les abonnements extraits. Pour plus d'informations, consultez [Replication Distribution Agent](replication-distribution-agent.md).  
   
 ## <a name="merge-agent"></a>Agent de fusion  
- L'Agent de fusion est utilisé dans la réplication de fusion. Il applique l'instantané initial à l'Abonné et déplace puis rapproche les modifications de données incrémentielles effectuées. Chaque abonnement de fusion a son propre Agent de fusion qui se connecte à la fois au serveur de publication et à l'Abonné et les met à jour. L'Agent de fusion est généralement exécuté sur le serveur de distribution pour les abonnements envoyés et sur l'Abonné pour les abonnements extraits. Par défaut, il télécharge les modifications de l'Abonné vers le serveur de publication puis du serveur de publication vers l'Abonné. Pour plus d’informations, consultez [Replication Merge Agent](replication-merge-agent.md).  
+ L'Agent de fusion est utilisé dans la réplication de fusion. Il applique l'instantané initial à l'Abonné et déplace puis rapproche les modifications de données incrémentielles effectuées. Chaque abonnement de fusion a son propre Agent de fusion qui se connecte à la fois au serveur de publication et à l'Abonné et les met à jour. L'Agent de fusion est généralement exécuté sur le serveur de distribution pour les abonnements envoyés et sur l'Abonné pour les abonnements extraits. Par défaut, il télécharge les modifications de l'Abonné vers le serveur de publication puis du serveur de publication vers l'Abonné. Pour plus d’informations, voir [Replication Merge Agent](replication-merge-agent.md).  
   
 ## <a name="queue-reader-agent"></a>Agent de lecture de la file d'attente  
  L'Agent de lecture de la file d'attente est utilisé dans le cadre de la réplication transactionnelle avec l'option de mise à jour en attente. Il s'exécute sur le serveur de distribution et redéplace les modifications effectuées sur l'Abonné vers le serveur de publication. Contrairement aux Agents de distribution et de fusion, il n'existe qu'une seule instance de l'Agent de lecture de file d'attente pour servir l'ensemble des serveurs de publication et des publications pour une base de données de distribution donnée. Pour plus d'informations sur l'Agent de lecture de la file d'attente, consultez [Replication Queue Reader Agent](replication-queue-reader-agent.md). Pour plus d'informations sur les abonnements pouvant être mis à jour, consultez [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md).  
@@ -61,7 +61,7 @@ ms.locfileid: "62721911"
 ## <a name="see-also"></a>Voir aussi  
  [Démarrer et arrêter un Agent de réplication &#40;SQL Server Management Studio&#41;](start-and-stop-a-replication-agent-sql-server-management-studio.md)   
  [Exécuter des travaux de maintenance de réplication &#40;SQL Server Management Studio&#41;](../administration/run-replication-maintenance-jobs-sql-server-management-studio.md)   
- [Concepts des exécutables de l’agent de réplication](../concepts/replication-agent-executables-concepts.md)   
+ [Concepts des exécutables de l’Agent de réplication](../concepts/replication-agent-executables-concepts.md)   
  [Administration de l’Agent de réplication](replication-agent-administration.md)  
   
   

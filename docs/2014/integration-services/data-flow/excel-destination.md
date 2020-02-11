@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 84647752eb549bd5d3607637d679e58356597a6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827222"
 ---
 # <a name="excel-destination"></a>Destination Excel
@@ -40,7 +40,7 @@ ms.locfileid: "62827222"
 ## <a name="usage-considerations"></a>Considérations sur l'utilisation  
  Le gestionnaire de connexions Excel utilise le fournisseur [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB pour Jet version 4.0 et son pilote de prise en charge Excel ISAM (Indexed Sequential Access Method) pour se connecter puis lire et écrire les données dans les sources de données Excel.  
   
- De nombreux articles disponibles dans la Base de connaissances [!INCLUDE[msCoName](../../includes/msconame-md.md)] documentent le comportement de ce fournisseur et de ce pilote et, bien que ces articles ne soient pas spécifiques à [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou à son prédécesseur DTS (Data Transformation Services), vous pouvez souhaiter vous informer sur certains comportements susceptibles de produire des résultats inattendus. Pour obtenir des informations générales sur l’utilisation et le comportement du pilote Excel, consultez [HOWTO : Utiliser ADO avec des données Excel à partir de Visual Basic ou VBA](https://support.microsoft.com/kb/257819).  
+ De nombreux articles disponibles dans la Base de connaissances [!INCLUDE[msCoName](../../includes/msconame-md.md)] documentent le comportement de ce fournisseur et de ce pilote et, bien que ces articles ne soient pas spécifiques à [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou à son prédécesseur DTS (Data Transformation Services), vous pouvez souhaiter vous informer sur certains comportements susceptibles de produire des résultats inattendus. Pour obtenir des informations générales sur l'utilisation et le comportement du pilote Excel, consultez [COMMENT FAIRE : Utiliser ADO avec des données Excel à partir de Visual Basic ou de VBA](https://support.microsoft.com/kb/257819).  
   
  Les comportements suivants du fournisseur Jet inclus avec le pilote Excel peuvent provoquer des résultats inattendus lors de l'enregistrement des données vers une destination Excel.  
   
@@ -48,9 +48,10 @@ ms.locfileid: "62827222"
   
      Pour plus d'informations sur la façon d'inclure l'apostrophe, consultez le billet de blog, [Une apostrophe est ajoutée à toutes les chaînes quand des données sont transformées dans excel lors de l'utilisation d'un composant de flux de données de destination Excel dans un package SSIS](https://go.microsoft.com/fwlink/?LinkId=400876), sur msdn.com.  
   
--   **Enregistrement des données mémo (ntext)** . Avant de pouvoir enregistrer des chaînes dépassant 255 caractères dans une colonne Excel, le pilote doit reconnaître le type de données de la colonne de destination comme **mémo** et non comme **chaîne**. Si la table de destination contient déjà des lignes de données, les premières lignes échantillonnées par le pilote doivent contenir au moins une instance d'une valeur dépassant 255 caractères dans la colonne mémo. Si la table de destination est créée pendant la conception du package ou au moment de l’exécution, l’instruction CREATE TABLE doit utiliser LONGTEXT (ou un de ses synonymes) comme type de données de la colonne Mémo.  
+-   **Enregistrement de da (ntext) MEMO**. Avant de pouvoir enregistrer des chaînes dépassant 255 caractères dans une colonne Excel, le pilote doit reconnaître le type de données de la colonne de destination comme **mémo** et non comme **chaîne**. Si la table de destination contient déjà des lignes de données, les premières lignes échantillonnées par le pilote doivent contenir au moins une instance d'une valeur dépassant 255 caractères dans la colonne mémo. Si la table de destination est créée pendant la conception du package ou au moment de l’exécution, l’instruction CREATE TABLE doit utiliser LONGTEXT (ou l’un de ses synonymes) comme type de données de la colonne MEMO.  
   
--   **Types de données système**. Le pilote Excel ne reconnaît qu'un ensemble limité de types de données. Par exemple, toutes les colonnes numériques sont interprétées comme doubles (DT_R8) et toutes les colonnes de type chaîne (autres que les colonnes mémo) comme des chaînes Unicode de 255 caractères (DT_WSTR). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mappe les types de données Excel de la façon suivante :  
+-   **Types de données**. Le pilote Excel ne reconnaît qu'un ensemble limité de types de données. Par exemple, toutes les colonnes numériques sont interprétées comme doubles (DT_R8) et toutes les colonnes de type chaîne (autres que les colonnes mémo) comme des chaînes Unicode de 255 caractères (DT_WSTR). 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mappe les types de données Excel de la façon suivante :  
   
     -   Numérique    virgule flottante double précision (DT_R8)  
   
@@ -64,7 +65,8 @@ ms.locfileid: "62827222"
   
     -   Mémo     flux de texte Unicode (DT_NTEXT)  
   
--   **Conversions des types de données et des longueurs**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ne convertit pas implicitement les types de données. Par conséquent, peut-être devrez-vous utiliser les transformations de conversion de données et de colonne dérivée pour convertir explicitement des données Excel avant chargement dans une destination non-Excel ou pour convertir des données non-Excel avant chargement dans une destination Excel. Dans ce cas, il peut être utile de créer le package initial à l'aide de l'Assistant Importation et Exportation, qui configure les conversions nécessaires automatiquement. Des exemples de conversions pouvant être requises sont présentées ci-dessous :  
+-   **Conversions de type et de longueur de données**. 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ne convertit pas implicitement les types de données. Par conséquent, peut-être devrez-vous utiliser les transformations de conversion de données et de colonne dérivée pour convertir explicitement des données Excel avant chargement dans une destination non-Excel ou pour convertir des données non-Excel avant chargement dans une destination Excel. Dans ce cas, il peut être utile de créer le package initial à l'aide de l'Assistant Importation et Exportation, qui configure les conversions nécessaires automatiquement. Des exemples de conversions pouvant être requises sont présentées ci-dessous :  
   
     -   conversion entre des colonnes Unicode Excel de type chaîne et des colonnes non-Unicode de type chaîne avec des pages de codes spécifiques ;  
   
@@ -85,15 +87,15 @@ ms.locfileid: "62827222"
   
 -   [Éditeur de destination Excel &#40;page Mappages&#41;](../excel-destination-editor-mappings-page.md)  
   
--   [Éditeur de destination Excel &#40;page Sortie d’erreur&#41;](../excel-destination-editor-error-output-page.md)  
+-   [Éditeur de destination Excel &#40;page sortie d’erreur&#41;](../excel-destination-editor-error-output-page.md)  
   
  La boîte de dialogue **Éditeur avancé** reflète toutes les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
 -   [Propriétés communes](../common-properties.md)  
   
--   [Propriétés personnalisées d’Excel](excel-custom-properties.md)  
+-   [Propriétés personnalisées d'Excel](excel-custom-properties.md)  
   
- Pour plus d’informations sur la façon de définir des propriétés, consultez [Définir les propriétés d’un composant de flux de données](set-the-properties-of-a-data-flow-component.md).  
+ Pour plus d’informations sur la façon de définir les propriétés, consultez [Définir les propriétés d’un composant de flux de données](set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="related-tasks"></a>Tâches associées  
   
@@ -105,11 +107,11 @@ ms.locfileid: "62827222"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Entrée de blog, [Excel in Integration Services, partie 1 sur 3 : Connections and Components](https://go.microsoft.com/fwlink/?LinkId=217674), sur dougbert.com  
+-   Entrée de blog, [Excel in Integration Services, Part 1 of 3: Connections and Components](https://go.microsoft.com/fwlink/?LinkId=217674), sur dougbert.com  
   
--   Entrée de blog, [Excel in Integration Services, Part 2 of 3 : Types de données et tables](https://go.microsoft.com/fwlink/?LinkId=217675), sur dougbert.com.  
+-   Entrée de blog, [Excel in Integration Services, Part 2 of 3: Tables and Data Types](https://go.microsoft.com/fwlink/?LinkId=217675), sur dougbert.com.  
   
--   Entrée de blog, [Excel in Integration Services, partie 3 sur 3 : Issues and Alternatives](https://go.microsoft.com/fwlink/?LinkId=217676), sur dougbert.com.  
+-   Entrée de blog, [Excel in Integration Services, Part 3 of 3: Issues and Alternatives](https://go.microsoft.com/fwlink/?LinkId=217676), sur dougbert.com.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Source Excel](excel-source.md)   

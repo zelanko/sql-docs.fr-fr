@@ -1,5 +1,5 @@
 ---
-title: À l’aide de curseurs de bloc | Microsoft Docs
+title: Utilisation des curseurs de bloc | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ ms.assetid: 2aad7d6b-216e-47e7-b3cb-f95ad096f21a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 529b71540b4abde5fce868975fcbf2749e31dc8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135539"
 ---
 # <a name="using-block-cursors"></a>Utilisation de curseurs de bloc
-Prise en charge pour les curseurs de bloc est intégrée dans ODBC 3. *x*. **SQLFetch** peut être utilisé uniquement pour les extractions multilignes lorsqu’elle est appelée dans ODBC 3. *x*; si une application ODBC 2. *x* application appelle **SQLFetch**, il s’ouvre uniquement un curseur de ligne unique, avant uniquement. Lorsqu’une application ODBC 3. *x* application appelle **SQLFetch** dans un ODBC 2. *x* pilote, elle retourne une seule ligne, sauf si le pilote prend en charge **SQLExtendedFetch**. Pour plus d’informations, consultez [curseurs de bloc, curseurs avec défilement et compatibilité descendante](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) dans g : annexe Instructions de pilote pour la compatibilité descendante.  
+La prise en charge des curseurs de bloc est intégrée à ODBC 3. *x*. **SQLFetch** peut uniquement être utilisée pour les extractions de lignes multiples quand elle est appelée dans ODBC 3. *x*; Si ODBC 2. *x* appelle **SQLFetch**, il n’ouvre qu’un curseur à une seule ligne et avant uniquement. Quand ODBC 3. *x* appelle **SQLFetch** dans une application ODBC 2. *x* , elle retourne une seule ligne, sauf si le pilote prend en charge **SQLExtendedFetch**. Pour plus d’informations, consultez [curseurs de bloc, curseurs avec défilement et compatibilité descendante](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) dans l’annexe G : instructions relatives aux pilotes pour la compatibilité descendante.  
   
- Pour utiliser les curseurs de bloc, l’application définit la taille de l’ensemble de lignes, lie les mémoires tampons d’ensemble de lignes (comme décrit dans la section précédente), si vous le souhaitez définit les attributs d’instruction SQL_ATTR_ROWS_FETCHED_PTR et SQL_ATTR_ROW_STATUS_PTR et les appels **SQLFetch**  ou **SQLFetchScroll** pour extraire un bloc de lignes. L’application peut modifier la taille de l’ensemble de lignes et lier le nouvel ensemble de lignes mémoires tampons (en appelant **SQLBindCol** ou en spécifiant un décalage de liaison) même après les lignes qui ont été extraites.  
+ Pour utiliser des curseurs de bloc, l’application définit la taille de l’ensemble de lignes, lie les mémoires tampons d’ensemble de lignes (comme décrit dans la section précédente), définit éventuellement les attributs d’instruction SQL_ATTR_ROWS_FETCHED_PTR et SQL_ATTR_ROW_STATUS_PTR et appelle **SQLFetch** ou **SQLFetchScroll** pour extraire un bloc de lignes. L’application peut modifier la taille de l’ensemble de lignes et lier de nouvelles mémoires tampons d’ensemble de lignes (en appelant **SQLBindCol** ou en spécifiant un décalage de liaison) même après l’extraction des lignes.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Taille des ensembles de lignes](../../../odbc/reference/develop-app/rowset-size.md)  
   
 -   [Nombre de lignes extraites et état](../../../odbc/reference/develop-app/number-of-rows-fetched-and-status.md)  
   
--   [SQLGetData et curseurs de bloc ; bloc curso](../../../odbc/reference/develop-app/sqlgetdata-and-block-cursors.md)
+-   [Les curseurs de bloc et SQLGetData ; bloquer le bloc](../../../odbc/reference/develop-app/sqlgetdata-and-block-cursors.md)

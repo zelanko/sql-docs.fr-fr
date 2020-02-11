@@ -16,16 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 32962186ac6fdf7b0cc18801d635e9b5ef9f5d22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209737"
 ---
 # <a name="resource-governor-classifier-function"></a>Fonction classifieur du gouverneur de ressources
   Le processus de classification de Resource Governor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affecte les sessions entrantes à un groupe de charge de travail en fonction des caractéristiques de la session. Vous pouvez adapter la logique de classification en entrant une fonction définie par l'utilisateur, appelée fonction classifieur.  
   
-## <a name="classification"></a>classification.  
+## <a name="classification"></a>classification ;  
  Resource Governor prend en charge la classification des sessions entrantes. La classification est basée sur un jeu de critères écrits par l'utilisateur et contenus dans une fonction. Les résultats de la logique de la fonction permettent à Resource Governor de classer des sessions en groupes de charges de travail existants.  
   
 > [!NOTE]  
@@ -72,7 +72,7 @@ ms.locfileid: "63209737"
   
 2.  exécution des déclencheurs LOGON ;  
   
-3.  classification.  
+3.  classification ;  
   
  Lorsque la classification commence, Resource Governor exécute la fonction classifieur et utilise la valeur retournée par la fonction pour envoyer des demandes au groupe de charges de travail approprié.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "63209737"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Décrit comment créer et tester une fonction définie par l'utilisateur classifieur.|[Créer et tester une fonction classifieur définie par l'utilisateur](create-and-test-a-classifier-user-defined-function.md)|  
+|Décrit comment créer et tester une fonction définie par l'utilisateur classifieur.|[Créer et tester une fonction classifieur définie par l’utilisateur](create-and-test-a-classifier-user-defined-function.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Resource Governor](resource-governor.md)   

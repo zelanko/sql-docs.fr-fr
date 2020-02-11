@@ -1,5 +1,5 @@
 ---
-title: Déployer des stratégies planifiées vers plusieurs Instances | Microsoft Docs
+title: Déployer des stratégies planifiées sur plusieurs instances | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68185799"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>Déployer des stratégies planifiées sur plusieurs instances
@@ -28,14 +28,14 @@ ms.locfileid: "68185799"
   
  Vous effectuerez ces tâches sur l'ordinateur sur lequel vous avez effectué la tâche précédente de cette leçon.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Les conditions préalables de cette tâche sont les suivantes :  
   
 -   Vous devez avoir effectué les tâches précédentes de cette leçon.  
   
 -   Les instances sur lesquelles vous voulez déployer les stratégies planifiées doivent exécuter [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] ou version ultérieure. L'automation requiert que les stratégies soient stockées localement, ce qui n'est pas pris en charge sur les versions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
--   Les serveurs où vous souhaitez déployer les stratégies planifiées doivent être inscrits dans serveurs inscrits dans le le **groupes de serveurs locaux** ou **des serveurs d’administration centrale** nœud. Pour plus d’informations, consultez les rubriques suivantes :  
+-   Les serveurs sur lesquels vous souhaitez déployer les stratégies planifiées doivent être enregistrés dans les serveurs inscrits dans le nœud groupes de serveurs **locaux** ou **serveurs de gestion centralisée** . Pour plus d'informations, voir les rubriques suivantes :  
   
     -   [Créer ou modifier un groupe de serveurs &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
@@ -45,20 +45,20 @@ ms.locfileid: "68185799"
   
 ### <a name="to-export-the-scheduled-policies-as-xml-files"></a>Pour exporter les stratégies planifiées sous la forme de fichiers .xml  
   
-1.  Sur le serveur où vous avez configuré des stratégies planifiées dans la tâche précédente, développez **gestion**, développez **gestion des stratégies de**, puis cliquez sur **stratégies**.  
+1.  Sur le serveur où vous avez configuré les stratégies planifiées au cours de la tâche précédente, développez **gestion**, gestion de la **stratégie**, puis cliquez sur **stratégies**.  
   
 2.  Dans le menu **Affichage** , cliquez sur **Détails de l’Explorateur d’objets**.  
   
-3.  Dans le **détails de l’Explorateur d’objets** volet, sélectionnez toutes les meilleures pratiques planifiées des stratégies que vous souhaitez déployer sur d’autres serveurs via des serveurs inscrits.  
+3.  Dans le volet Détails de l' **Explorateur d’objets** , sélectionnez toutes les stratégies des meilleures pratiques planifiées que vous souhaitez déployer sur d’autres serveurs via les serveurs inscrits.  
   
     > [!NOTE]  
-    >  Vous pouvez cliquer sur le **catégorie** titre pour trier les stratégies par catégorie.  
+    >  Vous pouvez cliquer sur l’en-tête **catégorie** pour trier les stratégies par catégorie.  
   
-4.  Avec le bouton droit de la sélection, puis cliquez sur **exporter la stratégie**.  
+4.  Cliquez avec le bouton droit sur la sélection, puis cliquez sur **Exporter la stratégie**.  
   
-5.  Si vous avez sélectionné plusieurs stratégies à exporter, dans le **rechercher un dossier** boîte de dialogue, sélectionnez un dossier de destination, ou créez un dossier. Pour cette leçon, créez un dossier avec le chemin d’accès **C:\Scheduled_BP_Policies**, puis cliquez sur **OK**.  
+5.  Si vous avez sélectionné plusieurs stratégies à exporter, dans la boîte de dialogue **Rechercher un dossier** , sélectionnez un dossier de destination ou créez un nouveau dossier. Pour cette leçon, créez un nouveau dossier avec le chemin **c:\ Scheduled_BP_Policies**, puis cliquez sur **OK**.  
   
-     Si vous n’avez sélectionné une stratégie à exporter, dans le **exporter la stratégie** boîte de dialogue zone, créez un nouveau dossier ayant le chemin d’accès **C:\Scheduled_BP_Policies**, cliquez sur **Open**, puis cliquez sur **Enregistrer**.  
+     Si vous avez sélectionné une seule stratégie à exporter, dans la boîte de dialogue **Exporter la stratégie** , créez un nouveau dossier avec le chemin **c:\ Scheduled_BP_Policies**, cliquez sur **ouvrir**, puis sur **Enregistrer**.  
   
      Les fichiers de stratégie .xml sont créés à l'emplacement du dossier.  
   
@@ -66,36 +66,36 @@ ms.locfileid: "68185799"
   
 1.  Dans le menu **Affichage** , cliquez sur **Serveurs inscrits**.  
   
-2.  Développez **moteur de base de données**, développez le **groupes de serveurs locaux** ou **des serveurs d’administration centrale**, cliquez sur le nœud que vous souhaitez déployer les stratégies, puis Cliquez sur **importer des stratégies**.  
+2.  Développez **moteur de base de données**, développez **groupes de serveurs locaux** ou **serveurs de gestion centralisée**, cliquez avec le bouton droit sur le nœud sur lequel vous souhaitez déployer les stratégies, puis cliquez sur **importer des stratégies**.  
   
     > [!NOTE]  
-    >  Si vous cliquez sur **groupes de serveurs locaux** ou le serveur de gestion centralisée lui-même, les stratégies seront déployées pour tous les serveurs gérés. Si vous cliquez avec le bouton droit sur un groupe de serveurs spécifique, les stratégies seront déployées uniquement sur les serveurs de ce groupe. Si vous cliquez avec le bouton droit sur un serveur inscrit spécifique, les stratégies seront déployées uniquement sur ce serveur.  
+    >  Si vous cliquez avec le bouton droit sur **groupes de serveurs locaux** ou sur le serveur de gestion centralisée, les stratégies sont déployées sur tous les serveurs gérés. Si vous cliquez avec le bouton droit sur un groupe de serveurs spécifique, les stratégies seront déployées uniquement sur les serveurs de ce groupe. Si vous cliquez avec le bouton droit sur un serveur inscrit spécifique, les stratégies seront déployées uniquement sur ce serveur.  
   
-3.  Regard **fichiers à importer**, cliquez sur le bouton de sélection ( **...** ).  
+3.  En regard de **fichiers à importer**, cliquez sur le bouton de sélection (**...**).  
   
-4.  Dans le **sélectionner la stratégie** boîte de dialogue, accédez à l’emplacement du dossier où vous avez enregistré les stratégies planifiées. Pour cet exemple, accédez à l’emplacement **C:\Scheduled_BP_Policies**.  
+4.  Dans la boîte de dialogue **Sélectionner une stratégie** , accédez à l’emplacement du dossier où vous avez enregistré les stratégies planifiées. Pour cet exemple, accédez à l’emplacement **c:\ Scheduled_BP_Policies**.  
   
-5.  Sélectionnez les stratégies que vous souhaitez importer dans les instances cibles, puis cliquez sur **Open**.  
+5.  Sélectionnez les stratégies que vous souhaitez importer dans les instances cibles, puis cliquez sur **ouvrir**.  
   
-6.  Dans le **importation** boîte de dialogue le **état de la stratégie** liste, sélectionnez l’état de la stratégie de votre choix. Vous pouvez choisir de conserver l'état de la stratégie, d'activer les stratégies ou de les désactiver lors de l'importation. Sachez que les stratégies doivent être activées pour s'exécuter selon une planification.  
+6.  Dans la boîte de dialogue **Importer** , dans la liste État de la **stratégie** , sélectionnez l’état de stratégie souhaité. Vous pouvez choisir de conserver l'état de la stratégie, d'activer les stratégies ou de les désactiver lors de l'importation. Sachez que les stratégies doivent être activées pour s'exécuter selon une planification.  
   
-7.  Cliquez sur **OK** pour importer les stratégies dans toutes les instances cibles.  
-  
-    > [!NOTE]  
-    >  S’il existe des erreurs, le **importation** boîte de dialogue ne disparaît pas. Cliquez sur le **journal** page pour consulter les messages. Cliquez sur **Annuler** pour fermer la boîte de dialogue.  
-  
-8.  Pour afficher les stratégies à partir d’une instance cible, connectez-vous à l’instance, ouvrez l’Explorateur d’objets, développez **gestion**, puis développez **stratégies**. Vous devez voir les stratégies importées dans le **stratégies** nœud. Si vous double-cliquez sur chaque stratégie, vous pouvez afficher la planification ou modifier les paramètres.  
+7.  Cliquez sur **OK** pour importer les stratégies vers toutes les instances cibles.  
   
     > [!NOTE]  
-    >  Pour afficher les résultats d'évaluation après l'exécution d'une stratégie planifiée, ouvrez le journal Historique de la stratégie sur l'instance cible. Pour ouvrir le journal, avec le bouton droit **gestion des stratégies de**, puis cliquez sur **afficher l’historique**.  
+    >  En cas d’erreur, la boîte de dialogue **Importer** ne disparaît pas. Cliquez sur la page **Journal** pour passer en revue les messages. Cliquez sur **Annuler** pour refermer la boîte de dialogue.  
   
-## <a name="summary"></a>Récapitulatif  
+8.  Pour afficher les stratégies à partir d’une instance cible, connectez-vous à l’instance, ouvrez l’Explorateur d’objets, développez **gestion**, puis développez **stratégies**. Vous devez voir les stratégies importées dans le nœud **stratégies** . Si vous double-cliquez sur chaque stratégie, vous pouvez afficher la planification ou modifier les paramètres.  
+  
+    > [!NOTE]  
+    >  Pour afficher les résultats d'évaluation après l'exécution d'une stratégie planifiée, ouvrez le journal Historique de la stratégie sur l'instance cible. Pour ouvrir le journal, cliquez avec le bouton droit sur **gestion des stratégies**, puis cliquez sur **afficher l’historique**.  
+  
+## <a name="summary"></a>Résumé  
  Ce didacticiel vous a montré comment effectuer des évaluations à la demande et des évaluations planifiées des stratégies des meilleures pratiques sur une ou plusieurs instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="next"></a>Suivant  
- Ce didacticiel est terminé. Pour revenir au début, consultez [didacticiel : Évaluation des meilleures pratiques à l’aide de gestion basée sur la stratégie](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md).  
+ Ce didacticiel est terminé. Pour revenir au début, consultez [Didacticiel : évaluation des meilleures pratiques à l’aide de la gestion basée sur des stratégies](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md).  
   
- Pour afficher la liste de [!INCLUDE[ssDE](../includes/ssde-md.md)] didacticiels, cliquez sur [didacticiels sur le moteur de base de données](../relational-databases/database-engine-tutorials.md).  
+ Pour afficher la liste des [!INCLUDE[ssDE](../includes/ssde-md.md)] didacticiels, cliquez sur [moteur de base de données didacticiels](../relational-databases/database-engine-tutorials.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Administrer des serveurs à l'aide de la Gestion basée sur des stratégies](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

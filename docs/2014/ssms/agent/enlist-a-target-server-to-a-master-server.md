@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f3d0d91de95e82fcd174aa9290e208afda5bef91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211393"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>Inscrire un serveur cible dans un serveur maître
@@ -32,7 +32,7 @@ ms.locfileid: "68211393"
   
  **Dans cette rubrique**  
   
--   **Pour inscrire un serveur cible à l'aide de :**  
+-   **Pour inscrire un serveur cible à l’aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68211393"
   
 1.  Utilisez la procédure stockée `sp_msx_enlist`.  Pour plus d’informations, consultez [sp_msx_enlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)  
   
-##  <a name="PowerShellProcedure"></a> À l’aide de SQL Server Management Objects (SMO)  
+##  <a name="PowerShellProcedure"></a>Utilisation de SQL Server Management Objects (SMO)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Administration automatisée à l'échelle d'une entreprise](automated-administration-across-an-enterprise.md)  

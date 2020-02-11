@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 766adecbc91f88ed0796e4214b7e4074fc564f01
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727285"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Scoring natif à l’aide de la fonction T-SQL PREDICT
@@ -75,7 +75,7 @@ Parmi les types de modèles non pris en charge, citons les suivants :
 
 Dans cet exemple, vous créez un modèle, puis appelez la fonction de prédiction en temps réel à partir de T-SQL.
 
-### <a name="step-1-prepare-and-save-the-model"></a>Étape 1. Préparer et enregistrer le modèle
+### <a name="step-1-prepare-and-save-the-model"></a>Étape 1. Préparer et enregistrer le modèle
 
 Exécutez le code suivant pour créer l’exemple de base de données et les tables obligatoires.
 
@@ -144,7 +144,7 @@ SELECT *, datalength(native_model_object)/1024. as model_size_kb
 FROM ml_models;
 ```
 
-### <a name="step-2-run-predict-on-the-model"></a>Étape 2. Exécuter PREDICT sur le modèle
+### <a name="step-2-run-predict-on-the-model"></a>Étape 2. Exécuter PREDICT sur le modèle
 
 L’instruction PREDICT simple suivante obtient une classification à partir du modèle d’arbre de décision à l’aide de la fonction de **scoring natif**. Elle prédit les espèces d’iris en fonction des attributs que vous fournissez (longueur et largeur des pétales).
 

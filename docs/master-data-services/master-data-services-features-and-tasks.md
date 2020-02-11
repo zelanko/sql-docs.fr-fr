@@ -11,10 +11,10 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 95c29509d9b08390a21598c94cdb64ccdd92cf36
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728032"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Fonctionnalités et tâches Master Data Services
@@ -51,21 +51,21 @@ ms.locfileid: "73728032"
   
 ## <a name="improve-data-quality"></a>Améliorer la qualité des données  
   
--   [Règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [&#40;des règles d’entreprise Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
--   [Validation &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
+-   [&#40;de validation Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   
 -   [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
--   [Notifications &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
+-   [&#40;de notifications Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
   
--   [Sécurité &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
+-   [&#40;de sécurité Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
-## <a name="move-data"></a>Déplacer les données  
+## <a name="move-data"></a>Déplacer des données  
   
--   [Vue d’ensemble : importation de données à partir de tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
+-   [Vue d’ensemble : importation de données à partir de tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
--   [Vue d’ensemble : exportation de données &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)  
+-   [Vue d’ensemble : exportation de données &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)  
   
 -   [Déploiement de modèles &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   

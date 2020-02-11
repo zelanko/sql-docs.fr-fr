@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf393a3e0f117098dc4a85bae3e6c68728f43a64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721805"
 ---
 # <a name="replication-programming-concepts"></a>Concepts de programmation en matière de réplication
@@ -71,7 +71,7 @@ ms.locfileid: "62721805"
   
  Vous pouvez également étendre votre application en associant les fonctionnalités de réplication à d'autres fonctionnalités fournies par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le tableau suivant décrit certaines fonctionnalités étendues que vous pouvez fournir dans votre application de réplication.  
   
-|Fonctionnalité|Exemple|  
+|Fonctionnalités|Exemple|  
 |-------------------|-------------|  
 |Administration de serveur à l'aide de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO)|Application qui permet à un administrateur de joindre et de configurer une base de données en tant que serveur de publication dans une topologie de réplication.|  
 |Accès aux données à l'aide d'ADO.NET|Application qui permet aux utilisateurs d'accéder par programme aux données de ventes répliquées et de les modifier dans une base de données d'abonné locale en mode hors connexion, puis de se connecter et de synchroniser l'abonnement par extraction de données (pull) en cliquant sur un bouton.|  
@@ -81,9 +81,9 @@ ms.locfileid: "62721805"
   
  Les rubriques suivantes contiennent des informations sur la sécurité :  
   
--   [Sécurité de la réplication SQL Server](../security/view-and-modify-replication-security-settings.md)  
+-   [Sécurité Réplication SQL Server](../security/view-and-modify-replication-security-settings.md)  
   
--   [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../../security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+-   [Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database](../../security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
 ## <a name="choosing-a-development-environment"></a>Choix d'un environnement de développement  
  Lorsque vous développez une application de réplication, trois environnements de développement de base doivent être pris en compte. Chaque environnement de développement a accès aux mêmes fonctionnalités de réplication, à quelques exceptions près. Il est possible de développer des applications de réplication dans chacun des environnements suivants.  
@@ -120,7 +120,7 @@ ms.locfileid: "62721805"
   
 2.  Cette application doit non seulement garantir l'accès aux données classique requis pour une application de vente, mais également permettre à un vendeur de synchroniser l'abonnement par extraction de données à la demande en cliquant sur un bouton. Étant donné qu'un représentant installera et exécutera l'application, l'application doit également être en mesure de configurer un abonnement et d'appliquer l'instantané initial au client. L'application utilisera éventuellement l'infrastructure fournie par Windows pour détecter la connectivité sans fil et synchroniser automatiquement l'abonnement lors de la détection d'une connexion.  
   
-3.  Respectez toutes les consignes de sécurité pour la réplication, notamment le recours à l'authentification Windows et à un réseau privé virtuel (VPN) lors de la connexion au serveur de publication. Si vous mettez en œuvre la synchronisation Web, utilisez une connexion SSL (Secure Sockets Layer). Pour plus d’informations, consultez [Configurer la synchronisation Web](../configure-web-synchronization.md).  
+3.  Respectez toutes les consignes de sécurité pour la réplication, notamment le recours à l'authentification Windows et à un réseau privé virtuel (VPN) lors de la connexion au serveur de publication. Si vous mettez en œuvre la synchronisation Web, utilisez une connexion SSL (Secure Sockets Layer). Pour plus d'informations, voir [Configurer la synchronisation web](../configure-web-synchronization.md).  
   
 4.  Pour que l'application puisse exploiter les fonctionnalités du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], elle est développée à l'aide d'un langage de code managé.  
   

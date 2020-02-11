@@ -15,10 +15,10 @@ ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: e12489cc490c5b8ee9f363e329da9a057fac8f3f
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728982"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>Chevauchement des autorisations de modèle et de membre (Master Data Services)
@@ -29,9 +29,9 @@ ms.locfileid: "73728982"
   
  Si un membre a une autorisation qui est différente de celle de son objet de modèle correspondant, les règles suivantes s'appliquent :  
   
--   **Refuser** remplace toutes les autres autorisations.  
+-   **Deny** remplace toutes les autres autorisations.  
   
--   L’autorisation**Admin** au niveau du modèle remplace toutes les autres autorisations ; elle est remplacée par une autorisation de type Tous les accès (CRUD) pour les sous-niveaux.  
+-   L’autorisation **admin** sur le niveau du modèle remplace toutes les autres autorisations et est remplacée par toutes les autorisations d’accès (CRUD) pour les sous-niveaux.  
   
 -   L’autorisation d’accès effective chevauche les autorisations des membres et attributs.  
   
@@ -76,6 +76,6 @@ ms.locfileid: "73728982"
   
 ## <a name="see-also"></a>Voir aussi  
  [Mode de détermination des autorisations &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [Chevauchement des autorisations des utilisateurs et des groupes &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
+ [Chevauchement des autorisations d’accès &#40;d’utilisateurs et de groupes Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   
   

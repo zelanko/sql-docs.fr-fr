@@ -11,10 +11,10 @@ ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: edf04dad0ce7f0a86bd651a2699d01f9dbea029c
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727792"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Nouveautés de Master Data Services (MDS)
@@ -25,19 +25,19 @@ ms.locfileid: "73727792"
   
  Si vous souhaitez une vue d’ensemble de l’organisation des données dans [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], consultez l’article [Vue d’ensemble de Master Data Services](../master-data-services/master-data-services-overview-mds.md). 
   
- **Pour installer Master Data Services, configurer la base de données et le site web, et déployer les exemples de modèles, consultez l’article** [Vue d’ensemble de Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md).  
+ **Pour installer Master Data Services, configurer la base de données et le site Web, et déployer les exemples de modèles, consultez** [vue d’ensemble de Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md).  
   
- **Télécharger**  
+ **Downloader**  
   
--   Pour télécharger [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], accédez au  **[Centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** .  
+-   Pour télécharger [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], accédez au  **[Centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**.  
   
--   Vous avez un compte Azure ?  Dans ce cas, cliquez **[ici](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** pour lancer une machine virtuelle sur laquelle [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] est déjà installé.  
+-   Vous avez un compte Azure ?  Cliquez **[ici](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** pour lancer une machine virtuelle déjà équipée de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 ##  <a name="improved-performance"></a>Performances améliorées  
   
  L’amélioration des performances vous permet de créer des modèles plus volumineux, de charger les données de façon plus efficace et d’obtenir de meilleures performances globales. Cette amélioration des performances concerne aussi le complément pour Microsoft Excel, qui a été amélioré pour réduire le temps de chargement des données et traiter des entités plus volumineuses.  
   
- Pour plus d’informations sur le complément pour Microsoft Excel, consultez [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
+ Pour plus d’informations sur le complément pour Microsoft Excel, consultez[Complément Master Data Services pour Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
   
  Les améliorations touchent également les fonctionnalités suivantes.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "73727792"
   
 ##  <a name="improved-security"></a>Sécurité renforcée  
   
- La nouvelle autorisation de la fonction Super utilisateur confère à un utilisateur ou à un groupe les mêmes autorisations que celles de l’administrateur du serveur dans la version précédente de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. L’autorisation Super utilisateur peut être attribuée à plusieurs utilisateurs et groupes. Dans la version précédente, l’utilisateur qui installait à l’origine [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] était l’administrateur du serveur, et il était difficile de transférer cette autorisation à un autre utilisateur ou groupe. Pour plus d’informations, consultez [Autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+ La nouvelle autorisation de la fonction Super utilisateur confère à un utilisateur ou à un groupe les mêmes autorisations que celles de l’administrateur du serveur dans la version précédente de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. L’autorisation Super utilisateur peut être attribuée à plusieurs utilisateurs et groupes. Dans la version précédente, l’utilisateur qui installait à l’origine [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] était l’administrateur du serveur, et il était difficile de transférer cette autorisation à un autre utilisateur ou groupe. Pour plus d’informations, consultez [autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
  Un utilisateur peut désormais se voir attribuer explicitement l’autorisation d’administrateur au niveau du modèle. Cela signifie que si des autorisations sont attribuées par la suite à l’utilisateur dans la sous-arborescence de modèle, par exemple au niveau de l’entité, il ne perd pas cette autorisation d’administrateur.  
   
@@ -130,14 +130,14 @@ ms.locfileid: "73727792"
   
 -   [Transactions &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
--   [Sécurité &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
+-   [&#40;de sécurité Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
 
 ## <a name="business-rule-improvements"></a>Améliorations des règles d’entreprise
- **Gérer les règles d’entreprise (complément MDS pour Excel)**  
+ **Gérer les règles d’entreprise (Complément MDS pour Excel)**  
   
  Dans le complément Master Data Services pour Excel, vous pouvez gérer les règles d’entreprise, notamment en créer et en modifier. Les règles d’entreprise servent à valider les données.  
  
- **Extension de règles d’entreprise**  
+ **Business Rules Extension**  
   
  Vous pouvez appliquer des scripts SQL définis par l’utilisateur en tant qu’extension des conditions et des actions de règles d’entreprise. Les fonctions SQL peuvent être utilisées en tant que condition. Les procédures stockées SQL peuvent être utilisées en tant qu’action. Pour plus d’informations, consultez l’article [Extension de règles d’entreprise (Master Data Services)](../master-data-services/business-rules-extension-master-data-services.md). 
  
@@ -145,7 +145,7 @@ ms.locfileid: "73727792"
   
  L’expérience de gestion des règles d’entreprise dans MDS a été complètement repensée en vue de l’améliorer. Pour plus d’informations sur cette fonctionnalité, consultez l’article [Règles d’entreprise (Master Data Services)](../master-data-services/business-rules-master-data-services.md).  
   
- **Fonctionnalités de gestion des règles d’entreprise retirées du complément MDS pour Excel**  
+ **Fonctionnalité de gestion des règles d’entreprise supprimée de la Complément MDS pour Excel**  
   
  Les fonctionnalités de gestion des règles d’entreprise ont été retirées du complément MDS pour Excel, car nous avons repensé l’expérience.    
 
@@ -167,7 +167,7 @@ ms.locfileid: "73727792"
   
  Vous pouvez modifier une relation plusieurs-à-plusieurs en modifiant les membres de l’entité de mappage. Pour plus d’informations, consultez l’article [Afficher les relations plusieurs à plusieurs dans des hiérarchies dérivées (Master Data Services)](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md).  
  
- **Expérience de gestion des hiérarchies dérivées améliorée**  
+ **Amélioration de l’expérience de gestion des hiérarchies dérivées**  
   
  L’expérience de gestion des hiérarchies dérivées dans MDS a été améliorée. Pour plus d’informations sur cette fonctionnalité, consultez l’article [Créer une hiérarchie dérivée (Master Data Services)](../master-data-services/create-a-derived-hierarchy-master-data-services.md).  
   
@@ -207,17 +207,17 @@ ms.locfileid: "73727792"
   
  Vous pouvez utiliser des ensembles de modifications pour enregistrer les modifications en attente d’une entité, et vous pouvez afficher et modifier les modifications en attente. Si l’entité exige une approbation des modifications, vous devez enregistrer les modifications en attente dans un ensemble de modifications et les soumettre à l’administrateur pour approbation. Pour plus d’informations, consultez l’article [Ensembles de modifications (Master Data Services)](../master-data-services/changesets-master-data-services.md).  
   
- **Gestion des ensembles de modifications et notifications par courrier électronique**  
+ **Modifier le courrier électronique et la gestion**  
   
  Dans cette version, vous pouvez désormais afficher et gérer toutes les modifications par modèle et version. Vous pouvez aussi recevoir des notifications par courrier électronique chaque fois que l’état d’un ensemble de modifications change pour une entité qui exige une approbation. Pour plus d’informations, consultez les articles [Gérer les ensembles de modifications (Master Data Services)](../master-data-services/manage-changesets-master-data-services.md) et [Notifications (Master Data Services)](../master-data-services/notifications-master-data-services.md).  
   
- **Afficher et gérer l’historique de révision**  
+ **Afficher et gérer l’historique des révisions**  
   
  Vous pouvez afficher et gérer l’historique de révision par entité et par membre. Si vous disposez d’autorisations de mise à jour, vous pouvez restaurer un membre dans sa version précédente. Pour plus d’informations, consultez l’article [Historique de révision de membre (Master Data Services)](../master-data-services/member-revision-history-master-data-services.md).  
  
 ## <a name="tool-and-sample-improvements"></a>Outil et améliorations des exemples 
   
- **Enregistrer ou ouvrir des fichiers de requête dans le complément MDS pour Excel**  
+ **Enregistrer ou ouvrir des fichiers de requête dans Complément MDS pour Excel**  
   
  Dans la page Explorateur d’entité, vous pouvez cliquer sur **Excel** pour enregistrer les fichiers de requête de raccourci. Vous pouvez aussi ouvrir le fichier de requête stocké sur votre ordinateur, dans le complément MDS pour Excel. Le fichier enregistré peut être ouvert à l’aide de l’application QueryOpener. Pour plus d’informations, consultez l’article [Fichiers de requête de raccourci (Complément MDS pour Excel)](../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md).  
   
@@ -232,6 +232,6 @@ ms.locfileid: "73727792"
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
   
 ## <a name="see-also"></a>Voir aussi  
- [Master Data Services et fonctionnalités de Services de qualité de données pris en charge par les éditions de SQL Server 2016](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
- [Fonctionnalités Master Data Services déconseillées](../master-data-services/deprecated-master-data-services-features.md)  
- [Fonctionnalités Master Data Services éliminées](../master-data-services/discontinued-master-data-services-features.md)
+ [Fonctionnalités de Master Data Services et de Data Quality Services prises en charge par les éditions de SQL Server 2016](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
+ [Fonctionnalités de Master Data Services dépréciées](../master-data-services/deprecated-master-data-services-features.md)  
+ [Fonctionnalités de Master Data Services abandonnées](../master-data-services/discontinued-master-data-services-features.md)

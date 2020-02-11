@@ -14,10 +14,10 @@ ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 524ff4934adf2317daceff64f70ce4ae0afb7424
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728473"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Créer une vue d’abonnement pour exporter des données (Master Data Services)
@@ -29,7 +29,7 @@ ms.locfileid: "73728473"
 ## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
--   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Gestion de l'intégration** . Pour plus d’informations, consultez [Autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Gestion de l'intégration** . Pour plus d’informations, consultez [autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
 -   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
@@ -63,33 +63,33 @@ ms.locfileid: "73728473"
 11. Cliquez sur **Enregistrer**.  
   
 ## <a name="view-information"></a>Visualiser les informations  
- Pour chaque vue créée, une ligne comportant dix colonnes est ajoutée à la grille. Le tableau ci-après décrit ces colonnes.  
+ Pour chaque vue créée, une ligne comportant dix colonnes est ajoutée à la grille. Le tableau suivant décrit les colonnes.  
   
 |Colonne|Description|  
 |------------|-----------------|  
-|État|État de la vue.<br /><br /> Lorsque vous cliquez sur **Enregistrer**, l’image ![icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icon pour la mise à jour de l’État») s’affiche, indiquant que la vue est en mode de mise à jour.<br /><br /> Si des erreurs se produisent lors de la création ou de la modification d’une vue, l’image ![icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icon pour l’état d’erreur») s’affiche.<br /><br /> Dans le cas contraire, l’État est OK et l’image ![icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icon pour l’état OK») s’affiche.|  
-|Nom|Nom de la vue d’abonnement.|  
+|Statut|État de la vue.<br /><br /> Lorsque vous cliquez sur **Enregistrer**, l’image ![icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône de mise à jour de l’État") s’affiche, indiquant que la vue est en mode de mise à jour.<br /><br /> Si des erreurs se produisent lors de la création ou de la modification d’une vue, l’image ![icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") s’affiche.<br /><br /> Dans le cas contraire, l’État est OK et l’image ![icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
+|Name|Nom de la vue d’abonnement.|  
 |Modèle|Nom du modèle.|  
 |Version|Nom de la version.|  
 |Version|Nom de l’indicateur de version.|  
 |Entité|Nom de la hiérarchie dérivée.|  
-|Sources de données|Nom de l’entité.|  
+|Entité|Nom de l’entité.|  
 |Format|Type des données figurant dans la vue.|  
-|level|Spécifie le nombre de niveaux de la vue ; cette valeur est uniquement utilisée pour les formats de vue de niveau Explicite ou Dérivé.|  
+|Level|Spécifie le nombre de niveaux de la vue ; cette valeur est uniquement utilisée pour les formats de vue de niveau Explicite ou Dérivé.|  
 |Inclure les membres supprimés|Indique si les membres supprimés de façon réversible sont inclus dans la vue.|  
   
  Lorsque vous cliquez sur une vue, les informations ci-après s’affichent.  
   
--   **Créée par**: nom de l’utilisateur ayant créé la vue.  
+-   **Créé par**: nom de l’utilisateur qui a créé la vue.  
   
--   **Le**: date et heure de création de la vue.  
+-   Le : date et heure **de**création de la vue.  
   
--   **Mise à jour par**: nom de l’utilisateur ayant effectué la dernière mise à jour de la vue.  
+-   **Mise à jour par**: nom de l’utilisateur qui a effectué la dernière mise à jour de la vue.  
   
--   **Le**: date et heure de la dernière mise à jour de la vue.  
+-   Le : date et heure **de**la dernière mise à jour de la vue.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble : exportation de données &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
+ [Vue d’ensemble : exportation de données &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [Supprimer une vue d’abonnement &#40;Master Data Services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
  [Créer un indicateur de version &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   

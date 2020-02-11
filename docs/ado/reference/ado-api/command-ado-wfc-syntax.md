@@ -1,5 +1,5 @@
 ---
-title: Commande (ADO - syntaxe WFC) | Microsoft Docs
+title: Command (syntaxe ADO-WFC) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: 39d0aa06-03ac-4c9a-8400-83947756ef99
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4722316cc92567000294c57089afd8840bea1bcd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919828"
 ---
 # <a name="command-ado---wfc-syntax"></a>Command (ADO - syntaxe WFC)
-## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>package com. ms. wfc. Data  
   
 ### <a name="constructor"></a>Constructeur  
   
@@ -44,9 +44,9 @@ public int executeUpdate(Object[] parameters, int options)
 public int executeUpdate()  
 ```  
   
- Le **executeUpdate** méthode est une méthode spéciale qui appelle le ADO sous-jacent **exécuter** méthode avec certains paramètres. Le **executeUpdate** méthode ne prend pas en charge le retour d’un **Recordset** objet, donc le **exécuter** la méthode *options* paramètre est modifié avec **AdoEnums.ExecuteOptions.NORECORDS**. Après le **exécuter** méthode se termine, sa mise à jour *RecordsAffected* paramètre est passé à la **executeUpdate** (méthode), qui retourne finalement un **int**.  
+ La méthode **executeUpdate** est une méthode spéciale qui appelle la méthode ADO **Execute** sous-jacente avec certains paramètres. La méthode **executeUpdate** ne prend pas en charge le retour d’un objet Recordset, donc le paramètre *options* de la méthode **Execute** est modifié avec **AdoEnums. ExecuteOptions.** **NORECORDS** . Une fois la méthode **Execute** terminée, son paramètre *RecordsAffected* mis à jour est passé à la méthode **executeUpdate** , qui est enfin retourné comme **int**.  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>Propriétés  
   
 ```  
 public com.ms.wfc.data.Connection getActiveConnection()  

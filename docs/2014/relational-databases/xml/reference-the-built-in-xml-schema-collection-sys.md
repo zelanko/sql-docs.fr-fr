@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 410dd8785ce58f87b35c6c18b5c5dc00ffcd9faa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240781"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>Référencer la collection de schémas XML intégrée (sys)
@@ -117,7 +117,7 @@ GO
     GO  
     ```  
   
- Le code suivant est un autre exemple dans lequel vous créez une collection de schémas XML qui utilise le type `varchar` défini dans l'espace de noms `sqltypes` :  
+ Le code suivant est un autre exemple dans lequel vous créez une collection de schémas XML qui utilise le type `varchar` défini dans l'espace de noms `sqltypes` :  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
@@ -147,7 +147,7 @@ data(/ns:root[1]) instance of sqltypes:varchar?')
 GO  
 ```  
   
- L’expression `instance of sqltypes:varchar?` retourne TRUE, car la valeur de l’élément &lt;`root`&gt; est d’un type dérivé de **varchar`@var` d’après le schéma associé à la variable** .  
+ L’expression `instance of sqltypes:varchar?` retourne TRUE, car la valeur de l’élément &lt;`root`&gt; est d’un type dérivé de **varchar** d’après le schéma associé à la variable`@var` .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Collections de schémas XML &#40;SQL Server&#41;](xml-schema-collections-sql-server.md)  

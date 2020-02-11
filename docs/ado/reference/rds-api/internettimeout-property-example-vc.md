@@ -1,5 +1,5 @@
 ---
-title: InternetTimeout, propriété-Exemple (VC ++) | Microsoft Docs
+title: InternetTimeout, exemple de propriété (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,17 +15,17 @@ ms.assetid: 88b6d05c-d4eb-4ab1-bbe2-95d146237f94
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7596f9728f7a51a5d28a3c1a19943efff783ac62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963990"
 ---
 # <a name="internettimeout-property-example-vc"></a>InternetTimeout, exemple de propriété (VC++)
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Cet exemple montre la [InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md) propriété qui existe sur le [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) et [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) objets. Dans ce cas, le **InternetTimeout** propriété est illustrée sur la **DataControl** objet et le délai d’expiration est définie sur 20 secondes.  
+ Cet exemple illustre la propriété [InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md) , qui existe sur les objets [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) et [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) . Dans ce cas, la propriété **InternetTimeout** est illustrée sur l’objet **DataControl** et le délai d’attente est défini sur 20 secondes.  
   
 ```cpp
 // BeginInternetTimeoutCpp  

@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196430"
 ---
 # <a name="create-indexed-views"></a>Créer des vues indexées
@@ -42,10 +42,10 @@ ms.locfileid: "68196430"
   
 5.  Créez l'index cluster unique sur la vue.  
   
-###  <a name="Restrictions"></a> Options SET requises pour les vues indexées  
- L'évaluation de la même expression peut produire des résultats différents dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] si des options SET différentes sont actives lors de l'exécution de la requête. Par exemple, si l’option SET CONCAT_NULL_YIELDS_NULL est activée (ON), l’expression **«** abc **»** + NULL retourne la valeur Null. Cependant, si l’option CONCAT_NULL_YIEDS_NULL est désactivée (OFF), la même expression retourne **«** abc **»** .  
+###  <a name="Restrictions"></a>Options SET requises pour les vues indexées  
+ L'évaluation de la même expression peut produire des résultats différents dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] si des options SET différentes sont actives lors de l'exécution de la requête. Par exemple, si l’option SET CONCAT_NULL_YIELDS_NULL est activée (ON), l’expression **«** abc **»** + NULL retourne la valeur Null. Cependant, si l’option CONCAT_NULL_YIEDS_NULL est désactivée (OFF), la même expression retourne **«** abc **»**.  
   
- Pour pouvoir gérer correctement les vues et retourner des résultats cohérents, les vues indexées nécessitent des valeurs fixes pour plusieurs options SET. Les options SET dans le tableau suivant doivent être définies avec les valeurs indiquées dans le **RequiredValue** colonne chaque fois que les conditions suivantes sont remplies :  
+ Pour pouvoir gérer correctement les vues et retourner des résultats cohérents, les vues indexées nécessitent des valeurs fixes pour plusieurs options SET. Les options SET dans le tableau suivant doivent être définies sur les valeurs indiquées dans la colonne **RequiredValue** chaque fois que les conditions suivantes sont remplies :  
   
 -   La vue et les index suivants sur la vue sont créés.  
   
@@ -55,15 +55,15 @@ ms.locfileid: "68196430"
   
 -   L'optimiseur de requête utilise la vue indexée pour générer le plan de requête.  
   
-    |Options SET|Valeur requise|Valeur de serveur par défaut|Par défaut<br /><br /> Valeur OLE DB et ODBC|Valeur par défaut<br /><br /> Valeur DB-Library|  
+    |Options définies|Valeur requise|Valeur de serveur par défaut|Default<br /><br /> Valeur OLE DB et ODBC|Default<br /><br /> Valeur DB-Library|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
-    |ANSI_NULLS|ON|ON|ON|OFF|  
-    |ANSI_PADDING|ON|ON|ON|OFF|  
-    |ANSI_WARNINGS*|ON|ON|ON|OFF|  
-    |ARITHABORT|ON|ON|OFF|OFF|  
-    |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
+    |ANSI_NULLS|ACTIVÉ|ACTIVÉ|ACTIVÉ|OFF|  
+    |ANSI_PADDING|ACTIVÉ|ACTIVÉ|ACTIVÉ|OFF|  
+    |ANSI_WARNINGS*|ACTIVÉ|ACTIVÉ|ACTIVÉ|OFF|  
+    |ARITHABORT|ACTIVÉ|ACTIVÉ|OFF|OFF|  
+    |CONCAT_NULL_YIELDS_NULL|ACTIVÉ|ACTIVÉ|ACTIVÉ|OFF|  
     |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-    |QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
+    |QUOTED_IDENTIFIER|ACTIVÉ|ACTIVÉ|ACTIVÉ|OFF|  
   
      *En définissant ANSI_WARNINGS sur ON, vous définissez implicitement ARITHABORT sur ON.  
   
@@ -79,18 +79,18 @@ ms.locfileid: "68196430"
   
  Même si une expression est déterministe, si elle contient des expressions flottantes, le résultat exact dépend de l'architecture du processeur ou de la version du microcode. Pour garantir l'intégrité des données, ces expressions peuvent participer seulement sous forme de colonnes non clés de vues indexées. Les expressions déterministes qui ne contiennent pas d'expressions flottantes s'appellent des expressions précises. Seules les expressions déterministes précises peuvent participer à des colonnes clés et dans les clauses WHERE et GROUP BY des vues indexées.  
   
-### <a name="additional-requirements"></a>Autres conditions requises  
+### <a name="additional-requirements"></a>Conditions supplémentaires  
  Outre les options SET et les conditions requises pour les fonctions déterministes, les conditions suivantes doivent être satisfaites :  
   
 -   L'utilisateur qui exécute CREATE INDEX doit être le propriétaire de la vue.  
   
 -   Lorsque vous créez l'index, l'option IGNORE_DUP_KEY doit avoir la valeur OFF (valeur par défaut).  
   
--   Les tables doivent être référencées par des noms en deux parties, _schéma_ **.** _nom_table_ , dans la définition de la vue.  
+-   Les tables doivent être référencées par des noms en deux parties, _schéma_**.**_nom_table_ , dans la définition de la vue.  
   
 -   Les fonctions définies par l'utilisateur référencées dans la vue doivent avoir été créées avec l'option WITH SCHEMABINDING.  
   
--   Toutes les fonctions définies par l’utilisateur référencées dans la vue doivent être référencées par des noms en deux parties, _schéma_ **.** _fonction_.  
+-   Toutes les fonctions définies par l’utilisateur référencées dans la vue doivent être référencées par des noms en deux parties, _schéma_**.** _fonction_.  
   
 -   La propriété d'accès aux données d'une fonction définie par l'utilisateur doit avoir la valeur NO SQL, et la propriété d'accès externe doit avoir la valeur NO.  
   
@@ -116,15 +116,15 @@ ms.locfileid: "68196430"
     |COUNT|Fonctions ROWSET (OPENDATASOURCE, OPENQUERY, OPENROWSET, AND OPENXML)|Jointures OUTER (LEFT, RIGHT ou FULL)|  
     |Table dérivée (définie en spécifiant une instruction SELECT dans la clause FROM)|Jointures réflexives|Spécification des colonnes à l’aide de SELECT \* ou de SELECT *nom_table*.*|  
     |DISTINCT|STDEV, STDEVP, VAR, VARP ou AVG|Expression de table commune (CTE)|  
-    |`float`\*, `text`, `ntext`, `image`, `XML`, ou `filestream` colonnes|Sous-requête|Clause OVER, qui inclut des fonctions de classement ou d'agrégation de fenêtre|  
+    |`float`\*`text` `ntext`colonnes,,,, ou `filestream` `image` `XML`|Sous-requête|Clause OVER, qui inclut des fonctions de classement ou d'agrégation de fenêtre|  
     |Prédicats de texte intégral (CONTAIN, FREETEXT)|Fonction SUM qui référence une expression acceptant les valeurs NULL|ORDER BY|  
     |Fonction d'agrégation CLR définie par l'utilisateur|Haut de la page|Opérateurs CUBE, ROLLUP ou GROUPING SETS|  
     |MIN, MAX|Opérateurs UNION, EXCEPT ou INTERSECT|TABLESAMPLE|  
-    |les variables de tables ;|OUTER APPLY ou CROSS APPLY|PIVOT, UNPIVOT|  
+    |Variables de table|OUTER APPLY ou CROSS APPLY|PIVOT, UNPIVOT|  
     |Jeux de colonnes éparses|Fonctions Inline ou table à instructions multiples|OFFSET|  
     |CHECKSUM_AGG|||  
   
-     \*La vue indexée peut contenir `float` colonnes ; Toutefois, ces colonnes ne peuvent pas être incluses dans la clé d’index en cluster.  
+     \*La vue indexée peut contenir `float` des colonnes ; Toutefois, ces colonnes ne peuvent pas être incluses dans la clé d’index cluster.  
   
 -   Si la clause GROUP BY est présente, la définition VIEW doit contenir COUNT_BIG(*), mais pas HAVING. Ces restrictions de GROUP BY sont applicables seulement à la définition de la vue indexée. Une requête peut utiliser une vue indexée dans son plan d'exécution, même si elle ne répond pas à ces restrictions de GROUP BY.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "68196430"
   
  La conversion implicite de données caractères non-Unicode entre les classements est également considérée comme non déterministe.  
   
-###  <a name="Considerations"></a> Observations  
+###  <a name="Considerations"></a>Raisons  
  La valeur de l’option **large_value_types_out_of_row** des colonnes contenues dans une vue indexée est héritée de la valeur de la colonne correspondante dans la table de base. Cette valeur est définie à l’aide de [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). La valeur par défaut des colonnes constituées à partir d'expressions est 0. Cela signifie que les types de valeurs élevées sont stockés dans la ligne.  
   
  Des vues indexées peuvent être créées sur une table partitionnée, et elles peuvent elles-mêmes être partitionnées.  
@@ -155,7 +155,7 @@ ms.locfileid: "68196430"
   
 #### <a name="to-create-an-indexed-view"></a>Pour créer une vue indexée  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -215,9 +215,9 @@ ms.locfileid: "68196430"
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
  [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
- [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql)   
- [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
- [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)   
+ [SET ARITHABORT &#40;&#41;Transact-SQL](/sql/t-sql/statements/set-arithabort-transact-sql)   
+ [DÉFINIR CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
+ [DÉFINIR NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)   
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)  
   
   

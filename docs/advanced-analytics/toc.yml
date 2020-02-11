@@ -1,6 +1,6 @@
 - name: Documentation SQL Server Machine Learning Services
   href: ../advanced-analytics/index.yml
-- name: Bienvenue dans SQL Server >
+- name: Documentation SQL Server >
   href: ../sql-server/index.yml
 - name: Vue d’ensemble
   expanded: true
@@ -13,7 +13,7 @@
       href: ../advanced-analytics/r/r-server-standalone.md
     - name: Nouveautés
       href: ../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md
-- name: Installation
+- name: Installer
   items:
     - name: "Changements d’isolation dans SQL\_Server\_2019"
       href: ../advanced-analytics/install/sql-server-machine-learning-services-2019.md
@@ -47,11 +47,11 @@
   items:
     - name: Python
       items:
-        - name: Créer des scripts Python
+        - name: Exécuter des scripts Python
           href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
-        - name: Gérer des types de données et des objets
+        - name: Objets et structures de données
           href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
-        - name: Écrire des fonctions Python
+        - name: Fonctions Python
           href: ../advanced-analytics/tutorials/quickstart-python-functions.md
         - name: Entraîner et scorer un modèle
           href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md
@@ -59,13 +59,13 @@
       items:
         - name: Créer des scripts R
           href: ../advanced-analytics/tutorials/quickstart-r-create-script.md
-        - name: Gérer des types de données et des objets
+        - name: Types de données et objets
           href: ../advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md
-        - name: Écrire des fonctions R
+        - name: "Fonctions\_R"
           href: ../advanced-analytics/tutorials/quickstart-r-functions.md
         - name: Entraîner et scorer un modèle
           href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
-- name: Didacticiels
+- name: Tutoriels
   items:
     - name: Python
       items:
@@ -139,36 +139,36 @@
               href: ../advanced-analytics/tutorials/walkthrough-deploy-and-use-the-model.md
         - name: Présentation approfondie de RevoScaleR
           items:
-            - name: 1. Introduction
+            - name: Introduction
               href: ../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
-            - name: 2. Créer une base de données et des autorisations
+            - name: 1. Créer une base de données et des autorisations
               href: ../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md
-            - name: 3. Créer un objet RxSqlServerData
+            - name: 2. Créer un objet RxSqlServerData
               href: ../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
-            - name: 4. Interroger et modifier des données
+            - name: 3. Interroger et modifier des données
               href: ../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md
-            - name: 5. Définir un contexte de calcul
+            - name: 4. Définir un contexte de calcul
               href: ../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md
-            - name: 6. Calculer des statistiques de synthèse
+            - name: 5. Calculer des statistiques de synthèse
               href: ../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md
-            - name: 7. Visualiser les données
+            - name: 6. Visualiser les données
               href: ../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md
-            - name: 8. Créer des modèles
+            - name: 7. Créer des modèles
               href: ../advanced-analytics/tutorials/deepdive-create-models.md
-            - name: 9. Affecter un score à de nouvelles données
+            - name: 8. Affecter un score à de nouvelles données
               href: ../advanced-analytics/tutorials/deepdive-score-new-data.md
-            - name: 10. Transformer des données
+            - name: 9. Transformer les données
               href: ../advanced-analytics/tutorials/deepdive-transform-data-using-r.md
-            - name: 11. Charger des données avec rxImport
+            - name: 10. Charger des données avec rxImport
               href: ../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md
-            - name: 12. Créer une table avec rxDataStep
+            - name: 11. Créer une table avec rxDataStep
               href: ../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
-            - name: 13. Effectuer une analyse de blocs
+            - name: 12. Effectuer une analyse de blocs
               href: ../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
-            - name: 14. Déplacer des données entre SQL Server et un fichier XDF
+            - name: 13. Déplacer des données avec un fichier XDF
               href: ../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
-            - name: 15. Envoyer R personnalisé avec rxExec
-              href: ../advanced-analytics/tutorials/r-tutorial-custom-r-functions.md
+            - name: 14. Envoyer R personnalisé avec rxExec
+              href: ../advanced-analytics/tutorials/deepdive-custom-r-functions-using-rxexec.md
     - name: Exemples de données
       items:
         - name: Jeu de données Airline
@@ -243,14 +243,28 @@
           items:
             - name: Obtenir des informations sur les packages Python
               href: ../advanced-analytics/package-management/python-package-information.md
-            - name: Installer des packages Python
+            - name: Installer avec sqlmlutils
               href: ../advanced-analytics/package-management/install-additional-python-packages-on-sql-server.md
+            - name: Installer avec les outils Python
+              href: ../advanced-analytics/package-management/install-python-packages-standard-tools.md
         - name: Installer de nouveaux packages R
           items:
             - name: "Obtenir des informations sur les packages\_R"
               href: ../advanced-analytics/package-management/r-package-information.md
-            - name: "Installer des packages\_R"
+            - name: "Installer avec les outils\_R"
+              href: ../advanced-analytics/package-management/install-r-packages-standard-tools.md
+            - name: Installer avec sqlmlutils
               href: ../advanced-analytics/package-management/install-additional-r-packages-on-sql-server.md
+            - name: Installer avec T-SQL
+              href: ../advanced-analytics/package-management/install-r-packages-with-tsql.md
+            - name: Utiliser RevoScaleR
+              items:
+                - name: Installer avec RevoScaleR
+                  href: ../advanced-analytics/package-management/install-r-packages-with-revoscaler.md
+                - name: "Activer la gestion\_R à distance"
+                  href: ../advanced-analytics/package-management/r-package-how-to-enable-or-disable.md
+                - name: Synchroniser des packages R
+                  href: ../advanced-analytics/package-management/package-install-uninstall-and-sync.md
             - name: Créer un dépôt miniCRAN
               href: ../advanced-analytics/package-management/create-a-local-package-repository-using-minicran.md
             - name: Conseils pour l’utilisation de packages R
@@ -301,7 +315,7 @@
               href: ../advanced-analytics/r/performance-case-study-r-services.md
             - name: Utiliser les fonctions de profilage de code R
               href: ../advanced-analytics/r/using-r-code-profiling-functions.md
-- name: Référence
+- name: Informations de référence
   items:
     - name: Packages Python
       items:
@@ -309,7 +323,7 @@
           href: ../advanced-analytics/python/ref-py-revoscalepy.md
         - name: microsoftml
           href: ../advanced-analytics/python/ref-py-microsoftml.md
-    - name: Packages R
+    - name: "Packages\_R"
       items:
         - name: RevoScaleR
           href: ../advanced-analytics/r/ref-r-revoscaler.md

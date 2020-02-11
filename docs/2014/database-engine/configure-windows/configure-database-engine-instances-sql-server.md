@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 578b870128486285a7c31bf9a860b85d170f8771
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786602"
 ---
 # <a name="configure-database-engine-instances-sql-server"></a>Configurer des instances du moteur de base de données (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "62786602"
 |----------------------|-----------|  
 |Décrit les différentes options de configuration de l'instance et explique comment afficher ou modifier ces options.|[Options de configuration de serveur &#40;SQL Server&#41;](server-configuration-options-sql-server.md)|  
 |Explique comment afficher et configurer les emplacements par défaut des nouveaux fichiers de données et fichiers journaux de l'instance.|[Afficher ou modifier les emplacements par défaut des fichiers de données et des fichiers journaux &#40;SQL Server Management Studio&#41;](view-or-change-the-default-locations-for-data-and-log-files.md)|  
-|Explique comment configurer SQL Server pour utiliser soft-NUMA.|[Configurer SQL Server pour utiliser Soft-NUMA &#40;SQL Server&#41;](soft-numa-sql-server.md)|  
+|Explique comment configurer SQL Server pour utiliser soft-NUMA.|[Configurez SQL Server pour utiliser le &#40;soft-NUMA SQL Server&#41;](soft-numa-sql-server.md)|  
 |Explique comment mapper un port TCP/IP à une affinité de nœud NUMA.|[Mapper les ports TCP/IP aux nœuds NUMA &#40;SQL Server&#41;](map-tcp-ip-ports-to-numa-nodes-sql-server.md)|  
 |Explique comment activer la stratégie Verrouiller les pages en mémoire de Windows. Cette stratégie détermine quels comptes peuvent utiliser un processus destiné à conserver les données en mémoire physique pour éviter leur pagination en mémoire virtuelle sur le disque.|[Activer l’option Lock Pages in Memory &#40;Windows&#41;](enable-the-lock-pages-in-memory-option-windows.md)|  
   

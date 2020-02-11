@@ -1,5 +1,5 @@
 ---
-title: Jeu d’enregistrements, SourceRecordset, propriétés (RDS) | Microsoft Docs
+title: Recordset, SourceRecordset, propriétés (RDS) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,19 +14,19 @@ ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f0cca4735e65ce5d96d431fa455181de921e4474
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963571"
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>Recordset et SourceRecordset, propriétés (RDS)
-Indique le **Recordset** objet retourné à partir d’un objet métier personnalisé.  
+Indique l’objet **Recordset** renvoyé à partir d’un objet métier personnalisé.  
   
  **S’applique à :** [DataControl, objet (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,25 +38,25 @@ Recordset = DataControl.Recordset
   
 #### <a name="parameters"></a>Paramètres  
  *DataControl*  
- Une variable objet qui représente un [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objet.  
+ Variable objet qui représente un objet [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
- *Recordset*  
- Une variable objet qui représente un **Recordset** objet.  
+ *Ensemble d'enregistrements*  
+ Variable objet qui représente un objet **Recordset** .  
   
 ## <a name="remarks"></a>Notes  
- Vous pouvez définir le **SourceRecordset** propriété à un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) retourné à partir d’un objet métier personnalisé.  
+ Vous pouvez définir la propriété **SourceRecordset** sur un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) retourné à partir d’un objet métier personnalisé.  
   
- Ces propriétés permettent à une application gérer le processus de liaison au moyen d’un processus personnalisé. Ils reçoivent un ensemble de lignes encapsulée dans un **Recordset** afin que vous pouvez interagir directement avec le **Recordset**, effectuer des actions telles que la définition des propriétés ou l’itération via la **Recordset** .  
+ Ces propriétés permettent à une application de gérer le processus de liaison au moyen d’un processus personnalisé. Ils reçoivent un ensemble de lignes encapsulé dans un **Recordset** afin que vous puissiez interagir directement avec le **Recordset**, en effectuant des actions telles que la définition de propriétés ou l’itération dans le **jeu d’enregistrements**.  
   
- Vous pouvez définir le **SourceRecordset** propriété ou lecture la **Recordset** propriété au moment de l’exécution dans le code de script.  
+ Vous pouvez définir la propriété **SourceRecordset** ou lire la propriété **Recordset** au moment de l’exécution dans le code de script.  
   
- **SourceRecordset** est une propriété en écriture seule, contrairement à la **Recordset** propriété, qui est une propriété en lecture seule.  
+ **SourceRecordset** est une propriété en écriture seule, contrairement à la propriété **Recordset** , qui est une propriété en lecture seule.  
   
 ## <a name="applies-to"></a>S'applique à  
  [DataControl, objet (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Recordset et SourceRecordset, propriétés-exemple (VBScript)](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)   
+ [Recordset et SourceRecordset, exemples de propriétés (VBScript)](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)   
  [CreateRecordset, méthode (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
  [Query, méthode (RDS)](../../../ado/reference/rds-api/query-method-rds.md)
 

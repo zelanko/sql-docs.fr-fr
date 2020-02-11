@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c78f634f78cdcd970c1d731071a291930cf00ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206655"
 ---
 # <a name="rowsets"></a>Ensembles de lignes
   Un ensemble de lignes est un jeu de lignes contenant des colonnes de données. Les ensembles de lignes sont des objets centraux qui permettent à tous les fournisseurs de données OLE DB d'exposer les données des jeux de résultats sous forme tabulaire.  
   
- Après avoir créé une session en utilisant la méthode **IDBCreateSession::CreateSession**, le consommateur peut utiliser l’interface **IOpenRowset** ou **IDBCreateCommand** dans la session pour créer un ensemble de lignes. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif prend en charge ces deux interfaces. Ces deux méthodes sont décrites ici.  
+ Après avoir créé une session en utilisant la méthode **IDBCreateSession::CreateSession**, le consommateur peut utiliser l’interface **IOpenRowset** ou **IDBCreateCommand** dans la session pour créer un ensemble de lignes. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client prend en charge ces deux interfaces. Ces deux méthodes sont décrites ici.  
   
 -   Créer un ensemble de lignes en appelant la méthode **IOpenRowset::OpenRowset**.  
   
@@ -46,17 +46,17 @@ ms.locfileid: "68206655"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Création d’un ensemble de lignes avec IOpenRowset](creating-a-rowset-with-iopenrowset.md)  
+-   [Création d'un ensemble de lignes avec IOpenRowset](creating-a-rowset-with-iopenrowset.md)  
   
--   [Création d’ensembles de lignes avec ICommand::Execute](creating-rowsets-with-icommand-execute.md)  
+-   [Création d'ensembles de lignes avec ICommand::Execute](creating-rowsets-with-icommand-execute.md)  
   
--   [Propriétés et comportements des ensembles de lignes](rowset-properties-and-behaviors.md)  
+-   [Propriétés et comportements de l'ensemble de lignes](rowset-properties-and-behaviors.md)  
   
 -   [Ensembles de lignes et curseurs SQL Server](rowsets-and-sql-server-cursors.md)  
   
--   [Récupération de lignes](fetching-rows.md)  
+-   [Extraction de lignes](fetching-rows.md)  
   
--   [Récupération d’une ligne unique avec IRow](fetching-a-single-row-with-irow.md)  
+-   [Extraction d'une ligne unique avec IRow](fetching-a-single-row-with-irow.md)  
   
 -   [Signets](bookmarks.md)  
   

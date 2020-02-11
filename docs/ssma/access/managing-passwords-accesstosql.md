@@ -1,5 +1,5 @@
 ---
-title: La gestion des mots de passe (AccessToSQL) | Microsoft Docs
+title: Gestion des mots de passe (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,41 +10,41 @@ ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5d8886f28a30f264e0357af82724567e42e3bd5a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67907183"
 ---
-# <a name="managing-passwords-accesstosql"></a>La gestion des mots de passe (AccessToSQL)
-Cette section concerne la sécurisation des mots de passe de base de données et la procédure pour importer ou exporter les sur les serveurs :  
+# <a name="managing-passwords-accesstosql"></a>Gestion des mots de passe (AccessToSQL)
+Cette section concerne la sécurisation des mots de passe de base de données et la procédure d’importation ou d’exportation sur plusieurs serveurs :  
   
-1.  Sécurisation de mot de passe  
+1.  Sécurisation du mot de passe  
   
-2.  Exportation ni importation de mot de passe chiffré  
+2.  Exportation ou importation d’un mot de passe chiffré  
   
-## <a name="securing-password"></a>Sécurisation de mot de passe  
-SSMA vous permet de sécuriser votre mot de passe d’une base de données.  
+## <a name="securing-password"></a>Sécurisation du mot de passe  
+SSMA vous permet de sécuriser le mot de passe d’une base de données.  
   
 Utilisez la procédure suivante pour implémenter une connexion sécurisée :  
   
-Spécifiez un mot de passe à l’aide d’une des trois méthodes suivantes :  
+Spécifiez un mot de passe valide à l’aide de l’une des trois méthodes suivantes :  
   
-1.  **Texte clair :** Tapez le mot de passe de base de données dans l’attribut de valeur du nœud « password ». Il se trouve sous le nœud de définition de serveur dans la section serveur du fichier de script ou du fichier de connexion de serveur.  
+1.  **Texte en clair :** Tapez le mot de passe de la base de données dans l’attribut value du nœud « Password ». Il se trouve sous le nœud définition de serveur dans la section serveur du fichier de script ou du fichier de connexion au serveur.  
   
-    Les mots de passe en texte clair ne sont pas sécurisés. Par conséquent, vous rencontrerez le message d’avertissement suivant dans la sortie de console : *« Serveur &lt;id serveur&gt; mot de passe n’est fourni sous forme de texte en clair non sécurisées, application de Console SSMA fournit une option pour protéger le mot de passe via le chiffrement, consultez option - securepassword dans le fichier d’aide SSMA pour en savoir plus informations ».*  
+    Les mots de passe en texte clair ne sont pas sécurisés. Par conséquent, le message d’avertissement suivant s’affiche dans la sortie de la console : *« le serveur Server &lt;-&gt; ID Password est fourni en texte clair non sécurisé, l’application console SSMA fournit une option pour protéger le mot de passe via le chiffrement. pour plus d’informations, consultez l’option-SecurePassword dans le fichier d’aide SSMA. »*  
   
-    **Mots de passe chiffrés :** Le mot de passe, dans ce cas, est stockée sous forme chiffrée sur l’ordinateur local dans ProtectedStorage.ssma.  
+    **Mots de passe chiffrés :** Le mot de passe spécifié, dans ce cas, est stocké sous forme chiffrée sur l’ordinateur local dans ProtectedStorage. SSMA.  
   
     -   **Sécurisation des mots de passe**  
   
-        -   Exécuter le `SSMAforAccessConsole.exe` avec le `-securepassword` et ajoutez le commutateur à la ligne de commande en passant le serveur de connexion ou fichier de script contenant le nœud de mot de passe dans la section de définition de serveur.  
+        -   Exécutez `SSMAforAccessConsole.exe` avec le `-securepassword` et ajoutez le commutateur sur la ligne de commande en passant la connexion au serveur ou le fichier de script contenant le nœud de mot de passe dans la section Définition du serveur.  
   
-        -   À l’invite de commandes, l’utilisateur est invité à entrer le mot de passe de base de données et confirmez-le.  
+        -   À l’invite, l’utilisateur est invité à entrer le mot de passe de la base de données et à le confirmer.  
   
-            Les ID de définition de serveur et ses mots de passe chiffrés correspondants sont stockés dans un fichier sur l’ordinateur local  
+            Les ID de définition de serveur et les mots de passe chiffrés correspondants sont stockés dans un fichier sur l’ordinateur local.  
   
-            Exemple 1 :
+            Exemple 1 :
             
                 Specify password
                 
@@ -54,7 +54,7 @@ Spécifiez un mot de passe à l’aide d’une des trois méthodes suivantes :
                 
                 Re-enter password for server_id 'XXX_1': xxxxxxx  
             
-            Exemple 2 :
+            Exemple 2 :
             
                 C:\SSMA\SSMAforAccessConsole.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ VariableValueFileSample.xml" -o
                 
@@ -68,23 +68,23 @@ Spécifiez un mot de passe à l’aide d’une des trois méthodes suivantes :
   
     -   **Suppression des mots de passe chiffrés**  
   
-        Exécuter le `SSMAforAccessConsole.exe` avec la`-securepassword` et `-remove` passer à la ligne de commande en passant l’ID de serveur pour supprimer les mots de passe chiffrés à partir du fichier de stockage protégé présent sur l’ordinateur local.  
+        Exécutez `SSMAforAccessConsole.exe` avec le`-securepassword` commutateur et `-remove` à la ligne de commande en passant les ID de serveur, pour supprimer les mots de passe chiffrés du fichier de stockage protégé présent sur l’ordinateur local.  
   
             C:\SSMA\SSMAforAccessConsole.EXE -securepassword -remove all
             C:\SSMA\SSMAforAccessConsole.EXE -securepassword -remove "source_1,target_1"  
   
-    -   **Liste des ID de serveur dont les mots de passe sont chiffrés.**  
+    -   **Liste des ID de serveur dont les mots de passe sont chiffrés**  
   
-        Exécuter le SSMAforAccessConsole.exe avec la `-securepassword` et `-list` passer à la ligne de commande pour répertorier tous les ID de serveur dont les mots de passe ont été chiffrés.  
+        Exécutez SSMAforAccessConsole. exe avec le commutateur `-securepassword` et `-list` sur la ligne de commande pour répertorier tous les ID de serveur dont les mots de passe ont été chiffrés.  
   
             C:\SSMA\SSMAforAccessConsole.EXE -securepassword -list  
   
     > [!NOTE]  
-    > 1.  Le mot de passe en texte clair mentionné dans le fichier de connexion de serveur ou de script est prioritaire sur le mot de passe chiffré dans le fichier sécurisé.  
-    > 2.  Lorsqu’il n’existe aucun mot de passe dans la section serveur de fichier de connexion de serveur ou le fichier de script, ou si elle n’a pas été sécurisée sur l’ordinateur local, la console vous invite à entrer le mot de passe.  
+    > 1.  Le mot de passe en texte clair mentionné dans le script ou le fichier de connexion du serveur est prioritaire sur le mot de passe chiffré dans fichier sécurisé.  
+    > 2.  Si aucun mot de passe n’existe dans la section serveur du fichier de connexion au serveur ou dans le fichier de script ou s’il n’a pas été sécurisé sur l’ordinateur local, la console vous invite à entrer le mot de passe.  
   
-## <a name="exporting-or-importing-encrypted-passwords"></a>Exporter ou importer des mots de passe chiffrés  
-L’application de Console SSMA vous permet d’exporter des mots de passe de base de données chiffrées présentes dans un fichier sur l’ordinateur local à un fichier sécurisé et inversement. Il permet de rendre la machine de mots de passe chiffrés indépendants. La fonctionnalité d’exportation lit l’id de serveur et le mot de passe à partir de l’ordinateur local, stockage protégé et enregistre les informations dans un fichier chiffré. L’utilisateur est invité à entrer le mot de passe pour le fichier sécurisé. Assurez-vous que le mot de passe entré est la longueur de 8 caractères ou plus. Ce fichier sécurisé est portable sur des ordinateurs différents. Fonctionnalité d’importation lit les informations d’id et mot de passe de serveur à partir du fichier sécurisé. L’utilisateur est invité à entrer le mot de passe pour le fichier sécurisé et ajoute les informations sur le stockage local protégé.  
+## <a name="exporting-or-importing-encrypted-passwords"></a>Exportation ou importation de mots de passe chiffrés  
+L’application console SSMA vous permet d’exporter les mots de passe de base de données chiffrés présents dans un fichier sur l’ordinateur local vers un fichier sécurisé, et vice-versa. Cela permet de rendre les mots de passe chiffrés indépendants de l’ordinateur. La fonctionnalité d’exportation lit l’ID de serveur et le mot de passe à partir du stockage protégé local et enregistre les informations dans un fichier chiffré. L’utilisateur est invité à entrer le mot de passe pour le fichier sécurisé. Assurez-vous que le mot de passe entré a une longueur de 8 caractères ou plus. Ce fichier sécurisé est portable sur différents ordinateurs. La fonctionnalité d’importation lit les informations d’ID de serveur et de mot de passe à partir du fichier sécurisé. L’utilisateur est invité à entrer le mot de passe pour le fichier sécurisé et ajoute les informations au stockage protégé local.  
 
 
     Export password
@@ -121,5 +121,5 @@ L’application de Console SSMA vous permet d’exporter des mots de passe de ba
     Please confirm password: xxxxxxxx  
   
 ## <a name="see-also"></a>Voir aussi  
-[Exécution de la Console SSMA (accès)](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[Exécution de la console SSMA (accès)](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

@@ -1,5 +1,5 @@
 ---
-title: La fonction propriétés et le nouveau travail (Page Général) | Microsoft Docs
+title: Propriétés du travail et nouveau travail (page général) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47f4f0abf784118dd94b62d7b8e08a2e060c639a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211384"
 ---
 # <a name="job-properties-and-new-job-general-page"></a>Propriétés du travail et Nouveau travail (page Général)
-  Utilisez cette page pour afficher et modifier les propriétés générales d’un travail [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Utilisez cette page pour afficher et modifier les propriétés générales d’un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] travail de l’agent.  
   
 ## <a name="options"></a>Options  
  **Nom**  
@@ -47,13 +47,13 @@ ms.locfileid: "68211384"
  **Créé le**  
  Affiche la date et l'heure de création du travail. Cette option est disponible uniquement dans la page **Général** des Propriétés du travail.  
   
- **Date de la dernière modification**  
+ **Dernière modification**  
  Affiche la date et l'heure de la dernière modification du travail. Cette option est disponible uniquement dans la page **Général** des Propriétés du travail.  
   
  **Dernière exécution**  
  Affiche la date et l'heure de la dernière exécution du travail. Cette option est disponible uniquement dans la page **Général** des Propriétés du travail.  
   
- **Afficher l'historique des travaux**  
+ **Afficher l’historique des travaux**  
  Affiche l'historique des travaux. Cette option est disponible uniquement dans la page **Général** des Propriétés du travail.  
   
 ## <a name="see-also"></a>Voir aussi  

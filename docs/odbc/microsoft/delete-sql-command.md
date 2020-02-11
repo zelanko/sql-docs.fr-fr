@@ -1,5 +1,5 @@
 ---
-title: DELETE, commande SQL | Microsoft Docs
+title: DELETE-commande SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: 0d5bd477-626f-4f22-a05a-f531d9f8c5e7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 79a9c9a86e290f568f205a7e7678122f9089a7e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096332"
 ---
 # <a name="delete---sql-command"></a>DELETE, commande SQL
-Marque les enregistrements marqués en suppression.  
+Marque les enregistrements à supprimer.  
   
- Le pilote ODBC Visual FoxPro prend en charge la syntaxe du langage Visual FoxPro native pour cette commande. Pour plus d’informations spécifiques au pilote, consultez la section Notes.  
+ Le pilote ODBC Visual FoxPro prend en charge la syntaxe du langage Visual FoxPro natif pour cette commande. Pour obtenir des informations spécifiques au pilote, consultez les notes.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,23 +33,23 @@ DELETE FROM [DatabaseName!]TableName
 ```  
   
 ## <a name="arguments"></a>Arguments  
- À partir de [ *DatabaseName !* ] *TableName*  
+ FROM [ *DatabaseName !*] *TableName*  
  Spécifie la table dans laquelle les enregistrements sont marqués pour suppression.  
   
- *DatabaseName !* Spécifie le nom d’une base de données qui contient la table si la base de données qui le contient n’est pas la base de données spécifié avec la source de données. Vous devez inclure le nom d’une base de données qui contient la table si la base de données n’est pas la base de données spécifié avec la source de données. Inclure le séparateur de point d’exclamation ( !) après le nom de la base de données et avant le nom de table.  
+ *DatabaseName !* Spécifie le nom d’une base de données qui contient la table si la base de données conteneur n’est pas la base de données spécifiée avec la source de données. Vous devez inclure le nom d’une base de données qui contient la table si la base de données n’est pas la base de données spécifiée avec la source de données. Insérez le délimiteur du point d’exclamation ( !) après le nom de la base de données et avant le nom de la table.  
   
- OÙ *FilterCondition1*[AND &#124; ou *FilterCondition2*...]  
- Spécifie que Visual FoxPro marquer uniquement certains enregistrements marqués en suppression.  
+ WHERE *FilterCondition1*[et &#124; ou *FilterCondition2*...]  
+ Spécifie que Visual FoxPro marque uniquement certains enregistrements pour la suppression.  
   
- *FilterCondition* spécifie les critères pour que les enregistrements marqués pour suppression. Vous pouvez inclure autant de conditions de filtre que vous le souhaitez, connectant à l’opération AND ou opérateur OR. Vous pouvez également utiliser l’opérateur NOT pour inverser la valeur d’une expression logique, ou vous pouvez utiliser **vide**() pour rechercher un champ vide.  
+ *FilterCondition* spécifie les critères que les enregistrements doivent remplir pour être marqués pour suppression. Vous pouvez inclure autant de conditions de filtre que vous le souhaitez, en les connectant à l’aide de l’opérateur AND ou OR. Vous pouvez également utiliser l’opérateur NOT pour inverser la valeur d’une expression logique, ou vous pouvez utiliser **Empty**() pour rechercher un champ vide.  
   
 ## <a name="remarks"></a>Notes  
- Si SET DELETED est définie sur ON, les enregistrements marqués pour suppression sont ignorées par toutes les commandes qui incluent une étendue.  
+ Si SET DELETEd a la valeur ON, les enregistrements marqués pour suppression sont ignorés par toutes les commandes qui incluent une étendue.  
   
- SUPPRIMER - utilise SQL verrouillage des enregistrements lors du marquage de plusieurs enregistrements pour une suppression de tables ouvert pour un accès partagé. Cela réduit la contention enregistrement dans les situations multi-utilisateur, mais peut réduire les performances. Pour optimiser les performances, ouvrez la table pour une utilisation exclusive.  
+ DELETE-SQL utilise le verrouillage des enregistrements lors du marquage de plusieurs enregistrements à supprimer dans les tables ouvertes pour un accès partagé. Cela réduit la contention des enregistrements dans les situations multi-utilisateur, mais peut réduire les performances. Pour des performances maximales, ouvrez la table pour une utilisation exclusive.  
   
-## <a name="driver-remarks"></a>Notes de pilote  
- Lorsque votre application envoie l’instruction SQL ODBC suppression à la source de données, le pilote ODBC Visual FoxPro convertit la commande dans la commande Supprimer de Visual FoxPro sans traduction.  
+## <a name="driver-remarks"></a>Remarques sur le pilote  
+ Lorsque votre application envoie la suppression de l’instruction SQL ODBC à la source de données, le pilote ODBC Visual FoxPro convertit la commande en commande Visual FoxPro DELETE sans traduction.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SET DELETED, commande](../../odbc/microsoft/set-deleted-command.md)

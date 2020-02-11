@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b4518884b3fe17ea3a638ed21210775af7c4921c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62640347"
 ---
 # <a name="move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility"></a>Déplacer un UCP d'une instance de SQL Server vers une autre (utilitaire SQL Server)
@@ -26,7 +26,7 @@ ms.locfileid: "62640347"
   
 1.  Créez un UCP sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sera la nouvelle instance hôte de l'UCP. Pour plus d’informations, consultez [Créer un point de contrôle de l’utilitaire SQL Server &#40;utilitaire SQL Server&#41;](create-a-sql-server-utility-control-point-sql-server-utility.md)  
   
-2.  Si des paramètres de stratégie non définis par défaut ont été définis pour toutes instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans votre utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], notez les seuils de stratégie afin que vous puissiez les rétablir sur le nouvel UCP. Les stratégies par défaut sont appliquées lorsque des instances sont ajoutées au nouvel UCP. Si les stratégies par défaut sont appliquées, le mode Liste de l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche **Global** dans la colonne **Type de stratégie** .  
+2.  Si des paramètres de stratégie non définis par défaut ont été définis pour toutes instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans votre utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , notez les seuils de stratégie afin que vous puissiez les rétablir sur le nouvel UCP. Les stratégies par défaut sont appliquées lorsque des instances sont ajoutées au nouvel UCP. Si les stratégies par défaut sont appliquées, le mode Liste de l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche **Global** dans la colonne **Type de stratégie** .  
   
 3.  Supprimez toutes les instances gérées de l'ancien UCP. Pour plus d’informations, consultez [Supprimer une instance de SQL Server de l’utilitaire SQL Server](remove-an-instance-of-sql-server-from-the-sql-server-utility.md).  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62640347"
   
 8.  Attendez environ 1 heure que se terminent la collecte de données et les opérations d'agrégation.  
   
-9. Pour actualiser les données, cliquez avec le bouton droit sur le nœud **Instances gérées** dans l’ **Explorateur de l’utilitaire**, puis sélectionnez **Actualiser**. Les données en mode Liste sont affichées dans le volet Contenu de l’**Explorateur de l’utilitaire**. Pour plus d’informations, consultez [Consulter les résultats d’une stratégie de contrôle d’intégrité des ressources &#40;utilitaire SQL Server&#41;](view-resource-health-policy-results-sql-server-utility.md).  
+9. Pour actualiser les données, cliquez avec le bouton droit sur le nœud **Instances gérées** dans l’ **Explorateur de l’utilitaire**, puis sélectionnez **Actualiser**. Les données en mode Liste sont affichées dans le volet Contenu de l’ **Explorateur de l’utilitaire** . Pour plus d’informations, consultez [Consulter les résultats d’une stratégie de contrôle d’intégrité des ressources &#40;utilitaire SQL Server&#41;](view-resource-health-policy-results-sql-server-utility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités et tâches de l'utilitaire SQL Server](sql-server-utility-features-and-tasks.md)   

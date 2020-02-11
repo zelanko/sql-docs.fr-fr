@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3a109f663ade5c1b52f9e6d6ca9cd83efac4b3ec
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73759362"
 ---
-# <a name="schema-rowsets---linkedservers-rowset"></a>Ensembles de lignes de schéma - Ensemble de lignes LINKEDSERVERS
+# <a name="schema-rowsets---linkedservers-rowset"></a>Ensembles de lignes de schéma - Ensemble de lignes LINKEDSERVERS
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  L'ensemble de lignes **LINKEDSERVERS** énumère les sources de données d'organisation qui peuvent participer aux requêtes distribuées [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+  L’ensemble de lignes **LINKEDSERVERS** énumère les sources de données de l’organisation qui peuvent participer aux requêtes distribuées [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  L'ensemble de lignes **LINKEDSERVERS** contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Description|  
+|Nom de la colonne|Indicateur de type|Description|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|Nom d'un serveur lié.|  
 |SVR_PRODUCT|DBTYPE_WSTR|Fabricant ou autre nom identifiant le type de banque de données représenté par le nom du serveur lié.|  

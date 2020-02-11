@@ -1,5 +1,5 @@
 ---
-title: Création des fichiers de connexion de serveur (DB2ToSQL) | Microsoft Docs
+title: Création des fichiers de connexion au serveur (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,14 +10,14 @@ ms.assetid: 685419f6-8606-462c-be12-8bace45bede6
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 484b9e12d53d22160358d873ddb2a3dc60d0977e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67989816"
 ---
-# <a name="creating-the-server-connection-files-db2tosql"></a>Création des fichiers de connexion de serveur (DB2ToSQL)
-Informations sur le serveur peuvent être spécifiées dans la section serveurs du fichier de script ou dans un fichier de connexion de serveur distinct. Le paramètre de ligne de commande pour le fichier de connexion de serveur est, `-c <serverconnectionfile>`. Si le même id de serveur est présent dans le fichier de script et le fichier de connexion de serveur, la définition du serveur dans le fichier de script est considéré comme.  
+# <a name="creating-the-server-connection-files-db2tosql"></a>Création des fichiers de connexion au serveur (DB2ToSQL)
+Les informations sur le serveur peuvent être spécifiées dans la section serveurs du fichier de script ou dans un fichier de connexion au serveur distinct. Le paramètre de ligne de commande du fichier de connexion au `-c <serverconnectionfile>`serveur est,. Si le même ID de serveur est présent dans le fichier de script et le fichier de connexion au serveur, la définition du serveur dans le fichier de script est prise en compte.  
   
 **Exemple : 1**  
   
@@ -73,8 +73,8 @@ Informations sur le serveur peuvent être spécifiées dans la section serveurs 
 </sql-server>  
 ```  
   
-## <a name="next-step"></a>Étape suivante  
-L’étape suivante de d’exploitation de la console est [l’exécution de la Console SSMA &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
+## <a name="next-step"></a>étape suivante  
+L’étape suivante de l’utilisation de la console est l' [exécution de la console SSMA &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Exécution de la console SSMA](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  

@@ -1,5 +1,5 @@
 ---
-title: Tester les autorisations&#39;d’un utilisateur
+title: Tester les autorisations d’un utilisateur&#39;s
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2890487c4bbdf23ca4f1d7fa13aa15764f8029d8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728871"
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>Tester les autorisations d’un utilisateur (Master Data Services)
@@ -34,6 +34,6 @@ ms.locfileid: "73728871"
 4.  La prochaine fois que vous ouvrez la fenêtre de navigateur, vous serez invité à fournir un nom d'utilisateur et un mot de passe.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sécurité &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
+ [&#40;de sécurité Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

@@ -14,10 +14,10 @@ ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 9326cafa216ad11e7b7a818d34fe035220402c33
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728158"
 ---
 # <a name="entities-master-data-services"></a>Entités (services de données de référence)
@@ -34,16 +34,16 @@ ms.locfileid: "73728158"
 ## <a name="how-entities-relate-to-other-model-objects"></a>Lien entre les entités et les autres objets de modèle  
  Vous pouvez considérer une entité comme une table qui contient des données de référence, dans laquelle les lignes représentent des membres et les colonnes des attributs.  
   
- ![Entité Master Data Services représentée sous forme de table](../master-data-services/media/mds-conc-entity-table.gif "Entité Master Data Services représentée sous forme de table")  
+ ![Entité Master Data Services représentée en tant que table](../master-data-services/media/mds-conc-entity-table.gif "Entité Master Data Services représentée en tant que table")  
   
  Vous devez remplir l'entité avec une liste des données de référence que vous souhaitez gérer.  
   
- Les entités permettent de générer des hiérarchies dérivées, qui sont des hiérarchies basées sur le niveau et sur plusieurs entités. Pour plus d’informations, consultez [Derived Hierarchies &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md).  
+ Les entités permettent de générer des hiérarchies dérivées, qui sont des hiérarchies basées sur le niveau et sur plusieurs entités. Pour plus d’informations, consultez [Hiérarchies dérivées &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md).  
   
  Les entités peuvent également être activées pour contenir des hiérarchies explicites (structures déséquilibrées basées sur une seule entité) et des collections (combinaisons uniques de sous-ensembles de membres). Pour plus d’informations, consultez [Hiérarchies explicites &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md) et [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md).  
   
 ## <a name="using-entities-as-constrained-lists"></a>Utilisation d'entités en tant que listes contraintes  
- Lorsque les utilisateurs affectent des attributs aux membres d'une entité, vous pouvez les forcer à choisir dans une liste contrainte de valeurs. Pour cela, vous devez vous servir d'une entité pour remplir une liste de valeurs pour l'attribut. Cet attribut est qualifié d'attribut basé sur un domaine. Pour plus d’informations, consultez [Domain-Based Attributes &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md).  
+ Lorsque les utilisateurs affectent des attributs aux membres d'une entité, vous pouvez les forcer à choisir dans une liste contrainte de valeurs. Pour cela, vous devez vous servir d'une entité pour remplir une liste de valeurs pour l'attribut. Cet attribut est qualifié d'attribut basé sur un domaine. Pour plus d’informations, consultez [Attributs basés sur un domaine &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md).  
   
 ## <a name="base-entities"></a>Entités de base  
  Une entité de base est un point de départ pour les utilisateurs qui parcourent les objets du modèle. Une entité de base détermine la disposition de l’écran lorsqu’un utilisateur ouvre la zone fonctionnelle **Explorateur** et clique sur **Explorateur** dans la barre de menus. Pour spécifier une entité comme entité de base, accédez à la zone fonctionnelle **Administration de système** . Dans la page **Vue du modèle** , faites glisser l’entité du contrôle d’arborescence à droite vers le nom du modèle dans le contrôle d’arborescence à gauche.  
@@ -54,11 +54,11 @@ ms.locfileid: "73728158"
 ## <a name="entity-examples"></a>Exemples d'entités  
  L'exemple suivant montre un entité comportant les attributs suivants : Name, Code, Subcategory, StandardCost, ListPrice et FilePhoto. Ces attributs décrivent les membres. Chaque membre est représenté par une ligne unique de valeurs d'attribut.  
   
- ![Table d’entité du produit Bike](../master-data-services/media/mds-conc-entity-table-w-data.gif "Table d’entité du produit Bike")  
+ ![Table de l'entité Bike Product](../master-data-services/media/mds-conc-entity-table-w-data.gif "Table de l'entité Bike Product")  
   
  Dans l'exemple suivant, l'entité Product est l'entité centrale. L'entité Subcategory est un attribut basé sur un domaine de l'entité Product. L'entité Category est un attribut basé sur un domaine de l'entité Subcategory. StandardCost et ListPrice sont des attributs de forme libre de l'entité Product, et FilePhoto est un attribut de fichier de l'entité Product.  
   
- ![Structure de l’arborescence de l’entité Product](../master-data-services/media/mds-conc-entity-ui.gif "Structure de l’arborescence de l’entité Product")  
+ ![Arborescence de l'entité Product](../master-data-services/media/mds-conc-entity-ui.gif "Arborescence de l'entité Product")  
   
 > [!NOTE]  
 >  Il s'agit d'un exemple basé sur l'interface utilisateur de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . La structure de l'arborescence hiérarchique affiche les relations entre les entités et les attributs basés sur un domaine. Elle est conçue pour afficher les relations plutôt que pour représenter les niveaux d'importance.  
@@ -72,7 +72,7 @@ ms.locfileid: "73728158"
 |Supprimez une entité existante.|[Supprimer une entité &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)|  
 |Affectez une autorisation à des entités.|[Affecter des autorisations d’objet de modèle &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
   
 -   [Modèles &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)  
   

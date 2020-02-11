@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 164ae15bdd93034ebcca109a01142b3106a78592
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637917"
 ---
 # <a name="install-and-configure-semantic-search"></a>Installer et configurer la recherche sémantique
@@ -54,14 +54,14 @@ GO
 ```  
   
 ###  <a name="HowToInstallModel"></a>Comment : installer, attacher et inscrire la base de données Base de langages statistiques pour la recherche sémantique  
- La base de données des statistiques linguistiques de sémantique n'est pas installée par le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour installer la base de données des statistiques linguistiques de sémantique comme une condition préalable à l'indexation sémantique, procédez comme suit :  
+ La base de données des statistiques linguistiques de sémantique n'est pas installée par le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour installer la base de données des statistiques linguistiques de sémantique comme une condition préalable à l'indexation sémantique, procédez comme suit :  
   
  **1. Installez la base de données des statistiques linguistiques de sémantique.**  
  1.  Localisez la base de données des statistiques linguistiques de sémantique sur le support d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou téléchargez-la sur le Web.  
   
     -   Localisez le package Windows Installer nommé **SemanticLanguageDatabase.msi** sur le support d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Recherchez la version 32 bits ou 64 bits du package selon le système cible. Le nom du dossier contenant identifie la version 32 bits ou 64 bits du fichier ; le nom de fichier lui-même est le même pour les deux versions.  
   
-    -   Télécharger le package d’installation à partir de [Microsoft ? SQL Server?? 2014 Base de langages statistiques pour la recherche sémantique](https://go.microsoft.com/fwlink/?LinkID=296743) page du centre de téléchargement [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
+    -   Télécharger le package d’installation à partir de [Microsoft ? SQL Server?? 2014 Base de langages statistiques pour la recherche sémantique](https://go.microsoft.com/fwlink/?LinkID=296743) page du [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Centre de téléchargement.  
   
 2.  Exécutez le package Windows Installer **SemanticLanguageDatabase.msi** pour extraire la base de données et le fichier journal.  
   
@@ -74,7 +74,7 @@ GO
 > [!IMPORTANT]  
 >  Lorsque la base de données des statistiques linguistiques de sémantique est extraite, des autorisations limitées sont assignées au fichier de base de données et au fichier journal à l'emplacement par défaut dans le système de fichiers. Par conséquent, vous pouvez ne pas avoir l'autorisation d'attacher la base de données si vous la laissez dans l'emplacement par défaut. Si une erreur se produit lorsque vous essayez d'attacher la base de données, déplacez les fichiers, ou vérifiez et corrigez les autorisations du système de fichiers s'il y a lieu.  
   
- **2. Attachez la base de données des statistiques linguistiques de sémantique.**  
+ **2. Attachez la base de données de statistiques linguistiques de sémantique.**  
  Attachez la base de données à l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en utilisant [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou en appelant [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql) avec la syntaxe **FOR ATTACH**. Pour plus d’informations, consultez [Attacher et détacher une base de données &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md).  
   
  Par défaut, le nom de la base de données est **semanticsdb**. Vous pouvez éventuellement donner un nom différent à la base de données lorsque vous l'attachez. Vous devez spécifier ce nom lorsque vous inscrivez la base de données à l'étape suivante.  
@@ -89,7 +89,7 @@ GO
   
  Cet exemple de code suppose que vous avez déplacé la base de données de son emplacement par défaut vers un nouvel emplacement.  
   
- **3. Inscrivez la base de données des statistiques linguistiques de sémantique.**  
+ **3. Inscrivez la base de données de statistiques linguistiques de sémantique.**  
  Appelez la procédure stockée [sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql) et fournissez le nom attribué à la base de données lors de son attachement.  
   
 ```sql  

@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: df06fb9ccbf4f3683877605e321207f0ca6d997e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196508"
 ---
 # <a name="dml-triggers"></a>Déclencheurs DML
@@ -59,10 +59,10 @@ ms.locfileid: "68196508"
 |Applicabilité|Tables|Tables et vues|  
 |Quantité par table ou vue|Plusieurs par action de déclenchement (UPDATE, DELETE et INSERT)|Un par action de déclenchement (UPDATE, DELETE et INSERT)|  
 |Références en cascade|Aucune restriction|Les déclencheurs INSTEAD OF UPDATE et DELETE ne sont pas autorisés sur des tables qui sont des cibles de contraintes d'intégrité référentielle en cascade.|  
-|Exécution|Après :<br /><br /> Traitement des contraintes<br />Actions référentielles déclaratives<br />Création de tables**inserted** et **deleted**<br />L'action de déclenchement|Avant : Traitement des contraintes<br /><br /> À la place de :  L'action de déclenchement<br /><br /> Après : Création de tables  **inserted** et **deleted**|  
+|Exécution|Après :<br /><br /> Traitement des contraintes<br />Actions référentielles déclaratives<br />Création de tables**inserted** et **deleted**<br />L'action de déclenchement|Avant : Traitement des contraintes<br /><br /> Au lieu de : L’action de déclenchement<br /><br /> Après : Création de tables  **inserted** et **deleted**|  
 |Ordre d'exécution|La première et la dernière exécution peuvent être spécifiées|Non applicable|  
-|`varchar(max)`, `nvarchar(max)`, et `varbinary(max)` références de colonne dans **inséré** et **supprimé** tables|Allowed|Allowed|  
-|`text`, `ntext`, et `image` références de colonne dans **inséré** et **supprimé** tables|Non autorisé|Allowed|  
+|`varchar(max)``nvarchar(max)`références de colonnes `varbinary(max)` , et dans les tables **inserted** et **Deleted**|Autorisé|Autorisé|  
+|`text``ntext`références de colonnes `image` , et dans les tables **inserted** et **Deleted**|Non autorisé|Autorisé|  
   
  Déclencheurs CLR  
  Un déclencheur CLR peut être un déclencheur AFTER ou INSTEAD OF. Il peut également s'agir d'un déclencheur DDL. Au lieu d'exécuter une procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] , un déclencheur CLR exécute une ou plusieurs méthodes écrites en code managé que les membres d'un assembly ont créées dans .NET Framework et téléchargées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -73,13 +73,13 @@ ms.locfileid: "68196508"
 |----------|-----------|  
 |Décrit comment créer un déclencheur DML.|[Créer des déclencheurs DML](create-dml-triggers.md)|  
 |Décrit comment créer un déclencheur CLR.|[Créer des déclencheurs CLR](create-clr-triggers.md)|  
-|Décrit comment créer un déclencheur DML pour gérer à la fois les modifications de données portant sur une seule ligne et plusieurs lignes.|[Créer de déclencheurs DML pour gérer plusieurs lignes de données](create-dml-triggers-to-handle-multiple-rows-of-data.md)|  
+|Décrit comment créer un déclencheur DML pour gérer à la fois les modifications de données portant sur une seule ligne et plusieurs lignes.|[Créer des déclencheurs DML pour gérer plusieurs lignes de données](create-dml-triggers-to-handle-multiple-rows-of-data.md)|  
 |Explique comment imbriquer des déclencheurs.|[Créer des déclencheurs imbriqués](create-nested-triggers.md)|  
 |Décrit comment spécifier l'ordre dans lequel les déclencheurs AFTER sont activés.|[Spécifier les premier et dernier déclencheurs](specify-first-and-last-triggers.md)|  
 |Décrit comment utiliser les tables inserted et deleted spéciales dans le code de déclencheur.|[Utiliser les tables inserted et deleted](use-the-inserted-and-deleted-tables.md)|  
-|Explique comment modifier ou renommer un déclencheur DML.|[Modifier ou renommer les déclencheurs DML](modify-or-rename-dml-triggers.md)|  
+|Explique comment modifier ou renommer un déclencheur DML.|[Modifier ou renommer des déclencheurs DML](modify-or-rename-dml-triggers.md)|  
 |Décrit comment afficher des informations sur les déclencheurs DML.|[Obtenir des informations sur les déclencheurs DML](get-information-about-dml-triggers.md)|  
-|Décrit comment supprimer ou désactiver les déclencheurs DML.|[Supprimer ou désactiver les déclencheurs DML](delete-or-disable-dml-triggers.md)|  
+|Décrit comment supprimer ou désactiver les déclencheurs DML.|[Supprimer ou désactiver des déclencheurs DML](delete-or-disable-dml-triggers.md)|  
 |Décrit comment gérer la sécurité du déclencheur.|[Gérer la sécurité des déclencheurs](manage-trigger-security.md)|  
   
 ## <a name="see-also"></a>Voir aussi  

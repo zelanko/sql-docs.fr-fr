@@ -17,14 +17,14 @@ ms.assetid: a3aa594d-f9d4-4654-8625-ec20153ff5d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 09e83fd8645a5c0ab604a640478c4cced4870742
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949813"
 ---
 # <a name="close-method-ado-md"></a>Close, méthode (ADO MD)
-Ferme un ensemble de cellules ouvert.  
+Ferme un CellSet ouvert.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,17 +34,17 @@ Cellset.Close
 ```  
   
 ## <a name="remarks"></a>Notes  
- À l’aide de la **fermer** méthode pour fermer un [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objet publiera les données associées, y compris les données dans les liés [cellule](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [axe](../../../ado/reference/ado-md-api/axis-object-ado-md.md), [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md), ou [membre](../../../ado/reference/ado-md-api/member-object-ado-md.md) objets. Fermeture d’un **Cellset** ne le supprime pas de la mémoire ; vous pouvez modifier ses paramètres de propriété et ouvrez à nouveau ultérieurement. Pour éliminer complètement un objet de la mémoire, la valeur est la variable objet **rien**.  
+ L’utilisation de la méthode **Close** pour fermer un objet [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) permet de libérer les données associées, y compris les données dans les [cellules](../../../ado/reference/ado-md-api/cell-object-ado-md.md), les [axes](../../../ado/reference/ado-md-api/axis-object-ado-md.md), les [positions](../../../ado/reference/ado-md-api/position-object-ado-md.md)ou les objets [membres](../../../ado/reference/ado-md-api/member-object-ado-md.md) associés. La fermeture d’un **Cellset** ne le supprime pas de la mémoire ; vous pouvez modifier ses paramètres de propriété et l’ouvrir à nouveau ultérieurement. Pour éliminer complètement un objet de la mémoire, affectez à la variable objet la valeur **Nothing**.  
   
- Vous pouvez appeler ultérieurement la [Open](../../../ado/reference/ado-md-api/open-method-ado-md.md) méthode pour rouvrir la **Cellset** en utilisant le même ou un autre chaîne source. Bien que le **Cellset** objet est fermé, récupération de toutes les propriétés ou appelez des méthodes qui référencent les données sous-jacentes ou de métadonnées génère une erreur.  
+ Vous pouvez appeler ultérieurement la méthode [Open](../../../ado/reference/ado-md-api/open-method-ado-md.md) pour rouvrir l' **Cellset** à l’aide de la même chaîne source ou d’une autre chaîne. Lorsque l’objet **Cellset** est fermé, la récupération de toutes les propriétés ou l’appel de toute méthode qui fait référence aux données ou métadonnées sous-jacentes génère une erreur.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Cellset, objet (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Axis, objet (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
- [Cellule, objet (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [Membre objet (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)   
- [Open, méthode (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)   
+ [AXIS, objet (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
+ [Cell, objet (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
+ [Member, objet (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)   
+ [Méthode Open (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)   
  [Position, objet (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)   
  [State, propriété (ADO MD)](../../../ado/reference/ado-md-api/state-property-ado-md.md)

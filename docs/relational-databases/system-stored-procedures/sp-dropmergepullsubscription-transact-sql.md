@@ -16,18 +16,18 @@ ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ab2cda06971e56a8c15e2fb7382977a36fe7a34a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933887"
 ---
-# <a name="spdropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription (Transact-SQL)
+# <a name="sp_dropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime un abonnement de fusion par extraction de données (pull). Cette procédure stockée est exécutée sur la base de données d'abonnement de l'Abonné.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,27 +40,27 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, avec NULL comme valeur par défaut. Ce paramètre est obligatoire. Spécifiez la valeur **tous les** pour supprimer les abonnements à toutes les publications  
+`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, avec NULL comme valeur par défaut. Ce paramètre est obligatoire. Spécifiez la valeur **All** pour supprimer les abonnements à toutes les publications  
   
-`[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *serveur de publication*est **sysname**, avec NULL comme valeur par défaut. Ce paramètre est obligatoire.  
+`[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher*est de **type sysname**, avec NULL comme valeur par défaut. Ce paramètre est obligatoire.  
   
-`[ @publisher_db = ] 'publisher_db'` Est le nom de la base de données du serveur de publication. *publisher_db*est **sysname**, avec NULL comme valeur par défaut. Ce paramètre est obligatoire.  
+`[ @publisher_db = ] 'publisher_db'`Nom de la base de données du serveur de publication. *publisher_db*est de **type sysname**, avec NULL comme valeur par défaut. Ce paramètre est obligatoire.  
   
-`[ @reserved = ] 'reserved'` est réservé pour une utilisation ultérieure. *réservé* est **bits**, avec une valeur par défaut **0**.  
+`[ @reserved = ] 'reserved'`Est réservé pour une utilisation ultérieure. la valeur *réservée* est de **bit**, avec **0**comme valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
  **sp_dropmergepullsubscription** est utilisé dans la réplication de fusion.  
   
- **sp_dropmergepullsubscription** supprime l’Agent de fusion pour cet abonnement par extraction de fusion, bien que l’Agent de fusion n’est pas créé dans **sp_addmergepullsubscription**.  
+ **sp_dropmergepullsubscription** supprime le agent de fusion pour cet abonnement par extraction de fusion, bien que le agent de fusion ne soit pas créé dans **sp_addmergepullsubscription**.  
   
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_dropmergepullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepullsubscrip_1.sql)]  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou l’utilisateur qui a créé l’abonnement par extraction de fusion peut exécuter **sp_dropmergepullsubscription**. Le **db_owner** rôle de base de données fixe n’est en mesure d’exécuter **sp_dropmergepullsubscription** si l’utilisateur qui a créé l’abonnement par extraction de fusion appartient à ce rôle.  
+ Seuls les membres du rôle serveur fixe **sysadmin** ou de l’utilisateur qui a créé l’abonnement par extraction de fusion peuvent exécuter **sp_dropmergepullsubscription**. Le rôle de base de données fixe **db_owner** peut uniquement exécuter **sp_dropmergepullsubscription** si l’utilisateur qui a créé l’abonnement par extraction de fusion appartient à ce rôle.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Supprimer un abonnement par extraction](../../relational-databases/replication/delete-a-pull-subscription.md)   
