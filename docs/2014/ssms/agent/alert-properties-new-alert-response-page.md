@@ -1,5 +1,5 @@
 ---
-title: Alerte des propriétés de nouvelle alerte (Page réponse) | Microsoft Docs
+title: Propriétés de l’alerte-nouvelle alerte (page réponse) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 135207a16ef49fca4820e0d7872d9c3542628d8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63062157"
 ---
-# <a name="alert-properties-new-alert-response-page"></a>Alerte de propriétés de nouvelle alerte (Page réponse)
-  Utilisez cette page pour spécifier un travail que vous souhaitez exécuter et pour obtenir une liste d'opérateurs à notifier en réponse à une alerte de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+# <a name="alert-properties-new-alert-response-page"></a>Propriétés de l’alerte-nouvelle alerte (page réponse)
+  Utilisez cette page pour spécifier un travail que vous souhaitez exécuter et pour obtenir une liste d’opérateurs à notifier en réponse à une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerte de l’agent.  
   
 ## <a name="options"></a>Options  
  **Exécuter le travail**  
  Active les options **Liste des travaux**, **Nouveau travail** et **Afficher le travail** .  
   
- **Nouveau travail**  
+ **Nouvelle tâche**  
  Ouvre la boîte de dialogue **Nouveau travail** . Ce bouton n'est pas disponible lorsque **Exécuter le travail** n'est pas sélectionné.  
   
  **Afficher le travail**  
@@ -35,13 +35,13 @@ ms.locfileid: "63062157"
  **Notifier les opérateurs**  
  Active les contrôles qui vous permettent d'ajouter, de supprimer ou de modifier des opérateurs.  
   
- **Liste d'opérateurs**  
+ **Liste d’opérateurs**  
  Répertorie les opérateurs à notifier lorsqu'une alerte se produit. Pour spécifier une méthode de notification, cochez la case **Messagerie électronique**, **Radiomessagerie**ou **Envoi réseau** affichée après le nom de l’opérateur. Cette option n’est pas disponible quand **Notifier les opérateurs** n’est pas sélectionné.  
   
- **Messagerie électronique**  
+ **Courriel**  
  Utilisez un courrier électronique pour notifier l'opérateur.  
   
- **Radiomessagerie**  
+ **Destinés**  
  Utilisez une adresse de radiomessagerie pour notifier l'opérateur.  
   
  **Envoi réseau**  
@@ -50,14 +50,14 @@ ms.locfileid: "63062157"
  **Nouvel opérateur**  
  Affiche la boîte de dialogue **Nouvel opérateur** , que vous pouvez utiliser pour créer un opérateur.  
   
- **Afficher l'opérateur**  
+ **View (opérateur)**  
  Affiche la boîte de dialogue **Propriétés** pour l’opérateur sélectionné. Vous pouvez afficher et modifier les propriétés d’opérateur dans la boîte de dialogue **Propriétés Opérateur**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Alerts](alerts.md)   
- [Créer une alerte à l’aide de la gravité de niveau](create-an-alert-using-severity-level.md)   
+ [Créer une alerte à l’aide d’un niveau de gravité](create-an-alert-using-severity-level.md)   
  [Alerts](alerts.md)   
  [Modifier une alerte](edit-an-alert.md)   
- [Delete an Alert](delete-an-alert.md)  
+ [Supprimer une alerte](delete-an-alert.md)  
   
   

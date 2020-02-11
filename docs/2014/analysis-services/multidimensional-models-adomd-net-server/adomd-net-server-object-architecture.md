@@ -14,24 +14,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80856721092becb85d6ff6fb2652013e975c6157
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68887969"
 ---
 # <a name="adomdnet-server-object-architecture"></a>Architecture des objets serveur ADOMD.NET
-  Les objets serveur ADOMD.NET sont des objets d’assistance qui peuvent être utilisés pour créer des fonctions définies par l’utilisateur (UDF) [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou des procédures stockées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  Les objets serveur ADOMD.NET sont des objets d’assistance qui peuvent être utilisés pour créer des fonctions définies par l’utilisateur (UDF) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ou des procédures stockées dans.  
   
 > [!NOTE]  
 >  Pour utiliser l'espace de noms `Microsoft.AnalysisServices.AdomdServer` (et ces objets), une référence à msmgdsrv.dll doit être ajoutée au projet UDF ou à la procédure stockée.  
   
- ![Affiche les relations d’objets dans le serveur ADOMD.net](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/adomdnetserverobjectmodel.gif "Affiche les relations d’objets dans le serveur ADOMD.net")  
+ ![Affiche les relations d'objet dans le serveur ADOMD.NET](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/adomdnetserverobjectmodel.gif "Affiche les relations d'objet dans le serveur ADOMD.NET")  
 Modèle objet ADOMD.NET  
   
  L'interaction avec la hiérarchie d'objets ADOMD.NET débute généralement avec un ou plusieurs objets de la couche de niveau supérieur, comme indiqué dans le tableau suivant.  
   
-|Pour|Utiliser cet objet|  
+|À|Utiliser cet objet|  
 |--------|---------------------|  
 |Évaluer des instructions MDX (Multidimensional Expressions)|<xref:Microsoft.AnalysisServices.AdomdServer.Expression><br /> L'objet <xref:Microsoft.AnalysisServices.AdomdServer.Expression> permet d'exécuter une expression MDX et d'évaluer cette expression sous un tuple spécifié.|  
 |Offrir la possibilité d'exécuter des fonctions MDX sans construire l'instruction MDX entière|<xref:Microsoft.AnalysisServices.AdomdServer.MDX><br /> L'objet <xref:Microsoft.AnalysisServices.AdomdServer.MDX> s'avère très pratique pour appeler des fonctions MDX prédéfinies sans utiliser l'objet <xref:Microsoft.AnalysisServices.AdomdServer.Expression>. Des fonctions supplémentaires pour l'objet <xref:Microsoft.AnalysisServices.AdomdServer.MDX> devraient être disponibles dans les futures versions.|  

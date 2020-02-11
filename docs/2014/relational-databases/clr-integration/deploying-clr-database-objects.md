@@ -16,14 +16,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4e06dfced9b9800c0e5c0b7d0dca208bac67c900
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920839"
 ---
 # <a name="deploying-clr-database-objects"></a>Déploiement d'objets de base de données CLR
-  Le déploiement est le processus selon lequel une application ou un module fini est distribué en vue de son installation et de son exécution sur un autre ordinateur. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio vous permet de développer des objets de base de données CLR (Common Language Runtime) et de les déployer sur un serveur de test. Les objets de base de données managés peuvent également être compilés avec les fichiers de redistribution [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework, au lieu de Visual Studio. Une fois compilés, les assemblys qui contiennent les objets de base de données CLR peuvent être déployés sur un serveur de test à l'aide de Visual Studio ou d'instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Notez que Visual Studio .NET 2003 ne peut pas être utilisé pour le déploiement ou la programmation de l'intégration du CLR. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclut le .NET Framework préinstallé et Visual Studio .NET 2003 ne peut pas utiliser les assemblys .NET Framework 2.0.  
+  Le déploiement est le processus selon lequel une application ou un module fini est distribué en vue de son installation et de son exécution sur un autre ordinateur. 
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio vous permet de développer des objets de base de données CLR (Common Language Runtime) et de les déployer sur un serveur de test. Les objets de base de données managés peuvent également être compilés avec les fichiers de redistribution [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework, au lieu de Visual Studio. Une fois compilés, les assemblys qui contiennent les objets de base de données CLR peuvent être déployés sur un serveur de test à l'aide de Visual Studio ou d'instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Notez que Visual Studio .NET 2003 ne peut pas être utilisé pour le déploiement ou la programmation de l'intégration du CLR. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclut le .NET Framework préinstallé et Visual Studio .NET 2003 ne peut pas utiliser les assemblys .NET Framework 2.0.  
   
  Une fois que les méthodes CLR ont été testées et vérifiées sur le serveur de test, elles peuvent être distribuées sur les serveurs de production à l'aide d'un script de déploiement. Le script de déploiement peut être généré manuellement ou à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (consultez la procédure plus loin dans cette rubrique).  
   
@@ -39,11 +41,11 @@ ms.locfileid: "62920839"
   
 #### <a name="to-deploy-the-assembly-using-visual-studio"></a>Pour déployer l'assembly à l'aide de Visual Studio  
   
-1.  Générez le projet en sélectionnant **Build** \<nom_projet > à partir de la **Build** menu.  
+1.  Générez le projet en sélectionnant nom du projet de **Build** \<> dans le menu **générer** .  
   
 2.  Résolvez tous les avertissements et erreurs de build avant de déployer l'assembly sur le serveur de test.  
   
-3.  Sélectionnez **déployer** à partir de la **Build** menu. L'assembly sera ensuite inscrit dans l'instance et la base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] spécifiées lors de la création initiale du projet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans Visual Studio.  
+3.  Sélectionnez **déployer** dans le menu **générer** . L'assembly sera ensuite inscrit dans l'instance et la base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] spécifiées lors de la création initiale du projet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans Visual Studio.  
   
 #### <a name="to-deploy-the-assembly-using-transact-sql"></a>Pour déployer l'assembly à l'aide de Transact-SQL  
   
@@ -75,7 +77,7 @@ ms.locfileid: "62920839"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- Pour plus d’informations sur la création des différents types d’objets de base de données managés dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez [les fonctions](../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [les agrégats](../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [CLR Types définis par l’utilisateur](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [procédures stockées CLR](../../database-engine/dev-guide/clr-stored-procedures.md), et [déclencheurs CLR](../../database-engine/dev-guide/clr-triggers.md).  
+ Pour plus d’informations sur la création des différents types d’objets de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]base de données managés dans, consultez [fonctions CLR définies par l’utilisateur](../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [agrégats CLR définis](../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)par l’utilisateur, [types CLR définis par l’utilisateur](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [procédures stockées CLR](../../database-engine/dev-guide/clr-stored-procedures.md)et [déclencheurs CLR](../../database-engine/dev-guide/clr-triggers.md).  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>Déploiement de l'assembly sur des serveurs de production  
  Une fois que les objets de base de données CLR ont été testés et vérifiés sur le serveur de test, ils peuvent être distribués sur les serveurs de production. Pour plus d’informations sur le débogage des objets de base de données managés, consultez [débogage des objets de base de données CLR](debugging-clr-database-objects.md).  
@@ -86,22 +88,22 @@ ms.locfileid: "62920839"
   
 1.  Ouvrez [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] et connectez-vous à l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] où l'assembly managé ou objet de base de données à déployer est inscrit.  
   
-2.  Dans le **Explorateur d’objets**, développez le  **\<nom du serveur >** et **bases de données** arborescences. Avec le bouton droit de la base de données où l’objet de base de données managé est inscrit, sélectionnez **tâches**, puis sélectionnez **générer des Scripts**. L'Assistant Script s'ouvre.  
+2.  Dans l **'Explorateur d’objets**, développez le ** \<nom du serveur>** et les arborescences **de bases de données** . Cliquez avec le bouton droit sur la base de données dans laquelle l’objet de base de données managé est inscrit, sélectionnez **tâches**, puis sélectionnez **générer des scripts**. L'Assistant Script s'ouvre.  
   
-3.  Sélectionnez la base de données à partir de la zone de liste et cliquez sur **suivant**.  
+3.  Sélectionnez la base de données dans la zone de liste, puis cliquez sur **suivant**.  
   
-4.  Dans le **choisir les Options de Script** volet, cliquez sur **suivant**, ou modifier les options, puis sur **suivant**.  
+4.  Dans le volet **choisir les options de script** , cliquez sur **suivant**, ou modifiez les options, puis cliquez sur **suivant**.  
   
-5.  Dans le **sélectionner les Types d’objet** volet, choisissez le type d’objet de base de données à déployer. Cliquer sur **Suivant**.  
+5.  Dans le volet **choisir les types d’objets** , choisissez le type d’objet de base de données à déployer. Cliquez sur **Suivant**.  
   
-6.  Pour chaque type d’objet sélectionné dans le **sélectionner les Types d’objet** volet, un **choisir \<type >** volet s’affiche. Dans ce volet, vous pouvez choisir parmi toutes les instances de ce type d'objet de base de données inscrites dans la base de données spécifiée. Sélectionnez un ou plusieurs objets et cliquez sur **suivant**.  
+6.  Pour chaque type d’objet sélectionné dans le volet **choisir les types d’objets** , un volet choisir ** \<un type de>** s’affiche. Dans ce volet, vous pouvez choisir parmi toutes les instances de ce type d'objet de base de données inscrites dans la base de données spécifiée. Sélectionnez un ou plusieurs objets, puis cliquez sur **suivant**.  
   
-7.  Le **Options de sortie** volet s’affiche lorsque tous de la base de données souhaitée de l’objet type a été sélectionné. Sélectionnez **Script dans un fichier** et spécifiez un chemin d’accès de fichier pour le script. Sélectionnez **Suivant**. Passez en revue vos sélections et cliquez sur **Terminer**. Le script de déploiement est enregistré dans le chemin d'accès relatif spécifié.  
+7.  Le volet **options de sortie** s’affiche lorsque tous les types d’objets de base de données souhaités ont été sélectionnés. Sélectionnez **script à fichier** et spécifiez un chemin d’accès au fichier pour le script. Sélectionnez **Suivant**. Passez en revue vos sélections et cliquez sur **Terminer**. Le script de déploiement est enregistré dans le chemin d'accès relatif spécifié.  
   
 ## <a name="post-deployment-scripts"></a>Scripts de post-déploiement  
  Vous pouvez exécuter un script de post-déploiement.  
   
- Pour ajouter un script de post-déploiement, ajoutez un fichier nommé postdeployscript.sql dans votre répertoire de projet Visual Studio. Par exemple, cliquez avec le bouton droit sur votre projet dans **l’Explorateur de solutions** et sélectionnez **ajouter un élément existant**. Ajoutez le fichier à la racine du projet, plutôt que dans le dossier Scripts de test.  
+ Pour ajouter un script de post-déploiement, ajoutez un fichier nommé postdeployscript.sql dans votre répertoire de projet Visual Studio. Par exemple, cliquez avec le bouton droit sur votre projet dans **Explorateur de solutions** , puis sélectionnez **Ajouter un élément existant**. Ajoutez le fichier à la racine du projet, plutôt que dans le dossier Scripts de test.  
   
  Lorsque vous cliquez sur Déployer, Visual Studio exécute ce script après le déploiement de votre projet.  
   

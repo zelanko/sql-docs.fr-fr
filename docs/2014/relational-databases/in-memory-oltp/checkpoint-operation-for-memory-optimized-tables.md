@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ddcdec0f624c1d6f70c57e593eaf9da66cbe0419
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63065527"
 ---
 # <a name="checkpoint-operation-for-memory-optimized-tables"></a>Opération de point de contrôle pour les tables mémoire optimisées
@@ -31,6 +31,6 @@ ms.locfileid: "63065527"
  Pour les tables mémoire optimisées, un point de contrôle automatique est pris lorsque la taille du fichier journal des transactions devient supérieure à 512 Mo depuis le dernier point de contrôle. Les 512 Mo incluent les enregistrements du journal des transactions à la fois pour les tables sur disque et les tables mémoire optimisées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création et gestion du stockage des objets mémoire optimisés](creating-and-managing-storage-for-memory-optimized-objects.md)  
+ [Création et gestion du stockage des objets à mémoire optimisée](creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

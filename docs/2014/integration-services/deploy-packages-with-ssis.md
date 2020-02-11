@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89db7def474b26ffd25da1495e3efaf0e1af43dd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232692"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>Didacticiel SSIS : déploiement de packages
@@ -77,13 +77,13 @@ ms.locfileid: "75232692"
  **Durée estimée pour effectuer ce didacticiel :** 2 heures  
   
 ## <a name="lessons-in-this-tutorial"></a>Leçons du didacticiel  
- [Leçon 1 : préparation de la création de l’ensemble de déploiement](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  
+ [Leçon 1 : préparation à la création de l'application de déploiement](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  
  Au cours de cette leçon, vous allez vous préparer à déployer une solution ETL en créant un nouveau projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et en ajoutant au projet les packages et les autres fichiers requis.  
   
- [Leçon 2 : création de l’ensemble de déploiement](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
+ [Leçon 2 : Création de l'application de déploiement](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
  Au cours de cette leçon, vous allez élaborer un utilitaire de déploiement et vérifier que l'application de déploiement inclut les fichiers nécessaires.  
   
- [Leçon 3 : installation de packages](../integration-services/lesson-3-install-ssis-package.md)  
+ [Leçon 3 : installation de packages](../integration-services/lesson-3-install-ssis-package.md)  
  Vous allez aussi copier l'application de déploiement sur l'ordinateur cible, installer les packages, puis les exécuter.  
   
 ![Icône de Integration Services (petite)](media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  

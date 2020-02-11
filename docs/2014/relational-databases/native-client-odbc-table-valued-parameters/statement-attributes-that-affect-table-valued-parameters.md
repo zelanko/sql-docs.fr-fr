@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 19a757f82c2fa2ff2e78453ddf0fea1fbebda3c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62626214"
 ---
 # <a name="statement-attributes-that-affect-table-valued-parameters"></a>Attributs d'instruction qui affectent des paramètres table
   Le tableau suivant décrit les attributs dans un champ de descripteur.  
   
-|Nom de l'attribut|type|Description|  
+|Nom de l’attribut|Type|Description|  
 |--------------------|----------|-----------------|  
 |SQL_SOPT_SS_PARAM_FOCUS|SQLUINTEGER|Pour plus d’informations sur SQL_SS_PARAM_FOCUS, consultez [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md).|  
 |SQL_SOPT_SS_NAME_SCOPE|SQLUINTEGER|Pour plus d’informations sur SQL_SS_NAME_SCOPE, consultez [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md).|  

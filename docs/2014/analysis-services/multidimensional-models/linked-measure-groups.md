@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec38404a32751330d7fefd974fafe3d571d3b11b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074782"
 ---
 # <a name="linked-measure-groups"></a>Groupes de mesures liés
   Un groupe de mesures lié est basé sur un autre groupe de mesures situé dans un autre cube de la même base de données ou d'une autre base de données Analysis Services. Utilisez un groupe de mesures lié si vous voulez réutiliser un jeu de mesures, et les valeurs de données correspondantes, dans plusieurs cubes.  
   
- Microsoft recommande que les groupes de mesures liés et d'origine se trouvent dans des solutions exécutées sur le même serveur. Liaison à un groupe de mesures sur un serveur distant sera déconseillée dans une version ultérieure (voir [Analysis Services déconseillées dans SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md)).  
+ Microsoft recommande que les groupes de mesures liés et d'origine se trouvent dans des solutions exécutées sur le même serveur. La liaison à un groupe de mesures sur un serveur distant est planifiée pour la désapprobation dans une version ultérieure (voir les [fonctionnalités Dépréciées Analysis Services dans SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md)).  
   
 > [!IMPORTANT]  
 >  Les groupes de mesures liés sont en lecture seule. Pour récupérer les dernières modifications, vous devez supprimer et recréer tous les groupes de mesures liés en fonction de l'objet source modifié. Pour cette raison, groupes de mesures et la zone de collage entre les projets est une approche lieu que vous devez comme au cas où futures de modifications au groupe de mesures seront requises.  

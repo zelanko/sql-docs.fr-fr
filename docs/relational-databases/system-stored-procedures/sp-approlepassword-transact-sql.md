@@ -18,21 +18,21 @@ ms.assetid: 7967dc0b-bee2-4c63-b8e9-1c3ce2f5db2a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 201daf29a40d0d7c7a4f49539c75fdc07bad1e31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68117761"
 ---
-# <a name="spapprolepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
+# <a name="sp_approlepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Modifie le mot de passe d'un rôle d'application dans la base de données active.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez [ALTER APPLICATION ROLE](../../t-sql/statements/alter-application-role-transact-sql.md) à la place.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez à la place [ALTER application Role](../../t-sql/statements/alter-application-role-transact-sql.md) .  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,14 +42,14 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @rolename = ] 'role'` Est le nom du rôle d’application. *rôle* est **sysname**, sans valeur par défaut. *rôle* doit exister dans la base de données actuelle.  
+`[ @rolename = ] 'role'`Nom du rôle d’application. *Role* est de **type sysname**, sans valeur par défaut. le *rôle* doit exister dans la base de données actuelle.  
   
-`[ @newpwd = ] 'password'` Est le nouveau mot de passe pour le rôle d’application. *mot de passe* est **sysname**, sans valeur par défaut. *mot de passe* ne peut pas être NULL.  
+`[ @newpwd = ] 'password'`Nouveau mot de passe du rôle d’application. *Password* est de **type sysname**, sans valeur par défaut. le *mot de passe* ne peut pas être null.  
   
 > [!IMPORTANT]  
->  N'utilisez pas de mot de passe NULL, Utilisez un mot de passe fort. Pour plus d’informations, consultez la page [Mots de passe forts](../../relational-databases/security/strong-passwords.md).  
+>  N'utilisez pas de mot de passe NULL, Utilisez un mot de passe fort. Pour plus d'informations, consultez la page [Mots de passe forts](../../relational-databases/security/strong-passwords.md).  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  

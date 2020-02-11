@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ab8db976275a60cfbf1e0afb78457afad18fc366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63012264"
 ---
 # <a name="accessing-the-soap-api"></a>Accès à l'API  SOAP
@@ -41,7 +41,7 @@ ms.locfileid: "63012264"
   
 -   Le point de terminaison <xref:ReportExecution2005> permet aux développeurs de traiter les rapports par programme et d'en effectuer le rendu sur un serveur de rapports. L’accès au WSDL de ce point de terminaison s’effectue à l’aide de `ReportExecution2005.asmx?wsdl`.  
   
- WSDL peut être utilisé par les kits de développement qui prennent en charge SOAP et les services web, comme le SDK [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+ WSDL peut être utilisé par les kits de développement qui prennent en charge SOAP et les services [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Web, tels que le kit de développement logiciel (SDK).  
   
  L'exemple suivant montre le format de l'URL au fichier WSDL de gestion [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
@@ -53,9 +53,9 @@ http://server/reportserver/ReportService2010.asmx?wsdl
   
 |Élément de l'URL|Description|  
 |-----------------|-----------------|  
-|*server*|Nom du serveur sur lequel le serveur de rapports est déployé.|  
-|*reportserver*|Nom du dossier qui contient le service Web XML. Cet élément est configuré au moment de l'installation.|  
-|*\<nom du point de terminaison>.asmx*|Nom du point de terminaison du service Web.|  
+|*serveurs*|Nom du serveur sur lequel le serveur de rapports est déployé.|  
+|*ReportServer*|Nom du dossier qui contient le service Web XML. Cet élément est configuré au moment de l'installation.|  
+|*\<nom du point de terminaison>. asmx*|Nom du point de terminaison du service Web.|  
   
  Pour plus d'informations sur le format WSDL, consultez la spécification WSDL du W3C (World Wide Consortium) à l'adresse http://www.w3.org/TR/wsdl.  
   

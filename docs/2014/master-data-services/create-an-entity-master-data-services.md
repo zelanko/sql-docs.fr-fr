@@ -14,16 +14,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d85fc4c21f200bcdc5a489cfcee6b50bc9f4b98e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479914"
 ---
 # <a name="create-an-entity-master-data-services"></a>Créer une entité (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez une entité destinée à contenir des membres et leurs attributs.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -40,28 +40,28 @@ ms.locfileid: "65479914"
   
 3.  Dans la page **Maintenance de l'entité** , dans la liste **Modèle** , sélectionnez un modèle.  
   
-4.  Cliquez sur **ajouter une entité**.  
+4.  Cliquez sur **Ajouter une entité**.  
   
-5.  Dans le **nom de l’entité** , tapez le nom de l’entité.  
+5.  Dans la zone nom de l' **entité** , tapez le nom de l’entité.  
   
-6.  Dans le **nom des tables intermédiaires** , tapez un nom pour la table intermédiaire.  
+6.  Dans la zone **nom des tables de mise en lots** , tapez un nom pour la table de mise en lots.  
   
     > [!TIP]  
-    >  Utilisez le nom du modèle dans le nom de la table de mise en lots, par exemple *NomModèle_NomEntité*. Cela facilite la recherche de tables dans la base de données. Pour plus d’informations sur les tables intermédiaires, consultez [importation des données &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
+    >  Utilisez le nom du modèle dans le nom de la table de mise en lots, par exemple *NomModèle_NomEntité*. Cela facilite la recherche de tables dans la base de données. Pour plus d’informations sur les tables de mise en lots, consultez [&#40;d’importation de données Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
   
-7.  Facultatif. Activez la case à cocher **Créer automatiquement les valeurs de code** . Pour plus d’informations, consultez [Création automatique de code &#40;Master Data Services&#41;](../../2014/master-data-services/automatic-code-creation-master-data-services.md).  
+7.  facultatif. Activez la case à cocher **Créer automatiquement les valeurs de code** . Pour plus d’informations, consultez [création automatique de Code &#40;Master Data Services&#41;](../../2014/master-data-services/automatic-code-creation-master-data-services.md).  
   
-8.  À partir de la **activer les hiérarchies explicites et collections** liste, sélectionnez une des options suivantes :  
+8.  Dans la liste **activer les hiérarchies explicites et les regroupements** , sélectionnez l’une des options suivantes :  
   
-    -   **Ne**. Sélectionnez cette option si vous n'avez pas besoin d'activer l'entité pour les hiérarchies et les collections explicites. Vous pouvez changer ce paramètre ultérieurement si nécessaire.  
+    -   **Non**. Sélectionnez cette option si vous n'avez pas besoin d'activer l'entité pour les hiérarchies et les collections explicites. Vous pouvez changer ce paramètre ultérieurement si nécessaire.  
   
-    -   **Oui**. Sélectionnez cette option lorsque vous souhaitez activer l'entité pour les hiérarchies et collections explicites. Dans le **nom de la hiérarchie explicite** , tapez un nom. Si vous le souhaitez, sélectionnez **hiérarchie obligatoire (tous les membres feuille sont inclus** pour rendre la hiérarchie explicite obligatoire.  
+    -   **Oui**. Sélectionnez cette option lorsque vous souhaitez activer l'entité pour les hiérarchies et collections explicites. Dans la zone nom de la **hiérarchie explicite** , tapez un nom. Si vous le souhaitez, sélectionnez **hiérarchie obligatoire (tous les membres feuille sont inclus** pour transformer la hiérarchie explicite en hiérarchie obligatoire.  
   
 9. Cliquez sur **enregistrer l’entité**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
   
--   [Créer un attribut de texte &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)  
+-   [Créez un attribut de texte &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)  
   
 -   [Créer un attribut basé sur un domaine &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
@@ -70,7 +70,7 @@ ms.locfileid: "65479914"
 ## <a name="see-also"></a>Voir aussi  
  [Entités &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
  [Hiérarchies explicites &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
- [Modifier un nom d’entité &#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)   
+ [Modifier le nom d’une entité &#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)   
  [Supprimer une entité &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)  
   
   

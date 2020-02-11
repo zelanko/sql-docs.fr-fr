@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_tran_version_store_space_usage (Transact-SQL) | Microsoft Docs
+title: sys. dm_tran_version_store_space_usage (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -21,32 +21,32 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2a4fac732f784a401206f37fb2af9d3d8e0688ba
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262661"
 ---
-# <a name="sysdmtranversionstorespaceusage-transact-sql"></a>Sys.dm_tran_version_store_space_usage (Transact-SQL)
+# <a name="sysdm_tran_version_store_space_usage-transact-sql"></a>sys. dm_tran_version_store_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
-Retourne une table qui affiche l’espace total dans tempdb utilisé par les enregistrements du magasin de version pour chaque base de données. **Sys.dm_tran_version_store_space_usage** est efficace et peu coûteuse à exécuter, car il ne pas parcourir les enregistrements de magasin de version individuelle et retourne agrégées espace de magasin de version consommé dans tempdb par base de données.
+Retourne une table qui affiche l’espace total dans tempdb utilisé par les enregistrements de la Banque des versions pour chaque base de données. **sys. dm_tran_version_store_space_usage** est efficace et n’est pas coûteux à exécuter, car il ne parcourt pas les enregistrements individuels de la Banque des versions et retourne l’espace de la Banque des versions agrégé utilisé dans tempdb par base de données.
   
-Chaque enregistrement avec contrôle de version est stocké en tant que données binaires, ainsi que des informations de suivi ou d’état. À l'instar des enregistrements des tables de la base de données, ceux de la banque des versions sont stockés dans des pages de 8 192 octets. Si un enregistrement excède ces 8 192 octets, il est réparti sur deux enregistrements.  
+Chaque enregistrement avec version est stocké sous forme de données binaires, avec des informations de suivi ou d’État. À l'instar des enregistrements des tables de la base de données, ceux de la banque des versions sont stockés dans des pages de 8 192 octets. Si un enregistrement excède ces 8 192 octets, il est réparti sur deux enregistrements.  
   
-Comme l'enregistrement avec contrôle de version est stocké sous forme binaire, cela ne pose pas de problème avec les différents classements des différentes bases de données. Utilisez **sys.dm_tran_version_store_space_usage** à surveiller et planifier la taille de tempdb en fonction de l’utilisation de l’espace de magasin de version des bases de données dans une instance de SQL Server.
+Comme l'enregistrement avec contrôle de version est stocké sous forme binaire, cela ne pose pas de problème avec les différents classements des différentes bases de données. Utilisez **sys. dm_tran_version_store_space_usage** pour surveiller et planifier la taille de tempdb en fonction de l’utilisation de l’espace de la Banque des versions des bases de données dans une instance SQL Server.
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**Int**|ID de base de données de la base de données.|  
-|**reserved_page_count**|**bigint**|Nombre total de pages réservées dans tempdb pour version stocke les enregistrements de la base de données.|  
-|**reserved_space_kb**|**bigint**|Espace total utilisé (en Ko) dans tempdb pour version stocke les enregistrements de la base de données.|  
+|**database_id**|**int**|ID de base de données de la base de données.|  
+|**reserved_page_count**|**bigint**|Nombre total de pages réservées dans tempdb pour les enregistrements de la Banque des versions de la base de données.|  
+|**reserved_space_kb**|**bigint**|Espace total utilisé en kilo-octets dans tempdb pour les enregistrements de la base de données de la Banque des versions.|  
   
 ## <a name="permissions"></a>Autorisations  
-Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
+Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiert `VIEW SERVER STATE` l’autorisation.   
 
 ## <a name="examples"></a>Exemples  
-La requête suivante peut être utilisée pour déterminer l’espace consommé dans tempdb, par la banque des versions de chaque base de données dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. 
+La requête suivante peut être utilisée pour déterminer l’espace consommé dans tempdb, par la Banque des versions de chaque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données dans une instance. 
   
 ```sql  
 SELECT 

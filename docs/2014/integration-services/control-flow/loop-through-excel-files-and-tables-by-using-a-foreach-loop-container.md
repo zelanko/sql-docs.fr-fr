@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 979a0e0a1e8a05b676d4de7ccda0c5876943d587
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830580"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Effectuer une boucle dans des fichiers et des tables Excel en utilisant un conteneur de boucles Foreach
@@ -32,7 +32,7 @@ ms.locfileid: "62830580"
   
      Si vous n'utilisez pas une variable pour l'argument de propriétés étendues, vous devez l'ajouter manuellement à l'expression qui contient la chaîne de connexion.  
   
-3.  Ajoutez un conteneur de boucles Foreach à l’onglet **Flux de contrôle** . Pour plus d’informations sur la configuration du conteneur de boucles Foreach, consultez [Configurer un conteneur de boucles Foreach](foreach-loop-container.md).  
+3.  Ajoutez un conteneur de boucles Foreach à l’onglet **Flow Control** . Pour plus d’informations sur la configuration du conteneur de boucles Foreach, consultez [configurer un conteneur de boucles Foreach](foreach-loop-container.md).  
   
 4.  Dans la page **Collection** de **l’Éditeur de boucle Foreach**, sélectionnez l’énumérateur Foreach File, spécifiez le dossier contenant les classeurs Excel, puis spécifiez le filtre de fichiers (généralement *.xls).  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62830580"
   
 8.  Sélectionnez le nouveau gestionnaire de connexions Excel, cliquez sur la propriété **Expressions** dans la fenêtre Propriétés, puis cliquez sur les points de suspension.  
   
-9. Dans le **Éditeur d’Expressions de propriété**, sélectionnez le `ConnectionString` propriété, puis cliquez sur le bouton de sélection.  
+9. Dans l' **éditeur d’expressions**de la propriété `ConnectionString` , sélectionnez la propriété, puis cliquez sur les points de suspension.  
   
 10. Dans le Générateur d'expressions, entrez l'expression suivante :  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62830580"
   
 2.  Créez une variable de chaîne qui recevra le nom du tableau actuel à chaque itération de la boucle.  
   
-3.  Ajoutez un conteneur de boucles Foreach à l’onglet **Flux de contrôle** . Pour plus d’informations sur la configuration du conteneur de boucles Foreach, consultez [Configurer un conteneur de boucles Foreach](foreach-loop-container.md).  
+3.  Ajoutez un conteneur de boucles Foreach à l’onglet **Flow Control** . Pour plus d’informations sur la configuration du conteneur de boucles Foreach, consultez [configurer un conteneur de boucles Foreach](foreach-loop-container.md).  
   
 4.  Dans la page **Collection** de **l’Éditeur de boucle Foreach**, sélectionnez l’énumérateur d’ensemble de lignes du schéma ADO.NET Foreach.  
   

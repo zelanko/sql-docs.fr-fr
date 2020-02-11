@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a041171d9639429196b09b7a1f9254a30907ab2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62814033"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>affinity mask (option de configuration de serveur)
@@ -59,7 +59,7 @@ ms.locfileid: "62814033"
   
  Si vous spécifiez un masque d'affinité qui tente d'effectuer un mappage à une UC inexistante, la commande RECONFIGURE envoie un message d'erreur à la session cliente et le consigne dans le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'utilisation de l'option RECONFIGURE WITH OVERRIDE n'a aucun effet dans ce cas, et la même erreur de configuration est à nouveau signalée.  
   
- Vous pouvez également exclure l'activité propre à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des processeurs auxquels le système d'exploitation Windows 2000 ou Windows Server 2003 attribue des charges de travail données. En attribuant la valeur 1 à un bit qui représente un processeur, ce processeur est sélectionné par le moteur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour l'affectation des threads. Lorsque vous définissez `affinity mask` 0 (valeur par défaut), le Microsoft Windows 2000 ou les algorithmes de planification de Windows Server 2003 définissent l’affinité du thread. Si vous attribuez à `affinity mask` une valeur différente de zéro, l'affinité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprète cette valeur comme étant un masque de bits indiquant que ces processeurs sont ceux sur lesquels doit porter la sélection.  
+ Vous pouvez également exclure l'activité propre à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des processeurs auxquels le système d'exploitation Windows 2000 ou Windows Server 2003 attribue des charges de travail données. En attribuant la valeur 1 à un bit qui représente un processeur, ce processeur est sélectionné par le moteur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour l'affectation des threads. Lorsque vous affectez `affinity mask` la valeur 0 (valeur par défaut), les algorithmes de planification de Microsoft Windows 2000 ou de windows Server 2003 définissent l’affinité du thread. Si vous attribuez à `affinity mask` une valeur différente de zéro, l'affinité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprète cette valeur comme étant un masque de bits indiquant que ces processeurs sont ceux sur lesquels doit porter la sélection.  
   
  La non-exécution des threads [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur des processeurs particuliers permet à Microsoft Windows 2000 ou Windows Server 2003 de mieux évaluer la gestion par le système de traitement des processus propres à Windows. Par exemple, sur un serveur à 8 processeurs exécutant deux instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (instances A et B), l'administrateur système peut utiliser l'option affinity mask pour affecter le premier jeu de 4 processeurs à l'instance A et le deuxième jeu de 4 processeurs à l'instance B. Pour configurer plus de 32 processeurs, définissez à la fois affinity mask et affinity64 mask. Les valeurs de l'option `affinity mask` sont les suivantes :  
   
@@ -114,7 +114,7 @@ GO
 |127|01111111|0, 1, 2, 3, 4, 5 et 6|  
 |255|11111111|0, 1, 2, 3, 4, 5, 6 et 7|  
   
- L'option affinity mask est une option avancée. Si vous utilisez la procédure stockée système sp_configure pour changer sa valeur, vous pouvez modifier `affinity mask` uniquement lorsque **afficher les options avancées** est défini sur 1. Après l'exécution de la commande [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE, le nouveau paramètre prend immédiatement effet sans redémarrage de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ L'option affinity mask est une option avancée. Si vous utilisez la procédure stockée système sp_configure pour modifier le paramètre, vous ne pouvez `affinity mask` modifier que si la valeur 1 a été attribuée à l' **option Afficher les options avancées** . Après l'exécution de la commande [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE, le nouveau paramètre prend immédiatement effet sans redémarrage de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="non-uniform-memory-access-numa"></a>Non-Uniform Memory Access (NUMA)  
  Lorsque vous utilisez l'accès NUMA (Non-Uniform Memory Access) matériel et que le masque d'affinité est défini, chaque planificateur dans un nœud possède une affinité avec sa propre unité centrale. Lorsque le masque d'affinité n'est pas défini, chaque planificateur possède une affinité avec le groupe d'unités centrales au sein du nœud NUMA et un planificateur mappé sur le nœud NUMA N1 peut planifier du travail sur toute unité centrale dans le nœud, mais pas sur des unités centrales associées à un autre nœud.  
@@ -127,7 +127,7 @@ GO
 ### <a name="startup"></a>Démarrage  
  Si un masque d'affinité spécifié ne respecte pas la stratégie de licences au moment du démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de l'attachement de la base de données, la couche du moteur achève le processus de démarrage ou l'opération de restauration/attachement de base de données, puis remet à zéro la valeur d'exécution sp_configure du masque d'affinité, en consignant un message d'erreur dans le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### <a name="reconfigure"></a>Reconfiguration  
+### <a name="reconfigure"></a>Reconfigurer  
  Si un masque d'affinité spécifié ne respecte pas la stratégie de licences lors de l'exécution de la commande [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE, un message d'erreur est envoyé à la session cliente et est consigné dans le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , exigeant ainsi que l'administrateur de la base de données reconfigure le masque d'affinité. Aucune commande RECONFIGURE WITH OVERRIDE n'est acceptée dans ce cas.  
   
 ## <a name="see-also"></a>Voir aussi  

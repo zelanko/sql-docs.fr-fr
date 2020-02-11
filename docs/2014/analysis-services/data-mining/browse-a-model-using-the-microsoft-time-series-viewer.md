@@ -1,5 +1,5 @@
 ---
-title: Explorer un modèle à l’aide de la visionneuse de la série Microsoft Time | Microsoft Docs
+title: Parcourir un modèle à l’aide de la visionneuse MTS (Microsoft Time Series) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85767ce54991950e75b39bf909d6d0ff3cb2cd8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085980"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Explorer un modèle à l'aide de la visionneuse de l'algorithme MTS (Microsoft Time Series)
-  La Visionneuse de l’algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] affiche les modèles d’exploration de données qui sont générés à l’aide de l’algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series). L’algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) est un algorithme de régression qui crée des modèles d’exploration de données pour la prédiction des colonnes continues, telles que les ventes de produits, dans un scénario de prédiction. Ces modèles de série chronologiques peuvent inclure des informations basées sur des algorithmes différents :  
+  La [!INCLUDE[msCoName](../../includes/msconame-md.md)] visionneuse de l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] algorithme Time Series dans affiche les modèles [!INCLUDE[msCoName](../../includes/msconame-md.md)] d’exploration de données générés avec l’algorithme MTS (Time Series). L’algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) est un algorithme de régression qui crée des modèles d’exploration de données pour la prédiction des colonnes continues, telles que les ventes de produits, dans un scénario de prédiction. Ces modèles de série chronologiques peuvent inclure des informations basées sur des algorithmes différents :  
   
 -   L'algorithme ARTxp, qui est optimisé pour les prédictions à court terme.  
   
@@ -39,17 +39,18 @@ ms.locfileid: "66085980"
 > [!NOTE]  
 >  La visionneuse de l'arborescence de contenu générique [!INCLUDE[msCoName](../../includes/msconame-md.md)] permet de consulter des informations détaillées relatives aux équations utilisées dans le modèle et les motifs découverts. Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse de l’arborescence de contenu générique Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) ou [Visionneuse de l’arborescence de contenu générique Microsoft &#40;exploration de données&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
-##  <a name="BKMK_ViewerTabs"></a> Onglets de la visionneuse  
+##  <a name="BKMK_ViewerTabs"></a>Onglets de la visionneuse  
  Lorsque vous parcourez un modèle d'exploration de données dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le modèle s'affiche sous l'onglet **Visionneuse de modèle d'exploration de données** du Concepteur d'exploration de données, à l'aide de la visionneuse appropriée pour ce modèle. La Visionneuse de l'algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) inclut les onglets suivants :  
   
--   [Modèle](#BKMK_Tree)  
+-   [Modélisation](#BKMK_Tree)  
   
 -   [Graphiques](#BKMK_Charts)  
   
- **Remarque** Les informations affichées pour le contenu du modèle et dans la Légende d’exploration de données dépendent de l’algorithme que le modèle utilise. Toutefois, les onglets **Modèle** et **Graphiques** sont les mêmes indépendamment de la combinaison d’algorithmes.  
+ **Remarque** Les informations affichées pour le contenu du modèle et dans la légende d’exploration de données dépendent de l’algorithme utilisé par le modèle. Toutefois, les onglets **Modèle** et **Graphiques** sont les mêmes indépendamment de la combinaison d’algorithmes.  
   
-###  <a name="BKMK_Tree"></a> Modèle  
- Quand vous générez un modèle de série chronologique, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] présente le modèle terminé sous forme d’arborescence. Si vos données contiennent plusieurs séries de cas, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] génère une arborescence séparée pour chaque série. Supposons, par exemple, que vous prévoyiez des ventes pour la zone Pacifique, l'Amérique du Nord et des régions d'Europe. Les prédictions pour chacune de ces régions sont des séries de cas. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] génère une arborescence distincte pour chacune de ces séries. Pour afficher une série particulière, sélectionnez-la série dans la liste **Arborescence** .  
+###  <a name="BKMK_Tree"></a>Modélisation  
+ Quand vous générez un modèle de série chronologique, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] présente le modèle terminé sous forme d’arborescence. Si vos données contiennent plusieurs séries de cas, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] génère une arborescence séparée pour chaque série. Supposons, par exemple, que vous prévoyiez des ventes pour la zone Pacifique, l'Amérique du Nord et des régions d'Europe. Les prédictions pour chacune de ces régions sont des séries de cas. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] génère une arborescence distincte pour chacune de ces séries. Pour afficher une série particulière, sélectionnez-la série dans la liste **Arborescence** .  
   
  Pour chaque arborescence, le modèle de série chronologique contient un nœud **Tous** , puis il le fractionne en une série des nœuds qui représentent des structures périodiques découvertes par l’algorithme. Vous pouvez cliquer sur chaque nœud pour afficher des statistiques, telles que le nombre de cas et l'équation.  
   
@@ -67,7 +68,7 @@ ms.locfileid: "66085980"
   
  [Retour au début](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Charts"></a> Graphiques  
+###  <a name="BKMK_Charts"></a>Anneaux  
  L’onglet **Graphiques** affiche un graphique qui représente le comportement de l’attribut prévu sur le temps, avec cinq valeurs futures prévues. L'axe vertical du graphique représente la valeur de la série et l'axe horizontal le temps.  
   
 > [!NOTE]  
@@ -86,9 +87,9 @@ ms.locfileid: "66085980"
  [Retour au début](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches de la visionneuse de modèle d'exploration de données et procédures](mining-model-viewer-tasks-and-how-tos.md)   
+ [Tâches de la visionneuse de modèle d’exploration de données et procédures](mining-model-viewer-tasks-and-how-tos.md)   
  [Algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm.md)   
- [Time Series Model Query Examples](time-series-model-query-examples.md)   
+ [Exemples de requêtes de modèle de série chronologique](time-series-model-query-examples.md)   
  [Visionneuses de modèle d’exploration de données](data-mining-model-viewers.md)  
   
   

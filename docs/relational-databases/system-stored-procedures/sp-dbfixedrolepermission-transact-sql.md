@@ -18,21 +18,21 @@ ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 91a7278230a0e7201e78354a38af58f417ac26ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108166"
 ---
-# <a name="spdbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
+# <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Affiche les autorisations d'un rôle de base de données fixe. **sp_dbfixedrolepermission** retourne des informations correctes dans [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. La sortie ne reflète pas les modifications apportées à la hiérarchie des autorisations qui ont été implémentées dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Pour plus d’informations, consultez[autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md).  
+  Affiche les autorisations d'un rôle de base de données fixe. **sp_dbfixedrolepermission** retourne des informations correctes dans [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. La sortie ne reflète pas les modifications apportées à la hiérarchie des autorisations [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]qui ont été implémentées dans. Pour plus d’informations, consultez[autorisations &#40;Moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md).  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,9 +42,9 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @rolename = ] 'role'` Est le nom du valide [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rôle de base de données fixe. *rôle* est **sysname**, avec NULL comme valeur par défaut. Si *rôle* n’est pas spécifié, les autorisations pour tous les rôles de base de données fixes sont affichées.  
+`[ @rolename = ] 'role'`Nom d’un rôle de base [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de données fixe valide. *role* est de **type sysname**, avec NULL comme valeur par défaut. Si le *rôle* n’est pas spécifié, les autorisations de tous les rôles de base de données fixes sont affichées.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -52,10 +52,10 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|Nom du rôle de base de données fixe|  
-|**Autorisation**|**nvarchar(70)**|Autorisations associées **DbFixedRole**|  
+|**Permission**|**nvarchar (70)**|Autorisations associées à **DbFixedRole**|  
   
 ## <a name="remarks"></a>Notes  
- Pour afficher une liste des rôles de base de données fixe, exécutez **sp_helpdbfixedrole**. Le tableau suivant présente les rôles de base de données fixes.  
+ Pour afficher la liste des rôles de base de données fixes, exécutez **sp_helpdbfixedrole**. Le tableau suivant présente les rôles de base de données fixes.  
   
 |Rôle de base de données fixe|Description|  
 |-------------------------|-----------------|  
@@ -69,7 +69,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 |**db_denydatareader**|Utilisateurs non autorisés à lire les données des bases de données|  
 |**db_denydatawriter**|Utilisateurs non autorisés à écrire des données dans les bases de données|  
   
- Membres de la **db_owner** rôle fixe de base de données possède les autorisations de tous les autres rôles de base de données fixe. Pour afficher les autorisations de rôles serveur fixes, exécutez **sp_srvrolepermission**.  
+ Les membres du rôle de base de données fixe **db_owner** disposent des autorisations de tous les autres rôles de base de données fixes. Pour afficher les autorisations pour les rôles serveur fixes, exécutez **sp_srvrolepermission**.  
   
  L'ensemble des résultats comprend les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qu'il est possible d'exécuter ainsi que d'autres activités spéciales que les membres du rôle de base de données peuvent effectuer.  
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28878f96b843a8a557e95d6c4ddf10681f481b8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771435"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Créer la fonction de récupération des données modifiées
@@ -76,7 +76,7 @@ ms.locfileid: "62771435"
 > [!NOTE]  
 >  Pour plus d'informations sur la syntaxe de cette procédure stockée et ses paramètres, consultez [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql).  
   
- La procédure stockée génère systématiquement une fonction wrapper pour retourner toutes les modifications de chaque instance de capture. Si le paramètre *@supports_net_changes* a été défini lors de la création de l'instance de capture, la procédure stockée génère également une fonction wrapper pour retourner les modifications de chaque instance de capture applicable.  
+ La procédure stockée génère systématiquement une fonction wrapper pour retourner toutes les modifications de chaque instance de capture. Si le *@supports_net_changes* paramètre a été défini lors de la création de l’instance de capture, la procédure stockée génère également une fonction wrapper pour retourner les modifications nettes de chaque instance de capture applicable.  
   
  La procédure stockée retourne un jeu de résultats à deux colonnes :  
   
@@ -108,7 +108,7 @@ deallocate #hfunctions
 ```  
   
 ### <a name="understanding-and-using-the-functions-created-by-the-stored-procedure"></a>Présentation et utilisation des fonctions créées par la procédure stockée  
- Pour guider systématiquement la chronologie des données de modification capturées, les fonctions wrapper générées attendent que le paramètre *@end_time* d'un intervalle devienne le paramètre *@start_time* de l'intervalle suivant. Lorsque cette convention est suivie, les fonctions wrapper générées peuvent effectuer les tâches suivantes :  
+ Pour parcourir systématiquement la chronologie des données de modification capturées, les fonctions wrapper générées s' *@end_time* attendent à ce que le paramètre d' *@start_time* un intervalle soit le paramètre de l’intervalle suivant. Lorsque cette convention est suivie, les fonctions wrapper générées peuvent effectuer les tâches suivantes :  
   
 -   Mapper les valeurs de date/d'heure aux valeurs LSN utilisées en interne.  
   
@@ -126,7 +126,7 @@ deallocate #hfunctions
   
 -   La valeur de date/d'heure de début et celle de date/d'heure de fin de l'intervalle. Lorsque les fonctions wrapper utilisent des valeurs de date/d'heure comme points pour l'intervalle de requête, les fonctions de capture de données modifiées utilisent deux valeurs LSN comme points de fin.  
   
--   Le filtre de lignes. Pour les fonctions wrapper et les fonctions de capture de données modifiées, le paramètre *@row_filter_option* est le même. Pour plus d’informations, consultez [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql) et [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql).  
+-   Le filtre de lignes. Pour les fonctions wrapper et les fonctions de capture de données modifiées, *@row_filter_option* le paramètre est le même. Pour plus d’informations, consultez [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql) et [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql).  
   
  Le jeu de résultats retourné par les fonctions wrapper inclut les données suivantes :  
   
@@ -134,7 +134,7 @@ deallocate #hfunctions
   
 -   Une colonne appelée __CDC_OPERATION qui utilise un champ à un ou deux caractères qui identifie l'opération associée à la ligne. Les valeurs valides de ce champ sont les suivantes : « I » pour insert (insertion), « D » pour delete (suppression), « UO » pour update old values (mise à jour des anciennes valeurs) et « UN » pour update new values (mise à jour des nouvelles valeurs).  
   
--   Indicateurs de mise à jour, lorsque vous les demandez, qui apparaissent sous la forme de colonnes de bits après le code d'opération et dans l'ordre spécifié dans le paramètre *@update_flag_list* . Ces colonnes sont nommées en ajoutant « _uflag » au nom de colonne associé.  
+-   Mettre à jour les indicateurs, lorsque vous les demandez, qui apparaissent sous la forme de colonnes de bits après le code d’opération et *@update_flag_list* dans l’ordre spécifié dans le paramètre. Ces colonnes sont nommées en ajoutant « _uflag » au nom de colonne associé.  
   
  Si votre package appelle une fonction wrapper qui interroge toutes les modifications, elle retourne également les colonnes __CDC_STARTLSN et \__CDC_SEQVAL. Ces deux colonnes deviennent les première et deuxième colonnes, respectivement, du jeu de résultats. La fonction wrapper trie également le jeu de résultats en fonction de ces deux colonnes.  
   
@@ -206,19 +206,19 @@ go
 ### <a name="retrieving-additional-metadata-with-the-change-data"></a>Récupération de métadonnées supplémentaires avec les données modifiées  
  Même si la fonction table créée par l’utilisateur et présentée plus haut utilise uniquement la colonne **__$operation**, la fonction **cdc.fn_cdc_get_net_changes_<capture_instance>** renvoie quatre colonnes de métadonnées pour chaque ligne de modification. Si vous souhaitez utiliser ces valeurs dans votre flux de données, vous pouvez les retourner en tant que colonnes supplémentaires à partir de la fonction wrapper table.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|`binary(10)`|Numéro séquentiel dans le journal associé à la transaction de validation de la modification.<br /><br /> Toutes les modifications validées dans la même transaction partagent le même numéro séquentiel dans le journal de validation. Par exemple, si une opération de mise à jour sur la table source modifie deux lignes différentes, la table de modifications contient quatre lignes (deux avec les anciennes valeurs et deux avec les nouvelles valeurs), chacune avec la même valeur **__$start_lsn** .|  
-|**__$seqval**|`binary(10)`|Valeur de classement utilisée pour classer les modifications de ligne dans une transaction.|  
-|**__$operation**|`int`|Opération de langage de manipulation de données associée à la modification. Les valeurs possibles sont les suivantes :<br /><br /> 1 = suppression<br /><br /> 2 = insertion<br /><br /> 3 = mise à jour (valeurs avant l'opération de mise à jour)<br /><br /> 4 = mise à jour (valeurs après l'opération de mise à jour)|  
-|**__$update_mask**|`varbinary(128)`|Masque de bits basé sur les ordinaux de colonne de la table de modifications identifiant les colonnes modifiées. Vous pouvez examiner cette valeur pour déterminer les colonnes qui ont été modifiées.|  
-|**\<<colonnes_de_table_source_capturées>**|variable|Les colonnes restantes retournées par la fonction sont les colonnes de la table source qui ont été identifiées comme colonnes capturées lorsque l'instance de capture a été créée. Si aucune colonne n'a été spécifiée à l'origine dans la liste des colonnes capturées, toutes les colonnes de la table source sont retournées.|  
+|**_ _ $ seqval**|`binary(10)`|Valeur de classement utilisée pour classer les modifications de ligne dans une transaction.|  
+|**_ _ $ opération**|`int`|Opération de langage de manipulation de données associée à la modification. Il peut s'agir d'une des méthodes suivantes :<br /><br /> 1 = suppression<br /><br /> 2 = insertion<br /><br /> 3 = mise à jour (valeurs avant l'opération de mise à jour)<br /><br /> 4 = mise à jour (valeurs après l'opération de mise à jour)|  
+|**_ _ $ update_mask**|`varbinary(128)`|Masque de bits basé sur les ordinaux de colonne de la table de modifications identifiant les colonnes modifiées. Vous pouvez examiner cette valeur pour déterminer les colonnes qui ont été modifiées.|  
+|**\<colonnes de table source capturées>**|varie|Les colonnes restantes retournées par la fonction sont les colonnes de la table source qui ont été identifiées comme colonnes capturées lorsque l'instance de capture a été créée. Si aucune colonne n'a été spécifiée à l'origine dans la liste des colonnes capturées, toutes les colonnes de la table source sont retournées.|  
   
  Pour plus d’informations, consultez [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql).  
   
-## <a name="next-step"></a>Étape suivante  
+## <a name="next-step"></a>étape suivante  
  Après avoir créé la fonction table qui interroge les données modifiées, l'étape suivante consiste à commencer à concevoir le flux de données dans le package.  
   
- **Rubrique suivante :** [Récupérer et comprendre les données modifiées](retrieve-and-understand-the-change-data.md)  
+ **Rubrique suivante :** [récupérer et comprendre les données modifiées](retrieve-and-understand-the-change-data.md)  
   
   

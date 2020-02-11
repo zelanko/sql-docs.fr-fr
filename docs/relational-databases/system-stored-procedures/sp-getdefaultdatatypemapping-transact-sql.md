@@ -16,18 +16,18 @@ ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 32fe9edf5c3d8621046a27937d83f642b1689d1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68123989"
 ---
-# <a name="spgetdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
+# <a name="sp_getdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne des informations sur le mappage par défaut pour le type de données spécifié entre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de base de données de gestion (SGBD). Cette procédure stockée est exécutée sur le serveur de distribution sur une base de données.  
+  Retourne des informations sur le mappage par défaut pour le type de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données spécifié entre et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un système de gestion de base de données (SGBD) non-. Cette procédure stockée est exécutée sur n’importe quelle base de données du serveur de distribution.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,68 +51,68 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @source_dbms = ] 'source_dbms'` Est le nom du SGBD à partir duquel les types de données sont mappés. *source_dbms* est **sysname**, et peut prendre l’une des valeurs suivantes :  
+`[ @source_dbms = ] 'source_dbms'`Nom du SGBD à partir duquel les types de données sont mappés. *source_dbms* est de **type sysname**et peut prendre l’une des valeurs suivantes :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Base de données source au format [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**ORACLE**|Base de données Oracle source.|  
+|**SOLUTION**|Base de données Oracle source.|  
   
  Ce paramètre est obligatoire.  
   
-`[ @source_version = ] 'source_version'` Est le numéro de version du SGBD source. *source_version* est **varchar (10)** , avec NULL comme valeur par défaut.  
+`[ @source_version = ] 'source_version'`Numéro de version du SGBD source. *source_version* est de type **varchar (10)**, avec NULL comme valeur par défaut.  
   
-`[ @source_type = ] 'source_type'` Est le type de données dans le SGBD source. *source_type* est **sysname**, sans valeur par défaut.  
+`[ @source_type = ] 'source_type'`Type de données dans le SGBD source. *source_type* est de **type sysname**, sans valeur par défaut.  
   
-`[ @source_length = ] source_length` Est la longueur du type de données dans le SGBD source. *source_length* est **bigint**, avec NULL comme valeur par défaut.  
+`[ @source_length = ] source_length`Longueur du type de données dans le SGBD source. *source_length* est de type **bigint**, avec NULL comme valeur par défaut.  
   
-`[ @source_precision = ] source_precision` Est la précision du type de données dans le SGBD source. *source_precision* est **bigint**, avec NULL comme valeur par défaut.  
+`[ @source_precision = ] source_precision`Précision du type de données dans le SGBD source. *source_precision* est de type **bigint**, avec NULL comme valeur par défaut.  
   
-`[ @source_scale = ] source_scale` Correspond à l’échelle du type de données dans le SGBD source. *source_scale* est **int**, avec NULL comme valeur par défaut.  
+`[ @source_scale = ] source_scale`Est l’échelle du type de données dans le SGBD source. *source_scale* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @source_nullable = ] source_nullable` Est si le type de données dans le SGBD source prend en charge une valeur NULL. *source_nullable* est **bits**, avec une valeur par défaut **1**, ce qui signifie que les valeurs NULL sont prises en charge.  
+`[ @source_nullable = ] source_nullable`Indique si le type de données du SGBD source prend en charge la valeur NULL. *source_nullable* est de type **bit**, avec **1**comme valeur par défaut, ce qui signifie que les valeurs NULL sont prises en charge.  
   
-`[ @destination_dbms = ] 'destination_dbms'` Est le nom de la destination du SGBD. *destination_dbms* est **sysname**, et peut prendre l’une des valeurs suivantes :  
+`[ @destination_dbms = ] 'destination_dbms'`Nom du SGBD de destination. *destination_dbms* est de **type sysname**et peut prendre l’une des valeurs suivantes :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destination.|  
-|**ORACLE**|Base de données Oracle de destination.|  
+|**SOLUTION**|Base de données Oracle de destination.|  
 |**DB2**|Base de données IBM DB2 de destination.|  
-|**SYBASE**|Base de données Sybase de destination.|  
+|**INTERFACES**|Base de données Sybase de destination.|  
   
  Ce paramètre est obligatoire.  
   
-`[ @destination_version = ] 'destination_version'` Est la version de produit du SGBD de destination. *destination_version* est **varchar (10)** , avec NULL comme valeur par défaut.  
+`[ @destination_version = ] 'destination_version'`Version du produit du SGBD de destination. *destination_version* est de type **varchar (10)**, avec NULL comme valeur par défaut.  
   
-`[ @destination_type = ] 'destination_type' OUTPUT` Le type de données est répertorié dans le SGBD de destination. *destination_type* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @destination_type = ] 'destination_type' OUTPUT`Type de données indiqué dans le SGBD de destination. *destination_type* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @destination_length = ] destination_length OUTPUT` Est la longueur du type de données du SGBD de destination. *destination_length* est **bigint**, avec NULL comme valeur par défaut.  
+`[ @destination_length = ] destination_length OUTPUT`Longueur du type de données dans le SGBD de destination. *destination_length* est de type **bigint**, avec NULL comme valeur par défaut.  
   
-`[ @destination_precision = ] destination_precision OUTPUT` Est la précision du type de données du SGBD de destination. *destination_precision* est **bigint**, avec NULL comme valeur par défaut.  
+`[ @destination_precision = ] destination_precision OUTPUT`Précision du type de données dans le SGBD de destination. *destination_precision* est de type **bigint**, avec NULL comme valeur par défaut.  
   
-`[ @destination_scale = ] _destination_scaleOUTPUT` Correspond à l’échelle du type de données du SGBD de destination. *destination_scale* est **int**, avec NULL comme valeur par défaut.  
+`[ @destination_scale = ] _destination_scaleOUTPUT`Est l’échelle du type de données dans le SGBD de destination. *destination_scale* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @destination_nullable = ] _destination_nullableOUTPUT` Est si le type de données du SGBD de destination prend en charge une valeur NULL. *destination_nullable* est **bits**, avec NULL comme valeur par défaut. **1** signifie que les valeurs NULL sont prises en charge.  
+`[ @destination_nullable = ] _destination_nullableOUTPUT`Indique si le type de données du SGBD de destination prend en charge une valeur NULL. *destination_nullable* est de type **bit**, avec NULL comme valeur par défaut. **1** signifie que les valeurs NULL sont prises en charge.  
   
-`[ @dataloss = ] _datalossOUTPUT` Indique si le mappage présente le risque de perte de données. *perte de données* est **bits**, avec NULL comme valeur par défaut. **1** signifie qu’il existe un risque potentiel de perte de données.  
+`[ @dataloss = ] _datalossOUTPUT`Indique si le mappage peut entraîner une perte de données. *perte* est de type **bit**, avec NULL comme valeur par défaut. **1** signifie qu’il existe un risque de perte de données.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_getdefaultdatatypemapping** est utilisée dans tous les types de réplication entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SGBD.  
+ **sp_getdefaultdatatypemapping** est utilisé dans tous les types de réplication entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SGBD non-.  
   
- **sp_getdefaultdatatypemapping** retourne les données de destination par défaut de type qui est la plus proche pour le type de données source spécifiée.  
+ **sp_getdefaultdatatypemapping** retourne le type de données de destination par défaut qui correspond à la correspondance la plus proche du type de données source spécifié.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_getdefaultdatatypemapping**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_getdefaultdatatypemapping**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_helpdatatypemap &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)   
  [sp_setdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)   
  [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
- [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)   
+ [Abonnés IBM DB2](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)   
  [Abonnés Oracle](../../relational-databases/replication/non-sql/oracle-subscribers.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Élément de groupe de fichiers pour les Index (DTA) | Microsoft Docs
+title: Élément FileGroup pour index (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d88acb23573afbd38e24836e254e8f54921806c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63154607"
 ---
 # <a name="filegroup-element-for-index-dta"></a>Filegroup, élément pour les index (Assistant Paramétrage de base de données)
@@ -39,9 +39,10 @@ ms.locfileid: "63154607"
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|**Type de données et longueur**|`string`, longueur illimitée.|  
+|**Type de données et longueur**|
+  `string`, longueur illimitée.|  
 |**Valeur par défaut**|Aucun.|  
-|**Occurrence**|Facultatif. Peut être utilisé une seule fois pour chaque élément `Index`. Cet élément ne peut pas être utilisé si les éléments `PartitionScheme` et `PartitionColumn` sont spécifiés pour l'élément `Index`.|  
+|**Occurrence**|facultatif. Peut être utilisé une seule fois pour chaque élément `Index`. Cet élément ne peut pas être utilisé si les éléments `PartitionScheme` et `PartitionColumn` sont spécifiés pour l'élément `Index`.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   

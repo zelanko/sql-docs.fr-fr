@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriel : Signature de procédures stockées avec un certificat | Microsoft Docs'
+title: 'Didacticiel : signature de procédures stockées à l’aide d’un certificat | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: daf80492cd6a0d8040d1497e71600c798e7ef96c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524092"
 ---
-# <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Tutoriel : Signature de procédures stockées à l'aide d'un certificat
+# <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Didacticiel : signature de procédures stockées à l'aide d'un certificat
   Ce didacticiel explique comment signer des procédures stockées à l'aide d'un certificat généré par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
@@ -48,7 +48,7 @@ ms.locfileid: "62524092"
  Chaque bloc de code dans cet exemple est présenté sous forme de lignes. Pour copier l'exemple tout entier, consultez la section [Exemple complet](#CompleteExample) à la fin de ce didacticiel.  
   
 ## <a name="1-configure-the-environment"></a>1. Configurez l'environnement  
- Pour définir le contexte initial de l'exemple, ouvrez une nouvelle requête dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et exécutez le code suivant pour ouvrir la base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]. Ce code modifie et redéfinit le contexte de la base de données à `AdventureWorks2012` , puis crée une nouvelle connexion serveur et un compte d'utilisateur de base de données (`TestCreditRatingUser`) avec un mot de passe.  
+ Pour définir le contexte initial de l'exemple, ouvrez une nouvelle requête dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et exécutez le code suivant pour ouvrir la base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Ce code modifie et redéfinit le contexte de la base de données à `AdventureWorks2012` , puis crée une nouvelle connexion serveur et un compte d'utilisateur de base de données (`TestCreditRatingUser`) avec un mot de passe.  
   
 ```  
 USE AdventureWorks2012;  
@@ -78,7 +78,7 @@ GO
 ```  
   
 ## <a name="3-create-and-sign-a-stored-procedure-using-the-certificate"></a>3. Créez et signez une procédure stockée à l'aide du certificat  
- Utilisez le code suivant pour créer une procédure stockée qui sélectionne des données de la table `Vendor` dans le schéma de la base de données `Purchasing`, ce qui limite l'accès uniquement aux sociétés qui ont une cote de solvabilité de 1. Notez que la première section de la procédure stockée affiche le contexte du compte d'utilisateur qui exécute la procédure stockée, à des fins de démonstration des concepts uniquement. Il n'est pas nécessaire pour répondre aux conditions requises.  
+ Utilisez le code suivant pour créer une procédure stockée qui sélectionne des données de la table `Vendor` dans le schéma de la base de données `Purchasing` , ce qui limite l'accès uniquement aux sociétés qui ont une cote de solvabilité de 1. Notez que la première section de la procédure stockée affiche le contexte du compte d'utilisateur qui exécute la procédure stockée, à des fins de démonstration des concepts uniquement. Il n'est pas nécessaire pour répondre aux conditions requises.  
   
 ```  
 CREATE PROCEDURE TestCreditRatingSP  
@@ -142,7 +142,7 @@ GO
  Pour plus d’informations sur l’accord d’autorisations à des objets, consultez [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql).  
   
 ## <a name="6-display-the-access-context"></a>6. Affichez le contexte d'accès  
- Pour afficher les droits associés à l'accès de la procédure stockée, exécutez le code suivant pour accorder des droits d'exécution de la procédure stockée à l'utilisateur `TestCreditRatingUser`.  
+ Pour afficher les droits associés à l'accès de la procédure stockée, exécutez le code suivant pour accorder des droits d'exécution de la procédure stockée à l'utilisateur `TestCreditRatingUser` .  
   
 ```  
 GRANT EXECUTE   
@@ -192,7 +192,7 @@ GO
   
  Pour plus d’informations sur l’instruction REVERT, consultez [REVERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/revert-transact-sql).  
   
-##  <a name="CompleteExample"></a> Exemple complet  
+##  <a name="CompleteExample"></a>Exemple complet  
  Cette section affiche l'exemple de code dans son intégralité.  
   
 ```  
@@ -289,6 +289,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

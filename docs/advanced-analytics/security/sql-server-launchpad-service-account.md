@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 1f05181e1a3069ec56f079751e43bd739424ce92
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727364"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>Configuration du service SQL Server Launchpad
@@ -65,8 +65,8 @@ Le tableau suivant liste les paramètres avancés pour [!INCLUDE[ssCurrent](../.
 
 |**Nom du paramètre**|**Type**|**Description**|
 |----|----|----|
-|JOB\_CLEANUP\_ON\_EXIT|Entier |Il s’agit d’un paramètre exclusivement interne. Ne modifiez pas cette valeur. </br></br>Spécifie si le dossier de travail temporaire créé pour chaque session de runtime externe doit être nettoyé une fois la session terminée. Ce paramètre est utile pour le débogage. </br></br>Les valeurs prises en charge sont **0** (désactivé) ou **1** (activé). </br></br>La valeur par défaut est 1, ce qui signifie que les fichiers journaux sont supprimés à la sortie.|
-|TRACE\_LEVEL|Entier |Configure le niveau de verbosité de la trace de MSSQLLAUNCHPAD à des fins de débogage. Affecte les fichiers de trace dans le chemin spécifié par le paramètre LOG_DIRECTORY. </br></br>Valeurs prises en charge : **1** (erreur), **2** (performances), **3** (avertissement) et **4** (informations). </br></br>La valeur par défaut est 1, ce qui signifie uniquement les erreurs de sortie.|
+|JOB\_CLEANUP\_ON\_EXIT|Integer |Il s’agit d’un paramètre exclusivement interne. Ne modifiez pas cette valeur. </br></br>Spécifie si le dossier de travail temporaire créé pour chaque session de runtime externe doit être nettoyé une fois la session terminée. Ce paramètre est utile pour le débogage. </br></br>Les valeurs prises en charge sont **0** (désactivé) ou **1** (activé). </br></br>La valeur par défaut est 1, ce qui signifie que les fichiers journaux sont supprimés à la sortie.|
+|TRACE\_LEVEL|Integer |Configure le niveau de verbosité de la trace de MSSQLLAUNCHPAD à des fins de débogage. Affecte les fichiers de trace dans le chemin spécifié par le paramètre LOG_DIRECTORY. </br></br>Les valeurs prises en charge sont les suivantes : **1** (erreur), **2** (performances), **3** (avertissement) et **4** (informations). </br></br>La valeur par défaut est 1, ce qui signifie uniquement les erreurs de sortie.|
 
 Tous les paramètres prennent la forme d’une paire clé-valeur, chaque paramètre figurant sur une ligne distincte. Par exemple, pour changer le niveau de trace, vous devez ajouter la ligne `Default: TRACE_LEVEL=4`.
 

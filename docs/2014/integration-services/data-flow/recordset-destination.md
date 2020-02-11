@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0553b1cbbd75196fa8534cf6bf64c58c1dad206b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770905"
 ---
 # <a name="recordset-destination"></a>Destination de l'ensemble d'enregistrements
@@ -34,17 +34,17 @@ ms.locfileid: "62770905"
   
  Cette source possède une entrée. Elle ne prend pas en charge de sortie d'erreur.  
   
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
 -   [Propriétés communes](../common-properties.md)  
   
--   [Propriétés personnalisées de la destination du jeu d'enregistrements](recordset-destination-custom-properties.md)  
+-   [Propriétés personnalisées de la destination du jeu d’enregistrements](recordset-destination-custom-properties.md)  
   
  Pour plus d’informations sur la façon de définir des propriétés, consultez [Définir les propriétés d’un composant de flux de données](set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Utiliser une destination de jeu d'enregistrements](recordset-destination.md)  
+ [Utiliser une destination de jeu d’enregistrements](recordset-destination.md)  
   
   

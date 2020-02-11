@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f336c64ffc0d044fa0f7282f3c87451483353879
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914950"
 ---
-# <a name="mssqlserver21862"></a>MSSQLSERVER_21862
+# <a name="mssqlserver_21862"></a>MSSQLSERVER_21862
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|MSSQLSERVER|  
-|ID d'événement|21862|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|21862|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SQLErrorNum21862|  
 |Texte du message|Les colonnes FILESTREAM ne peuvent pas être publiées dans une publication à l'aide d'une méthode de synchronisation 'database snapshot' ou 'database snapshot character'.|  

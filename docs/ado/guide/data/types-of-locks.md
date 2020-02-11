@@ -18,26 +18,26 @@ ms.assetid: 12a978c0-b8a0-4ef0-87f0-a43c13659272
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 93436a5180f1a01269f1612f7e608b71b4c073e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923809"
 ---
 # <a name="types-of-locks"></a>Types de verrous
 ## <a name="adlockbatchoptimistic"></a>adLockBatchOptimistic  
- Indique les mises à jour par lot optimiste. Requis pour le mode de mise à jour par lots.  
+ Indique les mises à jour optimistes par lot. Requis pour le mode de mise à jour par lot.  
   
- De nombreuses applications extraire un nombre de lignes à la fois et doivent apporter des mises à jour coordonnées qui incluent l’ensemble de lignes à être insérés, mis à jour ou supprimé. Avec les curseurs de traitement par lots, qu’un seul aller-retour au serveur est nécessaire, ce qui améliore les performances de mise à jour et en réduisant le trafic réseau. À l’aide d’une bibliothèque de curseurs par lots, vous pouvez créer un curseur statique et vous déconnecter puis à partir de la source de données. À ce stade vous pouvez apporter des modifications aux lignes et par la suite vous reconnecter et valider les modifications apportées à la source de données dans un lot.  
+ De nombreuses applications extraient plusieurs lignes à la fois et doivent ensuite effectuer des mises à jour coordonnées qui incluent l’ensemble des lignes à insérer, mettre à jour ou supprimer. Avec les curseurs batch, un seul aller-retour vers le serveur est nécessaire, améliorant ainsi les performances des mises à jour et diminuant le trafic réseau. À l’aide d’une bibliothèque de curseurs par lot, vous pouvez créer un curseur statique, puis vous déconnecter de la source de données. À ce stade, vous pouvez apporter des modifications aux lignes, puis vous reconnecter et poster les modifications vers la source de données dans un lot.  
   
 ## <a name="adlockoptimistic"></a>adLockOptimistic  
- Indique que le fournisseur utilise le verrouillage optimiste : le verrouillage d’enregistrements uniquement lorsque vous appelez le **mise à jour** (méthode). Cela signifie qu’il est probable qu’un autre utilisateur peut modifier les données entre le moment où vous modifiez l’enregistrement et lorsque vous appelez **mise à jour**, ce qui crée des conflits. Utilisez ce type de verrou dans les situations où la probabilité d’une collision est faible ou où les collisions peuvent être facilement résolues.  
+ Indique que le fournisseur utilise uniquement des enregistrements de verrouillage optimiste lorsque vous appelez la méthode **Update** . Cela signifie qu’il existe un risque qu’un autre utilisateur modifie les données entre le moment où vous modifiez l’enregistrement et celui où vous appelez **Update**, ce qui crée des conflits. Utilisez ce type de verrou dans les situations où les risques de collisions sont faibles ou où les collisions peuvent être facilement résolues.  
   
 ## <a name="adlockpessimistic"></a>adLockPessimistic  
- Indique un verrouillage pessimiste, enregistrement par enregistrement. Le fournisseur effectue ce qui est nécessaire pour garantir la modification réussie des enregistrements, généralement par un verrouillage d’enregistrements à la source de données immédiatement avant la modification. Bien entendu, cela signifie que les enregistrements ne sont pas disponibles à d’autres utilisateurs une fois que vous commencez à modifier, jusqu'à ce que vous libériez le verrou en appelant **mise à jour.** Utilisez ce type de verrou dans un système où vous ne pouvez pas vous permettre d’ont des modifications simultanées apportées aux données, comme dans un système de réservation.  
+ Indique le verrouillage pessimiste, enregistrement par enregistrement. Le fournisseur effectue ce qui est nécessaire pour garantir la réussite de la modification des enregistrements, en généralement en verrouillant les enregistrements au niveau de la source de données juste avant la modification. Bien entendu, cela signifie que les enregistrements ne sont pas disponibles pour les autres utilisateurs une fois que vous avez commencé à modifier, jusqu’à ce que vous relâchiez le verrou en appelant **Update.** Utilisez ce type de verrou dans un système où vous ne pouvez pas vous permettre d’avoir des modifications simultanées des données, telles que dans un système de réservation.  
   
 ## <a name="adlockreadonly"></a>adLockReadOnly  
- Indique les enregistrements en lecture seule. Vous ne pouvez pas modifier les données. Un verrou en lecture seule est le type de verrou « plus rapide », car il ne nécessite pas le serveur pour maintenir un verrou sur les enregistrements.  
+ Indique des enregistrements en lecture seule. Vous ne pouvez pas modifier les données. Un verrou en lecture seule est le type de verrou « le plus rapide », car il ne nécessite pas que le serveur maintienne un verrou sur les enregistrements.  
   
 ## <a name="adlockunspecified"></a>adLockUnspecified  
- Ne spécifie pas un type de verrou.
+ Ne spécifie pas de type de verrou.

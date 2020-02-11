@@ -1,5 +1,5 @@
 ---
-title: Sqlnativesql, fonction | Microsoft Docs
+title: SQLNativeSql fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 719b34eef3eb51af1e5eeabce3a88d453f005eff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138817"
 ---
 # <a name="sqlnativesql-function"></a>Fonction SQLNativeSql
 **Conformité**  
- Version introduite : Conformité aux normes 1.0 ODBC : ODBC  
+ Version introduite : ODBC 1,0 conforme aux normes : ODBC  
   
  **Résumé**  
- **SQLNativeSql** retourne la chaîne SQL comme modifiée par le pilote. **SQLNativeSql** n’exécute pas l’instruction SQL.  
+ **SQLNativeSql** retourne la chaîne SQL telle qu’elle a été modifiée par le pilote. **SQLNativeSql** n’exécute pas l’instruction SQL.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,60 +47,60 @@ SQLRETURN SQLNativeSql(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Handle de connexion*  
+ *ConnectionHandle*  
  [Entrée] Handle de connexion.  
   
  *InStatementText*  
- [Entrée] Chaîne de texte SQL à traduire.  
+ Entrée Chaîne de texte SQL à traduire.  
   
  *TextLength1*  
- [Entrée] Longueur en caractères de **InStatementText* chaîne de texte.  
+ Entrée Longueur en caractères de la chaîne de texte **InStatementText* .  
   
  *OutStatementText*  
- [Sortie] Pointeur vers une mémoire tampon dans lequel retourner la chaîne SQL traduite.  
+ Sortie Pointeur vers une mémoire tampon dans laquelle retourner la chaîne SQL traduite.  
   
- Si *OutStatementText* est NULL, *TextLength2Ptr* retournera toujours le nombre total de caractères (sans le caractère de fin de la valeur null pour les données de type caractère) disponibles à renvoyer dans la mémoire tampon vers lequel pointe *OutStatementText*.  
+ Si *OutStatementText* a la valeur null, *TextLength2Ptr* retourne toujours le nombre total de caractères (à l’exception du caractère de fin null pour les données de type caractère) disponibles pour retourner dans la mémoire tampon vers laquelle pointe *OutStatementText*.  
   
  *BufferLength*  
- [Entrée] Nombre de caractères dans le \* *OutStatementText* mémoire tampon. Si la valeur retournée dans  *\*InStatementText* est une chaîne Unicode (lors de l’appel **SQLNativeSqlW**), la *BufferLength* argument doit être un nombre pair.  
+ Entrée Nombre de caractères dans la \*mémoire tampon *OutStatementText* . Si la valeur retournée dans * \*InStatementText* est une chaîne Unicode (lors de l’appel de **SQLNativeSqlW**), l’argument *BufferLength* doit être un nombre pair.  
   
  *TextLength2Ptr*  
- [Sortie] Pointeur vers une mémoire tampon dans lequel retourner le nombre total de caractères (à l’exclusion de caractère nul de terminaison) disponibles à renvoyer dans \* *OutStatementText*. Si le nombre de caractères à retourner est supérieur ou égal à *BufferLength*, la traduit la chaîne SQL dans \* *OutStatementText* est tronqué à  *BufferLength* moins la longueur d’un caractère du caractère nul de terminaison.  
+ Sortie Pointeur vers une mémoire tampon dans laquelle retourner le nombre total de caractères (sans fin null) disponibles pour retourner dans \* *OutStatementText*. Si le nombre de caractères disponibles à retourner est supérieur ou égal à *BufferLength*, la chaîne SQL traduite dans \* *OutStatementText* est tronquée à *BufferLength* moins la longueur d’un caractère de fin null.  
   
-## <a name="returns"></a>Valeur renvoyée  
+## <a name="returns"></a>Retours  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Lorsque **SQLNativeSql** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenue en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_HANDLE_DBC et un *gérer* de *ConnectionHandle*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLNativeSql** et explique chacune dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
+ Quand **SQLNativeSql** retourne soit SQL_ERROR, soit SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenue en appelant **SQLGetDiagRec** avec un *comme HandleType* de SQL_HANDLE_DBC et un *handle* de *ConnectionHandle*. Le tableau suivant répertorie les valeurs SQLSTATE couramment retournées par **SQLNativeSql** et les explique dans le contexte de cette fonction. la notation « (DM) » précède les descriptions des SQLSTATEs retournées par le gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
-|01000|Avertissement général|Message d’information spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|01004|Données de chaîne droite tronquées|La mémoire tampon \* *OutStatementText* n’est pas suffisamment grande pour retourner la chaîne SQL entière, donc la chaîne SQL a été tronquée. La longueur de la chaîne SQL non tronquée est retournée dans **TextLength2Ptr*. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
+|01000|Avertissement général|Message d’information spécifique au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
+|01004|Données de chaîne, tronquées à droite|Le \* *OutStatementText* de mémoire tampon n’est pas assez grand pour retourner la chaîne SQL entière, donc la chaîne SQL a été tronquée. La longueur de la chaîne SQL non tronquée est retournée dans **TextLength2Ptr*. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |08003|Connexion non ouverte|Le *ConnectionHandle* n’était pas dans un état connecté.|  
-|08S01|Échec de lien de communication|Échec de la liaison de communication entre le pilote et de la source de données à laquelle le pilote a été connecté avant le traitement de la fonction a été exécutée.|  
-|22007|Format datetime non valide|**InStatementText* contenait une clause d’échappement avec une valeur de date, heure ou timestamp non valide.|  
-|24000|État de curseur non valide|Le curseur fait référence dans l’instruction a été positionné avant le début du jeu de résultats ou après la fin du jeu de résultats. Cette erreur ne peut pas être retournée par un pilote d’une implémentation de curseur SGBD native.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucun code SQLSTATE spécifique est survenu et pour lequel aucune SQLSTATE spécifiques à l’implémentation a été défini. Le message d’erreur retourné par **SQLGetDiagRec** dans le  *\*MessageText* tampon décrit l’erreur et sa cause.|  
-|HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou à l’achèvement de la fonction.|  
-|HY009|Utilisation non valide de pointeur null|(DM) **InStatementText* était un pointeur null.|  
-|HY010|Erreur de séquence de fonction|(DM) une fonction de façon asynchrone en cours d’exécution a été appelée pour le *ConnectionHandle* et était en cours d’exécution quand cette fonction a été appelée.|  
-|HY013|Erreur de gestion de mémoire|L’appel de fonction n’a pas pu être traité, car les objets sous-jacents de la mémoire ne sont pas accessible, probablement en raison de conditions de mémoire insuffisante.|  
-|HY090|Longueur de chaîne ou une mémoire tampon non valide|(DM) l’argument *TextLength1* était inférieur à 0, mais pas égale à SQL_NTS.|  
-|||(DM) l’argument *BufferLength* était inférieure à 0 et l’argument *OutStatementText* n’était pas un pointeur null.|  
-|HY109|Position de curseur non valide|La ligne actuelle du curseur a été supprimée ou n’a pas été extraites. Cette erreur ne peut pas être retournée par un pilote d’une implémentation de curseur SGBD native.|  
-|HY117|Connexion est suspendue en raison de l’état de transaction inconnu. Déconnecter uniquement et les fonctions en lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [SQLEndTran, fonction](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYT01|Délai de connexion expiré|Le délai de connexion a expiré avant que la source de données a répondu à la demande. Le délai de connexion est défini via **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Pilote ne prend pas en charge cette fonction|Le pilote (DM) associé le *ConnectionHandle* ne prend pas en charge la fonction.|  
+|08S01|Échec de la liaison de communication|Le lien de communication entre le pilote et la source de données à laquelle le pilote a été connecté a échoué avant la fin du traitement de la fonction.|  
+|22007|Format de date/heure non valide|**InStatementText* contenait une clause Escape avec une valeur de date, d’heure ou d’horodatage non valide.|  
+|24 000|État de curseur non valide|Le curseur référencé dans l’instruction a été placé avant le début du jeu de résultats ou après la fin du jeu de résultats. Cette erreur ne peut pas être retournée par un pilote disposant d’une implémentation de curseur SGBD native.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
+|HY009|Utilisation non valide d’un pointeur null|(DM) **InStatementText* était un pointeur null.|  
+|HY010|Erreur de séquence de fonction|(DM) une fonction d’exécution asynchrone a été appelée pour le *ConnectionHandle* et était toujours en cours d’exécution quand cette fonction a été appelée.|  
+|HY013|Erreur de gestion de la mémoire|Impossible de traiter l’appel de fonction, car les objets mémoire sous-jacents sont inaccessibles, probablement en raison de conditions de mémoire insuffisante.|  
+|HY090|Longueur de chaîne ou de mémoire tampon non valide|(DM) l’argument *TextLength1* est inférieur à 0, mais n’est pas égal à SQL_NTS.|  
+|||(DM) l’argument *BufferLength* est inférieur à 0 et l’argument *OutStatementText* n’était pas un pointeur null.|  
+|HY109|Position de curseur non valide|La ligne active du curseur a été supprimée ou n’a pas été extraite. Cette erreur ne peut pas être retournée par un pilote disposant d’une implémentation de curseur SGBD native.|  
+|HY117|La connexion est interrompue en raison d’un état de transaction inconnu. Seules les fonctions de déconnexion et de lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [fonction SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYT01|Délai d’attente de connexion expiré|Le délai d’attente de connexion a expiré avant que la source de données ait répondu à la demande. Le délai d’expiration de la connexion est défini par le biais de **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|IM001|Le pilote ne prend pas en charge cette fonction|(DM) le pilote associé au *ConnectionHandle* ne prend pas en charge la fonction.|  
   
 ## <a name="comments"></a>Commentaires  
- Voici des exemples de ce à quoi **SQLNativeSql** peut retourner pour la chaîne SQL d’entrée suivante contenant la fonction scalaire CONVERT. Supposons que la colonne empid est de type entier dans la source de données :  
+ Voici des exemples de ce que **SQLNativeSql** peut retourner pour la chaîne SQL d’entrée suivante qui contient la fonction scalaire Convert. Supposons que la colonne EmpID est de type entier dans la source de données :  
   
 ```sql  
 SELECT { fn CONVERT (empid, SQL_SMALLINT) } FROM employee  
 ```  
   
- Un pilote pour Microsoft SQL Server peut renvoyer la chaîne SQL traduite suivante :  
+ Un pilote pour Microsoft SQL Server peut retourner la chaîne SQL traduite suivante :  
   
 ```sql  
 SELECT convert (smallint, empid) FROM employee  
@@ -118,11 +118,11 @@ SELECT to_number (empid) FROM employee
 SELECT int2 (empid) FROM employee  
 ```  
   
- Pour plus d’informations, consultez [l’exécution directe](../../../odbc/reference/develop-app/direct-execution-odbc.md) et [exécution préparée](../../../odbc/reference/develop-app/prepared-execution-odbc.md).  
+ Pour plus d’informations, consultez [exécution directe](../../../odbc/reference/develop-app/direct-execution-odbc.md) et [Exécution préparée](../../../odbc/reference/develop-app/prepared-execution-odbc.md).  
   
 ## <a name="related-functions"></a>Fonctions connexes  
- Aucune.  
+ Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence de l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Informations de référence sur l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Fichiers d’en-tête ODBC](../../../odbc/reference/install/odbc-header-files.md)

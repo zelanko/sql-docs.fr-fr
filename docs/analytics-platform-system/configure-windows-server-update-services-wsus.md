@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 2fef7b88514357deb6cf0a009d12272cc3cf79a2
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.openlocfilehash: 089b76d7167b8561c93b01837dc2189c833362fd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74401398"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76761903"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configurer Windows Server Update Services (WSUS) dans Analytics Platform System
 Ces instructions vous guident tout au long des étapes d’utilisation de l’Assistant Configuration de Windows Server Update Services (WSUS) pour configurer WSUS pour Analytics Platform System. Vous devez configurer WSUS avant de pouvoir appliquer des mises à jour logicielles à l’appliance. WSUS est déjà installé sur la machine virtuelle VMM de l’appliance.  
@@ -138,11 +138,14 @@ Pour configurer WSUS, vous devez :
 8.  Choisissez produits.  
   
     > [!NOTE]  
-    > Si vous utilisez un serveur en amont, vous ne pourrez peut-être pas choisir produits. Si cette option n’est pas disponible, ignorez cette étape.  
+    > Si vous utilisez un serveur en amont, vous ne pourrez peut-être pas choisir produits. Si cette option n’est pas disponible, ignorez cette étape.
+
+    > [!WARNING]  
+    > Excluez les mises à jour SQL Server 2016.
   
     Désélectionnez toutes les mises à jour sélectionnées.  
   
-    Sélectionnez **Windows Server 2012 R2**et **System Center 2012 R2-Virtual Machine Manager**, puis cliquez sur **suivant**.  
+    Sélectionnez **SQL Server 2012**, **SQL Server 2014**, **Windows Server 2012 R2**et **System Center 2012 R2-Virtual Machine Manager**, puis cliquez sur **suivant**.  
   
 9. Choisissez classifications.  
   

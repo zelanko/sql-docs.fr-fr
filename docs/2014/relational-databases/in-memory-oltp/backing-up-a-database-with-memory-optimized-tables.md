@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bc4da6702716e845121d2081a166254d4be9449f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468325"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Sauvegarde d'une base de données avec des tables mémoire optimisées
@@ -39,7 +39,7 @@ ms.locfileid: "62468325"
 |IN TRANSITION TO TOMBSTONE|Métadonnées du fichier uniquement|  
 |TOMBSTONE|Métadonnées du fichier uniquement|  
   
- La taille des sauvegardes de base de données avec une ou plusieurs tables mémoire optimisées est généralement supérieure à sa taille en mémoire, mais inférieure à la taille de stockage sur disque. La taille supplémentaire dépendra du nombre de lignes supprimées et du nombre de paires de fichiers de point de contrôle qui ont les états MERGE SOURCE et REQUIRED FOR BACKUP/HA, ce qui dépend indirectement de la charge de travail. Pour obtenir une description des États de paires de fichiers de point de contrôle, consultez [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
+ La taille des sauvegardes de base de données avec une ou plusieurs tables mémoire optimisées est généralement supérieure à sa taille en mémoire, mais inférieure à la taille de stockage sur disque. La taille supplémentaire dépendra du nombre de lignes supprimées et du nombre de paires de fichiers de point de contrôle qui ont les états MERGE SOURCE et REQUIRED FOR BACKUP/HA, ce qui dépend indirectement de la charge de travail. Pour obtenir une description des États des paires de fichiers de point de contrôle, consultez [sys. dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
   
 ### <a name="estimating-size-of-full-database-backup"></a>Estimation de la taille d'une sauvegarde complète de base de données  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62468325"
   
  Le premier scénario de charge de travail concerne l'insertion (pour la plupart). Dans ce scénario, la plupart des fichiers de données auront l'état ACTIVE, seront totalement chargés et comporteront très peu de lignes supprimées. La taille de la sauvegarde de base de données sera proche de la taille des données en mémoire.  
   
- Le second scénario de charge de travail est de fréquente opérations d’insertion, suppression et mise à jour : Dans le pire des cas, chacune des paires de fichiers de point de contrôle sont chargées, à 50 % après prise en compte les lignes supprimées. Par conséquent, la taille de la sauvegarde de base de données sera égale à au moins 2 fois la taille des données en mémoire. En outre, il y aura peu de paires de fichiers de point de contrôle dans l'état MERGE SOURCE et REQUIRED FOR BACKUP/HA susceptibles d'augmenter la taille de la sauvegarde de la base de données.  
+ Le deuxième scénario de charge de travail concerne les opérations d'insertion, de suppression, et de mise à jour fréquentes : dans le pire des cas, chacune des paires de fichiers de point de contrôle est chargée à 50%, après avoir pris en compte les lignes supprimées. Par conséquent, la taille de la sauvegarde de base de données sera égale à au moins 2 fois la taille des données en mémoire. En outre, il y aura peu de paires de fichiers de point de contrôle dans l'état MERGE SOURCE et REQUIRED FOR BACKUP/HA susceptibles d'augmenter la taille de la sauvegarde de la base de données.  
   
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>Sauvegardes différentielles de bases de données avec des tables mémoire optimisées  
  Le stockage des tables optimisées en mémoire comprend des données et des fichiers delta, comme décrit dans [Durabilité pour les tables optimisées en mémoire](memory-optimized-tables.md). La sauvegarde différentielle d'une base de données avec des tables mémoire optimisées contient les données suivantes :  

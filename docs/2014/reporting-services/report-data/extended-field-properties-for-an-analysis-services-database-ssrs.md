@@ -10,35 +10,35 @@ ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3b601c08633ffe98d6b6005aa3dc34c773810ba3
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: b05d670e7873cab5b44c1bce0c62c716809af476
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892031"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propriétés de champ étendues pour une base de données Analysis Services (SSRS)
-  L’extension pour le traitement des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de champ étendues. Les propriétés de champs étendues sont des propriétés complémentaires aux propriétés `Value` et `IsMissing` qui sont disponibles sur la source de données et prises en charge par l'extension pour le traitement des données. Les propriétés étendues ne figurent pas dans le volet des données de rapport dans le cadre de la collection de champs pour un dataset de rapport. Vous pouvez inclure des valeurs de propriété de champ étendues dans votre rapport en écrivant des expressions qui les spécifient `Fields` par leur nom à l’aide de la collection intégrée.  
+  L' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] extension pour le traitement des données prend en charge les propriétés de champ étendues. Les propriétés de champs étendues sont des propriétés complémentaires aux propriétés `Value` et `IsMissing` qui sont disponibles sur la source de données et prises en charge par l'extension pour le traitement des données. Les propriétés étendues ne figurent pas dans le volet des données de rapport dans le cadre de la collection de champs pour un dataset de rapport. Vous pouvez inclure des valeurs de propriété de champ étendues dans votre rapport en écrivant des expressions qui les spécifient `Fields` par leur nom à l’aide de la collection intégrée.  
   
  Les propriétés étendues incluent des propriétés prédéfinies et des propriétés personnalisées. Les propriétés prédéfinies sont des propriétés communes à plusieurs sources de données qui sont mappées à des noms de propriétés de champs spécifiques. Elles sont accessibles par nom par l'intermédiaire de la collection `Fields` intégrée. Les propriétés personnalisées sont spécifiques à chaque fournisseur de données et sont accessibles par l'intermédiaire de la collection `Fields` intégrée uniquement par la syntaxe utilisant le nom de la propriété étendue comme chaîne.  
   
- Quand vous utilisez le Concepteur de requêtes MDX [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode graphique pour définir votre requête, un ensemble prédéfini de propriétés de cellule et de propriétés de dimension est ajouté automatiquement à la requête MDX. Vous pouvez uniquement utiliser des propriétés étendues qui sont répertoriées spécifiquement dans la requête MDX de votre rapport. Selon votre rapport, vous souhaiterez peut-être modifier le texte de la commande MDX par défaut pour inclure d'autres propriétés personnalisées ou de dimension définies dans le cube. Pour plus d’informations sur les champs étendus disponibles dans les sources de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Création et utilisation de valeurs de propriétés &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/creating-and-using-property-values-mdx).  
+ Quand vous utilisez le Concepteur de requêtes MDX [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode graphique pour définir votre requête, un ensemble prédéfini de propriétés de cellule et de propriétés de dimension est ajouté automatiquement à la requête MDX. Vous pouvez uniquement utiliser des propriétés étendues qui sont répertoriées spécifiquement dans la requête MDX de votre rapport. Selon votre rapport, vous souhaiterez peut-être modifier le texte de la commande MDX par défaut pour inclure d'autres propriétés personnalisées ou de dimension définies dans le cube. Pour plus d’informations sur les champs étendus disponibles dans les sources de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Création et utilisation de valeurs de propriétés &#40;MDX&#41;](../../analysis-services/creating-and-using-property-values-mdx.md).  
   
 ## <a name="working-with-field-properties-in-a-report"></a>Utilisation des propriétés de champ dans un rapport  
  Les propriétés de champ étendues incluent des propriétés prédéfinies et des propriétés spécifiques au fournisseur de données. Les propriétés de champ n’apparaissent pas avec la liste de champs dans le volet **Données du rapport** , même si elles figurent dans la requête générée pour un dataset ; par conséquent, vous ne pouvez pas faire glisser les propriétés de champ vers l’aire de conception du rapport. Vous devez faire glisser le champ dans le rapport, puis remplacer la propriété `Value` du champ par la propriété que vous voulez utiliser. Par exemple, si les données de cellule d’un cube ont déjà été mises en forme, vous pouvez utiliser la propriété de champ FormattedValue en utilisant l’expression suivante : `=Fields!FieldName.FormattedValue`.  
   
  Pour faire référence à une propriété étendue qui n'est pas prédéfinie, utilisez la syntaxe suivante dans une expression :  
   
--   *Fields!FieldName("PropertyName")*  
+-   *Field! FieldName ("PropertyName")*  
   
 ## <a name="predefined-field-properties"></a>Propriétés de champ prédéfinies  
  Dans la plupart des cas, les propriétés de champ prédéfinies s'appliquent aux mesures, aux niveaux ou aux dimensions. À chaque propriété de champ prédéfinie doit correspondre une valeur stockée dans la source de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si aucune valeur n'existe ou que vous spécifiez une propriété de champ de mesure uniquement sur un niveau (par exemple), la propriété retourne une valeur NULL.  
   
  Pour faire référence à une propriété prédéfinie à partir d'une expression, vous pouvez utiliser l'une des syntaxes suivantes :  
   
--   *Fields!FieldName.PropertyName*  
+-   *Field! FieldName. PropertyName*  
   
--   *Fields!FieldName("PropertyName")*  
+-   *Field! FieldName ("PropertyName")*  
   
  Le tableau suivant dresse la liste des propriétés de champ prédéfinies susceptibles d'être utilisées.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68892031"
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|Précise la valeur de données du champ.|  
 |`IsMissing`|`Boolean`|Indique si le champ figure dans le dataset obtenu.|  
-|`UniqueName`|`String`|Retourne le nom complet d'un niveau. Par exemple, la `UniqueName` valeur d’un employé peut être *[employee]. [ Service de l’employé]. [Service]. & [Sales]. & [Directeur des ventes de l’Amérique du Nord]. & [272]* .|  
+|`UniqueName`|`String`|Retourne le nom complet d'un niveau. Par exemple, la `UniqueName` valeur d’un employé peut être *[employee]. [ Service de l’employé]. [Service]. & [Sales]. & [Directeur des ventes de l’Amérique du Nord]. & [272]*.|  
 |`BackgroundColor`|`String`|Retourne la couleur d'arrière-plan définie dans la base de données pour le champ.|  
 |`Color`|`String`|Retourne la couleur de premier plan définie dans la base de données pour l'élément.|  
 |`FontFamily`|`String`|Retourne le nom de la police définie dans la base de données pour l'élément.|  
@@ -119,19 +119,19 @@ CELL PROPERTIES
   
  Les quatre premières lignes du résultat dans le volet Résultats MDX s'affichent dans le tableau suivant.  
   
-|Mois de l'année|Nombre de commandes|  
+|Mois de l'année|Order Count|  
 |-------------------|-----------------|  
 |Janvier|2,481|  
 |February|2,684|  
 |Mars|2,749|  
 |avril|2,739|  
   
- Même si les propriétés font partie de l'instruction select MDX, elles n'apparaissent pas dans les colonnes du jeu de résultats. Cependant, les données sont disponibles pour un rapport à l'aide de la fonctionnalité des propriétés étendues. Dans un volet des résultats d’une requête MDX dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vous pouvez double-cliquer sur la cellule et afficher les valeurs de propriétés de cellules si elles sont définies dans le cube. Si vous double-cliquez sur la première cellule Nombre de commandes qui contient le chiffre 1,379, une fenêtre contextuelle s'affiche avec les propriétés de cellule suivantes :  
+ Même si les propriétés font partie de l'instruction select MDX, elles n'apparaissent pas dans les colonnes du jeu de résultats. Cependant, les données sont disponibles pour un rapport à l'aide de la fonctionnalité des propriétés étendues. Dans un volet de résultats de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]MDX dans, vous pouvez double-cliquer sur la cellule et afficher les valeurs de propriété de cellule si elles sont définies dans le cube. Si vous double-cliquez sur la première cellule Nombre de commandes qui contient le chiffre 1,379, une fenêtre contextuelle s'affiche avec les propriétés de cellule suivantes :  
   
-|Propriété|Value|  
+|Propriété|Valeur|  
 |--------------|-----------|  
 |CellOrdinal|0|  
-|Value|2481|  
+|VALEUR|2481|  
 |BACK_COLOR|(Null)|  
 |FORE_COLOR|(Null)|  
 |FORMATTED_VALUE|2,481|  

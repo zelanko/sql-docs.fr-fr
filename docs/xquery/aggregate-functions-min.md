@@ -16,16 +16,16 @@ ms.assetid: db0b7d94-3fa6-488f-96d6-6a9a7d6eda23
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 29e5718debadb4725bc9d9ebcd499c261ed23d54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67985751"
 ---
 # <a name="aggregate-functions---min"></a>Fonctions d’agrégation : min
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Renvoie, à partir d’une séquence de valeurs atomiques, *$arg*, le seul élément dont la valeur est inférieure à celle de tous les autres.  
+  Retourne à partir d’une séquence de valeurs atomiques, *$arg*, un élément dont la valeur est inférieure à celle de tous les autres.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,14 +39,14 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  Séquence d'éléments à partir de laquelle la valeur minimale est renvoyée.  
   
 ## <a name="remarks"></a>Notes  
- Tous les types de valeurs atomisées transmises à **min()** doivent être des sous-types du même type de base. Types de base acceptés sont les types qui prennent en charge la **gt** opération. Ces types incluent les trois types numériques de base intégrés, les types de base date/heure et les types xs:string (chaîne), xs:boolean (booléen) et xdt:untypedAtomic (atomique non typé). Les valeurs de type xdt:untypedAtomic sont converties en xs:double. S’il existe un mélange de ces types, ou si d’autres valeurs d’autres types sont passés, une erreur statique est générée.  
+ Tous les types des valeurs atomisées passées à **min ()** doivent être des sous-types du même type de base. Les types de base acceptés sont les types qui prennent en charge l’opération **gt** . Ces types incluent les trois types numériques de base intégrés, les types de base date/heure et les types xs:string (chaîne), xs:boolean (booléen) et xdt:untypedAtomic (atomique non typé). Les valeurs de type xdt:untypedAtomic sont converties en xs:double. S’il existe un mélange de ces types, ou si d’autres valeurs d’autres types sont passées, une erreur statique est générée.  
   
- Le résultat de **min()** reçoit le type de base des types transmis, tels que xs : double dans le cas de xdt : untypedAtomic. Si l'entrée est statiquement vide, vide est implicite et une erreur statique est générée.  
+ Le résultat de **min ()** reçoit le type de base des types transmis, tel que XS : double dans le cas de xdt : untypedAtomic. Si l'entrée est statiquement vide, vide est implicite et une erreur statique est générée.  
   
- Le **min()** fonction retourne une valeur dans la séquence est inférieure à toute autre dans la séquence d’entrée. Pour les valeurs xs:string, le classement par défaut des points de code Unicode est utilisé. Si une valeur xdt : untypedAtomic ne peut pas être convertie en xs : double, la valeur est ignorée dans la séquence d’entrée, *$arg*. Si l'entrée est une séquence vide calculée de manière dynamique, la séquence vide est renvoyée.  
+ La fonction **min ()** retourne une valeur dans la séquence inférieure à toute autre valeur dans la séquence d’entrée. Pour les valeurs xs:string, le classement par défaut des points de code Unicode est utilisé. Si une valeur xdt : untypedAtomic ne peut pas être convertie en XS : double, la valeur est ignorée dans la séquence d’entrée *$arg*. Si l'entrée est une séquence vide calculée de manière dynamique, la séquence vide est renvoyée.  
   
 ## <a name="examples"></a>Exemples  
- Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type dans la base de données AdventureWorks.  
+ Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
 ### <a name="a-using-the-min-xquery-function-to-find-the-work-center-location-that-has-the-fewest-labor-hours"></a>R. Utilisation de la fonction XQuery min() pour rechercher le poste de travail enregistrant le moins d'heures de main-d'œuvre  
  La requête suivante récupère tous les postes de travail du processus de fabrication du modèle de produit (ProductModelID=7) qui enregistre le moins d'heures de main-d'œuvre. Généralement, comme le montre l'exemple suivant, un seul poste est renvoyé. Si plusieurs postes de travail enregistraient le même nombre minimal de main-d'œuvre, ils seraient tous renvoyés.  
@@ -68,13 +68,13 @@ WHERE ProductModelID=7
   
  Notez les points suivants dans la requête précédente :  
   
--   Le **espace de noms** mot clé dans le prologue XQuery définit un préfixe d’espace de noms. Ce préfixe est utilisé ultérieurement dans le corps de la requête.  
+-   Le mot clé **namespace** dans le prologue XQuery définit un préfixe d’espace de noms. Ce préfixe est utilisé ultérieurement dans le corps de la requête.  
   
- Le corps XQuery construit le code XML qui a un \<emplacement > élément avec WCID et **LaborHrs** attributs.  
+ Le corps XQuery construit le XML qui possède un \<emplacement> élément avec des attributs wcid et **LaborHrs** .  
   
 -   La requête récupère également l'identificateur et le nom du modèle de produit.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID   Name              Result  
@@ -85,9 +85,9 @@ ProductModelID   Name              Result
 ## <a name="implementation-limitations"></a>Limites de mise en œuvre  
  Les limitations suivantes s'appliquent :  
   
--   Le **min()** fonction mappe tous les entiers à xs : decimal.  
+-   La fonction **min ()** mappe tous les entiers à XS : Decimal.  
   
--   Le **min()** fonction sur les valeurs de type xs : Duration n’est pas pris en charge.  
+-   La fonction **min ()** sur des valeurs de type xs : Duration n’est pas prise en charge.  
   
 -   Les séquences faisant intervenir plusieurs types dérivés de différents types de base ne sont pas prises en charge.  
   

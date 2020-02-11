@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9f9439fd1b0844b09e26331859ce37d18817f908
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62505994"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>Modifier le compte de contrôleur et les comptes de services clients
@@ -24,7 +24,7 @@ ms.locfileid: "62505994"
   
 1.  Sur l’ordinateur sur lequel les services Distributed Replay sont installés, depuis l’invite de commandes, tapez `dcomcnfg`.  
   
-2.  Double-cliquez sur **Services**, faites défiler et cliquez avec le bouton droit sur **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<service name>** , puis cliquez sur **Démarrer** ou **Arrêter**.  
+2.  Double-cliquez sur **Services**, faites défiler et cliquez avec le bouton droit sur **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<service name>**, puis cliquez sur **Démarrer** ou **Arrêter**.  
   
 ### <a name="to-modify-the-distributed-replay-controller-service"></a>Pour modifier le service Distributed Replay Controller  
   
@@ -32,11 +32,11 @@ ms.locfileid: "62505994"
   
 2.  Sous **Services**, cliquez avec le bouton droit sur **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller**, puis sélectionnez **Propriétés**.  
   
-3.  Dans la fenêtre **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller** , sous l'onglet **Ouvrir une session** , sélectionnez **Ce compte**, tapez ou cliquez sur **Parcourir** pour entrer le nouveau compte d'ouverture de session, puis cliquez sur **OK**.  
+3.  Dans la ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fenêtre Propriétés du contrôleur de Distributed Replay** , sous l’onglet **ouvrir une session** , sélectionnez **ce compte**, tapez ou cliquez sur **Parcourir** pour entrer le nouveau compte d’ouverture de session, puis cliquez sur **OK**.  
   
-     **Important**: Lorsque vous configurez Distributed Replay Controller, vous pouvez spécifier un ou plusieurs comptes d’utilisateur qui seront utilisés pour exécuter les services Distributed Replay Client. Vous trouverez ci-dessous la liste des comptes pris en charge :  
+     **Important**: lorsque vous configurez Distributed Replay contrôleur, vous pouvez spécifier un ou plusieurs comptes d’utilisateur qui seront utilisés pour exécuter les services client Distributed Replay. Vous trouverez ci-dessous la liste des comptes pris en charge :  
   
-    -   Compte d'utilisateur de domaine  
+    -   Compte d’utilisateur de domaine  
   
     -   Compte d'utilisateur local créé par l'utilisateur  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62505994"
   
 2.  Arrêtez le service client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client.  
   
-3.  Dans la fenêtre **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client** , sous l'onglet **Ouvrir une session** , sélectionnez **Ce compte**, tapez ou cliquez sur **Parcourir** pour entrer le nouveau compte d'ouverture de session, puis cliquez sur **OK**.  
+3.  Dans la ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fenêtre Propriétés du client Distributed Replay** , sous l’onglet **ouvrir une session** , sélectionnez **ce compte**, tapez ou cliquez sur **Parcourir** pour entrer le nouveau compte d’ouverture de session, puis cliquez sur **OK**.  
   
 4.  Démarrez le service Distributed Replay Client.  
   

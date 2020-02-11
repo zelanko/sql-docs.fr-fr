@@ -1,5 +1,5 @@
 ---
-title: Extraire des colonnes avec IRow::GetColumns (OLE DB) | Microsoft Docs
+title: 'Extraction de colonnes avec IRow :: GetColumns (OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,23 +13,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 225a624f22f80b00a848d73f38febad60936b90a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468495"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Extraire des colonnes avec IRow::GetColumns (OLE DB)
-  L'interface `IRow` autorise un accès direct aux colonnes d'une ligne unique dans le jeu de résultats. `IRow` est donc une méthode efficace pour extraire des colonnes d'un jeu de résultats avec une seule ligne.  
+  L'interface `IRow` autorise un accès direct aux colonnes d'une ligne unique dans le jeu de résultats. 
+  `IRow` est donc une méthode efficace pour extraire des colonnes d'un jeu de résultats avec une seule ligne.  
   
  Un exemple de code démontrant comment extraire une ligne unique à l'aide de `IRow` est disponible. Dans cet exemple, une colonne est extraite à la fois de la ligne. L’exemple montre :  
   
 -   comment extraire un groupe de colonnes (de manière consécutive) ;  
   
--   comment accéder deux fois à une colonne avec extraction de la largeur réelle de la colonne la première fois, puis accès aux données concernées par la suite. Dans la structure DBCOLUMNACCESS, si **pData** a la valeur NULL et **cbMaxLen** est 0, l’appel à `IRow` - `>GetColumns()` retourne uniquement la longueur de colonne réelle. Dans ce cas, vous pouvez rappeler `IRow->GetColumns()` sur la même colonne pour récupérer les données réelles.  
+-   comment accéder deux fois à une colonne avec extraction de la largeur réelle de la colonne la première fois, puis accès aux données concernées par la suite. Dans la structure DBCOLUMNACCESS, si **pData** a la valeur null et que **cbMaxLen** est égal à `IRow` - `>GetColumns()` 0, l’appel à retourne uniquement la longueur de colonne réelle. Dans ce cas, vous pouvez rappeler `IRow->GetColumns()` sur la même colonne pour récupérer les données réelles.  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez conserver des informations d’identification, vous devez les chiffrer avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns"></a>Pour extraire des colonnes avec IRow::GetColumns  
   
@@ -48,7 +49,7 @@ ms.locfileid: "62468495"
   
 -   Comment accéder deux fois à une colonne : la première fois au moment de l'obtention de la largeur de colonne réelle, puis ultérieurement, au moment de l'accès aux données effectives.  
   
- Dans la structure DBCOLUMNACCESS, si pData a la valeur NULL et cbMaxLen est définie sur 0, l’appel à IRow -> GetColumns retourne uniquement la longueur de colonne réelle. Dans ce cas IRow -> GetColumns peut être appelée à nouveau sur la même colonne pour récupérer les données réelles. Cet exemple n'est pas pris en charge sur la plateforme IA64.  
+ Dans la structure DBCOLUMNACCESS, si pData a la valeur NULL et que cbMaxLen est défini sur 0, l’appel à IRow>GetColumns retourne seulement la longueur de colonne réelle. Dans ce cas, vous pouvez rappeler IRow->GetColumns sur la même colonne pour extraire les données réelles. Cet exemple n'est pas pris en charge sur la plateforme IA64.  
   
  Cet exemple requiert l'exemple de base de données AdventureWorks, que vous pouvez télécharger à partir de la page d'accueil des [exemples et projets de communautés Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .  
   
@@ -517,6 +518,6 @@ go
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques de procédures liées à OLE DB](ole-db-how-to-topics.md)  
+ [Rubriques de procédures OLE DB](ole-db-how-to-topics.md)  
   
   

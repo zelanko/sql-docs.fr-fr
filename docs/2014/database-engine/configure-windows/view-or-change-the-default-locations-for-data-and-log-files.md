@@ -1,5 +1,5 @@
 ---
-title: Afficher ou modifier les emplacements par défaut pour les données et fichiers journaux (SQL Server Management Studio) | Microsoft Docs
+title: Afficher ou modifier les emplacements par défaut des fichiers de données et des fichiers journaux (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 06d17a4feaec0db614f61fb7761b37ea415efc24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62808709"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files-sql-server-management-studio"></a>Afficher ou modifier les emplacements par défaut des fichiers de données et des fichiers journaux (SQL Server Management Studio)
@@ -29,11 +29,11 @@ ms.locfileid: "62808709"
   
      [Recommandations](#Recommendations)  
   
--   **Pour afficher ou modifier les données et journaux fichier emplacements par défaut, à l’aide de :**  
+-   **Pour afficher ou modifier les emplacements par défaut des fichiers de données et des fichiers journaux, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
--   **Suivi :**  [Modification des emplacements par défaut](#FollowUp)  
+-   **Suivi :**  [modification des emplacements par défaut](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -48,13 +48,13 @@ ms.locfileid: "62808709"
   
 #### <a name="to-view-or-change-the-default-locations-for-database-files"></a>Pour afficher ou modifier les emplacements par défaut des fichiers de base de données  
   
-1.  Dans l'Explorateur d'objets, cliquez avec le bouton droit sur un serveur, puis cliquez sur **Propriétés**.  
+1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur un serveur, puis cliquez sur **Propriétés**.  
   
 2.  Dans le volet gauche, cliquez sur la page **Paramètres de base de données** .  
   
 3.  Dans **Emplacements de la base de données par défaut**, consultez les emplacements par défaut actuels pour les nouveaux fichiers de données et les nouveaux fichiers journaux. Pour modifier un emplacement par défaut, entrez un nouveau chemin d'accès par défaut dans le champ **Données** ou **Journal** , ou cliquez sur le bouton Parcourir pour rechercher et sélectionner un chemin d'accès.  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir modifié les emplacements par défaut  
+##  <a name="FollowUp"></a>Suivi : après avoir modifié les emplacements par défaut  
  Vous devez arrêter et démarrer le service SQL Server pour valider la modification.  
   
 ## <a name="see-also"></a>Voir aussi  

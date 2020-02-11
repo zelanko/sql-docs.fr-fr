@@ -26,10 +26,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd16879f512bf1529bec8dab6679880cd0a6b8dd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243330"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Éditeurs de texte et de requête (SQL Server Management Studio)
@@ -61,10 +61,10 @@ ms.locfileid: "75243330"
 ## <a name="code-editor-components"></a>Composants de l'éditeur de code  
  Les éditeurs de code contiennent les fonctionnalités suivantes en plus de celles partagées avec les éditeurs de texte et XML :  
   
- **About**  
+ **Résultats**  
  Cette fenêtre permet d'afficher les résultats d'une requête. La fenêtre peut afficher les résultats dans une grille ou du texte, ou les résultats peuvent être dirigés vers un fichier. Les grilles de résultats peuvent être affichées comme des fenêtres avec onglets distinctes.  
   
- **Semi**  
+ **IntelliSense**  
  Dans les éditeurs, dans le menu **Edition** , pointez sur **IntelliSense**pour consulter les options [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense.  
   
  **Codage en couleurs**  
@@ -107,19 +107,19 @@ ms.locfileid: "75243330"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Décrit comment afficher et utiliser les fonctionnalités de base dans l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Éditeur de requête Moteur de base de données &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
+|Décrit comment afficher et utiliser les fonctionnalités de base dans l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Éditeur de requête du moteur de base de données &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
 |Décrit comment afficher et utiliser les fonctionnalités de base dans l'éditeur de requête MDX.|[Éditeur de requête MDX &#40;Analysis Services-données multidimensionnelles&#41;](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
 |Décrit comment afficher et utiliser les fonctionnalités de base dans l'éditeur de requête DMX.|[Éditeur de requête DMX &#40;Analysis Services d’exploration de données&#41;](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
 |Décrit comment afficher et utiliser les fonctionnalités de base dans l'éditeur XML/A.|[Éditeur XML &#40;SQL Server Management Studio&#41;](xml-editor-sql-server-management-studio.md)|  
 |Décrit comment configurer les options des différents éditeurs, tels que la numérotation des lignes et les options IntelliSense.|[Configurer les éditeurs &#40;SQL Server Management Studio&#41;](configure-editors-sql-server-management-studio.md)|  
 |Décrit les différentes façons d'ouvrir les éditeurs dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].|[Ouvrez un éditeur &#40;SQL Server Management Studio&#41;](open-an-editor-sql-server-management-studio.md)|  
-|Décrit comment gérer le mode d'affichage, tel que le retour automatique à la ligne, le fractionnement d'une fenêtre, ou les onglets.|[Gérer l’éditeur et le mode d’affichage](manage-the-editor-and-view-mode.md)|  
+|Décrit comment gérer le mode d'affichage, tel que le retour automatique à la ligne, le fractionnement d'une fenêtre, ou les onglets.|[Gérer l'Éditeur et le mode d'affichage](manage-the-editor-and-view-mode.md)|  
 |Explique comment définir les options de mise en forme, telles que le texte masqué ou la mise en retrait.|[Gérer la mise en forme du code](manage-code-formatting.md)|  
 |Décrit comment parcourir le texte dans une fenêtre d'éditeur à l'aide de fonctionnalités telles que la recherche incrémentielle ou Atteindre.|[Naviguer dans le code et le texte](navigate-code-and-text.md)|  
 |Explique comment définir les options de codage en couleurs pour différentes classes de syntaxe, ce qui facilite la lecture des instructions complexes.|[Codage en couleurs dans les éditeurs de requête](color-coding-in-query-editors.md)|  
 |Décrit comment utiliser la mise en relief du code pour masquer des parties de scripts complexes que vous n'utilisez pas actuellement.|[Mise en relief du code](code-outlining.md)|  
-|Explique comment faire glisser le texte d'un emplacement dans un script et le placer à un nouvel emplacement.|[Glisser-déplacer du texte](drag-and-drop-text.md)|  
-|Décrit comment effectuer une opération de recherche et de remplacement globale, par exemple lors de la modification des noms des colonnes.|[Rechercher et remplacer](search-and-replace.md)|  
+|Explique comment faire glisser le texte d'un emplacement dans un script et le placer à un nouvel emplacement.|[Glisser et déplacer du texte](drag-and-drop-text.md)|  
+|Décrit comment effectuer une opération de recherche et de remplacement globale, par exemple lors de la modification des noms des colonnes.|[Recherche et remplacement](search-and-replace.md)|  
 |Décrit comment définir des signets afin de rechercher plus facilement les segments de code importants.|[Gérer les signets](../native-client-ole-db-rowsets/bookmarks.md)|  
 |Explique comment imprimer des scripts ou les résultats dans une fenêtre ou une grille.|[Imprimer le code et les résultats](print-code-and-results.md)|  
 |Décrit comment utiliser les fonctionnalités sqlcmd dans l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Modifier des scripts SQLCMD à l'aide de l'Éditeur de requête](edit-sqlcmd-scripts-with-query-editor.md)|  
@@ -129,4 +129,4 @@ ms.locfileid: "75243330"
 |Décrit comment définir des couleurs personnalisées pour différentes instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)]et faire en sorte que ces couleurs soient définies comme arrière-plan de la barre d'état dans des fenêtres de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Barre d’État &#40;Moteur de base de données éditeur de requête&#41;](status-bar-database-engine-query-editor.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Raccourcis clavier SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [Raccourcis clavier dans SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

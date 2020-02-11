@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 21abdf4e5781f179c8168ff02aa611bd7dffd39f
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957158"
 ---
 # <a name="restore-the-service-master-key"></a>Restaurer la clé principale du service
@@ -28,17 +28,17 @@ ms.locfileid: "74957158"
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
-     [Caution](#Security)  
+     [Sécurité](#Security)  
   
 -   [Pour restaurer la clé principale du service à l’aide de Transact-SQL](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a>Avant de commencer  
+##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a>Limitations et restrictions  
+###  <a name="Restrictions"></a> Limitations et restrictions  
   
 -   Lorsque la clé principale de service est restaurée, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] déchiffre toutes les clés et les secrets qui ont été chiffrés au moyen de la clé principale de service en cours, puis les chiffre au moyen de la clé principale de service chargée à partir du fichier de sauvegarde.  
   
@@ -49,12 +49,12 @@ ms.locfileid: "74957158"
 > [!CAUTION]  
 >  La clé principale de service représente la racine de la hiérarchie de chiffrement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La clé principale de service sécurise de manière directe ou indirecte toutes les autres clés de l'arborescence. Si une clé dépendante ne peut pas être déchiffrée au cours d'une restauration forcée, les données sécurisées par cette clé sont perdues.  
   
-###  <a name="Security"></a>Caution  
+###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a>Autorisations  
+####  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation CONTROL SERVER sur le serveur.  
   
-##  <a name="SSMSProcedure"></a>Utilisation de Transact-SQL  
+##  <a name="SSMSProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-restore-the-service-master-key"></a>Pour restaurer la clé principale du service  
   
@@ -62,9 +62,9 @@ ms.locfileid: "74957158"
   
 2.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-3.  Dans la barre d'outils Standard , cliquez sur **Nouvelle requête**.  
+3.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-4.  Copiez et collez l’exemple suivant dans la fenêtre de requête et cliquez sur **exécuter**.  
+4.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
     ```  
     -- Restores the service master key from a backup file.  

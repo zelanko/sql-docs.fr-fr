@@ -1,5 +1,5 @@
 ---
-title: Utiliser un modèle pour créer une Action | Microsoft Docs
+title: Utiliser un modèle pour créer une action | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 52ba9afd78722d53bad32a6c918a98dbc2279ffa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072686"
 ---
 # <a name="use-a-template-to-create-an-action"></a>Utiliser un modèle pour créer une action
   La vue **Actions** du Concepteur de cube contient plusieurs modèles que vous pouvez utiliser pour créer des actions courantes. Le Concepteur de cube est accessible à partir de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 > [!NOTE]  
->  Après avoir créé l'action, elle devient disponible aux utilisateurs après la mise à jour ou le retraitement du cube. Pour plus d’informations, consultez [traitement d’un objet de modèle multidimensionnel](processing-a-multidimensional-model-analysis-services.md).  
+>  Après avoir créé l'action, elle devient disponible aux utilisateurs après la mise à jour ou le retraitement du cube. Pour plus d’informations, consultez traitement de l' [objet de modèle multidimensionnel](processing-a-multidimensional-model-analysis-services.md).  
   
 ### <a name="to-use-a-template-to-create-an-action"></a>Pour utiliser un modèle pour créer une action  
   
@@ -32,6 +32,6 @@ ms.locfileid: "66072686"
 -   Indiquez les informations nécessaires pour générer l'action selon le modèle.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Actions &#40;Analysis Services - Données multidimensionnelles&#41;](actions-analysis-services-multidimensional-data.md)  
+ [Actions &#40;Analysis Services-données multidimensionnelles&#41;](actions-analysis-services-multidimensional-data.md)  
   
   

@@ -10,10 +10,10 @@ ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 1fda81ac39233435dbcd0546e452878cc6767b33
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247149"
 ---
 # <a name="manage-a-knowledge-base"></a>Gérer une base de connaissances
@@ -22,14 +22,14 @@ ms.locfileid: "75247149"
 
   Cette rubrique décrit comment remplir les fonctions de gestion sur une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Vous pouvez supprimer une base de connaissances, la déverrouiller, ignorer vos modifications, la renommer et afficher ses propriétés.  
   
-##  <a name="BeforeYouBegin"></a>Avant de commencer  
+##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Prerequisites"></a>Conditions préalables  
  Pour gérer une base de connaissances, la base de connaissances doit avoir été déjà créée, et publiée (si une autre personne l'a créée) ou fermée (si vous l'avez créée).  
   
-###  <a name="Security"></a>Caution  
+###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a>Autorisations  
+####  <a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour ouvrir une base de connaissances.  
   
 ##  <a name="Manage"></a>Gérer une base de connaissances  
@@ -54,7 +54,7 @@ ms.locfileid: "75247149"
   
     6.  **Propriétés**: cliquez sur cette propriété pour afficher les propriétés de la base de données en lecture seule.  
   
-        1.  **Base de connaissances source**: base de connaissances sur laquelle cette base de données a été basée. Cette étape est facultative.  
+        1.  **Base de connaissances source**: base de connaissances sur laquelle cette base de données a été basée. Ce paramètre est facultatif.  
   
         2.  **État**: indique si la base de connaissances est **en cours** et si elle se trouve dans une activité spécifique de gestion des connaissances, comme déterminé lors de sa dernière fermeture. L'état peut être **En cours**, à savoir que la base de connaissances est ouverte dans une session de gestion des connaissances, mais pas dans une activité spécifique, ou **En cours** plus une activité de gestion des connaissances, dans laquelle la base de connaissances est ouverte dans une session de gestion des connaissances, et dans une activité spécifique.  
   

@@ -1,5 +1,5 @@
 ---
-title: L’exécution de requêtes rubriques de procédures (ODBC) | Microsoft Docs
+title: Rubriques de procédures relatives à l’exécution de requêtes (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b892adaf02f13ec7de150ae1de9966a65ac1d7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200387"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>Rubriques de procédures relatives à l'exécution de requêtes (ODBC)
@@ -26,13 +26,13 @@ ms.locfileid: "63200387"
   
 -   [Utiliser une instruction &#40;ODBC&#41;](use-a-statement-odbc.md)  
   
--   [Définir les Options de curseur &#40;ODBC&#41;](set-cursor-options-odbc.md)  
+-   [Définir les options de curseur &#40;ODBC&#41;](set-cursor-options-odbc.md)  
   
--   [Exécutez une instruction directement &#40;ODBC&#41;](execute-a-statement-directly-odbc.md)  
+-   [Exécuter directement une instruction &#40;ODBC&#41;](execute-a-statement-directly-odbc.md)  
   
 -   [Préparer et exécuter une instruction &#40;ODBC&#41;](prepare-and-execute-a-statement-odbc.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques de procédures liées à ODBC](../odbc-how-to-topics.md)  
+ [Rubriques de procédures ODBC](../odbc-how-to-topics.md)  
   
   

@@ -15,10 +15,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79a85515322d492d4356d47f78da4b79489a223e
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811109"
 ---
 # <a name="sql-graph-architecture"></a>Architecture du graphique SQL  
@@ -32,16 +32,16 @@ Les utilisateurs peuvent créer un graphique par base de données. Un graphique 
  
 ![architecture SQL-Graph](../../relational-databases/graphs/media/sql-graph-architecture.png "Architecture de la base de données SQL Graph")   
 
-Figure 1 : Architecture de la base de données SQL Graph
+Figure 1 : architecture de la base de données SQL Graph
  
 ## <a name="node-table"></a>Table de nœuds
 Une table de nœuds représente une entité dans un schéma de graphique. Chaque fois qu’une table de nœuds est créée, avec les colonnes définies par l’utilisateur `$node_id` , une colonne implicite est créée, ce qui identifie de façon unique un nœud donné dans la base de données. Les valeurs dans `$node_id` sont générées automatiquement et sont une combinaison `object_id` de cette table de nœuds et d’une valeur bigint générée en interne. Toutefois, lorsque la `$node_id` colonne est sélectionnée, une valeur calculée sous la forme d’une chaîne JSON s’affiche. En outre `$node_id` , est une pseudo-colonne qui est mappée à un nom interne avec une chaîne hexadécimale. Lorsque vous sélectionnez `$node_id` dans la table, le nom de la colonne s' `$node_id_<hex_string>`affiche sous la forme. L’utilisation de noms de pseudo-colonnes dans les requêtes est la méthode recommandée pour `$node_id` interroger la colonne interne et l’utilisation d’un nom interne avec une chaîne hexadécimale doit être évitée.
 
-Il est recommandé que les utilisateurs créent une contrainte ou un index unique `$node_id` sur la colonne au moment de la création de la table de nœuds. Toutefois, si aucun index n’est créé, un index non-cluster unique par défaut est créé automatiquement. Toutefois, tout index sur une pseudo-colonne de graphique est créé sur les colonnes internes sous-jacentes. Autrement dit, un index créé sur la `$node_id` colonne apparaît sur la colonne interne. `graph_id_<hex_string>`   
+Il est recommandé que les utilisateurs créent une contrainte ou un index unique `$node_id` sur la colonne au moment de la création de la table de nœuds. Toutefois, si aucun index n’est créé, un index non-cluster unique par défaut est créé automatiquement. Toutefois, tout index sur une pseudo-colonne de graphique est créé sur les colonnes internes sous-jacentes. Autrement dit, un index créé sur la `$node_id` colonne apparaît sur la colonne interne `graph_id_<hex_string>` .   
 
 
 ## <a name="edge-table"></a>Table Edge
-Une table Edge représente une relation dans un graphique. Les bords sont toujours dirigés et connectent deux nœuds. Une table Edge permet aux utilisateurs de modéliser des relations plusieurs-à-plusieurs dans le graphique. Une table Edge peut ou ne peut pas contenir d’attributs définis par l’utilisateur. Chaque fois qu’une table Edge est créée, avec les attributs définis par l’utilisateur, trois colonnes implicites sont créées dans la table Edge:
+Une table Edge représente une relation dans un graphique. Les bords sont toujours dirigés et connectent deux nœuds. Une table Edge permet aux utilisateurs de modéliser des relations plusieurs-à-plusieurs dans le graphique. Une table Edge peut ou ne peut pas contenir d’attributs définis par l’utilisateur. Chaque fois qu’une table Edge est créée, avec les attributs définis par l’utilisateur, trois colonnes implicites sont créées dans la table Edge :
 
 |Nom de la colonne    |Description  |
 |---   |---  |
@@ -49,15 +49,15 @@ Une table Edge représente une relation dans un graphique. Les bords sont toujou
 |`$from_id`   |Stocke `$node_id` le du nœud à partir duquel le bord provient.  |
 |`$to_id`   |Stocke `$node_id` le du nœud, à partir duquel le bord s’arrête. |
 
-Les nœuds qu’un bord donné peut connecter sont régis par les données insérées `$to_id` dans les `$from_id` colonnes et. Dans la première version, il n’est pas possible de définir des contraintes sur la table Edge, afin de la limiter à la connexion de deux types de nœuds. Autrement dit, un bord peut connecter deux nœuds quelconques dans le graphique, quels que soient leurs types.
+Les nœuds qu’un bord donné peut connecter sont régis par les données insérées dans les `$from_id` colonnes et `$to_id` . Dans la première version, il n’est pas possible de définir des contraintes sur la table Edge, afin de la limiter à la connexion de deux types de nœuds. Autrement dit, un bord peut connecter deux nœuds quelconques dans le graphique, quels que soient leurs types.
 
-Comme pour la `$node_id` colonne, il est recommandé que les utilisateurs créent un index ou une contrainte unique `$edge_id` sur la colonne au moment de la création de la table du bord, mais si aucun index non cluster par défaut n’est créé, un index non-cluster unique est automatiquement créé sur Cette colonne. Toutefois, tout index sur une pseudo-colonne de graphique est créé sur les colonnes internes sous-jacentes. Autrement dit, un index créé sur la `$edge_id` colonne apparaît sur la colonne interne. `graph_id_<hex_string>` Il est également recommandé, pour les scénarios OLTP, que les utilisateurs créent un index`$from_id`sur `$to_id`les colonnes (,), afin d’accélérer les recherches dans le sens de la périphérie.  
+Comme pour la `$node_id` colonne, il est recommandé que les utilisateurs créent un index unique ou une contrainte `$edge_id` sur la colonne au moment de la création de la table du bord, mais si aucun index non cluster par défaut n’est créé, un index non-cluster unique est automatiquement créé sur cette colonne. Toutefois, tout index sur une pseudo-colonne de graphique est créé sur les colonnes internes sous-jacentes. Autrement dit, un index créé sur la `$edge_id` colonne apparaît sur la colonne interne `graph_id_<hex_string>` . Il est également recommandé, pour les scénarios OLTP, que les utilisateurs créent un index`$from_id`sur `$to_id`les colonnes (,), afin d’accélérer les recherches dans le sens de la périphérie.  
 
 La figure 2 montre comment les tables de nœuds et de périphérie sont stockées dans la base de données. 
 
-![Person-Friends-tables](../../relational-databases/graphs/media/person-friends-tables.png "Nœud Person et tables de bord des amis")   
+![person-Friends-tables](../../relational-databases/graphs/media/person-friends-tables.png "Nœud Person et tables de bord des amis")   
 
-Figure 2 : Représentation de la table des nœuds et des bords
+Figure 2 : représentation d’une table de nœuds et d’un bord
 
 
 
@@ -88,8 +88,8 @@ Le tableau suivant répertorie les valeurs valides pour `graph_type` la colonne
 |2  |GRAPH_ID_COMPUTED  |
 |3  |GRAPH_FROM_ID  |
 |4  |GRAPH_FROM_OBJ_ID  |
-|5\.  |GRAPH_FROM_ID_COMPUTED  |
-|6\.  |GRAPH_TO_ID  |
+|5  |GRAPH_FROM_ID_COMPUTED  |
+|6  |GRAPH_TO_ID  |
 |7  |GRAPH_TO_OBJ_ID  |
 |8  |GRAPH_TO_ID_COMPUTED  |
 
@@ -101,27 +101,27 @@ Colonnes implicites dans une table de nœuds
 |Nom de la colonne    |Type de données  |is_hidden  |Commentaire  |
 |---  |---|---|---  |
 |graph_id_\<hex_string> |BIGINT |1  |colonne `graph_id` interne  |
-|$node_id_\<hex_string> |NVARCHAR   |0  |Colonne de `node_id` nœud externe  |
+|$node _id_\<hex_string> |NVARCHAR   |0  |Colonne de `node_id` nœud externe  |
 
 Colonnes implicites dans une table Edge
 
 |Nom de la colonne    |Type de données  |is_hidden  |Commentaire  |
 |---  |---|---|---  |
 |graph_id_\<hex_string> |BIGINT |1  |colonne `graph_id` interne  |
-|$edge_id_\<hex_string> |NVARCHAR   |0  |colonne `edge_id` externe  |
+|$edge _id_\<hex_string> |NVARCHAR   |0  |colonne `edge_id` externe  |
 |from_obj_id_\<hex_string>  |INT    |1  |interne à partir du nœud`object_id`  |
 |from_id_\<hex_string>  |BIGINT |1  |Interne à partir du nœud`graph_id`  |
-|$from_id_\<hex_string> |NVARCHAR   |0  |externe à partir du nœud`node_id`  |
+|$from _id_\<hex_string> |NVARCHAR   |0  |externe à partir du nœud`node_id`  |
 |to_obj_id_\<hex_string>    |INT    |1  |interne au nœud`object_id`  |
 |to_id_\<hex_string>    |BIGINT |1  |Interne au nœud`graph_id`  |
-|$to_id_\<hex_string>   |NVARCHAR   |0  |externe au nœud`node_id`  |
+|$to _id_\<hex_string>   |NVARCHAR   |0  |externe au nœud`node_id`  |
  
 ### <a name="system-functions"></a>Fonctions système
-Les fonctions intégrées suivantes sont ajoutées. Celles-ci permettent aux utilisateurs d’extraire des informations à partir des colonnes générées. Notez que ces méthodes ne valident pas l’entrée de l’utilisateur. Si l’utilisateur spécifie un `sys.node_id` non valide, la méthode extrait le composant approprié et le retourne. Par exemple, OBJECT_ID_FROM_NODE_ID prend `$node_id` comme entrée et retourne l’object_id de la table, ce nœud appartient à. 
+Les fonctions intégrées suivantes sont ajoutées. Celles-ci permettent aux utilisateurs d’extraire des informations à partir des colonnes générées. Notez que ces méthodes ne valident pas l’entrée de l’utilisateur. Si l’utilisateur spécifie un `sys.node_id` non valide, la méthode extrait le composant approprié et le retourne. Par exemple, OBJECT_ID_FROM_NODE_ID prend `$node_id` comme entrée et retourne la object_id de la table, ce nœud appartient à. 
  
-|Intégré   |Description  |
+|Intégration   |Description  |
 |---  |---  |
-|OBJECT_ID_FROM_NODE_ID |Extraire l’object_id d’un`node_id`  |
+|OBJECT_ID_FROM_NODE_ID |Extraire le object_id à partir d’un`node_id`  |
 |GRAPH_ID_FROM_NODE_ID  |Extraire le graph_id à partir d’un`node_id`  |
 |NODE_ID_FROM_PARTS |Construit un node_id à partir `object_id` d’un et d’un`graph_id`  |
 |OBJECT_ID_FROM_EDGE_ID |Extraire `object_id` à partir de`edge_id`  |
@@ -133,18 +133,18 @@ Les fonctions intégrées suivantes sont ajoutées. Celles-ci permettent aux uti
 ## <a name="transact-sql-reference"></a>Informations de référence sur Transact-SQL 
 Découvrez les [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introduites dans SQL Server et Azure SQL Database, qui permettent de créer et d’interroger des objets graphiques. Les extensions de langage de requête aident à interroger et à parcourir le graphique à l’aide de la syntaxe ASCII art.
  
-### <a name="data-definition-language-ddl-statements"></a>Instructions DDL (Data Definition Language)
+### <a name="data-definition-language-ddl-statements"></a>Instructions du langage de définition de données (DDL)
 
 |Tâche   |Article connexe  |Notes
 |---  |---  |---  |
 |CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE`est maintenant étendu pour prendre en charge la création d’une table en tant que nœud ou EDGE. Notez qu’une table Edge peut ou non avoir des attributs définis par l’utilisateur.  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|Les tables de nœuds et de périphérie peuvent être modifiées de la même façon qu’une table `ALTER TABLE`relationnelle, à l’aide de. Les utilisateurs peuvent ajouter ou modifier des colonnes, des index ou des contraintes définis par l’utilisateur. Toutefois, la modification de colonnes graphiques internes, `$node_id` comme `$edge_id`ou, génère une erreur.  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |Les utilisateurs peuvent créer des index sur des pseudo-colonnes et des colonnes définies par l’utilisateur dans des tables de nœuds et de périphérie. Tous les types d’index sont pris en charge, y compris les index ColumnStore cluster et non cluster.  |
-|CRÉER DES CONTRAINTES DE PÉRIPHÉRIE    |[EDGE CONSTRAINTS &#40;Transact-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |Les utilisateurs peuvent désormais créer des contraintes Edge sur les tables Edge pour appliquer une sémantique spécifique et maintenir l’intégrité des données.  |
+|CRÉER DES CONTRAINTES DE PÉRIPHÉRIE    |[CONTRAINTES EDGE &#40;&#41;Transact-SQL](../../relational-databases/tables/graph-edge-constraints.md)  |Les utilisateurs peuvent désormais créer des contraintes Edge sur les tables Edge pour appliquer une sémantique spécifique et maintenir l’intégrité des données.  |
 |DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |Les tables de nœuds et de périphérie peuvent être supprimées de la même façon qu’une `DROP TABLE`table relationnelle, à l’aide de. Toutefois, dans cette version, il n’existe aucune contrainte pour garantir qu’aucun bord ne pointe vers un nœud supprimé et que la suppression en cascade des bords n’est pas prise en charge lors de la suppression d’une table de nœuds ou de nœuds. Si une table de nœuds est supprimée, les utilisateurs déposent manuellement les bords connectés aux nœuds de cette table de nœuds afin de préserver l’intégrité du graphique.  |
 
 
-### <a name="data-manipulation-language-dml-statements"></a>Instructions DML (Data Manipulation Language)
+### <a name="data-manipulation-language-dml-statements"></a>Instructions du langage de manipulation de données
 
 |Tâche   |Article connexe  |Notes
 |---  |---  |---  |
@@ -159,12 +159,12 @@ Découvrez les [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introdu
 |Tâche   |Article connexe  |Notes
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|Les nœuds et les bords sont stockés en interne en tant que tables. par conséquent, la plupart des opérations prises en charge sur une table dans SQL Server ou Azure SQL Database sont prises en charge sur les tables de nœuds et de périphérie  |
-|MATCH  | [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)|La fonction intégrée de correspondance est introduite pour prendre en charge les critères spéciaux et traverser le graphique.  |
+|MATCH  | [Faire correspondre &#40;&#41;Transact-SQL](../../t-sql/queries/match-sql-graph.md)|La fonction intégrée de correspondance est introduite pour prendre en charge les critères spéciaux et traverser le graphique.  |
 
 
 
 ## <a name="limitations-and-known-issues"></a>Limitations et problèmes connus  
-Il existe certaines limitations sur les tables de nœuds et d’arêtes dans cette version:
+Il existe certaines limitations sur les tables de nœuds et d’arêtes dans cette version :
 * Les tables temporaires locales ou globales ne peuvent pas être des tables de nœuds ou de périphérie.
 * Les types de table et les variables de table ne peuvent pas être déclarés en tant que table de nœuds ou d’arêtes. 
 * Les tables de nœuds et de périphérie ne peuvent pas être créées en tant que tables temporelles avec version gérée par le système.   

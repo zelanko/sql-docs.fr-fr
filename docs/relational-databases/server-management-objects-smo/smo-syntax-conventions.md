@@ -17,16 +17,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e6e5c8f9d87fe511964d5657c57c70fe4379225e
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148565"
 ---
 # <a name="smo-syntax-conventions"></a>Conventions de syntaxe SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Les conventions typographiques de Management Objects (Smo) sont basées sur [!INCLUDE[msCoName](../../includes/msconame-md.md)] celles utilisées dans les documents de référence de Visual Studio .net.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Les conventions typographiques de Management Objects (SMO) sont basées sur [!INCLUDE[msCoName](../../includes/msconame-md.md)] celles utilisées dans les documents de référence de Visual Studio .net.  
   
 |Convention|Utilisé pour|  
 |----------------|--------------|  

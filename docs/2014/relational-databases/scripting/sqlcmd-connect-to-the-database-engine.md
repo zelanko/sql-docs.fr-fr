@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 94025942a6e06f4dfb7b0eeab43487e4a6308e4f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243264"
 ---
 # <a name="connect-to-the-database-engine-with-sqlcmd"></a>Se connecter au moteur de base de données avec sqlcmd
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]prend en charge la communication client avec le protocole réseau TCP/IP (par défaut) et le protocole de canaux nommés. Le protocole de mémoire partagée est également disponible si le client se connecte à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur le même ordinateur. Il existe trois méthodes courantes de sélection du protocole. Le protocole utilisé par l’utilitaire **sqlcmd** est déterminé dans l’ordre suivant :  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la communication cliente par le biais du protocole réseau TCP/IP (protocole par défaut) et du protocole des canaux nommés. Le protocole de mémoire partagée est également disponible si le client se connecte à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur le même ordinateur. Il existe trois méthodes courantes de sélection du protocole. Le protocole utilisé par l’utilitaire **sqlcmd** est déterminé dans l’ordre suivant :  
   
--   **sqlcmd** utilise le protocole spécifié dans le cadre de la chaîne de connexion comme décrit ci-dessous.  
+-   **sqlcmd** utilise le protocole spécifié dans la chaîne de connexion comme décrit ci-après.  
   
 -   Si aucun protocole n’est spécifié dans la chaîne de connexion, **sqlcmd** utilise le protocole défini dans l’alias auquel il se connecte. Pour configurer **sqlcmd** pour utiliser un protocole réseau spécifique en créant un alias, consultez [Créer ou modifier un alias de serveur devant être utilisé par un client &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md).  
   

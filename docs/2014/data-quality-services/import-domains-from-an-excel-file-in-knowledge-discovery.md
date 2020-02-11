@@ -11,18 +11,18 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0ca7391a025cf0fe4477cc9008c51c0a06a59f00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480547"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>Importer les domaines d'un fichier Excel dans la découverte des connaissances
-  Cette rubrique explique comment importer un ou plusieurs domaines d'un fichier Excel dans l'activité de découverte de connaissance [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). L'importation simplifie le processus de génération de la connaissance, en permettant de gagner du temps et d'économiser les efforts. Elle permet aux personnes qui ont des données dans un fichier Excel ou un fichier texte de créer une base de connaissances avec ces données. (Consultez [Importer des valeurs d’un fichier Excel dans un domaine](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md) pour plus d’informations sur l’importation de valeurs dans un domaine d’une base de connaissances existante.) L'exportation vers un fichier Excel n'est pas prise en charge.  
+  Cette rubrique explique comment importer un ou plusieurs domaines d'un fichier Excel dans l'activité de découverte de connaissance [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). L'importation simplifie le processus de génération de la connaissance, en permettant de gagner du temps et d'économiser les efforts. Elle permet aux personnes qui ont des données dans un fichier Excel ou un fichier texte de créer une base de connaissances avec ces données. (Consultez [importer des valeurs à partir d’un fichier Excel dans un domaine](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md) pour plus d’informations sur l’importation de valeurs dans un domaine d’une base de connaissances existante.) L’exportation vers un fichier Excel n’est pas prise en charge.  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a>Conditions préalables  
  Pour importer les domaines d'un fichier Excel, Excel doit être installé sur l'ordinateur où l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] est installée ; vous devez avoir créé un fichier Excel avec des valeurs de domaine (consultez [How the import works](#How)) et avoir créé et ouvert une base de connaissances dans laquelle importer le domaine.  
   
 ###  <a name="Security"></a> Sécurité  
@@ -30,9 +30,9 @@ ms.locfileid: "65480547"
 ####  <a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour importer les domaines d'un fichier Excel.  
   
-##  <a name="Import"></a> Importer les domaines d'un fichier Excel vers une base de connaissances  
+##  <a name="Import"></a>Importer des domaines à partir d’un fichier Excel dans une base de connaissances  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’application Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Dans l'écran d'accueil [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , effectuez l'une des opérations suivantes :  
   
@@ -52,7 +52,7 @@ ms.locfileid: "65480547"
   
 8.  Sélectionnez une colonne, puis mappez un domaine existant à la colonne, ou créez un nouveau domaine en cliquant sur l'icône **Créer un domaine** , en créant un domaine dans la boîte de dialogue **Créer un domaine** , puis en mappant le domaine à la colonne. Le type de données du domaine doit correspondre au type de données de la colonne. Répétez ces étapes pour toutes les colonnes de la feuille de calcul.  
   
-9. Cliquer sur **Suivant**.  
+9. Cliquez sur **Suivant**.  
   
 10. Dans la page **Découverte** , cliquez sur **Démarrer** pour analyser les données de la feuille de calcul Excel.  
   
@@ -67,10 +67,10 @@ ms.locfileid: "65480547"
   
 14. Vérifiez que la base de connaissances a été publiée, puis cliquez **OK**.  
   
-##  <a name="FollowUp"></a> Suivi : après l’importation de domaines à partir d’un fichier Excel  
+##  <a name="FollowUp"></a>Suivi : après l’importation des domaines à partir d’un fichier Excel  
  Après avoir importé les domaines d'un fichier Excel, vous pouvez ajouter les connaissances aux domaines ou utiliser les domaines dans un projet de nettoyage ou de correspondance, en fonction du contenu des domaines. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../../2014/data-quality-services/managing-a-domain.md), [Gestion d’un domaine composite](../../2014/data-quality-services/managing-a-composite-domain.md), [Créer une stratégie de correspondance](../../2014/data-quality-services/create-a-matching-policy.md), [Nettoyage des données](../../2014/data-quality-services/data-cleansing.md) ou [Correspondance de données](../../2014/data-quality-services/data-matching.md).  
   
-##  <a name="How"></a> How the import works  
+##  <a name="How"></a>Fonctionnement de l’importation  
  Dans l'opération d'importation, DQS interprète un fichier Excel comme suit :  
   
 -   Une colonne représente un domaine.  

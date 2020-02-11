@@ -1,5 +1,5 @@
 ---
-title: Éditeur du Gestionnaire de connexions MSMQ | Microsoft Docs
+title: Éditeur du gestionnaire de connexions MSMQ | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 91b448a87408a830464b50f641e6eefa8cf3f12c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057642"
 ---
 # <a name="msmq-connection-manager-editor"></a>Éditeur du gestionnaire de connexions MSMQ
@@ -36,13 +36,15 @@ ms.locfileid: "66057642"
  **Description**  
  Décrivez le gestionnaire de connexions. Il est recommandé d'indiquer ici l'usage auquel le gestionnaire de connexions est destiné, de sorte que les packages soient correctement documentés et plus faciles à gérer.  
   
- **Chemin d'accès**  
+ **Chemin d’accès**  
  Tapez le chemin d'accès complet de la file d'attente de messages. Le format du chemin d'accès dépend du type de file d'attente.  
   
 |Type de file d'attente|Exemple de chemin d'accès|  
 |----------------|-----------------|  
-|Public|\<nom_ordinateur >\\<nom_file_attente\>|  
-|Privé|\<nom_ordinateur >\Private$\\<nom_file_attente\>|  
+|Public|
+  \<nom_ordinateur >\\<nom_file_attente\>|  
+|Private|
+  \<nom_ordinateur >\Private$\\<nom_file_attente\>|  
   
  Vous pouvez utiliser "." pour représenter l'ordinateur local.  
   

@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5c7676d046a504a6f230df7a1352e791802ce7b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63288270"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
@@ -109,10 +109,10 @@ FOR XML AUTO
 ## <a name="see-also"></a>Voir aussi  
  [Syntaxe de base de la clause FOR XML](basic-syntax-of-the-for-xml-clause.md)   
  [Utiliser le mode RAW avec FOR XML](use-raw-mode-with-for-xml.md)   
- [UTiliser le mode AUTO avec FOR XML](use-auto-mode-with-for-xml.md)   
+ [Utiliser le mode AUTO avec FOR XML](use-auto-mode-with-for-xml.md)   
  [Utiliser le mode EXPLICIT avec FOR XML](use-explicit-mode-with-for-xml.md)   
  [Utiliser le mode PATH avec FOR XML](use-path-mode-with-for-xml.md)   
- [OPENXML &#40;SQL Server&#41;](openxml-sql-server.md)   
+ [&#41;de SQL Server &#40;OPENXML](openxml-sql-server.md)   
  [Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES](add-namespaces-to-queries-with-with-xmlnamespaces.md)  
   
   

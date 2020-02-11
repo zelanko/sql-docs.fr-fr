@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6cd3599ff68fadf6a55af1c57379e9cdd8cc4b5d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154495"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>Configurer DQS pour utiliser des données de référence
@@ -26,29 +26,29 @@ ms.locfileid: "70154495"
   
 ## <a name="before-you-begin"></a>Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
- Pour utiliser des données de référence de Marketplace, vous devez disposer d'une clé de compte Marketplace valide. Pour obtenir des informations détaillées sur la création d’une clé de compte Place de marché, consultez [Créer votre compte](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936). Vous pouvez également créer une clé de compte Marketplace à partir de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Pour ce faire, cliquez sur **Configuration** sous **Administration** dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , puis cliquez sur **Créer un ID de compte DataMarket** sous l'onglet **Données de référence** .  
+###  <a name="Prerequisites"></a>Conditions préalables  
+ Pour utiliser des données de référence de Marketplace, vous devez disposer d'une clé de compte Marketplace valide. Pour plus d’informations sur la création d’une clé de compte Marketplace, consultezhttps://go.microsoft.com/fwlink/?LinkId=212936) [créer votre compte](https://go.microsoft.com/fwlink/?LinkId=212936) (. Vous pouvez également créer une clé de compte de la Place de marché à partir de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Pour ce faire, cliquez sur **Configuration** sous **Administration** dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], puis cliquez sur **Créer un ID de compte DataMarket** sous l'onglet **Données de référence**.  
   
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_administrator sur la base de données DQS_MAIN pour configurer les paramètres du service de données de référence dans DQS.  
   
-##  <a name="Marketplace"></a> Configurer DQS pour utiliser des données de référence de Marketplace  
+##  <a name="Marketplace"></a>Configurer DQS pour utiliser des données de référence de Marketplace  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’application Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , sous **Administration**, cliquez sur **Configuration**.  
   
 3.  Sous l'onglet **Données de référence** , sous la zone **Paramètres réseau** , tapez les valeurs appropriées dans les zones **Serveur proxy** et **Port** si vous ou votre organisation utilisez un serveur proxy pour vous connecter à Internet.  
   
-4.  Spécifiez la clé de compte Marketplace dans la zone **ID de compte DataMarket** , puis cliquez sur l'icône **Valider l'ID de compte DataMarket** pour valider la clé de compte. Un message indiquant si la clé de compte Marketplace spécifiée est valide s'affiche.  
+4.  Spécifiez la clé de compte de la Place de marché dans la zone **ID de compte DataMarket**, puis cliquez sur l'icône **Valider l'ID de compte DataMarket** pour valider la clé de compte. Un message indiquant si la clé de compte Marketplace spécifiée est valide s'affiche.  
   
  Vous êtes maintenant prêt à utiliser, dans DQS, les services de données de référence Marketplace faisant l'objet d'un abonnement pour la clé de compte Marketplace spécifiée.  
   
-##  <a name="ThirdParty"></a> Configurer DQS pour utiliser des données de référence de fournisseurs de données de référence tiers en ligne directs  
+##  <a name="ThirdParty"></a>Configurer DQS pour utiliser des données de référence provenant de fournisseurs de données de référence tiers en ligne directs  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’application Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , sous **Administration**, cliquez sur **Configuration**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "70154495"
   
  Vous êtes maintenant prêt à utiliser, dans DQS, les services de données de référence à partir du fournisseur de données de référence tiers en ligne direct que vous venez de configurer.  
   
-##  <a name="FollowUp"></a> Suivi : Après la configuration de DQS pour utiliser des données de référence  
+##  <a name="FollowUp"></a>Suivi : après avoir configuré DQS pour utiliser des données de référence  
  Vous devez maintenant mapper les domaines de base de connaissances requis aux données de référence disponibles auprès des fournisseurs de données que vous venez de configurer. Pour ce faire, consultez [attacher un domaine ou un domaine composite à des données de référence](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
   

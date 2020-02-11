@@ -1,5 +1,5 @@
 ---
-title: Options de requête (Page de grille) de résultats | Microsoft Docs
+title: Résultats des options de requête (page grille) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,40 +13,40 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 7c50957f59ef4e4743ca1667d6eb7a97869bec18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089005"
 ---
 # <a name="query-options-results-grid-page"></a>Options de requête – Résultats (page Grille)
   Cette page vous permet de spécifier les options d'affichage du jeu de résultats d'une requête au format grille.  
   
 ## <a name="options"></a>Options  
- **Inclure la requête dans l'ensemble de résultats**  
+ **Inclure la requête dans le jeu de résultats**  
  Retourne le texte de la requête dans l'ensemble de résultats.  
   
- **Inclure des en-têtes de colonne lors de la copie ou de l'enregistrement de résultats**  
+ **Inclure les en-têtes de colonne lors de la copie ou de l’enregistrement des résultats**  
  Permet d'inclure les en-têtes (titres) des colonnes lorsque les résultats sont copiés dans le Presse-papiers ou enregistrés dans un fichier. Désactivez cette case à cocher si vous voulez que les résultats copiés ou enregistrés contiennent seulement les données, sans les en-têtes des colonnes.  
   
- **Ignorer les résultats après l'exécution**  
+ **Ignorer les résultats après l’exécution**  
  Permet de libérer de la mémoire en ignorant les résultats de la requête une fois qu'ils ont été affichés à l'écran.  
   
  **Afficher les résultats dans un onglet séparé**  
  Permet d'afficher l'ensemble de résultats dans une nouvelle fenêtre de document et non pas en bas de la fenêtre de requête de document.  
   
- **Basculer vers l'onglet des résultats après l'exécution de la requête**  
+ **Basculer vers l’onglet résultats après l’exécution de la requête**  
  Affiche automatiquement l'ensemble de résultats à l'écran.  
   
  **Nombre maximal de caractères récupérés**  
- **Données non-XML :**  
+ **Données non-XML**:  
   
  Entrez un nombre compris entre 1 et 65 535 pour indiquer le nombre maximal de caractères affichés dans chaque cellule.  
   
 > [!NOTE]  
 >  Si vous précisez un nombre trop élevé, les données de l'ensemble de résultats risquent d'être tronquées à l'affichage. Le nombre maximal de caractères affichés dans chaque cellule dépend de la taille de police. Si les ensembles de résultats retournés sont volumineux, il est préférable de ne pas spécifier une valeur trop élevée sans quoi vous risquez d'être confronté à une mémoire insuffisante pour l'exécution de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou à une dégradation des performances système.  
   
- **Données XML :**  
+ **Données XML**:  
   
  Sélectionnez **1 Mo**, **2 Mo**ou **5 Mo**. Sélectionnez **Illimité** pour récupérer tous les caractères.  
   

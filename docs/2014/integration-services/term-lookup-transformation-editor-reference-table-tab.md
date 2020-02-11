@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Transformation de recherche de terme (onglet Table de référence) | Microsoft Docs
+title: Éditeur de transformation de recherche de terme (onglet table de référence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e28dda733e4c93c482e26eeb207189014a1940da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055161"
 ---
 # <a name="term-lookup-transformation-editor-reference-table-tab"></a>Éditeur de transformation de recherche de terme (onglet Table de référence)
@@ -41,8 +41,8 @@ ms.locfileid: "66055161"
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de transformation de recherche de terme &#40;onglet Recherche de terme&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
- [Éditeur de transformation de recherche de terme &#40;onglet Avancé&#41;.](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
+ [Éditeur de transformation de recherche de terme &#40;onglet recherche de terme&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
+ [Éditeur de transformation de recherche de terme &#40;onglet Avancé&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
  [Transformation d'extraction de terme](data-flow/transformations/term-extraction-transformation.md)  
   
   

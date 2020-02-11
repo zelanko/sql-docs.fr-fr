@@ -1,5 +1,5 @@
 ---
-title: Abonnement, historique de synchronisation (abonnement de fusion, SQL Server 2005 et versions ultérieur) | Microsoft Docs
+title: Abonnement, historique de synchronisation (abonnement de fusion, SQL Server 2005 et versions ultérieures) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38bc4d44b988192be76ed613f52793dc2e8daefc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629710"
 ---
 # <a name="subscription-synchronization-history-merge-subscription-sql-server-2005-and-later"></a>Abonnement, Historique de synchronisation (Abonnement de fusion, SQL Server 2005 et version ultérieure)
@@ -34,7 +34,7 @@ ms.locfileid: "62629710"
   
 -   Error  
   
--   Terminé  
+-   Completed  
   
 -   Nouvel essai  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62629710"
  **Heure de fin**  
  Heure de fin de la session. Si l'agent ne s'est pas arrêté, ce champ est vide.  
   
- **Duration**  
+ **Durée**  
  Durée d'exécution de l'Agent de fusion au cours d'une session. La durée correspond au délai écoulé si l'Agent est actif ou au délai total si l'Agent a déjà été exécuté.  
   
  **Commandes téléchargées**  
@@ -55,7 +55,7 @@ ms.locfileid: "62629710"
  **Commandes téléchargées**  
  Nombre de lignes téléchargées en aval au cours de la session de l'Agent de fusion.  
   
- **Message d'erreur**  
+ **Message d’erreur**  
  Si la session s'est terminée par une erreur, ce champ contient le dernier message d'erreur consigné par l'Agent de fusion. Dans le cas contraire, ce champ est vide.  
   
  **Article**  
@@ -74,7 +74,7 @@ ms.locfileid: "62629710"
  **% du total**  
  Pourcentage du temps de traitement total correspondant à chaque phase dans la session sélectionnée.  
   
- **Duration**  
+ **Durée**  
  Durée passée dans chaque phase de traitement. La durée correspond au délai écoulé si l'Agent de fusion est en cours d'exécution au cours de la session ou au délai total s'il a déjà été exécuté.  
   
  **Inserts**  

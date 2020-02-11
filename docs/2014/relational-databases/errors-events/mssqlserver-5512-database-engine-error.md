@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb94a88d749b7d850eee9eff96cd78ef8cf9e08d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913620"
 ---
-# <a name="mssqlserver5512"></a>MSSQLSERVER_5512
+# <a name="mssqlserver_5512"></a>MSSQLSERVER_5512
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|MSSQLSERVER|  
-|ID d'événement|5512|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|5512|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|FS_TRUNCATEDIR_FAILED|  
 |Texte du message|L'erreur 0x%x (% ls) a été rencontrée pendant la troncation du répertoire « '%.*ls ».|  
@@ -36,6 +36,6 @@ ms.locfileid: "62913620"
  Échec de l’opération de troncation.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
- Pour connaître la cause de l’erreur, consultez le code d’état Windows spécifique. Pour plus d’informations sur ce code d’état, consultez [événements et Messages d’erreur au Support Microsoft](https://support.microsoft.com/search?query=events%20and%20error%20messages).  
+ Pour connaître la cause de l’erreur, consultez le code d’État Windows spécifique. Pour plus d’informations sur ce code d’État, consultez [messages d’événement et d’erreur à support Microsoft](https://support.microsoft.com/search?query=events%20and%20error%20messages).  
   
   

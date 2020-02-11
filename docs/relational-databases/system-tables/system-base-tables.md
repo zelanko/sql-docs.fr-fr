@@ -1,5 +1,5 @@
 ---
-title: Tables de Base système | Microsoft Docs
+title: Tables de base système | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,22 +17,22 @@ ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 43f5e96a280614d3f69472c7d794489bf1a5ba58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029562"
 ---
 # <a name="system-base-tables"></a>Tables de base système
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Les tables de base système sont des tables sous-jacentes qui stockent les métadonnées pour une base de données spécifique. Le **master** base de données est spécial à cet égard, car il contient des tables supplémentaires qui ne figurent pas dans un des autres bases de données. Ces tables contiennent des métadonnées persistantes dont l'étendue couvre le serveur.  
+  Les tables de base système sont des tables sous-jacentes qui stockent les métadonnées pour une base de données spécifique. La base de données **Master** est spéciale dans ce cas, car elle contient des tables supplémentaires qui sont introuvables dans les autres bases de données. Ces tables contiennent des métadonnées persistantes dont l'étendue couvre le serveur.  
   
 > [!IMPORTANT]  
 >  Les tables de base système sont uniquement utilisées dans [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et ne sont pas destinées à un usage général. Elles peuvent faire l'objet de modifications et la compatibilité n'est pas garantie.  
   
 ## <a name="system-base-table-metadata"></a>Métadonnées des tables de base système  
- Un bénéficiaire qui possède l’autorisation CONTROL, ALTER ou VIEW DEFINITION sur une base de données peut afficher les métadonnées de table de base système dans le **sys.objects** vue de catalogue. Le bénéficiaire peut également résoudre les noms et ID d’objets des tables de base système à l’aide des fonctions intégrées telles que [OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md) et [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md).  
+ Un bénéficiaire qui dispose de l’autorisation CONTROL, ALTER ou VIEW DEFINITION sur une base de données peut voir les métadonnées de la table de base système dans l’affichage catalogue **sys. Objects** . Le bénéficiaire peut également résoudre les noms et les ID d’objet des tables de base système en utilisant des fonctions intégrées telles que [object_name](../../t-sql/functions/object-name-transact-sql.md) et [object_id](../../t-sql/functions/object-id-transact-sql.md).  
   
  Pour créer une liaison avec une table de base système, un utilisateur doit se connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de la connexion administrateur dédiée. Une tentative d'exécution d'une requête SELECT à partir d'une table de base système sans connexion via la DAC provoque une erreur.  
   
@@ -44,47 +44,47 @@ ms.locfileid: "68029562"
   
 |Table de base|Description|  
 |----------------|-----------------|  
-|**Sys.sysschobjs**|Existe dans toutes les bases de données. Chaque ligne représente un objet de la base de données.|  
-|**Sys.sysbinobjs**|Existe dans toutes les bases de données. Contient une ligne pour chaque entité de Service Broker dans la base de données. Les entités de Service Broker incluent les éléments suivants :<br /><br /> type de message<br /><br /> contrat de service<br /><br /> de diffusion en continu<br /><br /> Les noms et les types utilisent un classement binaire fixe.|  
-|**Sys.sysclsobjs**|Existe dans toutes les bases de données. Contient une ligne pour chaque entité classifiée qui partage les mêmes propriétés communes qui incluent les éléments suivants :<br /><br /> Assembly<br /><br /> unité de sauvegarde<br /><br /> Catalogue de texte intégral<br /><br /> Partition (fonction)<br /><br /> Schéma de partition<br /><br /> groupe de fichiers<br /><br /> clé d'obfuscation|  
-|**Sys.sysnsobjs**|Existe dans toutes les bases de données. Contient une ligne pour chaque entité de l'étendue de l'espace de noms. Cette table est utilisée pour le stockage des entités de collection XML.|  
-|**Sys.syscolpars**|Existe dans toutes les bases de données. Contient une ligne pour chaque colonne de table, chaque vue ou chaque fonction table. Contient également des lignes pour chaque paramètre d'une procédure ou d'une fonction.|  
-|**Sys.systypedsubobjs**|Existe dans toutes les bases de données. Contient une ligne pour chaque sous-entité typée. Seuls les paramètres de la fonction de partition appartiennent à cette catégorie.|  
-|**Sys.sysidxstats**|Existe dans toutes les bases de données. Contient une ligne pour chaque index ou statistique pour les tables et les vues indexées<br /><br /> Remarque : Chaque index (segment excepté) est associé à une statistique qui porte le même nom que l’index.|  
-|**Sys.sysiscols**|Existe dans toutes les bases de données. Contient une ligne pour chaque colonne d'index et de statistiques persistante.|  
-|**Sys.sysscalartypes**|Existe dans toutes les bases de données. Contient une ligne pour chaque type défini par l'utilisateur ou chaque type système.|  
-|**Sys.sysdbreg**|Il existe dans le **master** uniquement la base de données. Contient une ligne pour chaque base de données inscrite.|  
-|**Sys.sysxsrvs**|Il existe dans le **master** uniquement la base de données. Contient une ligne pour chaque serveur local, lié ou distant.|  
-|**Sys.sysrmtlgns**|Cette table de base système existe dans le **master** uniquement la base de données. Contient une ligne pour chaque mappage d'ouverture de session distante. Cela est utilisé pour mapper les connexions entrantes issues d'un serveur correspondant et accédant à une connexion locale.|  
-|**Sys.syslnklgns**|Il existe dans le **master** uniquement la base de données. Contient une ligne pour chaque mappage de connexion liée. Les mappages de connexions liées sont utilisés par des appels de procédure distante et par des requêtes distribuées qui émanent d'un serveur local vers un serveur lié correspondant.|  
-|**Sys.sysxlgns**|Il existe dans le **master** uniquement la base de données. Contient une ligne pour chaque principal de serveur.|  
-|**Sys.sysdbfiles**|Existe dans toutes les bases de données. Si la colonne **dbid** est égal à zéro, la ligne représente un fichier qui appartient à cette base de données. Dans le **master** de base de données, la colonne **dbid** peut être différente de zéro. Lorsque c'est le cas, la ligne représente un fichier maître.|  
-|**Sys.sysusermsg**|Il existe dans le **master** uniquement la base de données. Chaque ligne représente un message d'erreur défini par l'utilisateur.|  
-|**Sys.sysprivs**|Existe dans toutes les bases de données. Contient une ligne pour chaque autorisation de niveau base de données ou serveur.<br /><br /> Remarque : Les autorisations au niveau du serveur sont stockées dans le **master** base de données.|  
-|**Sys.sysowners**|Existe dans toutes les bases de données. Chaque ligne représente un principal de base de données.|  
-|**Sys.sysobjkeycrypts**|Existe dans toutes les bases de données. Contient une ligne pour chaque clé symétrique, chaque chiffrement ou chaque propriété de chiffrement associé à un objet.|  
-|**Sys.syscerts**|Existe dans toutes les bases de données. Contient une ligne pour chaque certificat dans une base de données.|  
-|**Sys.sysasymkeys**|Existe dans toutes les bases de données. Chaque ligne représente une clé asymétrique.|  
-|**Sys.ftinds**|Existe dans toutes les bases de données. Contient une ligne pour chaque index de texte intégral dans la base de données.|  
-|**Sys.sysxprops**|Existe dans toutes les bases de données. Contient une ligne pour chaque propriété étendue.|  
-|**Sys.sysallocunits**|Existe dans toutes les bases de données. Contient une ligne pour chaque unité d'allocation de stockage.|  
-|**Sys.sysrowsets**|Existe dans toutes les bases de données. Contient une ligne pour chaque ensemble de lignes de partition pour un index ou un segment.|  
-|**Sys.sysrowsetrefs**|Existe dans toutes les bases de données. Contient une ligne pour chaque référence d'index à un ensemble de lignes.|  
-|**Sys.syslogshippers**|Il existe dans le **master** uniquement la base de données. Contient une ligne pour chaque témoin de mise en miroir de bases de données.|  
-|**Sys.sysremsvcbinds**|Existe dans toutes les bases de données. Contient une ligne pour chaque liaison de service distant.|  
-|**Sys.sysconvgroup**|Existe dans toutes les bases de données. Contient une ligne pour chaque instance de service dans Service Broker.|  
-|**Sys.sysxmitqueue**|Existe dans toutes les bases de données. Contient une ligne pour chaque file d'attente de transmission de Service Broker.|  
-|**Sys.sysdesend**|Existe dans toutes les bases de données. Contient une ligne pour chaque point de terminaison d'envoi d'une conversation Service Broker.|  
-|**Sys.sysdercv**|Existe dans toutes les bases de données. Contient une ligne pour chaque point de terminaison récepteur d'une conversation Service Broker.|  
-|**Sys.sysendpts**|Il existe dans le **master** uniquement la base de données. Contient une ligne pour chaque point de terminaison créé dans le serveur.|  
-|**Sys.syswebmethods**|Il existe dans le **master** uniquement la base de données. Contient une ligne pour chaque méthode SOAP définie sur un point de terminaison HTTP SOAP créé sur le serveur.|  
-|**Sys.sysqnames**|Existe dans toutes les bases de données. Contient une ligne pour chaque espace de noms ou chaque nom qualifié à un jeton d'ID de 4 octets.|  
-|**Sys.sysxmlcomponent**|Existe dans toutes les bases de données. Chaque ligne représente un composant de schéma XML.|  
-|**Sys.sysxmlfacet**|Existe dans toutes les bases de données. Contient une ligne pour chaque facette (restriction) XML d'une définition de type XML.|  
-|**Sys.sysxmlplacement**|Existe dans toutes les bases de données. Contient une ligne pour chaque emplacement XML pour les composants XML.|  
-|**Sys.syssingleobjrefs**|Existe dans toutes les bases de données. Contient une ligne pour chaque référence générale de N à 1.|  
-|**Sys.sysmultiobjrefs**|Existe dans toutes les bases de données. Contient une ligne pour chaque référence générale de N à N.|  
-|**Sys.sysobjvalues**|Existe dans toutes les bases de données. Contient une ligne pour chaque propriété de valeur générale d'une entité.|  
-|**Sys.sysguidrefs**|Existe dans toutes les bases de données. Contient une ligne pour chaque référence d'ID classifiée GUID.|  
+|**sys.sysschobjs**|Existe dans toutes les bases de données. Chaque ligne représente un objet de la base de données.|  
+|**sys.sysbinobjs**|Existe dans toutes les bases de données. Contient une ligne pour chaque entité de Service Broker dans la base de données. Les entités de Service Broker incluent les éléments suivants :<br /><br /> type de message<br /><br /> contrat de service<br /><br /> Service<br /><br /> Les noms et les types utilisent un classement binaire fixe.|  
+|**sys.sysclsobjs**|Existe dans toutes les bases de données. Contient une ligne pour chaque entité classifiée qui partage les mêmes propriétés communes qui incluent les éléments suivants :<br /><br /> Assembly<br /><br /> unité de sauvegarde<br /><br /> Catalogue de texte intégral<br /><br /> Fonction de partition<br /><br /> Schéma de partition<br /><br /> groupe de fichiers<br /><br /> clé d'obfuscation|  
+|**sys.sysnsobjs**|Existe dans toutes les bases de données. Contient une ligne pour chaque entité de l'étendue de l'espace de noms. Cette table est utilisée pour le stockage des entités de collection XML.|  
+|**sys.syscolpars**|Existe dans toutes les bases de données. Contient une ligne pour chaque colonne de table, chaque vue ou chaque fonction table. Contient également des lignes pour chaque paramètre d'une procédure ou d'une fonction.|  
+|**sys.systypedsubobjs**|Existe dans toutes les bases de données. Contient une ligne pour chaque sous-entité typée. Seuls les paramètres de la fonction de partition appartiennent à cette catégorie.|  
+|**sys.sysidxstats**|Existe dans toutes les bases de données. Contient une ligne pour chaque index ou statistique pour les tables et les vues indexées<br /><br /> Remarque : chaque index (à l’exception du segment de mémoire) est associé à une statistique qui porte le même nom que l’index.|  
+|**sys.sysiscols**|Existe dans toutes les bases de données. Contient une ligne pour chaque colonne d'index et de statistiques persistante.|  
+|**sys.sysscalartypes**|Existe dans toutes les bases de données. Contient une ligne pour chaque type défini par l'utilisateur ou chaque type système.|  
+|**sys.sysdbreg**|Existe uniquement dans la base de données **Master** . Contient une ligne pour chaque base de données inscrite.|  
+|**sys.sysxsrvs**|Existe uniquement dans la base de données **Master** . Contient une ligne pour chaque serveur local, lié ou distant.|  
+|**sys.sysrmtlgns**|Cette table de base système existe uniquement dans la base de données **Master** . Contient une ligne pour chaque mappage d'ouverture de session distante. Cela est utilisé pour mapper les connexions entrantes issues d'un serveur correspondant et accédant à une connexion locale.|  
+|**sys.syslnklgns**|Existe uniquement dans la base de données **Master** . Contient une ligne pour chaque mappage de connexion liée. Les mappages de connexions liées sont utilisés par des appels de procédure distante et par des requêtes distribuées qui émanent d'un serveur local vers un serveur lié correspondant.|  
+|**sys.sysxlgns**|Existe uniquement dans la base de données **Master** . Contient une ligne pour chaque principal de serveur.|  
+|**sys.sysdbfiles**|Existe dans toutes les bases de données. Si la colonne **dbid** est égale à zéro, la ligne représente un fichier qui appartient à cette base de données. Dans la base de données **Master** , la colonne **dbid** peut être différente de zéro. Lorsque c'est le cas, la ligne représente un fichier maître.|  
+|**sys.sysusermsg**|Existe uniquement dans la base de données **Master** . Chaque ligne représente un message d'erreur défini par l'utilisateur.|  
+|**sys.sysprivs**|Existe dans toutes les bases de données. Contient une ligne pour chaque autorisation de niveau base de données ou serveur.<br /><br /> Remarque : les autorisations au niveau du serveur sont stockées dans la base de données **Master** .|  
+|**sys.sysowners**|Existe dans toutes les bases de données. Chaque ligne représente un principal de base de données.|  
+|**sys.sysobjkeycrypts**|Existe dans toutes les bases de données. Contient une ligne pour chaque clé symétrique, chaque chiffrement ou chaque propriété de chiffrement associé à un objet.|  
+|**sys.syscerts**|Existe dans toutes les bases de données. Contient une ligne pour chaque certificat dans une base de données.|  
+|**sys.sysasymkeys**|Existe dans toutes les bases de données. Chaque ligne représente une clé asymétrique.|  
+|**sys.ftinds**|Existe dans toutes les bases de données. Contient une ligne pour chaque index de texte intégral dans la base de données.|  
+|**sys.sysxprops**|Existe dans toutes les bases de données. Contient une ligne pour chaque propriété étendue.|  
+|**sys.sysallocunits**|Existe dans toutes les bases de données. Contient une ligne pour chaque unité d'allocation de stockage.|  
+|**sys.sysrowsets**|Existe dans toutes les bases de données. Contient une ligne pour chaque ensemble de lignes de partition pour un index ou un segment.|  
+|**sys.sysrowsetrefs**|Existe dans toutes les bases de données. Contient une ligne pour chaque référence d'index à un ensemble de lignes.|  
+|**sys.syslogshippers**|Existe uniquement dans la base de données **Master** . Contient une ligne pour chaque témoin de mise en miroir de bases de données.|  
+|**sys.sysremsvcbinds**|Existe dans toutes les bases de données. Contient une ligne pour chaque liaison de service distant.|  
+|**sys.sysconvgroup**|Existe dans toutes les bases de données. Contient une ligne pour chaque instance de service dans Service Broker.|  
+|**sys.sysxmitqueue**|Existe dans toutes les bases de données. Contient une ligne pour chaque file d'attente de transmission de Service Broker.|  
+|**sys.sysdesend**|Existe dans toutes les bases de données. Contient une ligne pour chaque point de terminaison d'envoi d'une conversation Service Broker.|  
+|**sys.sysdercv**|Existe dans toutes les bases de données. Contient une ligne pour chaque point de terminaison récepteur d'une conversation Service Broker.|  
+|**sys.sysendpts**|Existe uniquement dans la base de données **Master** . Contient une ligne pour chaque point de terminaison créé dans le serveur.|  
+|**sys.syswebmethods**|Existe uniquement dans la base de données **Master** . Contient une ligne pour chaque méthode SOAP définie sur un point de terminaison HTTP SOAP créé sur le serveur.|  
+|**sys.sysqnames**|Existe dans toutes les bases de données. Contient une ligne pour chaque espace de noms ou chaque nom qualifié à un jeton d'ID de 4 octets.|  
+|**sys.sysxmlcomponent**|Existe dans toutes les bases de données. Chaque ligne représente un composant de schéma XML.|  
+|**sys.sysxmlfacet**|Existe dans toutes les bases de données. Contient une ligne pour chaque facette (restriction) XML d'une définition de type XML.|  
+|**sys.sysxmlplacement**|Existe dans toutes les bases de données. Contient une ligne pour chaque emplacement XML pour les composants XML.|  
+|**sys.syssingleobjrefs**|Existe dans toutes les bases de données. Contient une ligne pour chaque référence générale de N à 1.|  
+|**sys.sysmultiobjrefs**|Existe dans toutes les bases de données. Contient une ligne pour chaque référence générale de N à N.|  
+|**sys.sysobjvalues**|Existe dans toutes les bases de données. Contient une ligne pour chaque propriété de valeur générale d'une entité.|  
+|**sys.sysguidrefs**|Existe dans toutes les bases de données. Contient une ligne pour chaque référence d'ID classifiée GUID.|  
   
   

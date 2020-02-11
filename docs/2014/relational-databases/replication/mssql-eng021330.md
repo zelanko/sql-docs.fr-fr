@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e3640999842c7bd61c368bf967f74183f5d57099
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63023392"
 ---
-# <a name="mssqleng021330"></a>MSSQL_ENG021330
+# <a name="mssql_eng021330"></a>MSSQL_ENG021330
     
 ## <a name="message-details"></a>Détails du message  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|21330|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|21330|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique||  
 |Texte du message|Impossible de créer un sous-répertoire dans le répertoire de travail de la réplication.(%1!)|  
@@ -39,7 +39,7 @@ ms.locfileid: "63023392"
  Vérifiez que le chemin d'accès correct a été spécifié pour le dossier d'instantané et que le compte sous lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute sur le serveur de publication a des autorisations suffisantes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécifier l’emplacement d’instantanés par défaut](snapshot-options.md#snapshot-folder-locations)   
+ [Spécifier l’emplacement par défaut des instantanés](snapshot-options.md#snapshot-folder-locations)   
  [Guide de référence des erreurs et des événements &#40;réplication&#41;](errors-and-events-reference-replication.md)   
  [Initialiser un abonnement transactionnel sans instantané](initialize-a-transactional-subscription-without-a-snapshot.md)  
   

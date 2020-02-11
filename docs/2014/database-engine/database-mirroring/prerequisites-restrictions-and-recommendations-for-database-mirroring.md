@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9763385093db6e649e60ab7a6be74f8f28466e1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754599"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>Conditions préalables, limitations et recommandations relatives à la mise en miroir de bases de données
@@ -37,21 +37,21 @@ ms.locfileid: "62754599"
   
 
   
-##  <a name="DbmSupport"></a> Prise en charge de la mise en miroir de bases de données  
+##  <a name="DbmSupport"></a>Prise en charge de la mise en miroir de bases de données  
  Pour plus d’informations sur la prise en charge de la mise en miroir de bases de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Notez que la mise en miroir de bases de données fonctionne avec tous les niveaux de compatibilité de base de données pris en charge. Pour plus d’informations sur les niveaux de compatibilité pris en charge, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
   
 
   
-##  <a name="Prerequisites"></a> Conditions préalables  
+##  <a name="Prerequisites"></a>Conditions préalables  
   
 -   Pour établir une session de mise en miroir, les serveurs partenaires et le serveur témoin, s'il existe, doivent être exécutés sur la même version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Les deux serveurs partenaires, c'est-à-dire le principal et le serveur miroir doivent exécuter la même version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le serveur témoin, le cas échéant, peut s'exécuter sur n'importe quelle édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prend en charge la mise en miroir de bases de données.  
   
     > [!NOTE]  
-    >  Vous pouvez mettre à niveau des instances de serveur qui participent à une session de mise en miroir vers une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, voir [réduire les temps d’arrêt pour la mise en miroir de bases de données lors de la mise à niveau d’Instances de serveur](upgrading-mirrored-instances.md).  
+    >  Vous pouvez mettre à niveau des instances de serveur qui participent à une session de mise en miroir vers une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, voir [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md).  
   
 -   La base de données doit utiliser le mode de récupération complète. Les modes de récupération simples et utilisant les journaux de transactions ne prennent pas en charge la mise en miroir de bases de données. Par conséquent, toutes les opérations en bloc sont entièrement journalisées pour une base de données mise en miroir. Pour plus d’informations sur les modes de récupération, consultez [Modes de récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62754599"
   
 
   
-##  <a name="Restrictions"></a> Restrictions  
+##  <a name="Restrictions"></a>Concernant  
   
 -   Seules les bases de données utilisateur peuvent être mises en miroir. Vous ne pouvez pas mettre en miroir les bases de données **master**, **msdb**, **tempdb**ou **model** .  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62754599"
   
 
   
-##  <a name="RecommendationsForPartners"></a> Recommandations relatives à la configuration des serveurs partenaires  
+##  <a name="RecommendationsForPartners"></a>Recommandations pour la configuration des serveurs partenaires  
   
 -   Il est conseillé d'exécuter les partenaires sur des systèmes comparables pouvant supporter des charges de travail identiques.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62754599"
   
 -   Toutes les instances de serveur d'une session de mise en miroir doivent utiliser la même page de codes maître et le même classement. Si ce n'est pas le cas, un problème peut se produire pendant la configuration de la mise en miroir.  
   
--   Éventuellement, évaluez le temps de basculement d'une base de données pour vous assurer que la configuration du système va fournir les performances nécessaires. Pour plus d’informations, consultez [Estimer l’interruption de service au cours d’un basculement de rôle &#40;mise en miroir de bases de données&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).  
+-   Éventuellement, évaluez le temps de basculement d'une base de données pour vous assurer que la configuration du système va fournir les performances nécessaires. Pour en savoir plus, voir [Estimer l’interruption de service au cours d’un basculement de rôle &#40;mise en miroir de bases de données&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).  
   
 -   Pour des performances optimales, utilisez une carte d'interface réseau dédiée à la mise en miroir.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "62754599"
   
 
   
-##  <a name="RecommendationsForDeploying"></a> Recommandations relatives au déploiement de la mise en miroir de bases de données  
+##  <a name="RecommendationsForDeploying"></a>Recommandations pour le déploiement de la mise en miroir de bases de données  
  Le fonctionnement asynchrone permet d'optimiser les performances de la mise en miroir de bases de données. Une session de mise en miroir qui fonctionne en mode synchrone peut enregistrer une baisse de performance lorsque sa charge de travail génère de grandes quantités de données de journaux de transactions.  
   
  Dans les environnements de test, il convient d'explorer tous les modes de fonctionnement pour évaluer les performances de la mise en miroir de bases de données. Toutefois, avant de déployer la mise en miroir dans un environnement de production, assurez-vous que vous comprenez comment le réseau fonctionne en situation réelle.  
@@ -112,12 +112,12 @@ ms.locfileid: "62754599"
   
  Par conséquent, pour les environnements de production, nous vous invitons à suivre les instructions de déploiement ci-dessous :  
   
-1.  Lancez l'exécution en mode Haute performance, asynchrone. Ce mode est le moins sensible à l'environnement réseau et fournit la meilleure configuration pour explorer le fonctionnement de la mise en miroir. Nous vous recommandons d'exécuter votre système en mode asynchrone avant d'être certain que votre bande passante prend en charge la mise en miroir et pour vous permettre d'approfondir vos connaissances sur la configuration de la mise en miroir et sur les performances du mode asynchrone dans votre environnement. Pour plus d'informations, voir [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
+1.  Lancez l'exécution en mode Haute performance, asynchrone. Ce mode est le moins sensible à l'environnement réseau et fournit la meilleure configuration pour explorer le fonctionnement de la mise en miroir. Nous vous recommandons d'exécuter votre système en mode asynchrone avant d'être certain que votre bande passante prend en charge la mise en miroir et pour vous permettre d'approfondir vos connaissances sur la configuration de la mise en miroir et sur les performances du mode asynchrone dans votre environnement. Pour en savoir plus, voir [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
   
     > [!IMPORTANT]  
     >  Au cours de la phase de test, nous vous recommandons de surveiller vos sessions pour vérifier qu'elles ne contiennent pas d'erreurs réseau susceptibles de faire échouer la mise en miroir de bases de données. Pour plus d'informations sur les sources de défaillance potentielles, consultez [Possible Failures During Database Mirroring](possible-failures-during-database-mirroring.md). Pour plus d’informations sur la manière de surveiller la mise en miroir de bases de données, consultez [Surveillance de la mise en miroir de bases de données &#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md).  
   
-2.  Une fois que vous êtes certain que le fonctionnement asynchrone correspond aux besoins de l'entreprise, vous pouvez éventuellement essayer le fonctionnement synchrone pour améliorer la protection de vos données. Si vous décidez de tester la mise en miroir synchrone dans votre environnement, nous vous recommandons de commencer par le mode Haute sécurité sans basculement automatique. Le but principal de cette opération est d'évaluer la manière dont le fonctionnement synchrone affecte les performances des bases de données. Pour plus d'informations, voir [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
+2.  Une fois que vous êtes certain que le fonctionnement asynchrone correspond aux besoins de l'entreprise, vous pouvez éventuellement essayer le fonctionnement synchrone pour améliorer la protection de vos données. Si vous décidez de tester la mise en miroir synchrone dans votre environnement, nous vous recommandons de commencer par le mode Haute sécurité sans basculement automatique. Le but principal de cette opération est d'évaluer la manière dont le fonctionnement synchrone affecte les performances des bases de données. Pour en savoir plus, voir [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
   
 3.  N'activez pas le basculement automatique avant de vous être assuré que le mode Haute sécurité sans basculement automatique répond aux besoins de l'entreprise et que les erreurs réseau ne provoquent pas de défaillances. Pour plus d’informations, consultez [Basculement de rôle durant une session de mise en miroir de bases de données &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md).  
   
@@ -125,7 +125,7 @@ ms.locfileid: "62754599"
   
 ## <a name="see-also"></a>Voir aussi  
  [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
- [Sécurité du transport pour la mise en miroir de base de données et de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [Sécurité de transport pour la mise en miroir de bases de données et les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [Mise en miroir de bases de données &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Résoudre des problèmes de configuration de mise en miroir de bases de données &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  
   

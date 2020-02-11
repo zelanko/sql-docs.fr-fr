@@ -19,10 +19,10 @@ ms.assetid: 2685fb66-731d-40f7-af4b-596b9222c5d4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6ed3a127d2527b35c301ab7f3d05305c4f8d2ced
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75322125"
 ---
 # <a name="mspeer_conflictdetectionconfigresponse-transact-sql"></a>MSpeer_conflictdetectionconfigresponse (Transact-SQL)
@@ -32,21 +32,21 @@ ms.locfileid: "75322125"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|request_id|**tiers**|Identifie une entrée de demande de configuration de conflit dans la table [MSpeer_conflictdetectionconfigrequest](../../relational-databases/system-tables/mspeer-conflictdetectionconfigrequest-transact-sql.md) .|  
+|request_id|**int**|Identifie une entrée de demande de configuration de conflit dans la table [MSpeer_conflictdetectionconfigrequest](../../relational-databases/system-tables/mspeer-conflictdetectionconfigrequest-transact-sql.md) .|  
 |peer_node|**sysname**|Nom de l'instance serveur qui a généré la réponse.|  
 |peer_db|**sysname**|Base de données d’abonnement au niveau de l’homologue qui a généré la réponse.|  
 |peer_version|**sysname**|Spécifie le numéro de version du serveur de publication.|  
 |peer_db_version|**sysname**|Identifie le numéro de version de la base de données d'homologue.|  
-|is_peer|**64bits**|Indique si un nœud est un Abonné en lecture seule. La valeur **0** indique un abonné en lecture seule.|  
-|conflict_detection_enabled|**64bits**|Indique si la détection de conflit est activée pour la topologie.|  
+|is_peer|**bit**|Indique si un nœud est un Abonné en lecture seule. La valeur **0** indique un abonné en lecture seule.|  
+|conflict_detection_enabled|**bit**|Indique si la détection de conflit est activée pour la topologie.|  
 |originator_id|**varbinary(16)**|Identifie chaque nœud dans la topologie pour les besoins de la détection de conflit. Pour plus d’informations, voir [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
-|peer_conflict_retention|**tiers**|Durée, en jours, du stockage des métadonnées dans les tables en conflit.|  
-|peer_subscriptions|**LANGAGE**|Informations relatives au nœud ayant répondu à la demande.|  
+|peer_conflict_retention|**int**|Durée, en jours, du stockage des métadonnées dans les tables en conflit.|  
+|peer_subscriptions|**XML**|Informations relatives au nœud ayant répondu à la demande.|  
 |progress_phase|**nvarchar (32)**|Identifie la phase actuelle du traitement en utilisant l'une des valeurs suivantes :<br /><br /> Démarré<br /><br /> Version homologue collectée<br /><br /> État collecté|  
-|modified_date|**Date/heure**|Date et heure d'achèvement d'une phase.|  
+|modified_date|**DATETIME**|Date et heure d'achèvement d'une phase.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Vues de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [Vues de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

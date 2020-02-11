@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: cec604ff1a93213fc6308455cadda90e6efa2d61
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401423"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>Surveillance de l’appliance pour Analytics Platform System
@@ -38,7 +38,7 @@ Les valeurs et les informations qui peuvent être surveillées sur l’appareil 
 Plusieurs outils sont disponibles pour surveiller l’appliance.  
   
 Console Administration  
-SQL Server PDW dispose d’une console d’administration. Il s’agit d’un outil basé sur le Web qui affiche des informations sur les requêtes, les chargements, les sauvegardes et les restaurations, les verrous, les sessions, les alertes et l’état de l’appareil. La console d’administration s’exécute sur l’appliance. les utilisateurs se connectent à la console d’administration via Internet Explorer. Pour plus d’informations, voir :  
+SQL Server PDW dispose d’une console d’administration. Il s’agit d’un outil basé sur le Web qui affiche des informations sur les requêtes, les chargements, les sauvegardes et les restaurations, les verrous, les sessions, les alertes et l’état de l’appareil. La console d’administration s’exécute sur l’appliance. les utilisateurs se connectent à la console d’administration via Internet Explorer. Pour plus d'informations, consultez les pages suivantes :  
   
 -   [Surveiller l’appliance à l’aide de la console d’administration &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   

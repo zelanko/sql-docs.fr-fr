@@ -16,18 +16,18 @@ ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 67ba388871720ff804063f27a378b838d300baf0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68126390"
 ---
-# <a name="spscriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
+# <a name="sp_scriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Génère l’instruction CREATE PROCEDURE qui crée une procédure stockée de mise à jour dynamique. L'instruction UPDATE dans la procédure stockée personnalisée est créée dynamiquement en fonction de la syntaxe MCALL qui indique les colonnes devant être modifiées. Utilisez cette procédure stockée si le nombre d’index dans la table d’abonnement augmente et si le nombre de colonnes modifiées est limité. Cette procédure stockée est exécutée sur la base de données de publication du serveur de publication.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,19 +37,19 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @artid = ] artid` Est l’ID d’article. *artid* est **int**, sans valeur par défaut.  
+`[ @artid = ] artid`Est l’ID de l’article. *artid* est de **type int**, sans valeur par défaut.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Retourne un jeu de résultats qui se compose d’un seul **nvarchar (4000)** colonne. L'ensemble de résultats forme l’instruction CREATE PROCEDURE complète qui permet de créer la procédure stockée personnalisée.  
+ Retourne un jeu de résultats qui se compose d’une seule colonne **nvarchar (4000)** . L'ensemble de résultats forme l’instruction CREATE PROCEDURE complète qui permet de créer la procédure stockée personnalisée.  
   
 ## <a name="remarks"></a>Notes  
  **sp_scriptdynamicupdproc** est utilisé dans la réplication transactionnelle. La logique de script MCALL par défaut inclut toutes les colonnes dans l'instruction UPDATE et utilise une image bitmap pour déterminer les colonnes qui ont changé. Si une colonne n'a pas changé, elle est rétablie, ce qui ne cause généralement aucun problème. Si la colonne est indexée, un traitement supplémentaire intervient. L'approche dynamique inclut uniquement les colonnes qui ont changé, ce qui fournit une chaîne UPDATE optimale. Toutefois, un traitement supplémentaire a lieu pendant la phase d’exécution lors de la génération de l’instruction UPDATE dynamique. Nous vous recommandons de tester les approches dynamique et statique, puis d'opter pour la meilleure solution.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_scriptdynamicupdproc**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_scriptdynamicupdproc**.  
   
 ## <a name="examples"></a>Exemples  
- Cet exemple crée un article (avec *artid* définie sur **1**) sur le **auteurs** table dans le **pubs** de base de données et spécifie que la mise à jour instruction est la procédure personnalisée à exécuter :  
+ Cet exemple crée un article (avec un *artid* défini sur **1**) sur la table **Authors** de la base de données **pubs** et spécifie que l’instruction Update est la procédure personnalisée à exécuter :  
   
 ```  
 'MCALL sp_mupd_authors'  

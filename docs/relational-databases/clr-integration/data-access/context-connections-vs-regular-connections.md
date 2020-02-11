@@ -1,5 +1,5 @@
 ---
-title: Connexions normales et Connexions contextuelles | Microsoft Docs
+title: Connexions régulières et contextuelles | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,23 +13,23 @@ ms.assetid: a1dead02-be88-4b16-8cb2-db1284856764
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 69733cbf3357ba26dc9e9fdf818858dc4e747b99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138710"
 ---
-# <a name="context-connections-vs-regular-connections"></a>Connexions contextuelles et connexions standard
+# <a name="context-connections-vs-regular-connections"></a>Connexions de contexte et connexions normales
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Si vous vous connectez à un serveur distant, utilisez toujours des connexions normales plutôt que des connexions contextuelles. Si vous devez vous connecter au même serveur sur lequel la procédure stockée ou la fonction est en cours d'exécution, utilisez la connexion contextuelle dans la majorité des cas. Ceci présente des avantages, notamment l'exécution dans le même espace de transaction et la non-obligation de s'authentifier à nouveau.  
   
- Qui plus est, le recours aux connexions contextuelles produit généralement de meilleures performances et garantit une utilisation plus réduite des ressources. La connexion contextuelle est une connexion en processus uniquement, elle peut donc contacter le serveur « directement » par en ignorant les couches de protocole et de transport réseau pour envoyer des instructions Transact-SQL et recevoir des résultats. Le processus d'authentification est également ignoré. La figure suivante montre les principaux composants de la **SqlClient** gérés fournisseur, ainsi que comment les différents composants interagissent entre eux lorsque vous utilisez une connexion normale et lors de l’utilisation de la connexion de contexte.  
+ Qui plus est, le recours aux connexions contextuelles produit généralement de meilleures performances et garantit une utilisation plus réduite des ressources. La connexion de contexte est une connexion en mode in-process uniquement. elle peut donc contacter le serveur « directement » en contournant le protocole réseau et les couches de transport pour envoyer des instructions Transact-SQL et recevoir des résultats. Le processus d'authentification est également ignoré. L’illustration suivante montre les principaux composants du fournisseur géré **SqlClient** , ainsi que la manière dont les différents composants interagissent entre eux lors de l’utilisation d’une connexion normale, et lors de l’utilisation de la connexion contextuelle.  
   
- ![Chemins de code d’un contexte et connexion normale. ](../../../relational-databases/clr-integration/data-access/media/clrintdataaccess.gif "Chemins de code d’un contexte et connexion normale.")  
+ ![Chemins de code d'un contexte et connexion normale.](../../../relational-databases/clr-integration/data-access/media/clrintdataaccess.gif "Chemins de code d'un contexte et connexion normale.")  
   
  La connexion contextuelle suit un chemin de code plus court et implique moins de composants. Vous pouvez donc vous attendre à des demandes et des résultats circulant vers et depuis le serveur plus rapidement qu'avec une connexion normale. Le temps d'exécution des requêtes sur le serveur est le même pour les connexions normales et contextuelles.  
   
- Dans certains cas, vous devrez peut-être ouvrir une connexion normale distincte sur le même serveur. Par exemple, il existe certaines restrictions sur l’utilisation de la connexion de contexte décrite dans [Restrictions sur les connexions normales et contextuelles](../../../relational-databases/clr-integration/data-access/context-connections-and-regular-connections-restrictions.md).  
+ Dans certains cas, vous devrez peut-être ouvrir une connexion normale distincte sur le même serveur. Par exemple, certaines restrictions s’appliquent à l’utilisation de la connexion contextuelle, décrite dans [restrictions sur les connexions régulières et de contexte](../../../relational-databases/clr-integration/data-access/context-connections-and-regular-connections-restrictions.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Connexion contextuelle](../../../relational-databases/clr-integration/data-access/context-connection.md)  

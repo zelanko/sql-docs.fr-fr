@@ -1,5 +1,5 @@
 ---
-title: À l’aide des données de Table imbriquée comme entrée pour un graphique de précision | Microsoft Docs
+title: Utilisation des données de table imbriquée comme entrée pour un graphique d’exactitude | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a6e6d0ade60dbb42fca9bda9ee78f4dbb50064a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082733"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>Utilisation des données de table imbriquée comme entrée pour un graphique d'analyse de précision
@@ -43,7 +43,7 @@ ms.locfileid: "66082733"
   
 3.  Dans **Sélectionner le jeu de données à utiliser pour le graphique d’analyse de précision**, sélectionnez l’option **Spécifier un autre jeu de données**.  
   
-4.  Cliquez sur le bouton Parcourir **(...)**  pour choisir le jeu de données externes dans la liste des vues de sources de données sur le serveur actuel.  
+4.  Cliquez sur le bouton Parcourir **(...)** pour choisir le jeu de données externes dans une liste de vues de source de données sur le serveur actuel.  
   
 5.  Cliquez sur **Sélectionner la table de cas**. Dans la boîte de dialogue **Sélectionner une table** , sélectionnez la table dans la vue de source de données contenant les données de cas, puis cliquez sur **OK**.  
   

@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 54de95fe39ea6b99139ee040b93160a1a93ff1bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721613"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Configurer la topologie (réplication d'égal à égal)
-  Utilisez la page **Configurer la topologie** pour effectuer des tâches de configuration communes, telles que l'ajout de nouveaux nœuds, la suppression de nœuds et l'ajout de nouvelles connexions entre des nœuds existants. Le nœud que vous avez sélectionné dans la page **Publication** de cet Assistant s'affiche dans l'aire de conception. Pour spécifier des options de configuration, cliquez avec le bouton droit sur un nœud, une connexion ou l'aire de conception.  
+  Utilisez la page **configurer la topologie** pour effectuer des tâches de configuration courantes, telles que l’ajout de nouveaux nœuds, la suppression de nœuds et l’ajout de nouvelles connexions entre des nœuds existants. Le nœud que vous avez sélectionné dans la page **Publication** de cet Assistant s'affiche dans l'aire de conception. Pour spécifier des options de configuration, cliquez avec le bouton droit sur un nœud, une connexion ou l'aire de conception.  
   
 > [!NOTE]  
 >  L'Assistant Configurer la topologie d'égal à égal demande des informations de topologie lorsque l'Assistant est fermé. Si l'Assistant est fermé et ouvert de nouveau avant que tous les nœuds répondent à la demande d'informations, l'Assistant peut afficher un réseau partiel.  
@@ -31,9 +31,9 @@ ms.locfileid: "62721613"
 |Élément d'interface|Description|  
 |-----------------------|-----------------|  
 |Aire de conception|Affiche d'autres éléments d'interface. Pour ajouter des éléments, cliquez avec le bouton droit sur l'aire de conception.|  
-|![Le premier nœud dans une topologie](media/p2pwizard-firstnode.gif "Le premier nœud dans une topologie")|Nœud d'origine dans la topologie. Les nouveaux nœuds sont initialisés grâce à une copie de la base de données de publication du nœud d'origine.|  
-|![Un nœud pour lequel nous avons des informations complètes](media/p2pwizard-complete.gif "un nœud pour lequel nous avons des informations complètes") ou une version ultérieure, pour lesquels la réplication possède des informations complètes. Pour spécifier des options de configuration, cliquez avec le bouton droit sur le nœud.|  
-|![Un nœud pour lequel nous avons des informations incomplètes](media/p2pwizard-incomplete.gif "Un nœud pour lequel nous avons des informations incomplètes")|Nœud sur lequel la réplication possède des informations incomplètes. Pour spécifier des options de configuration, cliquez avec le bouton droit sur le nœud. La réplication possède des informations incomplètes pour l'une des raisons suivantes :<br /><br /> Le nœud exécute une instance de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] qui ne stocke pas toutes les métadonnées requises par l'Assistant.<br /><br /> Le nœud exécute une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais la réplication ne peut pas récupérer les informations d'abonnement du nœud. Pour résoudre ce problème :<br />-Assurez-vous que la base de données au niveau du nœud est en ligne et que vous pouvez vous connecter à celui-ci en utilisant les informations d’identification que les Agents de Distribution qui se connectent au nœud.<br />-Assurez-vous que l’Agent de lecture du journal et de tous les Agents de Distribution qui se connectent au nœud exécutent.<br />-Assurez-vous que le délai d’actualisation est bien suffisant pour collecter toutes les informations de topologie. Pour définir le délai, cliquez avec le bouton droit sur l'aire de conception, puis cliquez sur **Définir le délai d'actualisation**.|  
+|![Premier nœud d'une topologie](media/p2pwizard-firstnode.gif "Premier nœud d'une topologie")|Nœud d'origine dans la topologie. Les nouveaux nœuds sont initialisés grâce à une copie de la base de données de publication du nœud d'origine.|  
+|![Nœud pour lequel nous avons des informations complètes](media/p2pwizard-complete.gif "Nœud pour lequel nous avons des informations complètes") ou une version ultérieure, pour lesquelles la réplication a des informations complètes. Pour spécifier des options de configuration, cliquez avec le bouton droit sur le nœud.|  
+|![Nœud pour lequel nous avons des informations incomplètes](media/p2pwizard-incomplete.gif "Nœud pour lequel nous avons des informations incomplètes")|Nœud sur lequel la réplication possède des informations incomplètes. Pour spécifier des options de configuration, cliquez avec le bouton droit sur le nœud. La réplication possède des informations incomplètes pour l'une des raisons suivantes :<br /><br /> Le nœud exécute une instance de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] qui ne stocke pas toutes les métadonnées requises par l'Assistant.<br /><br /> Le nœud exécute une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais la réplication ne peut pas récupérer les informations d'abonnement du nœud. Pour résoudre ce problème :<br />-Assurez-vous que la base de données au niveau du nœud est en ligne et que vous pouvez vous y connecter en utilisant les mêmes informations d’identification que les agents de distribution qui se connectent au nœud.<br />-Assurez-vous que l’agent de lecture du journal et tous les agents de distribution qui se connectent au nœud sont en cours d’exécution.<br />-Assurez-vous que le délai d’expiration de l’actualisation est suffisamment élevé pour collecter toutes les informations de topologie. Pour définir le délai, cliquez avec le bouton droit sur l'aire de conception, puis cliquez sur **Définir le délai d'actualisation**.|  
 |Ligne grise avec des flèches|Connexion entre deux nœuds. Pour ajouter une connexion, cliquez avec le bouton droit sur l'un des nœuds que vous souhaitez connecter. Pour supprimer une connexion, cliquez avec le bouton droit sur la connexion.<br /><br /> Si la ligne a une flèche unique, la réplication possède des informations incomplètes sur l'un des nœuds.|  
   
 ### <a name="options-for-the-design-surface"></a>Options relatives à l'aire de conception  
@@ -54,15 +54,15 @@ ms.locfileid: "62721613"
   
 -   elle doit contenir une copie de la base de données impliquée dans la réplication (cette copie est généralement une sauvegarde restaurée de la base de données de publication d'origine).  
   
- **Sélectionner les nœuds à afficher**  
+ **Sélectionner le (s) nœud (s) à afficher**  
  Cette option vous permet de sélectionner les nœuds à afficher dans l'aire de conception. Cette option est utile si la topologie possède un grand nombre de nœuds. N'oubliez pas que vous pouvez ajouter des connexions uniquement entre des nœuds qui sont visibles dans l'aire de conception.  
   
- **Définir le délai d'actualisation**  
+ **Définir le délai d’actualisation**  
  Cette option vous permet de spécifier la durée d'exécution du processus d'actualisation avant qu'il arrive à expiration.  
   
 ### <a name="options-for-each-node"></a>Options pour chaque nœud  
- **Ajouter une nouvelle connexion homologue**  
- Cette option vous permet d'ajouter une connexion entre deux nœuds. Par exemple, si vous ajoutez une connexion entre les nœuds A et B, la réplication ajoute deux abonnements : La première autorise le nœud A à recevoir des modifications de la publication sur le nœud B, et le second autorise le nœud B à recevoir des modifications à partir de la publication sur le nœud A.  
+ **Ajouter une nouvelle connexion d’homologue**  
+ Cette option vous permet d'ajouter une connexion entre deux nœuds. Par exemple, si vous ajoutez une connexion entre un nœud A et un nœud B, la réplication ajoute deux abonnements : le premier autorise le nœud A à recevoir des modifications de la publication au niveau du nœud B, et le second autorise le nœud B à recevoir des modifications de la publication au niveau du nœud A.  
   
  **Supprimer le nœud homologue**  
  Cette option vous permet de supprimer un nœud de la topologie. Par exemple, si vous supprimez le nœud C, la publication au niveau de ce nœud est supprimée. Les abonnements entre le nœud A et le nœud C sont aussi supprimés, de même qu'entre le nœud B et le nœud C. La base de données au niveau du nœud C n'est pas supprimée, et la publication et la distribution ne sont pas désactivées.  
@@ -70,10 +70,10 @@ ms.locfileid: "62721613"
 > [!NOTE]  
 >  Lorsque vous configurez la réplication d'égal à égal, vous spécifiez un ID pour chaque nœud. Cet ID, qui doit être unique sur tous les nœuds de la topologie, est stocké dans la colonne originator_id de la table système [MSpeer_originatorid_history](/sql/relational-databases/system-tables/mspeer-originatorid-history-transact-sql). Si un nœud est supprimé de la topologie, l'ID est toujours conservé dans la table d'historique. L'ID est conservé pour empêcher de faux conflits d'avoir lieu si des modifications du nœud supprimé sont encore répliquées à travers la topologie. Si vous souhaitez réutiliser l'ID pour un nouveau nœud, vous devez tout d'abord supprimer manuellement l'ID de la table MSpeer_originatorid_history à tous les nœuds. Avant de supprimer un ID pour un nœud, exécutez [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) pour vérifier que toutes les modifications apportées à partir de ce nœud ont été répliquées.  
   
- **Se connecter à TOUS les nœuds affichés**  
+ **Se connecter à tous les nœuds affichés**  
  Cette option vous permet d'jouter des connexions entre le nœud sélectionné et tous les autres nœuds. Par exemple, si vous avez sélectionné cette option pour le nœud C dans une topologie à trois nœuds, la réplication ajoute quatre abonnements : deux qui autorisent les nœuds A et B à recevoir des modifications de la publication au niveau du nœud C, et deux qui autorisent le nœud C à recevoir des modifications des publications au niveau des nœuds A et B.  
   
- **Sélectionner les nœuds à afficher**  
+ **Sélectionner le (s) nœud (s) à afficher**  
  Cette option vous permet de sélectionner les nœuds à afficher dans l'aire de conception. Cette option est utile si la topologie possède un grand nombre de nœuds. N'oubliez pas que vous pouvez ajouter des connexions uniquement entre des nœuds qui sont visibles dans l'aire de conception.  
   
 ### <a name="options-for-the-connection-arrows"></a>Options pour les flèches de connexion  
