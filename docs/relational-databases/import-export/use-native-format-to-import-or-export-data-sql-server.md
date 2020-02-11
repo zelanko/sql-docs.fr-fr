@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: f6e1eaa9670a5cea38bbf617675d42737b13f796
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055918"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Utiliser le format natif pour importer ou exporter des données (SQL Server)
@@ -86,11 +86,11 @@ Vous pouvez importer des données au format natif dans une table à l’aide de 
 
 Le format natif est pris en charge par les options de commande suivantes :  
 
-|Command|Option|Description|  
+|Commande|Option|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-n**|Force l’utilitaire bcp à utiliser les types de données natifs des données.*|  
 |BULK INSERT|DATAFILETYPE **='native'**|Utilise les types de données native ou widenative des données. Notez que DATAFILETYPE n'est pas nécessaire si un fichier de format spécifie les types de données.|  
-|OPENROWSET|Néant|Doit utiliser un fichier de format.|
+|OPENROWSET|N/A|Doit utiliser un fichier de format.|
 
   
  \*Pour charger des données au format natif ( **-n**) dans un format compatible avec des versions antérieures de clients [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , utilisez le commutateur **-V** . Pour plus d’informations, consultez [Importer des données au format natif et caractère à partir de versions antérieures de SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
@@ -244,7 +244,7 @@ Pour utiliser des formats de données pour l'importation ou l'exportation en blo
 -   [Utiliser le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilitaire bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [sql_variant &#40;Transact-SQL&#41;](../../t-sql/data-types/sql-variant-transact-sql.md)   
