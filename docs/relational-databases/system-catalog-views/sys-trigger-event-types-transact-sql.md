@@ -1,5 +1,5 @@
 ---
-title: Sys.trigger_event_types (Transact-SQL) | Microsoft Docs
+title: sys. trigger_event_types (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,28 +20,28 @@ ms.assetid: 054aed54-7151-4760-934a-149fa434f1ae
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fb845732f3766e715df0e92d751a18b1aa8f2969
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091950"
 ---
-# <a name="systriggereventtypes-transact-sql"></a>sys.trigger_event_types (Transact-SQL)
+# <a name="systrigger_event_types-transact-sql"></a>sys.trigger_event_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque événement ou groupe d'événements sur lequel un déclencheur peut être activé.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**type**|**Int**|Type d'événement ou groupe d'événements qui active un déclencheur.|  
-|**type_name**|**nvarchar(64)**|Nom d'un événement ou groupe d'événements. Cela peut être spécifié dans la clause FOR d’une [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) instruction.|  
+|**entrer**|**int**|Type d'événement ou groupe d'événements qui active un déclencheur.|  
+|**type_name**|**nvarchar (64)**|Nom d'un événement ou groupe d'événements. Cela peut être spécifié dans la clause FOR d’une instruction [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) .|  
 |**parent_type**|**int**|Type de groupe d'événements qui est le parent de l'événement ou du groupe d'événements.|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Affichages catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

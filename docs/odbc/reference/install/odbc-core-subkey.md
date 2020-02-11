@@ -1,5 +1,5 @@
 ---
-title: Sous-clé des composants principaux ODBC | Microsoft Docs
+title: Sous-clé ODBC Core | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,20 +15,20 @@ ms.assetid: 055b31fc-f96c-450b-a596-d4570079fbf2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98c9380083eb5a0ad796f436af271564676b757d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094008"
 ---
 # <a name="odbc-core-subkey"></a>Sous-clé des composants principaux ODBC
-La valeur sous la sous-clé ODBC Core donne le décompte d’utilisation pour les composants principaux (Gestionnaire de pilotes, bibliothèque de curseurs, DLL d’installation et ainsi de suite). Le format de cette valeur est illustré dans le tableau suivant.  
+La valeur de la sous-clé ODBC principale indique le nombre d’utilisations des composants principaux (gestionnaire de pilotes, bibliothèque de curseurs, DLL du programme d’installation, etc.). Le format de cette valeur est indiqué dans le tableau suivant.  
   
-|Nom|Type de données|Données|  
+|Name|Type de données|Données|  
 |----------|---------------|----------|  
-|UsageCount|REG_DWORD|*nombre*|  
+|UsageCount|REG_DWORD|*saut*|  
   
- Par exemple, supposons que les composants de niveau principal ODBC ont été installés par les programmes d’installation pour les trois applications différentes et deux pilotes différents. La valeur sous la sous-clé ODBC Core serait :  
+ Par exemple, supposons que les composants ODBC Core ont été installés par les programmes d’installation pour trois applications différentes et deux pilotes différents. La valeur sous la sous-clé ODBC Core est la suivante :  
   
 ```  
 UsageCount : REG_DWORD : 0x5  

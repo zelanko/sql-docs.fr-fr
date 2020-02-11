@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_partition_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_partition_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/31/2019
 ms.prod: sql
@@ -21,52 +21,52 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cb9ab9e3cbf5948e5e832171c179d6daa2c0bc28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096285"
 ---
-# <a name="sysdmdbpartitionstats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
+# <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Renvoie le nombre de pages et de lignes de chaque partition de la base de données active.  
   
 > [!NOTE]  
->  À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_db_partition_stats**. Le partition_id dans sys.dm_pdw_nodes_db_partition_stats diffère de la partition_id dans la vue de catalogue sys.partitions pour Azure SQL Data Warehouse.
+>  Pour appeler cette valeur [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] à [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]partir de ou, utilisez le nom **sys. dm_pdw_nodes_db_partition_stats**. La partition_id dans sys. dm_pdw_nodes_db_partition_stats diffère de la partition_id de l’affichage catalogue sys. partitions pour Azure SQL Data Warehouse.
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**partition_id**|**bigint**|ID de la partition. Unique dans la base de données. C’est la même valeur que la **partition_id** dans le **sys.partitions** affichage à l’exception d’Azure SQL Data Warehouse catalogue.|  
-|**object_id**|**Int**|ID d'objet de la table ou de la vue indexée à laquelle appartient la partition.|  
-|**index_id**|**Int**|ID du segment de mémoire ou de l'index auquel appartient la partition.<br /><br /> 0 = Segment de mémoire<br /><br /> 1 = Index cluster<br /><br /> > 1 = index non cluster|  
-|**partition_number**|**Int**|Numéro de partition (basé sur la valeur 1) au sein de l'index ou du segment de mémoire.|  
-|**in_row_data_page_count**|**bigint**|Nombre de pages utilisées pour stocker les données des lignes de cette partition. Si la partition fait partie d'un segment de mémoire, la valeur de cette colonne est le nombre de pages de données dans ce segment. Si la partition fait partie d'un index, la valeur de cette colonne est le nombre de pages au niveau feuille. (Les pages non-feuille dans l’arborescence binaire ne figurent pas dans le nombre.) Pages IAM (Index Allocation Map) ne sont pas inclus dans les deux cas. Toujours 0 pour un index columnstore optimisé en mémoire xVelocity.|  
-|**in_row_used_page_count**|**bigint**|Nombre total de pages utilisées pour stocker et gérer les données des lignes de cette partition. Ce nombre inclut les pages non-feuille B-tree, les pages IAM et toutes les pages incluses dans le **in_row_data_page_count** colonne. Toujours 0 pour un index columnstore.|  
+|**partition_id**|**bigint**|ID de la partition. Unique dans la base de données. Il s’agit de la même valeur que la **partition_id** dans l’affichage catalogue **sys. partitions** , à l’exception de Azure SQL Data Warehouse.|  
+|**object_id**|**int**|ID d'objet de la table ou de la vue indexée à laquelle appartient la partition.|  
+|**index_id**|**int**|ID du segment de mémoire ou de l'index auquel appartient la partition.<br /><br /> 0 = Segment de mémoire<br /><br /> 1 = Index cluster<br /><br /> > 1 = Index non-cluster|  
+|**partition_number**|**int**|Numéro de partition (basé sur la valeur 1) au sein de l'index ou du segment de mémoire.|  
+|**in_row_data_page_count**|**bigint**|Nombre de pages utilisées pour stocker les données des lignes de cette partition. Si la partition fait partie d'un segment de mémoire, la valeur de cette colonne est le nombre de pages de données dans ce segment. Si la partition fait partie d'un index, la valeur de cette colonne est le nombre de pages au niveau feuille. (Les pages non-feuille dans l’arborescence binaire (B-Tree) ne sont pas incluses dans le nombre.) Les pages IAM (page IAM (Index Allocation Map)) ne sont pas incluses dans les deux cas. Toujours 0 pour un index columnstore optimisé en mémoire xVelocity.|  
+|**in_row_used_page_count**|**bigint**|Nombre total de pages utilisées pour stocker et gérer les données des lignes de cette partition. Ce nombre comprend les pages non-feuille dans l'arbre B (B-tree), les pages IAM et toutes les pages incluses dans la colonne **in_row_data_page_count**. Toujours 0 pour un index columnstore.|  
 |**in_row_reserved_page_count**|**bigint**|Nombre total de pages réservées pour stocker et gérer les données des lignes de cette partition, que les pages soient utilisées ou non. Toujours 0 pour un index columnstore.|  
-|**lob_used_page_count**|**bigint**|Nombre de pages utilisées pour stocker et gérer out of row **texte**, **ntext**, **image**, **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , et **xml** colonnes au sein de la partition. Les pages IAM sont incluses.<br /><br /> Nombre total d'objets LOB utilisés pour stocker et gérer l'index columnstore dans la partition.|  
-|**lob_reserved_page_count**|**bigint**|Nombre total de pages réservées pour stocker et gérer out of row **texte**, **ntext**, **image**, **varchar (max)** ,  **nvarchar (max)** , **varbinary (max)** , et **xml** colonnes au sein de la partition, que les pages soient en cours d’utilisation ou non. Les pages IAM sont incluses.<br /><br /> Nombre total d'objets LOB réservés pour le stockage et la gestion d'un index columnstore dans la partition.|  
-|**row_overflow_used_page_count**|**bigint**|Nombre de pages utilisées pour stocker et gérer le dépassement de ligne **varchar**, **nvarchar**, **varbinary**, et **sql_variant** colonnes dans la partition. Les pages IAM sont incluses.<br /><br /> Toujours 0 pour un index columnstore.|  
-|**row_overflow_reserved_page_count**|**bigint**|Nombre total de pages réservées pour stocker et gérer le dépassement de ligne **varchar**, **nvarchar**, **varbinary**, et **sql_variant** colonnes dans la partition, que les pages soient en cours d’utilisation ou non. Les pages IAM sont incluses.<br /><br /> Toujours 0 pour un index columnstore.|  
-|**used_page_count**|**bigint**|Nombre total de pages utilisées pour la partition. Calculée en tant que **in_row_used_page_count** + **lob_used_page_count** + **row_overflow_used_page_count**.|  
-|**reserved_page_count**|**bigint**|Nombre total de pages réservées pour la partition. Calculée en tant que **in_row_reserved_page_count** + **lob_reserved_page_count** + **row_overflow_reserved_page_count**.|  
+|**lob_used_page_count**|**bigint**|Nombre de pages utilisées pour stocker et gérer les colonnes hors ligne **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** et **xml** dans la partition. Les pages IAM sont incluses.<br /><br /> Nombre total d'objets LOB utilisés pour stocker et gérer l'index columnstore dans la partition.|  
+|**lob_reserved_page_count**|**bigint**|Nombre total de pages réservées pour stocker et gérer les colonnes hors ligne **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** et **xml** dans la partition, que les pages soient utilisées ou non. Les pages IAM sont incluses.<br /><br /> Nombre total d'objets LOB réservés pour le stockage et la gestion d'un index columnstore dans la partition.|  
+|**row_overflow_used_page_count**|**bigint**|Nombre de pages utilisées pour stocker et gérer les colonnes en dépassement de capacité des lignes **varchar**, **nvarchar**, **varbinary** et **sql_variant** de la partition. Les pages IAM sont incluses.<br /><br /> Toujours 0 pour un index columnstore.|  
+|**row_overflow_reserved_page_count**|**bigint**|Nombre total de pages réservées pour stocker et gérer les colonnes en dépassement de capacité des lignes **varchar**, **nvarchar**, **varbinary** et **sql_variant** de la partition, que les pages soient utilisées ou non. Les pages IAM sont incluses.<br /><br /> Toujours 0 pour un index columnstore.|  
+|**used_page_count**|**bigint**|Nombre total de pages utilisées pour la partition. Calculé en tant que **in_row_used_page_count** + **lob_used_page_count** + **row_overflow_used_page_count**.|  
+|**reserved_page_count**|**bigint**|Nombre total de pages réservées pour la partition. Calculé en tant que **in_row_reserved_page_count** + **lob_reserved_page_count** + **row_overflow_reserved_page_count**.|  
 |**row_count**|**bigint**|Nombre approximatif de lignes dans la partition.|  
-|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
-|**distribution_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Id numérique unique associé à la distribution.|  
+|**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
+|**distribution_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> ID numérique unique associé à la distribution.|  
   
 ## <a name="remarks"></a>Notes  
- **Sys.dm_db_partition_stats** affiche des informations sur l’espace utilisé pour stocker et gérer les données LOB de données en ligne et les données de dépassement de ligne pour toutes les partitions dans une base de données. Une seule ligne est affichée par partition.  
+ **sys. dm_db_partition_stats** affiche des informations sur l’espace utilisé pour stocker et gérer les données LOB des données dans la ligne, ainsi que des données de dépassement de ligne pour toutes les partitions d’une base de données. Une seule ligne est affichée par partition.  
   
  Les nombres sur lesquels le résultat est basé sont placés en mémoire cache ou stockés sur disque dans diverses tables système.  
   
- Les données dans la ligne, les données LOB et les données en dépassement de capacité des lignes représentent les trois unités d'allocation qui composent une partition. Le [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) (affichage catalogue) peut être interrogée pour les métadonnées relatives à chaque unité d’allocation dans la base de données.  
+ Les données dans la ligne, les données LOB et les données en dépassement de capacité des lignes représentent les trois unités d'allocation qui composent une partition. Il est possible d'effectuer des requêtes dans l'affichage catalogue [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) sur les métadonnées de chaque unité d'allocation de la base de données.  
   
- Si le segment de mémoire ou l'index n'est pas partitionné, il se compose d'une partition (dont le numéro est égal à 1) ; par conséquent, une seule ligne est renvoyée pour ce segment ou cet index. Le [sys.partitions](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) (affichage catalogue) peut être interrogée pour les métadonnées relatives à chaque partition de toutes les tables et des index dans une base de données.  
+ Si le segment de mémoire ou l'index n'est pas partitionné, il se compose d'une partition (dont le numéro est égal à 1) ; par conséquent, une seule ligne est renvoyée pour ce segment ou cet index. Il est possible d'effectuer des requêtes dans l'affichage catalogue [sys.partitions](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) sur les métadonnées de chaque partition des tables et des index d'une base de données.  
   
  Le nombre total pour une table ou un index s'obtient en ajoutant les nombres obtenus pour l'ensemble des partitions concernées.  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert l’autorisation VIEW DATABASE STATE pour interroger le **sys.dm_db_partition_stats** vue de gestion dynamique. Pour plus d’informations sur les autorisations sur les vues de gestion dynamique, consultez [fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ Nécessite l'autorisation VIEW DATABASE STATE pour effectuer une requête dans la vue de gestion dynamique **sys.dm_db_partition_stats**. Pour plus d’informations sur les autorisations sur les vues de gestion dynamique, consultez [fonctions et vues de gestion dynamique &#40;&#41;Transact-SQL ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Exemples  
   
@@ -106,7 +106,7 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Vues de gestion dynamique liées à la base de données &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Vues de gestion dynamique liées à la base de données &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   
 

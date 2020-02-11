@@ -14,24 +14,24 @@ ms.assetid: 4c59cd8e-a713-4095-9065-20d5bdeafe43
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c74f1a79ef79b682bc2900d671e07bbe34c4dbf5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107271"
 ---
 # <a name="statement-attributes"></a>Attributs d'instruction
-Attributs d’instruction sont caractéristiques de l’instruction. Par exemple, s’il faut pour utiliser des signets et ce que type de curseur à utiliser avec le résultat de l’instruction sont des attributs d’instruction.  
+Les attributs d’instruction sont des caractéristiques de l’instruction. Par exemple, s’il faut utiliser des signets et le type de curseur à utiliser avec le jeu de résultats de l’instruction, il s’agit d’attributs d’instruction.  
   
- Attributs d’instruction sont définis avec **SQLSetStmtAttr** et leurs paramètres actuels sont récupérés avec **SQLGetStmtAttr**. Il n’est pas nécessaire qu’une application définir des attributs d’instruction ; tous les attributs d’instruction ont des valeurs par défaut, dont certaines sont spécifiques au pilote.  
+ Les attributs d’instruction sont définis avec **SQLSetStmtAttr** et leurs paramètres actuels récupérés avec **SQLGetStmtAttr**. Il n’est pas nécessaire qu’une application définisse des attributs d’instruction ; tous les attributs d’instruction ont des valeurs par défaut, dont certains sont spécifiques au pilote.  
   
- Lorsqu’un attribut d’instruction peut être défini dépend de l’attribut lui-même. Les attributs d’instruction SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE, SQL_ATTR_SIMULATE_CURSOR et SQL_ATTR_USE_BOOKMARKS doivent être définis avant l’exécution de l’instruction. Les attributs d’instruction SQL_ATTR_ASYNC_ENABLE et SQL_ATTR_NOSCAN peuvent être définies à tout moment, mais ne sont pas appliquées jusqu'à ce que l’instruction est utilisée à nouveau. Attributs d’instruction SQL_ATTR_MAX_LENGTH et SQL_ATTR_MAX_ROWS SQL_ATTR_QUERY_TIMEOUT peuvent être définies à tout moment, mais il est spécifique au pilote qu’ils sont appliqués avant l’instruction est utilisée à nouveau. Les attributs d’instruction restants peuvent être définis à tout moment.  
+ Lorsqu’un attribut d’instruction peut être défini, dépend de l’attribut lui-même. Les attributs d’instruction SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE, SQL_ATTR_SIMULATE_CURSOR et SQL_ATTR_USE_BOOKMARKS doivent être définis avant l’exécution de l’instruction. Les attributs d’instruction SQL_ATTR_ASYNC_ENABLE et SQL_ATTR_NOSCAN peuvent être définis à tout moment, mais ils ne sont pas appliqués tant que l’instruction n’est pas réutilisée. Les attributs d’instruction SQL_ATTR_MAX_LENGTH, SQL_ATTR_MAX_ROWS et SQL_ATTR_QUERY_TIMEOUT peuvent être définis à tout moment, mais ils sont spécifiques au pilote, qu’ils soient appliqués avant que l’instruction soit réutilisée. Les attributs d’instruction restants peuvent être définis à tout moment.  
   
 > [!NOTE]  
->  La possibilité de définir des attributs d’instruction au niveau de la connexion en appelant **SQLSetConnectAttr** a été déconseillée dans ODBC 3. *x*. ODBC 3. *x* applications ne doivent jamais définir les attributs d’instruction au niveau de la connexion. ODBC 3. *x* pilotes doivent prennent uniquement en charge cette fonctionnalité si elles doivent fonctionner avec ODBC 2. *x* applications. Pour plus d’informations, consultez [SQLSetConnectOption mappage](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md) dans g : annexe Instructions de pilote pour la compatibilité descendante.  
+>  La possibilité de définir des attributs d’instruction au niveau de la connexion en appelant **SQLSetConnectAttr** est dépréciée dans ODBC 3. *x*. ODBC 3. *x* les applications ne doivent jamais définir d’attributs d’instruction au niveau de la connexion. ODBC 3. *x* les pilotes doivent uniquement prendre en charge cette fonctionnalité s’ils devraient fonctionner avec ODBC 2. *x* applications. Pour plus d’informations, consultez le [mappage SQLSetConnectOption](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md) dans annexe G : instructions relatives aux pilotes pour la compatibilité descendante.  
 >   
->  Une exception concerne les attributs SQL_ATTR_METADATA_ID et SQL_ATTR_ASYNC_ENABLE, qui sont des attributs de connexion et les attributs d’instruction et peuvent être définies au niveau de la connexion ou le niveau de l’instruction.  
+>  La SQL_ATTR_METADATA_ID et SQL_ATTR_ASYNC_ENABLE attributs, qui sont des attributs de connexion et des attributs d’instruction, sont une exception et peuvent être définis au niveau de la connexion ou de l’instruction.  
 >   
->  Aucun des attributs d’instruction introduites dans ODBC 3. *x* (à l’exception SQL_ATTR_METADATA_ID) peut être définie au niveau de la connexion.  
+>  Aucun des attributs d’instruction introduits dans ODBC 3. *x* (à l’exception de SQL_ATTR_METADATA_ID) peut être défini au niveau de la connexion.  
   
- Pour plus d’informations, consultez le [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) description de fonction.
+ Pour plus d’informations, consultez la description de la fonction [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) .

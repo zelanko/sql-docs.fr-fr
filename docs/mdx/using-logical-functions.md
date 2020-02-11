@@ -1,5 +1,5 @@
 ---
-title: Utilisation de fonctions logiques | Microsoft Docs
+title: Utilisation des fonctions logiques | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 723d481bc858d7d1db4a63cbb32ab5614eddbb55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097168"
 ---
 # <a name="using-logical-functions"></a>Utilisation de fonctions logiques
@@ -20,9 +20,9 @@ ms.locfileid: "68097168"
 
   Une fonction logique exécute une opération ou une comparaison logique sur des objets et des expressions et retourne une valeur booléenne. Les fonctions logiques sont essentielles dans la syntaxe MDX (Multidimensional Expressions) pour déterminer la position d'un membre.  
   
- La fonction logique la plus couramment utilisée est la **IsEmpty** (fonction). Pour plus d’informations sur l’utilisation de la **IsEmpty** de fonction, consultez [fonctionne avec des valeurs vides](../mdx/working-with-empty-values.md).  
+ La fonction logique la plus couramment utilisée est la fonction **IsEmpty** . Pour plus d’informations sur l’utilisation de la fonction **IsEmpty** , consultez [utilisation de valeurs vides](../mdx/working-with-empty-values.md).  
   
- La requête suivante montre comment utiliser le **IsLeaf** et **IsAncestor** fonctions :  
+ La requête suivante montre comment utiliser les fonctions **IsLeaf** et **IsAncestor** :  
   
  `WITH`  
   

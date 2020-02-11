@@ -16,16 +16,16 @@ ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3dc89ce68529212246d85bdbafa8d9487b77a067
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67910235"
 ---
 # <a name="replication-tables-transact-sql"></a>Tables de réplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Les tables système de réplication prennent en charge une topologie de réplication. Lorsqu'une base de données utilisateur est configurée en tant que serveur de publication ou en tant qu'abonné, la réplication ajoute des tables système à la base de données. Ces tables sont supprimées lorsqu'une base de données utilisateur est supprimée d'une topologie de réplication. Pour les règles générales concernant l’utilisation de tables système, consultez [Tables système &#40;Transact-SQL&#41;](system-tables-transact-sql.md).  
+  Les tables système de réplication prennent en charge une topologie de réplication. Lorsqu'une base de données utilisateur est configurée en tant que serveur de publication ou en tant qu'abonné, la réplication ajoute des tables système à la base de données. Ces tables sont supprimées lorsqu'une base de données utilisateur est supprimée d'une topologie de réplication. Pour connaître les règles générales relatives à l’utilisation des tables système, consultez [tables système &#40;&#41;Transact-SQL ](system-tables-transact-sql.md).  
   
 ## <a name="replication-tables"></a>Tables de réplication  
  La liste suivante répertorie les tables système utilisées par la réplication. Elles sont classées par base de données.  
@@ -73,7 +73,7 @@ ms.locfileid: "67910235"
 |[MSqreader_history](msqreader-history-transact-sql.md)            ||
 | &nbsp; | &nbsp; |
   
- Ces tables dans la base de données de distribution sont utilisées pour la réplication des données à partir de non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. Pour plus d’informations, consultez [serveurs de publication non-SQL Server](../../relational-databases/replication/non-sql/non-sql-server-publishers.md).  
+ Ces tables de la base de données de distribution sont utilisées pour la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des données à partir d’un serveur de publication non-. Pour plus d’informations, consultez [éditeurs non-SQL Server](../../relational-databases/replication/non-sql/non-sql-server-publishers.md).  
   
 |||  
 |-|-|  
@@ -91,7 +91,7 @@ ms.locfileid: "67910235"
  
 |||  
 |-|-|  
-|[conflict_\<schema>_\<table>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
+|[>_\<\<de la table de conflict_ de schéma>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
 |[MSdynamicsnapshotjobs](msdynamicsnapshotjobs-transact-sql.md)             |[MSpeer_response](mspeer-response-transact-sql.md)|
 |[MSdynamicsnapshotviews](msdynamicsnapshotviews-transact-sql.md)           |[MSpeer_topologyrequest](mspeer-topologyrequest-transact-sql.md)|  
 |[MSmerge_altsyncpartners](msmerge-altsyncpartners-transact-sql.md)         |[MSpeer_topologyresponse](mspeer-topologyresponse-transact-sql.md)|  

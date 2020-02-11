@@ -1,5 +1,5 @@
 ---
-title: Pilote ODBC pour Oracle utilisateur&#39;s Guide | Microsoft Docs
+title: Guide ODBC Driver for Oracle User&#39;s | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5ca4e8aa690aae9c8c3e30ed73745f2054dc396
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915788"
 ---
-# <a name="odbc-driver-for-oracle-user39s-guide"></a>Pilote ODBC pour Oracle utilisateur&#39;s Guide
+# <a name="odbc-driver-for-oracle-user39s-guide"></a>Guide ODBC Driver for Oracle User&#39;s
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Au lieu de cela, utilisez le pilote ODBC fourni par Oracle.  
+>  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Utilisez plutôt le pilote ODBC fourni par Oracle.  
   
- Le pilote ODBC pour Oracle Guide utilisateur vise à compléter l’aide de l’installation est accessible via la [administrateur de sources de données ODBC](../../odbc/admin/odbc-data-source-administrator.md).  
+ Le Guide de l’utilisateur du pilote ODBC pour Oracle est destiné à compléter l’aide du programme d’installation accessible via l’administrateur de la [source de données ODBC](../../odbc/admin/odbc-data-source-administrator.md).  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Schéma des versions du pilote](../../odbc/microsoft/driver-version-scheme.md)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67915788"
   
 -   [Configuration du pilote ODBC pour Oracle](../../odbc/microsoft/configuring-the-odbc-driver-for-oracle.md)  
   
--   [Connexion à une Source de données](../../odbc/microsoft/connecting-to-a-data-source-odbc-driver-for-oracle.md)  
+-   [Connexion à une source de données](../../odbc/microsoft/connecting-to-a-data-source-odbc-driver-for-oracle.md)  
   
 -   [Détermination des composants Oracle installés](../../odbc/microsoft/determining-installed-oracle-components.md)  
   

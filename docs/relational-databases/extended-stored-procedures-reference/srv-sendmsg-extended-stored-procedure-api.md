@@ -20,17 +20,17 @@ ms.assetid: efcb50b9-f8ff-4121-bf67-05830171b928
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 62fa2db01ff17008a0b6a7cd4e5fd0a2bce71189
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67910911"
 ---
-# <a name="srvsendmsg-extended-stored-procedure-api"></a>srv_sendmsg (API de procédure stockée étendue)
+# <a name="srv_sendmsg-extended-stored-procedure-api"></a>srv_sendmsg (API de procédure stockée étendue)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Utilisez plutôt l’intégration du CLR.  
   
  Envoie un message au client.  
   
@@ -75,16 +75,16 @@ msglen
  *srvproc*  
  Pointeur vers la structure SRV_PROC qui est le handle d'une connexion cliente particulière (dans ce cas, le handle qui a reçu la demande de langue). La structure contient des informations que la bibliothèque d'API de procédure stockée étendue utilise pour gérer les communications et les données entre l'application et le client.  
   
- *msgtype*  
+ *msgType*  
  SRV_MSG_INFO ou SRV_MSG_ERROR, selon que le serveur envoie un message d'information ou un message d'erreur.  
   
  *msgnum*  
  Numéro de message à 4 octets.  
   
- *class*  
+ *type*  
  Spécifie la gravité de l'erreur. Une gravité inférieure ou égale à 10 est considérée comme un message d'information.  
   
- *state*  
+ *Département*  
  Fournit le numéro d'état de l'erreur pour le message actuel. Le numéro d'état de l'erreur fournit des informations sur le contexte de l'erreur. Les numéros d'état valides sont compris entre 0 et 255.  
   
  *rpcname*  
@@ -93,16 +93,16 @@ msglen
  *rpcnamelen*  
  N’est pas pris en charge.  
   
- *linenum*  
+ *lineNum*  
  Numéro de ligne dans le lot de commandes du langage auquel le message s'applique. La numérotation des lignes débute à 1. Si *linenum* ne s’applique pas au message, définissez cette valeur sur 0.  
   
- *message*  
+ *Message*  
  Pointeur vers la chaîne de caractères à envoyer au client.  
   
- *msglen*  
+ *argument msglen*  
  Spécifie la longueur, en octets, de *message*. Si *message* se termine par le caractère NULL, définissez *msglen* sur SRV_NULLTERM.  
   
-## <a name="returns"></a>Valeur renvoyée  
+## <a name="returns"></a>Retours  
  SUCCEED ou FAIL  
   
 ## <a name="remarks"></a>Notes  
@@ -112,7 +112,7 @@ msglen
   
  Pour envoyer des messages en Unicode, utilisez **srv_wsendmsg** à la place de **srv_sendmsg**.  
   
- Pour plus d’informations, consultez [Données Unicode et pages de codes du serveur](../../relational-databases/extended-stored-procedures-programming/unicode-data-and-server-code-pages.md).  
+ Pour plus d’informations [, consultez données Unicode et pages de codes du serveur](../../relational-databases/extended-stored-procedures-programming/unicode-data-and-server-code-pages.md).  
   
 > [!IMPORTANT]  
 >  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  

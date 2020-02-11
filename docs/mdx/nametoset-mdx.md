@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 77731495eb058da05f6c61be391591a40725e579
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088391"
 ---
 # <a name="nametoset-mdx"></a>NameToSet (MDX)
 
 
-  Retourne un jeu qui contient le membre spécifié par une chaîne au format MDX Multidimensional Expressions.  
+  Retourne un jeu qui contient le membre spécifié par une chaîne au format MDX (Multidimensional Expressions).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,7 +32,7 @@ NameToSet(Member_Name)
  Expression de chaîne valide qui représente le nom d'un membre.  
   
 ## <a name="remarks"></a>Notes  
- Si le nom du membre spécifié existe, le **NameToSet** fonction retourne un jeu contenant ce membre. Sinon, elle retourne un jeu vide.  
+ Si le nom du membre spécifié existe, la fonction **NameToSet** retourne un jeu contenant ce membre. Sinon, elle retourne un jeu vide.  
   
 > [!NOTE]  
 >  Le nom de membre spécifié doit uniquement être un nom de membre ; il ne peut s'agir d'une expression de membre. Pour utiliser une expression de membre, consultez [StrToSet &#40;MDX&#41;](../mdx/strtoset-mdx.md).  
@@ -46,6 +46,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

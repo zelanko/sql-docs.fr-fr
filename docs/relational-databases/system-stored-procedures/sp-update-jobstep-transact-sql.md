@@ -18,18 +18,18 @@ ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7914e3b56dd02d96c02835bf6b4dcc5eb90e8f4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68084877"
 ---
-# <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
+# <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Modifie la valeur d'une étape d'un travail qui est utilisé pour effectuer des activités automatisées.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -61,81 +61,81 @@ sp_update_jobstep
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_id = ] job_id` Le numéro d’identification du travail auquel appartient l’étape. *job_id*est **uniqueidentifier**, avec NULL comme valeur par défaut. Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
+`[ @job_id = ] job_id`Numéro d’identification du travail auquel l’étape appartient. *job_id*est de type **uniqueidentifier**, avec NULL comme valeur par défaut. *Job_id* ou *job_name* doivent être spécifiés, mais ils ne peuvent pas être spécifiés.  
   
-`[ @job_name = ] 'job_name'` Le nom du travail auquel appartient l’étape. *job_name*est **sysname**, avec NULL comme valeur par défaut. Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
+`[ @job_name = ] 'job_name'`Nom du travail auquel l’étape appartient. *job_name*est de **type sysname**, avec NULL comme valeur par défaut. *Job_id* ou *job_name* doivent être spécifiés, mais ils ne peuvent pas être spécifiés.  
   
-`[ @step_id = ] step_id` Numéro d’identification de l’étape de travail à modifier. Il est impossible de modifier ce numéro. *l’argument id_étape*est **int**, sans valeur par défaut.  
+`[ @step_id = ] step_id`Numéro d’identification de l’étape de travail à modifier. Il est impossible de modifier ce numéro. *step_id*est de **type int**, sans valeur par défaut.  
   
-`[ @step_name = ] 'step_name'` Est un nouveau nom pour l’étape. *nom_de_l*est **sysname**, avec NULL comme valeur par défaut.  
+`[ @step_name = ] 'step_name'`Nouveau nom de l’étape. *step_name*est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @subsystem = ] 'subsystem'` Le sous-système utilisé par Microsoft SQL Server Agent pour exécuter *commande*. *sous-système* est **nvarchar (40)** , avec NULL comme valeur par défaut.  
+`[ @subsystem = ] 'subsystem'`Sous-système utilisé par Microsoft SQL Server Agent pour exécuter la *commande*. *Subsystem* est de type **nvarchar (40)**, avec NULL comme valeur par défaut.  
   
-`[ @command = ] 'command'` L’exécution des commandes à exécuter via *sous-système*. *commande* est **nvarchar (max)** , avec NULL comme valeur par défaut.  
+`[ @command = ] 'command'`Commande (s) à exécuter par le biais du *sous-système*. la *commande* est de type **nvarchar (max)**, avec NULL comme valeur par défaut.  
   
 `[ @additional_parameters = ] 'parameters'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @cmdexec_success_code = ] success_code` La valeur retournée par un **CmdExec** commande du sous-système pour indiquer que *commande* exécutée avec succès. *code_succès* est **int**, avec NULL comme valeur par défaut.  
+`[ @cmdexec_success_code = ] success_code`La valeur retournée par une commande de sous-système **CmdExec** pour indiquer que la *commande* a été exécutée avec succès. *success_code* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @on_success_action = ] success_action` L’action à effectuer si l’étape réussit. *action_succès* est **tinyint**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @on_success_action = ] success_action`Action à exécuter si l’étape se déroule correctement. *success_action* est de **type tinyint**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description (action)|  
+|Valeur|Description (action)|  
 |-----------|----------------------------|  
-|**1**|Quitter avec succès.|  
+|**1**|Quittez avec succès.|  
 |**2**|Sortie avec échec|  
-|**3**|Passage à l'étape suivante|  
-|**4**|Passez à l’étape *id_étape_succès.*|  
+|**1,3**|Passage à l'étape suivante|  
+|**4**|Passez à l’étape *success_step_id.*|  
   
-`[ @on_success_step_id = ] success_step_id` Le numéro d’identification de l’étape du travail à exécuter si l’étape réussit et *action_succès* est **4**. *id_étape_succès* est **int**, avec NULL comme valeur par défaut.  
+`[ @on_success_step_id = ] success_step_id`Numéro d’identification de l’étape de ce travail à exécuter si l’étape se déroule correctement et que *success_action* a la valeur **4**. *success_step_id* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @on_fail_action = ] fail_action` L’action à effectuer si l’étape échoue. *action_échec* est **tinyint**, avec NULL comme valeur par défaut et peut avoir une des valeurs suivantes.  
+`[ @on_fail_action = ] fail_action`Action à exécuter si l’étape échoue. *fail_action* est de **type tinyint**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description (action)|  
+|Valeur|Description (action)|  
 |-----------|----------------------------|  
-|**1**|Quitter avec succès.|  
+|**1**|Quittez avec succès.|  
 |**2**|Sortie avec échec|  
-|**3**|Passage à l'étape suivante|  
-|**4**|Passez à l’étape *id_étape_échec **.*|  
+|**1,3**|Passage à l'étape suivante|  
+|**4**|Passez à l’étape *fail_step_id * *.*|  
   
-`[ @on_fail_step_id = ] fail_step_id` Le numéro d’identification de l’étape du travail à exécuter si l’étape échoue et *action_échec* est **4**. *id_étape_échec* est **int**, avec NULL comme valeur par défaut.  
+`[ @on_fail_step_id = ] fail_step_id`Numéro d’identification de l’étape à exécuter dans ce travail si l’étape échoue et si *fail_action* a la valeur **4**. *fail_step_id* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *serveur* est **nvarchar (128)** , avec NULL comme valeur par défaut.  
+`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *Server* est de type **nvarchar (128)**, avec NULL comme valeur par défaut.  
   
-`[ @database_name = ] 'database'` Le nom de la base de données dans lequel exécuter un [!INCLUDE[tsql](../../includes/tsql-md.md)] étape. *base de données*est **sysname**. Les noms placés entre crochets ([ ]) ne sont pas autorisés. La valeur par défaut est NULL.  
+`[ @database_name = ] 'database'`Nom de la base de données dans laquelle exécuter une [!INCLUDE[tsql](../../includes/tsql-md.md)] étape. *Database est de* **type sysname**. Les noms placés entre crochets ([ ]) ne sont pas autorisés. La valeur par défaut est NULL.  
   
-`[ @database_user_name = ] 'user'` Le nom du compte d’utilisateur à utiliser lors de l’exécution un [!INCLUDE[tsql](../../includes/tsql-md.md)] étape. *utilisateur*est **sysname**, avec NULL comme valeur par défaut.  
+`[ @database_user_name = ] 'user'`Nom du compte d’utilisateur à utiliser lors de l’exécution d' [!INCLUDE[tsql](../../includes/tsql-md.md)] une étape. *User*est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @retry_attempts = ] retry_attempts` Le nombre de nouvelles tentatives à utiliser si cette étape échoue. *retry_attempts*est **int**, avec NULL comme valeur par défaut.  
+`[ @retry_attempts = ] retry_attempts`Nombre de nouvelles tentatives à utiliser en cas d’échec de cette étape. *retry_attempts*est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @retry_interval = ] retry_interval` La quantité de temps en minutes entre chaque tentative. *intervalle_entre_reprises* est **int**, avec NULL comme valeur par défaut.  
+`[ @retry_interval = ] retry_interval`Durée, en minutes, entre chaque tentative. *retry_interval* est de **type int**, avec NULL comme valeur par défaut.  
   
 `[ @os_run_priority = ] run_priority` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @output_file_name = ] 'file_name'` Le nom du fichier dans lequel la sortie de cette étape est enregistrée. *file_name* est **nvarchar (200)** , avec NULL comme valeur par défaut. Ce paramètre est valide uniquement avec les commandes fonctionnant dans les sous-systèmes [!INCLUDE[tsql](../../includes/tsql-md.md)] ou CmdExec.  
+`[ @output_file_name = ] 'file_name'`Nom du fichier dans lequel la sortie de cette étape est enregistrée. *file_name* est de type **nvarchar (200)**, avec NULL comme valeur par défaut. Ce paramètre est valide uniquement avec les commandes fonctionnant dans les sous-systèmes [!INCLUDE[tsql](../../includes/tsql-md.md)] ou CmdExec.  
   
- Pour définir nom_fichier_sortie NULL, vous devez définir *nom_fichier_sortie* sur une chaîne vide (' ') ou à une chaîne de caractères vides, mais vous ne pouvez pas utiliser le **CHAR(32)** (fonction). Vous pouvez par exemple définir cet argument avec une chaîne vide comme suit :  
+ Pour affecter la valeur NULL à output_file_name, vous devez affecter à *output_file_name* une chaîne vide (' ') ou à une chaîne de caractères vides, mais vous ne pouvez pas utiliser la fonction **char (32)** . Vous pouvez par exemple définir cet argument avec une chaîne vide comme suit :  
   
- **@output_file_name = ' '**  
+ **@output_file_name= ' '**  
   
-`[ @flags = ] flags` Une option qui contrôle le comportement. *indicateurs* est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @flags = ] flags`Option qui contrôle le comportement. *Flags* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**0** (valeur par défaut)|Écrasement du fichier de sortie.|  
+|**0** (par défaut)|Écrasement du fichier de sortie.|  
 |**2**|Ajout au fichier de sortie|  
 |**4**|Écriture de la sortie de l'étape d'un travail Transact-SQL dans l'historique des étapes.|  
-|**8**|Écriture du journal dans la table (remplace l'historique existant)|  
+|**version8**|Écriture du journal dans la table (remplace l'historique existant)|  
 |**16**|Écriture du journal dans la table (s'ajoute à l'historique existant)|  
   
-`[ @proxy_id = ] proxy_id` Numéro d’identification du proxy pour lequel l’étape de travail s’exécute en tant que. *proxy_id* est de type **int**, avec NULL comme valeur par défaut. Si aucun *proxy_id* est spécifié, aucun *proxy_name* est spécifié et aucune *user_name* est spécifié, l’étape de travail s’exécute en tant que compte de service pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+`[ @proxy_id = ] proxy_id`Numéro d’identification du proxy sous lequel l’étape de travail s’exécute. *proxy_id* est de type **int**, avec NULL comme valeur par défaut. Si aucun *proxy_id* n’est spécifié, aucun *proxy_name* n’est spécifié et aucun *user_name* n’est spécifié, l’étape de travail s’exécute en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tant que compte de service pour l’agent.  
   
-`[ @proxy_name = ] 'proxy_name'` Le nom de l’étape de travail s’exécute en tant que le proxy. *proxy_name* est de type **sysname**, avec NULL comme valeur par défaut. Si aucun *proxy_id* est spécifié, aucun *proxy_name* est spécifié et aucune *user_name* est spécifié, l’étape de travail s’exécute en tant que compte de service pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+`[ @proxy_name = ] 'proxy_name'`Nom du proxy sous lequel l’étape de travail s’exécute. *proxy_name* est de type **sysname**, avec NULL comme valeur par défaut. Si aucun *proxy_id* n’est spécifié, aucun *proxy_name* n’est spécifié et aucun *user_name* n’est spécifié, l’étape de travail s’exécute en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tant que compte de service pour l’agent.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_update_jobstep** doit être exécuté à partir de la **msdb** base de données.  
+ **sp_update_jobstep** doit être exécuté à partir de la base de données **msdb** .  
   
  La mise à jour de l'étape d'un travail incrémente le numéro de version de ce travail.  
   
@@ -148,11 +148,11 @@ sp_update_jobstep
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Seuls les membres du **sysadmin** mettre à jour une étape de travail appartienne à un autre utilisateur.  
+ Seuls les membres de **sysadmin** peuvent mettre à jour une étape de travail appartenant à un autre utilisateur.  
   
- Si l'étape d'un travail nécessite un accès à un proxy, le créateur de l'étape doit avoir accès au proxy pour l'étape du travail. Tous les sous-systèmes, excepté Transact-SQL, requièrent un compte proxy. Membres de **sysadmin** ont accès à tous les serveurs proxy et pouvez utiliser le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte de service Agent pour le proxy.  
+ Si l'étape d'un travail nécessite un accès à un proxy, le créateur de l'étape doit avoir accès au proxy pour l'étape du travail. Tous les sous-systèmes, excepté Transact-SQL, requièrent un compte proxy. Les membres de **sysadmin** ont accès à tous les proxies et peuvent utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le compte de service agent pour le proxy.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant modifie le nombre de tentatives de reprises pour la première étape du travail `Weekly Sales Data Backup`. À la fin de l'exemple, ce nombre s'élève à `10`.  

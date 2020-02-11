@@ -19,21 +19,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e17a87a04c8c4286a66c6e7a0746f2d7de48d72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124339"
 ---
-# <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
+# <a name="sp_fulltext_column-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
   Spécifie si une colonne particulière d'une table est utilisée dans l'indexation de texte intégral.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) à la place.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez à la place [ALTER FULLTEXT index](../../t-sql/statements/alter-fulltext-index-transact-sql.md) .  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,32 +47,32 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @tabname = ] 'qualified_table_name'` Est un nom de table d’une ou deux parties. La table doit déjà exister dans la base de données actuelle. La table doit avoir un index de recherche en texte intégral. *nom_table_qualifée* est **nvarchar (517)** , sans valeur par défaut.  
+`[ @tabname = ] 'qualified_table_name'`Est un nom de table en une ou deux parties. La table doit déjà exister dans la base de données actuelle. La table doit avoir un index de recherche en texte intégral. *qualified_table_name* est de type **nvarchar (517)**, sans valeur par défaut.  
   
-`[ @colname = ] 'column_name'` Est le nom d’une colonne dans *nom_table_qualifée*. La colonne doit être de type caractère, **varbinary (max)** ou **image** colonne et ne peut pas être une colonne calculée. *column_name* est **sysname**, sans valeur par défaut.  
+`[ @colname = ] 'column_name'`Nom d’une colonne dans *qualified_table_name*. La colonne doit être une colonne de type Character, **varbinary (max)** ou **image** et ne peut pas être une colonne calculée. *column_name* est de **type sysname**, sans valeur par défaut.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut créer des index de recherche en texte intégral de données texte stockées dans des colonnes qui sont de **varbinary (max)** ou **image** type de données. Les images et les dessins ne sont pas indexés.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]peut créer des index de recherche en texte intégral de données texte stockées dans des colonnes de type de données **varbinary (max)** ou **image** . Les images et les dessins ne sont pas indexés.  
   
-`[ @action = ] 'action'` Est l’action à effectuer. *action* est **varchar (20)** , aucune valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @action = ] 'action'`Action à exécuter. *action* est de type **varchar (20)**, sans valeur par défaut, et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**add**|Ajoute *column_name* de *nom_table_qualifée* à l’index de recherche en texte intégral inactif de la table. Cette action permet d'appliquer à la colonne une indexation de texte intégral.|  
-|**drop**|Supprime *column_name* de *nom_table_qualifée* à partir de l’index de recherche en texte intégral inactif de la table.|  
+|**complémentaires**|Ajoute *column_name* de *qualified_table_name* à l’index de recherche en texte intégral inactif de la table. Cette action permet d'appliquer à la colonne une indexation de texte intégral.|  
+|**Déplacez**|Supprime *column_name* de *qualified_table_name* de l’index de recherche en texte intégral inactif de la table.|  
   
-`[ @language = ] 'language_term'` Est la langue des données stockées dans la colonne. Pour obtenir la liste des langues incluses dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
+`[ @language = ] 'language_term'`Langue des données stockées dans la colonne. Pour obtenir la liste des langues incluses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dans, consultez [sys. fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
 > [!NOTE]  
 >  Utilisez l'analyse indépendante lorsqu'une colonne contient des données dans plusieurs langues ou dans une langue non prise en charge. La langue par défaut est spécifiée par l'option de configuration « Default Full-Text Language ».  
   
-`[ @type_colname = ] 'type_column_name'` Est le nom d’une colonne dans *nom_table_qualifée* qui contient le type de document de *column_name*. Cette colonne doit être **char**, **nchar**, **varchar**, ou **nvarchar**. Il est utilisé uniquement lorsque le type de données de *column_name* est de type **varbinary (max)** ou **image**. *type_column_name* est **sysname**, sans valeur par défaut.  
+`[ @type_colname = ] 'type_column_name'`Nom d’une colonne dans *qualified_table_name* qui contient le type de document de *column_name*. Cette colonne doit être de **type char**, **nchar**, **varchar**ou **nvarchar**. Elle est utilisée uniquement lorsque le type de données de *column_name* est de type **varbinary (max)** ou **image**. *type_column_name* est de **type sysname**, sans valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  Si l'index de texte intégral est actif, tout remplissage en cours est arrêté. De plus, si le suivi des modifications est activé pour une table détenant un index de texte intégral actif, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] garantit la validité de l'index. Par exemple, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arrête tout remplissage en cours sur la table, supprime l'index existant et démarre un nouveau remplissage.  
@@ -80,7 +80,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
  Si le suivi des modifications est activé et que des colonnes doivent être ajoutées ou supprimées de l'index de texte intégral tout en préservant l'index, la table doit être désactivée puis les colonnes requises doivent être ajoutées ou supprimées. Ces actions gèlent l'index. La table peut être activée ultérieurement lorsque le démarrage d'un remplissage s'avère pratique.  
   
 ## <a name="permissions"></a>Autorisations  
- Utilisateur doit être un membre du **db_ddladmin** fixe rôle de base de données ou un membre de la **db_owner** fixe rôle de base de données ou le propriétaire de la table.  
+ L’utilisateur doit être membre du rôle de base de données fixe **db_ddladmin** ou membre du rôle de base de données fixe **db_owner** ou du propriétaire de la table.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple ci-dessous illustre l'ajout de la colonne `DocumentSummary` de la table `Document` à l'index de texte intégral de la table.  
@@ -119,6 +119,6 @@ WHERE CONTAINS(spanishCol, 'formsof(inflectional, trabajar)')
  [sp_help_fulltext_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
  [sp_help_fulltext_tables_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Procédures stockées de recherche en texte intégral et la recherche sémantique &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [Procédures stockées de recherche en texte intégral et de recherche sémantique &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

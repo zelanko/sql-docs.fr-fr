@@ -18,18 +18,18 @@ ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: dce66e74f7415a8ff5ac6de4505d8a1f0632391b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108456"
 ---
-# <a name="spcursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
+# <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Définit les options de curseur ou retourne des informations de curseur créées par la procédure stockée sp_cursoropen. sp_cursoroption est appelée en spécifiant ID = 8 dans un paquet data stream (TDS).  
+  Définit des options de curseur ou retourne des informations de curseur créées par la procédure stockée sp_cursoropen. sp_cursoroption est appelée en spécifiant ID = 8 dans un paquet tabular data stream (TDS).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,29 +39,29 @@ sp_cursoroption cursor, code, value
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *cursor*  
- Est un *gérer* valeur générée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et retournée par la procédure stockée sp_cursoropen. *curseur* nécessite un **int** d’entrée de valeur pour l’exécution.  
+ *mire*  
+ Est une valeur de *handle* qui est générée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par et retournée par la procédure stockée sp_cursoropen. le *curseur* requiert une valeur d’entrée **int** pour l’exécution.  
   
  *code*  
- Permet de stipuler différents facteurs des valeurs de retour de curseur. *code* requiert l’une des opérations suivantes **int** valeurs d’entrée :  
+ Permet de stipuler différents facteurs des valeurs de retour de curseur. le *code* requiert l’une des valeurs d’entrée **int** suivantes :  
   
-|Value|Nom|Description|  
+|Valeur|Name|Description|  
 |-----------|----------|-----------------|  
-|0x0001|TEXTPTR_ONLY|Retourne le pointeur de texte, et non les données réelles, pour certaines colonnes text ou image désignées.<br /><br /> TEXTPTR_ONLY permet l’utilisation des pointeurs de texte à utiliser comme *handles* vers des objets blob qui peuvent être récupérés ultérieurement à sélectivement ou mis à jour à l’aide de [!INCLUDE[tsql](../../includes/tsql-md.md)] ou les fonctions DBLIB (par exemple) [!INCLUDE[tsql](../../includes/tsql-md.md)] READTEXT ou DBLIB DBWRITETEXT).<br /><br /> Si une valeur « 0 » est affectée, toutes les colonnes text et image dans la liste de sélection retourneront des pointeurs de texte plutôt que des données.|  
-|0x0002|CURSOR_NAME|Assigne le nom spécifié dans *valeur* jusqu’au curseur. Ceci, à son tour, ODBC peut ainsi utiliser [!INCLUDE[tsql](../../includes/tsql-md.md)] positionné les instructions UPDATE/DELETE sur les curseurs ouverts via sp_cursoropen.<br /><br /> La chaîne peut être spécifiée comme tout caractère ou type de données Unicode.<br /><br /> Dans la mesure où [!INCLUDE[tsql](../../includes/tsql-md.md)] des instructions UPDATE/DELETE positionnées fonctionnent, par défaut, sur la première ligne dans un curseur fat, sp_cursor SETPOSITION doit être utilisé pour positionner le curseur avant d’émettre l’instruction UPDATE/DELETE positionnée.|  
+|0x0001|TEXTPTR_ONLY|Retourne le pointeur de texte, et non les données réelles, pour certaines colonnes text ou image désignées.<br /><br /> TEXTPTR_ONLY permet d’utiliser des pointeurs de texte comme *Handles* d’objets BLOB qui peuvent être récupérés ou mis à [!INCLUDE[tsql](../../includes/tsql-md.md)] jour ultérieurement à l’aide des [!INCLUDE[tsql](../../includes/tsql-md.md)] fonctions ou de DBLIB (par exemple READTEXT ou DBLIB dbwritetext).<br /><br /> Si une valeur « 0 » est affectée, toutes les colonnes text et image dans la liste de sélection retourneront des pointeurs de texte plutôt que des données.|  
+|0x0002|CURSOR_NAME|Attribue le nom spécifié dans *valeur* au curseur. Cela permet à ODBC d’utiliser [!INCLUDE[tsql](../../includes/tsql-md.md)] des instructions UPDATE/DELETE positionnées sur les curseurs ouverts via sp_cursoropen.<br /><br /> La chaîne peut être spécifiée comme tout caractère ou type de données Unicode.<br /><br /> Étant [!INCLUDE[tsql](../../includes/tsql-md.md)] donné que les instructions UPDATE/DELETE positionnées fonctionnent, par défaut, sur la première ligne d’un curseur fat, sp_cursor SetPosition doit être utilisé pour positionner le curseur avant d’émettre l’instruction Update/Delete positionnée.|  
 |0x0003|TEXTDATA|Retourne les données réelles, et non le pointeur de texte, pour certaines colonnes text ou image sur les extractions suivantes (autrement dit, cela annule l'effet de TEXTPTR_ONLY).<br /><br /> Si TEXTDATA est activé pour une colonne particulière, la ligne est à nouveau extraite ou actualisée, et TEXTPTR_ONLY peut ensuite lui être à nouveau affecté. Comme avec TEXTPTR_ONLY, le paramètre de valeur est un entier qui spécifie le numéro de colonne et une valeur zéro retourne toutes les colonnes text et image.|  
 |0x0004|SCROLLOPT|Option de défilement. Pour plus d'informations, consultez « Valeurs des codes de retour » plus loin dans cette rubrique.|  
 |0x0005|CCOPT|Option de contrôle en matière d'accès concurrentiel. Pour plus d'informations, consultez « Valeurs des codes de retour » plus loin dans cette rubrique.|  
-|0x0006|ROWCOUNT|Nombre de lignes actuellement dans le jeu de résultats.<br /><br /> Remarque : Le nombre de lignes peut avoir changé depuis la valeur retournée par sp_cursoropen si le remplissage asynchrone est utilisé. La valeur -1 est retournée si le nombre de lignes est inconnu.|  
+|0x0006|ROWCOUNT|Nombre de lignes actuellement dans le jeu de résultats.<br /><br /> Remarque : le nombre de lignes peut avoir changé depuis la valeur retournée par sp_cursoropen si le remplissage asynchrone est utilisé. La valeur-1 est retournée si le nombre de lignes est inconnu.|  
   
- *value*  
- Désigne la valeur retournée par *code*. *valeur* est un paramètre obligatoire qui appelle un 0 x 0001, 0 x 0002 ou 0 x 0003 *code* valeur d’entrée.  
+ *ajoutée*  
+ Désigne la valeur retournée par le *code*. la *valeur* est un paramètre obligatoire qui requiert une valeur d’entrée de *code* 0x0001, 0x0002 ou 0x0003.  
   
 > [!NOTE]  
->  Un *code* valeur 2 est un type de données de chaîne. N’importe quel autre *code* valeur entrée ou retournée par *valeur* est un entier.  
+>  Une valeur de *code* de 2 est un type de données String. Toute autre entrée de valeur de *code* ou retournée par *valeur* est un entier.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- Le *valeur* paramètre peut retourner l’une des opérations suivantes *code* valeurs.  
+## <a name="return-code-values"></a>Codet de retour  
+ Le paramètre *value* peut retourner l’une des valeurs de *code* suivantes.  
   
 |Valeur retournée|Description|  
 |------------------|-----------------|  
@@ -69,7 +69,7 @@ sp_cursoroption cursor, code, value
 |0X0005|CCOPT|  
 |0X0006|ROWCOUNT|  
   
- Le *valeur* paramètre retourne une des valeurs SCROLLOPT suivantes.  
+ Le paramètre *value* retourne l’une des valeurs SCROLLOPT suivantes.  
   
 |Valeur retournée|Description|  
 |------------------|-----------------|  
@@ -78,7 +78,7 @@ sp_cursoroption cursor, code, value
 |0x0004|FORWARD_ONLY|  
 |0x0008|STATIC|  
   
- Le *valeur* paramètre retourne une des valeurs CCOPT suivantes.  
+ Le paramètre *value* retourne l’une des valeurs ccopt suivantes.  
   
 |Valeur retournée|Description|  
 |------------------|-----------------|  

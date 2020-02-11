@@ -1,5 +1,5 @@
 ---
-title: Clause COMPUTE de forme | Microsoft Docs
+title: Shape Compute, clause | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924146"
 ---
 # <a name="shape-compute-clause"></a>Clause COMPUTE de la commande SHAPE
-Une clause COMPUTE de forme génère un parent **Recordset**, dont les colonnes sont constituées d’une référence à l’enfant **Recordset**; facultatif dont le contenu est chapitre, nouveau, ou des colonnes calculées, des colonnes ou le résultat de l’exécution des fonctions d’agrégation sur l’enfant **Recordset** précédemment finies ou **Recordset**; et toutes les colonnes à partir de l’enfant **Recordset** répertoriées dans facultatif par clause.  
+Une clause COMPUTE Shape génère un **jeu d’enregistrements**parent, dont les colonnes se composent d’une référence à l' **objet Recordset**enfant ; les colonnes facultatives dont le contenu est un chapitre, une nouvelle colonne ou des colonnes calculées, ou le résultat de l’exécution des fonctions d’agrégation sur le **jeu d’enregistrements** enfant ou sur un **jeu d’enregistrements**précédemment mis en forme ; et toutes les colonnes de l' **objet Recordset** enfant qui sont listées dans la clause facultative by.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,58 +35,58 @@ SHAPE child-command [AS] child-alias
 ## <a name="description"></a>Description  
  Les parties de cette clause sont les suivantes :  
   
- *child-command*  
- Se compose d’une des opérations suivantes :  
+ *commande enfant*  
+ Se compose de l’un des éléments suivants :  
   
--   Une commande de requête entre accolades («{}») qui retourne un enfant **Recordset** objet. La commande est émise au fournisseur de données sous-jacent et sa syntaxe dépend de la configuration requise de ce fournisseur. Ce sera généralement le langage SQL, bien qu’ADO ne nécessite pas de n’importe quel langage de requête spécifique.  
+-   Commande de requête entre accolades ("{}") qui retourne un objet **Recordset** enfant. La commande est émise pour le fournisseur de données sous-jacent, et sa syntaxe dépend des spécifications de ce fournisseur. Il s’agit généralement du langage SQL, bien qu’ADO ne nécessite pas de langage de requête particulier.  
   
--   Le nom d’un existant en forme **Recordset**.  
+-   Nom d’un **jeu d’enregistrements**mis en forme existant.  
   
--   Une autre commande de forme.  
+-   Autre commande Shape.  
   
--   Le mot-clé TABLE, suivi du nom d’une table dans le fournisseur de données.  
+-   Le mot clé TABLE, suivi du nom d’une table dans le fournisseur de données.  
   
  *alias-enfant*  
- Alias utilisé pour faire référence à la **Recordset** retourné par la *commande enfant.* Le *enfant-alias* est requis dans la liste des colonnes dans la clause COMPUTE et définit la relation entre parent et enfant **Recordset** objets.  
+ Alias utilisé pour faire référence au **jeu d’enregistrements** retourné par la *commande enfant.* L' *alias d’enfant* est requis dans la liste de colonnes de la clause COMPUTE et définit la relation entre les objets **Recordset** enfant et parent.  
   
- *appended-column-list*  
- Une liste dans laquelle chaque élément définit une colonne dans le parent généré. Chaque élément contient une colonne de chapitre, une nouvelle colonne, une colonne calculée ou une valeur obtenue à partir d’une fonction d’agrégation sur l’enfant **Recordset**.  
+ *ajouté-colonne-liste*  
+ Liste dans laquelle chaque élément définit une colonne dans le parent généré. Chaque élément contient soit une colonne de chapitre, une nouvelle colonne, une colonne calculée, soit une valeur résultant d’une fonction d’agrégation sur le **jeu d’enregistrements**enfant.  
   
- *grp-field-list*  
- Une liste de colonnes dans le parent et enfant **Recordset** objets qui spécifie la façon dont les lignes doivent être groupées dans l’enfant.  
+ *GRP-champ-liste*  
+ Liste de colonnes dans les objets **Recordset** parent et enfant qui spécifient comment les lignes doivent être regroupées dans l’enfant.  
   
- Pour chaque colonne dans le *grp-field-list,* il existe une colonne correspondante dans l’enfant et parent **Recordset** objets. Pour chaque ligne de la page parente **Recordset**, le *grp liste de champs* colonnes ont des valeurs uniques et l’enfant **Recordset** référencé par le parent ligne se compose uniquement d’enfant les lignes dont la propriété *liste de champs grp* colonnes ont les mêmes valeurs que la ligne parente.  
+ Pour chaque colonne de la *liste grp-field-list* figure une colonne correspondante dans les objets **Recordset** parent et enfant. Pour chaque ligne de l’ensemble d' **enregistrements**parent, les colonnes *grp-field-list* ont des valeurs uniques et le **jeu d’enregistrements** enfant référencé par la ligne parente se compose uniquement de lignes enfants dont les colonnes *grp-field-list* ont les mêmes valeurs que la ligne parente.  
   
- Si la clause BY est incluse, l’enfant **Recordset**de lignes seront regroupées selon les colonnes dans la clause COMPUTE. Le parent **Recordset** contiendra une ligne pour chaque groupe de lignes de l’enfant **Recordset**.  
+ Si la clause BY est incluse, les lignes de l' **objet Recordset**enfant sont regroupées en fonction des colonnes de la clause COMPUTE. Le **jeu d’enregistrements** parent contiendra une ligne pour chaque groupe de lignes dans le **jeu d’enregistrements**enfant.  
   
- Si la clause BY est omise, l’intégralité de l’enfant **Recordset** est traité comme un seul groupe et le parent **Recordset** contient exactement une ligne. Cette ligne fait référence à l’intégralité de l’enfant **Recordset**. L’omission de la clause BY vous permet de calculer des agrégats de « total général » tout l’enfant **Recordset**.  
+ Si la clause BY est omise, le **jeu d’enregistrements** enfant entier est traité comme un groupe unique et le **Recordset** parent contient exactement une ligne. Cette ligne fait référence à l’intégralité du **Recordset**enfant. L’omission de la clause BY vous permet de calculer des agrégats « total général » sur l’ensemble du **jeu d’enregistrements**enfant.  
   
- Exemple :  
+ Par exemple :  
   
 ```  
 SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
 ```  
   
- Quel que soit le parent **Recordset** est formée (à l’aide de calcul ou APPEND), il contiendra une colonne de chapitre qui sert à associer à un enfant **Recordset**. Si vous le souhaitez, le parent **Recordset** peuvent également contenir des colonnes contenant des agrégats (SUM, MIN, MAX et ainsi de suite) sur les lignes enfants. Le parent et l’enfant **Recordset** peuvent contenir des colonnes qui contiennent une expression sur la ligne dans le **Recordset**, ainsi que les colonnes qui sont nouveaux et initialement vide.  
+ Quelle que soit la façon dont le **jeu d’enregistrements** parent est formé (à l’aide de Compute ou d’Append), il contient une colonne de chapitre qui est utilisée pour le lier à un **Recordset**enfant. Si vous le souhaitez, le **jeu d’enregistrements** parent peut également contenir des colonnes qui contiennent des agrégats (somme, min, Max, etc.) sur les lignes enfants. Le parent et le **Recordset** enfant peuvent contenir des colonnes qui contiennent une expression sur la ligne de l’ensemble d' **enregistrements**, ainsi que des colonnes nouvelles et vides initialement.  
   
 ## <a name="operation"></a>Opération  
- Le *commande enfant* est émis pour le fournisseur, qui retourne un enfant **Recordset**.  
+ La *commande enfant* est émise au fournisseur, qui retourne un **jeu d’enregistrements**enfant.  
   
- La clause COMPUTE spécifie les colonnes du parent **Recordset**, qui peut être une référence à l’enfant **Recordset**, un ou plusieurs agrégats, d’une expression calculée ou de nouvelles colonnes. Si une clause BY est, les colonnes qu’elle définit sont également ajoutées au parent **Recordset**. La clause BY spécifie comment les lignes de l’enfant **Recordset** sont regroupés.  
+ La clause COMPUTE spécifie les colonnes de l' **objet Recordset**parent, qui peut être une référence à l' **objet Recordset**enfant, un ou plusieurs agrégats, une expression calculée ou de nouvelles colonnes. S’il existe une clause BY, les colonnes qu’elle définit sont également ajoutées à l' **objet Recordset**parent. La clause BY spécifie la manière dont les lignes de l’ensemble d' **enregistrements** enfant sont regroupées.  
   
- Par exemple, supposons que vous avez une table nommée des données démographiques, qui se compose de champs d’état, ville et remplissage. (Les chiffres dans la table sont fournis uniquement à un exemple).  
+ Par exemple, supposons que vous disposiez d’une table nommée données démographiques, composée de champs État, ville et remplissage. (Les chiffres de remplissage dans le tableau sont fournis uniquement à titre d’exemple).  
   
-|État|City|Remplissage|  
+|State|City|Remplissage|  
 |-----------|----------|----------------|  
-|WA|Seattle|700,000|  
-|Ou|Medford|200,000|  
-|Ou|Portland|400,000|  
-|CA|Los Angeles|800,000|  
-|CA|San Diego|600,000|  
-|WA|Tacoma|500,000|  
-|Ou|Corvallis|300,000|  
+|WA|Seattle|700 000|  
+|OR|Medford|200 000|  
+|OR|Portland|400 000|  
+|CA|Los Angeles|800 000|  
+|CA|San Diego|600 000|  
+|WA|Tacoma|500 000|  
+|OR|Corvallis|300 000|  
   
- Maintenant, exécutez cette commande de la forme :  
+ À présent, émettez la commande SHAPE suivante :  
   
 ```  
 rst.Open  "SHAPE {select * from demographics} AS rs "  & _  
@@ -94,52 +94,52 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
            objConnection  
 ```  
   
- Cette commande ouvre une forme **Recordset** à deux niveaux. Le niveau parent est un généré **Recordset** avec une colonne d’agrégation (`SUM(rs.population)`), une colonne faisant référence à l’enfant **Recordset** (`rs`) et une colonne pour le regroupement de l’enfant **Recordset** (`state`). Le niveau enfant est la **Recordset** retourné par la commande de requête (`select * from demographics`).  
+ Cette commande ouvre un **Recordset** mis en forme avec deux niveaux. Le niveau parent est un **Recordset** généré avec une colonne d’agrégation`SUM(rs.population)`(), une colonne qui fait référence à l'`rs` **objet Recordset** enfant () et une colonne pour le regroupement du`state` **Recordset** enfant (). Le niveau enfant est le **jeu d’enregistrements** retourné par la commande de`select * from demographics`requête ().  
   
- L’enfant **Recordset** lignes de détails seront regroupés par état, mais dans aucun ordre particulier. Autrement dit, les groupes ne seront pas dans l’ordre alphabétique ou numérique. Si vous souhaitez que le parent **Recordset** pour être triée, vous pouvez utiliser la **tri du jeu d’enregistrements** pour classer le parent **Recordset**.  
+ Les lignes de détail de l' **objet Recordset** enfant sont regroupées par État, mais dans aucun ordre particulier. Autrement dit, les groupes ne seront pas classés par ordre alphabétique ou numérique. Si vous souhaitez que le **jeu d’enregistrements** parent soit ordonné, vous pouvez utiliser la méthode de tri de l’ensemble d' **enregistrements** pour trier le **jeu d'** enregistrements parent.  
   
- Vous pouvez désormais parcourir le parent **Recordset** et accéder aux détails de l’enfant **Recordset** objets. Pour plus d’informations, consultez [accès aux lignes d’un Recordset hiérarchique](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
+ Vous pouvez maintenant naviguer dans le **jeu d’enregistrements** parent ouvert et accéder aux objets **Recordset** des détails enfants. Pour plus d’informations, consultez [accès aux lignes d’un jeu d’enregistrements hiérarchique](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
   
-## <a name="resultant-parent-and-child-detail-recordsets"></a>Parent résultant et jeux d’enregistrements de détail enfants  
+## <a name="resultant-parent-and-child-detail-recordsets"></a>Jeux d’enregistrements des détails parents et enfants résultants  
   
 ### <a name="parent"></a>Parent  
   
-|Somme (rs. Remplissage)|rs|État|  
+|SOMME (RS. Habitants|rs|State|  
 |---------------------------|--------|-----------|  
-|1,300,000|Référence à Enfant1|CA|  
-|1,200,000|Référence à Enfant2|WA|  
-|1,100,000|Référence à enfant 3|Ou|  
+|1,3 million|Référence à child1|CA|  
+|1,2 million|Référence à enfant2|WA|  
+|1,1 million|Référence à child3|OR|  
   
-## <a name="child1"></a>Enfant1  
+## <a name="child1"></a>Child1  
   
-|État|City|Remplissage|  
+|State|City|Remplissage|  
 |-----------|----------|----------------|  
-|CA|Los Angeles|800,000|  
-|CA|San Diego|600,000|  
+|CA|Los Angeles|800 000|  
+|CA|San Diego|600 000|  
   
-## <a name="child2"></a>Enfant2  
+## <a name="child2"></a>Child2  
   
-|État|City|Remplissage|  
+|State|City|Remplissage|  
 |-----------|----------|----------------|  
-|WA|Seattle|700,000|  
-|WA|Tacoma|500,000|  
+|WA|Seattle|700 000|  
+|WA|Tacoma|500 000|  
   
 ## <a name="child3"></a>Child3  
   
-|État|City|Remplissage|  
+|State|City|Remplissage|  
 |-----------|----------|----------------|  
-|Ou|Medford|200,000|  
-|Ou|Portland|400,000|  
-|Ou|Corvallis|300,000|  
+|OR|Medford|200 000|  
+|OR|Portland|400 000|  
+|OR|Corvallis|300 000|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Accès aux lignes dans un Recordset hiérarchique](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [Vue d’ensemble de la mise en forme des données](../../../ado/guide/data/data-shaping-overview.md)   
- [Objet de champ](../../../ado/reference/ado-api/field-object.md)   
- [Grammaire de la mise en forme formelle](../../../ado/guide/data/formal-shape-grammar.md)   
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Accès aux lignes d’un jeu d’enregistrements hiérarchique](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
+ [Présentation de la mise en forme des données](../../../ado/guide/data/data-shaping-overview.md)   
+ [Field, objet](../../../ado/reference/ado-api/field-object.md)   
+ [Grammaire de forme formelle](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Fournisseurs requis pour la mise en forme des données](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Clause APPEND de forme](../../../ado/guide/data/shape-append-clause.md)   
- [En général, les commandes de forme](../../../ado/guide/data/shape-commands-in-general.md)   
- [Valeur de propriété (ADO)](../../../ado/reference/ado-api/value-property-ado.md)   
+ [Clause APPEND de la forme](../../../ado/guide/data/shape-append-clause.md)   
+ [Mettre en forme les commandes en général](../../../ado/guide/data/shape-commands-in-general.md)   
+ [Value, propriété (ADO)](../../../ado/reference/ado-api/value-property-ado.md)   
  [Fonctions Visual Basic pour Applications](../../../ado/guide/data/visual-basic-for-applications-functions.md)

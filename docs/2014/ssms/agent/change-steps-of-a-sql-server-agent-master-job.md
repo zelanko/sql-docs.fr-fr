@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1a60d9e5d8569324cc3f68200d4a5a232b930d8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63017590"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Modifier les étapes d'un travail maître SQL Server Agent
@@ -28,7 +28,7 @@ ms.locfileid: "63017590"
   
      [Sécurité](#Security)  
   
--   **Pour modifier les étapes d'un travail maître SQL Server Agent à l'aide de :**  
+-   **Pour apporter des modifications aux étapes d’un travail maître SQL Server Agent, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -56,19 +56,19 @@ ms.locfileid: "63017590"
   
 4.  Cliquez avec le bouton droit sur le travail dont vous voulez modifier les étapes, puis sélectionnez **Propriétés**.  
   
-5.  Dans la boîte de dialogue **Propriétés du travail -** _nom_travail_, sous **Sélectionner une page**, sélectionnez **Étapes**.  
+5.  Dans la boîte de dialogue **Propriétés du travail-**_Job_name_ , sous **Sélectionner une page**, sélectionnez **étapes**.  
   
-6.  Cliquez sur **modifier** pour ouvrir le **propriétés étape du travail -** _nom_étape_de_travail_ boîte de dialogue. Pour plus d’informations sur les options disponibles dans cette boîte de dialogue, consultez [propriétés étape du travail : Nouvelle étape du travail &#40;Page Général&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) et [propriétés de l’étape du travail : Nouvelle étape du travail &#40;Page avancé&#41;](job-step-properties-new-job-step-advanced-page.md).  
+6.  Cliquez sur **modifier** pour ouvrir la boîte **de dialogue Propriétés de l’étape du travail-**_job_step_name_ . Pour plus d’informations sur les options disponibles dans cette boîte de dialogue, consultez Propriétés de l’étape du travail [: nouvelle étape du travail &#40;page général&#41;](../../integration-services/general-page-of-integration-services-designers-options.md) et propriétés de l' [étape du travail : nouvelle étape du travail &#40;page avancé&#41;](job-step-properties-new-job-step-advanced-page.md).  
   
 7.  Lorsque vous avez terminé, cliquez sur **OK**.  
   
-8.  Dans le **propriétés du travail -** _nom_travail_ boîte de dialogue, cliquez sur **OK**.  
+8.  Dans la boîte de dialogue **Propriétés du travail-**_job_name_ , cliquez sur **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-make-changes-to-the-steps-of-a-sql-server-agent-master-job"></a>Pour modifier les étapes d'un travail maître SQL Server Agent  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

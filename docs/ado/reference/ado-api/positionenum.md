@@ -16,29 +16,29 @@ ms.assetid: e69af0a5-3405-4b72-9c6e-6b188ff746fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d5f7ca47177a953313ff983bb25f9178b73b4930
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917605"
 ---
 # <a name="positionenum"></a>PositionEnum
-Spécifie la position actuelle du pointeur d’enregistrement au sein d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Spécifie la position actuelle du pointeur d’enregistrement dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-|Constante|Value|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adPosBOF**|-2|Indique que le pointeur d’enregistrement actuel est de type BOF (autrement dit, le [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propriété est **True**).|  
-|**adPosEOF**|-3|Indique que le pointeur d’enregistrement actuel est de type EOF (autrement dit, le [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propriété est **True**).|  
-|**adPosUnknown**|-1|Indique que le **Recordset** est vide, la position actuelle est inconnue ou le fournisseur ne prend pas en charge la [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) ou [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) propriété.|  
+|**adPosBOF**|-2|Indique que le pointeur d’enregistrement actif se trouve sur BOF (autrement dit, la propriété [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) a la **valeur true**).|  
+|**adPosEOF**|-3|Indique que le pointeur d’enregistrement actif se trouve dans EOF (c’est-à-dire que la propriété [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) a la **valeur true**).|  
+|**adPosUnknown**|-1|Indique que le **jeu d’enregistrements** est vide, que la position actuelle est inconnue ou que le fournisseur ne prend pas en charge la propriété [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) ou [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) .|  
   
-## <a name="adowfc-equivalent"></a>Équivalent de ADO/WFC  
- Package : **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
+ Package : **com. ms. wfc. Data**  
   
-|Constante|  
+|Constant|  
 |--------------|  
 |AdoEnums.Position.BOF|  
-|AdoEnums.Position.EOF|  
-|AdoEnums.Position.UNKNOWN|  
+|AdoEnums. position. EOF|  
+|AdoEnums. position. Unknown|  
   
 ## <a name="applies-to"></a>S'applique à  
   

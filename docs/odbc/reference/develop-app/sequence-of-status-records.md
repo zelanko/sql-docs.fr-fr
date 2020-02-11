@@ -1,5 +1,5 @@
 ---
-title: Séquence d’enregistrements d’état | Microsoft Docs
+title: Séquence d’enregistrements d’État | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ ms.assetid: 0e0436cc-230f-44b0-b373-04a57e83ee76
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 67eac22a630305f32f141ea18861e5638445f19b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094350"
 ---
 # <a name="sequence-of-status-records"></a>Séquence d’enregistrements d’état
-Si deux ou plusieurs enregistrements d’état sont retournés, le Gestionnaire de pilotes et le pilote classent selon les règles suivantes. L’enregistrement avec le rang le plus élevé est le premier enregistrement. La source d’un enregistrement (Gestionnaire de pilotes, pilotes, passerelle et ainsi de suite) constitue toutefois pas lorsque les enregistrements de classement.  
+Si au moins deux enregistrements d’État sont renvoyés, le gestionnaire de pilotes et le pilote sont classés en fonction des règles suivantes. L’enregistrement avec le rang le plus élevé est le premier enregistrement. La source d’un enregistrement (gestionnaire de pilotes, pilote, passerelle, etc.) n’est pas prise en compte lors du classement des enregistrements.  
   
--   **Erreurs** enregistrements d’état qui décrivent les erreurs ont le rang le plus élevé. Parmi les enregistrements d’erreur, les enregistrements qui indiquent un échec de la transaction ou l’échec de la transaction possible outrank tous les autres enregistrements. Si deux ou plusieurs enregistrements décrivent la condition d’erreur, SQLSTATE défini par la spécification Open groupe CLI (classes 03 via HZ) outrank SQLSTATE définies par ODBC et définis par le pilote.  
+-   **Erreurs** Les enregistrements d’État qui décrivent les erreurs ont le rang le plus élevé. Parmi les enregistrements d’erreur, les enregistrements qui indiquent un échec de transaction ou un échec de transaction possible dérangent tous les autres enregistrements. Si deux ou plusieurs enregistrements décrivent la même condition d’erreur, les SQLSTATEs définies par la spécification Open CLI de groupe (classes 03 à HZ) sont prioritaires par rapport aux SQLSTATEs définies par ODBC et définies par le pilote.  
   
--   **Les valeurs de données non défini par l’implémentation** enregistrements d’état qui décrivent les valeurs des données de non définis par le pilote (classe 02) ont la deuxième rang le plus élevé.  
+-   **Aucune valeur de données définie par l’implémentation** Les enregistrements d’État qui décrivent les valeurs de données non définies par le pilote (classe 02) ont le deuxième rang le plus élevé.  
   
--   **Avertissements** enregistrements d’état qui décrivent les avertissements (classe 01) ont le rang le plus bas. Si deux ou plusieurs enregistrements décrivent la même condition d’avertissement, avertissement SQLSTATE défini par la spécification Open groupe CLI outrank SQLSTATE définies par ODBC et définis par le pilote.  
+-   **Avertissements** Les enregistrements d’État qui décrivent les avertissements (classe 01) ont le rang le plus bas. Si deux ou plusieurs enregistrements décrivent la même condition d’avertissement, les SQLSTATE d’avertissement définis par la spécification CLI de groupe ouverte sont prioritaires par rapport aux SQLSTATEs définies par ODBC et par le pilote.  
   
- S’il existe deux ou plusieurs enregistrements avec le rang le plus élevé, il n’est pas définie qui n’est le premier enregistrement. L’ordre de tous les autres enregistrements n’est pas défini. En particulier, étant donné que les avertissements peuvent apparaître avant les erreurs, les applications doivent vérifier tous les enregistrements d’état lorsqu’une fonction retourne une valeur autre que SQL_SUCCESS.
+ Si deux enregistrements ou plus ont le rang le plus élevé, il n’est pas défini quel enregistrement est le premier enregistrement. L’ordre de tous les autres enregistrements n’est pas défini. En particulier, étant donné que les avertissements peuvent apparaître avant les erreurs, les applications doivent vérifier tous les enregistrements d’État lorsqu’une fonction retourne une valeur autre que SQL_SUCCESS.

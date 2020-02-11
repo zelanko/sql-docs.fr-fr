@@ -18,18 +18,18 @@ ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b4c3d6ded5d85e5d38556792aaa7ea71dd9f42fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122450"
 ---
-# <a name="sphelplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
+# <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fournit des informations sur les connexions et les utilisateurs associés dans chaque base de données.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,9 +39,9 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @LoginNamePattern = ] 'login'` Est un nom de connexion. *login* est de type **sysname**, avec NULL comme valeur par défaut. *connexion* doit exister s’il est spécifié. Si *connexion* est ne pas spécifié, les informations sur toutes les connexions sont renvoyées.  
+`[ @LoginNamePattern = ] 'login'`Nom de connexion. *login* est de **type sysname**, avec NULL comme valeur par défaut. la *connexion* doit exister si elle est spécifiée. Si la *connexion* n’est pas spécifiée, des informations sur toutes les connexions sont retournées.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -51,33 +51,33 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nom de connexion.|  
 |**SID**|**varbinary(85)**|ID de sécurité de la connexion (SID).|  
-|**DefDBName**|**sysname**|Par défaut de base de données qui **LoginName** utilise pour se connecter à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**DefDBName**|**sysname**|Base de données par défaut utilisée par **LoginName** lors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]connexion à une instance de.|  
 |**DefLangName**|**sysname**|Langue par défaut utilisée par **LoginName**.|  
-|**Auser**|**char(5)**|Oui = **LoginName** a un nom d’utilisateur associé dans une base de données.<br /><br /> Non = **LoginName** n’a pas de nom d’utilisateur associé.|  
-|**À distance**|**char(7)**|Oui = **LoginName** a une connexion distante associée.<br /><br /> Non = **LoginName** n’a pas de connexion associée.|  
+|**Auser**|**Char (5)**|Oui = **LoginName** a un nom d’utilisateur associé dans une base de données.<br /><br /> Non = **LoginName** n’a pas de nom d’utilisateur associé.|  
+|**ARemote**|**Char (7)**|Oui = **LoginName** a une connexion distante associée.<br /><br /> Non = **LoginName** n’a pas de connexion associée.|  
   
  Le deuxième rapport contient des informations à propos des utilisateurs mappés à chaque connexion et des appartenances aux rôles de la connexion, comme illustré dans le tableau suivant.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nom de connexion.|  
-|**DBName**|**sysname**|Par défaut de base de données qui **LoginName** utilise pour se connecter à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**UserName**|**sysname**|Compte d’utilisateur **LoginName** est mappé dans **DBName**et les rôles qui **LoginName** est un membre dans **DBName**.|  
-|**UserOrAlias**|**char(8)**|MemberOf = **nom d’utilisateur** est un rôle.<br /><br /> Utilisateur = **nom d’utilisateur** est un compte d’utilisateur.|  
+|**@**|**sysname**|Base de données par défaut utilisée par **LoginName** lors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]connexion à une instance de.|  
+|**Nom d’utilisateur**|**sysname**|Compte d’utilisateur auquel **LoginName** est mappé dans **dbname**et les rôles dont **LoginName** est membre dans **dbname**.|  
+|**UserOrAlias**|**Char (8)**|MemberOf = **username** est un rôle.<br /><br /> User = **username** est un compte d’utilisateur.|  
   
 ## <a name="remarks"></a>Notes  
- Avant de supprimer un compte de connexion, utilisez **sp_helplogins** pour identifier les comptes d’utilisateur qui sont mappées à la connexion.  
+ Avant de supprimer une connexion, utilisez **sp_helplogins** pour identifier les comptes d’utilisateur mappés à la connexion.  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l’appartenance dans le **securityadmin** rôle serveur fixe.  
+ Requiert l’appartenance au rôle serveur fixe **securityadmin** .  
   
- Pour identifier tous les comptes d’utilisateur mappés à une connexion donnée, **sp_helplogins** doit vérifier toutes les bases de données au sein du serveur. Par conséquent, chaque base de données du serveur doit remplir une des conditions suivantes :  
+ Pour identifier tous les comptes d’utilisateur mappés à un compte de connexion donné, **sp_helplogins** devez vérifier toutes les bases de données au sein du serveur. Par conséquent, chaque base de données du serveur doit remplir une des conditions suivantes :  
   
--   L’utilisateur en cours d’exécution **sp_helplogins** a l’autorisation d’accéder à la base de données.  
+-   L’utilisateur qui exécute **sp_helplogins** a l’autorisation d’accéder à la base de données.  
   
--   Le **invité** compte d’utilisateur est activé dans la base de données.  
+-   Le compte d’utilisateur **invité** est activé dans la base de données.  
   
- Si **sp_helplogins** ne peut pas accéder à une base de données, **sp_helplogins** renverra toutes les informations que possible et affiche le message d’erreur 15622.  
+ Si **sp_helplogins** ne parvient pas à accéder à une base de données, **sp_helplogins** retournera autant d’informations que possible et affichera le message d’erreur 15622.  
   
 ## <a name="examples"></a>Exemples  
  Le code exemple suivant fournit des informations sur la connexion `John`.  

@@ -1,5 +1,5 @@
 ---
-title: À l’aide des fonctions membres | Microsoft Docs
+title: Utilisation des fonctions membres | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 54f600eb020472f93067f7b9fe1e867f2730d670
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097097"
 ---
 # <a name="using-member-functions"></a>Utilisation de fonctions de membre
@@ -20,7 +20,7 @@ ms.locfileid: "68097097"
 
   Une fonction de membre est une fonction MDX (Multidimensional Expressions) qui retourne un membre. Les fonctions de membre, comme les fonctions de tuple et les fonctions de définition, sont essentielles à la négociation des structures multidimensionnelles de la syntaxe MDX (Multidimensional Expressions) présentes dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- De nombreuses fonctions de membre dans MDX, la plus importante est la **CurrentMember** (fonction), qui est utilisée pour déterminer le membre actuel sur une hiérarchie. La requête suivante illustre comment l’utiliser, ainsi que la **Parent**, **ancêtre**, et **Prevmember** fonctions :  
+ Parmi les nombreuses fonctions membres de MDX, le plus important est la fonction **CurrentMember** , qui est utilisée pour déterminer le membre actuel sur une hiérarchie. La requête suivante montre comment l’utiliser, ainsi que les fonctions **parent**, **Ancestor**et **PrevMember** :  
   
  `WITH`  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68097097"
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions &#40;syntaxe MDX&#41;](../mdx/functions-mdx-syntax.md)   
- [À l’aide des fonctions de Tuple](../mdx/using-tuple-functions.md)   
+ [Utilisation des fonctions tuple](../mdx/using-tuple-functions.md)   
  [Utilisation de fonctions de jeu](../mdx/using-set-functions.md)  
   
   

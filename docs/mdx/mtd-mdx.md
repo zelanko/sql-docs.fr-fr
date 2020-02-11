@@ -1,5 +1,5 @@
 ---
-title: Mtd (MDX) | Microsoft Docs
+title: MTD (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e604f66e48c8c8bb93ff5fd4abb174449f0fcdd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088442"
 ---
 # <a name="mtd-mdx"></a>Mtd (MDX)
@@ -32,12 +32,12 @@ Mtd( [ Member_Expression ] )
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
 ## <a name="remarks"></a>Notes  
- Si une expression de membre n’est pas spécifiée, la valeur par défaut est le membre actuel de la première hiérarchie avec un niveau de type *mois* dans la première dimension de type *temps* dans le groupe de mesures.  
+ Si une expression de membre n’est pas spécifiée, la valeur par défaut est le membre actuel de la première hiérarchie avec un niveau de type *months* dans la première dimension de type *Time* dans le groupe de mesures.  
   
- Le **Mtd** fonction est un raccourci pour le [PeriodsToDate](../mdx/periodstodate-mdx.md) lorsque la propriété Type de la hiérarchie d’attribut sur lequel est basé un niveau est la valeur de la fonction *mois*. Ce qui signifie que `Mtd(Member_Expression)` est équivalent à `PeriodsToDate(Month_Level_Expression,Member_Expression)`.  
+ La fonction **MTD** est une fonction de raccourci pour la fonction [PeriodsToDate](../mdx/periodstodate-mdx.md) lorsque la propriété type de la hiérarchie d’attribut sur laquelle un niveau est basé est définie sur *months*. Ce qui signifie que `Mtd(Member_Expression)` est équivalent à `PeriodsToDate(Month_Level_Expression,Member_Expression)`.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant retourne la somme du mois pour les coûts de fret de date des ventes Internet pour le mois de juillet 2002 via le 20e jour de juillet.  
+ L’exemple suivant retourne la somme du mois jusqu’à ce jour les coûts de fret pour les ventes sur Internet pour le mois de juillet, de 2002 à 20 juillet.  
   
 ```  
 WITH MEMBER Measures.x AS SUM   
@@ -50,7 +50,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Somme &#40;MDX&#41;](../mdx/sum-mdx.md)   
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [&#41;MDX &#40;MDX](../mdx/sum-mdx.md)   
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

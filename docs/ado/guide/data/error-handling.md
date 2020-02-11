@@ -15,31 +15,31 @@ ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4cb3213b6a4c5711ccb8d6f9243047d8361a6e37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925427"
 ---
 # <a name="error-handling"></a>Gestion des erreurs
-ADO utilise différentes méthodes pour avertir une application d’erreurs qui se produisent. Cette section décrit les types d’erreurs qui peuvent se produire lorsque vous utilisez ADO et la façon dont votre application est notifiée. Il conclut en proposant des suggestions sur la façon de gérer ces erreurs.  
+ADO utilise plusieurs méthodes différentes pour notifier une application des erreurs qui se produisent. Cette section décrit les types d’erreurs qui peuvent se produire lorsque vous utilisez ADO et comment votre application est notifiée. Il conclut en faisant des suggestions sur la façon de gérer ces erreurs.  
   
-## <a name="how-does-ado-report-errors"></a>Comment ADO ne signale pas les erreurs ?  
- ADO signale les erreurs de plusieurs façons :  
+## <a name="how-does-ado-report-errors"></a>Comment ADO signale-t-il des erreurs ?  
+ ADO vous avertit des erreurs de plusieurs façons :  
   
--   Erreurs ADO génèrent une erreur d’exécution. Gérer une erreur ADO de la même façon que vous le feriez pour toute autre erreur d’exécution, comme l’utilisation d’un **en cas d’erreur** instruction en Visual Basic.  
+-   Les erreurs ADO génèrent une erreur au moment de l’exécution. Gérez une erreur ADO de la même façon que toute autre erreur d’exécution, telle que l’utilisation d’une instruction **On Error** dans Visual Basic.  
   
--   Votre programme peut recevoir des erreurs de OLE DB. Une erreur OLE DB génère une erreur d’exécution.  
+-   Votre programme peut recevoir des erreurs de OLE DB. Une erreur OLE DB génère également une erreur au moment de l’exécution.  
   
--   Si l’erreur est spécifique à votre fournisseur de données, un ou plusieurs **erreur** objets sont placés dans le **erreurs** collection de la **connexion** objet qui a été utilisé pour accéder aux données magasin de l’erreur s’est produite.  
+-   Si l’erreur est spécifique à votre fournisseur de données, un ou plusieurs objets d' **erreur** sont placés dans la collection d' **Erreurs** de l’objet de **connexion** qui a été utilisé pour accéder au magasin de données lorsque l’erreur s’est produite.  
   
--   Si le processus qui a déclenché un événement a également produit une erreur, les informations d’erreur sont placées dans un **erreur** de l’objet et transmis en tant que paramètre à l’événement. Consultez [gestion des événements ADO](../../../ado/guide/data/handling-ado-events.md) pour plus d’informations sur les événements.  
+-   Si le processus qui a déclenché un événement a également généré une erreur, les informations sur l’erreur sont placées dans un objet d' **erreur** et transmises en tant que paramètre à l’événement. Pour plus d’informations sur les événements, consultez [gestion des événements ADO](../../../ado/guide/data/handling-ado-events.md) .  
   
--   Les problèmes qui se produisent lors du traitement par lots mises à jour ou autres opérations en bloc implique un **Recordset** peuvent être indiqués par le **état** propriété de la **Recordset**. Par exemple, les violations de contraintes de schéma ou des autorisations insuffisantes peuvent être spécifiées par **RecordStatusEnum** valeurs.  
+-   Les problèmes qui se produisent lors du traitement des mises à jour par lots ou d’autres opérations en bloc impliquant un **Recordset** peuvent être indiqués par la propriété **Status** du **Recordset**. Par exemple, les violations de contrainte de schéma ou les autorisations insuffisantes peuvent être spécifiées par des valeurs **RecordStatusEnum** .  
   
--   Problèmes impliquant un particulier **champ** dans l’enregistrement actif sont également indiqués par le **état** propriété de chaque **champ** dans le **champs**  collection de la **enregistrement** ou **Recordset**. Par exemple, les types de données incompatibles ou les mises à jour qui n’a pas pu être effectuées. peuvent être spécifiés par **FieldStatusEnum** valeurs.  
+-   Les problèmes qui se produisent lors de l’exécution d’un **champ** particulier dans l’enregistrement actif sont également indiqués par la propriété **Status** de chaque **champ** de la collection **Fields** de l' **enregistrement** ou du **Recordset**. Par exemple, les mises à jour qui n’ont pas pu être effectuées ou les types de données incompatibles peuvent être spécifiés par les valeurs **FieldStatusEnum** .  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Erreurs ADO](../../../ado/guide/data/ado-errors.md)  
   

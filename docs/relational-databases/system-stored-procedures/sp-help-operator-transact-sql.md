@@ -18,19 +18,19 @@ ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e6568b15a12949180ca0e2df41063c100abc3290
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085297"
 ---
-# <a name="sphelpoperator-transact-sql"></a>sp_help_operator (Transact-SQL)
+# <a name="sp_help_operator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fournit des informations sur les opérateurs définis pour le serveur.  
   
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,43 +42,43 @@ sp_help_operator
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @operator_name = ] 'operator_name'` Le nom de l’opérateur. *nom_opérateur* est **sysname**. Si *nom_opérateur* est ne pas spécifié, les informations sur tous les opérateurs sont renvoyées.  
+`[ @operator_name = ] 'operator_name'`Nom de l’opérateur. *operator_name* est de **type sysname**. Si *operator_name* n’est pas spécifié, des informations sur tous les opérateurs sont retournées.  
   
-`[ @operator_id = ] operator_id` Le numéro d’identification de l’opérateur pour lequel les informations sont demandées. *operator_id*est **int**, avec NULL comme valeur par défaut.  
+`[ @operator_id = ] operator_id`Numéro d’identification de l’opérateur pour lequel des informations sont demandées. *operator_id*est de **type int**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
->  Soit *operator_id* ou *nom_opérateur* doit être spécifié, mais ne peut pas être spécifiés.  
+>  *Operator_id* ou *operator_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|Numéro d'identification de l'opérateur.|  
-|**name**|**sysname**|Nom de l’opérateur.|  
-|**enabled**|**tinyint**|L'opérateur est disponible pour recevoir des notifications :<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
-|**email_address**|**nvarchar(100)**|Adresse de messagerie de l'opérateur.|  
+|**identifi**|**int**|Numéro d'identification de l'opérateur.|  
+|**nomme**|**sysname**|Nom de l’opérateur.|  
+|**désactivé**|**tinyint**|L'opérateur est disponible pour recevoir des notifications :<br /><br /> **1** = Oui<br /><br /> **0** = non|  
+|**email_address**|**nvarchar(100**|Adresse de messagerie de l'opérateur.|  
 |**last_email_date**|**int**|Date de la dernière notification envoyée par courrier électronique à l'opérateur.|  
-|**last_email_time**|**Int**|Heure de la dernière notification envoyée par courrier électronique à l'opérateur.|  
-|**pager_address**|**nvarchar(100)**|Adresse de radiomessagerie de l'opérateur.|  
+|**last_email_time**|**int**|Heure de la dernière notification envoyée par courrier électronique à l'opérateur.|  
+|**pager_address**|**nvarchar(100**|Adresse de radiomessagerie de l'opérateur.|  
 |**last_pager_date**|**int**|Date de la dernière notification envoyée par radiomessagerie à l'opérateur.|  
 |**last_pager_time**|**int**|Heure de la dernière notification envoyée par radiomessagerie à l'opérateur.|  
-|**weekday_pager_start_time**|**Int**|Début de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie pendant la semaine.|  
-|**weekday_pager_end_time**|**Int**|Fin de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie pendant la semaine.|  
-|**saturday_pager_start_time**|**Int**|Début de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie le samedi.|  
+|**weekday_pager_start_time**|**int**|Début de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie pendant la semaine.|  
+|**weekday_pager_end_time**|**int**|Fin de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie pendant la semaine.|  
+|**saturday_pager_start_time**|**int**|Début de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie le samedi.|  
 |**saturday_pager_end_time**|**int**|Fin de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie le samedi.|  
-|**sunday_pager_start_time**|**Int**|Début de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie le dimanche.|  
+|**sunday_pager_start_time**|**int**|Début de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie le dimanche.|  
 |**sunday_pager_end_time**|**int**|Fin de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie le dimanche.|  
-|**pager_days**|**tinyint**|Un masque de bits (**1** = dimanche, **64** = samedi) de jours de la semaine qui indique quand l’opérateur est disponible pour recevoir des notifications par radiomessagerie.|  
-|**netsend_address**|**nvarchar(100)**|Adresse de l'opérateur pour les notifications envoyées par le réseau|  
+|**pager_days**|**tinyint**|Masque de bits (**1** = dimanche, **64** = samedi) des jours de la semaine indiquant quand l’opérateur est disponible pour recevoir des notifications par radiomessagerie.|  
+|**netsend_address**|**nvarchar(100**|Adresse de l'opérateur pour les notifications envoyées par le réseau|  
 |**last_netsend_date**|**int**|Date de la dernière notification envoyée à l'opérateur via le réseau.|  
 |**last_netsend_time**|**int**|Heure de la dernière notification envoyée à l'opérateur via le réseau.|  
 |**category_name**|**sysname**|Nom de la catégorie à laquelle appartient cet opérateur.|  
   
 ## <a name="remarks"></a>Notes  
- **sp_help_operator** doit être exécuté à partir de la **msdb** base de données.  
+ **sp_help_operator** doit être exécuté à partir de la base de données **msdb** .  
   
 ## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
@@ -89,7 +89,7 @@ sp_help_operator
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Exemples  
  Cet exemple vous renseigne sur l'opérateur `François Ajenstat`.  
