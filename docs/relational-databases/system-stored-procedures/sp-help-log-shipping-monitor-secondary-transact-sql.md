@@ -18,19 +18,19 @@ ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b1acf456bda88eeee0493d3f9d7ccc063a5bda50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68001007"
 ---
-# <a name="sphelplogshippingmonitorsecondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary (Transact-SQL)
+# <a name="sp_help_log_shipping_monitor_secondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne des informations sur une base de données secondaire à partir des tables du moniteur.  
   
  
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,24 +42,24 @@ sp_help_log_shipping_monitor_secondary
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @secondary_server = ] 'secondary_server'` Est le nom du serveur secondaire. *secondary_server* est **sysname**, sans valeur par défaut.  
+`[ @secondary_server = ] 'secondary_server'`Nom du serveur secondaire. *secondary_server* est de **type sysname**, sans valeur par défaut.  
   
-`[ @secondary_database = ] 'secondary_database'` Est le nom de la base de données secondaire. *secondary_database* est **sysname**, sans valeur par défaut.  
+`[ @secondary_database = ] 'secondary_database'`Nom de la base de données secondaire. *secondary_database* est de **type sysname**, sans valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|colonne|Description|  
+|Colonne|Description|  
 |------------|-----------------|  
-|**secondary_server**|Le nom de l’instance secondaire de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] dans la configuration d’envoi de journaux.|  
+|**secondary_server**|Nom de l’instance secondaire du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] dans la configuration de la copie des journaux de session.|  
 |**secondary_database**|Nom de la base de données secondaire dans la configuration de la copie des journaux de transactions.|  
 |**secondary_id**|ID du serveur secondaire dans la configuration d'envoi de journaux.|  
-|**primary_server**|Le nom de l’instance principale de la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] dans la configuration d’envoi de journaux.|  
+|**primary_server**|Nom de l’instance principale du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] dans la configuration de la copie des journaux de session.|  
 |**primary_database**|Nom de la base de données primaire dans la configuration d'envoi de journaux.|  
 |**restore_threshold**|Nombre de minutes pouvant s'écouler entre les opérations de restauration avant qu'une alerte ne soit générée.|  
-|**threshold_alert**|L’alerte à déclencher lorsque le seuil de restauration est dépassé.|  
+|**threshold_alert**|Alerte à déclencher lorsque le seuil de restauration est dépassé.|  
 |**threshold_alert_enabled**|Détermine si les alertes de seuil de restauration sont activées.<br /><br /> 1 = Activé.<br /><br /> 0 = Désactivées.|  
 |**last_copied_file**|Nom de fichier du dernier fichier de sauvegarde copié sur le serveur secondaire.|  
 |**last_copied_date**|Heure et date de la dernière copie sur le serveur secondaire.|  
@@ -70,10 +70,10 @@ sp_help_log_shipping_monitor_secondary
 |**history_retention_period**|Durée de conservation (en minutes) des enregistrements historiques d'envoi des journaux pour une base de données secondaire donnée avant leur suppression.|  
   
 ## <a name="remarks"></a>Notes  
- **sp_help_log_shipping_monitor_secondary** doit être exécuté à partir de la **master** base de données sur le serveur moniteur.  
+ **sp_help_log_shipping_monitor_secondary** doit être exécuté à partir de la base de données **Master** sur le serveur moniteur.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe peut exécuter cette procédure.  
+ Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure.  
   
 ## <a name="see-also"></a>Voir aussi  
  [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

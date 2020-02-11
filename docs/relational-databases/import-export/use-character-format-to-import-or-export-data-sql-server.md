@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 4d380954be720a6cb839b0c4259a408733f8e176
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056336"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Utiliser le format caractère pour importer ou exporter des données (SQL Server)
@@ -45,7 +45,7 @@ Lors de l'utilisation du format caractère, tenez compte des points suivants :
   
 -   Par défaut, [l’utilitaire bcp](../../tools/bcp-utility.md) sépare les champs de données de caractères par le caractère de tabulation et termine les enregistrements par un caractère de nouvelle ligne.  Pour plus d’informations sur la spécification des terminateurs de remplacement, consultez [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
--   Par défaut, avant l'exportation ou l'importation en bloc de données en mode caractère, les conversions suivantes sont réalisées :  
+-   Par défaut, avant l'exportation ou l'importation en bloc de données en mode caractère, les conversions suivantes sont réalisées :  
   
     |Sens de l'opération en bloc|Conversion|  
     |---------------------------------|----------------|  
@@ -63,11 +63,11 @@ Vous pouvez importer des données au format caractère dans une table à l’aid
   
 Le format caractère est pris en charge par les options de commande suivantes :  
   
-|Command|Option|Description|  
+|Commande|Option|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-c**|Force l’utilitaire bcp à utiliser les données de type caractère.\*|  
 |BULK INSERT|DATAFILETYPE **='char'**|Utilise le format caractère lors de l'importation en bloc des données.|  
-|OPENROWSET|Néant|Doit utiliser un fichier de format.|
+|OPENROWSET|N/A|Doit utiliser un fichier de format.|
   
  \*Pour charger les données caractères ( **-c**) dans un format compatible avec les versions antérieures des clients [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , utilisez le commutateur **-V** . Pour plus d’informations, consultez [Importer des données au format natif et caractère à partir de versions antérieures de SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
    
@@ -219,7 +219,7 @@ Pour utiliser des formats de données pour l'importation ou l'exportation en blo
 -   [Utiliser le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilitaire bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

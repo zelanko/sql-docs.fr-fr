@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d016e4f45a91a61c5918a4bfdfb9dd1073521c02
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056311"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Utiliser le format caractère Unicode pour importer ou exporter des données (SQL Server)
@@ -43,7 +43,7 @@ Lors de l’utilisation du format caractère Unicode, tenez compte des points su
 
 * Par défaut, [l’utilitaire bcp](../../tools/bcp-utility.md) sépare les champs de données de caractères par le caractère de tabulation et termine les enregistrements par un caractère de nouvelle ligne.  Pour plus d’informations sur la spécification des terminateurs de remplacement, consultez [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).
 
-* Les données [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) stockées dans un fichier de données au format caractère Unicode fonctionnent comme dans un fichier de données au format caractère, à la différence que les données sont stockées en tant que données [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) et non pas [char](../../t-sql/data-types/char-and-varchar-transact-sql.md). Pour plus d’informations sur le format caractère, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
+* Les données [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) stockées dans un fichier de données au format caractère Unicode fonctionnent comme dans un fichier de données au format caractère, à la différence que les données sont stockées en tant que données [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) et non pas [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) . Pour plus d’informations sur le format caractère, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
 
 ## Considérations spéciales relatives à l’utilisation du format caractère Unicode, de bcp et d’un fichier de format<a name="special_considerations"></a>
 Les fichiers de données de format caractère Unicode respectent les conventions pour les fichiers Unicode.  Les deux premiers octets du fichier sont des nombres hexadécimaux (0xFFFE).  Ces octets sont utilisés comme marques d’ordre d’octet, précisant si l’octet de poids fort est enregistré en premier ou en dernier dans le fichier.  [L’utilitaire bcp](../../tools/bcp-utility.md) peut mal interpréter les marques d’ordre d’octet et provoquer l’échec d’une partie du processus d’importation ; vous pouvez recevoir un message d’erreur similaire à ce qui suit :
@@ -82,11 +82,11 @@ Vous pouvez importer des données au format caractère Unicode dans une table à
   
 Le format caractère Unicode est pris en charge par les options de commande suivantes :  
   
-|Command|Option|Description|  
+|Commande|Option|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-w**|Utilise le format caractère Unicode.|  
 |BULK INSERT|DATAFILETYPE **='widechar'**|Utilise le format caractère Unicode lors de l'importation de données en bloc.|  
-|OPENROWSET|Néant|Doit utiliser un fichier de format.|
+|OPENROWSET|N/A|Doit utiliser un fichier de format.|
   
 > [!NOTE]
 >  Vous pouvez également spécifier le formatage par champ dans un fichier de format. Pour plus d’informations, consultez [Fichiers de format pour l’importation ou l’exportation de données &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).
@@ -238,10 +238,10 @@ Pour utiliser des formats de données pour l'importation ou l'exportation en blo
 -   [Utiliser le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilitaire bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [Prise en charge d'Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   

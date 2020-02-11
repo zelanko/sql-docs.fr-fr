@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ea3755fb103362b797735d74c9cbe67523aace59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68047191"
 ---
 # <a name="covariance-mdx"></a>Covariance (MDX)
@@ -29,7 +29,7 @@ Covariance(Set_Expression,Numeric_Expression_y [ ,Numeric_Expression_x ] )
   
 ## <a name="arguments"></a>Arguments  
  *Set_Expression*  
- Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
+ Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
  *Numeric_Expression_y*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre représentant les valeurs de l'axe des ordonnées.  
@@ -38,12 +38,12 @@ Covariance(Set_Expression,Numeric_Expression_y [ ,Numeric_Expression_x ] )
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre représentant les valeurs de l'axe des abscisses.  
   
 ## <a name="remarks"></a>Notes  
- Le **Covariance** fonction évalue le jeu spécifié par rapport à la première expression numérique, pour obtenir les valeurs de l’axe y. Elle évalue ensuite le jeu spécifié par rapport à la deuxième expression numérique (si cette dernière est précisée) pour extraire l'ensemble des valeurs de l'axe des abscisses. Si le deuxième expressionis numérique pas spécifié, la fonction utilise le contexte actuel des cellules dans le jeu spécifié en tant que valeurs pour l’axe des abscisses.  
+ La fonction de **covariance** évalue le jeu spécifié par rapport à la première expression numérique, pour obtenir les valeurs de l’axe y. Elle évalue ensuite le jeu spécifié par rapport à la deuxième expression numérique (si cette dernière est précisée) pour extraire l'ensemble des valeurs de l'axe des abscisses. Si la deuxième expression numériquen'est pas spécifiée, la fonction utilise le contexte actuel des cellules dans le jeu spécifié en tant que valeurs de l'axe des abscisses.  
   
- Le **Covariance** fonction utilise la formule de remplissage biaisée. Il s’agit Contrairement à la [CovarianceN](../mdx/covariancen-mdx.md) fonction qui utilise la formule de remplissage non biaisée (en divisant le nombre de paires x-y, puis en soustrayant 1).  
+ La fonction **covariance** utilise la formule de remplissage biaisée. Cela diffère de la fonction [CovarianceN](../mdx/covariancen-mdx.md) qui utilise la formule de remplissage non biaisée (en divisant le nombre de paires x-y, puis en soustrayant 1).  
   
 > [!NOTE]  
->  Le **Covariance** fonction ignore les cellules vides ou les cellules qui contiennent du texte ou les valeurs logiques sont ignorés. Cependant, elle tient compte des cellules dont la valeur est zéro.  
+>  La fonction **covariance** ignore les cellules vides ou les cellules qui contiennent du texte ou des valeurs logiques sont ignorées. Cependant, elle tient compte des cellules dont la valeur est zéro.  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant montre comment utiliser la fonction Covariance dans :  
@@ -58,6 +58,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

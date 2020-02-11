@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1d1137aab32a98a4699e95b7138bb333f63c65e9
-ms.sourcegitcommit: ea6603e20c723553c89827a6b8731a9e7b560b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74479458"
 ---
 # <a name="sysquery_store_plan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
@@ -42,21 +42,21 @@ ms.locfileid: "74479458"
 |**compatibility_level**|**smallint**|Niveau de compatibilité de base de données de la base de données référencée dans la requête.|  
 |**query_plan_hash**|**Binary(8**|Hachage MD5 du plan individuel.|  
 |**query_plan**|**nvarchar(max)**|Showplan XML pour le plan de requête.|  
-|**is_online_index_plan**|**64bits**|Le plan a été utilisé lors de la création d’un index en ligne. <br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
-|**is_trivial_plan**|**64bits**|Le plan est un plan trivial (sortie à l’étape 0 de l’optimiseur de requête). <br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
-|**is_parallel_plan**|**64bits**|Le plan est parallèle. <br/>**Remarque :** Azure SQL Data Warehouse retournera toujours un (1).|  
-|**is_forced_plan**|**64bits**|Le plan est marqué comme forcé lorsque l’utilisateur exécute la procédure stockée **sys. sp_query_store_force_plan**. Le mécanisme forcé *ne garantit pas* que exactement ce plan sera utilisé pour la requête référencée par **query_id**. Le forçage de plan force la compilation de la requête et produit en général exactement le même plan ou un plan similaire au plan référencé par **plan_id**. Si le forçage du plan échoue, **force_failure_count** est incrémenté et **last_force_failure_reason** est rempli avec la raison de l’échec. <br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
-|**is_natively_compiled**|**64bits**|Le plan comprend des procédures optimisées en mémoire compilées en mode natif. (0 = FALSE, 1 = TRUE). <br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
+|**is_online_index_plan**|**bit**|Le plan a été utilisé lors de la création d’un index en ligne. <br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
+|**is_trivial_plan**|**bit**|Le plan est un plan trivial (sortie à l’étape 0 de l’optimiseur de requête). <br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
+|**is_parallel_plan**|**bit**|Le plan est parallèle. <br/>**Remarque :** Azure SQL Data Warehouse retournera toujours un (1).|  
+|**is_forced_plan**|**bit**|Le plan est marqué comme forcé lorsque l’utilisateur exécute la procédure stockée **sys. sp_query_store_force_plan**. Le mécanisme forcé *ne garantit pas* que exactement ce plan sera utilisé pour la requête référencée par **query_id**. Le forçage de plan force la compilation de la requête et produit en général exactement le même plan ou un plan similaire au plan référencé par **plan_id**. Si le forçage du plan échoue, **force_failure_count** est incrémenté et **last_force_failure_reason** est rempli avec la raison de l’échec. <br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
+|**is_natively_compiled**|**bit**|Le plan comprend des procédures optimisées en mémoire compilées en mode natif. (0 = FALSE, 1 = TRUE). <br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
 |**force_failure_count**|**bigint**|Nombre de fois où l’application forcée de ce plan a échoué. Il peut être incrémenté uniquement lorsque la requête est recompilée (*pas à chaque exécution*). Elle est réinitialisée à 0 chaque fois que **is_plan_forced** passe de **false** à **true**. <br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
-|**last_force_failure_reason**|**tiers**|Raison pour laquelle le forçage du plan a échoué.<br /><br /> 0 : aucun échec, sinon le numéro d’erreur de l’erreur qui a provoqué l’échec de l’application<br /><br /> 8637 : ONLINE_INDEX_BUILD<br /><br /> 8683 : INVALID_STARJOIN<br /><br /> 8684 : TIME_OUT<br /><br /> 8689 : NO_DB<br /><br /> 8690 : HINT_CONFLICT<br /><br /> 8691 : SETOPT_CONFLICT<br /><br /> 8694 : DQ_NO_FORCING_SUPPORTED<br /><br /> 8698 : NO_PLAN<br /><br /> 8712 : NO_INDEX<br /><br /> 8713 : VIEW_COMPILE_FAILED<br /><br /> \<autre> de valeur : GENERAL_FAILURE <br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
+|**last_force_failure_reason**|**int**|Raison pour laquelle le forçage du plan a échoué.<br /><br /> 0 : aucun échec, sinon le numéro d’erreur de l’erreur qui a provoqué l’échec de l’application<br /><br /> 8637 : ONLINE_INDEX_BUILD<br /><br /> 8683 : INVALID_STARJOIN<br /><br /> 8684 : TIME_OUT<br /><br /> 8689 : NO_DB<br /><br /> 8690 : HINT_CONFLICT<br /><br /> 8691 : SETOPT_CONFLICT<br /><br /> 8694 : DQ_NO_FORCING_SUPPORTED<br /><br /> 8698 : NO_PLAN<br /><br /> 8712 : NO_INDEX<br /><br /> 8713 : VIEW_COMPILE_FAILED<br /><br /> \<autre> de valeur : GENERAL_FAILURE <br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
 |**last_force_failure_reason_desc**|**nvarchar(128)**|Description textuelle de last_force_failure_reason_desc.<br /><br /> ONLINE_INDEX_BUILD : une requête tente de modifier des données alors que la table cible a un index en cours de création en ligne<br /><br /> INVALID_STARJOIN : le plan contient une spécification StarJoin non valide<br /><br /> TIME_OUT : l’optimiseur a dépassé le nombre d’opérations autorisées lors de la recherche du plan spécifié par le plan forcé<br /><br /> NO_DB : aucune base de données spécifiée dans le plan n’existe<br /><br /> HINT_CONFLICT : impossible de compiler la requête, car le plan est en conflit avec un indicateur de requête<br /><br /> DQ_NO_FORCING_SUPPORTED : impossible d’exécuter la requête, car le plan est en conflit avec l’utilisation de la requête distribuée ou des opérations de texte intégral.<br /><br /> NO_PLAN : le processeur de requêtes n’a pas pu générer le plan de requête car le plan forcé n’a pas pu être vérifié pour la requête<br /><br /> NO_INDEX : l’index spécifié dans le plan n’existe plus<br /><br /> VIEW_COMPILE_FAILED : impossible de forcer le plan de requête en raison d’un problème dans une vue indexée référencée dans le plan<br /><br /> GENERAL_FAILURE : erreur de forçage général (non couverte par les raisons ci-dessus) <br/>**Remarque :** Azure SQL Data Warehouse retourne toujours *None*.|  
 |**count_compiles**|**bigint**|Planifiez les statistiques de compilation.|  
-|**initial_compile_start_time**|**DateTimeOffset**|Planifiez les statistiques de compilation.|  
-|**last_compile_start_time**|**DateTimeOffset**|Planifiez les statistiques de compilation.|  
-|**last_execution_time**|**DateTimeOffset**|La dernière heure d’exécution fait référence à la dernière heure de fin de la requête ou du plan.|  
-|**avg_compile_duration**|**dissocié**|Planifiez les statistiques de compilation. <br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
+|**initial_compile_start_time**|**datetimeoffset**|Planifiez les statistiques de compilation.|  
+|**last_compile_start_time**|**datetimeoffset**|Planifiez les statistiques de compilation.|  
+|**last_execution_time**|**datetimeoffset**|La dernière heure d’exécution fait référence à la dernière heure de fin de la requête ou du plan.|  
+|**avg_compile_duration**|**float**|Planifiez les statistiques de compilation. <br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
 |**last_compile_duration**|**bigint**|Planifiez les statistiques de compilation. <br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
-|**plan_forcing_type**|**tiers**|Type de forçage du plan.<br /><br />0 : AUCUN<br /><br />1 : MANUEL<br /><br />2 : AUTO|  
+|**plan_forcing_type**|**int**|Type de forçage du plan.<br /><br />0 : AUCUN<br /><br />1 : MANUEL<br /><br />2 : AUTO|  
 |**plan_forcing_type_desc**|**nvarchar (60)**|Description textuelle de plan_forcing_type.<br /><br />AUCUN : aucun plan forcé<br /><br />Manuel : plan forcé par l’utilisateur<br /><br />AUTO : plan forcé par réglage automatique|  
 
 ## <a name="plan-forcing-limitations"></a>Limites de l'application forcée d'un plan
@@ -93,8 +93,8 @@ Enfin, s’il y a des problèmes avec le plan lui-même :
  [sys. query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys. query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys. query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [Analyse des performances à l’aide de l’Magasin des requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Magasin des requêtes des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
+ [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Procédures stockées du Magasin des requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

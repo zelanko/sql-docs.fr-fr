@@ -1,5 +1,5 @@
 ---
-title: Sys.server_event_session_targets (Transact-SQL) | Microsoft Docs
+title: sys. server_event_session_targets (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,20 +21,20 @@ ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d9d3000b38f8cc59ef1349a1e0cd9219a3eb385f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68133192"
 ---
-# <a name="sysservereventsessiontargets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
+# <a name="sysserver_event_session_targets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Renvoie une ligne pour chaque cible d’événement pour une session d’événements.  
+  Retourne une ligne pour chaque cible d'événement d'une session d'événements.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_id|**Int**|ID de la session d'événements. N'accepte pas la valeur NULL.|  
+|event_session_id|**int**|ID de la session d'événements. N'accepte pas la valeur NULL.|  
 |target_id|**int**|ID de la cible. Cet ID est unique au sein de l'objet de la session d'événements. N'accepte pas la valeur NULL.|  
 |name|**sysname**|Nom de la cible d'événement. N'accepte pas la valeur NULL.|  
 |package|**sysname**|Nom du package d'événement qui contient la cible d'événement. N'accepte pas la valeur NULL.|  
@@ -48,8 +48,8 @@ ms.locfileid: "68133192"
   
 ||||  
 |-|-|-|  
-|From|Pour|Relation|  
-|sys.server_event_session_targets.event_session_id|Sys.server_event_sessions.event_session_id|Plusieurs-à-un|  
+|De|À|Relation|  
+|sys.server_event_session_targets.event_session_id|sys. server_event_sessions. event_session_id|Plusieurs-à-un|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

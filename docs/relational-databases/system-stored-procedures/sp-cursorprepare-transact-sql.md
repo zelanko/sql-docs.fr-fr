@@ -18,10 +18,10 @@ ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2719e330ec2fde61b91ca11ef93784983c6c418c
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74165913"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "74165913"
 
   Compile le lot ou l'instruction de curseur dans un plan d'exécution, mais ne crée pas le curseur. L'instruction compilée peut être utilisée ultérieurement par sp_cursorexecute. Cette procédure, couplée avec sp_cursorexecute, a la même fonction que sp_cursoropen, mais est fractionnée en deux phases. sp_cursorprepare est appelée en spécifiant ID = 3 dans un paquet tabular data stream (TDS).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,13 +52,13 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 > [!NOTE]  
 >  Utilisez une chaîne **ntext** comme valeur d’entrée lorsque *stmt* est paramétré et que la valeur de PARAMETERIZED_STMT *scrollopt* est on.  
   
- *stmt*  
+ *Insert*  
  Définit le jeu de résultats de curseur. Le paramètre *stmt* est requis et appelle une valeur d’entrée **ntext**, **nchar** ou **nvarchar** .  
   
 > [!NOTE]  
 >  Les règles de spécification de la valeur *stmt* sont les mêmes que celles de sp_cursoropen, à l’exception près que le type de données chaîne *stmt* doit être **ntext**.  
   
- *options*  
+ *Options*  
  Paramètre optionnel qui retourne une description des colonnes du jeu de résultats du curseur. les *options* requièrent la valeur d’entrée **int** suivante.  
   
 |Valeur|Description|  
@@ -104,15 +104,15 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- Comme avec *scrollpt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pouvez affecter une valeur différente de celle demandée.  
+ Comme avec *scrollpt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut affecter une valeur différente de celle demandée.  
   
 ## <a name="remarks"></a>Notes  
  Le paramètre d'état RPC prend l'une des valeurs suivantes :  
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|0|Réussi|  
-|0x0001|Failure|  
+|0|Succès|  
+|0x0001|Échec|  
 |1FF6|Impossible de retourner des métadonnées.<br /><br /> Remarque : Ceci est dû au fait que l’instruction ne produit pas un jeu de résultats ; par exemple, il s’agit d’une instruction INSERT ou DDL.|  
   
 ## <a name="examples"></a>Exemples  
@@ -144,7 +144,7 @@ exec sp_cursorclose @p2
  
  Quand *stmt* est paramétré et que la valeur de PARAMETERIZED_STMT *scrollopt* est on, le format de la chaîne est le suivant :  
   
- { *\<nom de la variable locale > * *\<type de données >* } [ ,... *n* ]  
+ { * \<nom de la variable locale>\<* * type de données>* } [ ,... *n* ]  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_cursorexecute &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
