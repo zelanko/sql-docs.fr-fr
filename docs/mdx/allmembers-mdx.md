@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 770d66941af9b42be3c7b26f7e04a60d2a95cac2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017153"
 ---
 # <a name="allmembers-mdx"></a>AllMembers (MDX)
@@ -39,16 +39,16 @@ Level_Expression.AllMembers
  Expression MDX (Multidimensional Expressions) valide qui retourne un niveau.  
   
 ## <a name="remarks"></a>Notes  
- Le **AllMembers** fonction retourne un jeu qui contient tous les membres, qui inclut des membres calculés, dans la hiérarchie ou spécifié au niveau. Le **AllMembers** fonction retourne les membres calculés même si la hiérarchie ou spécifié au niveau ne contient aucun membre visible.  
+ La fonction **AllMembers** retourne un jeu qui contient tous les membres, y compris les membres calculés, dans la hiérarchie ou le niveau spécifié. La fonction **AllMembers** retourne les membres calculés même si la hiérarchie ou le niveau spécifié ne contient aucun membre visible.  
   
 > [!IMPORTANT]  
 >  Lorsqu'une dimension contient uniquement une hiérarchie visible unique, cette hiérarchie peut être désignée soit par le nom de dimension, soit par le nom de la hiérarchie, puisque le nom de dimension dans ce cas est résolu à son unique hiérarchie visible. Par exemple, `Measures.AllMembers` est une expression MDX valide parce qu'elle est résolue à la seule hiérarchie de la dimension de mesures.  
   
 > [!NOTE]  
->  Le **AllMembers** fonction est sémantiquement similaire à la [AddCalculatedMembers (MDX)](../mdx/addcalculatedmembers-mdx.md) (fonction).  
+>  La fonction **AllMembers** est sémantiquement similaire à la fonction [AddCalculatedMembers (MDX)](../mdx/addcalculatedmembers-mdx.md) .  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant retourne tous les membres dans le [`Date].[Calendar Year]` hiérarchie d’attribut sur l’axe des colonnes, cela inclut les membres calculés et le jeu de tous les enfants de la `[Product].[Model Name]` hiérarchie sur l’axe des lignes à partir d’attributs le **Adventure Works** cube.  
+ L’exemple suivant retourne tous les membres de la`Date].[Calendar Year]` hiérarchie d’attribut [sur l’axe des colonnes, y compris les membres calculés et l’ensemble de `[Product].[Model Name]` tous les enfants de la hiérarchie d’attribut sur l’axe des lignes du cube **Adventure Works** .  
   
 ```  
 SELECT  
@@ -58,7 +58,7 @@ FROM
    [Adventure Works]  
 ```  
   
- L’exemple suivant retourne tous les membres dans le **mesures** dimension sur l’axe des colonnes, cela inclut tous les membres calculés et le jeu de tous les enfants de le `[Product].[Model Name]` hiérarchie sur l’axe des lignes d’attributs à partir de la **Adventure Works** cube.  
+ L’exemple suivant retourne tous les membres de la dimension **Measures** sur l’axe des colonnes, y compris tous les membres calculés et l’ensemble de `[Product].[Model Name]` tous les enfants de la hiérarchie d’attribut sur l’axe des lignes du cube **Adventure Works** .  
   
 ```  
 SELECT  
@@ -69,8 +69,8 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
- [Children &#40;MDX&#41;](../mdx/children-mdx.md)   
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [AddCalculatedMembers&#41;MDX &#40;](../mdx/addcalculatedmembers-mdx.md)   
+ [&#41;MDX &#40;](../mdx/children-mdx.md)   
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

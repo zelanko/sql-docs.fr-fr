@@ -1,5 +1,5 @@
 ---
-title: Trier l’exemple de propriété (VB) | Microsoft Docs
+title: Sort, exemple de propriété (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7dec17461f44c9e461a010e8a0bf5cf3fe3bbbd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931021"
 ---
 # <a name="sort-property-example-vb"></a>Sort, exemple de propriétés (VB)
-Cet exemple utilise le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) l’objet [tri](../../../ado/reference/ado-api/sort-property.md) propriété pour réorganiser les lignes d’un **Recordset** dérivé le ***auteurs*** table de le ***Pubs*** base de données. Une routine utilitaire secondaire imprime chaque ligne.  
+Cet exemple utilise la propriété [sort](../../../ado/reference/ado-api/sort-property.md) de l’objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) pour réorganiser les lignes d' **un jeu d’enregistrements** dérivé de la table ***Authors*** de la base de données ***pubs*** . Une routine utilitaire secondaire imprime chaque ligne.  
   
 ```  
 'BeginSortVB  
@@ -103,12 +103,12 @@ End Sub
 'EndSortVB  
 ```  
   
- Voici la routine utilitaire secondaire qui imprime le titre donné et le contenu de l’objet **Recordset**.  
+ Il s’agit de la routine d’utilitaire secondaire qui imprime le titre donné et le contenu du **jeu d’enregistrements**spécifié.  
   
 ```  
 Attribute VB_Name = "Sort"  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Sort, propriété](../../../ado/reference/ado-api/sort-property.md)

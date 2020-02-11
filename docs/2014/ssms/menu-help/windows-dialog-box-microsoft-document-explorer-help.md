@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 169ab149df11de12e5cf5452b0f8176737fb5dba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510011"
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>Boîte de dialogue Fenêtres (Aide de Microsoft Document Explorer)
@@ -26,13 +26,13 @@ ms.locfileid: "62510011"
  **Nom**  
  Affiche les noms des fenêtres de documents et d'outils, avec l'élément actif sélectionné.  
   
- **Chemin d'accès**  
+ **Chemin d’accès**  
  Affiche le chemin d'accès complet des documents. Les fenêtres n'utilisent généralement pas de chemin d'accès.  
   
- **Activate**  
+ **Activer**  
  Fait de la fenêtre de document ou d’outil sélectionnée l’élément actif dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] Document Explorer.  
   
- **Enregistrer**  
+ **Save**  
  Enregistre la fenêtre sélectionnée. Toutes les fenêtres ne peuvent pas être enregistrées.  
   
  **Fermer les fenêtres**  

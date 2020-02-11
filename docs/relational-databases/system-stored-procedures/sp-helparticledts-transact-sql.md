@@ -16,18 +16,18 @@ ms.assetid: cd1aed60-e056-4ff3-86ee-62b19433d890
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a9c489a08291aea3d1c50a6418dc8e1e853dce12
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771075"
 ---
-# <a name="sphelparticledts-transact-sql"></a>sp_helparticledts (Transact-SQL)
+# <a name="sp_helparticledts-transact-sql"></a>sp_helparticledts (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Permet d'obtenir des informations sur les noms de tâches personnalisés corrects à utiliser lors de la création d'un abonnement de transformation avec [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,7 +51,7 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
 |**post_script_ignore_error_task_name**|**sysname**|Nom de la tâche de programmation intervenant après la copie des données d'instantané. L'exécution du programme doit se poursuivre si une erreur de script est détectée.|  
 |**post_script_task_name**|**sysname**|Nom de la tâche de programmation intervenant après la copie des données d'instantané. L'exécution du programme s'arrête si une erreur survient.|  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  

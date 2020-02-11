@@ -17,14 +17,14 @@ ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dd64ba8119db1ecf2d2b621cd202c9f700b53475
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967280"
 ---
 # <a name="append-method-adox-procedures"></a>Append, méthode (procédures ADOX)
-Ajoute un nouveau [procédure](../../../ado/reference/adox-api/procedure-object-adox.md) de l’objet à la [procédures](../../../ado/reference/adox-api/procedures-collection-adox.md) collection.  
+Ajoute un nouvel objet de [procédure](../../../ado/reference/adox-api/procedure-object-adox.md) à la collection [procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,24 +35,24 @@ Procedures.Append Name, Command
   
 #### <a name="parameters"></a>Paramètres  
  *Nom*  
- Un **chaîne** valeur qui spécifie le nom de la procédure pour créer et à ajouter.  
+ Valeur de **chaîne** qui spécifie le nom de la procédure à créer et à ajouter.  
   
  *Commande*  
- ADO [commande](../../../ado/reference/ado-api/command-object-ado.md) objet qui représente la procédure pour créer et à ajouter.  
+ Objet de [commande](../../../ado/reference/ado-api/command-object-ado.md) ADO qui représente la procédure à créer et à ajouter.  
   
 ## <a name="remarks"></a>Notes  
- Crée une procédure dans la source de données avec le nom et les attributs spécifiés dans le **commande** objet.  
+ Crée une nouvelle procédure dans la source de données avec le nom et les attributs spécifiés dans l’objet **Command** .  
   
- Si le texte de commande qui spécifie l’utilisateur représente une vue plutôt qu’une procédure, le comportement dépend du fournisseur utilisé. **Ajouter** échoue si le fournisseur ne prend pas en charge les commandes persistantes.  
+ Si le texte de la commande que l’utilisateur spécifie représente une vue plutôt qu’une procédure, le comportement dépend du fournisseur utilisé. L' **Ajout** échoue si le fournisseur ne prend pas en charge les commandes persistantes.  
   
 > [!NOTE]
->  Lorsque vous utilisez le fournisseur OLE DB pour Microsoft Jet, le **procédures** collection **Append** méthode vous permettra de spécifier un **vue** au lieu d’un  **Procédure** dans le *commande* paramètre. Le **vue** sera ajouté à la source de données et sera ajouté à la **procédures** collection. Après le **Append**, si le **procédures** et **vues** collections sont actualisées, les **vue** ne sera plus dans le **Procédures** collection et apparaîtra dans le **vues** collection.  
+>  Lorsque vous utilisez le fournisseur de OLE DB pour Microsoft Jet, la méthode **Append** de la collection **procedures** vous permet de spécifier une **vue** plutôt qu’une **procédure** dans le paramètre *Command* . La **vue** sera ajoutée à la source de données et sera ajoutée à la collection **procedures** . Après l' **Ajout**, si les collections **procedures** et **views** sont actualisées, la **vue** ne figurera plus dans la collection **procedures** et apparaîtra dans la collection **views** .  
   
 ## <a name="applies-to"></a>S'applique à  
  [Procedures, collection (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procedures Append, méthode-exemple (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
+ [Procedures, exemple de méthode Append (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
  [Append, méthode (colonnes ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append, méthode (groupes ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
  [Append, méthode (Index ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   

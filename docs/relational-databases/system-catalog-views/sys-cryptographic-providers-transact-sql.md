@@ -1,5 +1,5 @@
 ---
-title: Sys.cryptographic_providers (Transact-SQL) | Microsoft Docs
+title: sys. cryptographic_providers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 27a8f2ddee2e0ff0839317cf1652bcf353c0b66b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67940297"
 ---
-# <a name="syscryptographicproviders-transact-sql"></a>sys.cryptographic_providers (Transact-SQL)
+# <a name="syscryptographic_providers-transact-sql"></a>sys.cryptographic_providers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque fournisseur de chiffrement inscrit.  
@@ -35,14 +35,14 @@ ms.locfileid: "67940297"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**provider_id**|**int**|Numéro d'identification du fournisseur de services de chiffrement.|  
-|**name**|**sysname**|Nom du fournisseur de chiffrement.|  
+|**nomme**|**sysname**|Nom du fournisseur de chiffrement.|  
 |**guid**|**uniqueidentifier**|GUID unique du fournisseur.|  
-|**version**|**nvarchar(50)**|Version du fournisseur dans le format '*aa.bb.cccc.dd*».|  
+|**Version**|**nvarchar(50)**|Version du fournisseur au format'*AA.bb.CCCC.DD*'.|  
 |**dll_path**|**nvarchar(512)**|Chemin d'accès à la DLL qui implémente l'interface de programmation d'applications (API, Application Program Interface) EKM (Extensible Key Management).|  
 |**is_enabled**|**bit**|Indique si le fournisseur est activé sur le serveur ou non.<br /><br /> 0 = non activé (valeur par défaut)<br /><br /> 1 = activé|  
   
 ## <a name="remarks"></a>Notes  
- Le **sys.cryptographic_providers** n’est visible au public.  
+ La vue **sys. cryptographic_providers** est visible par le public.  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

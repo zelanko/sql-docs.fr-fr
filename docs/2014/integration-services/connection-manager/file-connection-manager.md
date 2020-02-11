@@ -18,21 +18,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cf820e3f5a3f4a2ca9db28510b867c5dbc8f3c4f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833811"
 ---
 # <a name="file-connection-manager"></a>Gestionnaire de connexions de fichiers
-  Un gestionnaire de connexions de fichiers permet à un package de référencer un fichier ou dossier existant ou de créer un fichier ou dossier au moment de l'exécution. Par exemple, vous pouvez référencer un fichier Excel. Certains composants de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilisent les informations figurant dans les fichiers pour réaliser leur travail. Par exemple, une tâche d'exécution SQL peut référencer un fichier contenant les instructions SQL exécutées par la tâche. D'autres composants exécutent des opérations sur les fichiers. Par exemple, la tâche de système de fichiers peut référencer un fichier pour le copier à un nouvel emplacement.  
+  Un gestionnaire de connexions de fichiers permet à un package de référencer un fichier ou dossier existant ou de créer un fichier ou dossier au moment de l'exécution. Par exemple, vous pouvez référencer un fichier Excel. Certains composants de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilisent des informations dans des fichiers pour effectuer leur travail. Par exemple, une tâche d'exécution SQL peut référencer un fichier contenant les instructions SQL exécutées par la tâche. D'autres composants exécutent des opérations sur les fichiers. Par exemple, la tâche de système de fichiers peut référencer un fichier pour le copier à un nouvel emplacement.  
   
 ## <a name="usage-types-of-the-file-connection-manager"></a>Types d'utilisations du gestionnaire de connexions de fichiers  
  La propriété `FileUsageType` du gestionnaire de connexions de fichiers spécifie la manière dont la connexion de fichiers est utilisée. Le gestionnaire de connexions de fichiers peut créer un fichier, créer un dossier, utiliser un fichier existant ou utiliser un dossier existant.  
   
  Le tableau qui suit énumère les valeurs de `FileUsageType`.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |`0`|Le gestionnaire de connexions de fichiers utilise un fichier existant.|  
 |`1`|Le gestionnaire de connexions de fichiers crée un fichier.|  

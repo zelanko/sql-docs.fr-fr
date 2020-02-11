@@ -1,5 +1,5 @@
 ---
-title: Déployer des Packages à l’aide de l’utilitaire de déploiement | Microsoft Docs
+title: Déployer des packages à l’aide de l’utilitaire de déploiement | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 73b71e83f3b0f0f895b2cc5b8fd3495fb4893a32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059621"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>Déployer des packages à l’aide de l’utilitaire de déploiement
@@ -65,6 +65,6 @@ ms.locfileid: "66059621"
 8.  Si vous avez choisi de valider les packages après l'installation, affichez les résultats de validation des packages déployés.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Déploiement du package &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
+ [Déploiement de packages &#40;&#41;SSIS](packages/legacy-package-deployment-ssis.md)  
   
   

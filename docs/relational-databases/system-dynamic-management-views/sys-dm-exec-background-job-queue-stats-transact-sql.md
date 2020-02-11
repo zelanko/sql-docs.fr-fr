@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_background_job_queue_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_exec_background_job_queue_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,42 +21,42 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4707c652b8d47505cceba0be76c53eff2824b728
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68263950"
 ---
-# <a name="sysdmexecbackgroundjobqueuestats-transact-sql"></a>sys.dm_exec_background_job_queue_stats (Transact-SQL)
+# <a name="sysdm_exec_background_job_queue_stats-transact-sql"></a>sys.dm_exec_background_job_queue_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retourne une ligne qui fournit des statistiques agrégées pour chaque travail du processeur de requêtes soumis pour une exécution asynchrone (en arrière-plan).  
   
 > [!NOTE]  
->  À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_exec_background_job_queue_stats**.  
+>  Pour appeler cette valeur [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] à [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]partir de ou, utilisez le nom **sys. dm_pdw_nodes_exec_background_job_queue_stats**.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**queue_max_len**|**Int**|Longueur maximale de la file d'attente.|  
+|**queue_max_len**|**int**|Longueur maximale de la file d'attente.|  
 |**enqueued_count**|**int**|Nombre de demandes placées dans la file d'attente.|  
 |**started_count**|**int**|Nombre de demandes dont l'exécution a commencé.|  
 |**ended_count**|**int**|Nombre de demandes dont l'exécution s'est terminée sur un succès ou un échec.|  
 |**failed_lock_count**|**int**|Nombre de demandes ayant échoué à cause d'un problème de contention de verrouillage ou de blocage.|  
-|**failed_other_count**|**Int**|Nombre de demandes ayant échoué pour d'autres raisons.|  
+|**failed_other_count**|**int**|Nombre de demandes ayant échoué pour d'autres raisons.|  
 |**failed_giveup_count**|**int**|Nombre de demandes ayant échoué parce que le nombre limite de tentatives était atteint.|  
 |**enqueue_failed_full_count**|**int**|Nombre de tentatives d'empilement ayant échoué parce que la file d'attente était saturée.|  
-|**enqueue_failed_duplicate_count**|**Int**|Nombre de tentatives d'empilement en double.|  
+|**enqueue_failed_duplicate_count**|**int**|Nombre de tentatives d'empilement en double.|  
 |**elapsed_avg_ms**|**int**|Temps moyen écoulé par demande en millisecondes.|  
 |**elapsed_max_ms**|**int**|Temps écoulé pour la demande la plus longue, en millisecondes.|  
-|**pdw_node_id**|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
+|**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
 ## <a name="remarks"></a>Notes  
- Seules les informations pour les travaux de mise à jour des statistiques asynchrone apparaissent dans cette vue. Pour plus d’informations sur la mise à jour asynchrone des statistiques, consultez [statistiques](../../relational-databases/statistics/statistics.md).  
+ Seules les informations pour les travaux de mise à jour des statistiques asynchrone apparaissent dans cette vue. Pour plus d’informations sur les statistiques des mises à jour asynchrones, consultez [Statistics](../../relational-databases/statistics/statistics.md).  
   
 ## <a name="permissions"></a>Autorisations
 
-Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou un **administrateur Azure Active Directory** compte.   
+Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiert `VIEW SERVER STATE` l’autorisation.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
 
 ## <a name="examples"></a>Exemples  
   
@@ -88,7 +88,7 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Fonctions et vues de gestion dynamique relatives aux exécutions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Fonctions et vues de gestion dynamique liées à l’exécution &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

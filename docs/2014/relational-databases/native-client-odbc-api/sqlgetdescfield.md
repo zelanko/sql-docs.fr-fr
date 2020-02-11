@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a92b3a9491b8424fb9015fc4d30875fedb38758
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657778"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
@@ -26,25 +26,26 @@ ms.locfileid: "62657778"
   
  Les champs de descripteur qui contiennent des chaînes d'identificateur de colonne sont souvent des chaînes de longueur nulle. Toutes les valeurs des champs de descripteur spécifiques à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sont en lecture seule.  
   
- Comme les attributs récupérés avec SQLColAttribute, les champs de descripteur que les attributs au niveau des lignes de rapport (tels que SQL_CA_SS_COMPUTE_ID) sont signalés pour toutes les colonnes du jeu de résultats.  
+ À l’instar des attributs récupérés avec SQLColAttribute, les champs de descripteur qui signalent des attributs au niveau de la ligne (par exemple SQL_CA_SS_COMPUTE_ID) sont signalés pour toutes les colonnes du jeu de résultats.  
   
 ## <a name="sqlgetdescfield-and-table-valued-parameters"></a>SQLGetDescField et paramètres table  
- SQLGetDescField peut être utilisé pour obtenir des valeurs pour les attributs étendus des paramètres table et les colonnes de paramètre table. Pour plus d’informations sur les paramètres table, consultez [paramètres table &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ SQLGetDescField peut être utilisé pour obtenir des valeurs pour les attributs étendus de paramètres table et les colonnes de paramètre table. Pour plus d’informations sur les paramètres table, consultez [paramètres table &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlgetdescfield-support-for-enhanced-date-and-time-features"></a>Prise en charge par SQLGetDescField des fonctionnalités de date et heure améliorées  
  Pour plus d'informations sur les champs de descripteur disponibles avec les nouveaux types date/heure, consultez [Parameter and Result Metadata](../native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
- Pour plus d’informations, consultez [améliorations Date / heure &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Pour plus d’informations, consultez améliorations de la [date et de l’heure &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
- À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], SQLGetDescField peut retourner `SQL_C_SS_TIME2` (pour `time` types) ou `SQL_C_SS_TIMESTAMPOFFSET` (pour `datetimeoffset`) au lieu de `SQL_C_BINARY`, si votre application utilise ODBC 3.8.  
+ À compter [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]de, SQLGetDescField peut `SQL_C_SS_TIME2` retourner ( `time` pour les types `SQL_C_SS_TIMESTAMPOFFSET` ) ou `datetimeoffset`(pour) `SQL_C_BINARY`au lieu de, si votre application utilise ODBC 3,8.  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>Prise en charge par SQLGetDescField des types CLR volumineux définis par l'utilisateur  
- `SQLGetDescField` prend en charge les grands types CLR définis par l'utilisateur. Pour plus d’informations, consultez [Large CLR User-Defined Types &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ 
+  `SQLGetDescField` prend en charge les grands types CLR définis par l'utilisateur. Pour plus d’informations, consultez [types CLR volumineux définis par l’utilisateur &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlgetdescfield-support-for-sparse-columns"></a>Prise en charge par SQLGetDescField des colonnes éparses  
- SQLGetDescField peut être utilisé pour interroger le nouveau champ IRD SQL_CA_SS_IS_COLUMN_SET pour déterminer si une colonne est un `column_set` colonne.  
+ SQLGetDescField peut être utilisé pour interroger le nouveau champ IRD SQL_CA_SS_IS_COLUMN_SET pour déterminer si une colonne est `column_set` une colonne.  
   
- Pour plus d’informations, consultez [Sparse Columns Support &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md).  
+ Pour plus d’informations, consultez la rubrique [prise en charge des colonnes éparses &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="example"></a>Exemple  
   
@@ -152,7 +153,7 @@ if (SQLMoreResults(g_hStmt) == SQL_SUCCESS)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLGetDescField, fonction](https://go.microsoft.com/fwlink/?LinkId=59351)   
- [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
+ [SQLGetDescField fonction)](https://go.microsoft.com/fwlink/?LinkId=59351)   
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

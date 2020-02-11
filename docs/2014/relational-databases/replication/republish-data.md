@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 976520f5000d3a0f96ee3bdea25bcc9802939d36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250410"
 ---
 # <a name="republish-data"></a>Republier des données
@@ -43,9 +43,9 @@ ms.locfileid: "63250410"
   
  Dans l'illustration suivante, le serveur de publication et celui de republication sont aussi leurs propres distributeurs locaux. Si chacun d'eux a été configuré pour utiliser un serveur de distribution distant, chaque serveur de distribution doit se trouver du même côté de la liaison de communication lente ou coûteuse que son serveur de publication. Les serveurs de publication doivent être connectés à des serveurs de distribution distants par l'intermédiaire de liaisons de communications fiables à haut débit.  
   
- ![Republishing data](media/repl-06a.gif "Republishing data")  
+ ![Republication de données](media/repl-06a.gif "Republication de données")  
   
- Tous les serveurs peuvent être à la fois serveur de publication et Abonné. Par exemple, considérez le diagramme suivant dans lequel une publication d’une table située à Londres et doit être distribuée dans quatre villes aux États-Unis : Chicago, New York, San Diego et Seattle. Le serveur situé à New York a été sélectionné pour s'abonner à la table publiée sur le serveur londonien, car le site new-yorkais réunit les conditions suivantes :  
+ Tous les serveurs peuvent être à la fois serveur de publication et Abonné. Le diagramme suivant illustre l'exemple d'une publication d'une table située à Londres et qui doit être distribuée dans quatre villes aux États-Unis : Chicago, New York, San Diego et Seattle. Le serveur situé à New York a été sélectionné pour s'abonner à la table publiée sur le serveur londonien, car le site new-yorkais réunit les conditions suivantes :  
   
 -   La liaison réseau de retour vers Londres est relativement fiable.  
   
@@ -60,11 +60,11 @@ ms.locfileid: "63250410"
 |Serveur de publication|Abonné de publication|Abonné|  
 |---------------|---------------------------|----------------|  
 |Publication transactionnelle|Abonnement transactionnel/publication transactionnelle|Abonnement transactionnel|  
-|Publication transactionnelle|Transactionnelle abonnement/publication de fusion<sup>1</sup>|Abonnement de fusion|  
+|Publication transactionnelle|Abonnement transactionnel/publication de fusion<sup>1</sup>|Abonnement de fusion|  
 |Publication de fusion|Abonnement de fusion/publication de fusion|Abonnement de fusion|  
 |Publication de fusion|Abonnement de fusion/publication transactionnelle|Abonnement transactionnel|  
   
- <sup>1</sup>vous devez définir le `@published_in_tran_pub` propriété sur la publication de fusion. Par défaut, la réplication transactionnelle suppose que les tables sur l'Abonné soient traitées en tant qu'éléments accessibles en lecture seule. Si la réplication de fusion apporte des modifications aux données d'une table dans un abonnement transactionnel, une non-convergence de données peut se produire. Pour éviter ce risque, il est recommandé de spécifier toute table de ce type en tant qu'objet en téléchargement seul dans la publication de fusion. Cela empêche un Abonné de fusion de télécharger les modifications apportées aux données de la table. Pour plus d’informations, consultez [Optimiser les performances de la réplication de fusion avec les articles en téléchargement seul](merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+ <sup>1</sup> Vous devez définir la `@published_in_tran_pub` propriété sur la publication de fusion. Par défaut, la réplication transactionnelle suppose que les tables sur l'Abonné soient traitées en tant qu'éléments accessibles en lecture seule. Si la réplication de fusion apporte des modifications aux données d'une table dans un abonnement transactionnel, une non-convergence de données peut se produire. Pour éviter ce risque, il est recommandé de spécifier toute table de ce type en tant qu'objet en téléchargement seul dans la publication de fusion. Cela empêche un Abonné de fusion de télécharger les modifications apportées aux données de la table. Pour plus d’informations, consultez [Optimiser les performances de la réplication de fusion avec les articles en téléchargement seul](merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer la distribution](configure-distribution.md)   

@@ -17,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d83b716d9919bf322097b8ded8409950982d961c
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148359"
 ---
 # <a name="tracing-and-replaying-events"></a>Événements de traçage et de relecture
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Dans SMO, les objets de **trace** et de relecture <xref:Microsoft.SqlServer.Management.Trace> de l’espace de noms fournissent [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] un accès par programme à la fonctionnalité, qui est [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisée pour surveiller une instance de ou. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Vous pouvez capturer et enregistrer des données sur chaque événement dans un fichier ou dans une table en vue d'une analyse ultérieure. Par exemple, vous pouvez surveiller un environnement de production pour savoir quelles sont les procédures qui compromettent les performances en s'exécutant trop lentement.  
+  Dans SMO, les objets de **trace** et de **relecture** <xref:Microsoft.SqlServer.Management.Trace> de l’espace de noms fournissent [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] un accès par programme à la fonctionnalité, qui est [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisée [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]pour surveiller une instance de ou. Vous pouvez capturer et enregistrer des données sur chaque événement dans un fichier ou dans une table en vue d'une analyse ultérieure. Par exemple, vous pouvez surveiller un environnement de production pour savoir quelles sont les procédures qui compromettent les performances en s'exécutant trop lentement.  
   
- Les objets **Trace** et **Replay** fournissent un jeu d'objets qui peuvent être utilisés pour créer des traces sur une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ces objets peuvent être utilisés au sein de vos propres applications pour créer manuellement des traces pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. En outre, les objets SMO **Trace** peuvent être utilisés pour lire des fichiers et des tables SQL Trace créés en surveillant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]ou l'enregistrement DTS.  
+ Les objets **Trace** et **Replay** fournissent un jeu d'objets qui peuvent être utilisés pour créer des traces sur une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ces objets peuvent être utilisés au sein de vos propres applications pour créer manuellement des traces pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. En outre, les objets Smo **trace** peuvent être utilisés pour lire les fichiers de trace SQL et les tables qui [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ont [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]été créées par l’analyse, ou la journalisation Dts.  
   
  Les objets SMO **Trace** vous permettent de réaliser les fonctions suivantes :  
   

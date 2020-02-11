@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6750456d708d68e57aadd4b1139f6e108a93b9ba
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783018"
 ---
 # <a name="change-the-failover-mode-of-an-availability-replica-sql-server"></a>Modifier le mode de basculement d'un réplica de disponibilité (SQL Server)
@@ -33,11 +33,11 @@ ms.locfileid: "72783018"
   
 -   Cette tâche est prise en charge uniquement sur les réplicas principaux. Vous devez être connecté à l'instance de serveur qui héberge le réplica principal.  
   
--   Les instances de cluster de basculement (FCI) SQL Server ne prennent pas en charge le basculement automatique par les groupes de disponibilité. Par conséquent, tout réplica de disponibilité hébergé par une instance de cluster de basculement ne peut être configuré que pour un basculement manuel.  
+-   Les instances de cluster de basculement (FCI) SQL Server ne prennent pas en charge le basculement automatique par les groupes de disponibilité. Par conséquent, tout réplica de disponibilité hébergé par une instance de cluster de basculement ne peut être configuré que pour un basculement manuel.  
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -70,21 +70,21 @@ ms.locfileid: "72783018"
   
      }  )  
   
-     où  
+     where  
   
     -   *nom_groupe* correspond au nom du groupe de disponibilité.  
   
-    -   { '*nom_système*[\\*nom_instance*]' | '*nom_réseau_FCI*[\\*nom_instance*]' }  
+    -   {'*system_name*[\\*instance_name*] ' | '*FCI_network_name*[\\*instance_name*] '}  
   
          Spécifie l'adresse de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui héberge le réplica de disponibilité à modifier. Les composants de cette adresse sont les suivants :  
   
-         *nom_système*  
+         *system_name*  
          Nom NetBIOS du système informatique sur lequel réside une instance de serveur autonome.  
   
-         *nom_réseau_FCI*  
+         *FCI_network_name*  
          Nom réseau utilisé pour accéder à un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans lequel une instance de serveur cible est un serveur partenaire de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (FCI).  
   
-         *nom_instance*  
+         *instance_name*  
          Nom de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui héberge le réplica de disponibilité cible. Pour une instance de serveur par défaut, *nom_instance* est facultatif.  
   
      Pour plus d’informations sur ces paramètres, consultez [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql).  
@@ -112,11 +112,11 @@ ms.locfileid: "72783018"
     ```  
   
     > [!NOTE]  
-    >  Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour plus d’informations, consultez [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 Pour configurer et utiliser le fournisseur de SQL Server PowerShell, consultez [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md).
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble &#40;de groupes de disponibilité AlwaysOn SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
- [ &#40;Modes de disponibilité&#41; groupes de disponibilité AlwaysOn](availability-modes-always-on-availability-groups.md)   
- [Basculement et modes &#40;de basculement groupes de disponibilité AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md) 
+ [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [Modes de disponibilité &#40;groupes de disponibilité AlwaysOn&#41;](availability-modes-always-on-availability-groups.md)   
+ [Basculement et modes de basculement &#40;groupes de disponibilité AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md) 

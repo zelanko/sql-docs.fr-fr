@@ -16,18 +16,18 @@ ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b08e3312f34fcc26d6effff92e09b3739508171e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085294"
 ---
-# <a name="sphelppeerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
+# <a name="sp_help_peerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne des informations relatives aux paramètres de la détection de conflit pour une publication impliquée dans une topologie de réplication transactionnelle d'égal à égal.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,11 +38,11 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @publication=] '*publication*'  
- Nom de la publication pour laquelle renvoyer les informations. *publication* est **sysname**, sans valeur par défaut.  
+ [ @publication= ] «*publication*»  
+ Nom de la publication pour laquelle renvoyer les informations. *publication* est de **type sysname**, sans valeur par défaut.  
   
- [ @timeout=] *délai d’attente*  
- Spécifie la durée, en secondes, du délai d'expiration de la procédure durant l'attente d'une réponse de chaque nœud dans la topologie. Si la topologie contient un Abonné en lecture seule, spécifier une valeur de délai d'attente n'est pas valide. Les Abonnés en lecture seule ne répondent jamais à un appel de cette procédure. *délai d’attente* est **int**, avec une valeur par défaut de 60.  
+ [ @timeout= ] *délai d’expiration*  
+ Spécifie la durée, en secondes, du délai d'expiration de la procédure durant l'attente d'une réponse de chaque nœud dans la topologie. Si la topologie contient un Abonné en lecture seule, spécifier une valeur de délai d'attente n'est pas valide. Les Abonnés en lecture seule ne répondent jamais à un appel de cette procédure. *timeout* est de **type int**, avec 60 comme valeur par défaut.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  sp_help_peerconflictdetection retourne trois jeux de résultats. Ces résultats sont décrits dans les rubriques suivantes :  
@@ -53,8 +53,8 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
   
 -   [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md)  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
  sp_help_peerconflictdetection est utilisé dans la réplication transactionnelle d'égal à égal.  
@@ -64,7 +64,7 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>Voir aussi  
  [Détection de conflit dans la réplication d’égal à égal](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
- [Réplication transactionnelle d’égal à égal](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

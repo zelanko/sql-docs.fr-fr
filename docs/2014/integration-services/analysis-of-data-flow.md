@@ -1,5 +1,5 @@
 ---
-title: Analyse des flux de données | Microsoft Docs
+title: Analyse du workflow de données | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e67c5448a6625b37c7fb17bc24ea6bdd7cb879ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061601"
 ---
 # <a name="analysis-of-data-flow"></a>Analyse des flux de données
-  Vous pouvez utiliser la [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` vue pour analyser le flux de données des packages de base de données. Cette vue affiche une ligne à chaque fois qu'un composant de flux de données envoie des données à un composant en aval. Les informations peuvent être utilisées pour mieux comprendre les lignes envoyées à chaque composant.  
+  Vous pouvez utiliser la vue de base de données [Catalog. execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` pour analyser le workflow de packages. Cette vue affiche une ligne à chaque fois qu'un composant de flux de données envoie des données à un composant en aval. Les informations peuvent être utilisées pour mieux comprendre les lignes envoyées à chaque composant.  
   
 > [!NOTE]  
 >  Le niveau de journalisation doit avoir la valeur **Commentaires** afin de capturer des informations avec la vue catalog.execution_data_statistics.  
@@ -36,13 +36,13 @@ order by source_component_name, destination_component_name
   
  L'exemple suivant calcule le nombre de lignes par milliseconde envoyées par chaque composant pour une exécution spécifique. Les valeurs calculées sont les suivantes :  
   
--   **total_rows** - Somme de toutes les lignes envoyées par le composant  
+-   **total_rows** : somme de toutes les lignes envoyées par le composant  
   
--   **wall_clock_time_ms** - Durée d’exécution écoulée totale en millisecondes pour chaque composant  
+-   **wall_clock_time_ms** -temps d’exécution écoulé total, en millisecondes, pour chaque composant  
   
--   **num_rows_per_millisecond** - Nombre de lignes par milliseconde envoyées par chaque composant  
+-   **num_rows_per_millisecond** : nombre de lignes par milliseconde envoyées par chaque composant  
   
- Le `HAVING` clause est utilisée pour éviter une erreur de division par zéro dans les calculs.  
+ La `HAVING` clause est utilisée pour empêcher une erreur de division par zéro dans les calculs.  
   
 ```  
 use SSISDB  
@@ -59,7 +59,7 @@ order by source_component_name desc
 ```  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Débogage d'un flux de données](troubleshooting/debugging-data-flow.md)  
+ [Débogage d’un flux de données](troubleshooting/debugging-data-flow.md)  
   
  [Outils de dépannage pour l’exécution des packages](troubleshooting/troubleshooting-tools-for-package-execution.md)  
   

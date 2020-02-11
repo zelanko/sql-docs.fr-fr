@@ -18,16 +18,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7235f5f333ac7bb4520a6244e103baafba343ea3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833700"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>Gestionnaire de connexions de fichiers plats multiples
   Un gestionnaire de connexions de fichiers plats multiples permet à un package d'accéder aux données de plusieurs fichiers plats. Par exemple, une source de fichier plat peut utiliser un gestionnaire de connexions de fichiers plats multiples lorsque la tâche de flux de données se trouve dans un conteneur de boucles (conteneur de boucles For, par exemple). Dans chaque boucle du conteneur, la source de fichier plat charge les données à partir du nom de fichier suivant fourni par le gestionnaire de connexions de fichiers plats multiples.  
   
- Lorsque vous ajoutez un gestionnaire de connexions de fichiers plats multiples à un package, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée une connexion de gestionnaire qui sera converti en une connexion de fichiers plats multiples au moment de l’exécution, définit les propriétés sur le Gestionnaire de connexions de fichiers plats multiples, et Ajoute le Gestionnaire de connexions de fichiers plats multiples à la `Connections` collection du package.  
+ Lorsque vous ajoutez un gestionnaire de connexions de fichiers plats multiples à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package, crée un gestionnaire de connexions qui sera résolu en une connexion de fichiers plats multiples au moment de l’exécution, définit les propriétés sur le gestionnaire de connexions de fichiers plats multiples, puis ajoute `Connections` le gestionnaire de connexions de fichiers plats multiples à la collection du package.  
   
  La propriété `ConnectionManagerType` du gestionnaire de connexions a pour valeur `MULTIFLATFILE`.  
   
@@ -47,13 +47,13 @@ ms.locfileid: "62833700"
   
  Lorsque le gestionnaire de connexions de fichiers plats multiples référence plusieurs fichiers, les chemins d'accès aux fichiers sont séparés par une barre verticale (|). La propriété `ConnectionString` du gestionnaire de connexions utilise le format suivant :  
   
- \<*chemin*>|\<*chemin*>  
+ \<*chemin d'*** accès>|\<>  
   
- Vous pouvez également spécifier plusieurs fichiers en utilisant des caractères génériques. Par exemple, pour référencer tous les fichiers texte sur le C lecteur, la valeur de la `ConnectionString` propriété peut être définie sur C:\\*.txt.  
+ Vous pouvez également spécifier plusieurs fichiers en utilisant des caractères génériques. Par exemple, pour référencer tous les fichiers texte sur le lecteur C, la valeur de `ConnectionString` la propriété peut être définie sur C\\: *. txt.  
   
  Si un gestionnaire de connexions de fichiers plats multiples référence plusieurs fichiers, tous les fichiers doivent utiliser le même format.  
   
- Par défaut, le gestionnaire de connexions de fichiers plats multiples définit pour les colonnes de type chaîne une longueur de 50 caractères. Dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats multiples** , vous pouvez évaluer des exemples de données et redimensionner automatiquement la longueur de ces colonnes pour empêcher la troncation des données ou la largeur de colonne excessive. Sauf si vous redimensionnez la longueur de colonne dans une source de fichier plat ou une transformation, celle-ci reste la même dans le flux de données. Si ces colonnes mappent dans des colonnes de destination plus étroites, des avertissements apparaissent dans l'interface de l'utilisateur et, à l'exécution, des erreurs peuvent se produire du fait de la troncation des données. Vous pouvez redimensionner les colonnes pour les rendre compatibles avec les colonnes de destination dans le gestionnaire de connexions de fichiers plats multiples, la source du fichier plat ou une transformation. Pour modifier la longueur des colonnes de sortie, vous définissez le `Length` propriété de la colonne de sortie sur le **propriétés d’entrée et sortie** onglet dans le **éditeur avancé** boîte de dialogue.  
+ Par défaut, le gestionnaire de connexions de fichiers plats multiples définit pour les colonnes de type chaîne une longueur de 50 caractères. Dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats multiples** , vous pouvez évaluer des exemples de données et redimensionner automatiquement la longueur de ces colonnes pour empêcher la troncation des données ou la largeur de colonne excessive. Sauf si vous redimensionnez la longueur de colonne dans une source de fichier plat ou une transformation, celle-ci reste la même dans le flux de données. Si ces colonnes mappent dans des colonnes de destination plus étroites, des avertissements apparaissent dans l'interface de l'utilisateur et, à l'exécution, des erreurs peuvent se produire du fait de la troncation des données. Vous pouvez redimensionner les colonnes pour les rendre compatibles avec les colonnes de destination dans le gestionnaire de connexions de fichiers plats multiples, la source du fichier plat ou une transformation. Pour modifier la longueur des colonnes de sortie, définissez la `Length` propriété de la colonne de sortie sous l’onglet **propriétés d’entrée et de sortie** de la boîte de dialogue **éditeur avancé** .  
   
  Si vous mettez à jour des longueurs de colonne dans le gestionnaire de connexions de fichiers plats multiples après avoir ajouté et configuré la source de fichier plat qui utilise le gestionnaire de connexions, vous n'avez pas à redimensionner manuellement les colonnes de sortie dans la source de fichier plat. Quand vous ouvrez la boîte de dialogue **Source du fichier plat** , la source du fichier plat offre la possibilité de synchroniser les métadonnées de la colonne.  
   
@@ -62,18 +62,18 @@ ms.locfileid: "62833700"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page général&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Colonnes&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
+-   [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page colonnes&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
   
--   [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Avancé&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
+-   [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page avancé&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
 -   [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Aperçu&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
   
- Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programmation](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programme](../building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Source du fichier plat](../data-flow/flat-file-source.md)   
+ [Source de fichier plat](../data-flow/flat-file-source.md)   
  [Destination de fichier plat](../data-flow/flat-file-destination.md)   
  [Connexions Integration Services &#40;SSIS&#41;](integration-services-ssis-connections.md)  
   

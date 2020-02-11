@@ -16,10 +16,10 @@ ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 02ffdd0facfedd1b9eb6d8eee083f819566d818d
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72006103"
 ---
 # <a name="sp_validatemergepublication-transact-sql"></a>sp_validatemergepublication (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "72006103"
 
   Effectue une validation sur l'ensemble d'une publication, dans laquelle tous les abonnements (par envoi de données, par extraction de données et anonymes) sont validés une fois. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,18 +38,18 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **\@publication =** ] **«***publication***»**  
+ [**\@publication =**] **«***publication***»**  
  Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @level = ] level` est le type de validation à effectuer. *Level* est de **type tinyint**, sans valeur par défaut. Le paramètre « level » peut avoir l'une des valeurs suivantes :  
+`[ @level = ] level`Type de validation à effectuer. *Level* est de **type tinyint**, sans valeur par défaut. Le paramètre « level » peut avoir l'une des valeurs suivantes :  
   
 |Valeur de level (niveau)|Description|  
 |-----------------|-----------------|  
 |**1**|Validation du décompte de lignes uniquement.|  
-|**2**|Validation du nombre de lignes et de la somme de contrôle. Pour les abonnés [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], cette valeur est automatiquement définie sur **3**.|  
-|**3**|Il s'agit de la valeur recommandée.|  
+|**2**|Validation du nombre de lignes et de la somme de contrôle. Pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]les abonnés, cette valeur est automatiquement définie sur **3**.|  
+|**1,3**|Il s'agit de la valeur recommandée.|  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  

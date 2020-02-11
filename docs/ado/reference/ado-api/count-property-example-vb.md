@@ -1,5 +1,5 @@
 ---
-title: Exemple de propriété Count (VB) | Microsoft Docs
+title: Count, exemple de propriété (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5be99b4f43669a14f948cf10ee0b91028907ec0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933364"
 ---
 # <a name="count-property-example-vb"></a>Count, exemple de propriétés (VB)
-Cet exemple montre la [nombre](../../../ado/reference/ado-api/count-property-ado.md) propriété avec deux collections dans le ***employé*** base de données. La propriété obtient le nombre d’objets dans chaque collection et définit la limite supérieure pour les boucles qui énumèrent ces collections. Une autre façon d’énumérer ces collections sans utiliser le **nombre** propriété consisterait à utiliser `For Each...Next` instructions.  
+Cet exemple illustre la propriété [Count](../../../ado/reference/ado-api/count-property-ado.md) avec deux collections dans la base de données ***Employee*** . La propriété obtient le nombre d’objets dans chaque collection et définit la limite supérieure pour les boucles qui énumèrent ces collections. Une autre façon d’énumérer ces collections sans utiliser la propriété **Count** consiste à utiliser `For Each...Next` des instructions.  
   
 ```  
 'BeginCountVB  

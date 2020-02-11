@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b22cc6d5a609f8e1f585ccc1229e0e1cd67e1796
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68055641"
 ---
 # <a name="ordinal-mdx"></a>Ordinal (MDX)
@@ -32,7 +32,7 @@ Level_Expression.Ordinal
  Expression MDX (Multidimensional Expressions) valide qui retourne un niveau.  
   
 ## <a name="remarks"></a>Notes  
- Le **Ordinal** fonction est souvent utilisée conjointement avec la **IIF** et **CurrentMember** fonctions pour afficher de manière conditionnelle des valeurs différentes à différents niveaux de hiérarchie, selon la position ordinale de chaque cellule spécifique dans le résultat de la requête. Par exemple, vous pouvez utiliser la **Ordinal** (fonction) pour effectuer des calculs à certains niveaux et affiche la valeur par défaut « N/a » à d’autres niveaux.  
+ La fonction **ordinale** est fréquemment utilisée conjointement avec les fonctions **IIf** et **CurrentMember** pour afficher de manière conditionnelle des valeurs différentes à différents niveaux de la hiérarchie, en fonction de la position ordinale de chaque cellule dans le résultat de la requête. Par exemple, vous pouvez utiliser la fonction **ordinale** pour effectuer des calculs à certains niveaux et afficher une valeur par défaut « N/a » à d’autres niveaux.  
   
 ## <a name="example"></a>Exemple  
  L'exemple ci-dessous retourne le nombre ordinal du niveau Calendar Quarter dans la hiérarchie Calendar.  
@@ -44,6 +44,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

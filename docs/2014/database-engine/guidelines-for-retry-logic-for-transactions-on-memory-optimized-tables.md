@@ -1,5 +1,5 @@
 ---
-title: Instructions pour la logique de nouvelle tentative pour les Transactions sur les Tables mémoire optimisées | Microsoft Docs
+title: Instructions relatives à la logique de nouvelle tentative pour les transactions sur les tables optimisées en mémoire | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01f719470419940b130967b7c1360c4ae0c281eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779213"
 ---
 # <a name="guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables"></a>Instructions pour la logique de nouvelle tentative des transactions sur des tables mémoire optimisées
@@ -30,7 +30,7 @@ ms.locfileid: "62779213"
   
  Ces erreurs sont souvent dues à une interférence entre des transactions exécutées simultanément. L'action corrective habituelle consiste à réessayer la transaction.  
   
- Pour plus d’informations sur ces conditions d’erreur, consultez la section sur la détection de conflit, Validation et contrôles de dépendance de validation dans [Transactions dans les Tables optimisées en mémoire](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Pour plus d’informations sur ces conditions d’erreur, consultez la section relative à la détection de conflit, à la validation et aux vérifications de dépendance de validation dans les [transactions dans les tables optimisées en mémoire](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  Les blocages (code d'erreur 1205) ne peuvent pas se produire pour les tables mémoire optimisées, car celles-ci n'utilisent pas de verrous. Toutefois, si l'application contient déjà une logique de nouvelle tentative pour les blocages, la logique existante peut être étendue pour inclure les nouveaux codes d'erreur.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62779213"
 ### <a name="considerations-for-read-only-transactions-and-cross-container-transactions"></a>Considérations relatives aux transactions en lecture seule et aux transactions entre conteneurs  
  Les transactions en lecture seule entre conteneurs, qui sont des transactions démarrées en dehors du contexte d'une procédure stockée compilée en mode natif, n'effectuent pas de validation si toutes les tables mémoire optimisées sont accessibles avec l'isolation SNAPSHOT. Toutefois, lorsque les tables mémoire optimisées sont accessibles avec l'isolation REPEATABLE READ ou SERIALIZABLE, la validation est exécutée au moment de la validation. Dans ce cas, la logique de nouvelle tentative peut être nécessaire.  
   
- Pour plus d’informations, consultez la section sur les Transactions entre conteneurs dans [niveaux d’Isolation des transactions](../../2014/database-engine/transaction-isolation-levels.md).  
+ Pour plus d’informations, consultez la section sur les transactions entre conteneurs dans les [niveaux d’isolation des transactions](../../2014/database-engine/transaction-isolation-levels.md).  
   
 ## <a name="implementing-retry-logic"></a>Implémenter la logique de nouvelle tentative  
  Comme avec toutes les transactions qui ont accès aux tables mémoire optimisées, vous devez prendre en compte la logique de nouvelle tentative pour gérer les problèmes potentiels, tels que des conflits d'écriture (code d'erreur 41302) ou les problèmes de dépendance (code d'erreur 41301). Dans la plupart des applications le taux d'échec est bas, mais il est encore nécessaire de gérer les erreurs en effectuant une nouvelle tentative de transaction. Les deux méthodes suggérées pour implémenter la logique de nouvelle tentative sont les suivantes :  
@@ -71,7 +71,7 @@ ms.locfileid: "62779213"
   
 -   L'application cliente applique la logique de nouvelle tentative pour d'autres codes d'erreur, comme 1205, que vous pouvez étendre.  
   
--   Les conflits sont rares, mais il est important de réduire la latence de bout en bout à l'aide d'une exécution préparée. Pour plus d’informations sur l’exécution en mode natif directement les procédures stockées compilées, consultez [Natively Compiled Stored Procedures](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+-   Les conflits sont rares, mais il est important de réduire la latence de bout en bout à l'aide d'une exécution préparée. Pour plus d’informations sur l’exécution directe de procédures stockées compilées en mode natif, consultez [procédures stockées compilées en mode natif](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
  L'exemple suivant illustre la logique de nouvelle tentative dans une procédure stockée en [!INCLUDE[tsql](../includes/tsql-md.md)] interprété qui contient un appel à une procédure stockée compilée en mode natif ou à une transaction entre conteneurs.  
   
@@ -126,8 +126,8 @@ END
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Présentation des Transactions sur les Tables optimisées en mémoire](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [Transactions dans les Tables optimisées en mémoire](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
- [Instructions pour les niveaux d’isolement des transactions sur les tables à mémoire optimisée](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)  
+ [Fonctionnement des transactions sur les tables optimisées en mémoire](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+ [Transactions dans les tables optimisées en mémoire](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
+ [Instructions pour les niveaux d'isolement des transactions sur les tables mémoire optimisées](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)  
   
   

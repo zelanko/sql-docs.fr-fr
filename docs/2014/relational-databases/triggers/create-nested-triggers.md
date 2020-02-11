@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ba5b5edf57bf877827fefe4f8764b8b71124a550
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196539"
 ---
 # <a name="create-nested-triggers"></a>Créer des déclencheurs imbriqués
@@ -35,7 +35,7 @@ ms.locfileid: "68196539"
   
  Si l'imbrication est permise et qu'un déclencheur de la chaîne démarre une boucle infinie, le niveau d'imbrication maximal est dépassé et le déclencheur s'arrête.  
   
- Les déclencheurs imbriqués peuvent s'avérer utiles pour effectuer certaines fonctions de maintenance, comme stocker une copie de sauvegarde des lignes concernées par un déclencheur précédent. Par exemple, vous pouvez créer un déclencheur sur `PurchaseOrderDetail` , qui enregistre une copie de sauvegarde des lignes `PurchaseOrderDetail` qui ont été supprimées par le déclencheur `delcascadetrig` . Lorsque le déclencheur `delcascadetrig` est actif, la suppression de `PurchaseOrderID` 1965 de `PurchaseOrderHeader` supprime la ou les lignes correspondantes de `PurchaseOrderDetail`. Pour enregistrer les données, vous pouvez créer un déclencheur DELETE sur `PurchaseOrderDetail` , qui enregistre les données supprimées dans une autre table `del_save`créée séparément. Exemple :  
+ Les déclencheurs imbriqués peuvent s'avérer utiles pour effectuer certaines fonctions de maintenance, comme stocker une copie de sauvegarde des lignes concernées par un déclencheur précédent. Par exemple, vous pouvez créer un déclencheur sur `PurchaseOrderDetail` , qui enregistre une copie de sauvegarde des lignes `PurchaseOrderDetail` qui ont été supprimées par le déclencheur `delcascadetrig` . Lorsque le déclencheur `delcascadetrig` est actif, la suppression de `PurchaseOrderID` 1965 de `PurchaseOrderHeader` supprime la ou les lignes correspondantes de `PurchaseOrderDetail`. Pour enregistrer les données, vous pouvez créer un déclencheur DELETE sur `PurchaseOrderDetail` , qui enregistre les données supprimées dans une autre table `del_save`créée séparément. Par exemple :  
   
 ```  
 CREATE TRIGGER Purchasing.savedel  

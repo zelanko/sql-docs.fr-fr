@@ -16,14 +16,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: dfee7265529419aecf2b05831503ed134b93f525
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62787035"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>Configurer l'option de configuration de serveur min memory per query
-  Cette rubrique explique comment configurer le `min memory per query` option de configuration de serveur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le `min memory per query` option spécifie la quantité minimale de mémoire (en kilo-octets) allouée pour l’exécution d’une requête. Par exemple, si `min memory per query` est définie à 2 048 Ko, la requête est assurée pour obtenir au moins cette quantité de mémoire. La valeur par défaut est 1 024 Ko. La valeur minimale est de 512 Ko et la valeur maximale de 2 147 483 647 Ko (2 Go).  
+  Cette rubrique explique comment configurer `min memory per query` l’option de configuration de serveur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dans à [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] l' [!INCLUDE[tsql](../../includes/tsql-md.md)]aide de ou de. L' `min memory per query` option spécifie la quantité minimale de mémoire (en kilo-octets) qui sera allouée à l’exécution d’une requête. Par exemple, si `min memory per query` a la valeur 2 048 Ko, la requête est garantie d’obtenir au moins cette quantité de mémoire totale. La valeur par défaut est 1 024 Ko. La valeur minimale est de 512 Ko et la valeur maximale de 2 147 483 647 Ko (2 Go).  
   
  **Dans cette rubrique**  
   
@@ -35,13 +35,13 @@ ms.locfileid: "62787035"
   
      [Sécurité](#Security)  
   
--   **Pour configurer l'option min memory per query, utilisez :**  
+-   **Pour configurer l’option mémoire minimum par requête, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [Après avoir configuré l’option min memory per query](#FollowUp)  
+-   **Suivi :**  [après avoir configuré l’option mémoire minimum par requête](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -94,7 +94,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir configuré l’option min memory per query  
+##  <a name="FollowUp"></a>Suivi : après avoir configuré l’option mémoire minimum par requête  
  Le paramètre prend effet immédiatement sans redémarrage du serveur.  
   
 ## <a name="see-also"></a>Voir aussi  

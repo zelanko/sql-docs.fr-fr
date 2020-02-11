@@ -1,5 +1,5 @@
 ---
-title: Configurer des points de contrôle pour redémarrer un Package ayant échoué | Microsoft Docs
+title: Configurer des points de contrôle pour redémarrer un package ayant échoué | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e22e47af568ecf723b54a35fb6b83bd5ce74e333
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060773"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>Configurer des points de contrôle pour redémarrer un package ayant échoué
@@ -28,13 +28,13 @@ ms.locfileid: "66060773"
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] contenant le package à configurer.  
   
-2.  Dans **l’Explorateur de solutions**, double-cliquez sur le package pour l’ouvrir.  
+2.  Dans **Explorateur de solutions**, double-cliquez sur le package pour l’ouvrir.  
   
 3.  Cliquez sur l'onglet **Flux de contrôle** .  
   
 4.  Cliquez avec le bouton droit n’importe où dans l’arrière-plan de la surface de dessin du flux de contrôle, puis cliquez sur **Propriétés**.  
   
-5.  Définissez la propriété SaveCheckpoints sur `True`.  
+5.  Affectez à `True`la propriété SaveCheckpoints la valeur.  
   
 6.  Tapez le nom du fichier point de contrôle dans la propriété CheckpointFileName.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66060773"
   
     -   Cliquez avec le bouton droit sur une tâche ou un conteneur, puis cliquez sur **Propriétés**.  
   
-    -   Affectez à la propriété FailPackageOnFailure `True` pour chaque tâche et conteneur sélectionnés.  
+    -   Affectez à `True` la propriété FailPackageOnFailure la valeur pour chaque tâche et conteneur sélectionnés.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Redémarrer des packages à l'aide de points de contrôle](packages/restart-packages-by-using-checkpoints.md)  

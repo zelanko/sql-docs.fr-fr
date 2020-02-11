@@ -1,5 +1,5 @@
 ---
-title: InstanceName, propriété (classe ClientSettingsGeneralFlag) | Microsoft Docs
+title: Propriété InstanceName (classe ClientSettingsGeneralFlag) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 5e742e30ed90bf4415aa4fba8db6c4c92e62389d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63242521"
 ---
 # <a name="instancename-property-clientsettingsgeneralflag-class"></a>Propriété InstanceName (classe ClientSettingsGeneralFlag)
-  Obtient le nom de l'instance du client [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+  Obtient le nom de l’instance du [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>Éléments  
- *object*  
+ *dessin*  
  Objet de [classe ClientSettingsGeneralFlag](clientsettingsgeneralflag-class.md) qui représente un indicateur général pour les paramètres du serveur.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  

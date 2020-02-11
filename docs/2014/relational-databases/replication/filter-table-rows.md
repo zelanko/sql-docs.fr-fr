@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eafa0dc2be5ee9ceffd86185399168589fdd8b1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721219"
 ---
 # <a name="filter-table-rows"></a>Filtrer les lignes de la table
@@ -49,7 +49,7 @@ ms.locfileid: "62721219"
  Ce volet est rempli avec des filtres à mesure que vous les ajoutez aux articles de table dans la publication. Les tables avec filtres de lignes sont affichées en tant que nœuds de niveau supérieur dans le volet. Pour les publications de fusion, les tables auxquelles les filtres ont été étendus par le biais d'un filtre de jointure sont affichées en tant que nœuds enfants.  
   
  **Ajouter**  
- Cliquez sur **Ajouter** pour lancer une boîte de dialogue qui vous permet de filtrer les articles de table. Si vous cliquez sur **Ajouter** pour une publication d'instantané ou transactionnelle, une boîte de dialogue s'ouvre immédiatement. Si vous cliquez sur **Ajouter** pour une publication de fusion, trois choix s’affichent : **Ajouter un filtre**, **Ajouter une jointure pour étendre le filtre sélectionné** et **Générer automatiquement des filtres**.  
+ Cliquez sur **Ajouter** pour lancer une boîte de dialogue qui vous permet de filtrer les articles de table. Si vous cliquez sur **Ajouter** pour une publication d'instantané ou transactionnelle, une boîte de dialogue s'ouvre immédiatement. Si vous cliquez sur **Ajouter** pour une publication de fusion, trois choix s'affichent : **Ajouter un filtre**; **Ajouter une jointure pour étendre le filtre sélectionné**; **Générer automatiquement des filtres**.  
   
 -   Sélectionnez **Ajouter un filtre** pour ouvrir la boîte de dialogue du **même nom** . Elle vous permet d'appliquer des filtres de lignes à un article de table. Dans la boîte de dialogue **Ajouter un filtre** , vous pouvez, par exemple, indiquer qu'une table contenant des données client doit uniquement comporter des données relatives aux clients français lors de sa réplication vers des abonnés.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62721219"
  [Afficher et modifier les propriétés d’une publication](publish/view-and-modify-publication-properties.md)   
  [Filtrer des données publiées](publish/filter-published-data.md)   
  [Filtres de jointure](merge/join-filters.md)   
- [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
+ [Filtres de lignes paramétrés](merge/parameterized-filters-parameterized-row-filters.md)   
  [Publier des données et des objets de base de données](publish/publish-data-and-database-objects.md)  
   
   

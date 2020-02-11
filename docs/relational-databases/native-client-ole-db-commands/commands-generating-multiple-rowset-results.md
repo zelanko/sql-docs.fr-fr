@@ -19,23 +19,23 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 19a6dafd921edf924a35e30c7770155986203f5f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73758281"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Commandes générant des résultats dans plusieurs ensembles de lignes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Le fournisseur d’OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client peut retourner plusieurs ensembles de lignes à partir d’instructions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les instructions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retournent des résultats dans plusieurs ensembles de lignes dans les conditions suivantes :  
+  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client peut retourner plusieurs ensembles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lignes à partir d’instructions. Les instructions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retournent des résultats dans plusieurs ensembles de lignes dans les conditions suivantes :  
   
 -   des instructions SQL groupées sont soumises en tant que commande unique ;  
   
 -   des procédures stockées implémentent un lot d'instructions SQL ;  
   
 ## <a name="batches"></a>Lots  
- Le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB reconnaît le point-virgule comme délimiteur de lot pour les instructions SQL :  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client reconnaît le point-virgule comme délimiteur de lot pour les instructions SQL :  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  
@@ -45,11 +45,12 @@ WCHAR*       wSQLString = L"SELECT * FROM Categories; "
  Il est plus efficace d'envoyer plusieurs instructions SQL dans un lot que d'exécuter chaque instruction SQL séparément. L'envoi d'un lot réduit les allers-retours sur le réseau entre le client et le serveur.  
   
 ## <a name="stored-procedures"></a>Procédures stockées  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne un jeu de résultats pour chaque instruction dans une procédure stockée ; ainsi, la plupart des procédures stockées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retournent plusieurs jeux de résultats.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne un jeu de résultats pour chaque instruction dans une procédure stockée ; ainsi, la plupart des procédures stockées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retournent plusieurs jeux de résultats.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Utilisation d’IMultipleResults pour traiter plusieurs jeux de résultats](../../relational-databases/native-client-ole-db-commands/using-imultipleresults-to-process-multiple-result-sets.md)  
+-   [Utilisation d'IMultipleResults pour traiter plusieurs jeux de résultats](../../relational-databases/native-client-ole-db-commands/using-imultipleresults-to-process-multiple-result-sets.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Commandes](../../relational-databases/native-client-ole-db-commands/commands.md)  

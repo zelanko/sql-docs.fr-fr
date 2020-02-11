@@ -1,5 +1,5 @@
 ---
-title: SQLColAttributes, fonction | Microsoft Docs
+title: SQLColAttributes fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,24 +20,24 @@ ms.assetid: 3ece37af-db56-47fc-bc9d-6a7d0d8a00ec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 64df7ac6e212d103fab244dfa14ce4f8e932bcb4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039773"
 ---
 # <a name="sqlcolattributes-function"></a>SQLColAttributes, fonction
 **Conformité**  
- Version introduite : Conformité aux normes 1.0 ODBC : Déconseillé  
+ Version introduite : conformité des normes ODBC 1,0 : déconseillé  
   
  **Résumé**  
- Dans ODBC 3. *x*, la fonction ODBC 2.0 **SQLColAttributes** a été remplacé par **SQLColAttribute**. Pour plus d’informations, consultez [fonction SQLColAttribute](../../../odbc/reference/syntax/sqlcolattribute-function.md).  
+ Dans ODBC 3. *x*, la fonction ODBC 2,0 **SQLColAttributes** a été remplacée par **SQLColAttribute**. Pour plus d’informations, consultez [SQLColAttribute, fonction](../../../odbc/reference/syntax/sqlcolattribute-function.md).  
   
 > [!NOTE]  
->  Pour plus d’informations sur quelles le Gestionnaire de pilotes mappe cette fonction lorsqu’un ODBC 2. *x* application fonctionne avec un ODBC 3. *x* pilote, consultez [mappage de fonctions déconseillées](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) dans g : annexe Instructions de pilote pour la compatibilité descendante.  
+>  Pour plus d’informations sur le mappage de cette fonction par le gestionnaire de pilotes lorsqu’un ODBC 2. l’application *x* fonctionne avec ODBC 3. *x* , consultez [mappage des fonctions déconseillées](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) dans l’annexe G : instructions relatives aux pilotes pour la compatibilité descendante.  
   
- Consultez [informations sur ODBC 64 bits](../../../odbc/reference/odbc-64-bit-information.md), si votre application s’exécutera sur un système d’exploitation 64 bits.  
+ Consultez [ODBC 64-informations sur ODBC](../../../odbc/reference/odbc-64-bit-information.md), si votre application s’exécute sur un système d’exploitation 64 bits.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence de l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Informations de référence sur l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Fichiers d’en-tête ODBC](../../../odbc/reference/install/odbc-header-files.md)

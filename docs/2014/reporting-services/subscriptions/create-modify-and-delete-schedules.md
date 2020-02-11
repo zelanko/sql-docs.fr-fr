@@ -23,24 +23,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e04f3f9a89fef9c00312ae1622f74fc0a279314
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100878"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   Cette rubrique est consacrée à la création, la modification et la suppression des planifications.  
   
- Dans cette rubrique :  
+ Dans cette rubrique :  
   
--   [Présentation de la gestion des planifications partagées](#bkmk_overview)  
+-   [Vue d'ensemble de la gestion des planifications partagées](#bkmk_overview)  
   
--   [Créer et gérer des planifications partagées (Mode SharePoint)](#bkmk_sharepoint)  
+-   [Créer et gérer des planifications partagées (mode SharePoint)](#bkmk_sharepoint)  
   
--   [Créer et gérer des planifications partagées (Mode natif)](#bkmk_native)  
+-   [Créer et gérer des planifications partagées (mode natif)](#bkmk_native)  
   
-##  <a name="bkmk_overview"></a> Présentation de la gestion des planifications partagées  
+##  <a name="bkmk_overview"></a>Vue d’ensemble de la gestion des planifications partagées  
  Pour gérer des planifications partagées en mode natif, utilisez la page Planifications dans le Gestionnaire de rapports ou le dossier Planifications partagées dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Pour le mode SharePoint, utilisez les pages de gestion pour l'application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Vous pouvez voir toutes les planifications partagées qui sont définies pour le serveur de rapports, suspendre et reprendre des planifications (uniquement dans le Gestionnaire de rapports), et sélectionner les planifications à modifier ou à supprimer. La page Planifications partagées résume les informations suivantes concernant l'état de chaque planification : fréquence, propriétaire, date d'expiration et état.  
@@ -51,9 +51,9 @@ ms.locfileid: "66100878"
   
 -   Consultez la page Rapports d'une planification partagée donnée. Cette page répertorie tous les rapports et datasets partagés qui utilisent la planification partagée.  
   
--   Affichez les journaux des traces ou les fichiers journaux des exécutions des rapports afin de déterminer si ces derniers se sont exécutés aux heures spécifiées dans la planification. Pour plus d’informations, consultez [Fichiers journaux et sources de Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
+-   Affichez les journaux des traces ou les fichiers journaux des exécutions des rapports afin de déterminer si ces derniers se sont exécutés aux heures spécifiées dans la planification. Pour plus d’informations, consultez [Reporting Services les fichiers journaux et les sources](../report-server/reporting-services-log-files-and-sources.md).  
   
-##  <a name="bkmk_sharepoint"></a> Créer et gérer des planifications partagées (mode SharePoint)  
+##  <a name="bkmk_sharepoint"></a>Créer et gérer des planifications partagées (mode SharePoint)  
  Une planification partagée est une planification à usage général qui fournit des informations de planification prêtes à l'emploi à un nombre quelconque de rapports ou d'abonnements. Vous créez une planification partagée, puis vous la référencez dans un abonnement ou dans une page de propriétés lorsque vous avez besoin d'informations de planification. La gestion, la suspension et la reprise des planifications partagées peuvent être centralisées. En revanche, vous devez modifier manuellement une planification personnalisée pour empêcher l'exécution d'un rapport ou d'un abonnement.  
   
  Vous devez être un administrateur de site pour pouvoir créer, modifier ou supprimer les planifications partagées d'un site SharePoint.  
@@ -61,7 +61,7 @@ ms.locfileid: "66100878"
  Vous pouvez identifier une planification spécifique par son nom descriptif. Si aucun nom n'est spécifié, un nom par défaut est créé à partir des informations qui se rapportent à la planification, par exemple sa périodicité ou ses dates et heures d'exécution.  
   
 > [!NOTE]  
->  La création de planifications partagées requiert le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+>  La création de planifications partagées nécessite le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ### <a name="create-shared-schedules-sharepoint"></a>Créer des planifications partagées (SharePoint)  
   
@@ -102,10 +102,10 @@ ms.locfileid: "66100878"
   
 4.  Sélectionnez la planification, puis cliquez sur **Supprimer**.  
   
-##  <a name="bkmk_native"></a> Créer et gérer des planifications partagées (Mode natif)  
+##  <a name="bkmk_native"></a>Créer et gérer des planifications partagées (mode natif)  
  Les planifications partagées doivent être supprimées manuellement via la page Planifications du Gestionnaire de rapports ou le dossier Planifications partagées dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Si vous supprimez une planification partagée qui est en cours d'utilisation, toutes les références à cette planification sont remplacées par des planifications spécifiques aux rapports.  
   
- Les planifications spécifiques à un rapport ou un abonnement sont supprimées lorsque vous supprimez le rapport ou l'abonnement, ou lorsque vous choisissez une autre approche pour exécuter le rapport ou l'abonnement. Par exemple, si vous choisissez **Toujours exécuter ce rapport avec les données les plus récentes** , la planification spécifique aux rapports que vous avez créée pour exécuter un rapport en tant qu'instantané d'exécution de rapport est supprimée.  
+ Les planifications spécifiques à un rapport ou un abonnement sont supprimées lorsque vous supprimez le rapport ou l'abonnement, ou lorsque vous choisissez une autre approche pour exécuter le rapport ou l'abonnement. Par exemple, si vous choisissez **Toujours exécuter ce rapport avec les données les plus récentes** , la planification spécifique à un rapport que vous avez créée pour exécuter un rapport en tant qu’instantané d’exécution de rapport est supprimée.  
   
  Le fait de supprimer une planification et le fait de provoquer son expiration sont deux opérations différentes. Une date d'expiration sert à arrêter une planification, mais ne la supprime pas. Comme les planifications servent à automatiser un grand nombre de fonctionnalités, elles ne sont jamais supprimées automatiquement. Les planifications expirées fournissent aux administrateurs de serveurs de rapports des éléments de preuve quant à la cause de l'arrêt subit d'un processus automatisé. Sans la présence de la planification expirée, un administrateur de serveur de rapports peut faire une erreur de diagnostic pour un problème ou perdre inutilement du temps à tenter de dépanner un processus qui fonctionne parfaitement.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "66100878"
   
 2.  Dans le Gestionnaire de rapports, cliquez sur **Paramètres du site**dans la barre d’outils globale.  
   
-3.  Cliquez sur **Planifications**.  
+3.  Cliquez sur **planifications**.  
   
 4.  Cliquez sur **Nouvelle planification**. Pour modifier une planification existante, cliquez sur son nom.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "66100878"
   
 6.  Sélectionnez **Heure**, **Jour**, **Semaine**ou **Mois**. Cliquez sur **Une fois** pour créer une planification qui ne s'exécute qu'une seule fois. Des options supplémentaires s'affichent lorsque vous spécifiez la base de votre planification.  
   
-7.  Si vous le souhaitez, sélectionnez une date de début pour la planification. Par défaut, il s'agit de la date du jour. Vous pouvez reporter le début de la planification en choisissant une date ultérieure.  
+7.  Si vous le souhaitez, sélectionnez une date de début pour la planification. La valeur par défaut est le jour actuel. Vous pouvez reporter le début de la planification en choisissant une date ultérieure.  
   
 8.  Sélectionnez éventuellement une date de fin de planification. La planification cesse de s'exécuter à la date indiquée, mais elle n'est pas supprimée.  
   
@@ -159,7 +159,8 @@ ms.locfileid: "66100878"
   
  Si vous supprimez une planification partagée utilisée par plusieurs rapports et abonnements, le serveur de rapports créera des planifications individuelles pour chaque rapport et abonnement qui a précédemment utilisé la planification partagée. Chaque nouvelle planification individuelle contiendra la date, l'heure et la périodicité spécifiée dans la planification partagée. Notez que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne fournit pas de gestion centrale des planifications individuelles. Si vous supprimez une planification partagée, vous devez désormais gérer les informations de planification pour chaque élément individuel.  
   
- Si vous n'êtes pas sûr qu'une planification partagée soit utilisée, envisagez plutôt de la supprimer dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fournit les mêmes fonctionnalités de gestion des planifications partagées que le Gestionnaire de rapports, mais il fournit également une page Rapports supplémentaire qui indique le nom de chaque rapport utilisant la planification.  
+ Si vous n'êtes pas sûr qu'une planification partagée soit utilisée, envisagez plutôt de la supprimer dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . 
+  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fournit les mêmes fonctionnalités de gestion des planifications partagées que le Gestionnaire de rapports, mais il fournit également une page Rapports supplémentaire qui indique le nom de chaque rapport utilisant la planification.  
   
 ### <a name="create-delete-or-modify-a-shared-schedule-management-studio"></a>Créer, supprimer ou modifier une planification partagée (Management Studio)  
  Une planification partagée contient les informations de planification et de périodicité qui peuvent être utilisées par tous les rapports publiés et abonnements qui s'exécutent sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si de nombreux rapports et abonnements s'exécutent en même temps, vous pouvez créer une planification partagée pour ces travaux. Si vous souhaitez modifier ultérieurement la périodicité ou la date de fin, vous pouvez effectuer cette modification à un seul emplacement.  
@@ -172,13 +173,13 @@ ms.locfileid: "66100878"
   
 2.  Dans l'Explorateur d'objets, développez un nœud du serveur de rapports.  
   
-3.  Cliquez avec le bouton droit sur le dossier Planifications partagées, puis cliquez sur **Nouvelle planification**. La page Général de la boîte de dialogue **Nouvelle planification partagée** s'affiche.  
+3.  Cliquez avec le bouton droit sur le dossier Planifications partagées , puis cliquez sur **Nouvelle planification**. La page Général de la boîte de dialogue **Nouvelle planification partagée** s'affiche.  
   
      Pour modifier une planification partagée existante, développez le dossier Planifications partagées, cliquez avec le bouton droit sur la planification à modifier, puis cliquez sur **Propriétés**.  
   
 4.  Tapez un nom descriptif pour la planification.  
   
-5.  Si vous le souhaitez, sélectionnez une date de début pour la planification. Par défaut, il s'agit de la date du jour.  
+5.  Si vous le souhaitez, sélectionnez une date de début pour la planification. La valeur par défaut est le jour actuel.  
   
 6.  Si vous le souhaitez, sélectionnez une date de fin pour la planification. La planification cesse de s'exécuter à la date indiquée, mais elle n'est pas supprimée.  
   
@@ -196,12 +197,12 @@ ms.locfileid: "66100878"
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
- Si vous supprimez une planification partagée utilisée par plusieurs rapports et abonnements, le serveur de rapports créera des planifications individuelles pour chaque rapport et abonnement qui a précédemment utilisé la planification partagée. Chaque nouvelle planification individuelle contiendra la date, l'heure et la périodicité spécifiée dans la planification partagée. Notez que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne fournit pas de gestion centrale des planifications individuelles. Si vous supprimez une planification partagée, vous devez désormais gérer les informations de planification pour chaque élément individuel. Avant de supprimer une planification partagée, utilisez la [page Rapports](../tools/schedule-properties-reports-page.md) pour déterminer les rapports qui l'utilisent actuellement.  
+ Si vous supprimez une planification partagée utilisée par plusieurs rapports et abonnements, le serveur de rapports créera des planifications individuelles pour chaque rapport et abonnement qui a précédemment utilisé la planification partagée. Chaque nouvelle planification individuelle contiendra la date, l'heure et la périodicité spécifiée dans la planification partagée. Notez que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne fournit pas de gestion centrale des planifications individuelles. Si vous supprimez une planification partagée, vous devez désormais gérer les informations de planification pour chaque élément individuel. Avant de supprimer une planification partagée, utilisez la [page rapports](../tools/schedule-properties-reports-page.md) pour déterminer les rapports qui utilisent actuellement la planification partagée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Schedules](schedules.md)   
- [Pause and Resume Shared Schedules](pause-and-resume-shared-schedules.md)   
+ [Planifications](schedules.md)   
+ [Suspendre et reprendre des planifications partagées](pause-and-resume-shared-schedules.md)   
  [Mettre en cache un rapport &#40;Gestionnaire de rapports&#41;](../report-server/cache-a-report-report-manager.md)   
- [Ajouter un instantané à un historique de rapport &#40;Gestionnaire de rapports&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)  
+ [Ajout d’un instantané à un historique de rapport &#40;Gestionnaire de rapports&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)  
   
   

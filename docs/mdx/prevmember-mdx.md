@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e5aa91ac2ab5b4056a693535c19a9e250a865dd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020664"
 ---
 # <a name="prevmember-mdx"></a>PrevMember (MDX)
@@ -32,10 +32,10 @@ Member_Expression.PrevMember
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
 ## <a name="remarks"></a>Notes  
- Le **PrevMember** fonction retourne le membre précédent dans le même niveau que le membre spécifié.  
+ La fonction **PrevMember** retourne le membre précédent au même niveau que le membre spécifié.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre une requête simple qui utilise le **PrevMember** (fonction) pour afficher le nom du membre immédiatement avant le membre actuel sur l’axe des lignes :  
+ L’exemple suivant montre une requête simple qui utilise la fonction **PrevMember** pour afficher le nom du membre immédiatement avant le membre actuel sur l’axe des lignes :  
   
  `WITH MEMBER MEASURES.PREVMEMBERDEMO AS`  
   
@@ -47,7 +47,7 @@ Member_Expression.PrevMember
   
  `FROM [Adventure Works]`  
   
- L'exemple ci-dessous retourne le nombre de revendeurs dont les ventes ont baissé sur la période précédente en se basant sur les valeurs de membres State-Province (état-province) sélectionnées par l'utilisateur et évaluées à l'aide de la fonction Aggregate. Le **Hierarchize** et **DrillDownLevel** fonctions sont utilisées pour retourner des valeurs de refus des ventes pour les catégories de produits dans la dimension Product. Le **PrevMember** fonction est utilisée pour comparer la période actuelle avec la période précédente.  
+ L'exemple ci-dessous retourne le nombre de revendeurs dont les ventes ont baissé sur la période précédente en se basant sur les valeurs de membres State-Province (état-province) sélectionnées par l'utilisateur et évaluées à l'aide de la fonction Aggregate. Les fonctions **Hierarchize** et **DrilldownLevel** sont utilisées pour retourner des valeurs pour les ventes refusées pour les catégories de produits dans la dimension Product. La fonction **PrevMember** est utilisée pour comparer la période de temps actuelle avec la période précédente.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS   
@@ -76,6 +76,6 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5c2818c322749672c514cd9d392b61b580d40e88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869901"
 ---
-# <a name="mssqlserver14420"></a>MSSQLSERVER_14420
+# <a name="mssqlserver_14420"></a>MSSQLSERVER_14420
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|14420|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|14420|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SQLErrorNum14420|  
 |Texte du message|La base de données primaire d'envoi de journaux %s.%s a un seuil de sauvegarde de %d minutes et n'a pas effectué de journalisation des sauvegardes depuis %d minutes. Vérifiez les informations du journal de l'agent et du moniteur de copie des journaux de transaction.|  

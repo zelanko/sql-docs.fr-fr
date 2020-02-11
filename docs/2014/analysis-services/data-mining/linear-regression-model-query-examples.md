@@ -1,5 +1,5 @@
 ---
-title: Exemples de requête de modèle de régression linéaire | Microsoft Docs
+title: Exemples de requêtes de modèle de régression linéaire | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 917e41f6053aa499c7d3d7ca51a32b033591bdc1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084301"
 ---
 # <a name="linear-regression-model-query-examples"></a>Exemples de requête de modèle de régression linéaire
@@ -31,7 +31,7 @@ ms.locfileid: "66084301"
   
  **Requêtes de contenu**  
   
- [Utilisation de l'ensemble de lignes de schéma d'exploration de données pour déterminer les paramètres utilisés pour un modèle](#bkmk_Query1)  
+ [Utilisation de l’ensemble de lignes de schéma d’exploration de données pour déterminer les paramètres utilisés pour un modèle](#bkmk_Query1)  
   
  [Utilisation de DMX pour retourner la formule de régression du modèle](#bkmk_Query2)  
   
@@ -39,16 +39,16 @@ ms.locfileid: "66084301"
   
  **Requêtes de prédiction**  
   
- [Prédiction du revenu à l'aide d'une requête singleton](#bkmk_Query4)  
+ [Prédiction du revenu à l’aide d’une requête singleton](#bkmk_Query4)  
   
- [Utilisation des fonctions de prédiction avec un modèle de régression](#bkmk_Query5)  
+ [Utilisation de fonctions de prédiction avec un modèle de régression](#bkmk_Query5)  
   
-##  <a name="bkmk_top"></a> Recherche d'informations sur le modèle de régression linéaire  
+##  <a name="bkmk_top"></a>Recherche d’informations sur le modèle de régression linéaire  
  La structure d'un modèle de régression linéaire est extrêmement simple : le modèle d'exploration de données représente les données sous la forme d'un nœud unique qui définit la formule de régression. Pour plus d’informations, consultez [Contenu du modèle d’exploration de données pour les modèles de régression logistique &#40;Analysis Services – Exploration de données&#41;](mining-model-content-for-logistic-regression-models.md).  
   
- [Retour en haut](#bkmk_top)  
+ [Retour au début](#bkmk_top)  
   
-###  <a name="bkmk_Query1"></a> Exemple de requête 1 : À l’aide de l’ensemble de lignes de schéma d’exploration de données pour déterminer les paramètres utilisés pour un modèle  
+###  <a name="bkmk_Query1"></a>Exemple de requête 1 : utilisation de l’ensemble de lignes de schéma d’exploration de données pour déterminer les paramètres utilisés pour un modèle  
  En interrogeant l'ensemble de lignes de schéma d'exploration de données, vous pouvez obtenir les métadonnées relatives au modèle. Celles-ci peuvent inclure la date de création du modèle, celle de son dernier traitement, le nom de la structure d'exploration de données sur laquelle le modèle est basé, ainsi que le nom de la colonne désignée comme attribut prédictible. Vous pouvez également retourner les paramètres qui ont été utilisés lorsque le modèle a été créé pour la première fois.  
   
 ```  
@@ -66,9 +66,9 @@ WHERE MODEL_NAME = 'TM_PredictIncome'
 > [!NOTE]  
 >  Le paramètre`FORCE_REGRESSOR =` indique que la valeur actuelle du paramètre FORCE_REGRESSOR est Null.  
   
- [Retour en haut](#bkmk_top)  
+ [Retour au début](#bkmk_top)  
   
-###  <a name="bkmk_Query2"></a> Exemple de requête 2 : Récupération de la formule de régression pour le modèle  
+###  <a name="bkmk_Query2"></a>Exemple de requête 2 : récupération de la formule de régression pour le modèle  
  La requête suivante retourne le contenu du modèle d'exploration de données pour un modèle de régression linéaire qui a été construit en utilisant la même source de données de publipostage ciblé que celle utilisée dans le [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md). Ce modèle prédit le revenu des clients en fonction de leur âge.  
   
  La requête retourne le contenu du nœud qui contient la formule de régression. Chaque variable et chaque coefficient est stocké dans une ligne distincte de la table imbriquée NODE_DISTRIBUTION. Pour consulter la formule de régression complète, dans la [Visionneuse d’arborescences Microsoft](browse-a-model-using-the-microsoft-tree-viewer.md), cliquez sur le nœud **(Tout)** , puis ouvrez **Légende d’exploration de données**.  
@@ -83,7 +83,7 @@ FROM LR_PredictIncome.CONTENT
   
  Résultats attendus :  
   
-|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
+|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
 |Yearly Income|Manquant|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
@@ -114,9 +114,9 @@ FROM LR_PredictIncome.CONTENT
   
  Pour plus d’informations sur la signification de chaque type de valeur pour les modèles de régression, consultez [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services – Exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
- [Retour en haut](#bkmk_top)  
+ [Retour au début](#bkmk_top)  
   
-###  <a name="bkmk_Query3"></a> Exemple de requête 3 : Retour uniquement du Coefficient du modèle  
+###  <a name="bkmk_Query3"></a>Exemple de requête 3 : retour uniquement du coefficient du modèle  
  En utilisant l'énumération VALUETYPE, vous pouvez retourner uniquement le coefficient de l'équation de régression, tel qu'indiqué dans la requête suivante :  
   
 ```  
@@ -135,7 +135,7 @@ FROM LR_PredictIncome.CONTENT
 |LR_PredictIncome|||  
 |LR_PredictIncome|35793.5477381267|11|  
   
- [Retour en haut](#bkmk_top)  
+ [Retour au début](#bkmk_top)  
   
 ## <a name="making-predictions-from-a-linear-regression-model"></a>Élaborer des prédictions à partir d'un modèle de régression linéaire  
  Vous pouvez créer des requêtes de prédiction sur des modèles de régression linéaire en utilisant l'onglet Prévision de modèle d'exploration de données du Concepteur d'exploration de données. Le générateur de requêtes de prédiction est disponible à la fois dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -143,10 +143,10 @@ FROM LR_PredictIncome.CONTENT
 > [!NOTE]  
 >  Vous pouvez également créer des requêtes sur les modèles de régression en utilisant les compléments d’exploration de données pour Excel [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou les compléments d’exploration de données pour Excel [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] . Même si les compléments d'exploration de données pour Excel ne créent pas de modèles de régression, vous pouvez parcourir et interroger un modèle d'exploration de données stocké sur une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
- [Retour en haut](#bkmk_top)  
+ [Retour au début](#bkmk_top)  
   
-###  <a name="bkmk_Query4"></a> Exemple de requête 4 : Prédiction du revenu à l’aide d’une requête Singleton  
- La méthode la plus facile pour créer une requête singleton sur un modèle de régression consiste à utiliser la boîte de dialogue **Entrée de requête singleton** . Par exemple, vous pouvez générer la requête DMX suivante en sélectionnant le modèle de régression approprié, en choisissant **requête Singleton**, puis en tapant `20` comme valeur pour **âge**.  
+###  <a name="bkmk_Query4"></a>Exemple de requête 4 : prédiction du revenu à l’aide d’une requête singleton  
+ La méthode la plus facile pour créer une requête singleton sur un modèle de régression consiste à utiliser la boîte de dialogue **Entrée de requête singleton** . Par exemple, vous pouvez créer la requête DMX suivante en sélectionnant le modèle de régression approprié, en sélectionnant **requête singleton**, puis en tapant `20` comme valeur pour **Age**.  
   
 ```  
 SELECT [LR_PredictIncome].[Yearly Income]  
@@ -161,9 +161,9 @@ NATURAL PREDICTION JOIN
 |-------------------|  
 |45227.302092176|  
   
- [Retour en haut](#bkmk_top)  
+ [Retour au début](#bkmk_top)  
   
-###  <a name="bkmk_Query5"></a> Exemple de requête 5 : À l’aide des fonctions de prédiction avec un modèle de régression  
+###  <a name="bkmk_Query5"></a>Exemple de requête 5 : utilisation des fonctions de prédiction avec un modèle de régression  
  Vous pouvez utiliser de nombreuses fonctions de prédiction standard avec les modèles de régression linéaire. L'exemple suivant montre comment ajouter des statistiques descriptives aux résultats de requête de prédiction. D'après ces résultats, vous pouvez constater que l'écart de la moyenne est très important pour ce modèle.  
   
 ```  
@@ -182,28 +182,28 @@ NATURAL PREDICTION JOIN
 |-------------------|------------|  
 |45227.302092176|31827.1726561396|  
   
- [Retour en haut](#bkmk_top)  
+ [Retour au début](#bkmk_top)  
   
 ## <a name="list-of-prediction-functions"></a>Liste des fonctions de prédiction  
  Tous les algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)] prennent en charge un ensemble commun de fonctions. Toutefois, l'algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression) prend en charge les fonctions supplémentaires répertoriées dans le tableau suivant.  
   
 |||  
 |-|-|  
-|Fonction de prédiction|Utilisation|  
-|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Détermine si un nœud est un enfant d'un autre nœud dans le modèle.|  
-|[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|Indique si le nœud spécifié contient le cas courant.|  
-|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Retourne une valeur ou un ensemble de valeurs prédites pour une colonne spécifiée.|  
-|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|Retourne Node_ID pour chaque cas.|  
-|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|Retourne l'écart-type pour la valeur prédite.|  
-|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|Retourne la valeur de support pour un état spécifié.|  
-|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|Retourne la variance d'une colonne spécifiée.|  
+|Fonction de prédiction|Usage|  
+|[IsDescendant&#41;DMX &#40;](/sql/dmx/isdescendant-dmx)|Détermine si un nœud est un enfant d'un autre nœud dans le modèle.|  
+|[IsInNode&#41;DMX &#40;](/sql/dmx/isinnode-dmx)|Indique si le nœud spécifié contient le cas courant.|  
+|[&#41;&#40;DMX de PredictHistogram](/sql/dmx/predicthistogram-dmx)|Retourne une valeur ou un ensemble de valeurs prédites pour une colonne spécifiée.|  
+|[PredictNodeId&#41;DMX &#40;](/sql/dmx/predictnodeid-dmx)|Retourne Node_ID pour chaque cas.|  
+|[PredictStdev&#41;DMX &#40;](/sql/dmx/predictstdev-dmx)|Retourne l'écart-type pour la valeur prédite.|  
+|[PredictSupport&#41;DMX &#40;](/sql/dmx/predictsupport-dmx)|Retourne la valeur de support pour un état spécifié.|  
+|[PredictVariance&#41;DMX &#40;](/sql/dmx/predictvariance-dmx)|Retourne la variance d'une colonne spécifiée.|  
   
  Pour obtenir la liste des fonctions qui sont communes à tous les algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)], consultez [Algorithmes d’exploration de données &#40;Analysis Services – Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md). Pour plus d’informations sur l’utilisation de ces fonctions, consultez [Fonctions DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme MLR (Microsoft Linear Regression)](microsoft-linear-regression-algorithm.md)   
- [Requêtes d'exploration de données](data-mining-queries.md)   
- [Références techniques relatives à l'algorithme MLR (Microsoft Linear Regression)](microsoft-linear-regression-algorithm-technical-reference.md)   
- [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services – Exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Algorithme de régression linéaire Microsoft](microsoft-linear-regression-algorithm.md)   
+ [Requêtes d’exploration de données](data-mining-queries.md)   
+ [Référence technique de l’algorithme de régression linéaire Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

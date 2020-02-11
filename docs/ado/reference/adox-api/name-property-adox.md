@@ -42,27 +42,27 @@ ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 52808cf9e90c6779efb9f95e385f8df501bae870
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965762"
 ---
 # <a name="name-property-adox"></a>Name, propriété (ADOX)
 Indique le nom de l’objet.  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Définit ou retourne un **chaîne** valeur.  
+ Définit ou retourne une valeur de **chaîne** .  
   
 ## <a name="remarks"></a>Notes  
- Noms n’ont pas à être unique au sein d’une collection.  
+ Les noms ne doivent pas nécessairement être uniques dans une collection.  
   
- Le **nom** propriété est en lecture/écriture sur [colonne](../../../ado/reference/adox-api/column-object-adox.md), [groupe](../../../ado/reference/adox-api/group-object-adox.md), [clé](../../../ado/reference/adox-api/key-object-adox.md), [Index](../../../ado/reference/adox-api/index-object-adox.md), [ Table](../../../ado/reference/adox-api/table-object-adox.md), et [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) objets. Le **nom** propriété est en lecture seule sur [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md), [procédure](../../../ado/reference/adox-api/procedure-object-adox.md), et [vue](../../../ado/reference/adox-api/view-object-adox.md) objets.  
+ La propriété de **nom** est en lecture/écriture sur les objets de [colonne](../../../ado/reference/adox-api/column-object-adox.md), de [groupe](../../../ado/reference/adox-api/group-object-adox.md), de [clé](../../../ado/reference/adox-api/key-object-adox.md), d' [index](../../../ado/reference/adox-api/index-object-adox.md), de [table](../../../ado/reference/adox-api/table-object-adox.md)et d' [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) . La propriété **Name** est en lecture seule sur les objets [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md), [procédure](../../../ado/reference/adox-api/procedure-object-adox.md)et [vue](../../../ado/reference/adox-api/view-object-adox.md) .  
   
- Pour les objets en lecture/écriture (**colonne**, **groupe**, **clé**, **Index**, **Table** et  **Utilisateur** objets), la valeur par défaut est une chaîne vide ( » »).  
+ Pour les objets en lecture/écriture (**colonne**, **Groupe**, **clé**, **index**, **table** et objets **utilisateur** ), la valeur par défaut est une chaîne vide ("").  
   
 > [!NOTE]
->  Pour les clés, cette propriété est en lecture seule sur **clé** objets déjà ajoutés à une collection. Pour les tables, cette propriété est en lecture seule pour **Table** objets déjà ajoutés à une collection.  
+>  Pour les clés, cette propriété est en lecture seule sur les objets **clés** déjà ajoutés à une collection. Pour les tables, cette propriété est en lecture seule pour les objets de **table** déjà ajoutés à une collection.  
   
 ## <a name="applies-to"></a>S'applique à  
   
@@ -73,6 +73,6 @@ Indique le nom de l’objet.
 |[Table, objet (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[User, objet (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|[View, objet (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables et colonnes ajouter des méthodes, exemple de nom de propriété (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Keys Append, méthode, Type de clé, RelatedColumn, RelatedTable et UpdateRule, exemple de propriétés (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Columns et tables Append, méthodes, Name, exemple de propriété (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Méthodes Append des clés, type de clé, RelatedColumn, RelatedTable et UpdateRule, exemple de propriétés (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [ParentCatalog, exemple de propriété (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)

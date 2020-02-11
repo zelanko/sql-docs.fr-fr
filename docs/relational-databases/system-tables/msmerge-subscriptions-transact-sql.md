@@ -18,31 +18,31 @@ ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b00a2e83839724c2b6e5193e2ca08d5c6d3eced9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106313"
 ---
-# <a name="msmergesubscriptions-transact-sql"></a>MSmerge_subscriptions (Transact-SQL)
+# <a name="msmerge_subscriptions-transact-sql"></a>MSmerge_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Le **MSmerge_subscriptions** table contient une ligne pour chaque abonnement pris en charge par l’Agent de fusion sur l’abonné. Cette table est stockée dans la base de données de distribution.  
+  La table **MSmerge_subscriptions** contient une ligne pour chaque abonnement desservi par le agent de fusion sur l’abonné. Cette table est stockée dans la base de données de distribution.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**publisher_id**|**smallint**|L’ID du serveur de publication.|  
+|**publisher_id**|**smallint**|ID du serveur de publication.|  
 |**publisher_db**|**sysname**|Nom de la base de données du serveur de publication.|  
 |**publication_id**|**int**|ID de la publication.|  
-|**subscriber_id**|**smallint**|L’ID de l’abonné.|  
-|**bd_abonné**|**sysname**|Le nom de la base de données d’abonnement.|  
-|**subscription_type**|**int**|Le type d’abonnement :<br /><br /> 0 = Par envoi de données (push).<br /><br /> 1 = Par extraction de données (pull).<br /><br /> 2 = Anonyme.|  
+|**subscriber_id**|**smallint**|ID de l’abonné.|  
+|**subscriber_db**|**sysname**|Nom de la base de données d’abonnement.|  
+|**subscription_type**|**int**|Type d’abonnement :<br /><br /> 0 = Par envoi de données (push).<br /><br /> 1 = Par extraction de données (pull).<br /><br /> 2 = Anonyme.|  
 |**sync_type**|**tinyint**|Type de synchronisation :<br /><br /> 1 = Automatique.<br /><br /> 2 = Pas de synchronisation.|  
-|**status**|**tinyint**|L’état de l’abonnement.|  
-|**subscription_time**|**datetime**|Heure de création de l'abonnement.|  
+|**statu**|**tinyint**|État de l’abonnement.|  
+|**subscription_time**|**DATETIME**|Heure de création de l'abonnement.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vues de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

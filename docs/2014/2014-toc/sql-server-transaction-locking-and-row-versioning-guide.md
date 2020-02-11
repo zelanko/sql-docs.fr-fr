@@ -11,47 +11,48 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b49007cb51a2990ea90eb67b6e71087f59018d37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62513224"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>Guide du verrouillage des transactions et du contrôle de version de ligne SQL Server
 
   Dans une base de données, une mauvaise gestion des transactions conduit souvent à des problèmes de contention et de détérioration des performances dans les systèmes comprenant de nombreux utilisateurs. Plus le nombre d'utilisateurs qui ont accès aux données est grand, plus il est important que les applications utilisent les transactions de manière efficace. Ce guide présente les mécanismes de verrouillage et de contrôle de version de ligne utilisés par le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pour garantir l'intégrité physique de chaque transaction et contient des informations sur la façon dont les applications peuvent contrôler efficacement les transactions.  
   
-**S'applique à**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] et [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , sauf indication contraire.  
+**S’applique à** [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] : [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] jusqu’à, sauf indication contraire.  
   
-##  <a name="Top"></a> Dans ce Guide  
+##  <a name="Top"></a>Dans ce guide  
 
- [Principes fondamentaux de transaction](#Basics)  
+ [Notions de base des transactions](#Basics)  
   
- [Le verrouillage et principes de base de contrôle de version de ligne](#Lock_Basics)  
+ [Notions de base sur le verrouillage et le contrôle de version de ligne](#Lock_Basics)  
   
- [Verrouillage dans le moteur de base de données](#Lock_Engine)  
+ [Verrouillage du moteur de base de données](#Lock_Engine)  
   
  [Niveaux d'isolation basés sur le contrôle de version de ligne dans le moteur de base de données](#Row_versioning)  
   
- [Personnalisation du verrouillage pour un Index](#Customize)  
+ [Personnalisation du verrouillage d’un index](#Customize)  
   
  [Informations sur les transactions avancées](#Advanced)  
   
-##  <a name="Basics"></a> Principes de base sur les transactions  
+##  <a name="Basics"></a>Notions de base des transactions  
 
- Une transaction est une suite d'opérations effectuées comme une seule unité logique de travail. Une unité logique de travail doit posséder quatre propriétés appelées propriétés ACID (Atomicité, Cohérence, Isolation et Durabilité), pour être considérée comme une transaction :  
+ Une transaction est une séquence d’opérations effectuées en tant qu’unité logique de travail unique. Une unité logique de travail doit posséder quatre propriétés appelées propriétés ACID (Atomicité, Cohérence, Isolation et Durabilité), pour être considérée comme une transaction :  
   
  Atomicité  
  Une transaction doit être une unité de travail indivisible ; soit toutes les modifications de données sont effectuées, soit aucune ne l'est.  
   
- Cohérence  
- Lorsqu'elle est terminée, une transaction doit laisser les données dans un état cohérent. Dans une base de données relationnelle, toutes les règles doivent être appliquées aux modifications apportées par la transaction, afin de conserver l'intégrité de toutes les données. Toutes les structures de données internes, comme les index B-tree ou les listes à chaînage double, doivent être cohérentes à la fin de la transaction.  
+ Consistency  
+ une fois terminée, une transaction doit laisser toutes les données dans un état cohérent. Dans une base de données relationnelle, toutes les règles doivent être appliquées aux modifications apportées par la transaction, afin de conserver l'intégrité de toutes les données. Toutes les structures de données internes, comme les index B-tree ou les listes à chaînage double, doivent être cohérentes à la fin de la transaction.  
   
  Isolement  
- Les modifications effectuées par des transactions concurrentes doivent être isolées transaction par transaction. Une transaction reconnaît les données dans l'état où elles se trouvaient avant d'être modifiées par une transaction simultanée, ou les reconnaît une fois que la deuxième transaction est terminée, mais ne reconnaît jamais un état intermédiaire. Cette propriété est nommée mise en série, car elle permet de recharger les données de départ et de répéter une suite de transactions dont le résultat sur les données sera identique à celui des transactions d'origine.  
+ les modifications apportées par des transactions concurrentes doivent être isolées des modifications apportées par d’autres transactions simultanées. Une transaction reconnaît les données dans l'état où elles se trouvaient avant d'être modifiées par une transaction simultanée, ou les reconnaît une fois que la deuxième transaction est terminée, mais ne reconnaît jamais un état intermédiaire. Cette propriété est nommée mise en série, car elle permet de recharger les données de départ et de répéter une suite de transactions dont le résultat sur les données sera identique à celui des transactions d'origine.  
   
  Durabilité  
- Lorsqu'une transaction durable est terminée, ses effets sur le système sont permanents. Les modifications sont conservées même en cas de défaillance du système. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] et versions ultérieures permettent les transactions durables retardées. Les transactions durables retardées sont validées avant de consigner l'enregistrement du journal des transactions sur le disque. Pour plus d’informations sur la durabilité des transactions retardées, consultez la rubrique [Durabilité des transactions](../relational-databases/logs/control-transaction-durability.md).  
+ Lorsqu'une transaction durable est terminée, ses effets sur le système sont permanents. Les modifications persistent même en cas de défaillance du système. 
+  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] et versions ultérieures permettent les transactions durables retardées. Les transactions durables retardées sont validées avant de consigner l'enregistrement du journal des transactions sur le disque. Pour plus d’informations sur la durabilité des transactions retardées, consultez la rubrique [Durabilité des transactions](../relational-databases/logs/control-transaction-durability.md).  
   
  Les programmeurs SQL doivent concevoir des transactions dont les points de début et de fin permettent de maintenir la cohérence logique des données. La séquence de modifications des données qu'ils définissent doivent laisser les données dans un état cohérent par rapport aux règles d'entreprise définies par leur société. Ces instructions de modification des données doivent par conséquent être contenues dans une seule transaction pour que le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] puisse garantir l'intégrité physique de la transaction.  
   
@@ -65,9 +66,9 @@ ms.locfileid: "62513224"
   
 ### <a name="controlling-transactions"></a>Contrôle des transactions  
 
- Le contrôle des transactions par les applications consiste principalement à spécifier des points de début et de fin de chaque transaction. La spécification est effectuée à l'aide des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] ou des fonctions d'API de base de données. Le système doit aussi être capable de gérer les erreurs interrompant une transaction avant sa fin normale. Pour plus d’informations, consultez [instructions Transaction &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transactions-transact-sql), [Transactions dans ODBC](https://technet.microsoft.com/library/ms131281.aspx) et [Transactions dans SQL Server Native Client (OLEDB)](https://msdn.microsoft.com/library/ms130918.aspx).  
+ Le contrôle des transactions par les applications consiste principalement à spécifier des points de début et de fin de chaque transaction. La spécification est effectuée à l'aide des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] ou des fonctions d'API de base de données. Le système doit aussi être capable de gérer les erreurs interrompant une transaction avant sa fin normale. Pour plus d’informations, consultez [instructions de Transaction &#40;&#41;Transact-SQL ](/sql/t-sql/language-elements/transactions-transact-sql), [transactions dans ODBC](https://technet.microsoft.com/library/ms131281.aspx) et [transactions dans SQL Server Native Client (OleDb)](https://msdn.microsoft.com/library/ms130918.aspx).  
   
- Par défaut, les transactions sont gérées au niveau de la connexion. Lorsqu'une transaction est démarrée lors d'une connexion, toutes les instructions [!INCLUDE[tsql](../includes/tsql-md.md)] exécutées lors de cette connexion font partie de la transaction jusqu'à la fin de celle-ci. Toutefois, dans une session MARS (Multiple Active Result Set), une transaction [!INCLUDE[tsql](../includes/tsql-md.md)] explicite ou implicite devient une transaction dont l'étendue est définie par traitement gérée au niveau du lot. À la fin du traitement, si une transaction dont l'étendue est définie par traitement n'est pas validée ou restaurée, elle est automatiquement restaurée par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Multiple Active Result Sets (MARS) dans SQL Server](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx).  
+ Par défaut, les transactions sont gérées au niveau de la connexion. Lorsqu'une transaction est démarrée lors d'une connexion, toutes les instructions [!INCLUDE[tsql](../includes/tsql-md.md)] exécutées lors de cette connexion font partie de la transaction jusqu'à la fin de celle-ci. Toutefois, dans une session MARS (Multiple Active Result Set), une transaction [!INCLUDE[tsql](../includes/tsql-md.md)] explicite ou implicite devient une transaction dont l'étendue est définie par traitement gérée au niveau du lot. À la fin du traitement, si une transaction dont l'étendue est définie par traitement n'est pas validée ou restaurée, elle est automatiquement restaurée par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [mars (Multiple Active Result Sets) dans SQL Server](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx).  
   
 #### <a name="starting-transactions"></a>Démarrage des transactions  
 
@@ -89,7 +90,7 @@ ms.locfileid: "62513224"
 > [!NOTE]  
 >  UPDATE STATISTICS peut être utilisée à l'intérieur d'une transaction explicite. Toutefois, UPDATE STATISTICS est validée indépendamment de la transaction qui la contient et ne peut pas être restaurée.  
   
- **Transactions en mode de validation automatique**  
+ **Transactions validées automatiquement**  
  Le mode de validation automatique (autocommit) est le mode de gestion par défaut des transactions du moteur de base de données SQL Server. Chaque instruction Transact-SQL est validée ou restaurée dès qu'elle se termine. Lorsqu'une instruction est exécutée avec succès, elle est validée ; si une erreur se produit, elle est restaurée. Une connexion à une instance du moteur de base de données fonctionne par défaut en mode de validation automatique si les modes explicite ou implicite n'ont pas été spécifiés pour une transaction. Le mode autocommit est également le mode par défaut pour ADO, OLE DB, ODBC et DB-Library.  
   
  **Transactions implicites**  
@@ -104,7 +105,7 @@ ms.locfileid: "62513224"
 |Suppression|INSERT|TRUNCATE TABLE|  
 |DROP|OPEN|UPDATE|  
   
- **Transactions délimitées au traitement**  
+ **Transactions dont l’étendue est définie par lot**  
  Uniquement applicable aux ensembles de résultats MARS (Multiple Active Result Sets), une transaction [!INCLUDE[tsql](../includes/tsql-md.md)] explicite ou implicite qui démarre sous une session MARS devient une transaction dont l'étendue est définie par traitement. Une transaction dont l'étendue est définie par traitement qui n'est pas validée ou restaurée à la fin du traitement est automatiquement restaurée par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Transactions distribuées**  
@@ -115,7 +116,8 @@ ms.locfileid: "62513224"
  Dans une application, une transaction distribuée est gérée de manière comparable à une transaction locale. À la fin de la transaction, l'application requiert que la transaction soit validée ou restaurée. La validation d'une transaction distribuée doit être gérée de façon particulière par le gestionnaire de transaction pour minimiser les risques qu'une défaillance du réseau entraîne la validation de la transaction par certains gestionnaires de ressources, alors qu'elle sera restaurée par d'autres. Pour cela, le processus de validation est géré en deux phases, une phase de préparation et une phase de validation, d'où son nom de validation à deux phases (2PC).  
   
  Phase de préparation  
- Lorsque le gestionnaire de transactions reçoit une requête de validation, il envoie une commande de préparation à tous les gestionnaires de ressources concernés par la transaction. Chaque gestionnaire de ressources effectue alors toutes les opérations nécessaires à l'enregistrement de la transaction, et tous les tampons contenant les images du journal de la transaction sont vidés sur le disque. Lorsque chaque gestionnaire de ressources a terminé la phase de préparation, il retourne un message de succès ou d'échec au gestionnaire de transactions. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] a introduit la durabilité des transactions retardées. Les transactions durables retardées sont validées avant de vider les images de journal pour la transaction sur le disque. Pour plus d’informations sur la durabilité des transactions retardées, consultez la rubrique [Durabilité des transactions](../relational-databases/logs/control-transaction-durability.md).  
+ Lorsque le gestionnaire de transactions reçoit une requête de validation, il envoie une commande de préparation à tous les gestionnaires de ressources concernés par la transaction. Chaque gestionnaire de ressources effectue alors toutes les opérations nécessaires à l'enregistrement de la transaction, et tous les tampons contenant les images du journal de la transaction sont vidés sur le disque. Lorsque chaque gestionnaire de ressources a terminé la phase de préparation, il retourne un message de succès ou d'échec au gestionnaire de transactions. 
+  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] a introduit la durabilité des transactions retardées. Les transactions durables retardées sont validées avant de vider les images de journal pour la transaction sur le disque. Pour plus d’informations sur la durabilité des transactions retardées, consultez la rubrique [Durabilité des transactions](../relational-databases/logs/control-transaction-durability.md).  
   
  Phase de validation  
  Si le gestionnaire de transactions reçoit des messages de préparation réussie de tous les gestionnaires de ressources, il envoie une commande de validation à chacun d'entre eux. Les gestionnaires de ressources peuvent alors effectuer la validation. Si tous les gestionnaires de ressources signalent le succès de la validation, le gestionnaire de transactions envoie alors une notification de succès à l'application. Si l'un des gestionnaires de ressources indique un échec de la préparation, le gestionnaire de transactions envoie une commande de restauration à chaque gestionnaire de ressources et notifie l'échec de la validation à l'application.  
@@ -141,7 +143,7 @@ ms.locfileid: "62513224"
   
  Si une instruction génère une erreur d'exécution (comme une violation de contrainte) dans un traitement, la réaction par défaut du [!INCLUDE[ssDE](../includes/ssde-md.md)] est de restaurer seulement l'instruction ayant généré l'erreur. Vous pouvez modifier ce comportement à l'aide de l'instruction SET XACT_ABORT. Après l'exécution de SET XACT_ABORT ON, toute erreur d'exécution causée par une instruction déclenche automatiquement la restauration de la transaction en cours. Les erreurs de compilation, comme les erreurs de syntaxe, ne sont pas affectées par l'option SET XACT_ABORT. Pour plus d’informations, consultez [SET XACT_ABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-xact-abort-transact-sql).  
   
- Quand une erreur se produit, l'action corrective (COMMIT ou ROLLBACK) doit être incluse dans le code de l'application. Est un outil efficace pour gérer les erreurs, y compris celles dans les transactions, le [!INCLUDE[tsql](../includes/tsql-md.md)] essayez... INTERCEPTER la construction. Pour plus d’informations et d’exemples portant sur les transactions, consultez [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql). À partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], vous pouvez utiliser l’instruction THROW pour lever une exception et transférer l’exécution à un bloc CATCH d’un bloc TRY... INTERCEPTER la construction. Pour plus d’informations, consultez [THROW &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/throw-transact-sql).  
+ Quand une erreur se produit, l'action corrective (COMMIT ou ROLLBACK) doit être incluse dans le code de l'application. L’un des outils efficaces pour gérer les erreurs, y compris ceux qui [!INCLUDE[tsql](../includes/tsql-md.md)] se trouvent dans les transactions, est le bloc try... CATCH. Pour plus d’informations et d’exemples portant sur les transactions, consultez [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql). À partir [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]de, vous pouvez utiliser l’instruction throw pour lever une exception et transférer l’exécution à un bloc catch d’une instruction try... CATCH. Pour plus d’informations, consultez [THROW &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/throw-transact-sql).  
   
 ##### <a name="compile-and-run-time-errors-in-autocommit-mode"></a>Erreurs de compilation et d'exécution en mode de validation automatique  
 
@@ -184,9 +186,9 @@ SELECT * FROM TestBatch;  -- Returns rows 1 and 2.
 GO  
 ```  
   
- ![Icône de flèche utilisée avec le lien Retour au début](media/uparrow16x16.gif "icône de flèche utilisée avec le lien Retour au début") [dans ce Guide](#Top)  
+ ![Icône de flèche utilisée avec le lien retour au début](media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [dans ce guide](#Top)  
   
-##  <a name="Lock_Basics"></a> Principes de base sur le verrouillage et le contrôle de version de ligne  
+##  <a name="Lock_Basics"></a>Notions de base sur le verrouillage et le contrôle de version de ligne  
 
  Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise les mécanismes suivants pour garantir l'intégrité des transactions et gérer la cohérence des bases de données lorsque plusieurs utilisateurs accèdent simultanément aux données :  
   
@@ -260,7 +262,7 @@ GO
   
     -   Manquer une ou plusieurs lignes qui n'étaient pas la cible de la mise à jour  
   
-         Lorsque vous utilisez READ UNCOMMITTED, si votre requête lit des lignes à l’aide d’une analyse d’ordre d’allocation (à l’aide de pages IAM), vous risquez de manquer des lignes si une autre transaction provoque un fractionnement de page. Cela ne peut pas se produire lorsque vous utilisez la lecture validée car un verrou de table est maintenu pendant un fractionnement de page et ne se produit pas si la table n'a pas d'index cluster, car les mises à jour ne provoquent pas de fractionnements de page.  
+         Lorsque vous utilisez READ UNCOMMITTED, si votre requête lit des lignes à l'aide d'une analyse d'ordre d'allocation (à l'aide de pages IAM), vous risquez de manquer des lignes si une autre transaction provoque un fractionnement de page. Cela ne peut pas se produire lorsque vous utilisez la lecture validée car un verrou de table est maintenu pendant un fractionnement de page et ne se produit pas si la table n'a pas d'index cluster, car les mises à jour ne provoquent pas de fractionnements de page.  
   
 #### <a name="types-of-concurrency"></a>Types de concurrence  
 
@@ -272,11 +274,12 @@ GO
   
      Un système de verrouillage empêche les utilisateurs de modifier des données d'une manière qui affecterait les autres utilisateurs. Lorsqu'un utilisateur a effectué une action qui applique un verrouillage, les autres utilisateurs ne peuvent plus effectuer d'actions qui entreraient en conflit avec ce verrouillage tant que celui-ci n'est pas libéré par le propriétaire. Cette méthode s'appelle le contrôle pessimiste car elle est principalement utilisée dans les environnements où les données sont très sollicitées et où le coût de protection des données par verrouillage est inférieur au coût de restauration des transactions en cas de contentions de concurrence.  
   
--   Contrôle de concurrence optimiste  
+-   Contrôle d'accès concurrentiel optimiste  
   
      Dans le cas du contrôle de concurrence optimiste, les utilisateurs ne verrouillent pas les données quand ils les lisent. Lors d'une mise à jour, le système vérifie si un autre utilisateur a modifié les données après leur lecture. Si tel est le cas, une erreur est générée. Généralement, l'utilisateur recevant l'erreur restaure la transaction et recommence. Cette méthode s'appelle le contrôle optimiste car elle est principalement utilisée dans les environnements où les données sont peu demandées et où le coût de la restauration occasionnelle d'une transaction est inférieur au coût du verrouillage des données lors de la lecture.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge plusieurs niveaux de contrôle de concurrence. Les utilisateurs spécifient le type de contrôle de concurrence lorsqu'ils choisissent les niveaux d'isolement des transactions pour les connexions et les options de concurrence sur les curseurs. Ces attributs peuvent être définis à l'aide des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] ou des propriétés et attributs des API de base de données telles que ADO, ADO.NET, OLE DB et ODBC.  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge plusieurs niveaux de contrôle de concurrence. Les utilisateurs spécifient le type de contrôle de concurrence lorsqu'ils choisissent les niveaux d'isolement des transactions pour les connexions et les options de concurrence sur les curseurs. Ces attributs peuvent être définis à l'aide des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] ou des propriétés et attributs des API de base de données telles que ADO, ADO.NET, OLE DB et ODBC.  
   
 #### <a name="isolation-levels-in-the-database-engine"></a>Niveaux d'isolement du moteur de base de données  
 
@@ -305,19 +308,20 @@ GO
 
  La norme ISO définit les niveaux d'isolation suivants, tous pris en charge par le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] :  
   
-|Niveau d'isolement|Définition|  
+|Niveau d’isolation|Définition|  
 |---------------------|----------------|  
 |Lecture non validée|Le niveau d'isolement le plus bas et suffisant pour s'assurer que les données physiquement corrompues ne sont pas lues. À ce niveau, les lectures de modifications sont autorisées. Ainsi, une transaction peut afficher les modifications qui ne sont pas encore validées apportées par d'autres transactions.|  
 |Lecture validée|Permet à une transaction de lire des données lues auparavant (non modifiées) par une autre transaction, sans attendre la fin de la première transaction. Le [!INCLUDE[ssDE](../includes/ssde-md.md)] conserve les verrous d'écriture (acquis sur les données sélectionnées) jusqu'à la fin de la transaction, mais les verrous le lecture sont libérés dès que l'opération SELECT est terminée. C'est le niveau par défaut du [!INCLUDE[ssDE](../includes/ssde-md.md)].|  
 |Lecture renouvelable|Le [!INCLUDE[ssDE](../includes/ssde-md.md)] conserve les verrous de lecture et d'écriture acquis sur les données sélectionnées jusqu'à la fin de la transaction. Cependant, étant donné que les verrous d'étendus ne sont pas gérés, des lectures fantômes peuvent se produire.|  
-|Sérialisable|Niveau le plus élevé, dans lequel les transactions sont totalement isolées les unes des autres. Le [!INCLUDE[ssDE](../includes/ssde-md.md)] conserve les verrous de lecture et d'écriture acquis sur les données sélectionnées de façon à les libérer à la fin de la transaction. Les verrous d'étendues sont acquis lorsqu'une opération SELECT utilise une clause WHERE, plus particulièrement pour éviter les lectures fantômes.<br /><br /> **Remarque :** Opérations DDL et les transactions sur les tables répliquées peuvent échouer lorsque le niveau d’isolation sérialisable est demandé. Cela est dû au fait que les requêtes de réplication utilisent des indicateurs qui peuvent être incompatibles avec le niveau d'isolation sérialisable.|  
+|Sérialisable|Niveau le plus élevé, dans lequel les transactions sont totalement isolées les unes des autres. Le [!INCLUDE[ssDE](../includes/ssde-md.md)] conserve les verrous de lecture et d'écriture acquis sur les données sélectionnées de façon à les libérer à la fin de la transaction. Les verrous d'étendues sont acquis lorsqu'une opération SELECT utilise une clause WHERE, plus particulièrement pour éviter les lectures fantômes.<br /><br /> **Remarque :** Les opérations DDL et les transactions sur les tables répliquées peuvent échouer quand le niveau d’isolation sérialisable est demandé. Cela est dû au fait que les requêtes de réplication utilisent des indicateurs qui peuvent être incompatibles avec le niveau d'isolation sérialisable.|  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend également en charge deux niveaux d'isolement de la transaction supplémentaires qui utilisent le contrôle de version de ligne. Le premier est une implémentation de l'isolement read committed, et le deuxième est un niveau d'isolement, l'instantané.  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend également en charge deux niveaux d'isolement de la transaction supplémentaires qui utilisent le contrôle de version de ligne. Le premier est une implémentation de l'isolement read committed, et le deuxième est un niveau d'isolement, l'instantané.  
   
 |Niveau d'isolement basé sur le contrôle de version de ligne|Définition|  
 |------------------------------------|----------------|  
 |Instantané read committed|Lorsque l'option de base de données READ_COMMITTED_SNAPSHOT a la valeur ON, le niveau d'isolation read committed utilise le contrôle de version de ligne pour procurer une lecture cohérente au niveau des instructions. Les opérations de lecture ont besoin uniquement de verrous de table SCH-S, et pas de verrous de page ni de ligne. À savoir, le moteur de base de données utilise le contrôle de version de ligne pour présenter à chaque instruction un instantané cohérent des données (du point de vue transactionnel) telles qu'elles étaient au début de l'instruction. Les verrous ne sont pas utilisés pour protéger les données des mises à jour par d'autres transactions. Une fonction définie par l'utilisateur peut retourner des données qui ont été validées après l'heure de début de l'instruction contenant cette fonction.<br /><br /> Si l'option de base de données READ_COMMITTED_SNAPSHOT a la valeur OFF (valeur par défaut), l'isolement read committed utilise des verrous partagés pour empêcher d'autres transactions de modifier des lignes pendant que la transaction active exécute une opération de lecture. Les verrous partagés empêchent également l'instruction de lire des lignes modifiées par d'autres transactions, tant que celles-ci ne sont pas terminées. Les deux variantes sont conformes à la définition de l'isolation read committed de l'ISO.|  
-|Snapshot|Le niveau d'isolation d'instantané utilise le contrôle de version de ligne pour assurer la cohérence des lectures au niveau de la transaction. Les opérations de lecture ont besoin uniquement de verrous de table SCH-S, et pas de verrous de page ni de ligne. Lorsque l'opération de lecture lit des lignes modifiées par une autre transaction, elle récupère la version de la ligne du début de la transaction. Vous pouvez utiliser l'isolation d'instantané pour une base de données uniquement lorsque la valeur ON est attribuée à l'option de base de données ALLOW_SNAPSHOT_ISOLATION. Par défaut, cette option est désactivée (OFF) pour les bases de données utilisateur.<br /><br /> **Remarque :** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne prend pas en charge le contrôle de version des métadonnées. Pour cette raison, il existe des restrictions sur les opérations DDL pouvant être effectuées dans une transaction explicite exécutée avec le niveau d'isolement d'instantané. Les instructions DDL suivantes ne sont pas autorisées en isolement d’instantané après une instruction BEGIN TRANSACTION : ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME ou toute instruction de DDL common language runtime (CLR). Ces instructions sont autorisées lorsque vous avez recours à l'isolation d'instantané au sein des transactions implicites. Par définition, une transaction implicite est une instruction unique qui permet d'appliquer la sémantique de l'isolation d'instantané, même avec des instructions DDL. Violation de ce principe peut provoquer l’erreur 3961 : « A échoué dans la base de données de la transaction d’isolement de capture instantanée ' %. * ls', car l’objet accessible par l’instruction a été modifiés par une instruction DDL dans une autre transaction simultanée depuis le début de cette transaction. Cela est interdit, car les métadonnées sont dépourvues de version. Une mise à jour simultanée des métadonnées peut provoquer des incohérences si elle est associée à une isolation d'instantané. »|  
+|Instantané|Le niveau d'isolation d'instantané utilise le contrôle de version de ligne pour assurer la cohérence des lectures au niveau de la transaction. Les opérations de lecture ont besoin uniquement de verrous de table SCH-S, et pas de verrous de page ni de ligne. Lorsque l'opération de lecture lit des lignes modifiées par une autre transaction, elle récupère la version de la ligne du début de la transaction. Vous pouvez utiliser l'isolation d'instantané pour une base de données uniquement lorsque la valeur ON est attribuée à l'option de base de données ALLOW_SNAPSHOT_ISOLATION. Par défaut, cette option est désactivée (OFF) pour les bases de données utilisateur.<br /><br /> **Remarque :** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne prend pas en charge le contrôle de version des métadonnées.   Pour cette raison, il existe des restrictions sur les opérations DDL pouvant être effectuées dans une transaction explicite exécutée avec le niveau d'isolement d'instantané. Les instructions DDL suivantes ne sont pas autorisées avec le niveau d'isolation d'instantané après une instruction BEGIN TRANSACTION : ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME ou toute autre instruction DDL utilisant le langage CLR (Common Language Runtime). Ces instructions sont autorisées quand vous utilisez l’isolement d’instantané au sein de transactions implicites. Par définition, une transaction implicite est une instruction unique qui permet d'appliquer la sémantique de l'isolation d'instantané, même avec des instructions DDL. Tout manquement à ce principe peut provoquer l'erreur 3961 : « La transaction d'isolation d'instantané a échoué dans la base de données '%.*ls' car l'objet auquel l'instruction a eu accès a été modifié par une instruction DDL dans une autre transaction simultanée depuis le début de cette transaction. Cela est interdit, car les métadonnées sont dépourvues de version. Une mise à jour simultanée des métadonnées peut provoquer des incohérences si elle est associée à une isolation d'instantané. »|  
   
  Le tableau suivant répertorie les effets secondaires de la concurrence provoqués par les différents niveaux d'isolation.  
   
@@ -325,8 +329,8 @@ GO
 |---------------------|----------------|------------------------|-------------|  
 |**Lecture non validée**|Oui|Oui|Oui|  
 |**Lecture validée**|Non|Oui|Oui|  
-|**Lecture renouvelée**|Non|Non|Oui|  
-|**Snapshot**|Non|Non|Non|  
+|**Lecture renouvelable**|Non|Non|Oui|  
+|**Instantané**|Non|Non|Non|  
 |**Sérialisable**|Non|Non|Non|  
   
  Pour plus d’informations sur les types spécifiques de verrouillage ou de contrôle de version de ligne contrôlés par chaque niveau d’isolation de la transaction, consultez [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
@@ -352,9 +356,9 @@ GO
   
  Pour les transactions d’instantanés, les applications appellent `SQLSetConnectAttr` avec la valeur SQL_COPT_SS_TXN_ISOLATION pour le paramètre Attribute et la valeur SQL_TXN_SS_SNAPSHOT pour le paramètre ValuePtr. Une transaction d'instantané peut être extraite à l'aide de SQL_COPT_SS_TXN_ISOLATION ou de SQL_ATTR_TXN_ISOLATION.  
   
- ![Icône de flèche utilisée avec le lien Retour au début](media/uparrow16x16.gif "icône de flèche utilisée avec le lien Retour au début") [dans ce Guide](#Top)  
+ ![Icône de flèche utilisée avec le lien retour au début](media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [dans ce guide](#Top)  
   
-##  <a name="Lock_Engine"></a> Verrouillage dans le moteur de base de données  
+##  <a name="Lock_Engine"></a>Verrouillage dans le Moteur de base de données  
 
  Le verrouillage est un mécanisme utilisé par le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pour synchroniser l'accès simultané de plusieurs utilisateurs à la même donnée.  
   
@@ -372,7 +376,7 @@ GO
   
  Le tableau suivant répertorie les ressources que le [!INCLUDE[ssDE](../includes/ssde-md.md)] peut verrouiller.  
   
-|Resource|Description|  
+|Ressource|Description|  
 |--------------|-----------------|  
 |RID|Identificateur de ligne utilisé pour verrouiller une seule ligne dans un segment de mémoire.|  
 |KEY|Verrou de ligne dans un index utilisé pour protéger des groupes de clés dans les transactions susceptibles d'être sérialisées.|  
@@ -400,9 +404,9 @@ GO
 |Partagé (S)|Utilisé pour les opérations de lecture qui n'effectuent aucune modification ou mise à jour des données, par exemple une instruction SELECT.|  
 |Mise à jour (U)|Utilisé pour les ressources pouvant être mises à jour. Empêche une forme de blocage courante qui se produit lorsque plusieurs sessions lisent, verrouillent et mettent à jour des ressources ultérieurement.|  
 |Exclusif (X)|Utilisé par les opérations de modification de données, telles que INSERT, UPDATE ou DELETE. Empêche des mises à jour multiples sur la même ressource au même moment.|  
-|Intentionnel|Permet d'établir une hiérarchie de verrouillage. Les types de verrouillage intentionnels sont les suivants : les verrous de partage intentionnel (IS), d'exclusion intentionnelle (IX) et de partage intentionnel exclusif (SIX).|  
+|Intention|Permet d'établir une hiérarchie de verrouillage. Les types de verrouillage intentionnels sont les suivants : les verrous de partage intentionnel (IS), d'exclusion intentionnelle (IX) et de partage intentionnel exclusif (SIX).|  
 |schéma|Utilisé lors de l'exécution d'une opération associée au schéma d'une table. Les types de verrouillage de schéma sont les suivant : la stabilité du schéma (Sch-S) et la modification du schéma (Sch-M).|  
-|Mise à jour en bloc (BU)|Utilisé lorsque en bloc copie des données dans une table et le **TABLOCK** indicateur est spécifié.|  
+|Mise à jour en bloc (BU)|Utilisé lors de la copie en bloc de données dans une table et que l’indicateur **TABLOCK** est spécifié.|  
 |Verrou de clé|Protège la plage de lignes lue par une requête lorsque le niveau d'isolation des transactions SERIALIZABLE est utilisé. Garantit qu'aucune autre transaction ne peut insérer des lignes susceptibles de répondre aux requêtes de la transaction sérialisable si ces dernières étaient réexécutées.|  
   
 #### <a name="shared-locks"></a>Verrous partagés  
@@ -475,7 +479,7 @@ GO
   
 ||Mode accordé existant||||||  
 |------|---------------------------|------|------|------|------|------|  
-|**Mode requis**|**IS**|**S**|**U**|**IX**|**SIX**|**X**|  
+|**Mode demandé**|**IS**|**X**|**U**|**IX**|**SEMESTRE**|**X**|  
 |**Intent partagé (IS)**|Oui|Oui|Oui|Oui|Oui|Non|  
 |**Partagé (S)**|Oui|Oui|Oui|Non|Non|Non|  
 |**Mise à jour (U)**|Oui|Oui|Non|Non|Non|Non|  
@@ -488,7 +492,7 @@ GO
   
  Utilisez le tableau suivant pour déterminer la compatibilité de tous les modes de verrou disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- ![Matrice de compatibilité de verrouillage diagramme montrant](media/lockconflicttable.gif "matrice de compatibilité de verrouillage diagramme montrant")  
+ ![Diagramme affichant la matrice de compatibilité des verrous](media/lockconflicttable.gif "Diagramme affichant la matrice de compatibilité des verrous")  
   
 ### <a name="key-range-locking"></a>Verrouillage d'étendues de clés  
 
@@ -496,7 +500,7 @@ GO
   
  Le verrouillage d'étendues de clés empêche les lectures fantômes. La protection des étendues de clés entre les lignes permet également d'empêcher les insertions fantômes dans un jeu d'enregistrements auquel une transaction accède.  
   
- Un verrou d'étendues de clés est placé sur un index, spécifiant une valeur de clé de début et de fin. Ce verrou bloque toute tentative d'insertion, de mise à jour ou de suppression de ligne possédant une valeur de clé comprise dans cette étendue, car ces opérations doivent d'abord acquérir un verrou sur l'index. Par exemple, une transaction sérialisable peut émettre une instruction SELECT qui lit toutes les lignes dont les valeurs de clés sont comprises entre **'** AAA **'** et **'** CZZ **'** . Un verrou de groupes de clés sur les valeurs de clés comprises entre **'** AAA **'** et **'** CZZ **'** empêche les autres transactions d’insérer des lignes possédant des valeurs de clés comprises dans ce groupe, telles que **'** ADG **'** , **'** BBD **'** ou **'** CAL **'** .  
+ Un verrou d'étendues de clés est placé sur un index, spécifiant une valeur de clé de début et de fin. Ce verrou bloque toute tentative d'insertion, de mise à jour ou de suppression de ligne possédant une valeur de clé comprise dans cette étendue, car ces opérations doivent d'abord acquérir un verrou sur l'index. Par exemple, une transaction sérialisable peut émettre une instruction SELECT qui lit toutes les lignes dont les valeurs de clés sont comprises entre **'** AAA **'** et **'** CZZ **'**. Un verrou de groupes de clés sur les valeurs de clés comprises entre **'** AAA **'** et **'** CZZ **'** empêche les autres transactions d’insérer des lignes possédant des valeurs de clés comprises dans ce groupe, telles que **'** ADG **'**, **'** BBD **'** ou **'** CAL **'**.  
   
 #### <a name="key-range-lock-modes"></a>Modes de verrouillage d'étendues de clés  
 
@@ -506,7 +510,7 @@ GO
   
 -   La ligne représente le mode de verrouillage protégeant l'entrée de l'index.  
   
--   Le mode représente la combinaison de modes de verrouillage utilisée. Les modes de verrouillage d'étendues de clés comportent deux parties. La première représente le type de verrou utilisé pour verrouiller l’étendue d’index (Range*T*) et la deuxième représente le type de verrou utilisé pour verrouiller une clé spécifique (*K*). Les deux parties sont reliées par un tiret (-), par exemple Range*T*-*K*.  
+-   Le mode représente la combinaison de modes de verrouillage utilisée. Les modes de verrouillage d'étendues de clés comportent deux parties. La première représente le type de verrou utilisé pour verrouiller l’étendue d’index (Range*T*) et la deuxième représente le type de verrou utilisé pour verrouiller une clé spécifique (*K*). Les deux parties sont reliées par un trait d’Union (-), par exemple Range*T*-*K*.  
   
     |Plage|Ligne|Mode|Description|  
     |-----------|---------|----------|-----------------|  
@@ -522,7 +526,7 @@ GO
   
 ||Mode accordé existant|||||||  
 |------|---------------------------|------|------|------|------|------|------|  
-|**Mode requis**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
+|**Mode demandé**|**X**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
 |**Partagé (S)**|Oui|Oui|Non|Oui|Oui|Oui|Non|  
 |**Mise à jour (U)**|Oui|Non|Non|Oui|Non|Oui|Non|  
 |**Exclusif (X)**|Non|Non|Non|Non|Non|Oui|Non|  
@@ -561,13 +565,13 @@ GO
   
 -   Le niveau d'isolement de la transaction doit être défini sur SERIALIZABLE.  
   
--   Le processeur de requêtes doit utiliser un index pour implémenter le prédicat de filtre de l'étendue. Par exemple, la clause WHERE dans une instruction SELECT peut établir une condition d’étendue avec le prédicat : ColonneX BETWEEN N **’** AAA **’** AND N **’** CZZ **’** . Un verrou de groupes de clés ne peut être acquis que si **ColumnX** est couvert par une clé d’index.  
+-   Le processeur de requêtes doit utiliser un index pour implémenter le prédicat de filtre de l'étendue. Par exemple, la clause WHERE dans une instruction SELECT peut établir une condition d’étendue avec le prédicat suivant : ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'**. Un verrou de groupes de clés ne peut être acquis que si **ColumnX** est couvert par une clé d’index.  
   
 #### <a name="examples"></a>Exemples  
 
  La table et l'index suivants sont utilisés comme base pour les exemples de verrouillage d'étendues de clés ci-dessous.  
   
- ![Table de base de données avec illustration de b-tree index](media/btree4.gif "table de base de données avec illustration de b-tree d’index")  
+ ![Table de base de données avec illustration de l'arbre B (B-tree) de l'index](media/btree4.gif "Table de base de données avec illustration de l'arbre B (B-tree) de l'index")  
   
 ##### <a name="range-scan-query"></a>Requête d'analyse d'étendue  
 
@@ -623,7 +627,7 @@ INSERT mytable VALUES ('Dan');
 
  L'utilisation de verrous de bas niveau, comme les verrous de ligne, augmente la concurrence car elle diminue la probabilité d'avoir deux transactions qui demandent des verrous sur les mêmes données en même temps. L'utilisation de verrous de bas niveau augmente également le nombre de verrous et les ressources nécessaires à leur gestion. Les verrous de table ou de page de haut niveau réduisent la charge mais au détriment de la concurrence.  
   
- ![Diagramme montrant les coûts par rapport à la granularité](media/lockcht.gif "diagramme montrant les coûts par rapport à la granularité")  
+ ![Diagramme affichant le coût par rapport à la granularité](media/lockcht.gif "Diagramme affichant le coût par rapport à la granularité")  
   
  Le [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise une stratégie de verrouillage dynamique pour déterminer les verrous les plus rentables. Lorsqu'une requête est exécutée, le [!INCLUDE[ssDE](../includes/ssde-md.md)] détermine automatiquement les verrous les plus appropriés sur la base des caractéristiques du schéma et de la requête. Par exemple, pour réduire l'utilisation des verrous, l'optimiseur peut choisir d'utiliser des verrous de niveau page dans un index lors de l'analyse de l'index.  
   
@@ -635,11 +639,11 @@ INSERT mytable VALUES ('Dan');
   
 -   Les développeurs d'applications peuvent se concentrer sur le développement. Le [!INCLUDE[ssDE](../includes/ssde-md.md)] adapte le verrouillage automatiquement.  
   
- Dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] et versions ultérieures, le comportement d’escalade de verrous a changé avec l’introduction de l’option LOCK_ESCALATION. Pour plus d’informations, consultez l’option LOCK_ESCALATION de [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql).  
+ Dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] et les versions ultérieures, le comportement de l’escalade de verrous a changé avec l’introduction de l’option LOCK_ESCALATION. Pour plus d’informations, consultez l’option LOCK_ESCALATION de l' [instruction ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql).  
   
 ### <a name="deadlocking"></a>Interblocage  
 
- Un interblocage se produit lorsque deux tâches ou plus se bloquent mutuellement de façon permanente. Dans ce cas, chaque tâche place un verrou sur une ressource que la ou les autres tâches essaient de verrouiller. Exemple :  
+ Un interblocage se produit lorsque deux tâches ou plus se bloquent mutuellement de façon permanente. Dans ce cas, chaque tâche place un verrou sur une ressource que la ou les autres tâches essaient de verrouiller. Par exemple :  
   
 -   La transaction A obtient un verrou partagé sur la ligne 1.  
   
@@ -649,7 +653,7 @@ INSERT mytable VALUES ('Dan');
   
 -   La transaction B demande un verrou exclusif sur la ligne 1, mais elle est bloquée jusqu'à la fin de la transaction A qui libérera le verrou partagé sur la ligne 1.  
   
- Impossible de terminer la transaction A jusqu'à ce que la fin de la transaction B, mais la transaction B est bloquée par la transaction A. Cette condition est également appelée une dépendance cyclique : La transaction A a une dépendance sur la transaction B, et la transaction B ferme le cercle en possède une dépendance vis-à-vis de la transaction A.  
+ La transaction A ne peut pas se terminer tant que la transaction B n'est pas terminée, mais la transaction B est bloquée par la transaction A. Il s'agit d'une dépendance cyclique : la transaction A est dépendante de la transaction B, mais celle-ci ne peut pas s'exécuter car elle est dépendante de la transaction A.  
   
  Les deux transactions en interblocage attendent indéfiniment que la situation soit débloquée par un processus externe. Le moniteur d’interblocage du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] recherche périodiquement les tâches d’interblocage. S'il détecte une situation de dépendance cyclique, il désigne une des tâches comme victime et met fin à sa transaction avec un message d'erreur. Cela permet à l'autre tâche de terminer sa transaction. L'application qui exécutait la transaction abandonnée peut effectuer une nouvelle tentative qui réussit en général une fois que l'autre transaction est terminée.  
   
@@ -659,11 +663,11 @@ INSERT mytable VALUES ('Dan');
   
  Une situation d'interblocage peut se produire sur tout système multithread, pas uniquement sur les systèmes de gestion de bases de données relationnelles. Elle peut également concerner des ressources autres que les verrous sur les objets de base de données. Par exemple, un thread dans un système multithread peut acquérir une ou plusieurs ressources (par exemple, des blocs de mémoire). Si la ressource acquise appartient actuellement à une autre thread, la première thread devra éventuellement attendre que le thread propriétaire libère la ressource cible. le thread en attente a une dépendance sur le thread propriétaire de cette ressource particulière. Dans une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)], les sessions peuvent se bloquer lors de l’acquisition de ressources autres que des objets de base de données, notamment des blocs de mémoire ou des threads.  
   
- ![Diagramme montrant le blocage transaction](media/dedlck1.gif "diagramme montrant le blocage de transaction")  
+ ![Diagramme affichant le blocage de la transaction](media/dedlck1.gif "Diagramme affichant le blocage de la transaction")  
   
  Dans l’illustration, la transaction T1 est dépendante de la transaction T2 pour la ressource de verrou de table **Part**. De même, la transaction T2 est dépendante de T1 pour la ressource de verrou de table **Supplier**. Comme ces dépendances forment un cycle, il y a interblocage entre les transactions T1 et T2.  
   
- Des interblocages peuvent également se produire lorsqu'une table est partitionnée et que le paramètre LOCK_ESCALATION de TABLE ALTER a la valeur AUTO. Lorsque LOCK_ESCALATION a la valeur automatique, la concurrence augmente en permettant la [!INCLUDE[ssDE](../includes/ssde-md.md)] de verrouiller des partitions de table au niveau du HoBT au lieu d’au niveau de la TABLE. Toutefois, lorsque des transactions distinctes maintiennent des verrous de partition dans une table et souhaitent un verrou sur l'autre partition de transactions, cela provoque un interblocage. Ce type d’interblocage peut être évité en affectant à LOCK_ESCALATION pour la TABLE ; Bien que ce paramètre réduise la concurrence en forçant les mises à jour volumineuses d’une partition à attendre un verrou de table.  
+ Des interblocages peuvent également se produire lorsqu'une table est partitionnée et que le paramètre LOCK_ESCALATION de TABLE ALTER a la valeur AUTO. Lorsque LOCK_ESCALATION a la valeur AUTO, la [!INCLUDE[ssDE](../includes/ssde-md.md)] concurrence augmente en permettant au de verrouiller des partitions de table au niveau de HOBt au lieu du niveau table. Toutefois, lorsque des transactions distinctes maintiennent des verrous de partition dans une table et souhaitent un verrou sur l'autre partition de transactions, cela provoque un interblocage. Ce type d'interblocage peut être évité en affectant à LOCK_ESCALATION la valeur TABLE, bien que ce paramètre réduise la concurrence en forçant les mises à jour volumineuses d'une partition à attendre un verrou de table.  
   
 #### <a name="detecting-and-ending-deadlocks"></a>Détection et fin des blocages  
 
@@ -675,7 +679,7 @@ INSERT mytable VALUES ('Dan');
   
 -   Dans la mesure où aucune des deux tâches ne peut continuer tant qu'il n'y a pas de ressource disponible et que ni l'une ni l'autre des ressources ne peut être libérée avant la poursuite d'une tâche, un état de blocage se produit.  
   
- ![Diagramme affichant des tâches dans un état de blocage](media/task-deadlock-state.gif "diagramme affichant des tâches dans un état de blocage")  
+ ![Diagramme affichant des tâches dans un état de blocage](media/task-deadlock-state.gif "Diagramme affichant des tâches dans un état de blocage")  
   
  Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] détecte automatiquement les cycles de blocage dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Le [!INCLUDE[ssDE](../includes/ssde-md.md)] choisit l'une des sessions comme victime et la transaction en cours se termine par une erreur, ce qui met fin à la situation de blocage.  
   
@@ -689,15 +693,15 @@ INSERT mytable VALUES ('Dan');
   
 -   **Mémoire**. Lorsque des demandes concurrentes sont en attente d'allocation de mémoire qui ne peut être satisfaite faute de mémoire suffisante, un blocage peut se produire. Par exemple, deux demandes concurrentes, Q1 et Q2, qui s'exécutant en tant que fonctions définies par l'utilisateur, obtiennent respectivement 10 Mo et 20 Mo de mémoire. Si chaque requête nécessite 30 Mo et que la quantité de mémoire disponible est de 20 Mo, Q1 et Q2 doivent attendre que chacune libère la mémoire, ce qui entraîne un blocage.  
   
--   **Ressources liées à l’exécution de requêtes parallèles**. Les threads de coordination, production ou consommation associées à un port d’échange peuvent se bloquer mutuellement et provoquer un interblocage qui se produit généralement lors de l’introduction d’au moins un autre processus étranger à la requête parallèle. De même, quand commence l'exécution d'une requête parallèle, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] détermine le degré de parallélisme, ou le nombre de threads de travail, en fonction de la charge de travail en cours. Si la charge de travail change de façon inattendue, par exemple si de nouvelles requêtes commencent à s'exécuter sur le serveur ou que le système se trouve à court de threads de travail, il peut s'ensuivre un blocage.  
+-   **Ressources liées à l’exécution de requêtes parallèles** Les threads de coordinateur, de producteur ou de consommateur associés à un port Exchange peuvent se bloquer l’un de l’autre, ce qui entraîne généralement un blocage lors de l’inclusion d’au moins un autre processus qui ne fait pas partie de la requête parallèle. De même, quand commence l'exécution d'une requête parallèle, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] détermine le degré de parallélisme, ou le nombre de threads de travail, en fonction de la charge de travail en cours. Si la charge de travail change de façon inattendue, par exemple si de nouvelles requêtes commencent à s'exécuter sur le serveur ou que le système se trouve à court de threads de travail, il peut s'ensuivre un blocage.  
   
--   **Ressources MARS (Multiple Active Result Sets)** . Ces ressources servent à contrôler l'entrelacement de plusieurs demandes actives sous MARS. Pour plus d’informations, consultez [Multiple Active Result Sets (MARS) dans SQL Server](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx).  
+-   **Ressources mars (Multiple Active Result Sets)**. Ces ressources servent à contrôler l'entrelacement de plusieurs demandes actives sous MARS. Pour plus d’informations, consultez [mars (Multiple Active Result Sets) dans SQL Server](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx).  
   
     -   **Ressource utilisateur**. Lorsqu'un thread est en attente d'une ressource potentiellement contrôlée par une application d'utilisateur, la ressource est considérée comme étant une ressource externe ou utilisateur et est traitée comme un verrou.  
   
-    -   **Exclusion mutuelle de session**. Les tâches exécutées au cours d'une session sont entrelacées, ce qui signifie que seule une tâche peut s'exécuter à un moment donné dans le cadre de la session. Avant de pouvoir s'exécuter, la tâche doit disposer d'un accès exclusif à l'exclusion mutuelle de la session.  
+    -   **Mutex de session**. Les tâches exécutées au cours d'une session sont entrelacées, ce qui signifie que seule une tâche peut s'exécuter à un moment donné dans le cadre de la session. Avant de pouvoir s'exécuter, la tâche doit disposer d'un accès exclusif à l'exclusion mutuelle de la session.  
   
-    -   **Exclusion mutuelle de transaction**. Toutes les tâches qui s'exécutent lors d'une transaction sont entrelacées, ce qui signifie que seule une tâche peut s'exécuter à un moment donné dans le cadre de la transaction. Avant de pouvoir s'exécuter, la tâche doit disposer d'un accès exclusif à l'exclusion mutuelle de la transaction.  
+    -   **Mutex**de la transaction. Toutes les tâches qui s'exécutent lors d'une transaction sont entrelacées, ce qui signifie que seule une tâche peut s'exécuter à un moment donné dans le cadre de la transaction. Avant de pouvoir s'exécuter, la tâche doit disposer d'un accès exclusif à l'exclusion mutuelle de la transaction.  
   
      Pour pouvoir s'exécuter sous MARS, une tâche doit obtenir l'exclusion mutuelle de session. Si la tâche s'exécute dans le cadre d'une transaction, elle doit obtenir l'exclusion mutuelle de transaction. Vous serez ainsi assuré qu'il n'y a qu'une seule tâche active à la fois pour une session et une transaction données. Dès lors que les exclusions mutuelles requises ont été acquises, la tâche peut s'exécuter. Quand la tâche est terminée ou qu'elle aboutit au milieu de la demande, elle libère l'exclusion mutuelle de transaction avant l'exclusion mutuelle de session, c'est-à-dire dans l'ordre inverse de leur acquisition. Cependant, des blocages peuvent se produire avec ces ressources. Dans l'exemple de code suivant, deux tâches, la demande d'utilisateur U1 et la demande d'utilisateur U2, s'exécutent lors d'une même session.  
   
@@ -708,7 +712,7 @@ INSERT mytable VALUES ('Dan');
   
      La procédure stockée qui s'exécute à partir de la demande d'utilisateur U1 a obtenu l'exclusion mutuelle de session. Si son exécution se prolonge, le [!INCLUDE[ssDE](../includes/ssde-md.md)] considère que la procédure stockée attend une entrée de données de la part de l'utilisateur. La demande d'utilisateur U2 attend l'exclusion mutuelle de session alors que l'utilisateur attend le jeu de résultats d'U2, et U1 attend une ressource utilisateur. Il s'agit d'un état de blocage logiquement illustré ainsi :  
   
- ![Blocage de processus d’utilisateur d’affichage Diagramme logique. ](media/udb9-logicflowexamplec.gif "Logique diagramme montrant utilisateur blocage de processus.")  
+ ![Diagramme logique montrant le blocage de processus utilisateur.](media/udb9-logicflowexamplec.gif "Diagramme logique montrant le blocage de processus utilisateur.")  
   
 ##### <a name="deadlock-detection"></a>Détection de blocage  
 
@@ -745,8 +749,8 @@ INSERT mytable VALUES ('Dan');
 |Propriété|Indicateur de trace 1204 et indicateur de trace 1222|Indicateur de trace 1204 uniquement|Indicateur de trace 1222 uniquement|  
 |--------------|-----------------------------------------|--------------------------|--------------------------|  
 |Format de sortie|La sortie est capturée dans le journal des erreurs de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|Les nœuds impliqués dans le blocage sont privilégiés. Chaque nœud dispose d'une section dédiée, tandis que la section finale décrit la victime du blocage.|Retourne des informations dans un format de type XML, mais non conforme au schéma XSD (XML Schema Definition). Le format possède trois sections principales. La première déclare la victime du blocage. La deuxième décrit chaque processus impliqué dans le blocage. La troisième décrit les ressources synonymes des nœuds de l'indicateur de trace 1204.|  
-|Identification d'attributs|**SPID :\<x > ECID :\<x >.** Identifie le thread de l'ID du processus système en cas de traitements parallèles. L’entrée `SPID:<x> ECID:0`, où \<x > est remplacé par la valeur SPID, représente le thread principal. L’entrée `SPID:<x> ECID:<y>`, où \<x > est remplacé par la valeur SPID et \<y > est supérieur à 0, représente les sous-threads du même SPID.<br /><br /> **BatchID** (**sbid** pour l’indicateur de trace 1222). Identifie le traitement à partir duquel l'exécution du code demande ou détient un verrou. Lorsque MARS (Multiple Active Result Sets) est désactivé, la valeur BatchID est 0. Quand MARS est activé, la valeur des lots actifs est 1 pour *n*. Si la session ne comporte pas de traitements actifs, BatchID a pour valeur 0.<br /><br /> **Mode**. Spécifie, pour une ressource particulière, le type de verrou demandé, accordé ou attendu par un thread. Les différents modes sont IS (intent partagé), S (partagé), U (mise à jour), IX (intent exclusif), SIX (partagé avec intent exclusif) et X (exclusif).<br /><br /> **Line #** (**line** pour l’indicateur de trace 1222). Indique le numéro de ligne du traitement qui était en cours d'exécution lorsque le blocage s'est produit.<br /><br /> **Input Buf** (**inputbuf** pour l’indicateur de trace 1222). Dresse la liste de toutes les instructions du traitement en cours.|**Node**. Il s'agit du numéro d'entrée dans la chaîne de blocage.<br /><br /> **Lists**. Le propriétaire du verrou peut faire partie des listes suivantes :<br /><br /> **Grant List**. Énumère les propriétaires actuels de la ressource.<br /><br /> **Convert List**. Énumère les propriétaires en cours qui essaient de convertir leurs verrous vers un niveau supérieur.<br /><br /> **Wait List**. Énumère les nouvelles demandes de verrou en cours pour la ressource.<br /><br /> **Statement Type**. Décrit le type d'instructions DML (SELECT, INSERT, UPDATE ou DELETE) sur lesquelles les threads disposent d'autorisations.<br /><br /> **Victim Resource Owner**. Spécifie le thread choisi comme victime par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour rompre le cycle de blocage. Il est alors mis fin au thread choisi et à tous les sous-threads existants.<br /><br /> **Next Branch**. Représente les deux sous-threads (ou plus) du même SPID qui participent au cycle de blocage.|**deadlock victim**. Représente l’adresse de mémoire physique de la tâche (consultez [sys.dm_os_tasks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql)) qui a été sélectionnée comme victime de l’interblocage. Elle est égale à 0 (zéro) en cas de non résolution du blocage. Une tâche en cours d'annulation ne peut pas être choisie comme victime de blocage.<br /><br /> **executionstack**. Représente le code [!INCLUDE[tsql](../includes/tsql-md.md)] en cours d'exécution lorsque le blocage se produit.<br /><br /> **priority**. Représente la priorité de blocage. Dans certains cas, le [!INCLUDE[ssDE](../includes/ssde-md.md)] peut choisir de modifier la priorité de blocage pendant un bref laps de temps afin de favoriser la concurrence.<br /><br /> **logused**. Espace journal utilisé par la tâche.<br /><br /> **owner id**. ID de la transaction qui contrôle la demande.<br /><br /> **status**. État de la tâche. Il prend l'une des valeurs suivantes :<br /><br /> >> **pending**. En attente d'un thread de travail.<br /><br /> >> **runnable**. Prêt à s'exécuter, mais en attente d'un quantum.<br /><br /> >> **running**. En cours d'exécution sur le planificateur.<br /><br /> >> **suspended**. L'exécution est suspendue.<br /><br /> >> **done**. La tâche est achevée.<br /><br /> >> **spinloop**. En attente de libération d'un spinlock.<br /><br /> **waitresource**. Ressource convoitée par la tâche.<br /><br /> **waittime**. Délai d'attente de la ressource en millisecondes.<br /><br /> **schedulerid**. Planificateur associé à cette tâche. Consultez [sys.dm_os_schedulers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql).<br /><br /> **hostname**. Nom de la station de travail.<br /><br /> **isolationlevel**. Niveau d'isolement des transactions en cours.<br /><br /> **Xactid**. ID de la transaction qui contrôle la demande.<br /><br /> **currentdb**. ID de la base de données.<br /><br /> **lastbatchstarted**. Dernière fois qu'un processus client a démarré une exécution de traitement.<br /><br /> **lastbatchcompleted**. Dernière fois qu'un processus client a terminé une exécution de traitement.<br /><br /> **clientoption1 et clientoption2**. Options définies pour cette connexion cliente. Il s'agit d'un masque de bits qui contient des informations sur les options habituellement contrôlées par les instructions SET, telles que SET NOCOUNT et SET XACTABORT.<br /><br /> **associatedObjectId**. Représente l'ID HoBT (Heap or B-tree, segment de mémoire ou arborescence binaire).|  
-|Attributs des ressources|**RID**. Identifie la ligne d'une table pour laquelle un verrou est détenu ou demandé. RID est représenté comme RID : *db_id:file_id:page_no:row_no*. Par exemple, `RID: 6:1:20789:0`.<br /><br /> **OBJECT**. Identifie la table pour laquelle un verrou est détenu ou demandé. OBJECT est représenté comme OBJECT : *db_id:object_id*. Par exemple, `TAB: 6:2009058193`.<br /><br /> **KEY**. Identifie la plage de clés d'un index pour laquelle un verrou est détenu ou demandé. KEY est représenté comme KEY : *db_id:hobt_id* (*valeur de hachage de la clé d’index*). Par exemple, `KEY: 6:72057594057457664 (350007a4d329)`.<br /><br /> **PAG**. Identifie la ressource de page pour laquelle un verrou est détenu ou demandé. PAG est représenté comme PAG : *db_id:file_id:page_no*. Par exemple, `PAG: 6:1:20789`.<br /><br /> **EXT**. Identifie la structure d'extension. EXT est représenté comme EXT : *db_id:file_id:extent_no*. Par exemple, `EXT: 6:1:9`.<br /><br /> **DB**. Identifie le verrou de base de données. **DB est représenté de l’une des manières suivantes :**<br /><br /> DB : *db_id*<br /><br /> DB : *db_id*[BULK-OP-DB], qui identifie le verrou de base de données pris par la base de données de sauvegarde.<br /><br /> DB : *db_id*[BULK-OP-LOG], qui identifie le verrou pris par le journal de sauvegarde pour cette base de données spécifique.<br /><br /> **APP**. Identifie le verrou pris par une ressource d'application. APP est représenté comme APP : *lock_resource*. Par exemple, `APP: Formf370f478`.<br /><br /> **METADATA**. Représente les ressources de métadonnées impliquées dans un blocage. Comme METADATA possède de nombreuses sous-ressources, la valeur retournée dépend de la sous-ressource bloquée. Par exemple, les métadonnées. Retourne USER_TYPE `user_type_id =` \< *integer_value*>. Pour plus d’informations sur les ressources et sous-ressources METADATA, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql).<br /><br /> **HOBT**. Représente un segment de mémoire ou d'arbre B (B-Tree) impliqué dans un blocage.|Non exclusif à cet indicateur de trace.|Non exclusif à cet indicateur de trace.|  
+|Identification d'attributs|**SPID :\<x> ECID :\<x>.** Identifie le thread de l'ID du processus système en cas de traitements parallèles. L’entrée `SPID:<x> ECID:0`, où \<x> est remplacé par la valeur SPID, représente le thread principal. L’entrée `SPID:<x> ECID:<y>`, où \<x> est remplacé par la valeur SPID et \<l'> y est supérieure à 0, représente les sous-threads du même SPID.<br /><br /> **BatchID** (**sbid** pour l’indicateur de trace 1222). Identifie le traitement à partir duquel l'exécution du code demande ou détient un verrou. Lorsque MARS (Multiple Active Result Sets) est désactivé, la valeur BatchID est 0. Quand MARS est activé, la valeur des lots actifs est 1 pour *n*. Si la session ne comporte pas de traitements actifs, BatchID a pour valeur 0.<br /><br /> **Mode**. Spécifie, pour une ressource particulière, le type de verrou demandé, accordé ou attendu par un thread. Les différents modes sont IS (intent partagé), S (partagé), U (mise à jour), IX (intent exclusif), SIX (partagé avec intent exclusif) et X (exclusif).<br /><br /> **Ligne #** (**ligne** pour l’indicateur de trace 1222). Indique le numéro de ligne du traitement qui était en cours d'exécution lorsque le blocage s'est produit.<br /><br /> **Entrée buf** (**inputbuf** pour l’indicateur de trace 1222). Dresse la liste de toutes les instructions du traitement en cours.|**Nœud**. Il s'agit du numéro d'entrée dans la chaîne de blocage.<br /><br /> **Liste**. Le propriétaire du verrou peut faire partie des listes suivantes :<br /><br /> **Liste d’autorisations**. Énumère les propriétaires actuels de la ressource.<br /><br /> **Convertir la liste**. Énumère les propriétaires en cours qui essaient de convertir leurs verrous vers un niveau supérieur.<br /><br /> **Liste d’attente**. Énumère les nouvelles demandes de verrou en cours pour la ressource.<br /><br /> **Type d’instruction**. Décrit le type d'instructions DML (SELECT, INSERT, UPDATE ou DELETE) sur lesquelles les threads disposent d'autorisations.<br /><br /> **Propriétaire de la ressource victime**. Spécifie le thread choisi comme victime par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour rompre le cycle de blocage. Il est alors mis fin au thread choisi et à tous les sous-threads existants.<br /><br /> **Branche suivante**. Représente les deux sous-threads (ou plus) du même SPID qui participent au cycle de blocage.|**victime du blocage**. Représente l’adresse de mémoire physique de la tâche (consultez [sys.dm_os_tasks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql)) qui a été sélectionnée comme victime de l’interblocage. Elle est égale à 0 (zéro) en cas de non résolution du blocage. Une tâche en cours d'annulation ne peut pas être choisie comme victime de blocage.<br /><br /> **executionstack**. Représente le code [!INCLUDE[tsql](../includes/tsql-md.md)] en cours d'exécution lorsque le blocage se produit.<br /><br /> **priorité**. Représente la priorité de blocage. Dans certains cas, le [!INCLUDE[ssDE](../includes/ssde-md.md)] peut choisir de modifier la priorité de blocage pendant un bref laps de temps afin de favoriser la concurrence.<br /><br /> **logused**. Espace journal utilisé par la tâche.<br /><br /> **ID du propriétaire**. ID de la transaction qui contrôle la demande.<br /><br /> **État**. État de la tâche. Il prend l'une des valeurs suivantes :<br /><br /> >> **en attente**. En attente d'un thread de travail.<br /><br /> >> **exécutable**. Prêt à s'exécuter, mais en attente d'un quantum.<br /><br /> >> **en cours d’exécution**. En cours d'exécution sur le planificateur.<br /><br /> >> **suspendu**. L'exécution est suspendue.<br /><br /> >> **terminé**. La tâche est achevée.<br /><br /> >> **Spinloop**. En attente de libération d'un spinlock.<br /><br /> **Wait Resource**. Ressource convoitée par la tâche.<br /><br /> **délai**. Délai d'attente de la ressource en millisecondes.<br /><br /> **schedulerid**. Planificateur associé à cette tâche. Consultez [sys.dm_os_schedulers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql).<br /><br /> **nom d’hôte**. Nom de la station de travail.<br /><br /> **IsolationLevel**. Niveau d'isolement des transactions en cours.<br /><br /> **Xactid**. ID de la transaction qui contrôle la demande.<br /><br /> **CurrentDb**. ID de la base de données.<br /><br /> **lastbatchstarted**. Dernière fois qu'un processus client a démarré une exécution de traitement.<br /><br /> **lastbatchcompleted**. Dernière fois qu'un processus client a terminé une exécution de traitement.<br /><br /> **clientoption1 et clientoption2**. Options définies pour cette connexion cliente. Il s'agit d'un masque de bits qui contient des informations sur les options habituellement contrôlées par les instructions SET, telles que SET NOCOUNT et SET XACTABORT.<br /><br /> **associatedObjectId**. Représente l'ID HoBT (Heap or B-tree, segment de mémoire ou arborescence binaire).|  
+|Attributs des ressources|**RID**. Identifie la ligne d'une table pour laquelle un verrou est détenu ou demandé. RID est représenté comme RID : *db_id:file_id:page_no:row_no*. Par exemple : `RID: 6:1:20789:0`.<br /><br /> **Objet**. Identifie la table pour laquelle un verrou est détenu ou demandé. OBJECT est représenté comme OBJECT : *db_id:object_id*. Par exemple : `TAB: 6:2009058193`.<br /><br /> **Clé**. Identifie la plage de clés d'un index pour laquelle un verrou est détenu ou demandé. KEY est représenté comme KEY : *db_id:hobt_id* (*valeur de hachage de la clé d’index*). Par exemple : `KEY: 6:72057594057457664 (350007a4d329)`.<br /><br /> **Pag**. Identifie la ressource de page pour laquelle un verrou est détenu ou demandé. PAG est représenté comme PAG : *db_id:file_id:page_no*. Par exemple : `PAG: 6:1:20789`.<br /><br /> **Ext**. Identifie la structure d'extension. EXT est représenté comme EXT : *db_id:file_id:extent_no*. Par exemple : `EXT: 6:1:9`.<br /><br /> **Base**de. Identifie le verrou de base de données. **DB est représenté de l’une des manières suivantes :**<br /><br /> DB : *db_id*<br /><br /> DB : *db_id*[BULK-OP-DB], qui identifie le verrou de base de données pris par la base de données de sauvegarde.<br /><br /> DB : *db_id*[BULK-OP-LOG], qui identifie le verrou pris par le journal de sauvegarde pour cette base de données spécifique.<br /><br /> **Application**. Identifie le verrou pris par une ressource d'application. APP est représenté comme APP : *lock_resource*. Par exemple : `APP: Formf370f478`.<br /><br /> **Métadonnées**. Représente les ressources de métadonnées impliquées dans un blocage. Comme METADATA possède de nombreuses sous-ressources, la valeur retournée dépend de la sous-ressource bloquée. Par exemple, METADATA.USER_TYPE retourne `user_type_id =` \<*integer_value*>. Pour plus d’informations sur les ressources et sous-ressources METADATA, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql).<br /><br /> **HoBT**. Représente un segment de mémoire ou d'arbre B (B-Tree) impliqué dans un blocage.|Non exclusif à cet indicateur de trace.|Non exclusif à cet indicateur de trace.|  
   
 ###### <a name="trace-flag-1204-example"></a>Exemple d'indicateur de trace 1204  
 
@@ -860,9 +864,9 @@ deadlock-list
 
  Il s'agit d'un événement propre au [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] qui présente une description graphique des tâches et des ressources impliquées dans un blocage. L'exemple suivant illustre la sortie obtenue à partir de [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] quand l'événement Deadlock Graph est activé.  
   
- ![Blocage de processus logique organigramme montrant utilisateur. ](media/udb9-profilerdeadlockgraphc.gif "Logique organigramme montrant blocage de processus utilisateur.")  
+ ![Diagramme de flux logique montrant le blocage de processus utilisateur.](media/udb9-profilerdeadlockgraphc.gif "Diagramme de flux logique montrant le blocage de processus utilisateur.")  
   
- Pour plus d’informations sur l’exécution du [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] deadlock graph, consultez [enregistrer les événements Deadlock Graph &#40;SQL Server Profiler&#41;](../relational-databases/performance/save-deadlock-graphs-sql-server-profiler.md).  
+ Pour plus d’informations sur l' [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] exécution du graphique de blocage, consultez [enregistrer les graphiques d’interblocage &#40;SQL Server Profiler&#41;](../relational-databases/performance/save-deadlock-graphs-sql-server-profiler.md).  
   
 #### <a name="handling-deadlocks"></a>Gestion des blocages  
 
@@ -906,7 +910,7 @@ deadlock-list
 
  Si toutes les transactions concurrentes accèdent aux objets dans le même ordre, le risque de blocage diminue. Par exemple, si deux transactions concurrentes obtiennent un verrou sur la table **Supplier**, puis sur la table **Part**, l’une des transactions est bloquée sur la table **Supplier** jusqu’à ce que l’autre transaction se termine. Après la validation ou la restauration de la première transaction, la seconde continue et aucun blocage ne se produit. L'utilisation de procédures stockées pour toutes les modifications de données peut standardiser l'ordre d'accès aux objets.  
   
- ![Diagramme montrant les éviter les verrous mortels](media/dedlck2.gif "diagramme montrant éviter les verrous mortels")  
+ ![Diagramme indiquant comment éviter l'utilisation du blocage](media/dedlck2.gif "Diagramme indiquant comment éviter l'utilisation du blocage")  
   
 ##### <a name="avoid-user-interaction-in-transactions"></a>Aucune interaction utilisateur dans les transactions  
 
@@ -945,7 +949,7 @@ deadlock-list
 
  Les opérations de verrouillage accèdent à plusieurs ressources partagées, dont deux sont optimisées par le partitionnement de verrous :  
   
--   **Verrouillage tournant**. Contrôle l'accès à une ressource de verrou, par exemple une ligne ou une table.  
+-   **SpinLock**. Contrôle l'accès à une ressource de verrou, par exemple une ligne ou une table.  
   
      Sans partitionnement de verrous, un verrouillage spinlock gère toutes les demandes de verrouillage pour une seule ressource de verrou. Sur des systèmes qui connaissent une activité intense, une contention peut se produire pendant que les demandes de verrouillage attendent que le verrouillage spinlock devienne disponible. Dans ce cas, l'acquisition de verrous peut causer un goulet d'étranglement et détériorer les performances.  
   
@@ -1021,7 +1025,7 @@ BEGIN TRANSACTION
   
  Session 1 :  
   
- L'instruction `SELECT` suivante est exécutée sous la transaction qui est encore active sous la session 1. En raison de l'indicateur de verrou de table exclusif (X), la transaction va essayer d'acquérir un verrou exclusif X sur la table. Toutefois, le verrou S qui est maintenu par la transaction de la session 2 bloquera le verrou X au niveau de la partition ID 0.  
+ L'instruction `SELECT` suivante est exécutée sous la transaction qui est encore active sous la session 1. En raison de l'indicateur de verrou de table exclusif (X), la transaction va essayer d'acquérir un verrou exclusif X sur la table. Toutefois, le verrou S qui est maintenu par la transaction de la session 2 bloquera le verrou X au niveau de la partition ID 0.   
   
 ```  
 SELECT col1  
@@ -1046,7 +1050,7 @@ BEGIN TRANSACTION
   
  Session 2 :  
   
- Une instruction `SELECT` est exécutée sous une transaction. En raison de l'indicateur de verrou `TABLOCKX`, la transaction essaie d'acquérir un verrou exclusif (X) sur la table. Souvenez-vous que le verrou X doit être acquis sur toutes les partitions à partir de la partition ID 0. Le verrou X sera acquis sur toutes les partitions, de l'ID 0 à 5, mais il sera bloqué par le verrou IS acquis sur la partition ID 6.  
+ Une instruction `SELECT` est exécutée sous une transaction. En raison de l'indicateur de verrou `TABLOCKX`, la transaction essaie d'acquérir un verrou exclusif (X) sur la table. Souvenez-vous que le verrou X doit être acquis sur toutes les partitions à partir de la partition ID 0. Le verrou X sera acquis sur toutes les partitions, de l'ID 0 à 5, mais il sera bloqué par le verrou IS acquis sur la partition ID 6.   
   
  Sur les ID de partition de 7 à 15 que le verrou X n'a pas encore atteint, d'autres transactions peuvent continuer d'acquérir des verrous.  
   
@@ -1057,9 +1061,9 @@ BEGIN TRANSACTION
         WITH (TABLOCKX, HOLDLOCK);  
 ```  
   
- ![Icône de flèche utilisée avec le lien Retour au début](media/uparrow16x16.gif "icône de flèche utilisée avec le lien Retour au début") [dans ce Guide](#Top)  
+ ![Icône de flèche utilisée avec le lien retour au début](media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [dans ce guide](#Top)  
   
-##  <a name="Row_versioning"></a> Niveaux d’isolement basé sur le contrôle de version de ligne dans le moteur de base de données  
+##  <a name="Row_versioning"></a>Niveaux d’isolement basés sur le contrôle de version de ligne dans le Moteur de base de données  
 
  À partir de SQL Server 2005, le moteur de base de données introduit une implémentation d'un niveau d'isolement de la transaction existant, read committed, qui fournit un instantané au niveau des instructions basé sur le contrôle de version de ligne. Le moteur de base de données SQL Server offre également un niveau d'isolement de la transaction, instantané, qui fournit un instantané au niveau des transactions basé sur le contrôle de version de ligne.  
   
@@ -1220,7 +1224,7 @@ BEGIN TRANSACTION
   
  En cas d'utilisation de l'une des fonctionnalités de contrôle de version de ligne, vous devrez peut-être allouer un espace disque suffisant pour permettre les 14 octets nécessaires par ligne de base de données. L'ajout d'informations sur le contrôle de version de ligne peut entraîner le fractionnement des pages d'index ou l'allocation d'une nouvelle page de données en cas d'insuffisance d'espace disponible sur la page actuelle. Par exemple, si la longueur de ligne moyenne est de 100 octets, les 14 octets supplémentaires peuvent provoquer une augmentation de 14 pour cent de la table existante.  
   
- La réduction du [facteur de remplissage](../relational-databases/indexes/specify-fill-factor-for-an-index.md) peut permettre d’empêcher ou de réduire la fragmentation des pages d’index. Pour afficher les informations de fragmentation pour les données et les index d’une table ou une vue, vous pouvez utiliser [DBCC SHOWCONTIG](/sql/t-sql/database-console-commands/dbcc-showcontig-transact-sql).  
+ La réduction du [facteur de remplissage](../relational-databases/indexes/specify-fill-factor-for-an-index.md) peut permettre d’empêcher ou de réduire la fragmentation des pages d’index. Pour afficher les informations de fragmentation des données et des index d’une table ou d’une vue, vous pouvez utiliser [DBCC SHOWCONTIG](/sql/t-sql/database-console-commands/dbcc-showcontig-transact-sql).  
   
 #### <a name="space-used-in-large-objects"></a>Espace occupé dans les objets volumineux  
 
@@ -1236,9 +1240,10 @@ BEGIN TRANSACTION
   
 #### <a name="monitoring-row-versioning-and-the-version-store"></a>Contrôle du contrôle de version de ligne et du magasin de versions  
 
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit des outils pour le contrôle du contrôle de version de ligne, du magasin de versions et des processus d'isolement d'instantané : les vues DMV (Dynamic Management Views) et les compteurs de performances dans le Moniteur système Windows.  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit des outils pour le contrôle du contrôle de version de ligne, du magasin de versions et des processus d'isolement d'instantané : les vues DMV (Dynamic Management Views) et les compteurs de performances dans le Moniteur système Windows.  
   
-##### <a name="dmvs"></a>Vues DMV  
+##### <a name="dmvs"></a>DMV  
 
  Les vues DMV suivantes fournissent des informations sur l'état système actuel de tempdb et du magasin de versions, ainsi que sur les transactions utilisant le contrôle de version de ligne.  
   
@@ -1263,11 +1268,11 @@ BEGIN TRANSACTION
   
  sys.dm_tran_current_snapshot. Retourne une table virtuelle affichant toutes les transactions actives au début de la transaction d'isolement d'instantané. Si la transaction actuelle utilise l'isolement d'instantané, cette fonction ne retourne aucune ligne. sys.dm_tran_current_snapshot est similaire à sys.dm_tran_transactions_snapshot, mis à part qu’elle retourne uniquement les transactions actives pour l’instantané actuel. Pour plus d’informations, consultez [sys.dm_tran_current_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-current-snapshot-transact-sql).  
   
-##### <a name="performance-counters"></a>Compteurs de performances  
+##### <a name="performance-counters"></a>Compteurs de performance  
 
  Les compteurs de performance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournissent des informations sur les performances système affectées par les processus de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les compteurs de performances suivants contrôlent tempdb et le magasin de versions, ainsi que les transactions utilisant le contrôle de version de ligne. Les compteurs de performances se trouvent dans l'objet de performances SQLServer:Transactions.  
   
- **Espace disponible dans tempdb (Ko)** . Contrôle la quantité, en kilooctets (Ko), d'espace libre dans la base de données tempdb. tempdb doit disposer d'un espace libre suffisant pour gérer le magasin de versions prenant en charge l'isolement d'instantané.  
+ **Espace libre dans tempdb (Ko)**. Contrôle la quantité, en kilooctets (Ko), d'espace libre dans la base de données tempdb. tempdb doit disposer d'un espace libre suffisant pour gérer le magasin de versions prenant en charge l'isolement d'instantané.  
   
  La formule ci-dessous vous donne une estimation grossière de la taille du magasin de versions. Pour estimer la taille du magasin de versions en ce qui concerne les transactions longues, il peut s'avérer utile de contrôler les taux de génération et de nettoyage.  
   
@@ -1275,32 +1280,32 @@ BEGIN TRANSACTION
   
  Le délai le plus long d'exécution de transaction ne doit pas inclure les constructions d'un index en ligne. Étant donné que ces dernières opérations peuvent prendre un certain temps pour les tables volumineuses, elles utilisent un autre magasin de versions. La taille approximative du magasin de versions utilisé pour les constructions d'un index en ligne équivaut à la quantité de données modifiées dans la table, y compris tous les index, pendant toute la durée d'activité de la construction de l'index en ligne.  
   
- **Taille de la banque des versions (Ko)** . Contrôle la taille en Ko de tous les magasins de versions. Cette information permet de déterminer la quantité d'espace nécessaire dans la base de données tempdb pour le magasin de versions. Le contrôle de ce compteur sur une période de temps fournit une estimation utile de l'espace supplémentaire requis pour tempdb.  
+ **Taille de la Banque des versions (Ko)**. Contrôle la taille en Ko de tous les magasins de versions. Cette information permet de déterminer la quantité d'espace nécessaire dans la base de données tempdb pour le magasin de versions. Le contrôle de ce compteur sur une période de temps fournit une estimation utile de l'espace supplémentaire requis pour tempdb.  
   
- `Version Generation rate (KB/s)` . Contrôle le taux de génération de version en Ko par seconde pour tous les magasins de versions.  
+ `Version Generation rate (KB/s)`. Contrôle le taux de génération de version en Ko par seconde pour tous les magasins de versions.  
   
- `Version Cleanup rate (KB/s)` . Contrôle le taux de nettoyage de version en Ko par seconde pour tous les magasins de versions.  
+ `Version Cleanup rate (KB/s)`. Contrôle le taux de nettoyage de version en Ko par seconde pour tous les magasins de versions.  
   
 > [!NOTE]  
 >  Les informations obtenues à l'aide des compteurs Taux de génération de version (Ko/s) et Taux de nettoyage de version (Ko/s) permettent de prévoir l'espace nécessaire pour tempdb.  
   
- **Nombre d’unités dans la banque des versions**. Contrôle le nombre d'unités dans le magasin de versions.  
+ **Nombre d’unités**de la Banque des versions. Contrôle le nombre d'unités dans le magasin de versions.  
   
- **Création d’unité dans la banque des versions**. Contrôle le nombre total d'unités créées dans le magasin de versions pour le stockage des versions de lignes depuis le démarrage de l'instance.  
+ **Création d’unité**de la Banque des versions. Contrôle le nombre total d'unités créées dans le magasin de versions pour le stockage des versions de lignes depuis le démarrage de l'instance.  
   
- **Troncation d’unité dans la banque des versions**. Contrôle le nombre total d'unités tronquées dans le magasin de versions depuis le démarrage de l'instance. Une unité de magasin de versions est tronquée lorsque [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spécifie qu'aucune des lignes de versions stockées dans l'unité du magasin de versions n'est requise pour l'exécution des transactions actives.  
+ **Troncation d’unité**de la Banque des versions. Contrôle le nombre total d'unités tronquées dans le magasin de versions depuis le démarrage de l'instance. Une unité de magasin de versions est tronquée lorsque [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spécifie qu'aucune des lignes de versions stockées dans l'unité du magasin de versions n'est requise pour l'exécution des transactions actives.  
   
- **Proportion de conflits de mise à jour**. Contrôle la proportion de transactions d'instantanés de mise à jour présentant des conflits de mise à jour par rapport au nombre total de transactions d'instantanés de mise à jour.  
+ **Taux de conflits de mise à jour**. Contrôle la proportion de transactions d'instantanés de mise à jour présentant des conflits de mise à jour par rapport au nombre total de transactions d'instantanés de mise à jour.  
   
- **Délai le plus long d’exécution de transaction**. Contrôle le délai le plus long (en secondes) d'exécution de toute transaction utilisant le contrôle de version de ligne. Ce compteur permet de déterminer si l'exécution de l'une des transactions est trop longue.  
+ **Heure d’exécution**de la transaction la plus longue. Contrôle le délai le plus long (en secondes) d'exécution de toute transaction utilisant le contrôle de version de ligne. Ce compteur permet de déterminer si l'exécution de l'une des transactions est trop longue.  
   
  **Transactions**. Contrôle le nombre total de transactions actives. Les transactions système ne sont pas prises en compte.  
   
- `Snapshot Transactions` . Contrôle le nombre total de transactions d'instantanés actives.  
+ `Snapshot Transactions`. Contrôle le nombre total de transactions d'instantanés actives.  
   
- `Update Snapshot Transactions` . Contrôle le nombre total de transactions d'instantanés effectuant des opérations de mise à jour.  
+ `Update Snapshot Transactions`. Contrôle le nombre total de transactions d'instantanés effectuant des opérations de mise à jour.  
   
- `NonSnapshot Version Transactions` . Contrôle le nombre total de transactions actives non liées à des instantanés générant des enregistrements de versions.  
+ `NonSnapshot Version Transactions`. Contrôle le nombre total de transactions actives non liées à des instantanés générant des enregistrements de versions.  
   
 > [!NOTE]  
 >  La somme des compteurs Transactions d'instantanés de mise à jour et Transactions de versions non liées à des instantanés représente le nombre total de transactions participant à la génération d'une version. La différence entre les compteurs Transactions d'instantanés et Transactions d'instantanés de mise à jour indique le nombre de transactions d'instantanés en lecture seule.  
@@ -1309,7 +1314,7 @@ BEGIN TRANSACTION
 
  Les exemples ci-dessous illustrent les différences de comportement entre les transactions d'isolement d'instantané et les transactions validées en écriture qui utilisent le contrôle de version de ligne.  
   
-#### <a name="a-working-with-snapshot-isolation"></a>A. Utilisation du niveau d'isolement d'instantané  
+#### <a name="a-working-with-snapshot-isolation"></a>R. Utilisation du niveau d'isolement d'instantané  
 
  Dans cet exemple, une transaction exécutée sous isolement d'instantané lit des données qui sont ensuite modifiées par une autre transaction. La transaction d'instantané ne bloque pas l'opération de mise à jour exécutée par l'autre transaction et continue de lire les données à partir de la ligne avec version, en ignorant la modification apportée aux données. Toutefois, lorsque la transaction d'instantané tente de modifier des données qui ont déjà été modifiées par l'autre transaction, la transaction d'instantané génère une erreur et est terminée.  
   
@@ -1539,7 +1544,7 @@ ALTER DATABASE AdventureWorks2012
 |----------------------------------------------------------------|-----------------|  
 |OFF|La prise en charge des transactions d'isolement d'instantané n'est pas activée. Aucune transaction d'isolement d'instantané n'est autorisée.|  
 |PENDING_ON|La prise en charge des transactions d'isolement d'instantané est en état de transition (de OFF à ON). L'exécution de toutes les transactions ouvertes doit être terminée.<br /><br /> Aucune transaction d'isolement d'instantané n'est autorisée.|  
-|ON|La prise en charge des transactions d'isolement d'instantané est activée.<br /><br /> Les transactions d'isolement d'instantané sont autorisées.|  
+|ACTIVÉ|La prise en charge des transactions d'isolement d'instantané est activée.<br /><br /> Les transactions d'isolement d'instantané sont autorisées.|  
 |PENDING_OFF|La prise en charge des transactions d'isolement d'instantané est en état de transition (de ON à OFF).<br /><br /> Les transactions d'instantané lancées dès ce moment ne peuvent accéder à la base de données. Les transactions de mise à jour assument la responsabilité du versioning dans la base de données. Les transactions d'instantané existantes peuvent toujours accéder à la base de données sans aucun problème. L'état PENDING_OFF ne passe sur OFF qu'à la fin de l'exécution de toutes les transactions d'instantané activées lorsque l'état d'isolement d'instantané de la base de données correspondait à ON.|  
   
  Utilisez l'affichage catalogue sys.databases pour déterminer l'état des deux options de contrôle de version de ligne de la base de données.  
@@ -1615,7 +1620,8 @@ ALTER DATABASE AdventureWorks2012
   
 -   Les transactions distribuées, notamment les requêtes dans les bases de données partitionnées distribuées, ne sont pas prises en charge sous le niveau d'isolement d'instantané.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne conserve pas plusieurs versions des métadonnées système. Les instructions DDL (Data Definition Language) portant sur des tables et autres objets de base de données (index, vues, types de données, procédures stockées et fonctions CLR (Common Language Runtime)) modifient les métadonnées. Si une instruction DDL modifie un objet, toute référence simultanée à l'objet sous le niveau d'isolement d'instantané entraînera l'échec de la transaction d'instantané. Les transactions READCOMMITTED (lu-validé) ne présentent pas cette limitation lorsque l'option de base de données READ_COMMITTED_SNAPSHOT est activée (valeur ON).  
+-   
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne conserve pas plusieurs versions des métadonnées système. Les instructions DDL (Data Definition Language) portant sur des tables et autres objets de base de données (index, vues, types de données, procédures stockées et fonctions CLR (Common Language Runtime)) modifient les métadonnées. Si une instruction DDL modifie un objet, toute référence simultanée à l'objet sous le niveau d'isolement d'instantané entraînera l'échec de la transaction d'instantané. Les transactions READCOMMITTED (lu-validé) ne présentent pas cette limitation lorsque l'option de base de données READ_COMMITTED_SNAPSHOT est activée (valeur ON).  
   
      Supposons, par exemple, qu'un administrateur de base de données exécute l'instruction `ALTER INDEX` suivante.  
   
@@ -1632,13 +1638,13 @@ ALTER DATABASE AdventureWorks2012
     > [!NOTE]  
     >  Les opérations BULK INSERT peuvent entraîner des modifications au niveau des métadonnées de la table cible (par exemple, lors de la désactivation des vérifications de contraintes). Dans ce cas, les transactions simultanées d'isolement d'instantané qui accèdent à des tables faisant l'objet d'insertion en bloc échouent.  
   
- ![Icône de flèche utilisée avec le lien Retour au début](media/uparrow16x16.gif "icône de flèche utilisée avec le lien Retour au début") [dans ce Guide](#Top)  
+ ![Icône de flèche utilisée avec le lien retour au début](media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [dans ce guide](#Top)  
   
 ## <a name="customizing-locking-and-row-versioning"></a>Personnalisation du verrouillage et du contrôle de version de ligne  
   
 ### <a name="customizing-the-lock-time-out"></a>Personnalisation du délai d'attente de verrouillage  
 
- Quand une instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] ne peut pas accorder un verrou à une transaction, car une autre transaction possède déjà un verrou en conflit sur la ressource, la première transaction se bloque, dans l’attente de la libération du verrou existant. Par défaut, il n'existe pas de délai d'expiration obligatoire et aucun moyen de tester si une ressource est déjà verrouillée avant de la verrouiller, excepté par une tentative d'accès aux données (avec un risque de blocage infini).  
+ Lorsqu’une instance du [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ne peut pas accorder un verrou à une transaction, car une autre transaction possède déjà un verrou en conflit sur la ressource, la première transaction est bloquée en attendant la libération du verrou existant. Par défaut, il n'existe pas de délai d'expiration obligatoire et aucun moyen de tester si une ressource est déjà verrouillée avant de la verrouiller, excepté par une tentative d'accès aux données (avec un risque de blocage infini).  
   
 > [!NOTE]  
 >  Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], utilisez la vue de gestion dynamique **sys.dm_os_waiting_tasks** pour déterminer si un processus est bloqué et identifier l’auteur du blocage. Dans les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], utilisez la procédure stockée système **sp_who**.  
@@ -1647,7 +1653,7 @@ ALTER DATABASE AdventureWorks2012
   
  L'implémentation d'un gestionnaire d'erreurs qui intercepte le message d'erreur 1222 permet à une application de prendre les mesures conséquentes au délai d'expiration, par exemple soumettre à nouveau l'instruction qui été bloquée ou restaurer toute la transaction.  
   
- Pour déterminer le paramètre LOCK_TIMEOUT actuel, exécutez le @@LOCK_TIMEOUT (fonction) :  
+ Pour déterminer le paramètre de LOCK_TIMEOUT actuel, exécutez la@LOCK_TIMEOUT fonction @ :  
   
 ```  
 SELECT @@lock_timeout;  
@@ -1656,7 +1662,7 @@ GO
   
 ### <a name="customizing-transaction-isolation-level"></a>Personnalisation du niveau d'isolation des transactions  
 
- READ COMMITTED est le niveau d’isolation par défaut pour le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)]. Si une application doit fonctionner à un niveau d'isolation différent, elle peut le définir selon plusieurs méthodes :  
+ READ COMMITTED est le niveau d’isolation par [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]défaut pour le. Si une application doit fonctionner à un niveau d'isolation différent, elle peut le définir selon plusieurs méthodes :  
   
 -   Exécuter l’instruction [SET TRANSACTION ISOLATION LEVEL](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
   
@@ -1766,7 +1772,7 @@ GO
   
  Dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], l'option LOCK_ESCALATION de l'instruction ALTER TABLE peut défavoriser des verrous de table et activer des verrous HoBT sur des tables partitionnées. Cette option n'est pas un indicateur de verrouillage, mais elle peut servir à réduire l'escalade de verrous. Pour plus d’informations, consultez [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql).  
   
-###  <a name="Customize"></a> Personnalisation du verrouillage pour un index  
+###  <a name="Customize"></a>Personnalisation du verrouillage d’un index  
 
  Dans la plupart des cas, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise une stratégie de verrouillage dynamique qui choisit automatiquement la granularité de verrouillage la plus appropriée pour les requêtes. Nous vous recommandons de ne pas remplacer les niveaux de verrouillage par défaut, pour lesquels le verrouillage de page et de ligne est activé, sauf si les modèles d'accès à la table ou à l'index sont bien assimilés et cohérents et s'il existe une contention de ressources à résoudre. Le remplacement d’un niveau de verrouillage peut affecter considérablement les accès simultanés à une table ou un index. Par exemple, la spécification de verrous de niveau table uniquement sur une table de grande taille à laquelle les utilisateurs accèdent fréquemment peut provoquer des goulets d’étranglement, car les utilisateurs doivent attendre que le verrou de niveau table soit libéré avant de pouvoir accéder à la table.  
   
@@ -1776,7 +1782,7 @@ GO
   
  Parfois, un blocage se produit dans les circonstances suivantes : deux opérations simultanées acquièrent des verrous de ligne sur la même table, puis se bloquent, car elles doivent toutes les deux verrouiller la page. L'interdiction des verrous de ligne force l'une des opérations à attendre, ce qui évite le blocage.  
   
- La granularité de verrouillage utilisée pour un index peut être définie via les instructions CREATE INDEX et ALTER INDEX. Les paramètres de verrouillage s'appliquent à la fois aux pages d'index et aux pages de table. De plus, les instructions CREATE TABLE et ALTER TABLE peuvent être utilisées pour définir la granularité de verrouillage sur les contraintes PRIMARY KEY et UNIQUE. Pour descendante compatibilité, le **sp_indexoption** procédure stockée système peut également définir la granularité. Pour afficher l'option de verrouillage en cours pour un index donné, utilisez la fonction INDEXPROPERTY. Les verrous au niveau des pages, des lignes, ou une combinaison de ces derniers peuvent être refusés pour un index donné.  
+ La granularité de verrouillage utilisée pour un index peut être définie via les instructions CREATE INDEX et ALTER INDEX. Les paramètres de verrouillage s'appliquent à la fois aux pages d'index et aux pages de table. De plus, les instructions CREATE TABLE et ALTER TABLE peuvent être utilisées pour définir la granularité de verrouillage sur les contraintes PRIMARY KEY et UNIQUE. À des fins de compatibilité descendante, la procédure stockée système **sp_indexoption** peut également définir la granularité. Pour afficher l'option de verrouillage en cours pour un index donné, utilisez la fonction INDEXPROPERTY. Les verrous au niveau des pages, des lignes, ou une combinaison de ces derniers peuvent être refusés pour un index donné.  
   
 |Verrous refusés|Accès à l'index par|  
 |----------------------|-----------------------|  
@@ -1784,9 +1790,9 @@ GO
 |Niveau ligne|Verrous au niveau des pages et des tables|  
 |Niveau page et niveau ligne|Verrous au niveau des tables|  
   
- ![Icône de flèche utilisée avec le lien Retour au début](media/uparrow16x16.gif "icône de flèche utilisée avec le lien Retour au début") [dans ce Guide](#Top)  
+ ![Icône de flèche utilisée avec le lien retour au début](media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [dans ce guide](#Top)  
   
-##  <a name="Advanced"></a> Informations sur les transactions avancées  
+##  <a name="Advanced"></a>Informations sur les transactions avancées  
   
 ### <a name="nesting-transactions"></a>Transactions imbriquées  
 
@@ -1829,20 +1835,20 @@ GO
   
  La validation des transactions internes est ignorée par le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. La transaction est validée ou restaurée en fonction de l'action prise à la fin de la transaction la plus externe. Si la transaction externe est validée, les transactions imbriquées dans celle-ci le sont aussi. Si la transaction externe est restaurée, toutes les transactions internes le sont aussi, qu'elles aient été validées individuellement ou non.  
   
- Chaque appel à COMMIT TRANSACTION ou COMMIT WORK s'applique à la dernière instruction BEGIN TRANSACTION exécutée. Si les instructions BEGIN TRANSACTION sont imbriquées, une instruction COMMIT s'applique uniquement à la dernière transaction imbriquée, qui est la transaction la plus interne. Même si une TRANSACTION de validation *transaction_name* instruction dans une transaction imbriquée fait référence à la transaction de la transaction externe, la validation s’applique uniquement à la transaction la plus intérieure.  
+ Chaque appel à COMMIT TRANSACTION ou COMMIT WORK s'applique à la dernière instruction BEGIN TRANSACTION exécutée. Si les instructions BEGIN TRANSACTION sont imbriquées, une instruction COMMIT s'applique uniquement à la dernière transaction imbriquée, qui est la transaction la plus interne. Même si une instruction COMMIT TRANSACTION *transaction_name* dans une transaction imbriquée fait référence au nom de transaction de la transaction externe, la validation s’applique uniquement à la transaction la plus profonde.  
   
- Il n’est pas légal pour le *transaction_name* paramètre d’une instruction ROLLBACK TRANSACTION pour faire référence aux transactions internes d’un ensemble de transactions nommées imbriquées. *transaction_name* ne peut faire référence qu’au nom de la transaction la plus extérieure. Si une instruction ROLLBACK TRANSACTION *transaction_name* utilisant le nom de la transaction externe est exécutée à n’importe quel niveau d’un ensemble de transactions imbriquées, toutes les transactions imbriquées sont restaurées. Si une instruction ROLLBACK WORK ou ROLLBACK TRANSACTION sans un *transaction_name* paramètre est exécuté à n’importe quel niveau d’un ensemble de la transaction imbriquée, il restaure toutes les transactions imbriquées, y compris la transaction la plus extérieure.  
+ Il n’est pas légal que le paramètre *transaction_name* d’une instruction ROLLBACK TRANSACTION fasse référence aux transactions internes d’un ensemble de transactions imbriquées nommées. *transaction_name* ne peut faire référence qu’au nom de la transaction la plus à l’extérieur. Si une instruction ROLLBACK TRANSACTION *transaction_name* utilisant le nom de la transaction externe est exécutée à n’importe quel niveau d’un ensemble de transactions imbriquées, toutes les transactions imbriquées sont restaurées. Si une instruction ROLLBACK WORK ou ROLLBACK TRANSACTION sans paramètre *transaction_name* est exécutée à n’importe quel niveau d’un ensemble de transactions imbriquées, elle restaure toutes les transactions imbriquées, y compris la transaction la plus externe.  
   
- Le @@TRANCOUNT fonction enregistre le niveau d’imbrication de transactions en cours. Chaque instruction BEGIN TRANSACTION incrémente@TRANCOUNT d’une unité. Chaque décrémente d’instruction COMMIT TRANSACTION ou COMMIT WORK @@TRANCOUNT d’une unité. Un ROLLBACK WORK ou une instruction ROLLBACK TRANSACTION qui n’a pas un nom de la transaction restaure toutes les transactions imbriquées et remet @@TRANCOUNT à 0. Une instruction ROLLBACK TRANSACTION qui utilise le nom de transaction de la transaction la plus extérieure d’un ensemble de transactions imbriquées restaure toutes les transactions imbriquées et décrémente @@TRANCOUNT à 0. Lorsque vous ne savez pas si vous êtes déjà dans une transaction, sélectionnez@TRANCOUNT pour déterminer s’il est 1 ou plus. If @@TRANCOUNT est 0, vous n’êtes pas dans une transaction.  
+ La fonction@TRANCOUNT @ enregistre le niveau d’imbrication de la transaction actuelle. Chaque BEGIN TRANSACTION instruction incrémente @@TRANCOUNT d’une unité. Chaque instruction COMMIT TRANSACTION ou COMMIT WORK décrémente @@TRANCOUNT d’une unité. Une instruction ROLLBACK WORK ou ROLLBACK TRANSACTION qui n’a pas de nom de transaction restaure toutes les transactions imbriquées et décrémente @@TRANCOUNT à 0. Une TRANSACTION ROLLBACK qui utilise le nom de la transaction la plus à l’extérieur dans un ensemble de transactions imbriquées restaure toutes les transactions imbriquées et décrémente@TRANCOUNT @ à 0. Lorsque vous ne savez pas si vous êtes déjà dans une transaction, sélectionnez @@TRANCOUNT pour déterminer s’il s’agit d’une ou de plusieurs. Si @@TRANCOUNT est égal à 0, cela indique que vous n’êtes pas dans une transaction.  
   
 ### <a name="using-bound-sessions"></a>Utilisation de sessions associées  
 
  Les sessions associées facilitent la coordination des actions entre plusieurs sessions exécutées sur le même serveur. Les sessions associées permettent à plusieurs sessions de partager la même transaction et les mêmes verrous. Elles peuvent opérer sur les mêmes données sans conflits de verrous. Les sessions associées peuvent être créées à partir de plusieurs sessions de la même application ou à partir de sessions distinctes de plusieurs applications.  
   
- Pour participer à une session liée, une session doit appeler **sp_getbindtoken** ou **srv_getbindtoken** (via Open Data Services) pour obtenir un jeton une liaison. Un jeton d'association est une chaîne de caractères qui identifie de manière unique chaque transaction associée. Le jeton d'association est ensuite transmis aux autres sessions à associer à la session en cours. Les autres sessions se lient à la transaction en appelant **sp_bindsession** avec le jeton de liaison reçu de la première session.  
+ Pour participer à une session liée, une session appelle **sp_getbindtoken** ou **Srv_getbindtoken** (via Open Data Services) pour obtenir un jeton de liaison. Un jeton d'association est une chaîne de caractères qui identifie de manière unique chaque transaction associée. Le jeton d'association est ensuite transmis aux autres sessions à associer à la session en cours. Les autres sessions se lient à la transaction en appelant **sp_bindsession** avec le jeton de liaison reçu de la première session.  
   
 > [!NOTE]  
->  Une session doit avoir une transaction utilisateur active afin que **sp_getbindtoken** ou **srv_getbindtoken** réussisse.  
+>  Une session doit avoir une transaction utilisateur active pour que **sp_getbindtoken** ou **srv_getbindtoken** aboutisse.  
   
  Les jetons d'association doivent être transmis par le code de l'application qui crée la première session au code des applications qui lient leurs sessions à la première. Il n'existe aucune instruction [!INCLUDE[tsql](../includes/tsql-md.md)] ni fonction d'API qui permette à une application d'obtenir le jeton d'association pour une transaction démarrée par un autre processus. Les méthodes suivantes peuvent être utilisées pour transmettre un jeton d'association :  
   
@@ -1874,7 +1880,7 @@ GO
 
  Dans les versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], les sessions associées étaient principalement utilisées pour développer des procédures stockées étendues devant exécuter des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] pour le processus qui les appelle. Le passage par le processus appelant d'un jeton d'association comme paramètre de la procédure stockée permet à celle-ci d'accéder à l'espace de transaction du processus appelant, et d'intégrer ainsi la procédure stockée étendue à ce dernier.  
   
- Dans le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], les procédures stockées écrites à l'aide de CLR sont supérieures aux procédures stockées étendues en termes de sécurité, d'évolutivité et de stabilité. Procédures stockées CLR utilisent le **SqlContext** objet pour joindre le contexte de la session appelante, ne pas **sp_bindsession**.  
+ Dans le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], les procédures stockées écrites à l'aide de CLR sont supérieures aux procédures stockées étendues en termes de sécurité, d'évolutivité et de stabilité. Les procédures stockées CLR utilisent l’objet **SqlContext** pour joindre le contexte de la session appelante, et non **sp_bindsession**.  
   
  Les sessions associées peuvent être utilisées pour développer des applications à trois niveaux où la logique de gestion est incluse dans des programmes distincts qui peuvent travailler en coopération sur une seule transaction commerciale. Ces programmes doivent être codés de manière à coordonner soigneusement leur accès à une base de données. Comme les deux sessions partagent les mêmes verrous, les deux programmes ne doivent pas essayer de modifier simultanément les mêmes données. A tout moment, une seule session peut participer à la transaction ; aucune exécution en parallèle n'est possible. La transaction ne peut passer d'une session à l'autre que lors de points d'interruption bien définis, notamment lorsque l'exécution de toutes les instructions DML est terminée et que les résultats correspondants ont été extraits.  
   
@@ -1924,9 +1930,9 @@ GO
   
  Une transaction longue peut entraîner de graves problèmes pour une base de données, comme suit :  
   
--   Si une instance de serveur est arrêtée après qu’une transaction active a effectué de nombreuses modifications non validées, la phase de récupération du redémarrage suivant peut prendre beaucoup plus longue que la durée spécifiée par la **intervalle de récupération** server option de configuration ou par l’instruction ALTER DATABASE... Option SET TARGET_RECOVERY_TIME. Ces options contrôlent la fréquence des points de contrôle actifs et indirects, respectivement. Pour plus d’informations sur les types de points de contrôle, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md).  
+-   Si une instance de serveur est arrêtée après qu’une transaction active a effectué de nombreuses modifications non validées, la phase de récupération du redémarrage suivant peut prendre beaucoup plus de temps que le délai spécifié par l’option de configuration de serveur **intervalle de récupération** ou par la commande ALTER DATABASE... Définissez TARGET_RECOVERY_TIME option. Ces options contrôlent la fréquence des points de contrôle actifs et indirects, respectivement. Pour plus d’informations sur les types de points de contrôle, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md).  
   
--   Plus important, bien qu'une transaction en attente génère très peu d'entrées de journal, elle empêche la troncation du journal et entraîne ainsi sa croissance et son remplissage. Si le journal des transactions est rempli, la base de données ne peut plus effectuer de mises à jour. Pour plus d’informations, consultez [résoudre les problèmes d’un journal des transactions saturé &#40;erreur SQL Server 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md), et [journal des transactions &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md).  
+-   Plus important, bien qu'une transaction en attente génère très peu d'entrées de journal, elle empêche la troncation du journal et entraîne ainsi sa croissance et son remplissage. Si le journal des transactions est rempli, la base de données ne peut plus effectuer de mises à jour. Pour plus d’informations, consultez [résoudre les problèmes liés à un journal des transactions complet &#40;SQL Server erreur 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)et [au journal des transactions &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md).  
   
 #### <a name="discovering-long-running-transactions"></a>Découverte des transactions de longue durée  
 
@@ -1934,7 +1940,7 @@ GO
   
 -   **sys.dm_tran_database_transactions**  
   
-     Cet affichage de gestion dynamique retourne des informations sur les transactions au niveau de la base de données. Pour une transaction longue, les colonnes particulièrement intéressantes incluent l’heure du premier enregistrement de journal (**database_transaction_begin_time**), l’état actuel de la transaction (**database_transaction_state**) et le numéro séquentiel dans le journal de l’enregistrement initial dans le journal des transactions (**database_transaction_begin_lsn**).  
+     Cet affichage de gestion dynamique retourne des informations sur les transactions au niveau de la base de données. Pour une transaction de longue durée, les colonnes particulièrement intéressantes incluent l’heure du premier enregistrement de journal (**database_transaction_begin_time**), l’état actuel de la transaction (**database_transaction_state**) et le numéro séquentiel dans le journal (LSN) de l’enregistrement de début dans le journal des transactions (**database_transaction_begin_lsn**).  
   
      Pour plus d’informations, consultez [sys.dm_tran_database_transactions &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql).  
   
@@ -1946,12 +1952,12 @@ GO
 
  Vous devrez peut-être utiliser l'instruction KILL. Utilisez cette instruction avec précaution, particulièrement lorsque des processus critiques sont en cours d'exécution. Pour plus d’informations, consultez [KILL &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/kill-transact-sql).  
   
- ![Icône de flèche utilisée avec le lien Retour au début](media/uparrow16x16.gif "icône de flèche utilisée avec le lien Retour au début") [dans ce Guide](#Top)  
+ ![Icône de flèche utilisée avec le lien retour au début](media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [dans ce guide](#Top)  
   
 ## <a name="see-also"></a>Voir aussi  
 
- [Isolation de SQL Server 2005 Row Versioning des transactions](https://msdn.microsoft.com/library/ms345124(v=sql.90).aspx)   
+ [Isolation des transactions basée sur le contrôle de version de ligne SQL Server 2005](https://msdn.microsoft.com/library/ms345124(v=sql.90).aspx)   
  [Charge du contrôle de version de ligne](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   
- [Comment créer une transaction autonome dans SQL Server 2008](https://blogs.msdn.com/b/sqlprogrammability/archive/2008/08/22/how-to-create-an-autonomous-transaction-in-sql-server-2008.aspx)  
+ [Procédure : créer une transaction autonome dans SQL Server 2008](https://blogs.msdn.com/b/sqlprogrammability/archive/2008/08/22/how-to-create-an-autonomous-transaction-in-sql-server-2008.aspx)  
   
   

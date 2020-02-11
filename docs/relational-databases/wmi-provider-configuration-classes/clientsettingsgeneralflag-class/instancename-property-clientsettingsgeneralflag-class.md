@@ -18,15 +18,15 @@ ms.assetid: 7de3c043-6c5a-4663-b960-a80492444a99
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 8467ffe1f372b80e79358dc80f08a2b42e77ad6a
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660187"
 ---
 # <a name="instancename-property-clientsettingsgeneralflag-class"></a>Propriété InstanceName (classe ClientSettingsGeneralFlag)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Obtient le nom de l'instance du client [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+  Obtient le nom de l’instance du [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,7 +36,7 @@ object.InstanceName [= value]
 ```  
   
 ## <a name="parts"></a>Éléments  
- *object*  
+ *dessin*  
  Objet de [classe ClientSettingsGeneralFlag](../../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md) qui représente un indicateur général pour les paramètres du serveur.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  

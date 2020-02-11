@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 01d9c5b6ae0e69febd45008bf0aa7b6c3b5a83d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109382"
 ---
 # <a name="dataset-properties-dialog-box-filters-report-builder"></a>Boîte de dialogue Propriétés du dataset, Filtres (Générateur de rapports)
@@ -42,9 +42,9 @@ ms.locfileid: "66109382"
  Déplacez le filtre sélectionné vers le bas de la liste.  
   
  **Expression**  
- Tapez ou choisissez l'expression à laquelle vous souhaitez appliquer un filtre. Cliquez sur le bouton Expression (**fx**) pour modifier l’expression.  
+ Tapez ou choisissez l'expression à laquelle vous souhaitez appliquer un filtre. Cliquez sur le bouton Expression (**FX**) pour modifier l’expression.  
   
- **Data type**  
+ **Type de données**  
  Sélectionnez le type de données du champ **Valeur**. Lorsque cela est possible, sélectionnez un type de données correspondant à celui du champ **Expression**.  
   
  Les valeurs dans **Expression** et **Valeur** doivent s’évaluer au même type de données. Par exemple, si **Expression** a pour valeur un champ du type de données System.Int32 et que **Valeur** a pour valeur 7, sélectionnez **Entier**dans la liste déroulante.  
@@ -55,12 +55,12 @@ ms.locfileid: "66109382"
  Choisissez l'opérateur à utiliser pour comparer l'expression et la valeur.  
   
  **Valeur**  
- Tapez l’expression ou la valeur à utiliser lors de l’évaluation de l’expression spécifiée dans la zone **Expression** . Cliquez sur le bouton Expression (**fx**) pour modifier l’expression.  
+ Tapez l’expression ou la valeur à utiliser lors de l’évaluation de l’expression spécifiée dans la zone **Expression** . Cliquez sur le bouton Expression (**FX**) pour modifier l’expression.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [Ajouter un filtre à un jeu de données &#40;Générateur de rapports et SSRS&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
- [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   
   

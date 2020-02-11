@@ -18,10 +18,10 @@ ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f520ddd8443699ef4d1fe388f165648b0ff188c1
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659661"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>Propriété ErrorControl (classe SqlService)
@@ -36,16 +36,16 @@ object.ErrorControl [= value]
 ```  
   
 ## <a name="parts"></a>Éléments  
- *object*  
+ *dessin*  
  Objet de [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) qui représente le service.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur de chaîne qui spécifie la gravité de l'erreur signalée si le service échoue au démarrage. Le tableau suivant répertorie les valeurs possibles.  
   
- Ignore  
+ Ignorer  
  L'utilisateur n'est pas notifié.  
   
- Normale  
+ Normal  
  L'utilisateur est notifié.  
   
  Severe  

@@ -13,18 +13,18 @@ ms.assetid: 3931e7ec-f66b-4d5d-aad3-c4bf12e8b154
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72e24c8c68a8042cda83c6fa5e448fafcaed1607
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925250"
 ---
 # <a name="getting-data"></a>Obtention de données
-[Principes de base ADO](../../../ado/guide/data/ado-fundamentals.md)et le [HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md) exemple introduit en particulier, les quatre opérations principales impliquées dans la création d’une application ADO : obtention de données, examinez les données, modification des données et la mise à jour des données. Cette section décrit l’obtention de données plus en détail.  
+Les [principes de base d’ADO](../../../ado/guide/data/ado-fundamentals.md)et de l’exemple [HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md) , en particulier, ont introduit les quatre opérations principales impliquées dans la création d’une application ADO : obtention de données, examen des données, modification des données et mise à jour des données. Cette section explique comment obtenir des données plus en détail.  
   
- Sur un niveau de base, plusieurs objets ADO contribuent aux opérations d’obtention de données. Tout d’abord, vous devez vous connecter à une source de données à l’aide d’ADO **connexion** objet. Puis vous communiquer des instructions pour la source de données à l’aide d’ADO **commande** objet. Enfin, vous recevez généralement des données dans ADO **Recordset** objet.  
+ À un niveau de base, plusieurs objets ADO contribuent aux opérations d’obtention de données. Tout d’abord, vous devez vous connecter à une source de données à l’aide d’un objet de **connexion** ADO. Ensuite, vous transmettez les instructions à la source de données à l’aide d’un objet de **commande** ADO. Enfin, vous recevez le plus souvent des données dans un objet **Recordset** ADO.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Connexion à des sources de données](../../../ado/guide/data/connecting-to-data-sources.md)  
   

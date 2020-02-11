@@ -16,18 +16,18 @@ ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b952fcd8145a2cf5392308b21d593e8c377761f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933968"
 ---
-# <a name="spdropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
+# <a name="sp_dropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime un filtre de fusion. **sp_dropmergefilter** supprime toutes les colonnes de filtre de fusion définies dans le filtre de fusion à supprimer. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,32 +39,32 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @article = ] 'article'` Est le nom de l’article. *article* est **sysname**, sans valeur par défaut.  
+`[ @article = ] 'article'`Nom de l’article. *article* est de **type sysname**et n’a pas de valeur par défaut.  
   
-`[ @filtername = ] 'filtername'` Est le nom du filtre à supprimer. *FilterName* est **sysname**, sans valeur par défaut.  
+`[ @filtername = ] 'filtername'`Nom du filtre à supprimer. *FilterName* est de **type sysname**, sans valeur par défaut.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Active ou désactive la possibilité d’invalider un instantané. *àce_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Active ou désactive la possibilité d’invalider un instantané. *force_invalidate_snapshot* est un **bit**, avec **0**comme valeur par défaut.  
   
- **0** Spécifie que les modifications apportées à l’article de fusion n’invalident pas l’instantané n’est pas valide.  
+ **0** indique que les modifications apportées à l’article de fusion n’entraînent pas la non-validité de l’instantané.  
   
- **1** signifie que les modifications apportées à l’article de fusion peuvent invalider l’instantané n’est pas valide. Si qui est le cas, la valeur **1** autorise le nouvel instantané de se produire.  
+ **1** signifie que les modifications apportées à l’article de fusion peuvent entraîner la non-validité de l’instantané. Si tel est le cas, la valeur **1** accorde l’autorisation pour que le nouvel instantané se produise.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription` Active ou désactive la possibilité de marquer un abonnement comme non valide. *àce_reinit_subscription* est un **bits**, avec une valeur par défaut **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription`Active ou désactive la possibilité de marquer un abonnement comme non valide. *force_reinit_subscription* est un **bit**, avec **0**comme valeur par défaut.  
   
- **0** Spécifie que les modifications apportées au filtre d’article de fusion n’invalident pas les abonnements n’est pas valide.  
+ **0** indique que les modifications apportées au filtre d’article de fusion n’entraînent pas la non-validité des abonnements.  
   
- **1** signifie que les modifications apportées au filtre d’article de fusion invalident les abonnements n’est pas valide.  
+ **1** signifie que les modifications apportées au filtre d’article de fusion entraînent la non-validité des abonnements.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
  **sp_dropmergefilter** est utilisé dans la réplication de fusion.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou le **db_owner** rôle de base de données fixe peuvent exécuter **sp_dropmergefilter**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_dropmergefilter**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Changer les propriétés des publications et des articles](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   

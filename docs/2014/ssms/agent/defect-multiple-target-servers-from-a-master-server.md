@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0123027ac9aa87d616b52ac5cc26f36a20f7e1e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524013"
 ---
 # <a name="defect-multiple-target-servers-from-a-master-server"></a>Annuler l'inscription de plusieurs serveurs cibles dans un serveur maître
@@ -39,13 +39,15 @@ ms.locfileid: "62524013"
   
 4.  Sous **Destinataires**, activez l'une des options suivantes :  
   
-    -   **Tous les serveurs cibles** pour annuler l'inscription de tous les serveurs cibles de ce serveur principal. Utilisez cette option si vous souhaitez désinstaller complètement la configuration de l'administration multiserveur active.  
+    -   
+  **Tous les serveurs cibles** pour annuler l'inscription de tous les serveurs cibles de ce serveur principal. Utilisez cette option si vous souhaitez désinstaller complètement la configuration de l'administration multiserveur active.  
   
-    -   **Serveurs cibles sélectionnés**, puis cliquez sur la zone **Sélectionner** correspondante afin d'annuler l'inscription de certains serveurs cibles (mais pas tous) de ce serveur maître.  
+    -   
+  **Serveurs cibles sélectionnés**, puis cliquez sur la zone **Sélectionner** correspondante afin d'annuler l'inscription de certains serveurs cibles (mais pas tous) de ce serveur maître.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer un environnement multi-serveur](create-a-multiserver-environment.md)   
- [Administration automatisée à l'échelle d'une entreprise](automated-administration-across-an-enterprise.md)   
- [Annuler l’inscription d’un serveur cible dans un serveur maître](defect-a-target-server-from-a-master-server.md)  
+ [Administration automatisée à l’échelle d’une entreprise](automated-administration-across-an-enterprise.md)   
+ [Annuler l'inscription d'un serveur cible dans un serveur maître](defect-a-target-server-from-a-master-server.md)  
   
   

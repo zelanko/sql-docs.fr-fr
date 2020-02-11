@@ -1,5 +1,5 @@
 ---
-title: CREATE TABLE, commande SQL | Microsoft Docs
+title: CREATE TABLE-commande SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2f979ccb5a44ada8e86424e0f6134f39d28a021d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096600"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE, commande SQL
-Crée une table comportant les champs spécifiés.  
+Crée une table avec les champs spécifiés.  
   
- Le pilote ODBC Visual FoxPro prend en charge la syntaxe du langage Visual FoxPro native pour cette commande. Pour plus d’informations spécifiques au pilote, consultez **pilote notes**.  
+ Le pilote ODBC Visual FoxPro prend en charge la syntaxe du langage Visual FoxPro natif pour cette commande. Pour obtenir des informations spécifiques au pilote, consultez la **section Remarques**sur le pilote.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,63 +46,63 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- CRÉER la TABLE &#124; DBF *TableName1*  
- Spécifie le nom de la table à créer. Les options de TABLE et DBF sont identiques.  
+ CREATE TABLE &#124; DBF *TableName1*  
+ Spécifie le nom de la table à créer. Les options TABLE et DBF sont identiques.  
   
  NOM *LongTableName*  
- Spécifie un nom long de la table. Un nom de table long peut être spécifié uniquement quand une base de données est ouvert, car les noms de table longs sont stockés dans les bases de données.  
+ Spécifie un nom long pour la table. Un nom de table long ne peut être spécifié que lorsqu’une base de données est ouverte, car les noms de tables longs sont stockés dans des bases de données.  
   
- Les noms longs peuvent contenir jusqu'à 128 caractères et peuvent être utilisés à la place des noms de fichiers courts dans la base de données.  
+ Les noms longs peuvent contenir jusqu’à 128 caractères et peuvent être utilisés à la place des noms de fichiers courts dans la base de données.  
   
- FREE  
- Spécifie que la table n’est pas être ajoutée à une base de données ouverte. GRATUIT n’est pas nécessaire si une base de données n’est pas ouverte.  
+ GRATUIT  
+ Spécifie que la table ne sera pas ajoutée à une base de données ouverte. La version gratuite n’est pas obligatoire si une base de données n’est pas ouverte.  
   
- *(FieldName1 FieldType* [( *nFieldWidth* [, *nPrecision*])]  
- Spécifie le nom du champ, type de champ, la largeur de champ et de champ précision (nombre de décimales), respectivement.  
+ *(FieldName1 FieldType* [( *NFieldWidth* [, *nPrecision*])]  
+ Spécifie le nom du champ, le type de champ, la largeur du champ et la précision du champ (nombre de décimales), respectivement.  
   
- *FieldType* est une lettre unique indiquant le champ [type de données](../../odbc/microsoft/visual-foxpro-field-data-types.md). Certains types de données de champ nécessitent que vous spécifiez *nFieldWidth* ou *nPrecision* ou les deux.  
+ *FieldType* est une lettre unique indiquant le type de [données](../../odbc/microsoft/visual-foxpro-field-data-types.md)du champ. Certains types de données de champ requièrent que vous spécifiiez *nFieldWidth* ou *nPrecision* , ou les deux.  
   
- *nFieldWidth* et *nPrecision* sont ignorés pour D, G, I, L, M, P, T et Y types. *nPrecision* par défaut est zéro (pas de décimales) si *nPrecision* n’est pas inclus pour les types B, F ou N.  
+ *nFieldWidth* et *nPrecision* sont ignorés pour les types D, G, I, L, M, P, T et Y. *nPrecision* est défini par défaut sur zéro (pas de décimale) si *nPrecision* n’est pas inclus pour les types B, F ou N.  
   
  NULL  
- Autorise les valeurs null dans le champ.  
+ Autorise les valeurs NULL dans le champ.  
   
  NOT NULL  
- Empêche des valeurs null dans le champ.  
+ Empêche les valeurs NULL dans le champ.  
   
- Si vous omettez la valeur NULL et NOT NULL, la valeur actuelle de SET NULL détermine si les valeurs null sont autorisées dans le champ. Toutefois, si vous omettez la valeur NULL et non NULL et incluez la clé primaire ou une clause UNIQUE, le paramètre actuel de la valeur NULL est ignoré et le champ de valeur par défaut est NOT NULL.  
+ Si vous omettez NULL et NOT NULL, la valeur actuelle de SET NULL détermine si les valeurs NULL sont autorisées dans le champ. Toutefois, si vous omettez NULL et NOT NULL et que vous incluez la clause PRIMARY KEY ou UNIQUE, la valeur actuelle de SET NULL est ignorée et la valeur par défaut du champ est NOT NULL.  
   
- Vérifiez *lExpression1*  
- Spécifie une règle de validation pour le champ. *lExpression1* peut être une fonction définie par l’utilisateur. Dès qu’un enregistrement vide est ajouté, la règle de validation est activée. Une erreur est générée si la règle de validation n’autorise pas une valeur de champ vide dans un enregistrement ajouté.  
+ VÉRIFIER *lExpression1*  
+ Spécifie une règle de validation pour le champ. *lExpression1* peut être une fonction définie par l’utilisateur. Chaque fois qu’un enregistrement vide est ajouté, la règle de validation est vérifiée. Une erreur est générée si la règle de validation n’autorise pas la présence d’une valeur de champ vide dans un enregistrement ajouté.  
   
  ERREUR *cMessageText1*  
- Spécifie le message d’erreur que Visual FoxPro affiche lorsque la règle de champ génère une erreur. Le message s’affiche uniquement lorsque les données sont modifiées dans une fenêtre Parcourir ou une fenêtre d’édition.  
+ Spécifie le message d’erreur affiché par Visual FoxPro lorsque la règle de champ génère une erreur. Le message s’affiche uniquement lorsque les données sont modifiées dans une fenêtre Parcourir ou une fenêtre d’édition.  
   
- Par défaut *eExpression1*  
- Spécifie une valeur par défaut pour le champ. Le type de données de *eExpression1* doit être le même que le type de données.  
+ *EExpression1* par défaut  
+ Spécifie une valeur par défaut pour le champ. Le type de données de *eExpression1* doit être le même que le type de données du champ.  
   
  PRIMARY KEY  
- Crée un index principal pour le champ. La balise de l’index primaire porte le même nom que le champ.  
+ Crée un index primaire pour le champ. La balise d’index primaire porte le même nom que le champ.  
   
  UNIQUE  
- Crée un index de candidat pour le champ. La balise d’index candidate porte le même nom que le champ.  
+ Crée un index candidat pour le champ. La balise d’index candidat a le même nom que le champ.  
   
 > [!NOTE]  
->  Candidat index (créés en incluant l’option UNIQUE dans CREATE TABLE ou ALTER TABLE - SQL) ne sont pas le même que les index créés avec l’option UNIQUE dans la commande de l’INDEX. Un index créé avec l’option UNIQUE dans la commande de l’INDEX autorise les clés d’index en double ; index candidats n’autorisent pas les clés d’index en double. Consultez [INDEX](../../odbc/microsoft/index-command.md) pour plus d’informations sur son option UNIQUE.  
+>  Les index candidats (créés en incluant l’option UNIQUE dans CREATE TABLE ou ALTER TABLE-SQL) ne sont pas les mêmes que les index créés avec l’option UNIQUE dans la commande INDEX. Un index créé avec l’option UNIQUE dans la commande INDEX autorise les clés d’index dupliquées ; les index candidats n’autorisent pas les clés d’index en double. Pour plus d’informations sur son option UNIQUE, consultez [index](../../odbc/microsoft/index-command.md) .  
   
- Les valeurs NULL et les enregistrements en double ne sont pas autorisées dans un champ utilisé pour un index primaire ou candidate. Toutefois, Visual FoxPro ne génère pas une erreur si vous créez un index primaire ou candidate pour un champ qui prend en charge les valeurs null. Visual FoxPro génère une erreur si vous tentez d’entrer une valeur null ou en double dans un champ utilisé pour un index primaire ou candidate.  
+ Les valeurs NULL et les enregistrements en double ne sont pas autorisés dans un champ utilisé pour un index principal ou candidat. Toutefois, Visual FoxPro ne génère pas d’erreur si vous créez un index principal ou candidat pour un champ qui prend en charge les valeurs NULL. Visual FoxPro génère une erreur si vous tentez d’entrer une valeur null ou dupliquée dans un champ utilisé pour un index principal ou candidat.  
   
- RÉFÉRENCES *TableName2*[balise *TagName1*]  
- Spécifie la table parente à laquelle une relation persistante est établie. Si vous omettez la balise *TagName1*, la relation est établie à l’aide de la clé d’index primaire de la table parente. Si la table parente n’a pas un index primaire, Visual FoxPro génère une erreur.  
+ REFERENCEs *TableName2*[tag *TagName1*]  
+ Spécifie la table parente à laquelle une relation persistante est établie. Si vous omettez la BALIse *TagName1*, la relation est établie à l’aide de la clé d’index primaire de la table parente. Si la table parente n’a pas d’index primaire, Visual FoxPro génère une erreur.  
   
- Inclure la balise *TagName1* pour établir une relation basée sur une balise d’index existante pour la table parente. Noms de balise d’index peuvent contenir jusqu'à 10 caractères.  
+ Incluez la BALIse *TagName1* pour établir une relation basée sur une balise d’index existante pour la table parente. Les noms de balises d’index peuvent contenir jusqu’à 10 caractères.  
   
- La table parente ne peut pas être une table gratuite.  
+ La table parente ne peut pas être une table libre.  
   
  NOCPTRANS  
- Empêche la traduction vers différentes pages de codes pour les champs de caractère et Mémo. Si la table est convertie en une autre page de codes, les champs pour lesquels NOCPTRANS a été spécifié ne sont pas traduits. NOCPTRANS peut être spécifié uniquement pour les champs de caractère et Mémo.  
+ Empêche la traduction vers une page de codes différente pour les champs de type caractère et mémo. Si la table est convertie en une autre page de codes, les champs pour lesquels NOCPTRANS a été spécifié ne sont pas traduits. NOCPTRANS peut être spécifié uniquement pour les champs de type caractère et mémo.  
   
- L’exemple suivant crée une table nommée mytable contenant deux champs de caractère et deux champs de type Mémo. Le deuxième champ de caractère, char2 et le deuxième champ de type Mémo, memo2, inclure NOCPTRANS pour empêcher la traduction.  
+ L’exemple suivant crée une table nommée MyTable contenant deux champs de caractères et deux champs Mémo. Le deuxième champ de caractère, Char2, et le deuxième champ MEMO, memo2, incluent NOCPTRANS pour empêcher la traduction.  
   
 ```  
 CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;  
@@ -110,63 +110,63 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
 ```  
   
  CLÉ primaire *eExpression2* balise *TagName2*  
- Spécifie un index primaire à créer. *eExpression2* spécifie un champ ou une combinaison de champs dans la table. BALISE *TagName2* Spécifie le nom de la balise de l’index primaire qui est créé. Noms de balise d’index peuvent contenir jusqu'à 10 caractères.  
+ Spécifie un index primaire à créer. *eExpression2* spécifie un champ ou une combinaison de champs dans la table. TAG *TagName2* spécifie le nom de la balise d’index primaire qui est créée. Les noms de balises d’index peuvent contenir jusqu’à 10 caractères.  
   
- Comme une table peut avoir qu’un seul index primaire, vous ne peut pas inclure cette clause si vous avez déjà créé un index primaire pour un champ. Visual FoxPro génère une erreur si vous incluez plusieurs clauses de clé primaire dans CREATE TABLE.  
+ Étant donné qu’une table ne peut avoir qu’un seul index primaire, vous ne pouvez pas inclure cette clause si vous avez déjà créé un index primaire pour un champ. Visual FoxPro génère une erreur si vous incluez plusieurs clauses de clé primaire dans CREATE TABLE.  
   
- UNIQUE *eExpression3*balise *TagName3*  
- Crée un index de candidat. *eExpression3* spécifie un champ ou une combinaison de champs dans la table. Toutefois, si vous avez créé un index principal avec une des options de la clé primaire, vous ne pouvez pas inclure le champ qui a été spécifié pour l’index primaire. BALISE *TagName3* spécifie un nom de balise pour la balise d’index de candidat qui est créé. Noms de balise d’index peuvent contenir jusqu'à 10 caractères.  
+ Étiquette *EEXPRESSION3*unique *TagName3*  
+ Crée un index candidat. *eExpression3* spécifie un champ ou une combinaison de champs dans la table. Toutefois, si vous avez créé un index primaire avec l’une des options de clé primaire, vous ne pouvez pas inclure le champ qui a été spécifié pour l’index primaire. TAG *TagName3* spécifie un nom de balise pour la balise d’index candidat qui est créée. Les noms de balises d’index peuvent contenir jusqu’à 10 caractères.  
   
  Une table peut avoir plusieurs index candidats.  
   
  CLÉ étrangère *eExpression4*balise *TagName4*[NODUP]  
- Crée un index (non essentielles) étrangère et établit une relation à une table parent. *eExpression4* Spécifie l’expression de clé étrangère d’index, et *TagName4* Spécifie le nom de la balise de clé étrangère d’index qui est créé. Noms de balise d’index peuvent contenir jusqu'à 10 caractères. Inclure NODUP pour créer un index étrangère candidate.  
+ Crée un index étranger (non primaire) et établit une relation avec une table parente. *eExpression4* spécifie l’expression de clé d’index étrangère et *TagName4* spécifie le nom de la balise de clé d’index étrangère qui est créée. Les noms de balises d’index peuvent contenir jusqu’à 10 caractères. Incluez NODUP pour créer un index étranger candidat.  
   
- Vous pouvez créer plusieurs index étrangères pour la table, mais les expressions d’index étrangère doivent spécifier différents champs de la table.  
+ Vous pouvez créer plusieurs index étrangers pour la table, mais les expressions d’index étrangères doivent spécifier des champs différents dans la table.  
   
- RÉFÉRENCES *TableName3*[balise *TagName5*]  
- Spécifie la table parente à laquelle une relation persistante est établie. Inclure la balise *TagName5* pour établir une relation basée sur une balise d’index pour la table parente. Noms de balise d’index peuvent contenir jusqu'à 10 caractères. Par défaut, si vous omettez la balise *TagName5,* la relation est établie à l’aide de la clé d’index primaire de la table parente.  
+ REFERENCEs *TableName3*[tag *TagName5*]  
+ Spécifie la table parente à laquelle une relation persistante est établie. Incluez la BALIse *TagName5* pour établir une relation basée sur une balise d’index pour la table parente. Les noms de balises d’index peuvent contenir jusqu’à 10 caractères. Par défaut, si vous omettez la BALIse *TagName5,* la relation est établie à l’aide de la clé d’index primaire de la table parente.  
   
- Vérifiez *eExpression2*[erreur *cMessageText2*]  
- Spécifie la règle de validation de table. ERREUR *cMessageText2* Spécifie le message d’erreur Visual FoxPro affiche lors de l’exécution de la règle de validation de table. Le message s’affiche uniquement lorsque des données sont modifiées au sein d’une fenêtre Parcourir ou modifier la fenêtre.  
+ VÉRIFIER *eExpression2*[Error *cMessageText2*]  
+ Spécifie la règle de validation de table. ERREUR *cMessageText2* spécifie le message d’erreur affiché par Visual FoxPro lors de l’exécution de la règle de validation de table. Le message s’affiche uniquement lorsque les données sont modifiées dans une fenêtre Parcourir ou une fenêtre d’édition.  
   
- À partir du tableau *ArrayName*  
- Spécifie le nom d’un tableau existant dont le contenu est le nom, type, précision et mise à l’échelle pour chaque champ dans la table. Le contenu du tableau peut être défini avec la **AFIELDS**(fonction) ().  
+ À partir du tableau *arrayName*  
+ Spécifie le nom d’un tableau existant dont le contenu est le nom, le type, la précision et l’échelle pour chaque champ de la table. Le contenu du tableau peut être défini avec la fonction **AFIELDS**().  
   
 ## <a name="remarks"></a>Notes  
- La nouvelle table est ouvert dans la zone la plus basse de travail disponible et est accessible par son alias. La nouvelle table est ouverte en mode exclusif, quel que soit le paramètre actuel de définir exclusif.  
+ La nouvelle table est ouverte dans la zone de travail disponible la plus basse et est accessible par son alias. La nouvelle table est ouverte en mode exclusif, quelle que soit la valeur actuelle de SET EXCLUSIVE.  
   
- Si une base de données est ouverte et que vous n’incluez pas la clause gratuite, la nouvelle table est ajoutée à la base de données. Impossible de créer une nouvelle table portant le même nom en tant que table dans la base de données.  
+ Si une base de données est ouverte et que vous n’incluez pas la clause FREE, la nouvelle table est ajoutée à la base de données. Vous ne pouvez pas créer une nouvelle table portant le même nom qu’une table dans la base de données.  
   
- Si une base de données est ouverte, CREATE TABLE - SQL requiert une utilisation exclusive de la base de données. Pour ouvrir une base de données pour un usage exclusif, inclure exclusif dans ouvrir la base de données.  
+ Si une base de données est ouverte, CREATE TABLE-SQL requiert l’utilisation exclusive de la base de données. Pour ouvrir une base de données en vue d’une utilisation exclusive, incluez EXCLUSIVE dans la base de données ouverte.  
   
- Si une base de données n’est pas ouverte lorsque vous créez la nouvelle table, y compris les clauses de nom, CHECK, DEFAULT, FOREIGN KEY, PRIMARY KEY ou références génère une erreur.  
+ Si une base de données n’est pas ouverte au moment de la création de la table, y compris les clauses nom, vérification, valeur par défaut, clé étrangère, clé primaire ou références génèrent une erreur.  
   
 > [!NOTE]  
->  Syntaxe de CREATE TABLE utilise des virgules pour séparer certaines options de CREATE TABLE. En outre, NULL, pas NULL, chèque, par défaut, clé primaire et une clause UNIQUE doivent être placés entre parenthèses contenant les définitions de colonne.  
+>  CREATE TABLE syntaxe utilise des virgules pour séparer certaines options de CREATE TABLE. En outre, les clauses NULL, NOT NULL, CHECK, DEFAULT, PRIMARY KEY et UNIQUE doivent être placées entre parenthèses contenant les définitions de colonne.  
   
-## <a name="driver-remarks"></a>Notes de pilote  
- Lorsque votre application envoie l’instruction ODBC SQL CREATE TABLE pour la source de données, le pilote ODBC Visual FoxPro se traduit par la commande dans la ligne de commande Visual FoxProCREATE TABLE à l’aide de la syntaxe indiquée dans le tableau suivant.  
+## <a name="driver-remarks"></a>Remarques sur le pilote  
+ Lorsque votre application envoie l’instruction SQL ODBC CREATE TABLE à la source de données, le pilote ODBC Visual FoxPro convertit la commande en commande Visual FoxProCREATE TABLE à l’aide de la syntaxe indiquée dans le tableau suivant.  
   
-|Syntaxe ODBC|Syntaxe de Visual FoxPro|  
+|Syntaxe ODBC|Syntaxe Visual FoxPro|  
 |-----------------|--------------------------|  
-|CREATE TABLE *nom de table de base*<br /><br /> (*type de données d’identificateur de colonne*<br /><br /> [NON NULL]<br /><br /> [,*type de données d’identificateur de colonne*<br /><br /> [PAS DE VALEUR NULL]...)|CRÉER la TABLE *TableName1* [nom *LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [, *nPrecision*])]<br /><br /> [NON NULL)]|  
+|Nom de la *table de base* de CREATE TABLE<br /><br /> (*type de données de l’identificateur de colonne*<br /><br /> [NON NULL]<br /><br /> [,*type de données de l’identificateur de colonne*<br /><br /> [NON NULL]...)|CREATE TABLE *TableName1* [name *LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [, *nPrecision*])]<br /><br /> [NOT NULL])|  
   
- Lorsque vous créez une table en utilisant le pilote, le pilote ferme la table immédiatement après la création d’autoriser l’accès à la table par d’autres utilisateurs. Cela diffère de Visual FoxPro, ce qui laisse l’open exclusivement lors de la création de la table. Toutefois, si l’exécution d’une procédure stockée sur votre source de données contenant une instruction CREATE TABLE, la table est laissée ouverte.  
+ Lorsque vous créez une table à l’aide du pilote, le pilote ferme la table immédiatement après sa création afin d’autoriser d’autres utilisateurs à accéder à la table. Cela diffère de Visual FoxPro, ce qui laisse la table ouverte exclusivement lors de la création. Toutefois, si une procédure stockée de votre source de données contenant une instruction CREATE TABLE est exécutée, la table reste ouverte.  
   
- Si la source de données est une base de données (fichier .dbc), le pilote ODBC Visual FoxPro crée une table nommée *LongTableName* avec le même nom que le *nom de table de base*.  
+ Si la source de données est une base de données (fichier. DBC), le pilote ODBC Visual FoxPro crée une table nommée *LongTableName* portant le même nom que le nom de la *table de base*.  
   
-### <a name="using-data-definition-language-ddl"></a>À l’aide du langage de définition de données (DDL)  
- Vous ne pouvez pas inclure DDL aux emplacements suivants :  
+### <a name="using-data-definition-language-ddl"></a>Utilisation du langage de définition de données (DDL)  
+ Vous ne pouvez pas inclure DDL dans les emplacements suivants :  
   
--   Dans une instruction SQL par lots qui requiert une transaction  
+-   Dans une instruction SQL batch qui requiert une transaction  
   
--   En mode de validation manuelle, après une instruction qui requiert une transaction, sauf si votre application appelle d’abord **SQLTransact**.  
+-   En mode de validation manuelle, après une instruction qui nécessitait une transaction, à moins que votre application n’appelle d’abord **SQLTransact**.  
   
- Par exemple, si vous souhaitez créer une table temporaire, vous devez créer la table avant de commencer l’instruction qui requiert une transaction. Si vous incluez l’instruction CREATE TABLE dans une instruction SQL qui requiert une transaction par lots, le pilote retourne un message d’erreur.  
+ Par exemple, si vous souhaitez créer une table temporaire, vous devez créer la table avant de commencer l’instruction qui requiert une transaction. Si vous incluez l’instruction CREATE TABLE dans une instruction SQL batch qui requiert une transaction, le pilote retourne un message d’erreur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [ALTER TABLE, commande SQL](../../odbc/microsoft/alter-table-sql-command.md)   
- [Types de données pris en charge (pilote ODBC de Visual FoxPro)](../../odbc/microsoft/supported-data-types-visual-foxpro-odbc-driver.md)   
- [INSERT, commande SQL](../../odbc/microsoft/insert-sql-command.md)   
+ [ALTER TABLE-commande SQL](../../odbc/microsoft/alter-table-sql-command.md)   
+ [Types de données pris en charge (pilote ODBC Visual FoxPro)](../../odbc/microsoft/supported-data-types-visual-foxpro-odbc-driver.md)   
+ [Commande INSERT-SQL](../../odbc/microsoft/insert-sql-command.md)   
  [SELECT, commande SQL](../../odbc/microsoft/select-sql-command.md)

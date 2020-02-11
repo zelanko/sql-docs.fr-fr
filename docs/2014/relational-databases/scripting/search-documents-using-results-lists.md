@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03fa961955b963f0149fbfcd2dbdfc379bb8a7cf
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243309"
 ---
 # <a name="search-documents-using-results-lists"></a>Effectuer une recherche dans des documents à l'aide des listes de résultats
@@ -53,18 +53,18 @@ ms.locfileid: "75243309"
   
 5.  Cliquez sur **Remplacer** pour remplacer le résultat de la recherche en cours par le texte spécifié dans la zone **Remplacer par** . Vous pouvez ignorer une occurrence isolée en cliquant sur **Suivant** ou l’ensemble d’un fichier en cliquant sur **Ignorer le fichier**.  
   
-     \-ni  
+     \- ou -  
   
      Cliquez sur **Remplacer tout** pour remplacer toutes les occurrences trouvées par le texte spécifié dans la zone **Remplacer par** . Cochez la case **Conserver les fichiers modifiés ouverts après un remplacement global** si vous souhaitez annuler certains remplacements à un autre moment.  
   
     > [!NOTE]  
-    >  **Remplacer tout** remplace toutes les occurrences trouvées, y compris celles des fichiers que vous avez ignorés avec **ignorer le fichier** ou **suivant**. Vous pouvez utiliser **Annuler** uniquement pour les remplacements effectués dans des fichiers restant ouverts après cette opération.  
+    >  La commande**Remplacer tout** remplace toutes les occurrences trouvées, notamment celles que vous avez ignouées en cliquant sur le bouton **Ignouer le fichier** ou **Suivant**. Vous pouvez utiliser **Annuler** uniquement pour les remplacements effectués dans des fichiers restant ouverts après cette opération.  
   
  Les informations relatives aux remplacements s'affichent par défaut dans la fenêtre Résultats de la recherche 1. Vous pouvez parcourir les remplacements en double-cliquant sur chaque entrée de la fenêtre Résultats de la recherche 1.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rechercher et remplacer](search-and-replace.md)   
- [Rechercher des documents de manière interactive](search-documents-interactively.md)   
+ [Recherche et remplacement](search-and-replace.md)   
+ [Effectuer une recherche de façon interactive dans des documents](search-documents-interactively.md)   
  [Rechercher du texte avec des caractères génériques](search-text-with-wildcards.md)   
  [Rechercher du texte avec des expressions régulières](search-text-with-regular-expressions.md)  
   

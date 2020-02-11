@@ -10,10 +10,10 @@ ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: f0a79169b3ee192af278aeb4465fb13d7a311783
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251586"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Importer un domaine à partir d'un fichier .dqs
@@ -26,14 +26,14 @@ ms.locfileid: "75251586"
   
  Lorsque vous importez un domaine, le nom du domaine reste le même que le nom du domaine exporté à l’origine, à moins que ce nom de domaine existe déjà, auquel cas DQS ajoute « _1 » au nom. C'est également le cas si vous importez un domaine composite qui contient un domaine individuel portant le même nom qu'un domaine existant.  
   
-##  <a name="BeforeYouBegin"></a>Avant de commencer  
+##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Prerequisites"></a>Conditions préalables  
  Pour importer un domaine à partir d'un fichier .dqs, vous devez avoir déjà exporté un domaine unique ou un domaine composite (contenant plusieurs domaines uniques) vers le fichier .dqs. Le fichier .dqs doit contenir un seul domaine. Vous devez également avoir créé et ouvert une base de connaissances dans laquelle importer le domaine.  
   
-###  <a name="Security"></a>Caution  
+###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a>Autorisations  
+####  <a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour importer un domaine à partir d'un fichier de données .dqs.  
   
 ##  <a name="Import"></a>Importer un domaine à partir d’un fichier. DQS  

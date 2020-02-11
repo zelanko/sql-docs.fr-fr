@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21f58cd6991b760edeefb81c37e02c617f8e09cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916965"
 ---
 # <a name="shrink-a-database"></a>Réduire une base de données
@@ -80,7 +80,7 @@ ms.locfileid: "62916965"
      **Espace libre disponible**  
      Affiche la totalité de l'espace disponible dans les fichiers de données et les fichiers journaux de la base de données sélectionnée.  
   
-     **Réorganiser les fichiers avant de libérer de l'espace inutilisé**  
+     **Réorganiser les fichiers avant de libérer de l’espace inutilisé**  
      Activer cette option équivaut à exécuter DBCC SHRINKDATABASE en spécifiant une option de pourcentage cible. Désactiver cette option équivaut à exécuter DBCC SHRINKDATABASE avec l'option TRUNCATEONLY. Par défaut, cette option n'est pas sélectionnée à l'ouverture de la boîte de dialogue. Si cette option est sélectionnée, l'utilisateur doit spécifier une option de pourcentage cible.  
   
      **Espace libre maximal dans les fichiers après réduction**  
@@ -100,12 +100,12 @@ ms.locfileid: "62916965"
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkdb1)]  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir réduit une base de données  
+##  <a name="FollowUp"></a>Suivi : après avoir réduit une base de données  
  Les données qui sont déplacées pour réduire un fichier peuvent être dispersées à n'importe quel emplacement disponible dans le fichier. Cela provoque la fragmentation de l'index et peut ralentir les performances des requêtes qui recherchent une plage de l'index. Pour éliminer la fragmentation, reconstruisez les index dans le fichier après réduction.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Réduire un fichier](shrink-a-file.md)   
- [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
+ [sys. databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
  [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
  [DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
  [DBCC SHRINKFILE &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)   

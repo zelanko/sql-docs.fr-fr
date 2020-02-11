@@ -1,5 +1,5 @@
 ---
-title: Custom Messages for Logging | Microsoft Docs
+title: Messages personnalisés pour la journalisation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a557d3dfddf5989c580b0ba78f9b5d930c548617
-ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67316666"
 ---
 # <a name="custom-messages-for-logging"></a>Messages personnalisés pour la journalisation
+  
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit un ensemble complet d'événements personnalisés permettant d'écrire des entrées de journal pour des packages et bon nombre de tâches. Vous pouvez utiliser ces entrées pour enregistrer des informations détaillées sur l'avancement, les résultats et les problèmes d'exécution en enregistrant des événements prédéfinis ou des messages définis par l'utilisateur en vue d'une analyse ultérieure. Vous pouvez ainsi enregistrer l'heure de début et de fin d'une insertion en bloc pour identifier des problèmes de performances lors de l'exécution du package.  
   
  Les entrées de journal personnalisées constituent un ensemble qui se distingue de l'ensemble des événements de journalisation standard, disponibles pour les packages et tous les conteneurs et tâches. Ces entrées sont conçues pour capturer des informations utiles sur une tâche spécifique d'un package. Par exemple, l'une des entrées de journal personnalisées pour la tâche d'exécution de requêtes SQL consigne l'instruction SQL que la tâche exécute dans le journal.  
@@ -33,25 +34,25 @@ ms.locfileid: "67316666"
   
  [Package](#Package)  
   
- [Tâche d'insertion en bloc](#BulkInsert)  
+ [tâche d'insertion en bloc](#BulkInsert)  
   
  [tâche de flux de données](#DataFlow)  
   
- [Tâche d'exécution DTS 2000](#ExecuteDTS200)  
+ [Tâche d’exécution DTS 2000](#ExecuteDTS200)  
   
  [Tâche d'exécution de processus](#ExecuteProcess)  
   
- [Tache d'exécution de requêtes SQL](#ExecuteSQL)  
+ [Tâche d’exécution de requêtes SQL](#ExecuteSQL)  
   
  [Tâches du système de fichiers](#FileSystem)  
   
  [Tâche FTP](#FTP)  
   
- [Tâche MSMQ](#MessageQueue)  
+ [Message Queue Task](#MessageQueue)  
   
  [Tâche de script](#Script)  
   
- [Tâche Envoyer un message](#SendMail)  
+ [Tache Envoyer un message](#SendMail)  
   
  [Tâche de transfert de bases de données](#TransferDatabase)  
   
@@ -80,11 +81,11 @@ ms.locfileid: "67316666"
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
-|`PackageStart`|Indique que le package a commencé à s'exécuter.<br /><br /> Remarque : Cette entrée de journal est automatiquement écrite au journal. Vous ne pouvez pas l'exclure.|  
-|`PackageEnd`|Indique que le package est terminé.<br /><br /> Remarque : Cette entrée de journal est automatiquement écrite au journal. Vous ne pouvez pas l'exclure.|  
+|`PackageStart`|Indique que le package a commencé à s'exécuter.<br /><br /> Remarque : cette entrée de journal est automatiquement écrite dans le journal. Vous ne pouvez pas l'exclure.|  
+|`PackageEnd`|Indique que le package est terminé.<br /><br /> Remarque : cette entrée de journal est automatiquement écrite dans le journal. Vous ne pouvez pas l'exclure.|  
 |`Diagnostic`|Fournit des informations sur la configuration système qui affecte l'exécution du package, notamment le nombre d'exécutables pouvant s'exécuter simultanément.<br /><br /> L'entrée de journal `Diagnostic` inclut également des entrées avant et après les appels effectués auprès des fournisseurs de données externes. Pour plus d’informations, voir [Outils de dépannage de la connectivité des packages](troubleshooting/troubleshooting-tools-for-package-connectivity.md).|  
   
-###  <a name="BulkInsert"></a> Tâche d'insertion en bloc  
+###  <a name="BulkInsert"></a>Tâche d’insertion en bloc  
  Le tableau suivant répertorie les entrées de journal personnalisées de la tâche d'insertion en bloc.  
   
 |Entrée du journal|Description|  
@@ -93,7 +94,7 @@ ms.locfileid: "67316666"
 |`DTSBulkInsertTaskEnd`|Indique que l'insertion en bloc est terminée.|  
 |`DTSBulkInsertTaskInfos`|Fournit des informations détaillées concernant la tâche.|  
   
-###  <a name="DataFlow"></a> tâche de flux de données  
+###  <a name="DataFlow"></a>Tâche de workflow  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche de flux de données.  
   
 |Entrée du journal|Description|  
@@ -109,17 +110,17 @@ ms.locfileid: "67316666"
 |`PipelineExecutionTrees`|Indique les arborescences d'exécution de la disposition du flux de données. Le planificateur du moteur du flux de données utilise les arborescences pour construire le plan d’exécution du flux de données.|  
 |`PipelineInitialization`|Donne des informations d'initialisation relatives à la tâche. Ces informations incluent les répertoires à utiliser pour le stockage temporaire des données blob, la taille par défaut de la mémoire tampon, ainsi que le nombre de lignes contenues dans une mémoire tampon. Selon la configuration de la tâche de flux de données, plusieurs entrées de journal peuvent être écrites.|  
   
-###  <a name="ExecuteDTS200"></a> Tâche d'exécution DTS 2000  
+###  <a name="ExecuteDTS200"></a>Tâche d’exécution DTS 2000  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche d'exécution DTS 2000.  
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
 |`ExecuteDTS80PackageTaskBegin`|Indique que la tâche a commencé l'exécution d'un package DTS 2000.|  
-|`ExecuteDTS80PackageTaskEnd`|Indique que la tâche est terminée.<br /><br /> Remarque : Il est possible que le package DTS 2000 continue à s'exécuter à la fin de la tâche.|  
+|`ExecuteDTS80PackageTaskEnd`|Indique que la tâche est terminée.<br /><br /> Remarque : il est possible que le package DTS 2000 continue à s’exécuter à la fin de la tâche.|  
 |`ExecuteDTS80PackageTaskTaskInfo`|Fournit des informations détaillées concernant la tâche.|  
 |`ExecuteDTS80PackageTaskTaskResult`|Indique le résultat d'exécution du package DTS 2000 que la tâche a exécuté.|  
   
-###  <a name="ExecuteProcess"></a> Tâche d'exécution de processus  
+###  <a name="ExecuteProcess"></a>Tâche d’exécution de processus  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche d'exécution de processus.  
   
 |Entrée du journal|Description|  
@@ -127,21 +128,21 @@ ms.locfileid: "67316666"
 |`ExecuteProcessExecutingProcess`|Donne des informations sur le processus d'exécution de l'exécutable dont est chargé la tâche.<br /><br /> Deux entrées de journal sont écrites. La première contient des informations sur le nom et l'emplacement de l'exécutable que la tâche exécute, tandis que la seconde enregistre la sortie de l'exécutable.|  
 |`ExecuteProcessVariableRouting`|Fournit des informations sur les variables qui doivent être acheminées vers l'entrée et les sorties de l'exécutable. Les entrées du journal sont écrites pour stdin (l'entrée), stdout (la sortie) et stderr (la sortie des erreurs).|  
   
-###  <a name="ExecuteSQL"></a> Tache d'exécution de requêtes SQL  
+###  <a name="ExecuteSQL"></a>Tâche d’exécution SQL  
  Le tableau suivant décrit les entrées de journal personnalisées pour la tâche d'exécution SQL.  
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
 |`ExecuteSQLExecutingQuery`|Fournit des informations sur les phases d'exécution de l'instruction SQL. Des entrées de journal sont écrites lorsque la tâche acquiert la connexion à la base de données, lorsqu'elle commence à préparer l'instruction SQL et à la fin de l'exécution de l'instruction SQL. L'entrée de journal concernant la phase de préparation inclut l'instruction SQL que la tâche utilise.|  
   
-###  <a name="FileSystem"></a> Tâches du système de fichiers  
+###  <a name="FileSystem"></a>Tâche de système de fichiers  
  Le tableau suivant décrit l'entrée de journal personnalisée pour la tâche de système de fichiers.  
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
 |`FileSystemOperation`|Indique l'opération que la tâche effectue. L'entrée de journal est écrite au démarrage de l'opération du système de fichiers et inclut des informations sur la source et la destination.|  
   
-###  <a name="FTP"></a> Tâche FTP  
+###  <a name="FTP"></a>Tâche FTP  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche FTP.  
   
 |Entrée du journal|Description|  
@@ -149,7 +150,7 @@ ms.locfileid: "67316666"
 |`FTPConnectingToServer`|Indique que la tâche a lancé une connexion au serveur FTP.|  
 |`FTPOperation`|Indique le démarrage et le type d'une opération FTP effectuée par la tâche.|  
   
-###  <a name="MessageQueue"></a> Tâche MSMQ  
+###  <a name="MessageQueue"></a>Tâche MSMQ  
  Le tableau suivant répertorie les entrées de journal personnalisées de la tâche MSMQ.  
   
 |Entrée du journal|Description|  
@@ -163,14 +164,14 @@ ms.locfileid: "67316666"
 |`MSMQTaskInfo`|Fournit des informations détaillées concernant la tâche.|  
 |`MSMQTaskTimeOut`|Indique que le délai de la tâche a expiré.|  
   
-###  <a name="Script"></a> Tâche de script  
+###  <a name="Script"></a>Tâche de script  
  Le tableau suivant décrit l'entrée de journal personnalisée pour la tâche de script.  
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
 |`ScriptTaskLogEntry`|Indique les résultats de l'implémentation de la journalisation dans le script. Une entrée de journal est écrite pour chaque appel de la méthode `Log` de l'objet `Dts`. L'entrée est écrite à l'exécution du code. Pour plus d’informations, consultez [Journalisation dans la tâche de script](extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
-###  <a name="SendMail"></a> Tâche Envoyer un message  
+###  <a name="SendMail"></a>Tâche Envoyer un message  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche Envoyer un message.  
   
 |Entrée du journal|Description|  
@@ -179,7 +180,7 @@ ms.locfileid: "67316666"
 |`SendMailTaskEnd`|Indique que la tâche a terminé l'envoi d'un message électronique.|  
 |`SendMailTaskInfo`|Fournit des informations détaillées concernant la tâche.|  
   
-###  <a name="TransferDatabase"></a> Tâche de transfert de bases de données  
+###  <a name="TransferDatabase"></a>Tâche de transfert de base de données  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche de transfert de bases de données.  
   
 |Entrée du journal|Description|  
@@ -187,7 +188,7 @@ ms.locfileid: "67316666"
 |`SourceDB`|Spécifie la base de données que la tâche a copiée.|  
 |`SourceSQLServer`|Spécifie l'ordinateur à partir duquel la base de données a été copiée.|  
   
-###  <a name="TransferErrorMessages"></a> Tâche de transfert de messages d'erreur  
+###  <a name="TransferErrorMessages"></a>Tâche de transfert de messages d’erreur  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche de transfert de messages d'erreur.  
   
 |Entrée du journal|Description|  
@@ -195,7 +196,7 @@ ms.locfileid: "67316666"
 |`TransferErrorMessagesTaskFinishedTransferringObjects`|Indique que la tâche a terminé le transfert des messages d'erreur.|  
 |`TransferErrorMessagesTaskStartTransferringObjects`|Indique que la tâche a commencé le transfert des messages d'erreur.|  
   
-###  <a name="TransferJobs"></a> Tâche de transfert de travaux  
+###  <a name="TransferJobs"></a>Tâche de transfert de travaux  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche de transfert de travaux.  
   
 |Entrée du journal|Description|  
@@ -203,7 +204,7 @@ ms.locfileid: "67316666"
 |`TransferJobsTaskFinishedTransferringObjects`|Indique que la tâche a terminé le transfert des travaux de l’Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
 |`TransferJobsTaskStartTransferringObjects`|Indique que la tâche a commencé le transfert des travaux de l'Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
   
-###  <a name="TransferLogins"></a> Tâche de transfert de connexions  
+###  <a name="TransferLogins"></a>Tâche de transfert de connexions  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche de transfert de connexions.  
   
 |Entrée du journal|Description|  
@@ -211,7 +212,7 @@ ms.locfileid: "67316666"
 |`TransferLoginsTaskFinishedTransferringObjects`|Indique que la tâche a terminé le transfert des connexions.|  
 |`TransferLoginsTaskStartTransferringObjects`|Indique que la tâche a commencé le transfert des connexions.|  
   
-###  <a name="TransferMasterStoredProcedures"></a> Tâche de transfert de procédures stockées de master  
+###  <a name="TransferMasterStoredProcedures"></a>Tâche de transfert de procédures stockées de Master  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche de transfert de procédures stockées de master.  
   
 |Entrée du journal|Description|  
@@ -219,7 +220,7 @@ ms.locfileid: "67316666"
 |`TransferStoredProceduresTaskFinishedTransferringObjects`|Indique que la tâche a terminé le transfert des procédures stockées définies par l’utilisateur qui existent dans la base de données **master** .|  
 |`TransferStoredProceduresTaskStartTransferringObjects`|Indique que la tâche a commencé le transfert des procédures stockées définies par l’utilisateur qui existent dans la base de données **master** .|  
   
-###  <a name="TransferSQLServerObjects"></a> Tâche de transfert d'objets SQL Server  
+###  <a name="TransferSQLServerObjects"></a>Tâche de transfert d’objets SQL Server  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche de transfert d'objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 |Entrée du journal|Description|  
@@ -227,7 +228,7 @@ ms.locfileid: "67316666"
 |`TransferSqlServerObjectsTaskFinishedTransferringObjects`|Indique que la tâche a terminé le transfert des objets de base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
 |`TransferSqlServerObjectsTaskStartTransferringObjects`|Indique que la tâche a commencé le transfert des objets de base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
   
-###  <a name="WebServices"></a> Tâche de services Web  
+###  <a name="WebServices"></a>Tâche de services Web  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche de services Web.  
   
 |Entrée du journal|Description|  
@@ -236,7 +237,7 @@ ms.locfileid: "67316666"
 |`WSTaskEnd`|La tâche a terminé une méthode de service Web.|  
 |`WSTaskInfo`|Donne des informations détaillées relatives à la tâche.|  
   
-###  <a name="WMIDataReader"></a> Tâche Lecteur de données WMI  
+###  <a name="WMIDataReader"></a>Tâche lecteur de données WMI  
  Le tableau suivant répertorie les entrées de journal personnalisées de la tâche Lecteur de données WMI.  
   
 |Entrée du journal|Description|  
@@ -244,7 +245,7 @@ ms.locfileid: "67316666"
 |`WMIDataReaderGettingWMIData`|Indique que la tâche a commencé la lecture des données WMI.|  
 |`WMIDataReaderOperation`|Indique la requête WQL que la tâche a exécutée.|  
   
-###  <a name="WMIEventWatcher"></a> Tâche Observateur d'événement WMI  
+###  <a name="WMIEventWatcher"></a>Tâche Observateur d’événement WMI  
  Le tableau suivant répertorie les entrées de journal personnalisées de la tâche Observateur d'événement WMI.  
   
 |Entrée du journal|Description|  
@@ -253,7 +254,7 @@ ms.locfileid: "67316666"
 |`WMIEventWatcherTimedout`|Indique que le délai de la tâche a expiré.|  
 |`WMIEventWatcherWatchingForWMIEvents`|Indique que la tâche a commencé l'exécution de la requête WQL. L'entrée inclut la requête.|  
   
-###  <a name="XML"></a> Tâche XML  
+###  <a name="XML"></a>Tâche XML  
  Le tableau suivant décrit l'entrée de journal personnalisée de la tâche XML.  
   
 |Entrée du journal|Description|  

@@ -1,5 +1,5 @@
 ---
-title: Planifier la prise en charge de rapport cartographique | Microsoft Docs
+title: Planifier la prise en charge des rapports cartographiques | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df796e2dd4e132164f00716a9cb12f7b498d8984
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108082"
 ---
 # <a name="plan-for-map-report-support"></a>Planifier la prise en charge de rapport cartographique
-  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] prend en charge les rapports cartographiques qui utilisent des sources de données spatiales. Les données spatiales peuvent provenir de bases de données SQL Server, de fichiers de formes ESRI ou de la Bibliothèque de cartes installée avec Reporting Services ou le Générateur de rapports. Une carte peut également afficher un arrière-plan de mosaïques Bing. Un auteur de rapport peut créer un rapport qui spécifie des données spatiales ou des mosaïques Bing comme dynamique et récupéré au moment de l'exécution ou comme statique et incorporé dans la définition de rapport.  
+  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]prend en charge les rapports cartographiques qui utilisent des sources de données spatiales. Les données spatiales peuvent provenir de bases de données SQL Server, de fichiers de formes ESRI ou de la Bibliothèque de cartes installée avec Reporting Services ou le Générateur de rapports. Une carte peut également afficher un arrière-plan de mosaïques Bing. Un auteur de rapport peut créer un rapport qui spécifie des données spatiales ou des mosaïques Bing comme dynamique et récupéré au moment de l'exécution ou comme statique et incorporé dans la définition de rapport.  
   
 ## <a name="support-for-bing-maps"></a>Prise en charge de Bing Maps  
  Les cartes peuvent inclure une couche d'arrière-plan qui affiche des mosaïques Bing. Pour consulter un rapport publié qui a une couche de mosaïques, le serveur de rapports doit être configuré pour récupérer des mosaïques à partir des services Web Bing Maps. Pour plus d'informations, consultez [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md).  
   
- Dans chaque rapport, les auteurs peuvent spécifier s'il faut utiliser une connexion SSL (Secure Sockets Layer) pour récupérer des mosaïques auprès du serveur de mosaïques. Pour ce faire, dans le volet Propriétés de la couche de mosaïques, ils doivent définir la propriété booléenne usesecureconnection la valeur à `true`.  
+ Dans chaque rapport, les auteurs peuvent spécifier s'il faut utiliser une connexion SSL (Secure Sockets Layer) pour récupérer des mosaïques auprès du serveur de mosaïques. Pour ce faire, dans le volet Propriétés de la couche de mosaïques, ils doivent définir la propriété booléenne `true`UseSecureConnection sur.  
   
 > [!NOTE]  
 >  Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](https://go.microsoft.com/fwlink/?LinkId=151371) et [Déclaration de confidentialité](https://go.microsoft.com/fwlink/?LinkId=151372)(éventuellement en anglais).  
@@ -47,7 +47,7 @@ ms.locfileid: "66108082"
   
 -   Lorsque les données cartographiques doivent être incorporées, ajustez le centre de la fenêtre d'affichage et le niveau de zoom de façon à inclure uniquement les données cartographiques nécessaires pour le rapport.  
   
- Pour plus d’informations, [Maps &#40;Générateur de rapports et SSRS&#41;](report-design/maps-report-builder-and-ssrs.md).  
+ Pour plus d’informations, [mappe &#40;générateur de rapports et les&#41;SSRS ](report-design/maps-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  

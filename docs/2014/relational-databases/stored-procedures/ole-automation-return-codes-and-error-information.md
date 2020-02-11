@@ -15,18 +15,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 34744bedb701155d2695f6efc5aab3c493e6cf48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011268"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>Codes de retour OLE Automation et informations sur les erreurs
-  Les procédures stockées système OLE Automation retournent un code de retour de type `int` qui équivaut au HRESULT retourné par l'opération OLE Automation sous-jacente. Une valeur HRESULT égale à 0 indique que l'opération a réussi. Une valeur HRESULT différente de zéro est un code d’erreur OLE de forme hexadécimale 0 x 800*nnnnn*, qui est retourné comme un `int` valeur dans un code de retour de procédure stockée, HRESULT est au format 214*nnnnnnn*.  
+  Les procédures stockées système OLE Automation retournent un code de retour de type `int` qui équivaut au HRESULT retourné par l'opération OLE Automation sous-jacente. Une valeur HRESULT égale à 0 indique que l'opération a réussi. Un HRESULT différent de zéro est un code d’erreur OLE de forme hexadécimale 0x800*nnnnn*, mais lorsqu’il `int` est retourné comme valeur dans un code de retour de procédure stockée, HRESULT se présente sous la forme 214*nnnnnnn*.  
   
- Par exemple, en passant un nom d’objet non valide (SQLDMO. Xyzzy) à sp_OACreate provoque la procédure retournent un `int` HRESULT de 2147221005, ce qui correspond à 0x800401f3 en hexadécimal.  
+ Par exemple, en passant un nom d’objet non valide (SQLDMO. Xyzzy) à sp_OACreate fait en sorte que la procédure `int` retourne un HRESULT de 2147221005, qui est à 0x800401f3 au format hexadécimal.  
   
- Vous pouvez utiliser `CONVERT(binary(4), @hresult)` pour convertir un HRESULT `int` en une valeur `binary`. Toutefois, l'utilisation de `CONVERT(char(10), CONVERT(binary(4), @hresult))` produit une chaîne illisible, car chaque octet du HRESULT est converti en un seul caractère ASCII. Vous pouvez utiliser l’exemple suivant de procédure stockée Sp_hexadecimal pour convertir un `int` HRESULT à un `char` valeur qui contient une chaîne hexadécimale lisible.  
+ Vous pouvez utiliser `CONVERT(binary(4), @hresult)` pour convertir un HRESULT `int` en une valeur `binary`. Toutefois, l'utilisation de `CONVERT(char(10), CONVERT(binary(4), @hresult))` produit une chaîne illisible, car chaque octet du HRESULT est converti en un seul caractère ASCII. Vous pouvez utiliser l’exemple suivant de procédure stockée HexToChar pour `int` convertir un HRESULT `char` en une valeur qui contient une chaîne hexadécimale lisible.  
   
 ```  
 USE AdventureWorks2012;  

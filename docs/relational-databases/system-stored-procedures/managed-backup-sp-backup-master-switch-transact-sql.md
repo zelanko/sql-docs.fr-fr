@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_backup_master_switch (Transact-SQL) | Microsoft Docs
+title: managed_backup. sp_backup_master_switch (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,22 +21,22 @@ ms.assetid: 1ed2b2b2-c897-41cc-bed5-1c6bc47b9dd2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bb151279d1435c544de406e67384ce9ca1fdd11e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942066"
 ---
-# <a name="managedbackupspbackupmasterswitch-transact-sql"></a>managed_backup.sp_backup_master_switch (Transact-SQL)
+# <a name="managed_backupsp_backup_master_switch-transact-sql"></a>managed_backup. sp_backup_master_switch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Interrompt ou reprend la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+  Suspend ou reprend [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
  Utilisez cette procédure stockée pour interrompre temporairement et reprendre la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. De cette façon, tous les paramètres de configuration sont conservés et pourront être appliqués à la reprise des opérations. Lorsque la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est interrompue, la période de rétention n'est pas appliquée. Cela signifie qu'il n'y a pas de vérification pour déterminer si les fichiers doivent être supprimés du stockage ou s'il existe des fichiers de sauvegarde corrompus ou une rupture dans la séquence de journaux de transactions consécutifs.  
   
 
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,7 +47,7 @@ EXEC managed_backup.sp_backup_master_switch
   
 ##  <a name="Arguments"></a> Arguments  
  @state  
- Définissez l'état de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Le @state paramètre est **bits**. Si la valeur 0 est définie, les opérations sont interrompues, et si la valeur est 1, l'opération reprend.  
+ Définissez l'état de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Le @state paramètre est de **bits**. Si la valeur 0 est définie, les opérations sont interrompues, et si la valeur est 1, l'opération reprend.  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
  0 (réussite) ou 1 (échec)  
@@ -56,7 +56,7 @@ EXEC managed_backup.sp_backup_master_switch
  Décrit les problèmes de sécurité relatifs à l'instruction qui inclut les autorisations sous la forme d'une sous-section (en-tête H3). Envisagez d'inclure d'autres sous-sections pour le chaînage des propriétés et l'audit, le cas échéant.  
   
 ### <a name="permissions"></a>Autorisations  
- Nécessite l’appartenance au **db_backupoperator** rôle, de base de données avec **ALTER ANY CREDENTIAL** autorisations, et **EXECUTE** autorisations sur **sp_delete_ backuphistory**procédure stockée.  
+ Requiert l’appartenance au rôle de base de données **db_backupoperator** , avec les autorisations **ALTER ANY CREDENTIAL** et **Execute** sur **sp_delete_backuphistory**procédure stockée.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant peut être utilisé pour interrompre le service de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] sur l'instance sur laquelle il est exécuté :  

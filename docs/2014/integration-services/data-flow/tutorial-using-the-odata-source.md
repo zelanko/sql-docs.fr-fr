@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriel : À l’aide de la Source OData [SSIS] | Microsoft Docs'
+title: 'Didacticiel : utilisation de la source OData [SSIS] | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a799707dc57e07528afb29c135a5ee394c56354
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770215"
 ---
-# <a name="tutorial-using-the-odata-source-ssis"></a>Tutoriel : À l’aide de la Source OData [SSIS]
+# <a name="tutorial-using-the-odata-source-ssis"></a>Didacticiel : Utiliser la source OData [SSIS]
   Ce tutoriel vous guide dans le processus d’extraction de la collection **Employees** de l’exemple de service OData **Northwind** (http://services.odata.org/V3/Northwind/Northwind.svc/) ), puis de son chargement dans un fichier plat.  
   
 ## <a name="1-create-an-integration-services-project"></a>1. Créer un projet Integration Services  
   
 1.  Lancez **SQL Server Data Tools** ou [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
-2.  Cliquez sur **Fichier**, pointez sur **Nouveau**, puis cliquez sur **Projet**.  
+2.  Cliquez sur **Fichier**, pointez le curseur de la souris sur **Nouveau**, puis cliquez sur **Projet**.  
   
 3.  Dans la boîte de dialogue **Nouveau projet** , développez **Installé**, puis **Modèles**, **Business Intelligence**, et cliquez sur **Integration Services**.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "62770215"
   
 5.  Cliquez sur **Nouveau...** pour ajouter un nouveau gestionnaire de connexions OData.  
   
-6.  Entrez l'URL du service OData pour l' **Emplacement du document de service**. Il peut s'agir de l'URL qui renvoie au document de service, ou bien à un flux ou à une entité spécifique. Pour les besoins de ce didacticiel, tapez [ http://services.odata.org/V3/Northwind/Northwind.svc/ ](http://services.odata.org/V3/Northwind/Northwind.svc/).  
+6.  Entrez l'URL du service OData pour l' **Emplacement du document de service**. Il peut s'agir de l'URL qui renvoie au document de service, ou bien à un flux ou à une entité spécifique. Pour les besoins de ce didacticiel, tapez [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/).  
   
-7.  Assurez-vous que l' **Authentification Windows** est sélectionnée pour l' **authentification** à utiliser pour accéder au service OData. L'**Authentification Windows** est sélectionnée par défaut. Pour utiliser l'authentification de base, sélectionnez **Utiliser ce nom d'utilisateur et ce mot de passe**.  
+7.  Assurez-vous que l' **Authentification Windows** est sélectionnée pour l' **authentification** à utiliser pour accéder au service OData. **L’authentification Windows** est sélectionnée par défaut. Pour utiliser l'authentification de base, sélectionnez **Utiliser ce nom d'utilisateur et ce mot de passe**.  
   
 8.  Cliquez sur **Tester la connexion** à la connexion, puis cliquez sur **OK** pour créer une instance du gestionnaire de connexions OData.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62770215"
   
 10. Dans la liste déroulante **Collection** , sélectionnez **Employés**.  
   
-11. Entrez toutes les options ou filtres de requête OData supplémentaires pour **Options de requête**. Ex. $orderby=CompanyName&$top=100. Pour les besoins de ce didacticiel, entrez **$top=5**.  
+11. Entrez toutes les options ou filtres de requête OData supplémentaires pour **Options de requête**. P. $orderby=CompanyName&$top=100. Pour les besoins de ce didacticiel, entrez **$top=5**.  
   
 12. Cliquez sur **Aperçu** pour afficher un aperçu des données.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62770215"
   
 ## <a name="3-add-flat-file-destination-and-test-the-solution"></a>3. Ajouter une destination de fichier plat et tester la solution  
   
-1.  Glissez-déplacez une **Destination de fichier plat** de la **Boîte à outil SSIS** vers l’aire de conception du flux de données sous le composant **Source OData**.  
+1.  Glissez-déplacez une **Destination de fichier plat** de la **Boîte à outil SSIS** vers l’aire de conception du flux de données sous le composant **Source OData** .  
   
 2.  Connectez le composant **Source OData** au composant **Destination de fichier plat** avec la flèche bleue.  
   

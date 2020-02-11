@@ -15,25 +15,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8209bf586e5a0b288b4975869ee8903a73a27f06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188664"
 ---
 # <a name="sqltables"></a>SQLTables
-  SQLTables peut être exécutée sur un curseur côté serveur statique. Une tentative d’exécution SQLTables sur un curseur modifiable (dynamique ou jeu de clés) retourne SQL_SUCCESS_WITH_INFO, indiquant que le type de curseur a été modifié.  
+  SQLTables peut être exécuté sur un curseur côté serveur statique. Une tentative d’exécution de SQLTables sur un curseur pouvant être mis à jour (dynamique ou de jeu de clés) retourne SQL_SUCCESS_WITH_INFO indiquant que le type de curseur a été modifié.  
   
- SQLTables signale les tables de toutes les bases de données lorsque le *CatalogName* paramètre est SQL_ALL_CATALOGS et que tous les autres paramètres contiennent des valeurs par défaut (pointeurs NULL).  
+ SQLTables signale les tables de toutes les bases de données lorsque le paramètre *nomcatalogue* est SQL_ALL_CATALOGS et que tous les autres paramètres contiennent des valeurs par défaut (pointeurs null).  
   
- Pour signaler les catalogues disponibles, les schémas et les types de tables, SQLTables fait une utilisation particulière des chaînes vides (pointeurs d’octets de longueur nulle). Les chaînes vides ne sont pas des valeurs par défaut (pointeurs NULL).  
+ Pour signaler les catalogues disponibles, les schémas et les types de tables, SQLTables utilise des chaînes vides (pointeurs d’octets de longueur nulle). Les chaînes vides ne sont pas des valeurs par défaut (pointeurs NULL).  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge des informations de rapport pour les tables des serveurs liés en acceptant un nom en deux parties pour le *CatalogName* paramètre : *Nom_serveur_lié.Nom_Catalogue*.  
+ Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client prend en charge les informations de création de rapport pour les tables des serveurs liés en acceptant un nom en deux parties pour le paramètre *CatalogName* : *Linked_Server_Name.Catalog_Name*.  
   
- SQLTables retourne d’informations sur les tables dont les noms correspondent à *TableName* et sont détenus par l’utilisateur actuel.  
+ SQLTables retourne des informations sur toutes les tables dont les noms correspondent à *TableName* et qui sont détenus par l’utilisateur actuel.  
   
 ## <a name="sqltables-and-table-valued-parameters"></a>SQLTables et paramètres table  
- Lorsque l’attribut d’instruction SQL_SOPT_SS_NAME_SCOPE a la valeur SQL_SS_NAME_SCOPE_TABLE_TYPE, plutôt que sa valeur par défaut SQL_SS_NAME_SCOPE_TABLE, SQLTables retourne des informations sur les types de table. La valeur TABLE_TYPE retournée pour un type de table dans la colonne 4 du jeu de résultats retourné par SQLTables est un TYPE de TABLE. Pour plus d'informations sur SQL_SOPT_SS_NAME_SCOPE, consultez [SQLSetStmtAttr](sqlsetstmtattr.md).  
+ Lorsque l’attribut d’instruction SQL_SOPT_SS_NAME_SCOPE a la valeur SQL_SS_NAME_SCOPE_TABLE_TYPE, plutôt que sa valeur par défaut SQL_SS_NAME_SCOPE_TABLE, SQLTables retourne des informations sur les types de table. La valeur TABLE_TYPE retournée pour un type de table dans la colonne 4 du jeu de résultats retourné par SQLTables est le TYPE de TABLE. Pour plus d'informations sur SQL_SOPT_SS_NAME_SCOPE, consultez [SQLSetStmtAttr](sqlsetstmtattr.md).  
   
  Les tables, les vues et les synonymes partagent un espace de noms commun, distinct de l'espace de noms utilisé par les types de table. Bien qu'il ne soit pas possible d'avoir une table et une vue ayant le même nom, vous pouvez avoir une table et un type de table avec le même nom dans le même catalogue et le même schéma.  
   
@@ -54,7 +54,7 @@ SQLTables(hstmt, (SQLCHAR*) "%", SQL_NTS, (SQLCHAR*)"", 0, (SQLCHAR*)"",
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLTables (fonction)](https://go.microsoft.com/fwlink/?LinkId=59374)   
- [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
+ [SQLTables, fonction](https://go.microsoft.com/fwlink/?LinkId=59374)   
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

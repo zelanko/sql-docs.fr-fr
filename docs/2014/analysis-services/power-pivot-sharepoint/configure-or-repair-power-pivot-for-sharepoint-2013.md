@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac41915ab4b94f1b074874228a14f5ab6363604c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229352"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2013-powerpivot-configuration-tool"></a>Configurer ou réparer PowerPivot pour SharePoint 2013 (outil de configuration de PowerPivot)
@@ -22,7 +22,7 @@ ms.locfileid: "75229352"
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
  [Avant de commencer](#bkmk_before)  
   
@@ -118,9 +118,9 @@ ms.locfileid: "75229352"
 ||
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel Services ([NomServeur]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|Entrée utilisateur|Le serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est requis pour qu'Excel Services active les fonctionnalités principales de PowerPivot. Le nom du serveur que vous entrez dans cette page est également ajouté à la liste dans la page **Configurer les serveurs PowerPivot** .|  
 |**Configurer une nouvelle batterie de serveurs**|Serveur de base de données<br /><br /> Compte de batterie de serveurs<br /><br /> Phrase secrète<br /><br /> Port de l'Administration centrale de SharePoint|Par défaut, si nécessaire|Valeur par défaut de paramètres que vous avez entrés dans dans la page principale.|  
-|**Créer une application de service PowerPivot**|Nom d'application de service|Par défaut|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]Nom de l’application de service le nom par défaut est **application de service PowerPivot par défaut**. Vous pouvez le remplacer par une valeur différente dans l'outil.|  
-||Serveur de base de données|Par défaut|Serveur de base de données qui héberge la base de données d'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le nom par défaut du serveur est le même que celui du serveur de base de données utilisé pour la batterie. Vous pouvez utiliser une autre valeur que le nom du serveur par défaut.|  
-||Nom de la base de données|Par défaut|Nom de la base de données à créer pour la base de données d'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le nom de la base de données par défaut est basé sur le nom de l'application de service, suivi d'un GUID pour garantir un nom unique. Vous pouvez le remplacer par une valeur différente dans l'outil.|  
+|**Créer une application de service PowerPivot**|Nom d'application de service|Default|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]Nom de l’application de service le nom par défaut est **application de service PowerPivot par défaut**. Vous pouvez le remplacer par une valeur différente dans l'outil.|  
+||Serveur de base de données|Default|Serveur de base de données qui héberge la base de données d'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le nom par défaut du serveur est le même que celui du serveur de base de données utilisé pour la batterie. Vous pouvez utiliser une autre valeur que le nom du serveur par défaut.|  
+||Nom de la base de données|Default|Nom de la base de données à créer pour la base de données d'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le nom de la base de données par défaut est basé sur le nom de l'application de service, suivi d'un GUID pour garantir un nom unique. Vous pouvez le remplacer par une valeur différente dans l'outil.|  
 |**Créer une application Web par défaut**|Nom de l'application Web|Par défaut, si nécessaire|S'il n'existe aucune application Web, l'outil en crée une. L'application Web est configurée pour l'authentification en mode classique et écoute le port 80. La taille maximale de téléchargement de fichier a la valeur 2047, qui est la valeur maximale autorisée par SharePoint. La taille maximale de téléchargement de fichier permet de prendre en charge les fichiers [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] volumineux qui seront téléchargés sur le serveur.|  
 ||URL|Par défaut, si nécessaire|L'outil crée une URL basée sur le nom du serveur, en respectant les mêmes conventions d'affectation de noms de fichier que SharePoint.|  
 ||Pool d'applications|Par défaut, si nécessaire|L'outil crée un pool d'applications par défaut dans IIS.|  
@@ -193,7 +193,7 @@ ms.locfileid: "75229352"
  Ajoutez des sites de confiance dans Excel Services pour varier les autorisations et les paramètres de configuration sur les sites qui fournissent des classeurs Excel et des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Pour plus d'informations, consultez [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 ### <a name="build-a-includessgeminiincludesssgemini-mdmd-workbook"></a>Créer un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]  
- Après avoir installé les composants serveur dans une batterie, créez créer votre premier classeur Excel 2013 qui utilise des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] incorporées, puis publiez-le dans une bibliothèque SharePoint. Vous pouvez également télécharger ou publier un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] d'exemple pour vérifier l'accès aux données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans SharePoint. Pour plus d’informations, consultez les rubriques suivantes :   
+ Après avoir installé les composants serveur dans une batterie, créez créer votre premier classeur Excel 2013 qui utilise des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] incorporées, puis publiez-le dans une bibliothèque SharePoint. Vous pouvez également télécharger ou publier un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] d'exemple pour vérifier l'accès aux données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans SharePoint. Pour plus d’informations, consultez les rubriques suivantes :  
 
 -   [Nouveautés de PowerPivot dans Excel 2013](https://www.microsoft.com/microsoft-365/blog/2012/12/13/introduction-to-powerpivot-in-excel-2013/).  
   

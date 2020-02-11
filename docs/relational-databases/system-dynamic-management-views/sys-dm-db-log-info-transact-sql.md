@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_log_info (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_log_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7cb87d2d5677085edc8e6bd998f20c3c45013823
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262079"
 ---
-# <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
+# <a name="sysdm_db_log_info-transact-sql"></a>sys. dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
-Retourne [le fichier journal virtuel (fichier journal virtuel)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) informations du journal des transactions. Notez que tous les fichiers journaux des transactions sont combinés dans la sortie de table. Chaque ligne dans la sortie représente un fichier journal virtuel dans le journal des transactions et fournit des informations pertinentes pour ce fichier journal virtuel dans le journal.
+Retourne les informations de [fichier journal virtuel (fichier journal virtuel)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) du journal des transactions. Notez que tous les fichiers journaux des transactions sont combinés dans la sortie de la table. Chaque ligne de la sortie représente un fichier journal virtuel dans le journal des transactions et fournit des informations relatives à ce fichier journal virtuel dans le journal.
 
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,39 +39,39 @@ sys.dm_db_log_info ( database_id )
 ``` 
 
 ## <a name="arguments"></a>Arguments  
- *database_id* | NULL | PAR DÉFAUT  
- Est l’ID de la base de données. *database_id* est de type **int**. Les entrées valides sont le numéro d’ID de base de données, NULL ou par défaut. La valeur par défaut est NULL. NULL et par défaut sont des valeurs équivalentes dans le contexte de base de données actuelle.
+ *database_id* | NULL | VALEURS  
+ ID de la base de données. *database_id* est de **type int**. Les entrées valides sont le numéro d’identification d’une base de données, la valeur NULL ou la valeur par défaut. La valeur par défaut est NULL. NULL et DEFAULT sont des valeurs équivalentes dans le contexte de la base de données active.
  
- Spécifiez NULL pour retourner des informations de fichier journal virtuel de la base de données actuelle.
+ Spécifiez NULL pour retourner les informations de fichier journal virtuel de la base de données actuelle.
 
- La fonction intégrée [DB_ID](../../t-sql/functions/db-id-transact-sql.md) peut être spécifiée. Lorsque vous utilisez `DB_ID` sans spécifier un nom de base de données, le niveau de compatibilité de la base de données actuelle doit être supérieur ou égal à 90.  
+ Vous pouvez spécifier la fonction intégrée [DB_ID](../../t-sql/functions/db-id-transact-sql.md). Lorsque vous `DB_ID` utilisez sans spécifier de nom de base de données, le niveau de compatibilité de la base de données actuelle doit être supérieur ou égal à 90.  
 
 ## <a name="table-returned"></a>Table retournée  
 
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID de la base de données.|
-|file_id|**smallint**|Id de fichier du journal des transactions.|  
-|vlf_begin_offset|**bigint** |Offset de l’emplacement de la [le fichier journal virtuel (fichier journal virtuel)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) depuis le début du fichier journal des transactions.|
-|vlf_size_mb |**float** |[le fichier journal virtuel (fichier journal virtuel)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) taille en Mo, arrondi à 2 décimales.|     
-|vlf_sequence_number|**bigint** |[le fichier journal virtuel (fichier journal virtuel)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) numéro dans l’ordre créé de séquence. Uniquement utilisé pour identifier les fichiers journaux virtuels dans le fichier journal.|
-|vlf_active|**bit** |Indique si [le fichier journal virtuel (fichier journal virtuel)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) est en cours d’utilisation ou non. <br />0 - fichier journal virtuel n’est pas en cours d’utilisation.<br />1 - fichier journal virtuel est actif.|
-|vlf_status|**int** |État de la [le fichier journal virtuel (fichier journal virtuel)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Les valeurs possibles sont <br />0 - fichier journal virtuel est inactif <br />1 - fichier journal virtuel est initialisée mais non utilisé <br /> 2 - fichier journal virtuel est actif.|
-|vlf_parity|**tinyint** |Parité de [le fichier journal virtuel (fichier journal virtuel)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Utilisé en interne pour déterminer la fin du journal dans un fichier journal virtuel.|
-|vlf_first_lsn|**nvarchar(48)** |[Numéro de séquence journal (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) du premier enregistrement de journal dans le [le fichier journal virtuel (fichier journal virtuel)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
-|vlf_create_lsn|**nvarchar(48)** |[Numéro de séquence journal (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) du journal enregistrement créé le [le fichier journal virtuel (fichier journal virtuel)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
-|vlf_encryptor_thumbprint|**varbinary(20)**| **S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> Affiche l’empreinte numérique du chiffreur du fichier journal virtuel si le fichier journal virtuel est chiffré à l’aide de [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md), sinon NULL. |
+|file_id|**smallint**|ID de fichier du journal des transactions.|  
+|vlf_begin_offset|**bigint** |Emplacement de décalage du [fichier journal virtuel (fichier journal virtuel)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) à partir du début du fichier journal des transactions.|
+|vlf_size_mb |**float** |taille du [fichier journal virtuel (fichier journal virtuel)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) en Mo, arrondie à 2 décimales.|     
+|vlf_sequence_number|**bigint** |Numéro de séquence du [fichier journal virtuel (fichier journal virtuel)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) dans l’ordre de création. Utilisé pour identifier de manière unique fichiers journaux virtuels dans le fichier journal.|
+|vlf_active|**bit** |Indique si le [fichier journal virtuel (fichier journal virtuel)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) est en cours d’utilisation ou non. <br />0-fichier journal virtuel n’est pas en cours d’utilisation.<br />1-fichier journal virtuel est actif.|
+|vlf_status|**int** |État du [fichier journal virtuel (fichier journal virtuel)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Les valeurs possibles sont les suivants : <br />0-fichier journal virtuel est inactif <br />1-fichier journal virtuel est initialisé mais non utilisé <br /> 2-fichier journal virtuel est actif.|
+|vlf_parity|**tinyint** |Parité du [fichier journal virtuel (fichier journal virtuel)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Utilisé en interne pour déterminer la fin du journal au sein d’un fichier journal virtuel.|
+|vlf_first_lsn|**nvarchar (48)** |[Numéro séquentiel dans le journal (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) du premier enregistrement du journal dans le [fichier journal virtuel (fichier journal virtuel)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
+|vlf_create_lsn|**nvarchar (48)** |[Numéro séquentiel dans le journal (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) de l’enregistrement de journal qui a créé le [fichier journal virtuel (fichier journal virtuel)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
+|vlf_encryptor_thumbprint|**varbinary (20)**| **S’applique à :**[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> Affiche l’empreinte numérique du chiffreur du fichier journal virtuel si le fichier journal virtuel est chiffré à l’aide de [transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md), sinon null. |
 
 ## <a name="remarks"></a>Notes
-Le `sys.dm_db_log_info` fonction de gestion dynamique remplace la `DBCC LOGINFO` instruction.    
+La `sys.dm_db_log_info` fonction de gestion dynamique remplace `DBCC LOGINFO` l’instruction.    
  
 ## <a name="permissions"></a>Autorisations  
-Nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.  
+Nécessite l' `VIEW DATABASE STATE` autorisation dans la base de données.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-determing-databases-in-a-sql-server-instance-with-high-number-of-vlfs"></a>R. Définir bases de données dans une instance de SQL Server avec un grand nombre de fichiers journaux virtuels
-La requête suivante détermine les bases de données avec plus de 100 fichiers journaux virtuels dans les fichiers journaux, qui peuvent affecter le temps de démarrage, restauration et récupération de base de données.
+### <a name="a-determing-databases-in-a-sql-server-instance-with-high-number-of-vlfs"></a>R. Détermination des bases de données dans une instance SQL Server avec un nombre élevé de fichiers journaux virtuels
+La requête suivante détermine les bases de données avec plus de 100 fichiers journaux virtuels dans les fichiers journaux, ce qui peut affecter le temps de démarrage, de restauration et de récupération de la base de données.
 
 ```sql
 SELECT [name], COUNT(l.database_id) AS 'vlf_count' 
@@ -81,9 +81,9 @@ GROUP BY [name]
 HAVING COUNT(l.database_id) > 100
 ```
 
-### <a name="b-determing-the-position-of-the-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>B. Détermination de la position du dernier `VLF` dans le journal des transactions avant la réduction du fichier journal
+### <a name="b-determing-the-position-of-the-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>B. Détermination de la position de la dernière `VLF` dans le journal des transactions avant de réduire le fichier journal
 
-La requête suivante peut être utilisée pour déterminer la position de la dernier fichier journal virtuel actif avant d’exécuter shrinkfile sur le journal des transactions pour déterminer si le journal des transactions peut réduire.
+La requête suivante peut être utilisée pour déterminer la position du dernier fichier journal virtuel actif avant d’exécuter SHRINKFILE dans le journal des transactions pour déterminer si le journal des transactions peut être réduit.
 
 ```sql
 USE AdventureWorks2016
@@ -111,7 +111,7 @@ GO
 
 ## <a name="see-also"></a>Voir aussi  
 [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[Vues de gestion dynamique liées à la base de données &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[Vues de gestion dynamique liées à la base de données &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
-[sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
+[sys. dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
 

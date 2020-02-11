@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 00021ea9c23de80f6b025963543af2cf4be2f572
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905682"
 ---
 # <a name="lt-less-than-or-equal-to-mdx"></a>&lt;= (Inférieur ou égal à) (MDX)
@@ -34,9 +34,9 @@ MDX_Expression <= MDX_Expression
 ## <a name="return-value"></a>Valeur de retour  
  Valeur booléenne basée sur les conditions suivantes :  
   
--   t**rue** si les deux paramètres sont non null, et que le premier paramètre a une valeur qui est soit inférieure ou égale à la valeur du second paramètre.  
+-   Si**les** deux paramètres sont non null, et si le premier paramètre a une valeur qui est inférieure ou égale à la valeur du deuxième paramètre.  
   
--   f**interactivité** si les deux paramètres sont non null, et que le premier paramètre a une valeur qui dépasse la valeur du second paramètre.  
+-   f**false** si les deux paramètres sont non null, et si le premier paramètre a une valeur supérieure à la valeur du deuxième paramètre.  
   
 -   NULL si l'un ou l'autre ou les deux paramètres ont une valeur NULL.  
   
@@ -61,6 +61,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des opérateurs MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Référence des opérateurs MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
   
   

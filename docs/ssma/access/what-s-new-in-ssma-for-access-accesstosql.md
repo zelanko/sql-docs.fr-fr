@@ -2,23 +2,34 @@
 title: Nouveautés de SSMA for Access (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 12/04/2019
+ms.date: 01/22/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 0c13fd9b2e8c389685fff14679bb18fd8b4d4525
-ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
+ms.openlocfilehash: 168fb9acca00ef6d58f540a635c2212d408cf3bd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74834316"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76516473"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Nouveautés de SSMA for Access (AccessToSQL)
 
 Cet article répertorie les Assistant Migration SQL Server (SSMA) pour les modifications d’accès dans chaque version.
+
+## <a name="ssma-v86"></a>SSMA v 8.6
+
+En plus d’un ensemble ciblé de correctifs conçus pour améliorer la facilité d’utilisation et les performances, la version 8.6 de SSMA pour l’accès a été améliorée en ajoutant un paramètre qui permet aux utilisateurs d’omettre les propriétés étendues SSMA dans le code converti.
+
+Pour tirer parti de ce paramètre, dans SSMA pour Access, accédez **à outils** > **paramètres** > du projet**conversion****générale** > , puis sous **divers**, mettez à jour la valeur du paramètre **omettre les propriétés étendues** sur **Oui**.
+
+![Paramètre d’omission des propriétés étendues](../access/media/ssma-omit-extended-properties.png)
+
+> [!IMPORTANT]
+> Avec SSMA v 8.5 et versions ultérieures, .net 4.7.2 est une condition préalable à l’installation. Si vous avez besoin d’installer cette version, vous pouvez télécharger le fichier d’exécution [ici](https://dotnet.microsoft.com/download/dotnet-framework/net472).
 
 ## <a name="ssma-v85"></a>SSMA v 8.5
 

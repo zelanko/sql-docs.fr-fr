@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bb56fdfd6d59884ac60b587748cf1f663fa3042d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105910"
 ---
 # <a name="filter-equation-examples-report-builder-and-ssrs"></a>Exemples d'équations de filtre (Générateur de rapports et SSRS)
@@ -28,15 +28,15 @@ ms.locfileid: "66105910"
 ## <a name="filter-examples"></a>Exemples de filtres  
  Le tableau ci-dessous donne des exemples d'équations de filtre qui utilisent différents types de données et différent opérateurs. L'étendue de la comparaison est déterminée par l'élément de rapport pour lequel un filtre est défini. Par exemple, pour un filtre défini sur un dataset, **10 principaux %** représente les 10 premiers pour cent des valeurs dans le dataset ; pour un filtre défini sur un groupe, **10 principaux %** représente les 10 premiers pour cent des valeurs dans le groupe.  
   
-|Expression simple|Type de données|Opérateur|Value|Description|  
+|Expression simple|Type de données|Opérateur|Valeur|Description|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
-|`[SUM(Quantity)]`|`Integer`|`>`|`7`|Inclut des valeurs de données supérieures à 7.|  
-|`[SUM(Quantity)]`|`Integer`|`TOP N`|`10`|Inclut les 10 premières valeurs de données.|  
-|`[SUM(Quantity)]`|`Integer`|`TOP %`|`20`|Inclut les 20 premiers pour cent des valeurs de données.|  
-|`[Sales]`|`Text`|`>`|`=CDec(100)`|Inclut toutes les valeurs de type System.Decimal (types de données money SQL) supérieures à 100 $.|  
+|`[SUM(Quantity)]`|`Integer`|`>`|`7`|Inclut des valeurs de données supérieures à 7.|  
+|`[SUM(Quantity)]`|`Integer`|`TOP N`|`10`|Inclut les 10 premières valeurs de données.|  
+|`[SUM(Quantity)]`|`Integer`|`TOP %`|`20`|Inclut les 20 premiers pour cent des valeurs de données.|  
+|`[Sales]`|`Text`|`>`|`=CDec(100)`|Inclut toutes les valeurs de type System.Decimal (types de données money SQL) supérieures à 100 $.|  
 |`[OrderDate]`|`DateTime`|`>`|`2008-01-01`|Inclut toutes les dates du 1er janvier 2008 à la date du jour.|  
-|`[OrderDate]`|`DateTime`|`BETWEEN`|`2008-01-01`<br /><br /> `2008-02-01`|Inclut les dates à partir du 1er janvier 2008 jusqu'au 1er février 2008 compris.|  
-|`[Territory]`|`Text`|`LIKE`|`*east`|Tous les noms de secteurs qui se terminent par « est ».|  
+|`[OrderDate]`|`DateTime`|`BETWEEN`|`2008-01-01`<br /><br /> `2008-02-01`|Inclut les dates à partir du 1er janvier 2008 jusqu'au 1er février 2008 compris.|  
+|`[Territory]`|`Text`|`LIKE`|`*east`|Tous les noms de secteurs qui se terminent par « est ».|  
 |`[Territory]`|`Text`|`LIKE`|`%o%th*`|Tous les secteurs dont le nom commence par Nord et Sud.|  
 |`=LEFT(Fields!Subcat.Value,1)`|`Text`|`IN`|`B, C, T`|Toutes les valeurs de sous-catégorie commençant par les lettres B, C ou T.|  
   

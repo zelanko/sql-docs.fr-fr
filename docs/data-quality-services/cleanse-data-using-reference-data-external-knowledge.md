@@ -12,10 +12,10 @@ ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: fc0135ed4e4956d6bd98fc0b467a5b6d0a25a013
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75557904"
 ---
 # <a name="cleanse-data-using-external-knowledge-reference-data---data-quality-services-dqs"></a>Nettoyer les données à l’aide de données de référence de connaissances (externes)-Data Quality Services (DQS)
@@ -51,9 +51,9 @@ ms.locfileid: "75557904"
 ###  <a name="Prerequisites"></a>Conditions préalables  
  Vous devez avoir mappé les domaines obligatoires d'une base de connaissances DQS au service de données de référence approprié. En outre, la base de connaissances doit contenir la connaissance sur le type de données que vous souhaitez nettoyer. Par exemple, si vous souhaitez nettoyer les données sources qui contiennent des adresses américaines, vous devez mapper les domaines à un fournisseur de services de données de référence qui propose des données de haute qualité pour les adresses américaines. Pour plus d’informations, consultez [Attacher un domaine ou un domaine composite à des données de référence](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
   
-###  <a name="Security"></a>Caution  
+###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a>Autorisations  
+####  <a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_kb_operator sur la base de données DQS_MAIN pour effectuer le nettoyage des données.  
   
 ##  <a name="Cleanse"></a>Nettoyer vos données à l’aide de la connaissance des données de référence  

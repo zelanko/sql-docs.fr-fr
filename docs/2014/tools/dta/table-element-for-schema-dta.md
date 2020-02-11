@@ -1,5 +1,5 @@
 ---
-title: Élément de table pour le schéma (DTA) | Microsoft Docs
+title: Élément table pour Schema (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8b3a72f800643afa5e7edf6bdfa9928196f5da2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63138781"
 ---
 # <a name="table-element-for-schema-dta"></a>Table, élément pour les schémas (Assistant Paramétrage de base de données)
@@ -35,24 +35,24 @@ ms.locfileid: "63138781"
   
 ## <a name="element-attributes"></a>Attributs des éléments  
   
-|Attribute|Description|  
+|Attribut|Description|  
 |---------------|-----------------|  
-|`NumberOfRows`|Facultatif. Entier qui vous permet de simuler des tables de différentes tailles.|  
+|`NumberOfRows`|facultatif. Entier qui vous permet de simuler des tables de différentes tailles.|  
   
 ## <a name="element-characteristics"></a>Caractéristiques de l'élément  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|**Type de données et longueur**|**string**, entre 1 et 255 caractères.|  
+|**Type de données et longueur**|**chaîne**, comprise entre 1 et 255 caractères.|  
 |**Valeur par défaut**|Aucun.|  
-|**Occurrence**|Facultatif. Répertoriez autant de tables que nécessaire pour votre charge de travail.|  
+|**Occurrence**|facultatif. Répertoriez autant de tables que nécessaire pour votre charge de travail.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Éléments|  
 |------------------|--------------|  
 |**Élément parent**|[Schema, élément pour les bases de données &#40;Assistant Paramétrage de base de données&#41;](schema-element-for-database-dta.md)|  
-|**Éléments enfants**|[Name, élément pour les tables &#40;Assistant Paramétrage de base de données&#41;](name-element-for-table-dta.md)|  
+|**Éléments enfants**|[Élément Name pour la table &#40;DTA&#41;](name-element-for-table-dta.md)|  
   
 ## <a name="remarks"></a>Notes  
  Si vous ne spécifiez pas d'élément `Table`, l'Assistant Paramétrage du moteur de base de données suppose que toutes les tables sur la base de données spécifiée peuvent être paramétrées.  

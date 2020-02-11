@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5fb67c488da5f01ac572ec78a369790fc9014513
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782991"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-alwayson-availability-groups-sql-server-powershell"></a>Créer un point de terminaison de mise en miroir de bases de données pour les groupes de disponibilité AlwaysOn (SQL Server PowerShell)
@@ -26,19 +26,20 @@ ms.locfileid: "72782991"
   
  **Dans cette rubrique**  
   
--   **Before you begin:**  [Security](#Security)  
+-   **Avant de commencer :**  [sécurité](#Security)  
   
--   **Pour créer un point de terminaison de mise en miroir de bases de données, à l'aide de :**  [PowerShell](#PowerShellProcedure)  
+-   **Pour créer un point de terminaison de mise en miroir de bases de données, utilisez :**  [PowerShell](#PowerShellProcedure)  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
   
 ###  <a name="Security"></a> Sécurité  
   
 > [!IMPORTANT]  
->  L'algorithme RC4 est déconseillé. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Nous vous recommandons d'utiliser AES.  
+>  L'algorithme RC4 est déconseillé. 
+  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Nous vous recommandons d'utiliser AES.  
   
-####  <a name="Permissions"></a> Permissions  
- Requiert l'autorisation CREATE ENDPOINT ou l'appartenance au rôle serveur fixe sysadmin. Pour plus d’informations, consultez [GRANT – Octroi d’autorisations de point de terminaison &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql).  
+####  <a name="Permissions"></a> Autorisations  
+ Requiert l'autorisation CREATE ENDPOINT ou l'appartenance au rôle serveur fixe sysadmin. Pour plus d’informations, consultez [Autorisations de point de terminaison GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql).  
   
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Pour créer un point de terminaison pour la mise en miroir de bases de données**  
@@ -47,8 +48,8 @@ ms.locfileid: "72782991"
   
 2.  Utilisez l'applet de commande `New-SqlHadrEndpoint` pour créer le point de terminaison, puis utilisez `Set-SqlHadrEndpoint` pour démarrer le point de terminaison.  
   
-###  <a name="PShellExample"></a> Exemple (PowerShell)  
- Les commandes PowerShell suivantes créent un point de terminaison de mise en miroir de bases de données sur une instance de SQL Server (*Machine*\\*Instance*). Le point de terminaison utilise le port 5022.  
+###  <a name="PShellExample"></a>Exemple (PowerShell)  
+ Les commandes PowerShell suivantes créent un point de terminaison de mise en miroir de bases de données sur une instance de SQL Server (*instance*de*machine*\\). Le point de terminaison utilise le port 5022.  
   
 > [!IMPORTANT]  
 >  Cet exemple fonctionne uniquement sur une instance de serveur à laquelle aucun point de terminaison de mise en miroir de bases de données n'est actuellement associé.  
@@ -61,7 +62,7 @@ $endpoint = New-SqlHadrEndpoint MyMirroringEndpoint -Port 5022 -Path SQLSERVER:\
 Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
 ```  
   
-##  <a name="RelatedTasks"></a> Tâches connexes  
+##  <a name="RelatedTasks"></a> Tâches associées  
  **Pour configurer un point de terminaison de mise en miroir de bases de données**  
   
 -   [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
@@ -81,5 +82,5 @@ Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
 -   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer un groupe de disponibilité &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md)   
- [Vue d’ensemble &#40;de groupes de disponibilité AlwaysOn SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [Créer un groupe de disponibilité &#40;&#41;Transact-SQL](create-an-availability-group-transact-sql.md)   
+ [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  

@@ -1,5 +1,5 @@
 ---
-title: ActualSize et DefinedSize, exemple de propriétés (VC ++) | Microsoft Docs
+title: ActualSize et DefinedSize, exemple de propriétés (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 340f471215e9f8ec8bf4f0feaabec5cce559a9a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921471"
 ---
-# <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize et DefinedSize, exemple de propriétés (VC ++)
-Cet exemple utilise le [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) et [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) propriétés pour afficher la taille définie et la taille réelle d’un champ.  
+# <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize et DefinedSize, exemple de propriétés (VC + +)
+Cet exemple utilise les propriétés [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) et [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) pour afficher la taille définie et la taille réelle d’un champ.  
   
 ## <a name="example"></a>Exemple  
   
@@ -128,22 +128,22 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
- **Nom du Store : Eric les livres en lecture**  
+ **Nom du magasin : Eric the Read Books**  
 **Taille définie : 40**  
 **Taille réelle : 19**  
-**Nom du Store : De Barnum**  
+**Nom du magasin : Barnum**  
 **Taille définie : 40**  
 **Taille réelle : 8**  
-**Nom du Store : Actualités et Brews**  
+**Nom du magasin : Actualités & fusions**  
 **Taille définie : 40**  
 **Taille réelle : 12**  
-**Nom du Store : Doc-U-Mat : La documentation et linge de qualité**  
+**Nom du magasin : doc-U-mat : blanchissage et livres sur la qualité**  
 **Taille définie : 40**  
 **Taille réelle : 36**  
-**Nom du Store : Bookshop FRICATIVE**  
+**Nom du magasin : fricative Bookshop**  
 **Taille définie : 40**  
 **Taille réelle : 18**  
-**Nom du Store : Bookbeat**  
+**Nom du magasin : Bookbeat**  
 **Taille définie : 40**  
 **Taille réelle : 8**   
 ## <a name="see-also"></a>Voir aussi  

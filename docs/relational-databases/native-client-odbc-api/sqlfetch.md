@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 16756848fba4daae357f430b6cac39bafaffc9f6
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73786765"
 ---
 # <a name="sqlfetch"></a>SQLFetch
@@ -28,10 +28,10 @@ ms.locfileid: "73786765"
  Pour plus d’informations sur la conversion des valeurs de colonnes de résultats de types date/heure, consultez [conversions de SQL en C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md).  
   
 ## <a name="sqlfetch-support-for-large-clr-udts"></a>Prise en charge par SQLFetch des grands types CLR définis par l'utilisateur  
- **SQLFetch** prend en charge les grands types CLR définis par l'utilisateur. Pour plus d’informations, consultez [types &#40;CLR volumineux définis par l'&#41;utilisateur ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLFetch** prend en charge les grands types CLR définis par l’utilisateur (UDT). Pour plus d’informations, consultez [types CLR volumineux définis par l’utilisateur &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=80703)   
- [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

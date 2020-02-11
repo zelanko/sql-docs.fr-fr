@@ -18,18 +18,18 @@ ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2c95b74b5c1875f2a1f1db40ec42e3f3ada87a63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942362"
 ---
-# <a name="spadddatafilerecoversuspectdb-transact-sql"></a>sp_add_data_file_recover_suspect_db (Transact-SQL)
+# <a name="sp_add_data_file_recover_suspect_db-transact-sql"></a>sp_add_data_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Ajoute un fichier de données à un groupe de fichiers lorsque la récupération d'une base de données ne peut se terminer en raison d'un espace insuffisant sur le groupe de fichiers (erreur 1105). Une fois le fichier ajouté, cette procédure stockée désactive le paramètre suspect et achève la récupération de la base de données. Les paramètres sont les mêmes que ceux de ALTER DATABASE *database_name* ADD FILE.  
+  Ajoute un fichier de données à un groupe de fichiers lorsque la récupération d'une base de données ne peut se terminer en raison d'un espace insuffisant sur le groupe de fichiers (erreur 1105). Une fois le fichier ajouté, cette procédure stockée désactive le paramètre suspect et achève la récupération de la base de données. Les paramètres sont les mêmes que ceux de ALTER DATABASE *database_name* Add file.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,32 +45,32 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @dbName = ] 'database_ '` Est le nom de la base de données. *base de données* est **sysname**, sans valeur par défaut.  
+`[ @dbName = ] 'database_ '`Nom de la base de données. *Database est de* **type sysname**, sans valeur par défaut.  
   
-`[ @filegroup = ] 'filegroup_name_ '` Est le groupe de fichiers à laquelle ajouter le fichier. *FILEGROUP_NAME* est **nvarchar (260)** , avec NULL comme valeur par défaut, ce qui indique le fichier primaire.  
+`[ @filegroup = ] 'filegroup_name_ '`Groupe de fichiers auquel le fichier doit être ajouté. *filegroup_name* est de type **nvarchar (260)**, avec NULL comme valeur par défaut, qui indique le fichier primaire.  
   
-`[ @name = ] 'logical_file_name_ '` Est le nom utilisé dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour référencer le fichier. Il doit être unique dans le serveur. *nom_fichier_logique* est **nvarchar (260)** , sans valeur par défaut.  
+`[ @name = ] 'logical_file_name_ '`Nom utilisé dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour référencer le fichier. Il doit être unique dans le serveur. *logical_file_name* est de type **nvarchar (260)**, sans valeur par défaut.  
   
-`[ @filename = ] 'os_file_name_ '` Le chemin d’accès et nom de fichier est utilisé par le système d’exploitation pour le fichier. Le fichier doit résider sur une instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. *os_file_name* est **nvarchar (260)** , sans valeur par défaut.  
+`[ @filename = ] 'os_file_name_ '`Est le chemin d’accès et le nom de fichier utilisés par le système d’exploitation pour le fichier. Le fichier doit résider sur une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. *os_file_name* est de type **nvarchar (260)**, sans valeur par défaut.  
   
-`[ @size = ] 'size_ '` Est la taille initiale du fichier. *taille* est **nvarchar (20)** , avec NULL comme valeur par défaut. Indiquez un nombre entier sans aucune décimale. Les indications Mo et Ko peuvent être utilisées pour indiquer qu'il s'agit de mégaoctets ou de kilo-octets. La valeur par défaut est Mo. La valeur minimale est 512 Ko. Si *taille* n’est pas spécifié, la valeur par défaut est 1 Mo.  
+`[ @size = ] 'size_ '`Taille initiale du fichier. *Size* est de type **nvarchar (20)**, avec NULL comme valeur par défaut. Indiquez un nombre entier sans aucune décimale. Les indications Mo et Ko peuvent être utilisées pour indiquer qu'il s'agit de mégaoctets ou de kilo-octets. La valeur par défaut est Mo. La valeur minimale est 512 Ko. Si la *taille* n’est pas spécifiée, la valeur par défaut est 1 Mo.  
   
-`[ @maxsize = ] 'max_size_ '` Est la taille maximale que peut atteindre le fichier. *max_size* est **nvarchar (20)** , avec NULL comme valeur par défaut. Indiquez un nombre entier sans aucune décimale. Les indications Mo et Ko peuvent être utilisées pour indiquer qu'il s'agit de mégaoctets ou de kilo-octets. La valeur par défaut est Mo.  
+`[ @maxsize = ] 'max_size_ '`Taille maximale que peut atteindre le fichier. *max_size* est de type **nvarchar (20)**, avec NULL comme valeur par défaut. Indiquez un nombre entier sans aucune décimale. Les indications Mo et Ko peuvent être utilisées pour indiquer qu'il s'agit de mégaoctets ou de kilo-octets. La valeur par défaut est Mo.  
   
- Si *max_size* n’est pas spécifié, le fichier croît jusqu'à ce que le disque est plein. Le journal des applications [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows avertit l'administrateur lorsqu'un disque est sur le point d'être saturé.  
+ Si *max_size* n’est pas spécifié, le fichier s’agrandit jusqu’à ce que le disque soit plein. Le journal des applications [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows avertit l'administrateur lorsqu'un disque est sur le point d'être saturé.  
   
-`[ @filegrowth = ] 'growth_increment_ '` Est la quantité d’espace ajoutée au fichier chaque fois nouvel espace est nécessaire. *growth_increment* est **nvarchar (20)** , avec NULL comme valeur par défaut. La valeur 0 indique qu'aucun accroissement n'est autorisé. Indiquez un nombre entier sans aucune décimale. La valeur peut être exprimée en Mo, en Ko ou en pourcentage (%). Lorsque % est spécifié, la taille de l'incrément de croissance est le pourcentage spécifié de la taille du fichier au moment où l'incrémentation a lieu. Si un nombre est mentionné sans spécifier Mo, Ko ou %, la valeur par défaut est Mo.  
+`[ @filegrowth = ] 'growth_increment_ '`Quantité d’espace ajoutée au fichier chaque fois que de l’espace est nécessaire. *growth_increment* est de type **nvarchar (20)**, avec NULL comme valeur par défaut. La valeur 0 indique qu'aucun accroissement n'est autorisé. Indiquez un nombre entier sans aucune décimale. La valeur peut être exprimée en Mo, en Ko ou en pourcentage (%). Lorsque % est spécifié, la taille de l'incrément de croissance est le pourcentage spécifié de la taille du fichier au moment où l'incrémentation a lieu. Si un nombre est mentionné sans spécifier Mo, Ko ou %, la valeur par défaut est Mo.  
   
- Si *growth_increment* a la valeur NULL, la valeur par défaut est 10 %, et la valeur minimale est de 64 Ko. La taille spécifiée est arrondie à la valeur multiple de 64 Ko la plus proche.  
+ Si *growth_increment* a la valeur null, la valeur par défaut est 10% et la valeur minimale est de 64 Ko. La taille spécifiée est arrondie à la valeur multiple de 64 Ko la plus proche.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="permissions"></a>Autorisations  
- Exécution reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe. Ces autorisations ne sont pas transférables.  
+ Les autorisations d’exécution reviennent par défaut aux membres du rôle serveur fixe **sysadmin** . Ces autorisations ne sont pas transférables.  
   
 ## <a name="examples"></a>Exemples  
  Dans l'exemple suivant, la base de données `db1` a été déclarée suspecte au cours de sa récupération en raison d'un espace insuffisant (erreur 1105) dans le groupe de fichiers `fg1`.  

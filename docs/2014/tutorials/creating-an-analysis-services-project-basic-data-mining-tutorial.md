@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a7fcece285a17e158fcdfe77ef00004afe637541
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69494031"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>Création d'un projet Analysis Services (Didacticiel sur l'exploration de données de base)
-  Chaque projet [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] définit les objets présents dans une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unique. Une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] contient plusieurs types d'objets.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Chaque [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projet définit les objets dans une base [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de données unique. Une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] contient plusieurs types d'objets.  
   
 -   Modèles multidimensionnels (cubes)  
   
@@ -57,10 +57,10 @@ ms.locfileid: "69494031"
 3.  Dans la partie droite du volet **Pages de propriétés** , sous **Cible**, vérifiez que le nom du **Serveur** est **localhost**. Si vous utilisez une instance différente, tapez le nom de l'instance. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Didacticiel de création d' &#40;une source de données d’exploration de données de base&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
+ [Création d’une source de données &#40;didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Générer des projets Analysis Services &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/build-analysis-services-projects-ssdt)   
+ [Générer des projets de Analysis Services &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/build-analysis-services-projects-ssdt)   
  [Créer un projet Analysis Services &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt)  
   
   

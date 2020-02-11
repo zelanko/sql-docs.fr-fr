@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eea34b8ad278447d9e9085d99acb8500d14d5e7a
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637788"
 ---
 # <a name="transaction-isolation-levels-in-memory-optimized-tables"></a>Niveaux d’isolation des transactions dans les tables optimisées en mémoire
@@ -39,7 +39,7 @@ ms.locfileid: "73637788"
   
 -   Utilisez explicitement un indicateur de niveau d'isolation supérieur pour accéder à la table mémoire optimisée, par exemple WITH (SNAPSHOT).  
   
--   Spécifiez l'option SET `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, qui définira le niveau d'isolation pour la table mémoire optimisée sur SNAPSHOT (comme si vous aviez inclus des indicateurs WITH(SNAPSHOT) à chaque table mémoire optimisée). Pour plus d’informations sur la `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, consultez [options &#40;ALTER DATABASE SET Transact&#41;-SQL](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+-   Spécifiez l'option SET `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, qui définira le niveau d'isolation pour la table mémoire optimisée sur SNAPSHOT (comme si vous aviez inclus des indicateurs WITH(SNAPSHOT) à chaque table mémoire optimisée). Pour plus d’informations `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`sur, consultez [options ALTER database SET &#40;&#41;Transact-SQL ](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
  Alternativement, si le niveau d'isolement de la session est READ COMMITTED, utilisez des transactions en mode de validation automatique.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "73637788"
  Pour les tables sur disque, la plupart des garanties de niveau d'isolation sont implémentées à l'aide d'un verrouillage, qui empêche les conflits par blocage. Pour les tables mémoire optimisées, les garanties sont appliquées à l'aide d'un mécanisme de détection de conflit, qui évite de prendre des verrous. L'exception est l'isolation SNAPSHOT sur les tables sur disque. Cela est implémenté de façon similaire à l'isolation SNAPSHOT sur les tables mémoire optimisées à l'aide d'un mécanisme de détection de conflit.  
   
  SNAPSHOT  
- Ce niveau d'isolation spécifie que les données lues par n'importe quelle instruction d'une transaction représenteront la version cohérente d'un point de vue transactionnel des données qui existaient au début de la transaction. La transaction peut seulement reconnaître les modifications de données qui ont été validées avant qu'elle ne commence. Autrement dit, les modifications de données effectuées par d'autres transactions après le début de la transaction active ne sont pas visibles pour les instructions qui s'exécutent dans le cadre de ladite transaction. Les instructions d'une transaction obtiennent un instantané des données validées telles qu'elles existaient au début de cette transaction.  
+ Ce niveau d'isolation spécifie que les données lues par n'importe quelle instruction d'une transaction représenteront la version cohérente d'un point de vue transactionnel des données qui existaient au début de la transaction. La transaction peut seulement reconnaître les modifications de données qui ont été validées avant qu'elle ne commence. Les modifications de données effectuées par d'autres transactions après le début de la transaction actuelle ne sont pas visibles pour les instructions qui s’exécutent dans la transaction actuelle. Les instructions d'une transaction obtiennent un instantané des données validées telles qu'elles existaient au début de cette transaction.  
   
  Les opérations d'écriture (mises à jour, insertions et suppressions) sont toujours totalement isolées des autres transactions. Par conséquent, les opérations d'écriture dans une transaction SNAPSHOT peuvent être en conflit avec les opérations d'écriture d'autres transactions. Lorsque la transaction active tente de mettre à jour ou de supprimer une ligne mise à jour ou supprimée par une autre transaction validée après le début de la transaction active, la transaction prend fin avec le message d'erreur suivant.  
   
@@ -83,6 +83,6 @@ ms.locfileid: "73637788"
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnement des transactions sur les tables optimisées en mémoire](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
  [Instructions relatives aux niveaux d’isolation des transactions avec des tables mémoire optimisées](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
- [Instructions pour la logique de nouvelle tentative des transactions sur des tables à mémoire optimisée](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
+ [Instructions pour la logique de nouvelle tentative des transactions sur des tables mémoire optimisées](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
   
   

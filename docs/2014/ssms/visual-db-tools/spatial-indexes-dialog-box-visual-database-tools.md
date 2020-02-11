@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00c5e0017b8d81eaea6960f016e40dbc381e69e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049133"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Index spatiaux, boîte de dialogue (Visual Database Tools)
@@ -81,7 +81,7 @@ ms.locfileid: "63049133"
  **Min. Y**  
  Spécifie la coordonnée y de l'angle inférieur gauche du rectangle englobant. Cette propriété est estompée si le **Schéma de pavage** est une **Grille géographique**.  
   
- **Identity**  
+ **Identité**  
  Développée, elle affiche les champs de propriétés de **Nom** et **Description** .  
   
  **(Nom)**  
@@ -116,6 +116,6 @@ ms.locfileid: "63049133"
  Spécifie si le verrouillage au niveau des lignes est autorisé dans cet index. L'autorisation ou non du verrouillage au niveau de la ligne affecte les performances de la base de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d'ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md)  
+ [Vue d’ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md)  
   
   

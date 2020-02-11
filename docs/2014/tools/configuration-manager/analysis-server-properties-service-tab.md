@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4f083aafd2dc8718bb79798d43483c66b3520b0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666740"
 ---
 # <a name="analysis-server-properties-service-tab"></a>Propriétés de Analysis Server (onglet Service)
@@ -24,34 +24,34 @@ ms.locfileid: "62666740"
  **Chemin d’accès binaire**  
  Affiche l'emplacement des fichiers programme utilisés par ce service.  
   
- **Contrôle d’erreurs**  
+ **Contrôle d’erreur**  
  1 indique `SERVICE_ERROR_NORMAL`. Si le lancement du service échoue pendant le démarrage de l'ordinateur, le programme de démarrage consigne l'erreur et affiche une boîte de message, mais poursuit l'opération de démarrage. Cette valeur ne peut pas être modifiée.  
   
  **Code de sortie**  
  Lorsqu'une erreur se produit, le numéro d'erreur apparaît dans cette zone. Pour dépanner des incidents, recherchez ce numéro dans la Base de connaissances [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou communiquez-le au personnel en charge du support technique.  
   
- **Host Name**  
+ **Nom d’hôte**  
  Affiche le nom de l'ordinateur ou du cluster exécutant [!INCLUDE[ssAS](../../includes/ssas-md.md)].  
   
  **Nom**  
  Indique le nom d'affichage du service.  
   
- **ID de processus**  
+ **ID du processus**  
  Affiche le numéro qu’utilise [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows pour effectuer le suivi des processus de ce programme.  
   
  **Type de service SQL**  
- Affiche le type de service fourni aux processus appelants. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe plusieurs services.  
+ Affiche le type de service fourni aux processus appelants. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe plusieurs services.  
   
  **Mode de démarrage**  
  Les options disponibles pour ce service sont les suivantes :  
   
--   Manuelle : Ce service ne démarre pas automatiquement lorsque l’ordinateur démarre. Vous devez démarrer le service à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d'un autre outil.  
+-   Manuel : ce service n'est pas automatiquement lancé au démarrage de l'ordinateur. Vous devez démarrer le service à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d'un autre outil.  
   
--   Automatique : Ce service essaie de se lancer au démarrage de cet ordinateur.  
+-   Automatique : ce service essaie de se lancer au démarrage de cet ordinateur.  
   
--   Désactivé : Ce service ne peut pas être démarré.  
+-   Désactivé : ce service ne peut pas être démarré.  
   
- **État**  
+ **State**  
  Indique si ce service est en cours d'exécution, arrêté ou désactivé.  
   
   

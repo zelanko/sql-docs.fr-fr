@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af4229037b9c34bbc9a0316ef073f294209be6d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629645"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>Sauvegarder et restaurer des bases de données répliquées
@@ -50,7 +50,7 @@ ms.locfileid: "62629645"
   
 -   Bases de données système **master** et **msdb** sur le serveur de publication, sur le serveur de distribution et sur tous les Abonnés. Il est recommandé de sauvegarder ces bases de données en même temps, ainsi que la base de données de réplication appropriée. Par exemple, sauvegardez les bases de données **master** et **msdb** au niveau du serveur de publication en même temps que la base de données de publication. Si la base de données de publication est restaurée, vérifiez que les bases de données **master** et **msdb** sont cohérentes avec la base de données de publication en termes de configuration de la réplication et de paramètres.  
   
- Si vous effectuez des sauvegardes régulières des journaux, toutes les modifications liées à la réplication doivent être capturées dans les sauvegardes des journaux. Si vous n'effectuez pas de sauvegardes de fichiers journaux, une sauvegarde doit être effectuée chaque fois qu'une modification portant sur un paramètre de réplication a lieu. Pour plus d’informations, consultez [Common Actions Requiring an Updated Backup](common-actions-requiring-an-updated-backup.md).  
+ Si vous effectuez des sauvegardes régulières des journaux, toutes les modifications liées à la réplication doivent être capturées dans les sauvegardes des journaux. Si vous n'effectuez pas de sauvegardes de fichiers journaux, une sauvegarde doit être effectuée chaque fois qu'une modification portant sur un paramètre de réplication a lieu. Pour en savoir plus, voir [Common Actions Requiring an Updated Backup](common-actions-requiring-an-updated-backup.md).  
   
 ## <a name="backup-and-restore-strategies"></a>Stratégies de sauvegarde et de restauration  
  Les stratégies de sauvegarde et de restauration de chaque nœud d'une topologie de réplication sont différentes selon le type de réplication utilisé. Pour plus d'informations sur les stratégies de sauvegarde et de restauration pour chaque type de réplication, consultez les rubriques suivantes :  

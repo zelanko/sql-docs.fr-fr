@@ -1,5 +1,5 @@
 ---
-title: Views et Fields, Collections, exemple (VB) | Microsoft Docs
+title: Views et Fields, exemple de collections (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: d8304849-3f80-4cf3-9425-529d2a8ebedd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 16145ad1dd52a6ad535c9a51a64f410a85e12e18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964828"
 ---
 # <a name="views-and-fields-collections-example-vb"></a>Views et Fields, exemples de collections (VB)
-Le code suivant montre comment utiliser le [commande](../../../ado/reference/adox-api/command-property-adox.md) propriété et la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet à récupérer les informations de champ pour la vue.  
+Le code suivant montre comment utiliser la propriété [Command](../../../ado/reference/adox-api/command-property-adox.md) et l’objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) pour récupérer des informations de champ pour la vue.  
   
 ```  
 ' BeginViewFieldsVB  
@@ -81,5 +81,5 @@ End Sub
  [ActiveConnection, propriété (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Catalog, objet (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Command, propriété (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [Objet de vue (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
+ [View, objet (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
  [Views, collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

@@ -1,5 +1,5 @@
 ---
-title: Collection de paramètres, exemple de commande de propriété (VB) | Microsoft Docs
+title: Parameters (collection), Command, exemple de propriété (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd8595cf8089ce6fd15549680da538946414b9c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965624"
 ---
 # <a name="parameters-collection-command-property-example-vb"></a>Parameters (collection), Command (exemple de propriété) (VB)
-Le code suivant montre comment utiliser le [commande](../../../ado/reference/adox-api/command-property-adox.md) propriété avec le [commande](../../../ado/reference/ado-api/command-object-ado.md) objet à récupérer les informations de paramètre pour la procédure.  
+L’exemple de code suivant montre comment utiliser la propriété [Command](../../../ado/reference/adox-api/command-property-adox.md) avec l’objet [Command](../../../ado/reference/ado-api/command-object-ado.md) pour récupérer des informations sur les paramètres de la procédure.  
   
 ```  
 ' BeginParametersVB  
@@ -79,5 +79,5 @@ End Sub
  [ActiveConnection, propriété (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Catalog, objet (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Command, propriété (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [Objet de procédure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
+ [PROCEDURE, objet (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [Procedures, collection (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
