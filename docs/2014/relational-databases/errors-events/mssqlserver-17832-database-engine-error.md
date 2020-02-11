@@ -16,21 +16,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1280bb44d11ce4f8234d544bf113e796a9c3c85c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915427"
 ---
-# <a name="mssqlserver17832"></a>MSSQLSERVER_17832
+# <a name="mssqlserver_17832"></a>MSSQLSERVER_17832
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|ID d'événement|17832|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|17832|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SRV_BAD_LOGIN_PKT|  
 |Texte du message|Le paquet d'ouverture de session servant à ouvrir la connexion présente une structure non valide ; la connexion a été fermée. Contactez le fournisseur de la bibliothèque cliente.%.*ls|  
@@ -38,7 +38,7 @@ ms.locfileid: "62915427"
 ## <a name="explanation"></a>Explication  
  L'ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'a pas pu traiter le paquet d'ouverture de session du client, soit parce que le paquet n'a pas été créé correctement, soit parce qu'il a été endommagé pendant la transmission. Ce problème peut également être dû à la configuration de l'ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'adresse IP répertoriée correspond à l'adresse du client.  
   
-### <a name="more-information"></a>Informations supplémentaires  
+### <a name="more-information"></a>Informations complémentaires  
  Lorsque vous utilisez l'authentification Windows dans un environnement Kerberos, un client reçoit un ticket Kerberos qui contient un certificat PAC (Privilege Attribute Certificate). Le certificat PAC contient différents types de données d'autorisation, notamment les groupes dont l'utilisateur est membre, les droits dont il dispose et les stratégies qui s'appliquent à lui. Lorsque le client reçoit le ticket Kerberos, les informations contenues dans le certificat PAC sont utilisées pour générer le jeton d'accès de l'utilisateur. Le client présente le jeton à l'ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le cadre du paquet d'ouverture de session.  
   
  Si le jeton a été créé incorrectement ou endommagé pendant la transmission, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas proposer d'informations supplémentaires sur le problème.  
@@ -51,11 +51,11 @@ ms.locfileid: "62915427"
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
- **Pour modifier MaxTokenSize sur l’ordinateur du serveur**  
+ **Pour modifier le MaxTokenSize sur l’ordinateur serveur**  
   
 1.  Dans le menu **Démarrer** , cliquez sur **Exécuter**.  
   
-2.  Type `regedit`, puis cliquez sur **OK**. (Si la boîte de dialogue **Contrôle de compte d’utilisateur** s’affiche, cliquez sur **Continuer**.)  
+2.  Tapez `regedit`, puis cliquez sur **OK**. (Si la boîte de dialogue **Contrôle de compte d’utilisateur** s’affiche, cliquez sur **Continuer**.)  
   
 3.  Accédez à **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters**.  
   

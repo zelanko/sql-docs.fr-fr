@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3d25801b7cc7f6282ebc8cf7b1ce7839159312dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62897409"
 ---
 # <a name="power-ssis-expression"></a>POWER (expression SSIS)
@@ -36,7 +36,7 @@ POWER(numeric_expression,power)
  *puissance*  
  Expression numérique valide.  
   
-## <a name="result-types"></a>Types de résultats  
+## <a name="result-types"></a>Types des résultats  
  DT_R8  
   
 ## <a name="remarks"></a>Notes  

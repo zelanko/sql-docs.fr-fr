@@ -14,13 +14,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1bb6f278b18381d1b3d3defdb53a7c40a6f673ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960276"
 ---
-# <a name="secure-the-distributor"></a>Sécuriser le serveur de distribution
+# <a name="secure-the-distributor"></a>Protéger le serveur de distribution
   Les Agents de réplication suivants se connectent au serveur de distribution : l'Agent de lecture du journal, l'Agent d'instantané, l'Agent de lecture de la file d'attente, l'Agent de distribution et l'Agent de fusion. Il est important de donner un nom d'accès approprié à chacun de ces agents tout en suivant le principe d'accorder le minimum de droits nécessaires et de protéger également le stockage de tous les mots de passe.  
   
 -   Pour plus d’informations sur la gestion des connexions et des mots de passe, consultez [Gérer les connexions et les mots de passe dans la réplication](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication).  
@@ -46,8 +46,8 @@ ms.locfileid: "62960276"
   
 ## <a name="see-also"></a>Voir aussi  
  [Afficher et modifier les paramètres de sécurité de la réplication](view-and-modify-replication-security-settings.md)   
- [Activer les connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
+ [Activer les connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Sécurité de la réplication SQL Server](view-and-modify-replication-security-settings.md)  
+ [Sécurité Réplication SQL Server](view-and-modify-replication-security-settings.md)  
   
   

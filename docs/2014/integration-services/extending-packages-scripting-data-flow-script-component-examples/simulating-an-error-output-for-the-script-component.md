@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b7e2324fcfce6c560000bfef798aa966102d674b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62895508"
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>Simulation d'une sortie d'erreur pour le composant Script
@@ -46,7 +46,7 @@ ms.locfileid: "62895508"
   
 7.  Dans la page **Colonnes d’entrée**, sélectionnez les colonnes que vous souhaitez traiter dans la transformation de script. Cet exemple utilise uniquement la colonne CountryRegionName. Les colonnes d'entrée disponibles que vous n'avez pas sélectionnées seront tout simplement transférées sans être modifiées dans le flux de données.  
   
-8.  Sur le **entrées et sorties** page, ajoutez un nouveau, deuxième sortie et définissez son `SynchronousInputID` valeur à l’ID de l’entrée, qui est également la valeur de la `SynchronousInputID` propriété de la sortie par défaut. Définissez la propriété `ExclusionGroup` des deux sorties sur la même valeur différente de zéro (par exemple, 1) pour indiquer que chaque ligne sera dirigée vers une seule des deux sorties. Attribuez à la nouvelle sortie d'erreur un nom distinct, tel que « MyErrorOutput ».  
+8.  Sur la page **entrées et sorties** , ajoutez une nouvelle sortie, puis définissez sa `SynchronousInputID` valeur sur l’ID de l’entrée, qui est également la valeur de la `SynchronousInputID` propriété de la sortie par défaut. Définissez la propriété `ExclusionGroup` des deux sorties sur la même valeur différente de zéro (par exemple, 1) pour indiquer que chaque ligne sera dirigée vers une seule des deux sorties. Attribuez à la nouvelle sortie d'erreur un nom distinct, tel que « MyErrorOutput ».  
   
 9. Ajoutez des colonnes de sortie supplémentaires à la nouvelle sortie d'erreur pour capturer les informations d'erreur souhaitées, qui peuvent inclure le code de l'erreur, l'ID de la colonne dans laquelle l'erreur s'est produite et éventuellement la description de l'erreur. Cet exemple crée les nouvelles colonnes, ErrorColumn et ErrorMessage. Si vous interceptez des erreurs [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prédéfinies dans votre propre implémentation, assurez-vous d'ajouter une colonne ErrorCode pour le numéro d'erreur.  
   
@@ -99,11 +99,11 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
 }  
 ```  
   
-![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône de Integration Services (petite)](../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion des erreurs dans les données](../data-flow/error-handling-in-data.md)   
- [Utilisation de sorties d’erreur dans un composant de flux de données](../extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)   
+ [Utilisation des sorties d’erreur dans un composant de transmission de données](../extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)   
  [Création d’une transformation synchrone à l’aide du composant Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) 
   
   

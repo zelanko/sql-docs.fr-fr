@@ -17,13 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 79c9e433a6b5bcf9babee0060fdf028775e0e8a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889834"
 ---
-# <a name="performance-counters"></a>Compteurs de performances
+# <a name="performance-counters"></a>Compteurs de performance
+  
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installe un ensemble de compteurs de performances qui vous permettent d’analyser les performances du moteur de flux de données. Par exemple, le compteur Mémoires tampon spoulées permet de déterminer si des tampons de données sont écrits temporairement sur le disque lors de l'exécution d'un package. Cette permutation diminue les performances et indique que la mémoire de l'ordinateur est insuffisante.  
   
 > [!NOTE]  
@@ -53,7 +54,7 @@ ms.locfileid: "62889834"
 ## <a name="obtain-performance-counter-statistics"></a>Obtenir des statistiques sur les compteurs de performance  
  Pour les projets [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez obtenir des statistiques sur les compteurs de performances à l’aide de la fonction [dm_execution_performance_counters &#40;base de données SSISDB&#41;](/sql/integration-services/functions-dm-execution-performance-counters).  
   
- Dans l'exemple suivant, la fonction retourne des statistiques pour une exécution en cours ayant l'ID 34.  
+ Dans l'exemple suivant, la fonction retourne des statistiques pour une exécution en cours ayant l'ID 34.  
   
 ```  
 select * from [catalog].[dm_execution_performance_counters] (34)  

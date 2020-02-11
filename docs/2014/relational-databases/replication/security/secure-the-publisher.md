@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 201b1496444888b207a1a72be640b9705ff1059d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960144"
 ---
 # <a name="secure-the-publisher"></a>Sécuriser le serveur de publication
@@ -65,7 +65,7 @@ ms.locfileid: "62960144"
 ## <a name="ftp-snapshot-delivery"></a>Remise d'un instantané via FTP  
  Si vous spécifiez que les instantanés doivent être remis via un partage FTP plutôt qu'un partage UNC, vous devez spécifier une connexion et un mot de passe lors de la configuration de l'accès à FTP : Pour plus d’informations, consultez [Remettre un instantané via FTP](../publish/deliver-a-snapshot-through-ftp.md).  
   
-## <a name="log-reader-agent"></a>Agent de lecture du journal  
+## <a name="log-reader-agent"></a>l'Agent de lecture du journal ;  
  Il existe un Agent de lecture du journal pour chaque base de données publiée en vue de la réplication transactionnelle. Pour plus d’informations, voir [Create a Publication](../publish/create-a-publication.md).  
   
 ## <a name="queue-reader-agent"></a>Agent de lecture de la file d'attente  
@@ -74,6 +74,6 @@ ms.locfileid: "62960144"
 ## <a name="see-also"></a>Voir aussi  
  [Activer les connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Sécurité de la réplication SQL Server](view-and-modify-replication-security-settings.md)  
+ [Sécurité Réplication SQL Server](view-and-modify-replication-security-settings.md)  
   
   

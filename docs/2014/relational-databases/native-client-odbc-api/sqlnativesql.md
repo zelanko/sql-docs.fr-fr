@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0556d4e3b06c68e70513d68a5c2616bf47fc299c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046734"
 ---
 # <a name="sqlnativesql"></a>SQLNativeSql
   Le pilote ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client répond aux demandes **SQLNativeSql** sans visiter le serveur. La fonction teste efficacement la syntaxe d'instructions SQL. La vérification de la syntaxe ne détermine pas si des identificateurs ou les résultats d'expressions dans les instructions SQL sont valides, et l'exécution du code SQL natif [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourné par **SQLNativeSql** peut échouer.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sqlnativesql, fonction](https://go.microsoft.com/fwlink/?LinkID=59358)   
- [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
+ [SQLNativeSql fonction)](https://go.microsoft.com/fwlink/?LinkID=59358)   
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

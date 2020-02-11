@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b66a0c9efc94d648eba2f4d4f8cff779def413fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63131803"
 ---
 # <a name="overview-smo"></a>Vue d'ensemble (objets SMO)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) sont conçus pour la gestion par programme de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez les utiliser pour créer des applications de gestion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personnalisées. Même si [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est une application puissante et étendue de gestion de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une application SMO donnera dans certains cas de meilleurs résultats.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Les objets SMO (Management Objects) sont des objets conçus [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]pour la gestion par programme de. Vous pouvez les utiliser pour créer des applications de gestion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personnalisées. Même si [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est une application puissante et étendue de gestion de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une application SMO donnera dans certains cas de meilleurs résultats.  
   
  Par exemple, il est possible que les applications utilisateur qui contrôlent les tâches de gestion de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent être simplifiées pour répondre aux besoins de nouveaux utilisateurs et pour réduire les coûts de formation. Vous devez peut-être créer des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personnalisées ou créer une application de création et de contrôle du rendement des index. Une application SMO peut également être utilisée pour inclure de façon transparente le matériel ou les logiciels tiers dans l'application de gestion de base de données.  
   
@@ -32,7 +32,8 @@ ms.locfileid: "63131803"
   
 -   Exécution groupée des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] . Les instructions sont groupées pour améliorer les performances réseau.  
   
--   Capture des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] . Autorise la capture de toute opération dans un script. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] utilise cette fonctionnalité pour écrire une opération au lieu de l'exécuter immédiatement.  
+-   Capture des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] . Autorise la capture de toute opération dans un script. 
+  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] utilise cette fonctionnalité pour écrire une opération au lieu de l'exécuter immédiatement.  
   
 -   Gestion des services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le fournisseur WMI. Les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être démarrés, arrêtés et suspendus par programme.  
   
@@ -46,17 +47,17 @@ ms.locfileid: "63131803"
   
 -   Points de terminaison HTTP pour la gestions des requêtes SOAP. Pour plus d'informations, consultez [Implementing Endpoints](tasks/implementing-endpoints.md).  
   
--   Isolement d'instantané et contrôle de version de ligne pour plus de concurrence. Pour plus d'informations, consultez [Working with Snapshot Isolation](../native-client/features/working-with-snapshot-isolation.md).  
+-   Isolement d'instantané et contrôle de version de ligne pour plus de concurrence. Pour plus d’informations, consultez [Utilisation du niveau d’isolement d’instantané](../native-client/features/working-with-snapshot-isolation.md).  
   
--   La collection de schémas XML, les index XML et le type de données XML permettent la validation et le stockage des données XML. Pour plus d’informations, consultez [Collections de schémas XML &#40;SQL Server&#41; ](../xml/xml-schema-collections-sql-server.md) et [à l’aide des schémas XML](tasks/using-xml-schemas.md).  
+-   La collection de schémas XML, les index XML et le type de données XML permettent la validation et le stockage des données XML. Pour plus d’informations, consultez [collections de schémas xml &#40;SQL Server&#41;](../xml/xml-schema-collections-sql-server.md) et [utilisation de schémas XML](tasks/using-xml-schemas.md).  
   
 -   Bases de données d'instantanés pour la création de copies en lecture seule de bases de données.  
   
 -   Prise en charge de la communication basée sur des messages par [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Pour plus d'informations, consultez [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md).  
   
--   Prise en charge des synonymes pour les noms d'objets multiples de la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [synonymes &#40;moteur de base de données&#41;](../synonyms/synonyms-database-engine.md).  
+-   Prise en charge des synonymes pour les noms d'objets multiples de la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [synonymes &#40;Moteur de base de données&#41;](../synonyms/synonyms-database-engine.md).  
   
--   La gestion de la messagerie de base de données vous permet de créer des serveurs, des profils et des comptes de messagerie électronique dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Database Mail](../database-mail/database-mail.md).  
+-   La gestion de la messagerie de base de données vous permet de créer des serveurs, des profils et des comptes de messagerie électronique dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Messagerie de base de données](../database-mail/database-mail.md).  
   
 -   Prise en charge des serveurs inscrits pour l'inscription des informations de connexion. Pour plus d'informations, consultez [Register Servers](../../ssms/register-servers/register-servers.md).  
   
@@ -66,18 +67,18 @@ ms.locfileid: "63131803"
   
 -   Déclencheurs DDL pour l'ajout de fonctionnalités lorsque des événements DDL se produisent. Pour plus d'informations, consultez [DDL Triggers](../triggers/ddl-triggers.md).  
   
- L'espace de noms SMO est <xref:Microsoft.SqlServer.Management.Smo>. SMO est implémenté en tant qu'assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Cela signifie que le CLR (Common Language Runtime) de la version 2.0 de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] doit être installée avant d'utiliser les objets SMO. Les assembly SMO sont installés par défaut dans le Global Assembly Cache (GAC) avec l'option de Kit de développement logiciel (SDK) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les assemblys se trouvent dans [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. Pour plus d’informations, consultez le [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentation.  
+ L'espace de noms SMO est <xref:Microsoft.SqlServer.Management.Smo>. SMO est implémenté en tant qu'assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Cela signifie que le CLR (Common Language Runtime) de la version 2.0 de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] doit être installée avant d'utiliser les objets SMO. Les assembly SMO sont installés par défaut dans le Global Assembly Cache (GAC) avec l'option de Kit de développement logiciel (SDK) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les assemblys se trouvent dans [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. Pour plus d’informations, consultez la documentation [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
 ## <a name="smo-classes"></a>Classes SMO  
  Les classes SMO incluent deux catégories : les classes d'instance et les classes utilitaires.  
   
- **Classes d’instance**  
+ **Classes d'instance**  
   
  Les classes d'instance représentent des objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tels que des serveurs, des bases de données, des tables, des déclencheurs et des procédures stockées. La classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> est utilisée pour établir une connexion à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et contrôler le mode de capture des commandes qui lui sont envoyées.  
   
  Les objets d'instance SMO forment une hiérarchie qui représente la hiérarchie d'un serveur de base de données. Au sommet de cette hiérarchie se situent les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], suivies des bases de données, puis des tables, des colonnes, des déclencheurs et ainsi de suite. S'il est logique qu'il existe une relation un-à-plusieurs entre un parent et ses enfants, comme une table constituée d'une ou plusieurs colonnes, il est alors logique que l'enfant soit représenté par une collection d'objets. Sinon, l'enfant est simplement représenté par un objet.  
   
- **Classes d’utilitaire**  
+ **Classes d'utilitaire**  
   
  Les classes utilitaires représentent un groupe d'objets créés explicitement pour effectuer des tâches spécifiques. Elles ont été divisées en différentes hiérarchies d'objets selon leur fonction :  
   
@@ -110,7 +111,7 @@ ms.locfileid: "63131803"
   
  **Création de scripts**  
   
- Dans SMO, la création de scripts a été améliorée et déplacée dans la classe `Scripter`. Le `Scripter` classe peut découvrir les dépendances, comprendre les relations entre les objets et permettre la manipulation de la hiérarchie de dépendances. Le principal objet de script est l'objet `Scripter`. Il existe également plusieurs objets de support qui gèrent les dépendances et répondent aux événements de progression et d'erreur.  
+ Dans SMO, la création de scripts a été améliorée et déplacée dans la classe `Scripter`. La `Scripter` classe peut découvrir des dépendances, comprendre les relations entre les objets et permettre la manipulation de la hiérarchie de dépendances. Le principal objet de script est l'objet `Scripter`. Il existe également plusieurs objets de support qui gèrent les dépendances et répondent aux événements de progression et d'erreur.  
   
  L'objet `Scripter` prend en charge les options de script avancées suivantes :  
   
@@ -134,26 +135,26 @@ ms.locfileid: "63131803"
 /Server/Database[@Name='Adventureworks2012']  
 ```  
   
- L'URN d'un objet peut être récupéré en référençant sa propriété URN. L'objet Scripter utilise également des URN comme paramètres qui passent des références d'objet à la méthode de l'objet `Scripter`. En outre, un URN peut être spécifié pour le **GetSmoObject** méthode de la `Server` objet. Cela permet de créer une instance de l'objet SMO.  
+ L'URN d'un objet peut être récupéré en référençant sa propriété URN. L'objet Scripter utilise également des URN comme paramètres qui passent des références d'objet à la méthode de l'objet `Scripter`. En outre, un URN peut être spécifié pour la méthode **GetSmoObject** de l' `Server` objet. Cela permet de créer une instance de l'objet SMO.  
   
 ## <a name="new-sql-server-features-represented-in-smo"></a>Nouvelles fonctionnalités SQL Server représentées dans SMO  
- **Partitionnement des tables et Index**  
+ **Partitionnement des tables et des index**  
   
  Le partitionnement des tables et des index vous permet de gérer les données dispersées dans des tables et des index de groupes de fichiers. Cette nouvelle fonctionnalité est représentée par les objets SMO.  
   
- **EndPoints**  
+ **Terminaison**  
   
  Les demandes SOAP et les demandes de mise en miroir de base de données sont gérées par des points de terminaison à l'aide de l'objet <xref:Microsoft.SqlServer.Management.Smo.Endpoint>.  
   
- **Le contrôle de version au niveau d’Isolation/ligne d’instantané**  
+ **Isolement d'instantané/Contrôle de version de ligne**  
   
  L'isolement d'instantané (contrôle de version de ligne) est représenté par les nouvelles propriétés de l'objet <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
- **Namespace de schéma XML, index XML et type de données XML**  
+ **Espace de noms de schéma XML, index XML et type de données XML**  
   
  Les expaces de noms de schéma XML sont représentés dans SMO par une collection d'objets. Les index XML sont représentés dans SMO par une propriété d'objet `Index`.  
   
- **Améliorations de la recherche en texte intégral**  
+ **Améliorations apportées à la recherche en texte intégral**  
   
  De nouveaux objets sont fournis dans SMO pour représenter les améliorations apportées à la recherche en texte intégral.  
   
@@ -161,13 +162,14 @@ ms.locfileid: "63131803"
   
  L'objet <xref:Microsoft.SqlServer.Management.Smo.DatabaseOptions.PageVerify%2A> représente les options de vérification de page de bases de données.  
   
- **Bases de données de capture instantanée**  
+ **Bases de données d'instantanés**  
   
  Une base de données d'instantanés est une copie en lecture seule d'une base de données spécifiée à un point spécifique dans le temps. Une base de données d'instantanés peut être spécifiée à l'aide de la propriété <xref:Microsoft.SqlServer.Management.Smo.Database.IsDatabaseSnapshot%2A> de l'objet <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
  **Service Broker**  
   
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] et ses fonctionnalités sont représentés par un groupe d'objets  
+ 
+  [!INCLUDE[ssSB](../../includes/sssb-md.md)] et ses fonctionnalités sont représentés par un groupe d'objets  
   
  **Améliorations des index**  
   

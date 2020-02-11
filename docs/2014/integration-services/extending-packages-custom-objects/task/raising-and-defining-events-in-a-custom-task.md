@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af647a446366ea03063ea0deb84603a3f8f90dd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896127"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>Déclenchement et définition d'événements dans une tâche personnalisée
@@ -43,7 +43,7 @@ ms.locfileid: "62896127"
   
  L'exemple de code suivant présente la méthode `InitializeTask` d'une tâche personnalisée, où deux événements personnalisés sont créés et leurs propriétés sont définies. Les nouveaux événements sont ensuite ajoutés à la collection <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos>.  
   
- Pour le premier événement personnalisé, *eventName* a la valeur « **OnBeforeIncrement** » et *description* a la valeur « **Fires after the initial value is updated.** ». Le paramètre suivant, la valeur `true` indique que cet événement doit autoriser la création d'un conteneur de gestionnaire d'événements pour gérer l'événement. Le gestionnaire d'événements est un conteneur qui fournit une structure dans un package et des services à des tâches, comme d'autres conteneurs tels que le package, Séquence, ForLoop et ForEachLoop. Lorsque le *allowEventHandlers* paramètre est `true`, <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> objets sont créés pour l’événement. Tous les paramètres définis pour l'événement sont maintenant disponibles pour l'objet <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> dans la collection de variables de l'objet <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
+ Pour le premier événement personnalisé, *eventName* a la valeur « **OnBeforeIncrement** » et *description* a la valeur « **Fires after the initial value is updated.** ». Le paramètre suivant, la valeur `true` indique que cet événement doit autoriser la création d'un conteneur de gestionnaire d'événements pour gérer l'événement. Le gestionnaire d'événements est un conteneur qui fournit une structure dans un package et des services à des tâches, comme d'autres conteneurs tels que le package, Séquence, ForLoop et ForEachLoop. Lorsque le paramètre *AllowEventHandlers* a `true`la <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> la, les objets sont créés pour l’événement. Tous les paramètres définis pour l'événement sont maintenant disponibles pour l'objet <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> dans la collection de variables de l'objet <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
   
 ```csharp  
 public override void InitializeTask(Connections connections,  
@@ -189,7 +189,7 @@ Nothing,  bFireOnBeforeIncrement)
     End Class  
 ```  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône de Integration Services (petite)](../../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestionnaires d’événements Integration Services &#40;SSIS&#41](../../integration-services-ssis-event-handlers.md)   

@@ -1,5 +1,5 @@
 ---
-title: Modifier la requête de Source OData à l’exécution | Microsoft Docs
+title: Modifier la requête de source OData au moment de l’exécution | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1fac598789c53f460ed5239f304de2a39acff81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901186"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>Modifier la requête de la source OData à l'exécution
-  Vous pouvez modifier la requête de la source OData à l’exécution en ajoutant une expression à la propriété **[OData Source].[Query]** de la tâche de flux de données.  
+  Vous pouvez modifier la requête de source OData au moment de l’exécution en ajoutant une expression à la propriété **[OData Source].[Query]** de la tâche de flux de données.  
   
  Notez que les colonnes doivent être identiques à celles utilisées au moment de la conception ; sinon vous obtiendrez une erreur lors de l'exécution du package. Veillez à spécifier les mêmes colonnes (dans le même ordre) lorsque vous utilisez l'option de requête $select. Une alternative plus sûre à l’utilisation de l’option $select est de désélectionner les colonnes que vous ne souhaitez pas utiliser directement de l’interface utilisateur du composant source.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "62901186"
   
 2.  La fenêtre **Propriétés** met en surbrillance la propriété **Expressions** .  
   
-3.  Cliquez sur le... suspension (…) pour faire apparaître le **Éditeur d’Expressions de propriété**.  
+3.  Cliquez sur... (points de suspension) pour afficher l' **éditeur d’expressions**de la propriété.  
   
 4.  Sélectionnez la propriété **[OData Source].[Query]** .  
   
-5.  Cliquez sur le... suspension (…) pour **Expression**.  
+5.  Cliquez sur... bouton (points de suspension) pour l' **expression**.  
   
 6.  Entrez l’ **expression**.  
   

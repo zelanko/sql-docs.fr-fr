@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57e89016641469cbb3215429ff0f2b9053f758c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63138882"
 ---
 # <a name="open-file-dialog-box"></a>Boîte de dialogue Ouvrir un fichier
@@ -67,13 +67,13 @@ ms.locfileid: "63138882"
  **Nouveau dossier**  
  Affiche la boîte de dialogue **Nouveau dossier** . Utilisez cette option pour créer un dossier enfant sous le dossier sélectionné dans la zone de liste déroulante **Regarder dans** .  
   
-## <a name="views"></a>Affichages  
+## <a name="views"></a>Les vues  
  Fournit des options permettant d’organiser et d’afficher le contenu de l’élément sélectionné dans la zone de liste déroulante **Vues** .  
   
  **Miniatures**  
  Affiche les éléments sous la forme de miniatures dans le volet d'informations.  
   
- **Mosaïques**  
+ **Vignettes**  
  Affiche les fichiers et les dossiers sous la forme de grandes icônes.  
   
  **Icônes**  

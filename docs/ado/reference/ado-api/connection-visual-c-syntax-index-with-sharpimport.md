@@ -1,5 +1,5 @@
 ---
-title: 'Connexion (Index de la syntaxe Visual C++ avec #import) | Microsoft Docs'
+title: 'Connexion (Visual C++ index de syntaxe avec #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,13 +16,13 @@ ms.assetid: 03f47eda-840d-4cab-83d9-ccddd873f342
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 52ad9e19e07fbe6bff7a23bcd4da8feb2dec93cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933516"
 ---
-# <a name="connection-visual-c-syntax-index-with-import"></a>Connexion (Index de la syntaxe Visual C++ avec #import)
+# <a name="connection-visual-c-syntax-index-with-import"></a>Connexion (Visual C++ index de syntaxe avec #import)
 ## <a name="methods"></a>Méthodes  
   
 ```  
@@ -40,7 +40,7 @@ _RecordsetPtr OpenSchema( enum SchemaEnum Schema, const
     SchemaID = vtMissing );  
 ```  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>Propriétés  
   
 ```  
 _bstr_t GetConnectionString( );  
@@ -88,4 +88,4 @@ __declspec(property(get=GetState)) long State;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Connection, objet (ADO MD)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

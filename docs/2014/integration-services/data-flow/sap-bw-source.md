@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 169c35d89075646aa3f4964d0e9d6eda92bc13a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901067"
 ---
 # <a name="sap-bw-source"></a>Source SAP BW
-  La source SAP BW est le composant source de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 pour SAP BW. Ainsi, la source SAP BW extrait des données d'un système SAP Netweaver BW version 7 et met ces données à la disposition du flux de données dans un package [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  La source SAP BW est le composant source de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 pour SAP BW. Ainsi, la source de SAP BW extrait des données d’un système SAP NetWeaver BW version 7 et met ces données à la disposition du flot de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] données dans un package.  
   
  Cette source comporte une sortie et une sortie d'erreur.  
   
@@ -34,9 +34,9 @@ ms.locfileid: "62901067"
   
 -   [Établir une connexion au système SAP Netweaver BW](#bkmk_Connect_Database)  
   
--   [Configurer la source SAP BW](#bkmk_Configure_Source)  
+-   [Configurer la source de l’SAP BW](#bkmk_Configure_Source)  
   
-##  <a name="bkmk_Prepare_Objects"></a> Préparation des objets SAP Netweaver BW requis par la source  
+##  <a name="bkmk_Prepare_Objects"></a>Préparation des objets SAP NetWeaver BW requis par la source  
  La source SAP BW nécessite la présence de certains objets dans le système SAP Netweaver BW pour que la source puisse fonctionner. Si ces objets n'existent pas, vous devez suivre ces étapes pour les créer et les configurer dans le système SAP Netweaver BW.  
   
 > [!NOTE]  
@@ -85,7 +85,7 @@ ms.locfileid: "62901067"
   
  Pour plus d'informations sur le gestionnaire de connexions SAP BW, consultez [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md).  
   
-##  <a name="bkmk_Configure_Source"></a> Configuration de la source SAP BW  
+##  <a name="bkmk_Configure_Source"></a>Configuration de la source de SAP BW  
  Vous pouvez configurer la source SAP BW comme suit :  
   
 -   Recherchez et sélectionnez la destination OHS (Open Hub Service) à utiliser pour extraire des données.  
@@ -110,7 +110,7 @@ ms.locfileid: "62901067"
   
 -   Utilisez les options que vous avez sélectionnées pour afficher un aperçu des données à extraire.  
   
- Vous pouvez également activer la journalisation des appels de fonction RFC par la source. (Cette journalisation diffère de la journalisation facultative que vous pouvez activer sur les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].) Vous activez la journalisation des appels de fonction RFC lorsque vous configurez le gestionnaire de connexions SAP BW que la source utilisera. Pour plus d'informations sur la configuration du gestionnaire de connexions SAP BW, consultez [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md).  
+ Vous pouvez également activer la journalisation des appels de fonction RFC par la source. (Cette journalisation diffère de la journalisation facultative que vous pouvez activer sur les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .) Vous activez la journalisation des appels de fonction RFC lorsque vous configurez le gestionnaire de connexions SAP BW que la source utilisera. Pour plus d'informations sur la configuration du gestionnaire de connexions SAP BW, consultez [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md).  
   
  Si vous ne connaissez pas toutes les valeurs requises pour configurer la source, adressez-vous à votre administrateur SAP.  
   
@@ -135,9 +135,9 @@ ms.locfileid: "62901067"
   
 -   [Journal des requêtes](request-log.md)  
   
--   [Aperçu](preview.md)  
+-   [Préversion](preview.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Composants de Microsoft Connector 1.1 pour SAP BW](../microsoft-connector-for-sap-bw-components.md)  
+ [Composants Microsoft Connector 1.1 pour SAP BW](../microsoft-connector-for-sap-bw-components.md)  
   
   

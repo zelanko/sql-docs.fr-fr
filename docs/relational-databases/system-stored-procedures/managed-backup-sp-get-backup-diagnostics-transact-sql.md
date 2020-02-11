@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_get_backup_diagnostics (Transact-SQL) | Microsoft Docs
+title: managed_backup. sp_get_backup_diagnostics (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,20 +21,20 @@ ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5e967ae5b46ec703da4e8b1fff64f298fdf8a081
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942046"
 ---
-# <a name="managedbackupspgetbackupdiagnostics-transact-sql"></a>managed_backup.sp_get_backup_diagnostics (Transact-SQL)
+# <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup. sp_get_backup_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Retourne les événements étendus enregistrés par Smart Admin.  
   
- Utilisez cette procédure stockée pour surveiller les événements étendus enregistrés par Smart Admin. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] événements sont enregistrés dans le système et peuvent être consultés et surveillés à l’aide de cette procédure stockée.  
+ Utilisez cette procédure stockée pour surveiller les événements étendus enregistrés par Smart admin. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] les événements sont enregistrés dans ce système et peuvent être examinés et surveillés à l’aide de cette procédure stockée.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,15 +44,15 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ##  <a name="Arguments"></a> Arguments  
  @xevent_channel  
- Type d'événement étendu. La valeur par défaut retourne tous les événements enregistrés au cours des 30 dernières minutes. Les événements enregistrés dépendent des types d'événements étendus activés. Vous pouvez utiliser ce paramètre pour filtrer la procédure stockée et afficher uniquement les événements d'un type spécifique. Vous pouvez spécifier le nom d’événement complet ou spécifier une sous-chaîne comme : **'Admin'** , **'Analytic'** , **'Operational'** , et **'Debug'** . Le @event_channel est **VARCHAR (255)** .  
+ Type d'événement étendu. La valeur par défaut retourne tous les événements enregistrés au cours des 30 dernières minutes. Les événements enregistrés dépendent des types d'événements étendus activés. Vous pouvez utiliser ce paramètre pour filtrer la procédure stockée et afficher uniquement les événements d'un type spécifique. Vous pouvez spécifier le nom complet de l’événement ou spécifier une sous-chaîne telle que : **« admin**», « Analytics **»**, **« Operational »** et **« Debug »**. Est @event_channel de type **varchar (255)**.  
   
- Pour obtenir une liste d’utilisation de types actuellement activés événement la **managed_backup.fn_get_current_xevent_settings** (fonction).  
+ Pour obtenir la liste des types d’événements actuellement activés, utilisez la fonction **managed_backup. fn_get_current_xevent_settings** .  
   
  [@begin_time  
- Début de la période à partir de laquelle les événements doivent être affichés. Le @begin_time paramètre est de type DATETIME avec NULL comme valeur par défaut. S'il n'est pas spécifié, les événements correspondant aux dernières 30 minutes sont affichés.  
+ Début de la période à partir de laquelle les événements doivent être affichés. Le @begin_time paramètre est DateTime avec NULL comme valeur par défaut. S'il n'est pas spécifié, les événements correspondant aux dernières 30 minutes sont affichés.  
   
  @end_time  
- Fin de la période jusqu'à laquelle les événements doivent être affichés. Le @end_time paramètre est DateTime avec NULL comme valeur par défaut.  S'il n'est pas spécifié, les événements qui se sont produits jusqu'à l'heure actuelle sont affichés.  
+ Fin de la période jusqu'à laquelle les événements doivent être affichés. Le @end_time paramètre est DATATIME avec NULL comme valeur par défaut.  S'il n'est pas spécifié, les événements qui se sont produits jusqu'à l'heure actuelle sont affichés.  
   
 ## <a name="table-returned"></a>Table retournée  
  Cette procédure stockée retourne une table contenant les informations suivantes :  
@@ -62,12 +62,12 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 |Nom de la colonne|Type de données|Description|  
 |event_type|NVARCHAR (512)|Type d’événement étendu.|  
 |Événement|NVARCHAR (512)|Récapitulatif des journaux d'événements.|  
-|Timestamp|TIMESTAMP|Horodateur de l'événement indiquant à quel moment l'événement s'est produit.|  
+|Timestamp|timestamp|Horodateur de l'événement indiquant à quel moment l'événement s'est produit.|  
   
 ## <a name="security"></a>Sécurité  
   
 ### <a name="permissions"></a>Autorisations  
- Requiert **EXECUTE** autorisations sur la procédure stockée. Elle nécessite également **VIEW SERVER STATE** autorisations dans la mesure où elle appelle en interne autres objets système qui nécessitent cette autorisation.  
+ Requiert des autorisations **Execute** sur la procédure stockée. Elle requiert également des autorisations **View Server State** , car elle appelle en interne d’autres objets système qui nécessitent cette autorisation.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant retourne tous les événements enregistrés au cours des 30 dernières minutes.  

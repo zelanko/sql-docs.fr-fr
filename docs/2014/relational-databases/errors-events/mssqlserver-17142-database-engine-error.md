@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 54e6f671b7ba41425ad90a72eeb94fe38e425b9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915338"
 ---
-# <a name="mssqlserver17142"></a>MSSQLSERVER_17142
+# <a name="mssqlserver_17142"></a>MSSQLSERVER_17142
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|17142|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|17142|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|INIT_SRVC_PAUSED|  
 |Texte du message|Le service SQL Server a été interrompu. Aucune nouvelle connexion ne sera autorisée. Pour reprendre le service, utilisez SQL Computer Manager ou l'application Services du Panneau de configuration.|  

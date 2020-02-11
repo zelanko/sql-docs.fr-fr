@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 348a50b1f199fa28b9bc67718b47ee4819bdde87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873491"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Afficher ou modifier des planifications de jeu d'éléments de collecte (SQL Server Management Studio)
@@ -49,7 +49,7 @@ ms.locfileid: "62873491"
   
 2.  Cliquez avec le bouton droit sur un jeu d’éléments de collecte qui utilise le mode avec mise en cache, tel que **Statistiques sur les requêtes**, puis sélectionnez **Propriétés** pour ouvrir la boîte de dialogue [Propriétés du jeu d’éléments de collecte de données](#CollectionSet) .  
   
-3.  Vous pouvez modifier la fréquence de collecte sur la page **Général** . Pour cela, procédez comme suit :  
+3.  Vous pouvez modifier la fréquence de collecte sur la page **Général** . Pour ce faire, procédez comme suit :  
   
     1.  Dans le volet d’informations, double-cliquez sur le nombre qui s’affiche pour la colonne **Fréquence de collecte (s)** de la table **Éléments de collecte** .  
   
@@ -145,7 +145,7 @@ ms.locfileid: "62873491"
 > [!NOTE]  
 >  Cet onglet est activé uniquement si l’option **Mises en cache** est configurée pour **Collecte et téléchargement de données**.  
   
- **Server**  
+ **Serveur**  
  Affiche le nom du serveur qui héberge l'entrepôt de données de gestion. Pour plus d’informations, consultez [Configurer l’entrepôt de données de gestion &#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md).  
   
  **Entrepôt de données de gestion**  

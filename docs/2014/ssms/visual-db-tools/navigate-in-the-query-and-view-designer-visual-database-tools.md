@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a9c21d6bff4b30ad73d9653d51f2a49629985fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63066257"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Naviguer dans le Concepteur de requêtes et de vues (Visual Database Tools)
@@ -27,7 +27,7 @@ ms.locfileid: "63066257"
   
 ## <a name="any-pane"></a>Tous les volets  
   
-|**Pour**|**Appuyez sur**|**Cliquez sur**|  
+|**À**|**Appuyez sur**|**Cliquez sur**|  
 |------------|---------------|---------------|  
 |Vous déplacer entre les volets du Concepteur de requêtes et de vues|F6, Maj+F6|N'importe où dans le volet cible|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63066257"
   
 ## <a name="diagram-pane"></a>Volet Schéma  
   
-|**Pour**|**Appuyez sur**|**Cliquez sur**|  
+|**À**|**Appuyez sur**|**Cliquez sur**|  
 |------------|---------------|---------------|  
 |Vous déplacer entre des tables, des objets structurés en tables (et des lignes de jointures le cas échéant)|Tab ou Maj+Tab|Sur l'élément vers lequel vous voulez vous déplacer : table, objet structuré ou ligne de jointure|  
 |Vous déplacer entre les colonnes d'une table ou d'un objet structuré en table|Touches de direction|Dans la colonne à laquelle vous voulez accéder|  
@@ -51,7 +51,7 @@ ms.locfileid: "63066257"
   
 ## <a name="criteria-pane"></a>Volet Critères  
   
-|Pour|Appuyez sur|Cliquez sur|  
+|À|Appuyez sur|Cliquez sur |  
 |--------|-----------|-----------|  
 |Vous déplacer entre les cellules|Touches de direction, TAB ou MAJ+TAB|Sur la cellule cible|  
 |Vous déplacer sur la dernière ligne d'une colonne sélectionnée|Ctrl+Flèche bas||  
@@ -59,13 +59,13 @@ ms.locfileid: "63066257"
 |Vous déplacer sur la cellule située en haut à gauche dans la partie visible de la grille|Ctrl+Origine||  
 |Vous déplacer sur la cellule située en bas à droite|CTRL+FIN||  
 |Vous déplacer dans une liste déroulante|HAUT ou BAS|Sur le bouton dans la cellule|  
-|Sélectionner une colonne entière dans la grille|Ctrl + Espace|Sur l'en-tête de la colonne|  
+|Sélectionner une colonne entière dans la grille|Ctrl + Espace|En-tête de colonne|  
 |Basculer entre le mode Édition et le mode de sélection des cellules|F2||  
-|Copier le texte sélectionné dans la cellule à l'intérieur du Presse-papiers (en mode Édition)|CTRL+C||  
+|Copier le texte sélectionné dans la cellule à l'intérieur du Presse-papiers (en mode Édition)|Ctrl+C||  
 |Couper le texte sélectionné dans la cellule et le placer dans le Presse-papiers (en mode Édition)|Ctrl+X||  
 |Coller le texte à partir du Presse-papiers (en mode Édition)|Ctrl+V||  
 |Basculer entre les modes Insertion et Refrappe pendant la modification d'une cellule|INS||  
-|Activer ou désactiver la case à cocher dans la colonne de sortie|ESPACE|Sur la case à cocher|  
+|Activer ou désactiver la case à cocher dans la colonne de sortie|BARRE D’ESPACE|Sur la case à cocher|  
 |Effacer le contenu d'une cellule sélectionné|Suppression||  
 |Effacer toutes les valeurs dans une colonne de grille sélectionnée|Suppression||  
 |Insérer une ligne entre des lignes existantes|INS après avoir sélectionné une ligne dans la grille||  
@@ -86,23 +86,23 @@ ms.locfileid: "63066257"
   
 ## <a name="results-pane"></a>Volet Résultats  
   
-|**Pour**|**Appuyez sur**|**Cliquez sur**|  
+|**À**|**Appuyez sur**|**Cliquez sur**|  
 |------------|---------------|---------------|  
 |Vous déplacer entre des cellules|Touches de direction, TAB ou MAJ+TAB|Sur la cellule cible|  
 |Vous déplacer sur la première ou la dernière cellule de la ligne en cours|ORIGINE ou FIN||  
 |Vous déplacer sur la première ligne de la colonne en cours|Ctrl+Haut||  
 |Vous déplacer sur la cellule située en haut à gauche|Ctrl+Origine||  
 |Vous déplacer sur la cellule du bas dans la première colonne|Ctrl+Flèche bas||  
-|Étendre la sélection jusqu'au premier caractère d'une cellule|MAJ+ORIGNE||  
-|Étendre la sélection jusqu'au dernier caractère d'une cellule|MAJ+FIN||  
+|Étendre la sélection jusqu'au premier caractère d'une cellule|Maj+Origine||  
+|Étendre la sélection jusqu'au dernier caractère d'une cellule|Maj+Fin||  
 |Basculer entre le mode Édition et le mode de sélection des cellules|F2||  
 |Basculer entre les modes Insertion et Refrappe pendant la modification d'une cellule|INS||  
 |Supprimer une ligne de la table|Suppression||  
 |Annuler les modifications effectuées dans la cellule en cours|ÉCHAP dans une cellule qui a été modifiée||  
 |Annuler les modifications effectuées dans la colonne en cours|ÉCHAP dans une cellule qui n'a pas été modifiée||  
 |Entrer une valeur NULL dans une cellule|Ctrl+0||  
-|Copier les colonnes ou les lignes sélectionnées dans le Presse-papiers|CTRL+C||  
-|Copier le texte sélectionné dans la cellule à l'intérieur du Presse-papiers (en mode Édition)|CTRL+C||  
+|Copier les colonnes ou les lignes sélectionnées dans le Presse-papiers|Ctrl+C||  
+|Copier le texte sélectionné dans la cellule à l'intérieur du Presse-papiers (en mode Édition)|Ctrl+C||  
 |Couper le texte sélectionné dans la cellule et le placer dans le Presse-papiers (en mode Édition)|Ctrl+X||  
 |Coller le texte à partir du Presse-papiers (en mode Édition)|Ctrl+V||  
   

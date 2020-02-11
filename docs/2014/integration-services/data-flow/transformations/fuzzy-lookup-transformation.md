@@ -31,10 +31,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0b77d45ca55adaa85e4e37e9da817f325ce0fc7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900314"
 ---
 # <a name="fuzzy-lookup-transformation"></a>transformation de recherche floue
@@ -51,11 +51,11 @@ ms.locfileid: "62900314"
   
  Cette transformation a une entrée et une sortie.  
   
- Seules les colonnes d'entrée avec les types de données `DT_WSTR` et `DT_STR` peuvent être utilisées dans la correspondance floue. La correspondance exacte peut utiliser n'importe quel type de données DTS, à l'exception des types `DT_TEXT`, `DT_NTEXT` et `DT_IMAGE`. Pour plus d’informations, consultez [Types de données Integration Services](../integration-services-data-types.md). Les colonnes participant à la jointure entre l'entrée et la table de référence doivent avoir des types de données compatibles. Par exemple, il est valide pour joindre une colonne avec DTS `DT_WSTR` type de données à une colonne avec le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nvarchar` type de données, mais pas d’effectuer la jointure entre une colonne avec le `DT_WSTR` type de données à une colonne avec le `int` type de données.  
+ Seules les colonnes d'entrée avec les types de données `DT_WSTR` et `DT_STR` peuvent être utilisées dans la correspondance floue. La correspondance exacte peut utiliser n'importe quel type de données DTS, à l'exception des types `DT_TEXT`, `DT_NTEXT` et `DT_IMAGE`. Pour plus d’informations, consultez [Types de données Integration Services](../integration-services-data-types.md). Les colonnes participant à la jointure entre l'entrée et la table de référence doivent avoir des types de données compatibles. Par exemple, il est possible de joindre une colonne avec le type `DT_WSTR` de données DTS à une colonne avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nvarchar` le type de données, mais non valide pour joindre une `DT_WSTR` colonne avec le type de données à `int` une colonne avec le type de données.  
   
  Vous pouvez personnaliser cette transformation en spécifiant le volume maximum de mémoire, l'algorithme de comparaison de lignes et la mise en cache d'index et de tables de référence utilisés par la transformation.  
   
- Vous pouvez configurer la quantité de mémoire utilisée par la transformation de recherche floue en définissant la propriété personnalisée MaxMemoryUsage. Vous pouvez spécifier le nombre de mégaoctets (Mo) ou utiliser la valeur 0, ce qui permet à la transformation d'utiliser une quantité de mémoire dynamique basée sur ses besoins et sur la mémoire physique disponible. La propriété personnalisée MaxMemoryUsage peut être mise à jour par une expression de la propriété lors du chargement du package. Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41; ](../../expressions/integration-services-ssis-expressions.md), [Utiliser des expressions de propriété dans les packages](../../expressions/use-property-expressions-in-packages.md) et [Propriétés personnalisées des transformation](transformation-custom-properties.md).  
+ Vous pouvez configurer la quantité de mémoire utilisée par la transformation de recherche floue en définissant la propriété personnalisée MaxMemoryUsage. Vous pouvez spécifier le nombre de mégaoctets (Mo) ou utiliser la valeur 0, ce qui permet à la transformation d'utiliser une quantité de mémoire dynamique basée sur ses besoins et sur la mémoire physique disponible. La propriété personnalisée MaxMemoryUsage peut être mise à jour par une expression de la propriété au moment du chargement du package. Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41; ](../../expressions/integration-services-ssis-expressions.md), [Expressions de propriété dans des packages](../../expressions/use-property-expressions-in-packages.md) et [Propriétés personnalisées des transformations](transformation-custom-properties.md).  
   
 ## <a name="controlling-fuzzy-matching-behavior"></a>Contrôle du comportement de la correspondance floue  
  La transformation de recherche floue comprend trois fonctionnalités de personnalisation de la recherche qu'elle effectue : le nombre maximum de correspondances à retourner par ligne d'entrée, les séparateurs de jetons et les seuils de similarité.  
@@ -74,9 +74,9 @@ ms.locfileid: "62900314"
   
  Les colonnes de sortie de transformation comprennent les colonnes d'entrée marquées comme colonnes SQL directes, les colonnes sélectionnées dans la table de recherche et les colonnes supplémentaires suivantes :  
   
--   **_Similarity**, une colonne décrivant la similarité entre des valeurs des colonnes d’entrée et de référence.  
+-   **_Similarity**, colonne qui décrit la similarité entre les valeurs des colonnes d’entrée et de référence.  
   
--   **_Confidence**, une colonne décrivant la qualité de la correspondance.  
+-   **_Confidence**, une colonne qui décrit la qualité de la correspondance.  
   
  La transformation utilise la connexion à la base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour créer les tables temporaires utilisées par l'algorithme de correspondance approximative.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62900314"
   
 |Option|Description|  
 |------------|-----------------|  
-|**GenerateAndMaintainNewIndex**|Créer un nouvel index, l'enregistrer et le gérer. La transformation installe des déclencheurs dans la table de référence pour garder la table de référence et la table d'index synchronisées.|  
+|**Valeur GenerateAndMaintainNewIndex)**|Créer un nouvel index, l'enregistrer et le gérer. La transformation installe des déclencheurs dans la table de référence pour garder la table de référence et la table d'index synchronisées.|  
 |**GenerateAndPersistNewIndex**|Créer un nouvel index et l'enregistrer, sans le gérer.|  
 |**GenerateNewIndex**|Créer un nouvel index, sans l'enregistrer.|  
 |**ReuseExistingIndex**|Réutiliser un index existant.|  
@@ -104,17 +104,17 @@ ms.locfileid: "62900314"
  La commande SQL TRUNCATE TABLE n'appelle pas de déclencheurs DELETE. Si la commande TRUNCATE TABLE est utilisée sur la table de référence, celle-ci ne sera plus synchronisée avec l'index de correspondances et la transformation de recherche floue échouera. Lorsque les déclencheurs qui gèrent la table d'index de correspondances sont installés sur la table de référence, vous devez utiliser la commande SQL DELETE au lieu de TRUNCATE TABLE.  
   
 > [!NOTE]  
->  Lorsque vous sélectionnez **Conserver l’index stocké** sous l’onglet **Table de référence** de **l’Éditeur de transformation de recherche floue**, la transformation utilise des procédures stockées managées pour maintenir l’index. Ces procédures stockées managées utilisent la fonctionnalité de l’intégration du common language runtime (CLR) dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Par défaut, l'intégration CLR dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est désactivée. Pour utiliser la fonctionnalité **Conserver l’index stocké** , vous devez activer l’intégration du CLR. Pour plus d’informations, consultez [Activation de l’intégration du CLR](../../../relational-databases/clr-integration/clr-integration-enabling.md).  
+>  Lorsque vous sélectionnez **Conserver l’index stocké** sous l’onglet **Table de référence** de **l’Éditeur de transformation de recherche floue**, la transformation utilise des procédures stockées managées pour maintenir l’index. Ces procédures stockées managées utilisent la fonctionnalité d’intégration du Common Language Runtime (CLR) dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Par défaut, l'intégration CLR dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est désactivée. Pour utiliser la fonctionnalité **Conserver l’index stocké** , vous devez activer l’intégration du CLR. Pour plus d’informations, consultez [Activation de l’intégration du CLR](../../../relational-databases/clr-integration/clr-integration-enabling.md).  
 >   
 >  Dans la mesure où l’option **Conserver l’index stocké** requiert l’intégration du CLR, cette fonctionnalité n’est effective que lorsque vous sélectionnez une table de référence dans une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour laquelle l’intégration du CLR est activée.  
   
 ## <a name="row-comparison"></a>Comparaison de lignes  
- Lorsque vous configurez la transformation de configuration floue, vous pouvez spécifier l'algorithme de comparaison utilisé par la transformation pour rechercher les enregistrements correspondants dans la table de référence. Si vous définissez la propriété Exhaustive sur `True`, la transformation compare chaque ligne dans l’entrée à chaque ligne de la table de référence. Cet algorithme de comparaison peut produire des résultats plus précis, mais peut ralentir la transformation, sauf si le nombre de lignes dans la table de référence est faible. Si la propriété Exhaustive est définie sur `True`, la table de référence est chargée en mémoire. Pour éviter les problèmes de performances, il est recommandé de définir la propriété Exhaustive `True` lors du développement uniquement.  
+ Lorsque vous configurez la transformation de configuration floue, vous pouvez spécifier l'algorithme de comparaison utilisé par la transformation pour rechercher les enregistrements correspondants dans la table de référence. Si vous affectez à `True`la propriété exhaustif la valeur, la transformation compare chaque ligne de l’entrée à chaque ligne de la table de référence. Cet algorithme de comparaison peut produire des résultats plus précis, mais peut ralentir la transformation, sauf si le nombre de lignes dans la table de référence est faible. Si la propriété exhaustive a la valeur `True`, la totalité de la table de référence est chargée en mémoire. Pour éviter les problèmes de performances, il est recommandé de définir la propriété `True` exhaustive sur au cours du développement du package uniquement.  
   
- Si la propriété Exhaustive est définie sur `False`, la transformation de recherche floue renvoie uniquement les correspondances ayant au moins un jeton indexé ou une sous-chaîne (la sous-chaîne est appelée un *q-gram*) en commun avec l’enregistrement d’entrée. Pour améliorer l'efficacité des recherches, seul un sous-ensemble des jetons de chaque ligne de la table est indexé dans la structure d'index inversée dont se sert la transformation de recherche floue pour rechercher les correspondances. Lorsque le jeu de données d’entrée est petit, vous pouvez affecter à Exhaustive `True` afin d’éviter les correspondances manquantes pour lequel aucun jeton commun n’existe dans la table d’index.  
+ Si la propriété exhaustive a la valeur `False`, la transformation de recherche floue renvoie uniquement les correspondances qui ont au moins un jeton indexé ou une sous-chaîne (la sous-chaîne est appelée un *q-Gram*) en commun avec l’enregistrement d’entrée. Pour améliorer l'efficacité des recherches, seul un sous-ensemble des jetons de chaque ligne de la table est indexé dans la structure d'index inversée dont se sert la transformation de recherche floue pour rechercher les correspondances. Lorsque le jeu de données d’entrée est petit, vous pouvez `True` définir exhaustive sur afin d’éviter les correspondances manquantes pour lesquelles il n’existe aucun jeton commun dans la table d’index.  
   
 ## <a name="caching-of-indexes-and-reference-tables"></a>Mise en cache des index et tables de référence  
- Lorsque vous configurez la transformation de recherche floue, vous pouvez spécifier si la transformation met partiellement en cache l'index et la table de référence dans la mémoire avant que la transformation soit exécutée. Si vous définissez la propriété WarmCaches sur `True`, la table de référence et des index sont chargées en mémoire. Lorsque l’entrée a de nombreuses lignes, la définition de la propriété WarmCaches `True` peut améliorer les performances de la transformation. Lorsque le nombre de lignes d’entrée est petit, définition de la propriété WarmCaches `False` peut accélérer la réutilisation d’un index de grande taille.  
+ Lorsque vous configurez la transformation de recherche floue, vous pouvez spécifier si la transformation met partiellement en cache l'index et la table de référence dans la mémoire avant que la transformation soit exécutée. Si vous affectez à `True`la propriété WarmCaches avec la valeur, l’index et la table de référence sont chargés en mémoire. Lorsque l’entrée contient de nombreuses lignes, la définition de la `True` propriété WarmCaches avec sur peut améliorer les performances de la transformation. Lorsque le nombre de lignes d’entrée est faible, l’affectation de la `False` valeur à la propriété WarmCaches avec peut rendre plus rapide la réutilisation d’un index volumineux.  
   
 ## <a name="temporary-tables-and-indexes"></a>Tables et index temporaires  
  Lors de l'exécution, la transformation de recherche floue crée des objets temporaires tels que des tables et des index, dans la base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à laquelle la transformation se connecte. La taille de ces tables et index temporaires est proportionnelle au nombre de lignes et de jetons dans la table de référence et au nombre de jetons que la transformation de recherche floue crée ; ils peuvent donc occuper un volume important de l'espace disque. La transformation exécute également des requêtes sur ces tables temporaires. Vous devez donc envisager de connecter la transformation de recherche floue à une instance d’une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui ne soit pas en production, notamment si le serveur de production dispose d’un espace disque disponible limité.  
@@ -126,7 +126,7 @@ ms.locfileid: "62900314"
   
  Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de transformation de recherche floue** , cliquez sur l’une des rubriques suivantes :  
   
--   [Éditeur de transformation de recherche floue &#40;onglet Table de référence&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
+-   [Éditeur de transformation de recherche floue &#40;onglet de la table de référence&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
   
 -   [Éditeur de transformation de recherche floue &#40;onglet Colonnes&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
   
@@ -143,7 +143,7 @@ ms.locfileid: "62900314"
   
 ## <a name="see-also"></a>Voir aussi  
  [Transformation de recherche](lookup-transformation.md)   
- [Transformation de regroupement probable](fuzzy-grouping-transformation.md)   
+ [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md)   
  [Transformations Integration Services](integration-services-transformations.md)  
   
   

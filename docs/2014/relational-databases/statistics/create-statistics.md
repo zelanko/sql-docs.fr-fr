@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be88f92c6dbf2a2fc0f04c3f29c54816174aafa0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033623"
 ---
 # <a name="create-statistics"></a>Créer des statistiques
@@ -69,7 +69,7 @@ ms.locfileid: "63033623"
   
 4.  Cliquez avec le bouton droit sur le dossier **Statistiques** et sélectionnez **Nouvelles statistiques...** .  
   
-     Les propriétés suivantes s’affichent dans la page **Général** dans la boîte de dialogue **Nouvelles statistiques sur la table**_nom_table_ .  
+     Les propriétés suivantes sont affichées dans la page **général** de la boîte de dialogue **nouvelles statistiques sur la table**_table_name_ .  
   
      **Nom de la table**  
      Affiche le nom de la table décrite par les statistiques.  
@@ -89,7 +89,7 @@ ms.locfileid: "63033623"
      **Taille**  
      Indique la taille du type de données de chaque colonne.  
   
-     **Identity**  
+     **Identité**  
      Indique une colonne d'identité lorsque l'option est activée.  
   
      **Null autorisé**  
@@ -98,7 +98,7 @@ ms.locfileid: "63033623"
      **Ajouter**  
      Permet d'ajouter des colonnes supplémentaires de la table dans la grille des statistiques.  
   
-     **Supprimer**  
+     **Remove**  
      Permet de supprimer la colonne sélectionnée de la grille des statistiques.  
   
      **Monter**  
@@ -113,12 +113,12 @@ ms.locfileid: "63033623"
      **Mettre à jour les statistiques pour ces colonnes**  
      Activez cette option pour mettre à jour les statistiques lors de la fermeture de la boîte de dialogue.  
   
-     Les propriétés suivantes s’affichent dans la page **Filtre** dans la boîte de dialogue **Nouvelles statistiques sur la table**_nom_table_ .  
+     La propriété suivante est présente dans la page **filtre** de la boîte de dialogue **nouvelles statistiques sur la table**_table_name_ .  
   
      **Expression de filtre**  
      Définit quelles lignes de données inclure dans les statistiques filtrées. Par exemple : `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  Dans la boîte de dialogue **Nouvelles statistiques sur la table**_nom_table_ , dans la page **Général** , cliquez sur **Ajouter**.  
+5.  Dans la boîte de dialogue **nouvelles statistiques sur la Table**_table_name_ , dans la page **général** , cliquez sur **Ajouter**.  
   
      Les propriétés suivantes s'affichent dans la boîte de dialogue **Sélectionner les colonnes** . Ces informations sont en lecture seule.  
   
@@ -131,21 +131,21 @@ ms.locfileid: "63033623"
      **Taille**  
      Indique la taille du type de données de chaque colonne.  
   
-     **Identity**  
+     **Identité**  
      Indique une colonne d'identité lorsque l'option est cochée.  
   
-     **Allow NULLs**  
+     **Autoriser les valeurs NULL**  
      Indique si la colonne accepte les valeurs NULL.  
   
 6.  Dans la boîte de dialogue **Sélectionner les colonnes** , activez la ou les cases à cocher de chaque colonne pour laquelle vous voulez créer une statistique, puis cliquez sur **OK**.  
   
-7.  Dans la boîte de dialogue **Nouvelles statistiques sur la table**_nom_table_ , cliquez sur **OK**.  
+7.  Dans la boîte de dialogue **nouvelles statistiques sur la Table**_table_name_ , cliquez sur **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-create-statistics"></a>Pour créer des statistiques  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
