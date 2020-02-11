@@ -1,5 +1,5 @@
 ---
-title: Extraction d’une ligne unique avec IRow | Microsoft Docs
+title: Extraction d’une seule ligne avec IRow | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: faf887ab5e03d2d0ca8702dc9bd35d0ba094ece4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63183667"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>Extraction d'une ligne unique avec IRow
-  Le **IRow** interface d’implémentation dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif est simplifié pour améliorer les performances. **IRow** autorise l’accès direct aux colonnes d’un objet ligne unique. Si vous savez à l’avance que le résultat d’une exécution de commande produira une ligne exactement, **IRow** récupèrera les colonnes de cette ligne. Si le jeu de résultats comprend plusieurs lignes, **IRow** exposera uniquement la première ligne.  
+  L' **** implémentation de l’interface IRow [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le fournisseur OLE DB Native Client est simplifiée pour améliorer les performances. **IRow** autorise l’accès direct aux colonnes d’un objet Row unique. Si vous savez à l’avance que le résultat d’une exécution de commande produira une ligne exactement, **IRow** récupèrera les colonnes de cette ligne. Si le jeu de résultats comprend plusieurs lignes, **IRow** exposera uniquement la première ligne.  
   
- L’implémentation **IRow** ne permet aucune navigation de la ligne. Chaque colonne dans la ligne est accessible qu’une seule fois à une exception près : Une colonne peut être accédée une fois pour rechercher la taille de colonne et à nouveau pour extraire les données.  
+ L’implémentation **IRow** ne permet aucune navigation de la ligne. Chaque colonne dans la ligne est accédée une seule fois, à une exception près : une colonne peut être accédée une fois pour rechercher la taille de colonne et une autre fois pour extraire les données.  
   
 > [!NOTE]  
 >  **IRow::Open** prend uniquement en charge l’ouverture des types d’objets DBGUID_STREAM et DBGUID_NULL.  
@@ -36,7 +36,7 @@ ms.locfileid: "63183667"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Utilisation d’IRow::GetColumns](using-irow-getcolumns.md)  
+-   [Utilisation d'IRow::GetColumns](using-irow-getcolumns.md)  
   
 -   [Extraction de données Blob à l’aide d’IRow](../../database-engine/dev-guide/fetching-blob-data-using-irow.md)  
   

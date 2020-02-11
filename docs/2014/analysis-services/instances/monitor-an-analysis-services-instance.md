@@ -1,5 +1,5 @@
 ---
-title: Surveiller une Instance Analysis Services | Microsoft Docs
+title: Surveiller une instance de Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,15 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6a09984f089a88f90798c2ca8f4c2514c06bc1cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079747"
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Analyser une instance Analysis Services
-  Surveillez les performances de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en utilisant [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou l’Analyseur de performances, une application parfois désignée sous l’appellation **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] vous permet de créer et de gérer des traces, ainsi que d’analyser et relire les résultats de trace. L'Analyseur de performances rend compte de l'état du serveur, indexé en fonction de certains compteurs qui sont présentés dans la prochaine section.  
+  Surveillez les performances de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en utilisant [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou l’Analyseur de performances, une application parfois désignée sous l’appellation **PerfMon**. 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] vous permet de créer et de gérer des traces, ainsi que d’analyser et relire les résultats de trace. L'Analyseur de performances rend compte de l'état du serveur, indexé en fonction de certains compteurs qui sont présentés dans la prochaine section.  
   
 > [!NOTE]  
 >  Pour plus d’informations sur la surveillance, consultez le [Guide des opérations SQL Server 2008 R2](https://go.microsoft.com/fwlink/?LinkID=225539).  
@@ -33,11 +34,11 @@ ms.locfileid: "66079747"
   
  [Événements de trace Analysis Services](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events)  
   
- [Utiliser SQL Server Profiler pour surveiller Analysis Services](use-sql-server-profiler-to-monitor-analysis-services.md)  
+ [Utiliser SQL Server Profiler pour contrôler Analysis Services](use-sql-server-profiler-to-monitor-analysis-services.md)  
   
- [Utiliser des événements étendus SQL Server &#40;XEvents&#41; pour surveiller Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
+ [Utilisez SQL Server des événements étendus &#40;&#41; XEvents pour surveiller Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
- [Utiliser des vues de gestion dynamique &#40;DMV&#41; pour surveiller Analysis Services](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [Utilisez les vues de gestion dynamique &#40;les DMV&#41; pour surveiller Analysis Services](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  [Compteurs de performance &#40;SSAS&#41;](performance-counters-ssas.md)  
   

@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fbb7cbdda657ef59491cfbb2c1651b969d04428
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287718"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES
@@ -45,7 +45,7 @@ WHERE  ProductID=316 or ProductID=317
 FOR XML RAW  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <row ProductID="316" Name="Blade" />  
@@ -192,7 +192,7 @@ go
   
  Les attributs @xml:lang utilisent l’espace de noms xml prédéfini. Comme XML version 1.0 ne requiert pas la déclaration explicite de la liaison d'espace de noms xml, le résultat n'inclut pas de déclaration explicite de la liaison d'espace de noms.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Translation>  
@@ -218,7 +218,7 @@ WHERE CatalogDescription.exist('
     ) = 1  
 ```  
   
- Dans la requête précédente, les deux méthodes **query()** et **exist()** déclarent le même espace de noms dans leur prologue. Exemple :  
+ Dans la requête précédente, les deux méthodes **query()** et **exist()** déclarent le même espace de noms dans leur prologue. Par exemple :  
   
 ```  
 declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  

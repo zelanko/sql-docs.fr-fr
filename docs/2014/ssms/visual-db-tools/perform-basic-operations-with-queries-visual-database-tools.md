@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cca8d20555a2221842a6962081a0880c1a820745
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63280579"
 ---
 # <a name="perform-basic-operations-with-queries-visual-database-tools"></a>Effectuer des opérations de base concernant les requêtes (Visual Database Tools)
@@ -87,7 +87,7 @@ ms.locfileid: "63280579"
  [Utiliser le Concepteur de requêtes et de vues avec des données internationales &#40;Visual Database Tools&#41;](use-the-query-and-view-designer-with-international-data-visual-database-tools.md)  
  Décrit les fonctionnalités proposées par le Concepteur de requêtes et de vues pour faciliter l'utilisation des données internationales.  
   
-## <a name="reference"></a>Référence  
+## <a name="reference"></a>Informations de référence  
  [Outils du concepteur de requêtes et de vues &#40;Visual Database Tools&#41;](query-and-view-designer-tools-visual-database-tools.md)  
  Décrit les fonctionnalités et fonctions du Concepteur de requêtes et de vues.  
   

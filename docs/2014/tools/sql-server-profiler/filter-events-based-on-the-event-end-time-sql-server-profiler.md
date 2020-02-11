@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 48f0ada8740735e64fe57c35bc17553f59aa444c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184294"
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>Filtrer des événements en fonction de leur heure de fin (SQL Server Profiler)
@@ -42,7 +42,7 @@ ms.locfileid: "63184294"
   
 5.  Dans le menu **Sélection des événements**, cliquez sur la colonne de données **Heure de fin** pour ouvrir la boîte de dialogue **Modifier le filtre** . Vous pouvez également cliquer avec le bouton droit sur l’en-tête de la colonne, puis sélectionner **Modifier le filtre des colonnes**.  
   
-6.  Développez **supérieur** ou **inférieure à**, puis entrez un `datetime`valeur dans le champ qui apparaît sous l’opérateur de comparaison.  
+6.  Développez **supérieur à** ou **inférieur à**, puis entrez `datetime`une valeur dans le champ qui apparaît sous l’opérateur de comparaison.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server Profiler](sql-server-profiler.md)   

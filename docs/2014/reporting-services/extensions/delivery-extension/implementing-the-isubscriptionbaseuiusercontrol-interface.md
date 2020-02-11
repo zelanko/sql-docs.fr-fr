@@ -1,5 +1,5 @@
 ---
-title: Implémentation de l’Interface ISubscriptionBaseUIUserControl pour une Extension de remise | Microsoft Docs
+title: Implémentation de l’interface ISubscriptionBaseUIUserControl pour une extension de remise | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2664d71243d98e9b8152c5c5c7ce241a4f3669f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63164351"
 ---
 # <a name="implementing-the-isubscriptionbaseuiusercontrol-interface-for-a-delivery-extension"></a>Implémentation de l'interface ISubscriptionBaseUIUserControl pour une extension de remise

@@ -1,5 +1,5 @@
 ---
-title: Cibles des événements étendus SQL Server | Microsoft Docs
+title: SQL Server les cibles d’événements étendus | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7be4c1cc392516ffaf6d1e36fc10b93b517d772
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088868"
 ---
 # <a name="sql-server-extended-events-targets"></a>SQL Server Extended Events Targets
@@ -27,7 +27,7 @@ ms.locfileid: "66088868"
   
  Les Événements étendus fournissent les cibles suivantes que vous pouvez utiliser pour une session Événements étendus :  
   
--   [Compteur d’événements](../../2014/database-engine/event-counter-target.md)  
+-   [Compteur d'événements](../../2014/database-engine/event-counter-target.md)  
   
      Permet de comptabiliser tous les événements qui surviennent au cours d'une session Événements étendus. Permet d'obtenir des informations sur les caractéristiques de charge de travail sans ajouter la surcharge de la collecte d'événements complète. Il s'agit d'une cible synchrone.  
   
@@ -35,11 +35,11 @@ ms.locfileid: "66088868"
   
      Permet d'enregistrer sur le disque les résultats d'une session d'événements stockés en mémoire tampon. Il s'agit d'une cible asynchrone.  
   
--   [Appariement d’événements](../../2014/database-engine/event-pairing-target.md)  
+-   [Appariement d'événements](../../2014/database-engine/event-pairing-target.md)  
   
      De nombreux événements surviennent sous forme de paires, tels que les acquisitions et les libérations de verrous. Permet de savoir si un événement jumelé n'entre pas dans le cadre d'une correspondance. Il s'agit d'une cible asynchrone.  
   
--   [Suivi d’événements pour Windows (ETW)](../relational-databases/extended-events/event-tracing-for-windows-target.md)  
+-   [Suivi d'événements pour Windows (ETW)](../relational-databases/extended-events/event-tracing-for-windows-target.md)  
   
      Permet de mettre en corrélation les événements [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec les données d’événement du système d’exploitation Windows ou des applications. Il s'agit d'une cible synchrone.  
   
@@ -53,8 +53,8 @@ ms.locfileid: "66088868"
   
 ## <a name="see-also"></a>Voir aussi  
  [Événements étendus](../relational-databases/extended-events/extended-events.md)   
- [Packages d’événements étendus SQL Server](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
- [Sessions Événements étendus SQL Server](../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
+ [SQL Server des packages d’événements étendus](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
+ [SQL Server les sessions événements étendus](../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [Moteur des événements étendus SQL Server](../relational-databases/extended-events/sql-server-extended-events-engine.md)  
   
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a249a83aba62c7881be024caa3931cb5ad07204
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083292"
 ---
 # <a name="neural-network-model-query-examples"></a>Exemples de requêtes de modèle de réseau neuronal
@@ -28,22 +28,22 @@ ms.locfileid: "66083292"
   
  **Requêtes de contenu**  
   
- [Obtention des métadonnées du modèle avec DMX](#bkmk_Query1)  
+ [Obtention de métadonnées de modèle à l’aide de DMX](#bkmk_Query1)  
   
- [Récupération des métadonnées du modèle de l'ensemble de lignes de schéma](#bkmk_Query2)  
+ [Récupération de métadonnées de modèle à partir de l’ensemble de lignes de schéma](#bkmk_Query2)  
   
- [Récupération des attributs d'entrée du modèle](#bkmk_Query3)  
+ [Récupération des attributs d’entrée pour le modèle](#bkmk_Query3)  
   
  [Récupération des poids de la couche masquée](#bkmk_Query4)  
   
  **Requêtes de prédiction**  
   
- [Création d'une prédiction singleton](#bkmk_Query5)  
+ [Création d’une prédiction Singleton](#bkmk_Query5)  
   
 ## <a name="finding-information-about-a-neural-network-model"></a>Recherche d'informations sur le modèle de réseau neuronal  
  Tous les modèles d'exploration de données exposent le contenu appris par l'algorithme en fonction d'un schéma standardisé : l'ensemble de lignes de schéma du modèle d'exploration de données. Cette information fournit des détails à propos du modèle et inclut les métadonnées de base, les structures découvertes dans l'analyse et les paramètres utilisés lors du traitement. Vous pouvez créer des requêtes sur le contenu du modèle en utilisant des instructions DMX (Data Mining Extension).  
   
-###  <a name="bkmk_Query1"></a> Exemple de requête 1 : Obtention des métadonnées du modèle avec DMX  
+###  <a name="bkmk_Query1"></a>Exemple de requête 1 : obtention de métadonnées de modèle à l’aide de DMX  
  La requête suivante retourne des métadonnées de base sur un modèle généré en utilisant l'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network). Dans un modèle de réseau neuronal, le nœud parent du modèle contient uniquement le nom du modèle, le nom de la base de données dans laquelle le modèle est stocké et le nombre de nœuds enfants. Toutefois, le nœud des statistiques marginales (NODE_TYPE = 24) fournit à la fois ces métadonnées de base et des statistiques dérivées à propos des colonnes d'entrée utilisées dans le modèle.  
   
  L'exemple de requête suivant est basé sur le modèle d'exploration de données que vous créez dans le [didacticiel sur l'exploration de données intermédiaire](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md), nommé `Call Center Default NN`. Le modèle utilise des données d'un centre d'appels pour explorer les corrélations possibles entre le personnel et le nombre d'appels, les commandes et les problèmes. L'instruction DMX récupère des données à partir du nœud des statistiques marginales du modèle de réseau neuronal. La requête inclut le mot clé FLATTENED, parce que les statistiques d'attributs d'entrée dignes d'intérêt sont stockées dans une table imbriquée, NODE_DISTRIBUTION. Toutefois, si votre fournisseur de requêtes prend en charge les ensembles de lignes hiérarchiques, vous n'avez pas besoin d'utiliser le mot clé FLATTENED.  
@@ -61,16 +61,16 @@ WHERE NODE_TYPE = 24
 > [!NOTE]  
 >  Vous devez indiquer entre crochets le nom des colonnes de la table imbriquée `[SUPPORT]` et `[PROBABILITY]` pour les distinguer des mots clés du même nom.  
   
- Résultats de l'exemple :  
+ Résultats de l’exemple :  
   
-|MODEL_CATALOG|MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
+|MODEL_CATALOG|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |--------------------|-----------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
 |Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|Manquant|0|0|1|  
 |Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|< 64.7094100096|11|0.407407407|5|  
   
  Pour une définition de la signification des colonnes dans l’ensemble de lignes de schéma dans le contexte d’un modèle de réseau neuronal, consultez [Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_Query2"></a> Exemple de requête 2 : Récupération des métadonnées du modèle de l'ensemble de lignes de schéma  
+###  <a name="bkmk_Query2"></a>Exemple de requête 2 : récupération des métadonnées de modèle à partir de l’ensemble de lignes de schéma  
  Vous pouvez obtenir les mêmes informations que celles retournées par une requête de contenu DMX en interrogeant l'ensemble de lignes de schéma d'exploration de données. Toutefois, l'ensemble de lignes de schéma fournit quelques colonnes supplémentaires, L'exemple de requête suivant retourne la date à laquelle le modèle a été créé, la date à laquelle il a été modifié et la date à laquelle il a été traité pour la dernière fois. La requête retourne également les colonnes prédictibles, qui ne sont pas aisément disponibles à partir du contenu du modèle, et les paramètres utilisés pour générer le modèle. Ces informations peuvent être utiles pour documenter le modèle.  
   
 ```  
@@ -79,7 +79,7 @@ from $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'Call Center Default NN'  
 ```  
   
- Résultats de l'exemple :  
+ Résultats de l’exemple :  
   
 |||  
 |-|-|  
@@ -89,7 +89,7 @@ WHERE MODEL_NAME = 'Call Center Default NN'
 |PREDICTION_ENTITY|Durée moyenne par problème,<br /><br /> Niveau de service,<br /><br /> Nombre de commandes|  
 |MINING_PARAMETERS|HOLDOUT_PERCENTAGE=30, HOLDOUT_SEED=0<br /><br /> MAXIMUM_INPUT_ATTRIBUTES=255, MAXIMUM_OUTPUT_ATTRIBUTES=255<br /><br /> MAXIMUM_STATES=100, SAMPLE_SIZE=10000, HIDDEN_NODE_RATIO=4|  
   
-###  <a name="bkmk_Query3"></a> Exemple de requête 3 : Récupération des attributs d'entrée du modèle  
+###  <a name="bkmk_Query3"></a>Exemple de requête 3 : récupération des attributs d’entrée pour le modèle  
  Vous pouvez récupérer les paires attribut-valeur d'entrée utilisées pour créer le modèle en interrogeant les nœuds enfants (NODE_TYPE = 20) de la couche d'entrée (NODE_TYPE = 18). La requête suivante retourne la liste des attributs d'entrée à partir des descriptions de nœuds.  
   
 ```  
@@ -98,7 +98,7 @@ FROM [Call Center Default NN].CONTENT
 WHERE NODE_TYPE = 2  
 ```  
   
- Résultats de l'exemple :  
+ Résultats de l’exemple :  
   
 |NODE_DESCRIPTION|  
 |-----------------------|  
@@ -122,9 +122,9 @@ FROM [Call Center Default NN -- Predict Service and Orders].CONTENT
 WHERE NODE_TYPE = 21  
 ```  
   
- Résultats de l'exemple :  
+ Résultats de l’exemple :  
   
-|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
+|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
 |-----------------------|------------------------|  
 |Average Time Per Issue|64.7094100096 - 77.4002099712|  
 |Jour de la semaine|Fri.|  
@@ -139,7 +139,7 @@ WHERE NODE_TYPE = 21
 </NormContinuous>    
 ```  
   
-###  <a name="bkmk_Query4"></a> Exemple de requête 4 : Récupération des poids de la couche masquée  
+###  <a name="bkmk_Query4"></a>Exemple de requête 4 : récupération des poids de la couche masquée  
  Le contenu du modèle d'un modèle de réseau neuronal est structuré de manière à extraire facilement les détails relatifs à n'importe quel nœud du réseau. De plus, les nombres d'ID des nœuds fournissent des informations qui vous aident à identifier les relations entre les types de nœuds.  
   
  La requête suivante montre comment extraire les coefficients stockés sous un nœud particulier de la couche masquée. La couche masquée consiste en un nœud organisateur (NODE_TYPE = 19), qui contient uniquement les métadonnées, et plusieurs nœuds enfants (NODE_TYPE = 22), qui contiennent les coefficients pour les diverses combinaisons d'attributs et valeurs. Cette requête retourne uniquement les nœuds coefficient.  
@@ -153,9 +153,9 @@ WHERE NODE_TYPE = 22
 AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CONTENT  
 ```  
   
- Résultats de l'exemple :  
+ Résultats de l’exemple :  
   
-|NODE_UNIQUE_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.VALUETYPE|  
+|NODE_UNIQUE_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.VALUETYPE|  
 |------------------------|-----------------------|------------------------|-----------------|  
 |70000000200000000|6000000000000000a|-0.178616518|7|  
 |70000000200000000|6000000000000000b|-0.267561918|7|  
@@ -173,15 +173,15 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
   
  Par conséquent, ces résultats vous indiquent que six coefficients différents (VALUETYPE = 7) ont été transmis au nœud dénoté par l'ID 70000000200000000. Les valeurs des coefficients se trouvent dans la colonne ATTRIBUTE_VALUE. Vous pouvez déterminer exactement à quel attribut d'entrée le coefficient s'applique en utilisant l'ID de nœud dans la colonne ATTRIBUTE_NAME. Par exemple, l’ID de nœud 6000000000000000a se rapporte à l’attribut d’entrée et à la valeur `Day of Week = 'Tue.'` Vous pouvez utiliser l’ID de nœud pour créer une requête ou vous pouvez sélectionner le nœud en utilisant la [Visionneuse de l’arborescence de contenu générique Microsoft](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
- De la même façon, si vous interrogez la table des nœuds NODE_DISTRIBUTION dans la couche de sortie (NODE_TYPE = 23), vous pouvez consulter les coefficients pour chaque valeur de sortie. Toutefois, les pointeurs font référence aux nœuds de la couche masquée dans la couche de sortie. Pour plus d’informations, consultez [Mining Model Content for Neural Network Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
+ De la même façon, si vous interrogez la table des nœuds NODE_DISTRIBUTION dans la couche de sortie (NODE_TYPE = 23), vous pouvez consulter les coefficients pour chaque valeur de sortie. Toutefois, les pointeurs font référence aux nœuds de la couche masquée dans la couche de sortie. Pour plus d’informations, consultez [Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
   
 ## <a name="using-a-neural-network-model-to-make-predictions"></a>Utilisation d'un modèle de réseau neuronal pour élaborer des prédictions  
  L'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network) prend en charge à la fois la classification et la régression. Vous pouvez utiliser des fonctions de prédiction avec ces modèles pour fournir de nouvelles données et créer des prédictions singleton ou prédictions par lot.  
   
-###  <a name="bkmk_Query5"></a> Exemple de requête 5 : Création d'une prédiction singleton  
+###  <a name="bkmk_Query5"></a>Exemple de requête 5 : création d’une prédiction Singleton  
  La façon la plus simple de générer une requête de prédiction sur un modèle de réseau neuronal est d'utiliser le Générateur de requêtes de prédiction, disponible sur l'onglet **Prédiction d'exploration de données** du Concepteur d'exploration de données dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Vous pouvez parcourir le modèle dans la Visionneuse de l'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network) pour filtrer des attributs présentant un intérêt et voir les tendances, puis basculer vers l'onglet **Prédiction d'exploration de données** pour créer une requête et prédire de nouvelles valeurs pour ces tendances.  
   
- Par exemple, vous pouvez parcourir le modèle de centre d'appels pour voir les corrélations entre les volumes de commandes et d'autres attributs. Pour ce faire, ouvrez le modèle dans la visionneuse et pour **entrée**, sélectionnez  **\<tous les >** .  Ensuite, pour **Sortie**, sélectionnez **Nombre de commandes**. Pour **Valeur 1,** sélectionnez la plage qui représente le plus de commandes et pour **Valeur 2**, sélectionnez la plage qui représente le moins de commandes. Vous pouvez ensuite voir d'un seul coup d'œil tous les attributs que le modèle met en corrélation avec le volume de commandes.  
+ Par exemple, vous pouvez parcourir le modèle de centre d'appels pour voir les corrélations entre les volumes de commandes et d'autres attributs. Pour ce faire, ouvrez le modèle dans la visionneuse, puis, pour **entrée**, sélectionnez ** \<tous les>**.  Ensuite, pour **Sortie**, sélectionnez **Nombre de commandes**. Pour **Valeur 1,** sélectionnez la plage qui représente le plus de commandes et pour **Valeur 2**, sélectionnez la plage qui représente le moins de commandes. Vous pouvez ensuite voir d'un seul coup d'œil tous les attributs que le modèle met en corrélation avec le volume de commandes.  
   
  En parcourant les résultats dans la visionneuse, vous découvrez que certains jours de la semaine se caractérisent par des volumes de commandes bas et qu'une augmentation du nombre d'opérateurs semble correspondre à des ventes plus élevées. Vous pouvez alors utiliser une requête de prédiction sur le modèle pour tester une hypothèse de simulation et chercher à savoir si l'augmentation du nombre d'opérateurs de niveau 2 un jour de volume bas permettrait d'augmenter les commandes. Pour cela, créez une requête telle que la suivante :  
   
@@ -194,11 +194,11 @@ NATURAL PREDICTION JOIN
 13 AS [Level 2 Operators]) AS t  
 ```  
   
- Résultats de l'exemple :  
+ Résultats de l’exemple :  
   
 |Commandes prédites|Probabilité|  
 |----------------------|-----------------|  
-|364|0.9532...|  
+|364|0,9532...|  
   
  Le volume de ventes prédit est plus élevé que la plage actuelle de ventes pour mardi et la probabilité de la prédiction est très haute. Cependant, vous pouvez créer plusieurs prédictions à l'aide d'un processus par lot pour tester diverses hypothèses sur le modèle.  
   
@@ -210,21 +210,21 @@ NATURAL PREDICTION JOIN
   
 |||  
 |-|-|  
-|Fonction de prédiction|Utilisation|  
-|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Détermine si un nœud est un enfant d'un autre nœud dans le graphique de réseau neuronal.|  
-|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Retourne la probabilité pondérée.|  
-|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Retourne une table des valeurs associées à la valeur prédite actuelle.|  
-|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|Retourne la variance de la valeur prédite.|  
-|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|Retourne la probabilité pour la valeur prédite.|  
-|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|Retourne la déviance standard pour la valeur prédite.|  
-|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|Pour les modèles de réseau neuronal et de régression logistique, la fonction retourne une valeur unique qui représente la taille du jeu d'apprentissage pour le modèle entier.|  
+|Fonction de prédiction|Usage|  
+|[IsDescendant&#41;DMX &#40;](/sql/dmx/isdescendant-dmx)|Détermine si un nœud est un enfant d'un autre nœud dans le graphique de réseau neuronal.|  
+|[PredictAdjustedProbability&#41;DMX &#40;](/sql/dmx/predictadjustedprobability-dmx)|Retourne la probabilité pondérée.|  
+|[&#41;&#40;DMX de PredictHistogram](/sql/dmx/predicthistogram-dmx)|Retourne une table des valeurs associées à la valeur prédite actuelle.|  
+|[PredictVariance&#41;DMX &#40;](/sql/dmx/predictvariance-dmx)|Retourne la variance de la valeur prédite.|  
+|[PredictProbability&#41;DMX &#40;](/sql/dmx/predictprobability-dmx)|Retourne la probabilité pour la valeur prédite.|  
+|[PredictStdev&#41;DMX &#40;](/sql/dmx/predictstdev-dmx)|Retourne la déviance standard pour la valeur prédite.|  
+|[PredictSupport&#41;DMX &#40;](/sql/dmx/predictsupport-dmx)|Pour les modèles de réseau neuronal et de régression logistique, la fonction retourne une valeur unique qui représente la taille du jeu d'apprentissage pour le modèle entier.|  
   
- Pour la syntaxe de fonctions spécifiques, consultez [Fonctions DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
+ Pour en savoir plus sur la syntaxe de fonctions spécifiques, consultez [Informations de référence sur les fonctions DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
- [Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md)   
- [Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Leçon 5 : Création de réseau neuronal et modèles de régression logistique &#40;didacticiel d’exploration de données intermédiaire&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Algorithme de réseau neuronal Microsoft](microsoft-neural-network-algorithm.md)   
+ [Informations techniques de référence sur l’algorithme Microsoft neuronal Network](microsoft-neural-network-algorithm-technical-reference.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Leçon 5 : génération de modèles de réseau neuronal et de régression logistique &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   

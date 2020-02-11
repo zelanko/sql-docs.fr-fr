@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 75b29477c7ead402f06c9df2505a84636b906978
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63163956"
 ---
 # <a name="specify-search-conditions-visual-database-tools"></a>Spécifier des conditions de recherche (Visual Database Tools)
@@ -47,7 +47,7 @@ ms.locfileid: "63163956"
  Le Concepteur de requêtes et de vues met à jour l’instruction SQL dans le [volet SQL](sql-pane-visual-database-tools.md) en ajoutant ou en modifiant la clause WHERE.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Valeurs de recherche de règles pour l’entrée &#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
+ [Règles pour l’entrée de valeurs de recherche &#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
  [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

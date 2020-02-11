@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ce71d591dc8f72e6826f7bcd96628fb1898fd7bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63242949"
 ---
 # <a name="setdefaults-method-clientsettings-class"></a>Méthode SetDefaults (classe ClientSettings)
-  Définit toutes les valeurs par défaut pour l'instance du client [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec la possibilité de remplacer les données existantes.  
+  Définit toutes les valeurs par défaut pour l’instance du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client avec l’option permettant de remplacer les données existantes.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,14 +40,15 @@ OverwriteAll
 ```  
   
 ## <a name="parts"></a>Éléments  
- *object*  
+ *dessin*  
  Objet `ClientSettings` qui représente une instance du client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 #### <a name="parameters"></a>Paramètres  
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|*OverwriteAll*|Valeur booléenne qui spécifie s'il faut remplacer les valeurs existantes sur l'instance du client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . `true` pour remplacer les données existantes ou `false` si les données existantes ne doivent pas être remplacées.|  
+|*OverwriteAll*|Valeur booléenne qui spécifie s'il faut remplacer les valeurs existantes sur l'instance du client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
+  `true` pour remplacer les données existantes ou `false` si les données existantes ne doivent pas être remplacées.|  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur `uint32`, égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  

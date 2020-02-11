@@ -1,5 +1,5 @@
 ---
-title: Passez en revue les résultats de relecture | Microsoft Docs
+title: Passer en revue les résultats de la relecture | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149707"
 ---
 # <a name="review-the-replay-results"></a>Examiner les résultats de la relecture
-  Une fois que la fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay a terminé une relecture distribuée, l'activité de relecture de chaque client peut être capturée et enregistrée dans des fichiers de trace de résultats sur chaque client. Pour capturer cette activité, vous devez utiliser le paramètre **-o** quand vous exécutez l’outil d’administration avec l’option **replay**. Pour plus d’informations sur l’option replay, consultez [Option replay &#40;outil d’administration Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
+  Une fois [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que la fonctionnalité de Distributed Replay a effectué une relecture distribuée, l’activité de relecture de chaque client peut être capturée et enregistrée dans des fichiers de trace de résultats sur chaque client. Pour capturer cette activité, vous devez utiliser le paramètre **-o** quand vous exécutez l’outil d’administration avec l’option **replay** . Pour plus d’informations sur l’option replay, consultez [Option replay &#40;outil d’administration Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
   
  L'emplacement où sont stockés les fichiers de trace de résultats est spécifié par l'élément XML `<ResultDirectory>` dans le fichier de configuration client, `DReplayClient.xml`, situé sur chaque client. Les fichiers de trace dans le répertoire des résultats du client sont remplacés à chaque relecture.  
   
@@ -35,14 +35,14 @@ ms.locfileid: "63149707"
 ||Audit Logout|Une fois pour chaque événement Audit Logout dans les données de trace d'origine|Après la réussite ou l'échec de l'événement|  
 ||SQL:BatchCompleted|Une fois pour chaque événement SQL:BatchStarting dans les données de trace d'origine|Après la réussite ou l'échec de l'événement|  
 ||RPC:Completed|Une fois pour chaque événement RPC:Starting dans les données de trace d'origine|Après la réussite ou l'échec de l'événement|  
-|Statistiques et résultats|Replay Settings Event|Une fois|Premier événement de la trace de résultats|  
-||Replay Statistics Event|Une fois|Dernier événement de la trace de résultats.|  
+|Statistiques et résultats|Replay Settings Event|Ponctuelle|Premier événement de la trace de résultats|  
+||Replay Statistics Event|Ponctuelle|Dernier événement de la trace de résultats.|  
 ||Replay Result Set Event|Une fois pour chaque événement SQL:BatchStarting et RPC:Starting.<br /><br /> Uniquement capturé si la valeur de l'option `<RecordResultSet>` dans le fichier de configuration de relecture est `Yes`.||  
 ||Replay Result Row Event|Une fois pour chaque ligne dans le jeu de résultats des événements SQL:BatchStarting et RPC:Starting.<br /><br /> Uniquement capturé si la valeur de l'option `<RecordResultSet>` dans le fichier de configuration de relecture est `Yes`.||  
 |Erreurs et avertissements|Replay Internal Error|Une fois pour chaque erreur interne|En cas de condition d'erreur interne|  
 ||Replay Provider Error|Une fois pour chaque erreur de fournisseur|En cas de condition d'erreur de fournisseur|  
   
- Notez les points suivants :  
+ Notez les points suivants :  
   
 -   Pour chaque événement relu avec succès sur le serveur cible, il existe une classe d'événement de sortie correspondante.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "63149707"
 ## <a name="event-class-column-mapping"></a>Mappage de colonne de la classe d'événements  
  La figure suivante répertorie les colonnes de trace de résultats disponibles pour chaque type de classe d'événements capturée lors de la relecture.  
   
- ![Event class column mapping](../../database-engine/media/eventclassmappings.gif "Event class column mapping")  
+ ![Mappage de colonnes de la classe d’événements](../../database-engine/media/eventclassmappings.gif "Mappage de colonne de la classe d'événements")  
   
 ## <a name="column-descriptions-for-result-trace"></a>Descriptions des colonnes de la trace de résultats  
  Le tableau suivant décrit les colonnes des données de la trace de résultats.  
@@ -70,8 +70,8 @@ ms.locfileid: "63149707"
 |CaptureSPID|`int`|ID de la session de capture de l'événement.|10|  
 |ConnectionID|`int`|ID de la connexion de capture de l'événement.|11|  
 |ReplaySPID|`int`|ID de la session de relecture de l'événement.|12|  
-|DatabaseName|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|13|  
-|LoginName|`nvarchar`|Nom de connexion de l'utilisateur. Il peut s’agir soit d’une connexion de sécurité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , soit des informations d’identification de connexion Microsoft Windows, au format *nom_domaine*\\*nom_utilisateur*.|14|  
+|nom_base_de_données|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|13|  
+|LoginName|`nvarchar`|Nom de connexion de l'utilisateur. Il peut s’agir d' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] une connexion de sécurité ou des informations d’identification de connexion Microsoft Windows, au format *domain_name*\\*user_name*.|14|  
 |CaptureHostName|`nvarchar`|Nom de l'ordinateur sur lequel s'exécute le service client lors de la capture.|15|  
 |ReplayHostName|`nvarchar`|Nom de l'ordinateur sur lequel s'exécute le client lors de la relecture.|16|  
 |ApplicationName|`nvarchar`|Nom de l'application cliente qui a créé la connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lors de la capture.|17|  
@@ -80,6 +80,6 @@ ms.locfileid: "63149707"
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Distributed Replay Requirements](distributed-replay-requirements.md)   
  [Options de ligne de commande de l’outil d’administration &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configure Distributed Replay](configure-distributed-replay.md)  
+ [Configurer Distributed Replay](configure-distributed-replay.md)  
   
   

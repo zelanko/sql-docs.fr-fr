@@ -1,5 +1,5 @@
 ---
-title: Prise en charge de UTF-16 dans SQL Server Native Client 11.0 | Microsoft Docs
+title: Prise en charge d’UTF-16 dans SQL Server Native Client 11,0 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 415cb2fe8a3295770cfc8bd2d5c6e56750adb6d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205113"
 ---
 # <a name="utf-16-support-in-sql-server-native-client-110"></a>Prise en charge de UTF-16 dans SQL Server Native Client 11.0
-  À compter de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], si vous fournissez une mémoire tampon de longueur fixe lors de la liaison d’un paramètre de résultat ou de sortie de colonne et si le `wchar` caractère écrit dans la mémoire tampon avant le caractère de fin est un point de code de substitut étendu d’une paire de substitution et si la prochaine `wchar` caractère est un point de code de substitution faible, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client n’ajoutera pas le point de code de substitut étendu à la mémoire tampon.  
+  À compter [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]de, si vous fournissez une mémoire tampon de longueur fixe lors de la liaison d’un paramètre de `wchar` sortie ou de résultat de colonne et si le caractère écrit dans la mémoire tampon avant le caractère de fin est un point de code `wchar` de substitution étendu d’une paire de substitution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , et si le caractère suivant est un point de code de substitution faible, Native Client n’ajoute pas le point de code de  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités de SQL Server Native Client](sql-server-native-client-features.md)  

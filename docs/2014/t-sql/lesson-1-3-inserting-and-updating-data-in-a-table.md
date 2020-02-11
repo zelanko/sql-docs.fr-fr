@@ -13,23 +13,23 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 19e6683baeb0a82c77a858b04f18695ba7120b15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250126"
 ---
 # <a name="inserting-and-updating-data-in-a-table-tutorial"></a>Insertion et mise à jour des données dans une table (Didacticiel)
-  Une fois que vous avez créé la table **Products**, vous pouvez insérer des données dans la table à l’aide de l’instruction INSERT. Une fois les données insérées, vous allez modifier le contenu d'une ligne à l'aide d'une l'instruction UPDATE. Vous allez utiliser la clause WHERE de l'instruction UPDATE pour restreindre la mise à jour à une seule ligne. Les quatre instructions entrent les données suivantes.  
+  Une fois que vous avez créé la table **Products** , vous pouvez insérer des données dans la table à l’aide de l’instruction INSERT. Une fois les données insérées, vous allez modifier le contenu d'une ligne à l'aide d'une l'instruction UPDATE. Vous allez utiliser la clause WHERE de l'instruction UPDATE pour restreindre la mise à jour à une seule ligne. Les quatre instructions entrent les données suivantes.  
   
-|ProductID|ProductName|Price|ProductDescription|  
+|IDProduit|ProductName|Price|ProductDescription|  
 |---------------|-----------------|-----------|------------------------|  
 |1|Clamp|12.48|Workbench clamp|  
 |50|Screwdriver|3.17|Flat head|  
 |75|Tire Bar||Outil pour changer des pneus.|  
 |3000|3mm Bracket|52||  
   
- La syntaxe de base est la suivante : INSERT, nom de la table, liste de colonnes, les valeurs, puis une liste des valeurs à insérer. Les deux tirets en début de ligne indiquent que celle-ci est un commentaire et que le texte sera ignoré par le compilateur. Dans ce cas, le commentaire décrit une variation autorisée de la syntaxe.  
+ La syntaxe de base est la suivante : INSERT, nom de table, liste de colonnes, VALUES, puis la liste des valeurs à insérer. Les deux tirets en début de ligne indiquent que celle-ci est un commentaire et que le texte sera ignoré par le compilateur. Dans ce cas, le commentaire décrit une variation autorisée de la syntaxe.  
   
 ### <a name="to-insert-data-into-a-table"></a>Pour insérer des données dans une table  
   
@@ -84,7 +84,7 @@ ms.locfileid: "63250126"
     ```  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Lecture des données dans une table &#40;Didacticiel&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
+ [Lecture des données dans une table &#40;didacticiel&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   

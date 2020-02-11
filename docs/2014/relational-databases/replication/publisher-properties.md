@@ -1,5 +1,5 @@
 ---
-title: Les propriétés du serveur de publication de réplication SQL Server | Microsoft Docs
+title: Propriétés de l’éditeur de Réplication SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2ea467b00223e31ec7672d4d54a49150cf05368c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63261977"
 ---
-# <a name="sql-server-replication-publisher-properties"></a>Propriétés du serveur de publication de réplication SQL Server
-  Cette section contient des informations concernant les propriétés de publication disponibles sur le serveur de distribution et le serveur de publication. 
+# <a name="sql-server-replication-publisher-properties"></a>Propriétés de l’éditeur de Réplication SQL Server
+  Cette section contient des informations sur les propriétés du serveur de publication disponibles sur le serveur de distribution et sur le serveur de publication. 
 
 ## <a name="general"></a>Général  
   La page **Général** de la boîte de dialogue **Propriétés du serveur de publication** contient des informations en lecture seule sur le serveur de distribution et la base de données de distribution qu'utilise le serveur de publication. Pour changer le serveur de distribution ou la base de données de distribution d'un serveur de publication :  
@@ -61,7 +61,7 @@ ms.locfileid: "63261977"
  **Transactionnelle**  
  Activez cette case à cocher pour permettre aux utilisateurs du rôle de base de données fixe **db_owner** de créer des publications d'instantanés ou des publications transactionnelles dans la base de données. 
   
- **Fusion**  
+ **Fusionner**  
  Activez cette case à cocher pour permettre aux utilisateurs du rôle de base de données fixe **db_owner** de créer des publications de fusion dans la base de données.  
 
 ## <a name="subscribers"></a>Abonnés

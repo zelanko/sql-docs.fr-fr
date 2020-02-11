@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec4d66af36ff74b5b0a9160529990c9fc52fc961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200278"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>Utiliser des paramètres table (ODBC)
@@ -25,7 +25,7 @@ ms.locfileid: "63200278"
 ## <a name="example"></a>Exemple  
  Vous aurez besoin d'une source de données ODBC appelée TVPDemo. La base de données par défaut pour TVPDemo peut être n'importe quelle base de données de test sur votre ordinateur. Cette source de données doit être basée sur le pilote ODBC pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
- Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
+ Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   

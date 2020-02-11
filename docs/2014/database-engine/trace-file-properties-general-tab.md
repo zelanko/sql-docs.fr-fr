@@ -1,5 +1,5 @@
 ---
-title: Propriétés (onglet Général) du fichier de trace | Microsoft Docs
+title: Propriétés du fichier de trace (onglet général) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf665b0ea1cae89257d6368af9b307845a2cb3c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089612"
 ---
 # <a name="trace-file-properties-general-tab"></a>Propriétés du fichier de trace (onglet Général)
@@ -36,7 +36,7 @@ ms.locfileid: "66089612"
  **Type de fournisseur de trace**  
  Affiche le type de serveur qui a fourni la trace.  
   
- **version**  
+ **Version**  
  Affiche la version du serveur qui a fourni la trace.  
   
  **Taille du fichier (Ko)**  
@@ -45,7 +45,7 @@ ms.locfileid: "66089612"
  **Créé le**  
  La date et l'heure de création du fichier de trace.  
   
- **Modifié le**  
+ **Date de modification**  
  La date et l'heure de modification du fichier de trace.  
   
 ## <a name="see-also"></a>Voir aussi  

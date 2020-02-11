@@ -1,5 +1,5 @@
 ---
-title: Appliquer des filtres pour modéliser les données de test | Microsoft Docs
+title: Appliquer des filtres aux données de test du modèle | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 16c5a556159caa1227268bc3488a19d25fa9e296
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086150"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Appliquer des filtres aux données de test du modèle
   Quand vous spécifiez une source de données externe à utiliser pour tester un modèle, vous pouvez éventuellement appliquer un filtre pour restreindre les données d’entrée. Par exemple, vous pouvez tester le modèle spécifiquement pour les prédictions sur des clients dans une certaine plage de revenus.  
   
- Par exemple, dans le scénario de publipostage ciblé AdventureWorks, vous pouvez créer une expression de filtre telle que la suivante sur ProspectiveBuyer, qui est la table qui contient les données de test, et restreindre les cas de tests par plage de revenus :  
+ Par exemple, dans le scénario de publipostage ciblé AdventureWorks, vous pouvez créer une expression de filtre comme celle qui suit sur ProspectiveBuyer, qui est la table qui contient les données de test et limiter les cas de test par plage de revenus :  
   
  `[YearlyIncome] = '50000'`  
   
@@ -57,11 +57,11 @@ ms.locfileid: "66086150"
   
 1.  Double-cliquez sur la structure d'exploration de données qui contient le modèle à tester pour ouvrir le Concepteur d'exploration de données.  
   
-2.  Sélectionnez l’onglet **Graphique d’analyse de précision de l’exploration de données** , puis l’onglet **Sélection d’entrée** .  
+2.  Sélectionnez l’onglet **Graphique d’analyse de précision de l’exploration de données** puis l’onglet **Sélection d’entrée** .  
   
 3.  Sous l’onglet **Sélection d’entrée** , sous **Sélectionner le jeu de données à utiliser pour le graphique d’analyse de précision**, sélectionnez l’option **Spécifier un autre jeu de données**.  
   
-4.  Cliquez sur le bouton Parcourir **(...)**  pour ouvrir une boîte de dialogue et choisir le jeu de données externes.  
+4.  Cliquez sur le bouton Parcourir **(...)** pour ouvrir une boîte de dialogue et choisir le jeu de données externe.  
   
 5.  Choisissez la table de cas, et ajoutez une table imbriquée si nécessaire. Mappez les colonnes du modèle aux colonnes du jeu de données externes selon les besoins. Fermez la boîte de dialogue **Spécifier le mappage des colonnes** pour enregistrer la définition de table source.  
   
@@ -77,11 +77,11 @@ ms.locfileid: "66086150"
   
 8.  Utilisez les colonnes **Opérateur**et **Valeur** pour définir comment la colonne est filtrée.  
   
-     **Remarque** Tapez les valeurs sans utiliser de guillemets.  
+     **Remarque** Tapez des valeurs sans utiliser de guillemets.  
   
 9. Cliquez sur la zone de texte **et/ou** et sélectionnez un opérateur logique pour définir la manière dont les conditions multiples sont combinées.  
   
-10. Si vous le souhaitez, cliquez sur le bouton Parcourir **(...)**  à droite de la **valeur** zone de texte pour ouvrir le **filtre** boîte de dialogue zone et de définir des conditions sur la table imbriquée ou sur les colonnes de table de cas individuels.  
+10. Si vous le souhaitez, cliquez sur le bouton Parcourir **(...)** à droite de la zone de texte **valeur** pour ouvrir la boîte de dialogue **filtre** et définir des conditions sur la table imbriquée ou sur les colonnes de table de cas individuelles.  
   
 11. Vérifiez que les conditions de filtrage complétées sont correctes en affichant le texte dans le volet **Expression** .  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66086150"
   
 ## <a name="see-also"></a>Voir aussi  
  [Choisir et mapper les données de test du modèle](choose-and-map-model-testing-data.md)   
- [Utilisation des données de table imbriquée comme entrée pour un graphique d'analyse de précision](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
+ [Utilisation des données de table imbriquée comme entrée pour un graphique d’exactitude](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
  [Choisir un type de graphique d'analyse de précision et définir des options de graphique](choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

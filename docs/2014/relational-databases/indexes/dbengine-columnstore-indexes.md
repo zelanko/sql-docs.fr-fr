@@ -10,11 +10,11 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 39bf7c9bb07fc048e2bf40a0e6ac93b02e9dfe64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63161811"
 ---
-# <a name="columnstore-indexes"></a>Index columnstore 
-Consultez [à l’aide des index non cluster Columnstore](../../database-engine/using-nonclustered-columnstore-indexes.md) et [à l’aide d’index cluster Columnstore](../../database-engine/using-clustered-columnstore-indexes.md).
+# <a name="columnstore-indexes"></a>Index Columnstore 
+Consultez [utilisation d’index ColumnStore non cluster](../../database-engine/using-nonclustered-columnstore-indexes.md) et [utilisation d’index ColumnStore cluster](../../database-engine/using-clustered-columnstore-indexes.md).

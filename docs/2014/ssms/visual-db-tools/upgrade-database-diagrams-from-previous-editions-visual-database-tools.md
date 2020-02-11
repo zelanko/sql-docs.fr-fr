@@ -1,5 +1,5 @@
 ---
-title: Mettre à niveau des schémas de base de données d’éditions antérieures (Visual Database Tools) | Microsoft Docs
+title: Mettre à niveau des schémas de base de données à partir d’éditions antérieures (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 311285545abae9ae9f80b264204b88485aac71aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205708"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>Mettre à niveau des diagrammes de base de données d’éditions antérieures (Visual Database Tools)
-  Les diagrammes de base de données créés sur les éditions antérieures de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont automatiquement mis à niveau lors de l’installation du diagramme de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour connaître la procédure de configuration des schémas, consultez [Set Up Database Diagram Designer &#40;Visual Database Tools&#41;](visual-database-tools.md).  
+  Les diagrammes de base de données créés sur les éditions antérieures de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont automatiquement mis à niveau lors de l’installation du diagramme de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations sur la configuration de la création de diagrammes, consultez [configurer le concepteur de schémas de base de données &#40;Visual Database Tools&#41;](visual-database-tools.md).  
   
 ### <a name="to-upgrade-legacy-database-diagrams"></a>Pour mettre à niveau des diagrammes de base de données hérités  
   
@@ -40,6 +40,6 @@ ms.locfileid: "63205708"
   
 ## <a name="see-also"></a>Voir aussi  
  [Comprendre la propriété du schéma de base de données &#40;Visual Database Tools&#41;](understand-database-diagram-ownership-visual-database-tools.md)   
- [Configurer le Concepteur de schémas de base de données &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [Configurer le concepteur de schémas de base de données &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

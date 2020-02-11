@@ -1,5 +1,5 @@
 ---
-title: Projet de Scripts dans SQL Server Management Studio Analysis Services | Microsoft Docs
+title: Projet de scripts Analysis Services dans SQL Server Management Studio | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0bcc06655333dfef073757218d9a740c1dfb0dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080355"
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>Projet de script Analysis Services dans SQL Server Management Studio
@@ -29,7 +29,7 @@ ms.locfileid: "66080355"
   
  Vous pouvez utiliser les étapes de base suivantes pour créer un projet Scripts du serveur d'analyse dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
-1.  Dans le menu Fichier, pointez sur **Nouveau**, puis cliquez sur **Projet**.  
+1.  Dans le menu Fichier , pointez sur **Nouveau**, puis cliquez sur **Projet**.  
   
      Sélectionnez le modèle de projet **Scripts Analysis Server** et spécifiez un nom et un emplacement pour le nouveau projet.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66080355"
   
 4.  Cliquez avec le bouton droit sur le projet, pointez sur **Ajouter**, puis sélectionnez **Élément existant** pour ajouter différents fichiers, comme des fichiers texte contenant des notes sur le projet, dans le dossier **Divers** du projet Scripts Analysis Server dans l’Explorateur de solutions. Ces fichiers sont ignorés par [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## <a name="file-types"></a>Types de fichiers  
+## <a name="file-types"></a>File Types  
  Une solution [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] peut contenir plusieurs types de fichiers, en fonction des projets que vous avez inclus dans la solution et des éléments que vous avez inclus dans chaque projet pour cette solution. Pour plus d’informations sur les types de fichiers pour les solutions dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consultez [Fichiers gérant les solutions et les projets](../../ssms/solution/files-that-manage-solutions-and-projects.md). En règle générale, les fichiers de chaque projet dans une solution [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sont stockés dans le dossier de la solution, dans un dossier distinct pour chaque projet.  
   
  Le dossier d'un projet Scripts du serveur d'analyse peut contenir les types de fichiers répertoriés dans le tableau ci-dessous.  
@@ -54,13 +54,13 @@ ms.locfileid: "66080355"
 |Fichier de script XMLA (.xmla)|Contient un script XMLA inclus dans le projet.|  
   
 ## <a name="analysis-services-templates"></a>Modèles Analysis Services  
- Si vous ajoutez des scripts MDX, DMX ou XMLA à un projet Scripts Analysis Server, vous pouvez utiliser l’Explorateur de modèles pour rechercher les modèles [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , qui sont constitués d’un ensemble de scripts ou d’instructions prédéfinis qui montrent comment effectuer une action spécifique. L’Explorateur de modèles est accessible à partir du menu **Affichage** et intègre des modèles pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]et [!INCLUDE[ssEW](../../includes/ssew-md.md)]. Pour plus d’informations, consultez [Utiliser des modèles Analysis Services dans SQL Server Management Studio](use-analysis-services-templates-in-sql-server-management-studio.md).  
+ Si vous ajoutez des scripts MDX, DMX ou XMLA à un projet Scripts Analysis Server, vous pouvez utiliser l’Explorateur de modèles pour rechercher les modèles [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , qui sont constitués d’un ensemble de scripts ou d’instructions prédéfinis qui montrent comment effectuer une action spécifique. L’Explorateur de modèles est disponible dans le menu **affichage** et comprend [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]modèles pour [!INCLUDE[ssEW](../../includes/ssew-md.md)], et. Pour plus d’informations, consultez [Utiliser des modèles Analysis Services dans SQL Server Management Studio](use-analysis-services-templates-in-sql-server-management-studio.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création de modèles multidimensionnels à l’aide des Outils de données SQL Server &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [Référence MDX &#40;Multidimensional Expressions&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)   
- [Référence DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)   
- [Analysis Services Scripting Language &#40;ASSL&#41; référence](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
- [Analysis Services Scripting Language &#40;ASSL&#41; référence](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
+ [Création de modèles multidimensionnels à l’aide de SQL Server Data Tools &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [Expressions multidimensionnelles &#40;référence de&#41; MDX](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [Informations de référence sur la&#41; DMX &#40;Data Mining Extensions](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [Analysis Services&#41; référence du langage de script &#40;ASSL](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Analysis Services&#41; référence du langage de script &#40;ASSL](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
   
   

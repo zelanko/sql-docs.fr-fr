@@ -19,14 +19,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193333"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Utiliser des résultats FOR XML dans le code de l'application
-  En utilisant des clauses FOR XML avec des requêtes SQL, vous pouvez récupérer et même convertir les résultats de la requête en données XML. Dès lors que les résultats d'une requête FOR XML peuvent être utilisés dans le code de l'application XML, vous pouvez notamment effectuer les opérations suivantes :  
+  En utilisant des clauses FOR XML avec des requêtes SQL, vous pouvez récupérer et même convertir les résultats de la requête en données XML. Dès lors que les résultats d'une requête FOR XML peuvent être utilisés dans le code de l'application XML, vous pouvez notamment effectuer les opérations suivantes :  
   
 -   Interroger des tables SQL pour des instances de valeurs de [Données XML &#40;SQL Server&#41;](xml-data-sql-server.md)  
   
@@ -201,9 +201,11 @@ ms.locfileid: "63193333"
   
  Dans cet exemple, les API gérées Microsoft .NET Framework sont chargées de renvoyer et de rendre les résultats de la requête FOR XML :  
   
-1.  `SqlConnection` est utilisé pour ouvrir une connexion à SQL Server en fonction du contenu d'une variable de chaîne de connexion spécifiée strConn.  
+1.  
+  `SqlConnection` est utilisé pour ouvrir une connexion à SQL Server en fonction du contenu d'une variable de chaîne de connexion spécifiée strConn.  
   
-2.  `SqlDataAdapter` est ensuite utilisé en tant qu'adaptateur de données et utilise la connexion SQL et une chaîne de requête SQL spécifiée pour exécuter la requête FOR XML.  
+2.  
+  `SqlDataAdapter` est ensuite utilisé en tant qu'adaptateur de données et utilise la connexion SQL et une chaîne de requête SQL spécifiée pour exécuter la requête FOR XML.  
   
 3.  Une fois la requête exécutée, la méthode `SqlDataAdapter.Fill` est appelée et reçoit une instance d'un `DataSet,` MyDataSet, afin de remplir le dataset avec le résultat de la requête FOR XML.  
   
@@ -290,7 +292,7 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` prise en charge vous permet de demander que le résultat d’une requête FOR XML soit renvoyé en tant que type de données `xml` type de données, au lieu d’en tant que chaîne ou image de données, typées en spécifiant le [directive TYPE](type-directive-in-for-xml-queries.md). L’emploi d’une directive TYPE dans les requêtes FOR XML donne automatiquement accès à des résultats FOR XML très similaires à ceux qui sont présentés dans [Utiliser des données XML dans les applications](use-xml-data-in-applications.md).  
+>  La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` prise en charge du type de données vous permet de demander que le résultat d’une requête `xml` for XML soit retourné en tant que type de données, et non sous forme de données de type chaîne ou image, en spécifiant la [directive type](type-directive-in-for-xml-queries.md). L’emploi d’une directive TYPE dans les requêtes FOR XML donne automatiquement accès à des résultats FOR XML très similaires à ceux qui sont présentés dans [Utiliser des données XML dans les applications](use-xml-data-in-applications.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)  

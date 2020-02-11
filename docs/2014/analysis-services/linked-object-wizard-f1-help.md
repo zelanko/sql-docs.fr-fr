@@ -1,5 +1,5 @@
 ---
-title: Lié aide F1 de l’Assistant objet | Microsoft Docs
+title: Aide (F1) de l’Assistant objet lié | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1ac7ca54d8db398cf93e83e93c8f7d87c81f9d6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078065"
 ---
 # <a name="linked-object-wizard-f1-help"></a>Aide de l'Assistant Objet lié par la touche F1
-  L'Assistant Objet lié vous permet d'établir une liaison ou une importation à partir d'objets se trouvant dans d'autres bases de données [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , que ce soit dans la même instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou dans une autre instance, vers le projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] actuel de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Les objets liés continuent à refléter les modifications apportées à leur base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] source, alors que les objets importés ne reflètent pas de telles modifications. Aussi bien les dimensions que les groupes de mesures peuvent être liés, y compris leurs mesures associées. Les actions, les indicateurs de performance clé (KPI) et les calculs peuvent, eux, être importés.  
+  Utilisez l’Assistant objet lié pour établir une liaison ou une importation à partir [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] d’objets dans d’autres bases de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] données, de la même instance ou d’une autre [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance, [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]vers le projet actuel de. Les objets liés continuent à refléter les modifications apportées à leur base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] source, alors que les objets importés ne reflètent pas de telles modifications. Aussi bien les dimensions que les groupes de mesures peuvent être liés, y compris leurs mesures associées. Les actions, les indicateurs de performance clé (KPI) et les calculs peuvent, eux, être importés.  
   
  L'Assistant Objet lié vous guide lors des différentes étapes décrites ci-après :  
   

@@ -1,5 +1,5 @@
 ---
-title: Les rubriques de procédures ODBC | Microsoft Docs
+title: Rubriques de procédures relatives à ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 359419f0da19151172689090272e0c42e18cc906
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200378"
 ---
 # <a name="odbc-how-to-topics"></a>Rubriques de procédures ODBC
@@ -24,27 +24,27 @@ ms.locfileid: "63200378"
   
 -   [Rubriques des procédures relatives à la configuration du pilote ODBC SQL Server](../../database-engine/dev-guide/configuring-the-sql-server-odbc-driver-how-to-topics.md)  
   
--   [Allouer des Handles et se connecter à SQL Server &#40;ODBC&#41;](allocate-handles-and-connect-to-sql-server-odbc.md)  
+-   [Allouez des descripteurs et connectez-vous à SQL Server &#40;ODBC&#41;](allocate-handles-and-connect-to-sql-server-odbc.md)  
   
 -   [Rubriques de procédures relatives à l’exécution de requêtes &#40;ODBC&#41;](execute-queries/executing-queries-how-to-topics-odbc.md)  
   
--   [Traitement des rubriques de procédures de résultats &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  
+-   [Rubriques de procédures relatives au traitement des résultats &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  
   
--   [À l’aide des rubriques de procédures de curseurs &#40;ODBC&#41;](cursors/using-cursors-how-to-topics-odbc.md)  
+-   [Rubriques de procédures relatives à l’utilisation des curseurs &#40;ODBC&#41;](cursors/using-cursors-how-to-topics-odbc.md)  
   
 -   [Utiliser Microsoft Distributed Transaction Coordinator &#40;ODBC&#41;](use-microsoft-distributed-transaction-coordinator-odbc.md)  
   
--   [Les rubriques de procédures de procédures stockées en cours d’exécution &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
+-   [Rubriques de procédures relatives à l’exécution de procédures stockées &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
   
--   [Gestion des rubriques de procédures des colonnes text et image &#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
+-   [Rubriques de procédures relatives à la gestion des colonnes de texte et d’image &#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
   
--   [Rubriques Comment de performances de pilote ODBC de profilage &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)  
+-   [Rubriques de procédures relatives au profilage des performances du pilote ODBC &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)  
   
 -   [Traiter les erreurs ODBC &#40;ODBC&#41;](process-odbc-errors-odbc.md)  
   
--   [Copie en bloc avec les SQL Server ODBC Driver procédures &#40;ODBC&#41;](bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+-   [Rubriques de procédures relatives à la copie en bloc avec le SQL Server ODBC Driver &#40;ODBC&#41;](bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client &#40;&#41;ODBC](../native-client/odbc/sql-server-native-client-odbc.md)  
   
   

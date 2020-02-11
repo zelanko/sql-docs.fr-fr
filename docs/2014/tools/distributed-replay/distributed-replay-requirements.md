@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay Requirements | Microsoft Docs
+title: Configuration requise pour la Distributed Replay | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0e7a87ad14dbe1b12abb4ca4fe0af6b0a439c57b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149767"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
@@ -93,13 +93,13 @@ ms.locfileid: "63149767"
   
 -   TextData  
   
--   Application Name  
+-   Nom de l’application  
   
 -   LoginName  
   
--   DatabaseName  
+-   nom_base_de_données  
   
--   ID de la base de données  
+-   ID de base de données  
   
 -   HostName  
   
@@ -107,7 +107,7 @@ ms.locfileid: "63149767"
   
 -   SPID  
   
--   Start Time  
+-   Heure de début  
   
 -   EndTime  
   
@@ -124,8 +124,8 @@ ms.locfileid: "63149767"
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
   
-## <a name="operating-system-requirements"></a>Système d'exploitation requis  
- Les systèmes d'exploitation pris en charge pour exécuter l'outil d'administration et les services contrôleur et clients sont les mêmes que dans votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations sur les systèmes d’exploitation pris en charge pour votre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] une instance, consultez [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+## <a name="operating-system-requirements"></a>Systèmes d'exploitation requis  
+ Les systèmes d'exploitation pris en charge pour exécuter l'outil d'administration et les services contrôleur et clients sont les mêmes que dans votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations sur les systèmes d’exploitation pris en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] charge pour votre instance, consultez [configurations matérielle et logicielle requises pour l’installation de SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
  Les fonctionnalités Distributed Replay sont prises en charge à la fois sur les systèmes d'exploitation basés sur des processeurs x86 et ceux basés sur des processeurs x64. Pour les systèmes d'exploitation basés sur des processeurs x64, seul le mode Windows on Windows (WOW) est pris en charge.  
   
@@ -134,8 +134,10 @@ ms.locfileid: "63149767"
   
 |Fonctionnalité de Distributed Replay|Nombre maximal d'installations par environnement de relecture|  
 |--------------------------------|--------------------------------------------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Distributed Replay Controller|1|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Distributed Replay Client|16 (ordinateurs physiques ou virtuels)|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Distributed Replay Controller|1|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Distributed Replay Client|16 (ordinateurs physiques ou virtuels)|  
 |Outil d'administration|Illimité|  
   
 > [!NOTE]  
@@ -159,7 +161,7 @@ ms.locfileid: "63149767"
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
- [Sécurité de Distributed Replay](distributed-replay-security.md)   
+ [Sécurité Distributed Replay](distributed-replay-security.md)   
  [Installer Distributed Replay](install-distributed-replay-overview.md)  
   
   

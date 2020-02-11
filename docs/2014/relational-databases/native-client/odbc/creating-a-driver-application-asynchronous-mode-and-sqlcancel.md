@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3a4ec4e5d7575fdf5d915c8209999e1285fa79aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144320"
 ---
 # <a name="asynchronous-mode-and-sqlcancel"></a>Mode asynchrone et SQLCancel
@@ -45,9 +45,9 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ASYNC_ENABLE,
   
  Lorsque l'application teste l'achèvement de la commande, il effectue le même appel de fonction avec les mêmes paramètres sur le pilote. Si le pilote n'a pas encore reçu de réponse du serveur, il retourne de nouveau SQL_STILL_EXECUTING. L'application doit tester régulièrement la commande jusqu'à ce que le code de retour soit différent de SQL_STILL_EXECUTING. Lorsque l'application obtient un autre code de retour, même SQL_ERROR, elle peut déterminer que la commande est terminée.  
   
- Une commande peut parfois rester longtemps en attente. Si l’application doit annuler la commande sans attendre une réponse, il peut le faire en appelant **SQLCancel** avec la même instruction gérer en tant que la commande en attente. C’est la seule fois **SQLCancel** doit être utilisé. Certains programmeurs utilisent **SQLCancel** lorsqu’ils ont traité partie à travers un résultat défini et à annuler le reste du jeu de résultats. [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) ou [SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md) doit être utilisé pour annuler le reste d’un jeu de résultats en suspens, ne pas **SQLCancel**.  
+ Une commande peut parfois rester longtemps en attente. Si l’application doit annuler la commande sans attendre de réponse, elle peut le faire en appelant **SQLCancel** avec le même descripteur d’instruction que la commande en suspens. Il s’agit de la seule fois où **SQLCancel** doit être utilisé. Certains programmeurs utilisent **SQLCancel** lorsqu’ils ont traité des éléments dans un jeu de résultats et veulent annuler le reste du jeu de résultats. [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) ou [SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md) doit être utilisé pour annuler le reste d’un jeu de résultats en suspens, et non **SQLCancel**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création d’une application de pilote ODBC SQL Server Native Client](creating-a-driver-application.md)  
+ [Création d'une application de pilote ODBC SQL Server Native Client](creating-a-driver-application.md)  
   
   

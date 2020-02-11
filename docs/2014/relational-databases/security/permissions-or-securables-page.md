@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c83d92da6708c8c63e1ba4c2cea60b1497a54883
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63284548"
 ---
 # <a name="permissions-or-securables-page"></a>Page Autorisations ou Éléments sécurisables
@@ -43,7 +43,7 @@ ms.locfileid: "63284548"
 ## <a name="explicit-tab"></a>Onglet Autorisations explicites  
  L'onglet **Autorisations explicites** énumère les autorisations possibles pour les éléments sécurisables sélectionnés dans la grille supérieure. Pour configurer les autorisations, cochez ou décochez les cases **Accorder** (ou **Autoriser**), **Avec autorisation**et **Refuser** . Toutes les options ne sont pas disponibles pour toutes les autorisations explicites.  
   
- **Autorisations**  
+ **autorisations**  
  Nom de l'autorisation.  
   
  **Fournisseur d'autorisations**  
@@ -55,7 +55,7 @@ ms.locfileid: "63284548"
  **Avec autorisation**  
  Reflète l'état de l'option WITH GRANT pour l'autorisation indiquée dans la liste. Cette zone est en lecture seule. Pour appliquer cette autorisation, utilisez l'instruction [GRANT](/sql/t-sql/statements/grant-transact-sql) .  
   
- **Refuser**  
+ **Deny**  
  Sélectionnez cette option pour refuser cette autorisation à la connexion. Désactivez-la pour révoquer cette autorisation.  
   
  **Autorisations au niveau des colonnes**  
@@ -64,7 +64,7 @@ ms.locfileid: "63284548"
 ## <a name="effective-tab"></a>Onglet Autorisations effectives  
  Les autorisations qu'un principal a mises en rapport avec un élément sécurisable peuvent provenir des autorisations définies pour plusieurs principaux différents. Par exemple, une connexion peut recevoir des autorisations individuellement, et également comme membre d'un groupe. L'onglet **Autorisations effectives** affiche le résultat de la combinaison d'autorisations explicites et des autorisations provenant d'appartenances de groupe ou de rôle. Les autorisations Octroyer sont agrégées. Une autorisation Refuser remplace toutes les autorisations Octroyer.  
   
- **Autorisations**  
+ **autorisations**  
  Nom de l'autorisation.  
   
  **Colonne**  
@@ -72,6 +72,6 @@ ms.locfileid: "63284548"
   
 ## <a name="see-also"></a>Voir aussi  
  [Rôles au niveau de la base de données](authentication-access/database-level-roles.md)   
- [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

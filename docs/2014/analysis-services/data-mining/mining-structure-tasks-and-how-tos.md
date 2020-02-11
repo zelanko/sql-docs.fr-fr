@@ -1,5 +1,5 @@
 ---
-title: Tâches de la Structure et les procédures d’exploration de données | Microsoft Docs
+title: Tâches de la structure d’exploration de données et procédures | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 991185cbf8545fab21270d77ab90267c09380566
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083440"
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>Tâches de la structure d'exploration de données et procédures
@@ -24,22 +24,22 @@ ms.locfileid: "66083440"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Créer une structure d’exploration de données relationnelles](create-a-new-relational-mining-structure.md)  
+-   [créer une structure d'exploration de données relationnelle](create-a-new-relational-mining-structure.md)  
   
 -   [Créer une structure d’exploration de données OLAP](create-a-new-olap-mining-structure.md)  
   
--   [Ajouter des colonnes à une structure d’exploration de données](add-columns-to-a-mining-structure.md)  
+-   [ajouter des colonnes à une structure d'exploration de données](add-columns-to-a-mining-structure.md)  
   
--   [Supprimer des colonnes d’une structure d’exploration de données](remove-columns-from-a-mining-structure.md)  
+-   [Supprimer des colonnes d'une structure d'exploration de données](remove-columns-from-a-mining-structure.md)  
   
--   [Ajouter une table imbriquée à une structure d’exploration de données](add-a-nested-table-to-a-mining-structure.md)  
+-   [ajouter une table imbriquée à une structure d'exploration de données](add-a-nested-table-to-a-mining-structure.md)  
   
--   [Modifier les propriétés d’une structure d’exploration de données](change-the-properties-of-a-mining-structure.md)  
+-   [Modifier les propriétés d'une structure d'exploration de données](change-the-properties-of-a-mining-structure.md)  
   
--   [Modifier la vue de source de données utilisée pour une structure d’exploration de données](edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [Modifier la vue de source de données utilisée pour une structure d'exploration de données](edit-the-data-source-view-used-for-a-mining-structure.md)  
   
--   [Traiter une structure d’exploration de données](process-a-mining-structure.md)  
+-   [traiter une structure d'exploration de données](process-a-mining-structure.md)  
   
--   [Filtrer le cube source d’une structure d’exploration de données](../filter-the-source-cube-for-a-mining-structure.md)  
+-   [Filtrer le cube source d'une structure d'exploration de données](../filter-the-source-cube-for-a-mining-structure.md)  
   
   

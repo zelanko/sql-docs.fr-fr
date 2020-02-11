@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6c3bdb745d836959f563d19dc9897b718a2c9b16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478889"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>Chevauchement des autorisations d'accès (Master Data Services)
@@ -30,11 +30,11 @@ ms.locfileid: "65478889"
   
  Si un utilisateur est un membre de plusieurs groupes, et que ces groupes ont accès à Master Data Manager, les règles suivantes s'appliquent :  
   
--   **Refuser** remplace toutes les autres autorisations.  
+-   **Deny** remplace toutes les autres autorisations.  
   
--   **Mise à jour** substitue **en lecture seule**.  
+-   **Met à jour** les remplacements **en lecture seule**.  
   
- Ces règles s'appliquent à la fois à l'onglet **Modèles** et à l'onglet **Membres de hiérarchie** . Les autorisations sont résolues pour chaque onglet, puis combinées. Pour plus d’informations, consultez [How Permissions Are Determined &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md).  
+ Ces règles s'appliquent à la fois à l'onglet **Modèles** et à l'onglet **Membres de hiérarchie** . Les autorisations sont résolues pour chaque onglet, puis combinées. Pour plus d’informations, consultez [Mode de détermination des autorisations &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md).  
   
 > [!NOTE]  
 >  Vous pouvez afficher la résolution du chevauchement des autorisations d'accès dans l'interface utilisateur. Les onglets **Modèles** et **Membres de hiérarchie** ont tous deux une liste déroulante dans laquelle vous pouvez sélectionner **Effectives** pour afficher les autorisations effectives.  
@@ -44,26 +44,26 @@ ms.locfileid: "65478889"
   
  L'utilisateur appartient au Groupe 1 et au Groupe 2.  
   
- L’utilisateur a **en lecture seule** autorisation sur l’entité Product.  
+ L’utilisateur a l’autorisation **lecture seule** sur l’entité Product.  
   
  Groupe 1 a l'autorisation **Mise à jour** sur l'entité Product.  
   
- Groupe 2 a **en lecture seule** autorisation sur l’entité Product.  
+ Le groupe 2 a l’autorisation **lecture seule** sur l’entité Product.  
   
- Résultat : l’autorisation effective de l’utilisateur est **Mise à jour** sur l’entité Product.  
+ Résultat : l'autorisation effective de l'utilisateur est **Mise à jour** sur l'entité Product.  
   
 ## <a name="example-2"></a>Exemple 2  
  ![mds_conc_user_group_ex_2](../../2014/master-data-services/media/mds-conc-user-group-ex-2.gif "mds_conc_user_group_ex_2")  
   
  L'utilisateur appartient au Groupe 1 et au Groupe 2.  
   
- L’utilisateur a **en lecture seule** autorisation sur l’entité Product.  
+ L’utilisateur a l’autorisation **lecture seule** sur l’entité Product.  
   
  Groupe 1 a l'autorisation **Mise à jour** sur l'entité Product.  
   
  Groupe 2 a l'autorisation **Refuser** sur l'entité Product.  
   
- Résultat : l’autorisation effective de l’utilisateur est **Refuser** sur l’entité Product.  
+ Résultat : l'autorisation effective de l'utilisateur est **Refuser** sur l'entité Product.  
   
 ## <a name="example-3"></a>Exemple 3  
  ![mds_conc_user_group_ex_3](../../2014/master-data-services/media/mds-conc-user-group-ex-3.gif "mds_conc_user_group_ex_3")  
@@ -72,11 +72,11 @@ ms.locfileid: "65478889"
   
  L'utilisateur a l'autorisation **Mise à jour** sur un groupe de membres dans un nœud de la hiérarchie.  
   
- Groupe 1 a **en lecture seule** autorisation à un groupe de membres dans un nœud de hiérarchie.  
+ Le groupe 1 a l’autorisation **lecture seule** sur un groupe de membres dans un nœud de la hiérarchie.  
   
- Groupe 2 a **en lecture seule** autorisation à un groupe de membres dans un nœud de hiérarchie.  
+ Le groupe 2 a l’autorisation **lecture seule** sur un groupe de membres dans un nœud de la hiérarchie.  
   
- Résultat : l’autorisation effective de l’utilisateur est **Mise à jour** sur les membres.  
+ Résultat : l'autorisation effective de l'utilisateur est **Mise à jour** sur les membres.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mode de détermination des autorisations &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   

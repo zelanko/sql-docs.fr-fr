@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: faa6198bc9fa42b55be63ec57ff49ed6703ef260
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081259"
 ---
 # <a name="filter-and-sort-data-ssas-tabular"></a>Filtrer et trier les données (SSAS Tabulaire)
@@ -26,7 +26,7 @@ ms.locfileid: "66081259"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Trier des données dans une Table &#40;SSAS tabulaire&#41;](tabular-models/sort-data-in-a-table-ssas-tabular.md)trier des données dans une Table|Les tâches de cette rubrique décrivent comment trier les données d'une table par lettres ou par nombres.|  
-|[Filtrer des données dans une Table &#40;SSAS tabulaire&#41;](tabular-models/filter-data-in-a-table-ssas-tabular.md)|Les tâches de cette rubrique décrivent comment appliquer des filtres personnalisés pour contrôler la façon dont les lignes sont affichées.|  
+|[Trier des données dans une Table &#40;SSAS tabulaire&#41;](tabular-models/sort-data-in-a-table-ssas-tabular.md) Trier des données dans une table|Les tâches de cette rubrique décrivent comment trier les données d'une table par lettres ou par nombres.|  
+|[Filtrer les données d’une table &#40;SSAS tabulaire&#41;](tabular-models/filter-data-in-a-table-ssas-tabular.md)|Les tâches de cette rubrique décrivent comment appliquer des filtres personnalisés pour contrôler la façon dont les lignes sont affichées.|  
   
   

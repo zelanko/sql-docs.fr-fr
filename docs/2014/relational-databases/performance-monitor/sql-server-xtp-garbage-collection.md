@@ -1,5 +1,5 @@
 ---
-title: Garbage Collection XTP | Microsoft Docs
+title: Garbage collection XTP | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5796cc1184e862b4e8afe42b4fa5f5babe8358dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151034"
 ---
 # <a name="xtp-garbage-collection"></a>Garbage collection XTP
@@ -39,6 +39,6 @@ ms.locfileid: "63151034"
 |**Analyses de nettoyage démarrées par seconde**|Nombre d'analyses de nettoyage d'angles inutilisés démarrées (en moyenne), par seconde.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [XTP &#40;In-Memory OLTP&#41; les compteurs de performances](../../integration-services/performance/performance-counters.md)  
+ [Les compteurs de performances de l’OLTP en mémoire &#40;de XTP&#41;](../../integration-services/performance/performance-counters.md)  
   
   

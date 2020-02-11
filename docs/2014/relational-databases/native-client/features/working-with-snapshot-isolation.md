@@ -1,5 +1,5 @@
 ---
-title: Working with Snapshot Isolation | Microsoft Docs
+title: Utilisation de l’isolation d’instantané | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dcf2003873de6f6ca15fed4d0818337ce4920906
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205856"
 ---
 # <a name="working-with-snapshot-isolation"></a>Utilisation de l’isolement de capture instantanée
@@ -36,40 +36,40 @@ ms.locfileid: "63205856"
  Les transactions qui démarrent avec un niveau d'isolement d'instantané lisent un instantané de base de données au moment du démarrage de la transaction. Entre autres conséquences, lorsque vous ouvrez des curseurs de jeu de clés, dynamiques et côté serveur statiques dans un contexte de transaction d'instantané, ceux-ci se comportent de manière comparable à des curseurs statiques ouverts dans des transactions sérialisables. Toutefois, lorsque les curseurs sont ouverts avec un niveau d'isolement d'instantané, les verrous ne sont pas pris, ce qui peut réduire le blocage sur le serveur.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Fournisseur OLE DB SQL Server Native Client  
- Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif comporte des améliorations qui tirent parti de l’isolement d’instantané introduite dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Ces améliorations incluent des modifications aux jeux de propriétés DBPROPSET_DATASOURCEINFO et DBPROPSET_SESSION.  
+ Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client a des améliorations qui tirent parti de l’isolation d’instantané [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]introduite dans. Ces améliorations incluent des modifications aux jeux de propriétés DBPROPSET_DATASOURCEINFO et DBPROPSET_SESSION.  
   
-### <a name="dbpropsetdatasourceinfo"></a>DBPROPSET_DATASOURCEINFO  
+### <a name="dbpropset_datasourceinfo"></a>DBPROPSET_DATASOURCEINFO  
  Le jeu de propriétés DBPROPSET_DATASOURCEINFO a été modifié pour indiquer que le niveau d'isolement d'instantané est pris en charge par l'ajout de la valeur DBPROPVAL_TI_SNAPSHOT utilisée dans la propriété DBPROP_SUPPORTEDTXNISOLEVELS. Cette nouvelle valeur indique que le niveau d'isolement d'instantané est pris en charge, que le contrôle de version ait été activé sur la base de données ou non. Voici une liste des valeurs DBPROP_SUPPORTEDTXNISOLEVELS :  
   
 |ID de propriété|Description|  
 |-----------------|-----------------|  
-|DBPROP_SUPPORTEDTXNISOLEVELS|Type : VT_I4<br /><br /> R/W : En lecture seule<br /><br /> Description : Masque de bits spécifiant les niveaux d’isolement pris en charge. Combinaison de zéro ou plusieurs des éléments suivants :<br /><br /> -   DBPROPVAL_TI_CHAOS<br />-   DBPROPVAL_TI_READUNCOMMITTED<br />-   DBPROPVAL_TI_BROWSE<br />-DBPROPVAL_TI_CURSORSTABILITY<br />-   DBPROPVAL_TI_READCOMMITTED<br />-   DBPROPVAL_TI_REPEATABLEREAD<br />-   DBPROPVAL_TI_SERIALIZABLE<br />-   DBPROPVAL_TI_ISOLATED<br />-   DBPROPVAL_TI_SNAPSHOT|  
+|DBPROP_SUPPORTEDTXNISOLEVELS|Type : VT_I4<br /><br /> Lecture/écriture : lecture seule<br /><br /> Description : masque de bits spécifiant les niveaux d'isolation de la transaction pris en charge. Combinaison de zéro ou plusieurs des éléments suivants :<br /><br /> -DBPROPVAL_TI_CHAOS<br />-DBPROPVAL_TI_READUNCOMMITTED<br />-DBPROPVAL_TI_BROWSE<br />-DBPROPVAL_TI_CURSORSTABILITY<br />-DBPROPVAL_TI_READCOMMITTED<br />-DBPROPVAL_TI_REPEATABLEREAD<br />-DBPROPVAL_TI_SERIALIZABLE<br />-DBPROPVAL_TI_ISOLATED<br />-DBPROPVAL_TI_SNAPSHOT|  
   
-### <a name="dbpropsetsession"></a>DBPROPSET_SESSION  
+### <a name="dbpropset_session"></a>DBPROPSET_SESSION  
  Le jeu de propriétés DBPROPSET_SESSION a été modifié pour indiquer que le niveau d'isolement d'instantané est pris en charge par l'ajout de la valeur DBPROPVAL_TI_SNAPSHOT utilisée dans la propriété DBPROP_SESS_AUTOCOMMITISOLEVELS. Cette nouvelle valeur indique que le niveau d'isolement d'instantané est pris en charge, que le contrôle de version ait été activé sur la base de données ou non. Voici une liste des valeurs DBPROP_SESS_AUTOCOMMITISOLEVELS :  
   
 |ID de propriété|Description|  
 |-----------------|-----------------|  
-|DBPROP_SESS_AUTOCOMMITISOLEVELS|Type : VT_I4<br /><br /> R/W : En lecture seule<br /><br /> Description : Spécifie un masque de bits qui indique le niveau d’isolation de transaction en mode de validation automatique. Les valeurs pouvant être définies dans ce masque de bits sont les mêmes que celles qui peuvent être définies pour DBPROP_SUPPORTEDTXNISOLEVELS.|  
+|DBPROP_SESS_AUTOCOMMITISOLEVELS|Type : VT_I4<br /><br /> Lecture/écriture : lecture seule<br /><br /> Description : spécifie un masque de bits qui indique le niveau d'isolation de la transaction lorsqu'elle se trouve en mode de validation automatique. Les valeurs pouvant être définies dans ce masque de bits sont les mêmes que celles qui peuvent être définies pour DBPROP_SUPPORTEDTXNISOLEVELS.|  
   
 > [!NOTE]  
 >  Les erreurs DB_S_ERRORSOCCURRED ou DB_E_ERRORSOCCURRED se produisent si DBPROPVAL_TI_SNAPSHOT est défini dans le cadre de l'utilisation de versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
- Pour plus d’informations sur la façon dont l’isolement d’instantané est pris en charge dans les transactions, consultez [prenant en charge les Transactions locales](../../native-client-ole-db-transactions/transactions.md).  
+ Pour plus d’informations sur la prise en charge de l’isolement d’instantané dans les transactions, consultez prise en charge des [transactions locales](../../native-client-ole-db-transactions/transactions.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Pilote ODBC SQL Server Native Client  
- Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge l’isolement d’instantané cependant améliorations apportées à la [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) et [SQLGetInfo](../../native-client-odbc-api/sqlgetinfo.md) fonctions.  
+ Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge l’isolement d’instantané grâce aux améliorations apportées aux fonctions [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) et [SQLGetInfo](../../native-client-odbc-api/sqlgetinfo.md) .  
   
 ### <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
- Le **SQLSetConnectAttr** fonction prend désormais en charge l’utilisation de l’attribut SQL_COPT_SS_TXN_ISOLATION. L'attribution de la valeur SQL_TXN_SS_SNAPSHOT à SQL_COPT_SS_TXN_ISOLATION indique que la transaction aura lieu avec le niveau d'isolement d'instantané.  
+ La fonction **SQLSetConnectAttr** prend désormais en charge l’utilisation de l’attribut SQL_COPT_SS_TXN_ISOLATION. L'attribution de la valeur SQL_TXN_SS_SNAPSHOT à SQL_COPT_SS_TXN_ISOLATION indique que la transaction aura lieu avec le niveau d'isolement d'instantané.  
   
 ### <a name="sqlgetinfo"></a>SQLGetInfo  
- Le [SQLGetInfo](../../native-client-odbc-api/sqlgetinfo.md) fonction prend désormais en charge la valeur SQL_TXN_SS_SNAPSHOT qui a été ajoutée à un type d’information SQL_TXN_ISOLATION_OPTION.  
+ La fonction [SQLGetInfo](../../native-client-odbc-api/sqlgetinfo.md) prend désormais en charge la valeur SQL_TXN_SS_SNAPSHOT ajoutée au type d’informations SQL_TXN_ISOLATION_OPTION.  
   
- Pour plus d’informations sur la façon dont l’isolement d’instantané est pris en charge dans les transactions, consultez [curseur Transaction Isolation Level](../../native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md).  
+ Pour plus d’informations sur la prise en charge de l’isolement d’instantané dans les transactions, consultez [niveau d’isolement des transactions de curseur](../../native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités de SQL Server Native Client](sql-server-native-client-features.md)   
- [Propriétés et comportements des ensembles de lignes](../../native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)  
+ [Propriétés et comportements de l'ensemble de lignes](../../native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)  
   
   

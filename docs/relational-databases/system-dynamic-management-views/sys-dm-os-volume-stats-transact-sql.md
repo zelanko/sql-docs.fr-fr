@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_volume_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_os_volume_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/06/2019
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e7ec8171b569adbf887c1e153fb2b41619778f48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899718"
 ---
-# <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
+# <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
 
   Retourne les informations relatives au volume du système d'exploitation (répertoire) sur lequel les bases de données et fichiers spécifiés sont stockés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez cette fonction de gestion dynamique pour vérifier les attributs du lecteur de disque physique ou retourner les informations relatives à l'espace disque disponible pour le répertoire.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,10 +40,10 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ##  <a name="Arguments"></a> Arguments  
  *database_id*  
- ID de la base de données. *database_id* est de type **int**, sans valeur par défaut. Ne peut pas avoir la valeur NULL.  
+ ID de la base de données. *database_id* est de **type int**, sans valeur par défaut. Ne peut pas avoir la valeur NULL.  
   
  *file_id*  
- ID du fichier. *FILE_ID* est **int**, sans valeur par défaut. Ne peut pas avoir la valeur NULL.  
+ ID du fichier. *file_id* est de **type int**, sans valeur par défaut. Ne peut pas avoir la valeur NULL.  
   
 ## <a name="table-returned"></a>Table retournée  
   
@@ -90,7 +90,7 @@ CROSS APPLY sys.dm_os_volume_stats(DB_ID(f.name), f.file_id);
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys. master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
   
   

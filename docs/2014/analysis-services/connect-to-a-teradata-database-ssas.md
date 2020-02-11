@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dc6712598452b1957857509e6b3ff6f659a16c4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087190"
 ---
 # <a name="connect-to-a-teradata-database-ssas"></a>Connexion à une base de données Teradata (SSAS)
@@ -28,7 +28,7 @@ ms.locfileid: "66087190"
 >  Les informations d'identification de l'utilisateur actuel sont utilisées lors de la sélection d'une base de données sur cette page. Toutefois, l'importation ne réussira pas si l'utilisateur spécifié dans la page Informations d'emprunt d'identité n'a pas de privilèges suffisants pour lire la base de données sélectionnée.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
- **Nom convivial de connexion**  
+ **Nom convivial de la connexion**  
  Tapez un nom unique pour cette connexion à la source de données. Ce champ est obligatoire.  
   
  **Nom du serveur**  
@@ -45,7 +45,7 @@ ms.locfileid: "66087190"
  **Enregistrer mon mot de passe**  
  Spécifiez si le mot de passe que vous avez entré dans la zone **Mot de passe** doit être mémorisé.  
   
- **Avancé**  
+ **Avancée**  
  Définissez des propriétés de connexion supplémentaires à l’aide de la boîte de dialogue **Définir les propriétés avancées** . Pour plus d’informations, consultez [Définir les propriétés avancées &#40;SSAS&#41;](set-advanced-properties-ssas.md).  
   
  **Tester la connexion**  

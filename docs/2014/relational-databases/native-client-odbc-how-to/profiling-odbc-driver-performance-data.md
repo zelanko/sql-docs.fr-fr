@@ -1,5 +1,5 @@
 ---
-title: Profiler des données de performances de pilote (ODBC) | Microsoft Docs
+title: Données de performances du pilote de profil (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,56 +13,56 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a7de38f3c91814dbd364caee84b34dacdfbdf475
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200304"
 ---
 # <a name="profile-driver-performance-data-odbc"></a>Définir le profil des données de performances du pilote (ODBC)
-  Cet exemple présente les options [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifiques aux pilotes ODBC et destinées à l'enregistrement des statistiques de performances. L’exemple crée un fichier : odbcperf.log montre la création d’un fichier journal des performances et l’affichage de ces données directement à partir de la structure de données SQLPERF (la structure SQLPERF est définie dans Odbcss.h.). Cet exemple a été développé pour la version 3.0 d'ODBC ou une version ultérieure.  
+  Cet exemple présente les options [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifiques aux pilotes ODBC et destinées à l'enregistrement des statistiques de performances. Cet exemple crée un fichier odbcperf.log. Il illustre à la fois la création d'un fichier journal des données de performances et l'affichage de ces données directement à partir de la structure de données SQLPERF. (La structure SQLPERF est définie dans Odbcss.h.). Cet exemple a été développé pour la version 3.0 d'ODBC ou une version ultérieure.  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez conserver des informations d’identification, vous devez les chiffrer avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>Pour enregistrer les données de performances du pilote à l'aide de l'Administrateur ODBC  
   
-1.  Dans **le panneau de configuration**, double-cliquez sur **outils d’administration** , puis double-cliquez sur **Sources de données (ODBC)** . Vous pouvez également appeler l'exécutable odbcad32.exe.  
+1.  Dans **le panneau de configuration**, double-cliquez sur **Outils d’administration** , puis sur **sources de données (ODBC)**. Vous pouvez également appeler l'exécutable odbcad32.exe.  
   
-2.  Cliquez sur le **DSN utilisateur**, **DSN système**, ou **fichier DSN** onglet.  
+2.  Cliquez sur l’onglet **DSN utilisateur**, **système DSN**ou **fichier DSN** .  
   
 3.  Cliquez sur la source de données dont vous souhaitez consigner les performances.  
   
-4.  Cliquez sur **configurer**.  
+4.  Cliquez sur **Configurer**.  
   
-5.  Dans l’Assistant Microsoft SQL Server Configuration DSN, accédez à la page avec **les statistiques du pilote ODBC de journal dans le fichier journal**.  
+5.  Dans l’Assistant Microsoft SQL Server configurer un DSN, accédez à la page contenant les **statistiques du pilote ODBC du journal dans le fichier journal**.  
   
-6.  Sélectionnez **les statistiques du pilote ODBC de journal dans le fichier journal**. Dans la zone, tapez le nom du fichier dans lequel les statistiques sont à enregistrer. Si vous le souhaitez, cliquez sur **Parcourir** pour parcourir le système de fichiers pour le journal des statistiques.  
+6.  Sélectionnez **enregistrer les statistiques du pilote ODBC dans le fichier journal**. Dans la zone, tapez le nom du fichier dans lequel les statistiques sont à enregistrer. Si vous le souhaitez, cliquez sur **Parcourir** pour rechercher le journal des statistiques dans le système de fichiers.  
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>Pour enregistrer les données de performances du pilote par programme  
   
-1.  Appelez [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) avec SQL_COPT_SS_PERF_DATA_LOG et spécifiez le chemin d’accès et le nom complet du fichier journal de données de performances. Exemple :  
+1.  Appelez [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) avec SQL_COPT_SS_PERF_DATA_LOG et le chemin d’accès complet et le nom du fichier journal des données de performances. Par exemple :  
   
     ```  
     "C:\\Odbcperf.log"  
     ```  
   
-2.  Appelez [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) avec SQL_COPT_SS_PERF_DATA et SQL_PERF_START pour commencer à enregistrer les données de performances.  
+2.  Appelez [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) avec SQL_COPT_SS_PERF_DATA et SQL_PERF_START pour commencer l’enregistrement des données de performances.  
   
-3.  Le cas échéant, appelez [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) avec SQL_COPT_SS_LOG_NOW et NULL pour écrire un enregistrement délimité par tabulation de données de performances dans le fichier journal de données de performances. Vous pouvez effectuer plusieurs fois cette opération en cours d'exécution de l'application.  
+3.  Vous pouvez également appeler [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) avec SQL_COPT_SS_LOG_NOW et null pour écrire un enregistrement délimité par des tabulations de données de performances dans le fichier journal des données de performances. Vous pouvez effectuer plusieurs fois cette opération en cours d'exécution de l'application.  
   
 4.  Appelez [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) avec SQL_COPT_SS_PERF_DATA et SQL_PERF_STOP pour arrêter l’enregistrement des données de performances.  
   
 ### <a name="to-pull-driver-performance-data-into-an-application"></a>Pour extraire les données de performances du pilote dans une application  
   
-1.  Appelez [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) avec SQL_COPT_SS_PERF_DATA et SQL_PERF_START pour commencer le profilage des données de performances.  
+1.  Appelez [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) avec SQL_COPT_SS_PERF_DATA et SQL_PERF_START pour démarrer le profilage des données de performances.  
   
-2.  Appelez [SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md) avec SQL_COPT_SS_PERF_DATA et l’adresse d’un pointeur vers une structure SQLPERF. Le premier appel définit le pointeur sur l'adresse d'une structure SQLPERF valide qui contient les données de performances actuelles. Le pilote n'actualise pas en permanence les données dans la structure de performance. L’application doit réitérer l’appel à [SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md) dès qu’elle doit actualiser la structure avec des données de performances plus actuelles.  
+2.  Appelez [SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md) avec SQL_COPT_SS_PERF_DATA et l’adresse d’un pointeur vers une structure SQLPERF. Le premier appel définit le pointeur sur l'adresse d'une structure SQLPERF valide qui contient les données de performances actuelles. Le pilote n'actualise pas en permanence les données dans la structure de performance. L’application doit répéter l’appel à [SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md) chaque fois qu’elle a besoin d’actualiser la structure avec des données de performances plus récentes.  
   
 3.  Appelez [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) avec SQL_COPT_SS_PERF_DATA et SQL_PERF_STOP pour arrêter l’enregistrement des données de performances.  
   
 ## <a name="example"></a>Exemple  
- Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’accueil des [exemples et projets de communautés Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).) Cette source de données doit être basée sur le pilote ODBC fourni par le système d'exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
+ Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’hébergement [exemples et projets de la communauté Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .) Cette source de données doit être basée sur le pilote ODBC fourni par le système d’exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
@@ -238,7 +238,7 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques Comment de performances de pilote ODBC de profilage &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)   
- [Profilage des données de performances du pilote ODBC](../native-client/odbc/profiling-odbc-driver-performance.md)  
+ [Rubriques de procédures relatives au profilage des performances du pilote ODBC &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)   
+ [Profilage des performances du pilote ODBC](../native-client/odbc/profiling-odbc-driver-performance.md)  
   
   

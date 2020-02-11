@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5a78fc65ee96439c6b6a4d7726e9a40522e5be4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144340"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Créer un plan de maintenance (aire de conception de plan de maintenance)
@@ -30,7 +30,7 @@ ms.locfileid: "63144340"
   
      [Sécurité](#Security)  
   
--   [Création d'un plan de maintenance à l'aide de l'aire de conception de plan de maintenance](#SSMSProcedure)  
+-   [Création d’un plan de maintenance à l’aide du plan de maintenance Aire de conception](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -38,14 +38,14 @@ ms.locfileid: "63144340"
   
 -   Pour créer un plan de maintenance multiserveurs, vous devez configurer un environnement multiserveurs contenant un serveur maître et un ou plusieurs serveurs cibles. Les plans de maintenance multiserveurs doivent être créés et conservés sur le serveur maître. Ces plans peuvent être consultés mais ne peuvent pas être conservés sur les serveurs cibles.  
   
--   Les membres du rôle **db_ssisadmin** et du rôle **dc_admin** peuvent être en mesure d’élever leurs privilèges à **sysadmin**. Cette élévation de privilège est possible, car ces rôles peuvent modifier les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , qui sont exécutables par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le contexte de sécurité **sysadmin** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour empêcher cette élévation de privilège lors de l’exécution de plans de maintenance, de jeux d’éléments de collecte de données et d’autres packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configurez les travaux de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent qui exécutent des packages de façon à utiliser un compte proxy doté de privilèges limités ou ajoutez uniquement des membres **sysadmin** aux rôles **db_ssisadmin** et **dc_admin** .  
+-   Les membres du rôle **db_ssisadmin** et du rôle **dc_admin** peuvent être en mesure d’élever leurs privilèges à **sysadmin**. Cette élévation de privilège est possible, car ces rôles peuvent modifier les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , qui sont exécutables par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le contexte de sécurité **sysadmin** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour vous prémunir contre cette élévation de privilège lors de l’exécution de plans de maintenance [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , de jeux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’éléments de collecte de données et d’autres packages, configurez des travaux de l’agent qui exécutent des packages pour utiliser un compte proxy avec des privilèges limités ou ajoutez uniquement des membres **sysadmin** aux rôles **db_ssisadmin** et **dc_admin** .  
   
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
  Pour créer ou gérer des plans de maintenance, vous devez être membre du rôle serveur fixe **sysadmin** . L'Explorateur d'objets affiche uniquement le nœud **Plans de maintenance** pour les utilisateurs membres du rôle serveur fixe **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de l'aire de conception de plan de maintenance  
+##  <a name="SSMSProcedure"></a>Utilisation du plan de maintenance Aire de conception  
   
 #### <a name="to-create-a-maintenance-plan"></a>Pour créer un plan de maintenance  
   
@@ -59,7 +59,7 @@ ms.locfileid: "63144340"
   
      Les options suivantes sont disponibles dans l'en-tête de l'aire de conception.  
   
-     **Ajouter le sous-plan**  
+     **Ajouter un sous-plan**  
      Ajoute un sous-plan que vous pouvez configurer.  
   
      **Propriétés du sous-plan**  
@@ -74,10 +74,10 @@ ms.locfileid: "63144340"
      **Supprimer la planification**  
      Supprime une planification du sous-plan sélectionné.  
   
-     **Gérer les connexion**  
+     **Gérer les connexions**  
      Affiche la boîte de dialogue **Gérer les connexions** . Permet d'ajouter des connexions d'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supplémentaires au plan de maintenance. Pour plus d'informations sur cette boîte de dialogue, voir ci-dessous.  
   
-     **Création de rapport et enregistrement**  
+     **Création de rapports et enregistrement**  
      Affiche la boîte de dialogue **Création de rapport et enregistrement** . Pour plus d'informations sur cette boîte de dialogue, voir ci-dessous.  
   
      **Serveurs**  
@@ -104,10 +104,10 @@ ms.locfileid: "63144340"
      **Description**  
      Brève description du sous-plan.  
   
-     **Planifier**  
+     **Planification**  
      Indique pour quelle planification le sous-plan sera exécuté. Cliquez sur **Planification du sous-plan** pour ouvrir la boîte de dialogue **Nouvelle planification du travail** . Cliquez sur **Supprimer la planification** pour supprimer la planification du sous-plan.  
   
-     Liste**Exécuter en tant que**  
+     Liste **exécuter en tant que**  
      Sélectionnez le compte à utiliser pour exécuter cette sous-tâche.  
   
 6.  Cliquez sur l'icône **Planification du sous-plan** pour entrer les informations de la planification dans la boîte de dialogue **Nouvelle planification du travail** .  
@@ -116,7 +116,7 @@ ms.locfileid: "63144340"
   
      Les tâches de plan de maintenance suivantes sont disponibles dans la **Boîte à outils**:  
   
-    -   **Tâche Sauvegarder la base de données**  
+    -   **Tâche sauvegarder la base de données**  
   
     -   **Tâche Vérifier l'intégrité de la base de données**  
   
@@ -128,13 +128,13 @@ ms.locfileid: "63144340"
   
     -   **Tâche de nettoyage de maintenance**  
   
-    -   **Tâche Notifier l'opérateur**  
+    -   **tâche de notification d'opérateur**  
   
-    -   **Tâche Reconstruire l'index**  
+    -   **tâche Reconstruire l'index**  
   
     -   **Tâche Réorganiser l'index**  
   
-    -   **Tâche Réduire la base de données**  
+    -   **tâche Réduire la base de données**  
   
     -   **Tâche Mettre à jour les statistiques**  
   
@@ -159,11 +159,11 @@ ms.locfileid: "63144340"
          **Option de contrainte**  
          Définit la manière dont une contrainte fonctionne entre deux tâches.  
   
-         Liste**Opération d’évaluation**  
-         Spécifiez l'opération d'évaluation utilisée par la contrainte de précédence. Ces opérations sont : **Contrainte**, **Expression**, **Expression et contrainte** et **Expression ou contrainte**.  
+         Liste des **opérations d’évaluation**  
+         Spécifiez l'opération d'évaluation utilisée par la contrainte de précédence. Les opérations disponibles sont : **Contrainte**, **Expression**, **Expression et contrainte**et **Expression ou contrainte**.  
   
-         Liste**Valeur**  
-         Spécifiez la valeur de contrainte : **Réussite**, **Échec** ou **À l'achèvement**. **Réussite** est la valeur par défaut.  
+         Liste de **valeurs**  
+         Spécifiez la valeur de contrainte : **Réussite**, **Échec**ou **À l’achèvement**. La valeur par défaut est **Success** .  
   
         > [!NOTE]  
         >  La ligne de contrainte de précédence est verte pour **Réussite**, rouge pour **Échec**et bleue pour **À l’achèvement**.  
@@ -171,7 +171,7 @@ ms.locfileid: "63144340"
          **Expression**  
          Si vous utilisez les opérations **Expression**, **Expression et contrainte**ou **Expression ou contrainte**, tapez une expression. L'expression doit prendre une valeur de type Boolean.  
   
-         **Tester**  
+         **Test**  
          Validez l'expression.  
   
          **Contraintes multiples**  
@@ -215,7 +215,7 @@ ms.locfileid: "63144340"
   
         1.  Si vous sélectionnez **Générer un rapport de fichier texte**, sélectionnez **Créer un nouveau fichier** ou **Ajouter au fichier**.  
   
-        2.  En fonction de la sélection ci-dessus, entrez le nom et le chemin complet du nouveau fichier ou du fichier à ajouter dans les zones **Dossier** ou **Nom de fichier** . Ou bien, cliquez sur le bouton de sélection **(...)**  et sélectionnez le chemin d’accès au nom de dossier ou un fichier dans le **localiser le dossier -** _nom_serveur_ ou **rechercher les fichiers de base de données -** _nom_serveur_  boîtes de dialogue.  
+        2.  En fonction de la sélection ci-dessus, entrez le nom et le chemin complet du nouveau fichier ou du fichier à ajouter dans les zones **Dossier** ou **Nom de fichier** . Vous pouvez également cliquer sur les points de suspension **(...)** et sélectionner le chemin d’accès au dossier ou au nom de fichier dans les boîtes de dialogue **localiser le dossier-**_SERVER_NAME_ ou **Rechercher les fichiers de base de données-**_SERVER_NAME_ .  
   
         3.  Si vous sélectionnez **Envoyer le rapport à un destinataire de messagerie**, dans la liste **Opérateur d'agent** , sélectionnez le destinataire du rapport envoyé par messagerie électronique.  
   
@@ -230,7 +230,7 @@ ms.locfileid: "63144340"
   
 12. Pour consulter les résultats dans la visionneuse du fichier journal, dans **l’Explorateur d’objets**, cliquez avec le bouton droit sur le dossier **Plans de maintenance** ou sur le plan de maintenance spécifique et sélectionnez **Afficher l’historique**.  
   
-     Les options suivantes sont disponibles sur le **visionneuse du fichier journal -** _nom_serveur_ boîte de dialogue.  
+     Les options suivantes sont disponibles dans la boîte de dialogue **visionneuse du fichier journal-**_SERVER_NAME_ .  
   
      **Charger le journal**  
      Ouvre une boîte de dialogue dans laquelle vous pouvez spécifier un fichier journal à charger.  
@@ -241,13 +241,13 @@ ms.locfileid: "63144340"
      **Actualiser**  
      Actualise l'affichage des journaux sélectionnés. Le bouton **Actualiser** permet de relire les journaux sélectionnés à partir du serveur cible lors de l'application des paramètres de filtre.  
   
-     **Filtre**  
+     **Filter**  
      Ouvre une boîte de dialogue qui vous permet de spécifier les paramètres utilisés pour filtrer le fichier journal, notamment **Connexion**, **Date**et d’autres critères de filtre **Général** .  
   
-     **Recherche**  
+     **action**  
      Permet de rechercher un texte spécifique dans le fichier journal. La recherche des caractères génériques n'est pas prise en charge.  
   
-     **Arrêter**  
+     **Stop**  
      Arrête le chargement des entrées du fichier-journal. Par exemple, vous pouvez utiliser cette option si un fichier de journal distant ou hors connexion est long à charger, et que vous souhaitez seulement consulter les entrées les plus récentes.  
   
      **Résumé du fichier journal**  
@@ -272,6 +272,6 @@ ms.locfileid: "63144340"
      Sélectionnez une ligne pour afficher des détails supplémentaires sur la ligne d'événement sélectionnée en bas de la page. Vous pouvez changer l'ordre des colonnes en les faisant glisser sur la grille. Vous pouvez redimensionner les colonnes en faisant glisser les barres de séparation des colonnes dans l'en-tête de la grille vers la gauche ou la droite. Double-cliquez sur les barres de séparation des colonnes dans l'en-tête de la grille pour ajuster automatiquement la largeur de la colonne au contenu.  
   
      **Instance**  
-     Nom de l'instance pour laquelle l'événement s'est produit. Il est affiché sous la forme *nom de l'ordinateur*\\*nom de l'instance*.  
+     Nom de l'instance pour laquelle l'événement s'est produit. Il est affiché sous la forme nom d' *ordinateur*\\nom de l'*instance*.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler - Configuration de la relecture (Options de relecture avancées) | Microsoft Docs
+title: SQL Server Profiler-configuration de la relecture (options de relecture avancées) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0bf91032c1514037c754fd489ac266cf68063fa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089730"
 ---
 # <a name="sql-server-profiler---replay-configuration-advanced-replay-options"></a>Générateur de profils SQL Server - Configuration de la relecture (Options de relecture avancées)
@@ -45,16 +45,16 @@ ms.locfileid: "66089730"
  **Heure de fin**  
  Date et heure auxquelles la relecture doit se terminer dans le fichier de trace source.  
   
- **Délai d'attente du moniteur d'intégrité (sec.)**  
+ **Délai d’attente du moniteur d’intégrité (s)**  
  Spécifiez le délai d'attente de la relecture, en secondes. La valeur par défaut est 3 600 secondes (1 heure). Ce paramètre affecte la durée d'exécution d'un processus autorisée avant son interruption par le moniteur d'intégrité.  
   
- **Intervalle d'interrogation du moniteur d'intégrité par défaut (sec)**  
+ **Intervalle d’interrogation du moniteur d’intégrité (s)**  
  Spécifiez, en secondes, l'intervalle d'interrogation du moniteur d'intégrité pendant la relecture. La valeur par défaut est 60 secondes. Cette valeur permet à l'utilisateur de configurer la fréquence à laquelle le moniteur d'intégrité interroge les candidats à l'arrêt.  
   
  **Activer le moniteur de processus bloqués de SQL Server**  
  Active un processus qui recherche les processus bloqués ou les processus de blocage.  
   
- **Délai d'attente du moniteur de processus bloqués (s)**  
+ **Délai d’attente du moniteur de processus bloqués (s)**  
  Configure la fréquence à laquelle le moniteur de processus recherche les processus bloqués ou les processus de blocage.  
   
 ## <a name="see-also"></a>Voir aussi  

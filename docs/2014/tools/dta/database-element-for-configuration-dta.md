@@ -1,5 +1,5 @@
 ---
-title: Élément de base de données de Configuration (DTA) | Microsoft Docs
+title: Élément Database pour configuration (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fbca62a5d32ed6b7ec30eb5d6dba6a82a2b80c64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63298351"
 ---
 # <a name="database-element-for-configuration-dta"></a>Database, élément pour les configurations (Assistant Paramétrage de base de données)
@@ -52,7 +52,7 @@ ms.locfileid: "63298351"
  Cet élément porte le nom **DatabaseTypecomplexType** dans le schéma XML de l’Assistant Paramétrage du moteur de base de données. Ne confondez pas cet élément `Database` avec celui dont le parent racine est l'élément `Server`, qui se trouve en haut du fichier d'entrée XML. Pour plus d’informations, consultez [Database, élément pour les serveurs &#40;Assistant Paramétrage de base de données&#41;](database-element-for-server-dta.md).  
   
 ## <a name="example"></a>Exemple  
- Pour un exemple d’utilisation de ce `Database` élément, consultez la [exemple de fichier d’entrée XML avec la Configuration spécifiée par l’utilisateur &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  
+ Pour obtenir un exemple d’utilisation `Database` de cet élément, consultez l' [exemple de fichier d’entrée XML avec une configuration spécifiée par l’utilisateur &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  

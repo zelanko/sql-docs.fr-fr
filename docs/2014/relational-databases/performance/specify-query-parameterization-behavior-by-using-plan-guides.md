@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: da60ceee93802b14b7d09392740a1f6b471e4ab1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150606"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>Spécifier le comportement du paramétrage de requêtes grâce aux repères de plan
@@ -53,7 +53,7 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
 2.  Créez le repère de plan sur la forme paramétrable de la requête en spécifiant l'indicateur de requête PARAMETERIZATION FORCED.  
   
     > [!IMPORTANT]  
-    >  Dans le cadre du paramétrage d'une requête, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affecte un type de données aux paramètres remplaçant les valeurs littérales, en fonction de la valeur et de la taille du littéral. Ce même procédé est utilisé sur la valeur des littéraux constants transmis au paramètre de sortie **@stmt** de la procédure stockée **sp_get_query_template**. Comme le type de données précisé dans l’argument **@params** de **sp_create_plan_guide** doit correspondre à celui de la requête tel qu’il est paramétré par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il se peut que vous soyez amené à créer plusieurs repères de plan afin de couvrir l’ensemble des valeurs de paramètres possibles relatives à la requête.  
+    >  Dans le cadre du paramétrage d'une requête, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affecte un type de données aux paramètres remplaçant les valeurs littérales, en fonction de la valeur et de la taille du littéral. Le même processus se produit à la valeur des littéraux constants passés au **@stmt** paramètre de sortie de **sp_get_query_template**. Étant donné que le type de données **@params** spécifié dans l’argument de **sp_create_plan_guide** doit correspondre à celui de la requête tel qu' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]il est paramétré par, vous devrez peut-être créer plusieurs repères de plan pour couvrir la plage complète des valeurs de paramètres possibles pour la requête.  
   
  Le script suivant peut être utilisé aussi bien pour obtenir la requête paramétrable que pour créer plus tard un repère de plan s'y rapportant :  
   

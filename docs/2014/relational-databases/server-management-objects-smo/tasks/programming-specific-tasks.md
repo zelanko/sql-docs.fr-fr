@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e69a3ecab06b800ef1295c8c638b574135bf7b41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158712"
 ---
 # <a name="programming-specific-tasks"></a>Programmation de tâches spécifiques
@@ -34,12 +34,12 @@ ms.locfileid: "63158712"
 |[Configuration de SQL Server dans SMO](configuring-sql-server-in-smo.md)|Explique comment afficher et modifier les paramètres de configuration de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans SMO.|  
 |[Utilisation du partitionnement des tables et des index](using-table-and-index-partitioning.md)|Explique comment utiliser le partitionnement d'index et de table dans SMO.|  
 |[Utilisation de fichiers ou de groupes de fichiers pour stocker des données](using-filegroups-and-files-to-store-data.md)|Explique comment utiliser des groupes de fichiers dans SMO.|  
-|[Gestion des services et des paramètres réseau à l’aide du fournisseur WMI](managing-services-and-network-settings-by-using-wmi-provider.md)|Décrit plusieurs méthodes permettant d'effectuer le suivi de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en utilisant l'objet <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> qui représente le fournisseur WMI pour la gestion de la configuration.|  
+|[Gestion des services et des paramètres réseau à l'aide du fournisseur WMI](managing-services-and-network-settings-by-using-wmi-provider.md)|Décrit plusieurs méthodes permettant d'effectuer le suivi de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en utilisant l'objet <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> qui représente le fournisseur WMI pour la gestion de la configuration.|  
 |[Utilisation des objets de base de données](creating-altering-and-removing-database-objects.md)|Explique comment créer des classes d'instance qui représentent des objets de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |[Gestion des utilisateurs, rôles et connexions](managing-users-roles-and-logins.md)|Explique comment utiliser les rôles de sécurité dans SMO.|  
 |[Octroi, révocation et refus d'autorisations](granting-revoking-and-denying-permissions.md)|Explique comment utiliser SMO pour accorder, révoquer et refuser des autorisations aux utilisateurs ou membres d'un rôle.|  
 |[Utilisation du chiffrement](using-encryption.md)|Explique comment protéger des données à l'aide du chiffrement dans SMO.|  
-|[Planification de tâches administratives automatiques dans SQL Server Agent](../../../ssms/agent/sql-server-agent.md)|Explique comment utiliser l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour analyser, signaler et planifier des travaux dans SMO.|  
+|[Planification des tâches administratives automatiques dans l'Agent SQL Server](../../../ssms/agent/sql-server-agent.md)|Explique comment utiliser l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour analyser, signaler et planifier des travaux dans SMO.|  
 |[Sauvegarde et restauration de bases de données et de journaux de transactions](backing-up-and-restoring-databases-and-transaction-logs.md)|Explique comment sauvegarder et restaurer des bases de données et des journaux des transactions dans SMO.|  
 |[Création de scripts](scripting.md)|Explique comment créer des scripts basés sur des objets et découvrir les dépendances entre les objets dans SMO.|  
 |[Transfert de données](transferring-data.md)|Explique comment transférer des données dans SMO.|  
@@ -51,6 +51,6 @@ ms.locfileid: "63158712"
 |[Implémentation de la recherche en texte intégral](implementing-full-text-search.md)|Explique comment implémenter les catalogues et index de recherche en texte intégral dans SMO.|  
 |[Implémentation de points de terminaison](implementing-endpoints.md)|Explique comment créer des points de terminaison afin de gérer les charges utiles pour la mise en miroir de bases de données, les requêtes SOAP et Service Broker.|  
 |[Création et mise à jour des statistiques](../../statistics/statistics.md)|Explique comment installer et analyser des statistiques dans une base de données, dans SMO.|  
-|[Traçage et relecture d’événements](tracing-and-replaying-events.md)|Explique comment utiliser les objets `Trace` et `Replay` dans SMO pour tracer et relire des événements.|  
+|[Événements de traçage et de relecture](tracing-and-replaying-events.md)|Explique comment utiliser les objets `Trace` et `Replay` dans SMO pour tracer et relire des événements.|  
   
   

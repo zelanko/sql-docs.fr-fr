@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d202c04a41553b934c175edb7c0afcd907e846e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482544"
 ---
 # <a name="models-master-data-services"></a>Modèles (services de données de référence)
@@ -56,7 +56,7 @@ ms.locfileid: "65482544"
 ## <a name="model-example"></a>Exemple de modèle  
  Dans l'exemple suivant, les objets dans le modèle Product regroupent logiquement les données relatives au produit.  
   
- ![Exemple de données de référence du modèle Product](../../2014/master-data-services/media/mds-conc-model.gif "Exemple de données de référence du modèle Product")  
+ ![Exemple de modèle de produit Master Data](../../2014/master-data-services/media/mds-conc-model.gif "Exemple de modèle de produit Master Data")  
   
  D'autres modèles courants figurent ci-dessous :  
   
@@ -76,7 +76,7 @@ ms.locfileid: "65482544"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   [Vue d’ensemble de Master Data Services](master-data-services-overview-mds.md)  
+-   [Vue d'ensemble de Master Data Services](master-data-services-overview-mds.md)  
   
 -   [Entités &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   

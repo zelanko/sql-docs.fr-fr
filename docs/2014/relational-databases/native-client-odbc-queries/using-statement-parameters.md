@@ -1,5 +1,5 @@
 ---
-title: À l’aide des paramètres d’instruction | Microsoft Docs
+title: Utilisation des paramètres d’instruction | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a16f070623503dcb17788bc75bd5695bc1584d7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200248"
 ---
 # <a name="using-statement-parameters"></a>Utilisation de paramètres d'instruction
@@ -32,9 +32,9 @@ ms.locfileid: "63200248"
   
 -   améliorer l'interaction de l'utilisateur lors de la construction de critères de requête ;  
   
--   Gérer **texte**, **ntext**, et **image** données et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-types de données C spécifiques.  
+-   Gérer les données **Text**, **ntext**et **image** et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]les types de données C spécifiques.  
   
- Par exemple, un **parties** table possède des colonnes nommées **PartID**, **Description**, et **prix**. L'ajout d'un article sans paramètres requiert la construction d'une instruction SQL telle que :  
+ Par exemple, une table de **pièces** contient des colonnes nommées **partid**, **Description**et **Price**. L'ajout d'un article sans paramètres requiert la construction d'une instruction SQL telle que :  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
@@ -55,6 +55,6 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
 -   [Liaison de paramètres](using-statement-parameters-binding-parameters.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’exécution de requêtes &#40;ODBC&#41;](executing-queries-odbc.md)  
+ [Exécution de requêtes &#40;ODBC&#41;](executing-queries-odbc.md)  
   
   

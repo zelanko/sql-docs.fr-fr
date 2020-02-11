@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9fa024e9e744fd955e4ccc323919cb22a97b7dd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151197"
 ---
 # <a name="create-a-new-plan-guide"></a>Créer un repère de plan
@@ -33,7 +33,7 @@ ms.locfileid: "63151197"
   
      [Sécurité](#Security)  
   
--   **Pour créer un repère de plan, à l’aide de :**  
+-   **Pour créer un repère de plan, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -43,7 +43,8 @@ ms.locfileid: "63151197"
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
   
--   Les arguments de sp_create_plan_guide doivent être indiqués dans l'ordre affiché. Lorsque vous fournissez des valeurs pour les paramètres de `sp_create_plan_guide`, tous les noms de paramètres doivent être spécifiés explicitement, ou aucun nom ne doit être spécifié. Par exemple, si `@name =` est spécifié, `@stmt =`, `@type =` (etc.) doit l'être aussi. De même, si `@name =` est omis et que seule la valeur du paramètre est indiquée, les noms de paramètres restants doivent également être omis, et seules leurs valeurs doivent être indiquées. Les noms d'arguments sont utilisés à des fins descriptives uniquement, pour une meilleure compréhension de la syntaxe. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne vérifie pas que le nom de paramètre spécifié correspond au nom du paramètre à l'emplacement où le nom est utilisé.  
+-   Les arguments de sp_create_plan_guide doivent être indiqués dans l'ordre affiché. Lorsque vous fournissez des valeurs pour les paramètres de `sp_create_plan_guide`, tous les noms de paramètres doivent être spécifiés explicitement, ou aucun nom ne doit être spécifié. Par exemple, si `@name =` est spécifié, `@stmt =`, `@type =` (etc.) doit l'être aussi. De même, si `@name =` est omis et que seule la valeur du paramètre est indiquée, les noms de paramètres restants doivent également être omis, et seules leurs valeurs doivent être indiquées. Les noms d'arguments sont utilisés à des fins descriptives uniquement, pour une meilleure compréhension de la syntaxe. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne vérifie pas que le nom de paramètre spécifié correspond au nom du paramètre à l'emplacement où le nom est utilisé.  
   
 -   Vous pouvez créer plusieurs repères de plan OBJECT ou SQL pour la même requête et le même lot ou module. Toutefois, un seul repère de plan peut être activé à un moment donné.  
   
@@ -62,7 +63,7 @@ ms.locfileid: "63151197"
   
 1.  Cliquez sur le signe plus (+) pour développer la base de données dans laquelle vous souhaitez créer un repère de plan, puis cliquez sur le signe plus (+) pour développer le dossier **Programmabilité** .  
   
-2.  Cliquez sur le **repères de Plan** dossier et sélectionnez **nouveau repère de Plan...** .  
+2.  Cliquez avec le bouton droit sur le dossier **repères de plan** et sélectionnez **nouveau repère de plan.**...  
   
 3.  Dans la boîte de dialogue **Nouveau repère de plan** , dans la zone **Nom** , entrez le nom du repère de plan.  
   
@@ -92,7 +93,7 @@ ms.locfileid: "63151197"
   
 #### <a name="to-create-a-plan-guide"></a>Pour créer un repère de plan  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

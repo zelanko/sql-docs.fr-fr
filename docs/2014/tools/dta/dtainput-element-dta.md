@@ -1,5 +1,5 @@
 ---
-title: DTAInput, élément (DTA) | Microsoft Docs
+title: Élément DTAInput (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1861b6ef4ab3617b5f12e7711fa2b895edaa55a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188119"
 ---
 # <a name="dtainput-element-dta"></a>DTAInput, élément (Assistant Paramétrage de base de données)
@@ -47,7 +47,7 @@ ms.locfileid: "63188119"
 |Relation|Éléments|  
 |------------------|--------------|  
 |**Élément parent**|[DTAXML, élément &#40;Assistant Paramétrage de base de données&#41;](dtaxml-element-dta.md)|  
-|**Éléments enfants**|[Server, élément &#40;Assistant Paramétrage de base de données&#41;](server-element-dta.md)<br /><br /> [Workload, élément &#40;Assistant Paramétrage de base de données&#41;](workload-element-dta.md)<br /><br /> [TuningOptions, élément &#40;Assistant Paramétrage de base de données&#41;](tuningoptions-element-dta.md)<br /><br /> [Configuration, élément &#40;Assistant Paramétrage de base de données&#41;](configuration-element-dta.md)|  
+|**Éléments enfants**|[Server, élément &#40;Assistant Paramétrage de base de données&#41;](server-element-dta.md)<br /><br /> [Workload, élément &#40;Assistant Paramétrage de base de données&#41;](workload-element-dta.md)<br /><br /> [Élément TuningOptions &#40;DTA&#41;](tuningoptions-element-dta.md)<br /><br /> [Configuration, élément &#40;Assistant Paramétrage de base de données&#41;](configuration-element-dta.md)|  
   
 ## <a name="remarks"></a>Notes  
  Cet élément est la racine de la hiérarchie de schéma d'entrée de l'Assistant Paramétrage du moteur de base de données. Les entrées de l'Assistant Paramétrage du moteur de base de données peuvent être des arguments qui spécifient les bases de données à paramétrer, des charges de travail, des options de paramétrage ou une configuration spécifiée par l'utilisateur.  

@@ -13,13 +13,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b021cb21df1b3c27e7f43c3ef92650eda4c2cf86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151202"
 ---
-# <a name="database-engine-tuning-advisor"></a>Assistant Paramétrage du moteur de base de données
+# <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
   L'Assistant Paramétrage du moteur de base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] analyse les bases de données et émet des recommandations que vous pouvez utiliser pour optimiser les performances des requêtes. L'Assistant Paramétrage du moteur de base de données vous permet de sélectionner et de créer un ensemble optimal d'index, de vues indexées ou de partitions de table sans devoir être un expert familiarisé avec la structure de la base de données ou les mécanismes internes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez effectuer les tâches suivantes à l'aide de l'Assistant Paramétrage du moteur de base de données :  
   
 -   Résoudre les problèmes liés aux performances d'une requête de problème spécifique  
@@ -63,7 +63,7 @@ ms.locfileid: "63151202"
  Interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données  
  Interface simple d'utilisation dans laquelle vous pouvez spécifier la charge de travail et sélectionner plusieurs options de paramétrage.  
   
- Utilitaire**dta**  
+ **DTA** Utilitaire  
  Version d'invite de commandes de l'Assistant Paramétrage du moteur de base de données. L'utilitaire **dta** est conçu pour permettre l'utilisation de l'Assistant Paramétrage du moteur de base de données dans des applications et des scripts.  
   
  charge de travail  
@@ -106,7 +106,7 @@ ms.locfileid: "63151202"
   
 -   Spécifiez seulement les structures de conception de base de données physique qui doivent être analysées par l'Assistant Paramétrage du moteur de base de données. L'Assistant Paramétrage du moteur de base de données offre de nombreuses options, mais il ne spécifie que celles qui sont nécessaires.  
   
-## <a name="dependency-on-xpmsver-extended-stored-procedure"></a>Dépendance vis-à-vis de la procédure stockée étendue xp_msver  
+## <a name="dependency-on-xp_msver-extended-stored-procedure"></a>Dépendance vis-à-vis de la procédure stockée étendue xp_msver  
  Pour bénéficier de toutes ses fonctionnalités, l’Assistant Paramétrage du moteur de base de données fait appel à la procédure stockée étendue **xp_msver** . Cette procédure stockée étendue est activée par défaut. L'Assistant Paramétrage du moteur de base de données utilise cette procédure stockée étendue pour déterminer le nombre de processeurs et la quantité de mémoire disponibles sur l'ordinateur où réside la base de données que vous paramétrez. Si **xp_msver** n’est pas disponible, l’Assistant Paramétrage du moteur de base de données définit de façon arbitraire les caractéristiques matérielles de l’ordinateur sur lequel s’exécute l’Assistant Paramétrage du moteur de base de données. Si les caractéristiques matérielles de l'ordinateur sur lequel l'Assistant Paramétrage du moteur de base de données s'exécute ne sont pas disponibles, l'ordinateur est supposé être équipé d'un seul processeur et de 1024 mégaoctets (Mo) de mémoire.  
   
  Cette dépendance présente un impact sur les recommandations en matière de partitionnement, car le nombre de partitions recommandées dépend de ces deux valeurs (nombre de processeurs et quantité de mémoire disponible). Les résultats de votre paramétrage s'en trouvent également affectées lorsque vous paramétrez votre serveur de production par le biais d'un serveur de test. Dans ce scénario, l’Assistant Paramétrage du moteur de base de données utilise **xp_msver** pour déterminer les propriétés matérielles du serveur de production. Après avoir paramétré la charge de travail sur le serveur de test, l'Assistant Paramétrage du moteur de base de données se base sur ces propriétés matérielles pour générer une recommandation. Pour plus d’informations, consultez [xp_msver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql).  
@@ -117,6 +117,6 @@ ms.locfileid: "63151202"
 |Tâche de l'Assistant Paramétrage du moteur de base de données|Rubrique|  
 |-----------------------------------------|-----------|  
 |Initialiser et démarrer l'Assistant Paramétrage du moteur de base de données.<br /><br /> Créer une charge de travail en spécifiant le cache du plan, en créant un script ou en générant un fichier de trace ou une table de trace.<br /><br /> Paramétrer une base de données à l'aide de l'outil d'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données.<br /><br /> Créer des fichiers d'entrée XML pour paramétrer les charges de travail.<br /><br /> Afficher les descriptions des options d'interface utilisateur de l'Assistant Paramétrage du moteur de base de données.|[Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
-|Afficher les résultats de l'opération de paramétrage de base de données.<br /><br /> Sélectionner et mettre en œuvre des recommandations de paramétrage.<br /><br /> Réaliser une analyse de simulation exploratoire sur la charge de travail.<br /><br /> Examiner les sessions de paramétrage et les sessions de clonage en fonction des sessions existantes <br />ou modifier les recommandations de paramétrage existantes pour une évaluation ou une implémentation plus poussée.<br /><br /> Afficher les descriptions des options d'interface utilisateur de l'Assistant Paramétrage du moteur de base de données.|[Afficher et utiliser la sortie de l'Assistant Paramétrage du moteur de base de données](view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)|  
+|Afficher les résultats de l'opération de paramétrage de base de données.<br /><br /> Sélectionner et mettre en œuvre des recommandations de paramétrage.<br /><br /> Réaliser une analyse de simulation exploratoire sur la charge de travail.<br /><br /> Examiner les sessions de paramétrage et les sessions de clonage en fonction des sessions existantes <br />ou modifier les recommandations de paramétrage existantes pour une évaluation ou une implémentation plus poussée.<br /><br /> Afficher les descriptions des options d'interface utilisateur de l'Assistant Paramétrage du moteur de base de données.|[Afficher et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données](view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)|  
   
   

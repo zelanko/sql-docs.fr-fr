@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e808f1fc82dfe0a9fd6fa96999e6e2c5320ee452
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162013"
 ---
 # <a name="metadata-discovery"></a>Découverte des métadonnées
@@ -39,7 +39,7 @@ ms.locfileid: "63162013"
   
  Vous noterez également une amélioration des performances lors de la spécification du format de métadonnées à l'aide de [bcp_setbulkmode](../../native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md).  
   
- [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) dispose d’un nouveau *eOption* pour contrôler le comportement de bcp_readfmt : `BCPDELAYREADFMT`.  
+ [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) a un nouveau *eOption* pour contrôler le comportement de bcp_readfmt : `BCPDELAYREADFMT`.  
   
  Les fonctions ODBC suivantes ont été améliorées dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] pour fournir une fonctionnalité améliorée de découverte des métadonnées :  
   
@@ -57,7 +57,7 @@ ms.locfileid: "63162013"
   
 -   IColumnsRowset::GetColumnsRowset  
   
--   ICommandWithParameters::GetParameterInfo (consultez [ICommandWithParameters](../../native-client-ole-db-interfaces/icommandwithparameters.md) pour plus d’informations)  
+-   ICommandWithParameters :: GetParameterInfo (pour plus d’informations, consultez [ICommandWithParameters](../../native-client-ole-db-interfaces/icommandwithparameters.md) )  
   
  Vous noterez également une amélioration des performances lors de la spécification du format de métadonnées avec IBCPSession::BCPSetBulkMode  
   

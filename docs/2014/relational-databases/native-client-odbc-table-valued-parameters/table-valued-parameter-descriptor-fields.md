@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bd58bdb611a070c812364baf2fa3e1544c2ffdc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63228964"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>Champs de descripteur de paramètre table
@@ -24,9 +24,9 @@ ms.locfileid: "63228964"
   
 ## <a name="remarks"></a>Notes  
   
-|Nom|Location|type|Description|  
+|Name|Location|Type|Description|  
 |----------|--------------|----------|-----------------|  
-|SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR*|Nom du type de serveur du paramètre table.<br /><br /> Lorsqu’un nom de type de paramètre table est spécifié sur un appel à SQLBindParameter, il doit toujours être spécifié comme une valeur Unicode, même dans les applications qui sont générées comme applications ANSI. La valeur utilisée pour le paramètre *StrLen_or_IndPtr* doit être SQL_NTS ou la longueur de chaîne du nom multipliée par sizeof (WCHAR).<br /><br /> Quand un nom de type de paramètre table est spécifié via SQLSetDescField, il peut être spécifié en utilisant un littéral conforme à la façon dont l’application est généré. Le Gestionnaire de pilotes ODBC effectuera toute conversion Unicode requise.|  
+|SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR*|Nom du type de serveur du paramètre table.<br /><br /> Lorsqu’un nom de type de paramètre table est spécifié sur un appel à SQLBindParameter, il doit toujours être spécifié en tant que valeur Unicode, même dans les applications générées en tant qu’applications ANSI. La valeur utilisée pour le paramètre *StrLen_or_IndPtr* doit être SQL_NTS ou la longueur de chaîne du nom multipliée par sizeof (WCHAR).<br /><br /> Lorsqu’un nom de type de paramètre table est spécifié via SQLSetDescField, il peut être spécifié à l’aide d’un littéral qui est conforme à la façon dont l’application est générée. Le Gestionnaire de pilotes ODBC effectuera toute conversion Unicode requise.|  
 |SQL_CA_SS_TYPE_CATALOG_NAME (lecture seule)|IPD|SQLTCHAR*|Catalogue où le type est défini.|  
 |SQL_CA_SS_TYPE_SCHEMA_NAME|IPD|SQLTCHAR*|Schéma où le type est défini.|  
   
@@ -34,9 +34,9 @@ ms.locfileid: "63228964"
   
  Les attributs d'instruction et les champs d'en-tête de descripteur suivants s'appliquent aux paramètres table lorsque le focus de paramètre est défini sur un paramètre table :  
   
-|Créer une vue d’abonnement|Location|type|Description|  
+|Name|Location|Type|Description|  
 |----------|--------------|----------|-----------------|  
-|SQL_ATTR_PARAMSET_SIZE<br /><br /> (Équivaut à SQL_DESC_ARRAY_SIZE dans le descripteur APD.)|APD|SQLUINTEGER|Taille du tableau de mémoires tampon pour un paramètre table. Il s'agit du nombre maximal de lignes que les mémoires tampon peuvent prendre en charge ou de la taille des mémoires tampon dans les lignes ; la valeur du paramètre table peut elle-même avoir un nombre de lignes supérieur ou inférieur à la capacité des mémoires tampon. Valeur par défaut est 1. **Remarque :**  Si SQL_SOPT_SS_PARAM_FOCUS est défini sur sa valeur par défaut de 0, SQL_ATTR_PARAMSET_SIZE fait référence à l’instruction et spécifie le nombre de jeux de paramètres. Si SQL_SOPT_SS_PARAM_FOCUS est pour valeur l'ordinal d'un paramètre table, il fait référence au paramètre table et spécifie le nombre de lignes par jeu de paramètres pour le paramètre table.|  
+|SQL_ATTR_PARAMSET_SIZE<br /><br /> (Équivaut à SQL_DESC_ARRAY_SIZE dans le descripteur APD.)|APD|SQLUINTEGER|Taille du tableau de mémoires tampon pour un paramètre table. Il s'agit du nombre maximal de lignes que les mémoires tampon peuvent prendre en charge ou de la taille des mémoires tampon dans les lignes ; la valeur du paramètre table peut elle-même avoir un nombre de lignes supérieur ou inférieur à la capacité des mémoires tampon. 1 constitue la valeur par défaut. **Remarque :**  Si SQL_SOPT_SS_PARAM_FOCUS a la valeur par défaut 0, SQL_ATTR_PARAMSET_SIZE fait référence à l’instruction et spécifie le nombre de jeux de paramètres. Si SQL_SOPT_SS_PARAM_FOCUS est pour valeur l'ordinal d'un paramètre table, il fait référence au paramètre table et spécifie le nombre de lignes par jeu de paramètres pour le paramètre table.|  
 |SQL_ATTR_PARAM _BIND_TYPE|APD|SQLINTEGER|La valeur par défaut est SQL_PARAM_BIND_BY_COLUMN.<br /><br /> Pour sélectionner la liaison selon les lignes, ce champ a pour valeur la longueur de la structure ou une instance d'une mémoire tampon qui sera liée à un jeu de lignes de paramètre table. Cette durée doit inclure l'espace pour toutes les colonnes dépendantes et tout remplissage de la structure ou de la mémoire tampon. Cela garantit que lorsque l'adresse d'une colonne dépendante est incrémentée de la longueur spécifiée, le résultat pointera vers le début de la même colonne dans la ligne suivante. Lorsque vous utilisez l'opérateur `sizeof` dans ANSI C, ce comportement est garanti.|  
 |SQL_ATTR_PARAM_BIND_OFFSET_PTR|APD|SQLINTEGER*|La valeur par défaut est un pointeur null.<br /><br /> Si ce champ n'est pas NULL, le pilote déréférence le pointeur, ajoute la valeur déréférencée à chacun des champs différés dans l'enregistrement de descripteur (SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR et SQL_DESC_OCTET_LENGTH_PTR) et utilise les nouvelles valeurs de pointeur pour accéder aux valeurs de données.|  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63228964"
   
  SQL_CA_SS_TYPE_NAME est facultatif pour les appels de procédure stockée. Il doit être spécifié pour les instructions SQL qui ne sont pas des appels de procédure pour permettre au serveur de déterminer le type du paramètre table.  
   
- Si le nom de type est reqired et que le type de table pour le paramètre table est défini dans un schéma différent de la procédure stockée, SQL_CA_SS_TYPE_SCHEMA_NAME doit être spécifié dans le descripteur de paramètre d'implémentation (IPD). Sinon, le serveur ne pourra pas déterminer le type du paramètre table Cela entraîne une erreur lorsque vous appelez SQLExecute ou SQLExecDirect. L'erreur indiquera SQLSTATE = 07006 et le message « Violation de l'attribut de type de données restreint ».  
+ Si le nom de type est reqired et que le type de table pour le paramètre table est défini dans un schéma différent de la procédure stockée, SQL_CA_SS_TYPE_SCHEMA_NAME doit être spécifié dans le descripteur de paramètre d'implémentation (IPD). Sinon, le serveur ne pourra pas déterminer le type du paramètre table Cela génère une erreur lorsque vous appelez SQLExecute ou SQLExecDirect. L'erreur indiquera SQLSTATE = 07006 et le message « Violation de l'attribut de type de données restreint ».  
   
  Les colonnes de paramètre table peuvent utiliser la liaison selon les lignes ou selon les colonnes. La valeur par défaut est la liaison selon les colonnes. La liaison selon les lignes peut être spécifiée en définissant SQL_ATTR_PARAM_BIND_TYPE et SQL_ATTR_PARAM_BIND_OFFSET_PTR. Cela équivaut à la liaison selon les lignes de colonnes et de paramètres.  
   

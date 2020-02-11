@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe8eee02d019b5cf68e257b3fac4266a18ead795
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087024"
 ---
 # <a name="connect-to-microsoft-sql-server-analysis-services-ssas"></a>Connexion à Microsoft SQL Server Analysis Services (SSAS)
@@ -28,10 +28,10 @@ ms.locfileid: "66087024"
 >  Les informations d'identification de l'utilisateur actuel sont utilisées lors de la sélection d'une base de données sur cette page. Toutefois, l'importation ne réussira pas si l'utilisateur spécifié dans la page Informations d'emprunt d'identité n'a pas de privilèges suffisants pour lire la base de données sélectionnée.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
- **Nom convivial de connexion**  
+ **Nom convivial de la connexion**  
  Tapez un nom unique pour cette connexion à la source de données. Ce champ est obligatoire.  
   
- **Nom de fichier ou de serveur**  
+ **Nom du serveur ou du fichier**  
  Entrez l'une des informations suivantes :  
   
 -   Tapez le nom ou l'adresse IP du serveur SQL Server Analysis Services auquel vous voulez vous connecter.  
@@ -40,7 +40,7 @@ ms.locfileid: "66087024"
   
 -   Tapez l'URL d'un classeur PowerPivot publié dans SharePoint.  
   
- **Utiliser l'authentification Windows**  
+ **Utiliser l’authentification Windows**  
  Spécifiez si l'authentification Windows est utilisée pour se connecter à un serveur SQL Server Analysis Services.  
   
  Le mode d'authentification Windows permet à l'utilisateur de se connecter au moyen d'un compte d'utilisateur Windows. Dans la mesure du possible, utilisez l’authentification Windows.  
@@ -61,12 +61,12 @@ ms.locfileid: "66087024"
  Spécifiez un mot de passe pour la connexion de base de données. Cette option peut être modifiée uniquement si vous avez choisi de vous connecter via l'authentification SQL Server.  
   
  **Enregistrer mon mot de passe**  
- Précisez si le mot de passe que vous avez entré dans la zone **Mot de passe** est mémorisé. Cette option est disponible uniquement si vous avez choisi de vous connecter via l'authentification SQL Server.  
+ Spécifiez si le mot de passe que vous avez entré dans la zone **Mot de passe** est stocké. Cette option est disponible uniquement si vous avez choisi de vous connecter via l'authentification SQL Server.  
   
  **Nom de la base de données**  
  Sélectionnez une base de données dans la liste.  
   
- **Avancé**  
+ **Avancée**  
  Définissez des propriétés de connexion supplémentaires à l’aide de la boîte de dialogue **Définir les propriétés avancées** . Pour plus d’informations, consultez [Définir les propriétés avancées &#40;SSAS&#41;](set-advanced-properties-ssas.md).  
   
  **Tester la connexion**  

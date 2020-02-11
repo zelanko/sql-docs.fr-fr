@@ -1,5 +1,5 @@
 ---
-title: Obtenir une authentification mutuelle Kerberos | Microsoft Docs
+title: Récupération de l’authentification Kerberos mutuelle | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9158544f40a18ff6dce97483be57e645e15a57d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200414"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>Obtenir une authentification Kerberos mutuelle
@@ -22,7 +22,7 @@ ms.locfileid: "63200414"
   
  Il ne fonctionne pas avec les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Pour plus d’informations, consultez [nom Principal de Service &#40;SPN&#41; prise en charge dans les connexions clientes](../native-client/features/service-principal-name-spn-support-in-client-connections.md).  
+ Pour plus d’informations, consultez [nom de principal du Service &#40;&#41; prise en charge du SPN dans les connexions clientes](../native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## <a name="example"></a>Exemple  
  Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  

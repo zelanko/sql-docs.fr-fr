@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b6c8233b95f3f95235bb4f618358d4680d3088f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287479"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Générer un schéma XSD en ligne
@@ -36,7 +36,7 @@ ms.locfileid: "63287479"
   
  Lorsque vous spécifiez XMLSCHEMA dans une requête FOR XML, vous recevez à la fois un schéma et des données XML, le résultat de la requête. Chaque élément de niveau supérieur des données fait référence au schéma précédent en utilisant une déclaration d'espace de noms qui, à son tour, fait référence à l'espace de noms cible du schéma en ligne.  
   
- Exemple :  
+ Par exemple :  
   
 ```  
 <xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
@@ -94,7 +94,7 @@ WHERE BusinessEntityID = 1
 FOR XML AUTO, ELEMENTS  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  `<Person>`  
   
@@ -114,7 +114,7 @@ AND     SalesOrderHeader.SalesOrderID=5001
 FOR XML AUTO, ELEMENTS, XMLSCHEMA  
 ```  
   
- Comme la requête spécifie la directive ELEMENTS, les données XML résultantes sont centrées sur les éléments. La requête spécifie également la directive XMLSCHEMA. Par conséquent, un schéma XSD en ligne est retourné. Voici le résultat obtenu :  
+ Comme la requête spécifie la directive ELEMENTS, les données XML résultantes sont centrées sur les éléments. La requête spécifie également la directive XMLSCHEMA. Par conséquent, un schéma XSD en ligne est retourné. Voici le résultat obtenu :  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
@@ -154,7 +154,7 @@ FOR XML AUTO, ELEMENTS, XMLSCHEMA
   
  `</xsd:schema>`  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   Dans le résultat, <`SalesOrderHeader`> et <`SalesOrderDetail`> sont des éléments d'entité. Pour cette raison, ils sont déclarés globalement dans le schéma. Ainsi, la déclaration apparaît au plus haut niveau au sein de l'élément <`Schema`>.  
   
@@ -221,7 +221,7 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
 ## <a name="element-name-clashes"></a>Conflits de noms d'éléments  
  Dans FOR XML, le même nom peut être utilisé pour indiquer deux sous-éléments. Par exemple, la requête ci-dessous récupère les valeurs ListPrice et DealerPrice des produits, mais la requête spécifie le même alias, Price, pour ces deux colonnes. Par conséquent, l'ensemble de lignes résultant possèdera deux colonnes du même nom.  
   
-### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>Cas n° 1 : Les deux sous-éléments sont des colonnes non-clés du même type et peuvent être NULL  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>Cas 1 : les deux sous-éléments sont des colonnes non-clés du même type et ils acceptent la valeur NULL  
  Dans la requête ci-dessous, les deux sous-éléments sont des colonnes non-clés du même type et ils acceptent la valeur NULL.  
   
 ```  
@@ -313,7 +313,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>Cas n° 2 : Une clé et une colonne non-clé du même type  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>Cas 2 : une colonne clé et une colonne non-clé du même type  
  La requête ci-dessous illustre une colonne clé et une colonne non-clé du même type.  
   
 ```  
@@ -331,7 +331,7 @@ FROM T
 FOR XML RAW, ELEMENTS, XMLSCHEMA  
 ```  
   
- Voici l'ensemble de résultats. Seul un fragment du schéma XSD en ligne est indiqué :  
+ Voici l'ensemble de résultats. Seul un fragment du schéma XSD en ligne est indiqué :  
   
  `...`  
   
@@ -391,7 +391,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  Notez dans le schéma XSD en ligne que l'élément <`Col`> correspondant à Col2 a une valeur minOccurs égale à 0.  
   
-### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Cas 3 : Les deux éléments de différents types et les colonnes correspondantes peuvent être NULL  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Cas 3 : les deux éléments sont de types différents et les colonnes correspondantes acceptent la valeur NULL  
  La requête ci-dessous est spécifiée sur l'exemple de table défini dans le cas 2 :  
   
 ```  
@@ -460,11 +460,11 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
- Notez les éléments suivants dans le schéma XSD en ligne :  
+ Notez les éléments suivants dans le schéma XSD en ligne :  
   
 -   Comme Col2 et Col3 acceptent la valeur NULL, la déclaration d'élément <`Col`> spécifie une valeur minOccurs égale à 0 et une valeur maxOccurs égale à 2.  
   
--   Comme les deux éléments <`Col`> sont frères, le schéma contient une seule déclaration d'élément. En outre, comme les deux éléments sont également de types différents, bien qu'ils soient tous les deux d'un type simple, le type de l'élément dans le schéma est `xsd:anySimpleType`. Dans le résultat, chaque type d'instance est identifié par l'attribut `xsi:type`.  
+-   Comme les deux éléments <`Col`> sont frères, le schéma contient une seule déclaration d'élément. En outre, comme les deux éléments sont également de types différents, bien qu'ils soient tous les deux d'un type simple, le type de l'élément dans le schéma est `xsd:anySimpleType`. Dans le résultat, chaque type d'instance est identifié par l'attribut `xsi:type` .  
   
 -   Dans le résultat, chaque instance de l'élément <`Col`> fait référence à son type d'instance en utilisant l'attribut `xsi:type`.  
   

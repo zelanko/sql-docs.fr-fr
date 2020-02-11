@@ -1,5 +1,5 @@
 ---
-title: Numberofflags, propriété (classe ClientNetworkProtocol) | Microsoft Docs
+title: Propriété NumberOfFlags (classe ClientNetworkProtocol) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9a47f6e17a85fdf9cec169a611b9fe205ba02543
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192037"
 ---
 # <a name="numberofflags-property-clientnetworkprotocol-class"></a>Propriété NumberOfFlags (classe ClientNetworkProtocol)
-  Obtient le nombre d’options d’indicateur requises par le protocole réseau client spécifié par le [setordervalue, méthode (classe ClientNetworkProtocol)](clientnetworkprotocol-class.md).  
+  Obtient le nombre d’options d’indicateur requises par le protocole réseau client spécifié par la [méthode SetOrderValue (classe ClientNetworkProtocol)](clientnetworkprotocol-class.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,8 +37,8 @@ object
 ```  
   
 ## <a name="parts"></a>Éléments  
- *object*  
- Objet de [classe ClientNetworkProtocol](clientnetworkprotocol-class.md) qui représente le protocole réseau utilisé par le client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ *dessin*  
+ A [classe ClientNetworkProtocol](clientnetworkprotocol-class.md) qui représente le protocole réseau utilisé par le client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur `Uint32` qui spécifie le nombre d'options d'indicateur requises par le protocole réseau client référencé par la propriété `OrderValue`.  

@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7472ab39376b84b515ee5b57033a0eda6521ab27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191486"
 ---
-# <a name="mssqleng014120"></a>MSSQL_ENG014120
+# <a name="mssql_eng014120"></a>MSSQL_ENG014120
     
 ## <a name="message-details"></a>Détails du message  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|14120|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|14120|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique||  
 |Texte du message|Impossible de supprimer la base de données de distribution '%s'. La base de données de distribution est associée à un éditeur.|  

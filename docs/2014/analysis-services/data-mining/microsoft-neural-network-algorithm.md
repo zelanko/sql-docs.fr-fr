@@ -1,5 +1,5 @@
 ---
-title: Algorithme de réseau neuronal de Microsoft | Microsoft Docs
+title: Algorithme de réseau neuronal Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,14 +24,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a7330fab8b4c0ecdff296e0daa5e529442fd8b94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083872"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
-  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme de réseau neuronal associe chaque état possible de l’attribut d’entrée avec chaque état possible de l’attribut prédictible et utilise les données d’apprentissage pour calculer les probabilités. Vous pouvez utiliser ces probabilités ultérieurement pour procéder à une classification ou à une régression ainsi que pour prédire le résultat de l'attribut prédit en fonction des attributs d'entrée.  
+  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme de réseau neuronal associe chaque état possible de l’attribut d’entrée à chaque état possible de l’attribut prévisible et utilise les données d’apprentissage pour calculer les probabilités. Vous pouvez utiliser ces probabilités ultérieurement pour procéder à une classification ou à une régression ainsi que pour prédire le résultat de l'attribut prédit en fonction des attributs d'entrée.  
   
  Un modèle d'exploration de données généré avec l'algorithme MNN ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network) peut contenir plusieurs réseaux, en fonction du nombre de colonnes utilisées soit pour l'entrée et la prédiction, soit uniquement pour la prédiction. Le nombre de réseaux d'un modèle d'exploration de données dépend du nombre d'états figurant dans les colonnes d'entrée et dans les colonnes prédictibles utilisées par ce modèle d'exploration de données.  
   
@@ -53,11 +53,11 @@ ms.locfileid: "66083872"
 ## <a name="how-the-algorithm-works"></a>Fonctionnement de l'algorithme  
  L’algorithme MNN ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network) crée un réseau composé de trois couches de neurones maximum. une couche d'entrée, une couche masquée facultative et une couche de sortie.  
   
- **Couche d’entrée :** Neurones d’entrée définissent toutes les valeurs d’attribut d’entrée pour le modèle d’exploration de données et leurs probabilités.  
+ **Couche d’entrée :** Les neurones d’entrée définissent toutes les valeurs d’attribut d’entrée pour le modèle d’exploration de données, ainsi que leurs probabilités.  
   
- **Couche masquée :** Les neurones cachés reçoivent des entrées des neurones d'entrée et fournissent des sorties aux neurones de sortie. La couche masquée correspond à la couche où des poids sont affectés aux diverses probabilités des entrées. Un poids décrit la pertinence ou l’importance d'une entrée donnée par rapport au neurone masqué. Plus le poids assigné à une entrée est élevé, plus la valeur de cette entrée sera importante. Les poids peuvent être négatifs, ce qui implique que l'entrée peut désactiver un résultat spécifique au lieu de l'activer.  
+ **Couche masquée :** Les neurones cachés reçoivent des entrées des neurones d’entrée et fournissent des sorties aux neurones de sortie. La couche masquée correspond à la couche où des poids sont affectés aux diverses probabilités des entrées. Un poids décrit la pertinence ou l’importance d'une entrée donnée par rapport au neurone masqué. Plus le poids assigné à une entrée est élevé, plus la valeur de cette entrée sera importante. Les poids peuvent être négatifs, ce qui implique que l'entrée peut désactiver un résultat spécifique au lieu de l'activer.  
   
- **Couche de sortie :** Les neurones de sortie représentent les valeurs des attributs prédictibles du modèle d'exploration de données.  
+ **Couche de sortie :** Les neurones de sortie représentent des valeurs d’attribut prévisibles pour le modèle d’exploration de données.  
   
  Pour en savoir plus sur la construction et le notation des couches d’entrée, des couches masquées et des couches de sortie, consultez [Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](microsoft-neural-network-algorithm-technical-reference.md).  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66083872"
  Pour plus d’informations sur la définition des paramètres permettant de personnaliser le comportement d’un modèle, consultez [Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](microsoft-neural-network-algorithm-technical-reference.md).  
   
 ## <a name="viewing-a-neural-network-model"></a>Affichage d’un modèle Neural Network  
- Pour utiliser les données et voir comment le modèle met en corrélation les entrées et les sorties, vous pouvez utiliser la **Visionneuse de l’algorithme MNN (Microsoft Neural Network)** . Cette visionneuse personnalisée vous permet de définir des filtres sur les attributs d’entrée et leurs valeurs et présentent des graphiques qui illustrent leur impact sur les sorties. Les info-bulles de la visionneuse montrent la probabilité et l'élévation associées à chaque paire de valeurs d'entrée et de sortie. Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse de l’algorithme MNN (Microsoft Neural Network)](browse-a-model-using-the-microsoft-neural-network-viewer.md).  
+ Pour utiliser les données et voir comment le modèle met en corrélation les entrées et les sorties, vous pouvez utiliser la **Visionneuse de l’algorithme MNN (Microsoft Neural Network)**. Cette visionneuse personnalisée vous permet de définir des filtres sur les attributs d’entrée et leurs valeurs et présentent des graphiques qui illustrent leur impact sur les sorties. Les info-bulles de la visionneuse montrent la probabilité et l'élévation associées à chaque paire de valeurs d'entrée et de sortie. Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse de l’algorithme MNN (Microsoft Neural Network)](browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   
  Le moyen le plus simple d’explorer la structure du modèle est d’utiliser la **Visionneuse de l’arborescence de contenu générique Microsoft**. Vous pouvez consulter les entrées, les sorties et les réseaux créés par le modèle et cliquer sur n’importe quel nœud pour le développer et consulter les statistiques liées aux nœuds des couches d’entrée, de sortie ou masquée. Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse de l’arborescence de contenu générique Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md).  
   
@@ -89,8 +89,8 @@ ms.locfileid: "66083872"
 -   Ne prend pas en charge la création de dimensions d’exploration de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](microsoft-neural-network-algorithm-technical-reference.md)   
- [Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Informations techniques de référence sur l’algorithme Microsoft neuronal Network](microsoft-neural-network-algorithm-technical-reference.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Exemples de requêtes de modèle de réseau neuronal](neural-network-model-query-examples.md)   
  [Algorithme MLR (Microsoft Logistic Regression)](microsoft-logistic-regression-algorithm.md)  
   

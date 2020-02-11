@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 77a061d9a4bc1b1e320cf8af01599cdc52e139f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205014"
 ---
 # <a name="for-xml-support-for-string-data-types"></a>Prise en charge de FOR XML pour les types de données string
@@ -42,7 +42,7 @@ FOR XML AUTO;
 go  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
  <T c1="1" c2="Special character 0xD for carriage return   
@@ -61,6 +61,6 @@ after line feed" />
 -   Le saut de ligne de la troisième ligne est défini comme l'entité &#xA.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Prise en charge FOR XML des différents types de données SQL Server](for-xml-support-for-various-sql-server-data-types.md)  
+ [Prise en charge de FOR XML pour différents types de données SQL Server](for-xml-support-for-various-sql-server-data-types.md)  
   
   

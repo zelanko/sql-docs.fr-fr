@@ -13,20 +13,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 181d07e187c6b1091d38ebbe0018c61ae856caf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204983"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>Générer du code XML à partir d'ensembles de lignes avec FOR XML
-  Vous pouvez générer un `xml` instance de type de données à partir d’un ensemble de lignes à l’aide de FOR XML avec la nouvelle **TYPE** directive.  
+  Vous pouvez générer une `xml` instance de type de données à partir d’un ensemble de lignes en utilisant for XML avec la nouvelle directive de **type** .  
   
- Le résultat peut être assigné à un `xml` colonne, variable ou paramètre de type de données. De plus, il est possible d'imbriquer des clauses FOR XML pour générer une structure hiérarchique. Les clauses FOR XML imbriquées sont plus faciles à écrire que la clause FOR XML EXPLICIT, mais elles ne s'avèrent pas aussi performantes pour les hiérarchies profondes. FOR XML introduit aussi un nouveau mode PATH qui spécifie le chemin de l'arborescence XML où apparaît la valeur d'une colonne.  
+ Le résultat peut être assigné à une `xml` colonne, une variable ou un paramètre de type de données. De plus, il est possible d'imbriquer des clauses FOR XML pour générer une structure hiérarchique. Les clauses FOR XML imbriquées sont plus faciles à écrire que la clause FOR XML EXPLICIT, mais elles ne s'avèrent pas aussi performantes pour les hiérarchies profondes. FOR XML introduit aussi un nouveau mode PATH qui spécifie le chemin de l'arborescence XML où apparaît la valeur d'une colonne.  
   
  La nouvelle directive **FOR XML TYPE** permet de créer, avec une syntaxe SQL, des vues XML en lecture seule des données relationnelles. La vue peut être interrogée par des instructions SQL et le langage XQuery intégré, comme le montre l'exemple suivant. Vous pouvez également faire référence à ces vues SQL dans les procédures stockées.  
   
-## <a name="example-sql-view-returning-generated-xml-data-type"></a>Exemple : Vue SQL retournant un type de données XML généré  
+## <a name="example-sql-view-returning-generated-xml-data-type"></a>Exemple : vue SQL renvoyant un type de données XML généré  
  La définition de la vue SQL suivante crée une vue XML d'une colonne relationnelle, pk, et extrait les auteurs des livres d'une colonne XML :  
   
 ```  
@@ -36,7 +36,7 @@ FROM   T
 FOR XML AUTO, TYPE  
 ```  
   
- La vue V contient une seule ligne avec une seule colonne columnxmlVal de type XML`.` peuvent être interrogée comme une expression régulière `xml` instance de type de données. Par exemple, la requête suivante renvoie l'auteur dont le prénom est « David » :  
+ La vue V contient une seule ligne avec une seule colonne columnxmlVal de type`.` XML. elle peut être interrogée comme une `xml` instance de type de données normale. Par exemple, la requête suivante renvoie l'auteur dont le prénom est « David » :  
   
 ```  
 SELECT xmlVal.query('//author[first-name = "David"]')  

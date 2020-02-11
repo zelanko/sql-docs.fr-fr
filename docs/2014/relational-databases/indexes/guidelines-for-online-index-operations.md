@@ -18,21 +18,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2f7a25a4a6a4bb6b8f153a8b04b47aeb542265c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162487"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Instructions pour les opérations d'index en ligne
   Lorsque vous effectuez des opérations en ligne sur les index, les directives suivantes s'appliquent :  
   
--   Index cluster doivent être créés, reconstruits ou supprimés hors connexion lorsque la table sous-jacente contient les types de données LOB (large object) suivants : `image`, **ntext**, et `text`.  
+-   Les index cluster doivent être créés, reconstruits ou supprimés hors connexion lorsque la table sous-jacente contient les types de données LOB (large object `image`) suivants :, `text` **ntext**et.  
   
 -   Les index de tables temporaires locales ne peuvent pas être créés, reconstruits ou supprimés en ligne. Cette restriction ne s'applique pas aux index des tables temporaires globales.  
   
 > [!NOTE]  
->  Les opérations d'index en ligne ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir une liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+>  Les opérations d’index en ligne ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir une liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Le tableau suivant présente les opérations d'index réalisables en ligne et les index qui sont exclus de ces opérations en ligne. Des restrictions supplémentaires sont également incluses.  
   
@@ -67,11 +67,11 @@ ms.locfileid: "63162487"
   
  Même si les opérations en ligne sont préférables, vous devez évaluer votre environnement et les conditions spécifiques requises. Il peut être plus approprié d'exécuter hors connexion des opérations sur les index. Ce faisant, les utilisateurs disposent d'un accès restreint aux données pendant l'opération, mais l'opération est réalisée plus vite et consomme moins de ressources.  
   
- Sur les ordinateurs multiprocesseurs qui exécutent [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], les instructions d'index peuvent, à l'instar d'autres requêtes, utiliser davantage de processeurs pour réaliser les opérations d'analyse et de tri associées à l'instruction d'index. Vous pouvez utiliser l'option d'index MAXDOP pour contrôler le nombre de processeurs dédiés à l'opération d'index en ligne. De cette manière, vous pouvez équilibrer les ressources utilisées par l'opération d'index avec celles des utilisateurs simultanés. Pour plus d’informations, consultez [Configurer des opérations d’index parallèles](configure-parallel-index-operations.md). Pour plus d’informations sur les éditions de SQL Server que la prise en charge parallèle les opérations d’index, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Sur les ordinateurs multiprocesseurs qui exécutent [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], les instructions d'index peuvent, à l'instar d'autres requêtes, utiliser davantage de processeurs pour réaliser les opérations d'analyse et de tri associées à l'instruction d'index. Vous pouvez utiliser l'option d'index MAXDOP pour contrôler le nombre de processeurs dédiés à l'opération d'index en ligne. De cette manière, vous pouvez équilibrer les ressources utilisées par l'opération d'index avec celles des utilisateurs simultanés. Pour plus d’informations, consultez [Configurer des opérations d’index parallèles](configure-parallel-index-operations.md). Pour plus d’informations sur les éditions de SQL Server qui prennent en charge les opérations d’index parallèles, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Du fait qu'un verrou S ou Sch-M lock est conservé dans la phase finale de l'opération sur un index, soyez prudent lorsque vous exécutez une opération en ligne sur un index dans une transaction utilisateur explicite, telle qu'un blocage BEGIN TRANSACTION...COMMIT. Cette action maintient le verrou jusqu'à la fin de la transaction, gênant ainsi l'accès concurrentiel des utilisateurs.  
   
- La reconstruction d'index en ligne peut augmenter la fragmentation lorsqu'elle est autorisée à s'exécuter avec les options `MAX DOP > 1` et `ALLOW_PAGE_LOCKS = OFF` . Pour plus d’informations, consultez [How It Works: reconstruction d’index en ligne - Possibilité de fragmentation accrue](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx).  
+ La reconstruction d'index en ligne peut augmenter la fragmentation lorsqu'elle est autorisée à s'exécuter avec les options `MAX DOP > 1` et `ALLOW_PAGE_LOCKS = OFF` . Pour plus d’informations, consultez [Fonctionnement : La reconstruction d’index en ligne peut entraîner une fragmentation accrue](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx).  
   
 ## <a name="transaction-log-considerations"></a>Considérations relatives aux journaux de transactions  
  Les opérations d'index à grande échelle, réalisées hors connexion ou en ligne, peuvent générer de fortes charges de données susceptibles de remplir rapidement le journal de transactions. Pour garantir que l'opération d'index peut être restaurée, le journal des transactions ne doit pas être tronqué tant que l'opération d'index n'est pas terminée ; toutefois, le journal peut être sauvegardé pendant l'opération d'index. Par conséquent, le journal des transactions doit disposer d'un espace suffisant pour stocker les transactions des opérations d'index et les éventuelles transactions utilisateur simultanées pendant la durée de l'opération d'index. Pour plus d’informations, consultez [Espace disque du journal des transactions pour les opérations d’index](transaction-log-disk-space-for-index-operations.md).  

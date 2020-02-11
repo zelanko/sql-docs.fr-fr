@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a3dfc7b81bf6f6a3ef0b9b74a2d1a78f3e3e1db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200107"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Synchronisation Web pour la réplication de fusion
@@ -29,7 +29,7 @@ ms.locfileid: "63200107"
   
 -   Synchronisation de données d'utilisateurs mobiles via Internet.  
   
--   Synchronisation de données entre bases de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via un pare-feu d'entreprise.  
+-   Synchronisation des données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre les bases de données à travers un pare-feu d’entreprise.  
   
  Par exemple, un représentant commercial en déplacement peut se servir de la synchronisation Web. L'entreprise, [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)], dispose de représentants commerciaux qui se déplacent dans différents magasins et chez différents fournisseurs dans toutes les régions. Lors de déplacements prolongés, les représentants restent à l'hôtel et ont besoin d'un moyen pratique pour charger les chiffres des ventes et télécharger les mises à jour des produits tous les jours en fin de journée.  
   
@@ -51,7 +51,8 @@ ms.locfileid: "63200107"
   
  L'écouteur de réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Replisapi.dll) est configuré sur l'ordinateur exécutant IIS ; il est également responsable de la gestion des messages qui sont envoyés au serveur à partir du serveur de publication et des Abonnés. Chaque nœud de la topologie gère le flux de données XML par le biais du réconciliateur de réplication de fusion (Replrec.dll).  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou une version ultérieure est nécessaire pour tous les ordinateurs impliqués dans des opérations de synchronisation Web.  
+ 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou une version ultérieure est nécessaire pour tous les ordinateurs impliqués dans des opérations de synchronisation Web.  
   
 ### <a name="synchronization-process"></a>Processus de synchronisation  
  Les étapes inhérentes au processus de synchronisation sont les suivantes :  
@@ -82,6 +83,6 @@ ms.locfileid: "63200107"
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer la synchronisation Web](configure-web-synchronization.md)   
- [Topologies for Web Synchronization](topologies-for-web-synchronization.md)  
+ [Topologies pour la synchronisation Web](topologies-for-web-synchronization.md)  
   
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3d5465ab5157af0c0a6f1bd4a0566d49e45cd55c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482681"
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>Supprimer une ligne (Complément MDS pour Excel)
@@ -23,7 +23,7 @@ ms.locfileid: "65482681"
 > [!NOTE]  
 >  Les administrateurs peuvent réactiver les membres supprimés. Pour plus d’informations, consultez [Réactiver un membre ou une collection &#40;Master Data Services&#41;](../reactivate-a-member-or-collection-master-data-services.md).  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle **Explorateur** .  
@@ -39,6 +39,6 @@ ms.locfileid: "65482681"
 3.  Dans la boîte de dialogue de confirmation, cliquez sur **Oui**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Publication de données &#40;complément MDS pour Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+ [Publication des Complément MDS pour Excel de &#40;de données&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

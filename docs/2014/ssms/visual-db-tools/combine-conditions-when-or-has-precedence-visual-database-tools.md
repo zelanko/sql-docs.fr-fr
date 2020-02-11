@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 28203de42b3cdb4a033ce222c747df3e80da96f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63224503"
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>Associer des conditions avec priorité à l'opérateur OR (Visual Database Tools)
@@ -71,7 +71,7 @@ WHERE (job_lvl = 100 OR status = 'R') AND
 >  Quand vous entrez des conditions de requête au format indiqué immédiatement au-dessus du [volet SQL](sql-pane-visual-database-tools.md), mais que vous apportez par la suite des modifications à la requête figurant dans le volet Schéma ou dans le volet Critères, le Concepteur de requêtes recrée l'instruction SQL pour qu'elle corresponde à ce format, avec la condition AND répartie de manière explicite vers les deux conditions OR.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Conventions pour la combinaison de Conditions de recherche dans le volet Critères &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
+ [Conventions pour la combinaison de conditions de recherche dans le volet critères &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
  [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

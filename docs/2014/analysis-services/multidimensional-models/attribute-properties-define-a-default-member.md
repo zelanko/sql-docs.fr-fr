@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 959645223eacec6c000ddbfa23615b7949d10d5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077417"
 ---
 # <a name="define-a-default-member"></a>Définir un membre par défaut
@@ -33,17 +33,17 @@ ms.locfileid: "66077417"
  Si aucun membre par défaut n'est spécifié pour une hiérarchie d'attributs et que celle-ci peut être agrégée (la propriété `IsAggregatable` de l'attribut a la valeur `True`), le membre (All) est le membre par défaut. Si aucun membre par défaut n'est spécifié et que la hiérarchie d'attributs ne peut pas être agrégée (la propriété `IsAggregatable` de l'attribut a la valeur `False`), un membre par défaut est sélectionné à partir du niveau supérieur de la hiérarchie d'attributs.  
   
 ## <a name="specifying-the-default-member"></a>Spécification du membre par défaut  
- Chaque attribut dans une dimension dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a un membre par défaut, que vous pouvez spécifier à l’aide de la `DefaultMember` propriété pour un attribut. Ce paramètre est utilisé pour évaluer les expressions si un attribut est omis dans une requête. Si une requête spécifie une hiérarchie dans une dimension, les membres par défaut des attributs de cette hiérarchie sont ignorés. Si une requête ne spécifie pas une hiérarchie dans une dimension, le `DefaultMember` paramètres pour les attributs de dimension prennent effet.  
+ Chaque attribut d’une dimension dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a un membre par défaut, que vous pouvez spécifier à l' `DefaultMember` aide de la propriété d’un attribut. Ce paramètre est utilisé pour évaluer les expressions si un attribut est omis dans une requête. Si une requête spécifie une hiérarchie dans une dimension, les membres par défaut des attributs de cette hiérarchie sont ignorés. Si une requête ne spécifie pas de hiérarchie dans une dimension, `DefaultMember` les paramètres des attributs de dimension prennent effet.  
   
- Si le `DefaultMember` définition d’un attribut est vide et sa `IsAggregatable` propriété est définie sur `True`, le membre par défaut est le membre tous. Si le `IsAggregatable` propriété est définie sur `False`, le membre par défaut est le premier membre de premier niveau visible.  
+ Si le `DefaultMember` paramètre d’un attribut est vide et que `IsAggregatable` sa propriété a la `True`valeur, le membre par défaut est le membre tous. Si la `IsAggregatable` propriété a la valeur `False`, le membre par défaut est le premier membre du premier niveau visible.  
   
- Le `DefaultMember` définition d’un attribut s’applique à toute hiérarchie à laquelle participe l’attribut. Vous ne pouvez pas utiliser des paramètres différents pour des hiérarchies différentes dans une dimension. Par exemple, si le membre [1998] est le membre par défaut d'un attribut [Année], ce paramètre s'applique à toute hiérarchie dans la dimension. Le `DefaultMember` paramètre dans ce cas ne peut pas être [1998] dans une hiérarchie et [1997] dans une autre hiérarchie.  
+ Le `DefaultMember` paramètre d’un attribut s’applique à chaque hiérarchie dans laquelle l’attribut participe. Vous ne pouvez pas utiliser des paramètres différents pour des hiérarchies différentes dans une dimension. Par exemple, si le membre [1998] est le membre par défaut d'un attribut [Année], ce paramètre s'applique à toute hiérarchie dans la dimension. Dans `DefaultMember` ce cas, le paramètre ne peut pas être [1998] dans une hiérarchie et [1997] dans une autre hiérarchie.  
   
- Si vous définissez un membre par défaut pour un niveau particulier d'une hiérarchie qui ne s'agrège pas naturellement, vous devez définir des membres par défaut dans tous les niveaux au-dessus de ce niveau de la hiérarchie. Par exemple, dans la hiérarchie de pays-All-climat, vous ne pouvez pas définir un membre par défaut pour climat, sauf si vous définissez un membre par défaut pour pays. La violation de cette règle provoque des erreurs lors du traitement des requêtes.  
+ Si vous définissez un membre par défaut pour un niveau particulier d'une hiérarchie qui ne s'agrège pas naturellement, vous devez définir des membres par défaut dans tous les niveaux au-dessus de ce niveau de la hiérarchie. Par exemple, dans la hiérarchie All-pays-climat, vous ne pouvez pas définir un membre par défaut pour climat, sauf si vous définissez un membre par défaut pour les pays. La violation de cette règle provoque des erreurs lors du traitement des requêtes.  
   
- Lorsque les niveaux d'une hiérarchie s'agrègent naturellement, vous pouvez définir un membre par défaut pour un attribut de la hiérarchie sans tenir compte des autres attributs de cette hiérarchie. Par exemple, dans la hiérarchie de pays-région-ville, vous pouvez définir un membre par défaut pour Ville, par exemple [Ville]. [Paris] sans définir le membre par défaut pour l’état ou pays.  
+ Lorsque les niveaux d'une hiérarchie s'agrègent naturellement, vous pouvez définir un membre par défaut pour un attribut de la hiérarchie sans tenir compte des autres attributs de cette hiérarchie. Par exemple, dans la hiérarchie pays-province-ville, vous pouvez définir un membre par défaut pour City, par exemple [City]. [Montréal] sans définir le membre par défaut pour l’État ou le pays.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer le niveau &#40;Tous&#41; des hiérarchies d’attributs](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [Configurer le &#40;tous les niveaux de&#41; pour les hiérarchies d’attributs](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

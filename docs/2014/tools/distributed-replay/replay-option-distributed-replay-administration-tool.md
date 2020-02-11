@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a709d4badbd270d9ddffedd62ff040e8ca6c628
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149471"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>Option replay (outil d'administration Distributed Replay)
-  Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] outil d’administration Distributed Replay, `DReplay.exe`, est un outil de ligne de commande que vous pouvez utiliser pour communiquer avec distributed replay controller. Cette rubrique décrit l’option de ligne de commande **replay** et la syntaxe correspondante.  
+  L' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] outil d’administration Distributed Replay `DReplay.exe`,, est un outil en ligne de commande que vous pouvez utiliser pour communiquer avec le contrôleur Distributed Replay. Cette rubrique décrit l’option de ligne de commande **replay** et la syntaxe correspondante.  
   
  L’option **replay** initialise l’étape de relecture d’événement, dans laquelle le contrôleur distribue des données de relecture aux clients spécifiés, lance la relecture distribuée et synchronise les clients. Chaque client participant à la relecture peut éventuellement enregistrer l'activité de relecture et enregistrer un fichier de trace de résultats localement.  
   
- ![Icône de lien vers une rubrique](../../database-engine/media/topic-link.gif "Icône de lien vers une rubrique") Pour plus d’informations sur les conventions de syntaxe utilisées par l’outil d’administration, consultez [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).  
+ ![Icône de lien de rubrique](../../database-engine/media/topic-link.gif "Icône du lien de rubrique") Pour plus d’informations sur les conventions de syntaxe utilisées avec la syntaxe de l’outil d’administration, consultez conventions de la [syntaxe Transact-sql &#40;&#41;Transact-SQL ](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,7 +34,7 @@ ms.locfileid: "63149471"
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- **-m** *controller*  
+ **-m** *contrôleur*  
  Spécifie le nom de l'ordinateur du contrôleur. Vous pouvez utiliser «`localhost`» ou «`.`» pour désigner l'ordinateur local.  
   
  Si le paramètre **-m** n’est pas spécifié, l’ordinateur local est utilisé.  
@@ -58,7 +58,7 @@ ms.locfileid: "63149471"
  Lorsque le paramètre **-o** n’est pas spécifié, le fichier de trace de résultats n’est pas généré. La sortie de console retourne les informations de résumé à la fin de la relecture, mais aucune autre statistique de relecture n'est disponible.  
   
  **-s** *target_server*  
- Spécifie l'instance cible de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec laquelle la charge de travail distribuée doit être relue. Vous devez spécifier ce paramètre au format **nom_serveur[\nom_instance]** .  
+ Spécifie l'instance cible de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec laquelle la charge de travail distribuée doit être relue. Vous devez spécifier ce paramètre au format **nom_serveur[\nom_instance]**.  
   
  Vous ne pouvez pas utiliser «`localhost`» ou «`.`» comme serveur cible.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "63149471"
 > [!NOTE]  
 >  Chaque client s'inscrit avec le contrôleur spécifié dans le fichier de configuration client lors du démarrage du service client.  
   
- **-c** *config_file*  
+ **-c** *Config_file*  
  C'est le chemin d'accès complet du fichier de configuration de relecture ; il est utilisé pour spécifier l'emplacement du fichier lorsqu'il est stocké à un autre emplacement.  
   
  Le paramètre **-c** n’est pas obligatoire si vous voulez utiliser les valeurs par défaut du fichier de configuration de relecture `DReplay.exe.replay.config`.  
@@ -89,7 +89,7 @@ ms.locfileid: "63149471"
   
 -   Le paramètre **-d** spécifie l’emplacement du fichier intermédiaire sur le contrôleur, `c:\WorkingDir`.  
   
--   Le paramètre **-o** spécifie que chaque client spécifié capture l’activité de relecture et l’enregistre dans un fichier de trace de résultats. Remarque : L'élément `<ResultTrace>` dans le fichier de configuration peut être utilisé pour spécifier si le nombre de lignes et le jeu de résultats doivent être enregistrés.  
+-   Le paramètre **-o** spécifie que chaque client spécifié capture l’activité de relecture et l’enregistre dans un fichier de trace de résultats. Remarque : l'élément `<ResultTrace>` dans le fichier de configuration peut être utilisé pour spécifier si le nombre de lignes et le jeu de résultats doivent être enregistrés.  
   
 -   Le paramètre **-w** spécifie que les ordinateurs `client1` à `client4` participent en tant que clients à la relecture distribuée.  
   
@@ -156,11 +156,11 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
   
 ## <a name="see-also"></a>Voir aussi  
  [Relire les données de trace](replay-trace-data.md)   
- [Examiner les résultats de la relecture](review-the-replay-results.md)   
+ [Examiner les résultats de relecture](review-the-replay-results.md)   
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
- [Configure Distributed Replay](configure-distributed-replay.md)   
- [Forum de SQL Server Distributed Replay](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Utilisation de Distributed Replay pour le test de charge de SQL Server – Partie 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [Utilisation de Distributed Replay pour le test de charge de SQL Server – Partie 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [Configurer Distributed Replay](configure-distributed-replay.md)   
+ [Forum de Distributed Replay SQL Server](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
+ [Utilisation de Distributed Replay pour le test de charge de votre SQL Server-partie 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [Utilisation de Distributed Replay pour le test de charge de votre SQL Server-partie 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

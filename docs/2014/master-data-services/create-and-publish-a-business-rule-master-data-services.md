@@ -14,16 +14,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2b52be0b8c76333b069c018415ff698f13f824ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479894"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Créer et publier une règle d'entreprise (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez une règle d'entreprise pour garantir l'exactitude de vos données de référence. Après avoir créé une règle, vous devez la publier avant de pouvoir l'appliquer aux données.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -50,14 +50,14 @@ ms.locfileid: "65479894"
   
 9. Dans le volet **Composants** , développez le nœud **Conditions** .  
   
-10. Cliquez sur une condition et faites-la glisser vers le **IF** du volet **Conditions** étiquette.  
+10. Cliquez sur une condition et faites-la glisser vers l’étiquette **conditions** du volet **If** .  
   
     > [!TIP]  
-    >  Vous pouvez supprimer des éléments de votre règle d’entreprise en effectuant un clic droit et en choisissant **supprimer**.  
+    >  Vous pouvez supprimer des éléments de votre règle d’entreprise en cliquant avec le bouton droit et en choisissant **supprimer**.  
   
-11. Dans le **attributs** volet, cliquez sur un attribut et faites-le glisser vers le **modifier la Condition** du volet **sélectionner un attribut** étiquette.  
+11. Dans le volet **attributs** , cliquez sur un attribut et faites-le glisser vers l’étiquette **Sélectionner un attribut** du volet **modifier la condition** .  
   
-12. Dans le **modifier la Condition** volet, remplissez tous les champs requis.  
+12. Dans le volet **modifier la condition** , complétez tous les champs obligatoires.  
   
 13. Dans le volet **Modifier la condition** , cliquez sur **Enregistrer l’élément**.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "65479894"
     -   [Valider une version par rapport aux règles d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer des règles d’entreprise pour envoyer des notifications &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
+ [Configurez des règles d’entreprise pour envoyer des notifications &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
  [Modifier le nom d’une règle d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-business-rule-name-master-data-services.md)   
  [Ajouter plusieurs conditions à une règle d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
   

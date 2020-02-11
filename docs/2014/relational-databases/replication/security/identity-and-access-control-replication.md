@@ -16,22 +16,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd51a3e4c139c52d6510140324ae042c653377b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250316"
 ---
 # <a name="identity-and-access-control-replication"></a>Identité et contrôle d'accès (réplication)
-  L'authentification est le processus selon lequel une entité (généralement un ordinateur) vérifie qu'une autre entité, également appelée *entité principale*, (généralement un autre ordinateur ou un autre utilisateur) est bien ce qu'elle prétend être. L'autorisation est le processus selon lequel une entité principale authentifiée bénéficie de l'accès aux ressources, telles qu'un fichier du système de fichiers ou une table d'une base de données.  
+  L’authentification est le processus par lequel une entité (généralement un ordinateur dans ce contexte) vérifie qu’une autre entité, également appelée *principal*, (généralement un autre ordinateur ou un autre utilisateur) est qui ou ce qu’elle prétend être. L'autorisation est le processus selon lequel une entité principale authentifiée bénéficie de l'accès aux ressources, telles qu'un fichier du système de fichiers ou une table d'une base de données.  
   
  La sécurité de réplication fait appel à l'authentification et à l'autorisation pour contrôler l'accès aux objets de base de données répliqués, aux ordinateurs et aux agents impliqués dans le traitement de la réplication. Trois mécanismes régissent son fonctionnement :  
   
--   Sécurité de l’agent :  Le modèle de sécurité de l'agent de réplication permet un contrôle fin sur les comptes sous lesquels les agents de réplication s'exécutent et établissent des connexions. Pour plus d'informations sur le modèle de sécurité de l'agent, consultez [Replication Agent Security Model](replication-agent-security-model.md). Pour plus d’informations sur la définition des connexions et des mots de passe pour les agents, consultez [Gérer les connexions et les mots de passe dans la réplication](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication).  
+-   Sécurité de l’agent : le modèle de sécurité de l’agent de réplication permet un contrôle affiné sur les comptes sous lesquels les agents de réplication s’exécutent et effectuent des connexions. Pour plus d'informations sur le modèle de sécurité de l'agent, consultez [Replication Agent Security Model](replication-agent-security-model.md). Pour plus d’informations sur la définition des connexions et des mots de passe pour les agents, consultez [Gérer les connexions et les mots de passe dans la réplication](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication).  
   
--   Rôles d’administration :  Vérifiez que les rôles de base de données et de serveur appropriés sont utilisés pour la configuration, la maintenance et le traitement de la réplication. Pour plus d’informations, voir [Security Role Requirements for Replication](security-role-requirements-for-replication.md).  
+-   Rôles d’administration : Assurez-vous que les rôles de serveur et de base de données corrects sont utilisés pour la configuration, la maintenance et le traitement de la réplication. Pour plus d’informations, voir [Security Role Requirements for Replication](security-role-requirements-for-replication.md).  
   
--   La liste d’accès de publication (PAL) : Octroyez l'accès aux publications par l'intermédiaire de cette liste. La liste d'accès à la publication fonctionne de manière similaire à une liste de contrôle d'accès [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Lorsqu'un Abonné se connecte au serveur de publication ou au serveur de distribution et souhaite accéder à une publication, les informations d'authentification passées par l'agent sont comparées à celles de la liste d'accès à la publication. Pour obtenir plus d’informations et pour connaître les bonnes pratiques concernant la liste d’accès à la publication, consultez [Sécuriser le serveur de publication](secure-the-publisher.md).  
+-   La liste d’accès à la publication (PAL) : accorde l’accès aux publications via la PAL. La liste d'accès à la publication fonctionne de manière similaire à une liste de contrôle d'accès [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Lorsqu'un Abonné se connecte au serveur de publication ou au serveur de distribution et souhaite accéder à une publication, les informations d'authentification passées par l'agent sont comparées à celles de la liste d'accès à la publication. Pour obtenir plus d’informations et pour connaître les bonnes pratiques concernant la liste d’accès à la publication, consultez [Sécuriser le serveur de publication](secure-the-publisher.md).  
   
 ## <a name="filtering-published-data"></a>Filtrage des données publiées  
  Outre l'utilisation de l'authentification et de l'autorisation pour contrôler l'accès aux données et aux objets répliqués, la réplication comprend deux options permettant de contrôler les données disponibles sur un Abonné : filtrage des colonnes et filtrage des lignes. Pour plus d’informations sur le filtrage, consultez [Filtrer des données publiées](../publish/filter-published-data.md).  
@@ -41,13 +41,13 @@ ms.locfileid: "63250316"
  Le filtrage des données publiées vous permet de restreindre l'accès aux données et de spécifier les données qui sont disponibles sur l'Abonné. Par exemple, vous pouvez filtrer la table **Customer** afin que les partenaires de l'entreprise ne reçoivent que les informations sur les clients dont la colonne **ShareInfo** possède la valeur « Oui ». Pour les réplications de fusion, vous devez tenir compte de certains points de sécurité si vous utilisez un filtre paramétré qui inclut HOST_NAME(). Pour plus d'informations, consultez la section « Filtrage avec HOST_NAME() » dans [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
 
 ## <a name="manage-logins-and-passwords-in-replication"></a>Gérer les connexions et les mots de passe dans la réplication
-  Spécifiez les connexions et les mots de passe des agents de réplication lors de la configuration de la réplication. Après la configuration de la réplication, vous pouvez modifier les connexions et les mots de passe. Pour plus d’informations, consultez [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md). Si vous changez le mot de passe d’un compte utilisé par un agent de réplication, exécutez [sp_changereplicationserverpasswords &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql).  
+  Spécifiez les connexions et les mots de passe des agents de réplication lors de la configuration de la réplication. Après la configuration de la réplication, vous pouvez modifier les connexions et les mots de passe. Pour plus d’informations, consultez [afficher et modifier les paramètres de sécurité de la réplication](view-and-modify-replication-security-settings.md). Si vous changez le mot de passe d’un compte utilisé par un agent de réplication, exécutez [sp_changereplicationserverpasswords &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modèle de sécurité de l’Agent de réplication](replication-agent-security-model.md)   
+ [Modèle de sécurité de l’agent de réplication](replication-agent-security-model.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Sécurité de la réplication SQL Server](view-and-modify-replication-security-settings.md)   
- [Réplication limitation des menaces et vulnérabilités](threat-and-vulnerability-mitigation-replication.md)   
+ [Sécurité Réplication SQL Server](view-and-modify-replication-security-settings.md)   
+ [Atténuation des menaces et des vulnérabilités de réplication](threat-and-vulnerability-mitigation-replication.md)   
 
   
   

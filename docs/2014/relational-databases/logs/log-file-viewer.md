@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f72f8e40374198a5230e32b8ec5b3974fdb6b971
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144645"
 ---
 # <a name="log-file-viewer"></a>Visionneuse du fichier journal
@@ -52,7 +52,7 @@ ms.locfileid: "63144645"
 |Fournit l'aide (accessible à l'aide de la touche F1) relative à la Visionneuse du fichier journal.|[Visionneuse du fichier journal - Aide (F1)](log-file-viewer-f1-help.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Audit &#40;moteur de base de données&#41;](../security/auditing/sql-server-audit-database-engine.md)   
+ [SQL Server Audit &#40moteur de base de données&#41;](../security/auditing/sql-server-audit-database-engine.md)   
  [Journal des erreurs de l'Agent SQL Server](../../ssms/agent/sql-server-agent-error-log.md)  
   
   

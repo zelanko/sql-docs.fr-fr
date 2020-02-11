@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf05de13f0aada12da055f2e9c1e5a3a0db1d1df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195014"
 ---
 # <a name="page-setup-dialog-box"></a>Boîte de dialogue Mise en page
   Vous pouvez personnaliser votre conception de page à l'aide des options de la boîte de dialogue **Mise en page** . La disponibilité de certaines options dépend des langues qui sont installées et activées pour la modification.  
   
-## <a name="paper"></a>Papier  
+## <a name="paper"></a>Article  
  **Taille**  
  Sélectionnez une taille dans la liste.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "63195014"
  Gauche  
  Définit la distance entre le bord gauche de la page et le bord gauche des lignes sans retrait alignées à gauche.  
   
- Droit  
+ Right  
  Définit la distance entre le bord droit de la page et le bord droit des lignes sans retrait alignées à droite.  
   
  TOP  
@@ -50,7 +50,7 @@ ms.locfileid: "63195014"
  Définit la distance entre le bas de la page et le bas de la dernière ligne de la page.  
   
 ## <a name="other"></a>Autres  
- **Aperçu**  
+ **Préversion**  
  L'aperçu affiche les effets des paramètres sélectionnés.  
   
  **En-tête de page**  

@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 719e7a24efa2b0c68d4984d8b16f957a268fdafb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265858"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>Création d'un composant d'exécution d'élément de rapport personnalisé
-  Le composant d’exécution d’élément de rapport personnalisé est implémenté en tant que composant [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] à l’aide de tout langage Conforme CLS et est appelé par le processeur de rapports au moment de l’exécution. Les propriétés du composant d'exécution sont définies dans l'environnement de conception en modifiant le composant de conception d'élément de rapport personnalisé y correspondant.  
+  Le composant d’exécution d’élément de rapport personnalisé est implémenté en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] tant que composant à l’aide de tout langage conforme CLS et est appelé par le processeur de rapports au moment de l’exécution. Les propriétés du composant d'exécution sont définies dans l'environnement de conception en modifiant le composant de conception d'élément de rapport personnalisé y correspondant.  
 
 <!--
 Replacing the following multiValue.....
@@ -148,8 +148,8 @@ namespace Microsoft.Samples.ReportingServices
   
 ## <a name="see-also"></a>Voir aussi  
  [Architecture des éléments de rapports personnalisés](custom-report-item-architecture.md)   
- [Création d’un composant au moment de la conception d’éléments de rapport personnalisé](creating-a-custom-report-item-design-time-component.md)   
+ [Création d’un composant au moment de la conception d’éléments de rapport personnalisés](creating-a-custom-report-item-design-time-component.md)   
  [Bibliothèques de classes d’éléments de rapports personnalisés](custom-report-item-class-libraries.md)   
- [Guide pratique pour déployer un élément de rapport personnalisé](how-to-deploy-a-custom-report-item.md)  
+ [Procédure : déployer un élément de rapport personnalisé](how-to-deploy-a-custom-report-item.md)  
   
   

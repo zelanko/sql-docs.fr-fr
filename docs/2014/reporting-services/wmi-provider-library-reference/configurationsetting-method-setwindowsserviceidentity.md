@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d08e9900453fe259d727e202489d728e0dce47e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097876"
 ---
-# <a name="setwindowsserviceidentity-method-wmi-msreportserverconfigurationsetting"></a>Méthode SetWindowsServiceIdentity (WMI MSReportServer_ConfigurationSetting)
+# <a name="setwindowsserviceidentity-method-wmi-msreportserver_configurationsetting"></a>Méthode SetWindowsServiceIdentity (WMI MSReportServer_ConfigurationSetting)
   Fait en sorte que le service Windows Report Server s'exécute en tant qu'utilisateur Windows spécifié et accorde des autorisations de système de fichiers suffisantes à ce compte pour permettre au serveur de rapports de fonctionner.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -41,7 +41,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
 ```  
   
 ## <a name="parameters"></a>Paramètres  
- *UseBuiltInAccount*  
+ *UseBuiltInAccount a*  
  Indique si le compte spécifié est un compte Windows intégré.  
   
  *Compte*  
@@ -50,23 +50,23 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
  *Mot de passe*  
  Mot de passe du compte.  
   
- *HRESULT*  
+ *SIGNÉ*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Retourne un paramètre *HRESULT* qui indique si l'appel de la méthode a réussi ou a échoué. Une valeur 0 indique que l'appel de méthode a réussi. Une valeur différente de zéro indique qu'une erreur s'est produite.  
   
 ## <a name="remarks"></a>Notes  
- Lorsque le *UseBuiltInAccount* paramètre est défini sur `true` et le serveur de rapports s’exécute sur Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] ou Windows XP, la valeur de la *nom*, *domaine*, et *mot de passe* paramètres sont ignorés et le compte système Local est utilisé.  
+ Lorsque le *paramètre UseBuiltInAccount a* a la valeur `true` et que le serveur de rapports s’exécute [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] sur Microsoft ou Windows XP, la valeur des paramètres *Name*, *Domain*et *Password* est ignorée et le compte système local est utilisé.  
   
- Lorsque le *UseBuiltInAccount* paramètre est défini sur `true` et le serveur de rapports s’exécute sur Windows Server 2003, le *domaine* et *mot de passe* sont des propriétés ignoré, et le champ nom doit contenir « Builtin\system » ou « Builtin\System » ou « Builtin\LocalService ».  
+ Lorsque le paramètre *UseBuiltInAccount a* a la valeur `true` et que le serveur de rapports s’exécute sur Windows Server 2003, les propriétés *Domain* et *Password* sont ignorées, et le champ Name doit contenir « Builtin\system » ou « , » ou « Builtin\LocalService ».  
   
  La méthode SetWindowsServiceIdentity définit des autorisations d’accès aux fichiers sur les fichiers et les dossiers dans le répertoire d’installation du serveur de rapports.  
   
- Le compte spécifié dans le *compte* paramètre nécessite `LogonAsService` droits dans Windows. La méthode accorde ce droit au compte spécifié.  
+ Le compte spécifié dans le ** paramètre de compte `LogonAsService` requiert des droits dans Windows. La méthode accorde ce droit au compte spécifié.  
   
-## <a name="requirements"></a>Configuration requise  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+## <a name="requirements"></a>Spécifications  
+ **Espace de noms :**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

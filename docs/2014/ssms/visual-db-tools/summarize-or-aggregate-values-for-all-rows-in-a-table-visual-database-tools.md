@@ -1,5 +1,5 @@
 ---
-title: Synthétiser ou regrouper des valeurs de toutes les lignes d’une Table (Visual Database Tools) | Microsoft Docs
+title: Synthétiser ou agréger des valeurs pour toutes les lignes d’une table (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,23 +14,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33d44b48571839d9695893021f6cdc1c8bb63f06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204612"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>Synthétiser ou regrouper des valeurs de toutes les lignes d'une table (Visual Database Tools)
-  À l'aide d'une fonction d'agrégation, vous pouvez créer une synthèse pour toutes les valeurs d'une table. Ainsi, vous pouvez, comme dans l'exemple illustré ci-dessous, créer une requête qui affiche le prix total de tous les livres de la table `titles` :  
+  À l'aide d'une fonction d'agrégation, vous pouvez créer une synthèse pour toutes les valeurs d'une table. Ainsi, vous pouvez, comme dans l'exemple illustré ci-dessous, créer une requête qui affiche le prix total de tous les livres de la table `titles` :  
   
 ```  
 SELECT SUM(price)  
 FROM titles  
 ```  
   
- Vous pouvez créer plusieurs agrégations dans la même requête en utilisant des fonctions d'agrégation avec plusieurs colonnes. Il est par exemple possible de créer une requête qui calcule le total de la colonne `price` et la moyenne de la colonne `discount`.  
+ Vous pouvez créer plusieurs agrégations dans la même requête en utilisant des fonctions d'agrégation avec plusieurs colonnes. Il est par exemple possible de créer une requête qui calcule le total de la colonne `price` et la moyenne de la colonne `discount` .  
   
- Vous pouvez par ailleurs agréger la même colonne de différentes façons (total, comptage et moyenne) dans la même requête. Ainsi, la requête ci-dessous établit la moyenne et totalise la colonne `price` de la table `titles` :  
+ Vous pouvez par ailleurs agréger la même colonne de différentes façons (total, comptage et moyenne) dans la même requête. Ainsi, la requête ci-dessous établit la moyenne et totalise la colonne `price` de la table `titles` :  
   
 ```  
 SELECT AVG(price), SUM(price)  
@@ -78,7 +78,7 @@ FROM titles
 >  Le Concepteur de requêtes et de vues conserve les fonctions d'agrégation dans l'instruction SQL du volet SQL jusqu'à ce que vous désactiviez explicitement le mode Grouper par. Par conséquent, si vous modifiez votre requête en changeant son type, les tables ou autres objets table présents dans le volet Schéma, la requête obtenue peut comporter des fonctions d'agrégation non valides.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Trier et grouper les résultats de requête &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [Trier et regrouper les résultats des requêtes &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [Résumer les résultats de la requête &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)  
   
   

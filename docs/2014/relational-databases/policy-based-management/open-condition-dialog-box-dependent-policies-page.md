@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a47820c60b221773ad4ce312f49d2192eeddc547
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63182927"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>Boîte de dialogue Ouvrir une condition, page Stratégies dépendantes
@@ -29,7 +29,7 @@ ms.locfileid: "63182927"
  **Activé**  
  Une coche indique que la stratégie est actuellement activée. Vierge si la stratégie n'est pas activée.  
   
- **Historique**  
+ **History**  
  Cliquez sur le lien hypertexte Afficher l'historique pour afficher le rapport d'historique d'exécution.  
   
  **Créé le**  

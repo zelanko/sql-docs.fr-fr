@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a28f2401f11f20f8891dbe71537ce2240a570ed8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158248"
 ---
 # <a name="in-memory-oltp-garbage-collection"></a>Garbage collection de l'OLTP en mémoire
@@ -43,6 +43,6 @@ ms.locfileid: "63158248"
  Après qu'une transaction utilisateur est validée, elle identifie tous les éléments de la file d'attente associés au planificateur sur lequel elle s'exécute et désalloue la mémoire. Si la file d'attente du garbage collection sur le planificateur est vide, il recherche une file d'attente non vide dans le nœud NUMA actuel. En cas de faible activité transactionnelle et en cas de sollicitation de la mémoire, le thread principal garbage-collection peut accéder aux lignes extraites de n'importe quelle file d'attente pour les nettoyer. S'il n'y a aucune activité transactionnelle, par exemple, après avoir supprimé un grand nombre de lignes et s'il n'y a aucune sollicitation de la mémoire, les lignes supprimées ne sont extraites par le garbage collector que quand l'activité transactionnelle reprend ou quant la mémoire est sollicitée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestion de la mémoire pour l'OLTP en mémoire](../../database-engine/managing-memory-for-in-memory-oltp.md)  
+ [Gestion de la mémoire pour l’OLTP en mémoire](../../database-engine/managing-memory-for-in-memory-oltp.md)  
   
   

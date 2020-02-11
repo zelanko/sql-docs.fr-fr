@@ -1,5 +1,5 @@
 ---
-title: Prise en charge des Transactions distribuées | Microsoft Docs
+title: Prise en charge des transactions distribuées | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,27 +19,27 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b35715487638a21e71f76788650b3238a3c9290c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63213507"
 ---
 # <a name="supporting-distributed-transactions"></a>Prise en charge des transactions distribuées
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Consommateurs du fournisseur natives Client OLE DB peuvent utiliser le **ITransactionJoin::JoinTransaction** méthode pour participer à une transaction distribuée coordonnée par Microsoft Distributed Transaction Coordinator (MS DTC).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Les consommateurs du fournisseur OLE DB Native Client peuvent utiliser la méthode **ITransactionJoin :: JoinTransaction** pour participer à une transaction distribuée coordonnée par Microsoft Distributed Transaction Coordinator (MS DTC).  
   
- MS DTC expose les objets COM qui permettent aux clients d'initialiser des transactions coordonnées et d'y participer sur plusieurs connexions à diverses banques de données. Pour lancer une transaction, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consommateur du fournisseur OLE DB Native Client utilise MS DTC **ITransactionDispenser** interface. Le membre **BeginTransaction** de **ITransactionDispenser** retourne une référence sur un objet de transaction distribué. Cette référence est passée à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client à l’aide **JoinTransaction**.  
+ MS DTC expose les objets COM qui permettent aux clients d'initialiser des transactions coordonnées et d'y participer sur plusieurs connexions à diverses banques de données. Pour lancer une transaction, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consommateur du fournisseur OLE DB Native Client utilise l’interface MS DTC **ITransactionDispenser** . Le membre **BeginTransaction** de **ITransactionDispenser** retourne une référence sur un objet de transaction distribué. Cette référence est passée au fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB Native Client à l’aide de **JoinTransaction**.  
   
  MS DTC prend en charge l'abandon et la validation asynchrones sur les transactions distribuées. Pour la notification sur l’état de transaction asynchrone, le consommateur implémente l’interface **ITransactionOutcomeEvents** et connecte l’interface à un objet de transaction MS DTC.  
   
- Pour les transactions distribuées, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implémente du fournisseur OLE DB Native Client **ITransactionJoin::JoinTransaction** paramètres comme suit.  
+ Pour les transactions distribuées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le fournisseur de OLE DB Native Client implémente les paramètres **ITransactionJoin :: JoinTransaction** comme suit.  
   
 |Paramètre|Description|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|Pointeur vers un objet de transaction MS DTC.|  
-|*IsoLevel*|Ignoré par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif. Le niveau d'isolation pour les transactions coordonnées MS DTC est déterminé lorsque le consommateur acquiert un objet de transaction à partir de MS DTC.|  
-|*IsoFlags*|Doit être égal à 0. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les fournisseur OLE DB Native Client retourne XACT_E_NOISORETAIN si toute autre valeur est spécifiée par le consommateur.|  
-|*POtherOptions*|Si non NULL, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client demande l’objet d’options de l’interface. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client retourne XACT_E_NOTIMEOUT si l’objet d’options *ulTimeout* membre n’est pas égal à zéro. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client ignore la valeur de la *szDescription* membre.|  
+|*IsoLevel*|Ignoré par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client. Le niveau d'isolation pour les transactions coordonnées MS DTC est déterminé lorsque le consommateur acquiert un objet de transaction à partir de MS DTC.|  
+|*IsoFlags*|Doit être égal à 0. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client retourne XACT_E_NOISORETAIN si une autre valeur est spécifiée par le consommateur.|  
+|*POtherOptions*|Si la valeur n’est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pas null, le fournisseur de OLE DB Native Client demande l’objet d’options à partir de l’interface. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client retourne XACT_E_NOTIMEOUT si le membre *ulTimeout* de l’objet d’options n’est pas égal à zéro. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client ignore la valeur du membre *szDescription* .|  
   
  Cet exemple coordonne la transaction à l'aide de MS DTC.  
   

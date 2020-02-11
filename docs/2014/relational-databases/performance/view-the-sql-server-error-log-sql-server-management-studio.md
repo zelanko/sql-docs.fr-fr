@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 494b57b50115b5ed3cf5089448215b89e9422ccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150452"
 ---
 # <a name="view-the-sql-server-error-log-sql-server-management-studio"></a>Afficher le journal des erreurs SQL Server (SQL Server Management Studio)
@@ -28,7 +28,7 @@ ms.locfileid: "63150452"
   
 ### <a name="to-view-the-sql-server-error-log"></a>Pour afficher le journal des erreurs SQL Server  
   
-1.  Dans **Explorateur d’objets**, développez un serveur, puis **gestion**, puis développez **journaux SQL Server**.  
+1.  Dans l' **Explorateur d’objets**, développez successivement un serveur, **gestion**, puis **SQL Server journaux**.  
   
 2.  Cliquez avec le bouton droit sur un journal, puis cliquez sur **Afficher le journal SQL Server**.  
   

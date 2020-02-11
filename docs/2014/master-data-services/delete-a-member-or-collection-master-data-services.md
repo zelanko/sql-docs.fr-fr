@@ -17,10 +17,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f3164bca23e709fd434c6ba7850ec21179a076ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479713"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>Supprimer un membre ou une collection (Master Data Services)
@@ -29,12 +29,12 @@ ms.locfileid: "65479713"
 > [!NOTE]  
 >  Vous ne pouvez pas supprimer un membre s'il est utilisé comme une valeur d'attribut basée sur un domaine pour un autre membre.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Explorateur** .  
   
--   Pour les membres, vous devez disposer d’un minimum de **mise à jour** autorisation sur l’objet de modèle de feuille que vous supprimez un membre à partir de.  
+-   Pour les membres, vous devez disposer au minimum de l’autorisation **mettre à jour** sur l’objet modèle feuille à partir duquel vous supprimez un membre.  
   
 -   Pour les collections, vous devez avoir au minimum l'autorisation **Mettre à jour** sur l'objet modèle de collection feuille que vous supprimez.  
   

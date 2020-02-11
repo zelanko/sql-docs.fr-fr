@@ -1,5 +1,5 @@
 ---
-title: Fournisseur WMI pour les Classes de gestion de Configuration | Microsoft Docs
+title: Fournisseur WMI pour les classes de gestion de la configuration | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,49 +20,49 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b83388ff3be4c8cfdfec72968230f957358b1960
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63288421"
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>Fournisseur WMI pour les classes de gestion de la configuration
   Le fournisseur WMI (Windows Management Instrumentation) pour la gestion de la configuration fournit des fonctionnalités pour les classes suivantes :  
   
- [CInstance, classe](cinstance-class.md)  
+ [Classe CInstance](cinstance-class.md)  
   
- [ClientNetLibInfo, classe](clientnetlibinfo-class/clientnetlibinfo-class.md)  
+ [Classe ClientNetLibInfo](clientnetlibinfo-class/clientnetlibinfo-class.md)  
   
- [ClientNetworkProtocol, classe](clientnetworkprotocol-class/clientnetworkprotocol-class.md)  
+ [Classe ClientNetworkProtocol](clientnetworkprotocol-class/clientnetworkprotocol-class.md)  
   
- [ClientNetworkProtocolProperty, classe](clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)  
+ [Classe ClientNetworkProtocolProperty](clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)  
   
- [ClientSettings, classe](clientsettings-class.md)  
+ [Classe ClientSettings](clientsettings-class.md)  
   
- [ClientSettingsGeneralFlag, classe](clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)  
+ [Classe ClientSettingsGeneralFlag](clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)  
   
- [SecurityCertificate, classe](securitycertificate-class/securitycertificate-class.md)  
+ [Classe SecurityCertificate](securitycertificate-class/securitycertificate-class.md)  
   
- [ServerNetworkProtocol, classe](servernetworkprotocol-class/servernetworkprotocol-class.md)  
+ [Classe ServerNetworkProtocol](servernetworkprotocol-class/servernetworkprotocol-class.md)  
   
  [ServerNetworkProtocolIPAddress, classe](servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)  
   
- [ServerNetworkProtocolProperty, classe](servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)  
+ [Classe ServerNetworkProtocolProperty](servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)  
   
- [ServerSettings, classe](serversettings-class/serversettings-class.md)  
+ [Classe ServerSettings](serversettings-class/serversettings-class.md)  
   
- [ServerSettingsGeneralFlag, classe](serversettingsgeneralflag-class/serversettingsgeneralflag-class.md)  
+ [Classe ServerSettingsGeneralFlag](serversettingsgeneralflag-class/serversettingsgeneralflag-class.md)  
   
- [SInstance, classe](sinstance-class/sinstance-class.md)  
+ [Classe SInstance](sinstance-class/sinstance-class.md)  
   
- [SqlErrorLogEvent, classe](sqlerrorlogevent-class.md)  
+ [Classe SqlErrorLogEvent](sqlerrorlogevent-class.md)  
   
- [SqlErrorLogFile, classe](sqlerrorlogfile-class.md)  
+ [Classe SqlErrorLogFile](sqlerrorlogfile-class.md)  
   
- [SqlServerAlias, classe](sqlserveralias-class/sqlserveralias-class.md)  
+ [Classe SqlServerAlias](sqlserveralias-class/sqlserveralias-class.md)  
   
- [SqlService, classe](sqlservice-class/sqlservice-class.md)  
+ [Classe SqlService](sqlservice-class/sqlservice-class.md)  
   
- [SqlServiceAdvancedProperty, classe](sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md)  
+ [Classe SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md)  
   
   

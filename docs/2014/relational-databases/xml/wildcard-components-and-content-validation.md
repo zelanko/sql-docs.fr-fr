@@ -14,20 +14,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b824b240c6801317b16ac84820e0fc82054875b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193003"
 ---
 # <a name="wildcard-components-and-content-validation"></a>Composants génériques et validation de contenu
   Les composants génériques sont utilisés pour accroître la flexibilité en termes d'éléments pouvant apparaître dans un modèle de contenu. Ils sont pris en charge comme suit dans le langage XSD :  
   
--   Composants génériques éléments. Ils sont représentés par l’élément **\<xsd:any>**.  
+-   Composants génériques éléments. Ils sont représentés par l’élément **\<xsd:any>** .  
   
--   Composants génériques attributs. Ils sont représentés par l’élément **\<xsd:anyAttribute>**.  
+-   Composants génériques attributs. Ils sont représentés par l’élément **\<xsd:anyAttribute>** .  
   
- Ces deux éléments de caractère générique,**\<xsd:any>** et **\<xsd:anyAttribute>**, prennent en charge l’utilisation d’un attribut **processContents**. Grâce à lui, vous pouvez préciser une valeur indiquant comment les applications XML vont gérer la validation du contenu des documents associé à ces éléments de caractères génériques. Les valeurs possibles et leurs effets sont décrits ci-dessous :  
+ Ces deux éléments de caractère générique, **\<xsd:any>** et **\<xsd:anyAttribute>** , prennent en charge l’utilisation d’un attribut **processContents**. Grâce à lui, vous pouvez préciser une valeur indiquant comment les applications XML vont gérer la validation du contenu des documents associé à ces éléments de caractères génériques. Les valeurs possibles et leurs effets sont décrits ci-dessous :  
   
 -   La valeur **strict** indique que le contenu est entièrement validé.  
   

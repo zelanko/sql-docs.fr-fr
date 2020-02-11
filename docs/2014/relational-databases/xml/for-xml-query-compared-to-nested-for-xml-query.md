@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cccb676574fe4b767d567fbe48cdb887baddf8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205058"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>Comparaison de la requête FOR XML et de la requête FOR XML imbriquée
@@ -90,7 +90,7 @@ ORDER BY ProductCategoryID
 FOR XML AUTO, TYPE  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 < ProdCat ProductCategoryID="1" CategoryName="Bikes" />  
@@ -114,7 +114,7 @@ ORDER BY ProductCategoryID
 FOR XML AUTO, TYPE  
 ```  
   
- Notez les points suivants par rapport à la requête ci-dessus :  
+ Notez les points suivants par rapport à la requête ci-dessus :  
   
 -   La requête `FOR XML` interne extrait des informations sur les sous-catégories de produits. La directive `ELEMENTS` est ajoutée à la requête `FOR XML` interne pour générer des données XML centrées sur l'élément, qui sont ajoutées aux données XML créées par la requête externe. Par défaut, la requête externe génère des données XML centrées sur l'attribut.  
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 11e875d5b171194c3ac8ba4ad33fad51cacacffe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482659"
 ---
 # <a name="shortcut-query-files-mds-add-in-for-excel"></a>Fichiers de requête de raccourci (Complément MDS pour Excel)
@@ -37,7 +37,7 @@ ms.locfileid: "65482659"
   
  Quand vous ouvrez un fichier de requête de raccourci avec cette application, vous êtes invité à créer une connexion « sécurisée », indiquant que vous faites confiance au contenu de cet emplacement. Chaque fois que vous marquez une connexion comme sécurisée, elle est ajouté à la liste. Si vous souhaitez effacer cette liste, ouvrez la boîte de dialogue **Paramètres** , puis dans la section **Serveurs ajoutés à la liste sécurisée** , cliquez sur **Effacer tout**.  
   
- L’emplacement par défaut pour l’application est *lecteur*: \Program Files\Microsoft SQL Server\120\Master Data Services\Excel Add-In\Microsoft.MasterDataServices.QueryOpener.exe.  
+ L’emplacement par défaut de l’application est *lecteur*: \Program Files\Microsoft SQL Server\120\Master Data Services\Excel Add-In\Microsoft.MasterDataServices.QueryOpener.exe.  
   
  Il existe deux manières d'ouvrir des fichiers de requête de raccourci : vous pouvez les importer ou bien double-cliquer sur leur icône pour les ouvrir automatiquement.  
   
@@ -45,15 +45,15 @@ ms.locfileid: "65482659"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Enregistrez le contenu de la feuille de calcul active en tant que fichier de requête de raccourci.|[Enregistrer un fichier de requête de raccourci &#40;Complément MDS pour Excel#41;](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
-|Envoyez par courrier électronique un fichier de requête de raccourci qui représente le contenu de la feuille de calcul active.|[Envoyer par e-mail un fichier de requête de raccourci &#40;Complément MDS pour Excel#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|Enregistrez le contenu de la feuille de calcul active en tant que fichier de requête de raccourci.|[Enregistrer un fichier de requête de raccourci &#40;Complément MDS pour Excel&#41;](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|Envoyez par courrier électronique un fichier de requête de raccourci qui représente le contenu de la feuille de calcul active.|[Envoyer par courrier électronique un fichier de requête de raccourci &#40;Complément MDS pour Excel&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Contenu associé  
   
--   [Connexions &#40;Complément MDS pour Excel#41;](connections-mds-add-in-for-excel.md)  
+-   [Connexions &#40;Complément MDS pour Excel&#41;](connections-mds-add-in-for-excel.md)  
   
 -   [Complément Master Data Services pour Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   
--   [Sécurité &#40;Master Data Services&#41;](../security-master-data-services.md)  
+-   [&#40;de sécurité Master Data Services&#41;](../security-master-data-services.md)  
   
   

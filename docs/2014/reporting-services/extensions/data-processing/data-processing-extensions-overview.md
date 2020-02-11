@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ad425c954526fabd6b9b1cf83b42fe5667979c3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63165427"
 ---
 # <a name="data-processing-extensions-overview"></a>Vue d'ensemble des extensions pour le traitement des données
-  Les extensions pour le traitement des données dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] vous permettent de vous connecter à une source de données et de récupérer des données. Elles servent également de pont entre une source de données et un dataset Les extensions pour le traitement des données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sont basées sur un sous-ensemble des interfaces de fournisseur de données [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+  Les extensions pour le traitement des données dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] vous permettent de vous connecter à une source de données et de récupérer des données. Elles servent également de pont entre une source de données et un dataset [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]les extensions pour le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] traitement des données sont modélisées après un sous-ensemble des interfaces de fournisseur de données.  
   
  Le tableau suivant répertorie les extensions pour le traitement des données fournies avec [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
@@ -34,13 +34,14 @@ ms.locfileid: "63165427"
  Vous pouvez utiliser l'API de traitement de données [!INCLUDE[ssRS](../../../includes/ssrs.md)] pour ajouter le traitement de données personnalisées à votre serveur de rapports.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] intègre la prise en charge des fournisseurs de données dans le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Si vous avez déjà implémenté un fournisseur de données complet, vous n'avez pas besoin d'implémenter une extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Toutefois, songez à étendre votre fournisseur de données de manière à inclure les fonctionnalités spécifiques à [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2005, notamment les informations d'identification de connexion sécurisée et les agrégats côté serveur.  
+>  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] intègre la prise en charge des fournisseurs de données dans le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Si vous avez déjà implémenté un fournisseur de données complet, vous n'avez pas besoin d'implémenter une extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Toutefois, songez à étendre votre fournisseur de données de manière à inclure les fonctionnalités spécifiques à [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2005, notamment les informations d'identification de connexion sécurisée et les agrégats côté serveur.  
   
  Chaque extension pour le traitement des données incluse avec [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilise un jeu commun d'interfaces. De cette manière, chaque extension implémente des fonctionnalités comparables.  
   
  Vous pouvez développer des extensions pour le traitement des données pour vos propres sources de données ou vous pouvez utiliser les interfaces pour ajouter une couche supplémentaire de traitement des données aux infrastructures de base de données courantes. Vous pouvez déployer vos extensions pour le traitement des données personnalisées pour permettre l'intégration transparente des données dans les serveurs de rapports existants dans votre organisation. Vous pouvez également les utiliser dans le cadre d'une suite de création de rapports personnalisée que vous fournissez à vos consommateurs.  
   
- ![Architecture d’extension pour le traitement de données](../../media/bk-dataprocess-extensions.gif "Architecture d’extension pour le traitement de données")  
+ ![Architecture d'extension pour le traitement de données](../../media/bk-dataprocess-extensions.gif "Architecture d'extension pour le traitement de données")  
 Architecture de l'extension pour le traitement des données Reporting Services  
   
  Les avantages liés à l'implémentation d'une extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] personnalisée sont les suivants :  
@@ -54,7 +55,7 @@ Architecture de l'extension pour le traitement des données Reporting Services
 ## <a name="data-extension-process-flow"></a>Flux de traitement de l'extension de données  
  Avant de développer votre extension de données personnalisée, vous devez comprendre comment le serveur de rapports utilise les extensions de données pour traiter les données. Vous devez également comprendre les constructeurs et les méthodes appelés par le serveur de rapports.  
   
- ![Flux de traitement pour l’extension de traitement de données](../../media/bk-ext-01.gif "Flux de traitement pour l’extension de traitement de données")  
+ ![Flux de traitement pour l'extension de traitement de données](../../media/bk-ext-01.gif "Flux de traitement pour l'extension de traitement de données")  
 Flux de traitement pas à pas d'une extension de données appelée par le serveur de rapports  
   
  L'illustration montre la séquence d'événements suivante :  
@@ -70,13 +71,13 @@ Flux de traitement pas à pas d'une extension de données appelée par le serveu
   
 -   un ordinateur de déploiement sur lequel est installé le Générateur de rapports ou un serveur de rapports ;  
   
--   un ordinateur de développement sur lequel est installé [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)], ou une version ultérieure, ou le SDK [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ;  
+-   Un ordinateur de développement [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] avec ou version ultérieure, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ou le kit de développement logiciel (SDK) installé.  
   
 -   des connaissances approfondies des fonctionnalités et des capacités de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ;  
   
--   des connaissances approfondies de l’architecture [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], des fournisseurs de données [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], des objets DataSet ADO.NET et des interfaces [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] communes ;  
+-   Une compréhension approfondie de l’architecture [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] , [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] des fournisseurs de données, des objets DataSet ADO.net et des [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] interfaces communes.  
   
--   de l’expérience en développement dans un langage [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] tel que [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
+-   Expérience de développement dans [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] un langage tel [!INCLUDE[msCoName](../../../includes/msconame-md.md)] que Visual C# [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] ou .net.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Extensions Reporting Services](../reporting-services-extensions.md)   

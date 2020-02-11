@@ -1,5 +1,5 @@
 ---
-title: À l’aide de la mise en miroir de base de données | Microsoft Docs
+title: Utilisation de la mise en miroir de bases de données | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d7db93bdbe00b6aa1bc2525c0e8ed47e45aaf15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225328"
 ---
 # <a name="using-database-mirroring"></a>Utilisation de la mise en miroir de bases de données
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] Utilisez [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] à la place.  
   
- La mise en miroir de bases de données, introduite dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], est une solution permettant d'accroître la disponibilité de la base de données et la redondance des données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fournit la prise en charge implicite pour la mise en miroir de base de données, donc le développeur n’a pas besoin d’écrire du code ou de prendre toute autre action une fois qu’il a été configuré pour la base de données.  
+ La mise en miroir de bases de données, introduite dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], est une solution permettant d'accroître la disponibilité de la base de données et la redondance des données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client fournit une prise en charge implicite de la mise en miroir de bases de données, de sorte que le développeur n’a pas besoin d’écrire du code ou d’effectuer une autre action une fois qu’il a été configuré pour la base de données.  
   
  La mise en miroir de bases de données, implémentée pour chaque base de données, conserve une copie d’une base de données de production [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur un serveur de secours. Ce serveur est un serveur de secours automatique ou semi-automatique, selon la configuration et l'état de la session de mise en miroir de bases de données. Un serveur de secours automatique prend en charge le basculement rapide sans perte de transactions validées et un serveur de secours semi-automatique prend en charge le service forcé (avec perte de données possible).  
   
@@ -43,7 +43,7 @@ ms.locfileid: "63225328"
  Il est possible d'utiliser un alias lors de la spécification du nom d'une base de données miroir.  
   
 > [!NOTE]  
->  Pour plus d’informations sur les tentatives de connexion initiale et les tentatives de reconnexion à une base de données mise en miroir, consultez [connecter des Clients à une Session de mise en miroir de base de données &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+>  Pour plus d’informations sur les tentatives de connexion initiale et les tentatives de reconnexion à une base de données mise en miroir, consultez [connecter des clients à une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 ## <a name="programming-considerations"></a>Éléments de programmation à prendre en considération  
  Lorsque le serveur de la base de données principale échoue, l'application cliente reçoit des erreurs en réponse aux appels d'API, erreurs qui signifient que la connexion à la base de données a été perdue. Lorsque cela se produit, toutes les modifications apportées à la base de données qui n'ont pas été validées sont perdues et la transaction en cours est annulée. Si cela se produit, l'application doit fermer la connexion (ou libérer l'objet source de données) et la rouvrir. La connexion est redirigée de façon transparente vers la base de données miroir, qui fait désormais office de serveur principal.  
@@ -58,14 +58,14 @@ ms.locfileid: "63225328"
 >  De plus, les noms de serveur ne respectent pas la casse, contrairement aux noms de base de données. Par conséquent, vous devez vous assurer que vous utilisez la même casse dans les DSN et les chaînes de connexion.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Fournisseur OLE DB SQL Server Native Client  
- Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif prend en charge la mise en miroir de base de données via la connexion et les attributs de chaîne de connexion. La propriété SSPROP_INIT_FAILOVERPARTNER a été ajoutée à la propriété DBPROPSET_SQLSERVERDBINIT définie et le mot clé `FailoverPartner` est un nouvel attribut de chaîne de connexion de DBPROP_INIT_PROVIDERSTRING. Pour plus d’informations, consultez [Using Connection String Keywords with SQL Server Native Client](../applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client prend en charge la mise en miroir de bases de données via les attributs de connexion et de chaîne de connexion. La propriété SSPROP_INIT_FAILOVERPARTNER a été ajoutée à la propriété DBPROPSET_SQLSERVERDBINIT définie et le mot clé `FailoverPartner` est un nouvel attribut de chaîne de connexion de DBPROP_INIT_PROVIDERSTRING. Pour plus d’informations, consultez [utilisation de mots clés de chaîne de connexion avec SQL Server Native Client](../applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- Le cache de basculement est conservé tant que le fournisseur est chargé, autrement dit jusqu'à ce que **CoUninitialize** est appelée ou tant que l’application a une référence à un objet géré par le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client comme un objet de source de données.  
+ Le cache de basculement est conservé tant que le fournisseur est chargé, ce qui est jusqu’à ce que **CoUninitialize** soit appelé ou que l’application ait une référence à un objet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] géré par le fournisseur de OLE DB Native Client, tel qu’un objet de source de données.  
   
- Pour plus d’informations sur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prise en charge du fournisseur OLE DB Native Client pour la mise en miroir de base de données, consultez [propriétés d’initialisation et d’autorisation](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Pour plus d' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] informations sur la prise en charge du fournisseur OLE DB Native Client pour la mise en miroir de bases de données, consultez [propriétés d’initialisation et d’autorisation](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Pilote ODBC SQL Server Native Client  
- Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge la mise en miroir de base de données via la connexion et les attributs de chaîne de connexion. Plus précisément, l’attribut SQL_COPT_SS_FAILOVER_PARTNER a été ajoutée pour une utilisation avec le [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) et [SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md) fonctions ; et le `Failover_Partner` mot clé a été ajouté comme un nouvel attribut de chaîne de connexion.  
+ Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge la mise en miroir de bases de données via les attributs de connexion et de chaîne de connexion. Plus précisément, l’attribut SQL_COPT_SS_FAILOVER_PARTNER a été ajouté pour être utilisé avec les fonctions [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) et [SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md) . et le `Failover_Partner` mot clé a été ajouté en tant que nouvel attribut de chaîne de connexion.  
   
  Le cache de basculement est conservé tant que l'application possède au moins un handle d'environnement alloué. En revanche, il est perdu lorsque le dernier handle d'environnement est libéré.  
   

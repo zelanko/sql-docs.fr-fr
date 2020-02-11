@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4cd80e7d999314c549df4ebb5e51aa2a0ca2d3f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63154811"
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>Regrouper des lignes dans les résultats de requête (Visual Database Tools)
@@ -54,7 +54,7 @@ GROUP BY pub_id, type
   
 1.  Commencez la requête en ajoutant les tables à synthétiser dans le volet Schéma.  
   
-2.  Cliquez avec le bouton droit sur un point de l’arrière-plan du volet Schéma, puis choisissez **Ajouter un groupe par** dans le menu contextuel. Le Concepteur de requêtes et de vues ajoute une colonne **Grouper par** à la grille dans le volet Critères.  
+2.  Cliquez avec le bouton droit sur un point de l’arrière-plan du volet Schéma, puis choisissez **Ajouter un groupe par** dans le menu contextuel. Le Concepteur de requêtes et de vues ajoute une colonne **Group By** à la grille dans le volet Critères.  
   
 3.  Ajoutez la ou les colonnes à grouper dans le volet Critères. Si la colonne doit apparaître dans le résultat de la requête, vérifiez que la colonne **Sortie** est sélectionnée pour la sortie.  
   
@@ -72,7 +72,7 @@ GROUP BY pub_id, type
   
      Le Concepteur de requêtes et de vues assigne automatiquement un alias de colonne à la colonne que vous agrégez. Il est possible de remplacer l'alias généré automatiquement par un autre, plus significatif. Pour plus d’informations, consultez [Créer des alias de colonnes &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md).  
   
-     ![Ajout d’un alias de colonne au jeu de résultats de la requête](../../database-engine/media//dv3w9e3.gif "Ajout d’un alias de colonne au jeu de résultats de la requête")  
+     ![Ajout d'un alias de colonne au jeu de résultats de la requête](../../database-engine/media//dv3w9e3.gif "Ajout d'un alias de colonne au jeu de résultats de la requête")  
   
      L’instruction correspondante affichée dans le volet **SQL** peut se présenter comme suit :  
   

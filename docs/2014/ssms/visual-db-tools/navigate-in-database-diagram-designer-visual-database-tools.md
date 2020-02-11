@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e56a15d10bc267e6613d24ff934daf4561831c1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63254460"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>Naviguer dans le Concepteur de diagrammes de base de données (Visual Database Tools)
   Vous pouvez travailler dans le Concepteur de diagrammes de base de données à l’aide du clavier ou de la souris. Pour connaître les méthodes spécifiques utilisées dans le Concepteur de diagrammes de base de données, consultez les tableaux suivants.  
   
-|**Pour**|**Appuyez sur**|  
+|**To**|**Appuyez sur**|  
 |------------|---------------|  
 |Accéder au menu Diagramme de base de données|Alt+M|  
 |Vous déplacer au sein des tables et des relations éventuelles|Tab ou Maj+Tab|  
@@ -34,10 +34,10 @@ ms.locfileid: "63254460"
 |Déplacer des tables sur la surface du schéma|Ctrl+ Haut ou Ctrl+Bas|  
 |Faire défiler vers la droite/gauche et vers le haut/bas|Pg. préc/Pg. suiv pour un déplacement vertical, Ctrl+Pg. préc/Pg. suiv pour un déplacement horizontal|  
 |Redimensionner des tables et des annotations|Ctrl+Maj+Touches de direction|  
-|Modifier la quantité d'informations affichées dans une table|Ctrl+T|  
+|Modifier la quantité d'informations affichées dans une table|CTRL+T|  
 |Zoom|Ctrl+Touche Plus ou Moins|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer des schémas de base de données &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [Créer des diagrammes de base de données &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

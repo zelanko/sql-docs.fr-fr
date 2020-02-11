@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 377f9ecfd0f3d94388929d78a048bc65e5020a3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193236"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>Utiliser les méthodes value() et nodes() avec OPENXML
-  Vous pouvez utiliser plusieurs **value()** méthodes sur `xml` type de données dans un **sélectionnez** clause pour générer un ensemble de lignes de valeurs extraites. La méthode **nodes()** produit une référence interne pour chaque nœud sélectionné en vue d’une requête supplémentaire. La combinaison des méthodes **nodes()** et **value()** peut s’avérer plus efficace pour générer l’ensemble de lignes quand il contient plusieurs colonnes et, peut-être, quand les expressions de chemin utilisées durant sa génération sont complexes.  
+  Vous pouvez utiliser plusieurs méthodes **value ()** sur `xml` le type de données dans une clause **Select** pour générer un ensemble de lignes de valeurs extraites. La méthode **nodes()** produit une référence interne pour chaque nœud sélectionné en vue d’une requête supplémentaire. La combinaison des méthodes **nodes()** et **value()** peut s’avérer plus efficace pour générer l’ensemble de lignes quand il contient plusieurs colonnes et, peut-être, quand les expressions de chemin utilisées durant sa génération sont complexes.  
   
- Le **nodes()** méthode produit des instances d’un spécial `xml` type de données, chacune ayant son contexte défini sur un nœud sélectionné différent. Ce genre d’instance XML prend en charge les méthodes **query()** , **value()** , **nodes()** et **exist()** , et peut être utilisé dans les agrégations **count(\*)** . Tous les autres emplois génèrent une erreur.  
+ La méthode **Nodes ()** génère des instances d’un `xml` type de données spécial, chacune ayant son contexte défini sur un nœud sélectionné différent. Ce genre d’instance XML prend en charge les méthodes **query()** , **value()** , **nodes()** et **exist()** , et peut être utilisé dans les agrégations **count(\*)** . Tous les autres emplois génèrent une erreur.  
   
-## <a name="example-using-nodes"></a>Exemple : Utilisation de nodes()  
+## <a name="example-using-nodes"></a>Exemple : utilisation de nodes()  
  Supposez que vous voulez extraire les prénoms et les noms des auteurs et que le premier prénom ne soit pas « David ». En outre, vous voulez extraire ces informations sous forme d'un ensemble de lignes composé de deux colonnes, FirstName et LastName. En utilisant les méthodes **nodes()** et **value()** , vous pouvez y parvenir en procédant ainsi :  
   
 ```  
@@ -40,7 +40,7 @@ WHERE  nref.exist('first-name[. != "David"]') = 1
   
  Avec SQL Server 2000, vous avez la possibilité de générer un ensemble de lignes à partir d’une instance XML en utilisant **OpenXml()** . Vous pouvez spécifier le schéma relationnel pour l'ensemble de lignes et la façon de mapper les valeurs de l'instance XML avec les colonnes de l'ensemble de lignes.  
   
-## <a name="example-using-openxml-on-the-xml-data-type"></a>Exemple : Utilisation de OpenXml() sur le type de données xml  
+## <a name="example-using-openxml-on-the-xml-data-type"></a>Exemple : utilisation de OpenXml() sur le type de données xml  
  La requête peut être réécrite d’après l’exemple précédent en utilisant **OpenXml()** , comme le montre l’exemple suivant. Vous devez pour cela créer un curseur qui lit chaque instance XML dans une variable XML, et y applique ensuite OpenXML :  
   
 ```  

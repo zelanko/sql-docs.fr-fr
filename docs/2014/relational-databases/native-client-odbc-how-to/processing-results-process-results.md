@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21474aed83aac1fe86e2242b1238affa11ae64a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200315"
 ---
 # <a name="process-results-odbc"></a>Traiter des résultats (ODBC)
@@ -33,7 +33,7 @@ ms.locfileid: "63200315"
   
     -   Si les colonnes dépendantes sont utilisées, utilisez les données à présent disponibles dans les mémoires tampons des colonnes dépendantes.  
   
-    -   Si des colonnes indépendantes sont utilisées, appelez [SQLGetData](../native-client-odbc-api/sqlgetdata.md) une ou plusieurs fois pour obtenir les données pour les colonnes indépendantes après la dernière colonne dépendante. Les appels à `SQLGetData` doit se trouver dans l’ordre croissant de numéro de colonne.  
+    -   Si des colonnes indépendantes sont utilisées, appelez [SQLGetData](../native-client-odbc-api/sqlgetdata.md) une ou plusieurs fois pour obtenir les données pour les colonnes indépendantes après la dernière colonne dépendante. Les appels `SQLGetData` à doivent être dans l’ordre de plus en plus élevé du numéro de colonne.  
   
     -   Appelez plusieurs fois `SQLGetData` pour obtenir des données à partir d'une colonne text ou image.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "63200315"
   
     -   S’il retourne SQL_SUCCESS_WITH_INFO ou SQL_ERROR, appelez [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) pour déterminer si la sortie à partir d’une instruction PRINT ou RAISERROR est disponible.  
   
-         Si des paramètres d'instruction liés sont utilisés pour les paramètres de sortie ou la valeur de retour d'une procédure stockée, utilisez les données à présent disponibles dans les mémoires tampons de paramètres liés. Par ailleurs, quand des paramètres liés sont utilisés, chaque appel à [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) ou à [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) aura exécuté l’instruction SQL *S* fois, où *S* est le nombre d’éléments présents dans le tableau de paramètres liés. Cela signifie qu’il y aura *S* jeux de résultats à traiter, où chaque jeu de résultats comprend l’ensemble des jeux de résultats, des paramètres de sortie et des codes de retour habituellement retournés par une exécution unique de l’instruction SQL.  
+         Si des paramètres d'instruction liés sont utilisés pour les paramètres de sortie ou la valeur de retour d'une procédure stockée, utilisez les données à présent disponibles dans les mémoires tampons de paramètres liés. Par ailleurs, quand des paramètres liés sont utilisés, chaque appel à [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) ou à [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) aura exécuté l’instruction SQL *S* fois, où *S* est le nombre d’éléments présents dans le tableau de paramètres liés. Cela signifie qu’il y aura *S* jeux de résultats à traiter, où chaque jeu de résultats comprend tous les jeux de résultats, les paramètres de sortie et les codes de retour habituellement retournés par une exécution unique de l’instruction SQL.  
   
     > [!NOTE]  
     >  Lorsqu'un jeu de résultats contient des lignes calculées, chaque ligne calculée est rendue disponible comme un jeu de résultats distinct. Ces jeux de résultats calculés sont intercalés au sein des lignes normales et séparent les lignes normales en plusieurs jeux de résultats.  
@@ -58,6 +58,6 @@ ms.locfileid: "63200315"
 >  Pour annuler le traitement d’un jeu de résultats avant que [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) ne retourne SQL_NO_DATA, appelez [SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Traitement des rubriques de procédures de résultats &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  
+ [Rubriques de procédures relatives au traitement des résultats &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  
   
   

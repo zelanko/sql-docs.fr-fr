@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: afcc330c2b87573f766a7b0728662af9de841962
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204593"
 ---
 # <a name="types-of-queries-visual-database-tools"></a>Types de requêtes (Visual Database Tools)
@@ -51,7 +51,7 @@ ms.locfileid: "63204593"
  [Créer des requêtes Update &#40;Visual Database Tools&#41;](create-update-queries-visual-database-tools.md)  
  Explique comment créer une requête qui met à jour une table.  
   
-## <a name="reference"></a>Référence  
+## <a name="reference"></a>Informations de référence  
  [Propriétés de la requête &#40;Visual Database Tools&#41;](query-properties-visual-database-tools.md)  
  Décrit les propriétés disponibles lors de la conception de requêtes.  
   

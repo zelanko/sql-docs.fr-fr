@@ -1,5 +1,5 @@
 ---
-title: Indicateurs de performance clés (Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Indicateurs de performance clés (Concepteur de cube) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 88e48fb2bfae9711b6d8f303287f2e26dff18d9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079427"
 ---
 # <a name="kpis-cube-designer-analysis-services---multidimensional-data"></a>Indicateurs de performance clés (Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -37,15 +37,15 @@ ms.locfileid: "66079427"
   
 |Volet|Définition|  
 |----------|----------------|  
-|**Barre d'outils**|Utilisez la barre d'outils des modes Formulaire et Navigateur pour exécuter des opérations courantes dans cet onglet. Pour plus d’informations sur ce volet, consultez [Barre d’outils &#40;onglet Indicateurs de performance clés, Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Organisateur d’indicateur de performance clé**|Utilisez le volet **Organisateur d'indicateur de performance clé (KPI)** en mode Formulaire pour afficher les indicateurs de performance clés (KPI) du cube dans un format ordonné. Pour plus d’informations sur ce volet, consultez [Organisateur d’indicateur de performance clé &#40;onglet Indicateurs de performance clés, Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](kpi-organizer-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Barre d'outils**|Utilisez la barre d’outils en mode formulaire et navigateur pour effectuer des opérations courantes dans cet onglet. Pour plus d’informations sur ce volet, consultez [barre d’outils &#40;onglet indicateurs de performance clés, concepteur de Cube&#41; &#40;Analysis Services-&#41;de données multidimensionnelles ](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Organisateur d'indicateur de performance clé (KPI)**|Utilisez le volet **Organisateur d'indicateur de performance clé (KPI)** en mode Formulaire pour afficher les indicateurs de performance clés (KPI) du cube dans un format ordonné. Pour plus d’informations sur ce volet, consultez [Organisateur d’indicateur de performance clé &#40;onglet Indicateurs de performance clés, Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](kpi-organizer-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Outils de calcul**|Utilisez le volet **Outils de calcul** en mode Formulaire pour afficher les métadonnées, les fonctions et les outils disponibles pour le cube. Pour plus d’informations sur ce volet, consultez [Outils de calcul &#40;onglet Indicateurs de performance clés, Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](calculation-tools-kpis-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Éditeur de formulaire d’indicateur de performance clé**|Utilisez le volet Éditeur de formulaire d'indicateur de performance clé en mode Formulaire pour modifier les indicateurs de performance clés du cube. Pour plus d’informations sur ce volet, consultez [Éditeur de formulaire d’indicateur de performance clé (KPI) &#40;onglet Indicateurs de performance clés, Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Navigateur d’indicateur de performance clé**|Utilisez le volet Navigateur d'indicateur de performance clé (KPI) en mode Navigateur pour afficher le résultat des indicateurs de performance clés du cube. Pour plus d’informations sur ce volet, consultez [Navigateur d’indicateur de performance clé (KPI) &#40;onglet Indicateurs de performance clés, Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Éditeur de formulaire d'indicateur de performance clé (KPI)**|Utilisez le volet Éditeur de formulaire d'indicateur de performance clé en mode Formulaire pour modifier les indicateurs de performance clés du cube. Pour plus d’informations sur ce volet, consultez [Éditeur de formulaire d’indicateur de performance clé (KPI) &#40;onglet Indicateurs de performance clés, Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Navigateur d'indicateur de performance clé (KPI)**|Utilisez le volet Navigateur d'indicateur de performance clé (KPI) en mode Navigateur pour afficher le résultat des indicateurs de performance clés du cube. Pour plus d’informations sur ce volet, consultez [Navigateur d’indicateur de performance clé (KPI) &#40;onglet Indicateurs de performance clés, Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Indicateurs de Performance clés &#40;indicateurs de performance clés&#41; dans les modèles multidimensionnels](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)   
- [Principes de base des scripts MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)  
+ [Indicateurs de performance clés &#40;&#41; KPI dans les modèles multidimensionnels](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)   
+ [Notions de base de l’écriture de scripts MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Concepteur de cube &#40;Analysis Services-données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Vérification des propriétés de Dimension et de Cube | Microsoft Docs
+title: Vérification des propriétés de cube et de dimension | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c95d241d136f290110ac8a2b72540011a3922e24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079000"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>Vérification des propriétés de cube et de dimension
@@ -34,7 +34,7 @@ ms.locfileid: "66079000"
   
 4.  Dans le volet **Dimensions** de l'onglet **Structure de cube** , développez **Customer**, puis cliquez sur **Edit Customer** pour ouvrir la dimension dans le Concepteur de dimensions.  
   
-     Concepteur de dimensions contient ces onglets : **Structure de dimension**, **relations d’attributs**, **traductions**, et **navigateur**. Notez que le **Structure de Dimension** onglet comporte trois volets : **Attributs**, **hiérarchies**, et **vue de Source de données**. Les attributs que la dimension contient apparaissent dans le volet **Attributs** . Pour plus d’informations, consultez [Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md), [les hiérarchies définies par l’utilisateur](multidimensional-models/user-defined-hierarchies-create.md).  
+     Le Concepteur de dimensions contient ces onglets : **Structure de dimension**, **Relations d'attributs**, **Traductions**et **Navigateur**. Notez que l'onglet **Structure de dimension** comporte trois volets : **Attributs**, **Hiérarchies et niveaux**et **Vue de source de données**. Les attributs que la dimension contient apparaissent dans le volet **Attributs** . Pour plus d’informations, consultez [référence des propriétés d’attribut de dimension](multidimensional-models/dimension-attribute-properties-reference.md), créer des [hiérarchies définies par l’utilisateur](multidimensional-models/user-defined-hierarchies-create.md).  
   
 5.  Pour basculer vers le Concepteur de cube, cliquez avec le bouton droit sur le cube **Analysis Services Tutorial** dans le nœud **Cubes** de l’Explorateur de solutions, puis cliquez sur **Concepteur de vues**.  
   
@@ -42,9 +42,9 @@ ms.locfileid: "66079000"
   
      Dans cette vue du cube du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vous pouvez voir les dimensions du cube qui sont utilisées par le groupe de mesures Internet Sales. Vous pouvez également définir le type de relation entre chaque dimension et chaque groupe de mesures dans lequel elles sont utilisées.  
   
-7.  Cliquez sur l'onglet **Partitions** .  
+7.  Cliquez sur l’onglet **partitions** .  
   
-     L'Assistant Cube définit une seule partition pour le cube en utilisant le mode de stockage MOLAP (Multidimensional Online Analytical Processing) sans agrégations. Avec MOLAP, toutes les données de niveau feuille et toutes les agrégations sont stockées dans le cube de façon à obtenir des performances maximales. Les agrégations sont des données de synthèse précalculées qui améliorent les temps de réponse des requêtes, tout simplement parce que les réponses sont prêtes avant que les questions ne soient posées. Vous pouvez définir d'autres partitions, paramètres de stockage et paramètres d'écriture différée dans l'onglet **Partitions** . Pour plus d’informations, consultez [Partitions &#40;Analysis Services - Données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md) et [Agrégations et conceptions d’agrégation](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+     L'Assistant Cube définit une seule partition pour le cube en utilisant le mode de stockage MOLAP (Multidimensional Online Analytical Processing) sans agrégations. Avec MOLAP, toutes les données de niveau feuille et toutes les agrégations sont stockées dans le cube de façon à obtenir des performances maximales. Les agrégations sont des données de synthèse précalculées qui améliorent les temps de réponse des requêtes, tout simplement parce que les réponses sont prêtes avant que les questions ne soient posées. Vous pouvez définir des partitions supplémentaires, des paramètres de stockage et des paramètres d’écriture différée dans l’onglet **partitions** . Pour plus d’informations, consultez [partitions &#40;Analysis Services-&#41;de données multidimensionnelles ](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md), [agrégations et conceptions d’agrégation](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
 8.  Cliquez sur l'onglet **Navigateur** .  
   
@@ -52,12 +52,12 @@ ms.locfileid: "66079000"
   
 9. Dans l’Explorateur de solutions, cliquez avec le bouton droit sur **Analysis Services Tutorial** dans le nœud **Cubes** , puis cliquez sur **Afficher le code**. Cela peut prendre un certain temps.  
   
-     Le code XML du cube du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] est affiché sous l’onglet **[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.cube [XML]** . Ce code est celui utilisé pour créer le cube dans une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] au cours du déploiement. Pour plus d’informations, consultez [Afficher le code XML d’un projet Analysis Services &#40;SSDT&#41;](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md).  
+     Le code XML du cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] du didacticiel est affiché sous l' ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] onglet Tutorial. cube [XML]** . Il s’agit du code réel utilisé pour créer le cube dans une instance de au [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cours du déploiement. Pour plus d’informations, consultez [Afficher le code XML d’un projet Analysis Services &#40;SSDT&#41;](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md).  
   
 10. Fermez l'onglet du code XML.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Déploiement d’un projet Analysis Services](lesson-2-5-deploying-an-analysis-services-project.md)  
+ [Déploiement d'un projet Analysis Services](lesson-2-5-deploying-an-analysis-services-project.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Explorer les données d'une dimension dans le Concepteur de dimensions](multidimensional-models/database-dimensions-browse-dimension-data-in-dimension-designer.md)  

@@ -1,5 +1,5 @@
 ---
-title: SQL Server Data Mining Add-Ins for Office | Microsoft Docs
+title: Compléments d’exploration de données SQL Server pour Office | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 10015ac40948c95f8c912ba6fdb71147e50bb880
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082888"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Compléments d'exploration de données SQL Server pour Office
+  
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Compléments d'exploration de données est un ensemble d'outils légers pour l'analyse prédictive qui vous permet d'utiliser les données dans Excel pour générer des modèles d'analyse pour la prédiction, les recommandations ou l'exploration.  
   
  Les Assistants et les outils de gestion de données des compléments fournissent des instructions pas à pas pour les tâches d'exploration de données communes suivantes :  
@@ -34,7 +35,7 @@ ms.locfileid: "66082888"
   
     -   Réétiqueter les données pour améliorer la qualité d'analyse.  
   
--   **Analyser des modèles au moyen d'un apprentissage supervisé ou non.** Cliquez dans les Assistants conviviaux pour effectuer certaines tâches les plus fréquentes d'exploration de données, y compris l'analyse de clustering, l'analyse du panier d'achat et des prédictions.  
+-   **Analysez les modèles à l’aide d’un apprentissage supervisé ou non.** Cliquez dans les Assistants conviviaux pour effectuer certaines tâches les plus fréquentes d'exploration de données, y compris l'analyse de clustering, l'analyse du panier d'achat et des prédictions.  
   
      Parmi les algorithmes d'apprentissage automatique connus inclus dans les compléments figurent Naïve Bayes, régression logistique, clustering, série chronologique et réseaux neuronaux.  
   
@@ -42,26 +43,26 @@ ms.locfileid: "66082888"
   
      Les utilisateurs expérimentés peuvent créer des requêtes personnalisées DMX à l’aide de l’ **Éditeur de requêtes avancé**par glisser-déplacer, ou automatiser les prédictions à l’aide d’Excel VBA.  
   
--   **Documenter et gérer.** Une fois que vous avez créé un jeu de données et généré des modèles, documentez votre travail et vos analyses en générant un résumé statistique des données et modèle de paramètres.  
+-   **Documenter et gérer.** Une fois que vous avez créé un jeu de données et créé des modèles, documentez votre travail et vos Insights en générant un résumé statistique des paramètres de données et de modèle.  
   
--   **Explorer et visualiser.** Exploration de données n’est pas une activité qui peut être entièrement automatisée : vous devez Explorer et comprendre les résultats pour prendre des mesures explicites. Les compléments facilitent l'exploration en fournissant des visionneuses interactives dans Excel, des modèles Visio qui vous laissent personnaliser les diagrammes de modèle, et la possibilité d'exporter des graphiques et des tables pour Excel à des fins de filtrage ou de modification supplémentaire.  
+-   **Explorez et visualisez.** L’exploration de données n’est pas une activité qui peut être entièrement automatisée. vous devez explorer et comprendre les résultats pour prendre des mesures explicites. Les compléments facilitent l'exploration en fournissant des visionneuses interactives dans Excel, des modèles Visio qui vous laissent personnaliser les diagrammes de modèle, et la possibilité d'exporter des graphiques et des tables pour Excel à des fins de filtrage ou de modification supplémentaire.  
   
--   **Déployer et intégrer.** Lorsque vous avez créé un modèle utile, mettez votre modèle en production, en utilisant les outils de gestion pour exporter le modèle à partir de votre serveur expérimental vers une autre instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+-   **Déployer et intégrer.** Lorsque vous avez créé un modèle utile, mettez votre modèle en production, en utilisant les outils de gestion pour exporter le modèle de votre serveur expérimental vers une [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]autre instance de.  
   
      Vous pouvez également laisser le modèle sur le serveur où vous l'avez créé, mais actualisez les données d'apprentissage et exécutez des prédictions à l'aide d'Integration Services ou de scripts DMX.  
   
      Les utilisateurs avancés apprécieront la fonctionnalité de **trace** , qui permet d'afficher les instructions XMLA et DMX envoyées au serveur.  
   
-## <a name="getting-started"></a>Prise en main  
+## <a name="getting-started"></a>Mise en route  
  Consultez les rubriques suivantes pour en savoir plus sur les outils et sur l'installation :  
   
--   [Client d’exploration de données pour Excel &#40;compléments d’exploration de données SQL Server&#41;](../data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
+-   [Client d’exploration de données pour Excel &#40;SQL Server des compléments d’exploration de données&#41;](../data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   
--   [Outils d’analyse de table pour Excel](../table-analysis-tools-for-excel.md)  
+-   [Outils d'analyse de table pour Excel](../table-analysis-tools-for-excel.md)  
   
--   [Formes d’exploration de données pour Visio](../data-mining-shapes-for-visio.md)  
+-   [Formes d'exploration de données pour Visio](../data-mining-shapes-for-visio.md)  
   
--   [Connexion à un serveur d’exploration de données](../connect-to-a-data-mining-server.md)  
+-   [Connexion à un serveur d'exploration de données](../connect-to-a-data-mining-server.md)  
   
 ## <a name="support-and-requirements"></a>Prise en charge et configuration requise  
  Les compléments d'exploration de données SQL Server pour Office peuvent être téléchargés gratuitement. Vous devez disposer de l'une des versions suivantes d'Office déjà installée pour utiliser ces outils :  
@@ -75,14 +76,14 @@ ms.locfileid: "66082888"
   
  Les compléments d'exploration de données nécessitent une connexion à l'une des versions suivantes de SQL Server Analysis Services :  
   
--   Enterprise  
+-   Entreprise  
   
 -   Business Intelligence  
   
--   Standard  
+-   standard  
   
  Selon l'édition de SQL Server Analysis Services à laquelle vous vous connectez, certains algorithmes avancés peuvent ne pas être disponibles. Pour plus d'informations, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2014](https://msdn.microsoft.com/library/cc645993.aspx).  
   
- Pour plus d’informations avec l’installation, consultez cette page sur le centre de téléchargement : [https://www.microsoft.com/download/details.aspx?id=29061](https://www.microsoft.com/download/details.aspx?id=29061)  
+ Pour obtenir une aide supplémentaire sur l’installation, consultez cette page sur le centre de téléchargement :[https://www.microsoft.com/download/details.aspx?id=29061](https://www.microsoft.com/download/details.aspx?id=29061)  
   
   

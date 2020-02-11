@@ -19,20 +19,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c0dc1566693ad8d8c86d7efe47403248788b076
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144727"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Résoudre les problèmes liés à un journal des transactions saturé (erreur SQL Server 9002)
-  Cette rubrique décrit les réactions possibles et émet quelques suggestions qui vous aideront à éviter cette situation dans le futur. Quand le journal des transactions est saturé, le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] émet une erreur 9002. Le journal peut être renseigné lorsque la base de données est en ligne ou en cours de récupération. Si le journal se remplit tandis que la base de données est en ligne, cette dernière reste en ligne et peut uniquement être lue mais pas mise à jour. Si le journal se remplit en cours de récupération, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] marque la base de données comme RESOURCE PENDING. Dans les deux cas, une intervention de l'utilisateur est nécessaire pour libérer de l'espace disque.  
+  Cette rubrique décrit les réactions possibles et émet quelques suggestions qui vous aideront à éviter cette situation dans le futur. Quand le journal des transactions est saturé, le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] émet une erreur 9002. Le journal peut être renseigné lorsque la base de données est en ligne ou en cours de récupération. Si le journal se remplit tandis que la base de données est en ligne, la base de données reste en ligne mais elle peut uniquement être lue, et pas être mise à jour. Si le journal se remplit en cours de récupération, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] marque la base de données comme RESOURCE PENDING. Dans les deux cas, une intervention de l'utilisateur est nécessaire pour libérer de l'espace disque.  
   
 ## <a name="responding-to-a-full-transaction-log"></a>Réagir à un journal des transactions complet  
  La réponse adéquate à un journal des transactions saturé dépend en partie de la ou des conditions qui ont motivé le remplissage du journal. Pour découvrir les raisons qui empêchent de tronquer le journal dans une situation donnée, utilisez les colonnes **log_reuse_wait** et **log_reuse_wait_desc** de l’affichage catalogue **sys.database**. Pour plus d’informations, consultez [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql). Pour obtenir une description des facteurs susceptibles de retarder la troncation du journal, consultez [Journal des transactions &#40;SQL Server&#41;](the-transaction-log-sql-server.md).  
   
 > [!IMPORTANT]  
->  Si la base de données dans laquelle se trouvait récupération s’est produite l’erreur 9002, après avoir résolu le problème, récupérer la base de données à l’aide de ALTER DATABASE *database_name* SET ONLINE.  
+>  Si la base de données était en mode de récupération quand l’erreur 9002 s’est produite, récupérez la base de données à l’aide de l’instruction ALTER DATABASE *nom_base_de_données* SET ONLINE après avoir résolu le problème.  
   
  D'autres solutions possibles en cas de saturation du journal des transactions sont les suivantes :  
   
@@ -78,13 +78,13 @@ ms.locfileid: "63144727"
 ### <a name="increasing-the-size-of-a-log-file"></a>Augmentation de la taille d'un fichier journal  
  Si le disque du journal dispose d'espace libre, vous pouvez augmenter la taille du fichier journal. La taille maximale pour les fichiers journaux est de deux téraoctets (To) par fichier journal.  
   
- **Pour augmenter la taille de fichier**  
+ **Pour augmenter la taille du fichier**  
   
  Si la fonctionnalité de croissance automatique est désactivée, que la base de données est en ligne et que l'espace disque disponible est suffisant, effectuez l'une des opérations suivantes :  
   
 -   Augmentez manuellement la taille du fichier pour générer un seul incrément de croissance.  
   
--   Activez la croissance automatique à l'aide de l'instruction ALTER DATABASE pour définir un incrément de croissance différent de zéro pour l'option FILEGROWTH.  
+-   Activez la croissance automatique à l'aide de l'instruction ALTER DATABASE pour définir un incrément de croissance différent de zéro pour l'option FILEGROWTH.  
   
 > [!NOTE]  
 >  Dans les deux cas, si la limite de taille actuelle est atteinte, augmentez la valeur MAXSIZE.  

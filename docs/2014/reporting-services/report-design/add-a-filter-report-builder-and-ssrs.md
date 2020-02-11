@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 38d400b85e8c6f4523bcd20807310912100e587d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106850"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>Ajouter un filtre (Générateur de rapports et SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66106850"
   
 1.  Ouvrez un rapport en mode **Conception** .  
   
-2.  Sur l’aire de conception, sélectionnez la région de données, puis cliquez avec le bouton droit sur **Properties de** _\<région_de_données>_ . Pour une jauge, sélectionnez **Propriétés du panneau de jauge**. La boîte de dialogue **Propriétés de** _\<région_de_données>_ s’ouvre.  
+2.  Sur l’aire de conception, sélectionnez la région de données, puis cliquez avec le bouton droit sur _Properties de\<_ **région_de_données>** . Pour une jauge, sélectionnez **Propriétés du panneau de jauge**. La boîte de dialogue _Propriétés de\<_ **région_de_données>** s’ouvre.  
   
     > [!NOTE]  
     >  Dans une région de données de tableau matriciel, cliquez avec le bouton droit sur la cellule d’angle ou sur une poignée de ligne ou de colonne, puis cliquez sur **Propriétés du tableau matriciel**.  

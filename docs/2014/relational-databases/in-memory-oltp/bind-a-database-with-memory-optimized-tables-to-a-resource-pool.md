@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d64b5bf6b60f37bf386840031c304dd5b13faaeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158801"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Lier une base de données avec des tables optimisées en mémoire à un pool de ressources
@@ -30,7 +30,7 @@ ms.locfileid: "63158801"
 ## <a name="create-the-database-and-resource-pool"></a>Créer la base de données et le pool de ressources  
  Vous pouvez créer la base de données et le pool de ressources dans n'importe quel ordre. L'important est de créer les deux avant de procéder à leur liaison.  
   
-### <a name="create-the-database"></a>Créer la base de données  
+### <a name="create-the-database"></a>Création de la base de données  
  Le code [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant crée la base de données IMOLTP_DB destinée à contenir une ou plusieurs tables mémoire optimisées. Le chemin \<lecteur_et_chemin> doit exister avant d’exécuter cette commande.  
   
 ```sql  
@@ -41,13 +41,13 @@ ALTER DATABASE IMOLTP_DB ADD FILE( NAME = 'IMOLTP_DB_fg' , FILENAME = 'c:\data\I
 GO  
 ```  
   
-### <a name="determine-the-minimum-value-for-minmemorypercent-and-maxmemorypercent"></a>Déterminer la valeur minimale pour MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT  
+### <a name="determine-the-minimum-value-for-min_memory_percent-and-max_memory_percent"></a>Déterminer la valeur minimale pour MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT  
  Après avoir déterminé les besoins en mémoire des tables mémoire optimisées, vous devez déterminer le pourcentage de mémoire disponible dont vous avez besoin, et définir les pourcentages de mémoire sur cette valeur ou sur une valeur supérieure.  
   
  **Exemple :**    
 Pour cet exemple, nous allons supposer que vos calculs ont déterminé que les tables et les index mémoire optimisés ont besoin de 16 Go de mémoire. Supposons que vous disposez de 32 Go de mémoire allouée.  
   
- À première vue, il semblerait que vous deviez définir MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT à 50 (16 est 50 % de 32).  Cependant, cela ne permettrait pas de fournir à vos tables mémoire optimisées suffisamment de mémoire. En observant la table ci-dessous ([Pourcentage de mémoire disponible pour les index et les tables optimisés en mémoire](#percent-of-memory-available-for-memory-optimized-tables-and-indexes)), nous voyons que si vous disposez de 32 Go de mémoire allouée, seulement 80 % est disponible pour les tables et les index optimisés en mémoire.  Par conséquent, il convient de calculer les pourcentages minimum et maximum en fonction de la mémoire, et non de la mémoire allouée.  
+ À première vue, il semblerait que vous deviez définir MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT à 50 (16 est 50 % de 32).  Cependant, cela ne permettrait pas de fournir à vos tables mémoire optimisées suffisamment de mémoire. En observant la table ci-dessous ([Pourcentage de mémoire disponible pour les tables et index mémoire optimisés](#percent-of-memory-available-for-memory-optimized-tables-and-indexes)), nous voyons que si vous disposez de 32 Go de mémoire allouée, seulement 80 % est disponible pour les tables et les index optimisés en mémoire.  Par conséquent, il convient de calculer les pourcentages minimum et maximum en fonction de la mémoire, et non de la mémoire allouée.  
   
  `memoryNeedeed = 16`   
  `memoryCommitted = 32`   
@@ -58,12 +58,12 @@ Pour cet exemple, nous allons supposer que vos calculs ont déterminé que les t
  Chiffres réels :   
 `percentNeeded = 16 / (32 * 0.8) = 16 / 25.6 = 0.625`  
   
- Ainsi, vous avez besoin au moins de 62,5 % de la mémoire disponible pour obtenir les 16 Go requis pour vos tables et index mémoire optimisés.  Étant donné que les valeurs de MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT doivent être des entiers, nous devons les définir sur au moins 63 %.  
+ Ainsi, vous avez besoin au moins de 62,5 % de la mémoire disponible pour obtenir les 16 Go requis pour vos tables et index mémoire optimisés.  Étant donné que les valeurs de MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT doivent être des entiers, nous devons les définir sur au moins 63 %.  
   
 ### <a name="create-a-resource-pool-and-configure-memory"></a>Créer un pool de ressources et configurer la mémoire  
- Lors de la configuration de tables mémoire optimisées, la planification des capacités doit être effectuée sur MIN_MEMORY_PERCENT, et non sur MAX_MEMORY_PERCENT.  Consultez [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-pool-transact-sql) pour des informations sur MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT. Ce paramètre fournit une disponibilité de mémoire plus prédictible pour les tables optimisées en mémoire, car MIN_MEMORY_PERCENT sollicite la mémoire d'autres pools de ressources pour s'assurer qu'il est servi. Pour garantir que la mémoire est disponible et éviter les conditions OOM (mémoire insuffisante), les valeurs de MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT doivent être identiques. Consultez [Pourcentage de mémoire disponible pour les tables et index mémoire optimisés](#percent-of-memory-available-for-memory-optimized-tables-and-indexes) ci-dessous pour obtenir le pourcentage de la mémoire disponible pour les tables optimisées en mémoire en fonction de la quantité de mémoire allouée.  
+ Lors de la configuration de tables mémoire optimisées, la planification des capacités doit être effectuée sur MIN_MEMORY_PERCENT, et non sur MAX_MEMORY_PERCENT.  Consultez [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-pool-transact-sql) pour des informations sur MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT. Ce paramètre fournit une disponibilité de mémoire plus prédictible pour les tables mémoire optimisées, car MIN_MEMORY_PERCENT sollicite la mémoire d'autres pools de ressources pour s'assurer qu'il est servi. Pour garantir que la mémoire est disponible et éviter les conditions OOM (mémoire insuffisante), les valeurs de MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT doivent être identiques. Consultez [Pourcentage de mémoire disponible pour les tables et index mémoire optimisés](#percent-of-memory-available-for-memory-optimized-tables-and-indexes) ci-dessous pour obtenir le pourcentage de la mémoire disponible pour les tables optimisées en mémoire en fonction de la quantité de mémoire allouée.  
   
- Consultez [meilleures pratiques : Utilisation d’OLTP en mémoire dans un environnement de machine virtuelle](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) pour plus d’informations lorsque vous travaillez dans un environnement de machine virtuelle.  
+ Pour plus d’informations sur le fonctionnement dans un environnement de machines virtuelles, consultez [Meilleures pratiques : utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) .  
   
  Le code [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant crée un pool de ressources nommé Pool_IMOLTP avec la moitié de la mémoire disponible.  Une fois le pool créé, Resource Governor est reconfiguré afin d'inclure Pool_IMOLTP.  
   
@@ -118,14 +118,14 @@ GO
   
  Maintenant, la base de données est liée au pool de ressources.  
   
-## <a name="change-min-memory-percent-and-max-memory-percent-on-an-existing-pool"></a>Modifier le pourcentage de mémoire MIN et MAX mémoire pour cent sur un pool existant  
- Si vous ajoutez de la mémoire supplémentaire au serveur ou si la quantité de mémoire requise pour vos tables mémoire optimisées change, il peut être nécessaire de remplacer la valeur de MIN_MEMORY_PERCENT et de MAX_MEMORY_PERCENT. Les étapes suivantes vous montrent comment modifier la valeur de MIN_MEMORY_PERCENT et de MAX_MEMORY_PERCENT sur un pool de ressources. Consultez la section ci-dessous, pour des conseils sur les valeurs à utiliser pour MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT.  Consultez la rubrique [meilleures pratiques : Utilisation d’OLTP en mémoire dans un environnement de machine virtuelle](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) pour plus d’informations.  
+## <a name="change-min-memory-percent-and-max-memory-percent-on-an-existing-pool"></a>Modifier le pourcentage de mémoire minimal et le pourcentage de mémoire maximal sur un pool existant  
+ Si vous ajoutez de la mémoire supplémentaire au serveur ou si la quantité de mémoire requise pour vos tables mémoire optimisées change, il peut être nécessaire de remplacer la valeur de MIN_MEMORY_PERCENT et de MAX_MEMORY_PERCENT. Les étapes suivantes vous montrent comment modifier la valeur de MIN_MEMORY_PERCENT et de MAX_MEMORY_PERCENT sur un pool de ressources. Consultez la section ci-dessous, pour des conseils sur les valeurs à utiliser pour MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT.  Consultez la rubrique [Meilleures pratiques : utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) pour plus d’informations.  
   
 1.  Utilisez `ALTER RESOURCE POOL` pour modifier à la fois la valeur de MIN_MEMORY_PERCENT et de MAX_MEMORY_PERCENT.  
   
 2.  Utilisez `ALTER RESURCE GOVERNOR` pour reconfigurer Resource Governor avec les nouvelles valeurs.  
   
- **Exemple de code**  
+ **Exemple de Code**  
   
 ```sql  
 ALTER RESOURCE POOL Pool_IMOLTP  
@@ -146,11 +146,11 @@ GO
   
 |Mémoire validée cible|Pourcentage disponible pour les tables en mémoire|  
 |-----------------------------|---------------------------------------------|  
-|<= 8 Go|70%|  
+|<= 8 Go|70 %|  
 |<= 16 Go|75 %|  
 |<= 32 Go|80 %|  
 |\<= 96 Go|85 %|  
-|>96 Go|90 %|  
+|>96 Go|90%|  
   
  Par exemple, si votre « mémoire allouée cible » est de 100 Go et vous estimez que les tables et les index à mémoire optimisée ont besoin de 60 Go de mémoire, créez un pool de ressources avec MAX_MEMORY_PERCENT = 67 (60 Go nécessaires/0,90 = 66,667 Go – arrondi à 67 Go ; 67 Go/100 Go installés = 67 %) pour vous assurer que vos objets [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] ont les 60 Go dont ils ont besoin.  
   

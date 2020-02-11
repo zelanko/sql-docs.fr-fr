@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc4e2ecd81b6bf0a6c24aff8e89dc31c95e04625
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191442"
 ---
-# <a name="mssqleng014150"></a>MSSQL_ENG014150
+# <a name="mssql_eng014150"></a>MSSQL_ENG014150
     
 ## <a name="message-details"></a>Détails du message  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|14150|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|14150|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique||  
 |Texte du message|Réplication-%s : réussite de l'agent %s. %s|  
@@ -53,10 +53,10 @@ ms.locfileid: "63191442"
 ## <a name="see-also"></a>Voir aussi  
  [Administration de l’Agent de réplication](agents/replication-agent-administration.md)   
  [Guide de référence des erreurs et des événements &#40;réplication&#41;](errors-and-events-reference-replication.md)   
- [Agent de distribution de réplication](agents/replication-distribution-agent.md)   
- [Agent de lecture du journal de réplication](agents/replication-log-reader-agent.md)   
- [Agent de fusion de réplication](agents/replication-merge-agent.md)   
- [Agent de lecture de la file d’attente de réplication](agents/replication-queue-reader-agent.md)   
- [Agent d'instantané de réplication](agents/replication-snapshot-agent.md)  
+ [Replication Distribution Agent](agents/replication-distribution-agent.md)   
+ [Replication Log Reader Agent](agents/replication-log-reader-agent.md)   
+ [Replication Merge Agent](agents/replication-merge-agent.md)   
+ [Agent de lecture de la file d'attente de réplication](agents/replication-queue-reader-agent.md)   
+ [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
   
   

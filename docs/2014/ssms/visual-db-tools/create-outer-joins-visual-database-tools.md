@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd5c9a9cb2e40c7b0a235ff848c1f9a0025773a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184303"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>Créer des jointures externes (Visual Database Tools)
@@ -29,7 +29,7 @@ ms.locfileid: "63184303"
   
 1.  Créez la jointure, soit automatiquement, soit manuellement. Pour plus d’informations, consultez [Joindre automatiquement des tables &#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md) ou [Joindre manuellement des tables &#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md).  
   
-2.  Sélectionnez la ligne de jointure dans le volet Schéma, puis à partir de la **Concepteur de requêtes** menu, choisissez **sélectionner toutes les lignes de \<tablename >** , en sélectionnant la commande qui inclut la table dont supplémentaire lignes à inclure.  
+2.  Sélectionnez la ligne de jointure dans le volet Schéma, puis dans le menu **Concepteur de requêtes** , choisissez **Sélectionner toutes les \<lignes de TableName>**, en sélectionnant la commande qui inclut la table dont vous voulez inclure les lignes supplémentaires.  
   
     -   Choisissez la première table pour créer une jointure externe gauche.  
   

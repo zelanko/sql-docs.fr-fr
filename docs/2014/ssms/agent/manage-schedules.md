@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2371109c8fa28c579cd90735a51a4ad3a790385
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255073"
 ---
 # <a name="manage-schedules"></a>Gérer les planifications
-  Permet de visualiser et de modifier les propriétés des planifications de travaux du service [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Vous permet d’afficher et de modifier les [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propriétés des planifications de travaux de l’agent.  
   
 ## <a name="options"></a>Options  
  **Planifications disponibles**  
@@ -35,7 +35,7 @@ ms.locfileid: "63255073"
  **Description**  
  Décrit les conditions dans lesquelles la planification déclenche l'exécution du travail.  
   
- **Travaux planifiés**  
+ **Travaux dans la planification**  
  Répertorie les numéros des travaux associés à la planification. Cliquez sur un numéro pour afficher les propriétés du travail correspondant.  
   
  **Nouveau**  

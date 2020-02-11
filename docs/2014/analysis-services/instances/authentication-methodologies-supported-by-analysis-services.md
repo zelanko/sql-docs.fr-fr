@@ -1,5 +1,5 @@
 ---
-title: Méthodologies d’authentification pris en charge par Analysis Services | Microsoft Docs
+title: Méthodologies d’authentification prises en charge par Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a57aff903d41e8bcddef25e21def39a45e33d23f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080343"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Méthodologies d'authentification prises en charge par Analysis Services
@@ -34,7 +34,7 @@ ms.locfileid: "66080343"
   
  Pour plus d’informations sur les flux d’authentification BI et Analysis Services, consultez [Authentification et délégation d’identité Microsoft BI](https://go.microsoft.com/fwlink/?LinkID=286576).  
   
-##  <a name="bkmk_auth"></a> Comprendre les solutions de rechange pour l'authentification  
+##  <a name="bkmk_auth"></a>Comprendre vos alternatives d’authentification  
  La connexion à une base de données Analysis Services nécessite une identité de groupe ou d'utilisateur Windows et les autorisations associées. L'identité peut être une connexion destinée à des usages généraux utilisée par quiconque doit consulter un rapport. Cependant le scénario le plus probable comprend l'identité des utilisateurs individuels.  
   
  Généralement, un modèle tabulaire ou multidimensionnel possède différents niveaux d'accès aux données, par objet ou dans les données, selon la personne qui effectue la demande. Pour répondre à cet impératif, utilisez l'authentification NTLM, Kerberos, EffectiveUserName ou l'authentification de base. Toutes ces techniques fournissent une approche permettant de passer différentes identités d'utilisateur avec chaque connexion. Toutefois, la plupart de ces choix sont soumis à la limite d'un seul saut. Seul Kerberos avec la délégation permet de transmettre l'identité de l'utilisateur d'origine pour plusieurs connexions d'ordinateurs à un magasin de données principal sur un serveur distant.  
@@ -45,7 +45,7 @@ ms.locfileid: "66080343"
   
  Dans les solutions multiniveau, la restriction à un seul saut de NTLM peut être une contrainte. L'identité de l'utilisateur qui effectue la demande peut être empruntée sur un seul serveur distant, mais ne peut pas aller au-delà. Si l'opération actuelle nécessite des services exécutés sur plusieurs ordinateurs, vous devez configurer la délégation contrainte Kerberos de façon à réutiliser le jeton de sécurité sur des serveurs principaux. Utilisez également le stockage des informations d'identification ou l'authentification de base pour transmettre les informations sur la nouvelle identité sur une connexion à simple saut.  
   
- **Authentification Kerberos et délégation contrainte Kerberos**  
+ **Authentification Kerberos et délégation Kerberos avec restriction**  
   
  L'authentification Kerberos est la base de la sécurité intégrée Windows dans les domaines Active Directory. Tout comme avec NTLM, l'emprunt d'identité sous Kerberos est limité à un seul saut sauf si vous activez la délégation.  
   
@@ -72,16 +72,16 @@ ms.locfileid: "66080343"
   
  L'authentification de base ou anonyme est disponible uniquement lorsque vous configurez Analysis Services pour l'accès HTTP, à l'aide d'IIS et du fichier msmdpump.dll pour établir la connexion. Pour plus d’informations, consultez [Configurer l’accès HTTP à Analysis Services sur Internet Information Services &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
- **Stored Credentials**  
+ **Informations d'identification stockées**  
   
  La plupart des services d'application intermédiaires comprennent une fonctionnalité de stockage du nom d'utilisateur et du mot de passe qui sont ensuite utilisés pour récupérer des données dans un magasin de données de bas niveau, tel qu'Analysis Services ou le moteur relationnel SQL Server. De ce fait, le stockage des informations d'identification offre une cinquième solution pour la récupération des données. Les limitations de cette approche comprennent la surcharge de maintenance associée à la mise à jour des noms d'utilisateur et des mots de passe et l'utilisation d'une seule identité sur la connexion. Si votre solution nécessite l'identité de l'appelant d'origine, le stockage des informations d'identification ne constitue pas une solution viable.  
   
  Pour plus d’informations sur les informations d’identification, consultez [Créer, modifier et supprimer des sources de données partagées &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) et [Utiliser Excel Services avec le service Banque d’informations sécurisé dans SharePoint Server 2013](https://go.microsoft.com/fwlink/?LinkID=309869).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation d'emprunt d'identité avec sécurité du transport](https://go.microsoft.com/fwlink/?LinkId=311727)   
- [Configurer l’accès HTTP à Analysis Services sur Internet Information Services &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md)   
- [Configurer Analysis Services pour la délégation contrainte Kerberos](configure-analysis-services-for-kerberos-constrained-delegation.md)   
+ [Utilisation de l’emprunt d’identité avec la sécurité de transport](https://go.microsoft.com/fwlink/?LinkId=311727)   
+ [Configurer l’accès HTTP à Analysis Services sur Internet Information Services &#40;IIS&#41; 8,0](configure-http-access-to-analysis-services-on-iis-8-0.md)   
+ [Configurer Analysis Services pour la délégation Kerberos avec restriction](configure-analysis-services-for-kerberos-constrained-delegation.md)   
  [Inscription du nom SPN pour une instance Analysis Services](spn-registration-for-an-analysis-services-instance.md)   
  [Se connecter à Analysis Services](connect-to-analysis-services.md)  
   

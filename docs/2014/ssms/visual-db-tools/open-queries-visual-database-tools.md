@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 48d0e96f2cd7b37683399c599f336f78e1ede3fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195038"
 ---
 # <a name="open-queries-visual-database-tools"></a>Ouvrir des requêtes (Visual Database Tools)
@@ -35,7 +35,7 @@ ms.locfileid: "63195038"
 >  Par défaut, le Concepteur de requêtes et de vues ouvre tous ses volets (SQL, Critères, Schéma et Résultats), mais cette valeur par défaut peut être modifiée dans la boîte de dialogue **Options** . Pour ouvrir ces volets s’ils sont fermés, dans le menu **Concepteur de requêtes** , pointez sur **Volet**, puis cliquez sur le volet que vous souhaitez ouvrir.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Effectuer des opérations de base avec des requêtes &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Effectuer des opérations de base avec les requêtes &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Enregistrer des requêtes &#40;Visual Database Tools&#41;](save-queries-visual-database-tools.md)   
  [Utiliser des données du volet de résultats &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)  
   

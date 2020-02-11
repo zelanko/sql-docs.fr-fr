@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c92c08349a473aa4a83205cc539eec3577619109
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150431"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Enregistrer séparément des événements Showplan XML (Générateur de profils SQL Server)
@@ -31,17 +31,17 @@ ms.locfileid: "63150431"
      La boîte de dialogue **Propriétés de la trace**apparaît.  
   
     > [!NOTE]  
-    >  Si la case **Démarrer le suivi juste après avoir établi la connexion**est cochée, la boîte de dialogue **Propriétés de la trace**ne s’affiche pas et le suivi se lance. Pour désactiver ce paramètre, dans le menu **Outils,** , cliquez sur **Options**et désactivez la case à cocher **Démarrer le suivi juste après avoir établi la connexion** .  
+    >  Si l’option **Démarrer le suivi juste après avoir fait la connexion**est sélectionnée, la boîte de dialogue Propriétés de la **trace**ne s’affiche pas et la trace démarre à la place. Pour désactiver ce paramètre, accédez au menu **Outils**, cliquez sur **Options**et désactivez la case à cocher **Démarrer le suivi juste après avoir établi la connexion** .  
   
 2.  Dans la zone **Nom de la trace** de la boîte de dialogue **Propriétés de la trace** , entrez le nom de la trace.  
   
 3.  Dans la liste **Utiliser le modèle** , sélectionnez un modèle de trace comme base ou sélectionnez **Vide** si vous ne souhaitez pas utiliser de modèle.  
   
-4.  Procédez de l'une des manières suivantes :  
+4.  Effectuez l’une des actions suivantes :  
   
     -   Activez la case à cocher**Enregistrer dans le fichier** pour capturer la trace dans un fichier. Spécifiez une valeur dans **Définir la taille de fichier maximale**. Au besoin, activez les cases à cocher **Activer la substitution de fichier** et **Le serveur traite les données de trace** .  
   
-    -   Activez la case à cocher**Enregistrer dans la table** pour capturer la trace dans une table de base de données. Éventuellement, spécifiez une valeur dans **Définir le nombre de lignes maximal**.  
+    -   Activez la case à cocher**Enregistrer dans la table** pour capturer la trace dans une table de base de données. Si vous le souhaitez, cliquez sur **définir le nombre maximal de lignes**et spécifiez une valeur.  
   
 5.  Le cas échéant, activez la case à cocher **Activer l'heure d'arrêt de la trace** et indiquez une date et une heure d'arrêt.  
   
@@ -60,6 +60,6 @@ ms.locfileid: "63150431"
 11. Pour afficher le fichier d'événements **Showplan XML** dans SQL Server Management Studio, ouvrez le menu **Fichier** , pointez sur **Ouvrir**, puis cliquez sur **Fichier**. Recherchez le répertoire où vous avez enregistré le ou les fichiers d'événements **Showplan XML** pour en sélectionner un et l'ouvrir. Les fichiers d'événements**Showplan XML** ont l'extension .SQLPlan.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Analyser des requêtes avec des résultats SHOWPLAN dans SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
+ [Analyser les requêtes avec les résultats SHOWPLAN dans SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
   
   

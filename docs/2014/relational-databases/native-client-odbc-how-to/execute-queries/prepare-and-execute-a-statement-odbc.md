@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bcc1f6d1542928d534d31c6d64ef6130c0c7e04b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200400"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>Préparer et exécuter une instruction (ODBC)
@@ -58,7 +58,7 @@ ms.locfileid: "63200400"
   
 3.  Éventuellement, appelez [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) pour déterminer le nombre de paramètres dans l'instruction préparée.  
   
-4.  Si vous le souhaitez, pour chaque paramètre dans l’instruction préparée, vous devez appeler SQLDescribeParam pour obtenir des informations sur les paramètres.  
+4.  Si vous le souhaitez, pour chaque paramètre de l’instruction préparée, appelez SQLDescribeParam pour obtenir des informations sur les paramètres.  
   
 5.  Pour chaque marqueur de paramètre :  
   
@@ -66,7 +66,7 @@ ms.locfileid: "63200400"
   
     -   Allouez un tableau de S mémoires tampons de paramètres pour stocker les longueurs de données.  
   
-    -   Appelez SQLBindParameter pour lier les tableaux de longueur paramètre données valeur et les données au paramètre d’instruction.  
+    -   Appelez SQLBindParameter pour lier les tableaux de valeur de données et de longueur de données de paramètre au paramètre d'instruction.  
   
     -   Si le paramètre est un paramètre d'image ou de texte de données en cours d'exécution, installez-le.  
   
@@ -76,9 +76,9 @@ ms.locfileid: "63200400"
   
     -   Mettez les valeurs de données S et les longueurs de données S dans les tableaux de paramètres liés.  
   
-    -   Appelez SQLExecute pour exécuter l’instruction préparée.  
+    -   Appelez SQLExecute pour exécuter l'instruction préparée.  
   
-    -   Si les paramètres d’entrée data-at-execution sont utilisés, SQLExecute retourne SQL_NEED_DATA. Envoyer les données dans des segments à l’aide de SQLParamData et SQLPutData.  
+    -   Si des paramètres d'entrée de données en cours d'exécution sont utilisés, SQLExecute retourne SQL_NEED_DATA. Envoyez les données par segments à l'aide de SQLParamData et SQLPutData.  
   
 ### <a name="to-prepare-a-statement-with-row-wise-bound-parameters"></a>Pour préparer une instruction avec des paramètres liés selon les lignes  
   
@@ -100,15 +100,15 @@ ms.locfileid: "63200400"
   
 3.  Appelez SQLPrepare pour préparer l’instruction.  
   
-4.  Pour chaque marqueur de paramètre, appelez SQLBindParameter pour diriger le pointeur de longueur paramètre données valeur et les données vers leurs variables dans le premier élément du tableau de structures alloué à l’étape 1. Si le paramètre est un paramètre de données en cours d'exécution, installez-le.  
+4.  Pour chaque marqueur de paramètre, appelez SQLBindParameter pour pointer la valeur des données de paramètre et le pointeur de longueur des données vers leurs variables dans le premier élément du tableau de structures alloué à l’étape 1. Si le paramètre est un paramètre de données en cours d'exécution, installez-le.  
   
 5.  Pour chaque exécution d'une instruction préparée :  
   
     -   Remplissez le tableau de tampons de paramètres liés avec les valeurs de données.  
   
-    -   Appelez SQLExecute pour exécuter l’instruction préparée. Le pilote exécute efficacement l'instruction SQL S fois, une fois pour chaque jeu de paramètres.  
+    -   Appelez SQLExecute pour exécuter l'instruction préparée. Le pilote exécute efficacement l'instruction SQL S fois, une fois pour chaque jeu de paramètres.  
   
-    -   Si les paramètres d’entrée data-at-execution sont utilisés, SQLExecute retourne SQL_NEED_DATA. Envoyer les données dans des segments à l’aide de SQLParamData et SQLPutData.  
+    -   Si des paramètres d'entrée de données en cours d'exécution sont utilisés, SQLExecute retourne SQL_NEED_DATA. Envoyez les données par segments à l'aide de SQLParamData et SQLPutData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Rubriques de procédures relatives à l’exécution de requêtes &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  

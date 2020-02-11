@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_hadr_database_replica_cluster_states (Transact-SQL) | Microsoft Docs
+title: sys. dm_hadr_database_replica_cluster_states (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2fbd066113f5ad4394b83e0151643ab9ea3b7b82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67900671"
 ---
-# <a name="sysdmhadrdatabasereplicaclusterstates-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
+# <a name="sysdm_hadr_database_replica_cluster_states-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retourne une ligne contenant les informations destinées à vous fournir l'analyse de l'intégrité des bases de données de disponibilité dans chaque groupe de disponibilité Always On sur le cluster de basculement Windows Server (WSFC). Requête **sys.dm_hadr_database_replica_states** pour répondre aux questions suivantes :  
+  Retourne une ligne contenant les informations destinées à vous fournir l'analyse de l'intégrité des bases de données de disponibilité dans chaque groupe de disponibilité Always On sur le cluster de basculement Windows Server (WSFC). Interrogez **sys. dm_hadr_database_replica_states** pour répondre aux questions suivantes :  
   
 -   Toutes les bases de données d'un groupe de service sont-elles prêtes pour un basculement ?  
   
@@ -38,18 +38,18 @@ ms.locfileid: "67900671"
   
 -   Si le réplica principal n'est pas disponible actuellement, quel réplica secondaire permettrait la perte minimale de données s'il devenait le réplica principal ?  
   
--   Lorsque la valeur de la [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**log_reuse_wait_desc** colonne est « AVAILABILITY_REPLICA », quel réplica secondaire dans un groupe de disponibilité retarde la troncation du journal sur une base de données primaire ?  
+-   Lorsque la valeur de la colonne [sys. databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)   **log_reuse_wait_desc** est « AVAILABILITY_REPLICA », quel réplica secondaire d’un groupe de disponibilité détient la troncation du journal sur une base de données primaire donnée ?  
    
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**replica_id**|**uniqueidentifier**|Identificateur du réplica de disponibilité dans le groupe de disponibilité.|  
 |**group_database_id**|**uniqueidentifier**|Identificateur de la base de données dans le groupe de disponibilité. Cet identificateur est identique sur chaque réplica auquel cette base de données est attachée.|  
 |**database_name**|**sysname**|Nom d'une base de données qui appartient au groupe de disponibilité.|  
-|**is_failover_ready**|**bit**|Indique si la base de données secondaire est synchronisée avec la base de données primaire correspondante. L’une des :<br /><br /> 0 = la base de données n'est pas marquée comme étant synchronisée dans le cluster. La base de données n'est pas prête pour un basculement.<br /><br /> 1 = la base de données est marquée comme étant synchronisée dans le cluster. La base de données est prête pour un basculement.|  
+|**is_failover_ready**|**bit**|Indique si la base de données secondaire est synchronisée avec la base de données primaire correspondante. l’un des éléments suivants :<br /><br /> 0 = la base de données n'est pas marquée comme étant synchronisée dans le cluster. La base de données n'est pas prête pour un basculement.<br /><br /> 1 = la base de données est marquée comme étant synchronisée dans le cluster. La base de données est prête pour un basculement.|  
 |**is_pending_secondary_suspend**|**bit**|Indique si, après un basculement forcé, la base de données est en attente de suspension. Peut prendre une des valeurs suivantes :<br /><br /> 0 = n'importe quel état, sauf HADR_SYNCHRONIZED_ SUSPENDED.<br /><br /> 1 = HADR_SYNCHRONIZED_ SUSPENDED. Lorsqu'un basculement forcé se termine, chacune des bases de données secondaires est définie à HADR_SYNCHONIZED_SUSPENDED et reste dans cet état jusqu'à ce que le nouveau réplica principal reçoive un accusé de réception de cette base de données secondaire au message SUSPEND.<br /><br /> NULL = inconnu (aucun quorum)|  
 |**is_database_joined**|**bit**|Indique si la base de données sur ce réplica de disponibilité a été attachée au groupe de disponibilité. Peut prendre une des valeurs suivantes :<br /><br /> 0 = la base de données n'est pas attachée au groupe de disponibilité sur ce réplica de disponibilité.<br /><br /> 1 = la base de données est attachée au groupe de disponibilité sur ce réplica de disponibilité.<br /><br /> NULL = inconnu (le réplica de disponibilité ne possède pas de quorum).|  
-|**recovery_lsn**|**numeric(25,0)**|Sur le réplica principal, la fin du journal des transactions avant que le réplica n'écrive de nouveaux enregistrements de journal après la récupération ou le basculement. Sur le réplica principal, la ligne d'une base de données secondaire donnée aura la valeur avec laquelle le réplica principal nécessite que le réplica secondaire se synchronise (autrement dit, restaurer et réinitialiser).<br /><br /> Sur les réplicas secondaires cette valeur est NULL. Notez que chaque réplica secondaire aura la valeur maximale ou une valeur inférieure à laquelle le réplica principal a indiqué au réplica secondaire de revenir.|  
-|**truncation_lsn**|**numeric(25,0)**|Valeur de troncation du journal [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], qui peut être supérieure au LSN de troncation en local si la troncation du journal en local est bloquée (notamment par une opération de sauvegarde).|  
+|**recovery_lsn**|**numérique (25, 0)**|Sur le réplica principal, la fin du journal des transactions avant que le réplica n'écrive de nouveaux enregistrements de journal après la récupération ou le basculement. Sur le réplica principal, la ligne d'une base de données secondaire donnée aura la valeur avec laquelle le réplica principal nécessite que le réplica secondaire se synchronise (autrement dit, restaurer et réinitialiser).<br /><br /> Sur les réplicas secondaires cette valeur est NULL. Notez que chaque réplica secondaire aura la valeur maximale ou une valeur inférieure à laquelle le réplica principal a indiqué au réplica secondaire de revenir.|  
+|**truncation_lsn**|**numérique (25, 0)**|Valeur de troncation du journal [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], qui peut être supérieure au LSN de troncation en local si la troncation du journal en local est bloquée (notamment par une opération de sauvegarde).|  
   
 ## <a name="security"></a>Sécurité  
   
@@ -61,6 +61,6 @@ ms.locfileid: "67900671"
  [Affichages catalogue des groupes de disponibilité Always On &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Surveiller des groupes de disponibilité &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
+ [sys. dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
   
   

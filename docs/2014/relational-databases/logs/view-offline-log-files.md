@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144595"
 ---
 # <a name="view-offline-log-files"></a>Afficher les fichiers journaux hors connexion
@@ -31,7 +31,7 @@ ms.locfileid: "63144595"
 ## <a name="before-you-begin"></a>Avant de commencer  
  Pour vous connecter aux fichiers journaux hors connexion, une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être installée sur l'ordinateur que vous utilisez pour consulter les fichiers journaux hors connexion, ainsi que sur l'ordinateur où se trouvent les fichiers journaux en question. Si une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installée sur les deux ordinateurs, vous pouvez afficher les fichiers hors connexion pour les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et pour les instances qui exécutent des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur ces ordinateurs.  
   
- Si vous utilisez des serveurs inscrits, l'instance à laquelle vous voulez vous connecter doit être enregistrée sous **Groupes de serveurs locaux** ou **Serveurs de gestion centralisée** (l'instance peut être enregistrée seule ou être membre d'un groupe de serveurs). Pour plus d'informations sur l'ajout d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour des serveurs inscrits, consultez les rubriques suivantes :  
+ Si vous utilisez des serveurs inscrits, l'instance à laquelle vous voulez vous connecter doit être enregistrée sous **Groupes de serveurs locaux** ou **Serveurs de gestion centralisée** (l'instance peut être enregistrée seule ou être membre d'un groupe de serveurs). Pour plus d'informations sur l'ajout d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour des serveurs inscrits, consultez les rubriques suivantes :  
   
 -   [Créer ou modifier un groupe de serveurs &#40;SQL Server Management Studio&#41;](../../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "63144595"
   
 -   Autorisation en lecture pour le dossier qui contient les fichiers journaux des erreurs. Par défaut, ces fichiers journaux se trouvent à l’emplacement suivant (où \<*Lecteur>* représente le lecteur sur lequel vous avez installé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et où \<*NomInstance*> est le nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) :  
   
-     **\<Lecteur > : \Program Files\Microsoft SQL Server\MSSQL12. \<Nom_instance > \MSSQL\Log**  
+     **\<> de lecteur : \Program Files\Microsoft SQL Server\MSSQL12. \<Nom_instance> \mssql\log**  
   
  Pour vérifier les paramètres de sécurité de l'espace de noms WMI, utilisez le composant logiciel enfichable Contrôle WMI.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "63144595"
   
 1.  Ouvrez le composant logiciel enfichable Contrôle WMI. Pour ce faire, effectuez l'une des procédures suivantes, en fonction de votre système d'exploitation :  
   
-    -   Cliquez sur **Démarrer**, type `wmimgmt.msc` dans le **rechercher** zone, puis appuyez sur ENTRÉE.  
+    -   Cliquez sur **Démarrer**, `wmimgmt.msc` tapez dans la zone **Rechercher** , puis appuyez sur entrée.  
   
-    -   Cliquez sur **Démarrer**, cliquez sur **exécuter**, type `wmimgmt.msc`, puis appuyez sur ENTRÉE.  
+    -   Cliquez sur **Démarrer**, sur **exécuter**, `wmimgmt.msc`tapez, puis appuyez sur entrée.  
   
 2.  Par défaut, le composant logiciel enfichable Contrôle WMI gère l'ordinateur local.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63144595"
   
     3.  Entrez le nom de l'ordinateur distant, puis cliquez sur **OK**.  
   
-3.  Cliquez avec le bouton droit sur **Contrôle WMI (local)** ou **Contrôle WMI (***NomOrdinateurDistant***)** , puis cliquez sur **Propriétés**.  
+3.  Cliquez avec le bouton droit sur **contrôle WMI (local)** ou **contrôle WMI (***remotecomputername***)**, puis cliquez sur **Propriétés**.  
   
 4.  Dans la boîte de dialogue **Propriétés du Contrôle WMI** , cliquez sur l'onglet **Sécurité** .  
   
@@ -99,7 +99,7 @@ ms.locfileid: "63144595"
   
 3.  Dans l'arborescence de la console, trouvez l'instance sur laquelle vous voulez afficher les fichiers hors connexion.  
   
-4.  Procédez de l'une des manières suivantes :  
+4.  Effectuez l’une des actions suivantes :  
   
     -   Si l’instance est sous **Groupes de serveurs locaux**, développez **Groupes de serveurs locaux**, développez le groupe de serveurs (si l’instance est un membre d’un groupe), cliquez avec le bouton droit sur l’instance, puis cliquez sur **Afficher le journal SQL Server**.  
   

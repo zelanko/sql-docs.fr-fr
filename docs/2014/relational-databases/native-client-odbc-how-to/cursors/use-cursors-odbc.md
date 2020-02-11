@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb3662bbd1bff6c7c7deb3a8eac61108ea93074a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200486"
 ---
 # <a name="use-cursors-odbc"></a>Utiliser des curseurs (ODBC)
@@ -72,6 +72,6 @@ ms.locfileid: "63200486"
      Vous pouvez contrôler le type de curseur utilisé en définissant SQL_ATTR_CURSOR_TYPE et SQL_ATTR_CONCURRENCY ou en définissant SQL_ATTR_CURSOR_SENSITIVITY et SQL_ATTR_CURSOR_SCROLLABLE. Vous ne devez pas combiner les deux méthodes de spécification de comportement du curseur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [À l’aide des rubriques de procédures de curseurs &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)  
+ [Rubriques de procédures relatives à l’utilisation des curseurs &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)  
   
   

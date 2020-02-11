@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cf214691c2bcffeb617d3f7534fac94f8941db5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144486"
 ---
 # <a name="open-log-file-viewer"></a>Ouvrir la Visionneuse du fichier journal
@@ -32,7 +32,7 @@ ms.locfileid: "63144486"
   
 -   SQL Server  
   
--   Agent SQL Server  
+-   SQL Server Agent  
   
 -   Événements Windows (ces événements Windows sont également accessibles à partir de l'observateur d'événements).  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63144486"
  Vous pouvez ouvrir la Visionneuse du fichier journal de différentes façons, selon les informations que vous souhaitez consulter.  
   
 ##  <a name="BeforeYouBegin"></a> Autorisations  
- Pour accéder aux fichiers journaux pour les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sont en ligne, l’appartenance au rôle serveur fixe securityadmin est requise.  
+ Pour accéder aux fichiers journaux pour les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sont en ligne, l’appartenance au rôle serveur fixe securityadmin est obligatoire.  
   
  L’accès aux fichiers journaux des instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hors connexion nécessite un accès en lecture à l’espace de noms WMI **Root\Microsoft\SqlServer\ComputerManagement10** et au dossier où sont stockés les fichiers journaux. Pour plus d’informations, consultez la section Sécurité de la rubrique [Afficher les fichiers journaux hors connexion](view-offline-log-files.md).  
   

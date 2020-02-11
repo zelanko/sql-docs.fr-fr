@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 43347190c53331d0a30ba0f29d795cce981eec34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245118"
 ---
 # <a name="interactive-conflict-resolution"></a>Interactive Conflict Resolution
-  La réplication[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] propose un programme de résolution interactif qui vous permet de résoudre manuellement des conflits au cours d'une synchronisation à la demande dans le Gestionnaire de synchronisation [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Activé lors de l'exécution, le résolveur interactif est une interface graphique qui affiche des données pour chaque ligne conflictuelle et qui propose les options nécessaires à la consultation et à la modification de ces données, permettant ainsi de résoudre chaque conflit individuellement.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la réplication fournit un programme de résolution interactif, qui vous permet de résoudre les conflits manuellement pendant [!INCLUDE[msCoName](../../../includes/msconame-md.md)] la synchronisation à la demande dans le gestionnaire de synchronisation Windows. Activé lors de l'exécution, le résolveur interactif est une interface graphique qui affiche des données pour chaque ligne conflictuelle et qui propose les options nécessaires à la consultation et à la modification de ces données, permettant ainsi de résoudre chaque conflit individuellement.  
   
  Le résolveur interactif ressemble à l'outil d'affichage des conflits. Cependant, l'outil d'affichage des conflits affiche les résultats des conflits déjà résolus après la synchronisation de fusion et le résolveur interactif affiche chaque conflit non résolu, ce qui vous permet de déterminer l'issue de chacun d'eux durant la synchronisation de fusion. Un opérateur doit être disponible pour analyser le résolveur interactif lorsqu'un conflit se produit.  
   

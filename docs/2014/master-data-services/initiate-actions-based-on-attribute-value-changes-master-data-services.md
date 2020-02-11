@@ -14,16 +14,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: deaa7ca2225d6de503ceb3d5d901a5a51d11aa68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479364"
 ---
 # <a name="initiate-actions-based-on-attribute-value-changes-master-data-services"></a>Initier des actions en fonction de modifications de valeurs d'attribut (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez une règle d’entreprise pour initier des actions en fonction des modifications apportées aux valeurs d’attribut. Par exemple, lorsqu'une valeur d'attribut spécifique change, vous pouvez modifier une valeur, envoyer une notification, ou démarrer un flux de travail externe.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -54,7 +54,7 @@ ms.locfileid: "65479364"
   
 10. Sous le nœud **Comparaison de valeur** , faites glisser **a changé** vers l’étiquette **Conditions** du volet **IF** .  
   
-11. Dans le **attributs** volet, cliquez sur un attribut et faites-le glisser vers le **modifier la Condition** du volet **sélectionner un attribut** étiquette. Cet attribut n'a aucun effet sur la règle, vous pouvez donc sélectionner n'importe quel attribut disponible.  
+11. Dans le volet **attributs** , cliquez sur un attribut et faites-le glisser vers l’étiquette **Sélectionner un attribut** du volet **modifier la condition** . Cet attribut n'a aucun effet sur la règle, vous pouvez donc sélectionner n'importe quel attribut disponible.  
   
 12. Dans le volet **Modifier la condition** , dans la zone **Groupe de suivi des modifications** , tapez le numéro du groupe de suivi des modifications que vous avez attribué comme l’un des composants requis.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "65479364"
     -   [Valider une version par rapport aux règles d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter des attributs à un groupe de suivi des modifications &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)   
- [Règles d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+ [Ajouter des attributs à un groupe de Change Tracking &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)   
+ [&#40;des règles d’entreprise Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

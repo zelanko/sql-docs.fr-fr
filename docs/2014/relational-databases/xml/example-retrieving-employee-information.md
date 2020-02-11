@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : Récupération d’informations sur les employés | Microsoft Docs'
+title: 'Exemple : extraction d’informations sur les employés | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3d24f945eeb64975c71e416ed1e53d04fd5ffff9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287836"
 ---
-# <a name="example-retrieving-employee-information"></a>Exemple : Extraction d’informations sur les employés
+# <a name="example-retrieving-employee-information"></a>Exemple : extraction d'informations sur les employés
   Cet exemple extrait un ID et un nom pour chaque employé. Dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , les ID des employés se trouvent dans la colonne BusinessEntityID de la table Employee. Les noms des employés figurent dans la table Person. La colonne BusinessEntityID peut être utilisée pour joindre les tables.  
   
  Supposons que vous souhaitez générer un document XML à l'aide de la transformation FOR XML EXPLICIT comme suit :  
@@ -31,7 +31,7 @@ ms.locfileid: "63287836"
 ...  
 ```  
   
- Étant donné que la hiérarchie comprend deux niveaux, vous écrivez deux requêtes `SELECT` et appliquez UNION ALL. Voici la première requête qui extrait les valeurs de l'élément <`Employee`> et de ses attributs. La requête attribue `1` comme valeur `Tag` pour l'élément <`Employee`> et NULL comme valeur `Parent`, car il s'agit de l'élément de niveau supérieur.  
+ Étant donné que la hiérarchie comprend deux niveaux, vous écrivez deux requêtes `SELECT` et appliquez UNION ALL. Voici la première requête qui extrait les valeurs de l'élément <`Employee`> et de ses attributs. La requête attribue `1` comme valeur `Tag` pour l'élément <`Employee`> et NULL comme valeur `Parent`, car il s'agit de l'élément de niveau supérieur.  
   
 ```  
 SELECT 1    as Tag,  
@@ -57,7 +57,7 @@ INNER JOIN Person.Person AS P
 ON  E.BusinessEntityID = P.BusinessEntityID;  
 ```  
   
- Vous combinez ces requêtes avec `UNION AL`L, appliquez `FOR XML EXPLICIT` et spécifiez la clause `ORDER BY` requise. Vous devez trier l'ensemble de lignes par `BusinessEntityID` puis par nom afin que les valeurs NULL du nom apparaissent en premier. En exécutant la requête suivante sans la clause FOR XML, vous pouvez visualiser la table universelle générée.  
+ Vous combinez ces requêtes avec `UNION AL`L, appliquez `FOR XML EXPLICIT`et spécifiez la clause `ORDER BY` requise. Vous devez trier l'ensemble de lignes par `BusinessEntityID` puis par nom afin que les valeurs NULL du nom apparaissent en premier. En exécutant la requête suivante sans la clause FOR XML, vous pouvez visualiser la table universelle générée.  
   
  Voici la requête finale :  
   
@@ -99,9 +99,9 @@ FOR XML EXPLICIT;
   
  `...`  
   
- La première instruction `SELECT` spécifie les noms des colonnes dans l'ensemble de lignes obtenu. Ces noms forment deux groupes de colonnes. Le groupe qui possède la valeur `Tag` `1` dans le nom de colonne identifie `Employee` en tant qu'élément et `EmpID` en tant qu'attribut. L'autre groupe de colonnes possède la valeur `Tag` `2` dans la colonne et identifie <`Name`> en tant qu'élément et `FName` et `LName` en tant qu'attributs.  
+ La première instruction `SELECT` spécifie les noms des colonnes dans l'ensemble de lignes obtenu. Ces noms forment deux groupes de colonnes. Le groupe qui possède la valeur `Tag``1` dans le nom de colonne identifie `Employee` en tant qu'élément et `EmpID` en tant qu'attribut. L'autre groupe de colonnes possède la valeur `Tag` `2` dans la colonne et identifie <`Name`> en tant qu'élément et `FName` et `LName` en tant qu'attributs.  
   
- Le tableau suivant montre l'ensemble de lignes partiel généré par la requête :  
+ Le tableau suivant montre l'ensemble de lignes partiel généré par la requête :  
   
  `Tag Parent  Employee!1!EmpID Name!2!FName Name!2!LName`  
   
@@ -123,9 +123,9 @@ FOR XML EXPLICIT;
   
  Les lignes de la table universelle sont traitées comme suit pour générer l'arborescence XML obtenue :  
   
- La première ligne identifie la valeur `Tag` `1`. Par conséquent, le groupe de colonnes qui a la valeur `Tag``1` est identifié, `Employee!1!EmpID`. Cette colonne identifie `Employee` en tant que nom d'élément. Un élément <`Employee`> possédant les attributs `EmpID` est ensuite créé. Les valeurs de colonnes correspondantes sont affectées à ces attributs.  
+ La première ligne identifie la valeur `Tag``1`. Par conséquent, le groupe de colonnes qui a la valeur `Tag``1` est identifié, `Employee!1!EmpID`. Cette colonne identifie `Employee` en tant que nom d'élément. Un élément <`Employee`> possédant les attributs `EmpID` est ensuite créé. Les valeurs de colonnes correspondantes sont affectées à ces attributs.  
   
- La deuxième ligne a la valeur `Tag`  `2`. Par conséquent, le groupe de colonnes qui a la valeur `Tag``2` dans le nom de colonne, `Name!2!FName`, `Name!2!LName`, est identifié. Ces noms de colonnes identifient `Name` comme nom d'élément. Un élément <`Name`> possédant les attributs `FName` et `LName` est créé. Les valeurs de colonnes correspondantes sont ensuite affectées à ces attributs. Cette ligne identifie `1` comme `Parent`. Cet élément enfant est ajouté à l'élément <`Employee`> précédent.  
+ La deuxième ligne a la valeur `Tag``2`. Par conséquent, le groupe de colonnes qui a la valeur `Tag``2` dans le nom de colonne, `Name!2!FName`, `Name!2!LName`, est identifié. Ces noms de colonnes identifient `Name` comme nom d'élément. Un élément <`Name`> possédant les attributs `FName` et `LName` est créé. Les valeurs de colonnes correspondantes sont ensuite affectées à ces attributs. Cette ligne identifie `1` comme `Parent`. Cet élément enfant est ajouté à l'élément <`Employee`> précédent.  
   
  Ce processus est répété pour le reste des lignes de l'ensemble de lignes. Notez l'importance du tri des lignes dans la table universelle pour que FOR XML EXPLICIT puisse traiter l'ensemble de lignes dans l'ordre et générer le document XML souhaité.  
   

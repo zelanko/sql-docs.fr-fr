@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 232beed45a62ad9cef9f43b122d23cb4d0728a78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191686"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Utiliser l'Explorateur de l'utilitaire pour gérer l'Utilitaire SQL Server
@@ -37,7 +37,7 @@ ms.locfileid: "63191686"
 ### <a name="sql-server-utility-navigation-pane"></a>Volet Navigation de l'utilitaire SQL Server  
  Le volet Navigation de l'Explorateur de l'utilitaire fournit une arborescence des objets dans l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , groupés par point de contrôle d'utilitaire. Pour développer des dossiers, cliquez sur le signe plus (+) ou double-cliquez sur le nom de l'UCP dans le volet Navigation de l'Explorateur de l'utilitaire. Cliquez avec le bouton droit sur les dossiers ou les objets pour réaliser des tâches courantes. Les nœuds dans l'arborescence sont les suivants :  
   
--   Le nœud supérieur dans l'arborescence est le point de contrôle d'utilitaire (UCP). Le nom du nœud est construit ainsi : "Utility_Name" (ComputerName\UCP_instance_name). Si vous n'avez pas d'UCP, vous devez en créer un. Si vous n'êtes pas connecté à un utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez le faire. Pour plus d’informations, consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](sql-server-utility-features-and-tasks.md). Cliquez sur le nom d'UCP dans l'arborescence pour remplir le volet Contenu de l'Explorateur de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec les données dans l'affichage Tableau de bord. Pour plus d’informations, consultez [Tableau de bord de l’utilitaire &#40;utilitaire SQL Server&#41;](../../database-engine/utility-dashboard-sql-server-utility.md).  
+-   Le nœud supérieur dans l'arborescence est le point de contrôle d'utilitaire (UCP). Le nom du nœud se compose ainsi : « Utility_Name » (ComputerName\UCP_instance_name). Si vous n'avez pas d'UCP, vous devez en créer un. Si vous n'êtes pas connecté à un utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez le faire. Pour plus d’informations, consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](sql-server-utility-features-and-tasks.md). Cliquez sur le nom d'UCP dans l'arborescence pour remplir le volet Contenu de l'Explorateur de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec les données dans l'affichage Tableau de bord. Pour plus d’informations, consultez [Tableau de bord de l’utilitaire &#40;utilitaire SQL Server&#41;](../../database-engine/utility-dashboard-sql-server-utility.md).  
   
      Cliquez avec le bouton droit sur le nœud UCP pour actualiser des données dans le tableau de bord.  
   
@@ -60,13 +60,13 @@ ms.locfileid: "63191686"
  Lorsqu'un nœud contient un grand nombre d'objets, il peut être difficile de trouver l'objet que vous recherchez. Dans ce cas, utilisez la fonctionnalité de filtre de l'Explorateur de l'utilitaire pour réduire la taille de la liste. Par exemple, vous pouvez rechercher une instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou seulement les ordinateurs avec un espace de fichier sous-exploité. Cliquez avec le bouton droit sur le dossier à filtrer, cliquez sur le bouton de filtre, puis sur **Paramètres du filtre** pour ouvrir la boîte de dialogue Paramètres du filtre de l’Explorateur d’utilitaire. Vous pouvez filtrer la liste par nom, processeur de l'ordinateur, processeur des instances, espace de fichier, espace de volume, paramètres de substitution de stratégie ou dernière heure signalée. Les colonnes **Operator** et **Value** fournissent des opérateurs de filtrage supplémentaires dans une liste déroulante.  
   
 ### <a name="starting-powershell"></a>Démarrage de PowerShell  
- Vous pouvez démarrer une session PowerShell en cliquant avec le bouton droit sur la plupart des dossiers et objets dans l’arborescence de l’Explorateur d’objets et en sélectionnant **Démarrer PowerShell**. Cette opération démarre une session PowerShell dont la prise en charge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell activée, et le chemin d'accès défini sur l'objet sur lequel vous avez cliqué avec le bouton droit sur dans l'Explorateur d'objets. Vous pouvez entrer ensuite des commandes PowerShell dans un environnement PowerShell interactif. Pour en savoir plus, voir [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
+ Vous pouvez démarrer une session PowerShell en cliquant avec le bouton droit sur la plupart des dossiers et objets dans l’arborescence de l’Explorateur d’objets et en sélectionnant **Démarrer PowerShell**. Cette opération démarre une session PowerShell dont la prise en charge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell activée, et le chemin d'accès défini sur l'objet sur lequel vous avez cliqué avec le bouton droit sur dans l'Explorateur d'objets. Vous pouvez entrer ensuite des commandes PowerShell dans un environnement PowerShell interactif. Pour plus d’informations, consultez [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
   
  PowerShell n’offre pas d’aide accessible via la touche F1, mais inclut une applet de commande **Get-Help** qui fournit des informations sur l’utilisation de PowerShell. Pour plus d’informations sur l’utilisation de Get-Help, consultez [Obtenir de l’aide sur SQL Server PowerShell](../../database-engine/get-help-sql-server-powershell.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités et tâches de l'utilitaire SQL Server](sql-server-utility-features-and-tasks.md)   
  [Configurer des stratégies de contrôle d’intégrité &#40;utilitaire SQL Server&#41;](configure-health-policies-sql-server-utility.md)   
- [Explorateur d’objets](../../ssms/object/object-explorer.md)  
+ [l’Explorateur d’objets](../../ssms/object/object-explorer.md)  
   
   

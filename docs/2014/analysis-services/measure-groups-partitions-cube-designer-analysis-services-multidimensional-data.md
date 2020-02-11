@@ -1,5 +1,5 @@
 ---
-title: Mesurer les groupes (onglet Partitions, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Groupes de mesures (onglet partitions, concepteur de cube) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 587b3ef7c784b48c1347276646d366eae5570c97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077912"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>Groupes de mesures (onglet Partitions, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -26,7 +26,7 @@ ms.locfileid: "66077912"
  **Partitions**  
  Affiche une grille contenant la liste des partitions qui prennent en charge le groupe de mesures sélectionné. Cette grille comporte les colonnes suivantes :  
   
- **(Ordinal)**  
+ **Formations**  
  Affiche la position ordinale de la partition dans le groupe de mesures.  
   
  Cliquez pour sélectionner l'ensemble de la ligne de la partition.  
@@ -39,17 +39,17 @@ ms.locfileid: "66077912"
   
  Cliquez sur le bouton représentant des points de suspension **...** pour afficher la boîte de dialogue **Source de la partition** et définir la source de la partition sélectionnée.  
   
- **Agrégation**  
+ **Agréger**  
  Affiche le mode d'agrégation et le mode de stockage de la partition. Le mode de stockage est affiché en premier : traitement ROLAP (Relational Online Analytical Processing), traitement MOLAP (Multidimensional Online Analytical Processing) ou traitement HOLAP (Hybrid Online Analytical Processing). Le mode d'agrégation est affiché sous la forme d'un pourcentage d'optimisation demandée, d'une mesure d'espace demandé ou utilisé ou du nombre d'agrégations créées. Cliquez sur le bouton représentant des points de suspension **...** pour afficher la boîte de dialogue **Assistant Conception d’agrégation** et définir la conception d’agrégation de la partition spécifiée.  
   
  **Description**  
  Tapez la description facultative de la partition.  
   
- **Nouvelle Partition...**  
+ **Nouvelle partition...**  
  Cliquez pour afficher **l’Assistant Partition** et créer une partition dans le groupe de mesures sélectionné.  
   
  **Paramètres de stockage...**  
- Cliquez sur cette option pour afficher la boîte de dialogue **Paramètres de stockage** et définir les paramètres de mode de stockage, de mise en cache proactive et de notification pour la partition sélectionnée.  
+ Cliquez pour afficher la boîte de dialogue **Paramètres de stockage** et définir les paramètres de mode de stockage, de mise en cache proactive et de notification de la partition sélectionnée.  
   
 > [!NOTE]  
 >  Cette option est activée uniquement si une cellule d’une partition est sélectionnée dans la grille **Partitions** du groupe de mesures sélectionné.  
@@ -63,15 +63,15 @@ ms.locfileid: "66077912"
 |Option|Définition|  
 |------------|----------------|  
 |**Ajouter Business Intelligence**|Affiche l' **Assistant Business Intelligence** pour ajouter au cube des fonctionnalités d'aide à la décision. Pour plus d’informations sur **l’Assistant Business Intelligence**, consultez [Aide (F1) de l’Assistant Business Intelligence](business-intelligence-wizard-f1-help.md).|  
-|**Nouvelle Partition**|Cliquez pour afficher **l’Assistant Partition** et créer une partition dans le groupe de mesures sélectionné.|  
-|**Renommer la Partition**|Sélectionnez pour renommer la partition sélectionnée.|  
-|**Supprimer**|Cliquez sur cette option pour afficher la boîte de dialogue **Supprimer les objets** et supprimer l’action sélectionnée.<br /><br /> Remarque : Cette option est désactivée si une partition avec écriture différée est sélectionnée.|  
-|**Concevoir des agrégations**|Cliquez sur cette option pour afficher **l’Assistant Conception d’agrégation** et créer une conception d’agrégation pour la partition sélectionnée.<br /><br /> Remarque : Cette option est désactivée si une partition avec écriture différée est sélectionnée.|  
-|**Paramètres de stockage**|Cliquez sur cette option pour afficher la boîte de dialogue **Paramètres de stockage** et définir les paramètres de mode de stockage, de mise en cache proactive et de notification pour la partition sélectionnée.|  
-|**Paramètres d’écriture différée**|Cliquez sur cette option pour afficher la boîte de dialogue **Activer/Désactiver l’écriture différée** et définir les paramètres d’écriture différée pour le groupe de mesures contenant la partition sélectionnée.|  
-|**L’optimisation basée sur l’utilisation**|Cliquez sur cette option pour afficher **l’Assistant Optimisation de l’utilisation** et créer une conception d’agrégation basée sur des modèles d’utilisation existants pour la partition sélectionnée.<br /><br /> Remarque : Cette option est désactivée si une partition avec écriture différée est sélectionnée.|  
-|**Traiter**|Cliquez sur cette option pour afficher la boîte de dialogue **Traiter** et traiter la partition sélectionnée.|  
-|**Copier**|Cette option est désactivée.|  
+|**Nouvelle partition**|Cliquez pour afficher **l’Assistant Partition** et créer une partition dans le groupe de mesures sélectionné.|  
+|**Renommer la partition**|Sélectionnez pour renommer la partition sélectionnée.|  
+|**Supprimer**|Cliquez sur cette option pour afficher la boîte de dialogue **Supprimer les objets** et supprimer l’action sélectionnée.<br /><br /> Remarque : cette option est désactivée si une partition d’écriture différée est sélectionnée.|  
+|**Créer des agrégations**|Cliquez sur cette option pour afficher **l’Assistant Conception d’agrégation** et créer une conception d’agrégation pour la partition sélectionnée.<br /><br /> Remarque : cette option est désactivée si une partition d’écriture différée est sélectionnée.|  
+|**Paramètres de stockage**|Cliquez pour afficher la boîte de dialogue **Paramètres de stockage** et définir les paramètres de mode de stockage, de mise en cache proactive et de notification de la partition sélectionnée.|  
+|**Paramètres d'écriture différée**|Cliquez sur cette option pour afficher la boîte de dialogue **Activer/Désactiver l’écriture différée** et définir les paramètres d’écriture différée pour le groupe de mesures contenant la partition sélectionnée.|  
+|**Optimisation basée sur l'utilisation**|Cliquez sur cette option pour afficher **l’Assistant Optimisation de l’utilisation** et créer une conception d’agrégation basée sur des modèles d’utilisation existants pour la partition sélectionnée.<br /><br /> Remarque : cette option est désactivée si une partition d’écriture différée est sélectionnée.|  
+|**Procédure**|Cliquez sur cette option pour afficher la boîte de dialogue **Traiter** et traiter la partition sélectionnée.|  
+|**Copy**|Cette option est désactivée.|  
 |**Coller**|Cette option est désactivée.|  
 |**Propriétés**|Sélectionnez cette option pour afficher la fenêtre **Propriétés** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour la partition sélectionnée.|  
   

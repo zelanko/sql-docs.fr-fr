@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 811db11aecb5e6c0f4c68d272040aea3f8e38ca4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184540"
 ---
 # <a name="surface-area-configuration"></a>Configuration de la surface d'exposition
@@ -41,7 +41,7 @@ ms.locfileid: "63184540"
   
     -   Utilisez la zone **Configuration du réseau SQL Server** pour activer des protocoles de connexion et des options de connexion telles que les ports TCP/IP fixes ou le forçage du chiffrement.  
   
- Pour plus d’informations, consultez [SQL Server Configuration Manager](../sql-server-configuration-manager.md). La connectivité distante peut également dépendre de la configuration correcte d'un pare-feu. Pour plus d’informations, consultez [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
+ Pour plus d'informations, consultez [SQL Server Configuration Manager](../sql-server-configuration-manager.md). La connectivité distante peut également dépendre de la configuration correcte d'un pare-feu. Pour plus d’informations, consultez [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 ## <a name="enabling-and-disabling-features"></a>Activation et désactivation de fonctionnalités  
  L'activation et la désactivation de fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être configurée à l'aide de facettes dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -71,7 +71,7 @@ ms.locfileid: "63184540"
  Pour désactiver des points de terminaison, utilisez la Gestion basée sur des stratégies. Pour créer et modifier les propriétés de points de terminaison, utilisez [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql) et [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql).  
   
 ## <a name="related-content"></a>Contenu associé  
- [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   

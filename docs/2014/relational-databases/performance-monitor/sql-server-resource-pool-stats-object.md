@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fdf00d1291180197f66cd6cb23cf27f10659c68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63183021"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQLServer, objet Statistiques des pools de ressources
@@ -43,11 +43,11 @@ ms.locfileid: "63183021"
 |Mémoire cible (Ko)|Quantité cible, en kilo-octets (Ko), de mémoire que le pool de ressources tente d'obtenir selon les paramètres du pool de ressources et l'état du serveur.|  
 |E/S de lecture sur le disque par seconde|Nombre d'opérations de lecture à partir du disque au cours de la dernière seconde.|  
 |E/S de lecture sur le disque limitées par seconde|Nombre d'opérations de lecture limitées au cours de la dernière seconde.|  
-|Octets lus depuis le disque par seconde|Nombre d'octets lus à partir du disque au cours de la dernière seconde.|  
+|Nb d’octets de lecture de disque/s |Nombre d'octets lus à partir du disque au cours de la dernière seconde.|  
 |Millisecondes moyennes par lecture depuis le disque|Durée moyenne, en millisecondes, d'une opération de lecture sur le disque.|  
 |E/S d'écriture sur le disque par seconde|Nombre d'opérations d'écriture sur le disque au cours de la dernière seconde.|  
 |E/S d'écriture sur le disque limitées par seconde|Nombre d'opérations d'écriture limitées au cours de la dernière seconde.|  
-|Octets écrits sur le disque par seconde|Nombre d'octets écrits sur le disque au cours de la dernière seconde.|  
+| Nb d’octets d’écriture de disque/s|Nombre d'octets écrits sur le disque au cours de la dernière seconde.|  
 |Millisecondes moyennes par écriture sur le disque|Durée moyenne, en millisecondes, d'une opération d'écriture sur le disque.|  
   
 ## <a name="see-also"></a>Voir aussi  

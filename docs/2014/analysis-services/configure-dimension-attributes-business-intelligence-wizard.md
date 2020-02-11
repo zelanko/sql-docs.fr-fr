@@ -1,5 +1,5 @@
 ---
-title: Configurer les attributs de Dimension (Assistant Business Intelligence) | Microsoft Docs
+title: Configurer les attributs de la dimension (Assistant Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5fe43b53878744586c3d0d8ec5719d6241b0a302
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087447"
 ---
 # <a name="configure-dimension-attributes-business-intelligence-wizard"></a>Configurer les attributs de la dimension (Assistant Business Intelligence)
@@ -27,12 +27,12 @@ ms.locfileid: "66087447"
  Affiche le type de dimension sélectionné.  
   
 > [!NOTE]  
->  Cette option n’est pas disponible, car le `Type` propriété de la dimension ne peut pas être remplacée par une valeur autre que *compte* pour les dimensions de compte.  
+>  Cette option n’est pas disponible, `Type` car la propriété de la dimension ne peut pas être remplacée par une valeur autre que *compte* pour les dimensions de compte.  
   
- **Attributs de dimension**  
+ **Attributs de dimensions**  
  Affiche les types d'attributs valides qui peuvent être associés aux attributs de dimension existants dans la dimension.  
   
- **Include**  
+ **Inclusion**  
  Activez une case à cocher pour inclure le type d'attribut correspondant dans la dimension.  
   
  **Type d’attribut**  
@@ -41,15 +41,15 @@ ms.locfileid: "66087447"
  **Attribut de dimension**  
  Sélectionnez l'attribut de dimension qui doit être associé au type d'attribut correspondant.  
   
- **Définissez les mesures semi-additives en fonction de type de compte**  
+ **Définissez les mesures semi-additives en fonction du type de compte**  
  Sélectionnez cette option pour changer chaque mesure associée à cette dimension à agréger par type de compte.  
   
 > [!NOTE]  
 >  Cette option ne s'affiche pas si l'Assistant Business Intelligence a été démarré à partir du Concepteur de dimensions ou en cliquant avec le bouton droit sur une dimension dans l'Explorateur de solutions dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide (F1) de l'Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
- [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Concepteur de dimensions &#40;Analysis Services - données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [Aide (F1) de l’Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Concepteur de cube &#40;Analysis Services-données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Concepteur de dimensions &#40;Analysis Services-données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

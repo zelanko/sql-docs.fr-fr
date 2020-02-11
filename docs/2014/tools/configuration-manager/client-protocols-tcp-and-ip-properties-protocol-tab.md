@@ -1,5 +1,5 @@
 ---
-title: Protocoles clients - TCP et les propriétés IP (onglet protocole) | Microsoft Docs
+title: Protocoles clients-propriétés TCP et IP (onglet protocole) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: ec3c433c1ce16e35f064910083e7ab9959e4c3bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63253793"
 ---
 # <a name="client-protocols---tcp-and-ip-properties-protocol-tab"></a>Protocoles clients - Propriétés TCP/IP (onglet Protocole)
@@ -42,7 +42,7 @@ ms.locfileid: "63253793"
   
 ## <a name="see-also"></a>Voir aussi  
  [Choix d'un protocole réseau](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
- [Nouvel alias &#40;onglet Alias&#41;](../../../2014/tools/configuration-manager/new-alias-alias-tab.md)   
- [Propriétés d’&#60;alias&#62; &#40;onglet Alias&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
+ [Nouvel alias &#40;onglet alias&#41;](../../../2014/tools/configuration-manager/new-alias-alias-tab.md)   
+ [&#60;&#62; propriétés alias &#40;onglet alias&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
   
   

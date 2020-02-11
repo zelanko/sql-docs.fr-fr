@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f85903658025f3ea1e5df805bb0593da9d840f25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192431"
 ---
-# <a name="mssqleng014144"></a>MSSQL_ENG014144
+# <a name="mssql_eng014144"></a>MSSQL_ENG014144
     
 ## <a name="message-details"></a>Détails du message  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|14144|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|14144|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique||  
 |Texte du message|Impossible de supprimer l’Abonné '%s'. La base de données de publication '%s' comporte des abonnements qui lui sont associés.|  

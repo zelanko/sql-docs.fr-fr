@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d0d309103880a369a88952e19b252fc15693fdd4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191918"
 ---
 # <a name="handling-smo-events"></a>Gestion des événements SMO
@@ -35,9 +35,9 @@ ms.locfileid: "63191918"
 ## <a name="event-subscription"></a>Abonnement à un événement  
  Pour gérer des événements, vous devez écrire une classe de gestionnaire d'événements, créer une instance de cet événement, attribuer le gestionnaire d'événements à l'objet parent, puis vous abonner à l'événement.  
   
- La gestion d'événements requiert l'écriture d'une classe de gestionnaire d'événements. La classe de gestionnaire d'événements peut contenir plusieurs fonctions de gestionnaire d'événements et doit être installée pour les événements à gérer. Les fonctions de gestionnaire d’événements recevoir des informations sur l’événement à partir de la *ServerEventNotificatificationArgs* paramètre qui peut être utilisé pour signaler des informations sur l’événement.  
+ La gestion d'événements requiert l'écriture d'une classe de gestionnaire d'événements. La classe de gestionnaire d'événements peut contenir plusieurs fonctions de gestionnaire d'événements et doit être installée pour les événements à gérer. Les fonctions du gestionnaire d’événements reçoivent des informations sur l’événement à partir du paramètre *ServerEventNotificatificationArgs* qui peut être utilisé pour signaler des informations sur l’événement.  
   
- Les types d’événements de base de données et de serveur qui peuvent être gérées sont répertoriés dans le <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> classe et la <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>classe.  
+ Les types d’événements de base de données et de serveur qui peuvent être gérés <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> sont répertoriés <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>dans la classe et la classe.  
   
 ## <a name="example"></a>Exemple  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

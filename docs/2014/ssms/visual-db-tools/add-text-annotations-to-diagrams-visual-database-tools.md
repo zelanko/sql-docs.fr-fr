@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dc390d06ab21b295f0e5f7a2475d8c91671e843c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63298292"
 ---
 # <a name="add-text-annotations-to-diagrams-visual-database-tools"></a>Ajouter des annotations de texte aux schémas (Visual Database Tools)
@@ -37,6 +37,6 @@ ms.locfileid: "63298292"
 >  Pour modifier la police, cliquez avec le bouton droit sur le champ de texte et cliquez sur **Définir la police de l’annotation de texte**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utiliser des schémas de base de données &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [Utiliser des diagrammes de base de données &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

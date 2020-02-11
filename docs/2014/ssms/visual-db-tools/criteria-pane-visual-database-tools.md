@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1bbfd7e02b11a9f2a5cc0213c31b453eaa28e446
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270601"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Volet Critères (Visual Database Tools)
@@ -57,24 +57,24 @@ ms.locfileid: "63270601"
   
 |**Colonne**|**Type de requête**|**Description**|  
 |----------------|--------------------|---------------------|  
-|colonne|All|Affiche soit le nom d'une colonne de données utilisée pour la requête, soit l'expression d'une colonne calculée. La colonne est verrouillée pour rester toujours visible lors d'un défilement horizontal.|  
+|Colonne|Tous|Affiche soit le nom d'une colonne de données utilisée pour la requête, soit l'expression d'une colonne calculée. La colonne est verrouillée pour rester toujours visible lors d'un défilement horizontal.|  
 |Alias|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Spécifie soit un autre nom à donner à la colonne, soit le nom d'une colonne calculée.|  
 |Table de charge de travail|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Spécifie le nom de la table ou de l'objet structuré en table contenant la colonne de données associée. Cette colonne est vide dans le cas de colonnes calculées.|  
-|Sortie|SELECT, INSERT FROM, MAKE TABLE|Spécifie si une colonne de données apparaît dans le résultat de la requête.<br /><br /> Remarque : si la base de données le permet, vous pouvez mettre les clauses de tri ou de recherche dans une colonne de données que vous n’afficherez pas dans l’ensemble des résultats.|  
+|Output|SELECT, INSERT FROM, MAKE TABLE|Spécifie si une colonne de données apparaît dans le résultat de la requête.<br /><br /> Remarque : Si la base de données le permet, vous pouvez mettre les clauses de tri ou de recherche dans une colonne de données que vous n'afficherez pas dans l'ensemble des résultats.|  
 |Type de tri|SELECT, INSERT FROM|Spécifie si la colonne de données associée sert à trier les résultats de la requête et si le tri est croissant ou décroissant.|  
 |Ordre de tri|SELECT, INSERT FROM|Spécifie l'ordre de priorité dans lequel les colonnes de données seront triées dans l'ensemble des résultats. Lorsque vous modifiez l'ordre de tri d'une colonne de données, toutes les autres colonnes sont mises à jour en conséquence.|  
 |Regrouper par|SELECT, INSERT FROM, MAKE TABLE|Spécifie que la colonne de données associée est utilisée pour créer une requête d'agrégation. Cette colonne n'apparaît que si, dans le menu **Outils** , vous avez choisi **Regroupement** ou si, dans le volet SQL, vous avez ajouté une clause GROUP BY.<br /><br /> Par défaut, cette colonne a la valeur **Regrouper par**et la colonne associée devient partie intégrante de la clause GROUP BY.<br /><br /> Si vous allez dans une cellule de cette colonne, puis sélectionnez une fonction d'agrégation à appliquer à la colonne de données associée, par défaut l'expression obtenue s'ajoute en tant que colonne de sortie de l'ensemble des résultats.|  
-|Critères|All|Spécifie une condition de recherche (filtre) dans la colonne de données associée. Entrez un opérateur (« = » par défaut) ainsi que la valeur à rechercher. Si la valeur est un texte, encadrez ce dernier par des apostrophes.<br /><br /> Si la colonne de données associée fait partie d'une clause GROUP BY, l'expression entrée est utilisée dans une clause HAVING.<br /><br /> Si, dans la colonne **Critères** de la grille, vous entrez des valeurs dans plusieurs cellules, les conditions de recherche qui en résultent sont automatiquement liées par un ET logique.<br /><br /> Pour que plusieurs expressions de conditions de recherche s'appliquent à une même colonne de base de données, par exemple (fname > 'A') AND (fname < 'M'), ajoutez deux fois la colonne de données au volet Critères et, dans la colonne **Critères**, entrez une valeur distincte par instance de cette colonne de données.|  
-|Ou...|All|Spécifie une expression ajoutant une condition de recherche de la colonne de données, liée aux expressions précédentes par un OU logique. Pour ajouter des colonnes **Ou...** à la grille, appuyez sur la touche Tab dans la colonne **Ou...** la plus à droite.|  
+|Critères|Tous|Spécifie une condition de recherche (filtre) dans la colonne de données associée. Entrez un opérateur (« = » par défaut) ainsi que la valeur à rechercher. Si la valeur est un texte, encadrez ce dernier par des apostrophes.<br /><br /> Si la colonne de données associée fait partie d'une clause GROUP BY, l'expression entrée est utilisée dans une clause HAVING.<br /><br /> Si, dans la colonne **Critères** de la grille, vous entrez des valeurs dans plusieurs cellules, les conditions de recherche qui en résultent sont automatiquement liées par un ET logique.<br /><br /> Pour que plusieurs expressions de conditions de recherche s'appliquent à une même colonne de base de données, par exemple (fname > 'A') AND (fname < 'M'), ajoutez deux fois la colonne de données au volet Critères et, dans la colonne **Critères**, entrez une valeur distincte par instance de cette colonne de données.|  
+|Ou...|Tous|Spécifie une expression ajoutant une condition de recherche de la colonne de données, liée aux expressions précédentes par un OU logique. Pour ajouter des colonnes **Ou...** à la grille, appuyez sur la touche Tab dans la colonne **Ou...** la plus à droite.|  
 |Ajouter|INSERT FROM|Spécifie le nom de la colonne de données cible de la colonne de données associée. Lorsque vous créez une requête Insert From, le Concepteur de requêtes et de vues essaie de faire correspondre la source à une colonne de données cible appropriée. Si le Concepteur de requêtes et de vues ne peut pas choisir de correspondance, vous devez indiquer le nom de la colonne.|  
 |Nouvelle valeur|UPDATE, INSERT INTO|Spécifie la valeur à placer dans la colonne associée. Entrez une valeur littérale ou une expression.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concevoir des requêtes et des vues des rubriques de procédures &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Volet schéma &#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
- [Valeurs de recherche de règles pour l’entrée &#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
- [Trier et grouper les résultats de requête &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
- [Volet des résultats &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
+ [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Volet Schéma &#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
+ [Règles pour l’entrée de valeurs de recherche &#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
+ [Trier et regrouper les résultats des requêtes &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [Volet de résultats &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
  [SQL (volet) &#40;Visual Database Tools&#41;](sql-pane-visual-database-tools.md)  
   
   

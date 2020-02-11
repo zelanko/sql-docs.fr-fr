@@ -11,16 +11,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 50e62a9232690deb368096723f428118e9de7aa2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151153"
 ---
 # <a name="xtp-storage"></a>Storage XTP
   L'objet de performance XTP Storage contient des compteurs associés au stockage XTP dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Ce tableau décrit les compteurs **XTP Storage** .  
+ Ce tableau décrit les compteurs **XTP Storage**.  
   
 |Compteur|Description|  
 |-------------|-----------------|  
@@ -34,6 +34,6 @@ ms.locfileid: "63151153"
 |**Fichiers totaux fusionnés**|Nombre total de fichiers sources fusionnés. Ce nombre peut être utilisé pour rechercher le nombre moyen de fichiers sources dans la fusion.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [XTP &#40;In-Memory OLTP&#41; les compteurs de performances](../../integration-services/performance/performance-counters.md)  
+ [Les compteurs de performances de l’OLTP en mémoire &#40;de XTP&#41;](../../integration-services/performance/performance-counters.md)  
   
   

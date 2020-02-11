@@ -19,19 +19,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f59763b63f4e73687620482a2c1e739fe21fb6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150732"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Réduire la charge de paramétrage du serveur de production
+  
   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] L’Assistant Paramétrage compte sur l’optimiseur de requête pour analyser une charge de travail et faire des recommandations de paramétrage. Le fait d'effectuer cette analyse sur le serveur de production augmente la charge du serveur et peut dégrader les performances du serveur pendant la session de paramétrage. Vous pouvez réduire l'impact sur la charge du serveur pendant une session de paramétrage en utilisant un serveur de test en plus du serveur de production.  
   
 ## <a name="how-database-engine-tuning-advisor-uses-a-test-server"></a>Utilisation d'un serveur de test par l'Assistant Paramétrage du moteur de base de données  
  En règle générale, pour utiliser un serveur de test, vous copiez toutes les données du serveur de production vers le serveur de test, paramétrez le serveur de test et implémentez la recommandation sur le serveur de production. Cette méthode élimine le problème d'impact sur les performances du serveur de production, mais elle ne constitue pas la solution la plus efficace. La copie d'une importante quantité de données du serveur de production vers le serveur de test, par exemple, s'avère longue et consomme un nombre substantiel de ressources. En outre, le matériel du serveur de test est rarement aussi puissant que le matériel déployé pour les serveurs de production. Le processus de paramétrage repose sur l'optimiseur de requêtes. En outre, les recommandations qu'il génère sont partiellement basées sur le matériel sous-jacent. Si les matériels des serveurs de test et de production ne sont pas identiques, la qualité de la recommandation de l’Assistant Paramétrage du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] est moindre.  
   
- Pour éviter ces problèmes, l'Assistant Paramétrage du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] paramètre une base de production sur un serveur de production en déchargeant la majorité de la charge de paramétrage vers un serveur de test. Il procède ainsi en utilisant les informations de configuration matérielle du serveur de production et sans copier réellement les données du serveur de production vers le serveur de test. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] L’Assistant Paramétrage ne copie pas de données réelles du serveur de production sur le serveur de test. Il copie uniquement les métadonnées et les statistiques nécessaires.  
+ Pour éviter ces problèmes, l'Assistant Paramétrage du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] paramètre une base de production sur un serveur de production en déchargeant la majorité de la charge de paramétrage vers un serveur de test. Il procède ainsi en utilisant les informations de configuration matérielle du serveur de production et sans copier réellement les données du serveur de production vers le serveur de test. 
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] L’Assistant Paramétrage ne copie pas de données réelles du serveur de production sur le serveur de test. Il copie uniquement les métadonnées et les statistiques nécessaires.  
   
  Les étapes suivantes expliquent le processus de paramétrage d'une base de données de production sur un serveur de test :  
   
@@ -45,11 +47,14 @@ ms.locfileid: "63150732"
   
      Au cours du paramétrage, l'Assistant Paramétrage du moteur de base de données crée une base de données shell sur le serveur de test. Pour créer cette base de données shell et la paramétrer, l'Assistant Paramétrage du moteur de base de données envoie des appels au serveur de production :  
   
-    1.  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] L’Assistant Paramétrage importe des métadonnées de la base de données de production pour tester la base de données shell du serveur de test. Les métadonnées incluent des tables, des index, des vues des procédures stockées, des déclencheurs vides, etc. Ceci permet aux requêtes de charge de travail de s'exécuter par rapport à la base de données shell du serveur de test.  
+    1.  
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] L’Assistant Paramétrage importe des métadonnées de la base de données de production pour tester la base de données shell du serveur de test. Les métadonnées incluent des tables, des index, des vues des procédures stockées, des déclencheurs vides, etc. Ceci permet aux requêtes de charge de travail de s'exécuter par rapport à la base de données shell du serveur de test.  
   
-    2.  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] L’Assistant Paramétrage importe des statistiques du serveur de production pour que l’optimiseur de requêtes puisse optimiser précisément les requêtes sur le serveur de test.  
+    2.  
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] L’Assistant Paramétrage importe des statistiques du serveur de production pour que l’optimiseur de requêtes puisse optimiser précisément les requêtes sur le serveur de test.  
   
-    3.  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] L’Assistant Paramétrage importe des paramètres matériels définissant le nombre de processeurs et la mémoire disponible sur le serveur de production, afin de fournir à l’optimiseur de requêtes les informations dont il a besoin pour générer un plan de requête.  
+    3.  
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] L’Assistant Paramétrage importe des paramètres matériels définissant le nombre de processeurs et la mémoire disponible sur le serveur de production, afin de fournir à l’optimiseur de requêtes les informations dont il a besoin pour générer un plan de requête.  
   
 3.  Une fois que l’Assistant Paramétrage du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] a paramétré la base de données shell du serveur de test, il génère une recommandation de paramétrage.  
   
@@ -57,7 +62,7 @@ ms.locfileid: "63150732"
   
  L'illustration suivante montre le scénario du serveur de test et du serveur de production :  
   
- ![Utilisation du serveur test de l’Assistant Paramétrage du moteur de base de données](../../database-engine/media/testsvr.gif "Utilisation du serveur test de l’Assistant Paramétrage du moteur de base de données")  
+ ![Utilisation du serveur test de l'Assistant Paramétrage du moteur de base de données](../../database-engine/media/testsvr.gif "Utilisation du serveur test de l'Assistant Paramétrage du moteur de base de données")  
   
 > [!NOTE]  
 >  La fonction de paramétrage du serveur de test n'est pas prise en charge par l'interface utilisateur graphique de l'Assistant Paramétrage du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] .  
@@ -93,7 +98,7 @@ ms.locfileid: "63150732"
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Observations relatives à l'utilisation de serveurs de test](considerations-for-using-test-servers.md)   
+ [Considérations relatives à l’utilisation de serveurs de test](considerations-for-using-test-servers.md)   
  [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](database-engine-tuning-advisor.md)  
   
   

@@ -14,13 +14,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 59c66bc237b496fd913658f168b7b1c0089fdc00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250694"
 ---
-# <a name="sql-server-broker-activation-object"></a>SQL Server, Broker Activation (objet)
+# <a name="sql-server-broker-activation-object"></a>SQL Server: Broker Activation (objet)
   L'objet de performance **SQLServer:BrokerActivation** contient des compteurs de performances qui fournissent des informations sur l'activation des procédures stockées. Le tableau ci-dessous répertorie les compteurs inclus dans cet objet.  
   
 |Compteurs de SQL Server Broker Activation|Description|  

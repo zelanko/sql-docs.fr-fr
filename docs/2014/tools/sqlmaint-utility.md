@@ -1,5 +1,5 @@
 ---
-title: sqlmaint (utilitaire) | Microsoft Docs
+title: Utilitaire sqlmaint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,17 +19,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2e15dbb5b7cb21d29936fce5c9b0d1f215d244ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63187014"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint (utilitaire)
-  L’utilitaire**sqlmaint** exécute un ensemble spécifique d’opérations de maintenance sur une ou plusieurs bases de données. Utilisez **sqlmaint** pour exécuter des vérifications DBCC, sauvegarder une base de données et son journal des transactions, mettre à jour des statistiques et reconstruire des index. Toutes les activités de maintenance de base de données produisent un rapport qui peut être envoyé vers un fichier texte, un fichier HTML ou un compte de messagerie déterminé. **sqlmaint** exécute les plans de maintenance de base de données créés avec des versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour exécuter des plans de maintenance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à partir de l’invite de commandes, utilisez [l’utilitaire dtexec](../integration-services/packages/dtexec-utility.md).  
+  L’utilitaire**sqlmaint** exécute un ensemble spécifique d’opérations de maintenance sur une ou plusieurs bases de données. Utilisez **sqlmaint** pour exécuter des vérifications DBCC, sauvegarder une base de données et son journal des transactions, mettre à jour des statistiques et reconstruire des index. Toutes les activités de maintenance de base de données produisent un rapport qui peut être envoyé vers un fichier texte, un fichier HTML ou un compte de messagerie déterminé. **sqlmaint** exécute les plans de maintenance de base de données créés [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]avec des versions antérieures de. Pour exécuter des plans de maintenance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à partir de l’invite de commandes, utilisez [l’utilitaire dtexec](../integration-services/packages/dtexec-utility.md).  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../includes/ssnotedepnextavoid-md.md)] Utilisez plutôt la fonction plan de maintenance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour plus d’informations sur les plans de maintenance, consultez [Plans de maintenance](../relational-databases/maintenance-plans/maintenance-plans.md).  
+>  
+  [!INCLUDE[ssNoteDepNextAvoid](../includes/ssnotedepnextavoid-md.md)] Utilisez plutôt la fonction plan de maintenance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour plus d’informations sur les plans de maintenance, consultez [Plans de maintenance](../relational-databases/maintenance-plans/maintenance-plans.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -79,10 +80,10 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  Spécifie que le diagramme de syntaxe pour l’utilitaire **sqlmaint** doit être retourné. Ce paramètre doit être utilisé seul.  
   
- **-S** _server_name_[ **\\**_instance_name_]  
- Spécifie l’instance cible de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Spécifiez *server_name* pour vous connecter à l’instance par défaut du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sur ce serveur. Spécifiez *server_name**_\\_** nom_instance* pour vous connecter à une instance nommée du [!INCLUDE[ssDE](../includes/ssde-md.md)] sur ce serveur. Si aucun serveur n’est spécifié, **sqlmaint** se connecte à l’instance par défaut de [!INCLUDE[ssDE](../includes/ssde-md.md)] sur l’ordinateur local.  
+ **-S** _SERVER_NAME_[ **\\** _instance_name_]  
+ Spécifie l’instance cible [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]de. Spécifiez *SERVER_NAME* pour vous connecter à l’instance [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] par défaut de sur ce serveur. Spécifiez *server_name**_\\_** instance_name* pour vous connecter à une instance [!INCLUDE[ssDE](../includes/ssde-md.md)] nommée de sur ce serveur. Si aucun serveur n’est spécifié, **sqlmaint** se connecte à l’instance par défaut de [!INCLUDE[ssDE](../includes/ssde-md.md)] sur l’ordinateur local.  
   
- **-U** _login_ID_  
+ **-U** _login_id_  
  Spécifie l'ID de connexion à utiliser lors de la connexion au serveur. Si celui-ci n’est pas fourni, **sqlmaint** tente d’utiliser l’authentification [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Si *login_ID* contient des caractères spéciaux, il doit être encadré par des guillemets doubles. Ceux-ci sont facultatifs dans tous les autres cas.  
   
 > [!IMPORTANT]  
@@ -97,14 +98,14 @@ number[minutes | hours | days | weeks | months]
  **-D** _database_name_  
  Spécifie le nom de la base de données dans laquelle l'opération de maintenance doit être effectuée. Si *database_name* contient des caractères spéciaux, il doit être encadré par des guillemets doubles. Ceux-ci sont facultatifs dans tous les autres cas.  
   
- **-PlanName** _name_  
+ **-PlanName** _nom_  
  Spécifie le nom du plan de maintenance de base de données défini par l'Assistant Plan de maintenance de base de données. La seule information du plan utilisée par **sqlmaint** est la liste des bases de données qui y figurent. Toutes les activités de maintenance spécifiées dans les autres paramètres de **sqlmaint** s’appliquent à cette liste de bases de données.  
   
- **-PlanID** _guid_  
+ **-** _GUID_ PlanID  
  Spécifie l'identificateur global unique (GUID) d'un plan de maintenance de base de données à l'aide de l'Assistant Plan de maintenance de base de données. La seule information du plan utilisée par **sqlmaint** est la liste des bases de données qui y figurent. Toutes les activités de maintenance spécifiées dans les autres paramètres de **sqlmaint** s’appliquent à cette liste de bases de données. Cela doit correspondre à une valeur plan_id dans msdb.dbo.sysdbmaintplans.  
   
  **-Rpt** _text_file_  
- Spécifie le chemin et le nom complet du fichier dans lequel le rapport doit être créé. Le rapport est aussi créé à l'écran. Le rapport conserve les informations de version en ajoutant une date au nom de fichier. La date est générée comme suit : à la fin du nom de fichier, mais avant le point, sous la forme _*yyyyMMddhhmm*. *yyyy* = année, *MM* = mois, *dd* = jour, *hh* = heure, *mm* = minute.  
+ Spécifie le chemin et le nom complet du fichier dans lequel le rapport doit être créé. Le rapport est aussi créé à l'écran. Le rapport conserve les informations de version en ajoutant une date au nom de fichier. La date est générée comme suit : à la fin du nom de fichier, mais avant le point, sous la forme _*yyyyMMddhhmm*. *aaaa* = année, *mm* = mois, *DD* = jour, *hh* = heure, *mm* = minute.  
   
  Si vous exécutez l'utilitaire à 10h23 le 1er décembre 1996, avec la valeur *text_file* suivante :  
   
@@ -120,26 +121,26 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
   
  Le nom de fichier complet UNC (Universal Naming Convention) est requis pour *text_file* lorsque **sqlmaint** accède à un serveur distant.  
   
- **-** _Nom_opérateur_  
+ **-To** _operator_name_  
  Spécifie l'opérateur auquel le rapport créé sera envoyé par l'intermédiaire de SQL Mail.  
   
  **-HtmlRpt** _html_file_  
- Spécifie le chemin et le nom complets du fichier dans lequel un rapport HTML doit être créé. **sqlmaint** crée le nom de fichier en lui ajoutant une chaîne de type _*yyyyMMddhhmm* de la même manière que pour le paramètre **-Rpt** .  
+ Spécifie le chemin et le nom complets du fichier dans lequel un rapport HTML doit être créé. **sqlmaint** génère le nom de fichier en ajoutant une chaîne au format _*yyyyMMddhhmm* au nom de fichier, comme c’est le cas pour le paramètre **-RPT** .  
   
  Le nom de fichier complet UNC est requis pour *html_file* lorsque **sqlmaint** accède à un serveur distant.  
   
- **-DelHtmlRpt** \<*time_period*>  
- Spécifie que tous les rapports HTML du répertoire des rapports doivent être supprimés si l’intervalle de temps écoulé depuis la création du fichier de rapport excède la valeur spécifiée par \<*time_period*>. **-DelHtmlRpt** recherche les fichiers dont les noms correspondent au modèle créé à partir du paramètre *html_file*. Si *html_file* est c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, **-DelHtmlRpt** provoque la suppression par **sqlmaint** de tous les fichiers dont le nom correspond au modèle C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm et qui sont antérieurs à la date/heure spécifiée par \<*time_period*>.  
+ **-DelHtmlRpt** \< *time_period*>  
+ Spécifie que tous les rapports HTML du répertoire des rapports doivent être supprimés si l’intervalle de temps écoulé depuis la création du fichier de rapport excède la valeur spécifiée par \<*time_period*>. **-DelHtmlRpt** recherche les fichiers dont le nom correspond au modèle généré à partir du paramètre *html_file* . Si *html_file* est c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, **-DelHtmlRpt** provoque la suppression par **sqlmaint** de tous les fichiers dont le nom correspond au modèle C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm et qui sont antérieurs à la date/heure spécifiée par \<*time_period*>.  
   
  **-RmUnusedSpace** _threshold_percent free_percent_  
- Spécifie que l’espace inutilisé est retiré de la base de données spécifiée dans **-D**. Cette option est uniquement utile pour les bases de données dont la configuration prévoit une croissance automatique. *Threshold_percent* indique, en Mo, la taille qu’une base de données doit atteindre pour que **sqlmaint** tente d’en supprimer l’espace de données inutilisé. Si la base de données est plus petite que *threshold_percent*, aucune action n’est exécutée. *Free_percent* spécifie l’espace qui doit rester libre dans la base de données, exprimé sous la forme d’un pourcentage de la taille finale de celle-ci. Prenons l’exemple d’une base de données de 200 Mo contenant 100 Mo de données. Si la valeur 10 est affectée à *free_percent* , la base de données a pour taille finale 110 Mo. La base de données n’est pas étendue si elle est inférieure à la valeur de *free_percent* augmentée de la quantité de données contenue dans la base de données. Prenons l’exemple d’une base de données de 108 Mo contenant 100 Mo de données. Si la valeur 10 est affectée à *free_percent* , la base de données ne passera pas à 110 Mo, mais conserve sa taille de 108 Mo.  
+ Spécifie que l’espace inutilisé est retiré de la base de données spécifiée dans **-D**. Cette option est uniquement utile pour les bases de données dont la configuration prévoit une croissance automatique. *Threshold_percent* spécifie, en mégaoctets, la taille que la base de données doit atteindre avant que **sqlmaint** ne tente de supprimer l’espace de données inutilisé. Si la base de données est plus petite que *threshold_percent*, aucune action n’est exécutée. *Free_percent* spécifie la quantité d’espace inutilisé qui doit rester dans la base de données, spécifiée sous la forme d’un pourcentage de la taille finale de la base de données. Prenons l’exemple d’une base de données de 200 Mo contenant 100 Mo de données. Si la valeur 10 est affectée à *free_percent* , la base de données a pour taille finale 110 Mo. La base de données n’est pas étendue si elle est inférieure à la valeur de *free_percent* augmentée de la quantité de données contenue dans la base de données. Prenons l’exemple d’une base de données de 108 Mo contenant 100 Mo de données. Si la valeur 10 est affectée à *free_percent* , la base de données ne passera pas à 110 Mo, mais conserve sa taille de 108 Mo.  
   
  **-CkDB** | **-CkDBNoIdx**  
  Spécifie qu’une instruction DBCC CHECKDB ou une instruction DBCC CHECKDB avec l’option NOINDEX est exécutée dans la base de données indiquée dans **-D**. Pour plus d'informations, consultez DBCC CHECKDB.  
   
  Un avertissement est enregistré dans *text_file* si la base de données est en cours d’utilisation lorsque **sqlmaint** est exécuté.  
   
- **-CkAl** | **-CkAlNoIdx**  
+ **-CKAL** | **-CkAlNoIdx**  
  Spécifie qu’une instruction DBCC CHECKALLOC avec l’option NOINDEX est exécutée dans la base de données indiquée dans **-D**. Pour plus d’informations, consultez [DBCC CHECKALLOC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql).  
   
  **-CkCat**  
@@ -167,21 +168,21 @@ UPDATE STATISTICS table WITH SAMPLE sample_percent PERCENT;
  **-WriteHistory**  
  Spécifie que chaque action de maintenance effectuée par **sqlmaint**fait l’objet d’une entrée dans msdb.dbo.sysdbmaintplan_history. Si **-PlanName** ou **-PlanID** est spécifié, les entrées de sysdbmaintplan_history utilisent l’ID du plan spécifié. Si **-D** est spécifié, l’ID du plan est remplacé par des zéros dans les entrées de sysdbmaintplan_history.  
   
- **-BkUpDB** [ *backup_path*] |  **-BkUpLog** [ *backup_path* ]  
+ **-BkUpDB** [ *BACKUP_PATH*] |  **-BkUpLog** [ *BACKUP_PATH* ]  
  Spécifie une action de sauvegarde. **-BkUpDb** sauvegarde l’ensemble de la base de données. **-BkUpLog** sauvegarde uniquement le journal des transactions.  
   
- *backup_path* spécifie le répertoire pour la sauvegarde. *backup_path* n’est pas nécessaire si **-UseDefDir** est également spécifié et il est remplacé par la valeur de **-UseDefDir** si toutes deux sont spécifiées. La sauvegarde peut être placée à une adresse de répertoire ou de périphérique à bande (par exemple, \\\\.\TAPE0). Le nom de fichier pour la sauvegarde d'une base de données est créé automatiquement comme suit :  
+ *BACKUP_PATH* spécifie le répertoire de la sauvegarde. *BACKUP_PATH* n’est pas nécessaire si **-UseDefDir** est également spécifié, et est remplacé par **-UseDefDir** si les deux sont spécifiés. La sauvegarde peut être placée à une adresse de répertoire ou de périphérique à bande (par exemple, \\\\.\TAPE0). Le nom de fichier pour la sauvegarde d'une base de données est créé automatiquement comme suit :  
   
 ```  
 dbname_db_yyyyMMddhhmm.BAK  
   
 ```  
   
- où  
+ where  
   
--   *dbname* est le nom de la base de données actuellement sauvegardée.  
+-   *dbname* est le nom de la base de données en cours de sauvegarde.  
   
--   *yyyyMMddhhmm* correspond à la date et à l’heure de l’opération de sauvegarde où *yyyy* = année, *MM* = mois, *dd* = jour, *hh* = jour et *mm* = minute.  
+-   *yyyyMMddhhmm* est l’heure de l’opération de sauvegarde avec *aaaa* = année, *mm* = mois, *DD* = jour, *hh* = heure et *mm* = minute.  
   
  Le nom de fichier d'une transaction de sauvegarde est automatiquement créé sous la forme suivante :  
   
@@ -195,19 +196,19 @@ dbname_log_yyyymmddhhmm.BAK
  **-BkUpMedia**  
  Précise le type de support utilisé pour la sauvegarde, DISK ou TAPE.  
   
- **DISK**  
+ **LIBÉRER**  
  Spécifie que le support de sauvegarde est un disque.  
   
- **-DelBkUps**\< *time_period* >  
+ **-DelBkUps** \< *time_period* >  
  Pour les sauvegardes sur disque, spécifie que tous les fichiers de sauvegarde du répertoire de sauvegarde doivent être supprimés si l’intervalle de temps écoulé depuis la création de la sauvegarde excède la valeur indiquée dans \<*time_period*>.  
   
  **-CrBkSubDir**  
- Pour les sauvegardes sur disque, spécifie qu’un sous-répertoire doit être créé dans le répertoire [*backup_path*] ou dans le répertoire de sauvegarde par défaut si **-UseDefDir** est également spécifié. Le nom du sous-répertoire est généré à partir du nom de base de données spécifié dans **-D**. **-CrBkSubDir** offre un moyen aisé de placer toutes les sauvegardes de différentes bases de données dans des sous-répertoires séparés sans devoir modifier le paramètre *backup_path* .  
+ Pour les sauvegardes sur disque, spécifie qu’un sous-répertoire doit être créé dans le répertoire [*backup_path*] ou dans le répertoire de sauvegarde par défaut si **-UseDefDir** est également spécifié. Le nom du sous-répertoire est généré à partir du nom de base de données spécifié dans **-D**. **-CrBkSubDir** offre un moyen simple de placer toutes les sauvegardes de différentes bases de données dans des sous-répertoires distincts sans avoir à modifier le paramètre *BACKUP_PATH* .  
   
  **-UseDefDir**  
- Pour les sauvegardes sur disque, spécifie que le fichier de sauvegarde doit être créé dans le répertoire de sauvegarde par défaut. **UseDefDir** est prioritaire sur *backup_path* si ces deux paramètres sont spécifiés. Avec une installation de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] par défaut, le répertoire de sauvegarde par défaut est C:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Backup.  
+ Pour les sauvegardes sur disque, spécifie que le fichier de sauvegarde doit être créé dans le répertoire de sauvegarde par défaut. **UseDefDir** remplace *BACKUP_PATH* si les deux sont spécifiées. Avec une configuration [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] par défaut, le répertoire de sauvegarde par défaut est C:\Program Files\Microsoft SQL Server \ MSSQL10_50. MSSQLSERVER\MSSQL\Backup.  
   
- **TAPE**  
+ **DÉROULE**  
  Spécifie que le support de sauvegarde est une bande.  
   
  **-BkUpOnlyIfClean**  
@@ -216,8 +217,8 @@ dbname_log_yyyymmddhhmm.BAK
  **-VrfyBackup**  
  Spécifie que RESTORE VERIFYONLY est exécuté sur la sauvegarde lorsque celle-ci est terminée.  
   
- *number*[**minutes**| **hours**| **day**| **weeks**| **months**]  
- Spécifie l'intervalle de temps utilisé pour déterminer si un rapport ou un fichier de sauvegarde est suffisamment ancien pour être supprimé. *number* est un entier suivi (sans espace) d’une unité de temps. Exemples valides :  
+ *nombre*[**minutes**| **heures**| **** jour| **** semaines| **mois**]  
+ Spécifie l'intervalle de temps utilisé pour déterminer si un rapport ou un fichier de sauvegarde est suffisamment ancien pour être supprimé. *Number* est un entier suivi (sans espace) d’une unité de temps. Exemples valides :  
   
 -   **12weeks**  
   
@@ -245,7 +246,7 @@ dbname_log_yyyymmddhhmm.BAK
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-performing-dbcc-checks-on-a-database"></a>A. Réalisation de vérifications DBCC sur une base de données  
+### <a name="a-performing-dbcc-checks-on-a-database"></a>R. Réalisation de vérifications DBCC sur une base de données  
   
 ```  
 sqlmaint -S MyServer -D AdventureWorks2012 -CkDB -CkAl -CkCat -Rpt C:\MyReports\AdvWks_chk.rpt  
@@ -263,7 +264,7 @@ sqlmaint -S MyServer -PlanName MyUserDBPlan -UpdOptiStats 15 -RmUnusedSpace 110 
 sqlmaint -S MyServer -PlanName MyUserDBPlan -BkUpDB -BkUpMedia DISK -UseDefDir -CrBkSubDir -DelBkUps 2weeks  
 ```  
   
-### <a name="d-backing-up-a-database-to-the-default-xprogram-filesmicrosoft-sql-servermssql12mssqlservermssqlbackup-directory"></a>D. Sauvegarde d’une base de données à la valeur par défaut de x:\Program Files\Microsoft SQL Server\MSSQL12. Répertoire de MSSQLSERVER\MSSQL\Backup. \  
+### <a name="d-backing-up-a-database-to-the-default-xprogram-filesmicrosoft-sql-servermssql12mssqlservermssqlbackup-directory"></a>D. Sauvegarde d’une base de données dans la base de données par défaut x:\Program Files\Microsoft SQL Server\MSSQL12. Répertoire MSSQLSERVER\MSSQL\Backup. \  
   
 ```  
 sqlmaint -S MyServer -BkUpDB -BkUpMedia DISK -UseDefDir  

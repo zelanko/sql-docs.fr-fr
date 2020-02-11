@@ -1,5 +1,5 @@
 ---
-title: Alias de colonne dans la clause ORDER BY ne peut pas être précédées d’alias de table | Microsoft Docs
+title: Les alias de colonnes dans la clause ORDER BY ne peuvent pas avoir pour préfixe l’alias de table | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1f4328c6a70c00766979a13bbcf8dc2b8bd77f42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096320"
 ---
 # <a name="column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias"></a>Les alias de colonne dans la clause ORDER BY ne peuvent pas avoir un alias de table pour préfixe
@@ -71,7 +71,7 @@ ORDER BY p.LastName
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Problèmes de mise à niveau du moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
+ [Problèmes de mise à niveau Moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Le conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

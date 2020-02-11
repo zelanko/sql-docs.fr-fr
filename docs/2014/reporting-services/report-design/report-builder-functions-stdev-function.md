@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1763b417f381293eb9f9535cc5ef317cff268588
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105147"
 ---
 # <a name="stdev-function-report-builder-and-ssrs"></a>Fonction StDev (Générateur de rapports et SSRS)
@@ -34,11 +34,12 @@ StDev(expression, scope, recursive)
  *expression*  
  (`Integer` ou `Float`) Expression sur laquelle effectuer l'agrégation.  
   
- *portée*  
+ *scope*  
  (`String`) Facultatif. Nom d'un dataset, d'un groupe ou d'une région de données qui contient les éléments de rapport auxquels appliquer la fonction d'agrégation. Si le paramètre *scope* n'est pas spécifié, l'étendue actuelle est utilisée.  
   
- *récursifs*  
- (**Type énuméré**) Facultatif. `Simple` (par défaut) ou `RdlRecursive`. Indique s'il faut effectuer l'agrégation de manière récursive.  
+ *recursive*  
+ (**Type énuméré**) Facultatif. 
+  `Simple` (par défaut) ou `RdlRecursive`. Indique s'il faut effectuer l'agrégation de manière récursive.  
   
 ## <a name="return-type"></a>Type de retour  
  Retourne une valeur `Decimal` pour les expressions décimales et une valeur `Double` pour toutes les autres expressions.  
@@ -54,7 +55,7 @@ StDev(expression, scope, recursive)
   
 -   Le paramètre*Scope* des agrégats imbriqués ne peut pas être le nom d'un dataset.  
   
--   *Expression* ne doit pas contenir `First`, `Last`, `Previous`, ou `RunningValue` fonctions.  
+-   *L’expression* ne doit `First`pas `Last`contenir `Previous`de fonctions `RunningValue` ,, ou.  
   
 -   *Expression* ne doit pas contenir les agrégats imbriqués qui spécifient *recursive*.  
   

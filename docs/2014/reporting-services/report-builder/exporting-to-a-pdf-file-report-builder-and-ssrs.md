@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3eb41d807a1b4678882c791a7bdeb7693de7b08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107922"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportation vers un fichier PDF (Générateur de rapports et SSRS)
   L'extension de rendu PDF présente les rapports sous forme de fichiers s'affichant dans des visionneuses comme Adobe Acrobat si elles prennent en charge le format PDF 1.3. Bien que PDF 1.3 soit compatible avec Adobe Acrobat 4.0 et versions ultérieures, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge Adobe Acrobat 6 ou version ultérieure. Cette extension de rendu ne nécessite pas les logiciels Adobe pour effectuer le rendu du rapport. Toutefois, les visionneuses PDF comme Adobe Acrobat sont indispensables pour afficher ou imprimer un rapport au format PDF.  
   
- L'extension de rendu PDF prend en charge les caractères ANSI et peut convertir les caractères Unicode du japonais, coréen, chinois (traditionnel et simplifié), cyrillique, hébreu et arabe. Certaines limitations s'appliquent toutefois. Pour plus d’informations sur les limitations, consultez [exportation des rapports &#40;Générateur de rapports et SSRS&#41;](export-reports-report-builder-and-ssrs.md).  
+ L'extension de rendu PDF prend en charge les caractères ANSI et peut convertir les caractères Unicode du japonais, coréen, chinois (traditionnel et simplifié), cyrillique, hébreu et arabe. Certaines limitations s'appliquent toutefois. Pour plus d’informations sur les limitations, consultez [exportation de rapports &#40;générateur de rapports et&#41;SSRS ](export-reports-report-builder-and-ssrs.md).  
   
  Le convertisseur PDF est convertisseur de page physique et, par conséquent, a un comportement de pagination qui diffère d'autres convertisseurs, tels que HTML et Excel. Cette rubrique fournit des informations spécifiques au rendu PDF et décrit les exceptions aux règles.  
   
@@ -65,7 +65,8 @@ ms.locfileid: "66107922"
 |`Title`|Attribut `Name` de l'élément RDL `Report`|  
 |`Author`|Élément RDL `Author`|  
 |`Subject`|Élément RDL `Description`|  
-|`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
+|`Creator`|
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |`Producer`|Nom et version de l'extension de rendu|  
 |`CreationDate`|Heure de l'exécution du rapport au format `datetime` PDF|  
   
@@ -80,7 +81,7 @@ ms.locfileid: "66107922"
 ### <a name="document-map"></a>Explorateur de documents  
  Si des étiquettes d'explorateur de documents sont présentes dans le rapport, une structure du document est ajoutée au fichier PDF. Chaque étiquette de l'explorateur de documents apparaît comme une entrée dans la structure du document dans l'ordre dans lequel elle apparaît dans le rapport. Dans Acrobat, un signet cible est ajouté à la structure du document uniquement si la page sur laquelle il se trouve est rendue.  
   
- Si une seule page est rendue, aucune structure du document n'est ajoutée. L'explorateur de documents est organisé de façon hiérarchique pour refléter le niveau d'imbrication du rapport. La structure du document est accessible dans Acrobat sous l'onglet Signets. Un clic sur une entrée dans la structure du document affiche l'emplacement référencé par le signet dans le document.  
+ Si une seule page est rendue, aucune structure du document n'est ajoutée. L'explorateur de documents est organisé de façon hiérarchique pour refléter le niveau d'imbrication du rapport. La structure du document est accessible dans Acrobat sous l’onglet signets. Si vous cliquez sur une entrée dans la structure du document, le document est placé à l’emplacement du signet.  
   
 ### <a name="bookmarks"></a>Signets  
  Les signets ne sont pas pris en charge dans le rendu PDF.  
@@ -93,7 +94,7 @@ ms.locfileid: "66107922"
   
   
   
-##  <a name="Compression"></a> Compression  
+##  <a name="Compression"></a>Compressé  
  La compression d'image est basée sur le type de fichier d'origine de l'image. L'extension de rendu PDF compresse les fichiers PDF par défaut.  
   
  Pour conserver la compression des images incluses dans le fichier PDF lorsque cela est possible, les images JPEG sont stockées au format JPEG et tous les autres types d'images sont stockés au format BMP.  

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ea11c177533a6101bb0654ca0450e85ea855d9a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150820"
 ---
 # <a name="plan-guides"></a>Repères de plan
@@ -125,7 +125,7 @@ sp_create_plan_guide
   
  Pour les repères de plan basés sur SQL ou TEMPLATE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fait correspondre les valeurs des arguments @module_or_batch et @params avec une requête en comparant les deux valeurs caractère par caractère. Cela signifie que vous devez fournir le texte exactement tel que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le reçoit dans le traitement réel.  
   
- Quand @type= 'SQL' et que @module_or_batch a la valeur NULL, la valeur définie pour de @module_or_batch est celle de @stmt. Autrement dit, la valeur de *statement_text* doit être fournie dans un format identique (au caractère près) à celui utilisé lors de son envoi à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Aucune conversion interne n'est effectuée pour faciliter cette correspondance.  
+ Lorsque @type = 'SQL’et @module_or_batch a la valeur null, la valeur de @module_or_batch est définie sur la valeur de @stmt. Cela signifie que la valeur de *statement_text* doit être fournie au format identique, caractère pour le caractère, tel qu’il est envoyé à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Aucune conversion interne n'est effectuée pour faciliter cette correspondance.  
   
  Lorsqu'un repère de plan normal (SQL ou OBJECT) et un repère de plan TEMPLATE peuvent s'appliquer tous les deux à une instruction, seul le repère de plan normal est utilisé.  
   
@@ -152,7 +152,7 @@ sp_create_plan_guide
  [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql)   
- [sys.plan_guides &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-plan-guides-transact-sql)   
- [sys.fn_validate_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)  
+ [sys. plan_guides &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-plan-guides-transact-sql)   
+ [sys. fn_validate_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)  
   
   

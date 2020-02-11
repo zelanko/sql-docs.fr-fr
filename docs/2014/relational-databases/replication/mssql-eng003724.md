@@ -13,30 +13,30 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f3ea7c8720d43fdba53821091c0664bfe375a57b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191452"
 ---
-# <a name="mssqleng003724"></a>MSSQL_ENG003724
+# <a name="mssql_eng003724"></a>MSSQL_ENG003724
     
 ## <a name="message-details"></a>Détails du message  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|3724|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|3724|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique||  
-|Texte du message|Impossible de % S_MSG % S_MSG ' %. * ls', car il est utilisé pour la réplication.|  
+|Texte du message|Impossible de %1! le %2! '%3!' parce qu'il est utilisé pour la réplication.|  
   
 ## <a name="explanation"></a>Explication  
  Lorsque des objets d'une base de données sont répliqués, ils sont marqués comme étant répliqués dans la table système **sysarticles** (publications transactionnelles ou d'instantanés) ou dans la table système **sysmergearticles** (publications de fusion). Si vous tentez de supprimer un objet répliqué, cette erreur est générée.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
- Vérifiez que l'objet de base de données n'est pas répliqué avant d'essayer de le supprimer. Exemple :  
+ Vérifiez que l'objet de base de données n'est pas répliqué avant d'essayer de le supprimer. Par exemple :  
   
 -   Si l'erreur se produit dans la base de données de publication, supprimez l'article de la publication avant de supprimer l'objet. Pour plus d’informations, consultez [Ajouter et supprimer des articles de publications existantes](publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   

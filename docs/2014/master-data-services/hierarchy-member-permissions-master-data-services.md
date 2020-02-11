@@ -14,33 +14,33 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 371c7c605b5415654c01f3faa66fbd0801202785
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482952"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Autorisations des membres de la hiérarchie (Master Data Services)
   Les autorisations des membres de la hiérarchie sont optionnelles et doivent être utilisées uniquement lorsque vous souhaitez qu'un utilisateur ait un accès limité à des membres spécifiques. Si vous n'affectez pas d'autorisations sous l'onglet **Membres de hiérarchie** , les autorisations de l'utilisateur sont basées uniquement sur celles affectées sous l'onglet **Modèles** .  
   
- Les autorisations des membres de la hiérarchie sont affectées dans l’interface utilisateur de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , dans la zone fonctionnelle **Autorisations d’accès** sous l’onglet **Membres de hiérarchie** . Ces autorisations déterminent les membres auxquels un utilisateur peut accéder dans la zone fonctionnelle **Explorateur** de l'interface utilisateur.  
+ Les autorisations des membres de la hiérarchie [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] sont affectées dans l’interface utilisateur, dans la zone fonctionnelle **autorisations d’accès** sous l’onglet **membres de hiérarchie** . Ces autorisations déterminent les membres auxquels un utilisateur peut accéder dans la zone fonctionnelle **Explorateur** de l’interface utilisateur.  
   
  Sous l'onglet **Membres de hiérarchie** , chaque hiérarchie est représentée comme une arborescence. Lorsque vous affectez une autorisation à un nœud dans l'arborescence, tous les enfants héritent de cette autorisation à moins qu'elle ne soit affectée explicitement à un niveau inférieur.  
   
 > [!NOTE]  
 >  Lorsque vous affectez une autorisation à un nœud dans une hiérarchie, tous les membres des autres nœuds au même niveau ou à un niveau supérieur sont implicitement refusés.  
   
- Dans l' **Explorateur**, les autorisations des membres sont appliquées partout où le membre est affiché. Par exemple, un membre avec **en lecture seule** autorisation est en lecture seule dans des entités, des hiérarchies et collections auquel il appartient.  
+ Dans l' **Explorateur**, les autorisations des membres sont appliquées partout où le membre est affiché. Par exemple, un membre avec l’autorisation **lecture** seule est en lecture seule dans toutes les entités, hiérarchies et collections auxquelles il appartient.  
   
  Les autorisations des membres de la hiérarchie s'appliquent à la version de modèle à laquelle vous les affectez ainsi qu'à toutes les futures copies de la version. Elles ne s'appliquent pas aux versions antérieures à celle à laquelle vous les affectez.  
   
-|Permission|Description|  
+|Autorisation|Description|  
 |----------------|-----------------|  
-|**Lecture seule**|Les membres sont affichés, mais l'utilisateur ne peut pas les modifier. L'utilisateur ne peut pas non plus déplacer les membres dans les collections ou hiérarchies explicites auxquelles les membres appartiennent.<br /><br /> Remarque : Si vous affectez **en lecture seule** autorisé à **racine**, les membres sous **racine** sont en lecture seule ; toutefois, dans les hiérarchies et collections explicites, l’utilisateur peut déplacer des membres à **Racine** et ajouter de nouveaux membres à **racine**.|  
-|**Update**|Les membres sont affichés et l'utilisateur peut les modifier. L'utilisateur peut également déplacer les membres dans les collections ou hiérarchies explicites auxquelles les membres appartiennent.|  
-|**Refuser**|Les membres ne sont pas affichés.|  
+|**Lecture seule**|Les membres sont affichés, mais l'utilisateur ne peut pas les modifier. L'utilisateur ne peut pas non plus déplacer les membres dans les collections ou hiérarchies explicites auxquelles les membres appartiennent.<br /><br /> Remarque : Si vous attribuez l’autorisation **lecture** seule à la **racine**, les membres sous **racine** sont en lecture seule ; Toutefois, dans les hiérarchies et collections explicites, l’utilisateur peut déplacer des membres vers la **racine** et ajouter de nouveaux membres à la **racine**.|  
+|**Mise à jour**|Les membres sont affichés et l'utilisateur peut les modifier. L'utilisateur peut également déplacer les membres dans les collections ou hiérarchies explicites auxquelles les membres appartiennent.|  
+|**Deny**|Les membres ne sont pas affichés.|  
   
- Sous l'onglet **Membres de hiérarchie** , les autorisations que vous affectez n'entrent pas immédiatement en vigueur. La fréquence à laquelle les autorisations sont appliquées dépend du paramètre **Intervalle de traitement de la sécurité des membres** dans la table Paramètres système de la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Vous pouvez appliquer immédiatement des autorisations de membre en suivant la procédure décrite dans [Immediately Apply Member Permissions &#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md).  
+ Sous l'onglet **Membres de hiérarchie** , les autorisations que vous affectez n'entrent pas immédiatement en vigueur. La fréquence à laquelle les autorisations sont appliquées dépend du paramètre **Intervalle de traitement de la sécurité des membres** dans la table Paramètres système de la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Vous pouvez appliquer immédiatement des autorisations de membre en suivant la procédure décrite dans [Appliquer immédiatement des autorisations de membre &#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md).  
   
 > [!NOTE]  
 >  Vous ne pouvez pas affecter d'autorisations de membre de hiérarchie à des hiérarchies récursives, des hiérarchies dérivées avec un niveau supérieur composé d'une hiérarchie explicite et des hiérarchies dérivées avec des niveaux masqués.  
@@ -51,9 +51,9 @@ ms.locfileid: "65482952"
 ### <a name="when-a-member-belongs-to-multiple-hierarchies"></a>Lorsqu'un membre appartient à plusieurs hiérarchies  
  Plusieurs hiérarchies peuvent contenir le même membre.  
   
--   Si un nœud de hiérarchie est affecté **mise à jour** autorisation et l’autre est affecté **en lecture seule**, puis les membres dans le nœud sont **en lecture seule**.  
+-   Si une autorisation **mettre à jour** est affectée à un nœud de la hiérarchie et que l’autre est **accessible en lecture seule**, les membres du nœud sont **en lecture**seule.  
   
--   Si un nœud de hiérarchie est affecté **mise à jour** ou **en lecture seule** autorisation et un autre nœud est affecté **Deny**, puis les membres dans le nœud ne sont pas affichés.  
+-   Si l’autorisation **mise à jour** ou **lecture seule** est affectée à un nœud de la hiérarchie et que l’autorisation **refuser**est affectée à un autre nœud, les membres du nœud ne sont pas affichés.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Affecter des autorisations de membre de hiérarchie &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   

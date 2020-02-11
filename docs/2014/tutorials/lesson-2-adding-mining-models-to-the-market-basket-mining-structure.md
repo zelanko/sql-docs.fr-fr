@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 2 : Ajout des modèles d’exploration de données à la Structure d’exploration de données Market Basket | Microsoft Docs'
+title: 'Leçon 2 : ajout de modèles d’exploration de données à la structure d’exploration de données Market panier | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,23 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b9573d9359983e33cf23533787c26039572710ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204723"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Leçon 2 : Ajout de modèles d’exploration de données à la structure d’exploration de données Market Basket
-  Dans cette leçon, vous allez ajouter deux modèles d’exploration de données à la structure d’exploration de données Market Basket que vous avez créé dans [leçon 1 : Création de la Structure d’exploration de données de panier](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). Ces modèles d'exploration de données vous permettent de créer des prédictions.  
+# <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Leçon 2 : Ajout de modèles d'exploration de données à la structure d'exploration de données Market Basket
+  Dans cette leçon, vous allez ajouter deux modèles d’exploration de données à la structure d’exploration de données Market panier que vous avez créée au cours de [la leçon 1 : création de la structure d’exploration de données Market panier](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). Ces modèles d'exploration de données vous permettent de créer des prédictions.  
   
- Pour prévoir les types de produits que les clients sont susceptibles d’acheter en même temps, vous allez créer deux modèles d’exploration de données à l’aide de la [algorithme Microsoft Association](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md) et deux valeurs différentes pour le *MINIMUM_PROBABILTY* paramètre.  
+ Pour prédire les types de produits que les clients ont tendance à acheter en même temps, vous allez créer deux modèles d’exploration de données à l’aide de l' [algorithme Microsoft Association](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md) et deux valeurs différentes pour le paramètre *MINIMUM_PROBABILTY* .  
   
- *MINIMUM_PROBABILTY* est un [!INCLUDE[msCoName](../includes/msconame-md.md)] paramètre d’algorithme Association qui permet de déterminer le nombre de règles qui contient un modèle d’exploration de données en spécifiant la probabilité minimale qu’une règle doit avoir. Par exemple, la valeur 0,4 spécifie qu'une règle peut être générée uniquement si la combinaison des produits que la règle décrit présente une probabilité d'occurrence d'au moins quarante pour cent.  
+ *MINIMUM_PROBABILTY* est un [!INCLUDE[msCoName](../includes/msconame-md.md)] paramètre d’algorithme d’association qui permet de déterminer le nombre de règles qu’un modèle d’exploration de données contiendra en spécifiant la probabilité minimale qu’une règle doit avoir. Par exemple, la valeur 0,4 spécifie qu'une règle peut être générée uniquement si la combinaison des produits que la règle décrit présente une probabilité d'occurrence d'au moins quarante pour cent.  
   
- Vous examinerez l’effet de la modification de la *MINIMUM_PROBABILTY* paramètre dans une leçon ultérieure.  
+ Vous allez voir l’effet de la modification du paramètre *MINIMUM_PROBABILTY* dans une leçon ultérieure.  
   
 ## <a name="alter-mining-structure-statement"></a>Instruction ALTER MINING STRUCTURE  
- Pour ajouter un modèle d’exploration de données qui contient une table imbriquée à une structure d’exploration de données, vous utilisez le [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) instruction. Le code dans l’instruction peut être divisé en parties suivantes :  
+ Pour ajouter un modèle d’exploration de données qui contient une table imbriquée à une structure d’exploration de données, vous utilisez l’instruction [ALTER Mining structure &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) . Le code de l’instruction peut être divisé en plusieurs parties :  
   
 -   Identification de la structure d'exploration de données  
   
@@ -67,9 +67,9 @@ ALTER MINING STRUCTURE [<mining structure name>]
 ADD MINING MODEL [<mining model name>]  
 ```  
   
- Pour plus d’informations sur l’appellation d’un objet dans les Extensions DMX (Data Mining), consultez [identificateurs &#40;DMX&#41;](/sql/dmx/identifiers-dmx).  
+ Pour plus d’informations sur l’attribution d’un nom à un objet dans les extensions DMX (Data Mining Extensions), consultez [identificateurs &#40;dmx&#41;](/sql/dmx/identifiers-dmx).  
   
- Les lignes suivantes du code définissent les colonnes dans la structure d’exploration de données qui sera utilisée par le modèle d’exploration de données :  
+ Les lignes suivantes du code définissent les colonnes de la structure d’exploration de données qui seront utilisées par le modèle d’exploration de données :  
   
 ```  
 [<key column>],  
@@ -78,7 +78,7 @@ ADD MINING MODEL [<mining model name>]
   
  Vous pouvez utiliser uniquement des colonnes qui existent déjà dans la structure d'exploration de données.  
   
- La première colonne dans la liste de colonnes de modèle d'exploration de données doit être la colonne clé dans la structure d'exploration de données. Toutefois, vous n’avez pas au type `KEY` après la colonne clé pour spécifier l’utilisation. En effet, vous avez déjà défini la colonne en tant que clé lorsque vous avez créé la structure d'exploration de données.  
+ La première colonne dans la liste de colonnes de modèle d'exploration de données doit être la colonne clé dans la structure d'exploration de données. Toutefois, il n’est pas nécessaire de `KEY` taper après la colonne clé pour spécifier l’utilisation. En effet, vous avez déjà défini la colonne en tant que clé lorsque vous avez créé la structure d'exploration de données.  
   
  Les lignes restantes spécifient l'utilisation des colonnes dans le nouveau modèle d'exploration de données. Vous pouvez spécifier qu’une colonne dans le modèle d’exploration de données sera utilisée pour la prédiction à l’aide de la syntaxe suivante :  
   
@@ -95,18 +95,18 @@ ADD MINING MODEL [<mining model name>]
 ```  
   
 ## <a name="lesson-tasks"></a>Tâches de la leçon  
- Vous allez effectuer les tâches suivantes dans cette leçon :  
+ Dans cette leçon, vous allez effectuer les tâches suivantes :  
   
 -   ajouter un modèle d'exploration de données Association à la structure à l'aide de la probabilité par défaut ;  
   
 -   ajouter un modèle d'exploration de données Association à la structure à l'aide d'une probabilité modifiée.  
   
-## <a name="adding-an-association-mining-model-to-the-structure-using-the-default-minimumprobability"></a>Ajout d'un modèle d'exploration de données Association à la structure en utilisant le paramètre MINIMUM_PROBABILITY par défaut  
- La première tâche consiste à ajouter un nouveau modèle d’exploration de données à la structure d’exploration de données de panier d’achat basé sur le [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithme d’Association à l’aide de la valeur par défaut *MINIMUM_PROBABILITY*.  
+## <a name="adding-an-association-mining-model-to-the-structure-using-the-default-minimum_probability"></a>Ajout d'un modèle d'exploration de données Association à la structure en utilisant le paramètre MINIMUM_PROBABILITY par défaut  
+ La première tâche consiste à ajouter un nouveau modèle d’exploration de données à la structure d’exploration de [!INCLUDE[msCoName](../includes/msconame-md.md)] données Market panier basée sur l’algorithme d’association, en utilisant la valeur par défaut pour *MINIMUM_PROBABILITY*.  
   
 #### <a name="to-add-an-association-mining-model"></a>Pour ajouter un modèle d'exploration de données Association  
   
-1.  Dans **Explorateur d’objets**, avec le bouton droit de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
+1.  Dans l' **Explorateur d’objets**, cliquez avec le bouton [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]droit sur l’instance de, pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
   
      L'Éditeur de requête s'ouvre et contient une nouvelle requête vide.  
   
@@ -189,18 +189,18 @@ ADD MINING MODEL [<mining model name>]
     Using Microsoft_Association_Rules  
     ```  
   
-7.  Sur le **fichier** menu, cliquez sur **enregistrer DMXQuery1.dmx sous**.  
+7.  Dans le menu **fichier** , cliquez sur **Enregistrer DMXQuery1. DMX sous**.  
   
-8.  Dans le **enregistrer en tant que** boîte de dialogue, accédez au dossier approprié et nommez le fichier `Default_Association_Model.dmx`.  
+8.  Dans la boîte de dialogue **Enregistrer sous** , accédez au dossier approprié et nommez le fichier `Default_Association_Model.dmx`.  
   
-9. Dans la barre d’outils, cliquez sur le **Execute** bouton.  
+9. Dans la barre d’outils, cliquez sur le bouton **exécuter** .  
   
-## <a name="adding-an-association-mining-model-to-the-structure-changing-the-default-minimumprobability"></a>Ajout d'un modèle d'exploration de données Association à la structure en modifiant le paramètre MINIMUM_PROBABILITY par défaut  
+## <a name="adding-an-association-mining-model-to-the-structure-changing-the-default-minimum_probability"></a>Ajout d'un modèle d'exploration de données Association à la structure en modifiant le paramètre MINIMUM_PROBABILITY par défaut  
  La tâche suivante consiste à ajouter un nouveau modèle d'exploration de données à la structure d'exploration de données Market Basket en partant de l'algorithme [!INCLUDE[msCoName](../includes/msconame-md.md)] Association, puis en attribuant la valeur par défaut 0,01 au paramètre MINIMUM_PROBABILITY. La modification du paramètre force alors l'algorithme [!INCLUDE[msCoName](../includes/msconame-md.md)] Association à créer d'autres règles.  
   
 #### <a name="to-add-an-association-mining-model"></a>Pour ajouter un modèle d'exploration de données Association  
   
-1.  Dans **Explorateur d’objets**, avec le bouton droit de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
+1.  Dans l' **Explorateur d’objets**, cliquez avec le bouton [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]droit sur l’instance de, pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
   
      L'Éditeur de requête s'ouvre et contient une nouvelle requête vide.  
   
@@ -276,15 +276,15 @@ ADD MINING MODEL [<mining model name>]
     USING Microsoft_Association_Rules (Minimum_Probability = 0.1)  
     ```  
   
-7.  Sur le **fichier** menu, cliquez sur **enregistrer DMXQuery1.dmx sous**.  
+7.  Dans le menu **fichier** , cliquez sur **Enregistrer DMXQuery1. DMX sous**.  
   
-8.  Dans le **enregistrer en tant que** boîte de dialogue, accédez au dossier approprié et nommez le fichier `Modified Association_Model.dmx`.  
+8.  Dans la boîte de dialogue **Enregistrer sous** , accédez au dossier approprié et nommez le fichier `Modified Association_Model.dmx`.  
   
-9. Dans la barre d’outils, cliquez sur le **Execute** bouton.  
+9. Dans la barre d’outils, cliquez sur le bouton **exécuter** .  
   
  Dans la leçon suivante, vous allez traiter la structure d'exploration de données Market Basket et ses modèles d'exploration de données associés.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 3 : Traitement de la Structure d’exploration de données de panier d’achat](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
+ [Leçon 3 : traitement de la structure d'exploration de données Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
   
   

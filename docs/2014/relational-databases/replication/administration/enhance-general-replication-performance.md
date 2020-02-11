@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63187076"
 ---
 # <a name="enhance-general-replication-performance"></a>Améliorer les performances générales de la réplication
@@ -74,7 +74,7 @@ ms.locfileid: "63187076"
   
     -   Dans le cas d'une réplication transactionnelle, il peut être plus efficace d'inclure cette logique dans des procédures stockées personnalisées utilisées pour appliquer les commandes répliquées. Pour plus d’informations, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](../transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
-    -   Dans le cas d'une réplication de fusion, il peut être plus efficace d'utiliser des gestionnaires de logique métier. Pour plus d’informations, consultez [Exécuter la logique métier pendant la synchronisation de fusion](../merge/execute-business-logic-during-merge-synchronization.md).  
+    -   Dans le cas d'une réplication de fusion, il peut être plus efficace d'utiliser des gestionnaires de logique métier. Pour plus d’informations, consultez [Exécuter la logique métier lors de la synchronisation de fusion](../merge/execute-business-logic-during-merge-synchronization.md).  
   
      Si vous utilisez des déclencheurs pour conserver l'intégrité référentielle dans les tables publiées pour la réplication de fusion, indiquez l'ordre de traitement des tables afin de réduire le nombre de tentatives nécessaires à l'Agent de fusion. Pour plus d’informations, consultez [Spécifier les propriétés de la réplication de fusion](../publish/specify-merge-replication-properties.md).  
   
@@ -82,7 +82,7 @@ ms.locfileid: "63187076"
   
      Les objets volumineux nécessitent plus d'espace de stockage et de traitement que les autres types de données de colonnes. N'incluez pas ces colonnes dans les articles à moins que votre application en ait besoin. Les types de données `text`, `ntext` et `image` sont déconseillés. Si vous incluez des données de type LOB, il est recommandé d'utiliser respectivement les types de données `varchar(max)`, `nvarchar(max)`, `varbinary(max)`.  
   
-     Dans le cas d'une réplication transactionnelle, envisagez d'utiliser le profil de l'Agent de distribution appelé **Profil de distribution pour le flux OLEDB**. Pour plus d’informations, voir [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
+     Dans le cas d'une réplication transactionnelle, envisagez d'utiliser le profil de l'Agent de distribution appelé **Profil de distribution pour le flux OLEDB**. Pour plus d'informations, voir [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
   
 ## <a name="publication-design"></a>Conception de la publication  
   
@@ -96,7 +96,7 @@ ms.locfileid: "63187076"
   
      Les modifications peuvent être partitionnées en publiant des sous-ensembles de données sur chaque abonné, ou en utilisant une application qui dirige les modifications d'une ligne donnée sur un nœud donné :  
   
-    -   La réplication de fusion prend en charge la publication de sous-ensembles de données à l'aide de paramètres filtrés avec une seule publication. Pour plus d’informations, consultez [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+    -   La réplication de fusion prend en charge la publication de sous-ensembles de données à l'aide de paramètres filtrés avec une seule publication. Pour plus d'informations, voir [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
     -   La réplication transactionnelle prend en charge la publication de sous-ensembles de données à l'aide de filtres statiques avec plusieurs publications. Pour plus d’informations, consultez [Filtrer des données publiées](../publish/filter-published-data.md).  
   
@@ -158,7 +158,7 @@ ms.locfileid: "63187076"
   
 -   Utilisez le paramètre **-UseInprocLoader** de l’Agent de distribution et de l’Agent de fusion (il est impossible d’utiliser ce paramètre si des tables publiées comportent des colonnes XML). Ce paramètre entraîne l'utilisation de la commande BULK INSERT par l'Agent lorsque l'instantané est appliqué.  
   
- Les paramètres des agents peuvent être spécifiés dans des profils d'agent et sur la ligne de commande. Pour plus d'informations, consultez :  
+ Les paramètres des agents peuvent être spécifiés dans des profils d'agent et sur la ligne de commande. Pour plus d'informations, consultez les pages suivantes :  
   
 -   [Utiliser des profils d’agent de réplication](../agents/work-with-replication-agent-profiles.md)  
   

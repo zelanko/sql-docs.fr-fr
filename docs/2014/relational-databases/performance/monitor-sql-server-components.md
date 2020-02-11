@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9c0534bf3a12aa81a9fc84d0e2c4f82a189748a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150750"
 ---
 # <a name="monitor-sql-server-components"></a>Surveiller les composants SQL Server
@@ -82,7 +82,7 @@ ms.locfileid: "63150750"
   
 -   Distributed Replay Utility  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Moniteur d'activité  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Moniteur d’activité  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Plan d'exécution de requêtes graphique  
   
@@ -120,7 +120,8 @@ ms.locfileid: "63150750"
   
 3.  Enregistrer les données d'événement capturées.  
   
-     L'enregistrement des données d'événement capturées vous permet de les analyser ultérieurement, voire de les relire avec Distributed Replay Utility ou le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Les données d'événement capturées sont enregistrées dans un fichier pouvant être rechargé dans l'outil qui l'a créé à l'origine pour analyse. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permet d’enregistrer les données d’événement dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'enregistrement des données d'événement capturées est essentiel lors de la création d'un niveau de référence des performances. Les données du niveau de référence des performances sont enregistrées et utilisées lors de la comparaison des données d'événement récemment capturées afin de déterminer si les performances sont optimales. Pour plus d’informations, consultez [Modèles et autorisations du générateur de SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md).  
+     L'enregistrement des données d'événement capturées vous permet de les analyser ultérieurement, voire de les relire avec Distributed Replay Utility ou le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Les données d'événement capturées sont enregistrées dans un fichier pouvant être rechargé dans l'outil qui l'a créé à l'origine pour analyse. 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permet d’enregistrer les données d’événement dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'enregistrement des données d'événement capturées est essentiel lors de la création d'un niveau de référence des performances. Les données du niveau de référence des performances sont enregistrées et utilisées lors de la comparaison des données d'événement récemment capturées afin de déterminer si les performances sont optimales. Pour plus d’informations, consultez [Modèles et autorisations du générateur de SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md).  
   
 4.  Créer des modèles de trace contenant les paramètres spécifiés pour capturer les événements.  
   

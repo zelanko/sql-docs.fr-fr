@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0583632b9c9b8548e16b7a74718b48cad8066ced
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098038"
 ---
-# <a name="setextendedprotectionsettings-method-wmi-msreportserverconfigurationsetting"></a>Méthode SetExtendedProtectionSettings (WMI MSReportServer_ConfigurationSetting)
+# <a name="setextendedprotectionsettings-method-wmi-msreportserver_configurationsetting"></a>Méthode SetExtendedProtectionSettings (WMI MSReportServer_ConfigurationSetting)
   La méthode SetExtendedProtectionSettings sert à définir les propriétés RSWindowsExtendedProtectionLevel et RSWindowsExtendedProtectionScenario dans le fichier de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (RSReportServer.config).  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -41,14 +41,14 @@ public void SetExtendedProtectionSettings(
 ```  
   
 ## <a name="parameters"></a>Paramètres  
- *ExtendedProtectionLevel*  
+ *Propriété ExtendedProtectionLevel*  
  Définit RSWindowsExtendedProtectionLevel dans le fichier RSRreportserver.config. La valeur est obligatoire et ne respecte pas la casse.  
   
  La liste suivante affiche les valeurs valides :  
   
  `"Off | Allow | Require"`  
   
- *ExtendedProtectionScenario*  
+ *ExtendedProtectionScenario a pour*  
  Définit RSWindowsExtendedProtectionScenario dans le fichier RSReportserver.config. La valeur est obligatoire et ne respecte pas la casse.  
   
  La liste suivante affiche les valeurs valides :  
@@ -60,13 +60,13 @@ public void SetExtendedProtectionSettings(
   
  Pour définir la propriété ExtendedProtectionLevel, l'utilisateur doit être un membre du groupe BUILTIN\Administrators sur le serveur de rapports.  
   
-## <a name="requirements"></a>Configuration requise  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+## <a name="requirements"></a>Spécifications  
+ **Espace de noms :**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriété RSWindowsExtendedProtectionScenario &#40;WMI MSReportServer_ConfigurationSetting&#41;](rswindowsextendedprotectionscenario-property.md)   
  [Propriété RSWindowsExtendedProtectionLevel &#40;WMI MSReportServer_ConfigurationSetting&#41;](rswindowsextendedprotectionlevel-property.md)   
  [Protection étendue de l’authentification avec Reporting Services](../security/extended-protection-for-authentication-with-reporting-services.md)   
- [Fichier de configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md)  
+ [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)  
   
   

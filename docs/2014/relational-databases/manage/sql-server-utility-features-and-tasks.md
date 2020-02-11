@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1d3f61904a1a820df58583212dcbd2e998dbabbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63190424"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Fonctionnalités et tâches de l'utilitaire SQL Server
@@ -41,23 +41,23 @@ ms.locfileid: "63190424"
 |||  
 |-|-|  
 |**Description**|**Rubrique**|  
-|Décrit des éléments à prendre en considération lors de la configuration d'un serveur pour exécuter des jeux d'éléments de collecte d'utilitaire et de non-utilitaire sur la même instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Considérations sur l'exécution de jeux d'éléments de collecte de l'utilitaire et non-utilitaire sur la même instance de SQL Server](run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)|  
+|Décrit des éléments à prendre en considération lors de la configuration d'un serveur pour exécuter des jeux d'éléments de collecte d'utilitaire et de non-utilitaire sur la même instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Considérations sur l’exécution de jeux d’éléments de collecte de l’utilitaire et non-utilitaire sur la même instance de SQL Server](run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)|  
 |Décrit comme créer un point de contrôle d'utilitaire SQL Server.|[Créer un point de contrôle de l’utilitaire SQL Server &#40;utilitaire SQL Server&#41;](create-a-sql-server-utility-control-point-sql-server-utility.md)|  
 |Décrit comment se connecter à un Utilitaire SQL Server.|[Se connecter à un utilitaire SQL Server](connect-to-a-sql-server-utility.md)|  
 |Décrit comment inscrire une instance de SQL Server auprès d'un point de contrôle d'utilitaire.|[Inscrire une instance de SQL Server &#40;utilitaire SQL Server&#41;](enroll-an-instance-of-sql-server-sql-server-utility.md)|  
-|Décrit comment utiliser l'Explorateur d'utilitaire pour gérer l'Utilitaire SQL Server.|[Utiliser l'Explorateur de l'utilitaire pour gérer l'Utilitaire SQL Server](use-utility-explorer-to-manage-the-sql-server-utility.md)|  
+|Décrit comment utiliser l'Explorateur d'utilitaire pour gérer l'Utilitaire SQL Server.|[Utiliser l’Explorateur d’utilitaire pour gérer l’utilitaire SQL Server](use-utility-explorer-to-manage-the-sql-server-utility.md)|  
 |Décrit comment surveiller les instances de SQL Server dans l'Utilitaire SQL Server.|[Surveiller des instances de SQL Server dans l'utilitaire SQL Server](monitor-instances-of-sql-server-in-the-sql-server-utility.md)|  
 |Décrit comment afficher les résultats d'une stratégie de contrôle d'intégrité des ressources.|[Consulter les résultats d’une stratégie de contrôle d’intégrité des ressources &#40;utilitaire SQL Server&#41;](view-resource-health-policy-results-sql-server-utility.md)|  
-|Décrit comment modifier une définition de stratégie de contrôle d'intégrité des ressources.|[Modifier une définition de la stratégie de contrôle d’intégrité des ressources &#40;utilitaire SQL Server&#41;](modify-a-resource-health-policy-definition-sql-server-utility.md)|  
+|Décrit comment modifier une définition de stratégie de contrôle d'intégrité des ressources.|[Modifier une définition de la stratégie de contrôle d’intégrité des ressources &#40;Utilitaire SQL Server&#41;](modify-a-resource-health-policy-definition-sql-server-utility.md)|  
 |Décrit comment configurer votre entrepôt de données UCP.|[Configurer votre entrepôt de données de point de contrôle de l’utilitaire &#40;utilitaire SQL Server&#41;](configure-your-utility-control-point-data-warehouse-sql-server-utility.md)|  
 |Décrit comment configurer les stratégies de contrôle d'intégrité de l'utilitaire.|[Configurer des stratégies de contrôle d’intégrité &#40;utilitaire SQL Server&#41;](configure-health-policies-sql-server-utility.md)|  
 |Décrit comment ajuster l'atténuation dans les stratégies d'utilisation du processeur.|[Réduire le bruit dans les stratégies d’utilisation du processeur &#40;utilitaire SQL Server&#41;](reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)|  
-|Décrit comment supprimer une instance de SQL Server d'un UCP.|[Supprimer une instance de SQL Server de l'utilitaire SQL Server](remove-an-instance-of-sql-server-from-the-sql-server-utility.md)|  
+|Décrit comment supprimer une instance de SQL Server d'un UCP.|[Supprimer une instance de SQL Server de l’utilitaire SQL Server](remove-an-instance-of-sql-server-from-the-sql-server-utility.md)|  
 |Décrit comment modifier le compte proxy pour le collecteur de données de l'utilitaire sur une instance gérée de SQL Server.|[Modifier le compte proxy pour le jeu d’éléments de collecte de l’utilitaire sur une instance gérée de SQL Server &#40;utilitaire SQL Server&#41;](change-proxy-account-for-utility-collection-on-managed-sql-server.md)|  
 |Décrit comment déplacer un UCP d'une instance de SQL Server vers une autre.|[Déplacer un UCP d’une instance de SQL Server vers une autre &#40;utilitaire SQL Server&#41;](move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md)|  
 |Décrit comment supprimer un UCP.|[Supprimer un point de contrôle de l’utilitaire &#40;utilitaire SQL Server&#41;](remove-a-utility-control-point-sql-server-utility.md)|  
-|Décrit comment résoudre les problèmes de l'utilitaire SQL Server.|[Résolution des problèmes liés à l'utilitaire SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md)|  
+|Décrit comment résoudre les problèmes de l'utilitaire SQL Server.|[Résolution des problèmes liés à l’utilitaire SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md)|  
 |Décrit comment résoudre les problèmes d'intégrité des ressources de SQL Server.|[Résoudre les problèmes de contrôle d’intégrité de SQL Server &#40;utilitaire SQL Server&#41;](troubleshoot-sql-server-resource-health-sql-server-utility.md)|  
-|Liens vers les rubriques d'aide (F1) de l'Explorateur d'utilitaire.|[Aide sur l'Explorateur d'objets accessible via la touche F1](utility-explorer-f1-help.md)|  
+|Liens vers les rubriques d'aide (F1) de l'Explorateur d'utilitaire.|[Aide (F1) sur l’Explorateur d’utilitaire](utility-explorer-f1-help.md)|  
   
   

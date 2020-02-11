@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3dc7d153bb9e680d1948f5cddc118d51a2b1e792
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482746"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>Zone fonctionnelle Administration de système (Master Data Manager)
@@ -31,11 +31,11 @@ ms.locfileid: "65482746"
   
  [Attributs &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
- [Activer une entité pour les hiérarchies et Collections explicites &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)  
+ [Activez une entité pour les hiérarchies explicites et les collections &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)  
   
  [Attributs basés sur un domaine &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
- [Créer un attribut de texte &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)  
+ [Créez un attribut de texte &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)  
   
  [Créer un attribut basé sur un domaine &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
@@ -45,14 +45,14 @@ ms.locfileid: "65482746"
   
  [Déploiement de modèles &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
- [Déployer un package de déploiement de modèle à l’aide de l’Assistant](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
+ [Déployer un package de déploiement de modèle à l'aide de l'Assistant](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   
  [Créer un package de déploiement de modèle à l'aide de l'Assistant](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)  
   
- [Résolution des problèmes de déploiement de modèle de (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-model-deployment-master-data-services.aspx)  
+ [Résolution des problèmes de déploiement de modèle (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-model-deployment-master-data-services.aspx)  
   
 ## <a name="business-rules"></a>Règles d'entreprise  
- [Règles d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+ [&#40;des règles d’entreprise Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
  [Créer et publier une règle d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   

@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cf786e48e6e76ca6a16a0a50a954a2a07d3f7a66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162351"
 ---
 # <a name="create-unique-indexes"></a>Créer des index uniques
@@ -108,7 +108,7 @@ ms.locfileid: "63162351"
   
 5.  Dans la boîte de dialogue **Index/Clés** , cliquez sur **Ajouter**.  
   
-6.  Sélectionnez le nouvel index dans la zone de texte **Index ou clé unique/primaire sélectionné(e)** .  
+6.  Sélectionnez le nouvel index dans la zone de texte **Clé ou index Primary/Unique sélectionné** .  
   
 7.  Dans la grille principale, sous **(Général)** , sélectionnez **Type** puis choisissez **Index** dans la liste.  
   
@@ -120,11 +120,11 @@ ms.locfileid: "63162351"
   
 11. Dans la grille, sous **(Général)** , sélectionnez **Est unique** , puis choisissez **Oui** dans la liste.  
   
-12. Facultatif : Dans la grille principale, sous **Concepteur de tables**, sélectionnez **ignorer les clés dupliquées** , puis **Oui** dans la liste. Effectuez cette opération si vous souhaitez ignorer les tentatives d'ajout de données qui créeraient une clé dupliquée dans l'index unique.  
+12. Facultatif : Dans la grille principale, sous **Concepteur de tables**, sélectionnez **Ignorer les clés dupliquées** , puis choisissez **Oui** dans la liste. Effectuez cette opération si vous souhaitez ignorer les tentatives d'ajout de données qui créeraient une clé dupliquée dans l'index unique.  
   
 13. Cliquez sur **Fermer**.  
   
-14. Dans le menu **Fichier** , cliquez sur **Enregistrer**_nom_table_.  
+14. Dans le menu **fichier** , cliquez sur **Enregistrer**_table_name_.  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>Créer un index unique à l'aide de l'Explorateur d'objets  
   
@@ -142,7 +142,7 @@ ms.locfileid: "63162351"
   
 7.  Sous **Colonnes clés d’index**, cliquez sur **Ajouter…** .  
   
-8.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de**_nom_table_ , cochez la ou les cases correspondant à la ou aux colonnes de table à ajouter à l’index unique.  
+8.  Dans la boîte de dialogue **Sélectionner les colonnes à partir de**_table_name_ , activez la ou les cases à cocher de la ou des colonnes de table à ajouter à l’index unique.  
   
 9. Cliquez sur **OK**.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "63162351"
   
 #### <a name="to-create-a-unique-index-on-a-table"></a>Pour créer un index unique sur une table  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

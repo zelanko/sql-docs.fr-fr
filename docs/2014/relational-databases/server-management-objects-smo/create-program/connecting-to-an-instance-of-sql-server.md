@@ -1,5 +1,5 @@
 ---
-title: Connexion à une Instance de SQL Server | Microsoft Docs
+title: Connexion à une instance de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,26 +16,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1d22ec44b7be6562c7186272b403a76cd562be62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192080"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>Connexion à une instance de SQL Server
-  La première étape de programmation un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les application Management Objects (SMO) consiste à créer une instance de la <xref:Microsoft.SqlServer.Management.Smo.Server> objet et pour établir sa connexion à une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  La première étape de programmation dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] une application Smo (Management Objects) consiste à créer une instance <xref:Microsoft.SqlServer.Management.Smo.Server> de l’objet et à établir sa connexion à une [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]instance de.  
   
  Vous pouvez créer une instance de l'objet <xref:Microsoft.SqlServer.Management.Smo.Server> et établir une connexion avec l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de trois manières. La première est d'utiliser une variable objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection> pour fournir les informations de connexion. La deuxième est de fournir les informations de connexion en définissant explicitement les propriétés de l'objet <xref:Microsoft.SqlServer.Management.Smo.Server>. La troisième est de passer le nom de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans le constructeur d'objet <xref:Microsoft.SqlServer.Management.Smo.Server>.  
   
- **À l’aide d’un objet ServerConnection**  
+ **Utilisation d'un objet ServerConnection**  
   
  L'avantage de l'utilisation de la variable objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection> est que vous pouvez réutiliser les informations de connexion. Déclarez une variable objet <xref:Microsoft.SqlServer.Management.Smo.Server>, puis un objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection> et définissez les propriétés à l'aide des informations de connexion, telles que le nom de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et le mode d'authentification. Passez ensuite la variable objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection> en tant que paramètre au constructeur d'objet <xref:Microsoft.SqlServer.Management.Smo.Server>. Le partage simultané de connexions entre différents objets serveur n'est pas recommandé. Utilisez la méthode <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> pour vous procurer une copie des paramètres de connexion existants.  
   
- **Définir explicitement les propriétés de l’objet de serveur**  
+ **Définition explicite des propriétés d'objet serveur**  
   
  Vous pouvez également déclarer la variable objet <xref:Microsoft.SqlServer.Management.Smo.Server> et appeler le constructeur par défaut. En l'état, l'objet <xref:Microsoft.SqlServer.Management.Smo.Server> tente de se connecter à l'instance par défaut de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec tous les paramètres de connexion par défaut.  
   
- **En fournissant le nom d’instance de SQL Server dans le constructeur d’objet serveur**  
+ **Insertion du nom de l'instance de SQL Server dans le constructeur d'objet serveur**  
   
  Déclarez la variable objet <xref:Microsoft.SqlServer.Management.Smo.Server> et passez le nom de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en tant que paramètre de chaîne dans le constructeur. L'objet <xref:Microsoft.SqlServer.Management.Smo.Server> établit une connexion à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec les paramètres de connexion par défaut.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "63192080"
   
 -   Toutes les informations d'authentification nécessaires pour l'établissement de la connexion et l'ouverture d'une session sur le serveur sont fournies dans l'objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
--   Par défaut, les connexions sont établies au moyen de l'authentification Microsoft Windows. Pour l'utilisation de l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la propriété <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.LoginSecure%2A> doit avoir la valeur False et <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Login%2A> et <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Password%2A> doivent être définis avec un nom d'ouverture de session et un mot de passe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valides. Informations d’identification de sécurité doivent toujours être stockées et gérées de manière sécurisée et fournies au moment de l’exécution chaque fois que possible.  
+-   Par défaut, les connexions sont établies au moyen de l'authentification Microsoft Windows. Pour l'utilisation de l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la propriété <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.LoginSecure%2A> doit avoir la valeur False et <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Login%2A> et <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Password%2A> doivent être définis avec un nom d'ouverture de session et un mot de passe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valides. Les informations d’identification de sécurité doivent toujours être stockées et gérées en toute sécurité, et fournies au moment de l’exécution dans la mesure du possible.  
   
 -   La méthode <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> doit être appelée avant de passer la connexion à n'importe quel objet de programmation RMO.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "63192080"
 ## <a name="connecting-to-the-local-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Connexion à l'instance locale de SQL Server via l'authentification Windows en Visual Basic  
  La connexion à l'instance locale de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'exige pas beaucoup de code. À la place, elle se base sur les paramètres par défaut pour la méthode d'authentification et le serveur. La première opération nécessitant la récupération des données entraîne la création d'une connexion.  
   
- Cet exemple est [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] code .NET qui se connecte à l’instance locale de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide de l’authentification Windows.  
+ Cet exemple est [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] un code .net qui se connecte à l' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance locale de à l’aide de l’authentification Windows.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VB1](SMO How to#SMO_VB1)]  -->  
   
@@ -89,7 +89,7 @@ Console.WriteLine(srv.Information.Version);
 ## <a name="connecting-to-a-remote-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Connexion à une instance distante de SQL Server via l'authentification Windows en Visual Basic  
  Lorsque vous vous connectez à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] au moyen de l'authentification Windows, vous n'avez pas besoin de spécifier le type d'authentification. La méthode par défaut est l'authentification Windows.  
   
- Cet exemple est [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] code .NET qui se connecte à l’instance distante de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide de l’authentification Windows. La variable de chaîne *strServer* contient le nom de l’instance distante.  
+ Cet exemple est [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] un code .net qui se connecte à l' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance distante de à l’aide de l’authentification Windows. La variable de chaîne *strServer* contient le nom de l’instance distante.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VB2](SMO How to#SMO_VB2)]  -->  
   
@@ -113,7 +113,7 @@ Console.WriteLine(srv.Information.Version);
 ## <a name="connecting-to-an-instance-of-sql-server-by-using-sql-server-authentication-in-visual-basic"></a>Connexion à une instance de SQL Server via l'authentification SQL Server en Visual Basic  
  Lorsque vous vous connectez à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] via l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vous devez préciser le type d'authentification. Cet exemple montre l'autre méthode avec laquelle vous pouvez déclarer une variable objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection> qui permet de réutiliser les informations de connexion.  
   
- L’exemple est [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] code .NET qui montre comment se connecter à l’instance distante et *vPassword* contiennent l’ouverture de session et le mot de passe.  
+ L’exemple de [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] code .net montre comment se connecter à Remote et *vPassword* contiennent l’ouverture de session et le mot de passe.  
   
 ```  
 ' compile with:   
@@ -161,7 +161,7 @@ End Class
 ## <a name="connecting-to-an-instance-of-sql-server-by-using-sql-server-authentication-in-visual-c"></a>Connexion à une instance de SQL Server via l'authentification SQL Server en Visual C#  
  Lorsque vous vous connectez à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] via l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vous devez préciser le type d'authentification. Cet exemple montre l'autre méthode avec laquelle vous pouvez déclarer une variable objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection> qui permet de réutiliser les informations de connexion.  
   
- L’exemple est le code Visual c# .NET qui montre comment se connecter à l’instance distante et *vPassword* contiennent l’ouverture de session et le mot de passe.  
+ L’exemple est le code Visual C# .NET qui montre comment se connecter à Remote et *vPassword* contiennent l’ouverture de session et le mot de passe.  
   
 ```  
 // compile with:   

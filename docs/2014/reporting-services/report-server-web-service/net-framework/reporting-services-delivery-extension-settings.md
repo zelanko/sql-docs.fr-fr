@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d356bc1cb981479de8a4b1baa3bdaaf45b6145ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63260748"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Paramètres des extensions de remise de Reporting Services
@@ -38,31 +38,31 @@ ms.locfileid: "63260748"
 ## <a name="e-mail-delivery-settings"></a>Paramètres de remise par messagerie  
  Le tableau suivant répertorie les paramètres de remise par messagerie pour les abonnements qui utilisent la messagerie électronique du serveur de rapports.  
   
-|Paramètre|Value|  
+|Paramètre|Valeur|  
 |-------------|-----------|  
 |**TO**|Adresse de messagerie qui apparaît sur la ligne `To` du message électronique. Les adresses de messagerie multiples sont séparées par des points-virgules. Obligatoire.|  
-|**CC**|Adresse de messagerie qui apparaît sur la ligne `Cc` du message électronique. Les adresses de messagerie multiples sont séparées par des points-virgules. Facultatif.|  
-|**BCC**|Adresse de messagerie qui apparaît sur la ligne `Bcc` du message électronique. Les adresses de messagerie multiples sont séparées par des points-virgules. Facultatif.|  
-|**ReplyTo**|Adresse de messagerie qui apparaît dans l'en-tête `Reply-To` du message électronique. Il doit s'agir d'une adresse de messagerie unique. Facultatif.|  
+|**CC**|Adresse de messagerie qui apparaît sur la ligne `Cc` du message électronique. Les adresses de messagerie multiples sont séparées par des points-virgules. facultatif.|  
+|**BCC**|Adresse de messagerie qui apparaît sur la ligne `Bcc` du message électronique. Les adresses de messagerie multiples sont séparées par des points-virgules. facultatif.|  
+|**ReplyTo**|Adresse de messagerie qui apparaît dans l'en-tête `Reply-To` du message électronique. Il doit s'agir d'une adresse de messagerie unique. facultatif.|  
 |`IncludeReport`|Valeur indiquant si le rapport doit être inclus dans la remise par messagerie. La valeur `true` indique que le rapport est remis dans le corps du message électronique.|  
 |**RenderFormat**|Nom de l'extension de rendu à utiliser pour générer le rapport rendu. Ce nom doit correspondre à l'une des extensions de rendu visibles installées sur le serveur de rapports. Cette valeur est requise si le paramètre `IncludeReport` est défini sur `true`.|  
-|**Priorité**|Priorité avec laquelle le message électronique est envoyé. Les valeurs valides sont `LOW`, `NORMAL` et `HIGH`. La valeur par défaut est `NORMAL`.|  
-|**Subject**|Texte figurant dans la ligne Objet du message électronique.|  
+|**Priority**|Priorité avec laquelle le message électronique est envoyé. Les valeurs correctes sont `LOW`, `NORMAL` et `HIGH`. La valeur par défaut est `NORMAL`.|  
+|**Objet**|Texte figurant dans la ligne Objet du message électronique.|  
 |**Commentaire**|Texte inclus dans le corps du message électronique.|  
 |**IncludeLink**|Valeur qui indique si un lien vers le rapport doit être inclus dans le corps du message électronique.|  
   
 ## <a name="file-share-delivery-settings"></a>Paramètres de remise par partage de fichiers  
  Le tableau suivant répertorie les paramètres de remise par partage de fichiers pour les abonnements.  
   
-|Paramètre|Value|  
+|Paramètre|Valeur|  
 |-------------|-----------|  
-|**FILENAME**|Nom du fichier qui est enregistré sur le disque.|  
+|**EXTENSION**|Nom du fichier qui est enregistré sur le disque.|  
 |**FILEEXTN**|Indique si une extension de fichier doit être incluse pour le rapport rendu. La valeur est soit `true`, soit `false`.|  
-|**PATH**|Chemin d'accès au dossier ou chemin d'accès au partage de fichiers UNC dans lequel enregistrer le rapport.|  
+|**D**|Chemin d'accès au dossier ou chemin d'accès au partage de fichiers UNC dans lequel enregistrer le rapport.|  
 |**RENDER_FORMAT**|Format du rapport qui est enregistré sur le disque.|  
-|**USERNAME**|Nom d'utilisateur requis pour accéder à la ressource réseau ou au disque.|  
-|**PASSWORD**|Mot de passe requis pour accéder à la ressource réseau ou au disque.|  
-|**WRITEMODE**|Mode écriture à utiliser lors de l'accès au disque. Les valeurs valides sont `None`, `Overwrite` et `AutoIncrement`.|  
+|**NOM d’utilisateur**|Nom d'utilisateur requis pour accéder à la ressource réseau ou au disque.|  
+|**DE**|Mot de passe requis pour accéder à la ressource réseau ou au disque.|  
+|**WRITEMODE**|Mode écriture à utiliser lors de l'accès au disque. Les valeurs correctes sont `None`, `Overwrite` et `AutoIncrement`.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Informations techniques de référence &#40;SSRS&#41;](../../technical-reference-ssrs.md)   

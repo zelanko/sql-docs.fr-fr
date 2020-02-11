@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3cf9d0651b1a0ce5bbb49a575aea10723667ee2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479461"
 ---
 # <a name="hierarchies-master-data-services"></a>Hiérarchies (services de données de référence)
@@ -35,9 +35,9 @@ ms.locfileid: "65479461"
 ## <a name="kinds-of-hierarchies"></a>Types de hiérarchies  
  Vous pouvez créer plusieurs hiérarchies pour afficher et organiser vos membres de différentes façons. Vous pouvez créer :  
   
--   Des hiérarchies déséquilibrées d'une entité unique, appelées hiérarchies explicites. Pour plus d’informations, consultez [Explicit Hierarchies &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md).  
+-   Des hiérarchies déséquilibrées d'une entité unique, appelées hiérarchies explicites. Pour plus d’informations, consultez [Hiérarchies explicites &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md).  
   
--   Des hiérarchies basées sur le niveau à partir de plusieurs entités selon les relations existantes entre les entités et leurs attributs, appelées hiérarchies dérivées. Pour plus d’informations, consultez [Derived Hierarchies &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md).  
+-   Des hiérarchies basées sur le niveau à partir de plusieurs entités selon les relations existantes entre les entités et leurs attributs, appelées hiérarchies dérivées. Pour plus d’informations, consultez [Hiérarchies dérivées &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md).  
   
 > [!NOTE]  
 >  Tous les membres dans une hiérarchie doivent figurer dans le même modèle.  
@@ -56,7 +56,7 @@ ms.locfileid: "65479461"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Activer une entité pour les hiérarchies explicites et les collections.|[Activer une entité pour les hiérarchies et Collections explicites &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
+|Activer une entité pour les hiérarchies explicites et les collections.|[Activez une entité pour les hiérarchies explicites et les collections &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
 |Créer une hiérarchie explicite.|[Créer une hiérarchie explicite &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
 |Créer une hiérarchie dérivée.|[Créer une hiérarchie dérivée &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
 |Masquer ou supprimer des niveaux dans une hiérarchie dérivée existante.|[Masquer ou supprimer des niveaux dans une hiérarchie dérivée &#40;Master Data Services&#41;](../../2014/master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
@@ -69,7 +69,7 @@ ms.locfileid: "65479461"
   
 -   [Hiérarchies récursives &#40;Master Data Services&#41;](../../2014/master-data-services/recursive-hierarchies-master-data-services.md)  
   
--   [Hiérarchies dérivées avec un niveau supérieur composé d’une hiérarchie explicite &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
+-   [Hiérarchies dérivées avec des majuscules &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
   
 -   [Collections &#40;Master Data Services&#41;](collections-master-data-services.md)  
   

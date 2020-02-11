@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Partition (Analysis Services - données multidimensionnelles) de fusion | Microsoft Docs
+title: Boîte de dialogue fusionner une partition (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26751f2cc00330716f160c115d0e839cc6d9527a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077830"
 ---
 # <a name="merge-partition-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Partition de fusion (Analysis Services - Données multidimensionnelles)
   La boîte de dialogue **Partition de fusion** de **SQL Server Management Studio** permet de fusionner des partitions pour un groupe de mesures d'un cube. Vous pouvez afficher la boîte de dialogue **Partition de fusion** en cliquant avec le bouton droit sur le dossier Partitions ou sur une partition dans **Explorateur d’objets** et en sélectionnant **Fusionner des partitions** dans le menu contextuel.  
   
 ## <a name="options"></a>Options  
- **Server**  
+ **Serveur**  
  Sélectionnez le nom de l'instance Analysis Services qui contient la partition cible.  
   
  **Nom**  
  Sélectionnez le nom d'une partition existante à utiliser comme cible.  
   
- **Dossier**  
+ **Folder**  
  Affiche le nom du dossier qui contient la partition cible, si la partition indiquée dans le champ Nom n'utilise pas le dossier par défaut pour l'instance Analysis Services.  
   
  **Partitions sources**  
@@ -40,14 +40,14 @@ ms.locfileid: "66077830"
   
  Cette grille comporte les colonnes suivantes :  
   
-|colonne|Description|  
+|Colonne|Description|  
 |------------|-----------------|  
-|**Fusion**|Permet de fusionner la partition source dans la partition cible.|  
+|**Fusionner**|Permet de fusionner la partition source dans la partition cible.|  
 |**Nom de la partition**|Affiche le nom de la partition source.|  
 |**Dernier traitement**|Affiche la date et l'heure du dernier traitement de la partition source.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Partitions &#40;Analysis Services - Données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Fusionner des partitions dans Analysis Services &#40;SSAS - Multidimensionnel&#41;](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Partitions &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Fusionner des partitions dans Analysis Services &#40;SSAS-&#41;multidimensionnel](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

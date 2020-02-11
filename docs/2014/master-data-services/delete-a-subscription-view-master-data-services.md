@@ -14,16 +14,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3ae447196ebef455406202615ce4aff50d3749c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479468"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>Supprimer une vue d'abonnement (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], supprimez une vue d’abonnement lorsque vous n’en avez plus besoin. La suppression d'une vue d'abonnement dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] supprime la vue de la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Gestion de l'intégration** .  
@@ -38,7 +38,7 @@ ms.locfileid: "65479468"
   
 3.  Dans la page **Vues d’abonnement** , sélectionnez la ligne de la vue à supprimer.  
   
-4.  Cliquez sur **supprimer la vue d’abonnement**.  
+4.  Cliquez sur **Supprimer la vue d’abonnement**.  
   
 5.  Dans la boîte de dialogue de confirmation, cliquez sur **OK**.  
   

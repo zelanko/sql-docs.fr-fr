@@ -1,5 +1,5 @@
 ---
-title: Modifier la couleur de police, la taille et le Style dans les schémas (Visual Database Tools) | Microsoft Docs
+title: Modifier la couleur, la taille et le style de la police dans les schémas (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0945dd4bd2897cd0dba7425f98700b05237c6b96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63298300"
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>Modifier la couleur de police, la taille et le style dans les schémas (Visual Database Tools)
@@ -35,6 +35,6 @@ ms.locfileid: "63298300"
 4.  Modifiez la police, la taille, les éléments affichés ainsi que les couleurs de premier plan et d'arrière-plan.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utiliser des schémas de base de données &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [Utiliser des diagrammes de base de données &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

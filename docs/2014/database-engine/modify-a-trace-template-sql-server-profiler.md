@@ -1,5 +1,5 @@
 ---
-title: Modifier un modèle de Trace (SQL Server Profiler) | Microsoft Docs
+title: Modifier un modèle de trace (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64c13b9fed062b73de7ab35ef5048ae4b68e5618
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089999"
 ---
 # <a name="modify-a-trace-template-sql-server-profiler"></a>Modifier un modèle de trace (SQL Server Profiler)
@@ -30,7 +30,7 @@ ms.locfileid: "66089999"
   
 2.  Dans la boîte de dialogue **Propriétés du modèle de trace** , sous l’onglet **Général** , vous pouvez modifier le type de serveur et le nom de modèle, ou utiliser un modèle par défaut pour le type de serveur.  
   
-3.  Sous l’onglet **Sélection des événements**, utilisez le contrôle de la grille pour ajouter ou supprimer des événements et des colonnes de données dans le fichier de trace comme suit :  
+3.  Dans l’onglet **sélection des événements**, utilisez le contrôle Grid pour ajouter ou supprimer des événements et des colonnes de données dans le fichier de trace comme suit.  
   
     -   Pour ajouter un événement, développez la catégorie d’événements appropriée dans la colonne **Événements** , puis sélectionnez le nom de l’événement.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66089999"
 4.  Cliquez sur **Enregistrer**ou **Enregistrer sous**pour enregistrer le modèle de trace sous un autre nom.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécifier les événements et les colonnes de données d’un fichier de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
+ [Spécifiez les événements et les colonnes de données d’un fichier de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
  [Dériver un modèle à partir d’une trace en cours d’exécution &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [Dériver un modèle à partir d’un fichier de trace ou d’une table de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [Modèles et autorisations du générateur de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   

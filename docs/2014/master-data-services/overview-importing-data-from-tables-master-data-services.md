@@ -15,16 +15,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7f5f5e7d6c4706dee09c90237c2363f6cbf46b02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479017"
 ---
 # <a name="data-import-master-data-services"></a>Importation de données (Master Data Services)
   Une fois que vous avez créé un modèle pour vos données dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez commencer à ajouter des données et à apporter des modifications aux données de la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .   Vous utilisez les tables de mise en lots [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , les procédures stockées et Master Data Manager.  
   
- Vous pouvez également utiliser le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], pour ajouter des données dans le référentiel MDS ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de données). Pour plus d’informations, consultez [publication de données &#40;complément MDS pour Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
+ Vous pouvez également utiliser le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]pour ajouter des données au référentiel MDS ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de données). Pour plus d’informations, consultez [publication de données &#40;Complément MDS pour Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
   
  Lorsque vous ajoutez et mettez à jour des données, procédez comme suit.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "65479017"
      Vous utilisez des procédures stockées intermédiaires ou [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] pour charger les données.  
   
 > [!NOTE]  
->  Dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], la prise en charge des processus de site [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] est déconseillée.  
+>  Dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], la prise en charge des processus de mise en lots [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] est déconseillée.  
   
 ## <a name="deactivating-and-deleting-members"></a>Désactivation et suppression de membres  
  La désactivation signifie que le membre peut être réactivé. La réactivation d'un membre permet de restaurer ses attributs et son appartenance aux hiérarchies et collections. Toutes les transactions précédentes sont intactes. Les transactions de désactivation sont visibles par les administrateurs dans la zone fonctionnelle **Gestion des versions** de Master Data Manager.  
@@ -71,17 +71,18 @@ ms.locfileid: "65479017"
   
 -   [Table de mise en lots des membres feuille &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
   
--   [Table de mise en lots des membres consolidés &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [&#40;de la table de mise en lots des membres consolidés Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
--   [Table de mise en lots des relations &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
+-   [&#40;de la table de mise en lots des relations Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
   
  Pour chaque entité du modèle, il existe une table de mise en lots. Le nom de la table indique l'entité correspondante et le type d'entité comme membre feuille. L'illustration suivante montre les tables de mise en lots pour les entités Devise, Client et Produit.  
   
- ![Tables de mise en lots dans la base de données MDS](../../2014/master-data-services/media/mds-stagingtables.png "Tables de mise en lots dans la base de données MDS")  
+ ![Tables intermédiaires dans la base de données MDS](../../2014/master-data-services/media/mds-stagingtables.png "Tables intermédiaires dans la base de données MDS")  
   
  Le nom de la table est spécifié lors de la création d'une entité et ne peut pas être modifié. Si le nom de la table de mise en lots contient un _1 ou tout autre nombre, une autre table de ce nom existait déjà lorsque l'entité a été créée.  
   
- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] inclut les types suivants de procédures stockées de mise en lots.  
+ 
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] inclut les types suivants de procédures stockées de mise en lots.  
   
 -   stg.udp_\<nom>_Leaf  
   
@@ -91,7 +92,7 @@ ms.locfileid: "65479017"
   
  Pour chaque entité du modèle, il existe trois procédures stockées qui correspondent à un membre feuille, un membre consolidé et les tables de mise en lots de relations.  L'illustration suivante montre les procédures stockées de mise en lots pour les entités Devise, Client et Produit.  
   
- ![Mise en lots des procédures stockées dans la base de données MDS](../../2014/master-data-services/media/mds-stagingstoredprocedures.png "mise en lots des procédures stockées dans la base de données MDS")  
+ ![Procédures stockées intermédiaires dans la base de données MDS](../../2014/master-data-services/media/mds-stagingstoredprocedures.png "Procédures stockées intermédiaires dans la base de données MDS")  
   
  Pour plus d’informations sur les procédures stockées, consultez [Procédure stockée de mise en lots &#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md).  
   
@@ -102,8 +103,8 @@ ms.locfileid: "65479017"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   [Validation &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
+-   [&#40;de validation Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
   
--   [Règles d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [&#40;des règles d’entreprise Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

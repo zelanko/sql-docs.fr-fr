@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 948ef7eb5fdfeabdbb2ba3829e172f7c9f4028da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255812"
 ---
 # <a name="create-a-transact-sql-script-for-running-a-trace-sql-server-profiler"></a>Créer un script Transact-SQL pour exécuter une trace (SQL Server Profiler)
@@ -27,7 +27,7 @@ ms.locfileid: "63255812"
   
 1.  Ouvrez un fichier ou une table de trace. Pour plus d’informations, consultez [Ouvrir un fichier de trace &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) ou l'Assistant Paramétrage du [Ouvrir une table de trace &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md).  
   
-2.  Dans le menu **Fichier**, pointez sur **Exporter**, sur **Générer un script de la définition de la trace**, puis cliquez sur la version correspondant au serveur dont vous souhaitez effectuer le suivi.  
+2.  Dans le menu**Fichier**, pointez sur **Exporter**, sur **Générer un script de la définition de la trace**, puis cliquez sur la version correspondant au serveur dont vous souhaitez effectuer le suivi.  
   
 3.  Dans la boîte de dialogue **Enregistrer sous** , entrez un nom pour le fichier de script, puis cliquez sur **Enregistrer**.  
   

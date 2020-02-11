@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 2 : Ajout d’une référence Web | Microsoft Docs'
+title: 'Leçon 2 : ajout d’une référence Web | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,38 +11,39 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63316009"
 ---
-# <a name="lesson-2-adding-a-web-reference"></a>Leçon 2 : Ajout d’une référence web
+# <a name="lesson-2-adding-a-web-reference"></a>Leçon 2 : ajout d'une référence Web
   La découverte de service Web est le processus suivant lequel un client recherche un service Web et obtient sa description. Dans [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], le processus de la découverte de service Web implique l'interrogation d'un site Web suivant un algorithme prédéterminé. L'objectif de ce processus est de rechercher la description du service, qui correspond à un document XML utilisant le langage WSDL (Web Services Description Language).  
   
  La description du service décrit les services disponibles et la manière d'interagir avec ces derniers. Sans une description de service, il est impossible d'interagir par programme avec un service Web.  
   
- Votre application doit pouvoir communiquer avec le service Web et le rechercher lors de l'exécution. L'ajout d'une référence Web à votre projet pour le service Web permet cela en générant une classe proxy qui joue le rôle d'interface avec le service Web et qui en fournit une représentation locale. Pour plus d’informations, consultez « Comment : Générer un Proxy de Service Web XML » dans votre [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] documentation.  
+ Votre application doit pouvoir communiquer avec le service Web et le rechercher lors de l'exécution. L'ajout d'une référence Web à votre projet pour le service Web permet cela en générant une classe proxy qui joue le rôle d'interface avec le service Web et qui en fournit une représentation locale. Pour plus d'informations, consultez « Procédure : générer un XML d'un proxy de service Web » dans la documentation [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
   
 ### <a name="to-add-a-web-reference"></a>Pour ajouter une référence Web  
   
-1.  Sur le **projet** menu, cliquez sur **ajouter une référence de Service**.  
+1.  Dans le menu **projet** , cliquez sur **Ajouter une référence de service**.  
   
-2.  Dans le **ajouter une référence de Service** boîte de dialogue, cliquez sur **avancé**.  
+2.  Dans la boîte de dialogue **Ajouter une référence de service** , cliquez sur **avancé**.  
   
-3.  Dans le **les paramètres de référence de Service** boîte de dialogue, cliquez sur **ajouter une référence Web**.  
+3.  Dans la boîte de dialogue **paramètres de référence de service** , cliquez sur Ajouter une **référence Web**.  
   
-4.  Dans le **URL** zone de la **ajouter une référence Web** boîte de dialogue, tapez l’URL pour obtenir la description du service Web Report Server, tel que http://localhost/reportserver/reportservice2010.asmx. Puis cliquez sur le **accédez** bouton pour récupérer des informations sur le service Web.  
+4.  Dans la zone **URL** de la boîte de dialogue **Ajouter une référence Web** , tapez l’URL permettant d’obtenir la description de service du service Web Report Server http://localhost/reportserver/reportservice2010.asmx, telle que. Cliquez ensuite sur le bouton **OK** pour récupérer des informations sur le service Web.  
   
      \- ou -  
   
-     Si le service Web Report Server existe sur l’ordinateur local, cliquez sur le **services Web sur l’ordinateur local** lien dans le volet navigateur. Cliquez ensuite sur le lien du service Web ReportService2010 dans la liste fournie.  
+     Si le service Web Report Server existe sur l’ordinateur local, cliquez sur le lien **services Web sur l’ordinateur local** dans le volet navigateur. Cliquez ensuite sur le lien du service Web ReportService2010 dans la liste fournie.  
   
-5.  Dans le **nom de référence Web** boîte, renommez la référence Web ReportService2010, qui est l’espace de noms que vous utiliserez pour cette référence Web.  
+5.  Dans la zone nom de la **référence Web** , renommez la référence Web en ReportService2010, qui est l’espace de noms que vous allez utiliser pour cette référence Web.  
   
-6.  Cliquez sur **ajouter une référence** pour ajouter une référence Web pour le service Web cible.  
+6.  Cliquez sur **Ajouter une référence** pour ajouter une référence Web pour le service Web cible.  
   
-     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] télécharge la description du service et génère une classe proxy pour jouer le rôle d'interface entre votre application et le service Web Report Server. Vous devrez également ajouter une référence à l'espace de noms <xref:System.Web.Services> pour que votre référence Web fonctionne.  
+     
+  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] télécharge la description du service et génère une classe proxy pour jouer le rôle d'interface entre votre application et le service Web Report Server. Vous devrez également ajouter une référence à l'espace de noms <xref:System.Web.Services> pour que votre référence Web fonctionne.  
   
 7.  Dans le menu Projet, cliquez sur **Ajouter une référence**.  
   
@@ -52,7 +53,7 @@ ms.locfileid: "63316009"
   
 ## <a name="see-also"></a>Voir aussi  
  [Service web Report Server](../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Leçon 3 : L’accès au Service Web](../../2014/tutorials/lesson-3-accessing-the-web-service.md)   
- [Le Service Report Server Web à l’aide de Visual Basic ou Visual C# de l’accès à&#35; &#40;didacticiel SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
+ [Leçon 3 : accès au service Web](../../2014/tutorials/lesson-3-accessing-the-web-service.md)   
+ [Accès au service Web Report Server à l’aide de Visual Basic ou du didacticiel Visual C&#35; &#40;SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

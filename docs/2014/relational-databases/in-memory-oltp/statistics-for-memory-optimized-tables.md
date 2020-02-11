@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e47a8c6f5b0da31aea9168bbbc56bd9b28afb96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155791"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Statistiques pour les tables optimisées en mémoire
@@ -24,13 +24,13 @@ ms.locfileid: "63155791"
   
  Les données de table sont généralement modifiées au fil du temps, à mesure que des lignes sont insérées, mises à jour et supprimées. Cela signifie que les statistiques doivent être mises à jour régulièrement. Par défaut, les statistiques sur les tables sur disque sont mises à jour automatiquement lorsque l'optimiseur détermine qu'elles sont obsolètes.  
   
- Les statistiques sur les tables mémoire optimisées ne sont pas mises à jour par défaut. Vous devez les mettre à jour manuellement. Utilisez [UPDATE STATISTICS &#40;Transact-SQL&#41; ](/sql/t-sql/statements/update-statistics-transact-sql) pour des colonnes individuelles, des index ou tables. Utilisez [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) pour mettre à jour des statistiques pour tous les utilisateurs et les tables internes de la base de données.  
+ Les statistiques sur les tables mémoire optimisées ne sont pas mises à jour par défaut. Vous devez les mettre à jour manuellement. Utilisez [update statistics &#40;&#41;Transact-SQL](/sql/t-sql/statements/update-statistics-transact-sql) pour des colonnes, des index ou des tables individuels. Utilisez [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) pour mettre à jour les statistiques de toutes les tables utilisateur et internes de la base de données.  
   
- Lorsque vous utilisez [CREATE STATISTICS &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql) ou [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql), vous devez spécifier `NORECOMPUTE` pour désactiver les statistiques automatiques mise à jour pour les tables optimisées en mémoire. Pour les tables sur disque, [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) met à jour uniquement des statistiques si la table a été modifiée depuis le dernier [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql). Pour les tables optimisées en mémoire, [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) génère toujours des statistiques mises à jour. [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) est une bonne option pour les tables optimisées en mémoire ; sinon, vous devez connaître les tables comportant des modifications significatives, vous pouvez mettre à jour les statistiques individuellement.  
+ Lorsque vous utilisez [create statistics &#40;Transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql) ou [UPDATE statistics &#40;&#41;Transact-SQL ](/sql/t-sql/statements/update-statistics-transact-sql), vous devez spécifier `NORECOMPUTE` la désactivation de la mise à jour automatique des statistiques pour les tables optimisées en mémoire. Pour les tables sur disque, [sp_updatestats &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) met à jour les statistiques uniquement si la table a été modifiée depuis la dernière [sp_updatestats &#40;transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql). Pour les tables optimisées en mémoire, [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) génère toujours des statistiques mises à jour. [sp_updatestats &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) est une bonne option pour les tables optimisées en mémoire ; dans le cas contraire, vous devez connaître les tables qui ont des modifications importantes pour pouvoir mettre à jour les statistiques individuellement.  
   
  Les statistiques peuvent être générées lors de l'échantillonnage des données ou d'une analyse complète. Les statistiques échantillonnées n'utilisent qu'un échantillon des données de la table pour estimer la distribution des données. Les statistiques d'analyse complète analysent la table entière pour déterminer la distribution des données. Les statistiques d'analyse complète sont généralement plus précises, mais prennent plus temps pour le calcul. Les statistiques échantillonnées sont collectées plus rapidement.  
   
- Par défaut, les tables sur disque utilisent des statistiques échantillonnées. Les tables mémoire optimisées prennent uniquement en charge les statistiques d'analyse complète. Lorsque vous utilisez [CREATE STATISTICS &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql) ou [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql), vous devez spécifier le `FULLSCAN` option optimisé en mémoire tables.  
+ Par défaut, les tables sur disque utilisent des statistiques échantillonnées. Les tables mémoire optimisées prennent uniquement en charge les statistiques d'analyse complète. Lorsque vous utilisez [create statistics &#40;Transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql) ou [UPDATE statistics &#40;&#41;Transact-SQL ](/sql/t-sql/statements/update-statistics-transact-sql), `FULLSCAN` vous devez spécifier l’option pour les tables mémoire optimisées.  
   
  Considérations supplémentaires pour les statistiques sur les tables mémoire optimisées :  
   
@@ -68,7 +68,7 @@ ms.locfileid: "63155791"
   
 -   Ou mettez à jour les statistiques au moyen d'un script [!INCLUDE[tsql](../../../includes/tsql-md.md)] , tel que l'indique la section suivante.  
   
- Pour mettre à jour les statistiques d'une seule table mémoire optimisée (*myschema*. *Mytable*), exécutez le script suivant :  
+ Pour mettre à jour les statistiques d'une seule table mémoire optimisée (*myschema*. *MyTable*), exécutez le script suivant :  
   
 ```  
 UPDATE STATISTICS myschema.Mytable WITH FULLSCAN, NORECOMPUTE  
@@ -86,7 +86,7 @@ FROM sys.tables WHERE is_memory_optimized=1
 EXEC sp_executesql @sql  
 ```  
   
- Pour mettre à jour des statistiques pour toutes les tables dans la base de données, exécutez [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql).  
+ Pour mettre à jour les statistiques de toutes les tables de la base de données, exécutez [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql).  
   
  Les exemples suivants indiquent quand les statistiques sur les tables mémoire optimisées ont été mises à jour pour la dernière fois. Ces informations peuvent vous aider à décider si vous devez mettre à jour les statistiques.  
   
@@ -97,6 +97,6 @@ where t.is_memory_optimized=1
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables optimisées en mémoire](memory-optimized-tables.md)  
+ [Tables à mémoire optimisée](memory-optimized-tables.md)  
   
   

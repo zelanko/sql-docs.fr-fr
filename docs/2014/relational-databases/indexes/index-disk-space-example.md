@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2beb1a7890786e31fb525b61963c235033882247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63161790"
 ---
 # <a name="index-disk-space-example"></a>Exemple d'espace disque d'un index
@@ -49,23 +49,23 @@ ms.locfileid: "63161790"
   
 1.  Déterminez la taille des structures sources.  
   
-     Segment de mémoire : 1 million * 200 octets ~ 200 Mo  
+     Segment de mémoire : 1 million * 200 octets ~ 200 Mo  
   
-     Index non-cluster a : 1 million * 50 octets / 80 % ~ 63 Mo  
+     Index non-cluster A : 1 million * 50 octets / 80 % ~ 63 Mo  
   
-     Index non-cluster b : 1 million * 80 octets / 80 % ~ 100 Mo  
+     Index non-cluster B : 1 million * 80 octets / 80 % ~ 100 Mo  
   
-     Taille totale des structures existantes : 363 MO  
+     Taille totale des structures existantes : 363 Mo  
   
 2.  Déterminez la taille des structures d'index cibles. Supposons que la nouvelle clé en cluster a une longueur de 24 octets, indicateur d’unicité compris. L'indicateur de ligne (8 octets de long) des deux index non-cluster sera remplacé par cette clé d'index cluster.  
   
-     Index cluster : 1 million * 200 octets / 80 % ~ 250 Mo  
+     Index cluster : 1 million * 200 octets / 80 % ~ 250 Mo  
   
-     Index non-cluster a : 1 million * (50-8 + 24) octets / 80 % ~ 83 Mo  
+     Index non cluster A : 1 million * (50 - 8 + 24) octets / 80 % ~ 83 Mo  
   
-     Index non-cluster b : 1 million * (80-8 + 24) octets / 80 % ~ 120 Mo  
+     Index non cluster B : 1 million * (80 - 8 + 24) octets / 80 % ~ 120 Mo  
   
-     Taille totale des nouvelles structures : 453 MO  
+     Taille totale des nouvelles structures : 453 Mo  
   
      La quantité totale d'espace disque nécessaire à la prise en charge des structures sources et cibles pendant la durée de l'opération d'index est de 816 Mo (363 + 453). L'espace actuellement alloué aux structures sources sera désalloué une fois l'opération d'index validée.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "63161790"
   
 -   Déterminez l'espace de l'index de mappage temporaire.  
   
-     Dans cet exemple, l’ancien signet est l’ID de ligne (RID) du segment de mémoire (8 octets) et le nouveau signet est la clé de clustering (24 octets, y compris un `uniqueifier`). Aucune colonne ne se chevauche entre les anciens et nouveaux signets.  
+     Dans cet exemple, l’ancien signet est l’ID de ligne (RID) du segment de mémoire (8 octets) et le nouveau signet est la clé de clustering (24 `uniqueifier`octets, y compris un). Aucune colonne ne se chevauche entre les anciens et nouveaux signets.  
   
      Taille de l'index de mappage temporaire = 1 million * (8 octets + 24 octets) / 80 % ~ 40 Mo.  
   
@@ -109,18 +109,18 @@ ms.locfileid: "63161790"
   
 |Opération d'index|Espace disque nécessaire pour les emplacements des structures suivantes|  
 |---------------------|---------------------------------------------------------------------------|  
-|Opération d'index hors ligne avec SORT_IN_TEMPDB = ON|Espace total lors de l’opération : 1018 MO :<br /><br /> -Table et index existants : 363 MO\*<br /><br /> -<br />                    **tempdb**: 202 MO *<br /><br /> -Nouveaux index : 453 MO<br /><br /> Espace total requis après l’opération : 453 MO|  
-|Opération d'index hors ligne avec SORT_IN_TEMPDB = OFF|Espace total lors de l’opération : 816 MO :<br /><br /> -Table et index existants : 363 MO *<br /><br /> -Nouveaux index : 453 MO<br /><br /> Espace total requis après l’opération : 453 MO|  
-|Opération d'index en ligne avec SORT_IN_TEMPDB = ON|Espace total lors de l’opération : 1058 MO :<br /><br /> -Table et index existants : 363 MO\*<br /><br /> -**tempdb** (index de mappage compris) : 242 MO *<br /><br /> -Nouveaux index : 453 MO<br /><br /> Espace total requis après l’opération : 453 MO|  
-|Opération d'index en ligne avec SORT_IN_TEMPDB = OFF|Espace total lors de l’opération : 856 MO :<br /><br /> -Table et index existants : 363 MO *<br /><br /> -Index de mappage temporaire : 40 MO\*<br /><br /> -Nouveaux index : 453 MO<br /><br /> Espace total requis après l’opération : 453 MO|  
+|Opération d'index hors ligne avec SORT_IN_TEMPDB = ON|Espace total lors de l’opération : 1018 Mo :<br /><br /> -Table et index existants : 363 Mo\*<br /><br /> -<br />                    **tempdb**: 202 Mo*<br /><br /> -Nouveaux index : 453 Mo<br /><br /> Espace total requis après l'opération : 453 Mo|  
+|Opération d'index hors ligne avec SORT_IN_TEMPDB = OFF|Espace total lors de l’opération : 816 Mo :<br /><br /> -Table et index existants : 363 Mo*<br /><br /> -Nouveaux index : 453 Mo<br /><br /> Espace total requis après l'opération : 453 Mo|  
+|Opération d'index en ligne avec SORT_IN_TEMPDB = ON|Espace total lors de l’opération : 1058 Mo :<br /><br /> -Table et index existants : 363 Mo\*<br /><br /> -**tempdb** (y compris l’index de mappage) : 242 Mo *<br /><br /> -Nouveaux index : 453 Mo<br /><br /> Espace total requis après l'opération : 453 Mo|  
+|Opération d'index en ligne avec SORT_IN_TEMPDB = OFF|Espace total lors de l’opération : 856 Mo :<br /><br /> -Table et index existants : 363 Mo*<br /><br /> -Index de mappage temporaire : 40 Mo\*<br /><br /> -Nouveaux index : 453 Mo<br /><br /> Espace total requis après l'opération : 453 Mo|  
   
  *Cet espace est désalloué une fois l'opération d'index validée.  
   
  Cet exemple ne tient pas compte de l’espace disque temporaire supplémentaire éventuellement requis dans **tempdb** pour les enregistrements de versions créés par des opérations de mise à jour utilisateur et de suppression simultanées.  
   
 ## <a name="related-content"></a>Contenu associé  
- [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)  
+ [Espace disque nécessaire pour les opérations DDL d’index](disk-space-requirements-for-index-ddl-operations.md)  
   
- [Espace disque du journal des transactions pour les opérations d'index](transaction-log-disk-space-for-index-operations.md)  
+ [Espace disque du journal des transactions pour les opérations d’index](transaction-log-disk-space-for-index-operations.md)  
   
   

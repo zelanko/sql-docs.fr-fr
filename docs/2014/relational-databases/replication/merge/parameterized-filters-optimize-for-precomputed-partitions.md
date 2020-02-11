@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f80afa10c1dbd067648db26c2bed0f423f371b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250547"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>Optimiser les performances des filtres paramétrés avec des partitions précalculées
@@ -26,11 +26,11 @@ ms.locfileid: "63250547"
   
  Lorsqu'un abonné synchronise avec un serveur de publication, ce dernier doit évaluer les filtres de l'Abonné pour déterminer quelles lignes appartiennent à la partition, ou à l'ensemble de données de cet abonné. Le processus permettant de déterminer l'appartenance d'une partition aux modifications sur le serveur de publication pour chaque abonné recevant un dataset filtré est dénommé *évaluation de partition*. Sans partitions précalculées, l'évaluation de partition doit être effectuée pour chaque modification apportée à une colonne filtrée sur le serveur de publication depuis la dernière exécution de l'Agent de fusion pour un abonné spécifique, et ce processus doit être répété pour chaque abonné synchronisant avec le serveur de publication.  
   
- Cependant, si le serveur de publication et l'Abonné s'exécutent sur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou version ultérieure et que vous utilisez des partitions précalculées, l'appartenance d'une partition pour toutes les modifications sur le serveur de publication est précalculée et persistante au moment où sont apportées les modifications. Il en résulte que lorsque l'Abonné synchronise avec le serveur de publication, il peut commencer immédiatement à télécharger les modifications concernant sa partition, sans avoir à passer par le processus d'évaluation de partition. Cela peut entraîner d'importantes améliorations en terme de performance, lorsqu'une publication comporte beaucoup de modifications, d'abonnés ou d'articles dans la publication.  
+ Toutefois, si le serveur de publication et l’abonné [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] s’exécutent sur ou une version ultérieure et que vous utilisez des partitions précalculées, l’appartenance à une partition pour toutes les modifications sur le serveur de publication est précalculée et persistante au moment où les modifications sont effectuées. Il en résulte que lorsque l'Abonné synchronise avec le serveur de publication, il peut commencer immédiatement à télécharger les modifications concernant sa partition, sans avoir à passer par le processus d'évaluation de partition. Cela peut entraîner d'importantes améliorations en terme de performance, lorsqu'une publication comporte beaucoup de modifications, d'abonnés ou d'articles dans la publication.  
   
- En plus d'utiliser des partitions précalculées, prégénérez des instantanés et/ou permettez aux Abonnés de demander la génération et l'application d'un instantané la première fois qu'ils se synchronisent. Utilisez l'une ou l'autre de ces options ou les deux pour fournir des instantanés pour les publications qui utilisent des filtres paramétrés. Si vous ne spécifiez pas une de ces options, les abonnements sont initialisés à l'aide d'une série d'instructions SELECT et INSERT au lieu d'utiliser l'utilitaire **bcp** , ce processus étant beaucoup plus lent. Pour plus d’informations, consultez [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md).  
+ En plus d'utiliser des partitions précalculées, prégénérez des instantanés et/ou permettez aux Abonnés de demander la génération et l'application d'un instantané la première fois qu'ils se synchronisent. Utilisez l'une ou l'autre de ces options ou les deux pour fournir des instantanés pour les publications qui utilisent des filtres paramétrés. Si vous ne spécifiez pas une de ces options, les abonnements sont initialisés à l'aide d'une série d'instructions SELECT et INSERT au lieu d'utiliser l'utilitaire **bcp** , ce processus étant beaucoup plus lent. Pour plus d'informations, voir [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md).  
   
- **Pour utiliser les partitions précalculées**  
+ **Pour utiliser des partitions précalculées**  
   
  Les partitions précalculées sont activées par défaut sur toutes les publications, nouvelles ou existantes, répondant aux conditions décrites ci-dessous. Le paramétrage peut être modifié via [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou par programme. Pour plus d’informations, consultez [Optimize Parameterized Row Filters](../publish/optimize-parameterized-row-filters.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "63250547"
   
 ### <a name="database-collation"></a>Classement de base de données  
   
--   Lorsque les partitions précalculées sont utilisées, le classement de base de données est toujours utilisé lorsque des comparaisons sont effectuées, plutôt que le classement de la table ou de la colonne. Examinez le cas suivant :  
+-   Lorsque les partitions précalculées sont utilisées, le classement de base de données est toujours utilisé lorsque des comparaisons sont effectuées, plutôt que le classement de la table ou de la colonne. Examinez le scénario suivant :  
   
     -   Une base de données avec un classement respectant les accents contient une table avec un classement ne respectant pas les accents.  
   

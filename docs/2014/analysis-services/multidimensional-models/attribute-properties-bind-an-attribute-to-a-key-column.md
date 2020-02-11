@@ -1,5 +1,5 @@
 ---
-title: Lier un attribut à une colonne de clé | Microsoft Docs
+title: Lier un attribut à une colonne clé | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6fb2888ba5cba2d3ab2701d934f83dc55cf362ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077439"
 ---
 # <a name="bind-an-attribute-to-a-key-column"></a>Lier un attribut à une colonne clé
@@ -35,6 +35,6 @@ ms.locfileid: "66077439"
 4.  Tapez le nouveau nom.  
   
     > [!NOTE]  
-    >  Vous pouvez également définir le `Name` propriété d’un attribut sélectionné dans le **propriétés** fenêtre de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+    >  Vous pouvez également définir la `Name` propriété d’un attribut sélectionné dans la fenêtre **Propriétés** de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
   

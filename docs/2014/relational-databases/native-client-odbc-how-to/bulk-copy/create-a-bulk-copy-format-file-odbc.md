@@ -1,5 +1,5 @@
 ---
-title: Créer un fichier de Format de copie en bloc (ODBC) | Microsoft Docs
+title: Créer un fichier de format de copie en bloc (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 54f57ae8d03037639076e890b93c0cff9021bd78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63157222"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>Créer un fichier de format de copie en bloc (ODBC)
   Cet exemple illustre comment utiliser des fonctions de copie en bloc pour créer un fichier de données et un fichier de format. Cet exemple a été développé pour la version 3.0 d'ODBC ou une version ultérieure.  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez conserver des informations d’identification, vous devez les chiffrer avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-create-a-bulk-copy-format-file"></a>Pour créer un fichier de format de copie en bloc  
   
@@ -42,20 +42,20 @@ ms.locfileid: "63157222"
   
     -   Nom d'un fichier de données devant recevoir tous les messages d'erreur de copie en bloc (spécifiez NULL si vous ne souhaitez pas de fichier de message).  
   
-    -   La direction de la copie : DB_OUT vers le fichier à partir de la table ou vue.  
+    -   Direction de la copie : DB_OUT vers le fichier à partir de la table ou vue.  
   
 5.  Appelez [bcp_columns](../../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) pour définir le nombre de colonnes.  
   
-6.  Appelez [bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) pour chaque colonne afin de définir ses caractéristiques dans le fichier de données.  
+6.  Appelez [bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) pour chaque colonne pour définir ses caractéristiques dans le fichier de données.  
   
-7.  Appelez [bcp_writefmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) pour créer un fichier de format décrivant le fichier de données doit être créé par l’opération de copie en bloc.  
+7.  Appelez [bcp_writefmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) pour créer un fichier de format décrivant le fichier de données à créer par l’opération de copie en bloc.  
   
 8.  Appelez [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) pour exécuter l’opération de copie en bloc.  
   
  Une opération de copie en bloc exécutée de cette manière crée à la fois un fichier de données contenant les données copiées en bloc et un fichier de format décrivant la mise en page du fichier de données.  
   
 ## <a name="example"></a>Exemple  
- Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’accueil des [exemples et projets de communautés Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).) Cette source de données doit être basée sur le pilote ODBC fourni par le système d'exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
+ Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’hébergement [exemples et projets de la communauté Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .) Cette source de données doit être basée sur le pilote ODBC fourni par le système d’exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
@@ -212,7 +212,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Copie en bloc avec les SQL Server ODBC Driver procédures &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [Rubriques de procédures relatives à la copie en bloc avec le SQL Server ODBC Driver &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Utilisation de fichiers de données et de format](../../native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

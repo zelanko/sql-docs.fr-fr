@@ -1,5 +1,5 @@
 ---
-title: Créer des requêtes qui utilisent autre chose qu’une Table (Visual Database Tools) | Microsoft Docs
+title: Créer des requêtes à l’aide d’un tableau en dehors d’une table (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6cd83135da7e5c9f4dac9e41ff562551d14ab20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184323"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Créer des requêtes qui utilisent autre chose qu'une table (Visual Database Tools)
@@ -102,7 +102,7 @@ WHERE     type = 'psychology'
   
 ```  
   
- Le texte en gras montre la requête existante utilisée comme source de données de la nouvelle requête. Remarquez que la nouvelle requête utilise un alias, « co_authored_books », pour indiquer la requête existante. Pour plus d’informations sur les alias, consultez [Créer des alias de tables &#40;Visual Database Tools&#41;](create-table-aliases-visual-database-tools.md) et [Créer des alias de colonnes &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md).  
+ Le texte en gras montre la requête existante utilisée comme source de données de la nouvelle requête. Remarquez que la nouvelle requête utilise un alias, « co_authored_books », pour indiquer la requête existante. Pour plus d’informations sur les alias, consultez [Créer des alias de tables &#40;Visual Database Tools&#41;](create-table-aliases-visual-database-tools.md) et [Créer des alias de colonnes &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md).  
   
  De façon similaire, une requête peut participer à une opération JOIN. Par exemple, il est possible de rechercher les ventes de livres de luxe signés par plusieurs auteurs en créant une jointure entre la vue ExpensiveBooks et la requête d'extraction des livres signés par plusieurs auteurs. L'instruction SQL obtenue peut se présenter de la manière suivante :  
   
@@ -147,6 +147,6 @@ FROM
   
 ```  
   
- « VPA30890F » est l'ID d'employé du responsable de l'équipe à extraire. Pour plus d’informations sur l’ajout d’une fonction définie par l’utilisateur à une requête, consultez [Ajouter des tables à des requêtes &#40;Visual Database Tools&#41;](visual-database-tools.md). Pour obtenir une description complète des fonctions définies par l’utilisateur, consultez [Fonctions définies par l’utilisateur](../../relational-databases/user-defined-functions/user-defined-functions.md).  
+ « VPA30890F » est l'ID d'employé du responsable de l'équipe à extraire. Pour plus d’informations sur l’ajout d’une fonction définie par l’utilisateur à une requête, consultez [Ajouter des tables à des requêtes &#40;Visual Database Tools&#41;](visual-database-tools.md). Pour obtenir une description complète des fonctions définies par l’utilisateur, consultez [Fonctions définies par l’utilisateur](../../relational-databases/user-defined-functions/user-defined-functions.md).  
   
   

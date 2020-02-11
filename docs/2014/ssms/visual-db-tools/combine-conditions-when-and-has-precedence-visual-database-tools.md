@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4d0a0bcb7115255c3c6b3750cd930e7d06b9e2df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225813"
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>Associer des conditions avec priorité à l'opérateur AND (Visual Database Tools)
@@ -58,9 +58,9 @@ ms.locfileid: "63225813"
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Associer des Conditions OR a une priorité &#40;Visual Database Tools&#41;](combine-conditions-when-or-has-precedence-visual-database-tools.md)   
- [Conventions pour la combinaison de Conditions de recherche dans le volet Critères &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
- [Valeurs de recherche de règles pour l’entrée &#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
+ [Associer des conditions avec priorité à l' &#40;de Visual Database Tools&#41;](combine-conditions-when-or-has-precedence-visual-database-tools.md)   
+ [Conventions pour la combinaison de conditions de recherche dans le volet critères &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
+ [Règles pour l’entrée de valeurs de recherche &#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
  [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

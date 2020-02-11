@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2905ce39c487a1df04d839b6efe360803674ffb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255227"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>Boîte de dialogue Créer une nouvelle stratégie ou Ouvrir une stratégie, page Description
@@ -27,13 +27,13 @@ ms.locfileid: "63255227"
  **Description**  
  Tapez une description de la stratégie.  
   
- **Lien hypertexte d’aide supplémentaire : Texte à afficher**  
+ **Lien hypertexte d'aide supplémentaire : Texte à afficher**  
  Lors de l’exécution de stratégies, le lien hypertexte d’aide supplémentaire est affiché dans la page **Vue détaillée des résultats** . Tapez le texte à afficher en tant que lien hypertexte.  
   
- **Lien hypertexte d’aide supplémentaire : Adresse**  
+ **Lien hypertexte d'aide supplémentaire : Adresse**  
  Tapez le lien hypertexte d’une page web à ouvrir lorsque les utilisateurs cliquent sur le texte du lien hypertexte qui apparaît dans la page **Vue détaillée des résultats** .  
   
- **Lien hypertexte d’aide supplémentaire : Lien de test**  
+ **Lien hypertexte d'aide supplémentaire : Lien de test**  
  Cliquez pour ouvrir le lien hypertexte afin de tester la validité du lien.  
   
  **Date de création**  

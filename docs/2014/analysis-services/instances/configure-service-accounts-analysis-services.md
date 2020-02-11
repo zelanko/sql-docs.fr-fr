@@ -1,5 +1,5 @@
 ---
-title: Configurer les comptes de Service (Analysis Services) | Microsoft Docs
+title: Configurer les comptes de service (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8dfde906f7cadc01b9c7a4abbe32be1bd0408986
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080187"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Configurer les comptes de service (Analysis Services)
@@ -27,18 +27,18 @@ ms.locfileid: "66080187"
   
  Cette rubrique fournit des informations complémentaires pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], notamment sur les autorisations supplémentaires nécessaires pour les installations tabulaires et en cluster. Elle traite également des autorisations nécessaires pour prendre en charge les opérations de serveur. Par exemple, vous pouvez configurer des opérations de traitement et de requête pour qu'elles s'exécutent sous le compte de service, auquel cas vous devrez accordez des autorisations supplémentaires.  
   
--   [Privilèges Windows assignés à Analysis Services](#bkmk_winpriv)  
+-   [Privilèges Windows affectés à Analysis Services](#bkmk_winpriv)  
   
 -   [Autorisations de système de fichiers assignées à Analysis Services](#bkmk_FilePermissions)  
   
--   [Octroi d'autorisations supplémentaires pour des opérations de serveur spécifiques](#bkmk_tasks)  
+-   [Octroi d’autorisations supplémentaires pour des opérations de serveur spécifiques](#bkmk_tasks)  
   
  Une autre étape de configuration, non documentée ici, consiste à inscrire un nom de principal du service (SPN) pour le compte de service et l'instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Cette étape autorise l'authentification directe d'applications clientes auprès de sources de données principales dans les scénarios à deux tronçons. Cette étape s'applique uniquement aux services configurés pour la délégation Kerberos contrainte. Pour obtenir des instructions supplémentaires, consultez [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md) .  
   
 ## <a name="logon-account-recommendations"></a>Recommandations relatives aux comptes d'ouverture de session  
  Dans un cluster de basculement, toutes les instances d'Analysis Services doivent être configurées pour utiliser un compte d'utilisateur de domaine Windows. Veuillez assigner le même compte à toutes les instances. Pour plus d'informations, consultez [Procédure de mise en cluster d'Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx) .  
   
- Les instances autonomes doivent utiliser le compte virtuel par défaut, **NT Service\MSSQLServerOLAPService** pour l’instance par défaut, ou **NT Service\MSOLAP$** _nom-instance_ pour une instance nommée. Cette recommandation s'applique aux instances d'Analysis Services dans tous les modes de serveur, en partant du principe que la version du système d'exploitation est Windows Server 2008 R2 et versions ultérieures, et que celle d'Analysis Services est SQL Server 2012 et versions ultérieures.  
+ Les instances autonomes doivent utiliser le compte virtuel par défaut, **NT Service\MSSQLServerOLAPService** pour l’instance par défaut, ou **NT Service\MSOLAP$**_nom-instance_ pour une instance nommée. Cette recommandation s'applique aux instances d'Analysis Services dans tous les modes de serveur, en partant du principe que la version du système d'exploitation est Windows Server 2008 R2 et versions ultérieures, et que celle d'Analysis Services est SQL Server 2012 et versions ultérieures.  
   
 ## <a name="granting-permissions-to-analysis-services"></a>Octroi d'autorisations à Analysis Services  
  Cette section présente les autorisations requises par Analysis Services pour les opérations locales et internes telles que le démarrage d'un exécutable, la lecture d'un fichier de configuration et le chargement de bases de données à partir du répertoire des données. Si vous recherchez plutôt des conseils sur la configuration des autorisations pour l'accès aux données externes et l'interopérabilité avec d'autres services et applications, consultez [Octroi d'autorisations supplémentaires pour des opérations de serveur spécifiques](#bkmk_tasks) plus loin dans cette rubrique.  
@@ -49,13 +49,13 @@ ms.locfileid: "66080187"
   
  Vous pouvez consulter ce groupe de sécurité dans les paramètres de sécurité locale :  
   
--   Exécutez compmgmt.msc | **Utilisateurs et groupes locaux** | **groupes** | `SQLServerMSASUser$`\<nom-serveur >`$MSSQLSERVER` (pour une instance par défaut).  
+-   Exécuter compmgmt. msc | **Utilisateurs et groupes** | **locaux groupes** | `SQLServerMSASUser$`\<nom-serveur>`$MSSQLSERVER` (pour une instance par défaut).  
   
 -   Double-cliquez sur le groupe de sécurité pour afficher ses membres.  
   
  Le seul membre du groupe est le SID par service. Juste à côté se trouve le compte d'ouverture de session. Le nom de compte d'ouverture de session est symbolique, il permet de fournir du contexte au SID par service. Si vous modifiez ultérieurement le compte d'ouverture de session et que vous revenez ensuite à cette page, vous remarquerez que le groupe de sécurité et le SID par service ne changent pas, mais que l'étiquette du compte d'ouverture de session est différente.  
   
-##  <a name="bkmk_winpriv"></a> Privilèges Windows affectés au compte de service Analysis Services  
+##  <a name="bkmk_winpriv"></a>Privilèges Windows affectés au compte de service Analysis Services  
  Analysis Services a besoin d'autorisations du système d'exploitation pour le démarrage du service et pour demander des ressources système. Les exigences varient en fonction du mode serveur et selon qu'il s'agit ou non d'une instance en cluster. Si vous souhaitez vous familiariser avec les privilèges Windows, consultez [Privileges](https://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) (Privilèges) et [Privilege Constants (Windows)](/windows/desktop/SecAuthZ/privilege-constants) [Constantes de privilèges (Windows)].  
   
  Toutes les instances d’Analysis Services nécessitent le privilège **Ouvrir une session en tant que service** (SeServiceLogonRight). Le programme d'installation de SQL Server assigne automatiquement ce privilège sur le compte de service spécifié durant l'installation. Pour les serveurs qui s'exécutent en mode multidimensionnel et exploration de données, il s'agit du seul privilège Windows requis par le compte de service Analysis Services pour les installations serveur autonome et du seul privilège que le programme d'installation configure pour Analysis Services. Pour les instances tabulaires et en cluster, des privilèges Windows supplémentaires doivent être ajoutés manuellement.  
@@ -66,19 +66,19 @@ ms.locfileid: "66080187"
   
 |||  
 |-|-|  
-|**Augmenter une plage de travail de processus** (SeIncreaseWorkingSetPrivilege)|Ce privilège est accessible par défaut à tous les utilisateurs par l'intermédiaire du groupe de sécurité **Utilisateurs** . Si vous verrouillez un serveur en supprimant les privilèges pour ce groupe, Analysis Services ne démarre pas à, la journalisation de cette erreur : « Un privilège requis n’est pas détenu par le client. » Lorsque cette erreur se produit, restaurez le privilège à Analysis Services en l'accordant au groupe de sécurité Analysis Services approprié.|  
+|**Augmenter une plage de travail de processus** (SeIncreaseWorkingSetPrivilege)|Ce privilège est accessible par défaut à tous les utilisateurs par l'intermédiaire du groupe de sécurité **Utilisateurs** . Si vous verrouillez un serveur en supprimant des privilèges pour ce groupe, le démarrage d'Analysis Services risque d'échouer avec l'erreur suivante : « Le client ne dispose pas d'un privilège qui est obligatoire. » Lorsque cette erreur se produit, restaurez le privilège à Analysis Services en l'accordant au groupe de sécurité Analysis Services approprié.|  
 |**Ajuster les quotas de mémoire pour un processus** (SeIncreaseQuotaSizePrivilege)|Ce privilège sert à demander davantage de mémoire si un processus dispose de ressources insuffisantes pour terminer son exécution, avec comme limitation les seuils de mémoire établis pour l'instance.|  
-|**Verrouiller les pages en mémoire** (SeLockMemoryPrivilege)|Ce privilège est nécessaire uniquement lorsque la pagination est complètement désactivée. Par défaut, une instance serveur tabulaire utilise le fichier de pagination Windows, mais vous pouvez l'empêcher d'utiliser la pagination Windows en affectant la valeur 0 au paramètre `VertiPaqPagingPolicy`.<br /><br /> Si `VertiPaqPagingPolicy` a la valeur 1 (par défaut), l'instance serveur tabulaire utilise le fichier de pagination Windows. Les allocations ne sont pas verrouillées, ce qui permet à Windows de paginer selon les besoins. La pagination étant utilisée, nul besoin de verrouiller les pages en mémoire. Par conséquent, pour la configuration par défaut (où `VertiPaqPagingPolicy` = 1), vous n’avez pas besoin d’accorder le **verrouiller les pages en mémoire** privilège à une instance tabulaire.<br /><br /> `VertiPaqPagingPolicy` égal à 0. Si vous désactivez la pagination pour Analysis Services, les allocations sont verrouillées, ce qui implique que le privilège **Verrouiller les pages en mémoire** est accordé à l'instance tabulaire. Étant donné ce paramètre et le privilège **Verrouiller les pages en mémoire** , Windows ne peut pas paginer les allocations effectuées à Analysis Services lorsque le système est soumis à une sollicitation de la mémoire. Analysis Services s’appuie sur le **verrouiller les pages en mémoire** autorisation mettre en œuvre `VertiPaqPagingPolicy` = 0. La désactivation de la pagination Windows n'est pas recommandée. Cela augmente le taux d'erreurs liées à l'insuffisance de mémoire pour les opérations qui réussiraient si la pagination était autorisée. Consultez [propriétés de mémoire](../server-properties/memory-properties.md) pour plus d’informations sur `VertiPaqPagingPolicy`.|  
+|**Verrouiller des pages en mémoire** (SeLockMemoryPrivilege)|Ce privilège est nécessaire uniquement lorsque la pagination est complètement désactivée. Par défaut, une instance serveur tabulaire utilise le fichier de pagination Windows, mais vous pouvez l'empêcher d'utiliser la pagination Windows en affectant la valeur 0 au paramètre `VertiPaqPagingPolicy`.<br /><br /> Si `VertiPaqPagingPolicy` a la valeur 1 (par défaut), l'instance serveur tabulaire utilise le fichier de pagination Windows. Les allocations ne sont pas verrouillées, ce qui permet à Windows de paginer selon les besoins. La pagination étant utilisée, nul besoin de verrouiller les pages en mémoire. Ainsi, pour la configuration par défaut ( `VertiPaqPagingPolicy` où = 1), vous n’avez pas besoin d’accorder le privilège **verrouiller les pages en mémoire** à une instance tabulaire.<br /><br /> `VertiPaqPagingPolicy`à 0. Si vous désactivez la pagination pour Analysis Services, les allocations sont verrouillées, ce qui implique que le privilège **Verrouiller les pages en mémoire** est accordé à l'instance tabulaire. Étant donné ce paramètre et le privilège **Verrouiller les pages en mémoire** , Windows ne peut pas paginer les allocations effectuées à Analysis Services lorsque le système est soumis à une sollicitation de la mémoire. Analysis Services s’appuie sur l’autorisation **verrouiller les pages en mémoire** en tant que `VertiPaqPagingPolicy` mise en œuvre derrière = 0. La désactivation de la pagination Windows n'est pas recommandée. Cela augmente le taux d'erreurs liées à l'insuffisance de mémoire pour les opérations qui réussiraient si la pagination était autorisée. Pour [](../server-properties/memory-properties.md) plus d’informations sur `VertiPaqPagingPolicy`, consultez Propriétés de la mémoire.|  
   
 #### <a name="to-view-or-add-windows-privileges-on-the-service-account"></a>Pour afficher ou ajouter des privilèges Windows sur le compte de service  
   
 1.  Exécutez GPEDIT.msc | Stratégie de l'ordinateur local | Configuration ordinateur | Paramètres Windows | Paramètres de sécurité | Stratégies locales | Attribution des droits utilisateur.  
   
-2.  Passez en revue les stratégies existantes qui incluent `SQLServerMSASUser$`. Il s'agit d'un groupe de sécurité local présent sur les ordinateurs ayant une installation d'Analysis Services. Les privilèges Windows et les autorisations sur les dossiers de fichiers sont accordés à ce groupe de sécurité. Doublez-cliquez sur **Ouvrir une session en tant que service** pour voir de quelle façon le groupe de sécurité est spécifié sur votre système. Le nom complet du groupe de sécurité varie selon que vous avez installé Analysis Services comme instance nommée ou non. Utilisez ce groupe de sécurité plutôt que le compte de service lors de l'ajout des privilèges de compte.  
+2.  Passez en revue les stratégies `SQLServerMSASUser$`existantes qui incluent. Il s'agit d'un groupe de sécurité local présent sur les ordinateurs ayant une installation d'Analysis Services. Les privilèges Windows et les autorisations sur les dossiers de fichiers sont accordés à ce groupe de sécurité. Doublez-cliquez sur **Ouvrir une session en tant que service** pour voir de quelle façon le groupe de sécurité est spécifié sur votre système. Le nom complet du groupe de sécurité varie selon que vous avez installé Analysis Services comme instance nommée ou non. Utilisez ce groupe de sécurité plutôt que le compte de service lors de l'ajout des privilèges de compte.  
   
 3.  Pour ajouter des privilèges de compte dans GPEDIT, cliquez avec le bouton droit sur **Augmenter une plage de travail de processus** et sélectionnez **Propriétés**.  
   
-4.  Cliquez sur **Ajouter un groupe ou un utilisateur**.  
+4.  Cliquez sur **Ajouter un utilisateur ou un groupe**.  
   
 5.  Entrez le groupe d'utilisateurs de l'instance d'Analysis Services. N'oubliez pas que le compte de service est membre d'un groupe de sécurité local, ce qui nécessite que vous ajoutiez le nom de l'ordinateur local comme domaine du compte.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66080187"
 > [!NOTE]  
 >  Les versions antérieures du programme d'installation ajoutaient par inadvertance le compte de service Analysis Services au groupe **Utilisateurs du journal des performances** . Bien que ce problème ait été résolu, il est possible que des installations existantes présentent cette appartenance de groupe superflue. Comme le compte de service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne nécessite aucune appartenance au groupe **Utilisateurs du journal des performances** , vous pouvez le supprimer du groupe.  
   
-##  <a name="bkmk_FilePermissions"></a> Autorisations de système de fichiers affectées au compte de service Analysis Services  
+##  <a name="bkmk_FilePermissions"></a>Autorisations du système de fichiers affectées au compte de service Analysis Services  
   
 > [!NOTE]  
 >  Consultez [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) pour obtenir la liste des autorisations associées à chaque dossier de programme.  
@@ -104,7 +104,7 @@ ms.locfileid: "66080187"
   
  Le conteneur des autorisations sur les fichiers de données, les exécutables des fichiers programme, les fichiers de configuration, les fichiers journaux et les fichiers temporaires est un groupe de sécurité local créé par le programme d'installation de SQL Server.  
   
- Un groupe de sécurité est créé pour chaque instance que vous installez. Le groupe de sécurité est nommé d’après la fonction de l’instance soit **SQLServerMSASUser$ MSSQLSERVER** l’instance par défaut, ou `SQLServerMSASUser$` \<nom_serveur >$\<nom_instance > pour une instance nommée. Le programme d'installation configure ce groupe de sécurité avec les autorisations de fichiers requises pour effectuer les opérations serveur. Si vous vérifiez les autorisations de sécurité dans le répertoire \MSAS12.MSSQLSERVER\OLAP\BIN, vous verrez que le groupe de sécurité (et non le compte de service ou son SID par service) est le détenteur des autorisations sur ce répertoire.  
+ Un groupe de sécurité est créé pour chaque instance que vous installez. Le groupe de sécurité est nommé d’après l’instance ─ soit **SQLServerMSASUser $ MSSQLSERVER** pour l’instance par `SQLServerMSASUser$` \<défaut, soit\<NomServeur>$ nom_instance> pour une instance nommée. Le programme d'installation configure ce groupe de sécurité avec les autorisations de fichiers requises pour effectuer les opérations serveur. Si vous vérifiez les autorisations de sécurité dans le répertoire \MSAS12.MSSQLSERVER\OLAP\BIN, vous verrez que le groupe de sécurité (et non le compte de service ou son SID par service) est le détenteur des autorisations sur ce répertoire.  
   
  Le groupe de sécurité contient un membre uniquement : l'identificateur de sécurité (SID) par service du compte de démarrage de l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Le programme d'installation ajoute le SID par service au groupe de sécurité local. L'utilisation d'un groupe de sécurité local, avec son appartenance au SID, est la différence entre la configuration d'Analysis Services par le programme d'installation de SQL Server et le moteur de base de données.  
   
@@ -118,14 +118,14 @@ ms.locfileid: "66080187"
   
      `SC showsid MSOlap$Tabular`  
   
-2.  Utilisez **Computer Manager** | **utilisateurs et groupes locaux** | **groupes** pour inspecter l’appartenance de SQLServerMSASUser$\<nom_serveur >$\<nom_instance > groupe de sécurité.  
+2.  Utilisez les | **groupes** **utilisateurs et groupes locaux**de **Computer Manager** | pour inspecter l’appartenance du\<groupe de sécurité\<SQLServerMSASUser $ ServerName>$ nom_instance>.  
   
      Le SID de membre doit correspondre au SID par service obtenu à l'étape 1.  
   
-3.  Utilisez **Explorateur Windows** | **Program Files** | **Microsoft SQL Server** | MSASxx.MSSQLServer | **OLAP** | **bin** pour vérifier que les propriétés de sécurité des dossiers sont accordées au groupe de sécurité de l’étape 2.  
+3.  Utiliser les**fichiers** | programme de l' **Explorateur** | Windows**Microsoft SQL Server** | MSASxx. MSSQLServer | **** | **Emplacement** OLAP pour vérifier que les propriétés de sécurité du dossier sont accordées au groupe de sécurité à l’étape 2.  
   
 > [!NOTE]  
->  Ne supprimez ni ne modifiez jamais un SID. Pour restaurer un SID par service qui a été supprimé par mégarde, consultez [ https://support.microsoft.com/kb/2620201 ](https://support.microsoft.com/kb/2620201).  
+>  Ne supprimez ni ne modifiez jamais un SID. Pour restaurer un SID par service qui a été supprimé par inadvertance, [https://support.microsoft.com/kb/2620201](https://support.microsoft.com/kb/2620201)consultez.  
   
  **En savoir plus sur les SID par service**  
   
@@ -135,8 +135,9 @@ ms.locfileid: "66080187"
   
  Le SID étant non modifiable, les listes de contrôle d'accès du système de fichiers créées durant l'installation du service peuvent être utilisées indéfiniment, quelle que soit la fréquence de modification du compte de service. Par mesure de sécurité supplémentaire, les listes de contrôle d'accès (ACL) qui spécifient des autorisations via un SID garantissent que les exécutables de programme et les dossiers de données ne sont accessibles que par une seule instance d'un service, même si d'autres services s'exécutent sous le même compte.  
   
-##  <a name="bkmk_tasks"></a> Octroi d'autorisations Analysis Services supplémentaires pour des opérations spécifiques  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exécute certaines tâches dans le contexte de sécurité du compte de service (ou du compte d’ouverture de session) utilisé pour démarrer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]et exécute d’autres tâches dans le contexte de sécurité de l’utilisateur qui demande la tâche.  
+##  <a name="bkmk_tasks"></a>Octroi d’autorisations de Analysis Services supplémentaires pour des opérations de serveur spécifiques  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exécute certaines tâches dans le contexte de sécurité du compte de service (ou du compte d’ouverture de session) utilisé pour démarrer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]et exécute d’autres tâches dans le contexte de sécurité de l’utilisateur qui demande la tâche.  
   
  Le tableau suivant décrit les autorisations supplémentaires nécessaires pour prendre en charge les tâches s'exécutant en tant que compte de service.  
   
@@ -150,11 +151,11 @@ ms.locfileid: "66080187"
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [SQL Server Service Account and Per-Service SID (blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
- [SQL Server utilise un SID de service pour assurer l'isolement du service (article de la Base de connaissances)](https://support.microsoft.com/kb/2620201)   
- [Jeton d'accès (MSDN)](/windows/desktop/SecAuthZ/access-tokens)   
+ [SQL Server compte de service et SID par service (blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
+ [SQL Server utilise un SID de service pour assurer l’isolation du service (article de la base de connaissances)](https://support.microsoft.com/kb/2620201)   
+ [Jeton d’accès (MSDN)](/windows/desktop/SecAuthZ/access-tokens)   
  [Identificateurs de sécurité (MSDN)](/windows/desktop/SecAuthZ/security-identifiers)   
- [Jeton d'accès (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
- [Listes de contrôle d'accès (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
+ [Jeton d’accès (wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
+ [Listes de Access Control (Wikipédia)](http://en.wikipedia.org/wiki/Access_control_list)  
   
   

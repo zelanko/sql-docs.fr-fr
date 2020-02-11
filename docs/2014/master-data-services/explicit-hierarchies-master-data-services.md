@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: db039658fa292976062426268234d3978c1b32ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483001"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>Hiérarchies explicites (services de données de référence)
@@ -30,7 +30,7 @@ ms.locfileid: "65483001"
  Une hiérarchie explicite peut être déséquilibrée, ce qui signifie qu'elle peut se terminer à des niveaux différents simultanément. Chaque membre consolidé peut avoir un nombre illimité de membres consolidés et feuille en dessous, ou n'en avoir aucun. Les membres feuille peuvent se trouver sous un membre consolidé unique ou sous plusieurs niveaux de membres consolidés.  
   
 > [!NOTE]  
->  Avant de pouvoir créer une hiérarchie explicite, l'entité doit être activée pour les hiérarchies explicites. Pour plus d’informations, consultez [activer une entité pour les hiérarchies et Collections explicites &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md).  
+>  Avant de pouvoir créer une hiérarchie explicite, l'entité doit être activée pour les hiérarchies explicites. Pour plus d’informations, consultez [activer une entité pour les hiérarchies explicites et les Collections &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md).  
   
 ## <a name="types-of-explicit-hierarchies"></a>Types de hiérarchies explicites  
  Il existe deux types de hiérarchies explicites : obligatoire et non obligatoire.  
@@ -69,7 +69,7 @@ ms.locfileid: "65483001"
 |Peut être déséquilibré|Contient toujours un nombre cohérent de niveaux|  
   
 ## <a name="explicit-hierarchy-example"></a>Exemple de hiérarchie explicite  
- Dans l’exemple suivant, l’entité Product contient ces membres feuille : BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450}, and BK-R650 {Road-650}.  
+ Dans l'exemple suivant, l'entité Product contient les membres feuille suivants : BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450} et BK-R650 {Road-650}.  
   
  Pour synthétiser ces membres feuille à des points de consolidation spécifiques, vous pouvez créer des membres consolidés dans l'entité Product. Insérez les membres consolidés à des niveaux de l'arborescence hiérarchique où vous souhaitez synthétiser les membres feuille. Il n'existe aucune limitation quant à l'emplacement où vous insérez vos membres consolidés ; toutefois, chaque membre (feuille ou consolidé) ne peut être utilisé qu'une fois.  
   
@@ -81,9 +81,9 @@ ms.locfileid: "65483001"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Activer une entité pour les hiérarchies explicites et les collections.|[Activer une entité pour les hiérarchies et Collections explicites &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
+|Activer une entité pour les hiérarchies explicites et les collections.|[Activez une entité pour les hiérarchies explicites et les collections &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
 |Créer une hiérarchie explicite.|[Créer une hiérarchie explicite &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|Modifier le nom d'une hiérarchie explicite existante.|[Modifier le nom d’une hiérarchie explicite &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
+|Modifier le nom d'une hiérarchie explicite existante.|[Modifiez le nom d’une hiérarchie explicite &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
 |Supprimer une hiérarchie explicite existante.|[Supprimer une hiérarchie explicite &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
 |||  
   

@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Options de l’Exploration de données (Analysis Services - Exploration de données) | Microsoft Docs
+title: Boîte de dialogue Options d’exploration de données (Analysis Services-exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b327a0a350e88fd197a52c710f8a991c892a0aea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086537"
 ---
 # <a name="data-exploration-options-dialog-box-analysis-services---data-mining"></a>Boîte de dialogue Options d'exploration de données (Analysis Services – Exploration de données)
@@ -28,9 +28,9 @@ ms.locfileid: "66086537"
   
 |Terme|Définition|  
 |----------|----------------|  
-|**Nombre supérieur**|Sélectionnez cette option pour extraire le premier nombre de lignes défini dans **Nombre d'échantillons** comme échantillons de données.|  
+|**Les premières**|Sélectionnez cette option pour extraire le premier nombre de lignes défini dans **Nombre d'échantillons** comme échantillons de données.|  
 |**Échantillon aléatoire**|Sélectionnez cette option pour échantillonner et extraire de manière aléatoire le nombre de lignes défini dans **Nombre d'échantillons** comme échantillons de données.|  
-|**Nombre d’échantillons**|Sélectionnez le nombre de lignes à retourner sous forme de données d'échantillonnage.|  
+|**Nombre d'échantillons**|Sélectionnez le nombre de lignes à retourner sous forme de données d'échantillonnage.|  
 |**États par graphique**|Sélectionnez le nombre d'états discrets dans l'onglet **Graphique** de la boîte de dialogue **Explorer les données** .|  
   
   

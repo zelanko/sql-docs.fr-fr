@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8beb6998d78ad9a113ce18323133de7ed39ead56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66090639"
 ---
 # <a name="configure-a-server-to-run-the-off-by-default-policy"></a>Configurer un serveur pour exécuter la stratégie Désactivé par défaut
@@ -43,6 +43,6 @@ ms.locfileid: "66090639"
 10. Fermez les boîtes de dialogue **Vue détaillée des résultats** et **Évaluer les stratégies** .  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : Créer et appliquer une stratégie de standards de nommage](lesson-2-create-and-apply-a-naming-standards-policy.md)  
+ [Leçon 2 : Créer et appliquer une stratégie de normes d'affectation de noms](lesson-2-create-and-apply-a-naming-standards-policy.md)  
   
   

@@ -11,13 +11,13 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1dbc3dd467aab0cf60cdb255165767fc12a0f518
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63156774"
 ---
-# <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>Bonnes pratiques pour appeler des procédures stockées compilées en mode natif
+# <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>Meilleures pratiques pour appeler des procédures stockées compilées en mode natif
   Les procédures stockées compilées en mode natif sont les suivantes :  
   
 -   utilisées en général dans les parties ayant un impact sur les performances d'une application ;  
@@ -28,7 +28,7 @@ ms.locfileid: "63156774"
   
  L'avantage lié à l'utilisation d'une procédure stockée compilée en mode natif augmente avec le nombre de lignes et la quantité de logique qui est traitée par la procédure. Par exemple, une procédure stockée compilée en mode natif présentera de meilleures performances si elle utilise un ou plusieurs des éléments suivants :  
   
--   agrégation ;  
+-   Agrégation.  
   
 -   jointures de boucles imbriquées ;  
   
@@ -50,7 +50,7 @@ ms.locfileid: "63156774"
   
  De même, vous pouvez détecter l'utilisation de types incompatibles dans le même XEvent `hekaton_slow_parameter_passing`, avec `reason=parameter_conversion`.  
   
- Étant donné que vous devez implémenter la logique de nouvelle tentative lors de l'utilisation des tables mémoire optimisées (dans de nombreux scénarios), et que vous devrez contourner certaines limitations de fonctionnalités, vous pouvez créer une procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] interprétée par wrapper. Pour obtenir un exemple, consultez [instructions pour la logique de nouvelle tentative pour les Transactions sur les Tables optimisées en mémoire](memory-optimized-tables.md).  
+ Étant donné que vous devez implémenter la logique de nouvelle tentative lors de l'utilisation des tables mémoire optimisées (dans de nombreux scénarios), et que vous devrez contourner certaines limitations de fonctionnalités, vous pouvez créer une procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] interprétée par wrapper. Pour obtenir un exemple, consultez [instructions pour la logique de nouvelle tentative pour les transactions sur les tables optimisées en mémoire](memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées compilées en mode natif](natively-compiled-stored-procedures.md)  

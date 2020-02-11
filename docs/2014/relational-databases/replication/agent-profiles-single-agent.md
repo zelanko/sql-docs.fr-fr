@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4c6d6c421e976290f17a3e49848a1600445a7da1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63186967"
 ---
 # <a name="agent-profiles-single-agent"></a>Profils de l'Agent (agent unique)
@@ -29,10 +29,10 @@ ms.locfileid: "63186967"
  Sélectionnez le profil à utiliser lorsque des travaux sont créés pour un agent d'un type donné. Par exemple, si vous créez plusieurs abonnements à une publication de fusion, le travail de l'Agent de fusion pour chaque abonnement utilisera le profil sélectionné. Si vous souhaitez modifier le profil de travaux existants, sélectionnez un profil, puis cliquez sur **Modifier les Agents existants**.  
   
  **Nom**  
- Nom du profil  
+ Nom du profil.  
   
  **Type**  
- Type de profil : **Utilisateur** (défini par l’utilisateur) ou **système** (prédéfini).  
+ Type de profil : **Utilisateur** (défini par l'utilisateur) ou **Système** (prédéfini).  
   
  **Propriétés (...)**  
  Cliquez sur cette option pour voir les valeurs utilisées pour chaque paramètre dans le profil de l'agent.  

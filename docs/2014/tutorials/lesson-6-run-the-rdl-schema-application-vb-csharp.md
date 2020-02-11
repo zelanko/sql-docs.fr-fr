@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 6 : Exécutez l’Application du schéma RDL (VB -C#) | Microsoft Docs'
+title: 'Leçon 6 : exécuter l’application de schéma RDL (VB-C #) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,14 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 1f2f1c579e4f4eccad8015b1ed5448bd0b6e376a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63254506"
 ---
-# <a name="lesson-6-run-the-rdl-schema-application-vb-c"></a>Leçon 6 : Exécutez l’Application du schéma RDL (VB -C#)
+# <a name="lesson-6-run-the-rdl-schema-application-vb-c"></a>Leçon 6 : exécuter l’application de schéma RDL (VB-C #)
+  
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] offre deux méthodes pour créer et exécuter une application console à partir de l'environnement de développement intégré (IDE) :  
   
 -   Exécuter (avec débogage)  
@@ -26,7 +27,7 @@ ms.locfileid: "63254506"
   
 ### <a name="to-build-and-run-the-samplerdlschema-application"></a>Pour générer et exécuter l'application SampleRDLSchema  
   
-1.  Dans le menu **Déboguer** , cliquez sur **Exécuter sans débogage**. Cette commande permet de conserver la fenêtre de la console ouverte après l'exécution du programme.  
+1.  Dans le menu **Débogage**, cliquez sur **Exécuter sans débogage**. Cette commande permet de conserver la fenêtre de la console ouverte après l'exécution du programme.  
   
      L'application imprime la sortie suivante dans la console :  
   
@@ -46,7 +47,7 @@ ms.locfileid: "63254506"
 3.  Quand l'exécution de l'exemple d'application est terminée, une copie mise à jour du rapport est enregistrée sur le serveur de rapports.  
   
 ## <a name="see-also"></a>Voir aussi  
- [La mise à jour des rapports à l’aide des Classes générées à partir du schéma RDL &#40;didacticiel SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
- [RDL (Report Definition Language) &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
+ [Mise à jour des rapports à l’aide de classes générées à partir du schéma RDL &#40;didacticiel SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+ [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

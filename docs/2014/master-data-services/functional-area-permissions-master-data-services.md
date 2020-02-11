@@ -15,24 +15,24 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ffa8314e764a814956a7910f93d944294ab7acf7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479406"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>Autorisations de zone fonctionnelle (Master Data Services)
   Vous pouvez affecter une autorisation à chacune des zones fonctionnelles de l’interface utilisateur du [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Il existe cinq zones fonctionnelles :  
   
--   **Explorateur**  
+-   **Explorer**  
   
 -   **Gestion des versions**  
   
--   **Gestion de l'intégration**  
+-   **Gestion de l’intégration**  
   
--   **Administration de système**  
+-   **Administration du système**  
   
--   **Autorisations d'accès**  
+-   **Autorisations d’accès**  
   
  Lorsque vous affectez une autorisation à une zone fonctionnelle, vous rendez une zone de l'interface utilisateur visible à l'utilisateur ou au groupe.  
   

@@ -11,17 +11,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84c8d4f9ed6eccbf7e58be46a9b84c53559a317d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63232415"
 ---
 # <a name="accessing-the-wmi-provider-programmatically"></a>Accès au fournisseur WMI par programmation
   Cette rubrique est en cours d'élaboration.  
   
 ## <a name="wmi-provider-overview"></a>Vue d'ensemble du fournisseur WMI  
- L'espace de noms utilisé pour obtenir des informations sur [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dans les exemples de code contenus dans cette rubrique est **System.Management** , qui est issu du [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. L’espace de noms **System.Management** fournit un ensemble de classes de code managé par le biais desquelles les applications [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] peuvent accéder à des informations de gestion et les manipuler. Pour plus d'informations sur l'utilisation des classes WMI de Reporting Services à l'aide de l'espace de noms **System.Management** , consultez « Accès aux informations de gestion avec System.Management » dans le Kit de développement logiciel (SDK) [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] .  
+ L’espace de noms utilisé pour obtenir des informations sur [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dans les exemples de code contenus dans cette rubrique est **System.Management**, qui provient du [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. L’espace de noms **System.Management** fournit un ensemble de classes de code managé par le biais desquelles les applications [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] peuvent accéder à des informations de gestion et les manipuler. Pour plus d’informations sur l’utilisation des classes WMI de Reporting Services à l’aide de l’espace de noms **System.Management**, consultez « Accès aux informations de gestion avec System.Management » dans le SDK [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  
   
 ## <a name="finding-a-report-server-instance"></a>Recherche d'une instance de serveur de rapports  
  La méthode privilégiée pour rechercher des informations sur vos installations de serveur de rapports consiste à énumérer la collection d'instances WMI. L'exemple suivant indique comment rechercher des propriétés sur chaque instance de serveur de rapports en créant une collection et en effectuant une boucle dans la collection pour afficher les propriétés.  
@@ -127,7 +127,7 @@ class Class1
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Accéder au fournisseur WMI de Reporting Services](tools/access-the-reporting-services-wmi-provider.md)   
- [Fichier de configuration RSReportServer](report-server/rsreportserver-config-configuration-file.md)  
+ [Accéder au fournisseur WMI Reporting Services](tools/access-the-reporting-services-wmi-provider.md)   
+ [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)  
   
   

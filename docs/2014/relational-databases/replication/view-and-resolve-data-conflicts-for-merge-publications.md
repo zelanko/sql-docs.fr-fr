@@ -1,5 +1,5 @@
 ---
-title: Afficher et résoudre les conflits de données pour les Publications de fusion (SQL Server Management Studio) | Microsoft Docs
+title: Afficher et résoudre les conflits de données pour les publications de fusion (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8810377a7e676d4376fca3cc52e73d6c507dbd21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255426"
 ---
 # <a name="view-and-resolve-data-conflicts-for-merge-publications-sql-server-management-studio"></a>afficher et résoudre les conflits de données pour les publications de fusion (SQL Server Management Studio)
@@ -26,9 +26,9 @@ ms.locfileid: "63255426"
   
  Les données de conflit sont disponibles dans la Visionneuse des conflits de réplication pendant la durée définie comme période de rétention des conflits (par défaut 14 jours). Pour définir la période de rétention des conflits :  
   
--   Spécifiez une valeur de rétention pour le paramètre **@conflict_retention** de [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql).  
+-   Spécifiez une valeur de rétention pour le **@conflict_retention** paramètre de [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql).  
   
--   Spécifiez la valeur **conflict_retention** pour le paramètre **@property** et une valeur de rétention pour le paramètre **@value** de [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql).  
+-   Spécifiez une valeur de **conflict_retention** pour **@property** le paramètre et une valeur de rétention pour le **@value** paramètre de [sp_changemergepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql).  
   
  Par défaut, les informations sur les conflits sont stockées dans les emplacements suivants :  
   
@@ -38,20 +38,20 @@ ms.locfileid: "63255426"
   
 -   Sur le serveur de publication si les Abonnées exécutent [!INCLUDE[ssEW](../../includes/ssew-md.md)]. Les données conflictuelles ne peuvent pas être stockées sur les Abonnés [!INCLUDE[ssEW](../../includes/ssew-md.md)] .  
   
- Le stockage des informations de conflits est contrôlé par la propriété de publication **conflict_logging** . Pour plus d’informations, consultez [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) et [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql).  
+ Le stockage des informations de conflits est contrôlé par la propriété de publication **conflict_logging**. Pour plus d’informations, consultez [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) et [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql).  
   
- Il est également possible de résoudre les conflits de façon interactive au cours de la synchronisation à l'aide du programme de résolution interactif [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Le résolveur interactif est disponible via le Gestionnaire de synchronisation [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Pour plus d’informations, consultez [Synchroniser un abonnement à l’aide du Gestionnaire de synchronisation Windows &#40;Windows Synchronization Manager&#41;](synchronize-a-subscription-using-windows-synchronization-manager.md).  
+ Il est également possible de résoudre les conflits de façon interactive au cours de la synchronisation à l'aide du programme de résolution interactif [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Le résolveur interactif est disponible via le Gestionnaire de synchronisation [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Pour plus d’informations, consultez [Synchroniser un abonnement à l’aide du Gestionnaire de synchronisation Windows &#40;Gestionnaire de synchronisation Windows&#41;](synchronize-a-subscription-using-windows-synchronization-manager.md).  
   
 ### <a name="to-view-and-resolve-conflicts-for-merge-publications"></a>Pour afficher et résoudre les conflits des publications de fusion  
   
-1.  Connectez-vous au serveur de publication (ou à l'Abonné, le cas échéant) dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]puis développez le nœud du serveur.  
+1.  Connectez-vous au serveur de publication (ou à l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]abonné, le cas échéant) dans, puis développez le nœud du serveur.  
   
 2.  Développez le dossier **Réplication** , puis développez le dossier **Publications locales** .  
   
 3.  Cliquez avec le bouton droit sur la publication dont vous souhaitez afficher les conflits puis cliquez sur **Afficher les conflits**.  
   
     > [!NOTE]  
-    >  Si vous spécifiez une valeur **'subscriber'** pour la propriété **conflict_logging** , l'option de menu **Afficher les conflits** n'est pas disponible. Pour afficher les conflits, démarrez ConflictViewer.exe à partir de l'invite de commandes. Par défaut, ConflictViewer.exe est disponible dans le répertoire suivant : Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE. Pour obtenir la liste des paramètres de démarrage valides, exécutez ConflictViewer.exe -?.  
+    >  Si vous spécifiez une valeur **'subscriber'** pour la propriété **conflict_logging** , l'option de menu **Afficher les conflits** n'est pas disponible. Pour afficher les conflits, démarrez ConflictViewer.exe à partir de l'invite de commandes. Par défaut, ConflictViewer.exe se trouve dans le répertoire suivant : Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE. Pour obtenir la liste des paramètres de démarrage valides, exécutez ConflictViewer.exe -?.  
   
 4.  Dans la boîte de dialogue **Sélectionner la table de conflits** , sélectionnez une base de données et une table dont il faut afficher les conflits.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63255426"
   
     -   Sélectionner une ou plusieurs lignes dans la grille supérieure puis cliquer sur **Supprimer**, ce qui équivaut à cliquer sur le bouton **Soumettre le gagnant** (sans modifier les données).  
   
-    -   Cliquer sur le bouton des propriétés ( **...** ) pour afficher des informations plus détaillées sur une colonne concernée par un conflit.  
+    -   Cliquez sur le bouton des propriétés (**...**) pour afficher plus d’informations sur une colonne impliquée dans un conflit.  
   
     -   Modifier des données dans la colonne **Gagnant du conflit** ou **Perdant du conflit** avant de soumettre les données (les données sont en lecture seule si la colonne est grisée).  
   
@@ -71,12 +71,12 @@ ms.locfileid: "63255426"
   
     -   Cliquer sur **Soumettre le perdant** pour substituer la résolution et propager la valeur désignée comme perdante du conflit à tous les nœuds de la topologie.  
   
-    -   Sélectionner l'option **Consigner les détails de ce conflit** pour enregistrer les données de conflit dans un journal. Pour spécifier l'emplacement du fichier, pointez sur le menu **Affichage** puis cliquez sur **Options**. Entrez une valeur ou cliquez sur le bouton Parcourir ( **...** ) pour accéder au fichier approprié. Cliquez sur **OK** pour fermer la boîte de dialogue **Options** .  
+    -   Sélectionner l'option **Consigner les détails de ce conflit** pour enregistrer les données de conflit dans un journal. Pour spécifier l'emplacement du fichier, pointez sur le menu **Affichage** puis cliquez sur **Options**. Entrez une valeur ou cliquez sur le bouton Parcourir (**...**) pour accéder au fichier approprié. Cliquez sur **OK** pour fermer la boîte de dialogue **Options** .  
   
 6.  Fermer la Visionneuse des conflits de réplication.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Détection et résolution des conflits de réplication de fusion avancée](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Spécifier un programme de résolution d’articles de fusion](publish/specify-a-merge-article-resolver.md)  
+ [Détection et résolution avancées des conflits de réplication de fusion](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Spécifier un programme de résolution d'articles de fusion](publish/specify-a-merge-article-resolver.md)  
   
   

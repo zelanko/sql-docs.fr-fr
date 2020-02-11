@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue de fichiers de base de données (Analysis Services - données multidimensionnelles) Rechercher | Microsoft Docs
+title: Boîte de dialogue Rechercher les fichiers de base de données (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,21 +13,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a013ed1ca80e17f89baba65b89c460b6ee68691
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078027"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Rechercher les fichiers de base de données (Analysis Services - Données multidimensionnelles)
-  La boîte de dialogue **Rechercher les fichiers de base de données** affiche la liste des fichiers disponibles dans le journal ainsi que les dossiers de données définis pour une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Vous pouvez sélectionner un des fichiers répertoriés ou spécifier un dossier et un fichier manuellement. Pour afficher la boîte de dialogue **Rechercher les fichiers de base de données** , utilisez l’une des méthodes suivantes :  
+  La boîte de dialogue **Rechercher les fichiers de base de données** affiche la liste des fichiers disponibles dans le journal ainsi que les dossiers de données définis pour une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Vous pouvez sélectionner un des fichiers répertoriés ou spécifier un dossier et un fichier manuellement. Pour afficher la boîte de dialogue **Rechercher les fichiers de base de données** , utilisez l’une des méthodes suivantes :  
   
 -   Cliquez sur **Parcourir** dans la page **Général** de la boîte de dialogue **Restaurer la base de données** .  
   
--   Cliquez sur le bouton de sélection ( **...** ) dans la colonne **Fichier de sauvegarde** de la grille d’options de **restauration de partitions de sauvegarde** dans la page **Partitions** de la boîte de dialogue **Restaurer la base de données** .  
+-   cliquez sur le bouton points de suspension (**...**) dans la colonne **Fichier de sauvegarde** de la grille d'options de restauration de partitions de sauvegarde**** sur la page **Partitions** de la boîte de dialogue **Restaurer la base de données**.  
   
 ## <a name="options"></a>Options  
- **Sélectionnez le dossier**  
+ **Sélectionner le dossier**  
  Permet de sélectionner un dossier pour définir **Chemin d’accès sélectionné** sur le chemin choisi.  
   
  **Chemin d’accès sélectionné**  
@@ -37,8 +37,8 @@ ms.locfileid: "66078027"
  Permet de taper un autre fichier que celui sélectionné via l’option **Sélectionner le dossier**ou de sélectionner un fichier qui ne figure pas dans **Sélectionner le dossier**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Général &#40;restaurer la boîte de dialogue base de données&#41; &#40;Analysis Services - données multidimensionnelles&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
- [Partitions &#40;restaurer la boîte de dialogue base de données&#41; &#40;Analysis Services - données multidimensionnelles&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)  
+ [Analysis Services les concepteurs et les boîtes de dialogue &#40;les données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Boîte de dialogue &#40;de restauration de base de données général&#41; &#40;Analysis Services-données multidimensionnelles&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Boîte de dialogue partitions &#40;boîte de dialogue restaurer la base de données&#41; &#40;Analysis Services-données multidimensionnelles&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)  
   
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a2b398a9910926ca2ced339395feaf938c31d519
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67412706"
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>Tâche de nettoyage d'historique (Plan de maintenance)
@@ -28,7 +28,7 @@ ms.locfileid: "67412706"
  Cette instruction utilise les instructions **sp_purge_jobhistory** et **sp_delete_backuphistory** .  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
- **Connexion**  
+ **Connection**  
  Sélectionnez la connexion serveur à utiliser pour exécuter la tâche.  
   
  **Nouveau**  
@@ -53,7 +53,7 @@ ms.locfileid: "67412706"
 >  Si le nombre d'objets impliqués est élevé, l'affichage des instructions peut prendre un temps considérable.  
   
 ## <a name="new-connection-dialog-box"></a>Boîte de dialogue Nouvelle connexion  
- **Nom de la connexion**  
+ **Nom de connexion**  
  Entrez un nom pour la nouvelle connexion.  
   
  **Sélectionnez ou entrez un nom de serveur.**  

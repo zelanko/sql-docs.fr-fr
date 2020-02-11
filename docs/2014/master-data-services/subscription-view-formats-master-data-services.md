@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5891e3010645d17d08b13abf30f8fe46594fc1fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478868"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>Formats de vue d'abonnement (Master Data Services)
@@ -22,16 +22,16 @@ ms.locfileid: "65478868"
   
 ## <a name="subscription-view-formats"></a>Formats de vue d'abonnement  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |**Membres feuille**|Contient des membres feuille et leurs valeurs d'attribut associées.|  
 |**Membres consolidés**|Contient des membres consolidés et leurs valeurs d'attribut associées.|  
-|**Appartenances à la collection**|Contient une liste de collections et leurs valeurs d'attribut associées.|  
+|**Appartenances aux regroupements**|Contient une liste de collections et leurs valeurs d'attribut associées.|  
 |**Collections**|Contient la liste des collections et les membres de chacune, avec les valeurs de pondération et l'ordre de tri.|  
-|**Enfant de parent explicite**|Contient des structures de hiérarchie explicite pour une entité dans un format enfant de parent.|  
+|**Enfant parent explicite**|Contient des structures de hiérarchie explicite pour une entité dans un format enfant de parent.|  
 |**Niveaux explicites**|Contient des structures de hiérarchie explicite pour une entité au format de niveau.|  
-|**Enfant de parent dérivé (vue Hiérarchie dérivée)**|Contient une structure de hiérarchie dérivée au format enfant de parent.|  
-|**Niveaux dérivés (vue Hiérarchie dérivée)**|Contient une structure de hiérarchie dérivée au format de niveau.|  
+|**Enfant parent dérivé (vue hiérarchie dérivée)**|Contient une structure de hiérarchie dérivée au format enfant de parent.|  
+|**Niveaux dérivés (vue hiérarchie dérivée)**|Contient une structure de hiérarchie dérivée au format de niveau.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exportation de données &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)   

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8bcadc041fd1f2c4fd708fbc79ab52d0c0472956
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479576"
 ---
 # <a name="delete-an-entity-master-data-services"></a>Supprimer une entité (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "65479576"
 > [!NOTE]  
 >  Les membres de l'entité de toutes les versions seront supprimés définitivement.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -43,7 +43,7 @@ ms.locfileid: "65479576"
   
 4.  Sélectionnez la ligne de l'entité à supprimer.  
   
-5.  Cliquez sur **supprimer l’entité sélectionnée**.  
+5.  Cliquez sur **Supprimer l’entité sélectionnée**.  
   
 6.  Dans la boîte de dialogue de confirmation, cliquez sur **OK**.  
   

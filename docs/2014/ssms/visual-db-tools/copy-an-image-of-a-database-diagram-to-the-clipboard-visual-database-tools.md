@@ -1,5 +1,5 @@
 ---
-title: Copier une Image d’un schéma de base de données dans le Presse-papiers (Visual Database Tools) | Microsoft Docs
+title: Copier une image d’un schéma de base de données dans le presse-papiers (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e011d1dc3f4690f78821a2bd47aced8e06b8e768
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225849"
 ---
 # <a name="copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools"></a>Copier une image d’un diagramme de base de données dans le Presse-papiers (Visual Database Tools)
@@ -35,6 +35,6 @@ ms.locfileid: "63225849"
      L’image de l’intégralité du diagramme de la base de données est désormais dans le Presse-papiers système.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utiliser des schémas de base de données &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [Utiliser des diagrammes de base de données &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

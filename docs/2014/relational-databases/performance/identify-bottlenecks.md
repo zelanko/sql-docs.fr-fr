@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be8b05a3dc706d23f0e1328f4e8bdd38ed368ede
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150903"
 ---
 # <a name="identify-bottlenecks"></a>Identifier les goulots d'étranglement
@@ -44,7 +44,7 @@ ms.locfileid: "63150903"
 ## <a name="analyzing-bottlenecks"></a>Analyse des goulots d'étranglement  
  La durée excessive de divers événements représente un indicateur des goulots d'étranglement susceptibles d'être ajustés.  
   
- Exemple :  
+ Par exemple :  
   
 -   un composant peut empêcher le chargement d'un autre composant, augmentant ainsi le temps nécessaire pour terminer le chargement ;  
   

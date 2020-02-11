@@ -1,5 +1,5 @@
 ---
-title: 'Création et interrogation de modèles d’exploration de données à l’aide du langage DMX : Didacticiels (Analysis Services - Exploration de données) | Microsoft Docs'
+title: 'Création et interrogation de modèles d’exploration de données à l’aide de DMX : didacticiels (Analysis Services-exploration de données) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,49 +13,49 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 22ed01105a32f460bcbeb2c067299fdf62af2eed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63180552"
 ---
-# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Création et interrogation de modèles d’exploration de données à l’aide du langage DMX : Didacticiels (Analysis Services - Exploration de données)
-  Une fois que vous avez créé une solution d’exploration de données à l’aide de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous pouvez créer des requêtes sur les modèles d’exploration de données pour prévoir des tendances, extraire des modèles dans les données et mesurer la précision des modèles d’exploration de données.  
+# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Création et interrogation de modèles d'exploration de données à l'aide du langage DMX : didacticiels (Analysis Services - Exploration de données)
+  Une fois que vous avez créé une solution d’exploration [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]de données à l’aide de, vous pouvez créer des requêtes sur les modèles d’exploration de données pour prédire des tendances, récupérer des modèles dans les données et mesurer la précision des modèles d’exploration de données.  
   
- Les didacticiels pas à pas dans la liste suivante vous aidera à apprendre à générer et exécuter des requêtes d’exploration de données à l’aide de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] afin que vous pouvez obtenir le meilleur parti de vos données.  
+ Les didacticiels pas à pas de la liste suivante vous aideront à apprendre à créer et à exécuter des requêtes d’exploration de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] données à l’aide de afin que vous puissiez tirer le meilleur parti de vos données.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Tutoriel DMX Bike Buyer](../../2014/tutorials/bike-buyer-dmx-tutorial.md)  
+-   [Didacticiel DMX Bike Buyer](../../2014/tutorials/bike-buyer-dmx-tutorial.md)  
   
      Dans ce didacticiel, vous allez apprendre à créer une nouvelle structure et des modèles d'exploration de données  à l'aide du langage DMX (Data Mining Extensions) et à créer des requêtes de prédiction DMX.  
   
--   [Tutoriel DMX Market Basket](../../2014/tutorials/market-basket-dmx-tutorial.md)  
+-   [Didacticiel DMX Market Basket](../../2014/tutorials/market-basket-dmx-tutorial.md)  
   
      Ce didacticiel utilise un scénario de panier d'achat typique, avec des associations entre les produits que les clients achètent simultanément. Ce didacticiel montre également comment utiliser des tables imbriquées lorsque vous créez une structure d'exploration de données. Vous générez et effectuez l'apprentissage d'un modèle selon cette structure, puis vous créez des prédictions à l'aide de DMX.  
   
--   [Tutoriel DMX sur la prédiction de série chronologique](../../2014/tutorials/time-series-prediction-dmx-tutorial.md)  
+-   [Didacticiel DMX sur la prédiction de série chronologique](../../2014/tutorials/time-series-prediction-dmx-tutorial.md)  
   
-     Ce didacticiel crée un modèle de prévision pour illustrer l'utilisation de l'instruction CREATE MODEL (DMX). Vous ajoutez ensuite des modèles liés et personnalisez le comportement de chacun en modifiant les paramètres de l'algorithme MTS (Microsoft Time Series). Enfin, vous créez des prédictions et mettez à jour ces prédictions avec les nouvelles données. La capacité à mettre à jour d’une série chronologique lors de l’élaboration de prédictions a été ajoutée dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
+     Ce didacticiel crée un modèle de prévision pour illustrer l'utilisation de l'instruction CREATE MODEL (DMX). Vous ajoutez ensuite des modèles liés et personnalisez le comportement de chacun en modifiant les paramètres de l'algorithme MTS (Microsoft Time Series). Enfin, vous créez des prédictions et mettez à jour ces prédictions avec les nouvelles données. La possibilité de mettre à jour une série chronologique tout en faisant des prédictions a été ajoutée dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
-## <a name="reference"></a>Référence  
- [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+## <a name="reference"></a>Informations de référence  
+ [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Informations de référence sur le langage DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Informations de référence sur la&#41; DMX &#40;Data Mining Extensions](/sql/dmx/data-mining-extensions-dmx-reference)  
   
 ## <a name="related-sections"></a>Sections connexes  
   
--   [Tutoriel sur l’exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)  
+-   [Didacticiel d’exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
      Ce didacticiel introduit des concepts de base, tels que la procédure de création d'un projet et de génération de structures et de modèles d'exploration de données.  
   
--   [Didacticiel d’exploration de données intermédiaire &#40;Analysis Services - Exploration de données&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
+-   [Didacticiel sur l’exploration de données intermédiaire &#40;Analysis Services d’exploration de données&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
   
      Ce didacticiel contient plusieurs leçons indépendantes, chacune d'elle vous initiant à un type de modèle différent. Chaque leçon vous guide dans le processus de création d'un modèle, l'exploration du modèle, puis la personnalisation du modèle et la création de requêtes de prédiction.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Solutions d’exploration de données](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
- [Outils d'exploration de données](../../2014/analysis-services/data-mining/data-mining-tools.md)   
- [Projets d’exploration de données](../../2014/analysis-services/data-mining/data-mining-projects.md)  
+ [Outils d’exploration de données](../../2014/analysis-services/data-mining/data-mining-tools.md)   
+ [Projets d'exploration de données](../../2014/analysis-services/data-mining/data-mining-projects.md)  
   
   

@@ -14,17 +14,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47ce33e0d0a8cf76a90beb1fa3cc6ddfda27606f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63316141"
 ---
 # <a name="general-user-interface-elements"></a>Éléments généraux relatifs à l'interface utilisateur
+  
   **L’éditeur**, la fenêtre **Propriétés** et la **boîte à outils** représentent certains des éléments d’interface utilisateur de base de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Boîte de dialogue À propos de](about-dialog-box.md)  
+ [À propos de (boîte de dialogue)](about-dialog-box.md)  
  Décrit la boîte de dialogue qui fournit des informations sur [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et sur l'ordinateur sur lequel il s'exécute.  
   
  [Navigateur Web SQL Server Management Studio](sql-server-management-studio-web-browser.md)  

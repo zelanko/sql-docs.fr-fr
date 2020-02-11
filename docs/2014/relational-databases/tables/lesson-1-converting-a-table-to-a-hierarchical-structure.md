@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 1 : Conversion d’une Table en une Structure hiérarchique | Microsoft Docs'
+title: 'Leçon 1 : Conversion d’une table en structure hiérarchique | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 66e77d0badf14a804cb82249d03ed552e1f8dcfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205651"
 ---
-# <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>Leçon 1 : Conversion d’une table en une structure hiérarchique
+# <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>Leçon 1 : Conversion d'une table en structure hiérarchique
   Les clients qui ont des tables utilisant des jointures réflexives pour exprimer des relations hiérarchiques peuvent convertir leurs tables en structure hiérarchique en suivant les procédures fournies dans cette leçon. Il est relativement facile d'effectuer une migration de cette représentation vers une autre à l'aide de `hierarchyid`. Après la migration, les utilisateurs disposeront d'une représentation hiérarchique compacte et facile à comprendre, qui peut être indexée de plusieurs façons pour que les requêtes soient efficaces.  
   
  Cette leçon examine une table existante, crée une table contenant une colonne `hierarchyid`, remplit la table avec les données de la table source, puis illustre trois stratégies d'indexation. Cette leçon contient les rubriques suivantes :  
@@ -30,15 +30,15 @@ ms.locfileid: "63205651"
   
 -   [Optimisation de la table NewOrg](lesson-1-3-optimizing-the-neworg-table.md)  
   
--   [Résumé : Conversion d’une Table en une Structure hiérarchique](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
+-   [Résumé : Conversion d'une table en une structure hiérarchique](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Cette leçon requiert l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
  [Étude de la structure actuelle de la table Employee](lesson-1-1-examining-the-current-structure-of-the-employee-table.md)  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : Création et la gestion des données dans une Table hiérarchique](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
+ [Leçon 2 : création et gestion de données dans une table hiérarchique](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
   
   

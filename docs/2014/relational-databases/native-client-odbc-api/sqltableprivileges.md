@@ -15,19 +15,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 51492e55fd3c34c099a5f53187d1b2a9875ce7e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188637"
 ---
 # <a name="sqltableprivileges"></a>SQLTablePrivileges
-  **SQLTablePrivileges** peut être exécutée sur un curseur statique. Une tentative d’exécution **SQLTablePrivileges** sur un actualisable (commandé par keyset ou dynamique) retourne SQL_SUCCESS_WITH_INFO pour indiquer que le type de curseur a été modifié.  
+  **SQLTablePrivileges** peut être exécuté sur un curseur statique. Une tentative d’exécution de **SQLTablePrivileges** sur un qui peut être mis à jour (KEYSET ou Dynamic) retourne SQL_SUCCESS_WITH_INFO indiquant que le type de curseur a été modifié.  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge des informations de rapport pour les tables des serveurs liés en acceptant un nom en deux parties pour le *CatalogName* paramètre : *Nom_serveur_lié.Nom_Catalogue*.  
+ Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client prend en charge les informations de création de rapport pour les tables des serveurs liés en acceptant un nom en deux parties pour le paramètre *CatalogName* : *Linked_Server_Name.Catalog_Name*.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonction SQLTablePrivileges] (https://go.microsoft.com/fwlink/?LinkId=59373\)   
- [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
+ [SQLTablePrivileges fonction] (https://go.microsoft.com/fwlink/?LinkId=59373\)   
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

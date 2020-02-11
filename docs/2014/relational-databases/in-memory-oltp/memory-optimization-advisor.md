@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158004"
 ---
 # <a name="memory-optimization-advisor"></a>Conseiller d'optimisation de la mémoire
@@ -91,7 +91,7 @@ ms.locfileid: "63158004"
   
  S’il n’existe aucune clé primaire et que la table est migrée vers une table non durable, cet écran ne s’affiche pas.  
   
- Pour les colonnes textuelles (colonnes avec les types `char`, `nchar`, `varchar` et `nvarchar`), vous devez sélectionner un classement approprié. L'OLTP en mémoire prend uniquement en charge les classements BIN2 pour les colonnes d'une table mémoire optimisée, mais ne prend pas en charge les classements présentant des caractères supplémentaires. Consultez [Classements et pages de code](../../database-engine/collations-and-code-pages.md) pour plus d'informations sur les classements pris en charge et l'impact potentiel d'une modification du classement.  
+ Pour les colonnes textuelles (colonnes avec les types `char`, `nchar`, `varchar` et `nvarchar`), vous devez sélectionner un classement approprié. L'OLTP en mémoire prend uniquement en charge les classements BIN2 pour les colonnes d'une table mémoire optimisée, mais ne prend pas en charge les classements présentant des caractères supplémentaires. Consultez [Collations and Code Pages](../../database-engine/collations-and-code-pages.md) pour plus d'informations sur les classements pris en charge et l'impact potentiel d'une modification du classement.  
   
  Vous pouvez configurer les paramètres suivants pour la clé primaire :  
   
