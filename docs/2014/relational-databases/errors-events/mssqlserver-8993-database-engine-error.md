@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70bd3f0562befc2e7931ae04db93a7efd2b1c89a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761916"
 ---
-# <a name="mssqlserver8993"></a>MSSQLSERVER_8993
+# <a name="mssqlserver_8993"></a>MSSQLSERVER_8993
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|8993|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|8993|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC3_MISSING_FORWARDED_ROW|  
 |Texte du message|ID d'objet O_ID, page de ligne transmise P_ID1, l'emplacement S_ID1 pointe vers la page P_ID2, emplacement S_ID2. Aucune ligne transmise n’a été trouvée. Une erreur d'allocation s'est peut-être produite.|  

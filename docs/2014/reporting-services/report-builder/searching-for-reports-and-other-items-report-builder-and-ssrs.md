@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 76746ade9222257bcea6962c180ea12a01ff8afa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107650"
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>Recherche de rapports et d’autres éléments (Générateur de rapports et SSRS)
@@ -33,8 +33,8 @@ ms.locfileid: "66107650"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Recherche et affichage de rapports dans le Gestionnaire de rapports &#40;Générateur de rapports et SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)   
- [Utilisation du dossier Mes rapports &#40;Générateur de rapports et SSRS&#41;](using-my-reports-report-builder-and-ssrs.md)   
+ [Recherche et affichage de rapports dans Gestionnaire de rapports &#40;Générateur de rapports et SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)   
+ [Utilisation de Mes rapports &#40;Générateur de rapports et de SSRS&#41;](using-my-reports-report-builder-and-ssrs.md)   
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Ouvrir et fermer un rapport &#40;Gestionnaire de rapports&#41;](../reports/open-and-close-a-report-report-manager.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Développeur&#39;s Guide (réplication) | Microsoft Docs
+title: Guide du développeur&#39;s (réplication) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce595518fc33903a9438a9a702d19725fa605f9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721931"
 ---
-# <a name="developer39s-guide-replication"></a>Développeur&#39;s Guide (réplication)
+# <a name="developer39s-guide-replication"></a>Guide du développeur&#39;s (réplication)
   La possibilité de configurer, de gérer et d'analyser par programme une topologie de réplication entraîne la simplification des tâches de réplication répétitives et l'amélioration de l'expérience utilisateur pour vos applications basées sur la réplication. Grâce à la programmation de la réplication, les utilisateurs finaux peuvent bénéficier de fonctionnalités de réplication personnalisées sans avoir à connaître les procédures stockées de réplication et les fichiers exécutables de l'Agent de réplication. Ils n'ont pas non plus besoin d'utiliser l'interface utilisateur pour la réplication implémentée par [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
  Un accès par programme aux services de réplication peut être utile pour vos applications dans les situations suivantes :  
@@ -46,7 +46,7 @@ ms.locfileid: "62721931"
  [Concepts liés à Replication Management Objects](replication-management-objects-concepts.md)  
  Explique les concepts relatifs à l'utilisation de Replication Management Objects. Il s'agit d'un assembly de code managé qui encapsule les fonctionnalités de réplication pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Concepts des exécutables de l’agent de réplication](replication-agent-executables-concepts.md)  
+ [Concepts des exécutables de l'agent de réplication](replication-agent-executables-concepts.md)  
  Décrit l'utilisation des fichiers exécutables de l'Agent de réplication.  
 
   

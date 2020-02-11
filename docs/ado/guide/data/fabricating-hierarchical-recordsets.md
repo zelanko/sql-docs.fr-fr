@@ -1,5 +1,5 @@
 ---
-title: Fabrication de Recordsets hiérarchiques | Microsoft Docs
+title: Fabrication de jeux d’enregistrements hiérarchiques | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,16 +16,16 @@ ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fcdb630f2391f685080ac594cfdb537edf626a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925325"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>Fabrication de recordsets hiérarchiques
-L’exemple suivant montre comment créer un objet Recordset hiérarchique sans source de données sous-jacente en utilisant les données de mise en forme pour définir les colonnes pour le parent, enfants et petits-enfants **Recordsets**.  
+L’exemple suivant montre comment créer un jeu d’enregistrements hiérarchique sans source de données sous-jacente à l’aide de la syntaxe de mise en forme des données pour définir des colonnes pour les **jeux d’enregistrements**parents, enfants et petits-enfants.  
   
- Pour créer une liste hiérarchique **Recordset**, vous devez spécifier le [Microsoft Data Shaping Service pour OLE DB (fournisseur de services ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape), et vous pouvez spécifier une valeur de fournisseur de données None dans le paramètre de chaîne de connexion de la [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) méthode de la [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet. Pour plus d’informations, consultez [fournisseur de mise en forme des données](../../../ado/guide/data/required-providers-for-data-shaping.md).  
+ Pour fabriquer un **jeu d’enregistrements**hiérarchique, vous devez spécifier [Microsoft Data Shaping Service pour OLE DB (fournisseur de services ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape) et vous pouvez spécifier une fournisseur de données valeur None dans le paramètre de chaîne de connexion de la méthode [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) de l’objet [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . Pour plus d’informations, consultez [fournisseurs requis pour la mise en forme des données](../../../ado/guide/data/required-providers-for-data-shaping.md).  
   
 ```  
 Dim cn As New ADODB.Connection  
@@ -52,11 +52,11 @@ strShape = _
 rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1  
 ```  
   
- Dès que le **Recordset** a été créé, il peut être rempli, manipulé ou conservé dans un fichier.  
+ Dès que le **jeu d’enregistrements** a été créé, il peut être rempli, manipulé ou rendu persistant dans un fichier.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Accès aux lignes dans un Recordset hiérarchique](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [Grammaire de la mise en forme formelle](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Accès aux lignes d’un jeu d’enregistrements hiérarchique](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
+ [Grammaire de forme formelle](../../../ado/guide/data/formal-shape-grammar.md)   
  [Fournisseurs requis pour la mise en forme des données](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Clause APPEND de forme](../../../ado/guide/data/shape-append-clause.md)   
+ [Clause APPEND de la forme](../../../ado/guide/data/shape-append-clause.md)   
  [Généralités sur les commandes SHAPE](../../../ado/guide/data/shape-commands-in-general.md)

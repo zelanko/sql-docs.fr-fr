@@ -1,5 +1,5 @@
 ---
-title: CubeDefs, Collection (ADO MD) | Microsoft Docs
+title: CubeDefs, collection (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,29 +17,29 @@ ms.assetid: c79a5e36-71fd-44c4-948d-d6a7a89bb3b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6753c5a2cf70557868a25b2c4e2675a53d26d07b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938624"
 ---
 # <a name="cubedefs-collection-ado-md"></a>CubeDefs, collection (ADO MD)
-Contient le [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) objets qui représentent un cube à partir d’un catalogue multidimensionnel.  
+Contient les objets [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) qui représentent un cube à partir d’un catalogue multidimensionnel.  
   
 ## <a name="remarks"></a>Notes  
- **CubeDefs** est une collection ADO standard. Les propriétés et les méthodes d’une collection, vous pouvez effectuer les tâches suivantes :  
+ **CubeDefs** est une collection ADO standard. Avec les propriétés et les méthodes d’une collection, vous pouvez effectuer les opérations suivantes :  
   
--   Obtenir le nombre d’objets dans la collection avec le [nombre](../../../ado/reference/ado-api/count-property-ado.md) propriété.  
+-   Obtenez le nombre d’objets dans la collection avec la propriété [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
   
--   Retourner un objet de la collection avec la valeur par défaut [élément](../../../ado/reference/ado-api/item-property-ado.md) propriété.  
+-   Retourne un objet de la collection avec la propriété [Item](../../../ado/reference/ado-api/item-property-ado.md) par défaut.  
   
--   Mettre à jour les objets dans la collection à partir du fournisseur avec le [Actualiser](../../../ado/reference/ado-api/refresh-method-ado.md) (méthode).  
+-   Mettez à jour les objets de la collection à partir du fournisseur à l’aide de la méthode [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient la rubrique suivante.  
   
 -   [Propriétés, méthodes et événements](../../../ado/reference/ado-md-api/cubedefs-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de catalogue (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
- [Catalog, objet (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)   
+ [Objet Catalogue (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)   
  [CubeDef, objet (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)

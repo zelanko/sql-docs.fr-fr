@@ -1,5 +1,5 @@
 ---
-title: Cancel, exemple de méthode (VC ++) | Microsoft Docs
+title: Cancel, exemple de méthode (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 7e0eaa39-0c24-4d8c-87e8-f9c4fd3455e7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 88d211c825bd9d1c3aa0c76dc26778f18108ff07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920175"
 ---
 # <a name="cancel-method-example-vc"></a>Cancel, exemple de méthode (VC++)
-Cet exemple utilise le [Annuler](../../../ado/reference/ado-api/cancel-method-ado.md) méthode pour annuler une commande s’exécutant sur un [connexion](../../../ado/reference/ado-api/connection-object-ado.md) de l’objet si la connexion est occupée.  
+Cet exemple utilise la méthode [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) pour annuler une commande s’exécutant sur un objet [Connection](../../../ado/reference/ado-api/connection-object-ado.md) si la connexion est occupée.  
   
 ```  
 // CancelMethodExample.cpp  
@@ -142,4 +142,4 @@ void PrintComError(_com_error &e) {
   
 ## <a name="see-also"></a>Voir aussi  
  [Cancel, méthode (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
- [Connection, objet (ADO MD)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
