@@ -15,196 +15,196 @@ ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69d88aebe25f6cfa5490cce736c05780b87eee6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926645"
 ---
-# <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Fournisseur Microsoft OLE DB pour Microsoft Jet présentation
-Le fournisseur OLE DB pour Microsoft Jet permet à ADO accéder aux bases de données Microsoft Jet.
+# <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Vue d’ensemble du fournisseur Microsoft OLE DB pour Microsoft Jet
+Le fournisseur OLE DB pour Microsoft Jet permet à ADO d’accéder aux bases de données Microsoft Jet.
 
 ## <a name="connection-string-parameters"></a>Paramètres de chaîne de connexion
- Pour vous connecter à ce fournisseur, définissez le *fournisseur* argument de la [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) suivante à la propriété :
+ Pour vous connecter à ce fournisseur, définissez l’argument *Provider* de la propriété [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) sur ce qui suit :
 
 ```vb
 Microsoft.Jet.OLEDB.4.0
 ```
 
- Lire le [fournisseur](../../../ado/reference/ado-api/provider-property-ado.md) propriété renvoie également cette chaîne.
+ La lecture de la propriété [Provider](../../../ado/reference/ado-api/provider-property-ado.md) renverra également cette chaîne.
 
 ## <a name="typical-connection-string"></a>Chaîne de connexion classique
- Une chaîne de connexion classique pour ce fournisseur est :
+ Une chaîne de connexion classique pour ce fournisseur est la suivante :
 
 ```vb
 "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=databaseName;User ID=MyUserID;Password=MyPassword;"
 ```
 
- La chaîne se compose de ces mots clés :
+ La chaîne se compose des mots clés suivants :
 
 |Mot clé|Description|
 |-------------|-----------------|
-|**Fournisseur**|Spécifie le fournisseur OLE DB pour Microsoft Jet.|
-|**Source de données**|Spécifie le nom de chemin d’accès et le fichier de base de données (par exemple, `c:\Northwind.mdb`).|
-|**ID d'utilisateur**|Spécifie le nom d’utilisateur. Si ce mot clé n’est pas spécifié, la chaîne, «`admin`», est utilisé par défaut.|
-|**Mot de passe**|Spécifie le mot de passe utilisateur. Si ce mot clé n’est pas spécifié, la chaîne vide (" »), est utilisé par défaut.|
+|**Fournisseur**|Spécifie le fournisseur de OLE DB pour Microsoft Jet.|
+|**Source de données**|Spécifie le chemin d’accès et le nom de fichier `c:\Northwind.mdb`de la base de données (par exemple,).|
+|**ID d'utilisateur**|Spécifie le nom d'utilisateur. Si ce mot clé n’est pas spécifié, la chaîne`admin`, "", est utilisée par défaut.|
+|**Mot de passe**|Spécifie le mot de passe de l’utilisateur. Si ce mot clé n’est pas spécifié, la chaîne vide ("") est utilisée par défaut.|
 
 > [!NOTE]
->  Si vous vous connectez à un fournisseur de source de données qui prend en charge l’authentification Windows, vous devez spécifier **Trusted_Connection = yes** ou **Integrated Security = SSPI** au lieu des ID d’utilisateur et mot de passe informations dans la chaîne de connexion.
+>  Si vous vous connectez à un fournisseur de sources de données qui prend en charge l’authentification Windows, vous devez spécifier **Trusted_Connection = Yes** ou **Integrated Security = SSPI** à la place des informations d’ID d’utilisateur et de mot de passe dans la chaîne de connexion.
 
-## <a name="provider-specific-connection-parameters"></a>Paramètres de connexion spécifique au fournisseur
- Le fournisseur OLE DB pour Microsoft Jet prend en charge plusieurs propriétés dynamiques spécifiques au fournisseur en plus de ceux qui sont définis par ADO. Comme avec toutes les autres **connexion** paramètres, ils peuvent être définis à l’aide de la **propriétés** collection de la **connexion** objet ou dans le cadre de la chaîne de connexion.
+## <a name="provider-specific-connection-parameters"></a>Paramètres de connexion spécifiques au fournisseur
+ Le fournisseur de OLE DB pour Microsoft Jet prend en charge plusieurs propriétés dynamiques spécifiques au fournisseur, en plus de celles définies par ADO. Comme avec tous les autres paramètres de **connexion** , ils peuvent être définis à l’aide de la collection **Properties** de l’objet **Connection** ou dans le cadre de la chaîne de connexion.
 
- Le tableau suivant répertorie ces propriétés ainsi que le nom de propriété OLE DB correspondant entre parenthèses.
+ Le tableau suivant répertorie ces propriétés, ainsi que le nom de la propriété OLE DB correspondante entre parenthèses.
 
 |Paramètre|Description|
 |---------------|-----------------|
-|Jet OLEDB:Compact espace récupéré quantité (DBPROP_JETOLEDB_COMPACTFREESPACESIZE)|Indique une estimation de la quantité d’espace, en octets, qui peuvent être récupérées par le compactage de la base de données. Cette valeur est valide uniquement après avoir établi une connexion de base de données.|
-|Contrôle de OLEDB:Connection Jet (DBPROP_JETOLEDB_CONNECTIONCONTROL)|Indique si les utilisateurs peuvent se connecter à la base de données.|
-|Jet OLEDB : créer la base de données système (DBPROP_JETOLEDB_CREATESYSTEMDATABASE)|Indique si une base de données système doit être créé lors de la création d’une source de données.|
-|Jet OLEDB : Database le Mode de verrouillage (DBPROP_JETOLEDB_DATABASELOCKMODE)|Indique le mode de verrouillage pour cette base de données. Le premier utilisateur pour ouvrir la base de données détermine le mode utilisé lorsque la base de données est ouverte.|
-|Jet OLEDB : Database Password (DBPROP_JETOLEDB_DATABASEPASSWORD)|Indique le mot de passe de base de données.|
-|Jet OLEDB : ne copiez pas les paramètres régionaux sur Compact (DBPROP_JETOLEDB_COMPACT_DONTCOPYLOCALE)|Indique si Jet doit copier les informations de paramètres régionaux lorsque vous compactez une base de données.|
-|Jet OLEDB : chiffrer la base de données (DBPROP_JETOLEDB_ENCRYPTDATABASE)|Indique si un condensé de la base de données doit être chiffrée. Si cette propriété n’est pas définie, la base de données condensé sera chiffré si la base de données d’origine a également été chiffrée.|
-|Type de OLEDB:Engine Jet (DBPROP_JETOLEDB_ENGINE)|Indique le moteur de stockage utilisé pour accéder au magasin de données actuelle.|
-|Jet définies Async Delay (DBPROP_JETOLEDB_EXCLUSIVEASYNCDELAY)|Indique la longueur maximale de temps, en millisecondes, Jet susceptibles de retarder les écritures asynchrones sur le disque lorsque la base de données est ouverte en mode exclusif.<br /><br /> Cette propriété est ignorée sauf si **Jet OLEDB : Flush Transaction Timeout** est définie sur 0.|
-|Délai d’expiration de Transaction Jet OLEDB : Flush (DBPROP_JETOLEDB_FLUSHTRANSACTIONTIMEOUT)|Indique la durée d’attente avant que les données stockées dans un cache en écriture asynchrone sont écrite sur le disque. Ce paramètre remplace les valeurs pour **Jet OLEDB : Shared Async Delay** et **Jet définies Async Delay**.|
-|Jet OLEDB : Transactions globale en bloc (DBPROP_JETOLEDB_GLOBALBULKNOTRANSACTIONS)|Indique si les transactions SQL en bloc sont traitées.|
-|Jet OLEDB : opérations en bloc partielle Global (DBPROP_JETOLEDB_GLOBALBULKPARTIAL)|Indique le mot de passe utilisé pour ouvrir la base de données.|
-|Jet OLEDB : synchronisation de commande Commit implicite (DBPROP_JETOLEDB_IMPLICITCOMMITSYNC)|Indique si les modifications apportées dans les transactions implicites internes sont écrits en mode synchrone ou asynchrone.|
-|Délai de OLEDB:Lock Jet (DBPROP_JETOLEDB_LOCKDELAY)|Indique le nombre de millisecondes à attendre avant d’essayer d’acquérir un verrou après qu’une tentative précédente a échoué.|
-|Jet OLEDB:Lock nouvelle tentative (DBPROP_JETOLEDB_LOCKRETRY)|Indique le nombre de fois où une tentative d’accès d’une page verrouillée est répétée.|
-|Taille de mémoire tampon Jet OLEDB:Max (DBPROP_JETOLEDB_MAXBUFFERSIZE)|Indique la quantité maximale de mémoire, en kilo-octets, Jet peut utiliser avant de démarrer la vider les modifications sur le disque.|
-|Verrous de OLEDB:Max Jet par fichier (DBPROP_JETOLEDB_MAXLOCKSPERFILE)|Indique le nombre maximal de verrous que Jet peut placer sur une base de données. La valeur par défaut est 9500.|
+|Jet OLEDB : quantité d’espace récupéré compacte (DBPROP_JETOLEDB_COMPACTFREESPACESIZE)|Indique une estimation de la quantité d’espace, en octets, qui peut être récupérée en compactant la base de données. Cette valeur est valide uniquement après l’établissement d’une connexion de base de données.|
+|Jet OLEDB : contrôle de connexion (DBPROP_JETOLEDB_CONNECTIONCONTROL)|Indique si les utilisateurs peuvent se connecter à la base de données.|
+|Jet OLEDB : créer une base de données système (DBPROP_JETOLEDB_CREATESYSTEMDATABASE)|Indique si une base de données système doit être créée lors de la création d’une nouvelle source de données.|
+|Jet OLEDB : mode de verrouillage de base de données (DBPROP_JETOLEDB_DATABASELOCKMODE)|Indique le mode de verrouillage pour cette base de données. Le premier utilisateur qui ouvre la base de données détermine le mode utilisé pendant que la base de données est ouverte.|
+|Jet OLEDB : mot de passe de base de données (DBPROP_JETOLEDB_DATABASEPASSWORD)|Indique le mot de passe de la base de données.|
+|Jet OLEDB : ne pas copier les paramètres régionaux sur le compact (DBPROP_JETOLEDB_COMPACT_DONTCOPYLOCALE)|Indique si Jet doit copier les informations de paramètres régionaux lors du compactage d’une base de données.|
+|Jet OLEDB : chiffrement de base de données (DBPROP_JETOLEDB_ENCRYPTDATABASE)|Indique si une base de données compactée doit être chiffrée. Si cette propriété n’est pas définie, la base de données compactée est chiffrée si la base de données d’origine a également été chiffrée.|
+|Jet OLEDB : type de moteur (DBPROP_JETOLEDB_ENGINE)|Indique le moteur de stockage utilisé pour accéder au magasin de données actuel.|
+|Jet OLEDB : délai asynchrone exclusif (DBPROP_JETOLEDB_EXCLUSIVEASYNCDELAY)|Indique la durée maximale, en millisecondes, pendant laquelle jet peut retarder les écritures asynchrones sur le disque lorsque la base de données est ouverte en mode exclusif.<br /><br /> Cette propriété est ignorée sauf si **Jet OLEDB : Flush transaction Timeout** a la valeur 0.|
+|Jet OLEDB : vider le délai d’expiration de la transaction (DBPROP_JETOLEDB_FLUSHTRANSACTIONTIMEOUT)|Indique la durée d’attente avant que les données stockées dans un cache pour l’écriture asynchrone soient écrites sur le disque. Ce paramètre remplace les valeurs pour **Jet OLEDB : Shared Async Delay** et **Jet OLEDB : exclusive Async Delay**.|
+|Jet OLEDB : transactions globales en bloc (DBPROP_JETOLEDB_GLOBALBULKNOTRANSACTIONS)|Indique si les transactions SQL en bloc sont traitées.|
+|Jet OLEDB : opérations globales partielles en bloc (DBPROP_JETOLEDB_GLOBALBULKPARTIAL)|Indique le mot de passe utilisé pour ouvrir la base de données.|
+|Jet OLEDB : validation de validation implicite (DBPROP_JETOLEDB_IMPLICITCOMMITSYNC)|Indique si les modifications apportées aux transactions implicites internes sont écrites en mode synchrone ou asynchrone.|
+|Jet OLEDB : délai de verrouillage (DBPROP_JETOLEDB_LOCKDELAY)|Indique le nombre de millisecondes à attendre avant d’essayer d’acquérir un verrou après l’échec d’une tentative précédente.|
+|Jet OLEDB : nouvelle tentative de verrouillage (DBPROP_JETOLEDB_LOCKRETRY)|Indique le nombre de fois qu’une tentative d’accès à une page verrouillée est répétée.|
+|Jet OLEDB : taille maximale de la mémoire tampon (DBPROP_JETOLEDB_MAXBUFFERSIZE)|Indique la quantité de mémoire maximale, en kilo-octets, que Jet peut utiliser avant de commencer à vider les modifications sur le disque.|
+|Jet OLEDB : nombre maximal de verrous par fichier (DBPROP_JETOLEDB_MAXLOCKSPERFILE)|Indique le nombre maximal de verrous que Jet peut placer sur une base de données. La valeur par défaut est 9500.|
 |Jet OLEDB : nouveau mot de passe de base de données (DBPROP_JETOLEDB_NEWDATABASEPASSWORD)|Indique le nouveau mot de passe à définir pour cette base de données. L’ancien mot de passe est stocké dans **Jet OLEDB : Database Password**.|
-|Jet OLEDB : ODBC commande délai d’expiration (DBPROP_JETOLEDB_ODBCCOMMANDTIMEOUT)|Indique le nombre de millisecondes avant une requête ODBC distante à partir de Jet va expirer.|
-|Jet OLEDB:Page verrouille à un verrou de Table (DBPROP_JETOLEDB_PAGELOCKSTOTABLELOCK)|Indique le nombre de pages doit être verrouillé dans une transaction avant que Jet tente de promouvoir le verrou à un verrou de table. Si cette valeur est 0, le verrou n’est jamais promu.|
-|Délai d’attente OLEDB:Page Jet (DBPROP_JETOLEDB_PAGETIMEOUT)|Indique le nombre de millisecondes de qu'attente avant de vérifier a posteriori si son cache est obsolète avec le fichier de base de données Jet.|
-|Pages de valeur Long Jet OLEDB:Recycle (DBPROP_JETOLEDB_RECYCLELONGVALUEPAGES)|Indique si Jet doit essayer agressive récupérer les pages BLOB lorsqu’elles sont libérées.|
-|Chemin d’accès OLEDB:Registry Jet (DBPROP_JETOLEDB_REGPATH)|Indique la clé de Registre Windows qui contient des valeurs pour le moteur de base de données Jet.|
-|Jet OLEDB:Reset ISAM statistiques (DBPROP_JETOLEDB_RESETISAMSTATS)|Indique si le schéma **Recordset** DBSCHEMA_JETOLEDB_ISAMSTATS doit réinitialiser ses compteurs de performances après son retour d’informations sur les performances.|
-|Jet OLEDB : Shared Async Delay (DBPROP_JETOLEDB_SHAREDASYNCDELAY)|Indique la quantité maximale de temps, en millisecondes, Jet peut retarder les écritures asynchrones sur le disque lorsque la base de données est ouverte en mode multi-utilisateur.|
-|Base de données Jet OLEDB : System (DBPROP_JETOLEDB_SYSDBPATH)|Indique le chemin d’accès et le nom du fichier (base de données système).|
-|Mode de validation Jet OLEDB:Transaction (DBPROP_JETOLEDB_TXNCOMMITMODE)|Indique si Jet écrit les données sur le disque de façon synchrone ou asynchrone lorsqu’une transaction est validée.|
-|Synchronisation de validation Jet OLEDB:User (DBPROP_JETOLEDB_USERCOMMITSYNC)|Indique si les modifications qui ont été apportées dans les transactions sont écrites en mode synchrone ou asynchrone.|
+|Jet OLEDB : délai d’expiration de la commande ODBC (DBPROP_JETOLEDB_ODBCCOMMANDTIMEOUT)|Indique le nombre de millisecondes avant l’expiration d’une requête ODBC distante à partir de jet.|
+|Jet OLEDB : verrous de page vers verrou de table (DBPROP_JETOLEDB_PAGELOCKSTOTABLELOCK)|Indique combien de pages doivent être verrouillées dans une transaction avant que Jet tente de promouvoir le verrou sur un verrou de table. Si cette valeur est égale à 0, le verrou n’est jamais promu.|
+|Jet OLEDB : page Timeout (DBPROP_JETOLEDB_PAGETIMEOUT)|Indique le nombre de millisecondes pendant lesquelles jet attendra avant de vérifier si son cache est obsolète par le fichier de base de données.|
+|Jet OLEDB : recycler les pages à valeurs longues (DBPROP_JETOLEDB_RECYCLELONGVALUEPAGES)|Indique si Jet doit tenter de récupérer des pages BLOB de façon agressive lorsqu’elles sont libérées.|
+|Jet OLEDB : chemin d’accès au registre (DBPROP_JETOLEDB_REGPATH)|Indique la clé de Registre Windows qui contient des valeurs pour le moteur de base de données Jet.|
+|Jet OLEDB : Reset ISAM stats (DBPROP_JETOLEDB_RESETISAMSTATS)|Indique si le DBSCHEMA_JETOLEDB_ISAMSTATS du **Recordset** de schéma doit réinitialiser ses compteurs de performance après avoir retourné des informations de performances.|
+|Jet OLEDB : délai asynchrone partagé (DBPROP_JETOLEDB_SHAREDASYNCDELAY)|Indique la durée maximale, en millisecondes, que Jet peut retarder les écritures asynchrones sur le disque lorsque la base de données est ouverte en mode multi-utilisateur.|
+|Jet OLEDB : base de données système (DBPROP_JETOLEDB_SYSDBPATH)|Indique le chemin d’accès et le nom de fichier du fichier d’informations de groupe de travail (base de données système).|
+|Jet OLEDB : mode de validation de transaction (DBPROP_JETOLEDB_TXNCOMMITMODE)|Indique si Jet écrit des données sur le disque de façon synchrone ou asynchrone lorsqu’une transaction est validée.|
+|Jet OLEDB : synchronisation de validation de l’utilisateur (DBPROP_JETOLEDB_USERCOMMITSYNC)|Indique si les modifications apportées aux transactions sont écrites en mode synchrone ou asynchrone.|
 
-## <a name="provider-specific-recordset-and-command-properties"></a>Jeu d’enregistrements spécifiques au fournisseur et les propriétés d’une commande
- Le fournisseur Jet prend également en charge plusieurs spécifique au fournisseur **Recordset** et **commande** propriétés. Ces propriétés sont accessibles et définies par le biais du **propriétés** collection de la **Recordset** ou **commande** objet. Le tableau répertorie le nom de la propriété ADO et son nom de propriété OLE DB correspondant entre parenthèses.
+## <a name="provider-specific-recordset-and-command-properties"></a>Propriétés de commande et Recordset spécifiques au fournisseur
+ Le fournisseur Jet prend également en charge plusieurs propriétés de **commande** et **Recordset** spécifiques au fournisseur. Ces propriétés sont accessibles et définies via la collection **Properties** de l’objet **Recordset** ou **Command** . Le tableau répertorie le nom de la propriété ADO et le nom de la propriété OLE DB correspondante entre parenthèses.
 
 |Nom de la propriété|Description|
 |-------------------|-----------------|
-|Jet OLEDB:Bulk Transactions (DBPROP_JETOLEDB_BULKNOTRANSACTIONS)|Indique si les opérations en bloc SQL sont traitées. Grandes opérations en bloc peuvent échouer lorsque transactionnel, en raison de retards de ressources.|
-|Jet Enable Fat Cursors (DBPROP_JETOLEDB_ENABLEFATCURSOR)|Indique si Jet doit mettre en cache plusieurs lignes lors du remplissage d’un jeu d’enregistrements pour les sources de la ligne à distance.|
-|Taille de Cache du curseur OLEDB:Fat Jet (DBPROP_JETOLEDB_FATCURSORMAXROWS)|Indique le nombre de lignes en mémoire cache lorsque vous utilisez la mise en cache de ligne de magasin de données à distance. Cette valeur est ignorée sauf si **Jet OLEDB : Enable Fat Cursors** a la valeur True.|
-|Jet OLEDB : incohérence (DBPROP_JETOLEDB_INCONSISTENT)|Indique si les résultats de requête autorisent les mises à jour incohérentes.|
-|Jet OLEDB : granularité (DBPROP_JETOLEDB_LOCKGRANULARITY)|Indique si une table est ouvert à l’aide du verrouillage au niveau de la ligne.|
-|Jet OLEDB : ODBC Pass-Through Statement (DBPROP_JETOLEDB_ODBCPASSTHROUGH)|Indique que Jet doit transmettre le texte SQL dans un **commande** objet vers le serveur principal sans altération.|
-|Jet OLEDB:Partial en bloc Ops (DBPROP_JETOLEDB_BULKPARTIAL)|Indique le comportement de Jet cas d’échouent des opérations DML SQL.|
-|OLEDB:Pass Jet via une requête d’opération en bloc (DBPROP_JETOLEDB_PASSTHROUGHBULKOP)|Indique si les requêtes qui ne retournent un **Recordset** sont transmises sans modification à la source de données.|
-|Chaîne (DBPROP_JETOLEDB_ODBCPASSTHROUGHCONNECTSTRING) de connexion de OLEDB:Pass Jet via la requête|Indique la chaîne de connexion Jet utilisée pour se connecter à un magasin de données distant. Cette valeur est ignorée sauf si **Jet OLEDB : ODBC Pass-Through Statement** a la valeur True.|
-|Jet OLEDB : stockées requête (DBPROP_JETOLEDB_STOREDQUERY)|Indique si le texte de commande doit être interprété comme une requête stockée au lieu d’une commande SQL.|
-|Jet OLEDB : valider des règles sur l’ensemble (DBPROP_JETOLEDB_VALIDATEONSET)|Indique si les règles de validation Jet sont évaluées lorsque les données de la colonne sont définies ou lorsque les modifications sont validées sur la base de données.|
+|Jet OLEDB : transactions en bloc (DBPROP_JETOLEDB_BULKNOTRANSACTIONS)|Indique si les opérations SQL en bloc sont traitées. Les opérations en bloc volumineuses peuvent échouer lors de la transaction, en raison de retards de ressources.|
+|Jet OLEDB : activer les curseurs FAT (DBPROP_JETOLEDB_ENABLEFATCURSOR)|Indique si Jet doit mettre en cache plusieurs lignes lors du remplissage d’un jeu d’enregistrements pour les sources de ligne distantes.|
+|Jet OLEDB : taille du cache de curseurs FAT (DBPROP_JETOLEDB_FATCURSORMAXROWS)|Indique le nombre de lignes à mettre en cache lors de l’utilisation de la mise en cache des lignes du magasin de données distant. Cette valeur est ignorée, sauf si **Jet OLEDB : activer les curseurs Fat** a la valeur true.|
+|Jet OLEDB : incohérent (DBPROP_JETOLEDB_INCONSISTENT)|Indique si les résultats de la requête autorisent des mises à jour incohérentes.|
+|Jet OLEDB : granularité de verrouillage (DBPROP_JETOLEDB_LOCKGRANULARITY)|Indique si une table est ouverte à l’aide du verrouillage au niveau des lignes.|
+|Jet OLEDB : instruction directe ODBC (DBPROP_JETOLEDB_ODBCPASSTHROUGH)|Indique que Jet doit transmettre le texte SQL dans un objet de **commande** au back end non modifié.|
+|Jet OLEDB : opérations en bloc partielles (DBPROP_JETOLEDB_BULKPARTIAL)|Indique le comportement de jet lorsque les opérations DML SQL échouent.|
+|Jet OLEDB : transfert en bloc des requêtes directe (DBPROP_JETOLEDB_PASSTHROUGHBULKOP)|Indique si les requêtes qui ne retournent pas de **Recordset** sont transmises sans modification à la source de données.|
+|Jet OLEDB : chaîne de connexion de la requête directe (DBPROP_JETOLEDB_ODBCPASSTHROUGHCONNECTSTRING)|Indique la chaîne de connexion Jet utilisée pour se connecter à un magasin de données distant. Cette valeur est ignorée, sauf si **Jet OLEDB : ODBC pass-through Statement** a la valeur true.|
+|Jet OLEDB : requête stockée (DBPROP_JETOLEDB_STOREDQUERY)|Indique si le texte de la commande doit être interprété comme une requête stockée au lieu d’une commande SQL.|
+|Jet OLEDB : valider les règles sur le jeu (DBPROP_JETOLEDB_VALIDATEONSET)|Indique si les règles de validation jet sont évaluées lorsque les données de la colonne sont définies ou lorsque les modifications sont validées dans la base de données.|
 
- Par défaut, le fournisseur OLE DB pour Microsoft Jet ouvre les bases de données Microsoft Jet en mode lecture/écriture. Pour ouvrir une base de données en mode lecture seule, définissez la [Mode](../../../ado/reference/ado-api/mode-property-ado.md) propriété sur ADO **connexion** objet **adModeRead**.
+ Par défaut, le fournisseur de OLE DB pour Microsoft Jet ouvre les bases de données Microsoft Jet en mode lecture/écriture. Pour ouvrir une base de données en mode lecture seule, définissez la propriété [mode](../../../ado/reference/ado-api/mode-property-ado.md) de l’objet de **connexion** ADO sur **adModeRead**.
 
-## <a name="command-object-usage"></a>Utilisation de l’objet Command
- Texte de commande de la [commande](../../../ado/reference/ado-api/command-object-ado.md) objet utilise le dialecte SQL Microsoft Jet. Vous pouvez spécifier des requêtes renvoyant des lignes, les requêtes d’action et les noms de table dans le texte de commande ; Toutefois, les procédures stockées ne sont pas prises en charge et ne doivent pas être spécifiés.
+## <a name="command-object-usage"></a>Utilisation de l’objet de commande
+ Le texte de la commande dans l’objet [Command](../../../ado/reference/ado-api/command-object-ado.md) utilise le dialecte SQL Microsoft Jet. Vous pouvez spécifier des requêtes qui retournent des lignes, des requêtes d’action et des noms de tables dans le texte de la commande. Toutefois, les procédures stockées ne sont pas prises en charge et ne doivent pas être spécifiées.
 
-## <a name="recordset-behavior"></a>Comportement de jeu d’enregistrements
- Le moteur de base de données Microsoft Jet ne prend pas en charge les curseurs dynamiques. Par conséquent, le fournisseur OLE DB pour Microsoft Jet ne prend pas en charge la **adLockDynamic** type de curseur. Lorsqu’un curseur dynamique est demandé, le fournisseur renvoie un curseur keyset et réinitialiser le [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) propriété pour indiquer le type de [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) retourné. En outre, si un actualisable **Recordset** est demandée (**LockType** est **adLockOptimistic**, **adLockBatchOptimistic**, ou **adLockPessimistic**) le fournisseur sera également renvoyer un curseur keyset et réinitialiser le **CursorType** propriété.
+## <a name="recordset-behavior"></a>Comportement du Recordset
+ Le moteur de base de données Microsoft Jet ne prend pas en charge les curseurs dynamiques. Par conséquent, le fournisseur de OLE DB pour Microsoft Jet ne prend pas en charge le type de curseur **adLockDynamic** . Lorsqu’un curseur dynamique est demandé, le fournisseur retourne un curseur de jeu de clés et réinitialise la propriété [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) pour indiquer le type de [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) retourné. En outre, si un **jeu d’enregistrements** pouvant être mis à jour est demandé (**LockType** est **adLockOptimistic**, **adLockBatchOptimistic**ou **adLockPessimistic**), le fournisseur retourne également un curseur de jeu de clés et réinitialise la propriété **CursorType** .
 
 ## <a name="dynamic-properties"></a>Propriétés dynamiques
- Le fournisseur OLE DB pour Microsoft Jet insère plusieurs propriétés dynamiques dans le **propriétés** collection de non ouverts [connexion](../../../ado/reference/ado-api/connection-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)et [Commande](../../../ado/reference/ado-api/command-object-ado.md) objets.
+ Le fournisseur de OLE DB pour Microsoft Jet insère plusieurs propriétés dynamiques dans la collection **Properties** des objets [Connection](../../../ado/reference/ado-api/connection-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)et [Command](../../../ado/reference/ado-api/command-object-ado.md) inouverts.
 
- Les tableaux suivants sont un index croisé des noms ADO et OLE DB pour chaque propriété dynamique. Référence du programmeur OLE DB fait référence à un nom de la propriété ADO sous le terme « Description ». Vous trouverez plus d’informations sur ces propriétés dans la référence du programmeur OLE DB.
+ Les tableaux suivants sont un index croisé des noms ADO et OLE DB pour chaque propriété dynamique. Le Guide de référence du programmeur OLE DB fait référence à un nom de propriété ADO par le terme « Description ». Vous trouverez plus d’informations sur ces propriétés dans le Guide de référence du programmeur OLE DB.
 
-## <a name="connection-dynamic-properties"></a>Propriétés dynamiques de connexion
- Les propriétés suivantes sont ajoutées à la **propriétés** collection de la **connexion** objet.
+## <a name="connection-dynamic-properties"></a>Propriétés dynamiques de la connexion
+ Les propriétés suivantes sont ajoutées à la collection **Properties** de l’objet **Connection** .
 
 |Nom de la propriété ADO|Nom de la propriété OLE DB|
 |-----------------------|--------------------------|
 |Sessions actives|DBPROP_ACTIVESESSIONS|
-|Annulation gérable en asynchrone|DBPROP_ASYNCTXNABORT|
-|Validation gérable en asynchrone|DBPROP_ASYNCTNXCOMMIT|
-|AutoCommit Isolation Levels|DBPROP_SESS_AUTOCOMMITISOLEVELS|
+|Abandon Asynchable|DBPROP_ASYNCTXNABORT|
+|Validation Asynchable|DBPROP_ASYNCTNXCOMMIT|
+|Niveaux d’isolement de validation automatique|DBPROP_SESS_AUTOCOMMITISOLEVELS|
 |Emplacement du catalogue|DBPROP_CATALOGLOCATION|
-|Terme de catalogue|DBPROP_CATALOGTERM|
+|Terme du catalogue|DBPROP_CATALOGTERM|
 |Définition de colonne|DBPROP_COLUMNDEFINITION|
 |Catalogue actuel|DBPROP_CURRENTCATALOG|
 |source de données|DBPROP_INIT_DATASOURCE|
 |Data Source Name|DBPROP_DATASOURCENAME|
-|Objet de Source de données modèle de thread|DBPROP_DSOTHREADMODEL|
+|Modèle de thread de l’objet de source de données|DBPROP_DSOTHREADMODEL|
 |Nom SGBD|DBPROP_DBMSNAME|
-|Version SGBD|DBPROP_DBMSVER|
-|Regrouper par prise en charge|DBPROP_GROUPBY|
-|Prise en charge de Table hétérogène|DBPROP_HETEROGENEOUSTABLES|
-|Identificateur de la casse|DBPROP_IDENTIFIERCASE|
+|Version de SGBD|DBPROP_DBMSVER|
+|Prise en charge de GROUP BY|DBPROP_GROUPBY|
+|Prise en charge des tables hétérogènes|DBPROP_HETEROGENEOUSTABLES|
+|Respect de la casse des identificateurs|DBPROP_IDENTIFIERCASE|
 |Niveaux d’isolation|DBPROP_SUPPORTEDTXNISOLEVELS|
-|Conservation d’isolement|DBPROP_SUPPORTEDTXNISORETAIN|
+|Rétention de l’isolation|DBPROP_SUPPORTEDTXNISORETAIN|
 |Identificateur de paramètres régionaux|DBPROP_INIT_LCID|
-|Taille d’Index maximale|DBPROP_MAXINDEXSIZE|
-|Taille maximale de ligne|DBPROP_MAXROWSIZE|
-|Taille de ligne maximale inclut des objets BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
-|Nombre maximal de Tables dans, sélectionnez|DBPROP_MAXTABLESINSELECT|
+|Taille maximale de l’index|DBPROP_MAXINDEXSIZE|
+|Taille de ligne maximale|DBPROP_MAXROWSIZE|
+|La taille de ligne maximale comprend l’objet BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
+|Nombre maximal de tables dans SELECT|DBPROP_MAXTABLESINSELECT|
 |Mode|DBPROP_INIT_MODE|
-|Plusieurs jeux de paramètres|DBPROP_MULTIPLEPARAMSETS|
+|Jeux de paramètres multiples|DBPROP_MULTIPLEPARAMSETS|
 |Résultats multiples|DBPROP_MULTIPLERESULTS|
-|Plusieurs objets de stockage|DBPROP_MULTIPLESTORAGEOBJECTS|
-|Mise à jour de plusieurs Table|DBPROP_MULTITABLEUPDATE|
+|Objets de stockage multiples|DBPROP_MULTIPLESTORAGEOBJECTS|
+|Mise à jour de plusieurs tables|DBPROP_MULTITABLEUPDATE|
 |Ordre de classement NULL|DBPROP_NULLCOLLATION|
-|Comportement de concaténation des valeurs NULL|DBPROP_CONCATNULLBEHAVIOR|
-|OLE DB Version|DBPROP_PROVIDEROLEDBVER|
+|Comportement de concaténation NULL|DBPROP_CONCATNULLBEHAVIOR|
+|Version de OLE DB|DBPROP_PROVIDEROLEDBVER|
 |Prise en charge des objets OLE|DBPROP_OLEOBJECTS|
-|Ouvrez la prise en charge de l’ensemble de lignes|DBPROP_OPENROWSETSUPPORT|
-|Colonnes ORDER BY dans la liste de sélection|DBPROP_ORDERBYCOLUMNSINSELECT|
-|Disponibilité du paramètre de sortie|DBPROP_OUTPUTPARAMETERAVAILABILITY|
-|Passer par les accesseurs Ref|DBPROP_BYREFACCESSORS|
+|Prise en charge des ensembles de lignes ouverts|DBPROP_OPENROWSETSUPPORT|
+|CLASSER par colonnes dans la liste de sélection|DBPROP_ORDERBYCOLUMNSINSELECT|
+|Disponibilité des paramètres de sortie|DBPROP_OUTPUTPARAMETERAVAILABILITY|
+|Passer par les accesseurs de référence|DBPROP_BYREFACCESSORS|
 |Mot de passe|DBPROP_AUTH_PASSWORD|
-|Type d’identificateur persistant|DBPROP_PERSISTENTIDTYPE|
-|Préparation d’annulation|DBPROP_PREPAREABORTBEHAVIOR|
-|Préparation de validation|DBPROP_PREPARECOMMITBEHAVIOR|
+|Type d’ID persistant|DBPROP_PERSISTENTIDTYPE|
+|Comportement de préparation d’abandon|DBPROP_PREPAREABORTBEHAVIOR|
+|Préparer le comportement de validation|DBPROP_PREPARECOMMITBEHAVIOR|
 |Terme de procédure|DBPROP_PROCEDURETERM|
-|Demander|DBPROP_INIT_PROMPT|
+|Prompt|DBPROP_INIT_PROMPT|
 |Nom convivial du fournisseur|DBPROP_PROVIDERFRIENDLYNAME|
-|Provider Name|DBPROP_PROVIDERFILENAME|
+|Nom du fournisseur|DBPROP_PROVIDERFILENAME|
 |Version du fournisseur|DBPROP_PROVIDERVER|
 |Source de données en lecture seule|DBPROP_DATASOURCEREADONLY|
-|Conversions d’ensemble de lignes de commande|DBPROP_ROWSETCONVERSIONSONCOMMAND|
+|Conversions d’ensemble de lignes sur la commande|DBPROP_ROWSETCONVERSIONSONCOMMAND|
 |Terme de schéma|DBPROP_SCHEMATERM|
-|Utilisation de schéma|DBPROP_SCHEMAUSAGE|
+|Utilisation du schéma|DBPROP_SCHEMAUSAGE|
 |Prise en charge SQL|DBPROP_SQLSUPPORT|
 |Stockage structuré|DBPROP_STRUCTUREDSTORAGE|
-|Prise en charge de sous-requête|DBPROP_SUBQUERIES|
+|Prise en charge des sous-requêtes|DBPROP_SUBQUERIES|
 |Terme de table|DBPROP_TABLETERM|
-|Transaction DDL|DBPROP_SUPPORTEDTXNDDL|
+|DDL de la transaction|DBPROP_SUPPORTEDTXNDDL|
 |ID d'utilisateur|DBPROP_AUTH_USERID|
 |User Name|DBPROP_USERNAME|
 |Handle de fenêtre|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>Propriétés dynamiques du Recordset
- Les propriétés suivantes sont ajoutées à la **propriétés** collection de la **Recordset** objet.
+ Les propriétés suivantes sont ajoutées à la collection **Properties** de l’objet **Recordset** .
 
 |Nom de la propriété ADO|Nom de la propriété OLE DB|
 |-----------------------|--------------------------|
 |Ordre d’accès|DBPROP_ACCESSORDER|
-|Ensemble de lignes en mode Append-Only|DBPROP_APPENDONLY|
+|Ensemble de lignes Append uniquement|DBPROP_APPENDONLY|
 |Blocage des objets de stockage|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |Type de signet|DBPROP_BOOKMARKTYPE|
-|Signet|DBPROP_IROWSETLOCATE|
-|Signets ordonnés|DBPROP_ORDEREDBOOKMARKS|
-|Mettre en cache des colonnes différées|DBPROP_CACHEDEFERRED|
+|Avec signet|DBPROP_IROWSETLOCATE|
+|Signets triés|DBPROP_ORDEREDBOOKMARKS|
+|Mettre en cache les colonnes différées|DBPROP_CACHEDEFERRED|
 |Modifier les lignes insérées|DBPROP_CHANGEINSERTEDROWS|
 |Privilèges de colonne|DBPROP_COLUMNRESTRICT|
-|Notification de jeu de colonnes|DBPROP_NOTIFYCOLUMNSET|
+|Notification du jeu de colonnes|DBPROP_NOTIFYCOLUMNSET|
 |Colonne accessible en écriture|DBPROP_MAYWRITECOLUMN|
 |Différer la colonne|DBPROP_DEFERRED|
-|Mises à jour des objets de stockage délai|DBPROP_DELAYSTORAGEOBJECTS|
-|Récupérer vers l’arrière|DBPROP_CANFETCHBACKWARDS|
-|Contenant des lignes|DBPROP_CANHOLDROWS|
+|Retarder les mises à jour des objets de stockage|DBPROP_DELAYSTORAGEOBJECTS|
+|Extraire vers l’arrière|DBPROP_CANFETCHBACKWARDS|
+|Conserver les lignes|DBPROP_CANHOLDROWS|
 |IAccessor|DBPROP_IAccessor|
 |IColumnsInfo|DBPROP_IColumnsInfo|
 |IColumnsRowset|DBPROP_IColumnsRowset|
-|IConnectionPointContainer|DBPROP_IConnectionPointContainer|
+|Interfaces|DBPROP_IConnectionPointContainer|
 |IConvertType|DBPROP_IConvertType|
 |ILockBytes|DBPROP_ILockBytes|
 |Lignes immobiles|DBPROP_IMMOBILEROWS|
@@ -221,65 +221,65 @@ Microsoft.Jet.OLEDB.4.0
 |IStorage|DBPROP_IStorage|
 |IStream|DBPROP_IStream|
 |ISupportErrorInfo|DBPROP_ISupportErrorInfo|
-|Signets de littéral|DBPROP_LITERALBOOKMARKS|
+|Signets littéraux|DBPROP_LITERALBOOKMARKS|
 |Identité de ligne littérale|DBPROP_LITERALIDENTITY|
-|Nombre maximal de lignes ouvert|DBPROP_MAXOPENROWS|
+|Nombre maximal de lignes ouvertes|DBPROP_MAXOPENROWS|
 |Nombre maximal de lignes en attente|DBPROP_MAXPENDINGROWS|
-|Nombre maximal de lignes|DBPROP_MAXROWS|
+|Lignes au maximum|DBPROP_MAXROWS|
 |Utilisation de la mémoire|DBPROP_MEMORYUSAGE|
-|Granularité de notification|DBPROP_NOTIFICATIONGRANULARITY|
+|Granularité des notifications|DBPROP_NOTIFICATIONGRANULARITY|
 |Phases de notification|DBPROP_NOTIFICATIONPHASES|
 |Objets traités|DBPROP_TRANSACTEDOBJECT|
-|D’autres modifications visibles|DBPROP_OTHERUPDATEDELETE|
-|Autres Inserts Visible|DBPROP_OTHERINSERT|
+|Modifications visibles par d’autres utilisateurs|DBPROP_OTHERUPDATEDELETE|
+|Autres insertions visibles|DBPROP_OTHERINSERT|
 |Propres modifications visibles|DBPROP_OWNUPDATEDELETE|
-|Propres insertions visibles|DBPROP_OWNINSERT|
-|Conserver sur Abandon|DBPROP_ABORTPRESERVE|
+|Insertions visibles|DBPROP_OWNINSERT|
+|Conserver lors de l’abandon|DBPROP_ABORTPRESERVE|
 |Conserver lors de la validation|DBPROP_COMMITPRESERVE|
 |Redémarrage rapide|DBPROP_QUICKRESTART|
 |Événements réentrants|DBPROP_REENTRANTEVENTS|
 |Supprimer les lignes supprimées|DBPROP_REMOVEDELETED|
-|Signaler les modifications de plusieurs|DBPROP_REPORTMULTIPLECHANGES|
+|Signaler plusieurs modifications|DBPROP_REPORTMULTIPLECHANGES|
 |Retourner les insertions en attente|DBPROP_RETURNPENDINGINSERTS|
 |Notification de suppression de ligne|DBPROP_NOTIFYROWDELETE|
-|Notification de modification de première ligne|DBPROP_NOTIFYROWFIRSTCHANGE|
+|Notification de modification de la première ligne|DBPROP_NOTIFYROWFIRSTCHANGE|
 |Notification d’insertion de ligne|DBPROP_NOTIFYROWINSERT|
 |Privilèges de ligne|DBPROP_ROWRESTRICT|
 |Notification de resynchronisation de ligne|DBPROP_NOTIFYROWRESYNCH|
 |Modèle de thread de ligne|DBPROP_ROWTHREADMODEL|
-|Notification de modification de ligne annulation|DBPROP_NOTIFYROWUNDOCHANGE|
-|Notification de suppression de ligne annulation|DBPROP_NOTIFYROWUNDODELETE|
-|Notification d’annulation insertion ligne|DBPROP_NOTIFYROWUNDOINSERT|
+|Notification de modification de ligne annuler|DBPROP_NOTIFYROWUNDOCHANGE|
+|Notification de suppression de ligne annuler|DBPROP_NOTIFYROWUNDODELETE|
+|Notification d’insertion de ligne annuler|DBPROP_NOTIFYROWUNDOINSERT|
 |Notification de mise à jour de ligne|DBPROP_NOTIFYROWUPDATE|
-|Notification de modification de Position extraction de l’ensemble de lignes|DBPROP_NOTIFYROWSETFETCHPOSISIONCHANGE|
-|Notification de mise en production de l’ensemble de lignes|DBPROP_NOTIFYROWSETRELEASE|
-|Faites défiler vers l’arrière|DBPROP_CANSCROLLBACKWARDS|
+|Notification de modification de position d’extraction d’ensemble de lignes|DBPROP_NOTIFYROWSETFETCHPOSISIONCHANGE|
+|Notification de libération de l’ensemble de lignes|DBPROP_NOTIFYROWSETRELEASE|
+|Défilement vers l’arrière|DBPROP_CANSCROLLBACKWARDS|
 |Ignorer les signets supprimés|DBPROP_BOOKMARKSKIPPED|
-|Forte identité de ligne|DBPROP_STRONGITDENTITY|
-|Mettre à jour|DBPROP_UPDATABILITY|
+|Identité de ligne forte|DBPROP_STRONGITDENTITY|
+|Mise à jour|DBPROP_UPDATABILITY|
 |Utiliser des signets|DBPROP_BOOKMARKS|
 
 ## <a name="command-dynamic-properties"></a>Propriétés dynamiques de commande
- Les propriétés suivantes sont ajoutées à la **propriétés** collection de la **commande** objet.
+ Les propriétés suivantes sont ajoutées à la collection **Properties** de l’objet **Command** .
 
 |Nom de la propriété ADO|Nom de la propriété OLE DB|
 |-----------------------|--------------------------|
 |Ordre d’accès|DBPROP_ACCESSORDER|
-|Ensemble de lignes en mode Append-Only|DBPROP_APPENDONLY|
+|Ensemble de lignes Append uniquement|DBPROP_APPENDONLY|
 |Blocage des objets de stockage|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |Type de signet|DBPROP_BOOKMARKTYPE|
-|Signet|DBPROP_IROWSETLOCATE|
+|Avec signet|DBPROP_IROWSETLOCATE|
 |Modifier les lignes insérées|DBPROP_CHANGEINSERTEDROWS|
 |Privilèges de colonne|DBPROP_COLUMNRESTRICT|
-|Notification de jeu de colonnes|DBPROP_NOTIFYCOLUMNSET|
+|Notification du jeu de colonnes|DBPROP_NOTIFYCOLUMNSET|
 |Différer la colonne|DBPROP_DEFERRED|
-|Mises à jour des objets de stockage délai|DBPROP_DELAYSTORAGEOBJECTS|
-|Récupérer vers l’arrière|DBPROP_CANFETCHBACKWARDS|
-|Contenant des lignes|DBPROP_CANHOLDROWS|
+|Retarder les mises à jour des objets de stockage|DBPROP_DELAYSTORAGEOBJECTS|
+|Extraire vers l’arrière|DBPROP_CANFETCHBACKWARDS|
+|Conserver les lignes|DBPROP_CANHOLDROWS|
 |IAccessor|DBPROP_IAccessor|
 |IColumnsInfo|DBPROP_IColumnsInfo|
 |IColumnsRowset|DBPROP_IColumnsRowset|
-|IConnectionPointContainer|DBPROP_IConnectionPointContainer|
+|Interfaces|DBPROP_IConnectionPointContainer|
 |IConvertType|DBPROP_IConvertType|
 |ILockBytes|DBPROP_ILockBytes|
 |Lignes immobiles|DBPROP_IMMOBILEROWS|
@@ -296,43 +296,43 @@ Microsoft.Jet.OLEDB.4.0
 |IStorage|DBPROP_IStorage|
 |IStream|DBPROP_IStream|
 |ISupportErrorInfo|DBPROP_ISupportErrorInfo|
-|Signets de littéral|DBPROP_LITERALBOOKMARKS|
+|Signets littéraux|DBPROP_LITERALBOOKMARKS|
 |Identité de ligne littérale|DBPROP_LITERALIDENTITY|
 |Mode de verrouillage|DBPROP_LOCKMODE|
-|Nombre maximal de lignes ouvert|DBPROP_MAXOPENROWS|
+|Nombre maximal de lignes ouvertes|DBPROP_MAXOPENROWS|
 |Nombre maximal de lignes en attente|DBPROP_MAXPENDINGROWS|
-|Nombre maximal de lignes|DBPROP_MAXROWS|
-|Granularité de notification|DBPROP_NOTIFICATIONGRANULARITY|
+|Lignes au maximum|DBPROP_MAXROWS|
+|Granularité des notifications|DBPROP_NOTIFICATIONGRANULARITY|
 |Phases de notification|DBPROP_NOTIFICATIONPHASES|
 |Objets traités|DBPROP_TRANSACTEDOBJECT|
-|D’autres modifications visibles|DBPROP_OTHERUPDATEDELETE|
-|Autres Inserts Visible|DBPROP_OTHERINSERT|
+|Modifications visibles par d’autres utilisateurs|DBPROP_OTHERUPDATEDELETE|
+|Autres insertions visibles|DBPROP_OTHERINSERT|
 |Propres modifications visibles|DBPROP_OWNUPDATEDELETE|
-|Propres insertions visibles|DBPROP_OWNINSERT|
-|Conserver sur Abandon|DBPROP_ABORTPRESERVE|
+|Insertions visibles|DBPROP_OWNINSERT|
+|Conserver lors de l’abandon|DBPROP_ABORTPRESERVE|
 |Conserver lors de la validation|DBPROP_COMMITPRESERVE|
 |Redémarrage rapide|DBPROP_QUICKRESTART|
 |Événements réentrants|DBPROP_REENTRANTEVENTS|
 |Supprimer les lignes supprimées|DBPROP_REMOVEDELETED|
-|Signaler les modifications de plusieurs|DBPROP_REPORTMULTIPLECHANGES|
+|Signaler plusieurs modifications|DBPROP_REPORTMULTIPLECHANGES|
 |Retourner les insertions en attente|DBPROP_RETURNPENDINGINSERTS|
 |Notification de suppression de ligne|DBPROP_NOTIFYROWDELETE|
-|Notification de modification de première ligne|DBPROP_NOTIFYROWFIRSTCHANGE|
+|Notification de modification de la première ligne|DBPROP_NOTIFYROWFIRSTCHANGE|
 |Notification d’insertion de ligne|DBPROP_NOTIFYROWINSERT|
 |Privilèges de ligne|DBPROP_ROWRESTRICT|
 |Notification de resynchronisation de ligne|DBPROP_NOTIFYROWRESYNCH|
 |Modèle de thread de ligne|DBPROP_ROWTHREADMODEL|
-|Notification de modification de ligne annulation|DBPROP_NOTIFYROWUNDOCHANGE|
-|Notification de suppression de ligne annulation|DBPROP_NOTIFYROWUNDODELETE|
-|Notification d’annulation insertion ligne|DBPROP_NOTIFYROWUNDOINSERT|
+|Notification de modification de ligne annuler|DBPROP_NOTIFYROWUNDOCHANGE|
+|Notification de suppression de ligne annuler|DBPROP_NOTIFYROWUNDODELETE|
+|Notification d’insertion de ligne annuler|DBPROP_NOTIFYROWUNDOINSERT|
 |Notification de mise à jour de ligne|DBPROP_NOTIFYROWUPDATE|
-|Notification de modification de Position extraction de l’ensemble de lignes|DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE|
-|Notification de mise en production de l’ensemble de lignes|DBPROP_NOTIFYROWSETRELEASE|
-|Faites défiler vers l’arrière|DBPROP_CANSCROLLBACKWARDS|
+|Notification de modification de position d’extraction d’ensemble de lignes|DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE|
+|Notification de libération de l’ensemble de lignes|DBPROP_NOTIFYROWSETRELEASE|
+|Défilement vers l’arrière|DBPROP_CANSCROLLBACKWARDS|
 |Données du serveur lors de l’insertion|DBPROP_SERVERDATAONINSERT|
 |Ignorer les signets supprimés|DBPROP_BOOKMARKSKIP|
-|Forte identité de ligne|DBPROP_STRONGIDENTITY|
-|Mettre à jour|DBPROP_UPDATABILITY|
+|Identité de ligne forte|DBPROP_STRONGIDENTITY|
+|Mise à jour|DBPROP_UPDATABILITY|
 |Utiliser des signets|DBPROP_BOOKMARKS|
 
- Pour les détails d’implémentation spécifiques et des informations fonctionnelles sur le fournisseur OLE DB pour Microsoft Jet, consultez [fournisseur Jet](https://msdn.microsoft.com/library/windows/desktop/ms722791.aspx) dans la documentation OLE DB.
+ Pour obtenir des détails d’implémentation spécifiques et des informations fonctionnelles sur le fournisseur de OLE DB pour Microsoft Jet, consultez [fournisseur Jet](https://msdn.microsoft.com/library/windows/desktop/ms722791.aspx) dans la documentation OLE DB.

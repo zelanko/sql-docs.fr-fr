@@ -18,20 +18,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56655f7d75635668d266b44853fc29969fd741ed
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782670"
 ---
-# <a name="validate-a-dac-package"></a>Valider un package DAC
+# <a name="validate-a-dac-package"></a>Valider un package DAC
   Il est conseillé d'examiner le contenu d'un package DAC avant de le déployer en production et de valider les actions de mise à niveau avant de mettre à niveau une DAC existante. Ceci tout particulièrement lors du déploiement de packages qui n'ont pas été développés dans votre organisation.  
   
-1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
+1.  **Avant de commencer :**  [Prérequis](#Prerequisites)  
   
-2.  **Pour mettre à niveau une DAC, à l'aide de :**  [Afficher le contenu d'une DAC](#ViewDACContents), [Afficher les modifications de base de données](#ViewDBChanges), [Afficher les actions de mise à niveau](#ViewUpgradeActions), [Comparer des DAC](#CompareDACs)  
+2.  **Pour mettre à niveau une DAC à l’aide de** :  [Afficher le contenu d’une DAC](#ViewDACContents), [Afficher les modifications de base de données](#ViewDBChanges), [Afficher les actions de mise à niveau](#ViewUpgradeActions), [Comparer les DAC](#CompareDACs)  
   
-##  <a name="Prerequisites"></a> Conditions préalables requises  
+##  <a name="Prerequisites"></a> Conditions préalables  
  Nous vous recommandons de ne pas déployer un package DAC provenant de sources inconnues ou non approuvées. Ces DAC peuvent contenir du code malveillant susceptible d'exécuter un code [!INCLUDE[tsql](../../includes/tsql-md.md)] indésirable ou de provoquer des erreurs en modifiant le schéma. Avant d’utiliser une DAC provenant d’une source inconnue ou non approuvée, déployez-la sur une instance de test isolée de [!INCLUDE[ssDE](../../includes/ssde-md.md)], exécutez [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) sur la base de données sur un serveur autre qu’un serveur de production et examinez également le code (par exemple les procédures stockées ou tout autre code défini par l’utilisateur) contenu dans la base de données.  
   
 ##  <a name="ViewDACContents"></a> Afficher le contenu d'une DAC  
@@ -105,10 +105,10 @@ $dacName  = "MyApplication"
 $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DACScripts\MyApplicationChanges.txt  
 ```  
   
-##  <a name="ViewUpgradeActions"></a> Afficher les actions de mise à niveau  
+##  <a name="ViewUpgradeActions"></a>Afficher les actions de mise à niveau  
  Avant d'utiliser une nouvelle version d'un package DAC en vue de mettre à niveau une DAC déployée à partir d'une version antérieure d'un package DAC, vous pouvez générer un rapport contenant les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui seront exécutées durant la mise à niveau, puis passer en revue ces instructions.  
   
- **Signaler les actions de mise à niveau à l'aide d'un Assistant**  
+ **Signaler les actions de mise à niveau à l’aide d’un Assistant**  
   
 1.  Exécutez l’Assistant **Mettre à niveau une application de la couche Données** , en spécifiant la DAC actuellement déployée et le package DAC qui contient la nouvelle version de la DAC.  
   
@@ -118,7 +118,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 4.  Pour plus d’informations sur l’utilisation de l’Assistant, consultez [Mettre à niveau une application de la couche Données](upgrade-a-data-tier-application.md).  
   
- **Signaler les actions de mise à niveau à l'aide de PowerShell**  
+ **Signaler les actions de mise à niveau à l’aide de PowerShell**  
   
 1.  Créez un objet serveur SMO et définissez-le sur l'instance qui contient la DAC déployée.  
   
@@ -161,7 +161,7 @@ $dacstore.GetIncrementalUpgradeScript($dacName, $dacType) | Out-File -Filepath C
 $fileStream.Close()  
 ```  
   
-##  <a name="CompareDACs"></a> Compare DACs  
+##  <a name="CompareDACs"></a>Comparer DAC  
  Avant de mettre à niveau une DAC, il est conseillé d'examiner les différences dans la base de données et les objets au niveau de l'instance entre les DAC actuelles et nouvelles. Si vous ne disposez pas d'une copie du package de la DAC actuelle, vous pouvez extraire un package de la base de données actuelle.  
   
  Si vous importez les deux packages DAC dans des projets DAC dans les outils de développement de SQL Server, vous pouvez utiliser l'outil Comparaison de schémas pour analyser les différences entre les deux DAC.  
@@ -169,6 +169,6 @@ $fileStream.Close()
  Ou bien, décompressez les DAC dans des dossiers distincts. Vous pouvez ensuite utiliser un outil de comparaison, tel que l'utilitaire WinDiff, pour analyser les différences.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Applications de la couche Données](data-tier-applications.md)   
- [Déployer une application de la couche Données](deploy-a-data-tier-application.md)   
+ [Applications de la couche données](data-tier-applications.md)   
+ [Déployer une application de la couche données](deploy-a-data-tier-application.md)   
  [Mettre à niveau une application de la couche Données](upgrade-a-data-tier-application.md)  

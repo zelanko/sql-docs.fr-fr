@@ -11,27 +11,27 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 87ed68cc3540075e0fd5d357182d709394f44455
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797496"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>Configurer les paramètres de propriété FailureConditionLevel
   Utilisez la propriété FailureConditionLevel pour définir les conditions de basculement ou de redémarrage de l'instance de cluster de basculement (FCI) AlwaysOn. Les modifications de cette propriété sont appliquées immédiatement sans nécessiter le redémarrage du service WSFC (cluster de basculement Windows Server) ou de la ressource FCI.  
   
--   **Before you begin:**  [FailureConditionLevel Property Settings](#Restrictions), [Security](#Security)  
+-   **Avant de commencer :**  [paramètres de propriété FailureConditionLevel](#Restrictions), [sécurité](#Security)  
   
--   **Pour configurer les paramètres de propriété FailureConditionLevel à l’aide de** [PowerShell](#PowerShellProcedure), [Gestionnaire du cluster de basculement](#WSFC), [Transact-SQL](#TsqlProcedure)  
+-   **Pour configurer les paramètres de propriété FailureConditionLevel à l’aide de,** [PowerShell](#PowerShellProcedure), [Gestionnaire du cluster de basculement](#WSFC), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Paramètres de propriété FailureConditionLevel  
+###  <a name="Restrictions"></a>Paramètres de propriété FailureConditionLevel  
  Les conditions d'échec sont définies sur une échelle croissante. Pour les niveaux 1-5, chaque niveau inclut toutes les conditions des niveaux précédents en plus de ses propres conditions. Cela signifie qu'à chaque niveau, la probabilité de basculement ou de redémarrage est plus importante.  Pour plus d'informations, consultez la section « Détermination des échecs » de la rubrique [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md) .  
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite les autorisations ALTER SETTINGS et VIEW SERVER STATE.  
   
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
@@ -42,7 +42,7 @@ ms.locfileid: "72797496"
   
 2.  Importez le module `FailoverClusters` pour activer les applets de commande de cluster.  
   
-3.  Utilisez l’applet de commande `Get-ClusterResource` pour rechercher la ressource [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], puis utilisez l’applet de commande `Set-ClusterParameter` pour définir la propriété **FailureConditionLevel** d’une instance de cluster de basculement.  
+3.  Utilisez l' `Get-ClusterResource` applet de commande pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Rechercher la ressource, `Set-ClusterParameter` puis utilisez l’applet de commande pour définir la propriété **FailureConditionLevel** d’une instance de cluster de basculement.  
   
 > [!TIP]  
 >  Chaque fois que vous ouvrez une nouvelle fenêtre PowerShell, vous devez importer le module `FailoverClusters`.  
@@ -58,13 +58,13 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 ### <a name="related-content-powershell"></a>Contenu connexe (PowerShell)  
   
--   [Clustering and High-Availability](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Clustering et haute disponibilité) (Blog de l’équipe de clustering de basculement et d’équilibrage de la charge réseau)  
+-   [Clustering et haute disponibilité](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (blog de l’équipe de clustering de basculement et d’équilibrage de la charge réseau)  
   
--   [Mise en route de Windows PowerShell sur un cluster de basculement](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
+-   [Prise en main avec Windows PowerShell sur un cluster de basculement](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
 -   [Commandes de ressource de cluster et applets de commande Windows PowerShell équivalentes](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
-##  <a name="WSFC"></a> Utilisation du composant logiciel enfichable Gestionnaire du cluster de basculement  
+##  <a name="WSFC"></a>Utilisation du composant logiciel enfichable Gestionnaire du cluster de basculement  
 
 ### <a name="to-configure-failureconditionlevel-property-settings"></a>Pour configurer les paramètres de propriété FailureConditionLevel
   
@@ -80,7 +80,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
 
 ### <a name="to-configure-failureconditionlevel-property-settings"></a>Pour configurer les paramètres de propriété FailureConditionLevel
   
- À l’aide de l’instruction [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] , spécifiez la valeur de la propriété FailureConditionLevel.  
+ À l’aide de l’instruction [ALTER Server Configuration](/sql/t-sql/statements/alter-server-configuration-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] , vous pouvez spécifier la valeur de la propriété FailureConditionLevel.  
   
 ###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
  L'exemple suivant affecte à la propriété FailureConditionLevel la valeur 0, ce qui indique qu'aucun basculement ni redémarrage ne sera déclenché automatiquement sur n'importe quelle condition d'échec.  

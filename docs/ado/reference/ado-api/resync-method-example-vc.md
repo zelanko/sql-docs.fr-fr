@@ -1,5 +1,5 @@
 ---
-title: Resync, exemple de méthode (VC ++) | Microsoft Docs
+title: Resync, exemple de méthode (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: d34dfd26-9ca7-4c9c-a918-396f05fecca9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6a13e09895a25ac095888b42097bf47cbe27b369
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931240"
 ---
 # <a name="resync-method-example-vc"></a>Resync, exemple de méthode (VC++)
-Cet exemple montre comment utiliser le [Resync](../../../ado/reference/ado-api/resync-method.md) méthode pour actualiser les données dans un jeu d’enregistrements statique.  
+Cet exemple illustre l’utilisation de la méthode [Resync](../../../ado/reference/ado-api/resync-method.md) pour actualiser des données dans un Recordset statique.  
   
 ```  
 // Resync_Method_Sample.cpp  

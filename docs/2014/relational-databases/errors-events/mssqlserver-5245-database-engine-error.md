@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 30b37236b321fc90372914f2af48a652d41fbe03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913597"
 ---
-# <a name="mssqlserver5245"></a>MSSQLSERVER_5245
+# <a name="mssqlserver_5245"></a>MSSQLSERVER_5245
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|5245|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|5245|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC4_TABLE_LOCK_TIMEOUT_EXCEEDED|  
-|Texte du message|ID d’objet O_ID (objet 'NAME') : DBCC n’a pas pu obtenir un verrou sur cet objet, car le délai de demande de verrou a été dépassé. Cet objet a été ignoré et il ne sera pas traité.|  
+|Texte du message|ID d'objet O_ID (objet 'NAME') : DBCC n'a pas pu obtenir de verrou pour cet objet, car le délai d'attente de la requête de verrouillage a été dépassé. Cet objet a été ignoré et il ne sera pas traité.|  
   
 ## <a name="explanation"></a>Explication  
  Le délai d'attente de verrouillage a expiré pendant que DBCC attendait un verrouillage de table pour l'objet spécifié.  

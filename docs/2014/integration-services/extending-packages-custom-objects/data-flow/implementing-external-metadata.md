@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 70e99073f07e7e285d1fcbfad51cf9a275dd9441
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896150"
 ---
 # <a name="implementing-external-metadata"></a>Implémentation des métadonnées externes
@@ -77,7 +77,7 @@ End Sub
 ### <a name="connected-validation"></a>Validation connectée  
  Lorsqu'un composant est connecté à une source de données externe, les colonnes comprises dans les collections d'entrée ou de sortie sont vérifiées directement par rapport à la source de données externe. En outre, les colonnes comprises dans la collection de métadonnées externes doivent être validées. Cette validation est requise car la collection de métadonnées externe peut être modifiée à l’aide de l’**Éditeur avancé** dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], et les modifications apportées à la collection ne sont pas détectables. Par conséquent, en cas de connexion, les composants doivent s'assurer que les colonnes comprises dans la collection de colonnes de métadonnées externes continuent à refléter les colonnes à la source de données externe.  
   
- Vous pouvez choisir de masquer la collection de métadonnées externes dans le **éditeur avancé** en définissant le <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A> propriété de la collection à `false`. Cependant, cela masque également l’onglet **Mappage de colonnes** de l’éditeur, lequel permet aux utilisateurs de mapper des colonnes de la collection d’entrée ou de sortie aux colonnes de la collection de colonnes de métadonnées externes. La définition de cette propriété sur `false` n'empêche pas les développeurs de modifier la collection par programme, mais elle fournit un niveau de protection pour la collection de colonnes de métadonnées externes d'un composant qui est utilisé exclusivement dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
+ Vous pouvez choisir de masquer la collection de métadonnées externes dans la **éditeur avancé** en <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A> affectant à `false`la propriété de la collection la valeur. Cependant, cela masque également l’onglet **Mappage de colonnes** de l’éditeur, lequel permet aux utilisateurs de mapper des colonnes de la collection d’entrée ou de sortie aux colonnes de la collection de colonnes de métadonnées externes. La définition de cette propriété sur `false` n'empêche pas les développeurs de modifier la collection par programme, mais elle fournit un niveau de protection pour la collection de colonnes de métadonnées externes d'un composant qui est utilisé exclusivement dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="disconnected-validation"></a>Validation déconnectée  
  Lorsqu'un composant est déconnecté d'une source de données externe, la validation est simplifiée parce que les colonnes comprises dans la collection d'entrée ou de sortie sont vérifiées directement par rapport aux colonnes de la collection de métadonnées externes et non pas par rapport à la source externe. Un composant doit effectuer une validation déconnectée lorsque la connexion à sa source de données externe n'a pas été établie ou lorsque la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> a pour valeur `false`.  
@@ -108,7 +108,7 @@ Public  Overrides Function Validate() As DTSValidationStatus
 End Function  
 ```  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône de Integration Services (petite)](../../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Flux de données](../../data-flow/data-flow.md)  

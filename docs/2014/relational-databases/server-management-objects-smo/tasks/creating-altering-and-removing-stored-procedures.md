@@ -13,19 +13,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 58890cc7b9e34a3e8ff9262af1f6b1a67b47841e
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782362"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>Création, modification et suppression des procédures stockées
   Dans SMO ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects), les procédures stockées sont représentées par l'objet <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>.  
   
- La création d'un objet <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> dans SMO requiert la définition de la propriété <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> sur le script [!INCLUDE[tsql](../../../includes/tsql-md.md)] qui définit la procédure stockée. Les paramètres requièrent le préfixe \@ et doivent être créés individuellement en utilisant des objets <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> et en ajoutant à la collection <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> de l’objet <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>.  
+ La création d'un objet <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> dans SMO requiert la définition de la propriété <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> sur le script [!INCLUDE[tsql](../../../includes/tsql-md.md)] qui définit la procédure stockée. Les paramètres requièrent \@ le préfixe et doivent être créés <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> individuellement en utilisant des objets <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> et en ajoutant <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> à la collection de l’objet.  
   
 ## <a name="example"></a>Exemple  
- Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet Visual Basic Smo dans Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [créer un projet&#35; Smo Visual C dans Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet Visual Basic Smo dans Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [créer un projet Visual C&#35; Smo dans Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-visual-basic"></a>Création, modification et suppression d'une procédure stockée en Visual Basic  
  Cet exemple de code montre comment créer une procédure stockée pour la base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . L'exemple retourne le nom d'un employé lorsque le numéro d'ID d'employé est fourni. La procédure stockée requiert un paramètre d'entrée pour spécifier le numéro d'ID d'employé et un paramètre de sortie pour retourner le nom de l'employé.  

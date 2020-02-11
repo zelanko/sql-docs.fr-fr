@@ -11,18 +11,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6caa06af68eddfd85cb4f19ab2cfb8dd41bbdd95
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798112"
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application-sharepoint-2010-and-sharepoint-2013"></a>Configurer la messagerie électronique pour une application de service Reporting Services (SharePoint 2010 et SharePoint 2013)
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] L’alerte de données Reporting Services envoie des messages électroniques d’alerte. Pour envoyer du courrier électronique, vous devrez peut-être configurer votre application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et modifier l'extension de remise par messagerie pour l'application de service. Les paramètres de messagerie sont également requis si vous prévoyez d'utiliser l'extension de remise par messagerie pour la fonctionnalité d'abonnement de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 2010 &#124; et SharePoint 2013 en mode SharePoint.|  
+|[!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Le mode SharePoint &#124; SharePoint 2010 et SharePoint 2013.|  
   
 ### <a name="to-configure-e-mail-for-the-shared-service"></a>Pour configurer la messagerie pour le service partagé  
   
@@ -48,7 +49,7 @@ ms.locfileid: "72798112"
   
 ### <a name="ntlm-authentication"></a>Authentification NTLM  
   
-1.  Si votre environnement de messagerie requiert l'authentification NTLM et n'autorise pas l'accès anonyme, vous devez modifier la configuration d'extension de remise par messagerie de vos applications de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Modifiez **SMTPAuthenticate** pour utiliser la valeur « 2 ». Cette valeur ne peut pas être modifiée à partir de l'interface utilisateur. L’exemple de script PowerShell suivant met à jour la configuration complète pour l’extension de remise par messagerie du serveur de rapports pour l’application de service nommée « SSRS_TESTAPPLICATION ». Notez que certains nœuds répertoriés dans le script peuvent aussi être définis à partir de l’interface utilisateur, par exemple l’adresse « De ».  
+1.  Si votre environnement de messagerie requiert l'authentification NTLM et n'autorise pas l'accès anonyme, vous devez modifier la configuration d'extension de remise par messagerie de vos applications de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Modifiez **SMTPAuthenticate** pour utiliser la valeur « 2 ». Cette valeur ne peut pas être modifiée à partir de l'interface utilisateur. L’exemple de script PowerShell suivant met à jour la configuration complète pour l’extension de remise par messagerie du serveur de rapports pour l’application de service nommée « SSRS_TESTAPPLICATION ». Notez que certains nœuds répertoriés dans le script peuvent aussi être définis à partir de l’interface utilisateur, par exemple l’adresse « De ».  
   
     ```powershell
     $app = Get-SPRSServiceApplication | Where {$_.name -like "SSRS_TESTAPPLICATION *"}  

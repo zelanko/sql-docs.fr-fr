@@ -19,10 +19,10 @@ ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fd717f645b9e53d08f6dabbfc1ea5779c373056e
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305105"
 ---
 # <a name="sp_delete_proxy-transact-sql"></a>sp_delete_proxy (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "72305105"
 
   Supprime le proxy spécifié.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,18 +40,18 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @proxy_id = ] id` Numéro d’identification du proxy à supprimer. *Proxy_id* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @proxy_id = ] id`Numéro d’identification du proxy à supprimer. *Proxy_id* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @proxy_name = ] 'proxy_name'` nom du proxy à supprimer. *Proxy_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @proxy_name = ] 'proxy_name'`Nom du proxy à supprimer. *Proxy_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
- **@No__t-1proxy_name** ou **\@proxy_id** doit être spécifié. Si ces deux arguments sont spécifiés, ils doivent tous les deux référencer le même proxy, sinon la procédure stockée échoue.  
+ Proxy_name ou ** \@proxy_id** doivent être spécifiés. ** \@** Si ces deux arguments sont spécifiés, ils doivent tous les deux référencer le même proxy, sinon la procédure stockée échoue.  
   
  Si une étape d'un travail fait référence au proxy spécifié, ce dernier ne peut pas être supprimé et la procédure stockée échoue.  
   

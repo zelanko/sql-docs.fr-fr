@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 33f9329031c589c533277b1e681ea1cb7bae49b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098139"
 ---
-# <a name="reserveurl-method-wmi-msreportserverconfigurationsetting"></a>Méthode ReserveURL (WMI MSReportServer_ConfigurationSetting)
+# <a name="reserveurl-method-wmi-msreportserver_configurationsetting"></a>Méthode ReserveURL (WMI MSReportServer_ConfigurationSetting)
   Ajoute une réservation d'URL pour une application donnée.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -42,27 +42,27 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  *URLString*  
  URL pour la réservation.  
   
- *lcid*  
+ *LCID*  
  Paramètres régionaux à utiliser pour les messages d'erreur retournés.  
   
- *Erreur*  
+ *Error*  
  [out] Description de l'erreur qui s'est produite.  
   
- *HRESULT*  
+ *SIGNÉ*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Retourne un paramètre *HRESULT* qui indique si l'appel de la méthode a réussi ou a échoué. La valeur 0 indique que l'appel de la méthode a abouti ; un code d'erreur indique que l'appel n'a pas abouti.  
   
 ## <a name="remarks"></a>Notes  
- La propriété*UrlString* n'inclut pas le nom de répertoire virtuel. La méthode [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md) est fournie à cette fin.  
+ *UrlString* n’inclut pas le nom du répertoire virtuel. La méthode [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md) est fournie à cette fin.  
   
  Des réservations d'URL sont créées pour le compte de service Windows actuel. La modification du compte de service Windows nécessite la mise à jour manuelle de toutes les réservations d'URL.  
   
  Cette méthode entraîne un recyclage forcé de tous les domaines d'application. Les domaines d'application sont redémarrés une fois cette opération terminée.  
   
-## <a name="requirements"></a>Configuration requise  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+## <a name="requirements"></a>Spécifications  
+ **Espace de noms :**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

@@ -16,29 +16,29 @@ ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dba8636f07b88f1c05d465b844376c6ef3e61240
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931657"
 ---
 # <a name="position-property-ado"></a>Position, propriété (ADO)
-Indique la position actuelle dans un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objet.  
+Indique la position actuelle dans un objet de [flux](../../../ado/reference/ado-api/stream-object-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Définit ou retourne un **Long** valeur qui indique l’offset, en octets, de la position actuelle à partir du début du flux. La valeur par défaut est 0, ce qui représente le premier octet dans le flux.  
+ Définit ou retourne une valeur de **type long** qui spécifie le décalage, en nombre d’octets, de la position actuelle à partir du début du flux. La valeur par défaut est 0, qui représente le premier octet dans le flux.  
   
 ## <a name="remarks"></a>Notes  
- La position actuelle peut être déplacée vers un point après la fin du flux. Si vous spécifiez la position actuelle après la fin du flux, le [taille](../../../ado/reference/ado-api/size-property-ado-stream.md) de la **Stream** objet augmente en conséquence. Les nouveaux octets ajoutés de cette façon sera null.  
+ La position actuelle peut être déplacée vers un point situé après la fin du flux. Si vous spécifiez la position actuelle au-delà de la fin du flux, la [taille](../../../ado/reference/ado-api/size-property-ado-stream.md) de l’objet de **flux** sera augmentée en conséquence. Tout nouvel octet ajouté de cette façon sera null.  
   
 > [!NOTE]
->  **Position** mesure toujours des octets. Pour les flux de texte à l’aide de jeux de caractères multioctets, multipliez la position par la taille des caractères pour déterminer le nombre de caractères. Par exemple, pour un jeu de caractères de deux octets, le premier caractère est à la position 0, le deuxième caractère à la position 2, le troisième caractère à la position 4 et ainsi de suite.  
+>  La **position** mesure toujours les octets. Pour les flux de texte utilisant des jeux de caractères multioctets, multipliez la position par la taille de caractère pour déterminer le nombre de caractères. Par exemple, pour un jeu de caractères de deux octets, le premier caractère se trouve à la position 0, le deuxième caractère à la position 2, le troisième caractère à la position 4, et ainsi de suite.  
   
 > [!NOTE]
->  Les valeurs négatives ne peut pas être utilisés pour modifier la position actuelle dans un **Stream**. Seuls les nombres positifs peuvent être utilisés pour **Position**.  
+>  Les valeurs négatives ne peuvent pas être utilisées pour modifier la position actuelle dans un **flux**. Seuls les nombres positifs peuvent être utilisés pour la **position**.  
   
 > [!NOTE]
->  Pour en lecture seule **Stream** ADO ne renvoie pas une erreur si des objets **Position** a une valeur supérieure à la **taille** de la **Stream**. Cela ne modifie pas la taille de la **Stream**, ou modifiez la **Stream** contenu en aucune façon. Toutefois, cela doit être évité, car il en résulte un sans signification **Position**valeur.  
+>  Pour les objets de **flux** en lecture seule, ADO ne retourne pas d’erreur si **position** est définie sur une valeur supérieure à la **taille** du **flux**. Cela ne modifie pas la taille du **flux**, ni ne modifie le contenu du **flux** de quelque manière que ce soit. Toutefois, cette opération doit être évitée, car elle entraîne une valeur de **position**insignifiante.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

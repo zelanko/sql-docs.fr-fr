@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1306c4463544d2aee882645a2f0a9401a8fb3a60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913173"
 ---
-# <a name="mssqlserver7934"></a>MSSQLSERVER_7934
+# <a name="mssqlserver_7934"></a>MSSQLSERVER_7934
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|7934|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|7934|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_FS_MISSING_ROWSET_DIRECTORY|  
-|Texte du message|Erreur de table, Le répertoire Filestream F_ID d’ID pour l’ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID est introuvable.|  
+|Texte du message|Erreur de table : l'ID de répertoire FILESTREAM F_ID correspondant à l'ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, est introuvable.|  
   
 ## <a name="explanation"></a>Explication  
  Au cours de l'exécution de DBCC CHECKDB, une partition a été trouvée, mais son répertoire d'ensemble de lignes FILESTREAM correspondant dans l'espace de données FILESTREAM reste introuvable.  

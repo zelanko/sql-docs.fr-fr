@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4408e9b884e2cb5a0b47d9e6f95a16dec2bd20f6
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493866"
 ---
 # <a name="defining-a-fact-relationship"></a>Définition d'une relation de faits
@@ -63,17 +63,17 @@ ms.locfileid: "69493866"
   
 13. Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
-14. Dans le volet **attributs** du concepteur de dimensions pour la dimension **Internet Sales Order Details** , sélectionnez **Sales Order Number**, puis modifiez la propriété **Name** de la fenêtre Propriétés en `Item Description.`  
+14. Dans le volet **attributs** du concepteur de dimensions pour la dimension **Internet Sales Order Details** , sélectionnez **Sales Order Number**, puis remplacez la propriété **Name** de la fenêtre Propriétés par`Item Description.`  
   
-15. Dans la cellule de propriété **NameColumn** , cliquez sur le bouton Parcourir **(...)** . Dans la boîte de dialogue **colonne de nom** , sélectionnez **Product** dans la liste **table source** , sélectionnez **EnglishProductName** pour la **colonne source**, puis cliquez sur **OK**.  
+15. Dans la cellule de propriété **NameColumn** , cliquez sur le bouton Parcourir **(...)**. Dans la boîte de dialogue **colonne de nom** , sélectionnez **Product** dans la liste **table source** , sélectionnez **EnglishProductName** pour la **colonne source**, puis cliquez sur **OK**.  
   
 16. Ajoutez l’attribut **Sales Order Number** à la dimension. Pour cela, faites glisser la colonne **SalesOrderNumber** de la table **InternetSales** du volet **Vue de source de données** vers le volet **Attributs** .  
   
-17. Remplacez la propriété **Name** de l’attribut New **Sales Order Number** par `Order Number`, puis remplacez la valeur de la propriété **orderby** par **Key**.  
+17. Remplacez la propriété **Name** du nouvel attribut **Sales Order Number** par `Order Number`, puis remplacez la valeur de la propriété **orderby** par **Key**.  
   
-18. Dans le volet **hiérarchies** , créez une hiérarchie utilisateur **Internet Sales Orders** qui contient les niveaux de description de l' `Order Number` et de l' **élément** , dans cet ordre.  
+18. Dans le volet **hiérarchies** , créez une hiérarchie utilisateur **Internet Sales Orders** qui `Order Number` contient les niveaux de description de l' **élément** et, dans cet ordre.  
   
-19. Dans le volet **Attributs** , sélectionnez **Internet Sales Order Details**et vérifiez la valeur de la propriété **StorageMode** dans la fenêtre des propriétés.  
+19. Dans le volet **Attributs**, sélectionnez **Internet Sales Order Details** et vérifiez la valeur de la propriété **StorageMode** dans la fenêtre des propriétés.  
   
      Notez que cette dimension est stockée par défaut en tant que dimension MOLAP. Si l'utilisation du mode de stockage ROLAP en lieu et place du mode MOLAP permet de réduire le temps de traitement et de gagner de l'espace de stockage, elle se fait toutefois au dépend des performances des requêtes. Dans le cadre de ce didacticiel, vous allez utiliser le mode de stockage MOLAP.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "69493866"
   
      Notez que la dimension de cube **Internet Sales Order Details** est configurée automatiquement avec une relation de faits, comme le montre l’icône unique.  
   
-2.  Cliquez sur le bouton Parcourir ( **...** ) dans la cellule **Description** de l’élément, à l’intersection du groupe de mesures **Internet Sales** et de la dimension **Internet Sales Order Details** , pour passer en revue les propriétés de la relation de faits.  
+2.  Cliquez sur le bouton Parcourir (**...**) dans la cellule **Description** de l’élément, à l’intersection du groupe de mesures **Internet Sales** et de la dimension **Internet Sales Order Details** , pour passer en revue les propriétés de la relation de faits.  
   
      La boîte de dialogue **Définir une relation** s’affiche. Notez que vous ne pouvez pas configurer les propriétés.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "69493866"
   
      L'illustration suivante montre le résultat des étapes précédentes.  
   
-     ![Dimension des ventes sur Internet-montant des ventes](../../2014/tutorials/media/l5-factrelationship-3.gif "Dimension des ventes sur Internet-montant des ventes")  
+     ![Dimensionnement de Internet Sales-Sales Amount](../../2014/tutorials/media/l5-factrelationship-3.gif "Dimensionnement de Internet Sales-Sales Amount")  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
  [Définition d’une relation plusieurs-à-plusieurs](lesson-5-3-defining-a-many-to-many-relationship.md)  

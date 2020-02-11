@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 10399a26335912a9370aa21a386f58d04d04321e
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796388"
 ---
 # <a name="create-dml-triggers"></a>Créer des déclencheurs DML
@@ -34,7 +34,7 @@ ms.locfileid: "72796388"
 ### <a name="limitations-and-restrictions"></a>Limitations et restrictions  
  Pour obtenir la liste des limitations et des restrictions liées à la création de déclencheurs DML, consultez [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql).  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation ALTER sur la table ou la vue sur laquelle le déclencheur est créé.  
   
 ##  <a name="Procedures"></a> Comment créer un déclencheur DML  
@@ -56,12 +56,12 @@ ms.locfileid: "72796388"
   
 5.  Dans la boîte de dialogue **Spécifier les valeurs des paramètres du modèle** , entrez les valeurs suivantes pour les paramètres affichés.  
   
-    |Paramètre|Value|  
+    |Paramètre|Valeur|  
     |---------------|-----------|  
-    |Author|*Votre nom*|  
+    |Auteur|*Votre nom*|  
     |Date de création|*Date du jour*|  
     |Description|Vérifie le degré de solvabilité du fournisseur avant d'autoriser l'insertion d'une nouvelle commande fournisseur.|  
-    |Schema_name|Purchasing|  
+    |Schema_name|Achat|  
     |Trigger_Name|NewPODetail2|  
     |Table_Name|PurchaseOrderDetail|  
     |Data_Modification_Statement|Supprimez UPDATE et DELETE de la liste.|  

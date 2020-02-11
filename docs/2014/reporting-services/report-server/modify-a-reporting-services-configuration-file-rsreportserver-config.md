@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c77ae94a7b8c5760d14dcb3fed2af40573549d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103758"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
@@ -25,7 +25,7 @@ ms.locfileid: "66103758"
 > [!IMPORTANT]  
 >  Soyez prudent lorsque vous modifiez les fichiers de configuration. Si vous modifiez un paramètre réservé à un usage interne, vous risquez de désactiver votre installation. En règle générale, il est déconseillé de modifier les paramètres de configuration, sauf pour essayer de résoudre un problème spécifique. Pour plus d'informations sur les paramètres pouvant être modifiés en toute sécurité, consultez [RSReportServer Configuration File](rsreportserver-config-configuration-file.md) ou [RSReportDesigner Configuration File](rsreportdesigner-configuration-file.md). Pour plus d’informations sur les fichiers de configuration, consultez la documentation du produit [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
- Dans cette rubrique :  
+ Dans cette rubrique :  
   
 -   [Lecture et utilisation des valeurs de configuration](#bkmk_read_values)  
   
@@ -82,22 +82,22 @@ ms.locfileid: "66103758"
   
     -   [Authentification avec le serveur de rapports](../security/authentication-with-the-report-server.md)  
   
-    -   [Configurer le Gestionnaire de rapports pour passer des cookies d’authentification personnalisée](../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)  
+    -   [Configurer le Gestionnaire de rapports pour passer des cookies d'authentification personnalisée](../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)  
   
     -   [Personnaliser les paramètres d'extension de rendu dans RSReportServer.Config](../customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
-5.  Enregistrez le fichier.  
+5.  Enregistrez le fichier .  
   
-6.  Consultez les fichiers journaux des traces pour vous assurer qu'aucune erreur ne s'est produite. Si vous trouvez une erreur, cela signifie qu'un paramètre ou sa valeur ont été spécifiés de manière incorrecte. Examinez le [RSReportServer Configuration File](rsreportserver-config-configuration-file.md) pour connaître les valeurs valides du paramètre à l'origine de l'erreur. Pour plus d’informations sur l’affichage du journal des traces, consultez [Report Server Service Trace Log](report-server-service-trace-log.md) (Journal des traces du service Report Server).  
+6.  Consultez les fichiers journaux des traces pour vous assurer qu'aucune erreur ne s'est produite. Si vous trouvez une erreur, cela signifie qu'un paramètre ou sa valeur ont été spécifiés de manière incorrecte. Examinez le [RSReportServer Configuration File](rsreportserver-config-configuration-file.md) pour connaître les valeurs valides du paramètre à l'origine de l'erreur. Pour plus d’informations sur l’affichage du journal des traces, consultez [Report Server Service Trace Log](report-server-service-trace-log.md)(Journal des traces du service Report Server).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fichier de Configuration RSReportServer](rsreportserver-config-configuration-file.md)   
+ [Fichier de configuration RSReportServer](rsreportserver-config-configuration-file.md)   
  [Fichier de configuration ReportingServicesService](reportingservicesservice-configuration-file.md)   
  [Fichier de configuration RSReportDesigner](rsreportdesigner-configuration-file.md)   
- [Déploiement d'une extension pour le traitement des données](../extensions/data-processing/deploying-a-data-processing-extension.md)   
+ [Déploiement d’une extension pour le traitement des données](../extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Déploiement d’une extension de remise](../extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [Déploiement d’une extension de rendu](../extensions/rendering-extension/deploying-a-rendering-extension.md)   
- [Procédure : Déployer un élément de rapport personnalisé](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
+ [Procédure : déployer un élément de rapport personnalisé](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
  [Fichiers de configuration de Reporting Services](reporting-services-configuration-files.md)  
   
   

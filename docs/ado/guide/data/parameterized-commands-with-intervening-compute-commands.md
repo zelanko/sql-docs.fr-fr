@@ -1,5 +1,5 @@
 ---
-title: Des commandes avec des commandes COMPUTE intermédiaires paramétrables | Microsoft Docs
+title: Commandes paramétrables avec des commandes Compute intermédiaires | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,18 +16,18 @@ ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb6bc2b9f7e53caf28f44daf39815850940b9d3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924723"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>Commandes paramétrées avec des commandes COMPUTE intermédiaires
-Une forme paramétrée commande APPEND contient généralement une clause qui crée un parent **Recordset** avec une commande de requête et une autre clause qui crée un enfant **Recordset** avec une commande de requête paramétrable : Autrement dit, une commande contenant un espace réservé de paramètre (un point d’interrogation « ? »). La forme résultant **Recordset** a deux niveaux, dans laquelle le parent occupé par le niveau supérieur et le niveau inférieur occupé par l’enfant.  
+Une commande d’ajout de forme paramétrable classique a une clause qui crée un **jeu d’enregistrements** parent avec une commande de requête et une autre clause qui crée un **jeu d’enregistrements** enfant avec une commande de requête paramétrable, c’est-à-dire une commande contenant un espace réservé de paramètre (un point d’interrogation, «  ? »). Le **Recordset** mis en forme obtenu a deux niveaux, dans lesquels le parent occupe le niveau supérieur et l’enfant occupe le niveau inférieur.  
   
- La clause qui crée l’enfant **Recordset** peut maintenant être un nombre arbitraire de forme imbriquées commandes COMPUTE, la commande la plus profondément imbriquée contenant la requête paramétrable. La forme résultant **Recordset** a plusieurs niveaux, dans laquelle le parent occupé par le niveau le plus, l’enfant occupe le niveau de la plus basse et un nombre arbitraire de **Recordset**s générés par le commandes de mise en forme occupent les niveaux intermédiaires.  
+ La clause qui crée le **Recordset** enfant peut désormais être un nombre arbitraire de commandes de calcul de forme imbriquées, où la commande la plus profondément imbriquée contient la requête paramétrable. Le **Recordset** mis en forme qui en résulte a plusieurs niveaux, dans lesquels le parent occupe le niveau supérieur, l’enfant occupe le niveau lowermost, et un nombre arbitraire de **jeux d’enregistrements**générés par les commandes Compute de Shape occupent les niveaux intermédiaires.  
   
- L’utilisation classique pour cette fonctionnalité consiste à appeler la fonction d’agrégation et les fonctionnalités de regroupement de shapeCOMPUTE commandes pour créer des intervenants **Recordset** objets avec des informations analytiques sur l’enfant **Recordset** . En outre, comme il s’agit d’une commande de mise en forme paramétrée, chaque fois qu’une colonne de chapitre du parent est accessible, un nouvel enfant **Recordset** peuvent être récupérés. Étant donné que les niveaux intermédiaires sont dérivés de l’enfant, ils également recalculés.  
+ L’utilisation courante de cette fonctionnalité consiste à appeler la fonction d’agrégation et les capacités de regroupement des commandes shapeCOMPUTE pour créer des objets **Recordset** intermédiaires avec des informations analytiques sur le **Recordset**enfant. En outre, étant donné qu’il s’agit d’une commande de forme paramétrable, chaque fois qu’une colonne de chapitre du parent est accessible, un nouvel ensemble **d’enregistrements** enfant peut être récupéré. Étant donné que les niveaux intermédiaires sont dérivés de l’enfant, ils sont également recalculés.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de mise en forme des données](../../../ado/guide/data/data-shaping-example.md)

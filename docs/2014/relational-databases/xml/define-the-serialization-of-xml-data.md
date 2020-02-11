@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 39f3ccc462fb063ecb314b1e9968dcfa8a095cbb
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688886"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Définir la sérialisation des données XML
@@ -31,13 +31,13 @@ ms.locfileid: "72688886"
 ## <a name="serialization-encoding"></a>Encodage de la sérialisation  
  Si le type cible SQL est VARBINARY, le résultat est sérialisé au format UTF-16 avec une marque d'ordre d'octet UTF-16 au début, mais sans déclaration XML. Si le type cible est trop petit, une erreur est générée.  
   
- Par exemple:  
+ Par exemple :  
   
 ```sql
 select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 0xFFFE3C0094032F003E00  
@@ -45,13 +45,13 @@ select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))
   
  Si le type cible SQL est NVARCHAR ou NCHAR, le résultat est sérialisé au format UTF-16 sans marque d'ordre d'octet au début ni déclaration XML. Si le type cible est trop petit, une erreur est générée.  
   
- Par exemple:  
+ Par exemple :  
   
 ```sql
 select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Δ/>  
@@ -59,13 +59,13 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
   
  Si le type cible SQL est VARCHAR ou NCHAR, le résultat est sérialisé dans l'encodage correspondant à la page de codes du classement de la base de données sans marque d'ordre d'octet ni déclaration XML. Si le type cible est trop petit ou s'il est impossible de faire correspondre la valeur à la page de codes du classement de la cible, une erreur est générée.  
   
- Par exemple:  
+ Par exemple :  
   
 ```sql
 select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
 ```  
   
- Cela peut entraîner une erreur, si la page de codes du classement actuel ne peut pas représenter le caractère &#x10300;Unicode, ou elle le représente dans l’encodage spécifique.  
+ Cela peut entraîner une erreur, si la page de codes du classement actuel ne peut pas représenter le caractère Unicode & # x10300 ;, ou si elle le représente dans l’encodage spécifique.  
   
  Lors du renvoi des résultats XML côté client, les données seront transmises en UTF-16. Le fournisseur côté client exposera ensuite les données d'après les règles de son API.  
   
@@ -73,7 +73,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
  Le contenu d’un type de données **xml** est sérialisé de manière habituelle. Plus précisément, les nœuds d'élément sont mappés au balisage d'élément et les nœuds de texte sont mappés au contenu texte. Les circonstances dans lesquelles les caractères sont décomposés en entités et la façon dont les valeurs atomiques typées sont sérialisées sont décrites dans les sections suivantes.  
   
 ## <a name="entitization-of-xml-characters-during-serialization"></a>Codage d'entité des caractères XML au cours de la sérialisation  
- Chaque structure XML sérialisée doit pouvoir subir une nouvelle analyse. C’est pourquoi certains caractères doivent être sérialisés à l’aide du codage d’entité de façon à autoriser les accès répétés aux caractères, tout au long de la phase de normalisation de l’analyseur XML. Il s'avère aussi nécessaire de spécifier le codage d'entité de certains caractères afin d'assurer la bonne formation du document et son analyse. Voici les règles de codage d'entité qui s'appliquent au cours de la sérialisation :  
+ Chaque structure XML sérialisée doit pouvoir subir une nouvelle analyse. C’est pourquoi certains caractères doivent être sérialisés à l’aide du codage d’entité de façon à autoriser les accès répétés aux caractères, tout au long de la phase de normalisation de l’analyseur XML. Il s'avère aussi nécessaire de spécifier le codage d'entité de certains caractères afin d'assurer la bonne formation du document et son analyse. Voici les règles de codage d'entité qui s'appliquent au cours de la sérialisation :  
   
 -   Les caractères &, \< et > sont toujours codés sous la forme &amp;, &lt; et &gt;, respectivement, s’ils se trouvent dans la valeur d’un attribut ou dans le contenu d’un élément.  
   
@@ -87,7 +87,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
   
 -   Pour protéger les nœuds de texte contenant des espaces, l'un des espaces (généralement le dernier) est codé par sa référence de caractère numérique. De cette façon, l'analyse préserve le nœud de texte contenant des espaces, quel que soit le mode de traitement choisi pour les espaces au cours de l'analyse.  
   
- Par exemple:  
+ Par exemple :  
   
 ```sql
 declare @u NVARCHAR(50)  
@@ -96,7 +96,7 @@ set @u = N'<a a="
 select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <a a="  
@@ -118,7 +118,7 @@ set @x = N'<a>This example contains an entitized char: <.</a>'
 select @x.query('/a/text()')  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 This example contains an entitized char: <.  
@@ -130,7 +130,7 @@ This example contains an entitized char: <.
 select @x.value('(/a/text())[1]', 'nvarchar(100)')  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 This example contains an entitized char: <.  

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 52df62d9a69d57b95c3e3f4fa9a6e75599925953
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898021"
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt; (Supérieur à) (expression SSIS)
@@ -38,9 +38,9 @@ expression1 > expression2
   
 ## <a name="arguments"></a>Arguments  
  *expression1, expression2*  
- Toute expression valide. Les deux expressions doivent avoir des types de données implicitement convertibles.  
+ Peut être toute expression valide. Les deux expressions doivent avoir des types de données implicitement convertibles.  
   
-## <a name="result-types"></a>Types de résultats  
+## <a name="result-types"></a>Types des résultats  
  DT_BOOL  
   
 ## <a name="remarks"></a>Notes  
@@ -48,14 +48,14 @@ expression1 > expression2
   
  Le jeu d’expressions, *expression1* et *expression2*, doit suivre une des règles suivantes :  
   
--   **Numérique** : *expression1* et *expression2* doivent toutes deux être un type de données numériques. L'intersection des types de données doit être de type de données numérique, comme le spécifient les règles relatives aux conversions numériques implicites effectuées par l'évaluateur d'expression. L'intersection des deux types de données numériques ne peut pas être NULL. Pour plus d’informations, consultez [Types de données Integration Services dans les expressions](integration-services-data-types-in-expressions.md).  
+-   **Numérique** : *expression1* et *expression2* doivent toutes deux être d’un type de données numérique. L'intersection des types de données doit être de type de données numérique, comme le spécifient les règles relatives aux conversions numériques implicites effectuées par l'évaluateur d'expression. L'intersection des deux types de données numériques ne peut pas être NULL. Pour plus d’informations, consultez [Types de données Integration Services dans les expressions](integration-services-data-types-in-expressions.md).  
   
 -   **Caractère** : *expression1* et *expression2* doivent toutes deux s’évaluer à un type de données DT_STR ou DT_WSTR. Les deux expressions peuvent avoir une valeur de types de données chaîne différents.  
   
     > [!NOTE]  
     >  Les comparaisons de chaîne respectent la casse, les accents, le jeu de caractères Kana et la largeur.  
   
--   **Date, Heure ou Date/Heure** *expression1* et *expression2* doivent correspondre à l’un des types de données suivants : DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET, ou DT_FILETIME.  
+-   **Date, Heure ou Date/Heure** : *expression1* et *expression2* doivent toutes deux s’évaluer à un des types de données suivants : DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET ou DT_FILETIME.  
   
     > [!NOTE]  
     >  Le système ne prend pas en charge les comparaisons entre une expression qui correspond à un type de données heure et une expression qui correspond à un type de données date ou date/heure. Le système génère alors une erreur.  
@@ -81,7 +81,7 @@ expression1 > expression2
  Pour plus d'informations sur les types de données, consultez [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
 ## <a name="expression-examples"></a>Exemples d'expressions  
- L'exemple suivant renvoie la valeur TRUE si la date actuelle est antérieure au 4 juillet 2003. Pour plus d’informations, consultez [GETDATE &#40;expression SSIS&#41;](getdate-ssis-expression.md).  
+ L'exemple suivant renvoie la valeur TRUE si la date actuelle est antérieure au 4 juillet 2003. Pour plus d’informations, consultez [GETDATE &#40;expression SSIS&#41;](getdate-ssis-expression.md).  
   
 ```  
 "7/4/2003" > GETDATE()  
@@ -93,7 +93,7 @@ expression1 > expression2
 ListPrice > 500  
 ```  
   
- L’exemple suivant utilise la variable **LPrice**. Il retourne la valeur TRUE si la valeur de la variable **LPrice** est supérieure à 500. Le type de données de la variable doit être numérique pour permettre l'analyse de l'expression.  
+ Cet exemple utilise la variable **LPrice**. Il retourne la valeur TRUE si la valeur de la variable **LPrice** est supérieure à 500. Le type de données de la variable doit être numérique pour permettre l'analyse de l'expression.  
   
 ```  
 @LPrice > 500  

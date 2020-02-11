@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9ec9ac3eef28c4deae08d577487599575852c132
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893556"
 ---
 # <a name="unary-operators"></a>Opérateurs unaires
@@ -43,6 +43,6 @@ WHERE [Product].[Category].[Bikes]
  En outre, MDX utilise des opérateurs unaires spéciaux pour déterminer l’opération d’agrégation effectuée par la fonction [RollupChildren](../mdx/rollupchildren-mdx.md) . Pour plus d’informations sur ces opérateurs unaires spéciaux, consultez [Ajouter une agrégation personnalisée à une dimension](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Syntaxe &#40;MDX des opérateurs&#41;](../mdx/operators-mdx-syntax.md)  
+ [Opérateurs &#40;syntaxe MDX&#41;](../mdx/operators-mdx-syntax.md)  
   
   

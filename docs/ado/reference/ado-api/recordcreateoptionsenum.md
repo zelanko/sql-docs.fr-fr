@@ -16,25 +16,25 @@ ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 65fe33b73cf77a27fcd69743ffb09cb05e197797
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917344"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
-Spécifie si un existant **enregistrement** doit être ouvert ou un nouveau **enregistrement** créé pour le [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet [Open](../../../ado/reference/ado-api/open-method-ado-record.md) (méthode). Les valeurs peuvent être combinées avec un opérateur AND.  
+Spécifie si un **enregistrement existant doit** être ouvert ou si un nouvel **enregistrement** a été créé pour la méthode d' [ouverture](../../../ado/reference/ado-api/open-method-ado-record.md) de l’objet [Record](../../../ado/reference/ado-api/record-object-ado.md) . Les valeurs peuvent être combinées avec un opérateur AND.  
   
-|Constante|Value|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adCreateCollection**|0x2000|Crée un **enregistrement** au niveau du nœud spécifié par *Source* paramètre, au lieu d’ouvrir un existant **enregistrement**. Si la source pointe vers un nœud existant, une erreur d’exécution se produit, sauf si **adCreateCollection** est combiné avec **adOpenIfExists** ou **adCreateOverwrite**.|  
-|**adCreateNonCollection**|0|Crée un **enregistrement** de type [adSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md).|  
-|**adCreateOverwrite**|0x4000000|Modifie les indicateurs de création **adCreateCollection**, **adCreateNonCollection**, et **adCreateStructDoc**. Quand ou est utilisé avec cette valeur et l’une des valeurs d’indicateur de création, si l’URL source pointe vers un nœud existant ou **enregistrement**, puis existant **enregistrement** est remplacé et un nouveau est créé à la place. Cette valeur ne peut pas être utilisée avec **adOpenIfExists**.|  
-|**adCreateStructDoc**|0x80000000|Crée un **enregistrement** de type [adStructDoc](../../../ado/reference/ado-api/recordtypeenum.md), au lieu d’ouvrir un existant **enregistrement**.|  
-|**adFailIfNotExists**|-1|Valeur par défaut. Génère une erreur d’exécution si *Source* pointe vers un nœud inexistant.|  
-|**adOpenIfExists**|0x2000000|Modifie les indicateurs de création **adCreateCollection**, **adCreateNonCollection**, et **adCreateStructDoc**. Quand ou est utilisé avec cette valeur et l’une des valeurs d’indicateur de création, si l’URL source pointe vers un nœud existant ou **enregistrement** de l’objet, le fournisseur doit ouvrir existant **enregistrement** au lieu de créer un nouveau une. Cette valeur ne peut pas être utilisée avec **adCreateOverwrite**.|  
+|**adCreateCollection**|0x2000|Crée un **enregistrement** au niveau du nœud spécifié par le paramètre *source* , au lieu d’ouvrir un **enregistrement**existant. Si la source pointe vers un nœud existant, une erreur d’exécution se produit, sauf si **adCreateCollection** est combiné avec **adOpenIfExists** ou **adCreateOverwrite**.|  
+|**adCreateNonCollection**|0|Crée un nouvel **enregistrement** de type [adSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md).|  
+|**adCreateOverwrite**|0x4000000|Modifie les indicateurs de création **adCreateCollection**, **adCreateNonCollection**et **adCreateStructDoc**. Lorsque ou est utilisé avec cette valeur et l’une des valeurs d’indicateur de création, si l’URL source pointe vers un nœud ou un **enregistrement**existant, l' **enregistrement** existant est remplacé et un nouvel enregistrement est créé à la place. Cette valeur ne peut pas être utilisée avec **adOpenIfExists**.|  
+|**adCreateStructDoc**|0x80000000|Crée un nouvel **enregistrement** de type [adStructDoc](../../../ado/reference/ado-api/recordtypeenum.md), au lieu d’ouvrir un **enregistrement**existant.|  
+|**adFailIfNotExists**|-1|valeur par défaut. Génère une erreur au moment de l’exécution si la *source* pointe vers un nœud inexistant.|  
+|**adOpenIfExists**|0x2000000|Modifie les indicateurs de création **adCreateCollection**, **adCreateNonCollection**et **adCreateStructDoc**. Lorsque ou est utilisé avec cette valeur et l’une des valeurs d’indicateur de création, si l’URL source pointe vers un objet de nœud ou d' **enregistrement** existant, le fournisseur doit ouvrir l' **enregistrement** existant au lieu d’en créer un nouveau. Cette valeur ne peut pas être utilisée avec **adCreateOverwrite**.|  
   
-## <a name="adowfc-equivalent"></a>Équivalent de ADO/WFC  
+## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Ces constantes n’ont pas d’équivalents ADO/WFC.  
   
 ## <a name="applies-to"></a>S'applique à  

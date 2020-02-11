@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b34cf94a2ab6cfec601d41b02bf32b00f0eb3b41
-ms.sourcegitcommit: 816ff47eeab157c66e0f75f18897a63dc8033502
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71207725"
 ---
 # <a name="sp_query_store_force_plan-transact-sql"></a>sp_query_store_force_plan (Transact-SQL)
@@ -33,9 +33,9 @@ ms.locfileid: "71207725"
 
   Active le forçage d’un plan particulier pour une requête particulière.  
   
- Lorsqu’un plan est forcé pour une requête donnée, chaque fois que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rencontre la requête, il tente de forcer le plan dans l’optimiseur de requête. Si le forçage de plan échoue, un événement étendu est déclenché et l’optimiseur de requête est invité à optimiser de manière normale.  
+ Lorsqu’un plan est forcé pour une requête donnée, chaque fois [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qu’il rencontre une requête, il tente de forcer le plan dans l’optimiseur de requête. Si le forçage de plan échoue, un événement étendu est déclenché et l’optimiseur de requête est invité à optimiser de manière normale.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,11 +44,11 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @query_id = ] query_id` est l’ID de la requête. *query_id* est de type **bigint**, sans valeur par défaut.  
+`[ @query_id = ] query_id`ID de la requête. *query_id* est de type **bigint**, sans valeur par défaut.  
   
-`[ @plan_id = ] plan_id` est l’ID du plan de requête à forcer. *plan_id* est de type **bigint**, sans valeur par défaut.  
+`[ @plan_id = ] plan_id`ID du plan de requête à forcer. *plan_id* est de type **bigint**, sans valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
@@ -75,13 +75,13 @@ EXEC sp_query_store_force_plan 3, 3;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
+ [sp_query_store_remove_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
  [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
- [Query Store Catalog Views &#40;Transact-SQL&#41; [Affichages catalogue du magasin de requêtes &#40;Transact-SQL&#41;]](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
+ [Affichages catalogue du Magasin des requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Analyse des performances à l’aide de l’Magasin des requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
  [sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)       
- [Bonnes pratiques relatives au magasin de requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md#CheckForced)    
+ [Bonnes pratiques relatives au Magasin des requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md#CheckForced)    
   
   

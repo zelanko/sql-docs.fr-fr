@@ -1,5 +1,5 @@
 ---
-title: Exemple (VC ++) de modèle événements ADO | Microsoft Docs
+title: Exemple de modèle d’événements ADO (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,38 +15,38 @@ ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1af45d9ac4674af98097083e2da89a217f17a58f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921013"
 ---
 # <a name="ado-events-model-example-vc"></a>Exemple de modèle d’événements ADO (VC ++)
-La section Visual C++ de [instanciation des événements ADO par langage](../../../ado/guide/data/ado-event-instantiation-by-language.md) fournit une description générale de guide pratique pour instancier le modèle d’événement ADO. Voici un exemple spécifique de l’instanciation du modèle d’événement dans l’environnement créé par le **#import** directive.  
+La section Visual C++ de l' [instanciation d’événements ADO par langage](../../../ado/guide/data/ado-event-instantiation-by-language.md) fournit une description générale de l’instanciation du modèle d’événement ADO. Voici un exemple spécifique d’instanciation du modèle d’événement dans l’environnement créé par la directive **#import** .  
   
- La description générale utilise **adoint.h** en tant que référence pour les signatures de méthode. Toutefois, certains détails de la description générale de modifier légèrement suite à l’utilisation du **#import** directive :  
+ La description générale utilise **adoint. h** comme référence pour les signatures de méthode. Toutefois, certains détails de la description générale changent légèrement à la suite de l’utilisation de la directive **#import** :  
   
--   Le **#import** directive résout **typedef**du, types de données de signature de méthode et les modificateurs pour leurs formes fondamentales.  
+-   La directive **#import** résout les types de données de la signature de la méthode, et des modificateurs de **typedef**, en leurs formes fondamentales.  
   
--   Les méthodes virtuelles pures qui doivent être écrasées portent tous le préfixe "**raw_** ".  
+-   Les méthodes virtuelles pures qui doivent être remplacées sont toutes précédées de «**raw_**».  
   
- Partie du code reflète simplement le style de codage.  
+ Une partie du code reflète simplement le style de codage.  
   
--   Le pointeur vers **IUnknown** utilisé par le **Advise** méthode est obtenue explicitement par un appel à **QueryInterface**.  
+-   Le pointeur vers **IUnknown** utilisé par la méthode **Advise** est obtenu explicitement à l’aide d’un appel à **QueryInterface**.  
   
 -   Vous n’avez pas besoin de coder explicitement un destructeur dans les définitions de classe.  
   
--   Vous pouvez souhaiter des implémentations plus robustes de QueryInterface, AddRef et Release de code.  
+-   Vous souhaiterez peut-être coder des implémentations plus robustes de QueryInterface, AddRef et Release.  
   
--   Le **__uuidof()** directive est largement utilisée pour obtenir l’ID de l’interface.  
+-   La directive **__uuidof ()** est largement utilisée pour obtenir des ID d’interface.  
   
  Enfin, l’exemple contient du code de travail.  
   
--   L’exemple est écrit comme une application console.  
+-   L’exemple est écrit sous la forme d’une application console.  
   
--   Vous devez insérer votre propre code sous le commentaire «`// Do some work`».  
+-   Vous devez insérer votre propre code sous le commentaire, «`// Do some work`».  
   
--   Tous les événements gestionnaires par défaut pour ne rien faire et annulation davantage de notifications. Vous devez insérer le code approprié pour votre application et autoriser les notifications si nécessaire.  
+-   Par défaut, tous les gestionnaires d’événements ne font rien et annulent d’autres notifications. Vous devez insérer le code approprié pour votre application et autoriser les notifications si nécessaire.  
   
 ```  
 // ADO_Events_Model_Example.cpp  

@@ -1,5 +1,5 @@
 ---
-title: La mise en forme | Microsoft Docs
+title: Mise en forme | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,16 +14,16 @@ ms.assetid: b1c965b7-3dad-4de6-9e0e-502ca8785be3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 213ed5f05133733b8336f184599ca8ef3e4028a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924350"
 ---
 # <a name="reshaping"></a>Remise en forme
-Un **Recordset** créé par une clause d’une forme commande peut-être être affectée un *alias* nom (généralement avec le mot clé AS). L’alias d’une forme **Recordset** peut être référencée dans une commande totalement différente. Autrement dit, vous pouvez réutiliser ou *remodeler*, un préalablement mis en forme **Recordset** dans une nouvelle commande de forme. Pour prendre en charge cette fonctionnalité, ADO fournit une propriété, [Reshape Name](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md).  
+Un **jeu d’enregistrements** créé par une clause d’une commande SHAPE peut se voir attribuer un nom d' *alias* (généralement avec le mot clé As). L’alias d’un **Recordset** mis en forme peut être référencé dans une commande complètement différente. Autrement dit, vous pouvez réutiliser, ou *reformer*, un **jeu d’enregistrements** précédemment mis en forme dans une nouvelle commande de forme. Pour prendre en charge cette fonctionnalité, ADO fournit une propriété, [Remodel Name](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md).  
   
- La mise en forme a deux fonctions principales. La première consiste à associer un existant **Recordset** avec un nouveau parent **Recordset**.  
+ La remodelage a deux fonctions principales. La première consiste à associer un **jeu d’enregistrements** existant à un nouveau **jeu d’enregistrements**parent.  
   
 ## <a name="example"></a>Exemple  
   
@@ -36,10 +36,10 @@ rs2.Open "SHAPE {select * from Employees} " & _
          "APPEND (chapOrders RELATE EmployeeID to EmployeeID)", cn  
 ```  
   
- La deuxième fonction consiste à activer l’accès à chapitre à enfant existant **Recordset** objets, à l’aide de la syntaxe « forme \<recordset remodeler nom > ».  
+ La deuxième fonction consiste à activer l’accès non chapitre aux objets **Recordset** enfants existants, à l’aide de la syntaxe \<« Shape Recordset Reshape Name> ».  
   
 > [!NOTE]
->  Impossible d’ajouter des colonnes à une **Recordset**, remodeler un paramétrable **Recordset** ou **Recordset** des objets d’une clause COMPUTE intermédiaire, ou effectuer agréger des opérations sur n’importe quel **Recordset** descendants à partir de la **Recordset** en cours reformé. Le **Recordset** en cours reformé et la nouvelle forme de commande doivent tous deux utiliser le même [connexion](../../../ado/reference/ado-api/connection-object-ado.md).  
+>  Vous ne pouvez pas ajouter de colonnes à un **jeu d’enregistrements**existant, reformer un **Recordset** paramétré ou des objets **Recordset** dans une clause COMPUTE intermédiaire, ou effectuer des opérations d’agrégation sur tout descendant du **Recordset** à partir du **Recordset** en cours de remodelage. **Recordset** en cours de mise en forme et la nouvelle commande Shape doit utiliser la même [connexion](../../../ado/reference/ado-api/connection-object-ado.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de mise en forme des données](../../../ado/guide/data/data-shaping-example.md)

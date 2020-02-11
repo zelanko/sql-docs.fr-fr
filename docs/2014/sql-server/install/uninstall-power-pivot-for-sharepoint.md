@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 51b6788c0bc41796f91f8dee74812ff79062cda3
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798133"
 ---
 # <a name="uninstall-powerpivot-for-sharepoint"></a>Désinstaller PowerPivot pour SharePoint
@@ -32,13 +32,13 @@ ms.locfileid: "72798133"
   
 -   [Étape 3 : Exécuter le programme d'installation de SQL Server pour supprimer des programmes sur l'ordinateur local](#bkmk_uninstall)  
   
--   [Étape 4 : désinstaller le complément PowerPivot pour SharePoint](#bkmk_addin)  
+-   [Étape 4 : Installer ou désinstaller le complément PowerPivot pour SharePoint](#bkmk_addin)  
   
 -   [Étape 5 : Vérifier la désinstallation](#verify)  
   
 -   [Étape 6 : Liste de vérification post-désinstallation](#bkmk_post)  
   
-##  <a name="prereq"></a> Conditions préalables requises  
+##  <a name="prereq"></a> Conditions préalables  
   
 -   Vous devez être administrateur de batterie de serveurs SharePoint ou administrateur d'application de service pour désinstaller des fonctionnalités et des solutions de la batterie.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "72798133"
   
 1.  Supprimez tous les classeurs PowerPivot, documents et bibliothèques associés à une installation PowerPivot pour SharePoint. Ni les bibliothèques ni les documents ne fonctionneront une fois le logiciel désinstallé.  
   
-    -   [Supprimer une Galerie PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery)  
+    -   [Supprimer une bibliothèque PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery)  
   
     -   [Supprimer une bibliothèque de flux de données PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library)  
   
@@ -112,7 +112,7 @@ Get-Service | Where {$_.displayname -like "*sharepoint* administration*"}
   
  Pour rechercher et supprimer un travail de déploiement ou de rétraction figurant déjà dans la file d'attente, procédez comme suit :  
   
-1.  Pour toutes les autres erreurs, vérifiez les journaux ULS. Pour plus d’informations, consultez [configurer et afficher les fichiers journaux SharePoint et &#40;la&#41;journalisation des diagnostics PowerPivot pour SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging).  
+1.  Pour toutes les autres erreurs, vérifiez les journaux ULS. Pour plus d’informations, consultez [configurer et afficher les fichiers journaux SharePoint et la journalisation des diagnostics &#40;PowerPivot pour SharePoint&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging).  
   
 2.  Démarrez SharePoint Management Shell en tant qu'administrateur, puis exécutez la commande suivante pour afficher les travaux dans la file d'attente :  
   
@@ -173,7 +173,7 @@ Get-Service | Where {$_.displayname -like "*sharepoint* administration*"}
   
 2.  Supprimez tous les classeurs PowerPivot, documents et bibliothèques si vous ne l'avez pas déjà fait.  
   
-    -   [Supprimer une Galerie PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery)  
+    -   [Supprimer une bibliothèque PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery)  
   
     -   [Supprimer une bibliothèque de flux de données PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library)  
   
@@ -188,5 +188,5 @@ Get-Service | Where {$_.displayname -like "*sharepoint* administration*"}
      Ne désinstallez pas le fournisseur OLE DB Analysis Services. SharePoint installe le fournisseur OLE DB comme composant requis pour les classeurs Excel qui se connectent aux bases de données Analysis Services. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installe une version plus récente, mais cette version offre une compatibilité descendante. Vous devez donc la conserver sur le système pour éviter les problèmes de connexion de données ultérieurement.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Installer ou désinstaller le complément PowerPivot pour SharePoint &#40;SharePoint 2013&#41; ](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)   
- [Outils de configuration de PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  
+ [Installer ou désinstaller le complément PowerPivot pour SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)   
+ [PowerPivot Configuration Tools](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  

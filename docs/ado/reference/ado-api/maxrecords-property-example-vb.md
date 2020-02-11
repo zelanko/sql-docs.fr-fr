@@ -1,5 +1,5 @@
 ---
-title: Propriété MaxRecords, exemple (VB) | Microsoft Docs
+title: MaxRecords, exemple de propriété (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 630a3be4-7a87-41cf-997e-8bb50d89db1e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3caa09a03a7aabd87eddedff335abc3bddd1b318
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918178"
 ---
 # <a name="maxrecords-property-example-vb"></a>MaxRecords, exemple de propriété (VB)
-Cet exemple utilise le [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) propriété pour ouvrir un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) contenant les 10 plus chers dans le ***titres*** table.  
+Cet exemple utilise la propriété [maxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) pour ouvrir un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) contenant les 10 titres les plus chers dans la table ***titles*** .  
   
 ```  
 'BeginMaxRecordsVB  

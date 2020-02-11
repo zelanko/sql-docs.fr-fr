@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 015a01f849bb00dd0db4c2f060447d63a2f96bc6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914071"
 ---
-# <a name="mssqlserver41030"></a>MSSQLSERVER_41030
+# <a name="mssqlserver_41030"></a>MSSQLSERVER_41030
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|ID d'événement|41030|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|41030|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|OPEN_CLUSTER_SUB_KEY|  
 |Texte du message|Échec de l'ouverture de la sous-clé de Registre de clustering de basculement Windows Server « %.*ls » (code d'erreur %d).  La clé parente est la clé racine de cluster.  Le service WSFC n'est peut-être pas en cours d'exécution ou n'est pas disponible dans son état actuel, ou les arguments spécifiés ne sont pas valides. Si le groupe de disponibilité correspondant a été supprimé, cette erreur est attendue. Pour plus d'informations sur ce code d'erreur, consultez « codes d'erreur système » dans la documentation relative au développement Windows.|  

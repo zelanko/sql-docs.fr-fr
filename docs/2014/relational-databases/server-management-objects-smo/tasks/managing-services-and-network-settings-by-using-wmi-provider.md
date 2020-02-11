@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9ba2f9688adb5579616693470be151d757818117
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796631"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Gestion des services et des paramètres réseau à l'aide du fournisseur WMI
@@ -30,7 +30,7 @@ ms.locfileid: "72796631"
 ## <a name="example"></a>Exemple  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
- Pour les programmes qui utilisent le fournisseur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] WMI, vous devez inclure l’instruction `Imports` pour qualifier l’espace de noms WMI. Insérez l'instruction après les autres instructions `Imports`, avant toute autre déclaration dans l'application, par exemple :  
+ Pour les programmes qui utilisent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le fournisseur WMI, vous devez inclure `Imports` l’instruction pour qualifier l’espace de noms WMI. Insérez l'instruction après les autres instructions `Imports`, avant toute autre déclaration dans l'application, par exemple :  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

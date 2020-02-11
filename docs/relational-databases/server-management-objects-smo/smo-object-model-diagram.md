@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 004746516545278470515753361b31a1ac38ef47
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70911278"
 ---
 # <a name="smo-object-model-diagram"></a>Diagramme du modèle objet SMO
@@ -25,12 +25,12 @@ ms.locfileid: "70911278"
 
   Ce diagramme montre la hiérarchie des objets SMO et les relations entre les types d'objets. L'objet <xref:Microsoft.SqlServer.Management.Smo.Server> est l'objet de niveau supérieur.  
   
- ![Diagramme qui montre les relations hiérarchiques](../../relational-databases/server-management-objects-smo/media/object-diagram.gif "Diagramme qui montre les relations hiérarchiques")  
+ ![Diagramme affichant les relations hiérarchiques](../../relational-databases/server-management-objects-smo/media/object-diagram.gif "Diagramme affichant les relations hiérarchiques")  
   
- ![Modèle objet, arborescence présentant la hiérarchie](../../relational-databases/server-management-objects-smo/media/object-diagram-02.gif "Modèle objet, arborescence présentant la hiérarchie")  
+ ![Modèle objet, arborescence affichant la hiérarchie](../../relational-databases/server-management-objects-smo/media/object-diagram-02.gif "Modèle objet, arborescence affichant la hiérarchie")  
   
- ![Modèle objet, arborescence présentant la hiérarchie](../../relational-databases/server-management-objects-smo/media/object-diagram-03.gif "Modèle objet, arborescence présentant la hiérarchie")  
+ ![Modèle objet, arborescence affichant la hiérarchie](../../relational-databases/server-management-objects-smo/media/object-diagram-03.gif "Modèle objet, arborescence affichant la hiérarchie")  
   
- ![Modèle objet, arborescence présentant la hiérarchie](../../relational-databases/server-management-objects-smo/media/object-diagram-04.gif "Modèle objet, arborescence présentant la hiérarchie")  
+ ![Modèle objet, arborescence affichant la hiérarchie](../../relational-databases/server-management-objects-smo/media/object-diagram-04.gif "Modèle objet, arborescence affichant la hiérarchie")  
   
   

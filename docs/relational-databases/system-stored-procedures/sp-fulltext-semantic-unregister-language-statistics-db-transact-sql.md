@@ -18,10 +18,10 @@ ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d6952d245dfc9083c7cfa6e6d36ad991ffd24654
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72909141"
 ---
 # <a name="sp_fulltext_semantic_unregister_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "72909141"
   
  Cette instruction ne détache pas la base de données ni ne supprime le fichier de base de données physique du système de fichiers. Après avoir annulé l'inscription de la base de données, vous pouvez la détacher et supprimer le fichier de base de données physique.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -61,11 +61,11 @@ GO
  Pour plus d’informations, consultez [Installer et configurer la recherche sémantique](../../relational-databases/search/install-and-configure-semantic-search.md).  
   
 ## <a name="metadata"></a>Métadonnées  
- Pour plus d’informations sur la base de données Base de langages statistiques pour la recherche sémantique installée sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], interrogez la vue de catalogue [sys. fulltext_semantic_language_statistics_database &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
+ Pour plus d’informations sur la base de données Base de langages statistiques pour la recherche sémantique installée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sur une instance de, interrogez l’affichage catalogue [sys. Fulltext_semantic_language_statistics_database &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CONTROL SERVER.  
   
 ## <a name="examples"></a>Exemples  

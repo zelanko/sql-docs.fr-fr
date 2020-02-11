@@ -25,10 +25,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3335c5a7fcb46b901777de0404b5206aa6a876f6
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175976"
 ---
 # <a name="export-a-data-tier-application"></a>Exporter une application de la couche Données
@@ -49,11 +49,11 @@ ms.locfileid: "70175976"
   
  Vous ne pouvez pas exporter une base de données contenant des objets qui ne sont pas pris en charge dans une DAC ou contenant des utilisateurs à relation contenant-contenu. Pour plus d'informations sur les types d'objets pris en charge dans une DAC, consultez [DAC Support For SQL Server Objects and Versions](dac-support-for-sql-server-objects-and-versions.md).  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorisations  
  L’exportation d’une DAC requiert au minimum des autorisations ALTER ANY LOGIN et VIEW DEFINITION de la portée de la base de données, ainsi que des autorisations SELECT sur **sys.sql_expression_dependencies**. L'exportation d'une DAC peut être réalisée par les membres du rôle serveur fixe securityadmin également membres du rôle de base de données fixe database_owner dans la base de données à partir de laquelle est extraite la DAC. Les membres du rôle serveur fixe sysadmin ou le compte d’administrateur système intégré de SQL Server nommé **sa** peuvent également exporter une DAC.  
   
-##  <a name="UsingDeployDACWizard"></a> Utilisation de l'Assistant Exporter l'application de la couche Données  
- **Pour exporter une DAC à l'aide d'un Assistant**  
+##  <a name="UsingDeployDACWizard"></a>Utilisation de l’Assistant Exporter l’application de la couche données  
+ **Pour exporter une DAC à l’aide d’un Assistant**  
   
 1.  Connectez-vous à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sur site ou dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -63,11 +63,11 @@ ms.locfileid: "70175976"
   
 4.  Cliquez sur **Tâches**, puis sélectionnez **Exporter une application de la couche Données...**  
   
-5.  Renseignez les boîtes de dialogue de l'Assistant :  
+5.  Renseignez les boîtes de dialogue de l'Assistant :  
   
     -   [Page Introduction](#Introduction)  
   
-    -   [Page Paramètres d'exportation](#Export_settings)  
+    -   [Page Paramètres d’exportation](#Export_settings)  
   
     -   [Page Validation](#Validation)  
   
@@ -77,44 +77,44 @@ ms.locfileid: "70175976"
   
     -   [Page Résultats](#Results)  
   
-##  <a name="Introduction"></a> Page Introduction  
+##  <a name="Introduction"></a>Page Introduction  
  Cette page décrit les étapes de l'Assistant Exporter l'application de la couche Données.  
   
  **Options**  
   
- **Ne plus afficher cette page** - Activez la case à cocher pour ne plus afficher la page Introduction à l'avenir.  
+ **Ne plus afficher cette page.** - Activez la case à cocher pour ne plus afficher la page Introduction à l'avenir.  
   
- **Suivant** - Passe à la page **Sélectionner le package DAC** .  
+ **Suivant** -passe à la page **Sélectionner le package DAC** .  
   
- **Annuler** - Annule l’opération et ferme l’Assistant.  
+ **Annuler** -annule l’opération et ferme l’Assistant.  
   
-##  <a name="Export_settings"></a> Page Paramètres d'exportation  
+##  <a name="Export_settings"></a>Page Paramètres d’exportation  
  Utilisez cette page pour indiquer l'emplacement où vous souhaitez créer le fichier BACPAC.  
   
--   **Enregistrer sur le disque local** - Crée un fichier de BACPAC dans un répertoire sur l’ordinateur local. Cliquez sur **Parcourir...** pour explorer l’ordinateur local, ou spécifiez le chemin d’accès dans l’espace fourni. Le chemin d'accès doit inclure un nom de fichier et l'extension .bacpac.  
+-   **Enregistrer sur le disque local** -crée un fichier baBACPAC dans un répertoire sur l’ordinateur local. Cliquez sur **Parcourir...** pour explorer l’ordinateur local, ou spécifiez le chemin d’accès dans l’espace fourni. Le chemin d'accès doit inclure un nom de fichier et l'extension .bacpac.  
   
--   **Enregistrer dans Azure** - Crée un fichier BACPAC dans un conteneur Azure. Vous devez vous connecter à un conteneur Azure afin de valider cette option. Notez que cette option requiert également que vous spécifiiez un répertoire local pour le fichier temporaire. Notez que le fichier temporaire est créé à l'emplacement spécifié et qu'il y reste une fois l'opération terminée.  
+-   **Enregistrer dans Azure** -crée un fichier baBACPAC dans un conteneur Azure. Vous devez vous connecter à un conteneur Azure afin de valider cette option. Notez que cette option requiert également que vous spécifiiez un répertoire local pour le fichier temporaire. Notez que le fichier temporaire est créé à l'emplacement spécifié et qu'il y reste une fois l'opération terminée.  
   
  Pour spécifier un sous-ensemble de tables à exporter, utilisez l'option **Avancé** .  
   
-##  <a name="Validation"></a> Page Validation  
+##  <a name="Validation"></a>Page validation  
  Utilisez la page de validation pour passer en revue tous les problèmes qui empêchent l'opération. Pour continuer, résolvez les problèmes bloquants, puis cliquez sur **Réexécuter la validation** pour vous assurer que la validation est réussie.  
   
  Pour continuer, cliquez sur **Suivant**.  
   
-##  <a name="Summary"></a> Page Résumé  
+##  <a name="Summary"></a>Page Résumé  
  Utilisez cette page pour passer en revue la source spécifiée et les paramètres cibles de l'opération. Pour terminer l'exportation à l'aide des paramètres spécifiés, cliquez sur **Terminer**. Pour annuler l'exportation et quitter l'Assistant, cliquez sur **Annuler**.  
   
-##  <a name="Progress"></a> Page Progression  
+##  <a name="Progress"></a>Page progression  
  Cette page affiche une barre de progression indiquant l'état de l'opération. Pour afficher l'état détaillé, cliquez sur l'option **Afficher les détails** .  
   
-##  <a name="Results"></a> Page Résultats  
+##  <a name="Results"></a>Page résultats  
  Cette page signale la réussite ou l'échec de l'exportation et affiche les résultats de chaque action. Toute action pour laquelle une erreur s'est produite aura un lien dans la colonne **Résultat** . Cliquez sur le lien pour consulter le rapport d'erreur de cette action.  
   
- Cliquez sur **Terminer** pour fermer l'Assistant.  
+ Cliquez sur **Terminer** pour fermer l’Assistant.  
   
-##  <a name="NetApp"></a> Utilisation d'une application .Net Framework  
- **Pour exporter une DAC à l’aide de la méthode Export() dans une application .Net Framework.**  
+##  <a name="NetApp"></a>Utilisation d’une application .NET Framework  
+ **Pour exporter une DAC à l’aide de la méthode Export () dans une application .NET Framework.**  
   
  Pour afficher un exemple de code, téléchargez l'exemple d'application DAC sur [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)  
   
@@ -125,7 +125,7 @@ ms.locfileid: "70175976"
 3.  Utilisez la méthode `Export` de type `Microsoft.SqlServer.Management.Dac.DacStore` pour exporter la DAC. Spécifiez le nom de la DAC à exporter, ainsi que le chemin d'accès au dossier où le fichier d'exportation doit être placé.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Applications de la couche Données](data-tier-applications.md)   
+ [Applications de la couche données](data-tier-applications.md)   
  [Extraire une DAC d'une base de données](extract-a-dac-from-a-database.md)  
   
   

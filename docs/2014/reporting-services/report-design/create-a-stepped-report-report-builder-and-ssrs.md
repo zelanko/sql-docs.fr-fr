@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: de074a61bea0941b52240fe4d7b66eadc0cacaeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106132"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Créer un rapport en escalier (Générateur de rapports et SSRS)
   Un rapport par palier affiche des lignes de détails ou des groupes enfants mis en retrait sous un groupe parent dans la même colonne, comme le montre l'exemple ci-dessous :  
   
- ![Rendu de rapport en escalier](../media/steppedreportrendered.gif "Rendu de rapport en escalier")  
+ ![Rapport par palier rendu](../media/steppedreportrendered.gif "Rapport par palier rendu")  
   
  Les rapports traditionnels sous forme de table placent le groupe parent dans une colonne adjacente dans le rapport. La nouvelle région de données de tableau matriciel vous permet d’ajouter un groupe et des lignes de détails ou des groupes enfants à la même colonne. Pour différencier les lignes de groupe des lignes de détails ou de groupes enfants, vous pouvez appliquer une mise en forme telle qu'une couleur de police ou vous pouvez mettre en retrait les lignes de détails.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "66106132"
   
      L'illustration suivante montre l'apparence de la région de données rendue lorsque vous affichez le rapport.  
   
-     ![Rendu de rapport groupé](../media/tablereportrendered.gif "Rendu de rapport groupé")  
+     ![Rapport groupé rendu](../media/tablereportrendered.gif "Rapport groupé rendu")  
   
 3.  Pour un rapport par palier, vous n'avez pas besoin de la première colonne qui affiche l'instance de groupe. À la place, copiez la valeur de la cellule d'en-tête de groupe, supprimez la colonne de groupe et collez la valeur dans la première zone de texte de la ligne d'en-tête de groupe. Pour supprimer la colonne de groupe, cliquez avec le bouton droit sur la colonne de groupe ou sur la cellule, puis cliquez sur **Supprimer les colonnes**. L'illustration suivante montre l'apparence de la région de données sur l'aire de conception.  
   
-     ![Région de données avec ligne d’en-tête de groupe](../media/tabledataregiongroupheader.gif "Région de données avec ligne d’en-tête de groupe")  
+     ![Région de données avec ligne d'en-tête de groupe](../media/tabledataregiongroupheader.gif "Région de données avec ligne d'en-tête de groupe")  
   
 4.  Pour mettre en retrait les lignes de détails sous la ligne d'en-tête de groupe dans la même colonne, modifiez la marge intérieure de la cellule de données de détail.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66106132"
   
     2.  Dans le volet Propriétés, sous **Alignement**, développez les propriétés pour **Marge intérieure**.  
   
-    3.  Pour **gauche**, tapez une nouvelle valeur de marge intérieure, tel que `.5in`. La marge intérieure met en retrait le texte de la cellule selon la valeur que vous avez spécifiée. La valeur par défaut de la marge intérieure est égale à 2 points. Les valeurs valides pour les propriétés Padding sont zéro ou une valeur positive, suivis d'un indicateur de taille.  
+    3.  Pour **gauche**, tapez une nouvelle valeur de marge intérieure, telle `.5in`que. La marge intérieure met en retrait le texte de la cellule selon la valeur que vous avez spécifiée. La valeur par défaut de la marge intérieure est égale à 2 points. Les valeurs valides pour les propriétés Padding sont zéro ou une valeur positive, suivis d'un indicateur de taille.  
   
          Les indicateurs de taille sont :  
   
@@ -80,9 +80,9 @@ ms.locfileid: "66106132"
   
      ![Région de données pour un rapport par palier](../media/steppedreportdataregion.gif "Région de données pour un rapport par palier")  
   
-     **Région de données pour une mise en page de rapport en escalier**  
+     **Région de données pour la mise en page de rapport en escalier**  
   
-     Sous l’onglet **Accueil** , cliquez sur **Exécuter**. Le rapport affiche le groupe avec des niveaux en retrait pour les valeurs des groupes enfants.  
+     Dans l’onglet dossier de **démarrage** , cliquez sur **exécuter**. Le rapport affiche le groupe avec des niveaux en retrait pour les valeurs des groupes enfants.  
   
 ### <a name="to-create-a-stepped-report-with-multiple-groups"></a>Pour créer un rapport par palier avec plusieurs groupes  
   

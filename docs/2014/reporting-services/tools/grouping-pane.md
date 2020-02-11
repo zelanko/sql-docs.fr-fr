@@ -16,25 +16,25 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 476815dc8378c1e8ca790091021c1bd3ec95ba9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100272"
 ---
 # <a name="grouping-pane"></a>Volet de regroupement
-  Le volet regroupement affiche les groupes de lignes et les groupes de colonnes de la région de données de tableau matriciel actuellement sélectionnée. Le volet de regroupement n'est pas disponible pour les régions de données Graphique et Jauge. Le volet de regroupement se compose d’un volet Groupes de lignes et d’un volet Groupes de colonnes. Le volet de regroupement comporte deux modes : par défaut et avancé. Le mode par défaut affiche une vue hiérarchique des membres dynamiques pour les groupes de lignes et de colonnes. Le mode avancé affiche à la fois les membres statiques et dynamiques pour les groupes de lignes et de colonnes. Un groupe est un jeu de données nommé extrait d'un dataset de rapport qui est affiché sur une région de données. Les groupes sont organisés en hiérarchies qui incluent des membres statiques et dynamiques. Pour plus d’informations, consultez [Fonctionnement des groupes&#40;Générateur de rapports et SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md).  
+  Le volet de regroupement affiche les groupes de lignes et les groupes de colonnes de la région de données de tableau matriciel actuellement sélectionnée. Le volet de regroupement n'est pas disponible pour les régions de données Graphique et Jauge. Le volet de regroupement se compose d’un volet Groupes de lignes et d’un volet Groupes de colonnes. Le volet de regroupement comporte deux modes : par défaut et avancé. Le mode par défaut affiche une vue hiérarchique des membres dynamiques pour les groupes de lignes et de colonnes. Le mode avancé affiche à la fois les membres statiques et dynamiques pour les groupes de lignes et de colonnes. Un groupe est un jeu de données nommé extrait d'un dataset de rapport qui est affiché sur une région de données. Les groupes sont organisés en hiérarchies qui incluent des membres statiques et dynamiques. Pour plus d’informations, consultez [Fonctionnement des groupes&#40;Générateur de rapports et SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  Si vous ne voyez pas le volet de regroupement, sur le **rapport** menu, cliquez sur **regroupement**.  
+>  Si vous ne voyez pas le volet de regroupement, dans le menu **rapport** , cliquez sur **regroupement**.  
   
  Les cellules situées dans les zones de groupes de lignes et de colonnes peuvent être des membres statiques ou dynamiques d'un groupe. Les membres statiques ne sont utilisés qu'à une seule reprise par groupe et ne contiennent généralement que des étiquettes ou des totaux. Les membres dynamiques ne sont utilisés qu'à une seule reprise par instance de groupe et contiennent généralement les valeurs uniques de l'expression de groupe. Quand vous sélectionnez des cellules de tableau matriciel dans la zone de groupes de lignes ou de groupes de colonnes, le membre du groupe correspondant est sélectionné dans le volet Groupes de lignes ou Groupes de colonnes. Inversement, si vous sélectionnez des groupes dans le volet de regroupement, la cellule correspondante associée au membre du groupe est sélectionnée sur l'aire de conception. Pour plus d’informations sur les zones de groupes de lignes et de colonnes de tableau matriciel, consultez [Zones de région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  Le volet de regroupement prend en charge les modes suivants :  
   
--   **Par défaut** : utilisez le mode par défaut pour ajouter, modifier ou supprimer des groupes. Vous pouvez ajouter des groupes parents, enfants et des groupes de détails en faisant glisser des champs du volet des données de rapport et en les insérant dans la hiérarchie des groupes. Pour ajouter un groupe adjacent, vous devez utiliser le raccourci **Ajouter un groupe** . Pour plus d’informations, consultez [Ajouter ou supprimer un groupe dans une région de données &#40;Générateur de rapports et SSRS&#41;](../report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
+-   **Valeurs.** : utilisez le mode par défaut pour ajouter, modifier ou supprimer des groupes. Vous pouvez ajouter des groupes parents, enfants et des groupes de détails en faisant glisser des champs du volet des données de rapport et en les insérant dans la hiérarchie des groupes. Pour ajouter un groupe adjacent, vous devez utiliser le raccourci **Ajouter un groupe** . Pour plus d’informations, consultez [Ajouter ou supprimer un groupe dans une région de données &#40;Générateur de rapports et SSRS&#41;](../report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
--   **Avancé**: Utilisez le **Mode avancé** pour consulter tous les membres des groupes de lignes et colonnes, et pour définir des propriétés sur les membres statiques. Quand vous créez des groupes ou ajoutez des totaux, les propriétés qui contrôlent la manière dont la région de données de tableau matriciel génère les lignes et les colonnes sur chaque page de rapport sont définies automatiquement. Pour modifier ces propriétés manuellement, vous devez les définir sur le membre du tableau matriciel. Pour plus d’informations, consultez [Contrôle de l’affichage de la région de données de tableau matriciel sur une page de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
+-   **Avancé**. utilisez le **Mode avancé** pour afficher tous les membres des groupes de lignes et de colonnes et pour définir des propriétés sur les membres statiques. Quand vous créez des groupes ou ajoutez des totaux, les propriétés qui contrôlent la manière dont la région de données de tableau matriciel génère les lignes et les colonnes sur chaque page de rapport sont définies automatiquement. Pour modifier ces propriétés manuellement, vous devez les définir sur le membre du tableau matriciel. Pour plus d’informations, consultez [Contrôle de l’affichage de la région de données de tableau matriciel sur une page de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
 ## <a name="default-mode"></a>Mode par défaut  
  Dans le mode par défaut, les volets Groupes de lignes et Groupes de colonnes affichent une vue hiérarchique pour tous les groupes parents, enfants et adjacents. Un groupe enfant apparaît en retrait sous son groupe parent. Un groupe adjacent apparaît au même niveau de retrait que ses groupes frères. L'illustration suivante montre une région de données de tableau matriciel avec des groupes de lignes imbriqués, et des groupes de colonnes imbriqués et adjacents.  
@@ -57,17 +57,17 @@ ms.locfileid: "66100272"
   
  Dans la plupart des cas, les propriétés qui contrôlent l'affichage des lignes et des colonnes de groupe statiques et dynamiques sont définies automatiquement lorsque vous créez un groupe ou ajoutez des totaux. Pour modifier les valeurs par défaut, vous devez sélectionner le membre de groupe dans le volet Groupes de lignes ou Groupes de colonnes, et modifier les valeurs dans la fenêtre Propriétés. Les propriétés suivantes sont disponibles :  
   
--   **FixedData**: propriété booléenne. Pour les en-têtes de ligne et de colonne externes. Fige la zone de groupe de lignes en cas de défilement vertical ou la zone de groupe de colonnes en cas de défilement horizontal dans un convertisseur tel que HTML.  
+-   **FixedData**. Propriété booléenne. Pour les en-têtes de ligne et de colonne externes. Fige la zone de groupe de lignes en cas de défilement vertical ou la zone de groupe de colonnes en cas de défilement horizontal dans un convertisseur tel que HTML.  
   
--   **HideIfNoRows**: Propriété booléenne. Pour les membres statiques uniquement. Si cette propriété est définie, Hidden et ToggleItem sont ignorés. Masque ce membre si la région de données de tableau matriciel ne contient aucune ligne de données.  
+-   **HideIfNoRows**. Propriété booléenne. Pour les membres statiques uniquement. Si cette propriété est définie, Hidden et ToggleItem sont ignorés. Masque ce membre si la région de données de tableau matriciel ne contient aucune ligne de données.  
   
--   **KeepTogether**:  
+-   **SectionInsécable**.  
   
--   `KeepWithGroup` . Propriété booléenne. Pour les membres de lignes statiques uniquement. Conserve, dans la mesure du possible, cette ligne avec le membre dynamique frère précédent ou suivant, s'il n'est pas masqué.  
+-   `KeepWithGroup`. Propriété booléenne. Pour les membres de lignes statiques uniquement. Conserve, dans la mesure du possible, cette ligne avec le membre dynamique frère précédent ou suivant, s'il n'est pas masqué.  
   
 -   **RepeatOnNewPage**. Propriété booléenne. Pour les membres de lignes statiques uniquement et quand KeepWithGroup n’a pas la valeur None. Répète, dans la mesure du possible, cette ligne statique sur chaque page qui comporte au moins une instance du membre dynamique spécifiée par KeepWithGroup.  
   
--   `Hidden` . Propriété booléenne. Indique si la ligne ou la colonne doit être masquée initialement.  
+-   `Hidden`. Propriété booléenne. Indique si la ligne ou la colonne doit être masquée initialement.  
   
 -   **ToggleItem.** Chaîne. Nom de la zone de texte à laquelle ajouter l'image bascule. Cette zone de texte doit être située dans la même étendue de groupe ou dans une étendue contenante.  
   
@@ -75,9 +75,9 @@ ms.locfileid: "66100272"
   
  Chaque membre statique ne comporte pas un en-tête correspondant à une cellule sur l'aire de conception. Dans le volet de regroupement, la convention suivante indique si un membre statique n'a aucun en-tête :  
   
--   **Static** : indique un membre statique comportant une cellule d’en-tête.  
+-   **Statique** Indique un membre statique avec une cellule d’en-tête.  
   
--   **(Static)** : indique un membre statique sans cellule d’en-tête, également appelé statique masqué.  
+-   **(Statique)** Indique un membre statique sans cellule d’en-tête, appelé statique masqué.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

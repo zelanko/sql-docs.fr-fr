@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4227b0af8453a40e9dd63b4aef170d52f8115b2
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782931"
 ---
 # <a name="remove-an-availability-group-sql-server"></a>Supprimer un groupe de disponibilité (SQL Server)
@@ -32,11 +32,11 @@ ms.locfileid: "72782931"
   
 -   **Avant de commencer :**  
   
-     [Recommandations et limitations](#Restrictions)  
+     [Limitations et recommandations](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour supprimer un groupe de disponibilité, utilisez :**  
+-   **Pour supprimer un groupe de disponibilité, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "72782931"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER. Pour supprimer un groupe de disponibilité qui n'est pas hébergé par l'instance de serveur local, vous avez besoin de l'autorisation CONTROL SERVER ou CONTROL sur ce groupe de disponibilité.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -104,7 +104,7 @@ ms.locfileid: "72782931"
   
 1.  Remplacez le répertoire (`cd`) par celui de l'instance de serveur qui héberge le réplica principal, si possible, ou connectez-vous à une autre instance de serveur qui est activée pour les groupes de disponibilité AlwaysOn sur un nœud WSFC comportant les informations d'identification de sécurité appropriées pour le groupe de disponibilité.  
   
-2.  Utilisez l'applet de commande **Remove-SqlAvailabilityGroup** .  
+2.  Utilisez l’applet de commande **Remove-SqlAvailabilityGroup** .  
   
      Par exemple, la commande suivante supprime le groupe de disponibilité nommé `MyAg`. Cette commande peut être exécutée sur n'importe quelle instance de serveur qui héberge un réplica de disponibilité pour le groupe de disponibilité.  
   
@@ -113,16 +113,16 @@ ms.locfileid: "72782931"
     ```  
   
     > [!NOTE]  
-    >  Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour plus d’informations, consultez [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
--   [fournisseur PowerShell SQL Server](../../../powershell/sql-server-powershell-provider.md)  
+-   [Fournisseur SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="RelatedContent"></a> Contenu connexe  
+##  <a name="RelatedContent"></a> Contenu associé  
   
 -   [Fonctionnement : comportements de DROP AVAILABILITY GROUP](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (blog des ingénieurs du Service clientèle et du Support technique de SQL Server)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble &#40;de&#41; groupes de disponibilité AlwaysOn SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
+ [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Création et configuration des groupes de disponibilité &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)  

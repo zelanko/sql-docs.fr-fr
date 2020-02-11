@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: f985f41104dd194d851760c3d1c3e5479a65b7e8
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952593"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>Des extensions personnalisées ont été détectées sur le serveur de rapports (Conseiller de mise à niveau)
@@ -28,13 +28,13 @@ ms.locfileid: "71952593"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Mode natif &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le mode SharePoint.|  
   
 ## <a name="component"></a>Composant  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Description  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit une architecture extensible qui permet aux développeurs de créer des extensions personnalisées pour le traitement des données, la remise, le rendu, la sécurité et l’authentification.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit une architecture extensible qui permet aux développeurs de créer des extensions personnalisées pour le traitement des données, la remise, le rendu, la sécurité et l’authentification.  
   
  Si des extensions ou des assemblys personnalisés sont utilisés dans votre installation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous pouvez utiliser le programme d'installation pour effectuer une mise à niveau, mais vous devrez peut-être déplacer des extensions vers le nouvel emplacement d'installation après la mise à niveau ou effectuer des étapes avant la mise à niveau.  
   
@@ -46,13 +46,13 @@ ms.locfileid: "71952593"
 ## <a name="corrective-action"></a>Action corrective  
  Utilisez les sections suivantes pour déterminer les étapes à effectuer en plus de la mise à niveau de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou avant celle-ci :  
   
- [Extensions de traitement de données ou de remise personnalisées](#dataprocdeliver)  
+ [Extensions pour le traitement des données ou de remise personnalisées](#dataprocdeliver)  
   
  [Extensions de rendu personnalisées](#render)  
   
  [Extensions de sécurité ou d’authentification personnalisées sur un serveur de rapports SQL Server 2000](#secauth2000)  
   
- [Extensions de sécurité ou d’authentification personnalisées sur un serveur de rapports SQL Server 2005](#secauth2005)  
+ [Extensions de sécurité ou d'authentification personnalisées sur un serveur de rapports SQL Server 2005](#secauth2005)  
   
  Une fois la mise à niveau terminée, déplacez les assemblys d'extension vers le nouveau dossier d'installation, puis vérifiez que les extensions personnalisées fonctionnent comme prévu. Si votre extension ne fonctionne pas, vous devrez peut-être la recompiler.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71952593"
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>Étapes postérieures à la mise à niveau pour les extensions pour le traitement des données ou de remise personnalisées  
   
-1.  Déplacez le ou les fichiers d'extension vers le nouveau dossier du programme pour le serveur de rapports. Par défaut, le dossier du programme du serveur de rapports se trouve dans \Program Files\Microsoft SQL Server\MSRS10_50. \<*nom_instance*> serveur \Report.  
+1.  Déplacez le ou les fichiers d'extension vers le nouveau dossier du programme pour le serveur de rapports. Par défaut, le dossier du programme du serveur de rapports se trouve dans \Program Files\Microsoft SQL Server \ MSRS10_50. \< *instance_name*> serveur \Report.  
   
  Pour plus d'informations, consultez « Déploiement d'une extension pour le traitement des données » et « Implémentation d'une extension de remise » dans la documentation en ligne de SQL Server.  
   
@@ -142,6 +142,6 @@ ms.locfileid: "71952593"
 3.  Configurez les extensions sur la nouvelle instance.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Conseiller de mise &#40;à niveau des problèmes de mise à niveau Reporting Services&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+ [Problèmes de mise à niveau de Reporting Services &#40;conseiller de mise à niveau&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

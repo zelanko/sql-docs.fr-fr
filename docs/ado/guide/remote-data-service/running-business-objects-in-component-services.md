@@ -1,5 +1,5 @@
 ---
-title: Exécution d’objets métier dans les Services de composants | Microsoft Docs
+title: Exécution d’objets métier dans les services de composants | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,26 +13,26 @@ ms.assetid: 3077d0b6-42d6-4f10-8e5d-42e6204f1109
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87eab0ac5611b437f6e0cbe1957a4d6e8652c4b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922276"
 ---
 # <a name="running-business-objects-in-component-services"></a>Exécution d’objets métier dans les services de composants
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Objets métier peuvent être des fichiers exécutables (.exe) ou des bibliothèques de liens dynamiques (.dll). La configuration que vous utilisez pour exécuter l’objet métier varie selon que l’objet est un fichier .dll ou .exe :  
+ Les objets métier peuvent être des fichiers exécutables (. exe) ou des bibliothèques de liens dynamiques (. dll). La configuration que vous utilisez pour exécuter l’objet métier varie selon que l’objet est un fichier. dll ou. exe :  
   
--   Les objets métier créés en tant que fichiers .exe peuvent être appelés via DCOM. Si ces objets métier sont utilisés par le biais d’Internet Information Services (IIS), ils sont susceptibles d’être supplémentaires de marshaling de données, ce qui ralentissent les performances du client.  
+-   Les objets métier créés en tant que fichiers. exe peuvent être appelés via DCOM. Si ces objets métier sont utilisés par le biais de Internet Information Services (IIS), ils sont soumis à un marshaling de données supplémentaire, ce qui ralentit les performances du client.  
   
--   Les objets métier créés comme fichiers .dll peuvent être utilisés par IIS et donc également par HTTP. Elles peuvent également servir via DCOM uniquement par le biais de Services de composants ou via Microsoft Transaction Server, si vous utilisez Windows NT. DLL de l’objet métier doivent être inscrites sur l’ordinateur de serveur IIS pour y accéder via IIS. Pour plus d’informations sur la configuration d’une DLL pour s’exécuter sur DCOM, consultez la section [l’activation d’une DLL pour son exécution sur DCOM](../../../ado/guide/remote-data-service/enabling-a-dll-to-run-on-dcom.md).  
+-   Les objets métier créés en tant que fichiers. dll peuvent être utilisés par le biais d’IIS, et par conséquent également par HTTP. Ils peuvent également être utilisés sur DCOM uniquement par le biais des services de composants ou via Microsoft Transaction Server, si vous utilisez Windows NT. Les dll de l’objet métier devront être inscrites sur l’ordinateur serveur IIS pour y accéder via IIS. Pour plus d’informations sur la configuration d’une DLL à exécuter sur DCOM, consultez la section [activation d’une dll à exécuter sur DCOM](../../../ado/guide/remote-data-service/enabling-a-dll-to-run-on-dcom.md).  
   
 > [!NOTE]
->  Lorsque les objets métier sur la couche intermédiaire sont implémentés en tant que composants des Services de composants à l’aide de **GetObjectContext**, **SetComplete**, et **SetAbort**, l’entreprise les objets peuvent utiliser les Services de composants (ou MTS, si vous utilisez Windows NT) des objets de contexte pour maintenir leur état entre plusieurs appels clients. Ce scénario est possible avec DCOM, qui est généralement implémentée entre les clients approuvés et des serveurs dans un intranet. Dans ce cas, le [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) objet et [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) méthode côté client sont remplacés par l’objet de contexte de transaction et **CreateInstance** (méthode), qui sont fournies par le **ITransactionContext** interface et implémenté par les Services de composants.  
+>  Lorsque des objets métier sur le niveau intermédiaire sont implémentés en tant que composants de services de composants à l’aide de **GetObjectContext**, **SetComplete**et **SetAbort**, les objets métier peuvent utiliser les services de composants (ou MTS, si vous utilisez Windows NT) pour maintenir leur état entre plusieurs appels clients. Ce scénario est possible avec DCOM, qui est généralement implémenté entre les clients et les serveurs approuvés dans un intranet. Dans ce cas, le [RDS. ](../../../ado/reference/rds-api/dataspace-object-rds.md)L’objet DataSpace et la méthode [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) côté client sont remplacés par l’objet de contexte de transaction et la méthode **CreateInstance** , qui sont fournis par l’interface **ITransactionContext** et implémentés par les services de composants.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Principes de base de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
+ [Concepts de base de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

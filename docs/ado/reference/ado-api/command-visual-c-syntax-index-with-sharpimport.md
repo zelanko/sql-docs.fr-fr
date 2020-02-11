@@ -1,5 +1,5 @@
 ---
-title: 'Commande (Index de la syntaxe Visual C++ avec #import) | Microsoft Docs'
+title: 'Command (Visual C++ index de syntaxe avec #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,13 +16,13 @@ ms.assetid: ccb6ffbc-7303-4124-8a0c-f6356f2c82d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ad88bd09f82863586694ce1ea1eda7720a8d3af8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919779"
 ---
-# <a name="command-visual-c-syntax-index-with-import"></a>Commande (Index de la syntaxe Visual C++ avec #import)
+# <a name="command-visual-c-syntax-index-with-import"></a>Command (Visual C++ index de syntaxe avec #import)
 ## <a name="methods"></a>Méthodes  
   
 ```  
@@ -31,7 +31,7 @@ _RecordsetPtr Execute( VARIANT * RecordsAffected, VARIANT * Parameters, long Opt
 _ParameterPtr CreateParameter( _bstr_t Name, enum DataTypeEnum Type, enum ParameterDirectionEnum Direction, long Size, const _variant_t & Value = vtMissing );  
 ```  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>Propriétés  
   
 ```  
 _ConnectionPtr GetActiveConnection( );  

@@ -1,5 +1,5 @@
 ---
-title: sys. DM _resource_governor_workload_groups_history_ex (Azure SQL Database) | Microsoft Docs
+title: sys. dm_resource_governor_workload_groups_history_ex (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: joesackmsft
 ms.author: josack
 ms.openlocfilehash: 5fea5badf14ce9863f07dff189f1665788ec5fb6
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70873771"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
@@ -34,8 +34,8 @@ Retourne un instantané à un intervalle de 20 secondes pour les 32 dernières m
 |-----------------|---------------|-----------------|  
 |**pool_id**| int |ID du pool de ressources. N'accepte pas la valeur NULL.|
 |**group_id**| int |ID du groupe de charges de travail. N'accepte pas la valeur NULL.|
-|**name**| nvarchar (256) |Nom du groupe de charges de travail. N'accepte pas la valeur NULL.|
-|**snapshot_time**| datetime |Date et heure de la capture instantanée des statistiques du groupe de ressources.|
+|**nomme**| nvarchar(256) |Nom du groupe de charges de travail. N'accepte pas la valeur NULL.|
+|**snapshot_time**| DATETIME |Date et heure de la capture instantanée des statistiques du groupe de ressources.|
 |**duration_ms**| int |Durée entre l’instantané actuel et l’instantané précédent.|
 |**active_worker_count**| int |Nombre total de travailleurs dans l’instantané actuel.|
 |**active_request_count**| int |Nombre de demandes en cours. N'accepte pas la valeur NULL.|
@@ -52,7 +52,7 @@ Retourne un instantané à un intervalle de 20 secondes pour les 32 dernières m
 |**delta_reads_completed**| int |L’e/s de lecture totale s’est terminée depuis le dernier instantané. N'accepte pas la valeur NULL.|
 |**delta_read_bytes**| bigint |Nombre total d’octets lus depuis le dernier instantané. N'accepte pas la valeur NULL.|
 |**delta_read_stall_ms**| int |Durée totale (en millisecondes) entre l’arrivée et l’achèvement des e/s de lecture depuis le dernier instantané. N'accepte pas la valeur NULL.|
-|**delta_read_stall_queued_ms**| int |Durée totale (en millisecondes) entre l’arrivée des e/s de lecture et le problème depuis le dernier instantané. Autorise la valeur NULL. NULL si le groupe de ressources n’est pas régi pour les e/s. Un delta_read_stall_queued_ms différent de zéro signifie que les e/s sont affectées par RG.|
+|**delta_read_stall_queued_ms**| int |Durée totale (en millisecondes) entre l’arrivée des e/s de lecture et le problème depuis le dernier instantané. Autorise la valeur NULL. NULL si le groupe de ressources n’est pas régi pour les e/s. Une delta_read_stall_queued_ms différente de zéro signifie que les e/s sont affectées par RG.|
 |**delta_writes_queued**| int |Nombre total d’IOs d’écriture mis en file d’attente depuis le dernier instantané. Autorise la valeur NULL. NULL si le groupe de ressources n’est pas régi pour les e/s.|
 |**delta_writes_issued**| int |Nombre total d’e/s d’écriture émises depuis le dernier instantané. Autorise la valeur NULL. NULL si le groupe de ressources n’est pas régi pour les e/s.|
 |**delta_writes_completed**| int |L’e/s d’écriture totale est terminée depuis le dernier instantané. N'accepte pas la valeur NULL.|

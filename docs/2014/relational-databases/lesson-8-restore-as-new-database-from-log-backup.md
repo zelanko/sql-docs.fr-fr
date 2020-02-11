@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 464961600f69f14a2b66515a75906c0fd4af3f82
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175356"
 ---
-# <a name="lesson-9-restore-a-database-from-azure-storage"></a>Leçon 9. Restaurer une base de données à partir du stockage Azure
+# <a name="lesson-9-restore-a-database-from-azure-storage"></a>Leçon 9. Restaurer une base de données à partir du Stockage Azure
   Dans cette leçon, vous allez apprendre à restaurer un fichier de sauvegarde de base de données à partir du stockage Azure dans une base de données, qui réside localement ou dans une machine virtuelle dans Azure. Pour suivre cette leçon, vous n'avez pas besoin de terminer les leçons 4, 5, 6, 7 et 8.  
   
  Cette leçon suppose que vous avez déjà effectué les étapes suivantes :  
@@ -34,9 +34,9 @@ ms.locfileid: "70175356"
   
 -   Vous avez créé un SQL Server des informations d’identification sur votre ordinateur pour la fonctionnalité d’intégration du stockage Azure. Notez que ces informations d'identification nécessitent une clé de signature d'accès partagé (SAS).  
   
- Pour restaurer une base de données à partir du stockage Azure, procédez comme suit:  
+ Pour restaurer une base de données à partir du stockage Azure, procédez comme suit :  
   
-1.  Démarrez SQL Server Management Studio. Connectez-vous à l'instance par défaut.  
+1.  Exécutez SQL Server Management Studio. Connectez-vous à l'instance par défaut.  
   
 2.  Cliquez sur **nouvelle requête** dans la barre d’outils standard.  
   
@@ -95,6 +95,6 @@ ms.locfileid: "70175356"
   
     ```  
   
- **Fin du didacticiel: SQL Server de fichiers de données dans le service de stockage Azure**  
+ **Fin du didacticiel : SQL Server de fichiers de données dans le service de stockage Azure**  
   
   

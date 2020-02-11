@@ -16,10 +16,10 @@ ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8073d51fb4376acbdc19724422f6ef7543e3c403
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68894041"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
@@ -28,9 +28,9 @@ ms.locfileid: "68894041"
   Ajoute un nouveau travail de l'agent planifié utilisé pour synchroniser un abonnement envoyé avec une publication transactionnelle. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
 > [!IMPORTANT]  
->  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées en texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées en texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [activer les connexions chiffrées dans le Moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -71,7 +71,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ## <a name="arguments"></a>Arguments  
 `[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @subscriber = ] 'subscriber'`Nom de l’instance de l’abonné ou nom de l’écouteur GA si la base de données de l’abonné est un groupe de disponibilité. Subscriber est de **type sysname**, avec NULL comme valeur par défaut. 
+`[ @subscriber = ] 'subscriber'`Nom de l’instance de l’abonné ou nom de l’écouteur GA si la base de données de l’abonné est un groupe de disponibilité. *Subscriber* est de **type sysname**, avec NULL comme valeur par défaut. 
   
 `[ @subscriber_db = ] 'subscriber_db'`Nom de la base de données d’abonnement. *subscriber_db* est de **type sysname**, avec NULL comme valeur par défaut. Pour un abonné non-SQL Server, spécifiez la valeur **(destination par défaut)** pour *subscriber_db*.  
   
@@ -82,32 +82,32 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @subscriber_login = ] 'subscriber_login'`Connexion de l’abonné à utiliser lors de la connexion à un abonné au cours d’une synchronisation. *subscriber_login* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @subscriber_password = ] 'subscriber_password'`Mot de passe de l’abonné. *subscriber_password* est obligatoire si *subscriber_security_mode* est défini sur **0**. *subscriber_password* est de **type sysname**, avec NULL comme valeur par défaut. Si un mot de passe d'abonné est utilisé, il est automatiquement chiffré.  
+`[ @subscriber_password = ] 'subscriber_password'`Mot de passe de l’abonné. *subscriber_password* est requis si *subscriber_security_mode* a la valeur **0**. *subscriber_password* est de **type sysname**, avec NULL comme valeur par défaut. Si un mot de passe d'abonné est utilisé, il est automatiquement chiffré.  
   
 > [!IMPORTANT]  
 >  N'utilisez pas de mot de passe vide. Utilisez un mot de passe fort. Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez enregistrer les informations d'identification dans un fichier de script, vous devez sécuriser le fichier pour empêcher un accès non autorisé.  
   
-`[ @job_login = ] 'job_login'`Nom de connexion du compte sous lequel l’agent s’exécute. Sur Azure SQL Database Managed Instance utilisez un compte SQL Server. *job_login* est de type **nvarchar (257)** , avec NULL comme valeur par défaut. Ce compte Windows est toujours utilisé pour les connexions de l'Agent au serveur de distribution et pour les connexions à l'abonné utilisant l'authentification intégrée de Windows.  
+`[ @job_login = ] 'job_login'`Nom de connexion du compte sous lequel l’agent s’exécute. Sur Azure SQL Database Managed Instance utilisez un compte SQL Server. *job_login* est de type **nvarchar (257)**, avec NULL comme valeur par défaut. Ce compte Windows est toujours utilisé pour les connexions de l'Agent au serveur de distribution et pour les connexions à l'abonné utilisant l'authentification intégrée de Windows.  
   
 `[ @job_password = ] 'job_password'`Mot de passe du compte sous lequel l’agent s’exécute. *job_password* est de **type sysname**, sans valeur par défaut.  
   
 > [!IMPORTANT]  
 >  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez enregistrer les informations d'identification dans un fichier de script, vous devez sécuriser le fichier pour empêcher un accès non autorisé.  
   
-`[ @job_name = ] 'job_name'`Nom d’un travail d’agent existant. *nom_du_travail* est de **type sysname**, avec NULL comme valeur par défaut. Ce paramètre n'est indiqué que lorsque l'abonnement est synchronisé grâce à un travail existant plutôt qu'un nouveau travail (étant le comportement par défaut). Si vous n’êtes pas membre du rôle serveur fixe **sysadmin** , vous devez spécifier *job_login* et *job_password* lorsque vous spécifiez *nom_du_travail*.  
+`[ @job_name = ] 'job_name'`Nom d’un travail d’agent existant. *job_name* est de **type sysname**, avec NULL comme valeur par défaut. Ce paramètre n'est indiqué que lorsque l'abonnement est synchronisé grâce à un travail existant plutôt qu'un nouveau travail (étant le comportement par défaut). Si vous n’êtes pas membre du rôle serveur fixe **sysadmin** , vous devez spécifier *job_login* et *job_password* lorsque vous spécifiez *job_name*.  
   
 `[ @frequency_type = ] frequency_type`Fréquence de planification de l’Agent de distribution. *frequency_type* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**1**|Une fois|  
+|**1**|Ponctuelle|  
 |**2**|À la demande|  
-|**4**|Tous les jours|  
-|**8**|Semaine|  
-|**16**|Mois|  
+|**4**|Quotidienne|  
+|**version8**|Hebdomadaire|  
+|**16**|Mensuelle|  
 |**32**|Mensuelle relative|  
 |**64** (valeur par défaut)|Démarrage automatique|  
-|**128**|Périodique|  
+|**128**|Récurrent|  
   
 > [!NOTE]  
 >  Si vous spécifiez la valeur **64** , le agent de distribution s’exécute en mode continu. Cela correspond à la définition du paramètre **-Continuous** pour l’agent. Pour plus d'informations, consultez [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md).  
@@ -116,24 +116,24 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Date de la Agent de distribution. Ce paramètre est utilisé lorsque *frequency_type* a la valeur **32** (mensuelle relative). *frequency_relative_interval* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**1** (par défaut)|Première|  
+|**1** (par défaut)|Premier|  
 |**2**|Seconde|  
 |**4**|Troisième|  
-|**8**|Quatrième|  
-|**16**|Dernière|  
+|**version8**|Quatrième|  
+|**16**|Dernier|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est de **type int**, avec 0 comme valeur par défaut.  
   
 `[ @frequency_subday = ] frequency_subday`Fréquence de replanification au cours de la période définie. *frequency_subday* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**2**|Seconde|  
 |**4** (par défaut)|Minute|  
-|**8**|Heure|  
+|**version8**|Heure|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Intervalle de *frequency_subday*. *frequency_subday_interval* est de **type int**, avec 5 comme valeur par défaut.  
   
@@ -152,25 +152,25 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 > [!NOTE]  
 >  Vous devez spécifier un mot de passe si *dts_package_name* est spécifié.  
   
-`[ @dts_package_location = ] 'dts_package_location'`Spécifie l’emplacement du package. *dts_package_location* est de type **nvarchar (12)** , avec Distributor comme valeur par défaut. L’emplacement du package peut être **Distributor** ou Subscriber.  
+`[ @dts_package_location = ] 'dts_package_location'`Spécifie l’emplacement du package. *dts_package_location* est de type **nvarchar (12)**, avec Distributor comme valeur par défaut. L’emplacement du package peut être **Distributor** ou **Subscriber**.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Indique si l’abonnement peut être synchronisé via [!INCLUDE[msCoName](../../includes/msconame-md.md)] le gestionnaire de synchronisation. *enabled_for_syncmgr* est de type **nvarchar (5)** , avec false comme valeur par défaut. Si la **valeur**est false, l’abonnement n’est pas inscrit auprès du gestionnaire de synchronisation. Si la **valeur est true**, l’abonnement est inscrit auprès du gestionnaire de synchronisation et peut [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]être synchronisé sans démarrage.  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Indique si l’abonnement peut être synchronisé via [!INCLUDE[msCoName](../../includes/msconame-md.md)] le gestionnaire de synchronisation. *enabled_for_syncmgr* est de type **nvarchar (5)**, avec false comme valeur par défaut. Si la **valeur est false**, l’abonnement n’est pas inscrit auprès du gestionnaire de synchronisation. Si la **valeur est true**, l’abonnement est inscrit auprès du gestionnaire de synchronisation et peut [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]être synchronisé sans démarrage.  
   
 `[ @distribution_job_name = ] 'distribution_job_name'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 `[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @subscriber_provider = ] 'subscriber_provider'`Identificateur programmatique unique (ProgID) avec lequel le fournisseur OLE DB de la source de données non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est inscrit. *subscriber_provider* est de **type sysname**, avec NULL comme valeur par défaut. *subscriber_provider* doit être unique pour le fournisseur OLE DB installé sur le serveur de distribution. *subscriber_provider* est uniquement pris en charge pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les abonnés non-.  
+`[ @subscriber_provider = ] 'subscriber_provider'`Identificateur programmatique unique (PROGID) avec lequel le fournisseur OLE DB de la source de données non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est inscrit. *subscriber_provider* est de **type sysname**, avec NULL comme valeur par défaut. *subscriber_provider* doit être unique pour le fournisseur OLE DB installé sur le serveur de distribution. *subscriber_provider* n’est pris en charge que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les abonnés non-.  
   
-`[ @subscriber_datasrc = ] 'subscriber_datasrc'`Nom de la source de données, tel qu’il est interprété par le fournisseur OLE DB. *subscriber_datasrc* est de type **nvarchar (4000)** , avec NULL comme valeur par défaut. *subscriber_datasrc* est passé en tant que propriété DBPROP_INIT_DATASOURCE pour initialiser le fournisseur OLE DB. *subscriber_datasrc* est uniquement pris en charge pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les abonnés non-.  
+`[ @subscriber_datasrc = ] 'subscriber_datasrc'`Nom de la source de données, tel qu’il est interprété par le fournisseur OLE DB. *subscriber_datasrc* est de type **nvarchar (4000)**, avec NULL comme valeur par défaut. *subscriber_datasrc* est passé comme DBPROP_INIT_DATASOURCE propriété pour initialiser le fournisseur de OLE DB. *subscriber_datasrc* n’est pris en charge que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les abonnés non-.  
   
-`[ @subscriber_location = ] 'subscriber_location'`Est l’emplacement de la base de données tel qu’il est interprété par le fournisseur OLE DB. *subscriber_location* est de type **nvarchar (4000)** , avec NULL comme valeur par défaut. *subscriber_location* est passé en tant que propriété DBPROP_INIT_LOCATION pour initialiser le fournisseur OLE DB. *subscriber_location* est uniquement pris en charge pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les abonnés non-.  
+`[ @subscriber_location = ] 'subscriber_location'`Est l’emplacement de la base de données tel qu’il est interprété par le fournisseur OLE DB. *subscriber_location* est de type **nvarchar (4000)**, avec NULL comme valeur par défaut. *subscriber_location* est passé comme DBPROP_INIT_LOCATION propriété pour initialiser le fournisseur de OLE DB. *subscriber_location* n’est pris en charge que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les abonnés non-.  
   
-`[ @subscriber_provider_string = ] 'subscriber_provider_string'`Chaîne de connexion spécifique au fournisseur OLE DB qui identifie la source de données. *subscriber_provider_string* est de type **nvarchar (4000)** , avec NULL comme valeur par défaut. *subscriber_provider_string* est passé à IDataInitialize ou défini en tant que propriété DBPROP_INIT_PROVIDERSTRING pour initialiser le fournisseur OLE DB. *subscriber_provider_string* est uniquement pris en charge pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les abonnés non-.  
+`[ @subscriber_provider_string = ] 'subscriber_provider_string'`Chaîne de connexion spécifique au fournisseur OLE DB qui identifie la source de données. *subscriber_provider_string* est de type **nvarchar (4000)**, avec NULL comme valeur par défaut. *subscriber_provider_string* est passé à IDataInitialize ou défini en tant que propriété DBPROP_INIT_PROVIDERSTRING pour initialiser le fournisseur OLE DB. *subscriber_provider_string* n’est pris en charge que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les abonnés non-.  
   
-`[ @subscriber_catalog = ] 'subscriber_catalog'`Catalogue à utiliser lors de l’établissement d’une connexion au fournisseur OLE DB. *subscriber_catalog* est de **type sysname**, avec NULL comme valeur par défaut. *subscriber_catalog* est passé en tant que propriété DBPROP_INIT_CATALOG pour initialiser le fournisseur OLE DB. *subscriber_catalog* est uniquement pris en charge pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les abonnés non-.  
+`[ @subscriber_catalog = ] 'subscriber_catalog'`Catalogue à utiliser lors de l’établissement d’une connexion au fournisseur OLE DB. *subscriber_catalog* est de **type sysname**, avec NULL comme valeur par défaut. *subscriber_catalog* est passé comme DBPROP_INIT_CATALOG propriété pour initialiser le fournisseur de OLE DB. *subscriber_catalog* n’est pris en charge que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les abonnés non-.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  

@@ -1,5 +1,5 @@
 ---
-title: Paramètres (synchronisation) (SybaseToSQL) du projet | Microsoft Docs
+title: Paramètres du projet (synchronisation) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,51 +10,51 @@ ms.assetid: 2cd6bc01-b8e5-4312-83a4-eac66dc1d460
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 663a4b1e49d1f81ce040254a2c8f39a1a1f84b38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68028683"
 ---
 # <a name="project-settings-synchronization-sybasetosql"></a>Paramètres du projet (Synchronisation) (SybaseToSQL)
-La page de synchronisation de la **paramètres du projet** boîte de dialogue contient les paramètres qui personnalisent comment SSMA charge les objets de base de données, telles que les tables et procédures stockées, dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure.  
+La page synchronisation de la boîte de dialogue **paramètres du projet** contient des paramètres qui personnalisent la manière dont SSMA charge les objets de base de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données, tels que les tables et les procédures stockées, dans ou SQL Azure.  
   
-Vous pouvez accéder à deux différentes pages de synchronisation qui contiennent les mêmes paramètres :  
+Vous pouvez accéder à deux pages de synchronisation différentes qui contiennent les mêmes paramètres :  
   
--   Si vous souhaitez spécifier des paramètres pour tous les futurs projets SSMA, sur le **outils** menu, sélectionnez **par défaut des paramètres de projet**, sélectionnez le type de projet de migration pour lequel les paramètres sont requis pour être affichées ou modifiées à partir de **Version cible de Migration** liste déroulante, puis sélectionnez **synchronisation** en bas du volet gauche.  
+-   Si vous souhaitez spécifier des paramètres pour tous les futurs projets SSMA, dans le menu **Outils** , sélectionnez **paramètres du projet par défaut**, sélectionnez le type de projet de migration pour lequel les paramètres doivent être affichés ou modifiés dans la liste déroulante de la **version cible** de la migration, puis sélectionnez **synchronisation** en bas du volet gauche.  
   
--   Pour spécifier les paramètres pour le projet actuel, sur le **outils** menu, sélectionnez **paramètres du projet**, puis sélectionnez **synchronisation** en bas du volet gauche.  
+-   Pour spécifier les paramètres du projet actif, dans le menu **Outils** , sélectionnez **paramètres du projet**, puis sélectionnez **synchronisation** en bas du volet gauche.  
   
 ## <a name="options"></a>Options  
-**Tentatives**  
-Spécifie le nombre de tentatives de SSMA doit lors du chargement d’objets dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les objets qui ne sont pas chargés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors de la tentative actuelle sera tentée à nouveau jusqu'à ce que SSMA atteigne le nombre maximal de tentatives défini dans le processus de synchronisation en cours.  
+**Essayer**  
+Spécifie le nombre de tentatives que SSMA doit effectuer lors du chargement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]des objets dans. Les objets qui ne sont pas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chargés dans la tentative actuelle seront tentés à nouveau jusqu’à ce que SSMA atteigne le nombre maximal de tentatives dans le processus de synchronisation en cours.  
   
 ## <a name="synchronization-for-sql-server"></a>Synchronisation pour SQL Server  
-**Actualiser l’objet local sur la modification de l’objet locaux et distants**  
-Spécifie si SSMA doit remplacer les métadonnées de l’objet local avec les métadonnées de l’objet distant si vous modifient les objets locaux et distants.  
+**Actualiser l’objet local sur la modification de l’objet local et distant**  
+Spécifie si SSMA doit remplacer les métadonnées de l’objet local par les métadonnées de l’objet distant si les objets locaux et distants changent.  
 Si vous sélectionnez **Actualiser à partir de la base de données**, SSMA chargera les définitions de base de données dans les métadonnées lorsque la condition est remplie.  
 Si vous sélectionnez **écrire dans la base de données**, SSMA met à jour les objets dans la base de données en fonction du contenu des métadonnées SSMA lorsque la condition est remplie.  
-Si vous sélectionnez **Skip**, SSMA n’effectuera pas les actions d’actualisation.   
-Groupe d’options par défaut est **écrire dans la base de données.**  
+Si vous sélectionnez **Ignorer**, SSMA n’effectue aucune action d’actualisation.   
+L’option par défaut est **écrire dans la base de données.**  
   
-**Actualiser l’objet local sur la modification de l’objet local**  
-Spécifie si SSMA doit remplacer les métadonnées de l’objet local avec les métadonnées de l’objet distant si l’objet distant est modifié.  
+**Actualiser l’objet local lors de la modification de l’objet local**  
+Spécifie si SSMA doit remplacer les métadonnées de l’objet local par les métadonnées de l’objet distant si l’objet distant est modifié.  
 Si vous sélectionnez **Actualiser à partir de la base de données**, SSMA chargera les définitions de base de données dans les métadonnées lorsque la condition est remplie.  
 Si vous sélectionnez **écrire dans la base de données**, SSMA met à jour l’objet dans la base de données en fonction du contenu des métadonnées SSMA lorsque la condition est remplie.  
-Si vous sélectionnez **Skip**, SSMA n’effectuera pas les actions d’actualisation.   
-Groupe d’options par défaut est **écrire dans la base de données**.  
+Si vous sélectionnez **Ignorer**, SSMA n’effectue aucune action d’actualisation.   
+L’option par défaut est **écrire dans la base de données**.  
   
-**Actualiser l’objet local sur la modification de l’objet distant**  
-Spécifie si SSMA doit remplacer les métadonnées de l’objet local avec les métadonnées de l’objet distant si l’objet distant est modifié.  
+**Actualiser l’objet local lors de la modification de l’objet distant**  
+Spécifie si SSMA doit remplacer les métadonnées de l’objet local par les métadonnées de l’objet distant si l’objet distant est modifié.  
 Si vous sélectionnez **Actualiser à partir de la base de données**, SSMA chargera les définitions de base de données dans les métadonnées lorsque la condition est remplie.  
 Si vous sélectionnez **écrire dans la base de données**, SSMA met à jour l’objet dans la base de données en fonction du contenu des métadonnées SSMA lorsque la condition est remplie.  
-Si vous sélectionnez **Skip**, SSMA n’effectuera pas les actions d’actualisation.   
-Groupe d’options par défaut est **Actualiser à partir de la base de données**.  
+Si vous sélectionnez **Ignorer**, SSMA n’effectue aucune action d’actualisation.   
+L’option par défaut est **Actualiser à partir de la base de données**.  
   
-**Actualisation des métadonnées de l’objet local sont manquante**  
-Spécifie si SSMA doit créer les métadonnées locales si un objet existe sur la base de données cible, mais pas localement.  
-Si vous sélectionnez **Actualiser à partir de la base de données**, SSMA sélectionne l’actualisation à partir de l’option de base de données lorsque la condition est remplie.  
-Si vous sélectionnez **écrire dans la base de données**, SSMA supprimera l’objet à partir de la base de données lorsque la condition est remplie.  
-Si vous sélectionnez **Skip**, SSMA n’effectuera pas les actions d’actualisation.   
-Groupe d’options par défaut est **Actualiser à partir de la base de données**.  
+**Actualiser lorsque les métadonnées de l’objet local sont manquantes**  
+Spécifie si SSMA doit créer des métadonnées locales si un objet existe dans la base de données cible, mais pas localement.  
+Si vous sélectionnez **Actualiser à partir de la base de données**, SSMA sélectionne l’option Actualiser à partir de la base de données lorsque la condition est remplie.  
+Si vous sélectionnez **écrire dans la base de données**, SSMA supprime l’objet de la base de données lorsque la condition est remplie.  
+Si vous sélectionnez **Ignorer**, SSMA n’effectue aucune action d’actualisation.   
+L’option par défaut est **Actualiser à partir de la base de données**.  
   

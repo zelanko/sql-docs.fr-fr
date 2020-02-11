@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 530cca00459ed1ae170272dfd20a54928f039b38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900316"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Trier des données pour les transformations de fusion et de jointure de fusion
@@ -71,7 +71,7 @@ ms.locfileid: "62900316"
   
 5.  Cliquez sur l'onglet **Propriétés d'entrée et de sortie** .  
   
-6.  Cliquez sur  **\<nom du composant > sortie**et définissez le `IsSorted` propriété `True`.  
+6.  Cliquez sur ** \<nom du composant> sortie**, puis `IsSorted` affectez `True`à la propriété la valeur.  
   
     > [!NOTE]  
     >  Si vous définissez manuellement la propriété `IsSorted` de la sortie à `True` et que les données ne sont pas triées, il se peut que des données soient manquantes ou que des comparaisons de données incorrectes figurent dans la transformation de fusion ou de jointure de fusion en aval lors de l'exécution du package.  
@@ -110,7 +110,7 @@ ms.locfileid: "62900316"
  [Transformation de fusion](merge-transformation.md)   
  [Transformation de jointure de fusion](merge-join-transformation.md)   
  [Transformations Integration Services](integration-services-transformations.md)   
- [Chemins d'accès d'Integration Services](../integration-services-paths.md)   
+ [Chemins Integration Services](../integration-services-paths.md)   
  [tâche de flux de données](../../control-flow/data-flow-task.md)  
   
   

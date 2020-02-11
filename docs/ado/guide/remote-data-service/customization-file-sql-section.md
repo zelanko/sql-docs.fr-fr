@@ -1,5 +1,5 @@
 ---
-title: Fichier de personnalisation, Section SQL | Microsoft Docs
+title: Section SQL du fichier de personnalisation | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,25 +14,25 @@ ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6163a5b5fd0999e17e17961639e0a1fee3e8fa4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922797"
 ---
 # <a name="customization-file-sql-section"></a>Fichier de personnalisation, section SQL
-Le **sql** section peut contenir une nouvelle chaîne SQL qui remplace la chaîne de commande client. S’il n’existe aucune chaîne SQL dans la section, la section sera ignorée.  
+La section **SQL** peut contenir une nouvelle chaîne SQL qui remplace la chaîne de commande du client. S’il n’existe aucune chaîne SQL dans la section, la section sera ignorée.  
   
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- La nouvelle chaîne SQL peut être *paramétrable*. Autrement dit, les paramètres dans le **sql** section chaîne SQL (désigné par le ' ?' caractère) peuvent être remplacés par les arguments correspondants dans un *identificateur* dans la chaîne de commande client (désigné par un délimitée par des virgules liste entre parenthèses). L’identificateur et une liste d’arguments se comportent comme un appel de fonction.  
+ La nouvelle chaîne SQL peut être *paramétrable*. Autrement dit, les paramètres de la chaîne SQL de la section **SQL** (désignés par le caractère «  ? ») peuvent être remplacés par des arguments correspondants dans un *identificateur* dans la chaîne de commande cliente (désignée par une liste délimitée par des virgules entre parenthèses). L’identificateur et la liste d’arguments se comportent comme un appel de fonction.  
   
- Par exemple, supposons que la chaîne de commande client est `"CustomerByID(4)"`, l’en-tête de section SQL `[SQL CustomerByID]`, et la nouvelle chaîne de la section SQL est `"SELECT * FROM Customers WHERE CustomerID = ?".` génère le gestionnaire `"SELECT * FROM Customers WHERE CustomerID = 4"` et utiliser cette chaîne pour interroger la source de données.  
+ Par exemple, supposons que la chaîne de `"CustomerByID(4)"`commande du client est, que `[SQL CustomerByID]`l’en-tête de la section SQL `"SELECT * FROM Customers WHERE CustomerID = ?".` soit et que la `"SELECT * FROM Customers WHERE CustomerID = 4"` nouvelle chaîne de la section SQL soit le gestionnaire génère et utilise cette chaîne pour interroger la source de données.  
   
- Si la nouvelle instruction SQL est une chaîne vide (" »), alors la section est ignorée.  
+ Si la nouvelle instruction SQL est la chaîne null (""), la section est ignorée.  
   
- Si la nouvelle chaîne d’instruction SQL n’est pas valide, l’exécution de l’instruction échoue. Le paramètre client est ignoré. Vous pouvez effectuer cela intentionnellement pour « désactiver » toutes les commandes SQL de client en spécifiant :  
+ Si la nouvelle chaîne d’instruction SQL n’est pas valide, l’exécution de l’instruction échoue. Le paramètre client est effectivement ignoré. Vous pouvez effectuer cette opération intentionnellement pour « désactiver » toutes les commandes SQL clientes en spécifiant :  
   
 ```console
 [SQL default]   
@@ -40,23 +40,23 @@ SQL = " "
 ```  
   
 ## <a name="syntax"></a>Syntaxe  
- Un chaîne d’entrée SQL de remplacement est au format :  
+ Une entrée de chaîne SQL de remplacement se présente sous la forme suivante :  
   
- **SQL=**    
+ **SQL =**   
  ***sqlString***  
   
 |Élément|Description|  
 |----------|-----------------|  
-|**SQL**|Une chaîne littérale qui indique qu’il est une entrée de section SQL.|  
-|***sqlString***|Une chaîne SQL qui remplace la chaîne du client.|  
+|**Server**|Chaîne littérale qui indique qu’il s’agit d’une entrée de section SQL.|  
+|***sqlString***|Chaîne SQL qui remplace la chaîne du client.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fichier de personnalisation, Section Connect](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Fichier de personnalisation, Section de journaux](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Fichier de personnalisation, Section UserList](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
+ [Section de connexion au fichier de personnalisation](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
+ [Section journaux des fichiers de personnalisation](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
+ [Section UserList du fichier de personnalisation](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
  [Personnalisation de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Paramètres Client requis](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Présentation du fichier de personnalisation](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
+ [Paramètres client requis](../../../ado/guide/remote-data-service/required-client-settings.md)   
+ [Fonctionnement du fichier de personnalisation](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [Écriture d’un gestionnaire personnalisé](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
 
 

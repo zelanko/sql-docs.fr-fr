@@ -13,17 +13,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 172c8cbf13b76c23cd9f4768aaf5162e923bc28d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154302"
 ---
 # <a name="connect-to-azure-storage"></a>Se connecter à Stockage Azure
-  Utilisez la boîte de dialogue **connexion de stockage Azure** pour spécifier un compte de stockage et valider votre connexion à Azure.  
+  Utilisez la boîte de dialogue **Connexion de stockage Azure** pour spécifier un compte de stockage et valider votre connexion à Azure.  
   
 ## <a name="options"></a>Options  
- Spécifiez les informations suivantes sur votre compte Azure, puis cliquez sur **suivant** pour continuer.  
+ Spécifiez les informations suivantes sur votre compte Azure, puis cliquez sur **Suivant** pour continuer.  
   
 1.  **Compte de stockage** - Spécifiez le nom du compte de stockage.  
   

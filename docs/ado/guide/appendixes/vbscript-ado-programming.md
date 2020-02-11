@@ -16,38 +16,38 @@ ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f242a3596735a4bc43256d05b87100e71295a3da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926439"
 ---
 # <a name="vbscript-ado-programming"></a>Programmation ADO VBScript
 ## <a name="creating-an-ado-project"></a>Création d’un projet ADO  
- Microsoft Visual Basic, Scripting Edition ne prend pas en charge les bibliothèques de types, vous n’avez pas besoin de référencer ADO dans votre projet. Par conséquent, aucune fonctionnalité associée comme la saisie semi-automatique de ligne de commande n’est pris en charge. En outre, par défaut, les constantes énumérées ADO ne sont pas définis dans VBScript.  
+ Microsoft Visual Basic, l’édition de script ne prend pas en charge les bibliothèques de types. vous n’avez donc pas besoin de référencer ADO dans votre projet. Par conséquent, aucune fonctionnalité associée, telle que l’exécution de la ligne de commande, n’est prise en charge. En outre, par défaut, les constantes énumérées ADO ne sont pas définies dans VBScript.  
   
- Toutefois, ADO comporte deux fichiers contenant les définitions suivantes à utiliser avec VBScript :  
+ Toutefois, ADO vous fournit deux fichiers Include contenant les définitions suivantes à utiliser avec VBScript :  
   
--   Pour l’utilisation de script côté serveur Adovbs.inc, lequel est installé dans le dossier c:\Program Files\Common Files\System\ado\ par défaut.  
+-   Pour les scripts côté serveur, utilisez Adovbs. Inc, qui est installé dans le dossier c:\Program Files\Common Files\System\ado\ par défaut.  
   
--   Pour l’utilisation de script côté client Adcvbs.inc, lequel est installé dans le dossier c:\Program Files\Common Files\System\msdac\ par défaut.  
+-   Pour les scripts côté client, utilisez Adcvbs. Inc, qui est installé dans le dossier c:\Program Files\Common Files\System\msdac\ par défaut.  
   
- Vous pouvez copier et coller des définitions de constantes à partir de ces fichiers dans vos pages ASP ou, si vous effectuez un script côté serveur, copiez le fichier Adovbs.inc dans un dossier sur votre site Web et référencez-le dans votre page ASP comme suit :  
+ Vous pouvez copier et coller des définitions constantes à partir de ces fichiers dans vos pages ASP, ou, si vous effectuez des scripts côté serveur, copiez le fichier adovbs. Inc dans un dossier de votre site Web et référencez-le à partir de votre page ASP comme suit :  
   
 ```vb
 <!--#include File="adovbs.inc"-->  
 ```  
   
-## <a name="creating-ado-objects-in-vbscript"></a>Création d’objets ADO dans VBScript  
- Vous ne pouvez pas utiliser le **Dim** instruction pour assigner des objets à un type spécifique dans VBScript. En outre, VBScript ne prend pas en charge la **New** syntaxe utilisée avec le **Dim** instruction en Visual Basic pour Applications. Vous devez plutôt utiliser la **CreateObject** appel de fonction :  
+## <a name="creating-ado-objects-in-vbscript"></a>Création d’objets ADO en VBScript  
+ Vous ne pouvez pas utiliser l’instruction **Dim** pour assigner des objets à un type spécifique dans VBScript. En outre, VBScript ne prend pas en charge la **nouvelle** syntaxe utilisée avec l’instruction **Dim** dans Visual Basic pour applications. Vous devez à la place utiliser l’appel de fonction **CreateObject** :  
   
 ```vb
 Dim Rs1  
 Set Rs1 = Server.CreateObject( "ADODB.Recordset" )  
 ```  
   
-## <a name="vbscript-examples"></a>Exemples de VBScript  
- Le code suivant est un exemple générique de programmation côté serveur en VBScript dans un fichier de Active Server Page (ASP) :  
+## <a name="vbscript-examples"></a>Exemples VBScript  
+ Le code suivant est un exemple générique de programmation côté serveur VBScript dans un fichier de page (ASP) Active Server :  
   
 ```vb
 <%  @LANGUAGE="VBSCRIPT" %>  
@@ -74,13 +74,13 @@ Response.Write("Success!")
 </HTML>  
 ```  
   
- Des exemples VBScript plus spécifiques sont inclus dans la documentation d’ADO. Pour plus d’informations, consultez [exemples de Code ADO dans Microsoft Visual Basic Scripting Edition](../../../ado/reference/ado-api/ado-code-examples-vbscript.md).  
+ Des exemples VBScript plus spécifiques sont inclus dans la documentation ADO. Pour plus d’informations, consultez [exemples de code ADO dans Microsoft Visual Basic Scripting Edition](../../../ado/reference/ado-api/ado-code-examples-vbscript.md).  
   
 ## <a name="differences-between-vbscript-and-visual-basic"></a>Différences entre VBScript et Visual Basic  
- Utilisation d’ADO avec VBScript est similaire à l’aide d’ADO avec Visual Basic dans bien des égards, y compris la syntaxe est utilisée. Toutefois, il existe quelques différences importantes :  
+ L’utilisation d’ADO avec VBScript est semblable à l’utilisation d’ADO avec Visual Basic de nombreuses façons, notamment la façon dont la syntaxe est utilisée. Toutefois, il existe quelques différences importantes :  
   
--   VBScript prend en charge uniquement le type de données Variant, qui peut contenir différents types de données. Vous pouvez stocker les données que vous avez besoin dans un type de données Variant, et les données ne fonctionnera correctement en raison de casting effectué par VBScript. Il reconnaît le type requis par ADO et convertit la valeur de la variante en conséquence.  
+-   VBScript ne prend en charge que le type de données Variant, qui peut contenir différents types de données. Vous pouvez stocker les données dont vous avez besoin dans un type de données Variant, et les données fonctionneront correctement en raison du cast effectué par VBScript. Il reconnaît le type requis par ADO et convertit en conséquence la valeur de la variante.  
   
--   Vous ne pouvez pas utiliser **sur erreur goto \<étiquette >** dans VBScript.  
+-   Vous ne pouvez pas utiliser l' **étiquette on Error \<Goto>** dans VBScript.  
   
--   VBScript prend en charge les certaines des fonctions Visual Basic intégrées telles que **Msgbox**, **Date**, et **IsNumeric**. Toutefois, étant donné que VBScript est un sous-ensemble de Visual Basic, pas toutes les fonctions intégrées sont prises en charge. Par exemple, VBScript ne prend pas en charge la **Format** fonction et aux fonctions d’e/s de fichier.
+-   VBScript prend en charge certaines fonctions de Visual Basic intégrées, telles que **MsgBox**, **Date**et **IsNumeric**. Toutefois, étant donné que VBScript est un sous-ensemble de Visual Basic, toutes les fonctions intégrées ne sont pas prises en charge. Par exemple, VBScript ne prend pas en charge la fonction **format** et les fonctions d’e/s de fichier.

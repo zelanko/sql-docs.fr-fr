@@ -16,33 +16,33 @@ ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: decbc7c3b377234d91fe6b3e662d9449298041c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923616"
 ---
 # <a name="using-ado-for-internet-publishing"></a>Utilisation d’ADO pour la publication Internet
-[Le fournisseur OLE DB pour la publication Internet](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) montre un exemple spécifique de l’accès aux données hétérogènes avec ADO. Même si les exemples de cette section sont spécifiques à l’aide du fournisseur de publication Internet, les principes illustrés doivent être similaires lors de l’utilisation d’ADO avec d’autres fournisseurs de données hétérogènes, tel qu’un fournisseur à un magasin de courrier électronique.  
+[Le fournisseur OLE DB pour la publication Internet](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) montre un exemple spécifique d’accès à des données hétérogènes avec ADO. Bien que les exemples de cette section soient spécifiques à l’utilisation du fournisseur de publication Internet, les principes présentés doivent être similaires lorsque vous utilisez ADO avec d’autres fournisseurs pour des données hétérogènes, par exemple un fournisseur dans un magasin de messagerie électronique.  
   
-## <a name="urls"></a>URL  
- Uniform Resource Locator (URL) peut être utilisé comme alternative à des chaînes de connexion et le texte de la commande pour spécifier les sources de données et l’emplacement des fichiers et répertoires. Vous pouvez utiliser des URL avec le [connexion](../../../ado/reference/ado-api/connection-object-ado.md) et **Recordset** objets et avec le **enregistrement** et **Stream** objets.  
+## <a name="urls"></a>URLs  
+ Les URL (Uniform Resource Locators) peuvent être utilisées comme alternative aux chaînes de connexion et texte de commande pour spécifier des sources de données et l’emplacement des fichiers et des répertoires. Vous pouvez utiliser des URL avec la [connexion](../../../ado/reference/ado-api/connection-object-ado.md) existante et les objets **Recordset** et avec les objets **Record** et **Stream** .  
   
  Pour plus d’informations sur l’utilisation des URL, consultez [URL absolues et relatives](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="record-fields"></a>Champs d’enregistrement  
- La différence qui distingue les données hétérogènes des données homogènes est que dans le premier cas, chaque ligne de données, ou **enregistrement**, peut avoir un autre ensemble de colonnes, ou **champs**. Pour les données homogènes, chaque ligne a le même ensemble de colonnes. Pour plus d’informations sur les champs spécifiques au fournisseur de publication Internet, consultez [enregistrements et champs supplémentaires spécifiques au fournisseur](../../../ado/guide/data/records-and-provider-supplied-fields.md).  
+ La différence entre les données hétérogènes et les données homogènes réside dans le fait que, pour la première, chaque ligne de données ou **enregistrement**peut avoir un ensemble différent de colonnes ou de **champs**. Pour les données homogènes, chaque ligne a le même ensemble de colonnes. Pour plus d’informations sur les champs spécifiques au fournisseur de publication Internet, consultez [enregistrements et champs supplémentaires fournis par le fournisseur](../../../ado/guide/data/records-and-provider-supplied-fields.md).  
   
 ### <a name="appending-new-fields"></a>Ajout de nouveaux champs  
- Plusieurs objets ADO ont été améliorées pour fonctionner conjointement avec **enregistrement** et **Stream** objets.  
+ Plusieurs objets ADO ont été améliorés pour fonctionner conjointement avec les objets **Record** et **Stream** .  
   
--   Le [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection [Append](../../../ado/reference/ado-api/append-method-ado.md) (méthode), qui crée et ajoute un [champ](../../../ado/reference/ado-api/field-object.md) de l’objet à la collection, peuvent également spécifier la valeur de la **champ**.  
+-   La méthode [Append](../../../ado/reference/ado-api/append-method-ado.md) de la collection [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) , qui crée et ajoute un objet [Field](../../../ado/reference/ado-api/field-object.md) à la collection, peut également spécifier la valeur du **champ**.  
   
--   Le [mise à jour](../../../ado/reference/ado-api/update-method.md) méthode finalise l’ajout ou la suppression de champs à la collection.  
+-   La méthode [Update](../../../ado/reference/ado-api/update-method.md) finalise l’ajout ou la suppression de champs à la collection.  
   
--   En tant que raccourci et alternative à la **Append** (méthode), vous pouvez créer des champs en affectant une valeur à un champ non défini ou précédemment supprimé.  
+-   Comme raccourci et alternative à la méthode **Append** , vous pouvez créer des champs en affectant une valeur à un champ non défini ou supprimé.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Fournisseur OLE DB pour la publication Internet](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)  
   
@@ -53,6 +53,6 @@ ms.locfileid: "67923616"
 -   [Enregistrements et champs fournis par le fournisseur](../../../ado/guide/data/records-and-provider-supplied-fields.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Enregistrement objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Record, objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [Historique d’ADO](../../../ado/guide/ado-history.md)

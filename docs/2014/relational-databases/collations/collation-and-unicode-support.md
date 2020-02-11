@@ -28,13 +28,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c63b7c0d1acad34bb273e4a49921d55818965e80
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688732"
 ---
-# <a name="collation-and-unicode-support"></a>Prise en charge d'Unicode et du classement
+# <a name="collation-and-unicode-support"></a>Prise en charge d’Unicode et du classement
   Les classements dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournissent les règles de tri et les propriétés de respect de la casse et des accents pour vos données. Les classements utilisés avec les types de données character, tels que `char` et `varchar`, déterminent la page de codes et les caractères correspondants qui peuvent être représentés pour ce type de données. Que vous installiez une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], restauriez une sauvegarde de base de données ou connectiez un serveur à des bases de données clientes, il est important que vous compreniez les besoins en termes de paramètres régionaux, ordre de tri et respect de la casse et des accents des données avec lesquelles vous travaillez. Pour répertorier les classements disponibles sur votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql).  
   
  Lorsque vous sélectionnez un classement pour votre serveur, base de données, colonne ou expression, vous assignez certaines caractéristiques à vos données qui affecteront les résultats de nombreuses opérations dans la base de données. Par exemple, lorsque vous construisez une requête à l'aide d'ORDER BY, l'ordre de tri de votre jeu de résultats peut dépendre du classement appliqué à la base de données ou stipulé dans une clause COLLATE au niveau expression de la requête.  
@@ -52,11 +52,11 @@ ms.locfileid: "72688732"
 |Option|Description|  
 |------------|-----------------|  
 |Respecter la casse (_CS)|Fait la distinction entre les majuscules et les minuscules. Si cette option est activée, les minuscules sont triées avant leurs équivalents majuscules. Si cette option n'est pas sélectionnée, le classement ne respecte pas la casse. Dans ce cas, SQL Server considère que les versions en majuscules et en minuscules des lettres sont identiques dans les opérations de tri. Vous pouvez explicitement sélectionner le non-respect de la casse en spécifiant _CI.|  
-|Respecter les accents (_AS)|Fait la distinction entre les caractères accentués et non accentués. Par exemple, « a » n’est pas égal à&#x1EA5;«». Si cette option n'est pas sélectionnée, le classement ne respecte pas les accents. Dans ce cas, SQL Server considère que les versions accentuées et non accentuées des lettres sont identiques dans les opérations de tri. Vous pouvez explicitement sélectionner le non-respect des accents en spécifiant _AI.|  
+|Respecter les accents (_AS)|Fait la distinction entre les caractères accentués et non accentués. Par exemple, « a » n’est pas égal à « &#x1EA5; ». Si cette option n'est pas sélectionnée, le classement ne respecte pas les accents. Dans ce cas, SQL Server considère que les versions accentuées et non accentuées des lettres sont identiques dans les opérations de tri. Vous pouvez explicitement sélectionner le non-respect des accents en spécifiant _AI.|  
 |Respecter le jeu de caractères Kana (_KS)|Fait la distinction entre les deux types de caractères japonais Kana : Hiragana et Katakana. Si cette option n'est pas sélectionnée, le classement ne respecte pas les caractères Kana. Dans ce cas, SQL Server considère que les caractères Hiragana et Katakana sont identiques dans les opérations de tri. L'omission de cette option est le seul moyen de spécifier le non-respect du jeu de caractères Kana.|  
 |Respecter la largeur (_WS)|Fait la différence entre les caractères pleine largeur et demi-largeur. Si cette option n'est pas sélectionnée, SQL Server considère que la représentation pleine largeur et demi-largeur d'un même caractère sont identiques dans les opérations de tri. L'omission de cette option est le seul moyen de spécifier le non-respect de la largeur.|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les ensembles de classement suivants :  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les ensembles de classement suivants :  
   
  classements Windows  
  Les classements Windows définissent les règles de stockage des données de type caractère selon les paramètres régionaux système Windows associés. Pour un classement Windows, la comparaison de données non-Unicode est implémentée via le même algorithme que les données Unicode. Les règles de classement Windows de base spécifient l'alphabet ou la langue utilisée pour le tri du dictionnaire, et la page de codes utilisée pour stocker les données de type caractère non-Unicode. Les tris Unicode et non-Unicode sont compatibles avec les comparaisons de chaînes dans une version particulière de Windows. Les types de données sont ainsi cohérents dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ce qui permet aux développeurs de trier les chaînes dans leurs applications en appliquant les mêmes règles que celles utilisées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Nom de classement Windows &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql).  
@@ -67,7 +67,7 @@ ms.locfileid: "72688732"
  Il existe deux types de classement binaire dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; les anciens classements `BIN` et les nouveaux classements `BIN2`. Dans un classement `BIN2` tous les caractères sont triés en fonction de leurs points de code. Dans un classement `BIN` seul le premier caractère est trié selon le point de code, et les autres caractères sont triés en fonction de leurs valeurs d'octet. (En raison de l'architecture little endian de la plateforme Intel, les caractères de code Unicode sont toujours triés inversés par octet.)  
   
  classements SQL Server  
- Les classements (SQL_*)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournissent la compatibilité d'ordre de tri avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les règles de tri du dictionnaire pour les données non-Unicode ne sont pas compatibles avec les routines de tri fournies par les systèmes d'exploitation Windows. Toutefois, le tri de données Unicode est compatible avec une version particulière de règles de tri Windows. Comme les classements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent des règles de comparaison différentes pour les données Unicode et non-Unicode, vous pouvez obtenir des résultats différents pour des comparaisons traitant des mêmes données, selon le type de données sous-jacent. Pour plus d’informations, consultez [Nom du classement SQL Server &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]les classements (SQL_ *) fournissent la compatibilité d’ordre de tri [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]avec les versions antérieures de. Les règles de tri du dictionnaire pour les données non-Unicode ne sont pas compatibles avec les routines de tri fournies par les systèmes d'exploitation Windows. Toutefois, le tri de données Unicode est compatible avec une version particulière de règles de tri Windows. Comme les classements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent des règles de comparaison différentes pour les données Unicode et non-Unicode, vous pouvez obtenir des résultats différents pour des comparaisons traitant des mêmes données, selon le type de données sous-jacent. Pour plus d’informations, consultez [Nom du classement SQL Server &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql).  
   
 > [!NOTE]
 >  Lorsque vous mettez à niveau une instance anglaise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez spécifier les classements (SQL_*) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour permettre la compatibilité avec les instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existantes. Le classement par défaut d'une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] étant défini au cours de la procédure d'installation, assurez-vous de spécifier soigneusement les paramètres de classement dans les cas suivants :  
@@ -93,7 +93,7 @@ ms.locfileid: "72688732"
  Lorsque vous créez ou modifiez une table, vous pouvez spécifier des classements pour chaque colonne de chaîne de caractères à l'aide de la clause COLLATE. Si aucun classement n'est spécifié, le classement par défaut de la base de données est attribué à la colonne.  
   
  Classements au niveau de l'expression  
- Les classements au niveau de l'expression sont définis lors de l'exécution d'une instruction et ils affectent la façon dont l'ensemble de résultats est retourné. Cela permet aux résultats de tri ORDER BY d'être spécifiques aux paramètres régionaux. Utilisez une clause COLLATE telle que la suivante pour implémenter les classements au niveau de l'expression :  
+ Les classements au niveau de l'expression sont définis lors de l'exécution d'une instruction et ils affectent la façon dont l'ensemble de résultats est retourné. Cela permet aux résultats de tri ORDER BY d'être spécifiques aux paramètres régionaux. Utilisez une clause COLLATE telle que la suivante pour implémenter les classements au niveau de l'expression :  
   
 ```  
 SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;  
@@ -104,15 +104,15 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
  Les paramètres régionaux sont un ensemble d'informations associées à un emplacement ou à une culture. Il peut s'agir du nom et de l'identificateur de la langue parlée, du script utilisé pour écrire la langue et des conventions culturelles. Les classements peuvent être associés à un ou plusieurs ensembles de paramètres régionaux. Pour plus d'informations, consultez [Locale IDs Assigned by Microsoft (en anglais)](https://msdn.microsoft.com/goglobal/bb964664.aspx).  
   
   
-###  <a name="Code_Page_Defn"></a> Code Page  
+###  <a name="Code_Page_Defn"></a>Page de codes  
  Une page de codes est le jeu ordonné de caractères d'un script donné dans lequel un index numérique (ou une valeur de point de code) est associé à chaque caractère. Une page de codes Windows est généralement appelée *jeu de caractères* ou *charset*. Les pages de codes permettent d'assurer la prise en charge des jeux de caractères et des dispositions du clavier utilisés par différents paramètres régionaux système Windows.  
   
   
-###  <a name="Sort_Order_Defn"></a> Sort Order  
+###  <a name="Sort_Order_Defn"></a>Ordre de tri  
  L'ordre de tri spécifie comment sont triées les valeurs de données. Cela affecte les résultats de comparaison de données. Les données sont triées en utilisant les classements et peuvent être optimisées à l'aide des index.  
   
   
-##  <a name="Unicode_Defn"></a> Prise en charge d’Unicode  
+##  <a name="Unicode_Defn"></a>Prise en charge Unicode  
  Unicode est un standard en matière de correspondance de points de code avec des caractères. Comme il est conçu pour couvrir tous les caractères de toutes les langues du monde, il n'y a pas besoin de pages de codes différentes pour gérer des jeux de caractères différents. Si vous stockez des données de caractères de plusieurs langues, utilisez toujours les types de données Unicode (`nchar`, `nvarchar` et `ntext`) à la place des types de données non-Unicode (`char`, `varchar` et `text`).  
   
  Des limitations significatives sont associées aux types de données non-Unicode. C'est parce qu'un ordinateur non-Unicode sera restreint quant à l'utilisation d'une page de codes unique. Vous pouvez bénéficier de gains de performances en utilisant Unicode parce qu'un moins grand nombre de conversions de page de codes est requis. Les classements unicode doivent être sélectionnés individuellement au niveau de la base de données, de la colonne ou de l'expression parce qu'ils ne sont pas pris en charge au niveau serveur.  
@@ -129,13 +129,13 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
  Dans de nombreuses situations, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre en interaction avec d'autres serveurs ou clients et votre organisation peut utiliser différentes normes d'accès aux données entre les applications et les instances de serveur. Les clients[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont l'un des deux types principaux :  
   
--   Les**clients Unicode** qui utilisent OLE DB et ODBC (Open Database Connectivity) 3.7 ou version ultérieure.  
+-   **Les clients Unicode** qui utilisent OLE DB et Open Database Connectivity (ODBC) version 3,7 ou une version ultérieure.  
   
--   Les**clients non-Unicode** qui utilisent DB-Library et ODBC 3.6 ou version antérieure.  
+-   **Clients non-Unicode** qui utilisent DB-Library et ODBC version 3,6 ou une version antérieure.  
   
  Le tableau suivant présente des informations sur l'utilisation des données multilingues avec diverses combinaisons de serveurs Unicode et non-Unicode.  
   
-|Server|Client|Avantages ou restrictions|  
+|Serveur|Client|Avantages ou restrictions|  
 |------------|------------|-----------------------------|  
 |Unicode|Unicode|Comme les données Unicode seront utilisées dans la totalité du système, ce scénario fournit les meilleures performances et la meilleure protection contre la modification des données extraites. C’est le cas avec ActiveX Data Objects (ADO), OLE DB et ODBC 3.7 ou version ultérieure.|  
 |Unicode|Non-Unicode|Dans ce scénario, et surtout avec les connexions entre un serveur exécutant un système d'exploitation récent et un client exécutant une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou un système d'exploitation plus ancien, il peut y avoir des limitations ou des erreurs lorsque vous déplacez des données vers un ordinateur client. Les données Unicode sur le serveur tenteront d'établir un mappage à une page de codes correspondante sur le client non-Unicode afin de convertir les données.|  
@@ -143,8 +143,8 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |Non-Unicode|Non-Unicode|Cette configuration est la plus limitée pour des données multilingues. Vous pouvez utiliser uniquement une seule page de codes.|  
   
   
-##  <a name="Supplementary_Characters"></a> Caractères supplémentaires  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des types de données tels que `nchar` et `nvarchar` pour stocker des données Unicode. Ces types de données encodent le texte dans un format appelé *UTF-16*. Le Consortium Unicode alloue à chaque caractère un codepoint unique, qui est une valeur comprise entre 0x0000 et 0x10FFFF. Les caractères les plus fréquemment utilisés ont des valeurs de codepoint qui correspondent à un mot de 16 bits en mémoire et sur le disque, mais les caractères dont les valeurs de codepoint sont supérieures à 0xFFFF requièrent deux mots de 16 bits consécutifs. Ces caractères sont appelés des *caractères supplémentaires*et les deux mots de 16 bits consécutifs sont appelés des *paires de substitution*.  
+##  <a name="Supplementary_Characters"></a>Caractères supplémentaires  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fournit des types de données `nchar` tels `nvarchar` que et pour stocker des données Unicode. Ces types de données encodent le texte dans un format appelé *UTF-16*. Le Consortium Unicode alloue à chaque caractère un codepoint unique, qui est une valeur comprise entre 0x0000 et 0x10FFFF. Les caractères les plus fréquemment utilisés ont des valeurs de codepoint qui correspondent à un mot de 16 bits en mémoire et sur le disque, mais les caractères dont les valeurs de codepoint sont supérieures à 0xFFFF requièrent deux mots de 16 bits consécutifs. Ces caractères sont appelés des *caractères supplémentaires*et les deux mots de 16 bits consécutifs sont appelés des *paires de substitution*.  
   
  Si vous utilisez des caractères supplémentaires :  
   
@@ -154,19 +154,19 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
 -   Les caractères supplémentaires ne sont pas utilisables dans les métadonnées, telles que les noms d'objets de base de données.  
   
--   Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], une nouvelle famille de classements de caractères supplémentaires (SC) peut être utilisée avec les types de données `nchar`, `nvarchar` et `sql_variant`. Par exemple : `Latin1_General_100_CI_AS_SC`ou si vous utilisez un classement japonais, `Japanese_Bushu_Kakusu_100_CI_AS_SC`.  
+-   Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], une nouvelle famille de classements de caractères supplémentaires (SC) peut être utilisée avec les types de données `nchar`, `nvarchar` et `sql_variant`. Par exemple : `Latin1_General_100_CI_AS_SC` ou si vous utilisez un classement japonais, `Japanese_Bushu_Kakusu_100_CI_AS_SC`.  
   
-     L'indicateur SC peut s'appliquer :  
+     L’indicateur SC peut s’appliquer aux éléments suivants :  
   
     -   Classements Windows version 90  
   
     -   Classements Windows version 100  
   
-     L'indicateur SC ne peut pas s'appliquer :  
+     L’indicateur SC ne peut pas s’appliquer aux éléments suivants :  
   
     -   Classements Windows version 80 et sans version  
   
-    -   aux classements binaires BIN ou BIN2 ;  
+    -   Classements binaires BIN ou BIN2  
   
     -   Classements SQL*  
   
@@ -181,11 +181,11 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |[Recherche de correspondance d’un seul caractère générique](/sql/t-sql/language-elements/wildcard-match-one-character-transact-sql)<br /><br /> [Caractère générique - Caractères à ne pas faire correspondre](/sql/t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql)|Les caractères supplémentaires sont pris en charge pour toutes les opérations génériques.|Les caractères supplémentaires ne sont pas pris en charge pour ces opérations génériques. D'autres opérateurs génériques sont pris en charge.|  
   
   
-##  <a name="GB18030"></a> Prise en charge du langage GB18030  
+##  <a name="GB18030"></a>Prise en charge de GB18030  
  GB18030 est une norme distincte utilisée en République populaire de Chine pour l'encodage des caractères chinois. Dans la norme GB18030, les caractères peuvent être encodés sur 1, 2 ou 4 octets de longueur. Pour prendre en charge les caractères encodés selon la norme GB18030,[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les reconnaît lorsqu'ils entrent dans le serveur en provenance d'une application côté client, puis les convertit et les stocke en mode natif en tant que caractères Unicode. Une fois stockés dans le serveur, ils sont traités en tant que caractères Unicode dans toutes les opérations suivantes. Vous pouvez utiliser n'importe quel classement chinois, de préférence la version 100 la plus récente. Tous les classements de niveau _100 prennent en charge le tri linguistique avec les caractères GB18030. Si les données incluent des caractères supplémentaires (paires de substitution), vous pouvez utiliser les classements SC disponibles dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] pour améliorer la recherche et le tri.  
   
   
-##  <a name="Complex_script"></a> Prise en charge des scripts complexes  
+##  <a name="Complex_script"></a>Prise en charge des scripts complexes  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut prendre en charge l'entrée, le stockage, la modification et l'affichage de scripts complexes. Les scripts complexes sont les suivants :  
   
 -   Scripts qui associent l'utilisation de textes écrits de droite à gauche et de gauche à droite, par exemple les textes écrits en arabe et en anglais.  
@@ -197,7 +197,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
  Les applications de base de données qui interagissent avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent utiliser des contrôles qui prennent en charge les scripts complexes. Les contrôles Windows Form standard créés dans du code managé peuvent prendre en charge les scripts complexes.  
   
   
-##  <a name="Related_Tasks"></a> Tâches connexes  
+##  <a name="Related_Tasks"></a> Tâches associées  
   
 |Tâche|Rubrique|  
 |----------|-----------|  
@@ -209,12 +209,12 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |Explique comment modifier la langue des messages d'erreur et des paramètres relatifs à l'utilisation et l'affichage de la date, de l'heure et des devises.|[Définir une langue de session](set-a-session-language.md)|  
   
   
-##  <a name="Related_Content"></a> Contenu connexe  
+##  <a name="Related_Content"></a> Contenu associé  
  [SQL Server Best Practices Collation Change (Bonnes pratiques relatives au changement de classement dans SQL Server)](https://go.microsoft.com/fwlink/?LinkId=113891)  
   
- [SQL Server Best Practices Migration to Unicode (Bonnes pratiques relatives à la migration vers Unicode dans SQL Server)](https://go.microsoft.com/fwlink/?LinkId=113890)  
+ [« SQL Server les meilleures pratiques en matière de migration vers Unicode »](https://go.microsoft.com/fwlink/?LinkId=113890)  
   
- [Site web du consortium Unicode](https://go.microsoft.com/fwlink/?LinkId=48619)  
+ [Site Web du consortium Unicode](https://go.microsoft.com/fwlink/?LinkId=48619)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classements de base de données autonome](../databases/contained-database-collations.md)   

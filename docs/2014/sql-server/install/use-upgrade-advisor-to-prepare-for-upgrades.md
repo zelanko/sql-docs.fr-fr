@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab9c51ba125a7489d693a1af6b16e432e8fb7099
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632735"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Utiliser le Conseiller de mise à niveau pour la préparation des mises à niveau
@@ -56,17 +56,18 @@ ms.locfileid: "73632735"
 >  Les rapports peuvent contenir un élément « autres problèmes de mise à niveau ». Cet élément mène à une liste de problèmes qui ne sont pas détectés par le Conseiller de mise à niveau, mais qui peuvent exister sur votre serveur ou dans vos applications. Vous devez examiner la liste des problèmes non détectables et déterminer si vous devez modifier votre serveur ou vos applications en raison des problèmes non détectables.  
   
 ## <a name="how-to-install-and-run-upgrade-advisor"></a>Comment installer et exécuter le Conseiller de mise à niveau  
- L'emplacement d'installation du Conseiller de mise à niveau de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dépend des éléments que vous allez analyser. Le Conseiller de mise à niveau prend en charge l'analyse distante de tous les composants pris en charge, à l'exception de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si vous n'analysez pas d'instances de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous pouvez installer le Conseiller de mise à niveau sur n'importe quel ordinateur pouvant se connecter à votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et répondant à la configuration requise du Conseiller de mise à niveau. Pour plus d’informations, consultez [Mises à niveau de la version et de l’édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Si vous analysez des instances de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous devez installer le Conseiller de mise à niveau sur le serveur de rapports.  
+ L'emplacement d'installation du Conseiller de mise à niveau de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dépend des éléments que vous allez analyser. Le Conseiller de mise à niveau prend en charge l'analyse distante de tous les composants pris en charge, à l'exception de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si vous n'analysez pas d'instances de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous pouvez installer le Conseiller de mise à niveau sur n'importe quel ordinateur pouvant se connecter à votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et répondant à la configuration requise du Conseiller de mise à niveau. Pour plus d’informations, consultez [mises à niveau de version et d’édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Si vous analysez des instances de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous devez installer le Conseiller de mise à niveau sur le serveur de rapports.  
   
  Le Conseiller de mise à niveau est disponible dans un Feature Pack.  
   
  Les conditions préalables à l’installation et à l’exécution du conseiller de mise à niveau sont les suivantes :  
   
--   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2, Windows 7 SP1, et [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1.  
+-   
+  [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2, Windows 7 SP1, et [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1.  
   
 -   Windows Installer depuis la version 4.5. Vous pouvez installer Windows Installer à partir du [site Web Windows Installer](https://www.microsoft.com/download/details.aspx?id=8483).  
   
--   Microsoft .NET Framework 4. .NET Framework 4 est disponible sur le support produit de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et sur la [page de téléchargement de .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=209895).  
+-   Microsoft .NET Framework 4. .NET Framework 4 est disponible sur le [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] support du produit et à partir de la [page de téléchargement .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=209895).  
   
     -   Pour installer .NET Framework 4 à partir du support de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], localisez la racine du lecteur de disque. Ensuite, double-cliquez sur le dossier \redist, sur le dossier DotNetFrameworks et exécutez dotNetFx40_Full_x86_x64.exe (pour les systèmes d'exploitation 32 bits ou 64 bits).  
   
@@ -74,13 +75,13 @@ ms.locfileid: "73632735"
   
  Après avoir installé le conseiller de mise à niveau, vous pouvez l’ouvrir à partir du menu **Démarrer** :  
   
--   Cliquez sur **Démarrer**, pointez sur **tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], puis cliquez sur **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] le conseiller de mise à niveau**.  
+-   Cliquez sur **Démarrer**, pointez sur **tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], puis cliquez sur ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] conseiller de mise à niveau**.  
   
  Pour plus d'informations, consultez la documentation relative au Conseiller de mise à niveau incluse dans le téléchargement du Conseiller de mise à niveau, ainsi que les Notes de publication de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utiliser plusieurs versions et instances de SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
- [Mises à niveau de la version et de l’édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
+ [Mises à niveau de la version et de l'édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Compatibilité descendante](../../../2014/getting-started/backward-compatibility.md)  
   
   

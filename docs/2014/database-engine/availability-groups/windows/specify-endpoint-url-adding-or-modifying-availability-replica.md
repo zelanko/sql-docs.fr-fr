@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 524f9d4b3173a70d3491f2efc0f00f4061c4d6b4
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797969"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>Spécifier l'URL de point de terminaison lors de l'ajout ou lors de la modification d'un réplica de disponibilité (SQL Server)
@@ -30,24 +30,24 @@ ms.locfileid: "72797969"
   
 -   [Syntaxe pour une URL de point de terminaison](#SyntaxOfURL)  
   
--   [Recherche du nom de domaine complet d'un système](#Finding_FQDN)  
+-   [Recherche du nom de domaine complet d’un système](#Finding_FQDN)  
   
--   [Tâches connexes](#RelatedTasks)  
+-   [Tâches associées](#RelatedTasks)  
   
 -   [Contenu associé](#RelatedContent)  
   
-##  <a name="SyntaxOfURL"></a> Syntaxe pour une URL de point de terminaison  
- La syntaxe d'une URL de point de terminaison est la suivante :  
+##  <a name="SyntaxOfURL"></a>Syntaxe pour une URL de point de terminaison  
+ La syntaxe d'une URL de point de terminaison est la suivante :  
   
  TCP<strong>://</strong> *\<adresse-système>* <strong>:</strong> *\<port>*  
   
- où  
+ where  
   
--   *\<adresse_système>* est une chaîne qui identifie sans ambiguïté le système informatique cible. En règle générale, l'adresse de serveur est un nom système (si les systèmes sont dans le même domaine), un nom de domaine complet ou une adresse IP :  
+-   >d’adresse système est une chaîne qui identifie sans ambiguïté le système informatique cible. * \<* En règle générale, l'adresse de serveur est un nom système (si les systèmes sont dans le même domaine), un nom de domaine complet ou une adresse IP :  
   
     -   Étant donné que les nœuds du cluster WSFC (clustering de basculement Windows Server) figurent dans le même domaine, vous pouvez utiliser le nom du système informatique, par exemple `SYSTEM46`.  
   
-    -   Pour pouvoir utiliser une adresse IP, elle doit être unique dans votre environnement. Nous vous recommandons d'utiliser une adresse IP seulement si elle est statique. L'adresse IP peut être une adresse IP Version 4 (IPv4) ou IP Version 6 (IPv6). Une adresse IPv6 doit être placée entre crochets, par exemple : **[** _<adresse_IPv6>_ **]** .  
+    -   Pour pouvoir utiliser une adresse IP, elle doit être unique dans votre environnement. Nous vous recommandons d'utiliser une adresse IP seulement si elle est statique. L'adresse IP peut être une adresse IP Version 4 (IPv4) ou IP Version 6 (IPv6). Une adresse IPv6 doit être placée entre crochets, par exemple : **[** _<adresse_IPv6>_ **]** .  
   
          Pour connaître l'adresse IP d'un système, à l'invite de commandes Windows, entrez la commande **ipconfig** .  
   
@@ -65,7 +65,7 @@ ms.locfileid: "72797969"
   
      Dans l'URL de point de terminaison, seul le numéro du port identifie l'instance de serveur associée au point de terminaison de mise en miroir sur l'ordinateur cible. L'illustration suivante présente les URL de point de terminaison de deux instances de serveurs sur un même ordinateur. L'instance par défaut utilise le port `7022` et l'instance nommée utilise le port `7033`. L'URL de point de terminaison de ces deux instances de serveur sont, respectivement : `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7022` et `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7033`. Notez que l'adresse ne contient pas le nom de l'instance du serveur.  
   
-     ![Adresses réseau du serveur d’une instance par défaut](../../media/dbm-2-instances-ports-1-system.gif "Adresses réseau du serveur d’une instance par défaut")  
+     ![Adresses réseau de serveur d’une instance par défaut](../../media/dbm-2-instances-ports-1-system.gif "Adresses réseau de serveur d’une instance par défaut")  
   
      Pour identifier le port actuellement associé au point de terminaison de mise en miroir de bases de données d'une instance de serveur, utilisez l'instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivante :  
   
@@ -77,7 +77,7 @@ ms.locfileid: "72797969"
   
 ### <a name="examples"></a>Exemples  
   
-#### <a name="a-using-a-system-name"></a>A. Utilisation d'un nom système  
+#### <a name="a-using-a-system-name"></a>R. Utilisation d'un nom système  
  L'URL de point de terminaison suivante spécifie un nom système, `SYSTEM46`, et le port `7022`.  
   
  `TCP://SYSTEM46:7022`  
@@ -97,14 +97,14 @@ ms.locfileid: "72797969"
   
  `TCP://[2001:4898:23:1002:20f:1fff:feff:b3a3]:7022`  
   
-##  <a name="Finding_FQDN"></a> Recherche du nom de domaine complet d'un système  
+##  <a name="Finding_FQDN"></a>Recherche du nom de domaine complet d’un système  
  Pour rechercher le nom de domaine complet d'un système, à l'invite de commandes Windows de ce système, entrez :  
   
  **IPCONFIG /ALL**  
   
  Pour former le nom de domaine complet, concaténez les valeurs de *<host_name>* et *<Primary_Dns_Suffix>* de la manière suivante :  
   
- _&lt;nom_hôte&gt;_ **.** _<Suffixe_DNS_principal>_  
+ _<host_name>_ **.** _<Suffixe_DNS_principal>_  
   
  Par exemple, la configuration IP  
   
@@ -119,10 +119,10 @@ ms.locfileid: "72797969"
 > [!NOTE]  
 >  Pour obtenir des informations supplémentaires sur un nom de domaine complet, contactez votre administrateur système.  
   
-##  <a name="RelatedTasks"></a> Tâches connexes  
+##  <a name="RelatedTasks"></a> Tâches associées  
  **Pour configurer un point de terminaison de mise en miroir de bases de données**  
   
--   [Créer un point de terminaison de mise en &#40;miroir de bases de données pour groupes de disponibilité AlwaysOn SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Créer un point de terminaison de mise en miroir de bases de données pour groupes de disponibilité AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
@@ -134,7 +134,7 @@ ms.locfileid: "72797969"
   
 -   [Spécifier une adresse réseau de serveur &#40;mise en miroir de bases de données&#41;](../../database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
--   [Résoudre les problèmes &#40;de&#41;configuration de groupes de disponibilité AlwaysOn SQL Server supprimés](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+-   [Résoudre les problèmes de configuration de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;supprimé](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
  **Pour afficher des informations sur le point de terminaison de mise en miroir de bases de données**  
   
@@ -146,11 +146,11 @@ ms.locfileid: "72797969"
   
 -   [Joindre un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Contenu connexe  
+##  <a name="RelatedContent"></a> Contenu associé  
   
--   [Microsoft SQL Server Guide de solutions AlwaysOn pour la haute disponibilité et la récupération d’urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guide de solutions Microsoft SQL Server AlwaysOn pour la haute disponibilité et la récupération d'urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création et configuration des groupes de disponibilité &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [Vue d’ensemble &#40;de&#41; groupes de disponibilité AlwaysOn SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
+ [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  

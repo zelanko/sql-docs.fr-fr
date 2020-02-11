@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: c9ee7f745fc683a9ed93f2ca09ac94e1bf580f71
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952378"
 ---
 # <a name="virtual-directories-are-unspecified-upgrade-advisor"></a>Les répertoires virtuels ne sont pas spécifiés (Conseiller de mise à niveau)
@@ -24,7 +24,7 @@ ms.locfileid: "71952378"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Mode natif.|  
   
 ## <a name="component"></a>Composant  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
@@ -35,9 +35,9 @@ ms.locfileid: "71952378"
 ## <a name="corrective-action"></a>Action corrective  
  Une fois la mise à niveau terminée, utilisez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour définir les URL pour le serveur de rapports et le Gestionnaire de rapports. Utilisez le gestionnaire des services Internet pour supprimer tous les répertoires virtuels dont vous n’avez plus besoin.  
   
- Pour plus d’informations, consultez [configurer une &#40;URL SSRS&#41; Configuration Manager dans la](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Pour plus d’informations, consultez [configurer une URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Conseiller de mise &#40;à niveau des problèmes de mise à niveau Reporting Services&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+ [Problèmes de mise à niveau de Reporting Services &#40;conseiller de mise à niveau&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

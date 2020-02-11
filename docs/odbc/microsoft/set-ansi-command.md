@@ -13,14 +13,14 @@ ms.assetid: cf9a01b2-14bf-458c-a73c-2a58ddef32d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d32e4dc27568b37f273ef654ebd45d26ca23e555
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997765"
 ---
 # <a name="set-ansi-command"></a>SET ANSI, commande
-Détermine comment les comparaisons entre chaînes de longueurs différentes sont effectuées avec l’opérateur dans les commandes de Visual FoxPro SQL =.  
+Détermine comment les comparaisons entre des chaînes de longueurs différentes sont effectuées avec l’opérateur = dans les commandes SQL Visual FoxPro.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -30,32 +30,32 @@ SET ANSI ON | OFF
 ```  
   
 ## <a name="arguments"></a>Arguments  
- ON  
- (Par défaut pour le pilote ; la valeur par défaut pour Visual FoxPro est désactivée (OFF).) Remplit pour que la chaîne courte avec les champs vides nécessaires rend la longueur d’une chaîne égale à plus. Les deux chaînes sont ensuite comparé caractère pour caractère pour leurs longueurs entières. Prenez en compte cette comparaison :  
+ ACTIVÉ  
+ (Valeur par défaut pour le pilote ; la valeur par défaut de Visual FoxPro est OFF.) Remplit la chaîne plus petite avec les espaces nécessaires pour la faire correspondre à la longueur de la chaîne la plus longue. Les deux chaînes sont ensuite comparées caractère pour les caractères pour leur longueur entière. Prenons l’exemple de cette comparaison :  
   
 ```  
 'Tommy' = 'Tom'  
 ```  
   
- Le résultat est False (. F.) si SET ANSI est activé, car lorsque complétée, « Tom » devient 'Tom' et les chaînes « Tom » et 'Tommy' ne correspondent pas caractère pour caractère.  
+ Le résultat est false (. F.) si SET ANSI a la valeur on, car lorsqu’elle est complétée, « Tom » devient « Tom » et les chaînes « Tom » et « Tommy » ne correspondent pas au caractère pour le caractère.  
   
- Le == opérateur utilise cette méthode pour les comparaisons dans les commandes de Visual FoxPro SQL.  
+ L’opérateur « = = » utilise cette méthode pour les comparaisons dans les commandes SQL Visual FoxPro.  
   
  OFF  
- Spécifie que la chaîne plus courte ne soient ne pas complétés par des espaces. Les deux chaînes sont comparées caractère pour caractère jusqu'à la fin de la chaîne plus courte. Prenez en compte cette comparaison :  
+ Spécifie que la chaîne la plus petite ne doit pas être complétée par des espaces. Les deux chaînes sont des caractères comparés au caractère jusqu’à ce que la fin de la chaîne plus petite soit atteinte. Prenons l’exemple de cette comparaison :  
   
 ```  
 'Tommy' = 'Tom'  
 ```  
   
- Le résultat est True (. T.) lorsque SET ANSI est désactivé, car la comparaison s’arrête après 'Tom'.  
+ Le résultat est true (. T.) lorsque l’option SET ANSI est désactivée (OFF), la comparaison s’arrête après « Tom ».  
   
 ## <a name="remarks"></a>Notes  
- SET ANSI détermine si la plus courte des deux chaînes est remplie avec des espaces lorsqu’une comparaison de chaînes SQL est effectuée. SET ANSI n’a aucun effet le ==, opérateur ; Lorsque vous utilisez l’opérateur ==, la chaîne plus courte est toujours complétée par des espaces pour la comparaison.  
+ SET ANSI détermine si le plus petit de deux chaînes est complété par des espaces quand une comparaison de chaînes SQL est effectuée. SET ANSI n’a aucun effet sur l’opérateur = =; Lorsque vous utilisez l’opérateur = =, la chaîne la plus petite est toujours complétée par des espaces pour la comparaison.  
   
-## <a name="string-order"></a>Ordre de la chaîne  
- Dans les commandes SQL, l’ordre de gauche à droite des deux chaînes dans une comparaison est irrelevantswitching une chaîne à partir d’un côté de la = ou == opérateur à l’autre n’affecte pas le résultat de la comparaison.  
+## <a name="string-order"></a>Ordre des chaînes  
+ Dans les commandes SQL, l’ordre de gauche à droite des deux chaînes dans une comparaison est irrelevantswitching une chaîne d’un côté de l’opérateur = ou = = à l’autre n’affecte pas le résultat de la comparaison.  
   
 ## <a name="see-also"></a>Voir aussi  
- [SELECT, commande SQL](../../odbc/microsoft/select-sql-command.md)   
+ [SELECT-commande SQL](../../odbc/microsoft/select-sql-command.md)   
  [SET EXACT, commande](../../odbc/microsoft/set-exact-command.md)

@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c6dd1e22f90b834f5683a53d7b206dd1c8ad46e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099510"
 ---
 # <a name="set-report-server-properties-management-studio"></a>Définir les propriétés du serveur de rapports (Management Studio)
-  Vous pouvez définir les propriétés système du serveur de rapports dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] afin d’activer des fonctionnalités ou de définir les valeurs par défaut du serveur.  
+  Vous pouvez définir les propriétés système du serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] de rapports dans pour activer les fonctionnalités ou définir les valeurs par défaut du serveur.  
   
 ### <a name="to-open-the-advanced-server-properties-page"></a>Pour ouvrir la page de propriétés avancées du serveur  
   

@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5c78044f8790f3a1ab97d036467813efa3d30e6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913995"
 ---
-# <a name="mssqlserver41325"></a>MSSQLSERVER_41325
+# <a name="mssqlserver_41325"></a>MSSQLSERVER_41325
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|ID d'événement|41325|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|41325|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|HK_TX_COMMIT_SR_VALIDATION|  
 |Texte du message|La transaction en cours n'a pas été validée en raison d'un échec de validation SERIALIZABLE.|  

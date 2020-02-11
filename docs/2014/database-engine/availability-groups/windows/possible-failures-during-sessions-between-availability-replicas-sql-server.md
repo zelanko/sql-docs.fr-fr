@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b614a2e405501e2c41cae1add9e8e6b47d372dae
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874474"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Défaillances possibles pendant les sessions entre les réplicas de disponibilité (SQL Server)
@@ -59,7 +59,8 @@ ms.locfileid: "70874474"
   
 -   les câbles sont débranchés ;  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows comprend un pare-feu qui bloque un port spécifique ;  
+-   
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows comprend un pare-feu qui bloque un port spécifique ;  
   
 -   l'application de surveillance d'un port ne fonctionne pas ;  
   
@@ -68,14 +69,15 @@ ms.locfileid: "70874474"
 -   un serveur Windows a été redémarré ;  
   
 > [!NOTE]  
->  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)] ne protège pas des problèmes spécifiques au client qui accède aux serveurs. Prenons l'exemple d'un cas dans lequel une carte réseau publique gère des connexions clientes au réplica principal, tandis qu'une carte d'interface réseau privée gère le trafic entre les instances de serveur qui hébergent les réplicas d'un groupe de disponibilité. Dans ce cas, l'échec de la carte réseau publique empêcherait les clients d'accéder aux bases de données.  
+>  
+  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)] ne protège pas des problèmes spécifiques au client qui accède aux serveurs. Prenons l'exemple d'un cas dans lequel une carte réseau publique gère des connexions clientes au réplica principal, tandis qu'une carte d'interface réseau privée gère le trafic entre les instances de serveur qui hébergent les réplicas d'un groupe de disponibilité. Dans ce cas, l'échec de la carte réseau publique empêcherait les clients d'accéder aux bases de données.  
   
 ## <a name="failures-due-to-soft-errors"></a>Défaillances dues à des erreurs logicielles  
  Parmi les conditions susceptibles de provoquer des délais d'expiration de session figurent notamment, sans s'y limiter, les situations suivantes :  
   
 -   des erreurs réseau, par exemple, un dépassement de délai de la liaison TCP, des paquets supprimés ou endommagés, des paquets dans le désordre ;  
   
--   Un système d’exploitation, un serveur ou une base de données qui ne répond pas.  
+-   un système d’exploitation, un serveur ou une base de données qui ne répond pas ;  
   
 -   un serveur Windows en cours de dépassement d'un délai d'expiration ;  
   
@@ -86,21 +88,21 @@ ms.locfileid: "70874474"
   
  Les réplicas primaire et secondaire s'envoient réciproquement une commande ping pour signaler qu'ils sont toujours actifs, et la limite définie par le délai d'expiration de session empêche que l'un ou l'autre réplica attende indéfiniment de recevoir une commande ping de l'autre réplica. La limite définie par le délai d'expiration de session est une propriété de réplica configurable par l'utilisateur dont la valeur par défaut est de 10 secondes. La réception d'un ping au cours du délai d'attente indique que la connexion est toujours ouverte et que les instances de serveur communiquent via celle-ci. À la réception d'un ping, un réplica de disponibilité réinitialise son compteur de délai d'expiration de session sur cette connexion.  
   
- Si aucun ping n'est reçu de l'autre réplica au cours de la période d'expiration de session, la connexion expire. La connexion est fermée, et le réplica expiré passe à l'état DISCONNECTED. Même si un réplica déconnecté est configuré pour le mode de validation synchrone, les transactions n'attendront pas que ce réplica se reconnecte et se resynchronise.  
+ Si aucun ping n’est reçu de l’autre réplica au cours de la période d’expiration de session, la connexion expire. La connexion est fermée, et le réplica ayant expiré passe à l’État Disconnected. Même si un réplica déconnecté est configuré pour le mode de validation synchrone, les transactions n'attendront pas que ce réplica se reconnecte et se resynchronise.  
   
 ## <a name="responding-to-an-error"></a>Réponse à une erreur  
  Quel que soit le type d'erreur, une instance de serveur qui détecte une erreur réagit comme il se doit en fonction du rôle de l'instance, du mode de disponibilité de la session et de l'état des autres connexions de la session. Pour plus d’informations sur ce qui se produit lors de la perte d’un partenaire, consultez [modes de disponibilité (groupes de disponibilité AlwaysOn)](availability-modes-always-on-availability-groups.md).  
   
 ## <a name="related-tasks"></a>Tâches associées  
- **Pour modifier la valeur du délai d'expiration (mode de disponibilité avec validation synchrone uniquement)**  
+ **Pour modifier la valeur du délai d’attente (mode de disponibilité avec validation synchrone uniquement)**  
   
 -   [Modifier le délai d’expiration de session pour un réplica de disponibilité &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
- **Pour afficher la valeur actuelle du délai d'attente**  
+ **Pour afficher la valeur du délai d’attente actuel**  
   
 -   Interroger **session_timeout** dans [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble &#40;de groupes de disponibilité AlwaysOn SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96267b98d7e17b920e0a7cee70b69e4c964584e4
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798007"
 ---
 # <a name="copy-only-backups-sql-server"></a>Sauvegardes de type copie seule (SQL Server)
@@ -38,10 +38,10 @@ ms.locfileid: "72798007"
   
      Le journal des transactions n'est jamais tronqué après une sauvegarde de type copie seule.  
   
- Les sauvegardes de copie uniquement sont enregistrées dans la colonne **is_copy_only** de la table [backupset](/sql/relational-databases/system-tables/backupset-transact-sql).  
+ Les sauvegardes de copie uniquement sont enregistrées dans la colonne **is_copy_only** de la table [backupset](/sql/relational-databases/system-tables/backupset-transact-sql) .  
   
 ## <a name="to-create-a-copy-only-backup"></a>Pour créer une sauvegarde de type copie uniquement  
- Vous pouvez créer une sauvegarde de copie uniquement à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou de PowerShell.  
+ Vous pouvez créer une sauvegarde de copie uniquement à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell.  
   
 ###  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
@@ -52,24 +52,24 @@ ms.locfileid: "72798007"
   
 -   Pour une sauvegarde complète de type copie uniquement :  
   
-     SAUVEGARDER la base de données *database_name* de \<backup_device *>* ... AVEC COPY_ONLY...  
+     SAUVEGARDER la base de \<données*>* *database_name* à backup_device... AVEC COPY_ONLY...  
   
     > [!NOTE]  
     >  COPY_ONLY n'a aucun effet lorsqu'il est spécifié avec l'option DIFFERENTIAL.  
   
 -   Pour une sauvegarde de fichier journal de type copie uniquement  
   
-     SAUVEGARDER les *database_name* du journal de *\<* backup_device *>* ... AVEC COPY_ONLY...  
+     *Database_name* du journal de *\<* sauvegarde*>* sur backup_device... AVEC COPY_ONLY...  
   
 ###  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
   
 Utilisez l'applet de commande `Backup-SqlDatabase` avec le paramètre `-CopyOnly`.  
   
-##  <a name="RelatedTasks"></a> Tâches connexes  
+##  <a name="RelatedTasks"></a> Tâches associées  
 
 ### <a name="to-create-a-full-or-log-backup"></a>Pour créer une sauvegarde complète ou de fichier journal
   
--   [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
+-   [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
 -   [Sauvegarder un journal des transactions &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
@@ -79,7 +79,7 @@ Utilisez l'applet de commande `Backup-SqlDatabase` avec le paramètre `-CopyOnly
   
 ### <a name="to-set-up-and-use-the-sql-server-powershell-provider"></a>Pour configurer et utiliser le fournisseur SQL Server PowerShell
   
--   [fournisseur PowerShell SQL Server](../../powershell/sql-server-powershell-provider.md)  
+-   [Fournisseur SQL Server PowerShell](../../powershell/sql-server-powershell-provider.md)  
 
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](backup-overview-sql-server.md)   

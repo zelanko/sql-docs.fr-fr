@@ -18,37 +18,37 @@ ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7304062298a95406a223ba58026379a3bebf392f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931473"
 ---
 # <a name="recordcount-property-ado"></a>RecordCount, propriété (ADO)
 
-Indique le nombre d’enregistrements dans une [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.
+Indique le nombre d’enregistrements dans un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .
   
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne un **Long** valeur qui indique le nombre d’enregistrements dans le **Recordset**.
+Retourne une valeur de **type long** qui indique le nombre d’enregistrements dans le **Recordset**.
   
 ## <a name="remarks"></a>Notes
 
-Utilisez le **RecordCount** propriété pour déterminer le nombre d’enregistrements sont dans un **Recordset** objet. La propriété retourne -1 quand ADO ne peut pas déterminer le nombre d’enregistrements ou si le type de curseur ou le fournisseur ne prend pas en charge **RecordCount**. Lire le **RecordCount** propriété sur un fermé **Recordset** provoque une erreur.
+Utilisez la propriété **RecordCount** pour déterminer le nombre d’enregistrements dans un objet **Recordset** . La propriété retourne-1 lorsque ADO ne peut pas déterminer le nombre d’enregistrements ou si le type de fournisseur ou de curseur ne prend pas en charge **RecordCount**. La lecture de la propriété **RecordCount** sur un **jeu d’enregistrements** fermé génère une erreur.
 
-#### <a name="bookmarks-or-approximate-positioning"></a>Positionnement approximatif ou les signets
+#### <a name="bookmarks-or-approximate-positioning"></a>Signets ou positionnement approximatif
 
-Si l’objet Recordset *est* prennent en charge les deux signets ou approximative de positionnement, cette propriété retourne le nombre exact d’enregistrements dans le jeu d’enregistrements. Cette propriété retourne le nombre exact indépendamment de si le jeu d’enregistrements a été entièrement remplie.
+Si *l’objet Recordset prend en* charge les signets ou le positionnement approximatif, cette propriété retourne le nombre exact d’enregistrements dans le jeu d’enregistrements. Cette propriété retourne le nombre exact, que le jeu d’enregistrements ait été entièrement rempli ou non.
 
-En revanche, si l’objet Recordset ne *pas* prennent en charge les signets ou le positionnement approximatif, l’accès à cette propriété peut être une charge significative sur les ressources. Le vidage se produit parce que tous les enregistrements doivent récupérées et comptées pour renvoyer une valeur RecordCount précise.
+En revanche, si l’objet Recordset ne prend *pas* en charge les signets ou le positionnement approximatif, l’accès à cette propriété peut être un drainage significatif des ressources. La vidange se produit parce que tous les enregistrements doivent être récupérés et comptés pour retourner une valeur RecordCount exacte.
 
-- **adBookmark** liées à des signets.
-- **adApproxPosition** se rapporte au positionnement approximatif.
+- **adBookmark** lié aux signets.
+- **adApproxPosition** se réfère au positionnement approximatif.
 
 > [!NOTE]
-> Dans les versions ADO 2.8 et versions antérieures, le fournisseur SQLOLEDB extrait tous les enregistrements lorsqu’un curseur côté serveur est utilisé, en dépit du fait qu’elle retourne **True** pour les deux **prend en charge (adApproxPosition)** et **Prend en charge (adBookmark)** .
+> Dans les versions 2,8 et antérieures d’ADO, le fournisseur SQLOLEDB extrait tous les enregistrements lorsqu’un curseur côté serveur est utilisé, malgré le fait qu’il retourne la **valeur true** pour les deux **prises en charge (AdApproxPosition)** et **prend en charge (adBookmark)**.
   
-Le type de curseur de la **Recordset** objet détermine si le nombre d’enregistrements permettre être compté. Le **RecordCount** propriété retourne -1 pour un curseur avant uniquement ; le nombre réel pour une analyse statique ou curseur keyset ; et soit -1 ou le nombre réel pour un curseur dynamique, en fonction de la source de données.
+Le type de curseur de l’objet **Recordset** détermine si le nombre d’enregistrements peut être déterminé. La propriété **RecordCount** retourne-1 pour un curseur avant uniquement ; nombre réel pour un curseur statique ou de jeu de clés ; et soit-1, soit le nombre réel pour un curseur dynamique, en fonction de la source de données.
   
 ## <a name="applies-to"></a>S'applique à
 
@@ -57,6 +57,6 @@ Le type de curseur de la **Recordset** objet détermine si le nombre d’enregis
 ## <a name="see-also"></a>Voir aussi
 
 [Filter et RecordCount, exemple de propriétés (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)   
-[Filter et RecordCount propriétés exemple (VC ++)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)   
+[Filter et RecordCount, exemples de propriétés (VC + +)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)   
 [AbsolutePosition, propriété (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
 [PageCount, propriété (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)

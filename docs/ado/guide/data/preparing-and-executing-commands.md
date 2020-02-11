@@ -1,5 +1,5 @@
 ---
-title: Préparation et l’exécution de commandes | Microsoft Docs
+title: Préparation et exécution des commandes | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,23 +13,23 @@ ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2295d421f8b802f2f3b531d7de3fc086e43ad572
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924563"
 ---
 # <a name="preparing-and-executing-commands"></a>Préparation et l’exécution de commandes
-Les commandes sont émises pour un fournisseur des instructions pour effectuer certaines opérations sur la source de données sous-jacente. Une instruction SQL, par exemple, est une commande au fournisseur de données Microsoft SQL. Dans ADO, les commandes sont généralement représentées par **commande** objets, bien que des commandes simples peuvent également être émis via **connexion** ou **Recordset** objets.  
+Les commandes sont des instructions émises à un fournisseur pour effectuer des opérations sur la source de données sous-jacente. Une instruction SQL, par exemple, est une commande de l’Fournisseur de données Microsoft SQL. Dans ADO, les commandes sont généralement représentées par des objets de **commande** , bien que des commandes simples puissent également être émises via des objets de **connexion** ou **d’objet Recordset** .  
   
- Vous pouvez utiliser la **commande** objet pour demander de n’importe quel type d’opération pris en charge à partir du fournisseur, en supposant que le puisse interpréter correctement la chaîne de commande. Une opération courante pour les fournisseurs de données consiste à interroger une base de données et retourner des enregistrements dans une **Recordset** objet, qui peut être considéré comme un conteneur pour stocker le résultat et un outil pour afficher le résultat. À l’instar de nombreux objets ADO, certains **commande** collections d’objets, des méthodes ou propriétés peuvent générer des erreurs lorsque référencés, selon les fonctionnalités du fournisseur.  
+ Vous pouvez utiliser l’objet **Command** pour demander tout type d’opération pris en charge par le fournisseur, en supposant que le fournisseur puisse interpréter correctement la chaîne de commande. Une opération courante pour les fournisseurs de données consiste à interroger une base de données et à retourner des enregistrements dans un objet **Recordset** , qui peut être considéré comme un conteneur pour contenir le résultat et un outil pour afficher le résultat. Comme avec de nombreux objets ADO, certaines collections, méthodes ou propriétés d’objets **Command** peuvent générer des erreurs lorsqu’elles sont référencées, en fonction de la fonctionnalité du fournisseur.  
   
- Outre l’utilisation de **commande** objets, vous pouvez utiliser la **Execute** méthode sur le **connexion** objet ou le **Open** sur la (méthode) **Jeu d’enregistrements** objet à émettre une commande et qu’il soit exécuté. Toutefois, vous devez utiliser un **commande** si vous avez besoin de réutiliser une commande dans votre code, ou si vous devez transmettre des informations de paramétrage avec votre commande de l’objet. Ces scénarios sont présentés plus en détail plus loin dans cette section.  
+ En plus d’utiliser des objets de **commande** , vous pouvez utiliser la méthode **Execute** sur l’objet **Connection** ou la méthode **Open** sur l’objet **Recordset** pour émettre une commande et l’exécuter. Toutefois, vous devez utiliser un objet de **commande** si vous devez réutiliser une commande dans votre code, ou si vous devez transmettre des informations de paramètres détaillées avec votre commande. Ces scénarios sont traités plus en détail plus loin dans cette section.  
   
 > [!NOTE]
->  Certains **commande**s peut retourner un jeu de résultats sous forme de flux binaire ou en tant qu’un seul **enregistrement** plutôt que comme un **Recordset**, si cela est pris en charge par le fournisseur. En outre, certains **commande**s ne sont pas destinées à retourner un résultat défini (par exemple, une requête de mise à jour SQL). Cette section décrit le scénario le plus courant, toutefois : l’exécution de **commande**s qui retournent des résultats comme un **Recordset** objet. Pour plus d’informations sur le renvoi des résultats dans **enregistrement**s ou **Stream**s, consultez [enregistrements et flux](../../../ado/guide/data/records-and-streams.md).  
+>  Certaines **commandes**peuvent retourner un jeu de résultats sous la forme d’un flux binaire ou sous la forme d’un enregistrement unique plutôt que d’un **Recordset**, si ce **dernier** est pris en charge par le fournisseur. En outre, certaines **commandes**ne sont pas destinées à retourner un jeu de résultats (par exemple, une requête de mise à jour SQL). Cette section décrit le scénario le plus courant, en revanche : l’exécution des **commandes**qui retournent les résultats sous la forme d’un objet **Recordset** . Pour plus d’informations sur le retour de **résultats dans**les enregistrements ou les **flux**de données, consultez [enregistrements et flux](../../../ado/guide/data/records-and-streams.md).  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Vue d’ensemble de l’objet Command](../../../ado/guide/data/command-object-overview.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Recordset (ADO - syntaxe WFC) | Microsoft Docs
+title: Recordset (syntaxe ADO-WFC) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: bd1f571e-007f-432e-ada1-5c3e436c1a22
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58e0cde8798f73257a54be5cc95f64474334a153
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931389"
 ---
 # <a name="recordset-ado---wfc-syntax"></a>Recordset (ADO - syntaxe WFC)
-## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>package com. ms. wfc. Data  
   
 ### <a name="constructors"></a>Constructeurs  
   
@@ -134,7 +134,7 @@ public com.ms.wfc.data.Fields getFields()
 public AdoProperties getProperties()  
 ```  
   
-### <a name="events"></a>Events  
+### <a name="events"></a>Événements  
  Pour plus d’informations sur les événements ADO/WFC, consultez [instanciation des événements ADO par langage](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
   
 ```  

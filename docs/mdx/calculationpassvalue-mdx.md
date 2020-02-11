@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ae667d2cecb65f2525aaf855d3d1b70d40a59b21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016876"
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue (MDX)
@@ -31,7 +31,7 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
  *String_Expression*  
@@ -41,10 +41,10 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
  Expression numérique valide qui précise le numéro du test de calcul.  
   
  ABSOLUTE  
- Une valeur d’indicateur accès qui spécifie que le *Pass_Value* paramètre contient l’index de base zéro du test de calcul. ABSOLUTE est la valeur d'indicateur d'accès par défaut si aucune valeur de ce type n'est spécifiée.  
+ Valeur de l’indicateur d’accès qui spécifie que le paramètre *Pass_Value* contient l’index de base zéro du test de calcul. ABSOLUTE est la valeur d'indicateur d'accès par défaut si aucune valeur de ce type n'est spécifiée.  
   
  RELATIVE  
- Une valeur d’indicateur accès qui spécifie que le *Pass_Value* paramètre contient un décalage relatif au test de calcul du calcul déclencheur. Si le décalage se résout à un index de test de calcul inférieur à 0, le test de calcul 0 est utilisé et aucune erreur ne survient.  
+ Valeur de l’indicateur d’accès qui spécifie que le paramètre *Pass_Value* contient un décalage relatif par rapport au test de calcul du calcul de déclenchement. Si le décalage se résout à un index de test de calcul inférieur à 0, le test de calcul 0 est utilisé et aucune erreur ne survient.  
   
  ALL  
  Lorsque vous définissez cet indicateur, toutes les valeurs sont NULL, sauf les valeurs chargées par le moteur de stockage. Si l'indicateur n'est pas défini, les valeurs sont agrégées sans qu'aucun calcul ne soit appliqué.  
@@ -52,16 +52,16 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
 ## <a name="remarks"></a>Notes  
  Si une expression numérique est spécifiée, la fonction retourne une valeur numérique en évaluant l'expression numérique MDX précisée dans le test de calcul spécifié, et éventuellement modifiée par un indicateur d'accès et un modificateur d'indicateur d'accès.  
   
- Si une expression de chaîne est fournie, la fonction retourne une valeur de chaîne en évaluant l’expression de chaîne MDX précisée dans le test de calcul spécifié et éventuellement modifiée par un indicateur d’accès et un modificateur d’indicateur d’accès *.*  
+ Si une expression de chaîne est fournie, la fonction retourne une valeur de chaîne en évaluant l’expression de chaîne MDX spécifiée dans le test de calcul spécifié, et éventuellement modifiée par un indicateur d’accès et un modificateur d’indicateur d’accès *.*  
   
- Avec une résolution automatique de la récursivité dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], cette fonction a peu utilisation pratique.  
+ Avec la résolution de récurrence automatique dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], cette fonction n’a que peu d’utilité.  
   
 > [!NOTE]  
->  Seuls les administrateurs peuvent utiliser le **CalculationPassValue** fonction au sein d’un script MDX. Une erreur se produit si un script MDX contenant cette fonction est exécuté dans le contexte d'un rôle qui ne dispose pas des droits d'administrateur.  
+>  Seuls les administrateurs peuvent utiliser la fonction **CalculationPassValue** dans un script MDX. Une erreur se produit si un script MDX contenant cette fonction est exécuté dans le contexte d'un rôle qui ne dispose pas des droits d'administrateur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)   
- [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [CalculationCurrentPass&#41;MDX &#40;](../mdx/calculationcurrentpass-mdx.md)   
+ [&#41;de &#40;IIf](../mdx/iif-mdx.md)   
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

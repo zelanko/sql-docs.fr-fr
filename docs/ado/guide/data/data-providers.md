@@ -15,15 +15,15 @@ ms.assetid: 877b9f25-60c4-4ab6-8052-2c28a3849e89
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 40506ec971782c5e9108a34fd240faabcc2756b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925654"
 ---
 # <a name="data-providers"></a>Fournisseurs de données
-Fournisseurs de données représentent diverses sources de données telles que les bases de données SQL, des fichiers à accès séquentiel indexé, des feuilles de calcul, banques de documents et fichiers de courrier. Fournisseurs présentent les données uniformément à l’aide d’une abstraction commune appelée l’ensemble de lignes.  
+Les fournisseurs de données représentent diverses sources de données telles que les bases de données SQL, les fichiers séquentiels indexés, les feuilles de calcul, les magasins de documents et les fichiers de messagerie. Les fournisseurs exposent les données uniformément à l’aide d’une abstraction commune appelée ensemble de lignes.  
   
- ADO est puissant et flexible, car il peut se connecter à plusieurs fournisseurs de données et continuer à exposer le même modèle de programmation, indépendamment des fonctionnalités spécifiques de n’importe quel fournisseur donné. Cependant, étant donné que chaque fournisseur de données est unique, comment votre application interagit avec ADO varie par fournisseur de données.  
+ ADO est puissant et flexible, car il peut se connecter à n’importe quel autre fournisseur de données et exposer toujours le même modèle de programmation, quelles que soient les fonctionnalités spécifiques d’un fournisseur donné. Toutefois, étant donné que chaque fournisseur de données est unique, la façon dont votre application interagit avec ADO varie selon le fournisseur de données.  
   
- Par exemple, les fonctionnalités du fournisseur OLE DB pour SQL Server, qui est utilisé pour accéder aux bases de données Microsoft SQL Server, sont très différentes de celles du fournisseur Microsoft OLE DB pour Internet Publishing, qui est utilisé pour accéder au fichier magasins sur un serveur Web.
+ Par exemple, les fonctionnalités du fournisseur OLE DB pour SQL Server, qui est utilisé pour accéder aux bases de données Microsoft SQL Server, sont très différentes de celles du fournisseur Microsoft OLE DB pour la publication Internet, qui est utilisée pour accéder au fichier. stocke sur un serveur Web.

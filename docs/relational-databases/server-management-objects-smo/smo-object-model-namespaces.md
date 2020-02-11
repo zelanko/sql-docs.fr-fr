@@ -17,15 +17,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5e606844d031bb4ab2c29d9dfd012c97601ca12f
-ms.sourcegitcommit: b4962530f90234017073b3fdd2248936b2de4e69
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71077544"
 ---
 # <a name="smo-object-model-namespaces"></a>Espaces de noms du modèle objet SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les objets SMO ont différents espaces de noms. Les différents espaces de noms représentent différentes zones de fonctionnalités au sein de SMO.  
   
  Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], les assemblys Smo se trouvent dans le dossier C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies  

@@ -23,20 +23,20 @@ ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c3a8bc22e57d91ab64bdbbc5fc694575a8aa8ff9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920528"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans, CommitTrans et RollbackTrans, méthodes (ADO)
-Ces méthodes de transaction gèrent le traitement des transactions dans un [connexion](../../../ado/reference/ado-api/connection-object-ado.md) de l’objet comme suit :  
+Ces méthodes de transaction gèrent le traitement des transactions dans un objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) comme suit :  
   
--   **BeginTrans** commence une nouvelle transaction.  
+-   **BeginTrans** Commence une nouvelle transaction.  
   
--   **CommitTrans** enregistre les modifications et termine la transaction actuelle. Il peut également démarrer une nouvelle transaction.  
+-   **CommitTrans** Enregistre les modifications et met fin à la transaction en cours. Elle peut également démarrer une nouvelle transaction.  
   
--   **RollbackTrans** annule toutes les modifications apportées pendant la transaction en cours et termine la transaction. Il peut également démarrer une nouvelle transaction.  
+-   **RollbackTrans** Annule toutes les modifications apportées pendant la transaction en cours et met fin à la transaction. Elle peut également démarrer une nouvelle transaction.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,33 +49,33 @@ object.RollbackTrans
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- **BeginTrans** peut être appelé comme une fonction qui retourne un **Long** variable indiquant le niveau d’imbrication de la transaction.  
+ **BeginTrans** peut être appelée comme une fonction qui retourne une variable de **type long** indiquant le niveau d’imbrication de la transaction.  
   
 #### <a name="parameters"></a>Paramètres  
- *object*  
- Un **connexion** objet.  
+ *dessin*  
+ Objet de **connexion** .  
   
 ## <a name="connection"></a>Connexion  
- Utilisez ces méthodes avec un **connexion** lorsque vous souhaitez enregistrer ou annuler une série de modifications apportées aux données sources comme une unité unique de l’objet. Par exemple, pour transférer des fonds entre comptes, vous soustrayez un montant d’un et ajoutez la même quantité à l’autre. Si une mise à jour échoue, les comptes ne sont pas équilibrent. Intégration de ces modifications dans une transaction ouverte permet de s’assurer que soit la totalité soit aucune des modifications traversent.  
+ Utilisez ces méthodes avec un objet de **connexion** lorsque vous souhaitez enregistrer ou annuler une série de modifications apportées aux données sources en tant qu’unité unique. Par exemple, pour transférer de l’argent entre les comptes, vous devez soustraire un montant d’un et ajouter le même montant à l’autre. Si l’une des mises à jour échoue, les comptes ne sont plus équilibrés. L’apport de ces modifications dans une transaction ouverte garantit que toutes les modifications ou aucune d’entre elles sont effectuées.  
   
 > [!NOTE]
->  Tous les fournisseurs prennent en charge les transactions. Vérifiez que la propriété définis par le fournisseur «**Transaction DDL**» s’affiche dans le **connexion** l’objet [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection, indiquant que le fournisseur prend en charge transactions. Si le fournisseur ne prend pas en charge les transactions, l’appelant une de ces méthodes retournent une erreur.  
+>  Tous les fournisseurs ne prennent pas en charge les transactions. Vérifiez que la propriété «**transaction DDL**» définie par le fournisseur apparaît dans la collection de [Propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) de l’objet de **connexion** , ce qui indique que le fournisseur prend en charge les transactions. Si le fournisseur ne prend pas en charge les transactions, l’appel de l’une de ces méthodes renverra une erreur.  
   
- Après avoir appelé la **BeginTrans** (méthode), le fournisseur sera validée n’est plus instantanément les modifications que vous apportez jusqu'à ce que vous appeliez **CommitTrans** ou **RollbackTrans** pour mettre fin à la transaction.  
+ Une fois que vous avez appelé la méthode **BeginTrans** , le fournisseur ne valide plus instantanément les modifications apportées jusqu’à ce que vous appeliez **CommitTrans** ou **RollbackTrans** pour terminer la transaction.  
   
- Pour les fournisseurs qui prennent en charge les transactions imbriquées, en appelant le **BeginTrans** méthode dans une transaction ouverte démarre une nouvelle transaction imbriquée. La valeur de retour indique le niveau d’imbrication : une valeur de retour de « 1 » indique que vous avez ouvert une transaction de niveau supérieur (autrement dit, la transaction n'est pas imbriquée dans une autre transaction), « 2 » indique que vous avez ouvert une transaction de second niveau (une transaction imbriquée dans une transaction de niveau supérieur), et ainsi de suite. Appel **CommitTrans** ou **RollbackTrans** affecte uniquement le plus récemment ouvert transaction ; vous devez fermer ou annuler la transaction actuelle avant de résoudre les transactions de niveau supérieurs.  
+ Pour les fournisseurs qui prennent en charge les transactions imbriquées, l’appel de la méthode **BeginTrans** dans une transaction ouverte démarre une nouvelle transaction imbriquée. La valeur de retour indique le niveau d’imbrication : une valeur de retour de « 1 » indique que vous avez ouvert une transaction de niveau supérieur (c’est-à-dire que la transaction n’est pas imbriquée dans une autre transaction), « 2 » indique que vous avez ouvert une transaction de second niveau (a transaction imbriquée dans une transaction de niveau supérieur), et ainsi de suite. L’appel de **CommitTrans** ou **RollbackTrans** affecte uniquement la dernière transaction ouverte ; vous devez fermer ou restaurer la transaction en cours avant de pouvoir résoudre les transactions de niveau supérieur.  
   
- Appel de la **CommitTrans** méthode enregistre les modifications apportées dans une transaction ouverte sur la connexion et se termine la transaction. Appel de la **RollbackTrans** méthode annule les modifications apportées dans une transaction ouverte et met fin à la transaction. Lorsqu’il n’existe aucune transaction ouverte, l’appel de ces méthodes génère une erreur.  
+ L’appel de la méthode **CommitTrans** enregistre les modifications apportées dans une transaction ouverte sur la connexion et met fin à la transaction. L’appel de la méthode **RollbackTrans** inverse toutes les modifications apportées dans une transaction ouverte et met fin à la transaction. L’appel de l’une ou l’autre méthode quand aucune transaction n’est ouverte génère une erreur.  
   
- Selon le **connexion** l’objet [attributs](../../../ado/reference/ado-api/attributes-property-ado.md) propriété, en appelant le **CommitTrans** ou **RollbackTrans** méthodes peuvent Démarrer automatiquement une nouvelle transaction. Si le **attributs** propriété est définie sur **adXactCommitRetaining**, le fournisseur lance automatiquement une nouvelle transaction après une **CommitTrans** appeler. Si le **attributs** propriété est définie sur **adXactAbortRetaining**, le fournisseur lance automatiquement une nouvelle transaction après une **RollbackTrans** appeler.  
+ En fonction de la propriété [attributes](../../../ado/reference/ado-api/attributes-property-ado.md) de l’objet de **connexion** , l’appel des méthodes **CommitTrans** ou **RollbackTrans** peut démarrer automatiquement une nouvelle transaction. Si la propriété **attributes** a la valeur **adXactCommitRetaining**, le fournisseur démarre automatiquement une nouvelle transaction après un appel **CommitTrans** . Si la propriété **attributes** a la valeur **adXactAbortRetaining**, le fournisseur démarre automatiquement une nouvelle transaction après un appel **RollbackTrans** .  
   
 ## <a name="remote-data-service"></a>Service de données distant  
- Le **BeginTrans**, **CommitTrans**, et **RollbackTrans** méthodes ne sont pas disponibles sur une côté client **connexion** objet.  
+ Les méthodes **BeginTrans**, **CommitTrans**et **RollbackTrans** ne sont pas disponibles sur un objet de **connexion** côté client.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Connection, objet (ADO MD)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [BeginTrans, CommitTrans et RollbackTrans, méthodes-exemple (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
- [BeginTrans, CommitTrans et RollbackTrans, méthodes-exemple (VC ++)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vc.md)   
+ [BeginTrans, CommitTrans et RollbackTrans, exemples de méthodes (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
+ [BeginTrans, CommitTrans et RollbackTrans, exemples de méthodes (VC + +)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vc.md)   
  [Attributes, propriété (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)

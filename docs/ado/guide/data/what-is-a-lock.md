@@ -1,5 +1,5 @@
 ---
-title: Qu’est qu’un verrou ? | Microsoft Docs
+title: Qu’est qu’un verrou ? | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,27 +14,27 @@ ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c1607c9434e6c30ffd317277aadab27af96868fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923440"
 ---
 # <a name="what-is-a-lock"></a>Qu’est qu’un verrou ?
-Le verrouillage est le processus par lequel un SGBD limite l’accès à une ligne dans un environnement multi-utilisateur. Lorsqu’une ligne ou une colonne est verrouillée exclusivement, les autres utilisateurs ne sont pas autorisés à accéder aux données verrouillées jusqu'à ce que le verrou est libéré. Cela garantit que deux utilisateurs ne peuvent pas mettre à jour simultanément la même colonne dans une ligne.  
+Le verrouillage est le processus par lequel un SGBD restreint l’accès à une ligne dans un environnement multi-utilisateur. Lorsqu’une ligne ou une colonne est verrouillée de manière exclusive, les autres utilisateurs ne sont pas autorisés à accéder aux données verrouillées tant que le verrou n’est pas libéré. Cela permet de s’assurer que deux utilisateurs ne peuvent pas simultanément mettre à jour la même colonne dans une ligne.  
   
- Les verrous peuvent s’avérer très coûteuses du point de vue de la ressource et doivent être utilisés uniquement lorsque nécessaire pour préserver l’intégrité des données. Dans une base de données où des centaines voire des milliers d’utilisateurs essaie d’accéder à un enregistrement de chaque seconde - comme une base de données connecté à Internet - inutiles donc baisse des performances dans votre application.  
+ Les verrous peuvent être très coûteux du point de vue des ressources et doivent être utilisés uniquement lorsque cela est nécessaire pour préserver l’intégrité des données. Dans une base de données où des centaines ou des milliers d’utilisateurs peuvent tenter d’accéder à un enregistrement chaque seconde, par exemple une base de données connectée à Internet, un verrouillage inutile peut rapidement entraîner une baisse des performances dans votre application.  
   
- Vous pouvez contrôler la façon dont la source de données et la bibliothèque de curseurs ADO gérer l’accès concurrentiel en choisissant l’option de verrouillage appropriée.  
+ Vous pouvez contrôler la façon dont la source de données et la bibliothèque de curseurs ADO gèrent la concurrence en choisissant l’option de verrouillage appropriée.  
   
- Définir le **LockType** propriété avant d’ouvrir un **Recordset** pour spécifier le type de verrouillage le fournisseur doit utiliser pour l’ouvrir. Lire la propriété pour retourner le type de verrouillage en cours d’utilisation sur une ouverte **Recordset** objet.  
+ Définissez la propriété **LockType** avant d’ouvrir un **Recordset** pour spécifier le type de verrouillage que le fournisseur doit utiliser lors de son ouverture. Lisez la propriété pour retourner le type de verrouillage en cours d’utilisation sur un objet **Recordset** ouvert.  
   
- Les fournisseurs ne peuvent pas en charge tous les types de verrous. Si un fournisseur ne peut pas prendre en charge demandé **LockType** définition, elle remplacera un autre type de verrouillage. Pour déterminer les fonctionnalités de verrouillage disponibles dans un **Recordset** de l’objet, utilisez le [prend en charge](../../../ado/reference/ado-api/supports-method.md) méthode avec **adUpdate** et **adUpdateBatch**.  
+ Les fournisseurs ne prennent peut-être pas en charge tous les types de verrous. Si un fournisseur ne prend pas en charge le paramètre **LockType** demandé, il remplace un autre type de verrouillage. Pour déterminer les fonctionnalités de verrouillage réelles disponibles dans un objet **Recordset** , utilisez la méthode [supports](../../../ado/reference/ado-api/supports-method.md) avec **adUpdate** et **adUpdateBatch**.  
   
- Le **adLockPessimistic** paramètre n’est pas pris en charge si le [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriété est définie sur **adUseClient.** Si une valeur non pris en charge est définie, aucune erreur ne se produit ; prise en charge la plus proche **LockType** sera utilisé à la place.  
+ Le paramètre **adLockPessimistic** n’est pas pris en charge si la propriété [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) a la valeur **adUseClient.** Si une valeur non prise en charge est définie, aucune erreur ne se produit ; le **LockType** le plus proche pris en charge sera utilisé à la place.  
   
- Le **LockType** propriété est en lecture/écriture lors de la **Recordset** est fermé et en lecture seule lorsqu’il est ouvert.  
+ La propriété **LockType** est en lecture/écriture lorsque le **Recordset** est fermé et en lecture seule lorsqu’elle est ouverte.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Types de verrous](../../../ado/guide/data/types-of-locks.md)

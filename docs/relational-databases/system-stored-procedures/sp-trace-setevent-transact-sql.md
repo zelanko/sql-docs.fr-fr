@@ -18,10 +18,10 @@ ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f622f7d7097afd66a87b8ad90280e19ac3ea40de
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305299"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "72305299"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt des événements étendus.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,9 +45,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @traceid = ] trace_id` est l’ID de la trace à modifier. *trace_id* est de **type int**, sans valeur par défaut. L’utilisateur emploie cette *trace_id* valeur pour identifier, modifier et contrôler la trace.  
+`[ @traceid = ] trace_id`ID de la trace à modifier. *trace_id* est de **type int**, sans valeur par défaut. L’utilisateur emploie cette *trace_id* valeur pour identifier, modifier et contrôler la trace.  
   
-`[ @eventid = ] event_id` est l’ID de l’événement à activer. *event_id* est de **type int**, sans valeur par défaut.  
+`[ @eventid = ] event_id`ID de l’événement à activer. *event_id* est de **type int**, sans valeur par défaut.  
   
  Ce tableau répertorie les événements qui peuvent être ajoutés ou supprimés d'une trace.  
   
@@ -71,7 +71,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |24|Lock:Acquire|Indique qu'un verrou a été acquis sur une ressource, une page de données par exemple.|  
 |25|Lock:Deadlock|Indique que deux transactions concurrentes ont généré un interblocage, l'une essayant d'obtenir des verrous incompatibles sur des ressources appartenant à l'autre.|  
 |26|Lock:Canceled|Indique que l'acquisition d'un verrou sur une ressource a été annulée (par exemple à cause d'un interblocage).|  
-|27|Lock:Timeout|Indique qu'une demande de verrou sur une ressource (par exemple une page) a dépassé le délai d'attente parce qu'une autre transaction retient un verrou bloquant sur la ressource requise. Le délai d’attente est déterminé par la fonction @@LOCK_TIMEOUT et peut être défini à l’aide de l’instruction SET LOCK_TIMEOUT.|  
+|27|Lock:Timeout|Indique qu'une demande de verrou sur une ressource (par exemple une page) a dépassé le délai d'attente parce qu'une autre transaction retient un verrou bloquant sur la ressource requise. Le délai d’attente est déterminé par la@LOCK_TIMEOUT fonction @ et peut être défini à l’aide de l’instruction Set LOCK_TIMEOUT.|  
 |28|Degré d'événement de parallélisme (Insertion 7.0)|Se produit avant l'exécution d'une instruction SELECT, INSERT ou UPDATE.|  
 |29-31|Réservé|Utilisez plutôt l'événement 28.|  
 |32|Réservé|Réservé|  
@@ -81,7 +81,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |36|SP:CacheRemove|Indique qu'un élément est supprimé du cache de procédure.|  
 |37|SP:Recompile|Indique qu'une procédure stockée a été recompilée.|  
 |38|SP:CacheHit|Indique qu'une procédure stockée est trouvée dans le cache de procédure.|  
-|39|Déprécié|Déprécié|  
+|39|Déconseillé|Déconseillé|  
 |40|SQL:StmtStarting|Se produit lorsque l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] a démarré.|  
 |41|SQL:StmtCompleted|Se produit lorsque l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] est terminée.|  
 |42|SP:Starting|Indique que la procédure stockée a démarré.|  
@@ -132,12 +132,12 @@ sp_trace_setevent [ @traceid = ] trace_id
 |101|Réservé||  
 |102|Audit Database Scope GDR|Se produit chaque fois qu'une instruction GRANT DENY ou REVOKE est émise pour une autorisation d'instruction par tout utilisateur dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les actions de base de données uniquement, telles que l'accord d'autorisations sur une base de données.|  
 |103|Audit Object GDR Event|Se produit chaque fois qu'un utilisateur émet une instruction GRANT, DENY ou REVOKE relative à une autorisation d'objet dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|104|Audit AddLogin Event|Se produit lors de l’ajout ou de la suppression d’une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. pour **sp_addlogin** et **sp_droplogin**.|  
+|104|Audit AddLogin Event|Se produit lors [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de l’ajout ou de la suppression d’une connexion ; pour **sp_addlogin** et **sp_droplogin**.|  
 |105|Audit Login GDR Event|Se produit lors de l’ajout ou de la suppression d’un droit de connexion Windows ; pour **sp_grantlogin**, **sp_revokelogin**et **sp_denylogin**.|  
 |106|Audit Login Change Property Event|Se produit lorsqu’une propriété d’une connexion, à l’exception des mots de passe, est modifiée ; pour **sp_defaultdb** et **sp_defaultlanguage**.|  
 |107|Audit Login Change Password Event|Se produit lorsqu'un mot de passe de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est modifié.<br /><br /> Les mots de passe ne sont pas enregistrés.|  
 |108|Audit Add Login to Server Role Event|Se produit lorsqu’une connexion est ajoutée ou supprimée d’un rôle serveur fixe. pour **sp_addsrvrolemember**et **sp_dropsrvrolemember**.|  
-|109|Audit Add DB User Event|Se produit lorsqu’une connexion est ajoutée ou supprimée en tant qu’utilisateur de base de données (Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) dans une base de données ; pour **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**et **sp_dropuser**.|  
+|109|Audit Add DB User Event|Se produit lorsqu’une connexion est ajoutée ou supprimée en tant qu’utilisateur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]base de données (Windows ou) dans une base de données ; pour **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**et **sp_dropuser**.|  
 |110|Audit Add Member to DB Role Event|Se produit lorsqu’une connexion est ajoutée ou supprimée en tant qu’utilisateur de base de données (fixe ou défini par l’utilisateur) dans une base de données ; pour **sp_addrolemember**, **sp_droprolemember**et **sp_changegroup**.|  
 |111|Audit Add Role Event|Se produit lorsqu’une connexion est ajoutée ou supprimée en tant qu’utilisateur de base de données dans une base de données ; pour **sp_addrole** et **sp_droprole**.|  
 |112|Audit App Role Change Password Event|Se produit lorsque le mot de passe d'un rôle d'application est modifié.|  
@@ -210,7 +210,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |183|TM: Promote Tran starting|Intervient lors du démarrage d'une requête PROMOTE TRANSACTION.|  
 |184|TM: Promote Tran completed|Intervient lors de l'achèvement d'une requête PROMOTE TRANSACTION.|  
 |185|TM: Commit Tran starting|Intervient lors du démarrage d'une requête COMMIT TRANSACTION.|  
-|186.|TM: Commit Tran completed|Intervient lors de l'achèvement d'une requête COMMIT TRANSACTION.|  
+|186|TM: Commit Tran completed|Intervient lors de l'achèvement d'une requête COMMIT TRANSACTION.|  
 |187|TM: Rollback Tran starting|Intervient lors du démarrage d'une requête ROLLBACK TRANSACTION.|  
 |188|TM: Rollback Tran completed|Intervient lors de l'achèvement d'une requête ROLLBACK TRANSACTION.|  
 |189|Verrou : Timeout (délai d’expiration > 0)|Se produit lors de l'expiration d'une demande de verrou sur une ressource, telle qu'une page.|  
@@ -236,7 +236,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |218|Plan Guide Unsuccessful|Indique que SQL Server n'a pas pu produire un plan d'exécution pour une requête ou un lot qui contenait un repère de plan. SQL Server a tenté de générer un plan d'exécution pour cette requête ou ce lot sans appliquer le repère de plan. Un repère de plan non valide peut être à l'origine de ce problème. Vous pouvez valider le repère de plan à l'aide de la fonction système sys.fn_validate_plan_guide.|  
 |235|Audit Fulltext||  
   
-`[ @columnid = ] column_id` est l’ID de la colonne à ajouter pour l’événement. *column_id* est de **type int**, sans valeur par défaut.  
+`[ @columnid = ] column_id`ID de la colonne à ajouter pour l’événement. *column_id* est de **type int**, sans valeur par défaut.  
   
  Le tableau suivant répertorie les colonnes qui peuvent être ajoutées pour un événement.  
   
@@ -249,35 +249,35 @@ sp_trace_setevent [ @traceid = ] trace_id
 |5|**LineNumber**|Indique le numéro de la ligne qui contient l'erreur. Pour les événements qui impliquent des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] , comme **SP:StmtStarting**, la colonne **LineNumber** contient le numéro de ligne de l’instruction dans la procédure stockée ou le lot.|  
 |6|**NTUserName**|Nom d'utilisateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|  
 |7|**NTDomainName**|Domaine Windows auquel appartient l'utilisateur.|  
-|8|**HostName**|Nom de l'ordinateur client à l'origine de la requête.|  
+|8|**Nom d’hôte**|Nom de l'ordinateur client à l'origine de la requête.|  
 |9|**ClientProcessID**|ID affecté par l'ordinateur client au processus dans lequel s'exécute l'application cliente.|  
 |10|**ApplicationName**|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette colonne est remplie avec les valeurs passées par l'application plutôt que par le nom affiché du programme.|  
 |11|**LoginName**|Nom de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du client.|  
 |12|**SPID**|ID de processus serveur affecté par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au processus associé au client.|  
-|13|**Duration**|Quantité de temps écoulé (en microsecondes) pris par l’événement. Cette colonne de données n'est pas remplie par l'événement Hash Warning.|  
+|13|**Durée**|Quantité de temps écoulé (en microsecondes) pris par l’événement. Cette colonne de données n'est pas remplie par l'événement Hash Warning.|  
 |14|**StartTime**|Heure à laquelle a débuté l'événement, si disponible.|  
 |15|**EndTime**|Heure de fin de l'événement. Cette colonne n'est pas remplie pour les classes d'événements de démarrage, comme **SQL:BatchStarting** ou **SP:Starting**. Elle n’est pas non plus remplie par l’événement **hash Warning** .|  
-|16|**Reads**|Nombre de lectures logiques sur disque effectuées par le serveur pour l'événement. Cette colonne n’est pas remplie par l’événement **Lock : Released** .|  
-|17|**Writes**|Nombre d'écritures physiques effectuées par le serveur pour l'événement.|  
-|18|**Unité centrale**|Temps processeur (en millisecondes) utilisé par l'événement.|  
-|19|**Autorisations**|Représente l'image bitmap des autorisations ; utilisé par l'audit de sécurité.|  
-|20|**Severity**|Niveau de gravité d'une exception.|  
+|16|**Lectures**|Nombre de lectures logiques sur disque effectuées par le serveur pour l'événement. Cette colonne n’est pas remplie par l’événement **Lock : Released** .|  
+|17|**Écritures**|Nombre d'écritures physiques effectuées par le serveur pour l'événement.|  
+|18|**POURCENTAGE**|Temps processeur (en millisecondes) utilisé par l'événement.|  
+|19|**autorisations**|Représente l'image bitmap des autorisations ; utilisé par l'audit de sécurité.|  
+|20|**severity**|Niveau de gravité d'une exception.|  
 |21|**EventSubClass**|Type de sous-classe d'événements. Cette colonne de données n'est pas remplie pour toutes les classes d'événements.|  
-|22|**ObjectID**|ID affecté à l'objet par le système.|  
-|23|**Réussi**|Succès de la tentative d'utilisation des autorisations ; utilisé pour l'audit.<br /><br /> **1** = succès**0** = échec|  
-|24|**IndexID**|ID de l'index de l'objet affecté par l'événement. Pour déterminer l’ID d’index d’un objet, utilisez la colonne **indid** de la table système **sysindexes** .|  
+|22|**Arguments**|ID affecté à l'objet par le système.|  
+|23|**Success**|Succès de la tentative d'utilisation des autorisations ; utilisé pour l'audit.<br /><br /> **1** = succès**0** = échec|  
+|24|**IndexID contient**|ID de l'index de l'objet affecté par l'événement. Pour déterminer l’ID d’index d’un objet, utilisez la colonne **indid** de la table système **sysindexes** .|  
 |25|**IntegerData**|Valeur entière qui dépend de la classe d'événements capturée dans la trace.|  
-|26|**ServerName**|Nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *ServerName* ou *NomServeur\NomInstance*, suivi.|  
+|26|**Nom du serveur**|Nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *ServerName* ou *NomServeur\NomInstance*, suivi.|  
 |27|**EventClass**|Type de classe d'événement actuellement enregistrée.|  
 |28|**ObjectType**|Type d'objet : table, fonction ou procédure stockée, par exemple.|  
-|29|**NestLevel**|Niveau d'imbrication où s'exécute la procédure stockée. Consultez [@@NESTLEVEL &#40;Transact-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md).|  
-|30|**État**|État du serveur, en cas d'erreur.|  
-|31|**Erreur**|Numéro d’erreur.|  
+|29|**NestLevel**|Niveau d'imbrication où s'exécute la procédure stockée. Consultez [@@NESTLEVEL &#40;&#41;Transact-SQL ](../../t-sql/functions/nestlevel-transact-sql.md).|  
+|30|**State**|État du serveur, en cas d'erreur.|  
+|31|**Error**|Numéro d’erreur.|  
 |32|**Mode**|Mode de verrouillage du verrou acquis. Cette colonne n’est pas remplie par l’événement **Lock : Released** .|  
-|33|**Handle**|Handle de l'objet référencé dans l'événement.|  
+|33|**Traitée**|Handle de l'objet référencé dans l'événement.|  
 |34|**ObjectName**|Nom de l'objet en cours d'accès.|  
 |35|**DatabaseName**|Nom de la base de données spécifiée dans l’instruction USE *Database* .|  
-|36|**FileName**|Nom logique du nom de fichier modifié.|  
+|36|**Extension**|Nom logique du nom de fichier modifié.|  
 |37|**OwnerName**|Nom de propriétaire de l'objet référencé.|  
 |38|**RoleName**|Nom du rôle de base de données ou de serveur ciblé par une instruction.|  
 |39|**TargetUserName**|Nom d'utilisateur de la cible d'une action.|  
@@ -289,41 +289,41 @@ sp_trace_setevent [ @traceid = ] trace_id
 |45|**LinkedServerName**|Nom du serveur lié.|  
 |46|**ProviderName**|Nom du fournisseur OLE DB.|  
 |47|**MethodName**|Nom de la méthode OLE DB.|  
-|48|**RowCounts**|Nombre de lignes dans le traitement.|  
-|49|**RequestID**|ID de la demande contenant l'instruction.|  
+|48|**Nombres**|Nombre de lignes dans le traitement.|  
+|49|**Identifi**|ID de la demande contenant l'instruction.|  
 |50|**XactSequence**|Jeton servant à décrire la transaction en cours.|  
 |51|**EventSequence**|Numéro de séquence de cet événement.|  
 |52|**BigintData1**|valeur **bigint** qui dépend de la classe d’événements capturée dans la trace.|  
 |53|**BigintData2**|valeur **bigint** qui dépend de la classe d’événements capturée dans la trace.|  
-|54|**GUID**|Valeur GUID dépendante de la classe d'événements capturés dans la trace.|  
+|54|**UNIQUES**|Valeur GUID dépendante de la classe d'événements capturés dans la trace.|  
 |55|**IntegerData2**|Valeur d'entier dépendante de la classe d'événements capturés dans la trace.|  
 |56|**ObjectID2**|ID de l'objet ou de l'entité connexe, si disponible.|  
 |57|**Type**|Valeur d'entier dépendante de la classe d'événements capturés dans la trace.|  
 |58|**OwnerID**|Type de l'objet qui possède le verrou. Pour les événements de verrou uniquement.|  
 |59|**ParentName**|Nom du schéma dans lequel se trouve l'objet.|  
 |60|**IsSystem**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur.<br /><br /> **1** = système<br /><br /> **0** = utilisateur.|  
-|61|**Offset**|Décalage de départ de l'instruction dans la procédure stockée ou le lot.|  
+|61|**Décalage**|Décalage de départ de l'instruction dans la procédure stockée ou le lot.|  
 |62|**SourceDatabaseID**|ID de la base de données dans laquelle existe la source de l'objet.|  
 |63|**SqlHandle**|Hachage 64 bits basé sur le texte d'une requête ad hoc ou sur l'ID de base de données et d'objet d'un objet SQL. Cette valeur peut être transmise à **sys.dm_exec_sql_text()** pour récupérer le texte SQL associé.|  
 |64|**SessionLoginName**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de **Login1** et que vous exécutez une instruction en tant que **Login2**, **SessionLoginName** affiche **Login1**, tandis que **LoginName** affiche **Login2**. Cette colonne de données affiche les noms de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|  
   
- **[ @on=]** *on*  
+ **[ @on=]** *activé*  
  Indique si l'événement doit être activé, ON (1) ou désactivé, OFF (0). *on est de* **bits**, sans valeur par défaut.  
   
  Si *on* a la valeur **1**et que *column_id* a la valeur null, l’événement est défini sur on et toutes les colonnes sont effacées. Si *column_id* n’a pas la valeur null, la colonne est définie sur on pour cet événement.  
   
  Si *on* a la valeur **0**et que *column_id* a la valeur null, l’événement est désactivé et toutes les colonnes sont effacées. Si *column_id* n’a pas la valeur null, la colonne est désactivée.  
   
- Le tableau suivant illustre l’interaction entre **\@sur** et **\@ColumnID**.  
+ Le tableau suivant illustre l’interaction entre ** \@on** et ** \@ColumnID**.  
   
-|@on|@columnid|Résultat|  
+|@on|@columnid|Résultats|  
 |---------|---------------|------------|  
 |ON (**1**)|NULL|Événement activé (ON).<br /><br /> Toutes les colonnes sont effacées.|  
 ||NOT NULL|La colonne est activée (ON) pour l'événement spécifié.|  
 |OFF (**0**)|NULL|Événement désactivé (OFF).<br /><br /> Toutes les colonnes sont effacées.|  
 ||NOT NULL|La colonne est désactivée (OFF) pour l'événement spécifié.|  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  Le tableau suivant décrit les valeurs de code que les utilisateurs peuvent recevoir à la fin de l'exécution de la procédure stockée.  
   
 |Code de retour|Description|  
@@ -339,7 +339,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |16|La fonction n'est pas valide pour cette trace.|  
   
 ## <a name="remarks"></a>Notes  
- **sp_trace_setevent** effectue un grand nombre des actions précédemment exécutées par les procédures stockées étendues disponibles dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez **sp_trace_setevent** à la place de ce qui suit :  
+ **sp_trace_setevent** effectue un grand nombre des actions précédemment exécutées par les procédures stockées étendues disponibles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dans les versions antérieures de. Utilisez **sp_trace_setevent** à la place de ce qui suit :  
   
 -   **xp_trace_addnewqueue**  
   
@@ -347,7 +347,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 -   **xp_trace_seteventclassrequired**  
   
- Les utilisateurs doivent exécuter **sp_trace_setevent** pour chaque colonne ajoutée pour chaque événement. Lors de chaque exécution, si **\@** est défini sur **1**, **sp_trace_setevent** ajoute l’événement spécifié à la liste des événements de la trace. Si **\@sur** a la valeur **0**, **sp_trace_setevent** supprime l’événement spécifié de la liste.  
+ Les utilisateurs doivent exécuter **sp_trace_setevent** pour chaque colonne ajoutée pour chaque événement. Lors de chaque exécution, si ** \@on** a la valeur **1**, **sp_trace_setevent** ajoute l’événement spécifié à la liste des événements de la trace. Si ** \@on** a la valeur **0**, **sp_trace_setevent** supprime l’événement spécifié de la liste.  
   
  Les paramètres de toutes les procédures stockées trace SQL (**sp_trace_xx**) sont strictement typés. Si ces paramètres ne sont pas appelés avec des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée renvoie une erreur.  
   
@@ -357,10 +357,10 @@ sp_trace_setevent [ @traceid = ] trace_id
  L'utilisateur doit disposer de l'autorisation ALTER TRACE.  
   
 ## <a name="see-also"></a>Voir aussi  
- [sys.fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys. fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [Référence de classe d'événements SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
+ [Informations de référence sur la classe d’événements SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [Trace SQL](../../relational-databases/sql-trace/sql-trace.md)  
   
   

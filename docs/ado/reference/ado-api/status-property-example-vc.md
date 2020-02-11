@@ -1,5 +1,5 @@
 ---
-title: Status, exemple de propriété (VC ++) | Microsoft Docs
+title: Status, exemple de propriété (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 708120992341b0e184cc42d13ebe1f461ecf861a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916780"
 ---
 # <a name="status-property-example-vc"></a>Status, exemple de propriété (VC++)
-Cet exemple utilise le [état](../../../ado/reference/ado-api/status-property-ado-recordset.md) propriété pour afficher les enregistrements qui ont été modifiées dans une opération par lot avant une mise à jour du lot s’est produite.  
+Cet exemple utilise la propriété [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) pour afficher les enregistrements qui ont été modifiés dans une opération de traitement par lot avant qu’une mise à jour par lot ait eu lieu.  
   
 ```  
 // BeginStatusCpp.cpp  

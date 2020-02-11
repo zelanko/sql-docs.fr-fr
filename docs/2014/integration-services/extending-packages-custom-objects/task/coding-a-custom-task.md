@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ee6c3325364e6b695b288e1a5b43e7d2470f6e34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896105"
 ---
 # <a name="coding-a-custom-task"></a>Codage d'une tâche personnalisée
@@ -157,7 +157,7 @@ End Class
  Cette section décrit comment utiliser la méthode `Execute` qui est héritée et remplacée par des tâches. Elle explique également les différentes façons de fournir des informations concernant les résultats de l'exécution des tâches.  
   
 ### <a name="execute-method"></a>Méthode Execute  
- Tâches contenues dans l'exécution d'un package lorsque le runtime [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] appelle leur méthode `Execute`. Tâches implémentent leurs logique métier et principales fonctionnalités dans cette méthode et fournir les résultats de l’exécution en publiant des messages, en renvoyant une valeur de la <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> énumération et en remplaçant la propriété `get` de la `ExecutionValue` propriété.  
+ Tâches contenues dans l'exécution d'un package lorsque le runtime [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] appelle leur méthode `Execute`. Les tâches implémentent leur logique métier principale et leurs fonctionnalités dans cette méthode, et fournissent les résultats de l’exécution en publiant des messages <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> , en retournant une valeur de `get` l’énumération et en substituant la propriété de la `ExecutionValue` propriété.  
   
  La classe de base <xref:Microsoft.SqlServer.Dts.Runtime.Task> fournit une implémentation par défaut de la méthode <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>. Les tâches personnalisées substituent cette méthode pour définir leurs fonctionnalités d'exécution. L'objet <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> encapsule la tâche, en l'isolant du moteur d'exécution et des autres objets compris dans le package. En raison de cette isolation, la tâche n'a pas connaissance de son emplacement dans le package pour ce qui est de son ordre d'exécution et elle s'exécute uniquement lorsqu'elle est appelée par le runtime. Cette architecture empêche certains problèmes qui peuvent se produire lorsque les tâches modifient le package pendant l'exécution. La tâche peut accéder aux autres objets compris dans le package uniquement via les objets qui lui sont fournis comme paramètres dans la méthode <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>. Ces paramètres permettent aux tâches de déclencher des événements, d'écrire des entrées dans le journal des événements, d'accéder à la collection de variables et d'inscrire des connexions aux sources de données dans les transactions, tout en maintenant quand même l'isolation nécessaire pour garantir la stabilité et la fiabilité du package.  
   
@@ -285,7 +285,7 @@ Public Class SampleTask
 End Class  
 ```  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône de Integration Services (petite)](../../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création d’une tâche personnalisée](creating-a-custom-task.md)   

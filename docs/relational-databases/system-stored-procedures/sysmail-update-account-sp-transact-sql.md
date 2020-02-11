@@ -18,10 +18,10 @@ ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 68bd628eb791e7af102c6689e22b30ebd5bad73c
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305116"
 ---
 # <a name="sysmail_update_account_sp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "72305116"
   Modifie les informations dans un compte de messagerie de base de données existant.  
  
  
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,35 +52,35 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @account_id = ] account_id` l’ID de compte à mettre à jour. *account_id* est de **type int**, avec NULL comme valeur par défaut. Au moins un des *account_id* ou *account_name* doit être spécifié. Si les deux arguments sont précisés, la procédure modifie le nom du compte.  
+`[ @account_id = ] account_id`ID de compte à mettre à jour. *account_id* est de **type int**, avec NULL comme valeur par défaut. Au moins un des *account_id* ou *account_name* doit être spécifié. Si les deux arguments sont précisés, la procédure modifie le nom du compte.  
   
-`[ @account_name = ] 'account_name'` le nom du compte à mettre à jour. *account_name* est de **type sysname**, avec NULL comme valeur par défaut. Au moins un des *account_id* ou *account_name* doit être spécifié. Si les deux arguments sont précisés, la procédure modifie le nom du compte.  
+`[ @account_name = ] 'account_name'`Nom du compte à mettre à jour. *account_name* est de **type sysname**, avec NULL comme valeur par défaut. Au moins un des *account_id* ou *account_name* doit être spécifié. Si les deux arguments sont précisés, la procédure modifie le nom du compte.  
   
-`[ @email_address = ] 'email_address'` la nouvelle adresse de messagerie à partir de laquelle envoyer le message. Cette adresse doit être une adresse de messagerie Internet. Le nom de serveur figurant dans l'adresse identifie le serveur qu'utilise la messagerie de base de données pour envoyer le courrier à partir de ce compte. *email_address* est de type **nvarchar (128)** , avec NULL comme valeur par défaut.  
+`[ @email_address = ] 'email_address'`Nouvelle adresse de messagerie à partir de laquelle envoyer le message. Cette adresse doit être une adresse de messagerie Internet. Le nom de serveur figurant dans l'adresse identifie le serveur qu'utilise la messagerie de base de données pour envoyer le courrier à partir de ce compte. *email_address* est de type **nvarchar (128)**, avec NULL comme valeur par défaut.  
   
-`[ @display_name = ] 'display_name'` le nouveau nom complet à utiliser pour les messages électroniques à partir de ce compte. *display_name* est de type **nvarchar (128)** , sans valeur par défaut.  
+`[ @display_name = ] 'display_name'`Nouveau nom complet à utiliser pour les messages électroniques à partir de ce compte. *display_name* est de type **nvarchar (128)**, sans valeur par défaut.  
   
-`[ @replyto_address = ] 'replyto_address'` la nouvelle adresse à utiliser dans l’en-tête Reply-to des messages électroniques à partir de ce compte. *replyto_address* est de type **nvarchar (128)** , sans valeur par défaut.  
+`[ @replyto_address = ] 'replyto_address'`Nouvelle adresse à utiliser dans l’en-tête Reply-to des messages électroniques à partir de ce compte. *replyto_address* est de type **nvarchar (128)**, sans valeur par défaut.  
   
-`[ @description = ] 'description'` la nouvelle description du compte. *Description* est de type **nvarchar (256)** , avec NULL comme valeur par défaut.  
+`[ @description = ] 'description'`Nouvelle description du compte. *Description* est de type **nvarchar (256)**, avec NULL comme valeur par défaut.  
   
-`[ @mailserver_name = ] 'server_name'` le nouveau nom du serveur de messagerie SMTP à utiliser pour ce compte. L’ordinateur qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être en mesure de résoudre le *SERVER_NAME* en adresse IP. *SERVER_NAME* est de **type sysname**, sans valeur par défaut.  
+`[ @mailserver_name = ] 'server_name'`Nouveau nom du serveur de messagerie SMTP à utiliser pour ce compte. L’ordinateur qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être en mesure de résoudre le *SERVER_NAME* en adresse IP. *SERVER_NAME* est de **type sysname**, sans valeur par défaut.  
   
-`[ @mailserver_type = ] 'server_type'` le nouveau type de serveur de messagerie. *server_type* est de **type sysname**, sans valeur par défaut. Seule une valeur **« SMTP »** est prise en charge.  
+`[ @mailserver_type = ] 'server_type'`Nouveau type du serveur de messagerie. *server_type* est de **type sysname**, sans valeur par défaut. Seule une valeur **« SMTP »** est prise en charge.  
   
-`[ @port = ] port_number` le nouveau numéro de port du serveur de messagerie. *port_number* est de **type int**, sans valeur par défaut.  
+`[ @port = ] port_number`Nouveau numéro de port du serveur de messagerie. *port_number* est de **type int**, sans valeur par défaut.  
   
-`[ @timeout = ] 'timeout'` paramètre timeout pour SmtpClient. Send d’un seul message électronique. *Timeout* est de **type int** en secondes, sans valeur par défaut.  
+`[ @timeout = ] 'timeout'`Paramètre timeout pour SmtpClient. Send d’un seul message électronique. *Timeout* est de **type int** en secondes, sans valeur par défaut.  
   
-`[ @username = ] 'username'` le nouveau nom d’utilisateur à utiliser pour se connecter au serveur de messagerie. Le *nom d’utilisateur* est de **type sysname**, sans valeur par défaut.  
+`[ @username = ] 'username'`Nouveau nom d’utilisateur à utiliser pour se connecter au serveur de messagerie. Le *nom d’utilisateur* est de **type sysname**, sans valeur par défaut.  
   
-`[ @password = ] 'password'` le nouveau mot de passe à utiliser pour se connecter au serveur de messagerie. *Password* est de **type sysname**, sans valeur par défaut.  
+`[ @password = ] 'password'`Nouveau mot de passe à utiliser pour se connecter au serveur de messagerie. *Password* est de **type sysname**, sans valeur par défaut.  
   
-`[ @use_default_credentials = ] use_default_credentials` indique si le courrier électronique doit être envoyé au serveur SMTP à l’aide des informations d’identification du service [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** est de bits, sans valeur par défaut. Lorsque la valeur de ce paramètre est définie sur 1, la messagerie de base de données utilise les informations d'identification du moteur de base de données [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Lorsque ce paramètre a la valeur 0, Database Mail utilise le **nom d’utilisateur\@** et le **mot de passe\@** pour l’authentification sur le serveur SMTP. Si **\@nom d’utilisateur** et **\@mot de passe** sont NULL, il utilisera l’authentification anonyme. Contactez votre administrateur SMTP avant de définir ce paramètre.  
+`[ @use_default_credentials = ] use_default_credentials`Spécifie si le courrier électronique doit être envoyé au serveur SMTP à l’aide des [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] informations d’identification du service. **use_default_credentials** est de bits, sans valeur par défaut. Lorsque la valeur de ce paramètre est définie sur 1, la messagerie de base de données utilise les informations d'identification du moteur de base de données [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Lorsque ce paramètre a la valeur 0, Database mail utilise le ** \@nom d’utilisateur** et ** \@le mot de passe** pour l’authentification sur le serveur SMTP. Si ** \@le nom d’utilisateur** et ** \@le mot de passe** sont NULL, l’authentification anonyme est utilisée. Contactez votre administrateur SMTP avant de définir ce paramètre.  
   
-`[ @enable_ssl = ] enable_ssl` spécifie si Database Mail chiffre les communications à l’aide d’protocole SSL (SSL). Utilisez cette option si SSL est obligatoire sur votre serveur SMTP. **enable_ssl** est de bits, sans valeur par défaut.  
+`[ @enable_ssl = ] enable_ssl`Spécifie si Database Mail chiffre les communications à l’aide de protocole SSL (SSL). Utilisez cette option si SSL est obligatoire sur votre serveur SMTP. **enable_ssl** est de bits, sans valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
@@ -93,7 +93,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-changing-the-information-for-an-account"></a>A. Modification des informations d'un compte  
+### <a name="a-changing-the-information-for-an-account"></a>R. Modification des informations d'un compte  
  L’exemple suivant met à jour le compte `AdventureWorks Administrator` dans la base de données **msdb** . Les informations du compte prennent les valeurs fournies.  
   
 ```  
@@ -137,6 +137,6 @@ EXECUTE msdb.dbo.sysmail_update_account_sp
 ## <a name="see-also"></a>Voir aussi  
  [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)   
  [Créer un compte Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Procédures &#40;stockées Database mail Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Database Mail des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

@@ -18,18 +18,18 @@ ms.assetid: 4ba4aa91-4c19-41c7-b70d-5fd9d0e89a5e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9049340483674969a6ab4730d54794957c67aac9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997315"
 ---
-# <a name="spsyspolicypurgehealthstate-transact-sql"></a>sp_syspolicy_purge_health_state (Transact-SQL)
+# <a name="sp_syspolicy_purge_health_state-transact-sql"></a>sp_syspolicy_purge_health_state (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Supprime les états d'intégrité des stratégies de la Gestion basée sur des stratégies. Les états d'intégrité des stratégies sont des indicateurs visuels (symbole de parchemin marqué d'un « X » rouge) dans l'Explorateur d'objets qui vous permettent de déterminer sur quels nœuds une évaluation de stratégie a échoué.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,12 +39,12 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'` Représente le nœud dans l’Explorateur d’objets dont vous voulez supprimer l’état d’intégrité. *target_tree_root_with_id* est **nvarchar (400)** , avec NULL comme valeur par défaut.  
+`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'`Représente le nœud dans l’Explorateur d’objets où vous souhaitez effacer l’état d’intégrité. *target_tree_root_with_id* est de type **nvarchar (400)**, avec NULL comme valeur par défaut.  
   
  Vous pouvez spécifier des valeurs de la colonne target_query_expression_with_id de la vue système msdb.dbo.syspolicy_system_health_state.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
  Vous devez exécuter sp_syspolicy_purge_health_state dans le contexte de la base de données système msdb.  
@@ -55,7 +55,7 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
  Nécessite l'appartenance au rôle de base de données fixe PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Élévation possible des informations d’identification : Les utilisateurs du rôle PolicyAdministratorRole peuvent créer des déclencheurs de serveur et planifier des exécutions de stratégie qui peuvent affecter le fonctionnement de l’instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Par exemple, les utilisateurs du rôle PolicyAdministratorRole peuvent créer une stratégie qui peut empêcher la plupart des objets d’être créées dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Étant donné cette possible élévation des informations d’identification, le rôle PolicyAdministratorRole doit être accordé uniquement aux utilisateurs qui sont approuvés avec contrôle de la configuration de la [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Élévation possible des informations d’identification : les utilisateurs du rôle PolicyAdministratorRole peuvent créer des déclencheurs de serveur et planifier des exécutions de stratégie qui peuvent affecter le fonctionnement [!INCLUDE[ssDE](../../includes/ssde-md.md)]de l’instance du. Par exemple, les utilisateurs du rôle PolicyAdministratorRole peuvent créer une stratégie qui peut empêcher la création de la plupart des objets [!INCLUDE[ssDE](../../includes/ssde-md.md)]dans le. En raison de cette élévation possible des informations d’identification, le rôle PolicyAdministratorRole doit être accordé uniquement aux utilisateurs approuvés par le contrôle de la configuration [!INCLUDE[ssDE](../../includes/ssde-md.md)]du.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant supprime les états d'intégrité pour un nœud spécifique dans l'Explorateur d'objets.  

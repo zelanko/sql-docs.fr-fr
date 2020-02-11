@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1408d970093fde0e2efea9662b56b9f099d6b0b4
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783028"
 ---
 # <a name="change-the-session-timeout-period-for-an-availability-replica-sql-server"></a>Modifier le délai d'expiration de session pour un réplica de disponibilité (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "72783028"
   
      [Sécurité](#Security)  
   
--   **Pour modifier la période d'expiration de session, utilisez :**  
+-   **Pour modifier la période d’expiration de session, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "72783028"
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Prérequis  
+###  <a name="Prerequisites"></a>Conditions préalables  
   
 -   Vous devez être connecté à l'instance de serveur qui héberge le réplica principal.  
   
@@ -51,11 +51,11 @@ ms.locfileid: "72783028"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- **Pour modifier la période d'expiration de session pour un réplica de disponibilité**  
+ **Pour modifier la période d’expiration de session pour un réplica de disponibilité**  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance de serveur qui héberge le réplica principal et développez l'arborescence du serveur.  
   
@@ -107,4 +107,4 @@ ms.locfileid: "72783028"
 Pour configurer et utiliser le fournisseur de SQL Server PowerShell, consultez [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md).
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble &#40;de groupes de disponibilité AlwaysOn SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
