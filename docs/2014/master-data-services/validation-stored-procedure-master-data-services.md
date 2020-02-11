@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 89e0b57501eb948d0c67a6dc0a055051b7d19b18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481328"
 ---
 # <a name="validation-stored-procedure-master-data-services"></a>Procédure stockée de validation (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], validez une version pour appliquer des règles d’entreprise à tous les membres dans la version de modèle.  
   
- Cette rubrique explique comment utiliser la procédure stockée **mdm.udpValidateModel** pour valider des données. Si vous êtes administrateur dans l’application web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , vous pouvez à la place effectuer la validation dans l’interface utilisateur. Pour plus d’informations, consultez [valider une Version par rapport aux règles métier &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md).  
+ Cette rubrique explique comment utiliser la procédure stockée **mdm.udpValidateModel** pour valider des données. Si vous êtes administrateur dans l’application web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , vous pouvez à la place effectuer la validation dans l’interface utilisateur. Pour plus d’informations, consultez [Valider une version par rapport aux règles d’entreprise &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md).  
   
 > [!NOTE]  
 >  Si vous appelez la validation avant la fin de l'exécution du processus de site, les membres qui n'ont pas terminé la mise en lots ne sont pas validés.  
@@ -58,7 +58,7 @@ EXECUTE mdm.udpValidateModel @User_ID, @Model_ID, @Version_ID, 1
 |Version_ID|ID de version.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Importation de données &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
+ [&#40;d’importation de données Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
  [Valider une version par rapport aux règles d’entreprise &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md)  
   
   

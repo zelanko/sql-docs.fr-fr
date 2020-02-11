@@ -1,5 +1,5 @@
 ---
-title: Sur le moteur de base de données SQL Server | Microsoft Docs
+title: À propos du Moteur de base de données SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6373f67d40b9da97f652f3bcb05b3414deab5c8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779360"
 ---
 # <a name="about-the-sql-server-database-engine"></a>À propos du moteur de base de données SQL Server
   Le composant [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est le service de base pour le stockage, le traitement et la protection des données. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] fournit un accès contrôlé et un traitement transactionnel rapide qui répondent aux exigences des applications les plus gourmandes en termes de données dans votre entreprise.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge jusqu’à 50 instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur un seul ordinateur. Pour créer un type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation, consultez [installer SQL Server 2014 à partir de l’Assistant Installation &#40;le programme d’installation&#41;](install-sql-server-from-the-installation-wizard-setup.md).  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge jusqu’à 50 instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur un seul ordinateur. Pour créer une installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut, consultez [installer SQL Server 2014 à partir de l’assistant Installation &#40;&#41;d' ](install-sql-server-from-the-installation-wizard-setup.md)installation.  
   
- **Important** Pour des installations locales, vous devez exécuter le programme d’installation en tant qu’administrateur. Si vous installez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'un partage distant, vous devez utiliser un compte de domaine qui a les autorisations de lecture et d'exécution sur le partage distant.  
+ **Important** Pour les installations locales, vous devez exécuter le programme d’installation en tant qu’administrateur. Si vous installez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'un partage distant, vous devez utiliser un compte de domaine qui a les autorisations de lecture et d'exécution sur le partage distant.  
   
- Les fonctionnalités suivantes sont installées quand vous sélectionnez **Moteur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** dans la page Composants à installer de l’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
+ Les fonctionnalités suivantes sont installées lorsque vous sélectionnez ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] moteur de base de données** dans la page composants à installer de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’Assistant Installation de :  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -49,7 +50,7 @@ ms.locfileid: "62779360"
   
 -   Modèles de programmation  
   
--   Outils d'administration  
+-   Outils de gestion  
   
 -   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
   
@@ -61,8 +62,8 @@ ms.locfileid: "62779360"
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Éditions et composants de SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md)   
- [Planification d'une installation SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
- [Solutions haute disponibilité &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
- [Mise à niveau vers SQL Server 2014 à l’aide de l’Assistant Installation &#40;le programme d’installation&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)  
+ [Planification d’une installation de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
+ [Solutions de haute disponibilité &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
+ [Effectuez une mise à niveau vers SQL Server 2014 à l’aide de l’Assistant Installation &#40;le programme d’installation&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

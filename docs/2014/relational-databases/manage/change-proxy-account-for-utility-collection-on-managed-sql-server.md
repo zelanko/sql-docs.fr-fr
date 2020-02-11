@@ -1,5 +1,5 @@
 ---
-title: Modifier le compte Proxy pour la collecte de l’utilitaire est défini sur une Instance managée de SQL Server (utilitaire SQL Server) | Microsoft Docs
+title: Modifier le compte proxy pour le jeu d’collections de l’utilitaire sur un Managed Instance de SQL Server (Utilitaire SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: efa4af0c12379abaab2d810fd39ce6d7a3b0afef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62806323"
 ---
 # <a name="change-the-proxy-account-for-the-utility-collection-set-on-a-managed-instance-of-sql-server-sql-server-utility"></a>Modifier le compte proxy pour le jeu d'éléments de collecte de l'utilitaire sur une instance gérée de SQL Server (utilitaire SQL Server)
