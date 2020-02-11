@@ -1,5 +1,5 @@
 ---
-title: la procédure sp_dropmergealternatepublisher (Transact-SQL) | Microsoft Docs
+title: sp_dropmergealternatepublisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: a7dee4e2-2a60-41da-9d1d-6f991d7e2c5e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b6938a94b2cfe322abf55cbf663f91b4328c2120
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054289"
 ---
-# <a name="spdropmergealternatepublisher-transact-sql"></a>sp_dropmergealternatepublisher (Transact-SQL)
+# <a name="sp_dropmergealternatepublisher-transact-sql"></a>sp_dropmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime un serveur de publication de substitution d'une publication de fusion. Cette procédure stockée est exécutée sur la base de données d'abonnement de l'Abonné.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,26 +37,26 @@ sp_dropmergealaternatepublisher [ @publisher = ] 'publisher'    , [ @publisher_d
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publisher = ] 'publisher'` Est le nom du serveur de publication en cours. *serveur de publication*est **sysname**, sans valeur par défaut.  
+`[ @publisher = ] 'publisher'`Nom du serveur de publication actuel. *Publisher*est de **type sysname**, sans valeur par défaut.  
   
-`[ @publisher_db = ] 'publisher_db'` Est le nom de la base de données de publication actuel. *publisher_db*est **sysname**, sans valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'`Nom de la base de données de publication actuelle. *publisher_db*est de **type sysname**, sans valeur par défaut.  
   
-`[ @publication = ] 'publication'` Est le nom de la publication actuelle. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'`Nom de la publication actuelle. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @alternate_publisher = ] 'alternate_publisher'` Est le nom de l’autre serveur de publication à supprimer en tant que l’autre partenaire de synchronisation. *alternate_publisher*est **sysname**, sans valeur par défaut.  
+`[ @alternate_publisher = ] 'alternate_publisher'`Nom du serveur de publication de remplacement à supprimer en tant que partenaire de synchronisation de substitution. *alternate_publisher*est de **type sysname**, sans valeur par défaut.  
   
-`[ @alternate_publisher_db = ] 'alternate_publisher_db'` Est le nom de la base de données de publication à supprimer en tant que la base de données du publication du partenaire de synchronisation de substitution. *alternate_publisher_db*est **sysname**, sans valeur par défaut.  
+`[ @alternate_publisher_db = ] 'alternate_publisher_db'`Nom de la base de données de publication à supprimer en tant que base de données de publication du partenaire de synchronisation de substitution. *alternate_publisher_db*est de **type sysname**, sans valeur par défaut.  
   
-`[ @alternate_publication = ] 'alternate_publication'` Est le nom de la publication à supprimer en tant que la publication de partenaire de synchronisation de substitution. *alternate_publication*est **sysname**, sans valeur par défaut.  
+`[ @alternate_publication = ] 'alternate_publication'`Nom de la publication à supprimer en tant que publication du partenaire de synchronisation de substitution. *alternate_publication*est de **type sysname**, sans valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **la procédure sp_dropmergealternatepublisher** est utilisé dans la réplication de fusion.  
+ **sp_dropmergealternatepublisher** est utilisé dans la réplication de fusion.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou le **db_owner** rôle de base de données fixe peuvent exécuter **sp_dropmergelternatepublisher**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_dropmergelternatepublisher**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_addmergealternatepublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergealternatepublisher-transact-sql.md)  
