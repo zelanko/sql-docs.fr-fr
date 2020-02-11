@@ -1,5 +1,5 @@
 ---
-title: Initialisation de cas de Test (OracleToSQL) | Microsoft Docs
+title: Initialisation des cas de test (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,30 +11,30 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: ae6a7bbeb70ae53280877a1f88a006743eea0655
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264371"
 ---
 # <a name="initializing-test-cases-oracletosql"></a>Initialisation de cas de test (OracleToSQL)
-À cette étape, vous spécifiez les informations initiales pour le nouveau cas de test.  
+À cette étape, vous spécifiez les informations initiales du nouveau cas de test.  
   
 ## <a name="parameters"></a>Paramètres  
-**Nom de cas de test**  
+**Nom du cas de test**  
 Entrez le nom pour identifier le cas de test.  
   
 **Date de création**  
-Aujourd'hui actuelle date, est définie automatiquement.  
+Date actuelle, définie automatiquement.  
   
 **Date de dernière modification**  
-Rempli automatiquement ; ne doit pas être modifiée.  
+Renseigné automatiquement ; ne doit pas être modifié.  
   
-**Description des cas de test**  
+**Description du cas de test**  
 Entrez des informations supplémentaires pour identifier l’objectif du cas de test.  
   
-## <a name="next-step"></a>Étape suivante  
-[Sélection et la configuration des objets à tester &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
+## <a name="next-step"></a>étape suivante  
+[Sélection et configuration des objets pour tester &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Test des objets de base de données migrés &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  

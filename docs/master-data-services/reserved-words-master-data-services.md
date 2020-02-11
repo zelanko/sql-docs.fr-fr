@@ -14,10 +14,10 @@ ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 817e15d2fe7e91f63628826f58d6a86dd4edbcb3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727919"
 ---
 # <a name="reserved-words-master-data-services"></a>Mots réservés (Master Data Services)
@@ -39,18 +39,18 @@ ms.locfileid: "73727919"
   
 -   [Membres](../master-data-services/reserved-words-master-data-services.md#members)  
   
-##  <a name="models"></a> Modèles  
+##  <a name="models"></a>Axisymétriques  
  Si vous créez un modèle dont le nom est défini sur **Nom** ou **Code**, ne sélectionnez pas **Créer une entité portant le même nom que le modèle** , car **Nom** ou **Code** ne peut pas être utilisé pour le nom d’une entité.  
   
-##  <a name="entities"></a> Entités  
+##  <a name="entities"></a>Lesquelles  
  Pour les noms d'entité, vous ne pouvez pas utiliser **Name** ou **Code**.  
   
-##  <a name="exhierarchies"></a> Hiérarchies explicites  
+##  <a name="exhierarchies"></a>Hiérarchies explicites  
  Pour les noms de hiérarchies explicites, vous ne pouvez pas utiliser **Name** ou **Code**.  
   
-##  <a name="attributes"></a> Attributs  
+##  <a name="attributes"></a>Attributs  
   
--   **ID**  
+-   **IDENTIFI**  
   
 -   **Code**  
   
@@ -76,7 +76,7 @@ ms.locfileid: "73727919"
   
 -   **Version_ID**  
   
-##  <a name="members"></a> Membres  
+##  <a name="members"></a>Membres  
  Pour les membres, vous ne pouvez pas utiliser **MDMMemberStatus**, **MDMUnused**ou **ROOT** pour la valeur d’attribut **Code** .  
   
 ## <a name="see-also"></a>Voir aussi  

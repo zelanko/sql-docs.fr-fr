@@ -1,5 +1,5 @@
 ---
-title: Évaluation des bases de données MySQL pour la Conversion (MySQLToSQL) | Microsoft Docs
+title: Évaluation des bases de données MySQL pour la conversion (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,75 +12,75 @@ ms.assetid: 2a56a003-3b0f-453a-963c-00c9e40933ec
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ae9210444311267569d5f240d40252d4fe024877
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139207"
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>Évaluation des bases de données MySQL pour la conversion (MySQLToSQL)
-Avant de charger des objets et de migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, vous devez déterminer comment complexe sera la migration et combien de temps l’opération prendra. SSMA peut créer un rapport d’évaluation qui affiche le pourcentage d’objets qui seront converties correctement. SSMA vous permet également d’afficher les problèmes spécifiques qui provoquent des échecs de conversion.  
+Avant de charger des objets et de migrer des données vers ou SQL Azure, vous devez déterminer le niveau de complexité de la migration et le temps nécessaire à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la migration. SSMA peut créer un rapport d’évaluation qui indique le pourcentage d’objets qui seront convertis avec succès. SSMA vous permet également d’afficher les problèmes spécifiques qui provoquent des échecs de conversion.  
   
 ## <a name="creating-assessment-reports"></a>Création de rapports d’évaluation  
-Lorsqu’il crée ce rapport d’évaluation, SSMA convertit les objets de base de données MySQL sélectionnés à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou syntaxe de SQL Azure, puis affiche les résultats.  
+Lorsqu’il crée ce rapport d’évaluation, SSMA convertit les objets de base [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de données MySQL sélectionnés en SQL Azure syntaxe, puis affiche les résultats.  
   
 **Pour créer un rapport d’évaluation**  
   
-1.  Dans l’Explorateur de métadonnées de MySQL, sélectionnez les schémas à évaluer.  
+1.  Dans l’Explorateur de métadonnées MySQL, sélectionnez les schémas à évaluer.  
   
-2.  Pour omettre des objets individuels, désactivez les cases à cocher en regard de ceux.  
+2.  Pour omettre des objets spécifiques, désactivez les cases à cocher en regard de celles-ci.  
   
-3.  Avec le bouton droit **schémas**, puis sélectionnez **créer un rapport**.  
+3.  Cliquez avec le bouton droit sur **schémas**, puis sélectionnez **créer un rapport**.  
   
-    Cliquez sur un objet d’analyse des objets individuels. Ensuite, sélectionnez **créer un rapport**.  
+    Cliquez avec le bouton droit sur un objet pour analyser des objets individuels. Sélectionnez ensuite **créer un rapport**.  
   
-    SSMA affiche la progression dans la barre d’état en bas de la fenêtre. Si le volet de sortie est visible, vous verrez également des messages dans le volet de sortie.  
+    SSMA affiche la progression dans la barre d’État en bas de la fenêtre. Si le volet de sortie est visible, vous verrez également des messages dans le volet de sortie.  
   
-    Une fois l’évaluation terminée, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant pour MySQL, la fenêtre de rapport d’évaluation s’affiche.  
+    Une fois l’évaluation terminée, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fenêtre Assistant Migration pour MySQL, rapport d’évaluation s’affiche.  
   
-## <a name="using-assessment-reports"></a>À l’aide de rapports d’évaluation  
-La fenêtre de rapport d’évaluation contient trois volets :  
+## <a name="using-assessment-reports"></a>Utilisation des rapports d’évaluation  
+La fenêtre rapport d’évaluation contient trois volets :  
   
--   Le volet gauche contient la hiérarchie des objets qui sont inclus dans le rapport d’évaluation. Vous pouvez parcourir la hiérarchie et sélectionner les objets et les catégories d’objets à afficher le code et les statistiques de conversion.  
+-   Le volet gauche contient la hiérarchie des objets inclus dans le rapport d’évaluation. Vous pouvez parcourir la hiérarchie et sélectionner des objets et des catégories d’objets pour afficher les statistiques et le code de conversion.  
   
--   Le contenu du volet droit dépend de l’élément est sélectionné dans le volet gauche.  
+-   Le contenu du volet droit dépend de l’élément sélectionné dans le volet gauche.  
   
-    Si un groupe d’objets est sélectionné, par exemple de schéma, le volet droit contient un volet de statistiques de Conversion et les objets par le volet des catégories. Le volet de statistiques de Conversion affiche les statistiques de conversion pour les objets sélectionnés. Les objets par le volet des catégories affiche les statistiques de conversion pour l’objet ou les catégories d’objets.  
+    Si un groupe d’objets est sélectionné, par exemple schéma, le volet droit contient un volet conversion des statistiques et des objets par catégories. Le volet statistiques de conversion affiche les statistiques de conversion pour les objets sélectionnés. Le volet objets par catégorie affiche les statistiques de conversion pour l’objet ou les catégories d’objets.  
   
-    Si une fonction, la procédure, la table ou la vue est sélectionnée, le volet de droite contient des statistiques, de code source et de code cible.  
+    Si une fonction, une procédure, une table ou une vue est sélectionnée, le volet droit contient des statistiques, du code source et du code cible.  
   
-    -   La zone supérieure affiche les statistiques globales pour l’objet. Vous devrez peut-être développer **statistiques** pour afficher ces informations.  
+    -   La zone supérieure affiche les statistiques globales de l’objet. Vous devrez peut-être développer les **statistiques** pour afficher ces informations.  
   
-    -   La zone Source montre le code source de l’objet qui est sélectionné dans le volet gauche. Les zones en surbrillance affichent le code source problématiques.  
+    -   La zone source affiche le code source de l’objet sélectionné dans le volet gauche. Les zones mises en surbrillance indiquent un code source problématique.  
   
-    -   La zone cible montre le code converti. Texte rouge indique les messages d’erreur et de code problématiques.  
+    -   La zone cible affiche le code converti. Le texte en rouge montre le code et les messages d’erreur les plus problématiques.  
   
--   Le volet inférieur affiche les messages de la conversion, regroupés par numéro de message. Vous pouvez cliquer sur **erreurs**, **avertissements**, ou **Info** pour afficher les catégories de messages, puis développez un groupe de messages. Cliquez sur un message individuel pour sélectionner l’objet dans le volet gauche et afficher les détails dans le volet droit.  
+-   Le volet inférieur affiche des messages de conversion, regroupés par numéro de message. Vous pouvez cliquer sur **Erreurs**, **avertissements**ou **informations** pour afficher les catégories de messages, puis développer un groupe de messages. Cliquez sur un message pour sélectionner l’objet dans le volet gauche et afficher les détails dans le volet droit.  
   
-## <a name="analyzing-conversion-problems-by-using-the-assessment-report"></a>Analyse des problèmes de Conversion à l’aide du rapport d’évaluation  
-Le volet de statistiques de Conversion affiche les statistiques de conversion. Si le pourcentage pour n’importe quelle catégorie est inférieure à 100 %, vous devez déterminer pourquoi la conversion n’a pas réussie.  
+## <a name="analyzing-conversion-problems-by-using-the-assessment-report"></a>Analyse des problèmes de conversion à l’aide du rapport d’évaluation  
+Le volet statistiques de conversion affiche les statistiques de conversion. Si le pourcentage pour une catégorie est inférieur à 100%, vous devez déterminer la raison pour laquelle la conversion a échoué.  
   
 **Pour afficher les problèmes de conversion**  
   
-1.  Créer le rapport d’évaluation en suivant les instructions dans la procédure précédente.  
+1.  Créez le rapport d’évaluation à l’aide des instructions de la procédure précédente.  
   
-2.  Dans le volet gauche, développez les schémas ou des dossiers qui ont une icône d’erreur rouge. Continuez à développer les éléments jusqu'à ce que vous sélectionnez un élément individuel qui Échec de la conversion.  
+2.  Dans le volet gauche, développez schémas ou dossiers présentant une icône d’erreur rouge. Continuez à développer les éléments jusqu’à ce que vous ayez sélectionné un élément individuel qui n’a pas pu être converti.  
   
-3.  En haut du volet Source, cliquez sur **problème suivant**.  
+3.  En haut du volet source, cliquez sur **problème suivant**.  
   
-    Le code problématique est mis en surbrillance, voici le code connexe dans le volet de Navigation de la cible.  
+    Le code problématique est mis en surbrillance, tout comme le code connexe dans le volet de navigation cible.  
   
-4.  Passez en revue les messages d’erreur et déterminer ce que vous voulez faire avec l’objet qui a provoqué le problème de conversion.  
+4.  Passez en revue les messages d’erreur, puis déterminez ce que vous souhaitez faire avec l’objet qui a provoqué le problème de conversion.  
   
--   Mettre à jour de la syntaxe de MySQL dans SSMA. Vous pouvez mettre à jour la syntaxe uniquement pour les procédures et fonctions. Pour mettre à jour la syntaxe, sélectionnez l’objet dans le volet Explorateur de métadonnées de MySQL, cliquez sur le **SQL** onglet et modifiez le code SQL. Lorsque vous quittez l’élément, vous devrez enregistrer la syntaxe de la mise à jour. Vous pouvez afficher les erreurs signalées pour l’objet sur le **rapport** onglet.  
+-   Mettez à jour la syntaxe MySQL dans SSMA. Vous pouvez mettre à jour la syntaxe uniquement pour les procédures et les fonctions. Pour mettre à jour la syntaxe, sélectionnez l’objet dans le volet Explorateur de métadonnées MySQL, cliquez sur l’onglet **SQL** , puis modifiez le code SQL. Lorsque vous quittez l’élément, vous êtes invité à enregistrer la syntaxe mise à jour. Vous pouvez afficher les erreurs signalées pour l’objet sous l’onglet **rapport** .  
   
--   Dans MySQL, vous pouvez modifier l’objet de MySQL pour supprimer ou de réviser le code problématique. Pour charger le code mis à jour dans SSMA, vous devrez mettre à jour les métadonnées. Pour plus d’informations, consultez [connexion à MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md).  
+-   Dans MySQL, vous pouvez modifier l’objet MySQL pour supprimer ou réviser le code problématique. Pour charger le code mis à jour dans SSMA, vous devez mettre à jour les métadonnées. Pour plus d’informations, consultez [connexion à MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md).  
   
--   Vous pouvez exclure l’objet de la migration. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de l’Explorateur de métadonnées SQL Azure et l’Explorateur de métadonnées de MySQL, désactivez la case à cocher en regard de l’élément avant de charger les objets vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure et migrer les données de MySQL.  
+-   Vous pouvez exclure l’objet de la migration. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure l’Explorateur de métadonnées et l’Explorateur de métadonnées MySQL, désactivez la case à cocher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en regard de l’élément avant de charger les objets dans ou SQL Azure et migrez les données à partir de MySQL.  
   
-## <a name="next-step"></a>Étape suivante  
+## <a name="next-step"></a>étape suivante  
 [Conversion de bases de données MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Bases de données de migration de MySQL vers SQL Server - Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Migration de bases de données MySQL vers SQL Server-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

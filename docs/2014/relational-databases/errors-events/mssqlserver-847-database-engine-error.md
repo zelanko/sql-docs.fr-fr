@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f69e72bda33f361f168c3964411c969adffaa0e
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874541"
 ---
 # <a name="mssqlserver_847"></a>MSSQLSERVER_847
@@ -26,14 +26,14 @@ ms.locfileid: "70874541"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|847|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|847|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|N/A|  
 |Texte du message|Un dépassement de délai s’est produit lors de l’attente du verrou : classe '%ls', id %p, type %d, tâche 0x%p : %d, temps d’attente %d, indicateurs 0x%I64x, tâche propriétaire 0x%p. Poursuite de l'attente.|  
   
 ## <a name="explanation"></a>Explication  
- Un ordinateur peut cesser de répondre, ou un délai d’attente ou une autre interruption des opérations régulières peut se produire en même temps [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que l’écriture des erreurs du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrou de mémoire tampon dans le journal des erreurs.  
+ Un ordinateur peut ne plus répondre, ou bien un dépassement de délai ou une autre perturbation peuvent se produire, au même moment où [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écrit des erreurs de verrous de tampon dans le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Si le champ des statistiques du message a la valeur 0x04 activée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attend une opération d'E/S. Vous pouvez également recevoir le message [MSSQLSERVER_833](mssqlserver-833-database-engine-error.md) dans le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

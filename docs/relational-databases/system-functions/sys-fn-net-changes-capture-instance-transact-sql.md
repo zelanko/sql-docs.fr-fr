@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL) | Microsoft Docs
+title: sys. fn_net_changes_&lt;capture_instance&gt; (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 556518a5fc2950ff69e6a872df5387b4c8367c6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122571"
 ---
-# <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)
+# <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Wrappers pour le **net modifications** fonctions de requête. Les scripts requis pour créer ces fonctions sont générés par la procédure stockée sys.sp_cdc_generate_wrapper_function.  
+  Les wrappers pour les fonctions de requête des **modifications nettes** . Les scripts requis pour créer ces fonctions sont générés par la procédure stockée sys.sp_cdc_generate_wrapper_function.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,31 +50,31 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 ## <a name="arguments"></a>Arguments  
  *start_time*  
- Le **datetime** valeur qui représente le point de terminaison inférieur de la plage d’entrées de table de modifications à inclure dans le jeu de résultats.  
+ Valeur **DateTime** qui représente le point de terminaison inférieur de la plage des entrées de table de modifications à inclure dans le jeu de résultats.  
   
- Seules les lignes dans la capture de données modifiées. < instance_capture > _CT modifications table qui a une heure de validation associée strictement supérieure à *start_time* sont inclus dans le jeu de résultats.  
+ Seules les lignes du CDC. <capture_instance>_CT table de modifications qui ont une heure de validation associée strictement supérieure à *start_time* sont incluses dans le jeu de résultats.  
   
  Si une valeur NULL est fournie pour cet argument, le point de terminaison inférieur de la plage de requêtes correspond au point de terminaison inférieur de la plage valide pour l'instance de capture.  
   
  *end_time*  
- Le **datetime** valeur qui représente le point de terminaison supérieur de la plage d’entrées de table de modifications à inclure dans le jeu de résultats.  
+ Valeur **DateTime** qui représente le point de terminaison supérieur de la plage des entrées de table de modifications à inclure dans le jeu de résultats.  
   
- Ce paramètre peut prendre l’une des deux significations, selon la valeur choisie pour @closed_high_end_point lorsque sys.sp_cdc_generate_wrapper_function est appelé pour générer le script pour créer la fonction wrapper :  
+ Ce paramètre peut prendre l’une des deux significations, selon la valeur choisie pour @closed_high_end_point lorsque sys. sp_cdc_generate_wrapper_function est appelé pour générer le script pour créer la fonction wrapper :  
   
--   @closed_high_end_point = 1  
+-   @closed_high_end_point= 1  
   
-     Seules les lignes dans la capture de données modifiées. < instance_capture > _CT modifications table qui a une valeur dans \_ \_$start_lsn et une validation correspondante de temps inférieur ou égal à **start_time** sont inclus dans le jeu de résultats.  
+     Seules les lignes du CDC. <capture_instance>_CT table de modifications qui ont une valeur \_ \_dans $START _lsn et une heure de validation correspondante inférieure ou égale à **start_time** sont incluses dans le jeu de résultats.  
   
--   @closed_high_end_point = 0  
+-   @closed_high_end_point= 0  
   
-     Seules les lignes dans la capture de données modifiées. < instance_capture > _CT modifications table qui a une valeur dans \_ \_$start_lsn et une heure de validation strictement inférieure à **start_time** sont inclus dans le jeu de résultats.  
+     Seules les lignes du CDC. <capture_instance>_CT table de modifications qui ont une valeur \_ \_dans $START _lsn et une heure de validation correspondante strictement inférieure à **start_time** sont incluses dans le jeu de résultats.  
   
  Si une valeur NULL est fournie pour cet argument, le point de terminaison supérieur de la plage de requêtes correspond au point de terminaison supérieur de la plage valide pour l'instance de capture.  
   
- *< row_filter_option >* :: = {toutes les | tout avec le masque | tout avec fusion}  
+ *<row_filter_option>* :: = {All | all with mask | all with Merge}  
  Option qui régit le contenu des colonnes de métadonnées aussi bien que les lignes retournées dans le jeu de résultats. Il peut s'agir de l'une des options suivantes :  
   
- all  
+ tout  
  Retourne le contenu final d'une ligne modifiée dans les colonnes de contenu ainsi que l'opération requise pour appliquer la ligne dans la colonne de métadonnées __CDC_OPERATION.  
   
  all with mask  
@@ -95,12 +95,12 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 |Nom de la colonne|Type de colonne|Description|  
 |-----------------|-----------------|-----------------|  
-|\<colonnes de @column_list>|**Varie**|Les colonnes qui sont identifiées dans le **column_list** argument de sp_cdc_generate_wrapper_function lorsqu’elle est appelée pour générer le script pour créer le wrapper. Si *column_list* est NULL, toutes les colonnes sources suivies apparaîtront dans le jeu de résultats.|  
-|__CDC_OPERATION|**nvarchar(2)**|Code d'opération qui indique quelle opération est requise pour appliquer la ligne à l'environnement cible. L’opération peut varier en fonction de la valeur de l’argument *row_filter_option* qui est fourni dans l’appel suivant :<br /><br /> *row_filter_option* = 'all', 'all with mask'<br /><br /> 'D' - opération de suppression<br /><br /> 'I' - opération d'insertion<br /><br /> 'UN' - opération de mise à jour<br /><br /> *row_filter_option* = « all with merge »<br /><br /> 'D' - opération de suppression<br /><br /> 'M' – opération d'insertion ou de mise à jour|  
-|\<colonnes de @update_flag_list>|**bit**|Indicateur de bit nommé en ajoutant _uflag au nom de colonne. L’indicateur prend une valeur non null uniquement lorsque *row_filter_option* **= « all with mask'** et \__CDC_OPERATION **= un '** . Il est défini à 1 si la colonne correspondante a été modifiée dans la fenêtre de requête. Sinon, il prend la valeur 0.|  
+|\<colonnes de @column_list>|**diffère**|Colonnes identifiées dans l’argument **column_list** de la sp_cdc_generate_wrapper_function quand elle est appelée pour générer le script pour créer le wrapper. Si *column_list* a la valeur null, toutes les colonnes sources suivies s’affichent dans le jeu de résultats.|  
+|__CDC_OPERATION|**nvarchar (2)**|Code d'opération qui indique quelle opération est requise pour appliquer la ligne à l'environnement cible. L’opération varie en fonction de la valeur de l’argument *row_filter_option* fourni dans l’appel suivant :<br /><br /> *row_filter_option* = « All », « all with mask »<br /><br /> 'D' - opération de suppression<br /><br /> 'I' - opération d'insertion<br /><br /> 'UN' - opération de mise à jour<br /><br /> *row_filter_option* = 'all with Merge'<br /><br /> 'D' - opération de suppression<br /><br /> 'M' – opération d'insertion ou de mise à jour|  
+|\<colonnes de @update_flag_list>|**bit**|Indicateur de bit nommé en ajoutant _uflag au nom de colonne. L’indicateur prend une valeur non NULL uniquement lorsque *row_filter_option* **= « all with mask »** et \__CDC_OPERATION **= « un »**. Il est défini à 1 si la colonne correspondante a été modifiée dans la fenêtre de requête. Sinon, il prend la valeur 0.|  
   
 ## <a name="remarks"></a>Notes  
- La fonction fn_net_changes_ < instance_capture > sert de wrapper pour la fonction de requête cdc.fn_cdc_get_net_changes_ < instance_capture >. La procédure stockée sys.sp_cdc_generate_wrapper sert à créer le script du wrapper.  
+ La fonction fn_net_changes_<capture_instance> sert de wrapper pour la fonction de requête de capture de données modifiées. fn_cdc_get_net_changes_<capture_instance>. La procédure stockée sys. sp_cdc_generate_wrapper est utilisée pour créer le script du wrapper.  
   
  Les fonctions wrapper ne sont pas créées automatiquement. Vous devez effectuer deux opérations pour créer des fonctions wrapper :  
   
@@ -108,18 +108,18 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 2.  Exécuter le script pour créer la fonction wrapper.  
   
- Fonctions wrapper permettent aux utilisateurs d’interroger systématiquement les modifications qui se sont produites dans un intervalle lié par **datetime** valeurs au lieu de valeurs LSN. Les fonctions wrapper effectuent toutes les conversions requises entre les **datetime** valeurs et les valeurs LSN requises en interne en tant qu’arguments pour les fonctions de requête. Lorsque les fonctions wrapper sont utilisées en série pour traiter un flux de données modifiées, elles garantissent qu’aucune perte ou de données répétées condition que la convention suivante soit respectée : la @end_time valeur de l’intervalle associé à un appel est fournie en tant que le @start_time valeur pour l’intervalle associé à l’appel suivant.  
+ Les fonctions wrapper permettent aux utilisateurs de rechercher systématiquement les modifications qui se sont produites dans un intervalle délimité par des valeurs **DateTime** plutôt que par des valeurs LSN. Les fonctions wrapper effectuent toutes les conversions requises entre les valeurs **DateTime** fournies et les valeurs LSN nécessaires en interne en tant qu’arguments des fonctions de requête. Lorsque les fonctions wrapper sont utilisées en série pour traiter un flux de données modifiées, elles garantissent qu’aucune donnée n’est perdue ou répétée, à condition que la convention @end_time suivante soit suivie : la valeur de l’intervalle associé à un @start_time appel est fournie en tant que valeur de l’intervalle associé à l’appel suivant.  
   
  L'utilisation du paramètre @closed_high_end_point lors de la création du script vous permet de générer des wrappers destinés à prendre en charge une limite supérieure fermée ou une limite supérieure ouverte sur la fenêtre de requête spécifiée. Autrement dit, vous pouvez décider si les entrées qui ont une heure de validation égale à la limite supérieure de l'intervalle d'extraction doivent être incluses dans l'intervalle. Par défaut, la limite supérieure est incluse.  
   
- Le jeu de résultats retourné par la **net modifications** wrapper fonction retourne uniquement les colonnes suivies présentes dans le @column_list quand le wrapper a été généré. Si @column_list a la valeur NULL, toutes les colonnes sources suivies sont retournées. Les colonnes sources sont suivies d'une colonne d'opération, __CDC_OPERATION, qui est une colonne à un ou deux caractères qui identifie l'opération.  
+ Le jeu de résultats retourné par la fonction wrapper des **modifications nettes** retourne uniquement les colonnes suivies qui étaient dans @column_list le lorsque le wrapper a été généré. Si @column_list a la valeur NULL, toutes les colonnes sources suivies sont retournées. Les colonnes sources sont suivies d'une colonne d'opération, __CDC_OPERATION, qui est une colonne à un ou deux caractères qui identifie l'opération.  
   
- Indicateurs de bits sont ensuite rajoutés au jeu de résultats pour chaque colonne identifiée dans le paramètre @update_flag_list. Pour le **net modifications** wrapper, les bits indicateurs sont toujours NULL si le @row_filter_option qui est utilisé dans l’appel à la fonction wrapper est 'all' ou « all with merge ». Si la @row_filter_option est définie sur « all with mask » et __CDC_OPERATION est ' ou 'I', la valeur de l’indicateur est également NULL. Si \__CDC_OPERATION est un ', l’indicateur a la valeur 1 ou 0, selon que le **net** la mise à jour a provoqué une modification de la colonne.  
+ Les indicateurs binaires sont ensuite ajoutés au jeu de résultats pour chaque colonne identifiée dans le paramètre @update_flag_list. Pour le wrapper des **modifications nettes** , les indicateurs de bits sont toujours null @row_filter_option si le utilisé dans l’appel à la fonction wrapper est’all’ou’all with Merge'. Si a @row_filter_option la valeur « all with mask » et que __CDC_OPERATION a la valeur « d » ou « I », la valeur de l’indicateur est également null. Si \__CDC_OPERATION est’un', l’indicateur est défini sur 1 ou 0, selon que l’opération de mise à jour **nette** a entraîné ou non une modification de la colonne.  
   
- Le modèle de configuration de capture de données modifiées 'Instantiate de CDC Wrapper TVFs for Schema' illustre comment utiliser la procédure stockée sp_cdc_generate_wrapper_function pour obtenir des scripts CREATE pour toutes les fonctions wrapper pour les fonctions de requêtes définies d’un schéma. Le modèle crée ensuite ces scripts. Pour plus d’informations sur les modèles, consultez [Explorateur de modèles](../../ssms/template/template-explorer.md).  
+ Le modèle de configuration de capture de données modifiées « instanciation CDC Wrapper TVF pour le schéma » montre comment utiliser la procédure stockée sp_cdc_generate_wrapper_function pour obtenir des scripts de création pour toutes les fonctions wrapper pour les fonctions de requête définies d’un schéma. Le modèle crée ensuite ces scripts. Pour plus d’informations sur les modèles, consultez [Explorateur](../../ssms/template/template-explorer.md)de modèles.  
   
 ## <a name="see-also"></a>Voir aussi  
- [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
- [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
+ [sys. sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
+ [CDC. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
   
   

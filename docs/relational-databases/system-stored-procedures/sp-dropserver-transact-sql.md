@@ -19,18 +19,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 0155b154a1d63343c157bc2eca6e5cbd7c1b8968
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124827"
 ---
-# <a name="spdropserver-transact-sql"></a>sp_dropserver (Transact-SQL)
+# <a name="sp_dropserver-transact-sql"></a>sp_dropserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Supprime un serveur dans la liste des serveurs liés et distants connus sur l'instance locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icône de lien](../../database-engine/configure-windows/media/topic-link.gif "Icône de lien") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![icône de lien](../../database-engine/configure-windows/media/topic-link.gif "Icône de lien") [conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,19 +40,19 @@ sp_dropserver [ @server = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *server*  
- Serveur à supprimer. *server* est de type **sysname**et n'a pas de valeur par défaut. *serveur* doit exister.  
+ *serveurs*  
+ Serveur à supprimer. *Server* est de **type sysname**, sans valeur par défaut. le *serveur* doit exister.  
   
- *droplogins*  
- Indique qui de connexion de serveur lié et distant pour liés *server* doit également être supprimé si **droplogins** est spécifié. **`@droplogins`** est **char (10)** , avec NULL comme valeur par défaut.  
+ *DropLogins*  
+ Indique que les connexions de serveur lié et distant associées au *serveur* doivent également être supprimées si **DropLogins** est spécifié. **`@droplogins`** est de **type char (10)**, avec NULL comme valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- Si vous exécutez **sp_dropserver** sur un serveur qui est associé à des entrées de connexion de serveur lié et distant, ou est configuré comme serveur de publication de réplication, un message d’erreur est retourné. Pour supprimer toutes les connexions de serveur lié et distant d’un serveur lorsque vous supprimez le serveur, utilisez le **droplogins** argument.  
+ Si vous exécutez **sp_dropserver** sur un serveur qui a des entrées de connexion à des serveurs liés et distants, ou si est configuré en tant que serveur de publication de réplication, un message d’erreur est renvoyé. Pour supprimer toutes les connexions aux serveurs liés et distants pour un serveur lorsque vous supprimez le serveur, utilisez l’argument **DropLogins** .  
   
- **sp_dropserver** ne peut pas être exécutée à l’intérieur d’une transaction définie par l’utilisateur.  
+ **sp_dropserver** ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite une autorisation ALTER ANY LINKED SERVER sur le serveur.  

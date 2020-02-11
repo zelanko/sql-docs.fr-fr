@@ -1,5 +1,5 @@
 ---
-title: Fonction LocalDBFormatMessage | Microsoft Docs
+title: LocalDBFormatMessage fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,17 +16,17 @@ ms.assetid: 31b3152a-94cf-4f75-a31b-296d7dd16dbe
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: d5aa59cdb3b1c59b78a0ef99fb7d375275d370e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091226"
 ---
 # <a name="localdbformatmessage-function"></a>Fonction LocalDBFormatMessage
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Retourne la description textuelle localisée pour l'erreur SQL Server Express LocalDB spécifiée.  
   
- **Fichier d'en-tête :** sqlncli.h  
+ **Fichier d’en-tête :** sqlncli. h  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -61,8 +61,8 @@ HRESULT LocalDBFormatMessage(
  *lpcchMessage*  
  [Entrée/sortie] En entrée contient la taille de la mémoire tampon de *wszMessage* en caractères. En sortie, si la taille de la mémoire tampon donnée est trop petite, contient la taille de la mémoire tampon requise en caractères, y compris les zéros de fin. Si la fonction réussit, contient le nombre de caractères du message, à l'exception des zéros de fin.  
   
-## <a name="returns"></a>Valeur renvoyée  
- Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  
+## <a name="returns"></a>Retours  
+ S_OK  
  La fonction a réussi.  
   
  [LOCALDB_ERROR_NOT_INSTALLED](../../relational-databases/express-localdb-error-messages/localdb-error-not-installed.md)  
@@ -81,12 +81,12 @@ HRESULT LocalDBFormatMessage(
  Le tampon d'entrée *wszMessage* est trop court, et la troncation n'est pas demandée.  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
- Une erreur inattendue s'est produite. Pour plus d'informations, consultez le journal des événements.  
+ Une erreur inattendue s’est produite. Pour plus d'informations, consultez le journal des événements.  
   
 ## <a name="remarks"></a>Notes  
  Pour un exemple de code qui utilise l'API LocalDB, consultez [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [En-tête et informations de version de la base de données locale SQL Server Express](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
+ [En-tête et informations de version SQL Server Express LocalDB](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

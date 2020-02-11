@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f760220b02396591e684a83305111e487908d19b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006301"
 ---
 # <a name="coalesceempty-mdx"></a>CoalesceEmpty (MDX)
@@ -32,7 +32,7 @@ CoalesceEmpty(String_Expression1 [ ,String_Expression2,...n] )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Expression_numérique1*  
+ *Numeric_Expression1*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
  *Numeric_Expression2*  
@@ -45,16 +45,16 @@ CoalesceEmpty(String_Expression1 [ ,String_Expression2,...n] )
  Expression de chaîne valide qui correspond généralement à une valeur de chaîne spécifique substituée à une valeur NULL retournée par la première expression de chaîne.  
   
 ## <a name="remarks"></a>Notes  
- Si une ou plusieurs expressions numériques sont spécifiées, la **CoalesceEmpty** fonction retourne la valeur numérique de la première expression (de gauche à droite) numérique qui peut être résolue en une valeur non vide. Si aucune des expressions numériques spécifiées ne peut être résolue en une valeur non vide, la fonction retourne la valeur de cellule vide. En règle générale, la valeur de la deuxième expression numérique correspond à la valeur numérique substituée à une valeur NULL retournée par la première expression numérique.  
+ Si une ou plusieurs expressions numériques sont spécifiées, la fonction **CoalesceEmpty** retourne la valeur numérique de la première expression numérique (de gauche à droite) qui peut être résolue en une valeur non vide. Si aucune des expressions numériques spécifiées ne peut être résolue en une valeur non vide, la fonction retourne la valeur de cellule vide. En règle générale, la valeur de la deuxième expression numérique correspond à la valeur numérique substituée à une valeur NULL retournée par la première expression numérique.  
   
  Si une ou plusieurs expressions de chaîne sont spécifiées, la fonction retourne la valeur de chaîne de la première expression de chaîne (de gauche à droite) qui peut être résolue à une valeur non vide. Si aucune des expressions de chaîne spécifiées ne peut être résolue en une valeur non vide, la fonction retourne la valeur de cellule vide. En règle générale, la valeur de la deuxième expression de chaîne correspond à la valeur de chaîne substituée à une valeur NULL retournée par la première expression de chaîne.  
   
- Le **CoalesceEmpty** fonction accepte uniquement les valeurs du même type. Autrement dit, toutes les expressions de valeur spécifiées ne doivent prendre la valeur que de types de données numériques ou de cellule vide, ou toutes les expressions de valeur spécifiées doivent prendre la valeur de types de données chaîne ou de cellule vide. Un seul appel à cette fonction ne peut pas contenir à la fois des expressions numériques et des expressions de chaîne.  
+ La fonction **CoalesceEmpty** peut uniquement prendre des valeurs du même type. Autrement dit, toutes les expressions de valeur spécifiées ne doivent prendre la valeur que de types de données numériques ou de cellule vide, ou toutes les expressions de valeur spécifiées doivent prendre la valeur de types de données chaîne ou de cellule vide. Un seul appel à cette fonction ne peut pas contenir à la fois des expressions numériques et des expressions de chaîne.  
   
  Pour plus d'informations sur les cellules vides, consultez la documentation OLE DB.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant interroge la **Adventure Works** cube. Cet exemple retourne la quantité commandée de chaque produit et le pourcentage des quantités commandées par catégorie. Le **CoalesceEmpty** fonction garantit que les valeurs null sont représentées en tant que zéro (0) lors de la mise en forme les membres calculés.  
+ L’exemple suivant interroge le cube **Adventure Works** . Cet exemple retourne la quantité commandée de chaque produit et le pourcentage des quantités commandées par catégorie. La fonction **CoalesceEmpty** garantit que les valeurs NULL sont représentées comme zéro (0) lors de la mise en forme des membres calculés.  
   
 ```  
 WITH   
@@ -78,6 +78,6 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

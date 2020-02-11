@@ -19,19 +19,19 @@ ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 791c20214ff3eda4b5bb1f2bd3214b25ea972d74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010560"
 ---
-# <a name="spsyscollectorupdatecollectionitem-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
+# <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Permet de modifier les propriétés d'un élément de collecte défini par l'utilisateur ou de le renommer.  
   
  
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,24 +47,24 @@ sp_syscollector_update_collection_item
   
 ## <a name="arguments"></a>Arguments  
  [ @collection_item_id = ] *collection_item_id*  
- Identificateur unique qui identifie l'élément de collecte. *collection_item_id* est **int** avec une valeur par défaut NULL. *collection_item_id* doit avoir une valeur si *nom* est NULL.  
+ Identificateur unique qui identifie l'élément de collecte. *collection_item_id* est de **type int** avec NULL comme valeur par défaut. *collection_item_id* doit avoir une valeur si le *nom* est null.  
   
- [ @name =] '*nom*'  
- Nom de l'élément de collecte. *nom* est **sysname** avec une valeur par défaut NULL. *nom* doit avoir une valeur si *collection_item_id* a la valeur NULL.  
+ [ @name = ] '*nom*'  
+ Nom de l'élément de collecte. *Name* est de **type sysname** avec NULL comme valeur par défaut. le *nom* doit avoir une valeur si *collection_item_id* a la valeur null.  
   
- [ @new_name =] '*nouveau_nom*'  
- Nouveau nom pour l'élément de collecte. *new_name* est **sysname**, et si utilisé, ne peut pas être une chaîne vide.  
+ [ @new_name = ] '*new_name*'  
+ Nouveau nom pour l'élément de collecte. *new_name* est de **type sysname**et, s’il est utilisé, ne peut pas être une chaîne vide.  
   
  *new_name* doit être unique. Pour obtenir une liste de noms d'élément de collecte actuels, interrogez la vue système syscollector_collection_items.  
   
- [ @frequency = ] *frequency*  
- Fréquence (en secondes) de la collecte de données par cet élément de collecte. *fréquence* est **int**, avec une valeur par défaut de 5, la valeur minimale qui peut être spécifié.  
+ [ @frequency = ] *fréquence*  
+ Fréquence (en secondes) de la collecte de données par cet élément de collecte. *Frequency* est de **type int**, avec 5 comme valeur par défaut.  
   
- [ @parameters =] '*paramètres*'  
- Paramètres d'entrée pour l'élément de collecte. *paramètres* est **xml** avec NULL comme valeur par défaut. Le *paramètres* schéma doit correspondre au schéma de paramètres du type de collecteur.  
+ [ @parameters = ] '*Parameters*'  
+ Paramètres d'entrée pour l'élément de collecte. *Parameters* est de type **XML** avec NULL comme valeur par défaut. Le schéma des *paramètres* doit correspondre au schéma des paramètres du type de collecteur.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou 1 (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
  Si le jeu d'éléments de collecte est défini en mode non mis en cache, la modification de la fréquence est ignorée car ce mode provoque l'exécution de la collecte et du téléchargement des données selon la planification spécifiée pour le jeu d'éléments de collecte. Pour afficher l'état du jeu d'éléments de collecte, exécutez la requête suivante. Remplacez `<collection_item_id>` par l'ID de l'élément de collecte à mettre à jour.  
@@ -89,7 +89,7 @@ WHERE collection_item_id = <collection_item_id>;
 -   @parameters  
   
 ## <a name="examples"></a>Exemples  
- Les exemples suivants sont basés sur l’élément de collection créé dans l’exemple défini dans [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md).  
+ Les exemples suivants sont basés sur l’élément de collecte créé dans l’exemple défini dans [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md).  
   
 ### <a name="a-changing-the-collection-frequency"></a>R. Modification de la fréquence de collecte  
  L'exemple suivant modifie la fréquence de collecte pour l'élément de collecte spécifié.  

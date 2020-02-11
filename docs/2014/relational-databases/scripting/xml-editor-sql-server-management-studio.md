@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c4fc4e1b0f0340d579b1f6ee22db888417089352
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242939"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Éditeur XML (SQL Server Management Studio)
@@ -38,8 +38,8 @@ ms.locfileid: "75242939"
 |----------|-----------------|--------------------------|  
 |**Schéma**|Pour créer et modifier visuellement des schémas XML et des groupes de données ADO.NET.|.xsd|  
 |**Données**|Pour modifier visuellement des fichiers de données XML dans une grille de données structurée.|.xml|  
-|**LANGAGE**|Pour modifier XML ; l'éditeur de code source fournit un codage en couleurs et IntelliSense, y compris Compléter le mot et Liste des membres.|.xml .xsd .xslt .wsdl.web.resx.tdl.wsf.hta.disco.vsdisco.config|  
-|**Plan**|Affiche les plans de requête XML créés à l'aide de l'option SET SHOWPLAN_XML ON.|.showplan|  
+|**XML**|Pour modifier XML ; l'éditeur de code source fournit un codage en couleurs et IntelliSense, y compris Compléter le mot et Liste des membres.|.xml .xsd .xslt .wsdl.web.resx.tdl.wsf.hta.disco.vsdisco.config|  
+|**ShowPlan**|Affiche les plans de requête XML créés à l'aide de l'option SET SHOWPLAN_XML ON.|.showplan|  
   
 ## <a name="schema-view"></a>Mode Schéma  
  Le mode Schéma fournit une représentation visuelle des éléments, attributs, types, etc., qui constituent les schémas XML et les groupes de données ADO.NET.  
@@ -98,8 +98,7 @@ ms.locfileid: "75242939"
  Le mode XML fournit un éditeur pour modifier le XML brut, IntelliSense et un codage en couleurs. La saisie semi-automatique des instructions est disponible lorsque vous travaillez sur des fichiers .xsd et .xml auxquels est associé un schéma. Tapez \< pour initialiser une étiquette. une liste d’éléments valides à cet emplacement s’affiche. Après avoir tapé le nom de l'élément et appuyé sur la barre d'espace, la liste des attributs pris en charge par l'élément s'affiche.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense ne sont pas disponibles sur la barre d'outils. Pour accéder à ces options lorsque vous êtes dans l'Éditeur XML, dans le menu **Edition** , cliquez sur **IntelliSense**.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense ne sont pas disponibles sur la barre d'outils. Pour accéder à ces options lorsque vous êtes dans l'Éditeur XML, dans le menu **Edition** , cliquez sur **IntelliSense**.  
   
 ## <a name="showplan-view"></a>Mode SHOWPLAN  
  Les plans de requête peuvent être enregistrés au format XML lorsqu'ils sont créés à l'aide de l'option SET SHOWPLAN_XML ON. Double-cliquez sur un fichier se terminant par l'extension .showplan pour ouvrir le plan de requête.  

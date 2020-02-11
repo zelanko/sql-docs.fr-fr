@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_semantic_language_statistics_database (Transact-SQL) | Microsoft Docs
+title: sys. fulltext_semantic_language_statistics_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: e1d2e60ce41cd3c57af209123471696cf02a03ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68133792"
 ---
-# <a name="sysfulltextsemanticlanguagestatisticsdatabase-transact-sql"></a>sys.fulltext_semantic_language_statistics_database (Transact-SQL)
+# <a name="sysfulltext_semantic_language_statistics_database-transact-sql"></a>sys.fulltext_semantic_language_statistics_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne une ligne relative à la base de données de statistiques linguistiques de sémantique installée sur l'instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -37,16 +37,16 @@ ms.locfileid: "68133792"
 ||||  
 |-|-|-|  
 |**Nom de la colonne**|**Type**|**Description**|  
-|**database_id**|**Int**|ID de la base de données, unique dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**register_date**|**datetime**|Date d'inscription de la base de données pour le traitement sémantique.|  
-|**registered_by**|**Int**|ID du principal de serveur qui a inscrit la base de données pour le traitement sémantique.|  
-|**version**|**nvarchar(128)**|Informations de version les plus récentes spécifiques à la base de données de statistiques linguistiques de sémantique.|  
+|**database_id**|**int**|ID de la base de données, unique dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**register_date**|**DATETIME**|Date d'inscription de la base de données pour le traitement sémantique.|  
+|**registered_by**|**int**|ID du principal de serveur qui a inscrit la base de données pour le traitement sémantique.|  
+|**Version**|**nvarchar(128)**|Informations de version les plus récentes spécifiques à la base de données de statistiques linguistiques de sémantique.|  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  Pour plus d’informations, consultez [Installer et configurer la recherche sémantique](../../relational-databases/search/install-and-configure-semantic-search.md).  
   
 ## <a name="metadata"></a>Métadonnées  
- Pour plus d’informations sur les langues prises en charge pour l’indexation sémantique, interrogez l’affichage catalogue [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
+ Pour plus d’informations sur les langues prises en charge pour l’indexation sémantique, interrogez l’affichage catalogue [sys. fulltext_semantic_languages &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
   
 ## <a name="security"></a>Sécurité  
   
@@ -54,7 +54,7 @@ ms.locfileid: "68133792"
  La visibilité des métadonnées dans les affichages catalogue est limitée aux éléments sécurisables qu'un utilisateur détient ou pour lesquels des autorisations lui ont été accordées.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant montre comment interroger **sys.fulltext_semantic_language_statistics_database** pour obtenir des informations sur la base de données de statistiques linguistiques de sémantique inscrite sur l’instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ L’exemple suivant montre comment interroger **sys. fulltext_semantic_language_statistics_database** pour obtenir des informations sur la base de données de statistiques linguistiques de sémantique inscrite sur l’instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 SELECT * FROM sys.fulltext_semantic_language_statistics_database;  

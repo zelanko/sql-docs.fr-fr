@@ -43,14 +43,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c7d84fbe56d36bd91f2b7f8b49a3df73fb383c6e
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175739"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Déployer une base de données SQL Server sur une machine virtuelle Microsoft Azure
-  Utilisez l’Assistant **déployer une base de données SQL Server sur une machine virtuelle Azure** pour déployer une base de données à partir d’une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une machine virtuelle Azure. L'Assistant utilise une sauvegarde complète de la base de données ; par conséquent, il copie toujours le schéma complet de la base de données et les données d'une base de données utilisateur SQL Server. L'Assistant effectue également toutes les configurations de machine virtuelle Windows Azure pour vous ; par conséquent, aucune configuration préalable de machine virtuelle n'est requise.  
+  Utilisez l’Assistant **déployer une base de données SQL Server sur une machine virtuelle Azure** pour déployer une base de données [!INCLUDE[ssDE](../../includes/ssde-md.md)] à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] partir d’une instance du vers dans une machine virtuelle Azure. L'Assistant utilise une sauvegarde complète de la base de données ; par conséquent, il copie toujours le schéma complet de la base de données et les données d'une base de données utilisateur SQL Server. L'Assistant effectue également toutes les configurations de machine virtuelle Windows Azure pour vous ; par conséquent, aucune configuration préalable de machine virtuelle n'est requise.  
   
  Vous ne pouvez pas utiliser l'Assistant pour les sauvegardes différentielles, car il ne remplace pas une base de données existante portant le même nom de base de données. Pour remplacer une base de données existante sur la machine virtuelle, vous devez d'abord supprimer la base de données existante ou modifier le nom de la base de données. S'il existe un conflit de noms entre le nom de la base de données d'une opération de déploiement en cours et d'une base de données existante sur la machine virtuelle, l'Assistant suggère un nom de base de données avec suffixe pour la base de données en cours pour vous permettre d'effectuer cette opération.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "70175739"
   
  Pour plus d’informations sur l’exécution de SQL Server dans des machines virtuelles Azure, consultez se [préparer à migrer vers SQL Server dans les machines virtuelles Azure](https://msdn.microsoft.com/library/dn133142.aspx).  
   
- Sur les ordinateurs qui exécutent des systèmes d'exploitation Windows Server, vous devez utiliser les paramètres de configuration suivants pour exécuter l'Assistant :  
+ Sur les ordinateurs qui exécutent des systèmes d'exploitation Windows Server, vous devez utiliser les paramètres de configuration suivants pour exécuter l'Assistant :  
   
 -   Désactivez la configuration de sécurité renforcée : utilisez le Gestionnaire de serveur > Serveur local pour définir la configuration de sécurité renforcée (ESC) d’Internet Explorer sur **OFF**.  
   
@@ -103,33 +103,33 @@ ms.locfileid: "70175739"
   
  La version de SQL Server dans la machine virtuelle doit être identique ou ultérieure à la version de SQL Server source. SQL Server versions de base de données qui peuvent être déployées sur une machine virtuelle Azure à l’aide de cet Assistant :  
   
--   SQL Server 2008  
+-   SQL Server 2008  
   
--   SQL Server 2008 R2  
+-   SQL Server 2008 R2  
   
--   SQL Server 2012  
+-   SQL Server 2012  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
  SQL Server versions de base de données qui s’exécutent dans une base de données de machine virtuelle Azure peuvent être déployées sur :  
   
--   SQL Server 2012  
+-   SQL Server 2012  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
  S'il existe un conflit de noms entre le nom de la base de données d'une opération de déploiement en cours et d'une base de données existante sur la machine virtuelle, l'Assistant suggère un nom de base de données avec suffixe pour la base de données en cours pour vous permettre d'effectuer cette opération.  
   
-###  <a name="filestream"></a> Éléments à prendre en considération pour déployer une base de données FILESTREAM sur des machines virtuelles Windows Azure  
+###  <a name="filestream"></a>Considérations relatives au déploiement d’une base de données compatible FILESTREAM sur une machine virtuelle Azure  
  Tenez compte des instructions et des restrictions suivantes lorsque vous déployez des bases de données possédant des objets blob stockés dans des objets FILESTREAM :  
   
 -   La fonctionnalité de déploiement ne peut pas déployer une base de données FILESTREAM dans de nouvelles machines virtuelles. Si FILESTREAM n'est pas activé dans la machine virtuelle avant d'exécuter l'Assistant, l'opération de restauration de base de données échouera et l'Assistant ne pourra pas achever l'opération. Pour déployer correctement une base de données qui utilise FILESTREAM, activez FILESTREAM dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur la machine virtuelle hôte avant de lancer l'Assistant. Pour plus d’informations, consultez [FILESTREAM (SQL Server)](https://msdn.microsoft.com/library/gg471497.aspx).  
   
 -   Si votre base de données utilise l'OLTP en mémoire, déployez la base de données sur une machine virtuelle Azure sans aucune modification à la base de données. Pour plus d’informations, consultez [OLTP en mémoire (optimisation en mémoire)](https://msdn.microsoft.com/library/dn133186\(SQL.120\).aspx).  
   
-###  <a name="geography"></a> Éléments à prendre en considération pour la répartition géographique des actifs  
+###  <a name="geography"></a>Considérations relatives à la répartition géographique des ressources  
  Notez que les actifs suivants doivent se trouver dans la même région géographique :  
   
--   Service de cloud computing  
+-   Service cloud  
   
 -   Emplacement de la machine virtuelle  
   
@@ -137,10 +137,10 @@ ms.locfileid: "70175739"
   
  Si les actifs répertoriés ci-dessus ne sont pas colocalisés, l'Assistant ne pourra pas terminer l'opération.  
   
-###  <a name="configuration_settings"></a> Assistant Paramètres de configuration  
+###  <a name="configuration_settings"></a>Paramètres de configuration de l’Assistant  
  Utilisez les informations de configuration suivantes pour modifier les paramètres d'un déploiement de base de données de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers une machine virtuelle Azure.  
   
--   **Chemin par défaut du fichier de configuration** - %LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM\DeploymentSettings.xml  
+-   **Chemin d’accès par défaut du fichier de configuration** -%LocalAppData%\SQL SERVER\DEPLOY to à SQL dans WA VM\DeploymentSettings.Xml  
   
 -   **Structure du fichier de configuration**  
   
@@ -152,7 +152,7 @@ ms.locfileid: "70175739"
   
             -   BackupPath="\\\\[server name]\\[volume]\\" \<!-- The last used path for backup. Utilisé comme valeur par défaut dans l'Assistant. -->  
   
-            -   CleanupDisabled = false/> \<Assistant !--ne supprimera pas les fichiers intermédiaires et les objets Azure (machine virtuelle, CS, SA). -->  
+            -   CleanupDisabled = false/ \<> !--Assistant ne supprimera pas les fichiers intermédiaires et les objets Azure (machine virtuelle, CS, sa). -->  
   
         -   <PublishProfile \<! -- Dernières informations de profil de publication utilisées. -->  
   
@@ -164,15 +164,16 @@ ms.locfileid: "70175739"
   
             -   Publisher="" />  
   
-    -   \</DeploymentSettings>  
+    -   
+  \</DeploymentSettings>  
   
  **Valeurs du fichier de configuration**  
   
-###  <a name="permissions"></a> Permissions  
+###  <a name="permissions"></a> Autorisations  
  La base de données déployée doit avoir un état normal, doit être accessible au compte d'utilisateur qui exécute l'Assistant, et le compte d'utilisateur doit avoir les autorisations requises pour exécuter une opération de sauvegarde.  
   
 ##  <a name="launch_wizard"></a>Utilisation de l’Assistant déployer une base de données sur une machine virtuelle Azure  
- **Pour lancer l'Assistant, suivez les étapes suivantes :**  
+ **Pour lancer l’Assistant, procédez comme suit :**  
   
 1.  Utilisez SQL Server Management Studio pour vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec la base de données que vous souhaitez déployer.  
   
@@ -182,25 +183,25 @@ ms.locfileid: "70175739"
   
 
   
-##  <a name="Introduction"></a> Page Introduction  
+##  <a name="Introduction"></a>Page Introduction  
  Cette page décrit l’Assistant **déploiement d’une base de données SQL Server sur une machine virtuelle Azure** .  
   
  **Options**  
   
--   **Ne plus afficher cette page** - Cochez cette case pour ne plus afficher la page Introduction à l'avenir.  
+-   **Ne plus afficher cette page.** - Cochez cette case pour ne plus afficher la page Introduction à l'avenir.  
   
--   **Suivant** – Passe à la page **Paramètres de la source**.  
+-   **Suivant** -passe à la page Paramètres de la **source** .  
   
--   **Annuler** : annule l’opération et ferme l’Assistant.  
+-   **Annuler** -annule l’opération et ferme l’Assistant.  
   
 -   **Aide** : ouvre la rubrique d’aide MSDN de l’Assistant.  
   
-##  <a name="Source_settings"></a> Paramètres de la source  
- Utilisez cette page pour vous connecter à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge la base de données que vous souhaitez déployer sur la machine virtuelle Azure. Vous allez également spécifier un emplacement temporaire pour les fichiers à enregistrer à partir de l’ordinateur local avant leur transfert vers Azure. Il peut s'agir d'un emplacement réseau partagé.  
+##  <a name="Source_settings"></a>Paramètres de la source  
+ Utilisez cette page pour vous connecter à l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de qui héberge la base de données que vous souhaitez déployer sur la machine virtuelle Azure. Vous allez également spécifier un emplacement temporaire pour les fichiers à enregistrer à partir de l’ordinateur local avant leur transfert vers Azure. Il peut s'agir d'un emplacement réseau partagé.  
   
  **Options**  
   
--   Cliquez sur **se connecter...** , puis spécifiez les détails de connexion pour l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge la base de données à déployer.  
+-   Cliquez sur **se connecter...** , puis spécifiez les détails de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion pour l’instance de qui héberge la base de données à déployer.  
   
 -   Utilisez la liste déroulante **Sélectionner une base de données** pour spécifier la base de données à déployer.  
   
@@ -219,7 +220,7 @@ ms.locfileid: "70175739"
   
 -   **Abonnement** : sélectionnez, tapez ou collez votre ID d’abonnement Azure qui correspond au certificat de gestion à partir du magasin de certificats local ou d’un profil de publication.  
   
-##  <a name="Deployment_settings"></a> Page Paramètres de déploiement  
+##  <a name="Deployment_settings"></a>Page Paramètres de déploiement  
  Utilisez cette page pour spécifier le serveur de destination et fournir des détails sur votre nouvelle base de données.  
   
  **Options**  
@@ -240,23 +241,23 @@ ms.locfileid: "70175739"
   
 -   **Base de données** : spécifiez ou confirmez le nom d’une nouvelle base de données. Si le nom de la base de données existe déjà sur l'instance SQL Server de destination, modifiez le nom.  
   
-##  <a name="Summary"></a> Page Résumé  
+##  <a name="Summary"></a>Page Résumé  
  Utilisez cette page pour passer en revue les paramètres spécifiés pour l'opération. Pour terminer le déploiement à l'aide des paramètres spécifiés, cliquez sur **Terminer**. Pour annuler le déploiement et quitter l'Assistant, cliquez sur **Annuler**.  
   
  Des étapes manuelles peuvent être nécessaires pour déployer les détails de la base de données dans la base de données SQL Server sur la machine virtuelle Azure. Ces étapes seront décrites de façon détaillée.  
   
-##  <a name="Results"></a> Page Résultats  
+##  <a name="Results"></a>Page résultats  
  Cette page signale la réussite ou l'échec de l'opération de déploiement, affichant les résultats de chaque action. Toute action pour laquelle une erreur s'est produite comportera une indication dans la colonne **Résultat** . Cliquez sur le lien pour consulter le rapport d'erreur de cette action.  
   
  Cliquez sur **Terminer** pour fermer l'Assistant.  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’adaptateur de cloud pour SQL Server](../../database-engine/cloud-adapter-for-sql-server.md)   
- [Gestion du cycle de vie de base de données](../database-lifecycle-management.md)   
- [Exporter une application de la couche Données](../data-tier-applications/export-a-data-tier-application.md)   
- [Importer un fichier BACPAC pour créer une nouvelle base de données utilisateur](../data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)   
- [Sauvegarde et restauration Base de données SQL Azure](https://msdn.microsoft.com/library/azure/jj650016.aspx)   
- [SQL Server le déploiement dans des machines virtuelles Azure](https://msdn.microsoft.com/library/dn133141.aspx)   
- [Préparation à la migration vers SQL Server sur des machines virtuelles Azure](https://msdn.microsoft.com/library/dn133142.aspx)  
+ [adaptateur cloud pour SQL Server](../../database-engine/cloud-adapter-for-sql-server.md)   
+ [Gestion du cycle de vie des bases de données](../database-lifecycle-management.md)   
+ [Exporter une application de la couche données](../data-tier-applications/export-a-data-tier-application.md)   
+ [Importer un fichier baBACPAC pour créer une nouvelle base de données utilisateur](../data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)   
+ [Azure SQL Database la sauvegarde et la restauration](https://msdn.microsoft.com/library/azure/jj650016.aspx)   
+ [Déploiement de SQL Server dans des machines virtuelles Azure](https://msdn.microsoft.com/library/dn133141.aspx)   
+ [Préparation à la migration vers SQL Server dans des machines virtuelles Azure](https://msdn.microsoft.com/library/dn133142.aspx)  
   
   

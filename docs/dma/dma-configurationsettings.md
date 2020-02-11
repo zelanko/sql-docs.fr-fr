@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056539"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Configurer les paramètres de Assistant Migration de données
@@ -39,7 +39,7 @@ Veillez à enregistrer une copie du fichier de configuration d’origine avant d
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>Nombre de bases de données à évaluer en parallèle
 
-Assistant Migration de données évalue plusieurs bases de données en parallèle. Pendant l’évaluation Assistant Migration de données extrait l’application de la couche données (dacpac) pour comprendre le schéma de la base de données. Cette opération peut expirer si plusieurs bases de données sur le même serveur sont évaluées en parallèle. 
+Assistant Migration de données évalue plusieurs bases de données en parallèle. Pendant l’évaluation Assistant Migration de données extrait l’application de la couche données (dacpac) pour comprendre le schéma de la base de données.Cette opération peut expirer si plusieurs bases de données sur le même serveur sont évaluées en parallèle. 
 
 À partir de Assistant Migration de données v 2.0, vous pouvez contrôler cela en définissant la valeur de configuration parallelDatabases. La valeur par défaut est 8.
 
@@ -82,19 +82,19 @@ Assistant Migration de données migre plusieurs bases de données en parallèle 
 Pendant l’évaluation, Assistant Migration de données extrait l’application de la couche données (dacpac) pour comprendre le schéma de la base de données. Cette opération peut échouer avec des délais d’attente pour les bases de données très volumineuses, ou si le serveur est en cours de chargement. À partir de la migration de données v 1.0, vous pouvez modifier les valeurs de configuration suivantes pour éviter les erreurs. 
 
 > [!NOTE]
-> La totalité de l’entrée &lt;dacfx&gt; est commentée par défaut. Supprimez les commentaires, puis modifiez la valeur si nécessaire.
+> La totalité &lt;de&gt; l’entrée dacfx est commentée par défaut. Supprimez les commentaires, puis modifiez la valeur si nécessaire.
 
 - commandTimeout
 
-   Ce paramètre définit la propriété IDbCommand. CommandTimeout en *secondes*. (Valeur par défaut = 60)
+   Ce paramètre définit la propriété IDbCommand. CommandTimeout en *secondes*.(Valeur par défaut = 60)
 
 - databaseLockTimeout
 
-   Ce paramètre équivaut à définir la durée du délai d’expiration\_délai d’expiration [\_période](../t-sql/statements/set-lock-timeout-transact-sql.md) en *millisecondes*. (Valeur par défaut = 5000)
+   Ce paramètre équivaut à définir le délai d’expiration du délai d’attente du [verrou\_\_](../t-sql/statements/set-lock-timeout-transact-sql.md) en *millisecondes*.(Valeur par défaut = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-  Ce paramètre définit le nombre de connexions du pool de connexions SQL à utiliser. (Valeur par défaut = 8)
+  Ce paramètre définit le nombre de connexions du pool de connexions SQL à utiliser.(Valeur par défaut = 8)
 
 ```
 <advisorGroup>

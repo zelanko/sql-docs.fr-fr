@@ -18,18 +18,18 @@ ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ba1cbbfb95dafaa99a33d95b1d92a9e6e5f4e9a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010763"
 ---
-# <a name="sphelpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
+# <a name="sp_helpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Renvoie des informations sur les membres d'un rôle serveur fixe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,22 +39,22 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @srvrolename = ] 'role'` Est le nom d’un rôle de serveur fixe. *rôle* est **sysname**, avec NULL comme valeur par défaut. Si *rôle*n’est pas spécifié, le jeu de résultats inclut des informations sur tous les rôles serveur fixes.  
+`[ @srvrolename = ] 'role'`Nom d’un rôle serveur fixe. *role* est de **type sysname**, avec NULL comme valeur par défaut. Si le *rôle*n’est pas spécifié, le jeu de résultats contient des informations sur tous les rôles serveur fixes.  
   
- *rôle* peut être une des valeurs suivantes.  
+ le *rôle* peut être l’une des valeurs suivantes.  
   
 |Rôle serveur fixe|Description|  
 |-----------------------|-----------------|  
-|sysadmin|Administrateurs système|  
+|administrateur système|Administrateurs système|  
 |securityadmin|Administrateurs de la sécurité|  
-|serveradmin|Administrateurs du serveur|  
+|serveradmin|Administrateurs de serveur|  
 |setupadmin|Administrateurs de l'installation et de la configuration|  
 |processadmin|Administrateurs de processus|  
 |diskadmin|Administrateurs de disques|  
 |dbcreator|Créateurs de base de données|  
 |bulkadmin|Exécute les instructions BULK INSERT.|  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -62,17 +62,17 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|Nom du rôle de serveur|  
-|MemberName|**sysname**|Nom d’un membre du rôle serveur|  
-|MemberSID|**varbinary(85)**|Identificateur de sécurité de MemberName|  
+|MemberName|**sysname**|Nom d'un membre de ServerRole|  
+|MemberSID|**varbinary(85)**|ID de sécurité de MemberName|  
   
 ## <a name="remarks"></a>Notes  
- Utilisez sp_helprolemember pour afficher les membres d’un rôle de base de données.  
+ Utilisez sp_helprolemember pour afficher les membres d'un rôle de base de données.  
   
- Toutes les connexions sont un membre public. sp_helpsrvrolemember ne reconnaît pas le rôle public, car, en interne, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’implémente pas publique en tant que rôle.  
+ Toutes les connexions sont membres du public. sp_helpsrvrolemember ne reconnaît pas le rôle public car, en interne, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’implémente pas public en tant que rôle.  
   
- Pour ajouter ou de membres supprimés à partir de rôles de serveur, consultez [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ Pour ajouter ou supprimer des membres dans des rôles de serveur, consultez [ALTER Server role &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
- sp_helpsrvrolemember n’accepte pas un rôle de serveur défini par l’utilisateur en tant qu’argument. Pour déterminer les membres d’un rôle de serveur défini par l’utilisateur, consultez les exemples de [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ sp_helpsrvrolemember ne prend pas un rôle de serveur défini par l’utilisateur comme argument. Pour déterminer les membres d’un rôle de serveur défini par l’utilisateur, consultez les exemples dans [ALTER Server role &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle public.  

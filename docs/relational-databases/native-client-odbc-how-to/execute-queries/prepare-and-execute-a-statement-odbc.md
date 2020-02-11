@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ea4ce4bfe51f844d6d2916623f5a9cc3ffbe01a6
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781388"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>Préparer et exécuter une instruction (ODBC)
@@ -69,7 +69,7 @@ ms.locfileid: "73781388"
   
     -   Allouez un tableau de S mémoires tampons de paramètres pour stocker les longueurs de données.  
   
-    -   Appelez SQLBindParameter pour lier les tableaux de valeur de données et de longueur de données de paramètre au paramètre d’instruction.  
+    -   Appelez SQLBindParameter pour lier les tableaux de valeur de données et de longueur de données de paramètre au paramètre d'instruction.  
   
     -   Si le paramètre est un paramètre d'image ou de texte de données en cours d'exécution, installez-le.  
   
@@ -79,9 +79,9 @@ ms.locfileid: "73781388"
   
     -   Mettez les valeurs de données S et les longueurs de données S dans les tableaux de paramètres liés.  
   
-    -   Appelez SQLExecute pour exécuter l’instruction préparée.  
+    -   Appelez SQLExecute pour exécuter l'instruction préparée.  
   
-    -   Si des paramètres d’entrée de données en cours d’exécution sont utilisés, SQLExecute retourne SQL_NEED_DATA. Envoyez les données par segments à l’aide de SQLParamData et SQLPutData.  
+    -   Si des paramètres d'entrée de données en cours d'exécution sont utilisés, SQLExecute retourne SQL_NEED_DATA. Envoyez les données par segments à l'aide de SQLParamData et SQLPutData.  
   
 ### <a name="to-prepare-a-statement-with-row-wise-bound-parameters"></a>Pour préparer une instruction avec des paramètres liés selon les lignes  
   
@@ -109,11 +109,11 @@ ms.locfileid: "73781388"
   
     -   Remplissez le tableau de tampons de paramètres liés avec les valeurs de données.  
   
-    -   Appelez SQLExecute pour exécuter l’instruction préparée. Le pilote exécute efficacement l'instruction SQL S fois, une fois pour chaque jeu de paramètres.  
+    -   Appelez SQLExecute pour exécuter l'instruction préparée. Le pilote exécute efficacement l'instruction SQL S fois, une fois pour chaque jeu de paramètres.  
   
-    -   Si des paramètres d’entrée de données en cours d’exécution sont utilisés, SQLExecute retourne SQL_NEED_DATA. Envoyez les données par segments à l’aide de SQLParamData et SQLPutData.  
+    -   Si des paramètres d'entrée de données en cours d'exécution sont utilisés, SQLExecute retourne SQL_NEED_DATA. Envoyez les données par segments à l'aide de SQLParamData et SQLPutData.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques de procédures relatives &#40;à l’exécution de requêtes ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [Rubriques de procédures relatives à l’exécution de requêtes &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

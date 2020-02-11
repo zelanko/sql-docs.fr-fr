@@ -14,10 +14,10 @@ ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6b06d77f562864a1b18e492d1db70563b62d4647
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728465"
 ---
 # <a name="create-an-entity-master-data-services"></a>Créer une entité (Master Data Services)
@@ -56,38 +56,38 @@ ms.locfileid: "73728465"
     > [!TIP]
     > Si vous utilisez le nom par défaut des tables de mise en lots, MDS y ajoute automatiquement un identificateur (par exemple, _1 ou _2) si une entité portant le même nom existe dans un autre modèle.
   
-7.  Pour le champ **Type de journal des transactions**, choisissez le type du journal des transactions dans la liste déroulante.  
+7.  Pour le champ **Type de journal des transactions** , choisissez le type du journal des transactions dans la liste déroulante.  
   
      Pour plus d’informations, consultez [Modifier le type du journal des transactions de l’entité &#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md).  
   
-8.  Facultatif. Activez la case à cocher **Créer automatiquement les valeurs de code** . Pour plus d’informations, consultez [Création automatique de code &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md).  
+8.  facultatif. Activez la case à cocher **Créer automatiquement les valeurs de code** . Pour plus d’informations, consultez [création automatique de Code &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md).  
   
-9. Facultatif. Cochez la case **Activer la compression des données** . La compression de ligne est activée par défaut. Pour plus d’informations, voir [Data Compression](../relational-databases/data-compression/data-compression.md).  
+9. facultatif. Cochez la case **Activer la compression des données** . La compression de ligne est activée par défaut. Pour plus d’informations, voir [Data Compression](../relational-databases/data-compression/data-compression.md).  
   
 10. Cliquez sur **Enregistrer**.  
   
 ## <a name="grid-columns"></a>Colonnes de la grille  
- Pour chaque entité créée, une ligne comportant treize colonnes est ajoutée à la grille. Les colonnes sont décrites ci-après.  
+ Pour chaque entité créée, une ligne comportant treize colonnes est ajoutée à la grille. Les différentes colonnes sont décrites ci-après.  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|État|État de l’entité. Lorsque vous cliquez sur **Enregistrer** , l’image ci-après s’affiche pour indiquer que l’entité est en cours de mise à jour.<br /><br /> ![Icône de mise à jour de l’État](../master-data-services/media/mds-statusicon-updating.png "Icon pour la mise à jour de l’État»)<br /><br /> En cas d’erreur lors de la création ou de la modification d’une entité, l’image suivante apparaît.<br /><br /> ![Icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icon pour l’état d’erreur»)<br /><br /> Si l’état présente la valeur OK, l’image ci-dessous s’affiche.<br /><br /> ![Icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icon pour l’état OK»)|  
-|Nom|Nom de l’entité.|  
+|Statut|État de l’entité. Lorsque vous cliquez sur **Enregistrer** , l’image ci-après s’affiche pour indiquer que l’entité est en cours de mise à jour.<br /><br /> ![Icône de mise à jour de l’État](../master-data-services/media/mds-statusicon-updating.png "Icône de mise à jour de l’État")<br /><br /> En cas d’erreur lors de la création ou de la modification d’une entité, l’image suivante apparaît.<br /><br /> ![Icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur")<br /><br /> Si l’état présente la valeur OK, l’image ci-dessous s’affiche.<br /><br /> ![Icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK")|  
+|Name|Nom de l’entité.|  
 |Description|Description de l’entité.|  
 |Table de mise en lots|Nom de préfixe de la table utilisée pour le stockage des données.|  
-|Type de journal des transactions|Type du journal des transactions de l’entité.|  
+|Type du journal des transactions|Type du journal des transactions de l’entité.|  
 |Création automatique de code|Indique si la création automatique de code est activée.|  
-|Compression des données|Indique si la compression des données est activée pour l’entité.|  
+|Data Compression|Indique si la compression des données est activée pour l’entité.|  
 |Cible de synchronisation|Indique si l’entité est la cible d’une relation de synchronisation.|  
 |Activée pour les hiérarchies|Indique si l’entité est activée pour les hiérarchies explicites. Cette colonne affiche la valeur Oui si au moins une hiérarchie explicite est créée pour l’entité.|  
-|Date de création|Nom de l’utilisateur ayant créé l’entité.|  
+|Créé par|Nom de l’utilisateur ayant créé l’entité.|  
 |Créée le|Date et heure de création de l’entité.|  
 |Mise à jour par|Nom de l’utilisateur ayant effectué la dernière mise à jour de l’entité.|  
-|Mise à jour le|Date et heure de la dernière mise à jour de l’entité.|  
+|Updated On|Date et heure de la dernière mise à jour de l’entité.|  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
   
--   [Créer un attribut de texte &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
+-   [Créez un attribut de texte &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
   
 -   [Créer un attribut basé sur un domaine &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   

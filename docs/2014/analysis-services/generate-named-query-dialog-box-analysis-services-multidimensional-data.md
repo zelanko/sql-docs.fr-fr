@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue requête nommée (Analysis Services - données multidimensionnelles) générer | Microsoft Docs
+title: Boîte de dialogue générer une requête nommée (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 129e1df9463064baafa38fb860f415b9c01ab38b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080910"
 ---
 # <a name="generate-named-query-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Générer une requête nommée (Analysis Services - Données multidimensionnelles)

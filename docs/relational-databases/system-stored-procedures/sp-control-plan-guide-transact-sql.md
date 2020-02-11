@@ -18,18 +18,18 @@ ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 808d6e9482d293e957a0dc483df128d08b74133c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108763"
 ---
-# <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
+# <a name="sp_control_plan_guide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime, active ou désactive un repère de plan.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,35 +51,35 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
   
 ## <a name="arguments"></a>Arguments  
  **N'** _plan_guide_name_ **'**  
- Spécifie le repère de plan à supprimer, activer ou désactiver. *plan_guide_name* est résolu à la base de données actuelle. Si non spécifié, *plan_guide_name* valeur par défaut est NULL.  
+ Spécifie le repère de plan à supprimer, activer ou désactiver. *plan_guide_name* est résolue dans la base de données actuelle. S’il n’est pas spécifié, *plan_guide_name* la valeur par défaut est null.  
   
  DROP  
  Supprime le repère de plan spécifié par *plan_guide_name*. Après la suppression d'un repère de plan, les exécutions futures d'une requête auparavant filtrée par le repère de plan ne sont plus influencées par ce repère de plan.  
   
  DROP ALL  
- Supprime tous les repères de plan dans la base de données actuelle. **N'** _plan_guide_name_ ne peut pas être spécifié lorsque DROP ALL est défini.  
+ Supprime tous les repères de plan dans la base de données actuelle. **N'**_plan_guide_name_ ne peut pas être spécifié lorsque l’instruction DROP all est spécifiée.  
   
  DISABLE  
  Désactive le repère de plan spécifié par *plan_guide_name*. Après la désactivation d'un repère de plan, les exécutions futures d'une requête auparavant filtrée par le repère de plan ne sont plus influencées par ce repère de plan.  
   
  DISABLE ALL  
- Désactive tous les repères de plan dans la base de données actuelle. **N'** _plan_guide_name_ ne peut pas être spécifié lorsque DISABLE ALL est défini.  
+ Désactive tous les repères de plan dans la base de données actuelle. **N'**_plan_guide_name_ ne peut pas être spécifié lorsque Disable All est spécifié.  
   
  ENABLE  
  Active le repère de plan spécifié par *plan_guide_name*. Une fois activé, un repère de plan peut être associé à une requête admissible. Par défaut, les repères de plan sont activés au moment de leur création.  
   
  ENABLE ALL  
- Active tous les repères de plan dans la base de données actuelle. **N'** _plan_guide_name_ **'** ne peut pas être spécifié lorsque ENABLE ALL est défini.  
+ Active tous les repères de plan dans la base de données actuelle. **N'**_plan_guide_name_**'** ne peut pas être spécifié lorsque enable All est spécifié.  
   
 ## <a name="remarks"></a>Notes  
  Si vous tentez de supprimer ou de modifier une fonction, une procédure stockée ou un déclencheur DML référencé par un repère de plan, qu'il soit activé ou désactivé, une erreur se produit.  
   
  Désactiver un repère de plan désactivé, ou activer un repère de plan activé n'a pas d'effet et ne provoque pas d'erreur.  
   
- Repères de plan ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Toutefois, vous pouvez exécuter **sp_control_plan_guide** avec l’option DROP ou DROP ALL dans n’importe quelle édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Les repères de plan ne sont pas [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]disponibles dans toutes les éditions de. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Toutefois, vous pouvez exécuter **sp_control_plan_guide** avec l’option DROP ou DROP all dans n’importe quelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]édition de.  
   
 ## <a name="permissions"></a>Autorisations  
- Pour exécuter **sp_control_plan_guide** sur un repère de plan de type OBJECT (créée en spécifiant  **@type ='** objet **'** ) nécessite l’autorisation ALTER sur l’objet qui est référencé par le repère de plan. Tous les autres repères de plan nécessitent l'autorisation ALTER DATABASE.  
+ Pour exécuter **sp_control_plan_guide** sur un repère de plan de type Object (créé en spécifiant ** @type = '** Object **'** ), vous devez disposer de l’autorisation ALTER sur l’objet référencé par le repère de plan. Tous les autres repères de plan nécessitent l'autorisation ALTER DATABASE.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -134,10 +134,10 @@ EXEC sp_control_plan_guide N'DISABLE ALL';
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées du moteur de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
- [sys.plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
+ [sys. plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
  [Repères de plan](../../relational-databases/performance/plan-guides.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f4f911ebf60852fd4ab11c5813fc567deb2d0c87
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75225401"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>Configurer l'accès HTTP à Analysis Services sur Internet Information Services (IIS) 8.0
@@ -38,9 +38,9 @@ ms.locfileid: "75225401"
   
  Cette rubrique contient les sections suivantes :  
   
--   [Vue](#bkmk_overview)  
+-   [Vue d’ensemble](#bkmk_overview)  
   
--   [Conditions préalables](#bkmk_prereq)  
+-   [Prérequis](#bkmk_prereq)  
   
 -   [Copiez le fichier MSMDPUMP. dll dans un dossier sur le serveur Web.](#bkmk_copy)  
   

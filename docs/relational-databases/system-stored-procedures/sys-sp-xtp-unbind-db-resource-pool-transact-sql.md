@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_xtp_unbind_db_resource_pool (Transact-SQL) | Microsoft Docs
+title: sys. sp_xtp_unbind_db_resource_pool (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: be0f8e7b410abb2e9027ce0b773d1a1ad5a14465
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041002"
 ---
-# <a name="sysspxtpunbinddbresourcepool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
+# <a name="syssp_xtp_unbind_db_resource_pool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Cette procédure système supprime une liaison existante entre une base de données et un pool de ressources aux fins de suivi de l'utilisation de la mémoire [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  Si aucun pool n'est actuellement lié à la base de données spécifiée, un message de réussite est retourné. Lorsque la liaison de la base de données est annulée, la mémoire allouée précédemment aux objets mémoire optimisés reste allouée au pool de ressources précédent. Vous devez redémarrer la base de données pour libérer la mémoire allouée. Une fois que la base de données n'est plus liée au pool de ressources, la liaison recourt au pool de ressources DEFAULT.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -63,7 +63,7 @@ Database 'Hekaton_DB' does not have a binding to a resource pool.
 sys.sp_xtp_unbind_db_resource_pool 'Hekaton_DB'  
 ```  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 -   La base de données spécifiée par `database_name` doit avoir une liaison à un pool de ressources [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
   

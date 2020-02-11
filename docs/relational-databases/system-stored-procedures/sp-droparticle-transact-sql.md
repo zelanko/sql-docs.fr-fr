@@ -16,18 +16,18 @@ ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 882c57c552d9666ec3ef308f63a6c5058c21e8e2
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68768933"
 ---
-# <a name="spdroparticle-transact-sql"></a>sp_droparticle (Transact-SQL)
+# <a name="sp_droparticle-transact-sql"></a>sp_droparticle (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Supprime un article d'une publication transactionnelle ou d'instantané. Un article ne peut être supprimé s'il fait l'objet d'un ou plusieurs abonnements. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,20 +54,20 @@ sp_droparticle [ @publication= ] 'publication'
   
  **1** indique que les modifications apportées à l’article peuvent entraîner la non-validité de l’instantané, et s’il existe des abonnements qui nécessitent un nouvel instantané, donne l’autorisation de marquer l’instantané existant comme obsolète et de générer un nouvel instantané.  
   
-`[ @publisher = ] 'publisher'`Spécifie un serveur [!INCLUDE[msCoName](../../includes/msconame-md.md)] de publication non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'`Spécifie un serveur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de publication non-. *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  l' *éditeur* ne doit pas être utilisé lors de la modification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des propriétés d’un article sur un serveur de publication.  
   
 `[ @from_drop_publication = ] from_drop_publication` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
  **sp_droparticle** est utilisé dans la réplication transactionnelle et d’instantané.  
   
- Pour les articles filtrés horizontalement, **sp_droparticle** vérifie la colonne **type** de l’article dans la table [Transact-&#41; SQL &#40;sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md) pour déterminer si une vue ou un filtre doit également être supprimé. Si une vue ou un filtre ont été générés automatiquement, ils sont supprimés avec l'article. S'ils ont été créés manuellement, ils ne sont pas supprimés.  
+ Pour les articles filtrés horizontalement, **sp_droparticle** vérifie la colonne **type** de l’article dans la table [sysarticles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md) pour déterminer si une vue ou un filtre doit également être supprimé. Si une vue ou un filtre ont été générés automatiquement, ils sont supprimés avec l'article. S'ils ont été créés manuellement, ils ne sont pas supprimés.  
   
  L’exécution de **sp_droparticle** pour supprimer un article d’une publication ne supprime pas l’objet de la base de données de publication ou l’objet correspondant de la base de données d’abonnement. Utilisez `DROP <object>` pour supprimer ces objets manuellement si nécessaire.  
   

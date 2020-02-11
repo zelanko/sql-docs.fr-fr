@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 76362bedfd982fe0fb513873c6822fdcf56af6de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999938"
 ---
 # <a name="object-explorer-details-pane"></a>Volet Détails de l'Explorateur d'objets
@@ -42,11 +42,11 @@ ms.locfileid: "62999938"
 |----------|------------|  
 |**Précédent**|Passe aux éléments précédents affichés dans Détails de l'Explorateur d'objets. Réexécute une recherche lorsque l'affichage précédent est le résultat d'une opération de recherche.|  
 |**Suivant**|Passe à l’écran suivant après une opération **Précédent** .|  
-|**Monter**|Passe à l'objet ou au dossier parent.|  
+|**Haut**|Passe à l'objet ou au dossier parent.|  
 |**Synchroniser**|Définit l'objet sélectionné dans Détails de l'Explorateur d'objets comme focus de l'Explorateur d'objets.|  
 |**Filter**|Affiche, si disponible, un sous-ensemble configurable d'objets.|  
 |**Actualiser**|Actualise l'affichage dans Détails de l'Explorateur d'objets.|  
-|**Recherche**|Fournit une zone pour entrer un terme de recherche pour certains objets de base de données.|  
+|**action**|Fournit une zone pour entrer un terme de recherche pour certains objets de base de données.|  
   
 ### <a name="column-header-selections"></a>Sélections d'en-tête de colonne  
  Détails de l'Explorateur d'objets possède des colonnes sélectionnables. Vous pouvez cliquer avec le bouton droit sur n'importe quel en-tête de colonne et sélectionner les éléments à afficher. Vos sélections sont rendues persistantes à travers les différents objets que vous parcourez. Les sélections pour chaque utilisateur sont conservées lorsque vous quittez et redémarrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -87,7 +87,7 @@ ms.locfileid: "62999938"
 ## <a name="sql-server-object-search"></a>Recherche d'objets SQL Server  
  Caractères génériques  
   
--   Les caractères génériques standard sont pris en charge. Par exemple, la chaîne de recherche **dm_os%counters** retourne dm_os_memory_cache_counters et dm_os_performance_counters. Pour plus d’informations, consultez [rechercher du texte avec des caractères génériques](../../relational-databases/scripting/search-text-with-wildcards.md).  
+-   Les caractères génériques standard sont pris en charge. Par exemple, la chaîne de recherche **dm_os%counters** retourne dm_os_memory_cache_counters et dm_os_performance_counters. Pour plus d’informations, consultez [Rechercher du texte avec des caractères génériques](../../relational-databases/scripting/search-text-with-wildcards.md).  
   
  Étendue de recherche  
   
@@ -98,6 +98,6 @@ ms.locfileid: "62999938"
 -   Les recherches portant sur des jeux d'objets volumineux peut prendre du temps et nuire aux performances du serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Explorateur d'objets](object-explorer.md)  
+ [l’Explorateur d’objets](object-explorer.md)  
   
   

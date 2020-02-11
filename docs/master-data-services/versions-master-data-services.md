@@ -16,10 +16,10 @@ ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 700878062dc302296dd827fb5e7db9b52c4286f3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727797"
 ---
 # <a name="versions-master-data-services"></a>Versions (Master Data Services)
@@ -66,7 +66,7 @@ ms.locfileid: "73727797"
 -   **Versions simultanées.** Créez des versions simultanées de votre modèle lorsque vous souhaitez travailler sur plusieurs versions de vos données à la fois. Cela est utile lorsque votre société a des réorganisations ou fusions qui coïncident avec son activité habituelle et que vous souhaitez déterminer la façon dont les nouvelles données de référence peuvent s'ajuster à vos structures existantes.  
   
     > [!NOTE]  
-    >  Un paramètre dans le [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] détermine si vous pouvez ou non copier toutes les versions ou uniquement celles qui sont activées. Pour créer des versions simultanées vous devez configurer [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] pour vous permettre de copier toutes les versions. Ce paramètre est également disponible dans la table Paramètres système. Pour plus d’informations, consultez [System Settings &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md) (Paramètres système &#40;Master Data Services&#41;).  
+    >  Un paramètre dans le [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] détermine si vous pouvez ou non copier toutes les versions ou uniquement celles qui sont activées. Pour créer des versions simultanées vous devez configurer [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] pour vous permettre de copier toutes les versions. Ce paramètre est également disponible dans la table Paramètres système. Pour plus d’informations, consultez [Paramètres système &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
 ## <a name="related-tasks"></a>Tâches associées  
   
@@ -75,7 +75,7 @@ ms.locfileid: "73727797"
 |Modifier le nom d'une version existante.|[Modifier le nom d’une version &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
 |Verrouiller une version pour que seuls les administrateurs puissent en modifier les données.|[Verrouiller une version &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)|  
 |Déverrouiller une version afin que les utilisateurs puissent en modifier les données.|[Déverrouiller une version &#40;Master Data Services&#41;](../master-data-services/unlock-a-version-master-data-services.md)|  
-|Activer une version une fois que toutes les données ont été validées.|[Activer une version &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)|  
+|Activer une version une fois que toutes les données ont été validées.|[Valider une version &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)|  
 |Créer un indicateur pour marquer une version.|[Créer un indicateur de version &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
 |Modifier le nom d'un indicateur de version existant.|[Modifier le nom d’un indicateur de version &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
 |Affecter un indicateur existant à une version.|[Affecter un indicateur à une version &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
@@ -83,12 +83,12 @@ ms.locfileid: "73727797"
 |Supprimer une version existante.|[Supprimer une version &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md)|  
 |Vider les membres supprimés (récupérables) d’une version|[Purger les membres de version &#40;Master Data Services&#41;](../master-data-services/purge-version-members-master-data-services.md)|  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
   
 -   [Inverser une transaction &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
--   [Notifications &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
+-   [&#40;de notifications Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
   
--   [Règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [&#40;des règles d’entreprise Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

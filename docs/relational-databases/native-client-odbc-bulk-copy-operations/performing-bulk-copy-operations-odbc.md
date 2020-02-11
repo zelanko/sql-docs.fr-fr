@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e58c355c437d325e2a0db228f8ed4af83956fecf
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785047"
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>Exécution d'opérations de copie en bloc (ODBC)
@@ -42,7 +42,7 @@ ms.locfileid: "73785047"
      Doit être présent lors de l'exécution. sqlncli11.dll est distribué avec le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 > [!NOTE]  
->  La fonction ODBC **SQLBulkOperations** n’a aucune relation avec les fonctions de copie en bloc [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les applications doivent utiliser les fonctions de copie en bloc spécifiques à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour effectuer les opérations de copie en bloc.  
+>  La fonction ODBC **SQLBulkOperations** n’a aucune relation avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les fonctions de copie en bloc. Les applications doivent utiliser les fonctions de copie en bloc spécifiques à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour effectuer les opérations de copie en bloc.  
   
 ## <a name="minimally-logging-bulk-copies"></a>Enregistrement minimal des copies en bloc dans le journal  
  Avec le mode de récupération complète, toutes les opérations d'insertion de lignes effectuées par le chargement en masse sont intégralement enregistrées dans le journal des transactions. Pour les chargements de données volumineux, le journal des transactions peut se remplir rapidement. Sous certaines conditions, l'enregistrement minimal est possible. L'enregistrement minimal réduit le risque qu'une opération de chargement en masse ne remplisse l'espace du journal et se révèle plus efficace que l'enregistrement complet.  
@@ -60,12 +60,12 @@ ms.locfileid: "73785047"
   
 -   [Gestion des tailles de lot de copie en bloc](../../relational-databases/native-client-odbc-bulk-copy-operations/managing-bulk-copy-batch-sizes.md)  
   
--   [Copier en bloc des données texte et image](../../relational-databases/native-client-odbc-bulk-copy-operations/bulk-copying-text-and-image-data.md)  
+-   [Copie en bloc de données Text et Image](../../relational-databases/native-client-odbc-bulk-copy-operations/bulk-copying-text-and-image-data.md)  
   
--   [Conversion à partir de la bibliothèque de bases de données (DB-Library) vers une copie en bloc ODBC](../../relational-databases/native-client-odbc-bulk-copy-operations/converting-from-db-library-to-odbc-bulk-copy.md)  
+-   [Conversion à partir de la bibliothèque de bases de données vers une copie en bloc ODBC](../../relational-databases/native-client-odbc-bulk-copy-operations/converting-from-db-library-to-odbc-bulk-copy.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Native Client &#40;ODBC&#41; ](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [SQL Server Native Client &#40;&#41;ODBC](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [Importation et exportation en bloc de données &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)  
   
   

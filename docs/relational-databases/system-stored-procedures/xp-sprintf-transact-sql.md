@@ -1,7 +1,7 @@
 ---
 title: xp_sprintf (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 1eedd65c-03cc-4eab-b76e-04684fdfec52
 author: CarlRabeler
 ms.author: carlrab
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec2ad672135453750d5880d63a8f90f3e3d4c558
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ba1648da108762b03155eb93e1ee11c53a75583
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898359"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "75831764"
 ---
-# <a name="xpsprintf-transact-sql"></a>xp_sprintf (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="xp_sprintf-transact-sql"></a>xp_sprintf (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Formate et stocke une série de caractères et de valeurs dans le paramètre de sortie de type chaîne. Chaque argument de format est remplacé par l'argument correspondant.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,14 +40,14 @@ xp_sprintf { string OUTPUT , format }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *string*  
- Est un **varchar** variable qui reçoit la sortie.  
+ *chaîne*  
+ Variable **varchar** qui reçoit la sortie.  
   
  OUTPUT  
  Lorsqu'elle est spécifiée, cette option place la valeur de la variable dans le paramètre de sortie.  
   
  *format*  
- Est une chaîne de caractères de format avec des espaces réservés pour *argument* valeurs, semblable à celle prise en charge par le langage C **sprintf** (fonction). Pour l'instant, seul l'argument de format %s est pris en charge.  
+ Chaîne de caractères de format avec des espaces réservés pour les valeurs d' *argument* , similaire à celle prise en charge par la fonction **sprintf** du langage C. Pour l'instant, seul l'argument de format %s est pris en charge.  
   
  *argument*  
  Chaîne de caractères qui représente la valeur de l'argument de format correspondant.  
@@ -56,7 +55,7 @@ xp_sprintf { string OUTPUT , format }
  *n*  
  Emplacement réservé signalant qu'un nombre maximum de 50 arguments peut être spécifié.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -69,7 +68,7 @@ xp_sprintf { string OUTPUT , format }
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Procédures stockées étendues générales &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
+ [Procédures stockées étendues générales &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_sscanf &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-sscanf-transact-sql.md)  
   
   

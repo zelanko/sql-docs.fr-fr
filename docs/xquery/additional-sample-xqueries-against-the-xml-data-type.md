@@ -1,5 +1,5 @@
 ---
-title: Autres exemples de requêtes XQuery sur le Type de données xml | Microsoft Docs
+title: Exemples supplémentaires de requêtes XQuery sur le type de données XML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 2af66304-c021-427c-b3b3-e000ec0896cd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 2284f499dce30462b468dc385944ba19f0dbb88e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67986056"
 ---
 # <a name="additional-sample-xqueries-against-the-xml-data-type"></a>Exemples supplémentaires de requêtes XQuery sur le type de données xml
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Les rubriques de cette section fournissent des exemples supplémentaires qui montrent comment utiliser des requêtes XQuery sur le **xml** type de données :  
+  Les rubriques de cette section fournissent des exemples supplémentaires qui montrent comment utiliser des requêtes XQuery sur le type de données **XML** :  
   
--   [Cas d’emploi généraux des requêtes XQuery](../xquery/general-xquery-use-cases.md)  
+-   [Cas d'emploi généraux des requêtes XQuery](../xquery/general-xquery-use-cases.md)  
   
 -   [Requêtes XQuery impliquant une hiérarchie](../xquery/xqueries-involving-hierarchy.md)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67986056"
 -   [Gestion des espaces de noms dans XQuery](../xquery/handling-namespaces-in-xquery.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions XQuery impliquant le Type de données xml](../xquery/xquery-functions-against-the-xml-data-type.md)   
+ [Fonctions XQuery sur le type de données XML](../xquery/xquery-functions-against-the-xml-data-type.md)   
  [Opérateurs XQuery sur le type de données xml](../xquery/xquery-operators-against-the-xml-data-type.md)  
   
   

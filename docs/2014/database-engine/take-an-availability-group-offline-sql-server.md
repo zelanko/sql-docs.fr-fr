@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 87dff347bd0aee1211093d9e3406a24670a80e7f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228168"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>Placer un groupe de disponibilité hors connexion (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "75228168"
   
 
   
-##  <a name="BeforeYouBegin"></a>Avant de commencer  
+##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 > [!CAUTION]  
 >  Utilisez l'option OFFLINE uniquement pour une migration entre clusters des ressources du groupe de disponibilité.  
@@ -38,15 +38,15 @@ ms.locfileid: "75228168"
   
 -   Le groupe de disponibilité doit être en ligne.  
   
-###  <a name="Recommendations"></a>Relatives  
+###  <a name="Recommendations"></a> Recommandations  
  Avant de mettre le groupe de disponibilité hors connexion, supprimez le ou les écouteurs du groupe de disponibilité. Pour plus d’informations, consultez [Supprimer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](availability-groups/windows/remove-an-availability-group-listener-sql-server.md).  
   
-###  <a name="Security"></a>Caution  
+###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a>Autorisations  
+####  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
-##  <a name="TsqlProcedure"></a>Utilisation de Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour mettre un groupe de disponibilité hors connexion**  
   
 1.  Connectez-vous à une instance de serveur qui héberge un réplica de disponibilité pour le groupe de disponibilité. Ce réplica peut être le réplica principal ou un réplica secondaire.  
@@ -70,13 +70,13 @@ ALTER AVAILABILITY GROUP AccountsAG OFFLINE;
   
 -   **Si vous n’avez pas supprimé l’écouteur du groupe de disponibilité avant de le mettre hors connexion :**  Si vous migrez le groupe de disponibilité vers un autre cluster WSFC, supprimez le VNN et l’adresse IP virtuelle de l’écouteur. Vous pouvez les supprimer à l’aide de la console de gestion du cluster de basculement, de l’applet de commande PowerShell [Remove-ClusterResource](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx) ou de [cluster.exe](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx). Notez que cluster.exe est déconseillé sur Windows 8.  
   
-##  <a name="RelatedTasks"></a>Tâches associées  
+##  <a name="RelatedTasks"></a> Tâches associées  
   
 -   [Supprimer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
   
 -   [Modifiez le contexte de cluster HADR de l’instance de serveur &#40;SQL Server&#41;](availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)  
   
-##  <a name="RelatedContent"></a>Contenu connexe  
+##  <a name="RelatedContent"></a> Contenu associé  
   
 -   [Articles techniques SQL Server 2012](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   

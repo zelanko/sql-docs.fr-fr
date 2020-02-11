@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a69d4805a21cfbd83bd9a8d79b5150460d4977be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721681"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Créer et appliquer l'instantané initial
@@ -25,7 +25,7 @@ ms.locfileid: "62721681"
   
  **Dans cette rubrique**  
   
--   **Pour créer et appliquer l'instantané initial à l'aide de :**  
+-   **Pour créer et appliquer l’instantané initial à l’aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62721681"
   
 2.  Cliquez avec le bouton droit sur la réplication pour laquelle vous souhaitez créer un instantané, puis cliquez sur **Générer l'instantané**.  
   
-3.  Pour afficher le statut de l'Agent d'instantané, cliquez sur l'onglet **Agents** . Pour des informations plus détaillées, cliquez avec le bouton droit sur l'Agent d'instantané dans la grille, puis cliquez sur **Afficher les détails**.  
+3.  Pour afficher l’état de l’Agent d’instantané, cliquez sur l’onglet **agents** . Pour obtenir des informations plus détaillées, cliquez avec le bouton droit sur le Agent d’instantané dans la grille, puis cliquez sur **afficher les détails**.  
   
 #### <a name="to-apply-a-snapshot"></a>Pour appliquer un instantané  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62721681"
   
     -   Si l'Agent est paramétré pour une exécution à la demande, l'instantané est appliqué la prochaine fois que vous exécutez l'Agent.  
   
-     Pour plus d'informations sur la synchronisation des abonnements, consultez [Synchroniser un abonnement par émission (Push](synchronize-a-push-subscription.md) et [Synchroniser un abonnement par extraction (Pull)](synchronize-a-pull-subscription.md).  
+     Pour plus d'informations sur la synchronisation des abonnements, consultez [Synchronize a Push Subscription](synchronize-a-push-subscription.md) et [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Les instantanés initiaux peuvent être créés par programme en créant et exécutant un travail de l'Agent d'instantané ou en exécutant le fichier exécutable de l'Agent d'instantané à partir d'un fichier de commandes. Une fois qu'un instantané initial a été généré, il est transféré et appliqué sur l'Abonné lorsque l'abonnement est synchronisé pour la première fois. Si vous exécutez l'Agent d'instantané à partir d'une invite de commandes ou d'un fichier de commandes, vous devrez exécuter de nouveau l'agent chaque fois que l'instantané existant deviendra non valide.  
@@ -76,22 +76,22 @@ ms.locfileid: "62721681"
   
 #### <a name="to-create-and-run-a-snapshot-agent-job-to-generate-the-initial-snapshot"></a>Pour créer et exécuter un travail de l'Agent d'instantané pour générer l'instantané initial  
   
-1.  Créez une publication d'instantané, transactionnelle ou de fusion. Pour plus d’informations, consultez [Créer une publication](publish/create-a-publication.md).  
+1.  Créez une publication d'instantané, transactionnelle ou de fusion. Pour plus d’informations, voir [Create a Publication](publish/create-a-publication.md).  
   
-2.  Exécutez [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Spécifiez **@publication** et les paramètres suivants :  
+2.  Exécutez [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Spécifiez **@publication** et les paramètres suivants :  
   
-    -   **@job_login, qui spécifie** les informations d’identification de l’authentification Windows qu’utilise l’Agent d’instantané pour s’exécuter sur le serveur de distribution.  
+    -   , Qui spécifie les informations d’authentification Windows sous lesquelles le Agent d’instantané s’exécute sur le serveur de distribution. ** @job_login**  
   
-    -   **@job_password**, qui correspond au mot de passe pour les informations d’identification Windows fournies.  
+    -   , Qui est le mot de passe pour les informations d’identification Windows fournies. ** @job_password **  
   
-    -   (Facultatif) La valeur **0** pour **@publisher_security_mode** si l'agent utilisera l'authentification SQL Server lors de la connexion au serveur de publication. Dans ce cas, vous devez également spécifier les informations de connexion d'authentification SQL Server pour **@publisher_login** et **@publisher_password**.  
+    -   (Facultatif) La valeur **0** pour **@publisher_security_mode** si l'agent utilisera l'authentification SQL Server lors de la connexion au serveur de publication. Dans ce cas, vous devez également spécifier les informations de connexion d’authentification **@publisher_login** SQL Server **@publisher_password**pour et.  
   
-    -   (Facultatif) Une planification de synchronisation pour le travail de l'Agent d'instantané. Pour plus d'informations, voir [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
+    -   (Facultatif) Une planification de synchronisation pour le travail de l'Agent d'instantané. Pour plus d’informations, consultez [spécifier des planifications de synchronisation](specify-synchronization-schedules.md).  
   
     > [!IMPORTANT]  
-    >  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées en texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées en texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [activer les connexions chiffrées dans le Moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-3.  Ajoutez des articles à la publication. Pour plus d'informations, voir [Define an Article](publish/define-an-article.md).  
+3.  Ajoutez des articles à la publication. Pour plus d’informations, consultez [définir un Article](publish/define-an-article.md).  
   
 4.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_startpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql), en spécifiant la valeur **@publication** créée à l’étape 1.  
   
@@ -99,15 +99,15 @@ ms.locfileid: "62721681"
   
 1.  Créez une publication d'instantané, transactionnelle ou de fusion. Pour plus d’informations, voir [Create a Publication](publish/create-a-publication.md).  
   
-2.  Ajoutez des articles à la publication. Pour plus d'informations, voir [Define an Article](publish/define-an-article.md).  
+2.  Ajoutez des articles à la publication. Pour plus d’informations, consultez [définir un Article](publish/define-an-article.md).  
   
 3.  À partir de l'invite de commandes ou d'un fichier de commandes, démarrez l' [Replication Snapshot Agent](agents/replication-snapshot-agent.md) en exécutant **snapshot.exe**, en spécifiant les arguments de ligne de commande suivants :  
   
     -   **-Publication**  
   
-    -   **-Publisher**  
+    -   **-Serveur de publication**  
   
-    -   **-Distributor**  
+    -   **-Serveur de distribution**  
   
     -   **-PublisherDB**  
   
@@ -153,7 +153,7 @@ ms.locfileid: "62721681"
   
 1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransPublication> . Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publication, et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec la connexion créée à l'étape 1.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransPublication>. Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publication, et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec la connexion créée à l'étape 1.  
   
 3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour charger les propriétés restantes de l'objet. Si cette méthode retourne `false`, soit les propriétés de la publication ont été définies de manière incorrecte à l'étape 2, soit la publication n'existe pas.  
   
@@ -167,17 +167,23 @@ ms.locfileid: "62721681"
   
 1.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> et définissez les propriétés requises suivantes :  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publisher%2A> – nom du serveur de publication  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publisher%2A> – nom du serveur de publication  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherDatabase%2A> – nom de la base de données de publication  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherDatabase%2A> – nom de la base de données de publication  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publication%2A> – nom de la publication  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publication%2A> – nom de la publication  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> – nom du serveur de distribution  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> – nom du serveur de distribution  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> – valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> pour utiliser l'authentification Windows lors de la connexion au serveur de publication ou valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> et valeurs pour <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> et <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> pour utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors de la connexion au serveur de publication. L'authentification Windows est recommandée.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> – valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> pour utiliser l'authentification Windows lors de la connexion au serveur de publication ou valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> et valeurs pour <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> et <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> pour utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors de la connexion au serveur de publication. L'authentification Windows est recommandée.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> – valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> pour utiliser l'authentification Windows lors de la connexion au serveur de distribution ou valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> et valeurs pour <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> et <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> pour utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors de la connexion au serveur de distribution. L'authentification Windows est recommandée.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> – valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> pour utiliser l'authentification Windows lors de la connexion au serveur de distribution ou valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> et valeurs pour <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> et <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> pour utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors de la connexion au serveur de distribution. L'authentification Windows est recommandée.  
   
 2.  Spécifiez la valeur <xref:Microsoft.SqlServer.Replication.ReplicationType.Transactional> ou <xref:Microsoft.SqlServer.Replication.ReplicationType.Snapshot> pour <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>.  
   
@@ -187,7 +193,7 @@ ms.locfileid: "62721681"
   
 1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> . Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publication, et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec la connexion créée à l'étape 1.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication>. Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publication, et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec la connexion créée à l'étape 1.  
   
 3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour charger les propriétés restantes de l'objet. Si cette méthode retourne `false`, soit les propriétés de la publication ont été définies de manière incorrecte à l'étape 2, soit la publication n'existe pas.  
   
@@ -201,17 +207,23 @@ ms.locfileid: "62721681"
   
 1.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> et définissez les propriétés requises suivantes :  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publisher%2A> – nom du serveur de publication  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publisher%2A> – nom du serveur de publication  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherDatabase%2A> – nom de la base de données de publication  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherDatabase%2A> – nom de la base de données de publication  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publication%2A> – nom de la publication  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publication%2A> – nom de la publication  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> – nom du serveur de distribution  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> – nom du serveur de distribution  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> – valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> pour utiliser l'authentification Windows lors de la connexion au serveur de publication ou valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> et valeurs pour <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> et <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> pour utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors de la connexion au serveur de publication. L'authentification Windows est recommandée.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> – valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> pour utiliser l'authentification Windows lors de la connexion au serveur de publication ou valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> et valeurs pour <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> et <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> pour utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors de la connexion au serveur de publication. L'authentification Windows est recommandée.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> – valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> pour utiliser l'authentification Windows lors de la connexion au serveur de distribution ou valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> et valeurs pour <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> et <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> pour utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors de la connexion au serveur de distribution. L'authentification Windows est recommandée.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> – valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> pour utiliser l'authentification Windows lors de la connexion au serveur de distribution ou valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> et valeurs pour <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> et <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> pour utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors de la connexion au serveur de distribution. L'authentification Windows est recommandée.  
   
 2.  Spécifiez la valeur <xref:Microsoft.SqlServer.Replication.ReplicationType.Merge> pour <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>.  
   
@@ -232,14 +244,14 @@ ms.locfileid: "62721681"
   
 ## <a name="see-also"></a>Voir aussi  
  [Create a Publication](publish/create-a-publication.md)   
- [Créer un abonnement par extraction de données ](create-a-pull-subscription.md)   
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
- [Specify Synchronization Schedules](specify-synchronization-schedules.md)   
+ [Spécifier les planifications de synchronisation](specify-synchronization-schedules.md)   
  [Créer et appliquer l’instantané](create-and-apply-the-snapshot.md)   
  [Initialiser un abonnement avec un instantané](initialize-a-subscription-with-a-snapshot.md)   
  [Concepts liés à RMO (Replication Management Objects)](concepts/replication-management-objects-concepts.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
+ [Concepts liés aux procédures stockées système de réplication](concepts/replication-system-stored-procedures-concepts.md)   
  [Utiliser sqlcmd avec des variables de script](../scripting/sqlcmd-use-with-scripting-variables.md)  
   
   

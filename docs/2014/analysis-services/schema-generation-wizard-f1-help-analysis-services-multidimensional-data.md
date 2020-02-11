@@ -1,5 +1,5 @@
 ---
-title: Génération de schéma Assistant F1 (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Aide (F1) de l’Assistant génération de schéma (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dbc1f6daf1039d24830bc91140f82e061b88ae65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069945"
 ---
 # <a name="schema-generation-wizard-f1-help-analysis-services---multidimensional-data"></a>Aide (F1) de l'Assistant Génération de schéma (Analysis Services - Données multidimensionnelles)
@@ -36,15 +36,15 @@ ms.locfileid: "66069945"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Spécifier la cible &#40;Assistant génération de schéma&#41; &#40;Analysis Services - données multidimensionnelles&#41;](specify-target-schema-generation-wizard-analysis-services-multidimensional-data.md)  
+-   [Spécifier l’Assistant génération de schéma &#40;de la cible&#41; &#40;Analysis Services-données multidimensionnelles&#41;](specify-target-schema-generation-wizard-analysis-services-multidimensional-data.md)  
   
--   [Options de schéma de base de données de zone de sujet &#40;Assistant génération de schéma&#41; &#40;Analysis Services - données multidimensionnelles&#41;](subject-area-database-schema-options-analysis-services-multidimensional-data.md)  
+-   [Options de schéma de la base de données de la zone de sujet &#40;l’Assistant génération de schéma&#41; &#40;Analysis Services-données multidimensionnelles&#41;](subject-area-database-schema-options-analysis-services-multidimensional-data.md)  
   
--   [Spécifier les Conventions d’affectation de noms &#40;Assistant génération de schéma&#41; &#40;Analysis Services - données multidimensionnelles&#41;](specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md)  
+-   [Spécifiez les conventions d’affectation de noms &#40;Assistant génération de schéma&#41; &#40;Analysis Services-données multidimensionnelles&#41;](specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md)  
   
--   [Fin de l’Assistant &#40;Assistant génération de schéma&#41; &#40;Analysis Services - données multidimensionnelles&#41;](complete-schema-generation-wizard-analysis-services-multidimensional-data.md)  
+-   [Fin de l’Assistant &#40;de l’Assistant génération de schéma&#41; &#40;Analysis Services-données multidimensionnelles&#41;](complete-schema-generation-wizard-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Assistants Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [Analysis Services assistants &#40;&#41;de données multidimensionnelles](analysis-services-wizards-multidimensional-data.md)  
   
   

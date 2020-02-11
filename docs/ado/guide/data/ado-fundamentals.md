@@ -1,5 +1,5 @@
 ---
-title: Principes de base ADO | Microsoft Docs
+title: Notions de base d’ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,55 +11,55 @@ ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 75f5030f8faa5aa5d8e8a0f6bcb6d72b186c8448
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926060"
 ---
 # <a name="ado-fundamentals"></a>Concepts de base d’ADO
-ADO offre aux développeurs un modèle objet logique puissantes pour accéder par programmation aux, la modification et la mise à jour des données à partir d’un large éventail de sources de données via les interfaces système OLE DB. L’utilisation d’ADO la plus courante consiste à interroger une table ou des tables dans une base de données relationnelle, récupérer et afficher les résultats dans une application et permettre aux utilisateurs de peut-être apporter et enregistrer les modifications apportées aux données. Autres tâches sont les suivantes :  
+ADO offre aux développeurs un modèle d’objet logique puissant pour accéder, modifier et mettre à jour les données à partir d’un large éventail de sources de données via des interfaces système OLE DB. L’utilisation la plus courante d’ADO est d’interroger une table ou des tables dans une base de données relationnelle, de récupérer et d’afficher les résultats dans une application, et peut-être de permettre aux utilisateurs de créer et d’enregistrer les modifications apportées aux données. Les autres tâches sont les suivantes :  
   
--   Interrogation d’une base de données à l’aide de SQL et afficher les résultats.  
+-   Interrogation d’une base de données à l’aide de SQL et affichage des résultats.  
   
--   L’accès aux informations dans un magasin de fichiers sur Internet.  
+-   Accès aux informations dans un magasin de fichiers sur Internet.  
   
--   Manipulation des messages et des dossiers dans un système de messagerie.  
+-   Manipulation des messages et des dossiers dans un système de messagerie électronique.  
   
--   L’enregistrement des données à partir d’une base de données dans un fichier XML.  
+-   Enregistrement de données d’une base de données dans un fichier XML.  
   
--   L’exécution des commandes décrites avec XML et la récupération d’un flux XML.  
+-   Exécution de commandes décrites avec XML et récupération d’un flux XML.  
   
--   L’enregistrement des données dans un fichier binaire ou un flux XML.  
+-   Enregistrement de données dans un flux binaire ou XML.  
   
--   Qui permet à un utilisateur examiner et modifier des données dans les tables de base de données.  
+-   Permettre à un utilisateur d’examiner et de modifier les données dans les tables de base de données.  
   
--   Création et réutilisation paramétré les commandes de base de données.  
+-   Création et réutilisation des commandes de base de données paramétrables.  
   
 -   Exécution de procédures stockées.  
   
--   Créer dynamiquement une structure flexible, qui est nommée un **Recordset**, pour contenir, de parcourir et de manipuler des données.  
+-   Création dynamique d’une structure flexible, appelée **Recordset**, pour la conservation, la navigation et la manipulation des données.  
   
 -   Exécution d’opérations de base de données transactionnelle.  
   
--   Filtrage et tri des copies locales des informations de base de données en fonction de critères de l’exécution.  
+-   Filtrage et tri des copies locales des informations de la base de données en fonction des critères d’exécution.  
   
--   Créer et manipuler des résultats hiérarchiques à partir de bases de données.  
+-   Création et manipulation de résultats hiérarchiques à partir des bases de données.  
   
--   Champs de base de données de liaison pour les composants prenant en charge les données.  
+-   Liaison de champs de base de données à des composants qui prennent en charge les données.  
   
--   Création à distance, déconnecté **Recordsets**.  
+-   Création **d’un jeu d’enregistrements**distants et déconnectés.  
   
- ADO expose un large éventail d’options et paramètres pour fournir une telle flexibilité. Par conséquent, il est important d’adopter une approche méthodique pour savoir comment utiliser ADO dans une application, décomposer de chacun de vos objectifs en éléments gérables.  
+ ADO expose un large éventail d’options et de paramètres pour offrir une telle flexibilité. Par conséquent, il est important d’adopter une approche méthodique pour apprendre à utiliser ADO dans une application, en divisant chacun de vos objectifs en éléments gérables.  
   
- Quatre opérations principales sont impliquées dans la plupart des applications qui utilisent ADO : obtention de données, examinez les données, modification des données et la mise à jour des données. Ces opérations sont examinées plus en détail plus loin dans cette section.  
+ Quatre opérations principales sont impliquées dans la plupart des applications qui utilisent ADO : obtention de données, examen des données, modification des données et mise à jour des données. Ces opérations sont étudiées plus en détail plus loin dans cette section.  
   
- Toutefois, avant d’aborder ces détails, nous présenterons une vue d’ensemble du modèle objet ADO et une application ADO simple, ce qui est écrit en Microsoft Visual Basic® et effectue chacune des quatre opérations ADO principales :  
+ Toutefois, avant d’aborder ces détails, nous présenterons une vue d’ensemble du modèle objet ADO et une simple application ADO, écrite en Microsoft® Visual Basic® et effectuant chacune des quatre opérations ADO principales :  
   
 -   [Objets et collections ADO](../../../ado/guide/data/ado-objects-and-collections.md)  
   
--   [HelloData : Une Application ADO Simple](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
+-   [HelloData : une application ADO simple](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
   
--   [Fournisseurs OLE DB](../../../ado/guide/data/ole-db-providers-ado.md)  
+-   [Fournisseurs de OLE DB](../../../ado/guide/data/ole-db-providers-ado.md)  
   
 -   [Erreurs](../../../ado/guide/data/errors-ado.md)

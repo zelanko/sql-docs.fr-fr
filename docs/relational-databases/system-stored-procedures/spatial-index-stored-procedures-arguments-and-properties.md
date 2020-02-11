@@ -15,10 +15,10 @@ ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 82b906be4568b15a18c55247532bf35b6cd939a7
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69028905"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Procédures stockées d’index spatial-arguments et propriétés
@@ -26,7 +26,7 @@ ms.locfileid: "69028905"
 
   Cette rubrique documente les arguments et propriétés pour les procédures stockées d'index spatial.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
  Pour la syntaxe de procédures stockées d'index spatial spécifiques, consultez les rubriques suivantes :  
@@ -56,28 +56,28 @@ ms.locfileid: "69028905"
   
 `[ @query_sample = ] 'query_sample'`Est un exemple de requête représentative qui peut être utilisé pour tester l’utilité de l’index. Il peut s'agir d'un objet représentatif ou d'une fenêtre de requête. *query_sample* est une **géométrie** sans valeur par défaut.  
   
-`[ @xml_output = ] 'xml_output'`Paramètre de sortie qui retourne le jeu de résultats dans un fragment XML. *xml_output* est du **code XML** sans valeur par défaut.  
+`[ @xml_output = ] 'xml_output'`Paramètre de sortie qui retourne le jeu de résultats dans un fragment XML. *xml_output* est de **XML** sans valeur par défaut.  
   
-## <a name="properties"></a>Properties  
- Définissez verboseoutput = 0 pour retourner les propriétés principales, comme indiqué dans le tableau ci-dessous.  **\@** verboseoutput > 0 pour retourner toutes les propriétés de l’index spatial.  **\@**  
+## <a name="properties"></a>Propriétés  
+ Définissez ** \@verboseoutput** = 0 pour retourner les propriétés principales, comme indiqué dans le tableau ci-dessous. verboseoutput > 0 pour retourner toutes les propriétés de l’index spatial. ** \@**  
   
  **Base_Table_Rows**  
  Nombre de lignes dans la table de base. La valeur est de type **bigint**.  
   
  **Bounding_Box_xmin**  
- Propriétés du cadre englobant minimal X de l’index spatial pour le type Geometry. Cette valeur de propriété est NULL pour le type **Geography**. La valeur est **float**.  
+ Propriétés du cadre englobant minimal X de l’index spatial pour le type **Geometry** . Cette valeur de propriété est NULL pour le type **Geography**. La valeur est **float**.  
   
  **Bounding_Box_ymin**  
- Propriétés du cadre englobant minimal Y de l’index spatial pour le type Geometry. Cette valeur de propriété est NULL pour le type **Geography** . La valeur est **float**.  
+ Propriétés du cadre englobant minimal Y de l’index spatial pour le type **Geometry** . Cette valeur de propriété est NULL pour le type **Geography** . La valeur est **float**.  
   
  **Bounding_Box_xmax**  
- Propriétés du cadre englobant maximal X de l’index spatial pour le type Geometry. Cette valeur de propriété est NULL pour le type **Geography** . La valeur est **float**.  
+ Propriétés du cadre englobant maximal X de l’index spatial pour le type **Geometry** . Cette valeur de propriété est NULL pour le type **Geography** . La valeur est **float**.  
   
  **Bounding_Box_ymax**  
- Propriétés du cadre englobant maximal Y de l’index spatial pour le type Geometry. Cette valeur de propriété est NULL pour le type **Geography** . La valeur est **float**.  
+ Propriétés du cadre englobant maximal Y de l’index spatial pour le type **Geometry** . Cette valeur de propriété est NULL pour le type **Geography** . La valeur est **float**.  
   
  **Grid_Size_Level_1**  
- Densité de la grille de niveau 1 de l’index spatial:  
+ Densité de la grille de niveau 1 de l’index spatial :  
   
  16 pour LOW  
   
@@ -88,7 +88,7 @@ ms.locfileid: "69028905"
  La valeur est **int**.  
   
  **Grid_Size_Level_2**  
- Densité de la grille de niveau 2 de l’index spatial:  
+ Densité de la grille de niveau 2 de l’index spatial :  
   
  16 pour LOW  
   
@@ -99,7 +99,7 @@ ms.locfileid: "69028905"
  La valeur est **int**.  
   
  **Grid_Size_Level_3**  
- Densité de grille de niveau 3 de l’index spatial:  
+ Densité de grille de niveau 3 de l’index spatial :  
   
  16 pour LOW  
   
@@ -133,7 +133,7 @@ ms.locfileid: "69028905"
  Nombre de lignes d'index / nombre de lignes de table de base. La valeur est de type **bigint**.  
   
  **Total_Number_Of_ObjectCells_In_Level0_For_QuerySample**  
- Indique si l’exemple de requête représentative se situe en dehors du cadre englobant de l’index Geometry et dans la cellule racine (cellule de niveau 0). Il s'agit de 0 (pas dans la cellule de niveau 0) ou de 1. Si c'est dans la cellule de niveau 0, l'index exploré n'est pas un index approprié pour l'exemple de requête. Il s'agit d'une propriété principale. La valeur est de type **bigint**.  
+ Indique si l’exemple de requête représentative se situe en dehors du cadre englobant de l’index **Geometry** et dans la cellule racine (cellule de niveau 0). Il s'agit de 0 (pas dans la cellule de niveau 0) ou de 1. Si c'est dans la cellule de niveau 0, l'index exploré n'est pas un index approprié pour l'exemple de requête. Il s'agit d'une propriété principale. La valeur est de type **bigint**.  
   
  **Total_Number_Of_ObjectCells_In_Level0_In_Index**  
  Nombre d’instances de cellule d’objets indexés qui sont fractionnées dans le niveau 0 (cellule racine, en dehors du cadre englobant pour la **géométrie**). Il s'agit d'une propriété principale. La valeur est de type **bigint**.  
@@ -155,28 +155,28 @@ ms.locfileid: "69028905"
  Nombre d'instances de cellule d'objets indexés qui sont pavées avec la précision de niveau 4. Il s'agit d'une propriété principale. La valeur est de type **bigint**.  
   
  **Total_Number_Of_interior_ObjectCells_In_Level1_In_Index**  
- Nombre de cellules qui sont complètement couvertes par un objet au niveau de pavage 1 et qui sont donc à l’intérieur de l’objet. (Cell_attributevalue est 2.) Il s'agit d'une propriété principale. La valeur est de type **bigint**.  
+ Nombre de cellules qui sont complètement couvertes par un objet au niveau de pavage 1 et qui sont donc à l’intérieur de l’objet. (Cell_attributevalue est 2.) Il s’agit d’une propriété de base. La valeur est de type **bigint**.  
   
  **Total_Number_Of_interior_ObjectCells_In_Level2_In_Index**  
- Nombre de cellules entièrement couvertes par un objet au niveau de pavage 2 et qui sont donc à l’intérieur de l’objet. (La valeur Cell_attribute est 2.) Il s'agit d'une propriété principale. La valeur est de type **bigint**.  
+ Nombre de cellules entièrement couvertes par un objet au niveau de pavage 2 et qui sont donc à l’intérieur de l’objet. (Cell_attribute valeur est 2.) Il s’agit d’une propriété de base. La valeur est de type **bigint**.  
   
  **Total_Number_Of_interior_ObjectCells_In_Level3_In_Index**  
- Nombre de cellules entièrement couvertes par un objet au niveau de pavage 3 et, par conséquent, à l’intérieur de l’objet. (La valeur Cell_attribute est 2.) Il s'agit d'une propriété principale. La valeur est de type **bigint**.  
+ Nombre de cellules entièrement couvertes par un objet au niveau de pavage 3 et, par conséquent, à l’intérieur de l’objet. (Cell_attribute valeur est 2.) Il s’agit d’une propriété de base. La valeur est de type **bigint**.  
   
  **Total_Number_Of_interior_ObjectCells_In_Level4_In_Index**  
- Nombre de cellules qui sont complètement couvertes par un objet au pavage niveau 4 et se situent donc à l'intérieur de l'objet. (La valeur Cell_attribute est 2.) Il s'agit d'une propriété principale. La valeur est de type **bigint**.  
+ Nombre de cellules qui sont complètement couvertes par un objet au pavage niveau 4 et se situent donc à l'intérieur de l'objet. (Cell_attribute valeur est 2.) Il s’agit d’une propriété de base. La valeur est de type **bigint**.  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level1_In_Index**  
- Nombre de cellules qui sont croisées par un objet au niveau de pavage 1. (La valeur Cell_attribute est 1.) Il s'agit d'une propriété principale. La valeur est de type **bigint**.  
+ Nombre de cellules qui sont croisées par un objet au niveau de pavage 1. (Cell_attribute valeur est 1.) Il s’agit d’une propriété de base. La valeur est de type **bigint**.  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level2_In_Index**  
- Nombre de cellules qui sont croisées par un objet au niveau de pavage 2. (La valeur Cell_attribute est 1.) Il s'agit d'une propriété principale. La valeur est de type **bigint**.  
+ Nombre de cellules qui sont croisées par un objet au niveau de pavage 2. (Cell_attribute valeur est 1.) Il s’agit d’une propriété de base. La valeur est de type **bigint**.  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level3_In_Index**  
- Nombre de cellules qui sont croisées par un objet au niveau de pavage 3. (La valeur Cell_attribute est 1.) Il s'agit d'une propriété principale. La valeur est de type **bigint**.  
+ Nombre de cellules qui sont croisées par un objet au niveau de pavage 3. (Cell_attribute valeur est 1.) Il s’agit d’une propriété de base. La valeur est de type **bigint**.  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level4_In_Index**  
- Nombre de cellules qui sont croisées par un objet au pavage niveau 4. (La valeur Cell_attribute est 1.) Il s'agit d'une propriété principale. La valeur est de type **bigint**.  
+ Nombre de cellules qui sont croisées par un objet au pavage niveau 4. (Cell_attribute valeur est 1.) Il s’agit d’une propriété de base. La valeur est de type **bigint**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level0_For_QuerySample**  
  Indique si l'exemple de requête est dans la cellule racine 0 à l'extérieur du cadre englobant, mais le touche. Il s'agit d'une propriété principale. La valeur est de type **bigint**.  
@@ -185,19 +185,19 @@ ms.locfileid: "69028905"
 >  Cette information est uniquement utile pour déterminer s'il y a des objets que le cadre englobant a pu manquer de peu.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level0_In_Index**  
- Nombre d'objets au niveau 0 qui touchent le cadre englobant. (La valeur Cell_attribute est 0.)  La valeur est de type **bigint**.  
+ Nombre d'objets au niveau 0 qui touchent le cadre englobant. (Cell_attribute valeur est 0.)  La valeur est de type **bigint**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level1_In_Index**  
- Nombre de cellules d’objet qui touchent une limite de cellule de grille au niveau de pavage 1. (La valeur Cell_attribute est 0.) Il s'agit d'une propriété principale. La valeur est de type **bigint**.  
+ Nombre de cellules d’objet qui touchent une limite de cellule de grille au niveau de pavage 1. (Cell_attribute valeur est 0.) Il s’agit d’une propriété de base. La valeur est de type **bigint**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level2_In_Index**  
- Nombre de cellules d’objet qui touchent une limite de cellule de grille au niveau de pavage 2. (La valeur Cell_attribute est 0.) Il s'agit d'une propriété principale. La valeur est de type **bigint**.  
+ Nombre de cellules d’objet qui touchent une limite de cellule de grille au niveau de pavage 2. (Cell_attribute valeur est 0.) Il s’agit d’une propriété de base. La valeur est de type **bigint**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level3_In_Index**  
- Nombre de cellules d’objet qui touchent une limite de cellule de grille au niveau de pavage 3. (La valeur Cell_attribute est 0.) Il s'agit d'une propriété principale. La valeur est de type **bigint**.  
+ Nombre de cellules d’objet qui touchent une limite de cellule de grille au niveau de pavage 3. (Cell_attribute valeur est 0.) Il s’agit d’une propriété de base. La valeur est de type **bigint**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level4_In_Index**  
- Nombre de cellules d'objet qui touchent une limite de cellule de grille au pavage niveau 4. (La valeur Cell_attribute est 0.) Il s'agit d'une propriété principale. La valeur est de type **bigint**.  
+ Nombre de cellules d'objet qui touchent une limite de cellule de grille au pavage niveau 4. (Cell_attribute valeur est 0.) Il s’agit d’une propriété de base. La valeur est de type **bigint**.  
   
  **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
  Pourcentage de la zone totale (cellules feuilles totales) de la grille qui contient des cellules feuilles couvertes par un objet.  
@@ -207,10 +207,10 @@ ms.locfileid: "69028905"
  La valeur est **float**.  
   
  **Intersecting_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
- Identique à **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**, à ceci près qu’il s’agit de cellules partiellement couvertes. La valeur est **float**.  
+ Identique à **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**, sauf qu’il s’agit de cellules partiellement couvertes. La valeur est **float**.  
   
  **Border_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
- Identique à **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage** , sauf qu’il s’agit de cellules de bordure. La valeur est **float**.  
+ Identique à **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage** sauf qu’il s’agit de cellules de bordure. La valeur est **float**.  
   
  **Average_Cells_Per_Object_Normalized_To_Leaf_Grid**  
  Cellules moyennes par objet normalisées selon la grille feuilles. Cela nous donne une indication de la taille spatiale de l'objet, ou le volume des objets. La valeur est **float**.  
@@ -314,10 +314,10 @@ ms.locfileid: "69028905"
   
 -   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures &#40;stockées d’index spatial Transact-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [Procédures stockées d’index spatial &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [Vue d’ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Notions de base de XQuery](../../xquery/xquery-basics.md)   

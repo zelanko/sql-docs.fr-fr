@@ -12,10 +12,10 @@ ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 3986854293f50a34f51170e00b4204b78fba1b63
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251655"
 ---
 # <a name="domain-management-domain-list"></a>Gestion de l'arborescence du domaine : Liste des domaines
@@ -28,7 +28,7 @@ ms.locfileid: "75251655"
   
 ### <a name="domains-list"></a>Liste des domaines  
  **Domain**  
- Cette liste affiche tous les domaines dans la base de connaissances. Les opérations que vous effectuez dans les pages à onglets dans le volet droit sont exécutées sur le domaine sélectionné dans la liste. Pour plus d'informations, consultez la page sur les  
+ Cette liste affiche tous les domaines dans la base de connaissances. Les opérations que vous effectuez dans les pages à onglets dans le volet droit sont exécutées sur le domaine sélectionné dans la liste. Pour plus d'informations, consultez la rubrique  
   
  **Créer un domaine composite**  
  Créez un nouveau domaine composite dans la base de connaissances. Cette commande affiche la boîte de dialogue **Créer un domaine composite** . Cette commande est disponible en cliquant avec le bouton droit sur un domaine ou en cliquant sur l'icône au-dessus de la liste des domaines. Pour plus d’informations, consultez [Créer un domaine composite](../data-quality-services/create-a-composite-domain.md).  

@@ -18,22 +18,23 @@ ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: c316f48f3e590fcba419e125f8e327b25ee1ede6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933821"
 ---
-# <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
+# <a name="sp_dropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime une connexion distante mappée sur une connexion locale utilisée pour exécuter des procédures stockées distantes sur le serveur local exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Utilisez plutôt des serveurs liés et des procédures stockées de serveurs liés.  
+>  
+  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Utilisez plutôt des serveurs liés et des procédures stockées de serveurs liés.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,26 +45,27 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @remoteserver = ] 'remoteserver'` Est le nom du serveur distant mappé à la connexion à distance doit être supprimée. *RemoteServer* est **sysname**, sans valeur par défaut. *RemoteServer* doit déjà exister.  
+`[ @remoteserver = ] 'remoteserver'`Nom du serveur distant mappé sur la connexion distante à supprimer. *serveur_distant* est de **type sysname**, sans valeur par défaut. *serveur_distant* doit déjà exister.  
   
-`[ @loginame = ] 'login'` Est le nom de connexion facultatif sur le serveur local qui est associé avec le serveur distant. *login* est de type **sysname**, avec NULL comme valeur par défaut. *connexion* doit déjà exister si spécifié.  
+`[ @loginame = ] 'login'`Nom de connexion facultatif sur le serveur local qui est associé au serveur distant. *login* est de **type sysname**, avec NULL comme valeur par défaut. la *connexion* doit déjà exister si elle est spécifiée.  
   
-`[ @remotename = ] 'remote_name'` Nom facultatif de la connexion distante qui est mappée à *connexion* lors de la connexion à partir du serveur distant. *nom_distant* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @remotename = ] 'remote_name'`Nom facultatif de la connexion distante mappée à *login* lors de la connexion à partir du serveur distant. *remote_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- Si seuls *remoteserver* est spécifié, toutes les connexions à distance pour ce serveur distant sont supprimées du serveur local. Si *connexion* est également spécifiées, qui est distantes toutes les connexions à partir de *remoteserver* mappées sur cette connexion locale sont supprimées du serveur local. Si *nom_distant* est également spécifiée, seule la connexion à distance pour cet utilisateur à distance à partir de *remoteserver* est supprimé du serveur local.  
+ Si seul *serveur_distant* est spécifié, toutes les connexions distantes de ce serveur distant sont supprimées du serveur local. Si la *connexion* est également spécifiée, toutes les connexions distantes à partir de *serveur_distant* mappées à cette connexion locale spécifique sont supprimées du serveur local. Si *remote_name* est également spécifié, seule la connexion distante pour cet utilisateur distant à partir de *serveur_distant* est supprimée du serveur local.  
   
- Pour ajouter des utilisateurs du serveur local, utilisez **sp_addlogin**. Pour supprimer des utilisateurs du serveur local, utilisez **sp_droplogin**.  
+ Pour ajouter des utilisateurs de serveur local, utilisez **sp_addlogin**. Pour supprimer des utilisateurs du serveur local, utilisez **sp_droplogin**.  
   
- Les connexions distantes sont obligatoires uniquement lorsque vous utilisez des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 et les versions ultérieures utilisent à la place des connexions de serveurs liés. Utilisez **sp_addlinkedsrvlogin** et **sp_droplinkedsrvlogin** pour ajouter et supprimer des connexions de serveurs liés.  
+ Les connexions distantes sont obligatoires uniquement lorsque vous utilisez des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 et les versions ultérieures utilisent à la place des connexions de serveurs liés. Utilisez **sp_addlinkedsrvlogin** et **sp_droplinkedsrvlogin** pour ajouter et supprimer des connexions de serveurs liés.  
   
  **sp_dropremotelogin** ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l’appartenance dans le **sysadmin** ou **securityadmin** rôles serveur fixes.  
+ Nécessite l’appartenance aux rôles serveur fixes **sysadmin** ou **securityadmin** .  
   
 ## <a name="examples"></a>Exemples  
   

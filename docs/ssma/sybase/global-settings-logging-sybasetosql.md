@@ -10,51 +10,51 @@ ms.assetid: 4cb4da20-3b99-4aae-8c80-329ee23e796e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 26e24bc55df7eef0af34f9cd23215f27ba314700
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029052"
 ---
 # <a name="global-settings-logging-sybasetosql"></a>Paramètres globaux (Journalisation) (SybaseToSQL)
-Utilisez le **paramètres globaux** boîte de dialogue pour spécifier les paramètres de journalisation pour SSMA. En règle générale, vous modifieriez ces paramètres uniquement lorsque vous travaillez avec le support technique.  
+Utilisez la boîte de dialogue **paramètres globaux** pour spécifier les paramètres de journalisation pour SSMA. En règle générale, vous pouvez modifier ces paramètres uniquement lorsque vous travaillez avec le support technique.  
   
-Pour accéder à cette boîte de dialogue, dans le **outils** menu, sélectionnez **paramètres globaux** puis cliquez sur le **journalisation** bouton en bas du volet gauche.  
+Pour accéder à cette boîte de dialogue, dans le menu **Outils** , sélectionnez **paramètres globaux** , puis cliquez sur le bouton **journalisation** en bas du volet gauche.  
   
 ## <a name="options"></a>Options  
 **Niveau de messages**  
-Les options suivantes sont disponibles sous **au niveau des Messages**:  
+Les options suivantes sont disponibles sous **niveau des messages**:  
   
 |Option|Description|  
 |----------|---------------|  
 |**[toutes les catégories]**|Utilisé pour définir le niveau de journalisation pour toutes les options suivantes.|  
-|**Collecteur**|Collecte des métadonnées sur le schéma source et l’enregistre dans le projet.|  
-|**Converter**|Convertit des objets de base de données source, tels que les tables et procédures stockées, des structures de correspondant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] structures.|  
-|**Utilitaire de migration de données**|Migre les données à partir de la base de données source dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Formateur**|Sous-composant du convertisseur qui génère des scripts pour la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schéma.|  
+|**Collecteur**|Collecte les métadonnées relatives au schéma source et les enregistre dans le projet.|  
+|**Onduleur**|Convertit les structures des objets de base de données sources, tels que les tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les procédures stockées, en structures correspondantes.|  
+|**Data Migrator**|Migre les données de la base de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]données source vers.|  
+|**Formateur**|Sous-composant du convertisseur qui génère des scripts pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schéma.|  
 |**Interface utilisateur graphique**|Messages qui s’affichent lorsque vous utilisez l’outil SSMA.|  
 |**Éditeur de liens**|Résout les identificateurs SQL et fournit des informations à d’autres composants.|  
-|**Autre**|Tous les messages qui ne sont pas dans une autre catégorie.|  
-|**Analyseur**|Analyse du schéma source.|  
-|**Synchronisateur**|Charge la source des objets de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**TreeConverter**|Convertit des objets dans les métadonnées de source dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] métadonnées.|  
+|**Autres**|Tous les messages qui ne se trouvent pas dans une autre catégorie.|  
+|**Analyseur**|Analyse le schéma source.|  
+|**Synchronisateur**|Charge les objets de base [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de données source dans.|  
+|**TreeConverter**|Convertit des objets dans les métadonnées sources en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] métadonnées.|  
   
-Pour chaque option sous **au niveau des Messages**, configurez l’un des niveaux de journalisation suivants pour SSMA :  
+Pour chaque option sous **niveau de messages**, configurez l’un des niveaux de journalisation suivants pour SSMA :  
   
 |||  
 |-|-|  
-|**Erreur irrécupérable**|Écrire uniquement les messages d’erreur irrécupérable dans le journal.|  
-|**Error**|Écrire des messages d’erreur et une erreur irrécupérable dans le journal.|  
-|**Avertissement**|Écrire des messages d’avertissement, erreur et une erreur irrécupérable dans le journal.|  
-|**Info**|Écrire des information, avertissement, messages d’erreur et erreur irrécupérable dans le journal.|  
-|**Débogage**|Écrire tous les messages, y compris les messages, dans le journal de débogage.|  
+|**Erreur irrécupérable**|Écrit uniquement les messages d’erreur fatale dans le journal.|  
+|**Error**|Erreur d’écriture et messages d’erreur irrécupérable dans le journal.|  
+|**Avertissement**|Écrire les messages d’avertissement, d’erreur et d’erreur irrécupérable dans le journal.|  
+|**Méta**|Écrire les messages d’information, d’avertissement, d’erreur et d’erreur irrécupérable dans le journal.|  
+|**Débogage**|Écrit tous les messages, y compris les messages de débogage, dans le journal.|  
   
 **Chemin du fichier journal**  
-Le chemin d’accès de fichier et le nom des fichiers journaux SSMA. Pour spécifier un nom différent, cliquez sur le chemin d’accès actuel, puis cliquez sur le bouton de navigation ( **...** ) bouton.  
+Chemin d’accès et nom de fichier des fichiers journaux SSMA. Pour spécifier un autre nom, cliquez sur le chemin d’accès actuel, puis cliquez sur le bouton de navigation (**...**).  
   
 **Taille du fichier journal**  
-La taille maximale du fichier journal en Ko. La taille minimale est de 10 Ko. La taille par défaut est 10 240 Ko.  
+Taille maximale du fichier journal, en Ko. La taille minimale est de 10 Ko. La taille par défaut est de 10240 Ko.  
   
 **Nombre total de fichiers journaux**  
-Lorsqu’un journal se remplit, SSMA sera renommer le fichier journal et démarrer une nouvelle. À l’aide de ce paramètre, spécifiez le nombre maximal de fichiers journaux à conserver. La valeur minimale est 2.  
+Quand un journal est rempli, SSMA renomme le fichier journal et en démarre un nouveau. En utilisant ce paramètre, spécifiez le nombre maximal de fichiers journaux à conserver. La valeur minimale est 2.  
   

@@ -1,5 +1,5 @@
 ---
-title: Mise en route avec l’intégration CLR | Microsoft Docs
+title: Prise en main avec l’intégration du CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -24,32 +24,36 @@ helpviewer_keywords:
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 15e4a750e2568598fc5db2bab175643b50310db2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c71af732f9d4097904c38b6fff019dc86f02a6f0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138611"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76761928"
 ---
 # <a name="getting-started-with-clr-integration"></a>Mise en route avec l'intégration du CLR
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Cette rubrique fournit une vue d’ensemble des espaces de noms et des bibliothèques requis pour compiler des objets de base de données à l’aide de la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] intégration avec le common language runtime (CLR) du .NET Framework. La rubrique vous indique également comment écrire, compiler et exécuter une procédure stockée CLR simple écrite dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
+
+Cette rubrique fournit une vue d’ensemble des espaces de noms et des bibliothèques requis pour compiler des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] objets de base de données à l’aide de l’intégration avec l' .NET Framework Common Language Runtime (CLR). La rubrique vous indique également comment écrire, compiler et exécuter une procédure stockée CLR simple écrite dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
   
 ## <a name="required-namespaces"></a>Espaces de noms requis  
- Les composants requis pour développer des objets de base de données CLR sont installés avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les fonctionnalités d'intégration du CLR sont exposées dans un assembly appelé system.data.dll, qui fait partie du .NET Framework. Cet assembly se trouve dans le Global Assembly Cache (GAC), ainsi que dans le répertoire .NET Framework. Une référence à cet assembly est ajoutée en général automatiquement par les outils en ligne de commande et [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio, afin qu'il ne soit pas nécessaire de l'ajouter manuellement.  
+
+Les composants requis pour développer des objets de base de données CLR [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]de base sont installés avec. Les fonctionnalités d'intégration du CLR sont exposées dans un assembly appelé system.data.dll, qui fait partie du .NET Framework. Cet assembly se trouve dans le Global Assembly Cache (GAC), ainsi que dans le répertoire .NET Framework. Une référence à cet assembly est ajoutée en général automatiquement par les outils en ligne de commande et [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio, afin qu'il ne soit pas nécessaire de l'ajouter manuellement.  
   
- L'assembly system.data.dll contient les espaces de noms suivants, qui sont requis pour compiler les objets de base de données CLR :  
+L'assembly system.data.dll contient les espaces de noms suivants, qui sont requis pour compiler les objets de base de données CLR :  
   
- `System.Data`  
-  
- `System.Data.Sql`  
-  
- `Microsoft.SqlServer.Server`  
-  
- `System.Data.SqlTypes`  
-  
+- `System.Data`  
+- `System.Data.Sql`  
+- `Microsoft.SqlServer.Server`  
+- `System.Data.SqlTypes`  
+
+> [!TIP]
+> Le chargement d’objets de base de données CLR sur Linux est pris en charge, mais ils doivent être générés avec le .NET Framework (SQL Server l’intégration du CLR ne prend pas en charge .NET Core). En outre, les assemblys CLR avec le EXTERNAL_ACCESS ou un jeu d’autorisations unsafe ne sont pas pris en charge sur Linux.
+
 ## <a name="writing-a-simple-hello-world-stored-procedure"></a>Écriture d'une procédure stockée "Hello World" simple  
- Copiez et collez le code Visual C# ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic suivant dans un éditeur de texte et enregistrez-le dans un fichier nommé "helloworld.cs" ou "helloworld.vb".  
+
+Copiez et collez le code Visual C# ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic suivant dans un éditeur de texte et enregistrez-le dans un fichier nommé "helloworld.cs" ou "helloworld.vb".  
   
 ```csharp  
 using System;  
@@ -85,54 +89,46 @@ End Class
   
 ```  
   
- Ce programme simple contient une méthode statique unique sur une classe publique. Cette méthode utilise deux nouvelles classes, **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** et  **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)** , managé de création d’objets à un simple texte de sortie de base de données Message. La méthode affecte également la chaîne « Hello world ! » en tant que valeur de paramètre de sortie. Cette méthode peut être déclarée comme une procédure stockée dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], puis s'exécuter de la même manière qu'une procédure stockée [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+Ce programme simple contient une méthode statique unique sur une classe publique. Cette méthode utilise deux nouvelles classes, **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** et **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**, pour créer des objets de base de données managés afin de générer un message texte simple. La méthode assigne également la chaîne « Hello World ! » comme valeur d’un paramètre de sortie. Cette méthode peut être déclarée comme une procédure stockée dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], puis s'exécuter de la même manière qu'une procédure stockée [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- Compiler ce programme comme une bibliothèque, le charger dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], et exécutez-le en tant qu’une procédure stockée.  
+Compilez ce programme en tant que bibliothèque, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]chargez-le dans et exécutez-le en tant que procédure stockée.  
   
-## <a name="compile-the-hello-world-stored-procedure"></a>Compiler la procédure « Hello World » stockées  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installe par défaut les fichiers de redistribution [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Ces fichiers incluent csc.exe et vbc.exe, les compilateurs de ligne de commande pour les programmes Visual C# et Visual Basic. Pour compiler notre exemple, vous devez modifier votre variable de chemin d'accès pour pointer sur le répertoire qui contient csc.exe ou vbc.exe. Le chemin d'installation par défaut du .NET Framework est le suivant :  
+## <a name="compile-the-hello-world-stored-procedure"></a>Compiler la procédure stockée « Hello World »  
+
+
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installe par défaut les fichiers de redistribution [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Ces fichiers incluent csc.exe et vbc.exe, les compilateurs de ligne de commande pour les programmes Visual C# et Visual Basic. Pour compiler notre exemple, vous devez modifier votre variable de chemin d'accès pour pointer sur le répertoire qui contient csc.exe ou vbc.exe. Le chemin d'installation par défaut du .NET Framework est le suivant :  
   
-```  
-C:\Windows\Microsoft.NET\Framework\(version)  
-```  
+`C:\Windows\Microsoft.NET\Framework\(version)`  
   
- La version contient le numéro de version du programme redistribuable .NET Framework installé. Exemple :  
+La version contient le numéro de version du programme redistribuable .NET Framework installé. Par exemple :  
   
-```  
-C:\Windows\Microsoft.NET\Framework\v4.6.1  
-```  
+`C:\Windows\Microsoft.NET\Framework\v4.6.1`
+
+Une fois que vous avez ajouté le répertoire .NET Framework à votre chemin d'accès, vous pouvez compiler l'exemple de procédure stockée en assembly à l'aide de la commande ci-dessous. L’option **/target** vous permet de la compiler dans un assembly.  
   
- Une fois que vous avez ajouté le répertoire .NET Framework à votre chemin d'accès, vous pouvez compiler l'exemple de procédure stockée en assembly à l'aide de la commande ci-dessous. Le **/target** option vous permet de compiler dans un assembly.  
+Pour les fichiers sources Visual C# :  
   
- Pour les fichiers sources Visual C# :  
-  
-```  
-csc /target:library helloworld.cs   
-```  
+`csc /target:library helloworld.cs`  
   
  Pour les fichiers sources Visual Basic :  
   
-```  
-vbc /target:library helloworld.vb  
-```  
+`vbc /target:library helloworld.vb`  
   
- Ces commandes lancent le compilateur Visual C# ou Visual Basic en utilisant l'option /target pour spécifier la génération d'une DLL de bibliothèque.  
+Ces commandes lancent le compilateur Visual C# ou Visual Basic en utilisant l'option /target pour spécifier la génération d'une DLL de bibliothèque.  
   
 ## <a name="loading-and-running-the-hello-world-stored-procedure-in-sql-server"></a>Chargement et exécution de la procédure stockée "Hello World" dans SQL Server  
- Une fois que l'exemple de procédure a été compilé avec succès, vous pouvez le tester dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour cela, ouvrez [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] et créez une nouvelle requête, en vous connectant à une base de données de test appropriée (par exemple, l'exemple de base de données AdventureWorks).  
+
+Une fois que l'exemple de procédure a été compilé avec succès, vous pouvez le tester dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour cela, ouvrez [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] et créez une nouvelle requête, en vous connectant à une base de données de test appropriée (par exemple, l'exemple de base de données AdventureWorks).  
   
- La fonctionnalité d'exécution du code CLR est désactivée par défaut dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le code CLR peut être activé à l’aide de la **sp_configure** procédure stockée système. Pour plus d’informations, consultez [Activation de l’intégration du CLR](../../../relational-databases/clr-integration/clr-integration-enabling.md).  
+La fonctionnalité d'exécution du code CLR est désactivée par défaut dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le code CLR peut être activé à l’aide de la procédure stockée système **sp_configure** . Pour plus d’informations, consultez [Activation de l’intégration du CLR](../../../relational-databases/clr-integration/clr-integration-enabling.md).  
   
- Il est nécessaire de créer l'assembly afin de pouvoir accéder à la procédure stockée. Pour cet exemple, nous supposerons que vous avez créé l'assembly helloworld.dll dans le répertoire C:\. Ajoutez l'instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivante à votre requête.  
+Il est nécessaire de créer l'assembly afin de pouvoir accéder à la procédure stockée. Pour cet exemple, nous supposerons que vous avez créé l'assembly helloworld.dll dans le répertoire C:\. Ajoutez l'instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivante à votre requête.  
   
-```  
-CREATE ASSEMBLY helloworld from 'c:\helloworld.dll' WITH PERMISSION_SET = SAFE  
-```  
+`CREATE ASSEMBLY helloworld from 'c:\helloworld.dll' WITH PERMISSION_SET = SAFE`  
   
- Une fois l'assembly créé, il est possible d'accéder à la méthode HelloWorld en utilisant l'instruction CREATE PROCEDURE. Nous appellerons la procédure stockée "hello" :  
+Une fois l'assembly créé, il est possible d'accéder à la méthode HelloWorld en utilisant l'instruction CREATE PROCEDURE. Nous appellerons la procédure stockée "hello" :  
   
-```  
-  
+```sql
 CREATE PROCEDURE hello  
 @i nchar(25) OUTPUT  
 AS  
@@ -142,42 +138,44 @@ EXTERNAL NAME helloworld.HelloWorldProc.HelloWorld
 -- EXTERNAL NAME helloworld.[MyNS.HelloWorldProc].HelloWorld  
 ```  
   
- Une fois la procédure créée, elle peut être exécutée tout comme une procédure stockée normale écrite dans [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Exécutez la commande suivante :  
+Une fois la procédure créée, elle peut être exécutée tout comme une procédure stockée normale écrite dans [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Exécutez la commande suivante :  
   
-```  
+```sql
 DECLARE @J nchar(25)  
 EXEC hello @J out  
 PRINT @J  
 ```  
   
- Cela doit générer la sortie ci-dessous dans la fenêtre des messages [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
+Cela doit générer la sortie ci-dessous dans la fenêtre des messages [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
-```  
+```
 Hello world!  
 Hello world!  
 ```  
   
 ## <a name="removing-the-hello-world-stored-procedure-sample"></a>Suppression de l'exemple de procédure stockée "Hello World"  
- Lorsque vous avez terminé d'exécuter l'exemple de procédure stockée, vous pouvez supprimer la procédure et l'assembly de votre base de données de test.  
+
+Lorsque vous avez terminé d'exécuter l'exemple de procédure stockée, vous pouvez supprimer la procédure et l'assembly de votre base de données de test.  
   
- En premier lieu, supprimez la procédure à l'aide de la commande drop procedure.  
+En premier lieu, supprimez la procédure à l'aide de la commande drop procedure.  
   
-```  
+```sql
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'hello')  
    drop procedure hello  
 ```  
   
- Une fois la procédure supprimée, vous pouvez supprimer l'assembly qui contient votre exemple de code.  
+Une fois la procédure supprimée, vous pouvez supprimer l'assembly qui contient votre exemple de code.  
   
-```  
+```sql
 IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')  
    drop assembly helloworld  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Procédures stockées CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
- [Extensions spécifiques de SQL Server In-Process à ADO.NET](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
- [Débogage d’objets de base de données CLR](../../../relational-databases/clr-integration/debugging-clr-database-objects.md)   
- [Sécurité de l’intégration du CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md)  
-  
-  
+## <a name="next-steps"></a>Étapes suivantes
+
+Pour plus d’informations sur l’intégration du CLR dans SQL Server, consultez les articles suivants :
+
+- [Procédures stockées du CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)
+- [Extensions spécifiques in-process de SQL Server à ADO.NET](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)
+- [Débogage d'objets de base de données CLR](../../../relational-databases/clr-integration/debugging-clr-database-objects.md)
+- [Sécurité de l'intégration du CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md)

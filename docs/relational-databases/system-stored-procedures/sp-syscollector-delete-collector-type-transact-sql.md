@@ -19,18 +19,18 @@ ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c22170fff456a2ed65c295a1974539da20499c52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68000865"
 ---
-# <a name="spsyscollectordeletecollectortype-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
+# <a name="sp_syscollector_delete_collector_type-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime la définition d'un type de collecteur.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,20 +41,20 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @collector_type_uid = ] 'collector_type_uid'` Est le GUID pour le type de collecteur. *collector_type_uid* est **uniqueidentifier** et doit avoir une valeur si *nom* est NULL.  
+`[ @collector_type_uid = ] 'collector_type_uid'`GUID du type de collecteur. *collector_type_uid* est de type **uniqueidentifier** et doit avoir une valeur si *Name* est null.  
   
-`[ @name = ] 'name'` Est le nom du type de collecteur. *nom* est **sysname** et doit avoir une valeur si *collector_type_uid* a la valeur NULL.  
+`[ @name = ] 'name'`Nom du type de collecteur. *Name* est de **type sysname** et doit avoir une valeur si *collector_type_uid* a la valeur null.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- Soit *collector_type_uid* ou *nom* doit avoir une valeur, les deux ne peut pas être NULL.  
+ *Collector_type_uid* ou le *nom* doit avoir une valeur, les deux ne peuvent pas être null.  
   
  Cette procédure lèvera une erreur si les éléments de ce type de collection existent.  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l’appartenance dans le **dc_admin** (avec autorisation EXECUTE) rôle fixe de base de données pour exécuter cette procédure.  
+ Requiert l’appartenance au rôle de base de données fixe **dc_admin** (avec autorisation EXECUTE) pour exécuter cette procédure.  
   
 ## <a name="example"></a>Exemple  
  Cet exemple supprime le type de collecteur Requête T-SQL générique.  

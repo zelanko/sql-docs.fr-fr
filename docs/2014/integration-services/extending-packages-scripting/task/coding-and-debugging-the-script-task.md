@@ -22,17 +22,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 620b778069ef45deeeb5552296798736a1ebe5f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768409"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Codage et débogage de la tâche de script
   Après avoir configuré la tâche de script dans l’**éditeur de tâche de script**, vous pouvez écrire votre code personnalisé dans l’environnement de développement de tâche de script.  
   
 ## <a name="script-task-development-environment"></a>Environnement de développement de tâche de script  
- La tâche de script utilise [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) comme environnement de développement du script proprement dit.  
+ La tâche de script [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] utilise Tools for Applications (VSTA) comme environnement de développement pour le script lui-même.  
   
  Le code de script est écrit dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#. Vous pouvez spécifier le langage de script en définissant la propriété **ScriptLanguage** dans l’**éditeur de tâche de script**. Si vous préférez utiliser un autre langage de programmation, vous pouvez développer un assembly personnalisé dans le langage de votre choix et appeler ses fonctionnalités à partir du code inclus dans la de script.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "62768409"
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>Éléments et classes du projet de tâche de script  
  Par défaut, le projet de tâche de script affiché dans la fenêtre Explorateur de projets VSTA contient un seul élément, `ScriptMain`. L'élément `ScriptMain` contient à son tour une classe unique, également appelée `ScriptMain`. Les éléments de code inclus dans la classe varient selon le langage de programmation sélectionné pour la tâche de script :  
   
--   Lorsque la tâche de Script est configurée pour le [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] langage de programmation le `ScriptMain` classe possède une sous-routine publique, `Main`. La sous-routine `ScriptMain.Main` est la méthode appelée par le runtime lorsque vous exécutez votre tâche de script.  
+-   Lorsque la tâche de script est configurée [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] pour le langage de `ScriptMain` programmation, la classe possède une sous `Main`-routine publique,. La sous-routine `ScriptMain.Main` est la méthode appelée par le runtime lorsque vous exécutez votre tâche de script.  
   
-     Par défaut, le seul code figurant dans la sous-routine `Main` d'un nouveau script est la ligne `Dts.TaskResult = ScriptResults.Success`. Cette ligne informe le runtime que la tâche a été menée à bien. Le `Dts.TaskResult` propriété est abordée dans [retour de résultats de la tâche de Script](../../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
+     Par défaut, le seul code figurant dans la sous-routine `Main` d'un nouveau script est la ligne `Dts.TaskResult = ScriptResults.Success`. Cette ligne informe le runtime que la tâche a été menée à bien. La `Dts.TaskResult` propriété est décrite dans [retour des résultats de la tâche de script](../../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
   
 -   Lorsque la tâche de script est configurée pour le langage de programmation Visual C#, la classe `ScriptMain` possède une méthode publique, `Main`. La méthode est appelée lors de l'exécution de la tâche de script.  
   
@@ -245,10 +245,10 @@ To open Help, press F1.
   
 -   Entrée de blog, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](https://go.microsoft.com/fwlink/?LinkId=215661), sur blogs.msdn.com.  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les téléchargements, articles, exemples et vidéos les plus récents de [!INCLUDE[msCoName](../../../includes/msconame-md.md)], ainsi que les solutions retenues par la communauté informatique, consultez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône de Integration Services (petite)](../../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les téléchargements, articles, exemples et vidéos les plus récents de [!INCLUDE[msCoName](../../../includes/msconame-md.md)], ainsi que les solutions retenues par la communauté informatique, consultez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référencement d’autres assemblys dans les solutions de script](../referencing-other-assemblies-in-scripting-solutions.md)   
- [Configuration de la tâche de script dans l’éditeur de tâche de script](configuring-the-script-task-in-the-script-task-editor.md)  
+ [Référencement d’autres assemblys dans des solutions de script](../referencing-other-assemblies-in-scripting-solutions.md)   
+ [Configuration de la tâche de script dans l'éditeur de tâche de script](configuring-the-script-task-in-the-script-task-editor.md)  
   
   

@@ -18,26 +18,26 @@ ms.assetid: 9164bfe2-6fc4-4b52-946a-09ea3cf67041
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 638bea3db68712300ad2284e50676bf1df67c9ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139810"
 ---
 # <a name="mssnapshotdeliveryprogress-transact-sql"></a>MSsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Le **MSsnapshotdeliveryprogress** table est utilisée pour suivre les fichiers qui ont été remis avec succès à l’abonné lorsqu’un instantané est appliqué. Ces données permettent de reprendre la remise des fichiers si l'Agent de fusion ne parvient pas à fournir tous les fichiers pendant la session, de manière à ce que les mêmes fichiers ne soient pas de nouveau remis lors de la prochaine exécution de l'Agent. Cette table est stockée dans la base de données d'abonnement de l'Abonné.  
+  La table **MSsnapshotdeliveryprogress** est utilisée pour suivre les fichiers qui ont été remis à l’abonné lorsqu’un instantané est en cours d’application. Ces données permettent de reprendre la remise des fichiers si l'Agent de fusion ne parvient pas à fournir tous les fichiers pendant la session, de manière à ce que les mêmes fichiers ne soient pas de nouveau remis lors de la prochaine exécution de l'Agent. Cette table est stockée dans la base de données d'abonnement de l'Abonné.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**session_token**|**nvarchar(260)**|Identifie le chemin d'accès du dossier d'instantané à partir duquel le fichier a été remis. Pour les publications qui utilisent des filtres paramétrés, la chaîne **dynsnap** sera ajouté à la valeur.|  
-|**progress_token_hash**|**int**|Une valeur de hachage générée selon la valeur de *progress_token* utilisé améliorer l’efficacité des recherches pour une donnée *progress_token* valeur.|  
-|**progress_token**|**nvarchar(500)**|Identifie un fichier remis, sous la forme d'une combinaison du nom du fichier et de son chemin d'accès.|  
-|**progress_timestamp**|**datetime**|Le **datetime** valeur qui indique quand un fichier d’instantané a été remis avec succès.|  
+|**session_token**|**nvarchar(260)**|Identifie le chemin d'accès du dossier d'instantané à partir duquel le fichier a été remis. Pour les publications qui utilisent des filtres paramétrés, la chaîne **dynsnap** sera ajoutée à la valeur.|  
+|**progress_token_hash**|**int**|Valeur de hachage générée en fonction de la valeur de *progress_token* qui est utilisée pour améliorer l’efficacité de la recherche pour une valeur de *progress_token* donnée.|  
+|**progress_token**|**nvarchar (500)**|Identifie un fichier remis, sous la forme d'une combinaison du nom du fichier et de son chemin d'accès.|  
+|**progress_timestamp**|**DATETIME**|Valeur **DateTime** qui indique quand un fichier d’instantané a été remis avec succès.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vues de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

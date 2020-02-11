@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fcc071c10a2daa31190727dfc9f3cbe617bdcb66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831524"
 ---
 # <a name="ftp-task"></a>Tâche FTP
@@ -37,7 +37,7 @@ ms.locfileid: "62831524"
   
  Pour accéder à un fichier local ou à un répertoire local, la tâche FTP utilise un gestionnaire de connexions de fichiers ou des informations de chemin d'accès stockées dans une variable. À l'inverse, pour accéder à un fichier distant ou à un répertoire distant, la tâche FTP utilise un chemin d'accès directement spécifié sur le serveur distant, tel qu'indiqué dans le gestionnaire de connexions FTP, ou des informations de chemin d'accès stockées dans une variable. Pour plus d’informations, consultez [Gestionnaire de connexions de fichiers](../connection-manager/file-connection-manager.md) et [Variables Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
   
- Cela signifie que la tâche FTP peut recevoir plusieurs fichiers et supprimer plusieurs fichiers distants ; toutefois, la tâche peut envoyer seulement un fichier et supprimer seulement un fichier local si elle utilise un gestionnaire de connexions, car un gestionnaire de connexions de fichiers ne peut accéder qu'à un fichier. Pour accéder à plusieurs fichiers locaux, la tâche FTP doit utiliser une variable afin d'indiquer les informations de chemin d'accès. Par exemple, une variable contenant le texte « C:\Test\\*.txt » désigne un chemin qui prend en charge la suppression ou l’envoi de tous les fichiers ayant pour extension .txt et figurant dans le répertoire Test.  
+ Cela signifie que la tâche FTP peut recevoir plusieurs fichiers et supprimer plusieurs fichiers distants ; toutefois, la tâche peut envoyer seulement un fichier et supprimer seulement un fichier local si elle utilise un gestionnaire de connexions, car un gestionnaire de connexions de fichiers ne peut accéder qu'à un fichier. Pour accéder à plusieurs fichiers locaux, la tâche FTP doit utiliser une variable afin d'indiquer les informations de chemin d'accès. Par exemple, une variable contenant le texte « C:\Test\\*.txt » désigne un chemin qui prend en charge la suppression ou l’envoi de tous les fichiers ayant pour extension .txt et figurant dans le répertoire Test.  
   
  Pour envoyer plusieurs fichiers et accéder à plusieurs fichiers et répertoires locaux, vous pouvez également exécuter la tâche FTP plusieurs fois en l'incluant dans une boucle Foreach. La boucle Foreach peut passer en revue tous les fichiers d'un répertoire à l'aide de l'énumérateur For Each File. Pour plus d’informations, consultez [Conteneur de boucles Foreach](foreach-loop-container.md).  
   
@@ -75,8 +75,8 @@ ms.locfileid: "62831524"
  Pour plus d’informations sur la définition de ces propriétés par programmation, consultez <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de tâche FTP &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)   
- [Éditeur de tâche FTP &#40;page Transfert de fichiers&#41;](../ftp-task-editor-file-transfer-page.md)   
+ [Éditeur de tâche FTP &#40;page général&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Éditeur de tâche FTP &#40;page transfert de fichiers&#41;](../ftp-task-editor-file-transfer-page.md)   
  [Tâches Integration Services](integration-services-tasks.md)   
  [Flux de contrôle](control-flow.md)  
   

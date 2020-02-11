@@ -18,18 +18,18 @@ ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a2f4b2e8dbcf8e8427f51388c7bead75263d95a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130637"
 ---
-# <a name="spdeletejobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
+# <a name="sp_delete_jobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime le serveur cible spécifié.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,23 +40,23 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_id = ] job_id` Le numéro d’identification du travail dans lequel le serveur cible spécifié doit être supprimé. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] job_id`Numéro d’identification du travail à partir duquel le serveur cible spécifié sera supprimé. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
-`[ @job_name = ] 'job_name'` Le nom du travail dans lequel le serveur cible spécifié doit être supprimé. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'`Nom du travail à partir duquel le serveur cible spécifié sera supprimé. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
->  Soit *job_id* ou *nom_travail* doit être spécifié ; ne peut pas être spécifiés.  
+>  *Job_id* ou *job_name* doit être spécifié ; les deux ne peuvent pas être spécifiés.  
   
-`[ @server_name = ] 'server'` Le nom du serveur cible à supprimer du travail spécifié. *serveur* est **nvarchar (30)** , sans valeur par défaut. *serveur* peut être **(LOCAL)** ou le nom d’un serveur cible distant.  
+`[ @server_name = ] 'server'`Nom du serveur cible à supprimer du travail spécifié. *Server* est de type **nvarchar (30)**, sans valeur par défaut. le *serveur* peut être **(local)** ou le nom d’un serveur cible distant.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="permissions"></a>Autorisations  
- Pour exécuter cette procédure stockée, les utilisateurs doivent être membres de la **sysadmin** rôle serveur fixe.  
+ Pour exécuter cette procédure stockée, les utilisateurs doivent être membres du rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant supprime le serveur `SEATTLE2` du traitement du `Weekly Sales Backups`travail.  

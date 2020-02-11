@@ -14,10 +14,10 @@ ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 7ce5d8456d1857c3e62239deadf217e5d9841caa
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728899"
 ---
 # <a name="transactions-master-data-services"></a>Transactions (Master Data Services)
@@ -77,7 +77,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
 ```  
   
 ## <a name="system-settings"></a>Paramètres système  
- Il existe un paramètre dans le [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] qui détermine si les transactions sont enregistrées ou non lors de l'organisation des enregistrements. Vous pouvez ajuster ce paramètre dans le [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ou directement dans la table Paramètres système de la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Pour plus d’informations, consultez [System Settings &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md) (Paramètres système &#40;Master Data Services&#41;).  
+ Il existe un paramètre dans le [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] qui détermine si les transactions sont enregistrées ou non lors de l'organisation des enregistrements. Vous pouvez ajuster ce paramètre dans le [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ou directement dans la table Paramètres système de la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Pour plus d’informations, consultez [Paramètres système &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
  Lors de l'importation de données dans cette version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vous pouvez spécifier s'il faut enregistrer les transactions lors de l'initialisation de la procédure stockée. Pour plus d’informations, consultez [Procédure stockée de mise en lots &#40;Master Data Services&#41;](../master-data-services/staging-stored-procedure-master-data-services.md).  
   
@@ -95,7 +95,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
 ## <a name="external-resources"></a>Ressources externes  
  Billet de blog [Nettoyage des journaux des transactions, de l’historique des problèmes de validation et des tables de mise en lots](https://go.microsoft.com/fwlink/p/?LinkId=615374)(en anglais) sur msdn.com.  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
   
 -   [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
   

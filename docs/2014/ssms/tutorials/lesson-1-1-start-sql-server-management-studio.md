@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd7fed6fff4ddd55ef56e4c5b342c56b6c2f462f
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632799"
 ---
 # <a name="start-sql-server-management-studio"></a>Démarrer SQL Server Management Studio
@@ -27,12 +27,13 @@ ms.locfileid: "73632799"
 1.  Dans le menu **Démarrer** , pointez sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], puis cliquez sur **SQL Server Management Studio**.  
   
     > [!NOTE]  
-    >  Par défaut, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] n'est pas installé. Si [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] n'est pas disponible, installez-le en exécutant le programme d'installation. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] n’est pas disponible avec [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express est disponible en téléchargement gratuit à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=7593), mais il possède une interface utilisateur différente de celle décrite dans ce didacticiel.  
+    >  Par défaut, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] n'est pas installé. Si [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] n'est pas disponible, installez-le en exécutant le programme d'installation. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]n’est pas disponible [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]avec. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Express est disponible en téléchargement gratuit à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=7593), mais il possède une interface utilisateur différente de celle décrite dans ce didacticiel.  
   
-2.  Dans la boîte de dialogue **Se connecter à un serveur** , vérifiez les paramètres par défaut, puis cliquez sur **Se connecter**. Pour vous connecter, la zone **nom du serveur** doit contenir le nom de l’ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé. Si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] est une instance nommée, la zone **nom du serveur** doit également contenir le nom de l’instance au format \<*computer_name*> *\\<instance_name*>.  
+2.  Dans la boîte de dialogue **Se connecter à un serveur** , vérifiez les paramètres par défaut, puis cliquez sur **Se connecter**. Pour vous connecter, la zone **nom du serveur** doit contenir le nom de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ordinateur sur lequel est installé. Si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] est une instance nommée, la zone **nom du serveur** doit également contenir le nom de l’instance au format \< *computer_name*>\\<*instance_name*>.  
   
 ## <a name="management-studio-components"></a>Composants Management Studio  
- [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fournit des informations dans des fenêtres dédiées à des types d’informations précis. Les informations sur les bases de données s'affichent dans l'Explorateur d'objets et dans des fenêtres de documents.  
+ 
+  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fournit des informations dans des fenêtres dédiées à des types d’informations précis. Les informations sur les bases de données s'affichent dans l'Explorateur d'objets et dans des fenêtres de documents.  
   
 -   L'Explorateur d'objets est une arborescence qui présente tous les objets de base de données sur un serveur. Cela peut inclure les bases de données du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]et de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. L'Explorateur d'objets contient des informations sur tous les serveurs auxquels il est connecté. Lorsque vous ouvrez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], le système vous demande de vous connecter à l'Explorateur d'objets avec les derniers paramètres utilisés. Vous pouvez double-cliquer sur n'importe quel serveur dans la fenêtre Serveurs inscrits pour y établir une connexion, mais il n'est pas nécessaire d'inscrire un serveur pour pouvoir vous y connecter.  
   

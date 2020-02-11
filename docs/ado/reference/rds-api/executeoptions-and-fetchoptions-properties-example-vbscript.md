@@ -16,17 +16,17 @@ ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 782b76ca40418cd7fb8313c2b22da3a6ddd3978a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964191"
 ---
 # <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>ExecuteOptions et FetchOptions, exemples de propriétés (VBScript)
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Le code suivant montre comment définir le [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) et [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) propriétés au moment du design. Si pas définies, **ExecuteOptions** par défaut est **est adcExecSync**. Ce paramètre indique que lorsque le **RDS. Actualiser** méthode est appelée, elle sera exécutée sur le thread appelant actuels-autrement dit, de façon synchrone. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le en tant que **ExecuteOptionsDesignVBS.asp**.  
+ Le code suivant montre comment définir les propriétés [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) et [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) au moment du Design. Si la valeur de n’est pas définie, **ExecuteOptions** est par défaut **adcExecSync**. Ce paramètre indique que lorsque le **RDS. **La méthode Refresh est appelée, elle est exécutée sur le thread appelant actuel, c’est-à-dire de façon synchrone. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte, puis enregistrez-le en tant que **ExecuteOptionsDesignVBS. asp**.  
   
 ```  
 <!-- BeginExecuteOptionsDesignVBS -->  
@@ -94,7 +94,7 @@ body {
 <!-- EndExecuteOptionsDesignVBS -->  
 ```  
   
- L’exemple suivant montre comment définir le **ExecuteOptions** et **FetchOptions** propriétés au moment de l’exécution dans le code VBScript. Consultez le [Actualiser](../../../ado/reference/rds-api/refresh-method-rds.md) méthode pour obtenir un exemple de ces propriétés. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le en tant que **ExecuteOptionsRuntimeVBS.asp**.  
+ L’exemple suivant montre comment définir les propriétés **ExecuteOptions** et **FetchOptions** au moment de l’exécution dans du code VBScript. Pour obtenir un exemple fonctionnel de ces propriétés, consultez la méthode [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) . Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte, puis enregistrez-le en tant que **ExecuteOptionsRuntimeVBS. asp**.  
   
 ```  
 <!-- BeginExecuteOptionsRuntimeVBS -->  

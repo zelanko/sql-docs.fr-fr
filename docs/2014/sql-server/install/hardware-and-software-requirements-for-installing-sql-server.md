@@ -46,10 +46,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce6cef69abe7c2461552229363c8334ca56555b4
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245655"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server-2014"></a>Configurations matérielle et logicielle requises pour l'installation de SQL Server 2014
@@ -72,7 +72,7 @@ ms.locfileid: "75245655"
   
 -   Le programme d'installation de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe les composants logiciels suivants requis par le produit :  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Fichiers de support du programme d’installation  
   
@@ -97,7 +97,7 @@ ms.locfileid: "75245655"
 ##  <a name="hwswr"></a>Configuration matérielle et logicielle requise  
  La configuration requise suivante s'applique à toutes les installations de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] :  
   
-|Composant|Prérequis|  
+|Composant|Condition requise|  
 |---------------|-----------------|  
 |.NET Framework|Le .NET 3.5 SP1 est requis pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] lorsque vous sélectionnez [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)], Réplication ou [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], et qu'il n'est plus installé par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . <br />-Si vous exécutez le programme d’installation et que vous n’avez pas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .net 3,5 SP1, le programme d’installation vous demande de télécharger et d’installer .NET [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 3,5 SP1 avant de poursuivre l’installation. (Installez .NET 3,5 SP1 à partir de [Microsoft .NET Framework 3,5 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=22).) Le message d’erreur contient un lien vers le centre de téléchargement ou vous pouvez télécharger .NET 3,5 SP1 à partir de Windows Update. Pour éviter toute interruption pendant l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez télécharger et installer .NET 3.5 SP1 avant d'exécuter le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br />-Si vous exécutez le programme d’installation sur [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] un ordinateur [!INCLUDE[win8](../../includes/win8-md.md)]disposant de SP1 ou, vous devez activer .NET Framework [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]3,5 SP1 avant d’installer.<br />-S’il n’y a pas d’accès à Internet, vous devez télécharger et installer .NET Framework 3,5 SP1 avant d’exécuter le programme d’installation pour installer l’un des composants mentionnés ci-dessus. Pour plus d’informations sur les recommandations et des conseils sur l’obtention et l’activation de [!INCLUDE[win8](../../includes/win8-md.md)] .NET Framework [!INCLUDE[win8srv](../../includes/win8srv-md.md)]3,5 sur et, consultez Considérations sur lehttps://msdn.microsoft.com/library/windows/hardware/hh975396) [déploiement de Microsoft .NET Framework 3,5](https://msdn.microsoft.com/library/windows/hardware/hh975396) (.<br /><br /> .NET 4.0 est une condition requise pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe le .NET 4.0 lors de l'étape d'installation des fonctionnalités.<br />-Si vous installez les [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] éditions, assurez-vous qu’une connexion Internet est disponible sur l’ordinateur. Le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] télécharge et installe le .NET 4 car il n'est pas inclus dans les médias [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].<br />-[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]n’installe pas .NET 4,0 sur le mode Server Core [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] de SP1 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]ou. Vous devez installer le .NET 4.0 avant d'installer [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] sur une installation Server Core de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 ou [!INCLUDE[win8srv](../../includes/win8srv-md.md)].|  
@@ -108,7 +108,7 @@ ms.locfileid: "75245655"
 |Disque dur|
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] requiert un minimum de 6 GO d'espace disque disponible.<br /><br /> L'espace disque nécessaire varie selon les composants [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que vous installez. Pour plus d'informations, consultez [Hard Disk Space Requirements (32-Bit and 64 Bit)](hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) , plus loin dans cette rubrique. Pour plus d'informations sur les types de stockage pris en charge pour les fichiers de données, consultez [Storage Types for Data Files](hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).|  
 |Lecteur|Un lecteur de DVD, selon le cas, est requis pour l'installation à partir d'un disque.|  
-|Surveiller|
+|Moniteur|
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] requiert un moniteur avec une résolution Super-VGA (800 x 600) ou supérieure.|  
 |Internet|Les fonctionnalités Internet requièrent un accès à Internet (des frais peuvent s'appliquer).|  
   
@@ -117,7 +117,7 @@ ms.locfileid: "75245655"
 ##  <a name="pmosr"></a>Processeur, mémoire et système d’exploitation requis  
  Les spécifications de mémoire et de processeur suivantes s'appliquent à toutes les éditions de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  
   
-|Composant|Prérequis|  
+|Composant|Condition requise|  
 |---------------|-----------------|  
 |Mémoire<sup>[1]</sup>|**Minimale**<br /><br /> Éditions Express : 512 MO<br /><br /> Toutes les autres éditions : 1 GO<br /><br /> **Recommandations**<br /><br /> Éditions Express : 1 GO<br /><br /> Toutes les autres éditions : au moins 4 GO, qui doivent être augmentés au fur et à mesure de l'augmentation de la taille de la base de données pour garantir des performances optimales.|  
 |Vitesse du processeur|**Minimale**<br /><br /> Processeur x86 : 1,0 GHz<br /><br /> Processeur x64 : 1,4 GHz<br /><br /> **Recommandé :** 2,0 GHz ou plus rapide|  
@@ -201,7 +201,7 @@ L’installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sur le
   [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Enterprise 64 bits<br /><br /> 
   [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard 64 bits<br /><br /> 
   [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Web 64 bits|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Business Intelligence|[!INCLUDE[winserver2019_datacenter_md](../../includes/winserver2019-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2019_standard_md](../../includes/winserver2019-standard-md.md)]<br/><br/>[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Business Intelligence|[!INCLUDE[winserver2019_datacenter_md](../../includes/winserver2019-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2019_standard_md](../../includes/winserver2019-standard-md.md)]<br/><br/>[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>
   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter 64 bits<br /><br /> 
   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard 64 bits<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)]R2 Essentials 64-bit<br /><br /> 
   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation 64 bits<br /><br /> 
@@ -418,7 +418,7 @@ L’installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sur le
   
 -   Pour SQL Server 2012, vous devez appliquer SQL Server 2012 Service Pack 2 ou une mise à jour ultérieure. Pour plus d’informations, consultez [Comment obtenir le dernier Service Pack pour SQL Server 2012](https://support.microsoft.com/kb/2755533).  
   
--   SQL Server 2008 R2  
+-   SQL Server 2008 R2  
     et SQL Server 2008 ne sont pas pris en charge sur Windows 10.  
   
 ##  <a name="CrossLanguageSupport"></a>Prise en charge de plusieurs langues  
@@ -458,7 +458,7 @@ L’installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sur le
   
     > **Remarque :**  Le stockage SMB n’est pas [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pris en charge pour les fichiers de données des installations autonomes ou en cluster. Utilisez le stockage attaché direct ou un réseau de stockage à la place.  
   
-    > **IMPORTANT !** Le stockage SMB peut être hébergé par un serveur de fichiers Windows ou un dispositif de stockage SMB tiers. Si vous utilisez un serveur de fichiers Windows, il doit s'agir de la version 2008 ou ultérieure. Pour plus d'informations sur l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le partage de fichiers SMB comme option de stockage, consultez [Install SQL Server with SMB Fileshare as a Storage Option](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
+    > **IMPORTANT** Le stockage SMB peut être hébergé par un serveur de fichiers Windows ou un dispositif de stockage SMB tiers. Si vous utilisez un serveur de fichiers Windows, il doit s'agir de la version 2008 ou ultérieure. Pour plus d'informations sur l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le partage de fichiers SMB comme option de stockage, consultez [Install SQL Server with SMB Fileshare as a Storage Option](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
   
     > **!!!! D’avertissement**  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge uniquement le disque local pour l'installation des fichiers tempdb. Assurez-vous que le chemin d’accès spécifié pour les fichiers journaux et de données tempdb est valide sur **tous** les nœuds du cluster. Pendant le basculement, si les répertoires tempdb ne sont pas disponibles sur le nœud de basculement cible, la ressource [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne sera pas en ligne.  

@@ -1,5 +1,5 @@
 ---
-title: Floor, fonction (XQuery) | Microsoft Docs
+title: Fonction Floor (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 4ace57dd-b66e-4b60-a2b9-a1b0f1a0831d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1c27e432dc258b4d2b9d21bfe0ab28df8ee5b510
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946534"
 ---
 # <a name="numeric-values-functions---floor"></a>Fonctions de valeurs numériques : floor
@@ -39,22 +39,22 @@ fn:floor ($arg as numeric?) as numeric?
  Nombre à laquelle s'applique la fonction.  
   
 ## <a name="remarks"></a>Notes  
- Si le type de *$arg* est un des trois types numériques de base, **xs : float**, **xs : double**, ou **xs : decimal**, le type de retour est identique à la *$arg* type. Si le type de *$arg* est un type qui est dérivé d’un des types numériques, le type de retour est le type de base numérique.  
+ Si le type de *$arg* est l’un des trois types numériques de base, **XS : float**, **XS : double**ou **XS : Decimal**, le type de retour est le même que le type de *$arg* . Si le type de *$arg* est un type dérivé de l’un des types numériques, le type de retour est le type numérique de base.  
   
- Si l’entrée pour les fonctions de valeur, fn : Ceiling ou fn : Round est **xdt : untypedAtomic**, données non typées, il est implicitement converti dans **xs : double**. Tout autre type génère une erreur statique.  
+ Si l’entrée des fonctions FN : Floor, fn : Ceiling ou FN : Round est **xdt : untypedAtomic**, les données non typées sont implicitement converties en **XS : double**. Tout autre type génère une erreur statique.  
   
 ## <a name="examples"></a>Exemples  
- Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type dans la base de données AdventureWorks.  
+ Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** de l’exemple de base de données AdventureWorks.  
   
- Vous pouvez utiliser l’exemple fonctionnel de la [fonction ceiling (XQuery)](../xquery/numeric-values-functions-ceiling.md) pour le **floor()** fonction XQuery. Il vous suffit de remplacer le **ceiling()** (fonction) dans la requête avec le **floor()** (fonction).  
+ Vous pouvez utiliser l’exemple Working dans la [fonction ceiling (XQuery)](../xquery/numeric-values-functions-ceiling.md) pour la fonction XQuery **Floor ()** . Il vous suffit de remplacer la fonction **Ceiling ()** de la requête par la fonction **Floor ()** .  
   
 ## <a name="implementation-limitations"></a>Limites de mise en œuvre  
  Les limitations suivantes s'appliquent :  
   
--   Le **floor()** fonction mappe toutes les valeurs entières à xs : decimal.  
+-   La fonction **Floor ()** associe toutes les valeurs entières à XS : Decimal.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonction CEILING &#40;XQuery&#41;](../xquery/numeric-values-functions-ceiling.md)   
+ [Fonction ceiling &#40;XQuery&#41;](../xquery/numeric-values-functions-ceiling.md)   
  [Fonction Round &#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)   
  [Fonctions XQuery impliquant le type de données xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   

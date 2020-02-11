@@ -15,24 +15,24 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a2e5896456f3c4f8074b62f6e1d4707cc7c41d21
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73770802"
 ---
 # <a name="sessions"></a>Sessions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Une session de fournisseur d’OLE DB Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] représente une connexion unique à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] session de fournisseur OLE DB Native Client représente une connexion unique à une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de.  
   
- Le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB requiert que les sessions délimitent l’espace de transaction pour une source de données. Tous les objets de commande créés à partir d'un objet session spécifique participent à la transaction locale ou distribuée de l'objet session.  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client requiert que les sessions délimitent l’espace de transaction pour une source de données. Tous les objets de commande créés à partir d'un objet session spécifique participent à la transaction locale ou distribuée de l'objet session.  
   
  Le premier objet session créé sur la source de données initialisée reçoit la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] établie au moment de l'initialisation. Lorsque toutes les références sur les interfaces de l'objet session sont libérées, la connexion à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est accessible à un autre objet session créé sur la source de données.  
   
  Un objet session supplémentaire créé sur la source de données établit sa propre connexion à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comme spécifié par la source de données. La connexion à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est abandonnée lorsque l'application libère toutes les références aux objets créés au cours de cette session.  
   
- L’exemple suivant montre comment utiliser le fournisseur de OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client pour se connecter à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
+ L’exemple suivant montre comment utiliser le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] une base de données :  
   
 ```  
 int main()  
@@ -181,7 +181,7 @@ EXIT:
 }  
 ```  
   
- La connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB des objets de session fournisseur à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut générer une surcharge importante pour les applications qui créent et libèrent continuellement des objets de session. La surcharge peut être réduite en gérant efficacement les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB session du fournisseur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB les applications de fournisseur peuvent maintenir la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’un objet de session active en conservant une référence sur au moins une interface de l’objet.  
+ La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion des objets Native Client OLE DB session fournisseur à une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance de peut générer une surcharge importante pour les applications qui créent et libèrent continuellement des objets session. La surcharge peut être réduite en gérant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] efficacement les objets Native Client OLE DB session fournisseur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Les applications de fournisseur OLE DB Native Client peuvent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maintenir la connexion d’un objet de session active en conservant une référence sur au moins une interface de l’objet.  
   
  Par exemple, la gestion d'un pool de références d'objet de création de commande maintient des connexions actives pour ces objets session dans le pool. Les objets session étant obligatoires, le code de gestion du pool passe un pointeur d’interface **IDBCreateCommand** valide à la méthode d’application nécessitant la session. Lorsque la méthode d'application ne requiert plus la session, la méthode retourne le pointeur d'interface au code de gestion du pool plutôt que de libérer la référence de l'application à l'objet de création de commande.  
   
@@ -189,6 +189,6 @@ EXIT:
 >  Dans l’exemple précédent, l’interface **IDBCreateCommand** est utilisée, car l’interface **ICommand** implémente la méthode **GetDBSession**, la seule méthode dans l’étendue de la commande ou de l’ensemble de lignes qui permet à un objet de déterminer la session au cours de laquelle il a été créé. Par conséquent, un objet commande, et uniquement un objet commande, permet à une application de récupérer un pointeur d'objet source de données à partir duquel des sessions supplémentaires peuvent être créées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objets &#40;de source de données OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Objets de source de données &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

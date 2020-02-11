@@ -1,5 +1,5 @@
 ---
-title: Utiliser la Date et l’heure de Types | Microsoft Docs
+title: Utiliser des types de date et d’heure | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc57a2c286c9870421a223ce6a14ef201bef0c3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205503"
 ---
 # <a name="use-date-and-time-types"></a>Utiliser des types de date et d'heure
-  Cet exemple montre comment initialiser les structures de données de date et d’heure ajoutées dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Il prépare ensuite les valeurs d'entrée, lie les paramètres et exécute la requête. Pour plus d’informations sur l’utilisation de ces types, consultez [améliorations Date / heure &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+  Cet exemple montre comment initialiser les structures de données de date et d’heure ajoutées dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Il prépare ensuite les valeurs d'entrée, lie les paramètres et exécute la requête. Pour plus d’informations sur l’utilisation de ces types, consultez améliorations de la [date et de l’heure &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="example"></a>Exemple  
  Vous aurez besoin d'une source de données ODBC appelée DateTime. La base de données par défaut de DateTime doit être tempdb. Cette source de données doit être basée sur le pilote ODBC pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
- Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
+ Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   

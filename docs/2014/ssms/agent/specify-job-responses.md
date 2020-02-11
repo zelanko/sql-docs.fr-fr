@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9fa238a639321e9464ca3de2cc074b516f7df1e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245999"
 ---
 # <a name="specify-job-responses"></a>Spécifier des réponses à un travail
@@ -42,8 +42,8 @@ ms.locfileid: "63245999"
 |||  
 |-|-|  
 |**Description**|**Rubrique**|  
-|Explique comment avertir un opérateur de l'état d'un travail.|[Notifier l’état d’un travail à un opérateur](notify-an-operator-of-job-status.md)|  
-|Explique comment écrire l'état du travail dans le journal des applications Windows.|[Écrire l'état du travail dans le journal des applications Windows](../../reporting-services/report-server/windows-application-log.md)|  
+|Explique comment avertir un opérateur de l'état d'un travail.|[Notify an Operator of Job Status](notify-an-operator-of-job-status.md)|  
+|Explique comment écrire l'état du travail dans le journal des applications Windows.|[Write the Job Status to the Windows Application Log](../../reporting-services/report-server/windows-application-log.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Surveiller et répondre aux événements](monitor-and-respond-to-events.md)  

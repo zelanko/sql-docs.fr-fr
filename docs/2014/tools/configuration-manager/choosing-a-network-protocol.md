@@ -24,14 +24,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 9c167994c7145bce348b6959a57533e398e1d6bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035281"
 ---
 # <a name="choosing-a-network-protocol"></a>Choix d'un protocole réseau
-  Pour se connecter au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , un protocole réseau doit être activé. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut traiter les demandes sur plusieurs protocoles en même temps. Les clients se connectent à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec un seul protocole. Si le programme client ne connaît pas le protocole sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écoute, configurez le client pour qu'il essaie plusieurs protocoles en séquence. Le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous permet d'activer, de désactiver et de configurer des protocoles réseau.  
+  Pour se connecter au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , un protocole réseau doit être activé. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut traiter les demandes sur plusieurs protocoles à la fois. Les clients se connectent à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec un seul protocole. Si le programme client ne connaît pas le protocole sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écoute, configurez le client pour qu'il essaie plusieurs protocoles en séquence. Le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous permet d'activer, de désactiver et de configurer des protocoles réseau.  
   
 ## <a name="shared-memory"></a>Mémoire partagée  
  Il s'agit du protocole le plus simple à utiliser et pour lequel aucun paramètre ne doit être configuré. Étant donné que les clients qui utilisent le protocole de mémoire partagée peuvent se connecter uniquement à une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécutée sur le même ordinateur, il n'est pas utile pour la plupart des activités de base de données. Utilisez le protocole de mémoire partagée pour débloquer une situation dans laquelle vous suspectez que les autres protocoles ne sont pas configurés correctement.  
@@ -61,6 +61,6 @@ ms.locfileid: "63035281"
 ## <a name="enabling-the-protocol"></a>Activation du protocole  
  Pour pouvoir fonctionner, le protocole doit être activé sur le client et le serveur. Le serveur peut écouter les demandes simultanément sur tous les protocoles activés. Les ordinateurs clients peuvent en choisir un ou essayer d'utiliser les protocoles dans l'ordre dans lequel ils figurent dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Pour vous procurer un didacticiel sommaire sur la manière de configurer les protocoles et de vous connecter au [!INCLUDE[ssDE](../../includes/ssde-md.md)], consultez [Tutoriel : Bien démarrer avec le moteur de base de données](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
+ Pour vous procurer un didacticiel sommaire sur la manière de configurer les protocoles et de se connecter au [!INCLUDE[ssDE](../../includes/ssde-md.md)], consultez [Didacticiel : Mise en route du moteur de base de données](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
   
   

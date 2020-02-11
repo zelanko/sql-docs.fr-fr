@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_listextendedproperty (Transact-SQL) | Microsoft Docs
+title: sys. fn_listextendedproperty (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,19 +27,19 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9a2516d24b65e509ffc04c0f9979721ad6eefa22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68082715"
 ---
-# <a name="sysfnlistextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
+# <a name="sysfn_listextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retourne les valeurs de propriétés étendues d'objets de base de données.  
  
  
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -57,32 +57,32 @@ fn_listextendedproperty (
 ```  
   
 ## <a name="arguments"></a>Arguments  
- {par défaut | «*property_name*' | NULL}  
- Est le nom de la propriété. *property_name* est **sysname**. Les entrées autorisées sont les valeurs par défaut, NULL, ou un nom de propriété.  
+ {default | '*property_name*' | NUL  
+ Nom de la propriété. *property_name* est de **type sysname**. Les entrées autorisées sont les valeurs par défaut, NULL, ou un nom de propriété.  
   
- {par défaut | «*level0_object_type*' | NULL}  
- Type défini par l'utilisateur ou utilisateur. *level0_object_type* est **varchar (128)** , avec NULL comme valeur par défaut. Les entrées valides sont ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE, et NULL.  
+ {default | '*level0_object_type*' | NUL  
+ Type défini par l'utilisateur ou utilisateur. *level0_object_type* est de type **varchar (128)**, avec NULL comme valeur par défaut. Les entrées valides sont ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE, et NULL.  
   
 > [!IMPORTANT]  
 >  Les types de niveau 0 USER et TYPE seront éliminés dans une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ces fonctionnalités dans une nouvelle tâche de développement et prévoyez de modifier les applications qui les utilisent actuellement. À la place de USER, utilisez SCHEMA en tant que type de niveau 0. Pour TYPE, utilisez SCHEMA comme type de niveau 0 et TYPE comme type de niveau 1.  
   
- {par défaut | «*level0_object_name*' | NULL}  
- Nom du type d'objet de niveau 0 spécifié. *level0_object_name* est **sysname** avec NULL comme valeur par défaut. Les entrées autorisées sont les valeurs par défaut, NULL, ou un nom d'objet.  
+ {default | '*level0_object_name*' | NUL  
+ Nom du type d'objet de niveau 0 spécifié. *level0_object_name* est de **type sysname** , avec NULL comme valeur par défaut. Les entrées autorisées sont les valeurs par défaut, NULL, ou un nom d'objet.  
   
- {par défaut | «*level1_object_type*' | NULL}  
- Type d'objet de niveau 1. *level1_object_type* est **varchar (128)** avec NULL comme valeur par défaut. Les entrées valides sont AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TYPE, VIEW, XML SCHEMA COLLECTION et NULL.  
+ {default | '*level1_object_type*' | NUL  
+ Type d'objet de niveau 1. *level1_object_type* est de type **varchar (128)** avec NULL comme valeur par défaut. Les entrées valides sont AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TYPE, VIEW, XML SCHEMA COLLECTION et NULL.  
   
 > [!NOTE]  
 >  La valeur par défaut correspond à la valeur NULL, et la valeur 'default' est mappée sur le type d'objet DEFAULT.  
   
- {par défaut | «*level1_object_name*' | NULL}  
- Nom du type d'objet de niveau 1 spécifié. *level1_object_name* est **sysname** avec NULL comme valeur par défaut. Les entrées autorisées sont les valeurs par défaut, NULL, ou un nom d'objet.  
+ {default | '*level1_object_name*' | NUL  
+ Nom du type d'objet de niveau 1 spécifié. *level1_object_name* est de **type sysname** , avec NULL comme valeur par défaut. Les entrées autorisées sont les valeurs par défaut, NULL, ou un nom d'objet.  
   
- {par défaut | «*level2_object_type*' | NULL}  
- Type d'objet de niveau 2. *level2_object_type* est **varchar (128)** avec NULL comme valeur par défaut. Les entrées valides sont DEFAULT, la valeur par défaut (qui correspond à la valeur NULL) et NULL. Les entrées valides pour *level2_object_type* sont colonne contrainte, EVENT NOTIFICATION, INDEX, paramètre, TRIGGER et NULL.  
+ {default | '*level2_object_type*' | NUL  
+ Type d'objet de niveau 2. *level2_object_type* est de type **varchar (128)** avec NULL comme valeur par défaut. Les entrées valides sont DEFAULT, la valeur par défaut (qui correspond à la valeur NULL) et NULL. Les entrées valides pour *level2_object_type* sont Column, CONSTRAINT, Event notification, index, Parameter, Trigger et null.  
   
- {par défaut | «*level2_object_name*' | NULL}  
- Nom du type d'objet de niveau 2 spécifié. *level2_object_name* est **sysname** avec NULL comme valeur par défaut. Les entrées autorisées sont les valeurs par défaut, NULL, ou un nom d'objet.  
+ {default | '*level2_object_name*' | NUL  
+ Nom du type d'objet de niveau 2 spécifié. *level2_object_name* est de **type sysname** , avec NULL comme valeur par défaut. Les entrées autorisées sont les valeurs par défaut, NULL, ou un nom d'objet.  
   
 ## <a name="tables-returned"></a>Tables retournées  
  Le format des tables renvoyées par l'instruction fn_listextendedproperty est le suivant :  
@@ -92,18 +92,18 @@ fn_listextendedproperty (
 |objtype|**sysname**|  
 |objname|**sysname**|  
 |name|**sysname**|  
-|valeur|**sql_variant**|  
+|value|**sql_variant**|  
   
  Si la table renvoyée est vide, l'objet ne dispose pas de propriétés étendues, ou l'utilisateur n'est pas habilité à afficher la liste des propriétés étendues associées à cet objet. Lorsque les propriétés étendues de la base de données proprement dite sont retournées, les colonnes objtype et objname ont la valeur NULL.  
   
 ## <a name="remarks"></a>Notes  
- Si la valeur de *property_name* est NULL ou la valeur par défaut, fn_listextendedproperty retourne toutes les propriétés de l’objet spécifié.  
+ Si la valeur de *property_name* est null ou par défaut, fn_listextendedproperty retourne toutes les propriétés de l’objet spécifié.  
   
  Lorsque le type d'objet est spécifié et que la valeur du nom d'objet correspondant est NULL ou la valeur par défaut, fn_listextendedproperty retourne toutes les propriétés étendues de tous les objets du type spécifié.  
   
  Les objets se distinguent selon des niveaux : le niveau 0 étant le plus élevé et le niveau 2 le moins élevé. Si un type et un nom d'objet de niveau inférieur (niveau 1 ou 2) sont spécifiés, le type et le nom de l'objet parent ne doivent pas comporter la valeur NULL ou la valeur par défaut. Autrement, la fonction renvoie un jeu de résultats vide.  
   
- **objname** est résolu en tant que Latin1_General_CI_AI. Toutefois, vous pouvez contourner ce en substituant le classement dans la comparaison.  
+ **nomobj** est fixe en tant que Latin1_General_CI_AI. Toutefois, vous pouvez contourner ce problème en remplaçant le classement en comparaison.  
   
 ```  
 SELECT o.[object_id] AS 'table_id', o.[name] 'table_name',  
@@ -142,7 +142,7 @@ GO
  `(1 row(s) affected)`  
   
 ### <a name="b-displaying-extended-properties-on-all-columns-in-a-table"></a>B. Affichage des propriétés étendues de toutes les colonnes d'une table  
- L’exemple suivant répertorie les propriétés étendues pour les colonnes dans le `ScrapReason` table. Celle-ci est contenue dans le schéma `Production`.  
+ L’exemple suivant répertorie les propriétés étendues des `ScrapReason` colonnes de la table. Celle-ci est contenue dans le schéma `Production`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -167,7 +167,7 @@ GO
  `(3 row(s) affected)`  
   
 ### <a name="c-displaying-extended-properties-on-all-tables-in-a-schema"></a>C. Affichage des propriétés étendues de toutes les tables d'un schéma  
- L’exemple suivant répertorie les propriétés étendues de toutes les tables contenues dans le `Sales` schéma.  
+ L’exemple suivant répertorie des propriétés étendues pour toutes les `Sales` tables contenues dans le schéma.  
   
 ```  
 USE AdventureWorks2012;  
@@ -181,6 +181,6 @@ GO
  [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
- [Sys.extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
+ [sys. extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   

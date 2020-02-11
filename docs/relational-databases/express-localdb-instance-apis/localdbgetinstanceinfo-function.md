@@ -1,5 +1,5 @@
 ---
-title: Fonction LocalDBGetInstanceInfo | Microsoft Docs
+title: LocalDBGetInstanceInfo fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c10fcf4f0a57eef5e2f4f33d699c4ed7d4d350e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022084"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>Fonction LocalDBGetInstanceInfo
@@ -73,7 +73,7 @@ typedef struct _LocalDBInstanceInfo
   
 ```  
   
- **Fichier d'en-tête :** sqlncli.h  
+ **Fichier d’en-tête :** sqlncli. h  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -93,10 +93,10 @@ HRESULT LocalDBGetInstanceInfo(
  [Sortie] La mémoire tampon pour stocker des informations sur l'instance de LocalDB.  
   
  *dwInstanceInfoSize*  
- [Entrée] Contient la taille de la *InstanceInfo* mémoire tampon.  
+ Entrée Contient la taille de la mémoire tampon *InstanceInfo* .  
   
-## <a name="returns"></a>Valeur renvoyée  
- Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  
+## <a name="returns"></a>Retours  
+ S_OK  
  La fonction a réussi.  
   
  [LOCALDB_ERROR_NOT_INSTALLED](../../relational-databases/express-localdb-error-messages/localdb-error-not-installed.md)  
@@ -124,14 +124,14 @@ HRESULT LocalDBGetInstanceInfo(
  Une configuration d'instance est endommagée.  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
- Une erreur inattendue s'est produite. Pour plus d'informations, consultez le journal des événements.  
+ Une erreur inattendue s’est produite. Pour plus d'informations, consultez le journal des événements.  
   
 ## <a name="details"></a>Détails  
- Le raisonnement derrière l’introduction de la **struct** argument de taille (*lpInstanceInfoSize*) consiste à activer l’API doit retourner différentes versions de la **LocalDBInstanceInfostruct**, efficacement l’activation de compatibilité descendante et ascendante.  
+ Le raisonnement derrière l’introduction de l’argument de taille de **struct** (*lpInstanceInfoSize*) consiste à permettre à l’API de retourner différentes versions du **LocalDBInstanceInfostruct**, ce qui permet de garantir une compatibilité ascendante et descendante.  
   
- Si le **struct** argument de taille (*lpInstanceInfoSize*) correspond à la taille d’une version connue de la **LocalDBInstanceInfostruct**, cette version de la  **struct** est retourné. Sinon, LOCALDB_ERROR_INVALID_PARAMETER est retourné.  
+ Si l’argument de taille de **struct** (*lpInstanceInfoSize*) correspond à la taille d’une version connue du **LocalDBInstanceInfostruct**, cette version du **struct** est retournée. Sinon, LOCALDB_ERROR_INVALID_PARAMETER est retourné.  
   
- Un exemple typique de **LocalDBGetInstanceInfo** utilisation de l’API se présente comme suit :  
+ Voici un exemple typique d’utilisation de l’API **LocalDBGetInstanceInfo** :  
   
 ```  
 LocalDBInstanceInfo ii;  
@@ -142,6 +142,6 @@ LocalDBInstanceInfo(L"Test", &ii, sizeof(LocalDBInstanceInfo));
  Pour un exemple de code qui utilise l'API LocalDB, consultez [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [En-tête et informations de version de la base de données locale SQL Server Express](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
+ [En-tête et informations de version SQL Server Express LocalDB](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

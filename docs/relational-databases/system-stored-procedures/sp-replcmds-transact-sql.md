@@ -16,13 +16,13 @@ ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d60de0f459ec1224f6023e8ee848227fdc17ece
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771008"
 ---
-# <a name="spreplcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
+# <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Retourne les commandes pour les transactions signalées pour la réplication. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
@@ -30,7 +30,7 @@ ms.locfileid: "68771008"
 > [!IMPORTANT]  
 >  La procédure **sp_replcmds** doit être exécutée uniquement pour résoudre les problèmes de réplication.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,8 +48,8 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |-----------------|---------------|-----------------|  
 |**ID de l’article**|**int**|ID de l’article.|  
 |**partial_command**|**bit**|Indique s'il s'agit d'une commande partielle|  
-|**commande**|**varbinary(1024)**|La valeur de commande.|  
-|**xactid**|**binary(10)**|ID de la transaction.|  
+|**commande**|**varbinary (1024)**|La valeur de commande.|  
+|**xactid**|**binaire (10)**|ID de la transaction.|  
 |**xact_seqno**|**varbinary(16)**|Numéro de séquence de transaction.|  
 |**publication_id**|**int**|ID de la publication.|  
 |**command_id**|**int**|ID de la commande dans [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
@@ -71,9 +71,9 @@ sp_replcmds [ @maxtrans = ] maxtrans
 > [!NOTE]  
 >  Étant donné que le nom de table figurant dans la base de données source est qualifié par le nom du propriétaire, le propriétaire de la table dans la base de données cible doit porter le même nom de propriétaire.  
   
- Les clients qui tentent d’exécuter **sp_replcmds** au sein de la même base de données reçoivent l’erreur 18752 jusqu’à ce que le premier client se déconnecte. Une fois que le premier client se déconnecte, un autre client peut exécuter **sp_replcmds**et devient le nouveau lecteur de journal.  
+ Les clients qui tentent d’exécuter des **sp_replcmds** au sein de la même base de données reçoivent l’erreur 18752 jusqu’à ce que le premier client se déconnecte. Une fois que le premier client se déconnecte, un autre client peut exécuter **sp_replcmds**et devient le nouveau lecteur de journal.  
   
- Un message d’avertissement numéro 18759 est [!INCLUDE[msCoName](../../includes/msconame-md.md)] ajouté au [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] journal des erreurs et au [!INCLUDE[msCoName](../../includes/msconame-md.md)] journal des applications Windows si **sp_replcmds** ne parvient pas à répliquer une commande de texte parce que le pointeur de texte n’a pas été récupéré dans le même libellé.  
+ Un message d’avertissement numéro 18759 est [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajouté au journal des erreurs et au [!INCLUDE[msCoName](../../includes/msconame-md.md)] journal des applications Windows si **sp_replcmds** ne parvient pas à répliquer une commande de texte parce que le pointeur de texte n’a pas été récupéré dans la même transaction.  
   
 ## <a name="permissions"></a>Autorisations  
  Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_replcmds**.  

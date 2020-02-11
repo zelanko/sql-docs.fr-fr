@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c3d96670edc599a1f16456b862922dc6378b1362
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245154"
 ---
 # <a name="find-and-replace"></a>Rechercher et remplacer
-  Utilisez la boîte de dialogue **Rechercher et remplacer** pour rechercher du texte dans un fichier et le remplacer éventuellement. En fonction de la manière dont vous ouvrez la boîte de dialogue **Rechercher et remplacer** , vous pouvez accéder à plusieurs versions de cette même boîte de dialogue proposant des options légèrement différentes. Dans le menu **Edition** , pointez sur **Rechercher et remplacer**, puis cliquez sur **Recherche rapide** pour ouvrir la boîte de dialogue avec les options de recherche, mais sans les options de remplacement. Dans le menu **Edition** , pointez sur **Rechercher et remplacer**, puis cliquez sur **Remplacement rapide** pour ouvrir la boîte de dialogue avec les options de recherche et les options de remplacement.  
+  Utilisez la boîte de dialogue **Rechercher et remplacer** pour rechercher du texte dans un fichier et éventuellement le remplacer. En fonction de la manière dont vous ouvrez la boîte de dialogue **Rechercher et remplacer** , vous pouvez accéder à plusieurs versions de cette même boîte de dialogue proposant des options légèrement différentes. Dans le menu **Edition** , pointez sur **Rechercher et remplacer**, puis cliquez sur **Recherche rapide** pour ouvrir la boîte de dialogue avec les options de recherche, mais sans les options de remplacement. Dans le menu **Edition** , pointez sur **Rechercher et remplacer**, puis cliquez sur **Remplacement rapide** pour ouvrir la boîte de dialogue avec les options de recherche et les options de remplacement.  
   
  Vous pouvez également ouvrir la boîte de dialogue **Rechercher et remplacer** à l’aide de boutons de la barre d’outils et de touches de raccourci.  
   
@@ -30,10 +30,10 @@ ms.locfileid: "75245154"
  **Rechercher**  
  Tapez le texte à rechercher. La boîte de dialogue tente de fournir le texte recherché, à l'aide du texte sélectionné avec le curseur avant l'ouverture de la boîte de dialogue, d'un texte proche ou d'un texte qui a fait l'objet d'une recherche antérieure. Vous pouvez réutiliser une des 20 dernières chaînes de recherche en la sélectionnant dans cette liste déroulante.  
   
- **[chaîne avec caractères génériques]**  
+ **[chaînes contenant des caractères génériques]**  
  Si vous souhaitez inclure des caractères génériques tels que des astérisques (`*`) et des points d’interrogation (`?`) dans votre chaîne de recherche, cochez la case **Utiliser** sous **Options de recherche** , puis cliquez sur **Caractères génériques**.  
   
- **[Regular expression]**  
+ **[expression régulière]**  
  Pour forcer le moteur de recherche à interpréter votre chaîne de recherche comme une expression régulière, cochez la case **Utiliser** sous **Options de recherche** , puis cliquez sur **Expressions régulières**.  
   
  **Générateur d’expressions**  
@@ -42,38 +42,38 @@ ms.locfileid: "75245154"
 ## <a name="replace-with"></a>Remplacer par  
  Ces contrôles vous permettent de spécifier ce qui doit être inséré à la place de la chaîne ou de l'expression trouvée.  
   
- **Remplacer par**  
+ **Replace with**  
  Pour remplacer les instances de la chaîne spécifiée dans **Rechercher** par une autre chaîne, entrez la chaîne de remplacement dans ce champ. Pour supprimer les occurrences du texte spécifié dans **Rechercher**, laissez ce champ vide. Sélectionnez la liste déroulante afin d'afficher les 20 dernières entrées. Pour inclure des expressions régulières dans la chaîne spécifiée dans la zone **Remplacer par** , cochez la case **Utiliser** , puis cliquez sur **Expressions régulières**. Cette zone s’affiche uniquement si vous avez ouvert la boîte de dialogue en cliquant sur **Remplacement rapide**.  
   
- **Remplacer par**  
+ **Replace with**  
  Pour remplacer les occurrences de la chaîne spécifiée dans la zone **Rechercher** par une autre chaîne de caractères, tapez la chaîne de remplacement dans ce champ. Pour supprimer les occurrences de la chaîne spécifiée dans la zone **Rechercher** , laissez ce champ vide. Sélectionnez la liste déroulante afin d'afficher les 20 dernières entrées. Pour inclure des expressions régulières dans la chaîne spécifiée dans la zone **Remplacer par** , cochez la case **Utiliser** , puis cliquez sur **Expressions régulières**.  
   
  **Générateur d’expressions**  
  Ce bouton triangulaire placé à côté de la zone **Remplacer par** devient disponible quand la case **Utiliser** est cochée dans **Options de recherche**. Cliquez sur ce bouton pour afficher la liste des caractères génériques ou des expressions régulières, selon l’option **Utiliser** qui est sélectionnée. Cliquer sur un élément dans cette liste permet de l’ajouter à la chaîne spécifiée dans la zone **Remplacer par** .  
   
- **Lieu**  
+ **Replace**  
  Cliquez sur ce bouton pour remplacer l’occurrence en cours de la chaîne spécifiée dans la zone **Rechercher** par la chaîne spécifiée dans la zone **Remplacer par** et pour rechercher l’occurrence suivante à l’intérieur de la zone de recherche spécifiée dans **Regarder dans**.  
   
  **Remplacer tout**  
  Cliquez sur ce bouton pour remplacer toutes les occurrences de la chaîne spécifiée dans la zone **Rechercher** par la chaîne spécifiée dans la zone **Remplacer par** , dans tous les fichiers se trouvant dans la zone de recherche spécifiée dans la zone **Regarder dans** .  
   
 > [!CAUTION]  
->  Vérifiez que l’étendue définie dans **Regarder dans** inclut seulement les fichiers que vous souhaitez modifier.  
+>  Vérifiez que l’étendue définie dans **Rechercher dans** inclut seulement les fichiers que vous souhaitez modifier.  
   
- Un rappel avec une option **Conserver les fichiers modifiés ouverts** est affiché. Pour conserver l’option **Annuler** , vous devez sélectionner cette option. La **commande Annuler** est disponible uniquement dans les fichiers qui restent ouverts après avoir été modifiés.  
+ Un rappel avec une option **Conserver les fichiers modifiés ouverts** est affiché. Pour conserver l’option **Annuler** , vous devez sélectionner cette option. L’option**Annuler** est disponible uniquement dans les fichiers qui restent ouverts après avoir été modifiés.  
   
  **Ignorer le fichier**  
- Ce bouton est activé lorsque la valeur spécifiée pour **Regarder dans** inclut plusieurs fichiers. Cliquez sur ce bouton si vous ne voulez pas inspecter ni modifier le fichier actif. La recherche continue dans le fichier suivant de la liste **Regarder dans**.  
+ Ce bouton est activé lorsque la valeur spécifiée pour **Regarder dans** inclut plusieurs fichiers. Cliquez sur ce bouton si vous ne voulez pas inspecter ni modifier le fichier en cours. La recherche continue dans le fichier suivant de la liste **Regarder dans**.  
   
 ## <a name="look-in"></a>Regarder dans  
- **Regarder dans**  
+ **Look in**  
  Sélectionnez l’emplacement dans lequel vous souhaitez rechercher le texte spécifié dans **Rechercher**. Les options disponibles incluent **Document actif**, qui permet d’effectuer la recherche dans la fenêtre de document qui était active au moment de l’ouverture de la boîte de dialogue, et **Tous les documents ouverts**, qui permet d’effectuer la recherche dans toutes les fenêtres qui sont actuellement ouvertes dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="find-options"></a>Options de recherche  
  Vous pouvez développer ou réduire la section **Options de recherche** . Les options ci-après peuvent être activées ou désactivées.  
   
  **Respecter la casse**  
- Quand cette case est cochée, les fenêtres de résultats de la recherche n’affichent que les instances de la chaîne spécifiée dans **Rechercher** qui concordent avec le contenu et la casse. Par exemple, la recherche de «**MyObject**» avec la case à cocher **respecter la casse** activée retourne « MyObject », mais pas « MYOBJECT » ou « MyObject ».  
+ Quand cette case est cochée, les fenêtres de résultats de la recherche n’affichent que les instances de la chaîne spécifiée dans **Rechercher** qui concordent avec le contenu et la casse. Par exemple, si vous recherchez «**MonObjet**» en cochant la case **Respecter la casse** , la recherche va retourner « MonObjet », mais pas « monobjet » ni « MONOBJET».  
   
  **Mot entier**  
  Quand cette case est cochée, les fenêtres de résultats de la recherche n’affichent que les instances de la chaîne spécifiée dans **Rechercher** qui concordent avec les mots entiers. Si vous recherchez **MonObjet** , par exemple, « MonObject » est retourné comme résultat, mais pas « CMonObjet » ou « MonObjetC ».  
@@ -84,26 +84,26 @@ ms.locfileid: "75245154"
  **Rechercher le texte masqué**  
  Recherchez les occurrences dans le texte qui est masqué ou réduit.  
   
- **Faites**  
+ **Utilisation**  
  Indique comment interpréter les caractères spéciaux qui sont entrés dans les zones de texte **Rechercher** et **Remplacer par** . Les options comprennent **Caractères génériques** et **Expressions régulières**.  
   
- **Expressions régulières**  
+ **Regular Expressions**  
  Des notations spéciales définissent des modèles de texte pour les concordances. Pour obtenir la liste, consultez [Rechercher du texte avec des expressions régulières](search-text-with-regular-expressions.md).  
   
- **Les caractères génériques**  
+ **Caractères génériques**  
  Les caractères spéciaux tels que les astérisques (`*`) et les points d'interrogation (`?`) représentent un ou plusieurs caractères. Pour obtenir la liste, consultez [Rechercher du texte avec des caractères génériques](search-text-with-wildcards.md).  
   
- **Rechercher suivant**  
+ **Suivant**  
  Commence à rechercher le texte spécifié dans la zone **Rechercher** .  
   
- **Lieu**  
+ **Replace**  
  Cliquez sur ce bouton pour remplacer l’occurrence en cours de la chaîne spécifiée dans **Rechercher** par la chaîne spécifiée dans **Remplacer par**et pour rechercher l’occurrence suivante à l’intérieur de la zone de recherche spécifiée dans **Regarder dans**.  
   
- **Remplacer tout**  
+ **Replace All**  
  Cliquez sur ce bouton pour remplacer toutes les occurrences de la chaîne spécifiée dans **Rechercher** par la chaîne spécifiée dans **Remplacer par**, dans tous les fichiers se trouvant dans la zone de recherche spécifiée dans **Regarder dans**.  
   
 > [!CAUTION]  
->  Vérifiez que l’étendue définie dans **Regarder dans** inclut seulement les fichiers que vous souhaitez modifier.  
+>  Vérifiez que l’étendue définie dans **Rechercher dans** inclut seulement les fichiers que vous souhaitez modifier.  
   
 ## <a name="find-and-replace-views"></a>Vues Rechercher et remplacer  
  Les onglets situés en haut de la fenêtre Rechercher et remplacer comprennent les menus **Affichage** . Ces menus vous permettent de choisir un ensemble de champs à afficher dans le volet actif. Vous pouvez laisser la fenêtre **Rechercher et remplacer** ancrée à un endroit qui vous convient, puis basculer d’un onglet à l’autre et d’une vue à l’autre pour exécuter tout type d’opération de recherche ou de remplacement.  
@@ -121,4 +121,4 @@ ms.locfileid: "75245154"
  Cet onglet de barre d’outils remplace la boîte de dialogue par celle intitulée **Remplacer dans les fichiers** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Raccourcis clavier SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [Raccourcis clavier dans SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

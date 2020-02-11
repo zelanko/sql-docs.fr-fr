@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 45d4cd390e0369d8289ed9e58de01b7a02f752c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196755"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Contraintes de clé primaire et de clé étrangère
@@ -29,11 +29,11 @@ ms.locfileid: "68196755"
   
  [Contraintes de clé primaire](../tables/primary-and-foreign-key-constraints.md#PKeys)  
   
- [Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md#FKeys)  
+ [Contraintes de clé étrangère](../tables/primary-and-foreign-key-constraints.md#FKeys)  
   
  [Tâches associées](../tables/primary-and-foreign-key-constraints.md#Tasks)  
   
-##  <a name="PKeys"></a> Contraintes de clé primaire  
+##  <a name="PKeys"></a>Contraintes de clé primaire  
  Une table contient généralement une colonne ou une combinaison de colonnes dont les valeurs identifient de façon unique chaque ligne dans la table. Cette colonne (ou ces colonnes), appelée clé primaire (PK, Primary Key), assure l'intégrité de l'entité de la table. Les contraintes de clé primaire garantissent des données uniques, c'est pourquoi elles sont souvent définies pour une colonne d'identité.  
   
  Lorsque vous spécifiez une contrainte de clé primaire pour une table, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] garantit l'unicité des données en créant automatiquement un index unique pour les colonnes de clé primaire. Cet index permet également l'accès rapide aux données lorsque la clé primaire est utilisée dans des requêtes. Si une contrainte de clé primaire est définie sur plusieurs colonnes, des valeurs peuvent apparaître en double dans une colonne, mais chaque combinaison de valeurs issues de toutes les colonnes de la définition de contrainte de clé primaire doit être unique.  
@@ -54,7 +54,7 @@ ms.locfileid: "68196755"
   
 -   Si une clé primaire est définie sur une colonne avec le type de données CLR défini par l'utilisateur, l'implémentation du type doit prendre en charge le tri binaire.  
   
-##  <a name="FKeys"></a> Foreign Key Constraints  
+##  <a name="FKeys"></a>Contraintes de clé étrangère  
  On appelle « clé étrangère » une colonne ou une combinaison de colonnes utilisée pour établir et conserver une liaison entre les données de deux tables pour contrôler les données qui peuvent être stockées dans la table de clés étrangères. Dans une référence de clé étrangère, la création d'une liaison entre deux tables s'effectue lors du référencement de la ou des colonnes contenant les valeurs de clé primaire d'une table dans la ou les colonnes de l'autre table. Cette colonne devient alors une clé étrangère dans la seconde table.  
   
  Par exemple, la table **Sales.SalesOrderHeader** possède une liaison de clé étrangère avec la table **Sales.SalesPerson** car il existe une relation logique entre les commandes et les vendeurs. La colonne **SalesPersonID** de la table **SalesOrderHeader** correspond à la colonne clé primaire de la table **SalesPerson** . La colonne **SalesPersonID** de la table **SalesOrderHeader** est donc la clé étrangère de la table **SalesPerson** . Lors de la création de cette relation de clé étrangère, une valeur pour **SalesPersonID** ne peut pas être insérée dans la table **SalesOrderHeader** si elle n'existe pas déjà dans la table **SalesPerson** .  
@@ -115,7 +115,7 @@ ms.locfileid: "68196755"
 |Décrit comment créer une clé primaire.|[Créer des clés primaires](../tables/create-primary-keys.md)|  
 |Décrit comment supprimer une clé primaire.|[Supprimer des clés primaires](../tables/delete-primary-keys.md)|  
 |Explique comment modifier une clé primaire.|[Modifier des clés primaires](../tables/modify-primary-keys.md)|  
-|Explique comment créer des relations de clé étrangère|[Créer les relations entre les clés étrangères](../tables/create-foreign-key-relationships.md)|  
+|Explique comment créer des relations de clé étrangère|[Créer des relations de clé étrangère](../tables/create-foreign-key-relationships.md)|  
 |Décrit comment modifier les relations de clé étrangère.|[Modifier des relations de clé étrangère](../tables/modify-foreign-key-relationships.md)|  
 |Décrit comment supprimer des relations de clé étrangère.|[Supprimer les relations entre les clés étrangères](../tables/delete-foreign-key-relationships.md)|  
 |Décrit comment afficher les propriétés de clé étrangère.|[Afficher les propriétés de clés étrangères](../tables/view-foreign-key-properties.md)|  

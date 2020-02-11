@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: c4079ea4213d7ecbec0165c32c82b3449bbb5aee
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952510"
 ---
 # <a name="domain-accounts-required-for-sharepoint-farm-upgrade-advisor"></a>Comptes de domaine requis pour la batterie de serveurs SharePoint (Conseiller de mise à niveau)
@@ -22,7 +22,7 @@ ms.locfileid: "71952510"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mode SharePoint.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Mode SharePoint.|  
   
 ## <a name="component"></a>Composant  
  [!INCLUDE[ssRS](../../includes/ssrs.md)]  
@@ -35,7 +35,7 @@ ms.locfileid: "71952510"
  « Le serveur de rapports s'exécute sous le compte NT AUTHORITY\NETWORK SERVICE intégré, qui n'est pas pris en charge par les batteries de serveurs SharePoint. Reconfigurez le serveur de rapports pour qu’il s’exécute sous un compte de domaine.»  
   
 ## <a name="corrective-action"></a>Action corrective  
- Pour [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et les versions précédentes, utilisez le Gestionnaire de configuration de Reporting Services pour modifier le compte qui est affecté en tant que compte de service Report Server.  
+ Pour [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et les versions précédentes, utilisez la gestionnaire de configuration de Reporting Services pour modifier le compte qui est affecté en tant que compte de service Report Server.  
   
 #### <a name="to-change-the-service-account-from-configuration-manager"></a>Pour modifier le compte de service à partir du Gestionnaire de configuration  
   

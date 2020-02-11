@@ -18,18 +18,18 @@ ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 844e96d765f9ed06f88b140b906b78eb4ea16ea0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997434"
 ---
-# <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
+# <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fournit des informations sur un serveur distant, sur un serveur de réplication particulier ou sur tous les serveurs des deux types. Fournit le nom du serveur, le nom réseau du serveur, l'état de réplication du serveur, le numéro d'identification du serveur et le nom du classement. Fournit également les valeurs des délais d'expiration pour les connexions ou les requêtes des serveurs liés.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,37 +41,37 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @server = ] 'server'` Est le serveur sur lequel les informations sont signalées. Lorsque *server* n’est pas spécifié, des rapports sur tous les serveurs de **master.sys.servers**. *serveur* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @server = ] 'server'`Est le serveur sur lequel les informations sont signalées. Si le *serveur* n’est pas spécifié, génère des rapports sur tous les serveurs dans **Master. sys. Servers**. *Server* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @optname = ] 'option'` Est l’option qui décrit le serveur. *option* est **varchar (** 35 **)** , avec NULL comme valeur par défaut et doit être une des valeurs suivantes.  
+`[ @optname = ] 'option'`Est l’option qui décrit le serveur. l' *option* est de type **varchar (** 35 **)**, avec NULL comme valeur par défaut et doit prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**compatible avec le classement**|Affecte l'exécution des requêtes distribuées sur les serveurs liés. Si cette option a la valeur true,|  
+|**compatibilité du classement**|Affecte l'exécution des requêtes distribuées sur les serveurs liés. Si cette option a la valeur true,|  
 |**accès aux données**|Active ou désactive un serveur lié pour l'accès des requêtes distribuées.|  
-|**dist**|Serveur de distribution.|  
+|**dist**|Serveur de distribution|  
 |**dpub**|Serveur de publication distant de ce serveur de distribution.|  
-|**validation de schéma différée**|La vérification du schéma des tables distantes est ignorée au début de la requête.|  
-|**pub**|Serveur de publication.|  
+|**lazy schema validation**|La vérification du schéma des tables distantes est ignorée au début de la requête.|  
+|**pub**|Publication.|  
 |**rpc**|Active l'appel de procédure à distance (RPC) à partir du serveur spécifié.|  
 |**sortie RPC**|Active l'appel de procédure à distance (RPC) à destination du serveur spécifié.|  
-|**sub**|Abonné.|  
-|**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**indice**|Côté.|  
+|**requise**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**utiliser le classement distant**|Le classement d'une colonne distante est utilisé à la place de celui du serveur local.|  
   
-`[ @show_topology = ] 'show_topology'` Est la relation entre le serveur spécifié à d’autres serveurs. *afficher_la_topologie* est **varchar (** 1 **)** , avec NULL comme valeur par défaut. Si *afficher_la_topologie* n’est pas égal à **t** ou est NULL, **sp_helpserver** renvoie les colonnes figurant dans la section jeux de résultats. Si *afficher_la_topologie* est égal à **t**, outre les colonnes répertoriées dans les jeux de résultats, **sp_helpserver** retourne également **topy** et **topy** plus d’informations.  
+`[ @show_topology = ] 'show_topology'`Relation entre le serveur spécifié et d’autres serveurs. *show_topology* est de type **varchar (** 1 **)**, avec NULL comme valeur par défaut. Si *show_topology* n’est pas égal à **t** ou a la valeur null, **sp_helpserver** retourne les colonnes listées dans la section ensembles de résultats. Si *show_topology* est égal à **t**, en plus des colonnes listées dans les jeux de résultats, **sp_helpserver** retourne également les informations **topx** et **Topy** .  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (succès) ou 1 (échec).  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Nom du serveur.|  
+|**nomme**|**sysname**|Nom du serveur.|  
 |**network_name**|**sysname**|Nom réseau du serveur.|  
-|**status**|**varchar(** 70 **)**|État du serveur.|  
-|**id**|**char(** 4 **)**|Numéro d'identification du serveur.|  
+|**statu**|**varchar (** 70 **)**|État du serveur.|  
+|**identifi**|**char (** 4 **)**|Numéro d'identification du serveur.|  
 |**collation_name**|**sysname**|Classement du serveur.|  
 |**connect_timeout**|**int**|Valeur du délai d'expiration de la connexion au serveur lié.|  
 |**query_timeout**|**int**|Valeur du délai d'expiration des requêtes sur le serveur lié.|  
@@ -80,7 +80,7 @@ sp_helpserver [ [ @server = ] 'server' ]
  Un même serveur peut avoir plusieurs états.  
   
 ## <a name="permissions"></a>Autorisations  
- Sans les autorisations sont vérifiées.  
+ Aucune autorisation n’est vérifiée.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -103,7 +103,7 @@ EXEC sp_helpserver 'SEATTLE2';
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées du moteur de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   

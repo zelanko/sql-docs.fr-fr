@@ -1,5 +1,5 @@
 ---
-title: Exemple de Code de bibliothèque de curseurs | Microsoft Docs
+title: Exemple de code de la bibliothèque de curseurs | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4d985786e4743b8bcc691cf6888c24153f5cb5f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019072"
 ---
 # <a name="cursor-library-code-example"></a>Exemple de code de la bibliothèque de curseurs
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans tout nouveau développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande d’utiliser les fonctionnalités de curseur du pilote.  
+>  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande l’utilisation de la fonctionnalité de curseur du pilote.  
   
- L’exemple suivant utilise la bibliothèque de curseurs pour récupérer les ID de chaque commande, ouvrez date et état de la table ORDERS. Il affiche ensuite les 20 lignes de données. Si l’utilisateur met à jour ces données, le code met à jour les mémoires tampons d’ensemble de lignes et exécute une instruction de mise à jour positionnée. Enfin, il invite l’utilisateur pour la direction pour faire défiler et répète le processus.  
+ L’exemple suivant utilise la bibliothèque de curseurs pour récupérer l’ID de chaque commande, la date d’ouverture et l’état de la table ORDERs. Il affiche ensuite 20 lignes de données. Si l’utilisateur met à jour ces données, le code met à jour les mémoires tampons de l’ensemble de lignes et exécute une instruction Update positionnée. Enfin, il invite l’utilisateur à indiquer la direction de défilement et répète le processus.  
   
 ```  
 #define ROWS 20  

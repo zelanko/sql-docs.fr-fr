@@ -15,29 +15,29 @@ ms.assetid: 037afe23-052d-4f3a-8aa7-45302b199ad0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 597142d41ed8d3cff26891dfdcc89398543dab43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68103819"
 ---
 # <a name="binding-arrays-of-parameters"></a>Liaison de tableaux de paramètres
-Les applications qui utilisent des tableaux de paramètres lier les tableaux aux paramètres dans l’instruction SQL. Il existe deux styles de liaison :  
+Les applications qui utilisent des tableaux de paramètres lient les tableaux aux paramètres dans l’instruction SQL. Il existe deux styles de liaison :  
   
--   Lier un tableau à chaque paramètre. Chaque structure de données (tableau) contient toutes les données pour un seul paramètre. Il s’agit *la liaison* car elle est liée à une colonne de valeurs pour un seul paramètre.  
+-   Liez un tableau à chaque paramètre. Chaque structure de données (tableau) contient toutes les données d’un seul paramètre. C’est ce que l’on appelle une liaison selon les *colonnes* , car elle lie une colonne de valeurs pour un paramètre unique.  
   
--   Définir une structure pour contenir les données de paramètre pour un ensemble de paramètres et de lier un tableau de ces structures. Chaque structure de données contient les données pour une instruction SQL unique. Il s’agit *la liaison* car elle est liée à une ligne de paramètres.  
+-   Définissez une structure qui contiendra les données de paramètre pour un ensemble complet de paramètres et liez un tableau de ces structures. Chaque structure de données contient les données d’une instruction SQL unique. C’est ce que l’on appelle une *liaison selon les lignes* , car elle lie une ligne de paramètres.  
   
- Comme lors de l’application lie les variables uniques à des paramètres, il appelle **SQLBindParameter** pour lier les tableaux de paramètres. La seule différence est que les adresses transmises sont des adresses de tableau, les adresses non unique-variable. L’application définit l’attribut d’instruction SQL_ATTR_PARAM_BIND_TYPE pour spécifier s’il s’agit de l’utilisation d’après les colonnes (la valeur par défaut) ou la liaison. S’il faut utiliser la liaison selon les colonnes ou d’après les lignes est en grande partie une question de préférence de l’application. Selon la façon dont le processeur accède à la mémoire, la liaison peut être plus rapide. Toutefois, la différence est susceptible d’être négligeable à l’exception de très grand nombre de lignes de paramètres.  
+ Comme lorsque l’application lie des variables uniques à des paramètres, elle appelle **SQLBindParameter** pour lier des tableaux aux paramètres. La seule différence est que les adresses transmises sont des adresses de tableau, et non des adresses à une seule variable. L’application définit l’attribut d’instruction SQL_ATTR_PARAM_BIND_TYPE pour spécifier s’il utilise la liaison basée sur les colonnes (valeur par défaut) ou la liaison selon les lignes. L’utilisation de la liaison selon les colonnes ou les lignes dépend principalement des préférences de l’application. Selon la façon dont le processeur accède à la mémoire, la liaison selon les lignes peut être plus rapide. Toutefois, la différence est susceptible d’être négligeable, à l’exception du très grand nombre de lignes de paramètres.  
   
 ## <a name="column-wise-binding"></a>Liaison selon les colonnes  
- Lorsque vous utilisez la liaison, une application lie un ou deux tableaux pour chaque paramètre pour lequel les données doivent être fournies. Le premier tableau conserve les valeurs de données, et le deuxième tableau conserve les mémoires tampons de longueur / d’indicateur. Chaque tableau contient autant d’éléments qu’il sont a les valeurs pour le paramètre.  
+ Lors de l’utilisation d’une liaison selon les colonnes, une application lie un ou deux tableaux à chaque paramètre pour lequel des données doivent être fournies. Le premier tableau contient les valeurs de données, tandis que le second tableau contient des mémoires tampons de longueur/indicateur. Chaque tableau contient autant d’éléments qu’il y a de valeurs pour le paramètre.  
   
- La liaison est la valeur par défaut. L’application également peut modifier à partir de la liaison à la liaison en définissant l’attribut d’instruction SQL_ATTR_PARAM_BIND_TYPE. L’illustration suivante montre comment la liaison fonctionne.  
+ La liaison selon les colonnes est la valeur par défaut. L’application peut également passer d’une liaison par ligne à une liaison selon les colonnes en définissant l’attribut d’instruction SQL_ATTR_PARAM_BIND_TYPE. L’illustration suivante montre le fonctionnement de la liaison selon les colonnes.  
   
- ![Montre comment colonne&#45;préférable de liaison fonctionne](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
+ ![Illustre le fonctionnement de la liaison de colonne&#45;Wise](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
   
- Par exemple, le code suivant lie des tableaux de 10 éléments à des paramètres pour les colonnes PartID, Description et prix et exécute une instruction pour insérer des lignes de 10. Il utilise la liaison.  
+ Par exemple, le code suivant lie les tableaux à 10 éléments aux paramètres des colonnes PartId, description et Price, puis exécute une instruction pour insérer 10 lignes. Il utilise la liaison selon les colonnes.  
   
 ```  
 #define DESC_LEN 51  
@@ -118,19 +118,19 @@ for (i = 0; i < ParamsProcessed; i++) {
 ```  
   
 ## <a name="row-wise-binding"></a>Liaison selon les lignes  
- Lorsque vous utilisez la liaison, une application définit une structure pour chaque jeu de paramètres. La structure contient un ou deux éléments pour chaque paramètre. Le premier élément conserve la valeur du paramètre, et le deuxième élément conserve la mémoire tampon de longueur / d’indicateur. L’application puis alloue un tableau de ces structures, qui contient autant d’éléments qu’il sont a les valeurs pour chaque paramètre.  
+ Lors de l’utilisation d’une liaison selon les lignes, une application définit une structure pour chaque ensemble de paramètres. La structure contient un ou deux éléments pour chaque paramètre. Le premier élément contient la valeur de paramètre et le deuxième élément contient la mémoire tampon de longueur/d’indicateur. L’application alloue ensuite un tableau de ces structures, qui contient autant d’éléments qu’il y a de valeurs pour chaque paramètre.  
   
- L’application déclare la taille de la structure du pilote avec l’attribut d’instruction SQL_ATTR_PARAM_BIND_TYPE. L’application lie les adresses des paramètres dans la première structure du tableau. Par conséquent, le pilote peut calculer l’adresse des données pour une ligne particulière et une colonne en tant que  
+ L’application déclare la taille de la structure au pilote à l’aide de l’attribut d’instruction SQL_ATTR_PARAM_BIND_TYPE. L’application lie les adresses des paramètres dans la première structure du tableau. Ainsi, le pilote peut calculer l’adresse des données pour une ligne et une colonne particulières en tant que  
   
 ```  
 Address = Bound Address + ((Row Number - 1) * Structure Size) + Offset  
 ```  
   
- où les lignes sont numérotées de 1 à la taille de l’ensemble de paramètres. Le décalage, s’il est défini, est la valeur indiquée par l’attribut d’instruction SQL_ATTR_PARAM_BIND_OFFSET_PTR. L’illustration suivante montre comment la liaison fonctionne. Les paramètres peuvent être placés dans la structure dans n’importe quel ordre, mais sont affichés dans l’ordre séquentiel par souci de clarté.  
+ où les lignes sont numérotées de 1 à la taille du jeu de paramètres. Le décalage, s’il est défini, est la valeur vers laquelle pointe l’attribut d’instruction SQL_ATTR_PARAM_BIND_OFFSET_PTR. L’illustration suivante montre le fonctionnement de la liaison selon les lignes. Les paramètres peuvent être placés dans la structure dans n’importe quel ordre, mais ils sont affichés dans l’ordre séquentiel pour plus de clarté.  
   
- ![Montre comment ligne&#45;préférable de liaison fonctionne](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
+ ![Illustre le fonctionnement de la liaison de ligne&#45;Wise](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
   
- Le code suivant crée une structure avec des éléments pour les valeurs à stocker dans les colonnes PartID, Description et prix. Ensuite, il alloue un tableau de 10 éléments de ces structures et est liée aux paramètres pour les colonnes PartID, Description et prix, à l’aide de la liaison. Ensuite, il exécute une instruction pour insérer des lignes de 10.  
+ Le code suivant crée une structure avec des éléments pour les valeurs à stocker dans les colonnes PartId, description et Price. Il alloue ensuite un tableau de 10 éléments de ces structures et le lie aux paramètres des colonnes PartId, description et Price, à l’aide d’une liaison selon les lignes. Il exécute ensuite une instruction pour insérer 10 lignes.  
   
 ```  
 #define DESC_LEN 51  

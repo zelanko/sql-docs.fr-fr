@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_generate_wrapper_function (Transact-SQL) | Microsoft Docs
+title: sys. sp_cdc_generate_wrapper_function (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 074e114f81db6615a04240f10447a3f711a51cf7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083756"
 ---
-# <a name="sysspcdcgeneratewrapperfunction-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
+# <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Génère des scripts qui permettent de créer des fonctions wrapper pour les fonctions de requête de capture de données modifiées disponibles dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'API prise en charge dans les wrappers générés permet de spécifier l'intervalle de requête en tant qu'intervalle datetime. La fonction peut ainsi être utilisée dans de nombreuses applications d'entreposage, y compris celles que développent les concepteurs de packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui utilisent la technologie de capture de données modifiées pour déterminer la charge incrémentielle.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,26 +50,26 @@ sys.sp_cdc_generate_wrapper_function
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @capture_instance=] '*capture_instance*'  
- Instance de capture pour laquelle les scripts seront générés. *capture_instance* est **sysname** et a la valeur NULL comme valeur par défaut. Si une valeur est omise ou définie explicitement sur NULL, des scripts wrapper sont générés pour toutes les instances de capture.  
+ [ @capture_instance= ] '*capture_instance*'  
+ Instance de capture pour laquelle les scripts seront générés. *capture_instance* est de **type sysname** et sa valeur par défaut est null. Si une valeur est omise ou définie explicitement sur NULL, des scripts wrapper sont générés pour toutes les instances de capture.  
   
- [ @closed_high_end_point=] *high_end_pt_flag*  
- Bit indicateur ; indique si les modifications dont l'heure de validation est égale au point de terminaison supérieur doivent être incluses dans l'intervalle d'extraction par la procédure générée. *high_end_pt_flag* est **bits** et a la valeur par défaut 1, ce qui indique que le point de terminaison doit être inclus. La valeur 0 indique que toutes les heures de validation seront strictement inférieures au point de terminaison supérieur.  
+ [ @closed_high_end_point= ] *high_end_pt_flag*  
+ Bit indicateur ; indique si les modifications dont l'heure de validation est égale au point de terminaison supérieur doivent être incluses dans l'intervalle d'extraction par la procédure générée. *high_end_pt_flag* est de **bits** et a une valeur par défaut de 1, qui indique que le point de terminaison doit être inclus. La valeur 0 indique que toutes les heures de validation seront strictement inférieures au point de terminaison supérieur.  
   
- [ @column_list=] '*column_list*'  
- Liste de colonnes capturées à inclure dans le jeu de résultats retourné par la fonction wrapper. *column_list* est **nvarchar (max)** et a la valeur NULL comme valeur par défaut. Lorsque la valeur NULL est spécifiée, toutes les colonnes capturées sont incluses.  
+ [ @column_list= ] '*column_list*'  
+ Liste de colonnes capturées à inclure dans le jeu de résultats retourné par la fonction wrapper. *column_list* est de type **nvarchar (max)** et sa valeur par défaut est null. Lorsque la valeur NULL est spécifiée, toutes les colonnes capturées sont incluses.  
   
- [ @update_flag_list=] '*update_flag_list*'  
- Liste de colonnes incluses pour lesquelles un indicateur de mise à jour est inclus dans le jeu de résultats retourné par la fonction wrapper. *update_flag_list* est **nvarchar (max)** et a la valeur NULL comme valeur par défaut. Lorsque la valeur NULL est spécifiée, aucun indicateur de mise à jour n'est inclus.  
+ [ @update_flag_list= ] '*update_flag_list*'  
+ Liste de colonnes incluses pour lesquelles un indicateur de mise à jour est inclus dans le jeu de résultats retourné par la fonction wrapper. *update_flag_list* est de type **nvarchar (max)** et sa valeur par défaut est null. Lorsque la valeur NULL est spécifiée, aucun indicateur de mise à jour n'est inclus.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
 |Nom de la colonne|Type de colonne|Description|  
 |-----------------|-----------------|-----------------|  
-|**function_name**|**nvarchar(145)**|Nom de la fonction générée.|  
+|**function_name**|**nvarchar (145)**|Nom de la fonction générée.|  
 |**create_script**|**nvarchar(max)**|Script qui crée la fonction wrapper de l'instance de capture.|  
   
 ## <a name="remarks"></a>Notes  
@@ -105,6 +105,6 @@ DEALLOCATE #hfunctions;
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de capture des données modifiées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
- [Capture de données modifiées &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)  
+ [Capture de données modifiées &#40;&#41;SSIS](../../integration-services/change-data-capture/change-data-capture-ssis.md)  
   
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf8f57f65281ad0c7ee2b603e5e35d0f22fb6783
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63065517"
 ---
 # <a name="work-with-diagram-layout-visual-database-tools"></a>Utiliser une disposition de schémas (Visual Database Tools)
@@ -35,9 +35,9 @@ ms.locfileid: "63065517"
   
  [Modifier la couleur de police, la taille et le style dans les schémas &#40;Visual Database Tools&#41;](change-the-font-color-size-and-style-in-diagrams-visual-database-tools.md)  
   
-## <a name="reference"></a>Référence  
+## <a name="reference"></a>Informations de référence  
   
 ## <a name="related-sections"></a>Sections connexes  
- [Utiliser des schémas de base de données &#40;Visual Database Tools&#41;](work-with-database-diagrams-visual-database-tools.md)  
+ [Utiliser des diagrammes de base de données &#40;Visual Database Tools&#41;](work-with-database-diagrams-visual-database-tools.md)  
   
   

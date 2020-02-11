@@ -1,5 +1,5 @@
 ---
-title: Connexion (ADO - syntaxe WFC) | Microsoft Docs
+title: Connection (ADO-syntaxe WFC) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 64647d577170a79b1f600b7162a0338ea19c572e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919534"
 ---
 # <a name="connection-ado---wfc-syntax"></a>Connection (ADO - syntaxe WFC)
-## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>package com. ms. wfc. Data  
   
 ### <a name="constructor"></a>Constructeur  
   
@@ -44,7 +44,7 @@ public int executeUpdate(String commandText)
 public int executeUpdate(String commandText, int options)  
 ```  
   
- Le **executeUpdate** méthode est une méthode spéciale qui appelle le ADO sous-jacent **exécuter** méthode avec certains paramètres. Le **executeUpdate** méthode ne prend pas en charge le retour d’un **Recordset** objet, donc le **exécuter** la méthode *options* paramètre est modifié avec **AdoEnums.ExecuteOptions.NORECORDS**. Après le **exécuter** méthode se termine, sa mise à jour *RecordsAffected* paramètre est passé à la **executeUpdate** (méthode), qui retourne finalement un **int**.  
+ La méthode **executeUpdate** est une méthode spéciale qui appelle la méthode ADO **Execute** sous-jacente avec certains paramètres. La méthode **executeUpdate** ne prend pas en charge le retour d’un objet Recordset, donc le paramètre *options* de la méthode **Execute** est modifié avec **AdoEnums. ExecuteOptions.** **NORECORDS** . Une fois la méthode **Execute** terminée, son paramètre *RecordsAffected* mis à jour est passé à la méthode **executeUpdate** , qui est enfin retourné comme **int**.  
   
 ```  
 public void open()   
@@ -58,7 +58,7 @@ public Recordset openSchema(int schema)
 public Recordset openSchema(int schema, Object[] restrictions)  
 ```  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>Propriétés  
   
 ```  
 public int getAttributes()  
@@ -85,7 +85,7 @@ public AdoProperties getProperties()
 public com.ms.wfc.data.Errors getErrors()  
 ```  
   
-### <a name="events"></a>Events  
+### <a name="events"></a>Événements  
  Pour plus d’informations sur les événements ADO/WFC, consultez [instanciation des événements ADO par langage](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
   
 ```  
@@ -110,4 +110,4 @@ public void removeOnWillExecute(ConnectionEventHandler handler)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Connection, objet (ADO MD)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

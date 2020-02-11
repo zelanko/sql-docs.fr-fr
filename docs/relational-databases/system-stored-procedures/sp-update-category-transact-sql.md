@@ -18,18 +18,18 @@ ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3ebee467890e26aa58171690f5fdabaef3607ee1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68084924"
 ---
-# <a name="spupdatecategory-transact-sql"></a>sp_update_category (Transact-SQL)
+# <a name="sp_update_category-transact-sql"></a>sp_update_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Modifie le nom d'une catégorie.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,26 +42,26 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @class = ] 'class'` La classe de la catégorie à mettre à jour. *classe*est **varchar(8)** , sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @class = ] 'class'`Classe de la catégorie à mettre à jour. la classe est de *type* **varchar (8)**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**ALERTE**|Met à jour une catégorie d'alerte.|  
-|**JOB**|Met à jour une catégorie de travail.|  
-|**OPÉRATEUR**|Met à jour une catégorie d'opérateur.|  
+|**NOTIFICATION**|Met à jour une catégorie d'alerte.|  
+|**ATTENTE**|Met à jour une catégorie de travail.|  
+|**AND**|Met à jour une catégorie d'opérateur.|  
   
-`[ @name = ] 'old_name'` Le nom actuel de la catégorie. *ancien_nom*est **sysname**, sans valeur par défaut.  
+`[ @name = ] 'old_name'`Nom actuel de la catégorie. *old_name*est de **type sysname**, sans valeur par défaut.  
   
-`[ @new_name = ] 'new_name'` Le nouveau nom pour la catégorie. *new_name*est **sysname**, sans valeur par défaut.  
+`[ @new_name = ] 'new_name'`Nouveau nom de la catégorie. *new_name*est de **type sysname**, sans valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_update_category** doit être exécuté à partir de la **msdb** base de données.  
+ **sp_update_category** doit être exécuté à partir de la base de données **msdb** .  
   
 ## <a name="permissions"></a>Autorisations  
- Pour exécuter cette procédure stockée, les utilisateurs doivent avoir le **sysadmin** rôle serveur fixe.  
+ Pour exécuter cette procédure stockée, les utilisateurs doivent disposer du rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant renomme la catégorie de travail `AdminJobs` en `Administrative Jobs`.  

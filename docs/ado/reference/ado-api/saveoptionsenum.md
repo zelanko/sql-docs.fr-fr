@@ -16,21 +16,21 @@ ms.assetid: 59339100-6e29-48d1-aea3-6873796d186b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 807a8d7e5757a2caf76f100a1ae51c4a8a3f4e98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931145"
 ---
 # <a name="saveoptionsenum"></a>SaveOptionsEnum
-Indique si un fichier doit être créé ou remplacé lors de l’enregistrement à partir d’un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objet. Les valeurs peuvent être **adSaveCreateNotExist** ou **valeur adSaveCreateOverWrite**...  
+Spécifie si un fichier doit être créé ou remplacé lors de l’enregistrement à partir d’un objet de [flux](../../../ado/reference/ado-api/stream-object-ado.md) . Les valeurs peuvent être **adSaveCreateNotExist** ou **adSaveCreateOverWrite**.  
   
-|Constante|Value|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adSaveCreateNotExist**|1|Valeur par défaut. Crée un nouveau fichier si le fichier spécifié par le *nom de fichier* paramètre n’existe pas déjà.|  
-|**adSaveCreateOverWrite**|2|Remplace le fichier avec les données d’actuellement ouvert **Stream** si l’objet, le fichier spécifié par le *Filename* paramètre existe déjà. Si le fichier spécifié par le *nom de fichier* paramètre n’existe pas, un nouveau fichier est créé.|  
+|**adSaveCreateNotExist**|1|valeur par défaut. Crée un nouveau fichier si le fichier spécifié par le paramètre de *nom* de fichier n’existe pas déjà.|  
+|**adSaveCreateOverWrite**|2|Remplace le fichier par les données de l’objet de **flux** actuellement ouvert, si le fichier spécifié par le paramètre *filename* existe déjà. Si le fichier spécifié par le paramètre *filename* n’existe pas, un nouveau fichier est créé.|  
   
-## <a name="adowfc-equivalent"></a>Équivalent de ADO/WFC  
+## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Ces constantes n’ont pas d’équivalents ADO/WFC.  
   
 ## <a name="applies-to"></a>S'applique à  

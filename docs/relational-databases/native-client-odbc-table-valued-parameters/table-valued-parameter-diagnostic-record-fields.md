@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e7c4dd9e592a4a5790630664bc67eb906f9e960b
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73790719"
 ---
 # <a name="table-valued-parameter-diagnostic-record-fields"></a>champs d'enregistrement de diagnostic de paramètre table
@@ -26,6 +26,6 @@ ms.locfileid: "73790719"
   Deux nouveaux champs de diagnostic, SQL_DIAG_SS_TABLE_COLUMN_NUMBER et SQL_DIAG_SS_TABLE_ROW_NUMBER, ont été ajoutés aux enregistrements de diagnostic. Ces champs vous permettent de déterminer les valeurs de colonne de paramètre table qui sont associées à des erreurs et à des avertissements.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Paramètres &#40;table ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [Paramètres table &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

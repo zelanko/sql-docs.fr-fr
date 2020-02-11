@@ -11,10 +11,10 @@ ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6f3c303697ec3233935ec5c7743dcce0f18bfa01
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727985"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Définition des propriétés pour le complément Master Data Services pour Excel
@@ -31,14 +31,14 @@ ms.locfileid: "73727985"
 |-|-|-|  
 |Onglet et section|Paramètre|Description|  
 |Paramètres : Publication|Afficher la boîte de dialogue **Publier et annoter** lors de la publication|Sélectionnez cette option pour afficher la boîte de dialogue **Publier et annoter** lorsque vous cliquez sur **Publier**, ce qui vous permet d'entrer une seule annotation pour toutes les modifications ou d'entrer une annotation pour chaque modification.<br /><br /> Désélectionnez cette option pour indiquer que le processus de publication est initialisé sans la boîte de dialogue **Publier et annoter** . Vous n'aurez pas la possibilité d'entrer une annotation.|  
-|Paramètres : Version|Sélection de la version|Sélectionnez la version des données maîtres chargées dans le complément Excel. Valeurs possibles :<br /><br /> **Aucune** pour ne pas appliquer une valeur de version par défaut<br /><br /> **Plus ancienne** pour utiliser par défaut la version la plus ancienne **Plus récente** pour utiliser par défaut la version la plus récente.|  
+|Paramètres : Version|Sélection de la version|Sélectionnez la version des données maîtres chargées dans le complément Excel. Valeurs possibles :<br /><br /> **Aucun** pour que la version soit définie par défaut sur une version<br /><br /> De la plus **ancienne** à la plus **ancienne version la** plus récente pour la version la plus récente par défaut.|  
 |Paramètres : Journalisation|Activer la journalisation détaillée|Activez la journalisation pour le chargement des données de référence à partir de MDS dans le complément Excel, afin que le résultat de chaque commande du service soit enregistré.|  
 |Paramètres : Télémétrie|Activer la collecte de données de télémétrie|Activez la télémétrie pour améliorer la qualité, la fiabilité et les performances du complément Excel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|  
 |Paramètres : Taille du traitement par lot|Nombre de cellules à charger|Sélectionnez un nombre pour indiquer le nombre de milliers de cellules chargées dans un lot transféré du serveur MDS vers Excel. Le nombre par défaut est de 50 000 cellules.|  
 |Paramètres : Taille du traitement par lot|Nombre de cellules à publier|Sélectionnez un nombre pour indiquer le nombre de milliers de cellules publiées dans un lot retourné d'Excel vers le serveur. Le nombre par défaut est de 50 000 cellules.|  
 |Paramètres : Serveurs ajoutés à la liste approuvée|Effacer tout|Cliquez pour effacer la liste des connexions qui ont été désignées comme sûres lorsque le fichier de requête de raccourci associé a été ouvert.|  
 |Données : Filtres|Afficher l'avertissement de filtrage pour les jeux de données volumineux|Cliquez pour afficher un avertissement si le jeu de données chargé de MDS vers Excel dépasse le nombre maximal de lignes ou de colonnes.|  
-|Données : Filtres|Lignes au maximum|Sélectionnez le seuil pour le nombre de lignes chargées, au delà duquel un avertissement de filtrage est publié.|  
+|Données : Filtres|Nombre maximal de lignes|Sélectionnez le seuil pour le nombre de lignes chargées, au delà duquel un avertissement de filtrage est publié.|  
 |Données : Filtres|Colonnes au maximum|Sélectionnez le seuil pour le nombre de colonnes chargées, au delà duquel un avertissement de filtrage est publié.|  
 |Données : Format de cellule|Modifier la couleur de cellule quand : Modification des valeurs d'attributs|Cliquez pour indiquer que la couleur d'une cellule change si la valeur d'attribut de cette cellule est modifiée lorsque vous actualisez la table du complément Excel avec de nouvelles données provenant du référentiel MDS.|  
 |Données : Format de cellule|Modifier la couleur de cellule quand : Des membres sont ajoutés|Cliquez pour indiquer que la couleur des cellules d’une ligne change si un nouveau membre est ajouté à la ligne quand vous actualisez la table du complément Excel avec de nouvelles données provenant du référentiel MDS.|  

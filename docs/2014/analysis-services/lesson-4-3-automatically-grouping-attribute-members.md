@@ -11,22 +11,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6dc768188f25640a3685c8526bfceb3874154f40
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69890835"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Regroupement automatique des membres d'attribut
-  Lorsque vous explorez un cube, vous dimensionnez généralement les membres d'une hiérarchie d'attributs en vous basant sur les membres d'une autre hiérarchie d'attributs. Par exemple, vous pouvez souhaiter regrouper les ventes par ville, par produit acheté ou par genre. Toutefois, avec certains types d'attributs, il est utile de demander à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de créer automatiquement des regroupements de membres d'attribut basés sur la distribution des membres au sein d'une hiérarchie d'attributs. Par exemple, vous pouvez demander à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de créer des groupes de revenus annuels pour les clients. Lorsque vous faites cela, les utilisateurs qui parcourent la hiérarchie d'attributs voient les noms et les valeurs des groupes au lieu de voir les membres eux-mêmes. Cela limite le nombre de niveaux présentés aux utilisateurs, ce qui est plus pratique pour l'analyse.  
+  Lorsque vous explorez un cube, vous dimensionnez généralement les membres d'une hiérarchie d'attributs en vous basant sur les membres d'une autre hiérarchie d'attributs. Par exemple, vous pouvez souhaiter regrouper les ventes par ville, par produit acheté ou par genre. Toutefois, avec certains types d’attributs, il est utile de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pouvoir créer automatiquement des regroupements de membres d’attribut en fonction de la distribution des membres dans une hiérarchie d’attribut. Par exemple, vous pouvez demander à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de créer des groupes de revenus annuels pour les clients. Lorsque vous faites cela, les utilisateurs qui parcourent la hiérarchie d'attributs voient les noms et les valeurs des groupes au lieu de voir les membres eux-mêmes. Cela limite le nombre de niveaux présentés aux utilisateurs, ce qui est plus pratique pour l'analyse.  
   
  La propriété **DiscretizationMethod** détermine si [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] effectue le regroupement et détermine le type de regroupement effectué. Par défaut, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] n'effectue aucun regroupement. Lorsque vous activez les regroupements automatiques, vous pouvez autoriser [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à déterminer automatiquement la meilleure méthode de regroupement en se basant sur la structure de l'attribut ou bien, vous pouvez choisir l'un des algorithmes de regroupement dans la liste suivante pour spécifier la méthode de regroupement :  
   
  **EqualAreas**  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crée des plages de groupes pour que la totalité de la population des membres de dimension soit distribuée de façon égale entre les groupes.  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crée des plages de groupes pour que la totalité de la population des membres de dimension soit distribuée de façon égale entre les groupes.  
   
  **Clusters**  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crée des groupes en créant des regroupements unidimensionnels sur les valeurs d’entrée en utilisant la méthode de clustering K-Means avec des distributions gaussiennes. Cette option est valide uniquement pour les colonnes numériques.  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crée des groupes en créant des regroupements unidimensionnels sur les valeurs d’entrée en utilisant la méthode de clustering K-Means avec des distributions gaussiennes. Cette option est valide uniquement pour les colonnes numériques.  
   
  Après avoir spécifié une méthode de regroupement, vous devez spécifier le nombre de groupes, en utilisant la propriété **DiscretizationBucketCount** . Pour plus d’informations, consultez [Regrouper des membres d’un attribut &#40;Discrétisation&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  
   
@@ -48,7 +50,7 @@ ms.locfileid: "69890835"
   
      L'illustration suivante montre les propriétés modifiées pour l'attribut **Yearly Income**.  
   
-     ![Propriétés modifiées pour le revenu annuel](../../2014/tutorials/media/l4-discretizationmethod-1.gif "Propriétés modifiées pour le revenu annuel")  
+     ![Propriétés modifiées pour Yearly Income](../../2014/tutorials/media/l4-discretizationmethod-1.gif "Propriétés modifiées pour Yearly Income")  
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>Regroupement des membres de hiérarchies d'attributs dans la dimension Employee  
   
@@ -66,7 +68,7 @@ ms.locfileid: "69890835"
   
 6.  Dans le volet **Attributs** , sélectionnez **Vacation Hours**.  
   
-7.  Dans la Fenêtre Propriétés, modifiez la valeur de la propriété **DiscretizationMethod** en **zones égales** et modifiez la valeur de la propriété **DiscretizationBucketCount** en `5`.  
+7.  Dans la Fenêtre Propriétés, modifiez la valeur de la propriété **DiscretizationMethod** en **zones égales** et remplacez la valeur de la propriété **DiscretizationBucketCount** par `5`.  
   
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>Exploration des hiérarchies d'attributs modifiées  
   
@@ -94,7 +96,7 @@ ms.locfileid: "69890835"
   
      L'illustration suivante montre les ventes dimensionnées sur la base des heures de congé maladie par employé.  
   
-     ![Ventes dimensionnées par heure de congé maladie des employés](../../2014/tutorials/media/l4-discretizationmethod-2.gif "Ventes dimensionnées par heure de congé maladie des employés")  
+     ![Ventes dimensionnées par les heures de congé de maladie d'employé](../../2014/tutorials/media/l4-discretizationmethod-2.gif "Ventes dimensionnées par les heures de congé de maladie d'employé")  
   
 10. Supprimez la hiérarchie d'attributs **Sick Leave Hours** de la zone de colonnes du volet **Données** .  
   
@@ -126,6 +128,6 @@ ms.locfileid: "69890835"
  [Masquage et désactivation des hiérarchies d'attributs](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Regrouper des membres d’un attribut &#40;Discrétisation&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  
+ [Membres d’attribut de groupe &#40;&#41;de discrétisation](multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   

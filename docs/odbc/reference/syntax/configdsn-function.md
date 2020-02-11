@@ -20,15 +20,15 @@ ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 21a02107359b26c0dc30aa87acbf46c1ab1a172d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892851"
 ---
 # <a name="configdsn-function"></a>ConfigDSN, fonction
 **Conformité**  
- Version introduite: ODBC 1,0  
+ Version introduite : ODBC 1,0  
   
  **Résumé**  
  **ConfigDSN** ajoute, modifie ou supprime des sources de données à partir des informations système. Il peut inviter l’utilisateur à fournir des informations de connexion. Il peut se trouver dans la DLL du pilote ou dans une DLL d’installation distincte.  
@@ -49,43 +49,43 @@ BOOL ConfigDSN(
  Entrée Handle de fenêtre parente. La fonction n’affiche pas de boîtes de dialogue si le handle a la valeur null.  
   
  *fRequest*  
- Entrée Type de requête. L’argument *fRequest* doit contenir l’une des valeurs suivantes:  
+ Entrée Type de requête. L’argument *fRequest* doit contenir l’une des valeurs suivantes :  
   
- ODBC_ADD_DSN: Ajoutez une nouvelle source de données.  
+ ODBC_ADD_DSN : ajoutez une nouvelle source de données.  
   
- ODBC_CONFIG_DSN: Configurez (modifiez) une source de données existante.  
+ ODBC_CONFIG_DSN : configurer (modifier) une source de données existante.  
   
- ODBC_REMOVE_DSN: Supprimer une source de données existante.  
+ ODBC_REMOVE_DSN : supprimer une source de données existante.  
   
  *lpszDriver*  
  Entrée Description du pilote (généralement le nom du SGBD associé) présentée aux utilisateurs au lieu du nom du pilote physique.  
   
  *lpszAttributes*  
- Entrée Liste d’attributs se terminant par un caractère null, sous la forme de paires mot clé-valeur. Pour plus d’informations, consultez la section «commentaires».  
+ Entrée Liste d’attributs se terminant par un caractère null, sous la forme de paires mot clé-valeur. Pour plus d’informations, consultez la section « commentaires ».  
   
-## <a name="returns"></a>Valeur renvoyée  
+## <a name="returns"></a>Retours  
  La fonction retourne TRUE si elle réussit, FALSe en cas d’échec.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Quand **ConfigDSN** retourne false, une valeur  *\*pfErrorCode* associée est publiée dans la mémoire tampon d’erreur du programme d’installation par un appel à **SQLPostInstallerError** et peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie  *\** les valeurs pfErrorCode qui peuvent être retournées par **SQLInstallerError** et les explique dans le contexte de cette fonction.  
+ Quand **ConfigDSN** retourne false, une valeur * \*pfErrorCode* associée est publiée dans la mémoire tampon d’erreur du programme d’installation par un appel à **SQLPostInstallerError** et peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie * \** les valeurs pfErrorCode qui peuvent être retournées par **SQLInstallerError** et les explique dans le contexte de cette fonction.  
   
 |*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|Handle de fenêtre non valide|L’argument *hwndParent* n’était pas valide.|  
 |ODBC_ERROR_INVALID_KEYWORD_VALUE|Paires mot clé/valeur non valides|L’argument *lpszAttributes* contient une erreur de syntaxe.|  
 |ODBC_ERROR_INVALID_NAME|Nom de pilote ou de convertisseur non valide|L’argument *lpszDriver* n’était pas valide. Il est introuvable dans le registre.|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|Type de demande non valide|L’argument *fRequest* ne faisait pas partie des éléments suivants:<br /><br /> ODBC_ADD_DSN ODBC_CONFIG_DSN ODBC_REMOVE_DSN|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|Type de demande non valide|L’argument *fRequest* ne faisait pas partie des éléments suivants :<br /><br /> ODBC_ADD_DSN ODBC_CONFIG_DSN ODBC_REMOVE_DSN|  
 |ODBC_ERROR_REQUEST_FAILED|Échec de la *requête*|Impossible d’effectuer l’opération demandée par l’argument *fRequest* .|  
 |ODBC_ERROR_DRIVER_SPECIFIC|Erreur spécifique au pilote ou au traducteur|Erreur propre au pilote pour laquelle il n’existe aucune erreur de programme d’installation ODBC définie. L’argument *SzError* dans un appel à la fonction **SQLPostInstallerError** doit contenir le message d’erreur spécifique au pilote.|  
   
 ## <a name="comments"></a>Commentaires  
  **ConfigDSN** reçoit les informations de connexion de la dll du programme d’installation sous la forme d’une liste d’attributs sous la forme de paires mot clé-valeur. Chaque paire se termine par un octet NULL, et la liste entière se termine par un octet NULL. (Autrement dit, deux octets de valeur null marquent la fin de la liste.) Les espaces ne sont pas autorisés autour du signe égal dans la paire mot clé-valeur. **ConfigDSN** peut accepter des mots clés qui ne sont pas des mots clés valides pour **SQLBrowseConnect** et **SQLDriverConnect**. **ConfigDSN** ne prend pas nécessairement en charge tous les mots clés qui sont des mots clés valides pour **SQLBrowseConnect** et **SQLDriverConnect**. (**ConfigDSN** n’accepte pas le mot clé **Driver** .) Les mots clés utilisés par la fonction **ConfigDSN** doivent prendre en charge toutes les options nécessaires à la recréation de la source de données à l’aide de la fonctionnalité de configuration automatique du programme d’installation. Lorsque les utilisations des valeurs **ConfigDSN** et des valeurs de chaîne de connexion sont identiques, les mêmes mots clés doivent être utilisés.  
   
- Comme dans **SQLBrowseConnect** et **SQLDriverConnect**, les mots clés et leurs valeurs ne doivent pas contenir les **[]{}(),;? =\*! @** caractères, et la valeur du mot clé **DSN** ne peut pas contenir uniquement des espaces. En raison de la grammaire du Registre, les mots clés et les noms de sources\\de données ne peuvent pas contenir de barre oblique inverse ().  
+ Comme dans **SQLBrowseConnect** et **SQLDriverConnect**, les mots clés et leurs valeurs ne doivent pas contenir les **[]{}(),;? = \*! @** caractères, et la valeur du mot clé **DSN** ne peut pas contenir uniquement des espaces. En raison de la grammaire du Registre, les mots clés et les noms de sources\\de données ne peuvent pas contenir de barre oblique inverse ().  
   
  **ConfigDSN** doit appeler **SQLValidDSN** pour vérifier la longueur du nom de la source de données et vérifier qu’aucun caractère non valide n’est inclus dans le nom. Si le nom de la source de données est plus long que SQL_MAX_DSN_LENGTH ou contient des caractères non valides, **SQLValidDSN** retourne une erreur et **ConfigDSN** retourne une erreur. La longueur du nom de la source de données est également vérifiée par **SQLWriteDSNToIni**.  
   
- Par exemple, pour configurer une source de données qui requiert un ID d’utilisateur, un mot de passe et un nom de base de données, une application de configuration peut passer les paires mot clé/valeur suivantes:  
+ Par exemple, pour configurer une source de données qui requiert un ID d’utilisateur, un mot de passe et un nom de base de données, une application de configuration peut passer les paires mot clé/valeur suivantes :  
   
 ```  
 DSN=Personnel Data\0UID=Smith\0PWD=Sesame\0DATABASE=Personnel\0\0  
@@ -98,7 +98,7 @@ DSN=Personnel Data\0UID=Smith\0PWD=Sesame\0DATABASE=Personnel\0\0
 ## <a name="adding-a-data-source"></a>Ajout d'une source de données  
  Si un nom de source de données est transmis à **ConfigDSN** dans *lpszAttributes*, **ConfigDSN** vérifie que le nom est valide. Si le nom de la source de données correspond à un nom de source de données existant et que *hwndParent* a la valeur null, **ConfigDSN** remplace le nom existant. S’il correspond à un nom existant et que *hwndParent* n’est pas null, **ConfigDSN** invite l’utilisateur à remplacer le nom existant.  
   
- Si *lpszAttributes* contient suffisamment d’informations pour se connecter à une source de données, **ConfigDSN** peut ajouter la source de données ou afficher une boîte de dialogue permettant à l’utilisateur de modifier les informations de connexion. Si *lpszAttributes* ne contient pas suffisamment d’informations pour se connecter à une source de données, **ConfigDSN** doit déterminer les informations nécessaires; Si *hwndParent* n’a pas la valeur null, il affiche une boîte de dialogue pour récupérer les informations de l’utilisateur.  
+ Si *lpszAttributes* contient suffisamment d’informations pour se connecter à une source de données, **ConfigDSN** peut ajouter la source de données ou afficher une boîte de dialogue permettant à l’utilisateur de modifier les informations de connexion. Si *lpszAttributes* ne contient pas suffisamment d’informations pour se connecter à une source de données, **ConfigDSN** doit déterminer les informations nécessaires ; Si *hwndParent* n’a pas la valeur null, il affiche une boîte de dialogue pour récupérer les informations de l’utilisateur.  
   
  Si **ConfigDSN** affiche une boîte de dialogue, elle doit afficher toutes les informations de connexion qui lui sont passées dans *lpszAttributes*. En particulier, si un nom de source de données lui a été passé, **ConfigDSN** affiche ce nom, mais ne permet pas à l’utilisateur de le modifier. **ConfigDSN** peut fournir des valeurs par défaut pour les informations de connexion qui ne lui sont pas transmises dans *lpszAttributes*.  
   

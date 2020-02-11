@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 69877c6a20e37e012925185d0b807e9579066e35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754397"
 ---
 # <a name="service-accounts-configure-database-mirroring-security-wizard"></a>Comptes de service (Assistant Configuration de la sécurité de la mise en miroir de bases de données)
@@ -34,25 +34,25 @@ ms.locfileid: "62754397"
 -   [Démarrer l’Assistant Configuration de la sécurité de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
 ## <a name="options"></a>Options  
- **Principal**  
+ **Directeur**  
  Permet de spécifier le compte de service de l'instance de serveur principal. Entrez le nom du domaine en majuscules :  
   
- *NOM_DOMAINE*\\*nom_utilisateur*  
+ **\\*Nom* de domaine  
   
- **Miroir**  
+ **Mémoire**  
  Permet de spécifier le compte de service de l'instance de serveur miroir. Entrez le nom du domaine en majuscules :  
   
- *NOM_DOMAINE*\\*nom_utilisateur*  
+ **\\*Nom* de domaine  
   
  **Témoin**  
  Permet de spécifier le compte de service de l'instance de serveur témoin. Entrez le nom du domaine en majuscules :  
   
- *NOM_DOMAINE*\\*nom_utilisateur*  
+ **\\*Nom* de domaine  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés de la base de données &#40;page Mise en miroir&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Démarrer le moniteur de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Mise en miroir de bases de données &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Configurer des comptes de connexion pour la mise en miroir de base de données ou des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
+ [Configurer des comptes de connexion pour la mise en miroir de bases de données ou groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
   
   

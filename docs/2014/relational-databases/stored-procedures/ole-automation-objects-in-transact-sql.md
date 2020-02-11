@@ -16,13 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 06913c27af89657aef5a0a5397cd77a1ee025299
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211854"
 ---
 # <a name="ole-automation-objects-in-transact-sql"></a>Objets OLE Automation dans Transact-SQL
+  
   [!INCLUDE[tsql](../../includes/tsql-md.md)] contient plusieurs procédures stockées système qui permettent aux objets OLE Automation d’être référencés dans les lots [!INCLUDE[tsql](../../includes/tsql-md.md)] , les procédures stockées et les déclencheurs. Les procédures stockées système sont exécutées en tant que procédures stockées étendues, et les objets OLE Automation invoqués par les procédures stockées sont exécutés dans l'espace d'adressage d'une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] de la même façon que les procédures stockées étendues.  
   
  Les procédures stockées OLE Automation permettent aux lots [!INCLUDE[tsql](../../includes/tsql-md.md)] de faire référence aux objets SQL-DMO et aux objets OLE Automation personnalisés, notamment ceux qui exposent l’interface **IDispatch** . Un serveur OLE in-process personnalisé qui est créé à l’aide de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] doit disposer d’un gestionnaire d’erreurs (spécifié avec l’instruction **On Error GoTo** ) pour les sous-routines **Class_Initialize** et **Class_Terminate** . Les erreurs non gérées dans les sous-routines **Class_Initialize** et **Class_Terminate** peuvent entraîner des erreurs imprévisibles, comme une violation d’accès dans une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Les gestionnaires d'erreurs sont également recommandés pour les autres sous-routines.  
@@ -37,22 +38,22 @@ ms.locfileid: "68211854"
   
 -   **sp_OAMethod** appelle une méthode.  
   
--   **sp_OAGetErrorInfo** obtient les informations les plus récentes sur les erreurs.  
+-   **sp_OAGetErrorInfo** obtient les informations d’erreur les plus récentes.  
   
  Quand l’objet est devenu inutile, appelez **sp_OADestroy** pour désallouer l’instance de l’objet créée avec **sp_OACreate**.  
   
- Les objets OLE Automation retournent les données par l'intermédiaire de valeurs de propriétés et de méthodes. **sp_OAGetProperty** et **sp_OAMethod** retournent ces valeurs de données sous forme d’un ensemble de résultats.  
+ Les objets OLE Automation retournent les données par l'intermédiaire de valeurs de propriétés et de méthodes. **sp_OAGetProperty** et **sp_OAMethod** retournent ces valeurs de données sous la forme d’un jeu de résultats.  
   
  La portée d'un objet OLE Automation est un traitement. Toutes les références à un objet doivent se trouver dans un seul traitement, une seule procédure stockée ou un seul déclencheur.  
   
  Lorsque des références à des objets sont faites, les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE Automation prennent en charge le passage à travers l'objet référencé pour atteindre les autres objets qu'il contient. Par exemple, quand l’objet SQL-DMO **SQLServer** est utilisé, il est possible de créer des références aux bases de données et aux tables qui se trouvent sur ce serveur.  
   
 ## <a name="related-content"></a>Contenu associé  
- [Syntaxe de hiérarchie des objets &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/object-hierarchy-syntax-transact-sql)  
+ [Syntaxe de la hiérarchie d’objets &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/object-hierarchy-syntax-transact-sql)  
   
  [Configuration de la surface d'exposition](../security/surface-area-configuration.md)  
   
- [Procédures OLE Automation (option de configuration de serveur)](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)  
+ [OLE Automation Procedures (option de configuration de serveur)](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)  
   
  [sp_OACreate &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-oacreate-transact-sql)  
   

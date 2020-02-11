@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4305438285ae5f3b51ab8ac51ec2b1d0699aee64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62810347"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>Se connecter à un autre ordinateur (Gestionnaire de configuration SQL Server)
@@ -33,7 +33,7 @@ ms.locfileid: "62810347"
   
 1.  Dans le menu **Démarrer** , cliquez avec le bouton droit sur **Poste de travail**, puis cliquez sur **Gérer**.  
   
-2.  Dans **Gestion de l’ordinateur**, cliquez avec le bouton droit sur **Gestion de l’ordinateur (local)** , puis cliquez sur **Se connecter à un autre ordinateur**.  
+2.  Dans **Gestion de l’ordinateur**, cliquez avec le bouton droit sur **Gestion de l’ordinateur (local)**, puis cliquez sur **Se connecter à un autre ordinateur**.  
   
 3.  Dans la boîte de dialogue **Sélectionner un ordinateur** , dans la zone de texte **Un autre ordinateur** , tapez le nom de l'ordinateur que vous voulez gérer et cliquez sur **OK**.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62810347"
   
 1.  Dans le menu **Démarrer** , cliquez sur **Exécuter**.  
   
-2.  Dans le **ouvrir** , tapez `mmc -a` pour ouvrir le [!INCLUDE[msCoName](../../includes/msconame-md.md)] Console de gestion en mode auteur.  
+2.  Dans la zone **ouvrir** , tapez `mmc -a` pour ouvrir la [!INCLUDE[msCoName](../../includes/msconame-md.md)] console de gestion en mode auteur.  
   
 3.  Dans le menu **Fichier** , cliquez sur **Ajouter/Supprimer un composant logiciel enfichable**.  
   
@@ -59,13 +59,13 @@ ms.locfileid: "62810347"
   
 8.  Dans la fenêtre **Ajouter/Supprimer un composant logiciel enfichable** , cliquez sur **OK**.  
   
-9. Développez **Gestion de l’ordinateur (***\<nom_ordinateur>***)** , puis **Services et applications**.  
+9. Développez Gestion de l' **ordinateur (nom de***\<l’ordinateur>***)**, puis **services et applications**.  
   
 10. Cliquez avec le bouton droit sur **Gestionnaire de configuration SQL Server**, puis cliquez sur **Nouvelle fenêtre à partir d’ici**.  
   
 11. Dans le menu **Fenêtre**, cliquez sur **Racine de la console** pour revenir à la première fenêtre et supprimez-la.  
   
-12. Sur le **fichier** menu, cliquez sur **enregistrer en tant que**, enregistrez le fichier dans le dossier souhaité, avec un nom approprié et le `.msc` extension de fichier. Fermez [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
+12. Dans le menu **fichier** , cliquez sur **Enregistrer sous**, puis enregistrez le fichier dans le dossier de votre choix, avec un nom `.msc` approprié avec l’extension de fichier. Fermez [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
   
 13. Pour ouvrir le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l'ordinateur cible, double-cliquez sur le fichier. Si vous le souhaitez, enregistrez un lien vers le fichier sur le bureau ou dans le menu **Démarrer** .  
   

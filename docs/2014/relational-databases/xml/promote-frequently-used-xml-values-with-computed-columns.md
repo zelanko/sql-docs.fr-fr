@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5b2d167ca9bb2f5a39802bacceb3dd0eb3c96d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195574"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promouvoir les valeurs XML les plus fréquentes à l'aide de colonnes calculées
@@ -26,9 +26,9 @@ ms.locfileid: "68195574"
  La colonne promue peut être une colonne calculée de la même table ou une colonne distincte, gérée par l'utilisateur, d'une autre table. Cela suffit lorsque des valeurs singleton sont promues à partir de chaque instance XML. Toutefois, en cas de propriétés à valeurs multiples, vous devez créer une table distincte pour la propriété, comme l'explique la section suivante.  
   
 ## <a name="computed-column-based-on-the-xml-data-type"></a>Colonne calculée basée sur le type de données xml  
- Une colonne calculée peut être créée à l’aide d’une fonction définie par l’utilisateur qui appelle `xml` méthodes de type de données. Le type de la colonne calculée peut être n'importe quel type SQL, y compris XML. L'exemple suivant illustre ce concept.  
+ Une colonne calculée peut être créée à l’aide d’une fonction définie par l’utilisateur qui `xml` appelle des méthodes de type de données. Le type de la colonne calculée peut être n'importe quel type SQL, y compris XML. L'exemple suivant illustre ce concept.  
   
-### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Exemple : Colonne calculée basée sur la méthode du type de données xml  
+### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Exemple : colonne calculée basée sur la méthode du type de données xml  
  Créez la fonction définie par l'utilisateur pour extraire le numéro ISBN d'un livre :  
   
 ```  
@@ -50,7 +50,7 @@ ADD   ISBN AS dbo.udf_get_book_ISBN(xCol)
   
  La colonne calculée peut être indexée de manière habituelle.  
   
-### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>Exemple : Requêtes sur une colonne calculée basée sur les méthodes du type de données xml  
+### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>exemple: requêtes sur une colonne calculée basée sur les méthodes du type de données xml  
  Pour obtenir l'élément <`book`> portant le numéro ISBN 0-7356-1588-2 :  
   
 ```  
@@ -67,7 +67,7 @@ FROM   T
 WHERE  ISBN = '0-7356-1588-2'  
 ```  
   
- Vous pouvez créer une fonction définie par l’utilisateur pour retourner le `xml` type de données et une colonne calculée à l’aide de la fonction définie par l’utilisateur. Toutefois, vous ne pouvez pas créer d'index XML sur la colonne XML calculée.  
+ Vous pouvez créer une fonction définie par l’utilisateur pour retourner `xml` le type de données et une colonne calculée à l’aide de la fonction définie par l’utilisateur. Toutefois, vous ne pouvez pas créer d'index XML sur la colonne XML calculée.  
   
 ## <a name="creating-property-tables"></a>Création de tables de propriétés  
  Vous pouvez promouvoir certaines des propriétés à valeurs multiples de vos données XML dans une ou plusieurs tables, placer des index sur ces tables et modifier la cible de vos requêtes de façon à les utiliser. C'est généralement l'attitude à adopter lorsqu'un petit nombre de propriétés couvre la plupart de la charge des requêtes. Vous pouvez effectuer les opérations suivantes :  
@@ -78,20 +78,20 @@ WHERE  ISBN = '0-7356-1588-2'
   
 -   Créez des déclencheurs sur la colonne XML pour assurer la maintenance des tables de propriétés. Dans les déclencheurs, procédez ainsi :  
   
-    -   Utilisez `xml` données telles que des méthodes de type **nodes()** et **value()** , pour insérer et supprimer des lignes des tables de propriété.  
+    -   Utilisez `xml` des méthodes de type de données, telles que **Nodes ()** et **value ()**, pour insérer et supprimer des lignes dans les tables de propriétés.  
   
     -   Créez des fonctions table multidiffusion dans CLR (Common Language Runtime) pour insérer et supprimer des lignes dans les tables de propriétés.  
   
     -   Écrivez des requêtes qui accèdent par SQL aux tables de propriétés et par XML à la colonne XML de la table de base, et prévoyez des jointures entre les tables à l'aide de leur clé primaire.  
   
-### <a name="example-create-a-property-table"></a>Exemple : Création d’une table de propriétés  
+### <a name="example-create-a-property-table"></a>Exemple : création d'une table de propriétés  
  Supposons, dans cet exemple, que vous voulez promouvoir le prénom des auteurs. Dans la mesure où les livres peuvent avoir un ou plusieurs auteurs, le prénom est une propriété à valeurs multiples. Chaque prénom est stocké dans une ligne distincte d'une table de propriétés. La clé primaire de la table de base est dupliquée dans la table de propriétés pour la jointure en retour avec la table de base.  
   
 ```  
 create table tblPropAuthor (propPK int, propAuthor varchar(max))  
 ```  
   
-### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>Exemple : Création d’une fonction définie par l’utilisateur pour générer un ensemble de lignes à partir d’une instance XML  
+### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>exemple : création d'une fonction définie par l'utilisateur pour générer un ensemble de lignes à partir d'une instance XML  
  La fonction table suivante, udf_XML2Table, accepte une valeur de clé primaire et une instance XML. Elle récupère le prénom de tous les auteurs des éléments <`book`> et renvoie un ensemble de lignes pour les paires clé primaire/prénom.  
   
 ```  
@@ -107,7 +107,7 @@ begin
 end  
 ```  
   
-### <a name="example-create-triggers-to-populate-a-property-table"></a>Exemple : Création de déclencheurs pour remplir une table de propriétés  
+### <a name="example-create-triggers-to-populate-a-property-table"></a>exemple : création de déclencheurs pour remplir une table de propriétés  
  Le déclencheur insert insère des lignes dans la table de propriétés :  
   
 ```  
@@ -154,8 +154,8 @@ begin
 end  
 ```  
   
-### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Exemple : Recherche des instances XML dont les auteurs portent le même prénom  
- La requête peut être formée sur la colonne XML. Une autre possibilité consiste à rechercher le prénom « David » dans la table de propriétés et à faire une jointure en retour avec la table de base pour renvoyer l'instance XML. Exemple :  
+### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Exemple : recherche des instances XML dont les auteurs portent le même prénom  
+ La requête peut être formée sur la colonne XML. Une autre possibilité consiste à rechercher le prénom « David » dans la table de propriétés et à faire une jointure en retour avec la table de base pour renvoyer l'instance XML. Par exemple :  
   
 ```  
 SELECT xCol   
@@ -163,7 +163,7 @@ FROM     T JOIN tblPropAuthor ON T.pk = tblPropAuthor.propPK
 WHERE    tblPropAuthor.propAuthor = 'David'  
 ```  
   
-### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Exemple : Solution utilisant la fonction table de streaming CLR  
+### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Exemple : solution utilisant la fonction table multidiffusion CLR  
  La solution se compose des étapes suivantes :  
   
 1.  Définissez une classe CLR, SqlReaderBase, qui met en œuvre ISqlReader et génère une sortie table multidiffusion par application d'une expression de chemin sur une instance XML.  
@@ -172,7 +172,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
   
 3.  Définissez les déclencheurs insert, update et delete à l'aide de la fonction définie par l'utilisateur pour assurer la maintenance de la table de propriétés.  
   
- Pour cela, vous devez commencer par créer la fonction multidiffusion dans CLR. Le `xml` type de données est exposé comme une classe managée SqlXml dans ADO.NET et prend en charge la **CreateReader()** méthode qui retourne un flux XmlReader.  
+ Pour cela, vous devez commencer par créer la fonction multidiffusion dans CLR. Le `xml` type de données est exposé en tant que classe managée SqlXml dans ADO.net et prend en charge la méthode **CreateReader ()** qui retourne un XmlReader.  
   
 > [!NOTE]  
 >  L'exemple de code de cette section utilise XPathDocument et XPathNavigator, ce qui vous oblige à charger tous les documents XML en mémoire. Si vous utilisez un code similaire dans votre application pour traiter plusieurs documents XML volumineux, ce code n'est pas évolutif. Au lieu de cela, laissez les allocations de mémoire petites et utilisez les interfaces multidiffusion chaque fois que possible. Pour plus d’informations sur les performances, consultez [Architecture d’intégration du CLR](../../database-engine/dev-guide/architecture-of-clr-integration.md).  

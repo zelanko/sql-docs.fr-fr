@@ -1,5 +1,5 @@
 ---
-title: À l’aide de curseurs de serveur | Microsoft Docs
+title: Utilisation des curseurs côté serveur | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cef56db912d786b6908271d0747fe45690e90536
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011842"
 ---
 # <a name="using-server-cursors"></a>Utilisation des curseurs côté serveur
-  Si une application ODBC définit les attributs de curseur ODBC sur n’importe quelle autre que les valeurs par défaut, le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client demande au serveur d’implémenter un curseur de serveur API du même type. L'utilisation de curseurs côté serveur d'API libère la mémoire sur le client et peut réduire considérablement le trafic réseau entre le client et le serveur.  
+  Si une application ODBC définit l’un des attributs de curseur ODBC sur une valeur autre que les valeurs par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] défaut, le pilote ODBC native client demande au serveur d’implémenter un curseur côté serveur d’API du même type. L'utilisation de curseurs côté serveur d'API libère la mémoire sur le client et peut réduire considérablement le trafic réseau entre le client et le serveur.  
   
  Un inconvénient possible des curseurs côté serveur d'API est qu'ils ne prennent pas en charge toutes les instructions SQL. Les curseurs côté serveur d'API ne peuvent pas être utilisés pour exécuter :  
   

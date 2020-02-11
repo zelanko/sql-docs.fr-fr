@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b44319856c2604791290768516ab1eb4c190a66b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75241998"
 ---
 # <a name="navigate-code-and-text"></a>Naviguer dans le code et le texte
@@ -66,7 +66,7 @@ ms.locfileid: "75241998"
 ## <a name="go-to-command"></a>Atteindre, commande  
  Utilisez la commande **Atteindre** pour accéder à un numéro de ligne spécifique. Pour afficher les numéros de ligne, dans la boîte de dialogue **Options** , cliquez sur **Éditeur de texte**, sur **Tous les langages**, sur **Général**, puis sélectionnez **Numéros de ligne**.  
   
- **Pour accéder à un numéro de ligne spécifique**  
+ **Pour atteindre un numéro de ligne en particulier**  
   
 1.  Dans le menu **Edition** , cliquez sur **Atteindre** .  
   

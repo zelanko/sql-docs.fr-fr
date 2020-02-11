@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4ed2a24c72765c51e7d05fecaa5ab22c344013b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789020"
 ---
 # <a name="agent-xps-server-configuration-option"></a>Agent XPs (option de configuration de serveur)
@@ -28,7 +28,7 @@ ms.locfileid: "62789020"
 > [!NOTE]  
 >  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] L’Explorateur d’objets n’affiche pas le contenu du nœud [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent, sauf si ces procédures stockées étendues sont activées, quel que soit l’état du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
- Les valeurs possibles sont les suivantes :  
+ Les valeurs possibles sont les suivantes :  
   
 -   **0**, qui indique que les procédures stockées étendues de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ne sont pas disponibles (valeur par défaut).  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62789020"
  Le paramètre prend effet immédiatement, sans arrêt et redémarrage du serveur.  
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant active les procédures stockées étendues de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ L'exemple suivant active les procédures stockées étendues de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ```  
 sp_configure 'show advanced options', 1;  
@@ -51,7 +51,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches d’administration automatisée &#40;SQL Server Agent&#41;](../../ssms/agent/sql-server-agent.md)   
+ [Tâches d’administration automatisées &#40;SQL Server Agent&#41;](../../ssms/agent/sql-server-agent.md)   
  [Démarrer, arrêter ou suspendre le service SQL Server Agent](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
   
   

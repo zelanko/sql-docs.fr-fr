@@ -18,14 +18,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68199459"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Modifier le schéma dans les bases de données de publication
-  La réplication prend en charge une grande variété de modifications de schéma pour les objets publiés. Lorsque vous effectuez l'une des modifications de schémas qui suit sur l'objet publié approprié sur un serveur de publication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cette modification est propagée par défaut sur tous les Abonnés [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
+  La réplication prend en charge une grande variété de modifications de schéma pour les objets publiés. Quand vous effectuez une des modifications de schéma suivantes dans l’objet publié approprié sur un Abonné [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], cette modification est propagée par défaut sur tous les Abonnés [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
 -   ALTER TABLE  
   
@@ -46,14 +46,14 @@ ms.locfileid: "68199459"
   
  Pour obtenir des informations sur l’ajout et la suppression d’articles dans les publications, consultez [Ajouter et supprimer des articles de publications existantes](add-articles-to-and-drop-articles-from-existing-publications.md).  
   
- **Pour répliquer les modifications de schéma**  
+ **Pour répliquer des modifications de schéma**  
   
- Les modifications de schéma répertoriées ci-dessus sont répliquées par défaut. Pour plus d'informations sur la désactivation de la réplication des modifications de schéma, consultez [Répliquer les modifications de schéma](replicate-schema-changes.md).  
+ Les modifications de schéma répertoriées ci-dessus sont répliquées par défaut. Pour plus d'informations sur la désactivation de la réplication des modifications de schéma, consultez [Replicate Schema Changes](replicate-schema-changes.md).  
   
 ## <a name="considerations-for-schema-changes"></a>Considérations sur les modifications de schéma  
  Les éléments suivants doivent être pris en compte lors de la réplication des modifications de schéma.  
   
-### <a name="general-considerations"></a>Considérations générales  
+### <a name="general-considerations"></a>Considérations d’ordre général  
   
 -   Les modifications de schéma sont soumises aux restrictions imposées par [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Par exemple, ALTER TABLE ne vous permet pas de modifier les colonnes clés primaire.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "68199459"
   
 -   La modification ou la suppression de colonnes d'identité gérées par la réplication ne sont pas prises en charge. Pour plus d’informations sur la gestion automatique des colonnes d’identité, consultez [Répliquer des colonnes d’identité](replicate-identity-columns.md).  
   
--   Les modifications de schéma qui comprennent des fonctions non déterministes ne sont pas prises en charge car elles peuvent se traduire par la présence de données différentes sur le serveur de publication et l'Abonné (c'est-à-dire non convergentes). Par exemple, si vous émettez la commande suivante sur le serveur de publication : `ALTER TABLE SalesOrderDetail ADD OrderDate DATETIME DEFAULT GETDATE()`, les valeurs diffèrent lorsque la commande est répliquée sur l'Abonné, puis exécutée. Pour plus d'informations sur les fonctions non déterministes, consultez [Fonctions déterministes et non déterministes](../../user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+-   Les modifications de schéma qui comprennent des fonctions non déterministes ne sont pas prises en charge car elles peuvent se traduire par la présence de données différentes sur le serveur de publication et l'Abonné (c'est-à-dire non convergentes). Par exemple, si vous émettez la commande suivante sur le serveur de publication : `ALTER TABLE SalesOrderDetail ADD OrderDate DATETIME DEFAULT GETDATE()`, les valeurs diffèrent lorsque la commande est répliquée sur l'Abonné, puis exécutée. Pour plus d'informations sur les fonctions non déterministes, consultez [Deterministic and Nondeterministic Functions](../../user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 -   Il est conseillé de nommer explicitement les contraintes. Si les contraintes ne sont pas nommées explicitement, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] génère des noms pour celles-ci, qui seront différents sur le serveur de publication et sur chaque Abonné. Cela peut occasionner des problèmes pendant la réplication des modifications de schéma. Par exemple, si vous supprimez une colonne sur le serveur de publication et qu'une contrainte dépendante est supprimée, la réplication essaie de supprimer la contrainte sur l'Abonné. La suppression sur l'Abonné échouera car le nom de la contrainte est différent. Si la synchronisation échoue en raison d'un problème de dénomination de contrainte, supprimez manuellement la contrainte sur l'Abonné, puis réexécutez l'Agent de fusion.  
   
@@ -81,7 +81,8 @@ ms.locfileid: "68199459"
   
 -   La lecture non validée n'est pas un niveau d'isolement pris en charge lors de l'exécution d'instructions DDL sur une table publiée.  
   
--   `SET CONTEXT_INFO` ne doit pas être utilisée pour modifier le contexte des transactions dans lesquelles des modifications de schéma sont exécutées sur les objets publiés.  
+-   
+  `SET CONTEXT_INFO` ne doit pas être utilisée pour modifier le contexte des transactions dans lesquelles des modifications de schéma sont exécutées sur les objets publiés.  
   
 #### <a name="adding-columns"></a>Ajout de colonnes  
   
@@ -89,7 +90,7 @@ ms.locfileid: "68199459"
   
 -   Pour ajouter une nouvelle colonne à une table sans inclure cette colonne dans une publication existante, désactivez la réplication des modifications de schéma, puis exécutez ALTER TABLE \<Table> ADD \<Colonne>.  
   
--   Pour inclure une colonne existante dans une publication existante, utilisez [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) ou la boîte de dialogue **Propriétés de la publication - \<Publication>** .  
+-   Pour inclure une colonne existante dans une publication existante, utilisez [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) ou la boîte de dialogue **Propriétés de la publication - \<Publication>**.  
   
      Pour plus d'informations, voir [Définir et modifier un filtre de colonne](define-and-modify-a-column-filter.md). Cette opération exige la réinitialisation des abonnements.  
   
@@ -99,13 +100,13 @@ ms.locfileid: "68199459"
   
 -   Pour supprimer une colonne d’une publication existante et de la table sur le serveur de publication, exécutez ALTER TABLE \<Table> DROP \<Colonne>. Par défaut, la colonne est alors supprimée de la table sur tous les Abonnés.  
   
--   Pour supprimer une colonne d’une publication existante, tout en la conservant dans la table sur le serveur de publication, utilisez [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) ou la boîte de dialogue **Propriétés de la publication - \<Publication>** .  
+-   Pour supprimer une colonne d’une publication existante, tout en la conservant dans la table sur le serveur de publication, utilisez [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) ou la boîte de dialogue **Propriétés de la publication - \<Publication>**.  
   
-     Pour plus d’informations, voir [Définir et modifier un filtre de colonne](define-and-modify-a-column-filter.md). Cette opération exige la génération d'un nouvel instantané.  
+     Pour plus d'informations, voir [Définir et modifier un filtre de colonne](define-and-modify-a-column-filter.md). Cette opération exige la génération d'un nouvel instantané.  
   
 -   La colonne à supprimer ne peut pas être utilisée dans les clauses de filtrage d'un article quelconque d'une publication de la base de données.  
   
--   La suppression d'une colonne d'un article publié nécessite la prise en compte des éventuels contraintes, index ou propriétés de la colonne susceptibles d'affecter la base de données. Exemple :  
+-   La suppression d'une colonne d'un article publié nécessite la prise en compte des éventuels contraintes, index ou propriétés de la colonne susceptibles d'affecter la base de données. Par exemple :  
   
     -   Vous ne pouvez pas supprimer les colonnes utilisées dans une clé primaire d'articles de publications transactionnelles car elles sont utilisées par la réplication.  
   
@@ -144,11 +145,12 @@ ms.locfileid: "68199459"
         ||100RTM, instantané natif|100RTM, instantané en mode caractère|Tous les autres niveaux de compatibilité|  
         |-|-----------------------------|--------------------------------|------------------------------------|  
         |`hierarchyid`|Autoriser la modification|Bloquer la modification|Bloquer la modification|  
-        |`geography` et `geometry`|Autoriser la modification|Autoriser la modification<sup>1</sup>|Bloquer la modification|  
+        |`geography` et `geometry`|Autoriser la modification|Autoriser le changement<sup>1</sup>|Bloquer la modification|  
         |`filestream`|Autoriser la modification|Bloquer la modification|Bloquer la modification|  
-        |`date`, `time`, `datetime2` et `datetimeoffset`|Autoriser la modification|Autoriser la modification<sup>1</sup>|Bloquer la modification|  
+        |
+  `date`, `time`, `datetime2` et `datetimeoffset`|Autoriser la modification|Autoriser le changement<sup>1</sup>|Bloquer la modification|  
   
-         <sup>1</sup> abonnés SQL Server Compact convertissent ces types de données sur l’abonné.  
+         <sup>1</sup> SQL Server Compact abonnés convertissent ces types de données sur l’abonné.  
   
 -   Si une erreur se produit lors de l'application d'une modification de schéma (par exemple une erreur résultant de l'ajout d'une clé étrangère référençant une table non disponible sur l'Abonné), la synchronisation échoue et l'abonnement doit être réinitialisé.  
   
@@ -158,7 +160,7 @@ ms.locfileid: "68199459"
   
 ## <a name="see-also"></a>Voir aussi  
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
- [ALTER VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-view-transact-sql)   
+ [Instruction ALTER VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-view-transact-sql)   
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   
  [ALTER FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-function-transact-sql)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-trigger-transact-sql)   

@@ -13,16 +13,16 @@ ms.assetid: 3aee61c7-a9b7-4596-b78e-5828a00d0281
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9efe0f39ce304501096d9dcc682a0ea5d5137ee7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926999"
 ---
-# <a name="capture-ado-error-codes"></a>Capturer les Codes d’erreur ADO
-En plus des erreurs de fournisseur renvoyées dans le [erreur](../../../ado/reference/ado-api/error-object.md) les objets de la [erreurs](../../../ado/reference/ado-api/errors-collection-ado.md) collection, ADO peut renvoyer des erreurs au mécanisme de gestion des exceptions de votre environnement d’exécution. Utiliser, le mécanisme d’interception des erreurs votre langage de programmation, tels que le **en cas d’erreur** instruction dans Microsoft® Visual Basic, ou la **try-catch** bloquer dans Microsoft Visual C++®, pour capturer les erreurs ADO.
+# <a name="capture-ado-error-codes"></a>Capturer les codes d’erreur ADO
+Outre les erreurs de fournisseur retournées dans les objets [Error](../../../ado/reference/ado-api/error-object.md) de la collection [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) , ADO lui-même peut retourner des erreurs au mécanisme de gestion des exceptions de votre environnement d’exécution. Utilisez le mécanisme d’interception des erreurs de votre langage de programmation, tel que l’instruction **On Error** dans Microsoft® Visual Basic ou le bloc **try-catch** dans Microsoft Visual C++®, pour capturer les erreurs ADO.
 
- Pour la liste des codes d’erreur ADO, consultez [ErrorValueEnum](../../../ado/reference/ado-api/errorvalueenum.md).
+ Pour obtenir la liste des codes d’erreur ADO, consultez [ErrorValueEnum](../../../ado/reference/ado-api/errorvalueenum.md).
 
 ## <a name="see-also"></a>Voir aussi
- [Objet d’erreur](../../../ado/reference/ado-api/error-object.md) [Collection d’erreurs (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)
+ [Error Object](../../../ado/reference/ado-api/error-object.md) [, collection d’erreurs (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)

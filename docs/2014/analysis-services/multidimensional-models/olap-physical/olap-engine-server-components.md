@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0537be8bda9c367fc381140183b10ddf383cf16a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889525"
 ---
 # <a name="olap-engine-server-components"></a>Composants serveur du moteur OLAP
@@ -48,22 +48,22 @@ ms.locfileid: "68889525"
   
  L'illustration suivante présente l'architecture des composants [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], y compris tous les éléments majeurs s'exécutant dans l'instance [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et tous les composants utilisateur qui interagissent avec l'instance. L'illustration montre également que la seule façon d'accéder à l'instance est d'utiliser le composant d'écoute XMLA (XML for Analysis), à l'aide de HTTP ou TCP.  
   
- ![Diagramme de l’architecture du système Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/analysisservicessystemarchitecture.gif "Diagramme de l’architecture du système Analysis Services")  
+ ![Schéma de l'architecture système Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/analysisservicessystemarchitecture.gif "Schéma de l'architecture système Analysis Services")  
   
 ## <a name="xmla-listener"></a>Écouteur XMLA  
- Le composant écouteur XMLA gère toutes les communications XMLA entre [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et ses clients. Le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] paramètre de configuration dans le fichier msmdsrv. ini peut être utilisé pour spécifier un port sur lequel une instance écoute. `Port` La valeur 0 dans ce fichier indique qu' [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] écoute sur le port par défaut. Sauf spécification contraire, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] utilise par défaut les ports TCP suivants :  
+ Le composant écouteur XMLA gère toutes les communications XMLA entre [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et ses clients. Le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] `Port` paramètre de configuration dans le fichier msmdsrv. ini peut être utilisé pour spécifier un port sur lequel [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] une instance écoute. La valeur 0 dans ce fichier indique qu' [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] écoute sur le port par défaut. Sauf spécification contraire, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] utilise par défaut les ports TCP suivants :  
   
-|d’|Description|  
+|Port|Description|  
 |----------|-----------------|  
-|2383|Instance par défaut de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
-|2382|Redirecteur pour d’autres instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|2383|Instance par défaut [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]de.|  
+|2382|Redirecteur pour d’autres instances [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]de.|  
 |Affectation dynamique au démarrage du serveur|Instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
   
  Pour plus d’informations, consultez [configurer le pare-feu Windows pour autoriser l’accès à la Analysis Services](../../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Règles &#40;d’affectation des noms d’objets Analysis Services&#41;](object-naming-rules-analysis-services.md)   
- [Architecture physique &#40;Analysis Services - Données multidimensionnelles&#41;](understanding-microsoft-olap-physical-architecture.md)   
- [Architecture &#40;logique Analysis Services-données multidimensionnelles&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)  
+ [Règles d’affectation des noms d’objets &#40;Analysis Services&#41;](object-naming-rules-analysis-services.md)   
+ [Architecture physique &#40;Analysis Services-données multidimensionnelles&#41;](understanding-microsoft-olap-physical-architecture.md)   
+ [Architecture logique &#40;Analysis Services-données multidimensionnelles&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
   

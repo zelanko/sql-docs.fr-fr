@@ -10,10 +10,10 @@ ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: a9f1ab0eaca67eb1e5266f11381f316607031635
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251718"
 ---
 # <a name="data-quality-services-concepts"></a>Concepts Data Quality Services
@@ -46,7 +46,7 @@ ms.locfileid: "75251718"
 ##  <a name="Projects"></a>Concepts des projets de qualité des données  
  Le gestionnaire de données effectue des opérations de qualité des données (nettoyage et correspondance) à l'aide d'un projet de qualité des données dans l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
- **Nettoyage des données**  
+ **Data Cleansing**  
   
  Le nettoyage de données dans DQS s'effectue sur la base des connaissances dans une base de connaissances DQS. Le nettoyage de données dans DQS est un processus en deux étapes :  
   
@@ -73,7 +73,7 @@ ms.locfileid: "75251718"
   
  L'analyse des activités affiche l'état de chaque activité comprise dans une plage de données, fournit des données pour chaque activité et permet aux administrateurs DQS de contrôler une activité. Pour plus d’informations, consultez [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md).  
   
- **Configuré**  
+ **Configuration**  
   
  L'option de configuration vous permet de :  
   

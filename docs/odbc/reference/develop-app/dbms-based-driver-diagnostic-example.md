@@ -1,5 +1,5 @@
 ---
-title: Exemple de Diagnostic de pilote de SGBD | Microsoft Docs
+title: Exemple de diagnostic de pilote basé sur SGBD | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: a80d54b0-43ff-4dfd-b6cb-f4694a5ed765
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ef42fe2ab881a7e24d680e0dd941cbea0d95488f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076895"
 ---
 # <a name="dbms-based-driver-diagnostic-example"></a>Exemple de diagnostic d’un pilote de SGBD
-Un pilote de SGBD envoie des demandes à un SGBD et retourne des informations à l’application via le Gestionnaire de pilotes. Étant donné que le pilote est le composant qui sert d’interface avec le Gestionnaire de pilotes, il met en forme et retourne les arguments pour **SQLGetDiagRec**.  
+Un pilote basé sur un SGBD envoie des demandes à un SGBD et renvoie des informations à l’application via le gestionnaire de pilotes. Étant donné que le pilote est le composant qui s’interface avec le gestionnaire de pilotes, il met en forme et retourne les arguments pour **SQLGetDiagRec**.  
   
- Par exemple, si, à l’aide des Services/SQL, un pilote Microsoft pour Oracle Rdb a rencontré un nom de curseur non valide, elle peut retourner les valeurs suivantes à partir de **SQLGetDiagRec**:  
+ Par exemple, si, à l’aide de SQL/services, un pilote Microsoft pour la RDB Oracle a rencontré un nom de curseur non valide, il peut retourner les valeurs suivantes à partir de **SQLGetDiagRec**:  
   
 ```  
 SQLSTATE:         "34000"  
@@ -32,9 +32,9 @@ Native Error:      0
 Diagnostic Msg:   "[Microsoft][ODBC Rdb Driver]Invalid cursor name: EMPLOYEE_CURSOR."  
 ```  
   
- Étant donné que l’erreur s’est produite dans le pilote, il ajouté préfixes pour le message de diagnostic pour le fournisseur ([Microsoft]) et le (pilote [ODBC Rdb]).  
+ Étant donné que l’erreur s’est produite dans le pilote, elle a ajouté des préfixes au message de diagnostic pour le fournisseur ([Microsoft]) et le pilote ([pilote ODBC RDB]).  
   
- Si le SGBD ne peut pas trouver la table EMPLOYEE, le pilote peut mettre en forme et retourner les valeurs suivantes à partir de **SQLGetDiagRec**:  
+ Si le SGBD n’a pas trouvé la table EMPLOYee, le pilote peut formater et retourner les valeurs suivantes à partir de **SQLGetDiagRec**:  
   
 ```  
 SQLSTATE:         "42S02"  
@@ -43,4 +43,4 @@ Diagnostic Msg:   "[Microsoft][ODBC Rdb Driver][Rdb] %SQL-F-RELNOTDEF, Table EMP
                   "is not defined in schema."  
 ```  
   
- Étant donné que l’erreur s’est produite dans la source de données, le pilote ajouté un préfixe de l’identificateur de source de données ([Rdb]) pour le message de diagnostic. Étant donné que le pilote a été le composant connectée à la source de données, il ajouté préfixes pour son fournisseur ([Microsoft]) et l’identificateur ([ODBC Rdb pilote]) pour le message de diagnostic.
+ Étant donné que l’erreur s’est produite dans la source de données, le pilote a ajouté un préfixe pour l’identificateur de source de données ([RDB]) au message de diagnostic. Étant donné que le pilote était le composant qui a été associé à la source de données, il a ajouté des préfixes pour son fournisseur ([Microsoft]) et son identificateur ([pilote ODBC RDB]) au message de diagnostic.

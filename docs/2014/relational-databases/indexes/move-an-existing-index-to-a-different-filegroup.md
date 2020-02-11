@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd3c7f0bb394025581e4a2dffc8eb79a43acb498
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63036215"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Déplacer un index existant dans un autre groupe de fichiers
@@ -34,7 +34,7 @@ ms.locfileid: "63036215"
   
      [Sécurité](#Security)  
   
--   **Pour placer un index existant dans un autre groupe de fichiers à l'aide de :**  
+-   **Pour déplacer un index existant vers un autre groupe de fichiers, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63036215"
   
 3.  Cliquez avec le bouton droit sur la table avec l’index que vous souhaitez déplacer et sélectionnez **Conception**.  
   
-4.  Dans le menu **Concepteur de tables** , cliquez sur **Index/Clés**.  
+4.  Dans le menu **Concepteur de tables** , cliquez sur **index/clés**.  
   
 5.  Sélectionnez l'index à déplacer.  
   
@@ -101,10 +101,10 @@ ms.locfileid: "63036215"
   
  Les informations suivantes sont disponibles dans la page **Stockage** de la boîte de dialogue **Propriétés de l’index -** _nom_index_ :  
   
- **Groupe de fichiers**  
+ **Fichiers**  
  Stocke l'index dans le groupe de fichiers spécifié. La liste répertorie uniquement les groupes de fichiers standard (row). Le groupe de fichiers PRIMARY de la base de données est sélectionné par défaut dans la liste.  
   
- **Groupe de fichiers Filestream**  
+ **Groupe de fichiers FILESTREAM**  
  Spécifie le groupe de fichiers pour les données FILESTREAM. Cette liste affiche uniquement des groupes de fichiers FILESTREAM. Le groupe de fichiers sélectionné par défaut dans la liste est le groupe PRIMARY FILESTREAM.  
   
  **Schéma de partition**  
@@ -112,12 +112,12 @@ ms.locfileid: "63036215"
   
  L'option Schéma de partition n'est pas disponible s'il n'y a pas de schémas de partition dans la base de données.  
   
- **Schéma de partition Filestream**  
+ **Schéma de partition FileStream**  
  Spécifie le schéma de partition utilisé pour les données FILESTREAM. Ce schéma de partition doit être symétrique avec celui spécifié dans l'option **Schéma de partition** .  
   
  Si la table n'est pas partitionnée, le champ est vide.  
   
- **Paramètre du schéma de partition**  
+ **Paramètre de schéma de partition**  
  Affiche le nom de la colonne qui participe au schéma de partition.  
   
  **Colonne de table**  
@@ -129,7 +129,7 @@ ms.locfileid: "63036215"
 > [!NOTE]  
 >  Si la colonne de table est une colonne calculée, **Type de données de la colonne** contient la mention « colonne calculée ».  
   
- **Autoriser le traitement en ligne des instructions DML lors du déplacement de l'index**  
+ **Autoriser le traitement en ligne des instructions DML lors du déplacement de l’index**  
  Permet aux utilisateurs d'accéder à la table sous-jacente ou aux données des index cluster et à tous les index non-cluster associés pendant l'opération d'index.  
   
 > [!NOTE]  
@@ -145,7 +145,7 @@ ms.locfileid: "63036215"
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>Pour placer un index existant dans un autre groupe de fichiers  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

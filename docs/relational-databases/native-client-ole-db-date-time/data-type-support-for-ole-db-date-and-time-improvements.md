@@ -14,37 +14,38 @@ ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29983ce06bf5f50b4d555cee6a8997b22ccefc10
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 0c3eec754255d38979892c6e1e2d99e03e274897
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73770182"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76909619"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Prise en charge des types de données pour les améliorations de date et d’heure OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Cette rubrique fournit des informations sur les types de OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) qui prennent en charge les types de données de date/heure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Cette rubrique fournit des informations sur les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types OLE DB (Native Client) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prennent en charge les types de données date/heure.  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Mappage de type de données dans les ensembles de lignes et les paramètres  
  OLE DB fournit deux nouveaux types de données pour prendre en charge les nouveaux types de serveurs : DBTYPE_DBTIME2 et DBTYPE_DBTIMESTAMPOFFSET. Le tableau ci-dessous illustre le mappage complet des types de serveurs :  
   
-|Type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Type de données OLE DB|Value|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de données|Type de données OLE DB|Valeur|  
 |-----------------------------------------|----------------------|-----------|  
-|datetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
+|DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
-|date|DBTYPE_DBDATE|133 (oledb.h)|  
+|Date|DBTYPE_DBDATE|133 (oledb.h)|  
 |time|DBTYPE_DBTIME2|145 (sqlncli. h)|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (sqlncli. h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
   
 ## <a name="data-formats-strings-and-literals"></a>Formats de données : chaînes et littéraux  
   
-|Type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Type de données OLE DB|Format de chaîne pour les conversions clientes|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de données|Type de données OLE DB|Format de chaîne pour les conversions clientes|  
 |-----------------------------------------|----------------------|------------------------------------------|  
-|datetime|DBTYPE_DBTIMESTAMP|'aaaa-mm-jj hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge jusqu'à trois chiffres de fractions de seconde pour le type Datetime.|  
+|DATETIME|DBTYPE_DBTIMESTAMP|'aaaa-mm-jj hh:mm:ss[.999]'<br /><br /> 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge jusqu'à trois chiffres de fractions de seconde pour le type Datetime.|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|'aaaa-mm-jj hh:mm:ss'<br /><br /> Ce type de données possède une précision d'une minute. Le composant des secondes sera égal à zéro en sortie et arrondi par le serveur en entrée.|  
-|date|DBTYPE_DBDATE|'aaaa-mm-jj'|  
+|Date|DBTYPE_DBDATE|'aaaa-mm-jj'|  
 |time|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> Le cas échéant, les fractions de seconde peuvent être spécifiées à l'aide de sept chiffres au plus.|  
 |datetime2|DBTYPE_DBTIMESTAMP|'aaaa-mm-jj hh:mm:ss[.fffffff]'<br /><br /> Le cas échéant, les fractions de seconde peuvent être spécifiées à l'aide de sept chiffres au plus.|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|'aaaa-mm-jj hh:mm:ss[.fffffff] +/-hh:mm'<br /><br /> Le cas échéant, les fractions de seconde peuvent être spécifiées à l'aide de sept chiffres au plus.|  
@@ -70,7 +71,7 @@ ms.locfileid: "73770182"
   
 -   La plage des minutes s'étend de 0 à 59.  
   
--   La plage des secondes s'étend de 0 à 59. Cela permet d'ajouter deux secondes intercalaires (au plus) pour conserver la synchronisation avec l'heure sidérale.  
+-   La plage des secondes s'étend de 0 à 59. Ceci permet d’ajouter jusqu’à deux secondes intercalaires pour conserver la synchronisation avec l’heure sidérale.  
   
  Les implémentations pour les structs OLE DB existants suivants ont été modifiées afin de prendre en charge les nouveaux types de données de date et d'heure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Toutefois, les définitions n'ont pas changé.  
   
@@ -159,7 +160,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- Les applications qui migrent vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client qui utilisent des **sql_variant** et s’appuient sur la précision limitée de **DateTime** devront être mises à jour si le schéma sous-jacent est mis à jour pour utiliser **datetime2** plutôt que **DateTime**.  
+ Les applications qui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] migrent vers Native Client qui utilisent des **sql_variant** et s’appuient sur la précision limitée de **DateTime** devront être mises à jour si le schéma sous-jacent est mis à jour pour utiliser **datetime2** plutôt que **DateTime**.  
   
  Les macros d'accès pour SSVARIANT ont également été étendues avec l'addition des éléments suivants :  
   
@@ -173,16 +174,16 @@ enum SQLVARENUM {
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>Mappage des types de données dans ITableDefinition::CreateTable  
  Le mappage de type suivant est utilisé avec les structures DBCOLUMNDESC utilisées par ITableDefinition :: CreateTable :  
   
-|Type de données OLE DB (*wType*)|Type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Remarques|  
+|Type de données OLE DB (*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de données|Notes|  
 |----------------------------------|-----------------------------------------|-----------|  
-|DBTYPE_DBDATE|date||  
-|DBTYPE_DBTIMESTAMP|**datetime2**(p)|Le fournisseur d’OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client inspecte le membre DBCOLUMDESC *bScale* pour déterminer la précision en fractions de seconde.|  
-|DBTYPE_DBTIME2|**time**(p)|Le fournisseur d’OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client inspecte le membre DBCOLUMDESC *bScale* pour déterminer la précision en fractions de seconde.|  
-|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|Le fournisseur d’OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client inspecte le membre DBCOLUMDESC *bScale* pour déterminer la précision en fractions de seconde.|  
+|DBTYPE_DBDATE|Date||  
+|DBTYPE_DBTIMESTAMP|**datetime2**(p)|Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client inspecte le membre *bScale* DBCOLUMDESC pour déterminer la précision en fractions de seconde.|  
+|DBTYPE_DBTIME2|**heure**(p)|Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client inspecte le membre *bScale* DBCOLUMDESC pour déterminer la précision en fractions de seconde.|  
+|DBTYPE_DBTIMESTAMPOFFSET|**DateTimeOffset**(p)|Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client inspecte le membre *bScale* DBCOLUMDESC pour déterminer la précision en fractions de seconde.|  
   
  Lorsqu’une application spécifie DBTYPE_DBTIMESTAMP dans *wType*, elle peut remplacer le mappage par **datetime2** en fournissant un nom de type dans *pwszTypeName*. Si **DateTime** est spécifié, *bScale* doit avoir la valeur 3. Si **smalldatetime** est spécifié, *bScale* doit avoir la valeur 0. Si *bScale* n’est pas cohérent avec *wType* et *pwszTypeName*, DB_E_BADSCALE est retourné.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Améliorations des types de données de date et d’heure &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [Améliorations de la date et de l’heure &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

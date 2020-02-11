@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: fa7df2782b8102e386c70d5e874a25f7868dbb1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68071080"
 ---
 # <a name="cluster-dmx"></a>Cluster (DMX)
@@ -31,15 +31,15 @@ Cluster()
  Cette fonction ne peut être utilisée que si le modèle d'exploration de données sous-jacent prend en charge le clustering.  
   
 ## <a name="return-type"></a>Type de retour  
- Le **Cluster** fonction ne nécessite pas de paramètres.  
+ La fonction de **cluster** ne requiert pas de paramètres.  
   
- Le **Cluster** fonction retourne une valeur scalaire d’un nom de cluster. Toutefois, si vous utilisez cette fonction en tant qu’argument d’une autre fonction, vous devez la considérer comme un \<référence de colonne de cluster >.  
+ La fonction **cluster** retourne une valeur scalaire d’un nom de cluster. Toutefois, si vous utilisez cette fonction en tant qu’argument d’une autre fonction, vous devez la considérer \<comme une référence de colonne de cluster>.  
   
 ## <a name="remarks"></a>Notes  
- **Cluster** peut également être utilisé comme un `<`référence de colonne de cluster`>` pour un **PredictHistogram** (fonction).  
+ **Le cluster** peut également être utilisé en `<`tant que référence`>` de colonne de cluster pour une fonction **PredictHistogram** .  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant utilise une requête singleton avec le [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) et fonctions pour retourner la distance séparant le cas individuel à partir de chaque cluster du modèle d’exploration de données TM Clustering du Cluster et le probabilité que le cas individuel existe dans chaque cluster.  
+ L’exemple suivant utilise une requête singleton avec les fonctions [&#40;DMX&#41;](../dmx/predicthistogram-dmx.md) et cluster pour retourner la distance du cas individuel de chaque cluster du modèle d’exploration de données de clustering TM et la probabilité que le cas individuel existe dans chaque cluster.  
   
 ```  
 SELECT  
@@ -55,9 +55,9 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)   
- [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [ClusterProbability&#41;DMX &#40;](../dmx/clusterprobability-dmx.md)   
+ [Informations de référence sur les fonctions DMX&#41; Data Mining Extensions &#40;](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Fonctions &#40;&#41;DMX](../dmx/functions-dmx.md)   
+ [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)  
   
   

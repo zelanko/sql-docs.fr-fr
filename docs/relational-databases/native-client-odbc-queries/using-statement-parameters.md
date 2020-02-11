@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2e5cec08809ffbd0d51ce017bbd5ff09f45410f4
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779540"
 ---
 # <a name="using-statement-parameters"></a>Utilisation de paramètres d'instruction
@@ -35,7 +35,7 @@ ms.locfileid: "73779540"
   
 -   améliorer l'interaction de l'utilisateur lors de la construction de critères de requête ;  
   
--   Gérez les données **Text**, **ntext**et **image** et les types de données C spécifiques à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Gérer les données **Text**, **ntext**et **image** et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]les types de données C spécifiques.  
   
  Par exemple, une table de **pièces** contient des colonnes nommées **partid**, **Description**et **Price**. L'ajout d'un article sans paramètres requiert la construction d'une instruction SQL telle que :  
   

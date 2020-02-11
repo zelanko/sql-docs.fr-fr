@@ -13,13 +13,13 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 15a9ea69771699cf2b845d8018dfad1d1af511d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014079"
 ---
-# <a name="polygon"></a>Polygon
+# <a name="polygon"></a>Polygone
   Un `Polygon` est une surface à deux dimensions stockée en tant que séquence de points définissant un anneau englobant extérieur et zéro ou plusieurs anneaux intérieurs.  
   
 ## <a name="polygon-instances"></a>Instances Polygon  
@@ -29,7 +29,7 @@ ms.locfileid: "66014079"
   
  L'illustration suivante montre des exemples d'instances `Polygon`.  
   
- ![Exemples d’instances Polygon géométriques](../../database-engine/media/polygon.gif "Exemples d’instances Polygon géométriques")  
+ ![Exemples d'instances Polygon géométriques](../../database-engine/media/polygon.gif "Exemples d'instances Polygon géométriques")  
   
  Comme indiqué par l'illustration :  
   
@@ -64,7 +64,8 @@ DECLARE @g4 geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(3 0, 6 0, 6 3, 
 DECLARE @g5 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';  
 ```  
   
- Comme le montrent `@g4` and `@g5`, une instance `Polygon` acceptée peut ne pas être une instance `Polygon` valide. `@g5` montre également qu’une instance Polygon doit contenir uniquement un anneau avec quatre points quelconques à accepter.  
+ Comme le montrent `@g4` and `@g5`, une instance `Polygon` acceptée peut ne pas être une instance `Polygon` valide. 
+  `@g5` montre également qu’une instance Polygon doit contenir uniquement un anneau avec quatre points quelconques à accepter.  
   
  Les exemples suivants lèvent une `System.FormatException` parce que les instances `Polygon` ne sont pas acceptées.  
   
@@ -73,7 +74,9 @@ DECLARE @g1 geometry = 'POLYGON((1 1, 3 3, 1 1))';
 DECLARE @g2 geometry = 'POLYGON((1 1, 3 3, 3 1, 1 5))';  
 ```  
   
- `@g1` n'est pas accepté parce que l'instance `LineString` pour l'anneau extérieur ne contient pas assez de points. `@g2` n'est pas accepté car le point de départ de l'instance `LineString` de l'anneau extérieur n'est pas identique au point de fin. L'exemple suivant a un anneau extérieur acceptable, mais l'anneau intérieur n'est pas acceptable. Cela lève également une `System.FormatException`.  
+ 
+  `@g1` n'est pas accepté parce que l'instance `LineString` pour l'anneau extérieur ne contient pas assez de points. 
+  `@g2` n'est pas accepté car le point de départ de l'instance `LineString` de l'anneau extérieur n'est pas identique au point de fin. L'exemple suivant a un anneau extérieur acceptable, mais l'anneau intérieur n'est pas acceptable. Cela lève également une `System.FormatException`.  
   
 ```  
 DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))';  
@@ -91,7 +94,8 @@ DECLARE @g3 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g3` est valide parce que les deux anneaux intérieurs se touchent à un point unique et ne se croisent pas l’un l’autre. L'exemple suivant montre des instances `Polygon` qui ne sont pas valides.  
+ 
+  `@g3` est valide parce que les deux anneaux intérieurs se touchent à un point unique et ne se croisent pas l’un l’autre. L'exemple suivant montre des instances `Polygon` qui ne sont pas valides.  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (20 0, 0 10, 0 -20, 20 0))';  
@@ -103,7 +107,13 @@ DECLARE @g6 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.STIsValid(), @g6.STIsValid();  
 ```  
   
- `@g1` n’est pas valide, car la boucle interne touche l’anneau intérieur à deux endroits. `@g2` n’est pas valide, car le deuxième anneau intérieur est à l’intérieur du premier anneau intérieur. `@g3` n’est pas valide, car les deux anneaux intérieurs se touchent au niveau de plusieurs points consécutifs. `@g4` n’est pas valide, car les parties intérieures des deux anneaux intérieurs se chevauchent. `@g5` n’est pas valide, car l’anneau extérieur n’est pas le premier anneau. `@g6` n’est pas valide, car la boucle n’a pas au moins trois points distincts.  
+ 
+  `@g1` n’est pas valide, car la boucle interne touche l’anneau intérieur à deux endroits. 
+  `@g2` n’est pas valide, car le deuxième anneau intérieur est à l’intérieur du premier anneau intérieur. 
+  `@g3` n’est pas valide, car les deux anneaux intérieurs se touchent au niveau de plusieurs points consécutifs. 
+  `@g4` n’est pas valide, car les parties intérieures des deux anneaux intérieurs se chevauchent. 
+  `@g5` n’est pas valide, car l’anneau extérieur n’est pas le premier anneau. 
+  `@g6` n’est pas valide, car la boucle n’a pas au moins trois points distincts.  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant crée une instance `geometry``Polygon` simple avec un trou et un SRID 10.  
@@ -146,9 +156,9 @@ SELECT @g.ToString()
   
 ## <a name="see-also"></a>Voir aussi  
  [STArea &#40;type de données geometry&#41;](/sql/t-sql/spatial-geometry/starea-geometry-data-type)   
- [STExteriorRing &#40;type de données geometry&#41;](/sql/t-sql/spatial-geometry/stexteriorring-geometry-data-type)   
- [STNumInteriorRing &#40;type de données geometry&#41;](/sql/t-sql/spatial-geometry/stnuminteriorring-geometry-data-type)   
- [STInteriorRingN &#40;type de données geometry&#41;](/sql/t-sql/spatial-geometry/stinteriorringn-geometry-data-type)   
+ [Type de données STExteriorRing &#40;Geometry&#41;](/sql/t-sql/spatial-geometry/stexteriorring-geometry-data-type)   
+ [Type de données STNumInteriorRing &#40;Geometry&#41;](/sql/t-sql/spatial-geometry/stnuminteriorring-geometry-data-type)   
+ [Type de données STInteriorRingN &#40;Geometry&#41;](/sql/t-sql/spatial-geometry/stinteriorringn-geometry-data-type)   
  [STCentroid &#40;type de données geometry&#41;](/sql/t-sql/spatial-geometry/stcentroid-geometry-data-type)   
  [STPointOnSurface &#40;type de données geometry&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   
  [MultiPolygon](../spatial/polygon.md)   

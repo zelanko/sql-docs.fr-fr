@@ -18,18 +18,18 @@ ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 795a806b1b945407a2db947f6037c435efe68b56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010511"
 ---
-# <a name="spsyspolicyaddpolicycategorysubscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription (Transact-SQL)
+# <a name="sp_syspolicy_add_policy_category_subscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ajoute un abonnement aux catégories de stratégies à la base de données spécifiée.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,18 +42,18 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @target_type = ] 'target_type'` Est le type de cible de l’abonnement aux catégories. *target_type* est **sysname**, est requis et doit être définie sur 'DATABASE'.  
+`[ @target_type = ] 'target_type'`Type de cible de l’abonnement aux catégories. *target_type* est de **type sysname**, est obligatoire et doit avoir la valeur’Database'.  
   
-`[ @target_object = ] 'target_object'` Est le nom de la base de données qui peuvent s’abonner à la catégorie. *target_object* est **sysname**et est requis.  
+`[ @target_object = ] 'target_object'`Nom de la base de données qui s’abonnera à la catégorie. *target_object* est de **type sysname**et est obligatoire.  
   
-`[ @policy_category = ] 'policy_category'` Est le nom de la catégorie de stratégie pour vous abonner à. *policy_category* est **sysname**et est requis.  
+`[ @policy_category = ] 'policy_category'`Nom de la catégorie de stratégie à laquelle s’abonner. *policy_category* est de **type sysname**et est obligatoire.  
   
- Pour obtenir les valeurs de *policy_category*, interrogez la vue système msdb.dbo.syspolicy_policy_categories.  
+ Pour obtenir des valeurs pour *policy_category*, interrogez la vue système msdb. dbo. syspolicy_policy_categories.  
   
-`[ @policy_category_subscription_id = ] policy_category_subscription_id` Est l’identificateur pour l’abonnement aux catégories. *policy_category_subscription_id* est **int**et est retourné en tant que sortie.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id`Identificateur de l’abonnement aux catégories. *policy_category_subscription_id* est de **type int**et est retourné en tant que output.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
  Vous devez exécuter sp_syspolicy_add_policy_category_subscription dans le contexte de la base de données système msdb.  

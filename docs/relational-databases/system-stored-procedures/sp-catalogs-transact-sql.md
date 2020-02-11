@@ -18,18 +18,18 @@ ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0844001016f67d227b4612176b2804dcda0a3d29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68045943"
 ---
-# <a name="spcatalogs-transact-sql"></a>sp_catalogs (Transact-SQL)
+# <a name="sp_catalogs-transact-sql"></a>sp_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Renvoie la liste des catalogues du serveur lié spécifié. Ceci est équivalent aux bases de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,14 +39,14 @@ sp_catalogs [ @server_name = ] 'linked_svr'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @server_name = ] 'linked_svr'` Est le nom d’un serveur lié. *linked_svr* est **sysname**, sans valeur par défaut.  
+`[ @server_name = ] 'linked_svr'`Nom d’un serveur lié. *linked_svr* est de **type sysname**, sans valeur par défaut.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**Catalog_name**|**nvarchar(** 128 **)**|Nom du catalogue|  
-|**Description**|**nvarchar(** 4000 **)**|Description du catalogue.|  
+|**Catalog_name**|**nvarchar (** 128 **)**|Nom du catalogue|  
+|**Description**|**nvarchar (** 4000 **)**|Description du catalogue.|  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur le schéma.  
@@ -55,7 +55,7 @@ sp_catalogs [ @server_name = ] 'linked_svr'
  L'exemple suivant renvoie des informations sur les catalogues du serveur lié `OLE DB ODBC Linked Server #3`.  
   
 > [!NOTE]  
->  Pour **sp_catalogs** pour fournir des informations utiles, la `OLE DB ODBC Linked Server #3` doit déjà exister.  
+>  Par **sp_catalogs** pour fournir des informations utiles, `OLE DB ODBC Linked Server #3` le doit déjà exister.  
   
 ```  
 USE master;  

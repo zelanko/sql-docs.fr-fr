@@ -1,5 +1,5 @@
 ---
-title: Propriété MaxRecords, exemple (VC ++) | Microsoft Docs
+title: MaxRecords, exemple de propriété (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bde93002771c219b6358cd1ecd1325fd77208d8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932245"
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords, exemple de propriété (VC++)
-Cet exemple utilise le [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) propriété pour ouvrir un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) contenant les 10 plus chers dans le ***titres*** table.  
+Cet exemple utilise la propriété [maxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) pour ouvrir un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) contenant les 10 titres les plus chers dans la table ***titles*** .  
   
 ## <a name="example"></a>Exemple  
   
@@ -165,17 +165,17 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Titres des dix principaux par prix :**  
-**Mais elle est adaptée à l’utilisateur ? ---22,95**  
-**Ordinateur des personnes Phobic et Non allergiques au : Variations de comportement---21,59**  
-**Oignons, Leeks et ail : Secrets de la Méditerranée---20.95 la cuisine**  
-**Secrets de la Silicon Valley---20,00**  
-**Guide de base de données de l’exécutif occupé---(19,99 dollars)**  
-**Une discussion sur les ordinateurs---(19,99 dollars)**  
-**Traite de la Silicon Valley gastronomique---(19,99 dollars)**  
-**Prolonge la privation de données : Quatre études de cas---(19,99 dollars)**  
+ **Les dix principaux titres par prix :**  
+**Mais est-ce que l’utilisateur est convivial ? ---22,95**  
+**Phobic d’ordinateur et non-phobic : variations de comportement---21,59**  
+**Oignons, poireaux et aulx : cuisine secrets de la Méditerranée---20,95**  
+**Secrets de Silicon Valley---20,00**  
+**Le Guide de base de données du directeur occupé---19,99**  
+**Parler en direct des ordinateurs---19,99**  
+**Silicon Valley Gastronomic traite---19,99**  
+**Données prolongées : quatre études de cas---19,99**  
 **Sushi, tout le monde ? ---14,99**  
-**Cinquante années dans Buckingham Palace cuisines---11.95**   
+**50 ans dans Buckingham Palace cuisines---11,95**   
 ## <a name="see-also"></a>Voir aussi  
  [MaxRecords, propriété (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

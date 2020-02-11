@@ -11,10 +11,10 @@ ms.assetid: 835a032c-e37c-4f35-8ab0-5e4ae25c2e9b
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a62ad36e17fd25a922615ed4d7b8a49c12a14adf
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728611"
 ---
 # <a name="change-the-order-of-attributes"></a>Changer l'ordre des attributs
@@ -23,7 +23,7 @@ ms.locfileid: "73728611"
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez changer l'ordre des attributs.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -46,7 +46,7 @@ ms.locfileid: "73728611"
   
     -   Si l’attribut concerne les membres consolidés, sélectionnez **Consolidé** dans la zone de liste **Types de membre** .  
   
-    -   Si l’attribut concerne les collections, sélectionnez **Collection** dans la zone de liste **Types de membres** .  
+    -   Si l’attribut concerne les collections, sélectionnez **Collection** dans la zone de liste **Types de membre** .  
   
 6.  Sélectionnez la ligne de l’attribut dont vous souhaitez modifier l’ordre.  
   

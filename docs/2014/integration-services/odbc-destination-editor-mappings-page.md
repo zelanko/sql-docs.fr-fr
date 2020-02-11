@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Destination ODBC (Page mappages) | Microsoft Docs
+title: Éditeur de destination ODBC (page Mappages) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6f5deb525654007248fbc5c97c07e3c368654ad5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057227"
 ---
 # <a name="odbc-destination-editor-mappings-page"></a>Éditeur de destination ODBC (page Mappages)

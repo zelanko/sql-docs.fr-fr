@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1a78aac96c0f0362c36367511035d8e4544b2017
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762791"
 ---
-# <a name="mssqlserver7937"></a>MSSQLSERVER_7937
+# <a name="mssqlserver_7937"></a>MSSQLSERVER_7937
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|7937|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|7937|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_FS_MISSING_COLUMN_DIRECTORY|  
-|Texte du message|Erreur de table, Répertoire FileStream pour l’ID de colonne C_ID de l’ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID est introuvable.|  
+|Texte du message|Erreur de table : le répertoire Filestream correspondant à l'ID de colonne C_ID de l'ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID est introuvable.|  
   
 ## <a name="explanation"></a>Explication  
  La colonne spécifiée existe dans une partition ; toutefois, son répertoire FILESTREAM correspondant est introuvable dans l'espace de données FILESTREAM.  

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6518a46c44a97fbb386b4479454e89a0eccb1a39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101748"
 ---
 # <a name="role-definitions"></a>Définitions de rôles
@@ -32,7 +32,8 @@ ms.locfileid: "66101748"
  Il existe deux types de définitions de rôles : les définitions au niveau élément et les définitions au niveau système. Une *définition de rôle au niveau élément* décrit les tâches associées aux éléments qui sont stockés et gérés sur un serveur de rapports, comme des rapports, des dossiers et des modèles. Gérer les rapports, Afficher les dossiers et Gérer les abonnements individuels sont des exemples de tâches que vous pouvez inclure dans une définition de rôle au niveau élément. Une *définition de rôle système* inclut les tâches qui s’appliquent au site dans son ensemble. Afficher les propriétés du serveur de rapports est un exemple de tâche que vous pouvez inclure dans un rôle système.  
   
 ## <a name="predefined-roles"></a>Predefined Roles  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] comprend des rôles prédéfinis qui correspondent à différents niveaux d’interaction de l’utilisateur. Les rôles prédéfinis que vous pouvez utiliser sont répertoriés ci-dessous :  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] comprend des rôles prédéfinis qui correspondent à différents niveaux d’interaction de l’utilisateur. Les rôles prédéfinis que vous pouvez utiliser sont répertoriés ci-dessous :  
   
 -   Gestionnaire de contenu, Serveur de publication, Lecteur, Générateur de rapports et Mes rapports sont des définitions de rôles au niveau élément que vous pouvez utiliser lors de la création d'attributions de rôles pour accéder au contenu du serveur de rapports.  
   
@@ -45,9 +46,9 @@ ms.locfileid: "66101748"
   
  Un rôle doit avoir un nom unique. Pour être valide, la définition de rôle doit contenir au moins une tâche. Pour plus d’informations, consultez [Tâches et autorisations](tasks-and-permissions.md).  
   
- Pour créer une définition de rôle, utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Pour plus d’informations, consultez [Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md).  
+ Pour créer une définition de rôle, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]utilisez. Pour plus d’informations, consultez [Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md).  
   
- Après avoir créé une définition de rôle, vous pouvez l'utiliser en la sélectionnant dans une attribution de rôle. Pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](grant-user-access-to-a-report-server.md).  
+ Après avoir créé une définition de rôle, vous pouvez l'utiliser en la sélectionnant dans une attribution de rôle. Pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](grant-user-access-to-a-report-server.md)ne doit être attribué qu'à un nombre très limité d'utilisateurs.  
   
 ## <a name="customize-or-delete-a-role-definition"></a>Personnaliser ou supprimer une définition de rôle  
  Les rôles prédéfinis peuvent être modifiés ou remplacés par des rôles personnalisés. Pour modifier un rôle, vous ajoutez ou supprimez des tâches de la définition de rôle. Vous ne pouvez pas renommer un rôle. Toute modification d'une définition de rôle est immédiatement appliquée à toutes les attributions de rôles qui incluent cette définition de rôle.  
@@ -59,7 +60,7 @@ ms.locfileid: "66101748"
  [Octroi d'autorisations sur un serveur de rapports en mode natif](granting-permissions-on-a-native-mode-report-server.md)   
  [Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
  [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](grant-user-access-to-a-report-server.md)   
- [Modifier ou supprimer une affectation de rôle &#40;Gestionnaire de rapports&#41;](role-assignments-modify-or-delete.md)   
+ [Modifier ou supprimer une attribution de rôle &#40;Gestionnaire de rapports&#41;](role-assignments-modify-or-delete.md)   
  [Définir les autorisations sur les éléments du serveur de rapports sur un site SharePoint &#40;Reporting Services en mode intégré SharePoint&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
   

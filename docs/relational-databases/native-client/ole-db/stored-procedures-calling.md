@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c30e6ca03f1d1d4c794d01bd594efd88306410e3
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73759045"
 ---
 # <a name="stored-procedures---calling"></a>Procédures stockées - Appel
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Une procédure stockée peut avoir entre zéro et plusieurs paramètres. Elle peut également retourner une valeur. Lorsque vous utilisez le fournisseur de OLE DB Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les paramètres d’une procédure stockée peuvent être passés par :  
+  Une procédure stockée peut avoir entre zéro et plusieurs paramètres. Elle peut également retourner une valeur. Lorsque vous utilisez [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le fournisseur de OLE DB Native Client, les paramètres d’une procédure stockée peuvent être passés par :  
   
 -   via un codage effectué de manière irréversible de la valeur de données ;  
   
@@ -46,7 +46,7 @@ ms.locfileid: "73759045"
   
 1.  Indiquez les informations de paramètre dans un tableau de structures DBPARAMBINDINFO, notamment le nom du paramètre, le nom spécifique au fournisseur pour le type de données du paramètre ou un nom de type de données standard, etc. Chaque structure du tableau décrit un paramètre. Ce tableau est ensuite passé à la méthode **SetParameterInfo**.  
   
-2.  Appelez la méthode **ICommandWithParameters::SetParameterInfo** pour décrire les paramètres au fournisseur. **SetParameterInfo** spécifie le type de données natif de chaque paramètre. Les arguments de **SetParameterInfo** sont :  
+2.  Appelez la méthode **ICommandWithParameters::SetParameterInfo** pour décrire les paramètres au fournisseur. **SetParameterInfo** spécifie le type de données natif de chaque paramètre. Les arguments **SetParameterInfo** sont les suivants :  
   
     -   le nombre de paramètres pour lesquels définir des informations de type ;  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73759045"
 5.  Exécutez la commande en utilisant **ICommand::Execute**.  
 
 ## <a name="methods-of-calling-a-stored-procedure"></a>Méthodes d'appel d'une procédure stockée  
- Lors de l’exécution d’une procédure stockée dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], le fournisseur de OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge les éléments suivants :  
+ Lors de l’exécution d’une procédure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]stockée [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans, le fournisseur OLE DB Native Client prend en charge les éléments suivants :  
   
 -   séquence d'échappement ODBC CALL ;  
   
@@ -94,7 +94,7 @@ ms.locfileid: "73759045"
   
  La syntaxe générale pour l'appel d'une procédure à l'aide de la séquence d'échappement ODBC CALL est :  
   
- {[ **? =** ]**appel**_PROCEDURE_NAME_[ **(** [*paramètre*] [ **,** [*paramètre*]]... **)** ]}  
+ {[**? =**]**appel**_PROCEDURE_NAME_[**(**[*paramètre*] [**,**[*paramètre*]]... **)**]}  
   
  Par exemple :  
   
@@ -107,7 +107,7 @@ ms.locfileid: "73759045"
   
  Lorsque la séquence d'échappement RPC est utilisée pour exécuter une procédure stockée, le fournisseur n'appelle pas de fonction d'assistance pour déterminer les informations de paramètre (comme il le fait dans le cas de la syntaxe ODBC CALL). La syntaxe RPC est plus simple que la syntaxe ODBC CALL ; par conséquent, la commande est analysée plus rapidement, ce qui améliore les performances. Dans ce cas, vous devez fournir les informations de paramètre en exécutant **ICommandWithParameters::SetParameterInfo**.  
   
- La séquence d'échappement RPC nécessite que vous disposiez d'une valeur de retour. Si la procédure stockée ne retourne pas de valeur, le serveur retourne 0 par défaut. De plus, vous ne pouvez pas ouvrir de curseur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur la procédure stockée. La procédure stockée est préparée implicitement et l’appel à **ICommandPrepare::Prepare** échoue. En raison de l’impossibilité de préparer un appel RPC, vous ne pouvez pas interroger les métadonnées de colonne ; IColumnsInfo :: GetColumnInfo et IColumnsRowset :: GetColumnsRowset retournent DB_E_NOTPREPARED.  
+ La séquence d'échappement RPC nécessite que vous disposiez d'une valeur de retour. Si la procédure stockée ne retourne pas de valeur, le serveur retourne 0 par défaut. De plus, vous ne pouvez pas ouvrir de curseur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur la procédure stockée. La procédure stockée est préparée implicitement et l’appel à **ICommandPrepare::Prepare** échoue. En raison de l'incapacité de préparer un appel RPC, vous ne pouvez pas interroger les métadonnées des colonnes ; IColumnsInfo::GetColumnInfo et IColumnsRowset::GetColumnsRowset retourneront DB_E_NOTPREPARED.  
   
  Si vous connaissez toutes les métadonnées de paramètre, la séquence d'échappement RPC est la méthode recommandée pour exécuter les procédures stockées.  
   
@@ -117,10 +117,10 @@ ms.locfileid: "73759045"
 {rpc SalesByCategory}  
 ```  
   
- Pour obtenir un exemple d’application qui illustre une séquence d’échappement RPC, consultez [exécuter &#40;une procédure stockée à l’aide de la&#41; syntaxe &#40;RPC&#41;et traiter les codes de retour et les paramètres de sortie OLE DB](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ Pour obtenir un exemple d’application qui illustre une séquence d’échappement RPC, consultez [exécuter une procédure stockée &#40;à l’aide de la syntaxe rpc&#41; et traiter les codes de retour et les paramètres de sortie &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Instruction Transact-SQL EXECUTE  
- La séquence d’échappement ODBC CALL et la séquence d’échappement RPC sont les méthodes recommandées pour l’appel d’une procédure stockée, plutôt que l’instruction [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). Le fournisseur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB utilise le mécanisme RPC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour optimiser le traitement des commandes. Ce protocole RPC augmente les performances en supprimant une bonne partie du traitement des paramètres et de l'analyse des instructions sur le serveur.  
+ La séquence d’échappement ODBC CALL et la séquence d’échappement RPC sont les méthodes recommandées pour l’appel d’une procédure stockée, plutôt que l’instruction [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client utilise le mécanisme RPC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de pour optimiser le traitement des commandes. Ce protocole RPC augmente les performances en supprimant une bonne partie du traitement des paramètres et de l'analyse des instructions sur le serveur.  
   
  Voici un exemple d’instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE** :  
   

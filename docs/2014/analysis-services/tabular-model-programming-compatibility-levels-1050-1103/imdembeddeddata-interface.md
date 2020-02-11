@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757776"
 ---
 # <a name="imdembedded-interface"></a>Interface IMDEmbedded
@@ -30,16 +30,16 @@ ms.locfileid: "62757776"
   
 -   Annuler l'opération incorporée actuelle.  
   
--   Obtenir la taille estimée (en octets) du flux de données pour enregistrer l'objet incorporé. Hérité de l'objet `IPersistStream`.  
+-   Obtenir la taille estimée (en octets) du flux de données pour enregistrer l'objet incorporé. Hérité de `IPersistStream`.  
   
--   Vérifier si la base de données incorporée a changé depuis le dernier enregistrement. Hérité de l'objet `IPersistStream`.  
+-   Vérifier si la base de données incorporée a changé depuis le dernier enregistrement. Hérité de `IPersistStream`.  
   
--   Charger la base de données incorporée dans le moteur local ou in-process. Hérité de l'objet `IPersistStream`.  
+-   Charger la base de données incorporée dans le moteur local ou in-process. Hérité de `IPersistStream`.  
   
--   Enregistrer la base de données locale ou in-process sur le flux de données incorporé dans le document conteneur. Hérité de l'objet `IPersistStream`.  
+-   Enregistrer la base de données locale ou in-process sur le flux de données incorporé dans le document conteneur. Hérité de `IPersistStream`.  
   
-## <a name="reference"></a>Référence  
- La référence suivante documente la `IMDEmbedded` telle que présentée dans l’interface **msmd.h** fichier d’en-tête.  
+## <a name="reference"></a>Informations de référence  
+ La référence suivante documente `IMDEmbedded` l’interface comme présenté dans le fichier d’en-tête **Msmd. h** .  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>Fichier source : PXOEmbeddedData.idl  
   
@@ -103,13 +103,13 @@ HRESULT GetStreamIdentifier (
   
  Les valeurs possibles pour DBPROP_MSMD_EMBEDDED_DATA sont :  
   
-|Nom|Value|Définition|  
+|Name|Valeur|Définition|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|Aucune base de données incorporée disponible|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|L'application actuelle contient la base de données incorporée|  
 |DBPROPVAL_EMBED_LINKED|0x02|La base de données incorporée est hébergée dans une application distante (c.-à-d. SharePoint Server)|  
   
-#### <a name="source"></a>`Source`  
+#### <a name="source"></a>Source  
   
 ```  
 [id(1), helpstring("Get identifier used to look up embedded stream in container document")]   
@@ -139,7 +139,7 @@ HRESULT SetContainerURL (
  `E_FAIL`  
  Une erreur s'est produite lors de la définition de l'URL de conteneur.  
   
-#### <a name="source"></a>`Source`  
+#### <a name="source"></a>Source  
   
 ```  
 [id(2), helpstring("Set the URL for the document containing the embedded stream")]   
@@ -169,7 +169,7 @@ HRESULT SetHosted (
  `E_FAIL`  
  Une erreur s'est produite lors de la définition de l'indicateur.  
   
-#### <a name="source"></a>`Source`  
+#### <a name="source"></a>Source  
   
 ```  
 [id(5), helpstring("Set flag indicating if the application is in a hosted environment")]   
@@ -199,7 +199,7 @@ HRESULT SetTempDirPath (
  `E_FAIL`  
  Une erreur s'est produite lors de la définition du chemin d'accès.  
   
-#### <a name="source"></a>`Source`  
+#### <a name="source"></a>Source  
   
 ```  
 [id(4), helpstring("Set the path used by the host application for temporary files")]   
@@ -229,7 +229,7 @@ HRESULT Cancel ( void )
  `E_FAIL`  
  Une erreur s'est produite lors de l'annulation de l'opération incorporée.  
   
-#### <a name="source"></a>`Source`  
+#### <a name="source"></a>Source  
   
 ```  
 [id(5), helpstring("Cancel the current operation")]   
@@ -245,7 +245,7 @@ HRESULT GetSizeMax (
 ```  
   
 #### <a name="description"></a>Description  
- Obtient la taille estimée (en octets) du flux de données pour enregistrer l'objet incorporé. Hérité de l'objet `IPersistStream`.  
+ Obtient la taille estimée (en octets) du flux de données pour enregistrer l'objet incorporé. Hérité de `IPersistStream`.  
   
 #### <a name="parameters"></a>Paramètres  
  *in_bstrPath*  
@@ -265,10 +265,10 @@ HRESULT IsDirty ( void )
 ```  
   
 #### <a name="description"></a>Description  
- Vérifie si la base de données incorporée a changé depuis le dernier enregistrement. Hérité de l'objet `IPersistStream`.  
+ Vérifie si la base de données incorporée a changé depuis le dernier enregistrement. Hérité de `IPersistStream`.  
   
 #### <a name="parameters"></a>Paramètres  
- none  
+ Aucun  
   
 #### <a name="return-values"></a>Valeur(s) de retour  
  `S_OK`  
@@ -289,7 +289,7 @@ HRESULT Load (
 ```  
   
 #### <a name="description"></a>Description  
- Charge la base de données incorporée dans le moteur local ou in-process. Hérité de l'objet `IPersistStream`.  
+ Charge la base de données incorporée dans le moteur local ou in-process. Hérité de `IPersistStream`.  
   
 #### <a name="parameters"></a>Paramètres  
  *in_pStm*  
@@ -315,7 +315,7 @@ HRESULT Save (
 ```  
   
 #### <a name="description"></a>Description  
- Enregistre la base de données locale ou in-process sur le flux de données incorporé dans le document conteneur. Hérité de l'objet `IPersistStream`.  
+ Enregistre la base de données locale ou in-process sur le flux de données incorporé dans le document conteneur. Hérité de `IPersistStream`.  
   
 #### <a name="parameters"></a>Paramètres  
  *in_pStm*  

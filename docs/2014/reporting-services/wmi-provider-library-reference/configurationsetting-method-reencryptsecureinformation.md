@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef1a23d21e5945e15d497bab3480b48f8cf3fe6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098209"
 ---
-# <a name="reencryptsecureinformation-method-wmi-msreportserverconfigurationsetting"></a>Méthode ReencryptSecureInformation (WMI MSReportServer_ConfigurationSetting)
+# <a name="reencryptsecureinformation-method-wmi-msreportserver_configurationsetting"></a>Méthode ReencryptSecureInformation (WMI MSReportServer_ConfigurationSetting)
   Génère une nouvelle clé de chiffrement et rechiffre toutes les informations sécurisées dans le catalogue à l'aide de cette nouvelle clé.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -39,7 +39,7 @@ public void ReencryptSecureInformation (out Int32 HRESULT, out string[] Extended
 ```  
   
 ## <a name="parameters"></a>Paramètres  
- *HRESULT*  
+ *SIGNÉ*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
   
  *ExtendedErrors[]*  
@@ -57,8 +57,8 @@ public void ReencryptSecureInformation (out Int32 HRESULT, out string[] Extended
   
  Si cette méthode est exécutée sur un ordinateur dans un déploiement avec montée en puissance parallèle, chaque ordinateur dans le déploiement avec montée en puissance parallèle doit être réinitialisé.  
   
-## <a name="requirements"></a>Configuration requise  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+## <a name="requirements"></a>Spécifications  
+ **Espace de noms :**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

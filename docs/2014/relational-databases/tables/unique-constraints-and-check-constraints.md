@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196674"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Contraintes uniques et contraintes de validation
@@ -45,13 +45,13 @@ ms.locfileid: "68196674"
   
  Vous pouvez appliquer plusieurs contraintes CHECK à une seule colonne. Vous pouvez aussi appliquer une seule contrainte CHECK à plusieurs colonnes en la créant au niveau de la table. Ainsi, vous pouvez utiliser une contrainte CHECK sur plusieurs colonnes pour confirmer que les lignes comportant la valeur **USA** dans leur colonne **country_region** possèdent également une valeur à deux caractères dans leur colonne **state** . Cela permet de vérifier plusieurs conditions au même emplacement.  
   
- Les contraites CHECK sont similaires aux contraintes FOREIGN KEY dans la mesure où elles contrôlent les valeurs qui sont placées dans une colonne. La différence réside dans la manière dont elles déterminent les valeurs considérées comme valides : Contraintes FOREIGN KEY obtiennent la liste des valeurs valides d’une autre table, tandis que les contraintes CHECK déterminent ces valeurs à partir d’une expression logique.  
+ Les contraites CHECK sont similaires aux contraintes FOREIGN KEY dans la mesure où elles contrôlent les valeurs qui sont placées dans une colonne. Leur différence réside dans la manière dont elles déterminent les valeurs considérées comme valides : les contraintes FOREIGN KEY obtiennent la liste des valeurs valides d'une autre table, tandis que les contraintes CHECK déterminent ces valeurs sur la base d'une expression logique.  
   
 > [!CAUTION]  
 >  Les contraintes qui incluent une conversion de type de données implicite ou explicite peuvent causer l'échec de certaines opérations. Par exemple, ces contraintes définies sur des tables qui sont les sources d'une commutation de partition peuvent causer l'échec d'une opération ALTER TABLE...SWITCH. Évitez les conversions de types de données dans les définitions des contraintes.  
   
 ### <a name="limitations-of-check-constraints"></a>Limitations des contraintes CHECK  
- Les contraintes CHECK rejettent les valeurs qui donnent FALSE. Comme les valeurs nulles donnent UNKNOWN, il se peut que leur présence dans les expressions supplante une contrainte. Par exemple, supposons que vous placez une contrainte sur une `int` colonne **MyColumn** en spécifiant que **MyColumn** peut contenir uniquement la valeur 10 (**MyColumn = 10**). Si vous insérez la valeur NULL dans **MyColumn**, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] insère NULL et ne retourne pas d'erreur.  
+ Les contraintes CHECK rejettent les valeurs qui donnent FALSE. Comme les valeurs nulles donnent UNKNOWN, il se peut que leur présence dans les expressions supplante une contrainte. Par exemple, supposons que vous placez une contrainte `int` sur **une colonne** MaColonne en spécifiant **que** MaColonne peut contenir uniquement la valeur 10 (**MaColonne = 10**). Si vous insérez la valeur NULL dans **MyColumn**, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] insère NULL et ne retourne pas d'erreur.  
   
  Une contrainte CHECK retourne TRUE lorsque la condition qu'elle vérifie n'est pas FALSE pour une ligne quelconque de la table. Une contrainte CHECK s'exécute au niveau de la ligne. Si une table venant d'être créée ne comporte aucune ligne, les éventuelles contraintes CHECK sur cette table sont considérées comme valides. Cette situation peut produire des résultats inattendus, comme l'illustre l'exemple suivant.  
   
@@ -93,10 +93,10 @@ DELETE CheckTbl WHERE col1 = 10;
 |----------|-----------|  
 |Décrit comment créer une contrainte unique.|[Créer des contraintes uniques](../tables/create-unique-constraints.md)|  
 |Décrit comment modifier une contrainte unique.|[Modifier des contraintes uniques](../tables/modify-unique-constraints.md)|  
-|Décrit comment supprimer une contrainte unique.|[Supprimer des contraintes UNIQUE](../tables/delete-unique-constraints.md)|  
-|Décrit comment désactiver une contrainte de validation lorsque l'Agent de réplication insère ou met à jour les données dans votre table.|[Désactiver des contraintes de validation lors de la réplication](../tables/disable-check-constraints-for-replication.md)|  
+|Décrit comment supprimer une contrainte unique.|[Supprimer des contraintes uniques](../tables/delete-unique-constraints.md)|  
+|Décrit comment désactiver une contrainte de validation lorsque l'Agent de réplication insère ou met à jour les données dans votre table.|[Désactiver des contraintes de validation pour la réplication](../tables/disable-check-constraints-for-replication.md)|  
 |Décrit comment désactiver une contrainte de validation lorsque vous ajoutez, mettez à jour ou supprimez des données dans une table.|[Désactiver des contraintes de validation avec des instructions INSERT et UPDATE](../tables/disable-check-constraints-with-insert-and-update-statements.md)|  
-|Décrit comment modifier l'expression de contrainte ou les options qui activent ou désactivent la contrainte pour des conditions spécifiques.|[Modifier des contraintes CHECK](../tables/modify-check-constraints.md)|  
+|Décrit comment modifier l'expression de contrainte ou les options qui activent ou désactivent la contrainte pour des conditions spécifiques.|[Modifier des contraintes de validation](../tables/modify-check-constraints.md)|  
 |Décrit comment supprimer une contrainte de validation.|[Supprimer des contraintes de validation](../tables/delete-check-constraints.md)|  
 |Décrit comment afficher les propriétés d'une contrainte de validation.|[Contraintes uniques et contraintes de validation](../tables/unique-constraints-and-check-constraints.md)|  
   
