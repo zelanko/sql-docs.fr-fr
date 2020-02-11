@@ -18,16 +18,16 @@ ms.assetid: da51b0f8-5ad0-4aeb-96ed-2b3672a2a6e2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d3bddc4642d13fe84d35782849a80d2737601763
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106406"
 ---
-# <a name="msmergealtsyncpartners-transact-sql"></a>MSmerge_altsyncpartners (Transact-SQL)
+# <a name="msmerge_altsyncpartners-transact-sql"></a>MSmerge_altsyncpartners (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Le **MSmerge_altsyncpartners** table effectue le suivi de l’association de qui sont les partenaires de synchronisation en cours pour un serveur de publication. Cette table est stockée dans les bases de données de publication et d’abonnement.  
+  Le tableau **MSmerge_altsyncpartners** effectue le suivi de l’Association des partenaires de synchronisation actuels pour un serveur de publication. Cette table est stockée dans les bases de données de publication et d’abonnement.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -36,7 +36,7 @@ ms.locfileid: "68106406"
 |**description**|**nvarchar(255)**|Description du partenaire de synchronisation alternatif.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vues de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

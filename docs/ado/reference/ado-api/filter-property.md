@@ -16,85 +16,85 @@ ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ff06bc27e765945d1cca74b5f8401e0caadf6b17
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918630"
 ---
 # <a name="filter-property"></a>Filter, propriété
-Indique un filtre pour les données dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Indique un filtre pour les données d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour
 
-Définit ou retourne un **Variant** valeur, qui peut contenir un des éléments suivants :  
+Définit ou retourne une valeur de **type Variant** , qui peut contenir l’un des éléments suivants :  
   
--   **Chaîne de critères :** Une chaîne constituée d’une ou plusieurs clauses individuelles concaténées avec **AND** ou **OR** opérateurs.  
+-   **Chaîne de critères :** Chaîne constituée d’une ou plusieurs clauses individuelles concaténées avec les opérateurs **and** ou **or.**  
   
--   **Tableau de signets :** Tableau de signet unique valeurs qui pointent vers les enregistrements dans le **Recordset** objet.  
+-   **Tableau de signets :** Tableau de valeurs de signets uniques qui pointent vers des enregistrements dans l’objet **Recordset** .  
   
--   Un [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) valeur.  
+-   Valeur [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) .  
   
 ## <a name="remarks"></a>Notes
 
-Utilisez le **filtre** propriété à filtrer les enregistrements dans une **Recordset** objet. Filtrés **Recordset** devient le curseur actuel. Autres propriétés qui retournent des valeurs basées sur actuel **curseur** sont affectés, tels que [AbsolutePosition propriété (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [AbsolutePage propriété (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md), [ RecordCount, propriété (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md), et [PageCount, propriété (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md). Définition de la **filtre** propriété à une nouvelle valeur spécifique déplace l’enregistrement actif vers le premier enregistrement qui satisfait à la nouvelle valeur.
+Utilisez la propriété **Filter pour filtrer** de manière sélective les enregistrements d’un objet **Recordset** . Le **Recordset** filtré devient le curseur actuel. Les autres propriétés qui retournent des valeurs basées sur le **curseur** actuel sont affectées, telles que [ABSOLUTEPOSITION Property (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [AbsolutePage Property (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md), [RecordCount Property (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)et [PageCount Property (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md). La définition de la propriété **Filter** sur une nouvelle valeur spécifique déplace l’enregistrement actif vers le premier enregistrement qui satisfait la nouvelle valeur.
   
-La chaîne de critères se compose de clauses sous la forme *NomChamp-Opérateur-valeur* (par exemple, `"LastName = 'Smith'"`). Vous pouvez créer des clauses composées en concaténant des clauses avec **AND** (par exemple, `"LastName = 'Smith' AND FirstName = 'John'"`) ou **OR** (par exemple, `"LastName = 'Smith' OR LastName = 'Jones'"`). Pour les chaînes de critères, procédez comme suit :
+La chaîne de critères est composée de clauses au format *fieldName-Operator-value* (par exemple, `"LastName = 'Smith'"`). Vous pouvez créer des clauses composées en concaténant des clauses individuelles avec **et** ( `"LastName = 'Smith' AND FirstName = 'John'"`par exemple,) ou **ou** ( `"LastName = 'Smith' OR LastName = 'Jones'"`par exemple,). Pour les chaînes de critères, utilisez les instructions suivantes :
 
--   *FieldName* doit être un nom de champ valide à partir de la **Recordset**. Si le nom du champ contienne des espaces, vous devez placer le nom entre crochets.  
+-   *FieldName* doit être un nom de champ valide du **Recordset**. Si le nom du champ contient des espaces, vous devez placer le nom entre crochets.  
   
--   Opérateur doit être une des opérations suivantes : \<, >, \<=, > =, <>, =, ou **comme**.  
+-   L’opérateur doit être l’un des suivants \<:, > \<, =, >=,  <>, = ou **Like**.  
   
--   La valeur est la valeur avec laquelle vous allez comparer les valeurs de champ (par exemple, « Smith », #8/24/95 #, 12,345 ou 50,00 $). Utilisez des guillemets simples avec des chaînes et les signes dièse (##) avec des dates. Pour les nombres, vous pouvez utiliser décimales, signes dollar et la notation scientifique. Si l’opérateur est **comme**, valeur peut utiliser des caractères génériques. Uniquement l’astérisque (*) et le signe de pourcentage (%) les caractères génériques sont autorisés, et ils doivent être le dernier caractère de la chaîne. Valeur ne peut pas être null.  
+-   La valeur est la valeur avec laquelle vous allez comparer les valeurs de champ (par exemple, « Smith », #8/24/95 #, 12,345 ou $50,00). Utilisez des guillemets simples avec des chaînes et des signes dièse (#) avec des dates. Pour les nombres, vous pouvez utiliser des points décimaux, des signes dollar et une notation scientifique. Si l’opérateur est **comme**, la valeur peut utiliser des caractères génériques. Uniquement l’astérisque (*) et le signe de pourcentage (%) les caractères génériques sont autorisés et doivent être le dernier caractère de la chaîne. Value cannot be null.  
   
 > [!NOTE]
->  Pour inclure des guillemets simples (') dans le filtre de valeur, utilisez deux guillemets simples pour représenter un. Par exemple, pour filtrer sur o ' Malley, la chaîne de critères doit être `"col1 = 'O''Malley'"`. Pour inclure des guillemets simples au début et la fin de la valeur de filtre, délimitez la chaîne avec les signes dièse (#). Par exemple, pour filtrer sur '1', la chaîne de critères doit être `"col1 = #'1'#"`.  
+>  Pour inclure des guillemets simples (') dans la valeur de filtre, utilisez deux guillemets simples pour en représenter un. Par exemple, pour filtrer sur O’Malley, la chaîne de critères doit `"col1 = 'O''Malley'"`être. Pour inclure des guillemets simples à la fois au début et à la fin de la valeur de filtre, mettez la chaîne entre signes dièse (#). Par exemple, pour filtrer sur « 1 », la chaîne de critères doit `"col1 = #'1'#"`être.  
   
--   Il n’existe aucune priorité entre AND et ou. Clauses peuvent être regroupées dans les parenthèses. Toutefois, vous ne peut pas regrouper les clauses liées par OR et puis joindre le groupe à une autre clause avec un AND, comme dans l’extrait de code suivant :  
+-   Il n’existe aucune priorité entre AND et OR. Les clauses peuvent être regroupées entre parenthèses. Toutefois, vous ne pouvez pas regrouper les clauses jointes par ou, puis joindre le groupe à une autre clause avec un et, comme dans l’extrait de code suivant :  
  `(LastName = 'Smith' OR LastName = 'Jones') AND FirstName = 'John'`  
   
--   Au lieu de cela, vous devez construire ce filtre en tant que  
+-   Au lieu de cela, vous construisez ce filtre en tant que  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   Dans un **comme** clause, vous pouvez utiliser un caractère générique au début et à la fin du modèle. Par exemple, vous pouvez utiliser `LastName Like '*mit*'`. Ou avec **comme** vous pouvez utiliser un caractère générique uniquement à la fin du modèle. Par exemple, `LastName Like 'Smit*'`.  
+-   Dans une clause **Like** , vous pouvez utiliser un caractère générique au début et à la fin du modèle. Par exemple, vous pouvez utiliser `LastName Like '*mit*'`. Ou avec **Like** , vous pouvez utiliser un caractère générique uniquement à la fin du modèle. Par exemple : `LastName Like 'Smit*'`.  
   
- Les constantes de filtre facilitent la résolution des conflits d’enregistrements individuels lors des mises à jour par lot en vous permettant d’afficher, par exemple, uniquement les enregistrements qui ont été affectés pendant la dernière [méthode UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) appel de méthode.  
+ Les constantes de filtre facilitent la résolution des conflits d’enregistrements individuels pendant le mode de mise à jour par lot en vous permettant d’afficher, par exemple, uniquement les enregistrements qui ont été affectés lors du dernier appel de la méthode [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) .  
   
-Définition de la **filtre** propriété proprement dite peut échouer en raison d’un conflit avec les données sous-jacentes. Par exemple, cet échec peut se produire lorsqu’un enregistrement a déjà été supprimé par un autre utilisateur. Dans ce cas, le fournisseur retourne des avertissements dans le [erreurs Collection (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md) collection, mais n’interrompt ne pas l’exécution du programme. Une erreur au moment de l’exécution se produit uniquement en cas de conflits sur tous les enregistrements demandés. Utilisez le [Status, propriété (objet Recordset ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md) propriété pour localiser les enregistrements en conflit.  
+La définition de la propriété de **filtre** peut échouer en raison d’un conflit avec les données sous-jacentes. Par exemple, cet échec peut se produire lorsqu’un enregistrement a déjà été supprimé par un autre utilisateur. Dans ce cas, le fournisseur renvoie des avertissements à la collection d' [Erreurs (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md) , mais n’interrompt pas l’exécution du programme. Une erreur au moment de l’exécution se produit uniquement en cas de conflit sur tous les enregistrements demandés. Utilisez la propriété [Status Property (ADO Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md) pour localiser les enregistrements avec des conflits.  
   
-Définissant le **filtre** en une chaîne de longueur nulle (« ») a le même effet que l’utilisation de la **adFilterNone** constante.
+La définition de la propriété **Filter** sur une chaîne de longueur nulle ("") a le même effet que l’utilisation de la constante **adFilterNone** .
   
-Chaque fois que le **filtre** propriété est définie, la position actuelle se déplace vers le premier enregistrement dans le sous-ensemble filtré des enregistrements dans la **Recordset**. De même, lorsque le **filtre** propriété est désactivée, la position actuelle se déplace vers le premier enregistrement dans le **Recordset**.
+Chaque fois que la propriété **Filter** est définie, la position actuelle de l’enregistrement est déplacée vers le premier enregistrement du **jeu**d’enregistrements filtré. De même, lorsque la propriété **Filter** est désactivée, la position de l’enregistrement actif est déplacée vers le premier enregistrement du **jeu d’enregistrements**.
 
-Supposons qu’un **Recordset** est filtrée selon un champ d’un type variant, telles que le type sql_variant. Une erreur (DISP_E_TYPEMISMATCH ou 80020005) se produit lorsque les sous-types des valeurs de champ et le filtre utilisés dans la chaîne de critères ne correspondent pas. Par exemple, supposons que :
+Supposez qu’un **jeu d’enregistrements** est filtré en fonction d’un champ d’un type Variant, tel que le type sql_variant. Une erreur (DISP_E_TYPEMISMATCH ou 80020005) se produit lorsque les sous-types des valeurs de champ et de filtre utilisées dans la chaîne de critères ne correspondent pas. Par exemple, supposons que :
 
-- Un **Recordset** objet (rs) contienne une colonne (C) du type sql_variant.
-- Et une valeur de 1 du type I4 a été attribué à un champ de cette colonne. La chaîne de critères a la valeur `rs.Filter = "C='A'"` sur le champ.
+- Un objet **Recordset** (RS) contient une colonne (C) du type sql_variant.
+- Une valeur de 1 du type I4 a été affectée à un champ de cette colonne. La chaîne de critères est définie `rs.Filter = "C='A'"` sur sur le champ.
 
-Cette configuration génère l’erreur pendant l’exécution. Toutefois, `rs.Filter = "C=2"` appliquée sur le même champ ne produira pas une erreur. Et le champ est filtré hors de l’ensemble d’enregistrements actuel.
+Cette configuration génère l’erreur au moment de l’exécution. Toutefois, `rs.Filter = "C=2"` appliquée au même champ, aucune erreur n’est générée. Et le champ est exclu du jeu d’enregistrements actuel.
 
-Consultez le [signet propriété (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md) propriété pour obtenir une explication des valeurs de signet à partir de laquelle vous pouvez créer un tableau à utiliser avec la propriété de filtre.
+Pour obtenir une explication des valeurs de signet à partir desquelles vous pouvez créer un tableau à utiliser avec la propriété de filtre, consultez la propriété [Bookmark, propriété (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md) .
 
-Seuls les filtres sous la forme de chaînes de critères affectent le contenu d’un rendu persistant **Recordset**. Un exemple d’une chaîne de critères est `OrderDate > '12/31/1999'`. Les filtres créés avec un tableau de signets, ou à l’aide d’une valeur comprise entre le **FilterGroupEnum**, n’affectent pas le contenu du rendu persistant **Recordset**. Ces règles s’appliquent aux jeux d’enregistrements créés avec les curseurs côté client ou côté serveur.
+Seuls les filtres sous la forme de chaînes de critères affectent le contenu d’un **jeu d’enregistrements**persistant. Un exemple de chaîne de critères est `OrderDate > '12/31/1999'`. Les filtres créés avec un tableau de signets, ou à l’aide d’une valeur de **FilterGroupEnum**, n’affectent pas le contenu de l' **objet Recordset**persistant. Ces règles s’appliquent aux jeux d’enregistrements créés à l’aide de curseurs côté client ou côté serveur.
   
 > [!NOTE]
->  Lorsque vous appliquez l’indicateur adFilterPendingRecords à un filtré et modifié **Recordset** dans le mode de mise à jour par lot, la résultante **Recordset** est vide si le filtrage était basé sur le champ clé d’un table à clé unique et la modification a été effectuée sur les valeurs de champ clé. La résultante **Recordset** sera vide si une des affirmations suivantes est vraie :  
+>  Lorsque vous appliquez l’indicateur adFilterPendingRecords à un **Recordset** filtré et modifié dans le mode de mise à jour par lot, le **jeu d’enregistrements** résultant est vide si le filtrage était basé sur le champ clé d’une table à clé unique et que la modification a été apportée sur les valeurs de champ clés. Le **jeu d’enregistrements** résultant ne sera pas vide si l’une des affirmations suivantes est vraie :  
   
--   Le filtrage était basé sur des champs dans une table à clé unique.  
+-   Le filtrage était basé sur des champs non-clés dans une table à clé unique.  
   
--   Le filtrage reposait sur tous les champs dans une table à plusieurs clés.  
+-   Le filtrage était basé sur tous les champs d’une table à clés multiples.  
   
--   Les modifications ont été effectuées sur les champs non-clé dans une table à clé unique.  
+-   Des modifications ont été apportées sur les champs non-clés d’une table à clé unique.  
   
--   Modifications ont été apportées sur tous les champs dans une table à plusieurs clés.  
+-   Des modifications ont été apportées sur les champs d’une table à clé multiple.  
   
-Le tableau suivant récapitule les effets de **adFilterPendingRecords** dans différentes combinaisons de filtrage et de modifications. La colonne de gauche indique les modifications possibles. Modifications peuvent être effectuées sur un des champs non-clés, sur le champ de clé dans une table à clé unique ou sur un des champs clés dans une table à plusieurs clés. La ligne du haut montre le critère de filtrage. De filtrage peut reposer sur des champs non-clés, le champ de clé dans une table à clé unique ou l’un des champs clés dans une table à plusieurs clés. Les cellules qui montrent les résultats. Un **+** signe signifie que cette application **adFilterPendingRecords** entraîne non vides **Recordset**. Un **-** signe signifie vide **Recordset**.  
+Le tableau suivant récapitule les effets de **adFilterPendingRecords** dans différentes combinaisons de filtrage et de modifications. La colonne de gauche affiche les modifications possibles. Des modifications peuvent être apportées sur l’un des champs non-clés, sur le champ clé d’une table à clé unique ou sur n’importe quel champ clé dans une table à clé multiple. La ligne du haut affiche le critère de filtrage. Le filtrage peut être basé sur n’importe quel champ non indexé, sur le champ clé d’une table à clé unique ou sur l’un des champs clés d’une table à clé multiple. Les cellules qui se croisent affichent les résultats. Un **+** signe plus signifie que l’application de **adFilterPendingRecords** produit un **jeu d’enregistrements**non vide. Un **-** signe moins signifie un **jeu d’enregistrements**vide.  
   
-||Non-Windows clés|Clé unique|Plusieurs clés|
+||Non-clés|Clé unique|Clés multiples|
 |-|--------------|----------------|-------------------|
-|**Non-Windows clés**|+|+|+|
+|**Non-clés**|+|+|+|
 |**Clé unique**|+|-|N/A|
-|**Plusieurs clés**|+|N/A|+|
+|**Clés multiples**|+|N/A|+|
 |||||
   
 ## <a name="applies-to"></a>S'applique à
@@ -103,7 +103,7 @@ Le tableau suivant récapitule les effets de **adFilterPendingRecords** dans dif
   
 ## <a name="see-also"></a>Voir aussi
 
-[Filter et RecordCount, exemple de propriétés (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)
-[Filter et RecordCount propriétés exemple (VC ++)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)
-[Clear, méthode (ADO)](../../../ado/reference/ado-api/clear-method-ado.md) 
- [Optimize, propriété dynamique (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
+[Filter et RecordCount, exemples de propriétés (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)
+[Filter et RecordCount, exemple de propriétés (VC + +)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)
+[Clear, méthode (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)
+[optimize Property-Dynamic (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5d39cfd6ca3eba8222dda09a83fdd809bb7d00e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915049"
 ---
-# <a name="mssqlserver207"></a>MSSQLSERVER_207
+# <a name="mssqlserver_207"></a>MSSQLSERVER_207
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|207|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|207|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SQ_BADCOL|  
 |Texte du message|Nom de colonne non valide : '%.*ls'.|  
@@ -53,7 +53,7 @@ ms.locfileid: "62915049"
   
     1.  FROM  
   
-    2.  ON  
+    2.  ACTIVÉ  
   
     3.  JOIN  
   
@@ -115,11 +115,11 @@ ms.locfileid: "62915049"
     GROUP BY Year;  
     ```  
   
--   La clause WHEN NOT MATCHED BY SOURCE de l'instruction MERGE fait référence à une valeur accessible. Modifiez l'instruction MERGE de façon qu'une ligne au moins soit retournée par la table source dans la clause WHEN NOT MATCHED BY SOURCE. Par exemple, vous devrez peut-être ajouter ou modifier le critère de recherche spécifié pour la clause. Vous pouvez aussi modifier la clause de façon à spécifier une valeur qui ne fait pas référence à la table source. Par exemple, `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`.  
+-   La clause WHEN NOT MATCHED BY SOURCE de l'instruction MERGE fait référence à une valeur accessible. Modifiez l'instruction MERGE de façon qu'une ligne au moins soit retournée par la table source dans la clause WHEN NOT MATCHED BY SOURCE. Par exemple, vous devrez peut-être ajouter ou modifier le critère de recherche spécifié pour la clause. Vous pouvez aussi modifier la clause de façon à spécifier une valeur qui ne fait pas référence à la table source. Par exemple : `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [MERGE &#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql)   
- [FROM &#40;Transact-SQL&#41;](/sql/t-sql/queries/from-transact-sql)   
+ [À partir de &#40;&#41;Transact-SQL](/sql/t-sql/queries/from-transact-sql)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [UPDATE &#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql)  
   

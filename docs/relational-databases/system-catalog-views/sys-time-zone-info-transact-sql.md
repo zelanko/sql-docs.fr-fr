@@ -1,5 +1,5 @@
 ---
-title: sys.time_zone_info (Transact-SQL) | Microsoft Docs
+title: sys. time_zone_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2018
 ms.prod: sql
@@ -19,13 +19,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 69bfcbb7e1eeaf6b456a2e10d1f3bfcc581c3d76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106705"
 ---
-# <a name="systimezoneinfo-transact-sql"></a>sys.time_zone_info (Transact-SQL)
+# <a name="systime_zone_info-transact-sql"></a>sys.time_zone_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Retourne des informations sur les fuseaux horaires pris en charge. Tous les fuseaux horaires installés sur l’ordinateur sont stockés dans la ruche de Registre suivante :  
@@ -33,12 +33,12 @@ ms.locfileid: "68106705"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Nom du fuseau horaire au format standard de Windows. Par exemple, **CEN. Heure d’hiver Australie** ou **Europe centrale**.|  
-|**current_utc_offset**|**nvarchar(12)**|En cours de l’offset UTC. Par exemple, **+ 01:00** ou **-07:00**.|  
-|**is_currently_dst**|**bit**|True si actuellement en observant l’heure d’été.|  
+|**nomme**|**sysname**|Nom du fuseau horaire dans le format standard Windows. Par exemple, l' **heure standard CEN. Australia** ou l’heure d’hiver de l' **Europe centrale**.|  
+|**current_utc_offset**|**nvarchar (12)**|Décalage actuel en heure UTC. Par exemple, **+ 01:00** ou **-07:00**.|  
+|**is_currently_dst**|**bit**|True si vous observez actuellement l’heure d’été.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [GETUTCDATE &#40;Transact-SQL&#41;](../../t-sql/functions/getutcdate-transact-sql.md)   
- [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
- [Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
- [Affichages catalogue de Configuration de l’échelle du serveur &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)  
+ [DANS le fuseau horaire &#40;&#41;Transact-SQL](../../t-sql/queries/at-time-zone-transact-sql.md)   
+ [Fonctions et types de données de date et d’heure &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
+ [Affichages catalogue de configurations à l’ensemble du serveur &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)  

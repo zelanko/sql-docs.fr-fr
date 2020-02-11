@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 11e5b26a9e2a953aff319b41749d2c12be1a880e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63017099"
 ---
 # <a name="change-an-operator39s-availability"></a>Modifier la disponibilité d’un opérateur
@@ -38,7 +38,7 @@ ms.locfileid: "63017099"
   
      [Sécurité](#Security)  
   
--   **Pour modifier la disponibilité d'un opérateur, utilisez :**  
+-   **Pour modifier la disponibilité d’un opérateur, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63017099"
   
 4.  Cliquez avec le bouton droit sur l’opérateur que vous souhaitez activer ou désactiver et sélectionnez **Propriétés**, puis cliquez sur l’onglet **Général** .  
   
-5.  Dans la boîte de dialogue _Propriétés de_**nom_opérateur** , cochez ou décochez la case **Activé** .  
+5.  Dans la boîte de dialogue**Propriétés** de la _operator_name_, activez ou désactivez la case à cocher **activé** .  
   
 6.  Cliquez sur **OK**.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63017099"
   
 #### <a name="to-change-an-operators-availability"></a>Pour modifier la disponibilité d'un opérateur  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

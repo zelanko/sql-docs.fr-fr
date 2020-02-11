@@ -1,5 +1,5 @@
 ---
-title: SQLBindParam, mappage | Microsoft Docs
+title: Mappage SQLBindParam | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,29 +14,29 @@ ms.assetid: 375f8f24-36de-4946-916e-c75abc6f070d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ecec6116ee16f4affa615518a690d2c665648464
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091238"
 ---
 # <a name="sqlbindparam-mapping"></a>SQLBindParam, mappage
-**SQLBindParam** ne peut pas réellement être appelée déconseillé, car il n’a jamais été il dans ODBC ; Toutefois, il représente toujours les fonctionnalités en double : le Gestionnaire de pilotes doit exporter, car les applications ISO et conforme Open groupe l’utiliserez. Étant donné que **SQLBindParameter** contient toutes les fonctionnalités de **SQLBindParam**, **SQLBindParam** seront mappées sur des **SQLBindParameter** (lorsque le pilote sous-jacent est une application ODBC *3.x* pilote). Une application ODBC *3.x* pilote n’a pas besoin d’implémenter **SQLBindParam**.  
+**SQLBindParam** ne peut véritablement pas être appelé comme déconseillé, car il n’existait jamais dans ODBC ; Toutefois, il représente toujours des fonctionnalités dupliquées. le gestionnaire de pilotes doit l’exporter, car les applications ISO et Open Group sont en cours d’utilisation. Comme **SQLBindParameter** contient toutes les fonctionnalités de **SQLBindParam**, **SQLBindParam** sera mappé sur **SQLBindParameter** (lorsque le pilote sous-jacent est un pilote ODBC *3. x* ). Un pilote ODBC *3. x* n’a pas besoin d’implémenter **SQLBindParam**.  
   
 ## <a name="remarks"></a>Notes  
- Lorsque l’appel suivant à **SQLBindParam** est effectuée :  
+ Lorsque l’appel suivant à **SQLBindParam** est effectué :  
   
 ```  
 SQLBindParam(   StatementHandle,    ParameterNumber,    ValueType,    ParameterType,    ColumnSize,    DecimalDigits,    ParameterValuePtr,    StrLen_or_IndPtr)  
 ```  
   
- les appels du Gestionnaire de pilotes **SQLBindParameter** dans le pilote comme suit :  
+ le gestionnaire de pilotes appelle **SQLBindParameter** dans le pilote comme suit :  
   
 ```  
 SQLBindParameter(   StatementHandle,    ParameterNumber,    SQL_PARAM_INPUT,    ValueType,    ParameterType,    ColumnSize,    DecimalDigits,    ParameterValuePtr,    BufferLength,    StrLen_or_IndPtr)  
 ```  
   
- Consultez [informations sur ODBC 64 bits](../../../odbc/reference/odbc-64-bit-information.md), si votre application s’exécutera sur un système d’exploitation 64 bits.  
+ Consultez [ODBC 64-informations sur ODBC](../../../odbc/reference/odbc-64-bit-information.md), si votre application s’exécute sur un système d’exploitation 64 bits.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mappage des fonctions dépréciées](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)

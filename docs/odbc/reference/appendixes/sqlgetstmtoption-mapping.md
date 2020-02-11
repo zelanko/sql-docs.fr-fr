@@ -1,5 +1,5 @@
 ---
-title: Sqlgetstmtoption, mappage | Microsoft Docs
+title: Mappage SQLGetStmtOption | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,43 +14,43 @@ ms.assetid: fa599517-3f3e-4dad-a65a-b8596ae3f330
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2973455ff4ee7e8dc51b2cd07a6423c9b1c36346
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68073811"
 ---
 # <a name="sqlgetstmtoption-mapping"></a>SQLGetStmtOption, mappage
-Lorsqu’une application appelle **SQLGetStmtOption** à une application ODBC *3.x* pilote qui ne prend pas en charge cela, l’appel à  
+Quand une application appelle **SQLGetStmtOption** à un pilote ODBC *3. x* qui ne la prend pas en charge, l’appel à  
   
 ```  
 SQLGetStmtOption(hstmt, fOption, pvParam)  
 ```  
   
- entraîne comme suit :  
+ se produit comme suit :  
   
--   Si *fOption* indique une option d’instruction ODBC-défini qui retourne une chaîne, les appels du Gestionnaire de pilotes  
+-   Si *fOption* indique une option d’instruction définie par ODBC qui retourne une chaîne, le gestionnaire de pilotes appelle  
   
     ```  
     SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, NULL)  
     ```  
   
--   Si *fOption* indique une option d’instruction ODBC-défini qui retourne une valeur d’entier 32 bits, les appels du Gestionnaire de pilotes  
+-   Si *fOption* indique une option d’instruction définie par ODBC qui retourne une valeur entière de 32 bits, le gestionnaire de pilotes appelle  
   
     ```  
     SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, 0, NULL)  
     ```  
   
--   Si *fOption* indique une option d’instruction définis par le pilote, les appels du Gestionnaire de pilotes  
+-   Si *fOption* indique une option d’instruction définie par le pilote, le gestionnaire de pilotes appelle  
   
     ```  
     SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, NULL)  
     ```  
   
- Dans les trois cas précédents, le *au paramètre StatementHandle* argument est défini à la valeur de *hstmt*, le *attribut* argument est défini à la valeur de *fOption* et le *ValuePtr* argument est défini sur la même valeur que *pvParam*.  
+ Dans les trois cas précédents, l’argument *StatementHandle* est défini sur la valeur dans *HSTMT*, l’argument d' *attribut* est défini sur la valeur de *fOption*et l’argument *ValuePtr* est défini sur la même valeur que *pvParam*.  
   
- Pour les options de connexion de chaîne définie par ODBC, le Gestionnaire de pilotes définit le *BufferLength* argument dans l’appel à **SQLGetConnectAttr** à la longueur maximale prédéfinie (SQL_MAX_OPTION_STRING_LENGTH) ; une option de connexion sans chaînes, *BufferLength* est définie sur 0.  
+ Pour les options de connexion de chaîne définies par ODBC, le gestionnaire de pilotes définit l’argument *BufferLength* dans l’appel à **SQLGetConnectAttr** sur la longueur maximale prédéfinie (SQL_MAX_OPTION_STRING_LENGTH); pour une option de connexion sans chaîne, *BufferLength* a la valeur 0.  
   
- L’option d’instruction SQL_GET_BOOKMARK a été déconseillée dans ODBC *3.x*. Pour une application ODBC *3.x* pilote fonctionne avec ODBC *2.x* les applications qui utilisent SQL_GET_BOOKMARK, il doit prendre en charge SQL_GET_BOOKMARK. Pour une application ODBC *3.x* pilote fonctionne avec ODBC *2.x* applications, il doit prendre en charge affectant SQL_USE_BOOKMARKS SQL_UB_ON et doivent exposer des signets de longueur fixe. Si une application ODBC *3.x* pilote prend en charge uniquement des signets de longueur variable, les signets de longueur pas fixe, elle doit retourner SQLSTATE HYC00 (fonctionnalité facultative non implémentée) si une application ODBC *2.x* tente d’application la valeur SQL_USE_BOOKMARKS SQL_UB_ON.  
+ L’option d’instruction SQL_GET_BOOKMARK est dépréciée dans ODBC *3. x*. Pour qu’un pilote ODBC *3. x* fonctionne avec les applications ODBC *2. x* qui utilisent SQL_GET_BOOKMARK, il doit prendre en charge les SQL_GET_BOOKMARK. Pour qu’un pilote ODBC *3. x* fonctionne avec les applications ODBC *2. x* , il doit prendre en charge la définition de SQL_USE_BOOKMARKS pour SQL_UB_ON et doit exposer des signets de longueur fixe. Si un pilote ODBC *3. x* prend en charge uniquement les signets de longueur variable, pas les signets de longueur fixe, il doit retourner SQLSTATE HYC00 (fonctionnalité facultative non implémentée) si une application ODBC *2. x* tente de définir SQL_USE_BOOKMARKS sur SQL_UB_ON.  
   
- Pour une application ODBC *3.x* pilote, le Gestionnaire de pilotes ne vérifie plus pour voir si *Option* est comprise entre SQL_STMT_OPT_MIN et SQL_STMT_OPT_MAX, ou est supérieure à SQL_CONNECT_OPT_DRVR_START. Le pilote doit vérifier cela.
+ Pour un pilote ODBC *3. x* , le gestionnaire de pilotes ne vérifie plus si l' *option* est comprise entre SQL_STMT_OPT_MIN et SQL_STMT_OPT_MAX, ou est supérieure à SQL_CONNECT_OPT_DRVR_START. Le pilote doit vérifier cela.

@@ -1,5 +1,5 @@
 ---
-title: Assignation du stockage | Microsoft Docs
+title: Affectation du stockage | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0aefbfdeb984aa6b384c5c123ed69ec4fdaa41ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200040"
 ---
 # <a name="assigning-storage"></a>Assignation du stockage
   Une application peut assigner le stockage pour les résultats avant ou après avoir exécuté une instruction SQL. Si une application prépare ou exécute en premier l'instruction SQL, elle peut se renseigner à propos du jeu de résultats avant d'assigner le stockage pour les résultats. Par exemple, si le jeu de résultats est inconnu, l'application doit extraire le nombre de colonnes avant de pouvoir lui assigner du stockage.  
   
- Pour associer du stockage pour une colonne de données, une application appelle [SQLBindCol](../native-client-odbc-api/sqlbindcol.md)et lui passe :  
+ Pour associer le stockage pour une colonne de données, une application appelle [SQLBindCol](../native-client-odbc-api/sqlbindcol.md)et la transmet :  
   
 -   Le type de données vers lequel les données doivent être converties.  
   
@@ -49,11 +49,11 @@ ms.locfileid: "63200040"
   
 -   La liaison basée sur les colonnes est finie lorsque chaque colonne est liée à son propre tableau de variables.  
   
-     La liaison est spécifiée en appelant [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) avec *attribut* défini à SQL_ATTR_ROW_BIND_TYPE et *ValuePtr* défini à SQL_BIND_BY_COLUMN. Tous les tableaux doivent contenir le même nombre d'éléments.  
+     La liaison selon les colonnes est spécifiée en appelant [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) avec l' *attribut* défini sur SQL_ATTR_ROW_BIND_TYPE et *ValuePtr* défini sur SQL_BIND_BY_COLUMN. Tous les tableaux doivent contenir le même nombre d'éléments.  
   
 -   La liaison basée sur les lignes est finie lorsque tous les paramètres dans l'instruction SQL sont liés en tant qu'unité à un tableau de structures qui contiennent les variables individuelles pour les paramètres.  
   
-     La liaison est spécifiée en appelant **SQLSetStmtAttr** avec *attribut* défini à SQL_ATTR_ROW_BIND_TYPE et *ValuePtr* défini avec la taille de l’exploitation de la structure du colonnes du jeu de variables qui recevront le résultat.  
+     La liaison selon les lignes est spécifiée en appelant **SQLSetStmtAttr** avec l' *attribut* défini sur SQL_ATTR_ROW_BIND_TYPE et *ValuePtr* défini sur la taille de la structure contenant les variables qui recevront les colonnes du jeu de résultats.  
   
  L'application définit également SQL_ATTR_ROW_ARRAY_SIZE au nombre d'éléments dans les tableaux de colonnes ou de lignes et définit SQL_ATTR_ROW_STATUS_PTR et SQL_ATTR_ROWS_FETCHED_PTR.  
   

@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c5bd805a6c737862adbfe9fdef507e61d4035eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914015"
 ---
-# <a name="mssqlserver41349"></a>MSSQLSERVER_41349
+# <a name="mssqlserver_41349"></a>MSSQLSERVER_41349
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|ID d'événement|41349|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|41349|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|HK_ENCRYPTION_ON|  
-|Texte du message|Avertissement : le chiffrement a été activé pour une base de données qui contient une ou plusieurs tables optimisées par mémoire avec la durabilité SCHEMA_AND_DATA. Les données dans ces tables optimisées en mémoire ne seront pas chiffrées.|  
+|Texte du message|Avertissement : le chiffrement a été activé pour une base de données qui contient une ou plusieurs tables optimisées en mémoire avec la durabilité SCHEMA_AND_DATA. Les données dans ces tables optimisées en mémoire ne seront pas chiffrées.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [OLTP en mémoire &#40;Optimisation en mémoire&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

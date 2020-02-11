@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xtp_gc_queue_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_xtp_gc_queue_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: c56fe40ec6864ac48a991e155d06ce7c505ed593
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090200"
 ---
-# <a name="sysdmxtpgcqueuestats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
+# <a name="sysdm_xtp_gc_queue_stats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
@@ -34,12 +34,12 @@ ms.locfileid: "68090200"
   
  Le thread garbage collection principal (le thread inactif) trace les lignes mises à jour, supprimées et insérées de toutes les transactions terminées depuis la dernière invocation du thread de garbage collection principal. Lorsque le thread de garbage collection s'exécute, il détermine si l'horodateur de la transaction active la plus ancienne a changé. Si la transaction active la plus ancienne a changé, alors le thread inactif empile les éléments de travail (par segments de 16 lignes) pour les transactions dont les jeux d'écritures ne sont plus requis. Par exemple, si vous supprimez 1 024 lignes, vous verrez 64 éléments de travail de garbage collection en file d'attente, chacun contenant 16 lignes supprimées.  Après qu'une transaction utilisateur est validée, elle sélectionne tous les éléments empilés de son planificateur. S'il n'y a pas d'éléments empilés sur le planificateur, elle recherche des éléments sur toutes les files d'attente dans le nœud NUMA.  
   
- Vous pouvez déterminer si le garbage collection libère de la mémoire pour les lignes supprimées en exécutant sys.dm_xtp_gc_queue_stats pour voir si le travail empilé est traité. Si les entrées dans current_queue_depth ne sont pas en cours de traitement ou si aucun nouvel élément de travail n’est en cours ajouté à current_queue_depth ne, il s’agit d’une indication que le garbage collection ne libère pas de mémoire. Par exemple, le garbage collection ne peut pas être effectué s’il existe une transaction à long terme.  
+ Vous pouvez déterminer si le garbage collection libère de la mémoire pour les lignes supprimées en exécutant sys.dm_xtp_gc_queue_stats pour voir si le travail empilé est traité. Si les entrées du current_queue_depth ne sont pas traitées ou si aucun nouvel élément de travail n’est ajouté au current_queue_depth, cela indique que garbage collection ne libère pas de mémoire. Par exemple, garbage collection ne peut pas être effectué s’il existe une transaction longue.  
   
  Pour plus d’informations, consultez [OLTP en mémoire &#40;optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
 
-|Nom de la colonne|type|Description|  
+|Nom de la colonne|Type|Description|  
 |-----------------|----------|-----------------|  
 |queue_id|**int**|Identificateur unique de la file d'attente.|  
 |total_enqueues|**bigint**|Nombre total d'éléments de travail garbage collection empilés dans cette file d'attente depuis que le serveur a démarré.|  
@@ -66,6 +66,6 @@ queue_id total_enqueues total_dequeues current_queue_depth  maximum_queue_depth 
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues de gestion dynamique de Table optimisé en mémoire &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Vues de gestion dynamique des tables optimisées en mémoire &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

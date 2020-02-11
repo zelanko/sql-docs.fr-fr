@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_transactions (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_xtp_transactions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cc5f12e50c1e7a7d639acdbf9a244406ce9366c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097936"
 ---
-# <a name="sysdmdbxtptransactions-transact-sql"></a>sys.dm_db_xtp_transactions (Transact-SQL)
+# <a name="sysdm_db_xtp_transactions-transact-sql"></a>sys.dm_db_xtp_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Enregistre les transactions actives dans le moteur de base de données de l'OLTP en mémoire.  
@@ -41,19 +41,19 @@ ms.locfileid: "68097936"
 |session_id|**smallint**|Identificateur de la session qui exécute cette transaction. Jointures avec sys.dm_exec_sessions.|  
 |begin_tsn|**bigint**|Numéro de série du début de la transaction.|  
 |end_tsn|**bigint**|Numéro de série de fin de la transaction.|  
-|state|**Int**|État de la transaction :<br /><br /> 0=ACTIVE<br /><br /> 1=COMMITTED<br /><br /> 2=ABORTED<br /><br /> 3=VALIDATING|  
+|state|**int**|État de la transaction :<br /><br /> 0=ACTIVE<br /><br /> 1=COMMITTED<br /><br /> 2=ABORTED<br /><br /> 3=VALIDATING|  
 |state_desc|**nvarchar**|Description de l'état de la transaction.|  
 |result|**int**|Résultat de cette transaction. Les valeurs possibles sont les suivantes.<br /><br /> 0 - IN PROGRESS<br /><br /> 1 - SUCCESS<br /><br /> 2 - ERROR<br /><br /> 3 - COMMIT DEPENDENCY<br /><br /> 4 - VALIDATION FAILED (RR)<br /><br /> 5 - VALIDATION FAILED (SR)<br /><br /> 6 - ROLLBACK|  
-|result_desc|**nvarchar**|Résultat de cette transaction. Les valeurs possibles sont les suivantes.<br /><br /> IN PROGRESS<br /><br /> SUCCESS<br /><br /> d’erreur<br /><br /> COMMIT DEPENDENCY<br /><br /> VALIDATION FAILED (RR)<br /><br /> VALIDATION FAILED (SR)<br /><br /> ROLLBACK|  
+|result_desc|**nvarchar**|Résultat de cette transaction. Les valeurs possibles sont les suivantes.<br /><br /> IN PROGRESS<br /><br /> SUCCESS<br /><br /> ERROR<br /><br /> COMMIT DEPENDENCY<br /><br /> VALIDATION FAILED (RR)<br /><br /> VALIDATION FAILED (SR)<br /><br /> ROLLBACK|  
 |last_error|**int**|À usage interne uniquement|  
 |is_speculative|**bit**|À usage interne uniquement|  
 |is_prepared|**bit**|À usage interne uniquement|  
 |is_delayed_durability|**bit**|À usage interne uniquement|  
 |memory_address|**varbinary**|À usage interne uniquement|  
 |database_address|**varbinary**|À usage interne uniquement|  
-|thread_id|**Int**|À usage interne uniquement|  
+|thread_id|**int**|À usage interne uniquement|  
 |read_set_row_count|**int**|À usage interne uniquement|  
-|write_set_row_count|**Int**|À usage interne uniquement|  
+|write_set_row_count|**int**|À usage interne uniquement|  
 |scan_set_count|**int**|À usage interne uniquement|  
 |savepoint_garbage_count|**int**|À usage interne uniquement|  
 |log_bytes_required|**bigint**|À usage interne uniquement|  
@@ -62,22 +62,22 @@ ms.locfileid: "68097936"
 |reserved_bytes|**int**|À usage interne uniquement|  
 |commit_dependency_count|**int**|À usage interne uniquement|  
 |commit_dependency_total_attempt_count|**int**|À usage interne uniquement|  
-|scan_area|**Int**|À usage interne uniquement|  
+|scan_area|**int**|À usage interne uniquement|  
 |scan_area_desc|**nvarchar**|À usage interne uniquement|  
 |scan_location|**int**|À usage interne uniquement|  
-|dependent_1_address|**varbinary(8)**|À usage interne uniquement|  
-|dependent_2_address|**varbinary(8)**|À usage interne uniquement|  
-|dependent_3_address|**varbinary(8)**|À usage interne uniquement|  
-|dependent_4_address|**varbinary(8)**|À usage interne uniquement|  
-|dependent_5_address|**varbinary(8)**|À usage interne uniquement|  
-|dependent_6_address|**varbinary(8)**|À usage interne uniquement|  
-|dependent_7_address|**varbinary(8)**|À usage interne uniquement|  
-|dependent_8_address|**varbinary(8)**|À usage interne uniquement|  
+|dependent_1_address|**varbinary (8)**|À usage interne uniquement|  
+|dependent_2_address|**varbinary (8)**|À usage interne uniquement|  
+|dependent_3_address|**varbinary (8)**|À usage interne uniquement|  
+|dependent_4_address|**varbinary (8)**|À usage interne uniquement|  
+|dependent_5_address|**varbinary (8)**|À usage interne uniquement|  
+|dependent_6_address|**varbinary (8)**|À usage interne uniquement|  
+|dependent_7_address|**varbinary (8)**|À usage interne uniquement|  
+|dependent_8_address|**varbinary (8)**|À usage interne uniquement|  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation VIEW DATABASE STATE sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues de gestion dynamique de Table optimisé en mémoire &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Vues de gestion dynamique des tables optimisées en mémoire &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

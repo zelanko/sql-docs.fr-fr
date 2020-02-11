@@ -1,5 +1,5 @@
 ---
-title: Exemple de propriété (VC ++) d’état | Microsoft Docs
+title: State, exemple de propriété (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 1c38cd3b-e4f5-4754-b115-ef5e46d24ab9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dad78c3754fb55aa83c50d467920a611db277f13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930848"
 ---
 # <a name="state-property-example-vc"></a>State, exemple de propriété (VC++)
-Cet exemple utilise le [état](../../../ado/reference/ado-api/state-property-ado.md) propriété pour afficher un message alors que les connexions asynchrones s’ouvrent et exécutent des commandes asynchrones.  
+Cet exemple utilise la propriété [State](../../../ado/reference/ado-api/state-property-ado.md) pour afficher un message alors que des connexions asynchrones s’ouvrent et que des commandes asynchrones sont en cours d’exécution.  
   
 ```  
 // BeginStateCpp.cpp  

@@ -1,5 +1,5 @@
 ---
-title: Configurer Reporting Services pour utiliser un autre nom de sujet | Microsoft Docs
+title: Configurer Reporting Services pour utiliser un autre nom de l’objet | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39cb8593351e97c47fff38ae2d1b6f2b326f49b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109739"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Configurer Reporting Services pour utiliser un autre nom de l'objet
@@ -22,7 +22,7 @@ ms.locfileid: "66109739"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode natif|  
+|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Mode natif|  
   
  Les instructions s'appliquent à l'URL Reporting Services, ainsi qu'à une URL de service web.  
   
@@ -124,9 +124,9 @@ ms.locfileid: "66109739"
 10. Dans la page **État de Report Server** du Gestionnaire de configuration de Reporting Services, cliquez sur **Arrêter** , puis sur **Démarrer** pour redémarrer le serveur de rapports.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fichier de Configuration RSReportServer](report-server/rsreportserver-config-configuration-file.md)   
+ [Fichier de configuration RSReportServer](report-server/rsreportserver-config-configuration-file.md)   
  [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Modifier un fichier de configuration Reporting Services &#40;RSreportserver. config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

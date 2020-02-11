@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8becd7ad30acf1ea2a63feae4760091aede70c06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033501"
 ---
 # <a name="schedule-the-policies"></a>Planifier les stratégies
@@ -22,23 +22,23 @@ ms.locfileid: "63033501"
   
 ### <a name="to-schedule-the-best-practices-policies"></a>Pour planifier les stratégies des meilleures pratiques  
   
-1.  Dans l’Explorateur d’objets, développez **gestion**, développez **gestion des stratégies de**, développez **stratégies**, avec le bouton droit à une stratégie des meilleures pratiques, puis cliquez sur  **Propriétés**.  
+1.  Dans l’Explorateur d’objets, développez **gestion**, gestion de la **stratégie**, **stratégies**, cliquez avec le bouton droit sur une stratégie des meilleures pratiques, puis cliquez sur **Propriétés**.  
   
     > [!NOTE]  
-    >  Comme alternative, voir facilement les stratégies qui sont associés aux meilleures pratiques et trier les meilleures pratiques des catégories, développez **gestion**, développez **gestion des stratégies de**, puis cliquez sur **Stratégies**. Dans le menu **Affichage** , cliquez sur **Détails de l’Explorateur d’objets**. Dans le **détails de l’Explorateur d’objets** volet, cliquez sur le **catégorie** titre pour trier les stratégies par catégorie. Les stratégies des meilleures pratiques ont le préfixe **meilleures pratiques Microsoft**. Avec le bouton droit de la stratégie que vous souhaitez configurer, puis cliquez sur **propriétés**.  
+    >  En guise d’alternative, pour identifier facilement les stratégies associées aux meilleures pratiques et trier les catégories des meilleures pratiques, développez **gestion**, gestion de la **stratégie**, puis cliquez sur **stratégies**. Dans le menu **Affichage** , cliquez sur **Détails de l’Explorateur d’objets**. Dans le volet Détails de l' **Explorateur d’objets** , cliquez sur l’en-tête **catégorie** pour trier les stratégies par catégorie. Les stratégies des meilleures pratiques ont le préfixe **Microsoft Best Practices**. Cliquez avec le bouton droit sur la stratégie que vous souhaitez configurer, puis cliquez sur **Propriétés**.  
   
-2.  Sur le **général** page de la **ouvrir une stratégie** boîte de dialogue le **Mode d’évaluation** , cliquez sur **selon planification**.  
+2.  Sur la page **général** de la boîte de dialogue **ouvrir une stratégie** , dans la liste mode d' **évaluation** , cliquez sur **planification**.  
   
-3.  À côté du **planification** , cliquez sur **choisir** pour spécifier une planification existante ou cliquez sur **New** pour créer une planification.  
+3.  En regard de la zone **planification** , cliquez sur **choisir** pour spécifier une planification existante ou sur **nouveau** pour créer une planification.  
   
-4.  Une fois que vous avez configuré une planification, vous pouvez sélectionner le **activé** case à cocher en haut de la page pour activer la stratégie planifiée.  
+4.  Une fois que vous avez configuré une planification, vous pouvez activer la case à cocher **activé** vers le haut de la page pour activer la stratégie planifiée.  
   
 5.  Répétez les étapes 1 à 4 pour chaque stratégie à planifier.  
   
     > [!NOTE]  
-    >  Pour afficher les résultats d'évaluation après l'exécution d'une stratégie planifiée, ouvrez le journal Historique de la stratégie sur l'instance cible. Pour ouvrir le journal, avec le bouton droit **gestion des stratégies de**, puis cliquez sur **afficher l’historique**.  
+    >  Pour afficher les résultats d'évaluation après l'exécution d'une stratégie planifiée, ouvrez le journal Historique de la stratégie sur l'instance cible. Pour ouvrir le journal, cliquez avec le bouton droit sur **gestion des stratégies**, puis cliquez sur **afficher l’historique**.  
   
-## <a name="summary"></a>Récapitulatif  
+## <a name="summary"></a>Résumé  
  Vous avez configuré l'exécution de stratégies planifiées sur une instance unique de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Si vous souhaitez déployer des stratégies planifiées vers plusieurs instances, passez à la tâche suivante dans ce didacticiel.  
   
 ## <a name="next-steps"></a>Étapes suivantes  

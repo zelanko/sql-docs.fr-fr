@@ -10,28 +10,28 @@ ms.assetid: 66437b45-4686-4fc7-a91b-ebde45e0f1b0
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 8e9edc319a539d438cdb7eb126694812d9084d24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68084621"
 ---
 # <a name="new-project-db2tosql"></a>Nouveau projet (DB2ToSQL)
-Utilisez le **nouveau projet** boîte de dialogue pour créer un nouveau projet SSMA. Pour accéder à la **nouveau projet** boîte de dialogue le **fichier** menu, cliquez sur **nouveau projet**.  
+Utilisez la boîte de dialogue **nouveau projet** pour créer un nouveau projet SSMA. Pour accéder à la boîte de dialogue **nouveau projet** , dans le menu **fichier** , cliquez sur **nouveau projet**.  
   
 ## <a name="options"></a>Options  
 **Nom**  
-Entrez le nom du projet. SSMA permet d’ajouter l’extension de fichier.  
+Entrez le nom du projet. SSMA va ajouter l’extension de fichier.  
   
-**Lieu**  
-Entrez ou recherchez le dossier ou un emplacement réseau pour enregistrer le projet.  
+**Location**  
+Entrez ou accédez au dossier ou à l’emplacement réseau pour enregistrer le projet.  
   
 **Migrer vers**  
-Sélectionnez une de la version de base de données cible en dessous de la liste :  
+Sélectionnez l’une des versions de la base de données cible dans la liste ci-dessous :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   

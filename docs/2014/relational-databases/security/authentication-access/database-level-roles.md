@@ -38,10 +38,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3df05bddf37970ce0ff0d796bc2b5d93d309b4dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011720"
 ---
 # <a name="database-level-roles"></a>Rôles au niveau de la base de données
@@ -79,15 +79,15 @@ ms.locfileid: "63011720"
 |`dc_admin`<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|Les membres de ces rôles de base de données peuvent administrer et utiliser le collecteur de données. Pour plus d'informations, consultez [Data Collection](../../data-collection/data-collection.md).|  
 |**PolicyAdministratorRole**|Les membres du rôle de base de données **db_ PolicyAdministratorRole** peuvent effectuer toutes les activités de configuration et de maintenance sur les stratégies et conditions de la gestion basée sur une stratégie. Pour plus d’informations, consultez [Administrer des serveurs à l’aide de la Gestion basée sur des stratégies](../../policy-based-management/administer-servers-by-using-policy-based-management.md).|  
 |**ServerGroupAdministratorRole**<br /><br /> **ServerGroupReaderRole**|Les membres de ces rôles de base de données peuvent administrer et utiliser des groupes de serveurs inscrits.|  
-|**dbm_monitor**|Créé dans le `msdb` lors de la première base de données est inscrit dans le moniteur de mise en miroir de base de données de base de données. Le rôle **dbm_monitor** ne comporte aucun membre tant qu’un administrateur système n’affecte pas d’utilisateurs au rôle.|  
+|**dbm_monitor**|Créé dans la `msdb` base de données lorsque la première base de données est inscrite dans moniteur de mise en miroir de bases de données. Le rôle **dbm_monitor** ne comporte aucun membre tant qu’un administrateur système n’affecte pas d’utilisateurs au rôle.|  
   
 > [!IMPORTANT]  
->  Les membres du rôle db_ssisadmin et du rôle dc_admin peuvent être en mesure d'élever leurs privilèges à sysadmin. Cette élévation de privilège peut se produire, car ces rôles peuvent modifier les packages [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] et les packages [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] peuvent être exécutés par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide du contexte de sécurité sysadmin de l’Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour vous prémunir contre cette élévation de privilège lors de l'exécution de plans de maintenance, de jeux d'éléments de collecte de données et d'autres packages [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], configurez des travaux de l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui exécutent des packages pour l'utilisation d'un compte proxy doté de privilèges limités ou ajoutez uniquement des membres sysadmin aux rôles db_ssisadmin et dc_admin.  
+>  Les membres du rôle db_ssisadmin et du rôle dc_admin peuvent être en mesure d'élever leurs privilèges à sysadmin. Cette élévation de privilège peut se produire, car ces rôles peuvent modifier les packages [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] et les packages [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] peuvent être exécutés par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide du contexte de sécurité sysadmin de l’Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour vous prémunir contre cette élévation de privilège lors de l'exécution de plans de maintenance, de jeux d'éléments de collecte de données et d'autres packages [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , configurez des travaux de l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui exécutent des packages pour l'utilisation d'un compte proxy doté de privilèges limités ou ajoutez uniquement des membres sysadmin aux rôles db_ssisadmin et dc_admin.  
   
 ## <a name="working-with-database-level-roles"></a>Utilisation des rôles au niveau de la base de données  
  Le tableau ci-dessous explique les commandes, vues et fonctions permettant d'utiliser les rôles au niveau de la base de données.  
   
-|Fonctionnalité|type|Description|  
+|Fonctionnalité|Type|Description|  
 |-------------|----------|-----------------|  
 |[sp_helpdbfixedrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql)|Métadonnées|Retourne une liste des rôles de base de données fixes.|  
 |[sp_dbfixedrolepermission &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql)|Métadonnées|Affiche les autorisations d'un rôle de base de données fixe.|  
@@ -95,13 +95,13 @@ ms.locfileid: "63011720"
 |[sp_helprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql)|Métadonnées|Retourne des informations sur les membres d'un rôle dans la base de données actuelle.|  
 |[sys.database_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)|Métadonnées|Retourne une ligne pour chaque membre de chaque rôle de base de données.|  
 |[IS_MEMBER &#40;Transact-SQL&#41;](/sql/t-sql/functions/is-member-transact-sql)|Métadonnées|Indique si l'utilisateur actuel est membre du groupe Microsoft Windows ou du rôle de base de données Microsoft SQL Server spécifié.|  
-|[CREATE ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-role-transact-sql)|Command|Crée un rôle de base de données dans la base de données active.|  
-|[ALTER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-role-transact-sql)|Command|Modifie le nom d'un rôle de base de données.|  
-|[DROP ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-role-transact-sql)|Command|Supprime un rôle de la base de données.|  
-|[sp_addrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrole-transact-sql)|Command|Crée un rôle de base de données dans la base de données active.|  
-|[sp_droprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprole-transact-sql)|Command|Supprime un rôle de base de données de la base de données actuelle.|  
-|[sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)|Command|Ajoute un utilisateur ou un rôle de base de données, un compte de connexion ou un groupe Windows à un rôle de base de données dans la base de données active.|  
-|[sp_droprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)|Command|Supprime un compte de sécurité d'un rôle SQL Server dans la base de données actuelle.|  
+|[CREATE ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-role-transact-sql)|Commande|Crée un rôle de base de données dans la base de données active.|  
+|[ALTER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-role-transact-sql)|Commande|Modifie le nom d'un rôle de base de données.|  
+|[DROP ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-role-transact-sql)|Commande|Supprime un rôle de la base de données.|  
+|[sp_addrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrole-transact-sql)|Commande|Crée un rôle de base de données dans la base de données active.|  
+|[sp_droprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprole-transact-sql)|Commande|Supprime un rôle de base de données de la base de données actuelle.|  
+|[sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)|Commande|Ajoute un utilisateur ou un rôle de base de données, un compte de connexion ou un groupe Windows à un rôle de base de données dans la base de données active.|  
+|[sp_droprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)|Commande|Supprime un compte de sécurité d'un rôle SQL Server dans la base de données actuelle.|  
   
 ## <a name="public-database-role"></a>Rôle de base de données public  
  Chaque utilisateur de base de données appartient au rôle de base de données **public** . Lorsqu'un utilisateur ne s'est pas vu accorder ou refuser des autorisations spécifiques sur un objet sécurisable, il hérite des autorisations accordées à **public** sur cet objet.  

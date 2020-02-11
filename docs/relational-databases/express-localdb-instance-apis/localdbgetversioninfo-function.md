@@ -1,5 +1,5 @@
 ---
-title: Fonction LocalDBGetVersionInfo | Microsoft Docs
+title: LocalDBGetVersionInfo fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7030f26cb95b78a3cd2dde8520876f13acc4bc46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091202"
 ---
 # <a name="localdbgetversioninfo-function"></a>Fonction LocalDBGetVersionInfo
@@ -49,7 +49,7 @@ typedef struct _LocalDBVersionInfo
   
 ```  
   
- **Fichier d'en-tête :** sqlncli.h  
+ **Fichier d’en-tête :** sqlncli. h  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -66,10 +66,10 @@ HRESULT LocalDBGetVersionInfo(
  [Sortie] La mémoire tampon pour stocker des informations sur la version de LocalDB.  
   
  *dwVersionInfoSize*  
- [Entrée] Contient la taille de la *VersionInfo* mémoire tampon.  
+ Entrée Contient la taille de la mémoire tampon *VERSIONINFO* .  
   
-## <a name="returns"></a>Valeur renvoyée  
- Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  
+## <a name="returns"></a>Retours  
+ S_OK  
  La fonction a réussi.  
   
  [LOCALDB_ERROR_NOT_INSTALLED](../../relational-databases/express-localdb-error-messages/localdb-error-not-installed.md)  
@@ -82,14 +82,14 @@ HRESULT LocalDBGetVersionInfo(
  La version spécifiée de LocalDB n'existe pas.  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
- Une erreur inattendue s'est produite. Pour plus d'informations, consultez le journal des événements.  
+ Une erreur inattendue s’est produite. Pour plus d'informations, consultez le journal des événements.  
   
 ## <a name="details"></a>Détails  
- Le raisonnement derrière l’introduction de la **struct** argument de taille (*lpVersionInfoSize*) consiste à activer l’API doit retourner différentes versions de la **LocalDBVersionInfostruct**, efficacement l’activation de compatibilité descendante et ascendante.  
+ Le raisonnement derrière l’introduction de l’argument de taille de **struct** (*lpVersionInfoSize*) consiste à permettre à l’API de retourner différentes versions du **LocalDBVersionInfostruct**, ce qui permet de garantir une compatibilité ascendante et descendante.  
   
- Si le **struct** argument de taille (*lpVersionInfoSize*) correspond à la taille d’une version connue de la **LocalDBVersionInfostruct**, cette version de la  **struct** est retourné. Sinon, LOCALDB_ERROR_INVALID_PARAMETER est retourné.  
+ Si l’argument de taille de **struct** (*lpVersionInfoSize*) correspond à la taille d’une version connue du **LocalDBVersionInfostruct**, cette version du **struct** est retournée. Sinon, LOCALDB_ERROR_INVALID_PARAMETER est retourné.  
   
- Un exemple typique de **LocalDBGetVersionInfo** utilisation de l’API se présente comme suit :  
+ Voici un exemple typique d’utilisation de l’API **LocalDBGetVersionInfo** :  
   
 ```  
 LocalDBVersionInfo vi;  
@@ -101,6 +101,6 @@ LocalDBVersionInfo(L"11.0", &vi, sizeof(LocalDBVersionInfo));
  Pour un exemple de code qui utilise l'API LocalDB, consultez [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [En-tête et informations de version de la base de données locale SQL Server Express](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
+ [En-tête et informations de version SQL Server Express LocalDB](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

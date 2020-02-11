@@ -18,18 +18,18 @@ ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5d0979ba7df97ebc9fc5b79d8fd0cbd34b6a59a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108533"
 ---
-# <a name="spcursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
+# <a name="sp_cursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Crée et remplit un curseur basé sur le plan d'exécution créé par sp_cursorprepare. Cette procédure, couplée avec sp_cursorprepare, a la même fonction que sp_cursoropen, mais est fractionnée en deux phases. sp_cursorexecute est appelée en spécifiant ID = 4 dans un paquet data stream (TDS).  
+  Crée et remplit un curseur basé sur le plan d'exécution créé par sp_cursorprepare. Cette procédure, couplée avec sp_cursorprepare, a la même fonction que sp_cursoropen, mais est fractionnée en deux phases. sp_cursorexecute est appelée en spécifiant ID = 4 dans un paquet tabular data stream (TDS).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,32 +43,32 @@ sp_cursorexecute prepared_handle, cursor
   
 ## <a name="arguments"></a>Arguments  
  *prepared_handle*  
- L’instruction préparée *gérer* valeur retournée par sp_cursorprepare. *prepared_handle* est un paramètre obligatoire qui demande un **int** valeur d’entrée.  
+ Valeur de *handle* d’instruction préparée retournée par sp_cursorprepare. *prepared_handle* est un paramètre obligatoire qui requiert une valeur d’entrée **int** .  
   
- *cursor*  
- Est l’identificateur de curseur généré par SQL Server. *curseur* est un paramètre obligatoire qui doit être fourni pour toutes les procédures suivantes qui agissent sur le curseur, par exemple sp_cursorfetch  
+ *mire*  
+ Identificateur de curseur généré par le SQL Server. *Cursor* est un paramètre obligatoire qui doit être fourni pour toutes les procédures suivantes qui agissent sur le curseur, par exemple sp_cursorfetch  
   
  *scrollopt*  
- Option de défilement. *scrollopt* est un paramètre optionnel qui requiert un **int** valeur d’entrée. Le sp_cursorexecute*scrollopt* paramètre a les mêmes options de valeur que celles pour sp_cursoropen.  
+ Option de défilement. *scrollopt* est un paramètre facultatif qui requiert une valeur d’entrée **int** . Le paramètre sp_cursorexecute*scrollopt* a les mêmes options de valeur que celles pour sp_cursoropen.  
   
 > [!NOTE]  
 >  La valeur PARAMETERIZED_STMT n'est pas prise en charge.  
   
 > [!IMPORTANT]  
->  Si un *scrollopt* valeur n’est pas spécifiée, la valeur par défaut est KEYSET indépendamment de *scrollopt* valeur spécifiée dans sp_cursorprepare.  
+>  Si aucune valeur *scrollopt* n’est spécifiée, la valeur par défaut est keyset, quelle que soit la valeur *scrollopt* spécifiée dans sp_cursorprepare.  
   
  *ccopt*  
- Option de contrôle de devise. *ccopt* est un paramètre optionnel qui requiert un **int** valeur d’entrée. Le sp_cursorexecute*ccopt* paramètre a les mêmes options de valeur que celles pour sp_cursoropen.  
+ Option de contrôle de la devise. *ccopt* est un paramètre facultatif qui requiert une valeur d’entrée **int** . Le paramètre sp_cursorexecute*ccopt* a les mêmes options de valeur que celles pour sp_cursoropen.  
   
 > [!IMPORTANT]  
->  Si un *ccopt* valeur n’est pas spécifiée, la valeur par défaut est OPTIMISTIC indépendamment de *ccopt* valeur spécifiée dans sp_cursorprepare.  
+>  Si aucune valeur *ccopt* n’est spécifiée, la valeur par défaut est OPTIMISTIC, quelle que soit la valeur *ccopt* spécifiée dans sp_cursorprepare.  
   
- *rowcount*  
- Paramètre optionnel qui indique le nombre de lignes de tampon d'extraction à utiliser avec AUTO_FETCH. La valeur par défaut est de 20 lignes. *nombre de lignes* se comporte différemment lorsqu’assigné comme une valeur d’entrée ou une valeur de retour.  
+ *stopp*  
+ Paramètre optionnel qui indique le nombre de lignes de tampon d'extraction à utiliser avec AUTO_FETCH. La valeur par défaut est 20 lignes. le *compteur de lignes* se comporte différemment lorsqu’il est assigné comme valeur d’entrée ou valeur de retour.  
   
 |Comme une valeur d'entrée|Comme une valeur de retour|  
 |--------------------|---------------------|  
-|Lorsqu’AUTO_FETCH est spécifié avec les curseurs FAST_FORWARD *rowcount* représente le nombre de lignes à placer dans le tampon d’extraction.|Représente le nombre de lignes dans le jeu de résultats. Lorsque le *scrollopt* AUTO_FETCH est spécifiée, *rowcount* retourne le nombre de lignes qui ont été extraites dans le tampon d’extraction.|  
+|Lorsque AUTO_FETCH est spécifié avec FAST_FORWARD curseurs *RowCount* représente le nombre de lignes à placer dans le tampon d’extraction.|Représente le nombre de lignes dans le jeu de résultats. Lorsque la valeur de AUTO_FETCH *scrollopt* est spécifiée, *RowCount* retourne le nombre de lignes extraites dans le tampon d’extraction.|  
   
  *bound_param*  
  Indique l'utilisation facultative de paramètres supplémentaires.  
@@ -77,9 +77,9 @@ sp_cursorexecute prepared_handle, cursor
 >  Tous les paramètres après le cinquième sont passés au plan d'instruction comme paramètres d'entrée.  
   
 ## <a name="code-return-value"></a>Valeur de retour de code  
- *nombre de lignes* peut renvoyer les valeurs suivantes.  
+ *RowCount* peut retourner les valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |-1|Nombre de lignes inconnues.|  
 |-n|Un remplissage asynchrone est appliqué.|  
@@ -87,10 +87,10 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="remarks"></a>Notes  
   
 ## <a name="scrollopt-and-ccopt-parameters"></a>Paramètres scrollopt et ccopt  
- *scrollopt* et *ccopt* sont utiles lorsque les plans mis en cache sont anticipés pour le cache du serveur, ce qui signifie que le handle préparé qui identifie l’instruction doit être recompilé. Le *scrollopt* et *ccopt* les valeurs de paramètre doivent correspondre à celles envoyées dans la demande d’origine à sp_cursorprepare.  
+ *scrollopt* et *ccopt* sont utiles lorsque les plans mis en cache sont anticipés pour le cache du serveur, ce qui signifie que le handle préparé qui identifie l’instruction doit être recompilé. Les valeurs des paramètres *scrollopt* et *ccopt* doivent correspondre à celles envoyées dans la demande d’origine à sp_cursorprepare.  
   
 > [!NOTE]  
->  PARAMETERIZED_STMT ne doit pas être assignée à *scrollopt*.  
+>  PARAMETERIZED_STMT ne doit pas être assigné à *scrollopt*.  
   
  L'incapacité à fournir des valeurs correspondantes entraînera la recompilation des plans, annulant ainsi les opérations de préparation et d'exécution.  
   

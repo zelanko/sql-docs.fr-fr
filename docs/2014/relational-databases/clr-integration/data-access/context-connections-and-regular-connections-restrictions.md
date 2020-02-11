@@ -1,5 +1,5 @@
 ---
-title: Restrictions sur les connexions normales et contextuelles | Microsoft Docs
+title: Restrictions sur les connexions régulières et de contexte | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3b721409f0915cb1e13861f6481909e02af37cb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919168"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>Restrictions applicables aux connexions normales et contextuelles
-  Cette rubrique traite des restrictions associées à l’exécution de code dans le [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] processus via des connexions normales et contextuelles.  
+  Cette rubrique décrit les restrictions associées au code qui s’exécute dans le [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] processus via le contexte et les connexions normales.  
   
 ## <a name="restrictions-on-context-connections"></a>Restrictions applicables aux connexions contextuelles  
  Lorsque vous développez votre application, prenez en considération les restrictions suivantes qui s'appliquent aux connexions contextuelles :  
@@ -34,7 +34,8 @@ ms.locfileid: "62919168"
   
 -   Le traitement par lot des mises à jour dans une connexion contextuelle n'est pas pris en charge  
   
--   `SqlNotificationRequest` ne peut pas être utilisé avec les commandes qui s'exécutent contre une connexion contextuelle.  
+-   
+  `SqlNotificationRequest` ne peut pas être utilisé avec les commandes qui s'exécutent contre une connexion contextuelle.  
   
 -   L'annulation des commandes qui s'exécutent contre la connexion contextuelle n'est pas prise en charge. La méthode `SqlCommand.Cancel` ignore la demande silencieusement.  
   
@@ -47,7 +48,7 @@ ms.locfileid: "62919168"
 ## <a name="restrictions-on-regular-connections"></a>Restrictions applicables aux connexions normales  
  Lorsque vous développez votre application, prenez en considération les restrictions suivantes qui s'appliquent aux connexions normales :  
   
--   L'exécution de commande asynchrone contre des serveurs internes n'est pas prise en charge. L'inclusion de « async=true » dans la chaîne de connexion d'une commande, suivie de l'exécution de cette commande, lève l'exception `System.NotSupportedException`. Ce message s’affiche : « Traitement asynchrone n’est pas pris en charge lors de l’exécution à l’intérieur de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] processus. »  
+-   L'exécution de commande asynchrone contre des serveurs internes n'est pas prise en charge. L'inclusion de « async=true » dans la chaîne de connexion d'une commande, suivie de l'exécution de cette commande, lève l'exception `System.NotSupportedException`. Le message suivant apparaît : « Le traitement asynchrone n'est pas pris en charge en cas d'exécution à l'intérieur du processus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ».  
   
 -   L'objet `SqlDependency` n'est pas pris en charge.  
   

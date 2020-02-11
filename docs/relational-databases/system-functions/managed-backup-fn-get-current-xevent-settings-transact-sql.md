@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_get_current_xevent_settings (Transact-SQL) | Microsoft Docs
+title: managed_backup. fn_get_current_xevent_settings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,20 +21,20 @@ ms.assetid: 95d3adaa-bb9d-4833-b8b4-3d9fd4f9c82a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4133f8bb64d5d7e2e2b511c2128b9ddbca1fa550
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67910243"
 ---
-# <a name="managedbackupfngetcurrentxeventsettings-transact-sql"></a>managed_backup.fn_get_current_xevent_settings (Transact-SQL)
+# <a name="managed_backupfn_get_current_xevent_settings-transact-sql"></a>managed_backup. fn_get_current_xevent_settings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque type d'événement étendu pris en charge par Smart Admin.  
   
  Utilisez cette fonction pour retourner ou consulter les paramètres des événements étendus actuels afin d'identifier le type des événements qui sont configurables et les configurations actuelles.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,13 +51,13 @@ smart_admin.fn_get_current_xevent_settings ()
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |Event_name|NVARCHAR(128)|Type d'événement étendu|  
-|is_configurable|NVARCHAR(128)|Il est défini sur **True** si l’événement est configurable, sinon il valeur **False**.|  
+|is_configurable|NVARCHAR(128)|Cette propriété a la valeur **true** si l’événement est configurable, sinon elle a la valeur **false**.|  
 |is_enabled|NVARCHAR(128)|A la valeur True si l'événement est activé, sinon, a la valeur False. Utilisez smart_admin.sp_set_parameter pour activer les événements de débogage.|  
   
 ## <a name="security"></a>Sécurité  
   
 ### <a name="permissions"></a>Autorisations  
- Requiert **sélectionnez** autorisations sur la fonction.  
+ Requiert des autorisations **Select** sur la fonction.  
   
 ## <a name="examples"></a>Exemples  
  Cet exemple renvoie tous les événements étendus avec leur état actuel.  

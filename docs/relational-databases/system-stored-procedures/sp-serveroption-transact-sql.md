@@ -19,19 +19,19 @@ ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1fcd6f158908893ce5eb86c24a3bb3882867bc2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68104381"
 ---
-# <a name="spserveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
+# <a name="sp_serveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Définit les options de serveur pour les serveurs distants et les serveurs liés.  
   
  
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,36 +42,37 @@ sp_serveroption [@server = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @server = ] 'server'` Est le nom du serveur pour lequel définir l’option. *server* est de type **sysname**et n'a pas de valeur par défaut.  
+`[ @server = ] 'server'`Nom du serveur pour lequel l’option doit être définie. *Server* est de **type sysname**, sans valeur par défaut.  
   
-`[ @optname = ] 'option_name'` Est l’option à définir pour le serveur spécifié. *option_name* est **varchar (** 35 **)** , sans valeur par défaut. *option_name* peut être une des valeurs suivantes.  
+`[ @optname = ] 'option_name'`Option à définir pour le serveur spécifié. *option_name* est de type **varchar (** 35 **)**, sans valeur par défaut. *option_name* peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**compatible avec le classement**|Concerne l'exécution des requêtes distribuées sur les serveurs liés. Si cette option est définie sur **true**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] part du principe que tous les caractères du serveur lié sont compatibles avec le serveur local, en ce qui concerne la séquence de classement et de jeu de caractères (ou ordre de tri). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut alors envoyer au fournisseur des comparaisons sur les colonnes de caractères. Si cette option n'est pas activée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compare toujours les colonnes de caractères en local.<br /><br /> Cette option ne doit être définie que si la source de données correspondant au serveur lié possède le même jeu de caractères et respecte le même ordre de tri que le serveur local.|  
-|**nom de classement**|Spécifie le nom du classement utilisé par la source de données distante si **utiliser le classement distant** est **true** et la source de données n’est pas un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source de données. Le nom doit être l'un des classements pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Utilisez cette option lors d'un accès à une source de données OLE DB autre que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais dont le classement correspond à l'un des classements de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Le serveur lié doit prendre en charge un classement unique utilisable pour toutes les colonnes du serveur. Ne définissez pas cette option si le serveur lié prend en charge plusieurs classements dans une source de données unique ou si le classement du serveur lié ne correspond peut-être pas à l'un des classements de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|**délai de connexion**|Secondes valuein de délai d’attente pour la connexion à un serveur lié.<br /><br /> Si **0**, utilisez le **sp_configure** par défaut.|  
-|**accès aux données**|Active ou désactive un serveur lié pour l'accès des requêtes distribuées. Peut être utilisé uniquement pour **sys.server** entrées ajoutées via **sp_addlinkedserver**.|  
-|**dist**|Serveur de distribution.|  
-|**validation de schéma différée**|Détermine si le schéma des tables distantes doit être vérifié.<br /><br /> Si **true**, ignorer la vérification du schéma des tables distantes au début de la requête.|  
-|**pub**|Serveur de publication.|  
-|**délai de requête**|Valeur du délai d'expiration des requêtes par rapport à un serveur lié.<br /><br /> Si **0**, utilisez le **sp_configure** par défaut.|  
+|**compatibilité du classement**|Concerne l'exécution des requêtes distribuées sur les serveurs liés. Si cette option a la valeur **true**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suppose que tous les caractères du serveur lié sont compatibles avec le serveur local, en ce qui concerne le jeu de caractères et la séquence de classement (ou ordre de tri). 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut alors envoyer au fournisseur des comparaisons sur les colonnes de caractères. Si cette option n'est pas activée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compare toujours les colonnes de caractères en local.<br /><br /> Cette option ne doit être définie que si la source de données correspondant au serveur lié possède le même jeu de caractères et respecte le même ordre de tri que le serveur local.|  
+|**nom du classement**|Spécifie le nom du classement utilisé par la source de données distante si **Use Remote collation** a la **valeur true** et que la source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de données n’est pas une source de données. Le nom doit être l'un des classements pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Utilisez cette option lors d'un accès à une source de données OLE DB autre que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais dont le classement correspond à l'un des classements de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Le serveur lié doit prendre en charge un classement unique utilisable pour toutes les colonnes du serveur. Ne définissez pas cette option si le serveur lié prend en charge plusieurs classements dans une source de données unique ou si le classement du serveur lié ne correspond peut-être pas à l'un des classements de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|**délai de connexion**|Délai d’attente en secondes pour la connexion à un serveur lié.<br /><br /> Si la valeur est **0**, utilisez la valeur par défaut **sp_configure** .|  
+|**accès aux données**|Active ou désactive un serveur lié pour l'accès des requêtes distribuées. Peut être utilisé uniquement pour les entrées **sys. Server** ajoutées par le biais de **sp_addlinkedserver**.|  
+|**dist**|Serveur de distribution|  
+|**lazy schema validation**|Détermine si le schéma des tables distantes doit être vérifié.<br /><br /> Si la **valeur est true**, la vérification du schéma des tables distantes est ignorée au début de la requête.|  
+|**pub**|Publication.|  
+|**délai de requête**|Valeur du délai d'expiration des requêtes par rapport à un serveur lié.<br /><br /> Si la valeur est **0**, utilisez la valeur par défaut **sp_configure** .|  
 |**rpc**|Active RPC à partir du serveur donné.|  
 |**sortie RPC**|Active RPC vers le serveur donné.|  
-|**sub**|Abonné.|  
-|**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**utiliser le classement distant**|Détermine si le classement d'une colonne distante ou d'un serveur local doit être utilisé.<br /><br /> Si **true**, le classement des colonnes distantes est utilisé pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sources de données et le classement spécifié dans **nom de classement** est utilisé pour les non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des sources de données.<br /><br /> Si **false**, les requêtes distribuées utilisent toujours le classement par défaut du serveur local, tandis que **nom de classement** et le classement des colonnes distantes sont ignorés. La valeur par défaut est **false**. (Le **false** valeur est compatible avec la sémantique de classement utilisée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.)|  
-|**promotion des transactions à distance proc**|Cette option permet de protéger les actions d'une procédure de serveur à serveur par le biais d'une transaction MS DTC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator). Lorsque cette option a la valeur TRUE (ou) appelant une procédure stockée distante démarre une transaction distribuée et enregistre la transaction dans MS DTC. L'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appelant la procédure stockée distante constitue l'élément créateur de la transaction et qui contrôle l'exécution jusqu'à son terme. Si une instruction COMMIT TRANSACTION ou ROLLBACK TRANSACTION est ensuite émise pour la connexion, le serveur de contrôle demande à MS DTC de gérer l'achèvement de la transaction distribuée sur tous les ordinateurs concernés.<br /><br /> Une fois qu'une transaction distribuée [!INCLUDE[tsql](../../includes/tsql-md.md)] a démarré, des appels de procédures stockées distantes peuvent être effectués envers d'autres instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ont été définies en tant que serveurs liés. Les serveurs liés sont tous inscrits dans la transaction distribuée [!INCLUDE[tsql](../../includes/tsql-md.md)] et MS DTC garantit que la transaction est exécutée jusqu'à son terme sur chaque serveur lié.<br /><br /> Si cette option a la valeur FALSE (ou OFF), une transaction locale ne sera pas promue en transaction distribuée lors de l'exécution d'un appel de procédure distante sur un serveur lié.<br /><br /> Si, avant d'exécuter un appel de procédure de serveur à serveur, la transaction est déjà une transaction distribuée, cette option n'a pas effet. L'appel de procédure sur le serveur lié s'exécutera sous la même transaction distribuée.<br /><br /> Si, avant d'exécuter un appel de procédure de serveur à serveur, aucune transaction n'est active dans la connexion, cette option n'a pas effet. La procédure s'exécute ensuite sur le serveur lié sans transactions actives.<br /><br /> La valeur par défaut de cette option est TRUE (ou ON).|  
+|**indice**|Côté.|  
+|**requise**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**utiliser le classement distant**|Détermine si le classement d'une colonne distante ou d'un serveur local doit être utilisé.<br /><br /> Si **la valeur est true**, le classement des colonnes distantes est utilisé pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les sources de données, et le classement spécifié dans **collation Name** est[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisé pour les sources de données non-.<br /><br /> Si la **valeur est false**, les requêtes distribuées utilisent toujours le classement par défaut du serveur local, tandis que le **nom de classement** et le classement des colonnes distantes sont ignorés. La valeur par défaut est **false**. (La valeur **false** est compatible avec la sémantique de classement utilisée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0.)|  
+|**remote proc transaction promotion**|Cette option permet de protéger les actions d'une procédure de serveur à serveur par le biais d'une transaction MS DTC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator). Lorsque cette option a la valeur TRUE (ou ON), l'appel d'une procédure stockée distante démarre une transaction distribuée et inscrit la transaction avec MS DTC. L'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appelant la procédure stockée distante constitue l'élément créateur de la transaction et qui contrôle l'exécution jusqu'à son terme. Si une instruction COMMIT TRANSACTION ou ROLLBACK TRANSACTION est ensuite émise pour la connexion, le serveur de contrôle demande à MS DTC de gérer l'achèvement de la transaction distribuée sur tous les ordinateurs concernés.<br /><br /> Une fois qu'une transaction distribuée [!INCLUDE[tsql](../../includes/tsql-md.md)] a démarré, des appels de procédures stockées distantes peuvent être effectués envers d'autres instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ont été définies en tant que serveurs liés. Les serveurs liés sont tous inscrits dans la transaction distribuée [!INCLUDE[tsql](../../includes/tsql-md.md)] et MS DTC garantit que la transaction est exécutée jusqu'à son terme sur chaque serveur lié.<br /><br /> Si cette option a la valeur FALSE (ou OFF), une transaction locale ne sera pas promue en transaction distribuée lors de l'exécution d'un appel de procédure distante sur un serveur lié.<br /><br /> Si, avant d'exécuter un appel de procédure de serveur à serveur, la transaction est déjà une transaction distribuée, cette option n'a pas effet. L'appel de procédure sur le serveur lié s'exécutera sous la même transaction distribuée.<br /><br /> Si, avant d'exécuter un appel de procédure de serveur à serveur, aucune transaction n'est active dans la connexion, cette option n'a pas effet. La procédure s'exécute ensuite sur le serveur lié sans transactions actives.<br /><br /> La valeur par défaut de cette option est TRUE (ou ON).|  
   
-`[ @optvalue = ] 'option_value'` Spécifie ou non le *option_name* doit être activée (**TRUE** ou **sur**) ou désactivé (**FALSE** ou **hors**). *l’argument option_value* est **varchar (** 10 **)** , sans valeur par défaut.  
+`[ @optvalue = ] 'option_value'`Spécifie si le *option_name* doit être activé (**true** ou **on**) ou désactivé (**false** ou **off**). *option_value* est de type **varchar (** 10 **)**, sans valeur par défaut.  
   
- *l’argument option_value* peut être un entier non négatif pour le **délai de connexion** et **délai de requête** options. Pour le **nom de classement** option, *argument option_value* peut être un nom de classement ou une valeur NULL.  
+ *option_value* peut être un entier non négatif pour les options **délai de connexion** et **délai d’expiration** de la requête. Pour l’option **nom du classement** , *option_value* peut être un nom de classement ou une valeur null.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- Si le **compatible avec le classement** option est définie sur TRUE, **nom de classement** prend automatiquement la valeur null. Si **nom de classement** est défini sur une valeur non null, **compatible avec le classement** prend automatiquement la valeur False.  
+ Si l’option **collation compatible** est définie sur true, le **nom de classement** sera automatiquement défini sur null. Si le **nom du classement** est défini sur une valeur non null, le **classement compatible** est défini automatiquement sur false.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite une autorisation ALTER ANY LINKED SERVER sur le serveur.  
@@ -85,7 +86,7 @@ EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Distribué des procédures stockées de requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ [Procédures stockées de requêtes distribuées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   

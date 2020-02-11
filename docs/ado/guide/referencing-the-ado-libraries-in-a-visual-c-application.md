@@ -1,5 +1,5 @@
 ---
-title: Références aux bibliothèques ADO dans une Application Visual C++ | Microsoft Docs
+title: Référencement des bibliothèques ADO dans une application Visual C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -17,31 +17,31 @@ ms.assetid: d3ea12ec-bca8-48c3-af57-ce14576108c9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 62fb1b89299af1f466e446c8adba422a841f0196
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923022"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>Références aux bibliothèques ADO dans une application Visual C++
-Pour utiliser la dernière version de ADO dans une application Visual C++, utilisez la commande suivante `#import` directive :  
+Pour utiliser la dernière version d’ADO dans une application Visual C++, utilisez la directive `#import` suivante :  
   
 ```cpp
 #import "msado15.dll" \  
     no_namespace rename("EOF", "EndOfFile")  
 ```  
   
- Pour utiliser ADO MD ou ADOX, vous devez importer *msadomd.dll* ou *msadox.dll*, en utilisant la syntaxe ci-dessus.  
+ Pour utiliser ADO MD ou ADOX, vous devez importer *msadomd. dll* ou *msadox. dll*à l’aide de la syntaxe ci-dessus.  
   
 ## <a name="backward-compatibility"></a>Backward Compatibility  
- Pour utiliser les versions précédentes d’ADO, remplacez *msado15.dll* ci-dessus avec l’une des bibliothèques de types suivantes.  
+ Pour utiliser une version antérieure d’ADO, remplacez *msado15. dll* ci-dessus par l’une des bibliothèques de types suivantes.  
   
--   *msado27.tlb*, bibliothèque de types 2.7 ADO  
+-   *msado27. tlb*, bibliothèque de types ADO 2,7  
   
--   *msado26.tlb*, bibliothèque de types 2.6 ADO  
+-   *msado26. tlb*, bibliothèque de types ADO 2,6  
   
--   *Msado25.tlb*, bibliothèque de types 2,5 ADO  
+-   *Msado25. tlb*, bibliothèque de types ADO 2,5  
   
--   *Msado21.tlb*, bibliothèque de types 2.1 ADO  
+-   *Msado21. tlb*, bibliothèque de types ADO 2,1  
   
--   *msado20.tlb*, bibliothèque de types 2.0 ADO
+-   *msado20. tlb*, bibliothèque de types ADO 2,0

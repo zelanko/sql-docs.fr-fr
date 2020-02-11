@@ -19,40 +19,40 @@ ms.assetid: ee16de24-3d95-4b2e-a094-78df2514d18a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6ea3fd7937447ba3ed0f3ad89965301dead772cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122883"
 ---
 # <a name="backupmediafamily-transact-sql"></a>backupmediafamily (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Cette table contient une ligne pour chaque famille de supports de sauvegardes. Si une famille de supports réside dans un support de sauvegarde miroir, elle a une ligne distincte pour chaque miroir du support de sauvegarde. Cette table est stockée dans le **msdb** base de données.  
+  Cette table contient une ligne pour chaque famille de supports de sauvegardes. Si une famille de supports réside dans un support de sauvegarde miroir, elle a une ligne distincte pour chaque miroir du support de sauvegarde. Cette table est stockée dans la base de données **msdb** .  
     
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**media_set_id**|**Int**|Numéro d'identification unique du support de sauvegarde dont cette famille est membre. Références **backupmediaset (media_set_id)**|  
+|**media_set_id**|**int**|Numéro d'identification unique du support de sauvegarde dont cette famille est membre. Références **backupmediaset (media_set_id)**|  
 |**family_sequence_number**|**tinyint**|Position de la famille de supports dans le support de sauvegarde.|  
 |**media_family_id**|**uniqueidentifier**|Numéro d'identification unique de la famille de supports de sauvegarde. Sa valeur peut être NULL.|  
 |**media_count**|**int**|Nombre de supports de sauvegarde dans la famille de supports. Sa valeur peut être NULL.|  
-|**logical_device_name**|**nvarchar(128)**|Nom de cette unité de sauvegarde dans **sys.backup_devices.name**. S’il s’agit d’une unité de sauvegarde temporaire (par opposition à une unité de sauvegarde permanente qui existe dans **sys.backup_devices**), la valeur de **logical_device_name** a la valeur NULL.|  
-|**physical_device_name**|**nvarchar(260)**|Nom physique de l'unité de sauvegarde Sa valeur peut être NULL. Ce champ est partagé entre les processus de sauvegarde et de restauration. Il peut contenir le chemin d’accès de destination de sauvegarde d’origine ou le chemin de source de restauration d’origine. Selon si backup ou restore s’est produite tout d’abord sur un serveur pour une base de données. Notez que les restaurations consécutives du même fichier de sauvegarde ne met pas à jour le chemin d’accès, quel que soit son emplacement au moment de la restauration. Pour cette raison, **physical_device_name** champ ne peut pas être utilisé pour afficher le chemin d’accès de restauration utilisée.|  
-|**device_type**|**tinyint**|Type de l'unité de sauvegarde :<br /><br /> 2 = Disque<br /><br /> 5 = Bande<br /><br /> 7 = Unité virtuelle<br /><br /> 9 = stockage azure<br /><br /> 105 = Unité de sauvegarde constante.<br /><br /> Sa valeur peut être NULL.<br /><br /> Vous trouverez les tous les noms et les numéros de périphérique dans **sys.backup_devices**.|  
+|**logical_device_name**|**nvarchar(128)**|Nom de cette unité de sauvegarde dans **sys. backup_devices. Name**. S’il s’agit d’une unité de sauvegarde temporaire (par opposition à une unité de sauvegarde permanente qui existe dans **sys. backup_devices**), la valeur de **logical_device_name** est null.|  
+|**physical_device_name**|**nvarchar(260)**|Nom physique de l'unité de sauvegarde Sa valeur peut être NULL. Ce champ est partagé entre le processus de sauvegarde et de restauration. Il peut contenir le chemin d’accès de destination de la sauvegarde d’origine ou le chemin source d’origine de la restauration. Selon que la sauvegarde ou la restauration s’est produite en premier sur un serveur pour une base de données. Notez que les restaurations consécutives à partir du même fichier de sauvegarde ne mettent pas à jour le chemin d’accès, quel que soit son emplacement au moment de la restauration. Pour cette raison, **physical_device_name** champ ne peut pas être utilisé pour voir le chemin d’accès de restauration utilisé.|  
+|**device_type**|**tinyint**|Type de l'unité de sauvegarde :<br /><br /> 2 = Disque<br /><br /> 5 = Bande<br /><br /> 7 = Unité virtuelle<br /><br /> 9 = stockage Azure<br /><br /> 105 = Unité de sauvegarde constante.<br /><br /> Sa valeur peut être NULL.<br /><br /> Tous les noms et numéros de périphérique permanents sont disponibles dans **sys. backup_devices**.|  
 |**physical_block_size**|**int**|Taille du bloc physique réservé à l'écriture de la famille de supports de sauvegarde. Sa valeur peut être NULL.|  
-|**mirror**|**tinyint**|Nombre de miroirs (0-3).|  
+|**mémoire**|**tinyint**|Nombre de miroirs (0-3).|  
   
 ## <a name="remarks"></a>Notes  
- RESTORE VERIFYONLY FROM *backup_device* avec LOADHISTORY remplit les colonnes de la **backupmediaset** table avec les valeurs appropriées de l’en-tête de support de sauvegarde.  
+ RESTORE VERIFYONLY à partir de *backup_device* avec LoadHistory remplit les colonnes de la table **backupmediaset** avec les valeurs appropriées de l’en-tête Media-Set.  
   
- Pour réduire le nombre de lignes dans cette table et dans d’autres tables d’historique de sauvegarde et, exécutez le [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) procédure stockée.  
+ Pour réduire le nombre de lignes dans cette table et dans d’autres tables de sauvegarde et d’historique, exécutez la procédure stockée [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sauvegarde et restauration des Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+ [Sauvegarde et restauration de tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [Tables système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [Tables système &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

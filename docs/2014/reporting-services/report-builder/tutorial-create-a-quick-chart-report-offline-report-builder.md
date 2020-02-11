@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriel : Créer un rapport de graphique rapide en mode hors connexion (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : créer un rapport de graphique rapide en mode hors connexion (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -15,21 +15,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f345eaa2a51b5e6789f2a03968f8a1e68b12519a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107569"
 ---
-# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutoriel : Créer un rapport de graphique rapide en mode hors connexion (Générateur de rapports)
-  Dans ce didacticiel, vous allez créer un graphique à secteurs à l'aide d'un Assistant, puis le modifier quelque peu afin d'obtenir un petit aperçu des opérations réalisables. Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux méthodes ont le même résultat, un graphique à secteurs comme celui de l’illustration suivante :  
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Didacticiel : créer un rapport de graphique rapide en mode hors connexion (Générateur de rapports)
+  Dans ce didacticiel, vous allez créer un graphique à secteurs à l'aide d'un Assistant, puis le modifier quelque peu afin d'obtenir un petit aperçu des opérations réalisables. Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux méthodes ont le même résultat : un graphique à secteurs comme celui de l’illustration suivante :  
   
- ![« Mon premier graphique à secteurs « à exécution afficher](../media/rs-my1stpierunview.gif "mon premier graphique à secteurs dans la vue de l’exécution")  
+ ![« Mon premier graphique à secteurs » en mode exécution](../media/rs-my1stpierunview.gif "Mon premier graphique à secteurs en mode exécution")  
   
-## <a name="prerequisites"></a>Prérequis  
- Que vous utilisiez des données XML ou une requête [!INCLUDE[tsql](../../../includes/tsql-md.md)], vous devez avoir accès au Générateur de rapports [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Vous pouvez exécuter la version autonome ou la version ClickOnce disponible à partir du Gestionnaire de rapports ou d'un site SharePoint. Seule la première étape, l'ouverture du Générateur de rapports, est différente pour les versions ClickOnce. Pour plus d’informations, consultez [installation, désinstallation et prise en charge du Générateur de rapports](../install-uninstall-and-report-builder-support.md).  
+## <a name="prerequisites"></a>Conditions préalables requises  
+ Que vous utilisiez des données XML ou une requête [!INCLUDE[tsql](../../../includes/tsql-md.md)], vous devez avoir accès au Générateur de rapports [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Vous pouvez exécuter la version autonome ou la version ClickOnce disponible à partir du Gestionnaire de rapports ou d'un site SharePoint. Seule la première étape, l'ouverture du Générateur de rapports, est différente pour les versions ClickOnce. Pour plus d’informations, consultez [installation, désinstallation et prise en charge de générateur de rapports](../install-uninstall-and-report-builder-support.md).  
   
-##  <a name="TwoWays"></a> Deux façons de réaliser ce didacticiel  
+##  <a name="TwoWays"></a>Deux méthodes pour suivre ce didacticiel  
   
 -   [Créer le graphique à secteurs avec des données XML](#CreatePieChartXML)  
   
@@ -50,11 +50,11 @@ ms.locfileid: "66107569"
  [Créer le graphique à secteurs avec une requête Transact-SQL qui contient des données](#CreatePieQueryData)  
   
 ## <a name="also-in-this-article"></a>Également dans cet article  
- [Après avoir exécuté l’Assistant](#AfterWizard)  
+ [Après l’exécution de l’Assistant](#AfterWizard)  
   
- [Quelle est la suite](#WhatsNext)  
+ [Étapes suivantes](#WhatsNext)  
   
-##  <a name="CreatePieChartXML"></a> Création du graphique à secteurs avec des données XML  
+##  <a name="CreatePieChartXML"></a>Création du graphique à secteurs avec des données XML  
   
 #### <a name="to-create-the-pie-chart-with-xml-data"></a>Pour créer le graphique à secteurs avec des données XML  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66107569"
      La boîte de dialogue **Mise en route** s'affiche.  
   
     > [!NOTE]  
-    >  Si le **mise en route** boîte de dialogue n’apparaît pas, à partir de la **le Générateur de rapports** bouton, cliquez sur **New**.  
+    >  Si la boîte de dialogue **prise en main** n’apparaît pas, à partir du bouton **Générateur de rapports** , cliquez sur **nouveau**.  
   
 2.  Dans le volet gauche, assurez-vous que **Rapport** est sélectionné.  
   
@@ -77,13 +77,13 @@ ms.locfileid: "66107569"
   
 6.  Vous pouvez attribuer à la source de données le nom de votre choix. Dans la zone **Nom** , tapez **MonGraphiqueàSecteurs**.  
   
-7.  Dans le **sélectionner le type de connexion** , cliquez sur **XML.**  
+7.  Dans la zone **Sélectionner le type de connexion** , cliquez sur **XML.**  
   
-8.  Cliquez sur l’onglet **Informations d’identification** et sélectionnez **Utiliser l’utilisateur Windows actuel. Délégation Kerberos peut être nécessaire**, puis cliquez sur **OK**.  
+8.  Cliquez sur l’onglet **informations d’identification** , sélectionnez **utiliser l’utilisateur Windows actuel. La délégation Kerberos peut être nécessaire**, puis cliquez sur **OK**.  
   
 9. Dans la page **Choisir une connexion à une source de données** , cliquez sur **MonGraphiqueàSecteurs**, puis sur **Suivant**.  
   
-10. Copiez le texte suivant et collez-le dans la grande zone située au centre de la **concevoir une requête** page.  
+10. Copiez le texte suivant et collez-le dans la grande zone au centre de la page **créer une requête** .  
   
     ```  
     <Query>  
@@ -112,7 +112,7 @@ ms.locfileid: "66107569"
   
 11. (Facultatif) Cliquez sur le bouton Exécuter ( **!** ) pour voir les données sur lesquelles votre graphique sera basé.  
   
-12. Cliquer sur **Suivant**.  
+12. Cliquez sur **Suivant**.  
   
 13. Dans la page **Choisir un type de graphique** , cliquez sur **Secteurs**, puis sur **Suivant**.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66107569"
   
 15. Faites glisser le champ **FullName** de la zone **Champs disponibles** vers la zone **Catégories** (ou double-cliquez dessus pour le faire passer dans la zone **Catégories**), puis cliquez sur **Suivant**.  
   
-16. Dans le **choisir un style** page, **océan** est sélectionnée par défaut. Cliquez sur les autres styles pour voir à quoi ils ressemblent.  
+16. Dans la page **choisir un style** , **océan** est sélectionné par défaut. Cliquez sur les autres styles pour voir à quoi ils ressemblent.  
   
 17. Cliquez sur **Terminer**.  
   
@@ -130,15 +130,15 @@ ms.locfileid: "66107569"
   
 18. Pour afficher votre graphique à secteurs, cliquez sur **Exécuter** sous l'onglet **Accueil** du ruban.  
   
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#TwoWays)  
+ ![Icône de flèche utilisée avec le lien retour en haut](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [vers le haut](#TwoWays)  
   
-##  <a name="CreatePieQueryData"></a> Création du graphique à secteurs avec une requête [!INCLUDE[tsql](../../../includes/tsql-md.md)]  
+##  <a name="CreatePieQueryData"></a>Création du graphique à secteurs avec [!INCLUDE[tsql](../../../includes/tsql-md.md)] une requête  
   
 #### <a name="to-create-the-pie-chart-with-a-includetsqlincludestsql-mdmd-query-that-contains-data"></a>Pour créer le graphique à secteurs avec une requête [!INCLUDE[tsql](../../../includes/tsql-md.md)] qui contient des données  
   
 1.  Cliquez sur **Démarrer**, pointez sur **Programmes**, sur **Générateur de rapports Microsoft SQL Server 2012**, puis cliquez sur **Générateur de rapports version**.  
   
-2.  Dans le **nouveau rapport ou dataset** boîte de dialogue, vérifiez que **rapport** est sélectionné dans le volet gauche.  
+2.  Dans la boîte de dialogue **nouveau rapport ou DataSet** , vérifiez que **rapport** est sélectionné dans le volet gauche.  
   
 3.  Dans le volet droit, cliquez sur **Assistant Graphique**, puis sur **Créer**.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "66107569"
   
 8.  (Facultatif) Cliquez sur le bouton Exécuter ( **!** ) pour voir les données sur lesquelles votre graphique sera basé.  
   
-9. Cliquer sur **Suivant**.  
+9. Cliquez sur **Suivant**.  
   
 10. Dans la page **Choisir un type de graphique** , cliquez sur **Secteurs**, puis sur **Suivant**.  
   
@@ -181,9 +181,9 @@ ms.locfileid: "66107569"
   
 15. Pour afficher votre graphique à secteurs, cliquez sur **Exécuter** sous l'onglet **Accueil** du ruban.  
   
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#TwoWays)  
+ ![Icône de flèche utilisée avec le lien retour en haut](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [vers le haut](#TwoWays)  
   
-##  <a name="AfterWizard"></a> Après l'exécution de l'Assistant  
+##  <a name="AfterWizard"></a>Après l’exécution de l’Assistant  
  Maintenant que vous avez créé votre rapport de graphique à secteurs, vous pouvez le manipuler. Sous l'onglet **Exécuter** du ruban, cliquez sur **Conception**de manière à pouvoir continuer de le modifier.  
   
 ### <a name="make-the-chart-bigger"></a>Augmenter la taille du graphique  
@@ -196,28 +196,30 @@ ms.locfileid: "66107569"
   
 ##### <a name="to-display-percentage-values-as-labels-on-a-pie-chart"></a>Pour afficher des valeurs en pourcentage sous forme d'étiquettes sur un graphique à secteurs  
   
-1.  Avec le bouton droit sur le graphique à secteurs et sélectionnez **afficher les étiquettes de données**. Les étiquettes de données doivent apparaître dans chaque secteur du graphique.  
+1.  Cliquez avec le bouton droit sur le graphique à secteurs et sélectionnez **afficher les étiquettes de données**. Les étiquettes de données doivent apparaître dans chaque secteur du graphique.  
   
-2.  Avec le bouton droit sur les étiquettes et sélectionnez **propriétés de l’étiquette série**. La boîte de dialogue **Propriétés de l'étiquette de la série** s'affiche.  
+2.  Cliquez avec le bouton droit sur les étiquettes et sélectionnez Propriétés de l’étiquette de la **série**. La boîte de dialogue **Propriétés de l'étiquette de la série** s'affiche.  
   
-3.  Type `#PERCENT{P0}` pour le **données de l’étiquette** option.  
+3.  Type `#PERCENT{P0}` de l’option des **données d’étiquette** .  
   
-     `{P0}` indique le pourcentage sans décimales. Si vous tapez simplement `#PERCENT`, vos chiffres comporteront deux décimales. `#PERCENT` est un mot clé qui effectue un calcul ou une fonction pour vous ; il en existe de nombreux autres.  
+     
+  `{P0}` indique le pourcentage sans décimales. Si vous tapez simplement `#PERCENT`, vos chiffres comporteront deux décimales. 
+  `#PERCENT` est un mot clé qui effectue un calcul ou une fonction pour vous ; il en existe de nombreux autres.  
   
  Pour plus d’informations sur la personnalisation des étiquettes et légendes de graphique, voir [Afficher des valeurs en pourcentage dans un graphique à secteurs (Générateur de rapports et SSRS)](../report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) et [Modifier le texte d’un élément de légende (Générateur de rapports et SSRS)](../report-design/chart-legend-change-item-text-report-builder.md).  
   
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#TwoWays)  
+ ![Icône de flèche utilisée avec le lien retour en haut](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [vers le haut](#TwoWays)  
   
-##  <a name="WhatsNext"></a> Étape suivante  
- Maintenant que vous avez créé votre premier rapport dans le Générateur de rapports, vous pouvez effectuer les autres didacticiels et commencer à créer des rapports à partir de vos propres données. Pour exécuter le Générateur de rapports, vous devez avoir l’autorisation d’accéder à vos sources de données, telles que des bases de données, avec un *chaîne de connexion*, ce qui permet de vous connecter à la source de données. Votre administrateur système sera en mesure de vous fournir les informations nécessaires.  
+##  <a name="WhatsNext"></a>Et ensuite ?  
+ Maintenant que vous avez créé votre premier rapport dans le Générateur de rapports, vous pouvez effectuer les autres didacticiels et commencer à créer des rapports à partir de vos propres données. Pour exécuter Générateur de rapports, vous devez avoir l’autorisation d’accéder à vos sources de données, telles que des bases de données, avec une *chaîne de connexion*, qui vous permet de vous connecter à la source de données. Votre administrateur système sera en mesure de vous fournir les informations nécessaires.  
   
  Pour utiliser les autres didacticiels, vous avez besoin du nom d'une instance de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] et d'informations d'identification suffisantes pour accéder en lecture seule aux bases de données. Là encore, vous pouvez vous adresser à votre administrateur système.  
   
  Pour finir, afin d'enregistrer vos rapports sur un serveur de rapports ou un site SharePoint intégré à un serveur de rapports, il vous faut posséder l'URL et les autorisations nécessaires. Vous pouvez créer les rapports que vous créez directement à partir de votre ordinateur, mais les rapports procurent davantage de fonctionnalités lorsqu'ils sont exécutés à partir du serveur de rapports ou d'un site SharePoint. Vous devez disposer des autorisations nécessaires pour exécuter vos rapports (ou d'autres rapports) à partir du serveur de rapports ou du site SharePoint sur lequel ils sont publiés. Pour obtenir ces autorisations, contactez votre administrateur système.  
   
- Avant de continuer, il peut être utile de lire certains documents relatifs à certains concepts et termes. Pour plus d’informations, consultez [Concepts de création de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md). Il est également conseillé d'accorder un peu de temps à la planification avant de créer votre premier rapport. Ce temps consacré vous sera utile. Pour plus d’informations, consultez [planification d’un rapport &#40;Générateur de rapports&#41;](../report-design/planning-a-report-report-builder.md).  
+ Avant de continuer, il peut être utile de lire certains documents relatifs à certains concepts et termes. Pour plus d’informations, consultez [concepts de création de rapports &#40;générateur de rapports et&#41;SSRS ](../report-design/report-authoring-concepts-report-builder-and-ssrs.md). Il est également conseillé d'accorder un peu de temps à la planification avant de créer votre premier rapport. Ce temps consacré vous sera utile. Pour plus d’informations, consultez [planification d’un rapport &#40;Générateur de rapports&#41;](../report-design/planning-a-report-report-builder.md).  
   
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#TwoWays)  
+ ![Icône de flèche utilisée avec le lien retour en haut](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [vers le haut](#TwoWays)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Didacticiels &#40;Générateur de rapports&#41;](../report-builder-tutorials.md)   

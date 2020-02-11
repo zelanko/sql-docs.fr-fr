@@ -13,14 +13,14 @@ ms.assetid: 410c5a6e-e957-4ecc-9e2d-e591cbc0bc4f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f8addb9b4c7c200ee8f213bdd959067039ccfff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063673"
 ---
 # <a name="set-null-command"></a>SET NULL, commande
-Détermine comment les valeurs null sont prises en charge par le SQL ALTER TABLE (SQL, CREATE TABLE) et INSERT - commandes SQL.  
+Détermine la façon dont les valeurs NULL sont prises en charge par les commandes ALTER TABLE-SQL, CREATE TABLE-SQL et INSERT-SQL.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -30,20 +30,20 @@ SET NULL ON | OFF
 ```  
   
 ## <a name="arguments"></a>Arguments  
- ON  
- (Par défaut pour le pilote ; la valeur par défaut pour Visual FoxPro est désactivée (OFF).) Spécifie que toutes les colonnes dans une table créée avec ALTER TABLE et CREATE TABLE autorise les valeurs null. Vous pouvez remplacer la prise en charge de la valeur null pour les colonnes dans le tableau en incluant la clause NOT NULL dans les définitions de la colonne.  
+ ACTIVÉ  
+ (Valeur par défaut pour le pilote ; la valeur par défaut de Visual FoxPro est OFF.) Spécifie que toutes les colonnes d’une table créée avec ALTER TABLE et CREATE TABLE autorisent les valeurs NULL. Vous pouvez substituer la prise en charge des valeurs NULL pour les colonnes de la table en incluant la clause NOT NULL dans les définitions des colonnes.  
   
- Spécifie également que INSERT - SQL insère des valeurs null dans toutes les colonnes non inclus dans l’instruction INSERT - clause SQL VALUE. INSERT - SQL insère des valeurs null uniquement dans les colonnes qui acceptent les valeurs null.  
+ Spécifie également que INSERT-SQL insère des valeurs NULL dans toutes les colonnes qui ne sont pas incluses dans la clause INSERT-SQL VALUE. INSERT-SQL insère uniquement des valeurs NULL dans les colonnes qui autorisent les valeurs NULL.  
   
  OFF  
- Spécifie que toutes les colonnes dans une table créée avec ALTER TABLE et CREATE TABLE ne permettent pas de valeurs null. Vous pouvez désigner la prise en charge de la valeur null pour les colonnes dans l’instruction ALTER TABLE et CREATE TABLE en incluant la clause NULL dans les définitions de la colonne.  
+ Spécifie que toutes les colonnes d’une table créée avec ALTER TABLE et CREATE TABLE n’autorisent pas les valeurs NULL. Vous pouvez spécifier la prise en charge des valeurs NULL pour les colonnes de l’instruction ALTER TABLE et CREATE TABLE en incluant la clause NULL dans les définitions des colonnes.  
   
- Spécifie également que INSERT - SQL insère les valeurs vides dans toutes les colonnes non inclus dans l’instruction INSERT - clause SQL VALUE.  
+ Spécifie également que INSERT-SQL insère des valeurs vides dans toutes les colonnes qui ne sont pas incluses dans la clause INSERT-SQL VALUE.  
   
 ## <a name="remarks"></a>Notes  
- SET NULL affecte uniquement comment nul est pris en charge par ALTER TABLE, CREATE TABLE et INSERT - SQL. Autres commandes ne sont pas affectées par la valeur NULL.  
+ SET NULL affecte uniquement la prise en charge des valeurs NULL par ALTER TABLE, CREATE TABLE et INSERT-SQL. Les autres commandes ne sont pas affectées par la valeur NULL.  
   
 ## <a name="see-also"></a>Voir aussi  
- [ALTER TABLE, commande SQL](../../odbc/microsoft/alter-table-sql-command.md)   
- [CREATE TABLE, commande SQL](../../odbc/microsoft/create-table-sql-command.md)   
+ [ALTER TABLE-commande SQL](../../odbc/microsoft/alter-table-sql-command.md)   
+ [CREATE TABLE-commande SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [INSERT, commande SQL](../../odbc/microsoft/insert-sql-command.md)

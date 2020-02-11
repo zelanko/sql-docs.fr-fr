@@ -19,20 +19,20 @@ ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ccd72de184115929483a43fd69d133abe0e195af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68117907"
 ---
-# <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
+# <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   
 **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
 
 Ajoute une unité de sauvegarde à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,36 +47,36 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @devtype = ] 'device_type'` Est le type d’unité de sauvegarde. *device_type* est **varchar (20)** , sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @devtype = ] 'device_type'`Type de l’unité de sauvegarde. *device_type* est de type **varchar (20)**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**disk**|Fichier de disque dur comme unité de sauvegarde.|  
-|**tape**|Tout périphérique à bandes géré par [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> Remarque : La prise en charge des unités de sauvegarde sur bande sera supprimée dans une prochaine version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité.|  
+|**libérer**|Fichier de disque dur comme unité de sauvegarde.|  
+|**déroule**|Tout périphérique à bandes géré par [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> Remarque : la prise en charge des unités de sauvegarde sur bande sera supprimée dans une prochaine version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité.|  
   
-`[ @logicalname = ] 'logical_name'` Est le nom logique de l’unité de sauvegarde utilisée dans les instructions BACKUP et RESTORE. *nom_logique* est **sysname**, sans valeur par défaut, et ne peut pas être NULL.  
+`[ @logicalname = ] 'logical_name'`Nom logique de l’unité de sauvegarde utilisée dans les instructions BACKUP et Restore. *logical_name* est de **type sysname**, sans valeur par défaut et ne peut pas avoir la valeur null.  
   
-`[ @physicalname = ] 'physical_name'` Est le nom physique de l’unité de sauvegarde. Les noms physiques doivent respecter les règles en vigueur pour les noms de fichiers du système d'exploitation ou les conventions d'affectation des noms pour les unités réseau, et doivent comprendre un chemin d'accès complet. *physical_name* est **nvarchar (260)** , sans valeur par défaut de valeur et ne peut pas être NULL.  
+`[ @physicalname = ] 'physical_name'`Nom physique de l’unité de sauvegarde. Les noms physiques doivent respecter les règles en vigueur pour les noms de fichiers du système d'exploitation ou les conventions d'affectation des noms pour les unités réseau, et doivent comprendre un chemin d'accès complet. *physical_name* est de type **nvarchar (260)**, sans valeur par défaut, et ne peut pas être null.  
   
  Lorsque vous créez une unité de sauvegarde sur un site de réseau distant, assurez-vous que le nom sous lequel le [!INCLUDE[ssDE](../../includes/ssde-md.md)] a été démarré est capable d'assurer les opérations d'écriture sur l'ordinateur distant.  
   
- Si vous ajoutez un périphérique à bandes, ce paramètre doit être le nom physique affecté sur le périphérique à bandes local de Windows ; par exemple,  **\\ \\. \TAPE0** pour la première unité de bande sur l’ordinateur. Ce périphérique à bandes doit être relié à l'ordinateur serveur, il ne peut être utilisé à distance. Insérez les noms comportant des caractères non alphanumériques entre guillemets.  
+ Si vous ajoutez un périphérique à bandes, ce paramètre doit être le nom physique affecté à l’unité de bande locale par Windows ; par exemple, ** \\ \\.\TAPE0** pour le premier périphérique à bandes sur l’ordinateur. Ce périphérique à bandes doit être relié à l'ordinateur serveur, il ne peut être utilisé à distance. Insérez les noms comportant des caractères non alphanumériques entre guillemets.  
   
 > [!NOTE]  
 >  Cette procédure entre le nom physique spécifié dans le catalogue, mais elle ne tente pas de créer l'unité ou d'y accéder.  
   
-`[ @cntrltype = ] 'controller_type'` Obsolète. S'il est spécifié, ce paramètre est ignoré. Il est conservé uniquement pour des raisons de compatibilité descendante. Les nouvelles utilisations de **sp_addumpdevice** doit omettre ce paramètre.  
+`[ @cntrltype = ] 'controller_type'`Périmé. S'il est spécifié, ce paramètre est ignoré. Il est conservé uniquement pour des raisons de compatibilité descendante. Les nouvelles utilisations de **sp_addumpdevice** doivent omettre ce paramètre.  
   
-`[ @devstatus = ] 'device_status'` Obsolète. S'il est spécifié, ce paramètre est ignoré. Il est conservé uniquement pour des raisons de compatibilité descendante. Les nouvelles utilisations de **sp_addumpdevice** doit omettre ce paramètre.  
+`[ @devstatus = ] 'device_status'`Périmé. S'il est spécifié, ce paramètre est ignoré. Il est conservé uniquement pour des raisons de compatibilité descendante. Les nouvelles utilisations de **sp_addumpdevice** doivent omettre ce paramètre.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
- **sp_addumpdevice** ajoute une unité de sauvegarde à la **sys.backup_devices** vue de catalogue. Vous pouvez ensuite faire référence à cette unité de manière logique dans les instructions BACKUP et RESTORE. **sp_addumpdevice** n’effectue pas l’accès à l’appareil physique. L'accès à l'unité spécifié survient uniquement lorsqu'une instruction BACKUP ou RESTORE est exécutée. La création d'une unité de sauvegarde logique peut simplifier les instructions BACKUP et RESTORE, car la définition du nom de l'unité est une solution via l'utilisation d'une clause « TAPE = » ou « DISK = » pour spécifier le chemin d'accès de l'unité.  
+ **sp_addumpdevice** ajoute une unité de sauvegarde à l’affichage catalogue **sys. backup_devices** . Vous pouvez ensuite faire référence à cette unité de manière logique dans les instructions BACKUP et RESTORE. **sp_addumpdevice** n’effectue pas d’accès à l’appareil physique. L'accès à l'unité spécifié survient uniquement lorsqu'une instruction BACKUP ou RESTORE est exécutée. La création d'une unité de sauvegarde logique peut simplifier les instructions BACKUP et RESTORE, car la définition du nom de l'unité est une solution via l'utilisation d'une clause « TAPE = » ou « DISK = » pour spécifier le chemin d'accès de l'unité.  
   
  Des problèmes de propriété et de permissions sont susceptibles de perturber l'utilisation des unités de sauvegarde sur disque ou sur fichiers. Assurez-vous que le compte Windows sous lequel le [!INCLUDE[ssDE](../../includes/ssde-md.md)] a été démarré bénéficie des autorisations de fichiers adéquates.  
   
@@ -84,7 +84,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
  N'utilisez dans le lecteur de bande que les bandes recommandées par le fabricant du lecteur. Si vous utilisez des lecteurs DAT, utilisez des bandes DAT conçues pour fonctionner avec un ordinateur (Digital Data Storage-DDS).  
   
- **sp_addumpdevice** ne peut pas être exécutée à l’intérieur d’une transaction.  
+ **sp_addumpdevice** ne peut pas être exécutée dans une transaction.  
   
  Pour supprimer un appareil, utilisez [sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md) ou[SQL Server Management Studio](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md).  
   
@@ -105,7 +105,7 @@ EXEC sp_addumpdevice 'disk', 'mydiskdump', 'c:\dump\dump1.bak';
 ```  
   
 ### <a name="b-adding-a-network-disk-backup-device"></a>B. Ajout d'une unité de sauvegarde sur disque du réseau  
- L'exemple suivant ajoute une unité de sauvegarde sur disque distant appelée `networkdevice`. Le nom sous lequel le [!INCLUDE[ssDE](../../includes/ssde-md.md)] a été démarré doit disposer des autorisations à ce fichier à distance (`\\<servername>\<sharename>\<path>\<filename>.bak`).  
+ L'exemple suivant ajoute une unité de sauvegarde sur disque distant appelée `networkdevice`. Le nom sous lequel le [!INCLUDE[ssDE](../../includes/ssde-md.md)] a été démarré doit avoir les autorisations pour ce fichier`\\<servername>\<sharename>\<path>\<filename>.bak`distant ().  
   
 ```  
 USE master;  

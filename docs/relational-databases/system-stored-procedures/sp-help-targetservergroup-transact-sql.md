@@ -18,18 +18,18 @@ ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 63a3d9daa48bb98408c3f0d9b8282e8083849cf0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085074"
 ---
-# <a name="sphelptargetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
+# <a name="sp_help_targetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Répertorie tous les serveurs cibles du groupe spécifié. Si aucun groupe n'est spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] renvoie des informations sur tous les groupes de serveurs cibles.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,20 +40,20 @@ sp_help_targetservergroup
 ```  
   
 ## <a name="argument"></a>Argument  
-`[ @name = ] 'name'` Est le nom du groupe de serveurs cible pour lequel retourner les informations. *nom* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @name = ] 'name'`Nom du groupe de serveurs cibles pour lequel des informations doivent être retournées. *Name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**servergroup_id**|**int**|Numéro d'identification du groupe de serveurs|  
-|**name**|**sysname**|Nom du groupe de serveurs|  
+|**nomme**|**sysname**|Nom du groupe de serveurs|  
   
 ## <a name="permissions"></a>Autorisations  
- Pour exécuter cette procédure, les autorisations par défaut pour le **sysadmin** rôle serveur fixe.  
+ Les autorisations d’exécution de cette procédure sont octroyées par défaut au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
   

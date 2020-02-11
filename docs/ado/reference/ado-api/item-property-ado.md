@@ -46,14 +46,14 @@ ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fe7e807fc38d6f1cf6f72e5b19539bb839e9c08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918363"
 ---
 # <a name="item-property-ado"></a>Item, propriété (ADO)
-Indique un membre spécifique d’une collection, par nom ou un nombre ordinal.  
+Indique un membre spécifique d’une collection, par nom ou numéro ordinal.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -65,13 +65,13 @@ Set object = collection.Item ( Index )
  Retourne une référence d’objet.  
   
 ## <a name="parameters"></a>Paramètres  
- *Index*  
- Un **Variant** expression qui correspond au nom ou au nombre ordinal d’un objet dans une collection.  
+ *Évaluer*  
+ Expression **Variant** qui prend pour valeur le nom ou le numéro ordinal d’un objet dans une collection.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le **élément** propriété à retourner un objet spécifique dans une collection. Si **élément** Impossible de trouver un objet dans la collection qui correspond à la *Index* argument, une erreur se produit. En outre, certaines collections ne prennent en charge les objets nommés ; pour ces collections, vous devez utiliser des références de nombre ordinal.  
+ Utilisez la propriété **Item** pour retourner un objet spécifique dans une collection. Si l' **élément** ne peut pas trouver un objet dans la collection correspondant à l’argument d' *index* , une erreur se produit. En outre, certaines collections ne prennent pas en charge les objets nommés ; pour ces collections, vous devez utiliser des références de nombre ordinal.  
   
- Le **élément** propriété est la propriété par défaut pour toutes les collections ; par conséquent, les formes de syntaxe suivantes sont interchangeables :  
+ La propriété **Item** est la propriété par défaut pour toutes les collections ; par conséquent, les formes de syntaxe suivantes sont interchangeables :  
   
 ```  
 collection.Item (Index)  
@@ -91,5 +91,5 @@ collection (Index)
 |[Views, collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
 ## <a name="see-also"></a>Voir aussi  
- [Item, propriété-Exemple (VB)](../../../ado/reference/ado-api/item-property-example-vb.md)   
+ [Item, exemple de propriété (VB)](../../../ado/reference/ado-api/item-property-example-vb.md)   
  [Item, exemple de propriété (VC++)](../../../ado/reference/ado-api/item-property-example-vc.md)   

@@ -16,29 +16,29 @@ ms.assetid: 55d273c4-ccee-48ef-ba90-8893d04313c8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69bce043f7c5ce72de37e6e085e57baccd8c4864
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920356"
 ---
 # <a name="bookmarkenum"></a>BookmarkEnum
-Spécifie un signet qui indique où doit commencer l’opération.  
+Spécifie un signet indiquant où l’opération doit commencer.  
   
-|Constante|Value|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adBookmarkCurrent**|0|Commence à l’enregistrement actif.|  
 |**adBookmarkFirst**|1|Commence au premier enregistrement.|  
 |**adBookmarkLast**|2|Démarre au dernier enregistrement.|  
   
-## <a name="adowfc-equivalent"></a>Équivalent de ADO/WFC  
- Package : **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
+ Package : **com. ms. wfc. Data**  
   
-|Constante|  
+|Constant|  
 |--------------|  
 |AdoEnums.Bookmark.CURRENT|  
 |AdoEnums.Bookmark.FIRST|  
-|AdoEnums.Bookmark.LAST|  
+|AdoEnums. Bookmark. LAST|  
   
 ## <a name="applies-to"></a>S'applique à  
   

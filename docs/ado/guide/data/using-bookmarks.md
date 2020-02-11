@@ -1,5 +1,5 @@
 ---
-title: À l’aide de signets | Microsoft Docs
+title: Utilisation des signets | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,18 +14,18 @@ ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9fa2a738a3e94cd306619a318b75a2fd506972c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923611"
 ---
 # <a name="using-bookmarks"></a>Utilisation de signets
-Il est souvent utile de retourner directement à un enregistrement spécifique après avoir déplacé dans le **Recordset** sans avoir à faire défiler tous les enregistrements et comparer des valeurs. Par exemple, si vous tentez de rechercher un enregistrement à l’aide de la **trouver** méthode mais la recherche ne renvoie aucun enregistrement, vous accédez automatiquement à chaque extrémité de la **Recordset**. Si votre fournisseur les prend en charge, les signets peuvent être utilisés pour marquer votre position avant d’utiliser le **trouver** méthode afin de pouvoir revenir à votre emplacement. Un signet est un **Variant** type valeur qui identifie de façon unique un enregistrement dans un **Recordset** objet.  
+Il est souvent utile de revenir directement à un enregistrement spécifique après l’avoir déplacé dans le **Recordset** sans avoir à faire défiler chaque enregistrement et à comparer des valeurs. Par exemple, si vous tentez de rechercher un enregistrement à l’aide de la méthode **Find** alors que la recherche ne retourne aucun enregistrement, vous êtes automatiquement placé à chaque extrémité du **Recordset**. Si votre fournisseur les prend en charge, vous pouvez utiliser des signets pour marquer votre lieu avant d’utiliser la méthode **Find** afin de pouvoir revenir à votre emplacement. Un signet est une valeur de type **Variant** qui identifie de façon unique un enregistrement dans un objet **Recordset** .  
   
- Vous pouvez également utiliser un tableau de type variant de signets avec le **filtre de jeu d’enregistrements** méthode pour filtrer un jeu d’enregistrements sélectionné. Pour plus d’informations sur cette technique, consultez les résultats dans la rubrique, le filtrage [utilisation des Recordsets](../../../ado/guide/data/working-with-recordsets.md), plus loin dans cette section.  
+ Vous pouvez également utiliser un tableau de signets de type Variant avec la méthode de **filtre Recordset** pour filtrer sur un jeu d’enregistrements sélectionné. Pour plus d’informations sur cette technique, consultez Filtrage des résultats dans la rubrique, [utilisation des recordsets](../../../ado/guide/data/working-with-recordsets.md), plus loin dans cette section.  
   
- Vous pouvez utiliser la **signet** propriété pour obtenir un signet pour un enregistrement, ou définir l’enregistrement actif dans un **Recordset** objet enregistrement identifié par un signet valide. Le code suivant utilise la **signet** propriété pour définir un signet puis revenez à l’enregistrement de signet après avoir accédé à d’autres enregistrements. Pour déterminer si votre **Recordset** prend en charge les signets, utilisez la **prend en charge** (méthode).  
+ Vous pouvez utiliser la propriété **Bookmark** pour obtenir un signet pour un enregistrement ou définir l’enregistrement en cours dans un objet **Recordset** sur l’enregistrement identifié par un signet valide. Le code suivant utilise la propriété **Bookmark** pour définir un signet, puis revenir à l’enregistrement marqué d’un signet après un déplacement vers d’autres enregistrements. Pour déterminer si votre **Recordset** prend en charge les signets, utilisez la méthode **supports** .  
   
 ```  
 'BeginBookmarkEg  
@@ -46,6 +46,6 @@ End If
 'EndBookmarkEg  
 ```  
   
- Le [prend en charge](../../../ado/reference/ado-api/supports-method.md) méthode est décrit plus en détail plus loin.  
+ La méthode [supports](../../../ado/reference/ado-api/supports-method.md) est traitée plus en détail ultérieurement.  
   
- Sauf dans le cas de cloné **Recordsets**, les signets sont spécifiques à la **Recordset** dans lequel ils ont été créés, même si la même commande est utilisée. Cela signifie que vous ne pouvez pas utiliser un **signet** obtenu à partir d’un **Recordset** pour déplacer vers le même enregistrement dans une seconde **Recordset** ouvert avec la même commande.
+ Sauf dans le cas des **recordsets**clonés, les signets sont uniques dans le **jeu d’enregistrements** dans lequel ils ont été créés, même si la même commande est utilisée. Cela signifie que vous ne pouvez pas utiliser un **signet** obtenu à partir d’un **jeu d’enregistrements** pour vous déplacer vers le même enregistrement dans un deuxième **Recordset** ouvert avec la même commande.

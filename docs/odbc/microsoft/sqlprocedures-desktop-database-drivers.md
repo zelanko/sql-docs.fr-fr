@@ -1,5 +1,5 @@
 ---
-title: SQLProcedures (pilotes pour les postes de travail de base de données) | Microsoft Docs
+title: SQLProcedures (pilotes de base de données de bureau) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: c996ad6f-e790-40f4-a962-843422496149
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d778f53f2d82be88aa62489f49712048991b579f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67909961"
 ---
 # <a name="sqlprocedures-desktop-database-drivers"></a>SQLProcedures (pilotes pour les bases de données de poste de travail)
-**SQLProcedures** retourne uniquement les lignes pour ces procédures qui ont au moins un argument. Les procédures qui ont pas d’arguments sont traités en tant que vues.  
+**SQLProcedures** renverra uniquement des lignes pour les procédures qui ont au moins un argument. Les procédures qui n’ont pas d’arguments sont traitées comme des vues.  
   
-|colonne|Commentaires|  
+|Colonne|Commentaires|  
 |------------|--------------|  
 |PROCEDURE_QUALIFIER|Chemin d'accès au fichier de base de données.|  
 |PROCEDURE_OWNER|NULL|  

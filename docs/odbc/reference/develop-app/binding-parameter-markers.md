@@ -1,5 +1,5 @@
 ---
-title: Liaison des marqueurs de paramètres | Microsoft Docs
+title: Marqueurs de paramètres de liaison | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,26 +14,26 @@ ms.assetid: fe88c1c2-4ee4-45e0-8500-b8c25c047815
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0e625e01b9bf4771f18dd8e9807ab09100ca580c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107647"
 ---
 # <a name="binding-parameter-markers"></a>Liaison de marqueurs de paramètre
-L’application lie les paramètres en appelant **SQLBindParameter**. **SQLBindParameter** lie un paramètre à la fois. Avec elle, l’application spécifie les éléments suivants :  
+L’application lie les paramètres en appelant **SQLBindParameter**. **SQLBindParameter** lie un paramètre à la fois. Avec celle-ci, l’application spécifie les éléments suivants :  
   
--   Le numéro de paramètre. Les paramètres sont numérotés dans l’ordre croissant des paramètres dans l’instruction SQL, en commençant par le numéro 1. Bien qu’il soit juridique pour spécifier un numéro de paramètre est supérieur au nombre de paramètres dans l’instruction SQL, la valeur du paramètre sera ignorée lorsque l’instruction est exécutée.  
+-   Numéro du paramètre. Les paramètres sont numérotés dans l’ordre des paramètres d’incrémentation dans l’instruction SQL, en commençant par le chiffre 1. S’il est autorisé de spécifier un nombre de paramètres supérieur au nombre de paramètres dans l’instruction SQL, la valeur du paramètre est ignorée lors de l’exécution de l’instruction.  
   
--   Le type de paramètre (entrée, entrée/sortie ou de sortie). À l’exception des paramètres dans les appels de procédure, tous les paramètres sont des paramètres d’entrée. Pour plus d’informations, consultez [paramètres de procédure](../../../odbc/reference/develop-app/procedure-parameters.md), plus loin dans cette section.  
+-   Type de paramètre (entrée, entrée/sortie ou sortie). À l’exception des paramètres dans les appels de procédure, tous les paramètres sont des paramètres d’entrée. Pour plus d’informations, consultez [paramètres de procédure](../../../odbc/reference/develop-app/procedure-parameters.md), plus loin dans cette section.  
   
--   Le C type, l’adresse et octets longueur des données de la variable liée au paramètre. Le pilote doit être en mesure de convertir les données à partir du type de données C au type de données SQL ou une erreur est retournée. Pour une liste des conversions prises en charge, consultez [conversion des données à partir de C en Types de données SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) dans l’annexe d : Types de données.  
+-   Le type de données C, l’adresse et la longueur en octets de la variable liée au paramètre. Le pilote doit être en mesure de convertir les données du type de données C en type de données SQL, faute de quoi une erreur est retournée. Pour obtenir la liste des conversions prises en charge, consultez [conversion de données de C en types de données SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) dans l’annexe D : types de données.  
   
 -   Le type de données SQL, la précision et l’échelle du paramètre lui-même.  
   
--   L’adresse d’une mémoire tampon de longueur / d’indicateur. Il fournit la longueur d’octet de données binaires ou caractères, spécifie que les données sont NULL ou indique que les données sont envoyées avec **SQLPutData**. Pour plus d’informations, consultez [à l’aide des valeurs de longueur / d’indicateur](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
+-   Adresse d’une mémoire tampon de longueur/d’indicateur. Il fournit la longueur en octets des données binaires ou de type caractère, spécifie que les données sont NULL, ou spécifie que les données seront envoyées avec **SQLPutData**. Pour plus d’informations, consultez [utilisation des valeurs de longueur/indicateur](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
   
- Par exemple, le code suivant lie *vendeur* et *CustID* aux paramètres pour les colonnes vendeur et CustID. Étant donné que *vendeur* contient des données caractères, ce qui est de longueur variable, le code spécifie la longueur d’octet *vendeur* (11) et lie *SalesPersonLenOrInd* à contient la longueur d’octet des données dans *vendeur*. Ces informations ne sont pas nécessaires pour *CustID* , car il contient des données de type entier, ce qui est de longueur fixe.  
+ Par exemple, le code suivant lie *SalesPerson* et *CustID* aux paramètres des colonnes SalesPerson et CustID. Étant donné que *SalesPerson* contient des données de type caractère, dont la longueur est variable, le code spécifie la longueur en octets du *vendeur* (11) et lie *SalesPersonLenOrInd* pour contenir la longueur en octets des données dans le *vendeur*. Ces informations ne sont pas nécessaires pour *CustID* , car elles contiennent des données de type entier, qui sont de longueur fixe.  
   
 ```  
 SQLCHAR       SalesPerson[11];  
@@ -58,7 +58,7 @@ CustIDInd = 0;
 SQLExecDirect(hstmt1,"SELECT * FROM Orders WHERE SalesPerson=? AND CustID=?",SQL_NTS);  
 ```  
   
- Lorsque **SQLBindParameter** est appelée, le pilote stocke ces informations dans la structure de l’instruction. Lorsque l’instruction est exécutée, elle utilise les informations à récupérer les données de paramètre et les envoyer à la source de données.  
+ Lorsque **SQLBindParameter** est appelé, le pilote stocke ces informations dans la structure de l’instruction. Lorsque l’instruction est exécutée, elle utilise les informations pour récupérer les données de paramètre et les envoyer à la source de données.  
   
 > [!NOTE]  
->  Dans ODBC 1.0, les paramètres ont été liés avec **SQLSetParam**. Le Gestionnaire de pilotes mappe les appels entre **SQLSetParam** et **SQLBindParameter**, selon les versions d’ODBC utilisée par l’application et le pilote.
+>  Dans ODBC 1,0, les paramètres étaient liés à **SQLSetParam,**. Le gestionnaire de pilotes mappe les appels entre **SQLSetParam,** et **SQLBindParameter**, en fonction des versions de ODBC utilisées par l’application et le pilote.

@@ -1,5 +1,5 @@
 ---
-title: Size, propriété (ADO Stream) | Microsoft Docs
+title: Size, propriété (objet Stream ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,23 +16,23 @@ ms.assetid: a487c241-d953-4c31-ae7e-6358d5cf6733
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e52d05cdbc0fe0ca397c3a7b417fec72703b8e1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916923"
 ---
 # <a name="size-property-ado-stream"></a>Size, propriété (objet Stream ADO)
 Indique la taille du flux en nombre d’octets.  
   
 ## <a name="return-values"></a>Valeurs de retour  
- Retourne un **Long** valeur qui spécifie la taille du flux en nombre d’octets. La valeur par défaut est la taille de flux, ou -1 si la taille du flux de données n’est pas connue.  
+ Retourne une valeur de **type long** qui spécifie la taille du flux en nombre d’octets. La valeur par défaut est la taille du flux, ou-1 si la taille du flux n’est pas connue.  
   
 ## <a name="remarks"></a>Notes  
- **Taille** peut être utilisé uniquement avec open [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objets.  
+ La **taille** ne peut être utilisée qu’avec des objets de [flux](../../../ado/reference/ado-api/stream-object-ado.md) ouverts.  
   
 > [!NOTE]
->  N’importe quel nombre de bits peut être stocké dans un **Stream** objet, limitée uniquement par les ressources système. Si le **Stream** contient plus de bits que peut être représenté par un **Long** valeur, **taille** est tronqué et par conséquent ne représentent pas avec précision la longueur de la **Stream**.  
+>  Un nombre quelconque de bits peut être stocké dans un objet de **flux** , limité uniquement par les ressources système. Si le **flux** contient plus de bits que ce qui peut être représenté par une valeur **long** , la **taille** est tronquée et ne représente donc pas avec précision la longueur du **flux**.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

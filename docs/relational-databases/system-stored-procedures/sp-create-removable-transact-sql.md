@@ -18,21 +18,21 @@ ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d6f842b96a9b179548688a4c655a566087ba1ebf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108625"
 ---
-# <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
+# <a name="sp_create_removable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cette procédure crée une base de données sur un support amovible. Elle crée trois fichiers minimum (un pour les tables de catalogue système, un pour le journal des transactions et un ou plus pour les tables de données) et place la base de données sur ces fichiers.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Nous vous recommandons d’utiliser [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) à la place.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Nous vous recommandons d’utiliser [Create Database](../../t-sql/statements/create-database-sql-server-transact-sql.md) à la place.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,33 +55,33 @@ sp_create_removable
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @dbname = ] 'dbname'` Est le nom de la base de données à créer pour une utilisation sur un support amovible. *dbname* est **sysname**.  
+`[ @dbname = ] 'dbname'`Nom de la base de données à créer pour une utilisation sur un support amovible. *dbname* est de **type sysname**.  
   
-`[ @syslogical = ] 'syslogical'` Est le nom logique du fichier qui contient les tables du catalogue système. *syslogical* est **sysname**.  
+`[ @syslogical = ] 'syslogical'`Nom logique du fichier qui contient les tables du catalogue système. *syslogal* est de **type sysname**.  
   
-`[ @sysphysical = ] 'sysphysical'` Est le nom physique. Il comprend un chemin d'accès complet du fichier contenant les tables du catalogue système. *sysphysical* est **nvarchar (260)** .  
+`[ @sysphysical = ] 'sysphysical'`Nom physique. Il comprend un chemin d'accès complet du fichier contenant les tables du catalogue système. *sysphysical* est **de type nvarchar (260)**.  
   
-`[ @syssize = ] syssize` Est la taille, en mégaoctets, du fichier qui contient le système de tables du catalogue. *syssize* est **int**. La valeur minimale *syssize* est 1.  
+`[ @syssize = ] syssize`Taille, en mégaoctets, du fichier contenant les tables du catalogue système. *syssize* est de **type int**. La valeur minimale de *syssize* est 1.  
   
-`[ @loglogical = ] 'loglogical'` Est le nom logique du fichier qui contient le journal des transactions. *loglogical* est **sysname**.  
+`[ @loglogical = ] 'loglogical'`Nom logique du fichier qui contient le journal des transactions. *loglogical* est de **type sysname**.  
   
-`[ @logphysical = ] 'logphysical'` Est le nom physique. Il comprend un chemin d'accès complet du fichier contenant le journal des transactions. *logphysical* est **nvarchar (260)** .  
+`[ @logphysical = ] 'logphysical'`Nom physique. Il comprend un chemin d'accès complet du fichier contenant le journal des transactions. *logphysical* est **de type nvarchar (260)**.  
   
-`[ @logsize = ] logsize` Est la taille, en mégaoctets, du fichier qui contient le journal des transactions. *LogSize* est **int**. La valeur minimale *logsize* est 1.  
+`[ @logsize = ] logsize`Taille, en mégaoctets, du fichier qui contient le journal des transactions. la *journalisation* est de **type int**. La valeur de la taille minimale de la *journalisation* est 1.  
   
-`[ @datalogical1 = ] 'datalogical'` Est le nom logique d’un fichier qui contient les tables de données. *datalogique* est **sysname**.  
+`[ @datalogical1 = ] 'datalogical'`Nom logique d’un fichier qui contient les tables de données. *datalogical* est de **type sysname**.  
   
  Il doit exister entre 1 et 16 fichiers de données. Habituellement, plusieurs fichiers de données sont créés lorsqu'il est prévu que la base de données soit volumineuse et qu'elle doive être distribuée sur plusieurs disques.  
   
-`[ @dataphysical1 = ] 'dataphysical'` Est le nom physique. Il comprend un chemin d'accès complet du fichier contenant les tables de données. *dataphysique* est **nvarchar (260)** .  
+`[ @dataphysical1 = ] 'dataphysical'`Nom physique. Il comprend un chemin d'accès complet du fichier contenant les tables de données. *dataphysical* est **de type nvarchar (260)**.  
   
-`[ @datasize1 = ] 'datasize'` Est la taille, en mégaoctets, d’un fichier qui contient les tables de données. *DataSize* est **int**. La valeur minimale *datasize* est 1.  
+`[ @datasize1 = ] 'datasize'`Taille, en mégaoctets, d’un fichier qui contient des tables de données. *DataSize* est de **type int**. La valeur de *DataSize* minimale est 1.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  Si vous souhaitez faire une copie de votre base de données sur un support amovible (par exemple un CD-ROM) pour la distribuer à d'autres utilisateurs, utilisez cette procédure stockée.  
@@ -119,7 +119,7 @@ EXEC sp_create_removable 'inventory',
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Attacher et détacher une base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [Détachement et attachement de la base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_certify_removable &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sp_dbremove &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   

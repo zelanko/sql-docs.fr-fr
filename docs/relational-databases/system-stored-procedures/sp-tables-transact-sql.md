@@ -19,21 +19,21 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 71aaa9e52cfca8435501695a4ebf60b2a6aa6ee4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096053"
 ---
-# <a name="sptables-transact-sql"></a>sp_tables (Transact-SQL)
+# <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retourne une liste d'objets qui peuvent être interrogés dans l'environnement actuel. Cela signifie toute table ou vue, à l'exception des objets synonymes.  
   
 > [!NOTE]  
->  Pour déterminer le nom de l’objet de base d’un synonyme, interrogez la [sys.synonyms](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md) vue de catalogue.  
+>  Pour déterminer le nom de l’objet de base d’un synonyme, interrogez l’affichage catalogue [sys. synonymes](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md) .  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,40 +48,41 @@ sp_tables [ [ @table_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @table_name = ] 'name'` La table est utilisée pour retourner des informations de catalogue. *nom* est **nvarchar (384)** , avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge.  
+`[ @table_name = ] 'name'`Table utilisée pour retourner les informations de catalogue. *Name* est de type **nvarchar (384)**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge.  
   
-`[ @table_owner = ] 'owner'` Est le propriétaire de la table de la table utilisée pour retourner des informations de catalogue. *propriétaire* est **nvarchar (384)** , avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si le propriétaire n'est pas précisé, les règles par défaut définissant la visibilité des tables du SGBD sous-jacent sont utilisées.  
+`[ @table_owner = ] 'owner'`Propriétaire de la table utilisée pour retourner les informations de catalogue. *owner* est de type **nvarchar (384)**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si le propriétaire n'est pas précisé, les règles par défaut définissant la visibilité des tables du SGBD sous-jacent sont utilisées.  
   
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si l'utilisateur actuel est propriétaire d'une table portant le nom spécifié, les colonnes de cette table sont renvoyées. Si le propriétaire n'est pas spécifié et que l'utilisateur actuel ne possède pas de table ayant le nom spécifié, la procédure recherche une table portant le nom spécifié, possédée par le propriétaire de la base de données. Si la recherche de la table aboutit, ce sont les colonnes de cette dernière qui sont retournées.  
   
-`[ @table_qualifier = ] 'qualifier'` Est le nom du qualificateur de table. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (_qualificateur_ **.** _propriétaire_ **.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
+`[ @table_qualifier = ] 'qualifier'`Nom du qualificateur de la table. *qualifier* est de **type sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge les noms de tables en trois parties (_qualificateur_**.** _propriétaire_**.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
-``[ , [ @table_type = ] "'type', 'type'" ]`` Est une liste de valeurs séparées par des virgules, qui donne des informations sur les tables de tous les types de tables qui sont spécifiées. Ceux-ci incluent **TABLE**, **SYSTEMTABLE**, et **vue**. *type* est **varchar (100)** , avec NULL comme valeur par défaut.  
+``[ , [ @table_type = ] "'type', 'type'" ]``Liste de valeurs, séparées par des virgules, qui donne des informations sur toutes les tables des types de tables qui sont spécifiés. Il s’agit notamment de **table**, **SYSTEMTABLE**et **View**. *type* **varchar (100)**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Chaque type de table doit être encadré de guillemets simples, l'ensemble du paramètre devant être encadré de guillemets doubles. Les types de table sont en lettres majuscules. Si SET QUOTED_IDENTIFIER est défini à ON, chaque guillemet simple doit devenir double et l'ensemble du paramètre doit être encadré de guillemets simples.  
   
-`[ @fUsePattern = ] 'fUsePattern'` Détermine si le trait de soulignement (_), pourcentage (%) et entre crochets ([ou]) caractères sont interprétés comme des caractères génériques. Les valeurs valides sont 0 (critères spéciaux désactivés) et 1 (critères spéciaux activés). *fUsePattern* est **bits**, avec 1 comme valeur par défaut.  
+`[ @fUsePattern = ] 'fUsePattern'`Détermine si les caractères de soulignement (_), de pourcentage (%) et de crochets ([ou]) sont interprétés comme des caractères génériques. Les valeurs valides sont 0 (critères spéciaux désactivés) et 1 (critères spéciaux activés). *fUsePattern* est de **bits**, avec 1 comme valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- Aucun  
+## <a name="return-code-values"></a>Codet de retour  
+ None  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_QUALIFIER**|**sysname**|Nom du qualificateur de table. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Ce champ peut contenir la valeur NULL.|  
+|**TABLE_QUALIFIER**|**sysname**|Nom du qualificateur de la table. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Ce champ peut contenir la valeur NULL.|  
 |**TABLE_OWNER**|**sysname**|Nom du propriétaire de la table. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de l'utilisateur de la base de données qui a créé la table. Ce champ retourne toujours une valeur.|  
 |**TABLE_NAME**|**sysname**|Nom de la table. Ce champ retourne toujours une valeur.|  
 |**TABLE_TYPE**|**varchar(32)**|Table, table système ou vue.|  
-|**REMARQUES**|**varchar(254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur pour cette colonne.|  
+|**CONCERNANT**|**varchar (254)**|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur pour cette colonne.|  
   
 ## <a name="remarks"></a>Notes  
  Pour assurer une interopérabilité maximale, le client de la passerelle ne doit utiliser que les critères spéciaux SQL standard de SQL-92 (caractères génériques % et _).  
   
- Les informations de privilège concernant l'accès en lecture/écriture de l'utilisateur actuel à une table spécifique ne sont pas toujours vérifiées. Par conséquent, l'accès n'est pas garanti. Ce jeu de résultats ne comprend pas uniquement des tables et des vues, mais également des synonymes et des noms d'alias, dans le cas des passerelles vers les SGBD qui gèrent ces types. Si l’attribut de serveur **sp_server_info** a la valeur Y dans le jeu de résultats pour **sp_server_info**, seules les tables qui sont accessibles par l’utilisateur actuel sont retournées.  
+ Les informations de privilège concernant l'accès en lecture/écriture de l'utilisateur actuel à une table spécifique ne sont pas toujours vérifiées. Par conséquent, l'accès n'est pas garanti. Ce jeu de résultats ne comprend pas uniquement des tables et des vues, mais également des synonymes et des noms d'alias, dans le cas des passerelles vers les SGBD qui gèrent ces types. Si l’attribut de serveur **ACCESSIBLE_TABLES** est Y dans le jeu de résultats pour **sp_server_info**, seules les tables accessibles par l’utilisateur actuel sont retournées.  
   
- **sp_tables** équivaut à **SQLTables** dans ODBC. Les résultats obtenus sont triés par **TABLE_TYPE**, **TABLE_QUALIFIER**, **TABLE_OWNER**, et **TABLE_NAME**.  
+ **sp_tables** équivaut à **SQLTables** dans ODBC. Les résultats retournés sont triés par **TABLE_TYPE**, **TABLE_QUALIFIER**, **TABLE_OWNER**et **table_name**.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur le schéma.  
@@ -117,7 +118,7 @@ EXEC sp_tables ;
 ```  
   
 ### <a name="d-returning-information-about-the-tables-in-a-specified-schema"></a>D. Retour d'informations sur les tables dans un schéma spécifié  
- L’exemple suivant retourne des informations sur les tables de dimension dans le `AdventureWorksPDW201` base de données.  
+ L’exemple suivant retourne des informations sur les tables de dimension `AdventureWorksPDW201` de la base de données.  
   
 ```  
 -- Uses AdventureWorks  
@@ -129,7 +130,7 @@ EXEC sp_tables
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sys.synonyms &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
+ [sys. synonymes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

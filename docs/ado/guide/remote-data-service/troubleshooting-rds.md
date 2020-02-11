@@ -1,5 +1,5 @@
 ---
-title: Résolution des problèmes des services Bureau à distance | Microsoft Docs
+title: Résolution des problèmes RDS | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,31 +13,31 @@ ms.assetid: 92905044-579f-4c38-bca6-f8bd5b239c20
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c580006938c4180ccd0f575af81f687de5d6a630
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922011"
 ---
 # <a name="troubleshooting-rds"></a>Résolution des problèmes liés à RDS
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Consultez cette section pour les solutions aux erreurs spécifiques ou des problèmes liés à RDS. Cette section contient les rubriques suivantes.  
+ Reportez-vous à cette section pour obtenir des solutions à des erreurs ou problèmes spécifiques liés à RDS. Cette section contient les rubriques suivantes :  
   
 -   [Configuration de RDS sur Windows 2000](../../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)  
   
--   [« Erreur de serveur Internet : Accès refusé »](../../../ado/guide/remote-data-service/internet-server-error-access-denied.md)  
+-   [« Erreur du serveur Internet : accès refusé »](../../../ado/guide/remote-data-service/internet-server-error-access-denied.md)  
   
 -   [RDS retourne une erreur « Flux non lu »](../../../ado/guide/remote-data-service/rds-returns-stream-not-read-error.md)  
   
--   [Blocages avec niveau d’Isolation Repeatable lecture](../../../ado/guide/remote-data-service/deadlocks-with-read-repeatable-isolation-level.md)  
+-   [Interblocages avec un niveau d’isolation de lecture renouvelable](../../../ado/guide/remote-data-service/deadlocks-with-read-repeatable-isolation-level.md)  
   
 -   [Configuration d’un espace TempDB suffisant](../../../ado/guide/remote-data-service/ensuring-sufficient-tempdb-space.md)  
   
 -   [Minimisation de l’espace utilisé par un fichier journal](../../../ado/guide/remote-data-service/minimizing-log-file-space-usage.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Principes de base de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
+ [Concepts de base de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

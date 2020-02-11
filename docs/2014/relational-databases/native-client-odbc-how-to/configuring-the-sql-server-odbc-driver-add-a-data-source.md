@@ -1,5 +1,5 @@
 ---
-title: Ajouter une Source de données (ODBC) | Microsoft Docs
+title: Ajouter une source de données (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,32 +13,32 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c050efd2f309ccec76b80fd24b519e7d2389e4ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126073"
 ---
 # <a name="add-a-data-source-odbc"></a>Ajouter une source de données (ODBC)
-  Vous pouvez ajouter une source de données à l’aide de l’administrateur ODBC, par programmation (à l’aide de [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)), ou en créant un fichier.  
+  Vous pouvez ajouter une source de données à l’aide de l’administrateur ODBC, par programmation (à l’aide de [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)) ou en créant un fichier.  
   
 ### <a name="to-add-a-data-source-by-using-odbc-administrator"></a>Pour ajouter une source de données à l'aide de l'Administrateur ODBC  
   
-1.  À partir de la **le panneau de configuration**, accès **outils d’administration** , puis **Sources de données (ODBC)** . Vous pouvez également appeler l'exécutable odbcad32.exe.  
+1.  Dans le **panneau de configuration**, accédez à **Outils d’administration** , puis à **sources de données (ODBC)**. Vous pouvez également appeler l'exécutable odbcad32.exe.  
   
-2.  Cliquez sur le **DSN utilisateur**, **DSN système**, ou **fichier DSN** onglet, puis cliquez sur **ajouter**.  
+2.  Cliquez sur l’onglet **DSN utilisateur**, **système DSN**ou **fichier DSN** , puis cliquez sur **Ajouter**.  
   
-3.  Cliquez sur **SQL Server**, puis cliquez sur **Terminer**.  
+3.  Cliquez sur **SQL Server**, puis sur **Terminer**.  
   
 4.  Suivez les étapes de l'Assistant Créer une nouvelle source de données vers SQL Server.  
   
 ### <a name="to-add-a-data-source-programmatically"></a>Pour ajouter une source de données par programme  
   
-1.  Appelez [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md) avec le deuxième paramètre défini sur ODBC_ADD_DSN ou sur ODBC_ADD_SYS_DSN.  
+1.  Appelez [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md) avec le deuxième paramètre défini sur ODBC_ADD_DSN ou ODBC_ADD_SYS_DSN.  
   
 ### <a name="to-add-a-file-data-source"></a>Pour ajouter une source de données de fichier  
   
-1.  Appelez [SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md) avec un SAVEFILE = nom_fichier des paramètres dans la chaîne de connexion. Si la connexion est un succès, le pilote ODBC crée une source de données de fichier avec les paramètres de connexion dans l'emplacement désigné par le paramètre SAVEFILE.  
+1.  Appelez [SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md) avec un paramètre SAVEFILE = file_name dans la chaîne de connexion. Si la connexion est un succès, le pilote ODBC crée une source de données de fichier avec les paramètres de connexion dans l'emplacement désigné par le paramètre SAVEFILE.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Rubriques des procédures relatives à la configuration du pilote ODBC SQL Server](../../database-engine/dev-guide/configuring-the-sql-server-odbc-driver-how-to-topics.md)  

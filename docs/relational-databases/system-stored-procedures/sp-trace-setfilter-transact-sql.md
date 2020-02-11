@@ -18,21 +18,21 @@ ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0f48f7e8dd6e7d8fa57868994f9bcabb66777e90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68095939"
 ---
-# <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
+# <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Applique un filtre à une trace. **sp_trace_setfilter** ne peut être exécuté uniquement sur les traces existantes qui sont arrêtées (*état* est **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Retourne une erreur si cette procédure stockée est exécutée sur une trace qui n’existe pas ou dont la propriété *état* n’est pas **0**.  
+  Applique un filtre à une trace. **sp_trace_setfilter** ne peuvent être exécutées que sur des traces existantes qui sont arrêtées (l'*État* est **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]retourne une erreur si cette procédure stockée est exécutée sur une trace qui n’existe pas ou dont l' *État* n’est pas **égal à 0**.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt des événements étendus.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,36 +46,36 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @traceid = ] trace_id` Est l’ID de la trace à laquelle le filtre est défini. *trace_id* est **int**, sans valeur par défaut. L’utilisateur emploie cette *trace_id* valeur à identifier, modifier et contrôler la trace.  
+`[ @traceid = ] trace_id`ID de la trace à laquelle le filtre est défini. *trace_id* est de **type int**, sans valeur par défaut. L’utilisateur emploie cette *trace_id* valeur pour identifier, modifier et contrôler la trace.  
   
-`[ @columnid = ] column_id` Est l’ID de la colonne sur laquelle le filtre est appliqué. *column_id* est **int**, sans valeur par défaut. Si *column_id* est NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] efface tous les filtres de la trace spécifiée.  
+`[ @columnid = ] column_id`ID de la colonne sur laquelle le filtre est appliqué. *column_id* est de **type int**, sans valeur par défaut. Si *column_id* a la valeur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] null, efface tous les filtres pour la trace spécifiée.  
   
-`[ @logical_operator = ] logical_operator` Spécifie si l’opération AND (**0**) ou OR (**1**) opérateur est appliqué. *logical_operator* est **int**, sans valeur par défaut.  
+`[ @logical_operator = ] logical_operator`Spécifie si l’opérateur AND (**0**) ou or (**1**) est appliqué. *logical_operator* est de **type int**, sans valeur par défaut.  
   
-`[ @comparison_operator = ] comparison_operator` Spécifie le type de comparaison à effectuer. *comparison_operator* est **int**, sans valeur par défaut. Le tableau contient les opérateurs de comparaison et leurs valeurs.  
+`[ @comparison_operator = ] comparison_operator`Spécifie le type de comparaison à effectuer. *comparison_operator* est de **type int**, sans valeur par défaut. Le tableau contient les opérateurs de comparaison et leurs valeurs.  
   
-|Value|Opérateur de comparaison|  
+|Valeur|Opérateur de comparaison|  
 |-----------|-------------------------|  
-|**0**|= (Égal)|  
-|**1**|<> (Différent de)|  
+|**0**|= (Égal à)|  
+|**1**|<>  (différent de)|  
 |**2**|> (Supérieur à)|  
-|**3**|< (Inférieur à)|  
-|**4**|> = (supérieur ou égal)|  
-|**5**|< = (inférieur ou égal à)|  
+|**1,3**|< (Inférieur à)|  
+|**4**|>= (supérieur ou égal à)|  
+|**5,5**|<= (inférieur ou égal à)|  
 |**6**|LIKE|  
 |**7**|Ne correspond pas à|  
   
-`[ @value = ] value` Spécifie la valeur sur laquelle filtrer. Le type de données de *valeur* doit correspondre au type de données de la colonne à filtrer. Par exemple, si le filtre est défini sur une colonne d’ID d’objet qui est un **int** type de données, *valeur* doit être **int**. Si *valeur* est **nvarchar** ou **varbinary**, il peut avoir une longueur maximale de 8 000.  
+`[ @value = ] value`Spécifie la valeur sur laquelle filtrer. Le type de données de la *valeur* doit correspondre au type de données de la colonne à filtrer. Par exemple, si le filtre est défini sur une colonne d’ID d’objet qui est un type de données **int** , la *valeur* doit être **int**. Si la *valeur* est **nvarchar** ou **varbinary**, elle peut avoir une longueur maximale de 8000.  
   
  Lorsque l'opérateur de comparaison est LIKE ou NOT LIKE, l'opérateur logique peut inclure « % » ou tout autre filtre approprié pour l'opération LIKE.  
   
- Vous pouvez spécifier NULL pour *valeur* pour filtrer des événements avec les valeurs de colonne NULL. Uniquement **0** (= égal) et **1** (<> non égal) opérateurs sont valides avec la valeur NULL. Dans ce cas, ils sont équivalents aux opérateurs IS NULL et IS NOT NULL de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ Vous pouvez spécifier NULL comme *valeur* pour filtrer les événements avec des valeurs de colonne null. Seuls les opérateurs **0** (= Equal) et **1** (<> différent) sont valides avec la valeur null. Dans ce cas, ils sont équivalents aux opérateurs IS NULL et IS NOT NULL de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- Pour appliquer le filtre entre une plage de valeurs de colonne, **sp_trace_setfilter** doit être exécutée à deux reprises : une fois avec un supérieur à-ou-égal à ('> =') opérateur de comparaison et une autre fois avec un moins-à-ou-est égale à ('< =') opérateur .  
+ Pour appliquer le filtre entre une plage de valeurs de colonne, **sp_trace_setfilter** doit être exécutée deux fois, une fois avec un opérateur de comparaison supérieur ou égal à (' >= ') et une autre fois avec un opérateur d’infériorité ou d’égalité (' <= ').  
   
- Pour plus d’informations sur les types de données de colonne de données, consultez le [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
+ Pour plus d’informations sur les types de données des colonnes de données, consultez la [SQL Server référence](../../relational-databases/event-classes/sql-server-event-class-reference.md)de la classe d’événements.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  Le tableau suivant décrit les valeurs de code que les utilisateurs peuvent recevoir à la fin de l'exécution de la procédure stockée.  
   
 |Code de retour|Description|  
@@ -84,19 +84,20 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |1|Erreur inconnue.|  
 |2|La trace est en cours d'exécution. La modification de la Trace à cet instant précis entraîne une erreur.|  
 |4|La colonne spécifiée n’est pas valide.|  
-|5\.|La colonne spécifiée n'est pas autorisée pour le filtrage. Cette valeur est retournée uniquement à partir de **sp_trace_setfilter**.|  
-|6\.|L'opérateur de comparaison spécifié n'est pas valide.|  
+|5|La colonne spécifiée n'est pas autorisée pour le filtrage. Cette valeur est retournée uniquement à partir de **sp_trace_setfilter**.|  
+|6|L'opérateur de comparaison spécifié n'est pas valide.|  
 |7|L'opérateur logique spécifié n'est pas valide.|  
 |9|Le descripteur de trace spécifié n'est pas valide.|  
 |13|Mémoire insuffisante. Renvoyé lorsqu'il n'y a pas assez de mémoire pour exécuter l'action spécifiée.|  
 |16|La fonction n'est pas valide pour cette trace.|  
   
 ## <a name="remarks"></a>Notes  
- **sp_trace_setfilter** est un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procédure stockée qui effectue la plupart des actions précédemment exécutées par les procédures stockées étendues disponibles dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez **sp_trace_setfilter** au lieu du **xp_trace_set\*filtre** des procédures stockées étendues pour créer, appliquer, supprimer ou manipuler des filtres sur des traces. Pour plus d’informations, consultez [filtrer une Trace](../../relational-databases/sql-trace/filter-a-trace.md).  
+ **sp_trace_setfilter** est une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procédure stockée qui effectue un grand nombre des actions précédemment exécutées par les procédures stockées étendues [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]disponibles dans les versions antérieures de. Utilisez **sp_trace_setfilter** au lieu des procédures stockées étendues du **filtre xp_trace_set\*** pour créer, appliquer, supprimer ou manipuler des filtres sur des traces. Pour plus d’informations, consultez [Filtrer une trace](../../relational-databases/sql-trace/filter-a-trace.md).  
   
- Tous les filtres pour une colonne particulière doivent être activés ensemble en une seule exécution de **sp_trace_setfilter**. Par exemple, si un utilisateur décide d'appliquer deux filtres sur la colonne Nom d'application et un filtre sur la colonne Nom d'utilisateur, il doit spécifier les filtres sur le nom d'application de manière séquentielle. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne une erreur si l'utilisateur tente de spécifier un filtre sur le nom d'application dans un appel de procédure stockée, suivi d'un filtre sur le nom d'utilisateur, puis d'un autre filtre sur le nom d'application.  
+ Tous les filtres d’une colonne particulière doivent être activés ensemble au cours d’une exécution de **sp_trace_setfilter**. Par exemple, si un utilisateur décide d'appliquer deux filtres sur la colonne Nom d'application et un filtre sur la colonne Nom d'utilisateur, il doit spécifier les filtres sur le nom d'application de manière séquentielle. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne une erreur si l'utilisateur tente de spécifier un filtre sur le nom d'application dans un appel de procédure stockée, suivi d'un filtre sur le nom d'utilisateur, puis d'un autre filtre sur le nom d'application.  
   
- Paramètres de Trace de SQL toutes les procédures stockées (**sp_trace_xx**) sont strictement typés. Si ces paramètres ne sont pas appelés à l'aide des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée retourne une erreur.  
+ Les paramètres de toutes les procédures stockées trace SQL (**sp_trace_xx**) sont strictement typés. Si ces paramètres ne sont pas appelés à l'aide des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée retourne une erreur.  
   
 ## <a name="permissions"></a>Autorisations  
  L'utilisateur doit disposer de l'autorisation ALTER TRACE.  

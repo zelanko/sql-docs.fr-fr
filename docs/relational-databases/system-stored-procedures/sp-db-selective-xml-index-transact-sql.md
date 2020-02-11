@@ -18,21 +18,21 @@ ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1648cca415f37f9c54f13857d25af90a65372c04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108233"
 ---
-# <a name="spdbselectivexmlindex-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
+# <a name="sp_db_selective_xml_index-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Active ou désactive la fonctionnalité d'index XML sélectif sur une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Appelée sans paramètres, la procédure stockée retourne 1 si l'index XML sélectif est activé sur une base de données particulière.  
   
 > [!NOTE]  
->  Afin de désactiver l’Index XML sélectif à l’aide de cette procédure stockée, la base de données doit être placée en mode de récupération simple à l’aide de la [Options ALTER DATABASE SET &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) commande.  
+>  Pour désactiver l’index XML sélectif à l’aide de cette procédure stockée, la base de données doit être placée en mode de récupération simple à l’aide des [options ALTER DATABASE SET &#40;commande Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) .  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,17 +43,17 @@ ms.locfileid: "68108233"
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @ db_name = ] 'db_name'` Le nom de la base de données pour activer ou désactiver des Index XML sélectif sur. Si *db_name* est NULL, la base de données en cours est supposé.  
+`[ @ db_name = ] 'db_name'`Nom de la base de données sur laquelle activer ou désactiver l’index XML sélectif. Si *db_name* a la valeur null, la base de données actuelle est utilisée par défaut.  
   
-`[ @action = ] 'action'` Détermine s’il faut activer ou désactiver l’index. Si une valeur autre que 'on', 'true', 'off' ou 'false' est passée, une erreur sera déclenchée.  
+`[ @action = ] 'action'`Détermine s’il faut activer ou désactiver l’index. Si une autre valeur à l’exception de’on', 'true', 'OFF’ou’false’est passée, une erreur est générée.  
   
 ```  
   
 Allowed values: 'on', 'off', 'true', 'false'  
 ```  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **1** si l’Index XML sélectif est activé sur une base de données.  
+## <a name="return-code-values"></a>Codet de retour  
+ **1** si l’index XML sélectif est activé sur une base de données particulière.  
   
 ## <a name="examples"></a>Exemples  
   

@@ -18,21 +18,21 @@ ms.assetid: 663b859f-c6da-4942-95a6-60b93d05654e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: aec951ea8a0397c39c57619609264596aec9a648
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085822"
 ---
-# <a name="spdefaultdb-transact-sql"></a>sp_defaultdb (Transact-SQL)
+# <a name="sp_defaultdb-transact-sql"></a>sp_defaultdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Modifie la base de données par défaut pour un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion.  
+  Modifie la base de données par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] défaut pour une connexion.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) à la place.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez à la place [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) .  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,11 +42,11 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @loginame = ] 'login'` Est le nom de connexion. *connexion* est **sysname**, sans valeur par défaut. *connexion* peut être un existant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou un utilisateur de Windows ou un groupe. Si la connexion de l'utilisateur ou du groupe Windows n'existe pas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], elle est automatiquement ajoutée.  
+`[ @loginame = ] 'login'`Nom de la connexion. *login* est de **type sysname**, sans valeur par défaut. la *connexion* peut être une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion existante ou un utilisateur ou un groupe Windows. Si la connexion de l'utilisateur ou du groupe Windows n'existe pas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], elle est automatiquement ajoutée.  
   
-`[ @defdb = ] 'database'` Est le nom de la nouvelle base de données par défaut. *base de données* est **sysname**, sans valeur par défaut. *base de données* doit déjà exister.  
+`[ @defdb = ] 'database'`Nom de la nouvelle base de données par défaut. *Database est de* **type sysname**, sans valeur par défaut. la *base de données* doit déjà exister.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
@@ -58,7 +58,7 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
  Nécessite l'autorisation ALTER ANY LOGIN.  
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant définit [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] en tant que base de données par défaut pour le nom de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Victoria`.  
+ L'exemple suivant définit [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] en tant que base de données par défaut pour le nom de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`Victoria`.  
   
 ```  
 EXEC sp_defaultdb 'Victoria', 'AdventureWorks2012';  

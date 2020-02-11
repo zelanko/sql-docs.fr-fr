@@ -1,5 +1,5 @@
 ---
-title: L’exécution de lots | Microsoft Docs
+title: Exécution de lots | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84d3cf65284d767d437987c8ff2b21793466106e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901261"
 ---
 # <a name="executing-batches"></a>Exécution de lots
-Avant qu’une application exécute un lot d’instructions, elle doit tout d’abord vérifier si elles sont prises en charge. Pour ce faire, l’application appelle **SQLGetInfo** avec les options SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS et SQL_PARAM_ARRAY_SELECTS. La première option retourne si les générateurs de nombre de lignes et résultat instructions de génération de jeu sont prises en charge dans les lots explicites et de procédures, pendant les deux dernières options de retour d’informations sur la disponibilité des nombres de lignes et résultat définit dans paramétrées exécution.  
+Avant qu’une application exécute un lot d’instructions, elle doit d’abord vérifier si elles sont prises en charge. Pour ce faire, l’application appelle **SQLGetInfo** avec les options SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS et SQL_PARAM_ARRAY_SELECTS. La première option indique si les instructions de génération de nombre de lignes et de génération de jeu de résultats sont prises en charge dans les traitements et les procédures explicites, tandis que les deux dernières options retournent des informations sur la disponibilité des nombres de lignes et des jeux de résultats dans paramétrable production.  
   
- Lots d’instructions sont exécutées via **SQLExecute** ou **SQLExecDirect**. Par exemple, l’appel suivant exécute un lot explicit d’instructions pour ouvrir une nouvelle commande.  
+ Les lots d’instructions sont exécutés via **SQLExecute** ou **SQLExecDirect**. Par exemple, l’appel suivant exécute un lot explicite d’instructions pour ouvrir une nouvelle commande client.  
   
 ```  
 SQLCHAR *BatchStmt =  
@@ -37,9 +37,9 @@ SQLCHAR *BatchStmt =
 SQLExecDirect(hstmt, BatchStmt, SQL_NTS);  
 ```  
   
- Lorsqu’un lot de génération de résultats instructions est exécutée, elle retourne l’une ou plusieurs nombres de lignes ou résultat définit. Pour plus d’informations sur la façon de les récupérer, consultez [plusieurs résultats](../../../odbc/reference/develop-app/multiple-results.md).  
+ Lorsqu’un lot d’instructions de génération de résultats est exécuté, il renvoie un ou plusieurs nombres de lignes ou jeux de résultats. Pour plus d’informations sur la façon de les récupérer, consultez [plusieurs résultats](../../../odbc/reference/develop-app/multiple-results.md).  
   
- Si un lot d’instructions inclut des marqueurs de paramètres, ceux-ci sont numérotées en augmentant l’ordre des paramètres comme elles se trouvent dans une autre instruction. Par exemple, le lot suivant d’instructions ayant des paramètres numérotées de 1 à 21. ceux de la première **insérer** instruction sont numérotés 1 à 5 et celles de la dernière **insérer** instruction sont numérotées 18 et 21.  
+ Si un lot d’instructions comprend des marqueurs de paramètres, ceux-ci sont numérotés dans l’ordre des paramètres d’incrémentation, comme dans toute autre instruction. Par exemple, le lot d’instructions suivant contient des paramètres numérotés de 1 à 21 ; celles de la première instruction **Insert** sont numérotées de 1 à 5 et celles de la dernière instruction **Insert** sont numérotées de 18 à 21.  
   
 ```  
 INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  

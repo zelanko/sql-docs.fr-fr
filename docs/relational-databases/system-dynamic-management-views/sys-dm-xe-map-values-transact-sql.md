@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_xe_map_values (Transact-SQL) | Microsoft Docs
+title: sys. dm_xe_map_values (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,30 +20,30 @@ ms.assetid: c0c5dd7e-9cee-47e2-b65a-88194c00aa1f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6eb770951e48f7145311fb75de18a17236a09d7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090321"
 ---
-# <a name="sysdmxemapvalues-transact-sql"></a>sys.dm_xe_map_values (Transact-SQL)
+# <a name="sysdm_xe_map_values-transact-sql"></a>sys.dm_xe_map_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne un mappage des clés numériques internes à du texte explicite.  
  
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar (256)**|Nom du mappage. nom est unique dans le système local. N'accepte pas la valeur NULL.|  
+|name|**nvarchar (256)**|Nom du mappage. le nom est unique dans le système local. N'accepte pas la valeur NULL.|  
 |object_package_guid|**uniqueidentifier**|GUID du package qui contient le mappage. N'accepte pas la valeur NULL.|  
-|map_key|**Int**|Valeur de clé interne. N'accepte pas la valeur NULL.|  
-|map_value|**nvarchar(3072)**|Description de la valeur de clé. N'accepte pas la valeur NULL.|  
+|map_key|**int**|Valeur de clé interne. N'accepte pas la valeur NULL.|  
+|map_value|**nvarchar (3072)**|Description de la valeur de clé. N'accepte pas la valeur NULL.|  
   
 ## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ### <a name="relationship-cardinalities"></a>Cardinalités de la relation  
   
-|From|Pour|Relation|  
+|De|À|Relation|  
 |----------|--------|------------------|  
 |dm_xe_map_values.object_package_guid<br /><br /> dm_xe_map_values.name|sys.dm_xe_objects.package_guid<br /><br /> sys.dm_xe_objects.name|Plusieurs-à-un| 
   

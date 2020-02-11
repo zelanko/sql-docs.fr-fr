@@ -17,14 +17,14 @@ ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6ec1601749b6537484cead17c50492de131932ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931176"
 ---
 # <a name="save-method"></a>Save, méthode
-Enregistre le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dans un fichier ou [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objet.  
+Enregistre le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dans un objet de fichier ou de [flux](../../../ado/reference/ado-api/stream-object-ado.md) .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,40 +35,40 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>Paramètres  
  *Destination*  
- facultatif. Un **Variant** qui représente le nom de chemin d’accès complet du fichier où le **Recordset** doit être enregistré, ou une référence à un **Stream** objet.  
+ facultatif. **Variant** qui représente le nom de chemin d’accès complet du fichier dans lequel le **Recordset** doit être enregistré, ou une référence à un objet de **flux** .  
   
  *PersistFormat*  
- facultatif. Un [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) valeur qui spécifie le format dans lequel le **Recordset** doit être enregistré (XML ou ADTG). La valeur par défaut est **adPersistADTG**.  
+ facultatif. Valeur [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) qui spécifie le format dans lequel l' **objet Recordset** doit être enregistré (XML ou ADTG). La valeur par défaut est **adPersistADTG**.  
   
 ## <a name="remarks"></a>Notes  
- Le [méthode Save](../../../ado/reference/ado-api/save-method.md) méthode peut uniquement être appelée sur une ouverte **Recordset**. Utilisez le [méthode Open (objet Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) méthode à la restauration ultérieure le **Recordset** à partir de *Destination*.  
+ La méthode [Save Method](../../../ado/reference/ado-api/save-method.md) ne peut être appelée que sur un **Recordset**ouvert. Utilisez la méthode [Open (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) pour restaurer ultérieurement le **Recordset** de la *destination*.  
   
- Si le [propriété Filter](../../../ado/reference/ado-api/filter-property.md) propriété est en vigueur pour le **Recordset**, seules les lignes accessibles sous le filtre sont enregistrées. Si le **Recordset** est hiérarchique, puis l’enfant actuel **Recordset** et ses enfants sont enregistrés, y compris le parent **Recordset**. Si la méthode Save d’un enfant **Recordset** est appelée, l’enfant et tous ses enfants sont enregistrés, mais le parent n’est pas.  
+ Si la propriété Filter de la [propriété](../../../ado/reference/ado-api/filter-property.md) est appliquée à l' **objet Recordset**, seules les lignes accessibles sous le filtre sont enregistrées. Si le **jeu d’enregistrements** est hiérarchique, le **jeu d’enregistrements** enfant actuel et ses enfants sont enregistrés, y compris le **Recordset**parent. Si la méthode Save d’un **jeu d’enregistrements** enfant est appelée, l’enfant et tous ses enfants sont enregistrés, mais le parent n’est pas.  
   
- La première fois que vous enregistrez le **Recordset**, il est facultatif pour spécifier *Destination*. Si vous omettez *Destination*, un nouveau fichier sera créé avec un nom défini sur la valeur de la propriété de Source de la **Recordset**.  
+ La première fois que vous enregistrez le **Recordset**, il est facultatif de spécifier la *destination*. Si vous omettez la *destination*, un nouveau fichier est créé avec un nom défini sur la valeur de la propriété source du **Recordset**.  
   
- Omettez *Destination* lorsque vous appelez ensuite **enregistrer** après le premier enregistrement, ou une erreur d’exécution se produira. Si vous appelez ensuite **enregistrer** avec un nouveau *Destination*, le **Recordset** est enregistré dans la nouvelle destination. Toutefois, la nouvelle destination et la destination d’origine seront tous deux être ouverts.  
+ Omettez la *destination* lorsque vous appelez ensuite **Save** après le premier enregistrement, ou une erreur d’exécution se produit. Si, par la suite, vous appelez **Save** avec une nouvelle *destination*, le **jeu d’enregistrements** est enregistré dans la nouvelle destination. Toutefois, la nouvelle destination et la destination d’origine sont toutes deux ouvertes.  
   
- **Enregistrer** ne ferme pas la **Recordset** ou *Destination*, de sorte que vous pouvez continuer à travailler avec le **Recordset** et enregistrer vos modifications les plus récentes. *Destination* reste ouverte jusqu'à ce que le **Recordset** est fermé.  
+ L' **enregistrement** ne ferme pas le **jeu d’enregistrements** ou la *destination*. vous pouvez donc continuer à utiliser le **Recordset** et enregistrer les modifications les plus récentes. La *destination* reste ouverte jusqu’à la fermeture du **Recordset** .  
   
- Pour des raisons de sécurité, le **enregistrer** méthode autorise uniquement l’utilisation des paramètres de sécurité basse et personnalisée à partir d’un script exécuté par Microsoft Internet Explorer.  
+ Pour des raisons de sécurité, la méthode **Save** autorise uniquement l’utilisation de paramètres de sécurité bas et personnalisés à partir d’un script exécuté par Microsoft Internet Explorer.  
   
- Si le **enregistrer** méthode est appelée lors de l’asynchrone **Recordset** extraire, exécuter ou mettre à jour opération est en cours, puis **enregistrer** attend que l’opération asynchrone est terminée.  
+ Si la méthode **Save** est appelée alors qu’une opération d’extraction, d’exécution ou de mise à jour d’un **jeu d’enregistrements** asynchrone est en cours, **Save** attend jusqu’à ce que l’opération asynchrone soit terminée.  
   
- Les enregistrements sont enregistrés en commençant par la première ligne de la **Recordset**. Lorsque le **enregistrer** méthode est terminée, le curseur est déplacé vers la première ligne de la **Recordset**.  
+ Les enregistrements sont enregistrés à partir de la première ligne de l’ensemble d' **enregistrements**. Lorsque la méthode **Save** est terminée, la position de ligne actuelle est déplacée vers la première ligne du **Recordset**.  
   
- Pour de meilleurs résultats, définissez le [CursorLocation propriété (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriété **adUseClient** avec **enregistrer**. Si votre fournisseur ne prend pas en charge toutes les fonctionnalités nécessaires pour enregistrer les **Recordset** objets, le Service de curseur fournit cette fonctionnalité.  
+ Pour de meilleurs résultats, affectez à la propriété [CursorLocation (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) la valeur **adUseClient** avec **Save**. Si votre fournisseur ne prend pas en charge toutes les fonctionnalités nécessaires pour enregistrer des objets **Recordset** , le service de curseur fournit cette fonctionnalité.  
   
- Quand un **Recordset** est rendue persistante avec le **CursorLocation** propriété définie sur **adUseServer**, la fonctionnalité de mise à jour pour le **Recordset**est limité. En règle générale, seules les mises à jour de la table unique, des insertions et suppressions sont autorisées (selon les fonctionnalités du fournisseur). Le [méthode Resync](../../../ado/reference/ado-api/resync-method.md) méthode est également pas disponible dans cette configuration.  
+ Lorsqu’un **jeu d’enregistrements** est conservé avec la propriété **CursorLocation** définie sur **adUseServer**, la fonctionnalité de mise à jour du **Recordset** est limitée. En règle générale, seules les mises à jour, les insertions et les suppressions sur une seule table sont autorisées (dépend de la fonctionnalité du fournisseur). La méthode [Resync](../../../ado/reference/ado-api/resync-method.md) n’est pas non plus disponible dans cette configuration.  
   
 > [!NOTE]
->  Enregistrer un **Recordset** avec **champs** de type **adVariant**, **adIDispatch**, ou **adIUnknown** est non pris en charge par ADO et peut entraîner des résultats imprévisibles.  
+>  L’enregistrement d’un **jeu d’enregistrements** avec des **champs** de type **adVariant**, **adIDispatch**ou **adIUnknown** n’est pas pris en charge par ADO et peut entraîner des résultats imprévisibles.  
   
- Filtre uniquement sous la forme de chaînes de critères (par exemple OrderDate > ' 12/31/1999 ') affectent le contenu d’un rendu persistant **Recordset**. Les filtres créés avec un tableau de **signets** ou à l’aide d’une valeur comprise entre le [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) n’affectera pas le contenu du rendu persistant **Recordset**. Ces règles s’appliquent aux **Recordset**s créés avec les curseurs côté client ou côté serveur.  
+ Seuls les filtres sous la forme de chaînes de critères (par exemple, OrderDate > ' 12/31/1999 ') affectent le contenu d’un **jeu d’enregistrements**persistant. Les filtres créés à l’aide d’un tableau de **signets** ou de l’utilisation d’une valeur de [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) n’affectent pas le contenu de l' **objet Recordset**persistant. Ces règles s’appliquent aux **jeux d’enregistrements**créés à l’aide de curseurs côté client ou côté serveur.  
   
- Étant donné que le *Destination* paramètre peut accepter n’importe quel objet qui prend en charge l’interface OLE DB IStream, vous pouvez enregistrer un **Recordset** directement à l’objet de réponse de ASP. Pour plus d’informations, consultez le **scénario de persistance XML Recordset**.  
+ Étant donné que le paramètre de *destination* peut accepter tout objet qui prend en charge l’interface OLE DB IStream, vous pouvez enregistrer un **jeu d’enregistrements** directement dans l’objet de réponse ASP. Pour plus d’informations, consultez le **scénario de persistance d’un jeu d’enregistrements XML**.  
   
- Vous pouvez également enregistrer un **Recordset** au format XML à une instance d’un objet DOM MSXML, comme est indiqué dans le code Visual Basic suivant :  
+ Vous pouvez également enregistrer un **jeu d’enregistrements** au format XML dans une instance d’un objet DOM MSXML, comme indiqué dans le code Visual Basic suivant :  
   
 ```  
 Dim xDOM As New MSXML.DOMDocument  
@@ -83,9 +83,9 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
 ```  
   
 > [!NOTE]
->  Deux limitations s’appliquent lors de l’enregistrement des jeux d’enregistrements (formes de données) au format XML. Vous ne pouvez pas enregistrer au format XML si l’hiérarchique **Recordset** contient en attente de mises à jour, et vous ne pouvez pas enregistrer un paramétrable hiérarchique **Recordset**.  
+>  Deux limitations s’appliquent lors de l’enregistrement de recordsets hiérarchiques (formes de données) au format XML. Vous ne pouvez pas enregistrer dans XML si le **jeu d’enregistrements** hiérarchique contient des mises à jour en attente et que vous ne pouvez pas enregistrer un **jeu d’enregistrements**hiérarchique paramétré.  
   
- Un **Recordset** enregistré au format XML format est enregistré à l’aide du format UTF-8. Lorsqu’un tel fichier est chargé dans un Stream ADO, l’objet Stream ne tentera pas d’ouvrir un **Recordset** à partir du flux, sauf si la propriété de jeu de caractères du flux est définie à la valeur appropriée pour le format UTF-8.  
+ Un **jeu d’enregistrements** enregistré au format XML est enregistré à l’aide du format UTF-8. Lorsqu’un fichier de ce type est chargé dans un flux ADO, l’objet Stream ne tente pas d’ouvrir un **Recordset** à partir du flux, sauf si la propriété Charset du flux est définie sur la valeur appropriée pour le format UTF-8.  
   
 ## <a name="applies-to"></a>S'applique à  
   
@@ -94,8 +94,8 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
 |[Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Enregistrer et ouvrir des exemples de méthodes (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
- [Enregistrer et ouvrir l’exemple de méthodes (VC ++)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   
+ [Save et Open, exemples de méthodes (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
+ [Save et Open, exemples de méthodes (VC + +)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   
  [Open, méthode (objet Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Open, méthode (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
+ [Open, méthode (objet Stream ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [SaveToFile, méthode](../../../ado/reference/ado-api/savetofile-method.md)

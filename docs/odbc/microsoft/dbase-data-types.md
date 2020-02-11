@@ -18,43 +18,43 @@ ms.assetid: a0e31e6b-d02b-4ee2-9b37-5baf6a11c0a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1753e0d50655205bc6f459548f2ef2b77d5cc885
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096450"
 ---
 # <a name="dbase-data-types"></a>Types de données dBASE
-Le tableau suivant montre comment les types de données dBASE sont mappés aux types de données ODBC SQL. Notez que pas tous les types de données SQL ODBC sont prises en charge.  
+Le tableau suivant montre comment les types de données dBASE sont mappés aux types de données ODBC SQL. Notez que tous les types de données ODBC SQL ne sont pas pris en charge.  
   
 |type de données dBASE|Type de données ODBC|  
 |---------------------|--------------------|  
 |CHAR|SQL_VARCHAR|  
 |DATE|SQL_DATE|  
-|FLOAT[1]|SQL_DOUBLE|  
-|LOGIQUE|SQL_BIT|  
-|MÉMO|SQL_LONGVARCHAR|  
+|FLOAT [1]|SQL_DOUBLE|  
+|LOGICAL|SQL_BIT|  
+|CHAMPS|SQL_LONGVARCHAR|  
 |NUMÉRIQUE (BCD)|SQL_DOUBLE|  
-|CLASSES OLEOBJECT [1]|SQL_LONGBINARY|  
+|OLEOBJECT [1]|SQL_LONGBINARY|  
   
- Valide [1] uniquement pour la version de dBASE 5. *x*  
+ [1] valide uniquement pour dBASE version 5. *x*  
   
- Précision en dBASE III permet de nombres avec des exposants à deux chiffres et des nombres de dBASE IV avec jusqu'à exposants à trois chiffres. Étant donné que les nombres sont stockés sous forme de texte, elles sont converties en nombres. Si le nombre à convertir ne tient pas dans un champ, les résultats inexpliquées peuvent se produire.  
+ La précision dans dBASE III autorise les nombres avec des exposants à deux chiffres au maximum et dans les nombres dBASE IV avec des exposants à trois chiffres au maximum. Étant donné que les nombres sont stockés sous forme de texte, ils sont convertis en nombres. Si le nombre à convertir ne tient pas dans un champ, des résultats inexpliqués peuvent se produire.  
   
- DBASE permet une précision et une échelle doit être spécifiée avec un type de données numérique, il n'est pas prise en charge par le pilote dBASE ODBC. Le pilote dBASE ODBC retourne toujours une précision de 15 et une échelle de 0 pour un type de données numérique.  
+ Tandis que dBASE permet de spécifier une précision et une échelle à l’aide d’un type de données numérique, il n’est pas pris en charge par le pilote ODBC dBASE. Le pilote ODBC dBASE retourne toujours une précision de 15 et une échelle de 0 pour un type de données numérique.  
   
- Une colonne créée avec le type de données numériques en utilisant les mappages de pilote dBASE ODBC SQL_DOUBLE ODBC type de données. Par conséquent, les données dans cet article sont susceptibles d’être arrondi. Ce comportement n’est pas le même comme que les données numériques de type dans dBASE (type N), qui est Binary Coded Decimal (BCD).  
+ Une colonne créée avec le type de données numérique à l’aide du pilote ODBC dBASE correspond au type de données ODBC SQL_DOUBLE. Les données de cette colonne sont donc sujettes à l’arrondi. Ce comportement n’est pas le même que celui du type de données numérique dans dBASE (type N), qui correspond au code binaire décimal (BCD).  
   
 > [!NOTE]  
->  **SQLGetTypeInfo** retourne des types de données ODBC SQL. Toutes les conversions dans l’annexe D de la *de référence du programmeur ODBC* sont pris en charge pour les types de données ODBC SQL répertoriées plus haut dans cette rubrique.  
+>  **SQLGetTypeInfo** retourne des types de données ODBC SQL. Toutes les conversions de l’annexe D de la *Référence du programmeur ODBC* sont prises en charge pour les types de données SQL ODBC répertoriés précédemment dans cette rubrique.  
   
- Le tableau suivant présente des limitations sur dBASE types de données.  
+ Le tableau suivant présente les limitations relatives aux types de données dBASE.  
   
 |Type de données|Description|  
 |---------------|-----------------|  
-|CHAR|Création d’une colonne de type CHAR égale à zéro ou de longueur non spécifiée retourne en fait une colonne de 254 octets.|  
-|Données chiffrées|Le pilote dBASE ne prend pas en charge les tables dBASE chiffré.|  
-|LOGIQUE|Le pilote dBASE ne peut pas créer un index sur une colonne logique.|  
-|MÉMO|La longueur maximale d’une colonne Mémo est 65 500 octets.|  
+|CHAR|La création d’une colonne CHAR de zéro ou d’une longueur non spécifiée retourne en fait une colonne de 254 octets.|  
+|Données chiffrées|Le pilote dBASE ne prend pas en charge les tables dBASE chiffrées.|  
+|LOGICAL|Le pilote dBASE ne peut pas créer d’index sur une colonne logique.|  
+|CHAMPS|La longueur maximale d’une colonne de type Mémo est de 65 500 octets.|  
   
- Vous trouverez davantage de limites sur les types de données dans [Limitations des types de données](../../odbc/microsoft/data-type-limitations.md).
+ Vous trouverez plus de restrictions sur les types de données dans limitations des types de [données](../../odbc/microsoft/data-type-limitations.md).

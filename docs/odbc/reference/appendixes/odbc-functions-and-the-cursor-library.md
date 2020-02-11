@@ -1,5 +1,5 @@
 ---
-title: Fonctions ODBC et la bibliothèque de curseurs | Microsoft Docs
+title: Fonctions ODBC et bibliothèque de curseurs | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,19 +11,19 @@ ms.assetid: c609d0fb-787a-4b39-9673-332d411b3d63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 877dda7f387c8574c8ea2e91281b10b7563037b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100661"
 ---
 # <a name="odbc-functions-and-the-cursor-library"></a>Fonctions ODBC et la bibliothèque de curseurs
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans tout nouveau développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande d’utiliser les fonctionnalités de curseur du pilote.  
+>  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande l’utilisation de la fonctionnalité de curseur du pilote.  
   
- Lorsque la bibliothèque de curseurs ODBC est activée pour une connexion, le Gestionnaire de pilotes appelle des fonctions dans la bibliothèque de curseurs et non dans le pilote. La bibliothèque de curseurs exécute la fonction ou appelle dans le pilote spécifié.  
+ Lorsque la bibliothèque de curseurs ODBC est activée pour une connexion, le gestionnaire de pilotes appelle les fonctions dans la bibliothèque de curseurs au lieu du pilote. La bibliothèque de curseurs exécute la fonction ou l’appelle dans le pilote spécifié.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Fonctions ODBC exécutées par la bibliothèque de curseurs](../../../odbc/reference/appendixes/odbc-functions-executed-by-the-cursor-library.md)  
   

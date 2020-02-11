@@ -1,5 +1,5 @@
 ---
-title: Descripteurs d’instruction | Microsoft Docs
+title: Handles d’instruction | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,27 +14,27 @@ ms.assetid: 65d6d78b-a8c8-489a-9dad-f8d127a44882
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 730ead7bf90af3b6e6906fe184e0fa3312212137
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107259"
 ---
 # <a name="statement-handles"></a>Handles d’instruction
-Un *instruction* est plus facilement considérée comme une instruction SQL, tel que **sélectionnez \* à partir d’un employé**. Toutefois, une instruction est plus qu’une instruction SQL : il se compose de toutes les informations associées à cette instruction SQL, tels que des jeux de résultats créés par l’instruction et les paramètres utilisés dans l’exécution de l’instruction. Une instruction n’a même pas besoin d’avoir une instruction SQL définie par l’application. Par exemple, quand une fonction de catalogue comme **SQLTables** est exécutée sur une instruction, il s’exécute une instruction SQL prédéfinie qui retourne une liste de noms de table.  
+Une *instruction* est plus facilement considérée comme une instruction SQL, telle que **Select \* from employee**. Toutefois, une instruction est plus qu’une simple instruction SQL. elle se compose de toutes les informations associées à cette instruction SQL, telles que les jeux de résultats créés par l’instruction et les paramètres utilisés dans l’exécution de l’instruction. Une instruction n’a même pas besoin d’une instruction SQL définie par l’application. Par exemple, lorsqu’une fonction de catalogue telle que **SQLTables** est exécutée sur une instruction, elle exécute une instruction SQL prédéfinie qui retourne une liste de noms de tables.  
   
- Chaque instruction est identifiée par un descripteur d’instruction. Une instruction est associée à une connexion unique, et il peut y avoir plusieurs instructions sur cette connexion. Certains pilotes de limitent le nombre d’instructions actives, qu'elles prennent en charge ; option le SQL_MAX_CONCURRENT_ACTIVITIES **SQLGetInfo** Spécifie le nombre d’instructions actif un pilote prend en charge sur une seule connexion. Une instruction est définie comme étant *active* si elle contient des résultats en attente, où des résultats sont un jeu de résultats ou le nombre de lignes affectées par une **insérer**, **mise à jour**, ou **Supprimer** instruction ou les données sont envoyées avec plusieurs appels à **SQLPutData**.  
+ Chaque instruction est identifiée par un descripteur d’instruction. Une instruction est associée à une seule connexion, et il peut y avoir plusieurs instructions sur cette connexion. Certains pilotes limitent le nombre d’instructions actives qu’ils prennent en charge ; l’option SQL_MAX_CONCURRENT_ACTIVITIES dans **SQLGetInfo** spécifie le nombre d’instructions actives prises en charge par un pilote sur une seule connexion. Une instruction est définie comme *active* si elle a des résultats en attente, où les résultats sont soit un jeu de résultats, soit le nombre de lignes affectées par une instruction **Insert**, **Update**ou **Delete** , ou les données sont envoyées avec plusieurs appels à **SQLPutData**.  
   
- Au sein d’un morceau de code qui implémente ODBC (le Gestionnaire de pilotes ou un pilote), le descripteur d’instruction identifie une structure qui contient des informations sur l’instruction, telles que :  
+ Dans un morceau de code qui implémente ODBC (le gestionnaire de pilotes ou un pilote), le descripteur d’instruction identifie une structure qui contient des informations d’instruction, telles que :  
   
 -   État de l’instruction  
   
--   Les diagnostics au niveau de l’instruction actuelles  
+-   Diagnostics au niveau de l’instruction en cours  
   
--   Les adresses de variables d’application liés aux paramètres de l’instruction et les colonnes de jeu de résultats  
+-   Adresses des variables d’application liées aux paramètres de l’instruction et aux colonnes de l’ensemble de résultats  
   
--   Les paramètres actuels de chaque attribut d’instruction  
+-   Paramètres actuels de chaque attribut d’instruction  
   
- Descripteurs d’instruction sont utilisés dans la plupart des fonctions ODBC. En particulier, ils sont utilisés dans les fonctions pour lier les paramètres et les colonnes de jeu de résultats (**SQLBindParameter** et **SQLBindCol**), préparer et exécuter des instructions (**SQLPrepare** **SQLExecute**, et **SQLExecDirect**), de récupérer les métadonnées (**SQLColAttribute** et **SQLDescribeCol**), fetch résultats (**SQLFetch**) et récupérer les diagnostics (**SQLGetDiagField** et **SQLGetDiagRec**). Ils sont également utilisés dans les fonctions de catalogue (**SQLColumns**, **SQLTables**, et ainsi de suite) et un nombre d’autres fonctions.  
+ Les descripteurs d’instruction sont utilisés dans la plupart des fonctions ODBC. En particulier, elles sont utilisées dans les fonctions pour lier des paramètres et des colonnes de jeu de résultats (**SQLBindParameter** et **SQLBindCol**), préparer et exécuter des instructions (**SQLPrepare**, **SQLExecute**et **SQLExecDirect**), récupérer des métadonnées (**SQLColAttribute** et **SQLDescribeCol**), extraire des résultats (**SQLFetch**) et récupérer les Diagnostics (**SQLGetDiagField** et **SQLGetDiagRec**). Ils sont également utilisés dans les fonctions de catalogue (**SQLColumns**, **SQLTables**, etc.) et un certain nombre d’autres fonctions.  
   
- Descripteurs d’instruction sont allouées avec **SQLAllocHandle** et libéré avec **SQLFreeHandle**.
+ Les descripteurs d’instruction sont alloués avec **SQLAllocHandle** et libérés avec **SQLFreeHandle**.

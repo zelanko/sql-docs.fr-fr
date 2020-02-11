@@ -1,5 +1,5 @@
 ---
-title: Objet de propriétés, méthodes et événements | Microsoft Docs
+title: Propriétés, méthodes et événements de l’objet Property | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,27 +13,27 @@ ms.assetid: 21f67a7d-6273-4648-9abd-2236650efa4c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a0f281d1bce5e75b9158a18e1ea97256ba85625
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917511"
 ---
-# <a name="property-object-properties-methods-and-events"></a>Objet de propriétés, méthodes et événements
-## <a name="properties"></a>Properties  
+# <a name="property-object-properties-methods-and-events"></a>Propriétés, méthodes et événements de l’objet Property
+## <a name="properties"></a>Propriétés  
  [Attributes, propriété](../../../ado/reference/ado-api/attributes-property-ado.md)  
   
  [Propriété Name](../../../ado/reference/ado-api/name-property-ado.md)  
   
- [Propriété de type](../../../ado/reference/ado-api/type-property-ado.md)  
+ [Propriété type](../../../ado/reference/ado-api/type-property-ado.md)  
   
- [Valeur de propriété](../../../ado/reference/ado-api/value-property-ado.md)  
+ [Propriété Value](../../../ado/reference/ado-api/value-property-ado.md)  
   
 ## <a name="methods"></a>Méthodes  
- Aucune.  
+ Aucun.  
   
-## <a name="events"></a>Events  
- Aucune.  
+## <a name="events"></a>Événements  
+ Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Property, objet (ADO)](../../../ado/reference/ado-api/property-object-ado.md)

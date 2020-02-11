@@ -1,5 +1,5 @@
 ---
-title: INSERT, instruction-Limitations | Microsoft Docs
+title: Limitations des instructions INSERT | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,31 +15,31 @@ ms.assetid: dea05698-527a-41ab-8729-bbed85556185
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1676af6216ac703e9a8976951ec2888b9e940b67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085524"
 ---
 # <a name="insert-statement-limitations"></a>INSERT, instruction - limitations
-Les données insérées sont tronquées à droite sans avertissement si elle est trop long pour tenir dans la colonne.  
+Les données insérées sont tronquées à droite sans avertissement si elles sont trop longues pour tenir dans la colonne.  
   
- Tentative d’insertion d’une valeur qui est en dehors de la plage du type de données d’une colonne entraîne une valeur NULL à insérer dans la colonne.  
+ Toute tentative d’insertion d’une valeur qui se trouve en dehors de la plage du type de données d’une colonne entraîne l’insertion d’une valeur NULL dans la colonne.  
   
- Quand un fichier dBASE, Microsoft Excel, Paradox ou Textdriver est utilisé, l’insertion d’une chaîne de longueur nulle dans une colonne insère en fait une valeur NULL à la place.  
+ Lorsqu’un dBASE, Microsoft Excel, Paradox ou TextDriver est utilisé, l’insertion d’une chaîne de longueur nulle dans une colonne insère en fait une valeur NULL à la place.  
   
- Lorsque le pilote Microsoft Excel est utilisé, si une chaîne vide est insérée dans une colonne, la chaîne vide est convertie en une valeur NULL ; une instruction SELECT recherchée qui est exécutée avec une chaîne vide dans la clause WHERE ne réussira pas sur cette colonne.  
+ Lorsque le pilote Microsoft Excel est utilisé, si une chaîne vide est insérée dans une colonne, la chaîne vide est convertie en valeur NULL ; une instruction SELECT recherchée exécutée avec une chaîne vide dans la clause WHERE ne réussit pas sur cette colonne.  
   
- Une table n’est pas mis à jour par le pilote Paradox sous deux conditions :  
+ Une table ne peut pas être mise à jour par le pilote Paradox dans les deux conditions suivantes :  
   
--   Lorsqu’un index unique n’est pas défini sur la table. Cela n’est pas vrai pour une table vide, ce qui peut être mis à jour avec une seule ligne même si un index unique n’est pas défini sur la table. Si une seule ligne est insérée dans une table vide qui ne dispose pas d’un index unique, une application ne peut pas créer un index unique ou insérer des données supplémentaires une fois que la ligne a été insérée.  
+-   Lorsqu’un index unique n’est pas défini sur la table. Cela n’est pas vrai pour une table vide, qui peut être mise à jour avec une seule ligne, même si un index unique n’est pas défini sur la table. Si une seule ligne est insérée dans une table vide qui n’a pas d’index unique, une application ne peut pas créer d’index unique ou insérer des données supplémentaires après l’insertion de la ligne unique.  
   
--   Si le moteur de base de données Borland n’est pas implémenté, uniquement lire et ajoutez les instructions sont autorisées sur la table Paradox.  
+-   Si le Moteur de base de données Borland n’est pas implémenté, seules les instructions Read et Append sont autorisées sur la table Paradox.  
   
- Lorsque le pilote de texte est utilisé, les valeurs NULL sont représentées par une chaîne blancs dans les fichiers de longueur fixe, mais sont représentées par aucun espace dans les fichiers délimités. Par exemple, dans la ligne suivante qui contient trois champs, le deuxième champ est une valeur NULL :  
+ Lorsque le pilote de texte est utilisé, les valeurs NULL sont représentées par une chaîne remplie par des blancs dans des fichiers de longueur fixe, mais ne sont pas représentées par des espaces dans les fichiers délimités. Par exemple, dans la ligne suivante contenant trois champs, le deuxième champ est une valeur NULL :  
   
 ```  
 "Smith:,, 123  
 ```  
   
- Lorsque le pilote de texte est utilisé, toutes les valeurs de colonne peuvent être remplis avec des espaces. La longueur de n’importe quelle ligne doit être inférieur ou égal à 65,543 octets.
+ Lorsque le pilote de texte est utilisé, toutes les valeurs de colonne peuvent être complétées par des espaces de début. La longueur de n’importe quelle ligne doit être inférieure ou égale à 65 543 octets.

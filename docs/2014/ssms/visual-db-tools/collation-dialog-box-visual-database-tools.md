@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 28c32be0bfb42b923041169c542e21b21074cf70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62936963"
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>Boîte de dialogue Classement (Visual Database Tools)
@@ -54,6 +54,6 @@ ms.locfileid: "62936963"
  Applique à la colonne la séquence de classement par défaut pour la base de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utiliser des colonnes dans des requêtes d’agrégation &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [Utiliser des colonnes dans des requêtes d'agrégation &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

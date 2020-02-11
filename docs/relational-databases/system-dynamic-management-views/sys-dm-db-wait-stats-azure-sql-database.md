@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_wait_stats (Azure SQL Database) | Microsoft Docs
+title: sys. dm_db_wait_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.service: sql-database
@@ -20,13 +20,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0c32af194a1e74e0fd11e65a75109165e81cc4c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090876"
 ---
-# <a name="sysdmdbwaitstats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL Database)
+# <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Retourne des informations sur toutes les attentes subies par les threads qui se sont exécutés pendant l'opération. Vous pouvez utiliser cette vue agrégée pour diagnostiquer les problèmes de performance liés à [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et également liés à des requêtes et des traitements spécifiques.  
@@ -35,7 +35,7 @@ ms.locfileid: "68090876"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar(60)**|Nom du type d'attente. Pour plus d’informations, consultez [Types d’attentes](#WaitTypes), plus loin dans cette rubrique.|  
+|wait_type|**nvarchar (60)**|Nom du type d’attente. Pour plus d'informations, consultez [Types d'attentes](#WaitTypes), plus loin dans cette rubrique.|  
 |waiting_tasks_count|**bigint**|Nombre d'attentes sur ce type d'attente. Ce compteur est incrémenté au début de chaque attente.|  
 |wait_time_ms|**bigint**|Temps d'attente total en millisecondes pour ce type d'attente. Ce temps comprend signal_wait_time_ms.|  
 |max_wait_time_ms|**bigint**|Temps d'attente maximal sur ce type d'attente.|  
@@ -62,7 +62,7 @@ ms.locfileid: "68090876"
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation VIEW DATABASE STATE sur le serveur.  
   
-##  <a name="WaitTypes"></a> Types d’attentes  
+##  <a name="WaitTypes"></a>Types d’attente  
  Resource waits  
  Les attentes de ressource se produisent lorsque des demandes de travail accèdent à une ressource qui n'est pas disponible parce qu'elle est en cours d'utilisation par un autre travail ou qu'elle n'est pas encore disponible. Ces attentes sont par exemple des attentes de verrous, de verrous internes, de réseau et d'E/S de disque. Les attentes de verrou (interne ou externe) sont des attentes sur des objets de synchronisation.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68090876"
   
  Bien que le thread ne soit plus en train d'attendre, il n'a pas à redémarrer immédiatement. En effet, ce type de thread est d'abord placé dans la file d'attente des travaux pouvant s'exécuter et doit attendre qu'un quantum s'exécute sur le planificateur.  
   
- Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les compteurs de temps d’attente sont **bigint** valeurs et par conséquent ne sont pas sujets à la substitution de compteur en tant que les compteurs équivalents des versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les compteurs de temps d’attente sont des valeurs **bigint** et, par conséquent, ne sont pas aussi sujets à la substitution de compteur que les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]compteurs équivalents dans les versions antérieures de.  
   
  Le tableau suivant récapitule les types d'attente que rencontrent les tâches.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "68090876"
 |AUDIT_ON_DEMAND_TARGET_LOCK|Se produit lorsqu'il y a une attente sur un verrou utilisé pour garantir une initialisation unique des cibles d'événements étendus liées à l'audit.|  
 |AUDIT_XE_SESSION_MGR|Se produit lorsqu'il y a une attente sur un verrou utilisé pour synchroniser le démarrage et l'arrêt des sessions d'événements étendus liées à l'audit.|  
 |BACKUP|Se produit lorsqu'une tâche est bloquée dans un traitement de sauvegarde.|  
-|BACKUP_OPERATOR|Se produit lorsqu'une tâche attend le montage d'une bande. Pour afficher l’état de la bande, interrogez [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md). S'il n'y a pas d'opération de montage en cours, ce type d'attente peut indiquer un problème matériel au niveau du lecteur de bande.|  
+|BACKUP_OPERATOR|Se produit lorsqu'une tâche attend le montage d'une bande. Pour voir l'état de la bande, interrogez [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md). S'il n'y a pas d'opération de montage en cours, ce type d'attente peut indiquer un problème matériel au niveau du lecteur de bande.|  
 |BACKUPBUFFER|Se produit lorsqu'une tâche de sauvegarde attend des données ou une mémoire tampon pour y stocker les données. Ce type d'attente n'est pas typique, sauf lorsqu'une tâche attend qu'une bande monte.|  
 |BACKUPIO|Se produit lorsqu'une tâche de sauvegarde attend des données ou une mémoire tampon pour y stocker les données. Ce type d'attente n'est pas typique, sauf lorsqu'une tâche attend qu'une bande monte.|  
 |BACKUPTHREAD|Se produit lorsqu'une tâche attend la fin d'une tâche de sauvegarde. Les temps d'attente peuvent être longs, de plusieurs minutes à plusieurs heures. Si la tâche concernée est un processus d'E/S, ce type n'indique pas de problème.|  
@@ -192,27 +192,27 @@ ms.locfileid: "68090876"
 |LATCH_SH|Se produit pendant l'attente d'un verrou de partage. Cela n'inclut pas les verrous internes de tampons ni les verrous internes de marque de transaction. La liste des attentes LATCH_* est disponible dans la section sys.dm_os_latch_stats. Notez que sys.dm_os_latch_stats regroupe les attentes LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX et LATCH_DT.|  
 |LATCH_UP|Se produit pendant l'attente d'un verrou de mise à jour. Cela n'inclut pas les verrous internes de tampons ni les verrous internes de marque de transaction. La liste des attentes LATCH_* est disponible dans la section sys.dm_os_latch_stats. Notez que sys.dm_os_latch_stats regroupe les attentes LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX et LATCH_DT.|  
 |LAZYWRITER_SLEEP|Se produit lorsque des tâches d'écriture différée sont suspendues. Il s'agit d'une mesure de la durée consacrée aux tâches en arrière-plan qui attendent. Ne considérez pas cet état lorsque vous cherchez des blocages d'utilisateur.|  
-|LCK_M_BU|Se produit lorsqu'une tâche attend pour acquérir un verrou de mise à jour en bloc. Pour une matrice de compatibilité de verrouillage, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IS|Se produit lorsqu'une tâche attend pour acquérir un verrou intentionnel partagé. Pour une matrice de compatibilité de verrouillage, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IU|Se produit lorsqu'une tâche attend pour acquérir un verrou intentionnel de mise à jour. Pour une matrice de compatibilité de verrouillage, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IX|Se produit lorsqu'une tâche attend pour acquérir un verrou intentionnel exclusif. Pour une matrice de compatibilité de verrouillage, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_NL|Se produit lorsqu'une tâche attend pour acquérir un verrou NULL sur la valeur de clé actuelle, et un verrou de groupes d'insertions entre la clé actuelle et la clé précédente. Un verrou NULL sur la clé est un verrou de libération instantanée. Pour une matrice de compatibilité de verrouillage, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_S|Se produit lorsqu'une tâche attend pour acquérir un verrou partagé sur la valeur de clé actuelle, et un verrou de groupes d'insertions entre la clé actuelle et la clé précédente. Pour une matrice de compatibilité de verrouillage, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_U|La tâche attend pour acquérir un verrou de mise à jour sur la valeur de clé actuelle, et un verrou de groupes d'insertions entre la clé actuelle et la clé précédente. Pour une matrice de compatibilité de verrouillage, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_X|Se produit lorsqu'une tâche attend pour acquérir un verrou exclusif sur la valeur de clé actuelle, et un verrou de groupes d'insertions entre la clé actuelle et la clé précédente. Pour une matrice de compatibilité de verrouillage, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RS_S|Se produit lorsqu'une tâche attend pour acquérir un verrou partagé sur la valeur de clé actuelle, et un verrou de groupes partagés entre la clé actuelle et la clé précédente. Pour une matrice de compatibilité de verrouillage, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RS_U|Se produit lorsqu'une tâche attend pour acquérir un verrou de mise à jour sur la valeur de clé actuelle, et un verrou de groupes de mises à jour entre la clé actuelle et la clé précédente. Pour une matrice de compatibilité de verrouillage, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_S|Se produit lorsqu'une tâche attend pour acquérir un verrou partagé sur la valeur de clé actuelle, et un verrou de groupes exclusifs entre la clé actuelle et la clé précédente. Pour une matrice de compatibilité de verrouillage, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_U|Se produit lorsqu'une tâche attend pour acquérir un verrou de mise à jour sur la valeur de clé actuelle, et un verrou de groupes exclusifs entre la clé actuelle et la clé précédente. Pour une matrice de compatibilité de verrouillage, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_X|Se produit lorsqu'une tâche attend pour acquérir un verrou exclusif sur la valeur de clé actuelle, et un verrou de groupes exclusifs entre la clé actuelle et la clé précédente. Pour une matrice de compatibilité de verrouillage, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_S|Se produit lorsqu'une tâche attend pour acquérir un verrou partagé. Pour une matrice de compatibilité de verrouillage, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SCH_M|Se produit lorsqu'une tâche attend pour acquérir un verrou de modification de schéma. Pour une matrice de compatibilité de verrouillage, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SCH_S|Se produit lorsqu'une tâche attend pour acquérir un verrou de partage de schéma. Pour une matrice de compatibilité de verrouillage, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SIU|Se produit lorsqu'une tâche attend pour acquérir un verrou intentionnel de mise à jour partagé. Pour une matrice de compatibilité de verrouillage, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SIX|Se produit lorsqu'une tâche attend pour acquérir un verrou intentionnel exclusif partagé. Pour une matrice de compatibilité de verrouillage, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_U|Se produit lorsqu'une tâche attend pour acquérir un verrou de mise à jour. Pour une matrice de compatibilité de verrouillage, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_UIX|Se produit lorsqu'une tâche attend pour acquérir un verrou intentionnel exclusif de mise à jour. Pour une matrice de compatibilité de verrouillage, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_X|Se produit lorsqu'une tâche attend pour acquérir un verrou exclusif. Pour une matrice de compatibilité de verrouillage, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_BU|Se produit lorsqu'une tâche attend pour acquérir un verrou de mise à jour en bloc. Pour obtenir une matrice de compatibilité des verrous, consultez [sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_IS|Se produit lorsqu'une tâche attend pour acquérir un verrou intentionnel partagé. Pour obtenir une matrice de compatibilité des verrous, consultez [sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_IU|Se produit lorsqu'une tâche attend pour acquérir un verrou intentionnel de mise à jour. Pour obtenir une matrice de compatibilité des verrous, consultez [sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_IX|Se produit lorsqu'une tâche attend pour acquérir un verrou intentionnel exclusif. Pour obtenir une matrice de compatibilité des verrous, consultez [sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_NL|Se produit lorsqu'une tâche attend pour acquérir un verrou NULL sur la valeur de clé actuelle, et un verrou de groupes d'insertions entre la clé actuelle et la clé précédente. Un verrou NULL sur la clé est un verrou de libération instantanée. Pour obtenir une matrice de compatibilité des verrous, consultez [sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_S|Se produit lorsqu'une tâche attend pour acquérir un verrou partagé sur la valeur de clé actuelle, et un verrou de groupes d'insertions entre la clé actuelle et la clé précédente. Pour obtenir une matrice de compatibilité des verrous, consultez [sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_U|La tâche attend pour acquérir un verrou de mise à jour sur la valeur de clé actuelle, et un verrou de groupes d'insertions entre la clé actuelle et la clé précédente. Pour obtenir une matrice de compatibilité des verrous, consultez [sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_X|Se produit lorsqu'une tâche attend pour acquérir un verrou exclusif sur la valeur de clé actuelle, et un verrou de groupes d'insertions entre la clé actuelle et la clé précédente. Pour obtenir une matrice de compatibilité des verrous, consultez [sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RS_S|Se produit lorsqu'une tâche attend pour acquérir un verrou partagé sur la valeur de clé actuelle, et un verrou de groupes partagés entre la clé actuelle et la clé précédente. Pour obtenir une matrice de compatibilité des verrous, consultez [sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RS_U|Se produit lorsqu'une tâche attend pour acquérir un verrou de mise à jour sur la valeur de clé actuelle, et un verrou de groupes de mises à jour entre la clé actuelle et la clé précédente. Pour obtenir une matrice de compatibilité des verrous, consultez [sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RX_S|Se produit lorsqu'une tâche attend pour acquérir un verrou partagé sur la valeur de clé actuelle, et un verrou de groupes exclusifs entre la clé actuelle et la clé précédente. Pour obtenir une matrice de compatibilité des verrous, consultez [sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RX_U|Se produit lorsqu'une tâche attend pour acquérir un verrou de mise à jour sur la valeur de clé actuelle, et un verrou de groupes exclusifs entre la clé actuelle et la clé précédente. Pour obtenir une matrice de compatibilité des verrous, consultez [sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RX_X|Se produit lorsqu'une tâche attend pour acquérir un verrou exclusif sur la valeur de clé actuelle, et un verrou de groupes exclusifs entre la clé actuelle et la clé précédente. Pour obtenir une matrice de compatibilité des verrous, consultez [sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_S|Se produit lorsqu'une tâche attend pour acquérir un verrou partagé. Pour obtenir une matrice de compatibilité des verrous, consultez [sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SCH_M|Se produit lorsqu'une tâche attend pour acquérir un verrou de modification de schéma. Pour obtenir une matrice de compatibilité des verrous, consultez [sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SCH_S|Se produit lorsqu'une tâche attend pour acquérir un verrou de partage de schéma. Pour obtenir une matrice de compatibilité des verrous, consultez [sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SIU|Se produit lorsqu'une tâche attend pour acquérir un verrou intentionnel de mise à jour partagé. Pour obtenir une matrice de compatibilité des verrous, consultez [sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SIX|Se produit lorsqu'une tâche attend pour acquérir un verrou intentionnel exclusif partagé. Pour obtenir une matrice de compatibilité des verrous, consultez [sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_U|Se produit lorsqu'une tâche attend pour acquérir un verrou de mise à jour. Pour obtenir une matrice de compatibilité des verrous, consultez [sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_UIX|Se produit lorsqu'une tâche attend pour acquérir un verrou intentionnel exclusif de mise à jour. Pour obtenir une matrice de compatibilité des verrous, consultez [sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_X|Se produit lorsqu'une tâche attend pour acquérir un verrou exclusif. Pour obtenir une matrice de compatibilité des verrous, consultez [sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
 |LOG_RATE_GOVERNOR|Se produit lorsque la base de données attend des quotas à écrire dans le journal.|  
 |LOGBUFFER|Se produit lorsqu'une tâche attend de l'espace dans le tampon de journal pour stocker un enregistrement de journal. Des valeurs élevées fréquentes peuvent indiquer que les unités de journaux ne parviennent pas à gérer la quantité d'entrées de journaux produites par le serveur.|  
 |LOGGENERATION|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -224,7 +224,8 @@ ms.locfileid: "68090876"
 |MSQL_DQ|Se produit lorsqu'une tâche attend la fin d'une opération de requête distribuée. Permet de détecter d'éventuels interblocages d'application MARS (Multiple Active Result Set). L'attente se termine à la fin de l'appel de requête distribuée.|  
 |MSQL_XACT_MGR_MUTEX|Se produit lorsqu'une tâche attend d'avoir obtenu la propriété du gestionnaire de transactions de la session pour effectuer une opération de transaction au niveau de la session.|  
 |MSQL_XACT_MUTEX|Se produit durant la synchronisation de l'utilisation de la transaction. Une demande doit d'abord obtenir l'exclusion mutuelle pour pouvoir utiliser la transaction.|  
-|MSQL_XP|Se produit lorsqu'une tâche attend la fin d'une procédure stockée étendue. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise cet état d'attente pour détecter d'éventuels blocages d'application MARS. L'attente se termine à la fin de l'appel de procédure stockée étendue.|  
+|MSQL_XP|Se produit lorsqu'une tâche attend la fin d'une procédure stockée étendue. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise cet état d'attente pour détecter d'éventuels blocages d'application MARS. L'attente se termine à la fin de l'appel de procédure stockée étendue.|  
 |MSSEARCH|Se produit durant des appels de recherche en texte intégral. Cette attente se termine lorsque l'opération de texte intégral prend fin. Ces informations n'indiquent pas des contentions, mais plutôt la durée des opérations de texte intégral.|  
 |NET_WAITFOR_PACKET|Se produit lorsqu'une connexion attend un paquet réseau durant une lecture sur le réseau.|  
 |OLEDB|Se produit lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appelle le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Ce type d'attente n'est pas utilisé pour la synchronisation. Par contre, il indique la durée des appels émis vers le fournisseur OLE DB.|  
@@ -250,17 +251,17 @@ ms.locfileid: "68090876"
 |PREEMPTIVE_CLOSEBACKUPVDIDEVICE|Se produit lorsque le planificateur du système d'exploitation (SQLOS) bascule en mode préemptif pour fermer une unité de sauvegarde virtuelle.|  
 |PREEMPTIVE_CLUSAPI_CLUSTERRESOURCECONTROL|Se produit lorsque le planificateur du système d'exploitation (SQLOS) bascule en mode préemptif pour effectuer des opérations de cluster de basculement Windows.|  
 |PREEMPTIVE_COM_COCREATEINSTANCE|Se produit lorsque le planificateur du système d'exploitation (SQLOS) bascule en mode préemptif pour créer un objet COM.|  
-|PREEMPTIVE_HADR_LEASE_MECHANISM|Groupes de disponibilité AlwaysOn de bail responsable de planification pour les diagnostics CSS.|  
+|PREEMPTIVE_HADR_LEASE_MECHANISM|Always On la planification du gestionnaire de bail du groupe de disponibilité pour les diagnostics CSS.|  
 |PREEMPTIVE_SOSTESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_STRESSDRIVER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_XETESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PRINT_ROLLBACK_PROGRESS|Utilisé pour attendre que des processus utilisateur se terminent dans une base de données qui a subi un changement d'état suite à l'utilisation de la clause de terminaison ALTER DATABASE. Pour plus d’informations, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|Se produit lorsqu'une tâche en arrière-plan attend la fin de la tâche en arrière-plan qui reçoit (par interrogation) des notifications de clustering de basculement Windows Server.  À usage interne uniquement|  
-|PWAIT_HADR_CLUSTER_INTEGRATION|Un ajout, remplacement et/ou de suppression opération attend de saisir un verrou d’écriture sur une liste interne Always On (par exemple, une liste de réseaux, les adresses réseau ou les écouteurs de groupe de disponibilité).  À usage interne uniquement|  
-|PWAIT_HADR_OFFLINE_COMPLETED|Une Always On disponibilité groupe opération de suppression est en attente pour le groupe de disponibilité cible soit hors connexion avant la destruction d’objets de Clustering de basculement Windows Server.|  
-|PWAIT_HADR_ONLINE_COMPLETED|Un Always On créer ou opération de groupe de disponibilité de basculement est en attente pour le groupe de disponibilité cible passe en ligne.|  
-|PWAIT_HADR_POST_ONLINE_COMPLETED|Une Always On disponibilité groupe opération de suppression est en attente de l’arrêt d’une tâche en arrière-plan qui a été planifiée dans le cadre d’une commande précédente. Par exemple, une tâche en arrière-plan peut effectuer la transition de bases de données de disponibilité vers le rôle principal. La DLL DROP AVAILABILITY GROUP doit attendre la fin de cette tâche en arrière-plan afin d'éviter des conditions de concurrence.|  
+|PWAIT_HADR_CLUSTER_INTEGRATION|Une opération d’ajout, de remplacement et/ou de suppression attend de saisir un verrou d’écriture sur une liste interne Always On (par exemple, une liste de réseaux, d’adresses réseau ou d’écouteurs de groupe de disponibilité).  À usage interne uniquement|  
+|PWAIT_HADR_OFFLINE_COMPLETED|Une opération Drop Availability Group Always On attend que le groupe de disponibilité cible se déconnecte avant de détruire les objets de clustering de basculement Windows Server.|  
+|PWAIT_HADR_ONLINE_COMPLETED|Une opération de création ou de basculement de groupe de disponibilité Always On attend que le groupe de disponibilité cible soit mis en ligne.|  
+|PWAIT_HADR_POST_ONLINE_COMPLETED|Une opération Drop Availability Group Always On attend l’arrêt d’une tâche en arrière-plan qui était planifiée dans le cadre d’une commande précédente. Par exemple, une tâche en arrière-plan peut effectuer la transition de bases de données de disponibilité vers le rôle principal. La DLL DROP AVAILABILITY GROUP doit attendre la fin de cette tâche en arrière-plan afin d'éviter des conditions de concurrence.|  
 |PWAIT_HADR_WORKITEM_COMPLETED|Attente interne par un thread attendant la fin d'une tâche de travail asynchrone. Il s'agit d'une attente prévue, à l'usage de CSS.|  
 |PWAIT_MD_LOGIN_STATS|Se produit durant la synchronisation interne dans les métadonnées des statistiques de connexion.|  
 |PWAIT_MD_RELATION_CACHE|Se produit durant la synchronisation interne dans les métadonnées de la table ou de l'index.|  

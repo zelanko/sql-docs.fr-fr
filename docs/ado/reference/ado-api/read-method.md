@@ -17,14 +17,14 @@ ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 992631b8fb3864b6d7404f86d2f65de222f0b1c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917417"
 ---
 # <a name="read-method"></a>Read, méthode
-Lit un nombre spécifié d’octets à partir d’un fichier binaire [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objet.  
+Lit un nombre spécifié d’octets à partir d’un objet de [flux](../../../ado/reference/ado-api/stream-object-ado.md) binaire.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,16 +35,16 @@ Variant = Stream.Read ( NumBytes)
   
 #### <a name="parameters"></a>Paramètres  
  *NumBytes*  
- facultatif. Un **Long** valeur qui spécifie le nombre d’octets à lire à partir du fichier ou le [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) valeur **adReadAll**, qui est la valeur par défaut.  
+ facultatif. Valeur de **type long** qui spécifie le nombre d’octets à lire dans le fichier ou la valeur [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) **adReadAll**, qui est la valeur par défaut.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Le **en lecture** méthode lit un nombre spécifié d’octets ou l’intégralité du flux à partir d’un **Stream** de l’objet et retourne les données résultantes comme un **Variant**.  
+ La méthode **Read** lit un nombre spécifié d’octets ou le flux entier à partir d’un objet de **flux** et retourne les données résultantes sous la forme d’un **Variant**.  
   
 ## <a name="remarks"></a>Notes  
- Si *NumBytes* est supérieur au nombre d’octets restant dans le **Stream**, seuls les octets restants sont retournés. La lecture de données ne sont pas remplies pour correspondre à la longueur spécifiée par *NumBytes*. S’il n’y a aucun octet restant à lire, une variante avec une valeur null est retournée. **Lecture** ne peut pas être utilisé pour lire vers l’arrière.  
+ Si *NumBytes* est supérieur au nombre d’octets restants dans le **flux**, seuls les octets restants sont retournés. Les données lues ne sont pas complétées pour correspondre à la longueur spécifiée par *NumBytes*. S’il n’y a pas d’octets à lire, un variant avec une valeur null est retourné. La **lecture** ne peut pas être utilisée pour lire vers l’arrière.  
   
 > [!NOTE]
->  *NbOctets* mesure toujours des octets. Pour le texte **Stream** objets ([Type](../../../ado/reference/ado-api/type-property-ado-stream.md) est **adTypeText**), utilisez [ReadText](../../../ado/reference/ado-api/readtext-method.md).  
+>  *NumBytes* mesure toujours les octets. Pour les objets de **flux** de texte ([type](../../../ado/reference/ado-api/type-property-ado-stream.md) **adTypeText**), utilisez [READTEXT](../../../ado/reference/ado-api/readtext-method.md).  
   
 ## <a name="applies-to"></a>S'applique à  
  [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

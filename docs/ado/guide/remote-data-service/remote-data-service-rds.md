@@ -1,5 +1,5 @@
 ---
-title: Le Service de données à distance (RDS) | Microsoft Docs
+title: Service de données à distance (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,23 +14,23 @@ ms.assetid: 63a5f26b-e7ca-47d9-a004-59eaad6052b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0faa6f595f4f2001dc3456fde6d01cac0d52355c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922307"
 ---
 # <a name="remote-data-service-rds"></a>RDS (Remote Data Service)
-Service de données à distance (RDS) est une fonctionnalité d’ADO, avec lequel vous pouvez déplacer des données à partir d’un serveur vers une application cliente ou d’une page Web, manipuler les données sur le client et retourner des mises à jour sur le serveur dans un seul aller-retour.  
+RDS (Remote Data Service) est une fonctionnalité d’ADO, qui vous permet de déplacer des données d’un serveur vers une application cliente ou une page Web, de manipuler les données sur le client et de retourner des mises à jour au serveur en un seul aller-retour.  
   
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Guide du programmeur de services Bureau à distance contient les chapitres suivants :  
+ Le Guide du programmeur RDS contient les chapitres suivants :  
   
--   [Principes de base de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)  
+-   [Concepts de base de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)  
   
--   [Didacticiel RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)  
+-   [Tutoriel RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)  
   
 -   [Utilisation et sécurité de RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 

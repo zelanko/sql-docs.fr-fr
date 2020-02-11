@@ -1,5 +1,5 @@
 ---
-title: Fonctions d’API de niveau 1 (pilote ODBC pour Oracle) | Microsoft Docs
+title: Fonctions de l’API de niveau 1 (pilote ODBC pour Oracle) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,32 +17,32 @@ ms.assetid: 98cced6f-41b8-43c1-a3cd-f4ea1615c0af
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cb1771f88987073b1ef0bcc106f8de28549affe6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085471"
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>Fonctions de l’API du niveau 1 (pilote ODBC pour Oracle)
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Au lieu de cela, utilisez le pilote ODBC fourni par Oracle.  
+>  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Utilisez plutôt le pilote ODBC fourni par Oracle.  
   
- Prend en charge des fonctions à cette fournir au niveau de conformité de l’interface Core ainsi que des fonctionnalités supplémentaires telles que des transactions.  
+ Les fonctions à ce niveau fournissent la conformité de l’interface principale et des fonctionnalités supplémentaires telles que la prise en charge des transactions.  
   
-|Fonction d’API|Notes|  
+|Fonction API|Notes|  
 |------------------|-----------|  
-|**SQLColumns**|Crée un jeu de résultats pour une table, qui est la liste des colonnes pour la table spécifiée ou tables. Lorsque vous demandez des colonnes pour un synonyme PUBLIC, vous devez avoir défini l’attribut de connexion SYNONYMCOLUMNS et spécifié une chaîne vide en tant que le *szTableOwner* argument. Lors du renvoi des colonnes pour les synonymes PUBLIC, le pilote définit la colonne de nom de la TABLE sur une chaîne vide. Le jeu de résultats contient une colonne supplémentaire, ORDINAL POSITION, à la fin de chaque ligne. Cette valeur est la position ordinale de la colonne dans la table.|  
-|**SQLDriverConnect**|Se connecte à une source de données existante. Pour plus d’informations, consultez [Format chaîne de connexion et les attributs](../../odbc/microsoft/connection-string-format-and-attributes.md).|  
-|**SQLGetConnectOption**|Retourne le paramètre actuel d’une option de connexion. Cette fonction est partiellement prises en charge. Le pilote prend en charge toutes les valeurs pour le *fOption* argument mais ne prend ne pas en charge certaines *vParam* valeurs pour le *fOption* argument [SQL_TXN_ISOLATION ](../../odbc/microsoft/connect-options.md). Pour plus d’informations, consultez [Options connecter](../../odbc/microsoft/connect-options.md).|  
+|**SQLColumns**|Crée un jeu de résultats pour une table, qui est la liste des colonnes de la ou des tables spécifiées. Lorsque vous demandez des colonnes pour un synonyme PUBLIC, vous devez avoir défini l’attribut de connexion SYNONYMCOLUMNS et spécifié une chaîne vide comme argument *szTableOwner* . Lors du retour de colonnes pour les synonymes publics, le pilote définit la colonne de nom de TABLE sur une chaîne vide. Le jeu de résultats contient une colonne supplémentaire, POSITION ORDINALe, à la fin de chaque ligne. Cette valeur est la position ordinale de la colonne dans la table.|  
+|**SQLDriverConnect**|Établit une connexion à une source de données existante. Pour plus d’informations, consultez [format de chaîne de connexion et attributs](../../odbc/microsoft/connection-string-format-and-attributes.md).|  
+|**Sqlgetconnectoption,**|Retourne le paramètre actuel d’une option de connexion. Cette fonction est partiellement prise en charge. Le pilote prend en charge toutes les valeurs pour l’argument *fOption* , mais ne prend pas en charge certaines valeurs *vParam* pour l’argument *fOption* [SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md). Pour plus d’informations, consultez [options de connexion](../../odbc/microsoft/connect-options.md).|  
 |**SQLGetData**|Récupère la valeur d’un champ unique dans l’enregistrement actif du jeu de résultats donné.|  
-|**SQLGetFunctions**|Retourne TRUE pour toutes les fonctions prises en charge. Implémenté par le Gestionnaire de pilotes.|  
-|**SQLGetInfo**|Retourne des informations, y compris SQLHDBC SQLUSMALLINT, SQLPOINTER, SQLSMALLINT et SQLSMALLINT \*, sur le pilote ODBC pour Oracle et source de données associée à un handle de connexion, *pas*.|  
-|**SQLGetStmtOption**|Retourne le paramètre actuel d’une option d’instruction. Pour plus d’informations, consultez [Options d’instruction](../../odbc/microsoft/statement-options.md).|  
+|**SQLGetFunctions**|Retourne la valeur TRUE pour toutes les fonctions prises en charge. Implémenté par le gestionnaire de pilotes.|  
+|**SQLGetInfo**|Retourne des informations, notamment SQLHDBC, SQLUSMALLINT, SQLPOINTER, SQLSMALLINT et SQLSMALLINT \*, sur le pilote ODBC pour Oracle et la source de données associée à un handle de connexion, *hdbc*.|  
+|**SQLGetStmtOption**|Retourne le paramètre actuel d’une option d’instruction. Pour plus d’informations, consultez [Options des instructions](../../odbc/microsoft/statement-options.md).|  
 |**SQLGetTypeInfo**|Retourne des informations sur les types de données pris en charge par une source de données. Le pilote retourne les informations dans un jeu de résultats SQL.|  
-|**SQLParamData**|Utilisé conjointement avec **SQLPutData** pour spécifier les données de paramètre au moment de l’exécution d’instruction.|  
-|**SQLPutData**|Permet à une application envoyer des données pour un paramètre ou une colonne pour le pilote au moment de l’exécution d’instruction.|  
-|**SQLSetConnectOption**|Fournit l’accès aux options qui régissent les aspects de la connexion. Cette fonction est partiellement prises en charge : Le pilote prend en charge toutes les valeurs pour le *fOption* argument mais ne prend ne pas en charge certaines *vParam* valeurs pour le *fOption* argument [SQL_TXN_ISOLATION ](../../odbc/microsoft/connect-options.md). Pour plus d’informations, consultez [Options connecter](../../odbc/microsoft/connect-options.md).|  
-|**SQLSetStmtOption**|Définit les options relatives à un descripteur d’instruction, *hstmt*. Pour plus d’informations, consultez [Options d’instruction](../../odbc/microsoft/statement-options.md).|  
+|**SQLParamData**|Utilisé conjointement avec **SQLPutData** pour spécifier des données de paramètre au moment de l’exécution de l’instruction.|  
+|**SQLPutData**|Permet à une application d’envoyer des données pour un paramètre ou une colonne au pilote au moment de l’exécution de l’instruction.|  
+|**SQLSetConnectOption**|Donne accès aux options qui régissent les aspects de la connexion. Cette fonction est partiellement prise en charge : le pilote prend en charge toutes les valeurs pour l’argument *fOption* , mais ne prend pas en charge certaines valeurs *vParam* pour l’argument *fOption* [SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md). Pour plus d’informations, consultez [options de connexion](../../odbc/microsoft/connect-options.md).|  
+|**SQLSetStmtOption**|Définit les options associées à un descripteur d’instruction, *HSTMT*. Pour plus d’informations, consultez [Options des instructions](../../odbc/microsoft/statement-options.md).|  
 |**SQLSpecialColumns**|Récupère l’ensemble optimal de colonnes qui identifie de façon unique une ligne dans la table.|  
-|**SQLStatistics**|Récupère une liste des statistiques sur une seule table index et les noms de balise, associés à la table. Le pilote retourne les informations comme jeu de résultats.|  
-|**SQLTables**|Retourne la liste des noms de table spécifié par le paramètre dans le **SQLTables** instruction. Si aucun paramètre n’est spécifié, retourne les noms de table stockées dans la source de données actuelle. Le pilote retourne les informations comme jeu de résultats.<br /><br /> Énumération type appelle la méthode ne reçoit pas une entrée de jeu de résultats pour des vues paramétrées locales ou distant. Toutefois, un appel à **SQLTables** avec une table unique spécificateur de nom trouve une correspondance pour une telle vue, le cas échéant, portant le même nom ; Cela permet à l’API de recherche de conflits de nom avant la création d’une nouvelle table.<br /><br /> Synonymes publics sont retournés avec la valeur TABLE_OWNER » ».<br /><br /> VUES appartenant à SYS ou système sont identifiés en tant que vue système.|
+|**SQLStatistics**|Récupère une liste de statistiques sur une table unique et les index, ou les noms de balises, associés à la table. Le pilote retourne les informations sous la forme d’un jeu de résultats.|  
+|**SQLTables**|Retourne la liste des noms de tables spécifiés par le paramètre dans l’instruction **SQLTables** . Si aucun paramètre n’est spécifié, retourne les noms de tables stockés dans la source de données actuelle. Le pilote retourne les informations sous la forme d’un jeu de résultats.<br /><br /> Les appels de type énumération ne recevront pas d’entrée de jeu de résultats pour les vues distantes ou les vues paramétrées locales. Toutefois, un appel à **SQLTables** avec un spécificateur de nom de table unique trouvera une correspondance pour une telle vue, si elle existe, avec ce nom ; Cela permet à l’API de vérifier les conflits de noms avant la création d’une nouvelle table.<br /><br /> Les synonymes publics sont retournés avec une valeur TABLE_OWNER de «».<br /><br /> Les vues détenues par SYS ou système sont identifiées comme vue système.|

@@ -18,13 +18,13 @@ ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c2d0daf21a479bff171f31beb30e9dc188a9c97b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094833"
 ---
-# <a name="syspolicypolicyexecutionhistorydetails-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
+# <a name="syspolicy_policy_execution_history_details-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Affiche les expressions de condition exécutées, les cibles des expressions, le résultat de chaque exécution et les détails des erreurs, le cas échéant. Le tableau suivant décrit les colonnes dans la vue syspolicy_execution_history_details.  
@@ -33,9 +33,9 @@ ms.locfileid: "68094833"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |detail_id|**bigint**|Identificateur de cet enregistrement. Chaque enregistrement représente la tentative pour évaluer ou appliquer une expression de condition dans une stratégie. Si elle est appliquée à plusieurs cibles, chaque condition contient un enregistrement de détail pour chaque cible.|  
-|history_id|**bigint**|Identificateur de l'événement d'historique. Chaque événement d'historique représente une tentative d'exécution d'une stratégie. Comme une condition peut avoir plusieurs expressions de condition et plusieurs cibles, un history_id peut créer plusieurs enregistrements de détail. Utilisez la colonne history_id pour joindre cette vue à la [syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md) vue.|  
+|history_id|**bigint**|Identificateur de l'événement d'historique. Chaque événement d'historique représente une tentative d'exécution d'une stratégie. Comme une condition peut avoir plusieurs expressions de condition et plusieurs cibles, un history_id peut créer plusieurs enregistrements de détail. Utilisez la colonne history_id pour joindre cette vue à la vue [syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md) .|  
 |target_query_expression|**nvarchar(max)**|Cible de la stratégie et vue syspolicy_policy_execution_history.|  
-|execution_date|**datetime**|Date et heure de création de cet enregistrement de détail.|  
+|execution_date|**DATETIME**|Date et heure de création de cet enregistrement de détail.|  
 |result|**bit**|Succès ou échec de cette cible et évaluation d'expression de condition :<br /><br /> 0 (succès) ou 1 (échec).|  
 |result_detail|**nvarchar(max)**|Message de résultat. Disponible uniquement s'il est fourni par la facette.|  
 |exception_message|**nvarchar(max)**|Message généré par l'exception si celle-ci se produit.|  
@@ -70,6 +70,6 @@ WHERE PolHistDet.result = 0 ;
   
 ## <a name="see-also"></a>Voir aussi  
  [Administrer des serveurs à l'aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
- [Vues de la Gestion basée sur des stratégies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ [Vues de la gestion basée sur des stratégies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

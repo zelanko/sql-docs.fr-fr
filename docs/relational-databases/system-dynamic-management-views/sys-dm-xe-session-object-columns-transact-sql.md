@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_xe_session_object_columns (Transact-SQL) | Microsoft Docs
+title: sys. dm_xe_session_object_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,24 +20,24 @@ ms.assetid: e97f3307-2da6-4c54-b818-a474faec752e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 039c3b0be4feab53215bae22836b7fd5be4ecfb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090235"
 ---
-# <a name="sysdmxesessionobjectcolumns-transact-sql"></a>sys.dm_xe_session_object_columns (Transact-SQL)
+# <a name="sysdm_xe_session_object_columns-transact-sql"></a>sys.dm_xe_session_object_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Montre les valeurs de configuration pour les objets liés à une session.  
+  Indique les valeurs de configuration d'objets liés à une session.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary(8)**|Adresse mémoire de la session d'événements. A une relation plusieurs-à-un avec sys.dm_xe_sessions.address. N'accepte pas la valeur NULL.|  
+|event_session_address|**varbinary (8)**|Adresse mémoire de la session d'événements. A une relation plusieurs-à-un avec sys.dm_xe_sessions.address. N'accepte pas la valeur NULL.|  
 |column_name|**nvarchar (256)**|Nom de la valeur de configuration. N'accepte pas la valeur NULL.|  
 |column_id|**int**|ID de la colonne. Unique dans l'objet. N'accepte pas la valeur NULL.|  
-|column_value|**nvarchar(3072)**|Valeur configurée de la colonne. Autorise la valeur NULL.|  
-|object_type|**nvarchar(60)**|Type de l’objet. N'accepte pas la valeur NULL. object_type fait partie de :<br /><br /> événement<br /><br /> target|  
+|column_value|**nvarchar (3072)**|Valeur configurée de la colonne. Autorise la valeur NULL.|  
+|object_type|**nvarchar (60)**|Type de l’objet. N'accepte pas la valeur NULL. object_type est l’un des éléments suivants :<br /><br /> événement<br /><br /> target|  
 |object_name|**nvarchar (256)**|Nom de l'objet auquel appartient cette colonne. N'accepte pas la valeur NULL.|  
 |object_package_guid|**uniqueidentifier**|GUID du package qui contient l'objet. N'accepte pas la valeur NULL.|  
   
@@ -46,10 +46,10 @@ ms.locfileid: "68090235"
   
 ### <a name="relationship-cardinalities"></a>Cardinalités de la relation  
   
-|From|Pour|Relation|  
+|De|À|Relation|  
 |----------|--------|------------------|  
-|dm_xe_session_object_columns.object_name,<br /><br /> dm_xe_session_object_columns.object_package_guid|Sys.dm_xe_objects.package_guid,<br /><br /> sys.dm_xe_objects.name|Plusieurs-à-un|  
-|dm_xe_session_object_columns.column_name,<br /><br /> dm_xe_session_object_columns.column_id|Sys.dm_xe_object_columns.Name,<br /><br /> sys.dm_xe_object_columns.column_id|Plusieurs-à-un|  
+|dm_xe_session_object_columns. object_name,<br /><br /> dm_xe_session_object_columns.object_package_guid|sys. dm_xe_objects. package_guid,<br /><br /> sys.dm_xe_objects.name|Plusieurs-à-un|  
+|dm_xe_session_object_columns. column_name,<br /><br /> dm_xe_session_object_columns.column_id|sys. dm_xe_object_columns. Name,<br /><br /> sys.dm_xe_object_columns.column_id|Plusieurs-à-un|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  

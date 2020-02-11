@@ -1,5 +1,5 @@
 ---
-title: sys.index_columns (Transact-SQL) | Microsoft Docs
+title: sys. index_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -21,28 +21,28 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e20bd7ecc783e0449a1deaa21c9f3db6e07abbc7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122667"
 ---
-# <a name="sysindexcolumns-transact-sql"></a>sys.index_columns (Transact-SQL)
+# <a name="sysindex_columns-transact-sql"></a>sys.index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Contient une ligne par colonne qui fait partie d’un **sys.indexes** index ou table non ordonnée (segment).  
+  Contient une ligne par colonne qui fait partie d’un index **sys. Indexes** ou d’une table non ordonnée (segment de mémoire).  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID de l'objet pour lequel l'index est défini.|  
 |**index_id**|**int**|Identificateur de l'index où la colonne est définie.|  
-|**index_column_id**|**Int**|Identificateur de l'index de colonne. **index_column_id** est unique seulement dans **index_id**.|  
-|**column_id**|**int**|ID de la colonne dans **object_id**.<br /><br /> 0 = Identificateur de ligne (RID) dans un index non-cluster.<br /><br /> **column_id** est unique seulement dans **object_id**.|  
-|**key_ordinal**|**tinyint**|Valeur ordinale (basée sur la valeur 1) dans l'ensemble de colonnes clés.<br /><br /> 0 = N'est pas une colonne clé, ou est un index XML, un index columnstore ou un index spatial.<br /><br /> Remarque : Un index XML ou spatial ne peut pas être une clé, car les colonnes sous-jacentes ne sont pas comparables, ce qui signifie que leurs valeurs ne peuvent pas être triées.|  
+|**index_column_id**|**int**|Identificateur de l'index de colonne. **index_column_id** n’est unique que dans **index_id**.|  
+|**column_id**|**int**|ID de la colonne dans **object_id**.<br /><br /> 0 = Identificateur de ligne (RID) dans un index non-cluster.<br /><br /> **column_id** n’est unique que dans **object_id**.|  
+|**key_ordinal**|**tinyint**|Valeur ordinale (basée sur la valeur 1) dans l'ensemble de colonnes clés.<br /><br /> 0 = N'est pas une colonne clé, ou est un index XML, un index columnstore ou un index spatial.<br /><br /> Remarque : un index XML ou spatial ne peut pas être une clé, car les colonnes sous-jacentes ne sont pas comparables, ce qui signifie que leurs valeurs ne peuvent pas être triées.|  
 |**partition_ordinal**|**tinyint**|Valeur ordinale (basée sur la valeur 1) dans l'ensemble de colonnes de partitionnement. Un index cluster columnstore peut avoir au plus une colonne de partitionnement.<br /><br /> 0 = N'est pas une colonne de partitionnement.|  
 |**is_descending_key**|**bit**|1 = Colonne clé d'index avec un ordre de tri descendant.<br /><br /> 0 = Colonne clé d'index avec un ordre de tri croissant, ou il s'agit d'une colonne qui fait partie d'un index de hachage.|  
-|**is_included_column**|**bit**|1 = colonne est une colonne non clée ajoutée à l’index à l’aide de la clause CREATE INDEX INCLUDE ou de la colonne fait partie d’un index columnstore.<br /><br /> 0 = Colonne non incluse.<br /><br /> Les colonnes ajoutées implicitement car ils font partie de la clé de clustering ne figurent pas dans **sys.index_columns**.<br /><br /> Les colonnes ajoutées implicitement car il s'agit de colonnes de partitionnement sont retournées avec la valeur 0.| 
-|**column_store_order_ordinal**</br> S'applique à : Azure SQL Data Warehouse (version préliminaire)|**tinyint**|Ordinal (de base 1) au sein d’ensemble d’ordre des colonnes dans un index columnstore cluster ordonnée.|
+|**is_included_column**|**bit**|1 = la colonne est une colonne non-clé ajoutée à l’index à l’aide de la clause CREATe INDEX INCLUDe, ou la colonne fait partie d’un index ColumnStore.<br /><br /> 0 = Colonne non incluse.<br /><br /> Les colonnes ajoutées implicitement parce qu’elles font partie de la clé de clustering ne sont pas répertoriées dans **sys. index_columns**.<br /><br /> Les colonnes ajoutées implicitement car il s'agit de colonnes de partitionnement sont retournées avec la valeur 0.| 
+|**column_store_order_ordinal**</br> S’applique à : Azure SQL Data Warehouse (version préliminaire)|**tinyint**|Ordinal (de base 1) au sein d’un ensemble de colonnes de commande dans un index ColumnStore ordonné ordonné en clusters.|
   
 ## <a name="permissions"></a>Autorisations
 
@@ -84,12 +84,12 @@ IX_BillOfMaterials_UnitMeasureCode                         UnitMeasureCode    1 
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Affichages catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [Questions fréquentes (FAQ) sur l’interrogation des catalogues système SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [sys. Columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [Questions fréquentes sur l'interrogation des catalogues système de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

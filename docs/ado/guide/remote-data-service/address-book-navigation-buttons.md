@@ -1,5 +1,5 @@
 ---
-title: Boutons de Navigation de carnet d’adresses | Microsoft Docs
+title: Boutons de navigation dans le carnet d’adresses | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,22 +14,22 @@ ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 158b9084ebe9aac28a2ec05c18938338c1bc90ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922966"
 ---
 # <a name="address-book-navigation-buttons"></a>Boutons de navigation de l’application Carnet d’adresses
-L’application de carnet d’adresses affiche les boutons de navigation en bas de la page Web. Vous pouvez utiliser les boutons de navigation pour parcourir les données dans l’affichage de grille HTML en sélectionnant la première ou dernière ligne de données, ou les lignes adjacentes à la sélection actuelle.  
+L’application Carnet d’adresses affiche les boutons de navigation en bas de la page Web. Vous pouvez utiliser les boutons de navigation pour parcourir les données dans l’affichage de grille HTML en sélectionnant la première ou la dernière ligne de données ou les lignes adjacentes à la sélection actuelle.  
   
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="navigation-sub-procedures"></a>Procédures Sub de navigation  
- L’application de carnet d’adresses contient plusieurs procédures qui permettent aux utilisateurs de cliquer sur le **première**, **suivant**, **précédent**, et **dernière** boutons pour vous déplacer dans les données.  
+ L’application Carnet d’adresses contient plusieurs procédures qui permettent aux utilisateurs de cliquer sur les boutons **premier**, **suivant**, **précédent**et **dernier** pour se déplacer dans les données.  
   
- Par exemple, en cliquant sur le **premier** bouton Active la procédure de VBScript First_OnClick Sub. La procédure s’exécute un [MoveFirst](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) (méthode), ce qui rend la première ligne de données de la sélection actuelle. En cliquant sur le **dernière** bouton Active la procédure Sub de Last_OnClick, qui appelle le [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) méthode, ce qui la dernière ligne de données de la sélection actuelle. Les autres boutons de navigation fonctionnent de manière similaire.  
+ Par exemple, un clic sur le **premier** bouton active la procédure Sub First_OnClick VBScript. La procédure exécute une méthode [MoveFirst](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) , qui fait de la première ligne de données la sélection actuelle. Le fait de cliquer sur le **dernier** bouton active la procédure Last_OnClick Sub, qui appelle la méthode [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) , en faisant de la dernière ligne de données la sélection actuelle. Les autres boutons de navigation fonctionnent de la même manière.  
   
 ```vb
 ' Move to the first record in the bound Recordset.  

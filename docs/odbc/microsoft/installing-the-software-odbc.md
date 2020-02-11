@@ -14,21 +14,21 @@ ms.assetid: dfac8ade-eebe-4ebe-a199-feb740ed5bae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f3be4f2ce9a3388d53a4d8474e5c1ca172842b5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085509"
 ---
 # <a name="installing-the-software-odbc"></a>Installation du logiciel (ODBC)
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Au lieu de cela, utilisez le pilote ODBC fourni par Oracle.  
+>  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Utilisez plutôt le pilote ODBC fourni par Oracle.  
   
- Le pilote ODBC pour Oracle est un des composants d’accès aux données. Il accompagne les autres composants ODBC, telles que l’administrateur de sources de données ODBC et doit déjà être installé. Le pilote aussi disponibles sous « Pilotes et autres téléchargements » sur le site Web de Services de Support technique Microsoft en ligne à l’adresse [www.microsoft.com](https://www.microsoft.com).  
+ Le pilote ODBC pour Oracle est l’un des composants d’accès aux données. Il accompagne d’autres composants ODBC, tels que l’administrateur de la source de données ODBC, et doit déjà être installé. Le pilote se trouve également sous « pilotes et autres téléchargements » sur le site Web Microsoft Product Support Services (en anglais) sur [www.Microsoft.com](https://www.microsoft.com).  
   
- Logiciel réseau doit être installé en fonction de sa propre documentation. Le pilote ODBC pour Oracle ne requiert aucuns considérations spéciales installation tant que le logiciel réseau est pris en charge.  
+ Le logiciel réseau doit être installé conformément à sa propre documentation. Le pilote ODBC pour Oracle ne nécessite pas de considérations particulières relatives à l’installation tant que le logiciel réseau est pris en charge.  
   
- Logiciels Oracle doivent être installé en fonction de sa propre documentation. Le pilote ODBC pour Oracle ne requiert généralement aucuns considérations spéciales installation tant que le pilote prend en charge la version. Toutefois, pour préserver la compatibilité de produits, vous devez installer le pilote ODBC pour Oracle dernier pour vous assurer la dernière version du pilote. Oracle gère un site FTP public où il publie, entre autres choses, les correctifs pour les produits de serveur Oracle et le composant client qui est livré avec les produits serveur. Ces correctifs sont nécessaires au bon fonctionnement de plusieurs produits et technologies Microsoft. Pour plus d’informations sur ce site, consultez [correctifs logiciels Oracle](../../odbc/microsoft/oracle-software-patches.md).  
+ Le logiciel Oracle doit être installé conformément à sa propre documentation. Le pilote ODBC pour Oracle ne requiert généralement pas de considérations particulières relatives à l’installation tant que le pilote prend en charge la version. Toutefois, pour maintenir la compatibilité des produits, installez le pilote ODBC pour Oracle en dernier pour vous assurer que vous disposez de la dernière version du pilote. Oracle gère un site FTP public sur lequel il publie, entre autres, des correctifs pour les produits serveur Oracle et le composant client fourni avec les produits serveur. Ces correctifs sont requis pour le bon fonctionnement de plusieurs produits et technologies Microsoft. Pour plus d’informations sur ce site, consultez [correctifs logiciels Oracle](../../odbc/microsoft/oracle-software-patches.md).  
   
 > [!CAUTION]  
->  L’installation du logiciel Oracle sur MDAC/Windows DAC peut remplacer les versions actuelles de MDAC. Si des problèmes surviennent à l’aide des composants ODBC, réinstallez MDAC.
+>  L’installation du logiciel Oracle sur MDAC/Windows DAC peut remplacer les versions actuelles de MDAC. Si des problèmes surviennent lors de l’utilisation de composants ODBC, réinstallez MDAC.
