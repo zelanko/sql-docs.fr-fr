@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62688902"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Stratégies de sauvegarde et de restauration de la réplication de fusion
@@ -30,7 +30,7 @@ ms.locfileid: "62688902"
 -   La base de données d'abonnement sur chaque Abonné    
 -   Bases de données système **master** et **msdb** sur le serveur de publication, sur le serveur de distribution et sur tous les Abonnés. Il est recommandé de sauvegarder ces bases de données en même temps, ainsi que la base de données de réplication appropriée. Par exemple, sauvegardez les bases de données **master** et **msdb** au niveau du serveur de publication en même temps que la base de données de publication. Si la base de données de publication est restaurée, vérifiez que les bases de données **master** et **msdb** sont cohérentes avec la base de données de publication en termes de configuration de la réplication et de paramètres.  
   
- Si vous effectuez des sauvegardes régulières des journaux, toutes les modifications liées à la réplication doivent être capturées dans les sauvegardes des journaux. Si vous n'effectuez pas de sauvegardes des journaux, une sauvegarde doit être effectuée si un paramètre concernant la réplication est modifié. Pour en savoir plus, voir [Actions courantes nécessitant une sauvegarde mise à jour](common-actions-requiring-an-updated-backup.md).  
+ Si vous effectuez des sauvegardes régulières des journaux, toutes les modifications liées à la réplication doivent être capturées dans les sauvegardes des journaux. Si vous n'effectuez pas de sauvegardes des journaux, une sauvegarde doit être effectuée si un paramètre concernant la réplication est modifié. Pour en savoir plus, voir [Common Actions Requiring an Updated Backup](common-actions-requiring-an-updated-backup.md).  
   
  Choisissez une des approches détaillées ci-dessous pour la sauvegarde et la restauration de la base de données de publication, puis suivez les recommandations indiquées pour la base de données de distribution et les bases de données d'abonnement.  
   
@@ -51,12 +51,12 @@ ms.locfileid: "62688902"
   
 -   Si la publication n'est pas filtrée, vous devriez pouvoir mettre à jour la base de données de publication en la synchronisant avec l'Abonné le plus à jour.  
   
--   Si la publication est filtrée, il est possible que vous ne puissiez pas mettre à jour la base de données de publication. Considérez une table est partitionnée de telle sorte que chaque abonnement reçoit des données client seulement pour une seule région : Nord, est, Sud et Ouest. S'il y a au moins un Abonné pour chaque partition de données, la synchronisation avec un Abonné pour chaque partition doit permettre la mise à jour de la base de données de publication. Cependant, si par exemple des données de la partition Ouest n'ont été répliquées vers aucun des Abonnés, ces données ne peuvent pas être mises à jour au niveau du serveur de publication.  
+-   Si la publication est filtrée, il est possible que vous ne puissiez pas mettre à jour la base de données de publication. Supposons une table qui est partitionnée de façon telle que chaque abonnement reçoit des données client seulement pour une région : Nord, Est, Sud et Ouest. S'il y a au moins un Abonné pour chaque partition de données, la synchronisation avec un Abonné pour chaque partition doit permettre la mise à jour de la base de données de publication. Cependant, si par exemple des données de la partition Ouest n'ont été répliquées vers aucun des Abonnés, ces données ne peuvent pas être mises à jour au niveau du serveur de publication.  
   
 > [!IMPORTANT]  
 >  La synchronisation d'une base de données de publication avec une base de données d'abonnement peut aboutir à des tables publiées restaurées à un point dans le temps plus récent que celui d'autres tables non publiées restaurées à partir de la sauvegarde.  
   
- Si vous effectuez une synchronisation avec un Abonné qui exécute une version de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieure à [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l'abonnement ne peut pas être anonyme ; il doit être un abonnement client ou un abonnement serveur (qui s'appelaient « abonnement local » et « abonnement global » dans les versions antérieures).  
+ Si la synchronisation se fait avec un Abonné exécutant une version de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieure à [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l'abonnement ne peut pas être anonyme. Il doit s'agir d'un abonnement client ou d'un abonnement serveur (appelées abonnement local et abonnement global dans les versions précédentes).  
   
  Pour synchroniser un abonnement, consultez [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) et [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md).  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62688902"
   
  Si vous choisissez cette option, générez un nouvel instantané en vue de la communiquer aux Abonnés réinitialisés dès la fin de la restauration de la base de données de publication.  
   
- Pour réinitialiser un abonnement, consultez [Réinitialiser un abonnement](../reinitialize-a-subscription.md).  
+ Pour réinitialiser un abonnement, consultez [Reinitialize a Subscription](../reinitialize-a-subscription.md).  
   
  Pour créer et appliquer un instantané, consultez [Create et Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md) et [Créer un instantané d'une publication de fusion avec des filtres paramétrés](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
@@ -83,13 +83,13 @@ ms.locfileid: "62688902"
   
  Pour définir la période de rétention de publication, consultez [Définir la période d’expiration des abonnements](../publish/set-the-expiration-period-for-subscriptions.md).  
   
- Pour synchroniser un abonnement, consultez [Synchroniser un abonnement par émission (push)](../synchronize-a-push-subscription.md) et [Synchroniser un abonnement par extraction (pull)](../synchronize-a-pull-subscription.md).  
+ Pour synchroniser un abonnement, consultez [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) et [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md).  
   
 ## <a name="backing-up-and-restoring-a-republishing-database"></a>Sauvegarde et restauration d'une base de données de réédition  
  Une base de données de réédition désigne une base de données qui s'abonne à des données auprès d'un éditeur et qui, à son tour, diffuse ces données à d'autres bases de données d'abonnement. Lorsque vous restaurez une base de données de réédition, suivez les recommandations données dans les sections « Sauvegarde et restauration d'une base de données de publication » et « Sauvegarde et restauration d'une base de données d'abonnement » de cette rubrique.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sauvegarde et restauration des bases de données SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Sauvegarder et restaurer des bases de données SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Sauvegarder et restaurer des bases de données répliquées](back-up-and-restore-replicated-databases.md)  
   
   

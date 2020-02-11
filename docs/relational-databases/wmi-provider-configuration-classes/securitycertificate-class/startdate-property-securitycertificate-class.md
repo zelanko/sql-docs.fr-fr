@@ -18,10 +18,10 @@ ms.assetid: c8e70839-37e7-43fb-ba0f-3a6d51bbce35
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 9f4456ab12a2da301d348f76ca0202bbd7522125
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659472"
 ---
 # <a name="startdate-property-securitycertificate-class"></a>Propriété StartDate (classe SecurityCertificate)
@@ -36,7 +36,7 @@ object.StartDate [= value]
 ```  
   
 ## <a name="parts"></a>Éléments  
- *object*  
+ *dessin*  
  Objet de [classe SecurityCertificate](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) qui représente un certificat de sécurité.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
@@ -45,6 +45,6 @@ object.StartDate [= value]
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configuration des protocoles réseau du serveur et des bibliothèques Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuration des bibliothèques réseau et des protocoles réseau du serveur](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   
