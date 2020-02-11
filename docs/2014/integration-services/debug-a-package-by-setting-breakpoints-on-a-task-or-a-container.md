@@ -1,5 +1,5 @@
 ---
-title: Déboguer un Package en définissant des points d’arrêt sur une tâche ou un conteneur | Microsoft Docs
+title: Déboguer un package en définissant des points d’arrêt sur une tâche ou un conteneur | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 907caaa37c429dd2f788d0123f7f8ee0bbf8a27a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059658"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>Déboguer un package en définissant des points d'arrêt sur une tâche ou un conteneur
@@ -38,7 +38,7 @@ ms.locfileid: "66059658"
   
     -   Pour définir des points d’arrêt dans un gestionnaire d’événements, cliquez sur l’onglet **Gestionnaire d’événements** , cliquez avec le bouton droit sur une tâche, un conteneur de boucle For ou Foreach ou un conteneur de séquences, puis cliquez sur **Modifier les points d’arrêt**.  
   
-4.  Dans la boîte de dialogue **Définir les points d’arrêt de \<nom_conteneur>** , sélectionnez les points d’arrêt à activer.  
+4.  Dans la boîte de dialogue **Définir les points d’arrêt de \<nom_conteneur>**, sélectionnez les points d’arrêt à activer.  
   
 5.  Vous pouvez également modifier le type du nombre d'accès et la valeur du nombre d'accès pour chaque point d'arrêt.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66059658"
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils de dépannage pour le développement des packages](troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Déboguer un script en définissant des points d'arrêt dans une tâche de script et un composant de script](data-flow/transformations/script-component.md)   
+ [Déboguer un script en définissant des points d’arrêt dans une tâche de script et un composant script](data-flow/transformations/script-component.md)   
  [Codage et débogage de la tâche de script](control-flow/script-task.md)   
  [Codage et débogage du composant Script](extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
   

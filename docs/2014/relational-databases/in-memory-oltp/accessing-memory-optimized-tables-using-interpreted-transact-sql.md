@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c81ac6c0c8dcf7e24c80b426654164c668fcf3a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468606"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Accès aux tables optimisées en mémoire à l’aide du Transact-SQL interprété
@@ -42,7 +42,7 @@ ms.locfileid: "62468606"
 |Bases de données croisées|Requêtes de bases de données croisées<br /><br /> Transactions de bases de données croisées<br /><br /> Serveurs liés|  
   
 ## <a name="table-hints"></a>Indicateurs de table  
- Pour plus d'informations sur les indicateurs de table, consultez. [Indicateurs de table &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table). Isolement de capture instantanée a été ajouté pour prendre en charge [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
+ Pour plus d'informations sur les indicateurs de table, consultez. [Indicateurs de table &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table). L’isolement d’instantané a été [!INCLUDE[hek_2](../../includes/hek-2-md.md)]ajouté pour prendre en charge.  
   
  Les indicateurs de table suivants ne sont pas pris en charge lors de l'accès à une table de mémoire optimisée à l'aide du [!INCLUDE[tsql](../../includes/tsql-md.md)]interprété.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62468606"
 |READUNCOMMITTED|ROWLOCK|SPATIAL_WINDOW_MAX_CELLS = *integer*|TABLOCK|  
 |TABLOCKXX|UPDLOCK|XLOCK||  
   
- Lors de l'accès à une table mémoire optimisée à partir d'une transaction explicite ou implicite à l'aide du [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété, vous devez inclure un indicateur de table de niveau d'isolement tel que SNAPSHOT, REPEATABLEREAD ou SERIALIZABLE, ou utiliser MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT. Pour plus d’informations, consultez [instructions pour les niveaux d’Isolation des transactions avec Tables optimisées en mémoire](memory-optimized-tables.md) et [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+ Lors de l'accès à une table mémoire optimisée à partir d'une transaction explicite ou implicite à l'aide du [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété, vous devez inclure un indicateur de table de niveau d'isolement tel que SNAPSHOT, REPEATABLEREAD ou SERIALIZABLE, ou utiliser MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT. Pour plus d’informations, consultez [instructions pour les niveaux d’isolation des transactions avec des tables optimisées en mémoire](memory-optimized-tables.md) et [options ALTER database SET &#40;&#41;Transact-SQL ](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
 > [!NOTE]  
 >  Un indicateur de table de niveau d'isolation n'est pas obligatoire pour les tables mémoire optimisées accessibles par des requêtes qui s'exécutent en mode de validation automatique.  

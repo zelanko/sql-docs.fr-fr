@@ -1,5 +1,5 @@
 ---
-title: Boîte dialogue de propriétés du titre axe, général (Générateur de rapports et SSRS) | Microsoft Docs
+title: Boîte de dialogue Propriétés du titre de l’axe, général (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,27 +14,27 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4797dd3535ff00511594110cd7f2668af2223d3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109970"
 ---
 # <a name="axis-title-properties-dialog-box-general-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés du titre de l'axe, Général (Générateur de rapports et SSRS)
   Sélectionnez **Général** dans la boîte de dialogue **Propriétés du titre de l'axe** pour définir le titre de l'axe. Le titre de l'axe s'affiche sous l'axe des abscisses ou à côté de l'axe des ordonnées.  
   
 ## <a name="options"></a>Options  
- **Title**  
+ **Titre**  
  Tapez un titre ou une expression qui représente le titre de l'axe.  
   
  **Alignement du titre**  
  Sélectionnez un alignement ou tapez une expression qui représente l'alignement du titre de l'axe par rapport à l'intersection des axes.  
   
--   **Rapproché** Affiche le titre de l'axe à proximité de l'intersection des deux axes.  
+-   **Près** de Affiche le titre de l’axe vers l’intersection des deux axes.  
   
--   **Centre** Affiche le titre de l'axe au centre de l'axe.  
+-   **Centre** Affiche le titre de l’axe au centre de l’axe.  
   
--   **Espacé** Affiche le titre de l'axe loin de l'intersection des deux axes.  
+-   **Loin** Affiche le titre de l’axe à l’extérieur de l’intersection des deux axes.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   

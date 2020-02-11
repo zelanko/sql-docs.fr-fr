@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 90ecf9d2f9c677351a4c199414be25d753fe5346
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479966"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>Créer une hiérarchie dérivée (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "65479966"
 > [!NOTE]  
 >  S'il n'existe pas de valeur d'attribut basé sur un domaine pour un membre, le membre n'est pas inclus dans la hiérarchie dérivée. Pour demander une valeur d’attribut basé sur un domaine pour tous les membres, consultez [Requérir des valeurs d’attribut &#40;Master Data Services&#41;](require-attribute-values-master-data-services.md).  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -37,11 +37,11 @@ ms.locfileid: "65479966"
   
 1.  Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cliquez sur **Administration de système**.  
   
-2.  Sur le **vue de modèle** page, dans la barre de menus, pointez sur **gérer** et cliquez sur **hiérarchies dérivées**.  
+2.  Dans la page **vue du modèle** , dans la barre de menus, pointez sur **gérer** , puis cliquez sur **hiérarchies dérivées**.  
   
 3.  Dans la page **Maintenance de la hiérarchie dérivée** , dans la liste **Modèle** , sélectionnez un modèle.  
   
-4.  Cliquez sur **ajouter une hiérarchie dérivée**.  
+4.  Cliquez sur **Ajouter une hiérarchie dérivée**.  
   
 5.  Dans la page **Ajouter une hiérarchie dérivée** , renseignez la zone **Nom de la hiérarchie dérivée** .  
   
@@ -50,7 +50,7 @@ ms.locfileid: "65479966"
   
 6.  Cliquez sur **Enregistrer la hiérarchie dérivée**.  
   
-7.  Sur le **modifier la hiérarchie dérivée** page, dans le **entités et hiérarchies disponibles** volet, cliquez sur une entité ou une hiérarchie et faites-la glisser vers le **niveaux actuels** volet.  
+7.  Dans la page **modifier la hiérarchie dérivée** , dans le volet **entités et hiérarchies disponibles** , cliquez sur une entité ou une hiérarchie et faites-la glisser vers le volet **niveaux actuels** .  
   
 8.  Continuez à faire glisser des entités ou des hiérarchies jusqu'à ce que votre hiérarchie soit terminée.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "65479966"
   
 ## <a name="see-also"></a>Voir aussi  
  [Hiérarchies dérivées &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)   
- [Hiérarchies dérivées avec des niveaux supérieurs d’une hiérarchie dérivée&#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
+ [Hiérarchies dérivées avec des majuscules &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
  [Attributs basés sur un domaine &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
   

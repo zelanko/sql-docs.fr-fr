@@ -15,10 +15,10 @@ ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 07ad2379f82552a3db0ceee30305f7fdc38003fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006408"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Vue d'ensemble du moniteur de mise en miroir de bases de données
@@ -46,7 +46,7 @@ ms.locfileid: "68006408"
   
  Pour chaque base de données inscrite, les informations suivantes s'affichent :  
   
- _<nom_base_de_données>_ **(** _\<État>_ **,** _<PRINCIPAL_SERVER>_ **->** _<MIRROR_SERVER>_ **)**  
+ _<Database_name>_ **(** _\<Status>_ **,** _<PRINCIPAL_SERVER>_ **->** _<MIRROR_SERVER>_ **)**  
   
  *<nom_base_de_données>*  
  Nom d'une base de données mise en miroir inscrite auprès du moniteur de mise en miroir de bases de données.  
@@ -54,11 +54,11 @@ ms.locfileid: "68006408"
  *\<État>*  
  Les états possibles et les icônes associées sont les suivants :  
   
-|Icône|État|Description|  
+|Icône|Statut|Description|  
 |----------|------------|-----------------|  
 |Icône d'avertissement|**Unknown**|Le moniteur n'est connecté à aucun partenaire. Les seules informations disponibles sont celles qui ont été mises en cache par le moniteur.|  
 |Icône d'avertissement|**Synchronisation**|Le contenu de la base de données en miroir est décalé par rapport à celui de la base de données principale. L'instance de serveur principal envoie des enregistrements de journal à l'instance de serveur miroir, laquelle applique les modifications à la base de données miroir pour la restaurer par progression.<br /><br /> Lors du démarrage d'une session de mise en miroir de bases de données, les bases de données miroir et principale se trouvent dans cet état.|  
-|Cylindre de base de données standard|**Synchronisé**|Lorsque le serveur miroir a rattrapé suffisamment de retard par rapport au serveur principal, l'état de la base de données devient **Synchronisé**. La base de données reste dans cet état aussi longtemps que le serveur principal continue d'envoyer des modifications au serveur miroir et que le serveur miroir continue d'appliquer les modifications à la base de données miroir.<br /><br /> En mode haute sécurité, les deux méthodes de basculement (automatique et manuel) sont possibles, sans perte de données.<br /><br /> En mode haute performance, la perte de données peut se produire, même si l’état est **Synchronisé** .|  
+|Cylindre de base de données standard|**Synchronisée**|Lorsque le serveur miroir a rattrapé suffisamment de retard par rapport au serveur principal, l'état de la base de données devient **Synchronisé**. La base de données reste dans cet état aussi longtemps que le serveur principal continue d'envoyer des modifications au serveur miroir et que le serveur miroir continue d'appliquer les modifications à la base de données miroir.<br /><br /> En mode haute sécurité, les deux méthodes de basculement (automatique et manuel) sont possibles, sans perte de données.<br /><br /> En mode haute performance, la perte de données peut se produire, même si l’état est **Synchronisé** .|  
 |Icône d'avertissement|**Suspendu**|La base de données principale est disponible mais n'envoie pas de journaux au serveur miroir.|  
 |Icône d'erreur|**Déconnecté**|L'instance de serveur ne peut pas se connecter à son partenaire.|  
   
@@ -87,14 +87,14 @@ ms.locfileid: "68006408"
 ## <a name="action-menu"></a>Menu Action  
  Le menu **Action** comprend toujours les commandes suivantes :  
   
-|Command|Description|  
+|Commande|Description|  
 |-------------|-----------------|  
 |**Inscrire la base de données mise en miroir**|Ouvre la boîte de dialogue **Inscrire la base de données mise en miroir** . Utilisez cette boîte de dialogue pour inscrire une ou plusieurs bases de données mises en miroir sur une instance de serveur donnée en ajoutant la ou les bases de données au moniteur de mise en miroir de bases de données. Lorsqu'une base de données est ajoutée, le moniteur de mise en miroir de bases de données met en cache localement des informations sur la base de données, ses partenaires et la connexion aux partenaires.|  
 |**Gérer les connexions des instances serveur...**|Lorsque vous sélectionnez cette commande, la boîte de dialogue **Gérer les connexions serveur** s’ouvre. Vous pouvez alors choisir une instance de serveur pour laquelle vous souhaitez spécifier des informations d'identification qui seront utilisées par le moniteur lors de la connexion à un partenaire donné.<br /><br /> Pour modifier les informations d’identification pour un partenaire, recherchez l’entrée correspondante dans la grille **Instances de serveur** et cliquez sur **Modifier** dans cette ligne. La boîte de dialogue **Se connecter au serveur** s’ouvre avec le nom d’instance de serveur fixe, les contrôles d’informations d’identification étant initialisés sur la valeur actuelle mise en cache. Modifiez les informations d’authentification comme souhaité et cliquez sur **Se connecter**. Si les informations d’identification disposent des privilèges suffisants, la colonne **Se connecter avec** est mise à jour avec les nouvelles informations d’identification.|  
   
  Si vous sélectionnez une base de données, le menu **Action** comprend également les commandes suivantes.  
   
-|Command|Description|  
+|Commande|Description|  
 |-------------|-----------------|  
 |**Annuler l'inscription de cette base de données**|Supprime la base de données sélectionnée du moniteur de mise en miroir de bases de données.|  
 |**Définir les seuils d’avertissement...**|Ouvre la boîte de dialogue **Définir les seuils d’avertissement** . Un administrateur système peut activer ou désactiver des avertissements pour la base de données sur chaque partenaire et modifier le seuil de chaque avertissement. Nous vous recommandons de définir un seuil pour un avertissement spécifique sur les deux partenaires, afin de vous assurer que l'avertissement persiste lors du basculement de la base de données. Le seuil approprié pour chaque partenaire dépend des capacités de performance du système du partenaire.<br /><br /> Un événement est écrit dans le journal des événements pour une performance uniquement si sa valeur est identique ou supérieure au seuil au moment de la mise à jour de la table d'état. Si une valeur maximale atteint momentanément le seuil entre des mises à jour d'état, cette valeur est ignorée.|  

@@ -1,5 +1,5 @@
 ---
-title: Architecture du journal des transactions SQL Server et gestion | Microsoft Docs
+title: Gestion et architecture du journal des transactions SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 2495b9487a633fff6c5214a07e589f58fafa5e61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62512744"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management"></a>Architecture et gestion du journal des transactions SQL Server
@@ -56,7 +56,7 @@ ms.locfileid: "62512744"
   
  Les opérations de restauration sont également consignées dans le journal. Chaque transaction réserve de l'espace dans le journal des transactions afin qu'il existe suffisamment d'espace journal pour prendre en charge une restauration déclenchée par une instruction de restauration explicite ou par la détection d'une erreur. Le volume d'espace réservé dépend des opérations effectuées dans la transaction, mais il est généralement égal au volume d'espace utilisé pour la journalisation de chaque opération. Cet espace réservé est libéré lorsque la transaction est terminée.  
   
- La section du fichier journal comprise entre le premier enregistrement de journal nécessaire à une restauration portant sur l’ensemble de la base de données et la fin du journal représente la partie active du journal, également appelée le *journal actif*. Cette section est indispensable pour procéder à une récupération complète de la base de données. Aucune partie de ce journal actif ne peut être tronquée. Le numéro séquentiel dans le journal (LSN) de ce premier enregistrement est le LSN de récupération minimum (*MinLSN*).  
+ La section du fichier journal comprise entre le premier enregistrement de journal nécessaire à une restauration portant sur l’ensemble de la base de données et la fin du journal représente la partie active du journal, également appelée le *journal actif*. Cette section est indispensable pour procéder à une récupération complète de la base de données. Aucune partie de ce journal actif ne peut être tronquée. Le LSN (numéro séquentiel dans le journal) de ce premier enregistrement est le LSN de récupération minimum (*MinLSN*) .  
   
 ##  <a name="physical_arch"></a> Architecture physique du journal des transactions  
 
@@ -68,11 +68,11 @@ ms.locfileid: "62512744"
   
  Le journal des transactions est un fichier cumulatif. Considérons, par exemple, une base de données possédant un fichier journal physique divisé en quatre fichiers journaux virtuels. Lors de la création de la base de données, le fichier journal logique commence au début du fichier journal physique. Les nouveaux enregistrements du journal sont ajoutés à la fin du journal logique, qui s'étend vers la fin du journal physique. Le fait de tronquer le journal permet de libérer tous les journaux virtuels dont les enregistrements précèdent tous le MinLSN (numéro séquentiel dans le journal minimum). Le *MinLSN* est le numéro séquentiel dans le journal du plus ancien enregistrement du journal requis pour une opération de restauration réussie de l’ensemble de la base de données. Le journal des transactions de la base de données exemple ressemblerait à celui de l'illustration suivante :  
   
- ![Fichier journal divisé en quatre fichiers journaux virtuels](media/tranlog3.gif "fichier journal divisé en quatre fichiers journaux virtuels")  
+ ![Fichier journal divisé en quatre fichiers journaux virtuels](media/tranlog3.gif "Fichier journal divisé en quatre fichiers journaux virtuels")  
   
  Lorsque la fin du journal logique atteint la fin du fichier journal physique, le nouvel enregistrement du journal revient au début du fichier journal physique.  
   
- ![Enregistrements de journal environ au début du fichier journal de type wrap](media/tranlog4.gif "enregistrements de journal sont automatiquement environ début du fichier journal")  
+ ![Inclusion d'enregistrements de journal vers le début du fichier journal](media/tranlog4.gif "Inclusion d'enregistrements de journal vers le début du fichier journal")  
   
  Le cycle se répète indéfiniment tant que la fin du journal logique n'a pas atteint le début du journal logique. Si les anciens enregistrements du journal sont tronqués suffisamment souvent pour laisser de la place à tous les nouveaux enregistrements créées jusqu'au point de contrôle suivant, le journal ne se remplit jamais. Si la fin du journal logique atteint le début du journal logique, l'une ou l'autre des situations suivantes se produit :  
   
@@ -88,11 +88,11 @@ ms.locfileid: "62512744"
   
  Les illustrations suivantes montrent un journal des transactions avant et après une troncation. La première illustration montre un journal des transactions qui n'a jamais été tronqué. Actuellement, quatre fichiers journaux virtuels sont utilisés par le journal logique. Le journal logique commence avant le premier fichier journal virtuel et se termine au journal virtuel 4. L'enregistrement NSEmin se trouve dans le journal virtuel 3. Les journaux virtuels 1 et 2 contiennent uniquement des enregistrements de journal inactifs. Ces enregistrements peuvent être tronqués. Le journal virtuel 5 est encore inutilisé et ne fait pas partie du journal logique actuel.  
   
- ![Journal des transactions avec quatre journaux virtuels](media/tranlog2.gif "journal des transactions avec quatre journaux virtuels")  
+ ![Journal des transactions avec quatre journaux virtuels](media/tranlog2.gif "Journal des transactions avec quatre journaux virtuels")  
   
  La deuxième illustration montre le journal après sa troncation. Les journaux virtuels 1 et 2 ont été libérés en vue de leur réutilisation. Le journal logique commence désormais au début du journal virtuel 3. Le journal virtuel 5 est encore inutilisé et ne fait pas partie du journal logique actuel.  
   
- ![Fichier journal divisé en quatre fichiers journaux virtuels](media/tranlog3.gif "fichier journal divisé en quatre fichiers journaux virtuels")  
+ ![Fichier journal divisé en quatre fichiers journaux virtuels](media/tranlog3.gif "Fichier journal divisé en quatre fichiers journaux virtuels")  
   
  La troncation du journal se produit automatiquement après les événements suivants, à moins qu'elle ne soit retardée pour une raison quelconque :  
   
@@ -100,11 +100,12 @@ ms.locfileid: "62512744"
   
 -   En mode de restauration complète ou en mode de récupération utilisant les journaux de transactions, après une sauvegarde du journal, si un point de contrôle s'est produit depuis la dernière sauvegarde.  
   
- La troncation du journal peut être retardée pour différents motifs. En cas de retard prolongé de la troncation du journal, le journal des transactions peut se remplir complètement. Pour plus d’informations, consultez [Facteurs pouvant retarder la troncation du journal](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation) et [Résoudre les problèmes liés à un journal des transactions saturé &#40;erreur SQL Server 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
+ La troncation du journal peut être retardée pour différents motifs. En cas de retard prolongé de la troncation du journal, le journal des transactions peut se remplir complètement. Pour plus d’informations, consultez [facteurs pouvant retarder la troncation du journal](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation) et [résoudre les problèmes liés à un journal des transactions complet &#40;SQL Server l’erreur 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
   
 ##  <a name="WAL"></a> Journal des transactions à écriture anticipée  
 
- Cette section décrit le rôle que joue le journal des transactions à écriture anticipée (journal WAL) au niveau de l'enregistrement sur disque des modifications apportées aux données. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise un journal WAL (write-ahead log) qui garantit qu’aucune modification de données n’est écrite sur le disque avant l’écriture du journal associé sur celui-ci. Ainsi, les propriétés ACID (Atomicité, Cohérence, Isolation et Durabilité) d'une transaction sont conservées.  
+ Cette section décrit le rôle que joue le journal des transactions à écriture anticipée (journal WAL) au niveau de l'enregistrement sur disque des modifications apportées aux données. 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise un journal WAL (write-ahead log) qui garantit qu’aucune modification de données n’est écrite sur le disque avant l’écriture du journal associé sur celui-ci. Ainsi, les propriétés ACID (Atomicité, Cohérence, Isolation et Durabilité) d'une transaction sont conservées.  
   
  Pour comprendre le fonctionnement du journal à écriture anticipée, il est important que vous sachiez comment les données modifiées sont écrites sur le disque. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gère un cache des tampons dans lequel il lit les pages de données lorsque celles-ci doivent être extraites. Lorsqu’une page est modifiée dans le cache des tampons, elle n’est pas réécrite immédiatement sur le disque, mais elle est marquée comme *erronée*. Une page peut avoir plusieurs écritures logiques avant son écriture physique sur le disque. Pour chaque écriture logique, un enregistrement du journal des transactions est inséré dans le cache du journal qui enregistre la modification. L'enregistrement doit être écrit sur le disque avant que la page de modifications associée n'ait été supprimée du cache et écrite sur le disque. Le processus de point de contrôle analyse régulièrement le cache à la recherche de tampons contenant des pages issues d'une base de données spécifiée et écrit toutes les pages de modifications sur le disque. Les points de contrôle permettent une récupération ultérieure du système en créant un point où toutes les pages de modifications sont effectivement écrites sur le disque.  
   
@@ -130,11 +131,11 @@ ms.locfileid: "62512744"
 
  La restauration d'une sauvegarde de journal restaure par progression les modifications enregistrées dans le journal des transactions, afin de recréer l'état exact de la base de données qui existait au début de la sauvegarde du journal. Lorsque vous restaurez une base de données, vous devez restaurer les sauvegardes des journaux créées à la suite de la sauvegarde complète de base de données que vous restaurez ou à partir de la première sauvegarde de fichiers que vous restaurez. En règle générale, vous devez restaurer une série de sauvegardes de journaux jusqu'au point de récupération, après avoir restauré les données les plus récentes ou une sauvegarde différentielle. Ensuite, vous récupérez la base de données. Cette opération restaure toutes les transactions qui n'étaient pas terminées au début de la récupération et place la base de données en ligne. Une fois la base de données récupérée, vous ne pouvez plus restaurer des sauvegardes. Pour plus d’informations, consultez [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-## <a name="additional-reading"></a>Lecture supplémentaire  
+## <a name="additional-reading"></a>Documentation supplémentaire  
 
  Pour plus d'informations sur le journal des transactions, nous vous recommandons de lire les articles et les ouvrages suivants.  
   
- [Fonctionnement de la journalisation et de la récupération dans SQL Server de Paul Randall](https://technet.microsoft.com/magazine/2009.02.logging.aspx)  
+ [Fonctionnement de la journalisation et de la récupération dans SQL Server par Paul Randall](https://technet.microsoft.com/magazine/2009.02.logging.aspx)  
   
  [Gestion du journal des transactions SQL Server de Tony Davis et Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   

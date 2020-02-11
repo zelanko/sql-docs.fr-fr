@@ -18,18 +18,18 @@ ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6a1a2ce1208dcf359bb0586c3de1fe294644e3a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054879"
 ---
-# <a name="sphelpjobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
+# <a name="sp_help_jobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Renvoie des informations sur le serveur pour un travail donné.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,16 +42,16 @@ sp_help_jobserver
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_id = ] job_id` Numéro d’identification pour lequel retourner les informations. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] job_id`Numéro d’identification du travail pour lequel des informations doivent être retournées. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
-`[ @job_name = ] 'job_name'` Le nom du travail pour lequel retourner les informations. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'`Nom du travail pour lequel des informations doivent être retournées. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
->  Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
+>  *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
   
-`[ @show_last_run_details = ] show_last_run_details` Est que les informations de dernière exécution font partie du jeu de résultats. *afficher_les_détails_de_dernière_exécution* est **tinyint**, avec une valeur par défaut **0**. **0** n’inclut pas les informations de la dernière exécution, et **1** est.  
+`[ @show_last_run_details = ] show_last_run_details`Indique si les informations sur l’exécution de la dernière exécution font partie du jeu de résultats. *show_last_run_details* est de **type tinyint**, avec **0**comme valeur par défaut. **0** n’inclut pas les informations de dernière exécution, et **1** le fait.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -59,19 +59,19 @@ sp_help_jobserver
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Numéro d'identification du serveur cible.|  
-|**server_name**|**nvarchar(30)**|Nom de l'ordinateur du serveur cible.|  
-|**enlist_date**|**datetime**|Date d'inscription du serveur cible sur le serveur maître.|  
-|**last_poll_date**|**datetime**|Date à laquelle le serveur cible a interrogé pour la dernière fois le serveur maître.|  
+|**server_name**|**nvarchar(30**|Nom de l'ordinateur du serveur cible.|  
+|**enlist_date**|**DATETIME**|Date d'inscription du serveur cible sur le serveur maître.|  
+|**last_poll_date**|**DATETIME**|Date à laquelle le serveur cible a interrogé pour la dernière fois le serveur maître.|  
   
- Si **sp_help_jobserver** est exécutée avec *afficher_les_détails_de_dernière_exécution* définie sur **1**, le jeu de résultats comporte ces colonnes supplémentaires.  
+ Si **sp_help_jobserver** est exécutée avec *show_last_run_details* défini sur **1**, le jeu de résultats contient ces colonnes supplémentaires.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**last_run_date**|**Int**|Date du début de la dernière exécution du travail sur ce serveur cible.|  
-|**last_run_time**|**Int**|Heure du début de la dernière exécution du travail sur ce serveur.|  
+|**last_run_date**|**int**|Date du début de la dernière exécution du travail sur ce serveur cible.|  
+|**last_run_time**|**int**|Heure du début de la dernière exécution du travail sur ce serveur.|  
 |**last_run_duration**|**int**|Durée du travail lors de sa dernière exécution sur ce serveur cible (en secondes).|  
 |**last_outcome_message**|**nvarchar(1024)**|Décrit le dernier résultat du travail.|  
-|**last_run_outcome**|**int**|Résultat du travail à l'issue de sa dernière exécution sur ce serveur.<br /><br /> **0** = Échec<br /><br /> **1** = a réussi<br /><br /> **3** = annulée<br /><br /> **5** = inconnu|  
+|**last_run_outcome**|**int**|Résultat du travail à l'issue de sa dernière exécution sur ce serveur.<br /><br /> **0** = échec<br /><br /> **1** = réussite<br /><br /> **3** = annulé<br /><br /> **5** = inconnu|  
   
 ## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
@@ -82,9 +82,9 @@ sp_help_jobserver
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Membres de **SQLAgentUserRole** peuvent uniquement afficher les informations sur les travaux dont ils sont propriétaires.  
+ Les membres de **SQLAgentUserRole** peuvent uniquement afficher des informations sur les travaux dont ils sont propriétaires.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant renvoie des informations, dont les informations sur la dernière exécution, du travail `NightlyBackups`.  

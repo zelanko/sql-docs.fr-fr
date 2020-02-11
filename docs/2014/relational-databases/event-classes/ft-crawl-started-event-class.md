@@ -15,26 +15,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b249aff99abbe692e1515397c493109c54c86713
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63023893"
 ---
-# <a name="ftcrawl-started-event-class"></a>FT:Crawl Started, classe d’événements
+# <a name="ftcrawl-started-event-class"></a>Classe d'événements FT:Crawl Started
   La classe d’événements **FT:Crawl Started** indique qu’une analyse de texte intégral (remplissage) a démarré. Utilisez cette classe d'événements pour vérifier si une demande d'analyse est actuellement sélectionnée par des tâches de travail.  
   
-## <a name="ft-crawl-started-event-class-data-columns"></a>FT : Colonnes de données classe d’événements de démarrer l’analyse  
+## <a name="ft-crawl-started-event-class-data-columns"></a>Colonnes de données de la classe d'événements FT:Crawl Started  
   
 |Nom de la colonne de données|Type de données|Description|ID de la colonne|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|**DatabaseID**|**Int**|ID de la base de données dans laquelle l'analyse de texte intégral a démarré. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
-|**EventClass**|**Int**|Type d’événement = 155.|27|Non|  
-|**EventSequence**|**Int**|Séquence d'un événement donné au sein de la demande.|51|Non|  
-|**IsSystem**|**Int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Oui|  
-|**ObjectID**|**Int**|ID affecté à l'objet par le système. L'analyse de texte intégral a démarré sur l'index de texte intégral de cet objet.|22|Oui|  
+|**DatabaseID**|**int**|ID de la base de données dans laquelle l'analyse de texte intégral a démarré. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
+|**EventClass**|**int**|Type d’événement = 155.|27|Non|  
+|**EventSequence**|**int**|Séquence d'un événement donné au sein de la demande.|51|Non|  
+|**IsSystem**|**int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Oui|  
+|**ObjectID**|**int**|ID affecté à l'objet par le système. L'analyse de texte intégral a démarré sur l'index de texte intégral de cet objet.|22|Oui|  
 |**SessionLoginName**|**nvarchar**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moyen de Login1 et que vous exécutez une commande en tant que Login2, **SessionLoginName** affiche Login1 et **LoginName** affiche Login2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|64|Oui|  
-|**SPID**|**Int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
+|**SPID**|**int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |**StartTime**|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
 |**TextData**|**ntext**|Type d'analyse de texte intégral. Peut avoir les valeurs suivantes : Complète, Incrémentielle, Manuelle et Auto.|1|Oui|  
 |**TransactionID**|**bigint**|ID affecté par le système à la transaction.|4|Oui|  

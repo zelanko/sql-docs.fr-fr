@@ -2,7 +2,7 @@
 title: Afficher les rapports d’analyse pour les mises à niveau de SQL Server
 description: Afficher les rapports d’analyse dans Assistant Expérimentation de base de données
 ms.custom: seo-lt-2019
-ms.date: 11/22/2019
+ms.date: 02/04/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,78 +12,76 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: b72d49e691311104481637ff49d6c1e09ae0c230
-ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
+ms.openlocfilehash: 2a6d027c1fb1834e4033a11a498bfc8cdad4561f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74317742"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76977576"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Afficher les rapports d’analyse dans Assistant Expérimentation de base de données
 
-Une fois que vous avez utilisé Assistant Expérimentation de base de données (DEA) pour [créer un rapport d’analyse](database-experimentation-assistant-create-report.md), suivez les étapes ci-dessous pour examiner le rapport pour obtenir des informations sur les performances en fonction de votre test A/B.
+Une fois que vous avez utilisé Assistant Expérimentation de base de données (DEA) pour [créer un rapport d’analyse](database-experimentation-assistant-create-report.md), vous pouvez consulter le rapport pour obtenir des informations sur les performances en fonction du test A/B que vous avez effectué.
 
-## <a name="select-a-server"></a>Sélectionnez un serveur.
+## <a name="open-an-existing-analysis-report"></a>Ouvrir un rapport d’analyse existant
 
-Dans DEA, sélectionnez l’icône de menu. Dans le menu développé, sélectionnez **rapports d’analyse** en regard de l’icône de liste de vérification pour ouvrir la fenêtre rapports d’analyse.
+1. Dans DEA, sélectionnez l’icône de liste, spécifiez le nom du serveur et le type d’authentification, activez ou désactivez les cases à cocher **chiffrer la connexion** et **approuver le certificat du serveur** en fonction de votre scénario, puis sélectionnez **se connecter**.
 
-Sous **rapports d’analyse**, entrez le nom d’un ordinateur exécutant SQL Server qui a une base de données d’analyse, puis sélectionnez **se connecter**.
+   ![Se connecter au serveur avec le rapport](./media/database-experimentation-assistant-view-report/dea-connect-to-server-with-report-files.png)
 
-![Se connecter à un rapport existant](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
+2. Dans l’écran **rapports d’analyse** , sur le côté gauche, sélectionnez l’entrée pour le rapport que vous souhaitez afficher.
 
-Si vous ne disposez pas de dépendances, la page **Configuration requise** vous invite à entrer des liens pour les installer. Si nécessaire, installez les composants requis, puis sélectionnez **Réessayer**.
-
-![Page conditions préalables](./media/database-experimentation-assistant-view-report/dea-view-report-prereq.png)
-
-## <a name="select-an-analysis-report-to-view"></a>Sélectionner un rapport d’analyse à afficher
-
-Dans la liste des rapports d’analyse, double-cliquez sur un rapport pour l’ouvrir.
-
-![Afficher le rapport existant](./media/database-experimentation-assistant-view-report/dea-view-report-view-existing.png)
-
-Vous pouvez vous familiariser avec la représentation de votre charge de travail, comme illustré dans cet exemple de graphique :
-
-![Graphiques de représentation des charges de travail](./media/database-experimentation-assistant-view-report/dea-view-report-workload-compare.png)
+   ![Ouvrir un fichier de rapport existant](./media/database-experimentation-assistant-view-report/dea-select-report-to-view.png)
 
 ## <a name="view-and-understand-the-analysis-report"></a>Afficher et comprendre le rapport d’analyse
 
 Cette section vous guide tout au long du rapport d’analyse.
 
-### <a name="query-categories"></a>Catégories de requêtes
+Sur la première page de votre rapport, des informations sur la version et les informations de build des serveurs cibles sur lesquels l’expérimentation a été exécutée s’affichent. Seuil vous permet d’ajuster la sensibilité ou la tolérance de votre analyse de test A/B. Par défaut, le seuil est défini sur 5%; toute amélioration des performances >= 5% est catégorisée comme « améliorée ».  La liste déroulante vous permet d’évaluer le rapport avec différents seuils de performances.
 
-Sélectionnez les différents secteurs du graphique à secteurs de gauche pour afficher uniquement les requêtes qui appartiennent à cette catégorie.
+Vous pouvez exporter les données du rapport dans un fichier CSV en sélectionnant le bouton **Exporter** .  Sur n’importe quelle page du rapport d’analyse, vous pouvez sélectionner **Imprimer** pour imprimer ce qui est visible à l’écran à ce moment-là.
 
-![Secteurs de rapport](./media/database-experimentation-assistant-view-report/dea-view-report-pie-slices.png)
+### <a name="query-distribution"></a>Distribution des requêtes
 
-- **Requêtes dégradées**: requêtes qui ont été améliorées dans un par rapport à B.  
-- **Erreurs**: requêtes qui affichent des erreurs dans l’instance B, mais pas dans l’instance A.  
-- **Requêtes améliorées**: requêtes qui s’exécutaient mieux dans l’instance B que dans l’instance A.  
-- **Requêtes indéterminées**: requêtes qui ont subi une modification de performance indéterminée.  
-- **Identique**: requêtes dans lesquelles les performances sont restées les mêmes sur les instances A et B.
+- Sélectionnez les différents secteurs des graphiques à secteurs pour afficher uniquement les requêtes qui appartiennent à cette catégorie.
+
+   ![Catégories de rapports sous forme de secteurs](./media/database-experimentation-assistant-view-report/dea-view-report-pie-slices.png)
+
+  - **Détérioré**: requêtes exécutées plus loin sur la cible 2 que sur la cible 1.
+  - **Erreurs**: requêtes qui ont montré des erreurs au moins une fois sur au moins l’une des cibles.
+  - **Amélioration**: requêtes qui ont été plus performantes sur la cible 2 que sur la cible 1.
+  - **Impossible d’évaluer**: requêtes dont la taille d’échantillon est trop petite pour l’analyse statistique. Pour l’analyse de test A/B, la DEA requiert que les mêmes requêtes aient au moins 15 exécutions sur chaque cible.
+  - **Identique**: les requêtes qui n’ont pas de différence statistique entre Target 1 et Target 2.
+
+  Les requêtes d’erreur, le cas échéant, sont affichées dans des graphiques séparés ; graphique à barres qui classe les erreurs par type et un graphique à secteurs qui classe les erreurs par ID d’erreur.
+
+   ![Graphiques de requête d’erreur](./media/database-experimentation-assistant-view-report/dea-error-query-charts.png)
+
+  Il existe quatre types d’erreurs possibles :
+
+  - **Erreurs existantes**: erreurs qui existent sur les cibles 1 et 2.
+  - **Nouvelles Erreurs**: erreurs nouvelles sur la cible 2.
+  - **Erreurs résolues**: erreurs qui existent sur la cible 1 mais qui sont résolues sur la cible 2.
+  - **Bloqueurs de mise à niveau**: erreurs qui bloquent la mise à niveau vers le serveur cible.
+
+  Cliquer sur une section de barres ou de secteurs dans les graphiques permet de descendre dans la catégorie et d’afficher les métriques de performances, même pour la catégorie **ne peut pas évaluer** .
+
+  En outre, le tableau de bord affiche les cinq principales requêtes améliorées et dégradées pour fournir une vue d’ensemble rapide des performances.
 
 ### <a name="individual-query-drill-down"></a>Exploration des requêtes individuelles
 
-Vous pouvez sélectionner les liens du modèle de requête pour afficher des informations plus détaillées sur des requêtes spécifiques.
+Vous pouvez sélectionner des liens de modèle de requête pour obtenir des informations plus détaillées sur des requêtes spécifiques.
 
-![Exploration des requêtes](./media/database-experimentation-assistant-view-report/dea-view-report-drilldown.png)
+![Exploration d’une requête spécifique](./media/database-experimentation-assistant-view-report/dea-query-drill-down-report.png)
 
-Sélectionnez une requête spécifique pour ouvrir un résumé de comparaison de la requête.
+- Sélectionnez une requête spécifique pour ouvrir le résumé de la comparaison connexe.
 
-![Résumé de la comparaison](./media/database-experimentation-assistant-view-report/dea-view-report-comparison-summary.png)
+   ![Résumé de la comparaison](./media/database-experimentation-assistant-view-report/dea-view-report-comparison-summary.png)
 
-Vous pouvez voir les instances A et B sur lesquelles la requête s’est exécutée. Vous pouvez également voir un modèle de ce à quoi la requête peut ressembler. Un tableau affiche des informations de requête spécifiques aux instances A et B.
+   Vous trouverez des statistiques récapitulatives pour cette requête, telles que le nombre d’exécutions, la durée moyenne, l’UC moyenne, les lectures/écritures moyennes et le nombre d’erreurs.  Si la requête est une requête d’erreur, l’onglet informations sur l' **erreur** affiche plus de détails sur l’erreur.  Sous l’onglet informations sur le **plan de requête** , vous pouvez trouver des informations sur les plans de requête utilisés pour la requête sur Target 1 et Target 2.
 
-### <a name="error-queries"></a>Requêtes d’erreur
-
-Le rapport Résumé de la comparaison contient des sections informations d' **erreur** et informations **sur le plan de requête** développables. Les sections affichent les erreurs et les informations de plan pour les deux instances.
-
-Sélectionnez le secteur d’erreur (rouge) pour afficher les types d’erreurs suivants :
-
-- **Erreurs existantes**: erreurs qui se trouvaient dans un.
-- **Nouvelles Erreurs**: erreurs qui se trouvaient dans B.
-- **Erreurs résolues**: erreurs qui se trouvaient dans un mais pas dans B.
-
-![Graphiques d’erreur](./media/database-experimentation-assistant-view-report/dea-view-report-error-charts.png)
+   > [!NOTE]
+   > Si vous analysez un événement étendu (. XEL), les informations de plan de requête ne sont pas collectées pour limiter la sollicitation de la mémoire sur l’ordinateur de l’utilisateur.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -11,14 +11,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3b1bc12baf31a0e1d5edb344c538341cf2ad1be0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468335"
 ---
 # <a name="application-level-partitioning"></a>Partitionnement au niveau de l'application
-  Cet exemple illustre le partitionnement au niveau de l'application, où les données sont stockées dans une table à mémoire optimisée ou une table sur disque, selon que la commande se situe avant ou après une date spécifique. Toutes les commandes postérieures ou égales à *hotDate* sont dans la table à mémoire optimisée et toutes celles antérieures à *hotDate* sont dans la table sur disque. Supposez une charge de travail OLTP extrême avec de nombreuses transactions simultanées. Cette règle métier (commandes récentes dans une table mémoire optimisée) doit être appliquée même si plusieurs transactions simultanées tentent de modifier *hotDate*.  
+  Cet exemple illustre le partitionnement au niveau de l'application, où les données sont stockées dans une table à mémoire optimisée ou une table sur disque, selon que la commande se situe avant ou après une date spécifique. Toutes les commandes postérieures ou égales à *hotDate* sont dans la table à mémoire optimisée et toutes celles antérieures à *hotDate* sont dans la table sur disque. Supposez une charge de travail OLTP extrême avec de nombreuses transactions simultanées. Cette règle métier (commandes récentes dans une table optimisée en mémoire) doit être appliquée même si plusieurs transactions simultanées tentent de modifier *hotDate*.  
   
  Cet exemple n'utilise pas de [tables partitionnées](../partitions/partitioned-tables-and-indexes.md) pour la table sur disque, mais suit un point de fractionnement explicite entre les deux tables, à l'aide d'une troisième table. Le point de fractionnement peut être utilisé pour vous assurer que les données récemment insérées sont toujours insérées dans la table appropriées en fonction de la date. Il peut également être utilisé pour déterminer l'emplacement de recherche des données. Les données qui arrivent en retard sont insérées dans la table appropriée.  
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8b31b884e0f86bf2aebe4859cd1c7a441669e813
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905992"
 ---
 # <a name="isempty-mdx"></a>IsEmpty (MDX)
@@ -32,15 +32,15 @@ IsEmpty(Value_Expression)
  Expression MDX (Multidimensional Expressions) valide qui retourne généralement les coordonnées des cellules d'un membre ou d'un tuple.  
   
 ## <a name="remarks"></a>Notes  
- Le **IsEmpty** fonction renvoie **true** si l’expression évaluée est une valeur de cellule vide. Sinon, cette fonction retourne **false**.  
+ La fonction **IsEmpty** retourne la valeur **true** si l’expression évaluée est une valeur de cellule vide. Dans le cas contraire, cette fonction retourne **false**.  
   
 > [!NOTE]  
 >  La propriété par défaut d'un membre est la valeur du membre.  
   
- Le **IsEmpty** (fonction) est la seule façon de tester de manière fiable pour une cellule vide, car la valeur de cellule vide a une signification spéciale [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ La fonction **IsEmpty** est le seul moyen de tester de manière fiable une cellule vide, car la valeur de cellule vide a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]une signification particulière dans.  
   
 > [!IMPORTANT]  
->  Si l’évaluation de l’expression de valeur retourne une erreur, la fonction retournera **false**. Une expression de valeur peut retourner une erreur, notamment si la référence des propriétés désigne une propriété non valide ou inexistante.  
+>  Si l’évaluation de l’expression de valeur retourne une erreur, la fonction retourne **false**. Une expression de valeur peut retourner une erreur, notamment si la référence des propriétés désigne une propriété non valide ou inexistante.  
   
  Pour plus d'informations sur les cellules vides, consultez la documentation OLE DB.  
   
@@ -58,7 +58,7 @@ IsEmpty(Value_Expression)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation des valeurs vides](../mdx/working-with-empty-values.md)   
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Utilisation de valeurs vides](../mdx/working-with-empty-values.md)   
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

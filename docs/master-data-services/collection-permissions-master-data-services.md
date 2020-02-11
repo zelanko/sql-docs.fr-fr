@@ -14,10 +14,10 @@ ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: b55d028e90869f6b21d51348b97411fb6c965eb9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729636"
 ---
 # <a name="collection-permissions-master-data-services"></a>Autorisations de collection (services de données de référence)
@@ -32,12 +32,12 @@ ms.locfileid: "73729636"
 |Autorisation|Description|  
 |----------------|-----------------|  
 |**Lire**|L’utilisateur peut lire les membres de collection et les attributs de membre.|  
-|**Créer**|L’utilisateur peut créer des membres de collection et affecter des valeurs d’attribut.|  
-|**Update**|L’utilisateur peut mettre à jour les membres de collection, les attributs et les relations.|  
-|**Delete**|L’utilisateur peut supprimer les membres de collection.|  
-|**Refuser**|Tous les accès aux membres de collection sont refusés.|  
+|**Créés**|L’utilisateur peut créer des membres de collection et affecter des valeurs d’attribut.|  
+|**Mise à jour**|L’utilisateur peut mettre à jour les membres de collection, les attributs et les relations.|  
+|**Supprimer**|L’utilisateur peut supprimer les membres de collection.|  
+|**Deny**|Tous les accès aux membres de collection sont refusés.|  
   
- Vous pouvez combiner les autorisations d’accès en lecture, de création, de mise à jour et de suppression. Lorsque les autorisations de création, de mise à jour et de suppression sont affectées, l’autorisation d’accès en lecture est automatiquement affectée.  
+ Vous pouvez aussi combiner les autorisations Read, Create, Update et Delete. Lorsque les autorisations Create, Update et Delete sont attribuées, l’autorisation Read est attribuée automatiquement.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Affecter des autorisations d’objet de modèle &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   

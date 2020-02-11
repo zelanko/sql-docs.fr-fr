@@ -20,17 +20,17 @@ ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b6ba4c356411800dc7c5e52907b0baccd5682f09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064143"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert (API de procédure stockée étendue)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Utilisez plutôt l’intégration du CLR.  
   
  Modifie des données d'un type de données en un autre.  
   
@@ -69,7 +69,7 @@ destlen
  *srctype*  
  Spécifie le type des données à convertir. Ce paramètre peut être n'importe lequel des types de données d'API de procédure stockée étendue.  
   
- *src*  
+ *sources*  
  Pointeur vers les données à convertir. Ce paramètre peut être n'importe lequel des types de données d'API de procédure stockée étendue.  
   
  *srclen*  
@@ -86,7 +86,7 @@ destlen
  *destlen*  
  Spécifie la longueur, en octets, de la variable de destination. Ce paramètre est ignoré pour les types de données de longueur fixe. Pour une variable de destination de type SRVCHAR, la valeur de *destlen* doit être la longueur totale de l’espace de mémoire tampon de destination. Une longueur de -1 pour une variable de destination de type SRVCHAR ou SRVBINARY indique que l'espace disponible est suffisant. Pour une variable de destination de type *srvchar*, une longueur de -1 fait en sorte que la chaîne de caractères se termine par NULL.  
   
-## <a name="returns"></a>Valeur renvoyée  
+## <a name="returns"></a>Retours  
  Longueur des données converties, en octets, si la conversion de type de données réussit. Quand **srv_convert** rencontre une demande de conversion qu’il ne prend pas en charge, il appelle le gestionnaire d’erreurs fourni par le développeur, le cas échéant, définit un numéro d’erreur global et retourne -1.  
   
 ## <a name="remarks"></a>Notes  

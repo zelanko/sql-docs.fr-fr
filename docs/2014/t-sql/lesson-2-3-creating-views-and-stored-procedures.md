@@ -13,14 +13,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 20f16e9deeb9e07d2c63090c92100871331e0443
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211182"
 ---
 # <a name="creating-views-and-stored-procedures"></a>Création des vues et des procédures stockées
-  Étant donné que Mary peut désormais accéder à la base de données **TestData** , vous pouvez envisager de créer des objets de base de données, tels qu'une vue et une procédure stockée, puis octroyer à Mary l'accès à ses objets. Une vue est une instruction SELECT stockée, et une procédure stockée correspond à une ou plusieurs instructions [!INCLUDE[tsql](../includes/tsql-md.md)] qui s'exécutent comme un traitement.  
+  Maintenant que Mary peut accéder à la base de données **TestData** , vous souhaiterez peut-être créer des objets de base de données, tels qu’une vue et une procédure stockée, puis accorder à Mary l’accès à celles-ci. Une vue est une instruction SELECT stockée, et une procédure stockée correspond à une ou plusieurs instructions [!INCLUDE[tsql](../includes/tsql-md.md)] qui s'exécutent comme un traitement.  
   
  Les vues peuvent être interrogées comme des tables et n'acceptent pas de paramètres. Les procédures stockées sont plus complexes que les vues. Elles peuvent contenir des paramètres d'entrée et de sortie et peuvent contenir des instructions pour contrôler le flux du code, comme les instructions IF et WHILE. Il est recommandé de faire appel aux procédures stockées pour coder toutes les actions répétitives dans la base de données  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68211182"
   
 ### <a name="to-create-a-stored-procedure"></a>Pour créer une procédure stockée  
   
-1.  L'instruction suivante crée un nom de procédure stockée `pr_Names`, accepte un paramètre d'entrée nommé `@VarPrice` du type de données `money`. La procédure stockée imprime l'instruction `Products less than` concaténée avec le paramètre d'entrée dont le type de données `money` est remplacé par un type de données character `varchar(10)` . Puis, la procédure exécute une instruction `SELECT` sur la vue et passe le paramètre d'entrée dans le cadre de la clause `WHERE` . Cette opération retourne tous les produits dont le prix est inférieur à la valeur du paramètre d'entrée.  
+1.  L'instruction suivante crée un nom de procédure stockée `pr_Names`, accepte un paramètre d'entrée nommé `@VarPrice` du type de données `money`. La procédure stockée affiche l'instruction `Products less than` concaténée avec le paramètre d'entrée dont le type de données `money` est remplacé par un type de données character `varchar(10)`. Puis, la procédure exécute une instruction `SELECT` sur la vue et passe le paramètre d'entrée dans le cadre de la clause `WHERE`. Cette opération retourne tous les produits dont le prix est inférieur à la valeur du paramètre d'entrée.  
   
     ```  
     CREATE PROCEDURE pr_Names @VarPrice money  

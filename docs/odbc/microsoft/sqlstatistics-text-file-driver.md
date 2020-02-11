@@ -14,27 +14,27 @@ ms.assetid: 311afc01-d656-425f-be43-4a8e7cbc9a97
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4deede2060821ed05a58a637adcf09493fd910dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037818"
 ---
 # <a name="sqlstatistics-text-file-driver"></a>SQLStatistics (pilote de fichier texte)
 > [!NOTE]  
->  Cette rubrique fournit des informations spécifiques au pilote fichier texte. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette rubrique fournit des informations spécifiques au pilote de fichier texte. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
-|colonne|Commentaires|  
+|Colonne|Commentaires|  
 |------------|--------------|  
-|TABLE_QUALIFIER|Le chemin d’accès à un répertoire.<br /><br /> Critères spéciaux n’est pas pris en charge dans les *szTableQualifier* argument.|  
-|TABLE_OWNER|Valeur NULL est retournée dans cette colonne, car le nom du propriétaire n’est pas pris en charge.|  
-|TABLE_NAME|Nom de la table sans délimitation.<br /><br /> Critères spéciaux n’est pas pris en charge dans les *szTableName* argument.|  
-|INDEX_QUALIFIER|Toujours la valeur NULL est retournée.|  
-|INDEX_NAME|Index dépendant.|  
-|TYPE|Uniquement SQL_TABLE_STAT ou SQL_INDEX_OTHER s’affichera pour le TYPE.|  
-|SEQ_IN_INDEX|Index dépendant.|  
-|COLUMN_NAME|Index dépendant.|  
-|COLLATION|Index dépendant.|  
-|PAGES|Toujours la valeur NULL est retournée.|  
+|TABLE_QUALIFIER|Chemin d’accès à un répertoire.<br /><br /> Les critères spéciaux ne sont pas pris en charge dans l’argument *szTableQualifier* .|  
+|TABLE_OWNER|La valeur NULL est retournée dans cette colonne, car le nom du propriétaire n’est pas pris en charge.|  
+|TABLE_NAME|Nom de table sans délimiteur.<br /><br /> Les critères spéciaux ne sont pas pris en charge dans l’argument *szTableName* .|  
+|INDEX_QUALIFIER|NULL est toujours retourné.|  
+|INDEX_NAME|Dépendant de l’index.|  
+|TYPE|Seul SQL_TABLE_STAT ou SQL_INDEX_OTHER sera retourné pour le TYPE.|  
+|SEQ_IN_INDEX|Dépendant de l’index.|  
+|COLUMN_NAME|Dépendant de l’index.|  
+|COLLATION|Dépendant de l’index.|  
+|PAGES|NULL est toujours retourné.|  
   
- De filtrage est basé sur l’unicité (le *fUnique* argument). Le *fAccuracy* paramètre est ignoré.
+ Le filtrage est basé sur l’unicité (l’argument *fUnique* ). Le paramètre *fAccuracy* est ignoré.

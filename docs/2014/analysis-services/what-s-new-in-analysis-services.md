@@ -1,5 +1,5 @@
 ---
-title: Nouveautés&#39;de Analysis Services et Business Intelligence | Microsoft Docs
+title: '&#39;nouveautés dans Analysis Services et Business Intelligence | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/07/2019
 ms.prod: sql-server-2014
@@ -11,19 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 59ce45ff7e02d63c3c5bf27ca209ec911de67dbd
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889337"
 ---
-# <a name="what39s-new-in-sql-server-2014-analysis-services"></a>Nouveautés&#39;de SQL Server 2014 Analysis Services
-  À l’exception des fonctionnalités ajoutées à la prise en charge des rapports Power View [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] sur les modèles multidimensionnels, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] n’est pas modifié à partir de la version précédente.  
+# <a name="what39s-new-in-sql-server-2014-analysis-services"></a>&#39;nouveautés de SQL Server 2014 Analysis Services
+  À l’exception des fonctionnalités ajoutées à la prise en charge des rapports Power View [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sur les modèles multidimensionnels, n’est pas modifié à partir de la version précédente.  
   
- Pour plus d’informations [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] sur les autres produits et technologies qui sont différents dans cette version, consultez [Nouveautés de SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
+ Pour plus d’informations [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] sur les autres produits et technologies qui sont différents dans cette version, consultez [nouveautés de SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
   
 ## <a name="updates-to-design-tool-installation"></a>Mises à jour concernant l'installation de l'outil de conception  
- [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] pour Business Intelligence (SSDT-BI), anciennement Business Intelligence Development Studio (BIDS), permet de créer des modèles Analysis Services, des rapports Reporting Services et des packages Integration Services. Téléchargez SSDT-BI à partir des emplacements suivants :  
+ 
+  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] pour Business Intelligence (SSDT-BI), anciennement Business Intelligence Development Studio (BIDS), permet de créer des modèles Analysis Services, des rapports Reporting Services et des packages Integration Services. Téléchargez SSDT-BI à partir des emplacements suivants :  
   
 -   [Télécharger SSDT-BI pour Visual Studio 2013](https://go.microsoft.com/fwlink/p/?LinkId=396526)  
   
@@ -36,12 +37,12 @@ ms.locfileid: "68889337"
   
  ![Modèles Nouveau projet dans SSDT](media/ssdt-biprojects.png "Modèles Nouveau projet dans SSDT")  
   
-## <a name="features-recently-added-power-view-for-multidimensional-models"></a>Fonctionnalités récemment ajoutées: Power View pour les modèles multidimensionnels  
+## <a name="features-recently-added-power-view-for-multidimensional-models"></a>Fonctionnalités récemment ajoutées : Power View pour les modèles multidimensionnels  
  La possibilité de créer des rapports Power View sur des modèles multidimensionnels a été initialement introduite dans la mise à jour cumulative 4 de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 1. La fonctionnalité Power View pour les modèles multidimensionnels est maintenant incluse dans le cadre de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
- **Power View rapport pour un modèle multidimensionnel**  
+ **Rapport Power View pour un modèle multidimensionnel**  
   
- ![Rapport de Power View](media/powerviewreport-wn.gif "Rapport de Power View")  
+ ![Rapport Power View](media/powerviewreport-wn.gif "Rapport Power View")  
   
  Ce composant aide les entreprises à optimiser les investissements BI existants en utilisant les modèles multidimensionnels (également appelés des « cubes OLAP ») avec les derniers outils de création de rapports clients. Selon les types de données du modèle multidimensionnel, les utilisateurs peuvent facilement créer une variété de visualisations dynamiques à partir des tables et des matrices, notamment des graphiques en bulles et des cartes géographiques. Désormais, les modèles multidimensionnels prennent également en charge les requêtes utilisant des expressions DAX (Data Analysis Expressions).  
   

@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d482ac020aaaf5ac8f029306441c3e9979f4379
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62689063"
 ---
-# <a name="bcpinit"></a>bcp_init
+# <a name="bcp_init"></a>bcp_init
   Initialise l'opération de copie en bloc.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -56,48 +56,48 @@ eDirection
  Handle de connexion ODBC compatible avec la copie en bloc.  
   
  *szTable*  
- Nom de la table de base de données depuis ou vers laquelle s'effectue la copie. Ce nom peut aussi inclure le nom de la base de données ou le nom du propriétaire. Par exemple, **pubs.gracie.titles**, **pubs... titres**, **gracie.titles**, et **titres** sont tous des noms de tables.  
+ Nom de la table de base de données depuis ou vers laquelle s'effectue la copie. Ce nom peut aussi inclure le nom de la base de données ou le nom du propriétaire. Par exemple, **pubs. Gracie. titles**, **pubs.. les titres,** **Gracie. titles**et **titles** sont tous des noms de table autorisés.  
   
  Si *eDirection* est DB_OUT, *szTable* peut également être le nom d’une vue de base de données.  
   
- Si *eDirection* est DB_OUT et qu’une instruction SELECT est spécifiée à l’aide de [bcp_control](bcp-control.md) avant [bcp_exec](bcp-exec.md) est appelée, **bcp_init** _szTable_ doit être définie sur NULL.  
+ Si *eDirection* est DB_OUT et qu’une instruction SELECT est spécifiée à l’aide de [bcp_control](bcp-control.md) avant l’appel de [bcp_exec](bcp-exec.md) , **bcp_init**_szTable_ doit avoir la valeur null.  
   
  *szDataFile*  
- Nom du fichier utilisateur depuis ou vers lequel s'effectue la copie. Si les données sont en cours copiées directement à partir de variables à l’aide de [bcp_sendrow](bcp-sendrow.md), affectez la valeur *szDataFile* avec la valeur NULL.  
+ Nom du fichier utilisateur depuis ou vers lequel s'effectue la copie. Si les données sont copiées directement à partir de variables à l’aide de [bcp_sendrow](bcp-sendrow.md), affectez la valeur null à *szDataFile* .  
   
  *szErrorFile*  
- Nom du fichier d'erreurs à remplir avec les messages de progression, les messages d'erreur et les copies des lignes qui, pour quelque raison que ce soit, n'ont pas pu être copiées d'un fichier utilisateur vers une table. Si NULL est passé en tant que *szErrorFile*, aucun fichier d’erreurs n’est utilisé.  
+ Nom du fichier d'erreurs à remplir avec les messages de progression, les messages d'erreur et les copies des lignes qui, pour quelque raison que ce soit, n'ont pas pu être copiées d'un fichier utilisateur vers une table. Si la valeur NULL est transmise en tant que *szErrorFile*, aucun fichier d’erreur n’est utilisé.  
   
  *eDirection*  
  Direction de la copie, DB_IN ou DB_OUT. DB_IN indique la copie de variables de programme ou d'un fichier utilisateur dans une table. DB_OUT indique la copie d'une table de base de données dans un fichier utilisateur. Vous devez spécifier un nom de fichier utilisateur avec DB_OUT.  
   
-## <a name="returns"></a>Valeur renvoyée  
+## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
 ## <a name="remarks"></a>Notes  
- Appelez **bcp_init** avant d’appeler toute autre fonction de copie en bloc. **bcp_init** effectue les initialisations nécessaires pour une copie en bloc des données entre la station de travail et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Appelez **bcp_init** avant d’appeler une autre fonction de copie en bloc. **bcp_init** effectue les initialisations nécessaires pour une copie en bloc de données entre la station [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de travail et.  
   
- Le **bcp_init** fonction doit être fournie avec un handle de connexion ODBC activé pour une utilisation avec les fonctions de copie en bloc. Pour activer le handle, utilisez [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) avec SQL_COPT_SS_BCP défini SQL_BCP_ON sur un handle de connexion alloué, mais non connecté. La tentative d'assigner l'attribut sur un handle connecté provoque une erreur.  
+ La fonction **bcp_init** doit être fournie avec un handle de connexion ODBC activé pour une utilisation avec des fonctions de copie en bloc. Pour activer le descripteur, utilisez [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) avec SQL_COPT_SS_BCP défini sur SQL_BCP_ON sur un handle de connexion alloué, mais non connecté. La tentative d'assigner l'attribut sur un handle connecté provoque une erreur.  
   
- Lorsqu’un fichier de données est spécifié, **bcp_init** examine la structure de la base de données table source ou cible, pas le fichier de données. **bcp_init** spécifie les valeurs de format de données du fichier de données en fonction de chaque colonne dans la table de base de données, une vue ou un jeu de résultats SELECT. Cette spécification inclut le type de données de chaque colonne, la présence ou l'absence d'un indicateur de longueur ou null et des chaînes d'octet de terminateur dans les données, et la largeur des types de données de longueur fixe. **bcp_init** définit ces valeurs comme suit :  
+ Lorsqu’un fichier de données est spécifié, **bcp_init** examine la structure de la source de la base de données ou de la table cible, et non pas le fichier de données. **bcp_init** spécifie des valeurs de format de données pour le fichier de données en fonction de chaque colonne de la table de base de données, de la vue ou du jeu de résultats Select. Cette spécification inclut le type de données de chaque colonne, la présence ou l'absence d'un indicateur de longueur ou null et des chaînes d'octet de terminateur dans les données, et la largeur des types de données de longueur fixe. **bcp_init** définit ces valeurs comme suit :  
   
--   Le type de données spécifié est le type de données de la colonne dans la table de base de données, la vue ou le jeu de résultats SELECT. Le type de données est énuméré par les types de données natifs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifiés dans sqlncli.h. Les données elles-mêmes sont représentées dans leur forme informatique. Autrement dit, les données d’une colonne de **entier** type de données est représenté par une séquence de quatre octets big- ou little-endian basé sur l’ordinateur qui a créé le fichier de données.  
+-   Le type de données spécifié est le type de données de la colonne dans la table de base de données, la vue ou le jeu de résultats SELECT. Le type de données est énuméré par les types de données natifs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifiés dans sqlncli.h. Les données elles-mêmes sont représentées dans leur forme informatique. Autrement dit, les données d’une colonne de type de données **Integer** sont représentées par une séquence de quatre octets qui est Big-endian ou Little-endian, en fonction de l’ordinateur qui a créé le fichier de données.  
   
--   Si un type de données de base de données est de longueur fixe, les données du fichier de données sont également de longueur fixe. Les fonctions de copie en bloc qui traitent les données (par exemple, [bcp_exec](bcp-exec.md)) analysent les lignes de données que la longueur des données dans le fichier de données sera identique à la longueur des données spécifiées dans la table de base de données, une vue ou une liste de colonnes SELECT. Par exemple, les données d’une colonne de base de données définie comme **char (13)** doivent être représentées par 13 caractères pour chaque ligne de données dans le fichier. Les données de longueur fixe peuvent être préfixées avec un indicateur null si la colonne de base de données autorise les valeurs NULL.  
+-   Si un type de données de base de données est de longueur fixe, les données du fichier de données sont également de longueur fixe. Les fonctions de copie en bloc qui traitent les données (par exemple, [bcp_exec](bcp-exec.md)) analysent les lignes de données, en attendant que la longueur des données dans le fichier de données soit identique à la longueur des données spécifiées dans la liste de la base de données, de la vue ou de la colonne Select. Par exemple, les données d’une colonne de base de données définie en tant que **char (13)** doivent être représentées par 13 caractères pour chaque ligne de données dans le fichier. Les données de longueur fixe peuvent être préfixées avec un indicateur null si la colonne de base de données autorise les valeurs NULL.  
   
 -   Lorsque la séquence d'octet de terminateur est définie, la longueur de la séquence d'octet de terminateur est définie avec la valeur 0.  
   
 -   Lors de la copie vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le fichier de données doit avoir les données de chaque colonne de la table de base de données. Lors de la copie depuis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les données de toutes les colonnes de la table de base de données, de la vue ou du jeu de résultats SELECT, sont copiées vers le fichier de données.  
   
--   Lors de la copie vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la position ordinale d'une colonne du fichier de données doit être identique à la position ordinale de la colonne de la table de base de données. Lors de la copie à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp_exec** place les données selon la position ordinale de la colonne dans la table de base de données.  
+-   Lors de la copie vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la position ordinale d'une colonne du fichier de données doit être identique à la position ordinale de la colonne de la table de base de données. Lors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]copie à partir de, **bcp_exec** place les données en fonction de la position ordinale de la colonne dans la table de base de données.  
   
--   Si un type de données de base de données est variable en longueur (par exemple, **varbinary (22)** ) ou si une colonne de base de données peut contenir des valeurs null, les données dans le fichier de données sont préfixées par un indicateur de longueur/null. La largeur de l'indicateur varie selon le type de données et la version de la copie en bloc.  
+-   Si le type de données d’une base de données est variable en longueur (par exemple, **varbinary (22)**) ou si une colonne de base de données peut contenir des valeurs NULL, les données du fichier de données sont précédées d’un indicateur de longueur/null. La largeur de l'indicateur varie selon le type de données et la version de la copie en bloc.  
   
- Pour modifier les valeurs de format de données spécifiés pour un fichier de données, appelez [bcp_columns](bcp-columns.md) et [bcp_colfmt](bcp-colfmt.md).  
+ Pour modifier les valeurs de format de données spécifiées pour un fichier de données, appelez [bcp_columns](bcp-columns.md) et [bcp_colfmt](bcp-colfmt.md).  
   
- Les copies en bloc vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être optimisées pour les tables qui ne contiennent pas d'index en définissant le mode de récupération de base de données avec la valeur SIMPLE ou BULK_LOGGED. Pour plus d’informations, consultez [Prerequisites for Minimal Logging dans l’importation en bloc](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md) et [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql).  
+ Les copies en bloc vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être optimisées pour les tables qui ne contiennent pas d'index en définissant le mode de récupération de base de données avec la valeur SIMPLE ou BULK_LOGGED. Pour plus d’informations, consultez [Configuration requise pour la journalisation minimale dans l’importation en bloc](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md) et [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql).  
   
- Si aucun fichier de données n’est utilisé, vous devez appeler [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) pour spécifier le format et l’emplacement en mémoire des données de chaque colonne, puis copiez les lignes de données à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de [bcp_sendrow](bcp-sendrow.md).  
+ Si aucun fichier de données n’est utilisé, vous devez appeler [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) pour spécifier le format et l’emplacement en mémoire des données de chaque colonne, puis copier les lignes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de données dans le [bcp_sendrow](bcp-sendrow.md)à l’aide de.  
   
 ## <a name="example"></a>Exemple  
  Cet exemple montre comment utiliser la fonction ODBC bcp_init avec un fichier de format.  
@@ -229,6 +229,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions de copie en bloc](sql-server-driver-extensions-bulk-copy-functions.md)  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

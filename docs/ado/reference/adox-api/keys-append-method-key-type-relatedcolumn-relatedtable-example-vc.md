@@ -1,5 +1,5 @@
 ---
-title: Créer un nouvel exemple de clé étrangère (VC ++) | Microsoft Docs
+title: Créer un nouvel exemple de clé étrangère (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 28495b8f-18dc-482c-995d-a120f6ae2006
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 37fc296ecf520dc6ccc2964315a449bf508a2284
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c812f0503b8801e861364a04e5621cb975adb009
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965840"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76918068"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>Append (méthode) sur la collection Keys, Type de clé ; RelatedColumn, RelatedTable et UpdateRule, exemple de propriétés (VC++)
-Le code suivant montre comment créer une clé étrangère. Il suppose l’existent de deux tables (Customers et Orders).  
+Le code suivant montre comment créer une nouvelle clé étrangère. Il suppose que deux tables (Customers et Orders) existent.  
   
 ```  
 // BeginCreateKeyCpp.cpp  
@@ -92,7 +92,7 @@ int main() {
    }  
   
    catch(...) {  
-      cout << "Error occured in include files...." << endl;  
+      cout << "Error occurred in include files...." << endl;  
    }  
    ::CoUninitialize();  
 }  

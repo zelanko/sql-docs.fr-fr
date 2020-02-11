@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63241209"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Récupérer et interroger des données XML
@@ -27,7 +27,7 @@ ms.locfileid: "63241209"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve le contenu de l’instance XML, mais ne conserve pas les aspects de l’instance XML qui ne sont pas considérés significatifs dans le modèle de données XML. Cela signifie qu'une instance XML extraite peut ne pas être identique à l'instance stockée sur le serveur, mais contiendra les mêmes informations.  
   
 ### <a name="xml-declaration"></a>Déclaration XML  
- La déclaration XML d'une instance n'est pas conservée lors du stockage de l'instance dans la base de données. Exemple :  
+ La déclaration XML d'une instance n'est pas conservée lors du stockage de l'instance dans la base de données. Par exemple :  
   
 ```  
 CREATE TABLE T1 (Col1 int primary key, Col2 xml)  
@@ -40,7 +40,7 @@ FROM T1
   
  Le résultat est `<doc/>`.  
   
- La déclaration XML, telle que `<?xml version='1.0'?>`, n'est pas conservée en cas de stockage des données XML dans une instance de type de données `xml`. C'est la procédure normale. La déclaration XML () et ses attributs (version/encoding/stand-alone) sont perdus une fois que les données sont converties en type `xml`. La déclaration XML est traitée comme une directive de l'analyseur XML. Les données XML sont stockées en interne au format ucs-2. Toutes les autres instructions de traitement dans l'instance XML sont conservées.  
+ La déclaration XML, telle que `<?xml version='1.0'?>`, n'est pas conservée en cas de stockage des données XML dans une instance de type de données `xml`. C'est la procédure normale. La déclaration XML () et ses attributs (version/Encoding/stand-alone) sont perdus une fois les données converties en type `xml`. La déclaration XML est traitée comme une directive de l'analyseur XML. Les données XML sont stockées en interne au format ucs-2. Toutes les autres instructions de traitement dans l'instance XML sont conservées.  
   
   
 ### <a name="order-of-attributes"></a>Ordre des attributs  
@@ -79,7 +79,7 @@ SELECT @x.query('/*')
 GO  
 ```  
   
- Le préfixe d'espace de noms peut avoir une valeur différente dans le résultat. Exemple :  
+ Le préfixe d'espace de noms peut avoir une valeur différente dans le résultat. Par exemple :  
   
 ```  
 <p1:root xmlns:p1="abc"><p1:SomeElement/></p1:root>  
@@ -87,19 +87,19 @@ GO
   
   
 ##  <a name="query"></a> Définition des options requises de requête  
- Lors de l’interrogation `xml` à l’aide de variables ou les colonnes de type `xml` méthodes de type de données, les options suivantes doivent être définies comme indiqué.  
+ Lors de l' `xml` interrogation de colonnes de `xml` type ou de variables à l’aide de méthodes de type de données, les options suivantes doivent être définies comme indiqué.  
   
 |Options SET|Valeurs requises|  
 |-----------------|---------------------|  
-|ANSI_NULLS|ON|  
-|ANSI_PADDING|ON|  
-|ANSI_WARNINGS|ON|  
-|ARITHABORT|ON|  
-|CONCAT_NULL_YIELDS_NULL|ON|  
+|ANSI_NULLS|ACTIVÉ|  
+|ANSI_PADDING|ACTIVÉ|  
+|ANSI_WARNINGS|ACTIVÉ|  
+|ARITHABORT|ACTIVÉ|  
+|CONCAT_NULL_YIELDS_NULL|ACTIVÉ|  
 |NUMERIC_ROUNDABORT|OFF|  
-|QUOTED_IDENTIFIER|ON|  
+|QUOTED_IDENTIFIER|ACTIVÉ|  
   
- Si les options ne sont pas définies comme indiqué, les requêtes et les modifications sur `xml` les méthodes de type de données échoue.  
+ Si les options ne sont pas définies comme indiqué, les requêtes et `xml` les modifications sur les méthodes de type de données échouent.  
   
   
 ## <a name="see-also"></a>Voir aussi  

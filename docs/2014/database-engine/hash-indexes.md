@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 263fdcd4b09c4acc6c2bba4d67629f867d64c6b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779483"
 ---
 # <a name="hash-indexes"></a>Index de hachage
@@ -22,11 +22,12 @@ ms.locfileid: "62779483"
   
  Un index de hachage se compose d'une collection de compartiments organisés dans un tableau. Une fonction de hachage mappe les clés d'index aux compartiments correspondants dans l'index de hachage. L'illustration suivante montre trois clés d'index qui sont mappées à trois compartiments différents dans l'index de hachage. Dans l'illustration, le nom de fonction de hachage est f (x).  
   
- ![Clés d’index mappées à des compartiments. ](../../2014/database-engine/media/hekaton-tables-2.gif "Clés d’index mappées à des compartiments.")  
+ ![Clés d'index mappées à des compartiments.](../../2014/database-engine/media/hekaton-tables-2.gif "Clés d'index mappées à des compartiments.")  
   
  La fonction de hachage utilisée pour les index de hachage présente les caractéristiques suivantes :  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] possède une fonction de hachage utilisée pour tous les index de hachage.  
+-   
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] possède une fonction de hachage utilisée pour tous les index de hachage.  
   
 -   La fonction de hachage est déterministe. La même clé d'index est toujours mappée vers le même compartiment dans l'index de hachage.  
   
@@ -40,11 +41,11 @@ ms.locfileid: "62779483"
   
  La structure de l'index de hachage en mémoire comporte un tableau de pointeurs de mémoire. Chaque compartiment mappe à un décalage dans ce tableau. Chaque compartiment dans le tableau pointe sur la première ligne dans ce compartiment de hachage. Chaque ligne dans le compartiment pointe sur la ligne suivante, ce qui résulte dans une chaîne de lignes pour chaque compartiment de hachage, comme illustré dans la figure ci-dessous.  
   
- ![La structure d’index de hachage en mémoire. ](../../2014/database-engine/media/hekaton-tables-3.gif "La structure d’index de hachage en mémoire.")  
+ ![Structure de l'index de hachage en mémoire.](../../2014/database-engine/media/hekaton-tables-3.gif "Structure de l'index de hachage en mémoire.")  
   
  L'illustration comprend trois compartiments avec des lignes. Le deuxième compartiment supérieur contient les trois lignes rouges. La quatrième compartiment contient une seule ligne bleue. Le compartiment inférieur contient les deux lignes vertes. Il peut s'agir de versions différentes de la même ligne.  
   
- Pour plus d'informations sur les index des tables mémoire optimisées, consultez [Instructions pour utiliser les index sur les tables optimisées en mémoire](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Pour plus d'informations sur les index des tables mémoire optimisées, consultez [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Index sur des tables optimisées en mémoire](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  

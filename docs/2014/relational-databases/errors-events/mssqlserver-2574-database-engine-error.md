@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48e5aeab043fcfd0e65150ea3a1008d726cb0ffc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869256"
 ---
-# <a name="mssqlserver2574"></a>MSSQLSERVER_2574
+# <a name="mssqlserver_2574"></a>MSSQLSERVER_2574
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|2574|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|2574|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC_EMPTY_INDEX_TREE_LEVEL_PAGE|  
-|Texte du message|Erreur de table, La Page P_ID est vide dans l’ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID, unité d’allocation ID A_ID (type TYPE). Cela n'est pas autorisé au niveau LEVEL de l'arborescence binaire.|  
+|Texte du message|Erreur de table : la page P_ID est vide dans l'ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, ID d'unité d'allocation A_ID (type TYPE). Cela n'est pas autorisé au niveau LEVEL de l'arborescence binaire.|  
   
 ## <a name="explanation"></a>Explication  
  Une page de l'arbre B (B-tree) située au-dessus du niveau feuille de l'index spécifié est vide, ce qui signifie qu'elle ne possède pas de lignes. Ce comportement est possible pour les pages de niveau feuille dans [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], mais il n'a jamais été possible dans les niveaux d'arborescence.  

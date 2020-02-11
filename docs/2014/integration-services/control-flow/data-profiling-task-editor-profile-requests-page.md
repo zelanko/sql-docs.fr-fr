@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6deb484f6e213e7089c3aef272ebaebeba13a913
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832063"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Éditeur de tâche de profilage de données (page Demandes de profil)
@@ -40,7 +40,7 @@ ms.locfileid: "62832063"
 ### <a name="requests-pane-options"></a>Options du volet Demandes  
  Le volet Demandes propose les options suivantes :  
   
- **Affichage**  
+ **Afficher**  
  Précisez si vous souhaitez afficher l'ensemble des profils configurés pour la tâche ou simplement l'un d'entre eux.  
   
  Les colonnes dans le volet Demandes changent selon la **vue** que vous sélectionnez. Pour plus d'informations sur chacune de ces colonnes, consultez la section suivante « Colonnes du volet Demandes ».  
@@ -64,7 +64,7 @@ ms.locfileid: "62832063"
  **Type de profil**  
  Sélectionnez un profil des données à partir des options suivantes :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Demande de profil de clé candidate**|Calculez un profil de clé candidate.<br /><br /> Ce profil signale si une colonne ou un ensemble de colonnes est une clé, ou une clé approximative, pour la table sélectionnée. Ce profil peut également vous aider à identifier des problèmes dans vos données, tels que des valeurs dupliquées dans une colonne clé potentielle.|  
 |**Demande de profil de distribution de longueurs de colonne**|Calculez un profil de distribution de longueurs de colonne.<br /><br /> Le profil de distribution de longueurs de colonne signale toutes les longueurs distinctes des valeurs de chaîne dans la colonne sélectionnée, ainsi que le pourcentage de lignes dans la table que chaque longueur représente. Ce profil peut vous aider à identifier des problèmes dans vos données, tels que des valeurs non valides. Par exemple, vous profilez une colonne de codes d'états des États-Unis à deux caractères et découvrez des valeurs excédant deux caractères.|  
@@ -82,7 +82,7 @@ ms.locfileid: "62832063"
  **Gestionnaire de connexions**  
  Affiche le gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] qui se connecte à la base de données source.  
   
- **ID de demande**  
+ **ID de la demande**  
  Affiche un identificateur pour la demande. En règle générale, il n'est pas nécessaire de modifier la valeur générée automatiquement.  
   
 #### <a name="columns-common-to-the-five-individual-column-profiles"></a>Colonnes communes aux cinq profils de colonne individuels  

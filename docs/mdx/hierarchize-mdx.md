@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8ab2c866f201c53684c316282a143b4f672cb8e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105433"
 ---
 # <a name="hierarchize-mdx"></a>Hierarchize (MDX)
@@ -29,17 +29,17 @@ Hierarchize(Set_Expression [ , POST ] )
   
 ## <a name="arguments"></a>Arguments  
  *Set_Expression*  
- Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
+ Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
 ## <a name="remarks"></a>Notes  
- Le **Hierarchize** fonction organise les membres du jeu spécifié en ordre hiérarchique. La fonction conserve toujours les doublons.  
+ La fonction **Hierarchize** organise les membres du jeu spécifié dans l’ordre hiérarchique. La fonction conserve toujours les doublons.  
   
--   Si **POST** n’est pas spécifié, la fonction trie les membres d’un niveau dans leur ordre naturel. Leur ordre naturel est l'ordre par défaut des membres dans la hiérarchie lorsque aucune condition de tri n'est spécifiée. Les membres enfants suivent immédiatement leurs membres parents.  
+-   Si l' **envoi** n’est pas spécifié, la fonction trie les membres d’un niveau dans leur ordre naturel. Leur ordre naturel est l'ordre par défaut des membres dans la hiérarchie lorsque aucune condition de tri n'est spécifiée. Les membres enfants suivent immédiatement leurs membres parents.  
   
--   Si **POST** est spécifié, le **Hierarchize** fonction trie les membres d’un niveau à l’aide d’un ordre post-naturel. En d'autres termes, les membres enfants précèdent leurs parents.  
+-   Si la fonction de **publication** est spécifiée, la fonction **Hierarchize** trie les membres d’un niveau à l’aide d’un ordre de publication naturelle. En d'autres termes, les membres enfants précèdent leurs parents.  
   
 ## <a name="example"></a>Exemple  
- L'exemple ci-dessous remonte d'un niveau vers le membre Canada. Le **Hierarchize** fonction est utilisée pour organiser les membres de jeu spécifié dans l’ordre hiérarchique, ce qui est requis par le **DrillUpMember** (fonction).  
+ L'exemple ci-dessous remonte d'un niveau vers le membre Canada. La fonction **Hierarchize** est utilisée pour organiser les membres du jeu spécifié dans l’ordre hiérarchique, ce qui est requis par la fonction **DrillupMember** .  
   
 ```  
 SELECT DrillUpMember   
@@ -58,7 +58,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- L’exemple suivant retourne la somme de la `Measures.[Order Quantity]` membre, agrégé sur les neuf premiers mois de 2003 contenus dans le `Date` dimension, à partir de la **Adventure Works** cube. Le **PeriodsToDate** fonction définit les tuples dans le jeu auquel s’applique la fonction d’agrégation. Le **Hierarchize** fonction organise les membres du jeu spécifié de membres à partir de la dimension Product dans l’ordre hiérarchique.  
+ L’exemple suivant retourne la somme du `Measures.[Order Quantity]` membre, agrégée sur les neuf premiers mois de 2003 contenus dans la `Date` dimension, à partir du cube **Adventure Works** . La fonction **PeriodsToDate** définit les tuples dans le jeu sur lequel opère la fonction d’agrégation. La fonction **Hierarchize** organise les membres du jeu de membres spécifié à partir de la dimension Product dans l’ordre hiérarchique.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS Count  
@@ -86,6 +86,6 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

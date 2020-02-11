@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c5567abc0893bd183c2468f82278a014e2005113
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211294"
 ---
 # <a name="view-information-about-an-alert"></a>Afficher les informations relatives à une alerte
-  Cette rubrique explique comment afficher des infou demations relatives aux alertes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Cette rubrique explique comment afficher des informations sur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les alertes de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] l’agent [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dans [!INCLUDE[tsql](../../includes/tsql-md.md)]à l’aide de ou de.  
   
  **Dans cette rubrique**  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68211294"
   
      [Sécurité](#Security)  
   
--   **Pour afficher des informations relatives à une alerte, utilisez :**  
+-   **Pour afficher des informations sur une alerte, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -57,15 +57,15 @@ ms.locfileid: "68211294"
   
 4.  Cliquez avec le bouton droit sur l'alerte comportant les informations que vous voulez afficher, puis sélectionnez **Propriétés**.  
   
-     Pour plus d’informations sur les options disponibles contenues dans la boîte de dialogue _Propriétés de l’alerte_**nom_alerte** , consultez :  
+     Pour plus d’informations sur les options disponibles contenues dans la boîte de dialogue Propriétés de l'**alerte** _alert_name_, consultez :  
   
-    -   [Propriétés de nouvelle alerte d’alerte &#40;Page Général&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [Propriétés de l’alerte-nouvelle alerte &#40;page général&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [Propriétés de nouvelle alerte d’alerte &#40;Page de réponse&#41;](alert-properties-new-alert-response-page.md)  
+    -   [Propriétés de l’alerte-page nouvelle réponse &#40;alerte&#41;](alert-properties-new-alert-response-page.md)  
   
-    -   [Propriétés de l’alerte : Nouvelle alerte &#40;Page Options&#41;](alert-properties-new-alert-options-page.md)  
+    -   [Propriétés de l’alerte : nouvelle page d’options &#40;d’alerte&#41;](alert-properties-new-alert-options-page.md)  
   
-    -   [Propriétés de l'alerte &#40;page Historique&#41;](alert-properties-history-page.md)  
+    -   [Propriétés de l’alerte &#40;page historique&#41;](alert-properties-history-page.md)  
   
 5.  Lorsque vous avez terminé, cliquez sur **OK**.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "68211294"
   
 #### <a name="to-view-information-about-an-alert"></a>Pour afficher des informations relatives à une alerte  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 3 : Génération d’un scénario de panier d’achat (didacticiel d’exploration de données intermédiaire) | Microsoft Docs'
+title: 'Leçon 3 : génération d’un scénario de panier d’un marché (Didacticiel intermédiaire sur l’exploration de données) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,50 +16,50 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: c2f1c5a8ae897284f07c3fd6c65d9735099a41fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63042785"
 ---
-# <a name="lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial"></a>Leçon 3 : Génération d’un scénario de panier d’achat (didacticiel d’exploration de données intermédiaire)
+# <a name="lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial"></a>Leçon 3 : Génération d'un scénario de panier d'achat (Didacticiel sur l'exploration de données intermédiaire)
   Le service marketing de la société [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] souhaite améliorer son site Web pour promouvoir la vente croisée. Dans le cadre de la mise à jour du site, il veut pouvoir prédire les produits que les clients sont susceptibles d'acheter en fonction des produits déjà présents dans leurs paniers d'achat en ligne. Le service marketing souhaite également mieux comprendre le comportement d'achat des clients, afin de pouvoir concevoir le site Web de façon à ce que les articles susceptibles d'être achetés ensemble apparaissent ensemble. Il a appris que l'exploration de données est particulièrement utile pour ce type d' *analyse du panier d'achat* et vous demandé de développer un modèle d'exploration de données.  
   
  Une fois les tâches de cette leçon terminées, vous disposerez d'un modèle d'exploration de données qui présentera les articles par groupe à partir de l'historique des transactions des clients. En outre, vous pourrez utiliser le modèle d'exploration de données pour prédire les articles supplémentaires qu'un client sera susceptible d'acheter.  
   
- Pour effectuer les tâches de cette leçon, vous allez utiliser la source de données et de la solution que vous avez créé dans la première leçon de la [didacticiel d’exploration de données intermédiaire &#40;Analysis Services - Exploration de données&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md). Vous modifierez cette solution en ajoutant une vue de source de données qui contient des tables relatives au client, notamment une table imbriquée des achats des clients.  Vous générerez ensuite un modèle d'exploration de données qui utilise l'algorithme MAR (Microsoft Association Rules), adapté aux scénarios d'analyse de panier.  
+ Pour effectuer les tâches de cette leçon, vous allez utiliser la solution et la source de données que vous avez créées dans la première leçon du didacticiel sur l' [exploration de données intermédiaire &#40;Analysis Services-exploration de données&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md). Vous modifierez cette solution en ajoutant une vue de source de données qui contient des tables relatives au client, notamment une table imbriquée des achats des clients.  Vous générerez ensuite un modèle d'exploration de données qui utilise l'algorithme MAR (Microsoft Association Rules), adapté aux scénarios d'analyse de panier.  
   
  Cette leçon contient les rubriques suivantes :  
   
--   [Ajout d’un Data Source View avec des Tables imbriquées &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial.md)  
+-   [Ajout d’une vue de source de données avec des tables imbriquées &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial.md)  
   
--   [Création d’un modèle et la Structure Market Basket &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial.md)  
+-   [Création d’une structure et d’un modèle de panier d’évolution &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial.md)  
   
--   [Modification et traitement du modèle de panier &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/modify-process-market-basket-model-intermediate-data-mining-tutorial.md)  
+-   [Modification et traitement du modèle Market Basket &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/modify-process-market-basket-model-intermediate-data-mining-tutorial.md)  
   
--   [Exploration des modèles de panier &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/exploring-the-market-basket-models-intermediate-data-mining-tutorial.md)  
+-   [Exploration des modèles de panier d’évolution &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/exploring-the-market-basket-models-intermediate-data-mining-tutorial.md)  
   
--   [Filtrage d’une Table imbriquée dans un modèle d’exploration de données &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial.md)  
+-   [Filtrage d’une table imbriquée dans un modèle d’exploration de données &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial.md)  
   
--   [Prédiction d’Associations &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/predicting-associations-intermediate-data-mining-tutorial.md)  
+-   [Prédiction d’associations &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/predicting-associations-intermediate-data-mining-tutorial.md)  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Ajout d’un Data Source View avec des Tables imbriquées &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial.md)  
+ [Ajout d’une vue de source de données avec des tables imbriquées &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial.md)  
   
 ## <a name="all-lessons"></a>Toutes les leçons  
- [Leçon 1 : Création de la Solution d’exploration de données intermédiaire &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
+ [Leçon 1 : création de la solution intermédiaire d’exploration de données &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
   
- [Leçon 2 : Création d’un scénario de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [Leçon 2 : génération d’un scénario de prévision &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
- Leçon 3 : Scénario de panier (didacticiel d’exploration de données intermédiaire)  
+ Leçon 3 : Scénario de panier d’achat (didacticiel sur l’exploration de données intermédiaire)  
   
- [Leçon 4 : Création d’un scénario Sequence Clustering &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
+ [Leçon 4 : génération d’un scénario Sequence Clustering &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
- [Leçon 5 : Création de réseau neuronal et modèles de régression logistique &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Leçon 5 : génération de modèles de réseau neuronal et de régression logistique &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Didacticiel sur l'exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [Leçon 2 : Création d’un scénario de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)   
- [Leçon 4 : Création d’un scénario Sequence Clustering &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
+ [Didacticiel sur l’exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Leçon 2 : génération d’un scénario de prévision &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)   
+ [Leçon 4 : génération d’un scénario Sequence Clustering &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
   

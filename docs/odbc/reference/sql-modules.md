@@ -17,15 +17,15 @@ ms.assetid: 07551472-87ee-4765-951f-1364ed32f0c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b5cef56cec30e5ad09500135e05884bf55d5dde
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076223"
 ---
 # <a name="sql-modules"></a>Modules SQL
-La deuxième technique pour l’envoi d’instructions SQL au SGBD est dans des modules. En bref, un module se compose d’un groupe de procédures qui sont appelées à partir de l’hôte de langage de programmation. Chaque procédure contient une instruction SQL unique, et les données sont passées vers et à partir de la procédure au moyen de paramètres.  
+La deuxième technique pour l’envoi d’instructions SQL au SGBD s’effectue par le biais de modules. Brièvement, un module se compose d’un groupe de procédures, qui sont appelées à partir du langage de programmation de l’hôte. Chaque procédure contient une instruction SQL unique, et les données sont passées vers et à partir de la procédure via des paramètres.  
   
- Un module peut être considéré comme une bibliothèque d’objets qui est liée au code d’application. Cependant, exactement comment les procédures et le reste de l’application sont liés sont dépend de l’implémentation. Par exemple, les procédures peuvent être compilés en code objet et liés directement au code d’application, peut être compilés et stockés dans le SGBD et les appels pour accéder aux identificateurs de plan placés dans le code d’application, ou elles pourraient être interprétées au moment de l’exécution.  
+ Un module peut être considéré comme une bibliothèque d’objets liée au code de l’application. Toutefois, la façon dont les procédures et le reste de l’application sont liées dépend de l’implémentation. Par exemple, les procédures peuvent être compilées en code objet et liées directement au code de l’application, elles peuvent être compilées et stockées sur le SGBD et les appels aux identificateurs de plan d’accès placés dans le code d’application, ou elles peuvent être interprétées au moment de l’exécution.  
   
- Le principal avantage de modules est qu’ils distinctement les instructions SQL à partir du langage de programmation. En théorie, il doit être possible de modifier une sans modifier l’autre et simplement les réassocier.
+ Le principal avantage des modules est qu’ils séparent correctement les instructions SQL du langage de programmation. En théorie, il doit être possible d’en modifier un sans modifier les autres et les lier simplement.

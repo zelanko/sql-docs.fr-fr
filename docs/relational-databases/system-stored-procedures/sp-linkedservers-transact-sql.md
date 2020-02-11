@@ -18,18 +18,18 @@ ms.assetid: d8f82f78-8a1f-4831-bcee-7c36c6e7dfbb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 675707453fbc79f3f9c578469ed5e78b73d2fbfa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139828"
 ---
-# <a name="splinkedservers-transact-sql"></a>sp_linkedservers (Transact-SQL)
+# <a name="sp_linkedservers-transact-sql"></a>sp_linkedservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Renvoie la liste des serveurs liés définis dans le serveur local.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68139828"
 sp_linkedservers  
 ```  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou un nombre différent de zéro (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -46,11 +46,11 @@ sp_linkedservers
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**SRV_NAME**|**sysname**|Nom du serveur lié.|  
-|**SRV_PROVIDERNAME**|**nvarchar(** 128 **)**|Nom du fournisseur OLE DB gérant l'accès au serveur lié spécifié.|  
-|**SRV_PRODUCT**|**nvarchar(** 128 **)**|Nom de produit du serveur lié.|  
-|**SRV_DATASOURCE**|**nvarchar(** 4000 **)**|Propriété de source de données OLE DB correspondant au serveur lié spécifié.|  
-|**SRV_PROVIDERSTRING**|**nvarchar(** 4000 **)**|Propriété de chaîne du fournisseur OLE DB correspondant au serveur lié.|  
-|**SRV_LOCATION**|**nvarchar(** 4000 **)**|Propriété d'emplacement OLE DB correspondant au serveur lié spécifié.|  
+|**SRV_PROVIDERNAME**|**nvarchar (** 128 **)**|Nom du fournisseur OLE DB gérant l'accès au serveur lié spécifié.|  
+|**SRV_PRODUCT**|**nvarchar (** 128 **)**|Nom de produit du serveur lié.|  
+|**SRV_DATASOURCE**|**nvarchar (** 4000 **)**|Propriété de source de données OLE DB correspondant au serveur lié spécifié.|  
+|**SRV_PROVIDERSTRING**|**nvarchar (** 4000 **)**|Propriété de chaîne du fournisseur OLE DB correspondant au serveur lié.|  
+|**SRV_LOCATION**|**nvarchar (** 4000 **)**|Propriété d'emplacement OLE DB correspondant au serveur lié spécifié.|  
 |**SRV_CAT**|**sysname**|Propriété de catalogue OLE DB correspondant au serveur lié spécifié.|  
   
 ## <a name="permissions"></a>Autorisations  
@@ -66,6 +66,6 @@ sp_linkedservers
  [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Distribué des procédures stockées de requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
+ [Procédures stockées de requêtes distribuées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
   
   

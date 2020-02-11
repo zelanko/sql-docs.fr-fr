@@ -18,10 +18,10 @@ ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bc4d3bca563079c7e1dd7f3ee93e5947f65700b5
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305236"
 ---
 # <a name="sp_add_jobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "72305236"
 
   Transmet le travail spécifié au serveur spécifié.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,25 +40,26 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_id = ] job_id` le numéro d’identification du travail. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] job_id`Numéro d’identification du travail. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
-`[ @job_name = ] 'job_name'` le nom du travail. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'`Nom du travail. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
   
-`[ @server_name = ] 'server'` le nom du serveur sur lequel le travail doit être ciblé. *Server* est de type **nvarchar (30)** , avec N' (local) 'comme valeur par défaut. le *serveur* peut être **(local)** pour un serveur local ou le nom d’un serveur cible existant.  
+`[ @server_name = ] 'server'`Nom du serveur sur lequel le travail doit être ciblé. *Server* est de type **nvarchar (30)**, avec N' (local) 'comme valeur par défaut. le *serveur* peut être **(local)** pour un serveur local ou le nom d’un serveur cible existant.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
- **\@automatic_post** existe dans **sp_add_jobserver**, mais n’est pas listé sous arguments. **\@automatic_post** est réservé à un usage interne.  
+ automatic_post existe dans **sp_add_jobserver**, mais n’est pas listé sous arguments. ** \@** automatic_post est réservé à un usage interne. ** \@**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
+ 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
   
 ## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
@@ -75,11 +76,11 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-assigning-a-job-to-the-local-server"></a>A. Affectation d'un travail au serveur local  
+### <a name="a-assigning-a-job-to-the-local-server"></a>R. Affectation d'un travail au serveur local  
  L'exemple suivant affecte le travail `NightlyBackups` pour une exécution sur le serveur local.  
   
 > [!NOTE]  
->  Cet exemple suppose que le travail de `NightlyBackups` existe déjà.  
+>  Cet exemple suppose que le `NightlyBackups` travail existe déjà.  
   
 ```  
 USE msdb ;  

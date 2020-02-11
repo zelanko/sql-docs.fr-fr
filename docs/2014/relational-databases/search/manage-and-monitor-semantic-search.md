@@ -14,17 +14,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 94f8edc0fe8b2505adc36705200e299f36b2dbf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011129"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Gérer et surveiller la recherche sémantique
   Décrit le processus d'indexation sémantique et les tâches associées à la gestion et au contrôle des index.  
   
-##  <a name="HowToMonitorStatus"></a> Procédure : Vérifier l’état de l’indexation sémantique  
- **La première phase de l’indexation sémantique est terminée ?**  
+##  <a name="HowToMonitorStatus"></a>Procédure : vérifier l’état de l’indexation sémantique  
+ **La première phase de l'indexation sémantique est-elle achevée ?**  
  Interrogez la vue de gestion dynamique, [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql), et vérifiez les colonnes **status** et **status_description**.  
   
  La première phase de l'indexation inclut l'alimentation de l'index de mots clés de recherche en texte intégral et de l'index d'expressions clés sémantiques, ainsi que l'extraction de données de ressemblance de document.  
@@ -37,7 +37,7 @@ SELECT * FROM sys.dm_fts_index_population WHERE table_id = OBJECT_ID('table_name
 GO  
 ```  
   
- **La deuxième phase de l’indexation sémantique est terminée ?**  
+ **La seconde phase de l'indexation sémantique est-elle achevée ?**  
  Interrogez la vue de gestion dynamique, [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql), et vérifiez les colonnes **status** et **status_description**.  
   
  La deuxième phase de l'indexation inclut l'alimentation de l'index de ressemblance de document sémantique.  
@@ -50,8 +50,8 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population WHERE table_id = OBJECT_
 GO  
 ```  
   
-##  <a name="HowToCheckSize"></a> Procédure : Vérifiez la taille des index sémantiques  
- **Quelle est la taille logique d’un index d’expressions clés sémantiques ou d’un index de ressemblance de document sémantique ?**  
+##  <a name="HowToCheckSize"></a>Procédure : vérifier la taille des index sémantiques  
+ **Quelle est la taille logique d'un index d'expressions clés sémantiques ou d'un index de ressemblance de document sémantique ?**  
  Interrogez la vue de gestion dynamique, [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql).  
   
  La taille logique est affichée en nombre de pages d'index.  
@@ -64,7 +64,7 @@ SELECT * FROM sys.dm_db_fts_index_physical_stats WHERE object_id = OBJECT_ID('ta
 GO  
 ```  
   
- **Qu’est la taille totale des index sémantiques et de recherche en texte intégral pour un catalogue de texte intégral ?**  
+ **Quelle est la taille totale des index sémantiques et de recherche en texte intégral pour un catalogue de texte intégral ?**  
  Interrogez la propriété **IndexSize** de la fonction de métadonnées [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql).  
   
 ```sql  
@@ -72,7 +72,7 @@ SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')
 GO  
 ```  
   
- **Combien d’éléments est indexés dans les index de recherche en texte intégral et sémantiques pour un catalogue de texte intégral ?**  
+ **Combien d'éléments sont indexés dans les index sémantiques et de recherche en texte intégral pour un catalogue de texte intégral ?**  
  Interrogez la propriété **ItemCount** de la fonction de métadonnées [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql).  
   
 ```sql  
@@ -80,12 +80,12 @@ SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')
 GO  
 ```  
   
-##  <a name="HowToForcePopulation"></a> Procédure : Imposer l’alimentation des index sémantiques  
+##  <a name="HowToForcePopulation"></a>Procédure : forcer le remplissage des index sémantiques  
  Vous pouvez forcer le remplissage des index sémantiques et de recherche en texte intégral à l'aide de la clause START/STOP/PAUSE ou RESUME POPULATION avec la même syntaxe et le même comportement que ceux décrits pour les index de recherche en texte intégral. Pour plus d’informations, consultez [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql) et [Alimenter des index de recherche en texte intégral](../indexes/indexes.md).  
   
  Étant donné que l'indexation sémantique dépend de l'indexation de texte intégral, les index sémantiques ne sont remplis que lorsque les index de recherche en texte intégral associés le sont également.  
   
- **Exemple : Démarrer un remplissage complet des index sémantiques et de recherche en texte intégral**  
+ **Exemple : démarrer une alimentation complète des index sémantiques et de recherche en texte intégral**  
   
  L’exemple suivant démarre une alimentation complète des index sémantiques et de recherche en texte intégral en modifiant un index de recherche en texte intégral existant sur la table **Production.Document** dans l’exemple de base de données AdventureWorks2012.  
   
@@ -98,7 +98,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 GO  
 ```  
   
-##  <a name="HowToDisableIndexing"></a> Procédure : Désactiver ou réactiver l’indexation sémantique  
+##  <a name="HowToDisableIndexing"></a>Procédure : désactiver ou réactiver l’indexation sémantique  
  Vous pouvez activer ou désactiver l'indexation sémantique ou de texte intégral à l'aide de la clause ENABLE/DISABLE avec la même syntaxe et le même comportement que ceux décrits pour les index de recherche en texte intégral. Pour plus d’informations, consultez [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql).  
   
  Lorsque l'indexation sémantique est désactivée et suspendue, les requêtes sur les données sémantiques continuent de s'exécuter avec succès et retournent des données indexées précédemment. Ce comportement n'est pas cohérent avec le comportement de la recherche en texte intégral.  
@@ -119,10 +119,10 @@ ALTER FULLTEXT INDEX ON table_name ENABLE
 GO  
 ```  
   
-##  <a name="SemanticIndexing"></a> Phases d’indexation sémantique  
+##  <a name="SemanticIndexing"></a>Phases de l’indexation sémantique  
  Une recherche sémantique indexe deux types de données pour chaque colonne sur laquelle elle est activée :  
   
-1.  **Expressions clés**  
+1.  **Phrases clés**  
   
 2.  **Ressemblance de document**  
   
@@ -133,14 +133,14 @@ GO
 2.  **Phase 2**. L'index de ressemblance de document sémantique est rempli à son tour. Cet index dépend des deux index remplis à la phase précédente.  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="ProblemNotPopulated"></a> Problème : Les index sémantiques ne sont pas remplis  
- **Les index de recherche en texte intégral associés sont remplis ?**  
+##  <a name="ProblemNotPopulated"></a>Problème : les index sémantiques ne sont pas remplis  
+ **Les index de recherche en texte intégral associés sont-ils remplis ?**  
  Étant donné que l'indexation sémantique dépend de l'indexation de texte intégral, les index sémantiques ne sont remplis que lorsque les index de recherche en texte intégral associés le sont également.  
   
- **Sont la recherche en texte intégral et la recherche sémantique installées et configurées correctement ?**  
+ **La recherche en texte intégral et la recherche sémantique sont-elles installées et configurées correctement ?**  
  Pour plus d’informations, consultez [Installer et configurer la recherche sémantique](install-and-configure-semantic-search.md).  
   
- **Le FDHOST service n’est pas disponible, ou existe-t-il une autre condition qui provoquerait l’indexation de texte intégral pour la restauration ?**  
+ **Le service FDHOST est-il indisponible, ou existe-t-il une autre condition qui provoquerait l'échec de l'indexation de texte intégral ?**  
  Pour plus d’informations, consultez [Résoudre l’indexation de recherche en texte intégral](troubleshoot-full-text-indexing.md).  
   
   

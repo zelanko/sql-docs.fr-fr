@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec61ee62bf952e64e746ae132ce6ee35c89d468a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770594"
 ---
 # <a name="balanced-data-distributor-transformation"></a>Transformation du distributeur de données équilibrées (BDD)
-  La transformation du distributeur de données équilibrées (BDD) bénéficie de la fonction de traitement simultané des unités centrales modernes. Elle distribue des tampons de lignes entrantes uniformément dans les sorties sur des threads distincts. En utilisant des threads distincts pour chaque chemin de sortie, le composant BDD améliore les performances d'un package SSIS sur des ordinateurs à plusieurs cœurs ou plusieurs processeurs. Le composant BDD fait partie du Feature Pack de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Téléchargez-le et installez-le [ici](https://go.microsoft.com/fwlink/p/?LinkId=391999).  
+  La transformation du distributeur de données équilibrées (BDD) bénéficie de la fonction de traitement simultané des unités centrales modernes. Elle distribue des tampons de lignes entrantes uniformément dans les sorties sur des threads distincts. En utilisant des threads distincts pour chaque chemin de sortie, le composant BDD améliore les performances d'un package SSIS sur des ordinateurs à plusieurs cœurs ou plusieurs processeurs. Le composant BDD fait partie du Feature Pack de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Téléchargez et installez l’application à partir d’[ici](https://go.microsoft.com/fwlink/p/?LinkId=391999).  
   
  Le schéma suivant montre un exemple simple d'utilisation de la transformation BDD. Dans cet exemple, la transformation BDD sélectionne un tampon de pipeline à la fois des données d'entrée d'une source de fichier plat et l'envoie à l'un des trois chemins de sortie selon le principe du tourniquet. Dans SQL Server Data Tools, vérifiez les valeurs d’une propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferSize%2A>(taille par défaut du tampon de pipeline) et d’une propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferMaxRows%2A>(nombre maximal par défaut de lignes dans un tampon de pipeline) dans la fenêtre **Propriétés** affichant les propriétés d’une tâche de flux de données.  
   

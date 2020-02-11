@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 69b9e356fcaf4b5abd97b56c69ecdd9881aaaee2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63285773"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Élément Issue (ssbdiagnose)
@@ -40,9 +40,9 @@ ms.locfileid: "63285773"
   
 ## <a name="element-attributes"></a>Attributs des éléments  
   
-|Attribute|Description|  
+|Attribut|Description|  
 |---------------|-----------------|  
-|`type`|Identifie la catégorie de problème signalée par l’élément Issue :<br /><br /> **« Diagnosis »** Signale un problème de configuration identifié lors de l'analyse d'une configuration [!INCLUDE[ssSB](../../includes/sssb-md.md)] .<br /><br /> **« Problem »** Signale un problème qui a empêché **ssbdiagnose** d’effectuer son analyse. Résolvez le problème et exécutez de nouveau **ssbdiagnose**.<br /><br /> **« Event »** Signale un événement [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] identifié lors de l’exécution d’une vérification **-RUNTIME** . Les événements sont signalés uniquement si **-SHOWEVENTS** est spécifié.|  
+|`type`|Identifie la catégorie de problème signalée par l’élément Issue :<br /><br /> **« Diagnostic »** Signale un problème de configuration détecté lors de [!INCLUDE[ssSB](../../includes/sssb-md.md)] l’analyse d’une configuration.<br /><br /> **« Problème »** Signale un problème qui a empêché **ssbdiagnose** d’effectuer son analyse. Résolvez le problème et exécutez de nouveau **ssbdiagnose**.<br /><br /> **« Event »** Signale [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] un événement trouvé lorsque vous exécutez une vérification à l' **exécution** . Les événements sont signalés uniquement si **-SHOWEVENTS** est spécifié.|  
 |`code`|Identifie le numéro d'erreur du message.|  
 |`server`|Identifie l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans laquelle le problème a été trouvé. Si le problème a été identifié dans une instance par défaut, l'attribut de serveur porte uniquement le nom de l'ordinateur. Si le problème a été identifié dans une instance nommée, l'attribut de serveur prend la forme NomOrdinateur\NomInstance.|  
 |`database`|Identifie le nom de la base de données dans laquelle le problème a été trouvé.|  
@@ -52,7 +52,7 @@ ms.locfileid: "63285773"
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|**Type de données et longueur**|`string`, longueur est illimitée.|  
+|**Type de données et longueur**|`string`, la longueur est illimitée.|  
 |**Valeur**|Retourne le texte du message d'erreur.|  
 |**Occurrence**|Une fois par erreur signalée.|  
   

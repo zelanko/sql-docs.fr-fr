@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d7fe788192aac7f7bd3e4723b615391c5d8c6e86
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811516"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
@@ -34,12 +34,12 @@ ms.locfileid: "68811516"
   Renvoie les informations de taille et de fragmentation pour les données et les index de la table ou de la vue spécifiée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour un index, une ligne est retournée pour chaque niveau de l'arbre B (B-tree) dans chaque partition. Pour un segment de mémoire, une ligne est retournée pour l'unité d'allocation IN_ROW_DATA de chaque partition. Pour les données LOB, une ligne est retournée pour l'unité d'allocation LOB_DATA de chaque partition. S'il existe des données en dépassement de capacité des lignes dans la table, une ligne est retournée pour l'unité d'allocation ROW_OVERFLOW_DATA dans chaque partition. Ne retourne pas d'informations sur les index ColumnStore xVelocity avec mémoire optimisée.  
   
 > [!IMPORTANT]
-> Si vous interrogez **sys. DM _ db_index_physical_stats** sur une instance de serveur qui héberge un [réplica secondaire accessible en lecture](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)Always on, vous pouvez rencontrer un problème de blocage de rétablissement. Ce problème est dû au fait que la vue de gestion dynamique acquiert un verrou IS sur la table ou la vue utilisateur spécifiée qui peut bloquer les demandes d'un thread de phase de restauration par progression concernant un verrou X sur la table ou vue utilisateur en question.  
+> Si vous interrogez **sys. dm_db_index_physical_stats** sur une instance de serveur qui héberge un [réplica secondaire accessible en lecture](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)Always on, vous pouvez rencontrer un problème de blocage de rétablissement. Ce problème est dû au fait que la vue de gestion dynamique acquiert un verrou IS sur la table ou la vue utilisateur spécifiée qui peut bloquer les demandes d'un thread de phase de restauration par progression concernant un verrou X sur la table ou vue utilisateur en question.  
   
- **sys. DM _ db_index_physical_stats** ne retourne pas d’informations sur les index optimisés en mémoire. Pour plus d’informations sur l’utilisation des index optimisés en mémoire, consultez [sys. DM _db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
+ **sys. dm_db_index_physical_stats** ne retourne pas d’informations sur les index optimisés en mémoire. Pour plus d’informations sur l’utilisation des index optimisés en mémoire, consultez [sys. dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
   
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,31 +55,31 @@ sys.dm_db_index_physical_stats (
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *database_id* | NULL | 0 | DEFAULT  
+ *database_id* | NULL | 0 | VALEURS  
  ID de la base de données. *database_id* est de type **smallint**. Les entrées autorisées sont l'ID d'une base de données ou la valeur NULL, 0 ou DEFAULT. La valeur par défaut est 0. Les valeurs NULL, 0 et DEFAULT sont des valeurs équivalentes dans ce contexte.  
   
  Spécifiez NULL pour retourner des informations concernant toutes les bases de données de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous spécifiez NULL pour *database_id*, vous devez également spécifier null pour *object_id*, *index_id*et *partition_number*.  
   
- La fonction intégrée [DB_ID](../../t-sql/functions/db-id-transact-sql.md) peut être spécifiée. Si vous utilisez DB_ID sans spécifier de nom de base de données, le niveau de compatibilité de la base de données active doit être égal à 90 ou plus.  
+ Vous pouvez spécifier la fonction intégrée [DB_ID](../../t-sql/functions/db-id-transact-sql.md). Si vous utilisez DB_ID sans spécifier de nom de base de données, le niveau de compatibilité de la base de données active doit être égal à 90 ou plus.  
   
- *object_id* | NULL | 0 | DEFAULT  
- ID d’objet de la table ou de la vue sur laquelle l’index est activé. *l’object_id* est **int**.  
+ *object_id* | NULL | 0 | VALEURS  
+ ID d’objet de la table ou de la vue sur laquelle l’index est activé. *object_id* est de **type int**.  
   
  Les entrées autorisées sont l'ID d'une table et d'une vue ou la valeur NULL, 0 ou DEFAULT. La valeur par défaut est 0. Les valeurs NULL, 0 et DEFAULT sont des valeurs équivalentes dans ce contexte. À partir [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]de, les entrées valides incluent également le nom de la file d’attente Service Broker ou le nom de la table interne de la file d’attente. Lorsque les paramètres par défaut sont appliqués (c’est-à-dire tous les objets, tous les index, etc.), les informations de fragmentation de toutes les files d’attente sont incluses dans le jeu de résultats.  
   
  Spécifiez la valeur NULL pour retourner des informations sur toutes les tables et les vues de la base de données spécifiée. Si vous spécifiez NULL pour *object_id*, vous devez également spécifier null pour *index_id* et *partition_number*.  
   
- *index_id* | 0 | NULL | -1 | DEFAULT  
+ *index_id* | 0 | NULL | -1 | VALEURS  
  Identificateur de l’index. *index_id* est de **type int**. Les entrées valides sont le numéro d’ID d’un index, 0 si *object_id* est un segment de mémoire, NULL,-1 ou default. La valeur par défaut est-1. NULL,-1 et DEFAULT sont des valeurs équivalentes dans ce contexte.  
   
  Spécifiez la valeur NULL pour retourner des informations sur tous les index d'une table de base ou d'une vue. Si vous spécifiez NULL pour *index_id*, vous devez également spécifier null pour *partition_number*.  
   
  *partition_number* | NULL | 0 | VALEURS  
- Numéro de partition dans l'objet. *partition_number* est de **type int**. Les entrées valides sont les *partion_number* d’un index ou d’un segment de mémoire, NULL, 0 ou default. La valeur par défaut est 0. Les valeurs NULL, 0 et DEFAULT sont des valeurs équivalentes dans ce contexte.  
+ Numéro de partition dans l'objet. *partition_number* est de **type int**. Les entrées valides sont le *partion_number* d’un index ou d’un segment de mémoire, NULL, 0 ou default. La valeur par défaut est 0. Les valeurs NULL, 0 et DEFAULT sont des valeurs équivalentes dans ce contexte.  
   
  Spécifiez NULL pour retourner des informations sur toutes les partitions de l'objet propriétaire.  
   
- *partition_number* est basé sur 1. *Partition_number* a la valeur 1 pour un index ou un segment de mémoire non partitionné.  
+ *partition_number* est de base 1. Un index ou un segment de mémoire non partitionné a *partition_number* défini sur 1.  
   
  *mode* | NULL | VALEURS  
  Nom du mode. *mode* spécifie le niveau d’analyse utilisé pour obtenir des statistiques. *mode* est de **type sysname**. Les entrées autorisées sont DEFAULT, NULL, LIMITED, SAMPLED ou DETAILED. La valeur par défaut (NULL) est LIMITED.  
@@ -91,12 +91,12 @@ sys.dm_db_index_physical_stats (
 |database_id|**smallint**|ID de base de données de la table ou de la vue.|  
 |object_id|**int**|ID d'objet de la table ou de la vue vers laquelle pointe l'index.|  
 |index_id|**int**|ID d'index d'un index.<br /><br /> 0 = Segment de mémoire.|  
-|partition_number|**Int**|Numéro de partition de base 1 dans l'objet propriétaire : une table, une vue ou un index.<br /><br /> 1 = Index ou segment de mémoire non partitionné.|  
-|index_type_desc|**nvarchar(60)**|Description du type d’index:<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> INDEX ÉTENDU<br /><br /> XML INDEX<br /><br /> INDEX de mappage COLUMNSTORE (interne)<br /><br /> INDEX COLUMNSTORE DELETEBUFFER (interne)<br /><br /> INDEX COLUMNSTORE DELETEBITMAP (interne)|  
-|hobt_id|**bigint**|ID de segment de mémoire ou d’arbre B (B-Tree) de l’index ou de la partition.<br /><br /> Outre le renvoi des hobt_id d’index définis par l’utilisateur, cela retourne également le hobt_id des index ColumnStore internes.|  
-|alloc_unit_type_desc|**nvarchar(60)**|Description du type d'unité d'allocation :<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> L’unité d’allocation LOB_DATA contient les données stockées dans des colonnes de type **Text**, **ntext**, **image**, **varchar (max)** , **nvarchar (max)** , **varbinary (max)** et **XML**. Pour plus d’informations, consultez [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).<br /><br /> L’unité d’allocation ROW_OVERFLOW_DATA contient les données stockées dans les colonnes de type **varchar (n)** , **nvarchar (n)** , **varbinary (n)** et **sql_variant** qui ont été envoyées hors ligne.|  
+|partition_number|**int**|Numéro de partition de base 1 dans l'objet propriétaire : une table, une vue ou un index.<br /><br /> 1 = Index ou segment de mémoire non partitionné.|  
+|index_type_desc|**nvarchar (60)**|Description du type d'index :<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> INDEX ÉTENDU<br /><br /> XML INDEX<br /><br /> INDEX de mappage COLUMNSTORE (interne)<br /><br /> INDEX COLUMNSTORE DELETEBUFFER (interne)<br /><br /> INDEX COLUMNSTORE DELETEBITMAP (interne)|  
+|hobt_id|**bigint**|ID de segment de mémoire ou d’arbre B (B-Tree) de l’index ou de la partition.<br /><br /> Outre le renvoi de la hobt_id d’index définis par l’utilisateur, cela retourne également les hobt_id des index ColumnStore internes.|  
+|alloc_unit_type_desc|**nvarchar (60)**|Description du type d'unité d'allocation :<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> L’unité d’allocation LOB_DATA contient les données stockées dans des colonnes de type **Text**, **ntext**, **image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)** et **XML**. Pour plus d’informations, consultez [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).<br /><br /> L’unité d’allocation ROW_OVERFLOW_DATA contient les données stockées dans les colonnes de type **varchar (n)**, **nvarchar (n)**, **varbinary (n)** et **sql_variant** qui ont été envoyées hors ligne.|  
 |index_depth|**tinyint**|Nombre de niveaux d'index.<br /><br /> 1 = Segment de mémoire ou unité d'allocation LOB_DATA ou ROW_OVERFLOW_DATA.|  
-|index_level|**tinyint**|Niveau actuel de l'index.<br /><br /> 0 pour des index de niveau feuille, des segments de mémoire et des unités d'allocation LOB_DATA ou ROW_OVERFLOW_DATA.<br /><br /> Supérieur à 0 pour les index de niveaux non-feuille. *index_level* sera le niveau le plus élevé au niveau racine d’un index.<br /><br /> Les niveaux non-feuille des index sont traités uniquement lorsque *mode* = detailed.|  
+|index_level|**tinyint**|Niveau actuel de l'index.<br /><br /> 0 pour des index de niveau feuille, des segments de mémoire et des unités d'allocation LOB_DATA ou ROW_OVERFLOW_DATA.<br /><br /> Supérieur à 0 pour les index de niveaux non-feuille. *index_level* est le niveau le plus élevé au niveau racine d’un index.<br /><br /> Les niveaux non-feuille des index sont traités uniquement lorsque *mode* = detailed.|  
 |avg_fragmentation_in_percent|**float**|Fragmentation logique des index ou fragmentation de l'étendue des segments de mémoire dans l'unité d'allocation IN_ROW_DATA.<br /><br /> La valeur est mesurée en pourcentage et prend en compte plusieurs fichiers. Pour les définitions de la fragmentation logique et de la fragmentation de l'étendue, consultez la section Notes.<br /><br /> 0 pour les unités d'allocation LOB_DATA et ROW_OVERFLOW_DATA.<br /><br /> NULL pour les segments de mémoire lorsque *mode* = sampled.|  
 |fragment_count|**bigint**|Nombre de fragments dans le niveau feuille d'une unité d'allocation IN_ROW_DATA. Pour plus d'informations sur les fragments, consultez la section Notes.<br /><br /> NULL pour les niveaux non-feuille d'un index et les unités d'allocation LOB_DATA ou ROW_OVERFLOW_DATA.<br /><br /> NULL pour les segments de mémoire lorsque *mode* = sampled.|  
 |avg_fragment_size_in_pages|**float**|Nombre moyen de pages dans un fragment dans le niveau feuille d'une unité d'allocation IN_ROW_DATA.<br /><br /> NULL pour les niveaux non-feuille d'un index et les unités d'allocation LOB_DATA ou ROW_OVERFLOW_DATA.<br /><br /> NULL pour les segments de mémoire lorsque *mode* = sampled.|  
@@ -105,24 +105,24 @@ sys.dm_db_index_physical_stats (
 |record_count|**bigint**|Nombre total d'enregistrements.<br /><br /> Pour un index, le nombre total d'enregistrements s'applique au niveau actuel de l'arbre B (B-tree) dans l'unité d'allocation IN_ROW_DATA.<br /><br /> Pour un segment de mémoire, il s'agit du nombre total d'enregistrements dans l'unité d'allocation IN_ROW_DATA.<br /><br /> **Remarque :** Pour un segment de mémoire, le nombre d’enregistrements retournés par cette fonction peut ne pas correspondre au nombre de lignes retournées par\*l’exécution d’un SELECT count () sur le segment de mémoire. Cela est dû au fait qu'une ligne peut contenir plusieurs enregistrements. Par exemple, lors de certaines mises à jour, une ligne de segment unique peut comporter un enregistrement de transfert et un enregistrement transféré suite à l'opération de mise à jour. Par ailleurs, la plupart des lignes LOB de grande taille sont fractionnées en plusieurs enregistrements dans le stockage LOB_DATA.<br /><br /> Pour les unités d'allocation LOB_DATA or ROW_OVERFLOW_DATA, il s'agit du nombre total d'enregistrements dans toute l'unité d'allocation.<br /><br /> NULL lorsque *mode* = Limited.|  
 |ghost_record_count|**bigint**|Nombre d'enregistrements fantômes prêts à être supprimés par la tâche de nettoyage des enregistrements fantômes dans l'unité d'allocation.<br /><br /> 0 pour les niveaux non-feuille d'un index dans l'unité d'allocation IN_ROW_DATA.<br /><br /> NULL lorsque *mode* = Limited.|  
 |version_ghost_record_count|**bigint**|Nombre d'enregistrements fantômes retenus par une transaction d'isolation d'instantané en attente dans une unité d'allocation.<br /><br /> 0 pour les niveaux non-feuille d'un index dans l'unité d'allocation IN_ROW_DATA.<br /><br /> NULL lorsque *mode* = Limited.|  
-|min_record_size_in_bytes|**Int**|Taille minimale des enregistrements en octets.<br /><br /> Pour un index, la taille minimale des enregistrements s'applique au niveau actuel de l'arbre B (B-tree) dans l'unité d'allocation IN_ROW_DATA.<br /><br /> Pour un segment de mémoire, il s'agit de la taille minimale des enregistrements dans l'unité d'allocation IN_ROW_DATA.<br /><br /> Pour les unités d'allocation LOB_DATA ou ROW_OVERFLOW_DATA, il s'agit de la taille minimale des enregistrements dans toute l'unité d'allocation.<br /><br /> NULL lorsque *mode* = Limited.|  
-|max_record_size_in_bytes|**Int**|Taille maximale des enregistrements en octets.<br /><br /> Pour un index, la taille maximale des enregistrements s'applique au niveau actuel de l'arbre B (B-tree) dans l'unité d'allocation IN_ROW_DATA.<br /><br /> Pour un segment de mémoire, il s'agit de la taille maximale des enregistrements dans l'unité d'allocation IN_ROW_DATA.<br /><br /> Pour les unités d'allocation LOB_DATA ou ROW_OVERFLOW_DATA, il s'agit de la taille maximale des enregistrements dans toute l'unité d'allocation.<br /><br /> NULL lorsque *mode* = Limited.|  
+|min_record_size_in_bytes|**int**|Taille minimale des enregistrements en octets.<br /><br /> Pour un index, la taille minimale des enregistrements s'applique au niveau actuel de l'arbre B (B-tree) dans l'unité d'allocation IN_ROW_DATA.<br /><br /> Pour un segment de mémoire, il s'agit de la taille minimale des enregistrements dans l'unité d'allocation IN_ROW_DATA.<br /><br /> Pour les unités d'allocation LOB_DATA ou ROW_OVERFLOW_DATA, il s'agit de la taille minimale des enregistrements dans toute l'unité d'allocation.<br /><br /> NULL lorsque *mode* = Limited.|  
+|max_record_size_in_bytes|**int**|Taille maximale des enregistrements en octets.<br /><br /> Pour un index, la taille maximale des enregistrements s'applique au niveau actuel de l'arbre B (B-tree) dans l'unité d'allocation IN_ROW_DATA.<br /><br /> Pour un segment de mémoire, il s'agit de la taille maximale des enregistrements dans l'unité d'allocation IN_ROW_DATA.<br /><br /> Pour les unités d'allocation LOB_DATA ou ROW_OVERFLOW_DATA, il s'agit de la taille maximale des enregistrements dans toute l'unité d'allocation.<br /><br /> NULL lorsque *mode* = Limited.|  
 |avg_record_size_in_bytes|**float**|Taille moyenne des enregistrements en octets.<br /><br /> Pour un index, la taille moyenne des enregistrements s'applique au niveau actuel de l'arbre B (B-tree) dans l'unité d'allocation IN_ROW_DATA.<br /><br /> Pour un segment de mémoire, il s'agit de la taille moyenne des enregistrements dans l'unité d'allocation IN_ROW_DATA.<br /><br /> Pour les unités d'allocation LOB_DATA ou ROW_OVERFLOW_DATA, il s'agit de la taille moyenne des enregistrements dans toute l'unité d'allocation.<br /><br /> NULL lorsque *mode* = Limited.|  
 |forwarded_record_count|**bigint**|Nombre d'enregistrements d'un segment de mémoire qui contiennent des pointeurs avant vers un autre emplacement de données. (Cet état se produit pendant une mise à jour, lorsque l'espace disponible est insuffisant pour stocker la nouvelle ligne à l'emplacement d'origine.)<br /><br /> NULL pour toute unité d'allocation différente des unités d'allocation IN_ROW_DATA d'un segment de mémoire.<br /><br /> NULL pour les segments de mémoire lorsque *mode* = Limited.|  
 |compressed_page_count|**bigint**|Nombre de pages compressées.<br /><br /> Pour les segments de mémoire, les pages allouées récemment ne sont pas compressées avec le mode PAGE. Un segment de mémoire est compressé avec le mode PAGE sous deux conditions spéciales : lorsque les données sont importées en bloc ou lorsqu'un segment de mémoire est reconstruit. Les opérations DML par défaut qui provoquent des allocations de page ne sont pas compressées avec le mode PAGE. Reconstruisez un segment de mémoire lorsque la valeur compressed_page_count dépasse le seuil que vous souhaitez.<br /><br /> Pour les tables qui ont un index cluster, la valeur compressed_page_count indique l'efficacité de la compression PAGE.|  
-|hobt_id|bigint|**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Pour les index ColumnStore uniquement, il s’agit de l’ID d’un ensemble de lignes qui effectue le suivi des données ColumnStore internes pour une partition. Les ensembles de lignes sont stockés sous forme de tas de données ou d’arborescences binaires. Ils ont le même ID d’index que l’index ColumnStore parent. Pour plus d’informations, consultez [sys. &#40;INTERNAL_PARTITIONS Transact-&#41;SQL](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL si|  
-|column_store_delete_buffer_state|tinyint|**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = DRAINAGE<br /><br /> 3 = VIDAGE<br /><br /> 4 = RETRAIT<br /><br /> 5 = PRÊT|  
-|column_store_delete_buff_state_desc||**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NON valide: l’index parent n’est pas un index ColumnStore.<br /><br /> Les scanneurs et les relecteurs ouverts utilisent cette.<br /><br /> DRAINAGE-les suppressions s’impriment, mais les scanneurs l’utilisent encore.<br /><br /> Le vidage du tampon est fermé et les lignes de la mémoire tampon sont écrites dans le bitmap de suppression.<br /><br /> Mise hors service: les lignes du tampon de suppression fermé ont été écrites dans le bitmap de suppression, mais la mémoire tampon n’a pas été tronquée, car les scanneurs l’utilisent encore. Les nouveaux scanneurs n’ont pas besoin d’utiliser la mémoire tampon de mise hors service, car la mémoire tampon ouverte est suffisante.<br /><br /> PRÊT: ce tampon de suppression est prêt à être utilisé.|  
+|hobt_id|bigint|**S’applique à** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Pour les index ColumnStore uniquement, il s’agit de l’ID d’un ensemble de lignes qui effectue le suivi des données ColumnStore internes pour une partition. Les ensembles de lignes sont stockés sous forme de tas de données ou d’arborescences binaires. Ils ont le même ID d’index que l’index ColumnStore parent. Pour plus d’informations, consultez [sys. internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL si|  
+|column_store_delete_buffer_state|TINYINT|**S’applique à** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = DRAINAGE<br /><br /> 3 = VIDAGE<br /><br /> 4 = RETRAIT<br /><br /> 5 = PRÊT|  
+|column_store_delete_buff_state_desc||**S’applique à** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NON valide : l’index parent n’est pas un index ColumnStore.<br /><br /> Les scanneurs et les relecteurs ouverts utilisent cette.<br /><br /> DRAINAGE-les suppressions s’impriment, mais les scanneurs l’utilisent encore.<br /><br /> Le vidage du tampon est fermé et les lignes de la mémoire tampon sont écrites dans le bitmap de suppression.<br /><br /> Mise hors service : les lignes du tampon de suppression fermé ont été écrites dans le bitmap de suppression, mais la mémoire tampon n’a pas été tronquée, car les scanneurs l’utilisent encore. Les nouveaux scanneurs n’ont pas besoin d’utiliser la mémoire tampon de mise hors service, car la mémoire tampon ouverte est suffisante.<br /><br /> PRÊT : ce tampon de suppression est prêt à être utilisé.|  
   
 ## <a name="remarks"></a>Notes  
  La fonction de gestion dynamique sys.dm_db_index_physical_stats remplace l'instruction DBCC SHOWCONTIG.  
   
 ## <a name="scanning-modes"></a>Modes d'analyse  
- Le mode d'exécution de la fonction détermine le niveau de l'analyse effectuée pour obtenir les données statistiques utilisées par la fonction. le *mode* est spécifié sous la forme Limited, SAMPLED ou detailed. La fonction traverse les chaînes de pages des unités d'allocation qui composent les partitions spécifiées de la table ou de l'index. sys. DM _ db_index_physical_stats ne requiert qu’un verrou de table Intent-Shared (IS), quel que soit le mode dans lequel il s’exécute.  
+ Le mode d'exécution de la fonction détermine le niveau de l'analyse effectuée pour obtenir les données statistiques utilisées par la fonction. le *mode* est spécifié sous la forme Limited, SAMPLED ou detailed. La fonction traverse les chaînes de pages des unités d'allocation qui composent les partitions spécifiées de la table ou de l'index. sys. dm_db_index_physical_stats nécessite uniquement un verrou de table intentionnel (IS), quel que soit le mode dans lequel il s’exécute.  
   
  Le mode LIMITED est le mode plus rapide : il analyse le plus petit nombre de pages. Pour un index, seules les pages de niveau parent de l'arbre B (B-tree) (autrement dit, les pages au-dessus du niveau feuille) sont analysées. Pour un segment de mémoire, les pages PFS et IAM associées sont examinées et les pages de données d'un segment de mémoire sont analysées en mode LIMITED.  
   
- Avec le mode Limited, compressed_page_count a la valeur [!INCLUDE[ssDE](../../includes/ssde-md.md)] null, car le analyse uniquement les pages non-feuille de l’arborescence binaire (B-Tree) et les pages IAM et PFS du tas. Utilisez le mode SAMPLEd pour obtenir une valeur estimée pour compressed_page_count et utilisez le mode DETAILed pour obtenir la valeur réelle de compressed_page_count. Le mode SAMPLED retourne des statistiques basées sur 1 pour cent d'exemple de toutes les pages dans l'index ou le segment de mémoire. Les résultats en mode SAMPLED doivent être considérés comme étant approximatifs. Si l'index ou le segment de mémoire comporte moins de 10 000 pages, le mode DETAILED est utilisé à la place du mode SAMPLED.  
+ Avec le mode LIMITED, compressed_page_count a la valeur [!INCLUDE[ssDE](../../includes/ssde-md.md)] null, car le analyse uniquement les pages non-feuille de l’arborescence binaire (B-Tree) et les pages IAM et PFS du tas. Utilisez le mode SAMPLEd pour obtenir une valeur estimée pour compressed_page_count et utilisez le mode DETAILed pour obtenir la valeur réelle de compressed_page_count. Le mode SAMPLED retourne des statistiques basées sur 1 pour cent d'exemple de toutes les pages dans l'index ou le segment de mémoire. Les résultats en mode SAMPLED doivent être considérés comme étant approximatifs. Si l'index ou le segment de mémoire comporte moins de 10 000 pages, le mode DETAILED est utilisé à la place du mode SAMPLED.  
   
  Le mode DETAILED analyse toutes les pages et retourne toutes les statistiques.  
   
@@ -131,7 +131,7 @@ sys.dm_db_index_physical_stats (
 ## <a name="using-system-functions-to-specify-parameter-values"></a>Utilisation de fonctions système pour spécifier des valeurs de paramètres  
  Vous pouvez utiliser les [!INCLUDE[tsql](../../includes/tsql-md.md)] fonctions [DB_ID](../../t-sql/functions/db-id-transact-sql.md) et [object_id](../../t-sql/functions/object-id-transact-sql.md) pour spécifier une valeur pour les paramètres *database_id* et *object_id* . Toutefois, la transmission de valeurs non valides à ces fonctions peut entraîner des résultats imprévisibles. Par exemple, si le nom de la base de données ou de l'objet est introuvable car il n'existe pas ou il est mal orthographié, les deux fonctions retournent la valeur NULL. La fonction sys.dm_db_index_physical_stats interprète NULL comme une valeur générique qui spécifie toutes les bases de données ou tous les objets.  
   
- En outre, la fonction OBJECT_ID est traitée avant l’appel de la fonction sys. DM _ db_index_physical_stats et est donc évaluée dans le contexte de la base de données active, et non dans la base de données spécifiée dans *database_id*. Il est possible que la fonction OBJECT_ID retourne une valeur NULL ; ou, si le nom d'objet existe dans le contexte de la base de données active et la base de données spécifiée, un message d'erreur peut être retourné. Les exemples suivants présentent ces résultats inattendus.  
+ En outre, la fonction OBJECT_ID est traitée avant l’appel de la fonction sys. dm_db_index_physical_stats et est donc évaluée dans le contexte de la base de données active, et non dans la base de données spécifiée dans *database_id*. Il est possible que la fonction OBJECT_ID retourne une valeur NULL ; ou, si le nom d'objet existe dans le contexte de la base de données active et la base de données spécifiée, un message d'erreur peut être retourné. Les exemples suivants présentent ces résultats inattendus.  
   
 ```  
 USE master;  
@@ -168,7 +168,7 @@ GO
 ```  
   
 ### <a name="best-practice"></a>Bonne pratique  
- Vérifiez systématiquement qu'un ID valide est retourné lorsque vous utilisez DB_ID ou OBJECT_ID. Par exemple, lorsque vous utilisez object_id, spécifiez un nom en trois parties, `OBJECT_ID(N'AdventureWorks2012.Person.Address')`tel que, ou testez la valeur retournée par les fonctions avant de les utiliser dans la fonction sys. DM _ db_index_physical_stats. Les exemples A et B qui suivent illustrent une méthode sûre pour déterminer des ID de bases de données et d'objets.  
+ Vérifiez systématiquement qu'un ID valide est retourné lorsque vous utilisez DB_ID ou OBJECT_ID. Par exemple, lorsque vous utilisez OBJECT_ID, spécifiez un nom en trois parties, `OBJECT_ID(N'AdventureWorks2012.Person.Address')`tel que, ou testez la valeur retournée par les fonctions avant de les utiliser dans la fonction sys. dm_db_index_physical_stats. Les exemples A et B qui suivent illustrent une méthode sûre pour déterminer des ID de bases de données et d'objets.  
   
 ## <a name="detecting-fragmentation"></a>Détection de la fragmentation  
  La fragmentation a lieu lors de la modification des données (instructions INSERT, UPDATE et DELETE) effectuées sur la table, et donc dans les index définis sur la table. Comme ces modifications ne sont généralement pas distribuées équitablement entre les lignes de la table et des index, le remplissage de chaque page peut varier dans le temps. Pour les requêtes qui analysent tout ou partie des index d'une table, ce type de fragmentation peut entraîner des lectures de pages supplémentaires. Cela perturbe l'analyse parallèle des données.  
@@ -177,9 +177,9 @@ GO
   
  **Fragmentation logique**  
   
- Pourcentage de pages hors service dans les pages de feuilles d'un index. Une page non ordonnée est une page pour laquelle la page physique suivante allouée à l’index n’est pas la page désignée par le pointeur de pag*e* suivante dans la page feuille actuelle.  
+ Pourcentage de pages hors service dans les pages de feuilles d'un index. Une page non ordonnée est une page pour laquelle la page physique suivante allouée à l'index n'est pas la page désignée par le pointeur de pag*e* suivante dans la page feuille actuelle.  
   
- **Fragmentation de l’étendue**  
+ **Fragmentation de l'étendue**  
   
  Pourcentage d'étendues hors service dans les pages de feuilles d'un segment de mémoire. Une étendue est hors service lorsque l'étendue qui contient la page active d'un segment de mémoire n'est pas physiquement l'étendue suivant l'étendue contenant la page précédente.  
   
@@ -199,10 +199,10 @@ GO
  La fragmentation seule n'est pas une raison suffisante pour réorganiser ou reconstruire un index. Le principal effet de la fragmentation est le ralentissement de la lecture anticipée lors de l'analyse d'un index. Les temps de réponse sont donc plus longs. Si la charge de travail d'une requête sur une table ou un index fragmenté n'implique pas d'analyses car elle concerne essentiellement des recherches de singletons, la suppression de la fragmentation peut n'avoir aucun effet.
   
 > [!NOTE]  
->  L’exécution de DBCC SHRINKFILE ou de DBCC SHRINKDATABASE peut entraîner une fragmentation si un index est partiellement ou complètement déplacé pendant l’opération de réduction. Par conséquent, si une opération de compactage doit être effectuée, vous devez l'exécuter avant la suppression de la fragmentation.  
+>  L'exécution de DBCC SHRINKFILE ou de DBCC SHRINKDATABASE peut fragmenter un index si celui-ci est partiellement ou totalement déplacé pendant le compactage. Par conséquent, si une opération de compactage doit être effectuée, vous devez l'exécuter avant la suppression de la fragmentation.  
   
 ## <a name="reducing-fragmentation-in-a-heap"></a>Réduction de la fragmentation d'un segment de mémoire  
- Pour réduire la fragmentation de l'étendue d'un segment de mémoire, créez un index cluster sur la table puis supprimez l'index. Cela redistribue les données pendant la création de l'index cluster. Si l'on considère l'espace disponible dans la base de données, l'organisation des données est également optimale. Lorsque l'index cluster est par la suite supprimé pour recréer le segment de mémoire, les données ne sont pas déplacées et restent en position optimale. Pour plus d’informations sur l’exécution de ces opérations, consultez [Create index](../../t-sql/statements/create-index-transact-sql.md) et [Drop index](../../t-sql/statements/drop-index-transact-sql.md).  
+ Pour réduire la fragmentation de l'étendue d'un segment de mémoire, créez un index cluster sur la table puis supprimez l'index. Cela redistribue les données pendant la création de l'index cluster. Si l'on considère l'espace disponible dans la base de données, l'organisation des données est également optimale. Lorsque l'index cluster est par la suite supprimé pour recréer le segment de mémoire, les données ne sont pas déplacées et restent en position optimale. Pour plus d'informations sur l'exécution de ces opérations, consultez [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) et [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md).  
   
 > [!CAUTION]  
 >  La création et la suppression d’un index cluster sur une table reconstruit deux fois tous les index non cluster de cette table.  
@@ -234,7 +234,7 @@ GO
   
  Le refus de l'autorisation VIEW DATABASE STATE interdit le retour de tous les objets de la base de données, quelles que soient les autorisations CONTROL accordées sur des objets spécifiques. En outre, lorsque la base de données générique @*database_id*= null est spécifiée, la base de données est omise.  
   
- Pour plus d’informations, consultez [fonctions &#40;et vues de gestion dynamique Transact&#41;-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ Pour plus d’informations, consultez [fonctions et vues de gestion dynamique &#40;&#41;Transact-SQL ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Exemples  
   
@@ -285,7 +285,7 @@ GO
 ```  
   
 ### <a name="c-returning-information-for-all-databases"></a>C. Retour d'informations sur toutes les bases de données  
- L'exemple suivant retourne toutes les statistiques de l'ensemble des tables et des index dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en spécifiant la valeur générique `NULL` pour tous les paramètres. L’exécution de cette requête nécessite l’autorisation VIEW SERVER STATE.  
+ L'exemple suivant retourne toutes les statistiques de l'ensemble des tables et des index dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en spécifiant la valeur générique `NULL` pour tous les paramètres. L'exécution de cette requête nécessite l'autorisation VIEW SERVER STATE.  
   
 ```  
 SELECT * FROM sys.dm_db_index_physical_stats (NULL, NULL, NULL, NULL, NULL);  
@@ -294,7 +294,7 @@ GO
 ```  
   
 ### <a name="d-using-sysdm_db_index_physical_stats-in-a-script-to-rebuild-or-reorganize-indexes"></a>D. Utilisation de sys.dm_db_index_physical_stats dans un script pour reconstruire ou réorganiser des index  
- Le code exemple suivant réorganise ou reconstruit automatiquement toutes les partitions d'une base de données dont la fragmentation moyenne est supérieure à 10 %. L'exécution de cette requête nécessite l'autorisation VIEW DATABASE STATE. Cet exemple spécifie `DB_ID` en tant que premier paramètre sans fournir de nom de base de données. Une erreur sera générée si le niveau de compatibilité de la base de données active est inférieur ou égal à 80. Pour résoudre cette erreur, remplacez `DB_ID()` par un nom de base de données valide. Pour plus d’informations sur les niveaux de compatibilité de base de données, consultez [ALTER DATABASE Compatibility &#40;Level Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+ Le code exemple suivant réorganise ou reconstruit automatiquement toutes les partitions d'une base de données dont la fragmentation moyenne est supérieure à 10 %. L'exécution de cette requête nécessite l'autorisation VIEW DATABASE STATE. Cet exemple spécifie `DB_ID` en tant que premier paramètre sans fournir de nom de base de données. Une erreur sera générée si le niveau de compatibilité de la base de données active est inférieur ou égal à 80. Pour résoudre cette erreur, remplacez `DB_ID()` par un nom de base de données valide. Pour plus d’informations sur les niveaux de compatibilité de base de données, consultez [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ```  
 -- Ensure a USE <databasename> statement has been executed first.  
@@ -410,7 +410,7 @@ FROM sys.dm_db_index_physical_stats (db_id(),
   
 ||  
 |-|  
-|**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**S’applique à** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]jusqu’à.|  
   
  Les exemples suivants montrent comment interroger les files d’attente de service Broker pour la fragmentation.  
   
@@ -425,12 +425,12 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Fonctions et vues de gestion dynamique relatives aux index &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
- [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
- [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
- [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [Vues &#40;système Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Fonctions et vues de gestion dynamique liées aux index &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [sys. dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
+ [sys. dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
+ [sys. dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
+ [sys. allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [Vues système &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
 

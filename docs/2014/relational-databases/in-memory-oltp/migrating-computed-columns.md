@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7f5355af9adb2ae2a06fab1041b22959165dfaf2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63165043"
 ---
 # <a name="migrating-computed-columns"></a>Migration de colonnes calculées
-  Les colonnes calculées ne sont pas prises en charge dans les tables optimisées en mémoire. Toutefois, vous pouvez simuler une colonne calculée.  
+  Les colonnes calculées ne sont pas prises en charge dans les tables mémoire optimisées. Toutefois, vous pouvez simuler une colonne calculée.  
   
  Pensez à rendre vos colonnes calculées persistantes lorsque vous migrez vos tables sur disque vers des tables mémoire optimisées. Les performances des tables mémoire optimisées et des procédures stockées compilées en mode natif peuvent remettre en cause le besoin de persistance.  
   

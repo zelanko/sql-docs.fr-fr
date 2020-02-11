@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705517"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Gérer les sessions d'événements dans l'Explorateur d'objets
@@ -36,7 +36,7 @@ ms.locfileid: "62705517"
  Pour plus d'informations sur la création d'une session d'événements étendus, consultez [Create an Extended Events Session](../../database-engine/create-an-extended-events-session.md).  
   
 ## <a name="starting-or-stopping-an-extended-events-session"></a>Démarrer ou arrêter une session d'événements étendus  
- Vous pouvez démarrer ou arrêter une session d’événements étendus via le **éditeur de requête** à l’aide de la `ALTER EVENT SESSION` instruction, ou à l’aide de la **événements étendus** nœud de **Explorateur d’objets**.  
+ Vous pouvez démarrer ou arrêter une session d’événements étendus via l' **éditeur** de `ALTER EVENT SESSION` requête à l’aide de l’instruction, ou en utilisant le nœud **événements étendus** de l' **Explorateur d’objets**.  
   
  Quand vous arrêtez une session d’événements, la session n’apparaît plus comme une session active dans la vue de gestion dynamique sys.dm_xe_sessions. Toutefois, la définition de session reste intacte, et vous pouvez redémarrer la session. Pour supprimer complètement une définition de session, vous devez supprimer la session.  
   
@@ -128,7 +128,7 @@ STATE = STOP
  Quand vous supprimez une session d’événements, toutes les informations de configuration sont supprimées, et la définition de session ne s’affiche plus dans l’affichage catalogue sys.server_event_sessions.  
   
 > [!NOTE]  
->  system_health et AlwaysOn_health sont fournis avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; ne les supprimez pas. system_health est activée par défaut (pour plus d’informations, consultez [Utiliser la session system_health](use-the-ssms-xe-profiler.md)). AlwaysOn_health est désactivée par défaut. Ces sessions collectent des données qui peuvent être utiles pour le diagnostic des problèmes de performances.  
+>  system_health et AlwaysOn_health sont inclus dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; ne les supprimez pas. system_health est activée par défaut (pour plus d’informations, consultez [Utiliser la session system_health](use-the-ssms-xe-profiler.md)). AlwaysOn_health est désactivé par défaut. Ces sessions collectent des données qui peuvent être utiles pour le diagnostic des problèmes de performances.  
   
  Pour supprimer une session d'événements étendus, vous devez disposer de l'autorisation ALTER ANY EVENT SESSION.  
   

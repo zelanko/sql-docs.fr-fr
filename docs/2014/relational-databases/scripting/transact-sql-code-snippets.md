@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bbd2b5d690303521d11fcd0f4888b4dc611406e8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243117"
 ---
 # <a name="transact-sql-code-snippets"></a>Extraits de code Transact-SQL
@@ -25,8 +25,8 @@ ms.locfileid: "75243117"
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
 |Explique comment insérer un extrait de code existant, tel qu'un extrait de code CREATE TABLE ou SELECT.|[Insérer des extraits de code Transact-SQL](insert-transact-sql-snippets.md)|  
-|Explique comment insérer un ensemble d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans un bloc BEGIN, IF ou WHILE.|[Insérer des extraits de code d’entourage avec des extraits de code Transact-SQL](insert-surround-with-transact-sql-snippets.md)|  
-|Explique comment terminer la génération d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] complète ou d'un bloc après avoir inséré un extrait de code.|[Terminer les extraits de code Transact-SQL](complete-transact-sql-snippets.md)|  
+|Explique comment insérer un ensemble d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans un bloc BEGIN, IF ou WHILE.|[Insérer des extraits de code d’entourage (surround-with) Transact-SQL](insert-surround-with-transact-sql-snippets.md)|  
+|Explique comment terminer la génération d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] complète ou d'un bloc après avoir inséré un extrait de code.|[Compléter des extraits de code Transact-SQL](complete-transact-sql-snippets.md)|  
 |Explique comment générer vos propres extraits de code personnalisés et les ajouter à l'ensemble d'extraits de code SQL Server.|[Ajouter des extraits de code Transact-SQL](add-transact-sql-snippets.md)|  
   
 ## <a name="see-also"></a>Voir aussi  

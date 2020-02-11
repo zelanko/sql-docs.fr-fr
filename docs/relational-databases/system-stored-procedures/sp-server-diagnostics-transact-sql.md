@@ -18,10 +18,10 @@ ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d150d9b027b9a2c4d309ca2055722bb47ba092a4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982116"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
@@ -29,9 +29,9 @@ ms.locfileid: "73982116"
 
 Capture des données de diagnostics et des informations d'intégrité à propos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour détecter des échecs potentiels. La procédure fonctionne en mode de répétition et envoie régulièrement des résultats. Elle peut être appelée depuis une connexion DAC ou ordinaire.  
   
-**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures).  
+**S’applique à** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (et versions ultérieures).  
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,7 +40,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @repeat_interval = ] 'repeat_interval_in_seconds'` indique l’intervalle de temps pendant lequel la procédure stockée s’exécutera à plusieurs reprises pour envoyer des informations d’intégrité.  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'`Indique l’intervalle de temps pendant lequel la procédure stockée s’exécutera à plusieurs reprises pour envoyer des informations d’intégrité.  
   
  *repeat_interval_in_seconds* est de **type int** avec 0 comme valeur par défaut. Les valeurs de paramètre valides sont 0, ou toute valeur égale à ou supérieure à 5. La procédure stockée doit s'exécuter au moins 5 secondes pour retourner des données complètes. La valeur minimale pour que la procédure stockée s'exécute en mode de répétition est de 5 secondes.  
   
@@ -50,20 +50,20 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
  Si la valeur spécifiée est supérieure ou égale à 5, la procédure stockée s'exécute à plusieurs reprises pour retourner l'état d'intégrité jusqu'à ce qu'elle soit annulée manuellement.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
 0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
 **sp_server_diagnostics** retourne les informations suivantes :  
   
-|Colonne|Data type|Description|  
+|Colonne|Type de données|Description|  
 |------------|---------------|-----------------|  
-|**creation_time**|**datetime**|Indique l'horodateur de la création de ligne. Chaque ligne dans un ensemble de lignes unique a le même horodateur.|  
-|**component_type**|**sysname**|Indique si la ligne contient des informations pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composant au niveau de l’instance ou pour un groupe de disponibilité Always On :<br /><br /> instance<br /><br /> Always On : AvailabilityGroup|  
-|**component_name**|**sysname**|Indique le nom du composant ou le nom du groupe de disponibilité :<br /><br /> système<br /><br /> ressource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> Des événements.<br /><br /> *\<le nom du groupe de disponibilité >*|  
-|**state**|**int**|Indique l'état d'intégrité du composant :<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|**creation_time**|**DATETIME**|Indique l'horodateur de la création de ligne. Chaque ligne dans un ensemble de lignes unique a le même horodateur.|  
+|**component_type**|**sysname**|Indique si la ligne contient des informations pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le composant au niveau de l’instance ou pour un groupe de disponibilité Always On :<br /><br /> instance<br /><br /> Always On : AvailabilityGroup|  
+|**component_name**|**sysname**|Indique le nom du composant ou le nom du groupe de disponibilité :<br /><br /> système<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> événements<br /><br /> *\<nom du groupe de disponibilité>*|  
+|**Département**|**int**|Indique l'état d'intégrité du composant :<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|Décrit la colonne d'état. Les descriptions qui correspondent aux valeurs dans la colonne d'état sont :<br /><br /> 0 : inconnu<br /><br /> 1 : nettoyer<br /><br /> 2 : AVERTISSEMENT<br /><br /> 3 : erreur|  
-|**data**|**varchar (max)**|Spécifie des données spécifiques au composant.|  
+|**métadonnée**|**varchar (max)**|Spécifie des données spécifiques au composant.|  
   
  Voici les descriptions des cinq composants :  
   
@@ -77,7 +77,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **événements**: collecte des données et des surfaces via la procédure stockée sur les erreurs et événements d’intérêt enregistrés par le serveur, y compris des détails sur les exceptions de mémoire tampon en anneau, les événements de mémoire tampon en anneau sur le répartiteur de mémoire, la mémoire insuffisante, le moniteur du planificateur, le pool de mémoires tampons, les verrouillages spinlock et la connectivité. Les événements afficheront toujours 0 comme état.  
   
--   **\<nom du groupe de disponibilité >** : collecte les données du groupe de disponibilité spécifié (si component_type = "Always On : AvailabilityGroup").  
+-   **nom du groupe de disponibilité> : collecte les données pour le groupe de disponibilité spécifié (si component_type = "Always On : AvailabilityGroup"). \< **  
   
 ## <a name="remarks"></a>Notes  
 Du point de vue d'un échec, les composant system, resource et query_processing seront exploités pour la détection de pannes, tandis que les composants io_subsystem et events le seront uniquement à des fins de diagnostics.  
@@ -87,10 +87,10 @@ Le tableau suivant mappe les composants à leurs états d'intégrité associés.
 |Components|Bon état (1)|Avertissement (2)|Erreur (3)|Inconnu (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |système|x|x|x||  
-|ressource|x|x|x||  
+|resource|x|x|x||  
 |query_processing|x|x|x||  
 |io_subsystem|x|x|||  
-|Des événements.||||x|  
+|événements||||x|  
   
 Le (x) dans chaque ligne représente des états d'intégrité valides pour le composant. Par exemple, io_subsystem indiquera un bon état ou un avertissement. Il n'affichera pas les états d'erreur.  
  

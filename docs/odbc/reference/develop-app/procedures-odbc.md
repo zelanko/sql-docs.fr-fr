@@ -14,16 +14,16 @@ ms.assetid: 92172f52-6bd2-4b17-9ef0-baf1a97f7510
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18955db5c11f4f338091598ac717a71e7c78969e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68023275"
 ---
 # <a name="procedures-odbc"></a>Procédures dans ODBC
-Un *procédure* est un objet exécutable stocké sur la source de données. Généralement, il s'agit d'une ou plusieurs instructions SQL qui ont été précompilées.  
+Une *procédure* est un objet exécutable stocké dans la source de données. Généralement, il s'agit d'une ou plusieurs instructions SQL qui ont été précompilées.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Quand utiliser des procédures](../../../odbc/reference/develop-app/when-to-use-procedures.md)  
   

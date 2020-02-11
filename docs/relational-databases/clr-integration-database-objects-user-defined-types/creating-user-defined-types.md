@@ -1,5 +1,5 @@
 ---
-title: Création d’un Type défini par l’utilisateur | Microsoft Docs
+title: Création d’un type défini par l’utilisateur | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f08067c55110b801cd989e0be1c9fbc6955cb61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54aa7db3d2c2ea0d268874f0d59c3096b8e1a0ae
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028271"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76911083"
 ---
 # <a name="creating-user-defined-types"></a>Création de types définis par l’utilisateur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Pour créer un type défini par l'utilisateur capable d'être installé dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez créer tout d'abord une classe dans l'un des langages de programmation .NET Framework pris en charge, tels que Visual C# ou Visual Basic, conforme aux spécifications de création de types définis par l'utilisateur. La classe peut ensuite être compilée en tant que bibliothèque de liens dynamiques (DLL), qui peut être chargée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez également créer et déployer des types définis par l'utilisateur à l'aide de Visual Studio.  
   
- La fonctionnalité d'exécution du code CLR est désactivée par défaut dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le CLR peut être activé à l’aide de la **sp_configure** système de procédure stockée, comme indiqué dans l’exemple suivant [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions :  
+ La fonctionnalité d'exécution du code CLR est désactivée par défaut dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le CLR peut être activé à l’aide de la procédure stockée système **sp_configure** , comme indiqué [!INCLUDE[tsql](../../includes/tsql-md.md)] dans les instructions suivantes :  
   
 ```  
 sp_configure 'clr enabled', 1  
@@ -33,16 +33,16 @@ Reconfigure
 ```  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Configuration requise pour les types définis par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md)  
+ [Configuration requise pour les types définis par l'utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md)  
  Décrit les spécifications de codage des types définis par l'utilisateur.  
   
- [Codage de types définis par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)  
+ [Codage de types définis par l'utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)  
  Illustre des techniques de codage impliquées dans la création des types définis par l'utilisateur.  
   
 ## <a name="example"></a>Exemple  
- Le code suivant définit l’UDT Point, qui est décrite en détail dans [Coding User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
+ La liste de code suivante définit l’UDT Point, qui est décrit en détail dans [codage des types définis par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
- Le code complet pour les autres exemples discutés dans cette section peut être obtenu en installant les exemples CLR. Pour obtenir des instructions sur l’installation de ces exemples, consultez [exemples pour le moteur de base de données SQL Server](https://msftengprodsamples.codeplex.com/).  
+ Le code complet pour les autres exemples discutés dans cette section peut être obtenu en installant les exemples CLR. Pour obtenir des instructions sur l’installation de ces exemples, consultez [SQL Server moteur de base de données des exemples](https://msftengprodsamples.codeplex.com/).  
   
  C#  
   
@@ -84,7 +84,7 @@ public struct Point : INullable
     public override string ToString()  
     {  
         // Since InvokeIfReceiverIsNull defaults to 'true'  
-        // this test is unneccesary if Point is only being called  
+        // this test is unnecessary if Point is only being called  
         // from SQL.  
         if (this.IsNull)  
             return "NULL";  
@@ -233,7 +233,7 @@ Imports System.Text
     ' Use StringBuilder to provide string representation of UDT.  
     Public Overrides Function ToString() As String  
         ' Since InvokeIfReceiverIsNull defaults to 'true'  
-        ' this test is unneccesary if Point is only being called  
+        ' this test is unnecessary if Point is only being called  
         ' from SQL.  
         If Me.IsNull Then  
             Return "NULL"  
@@ -331,6 +331,6 @@ End Structure
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types CLR définis par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [Types CLR définis par l'utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

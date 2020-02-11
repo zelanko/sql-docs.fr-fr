@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f0aa1455ffd9f52fd917f68d2bb0bb80e3f25a94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006274"
 ---
 # <a name="comment-mdx"></a>Commentaire (MDX)
@@ -32,7 +32,7 @@ ms.locfileid: "68006274"
  Chaîne contenant le texte du commentaire.  
   
 ## <a name="remarks"></a>Notes  
- Le serveur n’évalue pas le texte entre les caractères de commentaire / * et \*/. Il est possible d'insérer des commentaires sur une ligne distincte ou à l'intérieur d'une instruction MDX. Commentaires de plusieurs lignes doivent être signalés par /\* et \*/.  
+ Le serveur n’évalue pas le texte entre les caractères de commentaire,/ \** et/. Il est possible d'insérer des commentaires sur une ligne distincte ou à l'intérieur d'une instruction MDX. Les commentaires sur plusieurs lignes doivent être indiqués par\* / \*et/.  
   
  Il n'y a pas de longueur maximale pour les commentaires. Les commentaires peuvent être imbriqués ; par exemple, `/* Test /*Comment*/ Text*/` est un commentaire imbriqué.  
   
@@ -53,8 +53,8 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [&#40;Commentaire&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
- [-- &#40;Comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
- [Référence des opérateurs MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Commentaire&#40;&#41; &#40;&#41;MDX](../mdx/comment-mdx-double-slash.md)   
+ [--&#40;comment&#41; &#40;&#41;MDX](../mdx/comment-mdx-operator-reference.md)   
+ [Référence des opérateurs MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
   
   

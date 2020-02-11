@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a15613c61db7469b242bbd5b76e5d1e51912e6be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270558"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>Personnaliser la quantité d'informations affichées dans les schémas (Visual Database Tools)
@@ -27,7 +27,7 @@ ms.locfileid: "63270558"
   
  Les choix sont les suivants :  
   
--   Standard  
+-   standard  
   
 -   Noms des colonnes  
   
@@ -54,6 +54,6 @@ ms.locfileid: "63270558"
 3.  Dans la boîte de dialogue **Sélectionner les colonnes** , choisissez les propriétés que vous souhaitez afficher quand **Custom** est sélectionné dans le menu **Vue Table** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utiliser des schémas de base de données &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [Utiliser des diagrammes de base de données &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

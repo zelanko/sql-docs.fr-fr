@@ -10,20 +10,21 @@ ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6bf2f4fd41ab67a0631fe5169a7904b571c842cc
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: c2636d417bb9956ac56885686b3512cc3c119cd7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73637666"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76929502"
 ---
 # <a name="calendar-aware-date-and-time-udt-sample"></a>Exemple de type de date et d’heure prenant en compte le calendrier
   Le stockage de dates sous forme de chaînes peut prêter à confusion car les dates sont sans intérêt si vous ne connaissez pas le système de calendrier utilisé. L'exemple `CADatetime` présente deux types de données définis par l'utilisateur, `CADatetime` et `CADate`, qui fournissent une gestion des dates et des heures utilisant un calendrier.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour créer et exécuter ce projet, les logiciels suivants doivent être installés :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://www.microsoft.com/sql-server/sql-server-editions-express)  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://www.microsoft.com/sql-server/sql-server-editions-express)  
   
 -   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](https://go.microsoft.com/fwlink/?linkid=62796)  
   
@@ -181,7 +182,7 @@ ms.locfileid: "73637666"
         private static readonly char[] allowedDoublePatternChars = new char[] { 'g', '\\' };  
   
         /// <summary>  
-        ///     Each tick is 100 nanoseconds.  This conversion factor when multipled by the number of  
+        ///     Each tick is 100 nanoseconds.  This conversion factor when multiplied by the number of  
         ///     days yields the number of ticks which make up that day.  Ticks are interesting as they  
         ///     can be used to construct DateTime instances in order to perform various date based computations.  
         /// </summary>  
@@ -1725,6 +1726,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Scénarios et exemples d’utilisation pour l’intégration du CLR &#40;Common Language Runtime&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [Scénarios d’utilisation et exemples pour le Common Language Runtime &#40;l’intégration du CLR&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

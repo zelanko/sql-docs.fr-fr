@@ -11,10 +11,10 @@ ms.reviewer: martinle
 ms.custom: seo-dt-2019
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
 ms.openlocfilehash: 7071c9cb46bde6e2d353293cec9f01451c0b4f67
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401287"
 ---
 # <a name="configure-auto-statistics"></a>Configurer les statistiques automatiques
@@ -55,7 +55,7 @@ ALTER DATABASE myPDW SET AUTO_UPDATE_STATISTICS_ASYNC ON
  
 AUTO_UPDATE option STATISTICS_ASYNC ne fonctionne que si la AUTO_UPDATE_STATISTICS est activée.  Par conséquent, les statistiques ne sont pas mises à jour lorsque AUTO_UPDATE_STATISTICS est désactivé et AUTO_UPDATE_STATISTICS_ASYNC est activé. 
 
-### <a name="error-messages"></a>messages d'erreur
+### <a name="error-messages"></a>Messages d’erreur
 Vous pouvez recevoir le message d’erreur « cette option n’est pas prise en charge dans PDW ».  Cette erreur se produit lorsque l’administrateur système n’a pas activé les statistiques automatiques et que vous essayez de définir l’une des options de statistiques automatiques dans ALTER DATABASE. 
 
 ### <a name="limitations-and-restrictions"></a>Limitations et restrictions

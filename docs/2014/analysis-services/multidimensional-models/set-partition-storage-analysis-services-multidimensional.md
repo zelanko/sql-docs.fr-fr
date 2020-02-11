@@ -1,5 +1,5 @@
 ---
-title: Définir un stockage de Partition (Analysis Services - multidimensionnel) | Microsoft Docs
+title: Définir un stockage de partitions (Analysis Services-multidimensionnel) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,19 +26,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d86734023080c9b7fc62cff636d4f1952d00d0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072988"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>Définir un stockage de partitions (Analysis Services - Multidimensionnel)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit plusieurs configurations de stockage standard pour les modes de stockage et les options de mise en cache. Celles-ci fournissent des configurations fréquemment utilisées pour la notification des mises à jour, la latence et la reconstruction des données.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit plusieurs configurations de stockage standard pour les modes de stockage et les options de mise en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cache. Celles-ci fournissent des configurations fréquemment utilisées pour la notification des mises à jour, la latence et la reconstruction des données.  
   
  Vous pouvez spécifier le stockage de partitions dans l'onglet Partitions du cube dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], ou dans la page de propriétés de partition de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="guidelines-for-choosing-a-storage-mode"></a>Instructions pour le choix d'un mode de stockage  
- Pour un groupe de mesures important, il est courant de configurer le stockage différemment pour les différentes partitions. Respectez les consignes suivantes :  
+ Pour un groupe de mesures important, il est courant de configurer le stockage différemment pour les différentes partitions. Tenez compte des recommandations suivantes :  
   
 -   Utiliser le mode ROLAP en temps réel pour les données actuelles qui sont mises à jour en continu.  
   

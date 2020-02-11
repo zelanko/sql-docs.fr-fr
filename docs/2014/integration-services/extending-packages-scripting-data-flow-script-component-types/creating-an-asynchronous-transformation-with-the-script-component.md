@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1940405c6bde86364024e10694f9aaf1da24b06d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768615"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Création d'une transformation asynchrone à l'aide du composant Script
@@ -70,7 +70,7 @@ ms.locfileid: "62768615"
 ### <a name="adding-variables"></a>Ajout de variables  
  S’il existe des variables dont vous souhaitez utiliser les valeurs dans votre script, vous pouvez les ajouter dans les champs de propriété ReadOnlyVariables et ReadWriteVariables de la page **Script** de l’**Éditeur de transformation de script**.  
   
- Lorsque vous ajoutez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également sélectionner plusieurs variables en cliquant sur les points de suspension ( **...** ) situé en regard du `ReadOnlyVariables` et `ReadWriteVariables` champs de propriété, puis en sélectionnant les variables dans le **sélectionner des variables** boîte de dialogue.  
+ Lorsque vous ajoutez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également sélectionner plusieurs variables en cliquant sur le bouton des points de suspension (**...**) en regard des `ReadOnlyVariables` champs de propriété et `ReadWriteVariables` , puis en sélectionnant les variables dans la boîte de dialogue Sélectionner des **variables** .  
   
  Pour obtenir des informations générales sur l’utilisation de variables avec le composant Script, consultez [Utilisation de variables dans le composant Script](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -82,11 +82,11 @@ ms.locfileid: "62768615"
  Pour obtenir des informations importantes concernant tous les types de composants créés à l’aide du composant Script, consultez [Codage et débogage du composant Script](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md).  
   
 ### <a name="understanding-the-auto-generated-code"></a>Fonctionnement du code généré automatiquement  
- Lorsque vous ouvrez l’IDE VSTA après avoir créé et configuré un composant de transformation, le texte modifiable `ScriptMain` classe apparaît dans l’éditeur de code avec les stubs de méthodes CreateNewOutputRows et ProcessInputRow. La classe ScriptMain est l’emplacement où vous allez écrire votre code personnalisé et ProcessInputRow est la méthode la plus importante d’un composant de transformation. La méthode `CreateNewOutputRows`, plus généralement utilisée dans un composant source, s'apparente à une transformation asynchrone dans la mesure où les deux composants doivent créer leurs propres lignes de sortie.  
+ Lorsque vous ouvrez l’environnement de développement intégré VSTA après avoir créé et configuré un composant de `ScriptMain` transformation, la classe modifiable apparaît dans l’éditeur de code avec des stubs pour les méthodes ProcessInputRow et CreateNewOutputRows. La classe ScriptMain est l’emplacement où vous allez écrire votre code personnalisé et ProcessInputRow est la méthode la plus importante d’un composant de transformation. La méthode `CreateNewOutputRows`, plus généralement utilisée dans un composant source, s'apparente à une transformation asynchrone dans la mesure où les deux composants doivent créer leurs propres lignes de sortie.  
   
- Si vous ouvrez le VSTA **Explorateur de projets** fenêtre, vous pouvez voir que le composant Script a également généré en lecture seule `BufferWrapper` et `ComponentWrapper` éléments de projet. La classe ScriptMain hérite de la classe UserComponent dans le `ComponentWrapper` élément de projet.  
+ Si vous ouvrez la fenêtre **Explorateur de projets** VSTA, vous pouvez voir que le composant script a également généré des éléments `BufferWrapper` de `ComponentWrapper` projet et en lecture seule. La classe ScriptMain hérite de la classe UserComponent dans l' `ComponentWrapper` élément de projet.  
   
- Au moment de l’exécution, le moteur de flux de données appelle la méthode PrimeOutput la `UserComponent` classe, qui remplace le <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> méthode de la <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> classe parente. La méthode PrimeOutput appelle à son tour la méthode CreateNewOutputRows.  
+ Au moment de l’exécution, le moteur de workflow appelle la méthode PrimeOutput `UserComponent` dans la classe, qui remplace la <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> méthode de la <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> classe parente. La méthode PrimeOutput appelle à son tour la méthode CreateNewOutputRows.  
   
  Le moteur de flux de données appelle ensuite la méthode ProcessInput dans la classe UserComponent, qui remplace la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> de la classe parente <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. La méthode ProcessInput parcourt à son tour les lignes du tampon d’entrée et appelle la méthode ProcessInputRow une fois pour chaque ligne.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62768615"
   
  Dans une transformation asynchrone, vous pouvez utiliser la méthode AddRow pour ajouter des lignes à la sortie appropriée à partir des méthodes ProcessInputRow ou ProcessInput. Il est inutile d’utiliser la méthode CreateNewOutputRows. Si vous écrivez une seule ligne de résultats, comme des résultats d’agrégation, dans une sortie particulière, vous pouvez créer au préalable la ligne de sortie à l’aide de la méthode CreateNewOutputRows et spécifier ses valeurs ultérieurement après avoir traité toutes les lignes d’entrée. Toutefois, il est inutile de créer plusieurs lignes dans la méthode CreateNewOutputRows car le composant Script ne vous permet d’utiliser que la ligne en cours dans une entrée ou une sortie. La méthode CreateNewOutputRows est plus importante dans un composant source où il n’existe pas de ligne d’entrée à traiter.  
   
- Vous pouvez également remplacer la méthode ProcessInput elle-même, afin d’effectuer d’autres traitements préliminaires ou finaux avant ou après avoir parcouru la mémoire tampon d’entrée et appelé la méthode ProcessInputRow pour chaque ligne. Par exemple, un des exemples de code dans cette rubrique remplace la méthode ProcessInput pour compter le nombre d’adresses dans une ville spécifique en tant que ProcessInputRow parcourt les lignes`.` l’exemple écrit la valeur de synthèse dans la deuxième sortie une fois que toutes les lignes ont été traité. L’exemple exécute l’opération de sortie dans ProcessInput car les mémoires tampons de sortie ne sont plus disponibles lorsque la méthode PostExecute est appelée.  
+ Vous pouvez également remplacer la méthode ProcessInput elle-même, afin d’effectuer d’autres traitements préliminaires ou finaux avant ou après avoir parcouru la mémoire tampon d’entrée et appelé la méthode ProcessInputRow pour chaque ligne. Par exemple, l’un des exemples de code de cette rubrique remplace ProcessInput pour compter le nombre d’adresses dans une ville spécifique, car ProcessInputRow effectue une boucle`.` sur les lignes. l’exemple écrit la valeur résumée dans la deuxième sortie une fois que toutes les lignes ont été traitées. L’exemple exécute l’opération de sortie dans ProcessInput car les mémoires tampons de sortie ne sont plus disponibles lorsque la méthode PostExecute est appelée.  
   
  Selon vos besoins, vous voudrez également écrire le script dans les méthodes PreExecute et PostExecute disponibles dans la classe ScriptMain pour effectuer tout traitement préliminaire ou final.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62768615"
  Cet exemple présente le code personnalisé requis dans la classe ScriptMain pour créer un composant de transformation asynchrone.  
   
 > [!NOTE]  
->  Ces exemples utilisent la table **Person.Address** de l’exemple de base de données **AdventureWorks** et passent ses première et quatrième colonnes (à savoir les colonnes **intAddressID** et **nvarchar(30)City**) dans le flux de données. Les mêmes données sont utilisées dans les exemples de source, transformation et destination de cette section. Des conditions préalables et des hypothèses supplémentaires sont documentées pour chaque exemple.  
+>  Ces exemples utilisent la table **Person. Address** de l’exemple de base de données **AdventureWorks** et transmettent ses première et quatrième colonnes, les colonnes **intAddressID** et **nvarchar (30) City** , par le biais du workflow de données. Les mêmes données sont utilisées dans les exemples de source, transformation et destination de cette section. Des conditions préalables et des hypothèses supplémentaires sont documentées pour chaque exemple.  
   
  Cet exemple présente un composant de transformation asynchrone à deux sorties. Cette transformation transfère les colonnes **AddressID** et **City** dans une sortie, tout en comptant le nombre d’adresses situées dans une ville spécifique (Redmond, Washington, États-Unis), puis elle exporte la valeur obtenue vers une deuxième sortie.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "62768615"
   
 8.  Créez et configurez un autre composant de destination pour la deuxième sortie. Puis connectez la deuxième sortie de la transformation, **MySummaryOutput**, au composant de destination. Comme la deuxième sortie écrit une seule ligne avec une seule valeur, vous pouvez configurer facilement une destination à l'aide d'un gestionnaire de connexions de fichiers plats qui se connecte à un nouveau fichier contenant une seule colonne. Dans l’exemple, cette colonne de destination est nommée **MyRedmondCount**.  
   
-9. Exécutez l'exemple.  
+9. Exécutez l’exemple.  
   
 ```vb  
 Public Class ScriptMain  
@@ -229,7 +229,7 @@ public class ScriptMain:
   
 ```  
   
-![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône de Integration Services (petite)](../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Présentation des transformations synchrones et asynchrones](../understanding-synchronous-and-asynchronous-transformations.md)   

@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 429956528484a11b26caf6c39a666ef933515314
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762371"
 ---
-# <a name="mssqlserver8651"></a>MSSQLSERVER_8651
+# <a name="mssqlserver_8651"></a>MSSQLSERVER_8651
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|8651|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|8651|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|MEMGRANT_ERR|  
 |Texte du message|Impossible d'exécuter l'opération demandée, car la mémoire est insuffisante. Diminuez la valeur configurée pour l'option de configuration de serveur « min memory per query ».|  
@@ -42,7 +42,7 @@ ms.locfileid: "62762371"
   
 1.  Vérifiez si d'autres applications ou services consomment de la mémoire sur ce serveur. Reconfigurez les applications ou les services moins importants pour consommer moins de mémoire.  
   
-2.  Commencer à collecter les compteurs d’analyseur de performances pour **SQL Server : Gestionnaire de tampons**, **SQL Server : Gestionnaire de mémoire**.  
+2.  Commencez la collecte des compteurs de l’analyseur de performances pour **SQL Server : Buffer Manager**, **SQL Server : Memory Manager**.  
   
 3.  Vérifiez les paramètres de configuration de la mémoire de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suivants :  
   
@@ -73,9 +73,9 @@ ms.locfileid: "62762371"
  Si le problème persiste, vous devez poursuivre vos recherches et éventuellement, réduire la charge de travail.  
   
 ## <a name="see-also"></a>Voir aussi  
- [DBCC FREESYSTEMCACHE &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-freesystemcache-transact-sql)   
- [DBCC FREESESSIONCACHE &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-freesessioncache-transact-sql)   
- [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql)   
+ [DBCC FREESYSTEMCACHE &#40;&#41;Transact-SQL](/sql/t-sql/database-console-commands/dbcc-freesystemcache-transact-sql)   
+ [DBCC FREESESSIONCACHE &#40;&#41;Transact-SQL](/sql/t-sql/database-console-commands/dbcc-freesessioncache-transact-sql)   
+ [DBCC FREEPROCCACHE &#40;&#41;Transact-SQL](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql)   
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [SQL Server, objet Gestionnaire de tampons](../performance-monitor/sql-server-buffer-manager-object.md)   
  [SQL Server, objet Memory Manager](../performance-monitor/sql-server-memory-manager-object.md)  

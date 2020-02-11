@@ -13,17 +13,17 @@ ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c99b9281071bc608f46edb9ace3c374c1fa60564
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922849"
 ---
 # <a name="configuring-rds"></a>Configuration de RDS
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Pour implémenter efficacement des services Bureau à distance, veillez à ce que vous êtes familiarisé avec les différentes configurations disponibles pour vous. Cette section inclut des informations importantes sur la sécurité et l’évolutivité de votre implémentation de RDS. Consultez les rubriques suivantes pour plus d’informations sur la configuration de vos ordinateurs pour l’utilisation de RDS.  
+ Pour implémenter RDS efficacement, veillez à vous familiariser avec les différentes configurations disponibles. Cette section contient des informations importantes sur la sécurité et l’évolutivité dans votre implémentation de RDS. Consultez les rubriques suivantes pour plus d’informations sur la configuration de vos ordinateurs pour utiliser RDS.  
   
 -   [Octroi de privilèges d’invité à un serveur web](../../../ado/guide/remote-data-service/granting-guest-privileges-to-a-web-server-computer.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "67922849"
 -   [Configuration de DataFactory en mode sans échec ou unrestricted](../../../ado/guide/remote-data-service/configuring-datafactory-for-safe-or-unrestricted-modes.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [À l’aide de Technologies associées avec RDS](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)   
+ [Utilisation des technologies associées avec RDS](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)   
  [Personnalisation de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Résolution des problèmes liés à RDS](../../../ado/guide/remote-data-service/troubleshooting-rds.md)
 

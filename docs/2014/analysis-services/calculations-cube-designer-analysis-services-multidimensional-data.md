@@ -1,5 +1,5 @@
 ---
-title: Calculs (Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Calculs (Concepteur de cube) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 07138beba90f3f863d81a24c7c92b2d9fd4a4276
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088288"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>Calculs (Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -35,7 +35,7 @@ ms.locfileid: "66088288"
   
 ## <a name="panes"></a>Volets  
  **Barre d'outils**  
- Utilisez la barre d'outils des modes Formulaire et Script pour exécuter des opérations courantes dans cet onglet. Pour plus d’informations sur ce volet, consultez [Barre d’outils &#40;onglet Calculs, Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md).  
+ Utilisez la barre d’outils en mode formulaire et script pour effectuer des opérations courantes dans cet onglet. Pour plus d’informations sur ce volet, consultez [barre d’outils &#40;l’onglet calculs, concepteur de Cube&#41; &#40;Analysis Services-&#41;de données multidimensionnelles ](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Organisateur de script**  
  Utilisez le volet **Organisateur de script** en mode Formulaire pour afficher le contenu du cube dans un format ordonné. Pour plus d’informations sur ce volet, consultez [Organisateur de script &#40;onglet Calculs, Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md).  
@@ -53,10 +53,10 @@ ms.locfileid: "66088288"
  Utilisez le volet **Éditeur de formulaire de jeu nommé** en mode Formulaire pour modifier les jeux nommés du script du cube. Pour plus d’informations sur ce volet, consultez [Éditeur de formulaire de jeu nommé &#40;onglet Calculs, Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objets de cube &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
- [Calculs](multidimensional-models-olap-logical-cube-objects/calculations.md)   
- [Principes de base des scripts MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Objets de cube &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+ [Touchant](multidimensional-models-olap-logical-cube-objects/calculations.md)   
+ [Notions de base de l’écriture de scripts MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Concepteur de cube &#40;Analysis Services-données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Créer des jeux nommés](multidimensional-models/create-named-sets.md)  
   
   

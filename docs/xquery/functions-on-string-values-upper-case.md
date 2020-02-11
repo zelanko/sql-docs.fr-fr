@@ -1,5 +1,5 @@
 ---
-title: Fonction UPPER-case (XQuery) | Microsoft Docs
+title: Fonction majuscule (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0dcbcbc0cd6c0cf479aee7a7c3fd8c5e53a53d28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004617"
 ---
 # <a name="functions-on-string-values---upper-case"></a>Fonctions sur les valeurs de chaîne : upper-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Cette fonction convertit chaque caractère dans *$arg* à son équivalent en majuscule. La conversion de casse binaire de Microsoft Windows pour les points de code Unicode spécifie le mode de conversion des caractères en majuscules. Cette norme est différente du mappage de la norme des points de code Unicode.  
+  Cette fonction convertit chaque caractère dans *$arg* en son équivalent en majuscules. La conversion de casse binaire de Microsoft Windows pour les points de code Unicode spécifie le mode de conversion des caractères en majuscules. Cette norme est différente du mappage de la norme des points de code Unicode.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,7 +47,7 @@ fn:upper-case($arg as xs:string?) as xs:string
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>R. Conversion d'une chaîne en majuscules.  
- L’exemple suivant modifie la chaîne d’entrée ' abcDEF ! @4» en majuscules.  
+ L’exemple suivant modifie la chaîne d’entrée’abcDEF ! '. @4» en majuscules.  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  

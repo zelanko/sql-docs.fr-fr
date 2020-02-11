@@ -14,46 +14,46 @@ ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b322dacbf85ec24b58e315ecbbf9d547d1481f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926487"
 ---
 # <a name="using-ado-with-scripting-languages"></a>Utilisation d’ADO avec les langages de script
-Dans un environnement de script, ADO vous permet d’exposer les données par le biais de scripts côté serveur. Dans ce scénario, ADO, le fournisseur OLE DB sous-jacent qui il utilise, et tous les composants nécessaires pour faire référence à un magasin de données donné sont installés sur un serveur exécutant Internet Information Services (IIS). À l’aide de Active Server Pages (ASP), ADO est un composant référencé dans un script qui peut générer du code HTML, par exemple. Ce contenu HTML peut être passé via HTTP à un navigateur Web client. À l’aide de scripts, la page Web peut renvoyer des actions au script côté serveur, ce qui vous permet de mettre à jour, de traverser ou afficher des données spécifiques.  
+Dans un environnement de script, ADO vous permet d’exposer des données par le biais de scripts côté serveur. Dans ce scénario, ADO, le fournisseur de OLE DB sous-jacent qu’il utilise et tous les autres composants nécessaires pour référencer un magasin de données donné sont installés sur un serveur exécutant Internet Information Services (IIS). À l’aide des pages d’Active Server (ASP), ADO est un composant référencé dans un script qui peut générer du code HTML, par exemple. Ce contenu HTML peut être transmis via HTTP à un navigateur Web client. En utilisant des scripts, la page Web peut renvoyer des actions au script côté serveur, ce qui vous permet de mettre à jour, parcourir ou afficher des données spécifiques.  
   
- Avant d’utiliser un objet ActiveX dans une page Web, il est important de savoir si l’objet est sécurisé pour le script. Lorsqu’un objet est considéré comme sécurisé pour le script, cela signifie que le contrôle ne peut pas intervenir dangereux sur l’ordinateur de l’utilisateur et par conséquent, peut être exécuté sans demander l’approbation de l’utilisateur. Le tableau suivant répertorie les objets ADO et indique s’ils sont sécurisés pour les scripts.  
+ Avant d’utiliser un objet ActiveX dans une page Web, il est important de savoir si l’objet est sécurisé pour l’écriture de scripts. Lorsqu’un objet est considéré comme sécurisé pour l’écriture de scripts, cela signifie que le contrôle ne peut pas prendre d’action nuisible sur l’ordinateur de l’utilisateur et peut donc être exécuté sans demander l’approbation de l’utilisateur. Le tableau suivant répertorie les objets ADO et indique s’ils sont sûrs pour l’écriture de scripts.  
   
-|Object|Sécurisée pour le script ?|  
+|Object|Sécurisé pour l’écriture de scripts ?|  
 |------------|-------------------------|  
 |Connexion ADO|Oui|  
 |Commande ADO|Non|  
 |Paramètre ADO|Non|  
-|Jeu d’enregistrements ADO|Oui|  
-|Objet Record ADO|Oui|  
-|ADO Stream|Oui|  
+|Recordset ADO|Oui|  
+|Enregistrement ADO|Oui|  
+|Flux ADO|Oui|  
 |Erreur ADO|Non|  
 |Catalogue ADOX|Non|  
-|Ensemble de cellules ADOX|Non|  
-|DataControl des services Bureau à distance|Oui|  
-|Espace de données de services Bureau à distance|Oui|  
-|DataFactory des services Bureau à distance|Non|  
+|CellSet, CellSet|Non|  
+|DataControl RDS|Oui|  
+|RDS DataSpace|Oui|  
+|Objet RDS DataFactory|Non|  
   
- Le tableau suivant répertorie les fournisseurs inclus avec Windows DAC/MDAC et indique s’ils sont sécurisés pour les scripts.  
+ Le tableau suivant répertorie les fournisseurs inclus avec Windows DAC/MDAC, et indique s’ils sont sûrs pour l’écriture de scripts.  
   
-|Fournisseur|Sécurisée pour le script ?|  
+|Fournisseur|Sécurisé pour l’écriture de scripts ?|  
 |--------------|-------------------------|  
-|Forme|Oui|  
-|Conserver|Oui|  
-|Remote|Oui|  
+|Graphique à base de formes|Oui|  
+|Persist|Oui|  
+|À distance|Oui|  
 |Fournisseur OLE DB pour SQL Server (SQLOLEDB)|Non|  
 |Fournisseur OLE DB pour ODBC (MSDASQL)|Non|  
   
 ## <a name="odbc-data-sources"></a>Sources de données ODBC  
- Une différence notable entre du code ADO script et le script est la Source de données ODBC si utilisé. Pour les applications sans script, vous pouvez créer un DSN utilisateur dans l’administrateur de sources de données ODBC. Pour les scripts qui sont exécutent sous IIS, vous devez créer une source de données système ; sinon vos scripts ne reconnaîtront pas la source de données que vous avez créé. Cela s’applique à n’importe quelle application de script de ADO à l’aide du fournisseur Microsoft OLE DB pour ODBC via Microsoft IIS.  
+ L’une des différences notables entre le script et le non-script ADO est la source de données ODBC, si elle est utilisée. Pour les applications sans script, vous pouvez créer un DSN utilisateur dans l’administrateur de la source de données ODBC. Pour les scripts qui s’exécutent sous IIS, vous devez créer un DSN système. dans le cas contraire, vos scripts ne reconnaîtront pas la source de données que vous avez créée. Cela s’applique à toute application de script ADO qui utilise le fournisseur Microsoft OLE DB pour ODBC par le biais de Microsoft IIS.  
   
-## <a name="referencing-the-ado-library"></a>Fait référence à la bibliothèque ADO  
+## <a name="referencing-the-ado-library"></a>Référencement de la bibliothèque ADO  
  Non applicable avec les langages de script.  
   
 ## <a name="handling-events"></a>Gestion des événements  

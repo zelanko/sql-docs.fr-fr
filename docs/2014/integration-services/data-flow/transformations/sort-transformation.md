@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dba1f3598abb8877721ff77d3dabcc8af8e0b94a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899882"
 ---
 # <a name="sort-transformation"></a>transformation de tri
@@ -32,7 +32,7 @@ ms.locfileid: "62899882"
  La transformation de tri comprend un ensemble d'options de comparaison qui permettent de définir la façon dont la transformation gère les données de chaîne dans une colonne. Pour plus d'informations, voir [Comparing String Data](../comparing-string-data.md).  
   
 > [!NOTE]  
->  La transformation de tri ne trie pas les GUID dans le même ordre que la clause ORDER BY dans Transact-SQL. Alors que la transformation de tri trie les GUID commençant par un numéro compris entre 0 et 9 avant les GUID commençant par une lettre comprise entre A et F, la clause ORDER BY, telle qu'elle est implémentée dans le [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], les trie différemment. Pour plus d’informations, consultez [Clause ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql).  
+>  La transformation de tri ne trie pas les GUID dans le même ordre que la clause ORDER BY dans Transact-SQL. Alors que la transformation de tri trie les GUID commençant par un numéro compris entre 0 et 9 avant les GUID commençant par une lettre comprise entre A et F, la clause ORDER BY, telle qu'elle est implémentée dans le [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], les trie différemment. Pour plus d’informations, consultez [Clause ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql).  
   
  La transformation de tri peut également supprimer les doublons de lignes dans le cadre du tri. Les doublons de lignes sont des lignes possédant les mêmes valeurs de clé de tri. La valeur de clé de tri est générée en fonction des options de comparaison de chaînes en cours d'utilisation ; par conséquent, différentes chaînes littérales peuvent avoir les mêmes valeurs de clé de tri. Dans les colonnes d'entrée, la transformation identifie en tant que doublons les lignes qui ont des valeurs différentes mais la même clé de tri.  
   

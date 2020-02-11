@@ -1,5 +1,5 @@
 ---
-title: NumericScale et Precision, propriétés, exemple (VC ++) | Microsoft Docs
+title: NumericScale et Precision, exemple de propriétés (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 70a751db424cec07a0ac617b3620316a07936400
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917963"
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>NumericScale et Precision, exemple de propriétés (VC++)
-Cet exemple utilise le [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) et [précision](../../../ado/reference/ado-api/precision-property-ado.md) propriétés pour afficher l’échelle numérique et la précision des champs dans le ***remises*** table de la  ***Pubs*** base de données.  
+Cet exemple utilise les propriétés [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) et [PRECISION](../../../ado/reference/ado-api/precision-property-ado.md) pour afficher l’échelle numérique et la précision des champs dans la table ***discounts*** de la base de données ***pubs*** .  
   
 ```cpp
 // BeginNumericScaleCpp.cpp  

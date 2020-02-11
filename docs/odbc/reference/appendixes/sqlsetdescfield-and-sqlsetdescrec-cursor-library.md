@@ -14,19 +14,19 @@ ms.assetid: 4ccff067-85cd-4bfa-a6cd-7f28051fb5b9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a21af2a2067498a3ec495013554b70d6a86455a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125574"
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField et SQLSetDescRec (bibliothèque de curseurs)
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans tout nouveau développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande d’utiliser les fonctionnalités de curseur du pilote.  
+>  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande l’utilisation de la fonctionnalité de curseur du pilote.  
   
- Cette rubrique explique comment utiliser le **SQLSetDescField** et **SQLSetDescRec** fonctions dans la bibliothèque de curseurs. Pour obtenir des informations générales sur ces fonctions, consultez [SQLSetDescField, fonction](../../../odbc/reference/syntax/sqlsetdescfield-function.md) et [SQLSetDescRec, fonction](../../../odbc/reference/syntax/sqlsetdescrec-function.md).  
+ Cette rubrique décrit l’utilisation des fonctions **SQLSetDescField** et **SQLSetDescRec** dans la bibliothèque de curseurs. Pour obtenir des informations générales sur ces fonctions, consultez [fonction SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) et [fonction SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md).  
   
- La bibliothèque de curseurs exécute **SQLSetDescField** lorsqu’elle est appelée pour retourner la valeur des champs définie pour les colonnes de signet :  
+ La bibliothèque de curseurs exécute **SQLSetDescField** lorsqu’elle est appelée pour retourner la valeur des champs définis pour les colonnes de signets :  
   
  SQL_DESC_DATA_PTR  
   
@@ -52,16 +52,16 @@ ms.locfileid: "68125574"
   
  SQL_DESC_NULLABLE  
   
- La bibliothèque de curseurs exécute les appels à **SQLSetDescRec** pour une colonne de signet.  
+ La bibliothèque de curseurs exécute des appels à **SQLSetDescRec** pour une colonne de signets.  
   
- Lorsque vous travaillez avec une application ODBC *2.x* pilote, la bibliothèque de curseurs retourne SQLSTATE HY090 (longueur de chaîne ou de mémoire tampon non valide) lorsque **SQLSetDescField** ou **SQLSetDescRec** est appelée Pour définir le champ SQL_DESC_OCTET_LENGTH pour l’enregistrement de signet d’un ARD sur une valeur non égale à 4. Lorsque vous travaillez avec une application ODBC *3.x* pilote, la bibliothèque de curseurs permet d’être n’importe quelle taille de la mémoire tampon.  
+ Lorsque vous utilisez un pilote ODBC *2. x* , la bibliothèque de curseurs retourne SQLState HY090 (chaîne ou longueur de mémoire tampon non valide) lorsque **SQLSetDescField** ou **SQLSetDescRec** est appelé pour définir le champ SQL_DESC_OCTET_LENGTH de l’enregistrement de signet d’un ARD sur une valeur qui n’est pas égale à 4. Lorsque vous utilisez un pilote ODBC *3. x* , la bibliothèque de curseurs permet à la mémoire tampon d’être de n’importe quelle taille.  
   
- La bibliothèque de curseurs exécute **SQLSetDescField** lorsqu’elle est appelée pour retourner la valeur du champ SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE ou SQL_DESC_ROW_STATUS_PTR. Ces champs peuvent être retournées pour n’importe quelle ligne, pas seulement la ligne du signet.  
+ La bibliothèque de curseurs exécute **SQLSetDescField** lorsqu’elle est appelée pour retourner la valeur du champ SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE ou SQL_DESC_ROW_STATUS_PTR. Ces champs peuvent être retournés pour n’importe quelle ligne, et pas seulement pour la ligne de signet.  
   
- La bibliothèque de curseurs n’exécute pas **SQLSetDescField** pour modifier n’importe quel champ de descripteur autres que les champs mentionnés précédemment. Si une application appelle **SQLSetDescField** pour définir tout autre champ lors du chargement de la bibliothèque de curseurs, l’appel est passé au pilote.  
+ La bibliothèque de curseurs n’exécute pas **SQLSetDescField** pour modifier un champ de descripteur autre que les champs mentionnés précédemment. Si une application appelle **SQLSetDescField** pour définir un autre champ pendant le chargement de la bibliothèque de curseurs, l’appel est passé au pilote.  
   
- La bibliothèque de curseurs prend en charge la modification dynamique des champs SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR et SQL_DESC_OCTET_LENGTH_PTR de n’importe quelle ligne d’un descripteur de ligne d’application (après un appel à **SQLExtendedFetch**, **SQLFetch**, ou **SQLFetchScroll**). Le champ SQL_DESC_OCTET_LENGTH_PTR peut être modifié à un pointeur null uniquement à annuler la liaison de la mémoire tampon de longueur pour une colonne.  
+ La bibliothèque de curseurs prend en charge la modification dynamique des champs SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR et SQL_DESC_OCTET_LENGTH_PTR de toute ligne d’un descripteur de ligne d’application (après un appel à **SQLExtendedFetch**, **SQLFetch**ou **SQLFetchScroll**). Le champ SQL_DESC_OCTET_LENGTH_PTR peut être remplacé par un pointeur NULL uniquement pour dissocier la mémoire tampon de longueur pour une colonne.  
   
- La bibliothèque de curseurs ne prend pas en charge la modification du champ SQL_DESC_BIND_TYPE dans un APD ou le ARD lorsqu’un curseur est ouvert. Le champ SQL_DESC_BIND_TYPE peut être modifié uniquement une fois que le curseur est fermé et avant l’ouverture d’un nouveau curseur. Les seuls champs de descripteur que la bibliothèque de curseurs prend en charge la modification quand le curseur est ouvert sont SQL_DESC_ARRAY_STATUS_PTR, SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR et SQL_DESC_ROWS_PROCESSED_ PTR.  
+ La bibliothèque de curseurs ne prend pas en charge la modification du champ SQL_DESC_BIND_TYPE dans APD ou ARD lorsqu’un curseur est ouvert. Le champ SQL_DESC_BIND_TYPE ne peut être modifié qu’après la fermeture du curseur et avant l’ouverture d’un nouveau curseur. Les seuls champs de descripteur que la bibliothèque de curseurs prend en charge en cas de modification lorsqu’un curseur est ouvert sont SQL_DESC_ARRAY_STATUS_PTR, SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR et SQL_DESC_ROWS_PROCESSED_ Effectués.  
   
- La bibliothèque de curseurs ne prend pas en charge la modification du champ SQL_DESC_COUNT de la ARD après **SQLExtendedFetch** ou **SQLFetchScroll** a été appelée et avant que le curseur a été fermé.
+ La bibliothèque de curseurs ne prend pas en charge la modification du champ SQL_DESC_COUNT du ARD après l’appel de **SQLExtendedFetch** ou **SQLFetchScroll** et avant la fermeture du curseur.

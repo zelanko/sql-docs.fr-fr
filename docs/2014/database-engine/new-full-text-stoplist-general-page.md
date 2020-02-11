@@ -1,5 +1,5 @@
 ---
-title: Nouvelle recherche en texte intégral liste de mots vides (Page Général) | Microsoft Docs
+title: Nouvelle page de mots vides de texte intégral (page général) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,21 +13,21 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eca5e82b9d23709b45949cfe6af9022f1243ef08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774211"
 ---
 # <a name="new-full-text-stoplist-general-page"></a>Nouvelle liste de mots vides de texte intégral (page Général)
   Utilisez cette boîte de dialogue pour créer une liste de mots vides de texte intégral. Une *liste de mots vides* est un ensemble de mots couramment utilisés, appelés *mots vides*, qui sont omis de l'indexation de texte intégral pour les tables qui utilisent cette liste. Pour plus d’informations, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](../relational-databases/search/full-text-search.md).  
   
- **Pour utiliser SQL Server Management Studio pour créer une liste de mots vides**  
+ **Pour utiliser SQL Server Management Studio afin de créer une liste de mots vides**  
   
 -   [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](../relational-databases/search/full-text-search.md)  
   
 ## <a name="options"></a>Options  
- **Nom de la liste de mots vides en texte intégral**  
+ **Nom de la liste de mots vides de texte intégral**  
  Entrez le nom de la liste de mots vides de texte intégral.  
   
  **Propriétaire**  

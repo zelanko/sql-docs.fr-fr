@@ -1,5 +1,5 @@
 ---
-title: Droponlymode, élément (DTA) | Microsoft Docs
+title: Élément DropOnlyMode, (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1d449defa98112c87a4b5789f1cff6f764252e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62659573"
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode, élément (Assistant Paramétrage de base de données)
@@ -40,7 +40,7 @@ ms.locfileid: "62659573"
 |--------------------|-----------------|  
 |**Type de données et longueur**|Aucun.|  
 |**Valeur par défaut**|Aucun.|  
-|**Occurrence**|Facultatif. Ne peut être utilisé qu'une seule fois pour chaque élément `TuningOptions`. Ne peut pas être utilisé si les éléments suivants sont spécifiés dans l'élément `TuningOptions` :<br /><br /> [FeatureSet, élément &#40;Assistant Paramétrage de base de données&#41;](featureset-element-dta.md)<br /><br /> [Partitioning, élément &#40;Assistant Paramétrage de base de données&#41;](partitioning-element-dta.md)<br /><br /> [L’élément KeepExisting &#40;Assistant Paramétrage de base de données&#41;](keepexisting-element-dta.md) est défini sur **ALL**|  
+|**Occurrence**|facultatif. Ne peut être utilisé qu'une seule fois pour chaque élément `TuningOptions`. Ne peut pas être utilisé si les éléments suivants sont spécifiés dans l'élément `TuningOptions` :<br /><br /> [Élément FeatureSet, &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Élément de partitionnement &#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> L' [élément keepexisting, &#40;DTA&#41;](keepexisting-element-dta.md) a la valeur **All**|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   

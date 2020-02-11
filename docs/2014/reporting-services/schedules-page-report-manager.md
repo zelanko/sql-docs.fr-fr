@@ -1,5 +1,5 @@
 ---
-title: Planifie la Page (Gestionnaire de rapports) | Microsoft Docs
+title: Page Planifications (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 927a9fc96e11bffdcacf7a12f09ee93d25f153fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102314"
 ---
 # <a name="schedules-page-report-manager"></a>Page Planifications (Gestionnaire de rapports)
@@ -52,10 +52,10 @@ ms.locfileid: "66102314"
  **Planification**  
  Affiche les planifications partagées actuellement définies. Cliquez sur une planification partagée pour afficher ou modifier les informations de fréquence.  
   
- **Creator**  
+ **Dernier**  
  Affiche le nom de l'utilisateur qui a créé la planification partagée.  
   
- **La dernière exécution, prochaine exécution**  
+ **Dernière exécution, Prochaine exécution**  
  Indique la dernière et la prochaine exécution de la planification partagée.  
   
  **État**  
@@ -63,6 +63,6 @@ ms.locfileid: "66102314"
   
 ## <a name="see-also"></a>Voir aussi  
  [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)   
- [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Aide F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   
