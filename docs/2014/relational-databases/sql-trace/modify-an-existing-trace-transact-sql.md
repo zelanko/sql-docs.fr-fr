@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 56d4f7d922c0c229b1e2126f93611670adf7c702
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63135616"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>Modifier une trace existante (Transact-SQL)
@@ -25,21 +25,21 @@ ms.locfileid: "63135616"
   
 ### <a name="to-modify-an-existing-trace"></a>Pour modifier une trace existante  
   
-1.  Si la trace est déjà en cours d’exécution, exécutez **sp_trace_setstatus** en spécifiant  **\@status = 0** pour l’arrêter.  
+1.  Si la trace est déjà en cours d’exécution, exécutez **sp_trace_setstatus** en spécifiant **\@status = 0**  pour l’arrêter.  
   
 2.  Pour modifier des événements de trace, exécutez **sp_trace_setevent** en spécifiant les modifications à l’aide des paramètres. Dans l'ordre, les paramètres sont les suivants :  
   
-    -   **@traceid** (ID de la trace)  
+    -   **@traceid**(ID de trace)  
   
-    -   **@eventid** (ID d’événement)  
+    -   **@eventid**(ID d’événement)  
   
-    -   **@columnid** (ID de la colonne)  
+    -   **@columnid**(ID de colonne)  
   
-    -   **@on** (ON)  
+    -   **@on**SUR  
   
-     Lorsque vous modifiez le paramètre **@on** , pensez à son interaction avec le paramètre **@columnid** :  
+     Lorsque vous modifiez le **@on** paramètre, gardez à l’esprit son interaction avec **@columnid** le paramètre :  
   
-    |ON|ID de la colonne|Résultat|  
+    |ACTIVÉ|ID de la colonne|Résultats|  
     |--------|---------------|------------|  
     |ON (**1**)|NULL|Événement activé. Toutes les colonnes sont effacées.|  
     ||NOT NULL|La colonne est activée pour l'événement spécifié.|  

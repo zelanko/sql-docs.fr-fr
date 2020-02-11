@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4759050a9453e1925ea47bc3dbf66d13aa821feb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770635"
 ---
 # <a name="aggregate-transformation"></a>Transformation d'agrégation
@@ -32,15 +32,15 @@ ms.locfileid: "62770635"
   
 |Opération|Description|  
 |---------------|-----------------|  
-|Group by|Divise les datasets en groupes. Les colonnes contenant tout type de données peuvent être utilisées pour le regroupement. Pour plus d’informations, consultez [GROUP BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-group-by-transact-sql).|  
-|Sum|Additionne les valeurs dans une colonne. Seules les colonnes dont les données sont numériques peuvent être additionnées. Pour plus d’informations, consultez [SUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/sum-transact-sql).|  
-|Moyenne|Retourne la moyenne des valeurs d'une colonne. La moyenne ne peut être calculée que sur les colonnes dont les données sont numériques. Pour plus d’informations, consultez [AVG &#40;Transact-SQL&#41;](/sql/t-sql/functions/avg-transact-sql).|  
+|Regrouper par|Divise les datasets en groupes. Les colonnes contenant tout type de données peuvent être utilisées pour le regroupement. Pour plus d’informations, consultez [GROUP BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-group-by-transact-sql).|  
+|SUM|Additionne les valeurs dans une colonne. Seules les colonnes dont les données sont numériques peuvent être additionnées. Pour plus d’informations, consultez [SUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/sum-transact-sql).|  
+|Average|Retourne la moyenne des valeurs d'une colonne. La moyenne ne peut être calculée que sur les colonnes dont les données sont numériques. Pour plus d’informations, consultez [AVG &#40;Transact-SQL&#41;](/sql/t-sql/functions/avg-transact-sql).|  
 |Count|Retourne le nombre d'éléments figurant dans un groupe. Pour plus d’informations, consultez [COUNT &#40;Transact-SQL&#41;](/sql/t-sql/functions/count-transact-sql).|  
 |Count distinct|Retourne le nombre de valeurs non NULL uniques d'un groupe.|  
 |Minimum|Renvoie la valeur minimale figurant dans un groupe. Pour plus d’informations, consultez [MIN &#40;Transact-SQL&#41;](/sql/t-sql/functions/min-transact-sql). À la différence de la fonction Transact-SQL MIN, cette opération peut être utilisée uniquement avec des données de type numérique, date et heure.|  
-|Maximum|Renvoie la valeur maximale figurant dans un groupe. Pour plus d’informations, consultez [MAX &#40;Transact-SQL&#41;](/sql/t-sql/functions/max-transact-sql). À la différence de la fonction Transact-SQL MAX, cette opération peut être utilisée uniquement avec des données de type numérique, date et heure.|  
+|Maximale|Renvoie la valeur maximale figurant dans un groupe. Pour plus d’informations, consultez [MAX &#40;Transact-SQL&#41;](/sql/t-sql/functions/max-transact-sql). À la différence de la fonction Transact-SQL MAX, cette opération peut être utilisée uniquement avec des données de type numérique, date et heure.|  
   
- La transformation d'agrégation traite les valeurs null de la même manière que le moteur de base de données relationnelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Ce comportement est défini dans la norme SQL-92. Les règles suivantes s'appliquent :  
+ La transformation d'agrégation traite les valeurs null de la même manière que le moteur de base de données relationnelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Ce comportement est défini dans la norme SQL-92. Les règles suivantes s’appliquent :  
   
 -   Dans une clause GROUP BY, les valeurs NULL sont traitées comme toute autre valeur de colonne. Si la colonne de regroupement contient plusieurs valeurs null, ces valeurs sont placées dans un seul groupe.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "62770635"
 ## <a name="performance-considerations"></a>Considérations relatives aux performances  
  La transformation d'agrégation comprend un ensemble de propriétés que vous pouvez définir pour améliorer ses performances.  
   
--   Quand vous effectuez une opération **Group by** , définissez les propriétés Keys ou KeysScale du composant et les sorties du composant. Grâce à Keys, vous pouvez spécifier le nombre exact de clés que la transformation doit normalement traiter. (Dans ce contexte, Keys fait référence au nombre de groupes attendus d’une opération **Group by**.) Grâce à KeysScale, vous pouvez spécifier un nombre approximatif de clés. Quand vous spécifiez une valeur appropriée pour Keys ou KeyScale, vous améliorez les performances car la transformation peut allouer la mémoire adéquate pour les données mises en cache par la transformation.  
+-   Quand vous effectuez une opération **Group by** , définissez les propriétés Keys ou KeysScale du composant et les sorties du composant. Grâce à Keys, vous pouvez spécifier le nombre exact de clés que la transformation doit normalement traiter. (Dans ce contexte, Keys fait référence au nombre de groupes attendus d’une opération **Group by** .) Grâce à KeysScale, vous pouvez spécifier un nombre approximatif de clés. Quand vous spécifiez une valeur appropriée pour Keys ou KeyScale, vous améliorez les performances car la transformation peut allouer la mémoire adéquate pour les données mises en cache par la transformation.  
   
--   Quand vous effectuez une opération **Comptage de valeurs** , définissez les propriétés CountDistinctKeys ou CountDistinctScale du composant. Grâce à CountDistinctKeys, vous pouvez indiquer le nombre exact de clés que la transformation doit normalement traiter pour une opération Count Distinct. (Dans ce contexte, CountDistinctKeys fait référence au nombre de valeurs distinctes attendues d’une opération **Comptage de valeurs**.) La propriété CountDistinctScale permet d’indiquer un nombre approximatif de clés pour une opération Count Distinct. Quand vous spécifiez une valeur appropriée pour CountDistinctKeys ou CountDistinctScale, vous améliorez les performances car la transformation peut allouer la mémoire adéquate pour les données mises en cache par la transformation.  
+-   Quand vous effectuez une opération **Comptage de valeurs** , définissez les propriétés CountDistinctKeys ou CountDistinctScale du composant. Grâce à CountDistinctKeys, vous pouvez indiquer le nombre exact de clés que la transformation doit normalement traiter pour une opération Count Distinct. (Dans ce contexte, CountDistinctKeys fait référence au nombre de valeurs distinctes attendues d’une opération **Comptage de valeurs** .) La propriété CountDistinctScale permet d’indiquer un nombre approximatif de clés pour une opération Count Distinct. Quand vous spécifiez une valeur appropriée pour CountDistinctKeys ou CountDistinctScale, vous améliorez les performances car la transformation peut allouer la mémoire adéquate pour les données mises en cache par la transformation.  
   
 ## <a name="aggregate-transformation-configuration"></a>Configuration de la transformation d'agrégation  
  La transformation d'agrégation est configurée au niveau de la transformation, de la sortie et de la colonne.  
@@ -100,7 +100,7 @@ ms.locfileid: "62770635"
   
  La transformation d'agrégation est asynchrone, ce qui signifie qu'elle ne consomme pas les données et ne les publie pas ligne par ligne. Au lieu de cela, elle consomme tout l'ensemble de lignes, effectue les regroupements et les agrégations, puis publie les résultats.  
   
- Cette transformation ne transmet aucune colonne, mais en crée de nouvelles dans le flux de données pour les données qu'elle publie. Seules les colonnes d'entrée auxquelles des fonctions d'agrégation s'appliquent ou les colonnes d'entrée que la transformation utilise pour le regroupement sont copiées dans la sortie de la transformation. Par exemple, l'entrée d'une transformation d'agrégation peut contenir trois colonnes : **PaysRégion**, **Ville** et **Population**. La transformation effectue un regroupement à partir de la colonne **PaysRegion** et applique la fonction Sum à la colonne **Population** . La sortie n’inclut donc pas la colonne **Ville** .  
+ Cette transformation ne transmet aucune colonne, mais en crée de nouvelles dans le flux de données pour les données qu'elle publie. Seules les colonnes d'entrée auxquelles des fonctions d'agrégation s'appliquent ou les colonnes d'entrée que la transformation utilise pour le regroupement sont copiées dans la sortie de la transformation. Par exemple, l’entrée d’une transformation d’agrégation peut contenir trois colonnes : **PaysRegion**, **Ville**et **Population**. La transformation effectue un regroupement à partir de la colonne **PaysRegion** et applique la fonction Sum à la colonne **Population** . La sortie n’inclut donc pas la colonne **Ville** .  
   
  Vous pouvez également ajouter plusieurs sorties à la transformation d'agrégation et diriger chaque agrégation vers une sortie différente. Par exemple, si la transformation d’agrégation applique les fonctions Sum et Average, chaque agrégation peut être dirigée vers une sortie différente.  
   

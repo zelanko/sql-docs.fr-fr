@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 521d40529501d761b8e50300c16a816284109695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770886"
 ---
 # <a name="request-log"></a>Journal des requêtes
@@ -34,7 +34,7 @@ ms.locfileid: "62770886"
   
 2.  Sous l’onglet **Flux de données** , double-cliquez sur la source SAP BW.  
   
-3.  Dans **l’Éditeur de source SAP BW**, cliquez sur **Gestionnaire de connexions** pour ouvrir la page **Gestionnaire de connexions** de l'éditeur.  
+3.  Dans l' **Éditeur de source SAP BW**, cliquez sur **Gestionnaire de connexions** pour ouvrir la page **Gestionnaire de connexions** de l'éditeur.  
   
 4.  Après avoir configuré la source SAP BW, cliquez sur **Aperçu** pour afficher un aperçu des événements dans la boîte de dialogue **Journal des requêtes** .  
   
@@ -48,13 +48,13 @@ ms.locfileid: "62770886"
  **Type**  
  Affiche le type de l'événement qui a été journalisé. Le tableau suivant répertorie les types d'événements possibles.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |S|Message de réussite.|  
-|E|Message d'erreur|  
+|E|Message d’erreur|  
 |W|Message d'avertissement.|  
 |I|Message d’information.|  
-|A|L'opération a été abandonnée.|  
+|Un|L'opération a été abandonnée.|  
   
  **Message**  
  Affiche le texte du message associé à l'événement journalisé.  

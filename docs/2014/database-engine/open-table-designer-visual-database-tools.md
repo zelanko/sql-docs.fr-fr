@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 57eb424087ccef14f4b1ff1aea4216b5dd0a205b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774183"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>Ouvrir le Concepteur de tables (Visual Database Tools)
@@ -43,7 +43,7 @@ ms.locfileid: "62774183"
      Le menu **Concepteur de tables** est ajouté au menu principal et la table s’ouvre dans les volets du concepteur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Conception de Tables &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/visual-database-tools.md)   
+ [Concevoir des tables &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/visual-database-tools.md)   
  [Tables](../relational-databases/tables/tables.md)  
   
   

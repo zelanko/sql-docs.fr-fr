@@ -1,5 +1,5 @@
 ---
-title: Sur le contrat de licence SQL Server (SSCM) | Microsoft Docs
+title: À propos des termes du contrat de licence SQL Server (SSCM) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 04231d0020d44107f9c8136aad9f26e8c098df47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035318"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>À propos des termes du contrat de licence SQL Server (SSCM)
-  Les termes de la Licence d'utilisation du logiciel [!INCLUDE[msCoName](../../includes/msconame-md.md)]sont copiés vers l'ordinateur local lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé. Lorsque plusieurs instances des mêmes édition et langue de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont installées sur le même ordinateur, une seule copie du contrat de licence s'applique à toutes les instances de cette édition et de cette langue. Les fichiers sont écrits dans : %ProgramFiles%\Microsoft SQL Server\110\License Terms\ ou % ProgramFiles (x86) %\Microsoft SQL Server\110\License termes\\.  
+  Les termes de la Licence d'utilisation du logiciel [!INCLUDE[msCoName](../../includes/msconame-md.md)]sont copiés vers l'ordinateur local lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé. Lorsque plusieurs instances des mêmes édition et langue de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont installées sur le même ordinateur, une seule copie du contrat de licence s'applique à toutes les instances de cette édition et de cette langue. Les fichiers sont écrits dans :%ProgramFiles%\Microsoft SQL Server\110\License Terms \ ou% ProgramFiles (x86)% \ Microsoft SQL Server\110\License\\terms.  
   
  Lorsque plusieurs instances des mêmes édition et langue de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont installées sur le même ordinateur, une seule copie du contrat de licence s'applique à toutes les instances de cette édition et de cette langue.  
   
- Le nom de fichier des termes du contrat de licence indique l'édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainsi que l'édition linguistique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : Exemple :  
+ Le nom de fichier des termes du contrat de licence indique l'édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainsi que l'édition linguistique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : Par exemple :  
   
 -   License_DEV_ENU.txt pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer, édition en langue anglaise.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "63035318"
  Pour plus d'informations sur les prix et les options de licences de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez le site Web [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=190955) .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Déclaration de confidentialité de Microsoft SQL Server](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   
- [Notice légale pour la documentation](../../../2014/getting-started/legal-notice-for-documentation.md)  
+ [Microsoft SQL Server déclaration de confidentialité](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   
+ [Notice légale pour documentation](../../../2014/getting-started/legal-notice-for-documentation.md)  
   
   

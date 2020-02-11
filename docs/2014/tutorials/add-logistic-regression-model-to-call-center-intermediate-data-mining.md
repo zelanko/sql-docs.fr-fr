@@ -1,5 +1,5 @@
 ---
-title: Ajout d’un modèle de régression logistique à la Structure de centre d’appels (didacticiel d’exploration de données intermédiaire) | Microsoft Docs
+title: Ajout d’un modèle de régression logistique à la structure du centre d’appels (didacticiel sur l’exploration de données intermédiaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 32e66a84dea20964c11c7de0aa568530aa8c28c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62823276"
 ---
 # <a name="adding-a-logistic-regression-model-to-the-call-center-structure-intermediate-data-mining-tutorial"></a>Ajout d'un modèle de régression logistique à la structure de centre d'appels (Didacticiel sur l'exploration de données intermédiaire)
@@ -28,47 +28,47 @@ ms.locfileid: "62823276"
   
 ### <a name="to-add-a-new-mining-model-to-the-call-center-mining-structure"></a>Pour ajouter un nouveau modèle d'exploration de données à la structure d'exploration de données de centre d'appels  
   
-1.  Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], dans l’Explorateur de solutions, cliquez sur la structure d’exploration de données, **placées dans un conteneur Center appeler**, puis sélectionnez **ouvrir le concepteur**.  
+1.  Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], dans Explorateur de solutions, cliquez avec le bouton droit sur la structure d’exploration de données, puis cliquez sur **Centre d’appels Binned (** et sélectionnez **ouvrir le concepteur**.  
   
-2.  Dans le Concepteur d’exploration de données, cliquez sur le **des modèles d’exploration de données** onglet.  
+2.  Dans le concepteur d’exploration de données, cliquez sur l’onglet **modèles d’exploration** de données.  
   
-3.  Cliquez sur **créer un modèle d’exploration de données**.  
+3.  Cliquez sur **créer un modèle d’exploration de données connexe**.  
   
-4.  Dans le **nouveau modèle d’exploration de données** boîte de dialogue pour **nom_modèle**, type `Call Center - LR`.  Pour **nom de l’algorithme**, sélectionnez **Microsoft Logistic Regression**.  
+4.  Dans la boîte de dialogue **nouveau modèle d’exploration de données** , pour `Call Center - LR`nom du **modèle**, tapez.  Pour **nom de l’algorithme**, sélectionnez **Microsoft logistique Regression**.  
   
 5.  Cliquez sur **OK**.  
   
-     Le nouveau modèle d’exploration de données s’affiche dans le **les modèles d’exploration de données** onglet.  
+     Le nouveau modèle d’exploration de données s’affiche sous l’onglet **modèles d’exploration de données** .  
   
 ### <a name="to-customize-the-logistic-regression-model"></a>Pour personnaliser le modèle de régression logistique  
   
-1.  Dans la colonne pour le nouveau modèle d’exploration de données, `Call Center - LR`, laissez l’ID Factcallcenter comme clé.  
+1.  Dans la colonne du nouveau modèle d’exploration de `Call Center - LR`données, laissez l’ID de callcenter en tant que clé.  
   
-2.  Modifiez la valeur de ServiceGrade et de Leveltwooperators par **Predict**.  
+2.  Remplacez la valeur de ServiceGrade et les opérateurs de niveau 2 par **Predict**.  
   
      Ces colonnes seront utilisées aussi bien comme entrée que pour la prédiction. Fondamentalement, vous créez deux modèles distincts sur les mêmes données : un qui prédit le nombre d'opérateurs et un qui prédit le niveau de service.  
   
-3.  Modifier tous les autres colonnes à **entrée**.  
+3.  Remplacez toutes les autres colonnes par **entrée**.  
   
 ### <a name="to-specify-the-seed-and-process-the-models"></a>Pour spécifier la valeur initiale et traiter les modèles  
   
-1.  Dans le **Mining Model** onglet, cliquez sur la colonne sur le modèle nommé Centre d’appels - LR et sélectionnez **paramètres d’algorithme définir**.  
+1.  Dans l’onglet **modèle d’exploration de données** , cliquez avec le bouton droit sur la colonne du modèle nommé Call Center-LR, puis sélectionnez définir les paramètres d' **algorithme**.  
   
-2.  Dans la ligne correspondant au paramètre HOLDOUT_SEED, cliquez sur la cellule vide sous **valeur**et le type `1`. Cliquez sur **OK**.  
+2.  Dans la ligne correspondant au paramètre HOLDOUT_SEED, cliquez sur la cellule vide sous **valeur**, puis `1`tapez. Cliquez sur **OK**.  
   
     > [!NOTE]  
     >  La valeur que vous choisissez comme valeur initiale n'a pas d'importance tant que vous utilisez la même valeur initiale pour tous les modèles associés.  
   
-3.  Dans le **des modèles d’exploration de données** menu, sélectionnez **traiter la Structure d’exploration de données et tous les modèles**. Cliquez sur **Oui** pour déployer le projet d’exploration de données mises à jour sur le serveur.  
+3.  Dans le menu **modèles d’exploration de données** , sélectionnez traiter l' **exploration de données et tous les modèles**. Cliquez sur **Oui** pour déployer le projet d’exploration de données mis à jour sur le serveur.  
   
-4.  Dans le **traiter le modèle d’exploration de données** boîte de dialogue, cliquez sur **exécuter**.  
+4.  Dans la boîte de dialogue **traiter le modèle d’exploration de données** , cliquez sur **exécuter**.  
   
-5.  Cliquez sur **fermer** pour fermer la **progression du traitement** boîte de dialogue, puis cliquez sur **fermer** à nouveau dans le **traiter le modèle d’exploration de données** boîte de dialogue.  
+5.  Cliquez sur **Fermer** pour fermer la boîte de dialogue **État d’avancement du traitement** , puis cliquez de nouveau sur **Fermer** dans la boîte de dialogue traiter le modèle d' **exploration de données** .  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Création de prédictions pour les modèles de centre d’appels &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
+ [Création de prédictions pour les modèles de centre d’appels &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exigences et considérations concernant le traitement &#40;exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Exigences et considérations relatives au traitement &#40;l’exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

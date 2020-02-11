@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6bb9c6f7fddc9ba0d4430b42ba5472a59c29e3cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916234"
 ---
-# <a name="mssqlserver10519"></a>MSSQLSERVER_10519
+# <a name="mssqlserver_10519"></a>MSSQLSERVER_10519
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|10519|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|10519|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|PG_INCOMPATIBLE_STMT_AND_HINTS|  
-|Texte du message|Impossible de créer le repère de plan ' %.\*ls, car les indicateurs spécifiés dans `@hints` ne peut pas être appliqué à l’instruction spécifiée par `@stmt` ou `@statement_start_offset`. Vérifiez que les indicateurs peuvent être appliqués à l'instruction.|  
+|Texte du message|Impossible de créer le repère de plan '%.\*ls', car les indicateurs spécifiés dans `@hints` ne peuvent pas être appliqués à l’instruction spécifiée par `@stmt` ou `@statement_start_offset`. Vérifiez que les indicateurs peuvent être appliqués à l'instruction.|  
   
 ## <a name="explanation"></a>Explication  
  Les indicateurs spécifiés dans `@hints` ne peuvent pas être appliqués à l'instruction spécifiée par `@stmt` ou `@statement_start_offset`.  

@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 535ae5f92fea0222468ed64f567154495e329a61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63044197"
 ---
-# <a name="format-pager-addresses-for-alerts"></a>Mettre en forme des adresses de radiomessagerie pour les alertes
-  Cette rubrique explique comment mettre en forme les adresses de radiomessagerie pour les alertes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+# <a name="format-pager-addresses-for-alerts"></a>Format Pager Addresses for Alerts
+  Cette rubrique explique comment mettre en forme des adresses [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de radiomessagerie pour [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] les [!INCLUDE[tsql](../../includes/tsql-md.md)]alertes de l’agent dans à l’aide de ou de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
  **Dans cette rubrique**  
   
@@ -33,7 +33,7 @@ ms.locfileid: "63044197"
   
      [Sécurité](#Security)  
   
--   **Pour mettre en forme des adresses de radiomessagerie, utilisez :**  
+-   **Pour mettre en forme les adresses de radiomessagerie, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "63044197"
   
 1.  Dans l' **Explorateur d'objets**, cliquez sur le signe plus pour développer le serveur qui contient l'alerte que vous souhaitez envoyer à un récepteur de radiomessagerie.  
   
-2.  Cliquez avec le bouton droit sur **Agent SQL Server** , puis sélectionnez **Propriétés**.  
+2.  Cliquez avec le bouton droit sur **SQL Server Agent** et sélectionnez **Propriétés** .  
   
 3.  Sous **Sélectionner une page**, sélectionnez **Système d'alerte**.  
   

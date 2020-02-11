@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72b426c504532f9c112eaaa1222b0349f3e5d814
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832590"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>Options Demande de profil de ratio de colonne Null (tâche de profilage des données)
@@ -32,7 +32,7 @@ ms.locfileid: "62832590"
   
 -   **Données**, qui incluent les options **TableOrView** et **Column**  
   
--   **Général**  
+-   **Généralités**  
   
 ### <a name="data-options"></a>Options de données  
  **ConnectionManager**  
@@ -43,7 +43,7 @@ ms.locfileid: "62832590"
   
  Pour plus d'informations, consultez la section « Options TableorView » dans cette rubrique.  
   
- **Column**  
+ **Colonne**  
  Sélectionnez la colonne existante à profiler. Sélectionnez **(\*)** pour profiler toutes les colonnes.  
   
  Pour plus d'informations, consultez la section « Options de colonne » dans cette rubrique.  

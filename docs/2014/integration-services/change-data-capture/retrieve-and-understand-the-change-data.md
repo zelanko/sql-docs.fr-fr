@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76635a5c1f1140bb66adf1d9ac40885c3dc43269
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771235"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>Récupérer et comprendre les données modifiées
@@ -54,7 +54,7 @@ ms.locfileid: "62771235"
   
 3.  Dans **l’Éditeur de source OLE DB**, dans la page **Colonnes** , vérifiez que toutes les colonnes souhaitées sont mappées à des colonnes de sortie.  
   
-## <a name="next-step"></a>Étape suivante  
+## <a name="next-step"></a>étape suivante  
  Après avoir configuré une source OLE DB pour récupérer les données modifiées, l'étape suivante consiste à commencer à concevoir le flux de données dans le package.  
   
  **Rubrique suivante :** [Traiter les insertions, les mises à jour et les suppressions](process-inserts-updates-and-deletes.md)  

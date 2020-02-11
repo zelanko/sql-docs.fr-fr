@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a29a8b9adda07015a7f6fec953db42748a1e752e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918818"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurer l'entrepôt de données de gestion (SQL Server Management Studio)
@@ -59,15 +59,15 @@ ms.locfileid: "62918818"
   
 6.  Répétez l'étape 5 jusqu'à ce que toutes les instances de base de données qui utilisent le collecteur de données soient configurées pour télécharger les données vers l'entrepôt de données de gestion partagé.  
   
-####  <a name="Wizard"></a> Assistant Configuration de l'entrepôt de données de gestion  
- **Page d'accueil**  
+####  <a name="Wizard"></a>Assistant Configuration de la Data Warehouse de gestion  
+ **Page d’accueil**  
   
  La page d'accueil est la page de démarrage de l'Assistant Configuration de la collecte de données. L'affichage de cette page est facultatif.  
   
  **Ne plus afficher cette page de démarrage.**  
  Sélectionnez cette option pour supprimer cette page la prochaine fois vous lancez l'Assistant Configuration de la collecte de données.  
   
- **Page Configuration du stockage de l'entrepôt de données de gestion**  
+ **Page Configurer le stockage Data Warehouse de gestion**  
   
  Utilisez cette page pour sélectionner un serveur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et un entrepôt de données de gestion. L'entrepôt de données de gestion est une base de données relationnelle qui sert de stockage pour les données collectées.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62918818"
   
  L'option **Nouveau** est disponible uniquement lors de la configuration d'un jeu d'éléments de collecte de données.  
   
- **Page Mapper les connexions et les utilisateurs**  
+ **Page mapper les connexions et les utilisateurs**  
   
  Utilisez cette page pour mapper des connexions à des rôles d'utilisateur de base de données pour l'entrepôt de données de gestion.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "62918818"
   
  Spécifiez une connexion en activant la case à cocher **Mappage** pour la connexion.  
   
- **Appartenance au rôle de base de données pour :** *\<nom_entrepôt_données*  
+ **Appartenance au rôle de base de données :**  *\<nom de l’entrepôt de données>*  
  Sélectionnez le rôle d'entrepôt de données de gestion auquel la connexion est mappée en cliquant sur une ou plusieurs cases à cocher en regard des options suivantes :  
   
 -   **mdw_admin**  
@@ -105,21 +105,21 @@ ms.locfileid: "62918818"
  **Nouvelle connexion**  
  Ouvrez la boîte de dialogue **Nouvelle connexion** et créez une connexion pour l’entrepôt de données de gestion.  
   
- **Page Fin de l'Assistant**  
+ **Page terminer l’Assistant**  
   
  Utilisez cette page pour vérifier et terminer la configuration de la collecte de données. L'arborescence contenue dans la fenêtre d'affichage indique les configurations qui s'appliquent ainsi que les actions qui sont entreprises lorsque vous cliquez sur **Terminer**.  
   
- **Page Progression de l'Assistant Configuration de la collecte de données**  
+ **Page progression de l’Assistant Configuration de la collecte de données**  
   
  Utilisez cette page pour consulter les résultats de chaque étape de configuration.  
   
  **Détails**  
  Affiche chaque étape de configuration sous la forme d’une ligne dans la grille **Détails** . Chaque ligne contient une colonne **Action** qui décrit l'étape et une colonne **État** qui indique la réussite ou l'échec de l'étape. En cas d'erreur, un message s'affiche dans la colonne **Message** .  
   
- **Arrêter**  
+ **Stop**  
  Arrête le traitement de l'Assistant.  
   
- **Rapport**  
+ **Report**  
  Affiche un rapport de la configuration de la collecte de données. Les options de rapport suivantes sont fournies :  
   
 -   Afficher le rapport  
@@ -130,7 +130,7 @@ ms.locfileid: "62918818"
   
 -   Envoyer le rapport sous forme de courrier électronique  
   
- **Fermer**  
+ **Plus**  
  Ferme l'Assistant.  
   
 ## <a name="see-also"></a>Voir aussi  

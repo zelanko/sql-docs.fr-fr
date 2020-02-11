@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7b61bd02d44639cb3f5ad540d53ebeebcff4da0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832721"
 ---
 # <a name="azure-hdinsight-hive-task"></a>Tâche Hive Azure HDInsight
@@ -37,8 +37,8 @@ Pour ajouter une **tâche Hive Azure HDInsight**, faites-la glisser sur le conce
   
 5.  Deux méthodes permettent de spécifier le script Hive à exécuter :
   
-    1.  **Script en ligne** : renseignez le champ **Script** en tapant directement le script à exécuter dans la boîte de dialogue **Entrer le script**.
+    1.  **Script en ligne** : renseignez le champ **Script** en tapant en ligne le script à exécuter dans la boîte de dialogue **Entrer le script**.
   
-    2.  **Fichier script** : chargez le fichier script dans le Stockage Blob Azure et renseignez le champ **BlobName**. Si l’objet blob ne se trouve pas dans le compte ou le conteneur de stockage par défaut associé au cluster HDInsight, vous devez renseigner les champs **ExternalStorageAccountName** et **ExternalBlobContainer**. Dans le cas d’un objet blob externe, assurez-vous qu’il est configuré comme étant accessible au public.  
+    2.  **Fichier de script** : téléchargez le fichier de script dans Stockage Blob Azure et renseignez le champ **BlobName**. Si l’objet blob ne se trouve pas dans le compte ou le conteneur de stockage par défaut associé au cluster HDInsight, vous devez renseigner les champs **ExternalStorageAccountName** et **ExternalBlobContainer**. Dans le cas d’un objet blob externe, assurez-vous qu’il est configuré comme étant accessible au public.  
   
      Si les deux sont spécifiés, le fichier de script est utilisé et le script en ligne est ignoré.

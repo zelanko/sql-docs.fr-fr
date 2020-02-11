@@ -1,5 +1,5 @@
 ---
-title: FILESTREAM et FileTable avec groupes de disponibilité AlwaysOn (SQL Server) | Microsoft Docs
+title: FILESTREAM et filetable avec groupes de disponibilité AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3fa149aa47c99418bd3109829bfffee698ab3f6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62814139"
 ---
 # <a name="filestream-and-filetable-with-alwayson-availability-groups-sql-server"></a>FILESTREAM et FileTable avec groupes de disponibilité AlwaysOn (SQL Server)
@@ -28,21 +28,21 @@ ms.locfileid: "62814139"
   
  La fonctionnalité FileTable n'est prise en charge que partiellement. Après un basculement, les données FileTable sont accessibles sur le réplica principal, mais pas sur les réplicas secondaires avec accès en lecture.  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
--   [Conditions préalables](#Prerequisites)  
+-   [Prérequis](#Prerequisites)  
   
--   [Utilisation de noms de réseau virtuel (VNN) pour l'accès à FILESTREAM et FileTable](#vnn)  
+-   [Utilisation de noms de réseau virtuel (VNN) pour l’accès FILESTREAM et filetable](#vnn)  
   
 -   [Tâches associées](#RelatedTasks)  
   
--   [Contenu connexe](#RelatedContent)  
+-   [Contenu associé](#RelatedContent)  
   
-##  <a name="Prerequisites"></a> Conditions préalables  
+##  <a name="Prerequisites"></a>Conditions préalables  
   
 -   Avant d'ajouter une base de données qui utilise FILESTREAM, avec ou sans FileTable, à un groupe de disponibilité, vérifiez que FILESTREAM est activé sur chaque instance de serveur qui héberge un réplica de disponibilité pour le groupe de disponibilité. Pour plus d’informations, consultez [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md).  
   
-##  <a name="vnn"></a> Utilisation de noms de réseau virtuel (VNN) pour l'accès à FILESTREAM et FileTable  
+##  <a name="vnn"></a>Utilisation de noms de réseau virtuel (VNN) pour l’accès FILESTREAM et filetable  
  Lorsque vous activez FILESTREAM sur une instance du [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un partage d'instance est créé pour permettre d'accéder aux données FILESTREAM. Vous accédez à ce partage en utilisant le nom d'ordinateur au format suivant :  
   
  `\\<computer_name>\<filestream_share_name>`  
@@ -59,9 +59,11 @@ ms.locfileid: "62814139"
   
     1.  `\\<computer_name>\<filestream_share_name>`  
   
-    2.  `\\<VNN1>\<filestream_share_name>` pour le groupe de disponibilité 1.  
+    2.  
+  `\\<VNN1>\<filestream_share_name>` pour le groupe de disponibilité 1.  
   
-    3.  `\\<VNN2>\<filestream_share_name>` pour le groupe de disponibilité 2.  
+    3.  
+  `\\<VNN2>\<filestream_share_name>` pour le groupe de disponibilité 2.  
   
  Ces partages d'étendue VNN sont également propagées à tous les réplicas secondaires.  
   
@@ -77,7 +79,7 @@ ms.locfileid: "62814139"
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   
--   [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
+-   [Activer et configurer FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
   
 -   [Activer les conditions préalables pour les FileTables](../../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
   
@@ -85,6 +87,6 @@ ms.locfileid: "62814139"
  Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

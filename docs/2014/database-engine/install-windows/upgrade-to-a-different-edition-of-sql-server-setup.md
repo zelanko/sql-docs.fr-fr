@@ -1,5 +1,5 @@
 ---
-title: Mise à niveau vers une autre édition de SQL Server 2014 (programme d’installation) | Microsoft Docs
+title: Effectuer une mise à niveau vers une autre édition de SQL Server 2014 (programme d’installation) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774573"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>Mettre à niveau vers une autre édition de SQL Server 2014 (programme d'installation)
@@ -26,12 +26,12 @@ ms.locfileid: "62774573"
   
 -   [Limites de capacité de calcul par édition de SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   
--   [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Configurations matérielle et logicielle requises pour l'installation de SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
->  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un environnement cluster :** Mise à niveau d’édition en cours d’exécution sur l’un des nœuds du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cluster est suffisant. Le nœud peut être actif ou passif et le moteur ne met pas les ressources hors ligne pendant la mise à niveau de l'édition. Après la mise à niveau de l'édition, il est nécessaire de redémarrer l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de la basculer sur un nœud différent.  
+>  **dans un environnement en cluster : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** L’exécution de la mise à niveau de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] édition sur l’un des nœuds du cluster est suffisante. Le nœud peut être actif ou passif et le moteur ne met pas les ressources hors ligne pendant la mise à niveau de l'édition. Après la mise à niveau de l'édition, il est nécessaire de redémarrer l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de la basculer sur un nœud différent.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour des installations locales, vous devez exécuter le programme d'installation en tant qu'administrateur. Si vous installez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'un partage distant, vous devez utiliser un compte de domaine qui dispose des autorisations de lecture sur le partage distant.  
   
 > [!IMPORTANT]  
@@ -49,7 +49,7 @@ ms.locfileid: "62774573"
   
 4.  L'Outil d'analyse de configuration système effectue une opération de découverte sur votre ordinateur. Pour continuer, cliquez sur **OK**.  
   
-5.  Dans la page Clé de produit, sélectionnez une case d'option pour indiquer si vous effectuez une mise à niveau vers une édition gratuite de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou si vous disposez d'une clé PID pour une version de production du produit. Pour plus d’informations, consultez [éditions et composants de SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) et [Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md).  
+5.  Dans la page Clé de produit, sélectionnez une case d'option pour indiquer si vous effectuez une mise à niveau vers une édition gratuite de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou si vous disposez d'une clé PID pour une version de production du produit. Pour plus d’informations, consultez [éditions et composants de SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) et [mises à niveau de version et d’édition prises en charge](supported-version-and-edition-upgrades.md).  
   
 6.  Dans la page Termes du contrat de licence, prenez connaissance du contrat de licence et activez la case à cocher indiquant que vous en acceptez les termes et conditions. Pour continuer, cliquez sur **Suivant**. Pour mettre fin au programme d'installation, cliquez sur **Annuler**.  
   

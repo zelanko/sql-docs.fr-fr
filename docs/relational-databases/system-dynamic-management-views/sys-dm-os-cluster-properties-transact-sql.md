@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_cluster_properties (Transact-SQL) | Microsoft Docs
+title: sys. dm_os_cluster_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3fd3c53f5603567e0f6c2b6ee4f1712f742c1137
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67900226"
 ---
-# <a name="sysdmosclusterproperties-transact-sql"></a>sys.dm_os_cluster_properties (Transact-SQL)
+# <a name="sysdm_os_cluster_properties-transact-sql"></a>sys.dm_os_cluster_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retourne une ligne avec les paramètres actuels des propriétés de ressource de cluster [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifiées dans cette rubrique. Aucune donnée n'est retournée si cette vue est exécutée sur une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -36,12 +36,12 @@ ms.locfileid: "67900226"
 
 |Nom de la colonne|Propriété|Description|  
 |-----------------|--------------|-----------------|  
-|VerboseLogging|bigint|Niveau de journalisation pour le cluster de basculement SQL Server. La journalisation détaillée peut être activée pour fournir des détails supplémentaires dans les journaux des erreurs à des fins de dépannage. L’une des valeurs suivantes :<br /><br /> 0 - La journalisation est désactivée (valeur par défaut)<br /><br /> 1 - Erreurs uniquement<br /><br /> 2 - Erreurs et avertissements<br /><br /> Pour plus d’informations, consultez [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).|  
+|VerboseLogging|bigint|Niveau de journalisation pour le cluster de basculement SQL Server. La journalisation détaillée peut être activée pour fournir des détails supplémentaires dans les journaux des erreurs à des fins de dépannage. L’une des valeurs suivantes :<br /><br /> 0 - La journalisation est désactivée (valeur par défaut)<br /><br /> 1 - Erreurs uniquement<br /><br /> 2 - Erreurs et avertissements<br /><br /> Pour plus d’informations, consultez [ALTER Server CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).|  
 |SqlDumperDumpFlags|bigint|Les indicateurs de vidage SQLDumper déterminent le type de fichiers dump généré par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le paramètre par défaut est 0.|  
 |SqlDumperDumpPath|nvarchar(260)|Emplacement où l'utilitaire SQLDumper génère les fichiers dump.|  
 |SqlDumperDumpTimeOut|bigint|Valeur du délai d'attente, en millisecondes, nécessaire à l'utilitaire SQLDumper pour générer un vidage en cas d'échec de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La valeur par défaut est 0.|  
 |FailureConditionLevel|bigint|Définit les conditions dans lesquelles le cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit échouer ou redémarrer. La valeur par défaut est 3. Pour obtenir une explication détaillée ou pour modifier les paramètres de propriété, consultez [configurer les paramètres de propriété FailureConditionLevel](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).|  
-|HealthCheckTimeout|bigint|Valeur du délai d'attente qui définit la durée pendant laquelle la DLL de ressource du moteur de base de données SQL Server doit attendre les informations d'intégrité du serveur avant de considérer que l'instance de SQL Server ne répond pas. Valeur de délai d'attente, exprimée en millisecondes. Valeur par défaut est 60000. Pour plus d’informations ou pour modifier ce paramètre de propriété, consultez [configurer les paramètres de propriété HealthCheckTimeout](../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md).|  
+|HealthCheckTimeout|bigint|Valeur du délai d'attente qui définit la durée pendant laquelle la DLL de ressource du moteur de base de données SQL Server doit attendre les informations d'intégrité du serveur avant de considérer que l'instance de SQL Server ne répond pas. Valeur de délai d'attente, exprimée en millisecondes. La valeur par défaut est 60000. Pour plus d’informations ou pour modifier ce paramètre de propriété, consultez [configurer les paramètres de propriété HealthCheckTimeout](../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md).|  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert les autorisations VIEW SERVER STATE sur l'instance de cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

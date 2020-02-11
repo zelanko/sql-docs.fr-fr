@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0a895fd1dc3fe51296a110902fb1dd4c27d3d5a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831881"
 ---
 # <a name="data-profiling-task"></a>Tâche de profilage des données
@@ -31,7 +31,7 @@ ms.locfileid: "62831881"
 > [!NOTE]  
 >  Cette rubrique décrit uniquement les fonctionnalités et les spécifications de la tâche de profilage des données. Pour connaître la procédure pas à pas d’utilisation de la tâche de profilage des données, consultez la section [Tâche de profilage des données et visionneuse](data-profiling-task-and-viewer.md).  
   
-## <a name="requirements-and-limitations"></a>Limitations et exigences  
+## <a name="requirements-and-limitations"></a>Spécifications et limitations  
  La tâche de profilage des données fonctionne uniquement avec les données stockées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette tâche ne fonctionne pas avec les sources de données tierces ou basées sur des fichiers.  
   
  En outre, pour exécuter un package qui contient la tâche de profilage des données, vous devez utiliser un compte qui dispose d'autorisations de lecture/écriture, notamment les autorisations CREATE TABLE, sur la base de données tempdb.  
@@ -82,7 +82,7 @@ ms.locfileid: "62831881"
 |FunctionalDependencyProfile|Colonnes de types `integer`, `char` et `datetime`|  
 |InclusionProfile|Colonnes de types `integer`, `char` et `datetime`|  
   
- \* Dans le tableau précédent des types de données valides, le `integer`, `char`, `datetime`, et `numeric` incluent les types de données spécifiques suivants :  
+ \*Dans le tableau précédent des types de données valides `integer`, `char`les `datetime`types, `numeric` , et incluent les types de données spécifiques suivants :  
   
  Les types d'entiers sont `bit`, `tinyint`, `smallint`, `int` et `bigint`.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "62831881"
   
  Les types numériques incluent les types `integer` (sauf `bit`), `money`, `smallmoney`, `decimal`, `float`, `real` et `numeric`.  
   
- \*\* `image`, `text`, `XML`, `udt`, et `variant` types ne sont pas pris en charge pour les profils autre que le profil de Ratio Null de colonne.  
+ \*\*`image`les `text`types `XML`, `udt`,, `variant` et ne sont pas pris en charge pour les profils autres que le profil de ratio de colonne null.  
   
 ### <a name="valid-tables-and-columns"></a>Tables et colonnes valides  
  Si la table ou colonne est vide, la tâche de profilage des données entreprend les actions suivantes :  
@@ -102,21 +102,21 @@ ms.locfileid: "62831881"
 -   Lorsque toutes les valeurs dans la colonne sélectionnée sont Null, la tâche de profilage des données calcule uniquement le profil de ratio de colonne Null. La tâche ne calcule pas les profils de distribution de longueurs de colonne, de modèle de colonne, de statistiques de colonnes ou de distribution de valeurs de colonne.  
   
 ## <a name="features-of-the-data-profiling-task"></a>Fonctionnalités de la tâche de profilage des données  
- Pratiques, les options de configuration de la tâche de profilage des données sont les suivantes :  
+ Pratiques, les options de configuration de la tâche de profilage des données sont les suivantes :  
   
--   **Colonnes génériques** Quand vous configurez une demande de profil, la tâche accepte le caractère générique **(\*)** à la place d’un nom de colonne. Cela simplifie la configuration et facilite la découverte des caractéristiques de données inconnues. Lorsque la tâche s'exécute, elle profile chaque colonne ayant un type de données approprié.  
+-   **Colonnes de caractères génériques** Quand vous configurez une demande de profil, la tâche accepte le caractère générique **(\*)** à la place d’un nom de colonne. Cela simplifie la configuration et facilite la découverte des caractéristiques de données inconnues. Lorsque la tâche s'exécute, elle profile chaque colonne ayant un type de données approprié.  
   
--   **Profil rapide** Vous pouvez sélectionner Profil rapide pour configurer la tâche rapidement. Un profil rapide profile une table ou une vue en utilisant tous les profils et paramètres par défaut.  
+-   **Profil rapide** Vous pouvez sélectionner profil rapide pour configurer rapidement la tâche. Un profil rapide profile une table ou une vue en utilisant tous les profils et paramètres par défaut.  
   
 ## <a name="custom-logging-messages-available-on-the-data-profililng-task"></a>Messages de journalisation personnalisés disponibles dans la tâche de profilage des données  
- Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche de profilage des données. Pour plus d’informations, consultez [Journalisation Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) et [Messages personnalisés pour la journalisation](../custom-messages-for-logging.md).  
+ Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche de profilage des données. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) et [Messages personnalisés pour la journalisation](../custom-messages-for-logging.md).  
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
 |**DataProfilingTaskTrace**|Donne des informations détaillées sur l'état de la tâche. Les messages contiennent les informations suivantes :<br /><br /> Début de traitement des requêtes<br /><br /> Début de requête<br /><br /> Query End<br /><br /> Fin du calcul de requête|  
   
 ## <a name="output-and-its-schema"></a>Sortie et son schéma  
- La tâche de profilage des données génère en sortie les profils sélectionnés en langage XML structuré conformément au schéma DataProfile.xsd. Vous pouvez préciser si cette sortie XML doit être enregistrée dans un fichier ou dans une variable de package. Vous pouvez voir ce schéma en ligne sur [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/). Vous pouvez, à partir de la page web, enregistrer une copie locale du schéma. Vous pouvez ensuite afficher la copie locale du schéma dans Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ou un autre éditeur de schéma, dans un éditeur XML ou encore dans un éditeur de texte tel que le Bloc-notes.  
+ La tâche de profilage des données génère en sortie les profils sélectionnés en langage XML structuré conformément au schéma DataProfile.xsd. Vous pouvez préciser si cette sortie XML doit être enregistrée dans un fichier ou dans une variable de package. Vous pouvez afficher ce schéma en ligne [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)à l’adresse. Vous pouvez, à partir de la page web, enregistrer une copie locale du schéma. Vous pouvez ensuite afficher la copie locale du schéma dans Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ou un autre éditeur de schéma, dans un éditeur XML ou encore dans un éditeur de texte tel que le Bloc-notes.  
   
  Ce schéma pour les informations sur la qualité des données peut être utile pour :  
   
@@ -124,7 +124,7 @@ ms.locfileid: "62831881"
   
 -   construire des outils personnalisés qui fonctionnent avec les informations sur la qualité des données.  
   
- L’espace de noms cible est identifié dans le schéma en tant que [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
+ L’espace de noms cible est identifié dans le [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)schéma comme.  
   
 ## <a name="output-in-the-conditional-workflow-of-a-package"></a>Sortie dans le flux de travail conditionnel d'un package  
  Les composants de profilage des données n'incluent pas de fonctionnalités intégrées pour implémenter la logique conditionnelle dans le flux de travail du package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] basée sur la sortie de la tâche de profilage des données. Toutefois, vous pouvez ajouter facilement cette logique, avec un minimum de programmation, dans une tâche de script. Ce code effectuerait une requête XPath sur la sortie XML, puis enregistrerait le résultat dans une variable de package. Les contraintes de précédence qui connectent la tâche de script aux tâches suivantes peuvent utiliser une expression pour déterminer le flux de travail. Par exemple, la tâche de script détecte que le pourcentage de valeurs Null dans une colonne dépasse un certain seuil. Lorsque cette condition est remplie, vous pouvez interrompre le package et résoudre le problème avant de continuer.  
@@ -135,23 +135,23 @@ ms.locfileid: "62831881"
  [Page Général](../general-page-of-integration-services-designers-options.md)  
  Dans la page **Général** , vous spécifiez le fichier ou la variable de sortie. Vous pouvez également sélectionner **Profil rapide** pour configurer rapidement la tâche afin de calculer des profils à l’aide des paramètres par défaut. Pour plus d’informations, consultez [Formulaire de profil rapide de table simple &#40;tâche de profilage des données&#41;](data-profiling-task.md).  
   
- [Page Demandes de profil](data-profiling-task-editor-profile-requests-page.md)  
+ [Page demandes de profil](data-profiling-task-editor-profile-requests-page.md)  
  Dans la page **Demandes de profil** , vous spécifiez la source de données et vous sélectionnez et configurez les profils de données à calculer. Pour plus d'informations sur les différents profils que vous pouvez configurer, consultez les rubriques suivantes :  
   
--   [Options Demande de profil de clé candidate &#40;tâche de profilage des données&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Options demande de profil de clé candidate &#40;tâche de profilage des données&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [Options Demande de profil de distribution de longueurs de colonne &#40;tâche de profilage des données&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Options demande de profil de distribution de longueurs de colonne &#40;tâche de profilage des données&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Options Demande de profil de ratio de colonne Null &#40;tâche de profilage des données&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Options demande de profil de ratio de colonne null &#40;la tâche de profilage des données&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [Options Demande de profil de modèle de colonne &#40;tâche de profilage des données&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Profil de motif de colonne options de demande &#40;tâche de profilage des données&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [Options Demande de profil de statistiques de colonnes &#40;tâche de profilage des données&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [Options demande de profil de statistiques de colonnes &#40;tâche de profilage des données&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Options Demande de profil de distribution de valeurs de colonne &#40;tâche de profilage des données&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Options demande de profil de distribution de valeurs de colonne &#40;tâche de profilage des données&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Options Demande de profil de dépendance fonctionnelle &#40;tâche de profilage des données&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [Options demande de profil de dépendance fonctionnelle &#40;&#41;de tâche de profilage des données](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Options Demande de profil d’inclusion de valeur &#40;tâche de profilage des données&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Options demande de profil d’inclusion de valeur &#40;la tâche de profilage des données&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
   

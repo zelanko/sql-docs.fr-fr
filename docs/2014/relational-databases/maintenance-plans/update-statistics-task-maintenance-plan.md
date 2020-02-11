@@ -15,19 +15,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 51a3deffc9db182f7b3ad8f50d27c24e0f74dc6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807114"
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>Tâche Mettre à jour les statistiques (Plan de maintenance)
-  Utilisez la boîte de dialogue **Tâche Mettre à jour les statistiques** pour mettre à jour les informations [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relatives aux données des tables et des index. Cette tâche rééchantillonne les statistiques de distribution de chaque index créé dans les tables utilisateur de la base de données. Les statistiques de distribution servent à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour optimiser la navigation dans les tables pendant le traitement des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] . Pour collecter automatiquement les statistiques de distribution, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] échantillonne périodiquement les données de la table correspondant à chaque index. La taille de cet échantillonnage est calculée en fonction du nombre de lignes de la table et de la fréquence de modification des données. Utilisez cette option pour effectuer un échantillonnage supplémentaire à l'aide du pourcentage spécifié de données des tables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise ces informations pour créer des plans de requête améliorés.  
+  Utilisez la boîte de dialogue **Tâche Mettre à jour les statistiques** pour mettre à jour les informations [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relatives aux données des tables et des index. Cette tâche rééchantillonne les statistiques de distribution de chaque index créé dans les tables utilisateur de la base de données. Les statistiques de distribution servent à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour optimiser la navigation dans les tables pendant le traitement des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] . Pour collecter automatiquement les statistiques de distribution, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] échantillonne périodiquement les données de la table correspondant à chaque index. La taille de cet échantillonnage est calculée en fonction du nombre de lignes de la table et de la fréquence de modification des données. Utilisez cette option pour effectuer un échantillonnage supplémentaire à l'aide du pourcentage spécifié de données des tables. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise ces informations pour créer des plans de requête améliorés.  
   
  Cette tâche exécute l'instruction UPDATE STATISTICS.  
   
 ## <a name="options"></a>Options  
- **Connexion**  
+ **Connection**  
  Sélectionnez la connexion serveur à utiliser pour exécuter la tâche.  
   
  **Nouveau**  
@@ -52,9 +53,9 @@ ms.locfileid: "62807114"
   
      Génère un plan de maintenance qui n'exécute les tâches de maintenance que sur les bases de données sélectionnées. Si vous choisissez cette option, sélectionnez au moins une base de données.  
   
- **Remarque** Les plans de maintenance sont exécutés uniquement sur des bases de données définies avec un niveau de compatibilité 80 ou plus. Les bases de données définies au niveau de compatibilité 70 ou moins ne sont pas affichées.  
+ **Remarque** Les plans de maintenance s’exécutent uniquement sur les bases de données définies au niveau de compatibilité 80 ou supérieur. Les bases de données définies au niveau de compatibilité 70 ou moins ne sont pas affichées.  
   
- **Objet**  
+ **Object**  
  Limite la grille de **Sélection** à l’affichage des tables et/ou des vues.  
   
  **Sélection**  
@@ -66,10 +67,10 @@ ms.locfileid: "62807114"
  **Statistiques de colonnes uniquement**  
  Met à jour les statistiques de colonnes uniquement.  
   
- **Statistiques d'index uniquement**  
+ **Statistiques d’index uniquement**  
  Met à jour les statistiques d'index uniquement.  
   
- **Type d'analyse**  
+ **Type d’analyse**  
  Type d'analyse destinée à la collecte des statistiques mises à jour.  
   
  **Analyse complète**  
@@ -85,7 +86,7 @@ ms.locfileid: "62807114"
 >  Si le nombre d'objets impliqués est élevé, l'affichage des instructions peut prendre un temps considérable.  
   
 ## <a name="new-connection-dialog-box"></a>Boîte de dialogue Nouvelle connexion  
- **Nom de la connexion**  
+ **Nom de connexion**  
  Entrez un nom pour la nouvelle connexion.  
   
  **Sélectionnez ou entrez un nom de serveur.**  
@@ -98,10 +99,10 @@ ms.locfileid: "62807114"
  Spécifiez le mode d'authentification sur le serveur.  
   
  **Utiliser la sécurité intégrée à Windows NT**  
- Permet de se connecter à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l’aide de l’authentification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+ Connectez-vous à une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] du [!INCLUDE[msCoName](../../includes/msconame-md.md)] avec l’authentification Windows.  
   
  **Utiliser un nom d'utilisateur et un mot de passe spécifiques**  
- Permet de se connecter à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] en utilisant l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette option n'est pas disponible.  
+ Se connecte à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l'aide de l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette option n'est pas disponible.  
   
  **Nom d'utilisateur**  
  Fournit le nom d'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à utiliser pour l'authentification. Cette option n'est pas disponible.  
