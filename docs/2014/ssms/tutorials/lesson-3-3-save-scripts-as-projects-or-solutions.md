@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6d17dd44f597d7b3ddfce574670e9e6bfd55f908
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753039"
 ---
 # <a name="save-scripts-as-projects-or-solutions"></a>Enregistrer des scripts sous forme de projets ou de solutions
@@ -58,11 +58,11 @@ ms.locfileid: "62753039"
     > [!NOTE]  
     >  Si vous avez besoin de davantage d'espace pour taper votre requête, appuyez sur Maj+Alt+Entrée pour afficher un plein écran.  
   
-11. Dans l’Explorateur de solutions, cliquez avec le bouton droit sur **SQLQuery1**et choisissez **Renommer**. Type **Check Workorders.sql** comme nouveau nom pour la requête et appuyez sur ENTRÉE.  
+11. Dans l’Explorateur de solutions, cliquez avec le bouton droit sur **SQLQuery1**et choisissez **Renommer**. Tapez **Check ordres de validation. SQL** comme nouveau nom de la requête, puis appuyez sur entrée.  
   
 12. Pour enregistrer votre solution et votre projet de scripts, dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Résumé : Solutions et projets de Script](lesson-3-4-summary-solutions-and-script-projects.md)  
+ [Résumé : Solutions et projets de script](lesson-3-4-summary-solutions-and-script-projects.md)  
   
   

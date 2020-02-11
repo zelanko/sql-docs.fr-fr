@@ -1,5 +1,5 @@
 ---
-title: Éditeur de formulaire d’indicateur de performance clé (onglet des indicateurs de performance clés, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Éditeur de formulaire d’indicateur de performance clé (onglet indicateurs de performance clés, concepteur de cube) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca81dda4ce34a498aa471ceed5ea86729b1df508
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079449"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Éditeur de formulaire d'indicateur de performance clé (onglet Indicateurs de performance clés, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -39,7 +39,7 @@ ms.locfileid: "66079449"
   
  Faites glisser les éléments sélectionnés du volet **Outils de calcul** dans cette option pour inclure la syntaxe MDX de l'élément sélectionné.  
   
- **Expression d’objectif**  
+ **Expression d'objectif**  
  Développez pour afficher ou modifier l'expression MDX de la valeur d'objectif de l'indicateur de performance clé.  
   
  Tapez l'expression MDX qui retourne la valeur d'objectif de l'indicateur de performance clé lorsque ce dernier est exécuté.  
@@ -60,12 +60,12 @@ ms.locfileid: "66079449"
   
  Faites glisser les éléments sélectionnés du volet **Outils de calcul** dans cette option pour inclure la syntaxe MDX de l'élément sélectionné.  
   
- Il est recommandé que cette expression retourne un nombre décimal compris entre -1 et 1. Une valeur inférieure représente une situation négative alors qu'une valeur supérieure représente une situation positive.  
+ Il est recommandé que cette expression retourne un nombre décimal compris entre-1 et 1. Une valeur inférieure représente une situation négative alors qu'une valeur supérieure représente une situation positive.  
   
 > [!NOTE]  
->  Les valeurs entre -1 et 1 sont possibles, mais ne peuvent pas être interprétées correctement par les applications clientes de tiers.  
+>  Les valeurs inférieures à 1 et supérieures à 1 sont possibles, mais elles peuvent ne pas être interprétées correctement par des applications clientes tierces.  
   
- **Trend**  
+ **Tendance**  
  Développez pour afficher les options **Graphique de tendance** et **Expression de tendance** .  
   
  **Graphique de tendance**  
@@ -79,10 +79,10 @@ ms.locfileid: "66079449"
   
  Faites glisser les éléments sélectionnés du volet **Outils de calcul** dans cette option pour inclure la syntaxe MDX de l'élément sélectionné.  
   
- L'expression de tendance peut être basée sur un critère temps qui a une signification dans un contexte d'entreprise. Il est recommandé que cette expression retourne un nombre décimal compris entre -1 et 1. Une valeur inférieure représente une tendance négative dans le temps alors qu'une valeur supérieure représente une tendance positive.  
+ L'expression de tendance peut être basée sur un critère temps qui a une signification dans un contexte d'entreprise. Il est recommandé que cette expression retourne un nombre décimal compris entre-1 et 1. Une valeur inférieure représente une tendance négative dans le temps alors qu'une valeur supérieure représente une tendance positive.  
   
 > [!NOTE]  
->  Les valeurs entre -1 et 1 sont possibles, mais ne peuvent pas être interprétées correctement par les applications clientes de tiers.  
+>  Les valeurs inférieures à 1 et supérieures à 1 sont possibles, mais elles peuvent ne pas être interprétées correctement par des applications clientes tierces.  
   
  **Propriétés supplémentaires**  
  Développez pour afficher les options **Afficher le dossier**, **Indicateur de performance clé parent**, **Membre à l’heure actuelle**, **Poids**et **Description** .  
@@ -92,13 +92,13 @@ ms.locfileid: "66079449"
   
  Utilisez une barre oblique inverse (\\) pour séparer les noms de dossiers dans le dossier d’affichage, et un point-virgule (;) pour séparer plusieurs dossiers d’affichage. Par exemple, tapez `Category\Goal\Scientific;Category\Goal\Metric`.  
   
- **KPI parent**  
+ **Indicateur de performance clé parent**  
  Sélectionnez un indicateur de performance clé existant pour catégoriser l'indicateur de performance clé que doit utiliser l'application cliente.  
   
 > [!NOTE]  
 >  Si cette option est affectée d’un indicateur de performance clé existant, **Afficher le dossier** est ignoré.  
   
- **Membre actuel**  
+ **Membre à l'heure actuelle**  
  Tapez l'expression MDX qui retourne le membre qui identifie le contexte temporel de l'indicateur de performance clé.  
   
  Faites glisser les éléments sélectionnés du volet **Outils de calcul** dans cette option pour inclure la syntaxe MDX de l'élément sélectionné.  
@@ -106,7 +106,7 @@ ms.locfileid: "66079449"
 > [!IMPORTANT]  
 >  L’expression MDX doit retourner le nom unique d’un membre dans une dimension de temps associée au groupe de mesures défini dans **Groupe de mesures associé**.  
   
- **Weight**  
+ **Poids**  
  Développez pour afficher ou modifier l'expression MDX du facteur de poids de l'indicateur de performance clé.  
   
  Faites glisser les éléments sélectionnés du volet **Outils de calcul** dans cette option pour inclure la syntaxe MDX de l'élément sélectionné.  
@@ -115,6 +115,6 @@ ms.locfileid: "66079449"
  Tapez la description facultative de l'indicateur de performance clé.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Indicateurs de performance clés &#40;Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)  
+ [Indicateurs de performance clés &#40;&#41; &#40;concepteur de cube Analysis Services-données multidimensionnelles&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)  
   
   

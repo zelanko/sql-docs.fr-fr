@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2365ec137329675e2cd88e7f5bf7e1781aa3308f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63280493"
 ---
 # <a name="arguments-for-external-tools"></a>Arguments pour outils externes
@@ -25,15 +25,15 @@ ms.locfileid: "63280493"
   
  Le tableau ci-dessous répertorie les arguments pour les outils externes.  
   
-|Créer une vue d’abonnement|Argument|Description|  
+|Name|Argument|Description|  
 |----------|--------------|-----------------|  
 |**Chemin d'accès de l'élément**|$(ItemPath)|Nom complet du fichier source en cours (sous la forme lecteur + chemin d'accès + nom du fichier) ; vide si la fenêtre active n'est pas une fenêtre source.|  
 |**Répertoire de l'élément**|$(ItemDir)|Répertoire de la source en cours (sous la forme lecteur + chemin d'accès) ; vide si la fenêtre active n'est pas une fenêtre source.|  
 |**Nom de fichier de l'élément**|$(ItemFilename)|Nom de fichier de la source en cours (sous la forme nom de fichier) ; vide si la fenêtre active n'est pas une fenêtre source.|  
 |**Extension de l'élément**|$(ItemExt)|Extension du nom de fichier de la source en cours.|  
 |**Ligne active** <sup>1</sup>|$(CurLine)|Position de ligne active du curseur de l'éditeur.|  
-|**Colonne active**1|$(CurCol)|Position de colonne active du curseur de l'éditeur.|  
-|**Texte actif**1|$(CurText)|Texte actif (mot se trouvant à la position actuelle du curseur, ou sélection d'une seule ligne, s'il y en a une).|  
+|**Colonne actuelle**1|$(CurCol)|Position de colonne active du curseur de l'éditeur.|  
+|**Texte actuel**1|$(CurText)|Texte actif (mot se trouvant à la position actuelle du curseur, ou sélection d'une seule ligne, s'il y en a une).|  
 |**Chemin d'accès de la cible**|$(TargetPath)|Nom de fichier complet de la cible (sous la forme lecteur + chemin d'accès + nom du fichier).|  
 |**Répertoire cible**|$(TargetDir)|Répertoire de la cible.|  
 |**Nom de la cible**|$(TargetName)|Nom de fichier de la cible.|  
@@ -43,10 +43,10 @@ ms.locfileid: "63280493"
 |**Répertoire de la solution**|$(SolutionDir)|Répertoire de la solution en cours (sous la forme lecteur + chemin d'accès).|  
 |**Nom du fichier solution**|$(SolutionFileName)|Nom de fichier de la solution en cours (sous la forme lecteur + chemin d'accès + nom du fichier).|  
   
- <sup>1</sup> la ligne actuelle, la colonne actuelle ou le texte actuel est basé sur la position du curseur dans l’éditeur de texte comme indiqué dans la barre d’état.  
+ <sup>1</sup> la ligne active, la colonne Active ou le texte actif est basé sur la position du curseur dans l’éditeur de texte, comme indiqué dans la barre d’État.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Boîte de dialogue Outils externes](external-tools-dialog-box.md)   
+ [Outils externes, boîte de dialogue](external-tools-dialog-box.md)   
  [Éléments généraux de l’interface utilisateur](general-user-interface-elements.md)  
   
   

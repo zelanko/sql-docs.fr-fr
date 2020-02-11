@@ -14,22 +14,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea689f96911af35176d6467e73d496b59f35e3c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833557"
 ---
 # <a name="azure-storage-connection-manager"></a>Gestionnaire de connexions Azure Storage
-  Le Gestionnaire de connexions de stockage Azure permet à un package SSIS pour vous connecter à un compte de stockage Azure en utilisant les valeurs que vous spécifiez pour les propriétés : Nom de compte de stockage et Clé de compte.  
+  Le Gestionnaire de connexions Azure Storage permet à un package SSIS (SQL Server Integration Services) de se connecter à un compte Azure Storage en utilisant les valeurs que vous spécifiez pour les propriétés Nom du compte de stockage et Clé de compte.  
   
 1.  Dans la boîte de dialogue **Ajout d’un gestionnaire de connexions SSIS** , sélectionnez **AzureStorage**, puis cliquez sur **Ajouter**.  
   
-2.  Dans la boîte de dialogue Éditeur du gestionnaire de connexions Azure Storage, choisissez **Utiliser un compte Azure** pour vous connecter à un service de gestion de données Azure par Internet, ou choisissez **Utiliser le compte de développeur local** pour vous connecter au service local hébergé par l’émulateur de stockage Azure.  
+2.  Dans la boîte de dialogue Éditeur du gestionnaire de connexions du Stockage Azure, choisissez **Utiliser un compte Azure** pour vous connecter à un service de gestion de données Azure par Internet, ou choisissez **Utiliser le compte de développeur local** pour vous connecter au service local hébergé par l’émulateur de Stockage Azure.  
   
 3.  Si vous avez sélectionné l’option **Utiliser un compte Azure** , procédez comme suit :  
   
-    1.  Renseignez les champs **Nom du compte de stockage** et **Clé de compte** . Ces valeurs seront stockées en tant que données sensibles dans le package SSIS.  
+    1.  Renseignez les champs **Nom du compte de stockage** et **Clé de compte**. Ces valeurs seront stockées en tant que données sensibles dans le package SSIS.  
   
     2.  Sélectionnez **Utiliser HTTPS** si vous souhaitez utiliser HTTPS plutôt que HTTP pour vous connecter au service de gestion de données Azure.  
   

@@ -1,5 +1,5 @@
 ---
-title: Create an Updatable Subscription à une Publication transactionnelle (Management Studio) | Microsoft Docs
+title: Créer un abonnement pouvant être mis à jour pour une publication transactionnelle (Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/20/2016
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9c04c03c08f118314dc96c8b491e61be317f40c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62691593"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-management-studio"></a>Créer un abonnement pouvant être mis à jour pour une publication transactionnelle (Management Studio)
@@ -43,7 +43,7 @@ Configurez des abonnements pouvant être mis à jour dans la page **Abonnements 
 
     Pour plus d’informations sur le basculement entre les modes de mise à jour, consultez [Basculer entre les modes de mise à jour d’un abonnement transactionnel pouvant être mis à jour](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).
 
-7. La page **Nom d’accès aux abonnements pouvant être mis à jour** est affichée pour les abonnements qui utilisent la mise à jour immédiate ou dont la propriété **update_mode** a la valeur **queued failover**. Dans la page **Nom d’accès aux abonnements pouvant être mis à jour**, spécifiez un serveur lié via lequel sont effectuées les connexions au serveur de publication pour les abonnements mis à jour immédiatement. Les connexions sont utilisées par les déclencheurs qui s'exécutent pour l'abonné et propagent les modifications sur le serveur de publication. Sélectionnez l'une des options suivantes :
+7. La page **Nom d’accès aux abonnements pouvant être mis à jour** est affichée pour les abonnements qui utilisent la mise à jour immédiate ou dont la propriété **update_mode** a la valeur **queued failover**. Dans la page **Nom d’accès aux abonnements pouvant être mis à jour**, spécifiez un serveur lié via lequel sont effectuées les connexions au serveur de publication pour les abonnements mis à jour immédiatement. Les connexions sont utilisées par les déclencheurs qui s'exécutent pour l'abonné et propagent les modifications sur le serveur de publication. Sélectionnez l’une des options suivantes :
 
     * **Créer un serveur lié qui se connecte par Authentification SQL Server**. Sélectionnez cette option si vous n'avez pas défini un serveur distant ou un serveur lié entre l'Abonné et le serveur de publication. La réplication crée un serveur lié pour vous. Le compte que vous spécifiez doit déjà exister sur le serveur de publication.
     * **Utiliser un serveur lié ou un serveur distant que vous avez déjà défini.** Sélectionnez cette option si vous avez défini un serveur distant ou un serveur lié entre l’abonné et le serveur de publication à l’aide de [sp_addserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql), [sp_addlinkedserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql), SQL Server Management Studio ou d’une autre méthode.
@@ -70,7 +70,7 @@ Configurez des abonnements pouvant être mis à jour dans la page **Abonnements 
 
     Pour plus d’informations sur le basculement entre les modes de mise à jour, consultez [Basculer entre les modes de mise à jour d’un abonnement transactionnel pouvant être mis à jour](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).
 
-10. La page **Nom d’accès aux abonnements pouvant être mis à jour** est affichée pour les abonnements qui utilisent la mise à jour immédiate ou dont la propriété **update_mode** a la valeur queued **failover**. Dans la page **Nom d’accès aux abonnements pouvant être mis à jour**, spécifiez un serveur lié via lequel sont effectuées les connexions au serveur de publication pour les abonnements mis à jour immédiatement. Les connexions sont utilisées par les déclencheurs qui s'exécutent pour l'abonné et propagent les modifications sur le serveur de publication. Sélectionnez l'une des options suivantes :
+10. La page **Nom d’accès aux abonnements pouvant être mis à jour** est affichée pour les abonnements qui utilisent la mise à jour immédiate ou dont la propriété **update_mode** a la valeur queued **failover**. Dans la page **Nom d’accès aux abonnements pouvant être mis à jour**, spécifiez un serveur lié via lequel sont effectuées les connexions au serveur de publication pour les abonnements mis à jour immédiatement. Les connexions sont utilisées par les déclencheurs qui s'exécutent pour l'abonné et propagent les modifications sur le serveur de publication. Sélectionnez l’une des options suivantes :
 
     * **Créer un serveur lié qui se connecte par Authentification SQL Server**. Sélectionnez cette option si vous n'avez pas défini un serveur distant ou un serveur lié entre l'Abonné et le serveur de publication. La réplication crée un serveur lié pour vous. Le compte que vous spécifiez doit déjà exister sur le serveur de publication.
     * **Utiliser un serveur lié ou un serveur distant que vous avez déjà défini.** Sélectionnez cette option si vous avez défini un serveur distant ou un serveur lié entre l’abonné et le serveur de publication à l’aide de [sp_addserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql), [sp_addlinkedserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql), SQL Server Management Studio ou d’une autre méthode.
@@ -91,7 +91,7 @@ Configurez des abonnements pouvant être mis à jour dans la page **Abonnements 
     * Si la valeur de `allow_pull` dans le jeu de résultats est `1`, la publication prend en charge les abonnements par extraction.
     * Si la valeur de `allow_pull` est `0`, exécutez [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), en spécifiant `allow_pull` pour `@property` , et `true` pour `@value`. 
 
-3. Sur l’Abonné, exécutez [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Spécifiez `@publisher` et `@publication`, et l’une des valeurs suivantes pour `@update_mode`:
+3. Sur l'Abonné, exécutez [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Spécifiez `@publisher` et `@publication`, et l’une des valeurs suivantes pour `@update_mode`:
 
     * `sync tran` - active l’abonnement pour la mise à jour immédiate.
     * `failover` - active l’abonnement pour la mise à jour immédiate avec mise à jour en file d’attente sous forme d’option de basculement.
@@ -99,7 +99,7 @@ Configurez des abonnements pouvant être mis à jour dans la page **Abonnements 
     > [!NOTE]  
 >  `failover` requiert que la publication soit également activée pour les abonnements avec mise à jour en file d’attente. 
  
-4. Sur l’Abonné, exécutez [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Spécifiez les éléments suivants :
+4. Sur l'Abonné, exécutez [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Spécifiez les éléments suivants :
 
     * Les paramètres `@publisher`, `@publisher_db`et `@publication` . 
     * Les informations d’identification Microsoft Windows sous lesquelles l’Agent de distribution est exécuté sur l’abonné pour `@job_login` et `@job_password`. 
@@ -171,7 +171,7 @@ L'abonnement par extraction est alors inscrit sur le serveur de publication.
     * Si la valeur de `allow_pull` dans le jeu de résultats est `1`, la publication prend en charge les abonnements par extraction.
     * Si la valeur de `allow_pull` est `0`, exécutez [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), en spécifiant `allow_pull` pour `@property` , et `true` pour `@value`. 
 
-3. Sur l’Abonné, exécutez [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Spécifiez `@publisher` et `@publication`, et l’une des valeurs suivantes pour `@update_mode`:
+3. Sur l'Abonné, exécutez [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Spécifiez `@publisher` et `@publication`, et l’une des valeurs suivantes pour `@update_mode`:
 
     * `queued tran` - active l’abonnement pour la mise à jour en attente.
     * `queued failover` - active la prise en charge de la mise à jour en file d’attente avec mise à jour immédiate comme option de basculement.
@@ -179,7 +179,7 @@ L'abonnement par extraction est alors inscrit sur le serveur de publication.
     > [!NOTE]  
 >  `queued failover` requiert que la publication soit également activée pour les abonnements avec mise à jour immédiate. Pour basculer sur la mise à jour immédiate, vous devez utiliser [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) pour définir les informations d’identification sous lesquelles les modifications au niveau de l’Abonné sont répliquées sur le serveur de publication.
  
-4. Sur l’Abonné, exécutez [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Spécifiez les paramètres suivants :
+4. Sur l'Abonné, exécutez [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Spécifiez les paramètres suivants :
 
     * @publisher, `@publisher_db`et `@publication`. 
     * Les informations d’identification Windows sous lesquelles l’Agent de distribution est exécuté sur l’abonné pour `@job_login` et `@job_password`. 
@@ -200,7 +200,7 @@ L'abonnement par extraction est alors inscrit sur le serveur de publication.
 1. Sur le serveur de publication, vérifiez que la publication prend en charge les abonnements avec mise à jour en file d’attente en exécutant [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql). 
 
     * Si la valeur de allow_queued_tran dans le jeu de résultats est 1, la publication prend en charge les abonnements avec mise à jour immédiate.
-    * Si la valeur de allow_queued_tran dans le jeu de résultats est 0, la publication doit être recréée en activant la prise en charge des abonnements avec mise à jour en file d’attente. Pour plus d’informations, consultez Guide pratique pour activer les abonnements avec mise à jour pour les publications transactionnelles (programmation Transact-SQL de la réplication).
+    * Si la valeur de allow_queued_tran dans le jeu de résultats est 0, la publication doit être recréée en activant la prise en charge des abonnements avec mise à jour en file d’attente. Pour plus d’informations, voir Procédure : activer les abonnements avec mise à jour pour les publications transactionnelles (programmation Transact-SQL de la réplication).
 
 2. Sur le serveur de publication, vérifiez que la publication prend en charge les abonnements par émission de données en exécutant [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql). 
 

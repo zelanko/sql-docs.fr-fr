@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 93b5666bd2d57fb0a8ffae435818a02ba152217c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484125"
 ---
 # <a name="managing-a-domain"></a>Gestion d'un domaine
@@ -50,14 +50,14 @@ ms.locfileid: "65484125"
 |Modifier ou augmenter les valeurs dans une base de connaissances|[Modifier les valeurs de domaine](../../2014/data-quality-services/change-domain-values.md)|  
 |Utiliser les règles de validation et de normalisation|[Créer une règle de domaine](../../2014/data-quality-services/create-a-domain-rule.md)|  
 |Utiliser des relations pour corriger un terme qui fait partie d'une valeur dans un domaine|[Créer des relations à base de termes](../../2014/data-quality-services/create-term-based-relations.md)|  
-|Effectuer, fermer ou annuler l'activité de gestion de l'arborescence du domaine|[Terminer l’activité de gestion de l’arborescence du domaine](../../2014/data-quality-services/end-the-domain-management-activity.md)|  
+|Effectuer, fermer ou annuler l'activité de gestion de l'arborescence du domaine|[Terminer l'activité de gestion de l'arborescence du domaine](../../2014/data-quality-services/end-the-domain-management-activity.md)|  
   
 ## <a name="related-tasks"></a>Tâches associées  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Construction d'une base de connaissances par la découverte de la connaissance et la gestion interactive de la connaissance|[Construction d’une base de connaissances](../../2014/data-quality-services/building-a-knowledge-base.md)|  
+|Construction d'une base de connaissances par la découverte de la connaissance et la gestion interactive de la connaissance|[Construction d'une base de connaissances](../../2014/data-quality-services/building-a-knowledge-base.md)|  
 |Importation ou exportation de la connaissance depuis ou vers une base de connaissances.|[Importation et exportation de connaissances](../../2014/data-quality-services/importing-and-exporting-knowledge.md)|  
-|Création d'un domaine composite et ajout de connaissances au domaine.|[Gestion d’un domaine composite](../../2014/data-quality-services/managing-a-composite-domain.md)|  
+|Création d'un domaine composite et ajout de connaissances au domaine.|[Gestion d'un domaine composite](../../2014/data-quality-services/managing-a-composite-domain.md)|  
   
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 57d80824ab0dde301a0b96239636cf0f79ca032c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714737"
 ---
 # <a name="delete-a-trace-transact-sql"></a>Supprimer une trace (Transact-SQL)
@@ -28,9 +28,9 @@ ms.locfileid: "62714737"
   
 ### <a name="to-delete-a-trace"></a>Pour supprimer une trace  
   
-1.  Exécutez **sp_trace_setstatus** en spécifiant **\@status= 0** pour arrêter la trace.  
+1.  Exécutez **sp_trace_setstatus** en spécifiant **@status= 0** pour arrêter la trace.  
   
-2.  Exécutez **sp_trace_setstatus** en spécifiant **\@status= 2** pour fermer la trace et supprimer du serveur les informations la concernant.  
+2.  Exécutez **sp_trace_setstatus** en spécifiant **@status= 2** pour fermer la trace et supprimer du serveur les informations la concernant.  
   
 > [!NOTE]  
 >  Une trace doit d'abord être arrêtée avant d'être fermée.  

@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8cf672f9aefc4b9fa0444c73596d2fac67089474
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67938930"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (propriété)
@@ -36,7 +36,7 @@ ms.locfileid: "67938930"
 > [!NOTE]  
 >  La propriété IDENTITY diffère de la propriété SQL-DMO **Identity** qui expose la propriété d’identité de lignes d’une colonne.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -81,7 +81,7 @@ IDENTITY [ (seed , increment) ]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-the-identity-property-with-create-table"></a>A. Utilisation de la propriété IDENTITY avec CREATE TABLE  
+### <a name="a-using-the-identity-property-with-create-table"></a>R. Utilisation de la propriété IDENTITY avec CREATE TABLE  
  L'exemple crée une table avec la propriété `IDENTITY` pour incrémenter automatiquement un numéro d'identification.  
   
 ```  

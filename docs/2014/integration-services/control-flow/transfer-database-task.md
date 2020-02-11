@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7ddf838269932c19b0614d5a5219a7f03daed17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830148"
 ---
 # <a name="transfer-database-task"></a>Tâche de transfert de bases de données
@@ -32,7 +32,7 @@ ms.locfileid: "62830148"
 ## <a name="transfer-of-databases-between-versions-of-sql-server"></a>Transférer des bases de données entre des versions de SQL Server  
  La tâche de transfert de bases de données peut transférer une base de données entre des instances de différentes versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Événements  
  La tâche de transfert de bases de données n'indique pas les stades intermédiaires de l'avancement du transfert des messages d'erreur : elle signale la tâche comme réalisée à 0 % ou à 100 %.  
   
 ## <a name="execution-value"></a>Valeur d'exécution  
@@ -71,9 +71,9 @@ ms.locfileid: "62830148"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de tâche de transfert de bases de données &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur de tâche de transfert de bases de données &#40;page général&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Éditeur de tâche de transfert de bases de données &#40;page Bases de données&#41;](../transfer-database-task-editor-databases-page.md)  
+-   [Éditeur de tâche de transfert de bases de données &#40;page bases de données&#41;](../transfer-database-task-editor-databases-page.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62830148"
 -   [Définir les propriétés d'une tâche ou d'un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-the-transfer-database-task"></a>Configuration par programmation de la tâche de transfert de bases de données  
- Pour plus d'informations sur la définition par programme de ces propriétés, cliquez sur la rubrique suivante :  
+ Pour plus d'informations sur la définition par programmation de ces propriétés, cliquez sur la rubrique suivante :  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.TransferDatabaseTask.TransferDatabaseTask>  
   
