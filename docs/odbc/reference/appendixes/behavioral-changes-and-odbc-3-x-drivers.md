@@ -1,5 +1,5 @@
 ---
-title: Changements de comportement et pilotes ODBC 3.x | Microsoft Docs
+title: Changements de comportement et pilotes ODBC 3. x | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,25 +15,25 @@ ms.assetid: 88a503cc-bff7-42d9-83ff-8e232109ed06
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27b48951c6fb3be8bfe070863409d77ab760d5fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915617"
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>Changements de comportement et pilotes ODBC 3.x
-L’attribut d’environnement SQL_ATTR_ODBC_VERSION indique au pilote s’il faut présenter ODBC *2.x* comportement ou ODBC *3.x* comportement. Configuration de l’attribut d’environnement SQL_ATTR_ODBC_VERSION dépend de l’application. ODBC *3.x* les applications doivent appeler **SQLSetEnvAttr** pour définir cet attribut après qu’ils appellent **SQLAllocHandle** pour allouer un handle d’environnement et avant d’appeler  **SQLAllocHandle** pour allouer un handle de connexion. Si elles ne le faites pas, le Gestionnaire de pilotes retourne SQLSTATE HY010 (erreur de séquence de fonction) sur le dernier appel à **SQLAllocHandle**.  
+L’attribut d’environnement SQL_ATTR_ODBC_VERSION indique au pilote s’il doit présenter un comportement ODBC *2. x* ou un comportement ODBC *3. x* . La façon dont l’attribut d’environnement SQL_ATTR_ODBC_VERSION est défini dépend de l’application. Les applications ODBC *3. x* doivent appeler **SQLSetEnvAttr** pour définir cet attribut après avoir appelé **SQLAllocHandle** pour allouer un handle d’environnement et avant d’appeler **SQLAllocHandle** pour allouer un handle de connexion. Si ce n’est pas le cas, le gestionnaire de pilotes retourne SQLSTATE HY010 (erreur de séquence de fonction) sur le dernier appel à **SQLAllocHandle**.  
   
 > [!NOTE]  
->  Pour plus d’informations sur les changements de comportement et de la façon dont une application fonctionne, consultez [des changements de comportement](../../../odbc/reference/develop-app/behavioral-changes.md).  
+>  Pour plus d’informations sur les changements de comportement et sur le fonctionnement d’une application, consultez [changements de comportement](../../../odbc/reference/develop-app/behavioral-changes.md).  
   
- ODBC *2.x* applications et ODBC *2.x* applications recompilées avec ODBC *3.x* n’appellent pas de fichiers d’en-tête **SQLSetEnvAttr**. Toutefois, ils appellent **SQLAllocEnv** au lieu de **SQLAllocHandle** pour allouer un handle d’environnement. Par conséquent, lorsque l’application appelle **SQLAllocEnv** dans le Gestionnaire de pilotes, le Gestionnaire de pilotes appelle **SQLAllocHandle** et **SQLSetEnvAttr** dans le pilote. Par conséquent, ODBC *3.x* pilotes peuvent toujours compter sur cet attribut est défini.  
+ Les applications ODBC *2. x* et les applications ODBC *2. x* recompilées avec les fichiers d’en-tête ODBC *3. x* n’appellent pas **SQLSetEnvAttr**. Toutefois, ils appellent **SQLAllocEnv** au lieu de **SQLAllocHandle** pour allouer un handle d’environnement. Par conséquent, lorsque l’application appelle **SQLAllocEnv** dans le gestionnaire de pilotes, le gestionnaire de pilotes appelle **SQLAllocHandle** et **SQLSetEnvAttr** dans le pilote. Par conséquent, les pilotes ODBC *3. x* peuvent toujours compter sur cet attribut en cours de définition.  
   
- Si une application conforme aux normes compilé avec l’indicateur de compilation ODBC_STD appels **SQLAllocEnv** (qui peut se produire car **SQLAllocEnv** n’est pas déconseillée dans la norme ISO), l’appel est mappé à  **SQLAllocHandleStd** au moment de la compilation. À l’exécution, l’application appelle **SQLAllocHandleStd**. Le Gestionnaire de pilotes définit l’attribut d’environnement SQL_ATTR_ODBC_VERSION à SQL_OV_ODBC3. Un appel à **SQLAllocHandleStd** équivaut à un appel à **SQLAllocHandle** avec un *HandleType* de SQL_HANDLE_ENV et un appel à **SQLSetEnvAttr** à la valeur SQL_ATTR_ODBC_VERSION SQL_OV_ODBC3.  
+ Si une application conforme aux normes compilée avec l’indicateur de compilation ODBC_STD appelle **SQLAllocEnv** (ce qui peut se produire parce que **SQLAllocEnv** n’est pas déconseillé dans ISO), l’appel est mappé à **SQLAllocHandleStd** au moment de la compilation. Au moment de l’exécution, l’application appelle **SQLAllocHandleStd**. Le gestionnaire de pilotes définit l’attribut d’environnement SQL_ATTR_ODBC_VERSION sur SQL_OV_ODBC3. Un appel à **SQLAllocHandleStd** est équivalent à un appel à **SQLAllocHandle** avec un *comme HandleType* de SQL_HANDLE_ENV et un appel à **SQLSetEnvAttr** pour définir SQL_ATTR_ODBC_VERSION à SQL_OV_ODBC3.  
   
- Dans certaines architectures de pilote, il est nécessaire pour le pilote apparaisse comme une ODBC *2.x* pilote ou une application ODBC *3.x* pilote, en fonction de la connexion. Le pilote dans ce cas en fait peut-être pas un pilote, mais une couche qui se trouve entre le Gestionnaire de pilotes et un autre pilote. Par exemple, il peut imiter un pilote, telles que ODBC Spy. Dans un autre exemple, il peut agir en tant que passerelle, tel que EDA/SQL. À apparaissent sous la forme d’une application ODBC *3.x* pilote, ce type de pilote doit être en mesure d’exporter **SQLAllocHandle**et apparaissent sous la forme d’une application ODBC *2.x* pilote, doit être en mesure d’exporter  **SQLAllocConnect**, **SQLAllocEnv**, et **SQLAllocStmt**. Lorsqu’un environnement, une connexion ou une instruction doit être allouée, le Gestionnaire de pilotes vérifie si ce pilote exporte **SQLAllocHandle**. Étant donné que le pilote est le cas, les appels du Gestionnaire de pilotes **SQLAllocHandle** dans le pilote. Si le pilote fonctionne avec une application ODBC *2.x* pilote, le pilote doit mapper l’appel à **SQLAllocHandle** à **SQLAllocConnect**, **SQLAllocEnv**, ou **SQLAllocStmt**, le cas échéant. Il doit également effectuer rien avec le **SQLSetEnvAttr** appeler lorsque qui se comporte comme une application ODBC *2.x* pilote.  
+ Dans certaines architectures de pilote, le pilote doit apparaître comme un pilote ODBC *2. x* ou un pilote ODBC *3. x* , en fonction de la connexion. Dans ce cas, le pilote peut ne pas être un pilote, mais une couche qui réside entre le gestionnaire de pilotes et un autre pilote. Par exemple, il peut imiter un pilote, tel qu’un espion ODBC. Dans un autre exemple, il peut agir en tant que passerelle, comme EDA/SQL. Pour qu’il apparaisse en tant que pilote ODBC *3. x* , un tel pilote doit pouvoir exporter **SQLAllocHandle**et s’afficher en tant que pilote ODBC *2. x* , doit pouvoir exporter **SQLAllocConnect**, **SQLAllocEnv**et **SQLAllocStmt,**. Lorsqu’un environnement, une connexion ou une instruction doit être allouée, le gestionnaire de pilotes vérifie si ce pilote exporte **SQLAllocHandle**. Depuis le pilote, le gestionnaire de pilotes appelle **SQLAllocHandle** dans le pilote. Si le pilote utilise un pilote ODBC *2. x* , le pilote doit mapper l’appel à **SQLAllocHandle** à **SQLAllocConnect**, **SQLAllocEnv**ou **SQLAllocStmt,**, selon le cas. Elle ne doit également rien faire avec l’appel **SQLSetEnvAttr** lorsqu’elle se comporte comme un pilote ODBC *2. x* .  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Type de données datetime](../../../odbc/reference/appendixes/datetime-data-types.md)  
   

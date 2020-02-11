@@ -18,16 +18,16 @@ ms.assetid: 4fc1822a-5d6e-4034-a2e2-363210232d3b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8de7dd1571f7b9082144e97c8b35d9a39d6cabe8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67907320"
 ---
 # <a name="msdynamicsnapshotviews-transact-sql"></a>MSdynamicsnapshotviews (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Le **MSdynamicsnapshotviews** table effectue le suivi de toutes les vues de capture instantanée de données filtrées temporaires créées par l’agent d’instantané et est utilisée par le système pour nettoyer les vues dans le cas d’un arrêt anormal de l’Agent SQL Server ou le Agent d’instantané. Cette table est stockée dans les bases de données de publication et d’abonnement.  
+  La table **MSdynamicsnapshotviews** effectue le suivi de toutes les vues d’instantanés de données filtrées temporaires créées par l’agent d’instantané, et est utilisée par le système pour nettoyer les vues en cas d’arrêt anormal de SQL Server agent ou de l’agent d’instantané. Cette table est stockée dans les bases de données de publication et d’abonnement.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  

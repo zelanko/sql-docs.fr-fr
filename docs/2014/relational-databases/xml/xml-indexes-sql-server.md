@@ -34,10 +34,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62631362"
 ---
 # <a name="xml-indexes-sql-server"></a>Index XML (SQL Server)
@@ -53,7 +53,7 @@ ms.locfileid: "62631362"
   
 -   Index XML secondaires  
   
- Le premier index portant sur la colonne de type `xml` est obligatoirement l'index XML primaire. À l’aide de l’index XML primaire, les types d’index secondaires suivants sont pris en charge : Chemin d’accès, la valeur et la propriété. Selon le type de requêtes, ces index secondaires peuvent contribuer à améliorer les performances liées à l'exécution de requêtes.  
+ Le premier index portant sur la colonne de type `xml` est obligatoirement l'index XML primaire. Par le biais de l'index XML primaire, les trois types d'index secondaires suivants sont pris en charge : PATH, VALUE, and PROPERTY. Selon le type de requêtes, ces index secondaires peuvent contribuer à améliorer les performances liées à l'exécution de requêtes.  
   
 > [!NOTE]  
 >  Vous ne pouvez pas créer ou modifier d'index XML à moins que les options de base de données ne soient définies correctement pour utiliser le type de données `xml`. Pour plus d’informations, consultez [Utiliser la recherche en texte intégral avec des colonnes XML](use-full-text-search-with-xml-columns.md).  
@@ -93,23 +93,23 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   La clé primaire de la table de base. Cette clé est copiée dans l'index XML primaire afin de pouvoir effectuer une jointure en retour avec la table de base et le nombre maximal de colonnes dans la clé primaire de la table de base est limité à 15.  
   
- Les informations de ce nœud sont utilisées afin d'évaluer et d'élaborer les résultats sous forme de données XML découlant d'une requête donnée. Pour des raisons d'optimisation, les informations relatives au nom de la balise et au type de nœud sont encodées sous forme de valeurs entières et la colonne Path s'appuie sur ce même encodage. En outre, les chemins d'accès sont stockés dans l'ordre inverse afin de pouvoir faire correspondre les chemins d'accès où seul le suffixe est connu. Exemple :  
+ Les informations de ce nœud sont utilisées afin d'évaluer et d'élaborer les résultats sous forme de données XML découlant d'une requête donnée. Pour des raisons d'optimisation, les informations relatives au nom de la balise et au type de nœud sont encodées sous forme de valeurs entières et la colonne Path s'appuie sur ce même encodage. En outre, les chemins d'accès sont stockés dans l'ordre inverse afin de pouvoir faire correspondre les chemins d'accès où seul le suffixe est connu. Par exemple :  
   
 -   `//ContactRecord/PhoneNumber` , où seuls les deux derniers niveaux sont connus ;  
   
- \- ou -  
+ OR  
   
 -   `/Book/*/Title` où le caractère générique (`*`) est mentionné au milieu de l’expression.  
   
  Le processeur de requêtes utilise l'index XML primaire dans le cas de requêtes mettant en œuvre des [xml Data Type Methods](/sql/t-sql/xml/xml-data-type-methods) et renvoie les valeurs scalaires ou les sous-arborescences XML tirées de l'index primaire lui-même (cet index stocke toutes les informations nécessaires afin de reconstruire l'instance XML).  
   
- Par exemple, la requête suivante retourne les informations sommaires stockées dans le `CatalogDescription``xml` colonne de type dans le `ProductModel` table. Elle ne renvoie les informations dans la balise <`Summary`> que pour les modèles de produits dont la description de catalogue stocke également la description située dans la balise <`Features`>.  
+ Par exemple, la requête suivante retourne des informations de résumé stockées `CatalogDescription``xml` dans la colonne type `ProductModel` de la table. Elle ne renvoie les informations dans la balise <`Summary`> que pour les modèles de produits dont la description de catalogue stocke également la description située dans la balise <`Features`>.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
 ```  
   
- Concernant l'index XML primaire, au lieu de fragmenter chaque instance d'objet blob XML se trouvant dans la table de base, les lignes de l'index correspondant à chaque objet blob XML sont soumises à des recherches séquentielles pour retrouver l'expression indiquée dans la méthode `exist()`. Si le chemin d'accès est retrouvé dans la colonne Path de l'index, l'élément <`Summary`> ainsi que ses sous-arborescences sont extraits de l'index XML primaire, puis convertis en objet blob XML suite à l'exécution de la méthode `query()`.  
+ Concernant l'index XML primaire, au lieu de fragmenter chaque instance d'objet blob XML se trouvant dans la table de base, les lignes de l'index correspondant à chaque objet blob XML sont soumises à des recherches séquentielles pour retrouver l'expression indiquée dans la méthode `exist()` . Si le chemin d'accès est retrouvé dans la colonne Path de l'index, l'élément <`Summary`> ainsi que ses sous-arborescences sont extraits de l'index XML primaire, puis convertis en objet blob XML suite à l'exécution de la méthode `query()`.  
   
  Notez que l'index XML primaire n'est pas sollicité lors de la récupération d'une instance XML complète. Par exemple, la requête suivante extrait de la table l'instance XML tout entière décrivant les instructions de fabrication d'un modèle de produit donné.  
   
@@ -141,7 +141,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   `/root/Location` , n'indiquant que son chemin d'accès ;  
   
- \- ou -  
+ OR  
   
 -   `/root/Location/@LocationID[.="10"]` , où le chemin et la valeur du nœud sont précisés.  
   
@@ -168,7 +168,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `/book[@* = "someValue"]`, où la requête recherche l'élément <`book`> dont un attribut possède la valeur `"someValue"`.  
   
- La requête suivante renvoie `ContactID` à partir de la table `Contact` . Le `WHERE` clause spécifie un filtre qui recherche les valeurs dans le `AdditionalContactInfo``xml` colonne de type. L'ID des contacts n'est renvoyé que si l'objet blob XML relatif aux informations complémentaires sur les contacts correspondants contient un numéro de téléphone spécifique. Puisque l'élément <`telephoneNumber`> peut apparaître n'importe où dans le document XML, l'expression du chemin d'accès indique l'axe descendant-or-self.  
+ La requête suivante renvoie `ContactID` à partir de la table `Contact` . La `WHERE` clause spécifie un filtre qui recherche des valeurs dans `AdditionalContactInfo``xml` la colonne Type. L'ID des contacts n'est renvoyé que si l'objet blob XML relatif aux informations complémentaires sur les contacts correspondants contient un numéro de téléphone spécifique. Puisque l'élément <`telephoneNumber`> peut apparaître n'importe où dans le document XML, l'expression du chemin d'accès indique l'axe descendant-or-self.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -183,7 +183,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
  Dans ce cas, nous connaissons donc la valeur de recherche correspondant à <`number`> mais elle peut se trouver n'importe où dans l'instance XML en tant qu'enfant de l'élément <`telephoneNumber`>. Ce type de requête pourrait être plus efficace grâce à la recherche d'une valeur précise dans les index.  
   
 ### <a name="property-secondary-index"></a>Index secondaire de type PROPERTY  
- Les requêtes chargées d'extraire plusieurs valeurs d'instances XML distinctes peuvent bénéficier de l'utilisation d'un index de type PROPERTY. Ce scénario se produit lorsque vous récupérez les propriétés de l’objet à l’aide de la **value()** méthode de la `xml` type et lorsque la valeur de clé primaire de l’objet est connue.  
+ Les requêtes chargées d'extraire plusieurs valeurs d'instances XML distinctes peuvent bénéficier de l'utilisation d'un index de type PROPERTY. Ce scénario se produit lorsque vous récupérez des propriétés d’objet à l’aide de la `xml` méthode **value ()** du type et lorsque la valeur de clé primaire de l’objet est connue.  
   
  L'index utilisant le paramètre PROPERTY se construit d'après des colonnes (PK pour la clé primaire, Path pour le chemin d'accès, ainsi que la valeur du nœud) issues de l'index XML primaire, où PK correspond à la clé primaire de la table de base.  
   
@@ -198,7 +198,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- À part les différences décrites plus loin dans cette rubrique, création un index XML portant sur une`xml` colonne de type est similaire à la création d’un index sur une non -`xml` colonne de type. Les instructions DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes permettent de créer et de gérer les index XML :  
+ À l’exception des différences décrites plus loin dans cette rubrique, la création d’un`xml` index XML sur une colonne de type est similaire à la création`xml` d’un index sur une colonne qui n’est pas de type. Les instructions DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes permettent de créer et de gérer les index XML :  
   
 -   [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   

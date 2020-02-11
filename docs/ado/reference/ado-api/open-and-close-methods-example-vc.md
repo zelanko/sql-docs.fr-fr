@@ -1,5 +1,5 @@
 ---
-title: Ouvrir et fermer l’exemple de méthodes (VC ++) | Microsoft Docs
+title: Open et Close, exemple de méthodes (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: f74a81fd-cbcc-4143-b9f8-774c88dd4fad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 436c58b712ee256f6e120b1b30578e8f0cbb4b64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917932"
 ---
 # <a name="open-and-close-methods-example-vc"></a>Open et Close, exemple de méthodes (VC++)
-Cet exemple utilise le **Open** et [fermer](../../../ado/reference/ado-api/close-method-ado.md) méthodes sur les deux [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) et [connexion](../../../ado/reference/ado-api/connection-object-ado.md) les objets qui ont été ouverts.  
+Cet exemple utilise les méthodes **Open** et [Close](../../../ado/reference/ado-api/close-method-ado.md) sur les objets [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) et [Connection](../../../ado/reference/ado-api/connection-object-ado.md) qui ont été ouverts.  
   
 ```  
 // Open_Close_Methods.cpp  
@@ -207,7 +207,7 @@ void PrintComError(_com_error &e) {
   
 ## <a name="see-also"></a>Voir aussi  
  [Close, méthode (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
- [Objet Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Open, méthode (objet Connection ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
+ [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Open, méthode (connexion ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Open, méthode (objet Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

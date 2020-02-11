@@ -14,27 +14,27 @@ ms.assetid: c4f001b5-8d16-4d39-a42e-c0e2faaaceaf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cde7a5ad0324bc7d5cde5e1a794eeb9e2cb3381a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931580"
 ---
 # <a name="prompt-property-dynamic-ado"></a>Prompt, propriété dynamique (ADO)
-Spécifie si le fournisseur OLE DB doit inviter l’utilisateur pour les informations d’initialisation.  
+Spécifie si le fournisseur de OLE DB doit inviter l’utilisateur à fournir des informations d’initialisation.  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Définit et renvoie un [ConnectPromptEnum](../../../ado/reference/ado-api/connectpromptenum.md) valeur.  
+ Définit et retourne une valeur [ConnectPromptEnum](../../../ado/reference/ado-api/connectpromptenum.md) .  
   
 ## <a name="remarks"></a>Notes  
- **Invite** est une propriété dynamique, qui peut être ajoutée à la [connexion](../../../ado/reference/ado-api/connection-object-ado.md) l’objet [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection par le fournisseur OLE DB. Pour demander les informations d’initialisation, les fournisseurs OLE DB affiche généralement une boîte de dialogue à l’utilisateur.  
+ **Prompt** est une propriété dynamique, qui peut être ajoutée à la collection de [Propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) de l’objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) par le fournisseur OLE DB. Pour demander des informations d’initialisation, OLE DB fournisseurs affichent généralement une boîte de dialogue à l’utilisateur.  
   
- Propriétés dynamiques d’un [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet sont perdues lorsque le **connexion** est fermé. Le **invite** propriété doit être réinitialisée avant de rouvrir le **connexion** pour utiliser une valeur autre que la valeur par défaut.  
+ Les propriétés dynamiques d’un objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) sont perdues lorsque la **connexion** est fermée. La propriété **prompt** doit être réinitialisée avant la réouverture de la **connexion** pour utiliser une valeur autre que la valeur par défaut.  
   
 > [!NOTE]
->  Ne spécifiez pas que le fournisseur doit inviter l’utilisateur dans les scénarios dans lesquels l’utilisateur sera pas en mesure de répondre à la boîte de dialogue. Par exemple, l’utilisateur ne sera pas en mesure de répondre si l’application s’exécute sur un système de serveur au lieu de sur le client de l’utilisateur, ou si l’application s’exécute sur un système sans utilisateur connecté. Dans ce cas, l’application attend indéfiniment une réponse et semblera bloquée.  
+>  Ne spécifiez pas que le fournisseur doit inviter l’utilisateur dans les scénarios où l’utilisateur ne sera pas en mesure de répondre à la boîte de dialogue. Par exemple, l’utilisateur ne peut pas répondre si l’application s’exécute sur un système serveur plutôt que sur le client de l’utilisateur, ou si l’application s’exécute sur un système sans utilisateur connecté. Dans ce cas, l’application attend indéfiniment une réponse et semble être verrouillée.  
   
-## <a name="usage"></a>Utilisation  
+## <a name="usage"></a>Usage  
   
 ```  
 Set cn = New Connection  
@@ -43,4 +43,4 @@ cn.Properties("Prompt") = adPromptNever    ' do not prompt the user
 ```  
   
 ## <a name="applies-to"></a>S'applique à  
- [Connection, objet (ADO MD)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

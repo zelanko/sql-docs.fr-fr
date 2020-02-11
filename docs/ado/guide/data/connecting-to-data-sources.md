@@ -1,5 +1,5 @@
 ---
-title: Connexion aux Sources de données | Microsoft Docs
+title: Connexion à des sources de données | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,20 +13,20 @@ ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 000302715e7ce7d3a8ae53f06d61f54e98cbd883
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925796"
 ---
 # <a name="connecting-to-data-sources"></a>Connexion à des sources de données
-ADO **connexion** objet représente une session unique avec une source de données, y compris un SGBD, un magasin de fichiers ou un fichier texte délimité par des virgules. Dans le cas d’un système de base de données client/serveur, la connexion ADO peut être une connexion de réseau réelle au serveur.  
+Un objet de **connexion** ADO représente une session unique avec une source de données, y compris un SGBD, un magasin de fichiers ou un fichier texte délimité par des virgules. Dans le cas d’un système de base de données client/serveur, la connexion ADO peut être une véritable connexion réseau au serveur.  
   
- Le **connexion** objet prend en charge divers [propriétés et méthodes](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md) pour spécifier les configurations de connexion, ouverture et fermeture des connexions, la création et l’exécution de commandes par rapport à la source de données et fournissant des informations sur la conception de la source de données sous-jacente sous la forme d’ensembles de lignes de schéma, etc. Selon les fonctionnalités prises en charge par le fournisseur, certaines collections, les méthodes ou les propriétés d’un **connexion** objet ne peut pas être disponible.  
+ L’objet de **connexion** prend en charge différentes [Propriétés et méthodes](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md) pour spécifier des configurations de connexion, ouvrir et fermer des connexions, créer et exécuter des commandes sur la source de données et fournir des informations sur la conception de la source de données sous-jacente sous la forme d’ensembles de lignes de schéma, etc. Selon les fonctionnalités prises en charge par le fournisseur, certaines collections, méthodes ou propriétés d’un objet de **connexion** peuvent ne pas être disponibles.  
   
- Vous pouvez vous connecter à une source de données en utilisant un **connexion** de l’objet ou en utilisant un **Recordset** objet.  
+ Vous pouvez vous connecter à une source de données soit à l’aide d’un objet de **connexion** , soit à l’aide d’un objet **Recordset** .  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Utilisation d’un objet Connection](../../../ado/guide/data/using-a-connection-object.md)  
   
@@ -36,4 +36,4 @@ ADO **connexion** objet représente une session unique avec une source de donné
   
 -   [Spécification des propriétés d’une connexion](../../../ado/guide/data/specifying-connection-properties.md)  
   
--   [Contrôle des Transactions](../../../ado/guide/data/controlling-transactions-ado.md)
+-   [Contrôle des transactions](../../../ado/guide/data/controlling-transactions-ado.md)

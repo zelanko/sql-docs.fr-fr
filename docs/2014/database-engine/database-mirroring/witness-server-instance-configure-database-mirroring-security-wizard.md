@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7db00b9deeb5faad62731aa666c54fa385be765b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753971"
 ---
 # <a name="witness-server-instance-configure-database-mirroring-security-wizard"></a>Instance de serveur témoin (Assistant Configuration de la sécurité de la mise en miroir de bases de données)
@@ -37,7 +37,7 @@ ms.locfileid: "62753971"
   
  Sinon, cette zone de liste affiche le nom du serveur actuel. Notez que l'instance de serveur témoin ne peut pas être la même que l'instance du principal ou du serveur miroir.  
   
- **Se connecter**  
+ **Connexion**  
  Si aucune instance de serveur témoin n’a été spécifiée, cliquez sur **Se connecter**. Dans la boîte de dialogue **Se connecter au serveur** qui s’affiche, vous pouvez spécifier l’instance de serveur et établir une connexion.  
   
  Si l’instance a été spécifiée, mais que l’Assistant ne propose pas de connexion doté d’autorisations suffisantes pour vérifier l’existence du point de terminaison, cliquez sur **Se connecter**. Dans la boîte de dialogue **Se connecter au serveur** qui s’affiche, l’instance de serveur est présélectionnée et ne peut pas être modifiée. Spécifiez un compte de domaine qui possède une autorisation suffisante et connectez-vous à l'instance du serveur.  
@@ -45,7 +45,7 @@ ms.locfileid: "62753971"
 > [!NOTE]  
 >  Au moment de se connecter à l’instance du serveur, l’Assistant de configuration de la sécurité de mise en miroir de bases de données utilise les informations d’identification fournies dans la boîte de dialogue **Se connecter au serveur** . Celles-ci diffèrent des informations d'identification d'une session de mise en miroir, qui utilise les informations d'identification du compte de démarrage où l'instance de serveur est en cours d'exécution en tant que service.  
   
- **Port d'écoute**  
+ **Port de l’écouteur**  
  Le comportement de cette option varie comme suit selon qu'il existe ou non un point de terminaison de mise en miroir pour cette instance du serveur :  
   
 -   Si le port d’écoute n’existe pas pour l’instance de serveur, le numéro de port 5022 s’affiche dans la zone de texte **Port** . Vous pouvez entrer n'importe quel numéro de port disponible, tel que 7022.  

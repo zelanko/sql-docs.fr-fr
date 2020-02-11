@@ -16,43 +16,43 @@ ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04dbf3069896b9a7668d64a2f1d322f0b17ca5f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918685"
 ---
 # <a name="field-object"></a>Objet Field
 Représente une colonne de données avec un type de données commun.  
   
 ## <a name="remarks"></a>Notes  
- Chaque **champ** objet correspond à une colonne dans la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Vous utilisez le [valeur](../../../ado/reference/ado-api/value-property-ado.md) propriété du **champ** objets pour définir ou retourner des données pour l’enregistrement en cours. Selon les fonctionnalités le fournisseur expose des regroupements, des méthodes ou propriétés d’un **champ** objet n’est peut-être pas disponible.  
+ Chaque objet **Field** correspond à une colonne dans le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Vous utilisez la propriété [value](../../../ado/reference/ado-api/value-property-ado.md) des objets **Field** pour définir ou renvoyer des données pour l’enregistrement actif. Selon la fonctionnalité que le fournisseur expose, certaines collections, méthodes ou propriétés d’un objet de **champ** peuvent ne pas être disponibles.  
   
- Avec les collections, les méthodes et les propriétés d’un **champ** de l’objet, vous pouvez procédez comme suit :  
+ Avec les collections, les méthodes et les propriétés d’un objet **Field** , vous pouvez effectuer les opérations suivantes :  
   
--   Retourner le nom d’un champ avec le [nom](../../../ado/reference/ado-api/name-property-ado.md) propriété.  
+-   Retourne le nom d’un champ avec la propriété [Name](../../../ado/reference/ado-api/name-property-ado.md) .  
   
--   Afficher ou modifier les données dans le champ avec le **valeur** propriété. **Valeur** est la propriété par défaut de la **champ** objet.  
+-   Affichez ou modifiez les données du champ avec la propriété **valeur** . La **valeur** est la propriété par défaut de l’objet de **champ** .  
   
--   Retourner les caractéristiques de base d’un champ avec le [Type](../../../ado/reference/ado-api/type-property-ado.md), [précision](../../../ado/reference/ado-api/precision-property-ado.md), et [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) propriétés.  
+-   Retourne les caractéristiques de base d’un champ avec les propriétés [type](../../../ado/reference/ado-api/type-property-ado.md), [PRECISION](../../../ado/reference/ado-api/precision-property-ado.md)et [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) .  
   
--   Renvoyer la taille déclarée d’un champ avec le [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) propriété.  
+-   Retourne la taille déclarée d’un champ avec la propriété [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) .  
   
--   Retourner la taille réelle des données dans un champ donné avec la [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) propriété.  
+-   Retourne la taille réelle des données dans un champ donné avec la propriété [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) .  
   
--   Déterminer les types de fonctionnalités sont prises en charge pour un champ donné avec la [attributs](../../../ado/reference/ado-api/attributes-property-ado.md) propriété et [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection.  
+-   Déterminez les types de fonctionnalités pris en charge pour un champ donné avec la propriété [attributs](../../../ado/reference/ado-api/attributes-property-ado.md) et la collection [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) .  
   
--   Manipuler les valeurs des champs contenant des données binaires ou caractères longues avec le [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) et [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) méthodes.  
+-   Manipuler les valeurs des champs contenant des données de type long Binary ou long Character avec les méthodes [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) et [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) .  
   
--   Si le fournisseur prend en charge les mises à jour par lots, résoudre les différences dans les valeurs de champ au cours de la mise à jour par lot avec le [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) et [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) propriétés.  
+-   Si le fournisseur prend en charge les mises à jour par lot, résolvez les incohérences dans les valeurs de champ lors de la mise à jour par lot avec les propriétés [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) et [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) .  
   
- Toutes les propriétés de métadonnées (**nom**, **Type**, **DefinedSize**, **précision**, et **NumericScale**) sont disponibles avant d’ouvrir le **champ** l’objet **Recordset**. Leur définition à ce moment-là est utile pour la construction dynamique des formulaires.  
+ Toutes les propriétés de métadonnées (**Name**, **type**, **DefinedSize**, **PRECISION**et **NumericScale**) sont disponibles avant l’ouverture du **Recordset**de l’objet **Field** . Leur définition à ce moment est utile pour la construction dynamique de formulaires.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient la rubrique suivante.  
   
--   [Champ objet propriétés, méthodes et événements](../../../ado/reference/ado-api/field-object-properties-methods-and-events.md)  
+-   [Propriétés, méthodes et événements de l’objet Field](../../../ado/reference/ado-api/field-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Collection de champs (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Collection de propriétés (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
+ [Fields, collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Properties, collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

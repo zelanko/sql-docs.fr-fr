@@ -16,16 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755351"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Connecter des clients à une session de mise en miroir de bases de données (SQL Server)
   Pour établir une connexion avec une session de mise en miroir de bases de données, un client peut soit utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, soit le fournisseur de données .NET Framework pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. S'ils sont configurés pour une base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , ces deux fournisseurs d'accès aux données prennent pleinement en charge la mise en miroir de bases de données. Pour plus d'informations sur les éléments de programmation à prendre en compte pour l'utilisation d'une base de données mise en miroir, consultez [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Qui plus est, l'instance de serveur principal actuelle doit être disponible et la connexion du client doit avoir été créée dans l'instance de serveur. Pour plus d’informations, consultez [Dépanner des utilisateurs orphelins &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Les connexions clientes à une session de mise en miroir de base de données n'exigent pas l'intervention de l'instance de serveur témoin (le cas échéant).  
   
- ##  <a name="InitialConnection"></a> Établissement de la connexion initiale à une session de mise en miroir de bases de données  
+ ##  <a name="InitialConnection"></a>Établissement de la connexion initiale à une session de mise en miroir de bases de données  
  Pour établir la connexion initiale avec une base de données mise en miroir, un client doit fournir une chaîne de connexion contenant au minimum le nom d'une instance de serveur. Ce nom de serveur obligatoire doit identifier l'instance du serveur principal actuel et est appelé *nom du serveur partenaire initial*.  
   
  Éventuellement, la chaîne de connexion peut également fournir le nom d'une autre instance de serveur, qui doit alors identifier l'instance du serveur miroir actuel, à utiliser si le serveur partenaire initial n'est pas disponible lors de la première tentative de connexion. Ce deuxième nom est appelé *nom du partenaire de basculement*.  
@@ -85,11 +85,11 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Attribut Server  
  La chaîne de connexion doit contenir un attribut `Server` indiquant le nom du serveur partenaire initial, lequel doit identifier l'instance du serveur principal actuel.  
   
- La façon la plus simple d’identifier l’instance de serveur consiste à spécifier son nom : *<nom_serveur>* [ **\\** _<nom_instance_SQL_Server>_ ]. Par exemple :  
+ La façon la plus simple d’identifier l’instance de serveur consiste à spécifier son nom, *<SERVER_NAME>*[**\\** _<SQL_Server_instance_name>_]. Par exemple :  
   
  `Server=Partner_A;`  
   
- ou Gestionnaire de configuration  
+ or  
   
  `Server=Partner_A\Instance_2;`  
   
@@ -98,7 +98,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  Il est nécessaire d'effectuer une requête SQL Server Browser si la chaîne de connexion spécifie le nom de l'instance nommée et pas le port.  
   
- Pour spécifier l’adresse IP et le port, le `Server` attribut prend la forme suivante, `Server=` *< adresse_IP >* `,` *\<port >* , par exemple :  
+ Pour spécifier l’adresse IP et le port, `Server` l’attribut prend la forme suivante `Server=` , *<ip_address>* `,` * \<>de port *, par exemple :  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -118,7 +118,7 @@ Server=123.34.45.56,4724;
 >  Cette chaîne omet les informations d'authentification.  
   
 > [!IMPORTANT]  
->  Intégration du préfixe de protocole avec le `Server` attribut (`Server=tcp:` *\<nom_serveur >* ) n’est pas compatible avec le **réseau** attribut et en spécifiant le protocole dans aux deux endroits obtiendrez probablement une erreur. Par conséquent, nous recommandons qu’une chaîne de connexion spécifie le protocole à l’aide de la **réseau** d’attribut et spécifiez uniquement le nom du serveur dans le `Server` attribut (`"Network=dbmssocn; Server=` *\<nom_serveur >* `"`).  
+>  Le regroupement du préfixe du `Server` protocole avec`Server=tcp:`l’attribut (*\<ServerName>*) n’est pas compatible avec l’attribut **Network** , et la spécification du protocole aux deux emplacements entraînera probablement une erreur. Par conséquent, nous recommandons qu’une chaîne de connexion spécifie le protocole à l’aide de l’attribut **Network** et spécifie uniquement le nom du serveur dans l' `Server` attribut (`"Network=dbmssocn; Server=`*\<ServerName>* `"`).  
   
 #### <a name="failover-partner-attribute"></a>Attribut partenaire de basculement  
  Outre le nom du serveur partenaire initial, le client peut aussi spécifier le nom du partenaire de basculement, lequel doit identifier l'instance du serveur miroir actuel. Le partenaire de basculement est spécifié par l'un des mots clés pour l'attribut de partenaire de basculement. Le mot clé de cet attribut dépend de l'API que vous utilisez. La table suivante répertorie ces mots clés :  
@@ -129,7 +129,7 @@ Server=123.34.45.56,4724;
 |Pilote ODBC|`Failover_Partner`|  
 |ActiveX Data Objects (ADO)|`Failover Partner`|  
   
- La façon la plus simple d’identifier l’instance de serveur consiste à employer son nom système : *<nom_serveur>* [ **\\** _<nom_instance_SQL_Server>_ ].  
+ Le moyen le plus simple d’identifier l’instance de serveur est son nom système, *<SERVER_NAME>*[**\\** _<SQL_Server_instance_name>_].  
   
  Sinon, l'adresse IP et le numéro de port peuvent être fournis dans l'attribut `Failover Partner`. Si la tentative de connexion initiale échoue au cours de la première connexion à la base de données, la tentative de connexion au partenaire de basculement ne sera pas tributaire de DNS et de SQL Server Browser. Une fois qu'une connexion est établie, le nom du partenaire de basculement sera remplacé par le nom du partenaire de basculement, si bien qu'en cas de basculement, les connexions redirigées feront appel à DNS et à SQL Server Browser.  
   
@@ -152,13 +152,13 @@ Server=123.34.45.56,4724;
 "Server=250.65.43.21,4734; Failover_Partner=Partner_B; Database=AdventureWorks; Network=dbmssocn"  
 ```  
   
-##  <a name="RetryAlgorithm"></a> Algorithme de délai entre deux tentatives de connexion (pour les connexions TCP/IP)  
+##  <a name="RetryAlgorithm"></a>Algorithme de nouvelle tentative de connexion (pour les connexions TCP/IP)  
  Pour une connexion TCP/IP, lorsque les noms des deux partenaires sont dans le cache, le fournisseur d'accès aux données se conforme à un algorithme de délai entre deux tentatives de connexion. Ceci s'applique lors de l'établissement de la connexion initiale à la session et lors de la reconnexion lorsqu'une connexion établie a été perdue. Une fois qu'une connexion a été ouverte, la réalisation des opérations de préouverture et d'ouverture de session prend du temps.  
   
 > [!NOTE]  
 >  Le temps consacré à l'établissement d'une connexion peut être supérieur au délai alloué entre deux tentatives en raison de facteurs externes, tels que les recherches DNS, un centre de distribution de clés de contrôleur de domaine/Kerberos lent, le temps consacré à contacter le service SQL Server Browser, un encombrement sur le réseau, etc. Ces facteurs externes peuvent empêcher un client de se connecter à une base de données mise en miroir. L'ouverture d'une connexion peut également être plus longue que le délai prévu entre deux tentatives en raison de facteurs externes. Pour plus d'informations sur le contournement de DNS et du service SQL Server Browser afin de tenter d'établir une connexion au partenaire initial, consultez [Établissement de la connexion initiale à une session de mise en miroir de bases de données](#InitialConnection), plus haut dans cette rubrique.  
   
- Si une tentative de connexion échoue ou si le délai entre deux tentatives expire avant que la connexion n'ait été établie, le fournisseur d'accès aux données se tourne vers l'autre partenaire. Si une connexion n'est pas ouverte à ce stade, le fournisseur tente alors d'utiliser le nom du partenaire initial et celui du partenaire de basculement, jusqu'à ce qu'une connexion ait été ouverte ou que le délai de connexion ait expiré. Par défaut, le délai d'expiration de connexion est de 15 secondes. Nous vous conseillons d'utiliser un délai d'expiration de connexion d'au moins 5 secondes. Si vous spécifiez un délai d'expiration plus court, il est possible que toutes les tentatives de connexion échouent.  
+ Si une tentative de connexion échoue ou si le délai entre deux tentatives expire avant que la connexion n'ait été établie, le fournisseur d'accès aux données se tourne vers l'autre partenaire. Si une connexion n’est pas ouverte à ce stade, le fournisseur essaie d’alterner les noms des partenaires initiaux et de basculement, jusqu’à ce qu’une connexion soit ouverte ou que la période de connexion expire. Le délai d’expiration de connexion par défaut est de 15 secondes. Nous vous conseillons d'utiliser un délai d'expiration de connexion d'au moins 5 secondes. Si vous spécifiez un délai d'expiration plus court, il est possible que toutes les tentatives de connexion échouent.  
   
  Le délai entre deux tentatives correspond à un pourcentage du délai de connexion. Le délai entre deux tentatives de connexion augmente lors de chaque essai successif. Lors du premier essai, le délai entre deux tentatives correspond à 8 % du délai de connexion total. Lors de chaque essai qui suit, l'algorithme de délai entre deux tentatives augmente la durée maximale accordée en fonction de cette même valeur. Par conséquent, les valeurs de délai entre les huit premières tentatives de connexion sont les suivantes :  
   
@@ -166,13 +166,13 @@ Server=123.34.45.56,4724;
   
  Le délai entre deux tentatives est calculé au moyen de la formule suivante :  
   
- _RetryTime_ **=** _PreviousRetryTime_ **+(** 0.08 **&#42;** _LoginTimeout_ **)**  
+ _RetryTime_ **=** _previousretrytime a_ **+ (** 0,08 **&#42;** _LoginTimeout_**)**  
   
  Où *PreviousRetryTime* a la valeur 0 au départ.  
   
  Par exemple, si vous utilisez le délai d’expiration de connexion par défaut de 15 secondes, *LoginTimeout* *= 15*. Dans ce cas, les délais entre deux tentatives alloués lors des trois premiers essais sont les suivants :  
   
-|Arrondi|Calcul de*RetryTime*|Délai entre chaque tentative|  
+|Round|Calcul *RetryTime*|Délai entre chaque tentative|  
 |-----------|-----------------------------|----------------------------|  
 |1|0 **+(** 0,08 **&#42;** 15 **)**|1,2 secondes|  
 |2|1,2 **+(** 0,08 **&#42;** 15 **)**|2,4 secondes|  
@@ -181,9 +181,9 @@ Server=123.34.45.56,4724;
   
  Le tableau suivant illustre ces délais pour les tentatives de connexion successives, lesquelles excèdent toutes le délai d'expiration.  
   
- ![Délai maximal de reprise pour un délai de connexion de 15 secondes](../media/dbm-retry-algorithm.gif "Délai maximal de reprise pour un délai de connexion de 15 secondes")  
+ ![Délai maximal de reprise pour un délai de connexion de 15 secondes](../media/dbm-retry-algorithm.gif "Délai maximal de reprise pour un délai de connexion de 15 secondes")  
   
- Pour le délai d'expiration de connexion par défaut, la durée maximale allouée aux trois premières tentatives de connexion est de 14,4 secondes. Si chaque tentative venait à utiliser la totalité du temps qui lui est alloué, il ne resterait alors que 0,6 secondes avant l'expiration du délai de connexion. Dans ce cas, la quatrième tentative serait écourtée et permettrait uniquement une dernière tentative de connexion rapide à l'aide du nom du partenaire initial. Cependant, une tentative de connexion peut échouer avant le délai autorisé, surtout lors des tentatives ultérieures. Par exemple, la réception d'une erreur réseau peut entraîner l'arrêt d'une tentative avant l'expiration du délai entre deux tentatives. Si les premières tentatives échouent en raison d'une erreur réseau, un délai supplémentaire est alors disponible pour la quatrième tentative, et éventuellement, pour des tentatives supplémentaires.  
+ Pour le délai d'expiration de connexion par défaut, la durée maximale allouée aux trois premières tentatives de connexion est de 14,4 secondes. Si chaque tentative devait utiliser tout son temps alloué, il ne reste plus 0,6 secondes de temps avant que la période de connexion expire. Dans ce cas, le quatrième round est réduit, ce qui permet uniquement une dernière tentative rapide de connexion à l’aide du nom de partenaire initial. Cependant, une tentative de connexion peut échouer avant le délai autorisé, surtout lors des tentatives ultérieures. Par exemple, la réception d'une erreur réseau peut entraîner l'arrêt d'une tentative avant l'expiration du délai entre deux tentatives. Si les premières tentatives échouent en raison d'une erreur réseau, un délai supplémentaire est alors disponible pour la quatrième tentative, et éventuellement, pour des tentatives supplémentaires.  
   
  L'échec d'une tentative de connexion peut également être lié à une instance de serveur inactive, comme dans les cas de figure où une instance de serveur procède au basculement de sa base de données. Dans ce cas, un délai entre deux tentatives est imposé pour empêcher que les clients surchargent les partenaires de tentatives de connexion à répétition.  
   
@@ -192,7 +192,7 @@ Server=123.34.45.56,4724;
 )  
   
 ### <a name="retry-delays-during-failover"></a>Délais entre deux tentatives lors d'un basculement  
- Si un client tente de se connecter à un partenaire qui fait l'objet d'un basculement, le partenaire répond immédiatement qu'il est inactif. Dans ce cas, chaque nouvelle tentative de connexion est beaucoup plus brève que le délai imparti entre deux tentatives. Ceci signifie que de nombreux essais de connexion peuvent survenir avant l'expiration du délai de connexion. Pour éviter que les partenaires ne soient surchargés par une série rapide de tentatives de connexion lors d'un basculement, le fournisseur d'accès aux données ajoute un délai court entre deux tentatives après chaque cycle. La durée d'un délai entre deux tentatives est déterminée par l'algorithme de délai entre deux tentatives. Après le premier essai, le délai est de 100 millisecondes. Après chacun des trois essais suivants, le délai entre deux tentatives est multiplié par deux : 200, 400 et 800. Pour tous les essais ultérieurs, le délai entre deux tentatives est de 1 seconde tant que la tentative de connexion n'a pas réussi ou que le délai n'a pas expiré.  
+ Si un client tente de se connecter à un partenaire qui fait l'objet d'un basculement, le partenaire répond immédiatement qu'il est inactif. Dans ce cas, chaque nouvelle tentative de connexion est beaucoup plus brève que le délai imparti entre deux tentatives. Cela signifie qu’un grand nombre de tentatives de connexion peuvent se produire avant l’expiration du délai de connexion. Pour éviter de surcharger les partenaires avec une série rapide de tentatives de connexion au cours d’un basculement, le fournisseur d’accès aux données ajoute un bref délai avant chaque nouvelle tentative. La durée d'un délai entre deux tentatives est déterminée par l'algorithme de délai entre deux tentatives. Après le premier essai, le délai est de 100 millisecondes. Après chacun des trois essais suivants, le délai entre deux tentatives est multiplié par deux : 200, 400 et 800. Pour tous les essais ultérieurs, le délai entre deux tentatives est de 1 seconde tant que la tentative de connexion n'a pas réussi ou que le délai n'a pas expiré.  
   
 > [!NOTE]  
 >  Si l'instance de serveur n'est pas arrêtée, la demande de connexion échoue immédiatement.  
@@ -201,13 +201,14 @@ Server=123.34.45.56,4724;
   
  ![Algorithme de délai entre reprises](../media/dbm-retry-delay-algorithm.gif "Algorithme de délai entre reprises")  
   
-##  <a name="Reconnecting"></a> Reconnexion à une session de mise en miroir de bases de données  
+##  <a name="Reconnecting"></a>Reconnexion à une session de mise en miroir de bases de données  
  Si une connexion établie à une session de mise en miroir de bases de données échoue pour une raison quelconque, par exemple suite au basculement de mise en miroir de bases de données, et que l'application tente de se reconnecter au serveur initial, le fournisseur d'accès aux données peut essayer de se reconnecter à l'aide du nom du partenaire de basculement stocké dans le cache du client. La reconnexion n'est cependant pas automatique. L'application doit avoir connaissance de l'erreur. Ensuite, elle doit fermer la connexion qui a échoué et en ouvrir une nouvelle à l'aide des mêmes attributs de chaîne de connexion. À ce stade, le fournisseur d'accès aux données redirige la connexion vers le partenaire de basculement. Si l'instance de serveur identifiée par ce nom est actuellement le serveur principal, la tentative de connexion réussit en général. S'il est incertain si une transaction a été validée ou restaurée, l'application doit vérifier son état, de la même façon que lors de la reconnexion à une instance de serveur autonome.  
   
  La reconnexion s'apparente à une connexion initiale pour laquelle la chaîne de connexion a fourni un nom de partenaire de basculement. Si la première tentative de connexion échoue, les tentatives de connexion alternent entre le nom du partenaire initial et le nom du partenaire de basculement jusqu'à ce que le client se connecte au serveur principal ou que le délai d'attente du fournisseur d'accès aux données soit atteint.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client vérifie qu’il se connecte à une instance de serveur principal, mais ne vérifie pas si cette instance est le serveur partenaire de l’instance de serveur spécifiée dans le nom de serveur partenaire initial de la chaîne de connexion.  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client vérifie qu’il se connecte à une instance de serveur principal, mais ne vérifie pas si cette instance est le serveur partenaire de l’instance de serveur spécifiée dans le nom de serveur partenaire initial de la chaîne de connexion.  
   
  Si les connexions utilisent TCP/IP, l'algorithme de délai entre deux tentatives de connexion détermine la durée allouée aux tentatives de connexion à chaque cycle.  
   
@@ -220,7 +221,7 @@ Server=123.34.45.56,4724;
   
  Après avoir été redirigé vers le partenaire de basculement, un client peut rencontrer des résultats inattendus lors de l'utilisation d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] USE pour utiliser une base de données différente. Cela peut se produire si l'instance de serveur principal actuelle (le partenaire de basculement) possède un ensemble de bases de données différent du serveur principal d'origine (le partenaire initial).  
   
-##  <a name="StalePartnerName"></a> Impact d'un nom de partenaire de basculement obsolète  
+##  <a name="StalePartnerName"></a>Impact d’un nom de partenaire de basculement obsolète  
  L'administrateur de base de données peut modifier le partenaire de basculement à tout moment. C’est pourquoi un nom de partenaire de basculement fourni par le client peut être périmé ou *obsolète*. Prenons par exemple un partenaire de basculement nommé Partner_B qui est remplacé par une autre instance de serveur nommée Partner_C. Si un client fournit Partner_B comme nom de partenaire de basculement, ce nom est obsolète. Quand le nom du partenaire de basculement fourni par le client est obsolète, le comportement du fournisseur d'accès aux données est identique à celui adopté lorsque le nom du partenaire de basculement n'est pas fourni par le client.  
   
  Par exemple, imaginons une situation dans laquelle un client utilise une chaîne de connexion unique pour une série de quatre tentatives de connexion. Dans la chaîne de connexion, le nom du serveur partenaire initial est Partner_A et le nom du partenaire de basculement est Partner_B :  
@@ -237,7 +238,7 @@ Server=123.34.45.56,4724;
 |Configuration|Serveur principal|Serveur miroir|Comportement lors de la tentative de connexion en spécifiant Partner_A et Partner_B|  
 |-------------------|----------------------|-------------------|------------------------------------------------------------------------------|  
 |Configuration de la mise en miroir de départ.|Partner_A|Partner_B|Partner_A est mis en cache en tant que nom du partenaire initial. Le client réussit à se connecter à Partner_A. Le client télécharge le nom du serveur miroir, Partner_B, et le met en cache en ignorant le nom du partenaire de basculement fourni par le client.|  
-|Partner_A subit une défaillance matérielle et un basculement a lieu (suivi d'une déconnexion des clients).|Partner_B|none|Partner_A est toujours mis en cache comme nom de partenaire initial, mais le nom de partenaire de basculement fourni par le client, Partner_B, permet au client de se connecter au serveur principal actuel.|  
+|Partner_A subit une défaillance matérielle et un basculement a lieu (suivi d'une déconnexion des clients).|Partner_B|Aucun|Partner_A est toujours mis en cache comme nom de partenaire initial, mais le nom de partenaire de basculement fourni par le client, Partner_B, permet au client de se connecter au serveur principal actuel.|  
 |L'administrateur de base de données arrête la mise en miroir (et déconnecte les clients), remplace Partner_A par Partner_C et redémarre la mise en miroir.|Partner_B|Partner_C|Le client essaie de se connecter à Partner_A sans succès. Ensuite, il essaie avec Partner_B (le serveur principal actuel) et sa tentative aboutit. Le fournisseur d'accès aux données télécharge le nom du serveur miroir actuel, Partner_C, et le met en cache comme nom de partenaire de basculement.|  
 |Le service est manuellement basculé vers Partner_C (déconnexion des clients).|Partner_C|Partner_B|Le client tente tout d'abord de se connecter à Partner_A, puis à Partner_B. Ces deux noms échouent et la demande de connexion finit par expirer et par échouer.|  
   

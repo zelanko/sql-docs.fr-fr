@@ -1,5 +1,5 @@
 ---
-title: Fonctions des Applications Visual Basic pour | Microsoft Docs
+title: Fonctions de Visual Basic pour Applications | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,42 +16,42 @@ ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25cac9bffce7602ce211be7f83c7e55239061282
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923462"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Fonctions Visual Basic pour Applications
-Le suivant fonctions Visual Basic pour Applications utilisables dans les expressions de calcul de mise en forme des données :  
+Les fonctions de Visual Basic pour Applications suivantes peuvent être utilisées dans les expressions CALC de mise en forme des données :  
   
 |||||||  
 |-|-|-|-|-|-|  
 |Abs|Asc|Atn|CBool|CByte|CMonnaie|  
-|CDate|CDbl|Chr|Chr|ChrW|Caract$|  
-|Chr$|CEnt|CLong|Cos|CSmpl|CChaîne|  
-|CVar|CVDate|CVErr|Date|Date$|AjDate|  
-|DiffDate|PartDate|SérieDate|ValDate|Jour|DDB|  
-|Error|Error$|Exp|Fix|Format|Format$|  
+|CDate|CDbl|Chr|ChrB|ChrW|Caract$|  
+|ChrB $|CEnt|CLong|Cos|CSmpl|CStr|  
+|CVar|CVDate|CVErr|Date|Date$|DateAdd|  
+|DiffDate|PartDate|SérieDate|ValDate|jour|DDB|  
+|Error|Error$|Exp|Correctif|Format|Format$|  
 |VC|Hex|Hex$|Heure|IIF|InStr|  
 |Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
-|IsNull|IsNumeric|IsObject|Minuscule|Minuscule$|Gauche|  
-|LeftB|Gauche$|LeftB$|NbCar|Journal|SupprGauche|  
-|SupprGauche$|ExtracChaîne|ExtracChaîne$|Minute|MIRR|Mois|  
-|maintenant|NPer|NPV|Oct|Oct$|Vpm|  
-|PPmt|PV|RVBC|Taux|RVB|Droit|  
-|RightB|Droite$|RightB$|Aléat|SupprDroite|RTrim$|  
+|IsNull|IsNumeric|IsObject|LCase|Minuscule$|Gauche|  
+|GAUCHEB|Gauche$|GAUCHEB $|Len|Journal|LTrim|  
+|SupprGauche$|Mid|ExtracChaîne$|Minute|MIRR|Month|  
+|Now|NPer|NPV|Oct|Oct$|Vpm|  
+|PPmt|PV|RVBC|Tarif|RGB|Right|  
+|RightB|Droite$|RightB $|Aléat|RTrim|RTrim $|  
 |Seconde|Sgn|Sin|AmorLin|Espace|Espace$|  
 |Racine|NumChaîne|Str$|CompChaîne|ConvChaîne|String|  
-|Chaîne$|SYD|Tan|Time|Temps$|Minuterie|  
-|SérieHeure|VHeure|SupprEspace|Trim$|TypeName|UCase|  
-|UCase$|Val|VarType|JourSem|Year||  
+|Chaîne$|SYD|Tan|Temps|Temps$|Minuteur|  
+|SérieHeure|VHeure|Trim|Trim$|TypeName|UCase|  
+|UCase$|Val|VarType|Jour de la semaine|Year||  
   
 ## <a name="see-also"></a>Voir aussi  
- [Accès aux lignes dans un Recordset hiérarchique](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [Vue d’ensemble de la mise en forme des données](../../../ado/guide/data/data-shaping-overview.md)   
- [Grammaire de la mise en forme formelle](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Accès aux lignes d’un jeu d’enregistrements hiérarchique](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
+ [Présentation de la mise en forme des données](../../../ado/guide/data/data-shaping-overview.md)   
+ [Grammaire de forme formelle](../../../ado/guide/data/formal-shape-grammar.md)   
  [Fournisseurs requis pour la mise en forme des données](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Clause APPEND de forme](../../../ado/guide/data/shape-append-clause.md)   
- [En général, les commandes de forme](../../../ado/guide/data/shape-commands-in-general.md)   
+ [Clause APPEND de la forme](../../../ado/guide/data/shape-append-clause.md)   
+ [Mettre en forme les commandes en général](../../../ado/guide/data/shape-commands-in-general.md)   
  [Clause COMPUTE de la commande SHAPE](../../../ado/guide/data/shape-compute-clause.md)

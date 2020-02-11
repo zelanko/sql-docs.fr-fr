@@ -1,5 +1,5 @@
 ---
-title: Exemple Visual Basic de mise en forme des données | Microsoft Docs
+title: Visual Basic exemple de mise en forme des données | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,10 +15,10 @@ ms.assetid: d95dd499-19e2-4ce7-b16e-f56a04a9519c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a21eda26bab7f5bc5d678c6763c803323ffcff8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923505"
 ---
 # <a name="visual-basic-example-of-data-shaping"></a>Exemple Visual Basic de mise en forme des données
@@ -90,16 +90,16 @@ End Function
   
 ```  
   
-#### <a name="try-it"></a>Essaie !  
+#### <a name="try-it"></a>Essayez !  
   
-1.  Créer un projet d’application EXE Standard de Visual Basic  
+1.  Créer un projet d’application Visual Basic standard EXE  
   
-2.  Sélectionnez **composants** à partir de la **projet** menu dans Visual Studio  
+2.  Sélectionner des **composants** dans le menu **projet** de Visual Studio  
   
-3.  Sélectionnez « Microsoft hiérarchique FlexGrid contrôle 6.0 (OLEDB) » dans le **composants** fenêtre contextuelle, puis cliquez sur **enregistrer**.  
+3.  Sélectionnez Microsoft Hierarchical FlexGrid Control 6,0 (OLEDB)» dans la fenêtre contextuelle des **composants** , puis cliquez sur **Enregistrer**.  
   
-4.  Double-cliquez sur le contrôle FlexGrid à partir du volet boîte à outils dans l’espace de travail de Visual Basic. Modifier le nom de cette instance à MSHFLEXGRID.  
+4.  Double-cliquez sur le contrôle FlexGrid dans le volet boîte à outils de l’espace de travail Visual Basic. Remplacez le nom de cette instance par MSHFLEXGRID.  
   
-5.  Copiez le code précédent et collez-la dans la **Code** page pour remplacer n’importe quel code existant.  
+5.  Copiez le code précédent et collez-le dans la page de **codes** pour remplacer le code existant.  
   
-6.  Sélectionnez **Démarrer** à partir de la **exécuter** menu pour exécuter l’application.
+6.  Sélectionnez **Démarrer** dans le menu **exécuter** pour exécuter l’application.

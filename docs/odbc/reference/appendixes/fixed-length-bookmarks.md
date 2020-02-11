@@ -16,15 +16,15 @@ ms.assetid: cbd8185e-fb03-408f-b80b-1a2e164534fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5877a6cb7a99803f854338321e333c87037c2e90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67913584"
 ---
 # <a name="fixed-length-bookmarks"></a>Signets de longueur fixe
-Si une application ODBC *3.x* pilote doit fonctionner avec une application ODBC *2.x* application que les signets de longueur fixe utilise, le pilote doivent prendre en charge les éléments suivants :  
+Si un pilote ODBC *3. x* doit fonctionner avec une application ODBC *2. x* qui utilise des signets de longueur fixe, le pilote doit prendre en charge les éléments suivants :  
   
--   SQL_UB_ON en tant que valeur pour l’option d’instruction SQL_USE_BOOKMARKS. (SQL_UB_ON est déconseillée dans ODBC *3.x*.)  
+-   SQL_UB_ON comme valeur pour l’option d’instruction SQL_USE_BOOKMARKS. (SQL_UB_ON est déconseillé dans ODBC *3. x*.)  
   
--   L’option d’instruction SQL_GET_BOOKMARK.
+-   Option d’instruction SQL_GET_BOOKMARK.

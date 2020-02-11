@@ -1,5 +1,5 @@
 ---
-title: COMME séquence d’échappement | Microsoft Docs
+title: COMME une séquence d’échappement | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 798d75ea-be9d-4bef-b297-318bc327f1ca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 629ceaf666ae732d0838a216272c308dcb5b5658
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041711"
 ---
 # <a name="like-escape-sequence"></a>Séquence d’échappement pour l’opérateur LIKE
-ODBC utilise les séquences d’échappement pour la clause LIKE. La syntaxe de cette séquence d’échappement est comme suit :  
+ODBC utilise des séquences d’échappement pour la clause LIKE. La syntaxe de cette séquence d’échappement est la suivante :  
   
 ```  
 {'escape-character'}  
@@ -31,14 +31,14 @@ ODBC utilise les séquences d’échappement pour la clause LIKE. La syntaxe de 
 ## <a name="remarks"></a>Notes  
  Dans la notation BNF, la syntaxe est la suivante :  
   
- *Échappement ODBC-like* :: =  
+ *ODBC-like-Escape* :: =  
   
- *ODBC-ÉCHAP-initiateur* escape ' *-caractère d’échappement*' *ODBC ÉCHAP-marque de fin*  
+ *ODBC-ESC-initiateur* Echap'*Escape-caractère*' *ODBC-ESC-terminateur*  
   
- *caractères d’échappement* :: = *caractère*  
+ *caractère d’échappement* :: = *caractère*  
   
- *ODBC-ÉCHAP-initiateur* :: = {}  
+ *ODBC-Echap-Initiator* :: = {  
   
- *ODBC ÉCHAP-marque de fin* :: =}  
+ *ODBC-ESC-terminateur* :: =}  
   
- Pour déterminer si le pilote prend en charge la séquence d’échappement LIKE séquence, une application peut appeler **SQLGetInfo** avec le type d’information SQL_LIKE_ESCAPE_CLAUSE.
+ Pour déterminer si le pilote prend en charge la séquence d’échappement LIKE, une application peut appeler **SQLGetInfo** avec le type d’informations SQL_LIKE_ESCAPE_CLAUSE.

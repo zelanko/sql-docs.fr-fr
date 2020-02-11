@@ -1,5 +1,5 @@
 ---
-title: Enregistrer et ouvrir l’exemple de méthodes (VC ++) | Microsoft Docs
+title: Save et Open, exemples de méthodes (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,16 +16,16 @@ ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 245affed25c7fb3d0ccc91504de0cfaaeee1807a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917073"
 ---
-# <a name="save-and-open-methods-example-vc"></a>Enregistrer et ouvrir l’exemple de méthodes (VC ++)
-Ces trois exemples montrent comment la [enregistrer](../../../ado/reference/ado-api/save-method.md) et **Open** méthodes peuvent être utilisés ensemble.  
+# <a name="save-and-open-methods-example-vc"></a>Save et Open, exemples de méthodes (VC + +)
+Ces trois exemples montrent comment les méthodes [Save](../../../ado/reference/ado-api/save-method.md) et **Open** peuvent être utilisées ensemble.  
   
- Supposons que vous allez voyage d’affaires et que vous souhaitez effectuer le long d’une table à partir d’une base de données. Avant de passer, vous accéder aux données en tant qu’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) et enregistrez-le dans un format transportable. Lorsque vous arrivez à destination, vous accédez le **Recordset** comme local, déconnecté **Recordset**. Vous apportez des modifications à la **Recordset**, puis enregistrez-le à nouveau. Enfin, lorsque vous revenez accueil, vous reconnecter à la base de données et mettre à jour avec les modifications apportées sur la route.  
+ Supposons que vous vous retrouvez dans un voyage d’affaires et que vous souhaitez prendre un tableau à partir d’une base de données. Avant d’aller plus tard, vous accédez aux données sous la forme [d’un jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) et vous les enregistrez sous une forme transportable. Lorsque vous arrivez à votre destination, vous accédez au **Recordset** sous la forme d’un **jeu d’enregistrements**local et déconnecté. Vous apportez des modifications à l’ensemble **d’enregistrements**, puis vous l’enregistrez de nouveau. Enfin, lorsque vous revenez chez vous, vous vous reconnectez à la base de données et vous le mettez à jour avec les modifications que vous avez apportées sur la route.  
   
 ```  
 // BeginSaveCpp.cpp  
@@ -262,5 +262,5 @@ bool FileExists() {
   
 ## <a name="see-also"></a>Voir aussi  
  [Open, méthode (objet Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Save, méthode](../../../ado/reference/ado-api/save-method.md)

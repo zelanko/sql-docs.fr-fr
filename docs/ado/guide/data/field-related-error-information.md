@@ -14,21 +14,21 @@ ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7094c2dba004e35593f5ab11b1162efbdf3283c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925313"
 ---
 # <a name="field-related-error-information"></a>Informations sur les erreurs liées aux champs
-Si une erreur est directement liée à un champ, par exemple, si les données sont manquantes ou si elle est de type incorrect pour le champ - vous pouvez récupérer plus d’informations sur la cause du problème en examinant le **champ** l’objet **état**  propriété. Cette propriété a été améliorée pour fournir des informations spécifiques sur le problème. Ainsi, par exemple, lorsqu’un appel à **UpdateBatch** échoue, la cause du problème peut être déterminé en examinant la **état** propriété de la **champs** dans chacune du concernés enregistrements. La propriété contient une des valeurs dans le **FieldStatusEnum** constante. Le tableau suivant contient les valeurs qui sont particulièrement intéressants lorsqu’une erreur se produit.  
+Si une erreur est directement liée à un champ (par exemple, si les données sont manquantes ou si le type est incorrect pour le champ), vous pouvez récupérer des informations supplémentaires sur la cause du problème en examinant la propriété **Status** de l’objet **Field** . Cette propriété a été améliorée pour fournir des informations spécifiques sur le problème. Ainsi, par exemple, lorsqu’un appel à **UpdateBatch** échoue, la cause du problème peut être déterminée en examinant la propriété **Status** des **champs** de chacun des enregistrements concernés. La propriété contient l’une des valeurs de la constante **FieldStatusEnum** . Le tableau suivant répertorie les valeurs qui présentent un intérêt particulier lorsqu’une erreur se produit.  
   
-|Constante|Value|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adFieldCantConvertValue**|2|Indique que le champ ne peut pas être récupéré ou stocké sans perte de données.|  
-|**adFieldDataOverflow**|6\.|Indique que les données retournées par le fournisseur a dépassé le type de données du champ.|  
-|**adFieldDefault**|13|Indique que la valeur par défaut pour le champ a été utilisée lors de la définition de données.|  
-|**adFieldIgnore**|15|Indique que ce champ a été ignoré lorsque les valeurs de données de paramètre dans la source. Aucune valeur n’a été définie par le fournisseur.|  
-|**adFieldIntegrityViolation**|10|Indique que le champ ne peut pas être modifié car il s’agit d’une entité calculée ou dérivée.|  
+|**adFieldDataOverflow**|6|Indique que les données retournées par le fournisseur ont débordé le type de données du champ.|  
+|**adFieldDefault**|13|Indique que la valeur par défaut du champ a été utilisée lors de la définition des données.|  
+|**adFieldIgnore**|15|Indique que ce champ a été ignoré lors de la définition des valeurs de données dans la source. Aucune valeur n’a été définie par le fournisseur.|  
+|**adFieldIntegrityViolation**|10|Indique que le champ ne peut pas être modifié, car il s’agit d’une entité calculée ou dérivée.|  
 |**adFieldIsNull**|3|Indique que le fournisseur a retourné une valeur null.|  
-|**adFieldOutOfSpace**|22|Indique que le fournisseur est impossible d’obtenir un espace de stockage suffisant pour terminer un déplacement ou de l’opération de copie.|
+|**adFieldOutOfSpace**|22|Indique que le fournisseur ne peut pas obtenir suffisamment d’espace de stockage pour effectuer une opération de déplacement ou de copie.|

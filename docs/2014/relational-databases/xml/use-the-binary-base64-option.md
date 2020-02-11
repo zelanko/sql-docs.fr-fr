@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1bda0167e1e55c3ded715de96027a153ec5a65de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63231255"
 ---
 # <a name="use-the-binary-base64-option"></a>Utiliser l'option BINARY BASE64
@@ -24,7 +24,7 @@ ms.locfileid: "63231255"
   
  Lors de la spécification d'une requête, si un alias est utilisé pour la colonne binaire de la vue, il est renvoyé dans l'encodage URL des données binaires. Dans les opérations suivantes, l'alias ne signifie rien et l'encodage URL ne peut pas être utilisé pour extraire l'image. Par conséquent, n'utilisez pas d'alias lors de l'interrogation d'une vue à l'aide du mode FOR XML AUTO.  
   
- Par exemple, dans une requête SELECT, la conversion d'une colonne en type de données d'objet blob en fait une entité temporaire puisqu'elle perd les noms de table et de colonne qui lui sont associés. De ce fait, les requêtes exprimées en mode AUTO génèrent une erreur car elles ne savent pas où placer cette valeur dans la hiérarchie XML. Exemple :  
+ Par exemple, dans une requête SELECT, la conversion d'une colonne en type de données d'objet blob en fait une entité temporaire puisqu'elle perd les noms de table et de colonne qui lui sont associés. De ce fait, les requêtes exprimées en mode AUTO génèrent une erreur car elles ne savent pas où placer cette valeur dans la hiérarchie XML. Par exemple :  
   
 ```  
 CREATE TABLE MyTable (Col1 int PRIMARY KEY, Col2 binary)  
@@ -49,13 +49,13 @@ FROM MyTable
 FOR XML AUTO, BINARY BASE64;  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <MyTable Col1="1" Col2="Bw==" />  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [UTiliser le mode AUTO avec FOR XML](use-auto-mode-with-for-xml.md)  
+ [Utiliser le mode AUTO avec FOR XML](use-auto-mode-with-for-xml.md)  
   
   

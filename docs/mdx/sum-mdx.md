@@ -1,5 +1,5 @@
 ---
-title: Somme (MDX) | Microsoft Docs
+title: Sum (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: eb4e9d55ef2228404dd9113170066e4a3612a0a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036671"
 ---
 # <a name="sum-mdx"></a>Sum (MDX)
@@ -31,7 +31,7 @@ Sum( Set_Expression [ , Numeric_Expression ] )
  *Set_Expression*  
  Expression d'ensemble MDX (Multidimensional Expressions) valide.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
 ## <a name="remarks"></a>Notes  
@@ -66,7 +66,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
- L’exemple suivant utilise le mot clé WITH MEMBER et **somme** fonction permettant de définir un membre calculé dans la dimension de mesures qui contient la somme de la mesure Reseller Sales Amount pour les membres Canada et United States de la Hiérarchie d’attribut pays dans la dimension Geography.  
+ L’exemple suivant utilise le mot clé WITH MEMBER et la fonction **Sum** pour définir un membre calculé dans la dimension Measures qui contient la somme de la mesure Reseller Sales Amount pour le Canada et États-Unis membres de la hiérarchie d’attribut Country dans la dimension Geography.  
   
 ```  
 WITH MEMBER Measures.NorthAmerica AS SUM   
@@ -80,7 +80,7 @@ SELECT {[Measures].[NorthAmerica]} ON 0,
 FROM [Adventure Works]  
 ```  
   
- Souvent, le **somme** fonction est utilisée avec la **CURRENTMEMBER** ou fonctions comme **YTD** qui retournent un jeu qui varie selon le membre actuel d’une hiérarchie. Par exemple, la requête suivante retourne la somme de la mesure de Montant des ventes sur Internet pour toutes les dates du début de l'année civile à la date affichée sur l'axe des lignes :  
+ Souvent, la fonction **Sum** est utilisée avec la fonction **CurrentMember** ou des fonctions telles que **AAD** qui renvoient un jeu qui varie en fonction du CurrentMember d’une hiérarchie. Par exemple, la requête suivante retourne la somme de la mesure de Montant des ventes sur Internet pour toutes les dates du début de l'année civile à la date affichée sur l'axe des lignes :  
   
  `WITH MEMBER MEASURES.YTDSUM AS`  
   
@@ -93,6 +93,6 @@ FROM [Adventure Works]
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

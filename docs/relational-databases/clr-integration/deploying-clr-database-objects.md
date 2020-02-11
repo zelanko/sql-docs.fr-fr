@@ -15,15 +15,17 @@ ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e82705236ec04c5618a4b43526078a6c218ceef9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72908682"
 ---
 # <a name="deploying-clr-database-objects"></a>Déploiement d'objets de base de données CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Le déploiement est le processus selon lequel une application ou un module fini est distribué en vue de son installation et de son exécution sur un autre ordinateur. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio vous permet de développer des objets de base de données CLR (Common Language Runtime) et de les déployer sur un serveur de test. Les objets de base de données managés peuvent également être compilés avec les fichiers de redistribution [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, au lieu de Visual Studio. Une fois compilés, les assemblys qui contiennent les objets de base de données CLR peuvent être déployés sur un serveur de test à l'aide de Visual Studio ou d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. Notez que Visual Studio .NET 2003 ne peut pas être utilisé pour le déploiement ou la programmation de l'intégration du CLR. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclut le .NET Framework préinstallé et Visual Studio .NET 2003 ne peut pas utiliser les assemblys .NET Framework 2.0.  
+  Le déploiement est le processus selon lequel une application ou un module fini est distribué en vue de son installation et de son exécution sur un autre ordinateur. 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio vous permet de développer des objets de base de données CLR (Common Language Runtime) et de les déployer sur un serveur de test. Les objets de base de données managés peuvent également être compilés avec les fichiers de redistribution [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, au lieu de Visual Studio. Une fois compilés, les assemblys qui contiennent les objets de base de données CLR peuvent être déployés sur un serveur de test à l'aide de Visual Studio ou d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. Notez que Visual Studio .NET 2003 ne peut pas être utilisé pour le déploiement ou la programmation de l'intégration du CLR. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclut le .NET Framework préinstallé et Visual Studio .NET 2003 ne peut pas utiliser les assemblys .NET Framework 2.0.  
   
  Une fois que les méthodes CLR ont été testées et vérifiées sur le serveur de test, elles peuvent être distribuées sur les serveurs de production à l'aide d'un script de déploiement. Le script de déploiement peut être généré manuellement ou à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (consultez la procédure plus loin dans cette rubrique).  
   
@@ -39,7 +41,7 @@ ms.locfileid: "72908682"
   
 #### <a name="to-deploy-the-assembly-using-visual-studio"></a>Pour déployer l'assembly à l'aide de Visual Studio  
   
-1.  Générez le projet en sélectionnant **générer** \<nom du projet > dans le menu **générer** .  
+1.  Générez le projet en sélectionnant nom du projet de **Build** \<> dans le menu **générer** .  
   
 2.  Résolvez tous les avertissements et erreurs de build avant de déployer l'assembly sur le serveur de test.  
   
@@ -57,7 +59,7 @@ ms.locfileid: "72908682"
   
  `vbc /target:library C:\helloworld.vb`  
   
- Ces commandes lancent le C# compilateur Visual ou Visual Basic à l’aide de l’option **/target** pour spécifier la génération d’une dll de bibliothèque.  
+ Ces commandes lancent le compilateur Visual C# ou Visual Basic à l’aide de l’option **/target** pour spécifier la génération d’une dll de bibliothèque.  
   
 1.  Résolvez tous les avertissements et erreurs de build avant de déployer l'assembly sur le serveur de test.  
   
@@ -67,7 +69,7 @@ ms.locfileid: "72908682"
   
  `CREATE ASSEMBLY HelloWorld from 'c:\helloworld.dll' WITH PERMISSION_SET = SAFE;`  
   
-1.  La procédure, fonction, agrégat, type défini par l'utilisateur ou déclencheur doit ensuite être créé(e) dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si l’assembly **HelloWorld** contient une méthode nommée **HelloWorld** dans la classe **procedures** , les [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes peuvent être ajoutées à la requête pour créer une procédure appelée **Hello** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  La procédure, fonction, agrégat, type défini par l'utilisateur ou déclencheur doit ensuite être créé(e) dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si l’assembly **HelloWorld** contient une méthode nommée **HelloWorld** dans la classe **procedures** , [!INCLUDE[tsql](../../includes/tsql-md.md)] les éléments suivants peuvent être ajoutés à la requête pour créer une procédure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]appelée **Hello** dans.  
   
  `CREATE PROCEDURE hello`  
   
@@ -75,7 +77,7 @@ ms.locfileid: "72908682"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- Pour plus d’informations sur la création des différents types d’objets de base de données managés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [fonctions CLR définies par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [agrégats CLR définis](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)par l’utilisateur, [types CLR définis par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [procédures stockées CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)et [clr Déclencheurs](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c).  
+ Pour plus d’informations sur la création des différents types d’objets de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]base de données managés dans, consultez [fonctions CLR définies par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [agrégats CLR définis](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)par l’utilisateur, [types CLR définis par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [procédures stockées CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)et [déclencheurs CLR](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c).  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>Déploiement de l'assembly sur des serveurs de production  
  Une fois que les objets de base de données CLR ont été testés et vérifiés sur le serveur de test, ils peuvent être distribués sur les serveurs de production. Pour plus d’informations sur le débogage des objets de base de données managés, consultez [débogage des objets de base de données CLR](../../relational-databases/clr-integration/debugging-clr-database-objects.md).  
@@ -86,7 +88,7 @@ ms.locfileid: "72908682"
   
 1.  Ouvrez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et connectez-vous à l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] où l'assembly managé ou objet de base de données à déployer est inscrit.  
   
-2.  Dans l **'Explorateur d’objets**, développez le **nom du serveur\<** et les arborescences **de bases de données** . Cliquez avec le bouton droit sur la base de données dans laquelle l’objet de base de données managé est inscrit, sélectionnez **tâches**, puis sélectionnez **générer des scripts**. L'Assistant Script s'ouvre.  
+2.  Dans l **'Explorateur d’objets**, développez le ** \<nom du serveur>** et les arborescences **de bases de données** . Cliquez avec le bouton droit sur la base de données dans laquelle l’objet de base de données managé est inscrit, sélectionnez **tâches**, puis sélectionnez **générer des scripts**. L'Assistant Script s'ouvre.  
   
 3.  Sélectionnez la base de données dans la zone de liste, puis cliquez sur **suivant**.  
   
@@ -94,7 +96,7 @@ ms.locfileid: "72908682"
   
 5.  Dans le volet **choisir les types d’objets** , choisissez le type d’objet de base de données à déployer. Cliquez sur **Suivant**.  
   
-6.  Pour chaque type d’objet sélectionné dans le volet **choisir les types d’objets** , un volet choisir un type de **\<** s’affiche. Dans ce volet, vous pouvez choisir parmi toutes les instances de ce type d'objet de base de données inscrites dans la base de données spécifiée. Sélectionnez un ou plusieurs objets, puis cliquez sur **suivant**.  
+6.  Pour chaque type d’objet sélectionné dans le volet **choisir les types d’objets** , un volet choisir ** \<un type de>** s’affiche. Dans ce volet, vous pouvez choisir parmi toutes les instances de ce type d'objet de base de données inscrites dans la base de données spécifiée. Sélectionnez un ou plusieurs objets, puis cliquez sur **suivant**.  
   
 7.  Le volet **options de sortie** s’affiche lorsque tous les types d’objets de base de données souhaités ont été sélectionnés. Sélectionnez **script à fichier** et spécifiez un chemin d’accès au fichier pour le script. Sélectionnez **Suivant**. Passez en revue vos sélections et cliquez sur **Terminer**. Le script de déploiement est enregistré dans le chemin d'accès relatif spécifié.  
   

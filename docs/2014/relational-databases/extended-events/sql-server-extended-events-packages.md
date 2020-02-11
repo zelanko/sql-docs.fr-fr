@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638744"
 ---
 # <a name="sql-server-extended-events-packages"></a>Packages d’événements étendus SQL Server
@@ -34,9 +34,9 @@ ms.locfileid: "62638744"
   
  Les packages sont identifiés par un nom, un GUID et le module binaire qui contient le package. Pour plus d’informations, consultez [sys.dm_xe_packages &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql).  
   
- Un package peut contenir l'ensemble ou une partie des objets suivants, présentés plus en détails ultérieurement dans cette rubrique :  
+ Un package peut contenir l'ensemble ou une partie des objets suivants, présentés plus en détails ultérieurement dans cette rubrique :  
   
--   Events  
+-   Événements  
   
 -   Cibles  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62638744"
   
  ![Relation d’un module, de packages et d’objets](../../database-engine/media/xepackagesobjects.gif "Relation d’un module, de packages et d’objets")  
   
-### <a name="events"></a>Events  
+### <a name="events"></a>Événements  
  Les événements surveillent les détails intéressants dans le chemin d'exécution d'un programme, tel que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le déclenchement d'un événement indique que le détail intéressant s'est manifesté et fournit les informations d'état correspondant au moment du déclenchement de l'événement.  
   
  Les événements peuvent être utilisés uniquement à des fins de suivi ou pour déclencher des actions. Ces actions peuvent être synchrones ou asynchrones.  
@@ -76,10 +76,10 @@ ms.locfileid: "62638744"
   
 |Terme|Définition|  
 |----------|----------------|  
-|Administratifs|Les événements administratifs sont principalement destinés aux utilisateurs finaux, aux administrateurs et au support technique. Les événements détectés dans les canaux administratifs font référence à un problème avec une solution déterminée qu'un administrateur peut mettre en place. Par exemple, le fait qu'une application ne puisse pas se connecter à une imprimante correspond à un événement administratif. Ces événements font l'objet d'une documentation détaillée ou sont accompagnés d'un message qui indique la procédure à suivre pour résoudre le problème.|  
-|Opérationnels|Les événements opérationnels permettent d'analyser et de diagnostiquer un problème ou une occurrence. Ils permettent de déclencher des outils ou des tâches en fonction du problème ou de l'occurrence. Par exemple, le fait qu'une imprimante soit ajoutée ou supprimée dans un système correspond à un événement opérationnel.|  
+|Admin|Les événements administratifs sont principalement destinés aux utilisateurs finaux, aux administrateurs et au support technique. Les événements détectés dans les canaux administratifs font référence à un problème avec une solution déterminée qu'un administrateur peut mettre en place. Par exemple, le fait qu'une application ne puisse pas se connecter à une imprimante correspond à un événement administratif. Ces événements font l'objet d'une documentation détaillée ou sont accompagnés d'un message qui indique la procédure à suivre pour résoudre le problème.|  
+|En fonctionnement|Les événements opérationnels permettent d'analyser et de diagnostiquer un problème ou une occurrence. Ils permettent de déclencher des outils ou des tâches en fonction du problème ou de l'occurrence. Par exemple, le fait qu'une imprimante soit ajoutée ou supprimée dans un système correspond à un événement opérationnel.|  
 |Analytiques|Les événements analytiques sont publiés selon un volume élevé. Ils décrivent le fonctionnement des programmes et sont généralement utilisés dans les enquêtes sur les performances.|  
-|Débogage|Les événements de débogage sont utilisés uniquement par les développeurs pour diagnostiquer un problème afin de le résoudre.<br /><br /> Remarque : Les événements du canal de débogage renvoient des données d'état internes propres à l'implémentation. Les schémas et les données renvoyées par les événements sont susceptibles de changer ou de ne plus être compatibles avec les prochaines versions de SQL Server. Par conséquent, les événements du canal de débogage pourront être changés ou supprimés dans les versions à venir de SQL Server sans notification.|  
+|Débogage|Les événements de débogage sont utilisés uniquement par les développeurs pour diagnostiquer un problème afin de le résoudre.<br /><br /> Remarque : les événements du canal de débogage renvoient des données d’État propres à l’implémentation interne. Les schémas et les données renvoyées par les événements sont susceptibles de changer ou de ne plus être compatibles avec les prochaines versions de SQL Server. Par conséquent, les événements du canal de débogage pourront être changés ou supprimés dans les versions à venir de SQL Server sans notification.|  
   
  **Mot clé**  
   
@@ -216,6 +216,6 @@ where name = 'lock_mode'
 ## <a name="see-also"></a>Voir aussi  
  [Sessions Événements étendus SQL Server](sql-server-extended-events-sessions.md)   
  [Moteur des Événements étendus SQL Server](sql-server-extended-events-engine.md)   
- [SQL Server Extended Events Targets](../../database-engine/sql-server-extended-events-targets.md)  
+ [Cibles des Événements étendus SQL Server](../../database-engine/sql-server-extended-events-targets.md)  
   
   

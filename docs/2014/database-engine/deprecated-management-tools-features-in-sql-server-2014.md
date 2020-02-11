@@ -1,5 +1,5 @@
 ---
-title: Fonctionnalités dans SQL Server 2014 des outils d’administration déconseillées | Microsoft Docs
+title: Fonctionnalités des outils d’administration déconseillées dans SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f8de4a3ce8ac36de33d96b71170cb64eb4dd5da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753951"
 ---
 # <a name="deprecated-management-tools-features-in-sql-server-2014"></a>Fonctionnalités des outils d'administration déconseillées dans SQL Server 2014
@@ -22,14 +22,14 @@ ms.locfileid: "62753951"
   
 |Fonctionnalité|Étape d'abandon|  
 |-------------|-----------------------|  
-|[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] API de serveur inscrit|Annonce|  
-|sqlps.exe|Warning|  
-|osql.exe|Warning|  
-|SQLMail|Warning|  
-|Classe SMO : Microsoft.SQLServer.Management.Smo.Information class|Annonce|  
-|Classe SMO : Microsoft.SQLServer.Management.Smo.Settings class|Annonce|  
-|Classe SMO : Classe Microsoft.SQLServer.Management.Smo.DatabaseOptions|Annonce|  
-|Classe SMO : Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication property|Annonce|  
+|[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]API de serveur inscrit|Annonce|  
+|sqlps.exe|Avertissement|  
+|osql.exe|Avertissement|  
+|SQLMail|Avertissement|  
+|Classe SMO : classe Microsoft.SQLServer.Management.Smo.Information|Annonce|  
+|Classe SMO : classe Microsoft.SQLServer.Management.Smo.Settings|Annonce|  
+|Classe SMO : classe Microsoft.SQLServer.Management.Smo.DatabaseOptions|Annonce|  
+|Classe SMO : propriété Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication|Annonce|  
 |Système de projet de base de données, incluant l'intégration du contrôle de code source, dans SSMS|Annonce|  
 |Notifications Net send (Agent[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] )|Annonce|  
 |Notifications par radiomessagerie (Agent[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] )|Annonce|  

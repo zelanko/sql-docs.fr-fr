@@ -1,5 +1,5 @@
 ---
-title: ActiveCommand, propriété-Exemple (VC ++) | Microsoft Docs
+title: ActiveCommand, exemple de propriété (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8d189646cc421eb05d9f49d2da08dfe39d9cb34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921634"
 ---
 # <a name="activecommand-property-example-vc"></a>ActiveCommand, exemple de propriété (VC++)
-Cet exemple montre la [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) propriété.  
+Cet exemple illustre la propriété [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) .  
   
- Une sous-routine un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) de l’objet dont la propriété **ActiveCommand** propriété est utilisée pour afficher le texte de la commande et le paramètre qui a créé le **Recordset**.  
+ Une sous-routine reçoit un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dont la propriété **ActiveCommand** est utilisée pour afficher le texte de la commande et le paramètre qui a créé le **Recordset**.  
   
 ## <a name="example"></a>Exemple  
   
@@ -212,7 +212,7 @@ void PrintComError(_com_error &e) {
 Ringer  
 ```  
   
-## <a name="sample-output"></a>Résultat de l'exemple  
+## <a name="sample-output"></a>Sortie exemple  
   
 ```  
 Command text = 'SELECT * FROM authors WHERE au_lname = ?'  

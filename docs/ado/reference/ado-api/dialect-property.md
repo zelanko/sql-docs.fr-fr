@@ -16,22 +16,22 @@ ms.assetid: 329c3a71-ba88-4009-b04f-2f52195a5957
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3b5c5709a63183bf4c92963dafecb2cf234e2d92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918995"
 ---
 # <a name="dialect-property"></a>Dialect, propriété
-Indique le dialecte de la [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) ou [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) propriétés. Le dialecte définit la syntaxe et les règles générales que le fournisseur utilise pour analyser la chaîne ou le flux.  
+Indique le dialecte des propriétés [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) ou [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) . Le dialecte définit la syntaxe et les règles générales que le fournisseur utilise pour analyser la chaîne ou le flux.  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Le **dialecte** propriété contient un GUID valide qui représente le dialecte du texte de commande ou du flux. La valeur par défaut de cette propriété est {C8B521FB-5CF3-11CE-ADE5-00AA0044773D}, ce qui indique que le fournisseur doit choisir comment interpréter le texte de la commande ou le flux.  
+ La propriété **Dialect** contient un GUID valide qui représente le dialecte du texte ou du flux de commande. La valeur par défaut de cette propriété est {C8B521FB-5CF3-11CE-ADE5-00AA0044773D}, qui indique que le fournisseur doit choisir comment interpréter le texte de la commande ou le flux.  
   
 ## <a name="remarks"></a>Notes  
- ADO n’interroge pas le fournisseur lorsque l’utilisateur lit la valeur de cette propriété ; elle retourne une représentation sous forme de chaîne de la valeur actuellement stockée dans le [commande](../../../ado/reference/ado-api/command-object-ado.md) objet.  
+ ADO n’interroge pas le fournisseur lorsque l’utilisateur lit la valeur de cette propriété ; elle retourne une représentation sous forme de chaîne de la valeur actuellement stockée dans l’objet [Command](../../../ado/reference/ado-api/command-object-ado.md) .  
   
- Lorsque l’utilisateur définit le **dialecte** valide le GUID de propriété, ADO et génère une erreur si la valeur fournie n’est pas un GUID valide. Consultez la documentation de votre fournisseur déterminer les valeurs GUID pris en charge par le **dialecte** propriété.  
+ Lorsque l’utilisateur définit la propriété **dialecte** , ADO valide le GUID et génère une erreur si la valeur fournie n’est pas un GUID valide. Consultez la documentation de votre fournisseur pour déterminer les valeurs GUID prises en charge par la propriété **dialecte** .  
   
 ## <a name="applies-to"></a>S'applique à  
  [Command, objet (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  

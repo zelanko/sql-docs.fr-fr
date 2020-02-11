@@ -17,21 +17,21 @@ ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924544"
 ---
 # <a name="provider-errors"></a>Erreurs du fournisseur
-Lorsqu’une erreur de fournisseur se produit, une erreur d’exécution de -2147467259 est retournée. Lorsque vous recevez cette erreur, vérifiez le **erreurs** collection d’actif **connexion** objet, qui contient une ou plusieurs erreurs décrivant ce qui s’est produite.  
+Lorsqu’une erreur de fournisseur se produit, une erreur d’exécution de-2147467259 est retournée. Lorsque vous recevez cette erreur, vérifiez la collection d' **Erreurs** de l’objet de **connexion** actif, qui contient une ou plusieurs erreurs décrivant ce qui s’est produit.  
   
-## <a name="the-ado-errors-collection"></a>La Collection d’erreurs ADO  
- Parce qu’une opération ADO particulière peut produire plusieurs erreurs de fournisseur, ADO expose une collection d’objets d’erreur via le **connexion** objet. Cette collection ne contient aucun objet si une opération se termine avec succès et qu’il contient un ou plusieurs **erreur** objets si quelque chose s’est produite et que le fournisseur a déclenché une ou plusieurs erreurs. Examinez chaque objet d’erreur pour déterminer la cause exacte de l’erreur.  
+## <a name="the-ado-errors-collection"></a>Collection d’erreurs ADO  
+ Étant donné qu’une opération ADO particulière peut générer plusieurs erreurs de fournisseur, ADO expose une collection d’objets d’erreur via l’objet de **connexion** . Cette collection ne contient aucun objet si une opération se termine avec succès et contient un ou plusieurs objets d' **erreur** en cas de problème et si le fournisseur a déclenché une ou plusieurs erreurs. Examinez chaque objet d’erreur pour déterminer la cause exacte de l’erreur.  
   
- Dès que vous avez terminé toutes les erreurs qui se sont produites, vous pouvez effacer la collection en appelant le **effacer** (méthode). Il est particulièrement important d’effacer explicitement la **erreurs** collection avant d’appeler le **Resync**, **UpdateBatch**, ou **CancelBatch**méthode sur un **Recordset** objet, le **Open** méthode sur un **connexion** de l’objet, ou définir le **filtre** propriété sur un **Recordset** objet. En effaçant la collection explicitement, vous pouvez être certain que n’importe quel **erreur** objets dans la collection ne subsiste d’une opération précédente.  
+ Dès que vous avez terminé de gérer les erreurs qui se sont produites, vous pouvez effacer la collection en appelant la méthode **Clear** . Il est particulièrement important de supprimer explicitement la collection **Errors** avant d’appeler la méthode **Resync**, **UpdateBatch**ou **CancelBatch** sur un **objet Recordset** , la méthode **Open** sur un objet **Connection** ou définir la propriété **Filter** sur un objet **Recordset** . En effaçant explicitement la collection, vous pouvez être certain que tous les objets d' **erreur** de la collection ne sont pas conservés à partir d’une opération précédente.  
   
- Certaines opérations peuvent générer des avertissements en plus des erreurs. Les avertissements sont également représentés par **erreur** des objets dans le **erreurs** collection. Lorsqu’un fournisseur ajoute un avertissement à la collection, il ne génère pas d’une erreur d’exécution. Vérifier le **nombre** propriété de la **erreurs** collection pour déterminer si un avertissement a été généré par une opération particulière. Si le nombre est un ou supérieur, un **erreur** objet a été ajouté à la collection. Dès que vous avez déterminé que le **erreurs** collection contient des erreurs ou des avertissements, vous pouvez effectuer une itération dans la collection et récupérer des informations sur chaque **erreur** objet qu’il contient. Le court exemple Visual Basic suivant illustre cela :  
+ Certaines opérations peuvent générer des avertissements en plus des erreurs. Les avertissements sont également représentés par des objets d' **erreur** dans la collection **Errors** . Lorsqu’un fournisseur ajoute un avertissement à la collection, il ne génère pas d’erreur au moment de l’exécution. Vérifiez la propriété **Count** de la collection **Errors** pour déterminer si un avertissement a été généré par une opération particulière. Si le nombre est supérieur ou égal à un, un objet d' **erreur** a été ajouté à la collection. Dès que vous avez déterminé que la collection d' **Erreurs** contient des erreurs ou des avertissements, vous pouvez effectuer une itération au sein de la collection et récupérer des informations sur chaque objet d' **erreur** qu’elle contient. L’exemple de Visual Basic succinct suivant illustre ceci :  
   
 ```  
 ' BeginErrorHandlingVB02  
@@ -59,23 +59,23 @@ End Function
 ' EndErrorHandlingVB02  
 ```  
   
- La routine de gestion d’erreur inclut un **pour chaque** boucle qui examine chaque objet dans le **erreurs** collection. Dans cet exemple, il accumule un message pour l’affichage. Dans un programme de travail, vous devez écrire du code pour effectuer une tâche appropriée pour chaque erreur, telle que la fermeture de tous les ouvrir des fichiers et de fermer le programme de façon ordonnée.  
+ La routine de gestion des erreurs comprend une boucle **for each** qui examine chaque objet dans la collection d' **Erreurs** . Dans cet exemple, il accumule un message à afficher. Dans un programme opérationnel, vous écrirez du code pour effectuer une tâche appropriée pour chaque erreur, par exemple fermer tous les fichiers ouverts et fermer le programme de manière ordonnée.  
   
-## <a name="the-error-object"></a>L’objet d’erreur  
- En examinant un **erreur** vous pouvez déterminer quelle erreur s’est produite, et plus important encore, quelle application ou l’objet a provoqué l’erreur de l’objet. Le **erreur** objet a les propriétés suivantes :  
+## <a name="the-error-object"></a>Objet d’erreur  
+ En examinant un objet d' **erreur** , vous pouvez déterminer l’erreur qui s’est produite et, plus important, l’application ou l’objet à l’origine de l’erreur. L’objet d' **erreur** a les propriétés suivantes :  
   
 |Nom de la propriété|Description|  
 |-------------------|-----------------|  
-|**Description**|Une description textuelle de l’erreur qui s’est produite.|  
-|**HelpContext, HelpFile**|Désigne le fichier d’aide et de la rubrique d’aide qui contiennent une description de l’erreur qui s’est produite.|  
-|**NativeError**|Le numéro d’erreur spécifique au fournisseur.|  
-|**Nombre**|Un entier Long qui représente le nombre (répertoriées dans le **ErrorValueEnum**) de l’erreur qui s’est produite.|  
-|**Source**|Indique le nom de l’objet ou l’application qui a généré une erreur.|  
-|**SQLState**|Un code d’erreur à cinq caractères que le fournisseur retourne au cours du processus d’une instruction SQL.|  
+|**Description**|Description textuelle de l’erreur qui s’est produite.|  
+|**HelpContext, HelpFile**|Fait référence à la rubrique d’aide et au fichier d’aide qui contiennent une description de l’erreur qui s’est produite.|  
+|**Native**|Numéro d’erreur spécifique au fournisseur.|  
+|**Certain**|Entier long qui représente le nombre (listé dans **ErrorValueEnum**) de l’erreur qui s’est produite.|  
+|**Source**|Indique le nom de l’objet ou de l’application qui a généré une erreur.|  
+|**SQLState**|Code d’erreur à cinq caractères renvoyé par le fournisseur pendant le processus d’une instruction SQL.|  
   
- ADO **erreur** objet est très similaire à Visual Basic standard **Err** objet. Ses propriétés décrivent l’erreur s’est produite. En plus du nombre de l’erreur, vous recevez également deux éléments d’information associés. Le **NativeError** propriété contient un numéro d’erreur spécifique au fournisseur que vous utilisez. Dans l’exemple précédent, le fournisseur est le fournisseur Microsoft OLE DB pour SQL Server, par conséquent, **NativeError** contient des erreurs spécifiques à SQL Server. Le **SQLState** propriété possède un code de cinq lettres qui décrit une erreur dans une instruction SQL.  
+ L’objet d' **erreur** ADO est très similaire à l’objet standard Visual Basic **Err** . Ses propriétés décrivent l’erreur qui s’est produite. Outre le numéro de l’erreur, vous recevez également deux informations associées. La propriété **NativeError** contient un numéro d’erreur spécifique au fournisseur que vous utilisez. Dans l’exemple précédent, le fournisseur est le fournisseur Microsoft OLE DB pour SQL Server. par conséquent, le **NativeError** contient des erreurs spécifiques à SQL Server. La propriété **SQLSTATE** comporte un code à cinq lettres qui décrit une erreur dans une instruction SQL.  
   
 ## <a name="event-related-errors"></a>Erreurs liées aux événements  
- Le **erreur** objet est également utilisé lorsque des erreurs liées aux événements se produisent. Vous pouvez déterminer si une erreur s’est produite dans le processus qui a déclenché un événement ADO en vérifiant la **erreur** objet passé comme paramètre d’événement.  
+ L’objet d' **erreur** est également utilisé lorsque des erreurs liées aux événements se produisent. Vous pouvez déterminer si une erreur s’est produite dans le processus qui a déclenché un événement ADO en vérifiant l’objet d' **erreur** passé comme paramètre d’événement.  
   
- Si l’opération qui provoque un événement se termine correctement, le *ne* paramètre du Gestionnaire d’événements est défini *adStatusOK*. En revanche, si l’opération qui a déclenché l’événement a échoué, le *ne* paramètre est défini sur *contraire*. Dans ce cas, le *pError* paramètre contiendra un **erreur** objet qui décrit l’erreur.
+ Si l’opération qui provoque un événement se termine correctement, le paramètre *adStatus* du gestionnaire d’événements est défini sur *adStatusOK*. En revanche, si l’opération qui a déclenché l’événement a échoué, le paramètre *adStatus* est défini sur *adStatusErrorsOccurred*. Dans ce cas, le paramètre *perror* contient un objet d' **erreur** qui décrit l’erreur.

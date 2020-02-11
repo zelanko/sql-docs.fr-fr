@@ -1,5 +1,5 @@
 ---
-title: Récupération des jeux de résultats dans des flux | Microsoft Docs
+title: Récupération de jeux de résultats dans des flux | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,18 @@ ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2f0c76a668c7191467e9f66ba48c486aceea16df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924347"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>Récupération de jeux de résultats dans les flux
-Au lieu de recevoir les résultats dans le traditionnel **Recordset** de l’objet, ADO peut récupérer à la place les résultats de la requête dans un flux de données. ADO **Stream** objet (ou d’autres objets qui prennent en charge le modèle COM **IStream** interface, tels que l’ASP **demande** et **réponse** objets ) peuvent être utilisées pour contenir ces résultats. Une utilisation de cette fonctionnalité consiste à récupérer les résultats au format XML. Avec SQL Server, par exemple, les résultats XML peuvent être retournées de plusieurs façons, par exemple à l’aide de la clause FOR XML avec une requête SQL SELECT ou une requête XPath.  
+Au lieu de recevoir les résultats dans l’objet **Recordset** traditionnel, ADO peut à la place récupérer les résultats de la requête dans un flux. L’objet de **flux** ADO (ou d’autres objets qui prennent en charge l’interface com **IStream** , tels que les objets de **requête** et de **réponse** ASP) peuvent être utilisés pour contenir ces résultats. Une utilisation de cette fonctionnalité consiste à récupérer les résultats au format XML. Avec SQL Server, par exemple, les résultats XML peuvent être retournés de plusieurs façons, par exemple à l’aide de la clause FOR XML avec une requête SQL SELECT ou à l’aide d’une requête XPath.  
   
- Pour recevoir les résultats de la requête au format de flux de données plutôt que dans un **Recordset**, vous devez spécifier le **adExecuteStream** constante à partir de **ExecuteOptionEnum** en tant que paramètre de la **Execute** méthode d’un **commande** objet. Si votre fournisseur prend en charge cette fonctionnalité, les résultats sont retournés dans un flux lors de l’exécution. Il se peut que vous pouvez être amené à spécifier des propriétés supplémentaires spécifiques au fournisseur avant que le code s’exécute. Par exemple, avec le fournisseur Microsoft OLE DB pour SQL Server, propriétés, telles que **sortie Stream** dans le **propriétés** collection de la **commande** objet doit être spécifié. Pour plus d’informations sur les propriétés dynamiques spécifiques à SQL Server associé à cette fonctionnalité, consultez propriétés XML-Related dans la documentation en ligne de SQL Server.  
+ Pour recevoir les résultats de la requête dans un format de flux plutôt que dans un **jeu d’enregistrements**, vous devez spécifier la constante **adExecuteStream** de **ExecuteOptionEnum** en tant que paramètre de la méthode **Execute** d’un objet **Command** . Si votre fournisseur prend en charge cette fonctionnalité, les résultats sont retournés dans un flux lors de l’exécution. Vous devrez peut-être spécifier d’autres propriétés spécifiques au fournisseur avant l’exécution du code. Par exemple, avec le fournisseur Microsoft OLE DB pour SQL Server, vous devez spécifier des propriétés telles que le **flux de sortie** dans la collection **Properties** de l’objet **Command** . Pour plus d’informations sur les propriétés dynamiques spécifiques à SQL Server relatives à cette fonctionnalité, consultez Propriétés XML dans le Documentation en ligne de SQL Server.  
   
-## <a name="for-xml-query-example"></a>PAR exemple de requête XML  
+## <a name="for-xml-query-example"></a>Exemple de requête FOR XML  
  L’exemple suivant est écrit en VBScript dans la base de données Northwind :  
   
 ```html
@@ -140,37 +140,37 @@ Au lieu de recevoir les résultats dans le traditionnel **Recordset** de l’obj
   
 ```  
   
- La clause FOR XML demande à SQL Server pour retourner des données sous la forme d’un document XML.  
+ La clause FOR XML indique à SQL Server de retourner des données sous la forme d’un document XML.  
   
-### <a name="for-xml-syntax"></a>POUR la syntaxe XML  
+### <a name="for-xml-syntax"></a>Syntaxe FOR XML  
   
 ```syntax
 FOR XML [RAW|AUTO|EXPLICIT]  
 ```  
   
- POUR XML RAW génère des éléments de ligne génériques qui ont des valeurs de colonne en tant qu’attributs. FOR XML AUTO utilise l’heuristique pour générer une arborescence hiérarchique avec des noms d’éléments en fonction des noms de table. FOR XML EXPLICIT génère une table universelle avec les relations décrites en détail par les métadonnées.  
+ FOR XML RAW génère des éléments de ligne génériques qui ont des valeurs de colonne comme attributs. FOR XML AUTO utilise des heuristiques pour générer une arborescence hiérarchique avec des noms d’éléments basés sur des noms de tables. FOR XML EXPLICIT génère une table universelle avec des relations entièrement décrites par les métadonnées.  
   
- Voici un exemple instruction SQL SELECT FOR XML :  
+ Voici un exemple d’instruction SQL SELECT FOR XML :  
   
 ```sql
 SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO  
 ```  
   
- La commande peut être spécifiée dans une chaîne, comme indiqué précédemment, attribué à **CommandText**, ou sous la forme d’une requête de modèle XML affectée à **CommandStream**. Pour plus d’informations sur les requêtes de modèle XML, consultez [commande flux](../../../ado/guide/data/command-streams.md) dans ADO ou à l’aide de flux de données pour l’entrée de commande dans la documentation en ligne de SQL Server.  
+ La commande peut être spécifiée dans une chaîne comme indiqué plus haut, assignée à **CommandText**ou sous la forme d’une requête de modèle XML affectée à **CommandStream**. Pour plus d’informations sur les requêtes de modèle XML, consultez [flux de commandes](../../../ado/guide/data/command-streams.md) dans ADO ou utilisation de flux pour l’entrée de commande dans l’documentation en ligne de SQL Server.  
   
- En tant qu’une requête de modèle XML, la requête FOR XML se présente comme suit :  
+ En tant que requête de modèle XML, la requête FOR XML se présente comme suit :  
   
 ```xml
 <sql:query> SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO </sql:query>  
 ```  
   
- Cet exemple spécifie l’ASP **réponse** de l’objet pour le **sortie Stream** propriété :  
+ Cet exemple spécifie l’objet de **réponse** ASP pour la propriété de **flux de sortie** :  
   
 ```vb
 adoCmd.Properties("Output Stream") = Response  
 ```  
   
- Ensuite, spécifiez **adExecuteStream** paramètre de **Execute**. Cet exemple encapsule le flux dans les balises XML pour créer un îlot de données XML :  
+ Ensuite, spécifiez le paramètre **adExecuteStream** de l' **instruction EXECUTE**. Cet exemple enveloppe le flux de données dans des balises XML pour créer un îlot de données XML :  
   
 ```vb
 Response.write "<XML ID=MyDataIsle>"  
@@ -179,4 +179,4 @@ Response.write "</XML>"
 ```  
   
 ### <a name="remarks"></a>Notes  
- À ce stade, XML a été transmis au navigateur client et il est prêt à être affiché. Cela permet à l’aide de code VBScript côté client pour lier le document XML à une instance de DOM et une boucle dans chaque nœud enfant pour générer une liste de produits au format HTML.
+ À ce stade, le code XML a été transmis au navigateur client et il est prêt à être affiché. Pour ce faire, vous utilisez le VBScript côté client pour lier le document XML à une instance du DOM et vous parcourez chaque nœud enfant pour générer une liste de produits au format HTML.

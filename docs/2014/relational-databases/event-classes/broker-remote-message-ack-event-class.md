@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c919eb7c63a241c780d5e56b3e530921c6b51d6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62663910"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack, classe d'événements
@@ -26,31 +26,31 @@ ms.locfileid: "62663910"
   
 ## <a name="brokerremote-message-ack-event-class-data-columns"></a>Colonnes de données de la classe d'événements Broker:Remote Message Ack  
   
-|Colonne de données|type|Description|Numéro de colonne|Filtrable|  
+|Colonne de données|Type|Description|Numéro de colonne|Filtrable|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette colonne est remplie avec les valeurs transmises par l'application au lieu de l'affichage du nom de programme.|10|Oui|  
 |**BigintData1**|**bigint**|Numéro de séquence du message qui contient l'accusé de réception.|52|Non|  
 |**BigintData2**|**bigint**|Numéro de séquence du message dont la réception est accusée.|53|Non|  
-|**ClientProcessID**|**Int**|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. Cette colonne de données est remplie si l'ID du processus du client est fourni par le client.|9|Oui|  
-|**DatabaseID**|**Int**|ID de la base de données spécifiée par l'instruction USE *base de données* . Si aucune instruction USE *base de données* n’a été émise pour une instance donnée, ID de la base de données par défaut. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données **ServerName** du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
-|**EventClass**|**Int**|Type de classe d'événements capturée. Toujours **149** pour **Broker:Message Ack**.|27|Non|  
-|**EventSequence**|**Int**|Numéro de séquence de cet événement.|51|Non|  
-|**EventSubClass**|**nvarchar**|Type de sous-classe d'événements qui fournit des informations complémentaires sur chaque classe d'événements. Cette colonne peut contenir les valeurs ci-dessous :<br /><br /> **Message d’accusé de réception envoyé**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] a envoyé un accusé de réception dans le cadre d’un message séquencé normal.<br /><br /> **Accusé de réception envoyé**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] a envoyé un accusé de réception en dehors d’un message séquencé normal.<br /><br /> **Message d’accusé de réception reçu**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] a reçu un accusé de réception dans le cadre d’un message séquencé normal.<br /><br /> **Accusé de réception reçu**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] a reçu un accusé de réception en dehors d'un message séquencé.|21|Oui|  
+|**ClientProcessID**|**int**|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. Cette colonne de données est remplie si l'ID du processus du client est fourni par le client.|9|Oui|  
+|**DatabaseID**|**int**|ID de la base de données spécifiée par l'instruction USE *base de données* . Si aucune instruction USE *base de données* n’a été émise pour une instance donnée, ID de la base de données par défaut. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données **ServerName** du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
+|**EventClass**|**int**|Type de classe d'événements capturée. Toujours **149** pour **Broker:Message Ack**.|27|Non|  
+|**EventSequence**|**int**|Numéro de séquence de cet événement.|51|Non|  
+|**EventSubClass**|**nvarchar**|Type de sous-classe d'événements qui fournit des informations complémentaires sur chaque classe d'événements. Cette colonne peut contenir les valeurs ci-dessous :<br /><br /> **Message avec accusé de réception envoyé**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] a envoyé un accusé de réception dans le cadre d’un message séquencé normal.<br /><br /> **Accusé de réception envoyé**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] a envoyé un accusé de réception en dehors d’un message séquencé normal.<br /><br /> **Message avec accusé de réception reçu**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] a reçu un accusé de réception dans le cadre d’un message séquencé normal.<br /><br /> **Accusé de réception reçu**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] a reçu un accusé de réception en dehors d'un message séquencé.|21|Oui|  
 |**GUID**|**uniqueidentifier**|ID de conversation du dialogue. Cet identifiant est transmis en tant que partie intégrante du message et est partagé par les deux intervenants de la conversation.|54|Non|  
-|**HonorBrokerPriority**|**Int**|Valeur actuelle de l’option de base de données HONOR_BROKER_PRIORITY : 0 = OFF, 1 = ON.|32|Oui|  
+|**HonorBrokerPriority**|**Int**|Valeur actuelle de l'option de base de données HONOR_BROKER_PRIORITY : 0 = OFF, 1 = ON.|32|Oui|  
 |**HostName**|**nvarchar**|Nom de l'ordinateur sur lequel s'exécute le client. Cette colonne de données est remplie si le nom de l'hôte est fourni par le client. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
-|**IntegerData**|**Int**|Numéro de fragment du message qui contient l'accusé de réception.|25|Non|  
-|**IntegerData2**|**Int**|Numéro de fragment du message dont la réception est accusée.|55|Non|  
-|**IsSystem**|**Int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur.<br /><br /> 0 = utilisateur<br /><br /> 1 = système|60|Non|  
+|**IntegerData**|**int**|Numéro de fragment du message qui contient l'accusé de réception.|25|Non|  
+|**IntegerData2**|**int**|Numéro de fragment du message dont la réception est accusée.|55|Non|  
+|**IsSystem**|**int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur.<br /><br /> 0 = utilisateur<br /><br /> 1 = système|60|Non|  
 |**LoginSid**|**image**|Numéro d'identification de sécurité (SID) de l'utilisateur connecté. Chaque connexion possède un SID unique au niveau du serveur.|41|Oui|  
 |**NTDomainName**|**nvarchar**|Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
 |**NTUserName**|**nvarchar**|Nom de l'utilisateur propriétaire de la connexion ayant généré l'événement.|6|Oui|  
-|**Priorité**|**Int**|Niveau de priorité de la conversation.|5|Oui|  
+|**Priorité**|**int**|Niveau de priorité de la conversation.|5|Oui|  
 |**RoleName**|**nvarchar**|Rôle de l'instance qui accuse réception du message. Il peut prendre la valeur **initiator** ou la valeur **target**.|38|Non|  
 |**ServerName**|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
-|**SPID**|**Int**|ID de processus serveur affecté par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au processus qui est associé au client.|12|Oui|  
+|**SPID**|**int**|ID de processus serveur affecté par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au processus qui est associé au client.|12|Oui|  
 |**StartTime**|**datetime**|Heure de début de l'événement, le cas échéant.|14|Oui|  
-|**StarvationElevation**|**Int**|Le message a été envoyé avec une priorité plus élevée que la priorité configurée pour la conversation : 0 = faux, 1 = true.|33|Oui|  
+|**StarvationElevation**|**int**|Le message a été envoyé avec une priorité plus élevée que la priorité configurée pour la conversation : 0 = faux, 1 = vrai.|33|Oui|  
 |**TransactionID**|**bigint**|ID affecté à la transaction par le système.|4|Non|  
   
   

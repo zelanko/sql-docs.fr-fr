@@ -1,5 +1,5 @@
 ---
-title: IsolationLevel et Mode, propriétés-exemple (VC ++) | Microsoft Docs
+title: IsolationLevel et mode, exemple de propriétés (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb39288499e2a78523ca29f2e1e4feff4ea9a310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932319"
 ---
-# <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel et Mode, propriétés-exemple (VC ++)
-Cet exemple utilise le [Mode](../../../ado/reference/ado-api/mode-property-ado.md) propriété pour ouvrir une connexion exclusive et le [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) propriété pour ouvrir une transaction effectuée indépendamment des autres transactions.  
+# <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel et mode, exemple de propriétés (VC + +)
+Cet exemple utilise la propriété [mode](../../../ado/reference/ado-api/mode-property-ado.md) pour ouvrir une connexion exclusive, et la propriété [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) pour ouvrir une transaction exécutée de manière isolée d’autres transactions.  
   
 ## <a name="example"></a>Exemple  
   
@@ -223,26 +223,26 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Mode de connexion est exclusif**  
-**Transaction est isolé**  
-**Guide de la disponibilité Executive de base de données - entreprise**  
-**À la cuisine avec des ordinateurs : Bilans clandestine - entreprise**  
-**Vous pouvez combattre les contraintes de l’ordinateur ! -entreprise**  
-**Une discussion sur les ordinateurs - entreprise**  
-**Silicon Valley gastronomique traite - mod_cook**  
-**Les micro-ondes épicerie - mod_cook**  
-**La psychologie de l’ordinateur à la cuisine - INDÉCIS**  
-**Mais elle est adaptée à l’utilisateur ? -popular_comp**  
-**Secrets de la Silicon Valley - popular_comp**  
-**Étiquette NET - popular_comp**  
-**Ordinateur des personnes Phobic et Non allergiques au : Variations de comportement - self_help**  
-**Est donc la ? -self_help**  
-**Durée de vie sans craindre - self_help**  
-**Prolonge la privation de données : Quatre études de cas - self_help**  
-**Sécurité émotionnelle : Un nouvel algorithme - self_help**  
-**Oignons, Leeks et ail : Secrets de la Méditerranée - cui_traditio la cuisine**  
-**Cinquante années dans Buckingham Palace cuisines - cui_traditio**  
-**Sushi, tout le monde ? -cui_traditio**   
+ **Le mode de connexion est exclusif**  
+**La transaction est isolée**  
+**Guide de la base de données du dirigeant occupé-professionnel**  
+**Cuisine avec des ordinateurs : des feuilles de balance pour la gestion clandestine**  
+**Vous pouvez lutter contre le stress informatique ! -Business**  
+**Parler en direct des ordinateurs-entreprise**  
+**Gastronomic de Silicon Valley, traité-mod_cook**  
+**Mod_cook de Gourmet à micro-ondes**  
+**La psychologie de la cuisine informatique-INDÉCIS**  
+**Mais est-ce que l’utilisateur est convivial ? -popular_comp**  
+**Secrets de Silicon Valley-popular_comp**  
+**Etiquette nette-popular_comp**  
+**Phobic d’ordinateur et non-phobic : variations de comportement-self_help**  
+**L’ennemi est-il colère ? -self_help**  
+**Vie sans crainte-self_help**  
+**Durée de données prolongée : quatre études de cas-self_help**  
+**Sécurité émotionnelle : un nouvel algorithme-self_help**  
+**Oignons, poireaux et aulx : cuisiner les secrets de la Méditerranée-trad_cook**  
+**50 ans dans Buckingham Palace cuisines-trad_cook**  
+**Sushi, tout le monde ? -trad_cook**   
 ## <a name="see-also"></a>Voir aussi  
- [IsolationLevel, propriété](../../../ado/reference/ado-api/isolationlevel-property.md)   
+ [Propriété IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Mode, propriété (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

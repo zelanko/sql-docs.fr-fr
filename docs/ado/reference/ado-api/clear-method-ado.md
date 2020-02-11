@@ -17,14 +17,14 @@ ms.assetid: 0a61ba7a-20b8-426a-91a0-9040e7c5a98a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 96bd13f130966b1830d07e49633842e4154b52b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920066"
 ---
 # <a name="clear-method-ado"></a>Clear, méthode (ADO)
-Supprime tous les le [erreur](../../../ado/reference/ado-api/error-object.md) objets à partir de la [erreurs](../../../ado/reference/ado-api/errors-collection-ado.md) collection.  
+Supprime tous les objets [Error](../../../ado/reference/ado-api/error-object.md) de la collection [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,21 +34,21 @@ Errors.Clear
 ```  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le **clair** méthode sur le [erreurs](../../../ado/reference/ado-api/errors-collection-ado.md) collection à supprimer toutes les existantes [erreur](../../../ado/reference/ado-api/error-object.md) objets à partir de la collection. Lorsqu’une erreur se produit, ADO efface automatiquement le **erreurs** collection et le remplit avec **erreur** objets basés sur la nouvelle erreur.  
+ Utilisez la méthode **Clear** de la collection [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) pour supprimer tous les objets d' [erreur](../../../ado/reference/ado-api/error-object.md) existants de la collection. Lorsqu’une erreur se produit, ADO efface automatiquement la collection d' **Erreurs** et la remplit avec des objets d' **erreur** en fonction de la nouvelle erreur.  
   
- Certaines propriétés et méthodes retournent des avertissements qui apparaissent sous la forme **erreur** des objets dans le **erreurs** collection sans pour autant arrêter l’exécution d’un programme. Avant d’appeler le [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), ou [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) méthodes sur un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet ; la [ouvrir](../../../ado/reference/ado-api/open-method-ado-connection.md) méthode sur un [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet ; ou définissez le [filtre](../../../ado/reference/ado-api/filter-property.md) propriété sur un **Recordset** d’objet, appelez le **effacer**(méthode) sur le **erreurs** collection. De cette façon, vous pouvez lire le [nombre](../../../ado/reference/ado-api/count-property-ado.md) propriété de la **erreurs** collection pour tester les avertissements retournés.  
+ Certaines propriétés et méthodes retournent des avertissements qui s’affichent en tant qu’objets d' **erreur** dans la collection d' **Erreurs** , mais n’arrêtent pas l’exécution d’un programme. Avant d’appeler les méthodes [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)ou [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) sur un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ; la méthode [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) sur un objet [Connection](../../../ado/reference/ado-api/connection-object-ado.md) ; ou définissez la propriété [Filter](../../../ado/reference/ado-api/filter-property.md) sur un objet **Recordset** , appelez la méthode **Clear** sur la collection **Errors** . De cette façon, vous pouvez lire la propriété [Count](../../../ado/reference/ado-api/count-property-ado.md) de la collection **Errors** pour tester les avertissements retournés.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Errors, collection (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Execute, Requery et Clear, exemple de méthodes (VB)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
- [Execute, Requery et Clear, exemple de méthodes (VBScript)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
- [Execute, Requery et Clear, exemple de méthodes (VC ++)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   
- [CancelBatch, méthode (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
- [DELETE, méthode (Collection de champs ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
- [DELETE, méthode (Collection de paramètres ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
- [DELETE, méthode (objet Recordset ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
- [Propriété de filtre](../../../ado/reference/ado-api/filter-property.md)   
+ [Execute, Requery et Clear, exemples de méthodes (VB)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
+ [Execute, Requery et Clear, exemple de méthode (VBScript)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
+ [Execute, Requery et Clear, exemples de méthodes (VC + +)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   
+ [Méthode CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
+ [Delete, méthode (collection Fields ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
+ [Delete, méthode (collection Parameters ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
+ [Delete, méthode (objet Recordset ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
+ [Filter (propriété)](../../../ado/reference/ado-api/filter-property.md)   
  [Resync, méthode](../../../ado/reference/ado-api/resync-method.md)   
  [UpdateBatch, méthode](../../../ado/reference/ado-api/updatebatch-method.md)

@@ -1,5 +1,5 @@
 ---
-title: Méthode GetRows, exemple (VB) | Microsoft Docs
+title: GetRows, exemple de méthode (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fedde638e343281c5d3810cc80c9ba8db820e839
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918464"
 ---
 # <a name="getrows-method-example-vb"></a>GetRows, exemple de méthode (VB)
-Cet exemple utilise le [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) méthode pour récupérer un nombre spécifié de lignes à partir d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) et remplir un tableau avec les données résultantes. Le **GetRows** méthode retournera inférieur au nombre souhaité de lignes dans deux cas : soit if [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) a été atteint, ou si **GetRows** tenté de récupérer un enregistrement qui a été supprimé par un autre utilisateur. La fonction retourne **False** uniquement si le deuxième cas se produit. La fonction GetRowsOK est requise pour exécuter cette procédure.  
+Cet exemple utilise la méthode [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) pour récupérer un nombre spécifié de lignes à partir d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) et pour remplir un tableau avec les données résultantes. La méthode **GetRows** retourne moins de lignes que le nombre souhaité dans deux cas : si [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) a été atteint ou si **GetRows** a tenté de récupérer un enregistrement qui a été supprimé par un autre utilisateur. La fonction retourne **false** uniquement si le second cas se produit. La fonction GetRowsOK est requise pour l’exécution de cette procédure.  
   
 ```  
 'BeginGetRowsVB  

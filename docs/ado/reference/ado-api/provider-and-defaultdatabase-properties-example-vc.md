@@ -1,5 +1,5 @@
 ---
-title: Provider et DefaultDatabase propriétés exemple (VC ++) | Microsoft Docs
+title: Provider et DefaultDatabase, exemples de propriétés (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 20226c4c9c8d25541cee7fac786b85af5c12859f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931485"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>Provider et DefaultDatabase, exemple de propriétés (VC++)
-Cet exemple montre la [fournisseur](../../../ado/reference/ado-api/provider-property-ado.md) propriété en ouvrant trois [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objets à l’aide de différents fournisseurs. Il utilise également le [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) propriété à définir la base de données par défaut pour le fournisseur ODBC de Microsoft.  
+Cet exemple illustre la propriété de [fournisseur](../../../ado/reference/ado-api/provider-property-ado.md) en ouvrant trois objets de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) à l’aide de différents fournisseurs. Elle utilise également la propriété [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) pour définir la base de données par défaut pour le fournisseur Microsoft ODBC.  
   
 ```  
 // Provider_and_DefaultDatabase_Properties.cpp  
@@ -134,6 +134,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [DefaultDatabase, propriété](../../../ado/reference/ado-api/defaultdatabase-property.md)   
+ [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Propriété DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)   
  [Provider, propriété (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)

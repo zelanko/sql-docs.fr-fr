@@ -10,12 +10,12 @@ ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26d88f2123d87d462ff7f83d0736c182885bf250
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 868fb0f7176faf1c1e795b8efe43f8b6d4cdb3f5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75225354"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76918096"
 ---
 # <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>Liste de vérification : utiliser PowerShell pour vérifier PowerPivot pour SharePoint
   Aucune opération d'installation ou de récupération de [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] n'est terminée sans exécuter un test de vérification complet qui confirme que les services et les données sont opérationnels. Dans cet article, nous vous indiquons comment effectuer ces étapes avec Windows PowerShell. Nous avons consacré une section distincte à chaque étape afin que vous puissiez accéder directement aux tâches spécifiques. Par exemple, exécutez le script dans la section [Bases de données](#bkmk_databases) de cette rubrique pour vérifier le nom de l'application de service et des bases de données de contenu si vous souhaitez les planifier pour la maintenance ou la sauvegarde.  
@@ -32,7 +32,7 @@ ms.locfileid: "75225354"
   
 |||  
 |-|-|  
-|[Préparer votre environnement PowerShell](#bkmk_prerequisites)<br /><br /> [Symptômes et actions recommandées](#bkmk_symptoms)<br /><br /> **(A)** [Analysis Services service Windows](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService et PowerPivotEngineService](#bkmk_engine_and_system_service)<br /><br /> **(C)** [application (s) de service PowerPivot et proxys](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [bases de données](#bkmk_databases)<br /><br /> [Fonctionnalités SharePoint](#bkmk_features)<br /><br /> [Travaux du minuteur](#bkmk_timer_jobs)<br /><br /> [Règles d’intégrité](#bkmk_health_rules)<br /><br /> **(E)** [journaux Windows et ULS](#bkmk_logs)<br /><br /> [Fournisseur MSOLAP](#bkmk_msolap)<br /><br /> [Bibliothèque cliente ADOMD.Net](#bkmk_adomd)<br /><br /> [Règles de collecte des données d’intégrité](#bkmk_health_collection)<br /><br /> [Elles](#bkmk_solutions)<br /><br /> [Étapes de vérification manuelle](#bkmk_manual)<br /><br /> [Ressources complémentaires](#bkmk_more_resources)<br /><br /> [Script PowerShell complet](#bkmk_full_script)|![contrôle powershell pour powerpivot](../../../sql-server/install/media/ssas-powershell-component-verification.png "contrôle powershell pour powerpivot")|  
+|[Préparer votre environnement PowerShell](#bkmk_prerequisites)<br /><br /> [Symptômes et actions recommandées](#bkmk_symptoms)<br /><br /> **(A)** [Analysis Services service Windows](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService et PowerPivotEngineService](#bkmk_engine_and_system_service)<br /><br /> **(C)** [application (s) de service PowerPivot et proxys](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [bases de données](#bkmk_databases)<br /><br /> [Fonctionnalités SharePoint](#bkmk_features)<br /><br /> [Travaux du minuteur](#bkmk_timer_jobs)<br /><br /> [Règles d’intégrité](#bkmk_health_rules)<br /><br /> **(E)** [journaux Windows et ULS](#bkmk_logs)<br /><br /> [Fournisseur MSOLAP](#bkmk_msolap)<br /><br /> [Bibliothèque cliente ADOMD.Net](#bkmk_adomd)<br /><br /> [Règles de collecte des données d’intégrité](#bkmk_health_collection)<br /><br /> [Solutions](#bkmk_solutions)<br /><br /> [Étapes de vérification manuelle](#bkmk_manual)<br /><br /> [Ressources complémentaires](#bkmk_more_resources)<br /><br /> [Script PowerShell complet](#bkmk_full_script)|![contrôle powershell pour powerpivot](../../../sql-server/install/media/ssas-powershell-component-verification.png "contrôle powershell pour powerpivot")|  
   
 ##  <a name="bkmk_prerequisites"></a>Préparer votre environnement PowerShell  
  Les étapes de cette section préparent votre environnement PowerShell. Elles peuvent ne pas être requises, selon la façon dont votre environnement de script est actuellement configuré.  
@@ -53,7 +53,7 @@ ms.locfileid: "75225354"
 Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0  
 ```  
   
- **Windows PowerShell**  
+ **Windows PowerShell**  
   
  Pour plus d'informations sur PowerShell ISE, consultez [Introduction à Windows PowerShell ISE](https://technet.microsoft.com/library/dd315244.aspx) et [Utiliser Windows PowerShell pour administrer SharePoint 2013](https://technet.microsoft.com/library/ee806878\(v=office.15\).aspx).  
   
@@ -302,7 +302,7 @@ Category    : Data Refresh
 EventID     : 43  
 Level       : High  
 Correlation : 5755879c-7cab-e097-8f80-f27895d44a77  
-Message     : The following error occured when working with the service application, Default PowerPivot Service Application. Skipping the service application..  
+Message     : The following error occurred when working with the service application, Default PowerPivot Service Application. Skipping the service application..  
   
 Timestamp   : 4/14/2014 7:15:02 PM  
 Area        : PowerPivot Service  
@@ -414,7 +414,7 @@ powerpivotwebapp.wsp Online     True WebApplicationDeployed {uesql11spoint2}
   
  [Gérer Excel Services avec Windows PowerShell (SharePoint Server 2010)](https://technet.microsoft.com/library/ff191201\(v=office.14\).aspx)  
   
- [Afficher et lire les fichiers journaux d’installation SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
+ [Afficher et lire les fichiers journaux d’installation de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
  [Utiliser l’applet de commande EvenLog](https://technet.microsoft.com/library/ee176846.aspx)  
   
@@ -458,7 +458,7 @@ Get-SPExcelServiceApplication | Select typename,  DisplayName, status
 #Write-Host ""  
 Write-Host -ForegroundColor Green "PowerPivot Service Application pool"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
-# the following assumes there is only 1 PowerPivot Service Application, and returns that applicaitons pool name.  if you have more than one, use the 2nd version  
+# the following assumes there is only 1 PowerPivot Service Application, and returns that application's pool name.  if you have more than one, use the 2nd version  
 $poolname = [string](Get-PowerPivotServiceApplication | Select -Property applicationpool)  
 $position = $poolname.lastindexof("=")  
 $poolname = $poolname.substring($position+1)  

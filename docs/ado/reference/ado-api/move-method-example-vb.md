@@ -15,14 +15,14 @@ ms.assetid: 55eb797a-0205-40d2-a797-55b216d1d3bb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 258f915b560bf7da9110909ada0f015fdc36af63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932124"
 ---
 # <a name="move-method-example-vb"></a>Move, exemple de méthode (VB)
-Cet exemple utilise le [déplacer](../../../ado/reference/ado-api/move-method-ado.md) méthode pour positionner le pointeur d’enregistrement basée sur l’entrée d’utilisateur.  
+Cet exemple utilise la méthode [Move](../../../ado/reference/ado-api/move-method-ado.md) pour positionner le pointeur d’enregistrement en fonction de l’entrée utilisateur.  
   
 ```  
 'BeginMoveVB  

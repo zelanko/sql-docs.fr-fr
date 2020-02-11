@@ -1,5 +1,5 @@
 ---
-title: Propertyvaltype, propriété (classe ServerNetworkProtocolProperty) | Microsoft Docs
+title: Propriété PropertyValType (classe ServerNetworkProtocolProperty) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 4a69cb8f0817c086537381a87b96dfb237b8d59c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62643198"
 ---
 # <a name="propertyvaltype-property-servernetworkprotocolproperty-class"></a>Propriété PropertyValType (classe ServerNetworkProtocolProperty)
@@ -37,8 +37,8 @@ object
 ```  
   
 ## <a name="parts"></a>Éléments  
- *object*  
- A [classe ServerNetworkProtocolProperty](servernetworkprotocolproperty-class.md) qui représente un attribut du protocole réseau sur l'instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ *dessin*  
+ Objet de [classe ServerNetworkProtocolProperty](servernetworkprotocolproperty-class.md) qui représente un attribut du protocole réseau sur l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur `uint32` qui spécifie le type de données de la valeur de la propriété. Elle retourne 0 pour une valeur de chaîne et 1 pour un type numérique.  

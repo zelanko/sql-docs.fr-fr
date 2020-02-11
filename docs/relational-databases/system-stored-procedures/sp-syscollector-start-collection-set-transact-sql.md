@@ -19,19 +19,19 @@ ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cad08f3866a17299aefce24df9701bb1817bc5fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010604"
 ---
-# <a name="spsyscollectorstartcollectionset-transact-sql"></a>sp_syscollector_start_collection_set (Transact-SQL)
+# <a name="sp_syscollector_start_collection_set-transact-sql"></a>sp_syscollector_start_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Démarre un jeu d'éléments de collecte si le collecteur est déjà activé et que le jeu d'éléments de collecte n'est pas en cours d'exécution. Si le collecteur n’est pas activé, activez le collecteur en exécutant [sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md) , puis utilisez cette procédure stockée pour démarrer un ensemble de la collection.  
+  Démarre un jeu d'éléments de collecte si le collecteur est déjà activé et que le jeu d'éléments de collecte n'est pas en cours d'exécution. Si le collecteur n’est pas activé, activez le collecteur en exécutant [sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md) puis utilisez cette procédure stockée pour démarrer un jeu d’Collections.  
 
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,17 +43,17 @@ sp_syscollector_start_collection_set
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @collection_set_id = ] collection_set_id` Est l’identificateur local unique pour l’ensemble de la collection. *collection_set_id* est **int** avec une valeur par défaut NULL. *collection_set_id* doit avoir une valeur si *nom* est NULL.  
+`[ @collection_set_id = ] collection_set_id`Identificateur local unique pour le jeu d’Collections. *collection_set_id* est de **type int** avec NULL comme valeur par défaut. *collection_set_id* doit avoir une valeur si le *nom* est null.  
   
-`[ @name = ] 'name'` Est le nom de l’ensemble de la collection. *nom* est **sysname** avec une valeur par défaut NULL. *nom* doit avoir une valeur si *collection_set_id* a la valeur NULL.  
+`[ @name = ] 'name'`Nom du jeu d’entités de collecte. *Name* est de **type sysname** avec NULL comme valeur par défaut. le *nom* doit avoir une valeur si *collection_set_id* a la valeur null.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
  sp_syscollector_create_collection_set doit être exécuté dans le contexte de la base de données système msdb et l'Agent SQL Server doit être activé.  
   
- Cette procédure échoue si elle est exécutée sur un jeu d'éléments de collecte sans planification. Si l’ensemble de la collection n’a pas une planification (car son mode de collecte est défini sur non mis en cache, par exemple), utilisez le [sp_syscollector_run_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md) procédure stockée pour démarrer l’ensemble de la collection.  
+ Cette procédure échoue si elle est exécutée sur un jeu d'éléments de collecte sans planification. Si le jeu d’collections n’a pas de planification (car son mode de collecte est défini sur non mis en cache, par exemple), utilisez la procédure stockée [sp_syscollector_run_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md) pour démarrer le jeu d’Collections.  
   
  Cette procédure active les travaux de collecte et de téléchargement pour le jeu d'éléments de collecte spécifié, et démarre immédiatement le travail de l'agent de collecte si le mode de collecte a la valeur 0 (mis en cache). Pour plus d’informations, consultez [sp_syscollector_create_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   

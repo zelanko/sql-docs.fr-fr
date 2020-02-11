@@ -1,5 +1,5 @@
 ---
-title: Les paramètres de Client requis | Microsoft Docs
+title: Paramètres client requis | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,29 +13,29 @@ ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bdb99cb3d792900f48ceb69c25c7ae720c339683
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922290"
 ---
 # <a name="required-client-settings"></a>Paramètres client obligatoires
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Spécifiez les paramètres suivants pour utiliser un personnalisé **DataFactory** gestionnaire.  
+ Spécifiez les paramètres suivants pour utiliser un gestionnaire **DataFactory** personnalisé.  
   
--   Spécifier « fournisseur = MS Remote » dans la [objet Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) objet [fournisseur de propriété (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) propriété ou le **connexion** chaîne de connexion de l’objet «**Fournisseur**= « mot clé.  
+-   Spécifiez « Provider = MS Remote » dans la propriété de la propriété du [fournisseur](../../../ado/reference/ado-api/provider-property-ado.md) d’objets de [connexion (](../../../ado/reference/ado-api/connection-object-ado.md) ADO) ou la chaîne de connexion de l’objet de **connexion** «**Provider**= ».  
   
--   Définir le [CursorLocation propriété (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriété **adUseClient**.  
+-   Affectez à la propriété [CursorLocation (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) la valeur **adUseClient**.  
   
--   Spécifiez le nom du gestionnaire à utiliser dans le [objet DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) l’objet **gestionnaire** propriété, ou la [objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) chaîne de connexion de l’objet » **Gestionnaire**= « mot clé. (Vous ne pouvez pas définir le gestionnaire le **connexion** objet chaîne de connexion.)  
+-   Spécifiez le nom du gestionnaire à utiliser dans la propriété du **Gestionnaire** de l’objet [DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) ou le mot clé de la chaîne de connexion de l’objet [Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) «**handler**= ». (Vous ne pouvez pas définir le gestionnaire dans la chaîne de connexion de l’objet de **connexion** .)  
   
- Services Bureau à distance fournit un gestionnaire par défaut sur le serveur nommé **MSDFMAP. Gestionnaire**. (Le fichier de personnalisation par défaut est nommé MSDFMAP. INI.)  
+ Les services Bureau à distance fournissent un gestionnaire par défaut sur le serveur nommé **msdfmap. Gestionnaire**. (Le fichier de personnalisation par défaut est nommé MSDFMAP. INI.)  
   
  **Exemple**  
   
- Supposez que les sections suivantes dans **MSDFMAP. INI** et le nom de source de données, AdvWorks, ont été définis précédemment :  
+ Supposons que les sections suivantes dans le **msdfmap. INI** et le nom de la source de données, AdvWorks, ont été définis précédemment :  
   
 ```console
 [connect CustomerDataBase]  
@@ -48,7 +48,7 @@ SQL="SELECT * FROM Customers WHERE CustomerID = ?"
   
  Les extraits de code suivants sont écrits en Visual Basic :  
   
-## <a name="rdsdatacontrol-version"></a>RDS. DataControl Version  
+## <a name="rdsdatacontrol-version"></a>Licence. Version de DataControl  
   
 ```vb
 Dim dc as New RDS.DataControl  
@@ -59,14 +59,14 @@ Set dc.SQL = "CustomerById(4)"
 dc.Refresh  
 ```  
   
-## <a name="recordset-version"></a>Version du jeu d’enregistrements  
+## <a name="recordset-version"></a>Version de l’ensemble d’enregistrements  
   
 ```vb
 Dim rs as New ADODB.Recordset  
 rs.CursorLocation = adUseClient  
 ```  
   
- Spécifiez soit le [Gestionnaire de propriété (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) propriété ou un mot clé ; le [fournisseur de propriété (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) propriété ou un mot clé ; et le *CustomerById* et  *CustomerDatabase* identificateurs. Ouvrez ensuite le **Recordset** objet  
+ Spécifiez la propriété ou le mot clé de la [propriété du gestionnaire (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) . la propriété ou le mot clé de la [propriété Provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) ; et les identificateurs *CustomerByID* et *CustomerDatabase* . Ouvrez ensuite l’objet **Recordset**  
   
  rs.Open "CustomerById(4)", "Handler=MSDFMAP.Handler;" & _  
   
@@ -76,11 +76,11 @@ rs.CursorLocation = adUseClient
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fichier de personnalisation, Section Connect](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Fichier de personnalisation, Section SQL](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Fichier de personnalisation, Section UserList](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
+ [Section de connexion au fichier de personnalisation](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
+ [Section SQL du fichier de personnalisation](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
+ [Section UserList du fichier de personnalisation](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
  [Personnalisation de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Paramètres Client requis](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Présentation du fichier de personnalisation](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
+ [Paramètres client requis](../../../ado/guide/remote-data-service/required-client-settings.md)   
+ [Fonctionnement du fichier de personnalisation](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [Écriture d’un gestionnaire personnalisé](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Trier de propriété | Microsoft Docs
+title: Sort, propriété | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -22,39 +22,39 @@ ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 946314f7be9f6c39d47a3f26b577e10834064dab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930943"
 ---
 # <a name="sort-property"></a>Sort, propriété
-Indique un ou plusieurs noms de champ sur lequel le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) est triée, et indique si chaque champ est trié dans l’ordre croissant ou décroissant.  
+Indique un ou plusieurs noms de champs sur lesquels le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) est trié, et indique si chaque champ est trié par ordre croissant ou décroissant.  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Définit ou retourne un **chaîne** valeur qui indique le champ de noms dans le **Recordset** sur laquelle trier. Chaque nom est séparé par une virgule et éventuellement suivie d’une valeur vide et le mot clé, **ASC**, qui trie le champ dans l’ordre croissant, ou **DESC**, qui trie le champ dans l’ordre décroissant. Par défaut, si aucun mot clé n’est spécifié, le champ est trié dans l’ordre croissant.  
+ Définit ou retourne une valeur de **chaîne** qui indique les noms de champs dans le **jeu d’enregistrements** sur lequel effectuer le tri. Chaque nom est séparé par une virgule et est éventuellement suivi d’un vide et du mot clé **ASC**, qui trie le champ par ordre croissant, ou **desc**, qui trie le champ dans l’ordre décroissant. Par défaut, si aucun mot clé n’est spécifié, le champ est trié dans l’ordre croissant.  
   
 ## <a name="remarks"></a>Notes  
- Cette propriété nécessite la [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriété être définie sur **adUseClient**. Un index temporaire est créé pour chaque champ dans le **tri** propriété si un index n’existe pas déjà.  
+ Cette propriété requiert que la propriété [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) soit définie sur **adUseClient**. Un index temporaire sera créé pour chaque champ spécifié dans la propriété de **Tri** si un index n’existe pas déjà.  
   
- L’opération de tri est efficace, car les données ne sont pas réorganisées physiquement, mais simplement accédées dans l’ordre spécifié par l’index.  
+ L’opération de tri est efficace, car les données ne sont pas réorganisées physiquement, mais elles sont simplement accessibles dans l’ordre spécifié par l’index.  
   
- Lorsque la valeur de la **tri** propriété n’est pas une chaîne vide, le **tri** ordre de la propriété est prioritaire sur l’ordre spécifié dans un **ORDER BY** clause inclus dans l’instruction SQL utilisée pour ouvrir le **Recordset**.  
+ Lorsque la valeur de la propriété **sort** n’est pas une chaîne vide, l’ordre de la propriété de **Tri** est prioritaire par rapport à l’ordre spécifié dans une clause **order by** incluse dans l’instruction SQL utilisée pour ouvrir le **Recordset**.  
   
- Le **Recordset** ne doivent pas être ouverts avant d’accéder à la **tri** propriété ; elle peut être définie à tout moment après le **Recordset** objet est instancié.  
+ Il n’est pas nécessaire d’ouvrir le **jeu d’enregistrements** avant d’accéder à la propriété de **Tri** . elle peut être définie à tout moment après l’instanciation de l’objet **Recordset** .  
   
- Définition de la **tri** propriété sur une chaîne vide sera réinitialise les lignes dans leur ordre d’origine et supprimer des index temporaires. Les index existants ne seront pas supprimés.  
+ Si vous affectez une chaîne vide à la propriété de **Tri** , les lignes sont réinitialisées dans leur ordre d’origine et les index temporaires sont supprimés. Les index existants ne seront pas supprimés.  
   
- Supposons qu’un **Recordset** contient trois champs nommés *firstName*, *middleInitial*, et *lastName*. Définir le **tri** à la chaîne de la propriété «`lastName DESC, firstName ASC`», ordre dans lequel sera le **Recordset** par nom de famille dans l’ordre décroissant, puis par prénom par ordre croissant. L’initiale du milieu est ignoré.  
+ Supposons qu’un **Recordset** contienne trois champs nommés *FirstName*, *MiddleInitial*et *LastName*. Affectez à la propriété **sort** la chaîne «`lastName DESC, firstName ASC`», qui ordonne le **jeu d’enregistrements** par nom de famille dans l’ordre décroissant, puis par le prénom dans l’ordre croissant. L’initiale du deuxième prénom est ignorée.  
   
- Aucun champ ne peut être nommé « ASC » ou « DESC », car ces noms en conflit avec les mots clés **ASC** et **DESC**. Vous pouvez créer un alias pour un champ avec un nom en conflit à l’aide de la **AS** mot clé dans la requête qui retourne le **Recordset**.  
+ Aucun champ ne peut être nommé « ASC » ou « DESC », car ces noms sont en conflit avec les mots clés **ASC** et **desc**. Vous pouvez créer un alias pour un champ avec un nom en conflit en utilisant le mot clé **As** dans la requête qui retourne le **Recordset**.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sort, exemple de propriété (VB)](../../../ado/reference/ado-api/sort-property-example-vb.md)   
- [Sort, exemple de propriété (VC ++)](../../../ado/reference/ado-api/sort-property-example-vc.md)   
+ [Sort, exemple de propriété (VC + +)](../../../ado/reference/ado-api/sort-property-example-vc.md)   
  [Optimize, propriété dynamique (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
  [SortColumn, propriété (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
  [SortDirection, propriété (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)

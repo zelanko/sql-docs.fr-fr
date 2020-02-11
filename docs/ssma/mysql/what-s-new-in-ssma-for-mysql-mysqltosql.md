@@ -2,23 +2,34 @@
 title: Nouveautés de SSMA pour MySQL (MySQLToSql) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 12/04/2019
+ms.date: 01/22/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: ccb8c325a2e0b2966c0355be0f9cd84bd8882d24
-ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
+ms.openlocfilehash: 96e27e6ec25d500b55ec71f5ca1c24d48c230ac5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74834309"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76516533"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Nouveautés de SSMA pour MySQL (MySQLToSql)
 
 Cet article répertorie les Assistant Migration SQL Server (SSMA) pour les modifications MySQL dans chaque version.
+
+## <a name="ssma-v86"></a>SSMA v 8.6
+
+En plus d’un ensemble ciblé de correctifs conçus pour améliorer la facilité d’utilisation et les performances, la version 8.6 de SSMA pour MySQL a été améliorée en ajoutant un paramètre qui permet aux utilisateurs d’omettre les propriétés étendues SSMA dans le code converti.
+
+Pour tirer parti de ce paramètre, dans SSMA pour MySQL, accédez **à outils** > **paramètres** > du projet**conversion****générale** > , puis sous **divers**, mettez à jour la valeur du paramètre **omettre les propriétés étendues** sur **Oui**.
+
+![Paramètre d’omission des propriétés étendues](../mysql/media/ssma-omit-extended-properties.png)
+
+> [!IMPORTANT]
+> Avec SSMA v 8.5 et versions ultérieures, .net 4.7.2 est une condition préalable à l’installation. Si vous avez besoin d’installer cette version, vous pouvez télécharger le fichier d’exécution [ici](https://dotnet.microsoft.com/download/dotnet-framework/net472).
 
 ## <a name="ssma-v85"></a>SSMA v 8.5
 
@@ -201,7 +212,7 @@ La version de juillet 2014 de SSMA pour MySQL contient les modifications suivant
 La version d’avril 2014 de SSMA pour MySQL contient les modifications suivantes :  
   
 * Ajout de la prise en charge de MS SQL Server 2014.  
-* Correction des bogues concernant la conversion vers Azure  
+* Correction des bogues concernant la conversion vers Azure.
 * Correction des bogues concernant les pages de rapport invisibles dans IE 10.  
   
 ## <a name="july-2011"></a>juillet 2011

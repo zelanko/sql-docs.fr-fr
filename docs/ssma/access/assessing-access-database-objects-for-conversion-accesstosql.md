@@ -1,5 +1,5 @@
 ---
-title: Évaluation des objets de base de données Access pour la Conversion (AccessToSQL) | Microsoft Docs
+title: Évaluation des objets de base de données Access pour la conversion (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,46 +19,46 @@ ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4c2f5bc6953ab0e96397ca728391cbe22a73dd50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67910688"
 ---
-# <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>Évaluation des objets de base de données Access pour la Conversion (AccessToSQL)
-Avant de charger des objets et de migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, vous devez déterminer la quantité de la migration sera réussie et la durée pendant laquelle la conversion peut prendre. SSMA peut créer un rapport d’évaluation qui affiche le pourcentage d’objets qui ont été correctement converties en valeurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de la syntaxe de SQL Azure et l’heure des estimations pour effectuer la migration. SSMA vous permet également d’afficher les problèmes spécifiques qui provoquait des échecs de conversion.  
+# <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>Évaluation des objets de base de données Access pour la conversion (AccessToSQL)
+Avant de charger des objets et de migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, vous devez déterminer la quantité de migration réussie et la durée de la conversion. SSMA peut créer un rapport d’évaluation qui indique le pourcentage d’objets qui ont été convertis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en SQL Azure syntaxe et les estimations de temps pour effectuer la migration. SSMA vous permet également de consulter les problèmes spécifiques qui ont provoqué des échecs de conversion.  
   
 ## <a name="creating-assessment-reports"></a>Création de rapports d’évaluation  
-Lorsqu’il crée un rapport d’évaluation, SSMA convertit les objets de base de données Access sélectionnés vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou syntaxe de SQL Azure, puis affiche les résultats.  
+Lorsqu’il crée un rapport d’évaluation, SSMA convertit les objets de base [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de données Access sélectionnés en SQL Azure syntaxe, puis affiche les résultats.  
   
 **Pour créer un rapport d’évaluation**  
   
-1.  Dans l’Explorateur de métadonnées d’accès, sélectionnez la base de données ou les bases de données que vous souhaitez évaluer.  
+1.  Dans l’Explorateur de métadonnées Access, sélectionnez la ou les bases de données que vous souhaitez évaluer.  
   
-2.  Pour omettre des objets individuels, désactivez les cases à cocher en regard des objets que vous ne souhaitez pas évaluer.  
+2.  Pour omettre des objets spécifiques, désactivez les cases à cocher en regard des objets que vous ne souhaitez pas évaluer.  
   
-3.  Avec le bouton droit **bases de données**, puis sélectionnez **créer un rapport**.  
+3.  Cliquez avec le bouton droit sur **bases de données**, puis sélectionnez **créer un rapport**.  
   
-    Vous pouvez également analyser les objets individuels en double-cliquant sur un objet, puis en sélectionnant **créer un rapport**.  
+    Vous pouvez également analyser des objets individuels en cliquant avec le bouton droit sur un objet, puis en sélectionnant **créer un rapport**.  
   
-    SSMA affiche la progression dans la barre d’état en bas de la fenêtre. Si le volet de sortie est visible, vous verrez également des messages dans le volet de sortie.  
+    SSMA affiche la progression dans la barre d’État en bas de la fenêtre. Si le volet de sortie est visible, vous verrez également des messages dans le volet de sortie.  
   
-Une fois l’évaluation terminée, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’Assistant de Migration pour l’accès : Fenêtre de rapport d’évaluation s’affiche.  
+Une fois l’évaluation terminée, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fenêtre Assistant Migration pour Access : rapport d’évaluation s’affiche.  
   
-## <a name="using-assessment-reports"></a>À l’aide de rapports d’évaluation  
-La fenêtre de rapport d’évaluation contient trois volets : un Explorateur, un volet d’informations et un volet de message.  
+## <a name="using-assessment-reports"></a>Utilisation des rapports d’évaluation  
+La fenêtre rapport d’évaluation contient trois volets : un explorateur, un volet d’informations et un volet de message.  
   
--   Le volet Explorateur vous permet de parcourir les objets qui ont été évaluées. Vous pouvez cliquer sur les éléments dans ce volet pour Explorer les clés, les index et les tables individuelles.  
+-   Le volet Explorateur vous permet de parcourir les objets qui ont été évalués. Vous pouvez cliquer sur des éléments dans ce volet pour accéder à des tables, des index et des clés individuels.  
   
--   Le volet de détails affiche les statistiques de conversion de l’objet sélectionné.  
+-   Le volet d’informations affiche les statistiques de conversion pour l’objet sélectionné.  
   
--   Le volet de message affiche les erreurs, avertissements et les messages d’information pour la conversion et estimations de temps pour effectuer la migration et les étapes de correction d’erreurs individuels.  
+-   Le volet message affiche les erreurs, les avertissements et les messages d’information relatifs à la conversion, ainsi que les délais d’exécution des étapes de migration et de correction d’erreurs individuelles.  
   
-Vous devez corriger les erreurs avant de réexécuter le rapport d’évaluation ou convertir des schémas. Pour rechercher des erreurs, cliquez sur le **erreurs** situé dans le volet messages et développez chaque erreur pour afficher une liste d’objets où l’erreur s’est produite. Si vous cliquez sur un objet dans le volet messages, toutes les erreurs et avertissements pour cet objet seront affiche dans le volet détails.  
+Vous devez corriger les erreurs avant d’exécuter à nouveau le rapport d’évaluation ou de convertir les schémas. Pour trouver des erreurs, cliquez sur le bouton **Erreurs** dans le volet messages, puis développez chaque erreur pour afficher la liste des objets où l’erreur s’est produite. Si vous cliquez sur un objet dans le volet messages, toutes les erreurs et tous les avertissements de cet objet s’affichent dans le volet d’informations.  
   
-## <a name="next-step"></a>Étape suivante  
+## <a name="next-step"></a>étape suivante  
 [Convertir des objets de base de données Access](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Migration bases de données Access vers SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+[Migration de bases de données Access vers SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

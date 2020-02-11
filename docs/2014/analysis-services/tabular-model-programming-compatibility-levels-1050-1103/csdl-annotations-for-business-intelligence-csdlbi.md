@@ -11,13 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 760e90c34c84bd4b44af90cbbb78aec7e025689a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757953"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>Annotations CSDL pour Business Intelligence (CSDLBI)
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge la présentation de la définition d'un modèle tabulaire dans un format XML appelé langage CSDL (Conceptual Schema Definition Langage) avec des annotations Business Intelligence (CSDLBI).  
   
  Cette rubrique fournit une vue d'ensemble de CSDLBI et de son utilisation avec des modèles de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -27,27 +28,27 @@ ms.locfileid: "62757953"
   
  Bien que le langage CSDL soit compatible avec l'Entity Data Framework, vous n'avez pas besoin de comprendre le modèle de relation d'entité et vous n'avez pas non plus besoin d'outils spéciaux pour générer un modèle tabulaire ou un rapport basé sur un modèle. Pour générer des modèles, utilisez des outils clients tels que [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou une API telle que AMO, puis déployez le modèle sur un serveur. Pour se connectent au modèle les clients utilisent un fichier de définition de modèle, généralement publié dans une bibliothèque SharePoint où il pourra être utilisé par les concepteurs de rapports et les consommateurs de rapports. Pour plus d'informations, consultez ces liens :  
   
--   [Solutions de modèles tabulaires &#40;SSAS Tabulaire&#41;](../tabular-model-solutions-ssas-tabular.md)  
+-   [Solutions de modèles tabulaires &#40;&#41;SSAS tabulaire](../tabular-model-solutions-ssas-tabular.md)  
   
--   [Déploiement d’une solution de modèle tabulaire &#40;SSAS Tabulaire&#41;](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+-   [Déploiement de solutions de modèles tabulaires &#40;&#41;SSAS tabulaire](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
--   [Connexion de modèle sémantique BI PowerPivot &#40;.bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
+-   [Connexion de modèle sémantique BI PowerPivot &#40;. BISM&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
   
  Le schéma CSDLBI est généré par le serveur Analysis Services en réponse à une demande d'une définition de modèle d'un client de création de rapports, tel que [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. L'application cliente envoie une requête XML au serveur Analysis Services qui héberge les données du modèle. En réponse, le serveur envoie un message XML contenant une définition des entités du modèle, en utilisant les annotations CSDLBI. Le client du rapport utilise ensuite des informations pour présenter les champs, les agrégations et les mesures qui sont disponibles dans le modèle. Les annotations CSDLBI fournissent également des informations sur le regroupement, le tri et la mise en forme des données.  
   
- Pour obtenir des informations générales sur CSDLBI, consultez [Concepts CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts).  
+ Pour obtenir des informations générales sur CSDLBI, consultez [concepts CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts).  
   
 ### <a name="working-with-csdl"></a>Utilisation de CSDL  
  L'ensemble d'annotations CSDLBI qui représente n'importe quel modèle tabulaire est un document XML qui contient une collection d'entités, simples et complexes. Les entités définissent des tables (ou dimensions), des colonnes (attributs), des associations (relations) et des formules incluses dans des colonnes calculées, des mesures ou des indicateurs de performance clés.  
   
  Vous ne pouvez pas modifier directement ces objets, mais vous devez utiliser les outils clients et des API (interfaces de programmation d'applications) fournis pour utiliser des modèles tabulaires.  
   
- Vous pouvez obtenir le langage CSDL pour un modèle en envoyant une demande DISCOVER au serveur qui héberge le modèle. La demande doit être qualifiée en spécifiant le serveur et le modèle, et, éventuellement, une vue ou une perspective. Le message retourné est une chaîne XML. Certains éléments dépendent du langage et peuvent retourner des valeurs différentes selon le langage de la connexion actuelle. Pour plus d’informations, consultez [ensemble de lignes DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
+ Vous pouvez obtenir le langage CSDL pour un modèle en envoyant une demande DISCOVER au serveur qui héberge le modèle. La demande doit être qualifiée en spécifiant le serveur et le modèle, et, éventuellement, une vue ou une perspective. Le message retourné est une chaîne XML. Certains éléments dépendent du langage et peuvent retourner des valeurs différentes selon le langage de la connexion actuelle. Pour plus d’informations, consultez [DISCOVER_CSDL_METADATA rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
   
 ### <a name="csdlbi-versions"></a>Versions de CSDLBI  
  La spécification CSDL d'origine (Entity Data Framework) prévoit la plupart des entités et des propriétés exigées pour prendre en charge la modélisation. Les annotations BI prennent en charge les spécifications particulières des modèles tabulaires, les propriétés de création de rapports requises pour les clients, tels que [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], et les métadonnées supplémentaires requises pour les modèles multidimensionnels. Cette section décrit les mises à jour dans chaque version.  
   
- **CSDLBI 1.0**  
+ **CSDLBI 1.0**  
   
  Le jeu initial d'ajouts au schéma CSDL pour prendre en charge les modèles tabulaires [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contenait des annotations afin de prendre en charge la modélisation des données, les calculs personnalisés et la présentation avancée :  
   
@@ -57,7 +58,7 @@ ms.locfileid: "62757953"
   
 -   Propriétés de visualisation et de navigation. Par exemple, des propriétés ont été ajoutées pour prendre en charge les champs de tri personnalisé, les images par défaut et  
   
- **CSDLBI 1.1**  
+ **CSDLBI 1.1**  
   
  Cette version du schéma CSDLBI inclut des ajouts pour la prise en charge des bases de données multidimensionnelles (telles que les cubes OLAP). Les nouveaux éléments et propriétés sont les suivants :  
   
@@ -71,12 +72,12 @@ ms.locfileid: "62757953"
   
 -   Prise en charge des perspectives.  
   
- Pour plus d’informations sur les éléments individuels dans les annotations CSDLBI, consultez [informations techniques de référence pour les Annotations BI au langage CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl). Pour plus d’informations sur la spécification CSDL principale, consultez le [spécification CSDL v3](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec).  
+ Pour plus d’informations sur les éléments individuels dans les annotations CSDLBI, consultez informations [techniques de référence sur les annotations bi dans le langage CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl). Pour plus d’informations sur la spécification CSDL principale, consultez la [spécification CSDL v3](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec).  
   
   
 ## <a name="see-also"></a>Voir aussi  
  [Présentation du modèle d’objet tabulaire](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
  [Concepts CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts)   
- [Présentation du modèle d’objet tabulaire](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
+ [Présentation du modèle d'objet tabulaire](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
   

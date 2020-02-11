@@ -16,23 +16,23 @@ ms.assetid: ef2cbb93-cd00-40f8-b1d2-5f5723a991aa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f2138a5f8417fc9156c916719e96d707b9a29de9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68040009"
 ---
 # <a name="descriptors"></a>Descripteurs
-Un handle de descripteur fait référence à une structure de données qui conserve des informations sur les colonnes ou les paramètres dynamiques.  
+Un handle de descripteur fait référence à une structure de données qui contient des informations sur les colonnes ou les paramètres dynamiques.  
   
- Fonctions ODBC qui opèrent sur des données de colonnes et de paramètres implicitement définir et récupérer des champs de descripteur. Par exemple, lorsque **SQLBindCol** est appelée pour lier des données de colonne, il définit les champs de descripteur qui décrivent complètement la liaison. Lorsque **SQLColAttribute** est appelée pour décrire les données de la colonne, elle retourne des données stockées dans les champs de descripteur.  
+ Les fonctions ODBC qui opèrent sur les données de colonnes et de paramètres définissent et récupèrent implicitement des champs de descripteur. Par exemple, lorsque **SQLBindCol** est appelé pour lier des données de colonne, il définit des champs de descripteur qui décrivent complètement la liaison. Lorsque **SQLColAttribute** est appelé pour décrire des données de colonne, il retourne les données stockées dans des champs de descripteur.  
   
- Une application appelant les fonctions ODBC pas concerner les lui-même avec descripteurs. Aucune opération de base de données ne nécessite que l’application accéder directement aux descripteurs. Toutefois, pour certaines applications, l’accès direct aux descripteurs simplifie de nombreuses opérations. Par exemple diriger les accès aux descripteurs de permet de relier les données de la colonne, qui peuvent être plus efficaces que l’appel **SQLBindCol** à nouveau.  
+ Une application appelant des fonctions ODBC n’a pas besoin de se préoccuper des descripteurs. Aucune opération de base de données ne nécessite que l’application bénéficie d’un accès direct aux descripteurs. Toutefois, pour certaines applications, obtenir un accès direct aux descripteurs simplifie de nombreuses opérations. Par exemple, l’accès direct aux descripteurs permet de relier les données de la colonne, ce qui peut être plus efficace que l’appel de **SQLBindCol** .  
   
 > [!NOTE]  
->  La représentation physique du descripteur n’est pas définie. Applications obtenir un accès direct à un descripteur uniquement en manipulant des ses champs en appelant les fonctions ODBC avec le handle du descripteur.  
+>  La représentation physique du descripteur n’est pas définie. Les applications accèdent directement à un descripteur en manipulant ses champs en appelant des fonctions ODBC avec le handle de descripteur.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Types de descripteurs](../../../odbc/reference/develop-app/types-of-descriptors.md)  
   
