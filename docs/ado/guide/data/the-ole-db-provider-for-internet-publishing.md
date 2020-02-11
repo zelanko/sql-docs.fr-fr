@@ -1,5 +1,5 @@
 ---
-title: Le fournisseur OLE DB pour la publication Internet | Microsoft Docs
+title: Fournisseur OLE DB pour la publication Internet | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,34 +17,34 @@ ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 80a373196f98a964bc3e522cc9329907a3392b95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923905"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>Fournisseur OLE DB pour la publication Internet
-ADO [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) et [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objets peuvent être utilisés avec le fournisseur Microsoft OLE DB pour la publication Internet (fournisseur de publication Internet) pour accéder et manipuler les ressources, telles que les dossiers ou fichiers Web pris en charge par Microsoft FrontPage. Avec ADO, vous pouvez spécifier la source d’un **enregistrement**, **Stream**, ou [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) pour être une URL. Vous pouvez ensuite charger, télécharger, déplacer, copier et supprimer des ressources ou manipuler directement les propriétés de ressource.  
+Les objets d' [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) et de [flux](../../../ado/reference/ado-api/stream-object-ado.md) ADO peuvent être utilisés avec le fournisseur Microsoft OLE DB pour la publication Internet (fournisseur de publication Internet) afin d’accéder à des ressources et de les manipuler, telles que des dossiers Web ou des fichiers pris en charge par Microsoft FrontPage. Avec ADO, vous pouvez spécifier la source d’un **enregistrement**, d’un **flux**ou d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) comme URL. Vous pouvez ensuite charger, télécharger, déplacer, copier et supprimer des ressources, ou manipuler directement les propriétés des ressources.  
   
- Par exemple le code qui utilise **enregistrements** et **flux** avec le fournisseur de publication Internet, consultez le [scénario de publication Internet](../../../ado/guide/data/internet-publishing-scenario.md).  
+ Pour obtenir un exemple de code qui utilise des **enregistrements** et des **flux** avec le fournisseur de publication Internet, consultez [scénario de publication Internet](../../../ado/guide/data/internet-publishing-scenario.md).  
   
- Le fournisseur de publication Internet est installé avec Microsoft Windows 2000. Les versions antérieures du fournisseur de publication Internet sont également disponibles avec Microsoft Office 2000 et Microsoft Internet Explorer 5.0.  
+ Le fournisseur de publication Internet est installé avec Microsoft Windows 2000. Les versions antérieures du fournisseur de publication Internet sont également disponibles avec Microsoft Office 2000 et Microsoft Internet Explorer 5,0.  
   
  Il existe trois façons de connecter ADO au fournisseur de publication Internet :  
   
--   Spécifiez « URL = » dans la chaîne de connexion. Exemple :  
+-   Spécifiez « URL = » dans la chaîne de connexion. Par exemple :  
   
     ```  
     objConn.Open "URL=https://servername"  
     ```  
   
--   Spécifiez Msdaipp.dso pour le *fournisseur* mot clé de la chaîne de connexion. Exemple :  
+-   Spécifiez Msdaipp. DSO pour le mot clé *Provider* de la chaîne de connexion. Par exemple :  
   
     ```  
     objConn.Open "provider=MSDAIPP.DSO;data source=https://servername"  
     ```  
   
--   Spécifiez Msdaipp.dso pour le [fournisseur](../../../ado/reference/ado-api/provider-property-ado.md) propriété de la [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet. Exemple :  
+-   Spécifiez Msdaipp. DSO pour la propriété [Provider](../../../ado/reference/ado-api/provider-property-ado.md) de l’objet [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . Par exemple :  
   
     ```  
     objConn.Provider = "MSDAIPP.DSO"  
@@ -52,6 +52,6 @@ ADO [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) et [St
     ```  
   
 > [!NOTE]
->  Si Msdaipp.dso est explicitement spécifié comme la valeur du fournisseur, soit avec le *fournisseur* mot clé de chaîne de connexion ou le **fournisseur** propriété, vous ne pouvez pas utiliser « URL = » dans la chaîne de connexion. Si vous le faites, une erreur se produit. Au lieu de cela, spécifiez simplement l’URL comme indiqué précédemment.  
+>  Si msdaipp. DSO est spécifié explicitement comme valeur du fournisseur, soit avec le mot clé de chaîne de connexion du *fournisseur* , soit avec la propriété **Provider** , vous ne pouvez pas utiliser "URL =" dans la chaîne de connexion. Si c’est le cas, une erreur se produit. Au lieu de cela, spécifiez simplement l’URL comme indiqué plus haut.  
   
- Pour plus d’informations sur le fournisseur de publication Internet, consultez [fournisseur Microsoft OLE DB pour la publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md), ou la documentation du fournisseur fourni avec l’application source avec laquelle le fournisseur OLE DB pour Publication Internet a été installé : Windows 2000, Office 2000 ou Internet Explorer 5.0.
+ Pour obtenir des informations plus spécifiques sur le fournisseur de publication Internet, consultez [fournisseur Microsoft OLE DB pour la publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)ou la documentation du fournisseur fournie avec l’application source avec laquelle le fournisseur de OLE DB pour la publication Internet a été installé : Windows 2000, Office 2000 ou Internet Explorer 5,0.

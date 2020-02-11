@@ -1,5 +1,5 @@
 ---
-title: DELETE, méthode (objet Recordset ADO) | Microsoft Docs
+title: Delete, méthode (objet Recordset ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 1eb9209c-602c-4507-b0c2-6527a599b67d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b978e3d885e3ff06dda18859384f88eb4c564254
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919124"
 ---
 # <a name="delete-method-ado-recordset"></a>Delete, méthode (objet Recordset ADO)
-Supprime l’enregistrement actif ou un groupe d’enregistrements.  
+Supprime l’enregistrement en cours ou un groupe d’enregistrements.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,31 +35,31 @@ recordset.Delete AffectRecords
   
 #### <a name="parameters"></a>Paramètres  
  *AffectRecords*  
- Un [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valeur qui détermine le nombre d’enregistrements le **supprimer** méthode affectera. La valeur par défaut est **adAffectCurrent**.  
+ Valeur [AffectEnum](../../../ado/reference/ado-api/affectenum.md) qui détermine le nombre d’enregistrements affectés par la méthode **Delete** . La valeur par défaut est **adAffectCurrent**.  
   
 > [!NOTE]
->  **adAffectAll** et **adAffectAllChapters** ne sont pas des arguments valides **supprimer**.  
+>  **adAffectAll** et **adAffectAllChapters** ne sont pas des arguments valides à **supprimer**.  
   
 ## <a name="remarks"></a>Notes  
- À l’aide de la **supprimer** méthode marque l’enregistrement actif ou un groupe d’enregistrements dans une [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet pour la suppression. Si le **Recordset** objet n’autorise pas suppression de l’enregistrement, une erreur se produit. Si vous êtes en mode de mise à jour immédiate, suppressions se produisent immédiatement dans la base de données. Si un enregistrement ne peut pas être supprimé avec succès (en raison de violations d’intégrité de base de données, par exemple), l’enregistrement reste en mode édition après l’appel à [mise à jour](../../../ado/reference/ado-api/update-method.md). Cela signifie que vous devez annuler la mise à jour avec [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) avant de déplacer l’enregistrement en cours (par exemple, avec [fermer](../../../ado/reference/ado-api/close-method-ado.md), [déplacer](../../../ado/reference/ado-api/move-method-ado.md), ou [ NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  
+ L’utilisation de la méthode **Delete** marque l’enregistrement en cours ou un groupe d’enregistrements dans un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) pour suppression. Si l’objet **Recordset** n’autorise pas la suppression d’enregistrements, une erreur se produit. Si vous êtes en mode de mise à jour immédiate, les suppressions se produisent immédiatement dans la base de données. Si un enregistrement ne peut pas être correctement supprimé (en raison de violations d’intégrité de la base de données, par exemple), l’enregistrement reste en mode édition après l’appel à [Update](../../../ado/reference/ado-api/update-method.md). Cela signifie que vous devez annuler la mise à jour avec [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) avant de quitter l’enregistrement actif (par exemple, avec [Close](../../../ado/reference/ado-api/close-method-ado.md), [Move](../../../ado/reference/ado-api/move-method-ado.md)ou [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  
   
- Si vous êtes en mode de mise à jour par lot, les enregistrements marqués pour suppression à partir du cache et la suppression se produit lorsque vous appelez le [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) (méthode). Utilisez le [filtre](../../../ado/reference/ado-api/filter-property.md) propriété pour afficher les enregistrements supprimés.  
+ Si vous êtes en mode de mise à jour par lot, les enregistrements sont marqués pour suppression dans le cache et la suppression réelle se produit lorsque vous appelez la méthode [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) . Utilisez la propriété [Filter](../../../ado/reference/ado-api/filter-property.md) pour afficher les enregistrements supprimés.  
   
- Extraction des valeurs de champ de l’enregistrement supprimé génère une erreur. Après avoir supprimé l’enregistrement en cours, l’enregistrement supprimé reste actif jusqu'à ce que vous déplacez vers un autre enregistrement. Une fois que vous vous éloignez de l’enregistrement supprimé, il n’est plus accessible.  
+ La récupération des valeurs de champ de l’enregistrement supprimé génère une erreur. Après la suppression de l’enregistrement actif, l’enregistrement supprimé reste actif jusqu’à ce que vous passiez à un autre enregistrement. Une fois que vous quittez l’enregistrement supprimé, il n’est plus accessible.  
   
- Si vous imbriquez des suppressions dans une transaction, vous pouvez récupérer les enregistrements supprimés avec la [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) (méthode). Si vous êtes en mode de mise à jour par lot, vous pouvez annuler une suppression en attente ou un groupe de suppressions en attente avec la [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) (méthode).  
+ Si vous imbriquez des suppressions dans une transaction, vous pouvez récupérer les enregistrements supprimés avec la méthode [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) . Si vous êtes en mode de mise à jour par lot, vous pouvez annuler une suppression en attente ou un groupe de suppressions en attente à l’aide de la méthode [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) .  
   
- Si la tentative de suppression des enregistrements échoue en raison d’un conflit avec les données sous-jacentes (par exemple, un enregistrement déjà supprimé par un autre utilisateur), le fournisseur retourne des avertissements dans le [erreurs](../../../ado/reference/ado-api/errors-collection-ado.md) collection mais n’interrompt ne pas le programme exécution. Une erreur d’exécution se produit uniquement en cas de conflits sur tous les enregistrements demandés.  
+ Si la tentative de suppression d’enregistrements échoue en raison d’un conflit avec les données sous-jacentes (par exemple, un enregistrement a déjà été supprimé par un autre utilisateur), le fournisseur renvoie des avertissements à la collection d' [Erreurs](../../../ado/reference/ado-api/errors-collection-ado.md) , mais n’interrompt pas l’exécution du programme. Une erreur d’exécution se produit uniquement en cas de conflit sur tous les enregistrements demandés.  
   
- Si le [Unique Table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) propriété dynamique est définie et le **Recordset** est le résultat de l’exécution d’une opération de jointure sur plusieurs tables, puis le **supprimer** méthode supprime uniquement lignes à partir de la table nommée dans le [Unique Table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) propriété.  
+ Si la propriété dynamique de la [table unique](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) est définie et que le **jeu d’enregistrements** est le résultat de l’exécution d’une opération de jointure sur plusieurs tables, la méthode **Delete** supprime uniquement les lignes de la table nommée dans la propriété [table unique](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) .  
   
 ## <a name="applies-to"></a>S'applique à  
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Supprimer l’exemple de méthode (VB)](../../../ado/reference/ado-api/delete-method-example-vb.md)   
- [Supprimer l’exemple de méthode (VBScript)](../../../ado/reference/ado-api/delete-method-example-vbscript.md)   
- [Supprimer l’exemple de méthode (VC ++)](../../../ado/reference/ado-api/delete-method-example-vc.md)   
- [DELETE, méthode (Collection de champs ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
- [DELETE, méthode (Collection de paramètres ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
+ [Delete, exemple de méthode (VB)](../../../ado/reference/ado-api/delete-method-example-vb.md)   
+ [Delete, exemple de méthode (VBScript)](../../../ado/reference/ado-api/delete-method-example-vbscript.md)   
+ [Delete, exemple de méthode (VC + +)](../../../ado/reference/ado-api/delete-method-example-vc.md)   
+ [Delete, méthode (collection Fields ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
+ [Delete, méthode (collection Parameters ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
  [DeleteRecord, méthode (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)
