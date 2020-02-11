@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 343975c2c6ad39c67dcd10c0d55886d21e69f3f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62711557"
 ---
 # <a name="using-autofetch-with-odbc-cursors"></a>Utilisation de l'auto-extraction avec les curseurs ODBC
-  Lors de la connexion à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge une option d’auto-extraction lors de l’utilisation de n’importe quel type de curseur de serveur. Avec l’auto-extraction, la **SQLExecute** ou **SQLExecDirect** fonction qui ouvre le curseur a également implicite [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md)(fonction) (SQL_FIRST). Les lignes qui comprennent le premier ensemble de lignes sont retournées aux variables d'application liée dans le cadre de l'exécution d'instruction, économisant un autre aller-retour sur le réseau jusqu'au serveur. [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) n’est pas pris en charge lorsque l’option d’auto-extraction est activée ; les colonnes du jeu de résultats doivent être liés à des variables de programme.  
+  En cas de connexion à une [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , le pilote ODBC Native Client prend en charge une option d’auto-extraction lors de l’utilisation d’un type de curseur de serveur. Avec l’auto-extraction, la fonction **SQLExecute** ou **SQLExecDirect** qui ouvre le curseur a également une fonction [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md)(SQL_FIRST) implicite. Les lignes qui comprennent le premier ensemble de lignes sont retournées aux variables d'application liée dans le cadre de l'exécution d'instruction, économisant un autre aller-retour sur le réseau jusqu'au serveur. [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) n’est pas pris en charge lorsque l’option d’auto-extraction est activée ; les colonnes du jeu de résultats doivent être liées à des variables de programme.  
   
  Les applications demandent l'auto-extraction en attribuant à l'attribut d'instruction SQL_SOPT_SS_CURSOR_OPTIONS spécifique au pilote la valeur SQL_CO_AF.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Détails de programmation de curseurs &#40;ODBC&#41;](cursor-programming-details-odbc.md)  
+ [Détails de programmation de curseur &#40;ODBC&#41;](cursor-programming-details-odbc.md)  
   
   

@@ -17,36 +17,36 @@ ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a919bb377eee2da1c3c1a65e85ddfb9807ed8d50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918032"
 ---
 # <a name="name-property-ado"></a>Name, propriété (ADO)
 Indique le nom d’un objet.  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Définit ou retourne un **chaîne** valeur qui indique le nom d’un objet.  
+ Définit ou retourne une valeur de **chaîne** qui indique le nom d’un objet.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le **nom** propriété à attribuer un nom à ou à récupérer le nom d’un **commande**, **propriété**, **champ**, ou **paramètre**  objet.  
+ Utilisez la propriété **Name** pour attribuer un nom à une **commande**, une **propriété**, un **champ**ou un objet **Parameter** ou pour en récupérer le nom.  
   
- La valeur est en lecture/écriture sur un **commande** objet et en lecture seule sur un **propriété** objet.  
+ La valeur est en lecture/écriture sur un objet **Command** et en lecture seule sur un objet **Property** .  
   
- Pour un **champ** objet, **nom** est généralement en lecture seule. Toutefois, pour les nouveaux **champ** les objets qui ont été ajoutées à la [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection d’un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md), **nom** est en lecture/écriture uniquement après le [valeur](../../../ado/reference/ado-api/value-property-ado.md) propriété pour le **champ** a été spécifié et le fournisseur de données a correctement ajouté le nouveau **champ** en appelant le [ Mise à jour](../../../ado/reference/ado-api/update-method.md) méthode de la **champs** collection.  
+ Pour un objet **Field** , **Name** est généralement en lecture seule. Toutefois, pour les nouveaux objets de **champ** qui ont été ajoutés à la collection de [champs](../../../ado/reference/ado-api/fields-collection-ado.md) d’un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md), le **nom** est en lecture/écriture uniquement après la spécification de la propriété [value](../../../ado/reference/ado-api/value-property-ado.md) du **champ** et que le fournisseur de données a correctement ajouté le nouveau **champ** en appelant la méthode [Update](../../../ado/reference/ado-api/update-method.md) de la collection **Fields** .  
   
- Pour **paramètre** objets pas encore ajouté à la [paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md) collection, le **nom** propriété est en lecture/écriture. Pour ajouter **paramètre** objets et toutes les autres, le **nom** propriété est en lecture seule. Noms n’ont pas à être unique au sein d’une collection.  
+ Pour les objets de **paramètre** qui n’ont pas encore été ajoutés à la collection [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) , la propriété **Name** est en lecture/écriture. Pour les objets de **paramètre** ajoutés et tous les autres objets, la propriété **Name** est en lecture seule. Les noms ne doivent pas nécessairement être uniques dans une collection.  
   
- Vous pouvez récupérer le **nom** propriété d’un objet par référence ordinale, après quoi vous pouvez faire référence à l’objet directement par nom. Par exemple, si `rstMain.Properties(20).Name` génère `Updatability`, vous pouvez ensuite référencer cette propriété en tant que `rstMain.Properties("Updatability")`.  
+ Vous pouvez récupérer la propriété **Name** d’un objet à l’aide d’une référence ordinale, après laquelle vous pouvez faire référence à l’objet directement par son nom. Par exemple, si `rstMain.Properties(20).Name` donne `Updatability`, vous pouvez ensuite faire référence à cette propriété en `rstMain.Properties("Updatability")`tant que.  
   
 ## <a name="applies-to"></a>S'applique à  
   
 |||  
 |-|-|  
-|[Command, objet (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Field, objet](../../../ado/reference/ado-api/field-object.md)|  
-|[Parameter, objet](../../../ado/reference/ado-api/parameter-object.md)|[Property, objet (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
+|[Command, objet (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Objet Field](../../../ado/reference/ado-api/field-object.md)|  
+|[Objet Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Property, objet (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Attributs et des exemples de propriétés de nom (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
- [Attributs et des exemples de propriétés de nom (VC ++)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
+ [Attributes et Name, exemple de propriétés (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
+ [Attributes et Name, exemple de propriétés (VC + +)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   

@@ -16,23 +16,23 @@ ms.assetid: 2fa4eec5-d50b-4fd3-8ae7-40af441ba12b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6692125b7323bedc7a416e51555c373ef850ce0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919370"
 ---
 # <a name="copyrecordoptionsenum"></a>CopyRecordOptionsEnum
-Spécifie le comportement de la [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md) (méthode).  
+Spécifie le comportement de la méthode [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md) .  
   
-|Constante|Value|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adCopyAllowEmulation**|4|Indique que le *Source* fournisseur tente de simuler la copie à l’aide de téléchargement et d’opérations de téléchargement si cette méthode échoue en raison *Destination*en cours sur un autre serveur ou de prise en charge par un autre fournisseur de *Source*. Notez que les capacités spécifiques de fournisseur peuvent entraver les performances ou de perdre des données.|  
-|**adCopyNonRecursive**|2|Copie le répertoire actif, mais aucune de ses sous-répertoires, vers la destination. L’opération de copie n’est pas récursive.|  
-|**adCopyOverWrite**|1|Remplace le fichier ou le répertoire si le *Destination* pointe vers un fichier ou répertoire existant.|  
-|**adCopyUnspecified**|-1|Valeur par défaut. Effectue l’opération de copie par défaut : L’opération échoue si le fichier de destination ou le répertoire existe déjà et l’opération de copie récursive.|  
+|**adCopyAllowEmulation**|4|Indique que le fournisseur *source* tente de simuler la copie à l’aide des opérations de téléchargement et de téléchargement si cette méthode échoue en raison de la *destination*sur un autre serveur ou par un fournisseur différent de la *source*. Notez que des fonctionnalités de fournisseur différentes peuvent nuire aux performances ou perdre des données.|  
+|**adCopyNonRecursive**|2|Copie le répertoire actif, mais aucun de ses sous-répertoires, vers la destination. L’opération de copie n’est pas récursive.|  
+|**adCopyOverWrite**|1|Remplace le fichier ou le répertoire si la *destination* pointe vers un fichier ou un répertoire existant.|  
+|**adCopyUnspecified**|-1|valeur par défaut. Effectue l’opération de copie par défaut : l’opération échoue si le fichier ou le répertoire de destination existe déjà et que l’opération copie de manière récursive.|  
   
-## <a name="adowfc-equivalent"></a>Équivalent de ADO/WFC  
+## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Ces constantes n’ont pas d’équivalents ADO/WFC.  
   
 ## <a name="applies-to"></a>S'applique à  

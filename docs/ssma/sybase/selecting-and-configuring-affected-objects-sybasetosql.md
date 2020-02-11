@@ -1,5 +1,5 @@
 ---
-title: Sélectionner et configurer les objets (SybaseToSQL) affectés | Microsoft Docs
+title: Sélection et configuration des objets affectés (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,22 +12,22 @@ ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3aa7ccc8d559f7017fd2a9bf0bc20bc7ae191c46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020989"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Sélection et configuration des objets affectés (SybaseToSQL)
-À cette page, vous pouvez sélectionner les tables et les clés étrangères, les modifications dans lequel doivent être comparées quand SSMA vérifie les résultats de l’exécution pour les objets choisi à l’étape précédente. En outre, vous pouvez personnaliser les paramètres de vérification.  
+Sur cette page, vous pouvez sélectionner des tables et des clés étrangères, les modifications dans lesquelles doivent être comparées lorsque SSMA vérifie les résultats de l’exécution pour les objets choisis à l’étape précédente. En outre, vous pouvez personnaliser les paramètres de vérification.  
   
 ## <a name="selection-of-affected-objects"></a>Sélection des objets affectés  
-Dans l’arborescence d’objets Sybase situé sur le côté gauche de la fenêtre, cochez les tables et les clés étrangères, les modifications dans lequel doivent être comparées pour étant identiques.  
+Dans l’arborescence d’objets Sybase située sur le côté gauche de la fenêtre, vérifiez les tables et les clés étrangères, les modifications dans lesquelles doit être comparée pour être identiques.  
   
-Si le testeur de SSMA ne peut pas vérifier la valeur d’un de ces objets, vous verrez le lien intitulé **certains des objets sélectionnés contiennent des erreurs** sous l’arborescence d’objets. Cliquez sur ce lien pour afficher les raisons pourquoi ces objets ne peuvent pas être comparées et pour effacer la sélection d’objets incorrectes.  
+Si SSMA tester ne peut pas vérifier l’un de ces objets, le lien étiqueté **certains objets sélectionnés contient des erreurs** sous l’arborescence objets. Cliquez sur ce lien pour afficher les raisons pour lesquelles ces objets ne peuvent pas être comparés et pour effacer la sélection d’objets incorrects.  
   
-## <a name="table"></a>Table  
-L’onglet de la Table contient la vue de grille de la table sélectionnée. La grille contient les informations suivantes sur la table sélectionnée :  
+## <a name="table"></a>Table de charge de travail  
+L’onglet table contient la vue de grille de la table sélectionnée. La grille contient les informations suivantes sur la table sélectionnée :  
   
 -   Nom de la colonne  
   
@@ -39,85 +39,85 @@ L’onglet de la Table contient la vue de grille de la table sélectionnée. La 
   
 -   Règle  
   
--   Par défaut  
+-   Default  
   
 -   Identité  
   
 -   Nullable  
   
 ## <a name="sql"></a>SQL  
-Onglet SQL contient la table « créer » SQL de la table sélectionnée.  
+L’onglet SQL contient le SQL « créer une table » de la table sélectionnée.  
   
 ## <a name="data"></a>Données  
-Onglet données affiche les données présentes dans la table sélectionnée.  
+L’onglet données affiche les données présentes dans la table sélectionnée.  
   
-## <a name="properties"></a>Properties  
-Onglet Propriétés affiche les propriétés de la table sélectionnée. Les champs suivants sont présents sous l’onglet Propriétés :  
+## <a name="properties"></a>Propriétés  
+L’onglet Propriétés affiche les propriétés de la table sélectionnée. Les champs suivants sont présents sous l’onglet Propriétés :  
   
--   Création ou dernière modification  
+-   Créé ou modifié pour la dernière fois  
   
--   Nom de l’objet  
+-   Nom d’objet  
   
-## <a name="table-comparison-settings"></a>Paramètres de comparaison de table  
-Établir des règles de comparaison pour la table sur **Table comparaisons** page. Vous pouvez rendre les paramètres suivants.  
+## <a name="table-comparison-settings"></a>Paramètres de comparaison de tables  
+Établissez les règles de comparaison pour la table sur la page **comparaisons de tables** . Vous pouvez définir les paramètres suivants.  
   
 ### <a name="comparison-mode"></a>Mode de comparaison  
-Définit le contenu de la table sur laquelle sera effectuée la comparaison.  
+Définit le contenu de la table sur lequel sera effectuée la comparaison.  
   
--   Si vous sélectionnez **modifications uniquement**, comparaison complète des lignes de la table sera effectuée.  
+-   Si vous sélectionnez **modifications uniquement**, la comparaison complète des lignes de la table est effectuée.  
   
--   Si vous sélectionnez **complète**, sera effectuée la comparaison uniquement pour les lignes qui ont été modifiés.  
+-   Si vous sélectionnez **complet**, la comparaison uniquement pour les lignes qui ont été modifiées sera effectuée.  
   
-## <a name="column-comparison-settings"></a>Paramètres de comparaison de colonne  
-Établir des règles de comparaison pour les colonnes de table sur **colonne comparaisons** page. Vous pouvez rendre les paramètres suivants.  
+## <a name="column-comparison-settings"></a>Paramètres de comparaison de colonnes  
+Établissez les règles de comparaison pour les colonnes de table sur la page **comparaisons de colonnes** . Vous pouvez définir les paramètres suivants.  
   
-### <a name="use-during-test-comparisons"></a>Utilisation pendant les comparaisons de tests  
-Déterminer si cette colonne fera partie de vérification des résultats de test.  
+### <a name="use-during-test-comparisons"></a>Utiliser pendant les comparaisons de tests  
+Détermine si cette colonne participera à la vérification des résultats des tests.  
   
--   Si vous choisissez **True**, SSMA compare le contenu de cette colonne après l’exécution du test sur Sybase avec le contenu de la colonne dans SQL Server.
+-   Si vous choisissez **true**, SSMA compare le contenu de cette colonne après avoir exécuté le test sur Sybase avec le contenu de la colonne dans SQL Server.
   
--   Si vous choisissez **False**, la colonne doivent être exclue de vérification des résultats.  
+-   Si vous choisissez la **valeur false**, la colonne sera exclue de la vérification des résultats.  
   
-### <a name="use-custom-scale"></a>Utiliser la mise à l’échelle personnalisée  
+### <a name="use-custom-scale"></a>Utiliser l’échelle personnalisée  
 Pour les colonnes de type de données numérique, vous pouvez définir une échelle personnalisée pour la comparaison.  
   
--   Si vous choisissez **True**, valeurs numériques seront arrondies conformément à la **mise à l’échelle comparaison** valeur avant d’être comparées.  
+-   Si vous choisissez **true**, les valeurs numériques sont arrondies en fonction de la valeur d' **échelle de comparaison** avant d’être comparées.  
   
--   Si vous choisissez **False**, la comparaison numérique seront exacte.  
+-   Si vous choisissez la **valeur false**, la comparaison numérique sera exacte.  
   
-### <a name="comparing-scale"></a>Comparaison de mise à l’échelle  
+### <a name="comparing-scale"></a>Comparaison de l’échelle  
   
--   Disponible uniquement si le **Use Custom Scale** option est définie sur **True**. Il s’agit de la précision d’une comparaison numérique.  
+-   Disponible uniquement si l’option utiliser la mise à l' **échelle personnalisée** a la valeur **true**. Il s’agit de la précision pour la comparaison numérique.  
   
-### <a name="date-time-comparing"></a>Comparaison de date heure  
-Définit la date/heure valeurs sont comparées.  
+### <a name="date-time-comparing"></a>Date et heure de comparaison  
+Définit comment les valeurs de date/d’heure sont comparées.  
   
--   Si vous sélectionnez **comparer la Date entière**, comparaison complète des valeurs à partir de ces deux plateformes sera effectuée.  
+-   Si vous sélectionnez **comparer la date entière**, la comparaison complète des valeurs des deux plateformes sera effectuée.  
   
--   Si vous sélectionnez **comparer une Date uniquement**, l’heure partie sera ignorée.  
+-   Si vous sélectionnez **comparer uniquement la date**, la partie heure sera ignorée.  
   
--   Si vous sélectionnez **comparer l’heure uniquement**, la date partie sera ignorée.  
+-   Si vous sélectionnez **comparer uniquement l’heure**, la partie date sera ignorée.  
   
--   Si vous sélectionnez **millisecondes ignorer**, les résultats seront comparées jusqu'à secondes.  
+-   Si vous sélectionnez **Ignorer les millisecondes**, les résultats seront comparés à quelques secondes.  
   
--   Si vous sélectionnez **ignorer la Date et les millisecondes**, le résultat sera uniquement par rapport à la partie heure et il ignore les parties fractionnaires d’une seconde.  
+-   Si vous sélectionnez **ignorer la date et les millisecondes**, le résultat est comparé uniquement par la partie heure et ignore les parties fractionnaires d’une seconde.  
   
 ### <a name="ignore-strings-case"></a>Ignorer la casse des chaînes  
-Contrôle de la casse de la comparaison.  
+Contrôle le respect de la casse de la comparaison.  
   
--   Si vous choisissez **True**, la comparaison sera respectent pas la casse.  
+-   Si vous choisissez **true**, la comparaison ne respecte pas la casse.  
   
--   Si vous choisissez **False**, la comparaison en compte de la casse des lettres.  
+-   Si vous choisissez la **valeur false**, la comparaison prendra en compte la casse.  
   
 ## <a name="comparing-sql"></a>Comparaison de SQL  
-Vous pouvez afficher les instructions SELECT, générées par le testeur de SSMA sur le **SQL comparer** page. Le testeur comparera les jeux de résultats de ces instructions sur la ligne par ligne. Chaque ligne d’un jeu de résultats Sybase suivante doit être égale à la ligne suivante du jeu de résultats produit dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Vous pouvez afficher les instructions SELECT générées par SSMA tester sur la page **comparer SQL** . Le testeur compare les jeux de résultats de ces instructions ligne par ligne. Chaque ligne suivante d’un jeu de résultats Sybase doit être égale à la ligne suivante du jeu de résultats produit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dans.  
   
-Vous pouvez modifier ces instructions SELECT pour effectuer une vérification personnalisée. Pour enregistrer les modifications dans Sybase et dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instructions, utilisez le **appliquer** boutons sous la source et la cible SQL, en conséquence.  
+Vous pouvez modifier ces instructions SELECT pour fournir une vérification personnalisée. Pour enregistrer les modifications dans Sybase et dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les instructions, utilisez les boutons **appliquer** sous le SQL source et cible, en conséquence.  
   
-## <a name="next-step"></a>Étape suivante  
+## <a name="next-step"></a>étape suivante  
 [Personnalisation de l’ordre des appels &#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Cas de Test en cours d’exécution &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[Exécution de cas de test &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
 [Test des objets de base de données migrés &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

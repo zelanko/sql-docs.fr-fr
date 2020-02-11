@@ -21,18 +21,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fb26ce238953f9bf4a3472385de6dd1bf5c167d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106248"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Graphiques (Générateur de rapports et SSRS)
-  Lorsque vous souhaitez résumer des données sous un format visuel, utilisez la région de données de graphique. Les graphiques vous permettent de présenter d'un coup d'œil de grandes quantités d'informations de synthèse. Il est important de se préparer avec soin et de comprendre vos données avant de créer un graphique, car ceci vous aidera à concevoir vos graphiques rapidement et efficacement. Pour plus d’informations, consultez [Ajouter un graphique à un rapport &#40;Générateur de rapports et SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md). Pour commencer à utiliser immédiatement un graphique, consultez la barre de colonne, graphique sparkline et des didacticiels de graphique à secteurs dans [didacticiels &#40;Générateur de rapports&#41; ](../report-builder-tutorials.md) ou la barre et les didacticiels de graphique à secteurs dans [didacticiels sur Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
+  Lorsque vous souhaitez résumer des données sous un format visuel, utilisez la région de données de graphique. Les graphiques vous permettent de présenter d'un coup d'œil de grandes quantités d'informations de synthèse. Il est important de se préparer avec soin et de comprendre vos données avant de créer un graphique, car ceci vous aidera à concevoir vos graphiques rapidement et efficacement. Pour plus d’informations, consultez [Ajouter un graphique à un rapport &#40;Générateur de rapports et SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md). Pour commencer à utiliser un graphique immédiatement, reportez-vous aux didacticiels sur les barres, les histogrammes, les graphiques sparkline et les secteurs dans les [didacticiels &#40;Générateur de rapports&#41;](../report-builder-tutorials.md) ou sur les didacticiels de graphique à barres et à secteurs dans [Reporting Services didacticiels &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
   
  L'illustration suivante affiche un grand nombre des différents éléments utilisés dans le graphique.  
   
- ![Schéma des éléments du graphique](../media/rs-chartelementsc.gif "Schéma des éléments du graphique")  
+ ![Diagramme d’éléments de graphique](../media/rs-chartelementsc.gif "Diagramme d’éléments de graphique")  
   
  Vous pouvez publier des graphiques hors d'un rapport en tant que parties de rapport. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66106248"
   
   
   
-##  <a name="SimilarMatrix"></a> Similarités avec une matrice  
+##  <a name="SimilarMatrix"></a>Similarités avec une matrice  
  Une façon de réfléchir au fonctionnement des graphiques consiste à les comparer aux matrices.  
   
  ![Nouvelle matrice ajoutée à partir de la boîte à outils, sélectionnée](../media/rs-matrixtemplatenewselected.gif "Nouvelle matrice ajoutée à partir de la boîte à outils, sélectionnée")  
@@ -123,7 +123,7 @@ ms.locfileid: "66106248"
  [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](chart-types-report-builder-and-ssrs.md)  
  Décrit tous les types et sous-types de graphiques disponibles dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], avec notamment les points à prendre en considération et les bonnes pratiques pour utiliser les différents types de graphiques.  
   
- [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
+ [Mise en forme d’un graphique (Générateur de rapports et SSRS)](formatting-a-chart-report-builder-and-ssrs.md)  
  Utilise la mise en forme pour améliorer l'apparence globale et met en évidence les principaux points de données de votre graphique.  
   
  [Points de données vides et Null dans les graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)  
@@ -151,8 +151,8 @@ ms.locfileid: "66106248"
  [Images, zones de texte, rectangles et lignes &#40;Générateur de rapports et SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [Tri interactif, Explorateurs de documents et liens &#40;Générateur de rapports et SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Régions de données imbriquées &#40;Générateur de rapports et SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
- [Tutoriel : Ajouter un histogramme à un rapport &#40;Générateur de rapports&#41;](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   
- [Tutoriel : Ajouter un graphique à secteurs à un rapport &#40;Générateur de rapports&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Tutoriel : Ajouter un graphique à barres à un rapport &#40;Générateur de rapports&#41;](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [Didacticiel : ajouter un histogramme à un rapport &#40;Générateur de rapports&#41;](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [Didacticiel : ajouter un graphique à secteurs à un rapport &#40;Générateur de rapports&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Didacticiel : ajouter un graphique à barres à un rapport &#40;Générateur de rapports&#41;](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

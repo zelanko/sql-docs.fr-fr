@@ -1,5 +1,5 @@
 ---
-title: En spécifiant une cible Namespace à l’aide de l’attribut targetNamespace (SQLXML 4.0) | Microsoft Docs
+title: Spécification d’un espace de noms cible à l’aide de l’attribut targetNamespace (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,22 +20,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd97b67974f248d002255c1977feebe4551e691f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013680"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Spécification d'un espace de noms cible à l'aide de l'attribut targetNamespace (SQLXML 4.0)
-  Dans l’écriture de schémas XSD, vous pouvez utiliser le langage XSD **targetNamespace** attribut pour spécifier un espace de noms cible. Cette rubrique décrit comment le langage XSD **targetNamespace**, **elementFormDefault**, et **attributeFormDefault** les attributs fonctionnent, comment elles affectent l’instance XML généré, et comment les requêtes XPath sont spécifiées avec les espaces de noms.  
+  Dans l’écriture de schémas XSD, vous pouvez utiliser l’attribut XSD **targetNamespace** pour spécifier un espace de noms cible. Cette rubrique décrit le fonctionnement des attributs XSD **targetNamespace**, **elementFormDefault**et **attributeFormDefault** , comment ils affectent l’instance XML générée et comment les requêtes XPath sont spécifiées avec des espaces de noms.  
   
- Vous pouvez utiliser la **xsd : targetNamespace** attribut pour placer des éléments et attributs de l’espace de noms par défaut dans un espace de noms différent. Vous pouvez également spécifier si les éléments et attributs du schéma déclarés localement doivent apparaître qualifiés par un espace de noms, soit explicitement en utilisant un préfixe, soit implicitement par défaut. Vous pouvez utiliser la **elementFormDefault** et **attributeFormDefault** attributs répertoriés dans le  **\<xsd : Schema >** élément pour spécifier globalement la qualification des éléments locaux et les attributs ou vous pouvez utiliser la **formulaire** attribut pour spécifier les éléments individuels et les attributs séparément.  
+ Vous pouvez utiliser l’attribut **xsd : targetNamespace** pour placer des éléments et des attributs de l’espace de noms par défaut dans un espace de noms différent. Vous pouvez également spécifier si les éléments et attributs du schéma déclarés localement doivent apparaître qualifiés par un espace de noms, soit explicitement en utilisant un préfixe, soit implicitement par défaut. Vous pouvez utiliser les attributs **elementFormDefault** et **attributeFormDefault** sur l' ** \<élément xsd : Schema>** pour spécifier globalement la qualification des éléments et attributs locaux, ou vous pouvez utiliser l’attribut **Form** pour spécifier séparément des éléments et des attributs.  
   
 ## <a name="examples"></a>Exemples  
- Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [configuration requise pour exécuter les exemples de SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-a-target-namespace"></a>A. Spécification d'un espace de noms cible  
- Le schéma XSD suivant spécifie un espace de noms cible à l’aide de la **xsd : targetNamespace** attribut. Le schéma définit également la **elementFormDefault** et **attributeFormDefault** pour les valeurs d’attribut **« unqualified »** (la valeur par défaut pour ces attributs). Il s’agit d’une déclaration globale et affecte tous les éléments locaux ( **\<ordre >** dans le schéma) et les attributs (**CustomerID**, **ContactName**et  **OrderID** dans le schéma).  
+### <a name="a-specifying-a-target-namespace"></a>R. Spécification d'un espace de noms cible  
+ Le schéma XSD suivant spécifie un espace de noms cible à l’aide de l’attribut **xsd : targetNamespace** . Le schéma définit également les valeurs des attributs **elementFormDefault** et **attributeFormDefault** sur **« Unqualified »** (valeur par défaut pour ces attributs). Il s’agit d’une déclaration globale qui affecte tous les éléments locaux (**\<ordre>** dans le schéma) et les attributs (**CustomerID**, **ContactName**et **OrderID** dans le schéma).  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -75,9 +75,9 @@ ms.locfileid: "66013680"
   
  Dans le schéma :  
   
--   Le **CustomerType** et **OrderType** déclarations de type sont globale et, par conséquent, sont incluses dans l’espace de noms cible du schéma. Par conséquent, lorsque ces types sont référencés dans la déclaration de  **\<client >** élément et ses  **\<ordre >** élément enfant, un préfixe est spécifié, qui est associé avec l’espace de noms cible.  
+-   Les déclarations de type **CustomerType** et **OrderType** sont globales et, par conséquent, sont incluses dans l’espace de noms cible du schéma. Par conséquent, lorsque ces types sont référencés dans la déclaration de ** \<Customer>** élément et son ** \<ordre>** élément enfant, un préfixe est spécifié qui est associé à l’espace de noms cible.  
   
--   Le  **\<client >** élément est également inclus dans l’espace de noms cible du schéma, car il est un élément global dans le schéma.  
+-   L' ** \<élément Customer>** est également inclus dans l’espace de noms cible du schéma, car il s’agit d’un élément global dans le schéma.  
   
  Exécutez la requête XPath suivante sur le schéma :  
   
@@ -98,9 +98,9 @@ ms.locfileid: "66013680"
   </ROOT>  
 ```  
   
- Ce document d’instance définit l’espace de noms urn : MyNamespace et associe un préfixe (y0) à ce dernier. Le préfixe est appliqué uniquement à la  **\<client >** élément global. (L’élément est global, car il est déclaré en tant qu’enfant de  **\<xsd : Schema >** élément dans le schéma.)  
+ Ce document d’instance définit l’espace de noms urn : MyNamespace et associe un préfixe (Y0) à celui-ci. Le préfixe est appliqué uniquement à l' ** \<élément Customer>** global. (L’élément est global parce qu’il est déclaré en tant qu’enfant de ** \<l’élément xsd : Schema>** dans le schéma.)  
   
- Le préfixe n’est pas appliqué pour les éléments et attributs locaux car la valeur de **elementFormDefault** et **attributeFormDefault** attributs est défini sur **«unqualified»** dans le schéma. Notez que le  **\<ordre >** élément est local car sa déclaration apparaît en tant qu’enfant de le  **\<complexType >** élément qui définit la  **\< CustomerType >** élément. De même, les attributs (**CustomerID**, **OrderID**, et **ContactName**) sont locaux, et non globaux.  
+ Le préfixe n’est pas appliqué aux éléments et attributs locaux, car la valeur des attributs **elementFormDefault** et **attributeFormDefault** est définie sur **« Unqualified »** dans le schéma. Notez que l' ** \<élément Order>** est local, car sa déclaration apparaît en tant qu’enfant de l' ** \<élément complexType>** qui définit l' ** \<élément>CustomerType** . De même, les attributs (**CustomerID**, **OrderID**et **ContactName**) sont locaux, et non globaux.  
   
 ##### <a name="to-create-a-working-sample-of-this-schema"></a>Pour créer un exemple fonctionnel de ce schéma  
   
@@ -117,7 +117,7 @@ ms.locfileid: "66013680"
     </ROOT>  
     ```  
   
-     La requête XPath dans le modèle retourne la  **\<client >** élément pour le client avec un CustomerID de 1. Notez que la requête XPath spécifie le préfixe d'espace de noms pour l'élément dans la requête et pas pour l'attribut. (Les attributs locaux ne sont pas qualifiés, comme spécifié dans le schéma.)  
+     La requête XPath dans le modèle retourne l' ** \<élément Customer>** pour le client dont le CustomerID est 1. Notez que la requête XPath spécifie le préfixe d'espace de noms pour l'élément dans la requête et pas pour l'attribut. (Les attributs locaux ne sont pas qualifiés, comme spécifié dans le schéma.)  
   
      Le chemin d'accès au répertoire spécifié pour le schéma de mappage (targetNameSpace.xml) est relatif au répertoire dans lequel le modèle est enregistré. Vous pouvez également spécifier un chemin d'accès absolu, par exemple :  
   
@@ -127,9 +127,9 @@ ms.locfileid: "66013680"
   
 3.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le modèle.  
   
-     Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Si le schéma spécifie **elementFormDefault** et **attributeFormDefault** attributs avec la valeur **« qualified »** , le document d’instance aura tous de la variable locale éléments et attributs qualifiés. Vous pouvez modifier le schéma précédent pour inclure ces attributs dans le  **\<xsd : Schema >** élément et exécutez de nouveau le modèle. Dans la mesure où les attributs sont désormais également qualifiés dans l'instance, la requête XPath sera modifiée pour inclure le préfixe d'espace de noms.  
+ Si le schéma spécifie des attributs **elementFormDefault** et **attributeFormDefault** avec la valeur **« Qualified »**, le document d’instance aura tous les éléments et attributs locaux qualifiés. Vous pouvez modifier le schéma précédent de façon à inclure ces attributs dans l' ** \<élément xsd : Schema>** et à réexécuter le modèle. Dans la mesure où les attributs sont désormais également qualifiés dans l'instance, la requête XPath sera modifiée pour inclure le préfixe d'espace de noms.  
   
  La requête XPath modifiée est présentée ci-dessous :  
   

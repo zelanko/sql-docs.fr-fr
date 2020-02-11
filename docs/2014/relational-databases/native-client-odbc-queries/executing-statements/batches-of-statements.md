@@ -18,14 +18,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8951469279e5c3577aef355e339397b329bb5d63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206769"
 ---
 # <a name="batches-of-statements"></a>Lots d'instructions
-  Un lot de [!INCLUDE[tsql](../../../includes/tsql-md.md)] contient des déclarations de deux ou plus, séparées par un point-virgule ( ;), intégrées dans une chaîne unique passée à **SQLExecDirect** ou [SQLPrepare, fonction](https://go.microsoft.com/fwlink/?LinkId=59360). Exemple :  
+  Un lot d' [!INCLUDE[tsql](../../../includes/tsql-md.md)] instructions contient plusieurs instructions, séparées par un point-virgule (;), créé dans une chaîne unique transmise à la [fonction](https://go.microsoft.com/fwlink/?LinkId=59360) **SQLExecDirect** ou SQLPrepare. Par exemple :  
   
 ```  
 SQLExecDirect(hstmt,   
@@ -33,11 +33,11 @@ SQLExecDirect(hstmt,
     SQL_NTS);  
 ```  
   
- Les lots peuvent se révéler plus efficaces que la soumission des instructions séparément car le trafic réseau est souvent réduit. Utilisez [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) pour vous positionner sur le prochain jeu de résultats lorsque s’est terminé avec le jeu de résultats actuel.  
+ Les lots peuvent se révéler plus efficaces que la soumission des instructions séparément car le trafic réseau est souvent réduit. Utilisez [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) pour être positionné sur le jeu de résultats suivant lorsque vous avez terminé avec le jeu de résultats actuel.  
   
  Les lots peuvent toujours être utilisés lorsque les attributs de curseur ODBC sont définis sur les valeurs par défaut d'un curseur avant uniquement en lecture seule avec une taille d'ensemble de lignes de 1.  
   
- Si un lot est exécuté lors de l'utilisation de curseurs côté serveur contre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], le curseur côté serveur est converti implicitement en un jeu de résultats par défaut. **SQLExecDirect** ou **SQLExecute** retourne SQL_SUCCESS_WITH_INFO et un appel à **SQLGetDiagRec** retourne :  
+ Si un lot est exécuté lors de l'utilisation de curseurs côté serveur contre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], le curseur côté serveur est converti implicitement en un jeu de résultats par défaut. **SQLExecDirect** ou **SQLExecute** retournent SQL_SUCCESS_WITH_INFO, et un appel à **SQLGetDiagRec** retourne :  
   
 ```  
 szSqlState = "01S02", pfNativeError = 0  
@@ -45,6 +45,6 @@ szErrorMsg = "[Microsoft][SQL Server Native Server Native Client]Cursor type cha
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’exécution d’instructions &#40;ODBC&#41;](executing-statements-odbc.md)  
+ [Exécution d’instructions &#40;ODBC&#41;](executing-statements-odbc.md)  
   
   

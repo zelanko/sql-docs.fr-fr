@@ -1,5 +1,5 @@
 ---
-title: dbo.sysdac_instances (Transact-SQL) | Microsoft Docs
+title: dbo. sysdac_instances (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -21,26 +21,26 @@ ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b1530e58597947a7e19f4ca264808fbfefd164ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68033110"
 ---
-# <a name="data-tier-application-views---dbosysdacinstances"></a>Vues de l’Application de couche données - dbo.sysdac_instances
+# <a name="data-tier-application-views---dbosysdac_instances"></a>Affichages des applications de la couche données-dbo. sysdac_instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Affiche une ligne pour chaque instance d’application (DAC) de couche données déployée sur une instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. sysdac_instances appartient au schéma dbo dans la base de données msdb. Le tableau suivant décrit les colonnes dans la vue sysdac_instances.  
+  Affiche une ligne pour chaque instance d’application de la couche données (DAC) déployée sur une [!INCLUDE[ssDE](../../includes/ssde-md.md)]instance du. sysdac_instances appartient au schéma dbo dans la base de données msdb. Le tableau suivant décrit les colonnes de la vue sysdac_instances.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |instance_id|**uniqueidentifier**|Identificateur de l'instance DAC.|  
 |nom_instance|**sysname**|Nom de l'instance DAC spécifiée quand la DAC a été déployée.|  
 |type_name|**sysname**|Nom de la DAC spécifiée quand le package DAC a été créé.|  
-|type_version|**nvarchar(64)**|Version de la DAC spécifiée quand le package DAC a été créé.|  
+|type_version|**nvarchar (64)**|Version de la DAC spécifiée quand le package DAC a été créé.|  
 |description|**nvarchar(4000)**|Description de la DAC écrite quand le package DAC a été créé.|  
 |type_stream|**varbinary(max)**|Flux de données qui contient une représentation encodée des objets logiques, tels que les tables et vues, contenus dans la DAC.|  
-|date_created|**datetime**|Date et heure de création de l'instance DAC.|  
+|date_created|**DATETIME**|Date et heure de création de l'instance DAC.|  
 |created_by|**sysname**|Connexion qui a créé l'instance DAC.|  
 |database_name|**sysname**|Nom de la base de données créée pour l'instance DAC.|  
   
@@ -51,7 +51,7 @@ ms.locfileid: "68033110"
  Nécessite l'appartenance au rôle serveur fixe sysadmin pour afficher toutes les colonnes. Les membres du rôle public peuvent consulter les colonnes instance_name, description et type_version.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [Vues de l’Application de couche données &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
+ [Applications de la couche données](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+ [Affichages des applications de la couche données &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
   
   

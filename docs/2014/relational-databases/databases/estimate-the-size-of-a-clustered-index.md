@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fe7b988590de54a3cb02aa540b244e1f56f3ba24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054124"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>Estimer la taille d’un index cluster
@@ -38,7 +38,7 @@ ms.locfileid: "66054124"
   
 3.  Faites la somme des valeurs calculées.  
   
-## <a name="step-1-calculate-the-space-used-to-store-data-in-the-leaf-level"></a>Étape 1. Calculer l'espace utilisé pour le stockage des données au niveau feuille  
+## <a name="step-1-calculate-the-space-used-to-store-data-in-the-leaf-level"></a>Étape 1. Calculer l'espace utilisé pour le stockage des données au niveau feuille  
   
 1.  Déterminez le nombre de lignes que contiendra la table :  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66054124"
   
      ***Leaf_space_used***  = 8192 x ***Num_Leaf_Pages***  
   
-## <a name="step-2-calculate-the-space-used-to-store-index-information"></a>Étape 2. Calculer l'espace utilisé pour le stockage des informations d'index  
+## <a name="step-2-calculate-the-space-used-to-store-index-information"></a>Étape 2. Calculer l'espace utilisé pour le stockage des informations d'index  
  Vous pouvez estimer la quantité d'espace nécessaire au stockage des niveaux supérieurs de l'index en procédant comme suit :  
   
 1.  Spécifiez le nombre de colonnes de longueur fixe et de longueur variable de la clé d'index et calculez l'espace nécessaire à leur stockage :  
@@ -174,27 +174,27 @@ ms.locfileid: "66054124"
   
 7.  Calculez le nombre de niveaux contenus dans l'index :  
   
-     ***Non-leaf_Levels*** = 1 + journal Index_Rows_Per_Page (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***Non leaf_Levels*** = 1 + Index_Rows_Per_Page de journal (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
   
      Arrondissez cette valeur au nombre entier supérieur le plus proche. Cette valeur n'inclut pas le niveau feuille de l'index cluster.  
   
 8.  Calculez le nombre de pages non-feuille contenues dans l'index :  
   
-     ***Num_Index_Pages =*** ∑Level ***(Num_Leaf_Pages / (Index_Rows_Per_Page***<sup>niveau</sup>***))***  
+     ***Num_Index_Pages =*** ∑ level ***(Num_Leaf_Pages/(***<sup>niveau</sup>Index_Rows_Per_Page ***))***  
   
      où 1 <= Level <= ***Non-leaf_Levels***  
   
      Arrondissez chaque élément de la somme au nombre entier supérieur le plus proche. À titre d’exemple simple, imaginez un index où ***Num_Leaf_Pages*** = 1000 et ***Index_Rows_Per_Page*** = 25. Le premier niveau d'index au-dessus du niveau feuille stocke 1 000 lignes d'index, ce qui représente une ligne d'index par page feuille et 25 lignes d'index par page. Par conséquent, il faut 40 pages pour stocker ces 1 000 lignes d'index. Le niveau suivant de l'index doit stocker 40 lignes. Cela requiert donc 2 pages. Le niveau final de l'index doit stocker 2 lignes. Cela requiert donc 1 page. Il en résulte 43 pages d'index non-feuille. Lorsque ces nombres sont utilisés dans les formules précédentes, le résultat est le suivant :  
   
-     ***Non-leaf_Levels***  = 1 + log25 (1000 / 25) = 3  
+     ***Non leaf_Levels*** = 1 + log25 (1000/25) = 3  
   
-     ***Num_Index_Pages*** = 1000 /(25<sup>3</sup>) + 1000 / (25<sup>2</sup>) + 1000 / (25<sup>1</sup>) = 1 + 2 + 40 = 43, ce qui est le nombre de pages décrit dans l’exemple.  
+     ***Num_Index_Pages*** = 1000/(25<sup>3</sup>) + 1000/(25<sup>2</sup>) + 1000/(25<sup>1</sup>) = 1 + 2 + 40 = 43, ce qui correspond au nombre de pages décrit dans l’exemple.  
   
 9. Calculez la taille de l'index (8 192 octets par page) :  
   
      ***Index_Space_Used***  = 8192 x ***Num_Index_Pages***  
   
-## <a name="step-3-total-the-calculated-values"></a>Étape 3. Faire la somme des valeurs calculées  
+## <a name="step-3-total-the-calculated-values"></a>Étape 3. Faire la somme des valeurs calculées  
  Faites la somme des valeurs obtenues à partir des deux étapes précédentes :  
   
  Taille de l’index cluster (octets) = ***Leaf_Space_Used*** + ***Index_Space_used***  

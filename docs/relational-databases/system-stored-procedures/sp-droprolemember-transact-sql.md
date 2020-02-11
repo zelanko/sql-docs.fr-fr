@@ -19,33 +19,33 @@ ms.author: vanto
 author: VanMSFT
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7123c1bd3fee61a3d0671a0d8fbe27c2943ba7ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124851"
 ---
-# <a name="spdroprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
+# <a name="sp_droprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Supprime un compte de sécurité d'un rôle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans la base de données active.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) à la place.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez à la place [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) .  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
 
-### <a name="syntax-for-both-sql-server-and-azure-sql-database"></a>Syntaxe pour SQL Server et base de données SQL Azure
+### <a name="syntax-for-both-sql-server-and-azure-sql-database"></a>Syntaxe pour SQL Server et Azure SQL Database
 
 ```  
 sp_droprolemember [ @rolename = ] 'role' ,   
      [ @membername = ] 'security_account'  
 ```  
 
-### <a name="syntax-for-both-azure-sql-data-warehouse-and-parallel-data-warehouse"></a>Syntaxe pour Azure SQL Data Warehouse et Parallel Data Warehouse
+### <a name="syntax-for-both-azure-sql-data-warehouse-and-parallel-data-warehouse"></a>Syntaxe pour les Azure SQL Data Warehouse et les Data Warehouse parallèles
 
 ```  
 sp_droprolemember 'role' ,  
@@ -53,19 +53,19 @@ sp_droprolemember 'role' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @rolename = ] 'role'` Est le nom du rôle à partir de laquelle le membre est supprimé. *rôle* est **sysname**, sans valeur par défaut. *rôle* doit exister dans la base de données actuelle.  
+`[ @rolename = ] 'role'`Nom du rôle à partir duquel le membre est supprimé. *role* est de **type sysname**, sans valeur par défaut. le *rôle* doit exister dans la base de données actuelle.  
   
-`[ @membername = ] 'security_account'` Le nom du compte de sécurité est supprimé du rôle. *celui-ci* est **sysname**, sans valeur par défaut. *celui-ci* peut être un utilisateur de base de données, un autre rôle de base de données, un compte de connexion Windows ou un groupe Windows. *celui-ci* doit exister dans la base de données actuelle.  
+`[ @membername = ] 'security_account'`Nom du compte de sécurité supprimé du rôle. *security_account* est de **type sysname**, sans valeur par défaut. *security_account* peut être un utilisateur de base de données, un autre rôle de base de données, une connexion Windows ou un groupe Windows. *security_account* doit exister dans la base de données active.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- sp_droprolemember supprime un membre d’un rôle de base de données en supprimant une ligne de la table sysmembers. Lorsqu'un membre est supprimé d'un rôle, il perd toutes les autorisations accordées par son appartenance à ce rôle.  
+ sp_droprolemember supprime un membre d'un rôle de base de données en supprimant une ligne dans la table sysmembers. Lorsqu'un membre est supprimé d'un rôle, il perd toutes les autorisations accordées par son appartenance à ce rôle.  
   
- Pour supprimer un utilisateur d’un rôle serveur fixe, utilisez sp_dropsrvrolemember. Les utilisateurs ne peuvent pas être supprimés du rôle public, et dbo ne peut pas être supprimé dans aucun rôle.  
+ Pour supprimer un utilisateur d'un rôle serveur fixe, utilisez sp_dropsrvrolemember. Vous ne pouvez pas supprimer des utilisateurs du rôle public et dbo ne peut être supprimé dans aucun rôle.  
   
- Utilisez sp_helpuser pour afficher les membres d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rôle et utilisez ALTER de rôle pour ajouter un membre à un rôle.  
+ Utilisez sp_helpuser pour afficher les membres d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rôle et utilisez ALTER ROLE pour ajouter un membre à un rôle.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER sur le rôle.  

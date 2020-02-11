@@ -1,5 +1,5 @@
 ---
-title: Exécuter la boîte de dialogue Package | Microsoft Docs
+title: Boîte de dialogue Exécuter le package | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b4b920b17e960059e1212be7dd15c176c0b25a47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059187"
 ---
 # <a name="execute-package-dialog-box"></a>Execute Package Dialog Box
@@ -29,17 +29,17 @@ ms.locfileid: "66059187"
   
 -   [Ouvrir la boîte de dialogue Exécuter le package](#open_dialog)  
   
--   [Définir les options sur la page Général](#general)  
+-   [Définir les options sur la page général](#general)  
   
 -   [Définir les options de l'onglet Paramètres](#parameters)  
   
--   [Définir les options de l'onglet Gestionnaires de connexions](#connection)  
+-   [Définir les options de l’onglet gestionnaires de connexions](#connection)  
   
 -   [Définir les options de l'onglet Avancé](#advanced)  
   
--   [Création de script avec les options de la boîte de dialogue Exécuter le package](#script)  
+-   [Script des options de la boîte de dialogue Exécuter le package](#script)  
   
-##  <a name="open_dialog"></a> Ouvrir la boîte de dialogue Exécuter le package  
+##  <a name="open_dialog"></a>Ouvrir la boîte de dialogue Exécuter le package  
   
 1.  Dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], connectez-vous au serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
@@ -53,31 +53,31 @@ ms.locfileid: "66059187"
   
 5.  Cliquez avec le bouton droit sur le package, puis cliquez sur **Exécuter**.  
   
-##  <a name="general"></a> Définir les options sur la page Général  
+##  <a name="general"></a>Définir les options sur la page général  
  Sélectionnez **Environnement** pour spécifier l'environnement qui est appliqué avec le package.  
   
-##  <a name="parameters"></a> Définir les options de l'onglet Paramètres  
+##  <a name="parameters"></a>Définir les options de l’onglet Paramètres  
  Utilisez l'onglet **Paramètres** pour modifier les valeurs de paramètre utilisées lors de l'exécution du package.  
   
-##  <a name="connection"></a> Définir les options de l'onglet Gestionnaires de connexions  
+##  <a name="connection"></a>Définir les options de l’onglet gestionnaires de connexions  
  Utilisez l'onglet Gestionnaires de connexions pour définir les propriétés du ou des gestionnaires de connexions du package.  
   
-##  <a name="advanced"></a> Définir les options de l'onglet Avancé  
+##  <a name="advanced"></a>Définir les options de l’onglet avancé  
  Utilisez l'onglet Avancé pour gérer des propriétés et d'autres paramètres du package.  
   
- **Ajouter**, **Modifier**, **Supprimer**  
+ **Ajouter**, **modifier**, **supprimer**  
  Cliquez pour ajouter, modifier ou supprimer une propriété.  
   
  **Niveau de journalisation**  
  Sélectionnez le niveau de journalisation pour l'exécution du package. Pour plus d’informations, consultez [catalog.set_execution_parameter_value &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database).  
   
- **Vider en cas d'erreurs**  
+ **Vider en cas d’erreur**  
  Spécifiez si un fichier de vidage est créé lorsque des erreurs se produisent pendant l'exécution du package. Pour plus d’informations, voir [Generating Dump Files for Package Execution](troubleshooting/generating-dump-files-for-package-execution.md).  
   
  **Runtime 32 bits**  
  Indiquez que le package doit s'exécuter sur un système 32 bits.  
   
-##  <a name="script"></a> Création de script avec les options de la boîte de dialogue Exécuter le package  
+##  <a name="script"></a>Script des options de la boîte de dialogue Exécuter le package  
  Lorsque vous vous trouvez dans la boîte de dialogue **Exécuter le package** , vous pouvez également utiliser le bouton **Script** de la barre d'outils pour écrire du code [!INCLUDE[tsql](../includes/tsql-md.md)] . Le script généré appelle les procédures stockées [catalog.start_execution &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database) avec les options que vous avez sélectionnées dans la boîte de dialogue **Exécuter le package**. Le script s'affiche dans une nouvelle fenêtre de script dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
   

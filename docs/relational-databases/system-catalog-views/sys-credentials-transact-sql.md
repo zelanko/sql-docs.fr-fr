@@ -1,5 +1,5 @@
 ---
-title: Sys.Credentials (Transact-SQL) | Microsoft Docs
+title: sys. Credentials (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/27/2017
 ms.prod: sql
@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: da427117b2282c9014ff0171e1a7c29f7490940e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078752"
 ---
 # <a name="syscredentials-transact-sql"></a>sys.credentials (Transact-SQL)
@@ -34,19 +34,19 @@ ms.locfileid: "68078752"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|credential_id|**Int**|ID de l'information d'identification. Unique dans le serveur.|  
+|credential_id|**int**|ID de l'information d'identification. Unique dans le serveur.|  
 |name|**sysname**|Nom de l'information d'identification. Unique dans le serveur.|  
 |credential_identity|**nvarchar(4000)**|Nom de l'identité à utiliser. Il s'agit généralement d'un utilisateur Windows. Il n'est pas nécessaire qu'elle soit unique.|  
-|create_date|**datetime**|Heure de création de l'information d'identification.|  
-|modify_date|**datetime**|Heure de la dernière modification de l'information d'identification.|  
-|target_type|**nvarchar(100)**|Type d'information d'identification. Retourne NULL pour des informations d'identification traditionnelles, CRYPTOGRAPHIC PROVIDER pour des informations d'identification mappées à un fournisseur de chiffrement. Pour plus d’informations sur les fournisseurs de gestion de clés externes, consultez [gestion de clés Extensible &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).|  
-|target_id|**Int**|ID de l'objet auquel l'information d'identification est mappée. Retourne 0 pour des informations d'identification traditionnelles, et une valeur différente de 0 pour des informations d'identification mappées à un fournisseur de chiffrement. Pour plus d’informations sur les fournisseurs de gestion de clés externes, consultez [gestion de clés Extensible &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).|  
+|create_date|**DATETIME**|Heure de création de l'information d'identification.|  
+|modify_date|**DATETIME**|Heure de la dernière modification de l'information d'identification.|  
+|target_type|**nvarchar(100**|Type d'information d'identification. Retourne NULL pour des informations d'identification traditionnelles, CRYPTOGRAPHIC PROVIDER pour des informations d'identification mappées à un fournisseur de chiffrement. Pour plus d’informations sur les fournisseurs de gestion de clés externes, consultez [gestion de clés Extensible &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).|  
+|target_id|**int**|ID de l'objet auquel l'information d'identification est mappée. Retourne 0 pour des informations d'identification traditionnelles, et une valeur différente de 0 pour des informations d'identification mappées à un fournisseur de chiffrement. Pour plus d’informations sur les fournisseurs de gestion de clés externes, consultez [gestion de clés Extensible &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).|  
 
 ## <a name="remarks"></a>Notes  
-Pour plus d’informations d’identification de niveau de base de données, consultez [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md).
+Pour obtenir des informations d’identification au niveau de la base de données, consultez [sys. database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md).
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite soit `VIEW ANY DEFINITION` autorisation ou `ALTER ANY CREDENTIAL` autorisation. En outre, le principal ne doit pas être refusé `VIEW ANY DEFINITION` autorisation.  
+ Requiert une `VIEW ANY DEFINITION` autorisation ou `ALTER ANY CREDENTIAL` une autorisation. En outre, l’autorisation du principal ne doit `VIEW ANY DEFINITION` pas être refusée.  
   
 ## <a name="see-also"></a>Voir aussi  
  [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   

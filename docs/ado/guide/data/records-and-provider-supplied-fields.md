@@ -14,68 +14,68 @@ ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 54d55926d2bec89b0764b751bf165586e8d3c6c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924517"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Enregistrements et champs fournis par le fournisseur
-Quand un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet est ouvert, sa source peut être la ligne actuelle d’ouvert [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), une URL absolue ou une URL relative en association avec une ouverture [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet .  
+Lorsqu’un objet [Record](../../../ado/reference/ado-api/record-object-ado.md) est ouvert, sa source peut être la ligne actuelle d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)ouvert, une URL absolue ou une URL relative avec un objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) ouvert.  
   
- Si le **enregistrement** est ouvert à partir d’un **Recordset**, le **enregistrement** objet [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection contiendra tous les champs à partir de la  **Jeu d’enregistrements**, ainsi que tous les champs ajoutés par le fournisseur sous-jacent.  
+ Si l' **enregistrement** est ouvert à partir d’un **jeu d’enregistrements**, la collection [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) de l’objet **Record** contient tous les champs du **Recordset**, ainsi que tous les champs ajoutés par le fournisseur sous-jacent.  
   
- Le fournisseur peut insérer des champs supplémentaires utilisés comme caractéristiques supplémentaires de la **enregistrement**. Par conséquent, un **enregistrement** peuvent avoir des champs uniques pas dans le **Recordset** en entier ou un **enregistrement** dérivé d’une autre ligne de la **Recordset**.  
+ Le fournisseur peut insérer des champs supplémentaires qui servent de caractéristiques supplémentaires de l' **enregistrement**. Par conséquent, un **enregistrement** peut avoir des champs uniques qui ne se trouvent pas dans le **Recordset** dans son ensemble ou dans un **enregistrement** dérivé d’une autre ligne de l’ensemble d' **enregistrements**.  
   
- Par exemple, toutes les lignes d’un **Recordset** dérivé d’un message électronique de source de données peut avoir des colonnes, telles que From, à et de l’objet. Un **enregistrement** dérivé qui **Recordset** aura les mêmes champs. Toutefois, le **enregistrement** peut avoir également d’autres champs uniques spécifiques au message représenté par cette **enregistrement**, telles que la pièce jointe et Cc (copie carbone).  
+ Par exemple, toutes les lignes d’un **jeu d’enregistrements** dérivé d’une source de données de messagerie électronique peuvent avoir des colonnes telles que from, to et subject. Un **enregistrement** dérivé de ce **Recordset** aura les mêmes champs. Toutefois, l' **enregistrement** peut également avoir d’autres champs propres au message spécifique représenté par cet **enregistrement**, par exemple, pièce jointe et CC (copie carbone).  
   
- Bien que le **enregistrement** objet et la ligne actuelle de la **Recordset** ont les mêmes champs, ils sont différents, car **enregistrement** et **Recordset**objets ont différentes méthodes et propriétés.  
+ Bien que l’objet **Record** et la ligne actuelle du **Recordset** aient les mêmes champs, ils sont différents, car les objets **Record** et **Recordset** ont des méthodes et des propriétés différentes.  
   
- Un champ commun par les **enregistrement** et **Recordset** peut être modifié sur des objets. Toutefois, le champ ne peut pas être supprimé sur le **enregistrement** de l’objet, bien que le fournisseur sous-jacent peut prendre en charge la valeur de champ null.  
+ Un champ qui est commun à l' **enregistrement** et au **Recordset** peut être modifié sur l’un ou l’autre des objets. Toutefois, le champ ne peut pas être supprimé de l’objet **Record** , même si le fournisseur sous-jacent peut prendre en charge l’affectation de la valeur null au champ.  
   
- Après le **enregistrement** est ouvert, vous pouvez ajouter par programmation des champs. Vous pouvez également supprimer des champs que vous avez ajoutés, mais vous ne pouvez pas supprimer les champs de l’original **Recordset**.  
+ Une fois l' **enregistrement** ouvert, vous pouvez ajouter des champs par programmation. Vous pouvez également supprimer des champs que vous avez ajoutés, mais vous ne pouvez pas supprimer des champs de l' **objet Recordset**d’origine.  
   
- Vous pouvez également ouvrir le **enregistrement** objet directement à partir d’une URL. Dans ce cas, les champs ajoutés à la **enregistrement** dépendent du fournisseur sous-jacent. Actuellement, la plupart des fournisseurs ajoutent un ensemble de champs qui décrivent l’entité représentée par le **enregistrement**. Si l’entité est constituée d’un flux d’octets, tel qu’un fichier simple, un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objet peut généralement être ouvert à partir de la **enregistrement**.  
+ Vous pouvez également ouvrir l’objet **Record** directement à partir d’une URL. Dans ce cas, les champs ajoutés à l' **enregistrement** dépendent du fournisseur sous-jacent. Actuellement, la plupart des fournisseurs ajoutent un ensemble de champs qui décrivent l’entité représentée par l' **enregistrement**. Si l’entité se compose d’un flux d’octets, tel qu’un fichier simple, un objet de [flux](../../../ado/reference/ado-api/stream-object-ado.md) peut généralement être ouvert à partir de l' **enregistrement**.  
   
-## <a name="special-fields-for-document-source-providers"></a>Les fournisseurs de champs spéciaux pour le Document Source  
- Une classe spéciale de fournisseurs, appelée *fournisseurs de source de document*, gère les dossiers et les documents. Quand un **enregistrement** objet qui représente un document ou un **Recordset** objet représente un dossier de documents, le fournisseur de source de document remplit ces objets avec un ensemble de champs qui décrivent unique caractéristiques du document à la place la valeur réelle de document lui-même. En règle générale, un champ contient une référence à la **Stream** qui représente le document.  
+## <a name="special-fields-for-document-source-providers"></a>Champs spéciaux pour les fournisseurs de source de document  
+ Une classe spéciale de fournisseurs, appelée *fournisseurs de source de document*, gère les dossiers et les documents. Lorsqu’un objet **Record** représente un document ou un objet **Recordset** représente un dossier de documents, le fournisseur de source du document remplit ces objets avec un ensemble unique de champs qui décrivent les caractéristiques du document plutôt que le document lui-même. En règle générale, un champ contient une référence au **flux** qui représente le document.  
   
- Ces champs constituent une ressource **enregistrement** ou **recordset** et sont répertoriés pour les fournisseurs spécifiques qui les prennent en charge dans [annexe a : Fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md).  
+ Ces champs constituent un **enregistrement** de ressource ou un **jeu d’enregistrements** et sont répertoriés pour les fournisseurs spécifiques qui les prennent en charge dans [annexe a : fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md).  
   
- Index de deux constantes le **champs** collection d’une ressource **enregistrement** ou **Recordset** pour extraire une paire de champs couramment utilisés. Le **champ** objet [valeur](../../../ado/reference/ado-api/value-property-ado.md) propriété retourne le contenu souhaité.  
+ Deux constantes indexent la collection de **champs** d’un **enregistrement** de ressource ou d’un **jeu d’enregistrements** pour récupérer une paire de champs couramment utilisés. La propriété [valeur](../../../ado/reference/ado-api/value-property-ado.md) de l’objet de **champ** retourne le contenu souhaité.  
   
--   Le champ accédé avec la **adDefaultStream** constante contient un flux par défaut associé à la **enregistrement** ou **Recordset** objet. Le fournisseur affecte un flux par défaut à un objet.  
+-   Le champ accédé avec la constante **adDefaultStream** contient un flux par défaut associé à l' **enregistrement** ou à l’objet **Recordset** . Le fournisseur assigne un flux par défaut à un objet.  
   
--   Le champ accédé avec la **adRecordURL** constante contient l’URL absolue qui identifie le document.  
+-   Le champ accessible avec la constante **adRecordURL** contient l’URL absolue qui identifie le document.  
   
- Un fournisseur de source de document ne prend pas en charge la [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection de **enregistrement** et **champ** objets. Le contenu de la **propriétés** collection a la valeur null pour ces objets.  
+ Un fournisseur de source de document ne prend pas en charge la collection [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) d’objets **Record** et **Field** . Le contenu de la collection **Properties** a la valeur null pour ces objets.  
   
- Un fournisseur de source de document peut ajouter une propriété spécifique au fournisseur comme **Type de source de données** pour déterminer si c’est un fournisseur de source de document. Pour plus d’informations sur la façon de déterminer le type de fournisseur, consultez la documentation du fournisseur.  
+ Un fournisseur de source de document peut ajouter une propriété spécifique au fournisseur telle que le **type DataSource** pour déterminer s’il s’agit d’un fournisseur de source de document. Pour plus d’informations sur la façon de déterminer votre type de fournisseur, consultez la documentation de votre fournisseur.  
   
-## <a name="resource-recordset-columns"></a>Colonnes de jeu d’enregistrements de ressources  
- Un *jeu d’enregistrements de ressource* se compose des colonnes suivantes.  
+## <a name="resource-recordset-columns"></a>Colonnes de l’ensemble d’enregistrements de ressources  
+ Un *jeu d’enregistrements de ressources* se compose des colonnes suivantes.  
   
-|Nom de la colonne|type|Description|  
+|Nom de la colonne|Type|Description|  
 |-----------------|----------|-----------------|  
-|RESOURCE_PARSENAME|AdVarWChar|En lecture seule. Indique l’URL de la ressource.|  
-|RESOURCE_PARENTNAME|AdVarWChar|En lecture seule. Indique l’URL absolue de l’enregistrement parent.|  
-|RESOURCE_ABSOLUTEPARSENAME|AdVarWChar|En lecture seule. Indique l’URL absolue de la ressource, qui est la concaténation de PARENTNAME et PARSENAME.|  
-|PROPRIÉTÉ RESOURCE_ISHIDDEN|AdBoolean|True si la ressource est masquée. Aucune ligne n’est retournée, sauf si la commande qui crée l’ensemble de lignes explicitement sélectionne les lignes où la propriété RESOURCE_ISHIDDEN a la valeur True.|  
-|RESOURCE_ISREADONLY|AdBoolean|True si la ressource est en lecture seule. Tente d’ouvrir cette ressource avec DBBINDFLAG_WRITE et échoue avec DB_E_READONLY. Cette propriété peut être modifiée même lorsque la ressource n’a été ouverte pour la lecture.|  
-|RESOURCE_CONTENTTYPE|AdVarWChar|Indique l’utilisation probable du document-par exemple, un dossier d’avocat. Cela peut correspondre au modèle Office ayant servi à créer le document.|  
-|RESOURCE_CONTENTCLASS|AdVarWChar|Indique le type MIME du document, indiquant le format comme «`text/html`».|  
+|RESOURCE_PARSENAME|AdVarWChar|Lecture seule. Indique l’URL de la ressource.|  
+|RESOURCE_PARENTNAME|AdVarWChar|Lecture seule. Indique l’URL absolue de l’enregistrement parent.|  
+|RESOURCE_ABSOLUTEPARSENAME|AdVarWChar|Lecture seule. Indique l’URL absolue de la ressource, qui est la concaténation de PARENTNAME et PARSENAME.|  
+|RESOURCE_ISHIDDEN|AdBoolean|True si la ressource est masquée. Aucune ligne n’est retournée, sauf si la commande qui crée l’ensemble de lignes sélectionne explicitement les lignes où RESOURCE_ISHIDDEN a la valeur true.|  
+|RESOURCE_ISREADONLY|AdBoolean|True si la ressource est en lecture seule. Tente d’ouvrir cette ressource avec DBBINDFLAG_WRITE et échoue avec DB_E_READONLY. Cette propriété peut être modifiée même lorsque la ressource n’a été ouverte que pour la lecture.|  
+|RESOURCE_CONTENTTYPE|AdVarWChar|Indique l’utilisation probable du document (par exemple, un résumé d’avocat). Cela peut correspondre au modèle Office utilisé pour créer le document.|  
+|RESOURCE_CONTENTCLASS|AdVarWChar|Indique le type MIME du document, indiquant le format tel que «`text/html`».|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|Indique la langue dans laquelle le contenu est stocké.|  
-|RESOURCE_CREATIONTIME|adFileTime|En lecture seule. Indique une structure FILETIME qui contient l’heure de que la ressource a été créée. L’heure est signalée dans le format de temps universel coordonné (UTC).|  
-|RESOURCE_LASTACCESSTIME|AdFileTime|En lecture seule. Indique une structure FILETIME qui contient l’heure de dernier accès à la ressource. L’heure est au format UTC. Les membres FILETIME sont zéro si le fournisseur ne prend pas en charge ce membre de temps.|  
-|RESOURCE_LASTWRITETIME|AdFileTime|En lecture seule. Indique une structure FILETIME qui contient l’heure de dernière écriture de la ressource. L’heure est au format UTC. Les membres FILETIME sont zéro si le fournisseur ne prend pas en charge ce membre de temps.|  
-|RESOURCE_STREAMSIZE|asUnsignedBigInt|En lecture seule. Indique la taille du flux de valeur par défaut de la ressource, en octets.|  
-|RESOURCE_ISCOLLECTION|AdBoolean|En lecture seule. True si la ressource est une collection, comme un répertoire. False si la ressource est un fichier simple.|  
-|RESOURCE_ISSTRUCTUREDDOCUMENT|AdBoolean|True si la ressource est un document structuré. False si la ressource n’est pas un document structuré. Il peut être une collection ou un fichier simple.|  
-|DEFAULT_DOCUMENT|AdVarWChar|En lecture seule. Indique que cette ressource contient une URL vers le document simple par défaut d’un dossier ou un document structuré. Utilisé lorsque le flux par défaut est demandé à partir d’une ressource. Cette propriété est vide pour un fichier simple.|  
-|CHAPTERED_CHILDREN|adChapter|En lecture seule. facultatif. Indique le chapitre de l’ensemble de lignes qui contient les enfants de la ressource. (Le *fournisseur OLE DB pour la publication Internet* n’utilise pas cette colonne.)|  
-|RESOURCE_DISPLAYNAME|AdVarWChar|En lecture seule. Indique le nom complet de la ressource.|  
-|RESOURCE_ISROOT|AdBoolean|En lecture seule. True si la ressource est la racine d’une collection ou un document structuré.|  
+|RESOURCE_CREATIONTIME|adFileTime|Lecture seule. Indique une structure FILETIME qui contient l’heure à laquelle la ressource a été créée. L’heure est indiquée au format de temps universel coordonné (UTC, Coordinated Universal Time).|  
+|RESOURCE_LASTACCESSTIME|AdFileTime|Lecture seule. Indique une structure FILETIME qui contient l’heure du dernier accès à la ressource. L’heure est au format UTC. Les membres FILETIME sont nuls si le fournisseur ne prend pas en charge ce membre de temps.|  
+|RESOURCE_LASTWRITETIME|AdFileTime|Lecture seule. Indique une structure FILETIME qui contient l’heure à laquelle la ressource a été écrite pour la dernière fois. L’heure est au format UTC. Les membres FILETIME sont nuls si le fournisseur ne prend pas en charge ce membre de temps.|  
+|RESOURCE_STREAMSIZE|asUnsignedBigInt|Lecture seule. Indique la taille du flux par défaut de la ressource, en octets.|  
+|RESOURCE_ISCOLLECTION|AdBoolean|Lecture seule. True si la ressource est une collection, telle qu’un répertoire. False si la ressource est un fichier simple.|  
+|RESOURCE_ISSTRUCTUREDDOCUMENT|AdBoolean|True si la ressource est un document structuré. False si la ressource n’est pas un document structuré. Il peut s’agir d’une collection ou d’un fichier simple.|  
+|DEFAULT_DOCUMENT|AdVarWChar|Lecture seule. Indique que cette ressource contient une URL vers le document simple par défaut d’un dossier ou d’un document structuré. Utilisé lorsque le flux par défaut est demandé à partir d’une ressource. Cette propriété est vide pour un fichier simple.|  
+|CHAPTERED_CHILDREN|AdChapter|Lecture seule. facultatif. Indique le chapitre de l’ensemble de lignes qui contient les enfants de la ressource. (Le *fournisseur de OLE DB pour la publication Internet* n’utilise pas cette colonne.)|  
+|RESOURCE_DISPLAYNAME|AdVarWChar|Lecture seule. Indique le nom complet de la ressource.|  
+|RESOURCE_ISROOT|AdBoolean|Lecture seule. True si la ressource est la racine d’une collection ou d’un document structuré.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Enregistrement objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Annexe A : fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Record, objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Annexe A : Fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)

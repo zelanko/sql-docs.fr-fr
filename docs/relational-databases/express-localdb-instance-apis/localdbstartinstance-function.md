@@ -1,5 +1,5 @@
 ---
-title: Fonction LocalDBStartInstance | Microsoft Docs
+title: LocalDBStartInstance fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,17 +16,17 @@ ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b06364adefd62b4267d43bac50d79f8f1d37958a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022088"
 ---
 # <a name="localdbstartinstance-function"></a>Fonction LocalDBStartInstance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Démarre l'instance SQL Server Express LocalDB spécifiée.  
   
- **Fichier d'en-tête :** sqlncli.h  
+ **Fichier d’en-tête :** sqlncli. h  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,8 +52,8 @@ HRESULT LocalDBStartInstance(
  *lpcchSqlConnection*  
  [Entrée/sortie] En entrée contient la taille de la mémoire tampon de *wszSqlConnection* en caractères, y compris les zéros de fin. En sortie, si la taille de la mémoire tampon donnée est trop petite, contient la taille de la mémoire tampon requise en caractères, y compris les zéros de fin.  
   
-## <a name="returns"></a>Valeur renvoyée  
- Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  
+## <a name="returns"></a>Retours  
+ S_OK  
  La fonction a réussi.  
   
  [LOCALDB_ERROR_NOT_INSTALLED](../../relational-databases/express-localdb-error-messages/localdb-error-not-installed.md)  
@@ -102,21 +102,21 @@ HRESULT LocalDBStartInstance(
  Impossible de créer une instance automatique. Pour plus d'informations sur l'erreur, consultez le journal des événements des applications Windows.  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
- Une erreur inattendue s'est produite. Pour plus d'informations, consultez le journal des événements.  
+ Une erreur inattendue s’est produite. Pour plus d'informations, consultez le journal des événements.  
   
 ## <a name="details"></a>Détails  
  L'argument de mémoire tampon de connexion (*wszSqlConnection*) et l'argument de taille de mémoire tampon de connexion (*lpcchSqlConnection*) sont facultatifs. Le tableau suivant affiche les options d'utilisation de ces arguments et leurs résultats.  
   
 |Buffer|buffer_size|Rationale|Action|  
 |------------|-----------------|---------------|------------|  
-|NULL|NULL|L’utilisateur veut démarrer l’instance et ne doit pas nécessairement un canal nom.|Démarre une instance (aucun retour de canal et aucun retour obligatoire de taille de mémoire tampon).|  
+|NULL|NULL|L’utilisateur veut démarrer l’instance et n’a pas besoin d’un nom de canal.|Démarre une instance (aucun retour de canal et aucun retour obligatoire de taille de mémoire tampon).|  
 |NULL|Présent|L'utilisateur demande la taille de la mémoire tampon de sortie. (Dans l'appel suivant l'utilisateur demandera probablement un début réel.)|Retourne une taille de mémoire tampon requise (aucun début et aucun retour de canal). Le résultat est S_OK.|  
 |Présent|NULL|Non autorisé ; entrée incorrecte.|LOCALDB_ERROR_INVALID_PARAMETER est retourné.|  
-|Présent|Présent|L'utilisateur veut démarrer l'instance et a besoin du nom de canal pour s'y connecter après qu'il a été démarré.|Vérifie la taille de la mémoire tampon, démarre l'instance, puis retourne le nom de canal dans la mémoire tampon. <br />L’argument de taille de mémoire tampon retourne la longueur de la « server = « chaîne, ne pas y compris les zéros de fin.|  
+|Présent|Présent|L'utilisateur veut démarrer l'instance et a besoin du nom de canal pour s'y connecter après qu'il a été démarré.|Vérifie la taille de la mémoire tampon, démarre l'instance, puis retourne le nom de canal dans la mémoire tampon. <br />L’argument de taille de mémoire tampon retourne la longueur de la chaîne « Server = », sans inclure les valeurs null de fin.|  
   
  Pour un exemple de code qui utilise l'API LocalDB, consultez [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [En-tête et informations de version de la base de données locale SQL Server Express](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
+ [En-tête et informations de version SQL Server Express LocalDB](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

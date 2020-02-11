@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 1 : Publication des données à l’aide de la réplication transactionnelle | Microsoft Docs'
+title: 'Leçon 1 : Publication de données à l’aide de la réplication transactionnelle | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8267f70049d0ef37c0ce80bc594dff25d53f15fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721092"
 ---
-# <a name="lesson-1-publishing-data-using-transactional-replication"></a>Leçon 1 : Publication de données à l’aide de la réplication transactionnelle
+# <a name="lesson-1-publishing-data-using-transactional-replication"></a>Leçon 1 : publication de données à l'aide de la réplication transactionnelle
   Dans cette leçon, vous créez une publication transactionnelle en utilisant [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour publier un sous-ensemble filtré de la table **Product** de l’exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Vous allez aussi ajouter à la liste d'accès à la publication le compte de connexion SQL Server utilisée par l'Agent de distribution. Avant de commencer ce didacticiel, vous devez avoir terminé le didacticiel précédent, [Préparation du serveur à la réplication](tutorial-preparing-the-server-for-replication.md).  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>Pour créer une publication et définir des articles  
@@ -34,7 +34,7 @@ ms.locfileid: "62721092"
   
 4.  Dans la page Type de publication, sélectionnez **Publication transactionnelle**, puis cliquez sur **Suivant**.  
   
-5.  Dans la page Articles, développez le nœud **Tables** , cochez la case **Product** , puis développez **Product** et décochez les cases **ListPrice** et **StandardCost** . Cliquer sur **Suivant**.  
+5.  Dans la page Articles, développez le nœud **Tables** , cochez la case **Product** , puis développez **Product** et décochez les cases **ListPrice** et **StandardCost** . Cliquez sur **Suivant**.  
   
 6.  Dans la page Filtrer les lignes de la table, cliquez sur **Ajouter**.  
   
@@ -44,13 +44,13 @@ ms.locfileid: "62721092"
     WHERE [SafetyStockLevel] < 500  
     ```  
   
-8.  Cliquez sur **OK**, puis sur **Suivant**.  
+8.  Cliquez sur **OK**, puis cliquez sur **Suivant**.  
   
 9. Cochez la case **Créer un instantané immédiatement et garder ce dernier disponible pour l’initialisation des abonnements** et cliquez sur **Suivant**.  
   
 10. Dans la page Sécurité de l’agent, décochez la case **Utiliser les paramètres de sécurité de l’Agent d’instantané** .  
   
-11. Cliquez sur **Paramètres de sécurité** pour l’Agent d’instantané, entrez \<_nom_ordinateur>_ **\repl_snapshot** dans la zone **Compte de processus**, spécifiez le mot de passe du compte et cliquez sur **OK**.  
+11. Cliquez **sur paramètres de sécurité** pour la agent d’instantané \<, entrez _Machine_Name>_ **\ repl_snapshot** dans la zone **compte de processus** , fournissez le mot de passe de ce compte, puis cliquez sur **OK**.  
   
 12. Répétez l’étape précédente pour définir repl_logreader comme compte de processus de l’Agent de lecture du journal, puis cliquez sur **Terminer**.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62721092"
   
 ### <a name="to-view-the-status-of-snapshot-generation"></a>Pour afficher l'état d'une génération d'instantané  
   
-1.  Connectez-vous au serveur de publication dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez le nœud du serveur, puis développez le dossier **Réplication** .  
+1.  Connectez-vous au serveur [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de publication dans, développez le nœud du serveur, puis développez le dossier **réplication** .  
   
 2.  Dans le dossier **Publications locales** , cliquez avec le bouton droit sur **AdvWorksProductTrans**, puis cliquez sur **Afficher l’état de l’Agent d’instantané**.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62721092"
   
 ### <a name="to-add-the-distribution-agent-login-to-the-pal"></a>Pour ajouter la connexion de l'Agent de distribution à la liste d'accès à la publication  
   
-1.  Connectez-vous au serveur de publication dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez le nœud du serveur, puis développez le dossier **Réplication** .  
+1.  Connectez-vous au serveur [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de publication dans, développez le nœud du serveur, puis développez le dossier **réplication** .  
   
 2.  Dans le dossier **Publications locales** , cliquez avec le bouton droit sur **AdvWorksProductTrans**, puis cliquez sur **Propriétés**.  
   
@@ -76,14 +76,14 @@ ms.locfileid: "62721092"
   
 3.  Sélectionnez la page **Liste d’accès à la publication** , puis cliquez sur **Ajouter**.  
   
-4.  \Dans la boîte de dialogue **Ajouter un accès à une publication**, sélectionnez _nom_ordinateur>_ **\repl_distribution** et cliquez sur **OK**. Cliquez sur **OK**.  
+4.  \Dans la boîte de dialogue **Ajouter un accès à une publication** , sélectionnez _<Machine_Name>_ **\ Repl_distribution** , puis cliquez sur **OK**. Cliquez sur **OK**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Vous avez créé avec succès la publication transactionnelle. Ensuite, vous allez créer l'abonnement à cette publication. Consultez [Leçon 2 : Création d’un abonnement à la Publication transactionnelle](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
+ Vous avez créé avec succès la publication transactionnelle. Ensuite, vous allez créer l'abonnement à cette publication. Consultez [Leçon 2 : Création d’un abonnement à la publication transactionnelle](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Filtrer des données publiées](publish/filter-published-data.md)   
  [Define an Article](publish/define-an-article.md)   
- [Créer et appliquer un instantané](create-and-apply-the-snapshot.md)  
+ [Créer et appliquer l’instantané](create-and-apply-the-snapshot.md)  
   
   

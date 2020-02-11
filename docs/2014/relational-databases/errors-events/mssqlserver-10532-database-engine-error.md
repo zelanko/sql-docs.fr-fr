@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cda3117df524ba90f322bbb99d6db98ee989ab71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870628"
 ---
-# <a name="mssqlserver10532"></a>MSSQLSERVER_10532
+# <a name="mssqlserver_10532"></a>MSSQLSERVER_10532
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|10532|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|10532|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|PG_NO_ELIGIBLE_STMT|  
-|Texte du message|Impossible de créer le repère de plan ' %. \*%.*ls, car le module ou lot spécifié par `@plan_handle` ne contient pas d’instruction éligible pour un repère de plan. Indiquez une autre valeur pour `@plan_handle`.|  
+|Texte du message|Impossible de créer le repère de plan ’%.\*ls’, car le module ou lot spécifié par `@plan_handle` ne contient pas d’instruction éligible pour un repère de plan. Indiquez une autre valeur pour `@plan_handle`.|  
   
 ## <a name="explanation"></a>Explication  
  Le module ou lot spécifié par `@plan_handle` ne contient pas d'instruction éligible pour un repère de plan.  

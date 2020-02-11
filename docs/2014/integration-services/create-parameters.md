@@ -13,13 +13,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 639e31d8ec9282a948a7eda9050cc1a2025ac65e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060143"
 ---
-# <a name="create-parameters"></a>Create Parameters
+# <a name="create-parameters"></a>Créer des paramètres
   Vous pouvez utiliser [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer les paramètres de projet et de package. Les procédures suivantes fournissent des instructions pas-à-pas pour créer les paramètres de package/projet.  
   
 > [!NOTE]  
@@ -33,17 +33,17 @@ ms.locfileid: "66060143"
   
 2.  Cliquez sur le bouton **Ajouter un paramètre** de la barre d'outils.  
   
-     ![Bouton de la barre d’outils](media/denali-parameter-add.gif "Ajouter un bouton à la barre d’outils")  
+     ![Bouton Ajouter une barre d’outils](media/denali-parameter-add.gif "Ajouter un bouton à la barre d'outils")  
   
 3.  Entrez les valeurs des propriétés **Nom**, **Type de données**, **Valeur**, **Sensible**et **Requis** dans la liste elle-même ou dans la fenêtre **Propriétés** . Le tableau suivant décrit ces propriétés.  
   
     |Propriété|Description|  
     |--------------|-----------------|  
-    |Nom|Nom du paramètre.|  
+    |Name|Le nom du paramètre.|  
     |Type de données|Type de données du paramètre.|  
     |Valeur par défaut|Valeur par défaut du paramètre affecté au moment de la conception. Cette valeur est aussi appelée « valeur de conception par défaut ».|  
     |Sensible|Les valeurs de paramètre sensibles sont chiffrées dans le catalogue et apparaissent sous la forme d'une valeur Null lorsqu'elles sont affichées avec Transact-SQL ou SQL Server Management Studio.|  
-    |Requis|Nécessite qu'une valeur, autre que la valeur de conception par défaut, soit spécifiée pour que le package puisse s'exécuter.|  
+    |Obligatoire|Nécessite qu'une valeur, autre que la valeur de conception par défaut, soit spécifiée pour que le package puisse s'exécuter.|  
     |Description|Pour faciliter la maintenance, description du paramètre. Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], définissez la description des paramètres dans la fenêtre Propriétés de Visual Studio lorsque le paramètre est sélectionné dans la fenêtre des paramètres applicables.|  
   
     > [!NOTE]  
@@ -67,17 +67,17 @@ ms.locfileid: "66060143"
   
 3.  Cliquez sur le bouton **Ajouter un paramètre** de la barre d'outils.  
   
-     ![Bouton de la barre d’outils](media/denali-parameter-add.gif "Ajouter un bouton à la barre d’outils")  
+     ![Bouton Ajouter une barre d’outils](media/denali-parameter-add.gif "Ajouter un bouton à la barre d'outils")  
   
 4.  Entrez les valeurs des propriétés **Nom**, **Type de données**, **Valeur**, **Sensible**et **Requis** .  
   
     |Propriété|Description|  
     |--------------|-----------------|  
-    |Nom|Nom du paramètre.|  
+    |Name|Le nom du paramètre.|  
     |Type de données|Type de données du paramètre.|  
     |Valeur par défaut|Valeur par défaut du paramètre affecté au moment de la conception. Cette valeur est aussi appelée « valeur de conception par défaut ».|  
     |Sensible|Les valeurs de paramètre sensibles sont chiffrées dans le catalogue et apparaissent sous la forme d'une valeur Null lorsqu'elles sont affichées avec Transact-SQL ou SQL Server Management Studio.|  
-    |Requis|Nécessite qu'une valeur, autre que la valeur de conception par défaut, soit spécifiée pour que le package puisse s'exécuter.|  
+    |Obligatoire|Nécessite qu'une valeur, autre que la valeur de conception par défaut, soit spécifiée pour que le package puisse s'exécuter.|  
     |Description|Pour faciliter la maintenance, description du paramètre. Dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], définissez la description des paramètres dans la fenêtre Propriétés de Visual Studio lorsque le paramètre est sélectionné dans la fenêtre des paramètres applicables.|  
   
 5.  Enregistrez le projet pour sauvegarder les modifications apportées aux paramètres. Les valeurs de paramètres sont stockées dans des configurations au sein du fichier projet. Enregistrez le fichier projet pour valider sur disque toutes les modifications apportées aux valeurs de paramètres.  
@@ -86,6 +86,6 @@ ms.locfileid: "66060143"
     >  Vous pouvez effectuer sur place des modifications dans la liste ou utiliser la fenêtre **Propriétés** pour modifier les valeurs des propriétés de paramètre. Vous pouvez supprimer un paramètre à l'aide du bouton **Supprimer (X)** de la barre d'outils. En cliquant sur le dernier bouton de la barre d'outils pour ouvrir la boîte de dialogue **Gérer les valeurs de paramètre** , vous pouvez spécifier une valeur pour un paramètre utilisé uniquement lors de l'exécution du package dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services &#40;SSIS&#41; paramètres](integration-services-ssis-package-and-project-parameters.md)  
+ [Paramètres de&#41; Integration Services &#40;SSIS](integration-services-ssis-package-and-project-parameters.md)  
   
   

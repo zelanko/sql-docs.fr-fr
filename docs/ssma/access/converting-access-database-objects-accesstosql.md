@@ -1,5 +1,5 @@
 ---
-title: Convertir des objets de base de données Access (AccessToSQL) | Microsoft Docs
+title: Conversion d’objets de base de données Access (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -30,93 +30,93 @@ ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 56c55dbc5df61bfdb9013e505335af16fccbeecd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006632"
 ---
-# <a name="converting-access-database-objects-accesstosql"></a>Convertir des objets de base de données Access (AccessToSQL)
-Une fois que vous avez ajouté des bases de données Access et connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, SSMA affiche les métadonnées pour l’accès et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objets de base de données SQL Azure. Vous pouvez maintenant sélectionner les objets de base de données Access et puis de convertir les schémas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou les schémas de SQL Azure.  
+# <a name="converting-access-database-objects-accesstosql"></a>Conversion d’objets de base de données Access (AccessToSQL)
+Une fois que vous avez ajouté des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Access et que vous vous êtes connecté à ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure, SSMA affiche des métadonnées pour les objets de base de données Access et ou SQL Azure. Vous pouvez maintenant sélectionner accéder aux objets de base de données, puis convertir les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schémas dans ou SQL Azure schémas.  
   
-## <a name="the-conversion-process"></a>Le processus de Conversion  
-Convertir des objets de base de données accepte les définitions d’objets à partir de l’accès aux métadonnées, les convertit en équivalent [!INCLUDE[tsql](../../includes/tsql-md.md)] syntaxe et charge ensuite ces informations dans le projet. Vous pouvez ensuite afficher le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objets de SQL Azure et leurs propriétés à l’aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de l’Explorateur de métadonnées SQL Azure.  
+## <a name="the-conversion-process"></a>Processus de conversion  
+La conversion d’objets de base de données prend les définitions d’objet des métadonnées d' [!INCLUDE[tsql](../../includes/tsql-md.md)] accès, les convertit en syntaxe équivalente, puis charge ces informations dans le projet. Vous pouvez ensuite afficher les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets ou SQL Azure et leurs propriétés à l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aide de ou SQL Azure Explorateur de métadonnées.  
   
 > [!IMPORTANT]  
-> Conversion d’objets ne crée pas les objets dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Uniquement, il convertit les définitions d’objet et stocke les informations dans le projet SSMA.  
+> La conversion d’objets ne crée pas les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets dans ou SQL Azure. Il convertit uniquement les définitions d’objets et stocke les informations dans le projet SSMA.  
   
-Lors de la conversion, SSMA imprime l’état sur le volet de sortie et messages d’erreur, avertissement et d’information vers le volet Liste d’erreurs. Ces informations permettent de déterminer si vous devez modifier vos bases de données Access ou de votre processus de conversion pour obtenir les résultats de la conversion souhaitée. Vous pouvez également utiliser les informations contenues dans le [préparation de bases de données Access pour la Migration](preparing-access-databases-for-migration-accesstosql.md) rubrique pour déterminer ce qui sera et ne seront pas converti.  
+Pendant la conversion, SSMA imprime l’État dans le volet de sortie, ainsi que les messages d’erreur, d’avertissement et d’information dans le volet Liste d’erreurs. Utilisez ces informations pour déterminer si vous devez modifier vos bases de données Access ou votre processus de conversion pour obtenir les résultats de conversion souhaités. Vous pouvez également utiliser les informations de la rubrique [préparation des bases de données Access pour la migration](preparing-access-databases-for-migration-accesstosql.md) pour déterminer ce qui va et ne sera pas converti.  
   
-## <a name="setting-conversion-options"></a>Définition des Options de Conversion  
-Avant de convertir des objets, passez en revue les options de conversion de projet dans le **paramètres du projet** boîte de dialogue. À l’aide de cette boîte de dialogue, vous pouvez définir comment SSMA convertit les colonnes Mémo indexées, les clés primaires, les contraintes de clé étrangère, les horodateurs et les tables sans index. Pour plus d’informations, consultez [paramètres du projet (Conversion)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
+## <a name="setting-conversion-options"></a>Définition des options de conversion  
+Avant de convertir des objets, passez en revue les options de conversion de projet dans la boîte de dialogue **paramètres du projet** . À l’aide de cette boîte de dialogue, vous pouvez définir la manière dont SSMA convertit les colonnes de mémo indexées, les clés primaires, les contraintes de clé étrangère, les horodateurs et les tables sans index. Pour plus d’informations, consultez [paramètres du projet (conversion)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388) .  
   
 ## <a name="conversion-results"></a>Résultats de la conversion  
-Le tableau suivant présente les objets d’accès sont convertis et résultant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objets de SQL Azure :  
+Le tableau suivant répertorie les objets Access qui sont convertis et les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets résultants ou SQL Azure :  
   
-|Objet d’accès|Objet qui en résulte de SQL Server|  
+|Objet d’accès|Objet SQL Server résultant|  
 |-----------------|-------------------------------|  
 |table|table|  
-|column|column|  
+|colonne|colonne|  
 |index|index|  
 |clé étrangère|clé étrangère|  
-|requête|vue<br /><br />Requêtes SELECT plus sont converties en vues. Autres requêtes, telles que les requêtes de mise à jour, ne sont pas migrés.<br /><br />Les requêtes SELECT qui prennent des paramètres ne sont pas converties, ni les requêtes de tableau croisé.|  
-|rapport|non converti|  
-|Formulaire|non converti|  
-|(Macro)|non converti|  
+|requête|vue<br /><br />La plupart des requêtes SELECT sont converties en vues. Les autres requêtes, telles que les requêtes de mise à jour, ne sont pas migrées.<br /><br />Les requêtes SELECT qui acceptent des paramètres ne sont pas converties, et ne sont pas des requêtes à onglets croisées.|  
+|report|non converti|  
+|form|non converti|  
+|macro|non converti|  
 |module|non converti|  
-|Valeur par défaut|Valeur par défaut|  
-|Autoriser zéro propriété de colonne de longueur|contrainte de validation|  
+|valeur par défaut|valeur par défaut|  
+|autoriser la propriété de colonne de longueur nulle|contrainte de validation|  
 |règle de validation de colonne|contrainte de validation|  
 |règle de validation de table|contrainte de validation|  
 |clé primaire|clé primaire|  
   
-## <a name="converting-access-objects"></a>Convertir des objets d’accès  
-Pour convertir des objets de base de données Access, vous devez tout d’abord sélectionner les objets que vous souhaitez convertir et puis SSMA effectuer la conversion. Pour afficher les messages de sortie pendant la conversion, sur le **vue** menu, sélectionnez **sortie**.  
+## <a name="converting-access-objects"></a>Conversion d’objets Access  
+Pour convertir des objets de base de données Access, vous devez d’abord sélectionner les objets que vous souhaitez convertir, puis demander à SSMA d’effectuer la conversion. Pour afficher les messages de sortie pendant la conversion, dans le menu **affichage** , sélectionnez **sortie**.  
   
-**Pour sélectionner et convertir des objets de base de données Access à la syntaxe SQL Server ou SQL Azure**  
+**Pour sélectionner et convertir des objets de base de données Access en SQL Server ou SQL Azure syntaxe**  
   
-1.  Dans l’Explorateur de métadonnées d’accès, développez **la métabase accès**, puis développez **bases de données**.  
+1.  Dans l’Explorateur de métadonnées Access, développez **accès-métabase**, puis développez **bases de données**.  
   
 2.  Effectuez une ou plusieurs des opérations suivantes :  
   
-    -   Pour convertir toutes les bases de données, sélectionnez la case à cocher à côté **bases de données**.  
+    -   Pour convertir toutes les bases de données, activez la case à cocher en regard de **bases de données**.  
   
-    -   Pour convertir ou omettre les bases de données individuelles, sélectionnez ou désactivez la case à cocher en regard du nom de la base de données.  
+    -   Pour convertir ou omettre des bases de données, activez ou désactivez la case à cocher en regard du nom de la base de données.  
   
-    -   Pour convertir ou omettre des requêtes, développez la base de données, puis cochez ou décochez la **requêtes** case à cocher.  
+    -   Pour convertir ou omettre des requêtes, développez la base de données, puis activez ou désactivez la case à cocher **requêtes** .  
   
-    -   Pour convertir ou omettre des tables individuelles, développez la base de données, puis **Tables**, puis sélectionnez ou désactivez la case à cocher en regard du tableau.  
+    -   Pour convertir ou omettre des tables individuelles, développez la base de données, développez **tables**, puis activez ou désactivez la case à cocher en regard de la table.  
   
-3.  Procédez de l'une des manières suivantes :  
+3.  Effectuez l’une des actions suivantes :  
   
-    -   Pour convertir des schémas, avec le bouton droit **bases de données** et sélectionnez **convertir le schéma**.  
+    -   Pour convertir des schémas, cliquez avec le bouton droit sur **bases de données** , puis sélectionnez **convertir le schéma**.  
   
-        Vous pouvez également convertir des objets individuels. Pour convertir un objet, quelles que soient les objets sont sélectionnés, cliquez sur l’objet et sélectionnez **convertir le schéma**.  
+        Vous pouvez également convertir des objets individuels. Pour convertir un objet, quels que soient les objets sélectionnés, cliquez avec le bouton droit sur l’objet et sélectionnez **convertir le schéma**.  
   
-        Lorsqu’un objet a été converti, il apparaît en gras dans l’Explorateur de métadonnées d’accès.  
+        Lorsqu’un objet a été converti, il apparaît en gras dans l’Explorateur de métadonnées Access.  
   
-    -   Pour convertir, charger et migrer les schémas et les données en une seule étape, cliquez sur les bases de données et sélectionnez **convertir, charger et migrer**.  
+    -   Pour convertir, charger et migrer des schémas et des données en une seule étape, cliquez avec le bouton droit sur bases de données, puis sélectionnez **convertir, charger et migrer**.  
   
-4.  Passez en revue les messages dans la **sortie** volet et les erreurs et les avertissements dans le **liste d’erreurs** volet.  
+4.  Examinez les messages dans le volet de **sortie** et les erreurs et les avertissements dans le volet **liste d’erreurs** .  
   
-## <a name="altering-tables-and-indexes"></a>Modification des Tables et des index  
-Après avoir converti les métadonnées de l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou les métadonnées de SQL Azure, et avant de charger les objets vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, vous pouvez modifier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou des tables de SQL Azure et des index.  
+## <a name="altering-tables-and-indexes"></a>Modification des tables et des index  
+Après avoir converti les métadonnées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’accès vers ou SQL Azure métadonnées, et avant de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] charger les objets dans ou SQL Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez modifier ou SQL Azure des tables et des index.  
   
-**Pour modifier les propriétés de table ou un index**  
+**Pour modifier les propriétés d’une table ou d’un index**  
   
-1.  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou l’Explorateur de métadonnées SQL Azure, sélectionnez la table ou l’index que vous souhaitez modifier.  
+1.  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure l’Explorateur de métadonnées, sélectionnez la table ou l’index que vous souhaitez modifier.  
   
-2.  Sur le **Table** , cliquez sur la propriété que vous souhaitez modifier puis entrez ou sélectionnez le nouveau paramètre. Par exemple, vous pouvez modifier nvarchar (15) à nvarchar (20), ou sélectionnez une case à cocher pour rendre une colonne de table autorise la valeur null.  
+2.  Sous l’onglet **table** , cliquez sur la propriété que vous souhaitez modifier, puis entrez ou sélectionnez le nouveau paramètre. Par exemple, vous pouvez remplacer nvarchar (15) par nvarchar (20) ou activer une case à cocher pour rendre une colonne de table Nullable.  
   
-    Déplacez le curseur hors de la cellule de la propriété modifiée. Vous pouvez le faire en cliquant sur une autre ligne ou en appuyant sur la touche Tab.  
+    Déplacez le curseur en dehors de la cellule de propriété modifiée. Pour ce faire, cliquez sur une autre ligne ou appuyez sur la touche Tab.  
   
 3.  Cliquez sur **Appliquer**.  
   
-Vous pouvez maintenant afficher les modifications dans le code sur le **SQL** onglet.  
+Vous pouvez maintenant afficher les modifications dans le code sous l’onglet **SQL** .  
   
-## <a name="next-step"></a>Étape suivante  
-L’étape suivante du processus de migration est [charger des objets de base de données convertis dans SQL Server](loading-converted-database-objects-into-sql-server-accesstosql.md)  
+## <a name="next-step"></a>étape suivante  
+L’étape suivante du processus de migration consiste [à charger des objets de base de données convertis en SQL Server](loading-converted-database-objects-into-sql-server-accesstosql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Migration bases de données Access vers SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+[Migration de bases de données Access vers SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

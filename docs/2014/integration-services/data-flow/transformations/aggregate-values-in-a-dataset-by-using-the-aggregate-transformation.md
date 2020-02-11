@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 10b14aa8a1f68b32c00ecb321c1af36fb15b868e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900932"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>Agréger les valeurs dans un dataset à l'aide de la transformation d'agrégation
@@ -54,7 +54,7 @@ ms.locfileid: "62900932"
     > [!NOTE]  
     >  La fourniture du nombre de valeurs distinctes, exact ou approximatif, optimise les performances, car la transformation peut préallouer la quantité de mémoire appropriée pour effectuer son travail.  
   
-12. Si vous le souhaitez, cliquez sur **Avancé** et mettez à jour le nom de la sortie de la transformation d’agrégation. Si les agrégations contiennent une `Group By` opération, vous pouvez sélectionner un nombre approximatif de regroupement des valeurs de clés dans le **redéfinir le nombre de** colonne ou spécifier un nombre exact de regroupement des valeurs de clés dans le **clés** colonne.  
+12. Si vous le souhaitez, cliquez sur **Avancé** et mettez à jour le nom de la sortie de la transformation d’agrégation. Si les agrégations incluent une `Group By` opération, vous pouvez sélectionner un nombre approximatif de valeurs de clé de regroupement dans la colonne **échelle de clés** ou spécifier un nombre exact de valeurs de clé de regroupement dans la colonne **clés** .  
   
     > [!NOTE]  
     >  La fourniture du nombre de valeurs distinctes, exact ou approximatif, optimise les performances, car la transformation peut préallouer la quantité de mémoire appropriée pour effectuer son travail.  
@@ -71,7 +71,7 @@ ms.locfileid: "62900932"
 ## <a name="see-also"></a>Voir aussi  
  [Transformation d'agrégation](aggregate-transformation.md)   
  [Transformations Integration Services](integration-services-transformations.md)   
- [Chemins d'accès d'Integration Services](../integration-services-paths.md)   
+ [Chemins Integration Services](../integration-services-paths.md)   
  [tâche de flux de données](../../control-flow/data-flow-task.md)  
   
   

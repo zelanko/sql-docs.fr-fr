@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: ccb2689b24914a0a953c1b9f7325cd5aa9c75d0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014122"
 ---
 # <a name="multipolygon"></a>MultiPolygon
@@ -25,7 +25,7 @@ ms.locfileid: "66014122"
 ## <a name="polygon-instances"></a>Instances Polygon  
  L'illustration suivante montre des exemples d'instances `MultiPolygon`.  
   
- ![Exemples d’instances MultiPolygon géométriques](../../database-engine/media/multipolygon.gif "Exemples d’instances MultiPolygon géométriques")  
+ ![Exemples d'instances MultiPolygon géométriques](../../database-engine/media/multipolygon.gif "Exemples d'instances MultiPolygon géométriques")  
   
  Comme indiqué par l'illustration :  
   
@@ -38,9 +38,9 @@ ms.locfileid: "66014122"
   
 -   Il s'agit d'une instance `MultiPolygon` vide.  
   
--   Toutes les instances comprenant l'instance `MultiPolygon` sont des instances `Polygon` acceptées. Pour plus d’informations sur accepté `Polygon` instances, consultez [polygone](../spatial/polygon.md).  
+-   Toutes les instances comprenant l'instance `MultiPolygon` sont des instances `Polygon` acceptées. Pour plus d’informations sur `Polygon` les instances acceptées, consultez [Polygon](../spatial/polygon.md).  
   
- Les exemples suivants montrent acceptés `MultiPolygon` instances.  
+ Les exemples suivants illustrent `MultiPolygon` des instances acceptées.  
   
 ```  
 DECLARE @g1 geometry = 'MULTIPOLYGON EMPTY';  
@@ -59,7 +59,7 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
 ### <a name="valid-instances"></a>Instances valides  
  Les instances `MultiPolygon` sont valides s'il s'agit d'instances `MultiPolygon` vides ou si elles respectent les critères suivants.  
   
-1.  Toutes les instances comprenant l'instance `MultiPolygon` sont des instances `Polygon` valides. Pour valide `Polygon` instances, consultez [polygone](../spatial/polygon.md).  
+1.  Toutes les instances comprenant l'instance `MultiPolygon` sont des instances `Polygon` valides. Pour connaître `Polygon` les instances valides, consultez [Polygon](../spatial/polygon.md).  
   
 2.  Aucune des instances `Polygon` comprenant l'instance `MultiPolygon` n'en chevauche une autre.  
   
@@ -72,7 +72,9 @@ DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1,
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g2` n'est pas valide car les deux instances de `Polygon` se touchent uniquement sur un point tangent. `@g3` n'est pas valide car les intérieurs des deux instances de `Polygon` se chevauchent.  
+ 
+  `@g2` n'est pas valide car les deux instances de `Polygon` se touchent uniquement sur un point tangent. 
+  `@g3` n'est pas valide car les intérieurs des deux instances de `Polygon` se chevauchent.  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant illustre la création d’une instance `geometry``MultiPolygon` et retourne l’entrée WKT (well-known text) du deuxième composant.  

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9c266cf82a6f790d20cec3b3ec94f3c5e42b74b5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75241990"
 ---
 # <a name="objects-supported-by-the-generate-scripts-wizard"></a>Objets pris en charge par l'Assistant Génération de scripts
@@ -25,10 +25,10 @@ ms.locfileid: "75241990"
   
 ||||||  
 |-|-|-|-|-|  
-|Rôle d'application|Rôle de base de données|Schéma|Agrégat défini par l'utilisateur|Vue<sup>1</sup>|  
+|Rôle d'application|Rôle de base de données|schéma|Agrégat défini par l'utilisateur|Vue<sup>1</sup>|  
 |Assembly|Contrainte DEFAULT|Procédure stockée<sup>1</sup>|Type de données défini par l'utilisateur|Collection de schémas XML|  
 |Contrainte CHECK|Catalogue de texte intégral|Synonyme|Fonction définie par l'utilisateur||  
-|Procédure stockée CLR (common language runtime)<sup>1</sup>|Index|Table|Table définie par l'utilisateur||  
+|Procédure stockée CLR (common language runtime)<sup>1</sup>|Index|Table de charge de travail|Table définie par l'utilisateur||  
 |Fonction CLR définie par l'utilisateur|Règle|Utilisateur<sup>2</sup>|Type défini par l'utilisateur||  
   
  <sup>1</sup> publié sans chiffrement.  

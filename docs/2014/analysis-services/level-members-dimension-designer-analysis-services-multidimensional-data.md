@@ -1,5 +1,5 @@
 ---
-title: Niveau et membres (onglet navigateur, Concepteur de dimensions) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Niveau et membres (onglet navigateur, concepteur de dimensions) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad602710cab83e2be25a03a4da6cce0c3407493e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078109"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Niveau et membres (onglet Navigateur, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
@@ -40,7 +40,7 @@ ms.locfileid: "66078109"
  **Niveau actuel**  
  Affiche le niveau auquel appartient le membre sélectionné dans **Arborescence** .  
   
- **Arborescence**  
+ **Arbres**  
  Affiche les membres correspondant à la hiérarchie et à la langue sélectionnées.  
   
  Si les propriétés du membre sont sélectionnées depuis l'option **Propriétés de membre** du volet Barre d'outils, chaque propriété du membre s'affiche dans une colonne.  
@@ -68,7 +68,7 @@ ms.locfileid: "66078109"
 > [!NOTE]  
 >  Cette option n'est disponible que si le mode d'écriture différée est activé.  
   
- **Cut**  
+ **Couper**  
  Copie les membres sélectionnés vers le Presse-papiers et les supprime de la hiérarchie.  
   
 > [!NOTE]  
@@ -113,17 +113,17 @@ ms.locfileid: "66078109"
  **Réduire tout**  
  Réduit tous les membres dans **Arborescence**.  
   
- **Développez le membre**  
+ **Développer le membre**  
  Développe le membre sélectionné dans **Arborescence**.  
   
  **Réduire le membre**  
  Réduit le membre sélectionné dans **Arborescence**.  
   
- **Écriture différée**  
+ **Transcription**  
  Sélectionnez cette option pour activer le mode d'écriture différée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Barre d’outils &#40;onglet navigateur, Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)   
- [Navigateur &#40;Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Barre d’outils &#40;onglet navigateur, concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Navigateur &#40;concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

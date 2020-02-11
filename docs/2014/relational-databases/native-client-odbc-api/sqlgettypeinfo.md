@@ -15,38 +15,40 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60c4c4d364f9c07e9ca241dd357535f7f7acb42d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046685"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
-  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les rapports de pilote ODBC Native Client définie de la colonne USERTYPE supplémentaire dans le résultat de `SQLGetTypeInfo`. USERTYPE signale la définition de type de données de bibliothèque de bases de données et est utile aux développeurs qui déplacent des applications de bibliothèque de bases de données existantes vers ODBC.  
+  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC native client signale la colonne supplémentaire usertype dans le jeu de `SQLGetTypeInfo`résultats de. USERTYPE signale la définition de type de données de bibliothèque de bases de données et est utile aux développeurs qui déplacent des applications de bibliothèque de bases de données existantes vers ODBC.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traite l'identité comme un attribut, tandis que ODBC la traite comme un type de données. Pour résoudre cette incohérence, `SQLGetTypeInfo` retourne les types de données : **intidentity**, **smallintidentity**, **tinyintidentity**, **decimalidentity** , et **numericidentity**. Le `SQLGetTypeInfo` colonne du jeu de résultats AUTO_UNIQUE_VALUE signale la valeur TRUE pour ces types de données.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traite l'identité comme un attribut, tandis que ODBC la traite comme un type de données. Pour résoudre cette incompatibilité `SQLGetTypeInfo` , retourne les types de données suivants : **intidentity**, **smallintidentity**, **tinyintidentity**, **decimalidentity**et **NumericIdentity**. La `SQLGetTypeInfo` colonne de l’ensemble de résultats AUTO_UNIQUE_VALUE indique la valeur true pour ces types de données.  
   
- Pour **varchar**, **nvarchar** et **varbinary**, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client continue de signaler les 8000, 4000 et 8000 respectivement pour COLUMN_SIZE valeur, même s’il est en réalité illimitée. Ceci a pour but de garantir la compatibilité descendante.  
+ Pour les valeurs de type **varchar**, **nvarchar** et **varbinary**, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client continue à signaler 8000, 4000 et 8000 pour la valeur COLUMN_SIZE, bien qu’il soit en fait illimité. Ceci a pour but de garantir la compatibilité descendante.  
   
- Pour le **xml** type de données, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client indique SQL_SS_LENGTH_UNLIMITED pour COLUMN_SIZE afin de dénoter une taille illimitée.  
+ Pour le type de données **XML** , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le pilote ODBC Native Client signale SQL_SS_LENGTH_UNLIMITED COLUMN_SIZE pour indiquer une taille illimitée.  
   
 ## <a name="sqlgettypeinfo-and-table-valued-parameters"></a>SQLGetTypeInfo et paramètres table  
- Le type de table pour les paramètres table est effectivement un meta-type-, un type utilisé pour définir d’autres types. Par conséquent, il ne devra pas être exposés via SQLGetTypeInfo. Applications doivent utiliser SQLTables, plutôt que de SQLGetTypeInfo, pour récupérer des métadonnées pour les types de table utilisé avec les paramètres table.  
+ Le type de table pour les paramètres table est en fait un type méta, c’est-à-dire un type utilisé pour définir d’autres types. Par conséquent, il n’est pas nécessaire de l’exposer via SQLGetTypeInfo. Les applications doivent utiliser SQLTables, plutôt que SQLGetTypeInfo, pour récupérer les métadonnées des types de tables utilisés avec les paramètres table.  
   
- Pour plus d’informations sur l’extraction de métadonnées pour les paramètres table, consultez [instruction attributs que les paramètres Affect Table-Valued](../native-client-odbc-table-valued-parameters/statement-attributes-that-affect-table-valued-parameters.md).  
+ Pour plus d’informations sur la récupération de métadonnées pour les paramètres table, consultez [attributs d’instruction qui affectent les paramètres table](../native-client-odbc-table-valued-parameters/statement-attributes-that-affect-table-valued-parameters.md).  
   
  Pour plus d’informations sur les paramètres table, consultez [paramètres table &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlgettypeinfo-support-for-enhanced-date-and-time-features"></a>Prise en charge de SQLGetTypeInfo pour les fonctionnalités Date et Heure améliorées  
  Pour les valeurs retournées pour les types de date/heure, consultez [Catalog Metadata](../native-client-odbc-date-time/metadata-catalog.md).  
   
- Pour plus d’informations générales, consultez [améliorations Date / heure &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Pour plus d’informations générales, consultez améliorations de la [date et de l’heure &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlgettypeinfo-support-for-large-clr-udts"></a>Prise en charge SQLGetTypeInfo pour les types CLR volumineux définis par l'utilisateur  
- `SQLGetTypeInfo` prend en charge les grands types CLR définis par l'utilisateur. Pour plus d’informations, consultez [Large CLR User-Defined Types &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ 
+  `SQLGetTypeInfo` prend en charge les grands types CLR définis par l'utilisateur. Pour plus d’informations, consultez [types CLR volumineux définis par l’utilisateur &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLGetTypeInfo Function](https://go.microsoft.com/fwlink/?LinkId=59356)   
- [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
+ [SQLGetTypeInfo, fonction](https://go.microsoft.com/fwlink/?LinkId=59356)   
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

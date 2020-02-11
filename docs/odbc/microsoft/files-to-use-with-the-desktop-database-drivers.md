@@ -15,17 +15,17 @@ ms.assetid: c936b9e9-e965-4437-a205-833413320940
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98df4ed5de9cc38f017c2fb9c577d12c067c5ebf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063681"
 ---
 # <a name="files-to-use-with-the-desktop-database-drivers"></a>Fichiers à utiliser avec les pilotes pour les bases de données de poste de travail
-Les pilotes de base de données de bureau ODBC sont utilisés avec le moteur de base de données Microsoft Jet, fichiers ISAM installables et fichiers de Microsoft ODBC. Ne sont pas toutes requises pour la redistribution du produit et les principaux composants ne sont pas toutes.  
+Les pilotes de base de données de bureau ODBC sont utilisés avec Microsoft Jet Moteur de base de données, les fichiers ISAM installables et les fichiers Microsoft ODBC. Tous ne sont pas nécessaires pour la redistribution du produit, et pas tous les composants principaux.  
   
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
 |Fichiers utilisés par chaque pilote de base de données de bureau|Fichiers de pilote ODBC|  
 |Fichiers Microsoft Jet utilisés par chaque pilote de base de données de bureau|Fichiers Microsoft Jet|  
-|Fichiers de pilote IISAM qui fournissent l’accès aux données entre Microsoft Jet et l’autres SGBD|Fichiers de pilote ISAM installables|
+|Fichiers de pilote IISAM qui fournissent l’accès aux données entre Microsoft Jet et l’autre SGBD|Fichiers de pilote ISAM installables|

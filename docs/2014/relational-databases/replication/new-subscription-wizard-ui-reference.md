@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ace6059545a4c46e3af279ad7c6104456478801c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022547"
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>Assistant Nouvel abonnement (références de l'interface utilisateur)
@@ -43,7 +43,7 @@ ms.locfileid: "63022547"
 -   [Valeurs HOST_NAME](host-name-values.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer un abonnement par extraction de données ](create-a-pull-subscription.md)   
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [S'abonner à des publications](subscribe-to-publications.md)   
 

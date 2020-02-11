@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d936c1a1086f13d43bc38758f86a0ab80f757f7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63249380"
 ---
 # <a name="subscription-type"></a>Type d'abonnement
-  La réplication de fusion propose deux types d'abonnements : l'abonnement serveur et l'abonnement client (connus dans les versions précédentes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous les noms respectifs d'abonnement global et abonnement local). Les abonnés disposant d'un abonnement serveur peuvent :  
+  La réplication de fusion propose deux types d’abonnement : serveur et client (référencés [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans les versions précédentes de, respectivement, global et local). Les abonnés disposant d'un abonnement serveur peuvent :  
   
 -   republier des données à d'autres Abonnés ;  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63249380"
  Permet de sélectionner pour chaque Abonné la valeur **Client** ou **Serveur** dans la zone de liste déroulante de la colonne **Type d'abonnement** . Dans le cas d'Abonnés bénéficiant d'un abonnement serveur, vous devez saisir un nombre compris entre 0 et 99,99 dans la colonne **Priorité pour la résolution des conflits** : plus ce nombre est grand, plus la priorité de l'Abonné est forte.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer un abonnement par extraction de données ](create-a-pull-subscription.md)   
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [S'abonner à des publications](subscribe-to-publications.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Mise en miroir de bases de données : interopérabilité et coexistence (SQL Server) | Microsoft Docs'
+title: 'Mise en miroir de bases de données : interopérabilité et coexistence (SQL Server) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2f38e7bac91c4d65e9c6209d693a598466096069
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807305"
 ---
-# <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>Mise en miroir de bases de données : interopérabilité et coexistence (SQL Server)
+# <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>Mise en miroir de bases de données : interopérabilité et coexistence (SQL Server)
   Vous pouvez utiliser la mise en miroir de bases de données avec les fonctionnalités et les composants suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   [Instances de Cluster de basculement AlwaysOn (SQL Server Clustering de basculement)](database-mirroring-and-sql-server-failover-cluster-instances.md)  
+-   [Instances de cluster de basculement AlwaysOn (clustering de basculement SQL Server)](database-mirroring-and-sql-server-failover-cluster-instances.md)  
   
 -   [Capture de données modifiées (et suivi des modifications)](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md)  
   
@@ -31,7 +31,7 @@ ms.locfileid: "62807305"
   
 -   [Catalogues de texte intégral](database-mirroring-and-full-text-catalogs-sql-server.md)  
   
--   [Copie des journaux de transaction](database-mirroring-and-log-shipping-sql-server.md)  
+-   [Envoi de journaux](database-mirroring-and-log-shipping-sql-server.md)  
   
 -   [Réplication](database-mirroring-and-replication-sql-server.md)  
   

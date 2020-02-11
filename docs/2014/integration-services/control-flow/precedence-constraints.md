@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: da27e10af2a5483583976a13e54bf9087c20e9b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831699"
 ---
 # <a name="precedence-constraints"></a>Contraintes de précédence
@@ -29,11 +29,11 @@ ms.locfileid: "62831699"
   
  Une contrainte de précédence lie deux exécutables : l'exécutable de précédence et l'exécutable contraint. L'exécutable de précédence s'exécute avant l'exécutable contraint et le résultat de l'exécution de l'exécutable de précédence peut déterminer si l'exécutable contraint s'exécute. Le schéma suivant illustre deux exécutables liés par une contrainte de précédence.  
   
- ![Exécutables connectés par le biais d’une contrainte de précédence](../media/ssis-pcsimple.gif "Exécutables connectés par le biais d’une contrainte de précédence")  
+ ![Exécutables connectés par le biais d'une contrainte de précédence](../media/ssis-pcsimple.gif "Exécutables connectés par le biais d'une contrainte de précédence")  
   
  Dans un flux de contrôle linéaire, c'est-à-dire sans branchement, les contraintes de précédence déterminent à elles seules la séquence d'exécution des tâches. Dans un flux de contrôle avec branchements, le moteur d'exécution [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] détermine l'ordre d'exécution des tâches et des conteneurs qui suivent immédiatement le branchement. Le moteur d'exécution détermine également l'ordre d'exécution des flux de travail non connectés dans un flux de contrôle.  
   
- L'architecture à conteneurs imbriqués d'[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] permet à tous les conteneurs (à l'exception du conteneur d'hôte de tâche qui encapsule une seule tâche) d'inclure d'autres conteneurs, chacun avec son propre flux de contrôle. Les conteneurs de boucles For, de boucles Foreach et de séquence peuvent inclure plusieurs tâches et d'autres conteneurs, qui à leur tour peuvent inclure plusieurs tâches et conteneurs. Par exemple, un package avec une tâche de script et un conteneur de séquence possède une contrainte de précédence qui lie la tâche de script et le conteneur de séquence. Le conteneur de séquence contient trois tâches de script et ses contraintes de précédence lient les trois tâches de script dans un flux de contrôle. Le schéma suivant illustre les contraintes de précédence dans un package avec deux niveaux d'imbrication.  
+ L'architecture à conteneurs imbriqués d' [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] permet à tous les conteneurs (à l'exception du conteneur d'hôte de tâche qui encapsule une seule tâche) d'inclure d'autres conteneurs, chacun avec son propre flux de contrôle. Les conteneurs de boucles For, de boucles Foreach et de séquence peuvent inclure plusieurs tâches et d'autres conteneurs, qui à leur tour peuvent inclure plusieurs tâches et conteneurs. Par exemple, un package avec une tâche de script et un conteneur de séquence possède une contrainte de précédence qui lie la tâche de script et le conteneur de séquence. Le conteneur de séquence contient trois tâches de script et ses contraintes de précédence lient les trois tâches de script dans un flux de contrôle. Le schéma suivant illustre les contraintes de précédence dans un package avec deux niveaux d'imbrication.  
   
  ![Contraintes de précédence dans un package](../media/mw-dts-12.gif "Contraintes de précédence dans un package")  
   
@@ -50,7 +50,8 @@ ms.locfileid: "62831699"
 -   Spécifiez si la contrainte de précédence est évaluée seule ou avec d'autres contraintes qui s'appliquent à l'exécutable contraint.  
   
 ## <a name="evaluation-operations"></a>Opérations d'évaluation  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre les opérations d’évaluation suivantes :  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre les opérations d’évaluation suivantes :  
   
 -   Une contrainte qui utilise uniquement le résultat d'exécution de l'exécutable de précédence pour déterminer si l'exécutable contraint s'exécute. Le résultat d'exécution de l'exécutable de précédence peut être achèvement, réussite ou échec. Il s'agit de l'opération par défaut.  
   
@@ -60,7 +61,8 @@ ms.locfileid: "62831699"
   
 -   Une expression ou une contrainte qui utilisent les résultats d'exécution de l'exécutable de précédence ou les résultats de retour de l'évaluation de l'expression.  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Le Concepteur utilise une couleur pour identifier le type de contrainte de précédence. La contrainte Success (réussite) est verte, la contrainte Failure (échec) est rouge et la contrainte Completion (fin) est bleue. Pour afficher les étiquettes de texte indiquant le type de contrainte dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)], vous devez configurer les fonctionnalités d’accessibilité du Concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+ 
+  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Le Concepteur utilise une couleur pour identifier le type de contrainte de précédence. La contrainte Success (réussite) est verte, la contrainte Failure (échec) est rouge et la contrainte Completion (fin) est bleue. Pour afficher les étiquettes de texte indiquant le type de contrainte dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , vous devez configurer les fonctionnalités d’accessibilité du Concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] .  
   
  L’expression doit être une expression [!INCLUDE[ssIS](../../../includes/ssis-md.md)] valide et elle peut inclure des fonctions, des opérateurs, et des variables système et personnalisées. Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41; ](../expressions/integration-services-ssis-expressions.md) et [Variables Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
   
@@ -86,9 +88,9 @@ ms.locfileid: "62831699"
 ## <a name="related-tasks"></a>Tâches associées  
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Définir les propriétés d’une contrainte de précédence](../set-the-properties-of-a-precedence-constraint.md)  
+-   [Définir les propriétés d'une contrainte de précédence](../set-the-properties-of-a-precedence-constraint.md)  
   
--   [Définir la valeur d’une contrainte de précédence à l’aide du menu contextuel](../set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)  
+-   [Définir la valeur d'une contrainte de précédence à l'aide du menu contextuel](../set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)  
   
 -   [Connecter des tâches et des conteneurs à l’aide d’une contrainte de précédence par défaut](../connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)  
   
@@ -98,7 +100,7 @@ ms.locfileid: "62831699"
  Article technique, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), sur social.technet.microsoft.com  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter des Expressions aux contraintes de précédence](../add-expressions-to-precedence-constraints.md)   
+ [Ajouter des expressions aux contraintes de précédence](../add-expressions-to-precedence-constraints.md)   
  [Contraintes de précédence multiples](../multiple-precedence-constraints.md)  
   
   

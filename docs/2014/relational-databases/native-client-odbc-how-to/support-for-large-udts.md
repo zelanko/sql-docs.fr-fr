@@ -1,5 +1,5 @@
 ---
-title: Prise en charge pour les UDT volumineux | Microsoft Docs
+title: Prise en charge des UDT volumineux | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5ccacd7bb6fabf6c7eed0cee02ddb34979f14a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205553"
 ---
 # <a name="support-for-large-udts"></a>Prise en charge de tables UDT volumineuses
@@ -22,7 +22,7 @@ ms.locfileid: "68205553"
   
  Il ne fonctionne pas avec les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Pour plus d’informations sur la prise en charge pour les UDT volumineux, consultez [Large CLR User-Defined Types &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ Pour plus d’informations sur la prise en charge des UDT volumineux, consultez [types CLR volumineux définis par l’utilisateur &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="example"></a>Exemple  
  La première liste de code correspond à du code source C#. Collez-la dans un fichier appelé LargeStringUDT.cs et compilez-la dans une DLL. Copiez LargeStringUDT.dll vers le répertoire racine de votre lecteur C.  

@@ -1,5 +1,5 @@
 ---
-title: Autres problèmes de mise à niveau du moteur de base de données | Microsoft Docs
+title: Autres problèmes de mise à niveau de Moteur de base de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f247f9addde6baa949f3260d7a9d9f86ce0c5bff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093700"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>Autres problèmes de mise à niveau du moteur de base de données
@@ -49,21 +49,21 @@ ms.locfileid: "66093700"
   
 -   syssegments  
   
- Utilisation du protocole VIA pour se connecter à la [!INCLUDE[ssDE](../../includes/ssde-md.md)] est déconseillée.  
+ L’utilisation du protocole VIA pour se connecter à [!INCLUDE[ssDE](../../includes/ssde-md.md)] l’est déconseillée.  
   
 ## <a name="new-data-types"></a>Nouveaux types de données  
  Les éléments suivants sont des types système réservés. Renommez les types définis par l'utilisateur en conflit avant ou après la mise à niveau.  
   
--   Géographie  
+-   Geography  
   
--   Geometry  
+-   Géométrie  
   
 -   Datetime2  
   
 -   HierarchyID  
   
 ## <a name="target-table-of-the-output-into-clause-cannot-have-any-defined-triggers"></a>La table cible de la clause OUTPUT INTO ne peut pas contenir de déclencheur défini  
- SORTIE dans une table cible lorsque la table comporte des déclencheurs activés n’est pas pris en charge.  
+ La sortie dans une table cible lorsque la table contient des déclencheurs activés n’est pas prise en charge.  
   
 ## <a name="compile-time-error-for-udfs-when-the-target-of-an-output-into-clause-is-a-table"></a>Erreur de compilation des UDF lorsque la cible d'une clause OUTPUT INTO est une table  
  Les fonctions définies par l'utilisateur (UDF) ne permettent pas d'exécuter des actions qui modifient l'état des bases de données. Par exemple, une fonction définie par l'utilisateur ne peut exécuter aucune action DDL (CREATE/ALTER/DROP) ou DML (INSERT/UPDATE/DELETE) sur des objets, à l'exception des variables de table.  
@@ -72,9 +72,9 @@ ms.locfileid: "66093700"
  MERGE est un maintenant un mot clé entièrement réservé. Les applications ne peuvent plus contenir d'objets (table, colonne, etc.) appelés MERGE.  
   
 ## <a name="rename-cdc-schema"></a>Renommer le schéma CDC  
- Il y a un nom de schéma appelé CDC. Ce nom de schéma ne peut pas être utilisé si **Capture de données modifiées** est activée pour la base de données.  
+ Il y a un nom de schéma appelé CDC. Ce nom de schéma ne peut pas être utilisé si la **capture de données modifiées** est activée pour la base de données.  
   
- Vous devez supprimer le schéma CDC avant d’activer **Capture de données modifiées** pour la base de données. Cette procédure peut s'effectuer avant ou après la mise à niveau. Pour supprimer le schéma, procédez comme suit :  
+ Vous devez supprimer le schéma CDC avant d’activer la **capture de données modifiées** pour la base de données. Cette procédure peut s'effectuer avant ou après la mise à niveau. Pour supprimer le schéma, procédez comme suit :  
   
 1.  Transférez les objets du schéma CDC vers un nouveau schéma à l'aide de l'instruction ALTER SCHEMA.  
   

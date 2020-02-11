@@ -15,10 +15,10 @@ ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 08b18a3a5805b37a371d6fa17850584d6f4953fd
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74164909"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>Fournisseur WMI pour les classes et propriétés d'événements serveur
@@ -27,20 +27,20 @@ ms.locfileid: "74164909"
   
  Pour savoir quelles propriétés d'un événement ou d'un groupe d'événements peuvent être interrogées, reportez-vous au schéma d'événement. Par défaut, le schéma d'événement est installé dans le répertoire suivant : [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events .xsd.  
   
- Vous pouvez également consulter le schéma d’événement publié à l’adresse [https://schemas.microsoft.com/sqlserver](https://go.microsoft.com/fwlink/?linkid=43100).  
+ Vous pouvez également vous référer au schéma d’événement publié à [https://schemas.microsoft.com/sqlserver](https://go.microsoft.com/fwlink/?linkid=43100)l’adresse.  
   
  Par exemple, en faisant référence à l’événement ALTER_DATABASE, vous allez apprendre que son événement parent est DDL_SERVER_LEVEL_EVENTS et que ses propriétés sont **TSQLCommand** et **DatabaseName**. L’événement hérite également des propriétés **SqlInstance**, **PostTime**, **ComputerName**, **SPID**et **LoginName**. Il ne possède pas d'événements enfants.  
   
 > [!NOTE]  
 >  Les procédures stockées système qui exécutent des opérations de type DDL peuvent également déclencher des notifications d'événements. Testez vos notifications d'événements pour déterminer leur réponse aux procédures stockées du système qui sont exécutées. Par exemple, l’instruction CREATe TYPE et la procédure stockée **sp_addtype** déclenchent toutes deux une notification d’événement qui est créée sur un événement CREATE_TYPE. Pour plus d’informations, consultez [événements DDL](../../relational-databases/triggers/ddl-events.md).  
   
- **Événements du langage de définition de données et groupes d’événements**  
+ **Événements et groupes d'événements DDL (Data Definition Language)**  
   
- ![Fournisseur WMI pour l’arborescence des événements des événements de serveur](../../relational-databases/wmi-provider-server-events/media/sql-wmi-ddl-events-ktm.gif "Fournisseur WMI pour l’arborescence des événements des événements de serveur")  
+ ![Fournisseur WMI pour l'arborescence d'événements de serveur](../../relational-databases/wmi-provider-server-events/media/sql-wmi-ddl-events-ktm.gif "Fournisseur WMI pour l'arborescence d'événements de serveur")  
   
  **Événements de trace et groupes d’événements**  
   
- ![Événements de trace et groupes d’événements](../../relational-databases/wmi-provider-server-events/media/sql-wmi-trc-all-events.gif "Événements de trace et groupes d’événements")  
+ ![Événements et groupes d'événements de trace](../../relational-databases/wmi-provider-server-events/media/sql-wmi-trc-all-events.gif "Événements et groupes d'événements de trace")  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fournisseur WMI pour les concepts des événements de serveur](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)   

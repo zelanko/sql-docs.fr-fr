@@ -15,10 +15,10 @@ ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ba22ffe282e6b4248ed58bed850bc6ac08255df5
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72278114"
 ---
 # <a name="sp_polybase_join_group-transact-sql"></a>sp_polybase_join_group (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "72278114"
   
  La fonctionnalité [Polybase](../../relational-databases/polybase/polybase-guide.md) doit être installée sur l’instance SQL Server.  Polybase permet l’intégration de sources de données non SQL Server, telles que Hadoop et le stockage d’objets BLOB Azure. Voir aussi [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,16 +40,16 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *\@head_node_address* = N'*head_node_address*'  
- Nom de l’ordinateur qui héberge le nœud principal SQL Server du groupe de scale-out Polybase. *\@head_node_address* est de type nvarchar (255).  
+ head_node_address = N «*head_node_address*» * \@*  
+ Nom de l’ordinateur qui héberge le nœud principal SQL Server du groupe de scale-out Polybase. head_node_address est de type nvarchar (255). * \@*  
   
- *\@dms_control_channel_port* = dms_control_channel_port  
- Port sur lequel le canal de contrôle pour le nœud principal Mouvement de données PolyBase service est en cours d’exécution. *\@dms_control_channel_port* est un __int16 non signé. La valeur par défaut est **16450**.  
+ * \@dms_control_channel_port* = dms_control_channel_port  
+ Port sur lequel le canal de contrôle pour le nœud principal Mouvement de données PolyBase service est en cours d’exécution. dms_control_channel_port est un __int16 non signé. * \@* La valeur par défaut est **16450**.  
   
- *\@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
- Nom du nœud principal SQL Server instance dans le groupe de montée en puissance parallèle Polybase. *\@head_node_sql_server_instance_name* est de type nvarchar (16).  
+ * \@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
+ Nom du nœud principal SQL Server instance dans le groupe de montée en puissance parallèle Polybase. head_node_sql_server_instance_name est de type nvarchar (16). * \@*  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="permissions"></a>Autorisations  
@@ -66,7 +66,7 @@ EXEC sp_polybase_join_group N'HST01', 16450, N'MSSQLSERVER'
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Prise en main de PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
+ [Prise en main de Polybase](../../relational-databases/polybase/get-started-with-polybase.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

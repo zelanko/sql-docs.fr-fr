@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f29ddee8456149ca16dd886935138b0cc915f42d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229297"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>Créer et personnaliser une Galerie PowerPivot
@@ -22,9 +22,9 @@ ms.locfileid: "75229297"
   
 ##  <a name="bkmk_top"></a>Dans cette rubrique  
   
--   [Conditions préalables](#prereq)  
+-   [Prérequis](#prereq)  
   
--   [Vue](#overview)  
+-   [Vue d’ensemble](#overview)  
   
 -   [Créer la Galerie PowerPivot](#createlib)  
   

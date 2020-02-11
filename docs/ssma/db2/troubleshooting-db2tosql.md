@@ -10,28 +10,28 @@ ms.assetid: e88038c6-fd35-479c-a76f-aabd42d2efef
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e0ab2e7721522e0671d195ec79a35bba72d462c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68059971"
 ---
 # <a name="troubleshooting-db2tosql"></a>Résolution des problèmes (DB2ToSQL)
-Il n’est pas rare de rencontrer à mi-chemin de problèmes de migration exécutant les commandes ou scripts de la console.  
+Il n’est pas rare de rencontrer des problèmes de migration à mi-chemin pour exécuter les commandes ou les scripts de la console.  
   
-Les erreurs réparables peuvent porter sur :  
+Les erreurs pouvant être corrigées sont les suivantes :  
   
 1.  Fonction  
   
 2.  Procédure  
   
-3.  Vue  
+3.  Affichage  
   
 4.  Déclencheur  
   
-5.  Modifier le type de données  
+5.  Modification du type de données  
   
-6.  Modifier les paramètres du projet  
+6.  Modification des paramètres du projet  
   
-Les problèmes peuvent être résolus à l’aide de l’interface utilisateur SSMA en ouvrant le fichier de projet créé via la console.  
+Les problèmes peuvent être résolus à l’aide de l’interface utilisateur SSMA en ouvrant le fichier projet créé par le biais de la console.  
   

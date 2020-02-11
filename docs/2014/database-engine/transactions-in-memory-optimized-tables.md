@@ -1,5 +1,5 @@
 ---
-title: Transactions dans les Tables optimisées en mémoire | Microsoft Docs
+title: Transactions dans les tables optimisées en mémoire | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bc72eeeb154749b0e889b495fab79bb8bf86db10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843098"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>Transactions dans les tables mémoire optimisées
   Le contrôle de version de ligne des tables sur disque (à l'aide de l'isolation SNAPSHOT ou avec READ_COMMITTED_SNAPSHOT) fournit un type de contrôle d'accès concurrentiel optimiste. Les programmes d'écriture et les programmes de lecture ne se bloquent pas les uns les autres. Avec les tables mémoire optimisées, les programmes d'écriture ne bloquent pas les autres programmes d'écriture. Avec le contrôle de version de ligne pour les tables sur disque, une transaction verrouille la ligne et les transactions concomitantes tentant de mettre à jour cette ligne sont bloquées. Il n'existe pas de verrouillage avec les tables mémoire optimisées. En revanche, si deux transactions tentent de mettre à jour la même ligne, un conflit d'écriture/écriture (erreur 41302) se produit.  
   
- Contrairement aux tables sur disque, les tables mémoire optimisées permettent le contrôle d'accès concurrentiel optimiste avec les niveaux d'isolation plus élevés, REPEATABLE READ et SERIALIZABLE. Les verrous ne sont pas utilisés pour appliquer les niveaux d'isolation. En revanche, à la fin de la transaction, une validation garantit les hypothèses de sérialisation ou de lecture renouvelable. Si les hypothèses ne sont pas respectées, la transaction est arrêtée. Pour plus d'informations, consultez [Transaction Isolation Levels](../../2014/database-engine/transaction-isolation-levels.md).  
+ Contrairement aux tables sur disque, les tables mémoire optimisées permettent le contrôle d'accès concurrentiel optimiste avec les niveaux d'isolation plus élevés, REPEATABLE READ et SERIALIZABLE. Les verrous ne sont pas utilisés pour appliquer les niveaux d'isolation. En revanche, à la fin de la transaction, une validation garantit les hypothèses de sérialisation ou de lecture renouvelable. Si les hypothèses ne sont pas respectées, la transaction est arrêtée. Pour plus d’informations, consultez [Transaction Isolation Levels](../../2014/database-engine/transaction-isolation-levels.md).  
   
  Les sémantiques clés des transactions pour les tables mémoire optimisées sont les suivantes :  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62843098"
 ### <a name="transaction-lifetime"></a>Durée de vie des transactions  
  Les problèmes mentionnés dans le tableau précédent peuvent se produire à différents stades au cours d'une transaction. L'illustration suivante montre les phases d'une transaction qui accède à des tables mémoire optimisées.  
   
- ![Durée de vie d’une transaction. ](../../2014/database-engine/media/hekaton-transactions.gif "Durée de vie d’une transaction.")  
+ ![Durée de vie d'une transaction.](../../2014/database-engine/media/hekaton-transactions.gif "Durée de vie d'une transaction.")  
 Durée de vie d'une transaction qui accède à des tables mémoire optimisées.  
   
 #### <a name="regular-processing"></a>Traitement normal  
@@ -82,7 +82,7 @@ Durée de vie d'une transaction qui accède à des tables mémoire optimisées.
   
  Cette erreur provoque l'arrêt de la transaction (même si XACT_ABORT est désactivé), ce qui signifie que la transaction sera restaurée à la fin de la session utilisateur. Les transactions vouées à l'échec ne peuvent pas être validées et prennent uniquement en charge les opérations de lecture qui n'écrivent pas dans le journal et n'accèdent pas aux tables mémoire optimisées.  
   
-#####  <a name="cd"></a> Dépendances de validation  
+#####  <a name="cd"></a>Dépendances de validation  
  Lors du traitement normal, une transaction peut lire les lignes écrites par d'autres transactions qui sont en phase de validation, mais qui ne sont pas encore validées. Les lignes sont visibles, car l'heure de fin logique des transactions a été définie au début de la phase de validation.  
   
  Si une transaction lit ces lignes non validées, elle prendra une dépendance de validation sur cette transaction. Cela a deux conséquences principales :  
@@ -123,7 +123,7 @@ Durée de vie d'une transaction qui accède à des tables mémoire optimisées.
   
  Toutes les dépendances de validation de la transaction sont annulées, et toutes les transactions qui attendaient la validation de cette transaction peuvent continuer à s'exécuter.  
   
-## <a name="limitations"></a>Limitations  
+## <a name="limitations"></a>Limites  
   
 -   Les transactions de bases de données croisées ne sont pas prises en charge avec les tables mémoire optimisées. Une transaction qui accède aux tables mémoire optimisées ne peut pas accéder à plus d'une base de données, à l'exception de l'accès en lecture/écriture à tempdb et de l'accès en lecture seule à la base de données système master.  
   
@@ -132,6 +132,6 @@ Durée de vie d'une transaction qui accède à des tables mémoire optimisées.
 -   Les tables mémoire optimisées ne prennent pas en charge le verrouillage. Les verrous explicites via les indicateurs de verrouillage (tels que TABLOCK, XLOCK, ROWLOCK) ne sont pas pris en charge avec les tables mémoire optimisées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Comprendre les transactions sur les tables à mémoire optimisée](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)  
+ [Comprendre les transactions sur les tables mémoire optimisées](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Marquage d’objets métier comme sûrs pour l’écriture de scripts | Microsoft Docs
+title: Marquage des objets métier comme sécurisés pour l’écriture de scripts | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,22 +13,22 @@ ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 55ae560f35a06e77803bfb011f4d430d5079ea05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922608"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>Marquage d’objets métier comme sûrs pour l’écriture de scripts
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Pour aider à sécuriser un environnement Internet, vous devez marquer les objets métier instanciés avec le [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) l’objet [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) méthode comme étant « sécurisés pour le script ». Vous devez vous assurer qu’ils sont marqués comme tels dans la zone de la licence du Registre système avant de pouvoir être utilisés dans DCOM.  
+ Pour garantir un environnement Internet sécurisé, vous devez marquer tous les objets métier instanciés avec les [services Bureau à distance. ](../../../ado/reference/rds-api/dataspace-object-rds.md)Méthode [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) de l’objet DataSpace comme « sécurisé pour les scripts ». Vous devez vous assurer qu’ils sont marqués comme tels dans la zone de licence du Registre système avant de pouvoir les utiliser dans DCOM.  
   
 > [!NOTE]
->  La mention « sécurisé pour le script » ou l’initialisation des objets métier peuvent être instanciés et initialisés par tout le monde sur le réseau. Marquer un objet métier « sécurisé pour le script » n’en fait pas sécurisée. Il est vital de s’assurer que les objets métier sont codées avec la sécurité la plus élevée pour vous assurer que ces objets ne présentent pas un point d’accès non protégé pour les données sensibles.  
+>  Les objets métier marqués comme « sécurisés pour l’écriture de scripts » ou sécurisés pour l’initialisation peuvent être instanciés et initialisés par quiconque sur le réseau. Le marquage d’un objet métier « sécurisé pour l’écriture de scripts » ne le rend pas sécurisé. Il est essentiel de s’assurer que les objets métier sont codés avec la sécurité la plus élevée pour s’assurer que ces objets ne présentent pas un point d’accès non protégé pour les données sensibles.  
   
- Pour configurer manuellement votre objet métier comme sûrs pour l’écriture de scripts, créez un fichier texte avec une extension .reg qui contient le texte suivant. Dans cet exemple, \< *MyActiveXGUID*> est le nombre GUID hexadécimal de votre objet métier. Les deux numéros suivants activer la fonctionnalité sécurisé pour le script :  
+ Pour marquer manuellement votre objet métier comme sécurisé pour l’écriture de scripts, créez un fichier texte avec une extension. reg qui contient le texte suivant. Dans cet exemple, \< *MyActiveXGUID*> est le numéro de GUID hexadécimal de votre objet métier. Les deux nombres suivants activent la fonctionnalité de sécurisation de script :  
   
 ```console
 [HKEY_CLASSES_ROOT\CLSID\<MyActiveXGUID>\Implemented   
@@ -37,12 +37,12 @@ Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}]
 Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]  
 ```  
   
- Enregistrez le fichier et les fusionner dans votre Registre en utilisant l’Éditeur du Registre ou en double-cliquant sur le fichier .reg dans l’Explorateur Windows.  
+ Enregistrez le fichier et fusionnez-le dans votre registre à l’aide de l’éditeur du registre ou en double-cliquant sur le fichier. reg dans l’Explorateur Windows.  
   
- Les objets métier créés dans Microsoft Visual Basic peuvent automatiquement marquées comme étant « sécurisés pour le script » avec l’Assistant de déploiement et le Package. Lorsque l’Assistant vous invite à spécifier les paramètres de sécurité, sélectionnez **pour l’initialisation** et **sécurisé pour le script**.  
+ Les objets d’entreprise créés dans Microsoft Visual Basic peuvent être automatiquement marqués comme « sécurisés pour les scripts » à l’aide de l’Assistant package et déploiement. Lorsque l’Assistant vous demande de spécifier des paramètres de sécurité, sélectionnez **sécurisé pour l’initialisation** et **sécurisé pour l’écriture de scripts**.  
   
- Sur la dernière étape, l’Assistant crée un .htm et un fichier .cab. Vous pouvez copier ces deux fichiers à l’ordinateur cible, puis double-cliquez sur le fichier .htm pour charger la page et enregistrer correctement le serveur.  
+ À la dernière étape, l’Assistant Installation de l’application crée un fichier. htm et un fichier. cab. Vous pouvez ensuite copier ces deux fichiers sur l’ordinateur cible et double-cliquer sur le fichier. htm pour charger la page et inscrire correctement le serveur.  
   
- Étant donné que l’objet métier sera installé dans le répertoire Windows\System32\Occache par défaut, déplacez-le vers le répertoire Windows\System32 et modifier le **HKEY_CLASSES_ROOT\CLSID\\**  \< *MyActiveXGUID*>\\**InprocServer32** clé de Registre pour faire correspondre le chemin correct.
+ Étant donné>\\que l’objet métier sera installé par défaut dans le répertoire Windows\System32\Occache, déplacez-le vers le répertoire Windows\System32 et modifiez la clé de Registre **HKEY_CLASSES_ROOT \CLSID\\**\<*MyActiveXGUID***InprocServer32** pour qu’elle corresponde au chemin d’accès correct.
 
 

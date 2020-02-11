@@ -1,5 +1,5 @@
 ---
-title: Sys.message_type_xml_schema_collection_usages (Transact-SQL) | Microsoft Docs
+title: sys. message_type_xml_schema_collection_usages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: 544f61a1-c7b7-44b4-bf8d-980ba87d0665
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 220f3df2f7bb8ecf0b6acd19f2cec33bf2fc7aa8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125388"
 ---
-# <a name="sysmessagetypexmlschemacollectionusages-transact-sql"></a>sys.message_type_xml_schema_collection_usages (Transact-SQL)
+# <a name="sysmessage_type_xml_schema_collection_usages-transact-sql"></a>sys.message_type_xml_schema_collection_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cet affichage catalogue retourne une ligne pour chaque type de message de service qui est validé par une collection de schémas XML.  

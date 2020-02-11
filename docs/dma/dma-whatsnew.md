@@ -14,10 +14,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: 83009008745a696919aa5ae5795d60ddfe9ba80b
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632883"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Nouveautés de Data Migration Assistant
@@ -31,7 +31,7 @@ La version v 5.0 du Assistant Migration de données prend en charge les élémen
 - SQL Server 2019 pour Windows et SQL Server 2019 pour Linux en tant que cibles à des fins d’évaluation et de mise à niveau.
 - Enregistrement et chargement des évaluations, y compris la prise en charge de l’enregistrement et du chargement des évaluations créées dans les versions antérieures du Assistant Migration de données.
 - Évaluation des projets SQL Server Integration Services (SSIS) hébergés dans les packages SSISDB et SSIS hébergés dans le magasin de packages. La Assistant Migration de base de données détecte les fonctionnalités non prises en charge, partiellement prises en charge ou déconseillées et les problèmes de compatibilité utilisés dans les packages sources et fournit des recommandations pour vous aider à résoudre ces problèmes.
-- Évaluation des requêtes SQL à partir d’une application externe, par C# exemple des requêtes SQL dans le code source. Les utilisateurs peuvent utiliser la boîte à outils de migration de l’accès aux données pour générer un rapport JSON C# complet pour les requêtes SQL utilisées dans le code source, puis charger le rapport dans Assistant Migration de données.
+- Évaluation des requêtes SQL à partir d’une application externe, par exemple des requêtes SQL dans du code source C#. Les utilisateurs peuvent utiliser la boîte à outils de migration de l’accès aux données pour générer un rapport JSON complet pour les requêtes SQL utilisées dans le code source C#, puis charger le rapport dans Assistant Migration de données.
 
 En outre, cette version de Assistant Migration de données fournit des améliorations et des correctifs de bogues supplémentaires, et l’outil a été mis à jour vers .net 4.7.2.
 
@@ -175,11 +175,11 @@ La version v 2.0 de Assistant Migration de données comprend des recommandations
 La version v 1.0 de Assistant Migration de données est la version initiale, et elle fournit pour :
 
 - Détection des problèmes qui peuvent affecter une mise à niveau vers une version locale de SQL Server. Toutes les découvertes sont décrites comme des problèmes de compatibilité et sont classées dans les domaines suivants :
-  - Modifications avec rupture
-  - Changements de comportement
+  - Changements cassants
+  -  Changements de comportement
   - Fonctionnalités dépréciées
 - Découverte de nouvelles fonctionnalités de la plateforme de SQL Server cible dont la base de données peut bénéficier après une mise à niveau. Toutes les découvertes sont décrites comme des recommandations relatives aux fonctionnalités et sont classées dans les domaines suivants :
-  - Performance
+  - Performances
   - Sécurité
   - Stockage
 - Expérience utilisateur moderne pour effectuer des évaluations.

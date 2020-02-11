@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e70ab55fedcc5053cf82a78c040c850a23824eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63075192"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Compilation en mode natif de tables et de procédures stockées
@@ -115,12 +115,12 @@ go
  La compilation native des tables et des procédures stockées utilise le compilateur de l'OLTP en mémoire. Ce compilateur génère des fichiers qui sont écrits sur le disque et chargés en mémoire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise les mécanismes suivants pour restreindre l'accès à ces fichiers.  
   
 ### <a name="native-compiler"></a>Compilateur natif  
- Le fichier exécutable du compilateur, ainsi que les fichiers binaires et les fichiers d'en-tête nécessaires pour la compilation native, sont installés dans le cadre de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le dossier MSSQL\Binn\Xtp. Ainsi, si l’instance par défaut est installé sous C:\Program Files, les fichiers du compilateur sont installés dans C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. MSSQLSERVER\MSSQL\Binn\Xtp.  
+ Le fichier exécutable du compilateur, ainsi que les fichiers binaires et les fichiers d'en-tête nécessaires pour la compilation native, sont installés dans le cadre de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le dossier MSSQL\Binn\Xtp. Par conséquent, si l’instance par défaut est installée sous c:\Program Files, les fichiers du compilateur sont installés\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dans c:\Program Files \MSSQL12. MSSQLSERVER\MSSQL\Binn\Xtp.  
   
  Pour limiter l'accès au compilateur, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des listes de contrôle d'accès (ACL) qui permettent de restreindre l'accès aux fichiers binaires. Tous les fichiers binaires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont protégés contre la modification ou la falsification via des listes de contrôle d'accès. Les listes de contrôle d'accès du compilateur natif limitent également l'utilisation du compilateur ; seuls le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les administrateurs système disposent des autorisations de lecture et d'exécution des fichiers du compilateur natif.  
   
 ### <a name="files-generated-by-a-native-compilation"></a>Fichiers générés par une compilation native  
- Les fichiers créés lorsqu'une table ou une procédure stockée est compilée sont les fichiers DLL et les fichiers intermédiaires, notamment les fichiers portant les extensions suivantes : .c, .obj, .xml et .pdb. Les fichiers générés sont enregistrés dans un sous-dossier du dossier de données par défaut. Le sous-dossier est appelé Xtp. Lorsque vous installez l’instance par défaut avec le dossier de données par défaut, les fichiers générés sont placés dans C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. MSSQLSERVER\MSSQL\DATA\Xtp.  
+ Les fichiers créés lorsqu'une table ou une procédure stockée est compilée sont les fichiers DLL et les fichiers intermédiaires, notamment les fichiers portant les extensions suivantes : .c, .obj, .xml et .pdb. Les fichiers générés sont enregistrés dans un sous-dossier du dossier de données par défaut. Le sous-dossier est appelé Xtp. Lors de l’installation de l’instance par défaut avec le dossier de données par défaut, les fichiers\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]générés sont placés dans C:\Program Files \MSSQL12. MSSQLSERVER\MSSQL\DATA\Xtp.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] empêche la falsification avec les DLL générées de trois manières :  
   
@@ -134,6 +134,6 @@ go
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables optimisées en mémoire](memory-optimized-tables.md)   
- [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)  
+ [Procédures stockées compilées en mode natif](natively-compiled-stored-procedures.md)  
   
   

@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cba973be9b4dc2ec0da286b2d01b636f0ca4e2b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067815"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
-  `SQLBindParameter` Permet d’éliminer le fardeau de conversion de données lorsqu’il est utilisé pour fournir des données pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client, ce qui entraîne des gains de performances significatifs pour les composants client et serveur d’applications. D'autres avantages incluent une perte réduite de précision lors de l'insertion ou de la mise à jour de types de données numériques approximatifs.  
+  `SQLBindParameter`peut éliminer le fardeau de la conversion des données lorsqu’il est utilisé pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournir des données pour le pilote ODBC Native Client, ce qui permet d’obtenir des gains de performances significatifs pour les composants client et serveur des applications. D'autres avantages incluent une perte réduite de précision lors de l'insertion ou de la mise à jour de types de données numériques approximatifs.  
   
 > [!NOTE]  
 >  Lors de l'insertion de données de type `char` et `wchar` dans une colonne image, la taille des données passées est utilisée, par opposition à la taille des données après conversion vers un format binaire.  
@@ -31,32 +31,33 @@ ms.locfileid: "63067815"
   
  Lors de l'utilisation du pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, spécifiez SQL_PARAM_INPUT lors de la liaison de paramètres d'entrée. Spécifiez seulement SQL_PARAM_OUTPUT ou SQL_PARAM_INPUT_OUTPUT lors de la liaison de paramètres de procédure stockée définis avec le mot clé OUTPUT.  
   
- [SQLRowCount](sqlrowcount.md) n’est pas fiable avec le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client si un élément de tableau d’un tableau de paramètres liés provoque une erreur dans l’exécution des instructions. L'attribut d'instruction ODBC SQL_ATTR_PARAMS_PROCESSED_PTR signale le nombre de lignes traitées avant l'erreur. L'application peut alors parcourir son tableau d'état de paramètre pour découvrir le nombre d'instructions exécutées avec succès, si nécessaire.  
+ [SQLRowCount](sqlrowcount.md) n’est pas fiable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le pilote ODBC Native Client si un élément de tableau d’un tableau de paramètres liés provoque une erreur dans l’exécution de l’instruction. L'attribut d'instruction ODBC SQL_ATTR_PARAMS_PROCESSED_PTR signale le nombre de lignes traitées avant l'erreur. L'application peut alors parcourir son tableau d'état de paramètre pour découvrir le nombre d'instructions exécutées avec succès, si nécessaire.  
   
 ## <a name="binding-parameters-for-sql-character-types"></a>Liaison de paramètres pour les types de caractères SQL  
- Si le type de données SQL passé est un type de caractère, *ColumnSize* est la taille en caractères (non en octets). Si la longueur de la chaîne de données en octets est supérieure à 8000, *ColumnSize* doit être défini sur `SQL_SS_LENGTH_UNLIMITED`, indiquant qu’il n’existe aucune limite à la taille du type SQL.  
+ Si le type de données SQL transmis est un type caractère, la valeur de la *colonne column* correspond à la taille en caractères (et non en octets). Si la longueur de la chaîne de données en octets est supérieure à 8000, la valeur de la *colonne column* doit être définie sur `SQL_SS_LENGTH_UNLIMITED`, ce qui indique qu’il n’existe aucune limite à la taille du type SQL.  
   
- Par exemple, si le type de données SQL est `SQL_WVARCHAR`, *ColumnSize* ne doit pas être supérieure à 4 000. Si la longueur réelle des données est supérieure à 4000, puis *ColumnSize* doit être défini sur `SQL_SS_LENGTH_UNLIMITED` afin que `nvarchar(max)` sera utilisé par le pilote.  
+ Par exemple, si le type de données SQL `SQL_WVARCHAR`est, la valeur de la *colonne column* ne doit pas être supérieure à 4000. Si la longueur réelle des données est supérieure à 4000, la valeur de la *colonne column* doit être définie sur `SQL_SS_LENGTH_UNLIMITED` afin `nvarchar(max)` de pouvoir être utilisée par le pilote.  
   
 ## <a name="sqlbindparameter-and-table-valued-parameters"></a>SQLBindParameter et paramètres table  
- Comme d’autres types de paramètre, les paramètres table sont liés par SQLBindParameter.  
+ Comme les autres types de paramètres, les paramètres table sont liés par SQLBindParameter.  
   
- Une fois qu'un paramètre table a été lié, ses colonnes sont également liées. Pour lier les colonnes, vous appelez [SQLSetStmtAttr](sqlsetstmtattr.md) pour définir SQL_SOPT_SS_PARAM_FOCUS à la position ordinale du paramètre table incluse. Ensuite, appelez SQLBindParameter pour chaque colonne dans le paramètre table. Pour retourner aux liaisons de paramètre de premier niveau, attribuez à SQL_SOPT_SS_PARAM_FOCUS la valeur 0.  
+ Une fois qu'un paramètre table a été lié, ses colonnes sont également liées. Pour lier les colonnes, vous appelez [SQLSetStmtAttr](sqlsetstmtattr.md) pour définir SQL_SOPT_SS_PARAM_FOCUS sur l’ordinal du paramètre table. Ensuite, appelez SQLBindParameter pour chaque colonne dans le paramètre table. Pour retourner aux liaisons de paramètre de premier niveau, attribuez à SQL_SOPT_SS_PARAM_FOCUS la valeur 0.  
   
- Pour plus d’informations sur les paramètres de mappage de champs de descripteur pour les paramètres table, consultez [liaison et les valeurs de colonne et les paramètres Data Transfer of Table-Valued](../native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
+ Pour plus d’informations sur le mappage des paramètres aux champs de descripteur pour les paramètres table, consultez [Binding and transfert de données of Table-valued Parameters and Column Values](../native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
   
  Pour plus d’informations sur les paramètres table, consultez [paramètres table &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlbindparameter-support-for-enhanced-date-and-time-features"></a>Prise en charge de SQLBindParameter pour les fonctionnalités de date et heure améliorées  
- Les valeurs de paramètre des types de date/heure sont converties comme décrit dans [Conversions de C en SQL](../native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md). Notez que les paramètres de type `time` et `datetimeoffset` doit avoir *ValueType* spécifié en tant que `SQL_C_DEFAULT` ou `SQL_C_BINARY` si leurs structures correspondantes (`SQL_SS_TIME2_STRUCT` et `SQL_SS_TIMESTAMPOFFSET_STRUCT`) sont utilisés.  
+ Les valeurs de paramètre de types date/heure sont converties comme décrit dans [conversions de C en SQL](../native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md). Notez que les paramètres de `time` type `datetimeoffset` et doivent ** avoir un ValueType `SQL_C_DEFAULT` spécifié `SQL_C_BINARY` comme ou si leurs structures`SQL_SS_TIME2_STRUCT` correspondantes (et `SQL_SS_TIMESTAMPOFFSET_STRUCT`) sont utilisées.  
   
- Pour plus d’informations, consultez [améliorations Date / heure &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Pour plus d’informations, consultez améliorations de la [date et de l’heure &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlbindparameter-support-for-large-clr-udts"></a>Prise en charge SQLBindParameter pour les types CLR volumineux définis par l'utilisateur  
- `SQLBindParameter` prend en charge les grands types CLR définis par l'utilisateur. Pour plus d’informations, consultez [Large CLR User-Defined Types &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ 
+  `SQLBindParameter` prend en charge les grands types CLR définis par l'utilisateur. Pour plus d’informations, consultez [types CLR volumineux définis par l’utilisateur &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Détails d’implémentation API ODBC](odbc-api-implementation-details.md)   
- [SQLBindParameter, fonction](https://go.microsoft.com/fwlink/?LinkId=59328)  
+ [Détails de l’implémentation de l’API ODBC](odbc-api-implementation-details.md)   
+ [Fonction SQLBindParameter](https://go.microsoft.com/fwlink/?LinkId=59328)  
   
   

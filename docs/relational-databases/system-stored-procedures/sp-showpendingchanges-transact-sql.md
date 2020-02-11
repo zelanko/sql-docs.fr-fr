@@ -16,10 +16,10 @@ ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6b09069cb5289e28d978a4f3b3483e14e63cebb2
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632746"
 ---
 # <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "73632746"
 
   Retourne un jeu de résultats affichant les modifications en attente de réplication. Cette procédure stockée est exécutée sur la base de données de publication du serveur de publication et sur la base de données d'abonnement de l'Abonné.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 > [!NOTE]  
 >  Cette procédure fournit un nombre approximatif des modifications apportées ainsi que les lignes concernées par ces modifications. Par exemple, la procédure récupère les informations du serveur de publication ou de l'abonné, mais pas à la fois en même temps. Les informations stockées à l'autre nœud peuvent engendrer un plus petit jeu de modifications à synchroniser que les estimations de procédure.  
@@ -43,17 +43,17 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @destination_server = ] 'destination_server'` est le nom du serveur sur lequel les modifications répliquées sont appliquées. *destination_server* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @destination_server = ] 'destination_server'`Nom du serveur sur lequel les modifications répliquées sont appliquées. *destination_server* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @publication = ] 'publication'` est le nom de la publication. *publication* est de **type sysname**, avec NULL comme valeur par défaut. Lorsque la *publication* est spécifiée, les résultats sont limités uniquement à la publication spécifiée.  
+`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, avec NULL comme valeur par défaut. Lorsque la *publication* est spécifiée, les résultats sont limités uniquement à la publication spécifiée.  
   
-`[ @article = ] 'article'` est le nom de l’article. *article* est de **type sysname**, avec NULL comme valeur par défaut. Lorsque *l’article* est spécifié, les résultats sont limités uniquement à l’article spécifié.  
+`[ @article = ] 'article'`Nom de l’article. *article* est de **type sysname**, avec NULL comme valeur par défaut. Lorsque *l’article* est spécifié, les résultats sont limités uniquement à l’article spécifié.  
   
-`[ @show_rows = ] 'show_rows'` spécifie si le jeu de résultats contient des informations plus spécifiques sur les modifications en attente, avec **0**comme valeur par défaut. Si la valeur **1** est spécifiée, le jeu de résultats contient les colonnes is_delete et rowguid.  
+`[ @show_rows = ] 'show_rows'`Spécifie si le jeu de résultats contient des informations plus spécifiques sur les modifications en attente, avec **0**comme valeur par défaut. Si la valeur **1** est spécifiée, le jeu de résultats contient les colonnes is_delete et rowguid.  
   
 ## <a name="result-set"></a>Jeu de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |destination_server|**sysname**|Nom du serveur vers lequel les modifications sont en cours de réplication.|  
 |pub_name|**sysname**|Nom de la publication.|  
@@ -63,9 +63,9 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 |pending_deletes|**int**|Nombre de suppressions en attente de réplication.|  
 |pending_ins_and_upd|**int**|Nombre d'insertions et de mises à jour en attente de réplication.|  
 |is_delete|**bit**|Indique si la modification en attente est une suppression. La valeur **1** indique que la modification est une suppression. Requiert une valeur de **1** pour @show_rows.|  
-|rowguid|**uniqueidentifier**|GUID qui identifie la ligne modifiée. Requiert une valeur de **1** pour @show_rows.|  
+|GuidLigne|**uniqueidentifier**|GUID qui identifie la ligne modifiée. Requiert une valeur de **1** pour @show_rows.|  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  

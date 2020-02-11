@@ -1,5 +1,5 @@
 ---
-title: Traductions (Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Traductions (Concepteur de cube) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5f361679d7e2e57024f0ac6859dbc3b0aac32a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065785"
 ---
 # <a name="translations-cube-designer-analysis-services---multidimensional-data"></a>Traductions (Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -26,14 +26,14 @@ ms.locfileid: "66065785"
   
 ## <a name="panes"></a>Volets  
  **Barre d'outils**  
- Permet d'utiliser les boutons de la barre d'outils pour effectuer les actions courantes relatives à l'onglet. Pour plus d’informations sur ce volet, consultez [Barre d’outils &#40;onglet Traductions, Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](toolbar-translations-tab-cube-designer-analysis-services-multidimensional-data.md).  
+ Utilisez la barre d’outils pour effectuer des actions courantes dans l’onglet. Pour plus d’informations sur ce volet, consultez [barre d’outils &#40;onglet traductions, concepteur de Cube&#41; &#40;Analysis Services-&#41;de données multidimensionnelles ](toolbar-translations-tab-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Détails des traductions**  
  Utilisez le volet des **détails des traductions** pour créer et modifier les traductions du cube sélectionné.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Traductions de cube](multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
- [Scénarios de globalisation pour données multidimensionnelles Analysis Services](globalization-scenarios-for-analysis-services-multiidimensional.md)   
- [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)  
+ [Scénarios de globalisation pour Analysis Services données multidimensionnelles](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [Concepteur de cube &#40;Analysis Services-données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

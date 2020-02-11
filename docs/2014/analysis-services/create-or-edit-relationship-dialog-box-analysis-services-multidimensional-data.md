@@ -1,5 +1,5 @@
 ---
-title: Créer ou modifier la boîte de dialogue relation (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Boîte de dialogue créer ou modifier une relation (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de19592ec5a94e99cc87c40dac476e75546c7968
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086774"
 ---
 # <a name="create-or-edit-relationship-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Créer/Modifier une relation (Analysis Services - Données multidimensionnelles)
@@ -31,29 +31,29 @@ ms.locfileid: "66086774"
 -   cliquer avec le bouton droit sur une relation dans le volet **Diagramme** du **Concepteur de vues de source de données** et sélectionner **Modifier la relation**.  
   
 > [!NOTE]  
->  Vous pouvez créer des relations dans le **Concepteur de vues de source de données** , qui n’existent pas dans la source de données sous-jacente, et supprimer des relations créées par le **Concepteur de vues de source de données** à partir de relations de clé étrangère existantes dans la source de données sous-jacente.  
+>  Vous pouvez créer des relations dans le **Concepteur de vue de source de données** qui n’existent pas dans la source de données sous-jacente, et supprimer des relations créées par le concepteur de vue de source de **données** à partir de relations de clé étrangère existantes dans la source de données sous-jacente.  
   
 ## <a name="options"></a>Options  
  **Table source (clé étrangère)**  
  Sélectionnez la table ou la requête nommée qui contient la référence à une ou plusieurs colonnes de la table de destination.  
   
  **Table de destination (clé primaire)**  
- Sélectionnez la table qui contient une ou plusieurs colonnes référencées par la table source. Pour les jointures réflexives, sélectionnez la même table que celle sélectionnée dans **Table source (clé étrangère)** .  
+ Sélectionnez la table qui contient une ou plusieurs colonnes référencées par la table source. Pour les jointures réflexives, sélectionnez la même table que celle sélectionnée dans **Table source (clé étrangère)**.  
   
- **Colonnes sources**  
+ **Colonnes source**  
  Sélectionnez les colonnes qui font référence à des colonnes de la table de destination.  
   
  **Colonnes de destination**  
  Sélectionnez les colonnes qui sont référencées par des colonnes de la table source.  
   
- **Reverse**  
+ **TVA**  
  Inverse le sens de la relation.  
   
  **Description**  
  Tapez une description facultative de la relation.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Concepteur de vue de source de données &#40;Analysis Services - Données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Analysis Services les concepteurs et les boîtes de dialogue &#40;les données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Concepteur de vue de source de données &#40;Analysis Services-données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

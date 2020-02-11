@@ -1,5 +1,5 @@
 ---
-title: Créer des Scripts Analysis Services dans Management Studio | Microsoft Docs
+title: Créer des scripts de Analysis Services dans Management Studio | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8e3cca216f7c2312b4e7b54f2236a5d1f7bafd9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080110"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Créer des scripts Analysis Services dans Management Studio
+  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] inclut des fonctionnalités de génération de script, des modèles et des éditeurs dont vous pouvez vous servir pour créer des scripts d’objets et de tâches Analysis Services.  
   
 ## <a name="script-analysis-services-tasks-in-management-studio"></a>Créer des scripts de tâches Analysis Services dans Management Studio  
@@ -35,7 +36,7 @@ ms.locfileid: "66080110"
   
 2.  Cliquez avec le bouton droit sur une base de données, puis cliquez sur **Sauvegarder**. La boîte de dialogue Sauvegarder la base de données s’ouvre. Spécifiez un nom de fichier de sauvegarde et sélectionnez les options souhaitées pour cette sauvegarde.  
   
-3.  Cliquez sur **Script** en haut de la boîte de dialogue. La fonctionnalité Script fait partie de toutes les boîtes de dialogue basées sur les tâches dans Management Studio. Il comprend les options suivantes : **Script d’Action dans une nouvelle fenêtre de requête** pour ouvrir la fenêtre Éditeur de requête, **Action de Script vers le fichier** pour enregistrer le script XMLA dans un fichier, ou **Action de Script dans le Presse-papiers** pour enregistrer le script XMLA à le Presse-papiers.  
+3.  Cliquez sur **Script** en haut de la boîte de dialogue. La fonctionnalité Script fait partie de toutes les boîtes de dialogue basées sur les tâches dans Management Studio. Elle contient les options suivantes : **Action de script dans une nouvelle fenêtre de requête** pour ouvrir la fenêtre d’éditeur de requête, **Action de script vers le fichier** pour enregistrer le script XMLA dans un fichier, ou **Action de script vers le Presse-papiers** pour enregistrer le script XMLA dans le Presse-papiers.  
   
      Notez que l’option **Action de script vers le travail** , qui est répertoriée comme une option de script dans Management Studio, n’est pas prise en charge pour les scripts Analysis Services.  
   
@@ -59,13 +60,13 @@ ms.locfileid: "66080110"
   
 2.  Recherchez l'objet pour lequel vous voulez créer un script qui crée, modifie ou supprime des objets.  
   
-3.  Cliquez sur l’objet, pointez sur **Script du Cube en tant que**, pointez sur **CREATE To**, **ALTER To**, ou **Delete To**, puis cliquez sur un du options suivantes : **Nouvelle fenêtre d’éditeur de requête** pour ouvrir la fenêtre Éditeur de requête, **fichier** pour enregistrer le script XMLA dans un fichier, ou **Presse-papiers** pour enregistrer le script XMLA dans le Presse-papiers.  
+3.  Cliquez avec le bouton droit sur l’objet et pointez sur **Générer un script du cube en tant que**, pointez sur **Create to**, **Alter to**ou **Delete to**, puis cliquez sur l’une des options suivantes : **Nouvelle fenêtre d’éditeur de requête** pour ouvrir la fenêtre d’éditeur de requête, **Fichier** pour enregistrer le script XMLA dans un fichier ou **Presse-papiers** pour enregistrer le script XMLA dans le Presse-papiers.  
   
     > [!NOTE]  
     >  Généralement, vous sélectionnez **Fichier** pour créer plusieurs versions différentes du fichier.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches d'administration à l'aide de scripts dans Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
- [Éditeur de requête XMLA &#40;Analysis Services - Données multidimensionnelles&#41;](../xmla-query-editor-analysis-services-multidimensional-data.md)  
+ [Écrire des scripts pour les tâches d’administration dans Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
+ [Éditeur de requête XMLA &#40;Analysis Services-données multidimensionnelles&#41;](../xmla-query-editor-analysis-services-multidimensional-data.md)  
   
   

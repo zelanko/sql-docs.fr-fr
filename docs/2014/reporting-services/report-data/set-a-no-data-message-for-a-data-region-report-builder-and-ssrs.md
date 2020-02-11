@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f2660582b03a121a81976d6bbc12afc1213877c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107085"
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>Définir un message d'absence de données pour une région de données (Générateur de rapports et SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66107085"
   
 1.  En mode Conception, sur l'aire de conception, cliquez sur la table, la matrice, la région de données de type liste ou le sous-rapport souhaité pour sélectionner celle-ci / celui-ci. Le volet Propriétés affiche les propriétés de l'élément que vous venez de sélectionner.  
   
-2.  Dans le volet Propriétés, tapez le texte que vous souhaitez afficher comme message dans `NoRowsMessage` champ de propriété.  
+2.  Dans le volet Propriétés, tapez le texte que vous souhaitez afficher en tant que message dans `NoRowsMessage` le champ de propriété.  
   
      Vous pouvez également cliquer sur l’option **Expression** de la liste déroulante pour ouvrir la boîte de dialogue **Expression** et créer l’expression souhaitée.  
   
@@ -35,9 +35,9 @@ ms.locfileid: "66107085"
   
 1.  En mode Conception, sur l'aire de conception, cliquez sur le graphique souhaité pour le sélectionner. Le volet Propriétés affiche les propriétés de l'élément que vous venez de sélectionner.  
   
-2.  Dans le volet Propriétés, développez le nœud pour `NoDataMessage`.  
+2.  Dans le volet Propriétés, développez le nœud `NoDataMessage`pour.  
   
-3.  Dans **légende**, tapez le texte que vous souhaitez afficher sous forme de message dans `NoDataMessage` champ de propriété.  
+3.  Dans **légende**, tapez le texte que vous souhaitez afficher en tant que message dans `NoDataMessage` le champ de propriété.  
   
      Vous pouvez également cliquer sur l’option **Expression** de la liste déroulante pour ouvrir la boîte de dialogue **Expression** et créer l’expression souhaitée.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66107085"
   
 1.  En mode Conception, sur l'aire de conception, cliquez sur le sous-rapport souhaité pour le sélectionner. Le volet Propriétés affiche les propriétés de l'élément que vous venez de sélectionner.  
   
-2.  Dans le volet Propriétés, tapez le texte que vous souhaitez afficher comme message dans `NoRowsMessage` champ de propriété.  
+2.  Dans le volet Propriétés, tapez le texte que vous souhaitez afficher en tant que message dans `NoRowsMessage` le champ de propriété.  
   
      Vous pouvez également cliquer sur l’option **Expression** de la liste déroulante pour ouvrir la boîte de dialogue **Expression** et créer l’expression souhaitée.  
   

@@ -1,5 +1,5 @@
 ---
-title: Section de données | Microsoft Docs
+title: Section données | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,36 +13,36 @@ ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6aebf318652e604c5f5ad4c30ef389fdfd9e78c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925645"
 ---
 # <a name="data-section"></a>Section de données
-La section de données définit les données de l’ensemble de lignes ainsi que tout en attente de mises à jour, les insertions ou les suppressions. La section de données peut contenir zéro ou plusieurs lignes. Il ne peut contenir que des données à partir d’un ensemble de lignes où la ligne est définie par le schéma. En outre, comme mentionné précédemment, les colonnes sans aucune donnée peuvent être omis. Si un attribut ou un sous-élément est utilisé dans la section de données et que cette construction n’a pas été définie dans la section de schéma, il est ignoré en mode silencieux.  
+La section Data définit les données de l’ensemble de lignes, ainsi que toutes les mises à jour, insertions ou suppressions en attente. La section de données peut contenir zéro ou plusieurs lignes. Elle ne peut contenir que des données d’un ensemble de lignes où la ligne est définie par le schéma. En outre, comme indiqué précédemment, les colonnes sans données peuvent être omises. Si un attribut ou un sous-élément est utilisé dans la section de données et que cette construction n’a pas été définie dans la section de schéma, elle est ignorée en mode silencieux.  
   
 ## <a name="string"></a>String  
- Les caractères XML réservés dans les données texte doivent être remplacées par des entités de caractères approprié. Par exemple, dans le nom de la société « Jean Garage », le guillemet simple doit être remplacé par une entité. La ligne réelle peut se présenter comme suit :  
+ Les caractères XML réservés dans les données de texte doivent être remplacés par les entités de caractères appropriées. Par exemple, dans le nom de la société « garage de Joe », le guillemet simple doit être remplacé par une entité. La ligne réelle ressemble à ce qui suit :  
   
 ```  
 <z:row CompanyName="Joe's Garage"/>  
 ```  
   
- Les caractères suivants sont réservés dans XML et doivent être remplacées par des entités de caractères : {', », &,\<, >}.  
+ Les caractères suivants sont réservés dans XML et doivent être remplacés par des entités de caractères : {', ",\<&,, >}.  
   
 ## <a name="binary"></a>Binary  
- Données binaires sont bin.hex encodé (autrement dit, un octet correspond à deux caractères, un caractère par quartet).  
+ Les données binaires sont encodées par bin. hex (autrement dit, un octet est mappé à deux caractères, un caractère par Quartet).  
   
 ## <a name="datetime"></a>DateTime  
- Le format VT_DATE variant n’est pas directement pris en charge par les types de données XML-Data. Le format correct pour les dates avec le composant à la fois une date et l’heure est aaaa-mm-jjThh.  
+ Le format de VT_DATE variant n’est pas directement pris en charge par les types de données XML-Data. Le format correct pour les dates avec un composant de données et d’heure est AAAA-MM-JJThh : mm : SS.  
   
- Pour plus d’informations sur les formats de date spécifiée par XML, consultez le [spécification W3C XML-Data](https://go.microsoft.com/fwlink/?LinkId=5692).  
+ Pour plus d’informations sur les formats de date spécifiés par XML, consultez [W3C XML-Data Specification](https://go.microsoft.com/fwlink/?LinkId=5692).  
   
- Lorsque la spécification XML-Data définit deux types de données équivalents (par exemple, i4 == int), ADO sera écrit le nom convivial, mais elle est lue dans les deux.  
+ Lorsque la spécification XML-Data définit deux types de données équivalents (par exemple, I4 = = int), ADO écrit le nom convivial, mais lit les deux.  
   
-## <a name="managing-pending-changes"></a>La gestion des modifications en attente  
- Un jeu d’enregistrements peut être ouverts dans l’immédiat ou mode de mise à jour par lot. Lorsqu’ils sont ouverts en mode de mise à jour par lot avec des curseurs côté client, toutes les modifications apportées à l’objet Recordset sont en état d’attente jusqu'à ce que la méthode UpdateBatch est appelée. Modifications en attente sont également conservées lorsque le jeu d’enregistrements est enregistré. Dans XML, ils sont représentés par l’utilisation des éléments « update » défini dans l’urn : schemas-microsoft-rowset. En outre, si un ensemble de lignes peut être mis à jour, la propriété être mise à jour doit être définie true dans la définition de la ligne. Par exemple, pour définir que la table Shippers contient des modifications en attente, la définition de ligne aurait coup de œil se présenter comme suit.  
+## <a name="managing-pending-changes"></a>Gestion des modifications en attente  
+ Un jeu d’enregistrements peut être ouvert en mode de mise à jour immédiate ou par lot. Lorsqu’ils sont ouverts en mode de mise à jour par lot avec des curseurs côté client, toutes les modifications apportées à l’ensemble d’enregistrements sont dans un état d’attente jusqu’à ce que la méthode UpdateBatch soit appelée. Les modifications en attente sont également conservées lors de l’enregistrement du Recordset. En XML, ils sont représentés par l’utilisation des éléments « Update » définis dans urn : schemas-microsoft-com : rowset. En outre, si un ensemble de lignes peut être mis à jour, la propriété pouvant être mise à jour doit avoir la valeur true dans la définition de la ligne. Par exemple, pour définir que la table Shippers contient des modifications en attente, la définition de ligne ressemble à ce qui suit.  
   
 ```  
 <s:ElementType name="row" content="eltOnly" updatable="true">  
@@ -53,9 +53,9 @@ La section de données définit les données de l’ensemble de lignes ainsi que
 </s:ElementType>  
 ```  
   
- Cela indique à la persistance au fournisseur de données afin qu’ADO puisse créer un objet Recordset modifiable.  
+ Cela indique au fournisseur de persistance d’exposer les données afin qu’ADO puisse construire un objet Recordset pouvant être mis à jour.  
   
- Les données d’exemple suivant montrent l’aspect des insertions, suppressions et les modifications dans le fichier persistant.  
+ Les exemples de données suivants montrent comment les insertions, les modifications et les suppressions apparaissent dans le fichier persistant.  
   
 ```  
 <rs:data>  
@@ -82,7 +82,7 @@ La section de données définit les données de l’ensemble de lignes ainsi que
 </rs:data>  
 ```  
   
- Une mise à jour contienne toujours les données de ligne d’origine entier suivies par les données de la ligne modifiée. La ligne modifiée peut contenir toutes les colonnes ou uniquement les colonnes qui ont été modifiées. Dans l’exemple précédent, la ligne 2 de l’expéditeur n’est pas modifiée, et uniquement la colonne Phone les valeurs ont changé pour Shipper 3 et est donc la seule colonne incluse dans la ligne modifiée. Les lignes insérées pour Shipper 12, 13 et 14 sont traités par lot balise rs : insert dans un seul ensemble. Notez que les lignes supprimées peuvent également être regroupés, bien que cela n’est pas présenté dans l’exemple précédent.  
+ Une mise à jour contient toujours l’intégralité des données de ligne d’origine, suivies des données de ligne modifiées. La ligne modifiée peut contenir toutes les colonnes ou uniquement celles qui ont été réellement modifiées. Dans l’exemple précédent, la ligne de Shipper 2 n’est pas modifiée et seule la colonne Phone a changé de valeur pour Shipper 3 et est donc la seule colonne incluse dans la ligne modifiée. Les lignes insérées pour les expéditeurs 12, 13 et 14 sont regroupées sous une étiquette RS : Insert. Notez que les lignes supprimées peuvent également être regroupées par lot, bien que cela ne soit pas illustré dans l’exemple précédent.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Persistance des enregistrements au format XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

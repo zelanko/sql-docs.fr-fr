@@ -1,5 +1,5 @@
 ---
-title: Appel d’une procédure stockée avec une commande | Microsoft Docs
+title: Appel d’une procédure stockée à l’aide d’une commande | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32f1013ef0aa9c8f02e19ec98234418480bc5f22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925865"
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>Appel d’une procédure stockée avec une commande
-Vous pouvez utiliser une commande pour appeler une procédure stockée. L’exemple de code à la fin de cette rubrique fait référence à une procédure stockée dans la base de données Northwind, appelée CustOrdersOrders, qui est défini comme suit.  
+Vous pouvez utiliser une commande pour appeler une procédure stockée. L’exemple de code à la fin de cette rubrique fait référence à une procédure stockée dans l’exemple de base de données Northwind, appelée CustOrdersOrders, qui est définie comme suit.  
   
 ```  
 CREATE PROCEDURE CustOrdersOrders @CustomerID nchar(5) AS  
@@ -32,15 +32,15 @@ WHERE CustomerID = @CustomerID
 ORDER BY OrderID  
 ```  
   
- Consultez votre documentation SQL Server pour plus d’informations sur la façon de définir et appeler des procédures stockées.  
+ Pour plus d’informations sur la définition et l’appel des procédures stockées, consultez la documentation de votre SQL Server.  
   
- Cette procédure stockée est similaire à la commande utilisée dans [paramètres d’objet de commande](../../../ado/guide/data/command-object-parameters.md). Il prend un paramètre d’ID et retourne des informations sur les commandes de ce client. L’exemple de code suivant utilise cette procédure stockée comme source pour ADO **Recordset**.  
+ Cette procédure stockée est similaire à la commande utilisée dans les paramètres de l' [objet Command](../../../ado/guide/data/command-object-parameters.md). Il prend un paramètre d’ID de client et retourne des informations sur les commandes de ce client. L’exemple de code suivant utilise cette procédure stockée comme source pour un **jeu d’enregistrements**ADO.  
   
- À l’aide de la procédure stockée vous donne accès à une autre fonctionnalité d’ADO : le **paramètres** collection **Actualiser** (méthode). À l’aide de cette méthode, ADO peut remplir automatiquement toutes les informations sur les paramètres requis par la commande en cours d’exécution. Il est une baisse des performances à l’aide de cette technique, car ADO doit interroger la source de données pour les informations sur les paramètres.  
+ L’utilisation de la procédure stockée vous permet d’accéder à une autre fonctionnalité ADO : la méthode **Refresh** de la collection **Parameters** . À l’aide de cette méthode, ADO peut automatiquement renseigner toutes les informations sur les paramètres requis par la commande au moment de l’exécution. Cette technique présente une baisse des performances, car ADO doit interroger la source de données pour obtenir des informations sur les paramètres.  
   
- Autres différences importantes existent entre l’exemple de code suivant et le code dans [paramètres d’objet de commande](../../../ado/guide/data/command-object-parameters.md), où les paramètres ont été entrés manuellement. Tout d’abord, ce code ne définit pas le **Prepared** propriété **True** , car elle est une procédure stockée SQL Server et est précompilé par définition. Ensuite, le **CommandType** propriété de la **commande** objet remplacé par **valeur adCmdStoredProc** dans le deuxième exemple pour informer ADO que la commande est une procédure stockée.  
+ D’autres différences importantes existent entre l’exemple de code suivant et le code dans les paramètres de l' [objet de commande](../../../ado/guide/data/command-object-parameters.md), où les paramètres ont été entrés manuellement. Tout d’abord, ce code n’affecte pas la **valeur true** à la propriété **Prepared** , car il s’agit d’une procédure stockée SQL Server qui est précompilée par définition. Deuxièmement, la propriété **CommandType** de l’objet **Command** est passée à **adCmdStoredProc** dans le deuxième exemple pour informer ADO que la commande était une procédure stockée.  
   
- Enfin, dans le deuxième exemple le paramètre doit être auquel index lors de la définition de la valeur, étant donné que vous ignorez peut-être le nom du paramètre au moment du design. Si vous ne connaissez pas le nom du paramètre, vous pouvez définir la nouvelle [NamedParameters](../../../ado/reference/ado-api/namedparameters-property-ado.md) propriété de la **commande** de l’objet sur True et font référence au nom de la propriété. Vous vous demandez peut-être pourquoi la position du premier paramètre mentionné dans la procédure stockée (@CustomerID) est de 1 au lieu de 0 (`objCmd(1) = "ALFKI"`). Il s’agit, car le paramètre 0 contient une valeur de retour de la procédure stockée SQL Server.  
+ Enfin, dans le deuxième exemple, le paramètre doit être référencé par index lors de la définition de la valeur, car vous ne connaissez peut-être pas le nom du paramètre au moment de la conception. Si vous connaissez le nom du paramètre, vous pouvez définir la nouvelle propriété [NamedParameters](../../../ado/reference/ado-api/namedparameters-property-ado.md) de l’objet de **commande** sur true et faire référence au nom de la propriété. Vous vous demandez peut-être pourquoi la position du premier paramètre mentionné dans la procédure@CustomerIDstockée () est 1 au`objCmd(1) = "ALFKI"`lieu de 0 (). Cela est dû au fait que le paramètre 0 contient une valeur de retour de la procédure stockée SQL Server.  
   
 ```  
 'BeginAutoParamCmd  
@@ -133,4 +133,4 @@ End Function
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Article de la Base de connaissances 117500](https://go.microsoft.com/fwlink/?LinkId=117500)
+ [Article 117500 de la base de connaissances](https://go.microsoft.com/fwlink/?LinkId=117500)

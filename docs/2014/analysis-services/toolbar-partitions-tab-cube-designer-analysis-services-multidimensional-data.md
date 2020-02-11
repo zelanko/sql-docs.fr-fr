@@ -1,5 +1,5 @@
 ---
-title: Barre d’outils (onglet Partitions, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Barre d’outils (onglet partitions, concepteur de cube) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7c64e45800b168a45a674dc74a5f192e5e9f8389
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066092"
 ---
 # <a name="toolbar-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>Barre d'outils (onglet Partitions, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -25,12 +25,12 @@ ms.locfileid: "66066092"
 |Option|Description|  
 |------------|-----------------|  
 |**Ajouter Business Intelligence**|Affiche l' **Assistant Business Intelligence** pour ajouter au cube des fonctionnalités d'aide à la décision.|  
-|**Traiter**|Cliquez pour afficher la boîte de dialogue **Traiter** et traiter le groupe de mesures ou la partition sélectionnés.|  
-|**Nouvelle Partition**|Cliquez pour afficher **l’Assistant Partition** et créer une partition dans le groupe de mesures sélectionné.|  
-|**Renommer**|Cliquez pour renommer la partition sélectionnée.<br /><br /> Remarque : Cette option est activée uniquement si une cellule d’une partition est sélectionnée dans le **Partitions** grille d’un groupe de mesures dans le **groupes de mesures** volet.|  
-|**Supprimer**|Cliquez sur cette option pour afficher la boîte de dialogue **Supprimer les objets** et supprimer l’action sélectionnée.<br /><br /> Remarque : Cette option est activée uniquement si la ligne entière d’une partition est sélectionnée dans le **Partitions** grille d’un groupe de mesures dans le **groupes de mesures** volet.<br /><br /> Remarque : Cette option est désactivée si une partition avec écriture différée est sélectionnée.|  
-|**Concevoir des agrégations**|Cliquez sur cette option pour afficher **l’Assistant Conception d’agrégation** et créer une conception d’agrégation pour la partition sélectionnée.<br /><br /> Remarque : Cette option est activée uniquement si une cellule d’une partition est sélectionnée dans le **Partitions** grille d’un groupe de mesures dans le **groupes de mesures** volet.<br /><br /> Remarque : Cette option est désactivée si une partition avec écriture différée est sélectionnée.|  
-|**L’optimisation basée sur l’utilisation**|Cliquez sur cette option pour afficher **l’Assistant Optimisation de l’utilisation** et créer une conception d’agrégation basée sur des modèles d’utilisation existants pour la partition sélectionnée.<br /><br /> Remarque : Cette option est activée uniquement si une cellule d’une partition est sélectionnée dans le **Partitions** grille d’un groupe de mesures dans le **groupes de mesures** volet.<br /><br /> Notez également que cette option est désactivée si une partition d’écriture différée est sélectionnée.|  
-|**Paramètres de stockage**|Cliquez sur cette option pour afficher la boîte de dialogue **Paramètres de stockage** et définir les paramètres de mode de stockage, de mise en cache proactive et de notification pour la partition sélectionnée.<br /><br /> Remarque : Cette option est activée uniquement si une cellule d’une partition est sélectionnée dans le **Partitions** grille d’un groupe de mesures dans le **groupes de mesures** volet.|  
+|**Procédure**|Cliquez pour afficher la boîte de dialogue **Traiter** et traiter le groupe de mesures ou la partition sélectionnés.|  
+|**Nouvelle partition**|Cliquez pour afficher **l’Assistant Partition** et créer une partition dans le groupe de mesures sélectionné.|  
+|**Renommer**|Cliquez pour renommer la partition sélectionnée.<br /><br /> Remarque : cette option est activée uniquement si une cellule d’une partition est sélectionnée dans la grille **Partitions** d’un groupe de mesures dans le volet **Groupes de mesures**.|  
+|**Supprimer**|Cliquez sur cette option pour afficher la boîte de dialogue **Supprimer les objets** et supprimer l’action sélectionnée.<br /><br /> Remarque : cette option est activée uniquement si l’ensemble de la ligne d’une partition est sélectionnée dans la grille **Partitions** d’un groupe de mesures dans le volet **Groupes de mesures**.<br /><br /> Remarque : cette option est désactivée si une partition d’écriture différée est sélectionnée.|  
+|**Créer des agrégations**|Cliquez sur cette option pour afficher **l’Assistant Conception d’agrégation** et créer une conception d’agrégation pour la partition sélectionnée.<br /><br /> Remarque : cette option est activée uniquement si une cellule d’une partition est sélectionnée dans la grille **Partitions** d’un groupe de mesures dans le volet **Groupes de mesures**.<br /><br /> Remarque : cette option est désactivée si une partition d’écriture différée est sélectionnée.|  
+|**Optimisation basée sur l'utilisation**|Cliquez sur cette option pour afficher **l’Assistant Optimisation de l’utilisation** et créer une conception d’agrégation basée sur des modèles d’utilisation existants pour la partition sélectionnée.<br /><br /> Remarque : cette option est activée uniquement si une cellule d’une partition est sélectionnée dans la grille **Partitions** d’un groupe de mesures dans le volet **Groupes de mesures**.<br /><br /> Notez également que cette option est désactivée si une partition d’écriture différée est sélectionnée.|  
+|**Paramètres de stockage**|Cliquez pour afficher la boîte de dialogue **Paramètres de stockage** et définir les paramètres de mode de stockage, de mise en cache proactive et de notification de la partition sélectionnée.<br /><br /> Remarque : cette option est activée uniquement si une cellule d’une partition est sélectionnée dans la grille **Partitions** d’un groupe de mesures dans le volet **Groupes de mesures**.|  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Fonction de Conversion de types de données explicites | Microsoft Docs
+title: Fonction de conversion de type de données explicite | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6982f7b7caa71abc08c5b84ef1bb6211dcadaecd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67913612"
 ---
 # <a name="explicit-data-type-conversion-function"></a>Fonctions de conversion de types de données explicites
-Conversion de type de données explicite est spécifiée en termes de définitions de type de données SQL.  
+La conversion de type de données explicite est spécifiée en termes de définitions de type de données SQL.  
   
- La syntaxe ODBC pour la fonction de conversion de type de données explicite ne limite pas les conversions. La validité de conversions spécifiques d’un type de données à un autre type de données sera déterminée par chaque implémentation spécifiques au pilote. Le pilote, car elle traduit la syntaxe ODBC la syntaxe native, rejette les conversions qui, bien qu’autorisée dans la syntaxe ODBC, ne sont pas pris en charge par la source de données. La fonction ODBC **SQLGetInfo**, avec la conversion options (telles que SQL_CONVERT_BIGINT, SQL_CONVERT_BINARY, SQL_CONVERT_INTERVAL_YEAR_MONTH et ainsi de suite), offre un moyen pour obtenir des informations sur les conversions prises en charge par la source de données .  
+ La syntaxe ODBC pour la fonction de conversion de type de données explicite ne limite pas les conversions. La validité de conversions spécifiques d’un type de données en un autre type de données est déterminée par chaque implémentation propre au pilote. Le pilote convertit la syntaxe ODBC en syntaxe native, en rejetant les conversions qui, bien que autorisées dans la syntaxe ODBC, ne sont pas prises en charge par la source de données. La fonction ODBC **SQLGetInfo**, avec les options de conversion (telles que SQL_CONVERT_BIGINT, SQL_CONVERT_BINARY, SQL_CONVERT_INTERVAL_YEAR_MONTH, etc.), offre un moyen d’obtenir des informations sur les conversions prises en charge par la source de données.  
   
- Le format de la **convertir** fonction est :  
+ Le format de la fonction **Convert** est le suivant :  
   
- **CONVERTIR (** _value_exp_, _data_type_ **)**  
+ **Convert (** _value_exp_, _data_type_**)**  
   
- La fonction retourne la valeur spécifiée par *value_exp* converti spécifié *data_type*, où *data_type* est un des mots clés suivants :  
+ La fonction retourne la valeur spécifiée par *value_exp* convertie en la *data_type*spécifiée, où *data_type* est l’un des mots clés suivants :  
   
 |||  
 |-|-|  
@@ -54,19 +54,19 @@ Conversion de type de données explicite est spécifiée en termes de définitio
 |SQL_INTERVAL_DAY_TO_MINUTE||  
 |SQL_INTERVAL_DAY_TO_SECOND||  
   
- La syntaxe ODBC pour la fonction de conversion de type de données explicite ne prend pas en charge la spécification de format de la conversion. Si la spécification des formats explicites est prise en charge par la source de données sous-jacente, un pilote doit spécifier une valeur par défaut ou implémenter la spécification de format.  
+ La syntaxe ODBC pour la fonction de conversion de type de données explicite ne prend pas en charge la spécification du format de conversion. Si la spécification de formats explicites est prise en charge par la source de données sous-jacente, un pilote doit spécifier une valeur par défaut ou implémenter la spécification de format.  
   
- L’argument *value_exp* peut être un nom de colonne, le résultat d’une autre fonction scalaire ou une valeur numérique ou la chaîne littérale. Exemple :  
+ L’argument *value_exp* peut être un nom de colonne, le résultat d’une autre fonction scalaire ou un littéral de chaîne ou numérique. Par exemple :  
   
 ```  
 { fn CONVERT( { fn CURDATE() }, SQL_CHAR ) }  
 ```  
   
- Convertit la sortie de la fonction scalaire CURDATE en une chaîne de caractères.  
+ Convertit la sortie de la fonction scalaire caillé en une chaîne de caractères.  
   
- Étant donné que ODBC n’impose un type de données pour les valeurs de retour de fonctions scalaires (comme les fonctions sont souvent spécifiques à la source de données), applications doivent utiliser la fonction scalaire CONVERT chaque fois que possible de forcer la conversion de type de données.  
+ Comme ODBC n’impose pas de type de données pour les valeurs de retour des fonctions scalaires (étant donné que les fonctions sont souvent spécifiques à la source de données), les applications doivent utiliser la fonction de conversion scalaire chaque fois que cela est possible pour forcer la conversion du type de données.  
   
- Les deux exemples suivants illustrent l’utilisation de la **convertir** (fonction). Ces exemples supposent l’existence d’une table appelée employés, avec une colonne de MATEMP de type SQL_SMALLINT et une colonne EMPNAME de type SQL_CHAR.  
+ Les deux exemples suivants illustrent l’utilisation de la fonction **Convert** . Ces exemples supposent l’existence d’une table appelée EMPLOYees, avec une colonne MATEMP de type SQL_SMALLINT et une colonne EMPNAME de type SQL_CHAR.  
   
  Si une application spécifie l’instruction SQL suivante :  
   
@@ -74,13 +74,13 @@ Conversion de type de données explicite est spécifiée en termes de définitio
 SELECT EMPNO FROM EMPLOYEES WHERE {fn CONVERT(EMPNO,SQL_CHAR)} LIKE '1%'  
 ```  
   
--   Un pilote pour ORACLE se traduit par l’instruction SQL à :  
+-   Un pilote pour ORACLE traduit l’instruction SQL en :  
   
     ```  
     SELECT EMPNO FROM EMPLOYEES WHERE to_char(EMPNO) LIKE '1%'  
     ```  
   
--   Un pilote pour SQL Server se traduit par l’instruction SQL à :  
+-   Un pilote pour SQL Server traduit l’instruction SQL en :  
   
     ```  
     SELECT EMPNO FROM EMPLOYEES WHERE convert(char,EMPNO) LIKE '1%'  
@@ -93,20 +93,20 @@ SELECT {fn ABS(EMPNO)}, {fn CONVERT(EMPNAME,SQL_SMALLINT)}
    FROM EMPLOYEES WHERE EMPNO <> 0  
 ```  
   
--   Un pilote pour ORACLE se traduit par l’instruction SQL à :  
+-   Un pilote pour ORACLE traduit l’instruction SQL en :  
   
     ```  
     SELECT abs(EMPNO), to_number(EMPNAME) FROM EMPLOYEES WHERE EMPNO <> 0  
     ```  
   
--   Un pilote pour SQL Server se traduit par l’instruction SQL à :  
+-   Un pilote pour SQL Server traduit l’instruction SQL en :  
   
     ```  
     SELECT abs(EMPNO), convert(smallint, EMPNAME) FROM EMPLOYEES  
        WHERE EMPNO <> 0  
     ```  
   
--   Un pilote pour Ingres se traduit par l’instruction SQL à :  
+-   Un pilote pour Ingres traduit l’instruction SQL en :  
   
     ```  
     SELECT abs(EMPNO), int2(EMPNAME) FROM EMPLOYEES WHERE EMPNO <> 0  

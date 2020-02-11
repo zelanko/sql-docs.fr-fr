@@ -1,5 +1,5 @@
 ---
-title: sys.security_policies (Transact-SQL) | Microsoft Docs
+title: sys. security_policies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,40 +22,40 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d6eec5c523e2bdd321af145f19d0b5e7e7cba39b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135312"
 ---
-# <a name="syssecuritypolicies-transact-sql"></a>Sys.security_policies (Transact-SQL)
+# <a name="syssecurity_policies-transact-sql"></a>sys. security_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  Retourne une ligne pour chaque stratégie de sécurité dans la base de données.  
+  Retourne une ligne pour chaque stratégie de sécurité de la base de données.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |name|**sysname**|Nom de la stratégie de sécurité, unique dans la base de données.|  
 |object_id|**int**|ID de la stratégie de sécurité.|  
-|principal_id|**Int**|ID du propriétaire de la stratégie de sécurité, tel qu'enregistré dans la base de données. NULL si le propriétaire est déterminé par le schéma.|  
-|schema_id|**Int**|ID du schéma où réside l'objet.|  
-|parent_object_id|**Int**|Identificateur de l'objet auquel appartient la stratégie. Doit être égal à 0.|  
-|type|**vachar(2)**|Doit être **SP**.|  
-|type_desc|**nvarchar(60)**|**SECURITY_POLICY**.|  
-|create_date|**datetime**|Date UTC de création de la stratégie de sécurité.|  
-|modify_date|**datetime**|Date UTC de dernière modification de la stratégie de sécurité.|  
+|principal_id|**int**|ID du propriétaire de la stratégie de sécurité, tel qu'enregistré dans la base de données. NULL si le propriétaire est déterminé par le schéma.|  
+|schema_id|**int**|ID du schéma où réside l'objet.|  
+|parent_object_id|**int**|Identificateur de l'objet auquel appartient la stratégie. Doit être égal à 0.|  
+|type|**vachar (2)**|Doit être **SP**.|  
+|type_desc|**nvarchar (60)**|**SECURITY_POLICY**.|  
+|create_date|**DATETIME**|Date UTC de création de la stratégie de sécurité.|  
+|modify_date|**DATETIME**|Date UTC de dernière modification de la stratégie de sécurité.|  
 |is_ms_shipped|**bit**|Toujours false.|  
 |is_enabled|**bit**|État de spécification de stratégie de sécurité :<br /><br /> 0 = désactivé<br /><br /> 1 = activé|  
 |is_not_for_replication|**bit**|La stratégie a été créée avec l'option NOT FOR REPLICATION.|  
 |uses_database_collation|**bit**|Utilise le même classement que la base de données.|  
-|is_schemabinding_enabled|**bit**|État de la liaison au schéma pour la stratégie de sécurité :<br /><br /> 0 ou NULL = activé<br /><br /> 1 = désactivé|  
+|is_schemabinding_enabled|**bit**|État de SCHEMABINDING pour la stratégie de sécurité :<br /><br /> 0 ou NULL = activé<br /><br /> 1 = désactivé|  
   
 ## <a name="permissions"></a>Autorisations  
- Les principaux avec le **ALTER ANY SECURITY POLICY** autorisation ont accès à tous les objets dans cette vue de catalogue, ainsi que toute personne ayant **VIEW DEFINITION** sur l’objet.  
+ Les principaux avec l’autorisation **modifier une stratégie de sécurité** ont accès à tous les objets de cet affichage catalogue, ainsi qu’à toute personne avec la **définition de vue** sur l’objet.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité au niveau des lignes](../../relational-databases/security/row-level-security.md)   
- [sys.security_predicates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)   
+ [sys. security_predicates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)   
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [Affichages catalogue de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

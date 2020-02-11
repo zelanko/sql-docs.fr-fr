@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2f92a270bb599c84f5d0b2bd85e713c3f406f81b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479527"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>Mode de détermination des autorisations (Master Data Services)
@@ -35,7 +35,7 @@ ms.locfileid: "65479527"
   
  ![mds_conc_security_no_overlap](../../2014/master-data-services/media/mds-conc-security-no-overlap.gif "mds_conc_security_no_overlap")  
   
-### <a name="step-1-effective-attribute-permissions-are-determined"></a>Étape 1 : Les autorisations d’attribut effectives sont déterminées.  
+### <a name="step-1-effective-attribute-permissions-are-determined"></a>Étape 1 : les autorisations d'attribut effectives sont déterminées.  
  La liste suivante décrit comment sont déterminées les autorisations d'attribut effectives :  
   
 -   Les autorisations attribuées aux objets de modèle déterminent les attributs auxquels un utilisateur peut accéder.  
@@ -44,13 +44,13 @@ ms.locfileid: "65479527"
   
 -   Tout objet situé au même niveau que l'entité est refusé implicitement.  
   
--   Tout objet situé à un niveau supérieur obtient un accès de navigation. Pour plus d’informations sur l’accès de navigation, consultez [accès de navigation &#40;Master Data Services&#41;](navigational-access-master-data-services.md).  
+-   Tout objet situé à un niveau supérieur obtient un accès de navigation. Pour plus d’informations sur l’accès de navigation, consultez [&#40;de l’accès de navigation Master Data Services&#41;](navigational-access-master-data-services.md).  
   
- Dans cet exemple, **en lecture seule** autorisation est attribuée à une entité et cette autorisation est héritée par son attribut, qui se trouve à un niveau inférieur dans la structure du modèle. Le modèle fournit l’accès de navigation pour cette entité et ses attributs. L'autre entité dans le modèle ne dispose d'aucune autorisation explicite attribuée et n'hérite d'aucune autorisation, donc elle est refusée implicitement.  
+ Dans cet exemple, l’autorisation **en lecture seule** est assignée à une entité et cette autorisation est héritée par son attribut, qui se trouve à un niveau inférieur dans la structure du modèle. Le modèle fournit un accès de navigation à cette entité et à son attribut. L'autre entité dans le modèle ne dispose d'aucune autorisation explicite attribuée et n'hérite d'aucune autorisation, donc elle est refusée implicitement.  
   
  ![mds_conc_inheritance_model](../../2014/master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
-### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>Étape 2 : Si les autorisations des membres de la hiérarchie sont attribuées, les autorisations de membre effectives sont déterminées.  
+### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>Étape 2 : si les autorisations des membres de la hiérarchie sont attribuées, les autorisations de membre effectives sont déterminées.  
  La liste suivante explique comment les autorisations des membres de la hiérarchie effectives sont déterminées :  
   
 -   Les autorisations attribuées aux nœuds de la hiérarchie déterminent les membres auxquels un utilisateur peut accéder.  
@@ -61,11 +61,11 @@ ms.locfileid: "65479527"
   
 -   Tout nœud situé aux niveaux supérieurs auquel aucune autorisation n'est attribuée est refusé implicitement.  
   
- Dans cet exemple, **en lecture seule** autorisation est attribuée à un nœud de la hiérarchie et cette autorisation est héritée par un nœud à un niveau inférieur dans la structure de hiérarchie. La racine n'a aucune autorisation attribuée, donc elle est refusée implicitement. L'autre nœud dans la structure de hiérarchie ne dispose d'aucune autorisation explicite attribuée et n'hérite d'aucune autorisation, donc il est refusé implicitement.  
+ Dans cet exemple, l’autorisation **lecture seule** est affectée à un nœud de la hiérarchie et cette autorisation est héritée par un nœud à un niveau inférieur dans la structure de la hiérarchie. La racine n'a aucune autorisation attribuée, donc elle est refusée implicitement. L'autre nœud dans la structure de hiérarchie ne dispose d'aucune autorisation explicite attribuée et n'hérite d'aucune autorisation, donc il est refusé implicitement.  
   
  ![mds_conc_inheritance_hierarchy](../../2014/master-data-services/media/mds-conc-inheritance-hierarchy.gif "mds_conc_inheritance_hierarchy")  
   
-### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>Étape 3 : L’intersection des autorisations d’attribut et de membre est déterminée.  
+### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>Étape 3 : l'intersection des autorisations d'attribut et de membre est déterminée.  
  Si les autorisations d'attribut effectives sont différentes des autorisations de membre effectives, les autorisations doivent être déterminées pour chaque valeur d'attribut individuelle. Pour plus d’informations, consultez [Chevauchement des autorisations de modèle et de membre &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md).  
   
 ## <a name="permissions-assigned-to-multiple-groups"></a>Autorisations attribuées à plusieurs groupes  
@@ -76,7 +76,7 @@ ms.locfileid: "65479527"
  Dans ce cas, le chevauchement des autorisations de l'utilisateur et du groupe doit être résolu avant que les autorisations de l'objet de modèle et des membres de la hiérarchie puissent être comparées. Pour plus d’informations, consultez [Chevauchement des autorisations d’accès &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Chevauchement des autorisations d’accès &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
+ [Chevauchement des autorisations d’accès &#40;d’utilisateurs et de groupes Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
  [Chevauchement des autorisations de modèle et de membre &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c1db711e5a1eec51323b38ee34bd1df08ed8aa9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106751"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Ajouter une action Développer ou Réduire à un élément (Générateur de rapports et SSRS)
@@ -44,30 +44,30 @@ ms.locfileid: "66106751"
     > [!NOTE]  
     >  Si vous ne voyez pas le volet Propriétés, cliquez sur **Affichage** sur le ruban, puis cliquez sur **Propriétés**.  
   
-4.  Dans `Hidden`, choisissez une des options suivantes pour définir la visibilité de cet élément de rapport la première fois que vous exécutez un rapport :  
+4.  Dans `Hidden`, choisissez l’une des options suivantes pour définir la visibilité de cet élément de rapport la première fois que vous exécutez un rapport :  
   
-    -   Sélectionnez `False` pour afficher l’élément de rapport.  
+    -   Sélectionnez `False` cette option pour afficher l’élément de rapport.  
   
-    -   Sélectionnez `True` pour masquer l’élément de rapport.  
+    -   Sélectionnez `True` cette option pour masquer l’élément de rapport.  
   
-    -   Sélectionnez **\<Expression>** pour ouvrir la boîte de dialogue **Expression** et créer une expression qui est évaluée au moment de l’exécution pour déterminer la visibilité.  
+    -   Sélectionnez ** \<expression>** pour ouvrir la boîte de dialogue **expression** et créer une expression qui est évaluée au moment de l’exécution pour déterminer la visibilité.  
   
 5.  Dans **ToggleItem**, sélectionnez dans la liste déroulante le nom d’une zone de texte à laquelle ajouter l’image bascule.  
   
      Dans l'image suivante, le groupe de lignes Couleur est configuré de façon à permettre aux utilisateurs de développer et de réduire les lignes associées.  
   
-     ![Configuration d’un groupe de lignes à développer](../media/expandcollapse-confighiddentoggleitemwithnumbers.png "Configuration d’un groupe de lignes à développer")  
+     ![Configuration du développement d'un groupe de lignes](../media/expandcollapse-confighiddentoggleitemwithnumbers.png "Configuration du développement d'un groupe de lignes")  
   
     > [!NOTE]  
     >  La zone de texte avec l'image bascule ne peut pas être le groupe de lignes ou de colonnes dont vous souhaitez masquer les lignes ou les colonnes qui y sont associées. Elle doit figurer dans le même groupe que l'élément qui est en train d'être masqué ou dans un groupe ancêtre. Par exemple, pour afficher ou masquer les lignes associées à un groupe enfant, sélectionnez une zone de texte dans une ligne associée au groupe parent.  
   
 6.  Pour tester la bascule, exécutez le rapport et cliquez sur la zone de texte comportant l'image bascule. L'affichage du rapport est actualisé de manière à afficher des groupes de lignes et des groupes de colonnes avec leur visibilité basculée.  
   
-     ![Exécution du rapport avec développement d’un groupe de lignes](../media/expandcollapse-runreport-rowgroup.png "Exécution du rapport avec développement d’un groupe de lignes")  
+     ![Exécution du rapport avec un groupe de lignes à développer](../media/expandcollapse-runreport-rowgroup.png "Exécution du rapport avec un groupe de lignes à développer")  
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>Pour ajouter une action Développer/Réduire à un élément de rapport  
   
-1.  Dans la vue Création de rapport, cliquez avec le bouton droit sur l’élément de rapport à afficher ou à masquer, puis cliquez sur **Propriétés** de *\<élément_de_rapport>*. La boîte de dialogue **Propriétés** de *\<élément de rapport>* correspondant à l’élément de rapport s’ouvre.  
+1.  En mode création de rapport, cliquez avec le bouton droit sur l’élément de rapport à afficher ou à masquer, puis cliquez sur **** * \<* propriétés de l’élément de rapport>. La * \<* boîte de dialogue **Propriétés** de l’élément de rapport>de l’élément de rapport s’ouvre.  
   
 2.  Cliquez sur **Visibilité**.  
   
@@ -80,20 +80,20 @@ ms.locfileid: "66106751"
     -   Sélectionnez **Afficher ou masquer en fonction d'une expression** pour utiliser une expression évaluée au moment de l'exécution pour déterminer la visibilité. Cliquez sur (**fx**) pour ouvrir la boîte de dialogue **Expression** et créer une expression.  
   
         > [!NOTE]  
-        >  Quand vous spécifiez une expression de visibilité, vous définissez la propriété Hidden de l’élément de rapport. L'expression prend la valeur `Boolean` `True` pour masquer l'élément, et la valeur `False` pour l'afficher.  
+        >  Quand vous spécifiez une expression de visibilité, vous définissez la propriété Hidden de l’élément de rapport. L'expression prend la valeur `Boolean``True` pour masquer l'élément, et la valeur `False` pour l'afficher.  
   
 4.  Dans **L’affichage peut être activé ou désactivé par cet élément de rapport**, tapez ou sélectionnez dans la liste déroulante le nom d’une zone de texte du rapport où afficher une image bascule, par exemple Textbox1.  
   
      Dans l'image suivante, la table est configurée de manière à permettre aux utilisateurs de la développer et de la réduire. L'affichage de la table peut être activé et désactivé depuis la zone de texte Table de Produits.  
   
-     ![Configurer une table rapport à développer](../media/expandcollapse-reporttable.png "Configurer une table rapport à développer")  
+     ![Configurer une table de rapport pour qu’elle soit développée](../media/expandcollapse-reporttable.png "Configurer le développement d'une table rapport")  
   
     > [!NOTE]  
     >  La zone de texte que vous choisissez doit figurer dans l'étendue actuelle ou contenante de cet élément de rapport (jusqu'au corps du rapport inclus). Par exemple, pour afficher ou masquer un graphique, sélectionnez une zone de texte qui est dans la même étendue contenante que le graphique, par exemple le corps du rapport ou un rectangle. La zone de texte doit figurer dans la même hiérarchie de conteneurs ou à un niveau plus élevé.  
   
 5.  Pour tester la bascule, exécutez le rapport et cliquez sur la zone de texte comportant l'image bascule. L'affichage du rapport est actualisé de manière à afficher les éléments du rapport avec leur visibilité basculée.  
   
-     ![Exécution du rapport avec développement d’une table](../media/expandcollapse-runreport-reporttable.png "Rapport en cours d’exécution avec développement d’une table")  
+     ![Exécution du rapport avec une table en cours de développement](../media/expandcollapse-runreport-reporttable.png "Exécution du rapport avec une table en cours de développement")  
   
 ## <a name="see-also"></a>Voir aussi  
  [Action d’exploration &#40;Générateur de rapports et SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   

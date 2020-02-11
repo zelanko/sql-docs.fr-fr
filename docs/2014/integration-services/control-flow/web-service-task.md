@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f21a5f938b2dcd7b90fa71ab946d2986b0633987
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829410"
 ---
 # <a name="web-service-task"></a>Tâche de service Web
@@ -50,8 +50,8 @@ ms.locfileid: "62829410"
   
  Les résultats de la méthode de service Web peuvent être écrits dans une variable ou dans un fichier. Vous pouvez utiliser le gestionnaire de connexions de fichiers pour spécifier le fichier ou indiquer le nom de la variable dans laquelle écrire les résultats. Pour plus d’informations, consultez [Gestionnaire de connexions de fichiers](../connection-manager/file-connection-manager.md) et [Variables Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
   
-## <a name="custom-logging-messages-available-on-the-web-service-task"></a>Messages de journalisation personnalisés disponibles dans la tâche de service Web  
- Le tableau suivant répertorie les entrées de journal personnalisées de la tâche de service Web. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) et [Messages personnalisés pour la journalisation](../custom-messages-for-logging.md).  
+## <a name="custom-logging-messages-available-on-the-web-service-task"></a>Messages de journalisation personnalisés disponibles dans la tâche de service Web  
+ Le tableau suivant répertorie les entrées de journal personnalisées de la tâche de service Web. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) et [Messages personnalisés pour la journalisation](../custom-messages-for-logging.md).  
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
@@ -64,17 +64,17 @@ ms.locfileid: "62829410"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de tâche de service Web &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur de tâche de service Web &#40;page général&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Éditeur de tâche de service Web &#40;page Entrée&#41;](../web-service-task-editor-input-page.md)  
+-   [Éditeur de tâche de service Web &#40;page d’entrée&#41;](../web-service-task-editor-input-page.md)  
   
--   [Éditeur de tâche de service Web &#40;page Sortie&#41;](../web-service-task-editor-output-page.md)  
+-   [Éditeur de tâche de service Web &#40;page sortie&#41;](../web-service-task-editor-output-page.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d’une tâche ou d’un conteneur](../set-the-properties-of-a-task-or-container.md)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>Configuration par programmation de la tâche de service web  
  Pour plus d'informations sur la définition par programmation de ces propriétés, cliquez sur l'une des rubriques suivantes :  
@@ -82,8 +82,8 @@ ms.locfileid: "62829410"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## <a name="related-content"></a>Contenu associé  
- Vidéo, [Guide pratique pour appeler un service web à l’aide de la tâche Service web (vidéo liée à SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642) sur technet.microsoft.com.  
+ Vidéo, [Procédure : appeler un service Web à l’aide de la tâche Service Web (vidéo liée à SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642), sur technet.microsoft.com.  
   
- [Comment consommer le Service Web via un Package SSIS](https://www.c-sharpcorner.com/article/how-to-consume-web-service-through-ssis-package/).  
+ [Comment utiliser le service Web via le package SSIS](https://www.c-sharpcorner.com/article/how-to-consume-web-service-through-ssis-package/).  
   
   

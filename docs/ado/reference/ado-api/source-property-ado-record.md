@@ -1,5 +1,5 @@
 ---
-title: Source, propriété (objet Record ADO) | Microsoft Docs
+title: Source, propriété (ADO record) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -21,35 +21,35 @@ ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b1870d8cd8253e1b6de74ce093d51ca6e33c5c6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930935"
 ---
 # <a name="source-property-ado-record"></a>Source, propriété (objet Record ADO)
-Indique la source de données ou l’objet représenté par le [enregistrement](../../../ado/reference/ado-api/record-object-ado.md).  
+Indique la source de données ou l’objet représenté par l' [enregistrement](../../../ado/reference/ado-api/record-object-ado.md).  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Définit ou retourne un **Variant** valeur qui indique l’entité représentée par le **enregistrement**.  
+ Définit ou retourne une valeur de **type Variant** qui indique l’entité représentée par l' **enregistrement**.  
   
 ## <a name="remarks"></a>Notes  
- Le **Source** propriété retourne le *Source* argument de la **enregistrement** objet [Open](../../../ado/reference/ado-api/open-method-ado-record.md) (méthode). Il peut contenir une chaîne d’URL absolue ou relative. Une URL absolue peut être utilisée sans la [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propriété pour ouvrir directement le **enregistrement** objet. Implicite **connexion** objet est créé dans ce cas.  
+ La propriété **source** retourne l’argument *source* de la méthode d' [ouverture](../../../ado/reference/ado-api/open-method-ado-record.md) de l’objet **Record** . Elle peut contenir une chaîne d’URL absolue ou relative. Une URL absolue peut être utilisée sans définir la propriété [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) pour ouvrir directement l’objet **Record** . Dans ce cas, un objet de **connexion** implicite est créé.  
   
- Le **Source** propriété peut également contenir une référence à un déjà ouverte **Recordset**, qui ouvre un **enregistrement** objet représentant la ligne actuelle dans le  **Jeu d’enregistrements**.  
+ La propriété **source** peut également contenir une référence à un **Recordset**déjà ouvert, ce qui ouvre un objet **Record** représentant la ligne actuelle dans le **Recordset**.  
   
- Le **Source** propriété peut également contenir une référence à un [commande](../../../ado/reference/ado-api/command-object-ado.md) object qui retourne une seule ligne de données à partir du fournisseur.  
+ La propriété **source** peut également contenir une référence à un objet de [commande](../../../ado/reference/ado-api/command-object-ado.md) qui retourne une ligne unique de données du fournisseur.  
   
- Si le **ActiveConnection** propriété est également définie, puis le **Source** propriété doit pointer vers un objet qui existe dans l’étendue de cette connexion. Par exemple, dans les espaces de noms structuré en arborescence, si le **Source** propriété contient une URL absolue, elle doit pointer vers un nœud à la portée du nœud identifié par l’URL dans la chaîne de connexion. Si le **Source** propriété contient une URL relative, puis il est validé dans le contexte défini par le **ActiveConnection** propriété.  
+ Si la propriété **ActiveConnection** est également définie, la propriété **source** doit pointer vers un objet qui existe dans l’étendue de cette connexion. Par exemple, dans les espaces de noms structurés en arborescence, si la propriété **source** contient une URL absolue, elle doit pointer vers un nœud qui existe à l’intérieur de l’étendue du nœud identifié par l’URL dans la chaîne de connexion. Si la propriété **source** contient une URL relative, elle est validée dans le contexte défini par la propriété **ActiveConnection** .  
   
- Le **Source** propriété est en lecture/écriture lors de la **enregistrement** objet est fermé et est en lecture seule tandis que le **enregistrement** objet est ouvert.  
+ La propriété **source** est en lecture/écriture lorsque l’objet **enregistrement** est fermé, et est en lecture seule lorsque l’objet **enregistrement** est ouvert.  
   
 > [!NOTE]
->  URL à l’aide du modèle http appellent automatiquement le [fournisseur Microsoft OLE DB pour la publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Pour plus d’informations, consultez [URL absolues et relatives](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  Les URL utilisant le schéma http appellera automatiquement le [fournisseur Microsoft OLE DB pour la publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Pour plus d’informations, consultez [URL absolues et relatives](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>S'applique à  
  [Record, objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Source, propriété (objet Error ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
+ [Source, propriété (erreur ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Source, propriété (objet Recordset ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5e6a5792c7e18013dba5cc4c0963dc6d045410f0
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782919"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>Reprendre une base de données de disponibilité (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "72782919"
   
      [Sécurité](#Security)  
   
--   **Pour reprendre une base de données secondaire, à l'aide de :**  
+-   **Pour reprendre une base de données secondaire à l’aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -46,14 +46,14 @@ ms.locfileid: "72782919"
   
      [PowerShell](#PowerShellProcedure)  
   
--   [Tâches connexes](#RelatedTasks)  
+-   [Tâches associées](#RelatedTasks)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
  Une commande RESUME retourne dès qu'elle est acceptée par le réplica qui héberge la base de données cible, mais en réalité, la reprise de la base de données se produit de façon asynchrone.  
   
-###  <a name="Prerequisites"></a> Prérequis  
+###  <a name="Prerequisites"></a>Conditions préalables  
   
 -   Vous devez être connecté à l'instance de serveur qui héberge la base de données à reprendre.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "72782919"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation ALTER sur la base de données.  
   
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
@@ -91,7 +91,7 @@ ms.locfileid: "72782919"
   
 2.  Reprenez la base de données secondaire à l’aide de l’instruction [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-hadr)suivante :  
   
-     ALTER DATABASE *nom_base_de_données* SET HADR RESUME  
+     Instruction ALTER DATABASE *database_name* Set Hadr Resume  
   
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
 
@@ -112,11 +112,11 @@ ms.locfileid: "72782919"
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
--   [fournisseur PowerShell SQL Server](../../../powershell/sql-server-powershell-provider.md)  
+-   [Fournisseur SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="RelatedTasks"></a> Tâches connexes  
+##  <a name="RelatedTasks"></a> Tâches associées  
   
 -   [Interrompre une base de données de disponibilité &#40;SQL Server&#41;](suspend-an-availability-database-sql-server.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble &#40;de groupes de disponibilité AlwaysOn SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  

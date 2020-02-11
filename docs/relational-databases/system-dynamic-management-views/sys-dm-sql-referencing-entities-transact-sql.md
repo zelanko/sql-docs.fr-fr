@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bd09706d1b3de9ebe4a5b333f79be9644c433e7c
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982340"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "73982340"
   
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -65,12 +65,12 @@ sys.dm_sql_referencing_entities (
   
  *schema_name* est obligatoire, sauf lorsque la classe référencée est PARTITION_FUNCTION.  
   
- *schema_name. referenced_entity_name* est **de type nvarchar (517)** .  
+ *schema_name. referenced_entity_name* est **de type nvarchar (517)**.  
   
- *< referenced_class >* :: = {Object | TAPEZ | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
+ *<referenced_class>* :: = {Object | TAPEZ | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
  Classe de l'entité référencée. Une seule classe peut être spécifiée par instruction.  
   
- *< referenced_class >* est de type **nvarchar**(60).  
+ *<referenced_class>* est de type **nvarchar**(60).  
   
 ## <a name="table-returned"></a>Table retournée  
   
@@ -80,7 +80,7 @@ sys.dm_sql_referencing_entities (
 |referencing_entity_name|**sysname**|Nom de l’entité de référence. N'accepte pas la valeur NULL.|  
 |referencing_id|**int**|ID de l'entité de référence. N'accepte pas la valeur NULL.|  
 |referencing_class|**tinyint**|Classe de l'entité de référence. N'accepte pas la valeur NULL.<br /><br /> 1 = objet<br /><br /> 12 = déclencheur DDL au niveau de la base de données<br /><br /> 13 = déclencheur DDL au niveau du serveur|  
-|referencing_class_desc|**nvarchar(60)**|Description de la classe de l’entité de référence.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
+|referencing_class_desc|**nvarchar (60)**|Description de la classe de l’entité de référence.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
 |is_caller_dependent|**bit**|Indique que la résolution de l'ID d'entité référencée se produit au moment de l'exécution, car elle dépend du schéma de l'appelant.<br /><br /> 1 = l'entité de référence a la possibilité de référencer l'entité ; toutefois, la résolution de l'ID d'entité référencée dépend de l'appelant et ne peut pas être déterminée. Cela se produit uniquement pour les références non liées au schéma à une procédure stockée, procédure stockée étendue ou fonction définie par l'utilisateur appelée dans une instruction EXECUTE.<br /><br /> 0 = l'entité référencée ne dépend pas de l'appelant.|  
   
 ## <a name="exceptions"></a>Exceptions  
@@ -99,13 +99,13 @@ sys.dm_sql_referencing_entities (
 ## <a name="remarks"></a>Notes  
  Le tableau suivant répertorie les types des entités pour lesquelles les informations de dépendance sont créées et gérées. Les informations de dépendance ne sont pas créées ni gérées pour les règles, les valeurs par défaut, les tables temporaires, les procédures stockées temporaires ou les objets système.  
   
-|Type d'entité|Entité de référence|Entité référencée|  
+|Type d’entité|Entité de référence|Entité référencée|  
 |-----------------|------------------------|-----------------------|  
-|Table|Oui*|Oui|  
-|Afficher|Oui|Oui|  
-|Procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Oui|Oui|  
+|Table de charge de travail|Oui*|Oui|  
+|Affichage|Oui|Oui|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)]procédure stockée * *|Oui|Oui|  
 |Procédure stockée CLR|Non|Oui|  
-|Fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] définie par l'utilisateur|Oui|Oui|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)]fonction définie par l’utilisateur|Oui|Oui|  
 |Fonction CLR définie par l'utilisateur|Non|Oui|  
 |Déclencheur CLR (DML et DDL)|Non|Non|  
 |Déclencheur DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
@@ -118,7 +118,7 @@ sys.dm_sql_referencing_entities (
 |Collection de schémas XML|Non|Oui|  
 |Fonction de partition|Non|Oui|  
   
- \* une table est suivie en tant qu’entité de référence uniquement lorsqu’elle fait référence à un module [!INCLUDE[tsql](../../includes/tsql-md.md)], à un type défini par l’utilisateur ou à une collection de schémas XML dans la définition d’une colonne calculée, d’une contrainte CHECK ou d’une contrainte DEFAULT.  
+ \*Une table est suivie en tant qu’entité de référence uniquement lorsqu’elle fait [!INCLUDE[tsql](../../includes/tsql-md.md)] référence à un module, un type défini par l’utilisateur ou une collection de schémas XML dans la définition d’une colonne calculée, d’une contrainte CHECK ou d’une contrainte default.  
   
  ** Les procédures stockées numérotées avec une valeur entière supérieure à 1 ne sont pas suivies en tant qu'entité de référence ou référencée.  
   
@@ -142,7 +142,7 @@ sys.dm_sql_referencing_entities (
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-the-entities-that-refer-to-a-given-entity"></a>A. Retour des entités qui font référence à une entité donnée  
+### <a name="a-returning-the-entities-that-refer-to-a-given-entity"></a>R. Retour des entités qui font référence à une entité donnée  
  L'exemple suivant retourne les entités dans la base de données active qui font référence à la table spécifiée.  
   
 ```sql  
@@ -154,7 +154,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. Retour des entités qui font référence à un type donné  
- L'exemple suivant retourne les entités qui référencent le type d'alias `dbo.Flag`. Le jeu de résultats montre que deux procédures stockées utilisent ce type. Le type de `dbo.Flag` est également utilisé dans la définition de plusieurs colonnes dans la table `HumanResources.Employee` ; Toutefois, étant donné que le type ne se trouve pas dans la définition d’une colonne calculée, d’une contrainte CHECK ou d’une contrainte DEFAULT dans la table, aucune ligne n’est retournée pour la table `HumanResources.Employee`.  
+ L'exemple suivant retourne les entités qui référencent le type d'alias `dbo.Flag`. Le jeu de résultats montre que deux procédures stockées utilisent ce type. Le `dbo.Flag` type est également utilisé dans la définition de plusieurs colonnes dans la `HumanResources.Employee` table ; Toutefois, étant donné que le type n’est pas dans la définition d’une colonne calculée, d’une contrainte CHECK ou d’une contrainte DEFAULT dans la table, aucune `HumanResources.Employee` ligne n’est retournée pour la table.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -175,7 +175,7 @@ GO
  ``` 
  
 ## <a name="see-also"></a>Voir aussi  
- [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
+ [sys. dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   
   

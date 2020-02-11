@@ -1,5 +1,5 @@
 ---
-title: Attribut de relations (Concepteur de dimensions) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Relations d’attributs (Concepteur de dimensions) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 08d01bb328bcf3e693724475532b6c9a39c79be2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66063187"
 ---
 # <a name="attribute-relationships-dimension-designer-analysis-services---multidimensional-data"></a>Relations d'attributs (Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
@@ -28,20 +28,20 @@ ms.locfileid: "66063187"
  [Barre d'outils](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)  
  La barre d’outils permet d’effectuer des opérations sous l’onglet **Relations d’attributs** du Concepteur de dimensions.  
   
- [Diagramme des relations d’attribut](attribute-relationship-diagram-analysis-services-multidimensional-data.md)  
+ [Diagramme des relations d'attributs](attribute-relationship-diagram-analysis-services-multidimensional-data.md)  
  Le diagramme des relations d'attributs permet de consulter le diagramme des relations d'attributs et de créer, modifier et supprimer des relations d'attributs.  
   
  [Liste des attributs](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
  Cette liste permet de localiser un attribut spécifique dans le diagramme des relations d'attributs ou de définir une nouvelle relation d'attribut.  
   
- [Liste des relations d’attributs](attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Liste des relations d'attributs](attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
  Cette liste permet de localiser une relation d'attribut spécifique dans le diagramme des relations d'attributs et de gérer cette relation.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Structure de dimension &#40;Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [Traductions &#40;Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
- [Navigateur &#40;Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)   
- [Dimensions &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Structure de dimension &#40;concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Traductions &#40;concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Navigateur &#40;concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Dimensions &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensions dans les modèles multidimensionnels](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

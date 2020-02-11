@@ -1,5 +1,5 @@
 ---
-title: Classe ServerSettings | Microsoft Docs
+title: ServerSettings, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cc1ee935e19c4f44dc1c350355edd08371ea6485
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137313"
 ---
 # <a name="serversettings-class"></a>Classe ServerSettings
-  La [classe ServerSettings] serversettings-class.md) représente les paramètres du serveur sur une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  [ServerSettings Class] ServerSettings-class.md) représente les paramètres du serveur sur une instance [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]de.  
   
- La [classe ServerSettings] serversettings-class.md) vous permet d’effectuer les tâches suivantes :  
+ [ServerSettings Class] ServerSettings-class.md) vous permet d’effectuer les tâches suivantes :  
   
 -   accéder aux paramètres de l'indicateur général pour l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ;  
   

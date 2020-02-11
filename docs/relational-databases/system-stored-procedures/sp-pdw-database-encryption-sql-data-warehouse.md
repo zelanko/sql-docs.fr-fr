@@ -1,5 +1,5 @@
 ---
-title: sp_pdw_database_encryption pour (SQL Data Warehouse) | Microsoft Docs
+title: sp_pdw_database_encryption (SQL Data Warehouse) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.service: sql-data-warehouse
@@ -12,16 +12,16 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 47d7aca62ddbf2637b54d77171a08817b842555c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008914"
 ---
-# <a name="sppdwdatabaseencryption-sql-data-warehouse"></a>sp_pdw_database_encryption pour (SQL Data Warehouse)
+# <a name="sp_pdw_database_encryption-sql-data-warehouse"></a>sp_pdw_database_encryption (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Utilisez **sp_pdw_database_encryption pour** pour activer le chiffrement transparent des données pour un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] appliance. Lorsque **sp_pdw_database_encryption pour** défini sur 1, utilisez le **ALTER DATABASE** instruction pour chiffrer une base de données à l’aide du chiffrement transparent des données.  
+  Utilisez **sp_pdw_database_encryption** pour activer le chiffrement transparent des données [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] pour un appareil. Lorsque **sp_pdw_database_encryption** défini sur 1, utilisez l’instruction **ALTER DATABASE** pour chiffrer une base de données à l’aide de TDE.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,25 +32,25 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-`[ @enabled = ] enabled` Détermine si le chiffrement transparent des données est activé. *activé* est **int**, et peut prendre l’une des valeurs suivantes :  
+`[ @enabled = ] enabled`Détermine si le chiffrement transparent des données est activé. l' *option Enabled* est de **type int**et peut prendre l’une des valeurs suivantes :  
   
 -   0 = Désactivé  
   
 -   1 = Activé  
   
- L’exécution de **sp_pdw_database_encryption pour** sans paramètres retourne l’état actuel du chiffrement transparent des données sur l’appliance comme un jeu de résultats scalaires : 0 pour désactivé ou 1 pour activé.  
+ L’exécution de **sp_pdw_database_encryption** sans paramètres retourne l’état actuel de TDE sur l’appliance sous la forme d’un jeu de résultats scalaire : 0 pour désactivé, ou 1 pour activé.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- Lorsque la chiffrement transparent des données sont activée à l’aide de **sp_pdw_database_encryption pour**, la base de données tempdb est supprimé, recréé et chiffré. Pour cette raison, la chiffrement transparent des données ne peut pas être activée sur une appliance tandis que les autres sessions sont actives à l’aide de tempdb. L’activation ou désactivation de TDE sur une appliance est une action qui modifie l’état de l’appliance, dans la plupart des cas doit être effectuée qu’une seule fois dans la durée de vie du matériel et doit être exécutée lorsqu’il n’existe aucun trafic sur l’appliance.  
+ Lorsque le TDE est activé à l’aide de **sp_pdw_database_encryption**, la base de données tempdb est supprimée, recréée et chiffrée. Pour cette raison, le TDE ne peut pas être activé sur un appareil tant qu’il existe d’autres sessions actives utilisant tempdb. L’activation ou la désactivation de TDE sur un appareil est une action qui modifie l’état de l’appliance. dans la plupart des cas, il est prévu qu’elle soit exécutée une fois dans la durée de vie de l’appliance et doit être exécutée en l’absence de trafic sur l’appliance.  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l’appartenance dans le **sysadmin** rôle de base de données fixe ou **CONTROL SERVER** autorisation.  
+ Requiert l’appartenance au rôle de base de données fixe **sysadmin** ou l’autorisation **Control Server** .  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant active le chiffrement transparent des données sur l’appliance.  
+ L’exemple suivant active TDE sur l’appliance.  
   
 ```sql  
 EXEC sys.sp_pdw_database_encryption 1;  
