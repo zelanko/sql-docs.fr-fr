@@ -18,18 +18,18 @@ ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1713974a8ba90474393ff9bb65f6b98a5c74b601
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054898"
 ---
-# <a name="sphelpjobsinschedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
+# <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne des informations sur les travaux auxquels une planification particulière est attachée.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,50 +41,50 @@ sp_help_jobs_in_schedule
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @schedule_id = ] schedule_id` L’identificateur de la planification à répertorier des informations. *id_de_la_planification* est **int**, sans valeur par défaut. Soit *id_de_la_planification* ou *nom_de_la_planification* peut être spécifié.  
+`[ @schedule_id = ] schedule_id`Identificateur de la planification pour laquelle répertorier les informations. *schedule_id* est de **type int**, sans valeur par défaut. *Schedule_id* ou *schedule_name* peuvent être spécifiés.  
   
-`[ @schedule_name = ] 'schedule_name'` Le nom de la planification à répertorier des informations. *nom_de_la_planification* est **sysname**, sans valeur par défaut. Soit *id_de_la_planification* ou *nom_de_la_planification* peut être spécifié.  
+`[ @schedule_name = ] 'schedule_name'`Nom de la planification pour laquelle répertorier les informations. *schedule_name* est de **type sysname**, sans valeur par défaut. *Schedule_id* ou *schedule_name* peuvent être spécifiés.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  Retourne le jeu de résultats suivant :  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**job_id**|**uniqueidentifier**|ID unique de la tâche.|  
-|**originating_server**|**nvarchar(30)**|Nom du serveur d'origine du travail|  
-|**name**|**sysname**|Nom du travail.|  
-|**enabled**|**tinyint**|Indique si le travail est activé pour être exécuté.|  
-|**description**|**nvarchar(512)**|Description pour le travail.|  
-|**start_step_id**|**Int**|Identificateur de l'étape du travail à partir de laquelle l'exécution doit débuter.|  
-|**category**|**sysname**|Catégorie de travail.|  
-|**Propriétaire**|**sysname**|Propriétaire du travail.|  
-|**notify_level_eventlog**|**int**|Masque binaire indiquant les circonstances entraînant la consignation d'une notification d'événement dans le journal des applications Microsoft Windows. Peut prendre l'une des valeurs suivantes :<br /><br /> **0** = jamais<br /><br /> **1** = en cas de succès du travail<br /><br /> **2** = lors de l’échec du travail<br /><br /> **3** = chaque fois que le travail est terminé (quel que soit le résultat du travail)|  
+|**job_id**|**uniqueidentifier**|ID unique du travail.|  
+|**originating_server**|**nvarchar(30**|Nom du serveur d'origine du travail|  
+|**nomme**|**sysname**|Nom du travail.|  
+|**désactivé**|**tinyint**|Indique si le travail est activé pour être exécuté.|  
+|**description**|**nvarchar(512)**|Description du travail.|  
+|**start_step_id**|**int**|Identificateur de l'étape du travail à partir de laquelle l'exécution doit débuter.|  
+|**catégorie**|**sysname**|Catégorie de travail.|  
+|**du**|**sysname**|Propriétaire du travail.|  
+|**notify_level_eventlog**|**int**|Masque binaire indiquant les circonstances entraînant la consignation d'une notification d'événement dans le journal des applications Microsoft Windows. Peut prendre l'une des valeurs suivantes :<br /><br /> **0** = jamais<br /><br /> **1** = lors de la tentative d’exécution d’un travail<br /><br /> **2** = en cas d’échec du travail<br /><br /> **3** = à chaque achèvement du travail (quel que soit le résultat du travail)|  
 |**notify_level_email**|**int**|Masque de bits indiquant les conditions d'envoi d'un message électronique en fin de travail. Les valeurs possibles sont les mêmes que pour **notify_level_eventlog**.|  
-|**notify_level_netsend**|**Int**|Masque de bits précisant les conditions d'envoi d'un message réseau en fin de travail. Les valeurs possibles sont les mêmes que pour **notify_level_eventlog**.|  
+|**notify_level_netsend**|**int**|Masque de bits précisant les conditions d'envoi d'un message réseau en fin de travail. Les valeurs possibles sont les mêmes que pour **notify_level_eventlog**.|  
 |**notify_level_page**|**int**|Masque de bits indiquant les conditions d'envoi d'une page en fin de travail. Les valeurs possibles sont les mêmes que pour **notify_level_eventlog**.|  
 |**notify_email_operator**|**sysname**|Nom d'adresse électronique de l'opérateur à avertir.|  
 |**notify_netsend_operator**|**sysname**|Nom de l'utilisateur ou de l'ordinateur utilisé pour envoyer les messages sur le réseau.|  
 |**notify_page_operator**|**sysname**|Nom de l'utilisateur ou de l'ordinateur utilisé pour envoyer une page.|  
-|**delete_level**|**Int**|Masque de bits indiquant les conditions de suppression du travail en fin de travail. Les valeurs possibles sont les mêmes que pour **notify_level_eventlog**.|  
-|**date_created**|**datetime**|Date de que création du travail.|  
-|**date_modified**|**datetime**|Date de dernière modification du travail.|  
-|**version_number**|**int**|Version du travail (mise à jour automatique à chaque modification).|  
+|**delete_level**|**int**|Masque de bits indiquant les conditions de suppression du travail en fin de travail. Les valeurs possibles sont les mêmes que pour **notify_level_eventlog**.|  
+|**date_created**|**DATETIME**|Date de création du travail.|  
+|**date_modified**|**DATETIME**|Date de dernière modification du travail.|  
+|**version_number**|**int**|Version du travail (automatiquement mise à jour chaque fois que le travail est modifié).|  
 |**last_run_date**|**int**|Date du début de la dernière exécution du travail.|  
-|**last_run_time**|**Int**|Heure du début de la dernière exécution du travail.|  
-|**last_run_outcome**|**Int**|Résultat du travail lors de sa dernière exécution :<br /><br /> **0** = Échec<br /><br /> **1** = a réussi<br /><br /> **3** = annulée<br /><br /> **5** = inconnu|  
-|**next_run_date**|**Int**|Date prévue pour la prochaine exécution du travail.|  
-|**next_run_time**|**Int**|Heure prévue pour la prochaine exécution du travail.|  
+|**last_run_time**|**int**|Heure du début de la dernière exécution du travail.|  
+|**last_run_outcome**|**int**|Résultat du travail lors de sa dernière exécution :<br /><br /> **0** = échec<br /><br /> **1** = réussite<br /><br /> **3** = annulé<br /><br /> **5** = inconnu|  
+|**next_run_date**|**int**|Date prévue pour la prochaine exécution du travail.|  
+|**next_run_time**|**int**|Heure prévue pour la prochaine exécution du travail.|  
 |**next_run_schedule_id**|**int**|Numéro d'identification de la prochaine exécution planifiée.|  
-|**current_execution_status**|**int**|État en cours d’exécution.|  
+|**current_execution_status**|**int**|État de l’exécution actuelle.|  
 |**current_execution_step**|**sysname**|Étape d'exécution du travail en cours.|  
 |**current_retry_attempt**|**int**|Si le travail est en cours d'exécution et que l'étape est effectuée plusieurs fois, ce paramètre correspond à la tentative en cours.|  
-|**has_step**|**Int**|Nombre d'étapes du travail.|  
+|**has_step**|**int**|Nombre d'étapes du travail.|  
 |**has_schedule**|**int**|Nombre de planifications d'un travail.|  
 |**has_target**|**int**|Nombre de serveurs cibles d'un travail.|  
-|**type**|**int**|Type du travail :<br /><br /> **1** = travail local.<br /><br /> **2** = travail multiserveur.<br /><br /> **0** = travail ne comprend aucun serveur cible.|  
+|**entrer**|**int**|Type du travail :<br /><br /> **1** = travail local.<br /><br /> **2** = travail multiserveur.<br /><br /> **0** = le travail n’a pas de serveurs cibles.|  
   
 ## <a name="remarks"></a>Notes  
  Cette procédure affiche des informations sur les travaux attachés à la planification spécifiée.  
@@ -98,9 +98,9 @@ sp_help_jobs_in_schedule
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Membres de **SQLAgentUserRole** peut uniquement afficher l’état des travaux dont ils sont propriétaires.  
+ Les membres de **SQLAgentUserRole** peuvent uniquement afficher l’état des travaux dont ils sont propriétaires.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant affiche les travaux attachés à la planification `NightlyJobs`.  
@@ -115,7 +115,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de SQL Server Agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [SQL Server Agent des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   

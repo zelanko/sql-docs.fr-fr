@@ -1,5 +1,5 @@
 ---
-title: Suppression de SSMA pour DB2 composants (DB2ToSQL) | Microsoft Docs
+title: Suppression de SSMA pour les composants DB2 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,30 +10,30 @@ ms.assetid: 4ee0d698-6246-48eb-b963-d62be81cab6a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 25c8222009c2ea9358c0bab2ad5ae077588fb3cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68060097"
 ---
-# <a name="removing-ssma-for-db2-components-db2tosql"></a>Suppression de SSMA pour DB2 composants (DB2ToSQL)
-Lorsque vous avez terminé migration bases de données de DB2 vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous souhaiterez peut-être désinstaller des composants SSMA. Vous pouvez désinstaller les composants du client à tout moment. Toutefois, vous ne devez pas désinstaller le pack d’extension à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sauf si vos bases de données migrées ne plus utilisent les fonctions dans le **ssma_DB2** schéma de la **sysdb** base de données.  
+# <a name="removing-ssma-for-db2-components-db2tosql"></a>Suppression de SSMA pour les composants DB2 (DB2ToSQL)
+Une fois que vous avez terminé la migration des bases [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de données de DB2 vers, vous souhaiterez peut-être désinstaller les composants SSMA. Vous pouvez désinstaller les composants du client à tout moment. Toutefois, vous ne devez pas désinstaller le Pack [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’extension de, sauf si vos bases de données migrées n’utilisent plus de fonctions dans le schéma **ssma_DB2** de la base de données **sysdb** .  
   
-## <a name="uninstalling-the-ssma-for-db2-client"></a>Désinstallation de SSMA pour DB2 Client  
-Vous pouvez désinstaller SSMA à l’aide de **Ajout / Suppression de programmes**.  
+## <a name="uninstalling-the-ssma-for-db2-client"></a>Désinstallation du client SSMA pour DB2  
+Vous pouvez désinstaller SSMA à l’aide d' **Ajout/suppression de programmes**.  
   
 **Pour désinstaller SSMA**  
   
-1.  Dans le panneau de configuration, ouvrez **Ajout / Suppression de programmes**.  
+1.  Dans le Panneau de configuration, ouvrez **Ajout/Suppression de programmes**.  
   
-2.  Sélectionnez  **[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’Assistant de Migration pour DB2**, puis cliquez sur **supprimer**.  
+2.  ** [!INCLUDE[msCoName](../../includes/msconame_md.md)] Sélectionnez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant Migration pour DB2**, puis cliquez sur **supprimer**.  
   
 3.  Pour confirmer que vous souhaitez désinstaller SSMA, cliquez sur **Oui**.  
   
-## <a name="uninstalling-the-extension-pack"></a>Désinstallation du Pack d’Extension  
-Si vous êtes sûr vos bases de données migrées n’utilisent pas les objets dans le **sysdb.ssma_DB2** schéma, vous pouvez supprimer le pack d’extension en le supprimant du schéma : il n’y a aucune désinstallation de Windows  
+## <a name="uninstalling-the-extension-pack"></a>Désinstallation du pack d’extension  
+Si vous êtes sûr que vos bases de données migrées n’utilisent pas d’objets dans le schéma **sysdb. ssma_DB2** , vous pouvez supprimer le pack d’extension en le supprimant du schéma-il n’y a pas de désinstallation de Windows  
   
 ## <a name="see-also"></a>Voir aussi  
-[Installation de SSMA pour DB2 Client &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)  
+[Installation de SSMA pour le client DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)  
 [Installation des composants SSMA sur SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
   

@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8247260f7a0233e255375143c23d5bc1c9e22c28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68070192"
 ---
 # <a name="drop-schema-transact-sql"></a>DROP SCHEMA (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68070192"
 
   Permet de supprimer un schéma de la base de données.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,7 +52,7 @@ DROP SCHEMA schema_name
   
 ## <a name="arguments"></a>Arguments  
  *IF EXISTS*  
- **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Supprime, de manière conditionnelle, le schéma uniquement s’il existe déjà.  
   
@@ -64,7 +64,7 @@ DROP SCHEMA schema_name
   
  Des informations sur les schémas sont consultables dans la vue de catalogue [sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md).  
   
- **Attention** [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
+ **Caution** [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CONTROL sur le schéma ou l'autorisation ALTER ANY SCHEMA sur la base de données.  

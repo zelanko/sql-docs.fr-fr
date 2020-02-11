@@ -1,5 +1,5 @@
 ---
-title: L’exécution de procédures | Microsoft Docs
+title: Exécution des procédures | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,25 +14,25 @@ ms.assetid: a75e497a-4661-438a-a10e-f598c65f81be
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98c36f02bde63862748eef14a8cbae063ca4e472
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069952"
 ---
 # <a name="executing-procedures"></a>Exécution de procédures
-ODBC définit une séquence d’échappement standard pour l’exécution de procédures. Pour connaître la syntaxe de cette séquence et un exemple de code qui l’utilise, consultez [les appels de procédure](../../../odbc/reference/develop-app/procedure-calls.md).  
+ODBC définit une séquence d’échappement standard pour l’exécution des procédures. Pour obtenir la syntaxe de cette séquence et un exemple de code qui l’utilise, consultez [appels de procédure](../../../odbc/reference/develop-app/procedure-calls.md).  
   
  Pour exécuter une procédure, une application effectue les actions suivantes :  
   
-1.  Définit les valeurs des paramètres. Pour plus d’informations, consultez [paramètres d’instruction](../../../odbc/reference/develop-app/statement-parameters.md), plus loin dans cette section.  
+1.  Définit les valeurs de tous les paramètres. Pour plus d’informations, consultez [paramètres des instructions](../../../odbc/reference/develop-app/statement-parameters.md), plus loin dans cette section.  
   
-2.  Appels **SQLExecDirect** et lui passe une chaîne contenant l’instruction SQL qui exécute la procédure. Cette instruction peut utiliser la séquence d’échappement définie par la syntaxe ODBC ou propres au SGBD ; instructions qui utilisent la syntaxe de SGBD spécifiques ne sont pas interopérables.  
+2.  Appelle **SQLExecDirect** et lui transmet une chaîne contenant l’instruction SQL qui exécute la procédure. Cette instruction peut utiliser la séquence d’échappement définie par ODBC ou la syntaxe spécifique au SGBD. les instructions qui utilisent la syntaxe propre au SGBD ne sont pas interopérables.  
   
-3.  Lorsque **SQLExecDirect** est appelée, le pilote :  
+3.  Lorsque **SQLExecDirect** est appelé, le pilote :  
   
-    -   Récupère les valeurs de paramètre en cours et les convertit en fonction des besoins. Pour plus d’informations, consultez [paramètres d’instruction](../../../odbc/reference/develop-app/statement-parameters.md), plus loin dans cette section.  
+    -   Récupère les valeurs de paramètres actuelles et les convertit si nécessaire. Pour plus d’informations, consultez [paramètres des instructions](../../../odbc/reference/develop-app/statement-parameters.md), plus loin dans cette section.  
   
-    -   Appelle la procédure dans la source de données et envoie les valeurs de paramètre converti. Comment le pilote appelle la procédure est spécifique au pilote. Par exemple, il peut modifier l’instruction SQL pour utiliser la grammaire SQL de la source de données et de soumettre cette instruction pour l’exécution, ou elle peut appeler la procédure directement à l’aide d’un mécanisme d’appel de procédure distante (RPC) est défini dans le protocole de flux de données du SGBD.  
+    -   Appelle la procédure dans la source de données et l’envoie aux valeurs de paramètre converties. La façon dont le pilote appelle la procédure est spécifique au pilote. Par exemple, il peut modifier l’instruction SQL pour utiliser la grammaire SQL de la source de données et envoyer cette instruction pour exécution, ou elle peut appeler la procédure directement à l’aide d’un mécanisme d’appel de procédure distante (RPC) défini dans le protocole de flux de données du SGBD.  
   
-    -   Retourne les valeurs des paramètres de sortie ou aucune entrée/sortie ou la valeur de retour de procédure, en supposant que la procédure réussit. Ces valeurs ne soient pas disponibles qu’après le traitement de tous les autres résultats (nombre de lignes et des jeux de résultats) générés par la procédure. Si la procédure échoue, le pilote retourne les erreurs.
+    -   Retourne les valeurs de tous les paramètres d’entrée/sortie ou de sortie ou la valeur de retour de la procédure, en supposant que la procédure aboutisse. Ces valeurs peuvent ne pas être disponibles tant que tous les autres résultats (nombres de lignes et jeux de résultats) générés par la procédure n’ont pas été traités. Si la procédure échoue, le pilote retourne les erreurs éventuelles.

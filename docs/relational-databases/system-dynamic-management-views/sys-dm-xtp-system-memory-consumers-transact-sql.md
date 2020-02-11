@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xtp_system_memory_consumers (Transact-SQL) | Microsoft Docs
+title: sys. dm_xtp_system_memory_consumers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,16 +19,16 @@ ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 83e9368b562a7ac200171dc814830b21d677770a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090093"
 ---
-# <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
+# <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Indique les consommateurs de mémoire au niveau système pour l'[!INCLUDE[hek_2](../../includes/hek-2-md.md)]. La mémoire pour ces consommateurs vient du pool par défaut (lorsque l’allocation est dans le contexte d’un thread utilisateur) ou du pool interne (si l’allocation est dans le contexte d’un thread système).  
+  Indique les consommateurs de mémoire au niveau système pour l'[!INCLUDE[hek_2](../../includes/hek-2-md.md)]. La mémoire pour ces consommateurs provient du pool par défaut (lorsque l’allocation est dans le contexte d’un thread utilisateur) ou à partir du pool interne (si l’allocation est dans le contexte d’un thread système).  
   
 ```  
 -- system memory consumers @ instance  
@@ -37,19 +37,19 @@ select * from sys.dm_xtp_system_memory_consumers
   
  Pour plus d’informations, consultez [OLTP en mémoire &#40;optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nom de la colonne|type|Description|  
+|Nom de la colonne|Type|Description|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|ID interne du consommateur de mémoire.|  
-|memory_consumer_type|**Int**|Entier qui représente le type de consommateur de mémoire avec l’une des valeurs suivantes :<br /><br /> 0 - ne doit pas être affiché. Regroupe l'utilisation de la mémoire de deux consommateurs ou plus.<br /><br /> 1 - LOOKASIDE : Suit la consommation de mémoire pour un système lookaside.<br /><br /> 2 - VARHEAP : Effectue le suivi de la consommation de mémoire pour un segment de longueur variable.<br /><br /> 4 - pool de pages d’e/s : Effectue le suivi de la consommation de mémoire pour un pool de pages système utilisé pour les opérations d’e/s.|  
-|memory_consumer_type_desc|**nvarchar(16)**|Description du type de consommateur de mémoire :<br /><br /> 0 - ne doit pas être affiché.<br /><br /> 1 - LOOKASIDE<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
-|memory_consumer_desc|**nvarchar(64)**|Description de l'instance de consommateur de mémoire :<br /><br /> VARHEAP : <br />Segment du système. Usage universel. Actuellement utilisé uniquement pour allouer des éléments de travail de garbage collection.<br />-ou-<br />Segment lookaside. Utilisé par les looksides lorsque le nombre d'éléments contenus dans la liste de disponibilité atteint un atteint une extrémité de fin prédéfinie (en règle générale environ 5 000 éléments).<br /><br /> PGPOOL : Pour système d’e/s pools il existe trois tailles différentes : Pool de pages système 4K, pool de pages système 64 K et système 256 Ko de la page pool.|  
+|memory_consumer_type|**int**|Entier qui représente le type de consommateur de mémoire avec l’une des valeurs suivantes :<br /><br /> 0-il ne doit pas être affiché. Regroupe l'utilisation de la mémoire de deux consommateurs ou plus.<br /><br /> 1-a : effectue le suivi de la consommation de mémoire pour un système.<br /><br /> 2-VARHEAP : effectue le suivi de la consommation de mémoire pour un segment de longueur variable.<br /><br /> 4-pool de pages d’e/s : effectue le suivi de la consommation de mémoire pour un pool de pages système utilisé pour les opérations d’e/s.|  
+|memory_consumer_type_desc|**nvarchar (16)**|Description du type de consommateur de mémoire :<br /><br /> 0-il ne doit pas être affiché.<br /><br /> 1-EN PARALLÈLE<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
+|memory_consumer_desc|**nvarchar (64)**|Description de l'instance de consommateur de mémoire :<br /><br /> VARHEAP <br />Segment du système. Usage général. Actuellement utilisé uniquement pour allouer des éléments de travail de garbage collection.<br />OU<br />Segment lookaside. Utilisé par les looksides lorsque le nombre d'éléments contenus dans la liste de disponibilité atteint un atteint une extrémité de fin prédéfinie (en règle générale environ 5 000 éléments).<br /><br /> PGPOOL : pour les pools de systèmes d’e/s, il existe trois tailles différentes : le pool de pages du système 4K, le pool de pages du système 64 K et le pool de pages système 256 K.|  
 |lookaside_id|**bigint**|ID du fournisseur de mémoire lookaside, ThreadLocal.|  
 |pagepool_id|**bigint**|ID du fournisseur de mémoire de pool de pages, ThreadLocal.|  
 |allocated_bytes|**bigint**|Nombre d'octets réservés pour ce consommateur.|  
 |used_bytes|**bigint**|Octets utilisés par ce consommateur. S'applique uniquement aux consommateurs de mémoire varheap.|  
 |allocation_count|**int**|Nombre d'allocations.|  
-|partition_count|**Int**|À usage interne uniquement|  
-|sizeclass_count|**Int**|À usage interne uniquement|  
+|partition_count|**int**|À usage interne uniquement|  
+|sizeclass_count|**int**|À usage interne uniquement|  
 |min_sizeclass|**int**|À usage interne uniquement|  
 |max_sizeclass|**int**|À usage interne uniquement|  
 |memory_consumer_address|**varbinary**|Adresse interne du consommateur.|  
@@ -105,6 +105,6 @@ total_allocated_MB   total_used_MB
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues de gestion dynamique de Table optimisé en mémoire &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Vues de gestion dynamique des tables optimisées en mémoire &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

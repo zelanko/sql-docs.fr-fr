@@ -1,5 +1,5 @@
 ---
-title: Fonction String (XQuery) | Microsoft Docs
+title: Fonction de chaîne (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9cb30d81102c17f2c3ce04b31ac7ff2b9689343e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038943"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>Fonctions d’accesseur de données : string (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retourne la valeur de *$arg* représenté sous forme de chaîne.  
+  Retourne la valeur de *$arg* représentée sous forme de chaîne.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,19 +43,19 @@ fn:string($arg as item()?) as xs:string
   
 -   Si *$arg* est la séquence vide, la chaîne de longueur nulle est retournée.  
   
--   Si *$arg* est un nœud, la fonction retourne la valeur de chaîne du nœud qui est obtenu à l’aide de l’accesseur de la valeur de chaîne. Celui-ci est défini dans les spécifications W3C XQuery 1.0 et XPath 2.0 Data Model.  
+-   Si *$arg* est un nœud, la fonction retourne la valeur de chaîne du nœud obtenu à l’aide de l’accesseur de valeur de chaîne. Celui-ci est défini dans les spécifications W3C XQuery 1.0 et XPath 2.0 Data Model.  
   
--   Si *$arg* est une valeur atomique, la fonction retourne la même chaîne est retournée par l’expression de cast en tant que **xs : String**, *$arg*, sauf si spécifié autrement.  
+-   Si *$arg* est une valeur atomique, la fonction retourne la même chaîne que celle retournée par la conversion de l’expression en tant que **XS : String**, *$arg*, sauf indication contraire.  
   
--   Si le type de *$arg* est **xs : anyURI**, l’URI est converti en une chaîne sans séquence d’échappement des caractères spéciaux.  
+-   Si le type de *$arg* est **XS : anyURI**, l’URI est converti en une chaîne sans caractères spéciaux d’échappement.  
   
--   Dans cette implémentation, **fn :String()** sans argument peut uniquement être utilisé dans le contexte d’un prédicat dépendant du contexte. Autrement dit, elle ne peut être utilisée qu'à l'intérieur de crochets ([ ]).  
+-   Cette implémentation, **FN : String ()** sans argument ne peut être utilisée que dans le contexte d’un prédicat dépendant du contexte. Autrement dit, elle ne peut être utilisée qu'à l'intérieur de crochets ([ ]).  
   
 ## <a name="examples"></a>Exemples  
- Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type dans la base de données AdventureWorks.  
+ Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
 ### <a name="a-using-the-string-function"></a>R. Utilisation de la fonction string  
- La requête suivante extrait le <`Features`> nœud d’élément enfant de la <`ProductDescription`> élément.  
+ La requête suivante récupère le <`Features`> nœud d’élément enfant de l’élément `ProductDescription` <>.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -79,7 +79,7 @@ WHERE ProductModelID=19
 </PD:Features>  
 ```  
   
- Si vous spécifiez le **string()** (fonction), vous recevez la valeur de chaîne du nœud spécifié.  
+ Si vous spécifiez la fonction **String ()** , vous recevez la valeur de chaîne du nœud spécifié.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -98,7 +98,7 @@ These are the product highlights.
 ```  
   
 ### <a name="b-using-the-string-function-on-various-nodes"></a>B. Utilisation de la fonction string sur différents nœuds  
- Dans l'exemple suivant, une instance XML est affectée à une variable de type xml. Les requêtes sont spécifiées pour illustrer le résultat de l’application **string()** à différents nœuds.  
+ Dans l'exemple suivant, une instance XML est affectée à une variable de type xml. Les requêtes sont spécifiées pour illustrer le résultat de l’application de **String ()** à différents nœuds.  
   
 ```  
 declare @x xml  
@@ -118,7 +118,7 @@ just text
 select @x.query('string(/)')  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 This is a comment 10  
@@ -138,7 +138,7 @@ select @x.query('string(/processing-instruction()[1])')
 select @x.query('string(/comment()[1])')  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 This is a comment   

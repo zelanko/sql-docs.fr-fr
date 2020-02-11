@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493775"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Définition et exploration de perspectives
@@ -33,13 +33,13 @@ ms.locfileid: "69493775"
   
      Tous les objets et leurs types d’objets apparaissent dans le volet **Perspectives** , comme le montre l’image suivante.  
   
-     ![Volet perspectives du concepteur de cube](../../2014/tutorials/media/l9-perspectives-1.gif "Volet perspectives du concepteur de cube")  
+     ![Volet Perspectives du Concepteur de cube](../../2014/tutorials/media/l9-perspectives-1.gif "Volet Perspectives du Concepteur de cube")  
   
 2.  Dans la barre d’outils de l’onglet **Perspectives** , cliquez sur **Nouvelle perspective** .  
   
      Une nouvelle perspective apparaît dans la colonne **Nom de perspective** avec le nom de perspective par défaut de **Perspective**, comme le montre l’image suivante. Observez que les cases à cocher de tous les objets sont activées ; cette perspective est identique à la perspective par défaut de ce cube jusqu'à ce que vous désactiviez la case à cocher d'un objet.  
   
-     ![Nouvelle perspective dans la colonne nom de la perspective](../../2014/tutorials/media/l9-perspectives-2.gif "Nouvelle perspective dans la colonne nom de la perspective")  
+     ![Nouvelle perspective dans la colonne Nom de perspective](../../2014/tutorials/media/l9-perspectives-2.gif "Nouvelle perspective dans la colonne Nom de perspective")  
   
 3.  Remplacez le nom de la `Internet Sales`perspective par.  
   
@@ -54,35 +54,35 @@ ms.locfileid: "69493775"
   
     -   `Reseller Sales`Groupe de mesures  
   
-    -   Groupe de mesures**Sales Quotas**  
+    -   Groupe de mesures **Sales quotas**  
   
-    -   Groupe de mesures**Sales Quotas 1**  
+    -   Groupe de mesures **Sales quotas 1**  
   
-    -   Dimension de cube**Reseller**  
+    -   Dimension de cube **Reseller**  
   
-    -   Dimension de cube**Reseller Geography**  
+    -   Dimension du cube de **géographie du revendeur**  
   
-    -   Dimension de cube**Sales Territory**  
+    -   Dimension de cube de **secteur de vente**  
   
-    -   Dimension de cube**Employee**  
+    -   Dimension de cube **Employee**  
   
-    -   Dimension de cube**Promotion**  
+    -   Dimension de cube de **promotion**  
   
-    -   Indicateur de performance clé**Reseller Revenue**  
+    -   **Revenus du revendeur** INDICATEUR  
   
-    -   Jeu nommé**Large Resellers**  
+    -   Jeu nommé **grands revendeurs**  
   
-    -   Membre calculé**Total Sales Amount**  
+    -   Membre calculé **Total Sales Amount**  
   
-    -   Membre calculé**Total Product Cost**  
+    -   Membre calculé du **coût total du produit**  
   
-    -   Membre calculé**Reseller GPM**  
+    -   Membre calculé **Reseller GPM**  
   
-    -   Membre calculé**Total GPM**  
+    -   Membre calculé **total GPM**  
   
-    -   Membre calculé**Reseller Sales Ratio to All Products**  
+    -   Membre calculé **Reseller Sales Ratio to All Products**  
   
-    -   Membre calculé**Total Sales Ratio to All Products**  
+    -   Membre calculé **Total Sales Ratio to All Products**  
   
      Ces objets ne concernent pas les ventes par Internet.  
   
@@ -103,27 +103,27 @@ ms.locfileid: "69493775"
   
     -   `Internet Sales`Groupe de mesures  
   
-    -   Groupe de mesures**Internet Sales Reason**  
+    -   Groupe de mesures **Internet Sales Reason**  
   
-    -   Dimension de cube**Customer**  
+    -   Dimension de cube **Customer**  
   
-    -   Dimension de cube**Internet Sales Order Details**  
+    -   Dimension de cube **Internet Sales Order Details**  
   
-    -   Dimension de cube**Sales Reason**  
+    -   Dimension de cube **Sales Reason**  
   
-    -   Action d’extraction**Internet Sales Details Drillthrough Action**  
+    -   Action d’extraction de l’action d’extraction **Internet Sales Details**  
   
-    -   Membre calculé**Total Sales Amount**  
+    -   Membre calculé **Total Sales Amount**  
   
-    -   Membre calculé**Total Product Cost**  
+    -   Membre calculé du **coût total du produit**  
   
-    -   Membre calculé**Internet GPM**  
+    -   Membre calculé **Internet GPM**  
   
-    -   Membre calculé**Total GPM**  
+    -   Membre calculé **total GPM**  
   
-    -   Membre calculé**Internet Sales Ratio to All Products**  
+    -   Membre calculé **Internet Sales Ratio to All Products**  
   
-    -   Membre calculé**Total Sales Ratio to All Products**  
+    -   Membre calculé **Total Sales Ratio to All Products**  
   
      Ces objets ne concernent pas les ventes de revendeurs.  
   
@@ -142,23 +142,23 @@ ms.locfileid: "69493775"
   
     -   `Reseller Sales`Groupe de mesures  
   
-    -   Groupe de mesures**Internet Sales Reason**  
+    -   Groupe de mesures **Internet Sales Reason**  
   
-    -   Groupe de mesures**Sales Quotas**  
+    -   Groupe de mesures **Sales quotas**  
   
-    -   Groupe de mesures**Sales Quotas1**  
+    -   Groupe de mesures **Sales Quotas1**  
   
-    -   Dimension de cube**Internet Sales Order Details**  
+    -   Dimension de cube **Internet Sales Order Details**  
   
-    -   Dimension de cube**Sales Reason**  
+    -   Dimension de cube **Sales Reason**  
   
-    -   Action d’extraction**Internet Sales Details Drillthrough Action**  
+    -   Action d’extraction de l’action d’extraction **Internet Sales Details**  
   
 4.  Activez la case à cocher pour les objets suivants :  
   
-    -   Mesure**Internet Sales Count**  
+    -   Mesure **Internet Sales Count**  
   
-    -   Mesure**Reseller Sales Count**  
+    -   Mesure **Reseller Sales Count**  
   
 ## <a name="browsing-the-cube-through-each-perspective"></a>Exploration du cube à travers chaque perspective  
   
@@ -188,7 +188,7 @@ ms.locfileid: "69493775"
   
      Observez que dans chacun de ces groupes de mesures, une seule mesure apparaît, comme le montre l'image suivante.  
   
-     Mesures relatives aux ventes sur ![Internet et](../../2014/tutorials/media/l9-perspectives-4.gif " aux revendeurs Mesures relatives aux ventes sur Internet et") aux revendeurs  
+     ![Mesures Internet Sales et Reseller Sales](../../2014/tutorials/media/l9-perspectives-4.gif "Mesures Internet Sales et Reseller Sales")  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
  [Définition et exploration de traductions](lesson-9-2-defining-and-browsing-translations.md)  

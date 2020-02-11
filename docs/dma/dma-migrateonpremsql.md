@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: fc78354e3b422342e376bd7ebe75233dcd3ffaee
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056535"
 ---
 # <a name="upgrade-sql-server-using-the-data-migration-assistant"></a>Mettre à niveau SQL Server à l’aide de la Assistant Migration de données
@@ -27,13 +27,13 @@ Le Assistant Migration de données fournit des évaluations transcohérentes de 
 
 Cet article fournit des instructions pas à pas pour la mise à niveau de SQL Server local vers des versions ultérieures de SQL Server ou vers des SQL Server sur des machines virtuelles Azure à l’aide de la Assistant Migration de données.
 
-## <a name="create-a-new-migration-project"></a>Créer un projet de migration
+## <a name="create-a-new-migration-project"></a>Créer un nouveau projet de migration
 
 1. Dans le volet gauche, sélectionnez **nouveau** (+), puis le type projet de **migration** .
 
 2. Définissez le type de serveur source et cible sur **SQL Server** si vous effectuez une mise à niveau d’une SQL Server locale vers une version ultérieure du SQL Server local.
 
-3. Sélectionnez **Créer**.
+3. Sélectionnez **Create** (Créer).
 
    ![Créer un projet de migration](../dma/media/NewCreate.png)
 
@@ -109,6 +109,6 @@ Vous pouvez surveiller la progression de la migration dans la page **afficher le
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Assistant Migration de données (DMA)](../dma/dma-overview.md)
+- [Assistant Migration de données (DMA)](../dma/dma-overview.md)
 - [Assistant Migration de données : paramètres de configuration](../dma/dma-configurationsettings.md)
 - [Assistant Migration de données : meilleures pratiques](../dma/dma-bestpractices.md)

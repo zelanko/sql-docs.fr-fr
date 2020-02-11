@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3bbf6c9640882ffca2bbdbf82b2ef2667c394096
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66090699"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>Vérifier et s'abonner à la stratégie Nom financier
@@ -22,9 +22,9 @@ ms.locfileid: "66090699"
   
 ### <a name="to-subscribe-to-the-finance-policy-category"></a>Pour abonner la base de données à la catégorie de stratégies Finance  
   
-1.  Dans l’Explorateur d’objets, développez **bases de données**, avec le bouton droit `Finance`, pointez sur **stratégies**, puis cliquez sur **catégories**.  
+1.  Dans l’Explorateur d’objets, développez **bases de données**, cliquez `Finance`avec le bouton droit, pointez sur **stratégies**, puis cliquez sur **catégories**.  
   
-2.  Sélectionnez le **abonné** case à cocher pour le `Finance` catégorie.  
+2.  Activez la **** case à cocher abonné `Finance` pour la catégorie.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -62,15 +62,16 @@ ms.locfileid: "66090699"
   
 2.  Dans la boîte de dialogue **Administration des catégories de stratégie** , recherchez la catégorie Finance et cochez la case **Abonnements à la base de données autorisée** pour la catégorie Finance.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Désormais, la catégorie Finance s’applique à toutes les bases de données, mais la condition que vous avez créée restreint la stratégie Nom financier à la base de données Finance. Cela démontre la manière dont vous pouvez utiliser des combinaisons de conditions complexes pour cibler des stratégies pour une application correcte sur de nombreux serveurs.  
+3.  
+  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Désormais, la catégorie Finance s’applique à toutes les bases de données, mais la condition que vous avez créée restreint la stratégie Nom financier à la base de données Finance. Cela démontre la manière dont vous pouvez utiliser des combinaisons de conditions complexes pour cibler des stratégies pour une application correcte sur de nombreux serveurs.  
   
-## <a name="summary"></a>Récapitulatif  
+## <a name="summary"></a>Résumé  
  Ce didacticiel vous a montré comment créer des conditions, des stratégies et des groupes de stratégies de la Gestion basée sur des stratégies et comment appliquer des filtres et vérifier la conformité des cibles de la Gestion basée sur des stratégies.  
   
 ## <a name="next"></a>Suivant  
- Ce didacticiel est terminé. Pour revenir au début, cliquez sur [didacticiel : Administration de serveurs à l’aide de gestion basée sur la stratégie](tutorial-administering-servers-by-using-policy-based-management.md).  
+ Ce didacticiel est terminé. Pour revenir au début, cliquez sur [Didacticiel : Administration de serveurs à l’aide de la Gestion basée sur des stratégies](tutorial-administering-servers-by-using-policy-based-management.md).  
   
- Pour obtenir la liste des didacticiels, consultez [didacticiels pour SQL Server 2014](../../tutorials/tutorials-for-sql-server-2014.md).  
+ Pour obtenir la liste des didacticiels, consultez [les didacticiels pour SQL Server 2014](../../tutorials/tutorials-for-sql-server-2014.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Administrer des serveurs à l'aide de la Gestion basée sur des stratégies](administer-servers-by-using-policy-based-management.md)  

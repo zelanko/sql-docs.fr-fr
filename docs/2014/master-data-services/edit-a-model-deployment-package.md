@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 82f3e362643df17d9105ad6987a851211bd22865
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479499"
 ---
 # <a name="edit-a-model-deployment-package"></a>Modifier un package de déploiement de modèle
@@ -24,7 +24,7 @@ ms.locfileid: "65479499"
   
  Vous utilisez l'Éditeur de package de modèle pour sélectionner des parties d'un modèle dans un fichier de package créé par l'outil MDSModelDeploy (qui crée un fichier de package incluant des objets et données) ou l'assistant Déploiement de modèle (qui crée un fichier comprenant uniquement la structure de modèle). Après modification du modèle dans le package, vous utilisez l'outil MDSModelDeploy pour déployer les objets et données, ou l'assistant Déploiement de modèle pour déployer uniquement la structure du modèle.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md).  
@@ -37,9 +37,9 @@ ms.locfileid: "65479499"
   
 2.  Exécutez ModelPackageEditor.exe.  
   
-3.  Dans l'assistant Éditeur de package de modèle, cliquez sur **Parcourir**, accédez au dossier contenant vos packages, sélectionnez un package, puis cliquez sur **Ouvrir**. Cliquer sur **Suivant**.  
+3.  Dans l'assistant Éditeur de package de modèle, cliquez sur **Parcourir**, accédez au dossier contenant vos packages, sélectionnez un package, puis cliquez sur **Ouvrir**. Cliquez sur **Suivant**.  
   
-4.  Sélectionnez les entités, hiérarchies dérivées, vues d'abonnements ou règles d'entreprise à déployer. Désélectionnez celles que vous ne souhaitez pas déployer. Cliquer sur **Suivant**.  
+4.  Sélectionnez les entités, hiérarchies dérivées, vues d'abonnements ou règles d'entreprise à déployer. Désélectionnez celles que vous ne souhaitez pas déployer. Cliquez sur **Suivant**.  
   
 5.  Vérifiez la liste des sélections à déployer. Pour effectuer une modification, cliquez sur **Précédent** et répétez l'étape 4.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "65479499"
   
 ## <a name="next-steps"></a>Étapes suivantes  
   
--   [Déployer un package de déploiement de modèle à l’aide de l’Assistant](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
+-   [Déployer un package de déploiement de modèle à l'aide de l'Assistant](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   
 -   [Déployer un package de déploiement de modèle à l'aide de MDSModelDeploy](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   

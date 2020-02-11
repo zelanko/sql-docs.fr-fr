@@ -15,32 +15,32 @@ ms.assetid: b7e48e9c-8912-4003-b4ef-30aa44de06a7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bf2ef856d8970bf60b3f1f329c57a2379eb528dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094026"
 ---
 # <a name="installing-odbc-components"></a>Installation des composants ODBC
 > [!NOTE]  
->  ODBC à partir de Windows XP et Windows Server 2003, est inclus dans le système d’exploitation Windows. Vous devez explicitement uniquement installer ODBC dans les versions antérieures de Windows.  
+>  À compter de Windows XP et de Windows Server 2003, ODBC est inclus dans le système d’exploitation Windows. Vous devez uniquement installer explicitement ODBC sur les versions antérieures de Windows.  
   
- Cette section décrit comment les composants ODBC sont installées et supprimées. Étant donné que les développeurs de pilotes toujours installer un composant ODBC (leurs pilotes), dont ils ont besoin de lire cette section. Les développeurs d’applications doivent lire cette section uniquement si ils proposent des composants ODBC avec leurs applications. Composants ODBC incluent le Gestionnaire de pilotes, pilotes, traducteurs, le programme d’installation DLL, la bibliothèque de curseurs et les fichiers associés. Dans le cadre de cette section, les applications ODBC ne sont pas considérés comme des composants ODBC.  
+ Cette section décrit comment installer et supprimer des composants ODBC. Étant donné que les développeurs de pilotes installent toujours un composant ODBC (leur pilote), ils doivent lire cette section. Les développeurs d’applications doivent lire cette section uniquement s’ils expédient des composants ODBC avec leurs applications. Les composants ODBC incluent le gestionnaire de pilotes, les pilotes, les traducteurs, la DLL du programme d’installation, la bibliothèque de curseurs et tous les fichiers associés. Dans le cadre de cette section, les applications ODBC ne sont pas considérées comme des composants ODBC.  
   
 > [!NOTE]  
->  Cette section est spécifique aux plateformes de Microsoft Windows. Comment les composants ODBC sont installés sur d’autres plates-formes sont spécifique à la plateforme.  
+>  Cette section est spécifique aux plates-formes Microsoft Windows. La façon dont les composants ODBC sont installés sur d’autres plateformes est spécifique à la plateforme.  
   
- Composants ODBC sont installées et supprimées sur une base de composant par composant, pas une base de fichier par fichier. Par exemple, si un traducteur compose du traducteur lui-même et un nombre de fichiers de données, ces fichiers sont installés et supprimés en tant que groupe ; non, ils doivent être installés et supprimés sur une base de fichier par fichier. La raison à cela consiste à s’assurer que les composants complets uniquement existent sur le système.  
+ Les composants ODBC sont installés et supprimés sur une base composant par composant, et non fichier par fichier. Par exemple, si un traducteur se compose du traducteur lui-même et d’un certain nombre de fichiers de données, ces fichiers sont installés et supprimés en tant que groupe. elles ne doivent pas être installées et supprimées fichier par fichier. Cela a pour but de s’assurer que seuls les composants complets existent sur le système.  
   
- Dans le cadre de l’installation et la suppression de composants, les éléments suivants sont définis comme des composants ODBC :  
+ Dans le cadre de l’installation et de la suppression de composants, les éléments suivants sont définis comme étant des composants ODBC :  
   
--   **Composants principaux.** Le Gestionnaire de pilotes, la bibliothèque de curseurs, la DLL d’installation et n’importe quel autre liés fichiers constituent les principaux composants et doivent être installés et supprimés en tant que groupe.  
+-   **Composants principaux.** Le gestionnaire de pilotes, la bibliothèque de curseurs, la DLL du programme d’installation et tous les autres fichiers associés composent les composants principaux et doivent être installés et supprimés en tant que groupe.  
   
--   **Pilotes.** Chaque pilote est un composant distinct.  
+-   **Stratégiques.** Chaque pilote est un composant distinct.  
   
--   **Traducteurs.** Chaque traduction est un composant distinct.  
+-   **Traducteurs.** Chaque traducteur est un composant distinct.  
   
- Avec la prise en charge d’Unicode dans ODBC 3.5 et versions ultérieures, une attention doit être accordée à l’aide de composants OLE DB avec ODBC. La version 1.1 du fournisseur OLE DB pour ODBC a été écrite dans les spécifications Unicode spécifiques dans ODBC 3.0. Étant donné que ces spécifications sont modifiées dans ODBC 3.5, il est nécessaire d’avoir la version 1.5 ou version ultérieure du fournisseur lors de l’utilisation d’ODBC 3.5 et versions ultérieures. Cette section contient les rubriques suivantes.  
+ Avec la prise en charge d’Unicode dans ODBC 3,5 et versions ultérieures, vous devez tenir compte de l’utilisation de OLE DB composants avec ODBC. La version 1,1 du fournisseur OLE DB pour ODBC a été écrite dans des spécifications Unicode spécifiques dans ODBC 3,0. Étant donné que ces spécifications ont changé dans ODBC 3,5, il est nécessaire d’avoir la version 1,5 ou ultérieure du fournisseur lors de l’utilisation de ODBC 3,5 et versions ultérieures. Cette section contient les rubriques suivantes :  
   
 -   [Composants d’installation](../../../odbc/reference/install/installation-components.md)  
   

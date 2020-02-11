@@ -23,14 +23,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b385e6b02807ed79e2becb127a16e76d04329764
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473130"
 ---
 # <a name="alerts"></a>Alertes
-  Les événements sont générés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et entrés dans le journal des applications [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent lit le journal des applications et compare les événements qui y sont écrits aux alertes que vous avez définies. Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent trouve une correspondance, il déclenche une alerte, qui est une réponse automatisée à un événement. Outre l'analyse des événements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peut aussi analyser les conditions de performance, ainsi que les événements WMI (Windows Management Instrumentation).  
+  Les événements sont générés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et entrés dans le journal des applications [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent lit le journal des applications et compare les événements qui y sont écrits aux alertes que vous avez définies. Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent trouve une correspondance, il déclenche une alerte, qui est une réponse automatisée à un événement. Outre l'analyse des événements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peut aussi analyser les conditions de performance, ainsi que les événements WMI (Windows Management Instrumentation).  
   
  Pour définir une alerte, vous spécifiez :  
   
@@ -46,9 +47,10 @@ ms.locfileid: "62473130"
 ## <a name="selecting-an-event-type"></a>Sélection d'un type d'événement  
  Une alerte est une réponse à un événement d'un type spécifique. Les alertes répondent aux types d'événements suivants :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Événements  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]événements  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Conditions de performance  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Des conditions de performance.  
   
 -   Événements WMI  
   
@@ -57,26 +59,30 @@ ms.locfileid: "62473130"
 ## <a name="specifying-a-sql-server-event"></a>Spécification d'un événement SQL Server  
  Vous pouvez préciser qu'une alerte doit avoir lieu en réponse à un ou plusieurs événements. Pour spécifier les événements qui déclenchent une alerte, utilisez les paramètres suivants :  
   
--   **Numéro d'erreur**  
+-   **Numéro d’erreur**  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent déclenche une alerte quand une erreur spécifique se produit. Par exemple, vous pouvez spécifier le numéro d'erreur 2571 pour répondre aux tentatives non autorisées d'appels de commandes de console de base de données (DBCC).  
+     
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent déclenche une alerte quand une erreur spécifique se produit. Par exemple, vous pouvez spécifier le numéro d'erreur 2571 pour répondre aux tentatives non autorisées d'appels de commandes de console de base de données (DBCC).  
   
 -   **Niveau de gravité**  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent déclenche une alerte quand se produit une erreur du niveau de gravité indiqué. Ainsi, vous pouvez spécifier un niveau de gravité de 15 pour répondre aux erreurs de syntaxe dans les instructions Transact-SQL.  
+     
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent déclenche une alerte quand se produit une erreur du niveau de gravité indiqué. Ainsi, vous pouvez spécifier un niveau de gravité de 15 pour répondre aux erreurs de syntaxe dans les instructions Transact-SQL.  
   
 -   **Sauvegarde de la base de données**  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ne déclenche une alerte que si l’événement se produit dans une base de données déterminée. Cette option s'applique en plus du numéro d'erreur ou du niveau de gravité. Par exemple, si une instance contient une base de données utilisée pour la production et une autre servant à la génération de rapports, vous pouvez définir une alerte répondant aux erreurs de syntaxe rencontrées uniquement dans la base de données de production.  
+     
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ne déclenche une alerte que si l’événement se produit dans une base de données déterminée. Cette option s'applique en plus du numéro d'erreur ou du niveau de gravité. Par exemple, si une instance contient une base de données utilisée pour la production et une autre servant à la génération de rapports, vous pouvez définir une alerte répondant aux erreurs de syntaxe rencontrées uniquement dans la base de données de production.  
   
--   **Texte de l'événement**  
+-   **Texte de l’événement**  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent déclenche une alerte si le message de l’événement spécifié contient une chaîne de texte déterminée. Par exemple, vous pouvez définir une alerte en réponse aux messages contenant le nom d'une table donnée ou une contrainte déterminée.  
+     
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent déclenche une alerte si le message de l’événement spécifié contient une chaîne de texte déterminée. Par exemple, vous pouvez définir une alerte en réponse aux messages contenant le nom d'une table donnée ou une contrainte déterminée.  
   
 ## <a name="selecting-a-performance-condition"></a>Sélection d'une condition de performances  
  Vous pouvez préciser qu'une alerte doit avoir lieu en réponse à une condition de performances déterminée. Dans ce cas, vous indiquez le compteur de performances qui doit être surveillé, un seuil d'alerte et le comportement que doit afficher le compteur si l'alerte se produit. Pour définir une condition de performances, vous devez définir les éléments suivants dans la page [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Général **de la boîte de dialogue** Nouvelle alerte **ou** Propriétés de l’alerte **de** Agent :  
   
--   **Objet**  
+-   **Object**  
   
      L'objet est l'élément de performance à surveiller.  
   
@@ -88,11 +94,11 @@ ms.locfileid: "62473130"
   
      L'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définit l'instance spécifique de l'attribut à surveiller, le cas échéant.  
   
--   **Alerte si le compteur** et **Valeur**  
+-   **Alerte si le compteur** et la **valeur**  
   
      Indique le seuil d'alerte et le comportement qui déclenche l'alerte. Le seuil est une valeur numérique. Le comportement est l’un **des suivants : tombe sous**, **devient égal à**ou **s’élève au-dessus d’une valeur numérique déterminée**. La **valeur** est un nombre qui décrit le compteur des conditions de performances. Par exemple, pour définir le déclenchement d’une alerte pour l’objet de performances **SQLServer:Locks** quand le **Temps d’attente des verrous** dépasse 30 minutes, vous choisiriez **s’élève au-dessus** et **indiqueriez une valeur de 30**.  
   
-     De même, vous pourriez définir le déclenchement d’une alerte pour l’objet de performance **SQLServer:Transactions** quand l’espace disponible dans **tempdb** tombe en dessous de 1000 Ko. Pour définir ceci, choisissez le compteur **Espace disponible dans tempdb (Ko)** , **tombe sous**, et une **valeur** de **1000**.  
+     De même, vous pourriez définir le déclenchement d’une alerte pour l’objet de performance **SQLServer:Transactions** quand l’espace disponible dans **tempdb** tombe en dessous de 1000 Ko. Pour définir ceci, choisissez le compteur **Espace disponible dans tempdb (Ko)**, **tombe sous**, et une **valeur** de **1000**.  
   
     > [!NOTE]  
     >  Les données de performances sont régulièrement échantillonnées, ce qui peut entraîner un léger décalage (de quelques secondes) entre l'atteinte du seuil et le déclenchement de l'alerte de performance.  
@@ -102,15 +108,17 @@ ms.locfileid: "62473130"
   
 -   **Espace de noms**  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent s’inscrit en tant que client WMI dans l’espace de noms WMI fourni pour rechercher des événements.  
+     
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent s’inscrit en tant que client WMI dans l’espace de noms WMI fourni pour rechercher des événements.  
   
 -   **Requête**  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilise l’instruction WQL (WMI Query Language) fournie pour identifier l’événement en question.  
+     
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilise l’instruction WQL (WMI Query Language) fournie pour identifier l’événement en question.  
   
  Vous trouverez ci-dessous des liens traitant des tâches courantes :  
   
- **Pour créer une alerte en fonction d'un numéro de message**  
+ **Pour créer une alerte en fonction d’un numéro de message**  
   
 -   [SQL Server Management Studio](create-an-alert-using-an-error-number.md)  
   
@@ -122,7 +130,7 @@ ms.locfileid: "62473130"
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)  
   
- **Pour créer une alerte en fonction d'un événement WMI**  
+ **Pour créer une alerte basée sur un événement WMI**  
   
 -   [SQL Server Management Studio](create-a-wmi-event-alert.md)  
   
@@ -134,15 +142,15 @@ ms.locfileid: "62473130"
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)  
   
- **Pour créer un message d'erreur d'événement défini par l'utilisateur**  
+ **Pour créer un message d’erreur d’événement défini par l’utilisateur**  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addmessage-transact-sql)  
   
- **Pour modifier un message d'erreur d'événement défini par l'utilisateur**  
+ **Pour modifier un message d’erreur d’événement défini par l’utilisateur**  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
   
- **Pour supprimer un message d'erreur d'événement défini par l'utilisateur**  
+ **Pour supprimer un message d’erreur d’événement défini par l’utilisateur**  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-dropmessage-transact-sql)  
   

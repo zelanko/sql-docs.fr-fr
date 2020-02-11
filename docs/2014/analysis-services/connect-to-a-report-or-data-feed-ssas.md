@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7a8feb912a7987328afa06043b18586f6e9bb29
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70151827"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>Connexion à un flux de rapport ou de données (SSAS)
@@ -26,7 +26,7 @@ ms.locfileid: "70151827"
  **Nom convivial de la connexion**  
  Tapez un nom convivial pour la connexion au flux de données.  
   
- **Chemin d'accès au rapport**  
+ **Chemin d’accès du rapport**  
  Indique l'URL d'un rapport SQL Server Reporting Services qui génère des sources de données. Cliquez sur **Parcourir** pour spécifier l'URL du rapport.  
   
  Cliquez sur **Afficher le rapport** pour afficher le rapport.  
@@ -34,8 +34,8 @@ ms.locfileid: "70151827"
  **Parcourir**  
  Naviguez jusqu'à un emplacement où un rapport est disponible.  
   
- **Avancé**  
- Définissez des propriétés de connexion supplémentaires à partir de la boîte de dialogue **Définir les propriétés avancées** .  
+ **Avancée**  
+ Définissez des propriétés de connexion supplémentaires à l’aide de la boîte de dialogue **définir les propriétés avancées** .  
   
  **Tester la connexion**  
  Essayez d'établir une connexion à la source de données à l'aide des paramètres actuels. Un message est affiché pour indiquer si la connexion a abouti.  
@@ -61,8 +61,8 @@ ms.locfileid: "70151827"
  **Enregistrer ma clé de compte**  
  Enregistre la clé de compte (chiffrée) avec la connexion de données.  
   
- **Avancé**  
- Définissez des propriétés de connexion supplémentaires à partir de la boîte de dialogue **Définir les propriétés avancées** .  
+ **Avancée**  
+ Définissez des propriétés de connexion supplémentaires à l’aide de la boîte de dialogue **définir les propriétés avancées** .  
   
  **Tester la connexion**  
  Essayez d'établir une connexion à la source de données à l'aide des paramètres actuels. Un message est affiché pour indiquer si la connexion a abouti.  
@@ -79,7 +79,7 @@ ms.locfileid: "70151827"
  **Parcourir**  
  Naviguez jusqu'à un emplacement où un flux de données est disponible.  
   
- **Avancé**  
+ **Avancée**  
  Définissez des propriétés de connexion supplémentaires à l’aide de la boîte de dialogue **Définir les propriétés avancées** .  
   
  **Tester la connexion**  

@@ -1,5 +1,5 @@
 ---
-title: Distribué des procédures stockées de requêtes (Transact-SQL) | Microsoft Docs
+title: Procédures stockées de requêtes distribuées (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,16 @@ ms.assetid: 0fbf2846-885e-4de2-b552-f6453c3ca136
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: a6cf13ee2f083a26d871272f5197b550cdf3dd49
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078180"
 ---
 # <a name="distributed-queries-stored-procedures-transact-sql"></a>Procédures stockées de requêtes distribuées (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les procédures stockées système suivantes qui sont utilisées pour mettre en œuvre et gérer les requêtes distribuées.  
   
 |||  

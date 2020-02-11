@@ -1,5 +1,5 @@
 ---
-title: Objet affichages catalogue (Transact-SQL) | Microsoft Docs
+title: Affichages catalogue d’objets (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -15,12 +15,11 @@ helpviewer_keywords:
 ms.assetid: e8670a6b-e15c-4126-8d2d-c9cfb968a12d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: daa9064feb59ab7052077d9d67701630ee7fcef5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a64052771d767f64880118f3940461b7f0fb1a4d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68220353"
 ---
 # <a name="object-catalog-views-transact-sql"></a>Vues de catalogue d'objets (Transact-SQL)
@@ -53,7 +52,7 @@ Cette section contient des liens vers les affichages catalogue suivants.
 |[sys.numbered_procedures](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)||  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue système](catalog-views-transact-sql.md) [vues système &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ Vues du [catalogue système](catalog-views-transact-sql.md) vues [système &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
 

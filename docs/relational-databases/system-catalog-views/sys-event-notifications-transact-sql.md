@@ -1,5 +1,5 @@
 ---
-title: Sys.event_notifications (Transact-SQL) | Microsoft Docs
+title: sys. event_notifications (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,26 +21,26 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 736083db5043dd8bcb9dce9f828a9191c582c872
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68048422"
 ---
-# <a name="syseventnotifications-transact-sql"></a>sys.event_notifications (Transact-SQL)
+# <a name="sysevent_notifications-transact-sql"></a>sys.event_notifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne une ligne pour chaque objet qui est une notification d’événement, avec **sys.objects.type** = fr.  
+  Retourne une ligne pour chaque objet qui est une notification d’événement, avec **sys. Objects. type** = en.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Nom de la notification d'événement|  
-|**object_id**|**Int**|Numéro d'identification de l'objet. Unique dans une base de données.|  
+|**nomme**|**sysname**|Nom de la notification d'événement|  
+|**object_id**|**int**|Numéro d'identification de l'objet. Unique dans une base de données.|  
 |**parent_class**|**tinyint**|Classe du parent.<br /><br /> 0 = Base de données<br /><br /> 1 = objet ou colonne|  
-|**parent_class_desc**|**nvarchar(60)**|DATABASE<br /><br /> OBJECT_OR_COLUMN|  
-|**parent_id**|**Int**|ID non NULL de l'objet parent<br /><br /> 0 = La classe parent est la base de données.|  
-|**create_date**|**datetime**|Date de création.|  
-|**modify_date**|**datetime**|Est toujours égale à **create_date**.|  
+|**parent_class_desc**|**nvarchar (60)**|DATABASE<br /><br /> OBJECT_OR_COLUMN|  
+|**parent_id**|**int**|ID non NULL de l'objet parent<br /><br /> 0 = La classe parent est la base de données.|  
+|**create_date**|**DATETIME**|Date de création.|  
+|**modify_date**|**DATETIME**|Est toujours égal à **create_date**.|  
 |**service_name**|**nvarchar (256)**|Nom du service cible auquel la notification est envoyée.|  
 |**broker_instance**|**nvarchar(128)**|Instance du broker auquel la notification est envoyée.|  
 |**principal_id**|**int**|ID du principal de base de données propriétaire de cette notification d'événement|  
@@ -50,7 +50,7 @@ ms.locfileid: "68048422"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Affichages catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

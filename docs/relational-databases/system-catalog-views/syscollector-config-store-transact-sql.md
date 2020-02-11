@@ -19,13 +19,13 @@ ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 174fa1af651c2e713bdb91ba217e896b833467b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68060374"
 ---
-# <a name="syscollectorconfigstore-transact-sql"></a>syscollector_config_store (Transact-SQL)
+# <a name="syscollector_config_store-transact-sql"></a>syscollector_config_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne les propriétés qui s'appliquent à l'intégralité du collecteur de données, par opposition à une instance de jeu d'éléments de collection. Chaque ligne de cette vue décrit une propriété du collecteur de données spécifique, telle que le nom de l'entrepôt de données de gestion, et le nom de l'instance où l'entrepôt de données de gestion est situé.  
@@ -44,7 +44,7 @@ ms.locfileid: "68060374"
 |Nom de la propriété|Description|  
 |-------------------|-----------------|  
 |CacheDirectory|Nom du répertoire dans le système de fichiers où les packages du type de collecteur stockent les informations temporaires.<br /><br /> NULL = le répertoire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] temporaire par défaut est utilisé.|  
-|CacheWindow|Indique la stratégie de rétention de données du répertoire de cache pour les téléchargements de données non réussis.<br /><br /> -1 = Conservation des données de tous les échecs de téléchargement.<br /><br /> 0 = Ne pas conserver les données après un échec de téléchargement.<br /><br /> *n* = conserver les données à partir de *n* les échecs de téléchargement précédents, où *n* > = 1.<br /><br /> Utilisez la procédure stockée sp_syscollector_set_cache_window pour modifier cette valeur.|  
+|CacheWindow|Indique la stratégie de rétention de données du répertoire de cache pour les téléchargements de données non réussis.<br /><br /> -1 = Conservation des données de tous les échecs de téléchargement.<br /><br /> 0 = Ne pas conserver les données après un échec de téléchargement.<br /><br /> *n* = conserver les données des *n* échecs de téléchargement précédents, où *n* >= 1.<br /><br /> Utilisez la procédure stockée sp_syscollector_set_cache_window pour modifier cette valeur.|  
 |CollectorEnabled|Indique l'état du collecteur de données.<br /><br /> 0 = désactivé<br /><br /> 1 = activé<br /><br /> Utilisez la procédure stockée sp_syscollector_enable_collector ou sp_syscollector_disable_collector pour modifier cette valeur.|  
 |MDWDatabase|Le nom de l'entrepôt de données de gestion. Utilisez la procédure stockée sp_syscollector_set_warehouse_database_name pour modifier cette valeur.|  
 |MDWInstance|Nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour l'entrepôt de données de gestion. Utilisez la procédure stockée sp_syscollector_set_warehouse_instance_name pour modifier cette valeur.|  

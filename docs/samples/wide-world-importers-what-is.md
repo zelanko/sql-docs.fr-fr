@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 872892d307883bb7df31b08de701b2030d9aeb1f
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68794606"
 ---
 # <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Exemples de bases de données larges World Importers pour Microsoft SQL
@@ -30,7 +30,7 @@ Récemment, WWI a commencé à vendre une variété de Novelties comestibles com
 
 ## <a name="workflow-for-warehouse-stock-items"></a>Flux de travail pour les éléments d’inventaire d’entrepôt
 
-Le déroulement classique de l’inventaire et de la distribution des éléments est le suivant:
+Le déroulement classique de l’inventaire et de la distribution des éléments est le suivant :
 - WWI crée des bons de commande et envoie les commandes aux fournisseurs.
 - Les fournisseurs envoient les articles, WWI les reçoivent et les stocke dans leur entrepôt.
 - Les clients commandent des éléments à partir de WWI
@@ -46,7 +46,7 @@ Le déroulement classique de l’inventaire et de la distribution des éléments
 
 Alors que l’équipe de WWI utilise SQL Server Reporting Services pour générer des rapports opérationnels à partir de la base de données WideWorldImporters, elle doit également effectuer des analyses sur leurs données et avoir besoin de générer des rapports stratégiques. L’équipe a créé un modèle de données dimensionnelles dans une base de données WideWorldImportersDW. Cette base de données est remplie par un package Integration Services.
 
-SQL Server Analysis Services est utilisé pour créer des modèles de données analytiques à partir des données du modèle de données dimensionnelles. SQL Server Reporting Services est utilisé pour générer des rapports stratégiques directement à partir du modèle de données dimensionnelles, et également à partir du modèle analytique. Power BI est utilisé pour créer des tableaux de bord à partir des mêmes données. Les tableaux de bord sont utilisés sur les sites Web, ainsi que sur les téléphones et les tablettes. *Remarque: ces modèles de données et rapports ne sont pas encore disponibles*
+SQL Server Analysis Services est utilisé pour créer des modèles de données analytiques à partir des données du modèle de données dimensionnelles. SQL Server Reporting Services est utilisé pour générer des rapports stratégiques directement à partir du modèle de données dimensionnelles, et également à partir du modèle analytique. Power BI est utilisé pour créer des tableaux de bord à partir des mêmes données. Les tableaux de bord sont utilisés sur les sites Web, ainsi que sur les téléphones et les tablettes. *Remarque : ces modèles de données et rapports ne sont pas encore disponibles*
 
 ## <a name="additional-workflows"></a>Flux de travail supplémentaires
 
@@ -62,6 +62,6 @@ La société travaille avec un exercice qui commence le 1er novembre.
 
 ## <a name="terms-of-use"></a>Conditions d’utilisation
 
-La licence de l’exemple de base de données et de l’exemple de code est décrite ici: [License. txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
+La licence de l’exemple de base de données et de l’exemple de code est décrite ici : [License. txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
-L’exemple de base de données inclut des données publiques qui ont été chargées à partir de data.gov et de EarthData naturel. Les conditions d’utilisation sont les suivantes:[https://www.naturalearthdata.com/about/terms-of-use/](https://www.naturalearthdata.com/about/terms-of-use/)
+L’exemple de base de données inclut des données publiques qui ont été chargées à partir de data.gov et de EarthData naturel. Les conditions d’utilisation sont les suivantes :[https://www.naturalearthdata.com/about/terms-of-use/](https://www.naturalearthdata.com/about/terms-of-use/)

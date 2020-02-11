@@ -18,21 +18,21 @@ ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2c927bdff462922d1846188366fbb92ce0d3663c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022425"
 ---
-# <a name="spaddsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
+# <a name="sp_addsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ajoute une connexion à un membre d'un rôle serveur fixe.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) à la place.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez à la place [ALTER Server Role](../../t-sql/statements/alter-server-role-transact-sql.md) .  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,13 +43,13 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @loginame **=** ] **'** _connexion_ **'**  
- Nom de la connexion ajoutée au rôle serveur fixe. *connexion* est **sysname**, sans valeur par défaut. *connexion* peut être un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou un compte de connexion Windows. Si la connexion Windows n'a pas encore été autorisée à accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], elle l'est automatiquement.  
+ [ @loginame **=** ] **«**_connexion_**»**  
+ Nom de la connexion ajoutée au rôle serveur fixe. *login* est de **type sysname**, sans valeur par défaut. la *connexion* peut être [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] une connexion ou une connexion Windows. Si la connexion Windows n'a pas encore été autorisée à accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], elle l'est automatiquement.  
   
- [ @rolename **=** ] **'** _rôle_ **'**  
- Nom du rôle serveur fixe auquel est ajoutée la connexion. *rôle* est **sysname**, avec NULL comme valeur par défaut et doit être une des valeurs suivantes :  
+ [ @rolename **=** ] **«**_role_**»**  
+ Nom du rôle serveur fixe auquel est ajoutée la connexion. *role* est de **type sysname**, avec NULL comme valeur par défaut et doit avoir l’une des valeurs suivantes :  
   
--   sysadmin  
+-   administrateur système  
   
 -   securityadmin  
   
@@ -65,23 +65,23 @@ sp_addsrvrolemember [ @loginame= ] 'login'
   
 -   bulkadmin  
 
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
  Lorsque vous ajoutez une connexion à un rôle serveur fixe, la connexion obtient les autorisations associées à ce rôle.  
   
- Impossible de modifier l’appartenance au rôle de la connexion sa et publics.  
+ L'appartenance au rôle de la connexion sa et public ne peut pas être modifiée.  
   
- Utilisez sp_addrolemember pour ajouter un membre à une base de données fixe ou d’un rôle défini par l’utilisateur.  
+ Utilisez sp_addrolemember pour ajouter un membre à un rôle de base de données fixe ou à un rôle défini par l'utilisateur.  
   
- sp_addsrvrolemember ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
+ La procédure sp_addsrvrolemember ne peut pas être exécutée dans une transaction définie par l'utilisateur.  
   
 ## <a name="permissions"></a>Autorisations  
  Il faut appartenir au rôle auquel le nouveau membre est ajouté.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant ajoute la connexion Windows `Corporate\HelenS` à la `sysadmin` rôle serveur fixe.  
+ L’exemple suivant ajoute la connexion `Corporate\HelenS` Windows au rôle `sysadmin` serveur fixe.  
   
 ```  
 EXEC sp_addsrvrolemember 'Corporate\HelenS', 'sysadmin';  

@@ -15,16 +15,16 @@ ms.assetid: 766488cc-450c-434c-9c88-467f6c57e17c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f7264b17c13d6b66bf1be24da81e96a4ca3e8a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122828"
 ---
 # <a name="batches-of-sql-statements"></a>Lots d’instructions SQL
-Un lot d’instructions SQL est un groupe de deux ou plusieurs instructions SQL ou une instruction SQL unique qui a le même effet en tant que groupe de deux ou plusieurs instructions SQL. Dans certaines implémentations, l’instruction du lot entier est exécutée avant que les résultats soient disponibles. Ceci est souvent plus efficace que la soumission des instructions séparément, car le trafic réseau peut souvent être réduit et la source de données peut optimiser parfois de l’exécution d’un lot d’instructions SQL. Dans d’autres implémentations, appelant **SQLMoreResults** entraîne l’exécution de l’instruction suivante dans le lot. ODBC prend en charge les types de lots suivants :  
+Un lot d’instructions SQL est un groupe d’au moins deux instructions SQL ou une instruction SQL unique qui a le même effet qu’un groupe d’au moins deux instructions SQL. Dans certaines implémentations, la totalité de l’instruction batch est exécutée avant que les résultats ne soient disponibles. Cela est souvent plus efficace que l’envoi d’instructions séparément, car le trafic réseau peut souvent être réduit et la source de données peut parfois optimiser l’exécution d’un lot d’instructions SQL. Dans d’autres implémentations, l’appel de **SQLMoreResults** déclenche l’exécution de l’instruction suivante dans le lot. ODBC prend en charge les types de lots suivants :  
   
--   **Lots explicites** un *traitement explicite* est de deux ou plusieurs instructions SQL séparées par des points-virgules ( ;). Par exemple, le lot suivant d’instructions SQL ouvre une nouvelle commande. Cela nécessite l’insertion de lignes dans les commandes et les lignes des tables. Notez qu’il n’existe aucun point-virgule après la dernière instruction.  
+-   **Lots explicites** Un *lot explicite* est composé de deux ou plusieurs instructions SQL séparées par des points-virgules (;). Par exemple, le lot d’instructions SQL suivant ouvre une nouvelle commande client. Cela nécessite l’insertion de lignes dans les tables Orders et Lines. Notez qu’il n’y a pas de point-virgule après la dernière instruction.  
   
     ```  
     INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  
@@ -39,7 +39,7 @@ Un lot d’instructions SQL est un groupe de deux ou plusieurs instructions SQL 
        VALUES (2002, 4, 412, 500)  
     ```  
   
--   **Procédures** si une procédure contient plusieurs instructions SQL, il est considéré comme un lot d’instructions SQL. Par exemple, l’instruction spécifiques à SQL Server suivante crée une procédure qui retourne un jeu de résultats contenant des informations concernant un client et un jeu de résultats dressant toutes les commandes ventes ouvertes pour ce client :  
+-   **Procédures** Si une procédure contient plus d’une instruction SQL, elle est considérée comme un lot d’instructions SQL. Par exemple, l’instruction suivante spécifique au SQL Server crée une procédure qui retourne un jeu de résultats contenant des informations sur un client et un jeu de résultats répertoriant toutes les commandes client ouvertes pour ce client :  
   
     ```  
     CREATE PROCEDURE GetCustInfo (@CustomerID INT) AS  
@@ -48,9 +48,9 @@ Un lot d’instructions SQL est un groupe de deux ou plusieurs instructions SQL 
           WHERE CustID = @CustomerID AND Status = 'OPEN'  
     ```  
   
-     Le **CREATE PROCEDURE** instruction proprement dite n’est pas un lot d’instructions SQL. Toutefois, la procédure qu’il crée est un lot d’instructions SQL. Aucun des points-virgules ne séparent les deux **sélectionnez** instructions, car le **CREATE PROCEDURE** instruction est spécifique à SQL Server et SQL Server ne nécessite pas un point-virgule pour séparer plusieurs instructions dans un  **CREATE PROCEDURE** instruction.  
+     L’instruction **CREATE PROCEDURE** proprement dite n’est pas un lot d’instructions SQL. Toutefois, la procédure qu’il crée est un lot d’instructions SQL. Aucun point-virgule ne sépare les deux instructions **Select** , car l’instruction **CREATE PROCEDURE** est spécifique à SQL Server, et SQL Server ne requiert pas de point-virgule pour séparer plusieurs instructions dans une instruction **CREATE PROCEDURE** .  
   
--   **Tableaux de paramètres** tableaux de paramètres peuvent être utilisées avec une instruction SQL paramétrée comme un moyen efficace pour effectuer des opérations en bloc. Par exemple, les tableaux de paramètres peuvent être utilisés par le code suivant **insérer** instruction pour insérer plusieurs lignes dans la table de lignes lors de l’exécution d’une seule instruction SQL :  
+-   **Tableaux de paramètres** Les tableaux de paramètres peuvent être utilisés avec une instruction SQL paramétrable comme un moyen efficace d’effectuer des opérations en bloc. Par exemple, des tableaux de paramètres peuvent être utilisés avec l’instruction **Insert** suivante pour insérer plusieurs lignes dans la table de lignes lors de l’exécution d’une seule instruction SQL :  
   
     ```  
     INSERT INTO Lines (OrderID, Line, PartID, Quantity)  
@@ -59,9 +59,9 @@ Un lot d’instructions SQL est un groupe de deux ou plusieurs instructions SQL 
   
      Si une source de données ne prend pas en charge les tableaux de paramètres, le pilote peut les émuler en exécutant l’instruction SQL une fois pour chaque jeu de paramètres. Pour plus d’informations, consultez [paramètres d’instruction](../../../odbc/reference/develop-app/statement-parameters.md) et [tableaux de valeurs de paramètre](../../../odbc/reference/develop-app/arrays-of-parameter-values.md), plus loin dans cette section.  
   
- Les différents types de lots ne peuvent pas être combinés de manière interopérable. Autrement dit, comment une application détermine le résultat de l’exécution d’un lot explicit qui inclut la procédure appelle, un traitement explicite qui utilise des tableaux de paramètres, et un appel de procédure qui utilise des tableaux de paramètres est spécifique au pilote.  
+ Les différents types de lots ne peuvent pas être mélangés de manière interopérable. Autrement dit, la façon dont une application détermine le résultat de l’exécution d’un lot explicite qui comprend des appels de procédure, un lot explicite qui utilise des tableaux de paramètres et un appel de procédure qui utilise des tableaux de paramètres est spécifique au pilote.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Instructions avec génération de résultats et sans résultats](../../../odbc/reference/develop-app/result-generating-and-result-free-statements.md)  
   

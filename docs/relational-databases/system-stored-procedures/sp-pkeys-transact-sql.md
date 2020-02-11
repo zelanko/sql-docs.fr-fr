@@ -18,18 +18,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8ed0e041a6aa36027613059f16f3902bdb664aeb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056425"
 ---
-# <a name="sppkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
+# <a name="sp_pkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Renvoie des informations de clé primaire pour une table de l'environnement actif.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,25 +42,25 @@ sp_pkeys [ @table_name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @table_name=] '*nom*'  
- Est la table pour laquelle retourner des informations. *nom* est **sysname**, sans valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge.  
+ [ @table_name= ] '*nom*'  
+ Table pour laquelle les informations doivent être retournées. *Name* est de **type sysname**, sans valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge.  
   
- [ @table_owner=] '*propriétaire*'  
- Spécifie le propriétaire de la table désignée. *propriétaire* est **sysname**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge. Si *propriétaire* n’est pas spécifié, les règles de visibilité de table par défaut du SGBD sous-jacent s’appliquent.  
+ [ @table_owner= ] «*propriétaire*»  
+ Spécifie le propriétaire de la table désignée. *owner* est de **type sysname**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge. Si *owner* n’est pas spécifié, les règles de visibilité de table par défaut du SGBD sous-jacent s’appliquent.  
   
- Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si l'utilisateur actuel est propriétaire d'une table portant le nom spécifié, les colonnes de cette table sont renvoyées. Si le *propriétaire* n’est pas spécifié et l’utilisateur actuel ne possède pas d’une table avec la valeur *nom*, cette procédure recherche une table avec la valeur *nom* détenus par le propriétaire de la base de données. Si la recherche de la table aboutit, ce sont les colonnes de cette dernière qui sont retournées.  
+ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si l'utilisateur actuel est propriétaire d'une table portant le nom spécifié, les colonnes de cette table sont renvoyées. Si le *propriétaire* n’est pas spécifié et que l’utilisateur actuel ne possède pas de table portant le *nom*spécifié, cette procédure recherche une table portant le *nom* spécifié, détenue par le propriétaire de la base de données. Si la recherche de la table aboutit, ce sont les colonnes de cette dernière qui sont retournées.  
   
- [ @table_qualifier=] '*qualificateur*'  
- Est l’identificateur de la table. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (_qualificateur_ **.** _propriétaire_ **.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
+ [ @table_qualifier= ] '*qualificateur*'  
+ Qualificateur de la table. *qualifier* est de **type sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge les noms de tables en trois parties (_qualificateur_**.** _propriétaire_**.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- Aucun  
+## <a name="return-code-values"></a>Codet de retour  
+ None  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|TABLE_QUALIFIER|**sysname**|Nom du qualificateur de table. Ce champ peut contenir la valeur NULL.|  
+|TABLE_QUALIFIER|**sysname**|Nom du qualificateur de la table. Ce champ peut contenir la valeur NULL.|  
 |TABLE_OWNER|**sysname**|Nom du propriétaire de la table. Ce champ retourne toujours une valeur.|  
 |TABLE_NAME|**sysname**|Nom de la table. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la table tel qu'il figure dans la table sysobjects. Ce champ retourne toujours une valeur.|  
 |COLUMN_NAME|**sysname**|Nom de la colonne, pour chaque colonne renvoyée de la table TABLE_NAME. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la colonne tel qu'il figure dans la table sys.columns. Ce champ retourne toujours une valeur.|  
@@ -86,7 +86,7 @@ EXEC sp_pkeys @table_name = N'Department'
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- L'exemple suivant extrait la clé primaire de la table `DimAccount` dans la base de données `AdventureWorksPDW2012`. Elle retourne zéro ligne indique que la table ne dispose pas d’une clé primaire.  
+ L'exemple suivant extrait la clé primaire de la table `DimAccount` dans la base de données `AdventureWorksPDW2012`. Elle ne retourne aucune ligne indiquant que la table n’a pas de clé primaire.  
   
 ```  
 -- Uses AdventureWorks  
@@ -95,7 +95,7 @@ EXEC sp_pkeys @table_name = N'DimAccount;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées du catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Procédures stockées de catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

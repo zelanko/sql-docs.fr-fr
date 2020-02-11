@@ -19,21 +19,21 @@ ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 190b4f0598afa6d434b5dada8c8464cb8209dac7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061262"
 ---
-# <a name="spdbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate (Transact-SQL)
+# <a name="sp_dbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Met à jour la table d'état de la surveillance de la mise en miroir de bases de données en insérant une nouvelle ligne de table pour chaque base de données en miroir et tronque les lignes antérieures à la période de rétention actuelle. La période de rétention par défaut est de 7 jours (168 heures). Lors de la mise à jour de la table, **sp_dbmmonitorupdate** évalue les mesures de performances.  
+  Met à jour la table d'état de la surveillance de la mise en miroir de bases de données en insérant une nouvelle ligne de table pour chaque base de données en miroir et tronque les lignes antérieures à la période de rétention actuelle. La période de rétention par défaut est de 7 jours (168 heures). Lors de la mise à jour de la table, **sp_dbmmonitorupdate** évalue les mesures de performance.  
   
 > [!NOTE]  
->  La première fois **sp_dbmmonitorupdate** s’exécute, il crée la base de données mise en miroir de la table d’état et la **dbm_monitor** rôle de base de données fixe dans le **msdb** base de données.  
+>  À sa première exécution, **sp_dbmmonitorupdate** crée la table d’état de la mise en miroir de bases de données et le rôle de base de données fixe **dbm_monitor** dans la base de données **msdb** .  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,22 +44,22 @@ sp_dbmmonitorupdate [ database_name ]
   
 ## <a name="arguments"></a>Arguments  
  *database_name*  
- Nom de la base de données dont vous souhaitez mettre à jour l'état de mise en miroir. Si *database_name* n’est pas spécifié, la procédure met à jour la table d’état pour chaque base de données mise en miroir sur l’instance de serveur.  
+ Nom de la base de données dont vous souhaitez mettre à jour l'état de mise en miroir. Si *database_name* n’est pas spécifié, la procédure met à jour la table d’État pour chaque base de données mise en miroir sur l’instance de serveur.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- Aucun  
+## <a name="return-code-values"></a>Codet de retour  
+ None  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
- **sp_dbmmonitorupdate** peuvent être exécutées uniquement dans le contexte de la **msdb** base de données.  
+ **sp_dbmmonitorupdate** ne peut être exécutée que dans le contexte de la base de données **msdb** .  
   
  Si aucune colonne de la table d'état ne s'applique au rôle d'un partenaire, la valeur est NULL sur ce partenaire. En outre, une colonne comporte la valeur NULL si les informations appropriées ne sont pas disponibles, comme lors d'un basculement ou d'un redémarrage de serveur.  
   
- Après avoir **sp_dbmmonitorupdate** crée le **dbm_monitor** rôle de base de données fixe dans le **msdb** de base de données, les membres de la **sysadmin** rôle serveur fixe peut ajouter un utilisateur à la **dbm_monitor** rôle de base de données fixe. Le **dbm_monitor** rôle permet à ses membres afficher l’état, la mise en miroir de base de données mais pas mettre à jour mais pas afficher ou configurer les événements de mise en miroir de base de données.  
+ Une fois que **sp_dbmmonitorupdate** créé le rôle de base de données fixe **dbm_monitor** dans la base de données **msdb** , les membres du rôle serveur fixe **sysadmin** peuvent ajouter n’importe quel utilisateur au rôle de base de données fixe **dbm_monitor** . Le rôle **dbm_monitor** permet à ses membres d’afficher l’état de la mise en miroir de bases de données, mais pas de les mettre à jour, mais pas d’afficher ou de configurer les événements de mise en miroir.  
   
- Lors de la mise à jour l’état de mise en miroir d’une base de données, **sp_dbmmonitorupdate** inspecte la valeur la plus récente de toute mesure de performance de mise en miroir pour lequel un seuil d’avertissement a été spécifié. Si la valeur dépasse le seuil, la procédure ajoute un événement d'informations au journal des événements. Tous les taux sont des moyennes établies depuis la dernière mise à jour. Pour plus d’informations, consultez [Utiliser des seuils d’avertissement et d’alertes sur des métriques de performances de mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
+ Lors de la mise à jour de l’état de la mise en miroir d’une base de données, **sp_dbmmonitorupdate** inspecte la valeur la plus récente de toutes les métriques de performances de mise en miroir pour lesquelles un seuil d’avertissement a été spécifié. Si la valeur dépasse le seuil, la procédure ajoute un événement d'informations au journal des événements. Tous les taux sont des moyennes établies depuis la dernière mise à jour. Pour plus d’informations, consultez [Utiliser des seuils d’avertissement et d’alertes sur des métriques de performances de mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  

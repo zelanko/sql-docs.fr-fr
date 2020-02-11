@@ -19,18 +19,18 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2600543715bffaba36e29305b0893a9f17cca59c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68072688"
 ---
-# <a name="spaddextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
+# <a name="sp_addextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Ajoute une nouvelle propriété étendue à un objet de base de données.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,38 +54,38 @@ sp_addextendedproperty
   
 ## <a name="arguments"></a>Arguments  
  [ @name ] = {'*property_name*'}  
- Est le nom de la propriété à ajouter. *property_name* est **sysname** et ne peut pas être NULL. Les noms peuvent également comporter des chaînes de caractères vides ou non alphanumériques, ainsi que des valeurs binaires.  
+ Nom de la propriété à ajouter. *property_name* est de **type sysname** et ne peut pas avoir la valeur null. Les noms peuvent également comporter des chaînes de caractères vides ou non alphanumériques, ainsi que des valeurs binaires.  
   
- [ @value=] {'*valeur*'}  
- Valeur à associer à la propriété. *valeur* est **sql_variant**, avec NULL comme valeur par défaut. La taille de l'argument *value* ne peut pas dépasser les 7 500 octets.  
+ [ @value= ] {'*valeur*'}  
+ Valeur à associer à la propriété. la *valeur* est **sql_variant**, avec NULL comme valeur par défaut. La taille de l'argument *value* ne peut pas dépasser les 7 500 octets.  
   
- [ @level0type=] {'*level0_object_type*'}  
- Type d'objet de niveau 0. *level0_object_type* est **varchar (128)** , avec NULL comme valeur par défaut.  
+ [ @level0type= ] {'*level0_object_type*'}  
+ Type d'objet de niveau 0. *level0_object_type* est de type **varchar (128)**, avec NULL comme valeur par défaut.  
   
  Les entrées valides sont ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE, PLAN GUIDE et NULL.  
   
 > [!IMPORTANT]  
 >  La possibilité de spécifier USER comme type de niveau 0 dans une propriété étendue d'un objet de type de niveau 1 sera supprimée dans une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez à la place SCHEMA en tant que type de niveau 0. Par exemple, lorsque vous définissez une propriété étendue sur une table, spécifiez le schéma de la table au lieu d'un nom d'utilisateur. La possibilité de spécifier TYPE comme type de niveau 0 sera supprimée dans une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour TYPE, utilisez SCHEMA comme type de niveau 0 et TYPE comme type de niveau 1.  
   
- [ @level0name=] {'*level0_object_name*'}  
- Nom du type d'objet de niveau 0 spécifié. *level0_object_name* est **sysname** avec NULL comme valeur par défaut.  
+ [ @level0name= ] {'*level0_object_name*'}  
+ Nom du type d'objet de niveau 0 spécifié. *level0_object_name* est de **type sysname** , avec NULL comme valeur par défaut.  
   
- [ @level1type=] {'*level1_object_type*'}  
- Type d'objet de niveau 1. *level1_object_type* est **varchar (128)** , avec NULL comme valeur par défaut. Les entrées valides sont agrégat, par défaut, fonction, nom de fichier logique, procédure, file d’attente, règle, séquence, SYNONYME, TABLE, TABLE_TYPE, TYPE, vue, COLLECTION de schémas XML et NULL.    
- [ @level1name=] {'*level1_object_name*'}  
- Nom du type d'objet de niveau 1 spécifié. *level1_object_name* est **sysname**, avec NULL comme valeur par défaut.  
+ [ @level1type= ] {'*level1_object_type*'}  
+ Type d'objet de niveau 1. *level1_object_type* est de type **varchar (128)**, avec NULL comme valeur par défaut. Les entrées valides sont agrégation, valeur par défaut, fonction, nom de fichier logique, procédure, file d’attente, règle, séquence, synonyme, TABLE, TABLE_TYPE, TYPE, vue, COLLECTION de schémas XML et NULL.    
+ [ @level1name= ] {'*level1_object_name*'}  
+ Nom du type d'objet de niveau 1 spécifié. *level1_object_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
- [ @level2type=] {'*level2_object_type*'}  
- Type d'objet de niveau 2. *level2_object_type* est **varchar (128)** , avec NULL comme valeur par défaut. Les entrées valides sont COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER et NULL.  
+ [ @level2type= ] {'*level2_object_type*'}  
+ Type d'objet de niveau 2. *level2_object_type* est de type **varchar (128)**, avec NULL comme valeur par défaut. Les entrées valides sont COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER et NULL.  
   
- [ @level2name=] {'*level2_object_name*'}  
- Nom du type d'objet de niveau 2 spécifié. *level2_object_name* est **sysname**, avec NULL comme valeur par défaut.  
+ [ @level2name= ] {'*level2_object_name*'}  
+ Nom du type d'objet de niveau 2 spécifié. *level2_object_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- Pour la définition des propriétés étendues, les objets dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données sont répartis sur trois niveaux : 0, 1 et 2. Le niveau 0 est le plus élevé et est défini en tant qu'objets contenus dans l'étendue de la base de données. Les objets de niveau 1 figurent dans l'étendue du schéma ou de l'utilisateur tandis que les objets de niveau 2 se trouvent dans les objets de niveau 1. Vous pouvez définir des propriétés étendues pour les objets de tous ces niveaux.  
+ Pour la définition des propriétés étendues, les objets d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont répartis sur trois niveaux : 0, 1 et 2. Le niveau 0 est le plus élevé et est défini en tant qu'objets contenus dans l'étendue de la base de données. Les objets de niveau 1 figurent dans l'étendue du schéma ou de l'utilisateur tandis que les objets de niveau 2 se trouvent dans les objets de niveau 1. Vous pouvez définir des propriétés étendues pour les objets de tous ces niveaux.  
   
  Les références à un objet d'un niveau donné doivent être qualifiées par les noms des objets de niveau supérieur possédant ou contenant l'objet en question. Par exemple, lorsque vous ajoutez une propriété étendue à une colonne de table (niveau 2), vous devez également indiquer le nom de la table (niveau 1) qui contient la colonne et le schéma (niveau 0) qui contient la table.  
   
@@ -96,10 +96,10 @@ sp_addextendedproperty
  Les propriétés étendues ne sont pas autorisées sur les tables optimisées en mémoire.  
   
 ## <a name="replicating-extended-properties"></a>Réplication des propriétés étendues  
- Les propriétés étendues sont répliquées uniquement dans la synchronisation initiale entre le serveur de publication et l'Abonné. Si vous ajoutez ou modifiez une propriété étendue après la synchronisation initiale, la modification n'est pas répliquée. Pour plus d’informations sur la réplication des objets de base de données, consultez [publier des données et des objets de base de données](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
+ Les propriétés étendues sont répliquées uniquement dans la synchronisation initiale entre le serveur de publication et l'Abonné. Si vous ajoutez ou modifiez une propriété étendue après la synchronisation initiale, la modification n'est pas répliquée. Pour plus d’informations sur la façon de répliquer des objets de base de données, consultez [publier des données et des objets de base de](../../relational-databases/replication/publish/publish-data-and-database-objects.md)données.  
   
-## <a name="schema-vs-user"></a>Visual Studio du schéma. Utilisateur  
- Nous ne vous recommandons pas de spécifier l'argument USER comme type de niveau 0 lorsque vous appliquez une propriété étendue à un objet de base de données, car vous pourriez engendrer une ambiguïté de résolution de noms. Par exemple, supposez que l'utilisateur Marie détient deux schémas (Marie et MySchema) et que ceux-ci contiennent tous deux une table intitulée MyTable. Si Mary ajoute une propriété étendue à la table MyTable et spécifie  **@level0type = n’User '** ,  **@level0name = Mary**, il n’est pas clairement à quelle table la propriété étendue est appliquée. Pour assurer la compatibilité descendante, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applique la propriété étendue à la table contenue dans le schéma nommé Mary.  
+## <a name="schema-vs-user"></a>Schéma ou  Utilisateur  
+ Nous ne vous recommandons pas de spécifier l'argument USER comme type de niveau 0 lorsque vous appliquez une propriété étendue à un objet de base de données, car vous pourriez engendrer une ambiguïté de résolution de noms. Par exemple, supposez que l'utilisateur Marie détient deux schémas (Marie et MySchema) et que ceux-ci contiennent tous deux une table intitulée MyTable. Si Mary ajoute une propriété étendue à la table MyTable et spécifie ** @level0type = n’User'**, ** @level0name = Mary**, il n’est pas évident de savoir à quelle table la propriété étendue est appliquée. Pour assurer la compatibilité descendante, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applique la propriété étendue à la table contenue dans le schéma nommé Mary.  
   
 ## <a name="permissions"></a>Autorisations  
  Les membres des rôles de base de données fixes db_owner et db_ddladmin peuvent ajouter des propriétés étendues à n'importe quel objet, avec toutefois la restriction suivante : db_ddladmin ne peut pas ajouter de propriétés à la base de données elle-même, ni aux utilisateurs ou rôles.  
@@ -236,8 +236,8 @@ EXEC sys.sp_addextendedproperty
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées du moteur de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sys. fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  
   

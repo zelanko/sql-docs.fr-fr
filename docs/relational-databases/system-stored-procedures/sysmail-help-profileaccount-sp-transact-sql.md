@@ -18,18 +18,18 @@ ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c4f0ceb580ddc7538dd1ea98b9e08a82cd8d35b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044495"
 ---
-# <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
+# <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Affiche les comptes associés à un ou plusieurs profils de messagerie de base de données.  
     
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,16 +43,16 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @profile_id = ] profile_id` Est l’ID de profil du profil à la liste. *profile_id* est **int**, avec NULL comme valeur par défaut. Soit *profile_id* ou *profile_name* doit être spécifié.  
+`[ @profile_id = ] profile_id`ID du profil à répertorier. *profile_id* est de **type int**, avec NULL comme valeur par défaut. *Profile_id* ou *profile_name* doivent être spécifiés.  
   
-`[ @profile_name = ] 'profile_name'` Est le nom du profil de profil à répertorier. *nom_profil* est **sysname**, avec NULL comme valeur par défaut. Soit *profile_id* ou *profile_name* doit être spécifié.  
+`[ @profile_name = ] 'profile_name'`Nom du profil à répertorier. *profile_name* est de **type sysname**, avec NULL comme valeur par défaut. *Profile_id* ou *profile_name* doivent être spécifiés.  
   
-`[ @account_id = ] account_id` Est l’ID de compte à la liste. *account_id* est **int**, avec NULL comme valeur par défaut. Lorsque *account_id* et *account_name* sont les deux NULL, répertorie tous les comptes dans le profil.  
+`[ @account_id = ] account_id`ID de compte à répertorier. *account_id* est de **type int**, avec NULL comme valeur par défaut. Lorsque *account_id* et *account_name* ont tous deux la valeur null, répertorie tous les comptes du profil.  
   
-`[ @account_name = ] 'account_name'` Est le nom du compte à la liste. *nom_compte* est **sysname**, avec NULL comme valeur par défaut. Lorsque *account_id* et *account_name* sont les deux NULL, répertorie tous les comptes dans le profil.  
+`[ @account_name = ] 'account_name'`Nom du compte à répertorier. *account_name* est de **type sysname**, avec NULL comme valeur par défaut. Lorsque *account_id* et *account_name* ont tous deux la valeur null, répertorie tous les comptes du profil.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  Retourne un jeu de résultats comportant les colonnes suivantes.  
@@ -60,22 +60,22 @@ sysmail_help_profileaccount_sp
 ||||  
 |-|-|-|  
 |Nom de la colonne|Type de données|Description|  
-|**profile_id**|**int**|Identificateur du profil du profil.|  
-|**nom_profil**|**sysname**|Nom du profil|  
+|**profile_id**|**int**|ID de profil du profil.|  
+|**profile_name**|**sysname**|Nom du profil.|  
 |**account_id**|**int**|ID du compte.|  
 |**account_name**|**sysname**|Nom du compte|  
-|**sequence_number**|**Int**|Numéro de séquence du compte dans le profil.|  
+|**sequence_number**|**int**|Numéro de séquence du compte dans le profil.|  
   
 ## <a name="remarks"></a>Notes  
- En cas de non *profile_id* ou *profile_name* est spécifié, cette procédure stockée retourne des informations pour chaque profil dans l’instance.  
+ Quand aucun *profile_id* ou *profile_name* n’est spécifié, cette procédure stockée retourne des informations pour chaque profil de l’instance.  
   
- La procédure stockée **sysmail_help_profileaccount_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
+ La procédure stockée **sysmail_help_profileaccount_sp** se trouve dans la base de données **msdb** et appartient au schéma **dbo** . La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
 ## <a name="permissions"></a>Autorisations  
- Autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
+ Les autorisations d’exécution pour cette procédure sont octroyées par défaut aux membres du rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
- **A. Liste des comptes d’un profil spécifique par nom**  
+ **A. Affichage de la liste des comptes d'un profil spécifique, par nom**  
   
  L'exemple suivant affiche la liste des informations pour le profil `AdventureWorks Administrator` en spécifiant le nom du profil.  
   
@@ -93,7 +93,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 131         AdventureWorks Administrator 198         Admin-BackupServer   2  
 ```  
   
- **B. Liste des comptes pour un ID de profil en profil spécifique**  
+ **B. Affichage de la liste des comptes d'un profil spécifique, par ID de profil**  
   
  L'exemple suivant affiche une liste des informations pour le profil `AdventureWorks Administrator` en spécifiant l'ID du profil.  
   
@@ -111,7 +111,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 131         AdventureWorks Administrator 198         Admin-BackupServer   2  
 ```  
   
- **C. Liste des comptes pour tous les profils**  
+ **C. Affichage de la liste des comptes de tous les profils**  
   
  L'exemple suivant affiche une liste des comptes de tous les profils de l'instance.  
   
@@ -131,8 +131,8 @@ profile_id  profile_name                 account_id  account_name         sequen
   
 ## <a name="see-also"></a>Voir aussi  
  [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)   
- [Créer un compte de messagerie de base de données](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Objets de Configuration de messagerie de base de données](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Procédures stockées de messagerie de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Créer un compte Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Objets de configuration Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Database Mail des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

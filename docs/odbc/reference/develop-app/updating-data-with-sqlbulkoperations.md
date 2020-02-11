@@ -15,24 +15,24 @@ ms.assetid: 7645a704-341e-4267-adbe-061a9fda225b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4d1aa9b3300cba78f34e876a8501dbaaa421390a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091662"
 ---
 # <a name="updating-data-with-sqlbulkoperations"></a>Mise à jour de données avec SQLBulkOperations
-Applications peuvent effectuer des opérations de mise à jour, suppression, fetch ou d’insertion en bloc sur la table sous-jacente à la source de données avec un appel à **SQLBulkOperations**. Appel **SQLBulkOperations** est une alternative pratique à la construction et l’exécution d’une instruction SQL. Il permet à un pilote ODBC prend en charge les mises à jour positionnées même lorsque la source de données ne prend pas en charge les instructions SQL positionnées. Il fait partie du paradigme de la réalisation d’accès de base de données complète au moyen d’appels de fonction.  
+Les applications peuvent effectuer des opérations de mise à jour, de suppression, d’extraction ou d’insertion en bloc sur la table sous-jacente au niveau de la source de données à l’aide d’un appel à **SQLBulkOperations**. L’appel de **SQLBulkOperations** est une alternative pratique à la construction et à l’exécution d’une instruction SQL. Il permet à un pilote ODBC de prendre en charge les mises à jour positionnées même lorsque la source de données ne prend pas en charge les instructions SQL positionnées. Il fait partie du paradigme d’obtention d’un accès complet à la base de données au moyen d’appels de fonction.  
   
- **SQLBulkOperations** opère sur l’ensemble de lignes en cours et peut être utilisé uniquement après un appel à **SQLFetch** ou **SQLFetchScroll**. L’application spécifie les lignes à supprimer, mettre à jour ou actualiser en mettant en cache leurs signets. Le pilote récupère les nouvelles données pour les lignes à mettre à jour ou les nouvelles données à insérer dans la table sous-jacente, à partir de mémoires tampons de l’ensemble de lignes.  
+ **SQLBulkOperations** opère sur l’ensemble de lignes actuel et peut être utilisé uniquement après un appel à **SQLFetch** ou **SQLFetchScroll**. L’application spécifie les lignes à mettre à jour, à supprimer ou à actualiser en mettant en cache leurs signets. Le pilote récupère les nouvelles données pour les lignes à mettre à jour, ou les nouvelles données à insérer dans la table sous-jacente, à partir des mémoires tampons de l’ensemble de lignes.  
   
- La taille de l’ensemble de lignes à utiliser par **SQLBulkOperations** est défini par un appel à **SQLSetStmtAttr** avec un *attribut* argument de SQL_ATTR_ROW_ARRAY_SIZE. Contrairement aux **SQLSetPos**, qui utilise une nouvelle taille de l’ensemble de lignes uniquement après un appel à **SQLFetch** ou **SQLFetchScroll**, **SQLBulkOperations** utilise le nouvelle taille d’ensemble de lignes après l’appel à **SQLSetStmtAttr**.  
+ La taille de l’ensemble de lignes à utiliser par **SQLBulkOperations** est définie par un appel à **SQLSetStmtAttr** avec un argument d' *attribut* de SQL_ATTR_ROW_ARRAY_SIZE. Contrairement à **SQLSetPos**, qui utilise une nouvelle taille d’ensemble de lignes uniquement après un appel à **SQLFetch** ou **SQLFetchScroll**, **SQLBulkOperations** utilise la nouvelle taille d’ensemble de lignes après l’appel à **SQLSetStmtAttr**.  
   
- Étant donné que la plupart des interactions avec les bases de données relationnelles sont effectuée via SQL, **SQLBulkOperations** n’est pas largement pris en charge. Toutefois, un pilote peut il émuler facilement en créant et en exécutant un **mise à jour**, **supprimer**, ou **insérer** instruction.  
+ Étant donné que la plupart des interactions avec les bases de données relationnelles s’effectuent par le biais de SQL, **SQLBulkOperations** n’est pas largement pris en charge. Toutefois, un pilote peut facilement l’émuler en construisant et en exécutant une instruction **Update**, **Delete**ou **Insert** .  
   
- Pour déterminer quelles opérations **SQLBulkOperation** prend en charge, une application appelle **SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR _ATTRIBUTES1 ou l’option d’informations SQL_STATIC_CURSOR_ATTRIBUTES1 (selon le type du curseur).  
+ Pour déterminer les opérations prises en charge par **SQLBulkOperation** , une application appelle **SQLGetInfo** avec l’option d’informations SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1 ou SQL_STATIC_CURSOR_ATTRIBUTES1 (selon le type du curseur).  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Mise à jour de lignes par signet avec SQLBulkOperations](../../../odbc/reference/develop-app/updating-rows-by-bookmark-with-sqlbulkoperations.md)  
   

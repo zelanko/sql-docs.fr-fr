@@ -1,5 +1,5 @@
 ---
-title: Enregistrements d’état | Microsoft Docs
+title: Enregistrements d’État | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: 4a987f69-158f-4cc4-a31b-2b7dd8dcbb87
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f6ed360c39b87efe851bcbbb5c60762288ea1719
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68114280"
 ---
 # <a name="status-records"></a>Enregistrements d’état
-Les champs dans les enregistrements d’état contiennent des informations sur les erreurs spécifiques ou des avertissements retournés par la Gestionnaire de pilotes, pilotes ou source de données, y compris le SQLSTATE, une numéro d’erreur natif, un message de diagnostic, un numéro de colonne et un numéro de ligne. Enregistrements d’état peuvent être créés uniquement si la fonction retourne SQL_ERROR, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_NEED_DATA ou SQL_STILL_EXECUTING. Pour obtenir une liste complète des champs dans les enregistrements d’état, consultez le [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) description de fonction.  
+Les champs des enregistrements d’État contiennent des informations sur des erreurs ou des avertissements spécifiques retournés par le gestionnaire de pilotes, le pilote ou la source de données, y compris le SQLSTATE, le numéro d’erreur natif, le message de diagnostic, le numéro de colonne et le numéro de ligne. Les enregistrements d’État ne peuvent être créés que si la fonction retourne SQL_ERROR, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_NEED_DATA ou SQL_STILL_EXECUTING. Pour obtenir la liste complète des champs dans les enregistrements d’État, consultez la description de la fonction [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) .  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Séquence d’enregistrements d’état](../../../odbc/reference/develop-app/sequence-of-status-records.md)  
   

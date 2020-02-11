@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9fdc66899f7d863cbfb3ae04ad0796614717a734
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209662"
 ---
 # <a name="processing-results"></a>Traitement des résultats
@@ -42,7 +42,7 @@ ms.locfileid: "63209662"
  Une fois les structures DBBINDING spécifiées, un accesseur est créé (**IAccessor::CreateAccessor**). Un accesseur est une collection de liaisons utilisée pour obtenir ou définir les données dans la mémoire tampon du consommateur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création d’une Application de fournisseur SQL Server Native Client OLE DB](creating-a-sql-server-native-client-ole-db-provider-application.md)   
- [Rubriques de procédures liées à OLE DB](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [Création d’une application SQL Server Native Client OLE DB Provider](creating-a-sql-server-native-client-ole-db-provider-application.md)   
+ [Rubriques de procédures OLE DB](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

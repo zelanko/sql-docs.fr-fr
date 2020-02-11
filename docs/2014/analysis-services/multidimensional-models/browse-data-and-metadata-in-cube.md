@@ -1,5 +1,5 @@
 ---
-title: Parcourir les données et métadonnées de Cube | Microsoft Docs
+title: Parcourir les données et les métadonnées dans le cube | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c2e82ff5158f64c95b0e66f327c6d57ebf2def29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076757"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Parcourir les données et métadonnées de cube
@@ -22,7 +22,7 @@ ms.locfileid: "66076757"
   
  Avant de parcourir un cube, vous devez le traiter et vous y reconnecter. Une fois le traitement terminé, ouvrez l'onglet **Navigateur** du Concepteur de cube. Cliquez sur le bouton Reconnecter dans la barre d'outils pour actualiser la connexion.  
   
- Le **navigateur** onglet comporte trois volets : le volet métadonnées, le volet de filtre et le volet des données. Utilisez le volet Métadonnées pour examiner la structure du cube dans le format d'arborescence. Utilisez le volet Filtre en haut de l'onglet **Navigateur** pour définir tout sous-cube auquel vous souhaitez accéder. Utilisez le volet Données pour afficher le jeu de résultats et explorer les hiérarchies de dimension.  
+ L’onglet **navigateur** comporte trois volets : le volet métadonnées, le volet filtre et le volet données. Utilisez le volet Métadonnées pour examiner la structure du cube dans le format d'arborescence. Utilisez le volet Filtre en haut de l'onglet **Navigateur** pour définir tout sous-cube auquel vous souhaitez accéder. Utilisez le volet Données pour afficher le jeu de résultats et explorer les hiérarchies de dimension.  
   
 ## <a name="setting-up-the-browser"></a>Configuration du navigateur  
  Pour préparer l'exploration d'un cube, vous pouvez spécifier une perspective ou une traduction à utiliser. Vous ajoutez des mesures et des dimensions au volet Données et spécifiez tous les filtres dans le volet Filtre.  
@@ -57,14 +57,14 @@ ms.locfileid: "66076757"
   
      \- ou -  
   
--   Dans le **Dimension** colonne de la **filtre** volet, cliquez sur  **\<sélectionner une dimension >** et sélectionnez une dimension dans la liste, puis cliquez sur  **\<Sélectionnez hiérarchie >** dans le **hiérarchie** colonne et sélectionnez une hiérarchie dans la liste.  
+-   Dans la colonne **dimension** du volet **filtre** , cliquez sur ** \<sélectionner une dimension>** et sélectionnez une dimension dans la liste, puis cliquez sur ** \<sélectionner une hiérarchie>** dans la colonne **hiérarchie** et sélectionnez une hiérarchie dans la liste.  
   
  Après avoir spécifié la hiérarchie, spécifiez l'opérateur et l'expression de filtre. Le tableau suivant décrit les opérateurs et les expressions de filtre.  
   
 |Opérateur|Expression de filtre|Description|  
 |--------------|-----------------------|-----------------|  
 |Égal à|Un ou plusieurs membres|Les valeurs doivent être égales à un membre spécifié.<br /><br /> (Fournit plusieurs sélections de membres pour les hiérarchies d'attribut, autres que les hiérarchies parent-enfant, et une seule sélection de membre pour d'autres hiérarchies.)|  
-|Non égal|Un ou plusieurs membres|Les valeurs ne doivent pas être égales à un membre spécifié.<br /><br /> (Fournit plusieurs sélections de membres pour les hiérarchies d'attribut, autres que les hiérarchies parent-enfant, et une seule sélection de membre pour d'autres hiérarchies.)|  
+|Non égal à|Un ou plusieurs membres|Les valeurs ne doivent pas être égales à un membre spécifié.<br /><br /> (Fournit plusieurs sélections de membres pour les hiérarchies d'attribut, autres que les hiérarchies parent-enfant, et une seule sélection de membre pour d'autres hiérarchies.)|  
 |Dans|Un ou plusieurs jeux nommés|Les valeurs doivent se trouver dans un jeu nommé spécifié.<br /><br /> (Pris en charge pour les hiérarchies d'attribut uniquement.)|  
 |Pas dans|Un ou plusieurs jeux nommés|Les valeurs ne doivent pas se trouver dans un jeu nommé spécifié.<br /><br /> (Pris en charge pour les hiérarchies d'attribut uniquement.)|  
 |Plage (limites incluses)|Un ou deux membres de délimitation d'une plage|Les valeurs doivent se situer entre les membres de délimitation ou être égales à ceux-ci. Si les membres de délimitation sont égaux ou qu'un seul membre est spécifié, aucune plage n'est appliquée et toutes les valeurs sont autorisées.<br /><br /> (Pris en charge pour les hiérarchies d'attribut uniquement. La plage doit se situer sur un niveau d'une hiérarchie. Les plages illimitées ne sont pas prises en charge actuellement.)|  

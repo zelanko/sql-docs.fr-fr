@@ -1,5 +1,5 @@
 ---
-title: Règles de conversion | Microsoft Docs
+title: Règles pour les conversions | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,89 +16,89 @@ ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9ca64355a80ce8892f0ea0494e165d934d8d7a88
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057091"
 ---
 # <a name="rules-for-conversions"></a>Règles pour les conversions
-Les règles dans cette section s’appliquent pour les conversions impliquant des littéraux numériques. Dans le cadre de ces règles, les termes suivants sont définis :  
+Les règles de cette section s’appliquent aux conversions impliquant des littéraux numériques. Dans le cadre de ces règles, les termes suivants sont définis :  
   
--   *Affectation de Store :* Lors de l’envoi des données dans une colonne de table dans une base de données. Cela se produit pendant les appels aux **SQLExecute**, **SQLExecDirect**, et **SQLSetPos**. Lors de l’attribution de magasin, « target » fait référence à une colonne de base de données, et « source » fait référence à des données dans les mémoires tampons d’application.  
+-   *Attribution du magasin :* Lors de l’envoi de données dans une colonne de table dans une base de données. Cela se produit lors des appels à **SQLExecute**, **SQLExecDirect**et **SQLSetPos**. Pendant l’attribution du magasin, la « cible » fait référence à une colonne de base de données et la « source » fait référence aux données dans les mémoires tampons d’application.  
   
--   *Affectation de la récupération :* Lorsque vous récupérez des données à partir de la base de données dans des tampons de l’application. Cela se produit pendant les appels aux **SQLFetch**, **SQLGetData**, **SQLFetchScroll**, et **SQLSetPos**. Lors de l’attribution de la récupération, « target » fait référence aux mémoires tampons de l’application et « source » fait référence à la colonne de base de données.  
+-   *Assignation d’extraction :* Lors de la récupération de données de la base de données dans des mémoires tampons d’application. Cela se produit lors des appels à **SQLFetch**, **SQLGetData**, **SQLFetchScroll**et **SQLSetPos**. Lors de l’assignation de la récupération, « Target » fait référence aux mémoires tampons de l’application et « source » fait référence à la colonne de base de données.  
   
--   *CS :* La valeur dans la source du caractère.  
+-   *CS :* Valeur dans la source du caractère.  
   
--   *NT :* La valeur dans la cible numérique.  
+-   *NT :* Valeur dans la cible numérique.  
   
--   *NS :* La valeur dans la source de type numérique.  
+-   *Ns :* Valeur dans la source numérique.  
   
--   *CT :* La valeur dans la cible de caractère.  
+-   *CT :* Valeur dans la cible de caractère.  
   
--   Précision d’un littéral numérique exact : le nombre de chiffres qu’il contient.  
+-   Précision d’un littéral numérique exact : nombre de chiffres qu’il contient.  
   
--   La mise à l’échelle d’un littéral numérique exact : le nombre de chiffres à droite de la période expresse ou implicite.  
+-   Échelle d’un littéral numérique exact : nombre de chiffres à droite de la période exprimée ou implicite.  
   
--   La précision d’un littéral numérique approximatif : la précision de la mantisse.  
+-   Précision d’un littéral numérique approximatif : la précision de sa mantisse.  
   
-## <a name="character-source-to-numeric-target"></a>Source du caractère à la cible numérique  
- Voici les règles de conversion à partir d’une source de caractère (CS) vers une cible numérique (NT) :  
+## <a name="character-source-to-numeric-target"></a>Source de caractères en cible numérique  
+ Voici les règles de conversion d’une source de caractères (CS) en cible numérique (NT) :  
   
-1.  Remplacez CS avec la valeur obtenue en supprimant les espaces de début ou de fin dans CS. Si CS n’est pas valide *littéral numérique*, SQLSTATE 22018 (valeur de caractère non valide pour la spécification de la casse) est retournée.  
+1.  Remplacez CS par la valeur obtenue en supprimant les espaces de début ou de fin dans CS. Si CS n’est pas un *littéral numérique*valide, SQLSTATE 22018 (valeur de caractère non valide pour la spécification de cast) est retournée.  
   
-2.  Remplacez CS avec la valeur obtenue en supprimant les zéros non significatifs avant la virgule décimale, les zéros de fin après la virgule décimale, ou les deux.  
+2.  Remplacez CS par la valeur obtenue en supprimant les zéros non significatifs avant la virgule décimale, les zéros de fin après la virgule décimale, ou les deux.  
   
-3.  Convertir CS NT. Si la conversion entraîne une perte de chiffres significatifs, SQLSTATE 22003 (valeur numérique hors limites) est retournée. Si la conversion entraîne la perte de chiffres non significatifs, SQLSTATE 01 s 07 (troncation fractionnelle) est retournée.  
+3.  Convertissez CS en NT. Si la conversion entraîne une perte de chiffres significatifs, SQLSTATE 22003 (valeur numérique hors limites) est retourné. Si la conversion entraîne la perte de chiffres non significatifs, SQLSTATE 01S07 (troncation fractionnaire) est retourné.  
   
-## <a name="numeric-source-to-character-target"></a>Source de type numérique à caractère cible  
- Voici les règles de conversion à partir d’une source numérique (NS) pour une cible de caractère (CT) :  
+## <a name="numeric-source-to-character-target"></a>Cible numérique à caractère cible  
+ Voici les règles de conversion d’une source numérique (NS) en une cible de caractère (CT) :  
   
-1.  Soit la longueur en caractères de TR LT Pour l’attribution de la récupération, LT est égale à la longueur de la mémoire tampon en caractères moins le nombre d’octets dans le caractère de fin de la valeur null pour ce jeu de caractères.  
+1.  Donnez à LT la longueur en caractères de CT. Pour l’assignation de récupération, la valeur LT est égale à la longueur de la mémoire tampon en caractères moins le nombre d’octets dans le caractère de fin null pour ce jeu de caractères.  
   
-2.  Cas :  
+2.  Parfois  
   
-    -   Si NS est un type numérique exact, puis laissez YP égale à la chaîne de caractères le plus court qui est conforme à la définition de *littéral numérique exacte* telles que la mise à l’échelle de YP est identique à l’échelle de NS, et la valeur interprétée de YP est le valeur absolue de NS.  
+    -   Si NS est un type numérique exact, laissez YP égal à la chaîne de caractères la plus petite conforme à la définition du *littéral exact-Numeric* , de sorte que l’échelle de YP est identique à l’échelle de NS, et la valeur interprétée de YP est la valeur absolue de NS.  
   
-    -   Si NS est un type numérique approximatif, puis que vous laissez YP être une chaîne de caractères comme suit :  
+    -   Si NS est un type numérique approximatif, laissez YP être une chaîne de caractères comme suit :  
   
-         Cas :  
+         Casse :  
   
-         Si NS est égal à 0, YP est 0.  
+         Si la valeur NS est égale à 0, YP est égal à 0.  
   
-         Soit la chaîne de caractères le plus court qui est conforme à la définition exacte-YSN*littéral numérique* et dont la valeur interprétée est la valeur absolue de NS. Si la longueur de YSN est inférieur à (*précision* + 1) du type de données de NS, puis laissez YP égal YSN.  
+         Laissez YSN être la chaîne de caractères la plus petite conforme à la définition du littéral exact-*Numeric* et dont la valeur interprétée est la valeur absolue de NS. Si la longueur de YSN est inférieure à la valeur (*précision* + 1) du type de données NS, laissez YP égal à YSN.  
   
-         Sinon, YP est la chaîne de caractères le plus court qui est conforme à la définition de *littéral numérique approximatif* dont la valeur interprétée est la valeur absolue de NS et dont la propriété *mantisse* se compose d’un seul *chiffre* autrement dit pas « 0 », suivie d’un *période* et un *entier non signé*.  
+         Dans le cas contraire, YP est la chaîne de caractères la plus petite qui est conforme à la définition du *littéral approximatif numérique* dont la valeur interprétée est la valeur absolue de NS et dont la *mantisse* est un *chiffre* unique qui n’est pas « 0 », suivi d’un *point* et d’un *entier non signé*.  
   
-3.  Cas :  
+3.  Casse :  
   
-    -   Si NS est inférieur à 0, puis que vous laissez Y être le résultat de :  
+    -   Si la valeur NS est inférieure à 0, le résultat est le suivant :  
   
-         '-' &#124; &#124; YP  
+         '-'  &#124;&#124; YP  
   
-         où «&#124;&#124;» est l’opérateur de concaténation de chaîne.  
+         où « &#124;&#124; » est l’opérateur de concaténation de chaînes.  
   
-         Sinon, permettent d’Y égal YP.  
+         Sinon, laissez Y égal à YP.  
   
-4.  Soit la longueur en caractères de Y EP.  
+4.  La longueur des caractères de a est égale à EP.  
   
-5.  Cas :  
+5.  Casse :  
   
-    -   Si EP est égale à LT, CT est défini à Y.  
+    -   Si EP est égal à LT, CT a la valeur Y.  
   
-    -   Si EP est inférieure à LT, CT est défini à Y étendu sur la droite par un nombre approprié d’espaces.  
+    -   Si EP est inférieur à LT, CT est défini sur Y étendu à droite en fonction du nombre d’espaces approprié.  
   
-         Sinon (EP > LT), copiez les premiers caractères LT de Y dans TR  
+         Sinon (LY > LT), copiez les premiers caractères LT de Y dans CT.  
   
-         Cas :  
+         Casse :  
   
-         S’il s’agit d’une attribution de magasin, retournent l’erreur SQLSTATE 22001 (chaîne de données tronquée à droite).  
+         S’il s’agit d’une attribution de magasin, retournez l’erreur SQLSTATE 22001 (données de chaîne tronquées à droite).  
   
-         S’il s’agit d’affectation de la récupération, retourner l’avertissement SQLSTATE 01004 (chaîne de données tronquée à droite). Lors de la copie entraîne la perte de chiffres fractionnaires (autres que des zéros à droite), elle est définie par le pilote si une des actions suivantes se produit :  
+         S’il s’agit d’une assignation de récupération, retournez l’avertissement SQLSTATE 01004 (données de chaîne tronquées à droite). Lorsque la copie entraîne la perte de chiffres fractionnaires (autres que des zéros de fin), elle est définie par le pilote, que l’un des éléments suivants se produise :  
   
-         (1) le pilote tronque la chaîne de Y pour une mise à l’échelle appropriée (qui peut être pas également de zéro) et écrit le résultat en tr  
+         (1) le pilote tronque la chaîne de Y vers une échelle appropriée (qui peut être également zéro) et écrit le résultat dans CT.  
   
-         (2) le pilote arrondit la chaîne de Y pour une mise à l’échelle appropriée (qui peut être pas également de zéro) et écrit le résultat en tr  
+         (2) le pilote arrondit la chaîne de Y à une échelle appropriée (qui peut être également zéro) et écrit le résultat dans CT.  
   
-         (3) le pilote ni tronque ni arrondit, mais copie simplement les premiers caractères LT de Y dans TR
+         (3) le pilote n’est ni tronqué ni arrondi, mais copie uniquement les premiers caractères LT de Y dans CT.

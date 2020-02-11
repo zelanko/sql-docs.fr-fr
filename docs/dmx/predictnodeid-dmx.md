@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a7c7751f317d4a56fb4aafb7085509d175f32255
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68074681"
 ---
 # <a name="predictnodeid-dmx"></a>PredictNodeId (DMX)
@@ -31,7 +31,7 @@ PredictNodeId(<scalar column reference>)
  Colonne scalaire  
   
 ## <a name="return-type"></a>Type de retour  
- \<expression scalaire >  
+ \<> d’expression scalaire  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant indique si la personne spécifiée est susceptible d'acheter une bicyclette et retourne l'identificateur nodeID du nœud dont elle est le plus susceptible de faire partie.  
@@ -61,8 +61,8 @@ WHERE NODE_UNIQUE_NAME= '00000000100'
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Informations de référence sur les fonctions DMX&#41; Data Mining Extensions &#40;](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Fonctions &#40;&#41;DMX](../dmx/functions-dmx.md)   
+ [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)  
   
   

@@ -18,21 +18,21 @@ ms.assetid: a8513f4a-c025-49c8-99c3-4c83cb7f51ed
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ea264c48332f6e72a5f26b330e42cfb1e3d3ff8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061252"
 ---
-# <a name="spdbremove-transact-sql"></a>sp_dbremove (Transact-SQL)
+# <a name="sp_dbremove-transact-sql"></a>sp_dbremove (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime une base de données et tous les fichiers qui y sont associés.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Nous vous recommandons d’utiliser [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) à la place.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Nous vous recommandons d’utiliser à la place [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) .  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,15 +42,15 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @dbname = ] 'database'` Est le nom de la base de données à supprimer. *base de données* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @dbname = ] 'database'`Nom de la base de données à supprimer. *Database est de* **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @dropdev = ] 'dropdev'` Un indicateur fourni pour la compatibilité descendante et actuellement ignoré. *dropdev* a la valeur **dropdev**.  
+`[ @dropdev = ] 'dropdev'`Est un indicateur fourni pour la compatibilité descendante uniquement et est actuellement ignoré. *dropdev* a la valeur **dropdev**.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  

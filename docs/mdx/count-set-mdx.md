@@ -1,5 +1,5 @@
 ---
-title: Count (jeu) (MDX) | Microsoft Docs
+title: Count (Set) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: aac2f72cc8cd91e1964fd7734b858be8215cfdd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68047293"
 ---
 # <a name="count-set-mdx"></a>Count (Set) (MDX)
@@ -33,15 +33,15 @@ Set_Expression.Count
   
 ## <a name="arguments"></a>Arguments  
  *Set_Expression*  
- Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
+ Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
 ## <a name="remarks"></a>Notes  
- Le **Count (jeu)** fonction inclut ou exclut les cellules vides, selon la syntaxe utilisée. Si la syntaxe standard est utilisée, les cellules vides peuvent être exclus ou inclus à l’aide de la **EXCLUDEEMPTY** ou **INCLUDEEMPTY** indicateurs, respectivement. Si vous utilisez l'autre syntaxe proposée, la fonction inclut toujours les cellules vides.  
+ La fonction **Count (Set)** inclut ou exclut les cellules vides, selon la syntaxe utilisée. Si la syntaxe standard est utilisée, les cellules vides peuvent être exclues ou incluses à l’aide des indicateurs **ExcludeEmpty** ou **INCLUDEEMPTY** , respectivement. Si vous utilisez l'autre syntaxe proposée, la fonction inclut toujours les cellules vides.  
   
- Pour exclure les cellules vides dans le comptage d’un jeu, utilisez la syntaxe standard et la propriété facultative **EXCLUDEEMPTY** indicateur.  
+ Pour exclure des cellules vides dans le nombre d’un jeu, utilisez la syntaxe standard et l’indicateur **ExcludeEmpty** facultatif.  
   
 > [!NOTE]  
->  Le **Count (jeu)** fonction compte les cellules vides par défaut. En revanche, le **nombre** fonction dans OLE DB qui compte un jeu exclut les cellules vides par défaut.  
+>  La fonction **Count (Set)** compte les cellules vides par défaut. En revanche, la fonction **Count** de OLE DB qui compte un jeu exclut les cellules vides par défaut.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple ci-dessous compte le nombre de cellules dans le jeu de membres comprenant les enfants de la hiérarchie d'attribut Model Name dans la dimension Product.  
@@ -53,14 +53,14 @@ SELECT Measures.X ON 0
 FROM [Adventure Works]  
 ```  
   
- L’exemple suivant compte le nombre de produits dans la dimension Product en utilisant le **DrilldownLevel** fonction conjointement avec le **nombre** (fonction).  
+ L’exemple suivant compte le nombre de produits dans la dimension Product à l’aide de la fonction **DrilldownLevel** conjointement avec la fonction **Count** .  
   
 ```  
 Count(DrilldownLevel (   
    [Product].[Product].[Product]))  
 ```  
   
- L’exemple suivant retourne les revendeurs dont les refus des ventes par rapport au trimestre précédent, à l’aide de la **nombre** fonction conjointement avec le **filtre** (fonction) et un nombre d’autres fonctions. Cette requête utilise le **agrégation** (fonction) pour prendre en charge la sélection de nombreux membres géographiques, comme pour les sélectionner à partir d’une liste déroulante, dans une application cliente.  
+ L’exemple suivant retourne ces revendeurs dont les ventes sont refusées par rapport au trimestre calendaire précédent, à l’aide de la fonction **Count** , conjointement à la fonction **Filter** et à un certain nombre d’autres fonctions. Cette requête utilise la fonction **Aggregate** pour prendre en charge la sélection de plusieurs membres Geography, par exemple pour la sélection dans une liste déroulante dans une application cliente.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  
@@ -91,16 +91,16 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Nombre &#40;Dimension&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
- [Nombre &#40;niveaux de hiérarchie&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [Nombre &#40;Tuple&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
- [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
- [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
- [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
- [Properties &#40;MDX&#41;](../mdx/properties-mdx.md)   
- [Aggregate &#40;MDX&#41;](../mdx/aggregate-mdx.md)   
- [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)   
- [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Nombre &#40;dimension&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
+ [Nombre &#40;niveaux de hiérarchie&#41; &#40;&#41;MDX](../mdx/count-hierarchy-levels-mdx.md)   
+ [Nombre &#40;Tuple&#41; &#40;&#41;MDX](../mdx/count-tuple-mdx.md)   
+ [DrilldownLevel&#41;MDX &#40;](../mdx/drilldownlevel-mdx.md)   
+ [AddCalculatedMembers&#41;MDX &#40;](../mdx/addcalculatedmembers-mdx.md)   
+ [Hierarchize&#41;MDX &#40;](../mdx/hierarchize-mdx.md)   
+ [Propriétés &#40;MDX&#41;](../mdx/properties-mdx.md)   
+ [&#41;MDX &#40;Aggregate](../mdx/aggregate-mdx.md)   
+ [Filtre &#40;&#41;MDX](../mdx/filter-mdx.md)   
+ [PrevMember&#41;MDX &#40;](../mdx/prevmember-mdx.md)   
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

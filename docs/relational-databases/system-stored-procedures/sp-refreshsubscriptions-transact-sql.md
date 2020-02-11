@@ -16,18 +16,18 @@ ms.assetid: 6cb9b1ce-1ce7-43ab-9451-201f79ed1ffa
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 548285b08ceedab49674b35128216bed320c3e7c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771185"
 ---
-# <a name="sprefreshsubscriptions-transact-sql"></a>sp_refreshsubscriptions (Transact-SQL)
+# <a name="sp_refreshsubscriptions-transact-sql"></a>sp_refreshsubscriptions (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Ajoutez des abonnements à de nouveaux articles pour tous les abonnés existants à une publication avec mise à jour immédiate. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,16 +39,16 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
 ## <a name="arguments"></a>Arguments  
 `[ @publication = ] 'publication'`Publication dont les abonnements doivent être actualisés. *publication* est de **type sysname**, sans valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  **sp_refreshsubscriptions** est utilisé dans les réplications d’instantané, transactionnelles et de fusion.  
   
- **sp_refreshsubscriptions** est appelé par **sp_addarticle** pour une publication avec mise à jour immédiate.  
+ **sp_refreshsubscriptions** est appelée par **sp_addarticle** pour une publication avec mise à jour immédiate.  
   
 ## <a name="permissions"></a>Autorisations  
  Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_refreshsubscriptions**.  

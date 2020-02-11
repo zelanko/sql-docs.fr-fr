@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 7dded8c79495d0bdc684927f4875a93c3160c1bf
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401031"
 ---
 # <a name="loading-server-capacity-planning-worksheet-for-analytics-platform-system"></a>Chargement de la feuille de planification de la capacité du serveur pour Analytics Platform System
@@ -31,7 +31,7 @@ Cette feuille de planification de la capacité vous aide à déterminer la confi
   
 Imprimez cette feuille de calcul et remplissez-la avec vos propres exigences.  
   
-|Composant|Prérequis|Renseignez cette colonne avec vos propres exigences|Recommandations|  
+|Composant|Condition requise|Renseignez cette colonne avec vos propres exigences|Recommandations|  
 |-------------|---------------|--------------------------------------------------|-------------------|  
 |Stockage|Nombre maximal d’octets que vous envisagez de stocker sur le serveur de chargement à un moment donné.|![Icône de crayon](media/pencil-icon.png "Icône de crayon")|Pour déterminer les besoins en stockage, déterminez la quantité de données que vous envisagez de stocker sur le serveur de chargement à un moment donné.  Les besoins en capacité ne concernent que les fichiers de charge ; le système d’exploitation et les fichiers de charge doivent se trouver sur des baies de disques différentes.<br /><br />Par exemple : Si vous envisagez de charger 100 Go de données à partir du disque 3 fois par jour, mais ne supprimez pas les fichiers de données jusqu’à la fin de la semaine, vous devez disposer d’un minimum de 2,1 to pour stocker les fichiers de données. Nous vous recommandons d’être prudent et de bénéficier d’environ 30% de stockage supplémentaire pour tenir compte des variations et de la croissance.  Pour cet exemple, 2,73 to d’espace de stockage sont préférables.|  
 |Vitesse de chargement|Nombre maximal d’octets par heure de données à charger dans PDW.|![Icône de crayon](media/pencil-icon.png "Icône de crayon")|Il s’agit d’une estimation. Lors du calcul de cette exigence, supposez que les fichiers se trouvent déjà sur le serveur de chargement et que d’autres conditions de chargement sont aussi efficaces que possible.<br /><br />Par exemple : il n’est pas nécessaire de factoriser la compression des données, car dwloader envoie toujours des données non compressées au PDW. Il n’est pas nécessaire de factoriser les conversions de types de données et la taille de la table de destination.|  

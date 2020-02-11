@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_cdc_get_max_lsn (Transact-SQL) | Microsoft Docs
+title: sys. fn_cdc_get_max_lsn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 93f3a4c8-b91f-4ebb-8e96-9397bb3a1c43
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c51a69eb3604b937b9bf2aaf9a09aa383f2c1490
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046452"
 ---
-# <a name="sysfncdcgetmaxlsn-transact-sql"></a>sys.fn_cdc_get_max_lsn (Transact-SQL)
+# <a name="sysfn_cdc_get_max_lsn-transact-sql"></a>sys.fn_cdc_get_max_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne le numéro de séquence maximale du journal (LSN) à partir de la colonne start_lsn dans la [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) (table système). Vous pouvez utiliser cette fonction pour retourner le point de terminaison supérieur de la chronologie de capture de données modifiées pour toute instance de capture.  
+  Retourne le numéro séquentiel dans le journal (LSN) maximal à partir de la colonne start_lsn de la table système [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Vous pouvez utiliser cette fonction pour retourner le point de terminaison supérieur de la chronologie de capture de données modifiées pour toute instance de capture.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,10 +42,10 @@ sys.fn_cdc_get_max_lsn ()
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- **binary(10)**  
+ **binaire (10)**  
   
 ## <a name="remarks"></a>Notes  
- Cette fonction retourne la valeur LSN maximal dans la colonne start_lsn de la [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) table. En tant que tel, il s'agit du dernier numéro séquentiel dans le journal traité par le processus de capture lorsque les modifications sont propagées aux tables de modification de base de données. Il sert également de point de terminaison supérieur pour toutes les chronologies associées aux instances de capture définies pour la base de données.  
+ Cette fonction retourne le LSN maximal dans la colonne start_lsn de la table [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . En tant que tel, il s'agit du dernier numéro séquentiel dans le journal traité par le processus de capture lorsque les modifications sont propagées aux tables de modification de base de données. Il sert également de point de terminaison supérieur pour toutes les chronologies associées aux instances de capture définies pour la base de données.  
   
  La fonction est généralement utilisée pour obtenir un point de terminaison supérieur approprié pour un intervalle de requête.  
   
@@ -77,7 +77,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sys.fn_cdc_get_min_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
+ [sys. fn_cdc_get_min_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
  [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   

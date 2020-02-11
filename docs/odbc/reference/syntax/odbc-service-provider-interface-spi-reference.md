@@ -1,5 +1,5 @@
 ---
-title: Référence de l’Interface (SPI) du fournisseur de Service ODBC | Microsoft Docs
+title: Informations de référence sur l’interface SPI (Service Provider Interface) ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ ms.assetid: cdeffb4a-f344-4abe-97f3-be2ede1c8e59
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 88053620fa413c50a8faff4cc47cbbe1457249f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68073831"
 ---
 # <a name="odbc-service-provider-interface-spi-reference"></a>Informations de référence sur l’interface SPI ODBC
-En règle générale, ODBC défini une interface de programmation d’applications (API). Les fonctions dans l’API peuvent être appelées par les applications, et elles doivent être implémentées à l’intérieur du Gestionnaire de pilotes et le pilote.  
+Traditionnellement, ODBC définissait une interface de programmation d’applications (API). Les fonctions de l’API peuvent être appelées par des applications et doivent être implémentées à la fois dans le gestionnaire de pilotes et dans le pilote.  
   
- Avec l’ajout de la fonctionnalité de regroupement de connexions prenant en charge de pilote, ODBC présente l’interface de fournisseur de service (SPI). Les fonctions dans le SPI sont utilisées pour la communication entre le Gestionnaire de pilotes et le pilote. Fonctions SPI sont implémentées par le pilote ; le Gestionnaire de pilotes n’expose pas de fonctions SPI aux applications. Applications ne doivent pas appeler directement ces fonctions.  
+ Avec l’ajout de la fonctionnalité de regroupement de connexions prenant en charge les pilotes, ODBC introduit l’interface SPI (Service Provider Interface). Les fonctions du SPI sont utilisées pour la communication entre le gestionnaire de pilotes et le pilote. Les fonctions SPI sont implémentées par le pilote ; le gestionnaire de pilotes n’expose pas les fonctions SPI aux applications. Les applications ne doivent pas appeler ces fonctions directement.  
   
- Inclure sqlspi.h pour le développement de pilote ODBC.  
+ Incluez sqlspi. h pour le développement du pilote ODBC.  
   
- Cette section contient les rubriques suivantes  
+ Cette section contient les rubriques suivantes :  
   
 -   [SQLCleanupConnectionPoolID](../../../odbc/reference/syntax/sqlcleanupconnectionpoolid-function.md)  
   
@@ -42,5 +42,5 @@ En règle générale, ODBC défini une interface de programmation d’applicatio
   
 ## <a name="see-also"></a>Voir aussi  
  [Développement d’un pilote ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Développement de la reconnaissance des pools de connexion dans un pilote ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)   
+ [Développement de la reconnaissance des pools de connexions dans un pilote ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)   
  [Regroupement de connexions du gestionnaire de pilotes](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)

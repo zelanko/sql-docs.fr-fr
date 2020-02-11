@@ -15,16 +15,16 @@ ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cb4f4c2b1e9658e1e0199ec6d856ef21db80cf07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952352"
 ---
 # <a name="implementing-desktop-database-drivers"></a>Implémentation des pilotes pour les bases de données de poste de travail
-Vous trouverez des instructions et notes techniques sur la façon d’implémenter et configurer les pilotes de base de données Microsoft ODBC Desktop dans l’aide en ligne d’administrateur de sources de données ODBC. Ce fichier est accessible pendant les routines d’installation de pilote à partir de la [administrateur de sources de données Microsoft ODBC](../../odbc/admin/odbc-data-source-administrator.md).  
+Vous trouverez des instructions et des notes techniques sur la façon d’implémenter et de configurer les pilotes de base de données de bureau Microsoft ODBC dans l’aide en ligne de l’administrateur de sources de données ODBC. Ce fichier est accessible pendant les routines d’installation du pilote à partir de l’administrateur de la [source de données Microsoft ODBC](../../odbc/admin/odbc-data-source-administrator.md).  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Fichiers à utiliser avec les pilotes pour les bases de données de poste de travail](../../odbc/microsoft/files-to-use-with-the-desktop-database-drivers.md)  
   
@@ -32,7 +32,7 @@ Vous trouverez des instructions et notes techniques sur la façon d’implément
   
 -   [Configuration matérielle et logicielle requise](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
   
--   [Descripteurs avec les pilotes de base de données de bureau](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
+-   [Descripteurs avec des pilotes de base de données de bureau](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
   
 -   [Diagnostics des pilotes pour les bases de données de poste de travail](../../odbc/microsoft/diagnostics-for-desktop-database-drivers.md)  
   

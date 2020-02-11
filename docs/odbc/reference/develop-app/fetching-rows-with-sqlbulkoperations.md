@@ -1,5 +1,5 @@
 ---
-title: Extraction de lignes avec SQLBulkOperations | Microsoft Docs
+title: Extraction de lignes à l’aide de SQLBulkOperations | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,23 +18,23 @@ ms.assetid: 0efee2d6-ce94-411e-9976-97ba28b8da37
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 60b6673c4a6d618e52c78b48fe7307c20c8628f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069842"
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>Extraction de lignes avec SQLBulkOperations
-Peuvent récupérer des données dans un ensemble de lignes à l’aide de signets par un appel à **SQLBulkOperations.** Les lignes à extraire sont identifiés par les signets dans une colonne liée de signet. Colonnes avec la valeur SQL_COLUMN_IGNORE ne sont pas extraits.  
+Les données peuvent être réextraites dans un ensemble de lignes à l’aide de signets par un appel à **SQLBulkOperations.** Les lignes à extraire sont identifiées par les signets dans une colonne de signets liés. Les colonnes ayant la valeur SQL_COLUMN_IGNORE ne sont pas extraites.  
   
  Pour effectuer des extractions en bloc avec **SQLBulkOperations**, l’application effectue les opérations suivantes :  
   
-1.  Récupère et met en cache les signets de toutes les lignes à mettre à jour. S’il existe plus d’un signet et la liaison est utilisée, les signets sont stockés dans un tableau. s’il existe plus d’un signet et la liaison est utilisée, les signets sont stockés dans un tableau de structures de ligne.  
+1.  Récupère et met en cache les signets de toutes les lignes à mettre à jour. Si plusieurs liaisons de signet et de colonne sont utilisées, les signets sont stockés dans un tableau ; s’il y a plus d’un signet et que la liaison selon les lignes est utilisée, les signets sont stockés dans un tableau de structures de lignes.  
   
-2.  Définit l’attribut d’instruction SQL_ATTR_ROW_ARRAY_SIZE au nombre de lignes à extraire et lie la mémoire tampon contenant la valeur du signet, ou le tableau de signets, à la colonne 0.  
+2.  Définit l’attribut d’instruction SQL_ATTR_ROW_ARRAY_SIZE sur le nombre de lignes à extraire et lie la mémoire tampon contenant la valeur de signet, ou le tableau de signets, à la colonne 0.  
   
-3.  Définit la valeur dans la mémoire tampon de longueur / d’indicateur de chaque colonne en fonction des besoins. Il s’agit de la longueur d’octet des données ou SQL_NTS pour les colonnes liées aux mémoires tampons de chaîne, la longueur d’octet des données pour les colonnes liées à la mémoire tampon binaire et SQL_NULL_DATA pour toutes les colonnes à la valeur NULL. L’application définit la valeur dans la mémoire tampon de longueur / d’indicateur de ces colonnes doivent être définies sur leur valeur par défaut (le cas échéant) ou NULL (si ce choix n’est pas le cas) à SQL_COLUMN_IGNORE.  
+3.  Définit la valeur de la mémoire tampon de longueur/d’indicateur de chaque colonne si nécessaire. Il s’agit de la longueur en octets des données ou SQL_NTS pour les colonnes liées aux mémoires tampons de chaîne, la longueur en octets des données pour les colonnes liées aux mémoires tampons binaires, et SQL_NULL_DATA pour toutes les colonnes dont la valeur est NULL. L’application définit la valeur dans la mémoire tampon de longueur/d’indicateur des colonnes qui doivent être définies sur leur valeur par défaut (le cas échéant) ou NULL (le cas échéant) pour SQL_COLUMN_IGNORE.  
   
-4.  Appels **SQLBulkOperations** avec la *opération* argument a la valeur SQL_FETCH_BY_BOOKMARK.  
+4.  Appelle **SQLBulkOperations** avec l’argument *Operation* défini sur SQL_FETCH_BY_BOOKMARK.  
   
- Il n’est pas nécessaire pour l’application pour utiliser le tableau d’opération de ligne pour empêcher l’opération à effectuer sur certaines colonnes. L’application sélectionne les lignes qu’elle souhaite extraire en copiant uniquement les signets pour les lignes dans le tableau de signet lié.
+ L’application n’a pas besoin d’utiliser le tableau d’opérations de ligne pour empêcher l’exécution de l’opération sur certaines colonnes. L’application sélectionne les lignes qu’elle souhaite extraire en copiant uniquement les signets pour ces lignes dans le tableau de signets lié.

@@ -1,5 +1,5 @@
 ---
-title: Les données Unicode et serveur des Pages de codes | Microsoft Docs
+title: Données Unicode et pages de codes du serveur | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,34 +15,34 @@ ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f32929b9cd5d2f69ae4ffbb8d13f7ec09d9972ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064273"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Données Unicode et pages de codes du serveur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Utilisez plutôt l’intégration du CLR.  
   
  L'API de procédure stockée étendue est activée pour les données Unicode ; toutefois, elle n'est pas activée pour les métadonnées Unicode. La directive Unicode #define n'a pas d'effet sur l'API de procédure stockée étendue.  
   
- Toutes les métadonnées retournées par l'API de procédure stockée étendue ou fournies par celle-ci à par votre application de procédure stockée étendue sont censées figurer dans la page de codes multioctets du serveur. La page de codes par défaut d’une application de serveur d’API de procédure stockée étendue est la page de codes ANSI de l’ordinateur sur lequel l’application est en cours d’exécution, ce qui peut être obtenu en appelant **srv_pfield** avec le paramètre de champ défini sur SRV_ SPROC_CODEPAGE.  
+ Toutes les métadonnées retournées par l'API de procédure stockée étendue ou fournies par celle-ci à par votre application de procédure stockée étendue sont censées figurer dans la page de codes multioctets du serveur. La page de codes par défaut d’une application serveur d’API de procédure stockée étendue est la page de codes ANSI de l’ordinateur sur lequel l’application s’exécute, qui peut être obtenue en appelant **SRV_PFIELD** avec le paramètre Field défini sur SRV_SPROC_CODEPAGE.  
   
  Si votre application de l'API de procédure stockée étendue prend en charge Unicode, vous devez convertir les noms de colonne de métadonnées Unicode, les messages d'erreur, etc. en données multioctets avant de passer ces données à l'API de procédure stockée étendue.  
   
 ## <a name="example"></a>Exemple  
  La procédure stockée étendue suivante est un exemple des conversions Unicode abordées précédemment. Notez les points suivants :  
   
--   Données de la colonne sont passées en tant que données Unicode à **srv_describe** , car la colonne est décrite comme étant SRVNVARCHAR.  
+-   Les données de colonne sont transmises en tant que données Unicode à **srv_describe** , car la colonne est décrite comme étant SRVNVARCHAR.  
   
--   Métadonnées de nom de colonne sont passée à **srv_describe** en tant que données multioctets.  
+-   Les métadonnées de nom de colonne sont passées à **srv_describe** en tant que données multioctets.  
   
-     Appels de procédures stockées étendu **srv_pfield** avec le paramètre de champ valeur srv_sproc_codepage attribuée pour obtenir la page de codes multioctets [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     La procédure stockée étendue appelle **SRV_PFIELD** avec le paramètre Field défini sur SRV_SPROC_CODEPAGE pour obtenir la page de codes multioctets de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Messages d’erreur sont passés à **srv_sendmsg** en tant que données multioctets.  
+-   Les messages d’erreur sont passés à **srv_sendmsg** en tant que données multioctets.  
   
     ```  
     __declspec(dllexport) RETCODE proc1 (SRV_PROC *srvproc)  

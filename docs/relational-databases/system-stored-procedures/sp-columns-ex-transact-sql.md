@@ -18,18 +18,18 @@ ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 799c45755d9d3866a1cbe3b61b8582787331123c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68070345"
 ---
-# <a name="spcolumnsex-transact-sql"></a>sp_columns_ex (Transact-SQL)
+# <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Renvoie les informations de colonne, à raison d'une ligne par colonne, pour les tables du serveur lié spécifiées. **sp_columns_ex** retourne des informations de colonne pour la colonne uniquement si *colonne* est spécifié.  
+  Renvoie les informations de colonne, à raison d'une ligne par colonne, pour les tables du serveur lié spécifiées. **sp_columns_ex** retourne les informations de colonne uniquement pour la colonne spécifique si la *colonne* est spécifiée.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,51 +44,51 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @table_server = ] 'table_server'` Est le nom du serveur lié pour lequel retourner les informations de colonne. *serveur_de_la_table* est **sysname**, sans valeur par défaut.  
+`[ @table_server = ] 'table_server'`Nom du serveur lié pour lequel les informations de colonne doivent être retournées. *table_server* est de **type sysname**, sans valeur par défaut.  
   
-`[ @table_name = ] 'table_name'` Est le nom de la table pour laquelle retourner des informations sur les colonnes. *table_name* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @table_name = ] 'table_name'`Nom de la table pour laquelle les informations de colonne doivent être retournées. *table_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @table_schema = ] 'table_schema'` Est le nom de schéma de la table pour laquelle retourner des informations sur les colonnes. *table_schema* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @table_schema = ] 'table_schema'`Nom de schéma de la table pour laquelle les informations de colonne doivent être retournées. *TABLE_SCHEMA* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @table_catalog = ] 'table_catalog'` Est le nom du catalogue de la table pour laquelle retourner des informations sur les colonnes. *table_catalog* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @table_catalog = ] 'table_catalog'`Nom du catalogue de la table pour laquelle les informations de colonne doivent être retournées. *TABLE_CATALOG* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @column_name = ] 'column'` Est le nom de la colonne de base de données pour laquelle les informations demandées. *colonne* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @column_name = ] 'column'`Nom de la colonne de base de données pour laquelle des informations doivent être fournies. *Column* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @ODBCVer = ] 'ODBCVer'` Est la version d’ODBC utilisée. *ODBCVer* est **int**, avec une valeur par défaut 2. Cela indique ODBC version 2. Les valeurs valides sont 2 ou 3. Consultez la spécification ODBC SQLColumns pour connaître les différences de comportement entre les versions 2 et 3.  
+`[ @ODBCVer = ] 'ODBCVer'`Est la version de ODBC en cours d’utilisation. *ODBCVer* est de **type int**, avec 2 comme valeur par défaut. Cela indique ODBC version 2. Les valeurs valides sont 2 ou 3. Consultez la spécification ODBC SQLColumns pour connaître les différences de comportement entre les versions 2 et 3.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- Aucun  
+## <a name="return-code-values"></a>Codet de retour  
+ None  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nom du qualificateur de la table ou de la vue. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (_qualificateur_ **.** _propriétaire_ **.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table. Ce champ peut contenir la valeur NULL.|  
+|**TABLE_CAT**|**sysname**|Nom du qualificateur de la table ou de la vue. Divers produits SGBD prennent en charge les noms de tables en trois parties (_qualificateur_**.** _propriétaire_**.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table. Ce champ peut contenir la valeur NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nom du propriétaire de la table ou de la vue. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de l'utilisateur de base de données qui a créé la table. Ce champ retourne toujours une valeur.|  
 |**TABLE_NAME**|**sysname**|Nom de table ou de vue. Ce champ retourne toujours une valeur.|  
-|**COLUMN_NAME**|**sysname**|Nom de colonne, pour chaque colonne de la **TABLE_NAME** retourné. Ce champ retourne toujours une valeur.|  
-|**DATA_TYPE**|**smallint**|Valeur entière correspondant à des indicateurs de type ODBC. S'il s'agit d'un type de données qui ne peut pas être mappé avec un type ODBC, cette valeur est NULL. Le nom de type de données natif est retourné dans le **TYPE_NAME** colonne.|  
-|**TYPE_NAME**|**varchar(** 13 **)**|Chaîne représentant un type de données. Le SGBD sous-jacent dispose de ce nom de type de données.|  
-|**COLUMN_SIZE**|**int**|Nombre de chiffres significatifs. La valeur de retour pour la **précision** colonne est en base 10.|  
+|**COLUMN_NAME**|**sysname**|Nom de colonne, pour chaque colonne de la **table_name** retournée. Ce champ retourne toujours une valeur.|  
+|**DATA_TYPE**|**smallint**|Valeur entière correspondant à des indicateurs de type ODBC. S'il s'agit d'un type de données qui ne peut pas être mappé avec un type ODBC, cette valeur est NULL. Le nom du type de données natif est retourné dans la colonne **type_name** .|  
+|**TYPE_NAME**|**varchar (** 13 **)**|Chaîne représentant un type de données. Le SGBD sous-jacent dispose de ce nom de type de données.|  
+|**COLUMN_SIZE**|**int**|Nombre de chiffres significatifs. La valeur de retour de la colonne **PRECISION** est en base 10.|  
 |**BUFFER_LENGTH**|**int**|Taille de transfert des données.1|  
 |**DECIMAL_DIGITS**|**smallint**|Nombre de chiffres situés à droite du séparateur décimal.|  
-|**NUM_PREC_RADIX**|**smallint**|Est la base de types de données numériques.|  
+|**NUM_PREC_RADIX**|**smallint**|Est la base des types de données numériques.|  
 |**NULLABLE**|**smallint**|Spécifie la possibilité de contenir une valeur NULL.<br /><br /> 1 = les valeurs NULL sont autorisées.<br /><br /> 0 = pas de valeur NULL.|  
-|**REMARQUES**|**varchar(** 254 **)**|Ce champ renvoie toujours la valeur NULL.|  
-|**COLUMN_DEF**|**varchar(** 254 **)**|Valeur par défaut de la colonne.|  
-|**SQL_DATA_TYPE**|**smallint**|Valeur du type de données SQL tel qu'il apparaît dans le champ TYPE du descripteur. Cette colonne est identique à la **DATA_TYPE** colonne, à l’exception de la **datetime** et SQL-92 **intervalle** types de données. Cette colonne renvoie toujours une valeur.|  
-|**SQL_DATETIME_SUB**|**smallint**|Code de sous-type pour **datetime** et SQL-92 **intervalle** types de données. Pour les autres types de données, cette colonne renvoie la valeur NULL.|  
-|**CHAR_OCTET_LENGTH**|**Int**|Longueur maximale, en octets, d'une colonne de type de données caractère ou entier. Pour tous les autres types de données, cette colonne renvoie une valeur NULL.|  
-|**ORDINAL_POSITION**|**Int**|Numéro d'ordre de la colonne dans la table. La première colonne de la table est la colonne 1. Cette colonne renvoie toujours une valeur.|  
-|**IS_NULLABLE**|**varchar(** 254 **)**|Possibilité de valeurs NULL dans la colonne de la table. Les règles ISO sont utilisées pour déterminer la possibilité de valeur Null. Un SGBD compatible avec la norme ISO SQL ne peut pas renvoyer de chaîne vide.<br /><br /> YES = la colonne peut inclure des valeurs NULL.<br /><br /> NO = la colonne ne peut pas inclure de valeurs NULL.<br /><br /> Cette colonne renvoie une chaîne de longueur zéro si la possibilité de valeurs Null n'est pas connue.<br /><br /> La valeur retournée pour cette colonne est différente de celle renvoyée pour la **NULLABLE** colonne.|  
-|**SS_DATA_TYPE**|**tinyint**|Type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisé par les procédures stockées étendues.|  
+|**CONCERNANT**|**varchar (** 254 **)**|Ce champ renvoie toujours la valeur NULL.|  
+|**COLUMN_DEF**|**varchar (** 254 **)**|Valeur par défaut de la colonne.|  
+|**SQL_DATA_TYPE**|**smallint**|Valeur du type de données SQL tel qu'il apparaît dans le champ TYPE du descripteur. Cette colonne est la même que la colonne **data_type** , à l’exception des types de données **DateTime** et SQL-92 **Interval** . Cette colonne renvoie toujours une valeur.|  
+|**SQL_DATETIME_SUB**|**smallint**|Code de sous-type pour les types de données **DateTime** et SQL-92 **Interval** . Pour les autres types de données, cette colonne renvoie la valeur NULL.|  
+|**CHAR_OCTET_LENGTH**|**int**|Longueur maximale, en octets, d'une colonne de type de données caractère ou entier. Pour tous les autres types de données, cette colonne renvoie une valeur NULL.|  
+|**ORDINAL_POSITION**|**int**|Numéro d'ordre de la colonne dans la table. La première colonne de la table est la colonne 1. Cette colonne renvoie toujours une valeur.|  
+|**IS_NULLABLE**|**varchar (** 254 **)**|Possibilité de valeurs NULL dans la colonne de la table. Les règles ISO sont utilisées pour déterminer la possibilité de valeur Null. Un SGBD compatible avec la norme ISO SQL ne peut pas renvoyer de chaîne vide.<br /><br /> YES = la colonne peut inclure des valeurs NULL.<br /><br /> NO = la colonne ne peut pas inclure de valeurs NULL.<br /><br /> Cette colonne renvoie une chaîne de longueur zéro si la possibilité de valeurs Null n'est pas connue.<br /><br /> La valeur retournée pour cette colonne est différente de la valeur renvoyée pour la colonne **Nullable** .|  
+|**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de données utilisé par les procédures stockées étendues.|  
   
  Pour plus d'informations, consultez la documentation de Microsoft ODBC.  
   
 ## <a name="remarks"></a>Notes  
- **sp_columns_ex** est exécuté en interrogeant l’ensemble de lignes COLUMNS de le **IDBSchemaRowset** interface du fournisseur OLE DB correspondant à *serveur_de_la_table*. Le *table_name*, *table_schema*, *table_catalog*, et *colonne* paramètres sont passés à cette interface pour limiter les lignes retourné.  
+ **sp_columns_ex** est exécuté en interrogeant l’ensemble de lignes COLUMNS de l’interface **IDBSchemaRowset** du fournisseur OLE DB correspondant à *table_server*. Les paramètres *table_name*, *TABLE_SCHEMA*, *TABLE_CATALOG*et *Column* sont passés à cette interface pour limiter les lignes retournées.  
   
- **sp_columns_ex** retourne un résultat vide si le fournisseur OLE DB du serveur lié spécifié ne prend pas en charge l’ensemble de lignes COLUMNS de le **IDBSchemaRowset** interface.  
+ **sp_columns_ex** retourne un jeu de résultats vide si le fournisseur de OLE DB du serveur lié spécifié ne prend pas en charge l’ensemble de lignes COLUMNS de l’interface **IDBSchemaRowset** .  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur le schéma.  

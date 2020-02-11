@@ -1,5 +1,5 @@
 ---
-title: sys.xml_schema_wildcards (Transact-SQL) | Microsoft Docs
+title: sys. xml_schema_wildcards (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,29 +20,29 @@ ms.assetid: 7cedfe9a-e99e-4777-8a28-98674b6e5cff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e725df2676084f74b51a8a68d74fbc32e0c32152
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68060391"
 ---
-# <a name="sysxmlschemawildcards-transact-sql"></a>sys.xml_schema_wildcards (Transact-SQL)
+# <a name="sysxml_schema_wildcards-transact-sql"></a>sys.xml_schema_wildcards (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne une ligne pour chaque composant de schéma XML qui est un caractère générique d’attribut (**type** de **V**) ou un caractère générique de l’élément (**type** de **W**), à la fois avec **symbol_space** de **N**.  
+  Retourne une ligne par composant de schéma XML qui est un attribut-caractère générique (**genre** of **V**) ou élément-caractère générique (**type** of **W**), avec **symbol_space** de **N**.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**\<héritée de colonnes >**||Hérite des colonnes de [sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
-|**process_content**|**char(1)**|Indique comment les contenus sont traités.<br /><br /> S = validation stricte (validation obligatoire)<br /><br /> L = validation libre (validation si possible)<br /><br /> P = validation ignorée|  
-|**process_content_desc**|**nvarchar(60)**|Description de la manière dont les contenus sont traités :<br /><br /> **STRICT_VALIDATION**<br /><br /> **LAX_VALIDATION**<br /><br /> **SKIP_VALIDATION**|  
-|**disallow_namespaces**|**bit**|0 = les espaces de noms énumérés dans [sys.xml_schema_wildcard_namespaces](../../relational-databases/system-catalog-views/sys-xml-schema-wildcard-namespaces-transact-sql.md) sont les seules personnes autorisées.<br /><br /> 1 = les espaces de noms sont les seuls non autorisés.|  
+|**\<colonnes héritées>**||Hérite des colonnes de [sys. xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
+|**process_content**|**Char(1**|Indique comment les contenus sont traités.<br /><br /> S = validation stricte (validation obligatoire)<br /><br /> L = validation libre (validation si possible)<br /><br /> P = validation ignorée|  
+|**process_content_desc**|**nvarchar (60)**|Description de la manière dont les contenus sont traités :<br /><br /> **STRICT_VALIDATION**<br /><br /> **LAX_VALIDATION**<br /><br /> **SKIP_VALIDATION**|  
+|**disallow_namespaces**|**bit**|0 = les espaces de noms énumérés dans [sys. xml_schema_wildcard_namespaces](../../relational-databases/system-catalog-views/sys-xml-schema-wildcard-namespaces-transact-sql.md) sont les seuls autorisés.<br /><br /> 1 = les espaces de noms sont les seuls non autorisés.|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Schémas XML &#40;système de Type XML&#41; affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
+ [Schémas XML &#40;les affichages catalogue du système de type XML&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

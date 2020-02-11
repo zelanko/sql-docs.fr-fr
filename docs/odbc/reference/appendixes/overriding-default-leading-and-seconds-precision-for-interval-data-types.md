@@ -1,5 +1,5 @@
 ---
-title: Remplacer la précision du début et Types de données Interval | Microsoft Docs
+title: Remplacer la précision de début et de seconde pour les types de données d’intervalle | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,27 +18,27 @@ ms.assetid: 3d65493f-dce7-4d29-9f59-c63a4e47918c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13adfb16b772acc5fac30cf3d10c6199f16f479d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100623"
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>Remplacement de la précision du début et de la fin par défaut pour les types de données d’intervalle
-Lorsque le champ SQL_DESC_TYPE d’un ARD est défini à un type de C datetime ou interval, en appelant **SQLBindCol** ou **SQLSetDescField**, le champ SQL_DESC_PRECISION (qui contient l’intervalle en secondes précision) est définie sur les valeurs par défaut suivantes :  
+Quand le champ SQL_DESC_TYPE d’un ARD est défini sur un type DateTime ou Interval C, en appelant **SQLBindCol** ou **SQLSetDescField**, le champ SQL_DESC_PRECISION (qui contient la précision de l’intervalle en secondes) est défini sur les valeurs par défaut suivantes :  
   
--   6 pour timestamp et tous les types de données d’intervalle avec un second composant.  
+-   6 pour timestamp et tous les types de données Interval avec un deuxième composant.  
   
 -   0 pour tous les autres types de données.  
   
- Pour tous les types de données d’intervalle, le champ de descripteur SQL_DESC_DATETIME_INTERVAL_PRECISION, qui contient la précision de champ Début intervalle, a la valeur 2 comme valeur par défaut.  
+ Pour tous les types de données d’intervalle, le champ de descripteur de SQL_DESC_DATETIME_INTERVAL_PRECISION, qui contient la précision de champ d’intervalle, est défini sur une valeur par défaut de 2.  
   
- Quand le champ SQL_DESC_TYPE dans un APD a un type de C datetime ou interval, en appelant **SQLBindParameter** ou **SQLSetDescField**, le SQL_DESC_PRECISION et SQL_DESC_DATETIME_INTERVAL_ Champs de précision dans le descripteur APD sont définies sur la valeur par défaut indiquée précédemment. Cela est vrai pour les paramètres d’entrée mais pas pour les paramètres d’entrée/sortie ou de sortie.  
+ Lorsque le champ SQL_DESC_TYPE d’un APD est défini sur un type DateTime ou Interval C, en appelant **SQLBindParameter** ou **SQLSetDescField**, les champs SQL_DESC_PRECISION et SQL_DESC_DATETIME_INTERVAL_PRECISION dans le APD sont définis sur la valeur par défaut indiquée précédemment. Cela est vrai pour les paramètres d’entrée, mais pas pour les paramètres d’entrée/sortie ou de sortie.  
   
- Un appel à **SQLSetDescRec** définit l’intervalle de la précision de début à la valeur par défaut, mais définit la précision de secondes d’intervalle (dans le champ SQL_DESC_PRECISION) à la valeur de son *précision* argument.  
+ Un appel à **SQLSetDescRec** définit la précision de l’intervalle à la valeur par défaut, mais définit la précision de l’intervalle en secondes (dans le champ SQL_DESC_PRECISION) sur la valeur de son argument de *précision* .  
   
- Si une des valeurs par défaut étant donnés précédemment n’est pas acceptable pour une application, l’application doit définir le champ SQL_DESC_PRECISION or SQL_DESC_DATETIME_INTERVAL_PRECISION en appelant **SQLSetDescField**.  
+ Si l’une des valeurs par défaut fournies précédemment n’est pas acceptable pour une application, l’application doit définir le champ SQL_DESC_PRECISION ou SQL_DESC_DATETIME_INTERVAL_PRECISION en appelant **SQLSetDescField**.  
   
- Si l’application appelle **SQLGetData** pour retourner des données dans un intervalle de type C ou datetime, la précision par défaut du début de l’intervalle et la précision de secondes d’intervalle sont utilisés. Si la valeur par défaut n’est pas acceptable, l’application doit appeler **SQLSetDescField** à définir n’importe quel champ de descripteur, ou **SQLSetDescRec** pour définir SQL_DESC_PRECISION. L’appel à **SQLGetData** doit avoir un *TargetType* de SQL_ARD_TYPE d’utiliser les valeurs dans les champs de descripteur.  
+ Si l’application appelle **SQLGetData** pour retourner des données dans un type DateTime ou Interval C, la précision de l’intervalle et la précision de l’intervalle en secondes par défaut sont utilisées. Si l’une des valeurs par défaut n’est pas acceptable, l’application doit appeler **SQLSetDescField** pour définir un champ de descripteur ou **SQLSetDescRec** pour définir SQL_DESC_PRECISION. L’appel à **SQLGetData** doit avoir un *TargetType* de SQL_ARD_TYPE pour utiliser les valeurs dans les champs de descripteur.  
   
- Lorsque **SQLPutData** est appelée, l’intervalle de précision et l’intervalle de secondes précision sont lues à partir des champs de l’enregistrement de descripteur qui correspondent à la data-at-execution paramètre ou la colonne, qui sont des champs APD pour les appels de début pour **SQLExecute** ou **SQLExecDirect**, ou les champs ARD pour les appels à **SQLBulkOperations** ou **SQLSetPos**.
+ Lorsque **SQLPutData** est appelé, la précision de l’intervalle et la précision de l’intervalle en secondes sont lues à partir des champs de l’enregistrement du descripteur qui correspondent au paramètre ou à la colonne de données en cours d’exécution, qui sont des champs APD pour les appels à **SQLExecute** ou **SQLEXECDIRECT**, ou des champs ARD pour les appels à **SQLBulkOperations** ou **SQLSetPos**.

@@ -16,10 +16,10 @@ ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4c0837db9666ab6b49aee30b81b5585cbf5d5ee0
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056772"
 ---
 # <a name="sp_replicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "74056772"
 
   Définit une option de base de données de réplication pour la base de données spécifiée. Cette procédure stockée est exécutée sur n'importe quelle base de données de l'abonné au niveau du serveur de publication ou de l'Abonné.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,24 +41,24 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @dbname = ] 'dbname'` est la base de données pour laquelle l’option de base de données de réplication est définie. *db_name* est de **type sysname**, sans valeur par défaut.  
+`[ @dbname = ] 'dbname'`Base de données pour laquelle l’option de base de données de réplication est définie. *db_name* est de **type sysname**, sans valeur par défaut.  
   
-`[ @optname = ] 'optname'` est l’option de base de données de réplication à activer ou à désactiver. *nom_d* 'est est de **type sysname**et peut prendre l’une des valeurs suivantes.  
+`[ @optname = ] 'optname'`Option de base de données de réplication à activer ou à désactiver. *nom_d* 'est est de **type sysname**et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
 |**publication de fusion**|La base de données peut être utilisée pour les publications de fusion.|  
-|**publish**|La base de données peut être utilisée pour les autres types de publications.|  
+|**édition**|La base de données peut être utilisée pour les autres types de publications.|  
 |**Inscrivez**|La base de données est une base de données d'abonnement.|  
-|**synchroniser avec la sauvegarde**|La base de données est activée pour la sauvegarde coordonnée. Pour plus d’informations, consultez [activer des sauvegardes coordonnées pour la programmation &#40;&#41;Transact-SQL de la](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)réplication transactionnelle.|  
+|**sync with backup**|La base de données est activée pour la sauvegarde coordonnée. Pour plus d’informations, consultez [activer des sauvegardes coordonnées pour la réplication transactionnelle &#40;la programmation Transact-SQL de la réplication&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
-`[ @value = ] 'value'` indique s’il faut activer ou désactiver l’option de base de données de réplication donnée. la valeur est de **type sysname**et peut avoir la *valeur* **true** ou **false**. Lorsque cette valeur est **false** et que *nom_d* 'est la **publication de fusion**, les abonnements à la base de données publiée de fusion sont également supprimés.  
+`[ @value = ] 'value'`Indique s’il faut activer ou désactiver l’option de base de données de réplication donnée. la valeur est de **type sysname**et peut avoir la *valeur* **true** ou **false**. Lorsque cette valeur est **false** et que *nom_d* 'est la **publication de fusion**, les abonnements à la base de données publiée de fusion sont également supprimés.  
   
-`[ @ignore_distributor = ] ignore_distributor` indique si cette procédure stockée est exécutée sans se connecter au serveur de distribution. *ignore_distributor* est de **bit**, avec **0**comme valeur par défaut, ce qui signifie que le serveur de distribution doit être connecté et mis à jour avec le nouvel état de la base de données de publication. La valeur **1** doit être spécifiée uniquement si le serveur de distribution est inaccessible et que **sp_replicationdboption** est utilisé pour désactiver la publication.  
+`[ @ignore_distributor = ] ignore_distributor`Indique si cette procédure stockée est exécutée sans se connecter au serveur de distribution. *ignore_distributor* est de **bit**, avec **0**comme valeur par défaut, ce qui signifie que le serveur de distribution doit être connecté et mis à jour avec le nouvel état de la base de données de publication. La valeur **1** doit être spécifiée uniquement si le serveur de distribution est inaccessible et que **sp_replicationdboption** est utilisé pour désactiver la publication.  
   
 `[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
@@ -73,10 +73,10 @@ sp_replicationdboption [ @dbname= ] 'db_name'
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer la publication et la distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [Créer une publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [Supprimer une Publication](../../relational-databases/replication/publish/delete-a-publication.md)   
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Supprimer une publication](../../relational-databases/replication/publish/delete-a-publication.md)   
  [Désactiver la publication et la distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys. databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

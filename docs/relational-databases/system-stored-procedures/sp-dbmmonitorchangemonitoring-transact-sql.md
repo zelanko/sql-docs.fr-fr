@@ -19,18 +19,18 @@ ms.assetid: 17be755b-673d-4cd4-9544-6ecb4220bed3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 70df2ef47b4d74ef2a4316da4809aecf2005e15e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108113"
 ---
-# <a name="spdbmmonitorchangemonitoring-transact-sql"></a>sp_dbmmonitorchangemonitoring (Transact-SQL)
+# <a name="sp_dbmmonitorchangemonitoring-transact-sql"></a>sp_dbmmonitorchangemonitoring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Modifie la valeur d'un paramètre de surveillance de mise en miroir de base de données.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,25 +41,25 @@ sp_dbmmonitorchangemonitoring parameter
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *parameter*  
+ *paramètre*  
  Spécifie l'identificateur du paramètre à modifier. Actuellement, seul le paramètre suivant est disponible :  
   
  1 = période de mise à jour  
   
  Nombre de minutes qui s'écoulent entre les mises à jour de la table de l'état des mises en miroir de base de données. L'intervalle par défaut est de 1 minute.  
   
- *value*  
+ *ajoutée*  
  Spécifie la nouvelle valeur du paramètre en cours de modification.  
   
 |Paramètre|Description de la valeur|  
 |---------------|--------------------------|  
 |1|Entier compris entre 1 et 120 qui spécifie une nouvelle période de mise à jour en minutes.|  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- Aucun  
+## <a name="return-code-values"></a>Codet de retour  
+ None  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  

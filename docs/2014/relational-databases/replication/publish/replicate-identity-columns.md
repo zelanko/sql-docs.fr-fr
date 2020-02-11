@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c6410e6b21ec3ebbb3cfb01fa78ffe80b2196a3
-ms.sourcegitcommit: ea6603e20c723553c89827a6b8731a9e7b560b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74479245"
 ---
 # <a name="replicate-identity-columns"></a>Répliquer des colonnes d'identité
@@ -44,7 +44,7 @@ ms.locfileid: "74479245"
   
 -   Manuel. Utilisée pour la réplication d'instantané et la réplication transactionnelle sans mises à jour sur l'Abonné, pour la réplication transactionnelle d'égal à égal ou si votre application doit contrôler les plages d'identité par programmation. Si vous spécifiez une gestion manuelle, vous devez vérifier que les plages sont affectées au serveur de publication et à chaque Abonné, et que de nouvelles plages sont attribuées si les plages initiales sont utilisées. La réplication définit l'option NOT FOR REPLICATION sur la colonne d'identité sur l'Abonné.  
   
--   Aucune. Cette option n'est recommandée que pour assurer une compatibilité amont avec les versions antérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et elle est disponible seulement à partir de l'interface des procédures stockées pour les publications transactionnelles.  
+-   Aucun. Cette option n'est recommandée que pour assurer une compatibilité amont avec les versions antérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et elle est disponible seulement à partir de l'interface des procédures stockées pour les publications transactionnelles.  
   
  Pour spécifier une option de gestion des plages d’identité, consultez [Gestion de plages d’identités](manage-identity-columns.md).  
   
@@ -64,7 +64,7 @@ ms.locfileid: "74479245"
 |`smallint`|-2^15 (-32 768) à 2^15-1 (32 767)|  
 |`int`|-2^31 (-2 147 483 648) à 2^31-1 (2 147 483 647)|  
 |`bigint`|-2^63 (-9 223 372 036 854 775 808) à 2^63-1 (9 223 372 036 854 775 807)|  
-|`decimal`les`numeric`|-10^38+1 à 10^38-1|  
+|`decimal` et `numeric`|-10^38+1 à 10^38-1|  
   
 > [!NOTE]  
 >  Pour créer un numéro à incrémentation automatique qui peut être utilisé dans plusieurs tables ou être appelé par des applications sans faire référence à une table, consultez [Numéros de séquence](../../sequence-numbers/sequence-numbers.md).  
@@ -123,7 +123,7 @@ ms.locfileid: "74479245"
     >  Si la valeur de la colonne d'identité est définie pour se décrémenter au lieu de s'incrémenter, enregistrez la valeur la plus faible, puis réalimentez la table avec cette valeur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [SAUVEGARDE &#40;&#41;Transact-SQL](/sql/t-sql/statements/backup-transact-sql)   
+ [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)   
  [IDENT_CURRENT &#40;Transact-SQL&#41;](/sql/t-sql/functions/ident-current-transact-sql)   
  [Propriété IDENTity &#40;&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)   

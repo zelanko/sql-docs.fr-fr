@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401175"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Chargeur de ligne de commande dwloader pour les Data Warehouse parallèles
@@ -138,7 +138,7 @@ Utilisez un fichier de paramètres, *parameter_file_name*, à la place des param
   
 Le fichier de paramètres contient un paramètre, sans **-** le préfixe, par ligne.  
   
-Exemples :  
+Exemples :  
   
 `rt=percentage`  
   
@@ -193,7 +193,7 @@ Pour charger plusieurs fichiers à l’aide d’une commande :
   
 -   Tous les fichiers sont concaténés et chargés comme s’il s’agissait d’un seul fichier, et les lignes rejetées sont dirigées vers un seul fichier rejeté.  
   
-Exemples :  
+Exemples :  
   
 -   -i \\\loadserver\loads\daily\\*. gz  
   
@@ -209,7 +209,7 @@ Exemples :
 En cas d’échec de chargement, **dwloader** stocke la ligne qui n’a pas pu être chargée et la description de l’erreur les informations d’échec dans un fichier nommé *load_failure_file_name*. Si ce fichier existe déjà, dwloader remplacera le fichier existant. *load_failure_file_name* est créé lorsque le premier échec se produit. Si toutes les lignes sont chargées avec succès, *load_failure_file_name* n’est pas créé.  
   
 **-fh** *number_header_rows*  
-Nombre de lignes (lignes) à ignorer au début de *source_data_file_name*. La valeur par défaut est 0.  
+Nombre de lignes (lignes) à ignorer au début de *source_data_file_name*. La valeur par défaut est 0.  
   
 <variable_length_column_options>  
 Les options d’une *source_data_file_name* qui contient des colonnes de longueur variable délimitées par des caractères. Par défaut, *source_data_file_name* contient des caractères ASCII dans des colonnes de longueur variable.  
@@ -224,7 +224,7 @@ Délimiteur pour chaque champ (colonne) dans la ligne. Le délimiteur de champ e
   
 |Name|Caractère d'échappement|Caractère hexadécimal|  
 |--------|--------------------|-----------------|  
-|Tab|\t|0x09|  
+|Onglet|\t|0x09|  
 |Retour chariot (CR)|\r|0x0D|  
 |Saut de ligne (LF)|\n|0x0A|  
 |CRLF|\r\n|0x0d0x0a|  
@@ -234,7 +234,7 @@ Délimiteur pour chaque champ (colonne) dans la ligne. Le délimiteur de champ e
   
 Pour spécifier le caractère de barre verticale sur la ligne de commande, placez-le entre guillemets doubles, "|". Cela permet d’éviter une mauvaise interprétation par l’analyseur de ligne de commande. Les autres caractères sont encadrés par des guillemets simples.  
   
-Exemples :  
+Exemples :  
   
 -t "|"  
   
@@ -274,7 +274,7 @@ Un LF est requis pour UNIX. Un CR est requis pour Windows.
 **-s** *string_delimiter*  
 Délimiteur du champ de type de données String d’un fichier d’entrée délimité par du texte. Le délimiteur de chaîne correspond à une ou plusieurs valeurs ASCII.  Il peut être spécifié sous la forme d’un caractère (par exemple,-s *) ou en tant que valeur hexadécimale (par exemple-s 0X22 pour un guillemet double).  
   
-Exemples :  
+Exemples :  
   
 x  
   
@@ -380,7 +380,7 @@ Chaque format DateTime est spécifié dans un fichier nommé *datetime_format_fi
   
 Chaque ligne contient le nom d’une colonne dans la table de destination et son format DateTime.  
   
-Exemples :  
+Exemples :  
   
 `LastReceiptDate=ymd`  
   
@@ -448,7 +448,7 @@ Utilisé avec l' `-rt percentage` option pour spécifier les vérifications de p
 **-c**  
 Supprime les espaces blancs à gauche et à droite des champs char, nchar, varchar et nvarchar. Convertit chaque champ qui contient uniquement des espaces blancs en chaîne vide.  
   
-Exemples :  
+Exemples :  
   
 ' 'est tronqué en' '  
   
@@ -559,9 +559,9 @@ Le mode Append charge les données en deux phases. La phase 1 charge simultaném
 |Segment de mémoire|Non|Oui|Non|Minimales|  
 |Segment de mémoire|Non|Non|Non|Minimales|  
 |CL|Oui|Oui|Non|Minimales|  
-|CL|Oui|Non|Oui|Complet|  
+|CL|Oui|Non|Oui|Complète|  
 |CL|Non|Oui|Non|Minimales|  
-|CL|Non|Non|Oui|Complet|  
+|CL|Non|Non|Oui|Complète|  
   
 Le tableau ci-dessus affiche **dwloader** en utilisant le mode Append chargé dans un segment de mémoire ou une table d’index cluster (ci), avec ou sans l’indicateur multitransactionnel, et en chargeant dans une table vide ou une table non vide. Le comportement de verrouillage et de journalisation de chaque combinaison de charge est affiché dans le tableau. Par exemple, si vous chargez (2e) la phase avec le mode Append dans un index cluster sans mode multitransactionnel et dans une table vide, PDW crée un verrou exclusif sur la table et la journalisation est minimale. Cela signifie qu’un client ne sera pas en mesure de charger (2e) la phase et la requête simultanément dans une table vide. Toutefois, lors du chargement avec la même configuration dans une table non vide, PDW n’émet pas de verrou exclusif sur la table et l’accès concurrentiel est possible. Malheureusement, la journalisation complète se produit, ce qui ralentit le processus.  
   

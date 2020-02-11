@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Transformation d’échantillonnage de pourcentage | Microsoft Docs
+title: Éditeur de transformation d’échantillonnage par pourcentage | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0366ecb08281a28d43bc98639bf4b11e60aea402
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056718"
 ---
 # <a name="percentage-sampling-transformation-editor"></a>Éditeur de transformation de l'échantillonnage du pourcentage
@@ -43,6 +43,6 @@ ms.locfileid: "66056718"
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Transformation d'échantillonnage de lignes](data-flow/transformations/row-sampling-transformation.md)  
+ [transformation d'échantillonnage de lignes](data-flow/transformations/row-sampling-transformation.md)  
   
   

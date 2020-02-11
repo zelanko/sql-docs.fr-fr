@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 92b068b4bfa7f8b61b5be0904bc47cf080afc861
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106839"
 ---
 # <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>Ajouter une jauge à un rapport (Générateur de rapports et SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66106839"
     > [!NOTE]  
     >  Contrairement aux graphiques, il n'existe que deux types de jauge : linéaire et radial. Les jauges disponibles dans la boîte de dialogue **Sélectionner le type de jauge** sont des modèles correspondant à ces deux types de jauges. C'est ce qui explique que vous ne pouvez pas modifier le type de jauge une fois que vous avez ajouté une jauge à votre rapport. Vous devez supprimer et rajouter une jauge pour en modifier le type.  
   
-     Si le rapport ne possède pas de source de données ni de dataset, la boîte de dialogue **Propriétés de la source de données** s'ouvre et vous aide à en créer. Pour plus d’informations, consultez [ajouter et vérifier une connexion de données ou d’une Source de données &#40;Générateur de rapports et SSRS&#41;](../report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+     Si le rapport ne possède pas de source de données ni de dataset, la boîte de dialogue **Propriétés de la source de données** s'ouvre et vous aide à en créer. Pour plus d’informations, consultez [Ajouter et vérifier une connexion de données ou une source de données &#40;générateur de rapports et des&#41;SSRS ](../report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
      Si le rapport est associé à une source de données mais à aucun dataset, la boîte de dialogue **Propriétés du dataset** s'ouvre et vous aide à en créer un. Pour plus d’informations, consultez [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](../report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   

@@ -18,18 +18,18 @@ ms.assetid: a831315e-793d-41c4-8333-b324bb2bc614
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 609151e71e0ee59f8a428a7c9f193124e047818c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68120073"
 ---
-# <a name="spdeletealert-transact-sql"></a>sp_delete_alert (Transact-SQL)
+# <a name="sp_delete_alert-transact-sql"></a>sp_delete_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime une alerte.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,19 +39,19 @@ sp_delete_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name = ] 'name'` Le nom de l’alerte. *nom* est **sysname**, sans valeur par défaut.  
+`[ @name = ] 'name'`Nom de l’alerte. *Name* est de **type sysname**, sans valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  En supprimant une alerte, vous supprimez également toute notification associée à celle-ci.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter cette procédure.  
+ Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple ci-dessous crée une alerte nommée `Test Alert`.  

@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 523891f2f0005c7f6e6752e5d16d3680f680fdfa
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882340"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Ajouter et supprimer des articles de publications existantes
@@ -33,7 +33,7 @@ ms.locfileid: "73882340"
  L'ajout d'un article se déroule comme suit : ajout de l'article à la publication, création d'un nouvel instantané de la publication, synchronisation de l'abonnement pour appliquer le schéma et les données du nouvel article.  
   
 > [!NOTE]
->  Si vous ajoutez un article à une publication de fusion et qu’un article existant dépend du nouvel article, vous devez spécifier un ordre de traitement pour les deux articles à l’aide du paramètre **\@processing_order** de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) et [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Examinez le scénario suivant : vous publiez une table, mais vous ne publiez pas de fonction référencée par la table. Si vous ne publiez pas la fonction, la table ne peut pas être créée au niveau de l'abonné. Quand vous ajoutez la fonction à la publication : spécifiez la valeur **1** pour le paramètre **\@processing_order** de **sp_addmergearticle**, spécifiez la valeur **2** pour le paramètre **\@processing_order** de **sp_changemergearticle** et spécifiez le nom de la table pour le paramètre **\@article**. Cet ordre de traitement permet de créer la fonction au niveau de l'Abonné avant la table qui en dépend. Vous pouvez utiliser différents nombres pour chaque article tant que le nombre de la fonction est inférieur au nombre de la table.  
+>  Si vous ajoutez un article à une publication de fusion et qu’un article existant dépend du nouvel article, vous devez spécifier un ordre de traitement pour les deux ** \@** Articles à l’aide du paramètre processing_order de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) et [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Examinez le scénario suivant : vous publiez une table, mais vous ne publiez pas de fonction référencée par la table. Si vous ne publiez pas la fonction, la table ne peut pas être créée au niveau de l'abonné. Quand vous ajoutez la fonction à la publication : spécifiez la valeur **1** pour le paramètre **\@processing_order** de **sp_addmergearticle**, spécifiez la valeur **2** pour le paramètre **\@processing_order** de **sp_changemergearticle** et spécifiez le nom de la table pour le paramètre **\@article**. Cet ordre de traitement permet de créer la fonction au niveau de l'Abonné avant la table qui en dépend. Vous pouvez utiliser différents nombres pour chaque article tant que le nombre de la fonction est inférieur au nombre de la table.  
   
 1.  Ajoutez un ou plusieurs articles à l'aide de l'une des méthodes suivantes :  
   
@@ -58,7 +58,7 @@ ms.locfileid: "73882340"
   
 -   La suppression d'un article d'une publication ne supprime pas l'objet de la base de données de publication ou l'objet correspondant de la base de données d'abonnement. Utilisez DROP \<objet> pour supprimer ces objets, le cas échéant. Lorsque vous supprimez un article lié à d’autres articles publiés par l’intermédiaire de contraintes de clés étrangères, il est conseillé de supprimer manuellement la table sur l’Abonné ou d’avoir recours à une exécution de script à la demande : spécifiez un script qui comprend les instructions DROP \<objet> appropriées. Pour plus d’informations, consultez [Exécuter des scripts pendant la synchronisation &#40;programmation Transact-SQL de la réplication&#41;](../execute-scripts-during-synchronization-replication-transact-sql-programming.md).  
   
--   Pour les publications de fusion présentant un niveau de compatibilité égal ou supérieur à 90RTM, les articles peuvent être supprimés à tout moment mais un nouvel instantané s'impose. De plus :  
+-   Pour les publications de fusion présentant un niveau de compatibilité égal ou supérieur à 90RTM, les articles peuvent être supprimés à tout moment mais un nouvel instantané s'impose. De plus :  
   
     -   Si l'article est un article parent dans une relation d'enregistrement logique ou de filtre de jointure, vous devez commencer par supprimer les relations, ce qui nécessite une réinitialisation.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "73882340"
   
 -   Pour les publications de fusion présentant un niveau de compatibilité inférieur à 90RTM, il est possible de supprimer les articles sans considérations particulières avant la synchronisation initiale des abonnements. Si un article est supprimé après la synchronisation d'un ou plusieurs abonnements, les abonnements doivent être supprimés, recréés et synchronisés.  
   
--   Pour les publications transactionnelles ou d'instantané, les articles peuvent être supprimés sans considérations particulières avant la création des abonnements. Si un article est supprimé après la création d'un ou plusieurs abonnements, les abonnements doivent être supprimés, recréés et synchronisés. Pour plus d’informations sur la suppression des abonnements, consultez [S’abonner à des publications](../subscribe-to-publications.md) et [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql). **sp_dropsubscription** permet de supprimer un seul article de l'abonnement au lieu de l'abonnement entier.  
+-   Pour les publications transactionnelles ou d'instantané, les articles peuvent être supprimés sans considérations particulières avant la création des abonnements. Si un article est supprimé après la création d'un ou plusieurs abonnements, les abonnements doivent être supprimés, recréés et synchronisés. Pour plus d’informations sur la suppression des abonnements, consultez [S’abonner à des publications](../subscribe-to-publications.md) et [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql). **sp_dropsubscription** vous permet de supprimer un seul article de l’abonnement au lieu de l’abonnement entier.  
   
 1.  La suppression d'un article d'une publication consiste à supprimer l'article et à créer un nouvel instantané de la publication. Dans la mesure où la suppression d'un article invalide l'instantané actuel, un nouvel instantané doit être créé.  
   

@@ -16,18 +16,18 @@ ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c49a710b25bad0cf36115afadc439cbe793981c3
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68768920"
 ---
 # <a name="sp_change_agent_profile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Modifie un paramètre d’un profil d’agent de réplication stocké dans la table. [MSagent_profiles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) . Cette procédure stockée est exécutée sur n’importe quelle base de données du serveur de distribution.  
+  Modifie un paramètre d’un profil d’agent de réplication stocké dans la table [MSagent_profiles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) . Cette procédure stockée est exécutée sur n’importe quelle base de données du serveur de distribution.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,11 +39,11 @@ sp_change_agent_profile [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @profile_id = ] profile_id`ID du profil. l’option par défaut est de **type int**, sans valeur par défaut.  
+`[ @profile_id = ] profile_id`ID du profil. *profile_id* est de **type int**, sans valeur par défaut.  
   
 `[ @property = ] 'property'`Nom de la propriété. *Property* est de **type sysname**, sans valeur par défaut.  
   
-`[ @value = ] 'value'`Nouvelle valeur de la propriété. la *valeur* est de type **nvarchar (3000)** , sans valeur par défaut.  
+`[ @value = ] 'value'`Nouvelle valeur de la propriété. la *valeur* est de type **nvarchar (3000)**, sans valeur par défaut.  
   
  Cette table décrit les propriétés modifiables du profil.  
   
@@ -51,7 +51,7 @@ sp_change_agent_profile [ @profile_id = ] profile_id
 |--------------|-----------------|  
 |**description**|Description du profil.|  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
