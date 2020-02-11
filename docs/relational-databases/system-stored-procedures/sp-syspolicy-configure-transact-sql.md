@@ -18,18 +18,18 @@ ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5aa9801d312e5f862cb6274659496aff10c774ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010498"
 ---
-# <a name="spsyspolicyconfigure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
+# <a name="sp_syspolicy_configure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Configure des paramètres pour la Gestion basée sur des stratégies, tels que l'activation, ou non, de cette dernière.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,9 +40,9 @@ sp_syspolicy_configure [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name = ] 'name'` Est le nom du paramètre que vous souhaitez configurer. *nom* est **sysname**, est requis et ne peut pas être NULL ou une chaîne vide.  
+`[ @name = ] 'name'`Est le nom du paramètre que vous souhaitez configurer. *Name* est de **type sysname**, est obligatoire et ne peut pas avoir la valeur null ou être une chaîne vide.  
   
- *nom* peut être une des valeurs suivantes :  
+ le *nom* peut être l’une des valeurs suivantes :  
   
 -   'Enabled' - Détermine si la Gestion basée sur des stratégies est activée.  
   
@@ -50,24 +50,24 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 -   'LogOnSuccess' - Spécifie si la Gestion basée sur des stratégies consigne les évaluations de stratégies réussies.  
   
-`[ @value = ] value` Est la valeur associée à la valeur spécifiée pour *nom*. *valeur* est **sql_variant**et est requis.  
+`[ @value = ] value`Valeur associée à la valeur spécifiée pour le *nom*. la *valeur* est **sql_variant**et est obligatoire.  
   
--   Si vous spécifiez 'Enabled' pour *nom*, vous pouvez utiliser une des valeurs suivantes :  
+-   Si vous spécifiez « Enabled » comme *nom*, vous pouvez utiliser l’une des valeurs suivantes :  
   
     -   0 = Désactive la Gestion basée sur des stratégies.  
   
     -   1 = Active la Gestion basée sur des stratégies.  
   
--   Si vous spécifiez 'HistoryRententionInDays' pour *nom*, spécifiez le nombre de jours en tant qu’entier.  
+-   Si vous spécifiez « HistoryRententionInDays » comme *nom*, spécifiez le nombre de jours sous la forme d’une valeur entière.  
   
--   Si vous spécifiez 'LogOnSuccess' pour *nom*, vous pouvez utiliser une des valeurs suivantes :  
+-   Si vous spécifiez « LogOnSuccess » comme *nom*, vous pouvez utiliser l’une des valeurs suivantes :  
   
     -   0 = Consigne uniquement les évaluations de stratégies ayant échoué.  
   
     -   1 = Consigne aussi bien les évaluations de stratégies réussies que celles ayant échoué.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
  Vous devez exécuter sp_syspolicy_configure dans le contexte de la base de données système msdb.  
@@ -78,7 +78,7 @@ sp_syspolicy_configure [ @name = ] 'name'
  Nécessite l'appartenance au rôle de base de données fixe PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Élévation possible des informations d’identification : Les utilisateurs du rôle PolicyAdministratorRole peuvent créer des déclencheurs de serveur et planifier des exécutions de stratégie qui peuvent affecter le fonctionnement de l’instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Par exemple, les utilisateurs du rôle PolicyAdministratorRole peuvent créer une stratégie qui peut empêcher la plupart des objets d’être créées dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Étant donné cette possible élévation des informations d’identification, le rôle PolicyAdministratorRole doit être accordé uniquement aux utilisateurs qui sont approuvés avec contrôle de la configuration de la [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Élévation possible des informations d’identification : les utilisateurs du rôle PolicyAdministratorRole peuvent créer des déclencheurs de serveur et planifier des exécutions de stratégie qui peuvent affecter le fonctionnement [!INCLUDE[ssDE](../../includes/ssde-md.md)]de l’instance du. Par exemple, les utilisateurs du rôle PolicyAdministratorRole peuvent créer une stratégie qui peut empêcher la création de la plupart des objets [!INCLUDE[ssDE](../../includes/ssde-md.md)]dans le. En raison de cette élévation possible des informations d’identification, le rôle PolicyAdministratorRole doit être accordé uniquement aux utilisateurs approuvés par le contrôle de la configuration [!INCLUDE[ssDE](../../includes/ssde-md.md)]du.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant active la Gestion basée sur des stratégies.  

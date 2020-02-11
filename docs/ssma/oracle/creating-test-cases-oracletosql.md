@@ -1,5 +1,5 @@
 ---
-title: Création de cas de Test (OracleToSQL) | Microsoft Docs
+title: Création de cas de test (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,34 +13,34 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 697f7049a60aa7ae2b8c89d1fb6c5ce8e3d29312
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266133"
 ---
 # <a name="creating-test-cases-oracletosql"></a>Création de cas de test (OracleToSQL)
-Utilisez l’Assistant de cas de Test pour créer un test. Cet Assistant vous permet de créer des cas de test en choisissant testé et vérifié les objets et en spécifiant les paramètres de tests.  
+Utilisez l’Assistant cas de test pour créer un test. Cet Assistant vous permet de créer des cas de test en choisissant des objets testés et vérifiés et en spécifiant les paramètres de test.  
   
-## <a name="starting-the-test-case-wizard"></a>Démarrage de l’Assistant de cas de Test  
-Pour démarrer l’Assistant de cas de Test cliquez sur **nouveau cas de Test...**  à partir de la **testeur** menu.  
+## <a name="starting-the-test-case-wizard"></a>Démarrage de l’Assistant cas de test  
+Pour démarrer l’Assistant cas de test **, cliquez sur nouveau cas de test...** dans le menu **testeur** .  
   
-Au démarrage, l’Assistant recherche schéma SSMATESTER_ORACLE sur le serveur Oracle source. Il est le schéma d’extension testeur utilisé pour le stockage d’objets auxiliaires. Si l’Assistant de cas de Test ne peut pas trouver SSMATESTER_ORACLE, il affiche une fenêtre de boîte de dialogue qui propose de créer le schéma. (Cette situation se produit généralement lors de la première exécution de testeur de SSMA.)  
+Au démarrage, l’Assistant recherche les SSMATESTER_ORACLE de schéma sur le serveur Oracle source. Il s’agit du schéma d’extension du testeur utilisé pour le stockage des objets auxiliaires. Si l’Assistant cas de test ne trouve pas SSMATESTER_ORACLE, il affiche une fenêtre de boîte de dialogue qui propose de créer le schéma. (Cette situation se produit généralement lors de la première exécution du testeur SSMA.)  
   
-Si vous obtenez la boîte de dialogue, cliquez sur **Oui** pour créer le schéma SSMATESTER_ORACLE sur le serveur source. Notez que vous devez disposer des privilèges d’Oracle pour créer un nouvel utilisateur et de créer des objets dans le schéma de cet utilisateur.  
+Si vous accédez à la boîte de dialogue, cliquez sur **Oui** pour créer SSMATESTER_ORACLE schéma sur le serveur source. Notez que vous devez disposer de privilèges Oracle pour créer un nouvel utilisateur et créer des objets dans le schéma de cet utilisateur.  
   
-## <a name="overview-of-creating-test-cases-using-the-wizard"></a>Présentation de la création de cas de Test à l’aide de l’Assistant  
-Le processus de création d’un cas de test se compose de cinq étapes :  
+## <a name="overview-of-creating-test-cases-using-the-wizard"></a>Vue d’ensemble de la création de cas de test à l’aide de l’Assistant  
+Le processus de création d’un cas de test consiste en cinq étapes :  
   
-1.  [Initialisation de cas de Test &#40;OracleToSQL&#41;](../../ssma/oracle/initializing-test-cases-oracletosql.md)  
+1.  [Initialisation des cas de test &#40;OracleToSQL&#41;](../../ssma/oracle/initializing-test-cases-oracletosql.md)  
   
-2.  [Sélection et la configuration des objets à tester &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
+2.  [Sélection et configuration des objets pour tester &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
   
-3.  [Sélectionner et configurer les objets affectés &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
+3.  [Sélection et configuration des objets affectés &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
 4.  [Personnalisation de l’ordre des appels &#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
-5.  [Terminer la préparation du cas de Test &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+5.  [Fin de la préparation du cas de test &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Test des objets de base de données migrés &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  

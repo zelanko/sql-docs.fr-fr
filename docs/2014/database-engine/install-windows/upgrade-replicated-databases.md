@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775316"
 ---
 # <a name="upgrade-replicated-databases"></a>Mettre à niveau des bases de données répliquées
@@ -63,19 +63,19 @@ ms.locfileid: "62775316"
   
  Exécutez les agents à partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], du moniteur de réplication ou de la ligne de commande. Pour plus d'informations sur l'exécution de l'Agent d'instantané, consultez les rubriques suivantes :  
   
--   [Créer et appliquer l'instantané initial](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
+-   [Créer et appliquer l’instantané initial](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
 -   [Démarrer et arrêter un Agent de réplication &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  
   
--   [Créer et appliquer l'instantané initial](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
+-   [Créer et appliquer l’instantané initial](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
 -   [Concepts des exécutables de l'agent de réplication](../../../2014/relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
  Pour plus d'informations sur l'exécution de l'Agent de fusion, consultez les rubriques suivantes :  
   
--   [Synchroniser un abonnement par extraction (pull)](../../../2014/relational-databases/replication/synchronize-a-pull-subscription.md)  
+-   [Synchroniser un abonnement par extraction](../../../2014/relational-databases/replication/synchronize-a-pull-subscription.md)  
   
--   [Synchroniser un abonnement par émission (push)](../../../2014/relational-databases/replication/synchronize-a-push-subscription.md)  
+-   [Synchroniser un abonnement par envoi de notification](../../../2014/relational-databases/replication/synchronize-a-push-subscription.md)  
   
  Après avoir mis à niveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une topologie qui utilise la réplication de fusion, modifiez le niveau de compatibilité de toutes les publications si vous voulez utiliser les nouvelles fonctionnalités.  
   
@@ -92,6 +92,6 @@ ms.locfileid: "62775316"
  [FAQ sur l’administration de la réplication](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Compatibilité descendante de la réplication](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
  [Mises à niveau de la version et de l'édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
- [Mise à niveau vers SQL Server 2014](upgrade-sql-server.md)  
+ [Mettre à niveau vers SQL Server 2014](upgrade-sql-server.md)  
   
   

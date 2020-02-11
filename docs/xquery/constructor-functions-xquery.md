@@ -1,5 +1,5 @@
 ---
-title: Fonctions constructeur (XQuery) | Microsoft Docs
+title: Fonctions de constructeur (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7f64c9ff6664410983d9c3ce7ebdbf07e493ca03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038991"
 ---
 # <a name="constructor-functions-xquery"></a>Fonctions constructeur (XQuery)
@@ -44,7 +44,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  Tout type XSD intégré.  
   
 ## <a name="remarks"></a>Notes  
- Les constructeurs sont pris en charge pour les types XSD de base et dérivés. Toutefois, les sous-types de **xs : Duration**, qui inclut **xdt : yearmonthduration et xdt : daytimeduration**, et **xs : QName**, **xs : NMTOKEN**, et **xs : notation** ne sont pas pris en charge. Les types atomiques définis par l'utilisateur présents dans les collections de schémas associées sont également disponibles, sous réserve qu'ils soient directement ou indirectement dérivés des types ci-après.  
+ Les constructeurs sont pris en charge pour les types XSD de base et dérivés. Toutefois, les sous-types de **XS : Duration**, notamment **xdt : yearMonthDuration et xdt : dayTimeDuration**et **XS : QName**, **XS : NMTOKEN**et **XS : notation** , ne sont pas pris en charge. Les types atomiques définis par l'utilisateur présents dans les collections de schémas associées sont également disponibles, sous réserve qu'ils soient directement ou indirectement dérivés des types ci-après.  
   
 #### <a name="supported-base-types"></a>Types de base pris en charge  
  Les types de base pris en charge sont les suivants :  
@@ -135,12 +135,12 @@ TYP($atomicvalue as xdt:anyAtomicType?
 -   Si l'argument est un littéral d'un autre type, l'expression est évaluée pendant la compilation. Lorsque la valeur ne satisfait pas aux contraintes de type, la séquence vide est renvoyée.  
   
 ## <a name="examples"></a>Exemples  
- Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type dans la base de données AdventureWorks.  
+ Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>R. Utilisation de la fonction XQuery dateTime() pour extraire les anciennes descriptions de produits  
- Dans cet exemple, un exemple de document XML est attribué au préalable un **xml** variable de type. Ce document contient trois exemples <`ProductDescription`> éléments, chacun d’eux contenant un <`DateCreated`> élément enfant.  
+ Dans cet exemple, un exemple de document XML est d’abord affecté à une variable de type **XML** . Ce document contient trois exemples de `ProductDescription` <> éléments, chacun d’eux contenant un élément `DateCreated` enfant <>.  
   
- La variable est ensuite interrogée afin que ne soient extraites que les descriptions de produits créées avant une date spécifique. À des fins de comparaison, la requête utilise le **:DateTime()** fonction constructeur à taper les dates.  
+ La variable est ensuite interrogée afin que ne soient extraites que les descriptions de produits créées avant une date spécifique. À des fins de comparaison, la requête utilise la fonction constructeur **XS : DateTime ()** pour taper les dates.  
   
 ```  
 declare @x xml  
@@ -173,13 +173,13 @@ select @x.query('
   
  Notez les points suivants dans la requête précédente :  
   
--   FOR... Structure de boucle WHERE est utilisée pour récupérer le \<ProductDescription > élément répondant à la condition spécifiée dans la clause WHERE.  
+-   POUR... OÙ la structure de la boucle est utilisée \<pour récupérer l’élément ProductDescription> remplissant la condition spécifiée dans la clause WHERE.  
   
--   Le **dateTime()** fonction constructeur sert à construire **dateTime** tapez des valeurs afin qu’ils puissent être comparées correctement.  
+-   La fonction de constructeur **DateTime ()** est utilisée pour construire des valeurs de type **DateTime** afin qu’elles puissent être comparées de manière appropriée.  
   
 -   La requête construit ensuite le document XML obtenu. Étant donné que vous construisez une séquence d'attributs, des virgules et des parenthèses sont utilisées dans la construction XML.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Product   

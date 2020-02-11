@@ -1,5 +1,5 @@
 ---
-title: Sqlcancel, fonction | Microsoft Docs
+title: SQLCancel fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ ms.assetid: ac0b5972-627f-4440-8c5a-0e8da728726d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 94f823cdefe4b3e5a62beb62062356dad3a88a03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036119"
 ---
 # <a name="sqlcancel-function"></a>SQLCancel, fonction
 **Conformité**  
- Version introduite : Conformité aux normes 1.0 ODBC : ISO 92  
+ Version introduite : ODBC 1,0 conformité aux normes : ISO 92  
   
  **Résumé**  
  **SQLCancel** annule le traitement sur une instruction.  
   
- Pour annuler le traitement sur une connexion ou une instruction, utilisez [sqlcancelhandle, fonction](../../../odbc/reference/syntax/sqlcancelhandle-function.md).  
+ Pour annuler le traitement d’une connexion ou d’une instruction, utilisez la [fonction SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,77 +45,77 @@ SQLRETURN SQLCancel(
   
 ## <a name="arguments"></a>Arguments  
  *StatementHandle*  
- [Entrée] Descripteur d’instruction.  
+ Entrée Descripteur d’instruction.  
   
-## <a name="returns"></a>Valeur renvoyée  
+## <a name="returns"></a>Retours  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Lorsque **SQLCancel** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenu en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_ HANDLE_STMT et un *gérer* de *au paramètre StatementHandle*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLCancel** et explique chacune dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
+ Quand **SQLCancel** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenue en appelant **SQLGetDiagRec** avec un *comme HandleType* de SQL_HANDLE_STMT et un *handle* de *StatementHandle*. Le tableau suivant répertorie les valeurs SQLSTATE couramment retournées par **SQLCancel** et les explique dans le contexte de cette fonction. la notation « (DM) » précède les descriptions des SQLSTATEs retournées par le gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
-|01000|Avertissement général|Message d’information spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucun code SQLSTATE spécifique est survenu et pour lequel aucune SQLSTATE spécifiques à l’implémentation a été défini. Le message d’erreur retourné par [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) dans l’argument  *\*MessageText* tampon décrit l’erreur et sa cause.|  
-|HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou à l’achèvement de la fonction.|  
-|HY010|Erreur de séquence de fonction|(DM) une fonction de façon asynchrone en cours d’exécution a été appelée pour le handle de connexion qui est associé à la *au paramètre StatementHandle*. Cette fonction asynchrone était en cours d’exécution lorsque le **SQLCancel** fonction a été appelée.<br /><br /> (DM) annuler l’opération a échoué car une opération asynchrone est en cours d’exécution sur un handle de connexion qui est associé avec *au paramètre StatementHandle*.|  
-|HY013|Erreur de gestion de mémoire|L’appel de fonction n’a pas pu être traité, car les objets sous-jacents de la mémoire ne sont pas accessible, probablement en raison de conditions de mémoire insuffisante.|  
-|HY018|Annuler le serveur a refusé la demande|Le serveur a refusé la demande d’annulation.|  
-|HY117|Connexion est suspendue en raison de l’état de transaction inconnu. Déconnecter uniquement et les fonctions en lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [SQLEndTran, fonction](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYT01|Délai de connexion expiré|Le délai de connexion a expiré avant que la source de données a répondu à la demande. Le délai de connexion est défini via **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Pilote ne prend pas en charge cette fonction|Le pilote (DM) associé le *au paramètre StatementHandle* ne prend pas en charge la fonction.|  
+|01000|Avertissement général|Message d’information spécifique au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) dans l’argument * \*MessageText* buffer décrit l’erreur et sa cause.|  
+|HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
+|HY010|Erreur de séquence de fonction|(DM) une fonction d’exécution asynchrone a été appelée pour le handle de connexion associé à *StatementHandle*. Cette fonction asynchrone était toujours en cours d’exécution lors de l’appel de la fonction **SQLCancel** .<br /><br /> L’opération d’annulation (DM) a échoué, car une opération asynchrone est en cours sur un handle de connexion associé à *StatementHandle*.|  
+|HY013|Erreur de gestion de la mémoire|Impossible de traiter l’appel de fonction, car les objets mémoire sous-jacents sont inaccessibles, probablement en raison de conditions de mémoire insuffisante.|  
+|HY018|Le serveur a refusé la demande d’annulation|Le serveur a refusé la demande d’annulation.|  
+|HY117|La connexion est interrompue en raison d’un état de transaction inconnu. Seules les fonctions de déconnexion et de lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [fonction SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYT01|Délai d’attente de connexion expiré|Le délai d’attente de connexion a expiré avant que la source de données ait répondu à la demande. Le délai d’expiration de la connexion est défini par le biais de **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|IM001|Le pilote ne prend pas en charge cette fonction|(DM) le pilote associé au *StatementHandle* ne prend pas en charge la fonction.|  
   
 ## <a name="comments"></a>Commentaires  
- **SQLCancel** peut annuler les types de traitement sur une instruction suivants :  
+ **SQLCancel** peut annuler les types de traitement suivants sur une instruction :  
   
 -   Une fonction s’exécutant de façon asynchrone sur l’instruction.  
   
--   Une fonction sur une instruction qui a besoin de données.  
+-   Fonction sur une instruction qui a besoin de données.  
   
--   Une fonction en cours d’exécution sur l’instruction sur un autre thread.  
+-   Fonction en cours d’exécution sur l’instruction sur un autre thread.  
   
- Dans ODBC 2. *x*, si une application appelle **SQLCancel** lorsque aucun traitement n’est effectuée sur l’instruction, **SQLCancel** a le même effet que **SQLFreeStmt** avec l’option SQL_CLOSE ; Ce comportement est défini uniquement par souci d’exhaustivité et les applications doivent appeler **SQLFreeStmt** ou **SQLCloseCursor** de fermeture des curseurs.  
+ Dans ODBC 2. *x*, si une application appelle **SQLCancel** quand aucun traitement n’est effectué sur l’instruction, **SQLCancel** a le même effet que **SQLFreeStmt** avec l’option SQL_CLOSE ; ce comportement est défini uniquement pour l’exhaustivité et les applications doivent appeler **SQLFreeStmt** ou **SQLCloseCursor** pour fermer les curseurs.  
   
- Lorsque **SQLCancel** est appelé pour annuler une fonction en cours d’exécution en mode asynchrone dans une instruction ou une fonction sur une instruction que les données de besoins, les enregistrements de diagnostic validées par la fonction en cours d’annulation sont désactivées, et **SQLCancel**  publie ses propres enregistrements de diagnostics ; lorsque **SQLCancel** est appelée pour annuler une fonction en cours d’exécution sur une instruction sur un autre thread, cependant, il n’efface pas le diagnostic enregistrements des étant annulée (fonction) et n’est pas valider ses propres enregistrements de Diagnostics.  
+ Quand **SQLCancel** est appelé pour annuler une fonction qui s’exécute de façon asynchrone dans une instruction ou une fonction sur une instruction qui a besoin de données, les enregistrements de diagnostic publiés par la fonction en cours d’annulation sont effacés et **SQLCancel** publie ses propres enregistrements de diagnostic. quand **SQLCancel** est appelé pour annuler une fonction en cours d’exécution sur une instruction sur un autre thread, toutefois, il n’efface pas les enregistrements de diagnostic de la fonction annulée et ne publie pas ses propres enregistrements de diagnostic.  
   
-## <a name="canceling-asynchronous-processing"></a>Annulation de traitement asynchrone  
- Une fois une application appelle une fonction de façon asynchrone, il appelle la fonction à plusieurs reprises pour déterminer si elle a terminé le traitement. Si le traitement de la fonction est toujours, elle retourne SQL_STILL_EXECUTING. Si la fonction a terminé le traitement, elle retourne un code différent.  
+## <a name="canceling-asynchronous-processing"></a>Annulation du traitement asynchrone  
+ Une fois qu’une application a appelé une fonction de manière asynchrone, elle appelle la fonction à plusieurs reprises pour déterminer si elle a terminé le traitement. Si la fonction est toujours en cours de traitement, elle retourne SQL_STILL_EXECUTING. Si la fonction a terminé le traitement, elle retourne un code différent.  
   
- Une fois que tout appel à la fonction qui retourne SQL_STILL_EXECUTING, une application peut appeler **SQLCancel** pour annuler la fonction. Si la demande d’annulation réussite, le pilote retourne SQL_SUCCESS. Ce message n’indique pas que la fonction a été réellement annulée ; Il indique que la demande d’annulation a été traitée. Quand ou si la fonction est en fait annulée est dépendant du pilote et dépend de la source de données. L’application doit continuer à appeler la fonction d’origine jusqu'à ce que le code de retour n’est pas SQL_STILL_EXECUTING. Si la fonction a été annulée avec succès, le code de retour est SQL_ERROR et SQLSTATE HY008 (opération annulée). Si la fonction terminé son traitement normal, le code de retour est SQL_SUCCESS ou SQL_SUCCESS_WITH_INFO si la fonction a réussi ou SQL_ERROR et un SQLSTATE autre que HY008 (opération annulée) en cas d’échec de la fonction.  
+ Après tout appel à la fonction qui retourne SQL_STILL_EXECUTING, une application peut appeler **SQLCancel** pour annuler la fonction. Si la demande d’annulation réussit, le pilote retourne SQL_SUCCESS. Ce message n’indique pas que la fonction a effectivement été annulée ; elle indique que la demande d’annulation a été traitée. Lorsque ou si la fonction est réellement annulée dépend du pilote et de la source de données. L’application doit continuer à appeler la fonction d’origine jusqu’à ce que le code de retour ne soit pas SQL_STILL_EXECUTING. Si la fonction a été annulée avec succès, le code de retour est SQL_ERROR et SQLSTATE HY008 (opération annulée). Si la fonction a terminé son traitement normal, le code de retour est SQL_SUCCESS ou SQL_SUCCESS_WITH_INFO si la fonction a réussi ou SQL_ERROR et une SQLSTATE autre que HY008 (opération annulée) si la fonction a échoué.  
   
 > [!NOTE]  
->  Dans ODBC 3.5, un appel à **SQLCancel** lorsque aucun traitement n’est effectuée sur l’instruction n’est pas traitée comme **SQLFreeStmt** avec l’option SQL_CLOSE, mais a n’est sans effet. Pour fermer un curseur, une application doit appeler **SQLCloseCursor**, et non **SQLCancel**.  
+>  Dans ODBC 3,5, un appel à **SQLCancel** quand aucun traitement n’est effectué sur l’instruction n’est traité comme **SQLFreeStmt** avec l’option SQL_CLOSE, mais n’a aucun effet. Pour fermer un curseur, une application doit appeler **SQLCloseCursor**, et non **SQLCancel**.  
   
  Pour plus d’informations sur le traitement asynchrone, consultez [exécution asynchrone](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md).  
   
 ## <a name="canceling-functions-that-need-data"></a>Annulation de fonctions nécessitant des données  
- Après avoir **SQLExecute** ou **SQLExecDirect** retourne SQL_NEED_DATA et avant l’envoi de données pour tous les paramètres de data-at-execution, une application peut appeler **SQLCancel** Pour annuler l’exécution de l’instruction. Une fois que l’instruction a été annulée, l’application peut appeler **SQLExecute** ou **SQLExecDirect** à nouveau. Pour plus d’informations, consultez [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md).  
+ Une fois **SQLExecute** ou **SQLExecDirect** retourné SQL_NEED_DATA et avant l’envoi des données pour tous les paramètres de données en cours d’exécution, une application peut appeler **SQLCancel** pour annuler l’exécution de l’instruction. Une fois l’instruction annulée, l’application peut rappeler **SQLExecute** ou **SQLExecDirect** . Pour plus d’informations, consultez [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md).  
   
- Après avoir **SQLBulkOperations** ou **SQLSetPos** retourne SQL_NEED_DATA et avant l’envoi de données pour toutes les colonnes de données en cours d’exécution, une application peut appeler **SQLCancel** Pour annuler l’opération. Une fois que l’opération a été annulée, l’application peut appeler **SQLBulkOperations** ou **SQLSetPos** nouveau ; annulation n’affecte pas l’état de curseur ou la position actuelle du curseur. Pour plus d’informations, consultez [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md) ou [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md).  
+ Une fois que **SQLBulkOperations** ou **SQLSetPos** a retourné SQL_NEED_DATA et avant l’envoi des données pour toutes les colonnes de données en cours d’exécution, une application peut appeler **SQLCancel** pour annuler l’opération. Une fois l’opération annulée, l’application peut appeler de nouveau **SQLBulkOperations** ou **SQLSetPos** ; l’annulation n’affecte pas l’état du curseur ou la position actuelle du curseur. Pour plus d’informations, consultez [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md) ou [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md).  
   
-## <a name="canceling-functions-executing-on-another-thread"></a>Annulation de l’exécution sur un autre Thread de fonctions  
- Dans une application multithread, l’application peut annuler une fonction qui s’exécute sur un autre thread. Pour annuler la fonction, l’application appelle **SQLCancel** avec le même descripteur d’instruction que celui utilisé par la fonction cible, mais sur un thread différent. Comment la fonction est annulée dépend du pilote et le système d’exploitation. Comme dans l’annulation d’une fonction en cours d’exécution en mode asynchrone, le code de retour de la **SQLCancel** indique uniquement si le pilote a traité la demande avec succès. Seulement SQL_SUCCESS ou SQL_ERROR peut être retourné ; Aucune information de diagnostic n’est retournée. Si la fonction d’origine est annulée, elle retourne SQL_ERROR et SQLSTATE HY008 (opération annulée).  
+## <a name="canceling-functions-executing-on-another-thread"></a>Annulation de fonctions s’exécutant sur un autre thread  
+ Dans une application multithread, l’application peut annuler une fonction qui s’exécute sur un autre thread. Pour annuler la fonction, l’application appelle **SQLCancel** avec le même descripteur d’instruction que celui utilisé par la fonction cible, mais sur un thread différent. Le mode d’annulation de la fonction dépend du pilote et du système d’exploitation. Comme pour l’annulation d’une fonction qui s’exécute de façon asynchrone, le code de retour de la **SQLCancel** indique uniquement si le pilote a correctement traité la demande. Seul SQL_SUCCESS ou SQL_ERROR peut être retourné ; aucune information de diagnostic n’est retournée. Si la fonction d’origine est annulée, elle retourne SQL_ERROR et SQLSTATE HY008 (opération annulée).  
   
- Si une instruction SQL est exécutée lorsque **SQLCancel** est appelée sur un autre thread pour annuler l’exécution de l’instruction, il est possible que l’exécution réussisse et retour SQL_SUCCESS lors de l’annulation réussit également. Dans ce cas, le Gestionnaire de pilotes part du principe que le curseur ouvert par l’exécution de l’instruction est fermé par l’annulation, l’application sera donc pas en mesure d’utiliser le curseur.  
+ Si une instruction SQL est exécutée lorsque **SQLCancel** est appelé sur un autre thread pour annuler l’exécution de l’instruction, il est possible que l’exécution réussisse et retourne SQL_SUCCESS alors que l’annulation est également réussie. Dans ce cas, le gestionnaire de pilotes suppose que le curseur ouvert par l’exécution de l’instruction est fermé par l’annulation, de sorte que l’application ne peut pas utiliser le curseur.  
   
- Pour plus d’informations à propos du threading, consultez [Multithreading](../../../odbc/reference/develop-app/multithreading.md).  
+ Pour plus d’informations sur les threads, consultez [Multithreading](../../../odbc/reference/develop-app/multithreading.md).  
   
 ## <a name="related-functions"></a>Fonctions connexes  
   
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
-|Liaison d’une mémoire tampon à un paramètre|[SQLBindParameter, fonction](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
-|Exécution en bloc insérer ou mettre à jour des opérations|[SQLBulkOperations, fonction](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  
-|Annule une fonction en cours d’exécution en mode asynchrone sur un handle de connexion, en outre les fonctionnalités de **SQLCancel**.|[SQLCancelHandle, fonction](../../../odbc/reference/syntax/sqlcancelhandle-function.md)|  
-|L’exécution d’une instruction SQL|[SQLExecDirect, fonction](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
-|Exécuter une instruction SQL préparée|[SQLExecute, fonction](../../../odbc/reference/syntax/sqlexecute-function.md)|  
+|Liaison d’une mémoire tampon à un paramètre|[Fonction SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
+|Exécution d’opérations d’insertion ou de mise à jour en bloc|[SQLBulkOperations, fonction](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  
+|Annule une fonction qui s’exécute de façon asynchrone sur un handle de connexion, en plus des fonctionnalités de **SQLCancel**.|[SQLCancelHandle, fonction](../../../odbc/reference/syntax/sqlcancelhandle-function.md)|  
+|Exécution d’une instruction SQL|[SQLExecDirect, fonction](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
+|Exécution d’une instruction SQL préparée|[SQLExecute, fonction](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |Libération d’un descripteur d’instruction|[SQLFreeStmt](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
-|Obtention d’un champ d’un enregistrement de diagnostic ou d’un champ de l’en-tête de diagnostic|[SQLGetDiagField, fonction](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|  
+|Obtention d’un champ d’un enregistrement de diagnostic ou d’un champ de l’en-tête de diagnostic|[Fonction SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|  
 |Obtention de plusieurs champs d’une structure de données de diagnostic|[SQLGetDiagRec, fonction](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|  
-|Retourner le paramètre suivant pour envoyer des données|[SQLParamData, fonction](../../../odbc/reference/syntax/sqlparamdata-function.md)|  
-|Envoi de données de paramètre au moment de l’exécution|[SQLPutData, fonction](../../../odbc/reference/syntax/sqlputdata-function.md)|  
-|Positionner le curseur dans un ensemble de lignes, l’actualisation des données dans l’ensemble de lignes, ou la mise à jour ou suppression de données dans le jeu de résultats|[SQLSetPos, fonction](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
+|Retour du paramètre suivant pour l’envoi de données|[SQLParamData, fonction](../../../odbc/reference/syntax/sqlparamdata-function.md)|  
+|Envoi de données de paramètre au moment de l’exécution|[Fonction SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|  
+|Positionnement du curseur dans un ensemble de lignes, actualisation des données dans l’ensemble de lignes ou mise à jour ou suppression de données dans le jeu de résultats|[SQLSetPos, fonction](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence de l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Informations de référence sur l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Fichiers d’en-tête ODBC](../../../odbc/reference/install/odbc-header-files.md)

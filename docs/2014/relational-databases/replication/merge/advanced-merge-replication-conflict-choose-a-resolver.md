@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17c751898aee25fa98bfeb6c2a7e1f1143bc61ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62931628"
 ---
 # <a name="choose-a-resolver"></a>Choisir un résolveur
@@ -34,7 +34,7 @@ ms.locfileid: "62931628"
   
 |Problème de résolution de conflits|Recommandation|  
 |-------------------------------|--------------------|  
-|Différentes catégories d'utilisateurs nécessitent des valeurs de priorité différentes.|Utilisez le résolveur par défaut et créez des abonnements serveur avec des valeurs de priorité différentes.<br /><br /> - Ou -<br /><br /> Utilisez un résolveur d'article qui reconnaît une colonne de valeur d'autorité dans l'article pour contribuer à résoudre tout conflit.|  
+|Différentes catégories d'utilisateurs nécessitent des valeurs de priorité différentes.|Utilisez le résolveur par défaut et créez des abonnements serveur avec des valeurs de priorité différentes.<br /><br /> -Ou-<br /><br /> Utilisez un résolveur d'article qui reconnaît une colonne de valeur d'autorité dans l'article pour contribuer à résoudre tout conflit.|  
 |Nécessité d'une solution de résolution de conflit du type “ le premier l'emporte ”.|Utilisez le résolveur par défaut et créez des abonnements clients.|  
 |La modification d'une même ligne de données par plusieurs utilisateurs est acceptable, du moment qu'aucune modification conflictuelle n'est apportée à la même colonne.|Utilisez soit le résolveur par défaut soit un résolveur d'articles où le suivi au niveau des colonnes est activé.|  
 |Les multiples modifications de valeurs dans une ligne doivent être signalées comme un conflit.|Utilisez soit le résolveur par défaut soit un résolveur d'articles où le suivi au niveau des lignes est activé.|  
@@ -42,7 +42,7 @@ ms.locfileid: "62931628"
 |Les données de résultat d'un conflit doivent être différentes des données de conflit originales.|Utilisez un résolveur d'articles qui calcule les nouvelles valeurs.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Détection et résolution des conflits dans les enregistrements logiques](advanced-merge-replication-conflict-resolving-in-logical-record.md)   
+ [Detecting and Resolving Conflicts in Logical Records](advanced-merge-replication-conflict-resolving-in-logical-record.md)   
  [Détection et résolution des conflits de réplication de fusion avancée](advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Republier des données](../republish-data.md)  
   

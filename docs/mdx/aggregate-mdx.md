@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6c75ab71456dc8b7ffc3efdf6bd157693de14881
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017170"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
@@ -29,19 +29,19 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
   
 ## <a name="arguments"></a>Arguments  
  *Set_Expression*  
- Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
+ Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
 ## <a name="remarks"></a>Notes  
  Si un jeu de tuples vides ou un jeu vide est spécifié, cette fonction retourne une valeur vide.  
   
- Le tableau suivant décrit comment la **agrégation** fonction se comporte avec différentes fonctions d’agrégation.  
+ Le tableau suivant décrit le comportement de la fonction d' **agrégation** avec différentes fonctions d’agrégation.  
   
-|Opérateur d'agrégation|Résultat|  
+|Opérateur d'agrégation|Résultats|  
 |--------------------------|------------|  
-|Sum|Retourne la somme des valeurs dans le jeu.|  
+|SUM|Retourne la somme des valeurs dans le jeu.|  
 |Count|Retourne le nombre de valeurs dans le jeu.|  
 |Max|Retourne la valeur maximale dans le jeu.|  
 |Min|Retourne la valeur minimale dans le jeu.|  
@@ -49,13 +49,13 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |Distinct Count|Agrège les données de faits qui contribuent au sous-cube lorsque l'axe de secteur comporte un jeu.<br /><br /> Retourne le comptage de valeurs pour chaque membre du jeu. Le résultat obtenu dépend de la sécurité dans les cellules agrégées et non de la sécurité dans les cellules requises pour le calcul. La sécurité des cellules dans le jeu déclenche une erreur ; la sécurité des cellules inférieure à la granularité du jeu spécifié est ignorée. Les calculs sur le jeu génèrent une erreur. Les calculs inférieurs à la granularité du jeu sont ignorés. Le comptage de valeurs dans un jeu qui inclut un membre et un ou plusieurs de ses enfants retourne le comptage de valeurs dans les faits qui contribuent au membre enfant.|  
 |Attributs qui ne peuvent pas être agrégés|Retourne la somme des valeurs.|  
 |Fonctions d'agrégation mixtes|Non pris en charge, déclenche une erreur.|  
-|Les opérateurs unaires.|Non respectés ; les valeurs sont agrégées par addition.|  
+|Opérateurs unaires|Non respectés ; les valeurs sont agrégées par addition.|  
 |Mesures calculées|Ordre de résolution défini pour garantir l'application de la mesure calculée.|  
 |Membres calculés|Application des règles normales, ce qui signifie que le dernier ordre de résolution est prioritaire.|  
-|Attributions|L'agrégation des attributions a lieu selon la mesure d'agrégation des mesures. Si la fonction d'agrégation des mesures est un comptage de valeurs, l'attribution est totalisée.|  
+|Affectations|L'agrégation des attributions a lieu selon la mesure d'agrégation des mesures. Si la fonction d'agrégation des mesures est un comptage de valeurs, l'attribution est totalisée.|  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant retourne la somme de la `Measures.[Order Quantity]` membre, agrégé sur les huit premiers mois de l’année civile 2003 qui figurent dans le `Date` dimension, à partir de la **Adventure Works** cube.  
+ L’exemple suivant retourne la somme du `Measures.[Order Quantity]` membre, agrégée sur les huit premiers mois de l’année civile 2003 qui sont contenus dans la `Date` dimension, à partir du cube **Adventure Works** .  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -93,7 +93,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- L'exemple ci-dessous retourne le nombre de revendeurs dont les ventes ont baissé sur la période précédente en se basant sur les valeurs de membres State-Province (état-province) sélectionnées par l'utilisateur et évaluées à l'aide de la fonction Aggregate. Le **Hierarchize** et **DrillDownLevel** fonctions sont utilisées pour retourner des valeurs de refus des ventes pour les catégories de produits dans la dimension Product.  
+ L'exemple ci-dessous retourne le nombre de revendeurs dont les ventes ont baissé sur la période précédente en se basant sur les valeurs de membres State-Province (état-province) sélectionnées par l'utilisateur et évaluées à l'aide de la fonction Aggregate. Les fonctions **Hierarchize** et **DrilldownLevel** sont utilisées pour retourner des valeurs pour les ventes refusées pour les catégories de produits dans la dimension Product.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS   
@@ -122,15 +122,15 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)   
- [Children &#40;MDX&#41;](../mdx/children-mdx.md)   
- [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
- [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)   
- [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
- [Properties &#40;MDX&#41;](../mdx/properties-mdx.md)   
- [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [PeriodsToDate &#40;&#41;MDX](../mdx/periodstodate-mdx.md)   
+ [&#41;MDX &#40;](../mdx/children-mdx.md)   
+ [Hierarchize&#41;MDX &#40;](../mdx/hierarchize-mdx.md)   
+ [Nombre &#40;défini&#41; &#40;&#41;MDX](../mdx/count-set-mdx.md)   
+ [Filtre &#40;&#41;MDX](../mdx/filter-mdx.md)   
+ [AddCalculatedMembers&#41;MDX &#40;](../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel&#41;MDX &#40;](../mdx/drilldownlevel-mdx.md)   
+ [Propriétés &#40;MDX&#41;](../mdx/properties-mdx.md)   
+ [PrevMember&#41;MDX &#40;](../mdx/prevmember-mdx.md)   
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

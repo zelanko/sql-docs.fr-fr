@@ -18,21 +18,21 @@ ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c02b9327dbff75e3c0816bb3eec19e3cb3135d50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008921"
 ---
-# <a name="sppassword-transact-sql"></a>sp_password (Transact-SQL)
+# <a name="sp_password-transact-sql"></a>sp_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Ajoute ou modifie un mot de passe pour un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion.  
+  Ajoute ou modifie un mot de passe [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour une connexion.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) à la place.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez à la place [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) .  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,16 +44,16 @@ sp_password [ [ @old = ] 'old_password' , ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @old = ] 'old_password'` Est l’ancien mot de passe. *old_password* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @old = ] 'old_password'`Est l’ancien mot de passe. *OLD_PASSWORD* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @new = ] 'new_password'` Est le nouveau mot de passe. *new_password* est **sysname**, sans valeur par défaut. *old_password* doit être spécifié si les paramètres nommés ne sont pas utilisés.  
+`[ @new = ] 'new_password'`Nouveau mot de passe. *new_password* est de **type sysname**, sans valeur par défaut. *OLD_PASSWORD* doit être spécifié si les paramètres nommés ne sont pas utilisés.  
   
 > [!IMPORTANT]  
->  N'utilisez pas de mot de passe NULL, Utilisez un mot de passe fort. Pour plus d’informations, consultez la page [Mots de passe forts](../../relational-databases/security/strong-passwords.md).  
+>  N'utilisez pas de mot de passe NULL, Utilisez un mot de passe fort. Pour plus d'informations, consultez la page [Mots de passe forts](../../relational-databases/security/strong-passwords.md).  
   
-`[ @loginame = ] 'login'` Est le nom de la connexion affectée par la modification de mot de passe. *login* est de type **sysname**, avec NULL comme valeur par défaut. *connexion* doit déjà exister et peut être spécifié uniquement par les membres de la **sysadmin** ou **securityadmin** rôles serveur fixes.  
+`[ @loginame = ] 'login'`Nom de la connexion affectée par la modification du mot de passe. *login* est de **type sysname**, avec NULL comme valeur par défaut. la *connexion* doit déjà exister et ne peut être spécifiée que par les membres des rôles serveur fixes **sysadmin** ou **securityadmin** .  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
@@ -69,7 +69,7 @@ sp_password [ [ @old = ] 'old_password' , ]
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-changing-the-password-of-a-login-without-knowing-the-old-password"></a>R. Modification du mot de passe d'une connexion sans disposer de l'ancien  
- L'exemple suivant montre l'utilisation de `ALTER LOGIN` pour remplacer le mot de passe de la connexion `Victoria` par `B3r1000d#2-36`. Cette méthode est recommandée. L'utilisateur qui exécute cette commande doit avoir l'autorisation CONTROL SERVER.  
+ L'exemple suivant montre l'utilisation de `ALTER LOGIN` pour remplacer le mot de passe de la connexion `Victoria` par `B3r1000d#2-36`. Ceci est la méthode privilégiée. L'utilisateur qui exécute cette commande doit avoir l'autorisation CONTROL SERVER.  
   
 ```  
 ALTER LOGIN Victoria WITH PASSWORD = 'B3r1000d#2-36';  
@@ -77,7 +77,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-password"></a>B. Modification d'un mot de passe  
- L'exemple suivant montre l'utilisation de `ALTER LOGIN` pour changer le mot de passe de la connexion `Victoria` de `B3r1000d#2-36` en `V1cteAmanti55imE`. Cette méthode est recommandée. L'utilisateur `Victoria` peut exécuter cette commande sans autorisations supplémentaires. Les autres utilisateurs ont besoin de l'autorisation ALTER ANY LOGIN.  
+ L'exemple suivant montre l'utilisation de `ALTER LOGIN` pour changer le mot de passe de la connexion `Victoria` de `B3r1000d#2-36` en `V1cteAmanti55imE`. Ceci est la méthode privilégiée. L'utilisateur `Victoria` peut exécuter cette commande sans autorisations supplémentaires. Les autres utilisateurs ont besoin de l'autorisation ALTER ANY LOGIN.  
   
 ```  
 ALTER LOGIN Victoria WITH   
@@ -89,7 +89,7 @@ GO
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [CRÉER une connexion &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 83ac357d01b616a0010b9c2132f77bbcf89b479b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917000"
 ---
 # <a name="database-properties-transaction-log-shipping-page"></a>Propriétés de la base de données (page Envoi des journaux de transactions)
@@ -43,7 +43,7 @@ ms.locfileid: "62917000"
  **Ajouter**  
  Cliquez sur **Ajouter** pour ajouter une base de données secondaire à la configuration de copie des journaux de transactions pour cette base de données primaire.  
   
- **Supprimer**  
+ **Remove**  
  Supprime une base de données sélectionnée de cette configuration de copie des journaux de transactions. Sélectionnez la base de données, puis cliquez sur **Supprimer**.  
   
  **Utiliser une instance du serveur moniteur**  

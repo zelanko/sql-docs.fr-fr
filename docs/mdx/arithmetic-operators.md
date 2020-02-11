@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1898f3e9807d2ea4f80f99e9a7ef27e672d58a18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017086"
 ---
 # <a name="arithmetic-operators"></a>Opérateurs arithmétiques
@@ -24,11 +24,11 @@ ms.locfileid: "68017086"
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|[+ (Additionner)](../mdx/add-mdx.md)|Additionne deux nombres.|  
-|[/ (Diviser)](../mdx/divide-mdx-operator-reference.md)|Divise un nombre par un autre.|  
+|[+ (Ajouter)](../mdx/add-mdx.md)|Additionne deux nombres.|  
+|[/(Division)](../mdx/divide-mdx-operator-reference.md)|Divise un nombre par un autre nombre.|  
 |[* (Multiplier)](../mdx/multiply-mdx.md)|Multiplie deux nombres.|  
-|[- (Soustraire)](../mdx/subtract-mdx.md)|Soustrait deux nombres.|  
-|^ (Puissance)|Élève un nombre à une puissance égale à un autre nombre.|  
+|[-(Soustraction)](../mdx/subtract-mdx.md)|Soustrait deux nombres.|  
+|^ (Puissance) |Élève un nombre à une puissance égale à un autre nombre.|  
   
 > [!NOTE]  
 >  MDX n'inclut pas de fonction pour obtenir la racine carrée d'un nombre. Pour obtenir la racine carrée d'un nombre, élevez-le à la puissance 0.5 à l'aide de l'opérateur ^.  
@@ -43,7 +43,7 @@ ms.locfileid: "68017086"
 -   Les expressions entre parenthèses ont la priorité sur toutes les autres opérations.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des opérateurs MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [Référence des opérateurs MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)   
  [Opérateurs &#40;syntaxe MDX&#41;](../mdx/operators-mdx-syntax.md)  
   
   

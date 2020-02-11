@@ -1,5 +1,5 @@
 ---
-title: Le Feature Pack Azure | Microsoft Docs
+title: Feature Pack Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 536dce64880c1e70b1b8a0c4b419811c1b32a975
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62772121"
 ---
 # <a name="azure-feature-pack"></a>Feature Pack Azure
@@ -27,7 +27,7 @@ Le Feature Pack SQL Server Integration Services (SSIS) pour Azure est une extens
   
 -   Gestionnaires de connexions  
   
-    -   [Gestionnaire de connexions de stockage Azure](connection-manager/azure-storage-connection-manager.md)  
+    -   [Gestionnaire de connexions Stockage Azure](connection-manager/azure-storage-connection-manager.md)  
   
     -   [Gestionnaire de connexions d’abonnement Azure](connection-manager/azure-subscription-connection-manager.md)  
     
@@ -43,7 +43,7 @@ Le Feature Pack SQL Server Integration Services (SSIS) pour Azure est une extens
   
     -   [Tâche de téléchargement d’objets blob Azure](control-flow/azure-blob-download-task.md)  
   
-    -   [Tâche Hive Azure HDInsight](control-flow/azure-hdinsight-hive-task.md)  
+    -   [Tâche Hive d’Azure HDInsight](control-flow/azure-hdinsight-hive-task.md)  
   
     -   [Tâche Pig Azure HDInsight](https://msdn.microsoft.com/library/mt146781(v=sql.120).aspx)
   
@@ -65,19 +65,19 @@ Le Feature Pack SQL Server Integration Services (SSIS) pour Azure est une extens
     
     -   [Destination Azure Data Lake Store](../../2014/integration-services/azure-data-lake-store-destination.md)
   
--   Énumérateur d’objets Blob Azure & énumérateur ADLS File. Consultez [Foreach Loop Container](control-flow/foreach-loop-container.md).  
+-   Énumérateur d’objets BLOB Azure & énumérateur de fichier ADLS. Consultez [conteneur de boucles Foreach](control-flow/foreach-loop-container.md).  
   
  
 ## <a name="download-the-feature-pack"></a>Télécharger le Feature Pack  
 Téléchargez le Feature Pack SQL Server Integration Services (SSIS) pour Azure.  
   
--   [Microsoft SQL Server 2014 Integration Services Feature Pack pour Azure](https://www.microsoft.com/download/details.aspx?id=47366)  
+-   [Feature Pack Microsoft SQL Server 2014 Integration Services pour Azure](https://www.microsoft.com/download/details.aspx?id=47366)  
 
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
 Avant d’installer le Feature Pack, vous devez vérifier que les conditions préalables suivantes sont remplies.  
   
 -   SQL Server Integration Services  
--   .Net Framework 4.5  
+-   .NET Framework 4.5  
   
 ## <a name="scenarios"></a>Scénarios  
   

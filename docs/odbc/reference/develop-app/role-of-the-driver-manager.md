@@ -1,5 +1,5 @@
 ---
-title: Rôle du Gestionnaire de pilotes | Microsoft Docs
+title: Rôle du gestionnaire de pilotes | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ ms.assetid: 7b861c82-357e-4590-8074-45136e9ed15e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7184c8ac9e0ad1813999a276f1579351f98544ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020402"
 ---
 # <a name="role-of-the-driver-manager"></a>Rôle du gestionnaire de pilotes
-Le Gestionnaire de pilotes détermine l’ordre final dans lequel retourner les enregistrements d’état qu’il génère. En particulier, il détermine quel enregistrement a le rang le plus élevé et doit être retournée tout d’abord. Le pilote est chargé de classer les enregistrements d’état qu’il génère. Si les enregistrements d’état sont publiées par le Gestionnaire de pilotes et le pilote, le Gestionnaire de pilotes est responsable de leur classement. Pour plus d’informations, consultez [séquence d’enregistrements d’état](../../../odbc/reference/develop-app/sequence-of-status-records.md).  
+Le gestionnaire de pilotes détermine l’ordre final dans lequel retourner les enregistrements d’État qu’il génère. En particulier, il détermine quel enregistrement a le rang le plus élevé et doit être retourné en premier. Le pilote est chargé de classer les enregistrements d’État qu’il génère. Si les enregistrements d’État sont publiés à la fois par le gestionnaire de pilotes et par le pilote, le gestionnaire de pilotes est chargé de les classer. Pour plus d’informations, consultez [séquence des enregistrements d’État](../../../odbc/reference/develop-app/sequence-of-status-records.md).  
   
- Le Gestionnaire de pilote n’autant la vérification des erreurs que possible. Cette opération enregistre tous les pilotes à partir de la vérification pour les mêmes erreurs. Par exemple, si un argument de fonction accepte un nombre discret de valeurs, telles que *opération* dans **SQLSetPos**, le Gestionnaire de pilotes vérifie que la valeur spécifiée est autorisée.  
+ Le gestionnaire de pilotes fait autant de vérification des erreurs que possible. Cela évite à tous les pilotes de vérifier les mêmes erreurs. Par exemple, si un argument de fonction accepte un nombre discret de valeurs, telles que l' *opération* dans **SQLSetPos**, le gestionnaire de pilotes vérifie que la valeur spécifiée est légale.  
   
- Les sections suivantes décrivent les types de conditions vérifiées par le Gestionnaire de pilotes. Ils ne sont pas destinés à être exhaustive ; Pour obtenir une liste complète du SQLSTATE retourne le Gestionnaire de pilotes, consultez la section « Diagnostics » de chaque fonction ; la description de chaque contrôle est effectué par le Gestionnaire de pilote commence par les lettres « (DM). » Consultez également les tables de transition d’état dans [annexe b : Tableaux des transitions d’état ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md); erreurs affichées entre parenthèses sont détectées par le Gestionnaire de pilotes.  
+ Les sections suivantes décrivent les types de conditions vérifiées par le gestionnaire de pilotes. Ils ne sont pas destinés à être exhaustifs ; pour obtenir la liste complète des SQLSTATEs retournées par le gestionnaire de pilotes, consultez la section « Diagnostics » de chaque fonction. la description de chaque vérification effectuée par le gestionnaire de pilotes commence par les lettres « (DM) ». Consultez également les tableaux de transition d’État dans [annexe B : tables de transition d’État ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md); les erreurs indiquées entre parenthèses sont détectées par le gestionnaire de pilotes.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Vérifications de la valeur des arguments](../../../odbc/reference/develop-app/argument-value-checks.md)  
   

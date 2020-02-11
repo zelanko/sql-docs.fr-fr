@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8db42e567b80ca282b89d9be29fffff3e643ea7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015648"
 ---
 # <a name="view-statistics-properties"></a>Afficher les propriétés des statistiques
@@ -31,7 +31,7 @@ ms.locfileid: "63015648"
   
      [Sécurité](#Security)  
   
--   **Pour afficher les propriétés des statistiques, utilisez :**  
+-   **Pour afficher les propriétés des statistiques à l’aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -68,15 +68,15 @@ ms.locfileid: "63015648"
      **Nom des statistiques**  
      Spécifie le nom de l'objet de base de données dans lequel les statistiques sont stockées.  
   
-     **Statistiques de l’INDEX statistics_name**  
-     Cette zone de texte affiche les propriétés retournées par l'objet de statistiques. Ces propriétés sont divisées en trois sections : En-tête des statistiques, vecteur de densité et histogramme.  
+     **Statistiques pour INDEXstatistics_name**  
+     Cette zone de texte affiche les propriétés retournées par l'objet de statistiques. Ces propriétés sont divisées en trois sections : en-tête de statistiques, vecteur de densité et histogramme.  
   
      Les informations suivantes décrivent les colonnes retournées dans le jeu de résultats de l'en-tête de statistiques.  
   
      **Nom**  
      Nom de l'objet de statistiques.  
   
-     **Mis à jour**  
+     **Mettre**  
      Date et heure de la dernière mise à jour des statistiques.  
   
      **Lignes**  
@@ -88,14 +88,14 @@ ms.locfileid: "63015648"
      **Étapes**  
      Nombre d'étapes dans l'histogramme. Chaque étape couvre une plage de valeurs de colonnes suivie d'une valeur de colonne de limite supérieure. Les étapes d'histogramme sont définies sur la première colonne clé des statistiques. Le nombre maximal d'étapes est 200.  
   
-     **Densité**  
+     **Masse**  
      La formule 1 / *valeurs distinctes* est utilisée pour toutes les valeurs de la première colonne clé de l’objet de statistiques, à l’exception des valeurs limites de l’histogramme. Cette valeur de densité n'est pas utilisée par l'optimiseur de requête ; elle est affichée pour la compatibilité descendante avec les versions antérieures à SQL Server 2008.  
   
-     **Longueur moyenne d'une clé**  
+     **Longueur moyenne de la clé**  
      Nombre moyen d'octets par valeur pour toutes les colonnes clés de l'objet de statistiques.  
   
-     **String Index**  
-     La valeur Yes indique que l'objet de statistiques contient des statistiques de résumé de chaîne pour améliorer les estimations de cardinalité des prédicats de requête qui utilisent l'opérateur LIKE ; c'est le cas par exemple de `WHERE ProductName LIKE '%Bike'`. Les statistiques de résumé de chaîne sont stockées à l’écart de l’histogramme et créées sur la première colonne clé de l’objet de statistiques quand il est de type **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **text**ou **ntext**.  
+     **Index de chaîne**  
+     La valeur Yes indique que l'objet de statistiques contient des statistiques de résumé de chaîne pour améliorer les estimations de cardinalité des prédicats de requête qui utilisent l'opérateur LIKE ; c'est le cas par exemple de `WHERE ProductName LIKE '%Bike'`. Les statistiques de résumé de chaîne sont stockées à l’écart de l’histogramme et créées sur la première colonne clé de l’objet de statistiques quand il est de type **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text**ou **ntext**.  
   
      **Expression de filtre**  
      Prédicat pour le sous-ensemble des lignes de table incluses dans l'objet de statistiques. NULL = statistiques non filtrées.  
@@ -105,8 +105,8 @@ ms.locfileid: "63015648"
   
      Les informations suivantes décrivent les colonnes retournées dans le jeu de résultats du vecteur de densité.  
   
-     **Toutes les densités**  
-     La densité est calculée selon la formule 1 / *valeurs distinctes*. Les résultats affichent la densité pour chaque préfixe des colonnes de l'objet de statistiques, à raison d'une ligne par densité. Une valeur distincte est une liste distincte des valeurs de colonnes par ligne et par préfixe de colonne. Par exemple, si l’objet de statistiques contient les colonnes clés (A, B, C), les résultats affichent la densité des listes distinctes de valeurs dans chacun des préfixes de colonnes suivants : (A), (A, B) et (A, B, C). Avec le préfixe (A, B, C), chacune de ces listes est une liste de valeurs distinctes : (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). L’utilisation du préfixe (A, B) les mêmes valeurs de colonne ont ces listes de valeurs distinctes : (3, 5), (4, 4) et (4, 5).  
+     **Toute la densité**  
+     La densité est calculée selon la formule 1 / *valeurs distinctes*. Les résultats affichent la densité pour chaque préfixe des colonnes de l'objet de statistiques, à raison d'une ligne par densité. Une valeur distincte est une liste distincte des valeurs de colonnes par ligne et par préfixe de colonne. Par exemple, si l'objet de statistiques contient des colonnes clés (A, B, C), les résultats affichent la densité des listes distinctes de valeurs dans chacun des préfixes de colonnes suivants : (A), (A,B) et (A, B, C). Avec le préfixe (A, B, C), chacune des listes suivantes est une liste de valeurs distincte : (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Avec le préfixe (A, B), les listes de valeurs distinctes suivantes sont associées aux mêmes valeurs de colonnes : (3, 5), (4, 4) et (4, 5).  
   
      **Longueur moyenne**  
      Longueur moyenne, en octets, pour le stockage d'une liste des valeurs de colonnes pour le préfixe de colonne. Par exemple, si les valeurs dans la liste (3, 5, 6) nécessitent 4 octets chacune, la longueur est égale à 12 octets.  
@@ -155,7 +155,7 @@ ms.locfileid: "63015648"
   
 #### <a name="to-find-all-of-the-statistics-on-a-table-or-view"></a>Pour rechercher toutes les statistiques sur une table ou une vue  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

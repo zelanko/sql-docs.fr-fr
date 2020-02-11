@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b8de45556d3c19ee8460b33e7f07ceb485b37597
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917115"
 ---
 # <a name="database-properties-filegroups-page"></a>Propriétés de la base de données (page Groupes de fichiers)
@@ -40,13 +40,13 @@ ms.locfileid: "62917115"
  **Lecture seule**  
  Sélectionnez cette option pour attribuer au groupe de fichiers l'état lecture seule.  
   
- **Default**  
+ **Par défaut**  
  Sélectionnez cette option pour définir ce groupe de fichiers comme groupe de fichiers par défaut. Vous pouvez définir un groupe de fichiers de ligne par défaut et un groupe de fichiers par défaut pour les données FILESTREAM.  
   
  **Ajouter**  
  Ajoute une nouvelle ligne vide dans la grille qui répertorie les groupes de fichiers associés à la base de données.  
   
- **Supprimer**  
+ **Remove**  
  Supprime la ligne sélectionnée des groupes de fichiers de la grille.  
   
 ## <a name="memory-optimized-data-filegroup-options"></a>Options des groupes de fichiers optimisés en mémoire  
@@ -59,7 +59,7 @@ ms.locfileid: "62917115"
  **Ajouter**  
  Ajoute une nouvelle ligne vide dans la grille qui répertorie les groupes de fichiers associés à la base de données.  
   
- **Supprimer**  
+ **Remove**  
  Supprime la ligne sélectionnée des groupes de fichiers de la grille.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -1,5 +1,5 @@
 ---
-title: Ajouter des fonctionnalités à une Instance de SQL Server 2014 (programme d’installation) | Microsoft Docs
+title: Ajouter des fonctionnalités à une instance de SQL Server 2014 (programme d’installation) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 147fe717919035c365ef2e3507e46a4323694570
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779370"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-2014-setup"></a>Ajouter des fonctionnalités à une instance de SQL Server 2014 (programme d'installation)
   Cette rubrique fournit une procédure pas à pas pour ajouter des fonctionnalités à une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Certains composants ou services de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont spécifiques à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ils sont également définis comme étant dépendants de l'instance. Ils partagent la même version que l'instance qui les héberge et sont utilisés exclusivement pour cette instance. Vous pouvez ajouter les composants dépendant d'une instance à une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], avec des composants partagés s'ils ne sont pas déjà installés. Pour obtenir une liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- Pour ajouter des fonctionnalités à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de l’invite de commandes, consultez [installer SQL Server 2014 à partir de l’invite de commandes](install-sql-server-from-the-command-prompt.md).  
+ Pour ajouter des fonctionnalités à une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de à partir de l’invite de commandes, consultez [installer SQL Server 2014 à partir de l’invite de commandes](install-sql-server-from-the-command-prompt.md).  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Avant de continuer, consultez les rubriques de [Planification d’une installation SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
   
 > [!NOTE]  
@@ -115,7 +115,7 @@ ms.locfileid: "62779370"
   
 20. Utilisez la page Configuration de Distributed Replay Client pour spécifier les utilisateurs auxquels vous voulez accorder des autorisations administratives sur le service Distributed Replay Client. Les utilisateurs qui disposent d'autorisations administratives ont un accès illimité au service Distributed Replay Client.  
   
-     **Nom du contrôleur** est un paramètre optionnel. La valeur par défaut est \<*blank*>. Entrez le nom du contrôleur avec lequel l'ordinateur client communiquera pour le service Distributed Replay Client. Notez les points suivants :  
+     **Nom du contrôleur** est un paramètre optionnel. La valeur par défaut est \<*blank*>. Entrez le nom du contrôleur avec lequel l'ordinateur client communiquera pour le service Distributed Replay Client. Notez les points suivants :  
   
     -   Si vous avez déjà configuré un contrôleur, entrez son nom lors de la configuration de chaque client.  
   
@@ -147,8 +147,8 @@ ms.locfileid: "62779370"
 ## <a name="see-also"></a>Voir aussi  
  [Afficher et lire les fichiers journaux d’installation de SQL Server](view-and-read-sql-server-setup-log-files.md)   
  [Valider une installation SQL Server](validate-a-sql-server-installation.md)   
- [Supprimer une Installation SQL Server 2014](repair-a-failed-sql-server-installation.md)   
- [Mise à niveau vers SQL Server 2014 à l’aide de l’Assistant Installation &#40;le programme d’installation&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)   
- [Installer SQL Server 2014 à partir de l’invite de commandes](install-sql-server-from-the-command-prompt.md)  
+ [Supprimer une installation SQL Server 2014](repair-a-failed-sql-server-installation.md)   
+ [Effectuez une mise à niveau vers SQL Server 2014 à l’aide de l’Assistant Installation &#40;le programme d’installation&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)   
+ [Installer SQL Server 2014 à partir de l'invite de commandes](install-sql-server-from-the-command-prompt.md)  
   
   

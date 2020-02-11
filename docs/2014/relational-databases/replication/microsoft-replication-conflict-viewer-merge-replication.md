@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e28a5077057c9a02a3b45de6a88180eab5c87b2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62938581"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Visionneuse des conflits de réplication Microsoft (réplication de fusion)
@@ -55,13 +55,13 @@ ms.locfileid: "62938581"
  **Appliquer ou supprimer le filtre**  
  Applique ou supprime un filtre défini dans la boîte de dialogue **Définir les filtres** .  
   
- **Tout sélectionner**  
+ **Sélectionner tout**  
  Sélectionne tous les conflits de la grille.  
   
  **Aucune sélection**  
  Désélectionne tous les conflits de la grille.  
   
- **Supprimer**  
+ **Remove**  
  Supprime les conflits sélectionnés et leurs métadonnées associées des tables système de réplication. Vous obtenez le même résultat en cliquant sur le bouton Soumettre le gagnant (sans modifier les données) de chaque conflit sélectionné.  
   
  **Afficher toutes les colonnes**  
@@ -70,8 +70,8 @@ ms.locfileid: "62938581"
  **Afficher les cinq premières colonnes et les autres colonnes qui contiennent des données conflictuelles**  
  Sélectionnez cette option pour afficher les cinq premières colonnes et toute colonne qui comporte des conflits. Cette option est utile lorsque la table comporte de nombreuses colonnes si vous voulez afficher uniquement les colonnes les plus pertinentes pour la résolution du conflit. Les cinq premières colonnes figurent toujours dans cette vue du fait que les champs qui identifient une ligne (par exemple la clé primaire ou les noms des champs) se trouvent souvent parmi les premières colonnes de la table.  
   
- **Informations sur la colonne** ( **…** )  
- Cliquez pour afficher les informations de colonne : **Nom de la table**, **Nom de la colonne**, **Type de données** et **Valeur de la colonne**. Le champ**Valeur de la colonne** est modifiable à moins que la valeur ne soit affichée en lecture seule.  
+ **Afficher les informations de colonne** (**...**)  
+ Affiche les informations sur la colonne : **Nom de la table**, **Nom de la colonne**, **Type de données**et **Valeur de la colonne**. Le champ**Valeur de la colonne** est modifiable à moins que la valeur ne soit affichée en lecture seule.  
   
  **Soumettre le gagnant**  
  Conserve la ligne que l'outil de résolution des conflits a déterminée gagnante. Vous pouvez modifier la valeur de n'importe quelle colonne qui n'est pas affichée en lecture seule avant de cliquer sur ce bouton.  

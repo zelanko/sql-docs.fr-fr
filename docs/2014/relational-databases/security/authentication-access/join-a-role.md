@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: d1c846f7ed60bbecac64021e9a881312e1f1f64c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011345"
 ---
 # <a name="join-a-role"></a>joindre un rôle
@@ -62,7 +62,7 @@ ms.locfileid: "63011345"
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Requiert `ALTER ANY ROLE` autorisation sur la base de données, `ALTER` autorisation sur le rôle, ou l’appartenance dans **db_securityadmin**.  
+ Nécessite `ALTER ANY ROLE` l’autorisation sur la base `ALTER` de données, l’autorisation sur le rôle ou l’appartenance à **db_securityadmin**.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
@@ -76,9 +76,9 @@ ms.locfileid: "63011345"
   
 4.  Cliquez avec le bouton droit sur le rôle à modifier, puis sélectionnez **Propriétés**.  
   
-5.  Dans le **propriétés du rôle de serveur -**_nom_rôle_serveur_ boîte de dialogue le **membres** , cliquez sur **ajouter**.  
+5.  Dans la boîte de dialogue **Propriétés du rôle de serveur-**_server_role_name_ , dans la page **membres** , cliquez sur **Ajouter**.  
   
-6.  Dans la boîte de dialogue **Sélectionner la connexion au serveur ou le rôle de serveur** , sous **Entrez les noms des objets à sélectionner (exemples)**, entrez la connexion ou le rôle serveur à ajouter à ce rôle serveur. Vous pouvez également cliquer sur **Parcourir…** et sélectionner l’ensemble ou certains des objets disponibles dans la boîte de dialogue **Rechercher des objets**. Cliquez sur **OK** pour revenir à la **propriétés du rôle de serveur -**_nom_rôle_serveur_ boîte de dialogue.  
+6.  Dans la boîte de dialogue **Sélectionner la connexion au serveur ou le rôle de serveur** , sous **Entrez les noms des objets à sélectionner (exemples)** , entrez la connexion ou le rôle serveur à ajouter à ce rôle serveur. Vous pouvez également cliquer sur **Parcourir…** et sélectionner l’ensemble ou certains des objets disponibles dans la boîte de dialogue **Rechercher des objets**. Cliquez sur **OK** pour revenir à la boîte de dialogue **Propriétés du rôle de serveur-**_server_role_name_ .  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -98,9 +98,9 @@ ms.locfileid: "63011345"
   
 7.  Cliquez avec le bouton droit sur le rôle à modifier, puis sélectionnez **Propriétés**.  
   
-8.  Dans le **propriétés du rôle de base de données -**_nom_rôle_base de données_ boîte de dialogue le **général** , cliquez sur **ajouter**.  
+8.  Dans la boîte **de dialogue Propriétés du rôle de base de données-**_database_role_name_ , dans la page **général** , cliquez sur **Ajouter**.  
   
-9. Dans la boîte de dialogue **Sélectionner l’utilisateur ou le rôle de la base de données** , sous **Entrez les noms des objets à sélectionner (exemples)**, entrez la connexion ou le rôle de base de données à ajouter à ce rôle de base de données. Vous pouvez également cliquer sur **Parcourir…** et sélectionner l’ensemble ou certains des objets disponibles dans la boîte de dialogue **Rechercher des objets**. Cliquez sur **OK** pour revenir à la **propriétés du rôle de base de données -**_nom_rôle_base de données_ boîte de dialogue.  
+9. Dans la boîte de dialogue **Sélectionner l’utilisateur ou le rôle de la base de données** , sous **Entrez les noms des objets à sélectionner (exemples)** , entrez la connexion ou le rôle de base de données à ajouter à ce rôle de base de données. Vous pouvez également cliquer sur **Parcourir…** et sélectionner l’ensemble ou certains des objets disponibles dans la boîte de dialogue **Rechercher des objets**. Cliquez sur **OK** pour revenir à la boîte **de dialogue Propriétés du rôle de base de données-**_database_role_name_ .  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -108,7 +108,7 @@ ms.locfileid: "63011345"
   
 #### <a name="to-add-a-member-to-a-fixed-server-role"></a>Pour ajouter un membre à un rôle serveur fixe  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "63011345"
   
 #### <a name="to-add-a-member-to-a-user-defined-database-role"></a>Pour ajouter un membre à un rôle de base de données défini par l'utilisateur  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -139,6 +139,6 @@ ms.locfileid: "63011345"
 ## <a name="see-also"></a>Voir aussi  
  [Rôles de niveau serveur](server-level-roles.md)   
  [Rôles au niveau de la base de données](../authentication-access/database-level-roles.md)   
- [Rôles d'applications](../authentication-access/application-roles.md)  
+ [Rôles d’application](../authentication-access/application-roles.md)  
   
   

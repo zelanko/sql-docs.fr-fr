@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 85bc34af971db386862528ac36ea04fef33f2daa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035671"
 ---
 # <a name="projects-sql-server-management-studio"></a>Projets (SQL Server Management Studio)
@@ -48,7 +48,7 @@ ms.locfileid: "63035671"
 |----------------------|-----------|  
 |Explique comment créer un projet dans une solution.|[Créer un projet](create-a-project.md)|  
 |Explique comment ajouter un projet existant à une solution.|[Ajouter un projet existant à une solution](add-an-existing-project-to-a-solution.md)|  
-|Explique comment modifier l'emplacement par défaut dans lequel les fichiers du projet sont enregistrés.|[Modifier l'emplacement par défaut des projets](change-the-default-location-for-projects.md)|  
+|Explique comment modifier l'emplacement par défaut dans lequel les fichiers du projet sont enregistrés.|[Modifier l’emplacement par défaut des projets](change-the-default-location-for-projects.md)|  
 |Explique comment afficher les propriétés actuelles d'un projet.|[Afficher les propriétés d'un projet](view-project-properties.md)|  
 |Explique comment ajouter de nouveaux éléments, tels que des connexions ou des fichiers de script, à un projet.|[Ajouter de nouveaux éléments à un projet](add-new-items-to-a-project.md)|  
 |Explique comment établir les informations de connexion d'une requête.|[Associer une requête à une connexion dans un projet](associate-a-query-with-a-connection-in-a-project.md)|  

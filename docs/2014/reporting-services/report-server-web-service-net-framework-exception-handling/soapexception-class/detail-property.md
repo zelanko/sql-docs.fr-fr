@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27d9d7ab4cd29c6eb0ea7ae1c6bddbe8c1b7ef06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046005"
 ---
 # <a name="detail-property"></a>Propriété Detail
@@ -31,7 +31,7 @@ ms.locfileid: "63046005"
  Code d'erreur propre à [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  **HttpStatus**  
- Code d'état HTTP.  
+ Code d’état HTTP.  
   
  **Message**  
  Message d'erreur et code d'erreur attribués par le serveur de rapports.  
@@ -39,19 +39,19 @@ ms.locfileid: "63046005"
  **HelpLink**  
  URL du lien d'aide vers un site Web sur lequel des informations complémentaires sur l'erreur sont disponibles. Pour plus d’informations, consultez [HelpLink, élément](helplink-element.md).  
   
- **LinkID**  
+ **Égale**  
  ID assigné au lien.  
   
  **ProductName**  
  Nom du produit. La valeur par défaut est **Microsoft SQL Server Reporting Services**.  
   
  **ProductVersion**  
- Version de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. La longueur maximale autorisée s'élève à 15 caractères. Le format du numéro de version doit se présenter comme suit : 8.00.0xxx.00.  
+ Version de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. La longueur maximale autorisée s'élève à 15 caractères. Le format du numéro de version doit être comme suit : 8.00.0xxx.00.  
   
  **ProductLocaleId**  
  ID des paramètres régionaux ou ID de la langue de la DLL INTL de l'application (par exemple, 0x41A).  
   
- **OperatingSystem**  
+ **Exploitation**  
  Système d'exploitation sur lequel [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] est installé. Les valeurs valides incluent **0** pour un système d’exploitation indépendant, **1** pour [!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)] et **16** pour Windows XP.  
   
  **CountryLocaleId**  

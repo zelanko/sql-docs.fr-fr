@@ -1,5 +1,5 @@
 ---
-title: Sys.sysremotelogins (Transact-SQL) | Microsoft Docs
+title: sys. sysremotelogins (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.assetid: b7ffcfa6-aed8-41d4-8b70-845439ab813d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1c51ccd657c8a7c5f07bdaf836ba3e279e81c590
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018136"
 ---
 # <a name="syssysremotelogins-transact-sql"></a>sys.sysremotelogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contient une ligne pour chaque utilisateur distant qui est autorisée à appeler des procédures stockées distantes sur une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Contient une ligne pour chaque utilisateur distant autorisé à appeler des procédures stockées distantes sur une instance [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
@@ -39,12 +39,12 @@ ms.locfileid: "68018136"
 |-----------------|---------------|-----------------|  
 |**remoteserverid**|**smallint**|ID du serveur distant.|  
 |**remoteusername**|**sysname**|Nom de connexion de l'utilisateur sur un serveur distant.|  
-|**status**|**smallint**|Retourne 0.|  
+|**statu**|**smallint**|Retourne 0.|  
 |**sid**|**varbinary(85)**|ID de sécurité de l'utilisateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|  
-|**changedate**|**datetime**|Date et heure de l'ajout de l'utilisateur distant.|  
+|**ChangeDate**|**DATETIME**|Date et heure de l'ajout de l'utilisateur distant.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mappage des Tables système avec les vues système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Affichages de compatibilité &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Mappage de tables système à des vues système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Vues de compatibilité &#40;&#41;Transact-SQL](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

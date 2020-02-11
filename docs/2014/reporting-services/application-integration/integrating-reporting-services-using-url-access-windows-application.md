@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb841d187385724ea31b5a7db86fcb323bf10663
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126236"
 ---
 # <a name="using-url-access-in-a-windows-application"></a>Utilisation de l'accès URL dans une application Windows
@@ -31,7 +31,7 @@ ms.locfileid: "63126236"
 -   Utiliser le contrôle <xref:System.Windows.Forms.WebBrowser> sur un Windows Form pour afficher un rapport.  
   
 ## <a name="starting-internet-explorer-from-a-windows-form"></a>Démarrage d'Internet Explorer à partir d'un Windows Form  
- Vous pouvez utiliser la classe <xref:System.Diagnostics.Process> pour accéder à un processus qui s'exécute sur un ordinateur. La classe <xref:System.Diagnostics.Process> est une construction [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] utile pour démarrer, arrêter, contrôler et surveiller des applications. Pour consulter un rapport spécifique dans votre base de données du serveur de rapports, vous pouvez démarrer le processus **IExplore**, en passant l’URL au rapport. L'exemple de code suivant peut être utilisé pour démarrer [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer et passer une URL de rapport spécifique lorsque l'utilisateur clique sur un bouton dans un Windows Form.  
+ Vous pouvez utiliser la classe <xref:System.Diagnostics.Process> pour accéder à un processus qui s'exécute sur un ordinateur. La <xref:System.Diagnostics.Process> classe est une construction [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] utile pour démarrer, arrêter, contrôler et surveiller des applications. Pour consulter un rapport spécifique dans votre base de données du serveur de rapports, vous pouvez démarrer le processus **IExplore**, en passant l’URL au rapport. L'exemple de code suivant peut être utilisé pour démarrer [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer et passer une URL de rapport spécifique lorsque l'utilisateur clique sur un bouton dans un Windows Form.  
   
 ```vb  
 Private Sub viewReportButton_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles viewReportButton.Click  
@@ -87,7 +87,7 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 ###### <a name="to-add-the-webbrowser-control-to-your-windows-form"></a>Pour ajouter le contrôle WebBrowser à votre Windows Form  
   
-1.  Créez une application Windows dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Créez une nouvelle application Windows dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
 2.  Localisez le contrôle <xref:System.Windows.Forms.WebBrowser> dans la boîte de dialogue **Boîte à outils**.  
   
@@ -115,7 +115,7 @@ webBrowser1.Navigate(url);
   
 ## <a name="see-also"></a>Voir aussi  
  [Intégration de Reporting Services dans des applications](../application-integration/integrating-reporting-services-into-applications.md)   
- [Intégration de Reporting Services à l’aide de l’accès URL](integrating-reporting-services-using-url-access.md)   
+ [Intégration d’Reporting Services à l’aide de l’accès URL](integrating-reporting-services-using-url-access.md)   
  [Intégration de Reporting Services à l’aide de SOAP](integrating-reporting-services-using-soap.md)   
  [Intégration de Reporting Services à l’aide des contrôles ReportViewer](integrating-reporting-services-using-reportviewer-controls.md)   
  [Accès URL &#40;SSRS&#41;](../url-access-ssrs.md)  

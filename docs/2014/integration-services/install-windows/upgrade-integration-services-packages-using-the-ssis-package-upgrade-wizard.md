@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e44b755748dcbda6af30e0570b667f9ba3ee75a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767885"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>Mettre à niveau des packages Integration Services à l'aide de l'Assistant Mise à niveau de packages SSIS
@@ -50,7 +50,7 @@ ms.locfileid: "62767885"
   
 #### <a name="to-run-the-wizard-at-the-command-prompt"></a>Pour exécuter l'Assistant à l'invite de commandes  
   
--   À l’invite de commandes, exécutez le fichier SSISUpgrade.exe à partir de la **C:\Program Files\Microsoft SQL Server\120\DTS\Binn** dossier.  
+-   À l’invite de commandes, exécutez le fichier fichier ssisupgrade. exe à partir du dossier **C:\Program Files\Microsoft SQL Server\120\DTS\Binn**  
   
 ## <a name="backing-up-the-original-packages"></a>Sauvegarde des packages d'origine  
  Pour sauvegarder les packages d'origine, les packages d'origine et les package mis à niveau doivent être stockés dans le même dossier du système de fichiers. Selon la façon dont vous exécutez l'Assistant, cet emplacement de stockage peut être sélectionné automatiquement.  
@@ -86,7 +86,7 @@ ms.locfileid: "62767885"
 2.  Dans la page **Sélectionner les options de gestion des packages** de l'Assistant, sélectionnez l'option **Sauvegarder les packages d'origine** .  
   
     > [!WARNING]  
-    >  Le **sauvegarder les packages d’origine** option ne s’affiche pas lorsque vous ouvrez un [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ou [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] projet [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ce qui lance automatiquement l’Assistant.  
+    >  L’option **sauvegarder les packages d’origine** ne s’affiche pas lorsque [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] vous [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] ouvrez un [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]projet ou dans, ce qui lance automatiquement l’Assistant.  
   
 3.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], exécutez l'Assistant Mise à niveau de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   

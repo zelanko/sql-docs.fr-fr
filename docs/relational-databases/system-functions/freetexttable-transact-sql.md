@@ -23,18 +23,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4ab1797fabd8fb7d77eab85c97604b77e72f25c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68042760"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Est une fonction utilisée dans le [à partir de la clause](../../t-sql/queries/from-transact-sql.md) d’un [!INCLUDE[tsql](../../includes/tsql-md.md)] une instruction SELECT pour effectuer une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recherche en texte intégral sur la recherche en texte intégral indexées colonnes contenant des types de données de type caractère. Cette fonction retourne une table de zéro, une ou plusieurs lignes pour les colonnes contenant des valeurs qui correspondent à la signification et pas seulement aux mots exacts, du texte spécifié *freetext_string*. FREETEXTTABLE est référencé comme s'il s'agissait d'un nom de table classique.  
+  Fonction utilisée dans la [clause from](../../t-sql/queries/from-transact-sql.md) d’une [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction SELECT pour effectuer une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recherche en texte intégral sur les colonnes indexées en texte intégral qui contiennent des types de données basés sur des caractères. Cette fonction retourne une table de zéro, une ou plusieurs lignes pour les colonnes qui contiennent des valeurs qui correspondent à la signification et non exactement à la formulation exacte du texte de la *freetext_string*spécifiée. FREETEXTTABLE est référencé comme s'il s'agissait d'un nom de table classique.  
   
- FREETEXTTABLE est utile pour les mêmes types de correspondances que la [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md),  
+ FREETEXTTABLE est utile pour les mêmes types de correspondances que l' [&#41;FREETEXT &#40;Transact-SQL ](../../t-sql/queries/freetext-transact-sql.md),  
   
  Les requêtes utilisant FREETEXTTABLE retournent une valeur de classement de pertinence (RANK) et une clé de texte intégral (KEY) pour chaque ligne.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68042760"
   
 (https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,47 +56,47 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *table*  
- Nom de la table marquée pour les requêtes de texte intégral. *table* ou *vue*peut être un une, deux ou nom d’objet de base de données de trois parties. Lors de l'interrogation d'une vue, une seule table de base indexée en texte intégral peut être impliquée.  
+ *Tableau*  
+ Nom de la table marquée pour les requêtes de texte intégral. la *table* ou la *vue*peut être un nom d’objet de base de données en une, deux ou trois parties. Lors de l'interrogation d'une vue, une seule table de base indexée en texte intégral peut être impliquée.  
   
- *table* ne pouvez pas spécifier un nom de serveur et ne peut pas être utilisé dans les requêtes sur des serveurs liés.  
+ la *table* ne peut pas spécifier un nom de serveur et ne peut pas être utilisée dans des requêtes sur des serveurs liés.  
   
  *column_name*  
- Nom d'une ou de plusieurs colonnes de texte intégral indexées de la table spécifiée dans la clause FROM. Les colonnes peuvent être de type **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** ou **varbinary(max)** .  
+ Nom d'une ou de plusieurs colonnes de texte intégral indexées de la table spécifiée dans la clause FROM. Les colonnes peuvent être de type **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** ou **varbinary(max)**.  
   
  *column_list*  
- Indique que plusieurs colonnes, délimitées par des virgules, peuvent être spécifiées. *column_list* doit être mis entre parenthèses. Une seule et même langue doit être utilisée dans toutes les colonnes de *column_list*, sauf si *language_term* est spécifié.  
+ Indique que plusieurs colonnes, délimitées par des virgules, peuvent être spécifiées. *column_list* doit être placé entre parenthèses. Une seule et même langue doit être utilisée dans toutes les colonnes de *column_list*, sauf si *language_term* est spécifié.  
   
  \*  
- Spécifie que la chaîne *freetext_string* à trouver doit être recherchée dans toutes les colonnes répertoriées pour la recherche en texte intégral. À moins que *language_term* est spécifié, la langue de toutes les colonnes indexées en texte intégral dans la table doit être le même.  
+ Spécifie que la chaîne *freetext_string* à trouver doit être recherchée dans toutes les colonnes répertoriées pour la recherche en texte intégral. Si *language_term* n’est pas spécifié, la langue de toutes les colonnes indexées de texte intégral dans la table doit être identique.  
   
  *freetext_string*  
  Texte à rechercher dans *column_name*. Tout texte, y compris des mots, expressions et phrases peuvent être entrés. Des correspondances sont générées si l'un des termes ou les formes de quelque terme que ce soit sont trouvés dans l'index de texte intégral.  
   
- Contrairement à dans le CONTAINS de recherche de condition where et est un mot clé, lorsqu’il est utilisé dans *freetext_string* le mot « and » est considéré comme un mot parasite, ou [mot vide](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)et seront ignorées.  
+ Contrairement à la condition de recherche CONTAINs où et est un mot clé, lorsqu’il est utilisé dans *freetext_string* le mot « and » est considéré comme un mot parasite, ou [mot vide](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md), et sera ignoré.  
   
- L'utilisation de WEIGHT, de FORMSOF, de caractères génériques, de NEAR et d'autres syntaxes n'est pas autorisée. La chaîne *freetext_string* est découpée en mots en vue de la recherche des radicaux et de l’analyse dans le dictionnaire des synonymes.  
+ L'utilisation de WEIGHT, de FORMSOF, de caractères génériques, de NEAR et d'autres syntaxes n'est pas autorisée. *freetext_string* est wordbroken, radicalement et transmis par le dictionnaire des synonymes.  
   
  LANGUAGE *language_term*  
  Langue dont les ressources seront utilisées pour l'analyse lexicale, la recherche de radical, l'utilisation du dictionnaire de synonymes et la suppression de mots vides dans la requête. Ce paramètre est facultatif et peut être spécifié sous la forme d'une chaîne, d'un entier ou d'une valeur hexadécimale correspondant à l'identificateur de paramètres régionaux (LCID) d'une langue. Si une langue est définie avec *language_term*, elle est appliquée à tous les éléments de la condition de recherche. Si aucune valeur n'est définie, la langue du texte intégral de la colonne est utilisée.  
   
  Si des documents de langues différentes sont stockés ensemble en tant qu'objets blob dans une colonne unique, l'identificateur de paramètres régionaux (LCID) d'un document donné détermine la langue utilisée pour l'indexation de son contenu. Quand une requête est effectuée sur la colonne, la spécification de*LANGUAGE language_term* augmente la probabilité d’une meilleure correspondance.  
   
- Quand il est spécifié en tant que chaîne, *language_term* correspond à la valeur de colonne **alias** dans l’affichage de compatibilité [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).  La chaîne doit être placée entre guillemets simples, comme dans '*language_term*'. Quand il est spécifié sous la forme d’un entier, *language_term* est le LCID qui identifie la langue. Quand il est spécifié sous la forme d’une valeur hexadécimale, *language_term* est 0x suivi de la valeur hexadécimale du LCID. La valeur hexadécimale ne doit pas dépasser huit caractères, y compris les zéros non significatifs.  
+ Quand il est spécifié en tant que chaîne, *language_term* correspond à la valeur de colonne **alias** dans l’affichage de compatibilité [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).  La chaîne doit être placée entre guillemets simples, comme dans '*language_term*'. Quand il est spécifié sous la forme d’un entier, *language_term* est le LCID réel qui identifie la langue. Quand il est spécifié sous la forme d’une valeur hexadécimale, *language_term* est 0x suivi de la valeur hexadécimale du LCID. La valeur hexadécimale ne doit pas dépasser huit caractères, y compris les zéros non significatifs.  
   
  Si la valeur est au format DBCS (jeu de caractères codés sur deux octets), [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la convertit en Unicode.  
   
  Si la langue spécifiée n'est pas valide ou si aucune ressource correspondant à cette langue n'est installée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne une erreur. Pour utiliser des ressources linguistiques neutres, indiquez 0x0 pour *language_term*.  
   
  *top_n_by_rank*  
- Spécifie que seules les *n*des correspondances de rang le plus élevés, par ordre décroissant, sont retournées. S’applique uniquement quand une valeur entière, *n*, est spécifié. Si *top_n_by_rank* est associé à d’autres paramètres, la requête peut retourner moins de lignes que le nombre de lignes correspondant effectivement à tous les prédicats. *Top_n_by_rank* vous permet d’augmenter les performances des requêtes en rappelant uniquement les accès les plus pertinents.  
+ Spécifie que seules les *n*correspondances de rang le plus élevé, dans l’ordre décroissant, sont retournées. S’applique uniquement lorsqu’une valeur entière, *n*, est spécifiée. Si *top_n_by_rank* est associé à d’autres paramètres, la requête peut retourner moins de lignes que le nombre de lignes correspondant effectivement à tous les prédicats. *top_n_by_rank* vous permet d’augmenter les performances des requêtes en rappelant uniquement les accès les plus pertinents.  
   
 ## <a name="remarks"></a>Notes  
  Les prédicats et les fonctions de texte intégral s'appliquent à une table unique, ce qui est implicite dans le prédicat FROM. Pour effectuer des recherches sur plusieurs tables, utilisez une table jointe dans votre clause FROM afin de baser votre recherche sur un jeu de résultats qui est le produit de deux tables ou plus.  
   
  FREETEXTTABLE utilise les mêmes conditions de recherche que le prédicat FREETEXT.  
   
- Comme CONTAINSTABLE, la table retournée possède des colonnes nommées **clé** et **rang**, qui sont référencées dans la requête pour obtenir les lignes appropriées et utiliser les valeurs de rang des lignes.  
+ Comme CONTAINSTABLE, la table retournée possède des colonnes nommées **Key** et **Rank**, qui sont référencées dans la requête pour obtenir les lignes appropriées et utiliser les valeurs de classement de lignes.  
   
 ## <a name="permissions"></a>Autorisations  
  FREETEXTTABLE ne peut être appelée que par les utilisateurs disposant des privilèges SELECT appropriés sur la table spécifiée ou les colonnes référencées de la table.  
@@ -104,7 +104,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-simple-example"></a>R. Exemple simple  
- L’exemple suivant crée et remplit un tableau simple de deux colonnes, la liste des 3 comtés et les couleurs dans leurs indicateurs. L’informatique crée et remplit un catalogue de texte intégral et un index sur la table. Le **FREETEXTTABLE** syntaxe est illustrée.  
+ L’exemple suivant crée et remplit une table simple de deux colonnes, répertoriant 3 comtés et les couleurs dans leurs indicateurs. Il crée et remplit un catalogue de texte intégral et un index sur la table. La syntaxe **FREETEXTTABLE** est ensuite illustrée.  
   
 ```  
 CREATE TABLE Flags (Country nvarchar(30) NOT NULL, FlagColors varchar(200));  
@@ -125,7 +125,7 @@ SELECT * FROM FREETEXTTABLE (Flags, FlagColors, 'Yellow');
 ```  
   
 ### <a name="b-using-freetext-in-an-inner-join"></a>B. Utilisation de FREETEXT dans un INNER JOIN  
- L’exemple suivant retourne la description et le rang de tous les produits avec une description qui correspond à la signification de `high level of performance`.  
+ L’exemple suivant retourne la description et le rang de tous les produits dont la description correspond à la `high level of performance`signification de.  
   
 ```  
 USE AdventureWorks2012;  
@@ -143,7 +143,7 @@ GO
 ```  
   
 ### <a name="c-specifying-language-and-highest-ranked-matches"></a>C. Spécification de la langue et des correspondances de classement supérieur  
- L’exemple suivant est identique et illustre l’utilisation de la `LANGUAGE` *language_term* et *top_n_by_rank* paramètres.  
+ L’exemple suivant est identique et montre l’utilisation des `LANGUAGE`paramètres *language_term* et *top_n_by_rank* .  
   
 ```  
 USE AdventureWorks2012;  
@@ -162,22 +162,22 @@ GO
 ```  
   
 > [!NOTE]
->  Le langage *language_term* paramètre n’est pas nécessaire pour utiliser le *top_n_by_rank* paramètre.  
+>  Le paramètre de *language_term* du langage n’est pas requis pour utiliser le paramètre *top_n_by_rank* .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Commencer à utiliser la recherche en texte intégral](../../relational-databases/search/get-started-with-full-text-search.md)   
+ [Prise en main de la recherche en texte intégral](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Créer et gérer des catalogues de texte intégral](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
- [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CRÉER un catalogue de texte intégral &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [Créer et gérer des index de recherche en texte intégral](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
- [Exécuter une requête avec une recherche en texte intégral](../../relational-databases/search/query-with-full-text-search.md)   
+ [Interroger avec la recherche en texte intégral](../../relational-databases/search/query-with-full-text-search.md)   
  [Créer des requêtes de recherche en texte intégral &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)   
- [Fonctions d’ensemble de lignes &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)   
+ [Fonctions d’ensemble de lignes &#40;&#41;Transact-SQL](../../t-sql/functions/rowset-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
- [Précalculer le rang (option de configuration de serveur)](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md)  
+ [&#40;&#41;Transact-SQL](../../t-sql/queries/where-transact-sql.md)   
+ [precompute rank (option de configuration de serveur)](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md)  
   
   

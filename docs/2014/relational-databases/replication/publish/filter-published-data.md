@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62989082"
 ---
 # <a name="filter-published-data"></a>Filtrer des données publiées
@@ -52,16 +52,16 @@ ms.locfileid: "62989082"
   
 -   Les filtres de lignes paramétrables, disponibles uniquement avec la réplication de fusion.  
   
-     À l'aide des filtres de lignes paramétrables, vous pouvez choisir un sous-ensemble de lignes à publier. Contrairement aux filtres statiques qui envoient le même sous-ensemble de lignes à chaque abonné, les filtres des lignes paramétrables se servent d'une valeur de données fournie par l'Abonné pour envoyer différents sous-ensembles de lignes aux abonnés. Pour plus d’informations, consultez [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+     À l'aide des filtres de lignes paramétrables, vous pouvez choisir un sous-ensemble de lignes à publier. Contrairement aux filtres statiques qui envoient le même sous-ensemble de lignes à chaque abonné, les filtres des lignes paramétrables se servent d'une valeur de données fournie par l'Abonné pour envoyer différents sous-ensembles de lignes aux abonnés. Pour plus d'informations, voir [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Les filtres de jointure, disponibles uniquement avec la réplication de fusion.  
   
-     À l'aide des filtres de jointure, vous pouvez étendre un filtre de lignes d'une table publiée à l'autre. Pour plus d’informations, consultez [Join Filters](../merge/join-filters.md).  
+     À l'aide des filtres de jointure, vous pouvez étendre un filtre de lignes d'une table publiée à l'autre. Pour plus d’informations, voir [Join Filters](../merge/join-filters.md).  
   
 ## <a name="static-row-filters"></a>filtres de lignes statiques  
  L'illustration suivante montre une table publiée filtrée pour que seules les lignes 2, 3 et 6 soient intégrées à la publication.  
   
- ![Filtrage de lignes](../media/repl-16.gif "Filtrage de lignes")  
+ ![Filtrage de lignes](../media/repl-16.gif "Filtrage de ligne")  
   
  Un filtre de lignes statiques utilise une clause WHERE pour sélectionner les données appropriées à publier, c'est à vous de spécifier la dernière partie de la clause WHERE. Considérez la table **Product** dans l'exemple de base de données Adventure Works, qui contient la colonne **ProductLine**. Pour publier uniquement les lignes comportant des données relatives aux vélos tout terrain, spécifiez `ProductLine = 'M'`.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62989082"
     > [!NOTE]  
     >  Dans les publications transactionnelles, les filtres de lignes peuvent ajouter un surcroît de traitement considérable car la clause de filtrage d'articles est évaluée pour chaque ligne de journal écrite pour une table publiée afin de déterminer si la ligne doit être répliquée. Les filtres de lignes doivent être évités dans les publications transactionnelles si chaque nœud de réplication peut prendre en charge la charge complète des données, et si l'ensemble global des données est relativement peu volumineux.  
   
--   Avec la réplication de fusion, utilisez le filtrage des lignes paramétrables plutôt que la création de plusieurs publications à l'aide des filtres de lignes statiques. Pour plus d’informations, consultez [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+-   Avec la réplication de fusion, utilisez le filtrage des lignes paramétrables plutôt que la création de plusieurs publications à l'aide des filtres de lignes statiques. Pour plus d'informations, voir [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
  Pour définir et modifier un filtre de lignes statiques, consultez [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
@@ -83,7 +83,7 @@ ms.locfileid: "62989082"
   
  Vous pouvez également combiner le filtrage de lignes et de colonnes, comme le montre l'illustration suivante.  
   
- ![Filtrage de lignes et de colonnes](../media/repl-18.gif "Filtrage de lignes et de colonnes")  
+ ![Filtrage de ligne et de colonne](../media/repl-18.gif "Filtrage de ligne et de colonne")  
   
  Après qu'une publication soit créée, vous pouvez utiliser le filtrage de colonnes pour supprimer une colonne d'une publication existante, mais la conserver dans la table sur le serveur de publication, et vous pouvez également inclure une colonne existante dans la publication. Pour les autres modifications, comme l'ajout d'une nouvelle colonne à une table puis à l'article publié, utilisez la réplication de modification de schéma. Pour plus d’informations, consultez les sections « Ajout de colonnes » et « Suppression de colonnes » dans la rubrique [Apporter des modifications au schéma sur des bases de données de publication](make-schema-changes-on-publication-databases.md).  
   
@@ -98,9 +98,9 @@ ms.locfileid: "62989082"
 |Colonnes n'autorisant pas la valeur NULL et n'ayant pas de valeur par défaut ou n'ayant pas la propriété IDENTITY définie.|Publications d'instantané ou publications transactionnelles qui autorisent les abonnements pouvant être mis à jour|  
 |Colonnes avec contraintes ou index uniques|Publications d'instantané ou publications transactionnelles qui autorisent les abonnements pouvant être mis à jour|  
 |Toutes les colonnes d'une publication de fusion SQL Server 7.0|Il est impossible de filtrer les colonnes dans les publications de fusion SQL Server 7.0.|  
-|Horodateur|Publications d'instantané ou publications transactionnelles SQL Server 7.0 qui autorisent les abonnements pouvant être mis à jour|  
+|Timestamp|Publications d'instantané ou publications transactionnelles SQL Server 7.0 qui autorisent les abonnements pouvant être mis à jour|  
   
- <sup>1</sup> si vous publiez une table dans une publication de fusion et que cette table contient déjà une colonne de type de données `uniqueidentifier` avec le `ROWGUIDCOL` propriété, la réplication peut utiliser cette colonne au lieu de créer une colonne supplémentaire nommée **rowguid**. Dans ce cas, la colonne existante doit être publiée.  
+ <sup>1</sup> si vous publiez une table dans une publication de fusion et que cette table contient déjà une colonne de `uniqueidentifier` type de `ROWGUIDCOL` données avec la propriété définie, la réplication peut utiliser cette colonne au lieu de créer une colonne supplémentaire nommée **rowguid**. Dans ce cas, la colonne existante doit être publiée.  
   
  Pour définir ou modifier un filtre de colonne, consultez [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
@@ -129,7 +129,9 @@ ms.locfileid: "62989082"
   
 -   La réplication transactionnelle vous permet de répliquer une vue indexée comme une vue ou une table. Si vous répliquez la vue comme une table, vous ne pouvez pas filtrer les colonnes de la table.  
   
- Les filtres de lignes ne sont pas conçus pour fonctionner sur les bases de données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limite volontairement l'exécution de `sp_replcmds` (les filtres qui s'exécutent sous) au propriétaire de la base de données (`dbo`). `dbo` n'a pas de privilèges de base de données croisés. Avec l'ajout de la capture de données modifiées (CDC) dans [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], la logique `sp_replcmds` remplit les tables de suivi des modifications avec les informations que l'utilisateur peut retourner et interroger. Pour des raisons de sécurité, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limite l’exécution de cette logique afin qu’un texte malveillant `dbo` ne puisse pas détourner ce chemin d’exécution. Par exemple, un `dbo` malveillant pourrait ajouter des déclencheurs sur les tables de capture de données modifiées qui seraient alors exécutés dans le contexte de l'utilisateur qui appelle `sp_replcmds`, dans ce cas l'agent lecteur du journal.  Si le compte sous lequel l'agent s'exécute dispose de privilèges plus élevés, le `dbo` malveillant pourrait transmettre ses privilèges.  
+ Les filtres de lignes ne sont pas conçus pour fonctionner sur les bases de données. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limite volontairement l'exécution de `sp_replcmds` (les filtres qui s'exécutent sous) au propriétaire de la base de données (`dbo`). 
+  `dbo` n'a pas de privilèges de base de données croisés. Avec l'ajout de la capture de données modifiées (CDC) dans [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], la logique `sp_replcmds` remplit les tables de suivi des modifications avec les informations que l'utilisateur peut retourner et interroger. Pour des raisons de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sécurité, limite l’exécution de cette logique afin qu’un malveillant `dbo` ne puisse pas détourner ce chemin d’exécution. Par exemple, un `dbo` malveillant pourrait ajouter des déclencheurs sur les tables de capture de données modifiées qui seraient alors exécutés dans le contexte de l'utilisateur qui appelle `sp_replcmds`, dans ce cas l'agent lecteur du journal.  Si le compte sous lequel l'agent s'exécute dispose de privilèges plus élevés, le `dbo` malveillant pourrait transmettre ses privilèges.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Publier des données et des objets de base de données](publish-data-and-database-objects.md)  

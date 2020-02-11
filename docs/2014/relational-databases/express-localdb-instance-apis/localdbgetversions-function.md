@@ -1,5 +1,5 @@
 ---
-title: Fonction LocalDBGetVersions | Microsoft Docs
+title: LocalDBGetVersions fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 431124cff2fcf293ccf1e8e8bcb74321245a661e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032282"
 ---
 # <a name="localdbgetversions-function"></a>Fonction LocalDBGetVersions
   Retourne toutes les versions de SQL Server Express LocalDB disponibles sur l'ordinateur.  
   
- **Fichier d'en-tête :** sqlncli.h  
+ **Fichier d’en-tête :** sqlncli. h  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,14 +36,14 @@ ms.locfileid: "63032282"
   
 ## <a name="parameters"></a>Paramètres  
  *pVersionNames*  
- [Sortie] Contient les noms des versions de base de données locale qui sont disponibles sur le poste de travail.  
+ Sortie Contient les noms des versions de base de données locale disponibles sur la station de travail de l’utilisateur.  
   
  *lpdwNumberOfVersions*  
  [Entrée/sortie] En entrée, contient le nombre d'emplacements de versions dans la mémoire tampon de *pVersionNames* .   
 En sortie, contient le nombre de versions de LocalDB existantes.  
   
-## <a name="returns"></a>Valeur renvoyée  
- Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  
+## <a name="returns"></a>Retours  
+ S_OK  
  La fonction a réussi.  
   
  [LOCALDB_ERROR_NOT_INSTALLED](../express-localdb-error-messages/localdb-error-not-installed.md)  
@@ -56,12 +56,12 @@ En sortie, contient le nombre de versions de LocalDB existantes.
  Le tampon d'entrée est trop court, et la troncation n'a pas été demandée.  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
- Une erreur inattendue s'est produite. Pour plus d'informations, consultez le journal des événements.  
+ Une erreur inattendue s’est produite. Pour plus d'informations, consultez le journal des événements.  
   
 ## <a name="remarks"></a>Notes  
  Pour un exemple de code qui utilise l'API LocalDB, consultez [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [En-tête et informations de version de la base de données locale SQL Server Express](sql-server-express-localdb-header-and-version-information.md)  
+ [En-tête et informations de version SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
   
   

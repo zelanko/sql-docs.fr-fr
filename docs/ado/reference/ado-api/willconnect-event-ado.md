@@ -17,16 +17,16 @@ ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9fc1ac74e7e3d521bae587957f5f95771e5a5268
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67945856"
 ---
 # <a name="willconnect-event-ado"></a>WillConnect, événement (ADO)
-Le **WillConnect** événement est appelé avant le début d’une connexion.  
+L’événement **WillConnect** est appelé avant le démarrage d’une connexion.  
   
- **S’applique à :** [Connection, objet (ADO MD)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ **S’applique à :** [objet Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,32 +37,32 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
   
 #### <a name="parameters"></a>Paramètres  
  *ConnectionString*  
- Un **chaîne** qui contient des informations de connexion pour la connexion en attente.  
+ **Chaîne** qui contient les informations de connexion pour la connexion en attente.  
   
- *UserID*  
- Un **chaîne** qui contient un nom d’utilisateur pour la connexion en attente.  
+ *IDutilisateur*  
+ **Chaîne** qui contient un nom d’utilisateur pour la connexion en attente.  
   
  *Mot de passe*  
- Un **chaîne** qui contient un mot de passe pour la connexion en attente.  
+ **Chaîne** qui contient un mot de passe pour la connexion en attente.  
   
  *Options*  
- Un **Long** valeur qui indique la manière dont le fournisseur doit évaluer le *ConnectionString*. Votre seule option est **adAsyncOpen**.  
+ Valeur de **type long** qui indique comment le fournisseur doit évaluer *ConnectionString*. La seule option est **adAsyncOpen**.  
   
- *adStatus*  
- Un [il ne](../../../ado/reference/ado-api/eventstatusenum.md) valeur d’état.  
+ *Statu*  
+ Valeur d’état [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) .  
   
- Lorsque cet événement est appelé, ce paramètre est défini sur **adStatusOK** par défaut. Il est défini sur **adStatusCantDeny** si l’événement ne peut pas demander l’annulation de l’opération en attente.  
+ Lorsque cet événement est appelé, ce paramètre a la valeur **adStatusOK** par défaut. Elle a la valeur **adStatusCantDeny** si l’événement ne peut pas demander l’annulation de l’opération en attente.  
   
- Avant le retour de cet événement, définissez ce paramètre sur **adStatusUnwantedEvent** pour éviter toute notification. Définissez ce paramètre sur **adStatusCancel** pour demander l’opération de connexion qui a provoqué l’annulation de cette notification.  
+ Avant le retour de cet événement, définissez ce paramètre sur **adStatusUnwantedEvent** pour empêcher les notifications suivantes. Affectez à ce paramètre la valeur **adStatusCancel** pour demander l’opération de connexion qui a provoqué l’annulation de cette notification.  
   
  *pConnection*  
- Le [connexion](../../../ado/reference/ado-api/connection-object-ado.md) de l’objet pour lequel cette notification d’événement s’applique. Modifications apportées aux paramètres de la **connexion** par le **WillConnect** Gestionnaire d’événements n’a aucun effet le **connexion**.  
+ Objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) pour lequel cette notification d’événement s’applique. Les modifications apportées aux paramètres de la **connexion** par le gestionnaire d’événements **WillConnect** n’auront aucun effet sur la **connexion**.  
   
 ## <a name="remarks"></a>Notes  
- Lorsque **WillConnect** est appelée, le *ConnectionString*, *UserID*, *mot de passe*, et *Options* paramètres sont définis sur les valeurs établies par l’opération qui a provoqué cet événement (la connexion en attente) et peut être modifiée avant le retour de l’événement. **WillConnect** peut retourner une demande d’annulation de la connexion en attente.  
+ Lorsque l’option **WillConnect** est appelée, les paramètres *ConnectionString*, *userid*, *Password*et *options* sont définis sur les valeurs établies par l’opération qui a provoqué cet événement (la connexion en attente) et peuvent être modifiées avant le retour de l’événement. Le **WillConnect** peut retourner une demande indiquant que la connexion en attente doit être annulée.  
   
- Lorsque cet événement est annulé, **ConnectComplete** sera appelé avec son *ne* paramètre défini sur **contraire**.  
+ Lorsque cet événement est annulé, **ConnectComplete** est appelé avec le paramètre *adStatus* défini sur **adStatusErrorsOccurred**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemple de modèle d’événements ADO (VC ++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+ [Exemple de modèle d’événements ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Présentation rapide du gestionnaire d’événements ADO](../../../ado/guide/data/ado-event-handler-summary.md)

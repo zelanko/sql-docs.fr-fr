@@ -16,16 +16,16 @@ ms.assetid: a005e885-7813-4c7e-b332-b01d9e9d4054
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9e412f796a5b04f980557b5a3131763811aa78da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68033167"
 ---
 # <a name="data-collector-views-transact-sql"></a>Vues de collecteur de données (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Le collecteur de données offre les vues suivantes pour afficher des informations sur la configuration du collecteur de données, telles que les propriétés du type de collecteur, les jeux d'éléments de collecte et les éléments des jeux d'éléments de collecte, ainsi que des statistiques d'exécution qui sont obtenues lorsqu'un jeu d'éléments de collecte s'exécute. Ces vues, ce qui se trouvent dans le **msdb** de base de données, fournissez également une couche d’abstraction pour les tables sous-jacentes. Cette abstraction améliore la sécurité en empêchant l'accès direct aux tables, tout en autorisant l'apport de modifications aux tables sans affecter les applications associées.  
+  Le collecteur de données offre les vues suivantes pour afficher des informations sur la configuration du collecteur de données, telles que les propriétés du type de collecteur, les jeux d'éléments de collecte et les éléments des jeux d'éléments de collecte, ainsi que des statistiques d'exécution qui sont obtenues lorsqu'un jeu d'éléments de collecte s'exécute. Ces vues, qui se trouvent dans la base de données **msdb** , fournissent également une couche d’abstraction pour les tables sous-jacentes. Cette abstraction améliore la sécurité en empêchant l'accès direct aux tables, tout en autorisant l'apport de modifications aux tables sans affecter les applications associées.  
   
 |||  
 |-|-|  

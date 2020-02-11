@@ -14,20 +14,20 @@ ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87ad7b8b36c80d86e0c3ac0335dd6f348a30c7bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002244"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>Construction d’instructions SQL interopérables
-Comme indiqué dans les sections précédentes, les applications interopérables doivent utiliser la grammaire SQL ODBC. Au-delà, grâce à cette grammaire, toutefois, un nombre de problèmes supplémentaires est confronté à des applications interopérables. Par exemple, ce que fait une application ? si elle souhaite utiliser une fonctionnalité, telles que les jointures externes, qui n’est pas pris en charge par toutes les sources de données  
+Comme mentionné dans les sections précédentes, les applications interopérables doivent utiliser la syntaxe ODBC SQL. Toutefois, au-delà de cette grammaire, un certain nombre de problèmes supplémentaires sont rencontrés par les applications interopérables. Par exemple, que fait une application si elle souhaite utiliser une fonctionnalité, telle que les jointures externes, qui n’est pas prise en charge par toutes les sources de données ?  
   
- À ce stade, le writer d’application doit prendre certaines décisions concernant les fonctionnalités de langage requises et facultatifs. Dans la plupart des cas, si un pilote spécifique ne prend pas en charge une fonctionnalité requise par l’application, l’application est simplement refuse d’exécuter avec ce pilote. Toutefois, si la fonctionnalité est facultative, l’application peut contourner la fonctionnalité. Par exemple, il peut désactiver les parties de l’interface qui autorise l’utilisateur à utiliser la fonctionnalité.  
+ À ce stade, l’auteur de l’application doit prendre des décisions concernant les fonctionnalités de langage requises et celles qui sont facultatives. Dans la plupart des cas, si un pilote particulier ne prend pas en charge une fonctionnalité requise par l’application, l’application refuse simplement de s’exécuter avec ce pilote. Toutefois, si la fonctionnalité est facultative, l’application peut contourner la fonctionnalité. Par exemple, il peut désactiver les parties de l’interface qui permettent à l’utilisateur d’utiliser la fonctionnalité.  
   
- Pour déterminer quelles fonctionnalités sont prises en charge, les applications démarrent en appelant **SQLGetInfo** avec l’option SQL_SQL_CONFORMANCE. Le niveau de conformité SQL donne à l’application une large vue dont SQL est pris en charge. Pour affiner cette vue, l’application appelle **SQLGetInfo** avec un certain nombre d’autres options. Pour obtenir une liste complète de ces options, consultez le [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) description de fonction. Enfin, **SQLGetTypeInfo** retourne des informations sur les types de données pris en charge par la source de données. Les sections suivantes répertorient un certain nombre de facteurs possibles applications doivent surveiller pour lors de la construction des instructions SQL interopérables.  
+ Pour déterminer les fonctionnalités prises en charge, les applications commencent en appelant **SQLGetInfo** avec l’option SQL_SQL_CONFORMANCE. Le niveau de conformité de SQL donne à l’application une vue d’ensemble des capacités de SQL prises en charge. Pour affiner cette vue, l’application appelle **SQLGetInfo** avec l’une des nombreuses autres options. Pour obtenir la liste complète de ces options, consultez la description de la fonction [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) . Enfin, **SQLGetTypeInfo** retourne des informations sur les types de données pris en charge par la source de données. Les sections suivantes répertorient un certain nombre de facteurs pouvant être surveillés par les applications lors de la construction d’instructions SQL interopérables.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Utilisation des catalogues et des schémas](../../../odbc/reference/develop-app/catalog-and-schema-usage.md)  
   

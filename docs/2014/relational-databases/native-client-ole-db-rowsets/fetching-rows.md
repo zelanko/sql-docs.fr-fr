@@ -1,5 +1,5 @@
 ---
-title: Extraction des lignes | Microsoft Docs
+title: Extraction de lignes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21a66754a9259dadcb8788d6afef4947f9a69ad1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140468"
 ---
 # <a name="fetching-rows"></a>Extraction de lignes
@@ -51,7 +51,7 @@ ms.locfileid: "63140468"
   
  Pour récupérer (fetch) les lignes de la base de données, le consommateur appelle une méthode, telle que **IRowset::GetNextRows** ou **IRowsetLocate::GetRowsAt**. Ces opérations d'extraction placent les données de ligne du serveur dans le tampon de ligne du fournisseur. Le consommateur ne peut pas accéder directement au tampon de ligne du fournisseur. Le consommateur utilise **IRowset::GetData** pour copier les données de la mémoire tampon du fournisseur vers la mémoire tampon du consommateur, et **IRowsetChange::SetData** pour copier les modifications de données de la mémoire tampon du consommateur vers la mémoire tampon de fournisseur.  
   
- Le consommateur appelle la méthode **GetData** et passe le descripteur à une ligne, le descripteur à un accesseur et un pointeur vers une mémoire tampon allouée par le consommateur. **GetData** convertit les données et retourne les colonnes comme spécifié dans les liaisons utilisées pour créer l’accesseur. Le consommateur peut appeler **GetData** plusieurs fois pour une même ligne, à l’aide de différents accesseurs et mémoires tampon. Par conséquent, le consommateur peut obtenir plusieurs copies des mêmes données.  
+ Le consommateur appelle la méthode **GetData** et passe le descripteur à une ligne, le descripteur à un accesseur et un pointeur vers une mémoire tampon allouée par le consommateur. **GetData** convertit les données et retourne les colonnes telles qu’elles sont spécifiées dans les liaisons utilisées pour créer l’accesseur. Le consommateur peut appeler **GetData** plusieurs fois pour une même ligne, à l’aide de différents accesseurs et mémoires tampon. Par conséquent, le consommateur peut obtenir plusieurs copies des mêmes données.  
   
  Les données de colonnes de longueur variable peuvent être traitées de plusieurs façons. En premier lieu, ces colonnes peuvent être liées à une section limitée de la structure du consommateur. Il s'ensuit une troncation quand la longueur des données dépasse la longueur de la mémoire tampon. Le consommateur peut déterminer que la troncation a eu lieu en vérifiant l'état DBSTATUS_S_TRUNCATED. La longueur retournée est toujours la véritable longueur en octets, afin que le consommateur puisse également déterminer la quantité de données tronquées.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "63140468"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Prochaine position d’extraction](fetching-rows-next-fetch-position.md)  
+-   [Prochaine position d'extraction](fetching-rows-next-fetch-position.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ensembles de lignes](rowsets.md)  

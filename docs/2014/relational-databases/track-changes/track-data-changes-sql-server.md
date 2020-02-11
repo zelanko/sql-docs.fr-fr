@@ -34,14 +34,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 257fdeadceb961fd9080956b3c6725c40e3c3c8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63073914"
 ---
 # <a name="track-data-changes-sql-server"></a>Suivre les modifications de données (SQL Server)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fournit deux fonctionnalités qui suivent les modifications apportées aux données d'une base de données : [Capture de données modifiées](#Capture) et [Suivi des modifications](#Tracking). Ces fonctionnalités permettent aux applications de déterminer les modifications de DML (opérations d’insertion, de mise à jour et de suppression) apportées aux tables utilisateur dans une base de données. La capture de données modifiées et le suivi des modifications peuvent être activés sur la même base de données ; aucune attention particulière n'est requise. Pour les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que prennent en charge des modifications capture de données et le suivi des modifications, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fournit deux fonctionnalités qui suivent les modifications apportées aux données d'une base de données : [Capture de données modifiées](#Capture) et [Suivi des modifications](#Tracking). Ces fonctionnalités permettent aux applications de déterminer les modifications de DML (opérations d’insertion, de mise à jour et de suppression) apportées aux tables utilisateur dans une base de données. La capture de données modifiées et le suivi des modifications peuvent être activés sur la même base de données ; aucune attention particulière n'est requise. Pour les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prennent en charge la capture de données modifiées et le suivi des modifications, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>Avantages liés à l'utilisation de la capture de données modifiées ou du suivi des modifications  
  Certaines applications doivent, pour être efficaces, être en mesure de rechercher les données qui ont été modifiées dans une base de données. En règle générale, les développeurs d'applications doivent, pour identifier les données modifiées, implémenter une méthode de suivi personnalisée dans leurs applications en utilisant une combinaison de déclencheurs, de colonnes d'horodateur et de tables supplémentaires. La création de ces applications demande généralement un effort considérable, aboutit à des mises à jour de schéma et se traduit souvent par une importante diminution des performances.  
@@ -74,18 +74,18 @@ ms.locfileid: "63073914"
 |Si la colonne a été modifiée|Oui|Oui|  
 |Type DML|Oui|Oui|  
   
-##  <a name="Capture"></a> Change Data Capture  
+##  <a name="Capture"></a> Capture de données modifiées  
  La capture de données modifiées fournit des informations de modification historiques pour une table utilisateur en capturant à la fois le fait que des modifications DML aient été apportées et les données effectivement modifiées. Les modifications sont capturées à l'aide d'un processus asynchrone qui lit le journal des transactions et n'a qu'un faible impact sur le système.  
   
  Comme indiqué dans l'illustration suivante, les modifications apportées aux tables utilisateur sont capturées dans des tables de modifications correspondantes. Ces tables de modifications fournissent une vue historique des modifications au fil du temps. Les fonctions de [capture de données modifiées](/sql/relational-databases/system-functions/change-data-capture-functions-transact-sql)fournies par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorisent une utilisation facile et systématique des données modifiées.  
   
- ![Illustration conceptuelle de la capture des données modifiées](../../database-engine/media/cdcart1.gif "Illustration conceptuelle de la capture des données modifiées")  
+ ![Illustration conceptuelle de la capture de données modifiées](../../database-engine/media/cdcart1.gif "Illustration conceptuelle de la capture de données modifiées")  
   
 ### <a name="security-model"></a>Modèle de sécurité  
  Cette section décrit le modèle de sécurité de la capture de données modifiées.  
   
  **Configuration et administration**  
- Pour activer ou désactiver des modifications capture de données pour une base de données, l’appelant de [sys.sp_cdc_enable_db &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql) ou [sys.sp_cdc_disable_db &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql)doit être un membre de serveur fixe `sysadmin` rôle. Activation et désactivation de capture de données modifiées au niveau de la table requiert que l’appelant de [sys.sp_cdc_enable_table &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql) et [sys.sp_cdc_disable_table &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql) soit être un membre du rôle sysadmin ou la base de données `database db_owner` rôle.  
+ Pour activer ou désactiver la capture de données modifiées pour une base de données, l’appelant de [sys. sp_cdc_enable_db &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql) ou [sys. sp_cdc_disable_db &#40;transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) doit être membre du rôle `sysadmin` serveur fixe. L’activation et la désactivation de la capture de données modifiées au niveau de la table requiert que l’appelant de [sys. sp_cdc_enable_table &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql) et [sys. sp_cdc_disable_table &#40;transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql) soit membre du rôle sysadmin ou d’un `database db_owner` membre du rôle de base de données.  
   
  L'utilisation de procédures stockées pour prendre en charge l'administration des travaux de capture de données modifiées est limitée aux membres du rôle `sysadmin` serveur et du rôle `database db_owner`.  
   
@@ -98,12 +98,12 @@ ms.locfileid: "63073914"
 ### <a name="data-type-considerations-for-change-data-capture"></a>Considérations relatives aux types de données pour la capture de données modifiées  
  Tous les types de colonne de base sont pris en charge par la capture de données modifiées. Le tableau suivant indique le comportement et les limites de plusieurs types de colonne.  
   
-|Type de colonne|Modifications capturées dans les tables de modifications|Limitations|  
+|Type de colonne|Modifications capturées dans les tables de modifications|Limites|  
 |--------------------|---------------------------------------|-----------------|  
 |Colonnes éparses|Oui|Ne prend pas en charge la capture des modifications lors de l'utilisation d'un jeu de colonnes.|  
 |Colonnes calculées|Non|Les modifications apportées aux colonnes calculées ne sont pas suivies. La colonne apparaîtra dans la table de modifications avec le type approprié, mais aura une valeur NULL.|  
 |XML|Oui|Les modifications apportées aux éléments XML individuels ne sont pas suivies.|  
-|timestamp|Oui|Le type de données dans la table des modifications est converti en binaire.|  
+|Timestamp|Oui|Le type de données dans la table des modifications est converti en binaire.|  
 |types de données BLOB|Oui|L'image précédente de la colonne BLOB est stockée uniquement si la colonne elle-même est modifiée.|  
   
 ### <a name="change-data-capture-and-other-sql-server-features"></a>Capture de données modifiées et autres fonctionnalités de SQL Server  
@@ -125,9 +125,9 @@ ms.locfileid: "63073914"
  Pour plus d’informations sur la mise en miroir des bases de données, consultez [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 #### <a name="transactional-replication"></a>Réplication transactionnelle  
- La capture de données modifiées et la réplication transactionnelle peuvent coexister dans la même base de données, mais le remplissage des tables de modifications est géré différemment lorsque les deux fonctionnalités sont activées. La capture de données modifiées et la réplication transactionnelle utilisent toujours la même procédure, [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql), pour lire les modifications dans le journal des transactions. Lors de la capture de données modifiées est activée en soi, un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent appelle de travail `sp_replcmds`. Lorsque ces deux fonctionnalités sont activées sur la même base de données, l’Agent de lecture du journal appelle `sp_replcmds`. Cet agent remplit à la fois les tables de modifications et les tables de bases de données de distribution. Pour plus d’informations, voir [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md).  
+ La capture de données modifiées et la réplication transactionnelle peuvent coexister dans la même base de données, mais le remplissage des tables de modifications est géré différemment lorsque les deux fonctionnalités sont activées. La capture de données modifiées et la réplication transactionnelle utilisent toujours la même procédure, [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql), pour lire les modifications dans le journal des transactions. Lorsque la capture de données modifiées est activée seule, un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] travail de l' `sp_replcmds`agent appelle. Lorsque les deux fonctionnalités sont activées sur la même base de données, l' `sp_replcmds`agent de lecture du journal appelle. Cet agent remplit à la fois les tables de modifications et les tables de bases de données de distribution. Pour plus d’informations, consultez [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md).  
   
- Considérez un scénario dans lequel la capture de données modifiées est activée sur la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , et deux tables sont activées pour la capture. Pour remplir la modification de tables, le travail de capture appelle `sp_replcmds`. La base de données est activée pour la réplication transactionnelle, et une publication est créée. Ensuite, l'Agent de lecture du journal est créé pour la base de données et le travail de capture est supprimé. L'Agent de lecture du journal continue à analyser le journal à partir du dernier numéro séquentiel dans le journal qui été validé dans la table de modifications. Cela garantit la cohérence des données dans les tables de modifications. Si la réplication transactionnelle est désactivée dans cette base de données, l'Agent de lecture du journal est supprimé et le travail de capture est recréé.  
+ Considérez un scénario dans lequel la capture de données modifiées est activée sur la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , et deux tables sont activées pour la capture. Pour remplir les tables de modifications, le travail de `sp_replcmds`capture appelle. La base de données est activée pour la réplication transactionnelle, et une publication est créée. Ensuite, l'Agent de lecture du journal est créé pour la base de données et le travail de capture est supprimé. L'Agent de lecture du journal continue à analyser le journal à partir du dernier numéro séquentiel dans le journal qui été validé dans la table de modifications. Cela garantit la cohérence des données dans les tables de modifications. Si la réplication transactionnelle est désactivée dans cette base de données, l'Agent de lecture du journal est supprimé et le travail de capture est recréé.  
   
 > [!NOTE]  
 >  Lorsque l'Agent de lecture du journal est utilisé à la fois pour la capture de données modifiées et la réplication transactionnelle, les modifications répliquées sont écrites en premier dans la base de données de distribution. Puis, les modifications capturées sont écrites dans les tables de modifications. Les deux opérations sont validées ensemble. Si l'écriture dans la base de données de distribution s'effectue avec une latence, la même latence est observée avant l'affichage des modifications dans les tables de modifications.  
@@ -150,7 +150,7 @@ ms.locfileid: "63073914"
  Vous pouvez utiliser [sys.sp_cdc_disable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) pour supprimer la capture de données modifiées d’une base de données restaurée ou attachée.  
  
 
-  ##  <a name="Tracking"></a> Change Tracking  
+  ##  <a name="Tracking"></a> Suivi des modifications  
  Le suivi des modifications capture le fait que des lignes d'une table ont été modifiées, mais ne capture pas les données modifiées. Cela permet aux applications de déterminer les lignes qui ont changé, les données de ligne les plus récentes étant obtenues directement à partir des tables utilisateur. Le suivi des modifications est par conséquent plus limité dans les questions historiques auxquelles il peut répondre, comparé à la capture de données modifiées. Toutefois, pour les applications qui ne requièrent pas d'informations historiques, la charge de stockage est largement inférieure puisque les données modifiées ne sont pas capturées. Un mécanisme de suivi synchrone est utilisé pour assurer le suivi des modifications. Ce mécanisme a été conçu pour imposer une charge minimale sur les opérations DML.  
   
  L'illustration suivante montre un scénario de synchronisation qui pourrait tirer parti du suivi des modifications. Dans ce scénario, une application requiert les informations suivantes : toutes les lignes de la table qui ont été modifiées depuis la dernière synchronisation de la table et uniquement les données de la ligne actuelle. Étant donné qu'un mécanisme synchrone est utilisé pour assurer le suivi des modifications, une application peut effectuer la synchronisation bidirectionnelle et détecter de manière fiable tout conflit pouvant survenir.  
@@ -168,7 +168,7 @@ ms.locfileid: "63073914"
   
 -   [Centre de développement Microsoft Sync Framework](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
-     Fournit une documentation complète pour [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] et [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]. Dans la documentation pour [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)], la rubrique « Guide pratique pour utiliser le suivi des modifications SQL Server » contient des informations détaillées et des exemples de code.  
+     Fournit une documentation complète pour [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] et [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]. Dans la documentation relative à [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)], la rubrique de procédure traitant de l’utilisation du suivi des modifications SQL Server contient des informations détaillées et des exemples de code.  
   
   
 ## <a name="related-tasks-required"></a>Tâches associées (obligatoires)  

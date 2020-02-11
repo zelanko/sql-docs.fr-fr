@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b4323715155ddb433012624f9d7a5df9bb0a29c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767658"
 ---
 # <a name="integration-services-ssis-queries"></a>Requêtes Integration Services (SSIS)
@@ -55,9 +55,9 @@ ms.locfileid: "62767658"
  Pour plus d’informations, consultez [Générateur de requêtes](../../2014/integration-services/query-builder.md).  
   
 ## <a name="sql-in-files"></a>SQL dans des fichiers  
- L'instruction SQL pour la tâche d'exécution SQL peut également se trouver dans un fichier distinct. Par exemple, vous pouvez écrire des requêtes à l'aide d'outils tels que l'éditeur de requêtes dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], enregistrer la requête dans un fichier, puis lire la requête à partir du fichier lors de l'exécution d'un package. Le fichier ne peut contenir que les instructions SQL à exécuter et des commentaires. Pour utiliser une instruction SQL stockée dans un fichier, vous devez fournir une connexion de fichiers qui spécifie le nom et l'emplacement du fichier. Pour plus d’informations, consultez [File Connection Manager](connection-manager/file-connection-manager.md).  
+ L'instruction SQL pour la tâche d'exécution SQL peut également se trouver dans un fichier distinct. Par exemple, vous pouvez écrire des requêtes à l'aide d'outils tels que l'éditeur de requêtes dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], enregistrer la requête dans un fichier, puis lire la requête à partir du fichier lors de l'exécution d'un package. Le fichier ne peut contenir que les instructions SQL à exécuter et des commentaires. Pour utiliser une instruction SQL stockée dans un fichier, vous devez fournir une connexion de fichiers qui spécifie le nom et l'emplacement du fichier. Pour plus d’informations, consultez [Gestionnaire de connexions de fichiers](connection-manager/file-connection-manager.md).  
   
 ## <a name="sql-in-variables"></a>SQL dans des variables  
- Si la source de l'instruction SQL dans la tâche d'exécution SQL est une variable, vous fournissez le nom de la variable qui contient la requête. La propriété Value de la variable contient le texte de la requête. Vous définissez la propriété ValueType de la variable en tant que type de données String, puis vous tapez ou copiez l’instruction SQL dans la propriété Value. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md).  
+ Si la source de l'instruction SQL dans la tâche d'exécution SQL est une variable, vous fournissez le nom de la variable qui contient la requête. La propriété Value de la variable contient le texte de la requête. Vous définissez la propriété ValueType de la variable en tant que type de données String, puis vous tapez ou copiez l’instruction SQL dans la propriété Value. Pour plus d’informations, consultez [Integration Services &#40;des variables de&#41; SSIS](integration-services-ssis-variables.md) et [utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md).  
   
   

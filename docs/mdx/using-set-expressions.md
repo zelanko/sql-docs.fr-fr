@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1588d955e728830da4417160591a5c2b6c231473
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893505"
 ---
 # <a name="using-set-expressions"></a>Utilisation d'expressions de jeu
@@ -22,7 +22,7 @@ ms.locfileid: "68893505"
   
  L'expression complète d'un jeu est constituée de zéro ou de davantage de tuples spécifiés de manière explicite entre accolades :  
   
- {[{ *Tuple_expression* | *Expression_membre* } [, { *Tuple_expression* | *Expression_membre* }]...]}  
+ {[{ *Tuple_expression* | *Member_expression* } [, { *Tuple_expression* | *Member_expression* }]...]}  
   
  Les expressions de membre spécifiées dans une expression de jeu sont converties en expressions de tuple à un membre.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68893505"
   
  se compose de trois tuples, chacun contient deux références explicites aux membres sur la hiérarchie Product Categories de la dimension Product et la hiérarchie de calendrier de la dimension Date.  
   
- Pour obtenir des exemples de fonctions qui retournent des jeux, consultez [utilisation de membres, &#40;de&#41;tuples et de paramètres MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
+ Pour obtenir des exemples de fonctions qui retournent des jeux, consultez [utilisation de membres, de tuples et de jeux &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2a981595c19c321ab498fe9eb65b8570eb17f3ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67999989"
 ---
 # <a name="descendants-mdx"></a>Descendants (MDX)
@@ -43,25 +43,25 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
  *Set_Expression*  
- Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
+ Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
  *Level_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un niveau.  
   
- *distance*  
+ *Distance*  
  Expression numérique valide qui spécifie la distance depuis le membre spécifié.  
   
  *Desc_Flag*  
  Expression de chaîne valide qui précise un indicateur de description qui identifie de possibles jeux de descendants.  
   
 ## <a name="remarks"></a>Notes  
- Si un niveau est spécifié, le **Descendants** fonction retourne un jeu qui contient les descendants du membre spécifié ou les membres du jeu spécifié, à un niveau spécifié, éventuellement modifié par un indicateur spécifié dans  *Desc_Flag*.  
+ Si un niveau est spécifié, la fonction **descendants** retourne un jeu qui contient les descendants du membre spécifié ou les membres du jeu spécifié, à un niveau spécifié, éventuellement modifié par un indicateur spécifié dans *Desc_Flag*.  
   
- Si *Distance* est spécifié, le **Descendants** fonction retourne un jeu qui contient les descendants du membre spécifié ou les membres du jeu spécifié qui sont le nombre spécifié de niveaux disparaître dans la hiérarchie du membre spécifié, éventuellement modifié par un indicateur spécifié dans *Desc_Flag*. En règle générale, cette fonction est utilisée avec l'argument Distance pour le travail avec des hiérarchies irrégulières. Si la distance précisée est zéro (0), la fonction retourne un jeu composé uniquement du membre ou du jeu spécifié.  
+ Si *distance* est spécifié, la fonction **descendants** retourne un jeu qui contient les descendants du membre spécifié ou les membres du jeu spécifié qui sont le nombre de niveaux spécifié en dehors de la hiérarchie du membre spécifié, éventuellement modifié par un indicateur spécifié dans *Desc_Flag*. En règle générale, cette fonction est utilisée avec l'argument Distance pour le travail avec des hiérarchies irrégulières. Si la distance précisée est zéro (0), la fonction retourne un jeu composé uniquement du membre ou du jeu spécifié.  
   
- Si une expression d’ensemble est spécifiée, le **Descendants** fonction est résolue individuellement pour chaque membre du jeu et le jeu est créé à nouveau. En d’autres termes, la syntaxe utilisée pour le **Descendants** fonction est fonctionnellement équivalente à l’expression MDX [générer](../mdx/generate-mdx.md) (fonction).  
+ Si une expression d’ensemble est spécifiée, la fonction **descendants** est résolue individuellement pour chaque membre du jeu, et l’ensemble est de nouveau créé. En d’autres termes, la syntaxe utilisée pour la fonction **descendants** est fonctionnellement équivalente à la fonction MDX [generate](../mdx/generate-mdx.md) .  
   
- Si aucun niveau ou la distance n’est spécifié, la valeur par défaut pour le niveau utilisé par la fonction est déterminée en appelant le [niveau](../mdx/level-mdx.md) (fonction) (<\<membre >>. Niveau) pour le membre spécifié (si un membre est spécifié) ou en appelant le **niveau** fonctionner pour chaque membre de l’ensemble spécifié (si un jeu est spécifié). Si aucune expression de niveau, distance ou aucun indicateur n'est spécifié, la fonction s'exécute comme si la syntaxe suivante était employée :  
+ Si aucun niveau ou distance n’est spécifié, la valeur par défaut du niveau utilisé par la fonction est déterminée en appelant la fonction [Level](../mdx/level-mdx.md) ( \<<membre>>. Level) pour le membre spécifié (si un membre est spécifié) ou en appelant la fonction **Level** pour chaque membre du jeu spécifié (si un jeu est spécifié). Si aucune expression de niveau, distance ou aucun indicateur n'est spécifié, la fonction s'exécute comme si la syntaxe suivante était employée :  
   
  `Descendants`  
   
@@ -89,7 +89,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
   
  `)`  
   
- En modifiant la valeur de l'indicateur de description, vous pouvez inclure ou exclure des descendants au niveau spécifié ou à la distance spécifiée, les enfants avant ou après la distance ou le niveau spécifié (jusqu'au nœud feuille), ainsi que les enfants de la feuille quel que soit le niveau spécifié ou la distance spécifiée. Le tableau suivant décrit les indicateurs autorisés dans les *Desc_Flag* argument.  
+ En modifiant la valeur de l'indicateur de description, vous pouvez inclure ou exclure des descendants au niveau spécifié ou à la distance spécifiée, les enfants avant ou après la distance ou le niveau spécifié (jusqu'au nœud feuille), ainsi que les enfants de la feuille quel que soit le niveau spécifié ou la distance spécifiée. Le tableau suivant décrit les indicateurs autorisés dans l’argument *Desc_Flag* .  
   
 |Indicateur|Description|  
 |----------|-----------------|  
@@ -123,7 +123,7 @@ SELECT Descendants
 FROM [Adventure Works]   
 ```  
   
- L’exemple suivant retourne la moyenne quotidienne de la `Measures.[Gross Profit Margin]` mesure, calculée sur les jours de chaque mois de l’année fiscale 2003 dans le **Adventure Works** cube. Le **Descendants** fonction retourne un ensemble de jours déterminé à partir du membre actuel de la `[Date].[Fiscal]` hiérarchie.  
+ L’exemple suivant retourne la moyenne quotidienne de la `Measures.[Gross Profit Margin]` mesure, calculée sur les jours de chaque mois de l’année fiscale 2003, à partir du cube **Adventure Works** . La fonction **descendants** retourne un jeu de jours déterminé à partir du membre actuel de `[Date].[Fiscal]` la hiérarchie.  
   
 ```  
 WITH MEMBER Measures.[Avg Gross Profit Margin] AS Avg  
@@ -140,7 +140,7 @@ FROM [Adventure Works]
 WHERE ([Date].[Fiscal Year].&[2003])  
 ```  
   
- L'exemple suivant utilise une expression de niveau et retourne la mesure Internet Sales Amount (volume de vente Internet) pour chaque State-Province (état-province) en Australie ; de même, il retourne le pourcentage de volume de vente Internet total pour l'Australie par état-province. Cet exemple utilise la fonction Item pour extraire le premier (et unique) tuple du jeu retourné par la **ancêtres** (fonction).  
+ L'exemple suivant utilise une expression de niveau et retourne la mesure Internet Sales Amount (volume de vente Internet) pour chaque State-Province (état-province) en Australie ; de même, il retourne le pourcentage de volume de vente Internet total pour l'Australie par état-province. Cet exemple utilise la fonction Item pour extraire le premier Tuple (et uniquement) du jeu retourné par la fonction **ancêtres** .  
   
 ```  
 WITH MEMBER Measures.x AS   
@@ -162,6 +162,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

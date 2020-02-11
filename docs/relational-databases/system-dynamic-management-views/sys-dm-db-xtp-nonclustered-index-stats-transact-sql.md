@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_xtp_nonclustered_index_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 726fd7d44ed64dfee609ad29181a2077364d72e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68026788"
 ---
-# <a name="sysdmdbxtpnonclusteredindexstats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_nonclustered_index_stats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   sys.dm_db_xtp_nonclustered_index_stats inclut des statistiques sur les opérations effectuées sur index non-cluster dans les tables mémoire optimisées. sys.dm_db_xtp_nonclustered_index_stats contient une ligne pour chaque index non-cluster sur une table mémoire optimisée dans la base de données active.  
@@ -38,17 +38,17 @@ ms.locfileid: "68026788"
   
  Un grand nombre de nouvelles tentatives indique des problèmes de concurrence ; appelez le support [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
- Pour plus d’informations sur les index non cluster optimisé en mémoire, consultez [vue d’ensemble de SQL Server In-Memory OLTP Internals](https://t.co/T6zToWc6y6), page 17.  
+ Pour plus d’informations sur les index non cluster optimisés en mémoire, consultez [SQL Server vue d’ensemble des éléments internes de l’OLTP en mémoire](https://t.co/T6zToWc6y6), page 17.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|ID de l'objet.|  
 |xtp_object_id|**bigint**|ID de la table optimisée en mémoire.|  
-|index_id|**Int**|Identificateur de l'index.|  
+|index_id|**int**|Identificateur de l'index.|  
 |delta_pages|**bigint**|Nombre total de pages delta pour cet index dans l'arborescence.|  
-|internal_pages|**bigint**|À usage interne uniquement. Nombre total de pages internes pour cet index dans l'arborescence.|  
+|internal_pages|**bigint**|À usage interne. Nombre total de pages internes pour cet index dans l'arborescence.|  
 |leaf_pages|**bigint**|Nombre total de pages feuilles pour cet index dans l'arborescence.|  
-|outstanding_retired_nodes|**bigint**|À usage interne uniquement. Nombre total de nœuds pour cet index dans les structures internes.|  
+|outstanding_retired_nodes|**bigint**|À usage interne. Nombre total de nœuds pour cet index dans les structures internes.|  
 |page_update_count|**bigint**|Nombre cumulé d'opérations de mise à jour d'une page dans l'index.|  
 |page_update_retry_count|**bigint**|Nombre cumulé de nouvelles tentatives d'une opération de mise à jour de page dans l'index.|  
 |page_consolidation_count|**bigint**|Nombre cumulé de consolidations de page dans l'index.|  
@@ -66,6 +66,6 @@ ms.locfileid: "68026788"
  Nécessite l'autorisation VIEW DATABASE STATE sur la base de données active.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues de gestion dynamique de Table optimisé en mémoire &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Vues de gestion dynamique des tables optimisées en mémoire &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

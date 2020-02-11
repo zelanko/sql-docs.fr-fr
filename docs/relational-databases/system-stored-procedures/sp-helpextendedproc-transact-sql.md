@@ -18,21 +18,21 @@ ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3dcbe6d187b56b0b15ae829eeecf1811b02dfee7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67943505"
 ---
-# <a name="sphelpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
+# <a name="sp_helpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Indique les procédures stockées étendues actuellement définies, ainsi que le nom de la bibliothèque de liaison dynamique (DLL) à laquelle la procédure (fonction) appartient.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez l’ [intégration CLR](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) à la place.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez plutôt l' [intégration du CLR](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) .  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,23 +42,23 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @funcname = ] 'procedure'` Est le nom de la procédure stockée étendue pour laquelle les informations sont signalées. *procédure* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @funcname = ] 'procedure'`Nom de la procédure stockée étendue pour laquelle les informations sont signalées. *procedure* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Nom de la procédure stockée étendue.|  
+|**nomme**|**sysname**|Nom de la procédure stockée étendue.|  
 |**dll**|**nvarchar(255)**|Nom de la DLL.|  
   
 ## <a name="remarks"></a>Notes  
- Lorsque *procédure* est spécifié, **sp_helpextendedproc** procédure stockée étendue de rapports sur le texte spécifié. Lorsque ce paramètre n’est pas fourni, **sp_helpextendedproc** retourne toutes les étendues des noms de procédures stockées et les noms de DLL à laquelle chaque procédure stockée étendue appartient.  
+ Si vous spécifiez la *procédure* , **sp_helpextendedproc** signale la procédure stockée étendue spécifiée. Lorsque ce paramètre n’est pas fourni, **sp_helpextendedproc** retourne tous les noms de procédures stockées étendues et les noms de dll auxquels appartient chaque procédure stockée étendue.  
   
 ## <a name="permissions"></a>Autorisations  
- Autorisation d’exécuter **sp_helpextendedproc** est accordée aux **public**.  
+ L’autorisation d’exécuter **sp_helpextendedproc** est accordée à **public**.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -73,7 +73,7 @@ GO
 ```  
   
 ### <a name="b-reporting-help-on-a-single-extended-stored-procedure"></a>B. Indication d'aide sur une procédure stockée étendue  
- L’exemple suivant signale sur le `xp_cmdshell` la procédure stockée étendue.  
+ L’exemple suivant signale la `xp_cmdshell` procédure stockée étendue.  
   
 ```  
 USE master;  

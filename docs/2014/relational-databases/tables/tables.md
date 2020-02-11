@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7a456d68283d81cf7eb4f879d76f086484c5e052
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211789"
 ---
 # <a name="tables"></a>Tables
@@ -27,19 +27,20 @@ ms.locfileid: "68211789"
   
 -   Vous pouvez affecter des propriétés à la table et à chaque colonne de la table pour contrôler les données qui sont autorisées et d'autres propriétés. Par exemple, vous pouvez créer des contraintes sur une colonne pour interdire les valeurs NULL ou fournir une valeur par défaut si aucune valeur n'est spécifiée, ou vous pouvez affecter une contrainte de clé sur la table qui applique l'unicité ou définit une relation entre les tables.  
   
--   Les données de la table peuvent être compressées par ligne ou par page. La compression des données peut permettre de stocker plus de lignes sur une page. Pour plus d’informations, consultez [Compression de données](../../relational-databases/data-compression/data-compression.md).  
+-   Les données de la table peuvent être compressées par ligne ou par page. La compression des données peut permettre de stocker plus de lignes sur une page. Pour plus d’informations, consultez [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
 ## <a name="types-of-tables"></a>Types de tables  
  Outre le rôle standard des tables de base définies par l'utilisateur, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] met à votre disposition les types de tables suivants, qui remplissent une fonction particulière dans une base de données.  
   
  Tables partitionnées  
- Les tables partitionnées sont des tables dont les données sont divisées horizontalement en unités qui peuvent être réparties sur plusieurs groupes de fichiers dans une base de données. Le partitionnement permet une gestion plus simple des tables et index volumineux. Vous pouvez en effet accéder à des sous-ensembles de données ou les gérer de manière rapide et efficace, tout en préservant l'intégrité de la collection globale. Par défaut, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge jusqu'à 15 000 partitions. Pour plus d’informations, consultez [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ Les tables partitionnées sont des tables dont les données sont divisées horizontalement en unités qui peuvent être réparties sur plusieurs groupes de fichiers dans une base de données. Le partitionnement permet une gestion plus simple des tables et index volumineux. Vous pouvez en effet accéder à des sous-ensembles de données ou les gérer de manière rapide et efficace, tout en préservant l'intégrité de la collection globale. Par défaut, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge jusqu'à 15 000 partitions. Pour plus d’informations, consultez [Tables et index partitionnés](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  Tables temporaires  
- Tables temporaires sont stockées dans `tempdb`. Il en existe deux types : locale et globale. Elles se différencient par leur nom, leur visibilité et leur disponibilité. Le premier caractère du nom des tables temporaires locales est un signe dièse (#) unique. Ces tables sont visibles uniquement à la connexion courante de l'utilisateur et sont supprimées dès que l'utilisateur se déconnecte de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En revanche, le nom des tables temporaires globales commence par deux signes dièse (##) ; ces tables sont visibles à tout utilisateur après avoir été créées et ne sont supprimées qu'une fois que l'ensemble des utilisateurs ayant fait référence à la table se sont déconnectés de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Les tables temporaires sont stockées `tempdb`dans. Il en existe deux types : locale et globale. Elles se différencient par leur nom, leur visibilité et leur disponibilité. Le premier caractère du nom des tables temporaires locales est un signe dièse (#) unique. Ces tables sont visibles uniquement à la connexion courante de l'utilisateur et sont supprimées dès que l'utilisateur se déconnecte de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En revanche, le nom des tables temporaires globales commence par deux signes dièse (##) ; ces tables sont visibles à tout utilisateur après avoir été créées et ne sont supprimées qu'une fois que l'ensemble des utilisateurs ayant fait référence à la table se sont déconnectés de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Tables système  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stocke les données qui définissent la configuration du serveur et de toutes ses tables dans un ensemble spécial de tables appelées « tables système ». Les utilisateurs ne peuvent pas directement interroger ou mettre à jour les tables système. Les informations contenues dans les tables système sont disponibles via les affichages système. Pour plus d’informations, consultez [Vues système &#40;Transact-SQL&#41;](/sql/t-sql/language-reference).  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stocke les données qui définissent la configuration du serveur et de toutes ses tables dans un ensemble spécial de tables appelées « tables système ». Les utilisateurs ne peuvent pas directement interroger ou mettre à jour les tables système. Les informations contenues dans les tables système sont disponibles via les affichages système. Pour plus d’informations, consultez [vues système &#40;&#41;Transact-SQL ](/sql/t-sql/language-reference).  
   
  Tableaux larges  
  Les tableaux larges utilisent des [colonnes éparses](use-sparse-columns.md) pour porter à 30 000 le total de colonnes qu’un tableau peut contenir. Les colonnes éparses sont des colonnes ordinaires qui ont un stockage optimisé pour les valeurs NULL. Les colonnes éparses réduisent l'espace nécessaire pour les valeurs NULL, en échange d'une augmentation du coût d'extraction des valeurs autres que NULL. Un tableau large a défini un [jeu de colonnes](use-column-sets.md), qui est une représentation XML non typée qui combine toutes les colonnes éparses d’une table dans une sortie structurée. Le nombre d'index et de statistiques est également porté à 1 000 et à 30 000, respectivement. La taille maximale d'une ligne de tableau large est de 8 019 octets. Par conséquent, la plupart des données dans une ligne particulière doivent avoir la valeur NULL. Le nombre maximal de colonnes non éparses plus les colonnes calculées dans un tableau large reste 1 024.  
@@ -64,22 +65,22 @@ ms.locfileid: "68211789"
 |Tâches de table|Rubrique|  
 |-----------------|-----------|  
 |Explique comment créer une table.|[Créer des tables &#40;moteur de base de données&#41;](create-tables-database-engine.md)|  
-|Explique comment supprimer une table.|[Supprimer des tables &#40;moteur de base de données&#41;](delete-tables-database-engine.md)|  
+|Explique comment supprimer une table.|[Supprimer les tables &#40;Moteur de base de données&#41;](delete-tables-database-engine.md)|  
 |Explique comment créer une table qui contient une partie ou la totalité des colonnes d'une table existante.|[Dupliquer des tables](duplicate-tables.md)|  
-|Explique comment renommer une table.|[Renommer des tables &#40;moteur de base de données&#41;](rename-tables-database-engine.md)|  
+|Explique comment renommer une table.|[Renommez les tables &#40;Moteur de base de données&#41;](rename-tables-database-engine.md)|  
 |Explique comment afficher les propriétés de la table.|[Afficher la définition de table](view-the-table-definition.md)|  
-|Explique comment déterminer si d'autres objets, tels qu'une vue ou une procédure stockée, dépendent d'une table.|[Afficher les dépendances d’une table](view-the-dependencies-of-a-table.md)|  
+|Explique comment déterminer si d'autres objets, tels qu'une vue ou une procédure stockée, dépendent d'une table.|[Afficher les dépendances d'une table](view-the-dependencies-of-a-table.md)|  
   
  Le tableau suivant fournit des liens vers les tâches couramment associées à la création ou à la modification de colonnes dans une table.  
   
 |Tâches de colonne|Rubrique|  
 |------------------|-----------|  
-|Explique comment ajouter des colonnes à une table existante.|[Ajouter des colonnes à une table &#40;moteur de base de données&#41;](add-columns-to-a-table-database-engine.md)|  
-|Explique comment supprimer des colonnes d'une table.|[Supprimer des colonnes d’une table](delete-columns-from-a-table.md)|  
-|Explique comment modifier le nom d'une colonne.|[Renommer des colonnes &#40;moteur de base de données&#41;](rename-columns-database-engine.md)|  
-|Explique comment copier des colonnes d'une table vers une autre, en copiant uniquement la définition de la colonne ou la définition et les données.|[Copier des colonnes d’une table vers une autre &#40;moteur de base de données&#41;](copy-columns-from-one-table-to-another-database-engine.md)|  
-|Explique comment modifier une définition de colonne, en modifiant le type de données ou une autre propriété.|[Modifier des colonnes &#40;moteur de base de données&#41;](modify-columns-database-engine.md)|  
-|Explique comment modifier l'ordre dans lequel les colonnes apparaissent.|[Changer l’ordre des colonnes dans une table](change-column-order-in-a-table.md)|  
+|Explique comment ajouter des colonnes à une table existante.|[Ajoutez des colonnes à une table &#40;Moteur de base de données&#41;](add-columns-to-a-table-database-engine.md)|  
+|Explique comment supprimer des colonnes d'une table.|[Supprimer des colonnes d'une table](delete-columns-from-a-table.md)|  
+|Explique comment modifier le nom d'une colonne.|[Renommez les colonnes &#40;Moteur de base de données&#41;](rename-columns-database-engine.md)|  
+|Explique comment copier des colonnes d'une table vers une autre, en copiant uniquement la définition de la colonne ou la définition et les données.|[Copier des colonnes d’une table vers une autre &#40;Moteur de base de données&#41;](copy-columns-from-one-table-to-another-database-engine.md)|  
+|Explique comment modifier une définition de colonne, en modifiant le type de données ou une autre propriété.|[Modifier les colonnes &#40;Moteur de base de données&#41;](modify-columns-database-engine.md)|  
+|Explique comment modifier l'ordre dans lequel les colonnes apparaissent.|[Modifier l'ordre des colonnes dans une table](change-column-order-in-a-table.md)|  
 |Explique comment créer une colonne calculée dans une table.|[Spécifier les colonnes calculées dans une table](specify-computed-columns-in-a-table.md)|  
 |Explique comment spécifier une valeur par défaut pour une colonne. Cette valeur est utilisée si une autre valeur n'est pas fournie.|[Spécifier des valeurs par défaut pour les colonnes](specify-default-values-for-columns.md)|  
   

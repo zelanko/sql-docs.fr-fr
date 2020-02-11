@@ -15,14 +15,14 @@ ms.assetid: 52b42b56-50aa-4ce6-8d79-0963c7a71437
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3387b4fa48eb1a04102daadcc08f971765d7ca2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037781"
 ---
 # <a name="c-interval-structure"></a>Structure d’intervalle C
-Chacun des types de données d’intervalle C répertoriées dans le [les Types de données C](../../../odbc/reference/appendixes/c-data-types.md) section utilise la même structure pour contenir les données d’intervalle. Lorsque **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData** est appelée, le pilote retourne les données dans la structure SQL_INTERVAL_STRUCT, utilise la valeur qui a été spécifiée par le application pour les types de données C (dans l’appel à **SQLBindCol**, **SQLGetData**, ou **SQLBindParameter**) pour interpréter le contenu de SQL_INTERVAL_STRUCT et remplit la *interval_type* champ de la structure avec le *enum* valeur correspondant au type C. Notez que les pilotes ne lisent pas les *interval_type* champ pour déterminer le type de l’intervalle ; ils récupèrent la valeur du champ de descripteur SQL_DESC_CONCISE_TYPE. Lors de la structure est utilisée pour les données de paramètre, le pilote utilise la valeur spécifiée par l’application dans le champ SQL_DESC_CONCISE_TYPE du descripteur APD interpréter le contenu de SQL_INTERVAL_STRUCT, même si l’application définit la valeur de la  *interval_type* champ à une valeur différente.  
+Chacun des types de données d’intervalle C listés dans la section [types de données c](../../../odbc/reference/appendixes/c-data-types.md) utilise la même structure pour contenir les données d’intervalle. Quand **SQLFetch**, **SQLFetchScroll**ou **SQLGetData** est appelé, le pilote retourne des données dans la structure SQL_INTERVAL_STRUCT, utilise la valeur spécifiée par l’application pour les types de données C (dans l’appel à **SQLBindCol**, **SQLGetData**ou **SQLBindParameter**) pour interpréter le contenu de SQL_INTERVAL_STRUCT et remplit le champ *Interval_type* de la structure avec la valeur d' *énumération* correspondant au type c. Notez que les pilotes ne lisent pas le champ *interval_type* pour déterminer le type de l’intervalle. ils récupèrent la valeur du champ descripteur SQL_DESC_CONCISE_TYPE. Lorsque la structure est utilisée pour les données de paramètre, le pilote utilise la valeur spécifiée par l’application dans le champ SQL_DESC_CONCISE_TYPE de l’APD pour interpréter le contenu de SQL_INTERVAL_STRUCT, même si l’application définit la valeur du champ *interval_type* sur une autre valeur.  
   
  Cette structure est définie comme suit :  
   
@@ -69,4 +69,4 @@ typedef struct tagSQL_DAY_SECOND
 } SQL_DAY_SECOND_STRUCT;  
 ```  
   
- Le *interval_type* champ de la SQL_INTERVAL_STRUCT indique à l’application quelle structure est maintenu dans l’union et également quels membres de la structure sont pertinentes. Le *interval_sign* champ a la valeur SQL_FALSE si l’intervalle de début de champ n’est pas signé ; si elle est SQL_TRUE, le champ Début est négatif. La valeur dans le champ Début lui-même est toujours non signée, quelle que soit la valeur de *interval_sign*. Le *interval_sign* champ agit comme un bit de signe.
+ Le champ *interval_type* de la SQL_INTERVAL_STRUCT indique à l’application la structure qui est conservée dans l’Union, ainsi que les membres de la structure qui sont pertinents. La valeur du champ *interval_sign* est SQL_FALSE si le champ de début de l’intervalle n’est pas signé ; s’il est SQL_TRUE, le champ de début est négatif. La valeur du champ de début est toujours non signée, quelle que soit la valeur de *interval_sign*. Le champ *interval_sign* agit comme un bit de signe.

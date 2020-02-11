@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a249f5536846507996da4a7478a32dbe68e4dcd
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811252"
 ---
 # <a name="mssql_eng014117"></a>MSSQL_ENG014117
@@ -26,8 +26,8 @@ ms.locfileid: "68811252"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|14117|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|14117|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique||  
 |Texte du message|'%1!' n'est pas configuré comme base de données de distribution.|  
@@ -46,13 +46,13 @@ ms.locfileid: "68811252"
 ## <a name="user-action"></a>Action de l'utilisateur  
  Vérifiez que l'instance du serveur de distribution est inscrite correctement. Si le nom réseau de l'ordinateur et le nom de l'instance SQL Server diffèrent, effectuez une des actions suivantes :  
   
--   Ajoutez le nom de l'instance SQL Server comme nom réseau valide. Pour définir un autre nom réseau, une méthode possible consiste à l'ajouter au fichier hosts local. Le fichier hosts local est installé par défaut dans le répertoire WINDOWS\system32\drivers\etc ou WINNT\system32\drivers\etc. Pour plus d'informations, consultez la documentation Windows.  
+-   Ajoutez le nom de l'instance SQL Server comme nom réseau valide. Pour définir un autre nom réseau, une méthode possible consiste à l'ajouter au fichier hosts local. Le fichier hosts local est installé par défaut dans le répertoire WINDOWS\system32\drivers\etc ou WINNT\system32\drivers\etc. Pour plus d'informations, reportez-vous à la documentation Windows.  
   
-     Si, par exemple, le nom d'ordinateur est comp1, l'adresse IP de l'ordinateur 10.193.17.129 et le nom de l'instance inst1/nominst, ajoutez l'entrée suivante au fichier des hôtes :  
+     Si, par exemple, le nom d'ordinateur est comp1, l'adresse IP de l'ordinateur 10.193.17.129 et le nom de l'instance inst1/nominst, ajoutez l'entrée suivante au fichier des hôtes :  
   
      10.193.17.129 inst1  
   
--   Désactivez la distribution, inscrivez l'instance puis réactivez la distribution. Si la valeur de @@SERVERNAME n’est pas correcte pour une instance non cluster, procédez comme suit:  
+-   Désactivez la distribution, inscrivez l'instance puis réactivez la distribution. Si la valeur de @@SERVERNAME n’est pas correcte pour une instance non-cluster, effectuez les étapes suivantes :  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  
@@ -67,7 +67,7 @@ ms.locfileid: "68811252"
   
  Après avoir vérifié que l'instance du serveur de distribution est inscrite correctement, vérifiez que la base de données de distribution figure dans **msdb..MSdistributiondbs**. Si elle ne s'y trouve pas :  
   
-1.  Créez un script de la configuration de la distribution. Pour plus d’informations, voir [Scripting Replication](scripting-replication.md).  
+1.  Créez un script de la configuration de la distribution. Pour plus d'informations, voir [Scripting Replication](scripting-replication.md).  
   
 2.  Désactivez la distribution puis réactivez-la. Pour plus d'informations, voir [Configure Distribution](configure-distribution.md).  
   

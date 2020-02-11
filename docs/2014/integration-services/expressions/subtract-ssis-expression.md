@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 03ede2272de2c574909ed44bb0291b3c56911f0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768728"
 ---
 # <a name="--subtract-ssis-expression"></a>- (Soustraction) (expression SSIS)
@@ -35,7 +35,7 @@ numeric_expression1 - numeric_expression2
  *expression_numérique1, expression_numérique2*  
  Toute expression valide d'un type de données numérique. Pour plus d’informations, consultez [Types de données Integration Services](../data-flow/integration-services-data-types.md).  
   
-## <a name="result-types"></a>Types de résultats  
+## <a name="result-types"></a>Types des résultats  
  Déterminés par les types de données des deux arguments. Pour plus d’informations, consultez [Types de données Integration Services dans les expressions](integration-services-data-types-in-expressions.md).  
   
 ## <a name="remarks"></a>Notes  
@@ -57,7 +57,7 @@ numeric_expression1 - numeric_expression2
 ListPrice - StandardCost  
 ```  
   
- L’exemple suivant soustrait une valeur calculée de la colonne **ListPrice** . La variable **Discount%** doit figurer entre crochets, car le nom contient le caractère %. Pour plus d’informations, consultez [Identificateurs &#40;SSIS&#41;](identifiers-ssis.md).  
+ L’exemple suivant soustrait une valeur calculée de la colonne **ListPrice** . La variable **Discount%** doit figurer entre crochets car elle contient le caractère « % ». Pour plus d’informations, consultez [Identificateurs &#40;SSIS&#41;](identifiers-ssis.md).  
   
 ```  
 ListPrice - (ListPrice * @[Discount%])  

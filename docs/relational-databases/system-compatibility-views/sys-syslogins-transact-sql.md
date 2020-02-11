@@ -1,5 +1,5 @@
 ---
-title: sys.syslogins (Transact-SQL) | Microsoft Docs
+title: sys. syslogins (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -21,10 +21,10 @@ ms.assetid: 4cb34f17-a4bb-469f-a218-71f074e6308f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5745d3f98741d4a414c7bb69d8f9865258d47e34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020008"
 ---
 # <a name="syssyslogins-transact-sql"></a>sys.syslogins (Transact-SQL)
@@ -40,36 +40,36 @@ ms.locfileid: "68020008"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**sid**|**varbinary(85)**|Identificateur de sécurité.|  
-|**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**createdate**|**datetime**|Date d'ajout de la connexion.|  
-|**updatedate**|**datetime**|Date de mise à jour de la connexion.|  
-|**accdate**|**datetime**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**statu**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**création**|**DATETIME**|Date d'ajout de la connexion.|  
+|**updateDate**|**DATETIME**|Date de mise à jour de la connexion.|  
+|**accdate**|**DATETIME**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**totcpu**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**totio**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**spacelimit**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**spacelimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**timelimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**resultlimit**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**name**|**sysname**|Nom de connexion de l’utilisateur.|  
-|**dbname**|**sysname**|Nom de la base de données par défaut de l'utilisateur lorsqu'une connexion est établie.|  
-|**password**|**nvarchar(128)**|Renvoie NULL.|  
-|**language**|**sysname**|Langue par défaut de l'utilisateur.|  
-|**denylogin**|**Int**|1 = La connexion concerne un utilisateur ou un groupe [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows et l'accès a été refusé.|  
+|**resultlimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**nomme**|**sysname**|Nom de connexion de l’utilisateur.|  
+|**@**|**sysname**|Nom de la base de données par défaut de l'utilisateur lorsqu'une connexion est établie.|  
+|**de**|**nvarchar(128)**|Renvoie NULL.|  
+|**sous**|**sysname**|Langue par défaut de l'utilisateur.|  
+|**denylogin**|**int**|1 = La connexion concerne un utilisateur ou un groupe [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows et l'accès a été refusé.|  
 |**hasaccess**|**int**|1 = La connexion possède les droits d'accès au serveur.|  
 |**isntname**|**int**|1 = La connexion est un utilisateur ou un groupe Windows.<br /><br /> 0 = Il s'agit d'une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**isntgroup**|**int**|1 = La connexion est un groupe Windows.|  
 |**isntuser**|**int**|1 = La connexion est un utilisateur Windows.|  
-|**sysadmin**|**int**|1 = connexion concerne un membre de la **sysadmin** rôle de serveur.|  
-|**securityadmin**|**Int**|1 = connexion concerne un membre de la **securityadmin** rôle de serveur.|  
-|**serveradmin**|**Int**|1 = connexion concerne un membre de la **serveradmin** rôle serveur fixe.|  
-|**setupadmin**|**Int**|1 = connexion concerne un membre de la **setupadmin** rôle serveur fixe.|  
-|**processadmin**|**int**|1 = connexion concerne un membre de la **processadmin** rôle serveur fixe.|  
-|**diskadmin**|**Int**|1 = connexion concerne un membre de la **diskadmin** rôle serveur fixe.|  
-|**dbcreator**|**Int**|1 = connexion concerne un membre de la **dbcreator** rôle serveur fixe.|  
-|**bulkadmin**|**Int**|1 = connexion concerne un membre de la **bulkadmin** rôle serveur fixe.|  
+|**administrateur système**|**int**|1 = la connexion est membre du rôle de serveur **sysadmin** .|  
+|**securityadmin**|**int**|1 = la connexion est membre du rôle de serveur **securityadmin** .|  
+|**ServerAdmin**|**int**|1 = la connexion est membre du rôle serveur fixe **ServerAdmin** .|  
+|**setupadmin**|**int**|1 = la connexion est membre du rôle serveur fixe **setupadmin** .|  
+|**processadmin**|**int**|1 = la connexion est membre du rôle serveur fixe **processadmin** .|  
+|**diskadmin**|**int**|1 = la connexion est membre du rôle serveur fixe **diskadmin** .|  
+|**rôles**|**int**|1 = la connexion est membre du rôle serveur fixe **dbcreator** .|  
+|**bulkadmin**|**int**|1 = la connexion est membre du rôle serveur fixe **bulkadmin** .|  
 |**LoginName**|**nvarchar(128)**|Nom de connexion de l’utilisateur. Fourni pour la compatibilité ascendante.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mappage des Tables système avec les vues système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Affichages de compatibilité &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Mappage de tables système à des vues système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Vues de compatibilité &#40;&#41;Transact-SQL](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

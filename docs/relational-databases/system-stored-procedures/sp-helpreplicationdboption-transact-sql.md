@@ -16,10 +16,10 @@ ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7aa68b2ee2e592f264f5a64c4c675103253da495
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771531"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "68771531"
 
   Indique si les bases de données du serveur de publication sont activées pour la réplication. Cette procédure stockée est exécutée sur n'importe quelle base de données du serveur de publication. *Non pris en charge pour les serveurs de publication Oracle.*  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,28 +43,28 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 `[ @type = ] 'type'`Limite le jeu de résultats à contenir uniquement les bases de données sur lesquelles la valeur de *type* d’option de réplication spécifiée a été activée. *type* est de type **sysname**et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**publish**|Réplication transactionnelle autorisée.|  
+|**édition**|Réplication transactionnelle autorisée.|  
 |**publication de fusion**|Réplication de fusion autorisée.|  
-|**réplication autorisée** valeurs|Réplication autorisée, qu'elle soit transactionnelle ou de fusion.|  
+|**réplication autorisée** (par défaut)|Réplication autorisée, qu'elle soit transactionnelle ou de fusion.|  
   
-`[ @reserved = ] reserved`Spécifie si les informations sur les publications et les abonnements existants sont retournées. la valeur réservée est de **bit**, avec 0 comme valeur par défaut. Si la valeur est **1**, le jeu de résultats inclut des informations indiquant si la base de données spécifiée a des publications ou des abonnements existants.  
+`[ @reserved = ] reserved`Spécifie si les informations sur les publications et les abonnements existants sont retournées. la valeur *réservée* est de **bit**, avec 0 comme valeur par défaut. Si la valeur est **1**, le jeu de résultats inclut des informations indiquant si la base de données spécifiée a des publications ou des abonnements existants.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Nom de la base de données.|  
-|**id**|**int**|Identificateur de base de données.|  
-|**transpublish**|**bit**|Si la base de données a été activée pour la publication transactionnelle ou d’instantané; la valeur **1** signifie que la publication transactionnelle ou d’instantané est activée.|  
-|**mergepublish**|**bit**|Si la base de données a été activée pour la publication de fusion; la valeur **1** signifie que la publication de fusion est activée.|  
-|**dbowner**|**bit**|Si l’utilisateur est membre du rôle de base de données fixe **db_owner** ; où la valeur **1** indique que l’utilisateur est membre de ce rôle.|  
-|**dbreadonly**|**bit**|Si la base de données est marquée en lecture seule; la valeur **1** signifie que la base de données est en lecture seule.|  
-|**haspublications**|**bit**|Indique si la base de données contient des publications existantes; la valeur **1** signifie qu’il existe des publications existantes.|  
+|**nomme**|**sysname**|Nom de la base de données.|  
+|**identifi**|**int**|Identificateur de base de données.|  
+|**transpublish**|**bit**|Si la base de données a été activée pour la publication transactionnelle ou d’instantané ; la valeur **1** signifie que la publication transactionnelle ou d’instantané est activée.|  
+|**mergepublish**|**bit**|Si la base de données a été activée pour la publication de fusion ; la valeur **1** signifie que la publication de fusion est activée.|  
+|**DBOwner**|**bit**|Si l’utilisateur est membre du rôle de base de données fixe **db_owner** ; où la valeur **1** indique que l’utilisateur est membre de ce rôle.|  
+|**dbreadonly**|**bit**|Si la base de données est marquée en lecture seule ; la valeur **1** signifie que la base de données est en lecture seule.|  
+|**haspublications**|**bit**|Indique si la base de données contient des publications existantes ; la valeur **1** signifie qu’il existe des publications existantes.|  
 |**haspullsubscriptions**|**bit**|Indique si la base de données a des abonnements par extraction existants. la valeur **1** signifie qu’il y a des abonnements par extraction existants.|  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  

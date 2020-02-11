@@ -18,18 +18,18 @@ ms.assetid: ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: adeed3012f6009ac174d758e7fdd3464fc3d2320
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68009119"
 ---
-# <a name="spdeleteoperator-transact-sql"></a>sp_delete_operator (Transact-SQL)
+# <a name="sp_delete_operator-transact-sql"></a>sp_delete_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime un opérateur.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,21 +40,21 @@ sp_delete_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name = ] 'name'` Le nom de l’opérateur à supprimer. *nom* est **sysname**, sans valeur par défaut.  
+`[ @name = ] 'name'`Nom de l’opérateur à supprimer. *Name* est de **type sysname**, sans valeur par défaut.  
   
-`[ @reassign_to_operator = ] 'reassign_operator'` Le nom de l’opérateur auquel les alertes de l’opérateur spécifié peuvent être réaffectées. *nouvel_opérateur* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @reassign_to_operator = ] 'reassign_operator'`Nom de l’opérateur auquel les alertes de l’opérateur spécifié peuvent être réaffectées. *reassign_operator* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  Si vous supprimez un opérateur, toutes les notifications qui lui sont associées le sont également.  
   
 ## <a name="permissions"></a>Autorisations  
- Membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_delete_operator**.  
+ Les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_delete_operator**.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant supprime l'opérateur `François Ajenstat`.  

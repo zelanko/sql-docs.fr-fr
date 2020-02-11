@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5acd507be99d7ff36245e723d20aebc36f42a917
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781994"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Inscrire un nom de principal du service pour les connexions Kerberos
@@ -71,7 +71,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **Instance nommée**  
   
--   *MSSQLSvc/FQDN*:[_port_ **|** _nom_instance_], où :  
+-   *MSSQLSvc/FQDN*: [_port_**|**_InstanceName_], où :  
   
     -   *MSSQLSvc* est le service en cours d’inscription.  
   
@@ -79,11 +79,11 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
     -   *port* est le numéro de port TCP.  
   
-    -   *nom_instance* est le nom de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+    -   *nom_instance* est le nom de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
  **Instance par défaut**  
   
--   *MSSQLSvc/FQDN*:_port_ **|** _MSSQLSvc/FQDN_, où :  
+-   *MSSQLSvc/FQDN*:_port_**|**_MSSQLSvc/FQDN_, où :  
   
     -   *MSSQLSvc* est le service en cours d’inscription.  
   
@@ -98,14 +98,14 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
 |||  
 |-|-|  
-|MSSQLSvc/*fqdn:port*|Nom principal de service par défaut, généré par le fournisseur, lorsque le protocole TCP est utilisé. *port* est un numéro de port TCP.|  
+|MSSQLSvc/*FQDN : port*|Nom principal de service par défaut, généré par le fournisseur, lorsque le protocole TCP est utilisé. *port* est un numéro de port TCP.|  
 |MSSQLSvc/*fqdn*|Nom principal de service par défaut, généré par le fournisseur, pour une instance par défaut lorsqu'un autre protocole que TCP est utilisé. *fqdn* est un nom de domaine complet.|  
-|MSSQLSvc/*fqdn:InstanceName*|Nom principal de service par défaut, généré par le fournisseur, pour une instance nommée lorsqu'un autre protocole que TCP est utilisé. *Nom_instance* est le nom d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|MSSQLSvc/*FQDN : nom_instance*|Nom principal de service par défaut, généré par le fournisseur, pour une instance nommée lorsqu'un autre protocole que TCP est utilisé. *Nom_instance* est le nom d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ##  <a name="Auto"></a> Inscription automatique des SPN  
  Lors du démarrage d’une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente d’inscrire le nom SPN du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Lors de l’arrêt de l’instance, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente d’annuler l’inscription du nom SPN. Pour une connexion TCP/IP, le nom de principal du service (SPN) est inscrit au format *MSSQLSvc/\<FQDN>* : *\<port_tcp>* . Les instances nommées et l’instance par défaut sont inscrites en tant que *MSSQLSvc* et seule la valeur de *\<port_tcp>* différencie les instances.  
   
- Pour les autres connexions qui prennent en charge Kerberos, le SPN est inscrit dans le format *MSSQLSvc /\<FQDN >* : *\<nom_instance >* pour une instance nommée. Le format pour l’inscription de l’instance par défaut est *MSSQLSvc/\<FQDN>* .  
+ Pour les autres connexions qui prennent en charge Kerberos, le SPN est inscrit au format *MSSQLSvc/\<FQDN>*:*\<InstanceName>* pour une instance nommée. Le format pour l’inscription de l’instance par défaut est *MSSQLSvc/\<FQDN>* .  
   
  Une intervention manuelle peut être requise pour inscrire ou annuler l'inscription du SPN si le compte de service ne possède pas les autorisations requises pour ces actions.  
   
@@ -120,7 +120,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 setspn -A MSSQLSvc/myhost.redmond.microsoft.com:1433 accountname  
 ```  
   
- **Remarque** S’il existe déjà un nom SPN, il doit être supprimé avant de pouvoir être réinscrit. Pour cela, utilisez la commande `setspn` avec le commutateur `-D` . Les exemples suivants illustrent comment inscrire manuellement un nouveau SPN basé sur une instance. Pour une instance par défaut, utilisez :  
+ **Remarque** Si un nom de principal du service existe déjà, il doit être supprimé avant de pouvoir être réinscrit. Pour cela, utilisez la commande `setspn` avec le commutateur `-D` . Les exemples suivants illustrent comment inscrire manuellement un nouveau SPN basé sur une instance. Pour une instance par défaut, utilisez :  
   
 ```  
 setspn -A MSSQLSvc/myhost.redmond.microsoft.com accountname  
@@ -135,7 +135,7 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename accountname
 ##  <a name="Client"></a> Connexions clientes  
  Les SPN spécifiés par l'utilisateur sont pris en charge dans les pilotes clients. Toutefois, si aucun SPN n'est fourni, il est généré automatiquement en fonction du type de connexion cliente. Pour une connexion TCP, un nom SPN au format *MSSQLSvc*/*FQDN*:[*port*] est utilisé à la fois pour les instances nommées et par défaut.  
   
- Pour les connexions par canaux nommés et mémoire partagée, un nom SPN au format *MSSQLSvc*/*FQDN*:*nom_instance* est utilisé pour une instance nommée et *MSSQLSvc*/*FQDN* est utilisé pour l’instance par défaut.  
+ Pour les canaux nommés et les connexions de mémoire partagée, un SPN au format*nom de domaine complet* *MSSQLSvc*/:*nom_instance* est utilisé pour une instance nommée et le*nom de domaine complet* *MSSQLSvc*/est utilisé pour l’instance par défaut.  
   
  **Utilisation d'un compte de service comme SPN**  
   
@@ -158,8 +158,8 @@ WHERE session_id = @@SPID;
   
 |Scénario|Méthode d'authentification|  
 |--------------|---------------------------|  
-|Le SPN est mappé au compte de domaine, au compte virtuel, au compte de service administré ou au compte intégré approprié. Par exemple, Système local ou SERVICE RÉSEAU.<br /><br /> Remarque : Correct signifie que le compte mappé par le SPN inscrit est le compte que le service SQL Server s’exécute sous.|Les connexions locales utilisent NTLM, les connexions distantes utilisent Kerberos.|  
-|Le SPN est le compte de domaine, le compte virtuel, le compte de service administré ou le compte intégré approprié.<br /><br /> Remarque : Correct signifie que le compte mappé par le SPN inscrit est le compte que le service SQL Server s’exécute sous.|Les connexions locales utilisent NTLM, les connexions distantes utilisent Kerberos.|  
+|Le SPN est mappé au compte de domaine, au compte virtuel, au compte de service administré ou au compte intégré approprié. Par exemple, Système local ou SERVICE RÉSEAU.<br /><br /> Remarque : l’exactitude signifie que le compte mappé par le SPN inscrit est le compte sous lequel le service SQL Server s’exécute.|Les connexions locales utilisent NTLM, les connexions distantes utilisent Kerberos.|  
+|Le SPN est le compte de domaine, le compte virtuel, le compte de service administré ou le compte intégré approprié.<br /><br /> Remarque : l’exactitude signifie que le compte mappé par le SPN inscrit est le compte sous lequel le service SQL Server s’exécute.|Les connexions locales utilisent NTLM, les connexions distantes utilisent Kerberos.|  
 |Le SPN est mappé à un compte de domaine, un compte virtuel, un compte de service administré ou un compte intégré erroné.|L'authentification échoue.|  
 |La recherche du SPN échoue ou ne mappe pas à un compte de domaine, un compte virtuel, un compte de service administré ou un compte intégré correct, ou n'est pas un compte de domaine, un compte virtuel, un compte de service administré ou un compte intégré correct.|Les connexions locales et distantes utilisent NTLM.|  
   

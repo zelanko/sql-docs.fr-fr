@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aa5f333b050d817d68c8769d7e53a9455581a3ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768655"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Développement d'objets personnalisés pour Integration Services
-  Lorsque les objets de flux de contrôle et de flux de données inclus dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ne répondent pas complètement à vos besoins, vous pouvez développer vos propres types d’objets personnalisés, notamment les suivants :  
+  Lorsque les objets de workflow de contrôle et de données inclus dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ne répondent pas complètement à vos besoins, vous pouvez développer de nombreux types d’objets personnalisés par vous-même, notamment :  
   
 -   **Tâches personnalisées**.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "62768655"
   
 -   **Énumérateurs personnalisés.** Prenez en charge l'itération sur un jeu d'objets ou de formats de valeurs qui ne sont pas pris en charge actuellement.  
   
--   **Composants de flux de données personnalisés.** Peuvent être configurés en tant que sources, transformations ou destinations.  
+-   **Composants de workflow de données personnalisés.** Peuvent être configurés en tant que sources, transformations ou destinations.  
   
  Le modèle objet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] facilite ce développement personnalisé à l'aide de classes de base qui fournissent un cadre cohérent et fiable pour votre implémentation personnalisée.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62768655"
 ## <a name="base-classes-attributes-and-important-methods"></a>Classes de base, attributs et méthodes importantes  
  Ce tableau constitue une référence simple aux éléments les plus importants du modèle objet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour chaque type d'objet personnalisé que vous pouvez développer.  
   
-|Objet personnalisé|Classe de base|Attribute|Méthodes importantes|  
+|Objet personnalisé|Classe de base|Attribut|Méthodes importantes|  
 |-------------------|----------------|---------------|-----------------------|  
 |Tâche|<xref:Microsoft.SqlServer.Dts.Runtime.Task>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|  
 |Gestionnaire de connexions|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A>|  
@@ -110,7 +110,7 @@ ms.locfileid: "62768655"
   
 -   Entrée de blog, [Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references](https://go.microsoft.com/fwlink/?LinkId=215662), sur blogs.msdn.com.  
   
-![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône de Integration Services (petite)](../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Persistance des objets personnalisés](persisting-custom-objects.md)   

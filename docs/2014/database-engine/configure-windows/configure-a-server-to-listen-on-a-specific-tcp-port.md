@@ -1,5 +1,5 @@
 ---
-title: Configurer un serveur pour écouter un port de TCP spécifique (Gestionnaire de Configuration SQL Server) | Microsoft Docs
+title: Configurer un serveur pour l’écoute sur un port TCP spécifique (Gestionnaire de configuration SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e85b1a85ab9415c76fdaeee5453c992994a286ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62813585"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port-sql-server-configuration-manager"></a>Configurer un serveur pour écouter un port TCP spécifique (Gestionnaire de configuration SQL Server)
@@ -30,14 +30,14 @@ ms.locfileid: "62813585"
  Pour plus d’informations sur les paramètres par défaut du Pare-feu Windows et pour obtenir une description des ports TCP qui affectent le moteur de base de données, Analysis Services, Reporting Services et Integration Services, consultez [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 > [!TIP]  
->  Lors de la sélection du numéro de port, consultez [http://www.iana.org/assignments/port-numbers](http://www.iana.org/assignments/port-numbers) pour obtenir la liste des numéros de ports attribués aux applications spécifiques. sélectionnez un numéro de port non assigné. Pour plus d’informations, consultez [La plage de port dynamique par défaut pour le protocole TCP/IP a changé dans Windows Vista et dans Windows Server 2008](https://support.microsoft.com/kb/929851).  
+>  Lorsque vous sélectionnez un numéro de port [http://www.iana.org/assignments/port-numbers](http://www.iana.org/assignments/port-numbers) , consultez pour obtenir la liste des numéros de port affectés à des applications spécifiques. sélectionnez un numéro de port non assigné. Pour plus d’informations, consultez [La plage de port dynamique par défaut pour le protocole TCP/IP a changé dans Windows Vista et dans Windows Server 2008](https://support.microsoft.com/kb/929851).  
   
 > [!WARNING]  
 >  Le moteur de base de données commence l'écoute sur un nouveau port une fois redémarré. Toutefois le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser surveille le Registre et signale le nouveau numéro de port dès que la configuration est modifiée, même si le moteur de base de données ne l'utilise pas. Redémarrez le moteur de base de données pour assurer la cohérence et éviter les échecs de connexion.  
   
  **Dans cette rubrique**  
   
--   **Pour configurer un serveur pour l'écoute sur un port TCP spécifique, utilisez :**  
+-   **Pour configurer un serveur pour l’écoute sur un port TCP spécifique, utilisez :**  
   
      [Gestionnaire de configuration SQL Server](#SSMSProcedure)  
   
@@ -47,15 +47,15 @@ ms.locfileid: "62813585"
   
 1.  Dans le Gestionnaire de configuration SQL Server, dans le volet de la console, développez **Configuration du réseau SQL Server**, **Protocoles pour \<nom_instance>** puis double-cliquez sur **TCP/IP**.  
   
-2.  Dans la boîte de dialogue **Propriétés TCP/IP** , sous l’onglet **Adresses IP** , plusieurs adresses IP apparaissent au format **IP1**, **IP2**, jusqu’à **IPAll**. Une de ces adresses correspond à l'adresse IP de la carte de bouclage, 127.0.0.1. D'autres adresses sont affichées pour chaque adresse IP sur l'ordinateur. Cliquez avec le bouton droit sur chaque adresse, puis cliquez sur **Propriétés** pour identifier l'adresse IP que vous voulez configurer.  
+2.  Dans la boîte de dialogue **Propriétés TCP/IP** , sous l’onglet **Adresses IP** , plusieurs adresses IP apparaissent au format **IP1**, **IP2**, jusqu’à **IPAll**. Une de ces adresses correspond à l'adresse IP de la carte de bouclage, 127.0.0.1. D'autres adresses sont affichées pour chaque adresse IP sur l'ordinateur. Cliquez avec le bouton droit sur chaque adresse, puis cliquez sur **Propriétés** pour identifier l’adresse IP que vous voulez configurer.  
   
 3.  Si la boîte de dialogue **Ports TCP dynamiques** contient **0**pour indiquer que [!INCLUDE[ssDE](../../includes/ssde-md.md)] écoute les ports dynamiques, supprimez le 0.  
   
-4.  Dans la zone **Port TCP** _, dans_ **Properties** area box, in the **TCP Port** box, type the port number you want this Port TCP address to listen on, and then click **OK**.  
+4.  Dans la zone **Propriétés** **IP**_n_ , dans la zone **port TCP** , tapez le numéro de port sur lequel vous voulez que cette adresse IP écoute, puis cliquez sur **OK**.  
   
 5.  Dans le volet de la console, cliquez sur **Services SQL Server**.  
   
-6.  Dans le volet Détails, cliquez avec le bouton droit sur **SQL Server (** \<nom_instance> **)** puis cliquez sur **Redémarrer** pour arrêter et redémarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+6.  Dans le volet d’informations, cliquez avec le bouton droit sur **SQL Server (nom de**\<l’instance>**)** , puis cliquez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sur **redémarrer**pour arrêter et redémarrer.  
   
  Après avoir configuré [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour écouter un port spécifique, il existe trois manières de vous connecter à un port spécifique avec une application cliente :  
   

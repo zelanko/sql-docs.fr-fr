@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ac7730e8437eaed304ed69c40e45fc93ee9b5531
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68888651"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>Création d'une vue de source de données (Didacticiel sur l'exploration de données de base)
@@ -24,14 +24,14 @@ ms.locfileid: "68888651"
   
 1.  Dans **Explorateur de solutions**, cliquez avec le bouton droit sur **vues de source de données**, puis sélectionnez **nouvelle vue de source de données**.  
   
-2.  Dans la page **Assistant Vue de source de données** , cliquez sur **Suivant**.  
+2.  Sur la page **Bienvenue dans l'Assistant Sources de données**, cliquez sur **Suivant**.  
   
 3.  Dans la page **Sélectionner une source de données** , sous **sources de données relationnelles**, sélectionnez la source de données Adventure Works DW 2012 que vous avez créée dans la dernière tâche. Cliquez sur **Suivant**.  
   
     > [!NOTE]  
     >  Si vous souhaitez créer une source de données, cliquez avec le bouton droit sur **sources de données** , puis cliquez sur **nouvelle source de données** pour démarrer l’Assistant source de données.  
   
-4.  Sur la page **Sélectionner des tables et des vues** , sélectionnez les objets suivants, puis cliquez sur la flèche droite pour les inclure dans la nouvelle vue de source de données:  
+4.  Sur la page **Sélectionner des tables et des vues** , sélectionnez les objets suivants, puis cliquez sur la flèche droite pour les inclure dans la nouvelle vue de source de données :  
   
     -   **ProspectiveBuyer (DBO)** -table des acheteurs de bicyclettes potentiels  
   
@@ -44,10 +44,10 @@ ms.locfileid: "68888651"
      La nouvelle vue de source de données s’ouvre dans l’onglet **Publipostage ciblé. DSV [conception]** .  
   
 ## <a name="previous-task-in-lesson"></a>Tâche précédente de la leçon  
- [Didacticiel de création d' &#40;une source de données d’exploration de données de base&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
+ [Création d’une source de données &#40;didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : Didacticiel sur l’exploration de &#40;données de base d’une structure de publipostage ciblé&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [Leçon 2 : création d’une structure de publipostage ciblée &#40;didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Définition d’une vue de source de données &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services)  

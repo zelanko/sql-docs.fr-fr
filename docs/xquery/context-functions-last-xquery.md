@@ -1,5 +1,5 @@
 ---
-title: la dernière fonction (XQuery) | Microsoft Docs
+title: Fonction last (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 04cb465c5180b829ff7d125c1695c3865c3f33c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039003"
 ---
 # <a name="context-functions---last-xquery"></a>Fonctions relatives au contexte : last (XQuery)
@@ -35,13 +35,13 @@ fn:last() as xs:integer
 ```  
   
 ## <a name="remarks"></a>Notes  
- Dans SQL Server, **fn :Last()** peut uniquement être utilisé dans le contexte d’un prédicat dépendant du contexte. Autrement dit, elle ne peut être utilisée qu'à l'intérieur de crochets (`[ ]`).  
+ Dans SQL Server, **FN : Last ()** ne peut être utilisé que dans le contexte d’un prédicat dépendant du contexte. Autrement dit, elle ne peut être utilisée qu'à l'intérieur de crochets (`[ ]`).  
   
 ## <a name="examples"></a>Exemples  
- Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type dans la base de données AdventureWorks.  
+ Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
 ### <a name="a-using-the-last-xquery-function-to-retrieve-the-last-two-manufacturing-steps"></a>R. Utilisation de la fonction XQuery last() pour récupérer les deux dernières étapes de fabrication.  
- La requête suivante récupère les deux dernières étapes de fabrication d'un modèle de produit spécifique. La valeur, le nombre d’étapes de fabrication, retourné par la **last()** fonction est utilisée dans cette requête pour récupérer les deux dernières étapes de fabrication.  
+ La requête suivante récupère les deux dernières étapes de fabrication d'un modèle de produit spécifique. La valeur, le nombre d’étapes de fabrication, retournée par la fonction **Last ()** , est utilisée dans cette requête pour récupérer les deux dernières étapes de fabrication.  
   
 ```  
 SELECT ProductModelID, Instructions.query('   
@@ -59,9 +59,9 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Dans la requête précédente, la **last()** fonctionner dans /`/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]` retourne le nombre d’étapes de fabrication. Cette valeur permet de récupérer la dernière étape de fabrication sur ce poste de travail.  
+ Dans la requête précédente, la fonction **Last ()** dans/`/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]` retourne le nombre d’étapes de fabrication. Cette valeur permet de récupérer la dernière étape de fabrication sur ce poste de travail.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID Result    

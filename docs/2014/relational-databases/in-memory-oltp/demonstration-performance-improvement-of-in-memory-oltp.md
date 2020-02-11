@@ -1,5 +1,5 @@
 ---
-title: 'Démonstration : Amélioration des performances de l’OLTP en mémoire | Microsoft Docs'
+title: 'Démonstration : optimisation des performances de l’OLTP en mémoire | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,27 +11,27 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63071784"
 ---
-# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Démonstration : Optimisation des performances de l'OLTP en mémoire
+# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Démonstration : optimisation des performances de l'OLTP en mémoire
   Cet exemple illustre les améliorations des performances obtenues avec l'OLTP en mémoire en comparant les différences des temps de réponse lors de l'exécution d'une requête Transact-SQL identique sur des tables optimisées en mémoire et des tables sur disque classiques. En outre, une procédure stockée compilée en mode natif est également créée (selon la même requête), puis exécutée pour montrer que vous obtenez généralement les meilleurs temps de réponse lors de l'interrogation d'une table optimisée en mémoire avec une procédure stockée compilée en mode natif. Cet exemple ne montre qu'un aspect des améliorations des performances lors de l'accès aux données dans des tables optimisées en mémoire : l'efficacité de l'accès aux données lors de l'exécution d'insertions. Cet échantillon est monothread et ne tire pas profit des avantages de concurrence de l'OLTP en mémoire. Une charge de travail utilisant la concurrence aura des gains de performance supérieurs.  
   
 > [!NOTE]  
->  Un autre exemple illustrant les tables optimisées en mémoire est disponible à l’adresse [exemple d’OLTP en mémoire SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
+>  Un autre exemple illustrant les tables optimisées en mémoire est disponible dans [l’exemple d’OLTP en mémoire SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
   
  Pour exécuter cet exemple, vous allez effectuer les opérations suivantes :  
   
-1.  Créer une base de données nommée **imoltp** et modifier ses détails de fichier pour le configurer à l’aide de l’OLTP en mémoire à.  
+1.  Créez une base de données nommée **imoltp** et modifiez ses détails de fichier pour la configurer pour l’utilisation de l’OLTP en mémoire.  
   
 2.  créer les objets de base de données pour notre exemple : trois tables et une procédure stockée compilée en mode natif ;  
   
 3.  exécuter les différentes requêtes et afficher les temps de réponse pour chacune d'elles.  
   
- Pour le programme d’installation le **imoltp** dans notre exemple de base de données, commencez par créer un dossier vide : **c:\imoltp_data**, puis exécutez le code suivant :  
+ Pour configurer la base de données **imoltp** pour notre exemple, commencez par créer un dossier vide : **c:\ imoltp_data**, puis exécutez le code suivant :  
   
 ```sql  
 USE master  
@@ -186,9 +186,9 @@ SELECT CAST(@timems AS VARCHAR(10)) + ' ms (memory-optimized table with natively
  [OLTP en mémoire &#40;optimisation en mémoire&#41;](in-memory-oltp-in-memory-optimization.md)   
  [Tables optimisées en mémoire](memory-optimized-tables.md)   
  [Procédures stockées compilées en mode natif](natively-compiled-stored-procedures.md)   
- [Exigences liées à l’utilisation des tables à mémoire optimisée](requirements-for-using-memory-optimized-tables.md)   
+ [Conditions requises pour l’utilisation de tables optimisées en mémoire](requirements-for-using-memory-optimized-tables.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [Options de fichiers et de groupes de fichiers ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
- [CREATE PROCEDURE et Tables optimisées en mémoire](/sql/t-sql/statements/create-procedure-transact-sql)  
+ [CRÉER des tables à procédure et à mémoire optimisée](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

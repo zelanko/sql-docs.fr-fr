@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a0f354280da857be236049a564a77716e93cd351
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807064"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>Tâche Réorganiser l'index (Plan de maintenance)
   Utilisez la boîte de dialogue **Tâche Réorganiser l’index** pour réordonner les pages d’index dans un ordre qui rend les recherches plus efficaces. Cette tâche utilise l'instruction `ALTER INDEX REORGANIZE` avec des bases de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 ## <a name="options"></a>Options  
- **Connexion**  
+ **Connection**  
  Sélectionnez la connexion serveur à utiliser pour exécuter la tâche.  
   
  **Nouveau**  
@@ -40,7 +40,7 @@ ms.locfileid: "62807064"
   
 -   **Toutes les bases de données système**  
   
-     Génère un plan de maintenance qui exécute des tâches de maintenance sur chaque base de données système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , à l'exception de **tempdb**. Aucune tâche de maintenance n'est exécutée sur les bases de données créées par l'utilisateur.  
+     Générez un plan de maintenance qui exécute des tâches de maintenance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur chacune des bases de données système, à l’exception de **tempdb**. Aucune tâche de maintenance n'est exécutée sur les bases de données créées par l'utilisateur.  
   
 -   **Toutes les bases de données utilisateur**  
   
@@ -50,13 +50,13 @@ ms.locfileid: "62807064"
   
      Génère un plan de maintenance qui n'exécute les tâches de maintenance que sur les bases de données sélectionnées. Si vous choisissez cette option, sélectionnez au moins une base de données.  
   
- **Objet**  
+ **Object**  
  Limite la grille de **Sélection** à l’affichage des tables et/ou des vues.  
   
  **Sélection**  
- Spécifie les tables ou les index faisant l'objet de cette tâche. Non disponible quand **Tables et vues** est sélectionné dans la zone **Objet** .  
+ Spécifie les tables ou les index faisant l'objet de cette tâche. Non disponible lorsque **tables et vues** est sélectionné dans la zone **objet** .  
   
- **Compacter les objets importants**  
+ **Compacter les objets volumineux**  
  Annule l'allocation de l'espace pour les tables et les vues si possible. Cette option utilise `ALTER INDEX LOB_COMPACTION = ON`.  
   
  **Vue T-SQL**  
@@ -66,7 +66,7 @@ ms.locfileid: "62807064"
 >  Si le nombre d'objets impliqués est élevé, l'affichage des instructions peut prendre un temps considérable.  
   
 ## <a name="new-connection-dialog-box"></a>Boîte de dialogue Nouvelle connexion  
- **Nom de la connexion**  
+ **Nom de connexion**  
  Entrez un nom pour la nouvelle connexion.  
   
  **Sélectionnez ou entrez un nom de serveur.**  
@@ -79,10 +79,10 @@ ms.locfileid: "62807064"
  Spécifiez le mode d'authentification sur le serveur.  
   
  **Utiliser la sécurité intégrée à Windows NT**  
- Permet de se connecter à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l’aide de l’authentification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+ Connectez-vous à une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] du [!INCLUDE[msCoName](../../includes/msconame-md.md)] avec l’authentification Windows.  
   
  **Utiliser un nom d'utilisateur et un mot de passe spécifiques**  
- Permet de se connecter à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] en utilisant l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette option n'est pas disponible.  
+ Se connecte à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l'aide de l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette option n'est pas disponible.  
   
  **Nom d'utilisateur**  
  Fournit le nom d'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à utiliser pour l'authentification. Cette option n'est pas disponible.  

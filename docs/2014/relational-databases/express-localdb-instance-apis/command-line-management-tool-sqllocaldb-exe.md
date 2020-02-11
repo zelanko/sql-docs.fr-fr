@@ -1,5 +1,5 @@
 ---
-title: 'Outil de gestion en ligne de commande : SqlLocalDB.exe | Microsoft Docs'
+title: 'Outil de gestion en ligne de commande : SqlLocalDB. exe | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 58ea983555fdcb4bb177813db88d40f4bcc59c0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63128783"
 ---
 # <a name="command-line-management-tool-sqllocaldbexe"></a>Outil de gestion en ligne de commande : SqlLocalDB.exe
@@ -27,7 +27,7 @@ ms.locfileid: "63128783"
 ## <a name="sqllocaldb-options"></a>Options de SqlLocalDB  
  SqlLocalDB prend en charge les options suivantes.  
   
-|Option|Ce qu’il fait|  
+|Option|Résultat|  
 |------------|------------------|  
 |`-?`|Affiche le texte d'aide.|  
 |`create&#124;c "instance name" [version-number] [-s]`|Crée une nouvelle instance de LocalDB avec un nom et une version spécifiés.<br /><br /> Si le paramètre [numéro-version] est omis, il prend par défaut la valeur de la version de la build de SqlLocalDB.<br /><br /> -s démarre la nouvelle instance de LocalDB après sa création.|  
@@ -42,7 +42,7 @@ ms.locfileid: "63128783"
 |||  
 |`trace&#124;t on&#124;off`|Active et désactive le traçage.|  
   
- SqlLocalDB traite les espaces comme des délimiteurs ; vous devez donc placer les noms d'instances contenant des espaces et des caractères spéciaux entre guillemets. Exemple :  
+ SqlLocalDB traite les espaces comme des délimiteurs ; vous devez donc placer les noms d'instances contenant des espaces et des caractères spéciaux entre guillemets. Par exemple :  
   
  `SqlLocalDB create "My instance name with spaces"`  
   

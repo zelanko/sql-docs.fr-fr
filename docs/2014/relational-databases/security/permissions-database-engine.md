@@ -19,22 +19,22 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63128764"
 ---
 # <a name="permissions-database-engine"></a>Autorisations (moteur de base de données)
   Chaque élément sécurisable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a des autorisations associées qui peuvent être accordées à un principal. Cette rubrique fournit les informations suivantes :  
   
--   [Conventions de nommage des autorisations](#_conventions)  
+-   [Conventions de dénomination des autorisations](#_conventions)  
   
--   [Autorisations liées aux éléments sécurisables spécifiques](#_securables)  
+-   [Autorisations relatives à des éléments sécurisables spécifiques](#_securables)  
   
--   [Autorisations SQL Server](#_permissions)  
+-   [Autorisations de SQL Server](#_permissions)  
   
--   [Algorithme de vérification d’autorisation](#_algorithm)  
+-   [Algorithme de vérification des autorisations](#_algorithm)  
   
 -   [Exemples](#_examples)  
   
@@ -73,7 +73,7 @@ ms.locfileid: "63128764"
   
      Confère au bénéficiaire la capacité de créer l' *Élément sécurisable du serveur*.  
   
--   CREATE \< *Élément sécurisable de base de données*>  
+-   CREATE \<*Élément sécurisable de base de données*>  
   
      Confère au bénéficiaire la capacité de créer l' *Élément sécurisable de base de données*.  
   
@@ -92,12 +92,12 @@ ms.locfileid: "63128764"
      L'autorisation REFERENCES est obligatoire sur un objet pour pouvoir créer une FONCTION ou une VUE avec la clause `WITH SCHEMABINDING` qui référence cet objet.  
   
 ## <a name="chart-of-sql-server-permissions"></a>Graphique des autorisations SQL Server  
- Pour obtenir un graphique de la taille d’une affiche de toutes les autorisations du [!INCLUDE[ssDE](../../includes/ssde-md.md)] au format PDF, consultez [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142).  
+ Pour obtenir un graphique de la taille [!INCLUDE[ssDE](../../includes/ssde-md.md)] d’une affiche de toutes les [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142)autorisations au format PDF, consultez.  
   
 ##  <a name="_securables"></a> Autorisations applicables à des éléments sécurisables spécifiques  
  Le tableau ci-dessous répertorie les principales classes d'autorisations et les types d'éléments sécurisables auxquels elles peuvent s'appliquer.  
   
-|Permission|S'applique à|  
+|Autorisation|S’applique à|  
 |----------------|----------------|  
 |SELECT|Synonymes<br /><br /> Tables et colonnes<br /><br /> Fonctions table, [!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR (Common Language Runtime) et colonnes<br /><br /> Vues et colonnes|  
 |VIEW CHANGE TRACKING|Tables<br /><br /> Schémas|  
@@ -107,16 +107,16 @@ ms.locfileid: "63128764"
 |Suppression|Synonymes<br /><br /> Tables et colonnes<br /><br /> Vues et colonnes|  
 |Exécutez|Procédures ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Fonctions scalaires et d'agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Synonymes<br /><br /> Types CLR|  
 |RECEIVE|Files d’attente[!INCLUDE[ssSB](../../includes/sssb-md.md)]|  
-|VIEW DEFINITION|Groupes de disponibilité<br /><br /> Procédures ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Files d’attente[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Fonctions scalaires et d'agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Connexions, utilisateurs et rôles<br /><br /> Synonymes<br /><br /> Tables<br /><br /> Fonctions table ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Affichages<br /><br /> Objets séquence|  
-|ALTER|Groupes de disponibilité<br /><br /> Procédures ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Fonctions scalaires et d'agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Objets séquence<br /><br /> Connexions, utilisateurs et rôles<br /><br /> Files d’attente[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Tables<br /><br /> Fonctions table ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Affichages|  
-|TAKE OWNERSHIP|Groupes de disponibilité<br /><br /> Rôles<br /><br /> Procédures ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Fonctions scalaires et d'agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Rôles de serveur<br /><br /> Synonymes<br /><br /> Tables<br /><br /> Fonctions table ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Affichages<br /><br /> Objets séquence|  
-|CONTROL|Groupes de disponibilité<br /><br /> Procédures ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Fonctions scalaires et d'agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Connexions, utilisateurs et rôles<br /><br /> Files d’attente[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Synonymes<br /><br /> Tables<br /><br /> Fonctions table ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Affichages<br /><br /> Objets séquence|  
+|VIEW DEFINITION|Groupes de disponibilité<br /><br /> Procédures ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Files d’attente[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Fonctions scalaires et d'agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Connexions, utilisateurs et rôles<br /><br /> Synonymes<br /><br /> Tables<br /><br /> Fonctions table ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Les vues<br /><br /> Objets séquence|  
+|ALTER|Groupes de disponibilité<br /><br /> Procédures ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Fonctions scalaires et d'agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Objets séquence<br /><br /> Connexions, utilisateurs et rôles<br /><br /> Files d’attente[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Tables<br /><br /> Fonctions table ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Les vues|  
+|TAKE OWNERSHIP|Groupes de disponibilité<br /><br /> Rôles<br /><br /> Procédures ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Fonctions scalaires et d'agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Rôles de serveur<br /><br /> Synonymes<br /><br /> Tables<br /><br /> Fonctions table ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Les vues<br /><br /> Objets séquence|  
+|CONTROL|Groupes de disponibilité<br /><br /> Procédures ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Fonctions scalaires et d'agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Connexions, utilisateurs et rôles<br /><br /> Files d’attente[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Synonymes<br /><br /> Tables<br /><br /> Fonctions table ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Les vues<br /><br /> Objets séquence|  
 |IMPERSONATE|Connexions et utilisateurs|  
   
 > [!CAUTION]  
->  Les autorisations par défaut accordées aux objets système au moment de l'installation sont évaluées avec soin par rapport aux menaces potentielles et ne doivent pas être modifiées dans le cadre du renforcement de l’installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les modifications apportées aux autorisations sur les objets système peuvent limiter ou rompre le fonctionnement et pourraient potentiellement laisser votre installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un état non pris en charge.  
+>  Les autorisations par défaut accordées aux objets système au moment de l'installation sont évaluées avec soin par rapport aux menaces potentielles et ne doivent pas être modifiées dans le cadre du renforcement de l'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les modifications apportées aux autorisations sur les objets système peuvent limiter ou rompre le fonctionnement et pourraient potentiellement laisser votre installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un état non pris en charge.  
   
-##  <a name="_permissions"></a> SQL Server et les autorisations de base de données SQL  
+##  <a name="_permissions"></a>Autorisations SQL Server et SQL Database  
  Le tableau ci-dessous fournit la liste complète des autorisations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les autorisations[!INCLUDE[ssSDS](../../includes/sssds-md.md)] sont disponibles seulement pour les éléments sécurisables de base pris en charge. Les autorisations de niveau serveur ne peuvent pas être accordées dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; toutefois, dans certains cas, les autorisations de base de données sont disponibles à la place.  
   
 |Élément sécurisable de base|Autorisations granulaires sur les éléments sécurisables de base|Code du type d'autorisation|Élément sécurisable qui contient un élément sécurisable de base|Autorisation sur l'élément sécurisable conteneur, qui implique une autorisation granulaire sur l'élément sécurisable de base|  
@@ -157,7 +157,7 @@ ms.locfileid: "63128764"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Remarque : S'applique uniquement à [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Remarque : s’applique uniquement [!INCLUDE[ssSDS](../../includes/sssds-md.md)]à.|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +165,7 @@ ms.locfileid: "63128764"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|MODIFIER UNE STRATÉGIE DE SÉCURITÉ|ALSP<br /><br /> Remarque : S'applique uniquement à [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|MODIFIER UNE STRATÉGIE DE SÉCURITÉ|ALSP<br /><br /> Remarque : s’applique uniquement [!INCLUDE[ssSDS](../../includes/sssds-md.md)]à.|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -204,7 +204,7 @@ ms.locfileid: "63128764"
 |DATABASE|Suppression|DL|SERVER|CONTROL SERVER|  
 |DATABASE|Exécutez|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Remarque : S'applique uniquement à [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Utilisez ALTER ANY CONNECTION dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Remarque : s’applique uniquement [!INCLUDE[ssSDS](../../includes/sssds-md.md)]à. Utilisez ALTER ANY CONNECTION dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
@@ -354,7 +354,7 @@ ms.locfileid: "63128764"
   
     -   la connexion ;  
   
-    -   l'utilisateur ;  
+    -   L’utilisateur  
   
     -   les appartenances aux rôles ;  
   
@@ -399,7 +399,7 @@ ms.locfileid: "63128764"
 ##  <a name="_examples"></a> Exemples  
  Les exemples de cette section montrent comment récupérer des informations relatives aux autorisations.  
   
-### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. Retour de la liste complète des autorisations accordables  
+### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>R. Retour de la liste complète des autorisations accordables  
  L'instruction suivante retourne toutes les autorisations du [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l'aide de la fonction `fn_builtin_permissions` . Pour plus d’informations, consultez [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql).  
   
 ```  

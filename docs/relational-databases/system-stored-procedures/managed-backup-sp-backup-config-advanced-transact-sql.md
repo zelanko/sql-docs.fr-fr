@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_backup_config_advanced (Transact-SQL) | Microsoft Docs
+title: managed_backup. sp_backup_config_advanced (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cbbbfbf442d36a5f78771e4d097888a86b441065
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942148"
 ---
-# <a name="managedbackupspbackupconfigadvanced-transact-sql"></a>managed_backup.sp_backup_config_advanced (Transact-SQL)
+# <a name="managed_backupsp_backup_config_advanced-transact-sql"></a>managed_backup. sp_backup_config_advanced (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Configure les paramètres avancés pour [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,10 +47,10 @@ EXEC managed_backup.sp_backup_config_advanced
   
 ##  <a name="Arguments"></a> Arguments  
  @database_name  
- Le nom de la base de données, permettant la gestion de sauvegarde sur une base de données spécifique. Si NULL ou *, cette sauvegarde managée s’appliqu’à toutes les bases de données sur le serveur.  
+ Nom de la base de données pour activer la sauvegarde managée sur une base de données spécifique. Si la valeur est NULL ou *, cette sauvegarde managée s’applique à toutes les bases de données sur le serveur.  
   
  @encryption_algorithm  
- Nom de l'algorithme de chiffrement utilisé lors de la sauvegarde pour chiffrer le fichier de sauvegarde. Le @encryption_algorithm est **SYSNAME**. C'est un paramètre requis lorsque vous configurez la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour la première fois pour la base de données. Spécifiez **NO_ENCRYPTION** si vous ne souhaitez pas chiffrer le fichier de sauvegarde. Lorsque vous modifiez le [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] paramètres de configuration, ce paramètre est facultatif : si le paramètre n’est pas spécifié, puis les valeurs de configuration existantes sont conservées. Les valeurs autorisées pour ce paramètre sont :  
+ Nom de l'algorithme de chiffrement utilisé lors de la sauvegarde pour chiffrer le fichier de sauvegarde. Est @encryption_algorithm de **type sysname**. C'est un paramètre requis lorsque vous configurez la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour la première fois pour la base de données. Spécifiez **NO_ENCRYPTION** si vous ne souhaitez pas chiffrer le fichier de sauvegarde. Lorsque vous modifiez [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] les paramètres de configuration, ce paramètre est facultatif. Si le paramètre n’est pas spécifié, les valeurs de configuration existantes sont conservées. Les valeurs autorisées pour ce paramètre sont :  
   
 -   AES_128  
   
@@ -65,12 +65,12 @@ EXEC managed_backup.sp_backup_config_advanced
  Pour plus d'informations sur les algorithmes de chiffrement, consultez [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md).  
   
  @encryptor_type  
- Le type de chiffreur, ce qui peut être soit « certificat » ou « ASYMMETRIC_KEY ». Le @encryptor_type est **nvarchar (32)** . Ce paramètre est facultatif si vous spécifiez NO_ENCRYPTION pour le @encryption_algorithm paramètre.  
+ Type de chiffreur, qui peut être « CERTIFICATe » ou « ASYMMETRIC_KEY ». Est @encryptor_type de type **nvarchar (32)**. Ce paramètre est facultatif si vous spécifiez NO_ENCRYPTION pour @encryption_algorithm le paramètre.  
   
  @encryptor_name  
- Nom d'un certificat ou d'une clé asymétrique qui existe, utilisé pour chiffrer la sauvegarde. Le @encryptor_name est **SYSNAME**. Si vous utilisez une clé asymétrique, elle doit être configurée avec la gestion de clés extensible (EKM). Ce paramètre est facultatif si vous spécifiez NO_ENCRYPTION pour le @encryption_algorithm paramètre.  
+ Nom d'un certificat ou d'une clé asymétrique qui existe, utilisé pour chiffrer la sauvegarde. Est @encryptor_name de **type sysname**. Si vous utilisez une clé asymétrique, elle doit être configurée avec la gestion de clés extensible (EKM). Ce paramètre est facultatif si vous spécifiez NO_ENCRYPTION pour @encryption_algorithm le paramètre.  
   
- Pour plus d’informations, consultez [Gestion de clés extensible &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ Pour plus d’informations, consultez [gestion de clés Extensible &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
  @local_cache_path  
  Ce paramètre n’est pas encore pris en charge.  
@@ -81,10 +81,10 @@ EXEC managed_backup.sp_backup_config_advanced
 ## <a name="security"></a>Sécurité  
   
 ### <a name="permissions"></a>Autorisations  
- Nécessite l’appartenance au **db_backupoperator** rôle, de base de données avec **ALTER ANY CREDENTIAL** autorisations, et **EXECUTE** autorisations sur **sp_delete_ backuphistory** procédure stockée.  
+ Requiert l’appartenance au rôle de base de données **db_backupoperator** , avec les autorisations **ALTER ANY CREDENTIAL** et **Execute** sur **sp_delete_backuphistory** procédure stockée.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant définit les options de configuration avancées pour [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour l’instance de SQL Server.  
+ L’exemple suivant définit des options de configuration [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] avancées pour pour l’instance de SQL Server.  
   
 ```  
 Use msdb;  
@@ -97,7 +97,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
- [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
+ [managed_backup. sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
+ [managed_backup. sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
   
   

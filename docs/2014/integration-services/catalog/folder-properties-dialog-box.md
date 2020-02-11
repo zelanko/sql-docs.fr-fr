@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7d04a071bd5d74ddff6c2dc682c0f6153a8f8b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771585"
 ---
 # <a name="folder-properties-dialog-box"></a>Propriétés du dossier, boîte de dialogue
-  Un dossier contient des projets et des environnements dans le catalogue `SSISDB`. Chaque dossier définit des autorisations qui s'appliquent au contenu du dossier. Pour plus d’informations sur les autorisations [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consultez [catalog.grant_permission &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database).  
+  Un dossier contient des projets et des environnements dans le catalogue `SSISDB`. Chaque dossier définit des autorisations qui s'appliquent au contenu du dossier. Pour plus d’informations sur les autorisations [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , consultez [catalog.grant_permission &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database).  
   
 ## <a name="to-set-folder-description-and-permissions"></a>Pour définir la description et les autorisations d'un dossier  
   

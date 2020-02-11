@@ -1,5 +1,5 @@
 ---
-title: Sys.availability_group_listeners (Transact-SQL) | Microsoft Docs
+title: sys. availability_group_listeners (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b363e410f35eb7880933520dd1dbf47f258b651e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041058"
 ---
-# <a name="sysavailabilitygrouplisteners-transact-sql"></a>sys.availability_group_listeners (Transact-SQL)
+# <a name="sysavailability_group_listeners-transact-sql"></a>sys.availability_group_listeners (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Pour chaque groupe de disponibilité Always On, retourne aucune ligne, ce qui indique qu'aucun nom réseau n'est associé au groupe de disponibilité, ou retourne une ligne pour chaque configuration d'écouteur de groupe de disponibilité dans le cluster de clustering de basculement Windows Server (WSFC). Cette vue affiche la configuration en temps réel obtenue à partir du cluster.  
@@ -38,12 +38,12 @@ ms.locfileid: "68041058"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**group_id**|**uniqueidentifier**|ID de groupe de disponibilité (**group_id**) à partir de [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md).|  
-|**listener_id**|**nvarchar(36)**|GUID à partir de l'ID de ressource de cluster.|  
-|**dns_name**|**nvarchar(63)**|Nom réseau configuré (nom d'hôte) de l'écouteur du groupe de disponibilité.|  
-|**port**|**Int**|Numéro de port TCP configuré pour l'écouteur du groupe de disponibilité.<br /><br /> NULL = L'écouteur a été configuré en dehors de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et son numéro de port n'a pas été ajouté au groupe de disponibilité. Pour ajouter le port, Listener de l’option MODIFY le [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction.|  
-|**is_conformant**|**bit**|Indique si cette configuration IP est conforme. Peut prendre une des valeurs suivantes :<br /><br /> 1 = L'écouteur est conforme. Il existe des relations « OR » uniquement entre ses adresses IP (Internet Protocol). *Conforme* englobe toutes une configuration IP qui a été créée par le [CREATE AVAILABILITY GROUP](../../t-sql/statements/create-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction. De plus, si une configuration IP créée en dehors de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par exemple à l'aide du Gestionnaire de cluster de basculement WSFC, peut être modifiée par l'instruction TSQL ALTER AVAILABILITY GROUP, la configuration IP obtient la qualification conforme.<br /><br /> 0 = L'écouteur n'est pas conforme. En général, cela indique une adresse IP qui ne peut pas être configurée à l'aide des commandes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et, à la place, a été définie directement dans le cluster WSFC.|  
-|**ip_configuration_string_from_cluster**|**nvarchar(max)**|Chaînes de configuration IP de cluster, le cas échéant, pour cet écouteur. NULL = L'écouteur n'a pas d'adresse IP virtuelle. Exemple :<br /><br /> Adresse IPv4 : `65.55.39.10`.<br /><br /> Adresse IPv6 : `2001::4898:23:1002:20f:1fff:feff:b3a3`|  
+|**group_id**|**uniqueidentifier**|ID de groupe de disponibilité (**group_id**) à partir de [sys. availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md).|  
+|**listener_id**|**nvarchar (36)**|GUID à partir de l'ID de ressource de cluster.|  
+|**dns_name**|**nvarchar (63)**|Nom réseau configuré (nom d'hôte) de l'écouteur du groupe de disponibilité.|  
+|**importer**|**int**|Numéro de port TCP configuré pour l'écouteur du groupe de disponibilité.<br /><br /> NULL = L'écouteur a été configuré en dehors de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et son numéro de port n'a pas été ajouté au groupe de disponibilité. Pour ajouter le port, pleaseuse l’option modifier l’écouteur de l’instruction [ALTER Availability Group](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
+|**is_conformant**|**bit**|Indique si cette configuration IP est conforme. Peut prendre une des valeurs suivantes :<br /><br /> 1 = L'écouteur est conforme. Seules les relations « ou » existent entre les adresses IP (Internet Protocol). *Conforme* englobe chaque configuration IP créée par l’instruction [Create Availability Group](../../t-sql/statements/create-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] . De plus, si une configuration IP créée en dehors de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par exemple à l'aide du Gestionnaire de cluster de basculement WSFC, peut être modifiée par l'instruction TSQL ALTER AVAILABILITY GROUP, la configuration IP obtient la qualification conforme.<br /><br /> 0 = L'écouteur n'est pas conforme. En général, cela indique une adresse IP qui ne peut pas être configurée à l'aide des commandes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et, à la place, a été définie directement dans le cluster WSFC.|  
+|**ip_configuration_string_from_cluster**|**nvarchar(max)**|Chaînes de configuration IP de cluster, le cas échéant, pour cet écouteur. NULL = L'écouteur n'a pas d'adresse IP virtuelle. Par exemple :<br /><br /> Adresse IPv4 : `65.55.39.10`.<br /><br /> Adresse IPv6 : `2001::4898:23:1002:20f:1fff:feff:b3a3`|  
   
 ## <a name="security"></a>Sécurité  
   

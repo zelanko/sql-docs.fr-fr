@@ -1,5 +1,5 @@
 ---
-title: Setserviceaccountpassword, méthode (classe SqlService) | Microsoft Docs
+title: Méthode SetServiceAccountPassword, (classe SqlService) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 113d84526b34f9f702cd8da68a06c055c3b559e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63062327"
 ---
 # <a name="setserviceaccountpassword-method-sqlservice-class"></a>Méthode SetServiceAccountPassword (classe SqlService)
@@ -40,7 +40,7 @@ AccountOldPassword , ServiceStartPassword
 ```  
   
 ## <a name="parts"></a>Éléments  
- *object*  
+ *dessin*  
  Objet de [classe SqlService](sqlservice-class.md) qui représente le service.  
   
 #### <a name="parameters"></a>Paramètres  

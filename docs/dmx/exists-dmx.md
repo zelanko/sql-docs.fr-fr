@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0197417dfef604f3cb90b5fa032dae892de272c7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889048"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
@@ -29,10 +29,10 @@ EXISTS(<subquery>)
   
 ## <a name="arguments"></a>Arguments  
  *subquery*  
- Une instruction SELECT de la forme SELECT * FROM \<Column Name > [where \<Predicate List >].  
+ Une instruction SELECT de la forme SELECT * FROM \<column Name> [where \<Predicate List>].  
   
 ## <a name="result-type"></a>Type de résultat  
- Retourne la **valeur true** si le jeu de résultats retourné par la sous-requête contient au moins une ligne; Sinon, retourne **false**.  
+ Retourne la **valeur true** si le jeu de résultats retourné par la sous-requête contient au moins une ligne ; Sinon, retourne **false**.  
   
 ## <a name="remarks"></a>Notes  
  Vous pouvez utiliser le mot clé NOT avant EXISTS ; par exemple, `WHERE NOT EXISTS (<subquery>)`.  
@@ -53,10 +53,10 @@ WHERE [[Model] = 'Patch kit'
 )  
 ```  
   
- Une autre façon d’afficher les mêmes données que celles retournées par cette requête consiste à ouvrir le modèle dans la visionneuse d’associations, à cliquer avec le bouton droit sur le kit de correctifs jeu d’éléments **= existing**, à sélectionner l’option d' **extraction** , puis à sélectionner uniquement les **cas de modèles**.  
+ Une autre façon d’afficher les mêmes données que celles retournées par cette requête consiste à ouvrir le modèle dans la visionneuse d’associations, à cliquer avec le bouton droit sur le **Kit de correctifs jeu d’éléments = existing**, à sélectionner l’option d' **extraction** , puis à sélectionner **uniquement les cas de modèles**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Syntaxe de filtre de modèle &#40;et exemples Analysis Services-exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
+ [Fonctions &#40;&#41;DMX](../dmx/functions-dmx.md)   
+ [Syntaxe de filtre de modèle et exemples &#40;Analysis Services d’exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
   
   
