@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b5a98877e04a077bf1bb1c0c527500f3102b862
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827143"
 ---
 # <a name="error-handling-in-data"></a>Gestion des erreurs dans les données
@@ -68,17 +68,17 @@ ms.locfileid: "62827143"
 ## <a name="adding-the-error-description"></a>Ajout de la description de l'erreur  
  Par défaut, une sortie d'erreur fournit le code d'erreur numérique et contient généralement l'identificateur de la colonne dans laquelle l'erreur s'est produite. Vous pouvez utiliser le composant Script pour inclure la description de l'erreur dans une colonne supplémentaire en utilisant une ligne unique de script pour appeler la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> de l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>.  
   
- Le composant Script peut être ajouté au segment d'erreur du flux de données n'importe où en aval des composants de flux de données dont vous souhaitez capturer les erreurs, mais est généralement placé immédiatement avant l'écriture des lignes en erreur vers une destination. De cette manière, le script recherche uniquement les descriptions des lignes d'erreurs écrites. Par exemple, le segment d'erreur du flux de données peut corriger certaines erreurs sans écrire ces lignes dans une destination d'erreur. Pour plus d’informations, consultez [amélioration d’une sortie d’erreur avec le composant Script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
+ Le composant Script peut être ajouté au segment d'erreur du flux de données n'importe où en aval des composants de flux de données dont vous souhaitez capturer les erreurs, mais est généralement placé immédiatement avant l'écriture des lignes en erreur vers une destination. De cette manière, le script recherche uniquement les descriptions des lignes d'erreurs écrites. Par exemple, le segment d'erreur du flux de données peut corriger certaines erreurs sans écrire ces lignes dans une destination d'erreur. Pour plus d’informations, consultez [amélioration d’une sortie d’erreur avec le composant script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
 ### <a name="to-configure-an-error-output"></a>Pour configurer un affichage des erreurs  
   
--   [Configurer une sortie d’erreur dans un composant de flux de données](../configure-an-error-output-in-a-data-flow-component.md)  
+-   [Configurer une sortie d'erreur dans un composant de flux de données](../configure-an-error-output-in-a-data-flow-component.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Flux de données](data-flow.md)   
  [Transformer des données avec des transformations](transformations/transform-data-with-transformations.md)   
- [Connecter des composants avec des chemins](../connect-components-with-paths.md)   
- [tâche de flux de données](../control-flow/data-flow-task.md)   
+ [Connecter des composants avec des chemins d’accès](../connect-components-with-paths.md)   
+ [Tâche de flux de données](../control-flow/data-flow-task.md)   
  [Flux de données](data-flow.md)  
   
   

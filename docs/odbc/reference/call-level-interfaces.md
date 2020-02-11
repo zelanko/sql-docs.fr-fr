@@ -1,5 +1,5 @@
 ---
-title: Niveau d’appel Interfaces | Microsoft Docs
+title: Interfaces de niveau appel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,25 +17,25 @@ ms.assetid: 42257bb6-0bf1-4533-a4ef-4a6dd2aecb18
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c6c37084ad91a931c4479ecf826c5cb554765412
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135672"
 ---
 # <a name="call-level-interfaces"></a>Interfaces de niveau d’appel
-La dernière technique pour l’envoi d’instructions SQL au SGBD est via une interface de niveau d’appel (CLI). Une interface de niveau d’appel fournit une bibliothèque de fonctions de SGBD qui peut être appelée par le programme d’application. Par conséquent, au lieu de tenter de fusion SQL avec un autre langage de programmation, une interface de niveau d’appel est similaire aux bibliothèques routines la plupart des programmeurs sont habitués à utiliser, telles que la chaîne, d’e/s ou des bibliothèques de mathématiques dans C. Notez ce SGBD qui prennent en charge embedded SQL vous disposez déjà d’une interface de niveau d’appel, les appels à laquelle sont générés par le précompilateur. Toutefois, ces appels sont non documentées et l’objet de modifications sans préavis.  
+La dernière technique pour l’envoi d’instructions SQL au SGBD est d’utiliser une interface de niveau appel (CLI). Une interface au niveau de l’appel fournit une bibliothèque de fonctions SGBD qui peuvent être appelées par le programme d’application. Ainsi, au lieu d’essayer de fusionner SQL avec un autre langage de programmation, une interface au niveau de l’appel est similaire aux bibliothèques de routines que la plupart des programmeurs sont habitués à utiliser, comme les bibliothèques de chaînes, d’e/s ou mathématiques en C. Notez que les SGBD qui prennent en charge le SQL incorporé disposent déjà d’une interface de niveau appel, les appels Toutefois, ces appels ne sont pas documentés et peuvent faire l’objet de modifications sans préavis.  
   
- Interfaces de niveau d’appel sont couramment utilisés dans les architectures client/serveur, dans lequel le programme d’application (le client) réside sur un ordinateur et le SGBD (serveur) se trouve sur un autre ordinateur. L’application appelle les fonctions de l’interface CLI sur le système local, et ces appels sont envoyés sur le réseau au SGBD pour le traitement.  
+ Les interfaces de niveau appel sont couramment utilisées dans les architectures client/serveur, dans lesquelles le programme d’application (le client) réside sur un ordinateur et le SGBD (le serveur) réside sur un autre ordinateur. L’application appelle les fonctions CLI sur le système local, et ces appels sont envoyés sur le réseau au SGBD pour traitement.  
   
- Une interface de niveau d’appel est similaire à SQL dynamique, car les instructions SQL sont passées au SGBD pour le traitement en cours d’exécution, mais il diffère d’embedded SQL dans sa globalité car il n’existe aucune des instructions SQL incorporées et aucun précompilateur n’est requis.  
+ Une interface au niveau de l’appel est similaire au SQL dynamique, dans le cas où les instructions SQL sont passées au SGBD pour traitement au moment de l’exécution, mais diffère de SQL incorporé dans la mesure où il n’y a pas d’instructions SQL incorporées et qu’aucun précompilation n’est nécessaire.  
   
- À l’aide d’une interface de niveau d’appel généralement implique les étapes suivantes :  
+ L’utilisation d’une interface au niveau de l’appel implique généralement les étapes suivantes :  
   
-1.  L’application appelle une fonction de l’interface CLI pour vous connecter au SGBD.  
+1.  L’application appelle une fonction CLI pour se connecter au SGBD.  
   
-2.  L’application génère une instruction SQL et le place dans une mémoire tampon. Il appelle ensuite une ou plusieurs fonctions CLI pour l’envoi de l’instruction au SGBD pour la préparation et l’exécution.  
+2.  L’application génère une instruction SQL et la place dans une mémoire tampon. Il appelle ensuite une ou plusieurs fonctions CLI pour envoyer l’instruction au SGBD pour la préparation et l’exécution.  
   
-3.  Si l’instruction est une instruction SELECT, l’application appelle une fonction de l’interface CLI pour retourner les résultats dans les tampons de l’application. En règle générale, cette fonction retourne une ligne ou une colonne de données à la fois.  
+3.  Si l’instruction est une instruction SELECT, l’application appelle une fonction CLI pour retourner les résultats dans les mémoires tampons d’application. En règle générale, cette fonction retourne une ligne ou une colonne de données à la fois.  
   
-4.  L’application appelle une fonction de l’interface CLI pour vous déconnecter de SGBD.
+4.  L’application appelle une fonction CLI pour se déconnecter du SGBD.

@@ -18,10 +18,10 @@ ms.assetid: 9672e70f-1d8c-4133-ac73-3b5733a1c4ee
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1324d352ca113a441dc388a235d44b5274e441be
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73658981"
 ---
 # <a name="isreadonly-property-sqlserviceadvancedproperty-class"></a>Propriété IsReadOnly (classe SqlServiceAdvancedProperty)
@@ -36,7 +36,7 @@ object.IsReadOnly [= value]
 ```  
   
 ## <a name="parts"></a>Éléments  
- *object*  
+ *dessin*  
  Objet de [classe SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) qui représente une propriété avancée.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  

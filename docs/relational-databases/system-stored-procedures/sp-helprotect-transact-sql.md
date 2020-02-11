@@ -18,23 +18,23 @@ ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7db43df5d500e56e58e3e8465ac03158fe7e4d21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997477"
 ---
-# <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
+# <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne un rapport contenant des informations sur les autorisations utilisateur concernant un objet ou des autorisations d'instruction, dans la base de données active.  
   
 > [!IMPORTANT]  
->  **sp_helprotect** ne retourne pas d’informations sur les éléments sécurisables qui ont été introduits dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Utilisez [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) et [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) à la place.  
+>  **sp_helprotect** ne retourne pas d’informations sur les éléments sécurisables introduits [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]dans. Utilisez à la place [sys. database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) et [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) .  
   
  Ne répertorie pas les autorisations qui sont toujours affectées aux rôles serveur fixes ou aux rôles de base de données fixes. N'inclut pas les identifiants de connexion ou les utilisateurs qui reçoivent des autorisations en fonction de leur appartenance à un rôle.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,17 +47,17 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name = ] 'object_statement'` Est le nom de l’objet dans la base de données actuelle ou une instruction, qui dispose des autorisations pour le rapport. *object_statement* est **nvarchar(776)** , avec NULL comme valeur par défaut, qui retourne toutes les autorisations d’objet et d’instruction. Si sa valeur est un objet (table, vue, procédure stockée ou procédure stockée étendue), ce doit être un objet valide dans la base de données en cours. Le nom d’objet peut inclure un identificateur de propriétaire sous la forme _propriétaire_ **.** _objet_.  
+`[ @name = ] 'object_statement'`Nom de l’objet dans la base de données active, ou une instruction, qui dispose des autorisations de rapport. *object_statement* est de type **nvarchar (776)**, avec NULL comme valeur par défaut, qui retourne toutes les autorisations d’objet et d’instruction. Si sa valeur est un objet (table, vue, procédure stockée ou procédure stockée étendue), ce doit être un objet valide dans la base de données en cours. Le nom de l’objet peut inclure un qualificateur de propriétaire sous la forme _propriétaire_**.** _objet_.  
   
- Si *object_statement* est une instruction, il peut être une instruction CREATE.  
+ Si *object_statement* est une instruction, il peut s’agir d’une instruction CREATE.  
   
-`[ @username = ] 'security_account'` Est le nom du principal pour lequel les autorisations sont retournées. *celui-ci* est **sysname**, avec NULL comme valeur par défaut, qui retourne tous les principaux dans la base de données actuelle. *celui-ci* doit exister dans la base de données actuelle.  
+`[ @username = ] 'security_account'`Nom du principal pour lequel des autorisations sont retournées. *security_account* est de **type sysname**, avec NULL comme valeur par défaut, qui retourne tous les principaux de la base de données active. *security_account* doit exister dans la base de données active.  
   
-`[ @grantorname = ] 'grantor'` Est le nom de principal ayant accordé les autorisations. *fournisseur d’autorisations* est **sysname**, avec NULL comme valeur par défaut, qui retourne toutes les informations sur les autorisations accordées par un principal dans la base de données.  
+`[ @grantorname = ] 'grantor'`Nom du principal qui a accordé des autorisations. *Granter* est de **type sysname**, avec NULL comme valeur par défaut, qui retourne toutes les informations relatives aux autorisations accordées par un principal de la base de données.  
   
-`[ @permissionarea = ] 'type'` Est une chaîne de caractères qui indique s’il faut afficher les autorisations d’objet (chaîne de caractères **o**), les autorisations d’instruction (chaîne de caractères **s**), ou les deux (**système d’exploitation**). *type* est **varchar (10)** , avec une valeur par défaut **système d’exploitation**. *type* peut être n’importe quelle combinaison de **o** et **s**, avec ou sans virgule ou espace entre **o** et **s**.  
+`[ @permissionarea = ] 'type'`Chaîne de caractères qui indique s’il faut afficher les autorisations relatives aux objets (chaîne de caractères **o**), les autorisations d’instruction (chaîne de caractères **s**) ou les deux (**système d’exploitation**). le *type* est **varchar (10)**, avec le **système d’exploitation**comme valeur par défaut. le *type* peut être n’importe quelle combinaison de **o** et de **s**, avec ou sans virgules ou espaces entre **o** et **s**.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -65,11 +65,11 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**Propriétaire**|**sysname**|Nom du propriétaire de l’objet.|  
-|**Objet**|**sysname**|Nom de l'objet.|  
-|**Bénéficiaire**|**sysname**|Nom du principal auquel des autorisations sont accordées.|  
+|**Object**|**sysname**|Nom de l'objet.|  
+|**Voient**|**sysname**|Nom du principal auquel des autorisations sont accordées.|  
 |**Fournisseur d'autorisations**|**sysname**|Nom du principal qui a accordé des autorisations au bénéficiaire spécifié.|  
-|**ProtectType**|**nvarchar(10)**|Nom du type de protection :<br /><br /> GRANT REVOKE|  
-|**Action**|**nvarchar(60)**|Nom de l’autorisation. Les instructions valides d'autorisation varient selon le type d'objet.|  
+|**ProtectType**|**nvarchar(10**|Nom du type de protection :<br /><br /> GRANT REVOKE|  
+|**Action**|**nvarchar (60)**|Nom de l’autorisation. Les instructions valides d'autorisation varient selon le type d'objet.|  
 |**Colonne**|**sysname**|Type d'autorisation :<br /><br /> All = l'autorisation couvre toutes les colonnes en cours de l'objet.<br /><br /> New = l'autorisation couvre toutes les nouvelles colonnes susceptibles d'être modifiées (à l'aide de l'instruction ALTER) pour l'objet ultérieurement.<br /><br /> All+New = combinaison de All et New.<br /><br /> Retourne un point si le type d'autorisation ne s'applique pas aux colonnes.|  
   
 ## <a name="remarks"></a>Notes  
@@ -81,7 +81,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 EXEC sp_helprotect NULL, NULL, dbo;  
 ```  
   
- Ou  
+ ou  
   
 ```  
 EXEC sp_helprotect @grantorname = 'dbo';  
@@ -133,9 +133,9 @@ EXEC sp_helprotect @name = 'CREATE TABLE';
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
+ [DENY &#40;&#41;Transact-SQL](../../t-sql/statements/deny-transact-sql.md)   
+ [GRANT &#40;&#41;Transact-SQL](../../t-sql/statements/grant-transact-sql.md)   
+ [REVOKE &#40;&#41;Transact-SQL](../../t-sql/statements/revoke-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.openkeys (Transact-SQL) | Microsoft Docs
+title: sys. openkeys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f1ef2a7b5bdff79c3d12441f09ab2a05439f7a61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125381"
 ---
 # <a name="sysopenkeys-transact-sql"></a>sys.openkeys (Transact-SQL)
@@ -34,13 +34,13 @@ ms.locfileid: "68125381"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**Int**|ID de la base de données qui contient la clé.|  
+|**database_id**|**int**|ID de la base de données qui contient la clé.|  
 |**database_name**|**sysname**|Nom de la base de données qui contient la clé.|  
 |**key_id**|**int**|ID de la clé. L'ID est unique dans la base de données.|  
 |**key_name**|**sysname**|Nom de la clé. Unique dans la base de données.|  
 |**key_guid**|**varbinary**|GUID de la clé. Unique dans la base de données.|  
-|**opened_date**|**datetime**|Date et heure d'ouverture de la clé.|  
-|**status**|**int**|1 si la clé est valide dans les métadonnées. 0 si la clé est introuvable dans les métadonnées.|  
+|**opened_date**|**DATETIME**|Date et heure d'ouverture de la clé.|  
+|**statu**|**int**|1 si la clé est valide dans les métadonnées. 0 si la clé est introuvable dans les métadonnées.|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

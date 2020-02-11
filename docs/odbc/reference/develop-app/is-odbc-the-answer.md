@@ -1,5 +1,5 @@
 ---
-title: ODBC est-il la réponse ? | Microsoft Docs
+title: ODBC est-il la réponse ? | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ ms.assetid: bfa5e6ee-5979-42a9-be6f-a84d1ee7a54c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e325793a7b703c445be836f6f427645acda3370
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138848"
 ---
 # <a name="is-odbc-the-answer"></a>ODBC est-il la réponse ?
-Avant d’aborder la question de l’interopérabilité, prenez en compte la question suivante : L’application doit-elle utiliser ODBC du tout ? Cela peut sembler une étrange question à poser dans un guide pour ODBC, mais il est en fait, un message légitime. ODBC n’a pas été conçu pour remplacer complètement les API de base de données natif, ni a été conçu pour fournir un accès de base de données dans toutes les circonstances. Il a été conçu pour fournir une interface commune pour les bases de données et a été conçue pour libérer les programmeurs d’applications d’avoir à en savoir plus sur et maintenir des liens vers plusieurs bases de données.  
+Avant d’aborder la question de l’interopérabilité, tenez compte de la question suivante : l’application doit-elle utiliser ODBC ? Cela peut sembler une question étrange de demander un guide à ODBC, mais il s’agit en fait d’un problème légitime. ODBC n’a pas été conçu pour remplacer complètement les API de base de données natives et n’a pas été conçu pour fournir un accès à la base de données dans toutes les circonstances. Il a été conçu pour fournir une interface commune aux bases de données et a été conçu pour permettre aux programmeurs d’applications de ne pas avoir à découvrir et à gérer des liens vers plusieurs bases de données.  
   
- Les applications personnalisées sont des candidats idéaux pour l’API de base de données natif. La principale raison est que des applications personnalisées souvent travailler avec un système SGBD unique et n’ont pas besoin pour fonctionner. Base de données native API peut effectuer une meilleure que ODBC d’exposer les fonctionnalités de SGBD particulier et peut exposer des fonctionnalités ne pas exposées par ODBC. En outre, étant donné que les développeurs d’applications personnalisées sont généralement familiarisés avec la base de données native API pour leurs SGBD, il y a peu de raisons pour en savoir plus de ODBC. Toutefois, il est intéressant de noter que, pour certains SGBD, ODBC est la base de données API native.  
+ Les applications personnalisées sont des candidats privilégiés pour les API de base de données natives. La raison principale est que les applications personnalisées fonctionnent souvent avec un SGBD unique et n’ont pas besoin d’être interopérables. Les API de base de données natives peuvent être plus performantes que ODBC d’exposer les fonctionnalités d’un SGBD particulier et peuvent exposer des fonctionnalités qui ne sont pas exposées par ODBC. En outre, étant donné que les développeurs d’applications personnalisées sont généralement familiarisés avec l’API de base de données native pour leur SGBD, il y a peu de raisons d’apprendre ODBC. Toutefois, il est intéressant de noter que pour certains SGBD, ODBC est l’API de base de données native.  
   
- Par conséquent, les applications qui sont candidats pour ODBC ? Les meilleurs candidats sont les applications qui fonctionnent avec plus d’un SGBD. Cela inclut pratiquement toutes les applications génériques et verticales. Il inclut également un nombre d’applications personnalisées. Par exemple, les applications personnalisées qui utilisent plusieurs SGBD différents sont beaucoup plus facile et plus clair à écrire avec ODBC qu’avec plusieurs API natives. Et les applications personnalisées écrites avec ODBC sont beaucoup plus faciles de migrer une société déplace d’un SGBD à l’autre ou déploie la même application sur différents SGBD.
+ Quelles sont les applications qui sont candidates à ODBC ? Les meilleurs candidats sont des applications qui fonctionnent avec plusieurs SGBD. Cela comprend pratiquement toutes les applications génériques et verticales. Il comprend également un certain nombre d’applications personnalisées. Par exemple, les applications personnalisées qui utilisent différents SGBD sont beaucoup plus simples et plus faciles à écrire avec ODBC qu’avec plusieurs API natives. Les applications personnalisées écrites avec ODBC sont beaucoup plus faciles à migrer au fur et à mesure que les entreprises passent d’un SGBD à un autre ou déploient la même application sur différents SGBD.

@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f31a95815c3a6c365d179a350846ec6f9a8bb795
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098605"
 ---
-# <a name="backupencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>Méthode BackupEncryptionKey (WMI MSReportServer_ConfigurationSetting)
+# <a name="backupencryptionkey-method-wmi-msreportserver_configurationsetting"></a>Méthode BackupEncryptionKey (WMI MSReportServer_ConfigurationSetting)
   Sauvegarde la clé de chiffrement de l'instance du serveur de rapports spécifiée. Un chiffrement par mot de passe est utilisé pour le stockage de la clé de chiffrement.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -46,13 +46,13 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
  *Mot de passe*  
  Chaîne utilisée pour chiffrer la clé de chiffrement avant qu'elle soit retournée.  
   
- *KeyFile[]*  
+ *Keyfile []*  
  [out] Tableau contenant la clé de chiffrement chiffrée.  
   
  *Longueur*  
  [out] Longueur du tableau retourné par la méthode.  
   
- *HRESULT*  
+ *SIGNÉ*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
   
  *ExtendedErrors[]*  
@@ -61,8 +61,8 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
 ## <a name="return-value"></a>Valeur de retour  
  Retourne un paramètre *HRESULT* qui indique si l'appel de la méthode a réussi ou a échoué. Une valeur 0 indique que l'appel de méthode a réussi. Une valeur différente de zéro indique qu'une erreur s'est produite.  
   
-## <a name="requirements"></a>Configuration requise  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+## <a name="requirements"></a>Spécifications  
+ **Espace de noms :**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

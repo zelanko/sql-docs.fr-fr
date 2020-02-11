@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4381047ad4373a2a5b03dc9ba1c96274b37621f2
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530847"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>Masquage et désactivation des hiérarchies d'attributs
@@ -49,27 +49,27 @@ ms.locfileid: "69530847"
   
 2.  Vérifiez si les hiérarchies d'attributs suivantes apparaissent dans la liste **Hiérarchie** :  
   
-    -   **Base Rate**  
+    -   **Taux de base**  
   
-    -   **Birth Date**  
+    -   **Date de naissance**  
   
-    -   **Nom d'accès**  
+    -   **ID de connexion**  
   
-    -   **Manager SSN**  
+    -   **SSN du gestionnaire**  
   
-    -   **SSN**  
+    -   **N**  
   
 3.  Affichez l'onglet **Structure de dimension** , puis sélectionnez les attributs suivants dans le volet **Attributs** . Vous pouvez sélectionner plusieurs mesures en cliquant sur chacune d'elles tout en maintenant enfoncée la touche CTRL :  
   
-    -   **Base Rate**  
+    -   **Taux de base**  
   
-    -   **Birth Date**  
+    -   **Date de naissance**  
   
-    -   **Nom d'accès**  
+    -   **ID de connexion**  
   
-    -   **Manager SSN**  
+    -   **SSN du gestionnaire**  
   
-    -   **SSN**  
+    -   **N**  
   
 4.  Dans la fenêtre des propriétés, affectez la valeur **False** à la propriété **AttributeHierarchyEnabled** pour les attributs sélectionnés.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "69530847"
   
      L'illustration suivante montre la propriété **AttributeHierarchyEnabled** avec la valeur False pour les attributs sélectionnés.  
   
-     ![Propriété AttributeHierarchyEnabled définie sur false](../../2014/tutorials/media/l4-hierarchyenabled-1.gif "Propriété AttributeHierarchyEnabled définie sur false")  
+     ![Propriété AttributeHierarchyEnabled avec la valeur False](../../2014/tutorials/media/l4-hierarchyenabled-1.gif "Propriété AttributeHierarchyEnabled avec la valeur False")  
   
 5.  Dans le menu **Générer** , cliquez sur **Déployer Analysis Services Tutorial**.  
   
@@ -93,13 +93,13 @@ ms.locfileid: "69530847"
   
     -   **Nom complet**  
   
-    -   **Postal Code**  
+    -   **Code postal**  
   
 3.  Affichez l'onglet **Structure de dimension** , puis sélectionnez les attributs suivants dans le volet **Attributs** . Pour cela, utilisez la touche CTRL pour sélectionner plusieurs attributs en même temps :  
   
     -   **Nom complet**  
   
-    -   **Postal Code**  
+    -   **Code postal**  
   
 4.  Dans la fenêtre des propriétés, affectez la valeur **False** à la propriété **AttributeHierarchyVisible** pour les attributs sélectionnés.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "69530847"
   
      L'illustration suivante montre la propriété **AttributeHierarchyVisible** avec la valeur False.  
   
-     ![Propriété AttributeHierarchyVisible définie sur false](../../2014/tutorials/media/l4-hierarchyvisible-1.gif "Propriété AttributeHierarchyVisible définie sur false")  
+     ![Propriété AttributeHierarchyVisible avec la valeur False](../../2014/tutorials/media/l4-hierarchyvisible-1.gif "Propriété AttributeHierarchyVisible avec la valeur False")  
   
 5.  Faites glisser l'attribut **Postal Code** du volet **Attributs** vers la hiérarchie utilisateur **Customer Geography** du volet **Hiérarchies et niveaux** , immédiatement sous le niveau **City** .  
   
@@ -126,6 +126,6 @@ ms.locfileid: "69530847"
      Notez que les niveaux masqués, **Postal Code** et **Full Name**, sont visibles dans la hiérarchie définie par l’utilisateur.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Tri des membres d’attribut sur la base d’un attribut secondaire](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
+ [Tri des membres d'attribut sur la base d'un attribut secondaire](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
   
   
