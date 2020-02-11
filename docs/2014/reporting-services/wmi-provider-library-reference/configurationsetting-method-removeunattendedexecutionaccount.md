@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: efe0523c9aa13315399c043367ef05a63da46e91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098154"
 ---
-# <a name="removeunattendedexecutionaccount-method-wmi-msreportserverconfigurationsetting"></a>Méthode RemoveUnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting)
+# <a name="removeunattendedexecutionaccount-method-wmi-msreportserver_configurationsetting"></a>Méthode RemoveUnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting)
   Supprime l'entrée de compte d'exécution sans assistance du fichier de configuration du serveur de rapports.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -39,14 +39,14 @@ public void RemoveUnattendedExecutionAccount (out Int32 HRESULT);
 ```  
   
 ## <a name="parameters"></a>Paramètres  
- *HRESULT*  
+ *SIGNÉ*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Retourne un paramètre *HRESULT* qui indique si l'appel de la méthode a réussi ou a échoué. Une valeur 0 indique que l'appel de méthode a réussi. Une valeur différente de zéro indique qu'une erreur s'est produite.  
   
-## <a name="requirements"></a>Configuration requise  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+## <a name="requirements"></a>Spécifications  
+ **Espace de noms :**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
