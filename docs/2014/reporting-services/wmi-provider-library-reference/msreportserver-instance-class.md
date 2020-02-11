@@ -20,13 +20,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a88146da815b97cecbdef598d0c75f1f95fcb54c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097219"
 ---
-# <a name="msreportserverinstance-class"></a>classe MSReportServer_Instance
+# <a name="msreportserver_instance-class"></a>classe MSReportServer_Instance
   La classe MSReportServer_Instance fournit des informations de base nécessaires pour qu’un client puisse se connecter à un serveur de rapports installé.  
   
  Pour obtenir la liste de tous les membres de ce type, consultez [MSReportServer_Instance Members](msreportserver-instance-members.md)  
@@ -44,10 +44,10 @@ public class MSReportServer_Instance
 ## <a name="thread-safety"></a>Sécurité des threads  
  Tous les membres publics statiques (**Shared** en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) de ce type sont sécurisés pour les opérations multithread. Il n'est pas garanti que les membres d'instance soient thread-safe.  
   
-## <a name="requirements"></a>Configuration requise  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+## <a name="requirements"></a>Spécifications  
+ **Espace de noms :**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
- **Plateforme :** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
+ **Plateforme :**[!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_Instance](msreportserver-instance-members.md)  

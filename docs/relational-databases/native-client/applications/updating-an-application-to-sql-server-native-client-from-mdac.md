@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f8f6b7efd8d97f63e93061cbef1a54e1df3146d2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243786"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>Mise à jour d'une application vers SQL Server Native Client à partir de MDAC
@@ -101,17 +101,17 @@ ms.locfileid: "75243786"
   
     -   Tuer  
   
-    -   Sauvegarde  
+    -   Backup  
   
 -   Lorsque des applications MDAC se connectent à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les types de données introduits dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] apparaissent en tant que types de données compatibles avec [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)], comme indiqué dans le tableau suivant.  
   
     |Type SQL Server 2005|Type SQL Server 2000|  
     |--------------------------|--------------------------|  
-    |**varchar (max)**|**financière**|  
-    |**nvarchar(max)**|**Text**|  
-    |**varbinary (max)**|**image**|  
+    |**varchar(max)**|**text**|  
+    |**nvarchar(max)**|**ntext**|  
+    |**varbinary(max)**|**image**|  
     |**assorti**|**varbinary**|  
-    |**Xml**|**Text**|  
+    |**langage**|**ntext**|  
   
      Ce mappage de type affecte les valeurs retournées pour les métadonnées de colonne. Par exemple, une colonne de **texte** a une taille maximale de 2 147 483 647, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mais ODBC native client signale la taille maximale des colonnes de type **varchar (max)** comme SQL_SS_LENGTH_UNLIMITED, et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB signale la taille maximale des colonnes **varchar (max)** comme 2 147 483 647 ou-1, en fonction de la plateforme.  
   
@@ -128,6 +128,6 @@ ms.locfileid: "75243786"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client et MDAC prennent en charge l'isolation de la transaction de lecture validée à l'aide du contrôle de version de ligne, mais seul [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge l'isolation de la transaction d'instantané. (En termes de programmation, l'isolation de la transaction de lecture validée à l'aide du contrôle de version de ligne est la même chose que la transaction de lecture validée.)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création d’applications avec SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [Génération d’applications avec SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

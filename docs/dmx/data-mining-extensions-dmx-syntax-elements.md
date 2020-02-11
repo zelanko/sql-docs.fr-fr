@@ -1,5 +1,5 @@
 ---
-title: Data Mining Extensions (DMX) les éléments de syntaxe | Microsoft Docs
+title: Éléments de syntaxe DMX (Data Mining Extensions) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,59 +9,59 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 17d24c6924b03e4ed0415e73bfefc0d372ca45bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68070853"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>Éléments de syntaxe DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous pouvez utiliser divers éléments de syntaxe pour définir les déclarations d’Extensions DMX (Data Mining) que vous pouvez utiliser pour créer, gérer et à utiliser des modèles d’exploration de données. Les rubriques suivantes décrivent ces éléments de syntaxe.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous pouvez utiliser différents éléments syntaxiques pour définir des instructions DMX (Data Mining Extensions) que vous pouvez utiliser pour créer, gérer et utiliser des modèles d’exploration de données. Les rubriques suivantes décrivent ces éléments de syntaxe.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Identificateurs &#40;DMX&#41;](../dmx/identifiers-dmx.md)  
+ [Identificateurs &#40;&#41;DMX](../dmx/identifiers-dmx.md)  
  Nommez les objets tels que les modèles d'exploration de données, les structures d'exploration de données et les colonnes.  
   
- [Types de données &#40;DMX&#41;](../dmx/data-types-dmx.md)  
+ [Types de données &#40;&#41;DMX](../dmx/data-types-dmx.md)  
  Définissez le type de données qu'une colonne de modèle d'exploration de données contient.  
   
  [Expressions &#40;DMX&#41;](../dmx/expressions-dmx.md)  
  Unités de syntaxe que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peut résoudre en valeurs unique ou scalaire, en objets, ou en valeurs de table.  
   
- [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [Opérateurs &#40;&#41;DMX](../dmx/operators-dmx.md)  
  Utilisés avec une ou plusieurs expressions DMX simples pour créer des expressions DMX plus complexes.  
   
- [Fonctions &#40;DMX&#41;](../dmx/functions-dmx.md)  
+ [Fonctions &#40;&#41;DMX](../dmx/functions-dmx.md)  
  Expression qui prend zéro ou une ou plusieurs valeurs d'entrée et retourne une valeur scalaire ou une table.  
   
- [Commentaires &#40;DMX&#41;](../dmx/comments-dmx.md)  
- Éléments de texte que vous pouvez insérer dans des instructions DMX ou des scripts pour expliquer l'objectif d'une instruction. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] n’exécute pas de commentaires.  
+ [Commentaires &#40;&#41;DMX](../dmx/comments-dmx.md)  
+ Éléments de texte que vous pouvez insérer dans des instructions DMX ou des scripts pour expliquer l'objectif d'une instruction. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]n’exécute pas de commentaires.  
   
- [Mots clés réservés &#40;DMX&#41;](../dmx/reserved-keywords-dmx.md)  
+ [Mots clés réservés &#40;&#41;DMX](../dmx/reserved-keywords-dmx.md)  
  Mots réservés à l'utilisation de DMX qui ne doivent pas être employés pour nommer des objets dans une base de données.  
   
- [Types de contenu &#40;DMX&#41;](../dmx/content-types-dmx.md)  
+ [Types de contenu &#40;&#41;DMX](../dmx/content-types-dmx.md)  
  Définissez le contenu qu'une colonne de structure d'exploration de données contient.  
   
- [Distributions &#40;DMX&#41;](../dmx/distributions-dmx.md)  
+ [Distributions &#40;&#41;DMX](../dmx/distributions-dmx.md)  
  Définit la distribution des données au sein d'une colonne.  
   
- [Utilisation &#40;DMX&#41;](../dmx/usage-dmx.md)  
+ [&#41;DMX &#40;d’utilisation](../dmx/usage-dmx.md)  
  Définissez de quelle manière un modèle utilise les colonnes qu'il contient.  
   
- [Indicateurs de modélisation &#40;DMX&#41;](../dmx/modeling-flags-dmx.md)  
+ [Indicateurs de modélisation &#40;&#41;DMX](../dmx/modeling-flags-dmx.md)  
  Définissez les indicateurs supplémentaires utilisés par l'algorithme pour traiter un modèle d'exploration de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Conventions de syntaxe](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Informations de référence sur la&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Informations de référence sur les fonctions DMX&#41; Data Mining Extensions &#40;](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Informations de référence sur l’opérateur de&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Informations de référence sur les instructions DMX&#41; &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Conventions de syntaxe du&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)   
  [Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
+ [Présentation de l'instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   

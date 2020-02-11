@@ -14,10 +14,10 @@ ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 78ba8b955fe0702a5b1737c1de24426d586f9ffa
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729362"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>Supprimer un groupe d'attributs (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "73729362"
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], supprimez un groupe d'attributs lorsque vous n'avez plus besoin de l'onglet à afficher dans la zone fonctionnelle **Explorateur** de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
--   **Remarque** Lorsque les groupes d'attributs existent, les attributs qui n'appartiennent pas à un groupe d'attributs ne sont pas affichés dans l' **Explorateur**. Lorsqu'aucun groupe d'attributs n'existe, tous les attributs sont affichés.  
+-   **Remarque** Lorsque des groupes d’attributs existent, les attributs qui n’appartiennent pas à un groupe d’attributs ne sont pas affichés dans l' **Explorateur**. Lorsqu'aucun groupe d'attributs n'existe, tous les attributs sont affichés.  
   
 ## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  

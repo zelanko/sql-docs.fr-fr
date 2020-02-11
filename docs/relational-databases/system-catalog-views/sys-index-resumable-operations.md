@@ -1,5 +1,5 @@
 ---
-title: sys.index_resumable_operations (Transact-SQL) | Microsoft Docs
+title: sys. index_resumable_operations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/12/2019
 ms.prod: sql
@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d33b78710605841e4559f9c402a18210e25b2daa
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73980303"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>sys. index_resumable_operations (Transact-SQL)
@@ -32,18 +32,18 @@ ms.locfileid: "73980303"
 **sys. index_resumable_operations** est une vue système qui surveille et vérifie l’état d’exécution actuel de la reconstruction ou de la création d’index pouvant être reprise.  
 **S’applique à**: SQL Server (2017 et versions ultérieures) et Azure SQL Database
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID de l’objet auquel cet index appartient (non Nullable).|  
 |**index_id**|**int**|ID de l’index (non Nullable). **index_id** n’est unique que dans l’objet.|
-|**nom**|**sysname**|Nom de l’index. le **nom** est unique dans l’objet.|  
+|**nomme**|**sysname**|Nom de l’index. le **nom** est unique dans l’objet.|  
 |**sql_text**|**nvarchar(max)**|Texte de l’instruction T-SQL DDL|
 |**last_max_dop**|**smallint**|Dernier MAX_DOP utilisé (valeur par défaut = 0)|
 |**partition_number**|**int**|Numéro de partition dans l’index ou le segment de mémoire propriétaire. Pour les tables et les index non partitionnés, ou si toutes les partitions sont en cours de reconstruction, la valeur de cette colonne est NULL.|
-|**state**|**tinyint**|État opérationnel de l’index pouvant être repris :<br /><br />0 = en cours d’exécution<br /><br />1 = pause|
-|**state_desc**|**nvarchar(60)**|Description de l’état opérationnel de l’index pouvant être repris (en cours d’exécution ou en pause)|  
-|**start_time**|**datetime**|Heure de début de l’opération d’index (non Nullable)|
-|**last_pause_time**|**datatime**| Heure de la dernière suspension de l’opération d’index (Nullable). NULL si l’opération est en cours d’exécution et n’est jamais suspendue.|
+|**Département**|**tinyint**|État opérationnel de l’index pouvant être repris :<br /><br />0 = en cours d’exécution<br /><br />1 = pause|
+|**state_desc**|**nvarchar (60)**|Description de l’état opérationnel de l’index pouvant être repris (en cours d’exécution ou en pause)|  
+|**start_time**|**DATETIME**|Heure de début de l’opération d’index (non Nullable)|
+|**last_pause_time**|**DataTime**| Heure de la dernière suspension de l’opération d’index (Nullable). NULL si l’opération est en cours d’exécution et n’est jamais suspendue.|
 |**total_execution_time**|**int**|Durée d’exécution totale à partir de l’heure de début en minutes (non Nullable)|
 |**percent_complete**|**real**|Progression de l’opération d’index en% (non Nullable).|
 |**page_count**|**bigint**|Nombre total de pages d’index allouées par l’opération de génération d’index pour les index nouveaux et de mappage (non Nullable).
@@ -73,4 +73,4 @@ SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;
 - [sys.key_constraints](sys-key-constraints-transact-sql.md)
 - [sys.filegroups](sys-filegroups-transact-sql.md)
 - [sys.partition_schemes](sys-partition-schemes-transact-sql.md)
-- [Questions fréquentes (FAQ) sur l’interrogation des catalogues système SQL Server](querying-the-sql-server-system-catalog-faq.md)
+- [Questions fréquentes sur l'interrogation des catalogues système de SQL Server](querying-the-sql-server-system-catalog-faq.md)

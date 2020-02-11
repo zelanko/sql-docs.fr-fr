@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 819a69ad9c1b1415726d816e2cbc1faa92bd6cd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081939"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>Onglet Réseau de dépendances (Visionneuse de modèle d'exploration de données)
@@ -24,17 +24,17 @@ ms.locfileid: "66081939"
   
  L'onglet **Réseau de dépendances**  est utilisé pour plusieurs types de modèles d'exploration de données, y compris les modèles Naïve Bayes, les modèles d'arbre de décision et les modèles d'association. Pour plus d'informations sur la manière d'interpréter le contenu de l'onglet **Réseau de dépendances**  dans le contexte de ces modèles, consultez les liens suivants :  
   
- [Explorer un modèle à l’aide de la visionneuse d’arborescences Microsoft](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ [Explorer un modèle à l'aide de la visionneuse d'arborescences Microsoft](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
- [Explorer un modèle à l’aide de la visionneuse de l’algorithme MNB (Microsoft Naive Bayes)](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ [Explorer un modèle à l'aide de la visionneuse de l'algorithme MNB (Microsoft Naive Bayes)](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
- [Explorer un modèle à l’aide de la visionneuse de l’algorithme MAR (Microsoft Association Rules)](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ [Explorer un modèle à l'aide de la visionneuse de l'algorithme MAR (Microsoft Association Rules)](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>Options  
- **Actualiser le contenu de l’Observateur**  
+ **Actualiser le contenu de l'observateur**  
  Recharge le modèle d'exploration de données dans la visionneuse.  
   
- **Modèle d'exploration de données**  
+ **Modèle d’exploration de données**  
  Choisissez un modèle d'exploration de données à afficher, parmi ceux de la structure d'exploration de données active. Le modèle d'exploration de données s'ouvre dans une visionneuse personnalisée. Le type de visionneuse personnalisée qui est utilisée pour chaque modèle est déterminé par l'algorithme que vous avez utilisé pour créer le modèle.  
   
  **Visionneuse**  
@@ -43,7 +43,7 @@ ms.locfileid: "66081939"
  **Zoom avant**  
  Permet d'effectuer un zoom avant sur le schéma afin que vous puissiez voir les attributs plus en détail.  
   
- **Effectuer un zoom arrière**  
+ **Zoom arrière**  
  Permet d'effectuer un zoom arrière sur le schéma, afin que vous puissiez voir plus d'attributs et les liens entre eux.  
   
  **Copier la vue du graphique**  
@@ -52,7 +52,7 @@ ms.locfileid: "66081939"
  **Copier le graphique entier**  
  Copie la totalité du diagramme dans le Presse-papiers.  
   
- **Links**  
+ **Liens**  
  Ajustez le nombre de liens (arêtes) et de nœuds affichés par la visionneuse en déplaçant le curseur à droite des attributs. Faites glisser la barre de curseur vers le bas pour augmenter la valeur de seuil, afin que seuls les liens les plus forts soient affichés. Pour chaque type de modèle, une valeur légèrement différente est utilisée pour représenter les liens dans le graphique :  
   
 -   Dans un modèle d' **arbre de décision** , les arêtes représentent la force prédictive de la connexion, déterminée en partie par le score de fractionnement.  
@@ -64,8 +64,8 @@ ms.locfileid: "66081939"
  Règle générale pour tous les types de modèle : plus le lien est fort, plus la relation prédictive entre les deux attributs est forte.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visionneuses de modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visionneuses de modèles d’exploration de données &#40;le concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visionneuses de modèle d’exploration de données](data-mining/data-mining-model-viewers.md)  
   
   

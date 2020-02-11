@@ -2,8 +2,7 @@
 title: Effectuer une évaluation de la migration SQL Server
 titleSuffix: Data Migration Assistant
 description: Découvrez comment utiliser Assistant Migration de données pour évaluer un SQL Server local avant de migrer vers un autre SQL Server ou Azure SQL Database
-ms.custom: seo-lt-2019
-ms.date: 12/10/2019
+ms.date: 01/15/2020
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,16 +14,17 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: b6d9fd3f31885641451b3ade2f0f4543d9f44455
-ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 8b01469536655fc351ecf742ed284f3f6c68f707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75001904"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76037163"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Effectuer une évaluation de migration SQL Server avec l’assistant Migration de données
 
-Les instructions pas à pas suivantes vous aident à effectuer la première évaluation de la migration vers des SQL Server locaux, SQL Server s’exécutant sur une machine virtuelle Azure, ou Azure SQL Database à l’aide de Assistant Migration de données.
+Les instructions pas à pas suivantes vous aident à effectuer la première évaluation de la migration vers des SQL Server locaux, SQL Server s’exécutant sur une machine virtuelle Azure ou Azure SQL Database à l’aide de Assistant Migration de données.
 
    > [!NOTE]
    > Assistant Migration de données v 5.0 introduit la prise en charge de l’analyse de la connectivité de base de données et des requêtes SQL incorporées dans le code de l’application. Pour plus d’informations, consultez le billet de blog [Using Assistant Migration de données pour évaluer la couche d’accès aux données d’une application](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430).
@@ -114,6 +114,9 @@ Les instructions pas à pas suivantes vous aident à effectuer la première éva
 
     ![Ajouter des sources et démarrer l’évaluation](../dma/media/dma-assesssqlonprem/select-database1.png)
 
+> [!NOTE]
+> Vous pouvez exécuter plusieurs évaluations simultanément et afficher l’état des évaluations en ouvrant la page **All Assessments** (Toutes les évaluations).
+
 ## <a name="view-results"></a>Afficher les résultats
 
 La durée de l’évaluation dépend du nombre de bases de données ajoutées et de la taille de schéma de chaque base de données. Les résultats s’affichent pour chaque base de données dès qu’ils sont disponibles.
@@ -156,4 +159,6 @@ Des instructions pas à pas détaillées sur les évaluations de la disponibilit
 
 Une fois que toutes les bases de données ont terminé l’évaluation, sélectionnez **Exporter le rapport** pour exporter les résultats vers un fichier JSON ou un fichier CSV. Vous pouvez ensuite analyser les données à votre convenance.
 
-Vous pouvez exécuter plusieurs évaluations simultanément et afficher l’état des évaluations en ouvrant la page **All Assessments** (Toutes les évaluations).
+## <a name="save-and-load-assessments"></a>Enregistrer et charger des évaluations
+
+Outre l’exportation des résultats d’une évaluation, vous pouvez enregistrer les détails de l’évaluation dans un fichier et charger un fichier d’évaluation en vue d’une révision ultérieure.  Pour plus d’informations, consultez l’article [enregistrer et charger des évaluations avec Assistant Migration de données](../dma/dma-save-load-assessments.md).

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2e3607426ecbc51b1d04dfc97b12f83faf328b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085580"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Créer une requête de contenu sur un modèle d'exploration de données
@@ -40,11 +40,11 @@ ms.locfileid: "66085580"
   
      Le modèle **Requête de contenu** s'ouvre dans l'éditeur de code approprié. Le volet de métadonnées répertorie les modèles qui sont disponibles dans la base de données active. Pour changer la base de données, sélectionnez une autre base de données dans la liste **Bases de données disponibles** .  
   
-5.  Entrez le nom d’un modèle d’exploration de données dans la ligne, `FROM` [ *\<modèle d’exploration, name, MyModel >* ]`.CONTENT`. Si le nom du modèle d'exploration de données contient des espaces, vous devez le mettre entre crochets.  
+5.  Entrez le nom d’un modèle d’exploration de données dans `FROM` la ligne, [*\<modèle d’exploration de données, nom, MyModel>*].`.CONTENT` Si le nom du modèle d'exploration de données contient des espaces, vous devez le mettre entre crochets.  
   
      Si vous ne voulez pas taper le nom, vous pouvez sélectionner un modèle d'exploration de données dans l' **Explorateur d'objets** et le faire glisser dans le modèle.  
   
-6.  Dans la ligne, `SELECT` *\<liste de sélection, la liste expr, \* >* , tapez les noms de colonnes dans l’ensemble de lignes du schéma de contenu du modèle d’exploration de données.  
+6.  Dans la ligne, `SELECT` * \<sélectionnez liste, liste expr, \* *, tapez les noms des colonnes dans l’ensemble de lignes de schéma du contenu du modèle d’exploration de données.  
   
      Pour afficher une liste des colonnes que vous pouvez retourner dans les requêtes de contenu de modèle d’exploration de données, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md).  
   
@@ -75,10 +75,10 @@ ms.locfileid: "66085580"
      Le volet Résultats affiche le contenu du modèle.  
   
     > [!NOTE]  
-    >  Pour afficher une liste de tous les ensembles de schéma lignes que vous pouvez interroger sur l’instance actuelle, utilisez cette requête : `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. Ou, pour obtenir la liste des ensembles de lignes de schéma spécifiques à l'exploration de données, consultez [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md).  
+    >  Pour afficher la liste de tous les ensembles de lignes de schéma que vous pouvez interroger sur l'instance active, utilisez cette requête : `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. Ou, pour obtenir la liste des ensembles de lignes de schéma spécifiques à l'exploration de données, consultez [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Contenu du modèle d’exploration de données &#40;Analysis Services d’exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
   
   

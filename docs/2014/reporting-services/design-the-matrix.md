@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1572e9fba00672b32a104cf8b8c9f5cfab66d97a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109297"
 ---
 # <a name="design-the-matrix"></a>Concevoir la matrice
@@ -43,6 +43,6 @@ ms.locfileid: "66109297"
   
 ## <a name="see-also"></a>Voir aussi  
  [Matrices &#40;Générateur de rapports et SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Aide de l’Assistant Rapport](../../2014/reporting-services/report-wizard-help.md)  
+ [Aide de l'Assistant Rapport](../../2014/reporting-services/report-wizard-help.md)  
   
   

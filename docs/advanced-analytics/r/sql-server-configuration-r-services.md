@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7d18661fadb12167fd0a443758cced1188401750
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727333"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configuration de SQL Server pour une utilisation avec R
@@ -76,7 +76,7 @@ L’optimisation de l’instance SQL Server est la clé d’une exécution effic
 > [!NOTE]
 > Les paramètres optimaux varient en fonction de la taille et du type de vos données, ainsi que du nombre de colonnes que vous utilisez pour le scoring ou l’apprentissage d’un modèle.
 > 
-> Vous pouvez passer en revue les résultats des optimisations spécifiques dans le dernier article : [Réglage des performances : résultats de l’étude de cas](../../advanced-analytics/r/performance-case-study-r-services.md)
+> Vous pouvez passer en revue les résultats des optimisations spécifiques dans le dernier article : [Optimisation des performances pour R - Résultats de l’étude de cas](../../advanced-analytics/r/performance-case-study-r-services.md)
 > 
 > Pour obtenir des échantillons de scripts, consultez le [référentiel GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning) distinct.
 
@@ -88,7 +88,7 @@ Un columnstore peut perdre de son efficacité si les insertions dans la table so
 
 Pour plus d’informations, consultez les documents suivants :
 
-+ [Compression de données](../../relational-databases/data-compression/data-compression.md)
++ [Compression des données](../../relational-databases/data-compression/data-compression.md)
 
 + [Activer la compression sur une table ou un index](../../relational-databases/data-compression/enable-compression-on-a-table-or-index.md)
 

@@ -27,10 +27,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 17eeefbe125722c666f9f56394028da8c66a66b3
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232280"
 ---
 # <a name="mapping-clr-parameter-data"></a>Mappage des données de paramètres CLR
@@ -42,43 +42,43 @@ ms.locfileid: "75232280"
 |`bigint`|`SqlInt64`|**Int64, Nullable\<Int64>**|  
 |`binary`|`SqlBytes, SqlBinary`|`Byte[]`|  
 |`bit`|`SqlBoolean`|**Boolean, Nullable\<>**|  
-|`char`|Aucune|Aucune|  
-|`cursor`|Aucune|Aucune|  
+|`char`|None|None|  
+|`cursor`|None|None|  
 |`date`|`SqlDateTime`|**DateTime, DateTime\<Nullable>**|  
 |`datetime`|`SqlDateTime`|**DateTime, DateTime\<Nullable>**|  
-|`datetime2`|Aucune|**DateTime, DateTime\<Nullable>**|  
+|`datetime2`|None|**DateTime, DateTime\<Nullable>**|  
 |`DATETIMEOFFSET`|`None`|**DateTimeOffset, DateTimeOffset\<Nullable>**|  
 |`decimal`|`SqlDecimal`|**Décimal, Nullable\<>décimal**|  
 |`float`|`SqlDouble`|**Double, double\<>Nullable**|  
-|`geography`|`SqlGeography`<br /><br /> `SqlGeography`est défini dans Microsoft. SqlServer. types. dll, qui est installé avec SQL Server et peut être téléchargé à partir [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]du [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164).|Aucune|  
-|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry`est défini dans Microsoft. SqlServer. types. dll, qui est installé avec SQL Server et peut être téléchargé à partir [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]du [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164).|Aucune|  
-|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId`est défini dans Microsoft. SqlServer. types. dll, qui est installé avec SQL Server et peut être téléchargé à partir [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]du [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164).|Aucune|  
-|`image`|Aucune|Aucune|  
+|`geography`|`SqlGeography`<br /><br /> `SqlGeography`est défini dans Microsoft. SqlServer. types. dll, qui est installé avec SQL Server et peut être téléchargé à partir [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]du [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164).|None|  
+|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry`est défini dans Microsoft. SqlServer. types. dll, qui est installé avec SQL Server et peut être téléchargé à partir [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]du [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164).|None|  
+|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId`est défini dans Microsoft. SqlServer. types. dll, qui est installé avec SQL Server et peut être téléchargé à partir [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]du [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164).|None|  
+|`image`|None|None|  
 |`int`|`SqlInt32`|**Int32, Nullable\<Int32>**|  
 |`money`|`SqlMoney`|**Décimal, Nullable\<>décimal**|  
 |`nchar`|`SqlChars, SqlString`|`String, Char[]`|  
-|`ntext`|Aucune|Aucune|  
+|`ntext`|None|None|  
 |`numeric`|`SqlDecimal`|**Décimal, Nullable\<>décimal**|  
 |`nvarchar`|`SqlChars, SqlString`<br /><br /> 
   `SQLChars` est une meilleure correspondance pour le transfert de données et leur accès, et `SQLString` est une meilleure correspondance pour effectuer des opérations sur une chaîne.|`String, Char[]`|  
 |`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char, String, Char [], Nullable\<char>**|  
 |`real`|
   `SqlSingle` (la plage de `SqlSingle`, toutefois, est plus grande que `real`)|**Single, Nullable\<>unique**|  
-|`rowversion`|Aucune|`Byte[]`|  
+|`rowversion`|None|`Byte[]`|  
 |`smallint`|`SqlInt16`|**Int16, Nullable\<Int16>**|  
 |`smallmoney`|`SqlMoney`|**Décimal, Nullable\<>décimal**|  
-|`sql_variant`|Aucune|`Object`|  
-|`table`|Aucune|Aucune|  
-|`text`|Aucune|Aucune|  
-|`time`|Aucune|**TimeSpan, null\<TimeSpan>**|  
-|`timestamp`|Aucune|Aucune|  
+|`sql_variant`|None|`Object`|  
+|`table`|None|None|  
+|`text`|None|None|  
+|`time`|None|**TimeSpan, null\<TimeSpan>**|  
+|`timestamp`|None|None|  
 |`tinyint`|`SqlByte`|**Byte,>\<d’octets Nullable**|  
 |`uniqueidentifier`|`SqlGuid`|**Guid,>\<GUID Nullable**|  
-|`User-defined type(UDT)`|Aucune|La même classe liée au type défini par l'utilisateur dans le même assembly ou un assembly dépendant.|  
+|`User-defined type(UDT)`|None|La même classe liée au type défini par l'utilisateur dans le même assembly ou un assembly dépendant.|  
 |**varbinary**|`SqlBytes, SqlBinary`|`Byte[]`|  
 |`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**Byte, Byte [],>\<d’octets Nullable**|  
-|`varchar`|Aucune|Aucune|  
-|`xml`|`SqlXml`|Aucune|  
+|`varchar`|None|None|  
+|`xml`|`SqlXml`|None|  
   
 ## <a name="automatic-data-type-conversion-with-out-parameters"></a>Conversion automatique de types de données avec les paramètres de sortie  
  Une méthode CLR peut retourner des informations au programme ou code appelant en marquant un paramètre d'entrée avec le modificateur `out` (Microsoft Visual C#) ou `<Out()> ByRef` (Microsoft Visual Basic). Si le paramètre d'entrée est un type de données CLR de l'espace de noms `System.Data.SqlTypes` et que le programme appelant spécifie son type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] équivalent comme paramètre d'entrée, une conversion de type se produit automatiquement lorsque la méthode CLR retourne le type de données.  
@@ -112,8 +112,8 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**Type de données CLR (SQL Server)**|**Type de données SQL Server**|  
-|`Decimal`|smallmoney|  
-|`SqlMoney`|smallmoney|  
+|`Decimal`|SMALLMONEY|  
+|`SqlMoney`|SMALLMONEY|  
 |`Decimal`|money|  
 |`DateTime`|smalldatetime|  
 |`SQLDateTime`|smalldatetime|  

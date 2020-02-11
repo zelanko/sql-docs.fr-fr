@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 15b5e67dcb5d272eacec84f83734a5db667be975
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095169"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Octroi, révocation et refus d'autorisations
@@ -31,7 +31,7 @@ ms.locfileid: "74095169"
  Les autorisations relatives à la base de données et les autorisations relatives aux objets de base de données peuvent être attribuées de la même façon en utilisant l'objet <xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet> et l'objet <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet>.  
   
 ## <a name="example"></a>Exemple  
- Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet&#35; Smo Visual C dans Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet Visual C&#35; Smo dans Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="granting-server-permissions-in-visual-basic"></a>Octroi d'autorisations de serveur en Visual Basic  
  Cet exemple de code octroie les autorisations Create Endpoint et Alter Any Endpoint à la connexion spécifiée, puis énumère et affiche les autorisations. L'une des autorisations est révoquée, puis les autorisations sont à nouveau énumérées. Cet exemple suppose que la connexion spécifiée dispose des autorisations de démarrage requises.  

@@ -1,5 +1,5 @@
 ---
-title: Désigner un serveur (SQL Server Management Studio) de transfert d’événements | Microsoft Docs
+title: Désigner un serveur de transfert d’événements (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b79da95e2709e2bb5ff3a3d76cac06b2a4268f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189385"
 ---
 # <a name="designate-an-events-forwarding-server-sql-server-management-studio"></a>Designate an Events Forwarding Server (SQL Server Management Studio)
-  Cette rubrique explique comment désigner un serveur auquel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transfère les événements dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Notez que le transfert d'événements s'applique aux événements transférés entre serveurs, et non aux événements transférés entre instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hébergées sur un même ordinateur. Notez également qu'afin de recevoir les événements transférés, le serveur de gestion des alertes doit être une instance par défaut de SQL Server.  
+  Cette rubrique explique comment désigner un serveur vers lequel transfère [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les événements dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] de. Notez que le transfert d'événements s'applique aux événements transférés entre serveurs, et non aux événements transférés entre instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hébergées sur un même ordinateur. Notez également qu'afin de recevoir les événements transférés, le serveur de gestion des alertes doit être une instance par défaut de SQL Server.  
   
  **Dans cette rubrique**  
   
@@ -30,7 +30,7 @@ ms.locfileid: "68189385"
   
      [Sécurité](#Security)  
   
--   **Pour désigner un serveur de transfert d'événements, utilisez :**  
+-   **Pour désigner un serveur de transfert d’événements, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68189385"
   
 2.  Cliquez avec le bouton droit sur **SQL Server Agent** , puis sélectionnez **Propriétés**.  
 
-3.  Dans la boîte de dialogue **Propriétés de SQL Server Agent -** _nom_serveur_, sous **Sélectionner une page**, sélectionnez **Avancé**.  
+3.  Dans la boîte de dialogue **Propriétés de SQL Server Agent -**_nom_serveur_, sous **Sélectionner une page**, sélectionnez **Avancé**.  
 
 4.  Sous **Transfert d'événements SQL Server**, sélectionnez la case à cocher **Transférer les événements sur un autre serveur** .  
   

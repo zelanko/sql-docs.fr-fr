@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b0bcb5cfe1ec4111aaea7153f35bca084df62b76
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401017"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Charger des données avec des Integration Services à des Data Warehouse parallèles
@@ -56,12 +56,12 @@ Pour exécuter le package à partir de SQL Server Data Tools, cliquez avec le bo
 ### <a name="run-from-powershell"></a>Exécuter à partir de PowerShell  
 Pour exécuter le package à partir de Windows PowerShell, à l’aide de l’utilitaire **dtexec** :`dtexec /FILE <packagePath>`  
   
-Par exemple, `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+Par exemple : `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>Exécuter à partir d’une invite de commandes Windows 
 Pour exécuter le package à partir d’une invite de commandes Windows, à l’aide de l’utilitaire **dtexec** :`dtexec /FILE <packagePath>`  
   
-Par exemple : `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+Par exemple : `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ## <a name="DataTypes"></a>Types de données  
 Lorsque vous utilisez Integration Services pour charger des données à partir d’une source de données dans une base de données SQL Server PDW, les données sont d’abord mappées à partir des données sources vers des types de données Integration Services. Cela permet à des données provenant de plusieurs sources de données d'être mappées à un ensemble commun de types de données.  
@@ -84,7 +84,7 @@ Ensuite, les données sont mappées à partir de Integration Services à des typ
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
 |NVARCHAR|DT_WSTR, DT_STR|  
-|REAL|DT_R4|  
+|real|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1, DT_I2, DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -146,12 +146,12 @@ Si le nombre de charges présentes dans la file d'attente des charges dépasse l
 > L’utilisation d’une source de données OLE DB dans SSIS avec l’adaptateur de destination PDW peut endommager les données si la table source contient des colonnes char et varchar avec des classements SQL. Nous vous recommandons d’utiliser une source ADO.NET si la table source contient des colonnes char ou varchar avec des classements SQL. 
 
   
-## <a name="Locks"></a>Comportement du verrouillage  
+## <a name="Locks"></a>Comportement de verrouillage  
 Lors du chargement de données avec Integration Services, SQL ServerPDW utilise des verrous de niveau ligne pour mettre à jour les données dans la table de destination. Cela signifie que chaque ligne est verrouillée en lecture et en écriture pendant sa mise à jour. Les lignes de la table de destination ne sont pas verrouillées pendant le chargement des données dans la table de mise en lots.  
   
-## <a name="Examples"></a>Illustre  
+## <a name="Examples"></a>Exemples  
   
-### <a name="Walkthrough"></a>Un. Chargement simple à partir d’un fichier plat  
+### <a name="Walkthrough"></a>R. Chargement simple à partir d’un fichier plat  
 La procédure pas à pas suivante illustre un chargement de données simple à l’aide de Integration Services pour charger des données de fichier plat sur un appareil SQL Server PDW.  Cet exemple suppose que Integration Services a déjà été installé sur l’ordinateur client et que la destination de SQL Server PDW a été installée, comme décrit ci-dessus.  
   
 Dans cet exemple, nous allons charger dans `Orders` la table, qui a la DDL suivante. La `Orders` table fait partie de la `LoadExampleDB` base de données.  
@@ -257,7 +257,7 @@ Exécutez le package sur votre ordinateur Integration Services.
 [Exemples de la communauté Microsoft SQL Server : Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [Amélioration des chargements incrémentiels avec la capture de données modifiées](../integration-services/change-data-capture/change-data-capture-ssis.md)  
 [Transformation de dimension à variation lente](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
-[Tâche d’insertion en bloc](../integration-services/control-flow/bulk-insert-task.md)  
+[tâche d'insertion en bloc](../integration-services/control-flow/bulk-insert-task.md)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

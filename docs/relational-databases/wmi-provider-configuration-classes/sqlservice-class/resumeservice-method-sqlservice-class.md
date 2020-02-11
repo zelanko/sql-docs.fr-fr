@@ -18,10 +18,10 @@ ms.assetid: 0b0a5f08-b95e-4626-bf81-309da7a0aacd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 40c0822bc8b881153909f77ec50b0c9de9883dec
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660934"
 ---
 # <a name="resumeservice-method-sqlservice-class"></a>Méthode ResumeService (classe SqlService)
@@ -36,11 +36,11 @@ object.ResumeService()
 ```  
   
 ## <a name="parts"></a>Éléments  
- *object*  
+ *dessin*  
  Objet de [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) qui représente le service.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
- Valeur UInt32 égale à 0 si la demande **ResumeService** a été acceptée, égale à 1 si la demande n’est pas prise en charge et n’importe quel autre nombre pour indiquer une erreur.  
+ Valeur uint32 égale à 0 si la demande **ResumeService** a été acceptée, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  
   
 ## <a name="remarks"></a>Notes  
   
