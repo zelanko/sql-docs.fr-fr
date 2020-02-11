@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 27070cc125ca0443ae833854e721c6f72c7ce832
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244824"
 ---
 # <a name="add-transact-sql-snippets"></a>Ajouter des extraits de code Transact-SQL
@@ -36,7 +36,7 @@ ms.locfileid: "75244824"
   
 2.  Sélectionnez le menu **Outils** et cliquez sur **Gestionnaire des extraits de code**.  
   
-3.  Cliquez sur le bouton **Ajouter**.  
+3.  Cliquez sur le bouton **Add** .  
   
 4.  Accédez au dossier qui contient vos extraits de code et cliquez sur le bouton **Sélectionner un dossier** .  
   
@@ -46,7 +46,7 @@ ms.locfileid: "75244824"
   
 2.  Sélectionnez le menu **Outils** et cliquez sur **Gestionnaire des extraits de code**.  
   
-3.  Cliquez sur le bouton **Importer**.  
+3.  Cliquez sur le bouton **Import**.  
   
 4.  Accédez au dossier qui contient votre extrait de code, cliquez sur le fichier .snippet, puis cliquez sur le bouton **Ouvrir** .  
   
@@ -106,11 +106,11 @@ ms.locfileid: "75244824"
   
 3.  Sélectionnez le menu **Outils** et cliquez sur **Gestionnaire des extraits de code**.  
   
-4.  Cliquez sur le bouton **Importer**.  
+4.  Cliquez sur le bouton **Import**.  
   
 5.  Accédez au dossier qui contient TryCatch.snippet, cliquez sur le fichier TryCatch.snippet, puis cliquez sur le bouton **Ouvrir** . Vous ne devez pas avoir d'extrait de code TryCatch dans votre dossier **Mes extraits de code** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Insérer des extraits de code d’entourage avec des extraits de code Transact-SQL](insert-surround-with-transact-sql-snippets.md)  
+ [Insérer des extraits de code d’entourage (surround-with) Transact-SQL](insert-surround-with-transact-sql-snippets.md)  
   
   

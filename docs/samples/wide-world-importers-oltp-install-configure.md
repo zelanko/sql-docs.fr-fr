@@ -10,10 +10,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: e1683adfa20851d279e8b8e18a3c767db9e5810d
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056273"
 ---
 # <a name="installation-and-configuration"></a>Installation et configuration
@@ -25,11 +25,11 @@ Instructions d’installation et de configuration de la base de données OLTP de
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (ou version ultérieure) ou [Azure SQL Database](https://azure.microsoft.com/services/sql-database/). Pour obtenir la version complète de l’exemple, utilisez l’édition Évaluation SQL Server/Developer/Enterprise.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Pour obtenir les meilleurs résultats, utilisez la version du 2016 juin ou une version ultérieure.
 
-## <a name="download"></a>Télécharger
+## <a name="download"></a>Téléchargement
 
 La dernière version de l’exemple :
 
-[wide-world-importers-release](https://go.microsoft.com/fwlink/?LinkID=800630)
+[larges-World-importateurs-version](https://go.microsoft.com/fwlink/?LinkID=800630)
 
 Téléchargez l’exemple de sauvegarde de base de données WideWorldImporters/BacPac qui correspond à votre édition de SQL Server ou Azure SQL Database.
 
@@ -37,7 +37,7 @@ Le code source permettant de recréer l’exemple de base de données est dispon
 
 [importateurs larges-World](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
 
-## <a name="install"></a>Installation
+## <a name="install"></a>Installer
 
 
 ### <a name="sql-server"></a>SQL Server
@@ -51,7 +51,7 @@ Pour restaurer une sauvegarde sur une instance de SQL Server, vous pouvez utilis
 5. Si nécessaire, modifiez l’emplacement cible pour les fichiers de données et les fichiers journaux dans le volet **fichiers** . Notez qu’il est recommandé de placer les fichiers de données et les fichiers journaux sur des lecteurs différents.
 6. Cliquez sur **OK**. La restauration de la base de données est lancée. Une fois l’opération terminée, la base de données WideWorldImporters est installée sur votre instance SQL Server.
 
-### <a name="azure-sql-database"></a>Base de données Azure SQL
+### <a name="azure-sql-database"></a>Azure SQL Database
 
 Pour importer un BacPac dans un nouveau SQL Database, vous pouvez utiliser Management Studio.
 
@@ -70,12 +70,12 @@ Pour importer un BacPac dans un nouveau SQL Database, vous pouvez utiliser Manag
 L’exemple de base de données peut utiliser l’indexation de texte intégral. Toutefois, cette fonctionnalité n’est pas installée par défaut avec SQL Server, vous devez la sélectionner lors de l’installation de SQL Server (elle est activée par défaut dans Azure SQL DB). Par conséquent, une étape consécutive à l’installation est requise.
 
 1. Dans SQL Server Management Studio, connectez-vous à la base de données WideWorldImporters et ouvrez une nouvelle fenêtre de requête.
-2. Exécutez la commande T-SQL suivante pour activer l’utilisation de l’indexation de texte intégral dans la base de données : `EXECUTE Application.Configuration_ApplyFullTextIndexing`
+2. Exécutez la commande T-SQL suivante pour activer l’utilisation de l’indexation de texte intégral dans la base de données :`EXECUTE Application.Configuration_ApplyFullTextIndexing`
 
 
 ### <a name="sql-server-audit"></a>SQL Server Audit
 
-S’applique à : SQL Server
+S’applique à : SQL Server
 
 L’activation de l’audit dans SQL Server requiert la configuration du serveur. Pour activer l’audit de SQL Server pour l’exemple WideWorldImporters, exécutez l’instruction suivante dans la base de données :
 

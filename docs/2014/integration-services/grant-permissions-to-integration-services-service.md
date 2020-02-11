@@ -1,5 +1,5 @@
 ---
-title: Accorder des autorisations au Service Integration Services | Microsoft Docs
+title: Accorder des autorisations à Integration Services service | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 989db1ed792d960b7a0dca22bd82ec8b2f5aa7df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058229"
 ---
 # <a name="grant-permissions-to-integration-services-service"></a>Accorder des autorisations au service Integration Services
@@ -26,7 +26,7 @@ ms.locfileid: "66058229"
   
 2.  Dans la boîte de dialogue **Services de composants**, développez le nœud Services de composants > Ordinateurs > Poste de travail > Configuration DCOM.  
   
-3.  Avec le bouton droit **Microsoft SQL Server Integration Services 12.0**, puis cliquez sur **propriétés**.  
+3.  Cliquez avec le bouton droit sur **Microsoft SQL Server Integration Services 12,0**, puis cliquez sur **Propriétés**.  
   
 4.  Sous l'onglet **Sécurité** , cliquez sur **Modifier** dans la zone **Autorisations d'exécution et d'activation** .  
   

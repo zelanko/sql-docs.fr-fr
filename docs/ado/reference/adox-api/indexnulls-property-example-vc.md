@@ -1,5 +1,5 @@
 ---
-title: IndexNulls, propriété-Exemple (VC ++) | Microsoft Docs
+title: IndexNulls, exemple de propriété (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ee407e03-4889-4a22-b031-ca542d637c96
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6b6a51a16abf767924ee83e93016743693a9f335
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e119dba2a24df76a918e87a6a5a28d66e381400
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965964"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76929429"
 ---
 # <a name="indexnulls-property-example-vc"></a>IndexNulls, exemple de propriété (VC++)
-Cet exemple montre la [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) propriété d’un [Index](../../../ado/reference/adox-api/index-object-adox.md). Le code crée un index et définit la valeur de **IndexNulls** basée sur l’entrée d’utilisateur. Ensuite, le **Index** est ajouté à la **employés** [Table](../../../ado/reference/adox-api/table-object-adox.md) dans le *Northwind* [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md). La nouvelle **Index** est appliqué à un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) selon le **employés** table et le **Recordset** est ouvert. Un nouvel enregistrement est ajouté à la **employés** table, avec un **Null** valeur dans le champ indexé. Indique si ce nouvel enregistrement est affiché varie selon le paramètre de la **IndexNulls** propriété.  
+Cet exemple illustre la propriété [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) d’un [index](../../../ado/reference/adox-api/index-object-adox.md). Le code crée un nouvel index et définit la valeur de **IndexNulls** en fonction de l’entrée de l’utilisateur. Ensuite, l' **index** est ajouté à la table **Employees** [](../../../ado/reference/adox-api/table-object-adox.md) dans le ** [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md)Northwind. Le nouvel **index** est appliqué à un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) basé sur la table **Employees** et le **Recordset** est ouvert. Un nouvel enregistrement est ajouté à la table **Employees** , avec une valeur **null** dans le champ indexé. Le fait que ce nouvel enregistrement s’affiche dépend du paramètre de la propriété **IndexNulls** .  
   
 ```  
 // BeignIndexNullCpp.cpp  
@@ -169,7 +169,7 @@ void IndexNullsX(_bstr_t strSel) {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in include files...." << endl;  
+      cout << "Error occurred in include files...." << endl;  
    }  
   
    if (m_pRstEmployees)  

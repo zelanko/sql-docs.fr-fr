@@ -1,5 +1,5 @@
 ---
-title: sys.sequences (Transact-SQL) | Microsoft Docs
+title: sys. sequences (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 410f6dcca93614c42de4a703fd591bb1c9cbc59a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68060556"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
@@ -35,21 +35,21 @@ ms.locfileid: "68060556"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|\<héritée de colonnes >||Hérite de toutes les colonnes de [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
-|**start_value**|**sql_variant non NULL**|Valeur de départ pour l'objet séquence. Si l'objet séquence est redémarré à l'aide d'ALTER SEQUENCE, il redémarrera à cette valeur. Lorsque l’objet séquence cycles il passe à la **minimum_value** ou **maximum_value**, et non le **start_value**.|  
-|**increment**|**sql_variant non NULL**|Valeur utilisée pour incrémenter l'objet séquence après chaque valeur générée.|  
-|**minimum_value**|**sql_variant NULL**|Valeur minimale qui peut être générée par l'objet séquence. Une fois cette valeur est atteinte, l’objet séquence retourne soit une erreur lorsque vous tentez de générer des valeurs plus ou si l’option CYCLE est spécifiée. Si aucun MINVALUE n’a été spécifiée, cette colonne renvoie la valeur minimale prise en charge par le type de données du Générateur de séquence.|  
+|\<colonnes héritées>||Hérite de toutes les colonnes de [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|**start_value**|**sql_variant pas NULL**|Valeur de départ pour l'objet séquence. Si l'objet séquence est redémarré à l'aide d'ALTER SEQUENCE, il redémarrera à cette valeur. Lorsque l’objet séquence se poursuit, il passe à la **minimum_value** ou **maximum_value**, et non à la **start_value**.|  
+|**incrément**|**sql_variant pas NULL**|Valeur utilisée pour incrémenter l'objet séquence après chaque valeur générée.|  
+|**minimum_value**|**sql_variant NULL**|Valeur minimale qui peut être générée par l'objet séquence. Une fois cette valeur atteinte, l’objet séquence retourne une erreur lors de la tentative de génération d’autres valeurs ou le redémarrage si l’option CYCLE est spécifiée. Si aucun MINVALUE n’a été spécifié, cette colonne retourne la valeur minimale prise en charge par le type de données du générateur de séquence.|  
 |**maximum_value**|**sql_variant NULL**|Valeur maximale qui peut être générée par l'objet séquence. Une fois cette valeur atteinte, l'objet séquence retourne une erreur lors de la tentative de génération de plus de valeurs ou redémarre si l'option CYCLE est spécifiée. Si aucun MAXVALUE n'a été spécifié, cette colonne retourne la valeur maximale prise en charge par le type de données de l'objet séquence.|  
-|**is_cycling**|**bit pas NULL**|Retourne 0 si NO CYCLE a été spécifié pour l'objet séquence et 1 si CYCLE a été spécifié.|  
-|**is_cached**|**bit pas NULL**|Retourne 0 si NO CACHE a été spécifié pour l'objet séquence et 1 si CACHE a été spécifié.|  
+|**is_cycling**|**bit NOT NULL**|Retourne 0 si NO CYCLE a été spécifié pour l'objet séquence et 1 si CYCLE a été spécifié.|  
+|**is_cached**|**bit NOT NULL**|Retourne 0 si NO CACHE a été spécifié pour l'objet séquence et 1 si CACHE a été spécifié.|  
 |**cache_size**|**int NULL**|Retourne la taille de cache spécifiée pour l'objet séquence. Cette colonne contient NULL si la séquence a été créée avec l'option NO CACHE ou si CACHE a été spécifié sans indication de taille de cache. Si la valeur spécifiée par la taille du cache est supérieure au nombre maximal de valeurs qui peuvent être retournées par l'objet séquence, cette taille du cache impossible à obtenir est toujours affichée.|  
-|**system_type_id**|**tinyint non NULL**|ID du type de système de type de données de l’objet séquence.|  
-|**user_type_id**|**int non NULL**|ID du type de données pour l'objet séquence, comme défini par l'utilisateur.|  
+|**system_type_id**|**tinyint non NULL**|ID du type de système pour le type de données de l’objet séquence.|  
+|**user_type_id**|**int NOT NULL**|ID du type de données pour l'objet séquence, comme défini par l'utilisateur.|  
 |**precision**|**tinyint non NULL**|Précision maximale du type de données.|  
 |**scale**|**tinyint non NULL**|Échelle maximale du type. L'échelle est retournée avec la précision afin de donner des métadonnées complètes aux utilisateurs. L'échelle est toujours de 0 pour les objets séquences car seuls les types entiers sont autorisés.|  
-|**current_value**|**sql_variant non NULL**|La dernière valeur engagée. Autrement dit, la valeur retournée à partir de la dernière exécution de la fonction NEXT VALUE FOR ou la dernière valeur de l’exécution de la **sp_sequence_get_range** procédure. Retourne la valeur START WITH si la séquence n'a jamais été utilisée.|  
-|**is_exhausted**|**bit pas NULL**|0 indique que davantage de valeurs peuvent être générées à partir de la séquence. 1 indique que l'objet séquence a atteint le paramètre MAXVALUE et que la séquence n'est pas définie sur CYCLE. La fonction NEXT VALUE FOR retourne une erreur jusqu'à ce que la séquence soit redémarrée à l'aide d'ALTER SEQUENCE.|  
-|**last_used_value**|**sql_variant NULL**|Retourne la dernière valeur générée par le [Next Value For](../../t-sql/functions/next-value-for-transact-sql.md) (fonction). S’applique à SQL Server 2017 et versions ultérieures.|  
+|**current_value**|**sql_variant pas NULL**|La dernière valeur engagée. Autrement dit, la valeur retournée par l’exécution la plus récente de la fonction NEXT VALUE FOR ou de la dernière valeur issue de l’exécution de la procédure **sp_sequence_get_range** . Retourne la valeur START WITH si la séquence n'a jamais été utilisée.|  
+|**is_exhausted**|**bit NOT NULL**|0 indique que davantage de valeurs peuvent être générées à partir de la séquence. 1 indique que l'objet séquence a atteint le paramètre MAXVALUE et que la séquence n'est pas définie sur CYCLE. La fonction NEXT VALUE FOR retourne une erreur jusqu'à ce que la séquence soit redémarrée à l'aide d'ALTER SEQUENCE.|  
+|**last_used_value**|**sql_variant NULL**|Retourne la dernière valeur générée par la fonction [Next value for](../../t-sql/functions/next-value-for-transact-sql.md) . S’applique à SQL Server 2017 et versions ultérieures.|  
   
 ## <a name="permissions"></a>Autorisations  
  Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et les versions ultérieures, la visibilité des métadonnées dans les affichages catalogue est limitée aux éléments sécurisables qu'un utilisateur détient ou pour lesquels des autorisations lui ont été accordées. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

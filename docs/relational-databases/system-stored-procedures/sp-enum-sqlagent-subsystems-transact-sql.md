@@ -18,18 +18,18 @@ ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 963cbcea93091eb48b8c73214ee3bc509f118e67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124674"
 ---
-# <a name="spenumsqlagentsubsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-SQL)
+# <a name="sp_enum_sqlagent_subsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Énumère les sous-systèmes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,24 +39,24 @@ sp_enum_sqlagent_subsystems
 ```  
   
 ## <a name="arguments"></a>Arguments  
- Aucun  
+ None  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**subsystem**|**nvarchar(40)**|Nom du sous-système.|  
+|**sous-système**|**nvarchar (40)**|Nom du sous-système.|  
 |**description**|**nvarchar(512)**|Description du sous-système.|  
-|**subsystem_dll**|**nvarchar(510)**|Module DLL qui contient le sous-système.|  
-|**agent_exe**|**nvarchar(510)**|Module exécutable utilisé par le sous-système.|  
-|**start_entry_point**|**nvarchar(30)**|Procédure appelée par l'Agent SQL Server pendant l'exécution d'une étape du travail.|  
-|**event_entry_point**|**nvarchar(30)**|Procédure appelée par l'Agent SQL Server pendant l'exécution d'une étape du travail.|  
-|**stop_entry_point**|**nvarchar(30)**|Procédure appelée par l'Agent SQL Server pendant l'exécution d'une étape du travail.|  
+|**subsystem_dll**|**nvarchar (510)**|Module DLL qui contient le sous-système.|  
+|**agent_exe**|**nvarchar (510)**|Module exécutable utilisé par le sous-système.|  
+|**start_entry_point**|**nvarchar(30**|Procédure appelée par l'Agent SQL Server pendant l'exécution d'une étape du travail.|  
+|**event_entry_point**|**nvarchar(30**|Procédure appelée par l'Agent SQL Server pendant l'exécution d'une étape du travail.|  
+|**stop_entry_point**|**nvarchar(30**|Procédure appelée par l'Agent SQL Server pendant l'exécution d'une étape du travail.|  
 |**max_worker_threads**|**int**|Nombre maximal de threads que l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] va démarrer pour ce sous-système.|  
-|**subsystem_id**|**Int**|Identificateur pour le sous-système.|  
+|**subsystem_id**|**int**|Identificateur du sous-système.|  
   
 ## <a name="remarks"></a>Notes  
  Cette procédure énumère les sous-systèmes disponibles dans l'instance.  
@@ -64,7 +64,7 @@ sp_enum_sqlagent_subsystems
 ## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer du rôle de base de données fixe **SQLAgentOperatorRole** dans la base de données **msdb** .  
   
- Pour plus d’informations sur **SQLAgentOperatorRole**, consultez [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour plus d’informations sur les **SQLAgentOperatorRole**, consultez [SQL Server Agent des rôles de base de données fixes](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Implémenter la sécurité SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md)   

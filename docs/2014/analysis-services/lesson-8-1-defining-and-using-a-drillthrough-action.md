@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493827"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Définition et utilisation d'une action d'extraction
@@ -30,13 +30,13 @@ ms.locfileid: "69493827"
   
      L’image suivante montre l’onglet **Actions** du Concepteur de cube.  
   
-     ![Onglet actions du concepteur de cube](../../2014/tutorials/media/l8-action1.gif "Onglet actions du concepteur de cube")  
+     ![Onglet Actions du Concepteur de cube](../../2014/tutorials/media/l8-action1.gif "Onglet Actions du Concepteur de cube")  
   
 2.  Dans la barre d’outils de l’onglet **Actions** , cliquez sur le bouton **Nouvelle action d’extraction** .  
   
      Un modèle d'action vide apparaît dans le volet de visualisation.  
   
-     ![Modèle d’action vide dans le volet d’affichage](../../2014/tutorials/media/l8-action2.gif "Modèle d’action vide dans le volet d’affichage")  
+     ![Modèle d'action vide dans le volet d'informations](../../2014/tutorials/media/l8-action2.gif "Modèle d'action vide dans le volet d'informations")  
   
 3.  Dans la zone **nom** , remplacez le nom de cette action par `Internet Sales Details Drillthrough Action`.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "69493827"
   
 6.  Dans la liste **Colonnes de retour** , cochez les cases **Item Description** et **Order Number** , puis cliquez sur **OK**. L'image suivante montre le modèle d'action tel qu'il doit se présenter à ce stade de la procédure.  
   
-     ![Zone colonnes d’extraction](../../2014/tutorials/media/l8-action3.gif "Zone colonnes d’extraction")  
+     ![Zone Colonnes d'extraction](../../2014/tutorials/media/l8-action3.gif "Zone Colonnes d'extraction")  
   
 7.  Développez la zone **Propriétés supplémentaires** , comme le montre l’image suivante.  
   
-     ![Zone de propriétés supplémentaires](../../2014/tutorials/media/l8-action4.gif "Zone de propriétés supplémentaires")  
+     ![Zone Propriétés supplémentaires](../../2014/tutorials/media/l8-action4.gif "Zone Propriétés supplémentaires")  
   
 8.  Dans la zone **nombre maximal** de lignes `10`, tapez.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "69493827"
   
      Ces paramètres limitent le nombre de lignes retournées et spécifient la légende qui apparaît dans le menu de l'application cliente. L’image suivante montre ces paramètres dans la zone **Propriétés supplémentaires** .  
   
-     ![Zone de propriétés supplémentaires](../../2014/tutorials/media/l8-action5.gif "Zone de propriétés supplémentaires")  
+     ![Zone Propriétés supplémentaires](../../2014/tutorials/media/l8-action5.gif "Zone Propriétés supplémentaires")  
   
 ## <a name="using-the-drillthrough-action"></a>Utilisation de l'action d'extraction  
   
@@ -104,11 +104,11 @@ ms.locfileid: "69493827"
   
     -   ShipDateKey  
   
-6.  Affectez à la propriété **nom** de l’attribut **Order Date Key** la valeur `Order Date` , cliquez sur le bouton Parcourir pour la propriété **colonne de nom** et dans la boîte de dialogue colonne de **nom** , sélectionnez **Date** comme table source, puis sélectionnez SimpleDate comme colonne source. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Affectez à la propriété **nom** de l’attribut **Order Date Key** `Order Date` la valeur, cliquez sur le bouton Parcourir pour la propriété **colonne de nom** , et dans la boîte de dialogue colonne de **nom** , sélectionnez **Date** comme table source et sélectionnez SimpleDate comme colonne source. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Modifiez la propriété de **nom** de l’attribut de clé de `Due Date` **Date d’échéance** sur, puis, en utilisant la même méthode que l’attribut **Order Date Key** , remplacez la valeur de la propriété de **colonne Name** de cet attribut par **date. SimpleDate (WCHAR)** .  
+7.  Modifiez la propriété de **nom** de l’attribut de clé de `Due Date`date d' **échéance** sur, puis, en utilisant la même méthode que l’attribut **Order Date Key** , remplacez la valeur de la propriété **Name Column** de cet attribut par **date. SimpleDate (WCHAR)**.  
   
-8.  Remplacez la **propriété Name** de l’attribut `Ship Date`Ship Date Key par, puis remplacez la propriété **Name Column** de cet attribut par **date. SimpleDate (WCHAR)** .  
+8.  Remplacez la propriété **Name** de l’attribut **Ship Date Key** par `Ship Date`, puis remplacez la propriété **Name Column** de cet attribut par **date. SimpleDate (WCHAR)**.  
   
 9. Sélectionnez l’onglet **Actions** du Concepteur de cube pour le cube du didacticiel de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
@@ -122,7 +122,7 @@ ms.locfileid: "69493827"
   
      L'image suivante montre ces colonnes sélectionnées.  
   
-     ![Zone colonnes d’extraction](../../2014/tutorials/media/l8-action7.gif "Zone colonnes d’extraction")  
+     ![Zone Colonnes d'extraction](../../2014/tutorials/media/l8-action7.gif "Zone Colonnes d'extraction")  
   
 ## <a name="reviewing-the-modified-drillthrough-action"></a>Vérification de l'action d'extraction modifiée  
   
@@ -143,7 +143,7 @@ ms.locfileid: "69493827"
      ![Commandes expédiées à Adam Powell](../../2014/tutorials/media/l8-action8.gif "Commandes expédiées à Adam Powell")  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 9: Définition de perspectives et de traductions](lesson-9-defining-perspectives-and-translations.md)  
+ [Leçon 9 : Définition de perspectives et de traductions](lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Actions &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   

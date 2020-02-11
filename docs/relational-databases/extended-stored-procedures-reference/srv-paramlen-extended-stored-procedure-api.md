@@ -20,17 +20,17 @@ ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5c89a9ddc1020f29bbcd661ec4c9672ba37f7770
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005703"
 ---
 # <a name="srv_paramlen-extended-stored-procedure-api"></a>srv_paramlen (API de procédure stockée étendue)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Utilisez plutôt l’intégration du CLR.  
   
  Retourne la longueur de données d'un paramètre d'appel de procédure stockée distante. Cette fonction a été remplacée par la fonction **srv_paraminfo**.  
   
@@ -54,23 +54,23 @@ n
  *n*  
  Indique le numéro du paramètre. Le premier paramètre est 1.  
   
-## <a name="returns"></a>Valeur renvoyée  
+## <a name="returns"></a>Retours  
  Longueur réelle, en octets, des données de paramètre. En l’absence de *n*ième paramètre ou de procédure stockée distante, la valeur -1 est retournée. Si le *n*ième paramètre est NULL, la valeur retournée est 0.  
   
- Cette fonction retourne les valeurs suivantes, si le paramètre correspond à l’un des types de données système [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ci-dessous.  
+ Cette fonction retourne les valeurs suivantes, si le paramètre est l’un des types [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] de données système suivants.  
   
 |Nouveaux types de données|Longueur de données d'entrée|  
 |--------------------|-----------------------|  
-|**BITN**|**NULL :** 1<br /><br /> **ZERO :** 1<br /><br /> **>=255:** Néant<br /><br /> **<255 :** Néant|  
-|**BIGVARCHAR**|**NULL :** 0<br /><br /> **ZERO :** 1<br /><br /> **>=255:** 255<br /><br /> **<255 :** *len* réel|  
-|**BIGCHAR**|**NULL :** 0<br /><br /> **ZERO :** 255<br /><br /> **>=255:** 255<br /><br /> **<255 :** 255|  
-|**BIGBINARY**|**NULL :** 0<br /><br /> **ZERO :** 255<br /><br /> **>=255:** 255<br /><br /> **<255 :** 255|  
-|**BIGVARBINARY**|**NULL :** 0<br /><br /> **ZERO :** 1<br /><br /> **>=255:** 255<br /><br /> **<255 :** *len* réel|  
-|**NCHAR**|**NULL :** 0<br /><br /> **ZERO :** 255<br /><br /> **>=255:** 255<br /><br /> **<255 :** 255|  
-|**NVARCHAR**|**NULL :** 0<br /><br /> **ZERO :** 1<br /><br /> **>=255:** 255<br /><br /> **<255 :** *len* réel|  
-|**NTEXT**|**NULL :** -1<br /><br /> **ZERO :** -1<br /><br /> **>=255:** -1<br /><br /> **\<255:** -1|  
+|**BITN**|**Null :** 1<br /><br /> **Zéro :** 1<br /><br /> **>= 255 :** NON APPLICABLE<br /><br /> **<255 :** NON APPLICABLE|  
+|**BIGVARCHAR**|**Null :** 0<br /><br /> **Zéro :** 1<br /><br /> **>= 255 :** 255<br /><br /> **<255 :** *longueur* réelle|  
+|**BIGCHAR**|**Null :** 0<br /><br /> **Zéro :** 255<br /><br /> **>= 255 :** 255<br /><br /> **<255 :** 255|  
+|**BIGBINARY**|**Null :** 0<br /><br /> **Zéro :** 255<br /><br /> **>= 255 :** 255<br /><br /> **<255 :** 255|  
+|**BIGVARBINARY**|**Null :** 0<br /><br /> **Zéro :** 1<br /><br /> **>= 255 :** 255<br /><br /> **<255 :** *longueur* réelle|  
+|**NCHAR**|**Null :** 0<br /><br /> **Zéro :** 255<br /><br /> **>= 255 :** 255<br /><br /> **<255 :** 255|  
+|**NVARCHAR**|**Null :** 0<br /><br /> **Zéro :** 1<br /><br /> **>= 255 :** 255<br /><br /> **<255 :** *longueur* réelle|  
+|**Text**|**Null :** -1<br /><br /> **Zéro :** -1<br /><br /> **>= 255 :** -1<br /><br /> 255 :-1 ** \<**|  
   
- \*   *len* réel = longueur de chaîne de caractères multioctets (cch)  
+ \**Len* réel = longueur de la chaîne de caractères multioctets (CCH)  
   
 ## <a name="remarks"></a>Notes  
  Chaque paramètre de procédure stockée distante possède une longueur de données réelle et une longueur de données maximale. Pour les types de données de longueur fixe standard qui n'autorisent pas les valeurs NULL, les longueurs réelle et maximale sont les mêmes. Pour les types de données de longueur variable, les longueurs peuvent varier. Par exemple, un paramètre déclaré en tant que **varchar(30)** peut posséder des données longues de 10 octets seulement. La longueur réelle du paramètre est 10 et sa longueur maximale est 30. La fonction **srv_paramlen** obtient la longueur de données réelle, en octets, d’une procédure stockée distante. Pour obtenir la longueur de données maximale d’un paramètre, utilisez **srv_parammaxlen**.  

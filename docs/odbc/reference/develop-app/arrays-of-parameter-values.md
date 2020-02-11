@@ -14,18 +14,18 @@ ms.assetid: 9b572c5b-1dfe-40af-bebd-051548ab6d90
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1e65928cd078a3f05032f4e4fb400e3e2eb1f27a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077072"
 ---
 # <a name="arrays-of-parameter-values"></a>Tableaux de valeurs de paramètre
-Il est souvent utile pour les applications de passer des tableaux de paramètres. Par exemple, à l’aide de tableaux de paramètres et une commande paramétrable **insérer** instruction, une application peut insérer un nombre de lignes à la fois. Il existe plusieurs avantages à l’utilisation de tableaux. Tout d’abord, le trafic réseau est réduit, car les données pour de nombreuses instructions sont envoyées dans un paquet unique (si la source de données prend en charge les tableaux de paramètres en mode natif). En second lieu, certaines sources de données peuvent exécuter des instructions SQL à l’aide des tableaux plus rapidement que l’exécution le même nombre d’instructions SQL séparées. Enfin, lorsque les données sont stockées dans un tableau, comme c’est souvent le cas pour les données d’écran, l’application peut lier toutes les lignes dans une colonne particulière avec un seul appel à **SQLBindParameter** et les mettre à jour en exécutant une instruction unique.  
+Il est souvent utile pour les applications de passer des tableaux de paramètres. Par exemple, en utilisant des tableaux de paramètres et une instruction **Insert** paramétrable, une application peut insérer plusieurs lignes à la fois. L’utilisation de tableaux présente plusieurs avantages. Tout d’abord, le trafic réseau est réduit, car les données de nombreuses instructions sont envoyées dans un seul paquet (si la source de données prend en charge les tableaux de paramètres en mode natif). Deuxièmement, certaines sources de données peuvent exécuter des instructions SQL à l’aide de tableaux plus rapidement que d’exécuter le même nombre d’instructions SQL distinctes. Enfin, lorsque les données sont stockées dans un tableau, comme c’est souvent le cas pour les données d’écran, l’application peut lier toutes les lignes d’une colonne particulière avec un seul appel à **SQLBindParameter** et les mettre à jour en exécutant une instruction unique.  
   
- Malheureusement, pas de nombreuses sources de données prend en charge les tableaux de paramètres. Toutefois, un pilote peut émuler des tableaux de paramètres en exécutant une instruction SQL une fois pour chaque ensemble de valeurs de paramètre. Cela peut entraîner les augmentations de vitesse, car le pilote peut préparer ensuite l’instruction qu’il prévoit d’exécuter une fois pour chaque jeu de paramètres. Elle peut également entraîner au code d’application plus simple.  
+ Malheureusement, certaines sources de données ne prennent pas en charge les tableaux de paramètres. Toutefois, un pilote peut émuler des tableaux de paramètres en exécutant une fois une instruction SQL pour chaque ensemble de valeurs de paramètre. Cela peut entraîner une augmentation de la vitesse, car le pilote peut ensuite préparer l’instruction qu’il prévoit d’exécuter une fois pour chaque jeu de paramètres. Cela peut également générer un code d’application plus simple.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Liaison de tableaux de paramètres](../../../odbc/reference/develop-app/binding-arrays-of-parameters.md)  
   

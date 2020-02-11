@@ -11,10 +11,10 @@ ms.assetid: 19b354ee-2906-4cc7-ba2f-32b4543bddcf
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 85cfc3d3859712cdb53b7db58bb1729baca692b3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729726"
 ---
 # <a name="automatically-generate-code-attribute-values-master-data-services"></a>Générer automatiquement les valeurs de l'attribut Code (Master Data Services)
@@ -30,7 +30,7 @@ ms.locfileid: "73729726"
   
 -   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
--   L'entité doit exister. Pour plus d’informations, consultez [Créer une entité &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).  
+-   L'entité doit exister. Pour plus d’informations, consultez [créer une entité &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).  
   
 ### <a name="to-automatically-generate-code-values"></a>Pour générer automatiquement des valeurs de code  
   
@@ -48,6 +48,6 @@ ms.locfileid: "73729726"
   
 ## <a name="see-also"></a>Voir aussi  
  [Création automatique de code &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)   
- [Générer automatiquement les valeurs des attributs autres que Code &#40;Master Data Services&#41;](../master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)  
+ [Générez automatiquement des valeurs d’attribut autres que code &#40;Master Data Services&#41;](../master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)  
   
   

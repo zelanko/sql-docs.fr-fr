@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46b9fef97433609310169c98d8ffc623a21a10c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876109"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Erreurs de support possibles pendant les opérations de sauvegarde et de restauration (SQL Server)
@@ -67,7 +67,7 @@ ms.locfileid: "62876109"
   
  Si une opération BACKUP continue après la survenue d'erreurs, l'opération effectue les étapes suivantes :  
   
-1.  Marque le jeu de sauvegarde sur le support de sauvegarde comme contenant des erreurs et trace la page dans la table **suspect_pages** de la base de données **msdb**. Pour plus d’informations, consultez [suspect_pages &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/suspect-pages-transact-sql).  
+1.  Marque le jeu de sauvegarde sur le support de sauvegarde comme contenant des erreurs et trace la page dans la table **suspect_pages** de la base de données **msdb** . Pour plus d’informations, consultez [suspect_pages &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/suspect-pages-transact-sql).  
   
 2.  Consigne l'erreur dans le journal des erreurs SQL Server.  
   

@@ -10,38 +10,38 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/27/2017
 ms.openlocfilehash: 54358529577061ad99c634fa6cc4ce9d98792e0c
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67412682"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Ajouter des données à partir de sources de données externes (SSRS)
 
 Pour récupérer des données à partir d'une source de données externe, vous utilisez une connexion de données. Les informations de connexion de données sont fournies habituellement par le propriétaire de la source de données externe, qui est chargé d'accorder les autorisations nécessaires et de spécifier les types d'informations d'identification à utiliser. Les informations de connexion de données sont enregistrées en tant que source de données de rapport. Le type de source de données spécifie l'extension de données à utiliser pour récupérer les données.  
 
-##  <a name="DataAccess"></a> Fonctionnement de la technologie d'accès aux données  
+##  <a name="DataAccess"></a>Fonctionnement de la technologie d’accès aux données  
 
 La récupération des données pour un dataset de rapport requiert plusieurs couches de logiciels d'accès aux données. La liste suivante fournit une description simple de l'utilisation des technologies d'accès aux données par les rapports :  
 
--   **Application et interface utilisateur** Application Générateur de rapports que vous utilisez pour créer une source de données, ajouter une référence à une source de données partagée, ajouter un dataset partagé, ou ajouter une partie de rapport qui inclut les sources de données et datasets dont elle dépend.  
+-   **Application et interface utilisateur** L’application Générateur de rapports que vous utilisez pour créer une source de données, ajouter une référence à une source de données partagée, ajouter un dataset partagé ou ajouter une partie de rapport qui contient les sources de données et les datasets dont elle dépend.  
 
--   **Éléments de définition de rapport** Les sources de données et datasets font partie de la définition de rapport. Après la publication d'un rapport sur un serveur de rapports, les sources de données partagées et les datasets partagés sont gérés indépendamment de la définition de rapport.  
+-   **Éléments de définition de rapport** Les sources de données et les datasets font partie de la définition de rapport. Après la publication d'un rapport sur un serveur de rapports, les sources de données partagées et les datasets partagés sont gérés indépendamment de la définition de rapport.  
 
-  -   **Source de données et source de données partagée** Partie d’une définition de rapport qui inclut les informations relatives au type de l’extension pour le traitement des données, les informations de connexion et l’authentification.  
+  -   Source **de données et source de données partagée** Partie d’une définition de rapport qui comprend les informations sur le type d’extension pour le traitement des données, les informations de connexion et l’authentification.  
 
-  -   **Dataset et collection de champs** Partie d’une définition de rapport qui inclut la requête, la collection de champs et les types de données des champs.  
+  -   **DataSet et collection de champs** Partie d’une définition de rapport qui comprend la requête, la collection de champs et les types de données de champ.  
 
--   **Extensions de données Reporting Services** Extensions de données intégrées installées avec le Générateur de rapports. Une extension de données fournit des fonctionnalités qui gèrent l'authentification, les agrégats de serveur et les paramètres à valeurs multiples.  
+-   **Reporting Services des extensions de données** Les extensions de données intégrées qui sont installées avec Générateur de rapports. Une extension de données fournit des fonctionnalités qui gèrent l'authentification, les agrégats de serveur et les paramètres à valeurs multiples.  
 
 -   **Fournisseur de données** Logiciel qui gère la connexion et la récupération des données à partir de la source de données externe. Le fournisseur de données définit la syntaxe de la chaîne de connexion. La plupart des extensions de données sont créées au-dessus d'une couche de fournisseur de données.  
 
--   **Source de données externe** Emplacement où récupérer les données du rapport, par exemple une base de données, un fichier, un cube ou un service web.  
+-   **Source de données externe** L’emplacement à partir duquel récupérer les données de rapport, par exemple une base de données, un fichier, un cube ou un service Web.  
 
 > [!NOTE]  
 >  Lorsque vous n'êtes pas connecté à un serveur de rapports, vous pouvez choisir l'une des extensions de données installées avec le Générateur de rapports. Vous accédez aux données en tant qu'utilisateur unique à l'aide des informations d'identification spécifiques à votre ordinateur. Lorsque vous êtes connecté à un serveur de rapports, vous pouvez choisir l'une des extensions de données installées sur le serveur de rapports. Vous accédez aux données en tant qu'utilisateur faisant partie des multiples utilisateurs qui exécutent le rapport, et vous utilisez les informations d'identification du serveur de rapports. Pour plus d’informations, consultez [Spécifier des informations d’identification dans le Générateur de rapports](../specify-credentials-in-report-builder.md).  
 
-##  <a name="ReportData"></a> Fonctionnement des données de rapport  
+##  <a name="ReportData"></a>Fonctionnement des données de rapport  
 Dans sa forme la plus simple, un rapport affiche les données d'un dataset de rapport dans une région de données de la page de rapport, autrement dit, dans un tableau, un graphique ou une matrice unique, ou tout autre type de région de données du rapport. Les données d'un dataset de rapport proviennent du premier jeu de résultats retourné par une commande de requête unique qui s'exécute à partir d'un accès en lecture seule à une source de données externe. Chaque région de données s'étend en fonction de toutes les données du dataset à afficher.  
 
 Les données d'un dataset sont essentiellement tabulaires. Les colonnes sont les champs de la requête de dataset. Les lignes proviennent des lignes du jeu de résultats. Vous pouvez utiliser les types de données généralisés suivants dans un rapport :  
@@ -60,7 +60,7 @@ Les données d'un dataset sont essentiellement tabulaires. Les colonnes sont les
 
 
 
-##  <a name="DataTypes"></a> Utilisation des types de données  
+##  <a name="DataTypes"></a>Utilisation des types de données  
 Lorsque vous créez un dataset, les types de données des champs sont mappés à un sous-ensemble de types de données CLR (Common Language Runtime) du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Les types de données qui ne peuvent pas être clairement mappés sont retournés comme chaînes. Pour plus d’informations sur l’utilisation des types de données de champ, consultez [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md). Lorsque vous créez un paramètre, le type de données doit être un type de données de définition de rapport pris en charge. Pour plus d’informations sur le mappage des types de données du fournisseur de données à un paramètre de rapport, consultez [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md).  
 
 
@@ -68,11 +68,11 @@ Lorsque vous créez un dataset, les types de données des champs sont mappés à
 ##  <a name="HowTo"></a> Rubriques de procédures  
 Cette section contient des instructions pas à pas sur l'utilisation des connexions de données, des sources de données et des datasets.  
 
-[Ajouter et vérifier une connexion de données ou d’une Source de données &#40;Générateur de rapports et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+[Ajouter et vérifier une connexion de données ou une source de données &#40;Générateur de rapports et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
 
 [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
 
-[Ajouter un filtre à un dataset &#40;Générateur de rapports et SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+[Ajouter un filtre à un jeu de données &#40;Générateur de rapports et SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
 
 ## <a name="InThisSection"></a> Dans cette section  
 
@@ -81,18 +81,18 @@ Les rubriques suivantes fournissent des informations sur chaque extension de don
 |Rubrique|Type de source de données|  
 |-----------|----------------------|  
 |[Type de connexion SQL Server &#40;SSRS&#41;](sql-server-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|[Type de connexion Analysis Services pour MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)])|  
-|[Type de connexion PowerPivot &#40;SSRS&#41;](power-pivot-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)])|  
-|[Type de connexion de liste SharePoint &#40;SSRS&#41;](sharepoint-list-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Liste SharePoint|  
+|[Type de connexion Analysis Services pour MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|  
+|[Type de connexion PowerPivot &#40;&#41;SSRS](power-pivot-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|  
+|[Type de connexion de liste SharePoint &#40;SSRS&#41;](sharepoint-list-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Liste SharePoint|  
 |[Type de connexion SQL Azure &#40;SSRS&#41;](sql-azure-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
-|[Type de connexion à un entrepôt de données SQL Server Parallel Data Warehouse &#40;SSRS&#41;](sql-server-parallel-data-warehouse-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|  
+|[Type de connexion SQL Server Data Warehouse parallèle &#40;SSRS&#41;](sql-server-parallel-data-warehouse-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|  
 |[Type de connexion SAP NetWeaver BI &#40;SSRS&#41;](sap-netweaver-bi-connection-type-ssrs.md)|SAP NetWeaver BI|  
 |[Type de connexion Hyperion Essbase &#40;SSRS&#41;](hyperion-essbase-connection-type-ssrs.md)|Hyperion Essbase|  
 |[Type de connexion OLE DB &#40;SSRS&#41;](ole-db-connection-type-ssrs.md)|OLE DB|  
-|[Type de connexion ODBC &#40;SSRS&#41;](odbc-connection-type-ssrs.md)|ODBC|  
+|[Type de connexion ODBC &#40;&#41;SSRS](odbc-connection-type-ssrs.md)|ODBC|  
 |[Type de connexion XML &#40;SSRS&#41;](xml-connection-type-ssrs.md)|XML|  
 
-## <a name="Related"></a> Sections connexes  
+## <a name="Related"></a>Sections connexes  
 
 Ces sections de la documentation fournissent des informations de fond d'ordre conceptuel sur les données de rapport, ainsi que des informations sur les procédures de définition, de personnalisation et d'utilisation des parties d'un rapport qui sont liées aux données.  
 
@@ -102,8 +102,8 @@ Ces sections de la documentation fournissent des informations de fond d'ordre co
 |[Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md)|Fournit des informations sur les connexions de données et les sources de données.|  
 |[Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|Fournit des informations sur les datasets incorporés et partagés.|  
 |[Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)|Fournit des informations sur la collection de champs de dataset générée par la requête.|  
-|[Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la section [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Fournit des informations détaillées sur la prise en charge des plateformes et des versions pour chaque extension de données.|  
-|[Vue d’ensemble des extensions pour le traitement des données](../extensions/data-processing/data-processing-extensions-overview.md) dans la section [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [de](https://go.microsoft.com/fwlink/?linkid=121312).|Fournit des informations détaillées sur les extensions de données pour les utilisateurs expérimentés.|  
+|[Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la documentation de la [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] documentation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [en ligne](https://go.microsoft.com/fwlink/?linkid=121312)de.|Fournit des informations détaillées sur la prise en charge des plateformes et des versions pour chaque extension de données.|  
+|[Présentation des extensions](../extensions/data-processing/data-processing-extensions-overview.md) pour le traitement [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans la documentation de la documentation [en ligne](https://go.microsoft.com/fwlink/?linkid=121312)de.|Fournit des informations détaillées sur les extensions de données pour les utilisateurs expérimentés.|  
 
 ## <a name="see-also"></a>Voir aussi  
 

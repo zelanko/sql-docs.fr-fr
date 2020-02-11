@@ -1,5 +1,5 @@
 ---
-title: Afficher les données de Session d’événement | Microsoft Docs
+title: Afficher les données de session d’événements | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2fecf8a71854d7f8df160ba3ff63912086a34e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67131790"
 ---
 # <a name="view-event-session-data"></a>Afficher des données de session d'événements
@@ -44,9 +44,9 @@ ms.locfileid: "67131790"
   
 -   Pour une cible event_file, affichez les données cibles du fichier (fichier .XEL) à l'aide de l'une des méthodes suivantes :  
   
-    -   Utiliser un fichier -> Ouvrir dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
+    -   Utilisez fichier-> ouvrir dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
     
-    -   Faites glisser et déposez le fichier dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. 
+    -   Glissez-déposez [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]le fichier dans. 
     
     -   Double-cliquez sur le fichier .XEL.  
     
@@ -54,16 +54,16 @@ ms.locfileid: "67131790"
     
     -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).
     
-    -   Utiliser Powershell en lecture-SQLXevent dans [SQLServer.XEvent module](https://www.powershellgallery.com/packages/SqlServer.XEvent).
+    -   Utilisez PowerShell Read-SQLXevent dans le [module SqlServer. XEvent](https://www.powershellgallery.com/packages/SqlServer.XEvent).
     
-    -   Consommer par programme des événements étendus à l’aide de la [XELite NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite).
+    -   Consommez XEvents par programme à l’aide de [NuGet XELite](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite).
     
-    -   Vous pouvez afficher plusieurs fois. Fichier XEL en sélectionnant **fusionner les fichiers d’événements étendus** à partir du fichier -> Ouvrir le menu.
+    -   Vous pouvez en afficher plusieurs. Fichier XEL en sélectionnant **fusionner les fichiers d’événements étendus** à partir du menu fichier > ouvrir.
 
 ### <a name="watching-live-data"></a>Surveiller les données actives  
  Vous pouvez surveiller les données actives à mesure qu'elles sont capturées.  
   
--   Dans l'Explorateur d'objets, développez les nœuds **Gestion**, **Événements étendus**, puis **Sessions** .  
+-   Dans l’Explorateur d’objets, développez les nœuds **gestion**, **événements étendus**, puis **sessions** .  
 
 -   Cliquez avec le bouton droit sur le nom de session, puis cliquez sur **Surveiller les données actives** pour commencer à afficher les données de suivi.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "67131790"
   
      Les événements sont généralement affichés en environ 30 secondes. Si vous souhaitez modifier la période de latence, vous pouvez modifier l'option **Latence maximale de répartition** dans la page **Options avancées** de la boîte de dialogue **Nouvelle session** .  
      
--    Données actives peuvent être diffusés en continu par le [SqlServer.XEvent PowerShell module](https://www.powershellgallery.com/packages/SqlServer.XEvent).
+-    Les données actives peuvent être diffusées en continu par le [module PowerShell SqlServer. XEvent](https://www.powershellgallery.com/packages/SqlServer.XEvent).
      
 ### <a name="to-refresh-target-data"></a>Pour actualiser les données cibles  
  L'actualisation des données cibles n'est pas prise en charge pour les cibles event_files :  
@@ -87,7 +87,7 @@ ms.locfileid: "67131790"
 ## <a name="working-with-data"></a>Utilisation des données  
  Vous pouvez utiliser les fonctionnalités d'analyse de l'interface utilisateur Événements étendus afin d'identifier les problèmes.  
   
-### <a name="details-pane"></a>Volet d'informations  
+### <a name="details-pane"></a>Volet Détails  
  Le volet **Détails** affiche toutes les colonnes de l'événement sélectionné, notamment les champs et les actions. Vous pouvez ajouter une colonne à la table de données cible en cliquant avec le bouton droit sur une ligne dans le volet **Détails** et en sélectionnant **Afficher la colonne dans la table**.  
   
 ### <a name="create-modify-or-delete-merged-columns"></a>Créer, modifier ou supprimer des colonnes fusionnées  
@@ -180,7 +180,7 @@ ms.locfileid: "67131790"
   
     -   Colonnes de table. Utilisez cette option pour rechercher toutes les colonnes visibles dans la fenêtre de trace.  
   
-    -   Détails. Utilisez cette option pour rechercher toutes les colonnes (promues et non promues) dans la fenêtre de trace qui ont été sélectionnées avant d’ouvrir le **rechercher dans les événements étendus** boîte de dialogue.  
+    -   Détails. Utilisez cette option pour rechercher toutes les colonnes (promues et non promues) dans la fenêtre de trace qui ont été sélectionnées avant d’ouvrir la boîte **de dialogue Rechercher dans les événements étendus** .  
   
     -   *Event_column_name*. Utilisez cette option pour effectuer une recherche dans une colonne d'événement spécifique dans la liste déroulante.  
   
@@ -238,7 +238,7 @@ ms.locfileid: "67131790"
   
  Pour afficher le graphique de blocage :  
   
--   Dans l'Explorateur d'objets, développez les nœuds **Gestion**, **Événements étendus**, puis **Sessions** .  
+-   Dans l’Explorateur d’objets, développez les nœuds **gestion**, **événements étendus**, puis **sessions** .  
   
 -   Cliquez avec le bouton droit sur la session qui contient l'événement de blocage configuré à afficher, puis sélectionnez **Surveiller les données actives**.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "67131790"
   
  Pour afficher les graphiques de plan de requête :  
   
-1.  Dans l'Explorateur d'objets, développez les nœuds **Gestion**, **Événements étendus**, puis **Sessions** .  
+1.  Dans l’Explorateur d’objets, développez les nœuds **gestion**, **événements étendus**, puis **sessions** .  
   
 2.  Cliquez avec le bouton droit sur la session qui contient le graphique du plan de requête que vous souhaitez afficher (par exemple, query_post_compilation_showplan), puis sélectionnez **Surveiller les données actives**.  
   

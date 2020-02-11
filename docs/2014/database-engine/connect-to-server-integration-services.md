@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64c565c45288de157a3ba4c6c367ae7f8849dfee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62808700"
 ---
 # <a name="connect-to-server-integration-services"></a>Se connecter au serveur (Integration Services)
-  Utilisez cette boîte de dialogue pour afficher ou spécifier des options de connexion à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+  Utilisez cette boîte de dialogue pour afficher ou spécifier les options [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]de connexion à.  
   
 ## <a name="options"></a>Options  
  **Type de serveur**  
@@ -30,7 +30,7 @@ ms.locfileid: "62808700"
  Sélectionnez le serveur auquel vous connecter. La dernière instance de serveur à laquelle une connexion a été établie est affichée par défaut.  
   
 > [!NOTE]  
->  N’utilisez pas  *\<nom_serveur >* \\ *\<nom_instance >* , car [!INCLUDE[ssIS](../includes/ssis-md.md)] ne prend pas en charge plusieurs instances sur un ordinateur.  
+>  \\N’utilisez * \<pas ServerName>* * \<InstanceName>*, car [!INCLUDE[ssIS](../includes/ssis-md.md)] ne prend pas en charge plusieurs instances sur un ordinateur.  
   
  **Authentification**  
  Seule l'authentification [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows est disponible pour [!INCLUDE[ssIS](../includes/ssis-md.md)]. Le mode d’authentification Windows permet à l’utilisateur de se connecter au moyen d’un compte d’utilisateur Windows.  
@@ -41,7 +41,7 @@ ms.locfileid: "62808700"
  **Mot de passe**  
  Cette option n'est pas disponible car seule l'authentification Windows est disponible pour [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   
- **Se connecter**  
+ **Connexion**  
  Cliquez sur cette option pour vous connecter au serveur sélectionné.  
   
  **Options**  

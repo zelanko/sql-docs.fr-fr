@@ -1,5 +1,5 @@
 ---
-title: Mise à jour, instruction-Limitations | Microsoft Docs
+title: Limitations des instructions UPDATE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.assetid: 14700aac-e135-4dc0-9138-4b01224461d5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1cc8cf58d4e4d826dc4b152e395dedbea395a095
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088202"
 ---
 # <a name="update-statement-limitations"></a>UPDATE, instruction - limitations
-Pour le pilote Paradox mettre à jour une table, la table doit avoir un index unique (clé primaire). Lorsque vous utilisez le pilote Paradox sans avoir à implémenter le moteur de base de données Borland, il n’est pas possible de mettre à jour une table Paradox.  
+Pour que le pilote Paradox met à jour une table, la table doit avoir un index unique (clé primaire Paradox). Lorsque vous utilisez le pilote Paradox sans implémenter le Moteur de base de données Borland, il n’est pas possible de mettre à jour une table Paradox.  
   
- Pas de prise en charge par le pilote de texte.  
+ Non pris en charge par le pilote de texte.  
   
- Lorsque le pilote Microsoft Excel est utilisé, il est possible de mettre à jour les valeurs, mais une ligne ne peut pas être supprimée à partir d’une table basée sur une feuille de calcul Microsoft Excel. Par conséquent, l’instruction de mise à jour ne constitue pas officiellement pris en charge par le pilote Microsoft Excel. Seule l’instruction INSERT est considéré comme pris en charge.
+ Lorsque le pilote Microsoft Excel est utilisé, il est possible de mettre à jour les valeurs, mais une ligne ne peut pas être supprimée d’une table basée sur une feuille de calcul Microsoft Excel. Par conséquent, l’instruction UPDATE n’est pas considérée comme officiellement prise en charge par le pilote Microsoft Excel. Seule l’instruction INSERT est considérée comme prise en charge.

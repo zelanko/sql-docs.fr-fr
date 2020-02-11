@@ -1,5 +1,5 @@
 ---
-title: MarshalOptions, propriété-Exemple (VB) | Microsoft Docs
+title: MarshalOptions, exemple de propriété (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7b760bb8d74664e58552f19e321473bb139c3ad0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918238"
 ---
 # <a name="marshaloptions-property-example-vb"></a>MarshalOptions, exemple de propriété (VB)
-Cet exemple utilise le [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) propriété pour spécifier quelles lignes sont envoyées au serveur - toutes les lignes ou uniquement les lignes modifiées.  
+Cet exemple utilise la propriété [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) pour spécifier les lignes qui sont renvoyées au serveur (toutes les lignes ou uniquement les lignes modifiées).  
   
 ```  
 'BeginMarshalOptionsVB  

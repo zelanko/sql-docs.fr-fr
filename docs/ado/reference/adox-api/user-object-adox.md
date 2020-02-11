@@ -1,5 +1,5 @@
 ---
-title: L’objet utilisateur (ADOX) | Microsoft Docs
+title: User, objet (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,37 +16,37 @@ ms.assetid: f68e32ce-ef7c-407d-bdb5-d280947ae0e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf454e28e7a823eb643b5bbd92b0396fac15a028
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964977"
 ---
 # <a name="user-object-adox"></a>User, objet (ADOX)
-Représente un compte d’utilisateur qui dispose des autorisations d’accès au sein d’une base de données sécurisée.  
+Représente un compte d’utilisateur qui dispose d’autorisations d’accès au sein d’une base de données sécurisée.  
   
 ## <a name="remarks"></a>Notes  
- Le [utilisateurs](../../../ado/reference/adox-api/users-collection-adox.md) collection d’un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md) représente tous les utilisateurs du catalogue. Le **utilisateurs** collection pour un [groupe](../../../ado/reference/adox-api/group-object-adox.md) représente uniquement les utilisateurs du groupe spécifique.  
+ La collection d' [utilisateurs](../../../ado/reference/adox-api/users-collection-adox.md) d’un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md) représente tous les utilisateurs du catalogue. La collection d' **utilisateurs** d’un [groupe](../../../ado/reference/adox-api/group-object-adox.md) représente uniquement les utilisateurs du groupe spécifique.  
   
- Avec les propriétés, les collections et les méthodes d’un **utilisateur** de l’objet, vous pouvez :  
+ Avec les propriétés, collections et méthodes d’un objet **utilisateur** , vous pouvez :  
   
--   Identifier l’utilisateur avec le [nom](../../../ado/reference/adox-api/name-property-adox.md) propriété.  
+-   Identifiez l’utilisateur à l’aide de la propriété [Name](../../../ado/reference/adox-api/name-property-adox.md) .  
   
--   Modifier le mot de passe pour un utilisateur avec le [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) (méthode).  
+-   Modifiez le mot de passe d’un utilisateur à l’aide de la méthode [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) .  
   
--   Déterminer si un utilisateur a lire, écrire ou supprimer des autorisations avec le [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) et [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) méthodes.  
+-   Déterminez si un utilisateur dispose d’autorisations de lecture, d’écriture ou de suppression avec les méthodes [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) et [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) .  
   
--   Accéder aux groupes auxquels appartient un utilisateur avec le [groupes](../../../ado/reference/adox-api/groups-collection-adox.md) collection.  
+-   Accédez aux groupes auxquels appartient un utilisateur avec la collection de [groupes](../../../ado/reference/adox-api/groups-collection-adox.md) .  
   
--   Accéder aux propriétés spécifiques au fournisseur avec le [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection.  
+-   Accédez aux propriétés spécifiques au fournisseur avec la collection [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) .  
   
--   Déterminer le [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) pour un utilisateur.  
+-   Déterminez le [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) d’un utilisateur.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient la rubrique suivante.  
   
 -   [Propriétés, méthodes et événements de l’objet User](../../../ado/reference/adox-api/user-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [GetPermissions et SetPermissions, exemples de méthodes (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
- [Collection de groupes (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
+ [Groups, collection (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [Users, collection (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

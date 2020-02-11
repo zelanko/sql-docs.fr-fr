@@ -18,14 +18,14 @@ ms.assetid: 8aa90cb0-f588-4141-9dc9-3b22918394ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2791bc1a89f8cec1362ab1f00c3be739f7d56b96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920108"
 ---
 # <a name="chapter-property-ado"></a>Chapter, propriété (ADO)
-Obtient ou définit un OLE DB **chapitre** objet à partir de/sur un [ADORecordsetConstruction, Interface](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md) objet. Lorsque vous utilisez **put_Chapter** pour définir le **chapitre** de l’objet, un sous-ensemble de lignes est transformé en ADO [objet Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet. Cela définit le chapitre actif de la **ensemble de lignes**objet. Cette propriété est en lecture/écriture.  
+Obtient ou définit un objet OLE DB **chapitre** à partir de/sur un objet d' [interface ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md) . Lorsque vous utilisez **put_Chapter** pour définir l’objet **Chapter** , un sous-ensemble de lignes est converti en objet [objet Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ADO. Cela définit le chapitre actuel de l’objet **rowset**. Cette propriété est en lecture/écriture.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,7 +42,7 @@ HRESULT put_Chapter([in] long lChapter);
  Handle d’un chapitre.  
   
 ## <a name="return-values"></a>Valeurs de retour  
- Cette méthode de propriété renvoie les valeurs HRESULT standard, notamment S_OK et E_FAIL.  
+ Cette méthode de propriété retourne les valeurs HRESULT standard, y compris S_OK et E_FAIL.  
   
 ## <a name="applies-to"></a>S'applique à  
  [ADORecordsetConstruction, interface](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)

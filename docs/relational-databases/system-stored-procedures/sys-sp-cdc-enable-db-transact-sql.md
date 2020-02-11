@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_enable_db (Transact-SQL) | Microsoft Docs
+title: sys. sp_cdc_enable_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 87cb8f207d85220b88ef00d65fd4704b21becf63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106505"
 ---
-# <a name="sysspcdcenabledb-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
+# <a name="syssp_cdc_enable_db-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Active la capture de données modifiées pour la base de données actuelle. Cette procédure doit être exécutée pour une base de données afin que des tables puissent être activées pour la capture de données modifiées dans cette base de données. Les enregistrements de capture de données modifiées insèrent, mettent à jour et suppriment l'activité appliquée aux tables activées, en rendant les détails des modifications disponibles dans un format relationnel simple à utiliser. Les informations sur la colonne qui reflètent la structure de colonne d'une table source suivie sont capturées pour les lignes modifiées, avec les métadonnées nécessaires à l'application des modifications à un environnement cible.  
@@ -36,7 +36,7 @@ ms.locfileid: "68106505"
 > [!IMPORTANT]
 >  La capture des modifications de données n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,16 +45,16 @@ ms.locfileid: "68106505"
 sys.sp_cdc_enable_db  
 ```  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
- Capture de données modifiées ne peut pas être activée sur [bases de données système](../../relational-databases/databases/system-databases.md) ou bases de données de distribution.  
+ La capture de données modifiées ne peut pas être activée sur les bases [de données système](../../relational-databases/databases/system-databases.md) ou les bases de données de distribution.  
   
- sys.sp_cdc_enable_db crée les objets de capture de données modifiées qui ont une portée à l'échelle de la base de données, y compris les tables de métadonnées et les déclencheurs DDL. Il crée le schéma cdc et l’utilisateur de base de données cdc et définit la colonne is_cdc_enabled pour l’entrée de la base de données dans les également le [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) affichage 1 catalogue.  
+ sys.sp_cdc_enable_db crée les objets de capture de données modifiées qui ont une portée à l'échelle de la base de données, y compris les tables de métadonnées et les déclencheurs DDL. Il crée également le schéma CDC et l’utilisateur de la base de données CDC et définit la colonne is_cdc_enabled pour l’entrée de la base de données dans l’affichage catalogue [sys. databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) sur 1.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe sysadmin.  
@@ -70,6 +70,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sys.sp_cdc_disable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)  
+ [sys. sp_cdc_disable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)  
   
   

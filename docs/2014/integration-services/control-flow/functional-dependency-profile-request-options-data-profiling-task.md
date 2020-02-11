@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2cab0f3edc080e6f2f174e3393548620c65f9176
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831545"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Options Demande de profil de dépendance fonctionnelle (tâche de profilage des données)
@@ -46,7 +46,7 @@ ms.locfileid: "62831545"
   
 -   **Données**, qui inclut les options **DeterminantColumns** et **DependentColumn**  
   
--   **Général**  
+-   **Généralités**  
   
 -   **Options**  
   
@@ -84,15 +84,15 @@ ms.locfileid: "62831545"
 > [!NOTE]  
 >  Quand vous utilisez le caractère générique **(\*)** pour **ColumnName**, **CompareOptions** est en lecture seule et est définie avec le paramètre **Default**.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**Default**|Trie et compare des données d'après le classement de la colonne dans la table source.|  
+|**Par défaut**|Trie et compare des données d'après le classement de la colonne dans la table source.|  
 |**BinarySort**|Trie et compare les données en fonction des modèles binaires définis pour chaque caractère. L'ordre de tri binaire respecte la casse et les accents. Il s'agit aussi de l'ordre de tri le plus rapide.|  
 |**DictionarySort**|Trie et compare des données d'après les règles de tri et de comparaison telles que définies dans les dictionnaires de la langue ou de l'alphabet associé.|  
   
  Si vous sélectionnez **DictionarySort**, vous pouvez également sélectionner toutes les combinaisons d’options répertoriées dans le tableau suivant. Par défaut, aucune de ces options supplémentaires n'est sélectionnée.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|Indique si la comparaison fait la distinction entre les lettres majuscules et minuscules. Si cette option est définie, la comparaison de chaînes ignore la casse. Par exemple, « ABC » est alors identique à « abc ».|  
 |**IgnoreNonSpace**|Indique si la comparaison fait la distinction entre les caractères avec espace et les caractères diacritiques. Si cette option est définie, la comparaison ignore les caractères diacritiques. Par exemple, « å » est identique à « a ».|  
@@ -103,11 +103,11 @@ ms.locfileid: "62831545"
  **RequestID**  
  Tapez un nom descriptif pour identifier cette demande de profil. En règle générale, il n'est pas nécessaire de modifier la valeur générée automatiquement.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Options  
  **ThresholdSetting**  
  Spécifiez le paramètre de seuil. La valeur par défaut de cette propriété est **Specified**.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Aucun**|Aucun seuil n'est spécifié. La puissance de la dépendance fonctionnelle est précisée, quelle que soit sa valeur.|  
 |**Specified**|Utilisez le seuil spécifié dans **FDStrengthThreshold**. La puissance de la dépendance fonctionnelle est précisée uniquement si elle est supérieure au seuil.|  

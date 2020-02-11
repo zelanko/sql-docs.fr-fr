@@ -1,5 +1,5 @@
 ---
-title: Référence de l’API ODBC | Microsoft Docs
+title: Informations de référence sur l’API ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,20 +12,20 @@ ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5073d7efcb2cb99e51fe0d9cd0382806501cfd0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085459"
 ---
 # <a name="odbc-api-reference"></a>Informations de référence sur l’API ODBC
-Les rubriques de cette section décrivent chaque fonction ODBC dans l’ordre alphabétique. Chaque fonction est définie comme une fonction de langage de programmation de C. Descriptions sont les suivantes :  
+Les rubriques de cette section décrivent chaque fonction ODBC par ordre alphabétique. Chaque fonction est définie en tant que fonction de langage de programmation C. Les descriptions sont les suivantes :  
   
 -   Objectif  
   
--   Version d’ODBC  
+-   Version ODBC  
   
--   Niveau de conformité standard CLI  
+-   Niveau de conformité de l’interface de commande standard  
   
 -   Syntaxe  
   
@@ -35,20 +35,20 @@ Les rubriques de cette section décrivent chaque fonction ODBC dans l’ordre al
   
 -   Diagnostics  
   
--   Commentaires sur l’utilisation et d’implémentation  
+-   Commentaires sur l’utilisation et l’implémentation  
   
 -   Exemple de code  
   
--   Références à des fonctions connexes  
+-   Références aux fonctions connexes  
   
- Le niveau de conformité CLI standard peut être une des opérations suivantes : 92 ISO, ouvrez le groupe, ODBC, ou obsolètes. Une fonction marquée comme conforme à ISO 92 apparaît également dans Open Group version 1, Open Group étant un sur-ensemble pur de ISO 92. Une fonction marquée comme conforme Open groupe apparaît également dans ODBC 3. *x*, étant donné que ODBC 3. *x* est un sur-ensemble pur de Open Group version 1. Une fonction marquée comme conforme à ODBC apparaît dans aucune norme. Une fonction marquée comme déconseillée a été déconseillée dans ODBC 3. *x*.  
+ Le niveau de conformité de l’interface CLI standard peut être l’un des suivants : ISO 92, Open Group, ODBC ou Deprecated. Une fonction marquée comme ISO 92-conforme figure également dans Open Group version 1, car Open Group est un sur-ensemble pur de ISO 92. Une fonction marquée comme Open Group-compatible s’affiche également dans ODBC 3. *x*, car ODBC 3. *x* est un sur-ensemble pur de Open Group version 1. Une fonction marquée comme compatible ODBC n’apparaît ni dans le standard. Une fonction marquée comme déconseillée a été dépréciée dans ODBC 3. *x*.  
   
- Gestion des informations de diagnostics est décrite dans le [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) description de fonction. Le texte associé aux valeurs SQLSTATE est inclus afin de fournir une description de la condition, mais n’est pas destiné à prescrire un texte spécifique.  
+ La gestion des informations de diagnostic est décrite dans la description de la fonction [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) . Le texte associé aux valeurs SQLSTATE est inclus pour fournir une description de la condition, mais n’est pas destiné à prescrire un texte spécifique.  
   
 > [!NOTE]  
->  Pour plus d’informations spécifiques au pilote sur les fonctions ODBC, consultez la section pour le pilote.  
+>  Pour obtenir des informations spécifiques au pilote sur les fonctions ODBC, consultez la section relative au pilote.  
   
- Cette section contient des rubriques pour les fonctions suivantes :  
+ Cette section contient les rubriques relatives aux fonctions suivantes :  
   
 -   [SQLAllocConnect, fonction](../../../odbc/reference/syntax/sqlallocconnect-function.md)  
   
@@ -58,11 +58,11 @@ Les rubriques de cette section décrivent chaque fonction ODBC dans l’ordre al
   
 -   [SQLAllocStmt, fonction](../../../odbc/reference/syntax/sqlallocstmt-function.md)  
   
--   [SQLBindCol, fonction](../../../odbc/reference/syntax/sqlbindcol-function.md)  
+-   [Fonction SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)  
   
--   [SQLBindParameter, fonction](../../../odbc/reference/syntax/sqlbindparameter-function.md)  
+-   [Fonction SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)  
   
--   [SQLBrowseConnect, fonction](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)  
+-   [Fonction SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)  
   
 -   [SQLBulkOperations, fonction](../../../odbc/reference/syntax/sqlbulkoperations-function.md)  
   
@@ -72,13 +72,13 @@ Les rubriques de cette section décrivent chaque fonction ODBC dans l’ordre al
   
 -   [SQLCloseCursor, fonction](../../../odbc/reference/syntax/sqlclosecursor-function.md)  
   
--   [SQLColAttribute, fonction](../../../odbc/reference/syntax/sqlcolattribute-function.md)  
+-   [Fonction SQLColAttribute](../../../odbc/reference/syntax/sqlcolattribute-function.md)  
   
 -   [SQLColAttributes, fonction](../../../odbc/reference/syntax/sqlcolattributes-function.md)  
   
--   [SQLColumnPrivileges, fonction](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)  
+-   [Fonction SQLColumnPrivileges](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)  
   
--   [SQLColumns, fonction](../../../odbc/reference/syntax/sqlcolumns-function.md)  
+-   [Fonction SQLColumns](../../../odbc/reference/syntax/sqlcolumns-function.md)  
   
 -   [SQLCompleteAsync, fonction](../../../odbc/reference/syntax/sqlcompleteasync-function.md)  
   
@@ -88,9 +88,9 @@ Les rubriques de cette section décrivent chaque fonction ODBC dans l’ordre al
   
 -   [SQLDataSources, fonction](../../../odbc/reference/syntax/sqldatasources-function.md)  
   
--   [SQLDescribeCol, fonction](../../../odbc/reference/syntax/sqldescribecol-function.md)  
+-   [Fonction SQLDescribeCol](../../../odbc/reference/syntax/sqldescribecol-function.md)  
   
--   [SQLDescribeParam, fonction](../../../odbc/reference/syntax/sqldescribeparam-function.md)  
+-   [Fonction SQLDescribeParam](../../../odbc/reference/syntax/sqldescribeparam-function.md)  
   
 -   [SQLDisconnect, fonction](../../../odbc/reference/syntax/sqldisconnect-function.md)  
   
@@ -98,7 +98,7 @@ Les rubriques de cette section décrivent chaque fonction ODBC dans l’ordre al
   
 -   [SQLDrivers, fonction](../../../odbc/reference/syntax/sqldrivers-function.md)  
   
--   [SQLEndTran, fonction](../../../odbc/reference/syntax/sqlendtran-function.md)  
+-   [Fonction SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)  
   
 -   [SQLError, fonction](../../../odbc/reference/syntax/sqlerror-function.md)  
   
@@ -110,71 +110,71 @@ Les rubriques de cette section décrivent chaque fonction ODBC dans l’ordre al
   
 -   [SQLFetch, fonction](../../../odbc/reference/syntax/sqlfetch-function.md)  
   
--   [SQLFetchScroll, fonction](../../../odbc/reference/syntax/sqlfetchscroll-function.md)  
+-   [Fonction SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)  
   
--   [SQLForeignKeys, fonction](../../../odbc/reference/syntax/sqlforeignkeys-function.md)  
+-   [Fonction SQLForeignKeys](../../../odbc/reference/syntax/sqlforeignkeys-function.md)  
   
 -   [SQLFreeConnect, fonction](../../../odbc/reference/syntax/sqlfreeconnect-function.md)  
   
 -   [SQLFreeEnv, fonction](../../../odbc/reference/syntax/sqlfreeenv-function.md)  
   
--   [SQLFreeHandle, fonction](../../../odbc/reference/syntax/sqlfreehandle-function.md)  
+-   [Fonction SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)  
   
--   [SQLFreeStmt, fonction](../../../odbc/reference/syntax/sqlfreestmt-function.md)  
+-   [Fonction SQLFreeStmt](../../../odbc/reference/syntax/sqlfreestmt-function.md)  
   
--   [SQLGetConnectAttr, fonction](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)  
+-   [Fonction SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)  
   
 -   [SQLGetConnectOption, fonction](../../../odbc/reference/syntax/sqlgetconnectoption-function.md)  
   
--   [SQLGetCursorName, fonction](../../../odbc/reference/syntax/sqlgetcursorname-function.md)  
+-   [SQLGetCursorName Function](../../../odbc/reference/syntax/sqlgetcursorname-function.md)  
   
--   [SQLGetData, fonction](../../../odbc/reference/syntax/sqlgetdata-function.md)  
+-   [Fonction SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)  
   
--   [SQLGetDescField, fonction](../../../odbc/reference/syntax/sqlgetdescfield-function.md)  
+-   [Fonction SQLGetDescField](../../../odbc/reference/syntax/sqlgetdescfield-function.md)  
   
 -   [SQLGetDescRec, fonction](../../../odbc/reference/syntax/sqlgetdescrec-function.md)  
   
--   [SQLGetDiagField, fonction](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)  
+-   [Fonction SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)  
   
 -   [SQLGetDiagRec, fonction](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)  
   
 -   [SQLGetEnvAttr, fonction](../../../odbc/reference/syntax/sqlgetenvattr-function.md)  
   
--   [SQLGetFunctions, fonction](../../../odbc/reference/syntax/sqlgetfunctions-function.md)  
+-   [Fonction SQLGetFunctions](../../../odbc/reference/syntax/sqlgetfunctions-function.md)  
   
--   [SQLGetInfo, fonction](../../../odbc/reference/syntax/sqlgetinfo-function.md)  
+-   [Fonction SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)  
   
--   [SQLGetStmtAttr, fonction](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)  
+-   [Fonction SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)  
   
 -   [SQLGetStmtOption, fonction](../../../odbc/reference/syntax/sqlgetstmtoption-function.md)  
   
--   [SQLGetTypeInfo, fonction](../../../odbc/reference/syntax/sqlgettypeinfo-function.md)  
+-   [Fonction SQLGetTypeInfo](../../../odbc/reference/syntax/sqlgettypeinfo-function.md)  
   
--   [SQLMoreResults, fonction](../../../odbc/reference/syntax/sqlmoreresults-function.md)  
+-   [Fonction SQLMoreResults](../../../odbc/reference/syntax/sqlmoreresults-function.md)  
   
--   [SQLNativeSql, fonction](../../../odbc/reference/syntax/sqlnativesql-function.md)  
+-   [Fonction SQLNativeSql](../../../odbc/reference/syntax/sqlnativesql-function.md)  
   
--   [SQLNumParams, fonction](../../../odbc/reference/syntax/sqlnumparams-function.md)  
+-   [Fonction SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md)  
   
--   [SQLNumResultCols, fonction](../../../odbc/reference/syntax/sqlnumresultcols-function.md)  
+-   [Fonction SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)  
   
 -   [SQLParamData, fonction](../../../odbc/reference/syntax/sqlparamdata-function.md)  
   
 -   [SQLParamOptions, fonction](../../../odbc/reference/syntax/sqlparamoptions-function.md)  
   
--   [SQLPrepare, fonction](../../../odbc/reference/syntax/sqlprepare-function.md)  
+-   [Fonction SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)  
   
--   [SQLPrimaryKeys, fonction](../../../odbc/reference/syntax/sqlprimarykeys-function.md)  
+-   [Fonction SQLPrimaryKeys](../../../odbc/reference/syntax/sqlprimarykeys-function.md)  
   
--   [SQLProcedureColumns, fonction](../../../odbc/reference/syntax/sqlprocedurecolumns-function.md)  
+-   [Fonction SQLProcedureColumns](../../../odbc/reference/syntax/sqlprocedurecolumns-function.md)  
   
--   [SQLProcedures, fonction](../../../odbc/reference/syntax/sqlprocedures-function.md)  
+-   [Fonction SQLProcedures](../../../odbc/reference/syntax/sqlprocedures-function.md)  
   
--   [SQLPutData, fonction](../../../odbc/reference/syntax/sqlputdata-function.md)  
+-   [Fonction SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)  
   
--   [SQLRowCount, fonction](../../../odbc/reference/syntax/sqlrowcount-function.md)  
+-   [SQLRowCount (fonction)](../../../odbc/reference/syntax/sqlrowcount-function.md)  
   
--   [SQLSetConnectAttr, fonction](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)  
+-   [Fonction SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)  
   
 -   [SQLSetConnectOption, fonction](../../../odbc/reference/syntax/sqlsetconnectoption-function.md)  
   
@@ -184,7 +184,7 @@ Les rubriques de cette section décrivent chaque fonction ODBC dans l’ordre al
   
 -   [SQLSetDescRec, fonction](../../../odbc/reference/syntax/sqlsetdescrec-function.md)  
   
--   [SQLSetEnvAttr, fonction](../../../odbc/reference/syntax/sqlsetenvattr-function.md)  
+-   [Fonction SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)  
   
 -   [SQLSetParam, fonction](../../../odbc/reference/syntax/sqlsetparam-function.md)  
   
@@ -192,16 +192,16 @@ Les rubriques de cette section décrivent chaque fonction ODBC dans l’ordre al
   
 -   [SQLSetScrollOptions, fonction](../../../odbc/reference/syntax/sqlsetscrolloptions-function.md)  
   
--   [SQLSetStmtAttr, fonction](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)  
+-   [Fonction SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)  
   
 -   [SQLSetStmtOption, fonction](../../../odbc/reference/syntax/sqlsetstmtoption-function.md)  
   
--   [SQLSpecialColumns, fonction](../../../odbc/reference/syntax/sqlspecialcolumns-function.md)  
+-   [Fonction SQLSpecialColumns](../../../odbc/reference/syntax/sqlspecialcolumns-function.md)  
   
--   [SQLStatistics, fonction](../../../odbc/reference/syntax/sqlstatistics-function.md)  
+-   [Fonction SQLStatistics](../../../odbc/reference/syntax/sqlstatistics-function.md)  
   
--   [SQLTablePrivileges, fonction](../../../odbc/reference/syntax/sqltableprivileges-function.md)  
+-   [Fonction SQLTablePrivileges](../../../odbc/reference/syntax/sqltableprivileges-function.md)  
   
--   [SQLTables, fonction](../../../odbc/reference/syntax/sqltables-function.md)  
+-   [Fonction SQLTables](../../../odbc/reference/syntax/sqltables-function.md)  
   
 -   [SQLTransact, fonction](../../../odbc/reference/syntax/sqltransact-function.md)

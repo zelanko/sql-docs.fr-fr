@@ -16,18 +16,18 @@ ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4db6a29d92fe093e9704f88fcc528c9fa687ccff
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68768947"
 ---
-# <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
+# <a name="sp_changedynamicsnapshot_job-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Modifie le travail de l'Agent qui crée l'instantané d'un abonnement vers une publication avec un filtre de lignes paramétrable. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -59,55 +59,55 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_type = ] frequency_type`Fréquence de planification de l’agent. *frequency_type* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**1**|Une fois|  
+|**1**|Ponctuelle|  
 |**2**|À la demande|  
-|**4**|Tous les jours|  
-|**8**|Semaine|  
-|**16**|Mois|  
+|**4**|Quotidienne|  
+|**version8**|Hebdomadaire|  
+|**16**|Mensuelle|  
 |**32**|Mensuelle relative|  
 |**64**|Démarrage automatique|  
-|**128**|Périodique|  
+|**128**|Récurrent|  
 |NULL (par défaut)||  
   
 `[ @frequency_interval = ] frequency_interval`Jours d’exécution de l’agent. *frequency_interval* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**1**|Dimanche|  
 |**2**|Lundi|  
-|**3**|Mardi|  
+|**1,3**|Mardi|  
 |**4**|Mercredi|  
-|**5**|Jeudi|  
+|**5,5**|Jeudi|  
 |**6**|Vendredi|  
 |**7**|Samedi|  
-|**8**|Jour|  
-|**9**|Jours de la semaine|  
+|**version8**|jour|  
+|**0,9**|Les jours de la semaine|  
 |**10**|Jours de week-end|  
 |NULL (par défaut)||  
   
 `[ @frequency_subday = ] frequency_subday`Fréquence de replanification au cours de la période définie. *frequency_subday* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**2**|Seconde|  
 |**4**|Minute|  
-|**8**|Heure|  
+|**version8**|Heure|  
 |NULL (par défaut)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Intervalle de *frequency_subday*. *frequency_subday_interval* est de **type int**, avec NULL comme valeur par défaut.  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Date à laquelle le Agent de fusion s’exécute. Ce paramètre est utilisé lorsque *frequency_type* a la valeur **32** (mensuelle relative). *frequency_relative_interval* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**1**|Première|  
+|**1**|Premier|  
 |**2**|Seconde|  
 |**4**|Troisième|  
-|**8**|Quatrième|  
-|**16**|Dernière|  
+|**version8**|Quatrième|  
+|**16**|Dernier|  
 |NULL (par défaut)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est de **type int**, avec NULL comme valeur par défaut.  
@@ -120,14 +120,14 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @active_end_time_of_day = ] active_end_time_of_day`Heure de la journée à laquelle le Agent de fusion cesse d’être planifié, au format HHMMSS. *active_end_time_of_day* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @job_login = ] 'job_login'`[!INCLUDE[msCoName](../../includes/msconame-md.md)] Compte Windows sous lequel le agent d’instantané s’exécute lors de la génération de l’instantané pour un abonnement à l’aide d’un filtre de lignes paramétrable. *job_login* est de type **nvarchar (257)** , avec NULL comme valeur par défaut.  
+`[ @job_login = ] 'job_login'`Compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lequel le agent d’instantané s’exécute lors de la génération de l’instantané pour un abonnement à l’aide d’un filtre de lignes paramétrable. *job_login* est de type **nvarchar (257)**, avec NULL comme valeur par défaut.  
   
-`[ @job_password = ] 'job_password'`Mot de passe du compte Windows sous lequel le Agent d’instantané s’exécute lors de la génération de l’instantané pour un abonnement à l’aide d’un filtre de lignes paramétrable. *job_password* est de type **nvarchar (257)** , avec NULL comme valeur par défaut.  
+`[ @job_password = ] 'job_password'`Mot de passe du compte Windows sous lequel le Agent d’instantané s’exécute lors de la génération de l’instantané pour un abonnement à l’aide d’un filtre de lignes paramétrable. *job_password* est de type **nvarchar (257)**, avec NULL comme valeur par défaut.  
   
 > [!IMPORTANT]  
 >  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez enregistrer les informations d'identification dans un fichier de script, vous devez sécuriser le fichier pour empêcher un accès non autorisé.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  

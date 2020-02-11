@@ -1,5 +1,5 @@
 ---
-title: DefaultDatabase, propriété | Microsoft Docs
+title: Propriété DefaultDatabase | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,31 +16,31 @@ ms.assetid: 41e8a8dd-e69c-4a09-8736-93502e01961c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c78dfdc476dc9dcf599fcfe7cb87bd5e1a39d281
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919166"
 ---
 # <a name="defaultdatabase-property"></a>DefaultDatabase, propriété
-Indique la base de données par défaut pour un [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet.  
+Indique la base de données par défaut pour un objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Définit ou retourne un **chaîne** valeur que prend le nom d’une base de données disponible à partir du fournisseur.  
+ Définit ou retourne une valeur de **chaîne** qui prend la valeur du nom d’une base de données disponible à partir du fournisseur.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le **DefaultDatabase** propriété pour définir ou retourner le nom de la base de données par défaut sur un spécifique **connexion** objet.  
+ Utilisez la propriété **DefaultDatabase** pour définir ou retourner le nom de la base de données par défaut sur un objet de **connexion** spécifique.  
   
- S’il existe une base de données par défaut, les chaînes SQL peuvent utiliser une syntaxe non qualifiée pour accéder aux objets dans cette base de données. Pour accéder aux objets dans une base de données autre que celui spécifié dans le **DefaultDatabase** propriété, vous devez qualifier les noms d’objets avec le nom de la base de données souhaitée. Lors de la connexion, le fournisseur écrit les informations de base de données par défaut pour le **DefaultDatabase** propriété. Certains fournisseurs n'autorisent qu’une seule base de données par connexion, auquel cas vous ne pouvez pas modifier le **DefaultDatabase** propriété.  
+ S’il existe une base de données par défaut, les chaînes SQL peuvent utiliser une syntaxe non qualifiée pour accéder aux objets de cette base de données. Pour accéder à des objets dans une base de données autre que celle spécifiée dans la propriété **DefaultDatabase** , vous devez qualifier les noms d’objets avec le nom de la base de données souhaitée. Lors de la connexion, le fournisseur écrit les informations de base de données par défaut dans la propriété **DefaultDatabase** . Certains fournisseurs n’autorisent qu’une seule base de données par connexion, auquel cas vous ne pouvez pas modifier la propriété **DefaultDatabase** .  
   
- Certaines sources de données et les fournisseurs ne peuvent pas prendre en charge cette fonctionnalité et peuvent retourner une erreur ou une chaîne vide.  
+ Certaines sources de données et fournisseurs peuvent ne pas prendre en charge cette fonctionnalité et peuvent retourner une erreur ou une chaîne vide.  
   
 > [!NOTE]
->  **Utilisation de Service de données à distance** cette propriété n’est pas disponible sur une côté client **connexion** objet.  
+>  **Utilisation des services de données distants** Cette propriété n’est pas disponible sur un objet de **connexion** côté client.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Connection, objet (ADO MD)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Provider et DefaultDatabase propriétés exemple (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
+ [Provider et DefaultDatabase, exemple de propriétés (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
  [Provider et DefaultDatabase, exemple de propriétés (VC++)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vc.md)   

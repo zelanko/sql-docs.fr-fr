@@ -17,14 +17,14 @@ ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b128c935ec0119344a213dbe5289cc8a3cd190fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919366"
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord, CopyTo et SaveToFile, exemple de méthodes (VB)
-Cet exemple montre comment créer des copies d’un fichier en utilisant [Stream](../../../ado/reference/ado-api/stream-object-ado.md) ou [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objets. Une copie est effectuée dans un dossier Web pour la publication Internet. Autres propriétés et les méthodes indiquées sont [Stream Type](../../../ado/reference/ado-api/type-property-ado-stream.md), **Open**, [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md), et [Record Open](../../../ado/reference/ado-api/open-method-ado-record.md).  
+Cet exemple montre comment créer des copies d’un fichier à l’aide d’objets [Stream](../../../ado/reference/ado-api/stream-object-ado.md) ou [Record](../../../ado/reference/ado-api/record-object-ado.md) . Une copie est effectuée dans un dossier Web pour la publication Internet. Les autres propriétés et méthodes présentées incluent [Stream type](../../../ado/reference/ado-api/type-property-ado-stream.md), **Open**, [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)et [Record Open](../../../ado/reference/ado-api/open-method-ado-record.md).  
   
 ```  
 'BeginCopyRecordVB  
@@ -128,9 +128,9 @@ End Sub
  [CopyRecord, méthode (ADO)](../../../ado/reference/ado-api/copyrecord-method-ado.md)   
  [CopyTo, méthode (ADO)](../../../ado/reference/ado-api/copyto-method-ado.md)   
  [LoadFromFile, méthode (ADO)](../../../ado/reference/ado-api/loadfromfile-method-ado.md)   
- [Open, méthode (objet Record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
- [Open, méthode (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Enregistrement objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Open, méthode (ADO record)](../../../ado/reference/ado-api/open-method-ado-record.md)   
+ [Open, méthode (objet Stream ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
+ [Record, objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [SaveToFile, méthode](../../../ado/reference/ado-api/savetofile-method.md)   
  [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [Type, propriété (objet Stream ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)

@@ -1,5 +1,5 @@
 ---
-title: Modifier le contrôle de code Source | Microsoft Docs
+title: Modifier le contrôle de code source | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 939e3befd0cbec87dbba7046761637c4b7655e22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812743"
 ---
 # <a name="change-source-control"></a>Modifier le contrôle de code source
@@ -31,7 +31,7 @@ ms.locfileid: "62812743"
 >  Cette boîte de dialogue est également disponible en cliquant avec le bouton droit sur l'élément dans l'Explorateur de solutions.  
   
 ## <a name="options"></a>Options  
- **Bind**  
+ **Lier**  
  Associe les éléments sélectionnés à un emplacement de serveur de contrôle de code source spécifié. Par exemple, vous pouvez utiliser cette option pour effectuer une liaison vers le dernier dossier et la dernière base de données connus du serveur de contrôle de code source. Si aucun dossier ou base de données récent n'est trouvé, vous devez en spécifier un ou une autre.  
   
  **Parcourir**  
@@ -40,13 +40,13 @@ ms.locfileid: "62812743"
  **Colonnes**  
  Identifie les colonnes à afficher et l'ordre dans lequel elles s'affichent.  
   
- **Se connecter**  
+ **Connexion**  
  Crée une connexion entre les éléments sélectionnés et le serveur de contrôle de code source.  
   
- **Connecté**  
+ **Correctement**  
  Affiche l'état de connexion d'une solution ou d'un projet sélectionné.  
   
- **Déconnecter**  
+ **Connect**  
  Déconnecte la copie locale d'une solution ou d'un projet, sur votre ordinateur personnel, de sa copie principale dans la base de données. Utilisez cette commande avant de déconnecter votre ordinateur du serveur de contrôle de code source (par exemple, en mode hors connexion sur votre ordinateur portable).  
   
  **OK**  
@@ -58,16 +58,16 @@ ms.locfileid: "62812743"
  **Actualiser**  
  Actualise les informations de connexion relatives à tous les projets répertoriés dans cette boîte de dialogue.  
   
- **Liaison de serveur**  
+ **Liaison du serveur**  
  Indique la liaison entre l'élément et un serveur de contrôle de code source.  
   
- **Nom de serveur**  
+ **Nom du serveur**  
  Affiche le nom du serveur de contrôle de code source auquel la solution ou le projet correspondant est lié.  
   
- **Solution/projet**  
+ **Solution/Projet**  
  Affiche le nom de chaque solution et projet dans la sélection en cours.  
   
- **Sort**  
+ **Trier**  
  Trie les colonnes affichées.  
   
  **État**  

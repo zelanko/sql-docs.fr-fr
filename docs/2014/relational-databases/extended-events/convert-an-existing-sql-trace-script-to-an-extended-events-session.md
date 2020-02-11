@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83cf9390524d2fdc013fdddc41c610c28930e998
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015771"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Convertir un script Trace SQL existant en session d'événements étendus
@@ -79,7 +79,7 @@ ms.locfileid: "63015771"
   
     2.  Pour chaque classe d'événements Trace SQL que vous avez identifiée à l'étape précédente, recherchez le nom d'événement Événements étendus équivalent. (Si vous n’êtes pas sûr du nom de l’événement équivalent, utilisez la requête dans la rubrique [Consulter les Événements étendus équivalents aux classes d’événements Trace SQL](view-the-extended-events-equivalents-to-sql-trace-event-classes.md).)  
   
-    3.  Utilisez la requête suivante pour identifier les champs de données corrects à utiliser pour les événements que vous avez identifiés à l'étape précédente. La requête affiche les champs de données d'événements étendus dans la colonne « event_field ». Dans la requête, remplacez *<event_name>* par le nom d’un événement que vous avez spécifié à l’étape précédente.  
+    3.  Utilisez la requête suivante pour identifier les champs de données corrects à utiliser pour les événements que vous avez identifiés à l'étape précédente. La requête affiche les champs de données d'événements étendus dans la colonne « event_field ». Dans la requête, remplacez *<event_name>* par le nom d’un événement que vous avez spécifié à l’étape précédente.  
   
         ```sql
         SELECT xp.name package_name, xe.name event_name  
@@ -100,7 +100,7 @@ ms.locfileid: "63015771"
 ## <a name="to-create-the-extended-events-session"></a>Pour créer la session d'événements étendus  
  Utilisez l'Éditeur de requête pour créer la session d'événements étendus, et écrire la sortie dans une cible de fichier. Les étapes suivantes décrivent une requête unique, avec les explications indiquant comment générer la requête. Pour obtenir un exemple de requête complet, consultez la section Exemple de cette rubrique.  
   
-1.  Ajoutez les instructions pour créer la session d’événements, en remplaçant*session_name* par le nom à utiliser pour la session d’événements étendus.  
+1.  Ajoutez des instructions pour créer la session d’événements, en remplaçant s*ession_name* par le nom que vous souhaitez utiliser pour la session d’événements étendus.  
   
     ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
@@ -248,6 +248,6 @@ ADD TARGET package0.asynchronous_file_target
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Consulter les Événements étendus équivalents aux classes d’événements Trace SQL](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
+ [Consulter les événements étendus équivalents aux classes d’événements Trace SQL](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
   
   

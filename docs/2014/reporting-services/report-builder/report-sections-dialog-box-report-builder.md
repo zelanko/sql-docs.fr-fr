@@ -13,22 +13,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 295e5f0ab4747cfb06b86525a1649a5fa7a39068
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107671"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>Boîte de dialogue Sections de rapport (Générateur de rapports)
-  Lorsque vous ouvrez un rapport, le Générateur de rapports vérifie que le rapport contient un seul élément **\<Section>** RDL (Report Definition Language). L’ouverture d’un rapport avec plusieurs éléments **\<Section>** n’est pas prise en charge.  
+  Lorsque vous ouvrez un rapport, générateur de rapports vérifie que le rapport contient une seule section d’Report Definition Language (RDL) ** \<>** élément. L’ouverture d’un rapport avec plusieurs ** \<sections>** éléments n’est pas prise en charge.  
   
  Bien qu'une définition de rapport comprenant plusieurs sections puisse être générée par programmation, la modification du rapport dans un environnement de création de rapports n'est pas prise en charge.  
   
  Pour identifier le format de définition de rapport actuel d’un rapport, d’un serveur de rapports, d’un projet ou de votre environnement de création de rapports, consultez [Rechercher la version du schéma de définition de rapport &#40;SSRS&#41;](../reports/find-the-report-definition-schema-version-ssrs.md).  
   
- Pour continuer, cliquez sur **OK** .  
+ Cliquez sur **OK** pour continuer.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide du Générateur de rapports pour les boîtes de dialogue, les volets et les Assistants](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Aide Générateur de rapports pour les boîtes de dialogue, les volets et les assistants](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

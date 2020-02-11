@@ -16,13 +16,13 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 6ea2e46b38919ae72ea70440523d75517e6efa92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62512548"
 ---
-# <a name="use-the-systemhealth-session"></a>Utiliser la session system_health
+# <a name="use-the-system_health-session"></a>Utiliser la session system_health
   La session system_health est une session Événements étendus incluse par défaut avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette session démarre automatiquement en même temps que le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et s’exécute sans effet notable sur les performances. Elle recueille des données système qui peuvent vous aider à résoudre des problèmes de performances dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Il est donc déconseillé de l'arrêter ou de la supprimer.  
   
  Cette session recueille des informations, dont les suivantes :  
@@ -65,12 +65,12 @@ ON (xe.address = xet.event_session_address)
 WHERE xe.name = 'system_health'  
 ```  
   
- Pour afficher les données de session depuis les fichier d'événements, utilisez l'interface utilisateur Événements étendus disponible dans Management Studio. Consultez [afficher les données de Session événements](../../database-engine/view-event-session-data.md) pour plus d’informations.  
+ Pour afficher les données de session depuis les fichier d'événements, utilisez l'interface utilisateur Événements étendus disponible dans Management Studio. Pour plus d’informations, consultez [afficher les données de session d’événements](../../database-engine/view-event-session-data.md) .  
   
-## <a name="restoring-the-systemhealth-session"></a>Restauration de la session system_health  
+## <a name="restoring-the-system_health-session"></a>Restauration de la session system_health  
  Si vous supprimez la session system_health, vous pouvez la restaurer en exécutant le fichier **u_tables.sql** dans l’Éditeur de requête. Ce fichier se trouve dans le dossier suivant, où C: représente le lecteur sur lequel vous avez installé les fichiers du programme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
- C:\Program Files\Microsoft SQL Server\MSSQL12. \< *instanceid*> \MSSQL\Install  
+ C:\Program Files\Microsoft SQL Server\MSSQL12. \< *InstanceID*> \mssql\install  
   
  Sachez qu’après avoir restauré la session, vous devez la démarrer en utilisant l’instruction ALTER EVENT SESSION ou en utilisant le nœud **Événements étendus** dans l’Explorateur d’objets. Sinon, la session démarre automatiquement la prochaine fois que vous redémarrerez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

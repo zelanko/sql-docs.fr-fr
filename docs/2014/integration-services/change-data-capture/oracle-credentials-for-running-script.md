@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12de97bf147ccb61cde5f82e2fa31782404071e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771110"
 ---
 # <a name="oracle-credentials-for-running-script"></a>Informations d'identification Oracle pour l'exécution d'un script
@@ -25,14 +25,14 @@ ms.locfileid: "62771110"
   
  **Authentification**  
   
- Sélectionnez l'une des options suivantes :  
+ Sélectionnez l’un des suivants :  
   
--   **Authentification Windows** : sélectionnez cette option pour utiliser les informations d’identification actuelles de domaine Windows. Vous ne pouvez utiliser cette option que si la base de données Oracle est configurée pour utiliser l'authentification Windows.  
+-   **Authentification Windows**: sélectionnez cette option pour utiliser les informations d'identification actuelles de domaine Windows. Vous ne pouvez utiliser cette option que si la base de données Oracle est configurée pour utiliser l'authentification Windows.  
   
--   **Authentification Oracle** : si vous sélectionnez cette option, vous devez taper le **Nom d’utilisateur** et le **Mot de passe** de l’utilisateur dans la base de données Oracle source à laquelle vous vous connectez.  
+-   **Authentification Oracle**: si vous sélectionnez cette option, vous devez taper le **Nom d'utilisateur** et le **Mot de passe** de l'utilisateur dans la base de données Oracle source à laquelle vous êtes connecté.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédure : gérer une instance de capture de données modifiées](manage-a-cdc-instance.md)   
+ [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
  [Examiner et générer des scripts de journalisation supplémentaires](review-and-generate-supplemental-logging-scripts.md)  
   
   

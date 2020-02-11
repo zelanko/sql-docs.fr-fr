@@ -1,5 +1,5 @@
 ---
-title: Qu’est qu’un curseur ? | Microsoft Docs
+title: Qu’est qu’un curseur ? | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,62 +13,62 @@ ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d903b2a5f971d0b6c7114a9e5229bff6133d743
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923456"
 ---
 # <a name="what-is-a-cursor"></a>Qu’est qu’un curseur ?
-Les opérations réalisées dans une base de données relationnelle s'exécutent sur un ensemble complet de lignes. L'ensemble de lignes retourné par une instruction SELECT contient toutes les lignes satisfaisant aux conditions de la clause WHERE de l'instruction. Cet ensemble complet de lignes retournées par l'instruction est appelé ensemble de résultats. Applications, en particulier celles qui sont interactifs et en ligne, ne peut pas toujours fonctionner efficacement l’ensemble de résultats en tant qu’unité. Ces applications ont besoin d'un mécanisme leur permettant de travailler avec une seule ligne ou avec un petit bloc de lignes à la fois. Les curseurs sont une extension des ensembles de résultats et fournissent ce mécanisme.  
+Les opérations réalisées dans une base de données relationnelle s'exécutent sur un ensemble complet de lignes. L'ensemble de lignes retourné par une instruction SELECT contient toutes les lignes satisfaisant aux conditions de la clause WHERE de l'instruction. Cet ensemble complet de lignes retournées par l'instruction est appelé ensemble de résultats. Les applications, en particulier celles qui sont interactives et en ligne, ne peuvent pas toujours travailler efficacement avec l’ensemble du jeu de résultats en tant qu’unité. Ces applications ont besoin d'un mécanisme leur permettant de travailler avec une seule ligne ou avec un petit bloc de lignes à la fois. Les curseurs sont une extension des ensembles de résultats et fournissent ce mécanisme.  
   
- Un curseur est implémenté par une bibliothèque de curseurs. Une bibliothèque de curseurs est un logiciel, souvent implémenté en tant que partie d’un système de base de données ou d’une API, d’accès aux données qui est utilisé pour gérer les attributs des données retournées à partir d’une source de données (un jeu de résultats). Ces attributs incluent la gestion de l’accès concurrentiel, position du jeu de résultats, nombre de lignes retournées et si vous pouvez déplacer vers l’avant ou vers l’arrière (ou les deux) par le biais du résultat défini (capacité de défilement).  
+ Un curseur est implémenté par une bibliothèque de curseurs. Une bibliothèque de curseurs est un logiciel, souvent implémenté dans le cadre d’un système de base de données ou d’une API d’accès aux données, qui est utilisé pour gérer les attributs des données retournées à partir d’une source de données (jeu de résultats). Ces attributs incluent la gestion de la concurrence, la position dans le jeu de résultats, le nombre de lignes retournées et si vous pouvez avancer ou reculer (ou les deux) dans le jeu de résultats (défilement).  
   
- Un curseur effectue le suivi de la position dans le jeu de résultats et vous permet d’effectuer plusieurs opérations ligne par ligne par rapport à un jeu de résultats, avec ou sans renvoi à la table d’origine. En d’autres termes, les curseurs conçus pour renvoyer un jeu de résultats basé sur les tables dans les bases de données. Le curseur est ainsi nommé car il indique la position actuelle dans le jeu de résultats, tout comme le curseur à l’écran indique la position actuelle.  
+ Un curseur effectue le suivi de la position dans le jeu de résultats et vous permet d’effectuer plusieurs opérations ligne par ligne sur un jeu de résultats, avec ou sans revenir à la table d’origine. En d’autres termes, les curseurs renvoient de manière conceptuelle un jeu de résultats basé sur des tables dans les bases de données. Le curseur est donc nommé, car il indique la position actuelle dans le jeu de résultats, tout comme le curseur sur l’écran de l’ordinateur indique la position actuelle.  
   
- Il est important de vous familiariser avec le concept des curseurs avant de passer aux spécificités de son utilisation dans ADO.  
+ Il est important de se familiariser avec le concept de curseurs avant de passer à en vue d’en savoir plus sur les spécificités de leur utilisation dans ADO.  
   
- Utilisation de curseurs, vous pouvez :  
+ Les curseurs vous permettent d’utiliser les éléments suivants :  
   
--   Spécifier le positionnement sur des lignes spécifiques dans le jeu de résultats.  
+-   Spécifiez le positionnement au niveau de lignes spécifiques dans le jeu de résultats.  
   
--   Récupérer une ligne ou un bloc de lignes basé sur la position du jeu de résultats actuel.  
+-   Récupère une ligne ou un bloc de lignes en fonction de la position actuelle du jeu de résultats.  
   
--   Modifier des données dans les lignes à la position actuelle dans le jeu de résultats.  
+-   Modifiez les données dans les lignes à la position actuelle dans le jeu de résultats.  
   
--   Définir différents niveaux de sensibilité aux modifications de données apportées par d’autres utilisateurs.  
+-   Définir différents niveaux de sensibilité aux modifications apportées aux données par d’autres utilisateurs.  
   
- Par exemple, considérez une application qui affiche une liste des produits disponibles pour un acheteur potentiel. L’acheteur fait défiler la liste pour afficher les coûts et les détails du produit et enfin sélectionne un produit à l’achat. Défilement supplémentaires et la sélection se produit pour le reste de la liste. Point de vue de l’acheteur, les produits s’affichent à la fois, mais l’application utilise un curseur de défilement pour parcourir et vers le bas jusqu'à l’ensemble de résultats.  
+ Par exemple, considérez une application qui affiche une liste des produits disponibles pour un acheteur potentiel. L’acheteur fait défiler la liste pour voir les détails et le coût du produit, puis sélectionne un produit à acheter. Le défilement et la sélection supplémentaires se produisent pour le reste de la liste. En ce qui concerne l’acheteur, les produits s’affichent l’un après l’autre, mais l’application utilise un curseur de défilement pour naviguer vers le haut et vers le haut dans le jeu de résultats.  
   
- Vous pouvez utiliser les curseurs de façons différentes :  
+ Vous pouvez utiliser les curseurs de plusieurs façons :  
   
--   Sans lignes du tout.  
+-   Sans aucune ligne.  
   
--   Avec certaines ou toutes les lignes dans une table unique.  
+-   Avec une partie ou l’ensemble des lignes d’une table unique.  
   
--   Avec certaines ou toutes les lignes des tables jointes logiquement.  
+-   Avec une partie ou la totalité des lignes de tables jointes de manière logique.  
   
--   Comme en lecture seule ou modifiables au niveau du curseur ou de champ.  
+-   En lecture seule ou modifiable au niveau du curseur ou du champ.  
   
 -   Comme avant uniquement ou avec défilement complet.  
   
--   Avec le curseur situé sur le serveur.  
+-   Avec le jeu de clés de curseur situé sur le serveur.  
   
--   Sensibles aux modifications de table sous-jacente a provoqué par d’autres applications (par exemple, l’appartenance, tri, des insertions, des mises à jour et suppressions).  
+-   Sensible aux modifications de table sous-jacentes provoquées par d’autres applications (telles que l’appartenance, le tri, les insertions, les mises à jour et les suppressions).  
   
 -   Existant sur le serveur ou le client.  
   
- Les curseurs en lecture seule permettent aux utilisateurs de parcourir le jeu de résultats et les curseurs peuvent implémenter des mises à jour de la ligne en lecture/écriture. Les curseurs complexes peuvent être définis avec les jeux de clés qui pointent vers les lignes de table de base. Bien que certains curseurs sont en lecture seule vers l’avant, d’autres peuvent avancer et reculer et permettent une actualisation dynamique du jeu de résultats selon les modifications apportées par les autres applications à la base de données.  
+ Les curseurs en lecture seule aident les utilisateurs à parcourir le jeu de résultats et les curseurs de lecture/écriture peuvent implémenter des mises à jour de lignes individuelles. Les curseurs complexes peuvent être définis avec des jeux de lignes qui repointent vers les lignes de la table de base. Bien que certains curseurs soient en lecture seule dans le sens inverse, d’autres peuvent se déplacer vers l’avant et fournir une actualisation dynamique du jeu de résultats en fonction des modifications apportées par d’autres applications à la base de données.  
   
- Pas toutes les applications doivent utiliser les curseurs de données access ou mise à jour. Certaines requêtes ne nécessitent pas de la mise à jour de ligne directe à l’aide d’un curseur. Les curseurs doivent être les dernier recours pour récupérer des données- et, vous devez choisir le curseur d’impact le plus possible. Lorsque vous créez un jeu de résultats en utilisant une procédure stockée, le jeu de résultats n’est pas modifiable à l’aide du curseur modifier ou mettre à jour les méthodes.  
+ Toutes les applications n’ont pas besoin d’utiliser des curseurs pour accéder aux données ou les mettre à jour. Certaines requêtes ne nécessitent simplement pas la mise à jour directe de lignes à l’aide d’un curseur. Les curseurs doivent être l’une des dernières techniques que vous choisissez pour récupérer des données. ensuite, vous devez choisir le curseur d’impact le plus faible possible. Lorsque vous créez un jeu de résultats à l’aide d’une procédure stockée, le jeu de résultats ne peut pas être mis à jour à l’aide des méthodes Edit ou Update du curseur.  
   
 ## <a name="concurrency"></a>Accès concurrentiel  
- Dans certaines applications multi-utilisateur, il est très important pour les données présentées à l’utilisateur final à être aussi actuelles que possible. Un exemple classique de ce système est un système de réservation de compagnies aériennes, où plusieurs utilisateurs peuvent être se disputent même siège sur un vol donné (et par conséquent, un enregistrement unique). Dans ce cas, la conception de l’application doit gérer des opérations simultanées sur un seul enregistrement.  
+ Dans certaines applications multi-utilisateur, il est très important que les données présentées à l’utilisateur final soient aussi actuelles que possible. Un exemple classique de ce type de système est un système de réservation d’une compagnie aérienne, où de nombreux utilisateurs peuvent être confrontés à un même siège sur un vol donné (et par conséquent, un seul enregistrement). Dans un tel cas, la conception de l’application doit gérer les opérations simultanées sur un seul enregistrement.  
   
- Dans d’autres applications, la concurrence n’est pas aussi importante. Dans ce cas, les dépenses encourues pour conserver que les données en cours à tout moment ne peut pas être justifiée.  
+ Dans d’autres applications, la concurrence n’est pas aussi importante. Dans ce cas, les dépenses liées à la conservation des données en permanence ne peuvent pas être justifiées.  
   
 ## <a name="position"></a>Position  
- Un curseur conserve également le suivi de la position actuelle dans un jeu de résultats. Pensez à la position du curseur comme un pointeur vers l’enregistrement en cours, similaire à la façon dont un tableau points d’index à la valeur à cet emplacement précis dans le tableau.  
+ Un curseur effectue également le suivi de la position actuelle dans un jeu de résultats. Considérez la position du curseur comme un pointeur vers l’enregistrement actif, similaire à la façon dont un index de tableau pointe vers la valeur à cet emplacement particulier dans le tableau.  
   
 ## <a name="scrollability"></a>Capacité de défilement  
- Le type de curseur utilisé par votre application affecte également la possibilité de déplacer vers l’avant et vers l’arrière dans les lignes d’un jeu de résultats ; Cela est parfois appelé capacité de défilement. La possibilité d’avancer *et* vers l’arrière à travers un résultat ensemble accroît la complexité du curseur et n’est donc plus coûteux à implémenter. Pour cette raison, vous devez demander un curseur avec cette fonctionnalité uniquement lorsque cela est nécessaire.
+ Le type de curseur utilisé par votre application affecte également la possibilité de se déplacer vers l’avant et vers l’arrière dans les lignes d’un jeu de résultats ; Cela est parfois appelé « défilement ». La possibilité de se déplacer vers l’avant *et* vers l’arrière dans un jeu de résultats augmente la complexité du curseur et est donc plus coûteuse à implémenter. Pour cette raison, vous devez demander un curseur avec cette fonctionnalité uniquement lorsque cela est nécessaire.

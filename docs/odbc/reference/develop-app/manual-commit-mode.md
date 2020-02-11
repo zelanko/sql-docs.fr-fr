@@ -18,13 +18,13 @@ ms.assetid: 9c4b3931-e48b-4960-89a2-5697537e9f51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7189a0586ba4f62091d5eb209a56931627bc6f7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036403"
 ---
 # <a name="manual-commit-mode"></a>Mode de validation manuelle
-*En mode de validation manuelle,* applications doivent terminer explicitement les transactions en appelant **SQLEndTran** pour les valider ou de les restaurer. C’est le mode de transaction normale pour la plupart des bases de données relationnelles.  
+*En mode de validation manuelle,* les applications doivent effectuer explicitement des transactions en appelant **SQLEndTran** pour les valider ou les restaurer. Il s’agit du mode de transaction normal pour la plupart des bases de données relationnelles.  
   
- Transactions dans ODBC n’ont pas à être explicitement lancée. Au lieu de cela, une transaction commence implicitement à chaque démarrage de l’application fonctionne sur la base de données. Si la source de données requiert l’émission de la transaction explicite, le pilote doit le fournir chaque fois que l’application exécute une instruction qui requiert une transaction et il n’existe aucune transaction en cours.
+ Les transactions dans ODBC n’ont pas besoin d’être explicitement initiées. Au lieu de cela, une transaction commence implicitement chaque fois que l’application commence à fonctionner sur la base de données. Si la source de données nécessite un lancement de transaction explicite, le pilote doit le fournir chaque fois que l’application exécute une instruction nécessitant une transaction et qu’il n’y a aucune transaction en cours.

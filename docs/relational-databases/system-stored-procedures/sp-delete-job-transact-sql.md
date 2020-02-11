@@ -18,10 +18,10 @@ ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fc733ca2b56ef9fa96be5ab2adf6486419e0e250
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72306273"
 ---
 # <a name="sp_delete_job-transact-sql"></a>sp_delete_job (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "72306273"
 
   Supprime un travail.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,33 +42,34 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_id = ] job_id` est le numéro d’identification du travail à supprimer. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] job_id`Numéro d’identification du travail à supprimer. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
-`[ @job_name = ] 'job_name'` est le nom du travail à supprimer. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'`Nom du travail à supprimer. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *Job_id* ou *job_name*doit être spécifié ; les deux ne peuvent pas être spécifiés.  
   
-`[ @originating_server = ] 'server'` à un usage interne.  
+`[ @originating_server = ] 'server'`Pour une utilisation interne.  
   
-`[ @delete_history = ] delete_history` spécifie s’il faut supprimer l’historique du travail. *delete_history* est de **bits**, avec **1**comme valeur par défaut. Lorsque *delete_history* est **1**, l’historique des travaux du travail est supprimé. Lorsque *delete_history* a la **valeur 0**, l’historique des travaux n’est pas supprimé.  
+`[ @delete_history = ] delete_history`Spécifie s’il faut supprimer l’historique du travail. *delete_history* est de **bits**, avec **1**comme valeur par défaut. Lorsque *delete_history* est **1**, l’historique des travaux du travail est supprimé. Lorsque *delete_history* a la **valeur 0**, l’historique des travaux n’est pas supprimé.  
   
- Notez que lorsqu’un travail est supprimé et que l’historique n’est pas supprimé, les informations historiques du travail ne s’affichent pas dans l’historique des travaux de l’interface utilisateur graphique de l’agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais les informations se trouvent toujours dans la table **sysjobhistory** de la base de données **msdb** .  
+ Notez que lorsqu’un travail est supprimé et que l’historique n’est pas supprimé, les informations d’historique du travail ne s' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affichent pas dans l’historique des travaux de l’interface graphique de l’agent, mais les informations se trouvent toujours dans la table **sysjobhistory** de la base de données **msdb** .  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule` spécifie s’il faut supprimer les planifications associées à ce travail s’ils ne sont attachés à aucun autre travail. *delete_unused_schedule* est de **bits**, avec **1**comme valeur par défaut. Lorsque *delete_unused_schedule* a la valeur **1**, les planifications associées à ce travail sont supprimées si aucune autre tâche ne fait référence à la planification. Lorsque *delete_unused_schedule* a la **valeur 0**, les planifications ne sont pas supprimées.  
+`[ @delete_unused_schedule = ] delete_unused_schedule`Spécifie s’il faut supprimer les planifications attachées à ce travail s’ils ne sont attachés à aucun autre travail. *delete_unused_schedule* est de **bits**, avec **1**comme valeur par défaut. Lorsque *delete_unused_schedule* a la valeur **1**, les planifications associées à ce travail sont supprimées si aucune autre tâche ne fait référence à la planification. Lorsque *delete_unused_schedule* a la **valeur 0**, les planifications ne sont pas supprimées.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
- L’argument **\@originating_server** est réservé à un usage interne.  
+ L’argument ** \@originating_server** est réservé à un usage interne.  
   
- L’argument **\@delete_unused_schedule** fournit une compatibilité descendante avec les versions précédentes de SQL Server en supprimant automatiquement les planifications qui ne sont associées à aucun travail. Notez que, par défaut, ce paramètre permet la compatibilité amont. Pour conserver les planifications qui ne sont pas attachées à un travail, vous devez fournir la valeur **0** comme **\@delete_unused_schedule** argument.  
+ L' ** \@argument delete_unused_schedule** fournit une compatibilité descendante avec les versions précédentes de SQL Server en supprimant automatiquement les planifications qui ne sont associées à aucun travail. Notez que, par défaut, ce paramètre permet la compatibilité amont. Pour conserver les planifications qui ne sont pas attachées à un travail, vous devez fournir la valeur **0** comme argument ** \@delete_unused_schedule** .  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
+ 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
   
  Cette procédure stockée ne peut pas supprimer les plans de maintenance ni les travaux relevant de plans de maintenance. Pour supprimer les plans de maintenance, vous devez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

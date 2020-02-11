@@ -20,14 +20,14 @@ ms.assetid: 7d359294-4ff2-47e0-8111-0c221b24d80e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 922f6690679d86bdb6cdafb721e3a5ed6bb674ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917121"
 ---
 # <a name="rowset-property-ado"></a>Rowset, propriété (ADO)
-Obtient ou définit un OLE DB **ensemble de lignes** objet à partir de/sur un **ADORecordsetConstruction** objet. Lorsque vous utilisez put_Rowset, l’ensemble de lignes est activée dans ADO **Recordset** objet.  
+Obtient ou définit un objet d' **ensemble de lignes** OLE DB à partir de/sur un objet **ADORecordsetConstruction** . Lorsque vous utilisez put_Rowset, l’ensemble de lignes est converti en objet **Recordset** ADO.  
   
  En lecture/écriture.  
   
@@ -40,13 +40,13 @@ HRESULT put_Rowset([in] IUnknown* pRowset);
   
 ## <a name="parameters"></a>Paramètres  
  *ppRowset*  
- Pointeur vers un OLE DB **ensemble de lignes** objet.  
+ Pointeur vers un objet d' **ensemble de lignes** OLE DB.  
   
  *PRowset*  
- OLE DB **ensemble de lignes** objet.  
+ Objet d' **ensemble de lignes** OLE DB.  
   
 ## <a name="return-values"></a>Valeurs de retour  
- Cette méthode de propriété renvoie les valeurs HRESULT standard, notamment S_OK et E_FAIL.  
+ Cette méthode de propriété retourne les valeurs HRESULT standard, y compris S_OK et E_FAIL.  
   
 ## <a name="applies-to"></a>S'applique à  
  [ADORecordsetConstruction, interface](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)

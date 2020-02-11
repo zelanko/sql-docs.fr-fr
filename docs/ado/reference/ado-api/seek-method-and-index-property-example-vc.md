@@ -1,5 +1,5 @@
 ---
-title: Seek (méthode) et Index, propriété-Exemple (VC ++) | Microsoft Docs
+title: Méthode Seek et index, exemple de propriété (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e19a30e60bb953dd8f521699b23fd00406d2d95d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931074"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Seek (méthode) et Index (propriété), exemple (VC++)
-Cet exemple utilise le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) l’objet [recherche](../../../ado/reference/ado-api/seek-method.md) (méthode) et [Index](../../../ado/reference/ado-api/index-property.md) propriété conjointement avec une donnée ***ID d’employé***, localiser nom de l’employé dans le ***employés*** table de la base de données Nwind.mdb.  
+Cet exemple utilise la méthode [Seek](../../../ado/reference/ado-api/seek-method.md) de l’objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) et la propriété [index](../../../ado/reference/ado-api/index-property.md) conjointement avec un ***ID d’employé***donné pour localiser le nom de l’employé dans la table ***Employees*** de la base de données Nwind. mdb.  
   
 ```  
 // BeginSeekCpp.cpp  
@@ -226,6 +226,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriété index](../../../ado/reference/ado-api/index-property.md)   
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Propriété d’index](../../../ado/reference/ado-api/index-property.md)   
+ [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Seek, méthode](../../../ado/reference/ado-api/seek-method.md)

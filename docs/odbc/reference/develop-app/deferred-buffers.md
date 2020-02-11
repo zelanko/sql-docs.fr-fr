@@ -1,5 +1,5 @@
 ---
-title: Différée des mémoires tampons | Microsoft Docs
+title: Mémoires tampons différées | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ ms.assetid: 02c9a75c-2103-4f68-a1db-e31f7e0f1f03
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f7c90dacc375877b4e449b8d59533ce75ff8a4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076834"
 ---
 # <a name="deferred-buffers"></a>Mémoires tampons différées
-Un *tampon différée* est celle dont la valeur est utilisée à un moment *après* elle est spécifiée dans un appel de fonction. Par exemple, **SQLBindParameter** sert à associer, ou *lier,* un tampon de données avec un paramètre dans une instruction SQL. L’application spécifie le numéro du paramètre et transmet l’adresse, la longueur d’octet et le type de la mémoire tampon. Le pilote enregistre ces informations mais n’examine pas le contenu de la mémoire tampon. Plus tard, lorsque l’application s’exécute l’instruction, le pilote récupère les informations et l’utilise pour récupérer les données de paramètre et les envoyer à la source de données. Par conséquent, l’entrée de données dans la mémoire tampon est différée. Mémoires tampons différées sont spécifiés dans une fonction et utilisés dans un autre, il est une erreur de programmation d’application pour libérer une mémoire tampon différée, tandis que le pilote attend toujours qu’elle existe ; Pour plus d’informations, consultez [allocation et libération de mémoires tampons](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md), plus loin dans cette section.  
+Une *mémoire tampon différée* est une mémoire dont la valeur est utilisée à un moment donné *après* qu’elle a été spécifiée dans un appel de fonction. Par exemple, **SQLBindParameter** est utilisé pour associer ou *lier* un tampon de données à un paramètre dans une instruction SQL. L’application spécifie le numéro du paramètre et passe l’adresse, la longueur en octets et le type de la mémoire tampon. Le pilote enregistre ces informations, mais n’examine pas le contenu de la mémoire tampon. Plus tard, lorsque l’application exécute l’instruction, le pilote récupère les informations et les utilise pour récupérer les données de paramètre et les envoyer à la source de données. Par conséquent, l’entrée des données dans la mémoire tampon est différée. Étant donné que les tampons différés sont spécifiés dans une fonction et utilisés dans une autre, il s’agit d’une erreur de programmation d’application pour libérer une mémoire tampon différée alors que le pilote s’attend à ce qu’elle existe toujours. Pour plus d’informations, consultez [allocation et libération de mémoires tampons](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md), plus loin dans cette section.  
   
- Tampons d’entrée et de sortie peuvent être différées. Le tableau suivant résume les utilisations des mémoires tampons différées. Notez que les mémoires tampons différées liés à des colonnes de jeu de résultats sont spécifiés avec **SQLBindCol**, et les mémoires tampons différées liés aux paramètres d’instruction SQL sont spécifiés avec **SQLBindParameter**.  
+ Les mémoires tampons d’entrée et de sortie peuvent être différées. Le tableau suivant récapitule les utilisations des mémoires tampons différées. Notez que les tampons différés liés aux colonnes de jeu de résultats sont spécifiés avec **SQLBindCol**et que les mémoires tampons différées liées aux paramètres d’instruction SQL sont spécifiées avec **SQLBindParameter**.  
   
-|Utilisation de la mémoire tampon|type|Spécifié avec|Utilisée par|  
+|Utilisation de la mémoire tampon|Type|Spécifié avec|Utilisée par|  
 |----------------|----------|--------------------|-------------|  
 |Envoi de données pour les paramètres d’entrée|Entrée différée|**SQLBindParameter**|**SQLExecute**<br /> **SQLExecDirect**|  
-|Envoi de données à mettre à jour ou insérer une ligne dans un résultat défini|Entrée différée|**SQLBindCol**|**SQLSetPos**|  
-|Renvoi de données pour les paramètres de sortie et d’entrée/sortie|Sortie différée|**SQLBindParameter**|**SQLExecute**<br /> **SQLExecDirect**|  
-|Définie les données de retour de résultats|Sortie différée|**SQLBindCol**|**SQLFetch**<br /> **SQLFetchScroll SQLSetPos**|
+|Envoi de données pour mettre à jour ou insérer une ligne dans un jeu de résultats|Entrée différée|**SQLBindCol**|**SQLSetPos**|  
+|Retour de données pour les paramètres de sortie et d’entrée/sortie|Sortie différée|**SQLBindParameter**|**SQLExecute**<br /> **SQLExecDirect**|  
+|Renvoi des données du jeu de résultats|Sortie différée|**SQLBindCol**|**SQLFetch**<br /> **SQLFetchScroll SQLSetPos**|

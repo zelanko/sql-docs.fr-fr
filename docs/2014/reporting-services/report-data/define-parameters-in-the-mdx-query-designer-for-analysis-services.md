@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 45fc220eb4b3dc74e5550312c5658760b6cb699c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892174"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Définir des paramètres dans le Concepteur de requêtes MDX pour Analysis Services (Générateur de rapports et SSRS)
@@ -59,7 +59,7 @@ ms.locfileid: "68892174"
   
 2.  Dans la barre d'outils, cliquez sur **Création** pour passer au mode Requête.  
   
-3.  Dans la barre d’outils du Concepteur de requêtes MDX, cliquez sur **Paramètres de la requête** (![Icône de la boîte de dialogue Paramètres de la requête](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Icône de la boîte de dialogue Paramètres de la requête")). La boîte de dialogue Paramètres de la requête s'ouvre.  
+3.  Dans la barre d’outils du concepteur de requêtes MDX, cliquez sur **paramètres** ![de la requête (icône de la boîte de dialogue Paramètres de la requête](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Icône de la boîte de dialogue Paramètres de la requête")). La boîte de dialogue Paramètres de la requête s'ouvre.  
   
 4.  Dans la colonne **Paramètre**, cliquez sur **\<Entrez le paramètre**, puis tapez le nom d’un paramètre.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "68892174"
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-10. Dans la barre d'outils du Concepteur de requêtes, cliquez sur **Exécuter**.  
+10. Dans la barre d'outils du concepteur de requêtes, cliquez sur **Exécuter**.  
   
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68892174"
      Pour afficher le dataset qui fournit des valeurs disponibles pour le paramètre de rapport, cliquez avec le bouton droit sur tout espace vide dans le volet des données de rapport, puis cliquez sur **Afficher les datasets masqués**. Le volet des données de rapport affiche tous les datasets dans le rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Type de connexion Analysis Services pour MDX (SSRS)](analysis-services-connection-type-for-mdx-ssrs.md)   
+ [Type de connexion Analysis Services pour MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
  [Interface utilisateur du Concepteur de requêtes MDX Analysis Services](analysis-services-mdx-query-designer-user-interface.md)  
   
   

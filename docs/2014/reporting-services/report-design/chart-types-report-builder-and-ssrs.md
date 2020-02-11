@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e4c71d67b215732eae6e94af1d0c92d9231f4a01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106266"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>Types de graphiques (Générateur de rapports et SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "66106266"
   
  Vous pouvez modifier le type de graphique après l'avoir créé. Pour plus d’informations, consultez [Modifier un type de graphique &#40;Générateur de rapports et SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md).  
   
- Des exemples de bon nombre de ces types de graphiques sont disponibles sous forme d'exemples de rapports. Pour plus d'informations sur le téléchargement de ces exemples de rapports, consultez [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Exemples de rapports du Générateur de rapports et du Concepteur de rapports](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ Des exemples de bon nombre de ces types de graphiques sont disponibles sous forme d'exemples de rapports. Pour plus d’informations sur le téléchargement des exemples [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]de rapports, consultez [Générateur de rapports et concepteur de rapports exemples de rapports](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 |Type de graphique|Afficher des données de ratio|Afficher des données de cotation boursière|Afficher des données linéaires|Afficher des données à valeurs multiples|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
@@ -44,7 +44,7 @@ ms.locfileid: "66106266"
 |[Graphiques d’étendue &#40;Générateur de rapports et SSRS&#41;](range-charts-report-builder-and-ssrs.md)|||![Disponible](../media/greencheck.gif "Disponible")|![Disponible](../media/greencheck.gif "Disponible")|  
 |[Graphiques à nuages de points &#40;Générateur de rapports et SSRS&#41;](scatter-charts-report-builder-and-ssrs.md)|![Disponible](../media/greencheck.gif "Disponible")||![Disponible](../media/greencheck.gif "Disponible")||  
 |[Graphiques à base de formes &#40;Générateur de rapports et SSRS&#41;](shape-charts-report-builder-and-ssrs.md)|![Disponible](../media/greencheck.gif "Disponible")||||  
-|[Graphiques sparkline](sparklines-and-data-bars-report-builder-and-ssrs.md)|![Disponible](../media/greencheck.gif "Disponible")|![Disponible](../media/greencheck.gif "Disponible")|![Disponible](../media/greencheck.gif "Disponible")|![Disponible](../media/greencheck.gif "Disponible")|  
+|[Sparklines](sparklines-and-data-bars-report-builder-and-ssrs.md)|![Disponible](../media/greencheck.gif "Disponible")|![Disponible](../media/greencheck.gif "Disponible")|![Disponible](../media/greencheck.gif "Disponible")|![Disponible](../media/greencheck.gif "Disponible")|  
 |[Graphiques boursiers &#40;Générateur de rapports et SSRS&#41;](stock-charts-report-builder-and-ssrs.md)||![Disponible](../media/greencheck.gif "Disponible")||![Disponible](../media/greencheck.gif "Disponible")|  
   
 ## <a name="see-also"></a>Voir aussi  

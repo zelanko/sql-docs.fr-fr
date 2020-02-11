@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d678622c67a83c279cce094b849829e668af30cb
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892151"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>Définition de données MDX - CREATE GLOBAL CUBE
 
 
-  Crée et remplit un cube persistant localement, en fonction d'un sous-cube issu d'un cube sur le serveur. Aucune connexion au serveur n'est nécessaire pour se connecter au cube conservé localement. Pour plus d’informations sur les cubes locaux, consultez [cubes locaux &#40;Analysis Services&#41;-données](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data)multidimensionnelles.  
+  Crée et remplit un cube persistant localement, en fonction d'un sous-cube issu d'un cube sur le serveur. Aucune connexion au serveur n'est nécessaire pour se connecter au cube conservé localement. Pour plus d’informations sur les cubes locaux, consultez [cubes locaux &#40;Analysis Services-&#41;de données multidimensionnelles ](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -104,19 +104,19 @@ FROM source_cube_name (<param list>)
  dimension_name  
  Nom de la dimension dans le cube local.  
   
- À \<partir de la clause Dim from >  
+ À \<partir de la clause dim from>  
  Élément spécifié uniquement pour la définition de dimension dérivée.  
   
  NOT_RELATED_TO_FACTS  
  Élément spécifié uniquement pour la définition de dimension dérivée.  
   
- \<type de niveau >  
+ \<type de niveau>  
  Élément spécifié uniquement pour la définition de dimension dérivée.  
   
 ## <a name="remarks"></a>Notes  
  Un cube local est défini en termes de mesures et de définitions qui le définissent. Il existe deux types de dimensions.  
   
--   Dimensions sources: il s’agit de dimensions qui faisaient partie d’un ou plusieurs cubes sources  
+-   Dimensions sources : il s’agit de dimensions qui faisaient partie d’un ou plusieurs cubes sources  
   
 -   Dimensions dérivées : dimensions offrant de nouvelles fonctionnalités d'analyse. Une dimension dérivée peut être une dimension régulière définie d'après une dimension source découpée verticalement ou horizontalement ou contenant un regroupement personnalisé de membres de dimension. Il peut s'agir également d'une dimension d'exploration de données fondée sur un modèle d'exploration de données.  
   
@@ -197,7 +197,7 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instructions &#40;MDX de définition de données MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [Instruction &#40;Create session cube MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
+ [Instructions de définition de données MDX &#40;&#41;MDX](../mdx/mdx-data-definition-statements-mdx.md)   
+ [Instruction CREATe SESSION CUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.registered_search_property_lists (Transact-SQL) | Microsoft Docs
+title: sys. registered_search_property_lists (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 87af4645a052001ddfc2d0540b6b40e75e3dbb20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067852"
 ---
-# <a name="sysregisteredsearchpropertylists-transact-sql"></a>sys.registered_search_property_lists (Transact-SQL)
+# <a name="sysregistered_search_property_lists-transact-sql"></a>sys.registered_search_property_lists (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient une ligne pour chaque liste de propriétés de recherche sur la base de données actuelle.  
@@ -36,9 +36,9 @@ ms.locfileid: "68067852"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**property_list_id**|**int**|ID de la liste de propriétés.|  
-|**name**|**sysname**|Nom de la liste de propriétés.|  
-|**create_date**|**datetime**|Date de création de la liste de propriétés.|  
-|**modify_date**|**datetime**|Date de dernière modification de la liste de propriétés au moyen d'une instruction ALTER.|  
+|**nomme**|**sysname**|Nom de la liste de propriétés.|  
+|**create_date**|**DATETIME**|Date de création de la liste de propriétés.|  
+|**modify_date**|**DATETIME**|Date de dernière modification de la liste de propriétés au moyen d'une instruction ALTER.|  
 |**principal_id**|**int**|Propriétaire de la liste de propriétés.|  
   
 ## <a name="remarks"></a>Notes  

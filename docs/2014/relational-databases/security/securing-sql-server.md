@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c1a701f1e63877c807964a8d81a829afdc9f7b81
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891616"
 ---
 # <a name="securing-sql-server"></a>Sécurisation de SQL Server
@@ -51,8 +51,8 @@ ms.locfileid: "68891616"
 |---------------------------|---------|  
 |Configuration d’un pare-feu fonctionnant avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configurer un pare-feu Windows pour accéder au moteur de base de données](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |Configuration d’un pare-feu fonctionnant avec [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Configurer un Pare-feu Windows pour l'accès au service SSIS](../../integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)|  
-|Configuration d’un pare-feu fonctionnant avec [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Configurer le pare-feu Windows pour autoriser l'accès à Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
-|Ouverture de ports spécifiques sur un pare-feu pour permettre l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configurer le Pare-feu Windows pour autoriser l'accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
+|Configuration d’un pare-feu fonctionnant avec [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Configurer le Pare-feu Windows pour autoriser l’accès à Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
+|Ouverture de ports spécifiques sur un pare-feu pour permettre l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |Configuration de la prise en charge de la Protection étendue de l'authentification à l'aide de la liaison de canal et liaison de service|[Se connecter au moteur de base de données à l'aide de la protection étendue](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
   
  La réduction de la surface d'exposition est une mesure de sécurité qui implique l'arrêt ou la désactivation de composants inutilisés. La réduction de la surface d'exposition permet de renforcer la sécurité en réduisant les risques d'attaque à l'encontre d'un système. L'élément principal à prendre en compte pour limiter la surface d'exposition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implique l'exécution des services requis dotés des privilèges minimaux en attribuant uniquement les droits appropriés aux services et aux utilisateurs. Le tableau ci-dessous contient des informations supplémentaires sur l'accès aux services et au système.  
@@ -141,6 +141,6 @@ GO
 ## <a name="related-content"></a>Contenu associé  
  [Considérations sur la sécurité pour une installation SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
- [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

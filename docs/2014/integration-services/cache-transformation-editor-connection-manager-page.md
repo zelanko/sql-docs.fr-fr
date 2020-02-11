@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Transformation du cache (Page Gestionnaire de connexions) | Microsoft Docs
+title: Éditeur de transformation du cache (page Gestionnaire de connexions) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4828d1d3f509dc40e6a8f818f24ba5a7881783e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061070"
 ---
 # <a name="cache-transformation-editor-connection-manager-page"></a>Éditeur de transformation du cache (Page Gestionnaire de connexions)
@@ -24,10 +24,10 @@ ms.locfileid: "66061070"
   
  Pour en savoir plus sur la transformation de cache, consultez [Transformation du cache](data-flow/transformations/cache-transform.md).  
   
- Pour en savoir plus sur le gestionnaire de connexions du cache, consultez [Gestionnaire de connexions du cache](connection-manager/cache-connection-manager.md).  
+ Pour en savoir plus sur le gestionnaire de connexions du cache, consultez [Cache Connection Manager](connection-manager/cache-connection-manager.md).  
   
 ## <a name="options"></a>Options  
- **Cache connection manager**  
+ **Gestionnaire de connexions du cache**  
  Sélectionnez un gestionnaire de connexions du cache existant en utilisant la liste, ou créez une connexion en utilisant le bouton **Nouvelle** .  
   
  **Nouveau**  

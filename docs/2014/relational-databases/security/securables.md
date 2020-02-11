@@ -19,16 +19,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7c4a82cfa4d8a82db1e01c49899c3c49c2e01ee9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745718"
 ---
 # <a name="securables"></a>Éléments sécurisables
   Les éléments sécurisables sont les ressources auxquelles le système d'autorisation du moteur de base de données [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] régule l'accès. Par exemple, une table est un élément sécurisable. Certains éléments sécurisables peuvent être contenus dans d'autres, de façon à créer des hiérarchies imbriquées appelées « étendues », pouvant elles-mêmes être sécurisées. L'étendue de ces éléments sécurisables est constituée par le **serveur**, la **base de données**et le **schéma**.  
   
-## <a name="securable-scope-server"></a>Étendue des éléments sécurisables : Serveur  
+## <a name="securable-scope-server"></a>Étendue des éléments sécurisables : serveur  
  Les éléments sécurisables du **serveur** sont les suivants :  
   
 -   Groupe de disponibilité  
@@ -37,11 +37,11 @@ ms.locfileid: "62745718"
   
 -   Connexion  
   
--   Rôle serveur  
+-   Rôle du serveur  
   
 -   Base de données  
   
-## <a name="securable-scope-database"></a>Étendue des éléments sécurisables : Base de données  
+## <a name="securable-scope-database"></a>Étendue des éléments sécurisables : base de données  
  Les éléments sécurisables de la **base de données** sont les suivants :  
   
 -   Rôle d'application  
@@ -64,7 +64,7 @@ ms.locfileid: "62745718"
   
 -   Rôle (de base de données)  
   
--   Itinéraire  
+-   Routage  
   
 -   schéma  
   
@@ -76,10 +76,10 @@ ms.locfileid: "62745718"
   
 -   Utilisateur  
   
-## <a name="securable-scope-schema"></a>Étendue des éléments sécurisables : schéma  
+## <a name="securable-scope-schema"></a>Étendue des éléments sécurisables : schéma  
  Les éléments sécurisables du **schéma** sont les suivants :  
   
--   type  
+-   Type  
   
 -   Collection de schémas XML  
   

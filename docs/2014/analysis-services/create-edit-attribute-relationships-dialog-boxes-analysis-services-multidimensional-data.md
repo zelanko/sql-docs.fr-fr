@@ -1,5 +1,5 @@
 ---
-title: Créer une relation d’attribut et les boîtes de dialogue de relation modifier attribut (onglet Concepteur relations d’attributs, Concepteur de dimensions) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Boîtes de dialogue créer une relation d’attribut et modifier la relation d’attribut (onglet Concepteur de relations d’attributs, concepteur de dimensions) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 544fc09037c0670c7ba44adf7b270e46899621a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086940"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Boîtes de dialogue Créer une relation d'attribut et Modifier la relation d'attribut (onglet Concepteur de relations d'attributs, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Créer une relation d’attribut** pour définir de nouvelles relations d’attributs et la boîte de dialogue **Modifier la relation d’attribut** pour modifier une relation d’attribut. Pour plus d’informations, consultez [Définir des relations d’attributs](multidimensional-models/attribute-relationships-define.md).  
   
- **Pour afficher la boîte de dialogue Créer une relation d’attribut**  
+ **Pour afficher la boîte de dialogue Créer une relation d'attribut**  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], dans l’Explorateur de solutions, double-cliquez sur une dimension pour ouvrir le Concepteur de dimensions, puis cliquez sur l’onglet **Relation d’attribut** .  
   
@@ -32,7 +32,7 @@ ms.locfileid: "66086940"
   
      Dans le diagramme des relations d’attributs ou la liste **Attributs** , cliquez avec le bouton droit sur un attribut, puis cliquez sur **Nouvelle relation d’attribut**.  
   
- **Pour afficher la boîte de dialogue Modifier une relation d’attribut**  
+ **Pour afficher la boîte de dialogue Modifier la relation d'attribut**  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], dans l’Explorateur de solutions, double-cliquez sur une dimension pour ouvrir le Concepteur de dimensions, puis cliquez sur l’onglet **Relation d’attribut** .  
   
@@ -54,6 +54,6 @@ ms.locfileid: "66086940"
  Indique le type de relation à créer, **Flexible (peut changer avec le temps)** ou **Rigide (ne change pas avec le temps)**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Relations d’attributs &#40;Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Relations d’attributs &#40;concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

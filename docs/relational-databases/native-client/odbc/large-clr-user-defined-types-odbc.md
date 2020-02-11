@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6f7b166ae15e403e2a84bc3a7f3902350c805788
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73760593"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Types CLR volumineux définis par l’utilisateur (ODBC)
@@ -37,7 +37,7 @@ ms.locfileid: "73760593"
   
  Le tableau suivant montre le mappage des types de données dans les paramètres et les jeux de résultats :  
   
-|Type de données SQL Server|Type de données SQL|Value|  
+|Type de données SQL Server|Type de données SQL|Valeur|  
 |--------------------------|-------------------|-----------|  
 |UDT CLR|SQL_SS_UDT|-151 (sqlncli.h)|  
   
@@ -109,7 +109,7 @@ ms.locfileid: "73760593"
 ## <a name="column-metadata-returned-by-sqlcolumns-and-sqlprocedurecolumns-catalog-metadata"></a>Métadonnées de colonne retournées par SQLColumns et SQLProcedureColumns (métadonnées de catalogue)  
  Les valeurs de colonne suivantes sont retournées pour les types définis par l'utilisateur (UDT) :  
   
-|Nom de colonne|SQL_SS_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|SQL_SS_UDT<br /><br /> (longueur supérieure à 8 000 octets)|  
+|Nom de la colonne|SQL_SS_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|SQL_SS_UDT<br /><br /> (longueur supérieure à 8 000 octets)|  
 |-----------------|-------------------------------------------------------------------|----------------------------------------------------------|  
 |DATA_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |TYPE_NAME|Nom du type défini par l’utilisateur.|Nom du type défini par l’utilisateur.|  
@@ -133,20 +133,20 @@ ms.locfileid: "73760593"
 |Conversion vers et depuis :|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|Géré|  
-|SQL_C_BINARY|Pris en charge|  
+|SQL_C_BINARY|Prise en charge|  
 |SQL_C_CHAR|Géré|  
   
- \* données binaires sont converties en une chaîne hexadécimale.  
+ \*Les données binaires sont converties en une chaîne hexadécimale.  
   
  Les conversions suivantes sont prises en charge entre les types de données C et SQL :  
   
 |Conversion vers et depuis :|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|Géré|  
-|SQL_C_BINARY|Pris en charge|  
+|SQL_C_BINARY|Prise en charge|  
 |SQL_C_CHAR|Géré|  
   
- \* conversion de chaîne hexadécimale en données binaires se produit.  
+ \*La conversion de chaînes hexadécimales en données binaires se produit.  
   
 ## <a name="sql_variant-support-for-udts"></a>Prise en charge des UDT par SQL_VARIANT  
  Les UDT ne sont pas pris en charge dans les colonnes SQL_VARIANT.  
@@ -159,8 +159,8 @@ ms.locfileid: "73760593"
   
 |Version du serveur|SQL_SS_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|SQL_SS_UDT<br /><br /> (longueur supérieure à 8 000 octets)|  
 |--------------------|-------------------------------------------------------------------|----------------------------------------------------------|  
-|SQL Server 2005|**UDT**|**varbinary(max)**|  
-|SQL Server 2008 et ultérieur|**UDT**|**UDT**|  
+|SQL Server 2005|**UDT**|**varbinary(max)**|  
+|SQL Server 2008 et versions ultérieures|**UDT**|**UDT**|  
   
 ## <a name="odbc-functions-supporting-large-clr-udts"></a>Fonctions ODBC prenant en charge les types CLR volumineux définis par l'utilisateur  
  Cette section indique les modifications apportées aux fonctions ODBC SQL Server Native Client au niveau des types CLR volumineux définis par l'utilisateur.  
@@ -213,7 +213,7 @@ ms.locfileid: "73760593"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  Les valeurs retournées pour les UDT sont les suivantes :  
   
-|Type de données SQL|Type|Sous-type|Longueur|Précision|Échelle|  
+|Type de données SQL|Type|Subtype|Longueur|Precision|Scale|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (longueur supérieure à 8 000 octets)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -233,7 +233,7 @@ ms.locfileid: "73760593"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  Les valeurs autorisées pour les UDT sont les suivantes :  
   
-|Type de données SQL|Type|Sous-type|Longueur|Précision|Échelle|  
+|Type de données SQL|Type|Subtype|Longueur|Precision|Scale|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (longueur supérieure à 8 000 octets)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -242,6 +242,6 @@ ms.locfileid: "73760593"
  Les valeurs retournées pour les UDT des colonnes DATA_TYPE, TYPE_NAME, COLUMN_SIZE, BUFFER_LENGTH et DECIMAL_DIGTS sont celles décrites dans « Métadonnées retournés par SQLColumns et SQLProcedureColumns (métadonnées de catalogue) », plus haut dans cette rubrique.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types CLR volumineux définis par l’utilisateur](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)  
+ [Types CLR volumineux définis par l'utilisateur](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
   

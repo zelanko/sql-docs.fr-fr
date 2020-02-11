@@ -18,18 +18,18 @@ ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b8c1b95d8d04e2b11982af14971e43e83db146f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68075773"
 ---
-# <a name="sprefreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
+# <a name="sp_refreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Met à jour les métadonnées de la vue non liée au schéma spécifiée. Les métadonnées persistantes d'une vue peuvent devenir obsolètes en raison des modifications des objets sous-jacents dont dépend l'affichage.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,13 +39,13 @@ sp_refreshview [ @viewname = ] 'viewname'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @viewname = ] 'viewname'` Est le nom de la vue. *ViewName* est **nvarchar**, sans valeur par défaut. *ViewName* peut être un identificateur multipartie, mais ne peut faire référence à des vues de la base de données actuelle.  
+`[ @viewname = ] 'viewname'`Nom de la vue. *viewName* est de type **nvarchar**, sans valeur par défaut. *viewName* peut être un identificateur à parties multiples, mais ne peut faire référence qu’à des vues de la base de données active.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou un nombre différent de zéro (échec)  
   
 ## <a name="remarks"></a>Notes  
- Si aucune vue n’est pas créée avec schemabinding, **sp_refreshview** doit être exécutée lorsque des modifications sont apportées aux objets sous-jacents de la vue qui affectent la définition de la vue. Autrement, la vue risque de produire des résultats imprévisibles en cas d'interrogation.  
+ Si une vue n’est pas créée avec SCHEMABINDING, **sp_refreshview** doit être exécutée lorsque des modifications sont apportées aux objets sous-jacents de la vue qui affectent la définition de la vue. Autrement, la vue risque de produire des résultats imprévisibles en cas d'interrogation.  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation ALTER sur la vue ainsi que l'autorisation REFERENCES sur les types CLR (Common Language Runtime) définis par l'utilisateur et sur les collections de schémas XML référencés par les colonnes de la vue.  
@@ -75,7 +75,7 @@ WHERE so.type = 'V' AND sed.referenced_id = OBJECT_ID('Person.Person');
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées du moteur de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sp_refreshsqlmodule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md)  

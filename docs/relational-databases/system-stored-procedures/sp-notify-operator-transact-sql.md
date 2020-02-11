@@ -18,19 +18,19 @@ ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 74558320df59414a756e1655bb073e9bf0d7d73c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107982"
 ---
-# <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
+# <a name="sp_notify_operator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Envoie un message électronique à un opérateur utilisant la messagerie de base de données.  
   
  
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,24 +47,24 @@ sp_notify_operator
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @profile_name = ] 'profilename'` Le nom du profil de messagerie de base de données à utiliser pour envoyer le message. *ProfileName* est **nvarchar (128)** . Si *profilename* n’est pas spécifié, le profil de messagerie de base de données par défaut est utilisé.  
+`[ @profile_name = ] 'profilename'`Nom du profil de Database Mail à utiliser pour envoyer le message. *ProfileName* est **de type nvarchar (128)**. Si *ProfileName* n’est pas spécifié, le profil de Database mail par défaut est utilisé.  
   
-`[ @id = ] id` L’identificateur de l’opérateur à laquelle envoyer le message. *ID* est **int**, avec NULL comme valeur par défaut. Un des *id* ou *nom* doit être spécifié.  
+`[ @id = ] id`Identificateur de l’opérateur auquel envoyer le message. *ID* est de **type int**, avec NULL comme valeur par défaut. Un *ID* ou un *nom* doit être spécifié.  
   
-`[ @name = ] 'name'` Le nom de l’opérateur auquel envoyer le message. *nom* est **nvarchar (128)** , avec NULL comme valeur par défaut. Un des *id* ou *nom* doit être spécifié.  
+`[ @name = ] 'name'`Nom de l’opérateur auquel envoyer le message. *Name* est de type **nvarchar (128)**, avec NULL comme valeur par défaut. Un *ID* ou un *nom* doit être spécifié.  
   
-> **REMARQUE :** Une adresse de messagerie doit être définie pour l’opérateur qu’il puisse recevoir des messages.  
+> **Remarque :** Une adresse de messagerie doit être définie pour l’opérateur avant de pouvoir recevoir des messages.  
   
-`[ @subject = ] 'subject'` Le sujet du message électronique. *objet* est **nvarchar (256)** sans valeur par défaut.  
+`[ @subject = ] 'subject'`Objet du message électronique. l' *objet* est de type **nvarchar (256)** et n’a pas de valeur par défaut.  
   
-`[ @body = ] 'message'` Le corps du message électronique. *message* est **nvarchar (max)** sans valeur par défaut.  
+`[ @body = ] 'message'`Corps du message électronique. le *message* est de type **nvarchar (max)** et n’a pas de valeur par défaut.  
   
-`[ @file_attachments = ] 'attachment'` Le nom d’un fichier à joindre au message électronique. *pièce jointe* est **nvarchar (512)** , sans valeur par défaut.  
+`[ @file_attachments = ] 'attachment'`Nom d’un fichier à joindre au message électronique. la *pièce jointe* est de type **nvarchar (512)**, sans valeur par défaut.  
   
-`[ @mail_database = ] 'mail_host_database'` Spécifie le nom de la base de données hôte de messagerie. *mail_host_database* est **nvarchar (128)** . Si aucun *mail_host_database* est spécifié, le **msdb** base de données est utilisé par défaut.  
+`[ @mail_database = ] 'mail_host_database'`Spécifie le nom de la base de données hôte de messagerie. *mail_host_database* est **de type nvarchar (128)**. Si aucun *mail_host_database* n’est spécifié, la base de données **msdb** est utilisée par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
  Envoie le message spécifié à l'adresse de messagerie de l'opérateur choisi. Si l'opérateur ne dispose pas d'une adresse de messagerie, une erreur est renvoyée.  
@@ -80,7 +80,7 @@ sp_notify_operator
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant envoie une notification par courrier électronique à l'opérateur `François Ajenstat` à l'aide du profil de messagerie de la base de données `AdventureWorks Administrator`. Le message électronique a pour objet `Test Notification`. Le message électronique contient la phrase « This is a test of notification via e-mail. ».  
@@ -98,7 +98,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de SQL Server Agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [SQL Server Agent des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  

@@ -21,13 +21,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 304cd31b4d89d56bee5dbc903c784ee4bf7af5fe
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637524"
 ---
-# <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Références techniques relatives à l’algorithme MDT (Microsoft Decision Trees)
+# <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MDT (Microsoft Decision Trees)
   L'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) est un algorithme hybride qui incorpore des méthodes différentes pour créer une arborescence et prend en charge plusieurs tâches analytiques, dont la régression, la classification et l'association. L'algorithme MDT (Microsoft Decision Trees) prend en charge la modélisation des attributs discrets et continus.  
   
  Cette rubrique explique l'implémentation de l'algorithme, décrit la façon de personnaliser le comportement de l'algorithme pour différentes tâches et fournit des liens vers des informations supplémentaires sur l'interrogation des modèles d'arbre de décision.  
@@ -66,10 +66,10 @@ ms.locfileid: "73637524"
   
 |Algorithme|Méthode d'analyse|Commentaires|  
 |---------------|------------------------|--------------|  
-|Decision Trees|Score d'intérêt et de pertinence<br /><br /> L’entropie de Shannon<br /><br /> Bayésien avec a priori K2<br /><br /> Équivalent bayésien de Dirichlet avec a priori uniforme (par défaut)|Si des colonnes contiennent des valeurs continues non binaires, le score d'intérêt et de pertinence est utilisé pour toutes les colonnes afin de garantir la cohérence. Sinon, la méthode par défaut ou spécifiée est utilisée.|  
-|Régression linéaire|Score d'intérêt et de pertinence|La régression linéaire utilise uniquement l'intérêt et la pertinence car elle ne prend en charge que les colonnes continues.|  
+|Arbres de décision|Score d'intérêt et de pertinence<br /><br /> Entropie de Shannon<br /><br /> Bayésien avec a priori K2<br /><br /> Équivalent bayésien de Dirichlet avec a priori uniforme (par défaut)|Si des colonnes contiennent des valeurs continues non binaires, le score d'intérêt et de pertinence est utilisé pour toutes les colonnes afin de garantir la cohérence. Sinon, la méthode par défaut ou spécifiée est utilisée.|  
+|régression linéaire|Score d'intérêt et de pertinence|La régression linéaire utilise uniquement l'intérêt et la pertinence car elle ne prend en charge que les colonnes continues.|  
   
-### <a name="scalability-and-performance"></a>Performances et extensibilité  
+### <a name="scalability-and-performance"></a>Extensibilité et performance  
  La classification est une stratégie d'exploration de données importante. En général, la quantité d'informations nécessaire pour classifier les cas grandit de façon directement proportionnelle au nombre d'enregistrements d'entrée. Cela limite la taille des données qui peuvent être classées. L'algorithme MDT (Microsoft Decision Trees) utilise les méthodes suivantes pour résoudre ces problèmes, améliorer les performances et éliminer les restrictions de mémoire :  
   
 -   Sélection des fonctionnalités pour optimiser la sélection des attributs.  
@@ -142,14 +142,14 @@ ms.locfileid: "73637524"
  *MINIMUM_SUPPORT*  
  Spécifie le nombre minimal de cas de nœud terminal requis pour générer un fractionnement dans l'arbre de décision.  
   
- La valeur par défaut est 10.  
+ La valeur par défaut est de 10.  
   
  Vous devrez peut-être augmenter cette valeur si le dataset est très grand, pour éviter le surapprentissage.  
   
  *SCORE_METHOD*  
  Spécifie la méthode utilisée pour calculer le résultat de la division. Les options suivantes sont disponibles :  
   
-|ID|Nom|  
+|id|Name|  
 |--------|----------|  
 |1|Entropie|  
 |3|Bayésien avec a priori K2|  
@@ -162,11 +162,11 @@ ms.locfileid: "73637524"
  *SPLIT_METHOD*  
  Spécifie la méthode utilisée pour fractionner le nœud. Les options suivantes sont disponibles :  
   
-|ID|Nom|  
+|id|Name|  
 |--------|----------|  
-|1|**Binary:** Indique qu'indépendamment du nombre réel de valeurs pour l'attribut, l'arborescence doit être fractionnée en deux branches.|  
-|2|**Complete:** Indique que l'arborescence peut créer autant de divisions qu'il y a de valeurs d'attribut.|  
-|3|**Both:** Spécifie qu'Analysis Services peut déterminer si un fractionnement binaire ou complet doit être utilisé pour produire les meilleurs résultats.|  
+|1|**Binaire :** Indique que, quel que soit le nombre réel de valeurs pour l’attribut, l’arborescence doit être fractionnée en deux branches.|  
+|2|**Terminé :** Indique que l’arborescence peut créer autant de divisions qu’il y a de valeurs d’attribut.|  
+|3|**Les deux :** Spécifie que Analysis Services peut déterminer si un fractionnement binaire ou complet doit être utilisé pour produire les meilleurs résultats.|  
   
  La valeur par défaut est 3.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "73637524"
   
  Il est inutile de spécifier qu'une colonne de données numériques continues représente un régresseur. L'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) utilise automatiquement la colonne en tant que régresseur potentiel et partitionne le dataset en régions avec des séquences explicites même si vous ne définissez pas l'indicateur REGRESSOR sur la colonne.  
   
- Toutefois, vous pouvez utiliser le paramètre FORCED_REGRESSOR pour faire en sorte que l'algorithme utilise un régresseur particulier. Ce paramètre peut être utilisé uniquement avec les [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithmes MDT et [!INCLUDE[msCoName](../../includes/msconame-md.md)] MLR. Lorsque vous définissez l’indicateur de modélisation, l’algorithme essaie de rechercher des équations de régression de la forme a * C1 + b\*C2 +... pour faire tenir les séquences dans les nœuds de l’arborescence. La somme des résiduels est calculée et, si l'écart est trop grand, l'arbre est fractionné.  
+ Toutefois, vous pouvez utiliser le paramètre FORCED_REGRESSOR pour faire en sorte que l'algorithme utilise un régresseur particulier. Ce paramètre peut être utilisé uniquement avec les [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithmes MDT et [!INCLUDE[msCoName](../../includes/msconame-md.md)] MLR. Lorsque vous définissez l’indicateur de modélisation, l’algorithme essaie de rechercher des équations de régression de la forme a *\*C1 + b C2 +... pour faire tenir les séquences dans les nœuds de l’arborescence. La somme des résiduels est calculée et, si l'écart est trop grand, l'arbre est fractionné.  
   
  Par exemple, si vous prédisez le comportement d'achat de vos clients en utilisant **Income** comme attribut et que vous définissez l'indicateur de modélisation REGRESSOR sur la colonne, l'algorithme essaie tout d'abord de faire tenir les valeurs **Income** en utilisant une formule de régression standard. Si l'écart est trop grand, la formule de régression est abandonnée et l'arbre est fractionné sur un autre attribut. L'algorithme MDT essaie ensuite de faire tenir un régresseur pour le revenu dans chacune des branches après le fractionnement.  
   
@@ -191,7 +191,7 @@ ms.locfileid: "73637524"
  Un modèle d'arbre de décision doit contenir une colonne clé, des colonnes d'entrée et au moins une colonne prédictible.  
   
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
- L'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) prend en charge les colonnes d'entrée et les colonnes prédictibles répertoriées dans le tableau suivant. Pour plus d’informations sur la signification des types de contenu utilisés dans un modèle d’exploration de données, consultez [Types de contenu &#40;exploration de données&#41;](content-types-data-mining.md).  
+ L'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) prend en charge les colonnes d'entrée et les colonnes prédictibles répertoriées dans le tableau suivant. Pour plus d’informations sur la signification des types de contenu en cas d’utilisation dans un modèle d’exploration de données, consultez [Types de contenu &#40;Exploration de données&#41;](content-types-data-mining.md).  
   
 |Colonne|Types de contenu|  
 |------------|-------------------|  
@@ -204,6 +204,6 @@ ms.locfileid: "73637524"
 ## <a name="see-also"></a>Voir aussi  
  [Algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm.md)   
  [Exemples de requêtes de modèle d’arbre de décision](decision-trees-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services – Exploration de données&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

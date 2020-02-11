@@ -1,5 +1,5 @@
 ---
-title: Item, propriété (objet Cellset d’ADO MD) | Microsoft Docs
+title: Item, propriété (ADO MD CellSet) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0c7fbce544cac188db7ed3b3d40478aa63809405
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949626"
 ---
 # <a name="item-property-ado-md-cellset"></a>Item, propriété (objet Cellset d’ADO MD)
-Récupère une cellule à partir d’un [cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) à l’aide de ses coordonnées.  
+Récupère une cellule d’un [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) à l’aide de ses coordonnées.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,18 +36,18 @@ Cell = Cellset.Item ( Positions)
   
 ## <a name="parameters"></a>Paramètres  
  *Positions*  
- Un **VariantArray** des valeurs qui spécifient de manière unique une cellule. *Positions* peut prendre l’une des opérations suivantes :  
+ **VariantArray** de valeurs qui spécifient une cellule de façon unique. Les *positions* peuvent être l’une des suivantes :  
   
--   Un tableau de nombres de position  
+-   Tableau de numéros de position  
   
--   Un tableau de noms de membre  
+-   Tableau de noms de membres  
   
--   La position ordinale  
+-   Position ordinale  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le **élément** propriété à retourner un [cellule](../../../ado/reference/ado-md-api/cell-object-ado-md.md) de l’objet dans un [ensemble de cellules](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objet. Si le **élément** propriété ne peut pas trouver la cellule correspondant à la *Positions* argument, une erreur se produit.  
+ Utilisez la propriété **Item** pour retourner un objet [Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md) dans un objet [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) . Si la propriété **Item** ne peut pas trouver la cellule correspondant à l’argument *positions* , une erreur se produit.  
   
- Le **élément** propriété est la propriété par défaut pour le **Cellset** objet. Les formes de syntaxe suivantes sont interchangeables :  
+ La propriété **Item** est la propriété par défaut de l’objet **Cellset** . Les formes de syntaxe suivantes sont interchangeables :  
   
 ```  
   
@@ -55,18 +55,18 @@ Cellset.Item ( Positions )Cellset ( Positions )
 ```  
   
 ## <a name="remarks"></a>Notes  
- Le *Positions* argument spécifie la cellule à retourner. Vous pouvez spécifier la cellule par position ordinale ou par la position le long de chaque axe. Lorsque vous spécifiez la cellule par position le long de chaque axe, vous pouvez spécifier la valeur numérique de la position ou les noms des membres pour chaque position.  
+ L’argument *positions* spécifie la cellule à retourner. Vous pouvez spécifier la cellule en fonction de la position ordinale ou de la position le long de chaque axe. Lorsque vous spécifiez la cellule par position le long de chaque axe, vous pouvez spécifier la valeur numérique de la position ou les noms des membres de chaque position.  
   
- La position ordinale est un nombre qui identifie de façon unique une cellule dans le **Cellset**. Conceptuellement, les cellules sont comptabilisées dans un **Cellset** comme si le **Cellset** ont été un *p*-tableau unidimensionnel, où *p* est le nombre d’axes. Les cellules sont traitées dans l'ordre ligne-champ. Voici la formule pour calculer le nombre ordinal d’une cellule :  
+ La position ordinale est un nombre qui identifie de façon unique une cellule dans l' **Cellset**. Conceptuellement, les cellules sont numérotées dans un ensemble de **cellules** comme si l’ensemble de **cellules** était un tableau de dimensions *p*, où *p* est le nombre d’axes. Les cellules sont traitées dans l'ordre ligne-champ. Vous trouverez ci-dessous la formule permettant de calculer le nombre ordinal d’une cellule :  
   
- Si des noms de membres sont passés comme des chaînes à **élément**, les membres doivent figurer dans l’ordre des identificateurs de l’axe numérique croissant. Au sein d’un axe, les membres doivent être répertoriés en ordre croissant d’imbrication : autrement dit, les membres de la dimension la plus éloignée vient en premier, suivie des dimensions. Chaque dimension doit être représentée par une chaîne séparée, et la liste de chaînes de membre doit être séparée par des virgules.  
+ Si les noms de membres sont passés en tant que chaînes à **Item**, les membres doivent être répertoriés dans l’ordre de tri des identificateurs d’axe numérique. Dans un axe, les membres doivent être listés dans l’ordre de plus en plus important de l’imbrication de dimensions, autrement dit, le membre de la dimension la plus à l’extérieur est d’abord suivi des membres de dimensions internes. Chaque dimension doit être représentée par une chaîne distincte, et la liste des chaînes de membres doit être séparée par des virgules.  
   
 > [!NOTE]
->  Extraction des cellules par nom de membre ne peut pas être pris en charge par votre fournisseur de données. Consultez la documentation de votre fournisseur pour plus d’informations.  
+>  La récupération de cellules par nom de membre peut ne pas être prise en charge par votre fournisseur de données. Pour plus d’informations, consultez la documentation de votre fournisseur.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Cellset, objet (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Cellule, objet (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
+ [Cell, objet (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [Cellset, objet (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)

@@ -13,25 +13,25 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 68bd85258bd3fd259386f020394ffb5bc70a9781
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62791913"
 ---
 # <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>Boîte de dialogue Ajouter une adresse IP (SQL Server Management Studio)
   Cette rubrique d'aide F1 décrit les options de la boîte de dialogue **Ajouter une adresse IP** . Cette boîte de dialogue accessible depuis la boîte de dialogue **Nouvel écouteur du groupe de disponibilité** et l'onglet **Écouteur** de la page **Spécifier les réplicas** de l' [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] ou l' [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Avant de commencer à ajouter des sous-réseaux à un écouteur de groupe de disponibilité, vérifiez que vous connaissez l'adresse IP de chaque sous-réseau et, pour une adresse IPv4, le masque de sous-réseau.  
   
-##  <a name="PageOptions"></a> Options Ajouter une adresse IP  
- **Sous-réseau**  
+##  <a name="PageOptions"></a>Options ajouter une adresse IP  
+ **Subnet**  
  Utilisez la liste déroulante pour sélectionner une adresse pour le sous-réseau que vous ajoutez à l'écouteur du groupe de disponibilité. Par défaut, un sous-réseau possède une adresse IPv4 et une adresse IPv6. La première fois que vous utilisez la boîte de dialogue **Ajouter une adresse IP** , la liste déroulante **Sous-réseau** affiche les deux adresses de sous-réseau pour chaque sous-réseau qui héberge un réplica pour le groupe de disponibilité. Pour ajouter un sous-réseau donné à l'écouteur, sélectionnez l'une de ses adresses de sous-réseau.  
   
  Après avoir complété la boîte de dialogue **Ajouter une adresse IP** et cliqué sur **OK** pour ajouter une adresse de sous-réseau sélectionnée à l'écouteur, la liste déroulante **Sous-réseau** filtre cette adresse de sous-réseau. Toutes les adresses de sous-réseau non sélectionnées demeurent dans la liste déroulante. Assurez-vous que vous ajoutez une et une seule adresse de sous-réseau par sous-réseau à l'écouteur, sinon la création de l'écouteur échoue.  
   
- **Adresses**  
+ **Résoudre**  
  Utilisez ce champ pour entrer une adresse IP statique pour l'adresse de sous-réseau sélectionnée. Contactez l'administrateur réseau pour connaître cette adresse IP. Assurez-vous que vous entrez une adresse valide pour l'adresse de sous-réseau sélectionnée, sinon la création de l'écouteur échoue.  
   
  **Adresse IPv4**  
@@ -63,8 +63,8 @@ ms.locfileid: "62791913"
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
- [Connectivité Client AlwaysOn (SQL Server)](always-on-client-connectivity-sql-server.md)  
+ [Connectivité client AlwaysOn (SQL Server)](always-on-client-connectivity-sql-server.md)  
   
   

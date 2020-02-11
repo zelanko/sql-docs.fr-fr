@@ -1,5 +1,5 @@
 ---
-title: Utilisation du fournisseur WMI pour les événements serveur | Microsoft Docs
+title: Utilisation du fournisseur WMI pour les événements de serveur | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0519561b24d8aff32adc7c375657fa85b9dfa496
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195730"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>Utilisation du fournisseur WMI pour les événements de serveur
@@ -43,10 +43,10 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
   
  Le GUID du Service Broker de msdb présente un intérêt particulier car il s'agit de l'emplacement du service cible du fournisseur.  
   
- Pour activer [!INCLUDE[ssSB](../../includes/sssb-md.md)] dans une base de données, utilisez l’option ENABLE_BROKER SET de la [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) instruction.  
+ Pour activer [!INCLUDE[ssSB](../../includes/sssb-md.md)] dans une base de données, utilisez l’option Set ENABLE_BROKER de l’instruction [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) .  
   
 ## <a name="specifying-a-connection-string"></a>Spécification d'une chaîne de connexion  
- Les applications dirigent le fournisseur WMI pour les événements de serveur vers une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en se connectant à un espace de noms WMI défini par le fournisseur. Le service WMI de Windows mappe cet espace de noms à la DLL de fournisseur, Sqlwep.dll, puis la charge en mémoire. Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a son propre espace de noms WMI, qui utilise par défaut : \\ \\.\\ *racine*\Microsoft\SqlServer\ServerEvents\\*nom_instance*. *nom_instance* valeur par défaut est MSSQLSERVER dans une installation par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Les applications dirigent le fournisseur WMI pour les événements de serveur vers une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en se connectant à un espace de noms WMI défini par le fournisseur. Le service WMI de Windows mappe cet espace de noms à la DLL de fournisseur, Sqlwep.dll, puis la charge en mémoire. Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possède son propre espace de noms WMI, qui a comme \\ \\valeur par défaut :. \\ **\\*instance_name*racine \Microsoft\SqlServer\ServerEvents. *instance_name* a pour valeur par défaut MSSQLServer dans une installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]par défaut de.  
   
 ## <a name="permissions-and-server-authentication"></a>Autorisations et authentification serveur  
  Pour accéder au fournisseur WMI pour les événements de serveur, le client d'où provient une application de gestion WMI doit correspondre à une connexion authentifiée Windows ou à un groupe dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifiée dans la chaîne de connexion de l'application.  
@@ -62,7 +62,7 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
   
 -   Pour créer une notification d'événements dont l'étendue correspond à une file d'attente, au minimum, l'autorisation ALTER est requise sur la file d'attente.  
   
- Pour plus d’informations sur la façon dont l’étendue requêtes WQL, consultez [à l’aide de WQL avec le fournisseur WMI pour les événements serveur](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx).  
+ Pour plus d’informations sur l’étendue des requêtes WQL, consultez [utilisation de WQL avec le fournisseur WMI pour les événements de serveur](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx).  
   
  Pour illustrer l'étendue, considérez une application de fournisseur WMI qui inclut la requête WQL suivante :  
   
@@ -76,7 +76,7 @@ WHERE DatabaseName = "AdventureWorks2012"
   
  Le fournisseur WMI traduit cette requête en une notification d'événements créée dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Cela signifie que l'appelant doit avoir les autorisations requises pour créer une telle notification d'événements, notamment l'autorisation CREATE DATABASE DDL EVENT NOTIFICATION dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
- Si une requête WQL spécifie une notification d'événements dont l'étendue correspond au niveau serveur, par exemple en émettant la requête SELECT * FROM ALTER_TABLE, l'application appelante doit avoir l'autorisation CREATE DDL EVENT NOTIFICATION au niveau du serveur. Notez que les notifications d'événements dont l'étendue est le serveur sont stockées dans la base de données master. Vous pouvez utiliser la [sys.server_event_notifications](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql) vue pour consulter leurs métadonnées de catalogue.  
+ Si une requête WQL spécifie une notification d'événements dont l'étendue correspond au niveau serveur, par exemple en émettant la requête SELECT * FROM ALTER_TABLE, l'application appelante doit avoir l'autorisation CREATE DDL EVENT NOTIFICATION au niveau du serveur. Notez que les notifications d'événements dont l'étendue est le serveur sont stockées dans la base de données master. Vous pouvez utiliser l’affichage catalogue [sys. server_event_notifications](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql) pour afficher leurs métadonnées.  
   
 > [!NOTE]  
 >  L'étendue de la notification d'événements qui est créée par le fournisseur WMI (serveur, base de données ou objet) dépend finalement du résultat du processus de vérification des autorisations qui est utilisé par le fournisseur WMI. Cela est affecté par le jeu d'autorisations de l'utilisateur qui appelle le fournisseur et sur la vérification de la base de données interrogée.  
@@ -109,7 +109,7 @@ WHERE DatabaseName = "AdventureWorks2012"
     -   DENY ou REVOKE (S'applique uniquement aux autorisations ALTER DATABASE, ALTER ANY DATABASE EVENT NOTIFICATION, CREATE DATABASE DDL EVENT NOTIFICATION, CONTROL SERVER, ALTER ANY EVENT NOTIFICATION, CREATE DDL EVENT NOTIFICATION ou CREATE TRACE EVENT NOTIFICATION.)  
   
 ## <a name="working-with-event-data-on-the-client-side"></a>Utilisation de données d'événements côté client  
- Une fois que le fournisseur WMI pour les événements de serveur crée la notification d’événements requise dans la base de données cible, la notification d’événements envoie des données d’événement au service cible dans msdb, nommé **SQL/Notifications/ProcessWMIEventProviderNotification /V1.0**. Le service cible place l’événement dans une file d’attente dans `msdb` qui est nommé **WMIEventProviderNotificationQueue**. (Le service et la file d’attente sont créés dynamiquement par le fournisseur lorsqu’il se connecte d’abord à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) Le fournisseur lit les données d’événement XML à partir de cette file d’attente, puis convertit au format d’objet géré (MOF) avant de retourner à l’application cliente. Les données MOF sont composées des propriétés de l'événement demandé par la requête WQL comme une définition de classe CIM (Common Information Model). Chaque propriété a un type CIM correspondant. Par exemple, la propriété `SPID` est retournée sous forme de type CIM `Sint32`. Les types CIM pour chaque propriété sont répertoriés sous chaque classe d’événements dans [fournisseur WMI pour les Classes d’événements de serveur et les propriétés](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
+ Une fois que le fournisseur WMI pour les événements de serveur a créé la notification d’événements requise dans la base de données cible, la notification d’événements envoie les données d’événement au service cible dans msdb, nommé **SQL/Notifications/ProcessWMIEventProviderNotification/v 1.0**. Le service cible place l’événement dans une file d' `msdb` attente nommée **WMIEventProviderNotificationQueue**. (Le service et la file d’attente sont créés dynamiquement par le fournisseur lorsqu’il se connecte pour la première fois à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) Le fournisseur lit ensuite les données d’événement XML de cette file d’attente et les transforme en MOF (Managed Object Format) avant de les retourner à l’application cliente. Les données MOF sont composées des propriétés de l'événement demandé par la requête WQL comme une définition de classe CIM (Common Information Model). Chaque propriété a un type CIM correspondant. Par exemple, la propriété `SPID` est retournée sous forme de type CIM `Sint32`. Les types CIM pour chaque propriété sont répertoriés sous chaque classe d’événements du [fournisseur WMI pour les classes et propriétés d’événements de serveur](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fournisseur WMI pour les concepts des événements de serveur](https://technet.microsoft.com/library/ms180560.aspx)  

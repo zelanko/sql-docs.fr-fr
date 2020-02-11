@@ -1,5 +1,5 @@
 ---
-title: Tables, Collection (ADOX) | Microsoft Docs
+title: Tables, collection (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,40 +17,40 @@ ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0bf28af10084a30a5c81c76fe7e44781178979ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965134"
 ---
 # <a name="tables-collection-adox"></a>Tables, collection (ADOX)
-Contient tous les [Table](../../../ado/reference/adox-api/table-object-adox.md) objets d’un catalogue.  
+Contient tous les objets [table](../../../ado/reference/adox-api/table-object-adox.md) d’un catalogue.  
   
 ## <a name="remarks"></a>Notes  
- Le [Append](../../../ado/reference/adox-api/append-method-adox-tables.md) méthode pour un **Tables** collection est unique pour ADOX. Vous pouvez :  
+ La méthode [Append](../../../ado/reference/adox-api/append-method-adox-tables.md) d’une collection **tables** est unique pour ADOX. Vous pouvez :  
   
--   Ajouter une nouvelle table à la collection avec le **Append** (méthode).  
+-   Ajoutez une nouvelle table à la collection à l’aide de la méthode **Append** .  
   
- Les propriétés et les méthodes restantes sont des collections ADO standard. Vous pouvez :  
+ Les propriétés et les méthodes restantes sont standard pour les collections ADO. Vous pouvez :  
   
--   Accéder à une table dans la collection avec le [élément](../../../ado/reference/ado-api/item-property-ado.md) propriété.  
+-   Accédez à une table de la collection à l’aide de la propriété [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   
--   Retourner le nombre de tables contenues dans la collection avec le [nombre](../../../ado/reference/ado-api/count-property-ado.md) propriété.  
+-   Retourne le nombre de tables contenues dans la collection avec la propriété [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
   
--   Supprimer une table de la collection avec le [supprimer](../../../ado/reference/adox-api/delete-method-adox-collections.md) (méthode).  
+-   Supprime une table de la collection à l’aide de la méthode [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) .  
   
--   Mettre à jour les objets dans la collection afin de refléter le schéma actuel de la base de données avec le [Actualiser](../../../ado/reference/ado-api/refresh-method-ado.md) (méthode).  
+-   Mettez à jour les objets de la collection pour refléter le schéma de base de données actuel avec la méthode [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
   
- Certains fournisseurs peuvent retourner des autres objets de schéma, tel qu’une vue, dans le **Tables** collection. Par conséquent, certaines collections ADOX peuvent contenir plusieurs références au même objet. Devez vous supprimez l’objet d’une collection, la modification sera pas visible dans une autre collection qui fait référence à l’objet supprimé jusqu'à ce que le **Actualiser** méthode est appelée sur la collection. Par exemple, avec le fournisseur OLE DB pour Microsoft Jet, les vues sont retournées avec la **Tables** collection. Si vous supprimez une vue, vous devez actualiser le **Tables** collection avant de la collection reflète la modification.  
+ Certains fournisseurs peuvent retourner d’autres objets de schéma, tels qu’une vue, dans la collection **tables** . Par conséquent, certaines collections ADOX peuvent contenir plusieurs références au même objet. Si vous supprimez l’objet d’une collection, la modification n’est pas visible dans une autre collection qui fait référence à l’objet supprimé tant que la méthode **Refresh** n’est pas appelée sur la collection. Par exemple, avec le fournisseur de OLE DB pour Microsoft Jet, les vues sont renvoyées avec la collection **tables** . Si vous supprimez une vue, vous devez actualiser la collection **tables** avant que la collection ne reflète la modification.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient la rubrique suivante.  
   
 -   [Propriétés, méthodes et événements de la collection Tables](../../../ado/reference/adox-api/tables-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemple de propriété ActiveConnection de catalogue (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
- [Tables et colonnes ajouter des méthodes, exemple de nom de propriété (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Méthode Close de connexion, exemple de propriété de Type de Table (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Keys Append, méthode, Type de clé, RelatedColumn, RelatedTable et UpdateRule, exemple de propriétés (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Exemple de propriété ActiveConnection de Catalog (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
+ [Columns et tables Append, méthodes, Name, exemple de propriété (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Connection Close, méthode, table type, exemple de propriété (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
+ [Méthodes Append des clés, type de clé, RelatedColumn, RelatedTable et UpdateRule, exemple de propriétés (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Catalog, objet (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Table, objet (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)

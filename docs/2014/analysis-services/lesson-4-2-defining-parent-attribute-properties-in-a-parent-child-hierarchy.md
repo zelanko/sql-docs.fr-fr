@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ddae9c199f1827d733d0e12f7ff834768aeae937
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69494013"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Définition des propriétés d'attribut parent dans une hiérarchie parent-enfant
@@ -37,7 +37,7 @@ ms.locfileid: "69494013"
   
 3.  Sélectionnez le membre **Ken J. Sánchez** .  
   
-     Notez que le nom du niveau pour ce membre est **Level 02**. (Le nom du niveau apparaît après **Niveau actuel**, immédiatement au-dessus du membre **All Employees**.) Au cours de la tâche suivante, vous allez définir des noms plus descriptifs pour chaque niveau.  
+     Notez que le nom du niveau pour ce membre est **Level 02**. (Le nom du niveau apparaît après **Niveau actuel** , immédiatement au-dessus du membre **All Employees** .) Au cours de la tâche suivante, vous allez définir des noms plus descriptifs pour chaque niveau.  
   
 4.  Développez **Ken J. Sánchez** pour afficher les noms des employés qui travaillent sous l’autorité de ce responsable, puis sélectionnez **Brian S. Welcker** pour afficher le nom de ce niveau.  
   
@@ -57,29 +57,29 @@ ms.locfileid: "69494013"
   
      L'illustration suivante montre la hiérarchie Employees développée.  
   
-10. ![Tableau croisé dynamique présentant la hiérarchie Employees](../../2014/tutorials/media/l4-employee-1.gif "Tableau croisé dynamique présentant la hiérarchie Employees")  
+10. ![Tableau croisé dynamique affichant la hiérarchie Employees](../../2014/tutorials/media/l4-employee-1.gif "Tableau croisé dynamique affichant la hiérarchie Employees")  
   
      Remarquez que les ventes faites par chaque responsable dans le niveau 03 sont également affichées dans le niveau 04. C'est parce que chaque responsable est également employé d'un autre responsable. Au cours de la tâche suivante, vous allez masquer les montants de ces ventes.  
   
 ## <a name="modifying-parent-attribute-properties-in-the-employee-dimension"></a>Modification des propriétés d'attribut parent dans la dimension Employee  
   
-1.  Affichez le Concepteur de dimensions pour la dimension **Employee** .  
+1.  Basculez vers le concepteur de dimensions pour la dimension **Employee** .  
   
 2.  Cliquez sur l’onglet **Structure de dimension** , puis sélectionnez la hiérarchie d’attributs **Employees** dans le volet **Attributs** .  
   
      Notez l'icône unique de l'attribut. Cette icône signifie que l'attribut est la clé parente dans une hiérarchie parent-enfant. Notez également, dans la fenêtre des propriétés, que la propriété **Usage** de l’attribut est définie comme **Parent**. Cette propriété a été définie par l'Assistant Dimension lors de la conception de la dimension. L'Assistant a détecté automatiquement la relation parent-enfant.  
   
-3.  Dans la fenêtre des propriétés, cliquez sur le bouton ( **...** ) dans la cellule de la propriété **NamingTemplate** .  
+3.  Dans la fenêtre des propriétés, cliquez sur le bouton (**...**) dans la cellule de la propriété **NamingTemplate** .  
   
-     Dans la boîte de dialogue **Modèle de nom de niveau**, vous pouvez définir le modèle d’attribution de nom de niveau qui détermine les noms de niveau dans la hiérarchie parent-enfant que les utilisateurs voient quand ils parcourent les cubes.  
+     Dans la boîte de dialogue **Modèle de nom de niveau** , vous pouvez définir le modèle d’attribution de nom de niveau qui détermine les noms de niveau dans la hiérarchie parent-enfant que les utilisateurs voient quand ils parcourent les cubes.  
   
-4.  Dans la deuxième ligne, la ligne **\*** , tapez **Employee Level \*** dans la colonne **Name**, puis sélectionnez la troisième ligne.  
+4.  Dans la deuxième ligne, la **\*** ligne, tapez **Employee \* Level** dans la colonne **Name** , puis cliquez sur la troisième ligne.  
   
-     Sous **Résultat**, chaque niveau est maintenant appelé « Employee Level » suivi d’un numéro incrémenté séquentiellement.  
+     Sous **Résultat** , chaque niveau est maintenant appelé « Employee Level » suivi d’un numéro incrémenté séquentiellement.  
   
      L’illustration suivante montre les éléments qui ont changé dans la boîte de dialogue **Modèle de nom de niveau** .  
   
-     ![Boîte de dialogue modèle de nom de niveau](../../2014/tutorials/media/l4-namingtemplate.gif "Boîte de dialogue modèle de nom de niveau")  
+     ![Boîte de dialogue modèle de nom de niveau](../../2014/tutorials/media/l4-namingtemplate.gif "Boîte de dialogue Modèle de nom de niveau")  
   
 5.  Cliquez sur **OK**.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "69494013"
   
      L'illustration suivante montre les modifications apportées à la hiérarchie Employees. Notez que Stephen Y. Jiang n’apparaît plus comme employé de lui-même.  
   
-     ![Hiérarchie des employés modifiés](../../2014/tutorials/media/l4-employee-2.png "Hiérarchie des employés modifiés")  
+     ![Hiérarchie Employees modifiée](../../2014/tutorials/media/l4-employee-2.png "Hiérarchie Employees modifiée")  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
  [Regroupement automatique des membres d'attribut](lesson-4-3-automatically-grouping-attribute-members.md)  

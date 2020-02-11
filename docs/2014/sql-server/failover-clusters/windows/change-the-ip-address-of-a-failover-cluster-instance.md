@@ -16,27 +16,27 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a9a93c9c6efdd5a864b5ab3ce0beacb7cbf1632
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049619"
 ---
 # <a name="change-the-ip-address-of-a-failover-cluster-instance"></a>Modifier l'adresse IP d'une instance de cluster de basculement
   Cette rubrique explique comment modifier la ressource d'adresse IP d'une instance de cluster de basculement (FCI) AlwaysOn à l'aide du composant logiciel enfichable Gestionnaire du cluster de basculement. Le composant logiciel enfichable Gestionnaire du cluster de basculement est l'application de gestion du service de cluster de basculement Windows Server (WSFC).  
   
--   **Avant de commencer :**  [Sécurité](#Security)  
+-   **Avant de commencer :**  [sécurité](#Security)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
- Avant de commencer, consultez les rubriques suivantes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] rubrique de la documentation en ligne : [Before Installing Failover Clustering](../install/before-installing-failover-clustering.md).  
+ Avant de commencer, consultez la rubrique [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Avant l’installation du clustering de basculement [dans la documentation en ligne de](../install/before-installing-failover-clustering.md).  
   
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
  Pour maintenir ou mettre à jour une FCI, vous devez être un administrateur local et disposer des autorisations requises pour vous connecter en tant que service sur tous les nœuds de la FCI.  
   
-##  <a name="WSFC"></a> Utilisation du composant logiciel enfichable Gestionnaire du cluster de basculement  
- **Pour modifier la ressource d'adresse IP pour une FCI**  
+##  <a name="WSFC"></a>Utilisation du composant logiciel enfichable Gestionnaire du cluster de basculement  
+ **Pour modifier la ressource d’adresse IP d’un FCI**  
   
 1.  Ouvrez le composant logiciel enfichable Gestionnaire du cluster de basculement.  
   

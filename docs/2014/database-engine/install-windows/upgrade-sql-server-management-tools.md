@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 925ab0eb6248ec59284c175e472a237071a0c0bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774813"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>Mettre à jour les outils d'administration SQL Server
@@ -34,7 +34,7 @@ ms.locfileid: "62774813"
   
 -   Tous les composants d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent être mis à niveau simultanément. Les numéros de version des composants [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]et [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] doivent être identiques dans une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
--   Vous pouvez ajouter des composants à une installation existante de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en même temps que vous procédez à une mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations, consultez [mise à niveau vers SQL Server 2014 avec l’Assistant Installation &#40;le programme d’installation&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md).  
+-   Vous pouvez ajouter des composants à une installation existante de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en même temps que vous procédez à une mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations, consultez [mettre à niveau vers SQL Server 2014 à l’aide de l’Assistant installation &#40;&#41;d’installation ](upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les Outils clients, tels que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], l’Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , sqlcmd et osql, ne sont pas mis à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. À la place, les outils clients s'exécutent côte à côte avec les outils des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge l’importation des paramètres à partir des versions antérieures des Outils clients [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -49,6 +49,6 @@ ms.locfileid: "62774813"
 ## <a name="see-also"></a>Voir aussi  
  [Mises à niveau de la version et de l'édition prises en charge](supported-version-and-edition-upgrades.md)   
  [Compatibilité descendante](../../getting-started/backward-compatibility.md)   
- [Mise à niveau vers SQL Server 2014 à l’aide de l’Assistant Installation &#40;le programme d’installation&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)  
+ [Effectuez une mise à niveau vers SQL Server 2014 à l’aide de l’Assistant Installation &#40;le programme d’installation&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

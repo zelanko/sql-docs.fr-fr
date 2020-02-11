@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4add98b6c085d52238a528c313008bc688ae6e54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829504"
 ---
 # <a name="wmi-event-watcher-task"></a>Tâche Observateur d'événement WMI
@@ -56,7 +56,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
 ```  
   
 ## <a name="custom-logging-messages-available-on-the-wmi-event-watcher-task"></a>Messages de journalisation personnalisés disponibles dans la tâche Observateur d'événement WMI  
- Le tableau suivant répertorie les entrées de journal personnalisées de la tâche Observateur d'événement WMI. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) et [Messages personnalisés pour la journalisation](../custom-messages-for-logging.md).  
+ Le tableau suivant répertorie les entrées de journal personnalisées de la tâche Observateur d'événement WMI. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) et [Messages personnalisés pour la journalisation](../custom-messages-for-logging.md).  
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
@@ -75,9 +75,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 -   Définissez la manière dont la tâche répond à l'événement. La tâche peut être configurée de façon à réussir ou à échouer, selon l'événement, ou elle peut simplement observer encore l'événement.  
   
--   Spécifiez l'action exécutée par la tâche lorsque le délai d'attente de requête WMI arrive à expiration. Vous pouvez enregistrer le délai d’attente et l’état après le délai d’attente ou bien déclencher un événement [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] personnalisé, indiquant que l’événement WMI a dépassé le délai d’attente, et enregistrant le délai d’attente et l’état après le délai d’attente.  
+-   Spécifiez l’action que la tâche effectue lorsque la requête WMI expire. Vous pouvez enregistrer le délai d’attente et l’état après le délai d’attente, ou déclencher un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] événement personnalisé, indiquant que l’événement WMI a expiré et a journaliser l’état du délai d’attente et du délai d’attente.  
   
--   Définissez la manière dont la tâche répond au délai d'attente. La tâche peut être configurée de façon à réussir ou à échouer, ou elle peut simplement observer encore l'événement.  
+-   Définissez la façon dont la tâche répond au délai d’attente. La tâche peut être configurée pour réussir ou échouer, ou la tâche peut simplement surveiller l’événement.  
   
 -   Spécifiez le nombre de fois où la tâche observe l'événement.  
   
@@ -91,7 +91,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de tâche Observateur d’événement WMI &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur de tâche Observateur d’événement WMI &#40;page général&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Éditeur de tâche Observateur d’événement WMI &#40;page Options WMI&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
   
@@ -102,7 +102,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
 -   [Définir les propriétés d'une tâche ou d'un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-the-wmi-event-watcher-task"></a>Configuration par programmation de la tâche Observateur d'événement WMI  
- Pour plus d'informations sur la définition par programme de ces propriétés, cliquez sur la rubrique suivante :  
+ Pour plus d'informations sur la définition par programmation de ces propriétés, cliquez sur la rubrique suivante :  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WmiEventWatcherTask.WmiEventWatcherTask>  
   

@@ -1,5 +1,5 @@
 ---
-title: Fonction SUM (XQuery) | Microsoft Docs
+title: Fonction Sum (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9e9095fdecf9bdf9782815c8b44c2131313568c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67985743"
 ---
 # <a name="aggregate-functions---sum"></a>Fonctions d’agrégation : sum
@@ -39,16 +39,16 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  Série de valeurs atomiques dont la somme est à calculer.  
   
 ## <a name="remarks"></a>Notes  
- Tous les types de valeurs atomisées transmises à **sum()** doivent être des sous-types du même type de base. Les types de base acceptés sont les trois types de base numériques intégrés ou xdt:untypedAtomic. Les valeurs de type xdt:untypedAtomic sont converties en xs:double. S’il existe un mélange de ces types, ou si d’autres valeurs d’autres types sont passés, une erreur statique est générée.  
+ Tous les types des valeurs atomisées passées à **Sum ()** doivent être des sous-types du même type de base. Les types de base acceptés sont les trois types de base numériques intégrés ou xdt:untypedAtomic. Les valeurs de type xdt:untypedAtomic sont converties en xs:double. S’il existe un mélange de ces types, ou si d’autres valeurs d’autres types sont passées, une erreur statique est générée.  
   
- Le résultat de **sum()** reçoit le type de base des types transmis tel que xs : double dans le cas de xdt : untypedAtomic, même si l’entrée est éventuellement la séquence vide. Si l'entrée est vide statiquement, le résultat est 0 avec le type statique et dynamique de xs:integer.  
+ Le résultat de **Sum ()** reçoit le type de base des types transmis, tels que XS : double dans le cas de xdt : untypedAtomic, même si l’entrée est éventuellement la séquence vide. Si l'entrée est vide statiquement, le résultat est 0 avec le type statique et dynamique de xs:integer.  
   
- Le **sum()** fonction retourne la somme des valeurs numériques. Si une valeur xdt : untypedAtomic ne peut pas être convertie en xs : double, la valeur est ignorée dans la séquence d’entrée, *$arg*. Si l'entrée est une séquence vide calculée dynamiquement, la valeur 0 du type de base utilisé est retournée.  
+ La fonction **Sum ()** retourne la somme des valeurs numériques. Si une valeur xdt : untypedAtomic ne peut pas être convertie en XS : double, la valeur est ignorée dans la séquence d’entrée *$arg*. Si l'entrée est une séquence vide calculée dynamiquement, la valeur 0 du type de base utilisé est retournée.  
   
  La fonction retourne une erreur d'exécution en cas d'exception de dépassement de capacité ou de valeur hors limite.  
   
 ## <a name="examples"></a>Exemples  
- Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type le [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données.  
+ Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées **** dans différentes colonnes de type [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML dans la base de données.  
   
 ### <a name="a-using-the-sum-xquery-function-to-find-the-total-combined-number-of-labor-hours-for-all-work-center-locations-in-the-manufacturing-process"></a>R. Utilisation de la fonction XQuery sum() pour rechercher le nombre total d'heures de travail pour tous les ateliers inclus dans le processus de fabrication  
  La requête ci-dessous permet de trouver le nombre total d'heures de travail pour tous les ateliers inclus dans le processus de fabrication de tous les modèles de produits pour lesquels des instructions de fabrication sont stockées.  
@@ -105,17 +105,17 @@ ProductModelID Name                 TotalLaborHours
 ### <a name="implementation-limitations"></a>Limites de mise en œuvre  
  Les limitations suivantes s'appliquent :  
   
--   Seule la version de l’argument unique de **sum()** est pris en charge.  
+-   Seule la version à argument unique de **Sum ()** est prise en charge.  
   
 -   Si l'entrée est une séquence vide calculée dynamiquement, la valeur 0 du type de base utilisé est retournée à la place du type xs:integer.  
   
--   Le **sum()** fonction mappe tous les entiers à xs : decimal.  
+-   La fonction **Sum ()** mappe tous les entiers à XS : Decimal.  
   
--   Le **sum()** fonction sur les valeurs de type xs : Duration n’est pas pris en charge.  
+-   La fonction **Sum ()** sur des valeurs de type xs : Duration n’est pas prise en charge.  
   
 -   Les séquences faisant intervenir plusieurs types dérivés de différents types de base ne sont pas prises en charge.  
   
--   L’expression, xs :double("-INF"))) génère une erreur de domaine.  
+-   La somme ((XS : double ("INF"), XS : double ("-INF"))) génère une erreur de domaine.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions XQuery impliquant le type de données xml](../xquery/xquery-functions-against-the-xml-data-type.md)  

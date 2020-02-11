@@ -1,5 +1,5 @@
 ---
-title: Connexion à une Source de données (pilote ODBC pour Oracle) | Microsoft Docs
+title: Connexion à une source de données (pilote ODBC pour Oracle) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,26 +14,26 @@ ms.assetid: f724a9c5-342a-4f4e-a030-ec34f7378eaf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b0e9e62c8e03166ec2f76b1c6bcb5000a062bac3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68082038"
 ---
 # <a name="connecting-to-a-data-source-odbc-driver-for-oracle"></a>Connexion à une source de données (pilote ODBC pour Oracle)
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Au lieu de cela, utilisez le pilote ODBC fourni par Oracle.  
+>  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Utilisez plutôt le pilote ODBC fourni par Oracle.  
   
- Une application ODBC peut transmettre des informations de connexion de plusieurs façons. Par exemple, l’application peut avoir le pilote d’inviter l’utilisateur pour les informations de connexion. Ou l’application peut attendre une chaîne de connexion qui spécifie la connexion de source de données. Comment vous connectez à une source de données dépend de la méthode de connexion utilisée par votre application ODBC.  
+ Une application ODBC peut transmettre des informations de connexion de plusieurs façons. Par exemple, l’application peut demander au pilote de toujours inviter l’utilisateur à entrer les informations de connexion. Ou l’application peut attendre une chaîne de connexion qui spécifie la connexion à la source de données. La façon dont vous vous connectez à une source de données dépend de la méthode de connexion utilisée par votre application ODBC.  
   
- Une méthode courante pour se connecter à une source de données est via la boîte de dialogue Source de données. Si votre application ODBC est configurée pour utiliser une boîte de dialogue, cette boîte de dialogue s’affiche et vous invite à entrer les informations de connexion de source de données approprié.  
+ Une façon courante de se connecter à une source de données consiste à utiliser la boîte de dialogue source de données. Si votre application ODBC est configurée pour utiliser une boîte de dialogue, cette boîte de dialogue s’affiche et vous invite à entrer les informations de connexion à la source de données appropriées.  
   
  Vous pouvez également vous connecter à une source de données à l’aide de la [chaîne de connexion](../../odbc/microsoft/connection-string-format-and-attributes.md).  
   
-### <a name="to-connect-to-a-data-source-using-a-dialog-box"></a>Pour vous connecter à une source de données à l’aide d’une boîte de dialogue  
+### <a name="to-connect-to-a-data-source-using-a-dialog-box"></a>Pour se connecter à une source de données à l’aide d’une boîte de dialogue  
   
-1.  Lorsque la boîte de dialogue Source de données s’affiche, sélectionnez une source de données Oracle, puis sur OK. La boîte de dialogue de connexion s’affiche.  
+1.  Lorsque la boîte de dialogue source de données s’affiche, sélectionnez une source de données Oracle, puis cliquez sur OK. La boîte de dialogue Connecter s'affiche.  
   
-2.  Renseignez les informations appropriées pour la boîte de dialogue se connecter, puis cliquez sur OK.  
+2.  Renseignez les informations appropriées pour la boîte de dialogue de connexion, puis cliquez sur OK.  
   
- Une fois la connexion des informations sont vérifiées, votre application peut utiliser le pilote ODBC pour Oracle pour accéder aux informations qui contient la source de données.
+ Une fois les informations de connexion vérifiées, votre application peut utiliser le pilote ODBC pour Oracle pour accéder aux informations contenues dans la source de données.

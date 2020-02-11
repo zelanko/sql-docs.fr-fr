@@ -1,5 +1,5 @@
 ---
-title: Spécifiez un serveur cible&#39;s emplacement (SQL Server Management Studio) | Microsoft Docs
+title: Spécifier un serveur cible&#39;emplacement s (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1d08c7f660d4deee887f95a06a7848f6d40b2d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211336"
 ---
 # <a name="specify-a-target-server39s-location-sql-server-management-studio"></a>Spécifier l’emplacement d’un serveur cible (SQL Server Management Studio)
@@ -31,7 +31,7 @@ ms.locfileid: "68211336"
   
      [Sécurité](#Security)  
   
--   **Pour spécifier l'emplacement d'un serveur cible, utilisez :**  
+-   **Pour spécifier l’emplacement d’un serveur cible à l’aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68211336"
   
 #### <a name="to-specify-a-target-servers-location"></a>Pour spécifier l'emplacement d'un serveur cible  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

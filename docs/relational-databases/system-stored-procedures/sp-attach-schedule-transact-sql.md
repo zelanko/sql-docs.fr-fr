@@ -18,18 +18,18 @@ ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f85095941311459da2fdc757a11895795ebb418e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046164"
 ---
-# <a name="spattachschedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
+# <a name="sp_attach_schedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Définit la planification d'un travail.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,26 +42,26 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_id = ] job_id` Numéro d’identification du travail auquel ajouter la planification. *job_id*est **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] job_id`Numéro d’identification du travail auquel la planification est ajoutée. *job_id*est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
-`[ @job_name = ] 'job_name'` Le nom du travail auquel ajouter la planification. *job_name*est **sysname**, avec NULL comme valeur par défaut.  
-  
-> [!NOTE]  
->  Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
-  
-`[ @schedule_id = ] schedule_id` Le numéro d’identification de planification de la planification à définir pour le travail. *id_de_la_planification*est **int**, avec NULL comme valeur par défaut.  
-  
-`[ @schedule_name = ] 'schedule_name'` Le nom de la planification à définir pour le travail. *nom_de_la_planification*est **sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'`Nom du travail auquel la planification est ajoutée. *job_name*est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
->  Soit *id_de_la_planification* ou *nom_de_la_planification* doit être spécifié, mais ne peut pas être spécifiés.  
+>  *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
+  
+`[ @schedule_id = ] schedule_id`Numéro d’identification de la planification à définir pour le travail. *schedule_id*est de **type int**, avec NULL comme valeur par défaut.  
+  
+`[ @schedule_name = ] 'schedule_name'`Nom de la planification à définir pour le travail. *schedule_name*est de **type sysname**, avec NULL comme valeur par défaut.  
+  
+> [!NOTE]  
+>  *Schedule_id* ou *schedule_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
   
 ## <a name="remarks"></a>Notes  
  La planification et le travail doivent avoir le même propriétaire.  
   
  Une planification peut être définie pour plusieurs travaux. Un travail peut être exécuté dans plusieurs planifications.  
   
- Cette procédure stockée doit être exécutée à partir de la **msdb** base de données.  
+ Cette procédure stockée doit être exécutée à partir de la base de données **msdb** .  
   
 ## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
@@ -72,11 +72,12 @@ sp_attach_schedule
   
 -   **SQLAgentOperatorRole**  
   
- Notez que le propriétaire du travail peut joindre un travail à une planification et détacher un travail d'une planification sans être le propriétaire de la planification. Toutefois, une planification ne peut pas être supprimée si le détachement la conserve sans travaux, sauf si l’appelant est propriétaire de la planification.  
+ Notez que le propriétaire du travail peut joindre un travail à une planification et détacher un travail d'une planification sans être le propriétaire de la planification. Toutefois, une planification ne peut pas être supprimée si le détachement le laisse sans travaux, sauf si l’appelant est le propriétaire de la planification.  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vérifie si l'utilisateur détient à la fois le travail et la planification.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vérifie si l'utilisateur détient à la fois le travail et la planification.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée une planification nommée `NightlyJobs`. Les travaux qui utilisent cette planification s'exécutent tous les jours lorsque l'heure indiquée par le serveur est `01:00`. L'exemple joint la planification au travail `BackupDatabase` et au travail `RunReports`.  

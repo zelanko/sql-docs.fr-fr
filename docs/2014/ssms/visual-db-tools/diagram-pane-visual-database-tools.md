@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 79ddfb40d33c8585b94ccc9718100e771da5e92e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126595"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>Volet Schéma (Visual Database Tools)
@@ -39,7 +39,7 @@ ms.locfileid: "63126595"
  **Tables**  
  Énumère les tables que vous pouvez ajouter au volet Schéma. Pour ajouter une table, sélectionnez-la et cliquez sur **Ajouter**. Pour ajouter plusieurs tables à la fois, sélectionnez-les et cliquez sur **Ajouter**.  
   
- **Vues**  
+ **Views**  
  Énumère les vues que vous pouvez ajouter au volet Schéma. Pour ajouter une vue, sélectionnez-la et cliquez sur **Ajouter**. Pour ajouter plusieurs vues à la fois, sélectionnez-les et cliquez sur **Ajouter**.  
   
  **Fonctions**  
@@ -96,8 +96,8 @@ ms.locfileid: "63126595"
 |![Icône Visual Database Tools](../../database-engine/media//dv3wbio.gif "Icône Visual Database Tools")|Le Concepteur de requêtes et de vues ne peut pas déterminer le type de jointure|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concevoir des requêtes et des vues des rubriques de procédures &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Volet Critères &#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
+ [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Volet critères &#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
  [Trier et regrouper des résultats de requête &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)  
   
   

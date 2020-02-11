@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b9c623a1e99053e796609dc82f27519f27c07a9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68049291"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
@@ -20,7 +20,7 @@ ms.locfileid: "68049291"
 
   Explore les membres d'un jeu un niveau en dessous du niveau le plus bas représenté dans le jeu.  
   
- Spécifiant le niveau à partir duquel extraire vers le bas est facultatif, mais si vous ne définissez pas le niveau, vous pouvez utiliser un **expression de niveau** ou **niveau d’index**. Ces arguments s'excluent mutuellement. Enfin, si des membres calculés sont présents dans la requête, vous pouvez spécifier un argument pour les inclure dans l'ensemble de lignes.  
+ La spécification du niveau d’exploration est facultative, mais si vous définissez le niveau, vous pouvez utiliser une **expression de niveau** ou le **niveau d’index**. Ces arguments s'excluent mutuellement. Enfin, si des membres calculés sont présents dans la requête, vous pouvez spécifier un argument pour les inclure dans l'ensemble de lignes.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -30,21 +30,21 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
   
 ## <a name="arguments"></a>Arguments  
  *Set_Expression*  
- Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
+ Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
  *Level_Expression*  
  (Facultatif). Une expression MDX qui identifie explicitement le niveau à explorer. Si vous spécifiez une expression de niveau, ignorez l'argument d'index du niveau inférieur.  
   
- *Index*  
+ *Évaluer*  
  (Facultatif). Expression numérique valide qui spécifie le nombre de hiérarchies pour lesquelles procéder à une extraction vers le bas au sein du jeu. Vous pouvez utiliser le niveau d'index de Level_Expression pour identifier explicitement le niveau jusqu'où explorer.  
   
  *Include_Calc_Members*  
  (Facultatif). Un indicateur spécifiant s'il faut inclure les membres calculés (s'ils existent) au niveau d'exploration.  
   
 ## <a name="remarks"></a>Notes  
- Le **DrilldownLevel** fonction retourne un jeu d’enfant de membres dans un ordre hiérarchique, en fonction des membres inclus dans le jeu spécifié. L'ordre est conservé parmi les membres d'origine dans le jeu spécifié, à ceci près que tous les membres enfants inclus dans le jeu de résultats de la fonction sont placés immédiatement sous leur membre parent.  
+ La fonction **DrilldownLevel** retourne un jeu de membres enfants dans un ordre hiérarchique, en fonction des membres inclus dans le jeu spécifié. L'ordre est conservé parmi les membres d'origine dans le jeu spécifié, à ceci près que tous les membres enfants inclus dans le jeu de résultats de la fonction sont placés immédiatement sous leur membre parent.  
   
- Pour une structure de données hiérarchique multiniveau donnée, vous pouvez choisir explicitement un niveau jusqu'où explorer. Il y a deux moyens mutuellement exclusifs de spécifier le niveau. La première approche consiste à définir le **level_expression** argument à l’aide d’une expression MDX qui retourne le niveau, une autre approche consiste à spécifier le **index** argument, à l’aide d’une expression numérique qui Spécifie le niveau par nombre.  
+ Pour une structure de données hiérarchique multiniveau donnée, vous pouvez choisir explicitement un niveau jusqu'où explorer. Il y a deux moyens mutuellement exclusifs de spécifier le niveau. La première approche consiste à définir l’argument **Level_Expression** à l’aide d’une expression MDX qui retourne le niveau, une autre approche consiste à spécifier l’argument d' **index** , à l’aide d’une expression numérique qui spécifie le niveau par numéro.  
   
  Si une expression de niveau est spécifiée, la fonction construit un jeu dans un ordre hiérarchique en récupérant uniquement les enfants des membres situés au niveau spécifié. Si une expression de niveau est spécifiée et qu'il n'y a pas de membre à ce niveau, l'expression de niveau est ignorée.  
   
@@ -52,21 +52,21 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
   
  Si aucune expression de niveau ou valeur d'index n'est spécifiée, la fonction génère un jeu dans l'ordre hiérarchique en extrayant uniquement les enfants des membres situés au niveau le plus bas de la première dimension référencée dans le jeu spécifié.  
   
- Interrogez la propriété XMLA MdpropMdxDrillFunctions vous permet de vérifier le niveau de prise en charge fournis par le serveur pour les fonctions d’extraction ; consultez [propriétés XMLA prises en charge &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) pour plus d’informations.  
+ L’interrogation de la propriété XMLA MdpropMdxDrillFunctions vous permet de vérifier le niveau de prise en charge fourni par le serveur pour les fonctions de perçage. Pour plus d’informations, consultez [Propriétés XMLA prises en charge &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
   
 ## <a name="examples"></a>Exemples  
  Vous pouvez essayer les exemples suivants dans la fenêtre de requête MDX dans SSMS, en utilisant le cube Adventure Works.  
   
- **Exemple 1 : montre la syntaxe minimale**  
+ **Exemple 1 : illustre la syntaxe minimale**  
   
- Le premier exemple montre la syntaxe minimale **DrilldownLevel**. Le seul argument requis est une expression définie. Notez que lorsque vous exécutez cette requête, vous obtenez le parent [All Categories] et les membres du niveau suivant vers le bas : [Accessories], [Bikes], et ainsi de suite. Bien que cet exemple soit simple, il illustre l’objectif de base de la **DrilldownLevel** (fonction), qui est d’Explorer jusqu’au niveau inférieur suivant.  
+ Le premier exemple illustre la syntaxe minimale pour **DrilldownLevel**. Le seul argument requis est une expression définie. Notez que lorsque vous exécutez cette requête, vous récupérez le parent [toutes les catégories] et les membres du niveau suivant : [accessoires], [vélos], etc. Bien que cet exemple soit simple, il montre l’objectif de base de la fonction **DrilldownLevel** , qui descend jusqu’au niveau suivant.  
   
 ```  
 SELECT DRILLDOWNLEVEL({[Product].[Product Categories]} * {[Sales Territory].[Sales Territory]}}) ON COLUMNS  
 FROM [Adventure Works]  
 ```  
   
- Exemple 2 : syntaxe alternative à l’aide d’un niveau d’index explicite  
+ Exemple 2 : syntaxe alternative utilisant un niveau d’index explicite  
   
  Cet exemple montre la syntaxe alternative, où le niveau d'index est spécifié via une expression numérique. Dans ce cas, le niveau d'index est 0. Pour un index de base zéro, il s'agit de l'index de niveau le plus bas.  
   
@@ -78,11 +78,11 @@ FROM [Adventure Works]
   
  Notez que le jeu de résultats est identique à celui de la requête précédente. En règle générale, la définition du niveau d'index n'est pas nécessaire, sauf si vous voulez que l'exploration commence à un niveau spécifique. Réexécutez la requête précédente en définissant la valeur de l'index à 1, puis à 2. Avec la valeur de l'index définie à 1, vous voyez que l'exploration commence au deuxième niveau de la hiérarchie. Avec la valeur de l'index définie à 2, l'exploration commence au troisième niveau de la hiérarchie, le niveau le plus élevé dans cet exemple. Plus l'expression numérique est élevée, plus le niveau de l'index est élevé.  
   
- **Exemple 3 : montre une expression de niveau**  
+ **Exemple 3 : illustre une expression de niveau**  
   
  L'exemple suivant montre comment utiliser une expression de niveau. Pour un jeu qui représente une structure hiérarchique, l'utilisation d'une expression de niveau vous permet de choisir un niveau dans la hiérarchie pour commencer l'exploration.  
   
- Dans cet exemple, le niveau de zoom commence à [City], comme deuxième argument de la **DrilldownLevel** (fonction). Quand vous exécutez cette requête, l'exploration commence au niveau [City], pour les états Washington et Oregon. Par la **DrilldownLevel** (fonction), également de jeu de résultats inclut les membres du niveau suivant vers le bas, [Postal codes].  
+ Dans cet exemple, le niveau d’exploration commence à [City], en tant que deuxième argument de la fonction **DrilldownLevel** . Quand vous exécutez cette requête, l'exploration commence au niveau [City], pour les états Washington et Oregon. Pour la fonction **DrilldownLevel** , le jeu de résultats comprend également des membres au niveau supérieur, [codes postaux].  
   
 ```  
 SELECT [Measures].[Internet Sales Amount] ON COLUMNS,  
@@ -97,9 +97,9 @@ SELECT [Measures].[Internet Sales Amount] ON COLUMNS,
 FROM [Adventure Works]  
 ```  
   
- **Exemple 4 - y compris les membres calculés**  
+ **Exemple 4 : inclusion de membres calculés**  
   
- Le dernier exemple montre un membre calculé, qui apparaît en bas du résultat défini lorsque vous ajoutez le **include_calculated_members** indicateur. Notez que l'indicateur est spécifié comme quatrième paramètre.  
+ Le dernier exemple montre un membre calculé, qui apparaît en bas du jeu de résultats lorsque vous ajoutez l’indicateur **include_calculated_members** . Notez que l'indicateur est spécifié comme quatrième paramètre.  
   
  Cet exemple fonctionne, car le membre calculé est au même niveau que les membres non calculés. Le membre calculé [West Coast] est composé de membres de [United States], plus tous les membres du niveau inférieur à [United States].  
   
@@ -117,6 +117,6 @@ FROM [Adventure Works]
  Si vous supprimez seulement l'indicateur et que vous réexécutez la requête, vous obtenez les mêmes résultats sans le membre calculé, [West Coast].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

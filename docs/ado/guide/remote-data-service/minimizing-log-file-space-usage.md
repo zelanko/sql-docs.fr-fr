@@ -1,5 +1,5 @@
 ---
-title: Réduire l’utilisation de l’espace de fichier journal | Microsoft Docs
+title: Minimisation de l’utilisation de l’espace du fichier journal | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,39 +13,39 @@ ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c8dc0799fbeba24ad4725d25647ef471edad8fb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922552"
 ---
 # <a name="minimizing-log-file-space-usage"></a>Minimisation de l’espace utilisé par un fichier journal
-Un fichier journal peut se remplir rapidement (provoquant ainsi l’abandon du serveur) s’il existe un gros volume d’activité sur une base de données SQL Server. Vous pouvez définir le fichier journal sur **vidage au point de contrôle** pour étendre considérablement la durée de vie du fichier journal pour une base de données.  
+Un fichier journal peut être rempli rapidement (ce qui entraîne l’arrêt du serveur) s’il existe un volume important d’activités sur une base de données SQL Server. Vous pouvez définir le fichier journal à **tronquer au point de contrôle** afin d’étendre considérablement la durée de vie du fichier journal pour une base de données.  
   
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-### <a name="to-enable-truncate-on-checkpoint-in-microsoft-sql-server-65"></a>Pour activer le vidage au point de contrôle dans Microsoft SQL Server 6.5  
+### <a name="to-enable-truncate-on-checkpoint-in-microsoft-sql-server-65"></a>Pour activer TRUNCATE au point de contrôle dans Microsoft SQL Server 6,5  
   
-1.  Démarrez Microsoft SQL Server Enterprise Manager, ouvrez l’arborescence pour le serveur, puis ouvrez l’arborescence de la base de données des appareils.  
+1.  Démarrez Microsoft SQL Server Entreprise Manager, ouvrez l’arborescence du serveur, puis ouvrez l’arborescence unités de base de données.  
   
-2.  Double-cliquez sur le nom de la base de données sur lequel cette fonctionnalité sera activée.  
+2.  Double-cliquez sur le nom de la base de données sur laquelle cette fonctionnalité sera activée.  
   
-3.  À partir de la **base de données** onglet, sélectionnez **Truncate**.  
+3.  Dans l’onglet **base de données** , sélectionnez **tronquer**.  
   
-4.  À partir de la **Options** onglet, sélectionnez **tronquer le journal sur le point de contrôle**, puis cliquez sur **OK**.  
+4.  Dans l’onglet **options** , sélectionnez **tronquer le journal au point de contrôle**, puis cliquez sur **OK**.  
   
-### <a name="to-enable-truncate-on-checkpoint-in-microsoft-sql-server-70"></a>Pour activer le vidage au point de contrôle dans Microsoft SQL Server 7.0  
+### <a name="to-enable-truncate-on-checkpoint-in-microsoft-sql-server-70"></a>Pour activer TRUNCATE au point de contrôle dans Microsoft SQL Server 7,0  
   
-1.  Démarrez Microsoft SQL Server Enterprise Manager, ouvrez l’arborescence pour le serveur, puis ouvrez l’arborescence de bases de données.  
+1.  Démarrez Microsoft SQL Server Entreprise Manager, ouvrez l’arborescence du serveur, puis ouvrez l’arborescence bases de données.  
   
-2.  Cliquez sur le nom de la base de données sur lequel cette fonctionnalité sera activée et choisissez **propriétés**.  
+2.  Cliquez avec le bouton droit sur le nom de la base de données sur laquelle cette fonctionnalité sera activée, puis choisissez **Propriétés**.  
   
-3.  À partir de la **Options** onglet, sélectionnez **tronquer le journal sur le point de contrôle**, puis cliquez sur **OK**.  
+3.  Dans l’onglet **options** , sélectionnez **tronquer le journal au point de contrôle**, puis cliquez sur **OK**.  
   
- Pour plus d’informations sur la **vidage au point de contrôle** fonctionnalité, consultez la documentation de Microsoft SQL Server.  
+ Pour plus d’informations sur la fonctionnalité **tronquer au point de contrôle** , consultez la documentation Microsoft SQL Server.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Principes de base de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
+ [Concepts de base de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

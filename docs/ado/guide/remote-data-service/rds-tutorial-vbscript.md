@@ -15,19 +15,19 @@ ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d45347bcdf212158fb6a0ee9f4599e1e1b00ff54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922426"
 ---
 # <a name="rds-tutorial-vbscript"></a>Tutoriel RDS (VBScript)
-Il s’agit du didacticiel RDS, écrites en Microsoft Visual Basic Scripting Edition. Pour obtenir une description de l’objectif de ce didacticiel, consultez le [didacticiel RDS](../../../ado/guide/remote-data-service/rds-tutorial.md).  
+Il s’agit du didacticiel RDS, écrit dans Microsoft Visual Basic Scripting Edition. Pour obtenir une description de l’objectif de ce didacticiel, consultez le didacticiel sur les [services Bureau à distance](../../../ado/guide/remote-data-service/rds-tutorial.md).  
   
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Dans ce didacticiel, [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) et [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) sont créés au moment du design - autrement dit, ils sont définis avec des balises d’objet, comme suit : `<OBJECT>...</OBJECT>`. Vous pouvez également, ils pu être créés au moment de l’exécution avec le [CreateObject (méthode) (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md) (méthode). Par exemple, le **RDS. DataControl** objet a pu être créé comme suit :  
+ Dans ce didacticiel, [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) et [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) sont créés au moment de la conception, c’est-à-dire qu’ils sont définis avec des balises d’objet `<OBJECT>...</OBJECT>`, comme suit :. Elles peuvent également être créées au moment de l’exécution à l’aide de la méthode [CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md) . Par exemple, le **RDS. **L’objet DataControl a pu être créé comme suit :  
   
 ```vb
 Set DC = Server.CreateObject("RDS.DataControl")  
@@ -48,24 +48,24 @@ Set DC = Server.CreateObject("RDS.DataControl")
    Dim DF1   
 ```  
   
-## <a name="step-1---specify-a-server-program"></a>Étape 1 : spécifier un programme de serveur  
- VBScript peut découvrir le nom du serveur Web IIS, il s’exécute en accédant à VBScript **Request.ServerVariables** méthode disponible pour les Pages ASP :  
+## <a name="step-1---specify-a-server-program"></a>Étape 1 : spécifier un programme serveur  
+ VBScript peut découvrir le nom du serveur Web IIS sur lequel il s’exécute en accédant à la méthode VBScript **Request. ServerVariables** disponible pour Active Server pages :  
   
 ```vb
 "https://<%=Request.ServerVariables("SERVER_NAME")%>"  
 ```  
   
- Toutefois, pour ce didacticiel, vous devez utiliser le serveur imaginaire, « yourServer ».  
+ Toutefois, pour ce didacticiel, utilisez le serveur imaginaire, « yourServer ».  
   
 > [!NOTE]
->  Faites attention au type de données de **ByRef** arguments. VBScript ne permet pas de spécifier le type de variable, vous devez donc toujours passer un **Variant**. Lorsque vous utilisez HTTP, RDS vous autorise à transmettre un type Variant à une méthode qui attend un type de données-non si vous l’appelez avec le **RDS. DataSpace** objet [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) (méthode). Lorsque vous utilisez DCOM ou un serveur in-process, vous devez faire correspondre les types de paramètres sur les côtés client et serveur, ou vous recevrez une erreur « Incompatibilité de Type ».  
+>  Faites attention au type de données des arguments **ByRef** . VBScript ne vous permet pas de spécifier le type de variable. vous devez donc toujours passer un **Variant**. Si vous utilisez le protocole HTTP, RDS vous permet de passer un variant à une méthode qui attend une valeur non variant si vous l’appelez avec le **RDS. **Méthode [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) de l’objet DataSpace. Lorsque vous utilisez DCOM ou un serveur in-process, vous devez faire correspondre les types de paramètres côté client et serveur, sans quoi vous recevrez une erreur de type « incompatibilité de type ».  
   
 ```vb
 Set DF1 = DS1.CreateObject("RDSServer.DataFactory", "https://yourServer")  
 ```  
   
-## <a name="step-2a---invoke-the-server-program-with-rdsdatacontrol"></a>Étape 2 a : appeler le programme serveur avec RDS. DataControl  
- Cet exemple est simplement un commentaire illustrant le comportement par défaut de la **RDS. DataControl** consiste à effectuer la requête spécifiée.  
+## <a name="step-2a---invoke-the-server-program-with-rdsdatacontrol"></a>Étape 2a : appeler le programme serveur avec les services Bureau à distance. DataControl  
+ Cet exemple est simplement un commentaire montrant que le comportement par défaut de l' **objet RDS. DataControl** consiste à exécuter la requête spécifiée.  
   
 ```vb
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="DC1">  
@@ -83,17 +83,17 @@ Sub RDSTutorial2A()
 ...  
 ```  
   
-## <a name="step-2b---invoke-the-server-program-with-rdsserverdatafactory"></a>Étape 2 b : appeler le programme serveur avec RDSServer.DataFactory  
+## <a name="step-2b---invoke-the-server-program-with-rdsserverdatafactory"></a>Étape 2b : appeler le programme serveur avec RDSServer. DataFactory  
   
-## <a name="step-3---server-obtains-a-recordset"></a>Étape 3 : le serveur obtient un objet Recordset  
+## <a name="step-3---server-obtains-a-recordset"></a>Étape 3 : le serveur obtient un jeu d’enregistrements  
   
-## <a name="step-4---server-returns-the-recordset"></a>Étape 4 : serveurs retourne le jeu d’enregistrements  
+## <a name="step-4---server-returns-the-recordset"></a>Étape 4-le serveur retourne l’ensemble d’enregistrements  
   
 ```vb
 Set RS = DF1.Query("DSN=Pubs;", "SELECT * FROM Authors")  
 ```  
   
-## <a name="step-5---datacontrol-is-made-usable-by-visual-controls"></a>Étape 5 : DataControl devient utilisable par des contrôles visuels  
+## <a name="step-5---datacontrol-is-made-usable-by-visual-controls"></a>Étape 5 : l’DataControl est rendu utilisable par les contrôles visuels  
   
 ```vb
 ' Assign the returned recordset to the DataControl.  
@@ -101,8 +101,8 @@ Set RS = DF1.Query("DSN=Pubs;", "SELECT * FROM Authors")
 DC1.SourceRecordset = RS  
 ```  
   
-## <a name="step-6a---changes-are-sent-to-the-server-with-rdsdatacontrol"></a>Étape 6 a - les modifications sont envoyées au serveur avec RDS. DataControl  
- Cet exemple est simplement un commentaire illustrant comment la **RDS. DataControl** effectue des mises à jour.  
+## <a name="step-6a---changes-are-sent-to-the-server-with-rdsdatacontrol"></a>Étape 6A-les modifications sont envoyées au serveur avec RDS. DataControl  
+ Cet exemple est simplement un commentaire montrant comment le **RDS. DataControl** effectue des mises à jour.  
   
 ```vb
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="DC1">  
@@ -125,7 +125,7 @@ Set DC1.SourceRecordset = RS
 DC1.SubmitChanges  
 ```  
   
-## <a name="step-6b---changes-are-sent-to-the-server-with-rdsserverdatafactory"></a>Étape 6 b - modifications sont envoyées au serveur avec RDSServer.DataFactory  
+## <a name="step-6b---changes-are-sent-to-the-server-with-rdsserverdatafactory"></a>Étape 6B-les modifications sont envoyées au serveur avec RDSServer. DataFactory  
   
 ```vb
 DF.SubmitChanges "DSN=Pubs", RS  
@@ -136,7 +136,7 @@ End Sub
 </HTML>  
 ```  
   
- **Il s’agit de la fin du didacticiel.**  
+ **Ceci est la fin du tutoriel.**  
   
 ## <a name="see-also"></a>Voir aussi  
- [Didacticiel RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
+ [Tutoriel RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   

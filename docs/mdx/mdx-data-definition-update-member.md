@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 73a2bf2973d8c4f8f9bf9ac886728fb45250343f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038145"
 ---
 # <a name="mdx-data-definition---update-member"></a>Définition de données MDX - UPDATE MEMBER
@@ -40,7 +40,7 @@ UPDATE MEMBER Cube_Name.Member_Name
  *MDX_Expression*  
  Expression MDX (Multidimensional Expressions) valide pour laquelle le membre doit être mis à jour.  
   
- *Property_name*  
+ *Property_Name*  
  Chaîne valide qui spécifie le nom d'une propriété de membre calculé.  
   
  *Property_Value*  
@@ -60,16 +60,16 @@ UPDATE MEMBER Cube_Name.Member_Name
   
 |Identificateur de propriété|Signification|  
 |-------------------------|-------------|  
-|FORMAT_STRING|Une chaîne de format de style Office que l’application cliente peut utiliser pour afficher les valeurs de cellule.|  
-|VISIBLE|Valeur qui indique si le membre calculé est visible dans un ensemble de lignes de schéma. Calculés visibles membres peuvent être ajoutés à un ensemble avec le [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) (fonction). Une valeur autre que zéro indique que le membre calculé est visible. La valeur par défaut de cette propriété est *Visible*.<br /><br /> Les membres calculés qui ne sont pas visibles sont généralement utilisés comme étapes intermédiaires dans des membres calculés plus complexes. Ces membres calculés peuvent également être référencés par d'autres types de membres, tels que des mesures.|  
+|FORMAT_STRING|Chaîne de format de style Office que l’application cliente peut utiliser pour afficher les valeurs des cellules.|  
+|VISIBLE|Valeur qui indique si le membre calculé est visible dans un ensemble de lignes de schéma. Les membres calculés visibles peuvent être ajoutés à un ensemble à l’aide de la fonction [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) . Une valeur autre que zéro indique que le membre calculé est visible. La valeur par défaut de cette propriété est *visible*.<br /><br /> Les membres calculés qui ne sont pas visibles sont généralement utilisés comme étapes intermédiaires dans des membres calculés plus complexes. Ces membres calculés peuvent également être référencés par d'autres types de membres, tels que des mesures.|  
 |NON_EMPTY_BEHAVIOR|Mesure ou jeu utilisé par MDX pour déterminer le comportement des membres calculés lors de la résolution des cellules vides.|  
 |CAPTION|Valeur de chaîne qui spécifie la légende que l'application cliente utilise pour afficher le membre.|  
-|DISPLAY_FOLDER|Valeur de chaîne qui spécifie le chemin d'accès au dossier d'affichage dans lequel l'application cliente doit afficher le membre. Le séparateur de niveau de dossier est défini par l'application cliente. Pour les outils et les clients fournis par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la barre oblique inverse (\\) comme séparateur de niveau. Pour fournir plusieurs dossiers d'affichage à un membre défini, utilisez un point-virgule (;) pour séparer les dossiers.|  
+|DISPLAY_FOLDER|Valeur de chaîne qui spécifie le chemin d'accès au dossier d'affichage dans lequel l'application cliente doit afficher le membre. Le séparateur de niveau de dossier est défini par l'application cliente. Pour les outils et clients fournis par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la barre oblique\\inverse () est le séparateur de niveau. Pour fournir plusieurs dossiers d'affichage à un membre défini, utilisez un point-virgule (;) pour séparer les dossiers.|  
 |ASSOCIATED_MEASURE_GROUP|Nom du groupe de mesures auquel ce membre est associé.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instruction de membre DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
- [Instruction CREATE MEMBER &#40;MDX&#41;](../mdx/mdx-data-definition-create-member.md)   
- [Instructions de définition de données MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Instruction DROP MEMBER &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
+ [Instruction CREATe MEMBER &#40;MDX&#41;](../mdx/mdx-data-definition-create-member.md)   
+ [Instructions de définition de données MDX &#40;&#41;MDX](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

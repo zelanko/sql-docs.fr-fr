@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b30a9f60f52b8b19875f5fb3c15242ce2c632fd
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175427"
 ---
-# <a name="lesson-8-restore-a-database-to-azure-storage"></a>Leçon 8. Restaurer une base de données dans Azure Storage
+# <a name="lesson-8-restore-a-database-to-azure-storage"></a>Leçon 8. Restaurer une base de données dans le Stockage Azure
   Dans cette leçon, vous allez apprendre à créer un fichier de sauvegarde localement, puis à le restaurer dans le stockage Azure. Notez que vous pouvez faire en sorte que votre base de données soit locale ou dans une machine virtuelle dans Azure. Pour suivre cette leçon, vous n'avez pas besoin de terminer les leçons 4, 5, 6 et 7.  
   
  Cette leçon suppose que vous avez déjà effectué les étapes suivantes :  
@@ -32,7 +32,7 @@ ms.locfileid: "70175427"
   
 -   Vous avez créé une base de données sur l'ordinateur source.  
   
- Pour restaurer une base de données dans Azure Storage, procédez comme suit:  
+ Pour restaurer une base de données dans Azure Storage, procédez comme suit :  
   
 1.  Sur l'ordinateur source, démarrez SQL Server Management Studio.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "70175427"
   
      À l'issue de cette étape, votre conteneur doit répertorier les fichiers de données (.mdf) et les fichiers (.ldf) sur le Portail de gestion.  
   
- Pour restaurer une base de données avec des fichiers de données et des fichiers journaux pointant vers Azure Storage à l’aide de SQL Server Management Studio interface utilisateur, procédez comme suit:  
+ Pour restaurer une base de données avec des fichiers de données et des fichiers journaux pointant vers Azure Storage à l’aide de SQL Server Management Studio interface utilisateur, procédez comme suit :  
   
 1.  Dans l' **Explorateur d’objets**, cliquez sur le nom du serveur pour développer l’arborescence du serveur.  
   
@@ -77,26 +77,26 @@ ms.locfileid: "70175427"
   
 4.  Sur la page **général** , dans la section source de **restauration** , cliquez sur périphérique **source** .  
   
-5.  Cliquez sur le bouton Parcourir de la zone de texte périphérique **source** pour ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde** .  
+5.  Cliquez sur le bouton Parcourir de la zone de texte Périphérique **source** afin d'ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde**.  
   
-6.  Dans la zone de texte support de sauvegarde, sélectionnez **fichier**, puis cliquez sur le bouton **Ajouter** pour localiser le fichier de sauvegarde (. bak). Cliquez sur **OK**.  
+6.  Dans la zone de texte de support de sauvegarde, sélectionnez **Fichier**, puis cliquez sur le bouton **Ajouter** pour localiser le fichier de sauvegarde (.bak). Cliquez sur **OK**.  
   
 7.  Cliquez sur **fichiers** sur la première page.  
   
-8.  Dans la section **restaurer les fichiers de la base de données** en tant que, sous le champ **Restaurer sous** , tapez les éléments suivants:  
+8.  Dans la section **restaurer les fichiers de la base de données** en tant que, sous le champ **Restaurer sous** , tapez les éléments suivants :  
   
-     Pour fichier de données, tapez `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`:. Pour fichier journal, tapez: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`.  
+     Pour fichier de données, tapez `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`:. Pour fichier journal, tapez : `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`.  
   
-     ![CTP2 SQL 14](../tutorials/media/ss-was-tutlesson-8-8.gif "CTP2 SQL 14")  
+     ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-8-8.gif "SQL 14 CTP2")  
   
 9. Cliquez sur **OK**.  
   
  Lorsque la restauration est effectuée, connectez-vous au Portail de gestion. Vous devez pouvoir consulter les fichiers .mdf et .ldf dans le conteneur comme suit :  
   
- ![CTP2 SQL 14](../tutorials/media/ss-was-tutlesson-8-9.gif "CTP2 SQL 14")  
+ ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-8-9.gif "SQL 14 CTP2")  
   
- **Leçon suivante :**  
+ **Leçon suivante :**  
   
- [Leçon 9 : Restaurer une base de données à partir du stockage Azure](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
+ [Leçon 9. Restaurer une base de données à partir du stockage Azure](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
   
   

@@ -13,19 +13,19 @@ ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2606733b3efc5a9641f8de0f544b3cff7c7e9a31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923341"
 ---
 # <a name="xslt-transformations"></a>Transformations XSLT
-XSLT peut être appliqué pour le code XML généré pour le transformer en un autre format. Comprendre le format XML dans ADO permet de développer des modèles XSLT qui peuvent transformer en un format plus convivial.  
+XSLT peut être appliqué au code XML généré pour le transformer en un autre format. La compréhension du format XML dans ADO vous aide à développer des modèles XSLT qui peuvent le transformer en une forme plus conviviale.  
   
- Par exemple, vous savez que chaque ligne de l’objet Recordset est enregistré en tant qu’élément z : row dans l’élément rs : data. De même, chaque champ de l’objet Recordset est enregistré comme une paire attribut-valeur pour cet élément.  
+ Par exemple, vous savez que chaque ligne de l’ensemble d’enregistrements est enregistrée en tant qu’élément z :Row à l’intérieur de l’élément RS : Data. De même, chaque champ de l’ensemble d’enregistrements est enregistré en tant que paire attribut-valeur pour cet élément.  
   
 ## <a name="remarks"></a>Notes  
- Le script XSLT suivant peut être appliqué au document XML indiqué dans la section précédente pour le transformer en un tableau HTML à afficher dans le navigateur :  
+ Le script XSLT suivant peut être appliqué au code XML présenté dans la section précédente pour le transformer en table HTML à afficher dans le navigateur :  
   
 ```  
 <?xml version="1.0" encoding="ISO-8859-1"?>  
@@ -50,7 +50,7 @@ XSLT peut être appliqué pour le code XML généré pour le transformer en un a
 </html>  
 ```  
   
- XSLT convertit le flux XML généré par la méthode Save d’ADO dans une table HTML qui affiche chaque champ de l’ensemble d’enregistrements, ainsi que le titre de la table. Lignes et en-têtes des colonnes sont également affectés différentes polices et couleurs.  
+ Le XSLT convertit le flux de données XML généré par la méthode ADO Save en une table HTML qui affiche chaque champ de l’ensemble d’enregistrements avec un en-tête de table. Les en-têtes et les lignes de la table se voient également attribuer des polices et des couleurs différentes.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Persistance des enregistrements au format XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

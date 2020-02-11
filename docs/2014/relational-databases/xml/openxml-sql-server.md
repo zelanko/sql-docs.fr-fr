@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb674ea7bd9540f7ae74bf9ad8737bdb83c237f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195630"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
@@ -35,10 +35,10 @@ ms.locfileid: "68195630"
   
  OPENXML peut être utilisé dans des instructions SELECT et SELECT INTO, partout où des fournisseurs d'ensemble de lignes, une vue ou OPENROWSET peuvent apparaître comme source. Pour plus d’informations sur la syntaxe d’OPENXML, consultez [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql).  
   
- Pour écrire des requêtes sur un document XML à l’aide de OPENXML, vous devez d’abord appeler `sp_xml_preparedocument`. Cela permet d'analyser le document XML et de retourner un descripteur au document analysé qui est prêt à être utilisé. Le document analysé est une représentation sous forme d'arborescence de modèle DOM (document model) de différents nœuds dans le document XML. Ce descripteur de document est transmis à OPENXML. OPENXML fournit alors une vue sous forme d'ensemble de lignes du document, en fonction des paramètres transmis.  
+ Pour écrire des requêtes sur un document XML à l’aide d’OPENXML, vous `sp_xml_preparedocument`devez d’abord appeler. Cela permet d'analyser le document XML et de retourner un descripteur au document analysé qui est prêt à être utilisé. Le document analysé est une représentation sous forme d'arborescence de modèle DOM (document model) de différents nœuds dans le document XML. Ce descripteur de document est transmis à OPENXML. OPENXML fournit alors une vue sous forme d'ensemble de lignes du document, en fonction des paramètres transmis.  
   
 > [!NOTE]  
->  `sp_xml_preparedocument` utilise une version mise à jour de SQL de l’analyseur MSXML, Msxmlsql.dll. Cette version de l'analyseur MSXML a été conçue pour prendre en charge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et offre une compatibilité descendante avec MSXML version 2.6.  
+>  `sp_xml_preparedocument`utilise une version SQL mise à jour de l’analyseur MSXML, fichier msxmlsql. dll. Cette version de l'analyseur MSXML a été conçue pour prendre en charge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et offre une compatibilité descendante avec MSXML version 2.6.  
   
  Pour libérer de la mémoire, vous devez supprimer la représentation interne d’un document XML de la mémoire en appelant la procédure stockée système **sp_xml_removedocument** .  
   
@@ -54,7 +54,8 @@ ms.locfileid: "68195630"
 ## <a name="example"></a>Exemple  
  L'exemple ci-dessous montre l'utilisation de `OPENXML` dans une instruction `INSERT` et une instruction `SELECT` . L'exemple de document XML comprend les éléments `<Customers>` et `<Orders>` .  
   
- D'abord, la procédure stockée `sp_xml_preparedocument` analyse le document XML. Le document analysé est une représentation sous forme d'arborescence des différents nœuds du document XML : éléments, attributs, textes, commentaires, et ainsi de suite. `OPENXML` fait ensuite référence à ce document XML analysé et fournit une vue sous forme d'ensemble de lignes de tout ou partie de ce document XML. Une instruction `INSERT` utilisant `OPENXML` peut ainsi insérer des données dans une table de base de données à partir de ce type d'ensemble de lignes. Vous pouvez utiliser plusieurs appels à `OPENXML` pour fournir une vue d'un ensemble de lignes provenant de différentes parties du document XML puis traiter celles-ci en les insérant par exemple dans différentes tables. Cette opération est également qualifiée de fragmentation de données XML dans des tables.  
+ D'abord, la procédure stockée `sp_xml_preparedocument` analyse le document XML. Le document analysé est une représentation sous forme d'arborescence des différents nœuds du document XML : éléments, attributs, textes, commentaires, et ainsi de suite. 
+  `OPENXML` fait ensuite référence à ce document XML analysé et fournit une vue sous forme d'ensemble de lignes de tout ou partie de ce document XML. Une instruction `INSERT` utilisant `OPENXML` peut ainsi insérer des données dans une table de base de données à partir de ce type d'ensemble de lignes. Vous pouvez utiliser plusieurs appels à `OPENXML` pour fournir une vue d'un ensemble de lignes provenant de différentes parties du document XML puis traiter celles-ci en les insérant par exemple dans différentes tables. Cette opération est également qualifiée de fragmentation de données XML dans des tables.  
   
  Dans l'exemple suivant, un document XML est fragmenté de telle sorte que les éléments `<Customers>` sont stockés dans la table `Customers` et les éléments `<Orders>` sont stockés dans la table `Orders` à l'aide de deux instructions `INSERT` . Cet exemple illustre également une instruction `SELECT` associée à `OPENXML` qui récupère les données des colonnes `CustomerID` et `OrderDate` du document XML. Dans la dernière étape du processus, la procédure stockée `sp_xml_removedocument`est appelée. Ceci permet en effet de libérer la mémoire allouée à la représentation en arborescence XML interne créée lors de la phase d'analyse.  
   
@@ -110,7 +111,7 @@ EXEC sp_xml_removedocument @docHandle;
 -   Un mappage entre les colonnes de l'ensemble de lignes et les nœuds XML  
   
 ### <a name="xml-document-handle-idoc"></a>Descripteur de document XML (idoc)  
- Le descripteur de document est renvoyé par la `sp_xml_preparedocument` procédure stockée.  
+ Le descripteur de document est `sp_xml_preparedocument` retourné par la procédure stockée.  
   
 ### <a name="xpath-expression-to-identify-the-nodes-to-be-processed-rowpattern"></a>Expression XPath identifiant les nœuds à traiter (rowpattern)  
  L'expression XPath spécifiée comme paramètre *rowpattern* identifie un ensemble de nœuds dans le document XML. Chaque nœud identifié par *rowpattern* correspond à une ligne unique de l'ensemble de lignes généré par OPENXML.  
@@ -139,15 +140,15 @@ EXEC sp_xml_removedocument @docHandle;
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**bigint**|ID unique du nœud du document.<br /><br /> L'ID de l'élément racine a pour valeur 0. Les valeurs négatives d'ID sont réservées.|  
-|**parentid**|**bigint**|Identifie le parent du nœud. Le parent identifié par cet ID n'est pas nécessairement l'élément parent. Toutefois, cela dépend du NodeType du nœud dont le parent est identifié par cet ID. Par exemple, si le nœud est un nœud texte, son parent peut être un nœud d'attribut.<br /><br /> Si le nœud se situe au niveau supérieur du document XML, son **ParentID** a pour valeur NULL.|  
-|**node type**|**int**|Identifie le type de nœud et est un entier qui correspond à la numérotation des types de nœud XML de modèle d'objet XML (DOM).<br /><br /> Valeurs susceptibles d'apparaître dans cette colonne pour indiquer le type de nœud :<br /><br /> **1** = Nœud d’élément<br /><br /> **2** = Nœud d’attribut<br /><br /> **3** = Nœud texte<br /><br /> **4** = Nœud de section CDATA<br /><br /> **5** = Nœud de référence d’entité<br /><br /> **6** = Nœud d’entité<br /><br /> **7** = Nœud d’instructions de traitement<br /><br /> **8** = Nœud de commentaire<br /><br /> **9** = Nœud de document<br /><br /> **10** = Nœud de type de document<br /><br /> **11** = Nœud de fragment de document<br /><br /> **12** = Nœud de notation<br /><br /> Pour plus d'informations, consultez la rubrique « Propriété nodeType » dans le Kit de développement logiciel Microsoft XML (MSXML).|  
-|**localname**|**nvarchar(max)**|Fournit le nom local de l'élément ou de l'attribut. A pour valeur NULL si l'objet DOM est dépourvu de nom.|  
-|**prefix**|**nvarchar(max)**|Préfixe de l'espace de noms du nom de nœud.|  
-|**namespaceuri**|**nvarchar(max)**|URI de l'espace de noms du nœud. Si la valeur est NULL, aucun espace de noms n'est présent.|  
-|**datatype**|**nvarchar(max)**|Type de données réel de la ligne d'élément ou d'attribut, NULL sinon. Le type de données est déduit de la DTD en ligne ou du schéma en ligne.|  
-|**prev**|**bigint**|ID XML de l'élément frère précédent. Vaut NULL en l'absence de frère précédent direct.|  
-|**texte**|**ntext**|Contient la valeur d'attribut ou le contenu de l'élément dans sa forme textuelle. Ou a pour valeur NULL, si l'entrée de la table du bord ne nécessite pas de valeur.|  
+|**identifi**|**bigint**|ID unique du nœud du document.<br /><br /> L'ID de l'élément racine a pour valeur 0. Les valeurs négatives d'ID sont réservées.|  
+|**ID**|**bigint**|Identifie le parent du nœud. Le parent identifié par cet ID n'est pas nécessairement l'élément parent. Toutefois, cela dépend du NodeType du nœud dont le parent est identifié par cet ID. Par exemple, si le nœud est un nœud texte, son parent peut être un nœud d'attribut.<br /><br /> Si le nœud se situe au niveau supérieur du document XML, son **ParentID** a pour valeur NULL.|  
+|**type de nœud**|**int**|Identifie le type de nœud et est un entier qui correspond à la numérotation des types de nœud XML de modèle d'objet XML (DOM).<br /><br /> Valeurs susceptibles d'apparaître dans cette colonne pour indiquer le type de nœud :<br /><br /> **1** = nœud d’élément<br /><br /> **2** = nœud d’attribut<br /><br /> **3** = nœud de texte<br /><br /> **4** = nœud de section CDATA<br /><br /> **5** = nœud de référence d’entité<br /><br /> **6** = nœud d’entité<br /><br /> **7** = nœud d’instruction de traitement<br /><br /> **8** = nœud de commentaire<br /><br /> **9** = nœud de document<br /><br /> **10** = nœud de type de document<br /><br /> **11** = nœud de fragment de document<br /><br /> **12** = nœud de notation<br /><br /> Pour plus d'informations, consultez la rubrique « Propriété nodeType » dans le Kit de développement logiciel Microsoft XML (MSXML).|  
+|**localName**|**nvarchar(max)**|Fournit le nom local de l'élément ou de l'attribut. A pour valeur NULL si l'objet DOM est dépourvu de nom.|  
+|**céder**|**nvarchar(max)**|Préfixe de l'espace de noms du nom de nœud.|  
+|**URI**|**nvarchar(max)**|URI de l'espace de noms du nœud. Si la valeur est NULL, aucun espace de noms n'est présent.|  
+|**décimal**|**nvarchar(max)**|Type de données réel de la ligne d'élément ou d'attribut, NULL sinon. Le type de données est déduit de la DTD en ligne ou du schéma en ligne.|  
+|**PREV**|**bigint**|ID XML de l'élément frère précédent. Vaut NULL en l'absence de frère précédent direct.|  
+|**text**|**ntext**|Contient la valeur d'attribut ou le contenu de l'élément dans sa forme textuelle. Ou a pour valeur NULL, si l'entrée de la table du bord ne nécessite pas de valeur.|  
   
 #### <a name="using-the-with-clause-to-specify-an-existing-table"></a>Utilisation de la clause WITH pour spécifier une table existante  
  Vous pouvez utiliser la clause WITH pour spécifier le nom d'une table existante. Pour cela, spécifiez simplement le nom d'une table existante dont le schéma permet à OPENXML de générer l'ensemble de lignes.  
@@ -170,11 +171,11 @@ EXEC sp_xml_removedocument @docHandle;
   
 -   en utilisant le paramètre *ColPattern*  
   
-     L'expression XPath*ColPattern*est spécifiée dans le paramètre *SchemaDeclaration* de la clause WITH. Le mappage spécifié dans *ColPattern* remplace celui défini par le paramètre *flags* .  
+     *ColPattern*, une expression XPath, est spécifié dans le cadre de *SchemaDeclaration* dans la clause with. Le mappage spécifié dans *ColPattern* remplace celui défini par le paramètre *flags* .  
   
-     Vous pouvez utiliser*ColPattern* pour spécifier le type de mappage, tel que centré sur les attributs ou centré sur les éléments, qui remplace ou améliore le mappage par défaut indiqué par le paramètre *flags*.  
+     *ColPattern* peut être utilisé pour spécifier le type de mappage, tel que centré sur les attributs ou centré sur l’élément, qui remplace ou améliore le mappage par défaut indiqué par les *indicateurs*.  
   
-     *ColPattern* est spécifié dans les circonstances suivantes :  
+     *ColPattern* est spécifié dans les circonstances suivantes :  
   
     -   le nom de colonne de l'ensemble de lignes est différent du nom d'élément ou d'attribut avec lequel il est mappé. Dans ce cas, *ColPattern* permet d'identifier le nom d'élément ou d'attribut XML avec lequel la colonne de l'ensemble de lignes est mappée.  
   

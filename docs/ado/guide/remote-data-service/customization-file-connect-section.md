@@ -1,5 +1,5 @@
 ---
-title: Fichier de personnalisation, Section Connect | Microsoft Docs
+title: Section de connexion du fichier de personnalisation | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,26 +14,26 @@ ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1de3710590cf49de30ff8e79a6ff829b124c42dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922805"
 ---
 # <a name="customization-file-connect-section"></a>Fichier de personnalisation, section connect
-Le comportement par défaut du gestionnaire consiste à refuser toutes les connexions. Le **connecter** section indique les exceptions à ce comportement. Par exemple, si tous les **connecter** sections sont absents ou vides, puis par défaut aucune connexion n’a pu être établie.  
+Le comportement par défaut du gestionnaire consiste à refuser toutes les connexions. La section **Connect** spécifie des exceptions à ce comportement. Par exemple, si toutes les sections **Connect** étaient absentes ou vides, aucune connexion n’a pu être établie par défaut.  
   
- Le **connecter** section peut contenir :  
+ La section **Connect** peut contenir les éléments suivants :  
   
--   Une entrée d’accès par défaut qui spécifie la valeur par défaut lisent et écrivent les opérations autorisées sur cette connexion. S’il n’existe aucune entrée d’accès par défaut dans la section, la section sera ignorée.  
+-   Entrée d’accès par défaut qui spécifie les opérations de lecture et d’écriture par défaut autorisées sur cette connexion. S’il n’y a pas d’entrée d’accès par défaut dans la section, la section sera ignorée.  
   
 -   Nouvelle chaîne de connexion qui remplace la chaîne de connexion du client.  
   
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Syntaxe  
- Une entrée d’accès par défaut est au format :  
+ Une entrée d’accès par défaut se présente sous la forme suivante :  
   
 ```console
   
@@ -42,7 +42,7 @@ accessRight
   
 ```  
   
- Une entrée de chaîne de connexion de remplacement est au format :  
+ Une entrée de chaîne de connexion de remplacement se présente sous la forme suivante :  
   
 ```console
   
@@ -55,20 +55,20 @@ connectionString
   
 |Élément|Description|  
 |----------|-----------------|  
-|**Se connecter**|Une chaîne littérale qui indique qu’il est une entrée de chaîne de connexion.|  
-|**_connectionString_**|Chaîne qui remplace la chaîne de connexion client global.|  
-|**Accès**|Une chaîne littérale qui indique qu’il est une entrée d’accès.|  
-|**_accessRight_**|L’un des droits d’accès suivants :<br /><br /> -   **NoAccess** -utilisateur ne peut pas accéder à la source de données.<br />-   **ReadOnly** -l’utilisateur peut lire la source de données.<br />-   **Lecture/écriture** -utilisateur capable de lire ou écrire dans la source de données.|  
+|**Connexion**|Chaîne littérale qui indique qu’il s’agit d’une entrée de chaîne de connexion.|  
+|**_connectionString_**|Chaîne qui remplace l’intégralité de la chaîne de connexion du client.|  
+|**y accéder**|Chaîne littérale qui indique qu’il s’agit d’une entrée d’accès.|  
+|**_accessRight_**|L’un des droits d’accès suivants :<br /><br /> -   **NoAccess** -l’utilisateur ne peut pas accéder à la source de données.<br />-   **ReadOnly** : l’utilisateur peut lire la source de données.<br />-   **ReadWrite** : l’utilisateur peut lire ou écrire dans la source de données.|  
   
- Si vous souhaitez autoriser toute connexion (en le désactivant, le comportement du gestionnaire par défaut), définissez l’entrée d’accès le **connecter par défaut** section à `Access=ReadWrite`et supprimez ou commentez à n’importe quel autre **connecter** _identificateur_ section.  
+ Si vous souhaitez autoriser une connexion (en désactivant le comportement du gestionnaire par défaut), définissez l’entrée d’accès dans la section **connexion par défaut** sur `Access=ReadWrite`, puis supprimez ou commentez toute autre section d' _identificateur_ de **connexion** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fichier de personnalisation, Section de journaux](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Fichier de personnalisation, Section SQL](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Fichier de personnalisation, Section UserList](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
+ [Section journaux des fichiers de personnalisation](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
+ [Section SQL du fichier de personnalisation](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
+ [Section UserList du fichier de personnalisation](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
  [Personnalisation de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Paramètres Client requis](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Présentation du fichier de personnalisation](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
+ [Paramètres client requis](../../../ado/guide/remote-data-service/required-client-settings.md)   
+ [Fonctionnement du fichier de personnalisation](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [Écriture d’un gestionnaire personnalisé](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
 
 

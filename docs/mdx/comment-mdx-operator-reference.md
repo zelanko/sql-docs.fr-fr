@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c848277505dde5fabb10247641ee6b7f955d84e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006283"
 ---
-# <a name="comment---mdx-operator-reference"></a>Commentaire - référence des opérateurs MDX
+# <a name="comment---mdx-operator-reference"></a>Commentaire-référence des opérateurs MDX
 
 
   Signale un texte de commentaire inséré par l'utilisateur.  
@@ -55,8 +55,8 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Commentaire &#40;MDX&#41;](../mdx/comment-mdx.md)   
- [&#40;Commentaire&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
- [Référence des opérateurs MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Commentaire &#40;&#41;MDX](../mdx/comment-mdx.md)   
+ [Commentaire&#40;&#41; &#40;&#41;MDX](../mdx/comment-mdx-double-slash.md)   
+ [Référence des opérateurs MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
   
   

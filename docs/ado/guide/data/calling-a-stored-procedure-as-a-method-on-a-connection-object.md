@@ -15,16 +15,16 @@ ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2189bf9b2a82cdf21fdd13ed77a977f6b333ac87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925898"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Appel d’une procédure stockée en tant que méthode sur un objet Connection
-Vous pouvez appeler une procédure stockée comme s’il s’agissait d’une méthode native sur l’open associé **connexion** objet. Cela revient à appeler une commande nommée sur le **connexion** objet.  
+Vous pouvez appeler une procédure stockée comme s’il s’agissait d’une méthode native sur l’objet de **connexion** ouvert associé. Cela revient à appeler une commande nommée sur l’objet de **connexion** .  
   
- L’exemple de code Visual Basic suivant appelle une procédure stockée dans la base de données Northwind, appelée CustOrdersOrders, qui est repris ici par commodité.  
+ L’exemple de code Visual Basic suivant appelle une procédure stockée dans l’exemple de base de données Northwind, appelée CustOrdersOrders, qui est répertoriée ici à nouveau pour plus de commodité.  
   
 ```  
 CREATE PROCEDURE CustOrdersOrders @CustomerID nchar(5) AS  
@@ -34,7 +34,7 @@ WHERE CustomerID = @CustomerID
 ORDER BY OrderID  
 ```  
   
- L’exemple de code suivant montre comment appeler une procédure stockée comme s’il s’agissait d’une méthode native sur une ouverte associée **connexion** objet.  
+ L’exemple de code suivant montre comment appeler une procédure stockée comme s’il s’agissait d’une méthode native sur un objet de **connexion** ouvert associé.  
   
 ```  
 Const DS = "MySQLServer"  
@@ -79,4 +79,4 @@ Set objComm = Nothing
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Connection, objet (ADO MD)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

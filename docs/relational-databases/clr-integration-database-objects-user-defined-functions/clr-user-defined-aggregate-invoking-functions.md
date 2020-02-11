@@ -1,5 +1,5 @@
 ---
-title: Appel de fonctions d’agrégation définies par l’utilisateur CLR | Microsoft Docs
+title: Appel de fonctions d’agrégation CLR définies par l’utilisateur | Microsoft Docs
 ms.custom: ''
 ms.date: 01/15/2019
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 53cd38b80b6884e9be5c41042fac34b68ec2cda0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68028374"
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>Agrégats CLR définis par l’utilisateur -Appel de fonctions
@@ -442,6 +442,6 @@ go
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Agrégats CLR définis par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)  
+ [Agrégats CLR définis par l'utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)  
   
   

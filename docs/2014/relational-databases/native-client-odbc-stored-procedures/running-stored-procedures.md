@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6bdf66ed9214a151886caedcf2247935a07f7811
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206730"
 ---
 # <a name="running-stored-procedures"></a>Exécution des procédures stockées
-  Une procédure stockée est un objet exécutable stocké dans une base de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge :  
+  Une procédure stockée est un objet exécutable stocké dans une base de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]permet  
   
 -   Procédures stockées :  
   
@@ -55,18 +55,18 @@ ms.locfileid: "68206730"
   
      Les procédures stockées étendues peuvent utiliser les fonctionnalités C et C++ non disponibles dans les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-     Pour obtenir un exemple montrant comment appeler une procédure stockée, consultez [traiter des Codes de retour et les paramètres de sortie &#40;ODBC&#41;](../native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md).  
+     Pour obtenir un exemple d’appel d’une procédure stockée, consultez [traiter les codes de retour et les paramètres de sortie &#40;ODBC&#41;](../native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Appel d’une procédure stockée](calling-a-stored-procedure.md)  
+-   [Appel d'une procédure stockée](calling-a-stored-procedure.md)  
   
--   [Traitement par lot des appels de procédures stockées](batching-stored-procedure-calls.md)  
+-   [Traitement par lot des appels aux procédures stockées](batching-stored-procedure-calls.md)  
   
 -   [Traitement des résultats des procédures stockées](processing-stored-procedure-results.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
- [Les rubriques de procédures de procédures stockées en cours d’exécution &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
+ [SQL Server Native Client &#40;&#41;ODBC](../native-client/odbc/sql-server-native-client-odbc.md)   
+ [Rubriques de procédures relatives à l’exécution de procédures stockées &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
   
   

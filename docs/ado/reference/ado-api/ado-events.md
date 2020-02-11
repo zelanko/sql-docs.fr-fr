@@ -14,43 +14,43 @@ ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 35169313ae487514403f62c8e6d1ba2c262cb8a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921008"
 ---
 # <a name="ado-events"></a>Événements ADO
 
 |||  
 |-|-|  
-|[BeginTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Appelée après la **BeginTrans** opération.|  
-|[CommitTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Appelée après la **CommitTrans** opération.|  
-|[ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|Appelé après une connexion.|  
-|[Déconnecter](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|Appelé après la fin d’une connexion.|  
-|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|Appelé lorsqu’une tentative de déplacement vers une ligne après la fin de la **Recordset**.|  
-|[ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|Appelé après que l’exécution d’une commande est terminée.|  
-|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|Appelé après que tous les enregistrements dans une opération asynchrone de longue durée ont été récupérés dans le **Recordset**.|  
-|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|Appelé périodiquement pendant une longue opération asynchrone pour signaler le nombre de lignes déjà extraites dans le **Recordset**.|  
-|[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Appelé après la valeur d’un ou plusieurs **champ** objets a changé.|  
-|[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|Appelée chaque fois qu’un avertissement se produit pendant une **ConnectionEvent** opération.|  
-|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Appelé après la position actuelle dans le **Recordset** modifications.|  
-|[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Appelé après la modification d’un ou plusieurs enregistrements.|  
-|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Appelée après la **Recordset** a changé.|  
-|[RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Appelée après la **RollbackTrans** opération.|  
-|[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Appelé avant qu’une opération en attente modifie la valeur d’une ou plusieurs **champ** des objets dans le **Recordset**.|  
-|[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Appelé avant qu’un ou plusieurs enregistrements (lignes) dans le **Recordset** modifier.|  
-|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Appelé avant qu’une opération en attente modifie la **Recordset**.|  
-|[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md)|Appelé avant le début d’une connexion.|  
-|[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)|Appelé juste avant qu’une commande en attente s’exécute sur cette connexion et permet à l’utilisateur pour examiner et modifier les paramètres d’exécution en attente.|  
-|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Le **WillMove** événement est appelé *avant* une opération en attente modifie la position actuelle dans le **Recordset**.|  
+|[BeginTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Appelé après l’opération **BeginTrans** .|  
+|[CommitTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Appelé après l’opération **CommitTrans** .|  
+|[ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|Appelée après le démarrage d’une connexion.|  
+|[Connect](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|Appelé après la fin d’une connexion.|  
+|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|Appelé en cas de tentative de déplacement vers une ligne située au-delà de la fin du **Recordset**.|  
+|[ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|Appelé après la fin de l’exécution d’une commande.|  
+|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|Appelée une fois que tous les enregistrements d’une longue opération asynchrone ont été récupérés dans le **Recordset**.|  
+|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|Appelée régulièrement au cours d’une opération asynchrone de longue durée pour signaler le nombre de lignes qui ont été récupérées actuellement dans le **Recordset**.|  
+|[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Appelé après la modification de la valeur d’un ou plusieurs objets **Field** .|  
+|[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|Appelé chaque fois qu’un avertissement se produit pendant une opération **ConnectionEvent** .|  
+|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Appelé après la modification de la position actuelle dans l’ensemble **d’enregistrements** .|  
+|[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Appelé après la modification d’un ou de plusieurs enregistrements.|  
+|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Appelé après la modification du **Recordset** .|  
+|[RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Appelé après l’opération **RollbackTrans** .|  
+|[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Appelé avant qu’une opération en attente modifie la valeur d’un ou plusieurs objets **Field** dans le **Recordset**.|  
+|[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Appelé avant qu’un ou plusieurs enregistrements (lignes) du **Recordset** soient modifiés.|  
+|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Appelé avant qu’une opération en attente modifie le **Recordset**.|  
+|[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md)|Appelé avant le démarrage d’une connexion.|  
+|[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)|Appelé juste avant qu’une commande en attente ne s’exécute sur cette connexion et donne à l’utilisateur la possibilité d’examiner et de modifier les paramètres d’exécution en attente.|  
+|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|L’événement **WillMove** est appelé *avant qu'* une opération en attente modifie la position actuelle dans l’ensemble **d’enregistrements**.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence de l’API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
+ [Informations de référence sur l’API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Collections ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Propriétés dynamiques ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [Constantes énumérées ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Annexe B : Erreurs ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [Annexe B : erreurs ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [Gestion des événements ADO](../../../ado/guide/data/handling-ado-events.md)   
  [Méthodes ADO](../../../ado/reference/ado-api/ado-methods.md)   
  [Modèle objet ADO](../../../ado/reference/ado-api/ado-object-model.md)   

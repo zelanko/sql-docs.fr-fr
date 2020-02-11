@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Propriétés de légende, général (Générateur de rapports et SSRS) | Microsoft Docs
+title: Boîte de dialogue Propriétés de la légende, général (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: defd23b4ef341f54551490470de494edd942221e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108554"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés de la légende, Général (Générateur de rapports et SSRS)
-  Utilisez la boîte de dialogue **Légende** pour définir l'apparence et la disposition de la légende du graphique. Pour plus d’informations, consultez [mise en forme de la légende sur un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/chart-legend-formatting-report-builder.md).  
+  Utilisez la boîte de dialogue **Légende** pour définir l'apparence et la disposition de la légende du graphique. Pour plus d’informations, consultez [mise en forme de la légende sur un graphique &#40;générateur de rapports et SSRS&#41;](report-design/chart-legend-formatting-report-builder.md).  
   
 ## <a name="options"></a>Options  
  **Nom**  
@@ -30,15 +30,15 @@ ms.locfileid: "66108554"
  **Disposition**  
  Sélectionnez une option pour indiquer la mise en page de la légende. La mise en page de la légende par défaut est Tableau automatique.  
   
--   **Tableau haut** Affichez le contenu de la légende dans un tableau. Les entrées de la légende seront ajoutées de manière à ce que la légende s'étende verticalement.  
+-   **Table haute** Affichez le contenu de la légende dans un tableau. Les entrées de la légende seront ajoutées de manière à ce que la légende s'étende verticalement.  
   
--   **Colonne** Affichez le contenu de la légende dans une colonne.  
+-   **Colonne** Affichez le contenu de la légende dans une seule colonne.  
   
--   **Ligne** Affichez le contenu de la légende dans une ligne.  
+-   **Ligne** Affichez le contenu de la légende sur une seule ligne.  
   
--   **Tableau large** Affichez le contenu de la légende dans un tableau. Les entrées de la légende seront ajoutées de manière à ce que la légende s'étende horizontalement.  
+-   **Tableau étendu** Affichez le contenu de la légende dans un tableau. Les entrées de la légende seront ajoutées de manière à ce que la légende s'étende horizontalement.  
   
--   **Tableau automatique** Affichez le contenu de la légende dans un tableau. Les entrées de la légende seront ajoutées de manière à ce que la légende s'étende horizontalement ou verticalement en fonction de l'espace disponible dans le graphique.  
+-   **Table automatique** Affichez le contenu de la légende dans un tableau. Les entrées de la légende seront ajoutées de manière à ce que la légende s'étende horizontalement ou verticalement en fonction de l'espace disponible dans le graphique.  
   
  **Ancrer à la zone de graphique**  
  Sélectionnez cette option pour associer la légende à une zone de graphique.  

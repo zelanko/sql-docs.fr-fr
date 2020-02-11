@@ -16,18 +16,18 @@ ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: ef595adcf3772dcac92c58764d99bca4374aeb0a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771353"
 ---
-# <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
+# <a name="sp_adddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Crée une nouvelle base de données de distribution et installe le schéma du serveur de distribution. La base de données de distribution stocke les procédures, le schéma et les métadonnées utilisés dans la réplication. Cette procédure stockée est exécutée sur la base de données master du serveur de distribution afin de créer la base de données de distribution et d'installer les tables et les procédures stockées nécessaires à la distribution de la réplication.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,17 +55,17 @@ sp_adddistributiondb [ @database= ] 'database'
 ## <a name="arguments"></a>Arguments  
 `[ @database = ] database'`Nom de la base de données de distribution à créer. *Database est de* **type sysname**, sans valeur par défaut. Si la base de données spécifiée existe déjà et n'est pas déjà marquée comme base de données de distribution, les objets nécessaires à l'activation de la distribution sont installés ; la base de données est également marquée comme base de données de distribution. Si la base de données spécifiée est déjà activée comme base de données de distribution, une erreur est renvoyée.  
   
-`[ @data_folder = ] 'data_folder'_`Nom du répertoire utilisé pour stocker le fichier de données de la base de données de distribution. *DATA_FOLDER* est de type **nvarchar (255)** , avec NULL comme valeur par défaut. Si sa valeur est NULL, le répertoire de données de cette instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est utilisé, par exemple `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`.  
+`[ @data_folder = ] 'data_folder'_`Nom du répertoire utilisé pour stocker le fichier de données de la base de données de distribution. *DATA_FOLDER* est de type **nvarchar (255)**, avec NULL comme valeur par défaut. Si la valeur est null, le répertoire de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de cette instance de est utilisé `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`, par exemple.  
   
-`[ @data_file = ] 'data_file'`Nom du fichier de base de données. *data_file* est de type **nvarchar (255)** , avec une valeur par défaut de **base de données**. Si la valeur est NULL, la procédure stockée crée un nom de fichier en utilisant le nom de la base de données.  
+`[ @data_file = ] 'data_file'`Nom du fichier de base de données. *data_file* est de type **nvarchar (255)**, avec une valeur par défaut de **base de données**. Si la valeur est NULL, la procédure stockée crée un nom de fichier en utilisant le nom de la base de données.  
   
 `[ @data_file_size = ] data_file_size`Taille initiale du fichier de données en mégaoctets (Mo). *data_file_size i*s **int**, avec une valeur par défaut de 5 Mo.  
   
-`[ @log_folder = ] 'log_folder'`Nom du répertoire du fichier journal de la base de données. *log_folder* est de type **nvarchar (255)** , avec NULL comme valeur par défaut. Si sa valeur est NULL, le répertoire de données de cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est utilisé, par exemple `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`.  
+`[ @log_folder = ] 'log_folder'`Nom du répertoire du fichier journal de la base de données. *log_folder* est de type **nvarchar (255)**, avec NULL comme valeur par défaut. Si sa valeur est NULL, le répertoire de données de cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est utilisé, par exemple `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`.  
   
-`[ @log_file = ] 'log_file'`Nom du fichier journal. *fichier_journal* est de type **nvarchar (255)** , avec NULL comme valeur par défaut. Si la valeur est NULL, la procédure stockée crée un nom de fichier en utilisant le nom de la base de données.  
+`[ @log_file = ] 'log_file'`Nom du fichier journal. *log_file* est de type **nvarchar (255)**, avec NULL comme valeur par défaut. Si la valeur est NULL, la procédure stockée crée un nom de fichier en utilisant le nom de la base de données.  
   
-`[ @log_file_size = ] log_file_size`Taille initiale du fichier journal en mégaoctets (Mo). *log_file_size* est de **type int**, avec 0 Mo comme valeur par défaut, ce qui signifie que la taille du fichier est créée à l’aide [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de la plus petite taille de fichier journal autorisée par.  
+`[ @log_file_size = ] log_file_size`Taille initiale du fichier journal en mégaoctets (Mo). *log_file_size* est de **type int**, avec une valeur par défaut de 0 Mo, ce qui signifie que la taille du fichier est créée à l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aide de la plus petite taille de fichier journal autorisée par.  
   
 `[ @min_distretention = ] min_distretention`Période de rétention minimale, en heures, avant la suppression des transactions de la base de données de distribution. *min_distretention* est de **type int**, avec 0 heure comme valeur par défaut.  
   
@@ -73,15 +73,15 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @history_retention = ] history_retention`Nombre d’heures de conservation de l’historique. *history_retention* est de **type int**, avec une valeur par défaut de 48 heures.  
   
-`[ @security_mode = ] security_mode`Mode de sécurité à utiliser lors de la connexion au serveur de distribution. *security_mode* est de **type int**, avec 1 comme valeur par défaut. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification; **1** spécifie l’authentification intégrée de Windows.  
+`[ @security_mode = ] security_mode`Mode de sécurité à utiliser lors de la connexion au serveur de distribution. *security_mode* est de **type int**, avec 1 comme valeur par défaut. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification ; **1** spécifie l’authentification intégrée de Windows.  
   
-`[ @login = ] 'login'`Nom de connexion utilisé lors de la connexion au serveur de distribution pour créer la base de données de distribution. Cette valeur est obligatoire si *security_mode* a la valeur **0**. *login* est de type **sysname**, avec NULL comme valeur par défaut.  
+`[ @login = ] 'login'`Nom de connexion utilisé lors de la connexion au serveur de distribution pour créer la base de données de distribution. Cela est requis si *security_mode* a la valeur **0**. *login* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @password = ] 'password'`Mot de passe utilisé lors de la connexion au serveur de distribution. Cette valeur est obligatoire si *security_mode* a la valeur **0**. *Password* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @password = ] 'password'`Mot de passe utilisé lors de la connexion au serveur de distribution. Cela est requis si *security_mode* a la valeur **0**. *Password* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 `[ @createmode = ] createmode`*createmode* est de **type int**, avec 1 comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**1** (par défaut)|Créez la base de données ou utilisez une base de données existante, puis appliquez le fichier **instdist. SQL** pour créer des objets de réplication dans la base de données de distribution.|  
@@ -89,12 +89,12 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
  
-`[ @deletebatchsize_xact = ] deletebatchsize_xact`Spécifie la taille de lot à utiliser lors du nettoyage des transactions expirées à partir des tables MSRepl_Transactions. *deletebatchsize_xact* est de **type int**, avec 5000 comme valeur par défaut. Ce paramètre a été introduit pour la première fois dans SQL Server 2017, suivi des versions de SQL Server 2012 SP4 et SQL Server 2016 SP2.  
+`[ @deletebatchsize_xact = ] deletebatchsize_xact`Spécifie la taille de lot à utiliser lors du nettoyage des transactions expirées à partir des tables de MSRepl_Transactions. *deletebatchsize_xact* est de **type int**, avec 5000 comme valeur par défaut. Ce paramètre a été introduit pour la première fois dans SQL Server 2017, suivi des versions de SQL Server 2012 SP4 et SQL Server 2016 SP2.  
 
 `[ @deletebatchsize_cmd = ] deletebatchsize_cmd`Spécifie la taille de lot à utiliser lors du nettoyage des commandes expirées à partir des tables MSRepl_Commands. *deletebatchsize_cmd* est de **type int**, avec 2000 comme valeur par défaut. Ce paramètre a été introduit pour la première fois dans SQL Server 2017, suivi des versions de SQL Server 2012 SP4 et SQL Server 2016 SP2. 
  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  

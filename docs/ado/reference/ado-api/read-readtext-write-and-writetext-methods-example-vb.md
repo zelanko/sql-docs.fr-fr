@@ -1,5 +1,5 @@
 ---
-title: Read, ReadText, Write et WriteText, méthodes-exemple (VB) | Microsoft Docs
+title: Read, ReadText, Write et WriteText, exemples de méthodes (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,14 +18,14 @@ ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f77b2d395b76b537107ad87cf1487bb4d25a430c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931443"
 ---
-# <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Read, ReadText, Write et WriteText, méthodes-exemple (VB)
-Cet exemple montre comment lire le contenu d’une zone de texte dans les deux un fichier texte [Stream](../../../ado/reference/ado-api/stream-object-ado.md) et un fichier binaire **Stream**. Autres propriétés et les méthodes indiquées sont [Position](../../../ado/reference/ado-api/position-property-ado.md), [taille](../../../ado/reference/ado-api/size-property-ado-parameter.md), [Charset](../../../ado/reference/ado-api/charset-property-ado.md), et [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
+# <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Read, ReadText, Write et WriteText, exemples de méthodes (VB)
+Cet exemple montre comment lire le contenu d’une zone de texte dans un [flux](../../../ado/reference/ado-api/stream-object-ado.md) de texte et un **flux**binaire. Les autres propriétés et méthodes indiquées incluent la [position](../../../ado/reference/ado-api/position-property-ado.md), la [taille](../../../ado/reference/ado-api/size-property-ado-parameter.md), le [jeu](../../../ado/reference/ado-api/charset-property-ado.md)de caractères et [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
   
 ```  
 'BeginReadVB  
@@ -115,8 +115,8 @@ End Sub
  [Position, propriété (ADO)](../../../ado/reference/ado-api/position-property-ado.md)   
  [Read, méthode](../../../ado/reference/ado-api/read-method.md)   
  [ReadText, méthode](../../../ado/reference/ado-api/readtext-method.md)   
- [SetEOS, méthode](../../../ado/reference/ado-api/seteos-method.md)   
- [Size, propriété (ADO Stream)](../../../ado/reference/ado-api/size-property-ado-stream.md)   
+ [SetEos, méthode](../../../ado/reference/ado-api/seteos-method.md)   
+ [Size, propriété (objet Stream ADO)](../../../ado/reference/ado-api/size-property-ado-stream.md)   
  [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
- [Écrire (méthode)](../../../ado/reference/ado-api/write-method.md)   
+ [Write, méthode](../../../ado/reference/ado-api/write-method.md)   
  [WriteText, méthode](../../../ado/reference/ado-api/writetext-method.md)

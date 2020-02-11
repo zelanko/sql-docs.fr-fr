@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e9b8fb98082fb3509acf50e6546673e86962893c
-ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74200419"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>Type de connexion PowerPivot (SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "74200419"
   
  Utilisez les informations de cette rubrique pour générer une source de données. Pour obtenir des instructions pas à pas, consultez [Ajouter et vérifier une connexion de données ou une source de données &#40;générateur de rapports et des&#41;SSRS ](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables requises  
  La source de données PowerPivot doit être publiée dans une Galerie PowerPivot sur un site SharePoint.  
   
  Pour prendre en charge les connexions du Générateur de rapports à un classeur PowerPivot, vous devez disposer de SQL Server 2008 R2 ADOMD.NET sur votre station de travail. Cette bibliothèque cliente est installée avec PowerPivot pour Excel, mais si vous utilisez un ordinateur qui n'a pas cette application, vous devez télécharger et installer ADOMD.NET à partir de la page [SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978).  
@@ -47,7 +47,7 @@ ms.locfileid: "74200419"
 ## <a name="parameters"></a>Paramètres  
  Dans le volet Filtres, sélectionnez l'option **Paramètres** pour qu'un filtre crée automatiquement un paramètre de rapport avec les valeurs disponibles qui correspondent aux sélections de filtre.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si vous ouvrez le Générateur de rapports à partir du classeur PowerPivot dans une Galerie PowerPivot, les tableaux croisés dynamiques, graphiques croisés dynamiques, segments et autres mises en page et fonctionnalités analytiques du classeur PowerPivot ne sont pas recréés dans le rapport. À la place, le rapport vide inclut une source de données préconfigurée qui pointe vers les données du classeur PowerPivot. La conception de rapports basés sur un classeur PowerPivot peut être fastidieuse et nécessiter du temps suivant le nombre de segments, de filtres et de tables ou de graphiques que vous voulez recréer dans le rapport. Une meilleure approche consiste à prévoir la présentation des données que vous voulez dans un rapport, indépendamment de la conception PowerPivot.  
   
  Les données contenues dans un classeur PowerPivot sont fortement compressées ; les données récupérées à partir du classeur PowerPivot pour un rapport ne sont pas compressées. Utilisez le concepteur de requêtes pour spécifier des filtres et des paramètres afin de limiter les données à ce qui est absolument nécessaire dans le rapport.  

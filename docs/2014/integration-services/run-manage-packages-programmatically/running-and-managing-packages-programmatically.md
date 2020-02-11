@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ecbaa54a723fae6a3c5fd11363bf42f1f2a57da0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62766824"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>Exécution et gestion de packages par programme
@@ -28,7 +28,7 @@ ms.locfileid: "62766824"
   
  Vous pouvez charger et exécuter un package existant à partir d'une application cliente en écrivant quelques lignes de code seulement.  
   
- Cette section décrit et explique comment exécuter un package existant par programme et comment accéder à la sortie du flux d'autres applications. Une option de programmation avancée vous permet de créer par programme un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ligne par ligne, tel que décrit dans [Building Packages Programmatically](../building-packages-programmatically/building-packages-programmatically.md).  
+ Cette section décrit et explique comment exécuter un package existant par programme et comment accéder à la sortie du flux d'autres applications. Une option de programmation avancée vous permet de créer par programmation un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ligne par ligne, comme indiqué dans la rubrique [Génération de packages par programmation](../building-packages-programmatically/building-packages-programmatically.md).  
   
  Cette section présente également d'autres tâches d'administration que vous pouvez effectuer par programme pour gérer des packages stockés, des packages en cours d'exécution et des rôles de package.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62766824"
  [Gestion par programmation des rôles de package &#40;Service SSIS&#41;](../run-manage-packages-programmatically/managing-package-roles-programmatically-ssis-service.md)  
  Explique comment obtenir ou définir des informations sur les rôles attribués à un package ou un dossier.  
   
-## <a name="reference"></a>Référence  
+## <a name="reference"></a>Informations de référence  
  [Guide de référence des erreurs et des messages propres à Integration Services](../integration-services-error-and-message-reference.md)  
  Répertorie les codes d'erreur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prédéfinis avec leur nom symbolique et leur description.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62766824"
  [Génération de packages par programmation](../building-packages-programmatically/building-packages-programmatically.md)  
  Explique comment créer, configurer et enregistrer des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] par programme.  
   
-![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les téléchargements, articles, exemples et vidéos les plus récents de [!INCLUDE[msCoName](../../includes/msconame-md.md)], ainsi que les solutions retenues par la communauté informatique, consultez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône de Integration Services (petite)](../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les téléchargements, articles, exemples et vidéos les plus récents de [!INCLUDE[msCoName](../../includes/msconame-md.md)], ainsi que les solutions retenues par la communauté informatique, consultez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server Integration Services](../sql-server-integration-services.md)  

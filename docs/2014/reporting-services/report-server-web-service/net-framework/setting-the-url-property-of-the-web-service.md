@@ -18,14 +18,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4036e38a0d0eb5e76934fa119b3bcc37342062a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62520285"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>Définition de la propriété Url du service Web
-  Dans vos applications [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], vous pouvez à tout moment modifier l’URL de base du service web Report Server vers lequel votre application est actuellement dirigée. Pour ce faire, il vous suffit de définir la propriété **Url** de l’objet de service. Exemple :  
+  À tout moment dans vos [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] applications, vous pouvez modifier l’URL de base du service Web Report Server vers lequel votre application est actuellement dirigée. Pour ce faire, il vous suffit de définir la propriété **Url** de l’objet de service. Par exemple :  
   
 ```vb  
 Dim rs As New ReportingService2010()  

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e83f539e1ffad77a337fc3e0142379da2ff0f703
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104103"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurer un serveur de rapports pour l'administration à distance
@@ -34,7 +34,7 @@ ms.locfileid: "66104103"
   
  `"The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)".`  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour cela, vous devez ouvrir une session localement et être membre du groupe Administrateurs local. Vous ne pouvez pas modifier les paramètres du pare-feu Windows d'un ordinateur distant sur une connexion distante.  
   
  Si vous souhaitez activer l'administration à distance pour un utilisateur non-administrateur, vous devez accorder des autorisations d'activation à distance DCOM (Distributed Component Object Model) au compte. Les instructions de configuration du serveur pour un accès non-administrateur sont fournies dans cette rubrique.  
@@ -60,9 +60,9 @@ ms.locfileid: "66104103"
   
 ### <a name="to-open-ports-in-windows-firewall"></a>Pour ouvrir les ports du Pare-feu Windows  
   
-1.  [Configurer un pare-feu Windows pour accéder au moteur de base de données](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
+1.  [Configurez un pare-feu Windows pour l’accès moteur de base de données](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
-2.  [Configurer un pare-feu pour accéder au serveur de rapports](configure-a-firewall-for-report-server-access.md).  
+2.  [Configurer un pare-feu pour l’accès au serveur de rapports](configure-a-firewall-for-report-server-access.md).  
   
 ### <a name="to-configure-remote-connections-to-the-report-server-database"></a>Pour configurer les connexions distantes à la base de données du serveur de rapports  
   
@@ -76,9 +76,9 @@ ms.locfileid: "66104103"
   
 1.  Ouvrez une session en tant qu'administrateur local sur l'ordinateur où vous souhaitez activer l'administration à distance.  
   
-2.  Si le serveur de rapports s’exécute sur Windows Vista, cliquez sur **invite de commandes** et sélectionnez **exécuter en tant qu’administrateur**. Pour d'autres systèmes d'exploitation, ouvrez une fenêtre d'invite de commandes.  
+2.  Si le serveur de rapports s’exécute sous Windows Vista, cliquez avec le bouton droit sur **invite de commandes** et sélectionnez **exécuter en tant qu’administrateur**. Pour d'autres systèmes d'exploitation, ouvrez une fenêtre d'invite de commandes.  
   
-3.  Exécutez la commande suivante :  
+3.  Exécutez la commande suivante :  
   
     ```  
     netsh.exe firewall set service type=REMOTEADMIN mode=ENABLE scope=ALL  
@@ -98,7 +98,7 @@ ms.locfileid: "66104103"
   
 1.  Dans le menu Démarrer, pointez sur **Outils d'administration**, puis cliquez sur **Services de composants**.  
   
-     Pour Windows Vista, dans le menu Démarrer, cliquez sur **tous les programmes**, cliquez sur **exécuter**, puis entrez `mmc comexp.msc`.  
+     Pour Windows Vista, dans le menu Démarrer, cliquez sur **tous les programmes**, sur **exécuter**, puis `mmc comexp.msc`sur entrée.  
   
 2.  Ouvrez le dossier Services de composants.  
   

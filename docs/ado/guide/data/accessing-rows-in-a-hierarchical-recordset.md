@@ -1,5 +1,5 @@
 ---
-title: Accès aux lignes dans un Recordset hiérarchique | Microsoft Docs
+title: Accès aux lignes d’un jeu d’enregistrements hiérarchique | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,24 +14,24 @@ ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e73b2ca96cc5e7eb7683b72aa19fd59a318b8596
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926356"
 ---
-# <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>Accès aux lignes dans un Recordset hiérarchique (par exemple)
-L’exemple suivant montre les étapes nécessaires pour accéder aux lignes dans une liste hiérarchique [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md):
+# <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>Accès aux lignes d’un jeu d’enregistrements hiérarchique (exemple)
+L’exemple suivant montre les étapes nécessaires pour accéder aux lignes d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md)hiérarchique :
 
-1.  **Jeu d’enregistrements** objets à partir de la **auteurs** et **titleauthor** les tables sont liées par ID d’auteur.
+1.  Les objets **Recordset** des tables **Authors** et **titleauthor** sont liés par l’ID de l’auteur.
 
-2.  La boucle externe affiche le nom et prénom de chaque auteur, l’état et identification.
+2.  La boucle externe affiche le prénom et le nom, l’État et l’identification de chaque auteur.
 
-3.  Ajouté **Recordset** pour chaque ligne est récupérée à partir de la [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection et affectés à *affectation*.
+3.  Le **Recordset** ajouté pour chaque ligne est extrait de la collection de [champs](../../../ado/reference/ado-api/fields-collection-ado.md) et affecté à *rstTitleAuthor*.
 
-4.  La boucle interne affiche quatre champs de chaque ligne dans le texte ajouté **Recordset**.
+4.  La boucle interne affiche quatre champs de chaque ligne dans le **Recordset**ajouté.
 
- Le [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) propriété est définie sur **false** à des fins d’illustration, afin que vous puissiez voir le chapitre changer de manière explicite dans chaque itération de la boucle externe. Pour rendre l’exemple de code plus efficace, vous pouvez déplacer l’affectation à l’étape 3 avant la première ligne à l’étape 2, afin que l’affectation est effectuée qu’une seule fois. Puis définissez la [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) propriété **true**, de sorte que *affectation* implicitement et automatiquement changera au chapitre correspondant à chaque fois que *rst* se déplace vers une nouvelle ligne.
+ La propriété [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) a la valeur **false** à des fins d’illustration, afin que vous puissiez voir le chapitre changer explicitement dans chaque itération de la boucle externe. Pour améliorer l’efficacité de l’exemple de code, vous pouvez déplacer l’affectation à l’étape 3 avant la première ligne de l’étape 2, afin que l’assignation ne soit exécutée qu’une seule fois. Affectez ensuite la valeur **true**à la propriété [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) , afin que *rstTitleAuthor* passe implicitement et automatiquement au chapitre correspondant chaque fois que *RST* passe à une nouvelle ligne.
 
 ## <a name="example"></a>Exemple
 
@@ -68,4 +68,4 @@ End Sub
 ```
 
 ## <a name="see-also"></a>Voir aussi
- [Vue d’ensemble de la mise en forme des données](../../../ado/guide/data/data-shaping-overview.md) [Field, objet](../../../ado/reference/ado-api/field-object.md) [Fields, Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [formels forme grammaire](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft Data Shaping Service pour OLE DB (Fournisseur de services ADO) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [fournisseurs requis pour la mise en forme des données](../../../ado/guide/data/required-providers-for-data-shaping.md) [forme Clause APPEND](../../../ado/guide/data/shape-append-clause.md) [commandes dans la forme Général](../../../ado/guide/data/shape-commands-in-general.md) [Clause COMPUTE de Shape](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic pour Applications functions](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+ [Vue d’ensemble](../../../ado/guide/data/data-shaping-overview.md) de la mise en forme des données collection de champs d' [objets de champ](../../../ado/reference/ado-api/field-object.md) [(ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [grammaire de forme formelle](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft Data Shaping Service pour OLE DB (ADO Service Provider)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [fournisseurs requis pour](../../../ado/guide/data/required-providers-for-data-shaping.md) la mise en forme des données commande de la forme [Ajouter](../../../ado/guide/data/shape-append-clause.md) une clause [dans](../../../ado/guide/data/shape-commands-in-general.md) la [clause COMPUTE Shape](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic pour applications Functions](../../../ado/guide/data/visual-basic-for-applications-functions.md)

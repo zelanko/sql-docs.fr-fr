@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 6b4aa4358259492e1b49672b054eddb8713c7473
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211985"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Créer une spécification de l'audit du serveur et de la base de données
@@ -35,7 +35,7 @@ ms.locfileid: "68211985"
   
      [Sécurité](#Security)  
   
--   **Pour créer un audit de serveur et une spécification d'audit de base de données, utilisez :**  
+-   **Pour créer un audit de serveur et une spécification d’audit de base de données, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "68211985"
   
 1.  Dans l'Explorateur d'objets, développez le dossier **Sécurité** .  
   
-2.  Cliquez avec le bouton droit sur le dossier **Audits** et sélectionnez **Nouvel audit...** . Pour plus d’informations, consultez [Créer un audit du serveur et une spécification d'audit du serveur](create-a-server-audit-and-server-audit-specification.md).  
+2.  Cliquez avec le bouton droit sur le dossier **audits** et sélectionnez **nouvel audit...**. Pour plus d’informations, consultez [créer un audit de serveur et une spécification d’audit de serveur](create-a-server-audit-and-server-audit-specification.md).  
   
 3.  Lorsque vous avez fini de sélectionner les options, cliquez sur **OK**.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68211985"
   
 2.  Développez le dossier **Sécurité** .  
   
-3.  Cliquez avec le bouton droit sur le dossier **Spécifications de l’audit de la base de données**, puis sélectionnez **Nouvelle spécification de l’audit de la base de données...** .  
+3.  Cliquez avec le bouton droit sur le dossier **Spécifications de l’audit de la base de données**, puis sélectionnez **Nouvelle spécification de l’audit de la base de données...**.  
   
      Les options suivantes sont disponibles dans la boîte de dialogue **Créer la spécification de l'audit de la base de données** .  
   
@@ -129,11 +129,11 @@ ms.locfileid: "68211985"
   
 #### <a name="to-create-a-database-level-audit-specification"></a>Pour créer une spécification d'audit de niveau base de données  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. L'exemple crée une spécification d'audit de base de données appelée `Audit_Pay_Tables` qui audite les instructions SELECT et INSERT par l'utilisateur `dbo`, pour la table `HumanResources.EmployeePayHistory` en fonction de l'audit de serveur défini précédemment.  
+3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. L'exemple crée une spécification d'audit de base de données appelée `Audit_Pay_Tables` qui audite les instructions SELECT et INSERT par l'utilisateur `dbo` , pour la table `HumanResources.EmployeePayHistory` en fonction de l'audit de serveur défini précédemment.  
   
     ```  
     USE AdventureWorks2012 ;   

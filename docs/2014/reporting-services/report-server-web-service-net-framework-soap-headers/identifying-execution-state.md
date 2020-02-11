@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 088090fe1572c0a7fd2f1165c7bf1cd6f7eb6839
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63020254"
 ---
 # <a name="identifying-execution-state"></a>Identification de l'état d'exécution
@@ -27,7 +27,8 @@ ms.locfileid: "63020254"
   
  La gestion des sessions implique de mettre en corrélation une requête HTTP avec d'autres requêtes précédentes générées à partir de la même session. Sans gestion des sessions, ces requêtes apparaissent non liées pour le service Web Report Server en raison de la nature sans connexion et sans état du protocole HTTP.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'expose pas un concept holistique de l'état de session tel que celui qui est exposé par [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Toutefois, lors de l'exécution de rapports, le serveur de rapports maintient l'état entre les appels de méthode sous la forme d'une **exécution**. Une exécution permet à l'utilisateur d'interagir de plusieurs façons avec le rapport, notamment en chargeant le rapport à partir du serveur de rapports, en définissant des informations d'identification et des paramètres pour le rapport et en effectuant son rendu.  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'expose pas un concept holistique de l'état de session tel que celui qui est exposé par [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Toutefois, lors de l'exécution de rapports, le serveur de rapports maintient l'état entre les appels de méthode sous la forme d'une **exécution**. Une exécution permet à l'utilisateur d'interagir de plusieurs façons avec le rapport, notamment en chargeant le rapport à partir du serveur de rapports, en définissant des informations d'identification et des paramètres pour le rapport et en effectuant son rendu.  
   
  Pendant qu'ils communiquent avec un serveur de rapports, les clients utilisent l'exécution pour gérer l'affichage des rapports et la navigation des utilisateurs vers d'autres pages d'un rapport, ainsi que pour afficher ou masquer certaines sections d'un rapport. Une exécution unique existe pour chaque rapport que l'application cliente exécute.  
   
@@ -39,7 +40,7 @@ ms.locfileid: "63020254"
   
  Le diagramme suivant illustre le chemin d'accès de traitement et de rendu des rapports.  
   
- ![Chemin de traitement/rendu des rapports](../../../2014/reporting-services/media/rs-render-process-diagram.gif "Chemin de traitement/rendu des rapports")  
+ ![Chemin d'accès de traitement/de rendu de rapport](../../../2014/reporting-services/media/rs-render-process-diagram.gif "Chemin d'accès de traitement/de rendu de rapport")  
   
  Pour prendre en charge les fonctions décrites ci-dessus, la méthode de rendu SOAP a été divisée en plusieurs méthodes qui comprennent des phases d'initialisation de l'exécution, de traitement et de rendu.  
   

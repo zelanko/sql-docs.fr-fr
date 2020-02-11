@@ -21,10 +21,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fceb0baa62b7998534a5b7620d2c99fd1afc1f8f
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148316"
 ---
 # <a name="using-encryption"></a>Utilisation du chiffrement
@@ -38,12 +38,13 @@ ms.locfileid: "70148316"
   
  Lorsqu'une base de données est associée à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vous devez soit fournir le mot de passe de la clé principale de la base de données, soit exécuter la méthode <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> pour réaliser une copie non chiffrée de la clé principale de la base de données, qui sera ensuite disponible pour un chiffrement à l'aide de la clé principale du service. Cette étape est recommandée pour éviter d'avoir à ouvrir explicitement la clé principale de base de données.  
   
- La méthode <xref:Microsoft.SqlServer.Management.Smo.MasterKey.Regenerate%2A> régénère la clé principale de base de données. Lorsque la clé principale de base de données est régénérée, toutes les clés qu'elle a permis de chiffrer sont déchiffrées, puis elles sont à nouveau chiffrées au moyen de la nouvelle clé principale de base de données. La méthode <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> supprime le chiffrement de la clé principale de la base de données par la clé principale du service. <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> entraîne le chiffrement d'une copie de la clé principale à l'aide de la clé principale du service, puis le stockage de cette clé à la fois dans la base de données actuelle et dans la base de données master.  
+ La méthode <xref:Microsoft.SqlServer.Management.Smo.MasterKey.Regenerate%2A> régénère la clé principale de base de données. Lorsque la clé principale de base de données est régénérée, toutes les clés qu'elle a permis de chiffrer sont déchiffrées, puis elles sont à nouveau chiffrées au moyen de la nouvelle clé principale de base de données. La méthode <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> supprime le chiffrement de la clé principale de la base de données par la clé principale du service. 
+  <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> entraîne le chiffrement d'une copie de la clé principale à l'aide de la clé principale du service, puis le stockage de cette clé à la fois dans la base de données actuelle et dans la base de données master.  
   
  Dans SMO, les certificats sont représentés par l'objet <xref:Microsoft.SqlServer.Management.Smo.Certificate>. L'objet <xref:Microsoft.SqlServer.Management.Smo.Certificate> a des propriétés qui spécifient la clé publique, le nom du sujet, la période de validité et les informations sur l'émetteur. L'autorisation d'accès au certificat est contrôlée en utilisant les méthodes **Grant**, **Revoke** et **Deny** .  
   
 ## <a name="example"></a>Exemple  
- Dans les exemples de code suivants, vous devez sélectionner l'environnement, le modèle et le langage de programmation à utiliser pour créer votre application. Pour plus d’informations, consultez [créer un projet&#35; Smo Visual C dans Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Dans les exemples de code suivants, vous devez sélectionner l'environnement, le modèle et le langage de programmation à utiliser pour créer votre application. Pour plus d’informations, consultez [créer un projet Visual C&#35; Smo dans Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="adding-a-certificate-in-visual-c"></a>Ajout d'un certificat en Visual C#  
  L'exemple de code crée un certificat simple avec un mot de passe de chiffrement. Contrairement à d'autres objets, la méthode <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> a plusieurs surcharges. La surcharge utilisée dans l'exemple crée un certificat avec un mot de passe de chiffrement.  

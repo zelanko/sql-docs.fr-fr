@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3624253fa70ca12078a981d694c5e50b5030ce01
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781179"
 ---
 # <a name="use-a-statement-odbc"></a>Utiliser une instruction (ODBC)
@@ -26,7 +26,7 @@ ms.locfileid: "73781179"
     
 ### <a name="to-use-a-statement"></a>Pour utiliser une instruction  
   
-1.  Appelez [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) avec SQL_HANDLE_STMT comme *HandleType* de manière à allouer un descripteur d'instruction.  
+1.  Appelez [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) avec SQL_HANDLE_STMT comme *HandleType* de manière à allouer un descripteur d’instruction.  
   
 2.  Si vous le souhaitez, appelez [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) pour définir des options d’instruction ou [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) pour obtenir des attributs d’instruction.  
   
@@ -70,9 +70,9 @@ ms.locfileid: "73781179"
   
     -   Pour réutiliser le descripteur d'instruction, allez à l'Étape 2.  
   
-8.  Appelez [SQLFreeHandle](../../../relational-databases/native-client-odbc-api/sqlfreehandle.md) avec SQL_HANDLE_STMT comme *HandleType* pour libérer le descripteur d'instruction.  
+8.  Appelez [SQLFreeHandle](../../../relational-databases/native-client-odbc-api/sqlfreehandle.md) avec SQL_HANDLE_STMT comme *HandleType* pour libérer le descripteur d’instruction.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques de procédures relatives &#40;à l’exécution de requêtes ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [Rubriques de procédures relatives à l’exécution de requêtes &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

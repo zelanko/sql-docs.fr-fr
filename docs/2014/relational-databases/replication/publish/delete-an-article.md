@@ -20,13 +20,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4be2287a1c0d43ccfdfaeaca3378f6d10f100134
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882272"
 ---
-# <a name="delete-an-article"></a>Delete an Article
+# <a name="delete-an-article"></a>Supprimer un article
   Cette rubrique explique comment supprimer un article dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou des objets RMO (Replication Management Objects). Pour plus d’informations sur les conditions dans lesquelles un article peut être supprimé et pour savoir si la suppression d’un article requiert un nouvel instantané ou la réinitialisation des abonnements, consultez [Ajouter et supprimer des articles de publications existantes](add-articles-to-and-drop-articles-from-existing-publications.md).  
   
   
@@ -62,7 +62,7 @@ ms.locfileid: "73882272"
   
 1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransArticle> .  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransArticle>.  
   
 3.  Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>et <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> .  
   
@@ -78,7 +78,7 @@ ms.locfileid: "73882272"
   
 1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergeArticle> .  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergeArticle>.  
   
 3.  Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>et <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> .  
   
@@ -92,6 +92,6 @@ ms.locfileid: "73882272"
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajouter et supprimer des articles de publications existantes](add-articles-to-and-drop-articles-from-existing-publications.md)   
- [Concepts liés aux procédures stockées système de réplication](../concepts/replication-system-stored-procedures-concepts.md)  
+ [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)  
   
   

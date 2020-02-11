@@ -1,5 +1,5 @@
 ---
-title: Remarques d’implémentation | Microsoft Docs
+title: Remarques sur l’implémentation | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,19 +11,19 @@ ms.assetid: 7ec14b9c-69b8-4c6e-838a-88d1ebdc8725
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 95b60ba35a867135cfc1f823e08b1a99f0262ca9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135742"
 ---
-# <a name="implementation-notes"></a>Remarques sur l’implémentation
+# <a name="implementation-notes"></a>Remarques relatives à l’implémentation
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans tout nouveau développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande d’utiliser les fonctionnalités de curseur du pilote.  
+>  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande l’utilisation de la fonctionnalité de curseur du pilote.  
   
- Cette section décrit comment la bibliothèque de curseurs ODBC est implémentée. Il décrit comment la bibliothèque de curseurs tient à jour son cache, exécute des instructions SQL et implémente les fonctions ODBC.  
+ Cette section décrit l’implémentation de la bibliothèque de curseurs ODBC. Il décrit comment la bibliothèque de curseurs gère son cache, exécute les instructions SQL et implémente les fonctions ODBC.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Cache de la bibliothèque de curseurs](../../../odbc/reference/appendixes/cursor-library-cache.md)  
   

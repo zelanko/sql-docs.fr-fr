@@ -1,5 +1,5 @@
 ---
-title: Objet de paramètre | Microsoft Docs
+title: Parameter, objet | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,42 +16,42 @@ ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 15df27e3dc48decf743a78dd4d147a22dc7cf276
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931664"
 ---
 # <a name="parameter-object"></a>Objet Parameter
-Représente un paramètre ou un argument associé à un [commande](../../../ado/reference/ado-api/command-object-ado.md) objet basé sur une procédure stockée ou une requête paramétrable.  
+Représente un paramètre ou un argument associé à un objet de [commande](../../../ado/reference/ado-api/command-object-ado.md) basé sur une requête paramétrable ou une procédure stockée.  
   
 ## <a name="remarks"></a>Notes  
- De nombreux fournisseurs prennent en charge les commandes paramétrables. Il s’agit de commandes dans lequel l’action souhaitée est définie une seule fois, mais les variables (ou paramètres) sont utilisées pour modifier certains détails de la commande. Par exemple, une instruction SQL SELECT peut utiliser un paramètre pour définir les critères de correspondance d’une clause WHERE et l’autre pour définir le nom de colonne pour une clause de tri.  
+ De nombreux fournisseurs prennent en charge les commandes paramétrables. Il s’agit de commandes dans lesquelles l’action souhaitée est définie une seule fois, mais les variables (ou paramètres) sont utilisées pour modifier certains détails de la commande. Par exemple, une instruction SQL SELECT peut utiliser un paramètre pour définir les critères de correspondance d’une clause WHERE, et une autre pour définir le nom de colonne d’une clause SORT BY.  
   
- **Paramètre** objets représentent des paramètres associés aux requêtes paramétrables ou les arguments d’entrée/sortie et les valeurs de retour de procédures stockées. Selon les fonctionnalités du fournisseur, certaines collections, les méthodes ou les propriétés d’un **paramètre** objet n’est peut-être pas disponible.  
+ Les objets de **paramètres** représentent des paramètres associés à des requêtes paramétrables, ou les arguments in/out et les valeurs de retour des procédures stockées. Selon la fonctionnalité du fournisseur, certaines collections, méthodes ou propriétés d’un objet de **paramètre** peuvent ne pas être disponibles.  
   
- Avec les collections, les méthodes et les propriétés d’un **paramètre** de l’objet, vous pouvez procédez comme suit :  
+ Avec les collections, les méthodes et les propriétés d’un objet **Parameter** , vous pouvez effectuer les opérations suivantes :  
   
--   Définir ou retourner le nom d’un paramètre avec le [nom](../../../ado/reference/ado-api/name-property-ado.md) propriété.  
+-   Définit ou retourne le nom d’un paramètre avec la propriété [Name](../../../ado/reference/ado-api/name-property-ado.md) .  
   
--   Définir ou retourner la valeur d’un paramètre avec le [valeur](../../../ado/reference/ado-api/value-property-ado.md) propriété. **Valeur** est la propriété par défaut de la **paramètre** objet.  
+-   Définit ou retourne la valeur d’un paramètre à l’aide de la propriété [value](../../../ado/reference/ado-api/value-property-ado.md) . La **valeur** est la propriété par défaut de l’objet de **paramètre** .  
   
--   Définir ou retourner les caractéristiques des paramètres avec le [attributs](../../../ado/reference/ado-api/attributes-property-ado.md), [Direction](../../../ado/reference/ado-api/direction-property.md), [précision](../../../ado/reference/ado-api/precision-property-ado.md), [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md), [ Taille](../../../ado/reference/ado-api/size-property-ado-parameter.md), et [Type](../../../ado/reference/ado-api/type-property-ado.md) propriétés.  
+-   Définissez ou retournez les caractéristiques des paramètres avec les propriétés [attributes](../../../ado/reference/ado-api/attributes-property-ado.md), [direction](../../../ado/reference/ado-api/direction-property.md), [précision](../../../ado/reference/ado-api/precision-property-ado.md), [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md), [taille](../../../ado/reference/ado-api/size-property-ado-parameter.md)et [type](../../../ado/reference/ado-api/type-property-ado.md) .  
   
--   Passer des données binaires longues ou de caractères à un paramètre avec le [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) (méthode).  
+-   Transmettre des données binaires ou caractères longues à un paramètre avec la méthode [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) .  
   
--   Accéder aux attributs spécifiques au fournisseur à l’aide de la [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection.  
+-   Accédez aux attributs spécifiques au fournisseur à l’aide de la collection [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) .  
   
- Si vous connaissez les noms et les propriétés des paramètres associés avec la procédure stockée ou une requête paramétrable que vous souhaitez appeler, vous pouvez utiliser la [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) méthode pour créer **paramètre** objets avec les paramètres de propriété approprié et l’utilisation du [Append](../../../ado/reference/ado-api/append-method-ado.md) méthode pour les ajouter à la [paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md) collection. Cela vous permet de définir et retourner des valeurs de paramètre sans devoir appeler le [Actualiser](../../../ado/reference/ado-api/refresh-method-ado.md) méthode sur le **paramètres** collection pour récupérer les informations de paramètre à partir du fournisseur, un potentiellement opération de gourmandes en ressources.  
+ Si vous connaissez les noms et les propriétés des paramètres associés à la procédure stockée ou à la requête paramétrable que vous souhaitez appeler, vous pouvez utiliser la méthode [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) pour créer des objets **Parameter** avec les paramètres de propriété appropriés et utiliser la méthode [Append](../../../ado/reference/ado-api/append-method-ado.md) pour les ajouter à la collection [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) . Cela vous permet de définir et de retourner des valeurs de paramètres sans avoir à appeler la méthode [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) sur la collection **Parameters** pour récupérer les informations sur les paramètres auprès du fournisseur, une opération potentiellement gourmande en ressources.  
   
- Le **paramètre** objet n’est pas sécurisé pour le script.  
+ L’objet de **paramètre** n’est pas sûr pour l’écriture de scripts.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient la rubrique suivante.  
   
--   [Propriétés de l’objet paramètre, méthodes et événements](../../../ado/reference/ado-api/parameter-object-properties-methods-and-events.md)  
+-   [Propriétés, méthodes et événements de l’objet Parameter](../../../ado/reference/ado-api/parameter-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Command, objet (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [CreateParameter, méthode (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Collection de paramètres (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [Parameters, collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Properties, collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

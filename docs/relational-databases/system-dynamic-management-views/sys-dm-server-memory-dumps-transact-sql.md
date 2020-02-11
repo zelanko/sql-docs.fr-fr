@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_server_memory_dumps (Transact-SQL) | Microsoft Docs
+title: sys. dm_server_memory_dumps (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,20 +19,20 @@ ms.assetid: 41782719-f54d-4e11-941a-c050c7576e23
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7f31bc59e918a2a2ca4f0cf9e3833571028e85a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090802"
 ---
-# <a name="sysdmservermemorydumps-transact-sql"></a>sys.dm_server_memory_dumps (Transact-SQL)
+# <a name="sysdm_server_memory_dumps-transact-sql"></a>sys.dm_server_memory_dumps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Renvoie une ligne pour chaque fichier de vidage de mémoire généré par le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Utilisez cette vue de gestion dynamique pour résoudre les problèmes potentiels.  
  
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**filename**|**nvarchar (256)**|Chemin d'accès et nom du fichier de vidage de mémoire. Ne peut pas avoir la valeur null.|  
+|**extension**|**nvarchar (256)**|Chemin d'accès et nom du fichier de vidage de mémoire. Ne peut pas avoir la valeur null.|  
 |**creation_time**|**datetimeoffset(7)**|Date et heure de création du fichier. Ne peut pas avoir la valeur null.|  
 |**size_in_bytes**|**bigint**|Taille (en octets) du fichier. Autorise la valeur NULL.|  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68090802"
  Le type de vidage peut être un minidump, un vidage de tous les threads ou un vidage complet. Les fichiers portent l'extension .mdmp.  
   
 ## <a name="security"></a>Sécurité  
- Les fichiers de vidage peuvent contenir des informations sensibles. Pour protéger les informations sensibles, vous pouvez utiliser une liste de contrôle d'accès (ACL) afin de restreindre l'accès aux fichiers ou copier les fichiers dans un dossier avec accès limité. Par exemple, avant d’envoyer que vos fichiers de débogage à Microsoft les services de support technique, nous vous recommandons de supprimer toutes les informations sensibles ou confidentielles.  
+ Les fichiers de vidage peuvent contenir des informations sensibles. Pour protéger les informations sensibles, vous pouvez utiliser une liste de contrôle d'accès (ACL) afin de restreindre l'accès aux fichiers ou copier les fichiers dans un dossier avec accès limité. Par exemple, avant d’envoyer vos fichiers de débogage aux services de support technique Microsoft, nous vous recommandons de supprimer toutes les informations sensibles ou confidentielles.  
   
 ### <a name="permissions"></a>Autorisations  
  Requiert l'autorisation VIEW SERVER STATE.  

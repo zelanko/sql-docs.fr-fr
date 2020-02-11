@@ -18,10 +18,10 @@ ms.assetid: 6c971bfc-c277-4c1e-a06e-146dcc34e759
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b4d28d0d41ed28ac2f623f38e0a977ded66f3f88
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660391"
 ---
 # <a name="properties-property-servernetworkprotocol-class"></a>Propriété Properties (classe ServerNetworkProtocol)
@@ -36,8 +36,8 @@ object.Properties [= value]
 ```  
   
 ## <a name="parts"></a>Éléments  
- *object*  
- Objet de [classe ServerNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md) qui représente le protocole réseau utilisé par l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ *dessin*  
+ A [classe ServerNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md) qui représente le protocole réseau utilisé par l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Tableau d'objets de [classe ServerNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) qui représentent les propriétés prises en charge par le protocole réseau serveur.  

@@ -18,10 +18,10 @@ ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: be1b7bc97a46282e0adae2fb5679cfff0cd11dd1
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74687320"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "74687320"
 
   Engendre une commande d'environnement Windows et lui transmet une chaîne à traiter. Toute sortie est retournée sous forme de lignes de texte.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,7 +62,7 @@ GO
 The command(s) completed successfully.  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le processus Windows généré par **xp_cmdshell** a les mêmes droits de sécurité que le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte de service.  
   
  **xp_cmdshell** fonctionne de façon synchrone. Le contrôle n'est renvoyé à l'appelant que lorsque la commande de l'interpréteur de commandes est terminée.  
@@ -173,7 +173,7 @@ EXEC master..xp_cmdshell @cmd;
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées étendues générales &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_cmdshell (option de configuration de serveur)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)   
- [Configuration de la surface d’exposition](../../relational-databases/security/surface-area-configuration.md)   
+ [Configuration de la surface d'exposition](../../relational-databases/security/surface-area-configuration.md)   
  [sp_xp_cmdshell_proxy_account &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)  
   
   

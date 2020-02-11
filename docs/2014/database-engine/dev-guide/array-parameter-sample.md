@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 822dc7f3d66afc44c187d199674a22f20977f535
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74055904"
 ---
 # <a name="array-parameter-sample"></a>Exemple de paramètre tableau
   Il est parfois utile de créer, de mettre à jour ou de supprimer un ensemble de lignes dans une base de données. Il existe plusieurs méthodes que vous pouvez utiliser dans ce but. L'une d'elles consiste à transmettre un tableau d'informations d'un client à une procédure stockée d'intégration CLR (Common Language Runtime) sur le serveur en utilisant un type de données d'intégration du CLR défini par l'utilisateur. La nature de tels types de données définis par l'utilisateur limite à 8000 octets le volume des données fournies au serveur. De ce fait, cette méthode n'est pas satisfaisante pour les données volumineuses ou complexes. Si les données manipulées sont simples et de petite taille, cette méthode peut s'avérer beaucoup plus efficace que l'appel d'une procédure stockée pour chaque ligne. En utilisant un tableau, l'ordre des données est préservé pour les applications où l'ordre a de l'importance. Cet exemple contient les éléments suivants :  
   
-1.  Le type de données défini par l'utilisateur `ContactTypeNames`. Ce type de données renferme une liste des noms de type de contact souhaité.  
+1.  Le type de données défini par l'utilisateur `ContactTypeNames` . Ce type de données renferme une liste des noms de type de contact souhaité.  
   
 2.  La procédure stockée `usp_EnsureContactTypeNames` implémentée comme une méthode Microsoft Visual C# ou Microsoft Visual Basic. Une instance du type de données défini par l'utilisateur `ContactTypeNames` est ainsi acceptée et de nouvelles lignes dans la table `Person.ContactType` sont insérées pour tous les noms de contact contenus dans l'instance du type de données défini par l'utilisateur et qui ne se trouvent pas encore dans cette table.  
   
@@ -29,7 +29,8 @@ ms.locfileid: "74055904"
 ## <a name="prerequisites"></a>Conditions préalables requises  
  Pour créer et exécuter ce projet, les logiciels suivants doivent être installés :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://www.microsoft.com/download/details.aspx?id=42299)  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://www.microsoft.com/download/details.aspx?id=42299)  
   
 -   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](https://archive.codeplex.com/?p=SqlServerSamples)  
   
@@ -58,7 +59,7 @@ ms.locfileid: "74055904"
   
 -   La base de données AdventureWorks doit être installée sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez.  
   
--   Si vous n’êtes pas un administrateur de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez, demandez à un administrateur de vous accorder l’autorisation **CreateAssembly** pour effectuer l’installation.  
+-   Si vous n'êtes pas administrateur de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée, vous devez demander à un administrateur de vous accorder l'autorisation **CreateAssembly**  pour terminer l'installation.  
   
 ## <a name="building-the-sample"></a>Génération de l'exemple  
   
@@ -68,7 +69,7 @@ ms.locfileid: "74055904"
   
 2.  Si nécessaire, créez un répertoire pour votre exemple. Pour cet exemple, nous utiliserons C:\MySample.  
   
-3.  Dans c:\MySample, créez `ContactTypeNames.vb` (pour l'exemple Visual Basic) ou `ContactTypeNames.cs` (pour l'exemple C#) et copiez l'exemple de code Visual Basic ou  C# approprié (ci-dessous) dans le fichier.  
+3.  Dans c:\MySample, créez `ContactTypeNames.vb` (pour l'exemple Visual Basic) ou `ContactTypeNames.cs` (pour l'exemple C#) et copiez l'exemple de code Visual Basic ou  C# approprié (ci-dessous) dans le fichier.  
   
 4.  Compilez l'exemple de code dans l'assembly requis à partir de l'invite de ligne de commande en exécutant l'un des éléments suivants, selon le langage choisi.  
   
@@ -76,7 +77,7 @@ ms.locfileid: "74055904"
   
     -   `Csc /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /target:library ContactTypeNames.cs`  
   
-5.  Dans c:\MySample, créez `Program.vb` (pour l'exemple Visual Basic) ou `Program.cs` (pour l'exemple C#) et copiez l'exemple de code Visual Basic ou  C# approprié (ci-dessous) dans le fichier.  
+5.  Dans c:\MySample, créez `Program.vb` (pour l'exemple Visual Basic) ou `Program.cs` (pour l'exemple C#) et copiez l'exemple de code Visual Basic ou  C# approprié (ci-dessous) dans le fichier.  
   
 6.  Localisez la ligne appropriée dans le programme de fichier (autour de la ligne 24) et remplacez `XXX` par le nom de votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -715,6 +716,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Scénarios et exemples d’utilisation pour l’intégration du CLR &#40;Common Language Runtime&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [Scénarios d’utilisation et exemples pour le Common Language Runtime &#40;l’intégration du CLR&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

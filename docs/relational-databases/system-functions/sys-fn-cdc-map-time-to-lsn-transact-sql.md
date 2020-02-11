@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_cdc_map_time_to_lsn (Transact-SQL) | Microsoft Docs
+title: sys. fn_cdc_map_time_to_lsn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7f4f6820aeeca8b600631810ed35933d2519b495
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046331"
 ---
-# <a name="sysfncdcmaptimetolsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
+# <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne la valeur de numéro séquentiel de séquence de journal dans le **start_lsn** colonne dans le [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) (table système) pour l’heure spécifiée. Vous pouvez utiliser cette fonction pour mapper systématiquement des plages de date/heure dans la plage de LSN requise par les fonctions d’énumération de capture de données modifiées [cdc.fn_cdc_get_all_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) et [cdc.fn _cdc_get_net_changes_ < instance_capture >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md) pour renvoyer les modifications de données dans cette plage.  
+  Retourne la valeur du numéro séquentiel dans le journal (LSN) à partir de la colonne **start_lsn** de la table système [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) pour l’heure spécifiée. Vous pouvez utiliser cette fonction pour mapper systématiquement les plages DateTime dans la plage basée sur LSN requise par les fonctions d’énumération de capture de données modifiées, [CDC. fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) et [CDC. fn_cdc_get_net_changes_](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)<capture_instance>pour retourner des modifications de données dans cette plage.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,19 +49,19 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **«** < relational_operator > **'** {plus grande moins que | plus moins grand qu’ou égal | plus petit supérieur à | plus petit supérieur ou égal}  
- Est utilisé pour identifier une valeur LSN distincte dans le **cdc.lsn_time_mapping** table avec associé à un **tran_end_time** qui satisfait la relation par rapport à la *tracking_time*  valeur.  
+ **'**<relational_operator>**'** {maximum inférieur à | le plus grand supérieur ou égal | le plus petit supérieur à | le plus petit ou égal à | plus petit}  
+ Est utilisé pour identifier une valeur LSN distincte dans la table **CDC. lsn_time_mapping** avec un **tran_end_time** associé qui satisfait la relation par rapport à la valeur de *tracking_time* .  
   
- *relational_operator* est **nvarchar (30)** .  
+ *relational_operator* est **de type nvarchar (30)**.  
   
  *tracking_time*  
- Valeur datetime à mettre en correspondance. *tracking_time* est **datetime**.  
+ Valeur datetime à mettre en correspondance. *tracking_time* est de **type DateTime**.  
   
 ## <a name="return-type"></a>Type de retour  
- **binary(10)**  
+ **binaire (10)**  
   
 ## <a name="remarks"></a>Notes  
- Pour comprendre comment la **sys.fn_cdc_map_time_lsn** peut être utilisé pour mapper les plages datetime aux plages LSN, considérez le scénario suivant. Supposez qu'un utilisateur souhaite extraire des données de modifications de façon quotidienne. Autrement dit, il ne souhaite extraire que les modifications pour un jour donné jusqu'à minuit compris. La limite inférieure de la plage temporelle se situerait à minuit, sans l'inclure, le jour précédent. La limite supérieure se situerait à minuit (compris) le jour donné. L’exemple suivant montre comment la fonction **sys.fn_cdc_map_time_to_lsn** peut être utilisé pour mapper systématiquement cette plage temporelle dans la plage basée sur LSN nécessaire par les fonctions d’énumération de capture de données modifiées pour retourner toutes les modifications dans cette plage.  
+ Pour comprendre comment la **sys. fn_cdc_map_time_lsn** peut être utilisée pour mapper des plages DateTime à des plages LSN, examinez le scénario suivant. Supposez qu'un utilisateur souhaite extraire des données de modifications de façon quotidienne. Autrement dit, il ne souhaite extraire que les modifications pour un jour donné jusqu'à minuit compris. La limite inférieure de la plage temporelle se situerait à minuit, sans l'inclure, le jour précédent. La limite supérieure se situerait à minuit (compris) le jour donné. L’exemple suivant montre comment la fonction **sys. fn_cdc_map_time_to_lsn** peut être utilisée pour mapper systématiquement cette plage temporelle à la plage basée sur LSN requise par les fonctions d’énumération de capture de données modifiées pour retourner toutes les modifications au sein de cette plage.  
   
  `DECLARE @begin_time datetime, @end_time datetime, @begin_lsn binary(10), @end_lsn binary(10);`  
   
@@ -75,13 +75,13 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
   
  `SELECT * FROM cdc.fn_cdc_get_net_changes_HR_Department(@begin_lsn, @end_lsn, 'all` `');`  
   
- L'opérateur relationnel '`smallest greater than`' est utilisé pour limiter les modifications à celles qui ont été effectuées après minuit le jour précédent. Si plusieurs entrées avec différentes valeurs LSN partage le **tran_end_time** valeur identifiée comme limite inférieure dans le [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) table, la fonction retournera la valeur LSN la vérification toutes les entrées sont incluses. Pour la limite supérieure, l’opérateur relationnel '`largest less than or equal to`' permet de s’assurer que la plage comprend toutes les entrées pour le jour, y compris ceux qui ont minuit comme leurs **tran_end_time** valeur. Si plusieurs entrées avec différentes valeurs LSN partage le **tran_end_time** valeur identifiée comme limite supérieure, la fonction retournera le LSN la plus élevée qui garantit que toutes les entrées sont incluses.  
+ L'opérateur relationnel '`smallest greater than`' est utilisé pour limiter les modifications à celles qui ont été effectuées après minuit le jour précédent. Si plusieurs entrées avec des valeurs LSN différentes partagent la valeur **tran_end_time** identifiée comme limite inférieure dans la table [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) , la fonction retourne le LSN le plus petit, garantissant ainsi que toutes les entrées sont incluses. Pour la limite supérieure, l’opérateur relationnel «`largest less than or equal to`» est utilisé pour s’assurer que la plage inclut toutes les entrées du jour, y compris celles dont la valeur **tran_end_time** est minuit. Si plusieurs entrées avec des valeurs LSN différentes partagent la valeur **tran_end_time** identifiée comme limite supérieure, la fonction retourne le LSN le plus grand, garantissant ainsi que toutes les entrées sont incluses.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant utilise le `sys.fn_cdc_map_time_lsn` fonction permettant de déterminer s’il existe des lignes dans le [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) table avec un **tran_end_time** valeur est supérieure ou égale à minuit. Cette requête peut être utilisée pour déterminer, par exemple, si le processus de capture a déjà traité les modifications validées jusqu'à minuit le jour précédent, afin que l'extraction des données de modifications pour ce jour puisse continuer.  
+ L’exemple suivant utilise la `sys.fn_cdc_map_time_lsn` fonction pour déterminer s’il existe des lignes dans la table [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) avec une valeur **tran_end_time** supérieure ou égale à minuit. Cette requête peut être utilisée pour déterminer, par exemple, si le processus de capture a déjà traité les modifications validées jusqu'à minuit le jour précédent, afin que l'extraction des données de modifications pour ce jour puisse continuer.  
   
 ```  
 DECLARE @extraction_time datetime, @lsn binary(10);  
@@ -94,9 +94,9 @@ END
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [cdc.lsn_time_mapping &#40;Transact-SQL&#41;](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)   
- [sys.fn_cdc_map_lsn_to_time &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md)   
- [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
+ [CDC. lsn_time_mapping &#40;Transact-SQL&#41;](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)   
+ [sys. fn_cdc_map_lsn_to_time &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md)   
+ [CDC. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
+ [CDC. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Page propriétés générales, rapports (Gestionnaire de rapports) | Microsoft Docs
+title: Page Propriétés générales, rapports (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b89d67636dd28514b8d5f34bee423e60abd9b81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109100"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>Page Propriétés générales, Rapports (Gestionnaire de rapports)
@@ -33,14 +33,14 @@ ms.locfileid: "66109100"
   
 ## <a name="options"></a>Options  
  **Nom**  
- Spécifie le nom du rapport. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et certains symboles. N'utilisez pas les caractères ; ? : \@ & = + , $ * \< >  
+ Spécifie le nom du rapport. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et certains symboles. N'utilisez pas les caractères ; ? : \@ & = +, $ *\< >  
   
  " ou / lorsque vous spécifiez un nom.  
   
  **Description**  
  Entrez une description du rapport. Cette description apparaît dans la page Contenu. Elle est visible par les utilisateurs qui sont autorisés à accéder au rapport.  
   
- **Masquer en mode liste**  
+ **Masquer en mode Liste**  
  Activez cette option pour masquer le rapport pour les utilisateurs qui utilisent le mode de visualisation Liste dans le Gestionnaire de rapports. Le mode Liste est le format d'affichage par défaut lorsque vous parcourez l'arborescence des dossiers du serveur de rapports. En mode Liste, les noms et les descriptions des éléments sont affichés sur la largeur de la page. Un autre format d'affichage, le mode Détails, est également disponible. En mode Détails, les descriptions ne sont pas affichées, mais cette vue fournit d'autres informations sur l'élément. Vous pouvez masquer un élément en mode Liste, mais pas en mode Détails. Pour restreindre l'accès à un élément, vous devez créer une attribution de rôle.  
   
  **Appliquer**  
@@ -50,19 +50,19 @@ ms.locfileid: "66109100"
  Cliquez pour supprimer le rapport de la base de données du serveur de rapports. La suppression d'un rapport entraîne celle de l'historique de rapport et de tous les abonnements et les planifications propres au rapport associés. Si le rapport est associé à des rapports liés, ces derniers deviennent non valides.  
   
  **Déplacer**  
- Cliquez pour déplacer un rapport dans l'arborescence des dossiers du serveur de rapports. Un clic sur ce bouton permet d'ouvrir la page Déplacer les éléments dans laquelle vous pouvez parcourir les dossiers pour sélectionner un nouvel emplacement. Pour plus d’informations, consultez [Page déplacer les éléments &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
+ Cliquez pour déplacer un rapport dans l'arborescence des dossiers du serveur de rapports. Un clic sur ce bouton permet d'ouvrir la page Déplacer les éléments dans laquelle vous pouvez parcourir les dossiers pour sélectionner un nouvel emplacement. Pour plus d’informations, consultez [page déplacer des éléments &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
  **Créer un rapport lié**  
- Cliquez pour ouvrir la page Nouveau rapport lié. Pour plus d’informations sur cette page et les rapports liés, consultez [Page nouveau rapport lié &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md).  
+ Cliquez pour ouvrir la page Nouveau rapport lié. Pour plus d’informations sur cette page et les rapports liés, consultez [page nouveau rapport lié &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md).  
   
- **Enregistrer**  
+ **Été**  
  Cliquez pour extraire une copie en lecture seule de la définition de rapport. Selon les associations de fichiers définies sur votre ordinateur, le fichier s'ouvre dans [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ou une autre application. Dans la plupart des cas, le rapport s'ouvre dans un fichier XML.  
   
  La copie que vous avez ouverte est identique à la définition de rapport d'origine qui a été initialement publiée sur le serveur de rapports. Toutes les propriétés qui ont été définies pour le rapport après sa publication (telles que les paramètres et les propriétés de source de données) ne sont pas reflétées dans le fichier que vous ouvrez.  
   
  Vous pouvez modifier la définition de rapport et l'enregistrer dans un nouveau fichier dans un dossier partagé, et télécharger la définition vers le serveur de rapports sous la forme d'un nouvel élément. Les modifications que vous apportez à la définition de rapport lorsqu'il est ouvert dans [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (ou une autre application) ne sont pas enregistrées directement sur le serveur de rapports. Vous devez télécharger le fichier pour publier le rapport modifié sur le serveur de rapports.  
   
- **Remplacer**  
+ **Lieu**  
  Cliquez pour remplacer la définition de rapport utilisée dans le rapport actuel par une définition différente d'un fichier .rdl situé dans le système de fichiers. Si vous mettez à jour une définition de rapport, vous devez redéfinir les paramètres de la source de données une fois la mise à jour terminée.  
   
  **Changer le lien**  
@@ -70,6 +70,6 @@ ms.locfileid: "66109100"
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Aide F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Format de chaîne de connexion et des attributs | Microsoft Docs
+title: Attributs et format de la chaîne de connexion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,50 +14,50 @@ ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a007f4c7c92bf4254e4d36638cf2d92ba0764be5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68082021"
 ---
 # <a name="connection-string-format-and-attributes"></a>Format et attributs de la chaîne de connexion
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Au lieu de cela, utilisez le pilote ODBC fourni par Oracle.  
+>  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Utilisez plutôt le pilote ODBC fourni par Oracle.  
   
- Au lieu d’utiliser une boîte de dialogue, certaines applications peuvent nécessiter une chaîne de connexion qui spécifie les informations de connexion de source de données. La chaîne de connexion se compose d’un nombre d’attributs qui spécifient comment un pilote se connecte à une source de données. Un attribut identifie une partie spécifique d’informations que le pilote doit savoir avant d’établir la connexion de source de données approprié. Chaque pilote peut avoir un autre ensemble d’attributs, mais le format de chaîne de connexion est toujours le même. Une chaîne de connexion a le format suivant :  
+ Au lieu d’utiliser une boîte de dialogue, certaines applications peuvent nécessiter une chaîne de connexion qui spécifie les informations de connexion à la source de données. La chaîne de connexion est constituée d’un certain nombre d’attributs qui spécifient la façon dont un pilote se connecte à une source de données. Un attribut identifie une information spécifique que le pilote doit connaître avant de pouvoir établir la connexion à la source de données appropriée. Chaque pilote peut avoir un ensemble différent d’attributs, mais le format de la chaîne de connexion est toujours le même. Une chaîne de connexion a le format suivant :  
   
 ```  
 "DSN=data-source-name[;SERVER=value] [;PWD=value] [;UID=value] [;<Attribute>=<value>]"  
 ```  
   
 > [!NOTE]  
->  Le pilote Microsoft ODBC pour Oracle prend en charge le format de chaîne de connexion de la première version du pilote, utilisé `CONNECTSTRING`= au lieu de `SERVER=`.  
+>  Le pilote Microsoft ODBC pour Oracle prend en charge le format de chaîne de connexion de la première version du pilote `CONNECTSTRING`, qui utilisait = au lieu de `SERVER=`.  
   
- Si vous vous connectez à un fournisseur de source de données qui prend en charge l’authentification Windows, vous devez spécifier `Trusted_Connection=yes` au lieu des informations d’ID et mot de passe utilisateur dans la chaîne de connexion.  
+ Si vous vous connectez à un fournisseur de sources de données qui prend en charge l’authentification `Trusted_Connection=yes` Windows, vous devez spécifier à la place de l’ID d’utilisateur et des informations de mot de passe dans la chaîne de connexion.  
   
- Vous devez spécifier la source de données nom si vous ne spécifiez pas l’UID, PWD, SERVER (ou CONNECTSTRING) et les attributs de pilote. Toutefois, tous les autres attributs sont facultatifs. Si vous ne spécifiez pas un attribut, cet attribut par défaut est celle spécifiée dans l’onglet DSN pertinentes de la **administrateur de sources de données ODBC** boîte de dialogue. La valeur d’attribut peut respecter la casse.  
+ Vous devez spécifier le nom de la source de données si vous ne spécifiez pas les attributs UID, PWD, SERVER (ou CONNECTSTRING) et DRIVER. Toutefois, tous les autres attributs sont facultatifs. Si vous ne spécifiez pas d’attribut, cet attribut est défini par défaut sur celui spécifié sous l’onglet DSN correspondant de la boîte de dialogue **administrateur de sources de données ODBC** . La valeur de l’attribut peut être sensible à la casse.  
   
- Les attributs de la chaîne de connexion sont les suivantes :  
+ Les attributs de la chaîne de connexion sont les suivants :  
   
-|Attribute|Description|Valeur par défaut|  
+|Attribut|Description|Valeur par défaut|  
 |---------------|-----------------|-------------------|  
-|DSN|Le nom de source de données répertoriés dans l’onglet pilotes de la **administrateur de sources de données ODBC** boîte de dialogue.|""|  
-|PWD|Le mot de passe pour le serveur Oracle que vous souhaitez accéder. Ce pilote prend en charge les limitations Oracle place sur les mots de passe.|""|  
-|SERVER|La chaîne de connexion pour le serveur Oracle que vous souhaitez accéder.|""|  
-|UID|Le nom d’utilisateur Oracle Server. Selon votre système, cet attribut ne peut pas être facultatif : autrement dit, certaines bases de données et les tables peuvent nécessiter cet attribut pour des raisons de sécurité.<br /><br /> Utilisez « / » pour utiliser Oracle d’exploitation de l’authentification du système.|""|  
-|BUFFERSIZE|La taille du tampon optimal utilisée lors de l’extraction des colonnes.<br /><br /> Le pilote optimise l’extraction de sorte qu’une opération d’extraction à partir du serveur Oracle retourne suffisamment de lignes pour remplir une mémoire tampon de cette taille. Valeurs plus élevées ont tendance à augmenter les performances si vous récupérez une grande quantité de données.|65535|  
-|SYNONYMCOLUMNS|Lorsque cette valeur est true (1), un appel de () API SQLColumn renvoie des informations de colonne. Sinon, () SQLColumn retourne uniquement les colonnes pour les tables et vues. Le pilote ODBC pour Oracle fournit un accès plus rapide lorsque cette valeur n’est pas définie.|1|  
-|REMARKS|Lorsque cette valeur est true (1), le pilote retourne les colonnes de notes pour la [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) jeu de résultats. Le pilote ODBC pour Oracle fournit un accès plus rapide lorsque cette valeur n’est pas définie.|0|  
-|StdDayOfWeek|Applique la norme ODBC pour la valeur scalaire DAYOFWEEK. Par défaut il est activé, mais les utilisateurs qui ont besoin de la version localisée peuvent modifier le comportement pour utiliser Oracle renvoie.|1|  
-|GuessTheColDef|Spécifie si le pilote doit retourner une valeur différente de zéro pour le *cbColDef* argument de **SQLDescribeCol**. S’applique uniquement aux colonnes où il n’y a aucune mise à l’échelle définie par Oracle, tel que calculé numériques colonnes et les colonnes définies en tant que nombre sans mise à l’échelle ni précision. Un **SQLDescribeCol** appeler retourne 130 pour la précision lorsque Oracle ne fournit pas ces informations.|0|  
+|DSN|Nom de la source de données figurant dans l’onglet pilotes de la boîte de dialogue **administrateur de sources de données ODBC** .|""|  
+|PWD|Mot de passe du serveur Oracle auquel vous souhaitez accéder. Ce pilote prend en charge les limitations que Oracle place sur les mots de passe.|""|  
+|SERVER|Chaîne de connexion pour le serveur Oracle auquel vous souhaitez accéder.|""|  
+|Identificateur d’utilisateur|Nom d’utilisateur du serveur Oracle. Selon votre système, cet attribut peut ne pas être facultatif. autrement dit, certaines bases de données et tables peuvent nécessiter cet attribut à des fins de sécurité.<br /><br /> Utilisez « / » pour utiliser l’authentification du système d’exploitation Oracle.|""|  
+|TAMPON|Taille de mémoire tampon optimale utilisée lors de l’extraction de colonnes.<br /><br /> Le pilote optimise l’extraction afin qu’une extraction à partir du serveur Oracle retourne suffisamment de lignes pour remplir une mémoire tampon de cette taille. Des valeurs plus élevées tendent à augmenter les performances si vous récupérez un grand nombre de données.|65535|  
+|SYNONYMCOLUMNS|Lorsque cette valeur est true (1), un appel d’API SQLColumn () retourne des informations sur les colonnes. Sinon, SQLColumn () retourne uniquement les colonnes des tables et des vues. Le pilote ODBC pour Oracle fournit un accès plus rapide lorsque cette valeur n’est pas définie.|1|  
+|Remarques|Lorsque cette valeur est true (1), le pilote retourne les colonnes de remarques pour le jeu de résultats [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) . Le pilote ODBC pour Oracle fournit un accès plus rapide lorsque cette valeur n’est pas définie.|0|  
+|StdDayOfWeek|Applique la norme ODBC pour la scalaire DAYOFWEEK. Par défaut, cette option est activée, mais les utilisateurs qui ont besoin de la version localisée peuvent modifier le comportement afin d’utiliser n’importe quel retour d’Oracle.|1|  
+|GuessTheColDef|Spécifie si le pilote doit retourner une valeur différente de zéro pour l’argument *cbColDef* de **SQLDescribeCol**. S’applique uniquement aux colonnes pour lesquelles il n’existe aucune échelle définie par Oracle, telle que les colonnes numériques calculées et les colonnes définies comme nombre sans précision ou échelle. Un appel de **SQLDescribeCol** retourne 130 pour la précision quand Oracle ne fournit pas ces informations.|0|  
   
- Par exemple, une chaîne de connexion qui se connecte à la source de données MyDataSource en utilisant le serveur MyOracleServerOracle et le monIdUtilisateur utilisateur Oracle serait :  
+ Par exemple, une chaîne de connexion qui se connecte à la source de données MyDataSource à l’aide du serveur MyOracleServerOracle et de l’utilisateur Oracle MyUserID serait la suivante :  
   
 ```  
 "DSN={MyDataSource};UID={MyUserID};PWD={MyPassword};SERVER={MyOracleServer}"  
 ```  
   
- Une chaîne de connexion qui se connecte à la source de données MyOtherDataSource à l’aide de l’authentification du système d’exploitation et le serveur MyOtherOracleServerOracle serait :  
+ Une chaîne de connexion qui se connecte à la source de données MyOtherDataSource à l’aide de l’authentification du système d’exploitation et du serveur MyOtherOracleServerOracle serait la suivante :  
   
 ```  
 "DSN=MyOtherDataSource;UID=/;PWD=;SERVER=MyOtherOracleServer"  

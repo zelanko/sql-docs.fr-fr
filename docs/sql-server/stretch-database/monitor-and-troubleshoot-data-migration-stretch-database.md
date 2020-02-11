@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d204c7acfbd8598a7cbb66a41dcf89915fc711ef
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843780"
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>Surveillance et résolution des problèmes de migration de données (Stretch Database)
@@ -24,7 +24,7 @@ ms.locfileid: "73843780"
 
   Pour surveiller la migration des données dans Stretch Database Monitor, sélectionnez **Tâches | Stretch | Monitor** pour à une base de données dans SQL Server Management Studio.  
   
-## <a name="check-the-status-of-data-migration-in-the-stretch-database-monitor"></a>Vérification de l’état de la migration des données dans Stretch Database Monitor  
+## <a name="check-the-status-of-data-migration-in-the-stretch-database-monitor"></a>Vérifier l’état de la migration des données dans Stretch Database Monitor  
  Sélectionnez **Tâches | Stretch | Monitor** pour une base de données dans SQL Server Management Studio pour ouvrir Stretch Database Monitor et surveiller la migration des données.  
   
 -   La partie supérieure de l’écran contient des informations générales sur la base de données SQL Server Stretch ainsi que sur la base de données Azure distante.  
@@ -37,12 +37,12 @@ ms.locfileid: "73843780"
  Ouvrez la vue de gestion dynamique **sys.dm_db_rda_migration_status** pour afficher le nombre de lots et de lignes de données migrés. Pour plus d’informations, consultez [sys.dm_db_rda_migration_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).  
   
 ##  <a name="Firewall"></a> Résolution des problèmes liés à la migration des données  
- **Je ne parviens pas à migrer les lignes de ma table Stretch vers Azure. Quel est le problème ?**  
+ **Les lignes de ma table Stretch ne sont pas migrées vers Azure. Quel est le problème ?**  
  Plusieurs problèmes peuvent affecter la migration. Vérifiez les points suivants :  
   
 -   Vérifiez la connectivité réseau de l’ordinateur SQL Server.  
   
--   Vérifiez que le pare-feu Azure n’empêche pas la connexion de SQL Server au point de terminaison distant.  
+-   Vérifiez que le pare-feu Azure n’empêche pas votre serveur SQL Server de se connecter au point de terminaison distant.  
   
 -   Vérifiez l’état du dernier lot dans la vue de gestion dynamique **sys.dm_db_rda_migration_status** . Si une erreur s’est produite, vérifiez les valeurs error_severity, error_state et error_number du lot concerné.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "73843780"
     -   Pour plus d’informations sur le contenu d’un message d’erreur SQL Server, consultez [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md).  
   
  **Le pare-feu Azure bloque les connexions à partir de mon serveur local.**  
- Vous devez peut-être ajouter une règle dans les paramètres de pare-feu Azure du serveur Azure afin d’autoriser SQL Server à communiquer avec le serveur Azure à distance.  
+ Vous devrez peut-être ajouter une règle dans les paramètres de pare-feu Azure du serveur Azure pour permettre à SQL Server de communiquer avec le serveur Azure distant.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gérer Stretch Database et résoudre ses problèmes](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+ [Gérer et dépanner Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
   
   

@@ -18,20 +18,20 @@ ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5428ae9130646db662c6c960f777c6a7dfe25000
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68084894"
 ---
-# <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
+# <a name="sp_update_job-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Modifie les attributs d'un travail.  
   
 
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,56 +56,56 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_id = ] job_id` Le numéro d’identification du travail à mettre à jour. *job_id*est **uniqueidentifier**.  
+`[ @job_id = ] job_id`Numéro d’identification du travail à mettre à jour. *job_id*est de type **uniqueidentifier**.  
   
-`[ @job_name = ] 'job_name'` Le nom de la tâche. *job_name* est **nvarchar (128)** .  
+`[ @job_name = ] 'job_name'`Nom du travail. *job_name* est **de type nvarchar (128)**.  
   
-> **REMARQUE :** Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
+> **Remarque :** *Job_id* ou *job_name* doivent être spécifiés, mais ils ne peuvent pas être spécifiés.  
   
-`[ @new_name = ] 'new_name'` Le nouveau nom pour le travail. *new_name* est **nvarchar (128)** .  
+`[ @new_name = ] 'new_name'`Nouveau nom du travail. *new_name* est **de type nvarchar (128)**.  
   
-`[ @enabled = ] enabled` Spécifie si le travail est activé (**1**) ou désactivée (**0**). *activé* est **tinyint**.  
+`[ @enabled = ] enabled`Spécifie si le travail est activé (**1**) ou désactivé (**0**). *Enabled* est de **type tinyint**.  
   
-`[ @description = ] 'description'` Description du travail. *Description* est **nvarchar (512)** .  
+`[ @description = ] 'description'`Description du travail. *Description* est **de type nvarchar (512)**.  
   
-`[ @start_step_id = ] step_id` Le numéro d’identification de la première étape à exécuter pour la tâche. *l’argument id_étape* est **int**.  
+`[ @start_step_id = ] step_id`Numéro d’identification de la première étape à exécuter pour le travail. *step_id* est de **type int**.  
   
-`[ @category_name = ] 'category'` La catégorie du travail. *catégorie* est **nvarchar (128)** .  
+`[ @category_name = ] 'category'`Catégorie du travail. la *catégorie* est **nvarchar (128)**.  
   
-`[ @owner_login_name = ] 'login'` Le nom de la connexion propriétaire du travail. *connexion* est **nvarchar (128)** seuls les membres de la **sysadmin** rôle serveur fixe peut modifier l’appartenance des travaux.  
+`[ @owner_login_name = ] 'login'`Nom de la connexion propriétaire du travail. la *connexion* est **nvarchar (128)** seuls les membres du rôle serveur fixe **sysadmin** peuvent modifier la propriété du travail.  
   
-`[ @notify_level_eventlog = ] eventlog_level` Spécifie le moment auquel une entrée dans le journal des applications Microsoft Windows pour ce travail. *niveau_journal_événements*est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @notify_level_eventlog = ] eventlog_level`Spécifie à quel moment placer une entrée dans le journal des applications Microsoft Windows pour ce travail. *eventlog_level*est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description (action)|  
+|Valeur|Description (action)|  
 |-----------|----------------------------|  
-|**0**|Never|  
+|**0**|Jamais|  
 |**1**|Si succès|  
 |**2**|Si échec|  
-|**3**|Always|  
+|**1,3**|Toujours|  
   
-`[ @notify_level_email = ] email_level` Spécifie à quel moment envoyer un message électronique à l’achèvement de ce travail. *niveau_courrier_électronique*est **int**. *niveau_courrier_électronique*utilise les mêmes valeurs que *niveau_journal_événements*.  
+`[ @notify_level_email = ] email_level`Spécifie à quel moment envoyer un message électronique à la fin de ce travail. *email_level*est de **type int**. *email_level*utilise les mêmes valeurs que *eventlog_level*.  
   
-`[ @notify_level_netsend = ] netsend_level` Spécifie à quel moment envoyer un message réseau une fois la fin de ce travail. *niveau_message_réseau*est **int**. *niveau_message_réseau*utilise les mêmes valeurs que *niveau_journal_événements*.  
+`[ @notify_level_netsend = ] netsend_level`Spécifie à quel moment envoyer un message réseau à la fin de ce travail. *netsend_level*est de **type int**. *netsend_level*utilise les mêmes valeurs que *eventlog_level*.  
   
-`[ @notify_level_page = ] page_level` Spécifie à quel moment envoyer une page à la fin de ce travail. *niveau_page* est **int**. *niveau_page*utilise les mêmes valeurs que *niveau_journal_événements*.  
+`[ @notify_level_page = ] page_level`Spécifie à quel moment envoyer une page à la fin de ce travail. *page_level* est de **type int**. *page_level*utilise les mêmes valeurs que *eventlog_level*.  
   
-`[ @notify_email_operator_name = ] 'operator_name'` Le nom de l’opérateur auquel le message électronique est envoyé une fois *niveau_courrier_électronique* est atteinte. *nom_adresse* est **nvarchar (128)** .  
+`[ @notify_email_operator_name = ] 'operator_name'`Nom de l’opérateur auquel le message électronique est envoyé lorsque *email_level* est atteint. *email_name* est **de type nvarchar (128)**.  
   
-`[ @notify_netsend_operator_name = ] 'netsend_operator'` Le nom de l’opérateur auquel le message réseau est envoyé. *opérateur_message_réseau* est **nvarchar (128)** .  
+`[ @notify_netsend_operator_name = ] 'netsend_operator'`Nom de l’opérateur auquel le message réseau est envoyé. *netsend_operator* est **de type nvarchar (128)**.  
   
-`[ @notify_page_operator_name = ] 'page_operator'` Le nom de l’opérateur auquel une page est envoyée. *opérateur_page* est **nvarchar (128)** .  
+`[ @notify_page_operator_name = ] 'page_operator'`Nom de l’opérateur auquel une page est envoyée. *page_operator* est **de type nvarchar (128)**.  
   
-`[ @delete_level = ] delete_level` Spécifie à quel moment supprimer le travail. *delete_leve*est **int**. *niveau_suppression*utilise les mêmes valeurs que *niveau_journal_événements*.  
+`[ @delete_level = ] delete_level`Spécifie à quel moment supprimer le travail. *delete_value*est de **type int**. *delete_level*utilise les mêmes valeurs que *eventlog_level*.  
   
-`[ @automatic_post = ] automatic_post` Réservé.  
+`[ @automatic_post = ] automatic_post`Réservé.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_update_job** doit être exécuté à partir de la **msdb** base de données.  
+ **sp_update_job** doit être exécuté à partir de la base de données **msdb** .  
   
- **sp_update_job** modifie uniquement les paramètres pour le paramètre auquel les valeurs sont fournies. Si un paramètre est manquant, la valeur actuelle est retenue.  
+ **sp_update_job** modifie uniquement les paramètres pour lesquels des valeurs de paramètre sont fournies. Si un paramètre est manquant, la valeur actuelle est retenue.  
   
 ## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
@@ -116,9 +116,9 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Seuls les membres du **sysadmin** pouvez utiliser cette procédure stockée pour modifier les attributs de travaux qui est détenus par d’autres utilisateurs.  
+ Seuls les membres de **sysadmin** peuvent utiliser cette procédure stockée pour modifier les attributs des tâches appartenant à d’autres utilisateurs.  
   
 ## <a name="examples"></a>Exemples  
  Cet exemple modifie le nom, la description et l'état (activé ou non) du travail `NightlyBackups`.  

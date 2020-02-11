@@ -13,20 +13,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5df70271c281673c71fb378564f454f0822998ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210716"
 ---
-# <a name="best-practices-for-time-based-row-filters"></a>Bonnes pratiques en matière de filtres de lignes basés sur le temps
+# <a name="best-practices-for-time-based-row-filters"></a>Meilleures pratiques pour les filtres de lignes basés sur le temps
   Les utilisateurs d'applications ont souvent besoin d'un sous-ensemble de données d'une table basé sur le temps. Par exemple, un vendeur peut avoir besoin des données sur les commandes passées au cours de la dernière semaine tandis qu'un planificateur d'événements peut avoir besoin des données sur les événements qui auront lieu au cours de la semaine à venir. Dans de nombreux cas, pour accomplir cette tâche, les applications utilisent des requêtes qui contiennent la fonction `GETDATE()`. Considérons l'instruction de filtre de lignes suivante :  
   
 ```  
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- Avec un filtre de ce type, il est généralement admis que deux événements se produisent systématiquement à l'exécution de l'Agent de fusion : les lignes qui satisfont aux critères de ce filtre sont répliquées vers les Abonnés, tandis que celles qui n'y satisfont plus sont nettoyées sur ceux-ci. (Pour plus d’informations sur le filtrage avec `HOST_NAME()`, consultez [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).) Toutefois, la réplication de fusion ne fait que répliquer et nettoyer les données qui ont changé depuis la dernière synchronisation, quelle que soit la façon dont vous définissez un filtre de lignes pour ces données.  
+ Avec un filtre de ce type, il est généralement admis que deux événements se produisent systématiquement à l'exécution de l'Agent de fusion : les lignes qui satisfont aux critères de ce filtre sont répliquées vers les Abonnés, tandis que celles qui n'y satisfont plus sont nettoyées sur ceux-ci. (Pour plus d’informations sur le `HOST_NAME()`filtrage avec, consultez [filtres de lignes paramétrables](parameterized-filters-parameterized-row-filters.md).) Toutefois, la réplication de fusion réplique et nettoie uniquement les données qui ont été modifiées depuis la dernière synchronisation, quelle que soit la façon dont vous définissez un filtre de lignes pour ces données.  
   
  Pour que la réplication de fusion traite une ligne, les données contenues dans celle-ci doivent satisfaire aux critères du filtre de lignes et avoir changé depuis la dernière synchronisation. Dans le cas de la table **SalesOrderHeader** , **OrderDate** est entré lorsqu'une ligne est insérée. Les lignes sont répliquées vers l'Abonné comme prévu car l'insertion constitue une modification de données. Toutefois, s'il existe des lignes sur l'Abonné qui ne satisfont plus aux critères de filtre (relatives en l'occurrence aux commandes qui datent de plus de sept jours), elles ne sont supprimées de l'Abonné que si elles ont été mises à jour pour une raison quelconque.  
   
@@ -57,7 +57,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
  Cette approche pallie les points faibles de l'utilisation de `GETDATE()` ou d'une autre méthode basée sur le temps et évite d'avoir à déterminer à quel moment les filtres sont évalués pour les partitions. Considérons l'exemple suivant d'une table **Events** :  
   
-|**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Répliquer**|  
+|**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Réplication**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|Réception|112|2006-10-04|1|  
 |2|Dîner|112|2006-10-10|0|  
@@ -81,7 +81,7 @@ GO
   
  La première ligne réinitialise la colonne **Replicate** à **0**, tandis que la seconde lui attribue la valeur **1** pour les événements qui se produiront au cours des sept prochains jours. Si cette instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] s'exécute le 07/10/2006, la table, une fois mise à jour, présentera l'aspect suivant :  
   
-|**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Répliquer**|  
+|**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Réplication**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|Réception|112|2006-10-04|0|  
 |2|Dîner|112|2006-10-10|1|  

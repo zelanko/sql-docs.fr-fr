@@ -15,10 +15,10 @@ ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2df45ce2a08e545bc7da11ab3f97df8aa86b0c26
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727938"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>Chevauchement des autorisations d'accès (Master Data Services)
@@ -33,11 +33,11 @@ ms.locfileid: "73727938"
   
  Si un utilisateur appartient à plusieurs groupes, et que ces groupes ont accès à [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], les règles suivantes s’appliquent :  
   
--   **Refuser** remplace toutes les autres autorisations. Si l’autorisation associée à l’objet est **Refuser** dans un groupe, l’autorisation effective est également Refuser.  
+-   **Deny** remplace toutes les autres autorisations. Si l’autorisation associée à l’objet est **Refuser** dans un groupe, l’autorisation effective est également Refuser.  
   
 -   Une autorisation d’accès correspond à l’association de toutes les autorisations effectives d’un groupe. Si l’autorisation associée à l’objet est **Créer** dans un groupe et **Mettre à jour** dans un autre, l’autorisation effective correspond à **Créer** et **Mettre à jour**.  
   
- Ces règles s'appliquent à la fois à l'onglet **Modèles** et à l'onglet **Membres de hiérarchie** . Les autorisations sont résolues pour chaque onglet, puis combinées. Pour plus d’informations, consultez [How Permissions Are Determined &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md).  
+ Ces règles s'appliquent à la fois à l'onglet **Modèles** et à l'onglet **Membres de hiérarchie** . Les autorisations sont résolues pour chaque onglet, puis combinées. Pour plus d’informations, consultez [Mode de détermination des autorisations &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md).  
   
 > [!NOTE]  
 >  Vous pouvez afficher la résolution du chevauchement des autorisations d'accès dans l'interface utilisateur. Les onglets **Modèles** et **Membres de hiérarchie** ont tous deux une liste déroulante dans laquelle vous pouvez sélectionner **Effectives** pour afficher les autorisations effectives.  

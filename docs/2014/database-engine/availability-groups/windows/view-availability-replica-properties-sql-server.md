@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a1ca87fc977ee97900be9e821cab4918064c7a44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62788005"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>Afficher les propriétés d'un réplica de disponibilité (SQL Server)
@@ -30,11 +30,11 @@ ms.locfileid: "62788005"
   
 2.  Développez le nœud **Haute disponibilité AlwaysOn** et le nœud **Groupes de disponibilité** .  
   
-3.  Développez le groupe de disponibilité auquel appartient le réplica de disponibilité, puis développez le nœud **Réplicas de disponibilité**.  
+3.  Développez le groupe de disponibilité auquel appartient le réplica de disponibilité, puis développez le nœud **Réplicas de disponibilité** .  
   
 4.  Cliquez avec le bouton droit sur le réplica de disponibilité dont vous souhaitez afficher les propriétés, puis sélectionnez la commande **Propriétés** .  
   
-5.  Dans la boîte de dialogue **Propriétés du réplica de disponibilité** , utilisez la page **Général** pour afficher les propriétés de ce réplica. Si vous êtes connecté au réplica principal, vous pouvez modifier les propriétés suivantes : mode de disponibilité, mode de basculement, accès à la connexion pour le rôle principal, accès en lecture pour le rôle secondaire (secondaire lisible) et valeur de délai d'expiration de session. Pour plus d’informations, consultez [propriétés du réplica de disponibilité &#40;Général Page&#41;](availability-replica-properties-general-page.md).  
+5.  Dans la boîte de dialogue **Propriétés du réplica de disponibilité** , utilisez la page **Général** pour afficher les propriétés de ce réplica. Si vous êtes connecté au réplica principal, vous pouvez modifier les propriétés suivantes : mode de disponibilité, mode de basculement, accès à la connexion pour le rôle principal, accès en lecture pour le rôle secondaire (secondaire lisible) et valeur de délai d'expiration de session. Pour plus d’informations, consultez [Propriétés du réplica de disponibilité &#40;page général&#41;](availability-replica-properties-general-page.md).  
   
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
@@ -81,9 +81,9 @@ ms.locfileid: "62788005"
   
 -   [Afficher les propriétés d’écouteur de groupe de disponibilité &#40;SQL Server&#41;](view-availability-group-listener-properties-sql-server.md)  
   
--   [Les stratégies AlwaysOn pour les problèmes opérationnels avec des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)
+-   [Stratégies AlwaysOn pour les problèmes opérationnels avec groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)
   
--   [Utiliser le tableau de bord Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Utilisez le tableau de bord AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 -   [Surveiller des groupes de disponibilité &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   
@@ -119,9 +119,9 @@ ms.locfileid: "62788005"
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Surveiller des groupes de disponibilité &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)   
- [Les stratégies AlwaysOn pour les problèmes opérationnels avec des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
- [Administration d’un groupe de disponibilité &#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)  
+ [Stratégies AlwaysOn pour les problèmes opérationnels avec groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
+ [Administration d’un groupe de disponibilité](administration-of-an-availability-group-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Spécifier la marque comme Table de dates pour l’utiliser avec Time Intelligence (SSAS tabulaire) | Microsoft Docs
+title: Spécifier la marque comme table de dates pour l’utiliser avec Time Intelligence (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27a03aaf94d518caa6b649b7ccd826e08798dacb
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284880"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>Spécifier la marque comme table de dates pour l'utiliser avec Time Intelligence (SSAS - Tabulaire)
@@ -36,9 +36,9 @@ ms.locfileid: "67284880"
   
 1.  Dans le concepteur de modèles, cliquez sur la table de dates.  
   
-2.  Cliquez sur le menu **Table** , cliquez sur **Date**, puis cliquez sur **Marquer en tant que table de dates**  
+2.  Cliquez sur le menu **table** , sur **Date**, puis sur **marquer en tant que table de dates** .  
   
-3.  Dans la boîte de dialogue **Marquer en tant que table de dates** , dans la zone de liste **Date** , sélectionnez une colonne à utiliser comme identificateur unique. Cette colonne doit contenir des valeurs uniques et doit avoir le type de données Date. Exemple :  
+3.  Dans la boîte de dialogue **Marquer en tant que table de dates** , dans la zone de liste **Date** , sélectionnez une colonne à utiliser comme identificateur unique. Cette colonne doit contenir des valeurs uniques et doit avoir le type de données Date. Par exemple :  
   
     |Date|  
     |----------|  
@@ -51,7 +51,7 @@ ms.locfileid: "67284880"
 4.  Si nécessaire, créez les relations entre les tables de faits et la table de dates.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Calculs &#40;SSAS Tabulaire&#41;](calculations-ssas-tabular.md)   
- [Fonctions Time Intelligence &#40;DAX&#41;](/dax/time-intelligence-functions-dax)  
+ [Calculs &#40;&#41;tabulaire SSAS](calculations-ssas-tabular.md)   
+ [Fonctions Time Intelligence &#40;&#41;DAX](/dax/time-intelligence-functions-dax)  
   
   

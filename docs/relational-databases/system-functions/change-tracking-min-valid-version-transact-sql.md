@@ -20,18 +20,18 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5bb0baec2284d17d84c7a8c3dddd13de3fa69510
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68042943"
 ---
-# <a name="changetrackingminvalidversion-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)
+# <a name="change_tracking_min_valid_version-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne la version minimale sur le client est valide pour une utilisation de l’obtention de suivi des informations à partir de la table spécifiée, lorsque vous utilisez le [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) (fonction).  
+  Retourne la version minimale sur le client qui peut être utilisée pour obtenir des informations de suivi des modifications à partir de la table spécifiée, lorsque vous utilisez la fonction [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) .  
     
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,13 +42,13 @@ CHANGE_TRACKING_MIN_VALID_VERSION ( table_object_id )
   
 ## <a name="arguments"></a>Arguments  
  *table_object_id*  
- Est l’ID d’objet de la table. *table_object_id* est un **int**.  
+ ID d’objet de la table. *table_object_id* est un **entier**.  
   
 ## <a name="return-type"></a>Type de retour  
  **bigint**  
   
 ## <a name="remarks"></a>Notes  
- Utilisez cette fonction pour valider la valeur de la *last_sync_version* paramètre pour CHANGETABLE. Si *last_sync_version* est inférieure à la valeur qui est signalée par cette fonction, les résultats sont retournés à partir d’un appel ultérieur à CHANGETABLE n’est peut-être pas valides.  
+ Utilisez cette fonction pour valider la valeur du paramètre *last_sync_version* pour CHANGETABLE. Si *last_sync_version* est inférieure à la valeur signalée par cette fonction, les résultats retournés à partir d’un appel ultérieur à CHANGETABLE peuvent ne pas être valides.  
   
  CHANGE_TRACKING_MIN_VALID_VERSION utilise les informations suivantes pour déterminer la valeur de retour :  
   
