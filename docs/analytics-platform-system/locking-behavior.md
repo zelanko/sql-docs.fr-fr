@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f3ecf5cf783b707b75c90dfa70d502e3c81d28c3
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401002"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>Comportement de verrouillage en parallèle Data Warehouse
@@ -40,7 +40,7 @@ Le verrou SharedUpdate interdit les modes de verrouillage exclusif et ExclusiveU
   
 Les verrous sont conservés sur les classes d’objets suivantes : base de données, schéma, objet (table, vue ou procédure), APPLICATION (utilisée en interne), EXTERNALDATASOURCE, EXTERNALFILEFORMAT et SCHEMARESOLUTION (verrou de niveau base de données pris lors de la création, de la modification ou suppression des objets de schéma ou des utilisateurs de base de données). Ces classes d’objets peuvent apparaître dans la colonne object_type de [sys. dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md).  
   
-## <a name="Remarks"></a>Remarques générales  
+## <a name="Remarks"></a>Remarques d'ordre général  
 Les verrous peuvent être appliqués aux bases de données, aux tables ou aux vues.  
   
 SQL Server PDW n’implémente aucun niveau d’isolement configurable. Il prend en charge le niveau d’isolation READ_UNCOMMITTED, tel que défini par la norme ANSI. Toutefois, étant donné que les opérations de lecture sont exécutées sous READ_UNCOMMITTED, très peu d’opérations de blocage se produisent ou conduisent à une contention dans le système.  
@@ -99,5 +99,5 @@ SQL Server prend en charge les types de verrous suivants. Tous les types de verr
 <!-- MISSING LINKS 
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 -->
-[sys. dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)  
+[sys.dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)  
   

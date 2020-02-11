@@ -1,5 +1,5 @@
 ---
-title: À l’aide de la bibliothèque de curseurs ODBC | Microsoft Docs
+title: Utilisation de la bibliothèque de curseurs ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,32 +14,32 @@ ms.assetid: 9653f2f8-ccfc-4220-99ef-601dc0fa641c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cdddf2e757c549de460f5e22c2ea76ce91a2a969
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069968"
 ---
 # <a name="using-the-odbc-cursor-library"></a>Utilisation de la bibliothèque de curseurs ODBC
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans tout nouveau développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande d’utiliser les fonctionnalités de curseur du pilote.  
+>  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande l’utilisation de la fonctionnalité de curseur du pilote.  
   
  Pour utiliser la bibliothèque de curseurs ODBC, une application :  
   
-1.  Appels **SQLSetConnectAttr** avec un *attribut* de SQL_ATTR_ODBC_CURSORS pour spécifier comment la bibliothèque de curseurs doit être utilisée avec une connexion particulière. La bibliothèque de curseurs peut toujours être utilisé (SQL_CUR_USE_ODBC), jamais utilisé uniquement si le pilote ne prend pas en charge les curseurs avec défilement (SQL_CUR_USE_IF_NEEDED) ou (SQL_CUR_USE_DRIVER).  
+1.  Appelle **SQLSetConnectAttr** avec un *attribut* de SQL_ATTR_ODBC_CURSORS pour spécifier comment la bibliothèque de curseurs doit être utilisée avec une connexion particulière. La bibliothèque de curseurs peut être toujours utilisée (SQL_CUR_USE_ODBC), utilisée uniquement si le pilote ne prend pas en charge les curseurs à défilement (SQL_CUR_USE_IF_NEEDED) ou n’est jamais utilisé (SQL_CUR_USE_DRIVER).  
   
-2.  Appels **SQLConnect**, **SQLDriverConnect**, ou **SQLBrowseConnect** pour se connecter à la source de données.  
+2.  Appelle **SQLConnect**, **SQLDriverConnect**ou **SQLBrowseConnect** pour se connecter à la source de données.  
   
-3.  Appels **SQLSetStmtAttr** pour spécifier le type de curseur (SQL_ATTR_CURSOR_TYPE), d’accès concurrentiel (SQL_ATTR_CONCURRENCY) et taille de l’ensemble de lignes (SQL_ATTR_ROW_ARRAY_SIZE). La bibliothèque de curseurs prend en charge les curseurs avant uniquement et statiques. Les curseurs avant uniquement doivent être en lecture seule, tandis que les curseurs statiques peuvent être en lecture seule ou peuvent utiliser le contrôle d’accès concurrentiel optimiste comparaison de valeurs.  
+3.  Appelle **SQLSetStmtAttr** pour spécifier le type de curseur (SQL_ATTR_CURSOR_TYPE), la concurrence (SQL_ATTR_CONCURRENCY) et la taille de l’ensemble de lignes (SQL_ATTR_ROW_ARRAY_SIZE). La bibliothèque de curseurs prend en charge les curseurs avant uniquement et statiques. Les curseurs avant uniquement doivent être en lecture seule, tandis que les curseurs statiques peuvent être en lecture seule ou peuvent utiliser le contrôle d’accès concurrentiel optimiste en comparant les valeurs.  
   
-4.  Alloue un ou plusieurs tampons de l’ensemble de lignes et les appels **SQLBindCol** une ou plusieurs fois pour lier ces mémoires tampons de colonnes de jeu de résultats.  
+4.  Alloue une ou plusieurs mémoires tampons d’ensemble de lignes et appelle **SQLBindCol** une ou plusieurs fois pour lier ces mémoires tampons aux colonnes du jeu de résultats.  
   
-5.  Génère un jeu de résultats en exécutant un **sélectionnez** instruction ou une procédure, ou en appelant une fonction de catalogue. Si l’application exécute les instructions de mise à jour positionnée, elle doit exécuter un **Sélectionnez pour mettre à jour** instruction pour générer le jeu de résultats.  
+5.  Génère un jeu de résultats en exécutant une instruction **Select** ou une procédure, ou en appelant une fonction de catalogue. Si l’application exécute des instructions Update positionnées, elle doit exécuter une instruction **Select for Update** pour générer le jeu de résultats.  
   
-6.  Appels **SQLFetch** ou **SQLFetchScroll** une ou plusieurs fois pour faire défiler le jeu de résultats.  
+6.  Appelle **SQLFetch** ou **SQLFetchScroll** une ou plusieurs fois pour faire défiler le jeu de résultats.  
   
- L’application peut modifier les valeurs de données dans les mémoires tampons d’ensemble de lignes. Pour actualiser les mémoires tampons d’ensemble de lignes avec des données à partir du cache de la bibliothèque de curseurs, une application appelle **SQLFetchScroll** avec la *FetchOrientation* argument a la valeur SQL_FETCH_RELATIVE et  *FetchOffset* argument la valeur 0.  
+ L’application peut modifier les valeurs des données dans les mémoires tampons de l’ensemble de lignes. Pour actualiser les tampons de l’ensemble de lignes avec les données du cache de la bibliothèque de curseurs, une application appelle **SQLFetchScroll** avec l’argument *FetchOrientation* défini sur SQL_FETCH_RELATIVE et l’argument *FetchOffset* défini sur 0.  
   
- Pour récupérer des données à partir d’une colonne indépendante, l’application appelle **SQLSetPos** pour positionner le curseur sur la ligne souhaitée. Il appelle ensuite **SQLGetData** pour récupérer les données.  
+ Pour extraire des données d’une colonne indépendante, l’application appelle **SQLSetPos** pour positionner le curseur sur la ligne souhaitée. Il appelle ensuite **SQLGetData** pour récupérer les données.  
   
- Pour déterminer le nombre de lignes qui ont été récupérées à partir de la source de données, l’application appelle **SQLRowCount**.
+ Pour déterminer le nombre de lignes qui ont été extraites de la source de données, l’application appelle **SQLRowCount**.

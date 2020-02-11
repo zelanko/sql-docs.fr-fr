@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5b6e2072e06e1ea5d61802a4c6a006737bc04762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871695"
 ---
 # <a name="database-states"></a>États d'une base de données
@@ -39,7 +39,7 @@ ms.locfileid: "62871695"
 ## <a name="database-state-definitions"></a>Définition des états d'une base de données  
  Le tableau ci-dessous définit les états de la base de données.  
   
-|État|Définition|  
+|State|Définition|  
 |-----------|----------------|  
 |ONLINE|La base de données est accessible. Le groupe de fichiers primaire est en ligne, mais il est possible que la phase de restauration de la récupération n'ait pas été réalisée.|  
 |OFFLINE|La base de données n'est pas disponible. Une base de données est mise hors connexion par une action explicite de l'utilisateur et reste dans cet état jusqu'à une nouvelle action de l'utilisateur. Par exemple, la base de données peut être mise hors connexion pour déplacer un fichier sur un nouveau disque. La base de données est ensuite ramenée en ligne une fois que le déplacement a eu lieu.|  

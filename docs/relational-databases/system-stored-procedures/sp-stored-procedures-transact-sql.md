@@ -18,19 +18,19 @@ ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 554b9317d6b474b23e9dbbc10dea03156ccc6287
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68702783"
 ---
-# <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
+# <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Renvoie la liste des procédures stockées dans l'environnement actuel.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,9 +43,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @sp_name = ] 'name'`Nom de la procédure utilisée pour retourner les informations de catalogue. *Name* est de type **nvarchar (390)** , avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge.  
+`[ @sp_name = ] 'name'`Nom de la procédure utilisée pour retourner les informations de catalogue. *Name* est de type **nvarchar (390)**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge.  
   
-`[ @sp_owner = ] 'schema'`Nom du schéma auquel appartient la procédure. *Schema* est de type **nvarchar (384)** , avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si *owner* n’est pas spécifié, les règles de visibilité des procédures par défaut du SGBD sous-jacent s’appliquent.  
+`[ @sp_owner = ] 'schema'`Nom du schéma auquel appartient la procédure. *Schema* est de type **nvarchar (384)**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si *owner* n’est pas spécifié, les règles de visibilité des procédures par défaut du SGBD sous-jacent s’appliquent.  
   
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si le schéma actif contient une procédure avec le nom spécifié, celle-ci est renvoyée. Si une procédure stockée non qualifiée est spécifiée, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] la recherche dans l'ordre suivant :  
   
@@ -55,7 +55,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   Schéma **dbo** dans la base de données active.  
   
-`[ @qualifier = ] 'qualifier'`Nom du qualificateur de la procédure. *qualifier* est de **type sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge les noms de tables en trois parties dans le formulaire (_qualificateur_ **.** _schéma_ **.** _nom_. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le *qualificateur* représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
+`[ @qualifier = ] 'qualifier'`Nom du qualificateur de la procédure. *qualifier* est de **type sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge les noms de tables en trois parties dans le formulaire (_qualificateur_**.** _schéma_**.** _nom_. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le *qualificateur* représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
 `[ @fUsePattern = ] 'fUsePattern'`Détermine si le trait de soulignement (_), le pourcentage (%) ou les crochets []) sont interprétés comme des caractères génériques. *fUsePattern* est de **bits**, avec 1 comme valeur par défaut.  
   
@@ -63,8 +63,8 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
  **1** = les critères spéciaux sont activés.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- Aucun  
+## <a name="return-code-values"></a>Codet de retour  
+ None  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -72,12 +72,14 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**PROCEDURE_QUALIFIER**|**sysname**|Nom du qualificateur de procédure. Cette colonne peut être NULL.|  
 |**PROCEDURE_OWNER**|**sysname**|Nom du propriétaire de la procédure. Cette colonne renvoie toujours une valeur.|  
-|**PROCEDURE_NAME**|**nvarchar(134)**|Nom de la procédure. Cette colonne renvoie toujours une valeur.|  
-|**NUM_INPUT_PARAMS**|**Int**|Réservé pour un usage ultérieur.|  
-|**NUM_OUTPUT_PARAMS**|**int**|Réservé pour un usage ultérieur.|  
-|**NUM_RESULT_SETS**|**Int**|Réservé pour un usage ultérieur.|  
-|**CONCERNANT**|**varchar(254)**|Description de la procédure. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur pour cette colonne.|  
-|**PROCEDURE_TYPE**|**smallint**|Type de procédure. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne toujours 2.0. Cette valeur peut être l’une des suivantes:<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
+|**PROCEDURE_NAME**|**nvarchar (134)**|Nom de la procédure. Cette colonne renvoie toujours une valeur.|  
+|**NUM_INPUT_PARAMS**|**int**|réservé à une utilisation future.|  
+|**NUM_OUTPUT_PARAMS**|**int**|réservé à une utilisation future.|  
+|**NUM_RESULT_SETS**|**int**|réservé à une utilisation future.|  
+|**CONCERNANT**|**varchar (254)**|Description de la procédure. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur pour cette colonne.|  
+|**PROCEDURE_TYPE**|**smallint**|Type de procédure. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne toujours 2.0. Cette valeur peut être l'une des suivantes :<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
 ## <a name="remarks"></a>Notes  
  Pour une interopérabilité maximale, le client de la passerelle doit utiliser seulement les recherches de correspondance avec des caractères génériques de SQL (caractères génériques % et _).  
@@ -110,7 +112,7 @@ sp_stored_procedures N'uspLogError', N'dbo', N'AdventureWorks2012', 1;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures &#40;stockées de catalogue Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Procédures stockées de catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
