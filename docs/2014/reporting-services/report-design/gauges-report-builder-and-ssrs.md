@@ -159,10 +159,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ec55d658da67c7d6ef7e9989f310c26ef11a20d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105745"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Jauges (Générateur de rapports et SSRS)
@@ -178,9 +178,9 @@ ms.locfileid: "66105745"
   
  Il existe deux types de jauges : la jauge radiale et la jauge linéaire. L'illustration suivante présente les éléments de base d'une jauge radiale unique dans le panneau de jauge.  
   
- ![Diagramme d’éléments de jauge](../media/gauge-elements-diagram.gif "Diagramme d’éléments de jauge")  
+ ![Diagramme d'éléments de jauge](../media/gauge-elements-diagram.gif "Diagramme d'éléments de jauge")  
   
- Pour plus d'informations sur l'utilisation de jauges comme indicateurs de performance clés, consultez le [tutoriel : Ajout d’un indicateur de performance clé à un rapport &#40;Générateur de rapports&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Pour plus d’informations sur l’utilisation des jauges comme indicateurs de performance clés, consultez [Didacticiel : ajout d’un indicateur de performance clé à un rapport &#40;Générateur de rapports&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  Vous pouvez publier des jauges hors d'un rapport en tant que parties du rapport. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -188,8 +188,9 @@ ms.locfileid: "66105745"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="GaugeTypes"></a> Types de jauges  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] fournit deux types de jauges : la jauge radiale et la jauge linéaire. La jauge radiale est en général utilisée lorsque vous souhaitez exprimer les données comme valeur de rapidité. La jauge linéaire est utilisée pour exprimer les données comme valeur de température ou d'échelle.  
+##  <a name="GaugeTypes"></a>Types de jauges  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] fournit deux types de jauges : la jauge radiale et la jauge linéaire. La jauge radiale est en général utilisée lorsque vous souhaitez exprimer les données comme valeur de rapidité. La jauge linéaire est utilisée pour exprimer les données comme valeur de température ou d'échelle.  
   
  Les principales différences entre les deux types sont la forme globale de la jauge et les pointeurs de la jauge disponibles. Les jauges radiales sont circulaires, ou plus ou moins circulaires, et ressemblent à des indicateurs de vitesse. Les pointeurs de la jauge sont souvent des aiguilles, mais peuvent être des marqueurs ou des barres.  
   
@@ -203,16 +204,16 @@ ms.locfileid: "66105745"
   
  ![rs_RadialGauge](../media/rs-radialgauge.gif "rs_RadialGauge")  
   
- Options de jauge radiale : Radial, Radial avec mini-jauge, Deux échelles, 90 degrés nord-est, 90 degrés nord-ouest, 90 degrés sud-ouest, 90 degrés sud-est, 180 degrés nord, 180 degrés sud, 180 degrés ouest, 180 degrés est et Compteur.  
+ Options de jauge radiale : Radial, Radial avec mini-jauge, Deux échelles, 90 degrés nord-est, 90 degrés nord-ouest, 90 degrés sud-ouest, 90 degrés sud-est, 180 degrés nord, 180 degrés sud, 180 degrés ouest, 180 degrés est et Métrique.  
   
  **Jauge linéaire**  
   
  ![rs_LinearGauge](../media/rs-lineargauge.gif "rs_LinearGauge")  
   
- Options de jauge linéaire : Horizontal, Vertical, Pointeurs multiples en forme de barres, Deux échelles, Plage de trois couleurs, Logarithmique, Thermomètre, Thermomètre Fahrenheit/Celsius et Graphique à puces.  
+ Options de jauge linéaire : Horizontal, Vertical, Pointeurs multiples en forme de barres, Deux échelles, Plage de trois couleurs, Logarithmique, Thermomètre, Thermomètre Fahrenheit/Celsius et Graphique à puces.  
   
   
-##  <a name="AddingData"></a> Ajout de données à une jauge  
+##  <a name="AddingData"></a>Ajout de données à une jauge  
  Une fois que vous avez ajouté une jauge à l'aire de conception, il vous suffit de faire glisser un champ du dataset vers le volet des données de la jauge. Par défaut, la jauge agrège les valeurs du champ en une seule valeur qui est indiquée sur la jauge. Cette valeur est associée au pointeur via la propriété Value. Selon le type de données du champ, la jauge utilise l'agrégat SUM ou COUNT. Lorsque vous utilisez des données numériques qui peuvent être ajoutées, la jauge utilise la fonction SUM. Sinon, elle utilise l'agrégat COUNT. La valeur du pointeur peut utiliser un agrégat différent, ou aucun agrégat.  
   
  Vous pouvez ajouter le regroupement à la jauge pour afficher des groupes individuels ou des lignes individuelles sur la jauge. Une fois le regroupement et le filtrage appliqués, la jauge utilise la valeur du pointeur pour afficher le dernier groupe ou la dernière ligne dans le dataset retourné.  
@@ -240,7 +241,7 @@ ms.locfileid: "66105745"
     > [!NOTE]  
     >  Cette méthode n'est pas applicable en l'absence de pointeur sur la jauge ou lorsque le rapport contient plusieurs datasets et que le panneau de jauge n'est associé à aucun dataset.  
   
--   Cliquez avec le bouton droit sur le pointeur de la jauge et sélectionnez **Propriétés du pointeur**. Pour `Value`, sélectionnez un champ dans la liste déroulante ou définissez une expression de champ en cliquant sur le **Expression** (*fx*) bouton.  
+-   Cliquez avec le bouton droit sur le pointeur de la jauge et sélectionnez **Propriétés du pointeur**. Pour `Value`, sélectionnez un champ dans la liste déroulante ou définissez une expression de champ en cliquant sur le bouton **expression** (*FX*).  
   
 ### <a name="aggregating-fields-into-a-single-value"></a>Agrégation de champs en une seule valeur  
  Lorsqu'un champ est ajouté à une jauge, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] calcule par défaut un agrégat pour ce champ. Les types de données numériques sont agrégés à l'aide de la fonction SUM. Les types de données non numériques sont agrégés à l'aide de la fonction COUNT, qui compte le nombre d'instances d'une valeur ou d'un champ particulier dans le dataset ou le groupe. Si le type de données du champ de valeur est String, la jauge ne peut pas afficher de valeur numérique, y compris en présence de chiffres dans les champs. Au lieu de cela, la jauge agrège les champs de type String à l'aide de la fonction COUNT. Pour éviter ce comportement, assurez-vous que les champs que vous utilisez sont des types de données numériques, par opposition aux chaînes qui contiennent des nombres mis en forme. Vous pouvez utiliser une expression Visual Basic pour convertir des valeurs de chaîne en type de données numérique à l'aide de la constante CDbl ou CInt. Par exemple, l'expression suivante convertit un champ de chaîne appelé MyField en valeurs numériques.  
@@ -255,7 +256,7 @@ ms.locfileid: "66105745"
  Vous pouvez ajouter un groupe à la jauge lorsque, par exemple, vous affichez plusieurs jauges dans une table ou une liste et que vous souhaitez afficher des données agrégées par groupe. Pour plus d’informations, consultez [Ajouter ou supprimer un groupe dans une région de données &#40;Générateur de rapports et SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
   
-##  <a name="PositioningData"></a> Positionnement des éléments dans une jauge  
+##  <a name="PositioningData"></a>Positionnement des éléments dans une jauge  
  Le panneau de jauge est le conteneur de niveau supérieur qui contient une ou plusieurs jauges. Pour afficher la boîte de dialogue **Propriétés du panneau de jauge** , cliquez immédiatement en dehors de la jauge. Chaque jauge contient successivement plusieurs éléments de jauge : une échelle de jauge, une plage de jauge et un pointeur de jauge. Lorsque vous utilisez la jauge, vous devez comprendre comment les éléments sont mesurés dans le panneau de jauge pour pouvoir modifier la taille et l'emplacement de ces éléments.  
   
 ### <a name="understanding-size-and-position-measurements"></a>Présentation des mesures de la taille et de la position  
@@ -292,7 +293,7 @@ ms.locfileid: "66105745"
   
 -   [Définir un intervalle d’alignement sur une jauge &#40;Générateur de rapports et SSRS&#41;](../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [Spécifier une Image en tant que pointeur sur une jauge &#40;Générateur de rapports et SSRS&#41;](../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md)  
+-   [Spécifier une image en tant que pointeur sur une jauge &#40;Générateur de rapports et SSRS&#41;](../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md)  
   
   
 ##  <a name="InThisSection"></a> Dans cette section  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fd223c0a66b533cb2b405dd0e766f7053b7a4e89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63275969"
 ---
 # <a name="sql-pane-visual-database-tools"></a>Volet SQL (Visual Database Tools)
@@ -56,9 +56,9 @@ ms.locfileid: "63275969"
 ## <a name="see-also"></a>Voir aussi  
  [Créer des requêtes &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Exécuter des requêtes &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
- [Concevoir des requêtes et des vues des rubriques de procédures &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [Volet schéma &#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
- [Volet Critères &#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
+ [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Volet Schéma &#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
+ [Volet critères &#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
  [Volet Résultats &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Champ (ADO - syntaxe WFC) | Microsoft Docs
+title: Field (syntaxe ADO-WFC) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 583e6de7dc8c3ea05d61dda53c3e630d05e4d5f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918750"
 ---
 # <a name="field-ado---wfc-syntax"></a>Field (ADO - syntaxe WFC)
-## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>package com. ms. wfc. Data  
   
 ### <a name="methods"></a>Méthodes  
   
@@ -34,7 +34,7 @@ public char[] getCharChunk(int len)
 public String getStringChunk(int len)  
 ```  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>Propriétés  
   
 ```  
 public int getActualSize()  
@@ -44,7 +44,7 @@ public com.ms.com.IUnknown getDataFormat()
 public void setDataFormat(com.ms.com.IUnknown format)  
 ```  
   
- (Pour plus d’informations, consultez la documentation pour l’interface com.ms.wfc.data.IDataFormat.)  
+ (Pour plus d’informations, consultez la documentation de l’interface com. ms. wfc. Data. IDataFormat.)  
   
 ```  
 public int getDefinedSize()  
@@ -64,13 +64,13 @@ public AdoProperties getProperties()
 ```  
   
 ### <a name="field-accessor-methods"></a>Méthodes d’accesseur de champ  
- Le [valeur](../../../ado/reference/ado-api/value-property-ado.md) propriété d’un [champ](../../../ado/reference/ado-api/field-object.md) objet Obtient ou définit le contenu de cet objet. Le contenu est représenté en tant que VARIANT, un type d’objet qui peut avoir une valeur et plusieurs types de données.  
+ La propriété [value](../../../ado/reference/ado-api/value-property-ado.md) d’un objet [Field](../../../ado/reference/ado-api/field-object.md) obtient ou définit le contenu de cet objet. Le contenu est représenté sous la forme d’une variante, d’un type d’objet auquel une valeur et l’un des différents types de données peuvent être attribués.  
   
- ADO/WFC implémente la **valeur** propriété avec le **getValue** (méthode), qui retourne un objet de type VARIANT ; et le **setValue** (méthode), qui prend une variante en tant qu’argument. Variantes sont très efficaces dans certains langages, tels que Microsoft Visual Basic.  
+ ADO/WFC implémente la propriété **value** avec la méthode **GetValue** , qui retourne un objet variant ; et la méthode **SetValue** , qui prend une variante comme argument. Les VARIANTEs sont très efficaces dans certains langages, tels que Microsoft Visual Basic.  
   
- Outre le **valeur** propriété, ADO/WFC fournit *accesseur* les méthodes qui utilisent des types de données Java pour obtenir et définir le contenu de **champ** objets. La plupart de ces méthodes ont des noms au format **obtenir**_DataType_ ou **définir**_DataType_.  
+ En plus de la propriété **value** , ADO/WFC fournit des méthodes d' *accesseur* qui utilisent des types de données Java pour récupérer et définir le contenu des objets **Field** . La plupart de ces méthodes ont des noms au format **obtenir**le_type de données_ ou **définir**le type de_données_.  
   
- Il existe deux exceptions à cela : Parmi les **getObject** méthodes retourne un objet converti en une classe spécifiée. Il existe aucune **getNull** propriété ; au lieu de cela, il existe un **isNull** propriété qui retourne une valeur booléenne indiquant si le champ est null.  
+ Il existe deux exceptions intéressantes : l’une des méthodes **GetObject** retourne un objet forcé dans une classe spécifiée. Il n’existe aucune propriété **getNull** ; au lieu de cela, il existe une propriété **IsNull** qui retourne une valeur booléenne indiquant si le champ est null.  
   
 ```  
 public native boolean getBoolean();  
@@ -99,4 +99,4 @@ public void setObject(Object value)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Field, objet](../../../ado/reference/ado-api/field-object.md)
+ [Objet Field](../../../ado/reference/ado-api/field-object.md)

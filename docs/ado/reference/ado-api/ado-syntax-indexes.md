@@ -14,18 +14,18 @@ ms.assetid: fad34f61-c34f-4c0b-8ce5-3b8872abfe4e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e4e4b071b8c62d3110d9d732d4cc63be3cce084d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920884"
 ---
 # <a name="ado-syntax-indexes"></a>Index de la syntaxe ADO
-La syntaxe d’appel des méthodes et propriétés ADO diffère selon votre environnement de développement. Le reste de la référence du langage ADO utilise le langage de programmation Microsoft Visual Basic pour illustrer la syntaxe de méthode et la propriété ADO. Toutefois, consultez les sections suivantes pour des exemples de syntaxe plus spécifiques en fonction de votre langage de programmation et de méthodologie :  
+La syntaxe d’appel des méthodes et des propriétés ADO diffère en fonction de votre environnement de développement. Le reste de la référence du langage ADO utilise le langage de programmation Microsoft Visual Basic pour illustrer la syntaxe des propriétés et des méthodes ADO. Toutefois, reportez-vous aux sections suivantes pour obtenir des exemples de syntaxe spécifiques basés sur votre langage et votre méthodologie de programmation :  
   
--   Le [ADO pour les Index de la syntaxe Visual C++ pour COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) couvre les propriétés et méthodes ADO sans utilisation de la **#import** directive de compilateur avec Microsoft Visual C++.  
+-   L' [index de syntaxe ADO for Visual C++ pour com](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) couvre les propriétés et les méthodes ADO sans utiliser la directive du compilateur **#import** avec Microsoft Visual C++.  
   
--   Le [ADO pour les Index de la syntaxe Visual C++ avec #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md) couvre les propriétés et méthodes ADO lorsque vous utilisez le **#import** directive de compilateur avec Microsoft Visual C++.  
+-   L' [index de syntaxe ADO for Visual C++ avec #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md) couvre les propriétés et les méthodes ADO lors de l’utilisation de la directive de compilateur **#import** avec Microsoft Visual C++.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation d’ADO avec Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   

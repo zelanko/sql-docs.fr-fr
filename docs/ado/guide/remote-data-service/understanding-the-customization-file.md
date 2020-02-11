@@ -1,5 +1,5 @@
 ---
-title: Présentation du fichier de personnalisation | Microsoft Docs
+title: Fonctionnement du fichier de personnalisation | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81a73044c1ab413fb2b49286814f3e6b3951c6c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921967"
 ---
 # <a name="understanding-the-customization-file"></a>Présentation du fichier de personnalisation
-Chaque en-tête de section dans le fichier de personnalisation se compose de crochets ( **[]** ) contenant un type et un paramètre. Les quatre types de section sont indiquées par les chaînes littérales **connecter**, **sql**, **userlist**, ou **journaux**. Le paramètre est la chaîne littérale, la valeur par défaut, un identificateur spécifié par l’utilisateur ou rien du tout.  
+Chaque en-tête de section du fichier de personnalisation se compose de crochets (**[]**) contenant un type et un paramètre. Les quatre types de section sont indiqués par les chaînes littérales **Connect**, **SQL**, **UserList**ou **logs**. Le paramètre est la chaîne littérale, la valeur par défaut, un identificateur spécifié par l’utilisateur ou rien.  
   
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Par conséquent, chaque section est marquée avec l’un des en-têtes de section suivants :  
   
@@ -39,39 +39,39 @@ identifier
   
 ```  
   
- Les en-têtes de section des éléments suivants.  
+ Les en-têtes de section comportent les éléments suivants.  
   
 |Élément|Description|  
 |----------|-----------------|  
-|**connect**|Une chaîne littérale qui modifie une chaîne de connexion.|  
-|**sql**|Une chaîne littérale qui modifie une chaîne de commande.|  
-|**userlist**|Une chaîne littérale qui modifie les droits d’accès d’un utilisateur spécifique.|  
-|**logs**|Une chaîne littérale qui spécifie un fichier journal de l’enregistrement d’erreurs opérationnelles.|  
-|**default**|Une chaîne littérale qui est utilisée si aucun identificateur n’est spécifié ou trouvé.|  
-|*identifier*|Chaîne qui correspond à une chaîne dans le **connecter** ou **commande** chaîne.<br /><br /> -Utilisez cette section si l’en-tête de section contient **connecter** et la chaîne d’identificateur se trouve dans la chaîne de connexion.<br />-Utilisez cette section si l’en-tête de section contient **sql** et la chaîne d’identificateur se trouve dans la chaîne de commande.<br />-Utilisez cette section si l’en-tête de section contient **userlist** et la chaîne de l’identificateur correspond à un **connecter** identificateur de section.|  
+|**entre**|Chaîne littérale qui modifie une chaîne de connexion.|  
+|**sql**|Chaîne littérale qui modifie une chaîne de commande.|  
+|**UserList**|Chaîne littérale qui modifie les droits d’accès d’un utilisateur spécifique.|  
+|**ouvrir**|Chaîne littérale qui spécifie un enregistrement de fichier journal d’erreurs opérationnelles.|  
+|**valeurs**|Chaîne littérale qui est utilisée si aucun identificateur n’est spécifié ou trouvé.|  
+|*identificateur*|Chaîne qui correspond à une chaîne dans la chaîne de **connexion** ou de **commande** .<br /><br /> -Utilisez cette section si l’en-tête de section contient **Connect** et que la chaîne d’identificateur est trouvée dans la chaîne de connexion.<br />-Utilisez cette section si l’en-tête de section contient **SQL** et que la chaîne d’identificateur est trouvée dans la chaîne de commande.<br />-Utilisez cette section si l’en-tête de section contient **UserList** et que la chaîne d’identificateur correspond à un identificateur de section de **connexion** .|  
   
- Le **DataFactory** appelle le gestionnaire, en passant les paramètres client. Le gestionnaire recherche les chaînes entières dans les paramètres client qui correspondent aux identificateurs dans les en-têtes de la section appropriée. Si une correspondance est trouvée, le contenu de cette section est appliqué au paramètre du client.  
+ Le **DataFactory** appelle le gestionnaire, en passant les paramètres du client. Le gestionnaire recherche les chaînes entières dans les paramètres client qui correspondent aux identificateurs dans les en-têtes de section appropriés. Si une correspondance est trouvée, le contenu de cette section est appliqué au paramètre client.  
   
  Une section particulière est utilisée dans les circonstances suivantes :  
   
--   A **connecter** section est utilisée si la valeur du client de connexion mot clé de chaîne, «**Source de données =** _valeur_», correspond à un **connecter** identificateur de la section. 
+-   Une section de **connexion** est utilisée si la partie valeur du mot clé de chaîne de connexion client, «**Data source =**_value_», correspond à un identificateur de section de **connexion** . 
   
--   Un **sql** section est utilisée si la chaîne de commande client contient une chaîne qui correspond à un **sql** identificateur de section.  
+-   Une section **SQL** est utilisée si la chaîne de commande du client contient une chaîne qui correspond à un identificateur de section **SQL** .  
   
--   Un **connecter** ou **sql** section avec un paramètre par défaut est utilisée si aucun identificateur correspondant.  
+-   Une section **Connect** ou **SQL** avec un paramètre default est utilisée en l’absence d’identificateur correspondant.  
   
--   Un **userlist** section est utilisée si le **userlist** section identificateur correspondances un **connecter** identificateur de la section. S’il existe une correspondance, le contenu de la **userlist** section sont appliqués à la connexion régie par le **connecter** section.  
+-   Une section **UserList** est utilisée si l’identificateur de la section **UserList** correspond à un identificateur de section de **connexion** . En cas de correspondance, le contenu de la section **UserList** est appliqué à la connexion régie par la section **Connect** .  
   
--   Si la chaîne dans une chaîne de connexion ou de commande ne correspond pas à l’identificateur dans les **connecter** ou **sql** section d’en-tête et il est aucun **connecter** ou **sql**  section d’en-tête avec un paramètre par défaut, la chaîne du client est utilisé sans modification.  
+-   Si la chaîne d’une connexion ou d’une chaîne de commande ne correspond pas à l’identificateur d’un en-tête de la section **Connect** ou **SQL** et qu’il n’existe pas d’en-tête **Connect** ou **SQL** avec un paramètre default, la chaîne du client est utilisée sans modification.  
   
--   Le **journaux** section est utilisée chaque fois que le **DataFactory** est en cours.  
+-   La section **logs** est utilisée chaque fois que le **DataFactory** est en cours d’exécution.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fichier de personnalisation, Section Connect](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Fichier de personnalisation, Section de journaux](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Fichier de personnalisation, Section SQL](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Fichier de personnalisation, Section UserList](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
+ [Section de connexion au fichier de personnalisation](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
+ [Section journaux des fichiers de personnalisation](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
+ [Section SQL du fichier de personnalisation](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
+ [Section UserList du fichier de personnalisation](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
  [Personnalisation de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Paramètres Client requis](../../../ado/guide/remote-data-service/required-client-settings.md)   
+ [Paramètres client requis](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Écriture d’un gestionnaire personnalisé](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
 

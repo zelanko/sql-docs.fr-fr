@@ -15,20 +15,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68024e36dd5f8188097ebcc673056c1b6d11e59b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100884"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Remise par courrier électronique dans Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] comprend une extension de remise par e-mail qui permet d’envoyer par e-mail des rapports à des utilisateurs individuels ou à des groupes. Vous pouvez configurer l'extension de remise par messagerie à l'aide du Gestionnaire de configuration de Reporting Services et en modifiant les fichiers de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- Pour distribuer ou recevoir un rapport par courrier électronique, vous devez définir un abonnement standard ou piloté par les données. Vous pouvez vous abonner ou effectuer la remise que d'un seul rapport à la fois. Vous ne pouvez pas créer d'abonnement qui distribue plusieurs rapports dans un seul message électronique. Pour plus d’informations sur les abonnements, consultez [créer, modifier et supprimer des abonnements Standard &#40;Reporting Services en Mode natif&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md).  
+ Pour distribuer ou recevoir un rapport par courrier électronique, vous devez définir un abonnement standard ou piloté par les données. Vous pouvez vous abonner ou effectuer la remise que d'un seul rapport à la fois. Vous ne pouvez pas créer d'abonnement qui distribue plusieurs rapports dans un seul message électronique. Pour plus d’informations sur les abonnements, consultez [créer, modifier et supprimer des abonnements Standard &#40;Reporting Services en mode natif&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode SharePoint &#124; SharePoint 2010 et SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Mode SharePoint &#124; SharePoint 2010 et SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Mode natif|  
   
 ## <a name="e-mail-delivery-options"></a>Options de remise des rapports par messagerie  
  La remise de rapports par messagerie du serveur de rapports s'effectue de différentes manières :  
@@ -37,9 +37,9 @@ ms.locfileid: "66100884"
   
 -   Envoi d'une notification dans la ligne Objet d'un message électronique. Par défaut, la ligne Objet de la définition d'abonnement contient les variables suivantes qui sont remplacées par des informations spécifiques au rapport lors du traitement de l'abonnement.  
   
-     **@ReportName** spécifie le nom du rapport.  
+     **@ReportName**Spécifie le nom du rapport.  
   
-     **@ExecutionTime** spécifie l'heure d'exécution du rapport.  
+     **@ExecutionTime**spécifie à quel moment le rapport a été exécuté.  
   
      Vous pouvez combiner ces variables avec du texte statique ou modifier le texte dans la ligne Objet de chaque abonnement.  
   
@@ -47,9 +47,10 @@ ms.locfileid: "66100884"
   
      Si votre navigateur prend en charge les formats HTML 4.0 et MHTML et si vous choisissez le format de rendu Archive Web, le rapport est incorporé au message. Tous les autres formats de rendu (CSV, PDF, etc.) remettent les rapports sous forme de pièces jointes. Vous pouvez désactiver cette fonction dans le fichier de configuration RSReportServer.  
   
-     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne vérifie pas la taille de la pièce jointe ou du message avant d'envoyer le rapport. Si la pièce jointe ou le message dépasse la limite maximale autorisée par votre serveur de messagerie, le rapport n'est pas remis. Choisissez une des autres options de remise (URL ou notification) si le rapport est volumineux.  
+     
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne vérifie pas la taille de la pièce jointe ou du message avant d'envoyer le rapport. Si la pièce jointe ou le message dépasse la limite maximale autorisée par votre serveur de messagerie, le rapport n'est pas remis. Choisissez une des autres options de remise (URL ou notification) si le rapport est volumineux.  
   
- C'est au moment de la création de l'abonnement que vous définissez les options de remise d'un rapport. Par exemple, si vous sélectionnez **Inclure un lien** dans l'abonnement, le message électronique contient un lien hypertexte vers le rapport.  
+ C'est au moment de la création de l'abonnement que vous définissez les options de remise d'un rapport. Par exemple, si vous sélectionnez **Inclure un lien** dans l’abonnement, le message e-mail contient un lien hypertexte vers le rapport.  
   
 ## <a name="role-based-e-mail-settings"></a>Paramètres de messagerie basés sur les rôles  
  Lorsque vous vous abonnez à un rapport, les paramètres de remise par messagerie que vous utilisez varient en fonction de votre rôle qui englobe soit la tâche « Gérer les abonnements individuels », soit la tâche « Gérer tous les abonnements ».  
@@ -71,9 +72,9 @@ ms.locfileid: "66100884"
   
  Pour plus d'informations sur la configuration d'un serveur de rapports en mode natif, consultez :  
   
--   [Configurer un serveur de rapports pour la remise du courrier électronique &#40;Gestionnaire de Configuration de SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+-   [Configurer un serveur de rapports pour la remise par messagerie &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   
--   [Paramètres de messagerie - Gestionnaire de Configuration &#40;SSRS en Mode natif&#41;](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
+-   [Paramètres de messagerie : Configuration Manager &#40;mode natif SSRS&#41;](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
   
  Pour plus d'informations sur la configuration d'un serveur de rapports en mode SharePoint, consultez :  
   
@@ -82,7 +83,7 @@ ms.locfileid: "66100884"
 ## <a name="see-also"></a>Voir aussi  
  [Tâches et autorisations](../security/tasks-and-permissions.md)   
  [Abonnements et remise &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [Abonnements pilotés par les données](data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Attributions de rôles](../security/role-assignments.md)  
   
   

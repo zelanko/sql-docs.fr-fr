@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_validate_plan_guide (Transact-SQL) | Microsoft Docs
+title: sys. fn_validate_plan_guide (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,20 +21,20 @@ ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a76835272ed86faeab807f97f6e8801985062733
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68059191"
 ---
-# <a name="sysfnvalidateplanguide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
+# <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Vérifie la validité du repère de plan spécifié. La fonction sys.fn_validate_plan_guide retourne le premier message d'erreur rencontré lorsque le repère de plan est appliqué à sa requête. Un ensemble de lignes vide est retourné lorsque le repère de plan est valide. Les repères de plan peuvent devenir non valides lorsque des modifications sont apportées à la conception physique de la base de données. Par exemple, si un repère de plan spécifie un index particulier et que cet index est ensuite supprimé, la requête ne peut plus utiliser ce repère de plan.  
   
  En validant un repère de plan, vous pouvez déterminer si le repère peut être utilisé par l'optimiseur sans modification. Selon les résultats de la fonction, vous pouvez décider de supprimer le repère de plan et paramétrer à nouveau la requête, ou de modifier la conception de base de données, par exemple, en recréant l'index spécifié dans le repère de plan.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,7 +44,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
   
 ## <a name="arguments"></a>Arguments  
  *plan_guide_id*  
- Est l’ID du repère de plan tel qu’indiqué dans le [sys.plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) vue de catalogue. *plan_guide_id* est **int** sans valeur par défaut.  
+ ID du repère de plan tel qu’indiqué dans l’affichage catalogue [sys. plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) . *plan_guide_id* est de **type int** sans valeur par défaut.  
   
 ## <a name="table-returned"></a>Table retournée  
   
@@ -53,7 +53,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 |msgnum|**int**|ID du message d'erreur.|  
 |severity|**tinyint**|Niveau de gravité du message, entre 1 et 25.|  
 |state|**smallint**|Numéro d'état de l'erreur indiquant le point dans le code au niveau duquel l'erreur s'est produite.|  
-|message|**nvarchar(2048)**|Texte du message de l'erreur.|  
+|message|**nvarchar (2048)**|Texte du message de l'erreur.|  
   
 ## <a name="permissions"></a>Autorisations  
  Les repères de plan de portée OBJECT requièrent une autorisation VIEW DEFINITION ou ALTER sur l'objet et les autorisations référencés pour compiler la requête ou le lot fourni dans le repère de plan. Par exemple, si un lot contient des instructions SELECT, des autorisations SELECT sont requises sur les objets référencés.  
@@ -75,7 +75,7 @@ GO
 ```  
   
 ### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>B. Test de la validation des repères de plan avant d'implémenter une modification de la base de données  
- L'exemple suivant utilise une transaction explicite pour supprimer un index. Le `sys.fn_validate_plan_guide` fonction est exécutée pour déterminer si cette action invalidera des repères de plan dans la base de données. En fonction des résultats de la fonction, l'instruction `DROP INDEX` est validée ou la transaction est restaurée, et l'index n'est pas supprimé.  
+ L'exemple suivant utilise une transaction explicite pour supprimer un index. La `sys.fn_validate_plan_guide` fonction est exécutée pour déterminer si cette action invalidera les repères de plan dans la base de données. En fonction des résultats de la fonction, l'instruction `DROP INDEX` est validée ou la transaction est restaurée, et l'index n'est pas supprimé.  
   
 ```sql  
 USE AdventureWorks2012;  

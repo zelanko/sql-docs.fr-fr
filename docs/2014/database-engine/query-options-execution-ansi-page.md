@@ -1,5 +1,5 @@
 ---
-title: Options de requête d’exécution (Page ANSI) | Microsoft Docs
+title: Exécution d’options de requête (page ANSI) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d9a8b5dea5ab90137c95c9ddaf609c63532dd5b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089080"
 ---
 # <a name="query-options-execution-ansi-page"></a>Options de requête (page ANSI)
-  Utilisez cette page pour spécifier si [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exécute les requêtes avec l’ensemble ou une partie des paramètres spécifiés dans la norme ISO (ANSI).  
+  Utilisez cette page pour spécifier que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exécute les requêtes à l’aide de l’ensemble ou d’une partie des paramètres spécifiés dans la norme ISO (ANSI).  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
- **SET ANSI_DEFAULTS**  
+ **DÉFINIR ANSI_DEFAULTS**  
  Sélectionne tous les paramètres ISO par défaut. Par défaut, cette zone n'est pas disponible car seuls certains des paramètres ISO sont configurés.  
   
  **SET QUOTED_IDENTIFIER**  

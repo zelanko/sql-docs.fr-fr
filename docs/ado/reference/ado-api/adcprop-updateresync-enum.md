@@ -16,21 +16,21 @@ ms.assetid: bc9e1a37-e969-47e9-8382-0bbfffa2034f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 82a5473a68303d429794d8b98c4e91293e4e30cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921401"
 ---
-# <a name="adcpropupdateresyncenum"></a>ADCPROP_UPDATERESYNC_ENUM
-Spécifie si le [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) méthode est suivie par implicite [Resync](../../../ado/reference/ado-api/resync-method.md) opération de la méthode et dans ce cas, la portée de cette opération.  
+# <a name="adcprop_updateresync_enum"></a>ADCPROP_UPDATERESYNC_ENUM
+Spécifie si la méthode [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) est suivie d’une opération de méthode de [resynchronisation](../../../ado/reference/ado-api/resync-method.md) implicite et, le cas échéant, de l’étendue de cette opération.  
   
-|Constante|Value|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adResyncAll**|15|Appelle **Resync** avec la valeur combinée de tous les autres membres ADCPROP_UPDATERESYNC_ENUM.|  
-|**adResyncAutoIncrement**|1|Valeur par défaut. Tente de récupérer la nouvelle valeur d’identité pour les colonnes qui sont automatiquement incrémentées ou générées par la source de données, telles que les champs à numérotation automatique du Jet de Microsoft ou des colonnes d’identité de Microsoft SQL Server.|  
-|**adResyncConflicts**|2|Appelle **Resync** pour toutes les lignes dans lequel l’opération update ou delete a échoué en raison d’un conflit d’accès concurrentiel.|  
-|**adResyncInserts**|8|Appelle **Resync** pour toutes les lignes insérées avec succès. Toutefois, les valeurs de colonnes AutoIncrement ne sont pas resynchronisées. Au lieu de cela, le contenu des lignes nouvellement insérées est resynchronisé selon la valeur de clé primaire existante. Si la clé primaire est une valeur d’auto-incrémentation, **Resync** ne sont pas récupérer le contenu de la ligne concernée. Pour incrémenter automatiquement les valeurs de clé primaire AutoIncrement, appelez **UpdateBatch** avec la valeur combinée **adResyncAutoIncrement** + **adResyncInserts**.|  
+|**adResyncAll**|15|Appelle **Resync** avec la valeur combinée de tous les autres membres de ADCPROP_UPDATERESYNC_ENUM.|  
+|**adResyncAutoIncrement**|1|valeur par défaut. Tente de récupérer la nouvelle valeur d’identité pour les colonnes qui sont automatiquement incrémentées ou générées par la source de données, telles que les champs de numérotation automatique Microsoft Jet ou les colonnes d’identité Microsoft SQL Server.|  
+|**adResyncConflicts**|2|Appelle **Resync** pour toutes les lignes dans lesquelles l’opération de mise à jour ou de suppression a échoué en raison d’un conflit d’accès concurrentiel.|  
+|**adResyncInserts**|8|Appelle **Resync** pour toutes les lignes insérées avec succès. Toutefois, les valeurs de colonne AutoIncrement ne sont pas resynchronisées. Au lieu de cela, le contenu des lignes nouvellement insérées est resynchronisé en fonction de la valeur de clé primaire existante. Si la clé primaire est une valeur AutoIncrement, **Resync** ne récupère pas le contenu de la ligne prévue. Pour incrémenter automatiquement les valeurs de clé primaire AutoIncrement, appelez **UpdateBatch** avec la valeur combinée **adResyncAutoIncrement** + **adResyncInserts**.|  
 |**adResyncNone**|0|N’appelle pas **Resync**.|  
 |**adResyncUpdates**|4|Appelle **Resync** pour toutes les lignes mises à jour avec succès.|  
   

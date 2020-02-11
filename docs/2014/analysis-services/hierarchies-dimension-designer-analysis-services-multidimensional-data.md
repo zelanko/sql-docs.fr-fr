@@ -1,5 +1,5 @@
 ---
-title: Hiérarchies (onglet Structure de Dimension, Concepteur de dimensions) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Hiérarchies (onglet structure de dimension, concepteur de dimensions) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a68cd859e93105c2fb4aa570dbf727fe7112bdab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080790"
 ---
 # <a name="hierarchies-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Hiérarchies (onglet Structure de dimension, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
@@ -30,7 +30,7 @@ ms.locfileid: "66080790"
   
 -   Afficher ou masquer des relations d'attributs en cliquant sur la flèche en regard du nom du niveau.  
   
- **Pour afficher le volet hiérarchies**  
+ **Pour afficher le volet Hiérarchies**  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , puis ouvrez la dimension souhaitée.  
   
@@ -41,9 +41,9 @@ ms.locfileid: "66080790"
  Affiche les hiérarchies actuellement créées. Dans chaque hiérarchie se trouvent les attributs qui composent les niveaux de la hiérarchie. Les relations d'attributs sont également affichées mais ils sont en lecture seule.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Structure de dimension &#40;Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [Attributs &#40;onglet Structure de Dimension, Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](attributes-dimension-designer-analysis-services-multidimensional-data.md)   
- [Vue de Source de données &#40;onglet Structure de Dimension, Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
- [Barre d’outils &#40;onglet Structure de Dimension, Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)  
+ [Structure de dimension &#40;concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Attributs &#40;onglet structure de dimension, concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](attributes-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Vue de source de données &#40;onglet structure de dimension, concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Barre d’outils &#40;onglet structure de dimension, concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)  
   
   

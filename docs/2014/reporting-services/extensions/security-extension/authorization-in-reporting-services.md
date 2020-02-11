@@ -13,17 +13,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ac9f9882724e9ba0341bf11af948c948070e6774
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63282244"
 ---
 # <a name="authorization-in-reporting-services"></a>Autorisation dans Reporting Services
-  L'autorisation est le processus permettant de déterminer si une identité peut se voir accorder le type d'accès demandé à une ressource donnée dans la base de données du serveur de rapports. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilise une architecture d'autorisation basée sur les rôles qui permet à un utilisateur d'accéder à une ressource donnée en fonction de l'attribution de rôle de l'utilisateur pour l'application. Les extensions de sécurité pour [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] contiennent une implémentation d'un composant d'autorisation servant à accorder l'accès aux utilisateurs une fois ceux-ci authentifiés sur le serveur de rapports. L'autorisation est appelée lorsqu'un utilisateur tente d'effectuer une opération sur le système ou sur un élément du serveur de rapports par le biais de l'API SOAP et via l'accès URL. Cela est possible grâce à l'interface d'extension de sécurité **IAuthorizationExtension**. Comme indiqué précédemment, toutes les extensions héritent d' **IExtension** , l'interface de base pour n'importe quelle extension que vous déployez. **IExtension** et **IAuthorizationExtension** sont membres de l'espace de noms **Microsoft.ReportingServices.Interfaces** .  
+  L'autorisation est le processus permettant de déterminer si une identité peut se voir accorder le type d'accès demandé à une ressource donnée dans la base de données du serveur de rapports. 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilise une architecture d'autorisation basée sur les rôles qui permet à un utilisateur d'accéder à une ressource donnée en fonction de l'attribution de rôle de l'utilisateur pour l'application. Les extensions de sécurité pour [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] contiennent une implémentation d'un composant d'autorisation servant à accorder l'accès aux utilisateurs une fois ceux-ci authentifiés sur le serveur de rapports. L'autorisation est appelée lorsqu'un utilisateur tente d'effectuer une opération sur le système ou sur un élément du serveur de rapports par le biais de l'API SOAP et via l'accès URL. Cela est possible grâce à l'interface d'extension de sécurité **IAuthorizationExtension**. Comme indiqué précédemment, toutes les extensions héritent d' **IExtension** , l'interface de base pour n'importe quelle extension que vous déployez. **IExtension** et **IAuthorizationExtension** sont membres de l’espace de noms **Microsoft. ReportingServices. interfaces** .  
   
 ## <a name="checking-access"></a>Vérification de l'accès  
- En matière d'autorisation, l'élément fondamental de toute implémentation de sécurité personnalisée est la vérification de l'accès, qui est implémentée dans la méthode <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A>. <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> est appelé chaque fois qu'un utilisateur tente une opération sur le serveur de rapports. La méthode <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> est surchargée pour chaque type d'opération. Voici un exemple de vérification d'accès pour les opérations de dossier :  
+ En matière d'autorisation, l'élément fondamental de toute implémentation de sécurité personnalisée est la vérification de l'accès, qui est implémentée dans la méthode <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A>. 
+  <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> est appelé chaque fois qu'un utilisateur tente une opération sur le serveur de rapports. La méthode <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> est surchargée pour chaque type d'opération. Voici un exemple de vérification d'accès pour les opérations de dossier :  
   
 ```  
 // Overload for Folder operations  
@@ -70,7 +72,7 @@ public bool CheckAccess(
 ### <a name="authorization-flow"></a>Flux d'autorisation  
  L'autorisation [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] est contrôlée par l'extension de sécurité actuellement configurée pour s'exécuter sur le serveur. L'autorisation, basée sur les rôles, est limitée aux autorisations et aux opérations fournies par l'architecture de la sécurité [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Le diagramme suivant représente le processus permettant d'autoriser des utilisateurs à manipuler des éléments dans la base de données du serveur de rapports :  
   
- ![Flux d’autorisation de sécurité de Reporting Services](../../media/rosettasecurityextensionauthorizationflow.gif "Flux d’autorisation de sécurité de Reporting Services")  
+ ![Flux d'autorisation de sécurité de Reporting Services](../../media/rosettasecurityextensionauthorizationflow.gif "Flux d'autorisation de sécurité de Reporting Services")  
   
  Comme représenté dans ce diagramme, l'autorisation suit la séquence suivante :  
   

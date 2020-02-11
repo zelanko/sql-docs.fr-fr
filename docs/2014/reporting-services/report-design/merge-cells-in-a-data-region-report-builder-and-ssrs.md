@@ -11,17 +11,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97e9280512b75aebfccb93c0e11e5402136fa6f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105566"
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>Fusionner des cellules dans une région de données (Générateur de rapports et SSRS)
   Vous pouvez fusionner des cellules dans une région de données pour les combiner, améliorer l'apparence de la région de données ou fournir des étiquettes étendues pour les groupes de colonnes et de lignes.  
   
 > [!NOTE]  
->  Les cellules peuvent uniquement être fusionnées à l'intérieur de chaque zone d'une région de données : angle, en-têtes de colonne, définition de groupe (ou en-têtes de ligne) et corps. Vous ne pouvez pas fusionner de cellules dépassant les limites de la zone. Vous ne pouvez par exemple pas fusionner une cellule située dans la zone d'angle de la région de données avec une cellule située dans la zone de groupe de lignes. Pour plus d’informations sur les zones de tableau matriciel, consultez [répertorie &#40;Générateur de rapports et SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
+>  Les cellules peuvent uniquement être fusionnées à l'intérieur de chaque zone d'une région de données : angle, en-têtes de colonne, définition de groupe (ou en-têtes de ligne) et corps. Vous ne pouvez pas fusionner de cellules dépassant les limites de la zone. Vous ne pouvez par exemple pas fusionner une cellule située dans la zone d'angle de la région de données avec une cellule située dans la zone de groupe de lignes. Pour plus d’informations sur les zones de tableau matriciel, consultez [listes &#40;générateur de rapports et les&#41;SSRS ](tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

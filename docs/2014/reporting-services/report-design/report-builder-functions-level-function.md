@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 35526e8928a98ccca2e2e61e88fb9361a6d00d6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105238"
 ---
 # <a name="level-function-report-builder-and-ssrs"></a>Fonction Level (Générateur de rapports et SSRS)
@@ -31,11 +31,11 @@ Level(scope)
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *portée*  
+ *scope*  
  (`String`) (Facultatif). Nom d'un dataset, d'un groupe ou d'une région de données qui contient les éléments de rapport auxquels appliquer la fonction d'agrégation. Si le paramètre *scope* n'est pas spécifié, l'étendue actuelle est utilisée.  
   
 ## <a name="return-type"></a>Type de retour  
- Retourne un `Integer`. Si *étendue* spécifie une jeu de données ou région de données ou un regroupement non récursif (c'est-à-dire, un regroupement sans aucune `Parent` élément), `Level` retourne 0. Si vous omettez le paramètre *scope* , elle retourne le niveau de l'étendue actuelle.  
+ Retourne un `Integer`. Si *scope* spécifie un DataSet ou une région de données, ou spécifie un regroupement non `Parent` récursif (c’est-à-dire un regroupement sans élément) `Level` , retourne 0. Si vous omettez le paramètre *scope* , elle retourne le niveau de l'étendue actuelle.  
   
 ## <a name="remarks"></a>Notes  
  La valeur retournée par la fonction `Level` est une valeur de base zéro, c'est-à-dire que le premier niveau d'une hiérarchie est 0.  

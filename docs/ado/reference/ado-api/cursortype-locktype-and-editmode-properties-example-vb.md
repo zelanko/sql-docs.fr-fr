@@ -17,14 +17,14 @@ ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4556a243206d373a110aaab6a56bd43bf487abff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919272"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>CursorType, LockType et EditMode, exemple de propriétés (VB)
-Cet exemple montre comment définir le [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) et [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) propriétés avant d’ouvrir un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Il montre également la valeur de la [EditMode](../../../ado/reference/ado-api/editmode-property.md) propriété sous différentes conditions. La fonction EditModeOutput est requise pour exécuter cette procédure.  
+Cet exemple montre comment définir les propriétés [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) et [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) avant d’ouvrir un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Il montre également la valeur de la propriété [EditMode](../../../ado/reference/ado-api/editmode-property.md) sous différentes conditions. La fonction EditModeOutput est requise pour l’exécution de cette procédure.  
   
 ```  
 'BeginEditModeVB  
@@ -128,5 +128,5 @@ End Function
  [EditMode, propriété](../../../ado/reference/ado-api/editmode-property.md)   
  [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md)   
  [LockType, propriété (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
- [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)   
+ [Déterminant](../../../ado/reference/ado-api/locktypeenum.md)   
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

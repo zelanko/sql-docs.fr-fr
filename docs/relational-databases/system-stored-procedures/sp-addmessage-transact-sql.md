@@ -18,18 +18,18 @@ ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 52d3db15c46af273e2f151e769a6b04be322ce5b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061838"
 ---
-# <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
+# <a name="sp_addmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Stocke un nouveau message d’erreur définis par l’utilisateur dans une instance de la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Messages stockés à l’aide de **sp_addmessage** peuvent être affichés à l’aide de la **sys.messages** vue de catalogue.  
+  Stocke un nouveau message d’erreur défini par l' [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]utilisateur dans une instance du. Les messages stockés à l’aide de **sp_addmessage** peuvent être affichés à l’aide de l’affichage catalogue **sys. messages** .  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,29 +42,29 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ \@msgnum = ] msg_id` Est l’ID du message. *msg_id* est **int** avec NULL comme valeur par défaut. *msg_id* d’erreur définis par l’utilisateur, messages peuvent être un entier compris entre 50 001 et 2 147 483 647. La combinaison de *msg_id* et *langage* doit être unique ; une erreur est retournée si l’ID existe déjà pour la langue spécifiée.  
+`[ \@msgnum = ] msg_id`ID du message. *msg_id* est de **type int** avec NULL comme valeur par défaut. *msg_id* pour les messages d’erreur définis par l’utilisateur peut être un entier compris entre 50 001 et 2 147 483 647. La combinaison des *msg_id* et de la *langue* doit être unique ; une erreur est retournée si l’ID existe déjà pour la langue spécifiée.  
   
-`[ \@severity = ]severity` Est le niveau de gravité de l’erreur. *gravité* est **smallint** avec NULL comme valeur par défaut. Les niveaux valides vont de 1 à 25. Pour plus d’informations sur les niveaux de gravité, consultez [Niveaux de gravité des erreurs du moteur de base de données](../../relational-databases/errors-events/database-engine-error-severities.md).  
+`[ \@severity = ]severity`Niveau de gravité de l’erreur. la *gravité* est de type **smallint** avec NULL comme valeur par défaut. Les niveaux valides vont de 1 à 25. Pour plus d’informations sur les niveaux de gravité, consultez [Niveaux de gravité des erreurs du moteur de base de données](../../relational-databases/errors-events/database-engine-error-severities.md).  
   
-`[ \@msgtext = ] 'msg'` Est le texte du message d’erreur. *Msg* est **nvarchar (255)** avec NULL comme valeur par défaut.  
+`[ \@msgtext = ] 'msg'`Texte du message d’erreur. *MSG* est de type **nvarchar (255),** avec NULL comme valeur par défaut.  
   
-`[ \@lang = ] 'language'` Est le langage pour ce message. *langage* est **sysname** avec NULL comme valeur par défaut. Étant donné que plusieurs langues peuvent être installés sur le même serveur, *langage* spécifie la langue dans laquelle chaque message est écrit. Lorsque *langage* est omis, la langue est la langue par défaut pour la session.  
+`[ \@lang = ] 'language'`Langue de ce message. *Language* est de **type sysname** , avec NULL comme valeur par défaut. Étant donné que plusieurs langues peuvent être installées sur le même serveur, *Language* spécifie la langue dans laquelle chaque message est écrit. Lorsque la *langue* est omise, la langue est la langue par défaut de la session.  
   
-`[ \@with_log = ] { 'TRUE' | 'FALSE' }` Est si le message doit être écrit dans le journal des applications Windows lorsqu’il se produit. **\@WITH_LOG** est **varchar (5)** avec FALSE comme valeur par défaut. Si sa valeur est TRUE, l'erreur est automatiquement écrite dans le journal des applications Windows. Si sa valeur est FALSE, l'erreur n'est pas automatiquement écrite dans le journal des applications Windows ; c'est la façon dont elle a été déclenchée qui détermine si l'erreur sera ou non écrite dans le journal. Seuls les membres de la **sysadmin** rôle de serveur peut utiliser cette option.  
+`[ \@with_log = ] { 'TRUE' | 'FALSE' }`Indique si le message doit être écrit dans le journal des applications Windows lorsqu’il se produit. WITH_LOG est de type **varchar (5),** avec false comme valeur par défaut. ** \@** Si sa valeur est TRUE, l'erreur est automatiquement écrite dans le journal des applications Windows. Si sa valeur est FALSE, l'erreur n'est pas automatiquement écrite dans le journal des applications Windows ; c'est la façon dont elle a été déclenchée qui détermine si l'erreur sera ou non écrite dans le journal. Seuls les membres du rôle de serveur **sysadmin** peuvent utiliser cette option.  
   
 > [!NOTE]  
->  Si un message est écrit dans le journal des applications Windows, il est également écrite dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] fichier journal des erreurs.  
+>  Si un message est écrit dans le journal des applications Windows, il est également écrit dans [!INCLUDE[ssDE](../../includes/ssde-md.md)] le fichier journal des erreurs.  
   
-`[ \@replace = ] 'replace'` Si spécifié comme chaîne *remplacer*, un message d’erreur existant est remplacé par le nouveau niveau de texte et la gravité de message. *Remplacez* est **varchar(7)** avec NULL comme valeur par défaut. Cette option doit être spécifiée si *msg_id* existe déjà. Si vous remplacez un U.S. Message en anglais, le niveau de gravité est remplacé pour tous les messages dans tous les autres langages qui ont le même *msg_id*.  
+`[ \@replace = ] 'replace'`S’il est spécifié comme chaîne de *remplacement*, un message d’erreur existant est remplacé par un nouveau texte de message et un niveau de gravité. *Replace* est de type **varchar (7)** avec NULL comme valeur par défaut. Cette option doit être spécifiée si *msg_id* existe déjà. Si vous remplacez un message en anglais des États-Unis, le niveau de gravité est remplacé pour tous les messages dans toutes les autres langues qui ont le même *msg_id*.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
- Pour les versions non anglaises de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], aux États-Unis Version anglaise d’un message doit déjà exister avant le message peut être ajouté à l’aide d’un autre langage. Le degré de gravité des deux versions du message doit correspondre.  
+ Pour les versions non anglaises de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la version anglaise d'un message doit exister préalablement à l'ajout d'un message dans une autre langue. Le degré de gravité des deux versions du message doit correspondre.  
   
  Lors de la localisation des messages qui contiennent des paramètres, utilisez les numéros de paramètres correspondant aux paramètres des messages d'origine. Insérez un point d'exclamation (!) après chaque numéro de paramètre.  
   
@@ -75,12 +75,12 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  La syntaxe pouvant différer d'une langue à l'autre, il se peut que les numéros de paramètres apparaissent dans un ordre différent par rapport au message d'origine.  
   
 ## <a name="permissions"></a>Autorisations  
-Nécessite l’appartenance dans le **sysadmin** ou **serveradmin** rôles serveur fixes.  
+Nécessite l’appartenance aux rôles serveur fixes **sysadmin** ou **ServerAdmin** .  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-defining-a-custom-message"></a>R. Définition d'un message personnalisé  
- L’exemple suivant ajoute un message personnalisé à **sys.messages**.  
+ L’exemple suivant ajoute un message personnalisé à **sys. messages**.  
   
 ```  
 USE master;  
@@ -92,7 +92,7 @@ GO
 ```  
   
 ### <a name="b-adding-a-message-in-two-languages"></a>B. Ajout d'un message en deux langues  
- L’exemple suivant ajoute d’abord un message dans des États-Unis Anglais, puis ajoute le même message en Français`.`  
+ L'exemple suivant ajoute d'abord un message en anglais, puis ajoute ce même message en français`.`  
   
 ```  
 USE master;  
@@ -108,7 +108,7 @@ GO
 ```  
   
 ### <a name="c-changing-the-order-of-parameters"></a>C. Modification de l'ordre des paramètres  
- L’exemple suivant ajoute d’abord un message dans des États-Unis Anglais, puis ajoute un message localisé dans lequel l’ordre des paramètres est modifié.  
+ L'exemple suivant ajoute d'abord un message en anglais, puis un message localisé dans lequel l'ordre des paramètres est modifié.  
   
 ```  
 USE master;  

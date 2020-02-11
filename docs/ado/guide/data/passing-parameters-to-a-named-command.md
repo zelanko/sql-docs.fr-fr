@@ -14,16 +14,16 @@ ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9799fb3f05871c16cfcd8edb5f2a50c6f7792978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924692"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>Passage de paramètres à une commande nommée
-Tout comme le résultat de la commande est transmis en tant qu’un *out* variable de la commande nommée, les paramètres pour une commande paramétrable peut été transmis en tant que *dans* variables à la commande nommée.  
+Tout comme le résultat de la commande est transmis en tant que variable *out* de la commande nommée, les paramètres d’une commande paramétrable peuvent être transmis comme *dans* les variables de la commande nommée.  
   
- Le code suivant exemple essaie de récupérer toutes les commandes passées par le client dont la propriété **CustomerID** est « ALKFI » à partir de la base de données Northwind. La valeur de **CustomerID** est fourni à la fois lorsque la commande nommée est appelée.  
+ L’exemple de code suivant tente de récupérer toutes les commandes passées par le client dont **CustomerID** a la valeur « ALKFI » dans la base de données Northwind. La valeur de **CustomerID** est fournie au moment où la commande nommée est appelée.  
   
 ```  
 Const DS = "MySqlServer"  
@@ -76,21 +76,21 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
- Notez que tous les paramètres d’entrée doivent précéder n’importe quelle variable de sortie et les types de données de paramètres doivent correspondre ou peuvent être converties à ceux des champs correspondants. L’instruction suivante-  
+ Notez que tous les paramètres d’entrée doivent précéder toute variable de sortie et que les types de données des paramètres doivent correspondre ou peuvent être convertis en ceux des champs correspondants. L’instruction suivante :  
   
 ```  
 objConn.GetOrdersOf 12345, objRs  
 ```  
   
- -entraîne une erreur de types de données ne correspondent pas, car le paramètre d’entrée requis est d’un **chaîne** type, pas d’un **entier** type.  
+ -génère une erreur de types de données incompatibles, car le paramètre d’entrée requis est un type **chaîne** , et non un type **entier** .  
   
- L’appel suivant-  
+ L’appel suivant :  
   
 ```  
 objConn.GetOrdersOf "12345", objRs  
 ```  
   
- -n’est valide, mais génère un résultat vide, car aucun enregistrement n’existe dans la base de données.  
+ -est valide, mais génère un jeu de résultats vide, car il n’existe aucun enregistrement de ce type dans la base de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Connection, objet (ADO MD)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: Options (Page des Plans de Maintenance de concepteurs) | Microsoft Docs
+title: Options (concepteurs-page plans de maintenance) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fe825b4f42f8899774cf0a33510ce095ca67939
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283179"
 ---
-# <a name="options-designers-maintenance-plans-page"></a>Options (Page des Plans de Maintenance de concepteurs)
+# <a name="options-designers-maintenance-plans-page"></a>Options (concepteurs-page plans de maintenance)
   La boîte de dialogue **Options** vous permet de déterminer le comportement par défaut du concepteur lors de l'ajout de nouvelles formes à la surface de dessin. Dans le menu **Outils** , cliquez sur **Options**, développez **Concepteurs**, puis sélectionnez **Plans de maintenance**.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  

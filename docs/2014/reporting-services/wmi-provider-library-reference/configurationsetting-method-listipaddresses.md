@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e406b42346e936fe72c70e5cb13b75ffb3f1f8fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098320"
 ---
-# <a name="listipaddresses-method-wmi-msreportserverconfigurationsetting"></a>Méthode ListIPAddresses (WMI MSReportServer_ConfigurationSetting)
+# <a name="listipaddresses-method-wmi-msreportserver_configurationsetting"></a>Méthode ListIPAddresses (WMI MSReportServer_ConfigurationSetting)
   Répertorie les adresses IP de l'ordinateur serveur de rapports.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -37,7 +37,7 @@ public void ListIPAddresses (out string[] IPAddress,
 ```  
   
 ## <a name="parameters"></a>Paramètres  
- *IPAddress[]*  
+ *IPAddress []*  
  [out] La liste d'adresses IP de l'ordinateur.  
   
  *IPVersion[]*  
@@ -49,19 +49,19 @@ public void ListIPAddresses (out string[] IPAddress,
  *Longueur*  
  [out] Longueur du tableau retourné par la méthode.  
   
- *HRESULT*  
+ *SIGNÉ*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Retourne un paramètre *HRESULT* qui indique si l'appel de la méthode a réussi ou a échoué. La valeur 0 indique que l'appel de la méthode a abouti ; un code d'erreur indique que l'appel n'a pas abouti.  
   
 ## <a name="remarks"></a>Notes  
- Les chaînes*IPVersion* sont V4, V6.  
+ Les chaînes *IPVersion* sont v4, V6.  
   
- Si *IsDhcpEnabled* est `True`, le *IPAddress* est dynamique. Elle ne doit pas être utilisée pour les liaisons SSL.  
+ Si *IsDhcpEnabled* a `True`la la, l' *adresse IP* est dynamique. Elle ne doit pas être utilisée pour les liaisons SSL.  
   
-## <a name="requirements"></a>Configuration requise  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+## <a name="requirements"></a>Spécifications  
+ **Espace de noms :**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

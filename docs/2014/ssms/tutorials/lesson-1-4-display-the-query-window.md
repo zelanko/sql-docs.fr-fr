@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0e357d8767178e2fb95c484d78248a08b51c2ebf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63281986"
 ---
 # <a name="display-the-query-window"></a>Afficher la fenêtre de requête
@@ -26,7 +26,7 @@ ms.locfileid: "63281986"
   
 1.  Dans la barre d'outils principale, cliquez sur **Requête de moteur de base de données**. Dans la boîte de dialogue **Se connecter au moteur de base de données** , cliquez sur **Se connecter**.  
   
-2.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur votre serveur, puis cliquez sur **Nouvelle requête**. Dans ce cas, l'Éditeur de requête utilise les informations de connexion du serveur inscrit.  
+2.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur votre serveur, puis cliquez sur **nouvelle requête**. Dans ce cas, l'Éditeur de requête utilise les informations de connexion du serveur inscrit.  
   
      Notez que les fenêtres sont affichées sous forme d'onglets à droite de l'Explorateur d'objets.  
   

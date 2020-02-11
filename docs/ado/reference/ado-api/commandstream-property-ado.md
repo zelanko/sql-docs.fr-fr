@@ -16,26 +16,26 @@ ms.assetid: f78f61b6-87e0-48dc-961e-83d0e20da58e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 23ec65380bfea16d38f02cab0a070ab69f85d525
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919744"
 ---
 # <a name="commandstream-property-ado"></a>CommandStream, propriété (ADO)
-Indique le flux utilisé comme entrée pour un [commande](../../../ado/reference/ado-api/command-object-ado.md) objet.  
+Indique le flux utilisé comme entrée pour un objet [Command](../../../ado/reference/ado-api/command-object-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Définit ou retourne le flux utilisé comme entrée pour un **commande** objet. Le format de ce flux est spécifique au fournisseur ; consultez la documentation de votre fournisseur pour plus d’informations. Cette propriété est similaire à la [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propriété, qui permet de spécifier une chaîne pour l’entrée d’un **commande**.  
+ Définit ou retourne le flux utilisé comme entrée pour un objet **Command** . Le format de ce flux est spécifique au fournisseur ; Pour plus d’informations, consultez la documentation de votre fournisseur. Cette propriété est similaire à la propriété [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) , qui permet de spécifier une chaîne pour l’entrée d’une **commande**.  
   
 ## <a name="remarks"></a>Notes  
- **CommandStream** et **CommandText** s’excluent mutuellement. Lorsque l’utilisateur définit le **CommandStream** propriété, le **CommandText** propriété est définie sur la chaîne vide ( » »). Si l’utilisateur définit le **CommandText** propriété, le **CommandStream** propriété sera définie **rien**.  
+ **CommandStream** et **CommandText** s’excluent mutuellement. Lorsque l’utilisateur définit la propriété **CommandStream** , la propriété **CommandText** est définie sur la chaîne vide (""). Si l’utilisateur définit la propriété **CommandText** , la propriété **CommandStream** est définie sur **Nothing**.  
   
- Les comportements de la **Command.Parameters.Refresh** et **Command.Prepare** méthodes sont définies par le fournisseur. Les valeurs des paramètres dans un flux de données ne peuvent pas être actualisées.  
+ Les comportements des méthodes **Command. Parameters. Refresh** et **Command. Prepare** sont définis par le fournisseur. Les valeurs des paramètres d’un flux ne peuvent pas être actualisées.  
   
- Le flux d’entrée n’est pas disponible à d’autres objets ADO qui retournent la source d’un **commande**. Par exemple, si le [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md) d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) est défini sur un **commande** objet qui a un flux comme entrée, **Recordset.Source** continue à retourner la **CommandText** propriété, qui contient une chaîne vide (« »), au lieu du contenu du flux de la **CommandStream** propriété.  
+ Le flux d’entrée n’est pas disponible pour les autres objets ADO qui retournent la source d’une **commande**. Par exemple, si la [source](../../../ado/reference/ado-api/source-property-ado-recordset.md) d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) est définie sur un objet de **commande** qui a un flux comme entrée, **Recordset. source** continue à retourner la propriété **CommandText** , qui contient une chaîne vide (""), au lieu du contenu du flux de la propriété **CommandStream** .  
   
- Lorsque vous utilisez un flux de commandes (comme spécifié par **CommandStream**), uniquement valide [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) valeurs pour le [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) propriété sont  **adCmdText** et **adCmdUnknown**. Toute autre valeur génère une erreur.  
+ Lors de l’utilisation d’un flux de commande (comme spécifié par **CommandStream**), les seules valeurs [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) valides pour la propriété [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) sont **adCmdText** et **adCmdUnknown**. Toute autre valeur générera une erreur.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Command, objet (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  

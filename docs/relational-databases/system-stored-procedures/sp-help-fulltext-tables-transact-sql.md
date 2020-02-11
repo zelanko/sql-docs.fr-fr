@@ -18,21 +18,21 @@ ms.assetid: 86e24a5f-a869-43f6-b83e-c52b7b01b5ff
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4ac8e09eff53c04377ccd48a47cc31d9d7ddc5e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68055024"
 ---
-# <a name="sphelpfulltexttables-transact-sql"></a>sp_help_fulltext_tables (Transact-SQL)
+# <a name="sp_help_fulltext_tables-transact-sql"></a>sp_help_fulltext_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne une liste des tables qui sont inscrites pour l'indexation de texte intégral.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez **sys.fulltext_indexes** vue de catalogue à la place. Pour plus d’informations, consultez [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez à la place **sys. fulltext_indexes** affichage catalogue. Pour plus d’informations, consultez [sys. fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,11 +43,11 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` Est le nom du catalogue de texte intégral. *fulltext_catalog_name* est **sysname**, avec NULL comme valeur par défaut. Si *fulltext_catalog_name* est omis ou a la valeur NULL, toutes les tables indexées en texte intégral associés à la base de données sont retournées. Si *fulltext_catalog_name* est spécifié, mais *table_name* est omis ou a la valeur NULL, les informations d’index de recherche en texte intégral sont récupérées pour chaque table indexée en texte intégral associé à ce catalogue. Si les deux *fulltext_catalog_name* et *table_name* sont spécifiés, une ligne est retournée si *table_name* associé *fulltext_catalog_name*; Sinon, une erreur est générée.  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'`Nom du catalogue de texte intégral. *fulltext_catalog_name* est de **type sysname**, avec NULL comme valeur par défaut. Si *fulltext_catalog_name* est omis ou si a la valeur null, toutes les tables indexées en texte intégral associées à la base de données sont retournées. Si *fulltext_catalog_name* est spécifié, mais que *table_name* est omis ou a la valeur null, les informations de l’index de recherche en texte intégral sont récupérées pour chaque table indexée de texte intégral associée à ce catalogue. Si *fulltext_catalog_name* et *table_name* sont spécifiés, une ligne est retournée si *table_name* est associé à *fulltext_catalog_name*; dans le cas contraire, une erreur est générée.  
   
-`[ @table_name = ] 'table_name'` Est le nom de table d’une ou deux parties pour laquelle les métadonnées de recherche en texte intégral sont demandées. *table_name* est **nvarchar (517)** , avec NULL comme valeur par défaut. Si seuls *table_name* est spécifié, la ligne concernant *table_name* est retourné.  
+`[ @table_name = ] 'table_name'`Nom de la table en une ou deux parties pour laquelle les métadonnées de texte intégral sont demandées. *table_name* est de type **nvarchar (517)**, avec NULL comme valeur par défaut. Si seul *table_name* est spécifié, seule la ligne pertinente pour *table_name* est retournée.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (succès) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -58,7 +58,7 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
 |**TABLE_NAME**|**sysname**|Nom de la table.|  
 |**FULLTEXT_KEY_INDEX_NAME**|**sysname**|Index imposant la contrainte UNIQUE dans la colonne désignée comme colonne clé unique.|  
 |**FULLTEXT_KEY_COLID**|**int**|ID de colonne de l'index unique identifié par FULLTEXT_KEY_NAME.|  
-|**FULLTEXT_INDEX_ACTIVE**|**Int**|Indique si les colonnes de cette table marquées pour l'indexation de texte intégral peuvent faire l'objet de requêtes :<br /><br /> 0 = Inactif<br /><br /> 1 = Actif|  
+|**FULLTEXT_INDEX_ACTIVE**|**int**|Indique si les colonnes de cette table marquées pour l'indexation de texte intégral peuvent faire l'objet de requêtes :<br /><br /> 0 = Inactif<br /><br /> 1 = Actif|  
 |**FULLTEXT_CATALOG_NAME**|**sysname**|Catalogue de texte intégral contenant les données d'index sur le texte intégral.|  
   
 ## <a name="permissions"></a>Autorisations  

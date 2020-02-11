@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5625e65b1da45e05002b540774f441f2deabd3f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63260948"
 ---
 # <a name="create-a-user-defined-event"></a>Créer un événement défini par l'utilisateur
@@ -42,7 +42,7 @@ ms.locfileid: "63260948"
   
  Les tâches suivantes apportent des informations sur la façon de créer des événements définis par l'utilisateur, ainsi que des alertes qui leur répondent :  
   
- **Pour créer une alerte en fonction d'un numéro de message**  
+ **Pour créer une alerte en fonction d’un numéro de message**  
   
 -   [SQL Server Management Studio](create-an-alert-using-an-error-number.md)  
   
@@ -60,15 +60,15 @@ ms.locfileid: "63260948"
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)  
   
- **Pour créer un message d'erreur d'événement défini par l'utilisateur**  
+ **Pour créer un message d’erreur d’événement défini par l’utilisateur**  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addmessage-transact-sql)  
   
- **Pour modifier un message d'erreur d'événement défini par l'utilisateur**  
+ **Pour modifier un message d’erreur d’événement défini par l’utilisateur**  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
   
- **Pour supprimer un message d'erreur d'événement défini par l'utilisateur**  
+ **Pour supprimer un message d’erreur d’événement défini par l’utilisateur**  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-dropmessage-transact-sql)  
   

@@ -16,14 +16,14 @@ ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71bc18b13061b844b35314239ffe4973155a0c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920727"
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>Append et CreateParameter, exemple de méthodes (JScript)
-Cet exemple utilise le [Append](../../../ado/reference/ado-api/append-method-ado.md) et [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) méthodes pour exécuter une procédure stockée avec un paramètre d’entrée. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le en tant que **nom AppendJS.asp**.  
+Cet exemple utilise les méthodes [Append](../../../ado/reference/ado-api/append-method-ado.md) et [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) pour exécuter une procédure stockée avec un paramètre d’entrée. Coupez et collez le code suivant dans le bloc-notes ou dans un autre éditeur de texte, puis enregistrez-le en tant que **AppendJS. asp**.  
   
 ```  
 <!-- BeginAppendJS -->  
@@ -144,6 +144,6 @@ body {
 ## <a name="see-also"></a>Voir aussi  
  [Append, méthode (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [CreateParameter, méthode (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Objet de champ](../../../ado/reference/ado-api/field-object.md)   
- [Collection de champs (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Parameter, objet](../../../ado/reference/ado-api/parameter-object.md)
+ [Field, objet](../../../ado/reference/ado-api/field-object.md)   
+ [Fields, collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Objet Parameter](../../../ado/reference/ado-api/parameter-object.md)

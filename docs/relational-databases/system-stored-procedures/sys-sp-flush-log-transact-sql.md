@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_flush_log (Transact-SQL) | Microsoft Docs
+title: sys. sp_flush_log (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,22 +20,22 @@ ms.assetid: 75cc9f52-3b1f-4754-b1e7-ce0dd3323bc9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 61c4cceab6c816d63226216a54d4f647e92e592d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68066684"
 ---
-# <a name="sysspflushlog-transact-sql"></a>sys.sp_flush_log (Transact-SQL)
+# <a name="syssp_flush_log-transact-sql"></a>sys.sp_flush_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Vide sur le disque le journal des transactions de la base de données active, renforçant ainsi toutes les transactions durables différées déjà validées.  
   
- Si vous choisissez d'utiliser la durabilité différée des transactions en raison des avantages qu'elle offre en matière de performances, mais que vous voulez également disposer d'une limite garantie sur la quantité de données qui sont perdues en cas de défaillance ou de basculement du serveur, exécutez `sys.sp_flush_log` lors d'une planification régulière. Par exemple, si vous souhaitez vous assurer vous ne perdez plus de x secondes de données, vous pouvez exécuter `sp_flush_log` toutes les x secondes.  
+ Si vous choisissez d'utiliser la durabilité différée des transactions en raison des avantages qu'elle offre en matière de performances, mais que vous voulez également disposer d'une limite garantie sur la quantité de données qui sont perdues en cas de défaillance ou de basculement du serveur, exécutez `sys.sp_flush_log` lors d'une planification régulière. Par exemple, si vous souhaitez vous assurer que vous ne perdez pas plus de x secondes de données, vous devez exécuter `sp_flush_log` toutes les x secondes.  
   
- L'exécution de `sys.sp_flush_log` garantit que toutes les transactions durables différées déjà validées sont rendues durables. Consultez la rubrique conceptuelle [contrôle la durabilité des transactions](../../relational-databases/logs/control-transaction-durability.md) pour plus d’informations.  
+ L'exécution de `sys.sp_flush_log` garantit que toutes les transactions durables différées déjà validées sont rendues durables. Pour plus d’informations, consultez la rubrique conceptuelle relative à la [durabilité des transactions](../../relational-databases/logs/control-transaction-durability.md) .  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,13 +46,13 @@ sys.sp_flush_log
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Aucune.  
+ Aucun.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  Un code de retour de 1 indique un succès.  Toute autre valeur signale un échec.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune.  
+ Aucun.  
   
 ## <a name="sample-code"></a>Exemple de code  
   

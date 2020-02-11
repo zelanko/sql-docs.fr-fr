@@ -13,24 +13,24 @@ ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71afc3c0bac0ea64285c450640d96fe5f5d709b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064971"
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol (bibliothèque de curseurs)
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans tout nouveau développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande d’utiliser les fonctionnalités de curseur du pilote.  
+>  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande l’utilisation de la fonctionnalité de curseur du pilote.  
   
- Cette rubrique explique comment utiliser le **SQLBindCol** fonction dans la bibliothèque de curseurs. Pour des informations générales sur **SQLBindCol**, consultez [SQLBindCol, fonction](../../../odbc/reference/syntax/sqlbindcol-function.md).  
+ Cette rubrique traite de l’utilisation de la fonction **SQLBindCol** dans la bibliothèque de curseurs. Pour obtenir des informations générales sur **SQLBindCol**, consultez la [fonction SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md).  
   
- Une application alloue un ou plusieurs tampons pour retourner l’ensemble de lignes en cours dans la bibliothèque de curseurs. Il appelle **SQLBindCol** une ou plusieurs fois pour lier ces mémoires tampons pour le jeu de résultats.  
+ Une application alloue une ou plusieurs mémoires tampons pour que la bibliothèque de curseurs retourne l’ensemble de lignes actuel dans. Elle appelle **SQLBindCol** une ou plusieurs fois pour lier ces mémoires tampons au jeu de résultats.  
   
- Une application peut appeler **SQLBindCol** obligent le résultat à définie les colonnes après l’appel **SQLExtendedFetch**, **SQLFetch**, ou **SQLFetchScroll**, à condition que le type de données C, taille de colonne et les chiffres décimaux de la colonne liée restent les mêmes. L’application ne doive pas fermer le curseur pour relier les colonnes à des adresses différentes.  
+ Une application peut appeler **SQLBindCol** pour relier les colonnes du jeu de résultats après avoir appelé **SQLExtendedFetch**, **SQLFetch**ou **SQLFetchScroll**, tant que le type de données C, la taille de colonne et les chiffres décimaux de la colonne liée restent identiques. L’application n’a pas besoin de fermer le curseur pour relier les colonnes à différentes adresses.  
   
- La bibliothèque de curseurs prend en charge la définition de l’attribut d’instruction SQL_ATTR_ROW_BIND_OFFSET_PTR à utiliser les décalages de liaison. (**SQLBindCol** ne devra pas être appelée pour cette nouvelle liaison doit avoir lieu.) Si la bibliothèque de curseurs est utilisée avec une application ODBC *3.x* pilote, le décalage de la liaison n’est pas utilisé lorsque **SQLFetch** est appelée. Le décalage de la liaison est utilisé si **SQLFetch** est appelée lorsque la bibliothèque de curseurs est utilisée avec une application ODBC *2.x* pilote car **SQLFetch** est ensuite mappé à  **SQLExtendedFetch**.  
+ La bibliothèque de curseurs prend en charge la définition de l’attribut d’instruction SQL_ATTR_ROW_BIND_OFFSET_PTR pour utiliser des décalages de liaison. (**SQLBindCol** n’a pas besoin d’être appelé pour que cette reliaison se produise.) Si la bibliothèque de curseurs est utilisée avec un pilote ODBC *3. x* , l’offset de liaison n’est pas utilisé lorsque **SQLFetch** est appelé. L’offset de liaison est utilisé si **SQLFetch** est appelé lorsque la bibliothèque de curseurs est utilisée avec un pilote ODBC *2. x* , car **SQLFetch** est ensuite mappée à **SQLExtendedFetch**.  
   
- La bibliothèque de curseurs prend en charge l’appel **SQLBindCol** pour lier la colonne de signet.  
+ La bibliothèque de curseurs prend en charge l’appel à **SQLBindCol** pour lier la colonne de signets.  
   
- Lorsque vous travaillez avec une application ODBC *2.x* pilote, la bibliothèque de curseurs retourne SQLSTATE HY090 (longueur de chaîne ou de mémoire tampon non valide) lorsque **SQLBindCol** est appelée pour la longueur du tampon pour une colonne de signet ne pouvez pas définir une valeur égal à 4. Lorsque vous travaillez avec une application ODBC *3.x* pilote, la bibliothèque de curseurs permet d’être n’importe quelle taille de la mémoire tampon.
+ Lors de l’utilisation d’un pilote ODBC *2. x* , la bibliothèque de curseurs retourne SQLState HY090 (chaîne ou longueur de mémoire tampon non valide) lorsque **SQLBindCol** est appelé pour définir la longueur de la mémoire tampon d’une colonne de signet sur une valeur différente de 4. Lorsque vous utilisez un pilote ODBC *3. x* , la bibliothèque de curseurs permet à la mémoire tampon d’être de n’importe quelle taille.

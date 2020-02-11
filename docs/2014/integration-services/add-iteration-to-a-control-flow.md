@@ -1,5 +1,5 @@
 ---
-title: Ajouter une itération à un flux de contrôle | Microsoft Docs
+title: Ajouter une itération à un workflow de contrôle | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,13 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b96f5f900e8c1a3adf136c7bdaf1b89f297e4921
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061980"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>Ajouter une itération à un flux de contrôle
+  
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclut le conteneur de boucles For, élément de flux de contrôle qui permet de facilement inclure un bouclage assurant la répétition conditionnelle d’un flux de contrôle dans un package. Pour plus d’informations, consultez [Conteneur de boucles For](control-flow/for-loop-container.md).  
   
  Le conteneur de boucles For évalue une condition à chaque itération de la boucle et s'arrête lorsque la condition est fausse. Il inclut des expressions pour l'initialisation de la boucle, la spécification de la condition d'évaluation qui arrête l'exécution du flux de contrôle répété et l'assignation d'une valeur à une expression qui met à jour la valeur par rapport à laquelle la condition d'évaluation est comparée. Vous devez fournir une condition d'évaluation, mais les expressions d'initialisation et d'assignation sont facultatives.  
@@ -38,18 +39,18 @@ ms.locfileid: "66061980"
   
  Les expressions peuvent inclure des variables. Les variables présentent l'avantage de pouvoir être mises à jour au moment de l'exécution, ce qui rend les packages plus flexibles et plus faciles à gérer. La longueur maximale d'une expression est limitée à 4 000 caractères.  
   
- Lorsque vous spécifiez une variable dans une expression, vous devez préfixer le nom de la variable avec le signe arobase (@). Par exemple, pour une variable nommée `Counter`, entrez @Counter dans l’expression qui utilise le conteneur de boucles for. Si vous incluez la propriété d'espace de noms dans la variable, vous devez placer la variable et l'espace de noms entre crochets. Par exemple, pour un `Counter` variable dans le `MyNamespace` espace de noms, type [@MyNamespace::Counter].  
+ Lorsque vous spécifiez une variable dans une expression, vous devez préfixer le nom de la variable avec le signe arobase (@). Par exemple, pour une variable nommée `Counter`, entrez @Counter dans l’expression utilisée par le conteneur de boucles for. Si vous incluez la propriété d'espace de noms dans la variable, vous devez placer la variable et l'espace de noms entre crochets. Par exemple, pour une `Counter` variable dans l' `MyNamespace` espace de noms,@MyNamespace::Countertapez [].  
   
- Les variables utilisées par le conteneur de boucles For doivent être définies dans la portée du conteneur de boucles For ou dans la portée d'un conteneur situé plus haut dans la hiérarchie de conteneurs de package. Par exemple, un conteneur de boucles For peut utiliser des variables définies dans sa portée et également des variables définies dans la portée du package. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md).  
+ Les variables utilisées par le conteneur de boucles For doivent être définies dans la portée du conteneur de boucles For ou dans la portée d'un conteneur situé plus haut dans la hiérarchie de conteneurs de package. Par exemple, un conteneur de boucles For peut utiliser des variables définies dans sa portée et également des variables définies dans la portée du package. Pour plus d’informations, consultez [Integration Services &#40;des variables de&#41; SSIS](integration-services-ssis-variables.md) et [utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md).  
   
  La grammaire d'expression [!INCLUDE[ssIS](../includes/ssis-md.md)] fournit un ensemble complet d'opérateurs et de fonctions pour l'implémentation d'expressions complexes utilisées pour l'évaluation, l'initialisation ou l'assignation. Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).  
   
 ### <a name="to-implement-a-for-loop-container-in-a-control-flow"></a>Pour implémenter un conteneur de boucles For dans un flux de contrôle  
   
-1.  Ajoutez le conteneur de boucles For au package. Pour plus d’informations, consultez [ajouter ou supprimer une tâche ou un conteneur dans un flux de contrôle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+1.  Ajoutez le conteneur de boucles For au package. Pour plus d’informations, consultez [Ajouter ou supprimer une tâche ou un conteneur dans un workflow de contrôle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   .  
   
-2.  Ajoutez des tâches et des conteneurs au conteneur de boucles For. Pour plus d’informations, consultez [ajouter ou supprimer une tâche ou un conteneur dans un flux de contrôle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+2.  Ajoutez des tâches et des conteneurs au conteneur de boucles For. Pour plus d’informations, consultez [Ajouter ou supprimer une tâche ou un conteneur dans un workflow de contrôle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   .  
   
 3.  Connectez les tâches et les conteneurs du conteneur de boucles For à l'aide de contraintes de précédence. Pour plus d’informations, consultez [Connecter des tâches et des conteneurs à l’aide d’une contrainte de précédence par défaut](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md).  
@@ -58,9 +59,9 @@ ms.locfileid: "66061980"
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajouter ou supprimer une tâche ou un conteneur dans un flux de contrôle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [Groupe ou dissocier des composants](group-or-ungroup-components.md)   
+ [Grouper ou dissocier des composants](group-or-ungroup-components.md)   
  [Connecter des tâches et des conteneurs à l’aide d’une contrainte de précédence par défaut](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
- [Ajouter une énumération à un flux de contrôle](../../2014/integration-services/add-enumeration-to-a-control-flow.md)   
+ [Ajouter une énumération à un workflow de contrôle](../../2014/integration-services/add-enumeration-to-a-control-flow.md)   
  [Flux de contrôle](control-flow/control-flow.md)  
   
   

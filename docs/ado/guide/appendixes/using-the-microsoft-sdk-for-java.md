@@ -1,5 +1,5 @@
 ---
-title: Utilisation du SDK Microsoft pour Java | Microsoft Docs
+title: Utilisation du kit de développement logiciel (SDK) Microsoft pour Java | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,40 +14,40 @@ ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b0e6c5f2eb5ad792141e77122ff9e132d97f62ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926468"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Utilisation du SDK Microsoft pour Java
 
 > [!IMPORTANT]
-> Microsoft prend plus en charge de Visual J ++ en janvier 2004.
+> Microsoft a supprimé la prise en charge de Visual J++ en janvier 2004.
 
-Le SDK Microsoft pour Java est le kit de développement pour l’environnement de Microsoft Internet Explorer. Outils, des informations et des exemples sont fournis pour vous aider à développer des programmes Java et applets selon JDK 1.1 et la machine virtuelle de Microsoft Win32 (Microsoft VM). Le SDK Microsoft pour Java n’est pas lié à Microsoft Visual J ++. Pour télécharger ce SDK, cliquez ici.  
+Le kit de développement logiciel (SDK) Microsoft pour Java est le kit de développement de l’environnement Microsoft Internet Explorer. Des outils, des informations et des exemples sont fournis pour vous aider à développer des programmes et des applets Java basés sur JDK 1,1 et sur la machine virtuelle Microsoft Win32 (Microsoft VM). Le kit de développement logiciel (SDK) Microsoft pour Java n’est pas lié à Microsoft Visual J++. Pour télécharger ce kit de développement logiciel (SDK), cliquez ici.  
   
- L’utilitaire Jactivex.exe génère des classes à partir d’une bibliothèque de types, mais peut uniquement être appelée sur la ligne de commande. Cette fonctionnalité n’est pas intégrée à l’environnement de développement Visual J ++. Contrairement aux classes générées par l’Assistant Bibliothèque de types Java, vous pouvez entrer dans les wrappers de classe créés par le Kit de développement. Cela est utile pour le débogage dont votre code utilise les classes de wrapper ADO.  
+ L’utilitaire JActiveX. exe génère des classes à partir d’une bibliothèque de types, mais ne peut être appelé que sur la ligne de commande. Cette fonctionnalité n’est pas intégrée à l’environnement de développement Visual J++. Contrairement aux classes générées par l’Assistant bibliothèque de types Java, vous pouvez effectuer un pas à pas détaillé dans les wrappers de classe créés par le kit de développement logiciel (SDK). Cela est utile pour déboguer la façon dont votre code utilise les classes wrapper ADO.  
   
- Ce mécanisme lit la bibliothèque de types ADO et génère des classes que vous pouvez instancier au sein de votre application. Il génère ces classes à l’emplacement suivant : \\< répertoire windows\>\Java\trustlib\msado15.  
+ Ce mécanisme lit la bibliothèque de types ADO et génère des classes que vous pouvez instancier dans votre application. Il génère ces classes à l’emplacement suivant : \\<répertoire\>Windows \Java\trustlib\msado15.  
   
- Création d’une application ADO dans Java à l’aide du SDK Microsoft pour Java est fondamentalement identique, du point de vue du code source, à l’aide de l’Assistant Bibliothèque de types Java. Pour l’exemple de code, consultez [Wrappers de classe Java ADO](../../../ado/guide/appendixes/ado-java-class-wrappers.md). La seule différence est dans la manière dont vous générez les classes wrapper en premier lieu, comme illustré dans les étapes suivantes.  
+ La création d’une application ADO en Java à l’aide du kit de développement logiciel (SDK) Microsoft pour Java est fondamentalement identique, du point de vue du code source, à l’utilisation de l’Assistant bibliothèque de types Java. Pour obtenir un exemple de code, consultez [wrappers de classe Java ADO](../../../ado/guide/appendixes/ado-java-class-wrappers.md). La seule différence réelle réside dans la façon dont vous générez les classes wrapper en premier lieu, comme illustré dans les étapes suivantes.  
   
-### <a name="to-create-an-ado-project-with-the-microsoft-sdk-for-java"></a>Pour créer un projet ADO avec le SDK Microsoft pour Java  
+### <a name="to-create-an-ado-project-with-the-microsoft-sdk-for-java"></a>Pour créer un projet ADO avec le kit de développement logiciel (SDK) Microsoft pour Java  
   
-1.  Exécutez la commande suivante à une invite de commandes. Vous devez définir le chemin d’accès pour inclure le SDK Microsoft pour le répertoire Bin de Java, ou exécutez la commande à partir de cet emplacement. En règle générale, le SDK Microsoft pour Java est installé dans le même emplacement que Visual Studio. Il s’agit d’une instruction de commande unique.  
+1.  Exécutez la commande suivante à l’invite de commandes. Vous devez définir le chemin d’accès pour inclure le répertoire bin du kit de développement logiciel (SDK) Microsoft pour Java, ou exécuter la commande à partir de cet emplacement. En règle générale, le kit de développement logiciel (SDK) Microsoft pour Java est installé au même emplacement que Visual Studio. Il s’agit d’une instruction de commande unique.  
   
     ```java
     \<path to DevStudio>\<path to Java SDK>\bin\JactiveX.exe /javatlb "C:\program files\common files\system\ado\msado15.dll"  
     ```  
   
-2.  Exécutez la commande suivante pour compiler les classes générées. Le commutateur/g : t active la génération de symboles de débogage afin que vous puissiez suivre la. Symboles de Java. Supprimer que les versions release.  
+2.  Exécutez la commande suivante pour compiler les classes générées. Le commutateur/g : t active la génération de symboles de débogage pour que vous puissiez tracer dans le. Symboles Java. Supprimez-le pour les versions release.  
   
     ```java
     jvc /g:t c:\<windows>\Java\trustlib\msado15\*.Java  
     ```  
   
-3.  Pour utiliser ces fichiers, ouvrez votre projet dans Visual J ++. À partir de la **projet** menu, choisissez **ajouter au projet**. Sélectionnez **fichiers**, puis ajoutez tous les. Fichiers JAVA générés dans le répertoire trustlib\msado15 à votre projet.  
+3.  Pour utiliser ces fichiers, ouvrez votre projet dans Visual J++. Dans le menu **projet** , choisissez **Ajouter au projet**. Sélectionnez **fichiers**, puis ajoutez tout. Fichiers JAVA générés dans le répertoire trustlib\msado15 pour votre projet.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Wrappers de classe Java ADO](../../../ado/guide/appendixes/ado-java-class-wrappers.md)   

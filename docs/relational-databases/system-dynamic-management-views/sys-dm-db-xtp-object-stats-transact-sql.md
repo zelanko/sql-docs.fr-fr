@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_object_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_xtp_object_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,18 +21,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e14d5162c15f38cf741ceead94c2bacb230c42a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68043175"
 ---
-# <a name="sysdmdbxtpobjectstats-transact-sql"></a>sys.dm_db_xtp_object_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_object_stats-transact-sql"></a>sys.dm_db_xtp_object_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Retourne le nombre de lignes affectées par l'opération sur chaque objet [!INCLUDE[hek_2](../../includes/hek-2-md.md)] depuis le dernier redémarrage de la base de données. Les statistiques sont mises à jour lorsque l'opération s'exécute, que la transaction soit validée ou restaurée.  
   
- sys.dm_db_xtp_object_stats vous permet d'identifier les tables mémoire optimisées qui changent le plus. Vous pouvez décider de supprimer des index non utilisés ou rarement utilisés sur la table, car chaque index affecte les performances. S'il y a des index de hachage, vous devez réévaluer périodiquement le nombre de compartiments. Pour plus d’informations, consultez [déterminer le nombre de compartiments Correct pour les index de hachage](https://msdn.microsoft.com/library/6d1ac280-87db-4bd8-ad43-54353647d8b5).  
+ sys.dm_db_xtp_object_stats vous permet d'identifier les tables mémoire optimisées qui changent le plus. Vous pouvez décider de supprimer des index non utilisés ou rarement utilisés sur la table, car chaque index affecte les performances. S'il y a des index de hachage, vous devez réévaluer périodiquement le nombre de compartiments. Pour plus d'informations, consultez [Determining the Correct Bucket Count for Hash Indexes](https://msdn.microsoft.com/library/6d1ac280-87db-4bd8-ad43-54353647d8b5).  
   
  sys.dm_db_xtp_object_stats vous permet d'identifier les tables mémoire optimisées qui ont des conflits de lecture-lecture, pouvant affecter les performances de votre application. Par exemple, si vous utilisez une logique de nouvelle tentative des transactions, il est possible que la même instruction doive être exécutée plus d'une fois. En outre, vous pouvez utiliser ces informations pour identifier les tables (et par conséquent la logique métier) qui nécessite une gestion des erreurs de lecture-lecture.  
   
@@ -48,12 +48,12 @@ ms.locfileid: "68043175"
 |row_delete_attempts|**bigint**|Nombre de lignes supprimées de la table depuis le dernier redémarrage de la base de données par les transactions validées et abandonnées.|  
 |write_conflicts|**bigint**|Nombre de conflits d'écriture qui se sont produits depuis le dernier redémarrage de la base de données.|  
 |unique_constraint_violations|**bigint**|Nombre de violations de contrainte unique qui se sont produites depuis le dernier redémarrage de la base de données.|  
-|object_address|**varbinary(8)**|À usage interne uniquement|  
+|object_address|**varbinary (8)**|À usage interne uniquement|  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation VIEW DATABASE STATE sur la base de données active.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues de gestion dynamique de Table optimisé en mémoire &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Vues de gestion dynamique des tables optimisées en mémoire &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

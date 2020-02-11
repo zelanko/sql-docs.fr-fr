@@ -1,5 +1,5 @@
 ---
-title: 'Exemples : Utilisation du mode PATH | Microsoft Docs'
+title: 'Exemples : utilisation du mode PATH | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5a566d9684341b7aa20342147aab950ebd4047c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287783"
 ---
-# <a name="examples-using-path-mode"></a>Exemples : Utilisation du mode PATH
+# <a name="examples-using-path-mode"></a>Exemples : utilisation du mode PATH
   Les exemples suivants montrent comment utiliser le mode PATH pour générer un document XML à partir d'une requête SELECT. Nombre de ces requêtes sont spécifiées par rapport aux documents XML des instructions de fabrication de bicyclettes stockés dans la colonne Instructions de la table ProductModel.  
   
 ## <a name="specifying-a-simple-path-mode-query"></a>Spécification d'une requête simple en mode PATH  
@@ -37,7 +37,7 @@ FOR XML PATH;
 GO  
 ```  
   
- Le résultat suivant est un document XML centré sur l'élément dans lequel chaque valeur de colonne de l'ensemble de lignes obtenu est incluse dans un élément. Étant donné que la clause `SELECT` ne spécifie aucun alias pour les noms de colonnes, les noms d'éléments enfants générés sont les mêmes que les noms de colonnes correspondants dans la clause `SELECT`. Pour chaque ligne de l'ensemble de lignes, une balise <`row`> est ajoutée.  
+ Le résultat suivant est un document XML centré sur l'élément dans lequel chaque valeur de colonne de l'ensemble de lignes obtenu est incluse dans un élément. Étant donné que la clause `SELECT` ne spécifie aucun alias pour les noms de colonnes, les noms d'éléments enfants générés sont les mêmes que les noms de colonnes correspondants dans la clause `SELECT` . Pour chaque ligne de l'ensemble de lignes, une balise <`row`> est ajoutée.  
   
  `<row>`  
   
@@ -111,7 +111,7 @@ FOR XML PATH ('');
 GO  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  `<ProductModelID>122</ProductModelID>`  
   
@@ -135,7 +135,7 @@ FOR XML PATH ('ProductModelData');
 GO  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  `< ProductModelData id="122">`  
   
@@ -200,7 +200,7 @@ FOR XML PATH ('ProductModelData'), root ('Root');
 GO  
 ```  
   
- Le résultat partiel est le suivant. Étant donné que la requête spécifie ManuInstr comme nom de colonne, le document XML renvoyé par le `query()` méthode est encapsulée dans un <`ManuInstr`> balise comme indiqué dans l’exemple suivant :  
+ Le résultat partiel est le suivant. Étant donné que la requête spécifie ManuInstr comme nom de colonne, le code `query()` XML retourné par la méthode est `ManuInstr` encapsulé dans une balise <> comme indiqué ci-dessous :  
   
  `<Root>`  
   
@@ -244,7 +244,7 @@ FOR XML PATH ('ns2:ProductInfo'), root('ns1:root');
 GO  
 ```  
   
- Notez que le préfixe `MI` est également défini dans `WITH XMLNAMESPACES`. Par conséquent, la méthode `query()` du type `xml` spécifié ne définit pas le préfixe dans le prologue de la requête. Voici le résultat obtenu :  
+ Notez que le préfixe `MI` est également défini dans `WITH XMLNAMESPACES`. Par conséquent, la méthode `query()` du type `xml` spécifié ne définit pas le préfixe dans le prologue de la requête. Voici le résultat obtenu :  
   
  `<ns1:root xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
   
@@ -289,7 +289,7 @@ GO
   
  `</ProductModelData>`  
   
- La requête ci-après génère le document XML souhaité :  
+ La requête ci-après génère le document XML souhaité :  
   
 ```  
 USE AdventureWorks2012;  
@@ -395,7 +395,7 @@ GO
   
  L'attribut `@xml:lang` ajouté à l'élément <`English`> est défini dans l'espace de noms xml prédéfini.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  `<Translation>`  
   
@@ -432,7 +432,7 @@ WHERE ProductModelID= 7 OR ProductModelID=9
 FOR XML PATH('ProductModelData'), root('root');  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  `<root xmlns="uri2" xmlns:ns1="uri1">`  
   

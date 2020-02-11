@@ -1,5 +1,5 @@
 ---
-title: Définir les Options globales de Trace (SQL Server Profiler) | Microsoft Docs
+title: Définir les options globales de trace (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c09927de3c10ab3b937101edc6b9da37503abb11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63267409"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>Définir les options globales de trace (SQL Server Profiler)
@@ -44,7 +44,7 @@ ms.locfileid: "63267409"
   
     -   **Nombre par défaut de threads de relecture** contrôle le nombre de threads de processeurs à utiliser pendant la relecture. Un nombre de threads élevé accélère la relecture, mais dégrade les performances du serveur. La valeur recommandée est **4**. Le tableau suivant répertorie les options disponibles :  
   
-        |Value|Description|  
+        |Valeur|Description|  
         |-----------|-----------------|  
         |**2**|Valeur minimale. Utilisez deux threads pour la relecture.|  
         |**4**|Valeur par défaut.|  
@@ -52,7 +52,7 @@ ms.locfileid: "63267409"
   
     -   L’option**Délai d’attente du moniteur d’intégrité par défaut (sec)** définit la durée maximale, en secondes, pendant laquelle un thread peut bloquer un autre processus. Le tableau suivant indique les valeurs possibles.  
   
-        |Value|Description|  
+        |Valeur|Description|  
         |-----------|-----------------|  
         |**0**|Valeur minimale. **0** signifie que [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] n’arrêtera jamais un processus de blocage.|  
         |**3600**|Valeur par défaut. Autorise les processus de blocage dont la durée n’est pas supérieure à **3600** secondes (une heure).|  
@@ -60,9 +60,9 @@ ms.locfileid: "63267409"
   
     -   L’option**Intervalle d’interrogation du moniteur d’intégrité par défaut (s)** définit la fréquence d’interrogation des threads de relecture des processus de blocage. Le tableau suivant indique les valeurs possibles.  
   
-        |Value|Description|  
+        |Valeur|Description|  
         |-----------|-----------------|  
-        |**1**|Valeur minimale. **1[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] signifie que** interroge les processus de blocage une fois par seconde.|  
+        |**1**|Valeur minimale. **1** signifie que[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] interroge les processus de blocage une fois par seconde.|  
         |**60**|Valeur par défaut. Interroge les processus de blocage une fois par minute.|  
         |**86400**|Valeur maximale. Interroge les processus de blocage une fois toutes les **86400** secondes (une fois par jour).|  
   

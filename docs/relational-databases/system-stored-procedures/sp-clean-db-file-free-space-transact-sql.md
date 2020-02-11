@@ -19,18 +19,18 @@ ms.assetid: 3eb53a67-969d-4cb8-9681-b1c8e6fd55b6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c788d78dac45f2371829bb450ac98c94164d97ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68070390"
 ---
-# <a name="spcleandbfilefreespace-transact-sql"></a>sp_clean_db_file_free_space (Transact-SQL)
+# <a name="sp_clean_db_file_free_space-transact-sql"></a>sp_clean_db_file_free_space (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Supprime des informations qui sont restées sur les pages de la base de données en raison des routines de modification de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sp_clean_db_file_free_space nettoie toutes les pages dans un fichier d’une base de données.  
+  Supprime des informations qui sont restées sur les pages de la base de données en raison des routines de modification de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sp_clean_db_file_free_space nettoie toutes les pages d’un seul fichier d’une base de données.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,16 +43,16 @@ sp_clean_db_file_free_space
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @dbname=] '*database_name*'  
- Nom de la base de données à nettoyer. *dbname* est **sysname** et ne peut pas être NULL.  
+ [ @dbname= ] '*database_name*'  
+ Nom de la base de données à nettoyer. *dbname* est de **type sysname** et ne peut pas avoir la valeur null.  
   
- [ @fileid=] '*numéro_fichier*'  
- ID du fichier de données à nettoyer. *numéro_fichier* est **int** et ne peut pas être NULL.  
+ [ @fileid= ] '*file_number*'  
+ ID du fichier de données à nettoyer. *file_number* est de **type int** et ne peut pas avoir la valeur null.  
   
- [ @cleaning_delay=] '*Délai_en_Secondes*'  
- Spécifie un intervalle entre le nettoyage des pages. Cela réduit l'effet sur le système d'E/S. *délai_en_secondes* est **int** avec une valeur par défaut 0.  
+ [ @cleaning_delay= ] '*delay_in_seconds*'  
+ Spécifie un intervalle entre le nettoyage des pages. Cela réduit l'effet sur le système d'E/S. *delay_in_seconds* est de **type int** avec 0 comme valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
@@ -62,7 +62,7 @@ sp_clean_db_file_free_space
   
  Avant d'exécuter sp_clean_db_file_free_space, il est recommandé de créer une sauvegarde de base de données complète.  
   
- Connexe [sp_clean_db_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md) procédure stockée nettoie tous les fichiers dans la base de données.  
+ La procédure stockée [sp_clean_db_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md) associée nettoie tous les fichiers de la base de données.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle de base de données db_owner.  
@@ -78,7 +78,7 @@ EXEC sp_clean_db_file_free_space
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées du moteur de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)
- <br>[Guide de processus de nettoyage de fantômes](../ghost-record-cleanup-process-guide.md) 
+ [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)
+ <br>[Guide de processus de nettoyage fantôme](../ghost-record-cleanup-process-guide.md) 
   
   

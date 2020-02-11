@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 706b930627039b5d2944b162ba9681808bfcc62c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105465"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planifier un rapport cartographique (Générateur de rapports et SSRS)
@@ -23,7 +23,7 @@ ms.locfileid: "66105465"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="MapPurpose"></a> Spécifier l'objectif de la carte  
+##  <a name="MapPurpose"></a>Spécifier l’objectif de la carte  
  Une conception de rapport efficace fournit des informations permettant aux utilisateurs de prendre des mesures pour résoudre les éventuels problèmes. Pour créer un affichage de carte efficace et facilement compréhensible, déterminez en premier lieu les questions auxquelles la carte doit aider à répondre. Par exemple, vous pouvez visualiser les types suivants de données pour identifier des possibilités commerciales sur une carte :  
   
 -   Chiffres des ventes relatifs pour chaque magasin.  
@@ -38,7 +38,7 @@ ms.locfileid: "66105465"
   
  
   
-##  <a name="Data"></a> Spécifier les données spatiales et analytiques  
+##  <a name="Data"></a>Spécifier les données spatiales et analytiques  
  Vous devez spécifier de quelles données spatiales et analytiques vous avez besoin.  
   
  Les données analytiques proviennent d'un dataset de rapport, des exemples de données incluses avec une carte de la bibliothèque de cartes ou de données analytiques incluses avec les données spatiales dans un fichier de forme ESRI.  
@@ -77,7 +77,7 @@ ms.locfileid: "66105465"
   
  Les données spatiales doivent contenir les champs suivants :  
   
--   **Spatial data.** Champ de données spatiales comprenant les jeux de coordonnées qui définissent chaque point, ligne ou polygone.  
+-   **Données spatiales.** Champ de données spatiales comprenant les jeux de coordonnées qui définissent chaque point, ligne ou polygone.  
   
 -   **Champs de correspondance.** Un ou plusieurs champs qui identifient de manière unique chaque champ de données spatiales. Par exemple, pour un point d'emplacement de magasin, vous souhaiterez peut-être utiliser le nom du magasin. Si le nom de magasin n'est pas unique dans les données spatiales, vous pouvez inclure le nom de la ville avec celui du magasin.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66105465"
   
 
   
-##  <a name="MapType"></a> Choisir un type de carte  
+##  <a name="MapType"></a>Choisir un type de carte  
  Lorsque vous exécutez l'Assistant Carte, vous ajoutez une carte et la première couche de carte à votre rapport. L'Assistant vous permet d'ajouter l'un des types de cartes suivants à votre rapport :  
   
 -   une carte simple qui affiche des emplacements sans données analytiques associées ;  
@@ -111,14 +111,14 @@ ms.locfileid: "66105465"
   
 |Icône d'Assistant|Style de couche|Type de couche|Description et options|  
 |-----------------|-----------------|----------------|-----------------------------|  
-|![rs_MapType_Polygon_Basic](../media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Carte simple|Polygon|Carte qui affiche des zones uniquement, par exemple, des secteurs de vente.<br /><br /> Options : Faites varier la couleur par palette ou utilisez une couleur unique. Une palette est un jeu prédéfini de couleurs. Lorsque toutes les couleurs d'une palette ont été attribuées, des nuances des couleurs sont attribuées.|  
-|![rs_MapType_Polygon_ColorAnalytical](../media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|Carte analytique en couleur|Polygon|Carte affichant des données analytiques en utilisant plusieurs couleurs, par exemple, pour afficher les chiffres des ventes par zone.|  
-|![rs_MapType_Polygon_Bubble](../media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Carte à bulles|Polygon|Carte affichant des données analytiques en faisant varier la taille des bulles centrées sur les zones, par exemple pour afficher les chiffres des ventes par zone.<br /><br /> Options : Faire varier les couleurs de zone basés sur un deuxième champ analytique et spécifiez des règles de couleur.|  
-|![rs_MapType_Line_Basic](../media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Carte linéaire simple|Ligne|Carte qui affiche des lignes uniquement, par exemple des itinéraires de livraison.<br /><br /> Options : Faites varier la couleur par palette ou utilisez une couleur unique.|  
-|![rs_MapType_Line_Analytical](../media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|Carte linéaire analytique|Ligne|Carte faisant varier la couleur et la largeur des lignes, par exemple pour afficher le nombre de paquets livrés et les mesures de ponctualité par itinéraire.<br /><br /> Options : Varier la largeur de ligne par un champ analytique, faites varier la couleur de ligne par un deuxième champ analytique et spécifiez des règles de couleur.|  
-|![rs_MapType_Marker_Basic](../media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|carte à marqueurs simple|Point|Carte affichant un marqueur à chaque emplacement, par exemple pour indiquer des villes.<br /><br /> Options : Faites varier la couleur par palette ou utilisez une couleur unique et modifier le style de marqueur.|  
-|![rs_MapType_Marker_Bubble](../media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|Carte à marqueurs à bulles|Point|Carte affichant une bulle pour chaque emplacement et faisant varier la taille des bulles en fonction d'un champ de données analytiques, par exemple pour indiquer les chiffres des ventes par ville.<br /><br /> Options : Faites varier la couleur des bulles par un deuxième champ analytique et spécifiez des règles de couleur.|  
-|![rs_MapType_Marker_Analytical](../media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|Carte à marqueurs analytique|Point|Carte affichant un marqueur à chaque emplacement et faisant varier la couleur, la taille et le type de marqueur en fonction de données analytiques, par exemple pour indiquer les produits produisant le meilleur chiffre d'affaires, la plage de bénéfices et la stratégie de remise.<br /><br /> Options : Faites varier le type de marqueur par un champ analytique, taille de marqueur par un deuxième champ analytique, couleur de marqueur par un troisième champ analytique et spécifiez des règles de couleur.|  
+|![rs_MapType_Polygon_Basic](../media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Carte simple|Polygone|Carte qui affiche des zones uniquement, par exemple, des secteurs de vente.<br /><br /> Options : faites varier la couleur par palette ou utilisez une couleur unique. Une palette est un jeu prédéfini de couleurs. Lorsque toutes les couleurs d'une palette ont été attribuées, des nuances des couleurs sont attribuées.|  
+|![rs_MapType_Polygon_ColorAnalytical](../media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|Carte analytique en couleur|Polygone|Carte affichant des données analytiques en utilisant plusieurs couleurs, par exemple, pour afficher les chiffres des ventes par zone.|  
+|![rs_MapType_Polygon_Bubble](../media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Carte à bulles|Polygone|Carte affichant des données analytiques en faisant varier la taille des bulles centrées sur les zones, par exemple pour afficher les chiffres des ventes par zone.<br /><br /> Options : faites varier les couleurs de zone en fonction d'un deuxième champ analytique et spécifiez des règles de couleur.|  
+|![rs_MapType_Line_Basic](../media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Carte linéaire simple|Lignes|Carte qui affiche des lignes uniquement, par exemple des itinéraires de livraison.<br /><br /> Options : faites varier la couleur par palette ou utilisez une couleur unique.|  
+|![rs_MapType_Line_Analytical](../media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|Carte linéaire analytique|Lignes|Carte faisant varier la couleur et la largeur des lignes, par exemple pour afficher le nombre de paquets livrés et les mesures de ponctualité par itinéraire.<br /><br /> Options : faites varier la largeur de ligne en fonction d'un champ analytique et la couleur de ligne en fonction d'un deuxième champ analytique, et spécifiez des règles de couleur.|  
+|![rs_MapType_Marker_Basic](../media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|carte à marqueurs simple|Point|Carte affichant un marqueur à chaque emplacement, par exemple pour indiquer des villes.<br /><br /> Options : faites varier la couleur par palette ou utilisez une couleur unique, et modifiez le style de marqueur.|  
+|![rs_MapType_Marker_Bubble](../media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|Carte à marqueurs à bulles|Point|Carte affichant une bulle pour chaque emplacement et faisant varier la taille des bulles en fonction d'un champ de données analytiques, par exemple pour indiquer les chiffres des ventes par ville.<br /><br /> Options : faites varier la couleur des bulles en fonction d'un deuxième champ analytique et spécifiez des règles de couleur.|  
+|![rs_MapType_Marker_Analytical](../media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|Carte à marqueurs analytique|Point|Carte affichant un marqueur à chaque emplacement et faisant varier la couleur, la taille et le type de marqueur en fonction de données analytiques, par exemple pour indiquer les produits produisant le meilleur chiffre d'affaires, la plage de bénéfices et la stratégie de remise.<br /><br /> Options : faites varier le type de marqueur en fonction d'un champ analytique, la taille de marqueur en fonction d'un deuxième champ analytique, la couleur de marqueur en fonction d'un troisième et spécifiez des règles de couleur.|  
   
  Après avoir ajouté une carte à l'aide de l'Assistant Carte, vous pouvez créer des couches supplémentaires ou modifier des options pour une couche à l'aide de l'Assistant Couche. Pour plus d’informations sur les Assistants, consultez [Assistant Carte et Assistant Couche &#40;Générateur de rapports et SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
@@ -126,7 +126,7 @@ ms.locfileid: "66105465"
   
  
   
-##  <a name="Legend"></a> Planifier les légendes  
+##  <a name="Legend"></a>Planifier des légendes  
  Pour aider vos utilisateurs à interpréter une carte, vous pouvez ajouter plusieurs légendes de carte, une échelle de couleurs et une échelle des distances. Lorsque vous concevez une carte, planifiez l'emplacement où vous souhaitez que les légendes s'affichent. Vous pouvez spécifier les informations suivantes à propos de chaque légende :  
   
 -   **Emplacement de la légende.** Par exemple, les légendes peuvent être affichées à l'intérieur ou à l'extérieur de la fenêtre d'affichage, et dans 12 emplacements discrets par rapport à la fenêtre d'affichage.  
@@ -135,7 +135,7 @@ ms.locfileid: "66105465"
   
 -   **Titre de la légende.** Par exemple, vous pouvez spécifier le texte du titre, et contrôler indépendamment s'il faut afficher un titre pour une légende de la carte ou pour l'échelle de couleurs.  
   
--   **Mise en page de la légende de carte.** Par exemple, les légendes de carte peuvent être affichées comme tables verticales ou horizontales.  
+-   **Disposition de la légende de la carte.** Par exemple, les légendes de carte peuvent être affichées comme tables verticales ou horizontales.  
   
  Le contenu de la légende est créé automatiquement pendant le traitement des rapports en fonction des options de règle définies pour chaque couche.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "66105465"
   
 
   
-##  <a name="Embedding"></a> Trouver un compromis entre la taille de la définition de rapport et le temps de traitement du rapport  
+##  <a name="Embedding"></a>Équilibrer la taille de la définition de rapport et le temps de traitement  
  Une conception de rapport efficace en matière de cartes nécessite de trouver un compromis entre les options qui contrôlent les performances du rapport et la taille de la définition de rapport. Les éléments cartographiques basés sur des données spatiales, ou les mosaïques Bing, peuvent être statiques et incorporés dans la définition de rapport, ou dynamiques et créés chaque fois que le rapport est traité. Vous devez évaluer les avantages et inconvénients présentés par des données cartographiques statiques et dynamiques et rechercher un compromis approprié pour votre scénario. Considérez les points suivants lorsque vous prenez cette décision :  
   
 -   Les éléments cartographiques incorporés peuvent augmenter considérablement la taille de la définition de rapport, mais ils réduisent le temps nécessaire pour afficher la carte dans le rapport. Votre serveur de rapports peut être soumis à des limites de taille que vous devez prendre en considération.  
@@ -161,8 +161,8 @@ ms.locfileid: "66105465"
 
   
 ## <a name="see-also"></a>Voir aussi  
- [Personnaliser des données et l’affichage d’une carte ou d’une couche &#40;Générateur de rapports et SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Tutoriel : Rapport cartographique &#40;Générateur de rapports&#41;](../tutorial-map-report-report-builder.md)   
+ [Personnaliser les données et l’affichage d’une carte ou d’une couche &#40;Générateur de rapports et SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
+ [Didacticiel : &#40;de rapport cartographique Générateur de rapports&#41;](../tutorial-map-report-report-builder.md)   
  [Cartes &#40;Générateur de rapports et SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   

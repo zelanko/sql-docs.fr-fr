@@ -15,14 +15,14 @@ ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4274c51be7bc2d94ca26312b246176bd58d197f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920186"
 ---
 # <a name="cancel-method-example-vb"></a>Cancel, exemple de méthode (VB)
-Cet exemple utilise le [Annuler](../../../ado/reference/ado-api/cancel-method-ado.md) méthode pour annuler une commande s’exécutant sur un [connexion](../../../ado/reference/ado-api/connection-object-ado.md) de l’objet si la connexion est occupée.  
+Cet exemple utilise la méthode [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) pour annuler une commande s’exécutant sur un objet [Connection](../../../ado/reference/ado-api/connection-object-ado.md) si la connexion est occupée.  
   
 ```  
 'BeginCancelVB  
@@ -104,4 +104,4 @@ End Sub
   
 ## <a name="see-also"></a>Voir aussi  
  [Cancel, méthode (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
- [Connection, objet (ADO MD)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

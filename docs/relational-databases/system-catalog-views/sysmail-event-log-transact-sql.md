@@ -18,36 +18,36 @@ ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4241ac9a457aa51f32ec12e9b1d8b83aa534995e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68060217"
 ---
-# <a name="sysmaileventlog-transact-sql"></a>sysmail_event_log (Transact-SQL)
+# <a name="sysmail_event_log-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contient une ligne pour chaque message Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourné par le système de messagerie de base de données (Dans ce contexte fait référence à un message comme un message d’erreur, pas un message électronique). Configurer le **niveau de journalisation** paramètre à l’aide de la **configurer les paramètres du système** boîte de dialogue de l’Assistant Configuration de la messagerie de base de données, ou le [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)une procédure stockée, à déterminer quels messages sont retournés.  
+  Contient une ligne pour chaque message Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourné par le système de messagerie de base de données (Le message dans ce contexte fait référence à un message, tel qu’un message d’erreur, et non un message électronique.) Configurez le paramètre de **niveau de journalisation** à l’aide de la boîte de dialogue **configurer les paramètres système** de l’Assistant Configuration de Database mail ou de la procédure stockée [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md) pour déterminer quels messages sont renvoyés.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**Log_id**|**Int**|Identificateur d'éléments du journal.|  
-|**event_type**|**varchar(11)**|Type d'avis inséré dans le journal. Les valeurs possibles sont les suivantes : erreurs, avertissements, messages d'information, messages de succès et messages internes supplémentaires.|  
-|**log_date**|**datetime**|Date et l'heure de création de l'entrée du journal.|  
+|**Log_id**|**int**|Identificateur d'éléments du journal.|  
+|**event_type**|**varchar (11)**|Type d'avis inséré dans le journal. Les valeurs possibles sont les suivantes : erreurs, avertissements, messages d'information, messages de succès et messages internes supplémentaires.|  
+|**log_date**|**DATETIME**|Date et l'heure de création de l'entrée du journal.|  
 |**description**|**nvarchar(max)**|Texte du message en cours d'enregistrement.|  
-|**process_id**|**Int**|L'ID de processus du programme externe de messagerie de base de données. Cette valeur change en principe à chaque démarrage du programme externe de messagerie de base de données.|  
-|**mailitem_id**|**Int**|Identificateur de l'élément de messagerie dans la file d'attente des messages. La valeur est NULL si le message n'est pas associé à un élément de courrier électronique spécifique.|  
-|**account_id**|**int**|Le **account_id** du compte associé à l’événement. La valeur est NULL si le message n'est pas associé à un compte spécifique.|  
-|**last_mod_date**|**datetime**|Date et heure de la dernière modification de la ligne.|  
+|**process_id**|**int**|L'ID de processus du programme externe de messagerie de base de données. Cette valeur change en principe à chaque démarrage du programme externe de messagerie de base de données.|  
+|**mailitem_id**|**int**|Identificateur de l'élément de messagerie dans la file d'attente des messages. La valeur est NULL si le message n'est pas associé à un élément de courrier électronique spécifique.|  
+|**account_id**|**int**|**Account_id** du compte associé à l’événement. La valeur est NULL si le message n'est pas associé à un compte spécifique.|  
+|**last_mod_date**|**DATETIME**|Date et heure de la dernière modification de la ligne.|  
 |**last_mod_user**|**sysname**|Dernier utilisateur qui a modifié la ligne. Pour les messages électroniques, il s'agit de l'utilisateur qui a envoyé le message. Pour les messages générés par le programme externe de messagerie de base de données, il s'agit du contexte utilisateur du programme.|  
   
 ## <a name="remarks"></a>Notes  
- Lors du dépannage de la messagerie de base de données, rechercher le **sysmail_event_log** affichage pour les événements liés aux échecs de messagerie. Certains messages, comme ceux signalant l'échec du programme externe de messagerie de base de données, ne sont pas associés à des messages électroniques spécifiques. Pour rechercher des erreurs liées à des messages électroniques spécifiques, rechercher le **mailitem_id** du courrier électronique ayant échoué dans le **sysmail_faileditems** afficher, puis recherchez le **sysmail_event_log**pour les messages associés à cette **mailitem_id**. Lorsqu’une erreur est retournée à partir de **sp_send_dbmail**, le message électronique n’est pas soumis au système de messagerie de base de données et l’erreur n’est pas affiché dans cette vue.  
+ Lors de la résolution des problèmes Database Mail, recherchez dans la vue **sysmail_event_log** des événements liés aux échecs de courrier électronique. Certains messages, comme ceux signalant l'échec du programme externe de messagerie de base de données, ne sont pas associés à des messages électroniques spécifiques. Pour rechercher des erreurs liées à des messages électroniques spécifiques, recherchez la **mailitem_id** du message électronique ayant échoué dans la vue **sysmail_faileditems** puis recherchez dans le **sysmail_event_log** les messages relatifs à ce **mailitem_id**. Lorsqu’une erreur est retournée à partir de **sp_send_dbmail**, le message électronique n’est pas envoyé au système Database mail et l’erreur ne s’affiche pas dans cette vue.  
   
- Lorsque les tentatives de remise d'un compte spécifique échouent, la messagerie de base de données conserve les messages d'erreur pendant les tentatives de reprises de comptes jusqu'à ce que la remise de l'élément de messagerie aboutisse ou échoue. En cas de réussite, toutes les erreurs accumulées sont consignés en tant qu’avertissements distincts, y compris le **account_id**. Il se peut alors que des avertissements s'affichent, bien que le message électronique ait été envoyé. En cas d’échec de la remise, tous les avertissements précédents sont consignés en tant que message d’une erreur sans un **account_id**, étant donné que tous les comptes ont échoué.  
+ Lorsque les tentatives de remise d'un compte spécifique échouent, la messagerie de base de données conserve les messages d'erreur pendant les tentatives de reprises de comptes jusqu'à ce que la remise de l'élément de messagerie aboutisse ou échoue. En cas de réussite ultime, toutes les erreurs accumulées sont consignées en tant qu’avertissements séparés, y compris les **account_id**. Il se peut alors que des avertissements s'affichent, bien que le message électronique ait été envoyé. En cas d’échec de remise ultime, tous les avertissements précédents sont consignés sous la forme d’un message d’erreur sans **account_id**, car tous les comptes ont échoué.  
   
 ## <a name="permissions"></a>Autorisations  
- Vous devez être un membre de la **sysadmin** rôle serveur fixe ou le **DatabaseMailUserRole** rôle de base de données pour accéder à cette vue. Membres de **DatabaseMailUserRole** qui ne sont pas membres de la **sysadmin** rôle, peuvent voir uniquement les événements pour les messages électroniques qu’ils soumettent.  
+ Pour accéder à cette vue, vous devez être membre du rôle serveur fixe **sysadmin** ou du rôle de base de données **DatabaseMailUserRole** . Les membres de **DatabaseMailUserRole** qui ne sont pas membres du rôle **sysadmin** peuvent uniquement voir les événements pour les courriers électroniques qu’ils envoient.  
   
 ## <a name="see-also"></a>Voir aussi  
  [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   

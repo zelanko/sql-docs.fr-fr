@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 5 : Publier la définition de rapport sur le serveur de rapports | Microsoft Docs'
+title: 'Leçon 5 : publier la définition de rapport sur le serveur de rapports | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c9c561657767c1b1e593fa9dcd9702b72193004d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63272870"
 ---
-# <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>Leçon 5 : Publier la définition du rapport sur le serveur de rapports
+# <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>Leçon 5 : publication de la définition du rapport sur le serveur de rapports
   La dernière étape de la mise à jour de la définition du rapport consiste à la republier sur le serveur de rapports.  
   
 ### <a name="to-publish-the-report-to-the-report-catalog"></a>Pour publier le rapport sur le catalogue de rapports  
   
-1.  Remplacez le code pour le `PublishReportDefinition()` méthode dans votre fichier Program.cs (Module1.vb pour [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) avec le code suivant :  
+1.  Remplacez le code de la `PublishReportDefinition()` méthode dans votre fichier Program.cs (Module1. vb pour [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) par le code suivant :  
   
     ```csharp  
     private void PublishReportDefinition()  
@@ -77,10 +77,10 @@ ms.locfileid: "63272870"
     ```  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- Dans la leçon suivante, vous allez compiler et exécuter le `SampleRDLSchema` application. Voir [Leçon 6 : Exécutez l’Application du schéma RDL &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md).  
+ Dans la leçon suivante, vous allez compiler et exécuter l' `SampleRDLSchema` application. Consultez [la leçon 6 : exécuter l’application de schéma RDL &#40;&#35;&#41;VB-C ](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [La mise à jour des rapports à l’aide des Classes générées à partir du schéma RDL &#40;didacticiel SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
- [RDL (Report Definition Language) &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
+ [Mise à jour des rapports à l’aide de classes générées à partir du schéma RDL &#40;didacticiel SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+ [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

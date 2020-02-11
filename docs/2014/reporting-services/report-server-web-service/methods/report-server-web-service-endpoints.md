@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 976e8452e50d293fb8125bfbdde1bd17a8f3be07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283487"
 ---
 # <a name="report-server-web-service-endpoints"></a>Points de terminaison du service Web Report Server
@@ -65,7 +65,7 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
   
 |Point de terminaison proxy|Description|  
 |--------------------|-----------------|  
-|<xref:ReportService2006>|Fournit les API permettant de gérer un serveur de rapports configuré pour le mode intégré SharePoint. **Remarque :**  Ce point de terminaison est déconseillé dans [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)].|  
+|<xref:ReportService2006>|Fournit les API permettant de gérer un serveur de rapports configuré pour le mode intégré SharePoint. **Remarque :**  Ce point de terminaison est déconseillé [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]dans.|  
 |<xref:ReportService2010>|Fournit les API permettant de gérer un serveur de rapports configuré pour le mode natif ou intégré SharePoint.|  
 |<xref:ReportExecution2005>|Fournit les API pour l'exécution de rapports et la navigation dans ces derniers.|  
 |<xref:ReportServiceAuthentication>|Fournit les API pour l'authentification des utilisateurs avec un serveur de rapports lorsque l'application Web SharePoint est configurée pour l'authentification par formulaires.|  

@@ -16,39 +16,39 @@ ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b9795f962d0ead59a8d4f993e799a0ae4e2b750
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921695"
 ---
 # <a name="absoluteposition-property-ado"></a>AbsolutePosition, propriété (ADO)
-Indique la position ordinale d’une [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) enregistrement en cours de l’objet.  
+Indique la position ordinale de l’enregistrement actif d’un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Pour le code 32 bits, définit ou retourne un **Long** valeur entre 1 et le nombre d’enregistrements dans le **Recordset** objet ([RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)), ou retourne une de la [ PositionEnum](../../../ado/reference/ado-api/positionenum.md) valeurs.  
+ Pour le code 32 bits, définit ou retourne une valeur de **type long** comprise entre 1 et le nombre d’enregistrements dans l’objet **Recordset** ([RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)), ou retourne l’une des valeurs [PositionEnum](../../../ado/reference/ado-api/positionenum.md) .  
   
- Pour le code de 64 bits, utilisez un type de données qui fournit pour le stockage d’une valeur 64 bits. Par exemple, vous pouvez utiliser Long ou une autre valeur qui est de longueur de 64 bits comme DBORDINAL. N’utilisez pas **PositionEnum** valeurs dans la mesure où ils sont limités à la longueur de 32 bits.  
+ Pour le code 64 bits, utilisez un type de données qui fournit le stockage d’une valeur 64 bits. Par exemple, vous pouvez utiliser long ou une autre valeur dont la longueur est égale à 64 bits, par exemple DBORDINAL. N’utilisez pas de valeurs **PositionEnum** , car elles sont limitées à une longueur de 32 bits.  
   
 ## <a name="remarks"></a>Notes  
- Pour définir le **AbsolutePosition** propriété, ADO exige que le fournisseur OLE DB que vous utilisez implémente le [IRowsetLocate:IRowset](https://msdn.microsoft.com/library/windows/desktop/ms721190.aspx) interface.  
+ Pour définir la propriété **AbsolutePosition** , ADO exige que le fournisseur OLE DB que vous utilisez implémente l’interface [IRowsetLocate : IRowset](https://msdn.microsoft.com/library/windows/desktop/ms721190.aspx) .  
   
- L’accès à la **AbsolutePosition** propriété d’un **Recordset** qui a été ouvert avec l’avant uniquement ou curseur dynamique génère l’erreur **adErrFeatureNotAvailable**. Avec d’autres types de curseur, la position correcte sera retournée tant que le fournisseur OLE DB prend en charge la **IRowsetScroll:IRowsetLocate** interface. Si le fournisseur ne prend pas en charge la **IRowsetScroll** interface, la propriété est définie sur **adPosUnknown**. Consultez la documentation de votre fournisseur déterminer si elle prend en charge **IRowsetScroll**.  
+ L’accès à la propriété **AbsolutePosition** d’un **jeu d’enregistrements** ouvert avec un curseur avant uniquement ou dynamique génère l’erreur **adErrFeatureNotAvailable**. Avec les autres types de curseurs, la position correcte est retournée tant que le fournisseur OLE DB prend en charge l’interface **IRowsetScroll : IRowsetLocate** . Si le fournisseur ne prend pas en charge l’interface **IRowsetScroll** , la propriété est définie sur **adPosUnknown**. Consultez la documentation de votre fournisseur pour déterminer s’il prend en charge **IRowsetScroll**.  
   
- Utilisez le **AbsolutePosition** propriété pour accéder à un enregistrement en fonction de sa position ordinale dans la **Recordset** objet, ou pour déterminer la position ordinale de l’enregistrement actif. Le fournisseur doit prendre en charge les fonctionnalités requises pour cette propriété doit être disponible.  
+ Utilisez la propriété **AbsolutePosition** pour vous déplacer vers un enregistrement en fonction de sa position ordinale dans l’objet **Recordset** ou pour déterminer la position ordinale de l’enregistrement actif. Le fournisseur doit prendre en charge les fonctionnalités appropriées pour que cette propriété soit disponible.  
   
- Comme le [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) propriété, **AbsolutePosition** basé sur 1 et est égale à 1 lors de l’enregistrement actif est le premier enregistrement dans le **Recordset**. Vous pouvez obtenir le nombre total d’enregistrements dans le **Recordset** de l’objet à partir de la [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) propriété.  
+ Comme la propriété [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) , **AbsolutePosition** est de base 1 et est égal à 1 lorsque l’enregistrement actif est le premier enregistrement dans le **Recordset**. Vous pouvez obtenir le nombre total d’enregistrements dans l’objet **Recordset** à partir de la propriété [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) .  
   
- Lorsque vous définissez la **AbsolutePosition** propriété, même si elle est à un enregistrement dans le cache actuel, ADO recharge le cache avec un nouveau groupe d’enregistrements en commençant par l’enregistrement que vous avez spécifié. Le [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) propriété détermine la taille de ce groupe.  
+ Lorsque vous définissez la propriété **AbsolutePosition** , même s’il s’agit d’un enregistrement dans le cache actuel, ADO recharge le cache avec un nouveau groupe d’enregistrements à partir de l’enregistrement que vous avez spécifié. La propriété [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) détermine la taille de ce groupe.  
   
 > [!NOTE]
->  Vous ne devez pas utiliser le **AbsolutePosition** propriété en tant que numéro d’enregistrement de substitution. La position d’un enregistrement donné change lorsque vous supprimez un enregistrement précédent. Il n’existe également aucune assurance qu’un enregistrement donné auront le même **AbsolutePosition** si le **Recordset** objet est actualisé ou rouvert. Les signets sont toujours la méthode recommandée de conserver et revenir à une position donnée et sont la seule façon de se positionner dans tous les types de **Recordset** objets.  
+>  Vous ne devez pas utiliser la propriété **AbsolutePosition** comme numéro d’enregistrement de substitution. La position d’un enregistrement donné change lorsque vous supprimez un enregistrement précédent. En outre, il n’est pas garanti qu’un enregistrement donné aura la même **AbsolutePosition** si l’objet **Recordset** est à nouveau interrogé ou rouvert. Les signets sont toujours la méthode recommandée pour la conservation et le retour à une position donnée et constituent la seule façon de positionner tous les types d’objets **Recordset** .  
   
 ## <a name="applies-to"></a>S'applique à  
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [AbsolutePosition et CursorLocation, exemple de propriétés (VB)](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vb.md)   
- [AbsolutePosition et CursorLocation, exemple de propriétés (VC ++)](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vc.md)   
+ [AbsolutePosition et CursorLocation, exemples de propriétés (VC + +)](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vc.md)   
  [AbsolutePage, propriété (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [RecordCount, propriété (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)

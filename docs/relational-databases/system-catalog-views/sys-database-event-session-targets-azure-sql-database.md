@@ -1,5 +1,5 @@
 ---
-title: Sys.database_event_session_targets (Azure SQL Database) | Microsoft Docs
+title: sys. database_event_session_targets (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,20 +12,20 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7e736adef1648785ec0d037688c340f31a0e1bda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915099"
 ---
-# <a name="sysdatabaseeventsessiontargets-azure-sql-database"></a>sys.database_event_session_targets (Azure SQL Database)
+# <a name="sysdatabase_event_session_targets-azure-sql-database"></a>sys.database_event_session_targets (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Renvoie une ligne pour chaque cible d’événement pour une session d’événements.  
+  Retourne une ligne pour chaque cible d'événement d'une session d'événements.  
   
 ||  
 |-|  
-|**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 et les versions ultérieures.|  
+|**S’applique à**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 et à toutes les versions ultérieures.|  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -43,8 +43,8 @@ ms.locfileid: "67915099"
   
 ||||  
 |-|-|-|  
-|From|Pour|Relation|  
-|sys.database_event_session_targets.event_session_id|sys.database_event_sessions.event_session_id|Plusieurs-à-un|  
+|De|À|Relation|  
+|sys. database_event_session_targets. event_session_id|sys. database_event_sessions. event_session_id|Plusieurs-à-un|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)  

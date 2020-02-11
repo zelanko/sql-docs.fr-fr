@@ -13,17 +13,17 @@ ms.assetid: 3b018f6a-9db0-4aa1-8ec4-afc5f76d7cad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0567e38d34b9400dcaf6b170d821aa0e5fd0e263
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079010"
 ---
 # <a name="determining-installed-oracle-components"></a>Détermination des composants Oracle installés
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Au lieu de cela, utilisez le pilote ODBC fourni par Oracle.  
+>  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Utilisez plutôt le pilote ODBC fourni par Oracle.  
   
- Pour déterminer les composants Oracle installés sur votre système (et leurs versions), accédez au répertoire \Orainst sous le répertoire de base d’Oracle. Ouvrez un des fichiers texte suivants : NT.rgs, Win95.rgs ou Win98.rgs.  
+ Pour déterminer les composants Oracle installés sur votre système (et leurs versions), accédez au répertoire \Orainst dans le répertoire racine d’Oracle. Ouvrez l’un des fichiers texte suivants : NT. RGS, Win95. RGS ou Win98. RGS.  
   
  Le format de fichier est similaire à ce qui suit :  
   
@@ -37,4 +37,4 @@ ms.locfileid: "68079010"
 69 w32plus80    all    "plus80"   "8.0.5.0.0"   "SQL*Plus"  
 ```  
   
- Les fichiers .rgs incluent également des informations sur l’installation et les descriptions de chaque composant.
+ Les fichiers. RGS incluent également des informations d’installation et des descriptions de chaque composant.

@@ -18,24 +18,24 @@ ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5868120af1e98c4b2f3be78f2cf7927df53b42d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68072661"
 ---
-# <a name="spaddlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
+# <a name="sp_addlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crée une nouvelle connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui permet à un utilisateur de se connecter à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) à la place.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez à la place [Create login](../../t-sql/statements/create-login-transact-sql.md) .  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,46 +51,46 @@ sp_addlogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @loginame=] '*connexion*'  
- Est le nom du compte de connexion. *connexion* est **sysname**, sans valeur par défaut.  
+ [ @loginame= ] «*connexion*»  
+ Est le nom du compte de connexion. *login* est de **type sysname**, sans valeur par défaut.  
   
- [ @passwd=] '*mot de passe*'  
- Est le mot de passe de connexion. *mot de passe* est **sysname**, avec NULL comme valeur par défaut.  
+ [ @passwd= ] «*mot de passe*»  
+ Est le mot de passe de connexion. *Password* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
- [ @defdb=] '*base de données*'  
- Base de données par défaut de la connexion (la base de données avec laquelle la connexion est établie en premier). *base de données* est **sysname**, avec une valeur par défaut **master**.  
+ [ @defdb= ] «*base de données*»  
+ Base de données par défaut de la connexion (la base de données avec laquelle la connexion est établie en premier). *Database est de* **type sysname**, avec **Master**comme valeur par défaut.  
   
- [ @deflanguage=] '*langage*'  
- Est la langue par défaut du compte de connexion. *langage* est **sysname**, avec NULL comme valeur par défaut. Si *langage* n’est pas spécifié, la valeur par défaut *langage* du nouveau compte de connexion est définie sur la langue par défaut actuelle du serveur.  
+ [ @deflanguage= ] «*langue*»  
+ Est la langue par défaut du compte de connexion. *Language* est de **type sysname**, avec NULL comme valeur par défaut. Si la *langue* n’est pas spécifiée, la *langue* par défaut de la nouvelle connexion est définie sur la langue par défaut actuelle du serveur.  
   
- [ @sid=] '*sid*'  
- Correspond au numéro d'identification de sécurité. *SID* est **varbinary (16)** , avec NULL comme valeur par défaut. Si *sid* est NULL, le système génère un SID pour la nouvelle connexion. Malgré l’utilisation d’un **varbinary** type de données, valeurs autres que NULL doit être de 16 octets exactement et ne doit pas déjà exister. Spécification *sid* est utile, par exemple, lorsque vous scripting ou déplacez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexions d’un serveur vers une autre, vous souhaitez que les connexions à avoir le même SID sur des serveurs différents.  
+ [ @sid= ] '*sid*'  
+ Correspond au numéro d'identification de sécurité. *sid* est de type **varbinary (16)**, avec NULL comme valeur par défaut. Si *sid* a la valeur null, le système génère un SID pour la nouvelle connexion. Malgré l’utilisation d’un type de données **varbinary** , les valeurs autres que NULL doivent avoir une longueur de 16 octets exactement et ne doivent pas déjà exister. La spécification du *sid* est utile, par exemple, lorsque vous scriptez ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] déplacez des connexions d’un serveur vers un autre, et que vous souhaitez que les connexions aient le même sid sur des serveurs différents.  
   
- [ @encryptopt=] '*encryption_option*'  
- Spécifie si le mot de passe est transmis en texte clair ou sous forme de hachage du mot de passe en texte clair. Notez qu'il n'y a aucun chiffrement. Le mot « chiffrement » est utilisé dans cette description à des fins de compatibilité ascendante. Si un mot de passe en texte clair est transmis, il est haché. Le hachage est stocké. *encryption_option* est **varchar (20)** , et peut prendre l’une des valeurs suivantes.  
+ [ @encryptopt= ] '*encryption_option*'  
+ Spécifie si le mot de passe est transmis en texte clair ou sous forme de hachage du mot de passe en texte clair. Notez qu'il n'y a aucun chiffrement. Le mot « chiffrement » est utilisé dans cette description à des fins de compatibilité ascendante. Si un mot de passe en texte clair est transmis, il est haché. Le hachage est stocké. *encryption_option* est de type **varchar (20)** et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|NULL|Le mot de passe est transmis en clair. Il s'agit du paramètre par défaut.|  
-|**skip_encryption**|Le mot de passe est déjà haché. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit stocker la valeur sans hacher à nouveau.|  
-|**procédure skip_encryption_old**|Le mot de passe fourni a été haché par une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit stocker la valeur sans hacher à nouveau. Option fournie pour des mises à niveau uniquement.|  
+|NULL|Le mot de passe est transmis en clair. Il s’agit de la valeur par défaut.|  
+|**skip_encryption**|Le mot de passe est déjà haché. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit stocker la valeur sans la hacher à nouveau.|  
+|**skip_encryption_old**|Le mot de passe fourni a été haché par une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit stocker la valeur sans la hacher à nouveau. Option fournie pour des mises à niveau uniquement.|  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- Les noms de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent compter de 1 à 128 caractères, comprenant des lettres, des symboles et des chiffres. Connexions d’accès ne peut pas contenir une barre oblique inverse (\\) ; être un nom de connexion réservé, par exemple sa ou public, ou exister déjà ; ou être une chaîne NULL ou vide (`''`).  
+ Les noms de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent compter de 1 à 128 caractères, comprenant des lettres, des symboles et des chiffres. Les connexions ne peuvent pas contenir de\\barre oblique inverse (); être un nom de connexion réservé, par exemple sa ou public, ou déjà existant ; ou a la valeur NULL ou est une`''`chaîne vide ().  
   
- Si le nom d'une base de données par défaut vous est fourni, vous pouvez vous connecter à la base de données spécifiée sans devoir exécuter l'instruction USE. Toutefois, vous ne pouvez pas utiliser la base de données par défaut jusqu'à ce que vous obtiennent un accès à cette base de données par le propriétaire de la base de données (à l’aide de [sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md) ou [sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)) ou [sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md).  
+ Si le nom d'une base de données par défaut vous est fourni, vous pouvez vous connecter à la base de données spécifiée sans devoir exécuter l'instruction USE. Toutefois, vous ne pouvez pas utiliser la base de données par défaut tant que vous n’avez pas accès à cette base de données par le propriétaire de la base de données (à l’aide de [sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md) ou [sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)) ou [sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md).  
   
  Le numéro SID est un identificateur global unique (GUID) qui identifiera de manière unique la connexion dans le serveur.  
   
  La modification de la langue par défaut du serveur n'entraîne pas celle de la langue par défaut des noms de connexion existants. Pour modifier la langue par défaut du serveur, utilisez [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
- À l’aide de **skip_encryption** pour supprimer le mot de passe, le hachage est utile si le mot de passe est déjà haché lorsque la connexion est ajoutée à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si le mot de passe a été haché par une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez **procédure skip_encryption_old**.  
+ L’utilisation de **skip_encryption** pour supprimer le hachage de mot de passe est utile si le mot de passe est déjà haché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]lorsque la connexion est ajoutée à. Si le mot de passe a été haché par une version [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]antérieure de, utilisez **skip_encryption_old**.  
   
  La procédure sp_droplogin ne peut pas être exécutée dans une transaction définie par l'utilisateur.  
   
@@ -139,7 +139,7 @@ EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2012', 'us_english', 0x
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [CRÉER une connexion &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   

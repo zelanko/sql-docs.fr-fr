@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5435c2a48417156abd6d4f831bf61c9ba6440fab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482577"
 ---
 # <a name="reserved-words-master-data-services"></a>Mots réservés (Master Data Services)
@@ -36,18 +36,18 @@ ms.locfileid: "65482577"
   
 -   [Membres](#members)  
   
-##  <a name="models"></a> Modèles  
- Si vous créez un modèle avec le nom de la valeur **nom**, ne sélectionnez pas **créer une entité portant le même nom que le modèle** car **nom** ne peut pas être utilisé pour le nom d’une entité.  
+##  <a name="models"></a>Axisymétriques  
+ Si vous créez un modèle dont le nom est défini sur **nom**, ne sélectionnez pas **créer une entité portant le même nom que le modèle** , car le nom ne peut pas être utilisé pour le nom d’une entité. ****  
   
-##  <a name="entities"></a> Entités  
+##  <a name="entities"></a>Lesquelles  
  Pour les noms d'entité, vous ne pouvez pas utiliser **Name** ou **Code**.  
   
-##  <a name="exhierarchies"></a> Hiérarchies explicites  
+##  <a name="exhierarchies"></a>Hiérarchies explicites  
  Pour les noms de hiérarchies explicites, vous ne pouvez pas utiliser **Name** ou **Code**.  
   
-##  <a name="attributes"></a> Attributs  
+##  <a name="attributes"></a>Attributs  
   
--   **ID**  
+-   **IDENTIFI**  
   
 -   **Code**  
   
@@ -69,10 +69,10 @@ ms.locfileid: "65482577"
   
 -   **Version_ID**  
   
-##  <a name="members"></a> Membres  
- Pour les membres, vous ne pouvez pas utiliser **MDMMemberStatus** ou **racine** pour le **Code** valeur d’attribut.  
+##  <a name="members"></a>Membres  
+ Pour les membres, vous ne pouvez pas utiliser **MDMMemberStatus** ou **root** pour la valeur de l’attribut **code** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble de Master Data Services](master-data-services-overview-mds.md)  
+ [Vue d'ensemble de Master Data Services](master-data-services-overview-mds.md)  
   
   

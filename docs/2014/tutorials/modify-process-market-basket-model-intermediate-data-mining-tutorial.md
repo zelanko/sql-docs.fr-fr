@@ -1,5 +1,5 @@
 ---
-title: Modification et traitement du modèle de panier d’achat (didacticiel d’exploration de données intermédiaire) | Microsoft Docs
+title: Modification et traitement du modèle Market Basket (Didacticiel intermédiaire sur l’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,30 +11,30 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 4987e3497b7d52ff11f8f52bc403105340f7f508
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63301369"
 ---
 # <a name="modifying-and-processing-the-market-basket-model-intermediate-data-mining-tutorial"></a>Modification et traitement du modèle de panier d'achat (Didacticiel intermédiaire sur l'exploration de données)
-  Avant de traiter le modèle d’exploration de données d’association que vous avez créé, vous devez modifier les valeurs par défaut de deux des paramètres : *Prise en charge* et *probabilité*.  
+  Avant de traiter le modèle d’exploration de données d’association que vous avez créé, vous devez modifier les valeurs par défaut de deux des paramètres : *support* et *probabilité*.  
   
--   *Prise en charge* définit le pourcentage de cas dans lequel une règle doit exister avant qu’il est considéré comme valide. Vous allez spécifier qu'une règle doit être présente dans au moins 1 pour cent des cas.  
+-   La *prise en charge* définit le pourcentage de cas dans lesquels une règle doit exister avant d’être considérée comme valide. Vous allez spécifier qu'une règle doit être présente dans au moins 1 pour cent des cas.  
   
--   *Probabilité* définit comment probablement une association doit être avant qu’il est considéré comme valide. Vous prendrez en compte toute association ayant une probabilité d'au moins 10 pour cent.  
+-   La probabilité définit la *probabilité* d’une association avant qu’elle soit considérée comme valide. Vous prendrez en compte toute association ayant une probabilité d'au moins 10 pour cent.  
   
- Pour plus d’informations sur les effets de l’augmentation ou diminution de la prise en charge et probabilité, consultez [l’algorithme Microsoft Association Technical Reference](../../2014/analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md).  
+ Pour plus d’informations sur les effets de l’augmentation ou de la réduction de la prise en charge et de la probabilité, consultez informations techniques de référence sur l' [algorithme Microsoft Association](../../2014/analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md).  
   
- Après avoir défini la structure et les paramètres pour le **Association** modèle d’exploration de données, vous allez traiter le modèle.  
+ Une fois que vous avez défini la structure et les paramètres du modèle d’exploration de données d' **Association** , vous devez traiter le modèle.  
   
 ### <a name="to-adjust-the-parameters-of-the-association-model"></a>Pour modifier les paramètres du modèle d'association  
   
-1.  Ouvrez le **des modèles d’exploration de données** onglet du Concepteur d’exploration de données.  
+1.  Ouvrez l’onglet **modèles d’exploration** de données du concepteur d’exploration de données.  
   
-2.  Avec le bouton droit le **Association** colonne dans la grille dans le concepteur et sélectionnez **paramètres d’algorithme défini pour ouvrir les paramètres d’algorithme** boîte de dialogue.  
+2.  Cliquez avec le bouton droit sur la colonne **Association** dans la grille du concepteur et sélectionnez **définir les paramètres d’algorithme pour ouvrir la boîte de dialogue Paramètres d’algorithme** .  
   
-3.  Dans le **valeur** colonne de la **paramètres d’algorithme** boîte de dialogue, définissez les paramètres suivants :  
+3.  Dans la colonne **valeur** de la boîte de dialogue **paramètres d’algorithme** , définissez les paramètres suivants :  
   
      MINIMUM_PROBABILITY = 0.1  
   
@@ -44,11 +44,11 @@ ms.locfileid: "63301369"
   
 ### <a name="to-process-the-mining-model"></a>Pour traiter le modèle d'exploration de données  
   
-1.  Sur le **Mining Model** menu de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], sélectionnez **traiter la Structure d’exploration de données et tous les modèles.**  
+1.  Dans le menu modèle d’exploration [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]de **données** de, sélectionnez traiter l’exploration de **données et tous les modèles.**  
   
 2.  Cliquez sur **Oui**pour répondre à l'avertissement qui vous invite à indiquer si vous souhaitez générer et déployer le projet.  
   
-     Le **traiter la Structure d’exploration de données - Association** boîte de dialogue s’ouvre.  
+     La boîte **de dialogue traiter la structure d’exploration de données-Association** s’ouvre.  
   
 3.  Cliquez sur **Exécuter**.  
   
@@ -56,12 +56,12 @@ ms.locfileid: "63301369"
   
 4.  Une fois le traitement terminé, cliquez sur **Fermer** pour quitter la boîte de dialogue **État d'avancement du traitement** .  
   
-5.  Cliquez sur **fermer** pour quitter le **traiter la Structure d’exploration de données - Association** boîte de dialogue.  
+5.  Cliquez à nouveau sur **Fermer** pour quitter la boîte de dialogue **traiter la structure d’exploration de données-Association** .  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Exploration des modèles de panier &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/exploring-the-market-basket-models-intermediate-data-mining-tutorial.md)  
+ [Exploration des modèles de panier d’évolution &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/exploring-the-market-basket-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exigences et considérations concernant le traitement &#40;exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Exigences et considérations relatives au traitement &#40;l’exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

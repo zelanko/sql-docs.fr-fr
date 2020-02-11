@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cfedde2b9bdeff831029f2f3916f28bec480d659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106395"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>Références à des collections de variables de rapport et de groupe (Générateur de rapports et SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "66106395"
   
 -   **Utilisation en lecture/écriture** Définissez une valeur une fois et sérialisez-la dans une session de rapport. L'option en lecture-écriture pour les variables fournit une meilleure alternative que l'utilisation d'une variable statique dans le bloc de code dans la définition de rapport.  
   
-     Lorsque vous désactivez le **en lecture seule** option pour une variable, la propriété accessible en écriture pour la variable est définie sur `true`. Pour mettre à jour la valeur à partir d’une expression, utilisez la méthode SetValue, par exemple `=Variables!MyVariable.SetValue("123")`.  
+     Lorsque vous désactivez l’option **lecture seule** pour une variable, la propriété accessible en écriture de la variable `true`a la valeur. Pour mettre à jour la valeur à partir d’une expression, utilisez la méthode SetValue, par exemple `=Variables!MyVariable.SetValue("123")`.  
   
     > [!NOTE]  
     >  Vous ne pouvez pas contrôler le moment où le processeur de rapports initialise une variable ou évalue une expression qui met à jour une variable. L'ordre d'exécution pour l'initialisation d'une variable est non défini.  
@@ -57,7 +57,7 @@ ms.locfileid: "66106395"
 ## <a name="group-variables"></a>Variables de groupe  
  Utilisez une variable de groupe pour calculer une expression complexe dans l'étendue d'un groupe. Une variable de groupe est valide uniquement dans l'étendue du groupe et ses groupes enfants.  
   
- Par exemple, supposez qu'une région de données affiche des données d'inventaire pour des éléments qui sont dans différentes catégories d'impôts et que vous souhaitez appliquer différents taux de taxe pour chaque catégorie. Vous regroupez les données en fonction des catégories et définissez une variable *Tax* sur le groupe parent. Vous définissez ensuite une variable de groupe pour *ItemTax* pour chaque catégorie d’impôts et affectez chacun des différents sous-groupes de catégories à la variable de groupe correcte. Exemple :  
+ Par exemple, supposez qu'une région de données affiche des données d'inventaire pour des éléments qui sont dans différentes catégories d'impôts et que vous souhaitez appliquer différents taux de taxe pour chaque catégorie. Vous regroupez les données en fonction des catégories et définissez une variable *Tax* sur le groupe parent. Vous définissez ensuite une variable de groupe pour *ItemTax* pour chaque catégorie d’impôts et affectez chacun des différents sous-groupes de catégories à la variable de groupe correcte. Par exemple :  
   
 -   Pour le groupe parent basé sur `[Category]`, affectez à la variable *Tax* la valeur `[Tax]`. Supposez que les valeurs des catégories sont Food et Clothing.  
   

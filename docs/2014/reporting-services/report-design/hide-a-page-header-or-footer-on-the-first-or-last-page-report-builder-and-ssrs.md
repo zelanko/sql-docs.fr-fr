@@ -1,5 +1,5 @@
 ---
-title: Masquer un en-tête de Page ou le pied de page sur la première ou la dernière Page (Générateur de rapports et SSRS) | Microsoft Docs
+title: Masquer un en-tête ou un pied de page sur la première ou la dernière page (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6f3033ea0c95841d15b1b71068c9a566abbfac98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105707"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>Masquer un en-tête ou un pied de page sur la première ou la dernière page (Générateur de rapports et SSRS)

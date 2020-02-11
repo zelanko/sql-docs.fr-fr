@@ -1,5 +1,5 @@
 ---
-title: Clone, exemple de méthode (VC ++) | Microsoft Docs
+title: Clone, exemple de méthode (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 7ac96c1d-d0d8-4bf8-b165-533818d0f590
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5ecdbf24ea70da0e16d05e4d866c0b2f0f9470c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919972"
 ---
 # <a name="clone-method-example-vc"></a>Clone, exemple de méthode (VC++)
-Cet exemple utilise le [Clone](../../../ado/reference/ado-api/clone-method-ado.md) méthode pour créer des copies d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) puis permet à l’utilisateur de positionner le pointeur d’enregistrement de chaque copie indépendamment.  
+Cet exemple utilise la méthode [clone](../../../ado/reference/ado-api/clone-method-ado.md) pour créer des copies d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) , puis permet à l’utilisateur de positionner le pointeur d’enregistrement de chaque copie indépendamment.  
   
 ```  
 // BeginCloneCpp.cpp  

@@ -19,18 +19,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7b75962019d9b39728ceff0b151e770dd0f51a25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68075632"
 ---
-# <a name="spreleaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
+# <a name="sp_releaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Libère un verrou appliqué à une ressource d'application.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,19 +43,19 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @Resource=] '*resource_name*'  
- Nom de ressource de verrou spécifié par l'application cliente. L'application doit veiller à ce que la ressource soit unique. Le nom spécifié est haché en interne en une valeur qui peut être stockée dans le gestionnaire de verrous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* est **nvarchar (255)** sans valeur par défaut. *resource_name* est binaire, est donc la casse, quel que soit les paramètres de classement de la base de données actuelle.  
+ [ @Resource= ] '*resource_name*'  
+ Nom de ressource de verrou spécifié par l'application cliente. L'application doit veiller à ce que la ressource soit unique. Le nom spécifié est haché en interne en une valeur qui peut être stockée dans le gestionnaire de verrous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* est de type **nvarchar (255)** et n’a pas de valeur par défaut. *resource_name* est comparé en binaire, respecte donc la casse, quels que soient les paramètres de classement de la base de données actuelle.  
   
- [ @LockOwner=] '*lock_owner*'  
- Propriétaire du verrou, qui est la valeur de *lock_owner* lorsque le verrou a été demandé. *lock_owner* est de type **nvarchar(32)** . La valeur peut être **Transaction** (valeur par défaut) ou **Session**. Lorsque le *lock_owner* valeur est **Transaction**, par défaut ou spécifié explicitement, sp_getapplock doit être exécutée à partir d’une transaction.  
+ [ @LockOwner= ] '*lock_owner*'  
+ Propriétaire du verrou, qui est la valeur de *lock_owner* lorsque le verrou a été demandé. *lock_owner* est **de type nvarchar (32)**. La valeur peut être **Transaction** (valeur par défaut) ou **Session**. Lorsque la valeur de *lock_owner* est **transaction**, par défaut ou explicitement spécifiée, sp_getapplock doit être exécutée à partir d’une transaction.  
   
- [ @DbPrincipal=] '*database_principal*'  
- Utilisateur, rôle ou rôle d'application qui dispose d'autorisations sur un objet d'une base de données. L’appelant de la fonction doit être membre du rôle de base de données fixe *database_principal*, dbo ou db_owner pour pouvoir appeler la fonction. La valeur par défaut est public.  
+ [ @DbPrincipal= ] '*database_principal*'  
+ Utilisateur, rôle ou rôle d'application qui dispose d'autorisations sur un objet d'une base de données. L’appelant de la fonction doit être membre du rôle de base de données fixe *database_principal*, dbo ou db_owner pour pouvoir appeler la fonction avec succès. La valeur par défaut est public.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- \>= 0 (succès) ou < 0 (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ \>= 0 (succès), ou < 0 (échec)  
   
-|Value|Résultat|  
+|Valeur|Résultats|  
 |-----------|------------|  
 |0|Le verrou a été libéré avec succès.|  
 |-999|Indique la validation de paramètre ou une autre erreur d'appel.|  

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 223f587b35a55b6f2df6d31ca64f48aac96fd6f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63288337"
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>Transformer les colonnes existantes en colonnes XML
@@ -33,7 +33,7 @@ ALTER COLUMN Col2 xml
 GO  
 ```  
   
- Vous pouvez convertir une colonne de type `xml` non typée en colonne XML typée. Exemple :  
+ Vous pouvez convertir une colonne de type `xml` non typée en colonne XML typée. Par exemple :  
   
 ```  
 CREATE TABLE T (Col1 int primary key, Col2 xml)  

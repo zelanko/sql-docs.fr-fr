@@ -1,5 +1,5 @@
 ---
-title: Mappage des Types de données cible (AccessToSQL) et de la Source | Microsoft Docs
+title: Mappage des types de données source et cible (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,80 +16,80 @@ ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e0600778b938a7736ab1112f31bbe4828605cdaf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67907161"
 ---
-# <a name="mapping-source-and-target-data-types-accesstosql"></a>Source de mappage et les Types de données cible (AccessToSQL)
-Les types de base de données Access diffèrent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de base de données. Lorsque vous convertissez des objets de base de données Access à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets, vous devez spécifier le mappage des types de données à partir de l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez accepter les mappages de type de données par défaut, ou vous pouvez personnaliser les mappages comme indiqué dans les procédures suivantes.  
+# <a name="mapping-source-and-target-data-types-accesstosql"></a>Mappage des types de données source et cible (AccessToSQL)
+Les types de base de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données Access diffèrent des types de base de données. Lorsque vous convertissez des objets de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données Access en objets, vous devez spécifier comment mapper les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]types de données de l’accès à. Vous pouvez accepter les mappages de type de données par défaut, ou vous pouvez personnaliser les mappages comme indiqué dans les procédures suivantes.  
   
 ## <a name="default-mappings"></a>Mappages par défaut  
-SSMA a un ensemble de mappages de types de données par défaut. Pour la liste des mappages par défaut, consultez [paramètres du projet (mappage de Type)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
+SSMA possède un ensemble de mappages de types de données par défaut. Pour obtenir la liste des mappages par défaut, consultez [paramètres du projet (mappage de type)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
   
-## <a name="customizing-data-type-mappings"></a>Personnalisation mappages de types de données  
-À l’aide de la **paramètres du projet** boîte de dialogue, vous pouvez personnaliser la façon dont les types sont mappés pour toutes les bases de données et les objets de base de données dans un projet. Les mappages de type pour un projet s’appliquent à toutes les bases de données et les objets de base de données qui n’ont pas de mappages de types personnalisés.  
+## <a name="customizing-data-type-mappings"></a>Personnalisation des mappages de types de données  
+La boîte de dialogue **paramètres du projet** vous permet de personnaliser la façon dont les types sont mappés pour toutes les bases de données et les objets de base de données d’un projet. Les mappages de type pour un projet s’appliquent à toutes les bases de données et objets de base de données qui n’ont pas de mappages de types personnalisés.  
   
-Vous pouvez également personnaliser le mappage des types de données au niveau de la base de données ou une table.  
+Vous pouvez également personnaliser le mappage de type de données au niveau de la base de données ou de la table.  
   
-La procédure suivante montre comment mapper des types de données sur le projet, la base de données ou le niveau de l’objet de base de données.  
+La procédure suivante montre comment mapper des types de données au niveau du projet, de la base de données ou de l’objet de base de données.  
   
-**Pour mapper les types de données**  
+**Pour mapper des types de données**  
   
-1.  Pour personnaliser le mappage de type de données pour la totalité du projet, ouvrez le **paramètres du projet** boîte de dialogue :  
+1.  Pour personnaliser le mappage de type de données pour l’ensemble du projet, ouvrez la boîte de dialogue **paramètres du projet** :  
   
-    1.  Sur le **outils** menu, sélectionnez **paramètres du projet**.  
+    1.  Dans le menu **Outils** , sélectionnez **paramètres du projet**.  
   
-    2.  Dans le volet gauche, sélectionnez **le mappage de Type**.  
+    2.  Dans le volet gauche, sélectionnez **mappage de type**.  
   
         Le graphique de mappage de type et les boutons s’affichent dans le volet droit.  
   
-    Ou, pour personnaliser le mappage des types de données au niveau de la base de données ou une table, sélectionnez la base de données ou la table dans le volet Explorateur de métadonnées d’accès :  
+    Ou, pour personnaliser le mappage de type de données au niveau de la base de données ou de la table, sélectionnez la base de données ou la table dans le volet Explorateur de métadonnées d’accès :  
   
-    1.  Dans le volet Explorateur de métadonnées d’accès, développez **la métabase accès**, puis développez **bases de données**.  
+    1.  Dans le volet Explorateur de métadonnées Access, développez **accès-métabase**, puis développez **bases de données**.  
   
-    2.  Sélectionnez la base de données ou une table pour laquelle vous souhaitez personnaliser le mappage de type de données.  
+    2.  Sélectionnez la base de données ou la table pour laquelle vous souhaitez personnaliser le mappage de type de données.  
   
-    3.  Dans le volet droit, cliquez sur **le mappage de Type**.  
+    3.  Dans le volet droit, cliquez sur **mappage de type**.  
   
 2.  Pour ajouter un nouveau mappage, procédez comme suit :  
   
-    1.  Dans le volet de mappage de Type, cliquez sur **ajouter**.  
+    1.  Dans le volet mappage de type, cliquez sur **Ajouter**.  
   
-    2.  Dans le **nouveau mappage de Type** boîte de dialogue **type de Source**, sélectionnez le type de données Access à mapper.  
+    2.  Dans la boîte de dialogue **nouveau mappage de type** , sous **type de source**, sélectionnez le type de données Access à mapper.  
   
-    3.  Si le type requiert une longueur, spécifiez les longueurs minimale et maximale des données pour le mappage en sélectionnant le **de** et **à** cases à cocher, puis en entrant les valeurs.  
+    3.  Si le type requiert une longueur, spécifiez les longueurs de données minimale et maximale pour le mappage en activant les cases à cocher **de** et à, puis **en** entrant les valeurs.  
   
-        Cela vous permet de personnaliser le mappage de données pour les valeurs inférieures et supérieures du même type de données.  
+        Cela vous permet de personnaliser le mappage des données pour les valeurs plus petites et plus grandes du même type de données.  
   
-    4.  Sous **type cible**, sélectionnez la cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.  
+    4.  Sous **type de cible**, sélectionnez le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données cible.  
   
-        Certains types nécessitent une longueur de type de données cible. Si nécessaire, entrez la nouvelle longueur de données dans le **remplacer par** , puis cliquez sur **OK**.  
+        Certains types nécessitent une longueur de type de données cible. Si nécessaire, entrez la nouvelle longueur des données dans la zone **remplacer par** , puis cliquez sur **OK**.  
   
 3.  Pour modifier un mappage de type de données, procédez comme suit :  
   
-    1.  Dans le volet de mappage de Type, cliquez sur **modifier**.  
+    1.  Dans le volet mappage de type, cliquez sur **modifier**.  
   
-    2.  Dans le **liste de mappage de Type** boîte de dialogue **type de Source**, sélectionnez le type de données Access à mapper.  
+    2.  Dans la boîte de dialogue **liste de mappage de type** , sous type de **source**, sélectionnez le type de données Access à mapper.  
   
-    3.  Si le type requiert une longueur, spécifiez les longueurs minimale et maximale des données pour le mappage en sélectionnant le **de** et **à** cases à cocher, puis en entrant les valeurs.  
+    3.  Si le type requiert une longueur, spécifiez les longueurs de données minimale et maximale pour le mappage en activant les cases à cocher **de** et à, puis **en** entrant les valeurs.  
   
-        Cela vous permet de personnaliser le mappage de données pour les valeurs inférieures et supérieures du même type de données.  
+        Cela vous permet de personnaliser le mappage des données pour les valeurs plus petites et plus grandes du même type de données.  
   
-    4.  Sous **type cible**, sélectionnez la cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.  
+    4.  Sous **type de cible**, sélectionnez le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données cible.  
   
-        Certains types nécessitent une longueur de type de données cible. Si nécessaire, entrez la nouvelle longueur de données dans le **remplacer par** , puis cliquez sur **OK**.  
+        Certains types nécessitent une longueur de type de données cible. Si nécessaire, entrez la nouvelle longueur des données dans la zone **remplacer par** , puis cliquez sur **OK**.  
   
 4.  Pour supprimer un mappage de type de données, procédez comme suit :  
   
-    1.  Dans le volet de mappage de Type, sélectionnez la ligne dans la liste de mappage de type qui contient le mappage de type de données à supprimer.  
+    1.  Dans le volet mappage de type, sélectionnez la ligne dans la liste mappage de type qui contient le mappage de type de données que vous souhaitez supprimer.  
   
     2.  Cliquez sur **Supprimer**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
-L’étape suivante du processus de migration est [convertir des objets de base de données d’accès aux objets SQL Server](converting-access-database-objects-accesstosql.md)  
+L’étape suivante du processus de migration consiste [à convertir les objets de base de données Access en objets SQL Server](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Migration bases de données Access vers SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+[Migration de bases de données Access vers SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

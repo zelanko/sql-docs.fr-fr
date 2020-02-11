@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 977c96b625ecb62f9f02d19e71df57cd17d8660f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478493"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Assistant Mise à niveau de base de données (Gestionnaire de configuration Master Data Services)
@@ -29,14 +29,14 @@ ms.locfileid: "65478493"
 |Nom du contrôle|Description|  
 |------------------|-----------------|  
 |**Instance SQL Server**|Nom de l’instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] actuellement sélectionnée.|  
-|**Base de données des services de données de référence**|Nom de la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] actuellement sélectionnée.|  
+|**Base de données Master Data Services**|Nom de la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] actuellement sélectionnée.|  
   
 ## <a name="progress-and-finish"></a>État d'avancement et fin  
  Affiche l'état d'avancement du processus de mise à niveau. Une fois la base de données mise à niveau, cliquez sur le lien vers le fichier journal pour afficher des informations détaillées sur la mise à niveau ou cliquez sur **Terminer** pour fermer l’Assistant Base de données et revenir à la page **Bases de données** . La base de données mise à niveau est sélectionnée et vous pouvez afficher et modifier ses paramètres système.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Page Configuration de base de données &#40;Gestionnaire de configuration Master Data Services&#41;](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
- [Configurer le site Web et la base de données pour Master Data Services](set-up-the-database-and-website-for-master-data-services.md)   
+ [Page Configuration de la base de données &#40;Gestionnaire de configuration Master Data Services&#41;](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
+ [Configurer la base de données et le site Web pour Master Data Services](set-up-the-database-and-website-for-master-data-services.md)   
  [Mettre à niveau Master Data Services](../database-engine/install-windows/upgrade-master-data-services.md)  
   
   

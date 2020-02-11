@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8123a523a0fa5212b4c0ffc8d98c6a90aef3396c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245933"
 ---
 # <a name="view-job-step-information"></a>View Job Step Information
@@ -31,7 +31,7 @@ ms.locfileid: "63245933"
   
      [Sécurité](#Security)  
   
--   **Pour afficher des informations sur une étape de travail, utilisez :**  
+-   **Pour afficher des informations sur les étapes de travail, utilisez :**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "63245933"
   
 #### <a name="to-view-job-step-information"></a>Pour afficher des informations sur une étape de travail  
   
-1.  Dans l' **Explorateur d'objets** , connectez-vous à une instance du moteur de base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
+1.  Dans l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **Explorateur d’objets,** Connectez-vous à une instance du, puis développez cette instance.  
   
 2.  Développez **Agent SQL Server**et **Travaux**, cliquez avec le bouton droit sur le travail contenant l’étape à modifier, puis cliquez sur **Propriétés**.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "63245933"
   
 5.  Dans la page **Général** de la boîte de dialogue **Propriétés de l'étape du travail** , vous pouvez afficher le type d'étape de travail et sa fonction.  
   
-6.  Cliquez sur la page **Avancé** pour afficher les mesures prises par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent si l'étape du travail réussit ou échoue, le nombre de fois où l'étape du travail doit être tentée, l'emplacement où est écrite la sortie de l'étape du travail et l'utilisateur pour lequel elle est exécutée.  
+6.  Cliquez sur la page **Avancé** pour afficher les mesures prises par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si l'étape du travail réussit ou échoue, le nombre de fois où l'étape du travail doit être tentée, l'emplacement où est écrite la sortie de l'étape du travail et l'utilisateur pour lequel elle est exécutée.  
   
 #### <a name="to-view-job-step-output"></a>Pour afficher la sortie d'une étape de travail  
   

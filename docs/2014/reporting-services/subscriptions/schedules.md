@@ -18,36 +18,36 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 12096cd9269718f9eb75ca4fcbd1dbc11e25e6c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100753"
 ---
 # <a name="schedules"></a>Planifications
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des planifications partagées et des planifications spécifiques aux rapports pour vous aider à contrôler le traitement et la distribution des rapports. La différence entre ces deux types de planifications réside dans la façon dont elles sont définies, stockées et gérées. La construction interne des deux types de planifications est la même. Toutes les planifications spécifient un type de périodicité : mensuelle, hebdomadaire ou quotidienne. Dans le type de périodicité, vous définissez les intervalles et la plage pour configurer la fréquence à laquelle un événement se produit. Qu'il s'agisse de créer une planification partagée ou une planification spécifique aux rapports, le type de périodicité et la façon dont elle est spécifiée restent inchangés.  
   
- Dans cette rubrique :  
+ Dans cette rubrique :  
   
 -   [Ce que vous pouvez faire avec les planifications](#bkmk_whatyoucando)  
   
--   [Comparaison des planifications partagées et spécifiques aux rapports](#bkmk_compare)  
+-   [Comparaison des planifications partagées et des planifications spécifiques aux rapports](#bkmk_compare)  
   
--   [Configurer les Sources de données](#bkmk_configuredatasources)  
+-   [Configurer les sources de données](#bkmk_configuredatasources)  
   
--   [Store les informations d’identification et comptes de traitement](#bkmk_credentials)  
+-   [Stocker les informations d’identification et les comptes de traitement](#bkmk_credentials)  
   
--   [La planification et le fonctionnement du traitement de remise](#bkmk_how_scheduling_works)  
+-   [Fonctionnement du traitement des planifications et des livraisons](#bkmk_how_scheduling_works)  
   
 -   [Dépendances de serveur](#bkmk_serverdependencies)  
   
--   [Conséquences de l’arrêt de l’Agent SQL Server](#bkmk_stoppingagent)  
+-   [Conséquences de l’arrêt du SQL Server Agent](#bkmk_stoppingagent)  
   
--   [Conséquences de l’arrêt du Service Report Server](#bkmk_stoppingservice)  
+-   [Conséquences de l’arrêt du service Report Server](#bkmk_stoppingservice)  
   
   
 ##  <a name="bkmk_whatyoucando"></a> Opérations réalisables avec les planifications  
- Vous pouvez utiliser le Gestionnaire de rapports en mode natif et les pages d'administration de site SharePoint en mode SharePoint pour créer et gérer vos planifications. Vous pouvez :  
+ Vous pouvez utiliser le Gestionnaire de rapports en mode natif et les pages d'administration de site SharePoint en mode SharePoint pour créer et gérer vos planifications. Vous pouvez :  
   
 -   Planifier la remise de rapports dans un abonnement standard ou piloté par des données.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66100753"
 ##  <a name="bkmk_credentials"></a> Stocker les informations d'identification et les comptes de traitement  
  La façon dont vous travaillez avec une planification dépend des tâches faisant partie de votre attribution de rôle. Si vous utilisez des rôles prédéfinis, les utilisateurs qui sont des gestionnaires de contenu et des administrateurs système peuvent créer et gérer n'importe quelle planification. Si vous utilisez des attributions de rôle par défaut, l'attribution de rôle doit inclure les tâches prenant en charge les opérations planifiées.  
   
-|Pour effectuer cette opération|Incluez cette tâche|Rôles prédéfinis du mode natif|Groupes du mode SharePoint|  
+|Action à réaliser|Incluez cette tâche|Rôles prédéfinis du mode natif|Groupes du mode SharePoint|  
 |----------------|-----------------------|----------------------------------|----------------------------|  
 |Créer, modifier ou supprimer des planifications partagées|Gérer les planifications partagées|Administrateur système|Propriétaires|  
 |Sélectionner les planifications partagées|Afficher les planifications partagées|Utilisateur système|Membres|  
@@ -128,7 +128,7 @@ ms.locfileid: "66100753"
  Reporting Services gère une file d'attente d'événements pour toutes les opérations planifiées. Il interroge régulièrement la file d'attente pour vérifier si elle contient de nouveaux événements. Par défaut, la file d'attente fait l'objet d'une analyse toutes les 10 secondes. Si vous souhaitez changer cette fréquence, modifiez les paramètres de configuration `PollingInterval`, `IsNotificationService` et `IsEventService` dans le fichier RSReportServer.config. Le mode SharePoint utilise également le fichier RSreporserver.config pour ces paramètres et les valeurs s'appliquent à toutes les applications de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d'informations, consultez [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md).  
   
 ##  <a name="bkmk_serverdependencies"></a> Dépendances de serveur  
- Il est impératif que le service Report Server et l'Agent SQL Server s'exécutent pour que le processeur de planification et de livraison fonctionne. La fonctionnalité de planification de traitement et des livraisons doit être activée via le `ScheduleEventsAndReportDeliveryEnabled` propriété de la **Configuration de Surface d’exposition pour Reporting Services** facette dans la gestion basée sur des stratégies. Enfin, les opérations planifiées ne peuvent se déclencher que si l'Agent SQL Server et le service Report Server sont en cours d'exécution.  
+ Il est impératif que le service Report Server et l'Agent SQL Server s'exécutent pour que le processeur de planification et de livraison fonctionne. La fonctionnalité planification et traitement de la distribution doit être activée `ScheduleEventsAndReportDeliveryEnabled` via la propriété de la configuration de la surface d' **exposition pour Reporting Services** facette dans la gestion basée sur des stratégies. Enfin, les opérations planifiées ne peuvent se déclencher que si l'Agent SQL Server et le service Report Server sont en cours d'exécution.  
   
 > [!NOTE]  
 >  Vous pouvez utiliser la facette **Configuration de la surface d'exposition pour Reporting Services** pour interrompre temporairement ou définitivement des opérations planifiées. Bien que vous puissiez créer et déployer des extensions de remise personnalisées, le processeur de planification et de livraison n'est en lui-même pas extensible. Vous ne pouvez pas modifier la manière dont il gère les événements et les notifications. Pour plus d'informations sur la désactivation des fonctionnalités, consultez la section **Événements planifiés et remise** de [Turn Reporting Services Features On or Off](../report-server/turn-reporting-services-features-on-or-off.md).  

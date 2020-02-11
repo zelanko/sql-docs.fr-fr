@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b7fc20f857f42c854fcf01947c39ea88206bb5b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63264889"
 ---
 # <a name="custom-report-item-class-libraries"></a>Bibliothèques de classes d'éléments de rapport personnalisés
@@ -46,7 +46,8 @@ ms.locfileid: "63264889"
 |`AltReportItem`|Objet de remplacement d'élément de rapport, à utiliser lorsque le contrôle DTC de l'élément de rapport personnalisé n'est pas pris en charge.|  
 |`Style`|Propriétés de style destinées à l'élément de rapport personnalisé.|  
 |`Adornment`|Fenêtre d'ornement utilisée pour modifier de manière interactive le contrôle.|  
-|`Site`|`ISite` du composant.|  
+|`Site`|
+  `ISite` du composant.|  
 |`DesignerVerbCollection`|Tableau de verbes personnalisés pour le menu contextuel du contrôle.|  
   
 #### <a name="public-methods"></a>M&#233;thodes publiques  
@@ -63,7 +64,7 @@ ms.locfileid: "63264889"
 |`OnPaint`|Appelé en réponse à l'événement `Paint`.|  
   
 ### <a name="microsoftreportdesignercustomreportitemattribute"></a>Microsoft.ReportDesigner.CustomReportItemAttribute  
- Cet attribut est utilisé afin d'identifier le type de l'élément de rapport personnalisé. Le nom doit correspondre à la valeur de la <`Name`> attribut de la `ReportItem` élément dans le fichier de configuration du Concepteur de rapports.  
+ Cet attribut est utilisé afin d'identifier le type de l'élément de rapport personnalisé. Le nom doit correspondre à la valeur de l' `Name` attribut <> de `ReportItem` l’élément dans le fichier de configuration concepteur de rapports.  
   
 #### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -131,8 +132,8 @@ ms.locfileid: "63264889"
 |`Fields`|Collection de champs `Microsoft.ReportDesigner.Field`) à déplacer.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Langage de définition de rapport &#40;SSRS, Report Definition Language&#41;](../reports/report-definition-language-ssrs.md)   
- [Création d’un composant d’exécution d’éléments de rapport personnalisé](creating-a-custom-report-item-run-time-component.md)   
+ [Report Definition Language &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)   
+ [Création d’un composant d’exécution d’élément de rapport personnalisé](creating-a-custom-report-item-run-time-component.md)   
  [Création d'un composant au moment de la conception d'éléments de rapport personnalisé](creating-a-custom-report-item-design-time-component.md)  
   
   

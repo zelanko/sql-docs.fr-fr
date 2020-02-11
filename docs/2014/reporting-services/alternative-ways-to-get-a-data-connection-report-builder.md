@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 36f489f25adc9746f844a6289ca8a2849ad83870
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109984"
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>Autres manières d'obtenir une connexion de données (Générateur de rapports)
@@ -37,7 +37,7 @@ ms.locfileid: "66109984"
   
 3.  Pour vous assurer que vous pouvez vous connecter à la source de données, cliquez sur **Tester la connexion**. Le message « La connexion a été correctement créée » s'affiche. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-4.  Cliquer sur **Suivant**.  
+4.  Cliquez sur **Suivant**.  
   
      Si nécessaire, entrez vos informations d'identification. Pour enregistrer les informations d’identification localement, sélectionnez **Enregistrer le mot de passe avec la connexion**. Si vous ne sélectionnez pas cette option, vous êtes invité à indiquer vos informations d'identification chaque fois que vous exécutez le rapport.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66109984"
   
      Le message « La connexion a été correctement créée » s'affiche. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Cliquer sur **Suivant**.  
+7.  Cliquez sur **Suivant**.  
   
 8.  Si vous êtes invité à entrer un nom d'utilisateur et un mot de passe, entrez vos informations d'identification. Pour enregistrer les informations d’identification localement, sélectionnez **Enregistrer le mot de passe avec la connexion**.  
   

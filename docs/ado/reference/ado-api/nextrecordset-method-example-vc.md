@@ -1,5 +1,5 @@
 ---
-title: Méthode NextRecordset, exemple (VC ++) | Microsoft Docs
+title: NextRecordset, exemple de méthode (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 8bb72817-0cf5-4ce9-9fb8-043c89da941c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ec37df7c37c8117dfdda99faabd746ccd8c3d69f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932025"
 ---
 # <a name="nextrecordset-method-example-vc"></a>NextRecordset, exemple de méthode (VC++)
-Cet exemple utilise le [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) méthode pour afficher les données dans un jeu d’enregistrements qui utilise une instruction de commande composée constituée de trois distinct **sélectionnez** instructions.  
+Cet exemple utilise la méthode [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) pour afficher les données d’un Recordset qui utilise une instruction de commande composée composée de trois instructions **Select** distinctes.  
   
 ```  
 // BeginNextRecordsetCpp.cpp  

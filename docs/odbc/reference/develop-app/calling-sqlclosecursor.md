@@ -17,11 +17,11 @@ ms.assetid: ef448c39-a9ad-4f07-8ef3-65bd4cef672a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 447a0892049317813fa9fe6986e6219922a11e28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068693"
 ---
 # <a name="calling-sqlclosecursor"></a>Appel de SQLCloseCursor
-Étant donné que **SQLCloseCursor** est presque identique **SQLFreeStmt** avec SQL_CLOSE, le Gestionnaire de pilotes ne mappe pas cette fonction. Fonctions de remplacement sont mappées afin qu’existant ODBC *2.x* applications peuvent facilement déplacer vers ODBC *3.x* à l’aide des nouvelles fonctions. Ce déplacement plus facilement ces applications commencer à utiliser ODBC nouvelle *3.x* fonctionnalités à l’intérieur du code conditionnel de façon modulaire. **SQLCloseCursor** ne représente pas de nouvelles fonctionnalités. Une application ne peut pas accéder tout l’avantage en déplaçant vers **SQLCloseCursor** de **SQLFreeStmt** avec SQL_CLOSE.
+Étant donné que **SQLCloseCursor** est quasiment identique à **SQLFreeStmt** avec SQL_CLOSE, le gestionnaire de pilotes ne mappe pas cette fonction. Les fonctions de remplacement sont mappées afin que les applications ODBC *2. x* existantes puissent facilement être déplacées vers ODBC *3. x* en utilisant les nouvelles fonctions. Un tel déplacement permet à de telles applications de commencer à utiliser de nouvelles fonctionnalités ODBC *3. x* à l’intérieur d’un code conditionnel de manière modulaire. **SQLCloseCursor** ne représente pas de nouvelles fonctionnalités. Une application ne tire aucun avantage en passant à **SQLCloseCursor** à partir de **SQLFreeStmt** avec SQL_CLOSE.

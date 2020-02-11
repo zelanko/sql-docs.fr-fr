@@ -18,21 +18,21 @@ ms.assetid: 516ef311-e83b-45c9-b9cd-0e0641774c04
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 4bca86b00ca5b2d84cc1c737ecf9d253a0451ea9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68126463"
 ---
-# <a name="spchangedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
+# <a name="sp_changedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Modifie le propriétaire de la base de données active.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) à la place.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez plutôt [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) .  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,13 +43,13 @@ sp_changedbowner [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @loginame=] '*connexion*'  
- ID de connexion du nouveau propriétaire de la base de données active. *connexion* est **sysname**, sans valeur par défaut. *connexion* doit être déjà un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou un utilisateur de Windows. *connexion* ne peut pas devenir le propriétaire de la base de données actuelle si elle a déjà accès à la base de données via un compte de sécurité utilisateur existant dans la base de données. Pour éviter cela, supprimez d'abord l'utilisateur de la base de données active.  
+ [ @loginame= ] «*connexion*»  
+ ID de connexion du nouveau propriétaire de la base de données active. *login* est de **type sysname**, sans valeur par défaut. la *connexion* doit être une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou un utilisateur Windows déjà existant. la *connexion* ne peut pas devenir le propriétaire de la base de données active s’il a déjà accès à la base de données par le biais d’un compte de sécurité utilisateur existant dans la base de données. Pour éviter cela, supprimez d'abord l'utilisateur de la base de données active.  
   
  [ @map= ] *remap_alias_flag*  
- Le *remap_alias_flag* paramètre est déconseillé, car l’alias de connexion ont été supprimés de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. À l’aide de la *remap_alias_flag* paramètre ne génère pas d’erreur mais n’a aucun effet.  
+ Le paramètre *remap_alias_flag* est déconseillé, car les alias de connexion ont été supprimés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de. L’utilisation du paramètre *remap_alias_flag* ne provoque pas d’erreur, mais n’a aucun effet.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
@@ -57,9 +57,9 @@ sp_changedbowner [ @loginame = ] 'login'
   
  Le propriétaire des bases de données système master, model et tempdb ne peut pas être changé.  
   
- Pour afficher une liste valide de *connexion* valeurs, exécutez la procédure stockée sp_helplogins.  
+ Pour afficher la liste des valeurs de *connexion* valides, exécutez la procédure stockée sp_helplogins.  
   
- L’exécution de sp_changedbowner avec uniquement le *connexion* modifications apportées aux paramètres de base de données de la propriété à *connexion*.  
+ L’exécution de sp_changedbowner avec uniquement le paramètre de *connexion* change la propriété de la base de données en *login*.  
   
  Vous pouvez modifier le propriétaire de tout élément sécurisable à l'aide de l'instruction ALTER AUTHORIZATION. Pour plus d’informations, consultez [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
   

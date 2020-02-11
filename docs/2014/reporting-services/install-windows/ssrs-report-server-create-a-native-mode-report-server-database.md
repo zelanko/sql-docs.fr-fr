@@ -14,27 +14,28 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8ae243786119823a7be4a093fcfef232f58d8492
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108677"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>Créer une base de données du serveur de rapports en mode natif (Gestionnaire de configuration de SSRS)
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif utilise une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le stockage interne. La base de données est un composant nécessaire et elle permet de stocker les rapports publiés, les modèles, les sources de données partagées, les données de session, les ressources et les métadonnées du serveur.  
   
  Pour créer une base de données du serveur de rapports ou modifier la chaîne de connexion ou les informations d'identification, utilisez les options de la page Base de données du Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] En Mode natif|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Mode natif|  
   
 ## <a name="when-to-create-or-configure-the-report-server-databases"></a>Quand créer ou configurer les bases de données de serveur de rapports  
  Vous devez créer et configurer la base de données du serveur de rapports si vous avez installé le serveur de rapports en mode fichiers uniquement.  
   
  Si vous avez installé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la configuration par défaut pour le mode natif, la base de données du serveur de rapports a été créée et configurée automatiquement lorsque l'instance du serveur de rapports a été installée. Vous pouvez utiliser le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour afficher ou modifier les paramètres que le programme d'installation a configurés automatiquement.  
   
-##  <a name="rsdbrequirements"></a> Avant de commencer  
+##  <a name="rsdbrequirements"></a>Avant de commencer  
  La création ou la configuration d'une base de données de serveur de rapports est un processus comportant plusieurs étapes. Avant de créer la base de données du serveur de rapports, pensez à la façon dont vous souhaitez spécifier les éléments suivants :  
   
  Sélectionner un serveur de base de données  
@@ -49,7 +50,7 @@ ms.locfileid: "66108677"
  Choisir les informations d'identification du serveur de rapports  
  Décidez comment le serveur de rapports se connectera aux bases de données de serveur de rapports. Les types d'informations d'identification incluent le compte d'utilisateur de domaine, le compte d'utilisateur de la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou le compte de service Report Server.  
   
- Ces informations d'identification sont chiffrées et stockées dans le fichier RSReportServer.config. Le serveur de rapports utilise ces informations d'identification pour les connexions continues à la base de données du serveur de rapports. Si vous souhaitez utiliser un compte d'utilisateur Windows ou un compte d'utilisateur de base de données, veillez bien à en spécifier un qui existe déjà. Bien que le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] crée une connexion et définisse les autorisations nécessaires, il ne crée pas de compte automatiquement. Pour plus d’informations, consultez [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+ Ces informations d'identification sont chiffrées et stockées dans le fichier RSReportServer.config. Le serveur de rapports utilise ces informations d'identification pour les connexions continues à la base de données du serveur de rapports. Si vous souhaitez utiliser un compte d'utilisateur Windows ou un compte d'utilisateur de base de données, veillez bien à en spécifier un qui existe déjà. Bien que le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] crée une connexion et définisse les autorisations nécessaires, il ne crée pas de compte automatiquement. Pour plus d’informations, consultez [configurer une connexion à la base de données du serveur de rapports &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
  Choisir une langue du serveur de rapports  
  Choisissez une langue à spécifier pour le serveur de rapports. Les noms de rôle prédéfinis, les descriptions et les dossiers Mes rapports n'apparaissent pas en différentes langues lorsque les utilisateurs se connectent au serveur à l'aide de différentes versions linguistiques d'un navigateur.  
@@ -63,13 +64,13 @@ ms.locfileid: "66108677"
   
 2.  Dans le menu **Démarrer**, pointez successivement sur **Tous les programmes**, **Microsoft SQL Server**et **Outils de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server**.  
   
-3.  Ouvrez **Configuration du réseau SQL Server**.  
+3.  Ouvrez **SQL Server Configuration réseau**.  
   
 4.  Sélectionnez l'instance.  
   
-5.  Avec le bouton droit **TCP/IP** et cliquez sur **activé**.  
+5.  Cliquez avec le bouton droit sur **TCP/IP** , puis cliquez sur **activé**.  
   
-6.  Redémarrage du service.  
+6.  Redémarrez le service.  
   
 7.  Ouvrez votre logiciel de pare-feu, ainsi que le port sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écoute. Pour l'instance par défaut, il s'agit généralement du port 1433 pour les connexions TCP/IP. Pour plus d’informations, consultez [Configurer un pare-feu Windows pour accéder au moteur de base de données](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -79,7 +80,7 @@ ms.locfileid: "66108677"
   
 2.  Dans la page Base de données, cliquez sur **Modifier la base de données**.  
   
-3.  Cliquez sur **Créer une nouvelle base de données de serveur de rapports**, puis cliquez sur **Suivant**.  
+3.  Cliquez sur **créer une nouvelle base de données de serveur de rapports**, puis sur **suivant**.  
   
 4.  Connectez-vous à l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] que vous allez utiliser pour créer et héberger la base de données du serveur de rapports :  
   
@@ -89,7 +90,7 @@ ms.locfileid: "66108677"
   
     3.  Pour valider la connexion au serveur, cliquez sur **Tester la connexion** .  
   
-    4.  Cliquer sur **Suivant**.  
+    4.  Cliquez sur **Suivant**.  
   
 5.  Spécifiez les propriétés utilisées pour créer la base de données. Pour plus d'informations sur la façon dont ces propriétés sont utilisées, consultez [Avant de commencer](#rsdbrequirements) dans cette rubrique :  
   
@@ -99,7 +100,7 @@ ms.locfileid: "66108677"
   
     3.  Le mode du serveur de rapports est toujours défini à **Natif**.  
   
-    4.  Cliquer sur **Suivant**.  
+    4.  Cliquez sur **Suivant**.  
   
 6.  Spécifiez les informations d'identification que le serveur de rapports doit utiliser pour se connecter à la base de données du serveur de rapports.  
   
@@ -111,16 +112,16 @@ ms.locfileid: "66108677"
   
          Sélectionnez **Informations d'identification du service** si vous souhaitez que le serveur de rapports se connecte à l'aide de son compte de service. Avec cette option, le serveur se connecte en utilisant la sécurité intégrée ; les informations d'identification ne sont pas chiffrées ou stockées.  
   
-    2.  Cliquer sur **Suivant**.  
+    2.  Cliquez sur **Suivant**.  
   
 7.  Examinez les informations sur la page Résumé pour vérifier que les paramètres sont corrects, puis cliquez sur **Suivant**.  
   
 8.  Vérifiez la connexion en cliquant sur une URL de la page URL de Report Server ou de la page URL du Gestionnaire de rapports. Les URL doivent être définies dans l'ordre pour que ce test fonctionne. Si la connexion à la base de données du serveur de rapports est valide, vous pouvez voir l'arborescence des dossiers du serveur de rapports ou le Gestionnaire de rapports dans une fenêtre de navigateur. Pour plus d’informations, consultez [Vérifier une installation de Reporting Services](verify-a-reporting-services-installation.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Base de données &#40;SSRS en Mode natif&#41;](../../sql-server/install/database-ssrs-native-mode.md)   
- [Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](../report-server/manage-a-reporting-services-native-mode-report-server.md)   
+ [Configurer une connexion à la base de données du serveur de rapports &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Base de données &#40;en mode natif SSRS&#41;](../../sql-server/install/database-ssrs-native-mode.md)   
+ [Gérer un serveur de rapports Reporting Services en mode natif](../report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

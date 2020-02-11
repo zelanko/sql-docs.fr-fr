@@ -1,5 +1,5 @@
 ---
-title: Curseurs avec défilement et Isolation des transactions | Microsoft Docs
+title: Curseurs avec défilement et isolation des transactions | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,50 +16,50 @@ ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 92e3694690ef1cba210da29766e7528762e691f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061602"
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>Curseurs avec défilement et isolation des transactions
-Le tableau suivant répertorie les facteurs régissant la visibilité des modifications.  
+Le tableau suivant répertorie les facteurs qui régissent la visibilité des modifications.  
   
-|Modifications apportées par :|Visibilité dépend de :|  
+|Modifications apportées par :|La visibilité dépend des éléments suivants :|  
 |----------------------|----------------------------|  
-|Curseur|Type de curseur, implémentation des curseurs|  
+|Curseur|Type de curseur, implémentation de curseur|  
 |Autres instructions dans la même transaction|Type de curseur|  
-|Instructions dans d’autres transactions|Type de curseur, niveau d’isolation de transaction|  
+|Instructions dans d’autres transactions|Type de curseur, niveau d’isolation de la transaction|  
   
- Ces facteurs sont affichés dans l’illustration suivante.  
+ Ces facteurs sont présentés dans l’illustration suivante.  
   
- ![Facteurs régissant la visibilité des modifications](../../../odbc/reference/develop-app/media/pr23.gif "pr23")  
+ ![Facteurs régissant la visibilité des changements](../../../odbc/reference/develop-app/media/pr23.gif "pr23")  
   
- Le tableau suivant récapitule la capacité de chaque type de curseur à détecter les modifications apportées par lui-même, par d’autres opérations dans sa propre transaction et par d’autres transactions. La visibilité des modifications de ce dernier varie selon le type de curseur et le niveau d’isolation de la transaction contenant le curseur.  
+ Le tableau suivant résume la capacité de chaque type de curseur à détecter les modifications effectuées par lui-même, par d’autres opérations dans sa propre transaction et par d’autres transactions. La visibilité de ces dernières modifications dépend du type de curseur et du niveau d’isolement de la transaction contenant le curseur.  
   
-|Curseur type\action|Self|Propriétaire<br /><br /> BeginTransaction|Dépendant<br /><br /> BeginTransaction<br /><br /> (RU[a])|Dépendant<br /><br /> BeginTransaction<br /><br /> (RC[a])|Dépendant<br /><br /> BeginTransaction<br /><br /> (RR[a])|Dépendant<br /><br /> BeginTransaction<br /><br /> (S[a])|  
+|Curseur type\action|Rythme|Manuellement<br /><br /> TXN|Dépendant<br /><br /> TXN<br /><br /> (RU [a])|Dépendant<br /><br /> TXN<br /><br /> (RC [a])|Dépendant<br /><br /> TXN<br /><br /> (RR [a])|Dépendant<br /><br /> TXN<br /><br /> (S [a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
-|Statique|||||||  
-|Insert|Peut-être [b]|Non|Non|Non|Non|Non|  
-|Mettre à jour|Peut-être [b]|Non|Non|Non|Non|Non|  
-|Supprimer|Peut-être [b]|Non|Non|Non|Non|Non|  
+|statique|||||||  
+|Insérer|Peut-être [b]|Non|Non|Non|Non|Non|  
+|Update|Peut-être [b]|Non|Non|Non|Non|Non|  
+|DELETE|Peut-être [b]|Non|Non|Non|Non|Non|  
 |Curseur piloté par jeu de clés|||||||  
-|Insert|Peut-être [b]|Non|Non|Non|Non|Non|  
-|Mettre à jour|Oui|Oui|Oui|Oui|Non|Non|  
-|Supprimer|Peut-être [b]|Oui|Oui|Oui|Non|Non|  
-|dynamique|||||||  
-|Insert|Oui|Oui|Oui|Oui|Oui|Non|  
-|Mettre à jour|Oui|Oui|Oui|Oui|Non|Non|  
-|Supprimer|Oui|Oui|Oui|Oui|Non|Non|  
+|Insérer|Peut-être [b]|Non|Non|Non|Non|Non|  
+|Update|Oui|Oui|Oui|Oui|Non|Non|  
+|DELETE|Peut-être [b]|Oui|Oui|Oui|Non|Non|  
+|Dynamique|||||||  
+|Insérer|Oui|Oui|Oui|Oui|Oui|Non|  
+|Update|Oui|Oui|Oui|Oui|Non|Non|  
+|DELETE|Oui|Oui|Oui|Oui|Non|Non|  
   
- [a] les lettres entre parenthèses indiquent le niveau d’isolation de la transaction contenant le curseur ; le niveau d’isolation de l’autre transaction (dans lequel la modification apportée) n’est pas pertinent.  
+ [a] les lettres entre parenthèses indiquent le niveau d’isolement de la transaction contenant le curseur ; le niveau d’isolation de l’autre transaction (dans laquelle la modification a été apportée) n’est pas pertinent.  
   
- UNITÉS DE REQUÊTE : Lecture non validée  
+ RU : lecture non validée  
   
- RC : Lecture validée  
+ RC : lecture validée  
   
- ENREGISTREMENT DE RESSOURCE : Lecture renouvelable  
+ RR : lecture renouvelable  
   
- %S :  Sérialisable  
+ S : sérialisable  
   
- [b] varie selon la façon dont le curseur est implémenté. Indique si le curseur peut détecter ces modifications est signalé via l’option SQL_STATIC_SENSITIVITY dans **SQLGetInfo**.
+ [b] dépend de la façon dont le curseur est implémenté. Si le curseur peut détecter de telles modifications est signalé par le biais de l’option SQL_STATIC_SENSITIVITY dans **SQLGetInfo**.

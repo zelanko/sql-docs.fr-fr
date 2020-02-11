@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63273734"
 ---
-# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Procédure pas à pas : ajouter et modifier un diagramme de base de données
+# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Procédure pas à pas : ajout et modification d’un diagramme de base de données
   Cette procédure pas à pas montre comment créer et modifier un diagramme de base de données et apporter des modifications à la base de données par l’intermédiaire du composant des diagrammes de base de données. Vous apprendrez à ajouter des tables aux schémas, à créer des relations entre les tables, créer des contraintes et des index sur des colonnes et modifier le niveau des informations qui s'affichent pour chaque table.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour réaliser cette procédure pas à pas, vous aurez besoin des éléments suivants :  
   
 -   Accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
@@ -44,7 +44,7 @@ ms.locfileid: "63273734"
   
 3.  Cliquez avec le bouton droit sur le nœud Diagrammes de base de données et sélectionnez **Nouveau diagramme de base de données**.  
   
-     Si la base de données n’a pas les objets nécessaires pour créer des diagrammes, le message suivant s’affiche : **Cette base de données ne dispose pas d’au moins un des objets de prise en charge nécessaires pour la fonctionnalité de diagrammes de base de données. Voulez-vous les créer ?** Cliquez sur **Oui**.  
+     Si la base de données n’a pas les objets nécessaires pour créer des diagrammes, le message suivant s’affiche : **Cette base de données ne dispose pas d’au moins un des objets de prise en charge nécessaires pour la fonctionnalité de diagrammes de base de données. Voulez-vous les créer ?** Choisissez **Oui**.  
   
      La boîte de dialogue **Ajouter une table** s’affiche.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63273734"
   
 1.  Cliquez avec le bouton droit sur la table `Address` . Dans le menu contextuel, pointez sur **Vue Table**, puis cliquez sur **Standard**.  
   
-     La grille de table affiche trois colonnes : **Nom de la colonne**, **Type de données**, et **Null autorisé**.  
+     La grille de table affiche trois colonnes : **Nom de la colonne**, **Type de données**et **Autoriser les valeurs NULL**.  
   
 2.  Cliquez avec le bouton droit sur la table `Address` , cliquez sur **Vue Table** et sélectionnez **Clés**.  
   
@@ -70,17 +70,17 @@ ms.locfileid: "63273734"
   
 1.  Cliquez avec le bouton droit sur le Concepteur de schémas en dehors des tables existantes et choisissez **Nouvelle table**.  
   
-2.  Dans le **choisir un nom** boîte de dialogue, cliquez sur **OK** pour accepter le nom par défaut `Table1`.  
+2.  Dans la boîte de dialogue **choisir un nom** , cliquez sur **OK** pour accepter `Table1`le nom par défaut.  
   
-     Une nouvelle grille de table s’affiche avec trois colonnes : **Nom de la colonne**, **Type de données**, et **Null autorisé**.  
+     Une nouvelle grille de table s’affiche avec trois colonnes : **Nom de la colonne**, **Type de données**et **Autoriser les valeurs NULL**.  
   
-3.  Ajoutez les informations suivantes pour `Table1`:  
+3.  Ajoutez les informations suivantes à `Table1`:  
   
     |**Nom de la colonne**|**Type de données**|**Null autorisé**|  
     |---------------------|-------------------|---------------------|  
-    |`T1col1`|`int`|checked|  
-    |`T1col2`|`varchar(50)`|checked|  
-    |`T1col3`|`float`|checked|  
+    |`T1col1`|`int`|cochée|  
+    |`T1col2`|`varchar(50)`|cochée|  
+    |`T1col3`|`float`|cochée|  
   
 4.  Cliquez avec le bouton droit sur `T1col1` , puis sélectionnez **Définir la clé primaire**.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "63273734"
   
 5.  Dans le menu **Fichier** , cliquez sur **Enregistrer Diagram1**.  
   
-6.  Dans le **choisir un nom** boîte de dialogue, cliquez sur **OK** pour accepter le nom par défaut `Diagram1`.  
+6.  Dans la boîte de dialogue **choisir un nom** , cliquez sur **OK** pour accepter `Diagram1`le nom par défaut.  
   
 7.  La boîte de dialogue **Enregistrer** s’affiche avec un message indiquant que `Table1` sera enregistré dans la base de données. Cliquez sur **Oui**.  
   
@@ -111,7 +111,8 @@ ms.locfileid: "63273734"
   
 4.  Tapez `T1col3 > 5` puis cliquez sur **OK**.  
   
-     `Table1` contient à présent une contrainte selon laquelle toutes les valeurs entrées dans `T1col3` doivent être supérieures à 5.  
+     
+  `Table1` contient à présent une contrainte selon laquelle toutes les valeurs entrées dans `T1col3` doivent être supérieures à 5.  
   
 5.  Cliquez sur **Fermer**.  
   
@@ -122,8 +123,8 @@ ms.locfileid: "63273734"
     |**Nom de la colonne**|**Type de données**|**Null autorisé**|  
     |---------------------|-------------------|---------------------|  
     |`T2col1`|`int`|non validé|  
-    |`T2col2`|`varchar(50)`|checked|  
-    |`T2col3`|`xml`|checked|  
+    |`T2col2`|`varchar(50)`|cochée|  
+    |`T2col3`|`xml`|cochée|  
   
     > [!NOTE]  
     >  Les colonnes situées du côté clé primaire d'une relation de clé étrangère doivent faire partie d'une clé primaire ou d'une contrainte unique.  
@@ -134,9 +135,9 @@ ms.locfileid: "63273734"
   
 3.  Cliquez sur **OK** pour enregistrer la nouvelle relation.  
   
-4.  Cliquez de nouveau sur **OK** .  
+4.  Cliquez à nouveau sur **OK**.  
   
-## <a name="creating-indexes"></a>Création des index  
+## <a name="creating-indexes"></a>Création d'index  
  Vous pouvez créer des index sur la plupart des types de données, y compris les données XML.  
   
 #### <a name="to-create-a-standard-index"></a>Pour créer un index standard  
@@ -208,11 +209,11 @@ ms.locfileid: "63273734"
   
 ## <a name="see-also"></a>Voir aussi  
  [Personnaliser la quantité d’informations affichées dans les schémas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Configurer le Concepteur de schémas de base de données &#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
- [Ajouter des Tables aux schémas &#40;Visual Database Tools&#41;](add-tables-to-diagrams-visual-database-tools.md)   
- [Créer des relations entre les Tables dans un diagramme de &#40;Visual Database Tools&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
+ [Configurer le concepteur de schémas de base de données &#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
+ [Ajouter des tables à des schémas &#40;Visual Database Tools&#41;](add-tables-to-diagrams-visual-database-tools.md)   
+ [Créer des relations entre des tables sur un diagramme &#40;Visual Database Tools&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
  [Créer des index XML](../../relational-databases/xml/create-xml-indexes.md)   
- [Copier une Image d’un schéma de base de données dans le Presse-papiers &#40;Visual Database Tools&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
+ [Copier une image d’un schéma de base de données dans le presse-papiers &#40;Visual Database Tools&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
  [Utiliser une disposition de schémas &#40;Visual Database Tools&#41;](work-with-diagram-layout-visual-database-tools.md)  
   
   

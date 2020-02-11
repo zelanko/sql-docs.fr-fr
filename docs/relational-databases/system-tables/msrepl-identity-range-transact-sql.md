@@ -18,32 +18,32 @@ ms.assetid: 6e92a8e8-7667-4c98-b1c4-46735bac50d8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38f5037598e240585333d246a99c29c5fd8f40fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079159"
 ---
-# <a name="msreplidentityrange-transact-sql"></a>MSrepl_identity_range (Transact-SQL)
+# <a name="msrepl_identity_range-transact-sql"></a>MSrepl_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Le **MSrepl_identity_range** table fournit la prise en charge de gestion des identités plage. Cette table est stockée dans les bases de données de publication, de distribution et d'abonnement.  
+  Le tableau **MSrepl_identity_range** fournit la prise en charge de la gestion des plages d’identité. Cette table est stockée dans les bases de données de publication, de distribution et d'abonnement.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**publisher** (serveur de publication)|**sysname**|Le nom du serveur de publication.|  
-|**publisher_db**|**sysname**|Le nom de la base de données de publication.|  
+|**publication**|**sysname**|Nom du serveur de publication.|  
+|**publisher_db**|**sysname**|Nom de la base de données de publication.|  
 |**TableName**|**sysname**|Nom de la table.|  
 |**identity_support**|**int**|Indique si la gestion automatique des plages d'identité est activée. La valeur 0 indique que la gestion automatique des plages d'identité n'est pas activée.|  
 |**next_seed**|**bigint**|Si la gestion automatique des plages d'identité est activée, indique le point de départ de la plage suivante.|  
 |**pub_range**|**bigint**|Taille de la plage d'identité du serveur de publication.|  
-|**range**|**bigint**|Taille des valeurs d'identité consécutives qui seraient affectées aux abonnés dans le cas d'un ajustement.|  
+|**vont**|**bigint**|Taille des valeurs d'identité consécutives qui seraient affectées aux abonnés dans le cas d'un ajustement.|  
 |**max_identity**|**bigint**|Limite maximale de la plage d'identité.|  
-|**threshold**|**Int**|Seuil de la plage d'identité exprimé en pourcentage.|  
+|**durée**|**int**|Seuil de la plage d'identité exprimé en pourcentage.|  
 |**current_max**|**bigint**|Maximum actuel qui est susceptible d'être attribué.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vues de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

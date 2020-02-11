@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_query_stats_xe_file (Transact-SQL) | Microsoft Docs
+title: sys. dm_pdw_query_stats_xe_file (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,24 +13,24 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 6e1224db9ce74d214320231419301b1fbc1b84cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044514"
 ---
-# <a name="sysdmpdwquerystatsxefile-transact-sql"></a>Sys.dm_pdw_query_stats_xe_file (Transact-SQL)
+# <a name="sysdm_pdw_query_stats_xe_file-transact-sql"></a>sys. dm_pdw_query_stats_xe_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Cette DMV est déconseillée et sera supprimée dans une version ultérieure. Dans cette version, elle retourne 0 ligne.  
   
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
-|événement|**nvarchar(60)**|Clé pour cette vue.||  
-|data|**xml**|||  
-|pdw_node_id|**Int**|Nœud sur lequel cette instance Xevent est en cours d’exécution.||  
+|événement|**nvarchar (60)**|Clé pour cette vue.||  
+|data|**langage**|||  
+|pdw_node_id|**int**|Nœud sur lequel cette instance XEvent est en cours d’exécution.||  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues de gestion dynamique de l’entrepôt SQL Data Warehouse et Parallel Data &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [SQL Data Warehouse et les vues de gestion dynamique Data Warehouse parallèles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

@@ -18,18 +18,18 @@ ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1dffb53a2b6436725a2b7dc19dfb209a58b1134e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053112"
 ---
-# <a name="spdescribecursorcolumns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
+# <a name="sp_describe_cursor_columns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fournit un rapport des attributs des colonnes contenues dans le jeu de résultats d'un curseur côté serveur.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,45 +47,45 @@ sp_describe_cursor_columns
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @cursor_return=] *variable_de_curseur_sortie* sortie  
- Nom d'une variable de curseur déclarée devant recevoir la sortie du curseur. *variable_de_curseur_sortie* est **curseur**, sans valeur par défaut et doit ne pas être associé à des curseurs au moment de la procédure sp_describe_cursor_columns est appelée. Le curseur retourné est un curseur en lecture seule, dynamique et permettant les défilements.  
+ [ @cursor_return= ] *output_cursor_variable* SORTIE  
+ Nom d'une variable de curseur déclarée devant recevoir la sortie du curseur. *output_cursor_variable* est **Cursor**, sans valeur par défaut, et ne doit pas être associé à des curseurs au moment où sp_describe_cursor_columns est appelé. Le curseur retourné est un curseur en lecture seule, dynamique et permettant les défilements.  
   
- [ @cursor_source=] {Ne local ' | Ne global ' | Ne variable '}  
- Indique si le curseur qui fait l'objet du rapport est défini en utilisant le nom d'un curseur local, d'un curseur global ou d'une variable de curseur. Le paramètre est **nvarchar (30)** .  
+ [ @cursor_source= ] {N’local' | N’global' | N’variable'}  
+ Indique si le curseur qui fait l'objet du rapport est défini en utilisant le nom d'un curseur local, d'un curseur global ou d'une variable de curseur. Le paramètre est de type **nvarchar (30)**.  
   
- [ @cursor_identity=] N'*nom_de_curseur_local*'  
- Nom d'un curseur créé par une instruction DECLARE CURSOR contenant soit le mot clé LOCAL, soit celui défini par défaut pour LOCAL. *nom_de_curseur_local* est **nvarchar (128)** .  
+ [ @cursor_identity= ] N'*local_cursor_name*'  
+ Nom d'un curseur créé par une instruction DECLARE CURSOR contenant soit le mot clé LOCAL, soit celui défini par défaut pour LOCAL. *local_cursor_name* est **de type nvarchar (128)**.  
   
- [ @cursor_identity=] N'*ne nom_de_curseur_global*'  
- Est le nom d’un curseur créé par une instruction DECLARE CURSOR contenant soit le mot clé GLOBAL soit celui défini par défaut pour GLOBAL. *ne nom_de_curseur_global* est **nvarchar (128)** .  
+ [ @cursor_identity= ] N'*global_cursor_name*'  
+ Nom d’un curseur créé par une instruction DECLARE CURSOR qui possède soit le mot clé GLOBAL, soit celui défini par défaut sur GLOBAL. *global_cursor_name* est **de type nvarchar (128)**.  
   
- *ne nom_de_curseur_global* peut également être le nom d’un curseur de serveur d’API qui est ouvert par une application ODBC puis nommé en appelant SQLSetCursorName.  
+ *global_cursor_name* peut également être le nom d’un curseur côté serveur d’API ouvert par une application ODBC, puis nommé en appelant SQLSetCursorName.  
   
- [ @cursor_identity=] N'*ne variable_de_curseur_entrée*'  
- Nom d'une variable de curseur associée à un curseur ouvert. *Ne variable_de_curseur_entrée* est **nvarchar (128)** .  
+ [ @cursor_identity= ] N'*input_cursor_variable*'  
+ Nom d'une variable de curseur associée à un curseur ouvert. *input_cursor_variable* est **de type nvarchar (128)**.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- Aucun  
+## <a name="return-code-values"></a>Codet de retour  
+ None  
   
 ## <a name="cursors-returned"></a>Curseurs retournés  
- sp_describe_cursor_columns encapsule son rapport sous la forme un [!INCLUDE[tsql](../../includes/tsql-md.md)] **curseur** paramètre de sortie. Cela permet aux lots, procédures stockées et déclencheurs [!INCLUDE[tsql](../../includes/tsql-md.md)] de travailler sur une seule ligne de sortie à la fois. Cela signifie également que la procédure ne peut pas être appelée directement à partir de fonctions d’API de base de données. Le **curseur** paramètre de sortie doit être lié à une variable de programme, mais l’API de base de données ne prennent pas en charge la liaison **curseur** variables ou des paramètres.  
+ sp_describe_cursor_columns encapsule son rapport sous la [!INCLUDE[tsql](../../includes/tsql-md.md)] forme d’un paramètre de sortie de **curseur** . Cela permet aux lots, procédures stockées et déclencheurs [!INCLUDE[tsql](../../includes/tsql-md.md)] de travailler sur une seule ligne de sortie à la fois. Cela signifie également que la procédure ne peut pas être appelée directement à partir des fonctions API de base de données. Le paramètre de sortie **Cursor** doit être lié à une variable de programme, mais les API de base de données ne prennent pas en charge la liaison de paramètres ou de variables de **curseur** .  
   
  Vous trouverez dans le tableau suivant une présentation du format de curseur renvoyé par sp_describe_cursor_columns.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|column_name|**sysname** (null)|Nom attribué à la colonne du jeu de résultats. La colonne est NULL si elle a été spécifiée sans être accompagnée de la clause AS.|  
-|ordinal_position|**Int**|Position relative de la colonne par rapport à la colonne la plus à gauche du jeu de résultats. La première colonne est à la position 0.|  
+|column_name|**sysname** (Nullable)|Nom attribué à la colonne du jeu de résultats. La colonne est NULL si elle a été spécifiée sans être accompagnée de la clause AS.|  
+|ordinal_position|**int**|Position relative de la colonne par rapport à la colonne la plus à gauche du jeu de résultats. La première colonne est à la position 0.|  
 |column_characteristics_flags|**int**|Masque de bits indiquant les informations stockées dans DBCOLUMNFLAGS dans OLE DB. Il peut s'agir d'un des éléments suivants ou d'une combinaison de ceux-ci :<br /><br /> 1 = Signet<br /><br /> 2 = Longueur fixe<br /><br /> 4 = Pouvant être Null<br /><br /> 8 = Contrôle de version de ligne<br /><br /> 16 = Colonne pouvant être mise à jour (définie dans le cas de colonnes projetées d'un curseur n'ayant pas de clause FOR UPDATE. Si une colonne de ce type existe, il ne peut y en avoir qu'une par curseur).<br /><br /> Lorsque les valeurs binaires sont combinées, les caractéristiques des valeurs binaires combinées s'appliquent. Par exemple, si la valeur binaire est égale à 6, la colonne est de longueur fixe (2) et accepte les valeurs NULL (4).|  
 |column_size|**int**|Taille maximale possible d'une valeur de cette colonne.|  
 |data_type_sql|**smallint**|Numéro indiquant le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la colonne.|  
-|column_precision|**tinyint**|Précision maximale de la colonne en tant que par le *bPrecision* valeur dans OLE DB.|  
-|column_scale|**tinyint**|Nombre de chiffres à droite de la virgule décimale pour la **numérique** ou **décimal** des types de données en tant que par le *bScale* valeur dans OLE DB.|  
+|column_precision|**tinyint**|Précision maximale de la colonne, en fonction de la valeur *bPrecision* dans OLE DB.|  
+|column_scale|**tinyint**|Nombre de chiffres à droite de la virgule décimale pour les types de données **numériques** ou **décimaux** , en fonction de la valeur *bScale* dans OLE DB.|  
 |order_position|**int**|Position de la colonne dans la clé d'ordre relative à la colonne la plus à gauche si la colonne prend part à la définition de l'ordre du jeu de résultats.|  
-|order_direction|**varchar (1)** (null)|A = La colonne fait partie de la clé d'ordre et l'ordre est croissant.<br /><br /> D = La colonne fait partie de la clé d'ordre et l'ordre est décroissant.<br /><br /> NULL = La colonne ne fait pas partie de la clé d'ordre.|  
+|order_direction|**varchar (1)**(Nullable)|A = La colonne fait partie de la clé d'ordre et l'ordre est croissant.<br /><br /> D = La colonne fait partie de la clé d'ordre et l'ordre est décroissant.<br /><br /> NULL = La colonne ne fait pas partie de la clé d'ordre.|  
 |hidden_column|**smallint**|0 = Cette colonne apparaît dans la liste de sélection.<br /><br /> 1 = Réservé pour un usage ultérieur.|  
 |columnid|**int**|Identification de la colonne de base. Si la colonne de l'ensemble de résultats a été créée à partir d'une expression, columnid est égal à -1.|  
-|objectid|**Int**|ID d'objet de l'objet ou de la table de base qui fournit la colonne. Si la colonne de l'ensemble de résultats a été créée à partir d'une expression, objectid est égal à -1.|  
+|objectid|**int**|ID d'objet de l'objet ou de la table de base qui fournit la colonne. Si la colonne de l'ensemble de résultats a été créée à partir d'une expression, objectid est égal à -1.|  
 |dbid|**int**|ID de la base de données contenant la table de base qui fournit la colonne. Si la colonne de l'ensemble de résultats a été créée à partir d'une expression, dbid est égal à -1.|  
 |dbname|**sysname**<br /><br /> (accepte les valeurs NULL)|Nom de la base de données contenant la table de base qui fournit la colonne. Si la colonne de l'ensemble de résultats a été créée à partir d'une expression, dbname a la valeur NULL.|  
   

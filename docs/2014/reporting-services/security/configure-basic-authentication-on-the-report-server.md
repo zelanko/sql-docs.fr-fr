@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 32b46265b5da376bc974b55c48bf54bad88917d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102160"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Configurer l’authentification de base sur le serveur de rapports
@@ -38,9 +38,9 @@ ms.locfileid: "66102160"
   
 1.  Ouvrez RSReportServer.config dans un éditeur de texte.  
   
-     Le fichier se trouve dans  *\<lecteur > :* \Program Files\Microsoft SQL Server\MSRS12. MSSQLSERVER\Reporting Services\ReportServer.  
+     Le fichier se trouve dans * \<le lecteur> :* \Program Files\Microsoft SQL Server\MSRS12. MSSQLSERVER\Reporting Services\ReportServer.  
   
-2.  Trouver <`Authentication`>.  
+2.  Recherchez <`Authentication`>.  
   
 3.  Copiez, parmi les structures XML suivantes, celle qui répond le mieux à vos besoins. La première structure XML fournit des espaces réservés pour spécifier tous les éléments décrits dans la section suivante :  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66102160"
           </AuthenticationTypes>  
     ```  
   
-4.  Collez-la sur les entrées existantes de <`Authentication`>.  
+4.  Collez-la sur les entrées existantes `Authentication` pour <>.  
   
      Si vous utilisez plusieurs types d'authentification, ajoutez juste l'élément `RSWindowsBasic` mais ne supprimez pas les entrées pour `RSWindowsNegotiate`, `RSWindowsNTLM` ou `RSWindowsKerberos`.  
   
@@ -73,9 +73,9 @@ ms.locfileid: "66102160"
   
      Notez que vous ne pouvez pas utiliser `Custom` avec d'autres types d'authentification.  
   
-5.  Remplacez les valeurs vides pour <`Realm`> ou <`DefaultDomain`> avec des valeurs qui sont valides pour votre environnement.  
+5.  Remplacez les valeurs vides pour `Realm` <> ou `DefaultDomain` <> par des valeurs valides pour votre environnement.  
   
-6.  Enregistrez le fichier.  
+6.  Enregistrez le fichier .  
   
 7.  Si vous avez configuré un déploiement avec montée en puissance parallèle, répétez ces étapes pour d'autres serveurs de rapports du déploiement.  
   
@@ -84,11 +84,13 @@ ms.locfileid: "66102160"
 ## <a name="rswindowsbasic-reference"></a>Référence RSWindowsBasic  
  Les éléments suivants peuvent être spécifiés lors de la configuration de l'authentification de base.  
   
-|Élément|Requis|Valeurs valides|  
+|Élément|Obligatoire|Valeurs valides|  
 |-------------|--------------|------------------|  
-|LogonMethod|Oui<br /><br /> Si vous ne spécifiez pas de valeur, 3 est utilisé.|`2` = ouverture de session réseau, destinée aux serveurs hautes performances pour l’authentification des mots de passe en texte brut.<br /><br /> `3` = ouverture de session basée sur du texte en clair ; les informations d’identification d’ouverture de session sont conservées dans le package d’authentification envoyé avec chaque requête HTTP, ce qui permet au serveur d’emprunter l’identité de l’utilisateur lors de la connexion à d’autres serveurs du réseau. (Par défaut)<br /><br /> Remarque : Les valeurs 0 (pour l’ouverture de session interactive) et 1 (pour l’ouverture de session de lot) ne sont pas pris en charge dans [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
-|Realm|Ce paramètre est facultatif|Spécifie une partition de ressource qui inclut les fonctionnalités d'autorisation et d'authentification permettant de contrôler l'accès aux ressources protégées de votre organisation.|  
-|DefaultDomain|Ce paramètre est facultatif|Spécifie le domaine utilisé par le serveur pour authentifier l'utilisateur. Cette valeur est facultative, mais si vous l'omettez, le serveur de rapports utilise le nom d'ordinateur comme domaine. Si l'ordinateur est membre du domaine, ce domaine est le domaine par défaut. Si vous avez installé le serveur de rapports sur un contrôleur de domaine, le domaine utilisé est celui contrôlé par l'ordinateur.|  
+|LogonMethod|Oui<br /><br /> Si vous ne spécifiez pas de valeur, 3 est utilisé.|
+  `2` = ouverture de session réseau, destinée aux serveurs hautes performances pour l’authentification des mots de passe en texte brut.<br /><br /> 
+  `3` = ouverture de session basée sur du texte en clair ; les informations d’identification d’ouverture de session sont conservées dans le package d’authentification envoyé avec chaque requête HTTP, ce qui permet au serveur d’emprunter l’identité de l’utilisateur lors de la connexion à d’autres serveurs du réseau. (Par défaut)<br /><br /> Remarque : les valeurs 0 (pour l’ouverture de session interactive) et 1 (pour l’ouverture de session par fichier de commande) ne sont pas prises en charge dans [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
+|Realm|Facultatif|Spécifie une partition de ressource qui inclut les fonctionnalités d'autorisation et d'authentification permettant de contrôler l'accès aux ressources protégées de votre organisation.|  
+|DefaultDomain|Facultatif|Spécifie le domaine utilisé par le serveur pour authentifier l'utilisateur. Cette valeur est facultative, mais si vous l'omettez, le serveur de rapports utilise le nom d'ordinateur comme domaine. Si l'ordinateur est membre du domaine, ce domaine est le domaine par défaut. Si vous avez installé le serveur de rapports sur un contrôleur de domaine, le domaine utilisé est celui contrôlé par l'ordinateur.|  
   
 ## <a name="enabling-anonymous-access-to-report-builder-application-files"></a>Activation de l'accès anonyme aux fichiers d'application du Générateur de rapports  
  Le Générateur de rapports utilise la technologie ClickOnce pour télécharger et installer les fichiers d'application sur l'ordinateur client. Lorsqu'il démarre sur l'ordinateur client, le lanceur d'applications ClickOnce fait une demande des fichiers d'application supplémentaires sur le serveur de rapports. Si le serveur de rapports est configuré pour l'authentification de base, le contrôle d'authentification du lanceur d'applications ClickOnce échoue car il ne prend pas en charge ce type d'authentification.  
@@ -101,7 +103,7 @@ ms.locfileid: "66102160"
   
 -   Ajoutez l'élément `IsReportBuilderAnonymousAccessEnabled` à RSReportServer.config et affectez-lui la valeur `True`. Une fois le fichier enregistré, le serveur de rapports crée un nouveau point de terminaison pour le Générateur de rapports. Le point de terminaison est utilisé en interne pour accéder aux fichiers programme et ne contient pas d'interface de programmation que vous pouvez utiliser dans le code. Avoir un point de terminaison séparé permet au Générateur de rapports de s'exécuter dans son propre domaine d'application dans la limite du processus du service Report Server.  
   
--   Vous pouvez éventuellement spécifier un compte de privilèges minimaux pour traiter les demandes sous un contexte de sécurité différent du serveur de rapports. Ce compte devient le compte anonyme pour accéder aux fichiers Générateur de rapports sur un serveur de rapports. Le compte définit l'identité du thread dans le processus de travail ASP.NET. Les demandes qui s'exécutent dans ce thread sont passées au serveur de rapports sans contrôle d'authentification. Ce compte est équivalent à IUSR_\<machine > compte dans Internet Information Services (IIS), qui est utilisé pour définir le contexte de sécurité pour les processus de travail ASP.NET traite lorsque l’accès anonyme et l’emprunt d’identité sont activés. Pour spécifier le compte, ajoutez-le à un fichier Web.config du Générateur de rapports.  
+-   Vous pouvez éventuellement spécifier un compte de privilèges minimaux pour traiter les demandes sous un contexte de sécurité différent du serveur de rapports. Ce compte devient le compte anonyme pour accéder aux fichiers Générateur de rapports sur un serveur de rapports. Le compte définit l'identité du thread dans le processus de travail ASP.NET. Les demandes qui s'exécutent dans ce thread sont passées au serveur de rapports sans contrôle d'authentification. Ce compte est équivalent au compte d'\<> d’ordinateur IUSR_ dans Internet Information Services (IIS), qui est utilisé pour définir le contexte de sécurité pour les processus de travail ASP.net lorsque l’accès anonyme et l’emprunt d’identité sont activés. Pour spécifier le compte, ajoutez-le à un fichier Web.config du Générateur de rapports.  
   
  Le serveur de rapports doit être configuré pour l'authentification de base pour activer l'accès anonyme aux fichiers programme du Générateur de rapports. Si le serveur de rapports n’est pas configuré pour l'authentification de base, un message d'erreur s'affichera lorsque vous tenterez d'activer l'accès anonyme.  
   
@@ -137,7 +139,7 @@ ms.locfileid: "66102160"
   
      Le mode d’authentification doit avoir la valeur `Windows` si vous incluez un fichier Web.config.  
   
-     `Identity impersonate` peut avoir la valeur `True` ou `False`.  
+     `Identity impersonate`peut être `True` ou `False`.  
   
     -   Affectez-lui la valeur `False` pour qu'ASP.NET ne lise pas le jeton de sécurité. La demande s'exécute dans le contexte de sécurité du service Report Server.  
   
@@ -156,7 +158,7 @@ ms.locfileid: "66102160"
 8.  Redémarrez le serveur de rapports.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Domaines d'application des applications du serveur de rapports](../report-server/application-domains-for-report-server-applications.md)   
+ [Domaines d’application pour les applications du serveur de rapports](../report-server/application-domains-for-report-server-applications.md)   
  [Sécurité et protection de Reporting Services](reporting-services-security-and-protection.md)  
   
   

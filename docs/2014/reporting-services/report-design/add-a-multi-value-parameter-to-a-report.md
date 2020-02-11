@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 72a827e8f15627e986008e57ecb9a180b715a8a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106811"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>Ajouter un paramètre à valeurs multiples sur un rapport
@@ -44,7 +44,7 @@ ms.locfileid: "66106811"
     ```  
   
     > [!IMPORTANT]  
-    >  Si vous n’incluez pas les parenthèses autour de la variable comme indiqué ci-dessus, le rapport échoue et l’erreur doit être déclarée » la variable scalaire » s’affiche.  
+    >  Si vous n’incluez pas les parenthèses autour de la variable comme indiqué ci-dessus, le rendu du rapport échoue et l’erreur « la variable scalaire doit être déclarée » s’affiche.  
   
      Un paramètre de dataset pour un dataset incorporé ou partagé est créé automatiquement pour la variable de la requête. Un paramètre de rapport est créé automatiquement pour le paramètre du dataset.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66106811"
     ```  
   
     > [!IMPORTANT]  
-    >  Si vous n’incluez pas les parenthèses autour de la variable comme indiqué ci-dessus, le rapport échoue et l’erreur doit être déclarée » la variable scalaire » s’affiche.  
+    >  Si vous n’incluez pas les parenthèses autour de la variable comme indiqué ci-dessus, le rendu du rapport échoue et l’erreur « la variable scalaire doit être déclarée » s’affiche.  
   
      Un paramètre de dataset pour un dataset incorporé ou partagé est créé automatiquement pour la variable de la requête. Un paramètre de rapport est créé automatiquement pour le paramètre du dataset.  
   

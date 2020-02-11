@@ -1,5 +1,5 @@
 ---
-title: Prend en charge de l’exemple de méthode (VB) | Microsoft Docs
+title: Supported, exemple de méthode (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e3bcea9183d44b02e5f45b7bdb977573f283815b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911707"
 ---
 # <a name="supports-method-example-vb"></a>Supports, exemple de méthode (VB)
-Cet exemple utilise le [prend en charge](../../../ado/reference/ado-api/supports-method.md) méthode pour afficher les options prises en charge par un jeu d’enregistrements ouvert avec différents types de curseurs. La procédure DisplaySupport est requise pour exécuter cette procédure.  
+Cet exemple utilise la méthode [supports](../../../ado/reference/ado-api/supports-method.md) pour afficher les options prises en charge par un jeu d’enregistrements ouvert avec différents types de curseurs. La procédure DisplaySupport est requise pour l’exécution de cette procédure.  
   
 ```  
 'BeginSupportsVB  
@@ -162,5 +162,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Supports, méthode](../../../ado/reference/ado-api/supports-method.md)

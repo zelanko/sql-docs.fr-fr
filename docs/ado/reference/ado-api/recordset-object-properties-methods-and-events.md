@@ -1,5 +1,5 @@
 ---
-title: Propriétés de l’objet Recordset, méthodes et événements | Microsoft Docs
+title: Propriétés, méthodes et événements de l’objet Recordset | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,21 +13,21 @@ ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f84faca18ad1f4f4bf7e036fa4ccbe0335154a63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917335"
 ---
-# <a name="recordset-object-properties-methods-and-events"></a>Propriétés de l’objet Recordset, méthodes et événements
-## <a name="propertiescollections"></a>Propriétés et des Collections  
- [AbsolutePage, propriété](../../../ado/reference/ado-api/absolutepage-property-ado.md)  
+# <a name="recordset-object-properties-methods-and-events"></a>Propriétés, méthodes et événements de l’objet Recordset
+## <a name="propertiescollections"></a>Propriétés/collections  
+ [Propriété AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)  
   
  [AbsolutePosition, propriété](../../../ado/reference/ado-api/absoluteposition-property-ado.md)  
   
  [ActiveCommand, propriété](../../../ado/reference/ado-api/activecommand-property-ado.md)  
   
- [ActiveConnection, propriété](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
+ [Propriété ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
   
  [BOF, EOF, propriétés](../../../ado/reference/ado-api/bof-eof-properties-ado.md)  
   
@@ -41,11 +41,11 @@ ms.locfileid: "67917335"
   
  [DataMember, propriété](../../../ado/reference/ado-api/datamember-property.md)  
   
- [Propriété de source de données](../../../ado/reference/ado-api/datasource-property-ado.md)  
+ [DataSource, propriété](../../../ado/reference/ado-api/datasource-property-ado.md)  
   
  [EditMode, propriété](../../../ado/reference/ado-api/editmode-property.md)  
   
- [Collection de champs](../../../ado/reference/ado-api/fields-collection-ado.md)  
+ [Collection Fields](../../../ado/reference/ado-api/fields-collection-ado.md)  
   
  [Filter, propriété](../../../ado/reference/ado-api/filter-property.md)  
   
@@ -55,32 +55,32 @@ ms.locfileid: "67917335"
   
  [MarshalOptions, propriété](../../../ado/reference/ado-api/marshaloptions-property-ado.md)  
   
- [MaxRecords, propriété](../../../ado/reference/ado-api/maxrecords-property-ado.md)  
+ [Propriété MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)  
   
  [PageCount, propriété](../../../ado/reference/ado-api/pagecount-property-ado.md)  
   
  [PageSize, propriété](../../../ado/reference/ado-api/pagesize-property-ado.md)  
   
- [Collection de propriétés](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Collection Properties](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [RecordCount, propriété](../../../ado/reference/ado-api/recordcount-property-ado.md)  
+ [Propriété RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)  
   
  [Sort, propriété](../../../ado/reference/ado-api/sort-property.md)  
   
  [Source, propriété (objet Recordset ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)  
   
- [State, propriété](../../../ado/reference/ado-api/state-property-ado.md)  
+ [Propriété State](../../../ado/reference/ado-api/state-property-ado.md)  
   
  [Status, propriété (objet Recordset ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)  
   
  [StayInSync, propriété](../../../ado/reference/ado-api/stayinsync-property.md)  
   
 ## <a name="methods"></a>Méthodes  
- [AddNew (méthode)](../../../ado/reference/ado-api/addnew-method-ado.md)  
+ [Méthode AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)  
   
  [Cancel (méthode)](../../../ado/reference/ado-api/cancel-method-ado.md)  
   
- [CancelBatch, méthode](../../../ado/reference/ado-api/cancelbatch-method-ado.md)  
+ [Méthode CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)  
   
  [CancelUpdate, méthode](../../../ado/reference/ado-api/cancelupdate-method-ado.md)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "67917335"
   
  [Delete, méthode (objet Recordset ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
   
- [Méthode Find](../../../ado/reference/ado-api/find-method-ado.md)  
+ [Find, méthode](../../../ado/reference/ado-api/find-method-ado.md)  
   
  [GetRows, méthode](../../../ado/reference/ado-api/getrows-method-ado.md)  
   
@@ -100,7 +100,7 @@ ms.locfileid: "67917335"
   
  [Move, méthode](../../../ado/reference/ado-api/move-method-ado.md)  
   
- [MoveFirst, MoveLast, MoveNext et MovePrevious, méthodes](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)  
+ [Méthodes MoveFirst, MoveLast, MoveNext et MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)  
   
  [NextRecordset, méthode](../../../ado/reference/ado-api/nextrecordset-method-ado.md)  
   
@@ -120,18 +120,18 @@ ms.locfileid: "67917335"
   
  [UpdateBatch, méthode](../../../ado/reference/ado-api/updatebatch-method.md)  
   
-## <a name="events"></a>Events  
- [EndOfRecordset, événement](../../../ado/reference/ado-api/endofrecordset-event-ado.md)  
+## <a name="events"></a>Événements  
+ [EndOfRecordset (événement)](../../../ado/reference/ado-api/endofrecordset-event-ado.md)  
   
- [FetchComplete, événement](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)  
+ [Événement FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)  
   
- [FetchProgress, événement](../../../ado/reference/ado-api/fetchprogress-event-ado.md)  
+ [Événement FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)  
   
- [WillChangeField et FieldChangeComplete, événements](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)  
+ [Événements WillChangeField et FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)  
   
  [WillChangeRecord et RecordChangeComplete, événements](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)  
   
- [WillChangeRecordset et RecordsetChangeComplete, événements](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)  
+ [Événements WillChangeRecordset et RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)  
   
  [WillMove et MoveComplete, événements](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
   

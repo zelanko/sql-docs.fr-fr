@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 52b569ba68e6693c5b720e118a4500e2e768b3dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63277122"
 ---
 # <a name="specify-search-criteria-visual-database-tools"></a>Spécifier des critères de recherche (Visual Database Tools)
@@ -65,10 +65,10 @@ ms.locfileid: "63277122"
  [Exclure les doublons de lignes &#40;Visual Database Tools&#41;](exclude-duplicate-rows-visual-database-tools.md)  
  Explique comment éliminer par filtrage les lignes en double des requêtes Select.  
   
- [Associer des conditions avec priorité à l’opérateur AND &#40;Visual Database Tools&#41;](combine-conditions-when-and-has-precedence-visual-database-tools.md)  
+ [Associer des conditions avec priorité à l'opérateur AND &#40;Visual Database Tools&#41;](combine-conditions-when-and-has-precedence-visual-database-tools.md)  
  Explique pourquoi et comment utiliser l'opérateur AND pour filtrer les résultats d'une requête.  
   
- [Associer des conditions avec priorité à l’opérateur OR &#40;Visual Database Tools&#41;](combine-conditions-when-or-has-precedence-visual-database-tools.md)  
+ [Associer des conditions avec priorité à l'opérateur OR &#40;Visual Database Tools&#41;](combine-conditions-when-or-has-precedence-visual-database-tools.md)  
  Explique pourquoi et comment utiliser l'opérateur OR pour filtrer les résultats d'une requête.  
   
  [Créer des sous-requêtes &#40;Visual Database Tools&#41;](create-subqueries-visual-database-tools.md)  

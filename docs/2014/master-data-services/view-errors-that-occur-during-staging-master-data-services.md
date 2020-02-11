@@ -1,5 +1,5 @@
 ---
-title: Afficher les erreurs qui se produisent pendant le processus de mise en lots (Master Data Services) | Microsoft Docs
+title: Afficher les erreurs qui se produisent pendant le processus de site (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 75b7fb5a1b98f599a07e47101f93268779ca39b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478564"
 ---
 # <a name="view-errors-that-occur-during-the-staging-process-master-data-services"></a>Afficher les erreurs qui se produisent pendant le processus de site (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "65478564"
   
 -   stg.viw_name_RelationshipErrorDetails pour les mises à jour de relation de hiérarchie.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Dans la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , vous devez disposer des autorisations SELECT sur la vue stg.viw_name_MemberErrorDetails ou stg.viw_name_RelationshipErrorDetails.  
@@ -49,7 +49,7 @@ ms.locfileid: "65478564"
  Pour plus d’informations sur les messages d’erreur, consultez [Erreurs du processus de mise en lots &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Importation de données &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
+ [&#40;d’importation de données Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
  [Résolution des problèmes liés au processus de site (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   
   

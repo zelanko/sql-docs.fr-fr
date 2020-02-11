@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0378394c274e66d71eebd642188f20194d29236b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480003"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Créer un package de déploiement de modèle à l'aide de MDSModelDeploy
@@ -24,10 +24,10 @@ ms.locfileid: "65480003"
   
 -   Des objets de modèle et des données.  
   
- Si vous souhaitez déployer un package qui contient uniquement des objets de modèle, vous pouvez utiliser l'Assistant Déploiement de modèle dans l'application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] à la place. Pour plus d’informations, consultez [Créer un package de déploiement de modèle à l’aide de l’Assistant](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
+ Si vous souhaitez déployer un package qui contient uniquement des objets de modèle, vous pouvez utiliser l'Assistant Déploiement de modèle dans l'application web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] à la place. Pour plus d’informations, consultez [Créer un package de déploiement de modèle à l’aide de l’Assistant](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
 > [!NOTE]  
-> Cette version de l’outil MDSModelDeploy ne pouvez pas utiliser plusieurs gigaoctets (Go) de mémoire. Lorsque vous créez ou que vous déployez les modèles volumineux à l’aide de **objets et les données de modèle** option, vous pouvez rencontrer des erreurs de « Stream était trop long » ou de « mémoire insuffisante ». Pour résoudre ce problème, utilisez MDS intermédiaire pour déployer les données ; mise à niveau ou à MDS 2016 ou version ultérieure, qui inclut la version mise à jour de l’outil MDSModelDeploy.
-## <a name="prerequisites"></a>Prérequis  
+> Cette version de l’outil MDSModelDeploy ne peut pas utiliser plus de gigaoctets (Go) de mémoire. Lorsque vous créez ou déployez des modèles volumineux à l’aide d' **objets de modèle et** de l’option de données, vous pouvez constater des erreurs de type « mémoire insuffisante » ou « flux trop long ». Pour résoudre ce problème, utilisez la mise en lots de MDS pour déployer les données. ou effectuez une mise à niveau vers MDS 2016 ou une version ultérieure, qui comprend la version mise à jour de l’outil MDSModelDeploy.
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 1.  Les autorisations de base nécessaires pour exécuter l'outil MDSModelDeploy sont les suivantes :  
@@ -66,17 +66,17 @@ ms.locfileid: "65480003"
   
 2.  Accédez à l'emplacement de MDSModelDeploy.exe.  
   
-    -   Si MDS a été installé dans l’emplacement par défaut, le fichier se trouve dans *lecteur*: \Program Files\Microsoft SQL Server\120\Master Data Services\Configuration.  
+    -   Si MDS a été installé à l’emplacement par défaut, le fichier se trouve dans *lecteur*: \Program Files\Microsoft SQL Server\120\Master Data Services\Configuration.  
   
     -   Si MDS n'a pas été installé dans l'emplacement par défaut, recherchez MDSModelDeploy.exe sur l'ordinateur local.  
   
-3.  Facultatif. Consultez les options et l'aide.  
+3.  facultatif. Consultez les options et l'aide.  
   
     -   Pour afficher toutes les options disponibles, tapez `MDSModelDeploy` et appuyez sur Entrée.  
   
     -   Pour afficher l’aide pour une option, tapez la commande suivante, où *OptionName* est le nom de l’option : `MDSModelDeploy help OptionName`.  
   
-4.  Facultatif. Si vous possédez plusieurs applications Web, déterminez le nom du service que vous allez déployer en entrant cette commande et en appuyant sur ENTRÉE :  
+4.  facultatif. Si vous possédez plusieurs applications Web, déterminez le nom du service que vous allez déployer en entrant cette commande et en appuyant sur ENTRÉE :  
   
     ```  
     MDSModelDeploy listservices  
@@ -96,7 +96,7 @@ ms.locfileid: "65480003"
   
 ## <a name="next-steps"></a>Étapes suivantes  
   
--   [Déployer un package de déploiement de modèle à l’aide de MDSModelDeploy](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
+-   [Déployer un package de déploiement de modèle à l'aide de MDSModelDeploy](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Options de déploiement de modèle &#40;Master Data Services&#41;](../../2014/master-data-services/model-deployment-options-master-data-services.md)   

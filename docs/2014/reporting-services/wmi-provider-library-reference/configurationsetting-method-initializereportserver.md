@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f5ea9e6e4e36e62828f3036c3765ba42c202448c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098347"
 ---
-# <a name="initializereportserver-method-wmi-msreportserverconfigurationsetting"></a>Méthode InitializeReportServer (WMI MSReportServer_ConfigurationSetting)
+# <a name="initializereportserver-method-wmi-msreportserver_configurationsetting"></a>Méthode InitializeReportServer (WMI MSReportServer_ConfigurationSetting)
   Initialise l'instance du service de rapports spécifiée.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -44,7 +44,7 @@ public void InitializeReportServer(string InstallationID,
  *InstallationID*  
  Chaîne utilisée pour chiffrer la clé de chiffrement avant qu'elle soit retournée.  
   
- *HRESULT*  
+ *SIGNÉ*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
   
  *ExtendedErrors[]*  
@@ -60,10 +60,10 @@ public void InitializeReportServer(string InstallationID,
   
  La méthode *InitializeReportServer* doit être appelée contre un serveur de rapports qui a déjà accès aux informations sécurisées, afin qu'il puisse déchiffrer la clé de chiffrement. La clé de chiffrement chiffrée résultante est ensuite stockée dans la base de données du serveur de rapports.  
   
- Si le serveur de rapports [IsInitialized](configurationsetting-property-isinitialized.md) propriété est définie sur `true` lorsque la méthode InitializeReportServer est appelée, la méthode aboutit sans essayer de chiffrer la clé de chiffrement.  
+ Si la propriété [IsInitialized](configurationsetting-property-isinitialized.md) du serveur de rapports a la `true` valeur lorsque la méthode InitializeReportServer est appelée, la méthode retourne la valeur Success sans essayer de chiffrer la clé de chiffrement.  
   
-## <a name="requirements"></a>Configuration requise  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+## <a name="requirements"></a>Spécifications  
+ **Espace de noms :**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

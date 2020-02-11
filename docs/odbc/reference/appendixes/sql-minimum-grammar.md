@@ -14,78 +14,78 @@ ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85b1f59efd809c604458bd7b99882705db240e9a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057012"
 ---
 # <a name="sql-minimum-grammar"></a>Grammaire minimale de SQL
-Cette section décrit la syntaxe SQL minimale un pilote ODBC doit prendre en charge. La syntaxe décrite dans cette section est un sous-ensemble de la syntaxe de niveau d’entrée de SQL-92.  
+Cette section décrit la syntaxe SQL minimale qu’un pilote ODBC doit prendre en charge. La syntaxe décrite dans cette section est un sous-ensemble de la syntaxe de niveau d’entrée de SQL-92.  
   
- Une application peut utiliser une de la syntaxe de cette section et être assurée que n’importe quel pilote compatible ODBC prendra en charge cette syntaxe. Pour déterminer si les fonctionnalités supplémentaires de SQL-92 pas dans cette section sont prises en charge, l’application doit appeler **SQLGetInfo** avec le type d’information SQL_SQL_CONFORMANCE. Même si le pilote n’est pas conforme à n’importe quel niveau de conformité SQL-92, une application peut toujours utiliser la syntaxe décrite dans cette section. Si un pilote est conforme à un niveau de SQL-92, quant à eux, il prend en charge toute la syntaxe incluse dans ce niveau. Cela inclut la syntaxe de cette section, car la grammaire minimale décrite ici est un sous-ensemble pur du plus bas niveau de conformité SQL-92. Une fois que l’application connaît le niveau de SQL-92 pris en charge, il peut déterminer si une fonctionnalité de niveau supérieur est pris en charge (le cas échéant) en appelant **SQLGetInfo** avec le type des informations correspondant à cette fonctionnalité.  
+ Une application peut utiliser l’une des syntaxes de cette section et être assurée que tout pilote compatible ODBC prendra en charge cette syntaxe. Pour déterminer si des fonctionnalités supplémentaires de SQL-92 ne sont pas prises en charge dans cette section, l’application doit appeler **SQLGetInfo** avec le type d’informations SQL_SQL_CONFORMANCE. Même si le pilote n’est conforme à aucun niveau de conformité SQL-92, une application peut toujours utiliser la syntaxe décrite dans cette section. Si un pilote est conforme à un niveau SQL-92, en revanche, il prend en charge toutes les syntaxes incluses dans ce niveau. Cela comprend la syntaxe de cette section, car la grammaire minimale décrite ici est un sous-ensemble pur du niveau de conformité SQL-92 le plus bas. Une fois que l’application connaît le niveau SQL-92 pris en charge, elle peut déterminer si une fonctionnalité de niveau supérieur est prise en charge (le cas échéant) en appelant **SQLGetInfo** avec le type d’informations individuel correspondant à cette fonctionnalité.  
   
- Les pilotes qui fonctionnent uniquement avec les sources de données en lecture seule ne peuvent pas en charge les parties de la grammaire inclus dans cette section qui traitent de la modification des données. Une application peut déterminer si une source de données est en lecture seule en appelant **SQLGetInfo** avec le type d’information SQL_DATA_SOURCE_READ_ONLY.  
+ Les pilotes qui fonctionnent uniquement avec des sources de données en lecture seule peuvent ne pas prendre en charge les parties de la grammaire incluses dans cette section qui traitent des données modifiées. Une application peut déterminer si une source de données est en lecture seule en appelant **SQLGetInfo** avec le type d’informations SQL_DATA_SOURCE_READ_ONLY.  
   
 ## <a name="statement"></a>.  
- *instruction de table créer* :: =  
+ *Create-table-Statement* :: =  
   
- CREATE TABLE *nom de table de base*  
+ Nom de la *table de base* de CREATE TABLE  
   
- ( *-identificateur de la colonne le type de données* [ *, type de données identificateur de colonne*]...)  
+ (*type de données de l’identificateur de colonne* [*, identificateur de colonne-type de données*]...)  
   
 > [!IMPORTANT]  
->  Comme un *type de données* dans un *-table-instruction create*, les applications doivent utiliser un type de données à partir de la colonne TYPE_NAME du jeu de résultats retourné par **SQLGetTypeInfo**.  
+>  En tant que *type de données* dans une *instruction CREATE TABLE*, les applications doivent utiliser un type de données de la colonne TYPE_NAME du jeu de résultats retourné par **SQLGetTypeInfo**.  
   
- *Delete-instruction recherché* :: =  
+ *Delete-Statement-recherchée* :: =  
   
- DELETE FROM *nom de la table* [où *condition de recherche*]  
+ SUPPRIMER de *table-Name* [where *Search-condition*]  
   
- *instruction DROP-table* :: =  
+ *drop-table-Statement* :: =  
   
- DROP TABLE *nom de table de base*  
+ DROP TABLE *base-table-Name*  
   
- *instruction d’insertion* :: =  
+ *Insert-Statement* :: =  
   
- INSERT INTO *nom de la table* [( *identificateur de colonne* [, *identificateur de colonne*]...)]      VALEURS ( *-valeur à insérer*[, *-valeur à insérer*]...)  
+ INSERT dans *table-Name* [( *Column-identifier* [, *Column-identifier*]...)]      VALEURS (*Insert-value*[, *Insert-value*]...)  
   
- *instruction SELECT* :: =  
+ *Select-Statement* :: =  
   
- SELECT [ALL &#124; DISTINCT] *select-list*  
+ SELECT [ALL &#124; DISTINCT] *Select-List*  
   
- À partir de *liste de références de table*  
+ À partir de *table-reference-list*  
   
- [Où *condition de recherche*]  
+ [WHERE *recherche-condition*]  
   
- [*order-by-clause*]  
+ [*commande par clause*]  
   
- *instruction* :: = *-table-instruction create*  
+ *instruction* :: = *Create-table-Statement*  
   
- &#124; *delete-statement-searched*  
+ *Instruction DELETE-Statement-recherchée* &#124;  
   
- &#124; *drop-table-statement*  
+ &#124; *drop-table-Statement*  
   
- &#124; *insert-statement*  
+ &#124; *instruction INSERT*  
   
- &#124; *select-statement*  
+ *Instruction select* &#124;  
   
- &#124; *update-statement-searched*  
+ &#124; *Update-instruction-recherchée*  
   
- *update-statement-searched*  
+ *Update-instruction-recherchée*  
   
- Mise à jour *-nom de la table*  
+ METTRE à jour *le nom de la table*  
   
- Définissez *identificateur de colonne* = {*expression* &#124; NULL}  
+ SET *Column-identifier* = {*expression* &#124; null}  
   
- [, *identificateur de colonne* = {*expression* &#124; NULL}]...  
+ [, *Column-identifier* = {*expression* &#124; NULL}]...  
   
- [Où *condition de recherche*]  
+ [WHERE *recherche-condition*]  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Éléments utilisés dans les instructions SQL](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md)  
   
--   [Prise en charge des types de données](../../../odbc/reference/appendixes/data-type-support.md)  
+-   [Prise en charge du type de données](../../../odbc/reference/appendixes/data-type-support.md)  
   
 -   [Types de données de paramètre](../../../odbc/reference/appendixes/parameter-data-types.md)  
   

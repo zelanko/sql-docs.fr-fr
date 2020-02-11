@@ -18,21 +18,22 @@ ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fac327d88aa8a6d74e153c1c7b2f3d637bf6f936
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046026"
 ---
-# <a name="spbindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
+# <a name="sp_bindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Lie ou la dissociation d’une session à d’autres sessions dans la même instance de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. La liaison de sessions permet à deux sessions ou plus de participer à la même transaction et d'en partager les verrous jusqu'à l'émission d'une instruction ROLLBACK TRANSACTION ou COMMIT TRANSACTION.  
+  Lie ou dissocie une session à d’autres sessions dans la même instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. La liaison de sessions permet à deux sessions ou plus de participer à la même transaction et d'en partager les verrous jusqu'à l'émission d'une instruction ROLLBACK TRANSACTION ou COMMIT TRANSACTION.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt MARS (Multiple Active Results Sets) ou des transactions distribuées. Pour plus d’informations, consultez [Utilisation de MARS &#40;Multiple Active Result Sets&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
+>  
+  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt MARS (Multiple Active Results Sets) ou des transactions distribuées. Pour plus d’informations, consultez [Utilisation de MARS &#40;Multiple Active Result Sets&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,21 +44,21 @@ sp_bindsession { 'bind_token' | NULL }
   
 ## <a name="arguments"></a>Arguments  
  **'** *bind_token* **'**  
- Est le jeton qui identifie la transaction obtenu à l’origine à l’aide de **sp_getbindtoken** ou Open Data Services **srv_getbindtoken** (fonction). *bind_token*est **varchar (255)** .  
+ Jeton qui identifie la transaction obtenue à l’origine à l’aide de **sp_getbindtoken** ou de la fonction **srv_getbindtoken** Open Data Services. *bind_token*est **de type varchar (255)**.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
  Deux sessions liées ne partage qu'une transaction et des verrous. Chaque session conserve son propre niveau d'isolation et la définition d'un nouveau niveau d'isolation sur une session n'affecte pas le niveau de l'autre. Chaque session reste identifiée par son compte de sécurité et ne peut accéder qu'aux ressources de la base de données auxquelles le compte est autorisé à accéder.  
   
- **sp_bindsession** utilise un jeton de liaison pour lier deux ou plusieurs sessions clientes existantes. Ces sessions clientes doivent se trouver sur la même instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] à partir duquel le jeton de liaison a été obtenu. Une session est un client exécutant une commande. Les sessions de base de données liées partagent une transaction et un espace de verrouillage.  
+ **sp_bindsession** utilise un jeton de liaison pour lier deux ou plusieurs sessions clientes existantes. Ces sessions clientes doivent se trouver sur la même instance [!INCLUDE[ssDE](../../includes/ssde-md.md)] du à partir de laquelle le jeton de liaison a été obtenu. Une session est un client exécutant une commande. Les sessions de base de données liées partagent une transaction et un espace de verrouillage.  
   
- Un jeton de liaison obtenu à partir d’une instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne peut pas être utilisé pour une session client connectée à une autre instance, même pour les transactions DTC. Un jeton de liaison n'est valide que localement dans chaque instance et ne peut pas être partagé par plusieurs instances. Pour lier des sessions clientes sur une autre instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)], vous devez obtenir un jeton de liaison différent en exécutant **sp_getbindtoken**.  
+ Un jeton de liaison obtenu à partir d’une [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance du ne peut pas être utilisé pour une session cliente connectée à une autre instance, même pour les transactions DTC. Un jeton de liaison n'est valide que localement dans chaque instance et ne peut pas être partagé par plusieurs instances. Pour lier des sessions clientes sur une autre [!INCLUDE[ssDE](../../includes/ssde-md.md)]instance du, vous devez obtenir un jeton de liaison différent en exécutant **sp_getbindtoken**.  
   
- **sp_bindsession** échoue avec une erreur si elle utilise un jeton qui n’est pas actif.  
+ **sp_bindsession** échouera avec une erreur si elle utilise un jeton qui n’est pas actif.  
   
- Détacher une session à l’aide **sp_bindsession** sans spécifier *bind_token* ou en passant la valeur NULL dans *bind_token*.  
+ Annuler une liaison à partir d’une session à l’aide de **sp_bindsession** sans spécifier *bind_token* ou en passant la valeur null dans *bind_token*.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
@@ -66,7 +67,7 @@ sp_bindsession { 'bind_token' | NULL }
  L'exemple suivant associe le jeton de liaison spécifié à la session active.  
   
 > [!NOTE]  
->  Le jeton de liaison indiqué dans l’exemple a été obtenu en exécutant **sp_getbindtoken** avant d’exécuter **sp_bindsession**.  
+>  Le jeton de liaison illustré dans l’exemple a été obtenu en exécutant **sp_getbindtoken** avant d’exécuter **sp_bindsession**.  
   
 ```  
 USE master;  

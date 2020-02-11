@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 257df5742c2f8dec7d48c6d3afb4d6c6373d058c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106889"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>Ajouter un graphique à un rapport (Générateur de rapports et SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "66106889"
   
 ### <a name="to-add-a-chart-to-a-report"></a>Pour ajouter un graphique à un rapport  
   
-1.  Créez un rapport et définissez un dataset. Pour plus d’informations, consultez [ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](../report-data/report-datasets-ssrs.md).  
+1.  Créez un rapport et définissez un dataset. Pour plus d’informations, consultez [Ajouter des données à un rapport &#40;générateur de rapports et SSRS&#41;](../report-data/report-datasets-ssrs.md).  
   
 2.  Sous l’onglet **Insérer** , cliquez sur **Graphique**, puis sur **Insérer un graphique**.  
   
@@ -70,9 +70,9 @@ ms.locfileid: "66106889"
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [Points de données vides et Null dans les graphiques &#40;Générateur de rapports et SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Tutoriel : Ajouter un graphique à barres à un rapport (Générateur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198052)   
- [Tutoriel : Ajouter un graphique à barres à un rapport (Concepteur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198042)   
- [Tutoriel : Ajouter un graphique à secteurs à un rapport (Générateur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198051)   
- [Tutoriel : Ajouter un graphique à secteurs à un rapport (Concepteur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198041)  
+ [Didacticiel : ajout d’un graphique à barres à un rapport (Générateur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Didacticiel : ajout d’un graphique à barres à un rapport (Concepteur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198042)   
+ [Didacticiel : ajout d’un graphique à secteurs à un rapport (Générateur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198051)   
+ [Didacticiel : ajout d’un graphique à secteurs à un rapport (Concepteur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

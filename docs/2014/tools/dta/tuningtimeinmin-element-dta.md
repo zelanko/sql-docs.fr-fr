@@ -1,5 +1,5 @@
 ---
-title: TuningTimeInMin Element (DTA) | Microsoft Docs
+title: Élément TuningTimeInMin (Assistant Paramétrage de base de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c30c6a4f746ae9aa81b8c1a71c0e380bdd26df03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63268160"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin, élément (Assistant Paramétrage de base de données)
@@ -38,7 +38,8 @@ ms.locfileid: "63268160"
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|**Type de données et longueur**|`unsignedInt`, longueur illimitée.|  
+|**Type de données et longueur**|
+  `unsignedInt`, longueur illimitée.|  
 |**Valeur par défaut**|480 minutes (8 heures).|  
 |**Occurrence**|Obligatoire, à moins qu'une valeur n'ait été spécifiée pour l'élément `NumberOfEvents`.|  
   

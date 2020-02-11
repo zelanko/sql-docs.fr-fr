@@ -1,5 +1,5 @@
 ---
-title: Propriétés de trace (onglet Général) | Microsoft Docs
+title: Propriétés de la trace (onglet général) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 573c8d13b9a7431c33d8c3b104712a2bf31b3fbf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089531"
 ---
 # <a name="trace-properties-general-tab"></a>Propriétés de la trace (onglet Général)
@@ -34,7 +34,7 @@ ms.locfileid: "66089531"
  **Type de fournisseur de trace**  
  Affiche le type de serveur qui fournit la trace. Le champ **Type de fournisseur de trace** est rempli automatiquement par le fichier de définition de trace. Vous ne pouvez pas modifier ce champ.  
   
- **version**  
+ **Version**  
  Affiche la version du serveur qui fournit la trace. Le champ **Version** est rempli automatiquement par le fichier de définition de trace. Vous ne pouvez pas modifier ce champ.  
   
  **Utiliser le modèle**  
@@ -46,7 +46,7 @@ ms.locfileid: "66089531"
  **Définir la taille de fichier maximale (Mo)**  
  Si vous décidez d'enregistrer les données de trace dans un fichier, vous devez indiquer la taille maximale de ce fichier. La valeur par défaut est 5 mégaoctets (Mo). La taille maximale est uniquement limitée par le système de fichiers (NTFS, FAT) dans lequel le fichier est enregistré.  
   
- \<Graphique > **enregistrer en tant que**  
+ \<Graphique> **Enregistrer sous**  
  Une fois que vous avez choisi d'enregistrer les données dans un fichier, vous pouvez sélectionner cette icône pour modifier le nom du fichier.  
   
  **Activer la substitution de fichier**  
@@ -58,13 +58,13 @@ ms.locfileid: "66089531"
  **Enregistrer dans la table**  
  Cette option permet de capturer les données de trace dans une table de base de données. L'enregistrement des données de trace vous permet de consulter et d'analyser ces données plus tard. Ce choix peut néanmoins provoquer un surcroît de charge important sur le serveur où les données de trace sont enregistrées. Si possible, n'enregistrez pas la table de trace sur le serveur qui est tracé.  
   
- \<Graphique > **Table de Destination**  
+ \<Graphique> la **table de destination**  
  Une fois que vous avez choisi d'enregistrer les données de trace dans une table de base de données, vous pouvez sélectionner cette icône pour modifier le nom de la table.  
   
- **Définir le nombre de lignes maximal (en milliers)**  
+ **Définir le nombre maximal de lignes (en milliers)**  
  Spécifiez le nombre maximal de lignes pour l'enregistrement des données. La valeur par défaut est 1000 lignes.  
   
- **Activer l'heure d'arrêt de la trace**  
+ **Activer l’heure d’arrêt de la trace**  
  Définissez la date et l'heure auxquelles la trace doit s'arrêter et se fermer.  
   
 ## <a name="see-also"></a>Voir aussi  

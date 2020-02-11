@@ -17,14 +17,14 @@ ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a2f9efa8f5042fab603c794edada5aacab001936
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921327"
 ---
 # <a name="addnew-method-ado"></a>AddNew, méthode (ADO)
-Crée un nouvel enregistrement pour être une mise à jour [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
+Crée un nouvel enregistrement pour un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) pouvant être mis à jour.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,30 +34,30 @@ recordset.AddNew FieldList, Values
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *recordset*  
- Un **Recordset** objet.  
+ *Recordset*  
+ Objet **Recordset** .  
   
  *FieldList*  
- facultatif. Un nom unique ou un tableau de noms ou les positions ordinales des champs dans le nouvel enregistrement.  
+ facultatif. Un nom unique, ou un tableau de noms ou de positions ordinales des champs dans le nouvel enregistrement.  
   
  *Valeurs*  
- facultatif. Une valeur unique, ou un tableau de valeurs pour les champs dans le nouvel enregistrement. Si *Fieldlist* est un tableau, *valeurs* doit également être un tableau avec le même nombre de membres ; sinon, une erreur se produit. L’ordre des noms de champ doit correspondre à l’ordre des valeurs de champ dans chaque tableau.  
+ facultatif. Une valeur unique, ou un tableau de valeurs pour les champs dans le nouvel enregistrement. Si *FieldList* est un tableau, les *valeurs* doivent également être un tableau avec le même nombre de membres ; dans le cas contraire, une erreur se produit. L’ordre des noms de champs doit correspondre à l’ordre des valeurs de champ dans chaque tableau.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le **AddNew** méthode pour créer et initialiser un nouvel enregistrement. Utilisez le [prend en charge](../../../ado/reference/ado-api/supports-method.md) méthode avec **adAddNew** (un [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) valeur) pour vérifier si vous pouvez ajouter des enregistrements à actuel **Recordset**objet.  
+ Utilisez la méthode **AddNew** pour créer et initialiser un nouvel enregistrement. Utilisez la méthode [supports](../../../ado/reference/ado-api/supports-method.md) avec **adAddNew** (une valeur [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) ) pour vérifier si vous pouvez ajouter des enregistrements à l’objet **Recordset** actuel.  
   
- Après avoir appelé la **AddNew** (méthode), le nouvel enregistrement devient l’enregistrement actif et reste actif après avoir appelé la [mise à jour](../../../ado/reference/ado-api/update-method.md) (méthode). Dans la mesure où le nouvel enregistrement est ajouté à la **Recordset**, un appel à **MoveNext** après la mise à jour ne dépassera la fin de la **Recordset**, en faisant **EOF**  True. Si le **Recordset** objet ne prend pas en charge les signets, vous n’êtes peut-être pas en mesure d’accéder au nouvel enregistrement lorsque vous passez à un autre enregistrement. Selon votre type de curseur, vous devez appeler la [Requery](../../../ado/reference/ado-api/requery-method.md) méthode pour rendre le nouvel enregistrement accessible.  
+ Une fois que vous avez appelé la méthode **AddNew** , le nouvel enregistrement devient l’enregistrement actif et reste actif après l’appel de la méthode [Update](../../../ado/reference/ado-api/update-method.md) . Étant donné que le nouvel enregistrement est ajouté au **Recordset**, un appel à **MoveNext** après la mise à jour se déplacera au-delà de la fin de l’ensemble d' **enregistrements**, ce qui rend **EOF** true. Si l’objet **Recordset** ne prend pas en charge les signets, vous risquez de ne pas pouvoir accéder au nouvel enregistrement après l’avoir déplacé vers un autre enregistrement. Selon le type de curseur, vous devrez peut-être appeler la méthode [Requery](../../../ado/reference/ado-api/requery-method.md) pour rendre le nouvel enregistrement accessible.  
   
- Si vous appelez **AddNew** lors de la modification de l’enregistrement en cours ou lors de l’ajout d’un nouvel enregistrement, ADO appelle le **mise à jour** méthode pour enregistrer un change et puis crée le nouvel enregistrement.  
+ Si vous appelez **AddNew** pendant la modification de l’enregistrement en cours ou lors de l’ajout d’un nouvel enregistrement, ADO appelle la méthode **Update** pour enregistrer les modifications apportées, puis crée le nouvel enregistrement.  
   
- Le comportement de la **AddNew** méthode varie selon le mode de mise à jour de la **Recordset** objet et si vous passez le *Fieldlist* et *valeurs*arguments.  
+ Le comportement de la méthode **AddNew** dépend du mode de mise à jour de l’objet **Recordset** et du fait que vous passiez les arguments *FieldList* et *values* .  
   
- Dans *en mode de mise à jour immédiate* (dans lequel le fournisseur écrit les modifications à la source de données sous-jacente lorsque vous appelez le **mettre à jour** (méthode)), l’appel la **AddNew** sans (méthode) arguments affecte le [EditMode](../../../ado/reference/ado-api/editmode-property.md) propriété **adEditAdd** (un [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md) valeur). Le fournisseur met en cache localement les modifications des valeurs de champ. Appelant le **mise à jour** méthode publie le nouvel enregistrement dans la base de données et réinitialise le **EditMode** propriété **adEditNone** (un **EditModeEnum**valeur). Si vous passez le *Fieldlist* et *valeurs* arguments, ADO publie immédiatement le nouvel enregistrement dans la base de données (aucune **mise à jour** appel n’est nécessaire) ; le **EditMode**  valeur de propriété ne change pas (**adEditNone**).  
+ En *mode de mise à jour immédiate* (dans lequel le fournisseur enregistre les modifications apportées à la source de données sous-jacente une fois que vous avez appelé la méthode **Update** ), l’appel de la méthode **AddNew** sans arguments définit la propriété [EditMode](../../../ado/reference/ado-api/editmode-property.md) sur **adEditAdd** (une valeur [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md) ). Le fournisseur met en cache toutes les modifications de valeur de champ localement. L’appel de la méthode **Update** publie le nouvel enregistrement dans la base de données et réinitialise la propriété **EditMode** sur **adEditNone** (une valeur **EditModeEnum** ). Si vous transmettez les arguments *FieldList* et *values* , ADO publie immédiatement le nouvel enregistrement dans la base de données (aucun appel de **mise à jour** n’est nécessaire); la valeur de la propriété **EditMode** ne change pas (**adEditNone**).  
   
- Dans *mode de mise à jour par lots* (dans lequel le fournisseur met en cache plusieurs modifications et les écrit dans la source de données sous-jacente uniquement lorsque vous appelez le [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) méthode), l’appel la **AddNew** méthode sans arguments affecte le **EditMode** propriété **adEditAdd**. Le fournisseur met en cache localement les modifications des valeurs de champ. Appel de la **mise à jour** méthode ajoute le nouvel enregistrement actuel **Recordset**, mais le fournisseur ne pas valider les modifications apportées à la base de données sous-jacente, ou redéfinissez le **EditMode** pour **adEditNone**, jusqu'à ce que vous appeliez la **UpdateBatch** (méthode). Si vous passez le *Fieldlist* et *valeurs* arguments, ADO envoie le nouvel enregistrement dans le fournisseur de stockage dans un cache et définit le **EditMode** à **adEditAdd** ; vous devez appeler la **UpdateBatch** méthode pour valider le nouvel enregistrement dans la base de données sous-jacente.  
+ En *mode de mise à jour par lot* (dans lequel le fournisseur met en cache plusieurs modifications et les écrit dans la source de données sous-jacente uniquement lorsque vous appelez la méthode [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) ), l’appel de la méthode **AddNew** sans arguments affecte à la propriété **EditMode** la valeur **adEditAdd**. Le fournisseur met en cache toutes les modifications de valeur de champ localement. L’appel de la méthode de **mise à jour** ajoute le nouvel enregistrement au **Recordset**actuel, mais le fournisseur ne publie pas les modifications dans la base de données sous-jacente, ou réinitialisez **le mode de restauration en** **adEditNone**, jusqu’à ce que vous appeliez la méthode **UpdateBatch** . Si vous transmettez les arguments *FieldList* et *values* , ADO envoie le nouvel enregistrement au fournisseur pour le stockage dans un cache et définit le paramètre **EditMode** sur **adEditAdd**. vous devez appeler la méthode **UpdateBatch** pour poster le nouvel enregistrement dans la base de données sous-jacente.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment utiliser la méthode AddNew avec la liste de champs et de la liste de valeurs inclus, pour voir comment inclure la liste de champs et une liste de valeurs sous forme de tableaux.  
+ L’exemple suivant montre comment utiliser la méthode AddNew avec la liste de champs et la liste de valeurs incluse, pour voir comment inclure la liste de champs et la liste de valeurs en tant que tableaux.  
   
 ```  
 create table aa1 (intf int, charf char(10))  
@@ -86,12 +86,12 @@ rs.Update
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Méthode AddNew, exemple (VB)](../../../ado/reference/ado-api/addnew-method-example-vb.md)   
- [Méthode AddNew, exemple (VBScript)](../../../ado/reference/ado-api/addnew-method-example-vbscript.md)   
- [Méthode AddNew, exemple (VC ++)](../../../ado/reference/ado-api/addnew-method-example-vc.md)   
+ [AddNew, exemple de méthode (VB)](../../../ado/reference/ado-api/addnew-method-example-vb.md)   
+ [AddNew, exemple de méthode (VBScript)](../../../ado/reference/ado-api/addnew-method-example-vbscript.md)   
+ [AddNew, exemple de méthode (VC + +)](../../../ado/reference/ado-api/addnew-method-example-vc.md)   
  [CancelUpdate, méthode (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [EditMode, propriété](../../../ado/reference/ado-api/editmode-property.md)   
- [Requery (méthode)](../../../ado/reference/ado-api/requery-method.md)   
- [Prend en charge (méthode)](../../../ado/reference/ado-api/supports-method.md)   
- [Méthode de mise à jour](../../../ado/reference/ado-api/update-method.md)   
+ [Requery, méthode](../../../ado/reference/ado-api/requery-method.md)   
+ [Prend en charge la méthode](../../../ado/reference/ado-api/supports-method.md)   
+ [Update, méthode](../../../ado/reference/ado-api/update-method.md)   
  [UpdateBatch, méthode](../../../ado/reference/ado-api/updatebatch-method.md)

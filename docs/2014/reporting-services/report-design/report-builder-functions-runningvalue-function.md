@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a72673641fc0f67e22d88d5ea104089b273dedce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105162"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>Fonction RunningValue (Générateur de rapports et SSRS)
@@ -37,8 +37,9 @@ RunningValue(expression, function, scope)
  *function*  
  (`Enum`) Nom de la fonction d'agrégation à appliquer à l'expression, par exemple, `Sum`. Cette fonction ne peut pas être de type `RunningValue`, `RowNumber` ou `Aggregate`.  
   
- *portée*  
- (`String`) Constante de chaîne qui correspond au nom d'un dataset, d'une région de données ou d'un groupe, ou valeur Null (`Nothing` en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), qui spécifie le contexte dans lequel évaluer l'agrégation. `Nothing` spécifie le contexte le plus à l'extérieur, habituellement le dataset du rapport.  
+ *scope*  
+ (`String`) Constante de chaîne qui correspond au nom d'un dataset, d'une région de données ou d'un groupe, ou valeur Null (`Nothing` en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), qui spécifie le contexte dans lequel évaluer l'agrégation. 
+  `Nothing` spécifie le contexte le plus à l'extérieur, habituellement le dataset du rapport.  
   
 ## <a name="return-type"></a>Type de retour  
  Déterminé par la fonction d'agrégation spécifiée dans le paramètre *function* .  
@@ -46,7 +47,8 @@ RunningValue(expression, function, scope)
 ## <a name="remarks"></a>Notes  
  La valeur de `RunningValue` se réinitialise à 0 pour chaque nouvelle instance de l'étendue. Si vous spécifiez un groupe, la valeur d'exécution est réinitialisée lorsque l'expression de groupe change. Si vous indiquez une région de données, le cumul est réinitialisé pour chaque nouvelle instance de la région de données. Si vous spécifiez un dataset, la valeur d'exécution n'est pas réinitialisée dans l'ensemble du dataset.  
   
- `RunningValue` ne peut pas être utilisé dans une expression de filtre ou de tri.  
+ 
+  `RunningValue` ne peut pas être utilisé dans une expression de filtre ou de tri.  
   
  Le jeu des données pour lequel la valeur d'exécution est calculée doit avoir le même type de données. Pour convertir des données qui ont plusieurs types de données numériques en un même type de données, utilisez des fonctions de conversion telles que `CInt`, `CDbl` ou `CDec`. Pour plus d'informations, consultez [Fonctions de conversion de types de données](https://go.microsoft.com/fwlink/?LinkId=96142).  
   
@@ -58,7 +60,7 @@ RunningValue(expression, function, scope)
   
 -   Le paramètre Scope des agrégats imbriqués ne peut pas être le nom d'un dataset.  
   
--   *Expression* ne doit pas contenir `First`, `Last`, `Previous`, ou `RunningValue` fonctions.  
+-   *L’expression* ne doit `First`pas `Last`contenir `Previous`de fonctions `RunningValue` ,, ou.  
   
 -   *Expression* ne doit pas contenir les agrégats imbriqués qui spécifient *recursive*.  
   

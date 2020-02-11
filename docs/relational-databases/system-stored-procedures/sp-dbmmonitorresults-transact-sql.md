@@ -19,18 +19,18 @@ ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e46116111e9f1e85cdaad48e9742e62fba187e74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899175"
 ---
-# <a name="spdbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
+# <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne les lignes d'état d'une base de données surveillée, à partir de la table d'état dans laquelle est stocké l'historique de la surveillance de la mise en miroir de bases de données, et vous permet de choisir si la procédure doit au préalable obtenir le dernier état.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,7 +62,7 @@ sp_dbmmonitorresults database_name
   
  6 = 100 dernières lignes  
   
- 7 = 500 dernières lignes  
+ 7 = dernières 500 lignes  
   
  8 = 1 000 dernières lignes  
   
@@ -73,10 +73,10 @@ sp_dbmmonitorresults database_name
   
  0 = ne met pas à jour l'état de la base de données. Les résultats sont calculés à l'aide des deux dernières lignes uniquement, dont l'âge dépend du moment auquel la table d'état a été actualisée ;  
   
- 1 = met à jour l’état de la base de données en appelant **sp_dbmmonitorupdate** avant de calculer les résultats. Toutefois, si la table d’état a été mis à jour dans les 15 secondes précédentes, ou l’utilisateur n’est pas un membre de la **sysadmin** rôle serveur fixe **sp_dbmmonitorresults** s’exécute sans mettre à jour l’état.  
+ 1 = met à jour l’état de la base de données en appelant **sp_dbmmonitorupdate** avant de calculer les résultats. Toutefois, si la table d’État a été mise à jour au cours des 15 dernières secondes, ou si l’utilisateur n’est pas membre du rôle serveur fixe **sysadmin** , **sp_dbmmonitorresults** s’exécute sans mettre à jour l’État.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- Aucun  
+## <a name="return-code-values"></a>Codet de retour  
+ None  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  Retourne le nombre demandé de lignes de l'état d'historique pour la base de données spécifiée. Chaque ligne contient les informations suivantes :  
@@ -84,29 +84,29 @@ sp_dbmmonitorresults database_name
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Nom d'une base de données mise en miroir.|  
-|**role**|**Int**|Rôle de mise en miroir actuel de l'instance du serveur :<br /><br /> 1 = Principal<br /><br /> 2 = Miroir|  
+|**actif**|**int**|Rôle de mise en miroir actuel de l'instance du serveur :<br /><br /> 1 = Principal<br /><br /> 2 = Miroir|  
 |**mirroring_state**|**int**|État de la base de données :<br /><br /> 0 = suspendu<br /><br /> 1 = déconnecté<br /><br /> 2 = Synchronisation<br /><br /> 3 = Basculement en attente<br /><br /> 4 = Synchronisé|  
 |**witness_status**|**int**|L'état de connexion du témoin dans la session de mise en miroir de la base de données peut être :<br /><br /> 0 = Inconnu<br /><br /> 1 = connecté<br /><br /> 2 = Déconnecté|  
 |**log_generation_rate**|**int**|Quantité de journal générée, en kilo-octets/s, depuis la précédente mise à jour de l'état de mise en miroir de cette base de données.|  
-|**unsent_log**|**Int**|Taille, en kilo-octets, du journal non envoyé dans la file d'attente d'envoi sur le principal.|  
+|**unsent_log**|**int**|Taille, en kilo-octets, du journal non envoyé dans la file d'attente d'envoi sur le principal.|  
 |**send_rate**|**int**|Débit d'envoi du journal, en kilo-octets/s, depuis le principal vers le serveur miroir.|  
 |**unrestored_log**|**int**|Taille, en kilo-octets, de la file d'attente de restauration par progression sur le serveur miroir.|  
 |**recovery_rate**|**int**|Débit de la restauration par progression sur le serveur miroir, en kilo-octets/s.|  
 |**transaction_delay**|**int**|Délai total, en millisecondes, de toutes les transactions.|  
 |**transactions_per_sec**|**int**|Nombre de transactions par seconde sur l'instance du serveur principal.|  
 |**average_delay**|**int**|Délai moyen de chaque transaction sur l'instance du serveur principal grâce à la mise en miroir de bases de données. En mode hautes performances (c'est-à-dire, lorsque la propriété SAFETY a pour valeur OFF), cette valeur est généralement 0.|  
-|**time_recorded**|**datetime**|Heure à laquelle la ligne a été enregistrée lors de la surveillance de la mise en miroir de bases de données. Il s'agit de l'heure système du principal.|  
-|**time_behind**|**datetime**|Heure système approximative du principal sur laquelle la base de données miroir est actuellement synchronisée. Cette valeur n'est significative que sur l'instance du serveur principal.|  
-|**local_time**|**datetime**|Heure système sur l'instance du serveur local à laquelle cette ligne a été mise à jour.|  
+|**time_recorded**|**DATETIME**|Heure à laquelle la ligne a été enregistrée lors de la surveillance de la mise en miroir de bases de données. Il s'agit de l'heure système du principal.|  
+|**time_behind**|**DATETIME**|Heure système approximative du principal sur laquelle la base de données miroir est actuellement synchronisée. Cette valeur n'est significative que sur l'instance du serveur principal.|  
+|**local_time**|**DATETIME**|Heure système sur l'instance du serveur local à laquelle cette ligne a été mise à jour.|  
   
 ## <a name="remarks"></a>Notes  
- **sp_dbmmonitorresults** peuvent être exécutées uniquement dans le contexte de la **msdb** base de données.  
+ **sp_dbmmonitorresults** ne peut être exécutée que dans le contexte de la base de données **msdb** .  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l’appartenance dans le **sysadmin** rôle serveur fixe ou dans le **dbm_monitor** rôle de base de données fixe dans le **msdb** base de données. Le **dbm_monitor** rôle permet à ses membres afficher l’état, la mise en miroir de base de données mais pas mettre à jour mais pas afficher ou configurer les événements de mise en miroir de base de données.  
+ Requiert l’appartenance au rôle serveur fixe **sysadmin** ou au rôle de base de données fixe **dbm_monitor** dans la base de données **msdb** . Le rôle **dbm_monitor** permet à ses membres d’afficher l’état de la mise en miroir de bases de données, mais pas de les mettre à jour, mais pas d’afficher ou de configurer les événements de mise en miroir.  
   
 > [!NOTE]  
->  La première fois que **sp_dbmmonitorupdate** s’exécute, il crée le **dbm_monitor** rôle de base de données fixe dans le **msdb** base de données. Membres de la **sysadmin** rôle serveur fixe peut ajouter un utilisateur à la **dbm_monitor** rôle de base de données fixe.  
+>  La première fois que **sp_dbmmonitorupdate** s’exécute, il crée le rôle de base de données fixe **dbm_monitor** dans la base de données **msdb** . Les membres du rôle serveur fixe **sysadmin** peuvent ajouter n’importe quel utilisateur au rôle de base de données fixe **dbm_monitor** .  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant retourne les lignes enregistrées au cours des deux heures précédentes sans mettre à jour l'état de la base de données.  

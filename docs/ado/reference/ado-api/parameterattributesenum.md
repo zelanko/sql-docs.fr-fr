@@ -16,25 +16,25 @@ ms.assetid: 7ef6c728-5eda-4bde-8052-02d2db1d2cfe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 95ba0d84d99d2f0cd51b363a42b8620b55459b7d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917754"
 ---
 # <a name="parameterattributesenum"></a>ParameterAttributesEnum
-Spécifie les attributs d’un [paramètre](../../../ado/reference/ado-api/parameter-object.md) objet.  
+Spécifie les attributs d’un objet de [paramètre](../../../ado/reference/ado-api/parameter-object.md) .  
   
-|Constante|Value|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adParamSigned**|16|Indique que le paramètre accepte les valeurs signées.|  
-|**adParamNullable**|64|Indique que le paramètre accepte les valeurs null.|  
+|**adParamNullable**|64|Indique que le paramètre accepte les valeurs NULL.|  
 |**adParamLong**|128|Indique que le paramètre accepte les données binaires longues.|  
   
-## <a name="adowfc-equivalent"></a>Équivalent de ADO/WFC  
- Package : **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
+ Package : **com. ms. wfc. Data**  
   
-|Constante|  
+|Constant|  
 |--------------|  
 |AdoEnums.ParameterAttributes.SIGNED|  
 |AdoEnums.ParameterAttributes.NULLABLE|  

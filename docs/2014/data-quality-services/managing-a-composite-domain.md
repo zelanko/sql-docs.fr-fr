@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: eef4cc29bdcda107bba55ceab14aa7984fc420a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480392"
 ---
 # <a name="managing-a-composite-domain"></a>Gestion d'un domaine composite
@@ -39,8 +39,8 @@ ms.locfileid: "65480392"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Construction d'une base de connaissances par la découverte de la connaissance et la gestion interactive de la connaissance|[Construction d’une base de connaissances](../../2014/data-quality-services/building-a-knowledge-base.md)|  
+|Construction d'une base de connaissances par la découverte de la connaissance et la gestion interactive de la connaissance|[Construction d'une base de connaissances](../../2014/data-quality-services/building-a-knowledge-base.md)|  
 |Importation ou exportation de la connaissance depuis ou vers une base de connaissances.|[Importation et exportation de connaissances](../../2014/data-quality-services/importing-and-exporting-knowledge.md)|  
-|Création d'un seul domaine et ajout de connaissances au domaine.|[Gestion d’un domaine](../../2014/data-quality-services/managing-a-domain.md)|  
+|Création d'un seul domaine et ajout de connaissances au domaine.|[Gestion d'un domaine](../../2014/data-quality-services/managing-a-domain.md)|  
   
   

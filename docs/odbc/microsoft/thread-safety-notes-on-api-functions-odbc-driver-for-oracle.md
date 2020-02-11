@@ -1,5 +1,5 @@
 ---
-title: Notes de sécurité des threads sur les fonctions d’API (pilote ODBC pour Oracle) | Microsoft Docs
+title: Remarques sur la sécurité des threads sur les fonctions d’API (pilote ODBC pour Oracle) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: f0c9bdfd-f79d-4088-9ecb-afcd8ca7fb73
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 926b2285bcce9a28579fffc4004c5454b2837392
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67912434"
 ---
 # <a name="thread-safety-notes-on-api-functions-odbc-driver-for-oracle"></a>Remarques sur la cohérence des threads dans les fonctions de l’API (pilote ODBC pour Oracle)
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Au lieu de cela, utilisez le pilote ODBC fourni par Oracle.  
+>  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Utilisez plutôt le pilote ODBC fourni par Oracle.  
   
- Le pilote Microsoft ODBC pour Oracle est thread-safe ; Toutefois, Oracle n’autorise pas plusieurs instructions simultanées sur une seule connexion. Le pilote applique cette restriction. En d’autres termes, dans les applications multithread, bien que le pilote ODBC pour Oracle n’importe quel thread peut appeler à tout moment, le pilote bloque n’importe quel autre thread à partir du pilote sur la même connexion jusqu'à ce que le thread d’origine quitte le pilote.  
+ Le pilote Microsoft ODBC pour Oracle est thread-safe ; Toutefois, Oracle n’autorise pas plusieurs instructions simultanées sur une seule connexion. Le pilote applique cette restriction. En d’autres termes, dans les applications multithread, bien que n’importe quel thread puisse appeler le pilote ODBC pour Oracle à tout moment, le pilote bloque tout autre thread du pilote sur la même connexion jusqu’à ce que le thread d’origine quitte le pilote.  
   
- Le pilote ne bloque pas s’il existe deux instructions sur les deux connexions différentes. Toutefois, s’il existe une connexion unique avec deux instructions, il est potentiel de blocage.
+ Le pilote n’est pas bloqué s’il y a deux instructions sur deux connexions différentes. Toutefois, s’il existe une seule connexion avec deux instructions, il existe un risque de blocage.

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6eeb17662c0cac290a7a455d0925cd05560e5e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087363"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>Connexion à un fichier plat (SSAS)
@@ -28,10 +28,10 @@ ms.locfileid: "66087363"
 >  Les informations d'identification de l'utilisateur actuel sont utilisées lors de la sélection d'un fichier dans cette page. Toutefois, l'importation ne réussira pas si l'utilisateur spécifié dans la page Informations d'emprunt d'identité n'a pas de privilèges suffisants pour lire le fichier sélectionné.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
- **Nom convivial de connexion**  
+ **Nom convivial de la connexion**  
  Tapez un nom unique pour cette connexion à la source de données. Ce champ est obligatoire.  
   
- **Chemin d'accès au fichier**  
+ **Chemin du fichier**  
  Spécifiez le chemin d'accès complet du fichier.  
   
  **Parcourir**  
@@ -40,7 +40,7 @@ ms.locfileid: "66087363"
  **Séparateur de colonnes**  
  Effectuez une sélection dans une liste de séparateurs de colonnes disponibles. Choisissez un séparateur qu'il est peu probable de rencontrer dans le texte.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |Tabulation (t)|Les colonnes sont séparées par une tabulation (t).|  
 |Virgule (,)|Les colonnes sont séparées par une virgule (,).|  
@@ -49,7 +49,7 @@ ms.locfileid: "66087363"
 |deux-points (:)|Les colonnes sont séparées par un deux-points (:).|  
 |Barre verticale (&#124;)|Les colonnes sont séparées par une barre verticale (&#124;).|  
   
- **Avancé**  
+ **Avancée**  
  Spécifiez les options de paramètres régionaux et d'encodage pour le fichier plat.  
   
  **Utiliser la première ligne comme en-têtes de colonnes**  
@@ -63,10 +63,10 @@ ms.locfileid: "66087363"
   
 |Option|Description|  
 |------------|-----------------|  
-|**Case à cocher dans l’en-tête de colonne**|Activez la case à cocher pour inclure la colonne lors de l'importation des données. Désactivez la case à cocher pour supprimer la colonne lors de l'importation de données.|  
-|**Bouton de flèche vers le bas dans l’en-tête de colonne**|Triez et filtrez les données dans la colonne.|  
+|**Case à cocher dans l'en-tête de colonne**|Activez la case à cocher pour inclure la colonne lors de l'importation des données. Désactivez la case à cocher pour supprimer la colonne lors de l'importation de données.|  
+|**Bouton Flèche vers le bas dans l'en-tête de colonne**|Triez et filtrez les données dans la colonne.|  
   
- **Effacer les filtres de lignes**  
+ **Désactiver les filtres de lignes**  
  Supprimez tous les filtres appliqués aux données dans les colonnes.  
   
   

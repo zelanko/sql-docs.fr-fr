@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 54ab01033fc65f829f2a06bb5cbad8fc9e4d08f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480182"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>Ajouter plusieurs conditions à une règle d'entreprise (Master Data Services)
@@ -25,7 +25,7 @@ ms.locfileid: "65480182"
 > [!NOTE]  
 >  Si vous créez une règle d'entreprise qui utilise l'opérateur **OR** , créez une règle distincte pour chaque instruction conditionnelle qui peut être évaluée indépendamment. Vous pouvez alors exclure des règles si nécessaire, ce qui offre plus de souplesse et facilite la résolution des problèmes.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -44,7 +44,7 @@ ms.locfileid: "65480182"
   
 4.  Dans la liste **Entité** , sélectionnez une entité.  
   
-5.  À partir de la **Type de membre** , sélectionnez un type de membre.  
+5.  Dans la liste **type de membre** , sélectionnez un type de membre.  
   
 6.  Dans la liste **Attribut** , sélectionnez un attribut ou conservez l’option par défaut **Tout**.  
   
@@ -52,28 +52,28 @@ ms.locfileid: "65480182"
   
 8.  Cliquez sur **Modifier la règle d’entreprise sélectionnée**.  
   
-9. Dans le **composants** volet, développez le **opérateurs logiques** nœud.  
+9. Dans le volet **composants** , développez le nœud **opérateurs logiques** .  
   
-10. Cliquez sur **AND** ou **OR** et faites-la glisser vers le **IF** du volet **AND** étiquette.  
+10. Cliquez sur **et** ou **ou** , puis faites-le glisser vers l’étiquette **et** le du volet **If** .  
   
 11. Dans le volet **Composants** , développez le nœud **Conditions** .  
   
-12. Cliquez sur une condition et faites-la glisser vers **IF** volet, à la **AND** ou **OR** étiquette à partir de l’étape 10.  
+12. Cliquez sur une condition et faites-la glisser vers le volet **If** , vers l’étiquette **et** **ou ou à** partir de l’étape 10.  
   
-13. Dans le **attributs** volet, cliquez sur un attribut et faites-le glisser vers le **modifier la Condition** du volet **sélectionner un attribut** étiquette.  
+13. Dans le volet **attributs** , cliquez sur un attribut et faites-le glisser vers l’étiquette **Sélectionner un attribut** du volet **modifier la condition** .  
   
-14. Dans le **modifier la Condition** volet, remplissez tous les champs requis.  
+14. Dans le volet **modifier la condition** , complétez tous les champs obligatoires.  
   
 15. Dans le volet **Modifier la condition** , cliquez sur **Enregistrer l’élément**.  
   
-16. Si vous le souhaitez, ajouter plus de conditions, à partir de la **composants** volet, faites glisser **AND** ou **OR** aux **AND** ou **OR**dans les **IF** volet. Suivez ensuite les étapes 13 à 15.  
+16. Si vous le souhaitez, pour ajouter d’autres conditions, à partir du volet **composants** , faites glisser **and** ou **or** vers Any **et** or **ou** dans le volet **If** . Suivez ensuite les étapes 13 à 15.  
   
     > [!TIP]  
-    >  Pour supprimer une condition, cliquez sur le nom de la condition et, dans le **modifier la Condition** volet, cliquez sur **suppression de l’élément**.  
+    >  Pour supprimer une condition, cliquez sur le nom de la condition, puis dans le volet **modifier la condition** , cliquez sur **Supprimer l’élément**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Règles d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
- [Renommer une règle d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-business-rule-name-master-data-services.md)   
- [Configurer des règles d’entreprise pour envoyer des notifications &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
+ [&#40;des règles d’entreprise Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
+ [Modifier le nom d’une règle d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-business-rule-name-master-data-services.md)   
+ [Configurez des règles d’entreprise pour envoyer des notifications &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
   
   

@@ -13,37 +13,37 @@ ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5f28b5d593524288a755f4c9455bba39554d7bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924818"
 ---
 # <a name="namespaces"></a>Espaces de noms
-Le format de persistance XML dans ADO utilise quatre espaces de noms suivants.  
+Le format de persistance XML dans ADO utilise les quatre espaces de noms suivants.  
   
 ## <a name="remarks"></a>Notes  
- Le format de persistance XML dans ADO utilise quatre espaces de noms suivants.  
+ Le format de persistance XML dans ADO utilise les quatre espaces de noms suivants.  
   
-|Prefix|Description|  
+|Préfixe|Description|  
 |------------|-----------------|  
-|s|Fait référence à l’espace de noms « XML-Data » contenant les éléments et attributs qui définissent le schéma de l’ensemble d’enregistrements actuel.|  
-|DT|Fait référence à la spécification de définitions de type de données.|  
-|rs|Fait référence à l’espace de noms des éléments conteneur et des attributs spécifiques aux propriétés de jeu d’enregistrements ADO et des attributs.|  
-|e|Fait référence au schéma de l’ensemble de lignes en cours.|  
+|s|Fait référence à l’espace de noms « XML-Data » contenant les éléments et les attributs qui définissent le schéma du Recordset actuel.|  
+|div|Fait référence à la spécification des définitions des types de données.|  
+|rs|Fait référence à l’espace de noms contenant des éléments et des attributs spécifiques aux attributs et propriétés ADO Recordset.|  
+|z|Fait référence au schéma de l’ensemble de lignes actuel.|  
   
- Un client ne devez pas ajouter ses propres balises à ces espaces de noms, tel que défini par la spécification. Par exemple, un client ne doit pas définir un espace de noms « urn : schemas-microsoft-rowset », puis écrire quelque chose comme « rs : MaPropreBalise ». Pour en savoir plus sur les espaces de noms, consultez le [espaces de noms W3C dans la recommandation XML](http://www.w3.org/TR/REC-xml-names/).  
+ Un client ne doit pas ajouter ses propres balises à ces espaces de noms, comme défini par la spécification. Par exemple, un client ne doit pas définir un espace de noms comme « urn : schemas-microsoft-com : rowset », puis écrire un texte tel que « RS : MyOwnTag ». Pour en savoir plus sur les espaces de noms, consultez la recommandation du W3C sur les [espaces de noms dans XML](http://www.w3.org/TR/REC-xml-names/).  
   
 > [!IMPORTANT]
->  L’ID de la balise de schéma doit être « RowsetSchema » et l’espace de noms utilisé pour faire référence au schéma de l’ensemble de lignes en cours doit pointer vers « #RowsetSchema ».  
+>  L’ID de la balise de schéma doit être « RowsetSchema » et l’espace de noms utilisé pour faire référence au schéma de l’ensemble de lignes actuel doit pointer sur « #RowsetSchema ».  
   
- Notez que le préfixe de l’espace de noms - la partie entre le signe deux-points et le signe égal - est arbitraire.  
+ Notez que le préfixe de l’espace de noms (le composant entre le signe deux-points et le signe égal) est arbitraire.  
   
 ```  
 xmlns:rs="urn:schemas-microsoft-com:rowset"  
 ```  
   
- L’utilisateur peut définir cette option pour être n’importe quel nom, que ce nom est utilisé partout dans le document XML. ADO écrit toujours « s », « rs », « dt » et « z », mais ces préfixes ne sont pas codées en dur dans le composant de chargement.  
+ L’utilisateur peut définir cette valeur sur n’importe quel nom, à condition que ce nom soit utilisé de manière cohérente dans tout le document XML. ADO écrit toujours les lettres « s », « RS », « DT » et « z », mais ces noms de préfixe ne sont pas codés en dur dans le composant de chargement.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Persistance des enregistrements au format XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

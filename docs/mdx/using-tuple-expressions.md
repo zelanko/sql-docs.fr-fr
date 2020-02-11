@@ -1,5 +1,5 @@
 ---
-title: À l’aide d’Expressions de Tuple | Microsoft Docs
+title: Utilisation d’expressions de Tuple | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 55b55f2104e900104c051021fc02761d32c63e5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135134"
 ---
 # <a name="using-tuple-expressions"></a>Utilisation d'expressions de tuple
@@ -36,7 +36,7 @@ ms.locfileid: "68135134"
   
 -   Si la hiérarchie référencée implicitement possède un membre par défaut, celui-ci est ajouté au tuple.  
   
--   Si la hiérarchie référencée implicitement ne possède aucun membre par défaut, le **(All)** membre de la hiérarchie par défaut est utilisé.  
+-   Si la hiérarchie référencée implicitement n’a pas de membre par défaut, le membre **(All)** de la hiérarchie par défaut est utilisé.  
   
 -   Si la hiérarchie référencée implicitement ne possède aucun membre par défaut, le premier membre du niveau le plus élevé de la hiérarchie est utilisé.  
   
@@ -45,6 +45,6 @@ ms.locfileid: "68135134"
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)   
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

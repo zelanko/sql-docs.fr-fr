@@ -1,5 +1,5 @@
 ---
-title: Écrivez une Application interopérable | Microsoft Docs
+title: Écriture d’une application interopérable | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,24 +16,24 @@ ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f24e50b7f6dd8b129a2777ce1132ec426b7ea182
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078981"
 ---
 # <a name="writing-an-interoperable-application"></a>Écriture d’une application interopérable
-Chaque fois qu’une application utilise le même code sur plus d’un pilote, ce code doit être interopérable entre ces pilotes. Dans la plupart des cas, il s’agit d’une tâche facile. Par exemple, le code pour extraire les lignes avec un curseur avant uniquement est identique pour tous les pilotes. Dans certains cas, cela peut être plus difficile. Par exemple, le code pour construire des identificateurs pour une utilisation dans les instructions SQL doit prendre en compte la casse de l’identificateur, des guillemets et des conventions d’affectation de noms une seule partie, les deux parties et les trois parties.  
+Chaque fois qu’une application utilise le même code sur plusieurs pilotes, ce code doit être interopérable entre ces pilotes. Dans la plupart des cas, il s’agit d’une tâche facile. Par exemple, le code permettant d’extraire des lignes avec un curseur avant uniquement est le même pour tous les pilotes. Dans certains cas, cela peut être plus difficile. Par exemple, le code permettant de construire des identificateurs pour une utilisation dans des instructions SQL doit prendre en compte les conventions d’affectation de noms, de guillemets et d’une partie, en deux parties et en trois parties.  
   
- En règle générale, code interopérable doit faire face à des problèmes de prise en charge de la fonctionnalité et la variabilité de la fonctionnalité. *Prise en charge des fonctionnalités* fait référence à ou non une fonctionnalité particulière est prise en charge. Par exemple, pas tous les SGBD prennent en charge les transactions et interopérable code doit fonctionner correctement, quel que soit prise en charge de la transaction. *Fonctionnalité de variabilité* fait référence à la variation de la manière dont une fonctionnalité particulière est prise en charge. Par exemple, les noms de catalogues sont placés au début des identificateurs dans certains SGBD et à la fin des identificateurs dans d’autres.  
+ En général, le code interopérable doit faire face aux problèmes liés à la prise en charge des fonctionnalités et à la variabilité des fonctionnalités. La *prise en charge des fonctionnalités* fait référence à la prise en charge d’une fonctionnalité particulière. Par exemple, tous les SGBD ne prennent pas en charge les transactions et le code interopérable doit fonctionner correctement indépendamment de la prise en charge des transactions. La *variabilité des fonctionnalités* fait référence à la variation de la façon dont une fonctionnalité particulière est prise en charge. Par exemple, les noms de catalogue sont placés au début des identificateurs dans certains SGBD et à la fin des identificateurs dans d’autres.  
   
- Les applications peuvent traiter avec prise en charge de la fonctionnalité et la variabilité de la fonctionnalité au moment du design ou au moment de l’exécution. Pour faire face avec prise en charge de fonctionnalité et de variabilité au moment du design, un développeur examine la cible SGBD et les pilotes et permet de s’assurer que le même code seront interopérable entre eux. Il s’agit généralement de la façon dans lequel les applications avec l’interopérabilité faible ou limitée traitent ces problèmes.  
+ Les applications peuvent gérer la prise en charge des fonctionnalités et la variabilité des fonctionnalités au moment du design ou au moment de l’exécution. Pour gérer la prise en charge des fonctionnalités et la variabilité au moment du design, un développeur examine les SGBD et les pilotes cibles et s’assure que le même code peut être interopérable entre eux. Il s’agit généralement de la façon dont les applications avec une interopérabilité faible ou limitée traitent de ces problèmes.  
   
- Par exemple, si le développeur garantit qu’une application verticale fonctionne qu’avec quatre SGBD particulier et si chacun de ces SGBD prend en charge les transactions, l’application doit-elle pas de code de vérification de la prise en charge de la transaction en cours d’exécution. Il peut toujours supposer que les transactions sont disponibles en raison de la décision au moment du design à utiliser seulement quatre SGBD, chacun d’eux prend en charge les transactions.  
+ Par exemple, si le développeur garantit qu’une application verticale fonctionne uniquement avec quatre SGBD particuliers et si chacun de ces SGBD prend en charge les transactions, l’application n’a pas besoin de code pour vérifier la prise en charge des transactions au moment de l’exécution. Il peut toujours supposer que les transactions sont disponibles en raison de la décision au moment du design d’utiliser uniquement quatre SGBD, chacun prenant en charge les transactions.  
   
- Pour faire face avec prise en charge de fonctionnalité et de variabilité en cours d’exécution, l’application doit tester différentes fonctionnalités en cours d’exécution et agir en conséquence. Cela est généralement celle dans laquelle des applications hautement interopérables traitent ces problèmes. Pour les problèmes de prise en charge de fonctionnalité, cela signifie que d’écrire du code qui rend le code de fonction facultatif ou d’écriture qui émule la fonctionnalité lorsqu’il n’est pas disponible. Pour les problèmes de variabilité de fonctionnalité, cela signifie que d’écrire du code qui prend en charge toutes les variations possibles.  
+ Pour gérer la prise en charge des fonctionnalités et la variabilité au moment de l’exécution, l’application doit tester des fonctionnalités différentes au moment de l’exécution et agir en conséquence. Il s’agit généralement de la façon dont les applications hautement interopérables traitent ces problèmes. Pour les problèmes de prise en charge des fonctionnalités, cela signifie écrire du code qui rend la fonctionnalité facultative ou écrire du code qui émule la fonctionnalité lorsqu’elle n’est pas disponible. Pour les problèmes de variabilité des fonctionnalités, cela signifie écrire du code qui prend en charge toutes les variations possibles.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Vérification de la prise en charge et de la variabilité des fonctionnalités](../../../odbc/reference/develop-app/checking-feature-support-and-variability.md)  
   

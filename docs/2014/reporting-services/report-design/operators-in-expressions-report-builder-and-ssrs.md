@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb4ea26e646453b3acd85a4f5e13ab9557f950fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105499"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Opérateurs dans les expressions (Générateur de rapports et SSRS)
@@ -46,8 +46,8 @@ ms.locfileid: "66105499"
 |>|Supérieur à.|  
 |>=|Supérieur ou égal à.|  
 |=|Égal à.|  
-|<>|Différent de.|  
-|Correspond à|Détermine si une chaîne de caractères donnée correspond à un modèle spécifié. Une chaîne peut comprendre des caractères normaux ainsi que des caractères génériques. Au cours de l'analyse, les caractères normaux doivent correspondre exactement aux caractères spécifiés dans la chaîne de caractères. Toutefois, les caractères génériques peuvent être associés à des portions aléatoires de la chaîne de caractères. L'utilisation de caractères génériques rend l'opérateur LIKE plus flexible que lorsque les opérateurs de comparaison des chaînes = et != sont utilisés.<br /><br /> Les caractères suivants de listes qui peuvent être utilisés en tant que caractères génériques :<br /><br /> **%**  : Toute chaîne de zéro caractère ou plus.<br /><br /> **_**: N'importe quel caractère.<br /><br /> **[ ]**: N’importe quel caractère dans la plage spécifiée (par exemple, [a-f]) ou la valeur (par exemple, [aeiou]).<br /><br /> **[^]**: Tout caractère hors de la plage spécifiée (par exemple, [^ a-f]) ou la valeur (par exemple, [^ aeiou]).|  
+|<>|Non égal à.|  
+|Correspond à|Détermine si une chaîne de caractères donnée correspond à un modèle spécifié. Une chaîne peut comprendre des caractères normaux ainsi que des caractères génériques. Au cours de l'analyse, les caractères normaux doivent correspondre exactement aux caractères spécifiés dans la chaîne de caractères. Toutefois, les caractères génériques peuvent être associés à des portions aléatoires de la chaîne de caractères. L'utilisation de caractères génériques rend l'opérateur LIKE plus flexible que lorsque les opérateurs de comparaison des chaînes = et != sont utilisés.<br /><br /> La liste suivante répertorie les caractères qui peuvent être utilisés comme caractères génériques :<br /><br /> **%**: Toute chaîne de zéro caractère ou plus.<br /><br /> **_**: Tout caractère unique.<br /><br /> **[]**: Tout caractère unique dans la plage spécifiée (par exemple, [a-f]) ou défini (par exemple, [aeiou]).<br /><br /> **[^]**: Tout caractère unique qui ne figure pas dans la plage spécifiée (par exemple, [^ a-f]) ou défini (par exemple, [^ aeiou]).|  
 |Is|Compare deux références d'objet.|  
   
 ### <a name="string-concatenation"></a>Concaténation de chaînes  
@@ -63,7 +63,7 @@ ms.locfileid: "66105499"
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|And|Effectue une conjonction logique sur deux expressions booléennes ou une conjonction au niveau du bit sur deux expressions numériques.|  
+|and|Effectue une conjonction logique sur deux expressions booléennes ou une conjonction au niveau du bit sur deux expressions numériques.|  
 |Not|Effectue une négation logique sur une expression booléenne ou une négation au niveau du bit sur une expression numérique.|  
 |ou|Effectue une disjonction logique sur deux expressions booléennes ou une disjonction au niveau du bit sur deux valeurs numériques.|  
 |Xor|Effectue une exclusion logique sur deux expressions booléennes ou une exclusion au niveau du bit sur deux expressions numériques.|  

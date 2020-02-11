@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 465d20f425a479f173ed5a9c2b5f5ec96ec7f707
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480811"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
@@ -34,9 +34,9 @@ ms.locfileid: "65480811"
   
  L'illustration suivante montre le processus de nettoyage des données dans DQS :  
   
- ![Processus de nettoyage des données dans DQS](../../2014/data-quality-services/media/dqs-cleansingprocess.gif "Processus de nettoyage des données dans DQS")  
+ ![Processus de nettoyage de données dans DQS](../../2014/data-quality-services/media/dqs-cleansingprocess.gif "Processus de nettoyage de données dans DQS")  
   
-##  <a name="ComputerAssisted"></a> Nettoyage assisté par ordinateur  
+##  <a name="ComputerAssisted"></a>Nettoyage assisté par ordinateur  
  Le processus de nettoyage des données dans DQS applique la base de connaissances aux données à nettoyer et propose des modifications aux données. Le gestionnaire de données a accès à chaque modification proposée, ce qui lui permet d'évaluer et de corriger les modifications. Pour effectuer le nettoyage des données, le gestionnaire de données procède comme suit :  
   
 1.  Création d'un projet de qualité des données, sélection d'une base de connaissances par rapport à laquelle vous souhaitez analyser et nettoyer vos données sources, puis sélection de l'activité **Nettoyage** . Plusieurs projets de qualité de données peuvent utiliser la même base de connaissances.  
@@ -60,18 +60,18 @@ ms.locfileid: "65480811"
   
  Toute valeur dont le niveau de confiance est inférieur à la valeur du seuil de suggestion automatique est conservée en l'état par DQS, sauf si le gestionnaire de données spécifie une modification.  
   
-##  <a name="Interactive"></a> Nettoyage interactif  
+##  <a name="Interactive"></a>Nettoyage interactif  
  En s'appuyant sur le processus de nettoyage assisté par ordinateur, DQS fournit au gestionnaire de données les informations dont il a besoin pour prendre une décision à propos de la modification des données. DQS classe les données dans les cinq onglets suivants :  
   
--   **Suggérés** : valeurs pour lesquelles DQS a identifié des suggestions dont le niveau de confiance est supérieur à la valeur du *seuil de suggestion automatique* mais inférieur à la valeur du *seuil de correction automatique*. Vous devez examiner ces valeurs et les approuver ou les refuser, selon le cas.  
+-   **Suggestion**: valeurs pour lesquelles DQS a trouvé des suggestions dont le niveau de confiance est supérieur à la valeur du *seuil de suggestion automatique* mais inférieur à la valeur du *seuil de correction automatique* . Vous devez examiner ces valeurs et les approuver ou les refuser, selon le cas.  
   
--   **Nouveau** : Valeurs valides pour lesquelles DQS ne dispose pas de suffisamment d’informations (suggestion) et par conséquent ne peut pas être mappé à aucun autre onglet. En outre, cet onglet contient également les valeurs dont le niveau de confiance est inférieur à la valeur du *seuil de suggestion automatique* , mais suffisamment élevé pour être considéré comme valide.  
+-   **Nouveau**: les valeurs valides pour lesquelles DQS ne dispose pas de suffisamment d’informations (suggestion) et ne peuvent donc pas être mappées à un autre onglet. En outre, cet onglet contient également des valeurs dont le niveau de confiance est inférieur à la valeur du *seuil de suggestion automatique* , mais suffisamment élevé pour être marqué comme valide.  
   
--   **Non valide** : Valeurs qui ont été marquées comme étant non valides dans le domaine dans la base de connaissances ou les valeurs qui ont échoué à un domaine règle ou référence des données. Cet onglet contient également les valeurs qui sont rejetées par l'utilisateur dans l'un des quatre autres onglets pendant le processus de nettoyage interactif.  
+-   **Non valide**: valeurs qui ont été marquées comme non valides dans le domaine de la base de connaissances ou valeurs qui n’ont pas réussi une règle de domaine ou des données de référence. Cet onglet contient également les valeurs qui sont rejetées par l'utilisateur dans l'un des quatre autres onglets pendant le processus de nettoyage interactif.  
   
--   **Corrigé** : valeurs corrigées par DQS pendant le processus de nettoyage automatisé lorsque DQS a trouvé une correction pour la valeur dont le niveau de confiance est supérieur à la valeur du *seuil de correction automatique*. Cet onglet contient également les valeurs pour lesquelles l'utilisateur a spécifié une valeur correcte dans la colonne **Corriger vers** lors du nettoyage interactif, puis approuvé en cliquant sur la case d'option dans la colonne **Approuver** de l'un des quatre autres onglets.  
+-   **Corrigé**: valeurs corrigées par DQS pendant le processus de nettoyage automatisé, car DQS a trouvé une correction pour la valeur avec un niveau de confiance au-dessus de la valeur du *seuil de correction automatique* . Cet onglet contient également les valeurs pour lesquelles l'utilisateur a spécifié une valeur correcte dans la colonne **Corriger vers** lors du nettoyage interactif, puis approuvé en cliquant sur la case d'option dans la colonne **Approuver** de l'un des quatre autres onglets.  
   
--   **Correct** : Valeurs qui ont été trouvés corrects. Par exemple, la valeur correspond à une valeur de domaine. Si nécessaire, vous pouvez remplacer le nettoyage DQS en refusant les valeurs affichées sous cet onglet, ou en spécifiant un autre mot dans la colonne **Corriger vers** , puis en cliquant sur la case d'option dans la colonne **Accepter** . Cet onglet contient également les valeurs qui ont été approuvées par l'utilisateur lors du nettoyage interactif en cliquant sur la case d'option dans la colonne **Approuver** sous l'onglet **Nouveau** ou **Non valide** .  
+-   **Correct**: valeurs qui ont été trouvées correctes. Par exemple, la valeur correspond à une valeur de domaine. Si nécessaire, vous pouvez remplacer le nettoyage DQS en refusant les valeurs affichées sous cet onglet, ou en spécifiant un autre mot dans la colonne **Corriger vers** , puis en cliquant sur la case d'option dans la colonne **Accepter** . Cet onglet contient également les valeurs qui ont été approuvées par l'utilisateur lors du nettoyage interactif en cliquant sur la case d'option dans la colonne **Approuver** sous l'onglet **Nouveau** ou **Non valide** .  
   
 > [!NOTE]  
 >  Sous les onglets **Suggérés**, **Corrigé**et **Correct** , DQS affiche la valeur de début d'un domaine, le cas échéant, dans la colonne **Corriger vers** en fonction de la valeur de domaine correspondante.  
@@ -84,12 +84,12 @@ ms.locfileid: "65480811"
   
  L'illustration suivante montre le nettoyage de données à l'aide de l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] :  
   
- ![Nettoyage des données dans Data Quality Client](../../2014/data-quality-services/media/dqs-cleansingindqsclient.gif "Nettoyage des données dans Data Quality Client")  
+ ![Nettoyage de données dans le Data Quality Client](../../2014/data-quality-services/media/dqs-cleansingindqsclient.gif "Nettoyage de données dans le Data Quality Client")  
   
-##  <a name="Leading"></a> Correction de la valeur de début  
+##  <a name="Leading"></a>Correction de la valeur de début  
  La correction de la valeur de début s'applique aux valeurs de domaine qui ont des synonymes, lorsque l'utilisateur veut utiliser une des valeurs synonymes comme valeur de début en remplacement d'autres valeurs pour homogénéiser la représentation de la valeur. Par exemple, « New York », « NYC », et « Big Apple » sont des synonymes, et l’utilisateur veut utiliser « New York » comme valeur de début au lieu de « NYC » et « Big Apple ». DQS prend en charge la correction de la valeur de début pendant le processus de nettoyage pour vous aider à normaliser vos données. La correction de la valeur de début est effectuée uniquement si cette option a été activée pour le domaine lors de sa création. Par défaut, la correction de la valeur de début est activée pour tous les domaines, sauf si vous avez désactivé la case à cocher **Utiliser des valeurs de début** lors de la création d'un domaine. Pour plus d'informations sur cette case à cocher, consultez [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
   
-##  <a name="Standardize"></a> Normalisation des données nettoyées  
+##  <a name="Standardize"></a>Normaliser les données nettoyées  
  Vous pouvez choisir s'il faut exporter les données nettoyées au format normalisé en fonction du format de sortie défini pour les domaines. Lors de la création d'un domaine, vous pouvez sélectionner la mise en forme qui est appliquée lorsque les valeurs de données du domaine sont générées. Pour plus d'informations sur la spécification des formats de sortie pour un domaine, consultez la liste **Mettre en forme la sortie vers** de la rubrique [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
   
  Lors de l'exportation des données nettoyées dans la page **Exporter** de l'Assistant de nettoyage de projet de qualité des données, spécifiez si vous souhaitez que les données nettoyées soient exportées au format normalisé en activant la case à cocher **Normaliser la sortie** . Par défaut, les données nettoyées sont exportées au format normalisé (autrement dit, la case à cocher est activée). Pour plus d’informations sur l’exportation des données nettoyées, consultez [Nettoyer des données à l’aide des connaissances DQS &#40;internes&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md).  
@@ -98,13 +98,13 @@ ms.locfileid: "65480811"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Explique comment configurer les valeurs de seuil pour l'activité de nettoyage.|[Configure Threshold Values for Cleansing and Matching](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
-|Explique comment nettoyer les données à l'aide des connaissances intégrées à DQS.|[Nettoyer des données à l’aide de la base de connaissances DQS &#40;interne&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)|  
-|Explique comment nettoyer les données à l'aide des connaissances du service de données de référence.|[Nettoyer des données à l’aide de la connaissance des données de référence &#40;externes&#41;](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
+|Explique comment configurer les valeurs de seuil pour l'activité de nettoyage.|[Configurer les valeurs de seuil pour le nettoyage et la correspondance](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
+|Explique comment nettoyer les données à l'aide des connaissances intégrées à DQS.|[Nettoyer les données à l’aide de DQS &#40;connaissances&#41; internes](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)|  
+|Explique comment nettoyer les données à l'aide des connaissances du service de données de référence.|[Nettoyer les données à l’aide de données de référence &#40;la connaissance des&#41; externes](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
 |Explique comment nettoyer un domaine composite.|[Nettoyer les données dans un domaine composite](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Projets de qualité des données &#40;DQS&#41;](../../2014/data-quality-services/data-quality-projects-dqs.md)   
+ [Projets de qualité des données &#40;&#41;DQS](../../2014/data-quality-services/data-quality-projects-dqs.md)   
  [Correspondance de données](../../2014/data-quality-services/data-matching.md)  
   
   

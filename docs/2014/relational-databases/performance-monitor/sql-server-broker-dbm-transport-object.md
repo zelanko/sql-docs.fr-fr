@@ -1,5 +1,5 @@
 ---
-title: SQL Server, service Broker et DBM Transport objet | Microsoft Docs
+title: Objet de transport SQL Server, Broker et DBM | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b0347c7f7e19ae5500f8c5be100ef2d0dc663784
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250727"
 ---
 # <a name="sql-server-broker-and-dbm-transport-object"></a>SQL Server, Broker et Objet DBM Transport
@@ -38,7 +38,7 @@ ms.locfileid: "63250727"
 |**Fragments de message P8 envoyés/s**|Ce compteur indique le nombre de fragments de message de priorité 8 envoyés sur le réseau par seconde.|  
 |**Fragments de message P9 envoyés/s**|Ce compteur indique le nombre de fragments de message de priorité 9 envoyés sur le réseau par seconde.|  
 |**Fragments de message P10 envoyés/s**|Ce compteur désigne le nombre de fragments de message de priorité 10 envoyés sur le réseau par seconde.|  
-|**Taille moyenne des messages fragments envoyés**|Ce compteur précise la taille moyenne des fragments de message envoyés sur le réseau.|  
+|**Taille moyenne des fragments de message envoyés**|Ce compteur précise la taille moyenne des fragments de message envoyés sur le réseau.|  
 |**Fragments de message envoyés/s**|Ce compteur désigne le nombre de fragments de message de toutes les priorités envoyés sur le réseau par seconde.|  
 |**Fragments de message reçus/s**|Ce compteur reprend le nombre de fragments de message reçus sur le réseau par seconde.|  
 |**Taille moyenne des fragments de message reçus**|Ce compteur précise la taille moyenne des fragments de message reçus sur le réseau.|  
@@ -50,7 +50,7 @@ ms.locfileid: "63250727"
 |**Total des octets d'E/S reçus**|Ce compteur indique le nombre total d'octets reçus sur le réseau par les points de terminaison Service Broker et de mise en miroir de bases de données.|  
 |**Octets d'E/S reçus/s**|Ce compteur reprend le nombre total d'octets reçus par seconde sur le réseau par les points de terminaison Service Broker et de mise en miroir de bases de données.|  
 |**Longueur moyenne des E/S reçues**|Ce compteur désigne le nombre moyen d'octets pour une opération de réception de transport.|  
-|**Réception des e/s par seconde**|Ce compteur indique le nombre d'opérations d'E/S du transport en réception par seconde que la couche Service Broker/DBM transport a effectuées. Il se peut qu'une opération de réception du transport contienne plusieurs fragments de message.|  
+|**E/S reçues/s**|Ce compteur indique le nombre d'opérations d'E/S du transport en réception par seconde que la couche Service Broker/DBM transport a effectuées. Il se peut qu'une opération de réception du transport contienne plusieurs fragments de message.|  
 |**Total des octets d'E/S envoyés**|Ce compteur indique le nombre total d'octets transmis sur le réseau par les points de terminaison Service Broker et de mise en miroir de bases de données.|  
 |**Octets d'E/S envoyés/s**|Ce compteur reprend le nombre total d'octets envoyés par seconde sur le réseau par les points de terminaison Service Broker et de mise en miroir de bases de données.|  
 |**Longueur moyenne des E/S envoyées**|Ce compteur précise la taille moyenne en octets des opérations d'envoi de transport. Il se peut qu'une opération d'envoi du transport contienne plusieurs fragments de message.|  

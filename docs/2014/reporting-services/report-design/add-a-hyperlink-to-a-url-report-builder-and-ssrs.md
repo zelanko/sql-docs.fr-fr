@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa7b0d32a62e5e2d729e05c88b892ccaffc0fc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106814"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Ajouter un lien hypertexte à une URL (Générateur de rapports et SSRS)
@@ -27,20 +27,20 @@ ms.locfileid: "66106814"
   
  Vous pouvez ajouter un lien hypertexte à une URL vers tout élément qui a une propriété **Action** , par exemple une zone de texte, une image ou une série calculée dans un graphique. Lorsque l'utilisateur clique sur l'élément de rapport en question, l'action que vous définissez est exécutée. Pour plus d’informations, consultez [Boîte de dialogue Propriétés relatives aux actions &#40;Générateur de rapports et SSRS&#41;](../action-properties-dialog-box-report-builder-and-ssrs.md) et [Spécification de chemins d’accès à des éléments externes &#40;Générateur de rapports et SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   
- Pour démarrer rapidement, consultez [Tutoriel : Mettre en forme du texte &#40;Générateur de rapports&#41;](../tutorial-format-text-report-builder.md).  
+ Pour une prise en main rapide, consultez [Didacticiel : mettre en forme du texte &#40;Générateur de rapports&#41;](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  Les liens qui sont associés à des champs de dataset peuvent être vulnérables à des opérations de falsification à des fins malveillantes. Pour plus d’informations, consultez [Sécuriser des rapports et des ressources](../security/secure-reports-and-resources.md) dans la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][documentation en ligne](https://go.microsoft.com/fwlink/?LinkId=154888) sur msdn.microsoft.com.  
   
 ### <a name="to-add-a-hyperlink"></a>Pour ajouter un lien hypertexte  
   
-1.  En mode création de rapport, cliquez avec le bouton droit sur la zone de texte, l'image ou le graphique auquel vous voulez ajouter un lien, puis cliquez sur **Propriétés**.  
+1.  En mode Création de rapport, cliquez avec le bouton droit sur la zone de texte, l’image ou le graphique auquel vous voulez ajouter un lien, puis cliquez sur **Propriétés**.  
   
 2.  Dans la boîte de dialogue Propriétés, cliquez sur **Action**.  
   
 3.  Sélectionnez **Atteindre l'URL**. Une section supplémentaire apparaît dans la boîte de dialogue pour cette option.  
   
-4.  Dans **Sélectionner une URL**, tapez ou sélectionnez une URL ou une expression qui prend la valeur d'une URL ou cliquez sur la flèche déroulante et cliquez sur le nom d'un champ qui contient une URL.  
+4.  Dans **Sélectionner une URL**, entrez ou sélectionnez une URL ou une expression qui prend la valeur d’une URL, ou cliquez sur la flèche déroulante et cliquez sur le nom d’un champ qui contient une URL.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

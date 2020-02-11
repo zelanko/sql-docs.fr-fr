@@ -23,14 +23,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 71c462baf00d4129b4efaea0eb39b3a08e6c7ce6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63261880"
 ---
 # <a name="replication-publishing-model-overview"></a>Vue d’ensemble du modèle de publication de réplication
-  La réplication utilise une métaphore de l'industrie de l'édition pour représenter les composants d'une topologie de réplication ; elle comprend un serveur de publication, un serveur de distribution, des abonnés, des publications, des articles et des abonnements. Il peut être utile de penser à la réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans les mêmes termes qu'un magazine :  
+  La réplication utilise une métaphore de l'industrie de l'édition pour représenter les composants d'une topologie de réplication ; elle comprend un serveur de publication, un serveur de distribution, des abonnés, des publications, des articles et des abonnements. Il est utile de penser [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à la réplication en termes de magazine :  
   
 -   L'éditeur d'un magazine produit une ou plusieurs publications  
   
@@ -61,12 +61,12 @@ ms.locfileid: "63261880"
 ## <a name="publication"></a>Publication  
  Une publication est une collection d'un ou plusieurs articles provenant d'une base de données. Le regroupement de plusieurs articles en une publication facilite la spécification d'un ensemble logique d'objets de base de données et de données qui sont répliqués comme une seule unité.  
   
-## <a name="subscription"></a>Abonnement  
- Un abonnement est une requête portant sur la remise d'une copie d'une publication à un Abonné. L'abonnement définit la publication qui sera reçue, et où et quand elle sera reçue. Il existe deux types d'abonnements : les abonnements par émission de données et les abonnements par extraction. Pour plus d’informations sur les abonnements par envoi et par extraction de données, consultez [S’abonner à des publications](../subscribe-to-publications.md).  
+## <a name="subscription"></a>Subscription  
+ Un abonnement est une requête portant sur la remise d'une copie d'une publication à un Abonné. L'abonnement définit la publication qui sera reçue, et où et quand elle sera reçue. Il existe deux types d'abonnements : les abonnements par émission de données et les abonnements par extraction. Pour plus d’informations sur les abonnements par envoi et par extraction de données, consultez [S’abonner à des publications](../subscribe-to-publications.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des Agents de réplication](../agents/replication-agents-overview.md)   
- [Types of Replication](../types-of-replication.md)   
- [Configurer la réplication pour les groupes de disponibilité AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) [maintenance une base de données de Publication AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
+ [Présentation des Agents de réplication](../agents/replication-agents-overview.md)   
+ [Types de réplication](../types-of-replication.md)   
+ [Configurez la réplication pour groupes de disponibilité AlwaysOn (SQL Server) qui](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) [gère une base de données de publication alwayson &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
   

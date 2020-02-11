@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6d0d9249a5cfb801e07a85132060bb4d1781346
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63251099"
 ---
 # <a name="sql-server-latches-object"></a>SQL Server - Objet Latches
@@ -27,12 +27,12 @@ ms.locfileid: "63251099"
   
 |Compteurs des verrous internes de SQL Server|Description|  
 |---------------------------------|-----------------|  
-|**Temps d'attente moyen d'un verrou interne (ms)**|Temps d'attente moyen d'un verrou interne (en millisecondes) pour les requêtes en attente.|  
+|**Temps d’attente moyen d’un verrou interne (MS)**|Temps d'attente moyen d'un verrou interne (en millisecondes) pour les requêtes en attente.|  
 |**Attentes de verrous internes/s**|Nombre de requêtes de verrous internes n'ayant pas pu être accordés immédiatement.|  
 |**Nombre de SuperLatch**|Nombre de verrous internes qui sont actuellement des SuperLatch.|  
-|**Rétrogradations SuperLatch/sec**|Nombre de SuperLatch ayant été rétrogradés au rang de verrous internes réguliers au cours de la dernière seconde.|  
+|**Rétrogradations de SuperLatch/s**|Nombre de SuperLatch ayant été rétrogradés au rang de verrous internes réguliers au cours de la dernière seconde.|  
 |**Promotions SuperLatch/s**|Nombre de SuperLatch ayant été promus au rang de SuperLatch au cours de la dernière seconde.|  
-|**Temps d'attente total des verrous internes (ms)**|Temps d'attente total (en millisecondes) pour les verrous lors de la dernière seconde.|  
+|**Temps d’attente total des verrous internes (MS)**|Temps d'attente total (en millisecondes) pour les verrous lors de la dernière seconde.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](monitor-resource-usage-system-monitor.md)  

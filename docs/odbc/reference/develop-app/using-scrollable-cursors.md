@@ -1,5 +1,5 @@
 ---
-title: À l’aide de curseurs avec défilement | Microsoft Docs
+title: Utilisation des curseurs à défilement | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ ms.assetid: c5d795ba-70b0-420f-a944-b1894061a755
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 33f2050be5a0fb1b6d58bf00dd8c76c33219a237
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079569"
 ---
 # <a name="using-scrollable-cursors"></a>Utilisation des curseurs avec défilement
-À l’aide d’un curseur de défilement requiert ces trois étapes :  
+L’utilisation d’un curseur de défilement nécessite les trois étapes suivantes :  
   
-1.  Déterminer les fonctionnalités du curseur.  
+1.  Déterminez les fonctionnalités de curseur.  
   
-2.  Définir le curseur.  
+2.  Configurez le curseur.  
   
-3.  Faire défiler et extraire des lignes.  
+3.  Défilement et extraction de lignes.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Détermination des fonctionnalités du curseur](../../../odbc/reference/develop-app/determining-cursor-capabilities.md)  
   
@@ -37,4 +37,4 @@ ms.locfileid: "68079569"
   
 -   [Caractéristiques et types de curseurs](../../../odbc/reference/develop-app/cursor-characteristics-and-cursor-type.md)  
   
--   [Défilement et récupération (fetch) de lignes](../../../odbc/reference/develop-app/scrolling-and-fetching-rows-odbc.md)
+-   [Défilement et extraction de lignes](../../../odbc/reference/develop-app/scrolling-and-fetching-rows-odbc.md)

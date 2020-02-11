@@ -1,5 +1,5 @@
 ---
-title: Afficher la boîte de dialogue de Table (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Boîte de dialogue Afficher la table (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d21063bf403d9973ac4ff09725545e47e84a7cd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068660"
 ---
 # <a name="show-table-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Afficher la table (Analysis Services - Données multidimensionnelles)
@@ -35,15 +35,15 @@ ms.locfileid: "66068660"
 -   cliquant avec le bouton droit sur l’arrière-plan du volet **Vue de source de données** dans la page **Structure d’exploration de données** du **Concepteur de modèle d’exploration de données** et en sélectionnant **Afficher les tables**.  
   
 ## <a name="options"></a>Options  
- **Sélectionnez d’autres tables à afficher**  
+ **Sélectionnez d'autres tables à afficher**  
  Sélectionnez les tables à ajouter au volet **Vue de source de données** . Cette option affiche une grille des objets disponibles et de leur type correspondant au filtre défini dans **Filtre** (ou bien toutes les tables si **Filtre** n’est pas défini) et n’ayant pas encore été affichés dans le diagramme actuel.  
   
  **Filter**  
  Tapez le filtre à utiliser pour restreindre la liste des objets, puis cliquez sur le bouton pour filtrer les tables figurant dans **Sélectionnez d’autres tables à afficher**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Vue de Source de données &#40;onglet Structure de Dimension, Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
- [Vue de Source de données &#40;onglet Structure de Cube, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  
+ [Analysis Services les concepteurs et les boîtes de dialogue &#40;les données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Vue de source de données &#40;onglet structure de dimension, concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Vue de source de données &#40;onglet structure de cube, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  
   
   

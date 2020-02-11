@@ -17,14 +17,14 @@ ms.assetid: fc268e22-205b-44a3-9038-ffed51e23e10
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 43c5fef08d22364b9842c58fc82d46ba4bfa00bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918566"
 ---
 # <a name="getchunk-method-ado"></a>GetChunk, méthode (ADO)
-Retourne l’ensemble ou une partie du contenu d’un texte de grande taille ou les données binaires [champ](../../../ado/reference/ado-api/field-object.md) objet.  
+Retourne la totalité ou une partie du contenu d’un objet de texte ou de [champ](../../../ado/reference/ado-api/field-object.md) de données binaire volumineux.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,31 +34,31 @@ variable = field.GetChunk(Size)
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- Retourne un **Variant**.  
+ Retourne une valeur de **type Variant**.  
   
 #### <a name="parameters"></a>Paramètres  
  *Taille*  
- Un **Long** expression qui est égale au nombre d’octets ou de caractères que vous souhaitez récupérer.  
+ Expression **longue** qui est égale au nombre d’octets ou de caractères que vous souhaitez récupérer.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le **GetChunk** méthode sur un **champ** objet à récupérer tout ou partie de ses données binaires ou caractères de long. Dans les situations où la mémoire système est limitée, vous pouvez utiliser la **GetChunk** méthode pour manipuler les valeurs de type long dans les parties, plutôt que dans leur intégralité.  
+ Utilisez la méthode **GetChunk** sur un objet **Field** pour récupérer tout ou partie de ses données binaires ou caractères longues. Dans les situations où la mémoire système est limitée, vous pouvez utiliser la méthode **GetChunk** pour manipuler des valeurs longues en plusieurs parties, plutôt que dans leur intégralité.  
   
- Les données qui un **GetChunk** appel retourne est affectée à *variable*. Si *taille* est supérieur aux données restantes, le **GetChunk** méthode retourne uniquement les données restantes sans remplissage *variable* avec des espaces vides. Si le champ est vide, le **GetChunk** méthode retourne une valeur null.  
+ Les données retournées par un appel à **GetChunk** sont affectées à une *variable*. Si la *taille* est supérieure aux données restantes, la méthode **GetChunk** retourne uniquement les données restantes sans *variable* de remplissage avec des espaces vides. Si le champ est vide, la méthode **GetChunk** retourne une valeur null.  
   
- Chaque **GetChunk** appel récupère les données en commençant à partir de laquelle le précédent **GetChunk** appel s’est arrêté. Toutefois, si vous récupérez des données à partir d’un champ et que vous définissez ou lisez la valeur d’un autre champ dans l’enregistrement actif, ADO part du principe que vous avez terminé la récupération des données à partir du premier champ. Si vous appelez le **GetChunk** méthode sur le premier champ, ADO interprète l’appel en tant que nouvelle **GetChunk** opération et commence à lire à partir du début des données. L’accès à d’autres champs [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) les objets qui ne sont pas des clones du premier **Recordset** n’interrompt pas les objets **GetChunk** operations.  
+ Chaque appel **GetChunk** suivant récupère les données à partir de l’endroit où l’appel **GetChunk** précédent s’est arrêté. Toutefois, si vous extrayez des données d’un champ, puis que vous définissez ou lisez la valeur d’un autre champ dans l’enregistrement actif, ADO suppose que vous avez terminé la récupération des données du premier champ. Si vous renommez la méthode **GetChunk** sur le premier champ, ADO interprète l’appel comme une nouvelle opération **GetChunk** et commence la lecture à partir du début des données. L’accès aux champs d’autres objets [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) qui ne sont pas des clones du premier objet **Recordset** n’interrompt pas les opérations **GetChunk** .  
   
- Si le **adFldLong** bit dans le [attributs](../../../ado/reference/ado-api/attributes-property-ado.md) propriété d’un **champ** objet est défini sur **True**, vous pouvez utiliser le **GetChunk**  (méthode) pour ce champ.  
+ Si le **bit adFldLong** dans la propriété [attributes](../../../ado/reference/ado-api/attributes-property-ado.md) d’un objet de **champ** a la valeur **true**, vous pouvez utiliser la méthode **GetChunk** pour ce champ.  
   
- S’il n’existe aucun enregistrement actif lorsque vous utilisez le **GetChunk** méthode sur un **champ** de l’objet, l’erreur 3021 (aucun enregistrement actif) survient.  
+ S’il n’existe aucun enregistrement en cours lorsque vous utilisez la méthode **GetChunk** sur un objet **Field** , l’erreur 3021 (aucun enregistrement en cours) se produit.  
   
 > [!NOTE]
->  Le **GetChunk** méthode ne fonctionne pas sur **champ** objets d’un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet. Il n’effectue aucune opération et entraîne une erreur d’exécution.  
+>  La méthode **GetChunk** ne fonctionne pas sur les objets **Field** d’un objet [Record](../../../ado/reference/ado-api/record-object-ado.md) . Elle n’exécute aucune opération et génère une erreur d’exécution.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Field, objet](../../../ado/reference/ado-api/field-object.md)  
+ [Objet Field](../../../ado/reference/ado-api/field-object.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [AppendChunk et GetChunk, exemple de méthodes (VB)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
- [AppendChunk et GetChunk, exemple de méthodes (VC ++)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
+ [AppendChunk et GetChunk, exemple de méthodes (VC + +)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
  [AppendChunk, méthode (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
  [Attributes, propriété (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)

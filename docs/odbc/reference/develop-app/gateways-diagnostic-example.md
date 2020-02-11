@@ -1,5 +1,5 @@
 ---
-title: Exemple de Diagnostic de passerelles | Microsoft Docs
+title: Exemple de diagnostic de passerelles | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,25 +15,25 @@ ms.assetid: e0695fac-4593-4b3d-8675-cb8f73dab966
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 50476cb92d477bb9a72ac8d4311d24572b0368e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069684"
 ---
 # <a name="gateways-diagnostic-example"></a>Exemple de diagnostic des passerelles
-Dans une architecture de la passerelle, un pilote envoie des demandes à une passerelle qui prend en charge ODBC. La passerelle envoie les demandes à un SGBD. Étant donné que c’est le composant qui sert d’interface avec le Gestionnaire de pilotes, le pilote met en forme et retourne les arguments pour **SQLGetDiagRec**.  
+Dans une architecture de passerelle, un pilote envoie des demandes à une passerelle qui prend en charge ODBC. La passerelle envoie les demandes à un SGBD. Étant donné qu’il s’agit du composant qui interagit avec le gestionnaire de pilotes, le pilote met en forme et retourne les arguments pour **SQLGetDiagRec**.  
   
- Par exemple, si une passerelle à Rdb basé sur Oracle sur Microsoft Open Data Services et si Rdb n’a pas trouvé la table EMPLOYEE, la passerelle peut générer ce message de diagnostic :  
+ Par exemple, si Oracle est basé sur une passerelle RDB sur Microsoft Open Data Services et si RDB n’a pas pu trouver la table EMPLOYee, la passerelle peut générer ce message de diagnostic :  
   
 ```  
 "[42S02][-1][DEC][ODS Gateway][Rdb]%SQL-F-RELNOTDEF, Table EMPLOYEE is not defined "  
    "in schema."  
 ```  
   
- Étant donné que l’erreur s’est produite dans la source de données, la passerelle ajoutée un préfixe de l’identificateur de source de données ([Rdb]) pour le message de diagnostic. Étant donné que la passerelle a été le composant connectée à la source de données, il ajouté préfixes pour son fournisseur [DEC (]) et l’identificateur ([ODS passerelle]) pour le message de diagnostic. Il également ajouté la valeur SQLSTATE et le code d’erreur Rdb au début du message de diagnostic. Cela autorisé pour préserver la sémantique de sa propre structure de message et de toujours fournir les informations de diagnostic pour le pilote ODBC. Le pilote analyse les informations d’erreur associées à l’instruction d’erreur par la passerelle.  
+ Étant donné que l’erreur s’est produite dans la source de données, la passerelle a ajouté un préfixe pour l’identificateur de source de données ([RDB]) au message de diagnostic. Étant donné que la passerelle était le composant qui a été associé à la source de données, elle a ajouté des préfixes pour son fournisseur ([DEC]) et son identificateur ([ODS Gateway]) au message de diagnostic. Elle a également ajouté la valeur SQLSTATE et le code d’erreur RDB au début du message de diagnostic. Cela lui permettait de conserver la sémantique de sa propre structure de message tout en fournissant les informations de diagnostic ODBC au pilote. Le pilote analyse les informations d’erreur jointes à l’instruction Error par la passerelle.  
   
- Étant donné que le pilote de la passerelle est le composant qui sert d’interface avec le Gestionnaire de pilotes, il utilise le message de diagnostic précédent pour formater et retourner les valeurs suivantes à partir de **SQLGetDiagRec**:  
+ Étant donné que le pilote de passerelle est le composant qui interagit avec le gestionnaire de pilotes, il utilise le message de diagnostic précédent pour formater et retourner les valeurs suivantes à partir de **SQLGetDiagRec**:  
   
 ```  
 SQLSTATE:         "42S02"  

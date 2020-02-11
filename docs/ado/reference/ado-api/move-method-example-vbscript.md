@@ -15,20 +15,20 @@ ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d2075987e8c3faae9003b0edc4010fe7e4cedb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918162"
 ---
 # <a name="move-method-example-vbscript"></a>Move, exemple de méthode (VBScript)
-Cet exemple utilise le [déplacer](../../../ado/reference/ado-api/move-method-ado.md) méthode pour positionner le pointeur d’enregistrement, basée sur l’entrée d’utilisateur.  
+Cet exemple utilise la méthode [Move](../../../ado/reference/ado-api/move-method-ado.md) pour positionner le pointeur d’enregistrement, en fonction de l’entrée utilisateur.  
   
- Utilisez l’exemple suivant dans une Page ASP (Active Server). Pour afficher cet exemple entièrement fonctionnel, vous devez disposer les données source AdvWorks.mdb (installé avec le Kit de développement), situé dans C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb ou modifier le chemin d’accès dans l’exemple de code afin de refléter l’emplacement réel de ce fichier. Il s’agit d’un fichier de base de données Microsoft Access.  
+ Utilisez l’exemple suivant dans une page de Active Server (ASP). Pour afficher cet exemple entièrement fonctionnel, vous devez disposer de la source de données AdvWorks. mdb (installée avec le kit de développement logiciel (SDK)) située dans C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb ou modifier le chemin d’accès dans l’exemple de code pour refléter emplacement réel de ce fichier. Il s’agit d’un fichier de base de données Microsoft Access.  
   
- Utilisez **trouver** pour localiser le fichier Adovbs.inc et placez-le dans le répertoire que vous prévoyez d’utiliser. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le en tant que **MoveVBS.asp**. Vous pouvez afficher le résultat dans n’importe quel navigateur.  
+ Utilisez **Find** pour localiser le fichier adovbs. Inc et placez-le dans le répertoire que vous prévoyez d’utiliser. Coupez et collez le code suivant dans le bloc-notes ou dans un autre éditeur de texte, puis enregistrez-le en tant que **MoveVBS. asp**. Vous pouvez afficher le résultat dans n’importe quel navigateur.  
   
- Essayez d’entrer une lettre ou un type non entier pour afficher le travail de gestion des erreurs.  
+ Essayez d’entrer une lettre ou un nombre entier pour voir le travail de gestion des erreurs.  
   
 ```  
 <!-- BeginMoveVBS -->  

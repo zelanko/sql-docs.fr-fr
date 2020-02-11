@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d22c8c22170ecef301eacd553f15c16091c9a6e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105044"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Rapports, parties de rapports et définitions de rapports (Générateur de rapports et SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise un certain nombre de termes pour décrire un rapport dans différents États, notamment la définition initiale, le rapport publié et le rapport affiché tel qu’il apparaît à l’utilisateur.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]utilise un certain nombre de termes pour décrire un rapport dans différents États, notamment la définition initiale, le rapport publié et le rapport affiché tel qu’il apparaît à l’utilisateur.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -60,12 +60,12 @@ ms.locfileid: "66105044"
   
 -   Abonnez-vous à un rapport dont la remise est effectuée, au format de sortie que vous indiquez, dans une boîte de réception de messagerie électronique ou dans un partage de fichiers.  
   
- Abonnez-vous à un rapport, dont la remise est effectuée, au format de sortie que vous indiquez, dans une boîte de réception de messagerie électronique ou dans un partage de fichiers. Le format de rendu par défaut est HTML 4.0 pour les rapports du Générateur de rapports. Outre le format HTML, les rapports peuvent être générés dans divers formats de sortie, notamment Excel, Word, XML, PDF, TIFF et CSV. Tout comme les rapports publiés, les rapports rendus ne peuvent être ni modifiés ni réenregistrés sur un serveur de rapports. Pour plus d’informations, consultez [exportation des rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
+ Abonnez-vous à un rapport, dont la remise est effectuée, au format de sortie que vous indiquez, dans une boîte de réception de messagerie électronique ou dans un partage de fichiers. Le format de rendu par défaut est HTML 4.0 pour les rapports du Générateur de rapports. Outre le format HTML, les rapports peuvent être générés dans divers formats de sortie, notamment Excel, Word, XML, PDF, TIFF et CSV. Tout comme les rapports publiés, les rapports rendus ne peuvent être ni modifiés ni réenregistrés sur un serveur de rapports. Pour plus d’informations, consultez [exportation de rapports &#40;générateur de rapports et&#41;SSRS ](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts de création de rapport &#40;Générateur de rapports et SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
- [Générateur de rapports dans SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
- [Installer, désinstaller et prise en charge du Générateur de rapports](../install-uninstall-and-report-builder-support.md)   
+ [Concepts de création de rapports &#40;Générateur de rapports et SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Générateur de rapports SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
+ [Installer, désinstaller et Générateur de rapports la prise en charge](../install-uninstall-and-report-builder-support.md)   
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportation de rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   

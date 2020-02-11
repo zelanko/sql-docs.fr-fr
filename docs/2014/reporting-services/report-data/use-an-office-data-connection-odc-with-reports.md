@@ -1,5 +1,5 @@
 ---
-title: Utiliser une connexion de données Office (.odc) avec les rapports (Reporting Services en Mode intégré SharePoint) | Microsoft Docs
+title: Utiliser une connexion de données Office (. odc) avec les rapports (Reporting Services en mode intégré SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 983f60396f48e488b20e25f18751f615ded799ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106958"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>Utiliser une connexion de données Office (.odc) avec les rapports (Reporting Services en mode intégré SharePoint)
-  Pour certains scénarios, vous pouvez utiliser un fichier .odc (Office Data Connection) existant pour fournir des informations de connexion à un rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Un fichier .odc peut être utilisé à la place d’un fichier .rsds quand vous créez une source de données partagée. Le serveur de rapports utilise le fichier .odc de la même manière qu'un fichier .rsds ; il le lit pour obtenir le type de sources de données, une chaîne de connexion et les informations d'identification.  
+  Pour certains scénarios, vous pouvez utiliser un fichier .odc (Office Data Connection) existant pour fournir des informations de connexion à un rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Un fichier .odc peut être utilisé à la place d’un fichier .rsds quand vous créez une source de données partagée. Le serveur de rapports utilise le fichier .odc de la même manière qu'un fichier .rsds ; il le lit pour obtenir le type de sources de données, une chaîne de connexion et les informations d'identification.  
   
  Tous les fichiers .odc ne peuvent pas être utilisés avec un rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . L'extension pour le traitement des données et les caractéristiques du rapport et du fichier .odc déterminent si un fichier .odc peut être utilisé :  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66106958"
   
 4.  Sélectionnez **Fournisseur Microsoft OLE DB pour SQL Server**, puis cliquez sur **Suivant**.  
   
-5.  Entrez le nom du serveur (par défaut, il s'agit du nom réseau de l'ordinateur) et un compte d'utilisateur disposant d'autorisations valides sur la connexion et la base de données. Cliquer sur **Suivant**.  
+5.  Entrez le nom du serveur (par défaut, il s'agit du nom réseau de l'ordinateur) et un compte d'utilisateur disposant d'autorisations valides sur la connexion et la base de données. Cliquez sur **Suivant**.  
   
 6.  Sélectionnez une base de données, puis cliquez sur **OK** pour fermer la boîte de dialogue **Liaison de données** .  
   
@@ -92,7 +92,7 @@ ms.locfileid: "66106958"
   
 10. Si le rapport utilise des informations de source de données personnalisées, cliquez sur **Partagé**.  
   
-11. Dans **Lien de source de données**, cliquez sur le bouton Parcourir (**...**).  
+11. Dans **Lien de source de données**, cliquez sur le bouton Parcourir ( **...** ).  
   
 12. Sélectionnez le fichier .odc que vous venez de télécharger.  
   

@@ -14,23 +14,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 36def4705f6b2be9d5e1828f920ae41a51477272
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108086"
 ---
 # <a name="pdf-device-information-settings"></a>Paramètres d'informations de périphérique PDF
   Le tableau suivant répertorie les paramètres d'informations de périphérique qui permettent un rendu des rapports au format PDF.  
   
-|Paramètre|Value|  
+|Paramètre|Valeur|  
 |-------------|-----------|  
 |**Colonnes**|Nombre de colonnes à définir pour le rapport. Cette valeur remplace les paramètres d'origine du rapport.|  
 |**ColumnSpacing**|Espacement entre les colonnes à définir pour le rapport. Cette valeur remplace les paramètres d'origine du rapport.|  
 |**DpiX**|Résolution du périphérique de sortie sur l'axe x.|  
 |**DpiY**|Résolution du périphérique de sortie sur l'axe y.|  
 |**EndPage**|Dernière page du rapport à restituer. La valeur par défaut correspond à la valeur définie pour `StartPage`.|  
-|`HumanReadablePDF`|Indique si le PDF doit être compressé, ce qui rend la source plus lisible. La valeur par défaut est `false.`|  
+|`HumanReadablePDF`|Indique si le PDF doit être compressé, ce qui rend la source plus lisible. La valeur par défaut est `false.`.|  
 |**MarginBottom**|Valeur de marge inférieure, exprimée en pouces, à définir pour le rapport. Vous devez saisir un entier ou un nombre à virgule, puis l’abréviation « in » (par exemple, 1in). Cette valeur remplace les paramètres d'origine du rapport.|  
 |**MarginLeft**|Valeur de marge de gauche, exprimée en pouces, à définir pour le rapport. Vous devez saisir un entier ou un nombre à virgule, puis l’abréviation « in » (par exemple, 1in). Cette valeur remplace les paramètres d'origine du rapport.|  
 |**MarginRight**|Valeur de marge de droite, exprimée en pouces, à définir pour le rapport. Vous devez saisir un entier ou un nombre à virgule, puis l’abréviation « in » (par exemple, 1in). Cette valeur remplace les paramètres d'origine du rapport.|  
@@ -41,7 +41,7 @@ ms.locfileid: "66108086"
   
 ## <a name="see-also"></a>Voir aussi  
  [Transmission de paramètres d'informations de périphérique aux extensions de rendu](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personnaliser les paramètres d'extension de rendu dans RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Personnaliser les paramètres d’extension de rendu dans RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Informations techniques de référence &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

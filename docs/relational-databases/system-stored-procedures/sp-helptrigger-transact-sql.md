@@ -19,18 +19,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1e6244443fc1f6ba7d83376226fedd56563e0d39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68048219"
 ---
-# <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
+# <a name="sp_helptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne le ou les types de déclencheurs DML définis sur la table spécifiée de la base de données actuelle. Impossible d’utiliser sp_helptrigger avec des déclencheurs DDL. Requête la [procédures stockées système](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) vue de catalogue à la place.  
+  Retourne le ou les types de déclencheurs DML définis sur la table spécifiée de la base de données actuelle. sp_helptrigger ne peut pas être utilisé avec des déclencheurs DDL. Interrogez plutôt l’affichage catalogue des [procédures stockées système](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) .  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,17 +41,17 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @tabname = ] 'table'` Est le nom de la table dans la base de données en cours pour lequel retourner des informations sur le déclencheur. *table* est **nvarchar(776)** , sans valeur par défaut.  
+`[ @tabname = ] 'table'`Nom de la table dans la base de données active pour laquelle les informations de déclencheur doivent être retournées. *table* est de type **nvarchar (776)**, sans valeur par défaut.  
   
-`[ @triggertype = ] 'type'` Est le type de déclencheur DML pour retourner des informations. *type* est **char (6)** , avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @triggertype = ] 'type'`Type du déclencheur DML pour lequel des informations doivent être retournées. le *type* est **char (6)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**DELETE**|Renvoie des informations sur le déclencheur DELETE.|  
 |**INSERT**|Renvoie des informations sur le déclencheur INSERT.|  
 |**UPDATE**|Renvoie des informations sur le déclencheur UPDATE.|  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -62,14 +62,14 @@ sp_helptrigger [ @tabname = ] 'table'
 |**trigger_name**|**sysname**|Nom du déclencheur.|  
 |**trigger_owner**|**sysname**|Nom du propriétaire de la table pour laquelle le déclencheur est défini.|  
 |**isupdate**|**int**|1 = déclencheur UPDATE<br /><br /> 0 = n'est pas un déclencheur UPDATE|  
-|**isdelete**|**Int**|1 = déclencheur DELETE<br /><br /> 0 = n'est pas un déclencheur DELETE|  
+|**isdelete**|**int**|1 = déclencheur DELETE<br /><br /> 0 = n'est pas un déclencheur DELETE|  
 |**isinsert**|**int**|1 = déclencheur INSERT<br /><br /> 0 = n'est pas un déclencheur INSERT|  
-|**isafter**|**Int**|1 = déclencheur AFTER<br /><br /> 0 = n'est pas un déclencheur AFTER|  
-|**isinsteadof**|**Int**|1 = déclencheur INSTEAD OF<br /><br /> 0 = n'est pas un déclencheur INSTEAD OF|  
+|**isafter**|**int**|1 = déclencheur AFTER<br /><br /> 0 = n'est pas un déclencheur AFTER|  
+|**isinsteadof**|**int**|1 = déclencheur INSTEAD OF<br /><br /> 0 = n'est pas un déclencheur INSTEAD OF|  
 |**trigger_schema**|**sysname**|Nom du schéma auquel le déclencheur appartient.|  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md) autorisation sur la table.  
+ Nécessite l’autorisation de configuration de la [visibilité des métadonnées](../../relational-databases/security/metadata-visibility-configuration.md) sur la table.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant exécute `sp_helptrigger` pour produire des informations sur le ou les déclencheurs de la table `Person.Person`.  
@@ -81,7 +81,7 @@ EXEC sp_helptrigger 'Person.Person';
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées du moteur de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

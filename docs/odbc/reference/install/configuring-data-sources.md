@@ -1,5 +1,5 @@
 ---
-title: Configuration des Sources de données | Microsoft Docs
+title: Configuration des sources de données | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: f11985c2-c054-4ab4-840e-aca4c585c9d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa845e44e2f8999ed4e103583acb0536e2aca096
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068620"
 ---
 # <a name="configuring-data-sources"></a>Configuration de sources de données
-Informations sur les sources de données sont stockées dans le Registre système. Les utilisateurs modifier les informations de source de données via un programme d’administration. Cela peut être l’administrateur ODBC, l’appareil ODBC le panneau de configuration ou un programme d’administration écrit par un développeur d’application ou un pilote.  
+Les informations sur les sources de données sont stockées dans le registre système. Les utilisateurs modifient les informations de source de données par le biais d’un programme d’administration. Il peut s’agir de l’administrateur ODBC, du périphérique du panneau de configuration ODBC ou d’un programme d’administration écrit par un développeur d’applications ou de pilotes.  
   
- Vous pouvez utiliser les commandes PowerShell pour modifier des sources de données. Pour plus d’informations sur ces commandes PowerShell, consultez [commandes PowerShell de Windows Data Access composants](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
+ Vous pouvez utiliser des commandes PowerShell pour modifier des sources de données. Pour plus d’informations sur ces commandes PowerShell, consultez [Windows Data Access Components PowerShell Commands](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
   
 > [!NOTE]  
->  Cette section est spécifique aux plateformes de Microsoft Windows®. Configuration des sources de données sur d’autres plates-formes est spécifique à la plateforme.  
+>  Cette section est spécifique aux plates-formes Microsoft Windows®. La façon dont les sources de données sont configurées sur d’autres plateformes est spécifique à la plateforme.  
   
- Cette section contient les rubriques suivantes :  
+ Cette section couvre les rubriques suivantes :  
   
 -   [Composants de configuration](../../../odbc/reference/install/configuration-components.md)

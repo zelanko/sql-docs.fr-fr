@@ -1,5 +1,5 @@
 ---
-title: En général les commandes Shape | Microsoft Docs
+title: Mettre en forme des commandes en général | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,44 +14,44 @@ ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 09fec8bd07d036fd6a93b8f6bcb54a51a68150fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924177"
 ---
 # <a name="shape-commands-in-general"></a>Généralités sur les commandes SHAPE
-Mise en forme des données définit les colonnes d’une forme **Recordset**, les relations entre les entités représentées par les colonnes et la façon dont le **Recordset** est rempli avec des données.  
+La mise en forme des données définit les colonnes d’un **jeu d’enregistrements**mis en forme, les relations entre les entités représentées par les colonnes et la manière dont le **Recordset** est rempli avec les données.  
   
- Une forme **Recordset** peut se composer des types de colonnes suivants.  
+ Un **Recordset** mis en forme peut être constitué des types de colonnes suivants.  
   
 |Type de colonne|Description|  
 |-----------------|-----------------|  
-|data|Champs à partir d’un **Recordset** retournées par une commande de requête à un fournisseur de données, table, précédemment en forme ou **Recordset**.|  
-|Chapitre|Une référence à un autre **Recordset**, appelée un *chapitre*. Colonnes de chapitres rendent possible de définir un *parent-enfant* relation où la *parent* est la **Recordset** qui contient la colonne de chapitre et la *enfant* est la **Recordset** représenté par le chapitre.|  
-|agrégat|La valeur de la colonne est dérivée en exécutant un *fonction d’agrégation* sur toutes les lignes ou une colonne de toutes les lignes d’un enfant **Recordset**. (Consultez les fonctions d’agrégation dans la rubrique suivante, [fonctions d’agrégation, fonction CALC et le mot clé NEW](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md).)|  
-|expression calculée|La valeur de la colonne est obtenue par le calcul d’une expression Visual Basic pour Applications sur les colonnes dans la même ligne de la **Recordset**. L’expression est l’argument de la fonction CALC. (Consultez Expression calculée dans la rubrique suivante, [fonctions d’agrégation, fonction CALC et le mot clé NEW](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md) et dans [Visual Basic pour Applications Functions](../../../ado/guide/data/visual-basic-for-applications-functions.md).)|  
-|new|Champs vides, fabriqués, qui peuvent être remplis avec des données à une date ultérieure. La colonne est définie avec le mot clé NEW. (Consultez le nouveau mot clé dans la rubrique suivante, [fonctions d’agrégation, fonction CALC et le mot clé NEW](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md).)|  
+|data|Les champs d’un **jeu d’enregistrements** retournés par une commande de requête à un fournisseur de données, à une table ou à un **jeu d’enregistrements**précédemment mis en forme.|  
+|chapitre|Référence à un autre **Recordset**, appelée *chapitre*. Les colonnes de chapitre permettent de définir une relation *parent-enfant* où le *parent* est le **Recordset** qui contient la colonne de chapitre et l' *enfant* est le **jeu d’enregistrements** représenté par le chapitre.|  
+|aggregate|La valeur de la colonne est dérivée de l’exécution d’une *fonction d’agrégation* sur toutes les lignes ou une colonne de toutes les lignes d’un **jeu d’enregistrements**enfant. (Pour plus d’informations, consultez fonctions d’agrégation dans la rubrique suivante, [fonctions d’agrégation, fonction Calc et mot clé New](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md).)|  
+|expression calculée|La valeur de la colonne est dérivée du calcul d’une expression Visual Basic pour Applications sur les colonnes de la même ligne du **Recordset**. L’expression est l’argument de la fonction CALC. (Voir l’expression calculée dans la rubrique suivante, [fonctions d’agrégation, fonction Calc et le mot clé New](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md) et dans les [fonctions Visual Basic pour applications](../../../ado/guide/data/visual-basic-for-applications-functions.md).)|  
+|new|Champs vides, fabriqués, qui peuvent être remplis avec des données ultérieurement. La colonne est définie avec le mot clé NEW. (Consultez nouveau mot clé dans la rubrique suivante, [fonctions d’agrégation, fonction Calc et mot clé New](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md).)|  
   
- La commande shape peut contenir une clause qui spécifie une commande de requête à un fournisseur de données sous-jacent qui retournera un **Recordset** objet. Syntaxe de la requête dépend de la configuration requise du fournisseur de données sous-jacent. Il s’agit généralement de SQL, bien qu’ADO ne nécessite pas l’utilisation de n’importe quel langage de requête spécifique.  
+ Une commande SHAPE peut contenir une clause qui spécifie une commande de requête à un fournisseur de données sous-jacent qui retournera un objet **Recordset** . La syntaxe de la requête dépend des spécifications du fournisseur de données sous-jacent. Il s’agit généralement de SQL, bien qu’ADO ne nécessite pas l’utilisation d’un langage de requête particulier.  
   
- Commandes Shape peuvent être édités par **Recordset** objets ou en définissant le [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propriété de la [commande](../../../ado/reference/ado-api/command-object-ado.md) objet, puis en appelant le [Execute ](../../../ado/reference/ado-api/execute-method-ado-command.md) (méthode).  
+ Les commandes Shape peuvent être émises par des objets **Recordset** ou en définissant la propriété [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) de l’objet [Command](../../../ado/reference/ado-api/command-object-ado.md) , puis en appelant la méthode [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) .  
   
- Vous pouvez utiliser une clause SQL JOIN pour lier les deux tables ; Toutefois, une liste hiérarchique **Recordset** peut représenter les informations plus efficacement. Chaque ligne d’un **Recordset** créé par une jointure d’informations se répète une des tables de façon redondante. Une liste hiérarchique **Recordset** n’a qu’un seul parent **Recordset** pour chacun des enfants plusieurs **Recordset** objets.  
+ Vous pouvez utiliser une clause JOIN SQL pour lier deux tables ; Toutefois, un **jeu d’enregistrements** hiérarchique peut représenter les informations plus efficacement. Chaque ligne d’un **jeu d’enregistrements** créé par une jointure répète des informations de façon redondante à partir de l’une des tables. Un **jeu d’enregistrements** hiérarchique n’a qu’un seul **jeu d’enregistrements** parent pour chacun des objets **Recordset** enfants multiples.  
   
- Commandes Shape peuvent être imbriquées. Autrement dit, le *parent-command* ou *commande enfant* ne peut être lui-même une autre commande de forme.  
+ Les commandes Shape peuvent être imbriquées. Autrement dit, la commande *parente* ou la *commande enfant* peut elle-même être une autre commande Shape.  
   
- Le fournisseur shape retourne toujours un curseur client, même lorsque l’utilisateur spécifie un emplacement de curseur **adUseServer**.  
+ Le fournisseur Shape retourne toujours un curseur client, même lorsque l’utilisateur spécifie un emplacement de curseur **adUseServer**.  
   
- Vous pouvez accéder à la **Recordset** composants de la forme **Recordset** par programmation ou via un contrôle visuel approprié.  
+ Vous pouvez accéder aux composants du **Recordset** de l' **objet Recordset** mis en forme par programmation ou par le biais d’un contrôle visuel approprié.  
   
- Microsoft fournit un outil visuel qui génère des commandes shape (voir la [données environnement concepteur](https://go.microsoft.com/fwlink/?LinkId=5689) dans la documentation de Visual Basic 6) et une autre qui affiche des curseurs hiérarchiques (voir « à l’aide de la Microsoft hiérarchique Contrôle FlexGrid » dans la documentation de Visual Basic 6).  
+ Microsoft fournit un outil visuel qui génère des commandes de forme (voir le [Concepteur d’environnement de données](https://go.microsoft.com/fwlink/?LinkId=5689) dans la documentation Visual Basic 6) et un autre qui affiche des curseurs hiérarchiques (consultez « Utilisation du contrôle Microsoft Hierarchical FlexGrid » dans la documentation de Visual Basic 6).  
   
- Pour plus d’informations sur la navigation dans une liste hiérarchique **Recordset**, consultez [accès aux lignes d’un Recordset hiérarchique](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
+ Pour plus d’informations sur la navigation dans un **jeu d’enregistrements**hiérarchique, consultez [accès aux lignes d’un jeu d’enregistrements hiérarchique](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
   
- Pour obtenir des informations détaillées sur les commandes de forme correcte, consultez [grammaire formelle de forme](../../../ado/guide/data/formal-shape-grammar.md).  
+ Pour obtenir des informations précises sur les commandes de forme syntaxiquement correctes, consultez [grammaire de forme formelle](../../../ado/guide/data/formal-shape-grammar.md).  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Fonctions d’agrégation, fonction CALC et mot clé NEW](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)  
   

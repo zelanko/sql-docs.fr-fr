@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58abb892f737b3f5b3c707c9e26fd44249d8e54f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105474"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Pagination dans Reporting Services (Générateur de rapports et SSRS)
@@ -45,14 +45,14 @@ ms.locfileid: "66105474"
   
  La zone de la page physique qui reste après avoir alloué l'espace pour les marges, l'espacement des colonnes et l'en-tête et le pied de page de la page, est appelée la *zone de page utilisable*. Les marges sont appliquées uniquement lorsque vous affichez et imprimez des rapports dans les formats du convertisseur de saut de page manuel. L'image suivante montre la marge et la zone de page utilisable d'une page physique.  
   
- ![Page physique avec marges et zone utilisable](../media/rspagemargins.gif "Page physique avec marges et zone utilisable")  
+ ![Page physique avec marges et zone utilisable.](../media/rspagemargins.gif "Page physique avec marges et zone utilisable.")  
   
 ### <a name="newsletter-style-columns"></a>Colonnes de style bulletin d'informations  
  Votre rapport peut être divisé en colonnes, telles que les colonnes d'un journal, qui sont considérées comme des pages logiques affichées sur la même page physique. Elles sont organisées de gauche à droite, de haut en bas et sont séparées par un espace vide entre chaque colonne. Si le rapport est divisé en plusieurs colonnes, chaque page physique est divisée verticalement en colonnes, chacune d'entre elles étant considérée comme une page logique. Par exemple, vous avez deux colonnes sur une page physique. Le contenu de votre rapport remplit la première colonne, puis la deuxième colonne. Si le rapport ne s'ajuste pas entièrement dans les deux premières colonnes, le rapport remplit la première colonne, puis la deuxième colonne de la page suivante. Les colonnes continuent à être remplies, de gauche à droite, de haut en bas jusqu'à ce que tous les éléments du rapport soient affichés. Si vous spécifiez des tailles de colonne qui équivalent à une largeur horizontale ou verticale de la page égale à zéro, l'espacement entre les colonnes prend la valeur par défaut zéro.  
   
  Les colonnes sont spécifiées à l’aide du volet **Propriétés de rapport** , de la boîte de dialogue **Mise en page** ou en modifiant les propriétés TopMargin, BottomMargin, LeftMargin et RightMargin dans le volet **Propriétés** . Si vous souhaitez utiliser une taille de marge qui n'est pas définie, vous pouvez la spécifier en utilisant les paramètres d'informations de périphérique pour le convertisseur spécifique que vous utilisez pour exporter le rapport. Les colonnes sont appliquées uniquement lorsque vous affichez et imprimez des rapports aux formats PDF ou Image. L'image suivante montre la zone de page utilisable d'une page qui contient des colonnes.  
   
- ![Page physique avec colonnes illustrées](../media/rspagecolumns.gif "Page physique avec colonnes illustrées")  
+ ![Page physique avec colonnes illustrées.](../media/rspagecolumns.gif "Page physique avec colonnes illustrées.")  
   
 ## <a name="page-breaks-and-page-names"></a>Sauts de page et noms de pages  
  Un rapport peut être plus lisible et ses données plus faciles à auditer et exporter lorsque les pages du rapport ont un nom. Reporting Services fournit des propriétés pour les rapports et régions de données de tableau matriciel (table, matrice et liste), groupes et rectangles dans le rapport pour contrôler la pagination, réinitialiser les numéros de page et fournir de nouveaux noms de pages de rapport sur les sauts de page. Ces fonctionnalités peuvent améliorer les rapports indépendamment du format dans lequel les rapports sont rendus, mais sont particulièrement utiles lors de l'exportation de rapports vers les classeurs Excel.  

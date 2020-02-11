@@ -1,5 +1,5 @@
 ---
-title: Outils de calcul (onglet des indicateurs de performance clés, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Outils de calcul (onglet indicateurs de performance clés, concepteur de cube) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ecd16965c81ccb091d70320bd91c56112d3c15a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088271"
 ---
 # <a name="calculation-tools-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Outils de calcul (onglet Indicateurs de performance clés, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -39,7 +39,7 @@ ms.locfileid: "66088271"
 > [!NOTE]  
 >  En mode projet, la boîte de dialogue **Outils de calcul** lit les informations de cette option dans un fichier XML nommé MDXFunctions.xml inclus dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. En mode en ligne, les informations de cette option sont récupérées de l'ensemble de lignes du schéma MDSCHEMA_FUNCTIONS pour l'instance.  
   
- **Modèles**  
+ **Ceux**  
  Affiche les modèles prédéfinis disponibles pour les indicateurs de performance clés (KPI).  
   
  Faites glisser un élément sélectionné dans le volet **Éditeur de formulaire d'indicateur de performance clé** pour inclure la syntaxe MDX de cet élément à l'emplacement sélectionné dans le volet.  
@@ -47,7 +47,7 @@ ms.locfileid: "66088271"
 ## <a name="context-menu"></a>Menu contextuel  
  Le menu contextuel propose les options suivantes. Vous y accédez en cliquant avec le bouton droit sur un élément du volet **Outils de calcul** :  
   
- **Copier**  
+ **Copy**  
  Sélectionnez cette option pour copier l'élément sélectionné dans **Métadonnées** ou **Fonctions** dans le Presse-papiers.  
   
 > [!NOTE]  
@@ -65,18 +65,18 @@ ms.locfileid: "66088271"
 > [!NOTE]  
 >  Cette option est activée uniquement si le niveau d'un attribut est sélectionné dans **Métadonnées**.  
   
- **Ajouter un modèle**  
+ **Ajouter un Modèle**  
  Sélectionnez un nouveau membre calculé, un ensemble nommé ou un script de commandes d’après le modèle sélectionné vers le script du cube et affichez l’ **Éditeur de formulaire d’indicateur de performance clé** en mode formulaire.  
   
 > [!NOTE]  
 >  Cette option s'affiche uniquement si **Métadonnées** est sélectionné.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Indicateurs de performance clés &#40;Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
- [Barre d’outils &#40;onglet des indicateurs de performance clés, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Organisateur d’indicateur de performance clé &#40;onglet des indicateurs de performance clés, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](kpi-organizer-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Éditeur de formulaire d’indicateur de performance clé &#40;onglet des indicateurs de performance clés, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Navigateur d’indicateur de performance clé &#40;onglet des indicateurs de performance clés, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)  
+ [Concepteur de cube &#40;Analysis Services-données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Indicateurs de performance clés &#40;&#41; &#40;concepteur de cube Analysis Services-données multidimensionnelles&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
+ [Barre d’outils &#40;onglet indicateurs de performance clés, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Organisateur d’indicateur de performance clé &#40;onglet indicateurs de performance clés, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](kpi-organizer-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Éditeur de formulaire d’indicateur de performance clé &#40;onglet indicateurs de performance clés, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Explorateur d’indicateurs de performance clés &#40;onglet indicateurs de performance clés, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)  
   
   

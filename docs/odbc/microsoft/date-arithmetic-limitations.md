@@ -1,5 +1,5 @@
 ---
-title: Limitations de l’arithmétique de date | Microsoft Docs
+title: Limitations de l’arithmétique des dates | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,11 +14,11 @@ ms.assetid: 4ae40066-5911-4d32-937a-040bacc853ec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1c15a80ec72e17e1c290a4cf5832b96ec34c3cc7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68081883"
 ---
 # <a name="date-arithmetic-limitations"></a>Limitations de l’arithmétique des dates
-Arithmétique de date n’est pas pris en charge pour la soustraction d’un type de données DATE à partir d’un type de données DATE.
+L’arithmétique de date n’est pas prise en charge pour soustraire un type de données DATE d’un type de données DATE.

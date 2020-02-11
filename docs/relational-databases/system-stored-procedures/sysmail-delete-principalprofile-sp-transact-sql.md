@@ -18,18 +18,18 @@ ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 86f9566ce86423939aff22fc37331c5c9db89904
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67909209"
 ---
-# <a name="sysmaildeleteprincipalprofilesp-transact-sql"></a>sysmail_delete_principalprofile_sp (Transact-SQL)
+# <a name="sysmail_delete_principalprofile_sp-transact-sql"></a>sysmail_delete_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime l'autorisation d'utilisation d'un profil de messagerie de base de données public ou privé pour un utilisateur de base de données ou un rôle de base de données.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,29 +40,29 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @principal_id = ] principal_id` Est l’ID de l’utilisateur de base de données ou d’un rôle dans le **msdb** base de données pour l’association à supprimer. *principal_id* est **int**, avec NULL comme valeur par défaut. Pour rendre un profil public en profil privé, fournissez l’identificateur principal **0** ou le nom principal **'public'** . Soit *principal_id* ou *principal_name* doit être spécifié.  
+`[ @principal_id = ] principal_id`ID de l’utilisateur ou du rôle de base de données dans la base de données **msdb** pour l’Association à supprimer. *principal_id* est de **type int**, avec NULL comme valeur par défaut. Pour créer un profil public dans un profil privé, indiquez l’ID principal **0** ou le nom principal **« public »**. *Principal_id* ou *principal_name* doivent être spécifiés.  
   
-`[ @principal_name = ] 'principal_name'` Est le nom de l’utilisateur de base de données ou d’un rôle dans le **msdb** base de données pour l’association à supprimer. *principal_name* est **sysname**, avec NULL comme valeur par défaut. Pour rendre un profil public en profil privé, fournissez l’identificateur principal **0** ou le nom principal **'public'** . Soit *principal_id* ou *principal_name* doit être spécifié.  
+`[ @principal_name = ] 'principal_name'`Nom de l’utilisateur ou du rôle de base de données dans la base de données **msdb** pour l’Association à supprimer. *principal_name* est de **type sysname**, avec NULL comme valeur par défaut. Pour créer un profil public dans un profil privé, indiquez l’ID principal **0** ou le nom principal **« public »**. *Principal_id* ou *principal_name* doivent être spécifiés.  
   
-`[ @profile_id = ] profile_id` Est l’ID du profil pour l’association à supprimer. *profile_id* est **int**, avec NULL comme valeur par défaut. Soit *profile_id* ou *profile_name* doit être spécifié.  
+`[ @profile_id = ] profile_id`ID du profil pour l’Association à supprimer. *profile_id* est de **type int**, avec NULL comme valeur par défaut. *Profile_id* ou *profile_name* doivent être spécifiés.  
   
-`[ @profile_name = ] 'profile_name'` Est le nom du profil pour l’association à supprimer. *nom_profil* est **sysname**, avec NULL comme valeur par défaut. Soit *profile_id* ou *profile_name* doit être spécifié.  
+`[ @profile_name = ] 'profile_name'`Nom du profil pour l’Association à supprimer. *profile_name* est de **type sysname**, avec NULL comme valeur par défaut. *Profile_id* ou *profile_name* doivent être spécifiés.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- Pour rendre un profil public en profil privé, fournissez **'public'** pour le nom principal ou **0** pour l’id du principal.  
+ Pour créer un profil public dans un profil privé, indiquez **« public »** comme nom de principal ou **0** pour l’ID de principal.  
   
- Soyez prudent lorsque vous supprimez des autorisations pour le profil privé par défaut d'un utilisateur ou pour le profil public par défaut. Quand aucun profil par défaut n’est disponible, **sp_send_dbmail** exige que le nom d’un profil en tant qu’argument. Par conséquent, la suppression d’un profil par défaut peut entraîner les appels à **sp_send_dbmail** échec. Pour plus d’informations, consultez [sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).  
+ Soyez prudent lorsque vous supprimez des autorisations pour le profil privé par défaut d'un utilisateur ou pour le profil public par défaut. Quand aucun profil par défaut n’est disponible, **sp_send_dbmail** requiert le nom d’un profil comme argument. Par conséquent, la suppression d’un profil par défaut peut entraîner l’échec des appels à **sp_send_dbmail** . Pour plus d’informations, consultez [sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).  
   
- La procédure stockée **sysmail_delete_principalprofile_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
+ La procédure stockée **sysmail_delete_principalprofile_sp** se trouve dans la base de données **msdb** et appartient au schéma **dbo** . La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
 ## <a name="permissions"></a>Autorisations  
- Autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
+ Les autorisations d’exécution pour cette procédure sont octroyées par défaut aux membres du rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant illustre la suppression de l’association entre le profil **AdventureWorks Administrator** et la connexion **ApplicationUser** dans le **msdb** base de données.  
+ L’exemple suivant illustre la suppression de l’association entre le profil **administrateur AdventureWorks** et le **ApplicationUser** de connexion dans la base de données **msdb** .  
   
 ```  
 EXECUTE msdb.dbo.sysmail_delete_principalprofile_sp  
@@ -72,7 +72,7 @@ EXECUTE msdb.dbo.sysmail_delete_principalprofile_sp
   
 ## <a name="see-also"></a>Voir aussi  
  [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)   
- [Objets de Configuration de messagerie de base de données](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Procédures stockées de messagerie de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Objets de configuration Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Database Mail des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

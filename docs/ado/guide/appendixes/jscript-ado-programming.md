@@ -16,30 +16,30 @@ ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d07759405dc337667cc8971ce7795af428a0cfa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926805"
 ---
 # <a name="jscript-ado-programming"></a>Programmation ADO JScript
 ## <a name="creating-an-ado-project"></a>Création d’un projet ADO  
- Microsoft JScript ne prend pas en charge les bibliothèques de types, vous n’avez pas besoin de la référence ADO dans votre projet. Par conséquent, aucune fonctionnalité associée comme la saisie semi-automatique de ligne de commande n’est pris en charge. En outre, par défaut, les constantes énumérées ADO ne sont pas définis dans JScript.  
+ Microsoft JScript ne prend pas en charge les bibliothèques de types. vous n’avez donc pas besoin de référencer ADO dans votre projet. Par conséquent, aucune fonctionnalité associée, telle que l’exécution de la ligne de commande, n’est prise en charge. En outre, par défaut, les constantes énumérées ADO ne sont pas définies en JScript.  
   
- Toutefois, ADO comporte deux fichiers contenant les définitions suivantes à utiliser avec JScript :  
+ Toutefois, ADO vous fournit deux fichiers Include contenant les définitions suivantes à utiliser avec JScript :  
   
--   Pour l’utilisation de script côté serveur Adojavas.inc, qui est installé dans les dossiers de la bibliothèque ADO.  
+-   Pour les scripts côté serveur, utilisez Adojavas. Inc, qui est installé dans les dossiers de la bibliothèque ADO.  
   
--   Pour l’utilisation de script côté client Adcjavas.inc, qui est installé dans les dossiers de la bibliothèque ADO.  
+-   Pour les scripts côté client, utilisez Adcjavas. Inc, qui est installé dans les dossiers de la bibliothèque ADO.  
   
- Vous pouvez copier et coller des définitions de constantes à partir de ces fichiers dans vos pages ASP ou, si vous effectuez un script côté serveur, copiez le fichier Adojavas.inc dans un dossier sur votre site Web et y fait référence à partir de votre page ASP comme suit :  
+ Vous pouvez copier et coller des définitions constantes à partir de ces fichiers dans vos pages ASP, ou, si vous effectuez des scripts côté serveur, copier le fichier Adojavas. Inc dans un dossier sur votre site Web et le référencer à partir de votre page ASP comme suit :  
   
 ```javascript
 <!--#include File="adojavas.inc"-->  
 ```  
   
-## <a name="creating-ado-objects-in-jscript"></a>Création d’objets ADO dans JScript  
- Vous devez plutôt utiliser la **CreateObject** appel de fonction :  
+## <a name="creating-ado-objects-in-jscript"></a>Création d’objets ADO en JScript  
+ Vous devez à la place utiliser l’appel de fonction **CreateObject** :  
   
 ```javascript
 var Rs1;  
@@ -47,7 +47,7 @@ Rs1 = Server.CreateObject("ADODB.Recordset");
 ```  
   
 ## <a name="jscript-example"></a>Exemple JScript  
- Le code suivant est un exemple générique de programmation côté serveur en JScript dans un fichier de Active Server Page (ASP) qui ouvre un **Recordset** objet :  
+ Le code suivant est un exemple générique de programmation côté serveur JScript dans un fichier de page Active Server (ASP) qui ouvre un objet **Recordset** :  
   
 ```javascript
 <%  @LANGUAGE="JScript" %>  

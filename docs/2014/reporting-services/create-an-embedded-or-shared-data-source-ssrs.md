@@ -1,5 +1,5 @@
 ---
-title: Créer une Source de données incorporée ou partagée (SSRS) | Microsoft Docs
+title: Créer une source de données incorporée ou partagée (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -13,23 +13,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 088889518d88c5fd45f988fe03185e22f041b627
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109656"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>Créer une source de données incorporée ou partagée (SSRS)
-  Une source de données de rapport spécifie un nom et des informations de connexion. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] prend deux types de sources de données en charge : incorporée et partagée. Une source de données incorporée est définie dans une définition de rapport et utilisée uniquement par ce rapport. Une source de données partagée est définie sous la forme d'un élément distinct et peut être utilisée par plusieurs rapports. Pour plus d’informations, consultez [incorporé et connexions de données partagées ou les Sources de données &#40;Générateur de rapports et SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md).  
+  Une source de données de rapport spécifie un nom et des informations de connexion. 
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] prend deux types de sources de données en charge : incorporée et partagée. Une source de données incorporée est définie dans une définition de rapport et utilisée uniquement par ce rapport. Une source de données partagée est définie sous la forme d'un élément distinct et peut être utilisée par plusieurs rapports. Pour plus d’informations, consultez [connexions de données ou sources de données incorporées et partagées &#40;générateur de rapports et les&#41;SSRS ](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md).  
   
  Dans le Générateur de rapports, vous accédez au serveur de rapports ou au site SharePoint et sélectionnez les sources de données ou créez des sources de données incorporées. Vous ne pouvez pas créer de sources de données partagées dans le Générateur de rapports.  
   
- Dans le Concepteur de rapports, vous pouvez créer des sources de données partagées ou incorporées. Dans le volet données du rapport, commencez à créer une référence de source de données, puis sélectionnez le **New** option. Après avoir créé une référence de source de données, une nouvelle source de données partagée est automatiquement ajoutée à l'Explorateur de solutions dans le dossier Sources de données partagées.  
+ Dans le Concepteur de rapports, vous pouvez créer des sources de données partagées ou incorporées. Dans le volet des données de rapport, commencez par créer une référence de source de données, puis sélectionnez l’option **nouveau** . Après avoir créé une référence de source de données, une nouvelle source de données partagée est automatiquement ajoutée à l'Explorateur de solutions dans le dossier Sources de données partagées.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
- Vous pouvez également créer des sources de données partagées directement sur un serveur de rapports ou sur un site SharePoint. Pour plus d’informations, consultez [créer, supprimer ou modifier une Source de données partagée &#40;le Gestionnaire de rapports&#41; ](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md) ou [créer et gérer des Sources de données partagées &#40;Reporting Services en Mode intégré SharePoint&#41;](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md).  
+ Vous pouvez également créer des sources de données partagées directement sur un serveur de rapports ou sur un site SharePoint. Pour plus d’informations, consultez [créer, supprimer ou modifier une source de données partagée &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md) ou [créer et gérer des sources de données partagées &#40;Reporting Services en Mode intégré SharePoint&#41;](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md).  
   
 ### <a name="to-create-an-embedded-or-shared-data-source"></a>Pour créer une source de données incorporée ou partagée  
   
@@ -40,13 +41,13 @@ ms.locfileid: "66109656"
   
 2.  Dans la zone de texte **Nom** , tapez un nom pour la source de données ou acceptez la valeur par défaut. Le nom de la source de données est utilisé en interne dans le rapport. Par souci de clarté, il est recommandé que le nom de la source de données contienne le nom de la base de données spécifiée dans la chaîne de connexion.  
   
-3.  Pour une source de données incorporée, vérifiez que **connexion incorporée** est sélectionné.  
+3.  Pour une source de données incorporée, vérifiez que l’option **connexion incorporée** est sélectionnée.  
   
     1.  Dans la liste déroulante **Type** , sélectionnez un type de source de données ; par exemple, **Microsoft SQL Server** ou **OLE DB**.  
   
     2.  Spécifiez une chaîne de connexion à l'aide de l'une des méthodes suivantes :  
   
-    -   Tapez directement la chaîne de connexion dans la zone de texte **Chaîne de connexion** . Pour obtenir la liste des exemples de chaînes de connexion, consultez [des connexions de données, les Sources de données et les chaînes de connexion dans le Générateur de rapports](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md) ou [des connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+    -   Tapez directement la chaîne de connexion dans la zone de texte **Chaîne de connexion** . Pour obtenir la liste des exemples de chaînes de connexion, consultez [connexions de données, sources de données et chaînes de connexion dans générateur de rapports](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md) ou [connexions de données, sources de données et chaînes de connexion dans Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
     -   Cliquez sur le bouton d’expression (**fx)** pour créer une expression qui prend la valeur d’une chaîne de connexion. Dans la boîte de dialogue **Expression** , tapez l'expression dans le volet Expression. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -54,7 +55,7 @@ ms.locfileid: "66109656"
   
          Renseignez les champs de la boîte de dialogue **Propriétés de connexion** comme il convient pour le type de source de données. Les propriétés de connexion incluent le type de la source de données, son nom, ainsi que les informations d'identification à utiliser. Une fois que vous avez spécifié les valeurs dans cette boîte de dialogue, cliquez sur **Tester la connexion** pour vérifier que la source de données est disponible et que les informations d'identification indiquées sont correctes. Pour plus d’informations sur les types de source de données spécifiques, consultez les rubriques dans [Ajouter des données à partir de sources de données externes &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md).  
   
-4.  Pour une source de données partagée, vérifiez que **utiliser une référence de source de données partagée** est sélectionné.  
+4.  Pour une source de données partagée, vérifiez que l’option **utiliser une référence de source de données partagée** est sélectionnée.  
   
     1.  Cliquez sur **Nouveau**. Dans la boîte de dialogue de propriétés **Source de données partagée** , suivez les étapes 2 et 3 pour créer une source de données.  
   
@@ -76,18 +77,18 @@ ms.locfileid: "66109656"
   
 ### <a name="to-convert-an-embedded-data-source-to-a-shared-data-source-in-report-designer"></a>Pour convertir une source de données partagée en source de données incorporée dans le Concepteur de rapports  
   
--   Dans le volet données du rapport, avec le bouton droit de la source de données, puis sélectionnez **convertir en Source de données partagée**.  
+-   Dans le volet données du rapport, cliquez avec le bouton droit sur la source de données, puis cliquez sur **convertir en source de données partagée**.  
   
 ### <a name="to-convert-a-shared-data-source-to-an-embedded-data-source-in-report-builder"></a>Pour convertir une source de données partagée en source de données incorporée dans le Générateur de rapports  
   
--   Dans le volet données du rapport, avec le bouton droit de la source de données et ouvrez **propriétés Source de données**.  
+-   Dans le volet données du rapport, cliquez avec le bouton droit sur la source de données et ouvrez propriétés de la **source de données**.  
   
--   Cliquez sur **connexion incorporée** et terminer la création de la source de données incorporées comme décrit précédemment.  
+-   Cliquez sur **connexion incorporée** et terminez la création de la source de données incorporée comme décrit dans une procédure précédente.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Stocker des informations d’identification dans une source de données Reporting Services](report-data/store-credentials-in-a-reporting-services-data-source.md)   
+ [Stocker les informations d’identification dans une source de données Reporting Services](report-data/store-credentials-in-a-reporting-services-data-source.md)   
  [Connexions de données ou sources de données incorporées et partagées &#40;Générateur de rapports et SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
- [Convertir à partir d’une Source de données incorporée en source partagée &#40;Générateur de rapports et SSRS&#41;](report-data/convert-data-sources-report-builder-and-ssrs.md)   
+ [Conversion d’une source de données incorporée en &#40;partagé Générateur de rapports et SSRS&#41;](report-data/convert-data-sources-report-builder-and-ssrs.md)   
  [Lier un rapport ou un modèle à une source de données partagée &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [Configurer les propriétés de la source de données d’un rapport &#40;Gestionnaire de rapports&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)   
  [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  

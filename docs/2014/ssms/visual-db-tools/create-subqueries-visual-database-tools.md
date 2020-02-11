@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e68809c7551e3c6711fadd9973c472dcb4e90307
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270620"
 ---
 # <a name="create-subqueries-visual-database-tools"></a>Créer des sous-requêtes (Visual Database Tools)
@@ -61,7 +61,7 @@ ms.locfileid: "63270620"
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Prise en charge des Types de requêtes &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Types de requêtes pris en charge &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

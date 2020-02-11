@@ -1,5 +1,5 @@
 ---
-title: CREATE INDEX, instruction-Limitations | Microsoft Docs
+title: Limitations de l’instruction CREATe INDEX | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ ms.assetid: 832dcda1-e452-48e6-8adb-7fb33c4fb4ff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ddb695d996cdd40b7fde4087799e5c1ec84224c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68081933"
 ---
 # <a name="create-index-statement-limitations"></a>CREATE INDEX, instruction - limitations
-L’instruction CREATE INDEX n’est pas pris en charge pour les pilotes Microsoft Excel ou texte.  
+L’instruction CREATe INDEX n’est pas prise en charge pour Microsoft Excel ou les pilotes texte.  
   
- Un index peut être défini sur un maximum de 10 colonnes. Si plus de 10 colonnes sont incluses dans une instruction CREATE INDEX, l’index n’est pas reconnue et la table est traitée comme si aucun index ont été créés.  
+ Un index peut être défini sur un maximum de 10 colonnes. Si plus de 10 colonnes sont incluses dans une instruction CREATe INDEX, l’index n’est pas reconnu et la table est traitée comme si aucun index n’avait été créé.  
   
- Le pilote dBASE ne peut pas créer un index sur une colonne logique.  
+ Le pilote dBASE ne peut pas créer d’index sur une colonne logique.  
   
- Lorsque le pilote dBASE est utilisé, les temps de réponse sur les fichiers volumineux peuvent être améliorées en créant un index .mdx (ou .ndx) sur la colonne (champ) spécifié dans les clauses WHERE d’une instruction SELECT. Index .mdx existants seront automatiquement appliquées pour =, >, \<, > =, = < et entre les opérateurs dans une clause WHERE et les prédicats LIKE, ainsi que dans les prédicats de jointure.  
+ Lorsque le pilote dBASE est utilisé, vous pouvez améliorer le temps de réponse des fichiers volumineux en générant un index. MDX (ou. ndx) sur la colonne (champ) spécifiée dans les clauses WHERE d’une instruction SELECT. Les index. MDX existants seront automatiquement appliqués pour les opérateurs =, > \<,, >=, =< et between dans une clause WHERE, ainsi que pour les prédicats LIKE et dans les prédicats de jointure.  
   
- Lorsque le pilote dBASE est utilisé, l’index créé par une instruction CREATE UNIQUE INDEX n’est pas réellement non unique, et les valeurs en double peuvent être insérées dans la colonne indexée. Qu’un seul enregistrement à partir d’un jeu avec des valeurs de clés identiques peut être ajouté à l’index.  
+ Lorsque le pilote dBASE est utilisé, l’index créé par une instruction CREATe UNIQUE INDEX est en fait non unique et des valeurs dupliquées peuvent être insérées dans la colonne indexée. Un seul enregistrement d’un ensemble avec des valeurs de clé identiques peut être ajouté à l’index.  
   
- Lorsque le pilote Paradox est utilisé, un index unique doit être défini sur un sous-ensemble contigu de colonnes dans une table, y compris la première colonne. Une table ne peut pas être mis à jour par le pilote Paradox si un index unique n’est pas défini sur la table, ou si le pilote Paradox est utilisé sans l’implémentation du moteur de base de données Borland.
+ Lorsque le pilote Paradox est utilisé, un index unique doit être défini sur un sous-ensemble contigu des colonnes d’une table, y compris la première colonne. Une table ne peut pas être mise à jour par le pilote Paradox si un index unique n’est pas défini sur la table ou lorsque le pilote Paradox est utilisé sans l’implémentation du Moteur de base de données Borland.
