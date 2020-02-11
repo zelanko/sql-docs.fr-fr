@@ -1,5 +1,5 @@
 ---
-title: sys.schemas (Transact-SQL) | Microsoft Docs
+title: sys. schemas (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8f5a0707c599b70ec3c006b00eacb5f8c1a8a87b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018341"
 ---
-# <a name="schemas-catalog-views---sysschemas"></a>Affichages - catalogue de schémas sys.schemas
+# <a name="schemas-catalog-views---sysschemas"></a>Affichages catalogue de schémas-sys. schemas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Contient une ligne pour chaque schéma de base de données.  
@@ -37,14 +37,14 @@ ms.locfileid: "68018341"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Nom du schéma. Unique dans la base de données.|  
+|**nomme**|**sysname**|Nom du schéma. Unique dans la base de données.|  
 |**schema_id**|**int**|Identificateur du schéma. Unique dans la base de données.|  
-|**principal_id**|**Int**|Identificateur du principal qui possède ce schéma.|  
+|**principal_id**|**int**|Identificateur du principal qui possède ce schéma.|  
   
 ## <a name="remarks"></a>Notes  
-Schémas de base de données agissent comme des espaces de noms ou des conteneurs pour les objets, tels que des tables, vues, procédures et fonctions, qui se trouve dans le **sys.objects** vue de catalogue.  
+Les schémas de base de données jouent le rôle d’espaces de noms ou de conteneurs pour les objets, tels que les tables, les vues, les procédures et les fonctions, qui se trouvent dans l’affichage catalogue **sys. Objects** .  
 
-Chaque schéma a un propriétaire. Le propriétaire est une sécurité [principal](../../relational-databases/security/authentication-access/principals-database-engine.md).
+Chaque schéma a un propriétaire. Le propriétaire est un [principal](../../relational-databases/security/authentication-access/principals-database-engine.md)de sécurité.
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** . Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
@@ -56,6 +56,6 @@ Chaque schéma a un propriétaire. Le propriétaire est une sécurité [principa
 
 [Affichages catalogue de schémas &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/c516fb1c-b6ed-48ae-99c7-a78bc4336c8e)   
 
-[sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+[sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   

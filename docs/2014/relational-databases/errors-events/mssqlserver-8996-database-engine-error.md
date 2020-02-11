@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 41f92430eecb0eb06fbca18bbb552a2e85ce6069
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761839"
 ---
-# <a name="mssqlserver8996"></a>MSSQLSERVER_8996
+# <a name="mssqlserver_8996"></a>MSSQLSERVER_8996
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|8996|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|8996|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC3_IAM_PAGE_RANGE_IN_WRONG_FILEGROUP|  
 |Texte du message|La page IAM P_ID pour l'ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, ID d'unité d'allocation A_ID (type TYPE) contrôle les pages du groupe de fichiers FG_ID1, lesquelles doivent être dans le groupe de fichiers FG_ID2.|  

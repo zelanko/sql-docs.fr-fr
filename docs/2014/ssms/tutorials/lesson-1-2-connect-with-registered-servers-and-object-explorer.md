@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 374d75c18adc091eaf6a01ae1164a529a34accee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62636423"
 ---
 # <a name="connect-with-registered-servers-and-object-explorer"></a>Connexion avec le composant Serveurs inscrits et l'Explorateur d'objets
@@ -37,7 +37,7 @@ ms.locfileid: "62636423"
   
 5.  Dans la zone **Nom du serveur inscrit** , tapez [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-6.  Sur le **propriétés de connexion** sous l’onglet le **se connecter à la base de données** liste, sélectionnez  **\<parcourir le serveur... >** .  
+6.  Sous l’onglet **Propriétés de connexion** , dans la liste **se connecter à la base de données** , sélectionnez ** \<parcourir le serveur... >**.  
   
 7.  Dans la boîte de dialogue **Rechercher les bases de données** , cliquez sur **Oui**.  
   

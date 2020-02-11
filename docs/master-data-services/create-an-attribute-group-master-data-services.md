@@ -14,10 +14,10 @@ ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 534e8bed6596c9b15e05ec179ece3d37a64b15ac
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728441"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>Créer un groupe d'attributs (Master Data Services)
@@ -33,7 +33,7 @@ ms.locfileid: "73728441"
   
 -   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
--   Au moins un attribut doit exister. Pour plus d’informations, consultez [Create a Text Attribute &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md).  
+-   Au moins un attribut doit exister. Pour plus d’informations, consultez [Créer un attribut de texte &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md).  
   
 ### <a name="to-create-an-attribute-group"></a>Pour créer un groupe d'attributs  
   
@@ -67,16 +67,16 @@ ms.locfileid: "73728441"
   
 12. Cliquez sur **Enregistrer**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
   
 -   [Rendre un groupe d’attributs visible pour les utilisateurs &#40;Master Data Services&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Groupes d’attributs &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
  [Attributs &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
- [Modifier le nom d’un groupe d’attributs &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-group-name-master-data-services.md)   
+ [Modifiez le nom d’un groupe d’attributs &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-group-name-master-data-services.md)   
  [Supprimer un groupe d’attributs &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)   
- [Autorisations de feuille &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)   
+ [Autorisations feuille &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)   
    
   
   

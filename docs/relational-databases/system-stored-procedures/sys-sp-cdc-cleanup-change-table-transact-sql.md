@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_cleanup_change_table (Transact-SQL) | Microsoft Docs
+title: sys. sp_cdc_cleanup_change_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,10 +21,10 @@ ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 51c0af34fb3158cc5032ee9ef53abce22d8ecc3a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72909329"
 ---
 # <a name="syssp_cdc_cleanup_change_table-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "72909329"
 
   Supprime des lignes de la table de modifications dans la base de données actuelle en fonction de la valeur de *low_water_mark* spécifiée. Cette procédure stockée est fournie aux utilisateurs qui souhaitent gérer le processus du nettoyage de la table de modifications directement. Toutefois, soyez vigilant, car la procédure affecte tous les consommateurs des données de la table de modifications.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,34 +45,34 @@ sys.sp_cdc_cleanup_change_table
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [@capture_instance =] '*capture_instance*'  
+ [ @capture_instance = ] '*capture_instance*'  
  Est le nom de l'instance de capture associée à la table de modifications. *capture_instance* est de **type sysname**, sans valeur par défaut et ne peut pas avoir la valeur null.  
   
  *capture_instance* devez nommer une instance de capture qui existe dans la base de données actuelle.  
   
  [ @low_water_mark = ] *low_water_mark*  
- Numéro séquentiel dans le journal (LSN) qui doit être utilisé comme nouvelle limite inférieure pour l’instance de *capture*. *low_water_mark* est de **type Binary (10)** , sans valeur par défaut.  
+ Numéro séquentiel dans le journal (LSN) qui doit être utilisé comme nouvelle limite inférieure pour l’instance de *capture*. *low_water_mark* est de **type Binary (10)**, sans valeur par défaut.  
   
  Si la valeur n’est pas null, elle doit apparaître comme valeur start_lsn d’une entrée actuelle dans la table [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Si d'autres entrées dans cdc.lsn_time_mapping partagent la même heure de validation que l'entrée identifiée par la nouvelle borne inférieure, le plus petit numéro séquentiel dans le journal associé à ce groupe d'entrées est choisi comme borne inférieure.  
   
  Si la valeur est définie explicitement sur NULL, la limite *inférieure* actuelle de l' *instance de capture* est utilisée pour définir la limite supérieure pour l’opération de nettoyage.  
   
- [@threshold=] «*seuil de suppression*»  
+ [ @threshold= ] «*seuil de suppression*»  
  Est le nombre maximal d'entrées qui peuvent être supprimées à l'aide d'une instruction unique lors du nettoyage. *delete_threshold* est de type **bigint**, avec 5000 comme valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  sys.sp_cdc_cleanup_change_table effectue les opérations suivantes :  
   
-1.  Si le paramètre @low_water_mark n’a pas la valeur NULL, il définit la valeur de start_lsn pour l' *instance de capture* sur la nouvelle *limite inférieure*.  
+1.  Si le @low_water_mark paramètre n’est pas null, il définit la valeur de start_lsn pour l' *instance de capture* sur la nouvelle *limite inférieure*.  
   
     > [!NOTE]  
-    >  La nouvelle limite inférieure ne peut pas être la limite inférieure spécifiée dans l'appel de procédure stockée. Si d'autres entrées dans la table cdc.lsn_time_mapping partagent la même heure de validation, le plus petit start_lsn représenté dans le groupe d'entrées est sélectionné comme limite inférieure ajustée. Si le paramètre @low_water_mark a la valeur NULL ou si la limite inférieure actuelle est supérieure à la nouvelle limite inférieure, la valeur start_lsn de l’instance de capture reste inchangée.  
+    >  La nouvelle limite inférieure ne peut pas être la limite inférieure spécifiée dans l'appel de procédure stockée. Si d'autres entrées dans la table cdc.lsn_time_mapping partagent la même heure de validation, le plus petit start_lsn représenté dans le groupe d'entrées est sélectionné comme limite inférieure ajustée. Si le @low_water_mark paramètre est null ou si la limite inférieure actuelle est supérieure à la nouvelle limite inférieure, la valeur start_lsn de l’instance de capture reste inchangée.  
   
 2.  Les entrées de table de modifications avec des valeurs __$start_lsn inférieures à la limite inférieure sont ensuite supprimées. Le seuil de suppression est utilisé pour limiter le nombre de lignes supprimées dans une transaction unique. Un échec de suppression des entrées est signalé, mais n'affecte pas les modifications de la limite inférieure d'instance de capture ayant pu être apportées selon l'appel.  
 
@@ -80,7 +80,7 @@ sys.sp_cdc_cleanup_change_table
   
 -   Le travail de l'agent de nettoyage signale des échecs de suppression.  
   
-     Un administrateur peut exécuter explicitement cette procédure stockée pour réessayer d'effectuer une opération ayant échoué. Pour effectuer une nouvelle tentative de nettoyage pour une instance de capture donnée, exécutez sys. sp_cdc_cleanup_change_table et spécifiez NULL pour le paramètre @low_water_mark.  
+     Un administrateur peut exécuter explicitement cette procédure stockée pour réessayer d'effectuer une opération ayant échoué. Pour effectuer une nouvelle tentative de nettoyage pour une instance de capture donnée, exécutez sys. sp_cdc_cleanup_change_table et @low_water_mark spécifiez NULL pour le paramètre.  
   
 -   La stratégie simple basée sur la rétention utilisée par le travail de l'agent de nettoyage n'est pas adéquate.  
   
@@ -90,8 +90,8 @@ sys.sp_cdc_cleanup_change_table
  Nécessite l'appartenance au rôle de base de données fixe db_owner.  
   
 ## <a name="see-also"></a>Voir aussi  
- [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [sys.fn_cdc_get_min_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
- [sys.fn_cdc_increment_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)  
+ [CDC. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [sys. fn_cdc_get_min_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
+ [sys. fn_cdc_increment_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)  
   
   

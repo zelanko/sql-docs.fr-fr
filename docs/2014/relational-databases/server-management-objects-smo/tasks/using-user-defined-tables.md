@@ -13,20 +13,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2b780dfd75d998a9e3f6e382890b8318b958688d
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72781818"
 ---
 # <a name="using-user-defined-tables"></a>Utilisation de tables définies par l'utilisateur
   Les tables définies par l'utilisateur représentent des informations disposées en table. Elles sont utilisées comme paramètres lorsque vous transmettez des données tabulaires dans des procédures stockées ou des fonctions définies par l'utilisateur. Les tables définies par l'utilisateur ne peuvent pas être utilisées pour représenter des colonnes dans une table de base de données.  
   
- L'objet <xref:Microsoft.SqlServer.Management.Smo.Database> a une propriété <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> qui référence un objet <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Chaque objet <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> de cette collection a une propriété **Columns** qui fait référence à une collection d’objets <xref:Microsoft.SqlServer.Management.Smo.Column> qui répertorient les colonnes de la table définie par l’utilisateur. Utilisez la méthode Add pour ajouter des colonnes à la table définie par l'utilisateur.  
+ L'objet <xref:Microsoft.SqlServer.Management.Smo.Database> a une propriété <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> qui référence un objet <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Chaque <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> objet de cette collection a une propriété **Columns** qui fait référence à une <xref:Microsoft.SqlServer.Management.Smo.Column> collection d’objets qui répertorient les colonnes de la table définie par l’utilisateur. Utilisez la méthode Add pour ajouter des colonnes à la table définie par l'utilisateur.  
   
  Lorsque vous définissez une nouvelle table définie par l'utilisateur en utilisant l'objet <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>, vous devez fournir des colonnes et une clé primaire basée sur l'une des colonnes.  
   
- Les types de table définis par l'utilisateur ne peuvent pas être modifiés une fois qu'ils ont été créés. <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> ne prend pas en charge la méthode Alter. Les types de table définis par l'utilisateur peuvent avoir des contraintes de validation, mais certaines opérations de validation lèveront une exception car le type n'est pas modifiable.  
+ Les types de table définis par l'utilisateur ne peuvent pas être modifiés une fois qu'ils ont été créés. 
+  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> ne prend pas en charge la méthode Alter. Les types de table définis par l'utilisateur peuvent avoir des contraintes de validation, mais certaines opérations de validation lèveront une exception car le type n'est pas modifiable.  
   
  La classe <xref:Microsoft.SqlServer.Management.Smo.DataType> est utilisée pour spécifier le type de données qui est associé aux colonnes et paramètres. Utilisez ce type pour spécifier le type de table défini par l'utilisateur comme paramètre pour des fonctions définies par l'utilisateur et des procédures stockées.  
   

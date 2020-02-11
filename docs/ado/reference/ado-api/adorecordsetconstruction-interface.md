@@ -1,5 +1,5 @@
 ---
-title: ADORecordsetConstruction, Interface | Microsoft Docs
+title: ADORecordsetConstruction, interface | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,42 +16,42 @@ ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1e1d14255acd4cc7f18abea1c494353ef970903c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920796"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction, interface
-Le **ADORecordsetConstruction** interface est utilisée pour construire une ADO **Recordset** objet à partir d’un OLE DB **ensemble de lignes** objet dans une application C/C++.  
+L’interface **ADORecordsetConstruction** est utilisée pour construire un objet **Recordset** ADO à partir d’un objet d' **ensemble de lignes** OLE DB dans une application C/C++.  
   
  Cette interface prend en charge les propriétés suivantes :  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>Propriétés  
   
 |||  
 |-|-|  
-|[Chapitre](../../../ado/reference/ado-api/chapter-property-ado.md)|En lecture/écriture.<br />Obtient/définit une OLE DB **chapitre** objet à partir de/sur cette ADO **Recordset** objet.|  
-|[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|En lecture/écriture.<br />Obtient/définit une OLE DB **RowPosition** objet à partir de/sur cette ADO **Recordset** objet.|  
-|[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|En lecture/écriture.<br />Obtient/définit une OLE DB **ensemble de lignes** objet à partir de/sur cette ADO **Recordset** objet.|  
+|[Chapitre](../../../ado/reference/ado-api/chapter-property-ado.md)|Lecture/écriture.<br />Obtient/définit un objet OLE DB **chapitre** à partir de cet objet **Recordset** ADO.|  
+|[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|Lecture/écriture.<br />Obtient/définit un objet OLE DB **RowPosition** à partir de cet objet **Recordset** ADO.|  
+|[Ensemble de lignes](../../../ado/reference/ado-api/rowset-property-ado.md)|Lecture/écriture.<br />Obtient/définit un objet d' **ensemble de lignes** OLE DB à partir de cet objet **Recordset** ADO.|  
   
 ## <a name="methods"></a>Méthodes  
- Aucune.  
+ Aucun.  
   
-## <a name="events"></a>Events  
- Aucune.  
+## <a name="events"></a>Événements  
+ Aucun.  
   
 ## <a name="remarks"></a>Notes  
- Étant donné un OLE DB **ensemble de lignes** objet (`pRowset`), la construction de ADO **Recordset** objet (`adoRs`) s’élève à trois opérations ci-après :  
+ À partir d' **** un objet d'`pRowset`ensemble de lignes OLE DB (), la construction d’un`adoRs`objet **Recordset** ADO () se base sur les trois opérations de base suivantes :  
   
-1.  Créer un ADO **Recordset** objet :  
+1.  Créez un objet **Recordset** ADO :  
   
     ```  
     Recordset20Ptr adoRs;  
     adoRs.CreateInstance(__uuidof(Recordset));  
     ```  
   
-2.  Requête la **IADORecordsetConstruction** interface sur le **Recordset** objet :  
+2.  Interrogez l’interface **IADORecordsetConstruction** sur l’objet **Recordset** :  
   
     ```  
     adoRecordsetConstructionPtr adoRsConstruct=NULL;  
@@ -59,7 +59,7 @@ Le **ADORecordsetConstruction** interface est utilisée pour construire une ADO 
                          (void**)&adoRsConstruct);  
     ```  
   
-3.  Appelez le `IADORecordsetConstruction::put_Rowset` méthode de propriété pour définir le OLE DB `Rowset` objet sur le ADO `Recordset` objet :  
+3.  Appelez la `IADORecordsetConstruction::put_Rowset` méthode Property pour définir l’objet `Rowset` OLE DB sur l’objet `Recordset` ADO :  
   
     ```  
     IUnknown *pUnk=NULL;  
@@ -67,17 +67,17 @@ Le **ADORecordsetConstruction** interface est utilisée pour construire une ADO 
     adoRsConstruct->put_Rowset(pUnk);  
     ```  
   
- La résultante `adoRs` objet représente maintenant le ADO **Recordset** objet construit à partir d’OLE DB **ensemble de lignes** objet.  
+ L’objet `adoRs` résultant représente maintenant l’objet **Recordset** ADO construit à partir de l’objet d' **ensemble de lignes** OLE DB.  
   
- Vous pouvez également construire ADO **Recordset** objet à partir d’un OLE DB **chapitre** ou **RowPosition** objet.  
+ Vous pouvez également construire un objet **Recordset** ADO à partir d’un OLE DB **chapitre** ou **RowPosition** .  
   
-## <a name="requirements"></a>Configuration requise  
- **Version :** ADO 2.0 et versions ultérieur  
+## <a name="requirements"></a>Spécifications  
+ **Version :** ADO 2,0 et versions ultérieures  
   
- **Bibliothèque :** msado15.dll  
+ **Bibliothèque :** msado15. dll  
   
  **UUID :** 00000283-0000-0010-8000-00AA006D2EA4  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Rowset, propriété (ADO)](../../../ado/reference/ado-api/rowset-property-ado.md)

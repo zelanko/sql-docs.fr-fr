@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4a2c55573807feb4de947f1fa3b5af685b9f168
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638323"
 ---
 # <a name="stored-procedures"></a>Procédures stockées
-  Une procédure stockée ([Stored Procedures &#40;moteur de base de données&#41;](../../stored-procedures/stored-procedures-database-engine.md)) est un objet exécutable stocké dans une base de données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge :  
+  Une procédure stockée ([procédures stockées &#40;Moteur de base de données&#41;](../../stored-procedures/stored-procedures-database-engine.md)) est un objet exécutable stocké dans une base de données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]permet  
   
 -   Procédures stockées  
   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0bb04374ede05406fdf6d273a76a246bb35f5dac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637866"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>Syntaxe de base de la clause FOR XML
@@ -29,7 +29,7 @@ ms.locfileid: "62637866"
 > [!IMPORTANT]  
 >  La directive XMLDATA de l'option FOR XML est déconseillée. Utilisez la génération XSD en mode RAW et AUTO. Il n'existe aucune solution de remplacement pour la directive XMLDATA en mode EXPLICIT. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- Voici la syntaxe de base telle qu’elle est décrite dans [Clause FOR (Transact-SQL)](/sql/t-sql/queries/select-for-clause-transact-sql):  
+ Voici la syntaxe de base décrite dans [clause for (Transact-SQL)](/sql/t-sql/queries/select-for-clause-transact-sql):  
   
 ```  
 [ FOR { BROWSE | <XML> } ]  
@@ -88,12 +88,12 @@ XML
  TYPE  
  Spécifie que la requête retourne des résultats de type **xml** . Pour plus d’informations, consultez [Directive TYPE dans les requêtes FOR XML](type-directive-in-for-xml-queries.md).  
   
- ROOT [('*RootName*')]  
+ ROOT [('*rootName*')]  
  Spécifie qu'un et un seul élément de premier niveau doit être ajouté au code XML résultant. Vous pouvez, si vous le souhaitez, spécifier le nom d'élément racine à générer. La valeur par défaut est « root ».  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utiliser le mode RAW avec FOR XML](use-raw-mode-with-for-xml.md)   
- [UTiliser le mode AUTO avec FOR XML](use-auto-mode-with-for-xml.md)   
+ [Utiliser le mode AUTO avec FOR XML](use-auto-mode-with-for-xml.md)   
  [Utiliser le mode EXPLICIT avec FOR XML](use-explicit-mode-with-for-xml.md)   
  [Utiliser le mode PATH avec FOR XML](use-path-mode-with-for-xml.md)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   

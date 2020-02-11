@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 97da2ed795d002fa47900eb21ead90b48b525387
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727562"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Installer des modèles Machine Learning préformés sur SQL Server
@@ -25,7 +25,7 @@ Une fois installés, les modèles préformés sont considérés comme des détai
 
 Pour utiliser les modèles préformés, appelez les fonctions indiquées dans le tableau suivant.
 
-| Fonction R (MicrosoftML) | Fonction Python (MicrosoftML) | Utilisation |
+| Fonction R (MicrosoftML) | Fonction Python (MicrosoftML) | Usage |
 |--------------------------|-------------------------------|-------|
 | [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | Génère un score de sentiment positif-négatif sur les entrées de texte. |
 | [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | Extrait des informations de texte à partir des entrées du fichier image. |
@@ -213,7 +213,7 @@ Pour plus d’informations sur les algorithmes utilisés dans ces modèles Deep 
 
 ## <a name="see-also"></a>Voir aussi
 
-+ [SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md)
++ [Services de Machine Learning SQL Server](sql-machine-learning-services-windows-install.md)
 + [Mettre à niveau les composants Machine Learning (R et Python) dans les instances de SQL Server](../install/upgrade-r-and-python.md)
 + [MicrosoftML package for R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) (Package MicrosoftML pour R)
 + [microsoftml package for Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) (Package microsoftml pour Python)

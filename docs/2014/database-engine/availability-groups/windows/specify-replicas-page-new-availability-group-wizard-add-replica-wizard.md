@@ -14,14 +14,14 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ab74dc982416e3c18f2a0ad649e52de23770c5a
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 2a552b5847f1abda254da1d6c7348088ee0e8a03
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176047"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76923041"
 ---
-# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Page Spécifier les réplicas (Assistant Nouveau groupe de disponibilité : Assistant Ajout de réplica)
+# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Page Spécifier les réplicas (Assistant Nouveau groupe de disponibilité : Assistant Ajout de réplica)
   Cette rubrique décrit les options de la page **Spécifier les réplicas** . Cette page s'applique à l' [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] et à l' [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Utilisez la page **Spécifier les réplicas** pour spécifier et configurer un ou plusieurs réplicas de disponibilité afin d'ajouter le groupe de disponibilité. Cette page contient quatre onglets, qui sont présentés dans le tableau suivant. Cliquez sur le nom d'un onglet du tableau pour atteindre la section correspondante, plus loin dans cette rubrique.  
   
 |Onglet|Brève description|  
@@ -31,7 +31,7 @@ ms.locfileid: "70176047"
 |[Préférences de sauvegarde](#BackupPreferencesTab)|Utilisez cet onglet pour spécifier vos préférences de sauvegarde pour le groupe de disponibilité dans son ensemble, ainsi que les priorités de sauvegarde pour les différents réplicas de disponibilité.|  
 |[Port d'écoute](#Listener)|Utilisez cet onglet, s'il est disponible, pour créer un écouteur de groupe de disponibilité. Par défaut, aucun écouteur n'est créé.<br /><br /> Remarque : Cet onglet est disponible uniquement si vous exécutez l’[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)].|  
   
-##  <a name="ReplicasTab"></a> Onglet Réplicas  
+##  <a name="ReplicasTab"></a>Onglet réplicas  
  **Instance de serveur**  
  Affiche le nom de l'instance du serveur qui hébergera le réplica de disponibilité.  
   
@@ -40,12 +40,12 @@ ms.locfileid: "70176047"
  **Rôle initial**  
  Indique le rôle que le nouveau réplica jouera initialement : **Principal** ou **Secondaire**.  
   
- **Basculement automatique (jusqu’à 2)**  
+ **Basculement automatique (jusqu’à 2)**  
  Activez cette case à cocher uniquement si vous souhaitez que ce réplica de disponibilité soit un partenaire de basculement automatique. Pour configurer le basculement automatique, vous devez choisir cette option pour le réplica principal initial et pour un réplica secondaire. Les deux réplicas utilisent le mode de disponibilité avec validation synchrone. Seuls deux réplicas peuvent prendre en charge le basculement automatique.  
   
  Pour plus d’informations sur le mode de disponibilité avec validation synchrone, consultez [modes de disponibilité (groupes de disponibilité AlwaysOn)](availability-modes-always-on-availability-groups.md). Pour plus d’informations sur le basculement automatique, consultez [Basculement et modes de basculement &#40;groupes de disponibilité AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
   
- **Validation synchrone (jusqu'à 3)**  
+ **Validation synchrone (jusqu’à 3)**  
  Si vous avez sélectionné **Basculement automatique (jusqu'à 2)** pour le réplica, l'option **Validation asynchrone (jusqu'à 3)** est également sélectionnée. Si la case à cocher est vide, sélectionnez-la uniquement si vous souhaitez que ce réplica utilise le mode de validation synchrone avec le basculement manuel planifié uniquement. Seuls trois réplicas peuvent utiliser le mode de validation synchrone.  
   
  Si vous souhaitez que ce réplica utilise le mode de disponibilité avec validation asynchrone, n'activez pas cette case à cocher. Le réplica ne prendra en charge que le basculement manuel forcé (avec possible perte de données). Pour plus d’informations sur le mode de disponibilité avec validation asynchrone, consultez [modes de disponibilité (groupes de disponibilité AlwaysOn)](availability-modes-always-on-availability-groups.md). Pour plus d’informations sur le basculement manuel planifié et le basculement manuel forcé, consultez [Basculement et modes de basculement &#40;groupes de disponibilité AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
@@ -53,8 +53,8 @@ ms.locfileid: "70176047"
  **Rôle secondaire accessible en lecture**  
  Sélectionnez une valeur dans la liste déroulante **Rôle secondaire accessible en lecture** , comme suit :  
   
- **Nonn**  
- Aucune connexion directe n'est autorisée aux bases de données secondaires de ce réplica. Elles ne sont pas disponibles pour l'accès en lecture. Il s’agit du paramètre par défaut.  
+ **Non**  
+ Aucune connexion directe n'est autorisée aux bases de données secondaires de ce réplica. Elles ne sont pas disponibles pour l'accès en lecture. Il s'agit du paramètre par défaut.  
   
  **Intention de lecture uniquement**  
  Seules les connexions en lecture seule directes sont autorisées aux bases de données secondaires de ce réplica. La ou les bases de données secondaires sont toutes disponibles pour l'accès en lecture.  
@@ -66,18 +66,18 @@ ms.locfileid: "70176047"
  Cliquez pour ajouter un réplica secondaire au groupe de disponibilité.  
   
  **Ajouter un réplica Azure**  
- Cliquez pour créer une machine virtuelle Azure qui exécute un réplica secondaire dans le groupe de disponibilité. Cette option s'applique uniquement pour un groupe de disponibilité dans un environnement hybride qui contient des réplicas locaux. Pour plus d’informations, consultez [Haute disponibilité et récupération d’urgence pour SQL Server dans les machines virtuelles Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
+ Cliquez pour créer une machine virtuelle Azure qui exécute un réplica secondaire dans le groupe de disponibilité. Cette option s'applique uniquement pour un groupe de disponibilité dans un environnement hybride qui contient des réplicas locaux. Pour plus d’informations, consultez [haute disponibilité et récupération d’urgence pour SQL Server dans machines virtuelles Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
   
  **Supprimer le réplica**  
  Cliquez pour supprimer le réplica secondaire sélectionné du groupe de disponibilité.  
   
-##  <a name="EndpointsTab"></a> Onglet Points de terminaison  
+##  <a name="EndpointsTab"></a>Onglet points de terminaison  
  Pour chaque instance de serveur qui hébergera un réplica de disponibilité, l'onglet **Points de terminaison** affiche des valeurs réelles du point de terminaison de mise en miroir de bases de données existant, le cas échéant, ou des valeurs suggérées pour un nouveau point de terminaison potentiel qui utiliserait l'authentification Windows. Pour les points de terminaison existant et potentiel, la grille des valeurs de point de terminaison affiche les informations suivantes :  
   
- **Nom de serveur**  
+ **Nom du serveur**  
  Affiche le nom d'une instance de serveur qui hébergera un réplica de disponibilité.  
   
- **URL de point de terminaison**  
+ **URL du point de terminaison**  
  Affiche l'URL réelle ou proposée du point de terminaison de mise en miroir de bases de données. Pour un nouveau point de terminaison proposé, vous pouvez modifier cette valeur. Pour plus d’informations sur le format de ces URL, consultez [Spécifier l’URL de point de terminaison lors de l’ajout ou lors de la modification d’un réplica de disponibilité &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
  **Numéro de port**  
@@ -106,7 +106,7 @@ ms.locfileid: "70176047"
   
      Si vous laissez la page **Spécifier les réplicas de disponibilité** ouverte lorsque vous configurez des points de terminaison, retournez à l'onglet **Points de terminaison** et cliquez sur **Actualiser** pour mettre à jour la grille **Valeurs de point de terminaison** .  
   
-##  <a name="BackupPreferencesTab"></a> Onglet Préférences de sauvegarde  
+##  <a name="BackupPreferencesTab"></a>Onglet Préférences de sauvegarde  
  Pour spécifier l'emplacement des sauvegardes, choisissez l'une des options suivantes :  
   
  **Préférer secondaire**  
@@ -115,7 +115,7 @@ ms.locfileid: "70176047"
  **Secondaire uniquement**  
  Spécifie que les sauvegardes ne doivent jamais être effectuées sur le réplica principal. Si le réplica principal est le seul réplica en ligne, la sauvegarde ne doit pas avoir lieu.  
   
- **Principal**  
+ **Primaire**  
  Spécifie que les sauvegardes doivent toujours avoir lieu sur le réplica principal. Cette option est utile si vous avez besoin de fonctionnalités de sauvegarde, telles que la création de sauvegardes différentielles, qui ne sont pas prises en charge lorsque la sauvegarde est exécutée sur un réplica secondaire.  
   
  **Tout réplica**  
@@ -131,22 +131,22 @@ ms.locfileid: "70176047"
  Affiche le nom de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui héberge le réplica de disponibilité.  
   
  **Priorité de sauvegarde (Minimale=1, Maximale=100)**  
- Attribuez la priorité d'exécution des sauvegardes sur ce réplica par rapport aux autres réplicas dans le même groupe de disponibilité. La valeur par défaut est 50. Vous pouvez sélectionner n'importe quel autre entier dans la plage 0..100. 1 indique la priorité la plus faible, 100 la priorité la plus élevée. Si vous avez défini **Priorité de sauvegarde** sur 1, le réplica de disponibilité est choisi pour l'exécution des sauvegardes uniquement si aucun réplica de disponibilité ayant une priorité plus élevée n'est actuellement disponible.  
+ Attribuez la priorité d'exécution des sauvegardes sur ce réplica par rapport aux autres réplicas dans le même groupe de disponibilité. La valeur par défaut est 50. Vous pouvez sélectionner n'importe quel autre entier dans la plage 0..100. 1 indique la priorité la plus faible, 100 la priorité la plus élevée. Si vous définissez **priorité de sauvegarde** sur 1, le réplica de disponibilité est choisi pour effectuer des sauvegardes uniquement si aucun réplica de disponibilité de priorité plus élevée n’est actuellement disponible.  
   
  **Exclure le réplica**  
  Pour que ce réplica de disponibilité ne soit jamais choisi pour effectuer des sauvegardes. Cela est utile, par exemple, pour un réplica de disponibilité distant sur lequel vous ne souhaitez jamais basculer de sauvegardes.  
   
-##  <a name="Listener"></a> Onglet Écouteur  
+##  <a name="Listener"></a>Onglet écouteur  
  Spécifiez votre préférence pour un[écouteur de groupe de disponibilité](../../listeners-client-connectivity-application-failover.md)qui fournira un point de connexion du client, à savoir :  
   
- **Ne créez pas d'écouteur de groupe de disponibilité maintenant.**  
- Sélectionnez cette option pour ignorer cette étape. Vous pouvez créer un écouteur ultérieurement. Pour plus d’informations, consultez [Créer ou configurer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md).  
+ **Ne créez pas d’écouteur de groupe de disponibilité maintenant.**  
+ Sélectionnez cette option pour ignorer cette étape. Vous pouvez créer un écouteur ultérieurement. Pour plus d'informations, consultez [Créer ou configurer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md).  
   
  **Créez un écouteur de groupe de disponibilité.**  
  Spécifiez vos préférences d'écouteur pour ce groupe de disponibilité, comme suit :  
   
  **Nom DNS de l'écouteur**  
- Indiquez le nom réseau de l'écouteur. Ce nom doit être unique sur le domaine et ne peut contenir que des caractères alphanumériques, des tirets ( **-** ) et des traits d’union ( **_** ), dans n’importe quel ordre. Lorsqu'il est spécifié à l'aide de l'onglet **Écouteur** , le nom DNS peut contenir jusqu'à 15 caractères.  
+ Indiquez le nom réseau de l'écouteur. Ce nom doit être unique sur le domaine et ne peut contenir que des caractères alphanumériques,**-** des tirets () et des traits d’Union (**_**), dans n’importe quel ordre. Lorsqu'il est spécifié à l'aide de l'onglet **Écouteur** , le nom DNS peut contenir jusqu'à 15 caractères.  
   
 > [!IMPORTANT]  
 >  Si vous entrez un nom d’écouteur DNS (ou un numéro de port) non valide dans l’onglet **Écouteur** , le bouton **Suivant** est désactivé dans la page **Spécifier les réplicas** .  
@@ -165,16 +165,16 @@ ms.locfileid: "70176047"
   
  Si l’option **Adresse IP statique** est sélectionnée comme mode réseau (il s’agit de la sélection par défaut), une grille affiche les colonnes **Sous-réseau** et **Adresse IP** , et les boutons associés **Ajouter** et **Supprimer** sont affichés. Notez que la grille est vide tant que vous n'avez pas ajouté le premier sous-réseau.  
   
- Colonne**Sous-réseau**  
+ Colonne de **sous-réseau**  
  Affiche l'adresse de sous-réseau que vous avez sélectionnée pour chaque sous-réseau ajouté pour l'écouteur.  
   
- Colonne**Adresse IP**  
+ Colonne d' **adresse IP**  
  Affiche l'adresse IPv4 ou IPv6 que vous avez spécifiée pour un sous-réseau donné.  
   
  **Ajouter**  
  Cliquez pour ajouter un sous-réseau à cet écouteur. Cela ouvre la boîte de dialogue **Ajouter une adresse IP** . Pour plus d’informations, consultez la rubrique d’aide [Boîte de dialogue Ajouter une adresse IP &#40;SQL Server Management Studio&#41;](add-ip-address-dialog-box-sql-server-management-studio.md).  
   
- **Supprimer**  
+ **Remove**  
  Cliquez pour supprimer le sous-réseau actuellement sélectionné dans la grille.  
   
  **DHCP**  
@@ -185,7 +185,7 @@ ms.locfileid: "70176047"
   
  Lorsque **DHCP** est sélectionné, le champ **Sous-réseau** est affiché.  
   
- **Sous-réseau**  
+ **Subnet**  
  Si vous avez sélectionné **DHCP** comme mode réseau, utilisez la liste déroulante **Sous-réseau** pour sélectionner une adresse du sous-réseau qui héberge les réplicas de disponibilité du groupe de disponibilité.  
   
 > [!IMPORTANT]
@@ -194,7 +194,7 @@ ms.locfileid: "70176047"
 >  -   Demandez à votre administrateur réseau de réserver l'adresse IP de l'écouteur pour son utilisation exclusive. Fournissez le nom d'hôte DNS de l'écouteur aux développeurs d'applications pour qu'ils l'utilisent dans les chaînes de connexion lorsqu'ils demandent des connexions clientes vers ce groupe de disponibilité.  
 > -   Fournissez le nom d'hôte DNS de l'écouteur aux développeurs d'applications pour qu'ils l'utilisent dans les chaînes de connexion lorsqu'ils demandent des connexions clientes vers ce groupe de disponibilité.  
   
-##  <a name="RelatedTasks"></a> Tâches connexes  
+##  <a name="RelatedTasks"></a> Tâches associées  
   
 -   [Utiliser l’Assistant Groupe de disponibilité &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
   
@@ -206,10 +206,10 @@ ms.locfileid: "70176047"
   
 -   [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  
   
--   [Créer un point de terminaison de mise en &#40;miroir de bases de données pour groupes de disponibilité AlwaysOn SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Créer un point de terminaison de mise en miroir de bases de données pour groupes de disponibilité AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble &#40;de&#41; groupes de disponibilité AlwaysOn SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
+ [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql)   
  [Conditions préalables requises, restrictions et recommandations pour groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   

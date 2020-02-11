@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2fe1a42540b21fd11dbfb9747a77991073d35c97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637567"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>Refuser des autorisations sur une collection de schémas XML
@@ -47,7 +47,7 @@ ms.locfileid: "62637567"
 ## <a name="examples"></a>Exemples  
  Les scénarios proposés dans les exemples suivants montrent le fonctionnement des autorisations sur les schémas XML. Chaque exemple crée la base de données de test, les schémas relationnels et les connexions nécessaires. Ces connexions reçoivent les autorisations nécessaires sur la collection de schémas XML. Chaque exemple procède au nettoyage qui s'impose à la fin de la procédure.  
   
-### <a name="a-preventing-a-user-from-creating-an-xml-schema-collection"></a>A. Scénario pour empêcher un utilisateur de créer une collection de schémas XML  
+### <a name="a-preventing-a-user-from-creating-an-xml-schema-collection"></a>R. Scénario pour empêcher un utilisateur de créer une collection de schémas XML  
  Une des méthodes pour empêcher un utilisateur de créer une collection de schémas XML consiste à lui refuser l'autorisation ALTER sur un schéma relationnel. Cela est illustré par l'exemple suivant.  
   
  Cet exemple crée un utilisateur `TestLogin1`et une base de données. Il crée également un schéma relationnel, en plus du schéma `dbo` , dans la base de données. L'autorisation `CREATE XML SCHEMA` de départ permet à l'utilisateur de créer une collection de schémas n'importe où dans la base de données. L'exemple refuse ensuite l'autorisation `ALTER` à l'utilisateur sur l'un des schémas relationnels. L'utilisateur ne peut donc plus créer de collection de schémas XML dans ce schéma relationnel.  

@@ -1,5 +1,5 @@
 ---
-title: Déployé les détails de l’Application de couche données (utilitaire SQL Server) | Microsoft Docs
+title: Détails sur l’application de la couche données déployée (Utilitaire SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754089"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Détails des applications de la couche Données déployées (utilitaire SQL Server)
@@ -32,11 +32,11 @@ ms.locfileid: "62754089"
  Mode Liste  
  Le mode Liste, dans le volet supérieur, affiche des données concernant des applications de la couche Données. Les icônes d'état d'intégrité fournissent un résumé de l'état de chaque application de la couche Données par catégorie d'utilisation :  
   
--   Coche verte (![](../../2014/database-engine/media/well-utilized.gif "Correctement exploité")) : nombre d’applications de la couche Données qui ne violent pas les stratégies d’utilisation des ressources. Les ressources sont bien utilisées.  
+-   Coche verte : ![](../../2014/database-engine/media/well-utilized.gif "Well_utilized") - nombre d’applications de la couche Données qui ne violent pas les stratégies d’utilisation des ressources. Les ressources sont bien utilisées.  
   
--   Flèche bas verte (![](../../2014/database-engine/media/utility-down-arrow.gif "Utilitaire, flèche bas")) : les ressources sont sous-exploitées.  
+-   Flèche bas verte : ![](../../2014/database-engine/media/utility-down-arrow.gif "Utility_down_arrow") - les ressources sont sous-exploitées.  
   
--   Flèche haut rouge (![](../../2014/database-engine/media/utility-up-arrow.gif "Utilitaire, flèche haut")) : les ressources sont surexploitées.  
+-   Flèche haut rouge : ![](../../2014/database-engine/media/utility-up-arrow.gif "Utility_up_arrow") - les ressources sont surexploitées.  
   
  La séquence des colonnes en mode Liste peut être modifiée en les faisant glisser vers la gauche ou la droite. Les colonnes en mode Liste peuvent être ajoutées ou supprimées en cliquant avec le bouton droit sur leurs en-tête et en les sélectionnant ou désélectionnant. Le menu contextuel offre également des options de tri. Le tri peut également être activé en cliquant en haut d'un nom de colonne.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "62754089"
   
 -   Nom : le nom de l'application de la couche Données.  
   
--   Processeur de l'application : affiche l'état d'intégrité de l'utilisation du processeur pour cette application de la couche Données. L'état d'intégrité de ce paramètre est déterminé en fonction de la stratégie d'utilisation du processeur définie pour l'application de la couche Données et du paramètre de configuration de la stratégie d'évaluation des ressources volatiles. Pour plus d’informations, consultez [Réduire le bruit dans les stratégies d’utilisation du processeur &#40;utilitaire SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   Processeur de l'application : affiche l'état d'intégrité de l'utilisation du processeur pour cette application de la couche Données. L'état d'intégrité de ce paramètre est déterminé en fonction de la stratégie d'utilisation du processeur définie pour l'application de la couche Données et du paramètre de configuration de la stratégie d'évaluation des ressources volatiles. Pour plus d’informations, consultez [réduire le bruit dans les stratégies d’utilisation du processeur &#40;Utilitaire SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      Pour consulter l’historique de l’utilisation du processeur pour cette application de la couche Données ou pour afficher ou modifier les limites de la stratégie, cliquez sur l’onglet **Utilisation du processeur**.  
   
--   Processeur de l'ordinateur : affiche l'état d'intégrité de l'utilisation du processeur de l'ordinateur. L'état d'intégrité de ce paramètre est déterminé en fonction de la stratégie d'utilisation du processeur définie pour l'ordinateur et du paramètre de configuration de la stratégie d'évaluation des ressources volatiles. Pour plus d’informations, consultez [Réduire le bruit dans les stratégies d’utilisation du processeur &#40;utilitaire SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   Processeur de l'ordinateur : affiche l'état d'intégrité de l'utilisation du processeur de l'ordinateur. L'état d'intégrité de ce paramètre est déterminé en fonction de la stratégie d'utilisation du processeur définie pour l'ordinateur et du paramètre de configuration de la stratégie d'évaluation des ressources volatiles. Pour plus d’informations, consultez [réduire le bruit dans les stratégies d’utilisation du processeur &#40;Utilitaire SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      Pour consulter l’historique de l’utilisation du processeur pour cette application de la couche Données ou pour afficher ou modifier les limites de la stratégie, cliquez sur l’onglet **Utilisation du processeur**.  
   
@@ -62,9 +62,9 @@ ms.locfileid: "62754089"
   
     -   Flèche haut rouge : l'état d'intégrité d'au moins un groupe de fichiers ou du groupe de fichier journal est surexploité. Notez que, si une base de données se trouve dans l’état « urgence », l’état d’intégrité affiche l’espace de fichier journal surexploité.  
   
-     Pour afficher ou modifier les limites de la stratégie d’espace de fichier, cliquez sur l’onglet **Utilisation du stockage** .  
+     Pour afficher ou modifier les limites de la stratégie d'espace de fichier, cliquez sur l'onglet **Utilisation du stockage**.  
   
--   Espace de volume : affiche un résumé des états d'intégrité de l'utilisation de l'espace de volume pour tous les volumes contenant des bases de données qui appartiennent à l'application de la couche Données sélectionnée. Si l'état d'intégrité d'un des volumes est surexploité, l'état d'intégrité de l'espace de volume sera signalé en mode Liste comme étant surexploité. Si l'état d'intégrité d'un des volumes de données est sous-exploité et qu'aucun volume n'est surexploité, l'état d'intégrité de l'espace de volume sera signalé en mode Liste comme étant sous-exploité. Sinon, l'état d'intégrité de l'espace de volume sera signalé en mode Liste comme étant correctement utilisé. Pour afficher ou modifier les limites de la stratégie, cliquez sur l’onglet **Utilisation du stockage** .  
+-   Espace de volume : affiche un résumé des états d'intégrité de l'utilisation de l'espace de volume pour tous les volumes contenant des bases de données qui appartiennent à l'application de la couche Données sélectionnée. Si l'état d'intégrité d'un des volumes est surexploité, l'état d'intégrité de l'espace de volume sera signalé en mode Liste comme étant surexploité. Si l'état d'intégrité d'un des volumes de données est sous-exploité et qu'aucun volume n'est surexploité, l'état d'intégrité de l'espace de volume sera signalé en mode Liste comme étant sous-exploité. Sinon, l'état d'intégrité de l'espace de volume sera signalé en mode Liste comme étant correctement utilisé. Pour afficher ou modifier les limites de la stratégie, cliquez sur l'onglet **Utilisation du stockage**.  
   
 -   Type de stratégie : indique si les stratégies « Globales » par défaut ou des stratégies de « Substitution » personnalisées sont appliquées pour l'application de la couche Données.  
   
@@ -76,17 +76,17 @@ ms.locfileid: "62754089"
   
 -   Date déployée  
   
--   Digne de confiance : (True ou False)  
+-   Digne de confiance : (True ou False)  
   
 -   Classement  
   
 -   Niveau de compatibilité : (par exemple, Version100)  
   
--   Chiffrement est activé : (True ou False)  
+-   Chiffrement activé : (True ou False)  
   
--   Mode de récupération : (Simple, complet ou journalisé en bloc)  
+-   Mode de récupération : (simple, complet ou en utilisant les journaux de transactions)  
   
--   Dernière heure signalée : Cette colonne indique la date locales du processeur et l’heure à l’aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) dans la documentation en ligne de SQL Server. Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) dans la documentation en ligne de SQL Server.  
+-   Dernière heure signalée : cette colonne affiche l'heure et la date locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) dans la documentation en ligne de SQL Server. Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) dans la documentation en ligne de SQL Server.  
   
  Onglet Utilisation du processeur  
  L'onglet d'utilisation du processeur affiche côte à côte des graphiques de données d'historique pour l'application de la couche Données et l'utilisation du processeur de l'ordinateur.  
@@ -140,7 +140,7 @@ ms.locfileid: "62754089"
   
  Si le fichier n'est pas configuré pour s'agrandir automatiquement, alors la capacité effective sera la quantité d'espace allouée au fichier. Si le fichier est configuré pour s'agrandir automatiquement, la capacité effective sera la somme de la quantité d'espace actuellement allouée au fichier et de la quantité d'espace libre actuellement disponible sur le volume.  
   
- Les stratégies d'utilisation du stockage peuvent être configurées pour les fichiers de données et pour les fichiers journaux. Pour afficher ou modifier les seuils de la stratégie d’utilisation du stockage pour les fichiers, cliquez sur le lien **Stratégie Fichiers** au bas du volet Utilisation du stockage. Pour afficher ou modifier les seuils de la stratégie d’utilisation du stockage pour un volume de stockage, cliquez sur le lien **Stratégie Volumes** au bas du volet Utilisation du stockage.  
+ Les stratégies d'utilisation du stockage peuvent être configurées pour les fichiers de données et pour les fichiers journaux. Pour afficher ou modifier les seuils de la stratégie d'utilisation du stockage pour les fichiers, cliquez sur le lien **Stratégie Fichiers** au bas du volet Utilisation du stockage. Pour afficher ou modifier les seuils de la stratégie d'utilisation du stockage pour un volume de stockage, cliquez sur le lien **Stratégie Volumes** au bas du volet Utilisation du stockage.  
   
  Pour remplacer les seuils de stratégie par défaut, cliquez sur la case d’option pour **Remplacer la stratégie par défaut**, spécifiez des valeurs pour les limites supérieures et inférieures, puis cliquez sur **OK**.  
   
@@ -153,21 +153,21 @@ ms.locfileid: "62754089"
   
 -   Date déployée  
   
--   Digne de confiance : (True ou False)  
+-   Digne de confiance : (True ou False)  
   
 -   Classement  
   
 -   Niveau de compatibilité : (par exemple, Version100)  
   
--   Chiffrement est activé : (True ou False)  
+-   Chiffrement activé : (True ou False)  
   
--   Mode de récupération : (Simple, complet ou journalisé en bloc)  
+-   Mode de récupération : (simple, complet ou en utilisant les journaux de transactions)  
   
--   Dernière heure signalée : Cette colonne indique la date locales du processeur et l’heure à l’aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) dans la documentation en ligne de SQL Server. Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) dans la documentation en ligne de SQL Server.  
+-   Dernière heure signalée : cette colonne affiche l'heure et la date locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) dans la documentation en ligne de SQL Server. Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) dans la documentation en ligne de SQL Server.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Détails de l’instance gérée &#40;utilitaire SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
- [Tableau de bord utilitaire &#40;utilitaire SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
+ [Tableau de bord de l’utilitaire &#40;Utilitaire SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [Surveiller des instances de SQL Server dans l'utilitaire SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [Fonctionnalités et tâches de l’utilitaire SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   

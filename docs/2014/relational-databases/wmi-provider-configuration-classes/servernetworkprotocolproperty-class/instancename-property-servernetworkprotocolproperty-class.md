@@ -1,5 +1,5 @@
 ---
-title: InstanceName, propriété (classe ServerNetworkProtocolProperty) | Microsoft Docs
+title: Propriété InstanceName (classe ServerNetworkProtocolProperty) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8bf094914e087379ac72f23afcbf034a8248b30e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62643093"
 ---
 # <a name="instancename-property-servernetworkprotocolproperty-class"></a>Propriété InstanceName (classe ServerNetworkProtocolProperty)
-  Obtient le nom d'une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur laquelle le protocole réseau serveur est installé.  
+  Obtient le nom d’une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur laquelle le protocole réseau serveur est installé.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>Éléments  
- *object*  
+ *dessin*  
  Objet de [classe ServerNetworkProtocolProperty](servernetworkprotocolproperty-class.md) qui représente un attribut du protocole réseau sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  

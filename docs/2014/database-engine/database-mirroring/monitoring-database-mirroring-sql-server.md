@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755363"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Surveillance de la mise en miroir de bases de données (SQL Server)
@@ -129,7 +129,7 @@ ms.locfileid: "62755363"
   
      Les administrateurs système peuvent utiliser la procédure stockée système **sp_dbmmonitorresults** pour afficher (et éventuellement mettre à jour) la table d’état si cette dernière n’a pas été mise à jour au cours des 15 secondes précédentes. Cette procédure appelle la procédure **sp_dbmmonitorupdate** et retourne une ou plusieurs lignes d’historique, en fonction de la quantité demandée dans l’appel de procédure. Pour plus d’informations sur l’état dans son jeu de résultats, consultez [sp_dbmmonitorresults &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql).  
   
-#### <a name="monitoring-database-mirroring-status-by-dbmmonitor-members"></a>État de la mise en miroir de base de données (par les membres dbm_monitor)  
+#### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>État de la mise en miroir de base de données (par les membres dbm_monitor)  
  Comme nous l’avons mentionné, lors de la première exécution de la procédure **sp_dbmmonitorupdate** , le rôle de base de données fixe **dbm_monitor** est créé dans la base de données **msdb** . Les membres du rôle de base de données fixe **dbm_monitor** peuvent consulter l’état de la mise en miroir existant à l’aide du moniteur de mise en miroir de bases de données ou de la procédure stockée **sp_dbmmonitorresults** . Cependant, ces utilisateurs ne peuvent pas mettre à jour la table d'état. Pour connaître l’ancienneté de l’état affiché, un utilisateur peut observer les heures sur les étiquettes **Journal principal (***\<heure>***)** et **Journal miroir (***\<heure>***)** dans la page **État**.  
   
  Les membres du rôle de base de données fixe **dbm_monitor** sont tributaires du **travail du moniteur de mise en miroir de bases de données** pour la mise à jour de la table d’état à des fréquences régulières. Si le travail n'existe pas ou si l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est arrêté, l'état devient de plus en plus obsolète et ne correspondra plus forcément à la configuration de la session de mise en miroir. Par exemple, après un basculement, les partenaires peuvent sembler partager le même rôle (principal ou miroir), ou le serveur principal actuel peut être affiché comme serveur miroir, alors que le serveur miroir actuel est affiché comme principal.  
@@ -154,15 +154,15 @@ ms.locfileid: "62755363"
   
 -   Rôle actuel  
   
-     Rôle actuel de l'instance de serveur. Les états possibles sont les suivants :  
+     Rôle actuel de l'instance de serveur. Les états possibles sont :  
   
     -   Principal  
   
     -   Miroir  
   
--   État de la mise en miroir  
+-   état de la mise en miroir  
   
-     Les états possibles sont les suivants :  
+     Les états possibles sont :  
   
     -   Unknown  
   
@@ -170,13 +170,13 @@ ms.locfileid: "62755363"
   
     -   Synchronisé  
   
-    -   Suspendu  
+    -   Interrompu  
   
     -   Déconnecté  
   
 -   Connexion témoin  
   
-     État de connexion du témoin. Les états possibles sont les suivants :  
+     État de connexion du témoin. Les états possibles sont :  
   
     -   Unknown  
   
@@ -295,7 +295,7 @@ ms.locfileid: "62755363"
   
 -   Classe d'événements**Database Mirroring State Change**  
   
-     Indique le changement de l'état de mise en miroir d'une base de données mise en miroir. Pour plus d’informations, consultez [Database Mirroring State Change Event Class](../../relational-databases/event-classes/database-mirroring-state-change-event-class.md).  
+     Indique le changement de l'état de mise en miroir d'une base de données mise en miroir. Pour plus d'informations, voir [Database Mirroring State Change Event Class](../../relational-databases/event-classes/database-mirroring-state-change-event-class.md).  
   
 -   Classe d'événements**Audit Database Mirroring Login**  
   
@@ -309,7 +309,7 @@ ms.locfileid: "62755363"
   
 -   [Afficher l’état d’une base de données mise en miroir &#40;SQL Server Management Studio&#41;](view-the-state-of-a-mirrored-database-sql-server-management-studio.md)  
   
- **Procédures stockées**  
+ **procédures stockées**  
   
 -   [sp_dbmmonitoraddmonitoring &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql)  
   

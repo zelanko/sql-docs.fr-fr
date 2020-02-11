@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c52c2641d21c20c91ec7548cafc969e506801b08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036992"
 ---
 # <a name="settoarray-mdx"></a>SetToArray (MDX)
@@ -29,16 +29,16 @@ SetToArray(Set_Expression1 [ ,Set_Expression2,...n ][ ,Numeric_Expression ] )
   
 ## <a name="arguments"></a>Arguments  
  *Set_Expression1*  
- Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
+ Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
  *Set_Expression2*  
- Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
+ Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
 ## <a name="remarks"></a>Notes  
- Le **SetToArray** fonction convertit un ou plusieurs jeux en tableau à utiliser dans une fonction définie par l’utilisateur. Le nombre de dimensions de ce tableau est identique au nombre de jeux précisé.  
+ La fonction **SetToArray** convertit un ou plusieurs jeux en tableau à utiliser dans une fonction définie par l’utilisateur. Le nombre de dimensions de ce tableau est identique au nombre de jeux précisé.  
   
  L'expression numérique facultative peut fournir les valeurs des cellules du tableau. Si aucune expression numérique n'est spécifiée, la jointure croisée des jeux est évaluée dans le contexte actuel.  
   
@@ -50,7 +50,7 @@ SetToArray(Set_Expression1 [ ,Set_Expression2,...n ][ ,Numeric_Expression ] )
 ```  
   
 > [!NOTE]  
->  Le type de retour de la **SetToArray** fonction correspond au type VARIANT, VT_ARRAY. Par conséquent, la sortie de la **SetToArray** fonction doit être utilisée uniquement comme entrée à une fonction définie par l’utilisateur.  
+>  Le type de retour de la fonction **SetToArray** est le type VARIANT, VT_ARRAY. Par conséquent, la sortie de la fonction **SetToArray** doit être utilisée uniquement en tant qu’entrée d’une fonction définie par l’utilisateur.  
   
 ## <a name="example"></a>Exemple  
  L'exemple ci-dessous retourne un tableau.  
@@ -60,6 +60,6 @@ SetToArray([Geography].[Geography].Members, [Measures].[Internet Sales Amount])
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -11,13 +11,13 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9560249e07cbd360914b5dab21eb68dc8e7f013f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467243"
 ---
-# <a name="restore-and-recovery-of-memory-optimized-tables"></a>Restauration et récupération de tables optimisées en mémoire
+# <a name="restore-and-recovery-of-memory-optimized-tables"></a>Restauration et récupération de tables mémoire optimisées
   Le mécanisme de base utilisé pour récupérer ou restaurer une base de données avec des tables mémoire optimisées est similaire à celui utilisé pour les bases de données avec uniquement des tables sur disque. Mais à la différence des tables sur disque, les tables mémoire optimisées doivent être chargées dans la mémoire avant que la base de données soit disponible pour l'accès utilisateur. Cela ajoute une nouvelle étape à la récupération de la base de données. Les étapes de récupération de bases de données sont modifiées comme suit :  
   
  Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] redémarre, chaque base de données passe via une phase de récupération qui comprend les trois phases suivantes :  
@@ -40,9 +40,9 @@ ms.locfileid: "62467243"
   
 -   Flux des fichiers de données.  Une fois le filtre de mappage de delta créé, les fichiers de données sont lus en utilisant autant de thread qu'il existe d'UC logiques. Chaque thread qui lit le fichier de données lit les lignes de données, vérifie le mappage de delta associé et insère la ligne dans la table uniquement si cette ligne n'a pas été marquée comme supprimée. Cette partie de la récupération peut être liée à l'UC dans certains cas, comme indiqué ci-dessous.  
   
- ![Tables optimisées en mémoire.](../../database-engine/media/memory-optimized-tables.gif "Tables optimisées en mémoire.")  
+ ![Tables optimisées en mémoire.](../../database-engine/media/memory-optimized-tables.gif "Tables à mémoire optimisée.")  
   
- Les tables optimisées en mémoire peuvent généralement être chargées dans la mémoire à la vitesse des E/S mais dans certains cas, le chargement des lignes de données dans la mémoire est plus lent. Les cas spécifiques sont les suivants :  
+ Les tables mémoire optimisées peuvent généralement être chargées dans la mémoire à la vitesse des E/S mais dans certains cas, le chargement des lignes de données dans la mémoire est plus lent. Les cas spécifiques sont les suivants :  
   
 -   Un nombre de compartiments faible pour l'index de hachage peut entraîner une collision excessive ralentissant les insertions des lignes de données. Cela entraîne généralement une très forte utilisation du processeur tout le long, et en particulier à la fin de la récupération. Si vous avez configuré l'index de hachage correctement, il ne devrait pas affecter le temps de récupération.  
   

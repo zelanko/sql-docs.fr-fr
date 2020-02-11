@@ -1,5 +1,5 @@
 ---
-title: Classe ServerNetworkProtocolIPAddress | Microsoft Docs
+title: ServerNetworkProtocolIPAddress, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b987e8770b4bef8c09974fc8b0770f4a8a6b45cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62643381"
 ---
 # <a name="servernetworkprotocolipaddress-class"></a>Classe ServerNetworkProtocolIPAddress
-  La [classe ServerNetworkProtocolIPAddress] servernetworkprotocolipaddress-class.md) représente une adresse IP pris en charge par le protocole réseau serveur.  
+  [ServerNetworkProtocolIPAddress Class] ServerNetworkProtocolIPAddress-class.md) représente une adresse IP prise en charge par le protocole réseau serveur.  
   
- Avec la [classe ServerNetworkProtocolIPAddress] servernetworkprotocolipaddress-class.md), vous pouvez effectuer les tâches suivantes :  
+ Avec [ServerNetworkProtocolIPAddress Class] ServerNetworkProtocolIPAddress-class.md), vous pouvez effectuer les tâches suivantes :  
   
--   vérifier le nom de l'instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)];  
+-   Vérifiez le nom de l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   vérifier le nom de l'adresse IP et le nom du protocole ;  
   

@@ -18,18 +18,18 @@ ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cf2e5f7e05286da23f4bccc94d1017f00cb7db70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67909197"
 ---
-# <a name="sysmaildeleteprofileaccountsp-transact-sql"></a>sysmail_delete_profileaccount_sp (Transact-SQL)
+# <a name="sysmail_delete_profileaccount_sp-transact-sql"></a>sysmail_delete_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime un compte d'un profil de messagerie de base de données.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,19 +40,19 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @profile_id = ] profile_id` L’ID de profil du profil à supprimer. *profile_id* est **int**, avec NULL comme valeur par défaut. Soit le *profile_id* ou *profile_name* peut être spécifié.  
+`[ @profile_id = ] profile_id`ID de profil du profil à supprimer. *profile_id* est de **type int**, avec NULL comme valeur par défaut. La *profile_id* ou la *profile_name* peut être spécifiée.  
   
-`[ @profile_name = ] 'profile_name'` Le nom du profil du profil à supprimer. *nom_profil* est **sysname**, avec NULL comme valeur par défaut. Soit le *profile_id* ou *profile_name* peut être spécifié.  
+`[ @profile_name = ] 'profile_name'`Nom de profil du profil à supprimer. *profile_name* est de **type sysname**, avec NULL comme valeur par défaut. La *profile_id* ou la *profile_name* peut être spécifiée.  
   
-`[ @account_id = ] account_id` L’ID de compte à supprimer. *account_id* est **int**, avec NULL comme valeur par défaut. Soit le *account_id* ou *account_name* peut être spécifié.  
+`[ @account_id = ] account_id`ID de compte à supprimer. *account_id* est de **type int**, avec NULL comme valeur par défaut. La *account_id* ou la *account_name* peut être spécifiée.  
   
-`[ @account_name = ] 'account_name'` Le nom du compte à supprimer. *nom_compte* est **sysname**, avec NULL comme valeur par défaut. Soit le *account_id* ou *account_name* peut être spécifié.  
+`[ @account_name = ] 'account_name'`Nom du compte à supprimer. *account_name* est de **type sysname**, avec NULL comme valeur par défaut. La *account_id* ou la *account_name* peut être spécifiée.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  Renvoie une erreur si le compte spécifié n'est pas associé au profil spécifié.  
@@ -61,10 +61,10 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
   
  Lorsqu'un profil est spécifié mais pas un compte, cette procédure stockée supprime tous les comptes du profil spécifié. Par exemple, pour modifier les serveurs SMTP utilisés par un profil, il peut être pratique de supprimer tous les comptes du profil et d'ajouter ensuite les nouveaux comptes.  
   
- La procédure stockée **sysmail_delete_profileaccount_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
+ La procédure stockée **sysmail_delete_profileaccount_sp** se trouve dans la base de données **msdb** et appartient au schéma **dbo** . La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
 ## <a name="permissions"></a>Autorisations  
- Autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
+ Les autorisations d’exécution pour cette procédure sont octroyées par défaut aux membres du rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant montre la suppression du compte `Audit Account` du profil `AdventureWorks Administrator`.  
@@ -77,8 +77,8 @@ EXECUTE msdb.dbo.sysmail_delete_profileaccount_sp
   
 ## <a name="see-also"></a>Voir aussi  
  [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)   
- [Créer un compte de messagerie de base de données](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Objets de Configuration de messagerie de base de données](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Procédures stockées de messagerie de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Créer un compte Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Objets de configuration Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Database Mail des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

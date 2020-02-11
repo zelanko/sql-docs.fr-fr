@@ -13,24 +13,24 @@ ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 42bae7f340f7f46bb5a57498b1c846f6d532ff20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67927128"
 ---
-# <a name="ado-overview-and-benefits"></a>Présentation d’ADO et avantages
-ActiveX Data Objects (ADO) est une interface de haut niveau, facile à utiliser pour OLE DB. OLE DB est une interface de bas niveau, hautes performances à un large éventail de magasins de données. ADO et OLE DB peuvent fonctionner avec relationnel (tabulaire) et non relationnelles (hiérarchique ou flux) données.
+# <a name="ado-overview-and-benefits"></a>Vue d’ensemble et avantages d’ADO
+ActiveX Data Objects (ADO) est une interface de haut niveau et facile à utiliser pour OLE DB. OLE DB est une interface de bas niveau et hautes performances pour une variété de magasins de données. ADO et OLE DB peuvent fonctionner avec des données relationnelles (tabulaires) et non relationnelles (hiérarchiques ou de flux).
 
- ADO fournit une couche d’abstraction entre votre application cliente ou de la couche intermédiaire et les interfaces OLE DB de bas niveau. ADO utilise un petit ensemble d’objets Automation pour fournir une interface simple et efficace pour OLE DB. Cette interface permet à ADO un bon choix pour les langages de niveau supérieur, tels que Visual Basic et VBScript, les développeurs qui souhaitent accéder aux données sans devoir apprendre les subtilités de COM et OLE DB.
+ ADO fournit une couche d’abstraction entre votre application cliente ou de niveau intermédiaire et les interfaces de OLE DB de bas niveau. ADO utilise un petit ensemble d’objets Automation pour fournir une interface simple et efficace à OLE DB. Grâce à cette interface, ADO est un bon choix pour les développeurs dans des langages de niveau supérieur, tels que Visual Basic et VBScript, qui souhaitent accéder aux données sans avoir à apprendre les subtilités de COM et OLE DB.
 
- Cette section contient les rubriques suivantes.
+ Cette section contient les rubriques suivantes :
 
 -   [Historique d’ADO](../../ado/guide/ado-history.md)
 
 -   [Prérequis pour l’utilisation de la documentation d’ADO](../../ado/guide/prerequisites-for-using-the-ado-documentation.md)
 
--   [Référencer les bibliothèques ADO](../../ado/guide/referencing-the-ado-libraries.md)
+-   [Référencement des bibliothèques ADO](../../ado/guide/referencing-the-ado-libraries.md)
 
 -   [Tableau des tâches ADO](../../ado/guide/ado-task-table.md)
 

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 651b13121653f5627f59bc6a8a11f1e2e49c43b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211842"
 ---
 # <a name="modify-check-constraints"></a>Modifier des contraintes de validation
@@ -56,7 +56,7 @@ ms.locfileid: "68211842"
   
 4.  Effectuez l'une des actions décrites dans le tableau suivant :  
   
-    |Pour|Procédez comme suit|  
+    |À|Procédez comme suit|  
     |--------|------------------------|  
     |Modifier l'expression de contrainte|Tapez la nouvelle expression dans le champ **Expression** .|  
     |Renommer la contrainte|Tapez un nouveau nom dans le champ **Nom** .|  
@@ -69,7 +69,7 @@ ms.locfileid: "68211842"
   
 5.  Cliquez sur **Fermer**.  
   
-6.  Dans le menu **Fichier** , cliquez sur **Enregistrer**_nom_table_.  
+6.  Dans le menu **Fichier**, cliquez sur **Enregistrer**_nom de la table_.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour modifier une contrainte de validation**  

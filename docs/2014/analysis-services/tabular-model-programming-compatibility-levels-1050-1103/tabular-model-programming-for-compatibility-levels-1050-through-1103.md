@@ -1,5 +1,5 @@
 ---
-title: Programmation de modèle tabulaire | Microsoft Docs
+title: Programmation de modèles tabulaires | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2055602dae01e71ac320f5838181c8d8b08534a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757642"
 ---
 # <a name="tabular-model-programming"></a>Programmation de modèle tabulaire
@@ -27,14 +27,14 @@ ms.locfileid: "62757642"
 ## <a name="in-this-section"></a>Dans cette section  
  [Annotations CSDL pour Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
- [Présentation du modèle d’objet tabulaire](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
+ [Présentation du modèle d'objet tabulaire](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
- [Informations techniques de référence sur les annotations pour le décisionnel dans CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)  
+ [Référence technique pour les annotations BI au langage CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)  
   
  [Interface IMDEmbedded](imdembeddeddata-interface.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modélisation tabulaire &#40;SSAS tabulaire&#41;](../tabular-models/tabular-models-ssas.md)   
- [Générateur de modèles tabulaires &#40;SSAS tabulaire&#41;](../tabular-model-designer-ssas-tabular.md)  
+ [Modélisation tabulaire &#40;la&#41;tabulaire SSAS](../tabular-models/tabular-models-ssas.md)   
+ [Concepteur de modèles tabulaires &#40;&#41;SSAS tabulaire](../tabular-model-designer-ssas-tabular.md)  
   
   

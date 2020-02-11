@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : demande de schémas comme résultats à l’aide des options XMLDATA et XMLSCHEMA | Microsoft Docs'
+title: 'Exemple : demande de schémas comme résultats à l’aide des options XMLDATA et XMLSCHEMA | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a2a18dd84f5f0a83cc3c6f42bf664c178c1ba6b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637925"
 ---
-# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Exemple : demande de schémas comme résultats à l’aide des options XMLDATA et XMLSCHEMA
+# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Exemple : demande de schémas comme résultats à l'aide des options XMLDATA et XMLSCHEMA
   La requête suivante retourne le schéma XML-DATA qui décrit la structure du document.  
   
 ## <a name="example"></a>Exemple  
@@ -35,7 +35,7 @@ FOR XML RAW, XMLDATA
 GO  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Schema name="Schema1" xmlns="urn:schemas-microsoft-com:xml-data"   
@@ -52,7 +52,7 @@ GO
 ```  
   
 > [!NOTE]
->  <`Schema`> est déclaré en tant qu'espace de noms. Pour éviter les conflits d'espaces de noms lorsque plusieurs schémas XML-Data sont interrogés dans des requêtes FOR XML différentes, l'identificateur d'espace de noms, `Schema1` dans cet exemple, est modifié à chaque exécution de requête. L’identificateur d’espace de noms se compose de **Schema_n_** où **_n_** est un entier.  
+>  <`Schema`> est déclaré en tant qu'espace de noms. Pour éviter les conflits d'espaces de noms lorsque plusieurs schémas XML-Data sont interrogés dans des requêtes FOR XML différentes, l'identificateur d'espace de noms, `Schema1` dans cet exemple, est modifié à chaque exécution de requête. L’identificateur d’espace de noms est composé de **Schema_n_** où **_n_** est un entier.  
   
  En spécifiant l'option `XMLSCHEMA` , vous pouvez demander le schéma XSD pour le résultat.  
   
@@ -66,7 +66,7 @@ FOR XML RAW, XMLSCHEMA
 GO  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
@@ -101,7 +101,7 @@ FOR XML RAW, XMLSCHEMA ('urn:example.com')
 GO  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <xsd:schema targetNamespace="urn:example.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  

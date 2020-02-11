@@ -1,5 +1,5 @@
 ---
-title: 'Propriétés de l’étape du travail : Nouvelle étape du travail (Page Général) | Microsoft Docs'
+title: 'Propriétés de l’étape du travail : nouvelle étape du travail (page général) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510953"
 ---
 # <a name="job-step-properties-new-job-step-general-page"></a>Propriétés de l’étape du travail : Nouvelle étape du travail (page Général)
-  Utilisez cette page pour afficher et modifier les propriétés d’une étape d’un travail de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou pour définir une nouvelle étape de travail.  
+  Utilisez cette page pour afficher et modifier les propriétés d’une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] étape de travail de l’agent ou pour définir une nouvelle étape de travail.  
   
  Pour naviguer vers cette page, dans l’Explorateur d’objets [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , développez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, cliquez avec le bouton droit sur **Travaux**, cliquez sur **Nouvelles tâches**, sélectionnez la page **Étapes** et cliquez sur **Nouveau**. Vous pouvez également accéder à cette page en cliquant avec le bouton droit sur un travail dans l’Explorateur d’objets, en cliquant sur **Propriétés**, en sélectionnant la page **Étapes** et en cliquant sur **Nouveau**, **Insérer**ou **Modifier**.  
   
@@ -37,17 +37,17 @@ ms.locfileid: "62510953"
  **Sauvegarde de la base de données**  
  Définissez la base de données où est exécutée l'étape du travail. Cette option est disponible pour tous les types d'étapes de travail.  
   
- **Command**  
+ **Commande**  
  Définissez la commande exécutée par l'étape du travail.  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Options des étapes de travail Transact-SQL  
  **Ouvrir**  
  Charge la commande à partir d'un fichier.  
   
- **Tout sélectionner**  
+ **Sélectionner tout**  
  Sélectionne le texte de la commande.  
   
- **Copier**  
+ **Copy**  
  Copie le texte sélectionné dans le Presse-papiers.  
   
  **Coller**  
@@ -73,26 +73,26 @@ ms.locfileid: "62510953"
  **Ouvrir**  
  Charge la commande à partir d'un fichier.  
   
- **Tout sélectionner**  
+ **Sélectionner tout**  
  Sélectionne le texte de la commande.  
   
- **Copier**  
+ **Copy**  
  Copie le texte sélectionné.  
   
  **Coller**  
  Colle le contenu du Presse-papiers.  
   
 ## <a name="options-for-operating-system-cmdexec-job-steps"></a>Options des étapes de travail du système d'exploitation (CmdExec)  
- **Traiter le code de sortie d'une commande réussie**  
+ **Traiter le code de sortie d’une commande réussie**  
  Tapez le code de sortie renvoyé par la commande pour indiquer la réussite de son exécution.  
   
  **Ouvrir**  
  Charge la commande à partir d'un fichier.  
   
- **Tout sélectionner**  
+ **Sélectionner tout**  
  Sélectionne le texte de la commande.  
   
- **Copier**  
+ **Copy**  
  Copie le texte sélectionné.  
   
  **Coller**  
@@ -102,30 +102,30 @@ ms.locfileid: "62510953"
  **Ouvrir**  
  Charge le script à partir d'un fichier.  
   
- **Tout sélectionner**  
+ **Sélectionner tout**  
  Sélectionne le texte du script.  
   
- **Copier**  
+ **Copy**  
  Copie le texte sélectionné.  
   
  **Coller**  
  Colle le contenu du Presse-papiers.  
   
 ## <a name="options-for-replication-distributor-job-steps"></a>Options pour les étapes de travail Serveur de distribution de réplication  
- **Tout sélectionner**  
+ **Sélectionner tout**  
  Sélectionne le texte de la commande.  
   
- **Copier**  
+ **Copy**  
  Copie le texte sélectionné.  
   
  **Coller**  
  Colle le contenu du Presse-papiers.  
   
 ## <a name="options-for-replication-merge-job-steps"></a>Options pour les étapes de travail Fusion de réplication  
- **Tout sélectionner**  
+ **Sélectionner tout**  
  Sélectionne le texte de la commande.  
   
- **Copier**  
+ **Copy**  
  Copie le texte sélectionné.  
   
  **Coller**  
@@ -135,65 +135,65 @@ ms.locfileid: "62510953"
  **Sauvegarde de la base de données**  
  Base de données à utiliser pour l'étape du travail.  
   
- **Tout sélectionner**  
+ **Sélectionner tout**  
  Sélectionne le texte de la commande.  
   
- **Copier**  
+ **Copy**  
  Copie le texte sélectionné.  
   
  **Coller**  
  Colle le contenu du Presse-papiers.  
   
 ## <a name="options-for-replication-snapshot-job-steps"></a>Options pour les étapes de travail d'instantané de réplication  
- **Tout sélectionner**  
+ **Sélectionner tout**  
  Sélectionne le texte de la commande.  
   
- **Copier**  
+ **Copy**  
  Copie le texte sélectionné.  
   
  **Coller**  
  Colle le contenu du Presse-papiers.  
   
 ## <a name="options-for-replication-transaction-log-reader-job-steps"></a>Options pour les étapes de travail Lecteur du journal des transactions de réplication  
- **Tout sélectionner**  
+ **Sélectionner tout**  
  Sélectionne le texte de la commande.  
   
- **Copier**  
+ **Copy**  
  Copie le texte sélectionné.  
   
  **Coller**  
  Colle le contenu du Presse-papiers.  
   
 ## <a name="options-for-sql-server-analysis-services-command-job-steps"></a>Options pour les étapes de travail Commande SQL Server Analysis Services  
- **Server**  
+ **Serveur**  
  Sélectionnez le serveur sur lequel vous souhaitez exécuter l'étape du travail.  
   
  **Ouvrir**  
  Charge la commande à partir d'un fichier.  
   
- **Tout sélectionner**  
+ **Sélectionner tout**  
  Sélectionne le texte de la commande.  
   
- **Copier**  
+ **Copy**  
  Copie le texte sélectionné.  
   
  **Coller**  
  Colle le contenu du Presse-papiers.  
   
 ## <a name="options-for-sql-server-analysis-services-query-job-steps"></a>Options pour les étapes de travail Requête SQL Server Analysis Services  
- **Server**  
+ **Serveur**  
  Sélectionnez le serveur sur lequel vous souhaitez exécuter l'étape du travail.  
   
- **Base de données**  
+ **Sauvegarde de la base de données**  
  Base de données à utiliser pour l'étape du travail.  
   
  **Ouvrir**  
  Charge la commande à partir d'un fichier.  
   
- **Tout sélectionner**  
+ **Sélectionner tout**  
  Sélectionne le texte de la commande.  
   
- **Copier**  
+ **Copy**  
  Copie le texte sélectionné.  
   
  **Coller**  
@@ -205,7 +205,7 @@ ms.locfileid: "62510953"
  Spécifiez l'emplacement du package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) et la méthode d'authentification à utiliser. Les options suivantes sont disponibles quand vous sélectionnez cet onglet :  
   
  **Source du package**  
- Spécifiez l'emplacement où est stocké le package [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Choisissez une des options suivantes :  
+ Spécifiez l'emplacement où est stocké le package [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Choisissez l’un des éléments suivants :  
   
 -   **SQL Server**  
   
@@ -213,17 +213,18 @@ ms.locfileid: "62510953"
   
 -   **Magasin de packages SSIS**  
   
- **Server**  
+ **Serveur**  
  Tapez le nom du serveur où est stocké le package [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Cette option n’est disponible que si **SQL Server** ou **Magasin de packages SSIS** est spécifié dans **Source du package**.  
   
- **Utiliser l'authentification Windows**  
+ **Utiliser l’authentification Windows**  
  Les connexions à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent l'authentification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- **Utiliser l'authentification SQL Server**  
+ **Utiliser l’authentification SQL Server**  
  Les connexions à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si vous sélectionnez cette méthode d’authentification, entrez le **Nom d’utilisateur** et le **Mot de passe**appropriés.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] L’authentification est fournie pour la compatibilité descendante. Pour une sécurité renforcée, utilisez l'authentification Windows dans la mesure du possible.  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est fournie dans un souci de compatibilité descendante. Pour une sécurité renforcée, utilisez l'authentification Windows dans la mesure du possible.  
   
  **Package**  
  Tapez l'emplacement du package.  
@@ -240,7 +241,7 @@ ms.locfileid: "62510953"
  **Ajouter**  
  Ajoute un fichier de configuration pour le package.  
   
- **Supprimer**  
+ **Remove**  
  Supprime un fichier de configuration pour le package.  
   
  **Monter**  
@@ -258,7 +259,7 @@ ms.locfileid: "62510953"
  **Ajouter**  
  Ajoute un fichier de commandes.  
   
- **Supprimer**  
+ **Remove**  
  Supprime le fichier de commandes sélectionné.  
   
  **Monter**  
@@ -282,16 +283,16 @@ ms.locfileid: "62510953"
 ### <a name="execution-options-tab"></a>Onglet Options d'exécution  
  Sous cet onglet, vous pouvez consulter ou modifier les options d'exécution pour le package.  
   
- **Mettre le package en échec en cas d'avertissements de validation**  
+ **Échec du package sur les avertissements de validation**  
  Sélectionnez cette option pour faire échouer l'exécution du package en cas d'avertissements de validation.  
   
- **Valider le package sans l'exécuter**  
+ **Valider le package sans l’exécuter**  
  Sélectionnez cette option pour que l'étape du travail valide le package, mais ne l'exécute pas.  
   
- **Maximum d'exécutables simultanés**  
+ **Nombre maximal d’exécutables simultanés**  
  Nombre maximal de fichiers exécutables pouvant être exécutés en même temps.  
   
- **Activer les points de contrôle de package**  
+ **Activer les points de contrôle du package**  
  Sélectionnez cette option pour que l'étape du travail utilise les points de vérification du package.  
   
  **Fichier de point de contrôle**  
@@ -300,7 +301,7 @@ ms.locfileid: "62510953"
  **...**  
  Naviguez jusqu'au fichier de point de vérification du package.  
   
- **Substituer les options de redémarrage**  
+ **Remplacer les options de redémarrage**  
  Sélectionnez cette option pour spécifier les options de redémarrage de cette étape de travail qui sont différentes des options de redémarrage spécifiées dans le package.  
   
  **Option de redémarrage**  
@@ -315,7 +316,7 @@ ms.locfileid: "62510953"
  **Chaîne de configuration**  
  Tapez la chaîne de configuration du module fournisseur d'informations.  
   
- **Supprimer**  
+ **Remove**  
  Supprime le module fournisseur d'informations.  
   
 ### <a name="set-values-tab"></a>Onglet Valeurs définies  
@@ -327,7 +328,7 @@ ms.locfileid: "62510953"
  **Valeur**  
  Permet de consulter ou de modifier la valeur de la propriété.  
   
- **Supprimer**  
+ **Remove**  
  Supprime la propriété.  
   
 ### <a name="verification-tab"></a>Onglet Vérification  
@@ -342,13 +343,13 @@ ms.locfileid: "62510953"
  **Build**  
  Tapez le numéro de build du package.  
   
- **Vérifier l'ID de package**  
+ **Vérifier l’ID de package**  
  Exécute uniquement les packages dotés d'un ID spécifique. Lorsque cette option est sélectionnée, l'étape du travail échoue si le package n'a pas l'ID spécifié.  
   
  **ID du package**  
  Tapez l'ID du package.  
   
- **Vérifier l'ID de version**  
+ **Vérifier l’ID de version**  
  Exécute uniquement les packages dotés d'un ID de version spécifique. Lorsque cette option est sélectionnée, l'étape du travail échoue si le package n'a pas l'ID de version spécifié.  
   
  **ID de version**  
@@ -357,7 +358,7 @@ ms.locfileid: "62510953"
 ### <a name="command-line-tab"></a>Onglet Ligne de commande  
  Spécifiez les options de ligne de commande du package. Lorsque vous sélectionnez cet onglet, les options suivantes sont disponibles.  
   
- **Restaurer les options d'origine**  
+ **Restaurer les options d’origine**  
  Utilise les options de ligne de commande définies dans cette boîte de dialogue.  
   
  **Modifier la ligne de commande manuellement**  
@@ -368,7 +369,7 @@ ms.locfileid: "62510953"
   
 ## <a name="see-also"></a>Voir aussi  
  [Gérer les étapes de travail](manage-job-steps.md)   
- [Travaux de l’Agent SQL Server pour les Packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)   
+ [Travaux de SQL Server Agent pour les packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)   
  [Administration de l’Agent de réplication](../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

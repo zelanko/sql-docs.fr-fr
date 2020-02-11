@@ -1,5 +1,5 @@
 ---
-title: Exemple de comptage de propriété (VC ++) | Microsoft Docs
+title: Count, exemple de propriété (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 73557703a1375128a141de8194929f9284b86930
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919332"
 ---
 # <a name="count-property-example-vc"></a>Count, exemple de propriété (VC++)
-Cet exemple montre la [nombre](../../../ado/reference/ado-api/count-property-ado.md) propriété avec deux collections dans le ***employé*** base de données. La propriété obtient le nombre d’objets dans chaque collection et définit la limite supérieure pour les boucles qui énumèrent ces collections.  
+Cet exemple illustre la propriété [Count](../../../ado/reference/ado-api/count-property-ado.md) avec deux collections dans la base de données ***Employee*** . La propriété obtient le nombre d’objets dans chaque collection et définit la limite supérieure pour les boucles qui énumèrent ces collections.  
   
 ```  
 // BeginCountCpp.cpp  

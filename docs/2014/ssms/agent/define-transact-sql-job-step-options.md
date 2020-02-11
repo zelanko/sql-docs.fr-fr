@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 769e4cb9298ce2a92f7200d9e04743d6b16f842d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62523882"
 ---
 # <a name="define-transact-sql-job-step-options"></a>Définir les options d'une étape de travail Transact-SQL
-  Cette rubrique explique comment définir les options pour les étapes de travail [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de SQL Server Management Objects.  
+  Cette rubrique explique comment définir les options des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] étapes [!INCLUDE[tsql](../../includes/tsql-md.md)] de travail de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] l’agent [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dans à l’aide de ou SQL Server Management Objects.  
   
  **Dans cette rubrique**  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62523882"
   
      [Sécurité](#Security)  
   
--   **Pour définir les options d'une étape de travail Transact-SQL, avec :** ,  
+-   **Pour définir les options d’une étape de travail Transact-SQL à l’aide de :** ,  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62523882"
   
 2.  Cliquez successivement sur la page **Étapes** , sur une étape de travail et sur **Modifier**.  
   
-3.  Dans la boîte de dialogue **Propriétés de l'étape de travail** , confirmez le type de travail **Script Transact-SQL (TSQL)** , puis sélectionnez la page **Avancé** .  
+3.  Dans la boîte de dialogue **Propriétés de l'étape de travail** , confirmez le type de travail **Script Transact-SQL (TSQL)**, puis sélectionnez la page **Avancé** .  
   
 4.  Définissez l'action à exécuter si le travail aboutit en sélectionnant l'option appropriée dans la liste **Action en cas de succès** .  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62523882"
   
 9. Si vous êtes membre du rôle de serveur fixe **sysadmin** et voulez exécuter cette étape de travail avec une connexion SQL différente, sélectionnez la connexion SQL dans la liste **Exécuter en tant qu'utilisateur** .  
   
-##  <a name="SMO"></a> À l’aide de SQL Server Management Objects  
+##  <a name="SMO"></a>Utilisation de SQL Server Management Objects  
  **Pour définir les options d'une étape de travail Transact-SQL**  
   
  Utilisez la classe `JobStep` à l'aide d'un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell.  

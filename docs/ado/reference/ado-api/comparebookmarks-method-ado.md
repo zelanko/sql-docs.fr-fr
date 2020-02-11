@@ -18,10 +18,10 @@ ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0d737c2f031fa3ba630eabb7e52dff0e056c3390
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919599"
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks, méthode (ADO)
@@ -35,30 +35,30 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- Retourne un [CompareEnum](../../../ado/reference/ado-api/compareenum.md) valeur qui indique la position de ligne relative de deux enregistrements représentée par leur signet.  
+ Retourne une valeur [CompareEnum](../../../ado/reference/ado-api/compareenum.md) qui indique la position de ligne relative de deux enregistrements représentés par leurs signets.  
   
 #### <a name="parameters"></a>Paramètres  
- *Bookmark1*  
- Le signet de la première ligne.  
+ *Signet1*  
+ Signet de la première ligne.  
   
- *Bookmark2*  
- Le signet de la deuxième ligne.  
+ *Signet2*  
+ Signet de la deuxième ligne.  
   
 ## <a name="remarks"></a>Notes  
- Les signets doivent s’appliquer à la même [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet, ou un **Recordset** objet et ses [clone](../../../ado/reference/ado-api/clone-method-ado.md). Vous ne pouvez pas comparer correctement des signets à partir de différents **Recordset** objets, même si elles ont été créées à partir de la même source ou commande. Ni vous pouvez comparer des signets d’un **Recordset** objet dont le fournisseur sous-jacent ne prend pas en charge les comparaisons.  
+ Les signets doivent s’appliquer au même objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) , ou à un objet **Recordset** et à son [clone](../../../ado/reference/ado-api/clone-method-ado.md). Vous ne pouvez pas comparer de manière fiable des signets de différents objets **Recordset** , même s’ils ont été créés à partir de la même source ou commande. Vous ne pouvez pas non plus comparer les signets d’un objet **Recordset** dont le fournisseur sous-jacent ne prend pas en charge les comparaisons.  
   
- Un signet identifie de façon unique une ligne dans un **Recordset** objet. Utilisez le [signet](../../../ado/reference/ado-api/bookmark-property-ado.md) propriété de la ligne actuelle pour obtenir son signet.  
+ Un signet identifie de façon unique une ligne dans un objet **Recordset** . Utilisez la propriété [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) de la ligne actuelle pour obtenir son signet.  
   
- Étant donné que le type de données d’un signet est spécifique à chaque fournisseur, ADO expose en tant qu’un **Variant**. Par exemple, les signets de SQL Server sont de type DBTYPE_R8 (**Double**). ADO expose ce type comme un **Variant** avec un sous-type de **Double**.  
+ Étant donné que le type de données d’un signet est spécifique à chaque fournisseur, ADO l’expose en tant que **variante**. Par exemple, SQL Server signets sont de type DBTYPE_R8 (**double**). ADO expose ce type en tant que **Variant** avec un sous-type de **double**.  
   
- Lorsque vous comparez des signets, ADO ne tente pas de n’importe quel type de contrainte. Les valeurs sont simplement transmises au fournisseur où la comparaison se produit. Si les signets passés à la **CompareBookmarks** méthode sont stockées dans des variables de types différents, il peut générer l’erreur d’incompatibilité de type suivante : « Arguments sont de type incorrect, sont en dehors des limites acceptables ou sont en conflit avec eux. »  
+ Lors de la comparaison de signets, ADO ne tente aucun type de contrainte. Les valeurs sont simplement transmises au fournisseur où la comparaison est effectuée. Si les signets passés à la méthode **CompareBookmarks** sont stockés dans des variables de types différents, il peut générer l’erreur d’incompatibilité de type suivante : « les arguments sont d’un type incorrect, sont en dehors de la plage acceptable ou sont en conflit les uns avec les autres. »  
   
- Signet qui n’est pas valide ou mal formée provoque une erreur.  
+ Un signet qui n’est pas valide ou de forme incorrecte génère une erreur.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [CompareBookmarks, méthode-exemple (VB)](../../../ado/reference/ado-api/comparebookmarks-method-example-vb.md)   
- [CompareBookmarks, méthode-exemple (VC ++)](../../../ado/reference/ado-api/comparebookmarks-method-example-vc.md)   
+ [CompareBookmarks, exemple de méthode (VB)](../../../ado/reference/ado-api/comparebookmarks-method-example-vb.md)   
+ [CompareBookmarks, exemple de méthode (VC + +)](../../../ado/reference/ado-api/comparebookmarks-method-example-vc.md)   
  [Bookmark, propriété (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)

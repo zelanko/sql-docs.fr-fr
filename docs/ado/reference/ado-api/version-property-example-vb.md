@@ -1,5 +1,5 @@
 ---
-title: Exemple de propriété version (VB) | Microsoft Docs
+title: Version, exemple de propriété (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,24 +15,24 @@ ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 023ee009831cb3576691f0af5dfb85752d51fcc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938746"
 ---
 # <a name="version-property-example-vb"></a>Version, exemple de propriété (VB)
-Cet exemple utilise le [Version](../../../ado/reference/ado-api/version-property-ado.md) propriété d’un [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet pour afficher la version actuelle de ADO. Il utilise également plusieurs propriétés dynamiques pour afficher :  
+Cet exemple utilise la propriété [version](../../../ado/reference/ado-api/version-property-ado.md) d’un objet [Connection](../../../ado/reference/ado-api/connection-object-ado.md) pour afficher la version ADO actuelle. Il utilise également plusieurs propriétés dynamiques pour afficher :  
   
--   le nom actuel de SGBD et la version.  
+-   nom et version du SGBD actuel.  
   
 -   Version de OLE DB.  
   
--   Nom du fournisseur et la version.  
+-   nom et version du fournisseur.  
   
--   Version d’ODBC.  
+-   Version ODBC.  
   
--   Nom du pilote ODBC et la version.  
+-   Nom et version du pilote ODBC.  
   
 ```  
 'BeginVersionVB  
@@ -78,5 +78,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Version, propriété (ADO)](../../../ado/reference/ado-api/version-property-ado.md)

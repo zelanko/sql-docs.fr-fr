@@ -1,5 +1,5 @@
 ---
-title: EOS et LineSeparator, propriétés et SkipLine, méthode, exemple (VB) | Microsoft Docs
+title: Propriétés EOS et LineSeparator et SkipLine, exemple de méthode (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d2a9c5f4f07b22f11869a21fc4855f4ae21b25c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933060"
 ---
-# <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS et LineSeparator, propriétés et SkipLine, méthode, exemple (VB)
-Cet exemple montre comment manipuler le texte ligne par ligne le flux de données à la fois. Effet de modifier le séparateur de ligne à partir de la valeur par défaut retour chariot / (**adCRLF**) à simplement le saut de ligne (**adLF**) ou un retour chariot (**adCR simple**) s’affiche.  
+# <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>Propriétés EOS et LineSeparator et SkipLine, exemple de méthode (VB)
+Cet exemple montre comment manipuler des flux de texte une ligne à la fois. L’effet de la modification du séparateur de lignes à partir du retour chariot/saut de ligne par défaut (**adCRLF**) en simple saut de ligne (**adLF**) ou retour chariot (**ADCR**) est affiché.  
   
 ```  
 'BeginSkipLineVB  

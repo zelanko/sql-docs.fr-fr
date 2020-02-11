@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637992"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Créer des variables et des colonnes de type de données XML
-  Le type de données `xml` est un type de données intégré à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], quelque peu similaire aux autres types intégrés, tels que `int` et `varchar`. Comme avec d’autres types intégrés, vous pouvez utiliser la `xml` de type de données comme type de colonne lorsque vous créez une table sous la forme d’un type de variable, un type de paramètre, un type de retour de fonction, ou dans [CAST et CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  
+  Le type de données `xml` est un type de données intégré à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], quelque peu similaire aux autres types intégrés, tels que `int` et `varchar`. Comme avec les autres types intégrés, vous pouvez utiliser le `xml` type de données comme type de colonne lorsque vous créez une table en tant que type de variable, type de paramètre, type de retour de fonction ou en [Cast et Convert](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
 ## <a name="creating-columns-and-variables"></a>Création de variables et de colonnes  
  Pour créer une colonne de type `xml` dans le cadre d’une table, utilisez une instruction `CREATE TABLE` , comme illustré dans l’exemple suivant :  
@@ -66,7 +66,8 @@ CREATE TABLE T (XmlColumn xml
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend également en charge les contraintes NULL et NOT NULL sur des colonnes de type `xml`. Exemple :  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend également en charge les contraintes NULL et NOT NULL sur des colonnes de type `xml`. Par exemple :  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  
@@ -127,9 +128,9 @@ INSERT INTO T values(1,'<Product />')
 ```  
   
 ## <a name="same-or-different-table"></a>Table identique ou différente  
- Un `xml` colonne de type de données peut être créée dans une table qui contient d’autres colonnes relationnelles ou dans une table distincte dotée d’une relation de clé étrangère avec une table principale.  
+ Une `xml` colonne de type de données peut être créée dans une table qui contient d’autres colonnes relationnelles ou dans une table distincte avec une relation de clé étrangère avec une table principale.  
   
- Créer un `xml` colonne de type de données dans la même table lorsqu’une des conditions suivantes est vraie :  
+ Créez une `xml` colonne de type de données dans la même table lorsque l’une des conditions suivantes est remplie :  
   
 -   Votre application récupère les données dans la colonne XML sans exiger qu'un index XML existe dans la colonne XML.  
   

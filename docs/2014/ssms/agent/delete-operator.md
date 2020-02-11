@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c8d483b6ed67c67b901fcd25a4eeb76a550ce385
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666600"
 ---
 # <a name="delete-operator"></a>Supprimer l'opérateur
@@ -26,7 +26,7 @@ ms.locfileid: "62666600"
  **Objet à supprimer**  
  Indique l'opérateur à supprimer.  
   
- **Réattribuer à**  
+ **Réassigner à**  
  Réattribue les notifications pour l'opérateur à supprimer.  
   
  **Propriétés**  

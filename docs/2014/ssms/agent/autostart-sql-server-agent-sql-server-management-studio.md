@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0088ef5797b258d3c765a4548e3b1cae9d5e0a14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473005"
 ---
-# <a name="autostart-sql-server-agent-sql-server-management-studio"></a>Démarrer automatiquement l'Agent SQL Server (SQL Server Management Studio)
-  Cette rubrique explique comment configurer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour qu'il redémarre automatiquement en cas d'arrêt inopiné dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+# <a name="autostart-sql-server-agent-sql-server-management-studio"></a>Démarrer automatiquement SQL Server Agent (SQL Server Management Studio)
+  Cette rubrique explique comment configurer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’agent pour qu’il redémarre automatiquement s’il doit s’arrêter [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]de façon inattendue dans.  
   
  **Dans cette rubrique**  
   
@@ -31,7 +31,7 @@ ms.locfileid: "62473005"
   
      [Sécurité](#Security)  
   
--   [Pour configurer SQL Server Agent en vue d'un redémarrage automatique, à l'aide de SQL Server Management Studio](#SSMSProcedure)  
+-   [Pour configurer le redémarrage automatique de SQL Server Agent à l’aide de SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62473005"
   
 -   Changer les quotas de mémoire d'un processus (SeIncreaseQuotaPrivilege)  
   
- Pour plus d’informations sur les autorisations Windows requises pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte de service de l’Agent, consultez [sélectionner un compte pour le Service SQL Server Agent](select-an-account-for-the-sql-server-agent-service.md) et [configurer les comptes de Service Windows et Autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Pour plus d’informations sur les autorisations Windows requises pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le compte de service de l’agent, consultez [Sélectionner un compte pour le service SQL Server Agent](select-an-account-for-the-sql-server-agent-service.md) et [configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   

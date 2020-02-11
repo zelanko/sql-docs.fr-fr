@@ -1,5 +1,5 @@
 ---
-title: Ajout d’une étendue procédure stockée pour SQL Server | Microsoft Docs
+title: Ajout d’une procédure stockée étendue à SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,23 +15,23 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3a5e5ab2d0dba0d7d39fcf3223f0aeec5ab6a058
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62512347"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>Ajout d'une procédure stockée étendue à SQL Server
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Utilisez plutôt l’intégration du CLR.  
   
- Une DLL qui contient des fonctions de procédure stockée étendue joue le rôle d'extension pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour installer la DLL, copiez le fichier vers un répertoire, tel que celui qui contient la norme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fichiers DLL (C:\Program Files\Microsoft SQL Server\MSSQL12.0. *x*\MSSQL\Binn par défaut).  
+ Une DLL qui contient des fonctions de procédure stockée étendue joue le rôle d'extension pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour installer la DLL, copiez le fichier dans un répertoire, tel que celui qui contient les fichiers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dll standard (C:\Program Files\Microsoft SQL Server\MSSQL12.0.* x*\MSSQL\Binn par défaut).  
   
  Une fois la DLL de procédure stockée étendue copiée vers le serveur, un administrateur système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit inscrire dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chaque fonction de procédure stockée étendue dans la DLL. Vous devez pour cela utiliser la procédure stockée système sp_addextendedproc.  
   
 > [!IMPORTANT]  
->  Il est conseillé à l'administrateur système de vérifier minutieusement la procédure stockée étendue afin de s'assurer qu'elle ne contient aucun code nuisible ou malveillant avant de l'ajouter au serveur et d'accorder à d'autres utilisateurs des autorisations d'exécution.  Validez toutes les entrées utilisateur. Ne concaténez pas les entrées d’utilisateur avant de valider. N'exécutez jamais une commande élaborée à partir d'une entrée utilisateur non validée.  
+>  Il est conseillé à l'administrateur système de vérifier minutieusement la procédure stockée étendue afin de s'assurer qu'elle ne contient aucun code nuisible ou malveillant avant de l'ajouter au serveur et d'accorder à d'autres utilisateurs des autorisations d'exécution.  Validez toutes les entrées utilisateur. Ne concaténez pas les entrées utilisateur avant de les valider. N'exécutez jamais une commande élaborée à partir d'une entrée utilisateur non validée.  
   
  Le premier paramètre de sp_addextendedproc spécifie le nom de la fonction et le deuxième paramètre spécifie le nom de la DLL dans laquelle cette fonction réside. Il est recommandé de spécifier le chemin complet d'accès à la DLL.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62512347"
 sp_addextendedproc 'xp_hello', 'c:\Program Files\Microsoft SQL Server\MSSQL12.0.MSSQLSERVER\MSSQL\Binn\xp_hello.dll';  
 ```  
   
- Si le nom de la fonction spécifié dans `sp_addextendedproc` ne correspond pas exactement au nom de fonction dans la DLL, le nouveau nom sera inscrit dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais le nom ne sera pas utilisable. Par exemple, bien que `xp_Hello` est inscrit comme un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] située dans procédure stockée étendue `xp_hello.dll`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne sera pas en mesure de trouver la fonction dans la DLL si vous utilisez `xp_Hello` pour appeler la fonction ultérieurement.  
+ Si le nom de la fonction spécifié dans `sp_addextendedproc` ne correspond pas exactement au nom de fonction dans la DLL, le nouveau nom sera inscrit dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais le nom ne sera pas utilisable. Par exemple, même `xp_Hello` si est inscrit en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tant que procédure stockée `xp_hello.dll`étendue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] située dans, ne pourra pas trouver la fonction dans la dll si vous `xp_Hello` utilisez pour appeler la fonction ultérieurement.  
   
 ```  
 --Register the function (xp_hello) with an initial upper case  

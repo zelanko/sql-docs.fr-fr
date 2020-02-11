@@ -20,10 +20,10 @@ ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 4d0feb6b3254ddff640a41de8e0b833739225761
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73168770"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73168770"
 
   Hache un mot de passe et compare le hachage au hachage d'un mot de passe existant. PWDCOMPARE peut être utilisé pour rechercher les mots de passe de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vides ou les mots de passe faibles courants.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,7 +56,7 @@ PWDCOMPARE ( 'clear_text_password'
 >  Ce paramètre est fourni pour des raisons de compatibilité descendante, mais est ignoré car les objets blob de hachage de mot de passe contiennent maintenant leurs propres descriptions de version. [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]  
   
 ## <a name="return-types"></a>Types de retour  
- **Int**  
+ **int**  
   
  Renvoie 1 si le hachage de *clear_text_password* correspond au paramètre *password_hash*, et 0 si ce n’est pas le cas.  
   
@@ -72,7 +72,7 @@ PWDCOMPARE ( 'clear_text_password'
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-identifying-logins-that-have-no-passwords"></a>A. Identification de comptes de connexion qui n'ont pas de mots de passe  
+### <a name="a-identifying-logins-that-have-no-passwords"></a>R. Identification de comptes de connexion qui n'ont pas de mots de passe  
  L'exemple suivant identifie les comptes de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui n'ont pas de mots de passe.  
   
 ```  

@@ -18,10 +18,10 @@ ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d0bd62fe3462441d4eab9d3d89bce20cf1144131
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72909557"
 ---
 # <a name="sp_change_log_shipping_secondary_database-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "72909557"
 
   Modifie les paramètres de la base de données secondaire.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,11 +51,11 @@ sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @restore_delay = ] 'restore_delay'` la durée, en minutes, pendant laquelle le serveur secondaire attend avant de restaurer un fichier de sauvegarde donné. *restore_delay* est de **type int** et ne peut pas avoir la valeur null. La valeur par défaut est 0.  
+`[ @restore_delay = ] 'restore_delay'`Durée, en minutes, pendant laquelle le serveur secondaire attend avant de restaurer un fichier de sauvegarde donné. *restore_delay* est de **type int** et ne peut pas avoir la valeur null. La valeur par défaut est 0.  
   
-`[ @restore_all = ] 'restore_all'` si la valeur est définie sur 1, le serveur secondaire restaure toutes les sauvegardes du journal des transactions disponibles lors de l’exécution du travail de restauration. Dans le cas contraire, le serveur s'arrête une fois qu'un fichier a été restauré. *restore_all* est de type **bit** et ne peut pas être null.  
+`[ @restore_all = ] 'restore_all'`Si la valeur est définie sur 1, le serveur secondaire restaure toutes les sauvegardes du journal des transactions disponibles lors de l’exécution du travail de restauration. Dans le cas contraire, le serveur s'arrête une fois qu'un fichier a été restauré. *restore_all* est de type **bit** et ne peut pas être null.  
   
-`[ @restore_mode = ] 'restore_mode'` le mode de restauration de la base de données secondaire.  
+`[ @restore_mode = ] 'restore_mode'`Mode de restauration de la base de données secondaire.  
   
  0 = restaurer le journal avec NORECOVERY.  
   
@@ -63,27 +63,27 @@ sp_change_log_shipping_secondary_database
   
  *Restore* est de type **bit** et ne peut pas être null.  
   
-`[ @disconnect_users = ] 'disconnect_users'` si la valeur 1 est définie, les utilisateurs sont déconnectés de la base de données secondaire lorsqu’une opération de restauration est effectuée. Valeur par défaut = 0. *disconnect_users* est de type **bit** et ne peut pas être null.  
+`[ @disconnect_users = ] 'disconnect_users'`Si la valeur est définie sur 1, les utilisateurs sont déconnectés de la base de données secondaire lors de l’exécution d’une opération de restauration. Valeur par défaut = 0. *disconnect_users* est de type **bit** et ne peut pas être null.  
   
-`[ @block_size = ] 'block_size'` la taille, en octets, utilisée comme taille de bloc pour l’unité de sauvegarde. *block_size* est de **type int** avec la valeur par défaut-1.  
+`[ @block_size = ] 'block_size'`Taille, en octets, utilisée comme taille de bloc pour l’unité de sauvegarde. *block_size* est de **type int** avec la valeur par défaut-1.  
   
-`[ @buffer_count = ] 'buffer_count'` le nombre total de mémoires tampons utilisées par l’opération de sauvegarde ou de restauration. *buffer_count* est de **type int** avec la valeur par défaut-1.  
+`[ @buffer_count = ] 'buffer_count'`Nombre total de mémoires tampons utilisées par l’opération de sauvegarde ou de restauration. *buffer_count* est de **type int** avec la valeur par défaut-1.  
   
-`[ @max_transfer_size = ] 'max_transfer_size'` la taille, en octets, de la demande d’entrée ou de sortie maximale émise par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’unité de sauvegarde. *max_transfersize* est de **type int** et peut avoir la valeur null.  
+`[ @max_transfer_size = ] 'max_transfer_size'`Taille, en octets, de la demande d’entrée ou de sortie maximale émise par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’unité de sauvegarde. *max_transfersize* est de **type int** et peut avoir la valeur null.  
   
-`[ @restore_threshold = ] 'restore_threshold'` le nombre de minutes autorisées à s’écouler entre les opérations de restauration avant la génération d’une alerte. *restore_threshold* est de **type int** et ne peut pas avoir la valeur null.  
+`[ @restore_threshold = ] 'restore_threshold'`Nombre de minutes autorisées à s’écouler entre les opérations de restauration avant la génération d’une alerte. *restore_threshold* est de **type int** et ne peut pas avoir la valeur null.  
   
-`[ @threshold_alert = ] 'threshold_alert'` est l’alerte à déclencher lorsque le seuil de restauration est dépassé. *threshold_alert* est de **type int**, avec 14420 comme valeur par défaut.  
+`[ @threshold_alert = ] 'threshold_alert'`Alerte à déclencher lorsque le seuil de restauration est dépassé. *threshold_alert* est de **type int**, avec 14420 comme valeur par défaut.  
   
-`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` spécifie si une alerte est déclenchée lorsque *restore_threshold*est dépassé. 1 = activées ; 0 = désactivées. *threshold_alert_enabled* est de type **bit** et ne peut pas être null.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'`Spécifie si une alerte sera déclenchée lorsque *restore_threshold*est dépassé. 1 = activées ; 0 = désactivées. *threshold_alert_enabled* est de type **bit** et ne peut pas être null.  
   
-`[ @history_retention_period = ] 'history_retention_period'` est la durée en minutes pendant laquelle l’historique est conservé. *history_retention_period* est de **type int**. La valeur 1440 est utilisée si aucun n’est spécifié.  
+`[ @history_retention_period = ] 'history_retention_period'`Durée en minutes pendant laquelle l’historique est conservé. *history_retention_period* est de **type int**. La valeur 1440 est utilisée si aucun n’est spécifié.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  **sp_change_log_shipping_secondary_database** doit être exécuté à partir de la base de données **Master** sur le serveur secondaire. Elle effectue les actions suivantes :  

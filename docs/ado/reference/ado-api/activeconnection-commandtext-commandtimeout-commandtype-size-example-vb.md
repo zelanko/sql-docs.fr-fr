@@ -1,5 +1,5 @@
 ---
-title: Stockées procédure exemple (VB) | Microsoft Docs
+title: Exemple de propriétés de procédure stockée (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,14 +19,14 @@ ms.assetid: dade4531-0bcc-4a52-8f86-b110ba2a3f9d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd91fdf0321d16e5b7d498d5ee814006a2e3419d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921640"
 ---
-# <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vb"></a>ActiveConnection, CommandText, CommandTimeout, CommandType, la taille et Direction, propriétés-exemple (VB)
-Cet exemple utilise le [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [taille](../../../ado/reference/ado-api/size-property-ado-parameter.md), et [Direction](../../../ado/reference/ado-api/direction-property.md) propriétés pour exécuter une procédure stockée.  
+# <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vb"></a>ActiveConnection, CommandText, CommandTimeout, CommandType, size et direction, exemple de propriétés (VB)
+Cet exemple utilise les propriétés [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [Size](../../../ado/reference/ado-api/size-property-ado-parameter.md)et [direction](../../../ado/reference/ado-api/direction-property.md) pour exécuter une procédure stockée.  
   
 ```  
 'BeginActiveConnectionVB  
@@ -135,13 +135,13 @@ End Sub
   
 ## <a name="see-also"></a>Voir aussi  
  [ActiveCommand, propriété (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Objet Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Command, objet (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [CommandText, propriété (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [CommandTimeout, propriété (ADO)](../../../ado/reference/ado-api/commandtimeout-property-ado.md)   
  [CommandType, propriété (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
- [Objet Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Propriété direction](../../../ado/reference/ado-api/direction-property.md)   
- [Objet de paramètre](../../../ado/reference/ado-api/parameter-object.md)   
- [Enregistrement objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Direction, propriété](../../../ado/reference/ado-api/direction-property.md)   
+ [Parameter (objet)](../../../ado/reference/ado-api/parameter-object.md)   
+ [Record, objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Size, propriété (paramètre ADO)](../../../ado/reference/ado-api/size-property-ado-parameter.md)

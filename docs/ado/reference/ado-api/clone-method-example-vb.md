@@ -15,14 +15,14 @@ ms.assetid: 64cb1753-e074-4a2d-8b74-7c35f3f6f64d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 05bd5c203b252909ad4707681aff49181bfde162
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920000"
 ---
 # <a name="clone-method-example-vb"></a>Clone, exemple de méthode (VB)
-Cet exemple utilise le [Clone](../../../ado/reference/ado-api/clone-method-ado.md) méthode pour créer des copies d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) puis permet à l’utilisateur de positionner le pointeur d’enregistrement de chaque copie indépendamment.  
+Cet exemple utilise la méthode [clone](../../../ado/reference/ado-api/clone-method-ado.md) pour créer des copies d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) , puis permet à l’utilisateur de positionner le pointeur d’enregistrement de chaque copie indépendamment.  
   
 ```  
 'BeginCloneVB  

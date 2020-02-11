@@ -13,16 +13,16 @@ ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e2d1c30546a8466ba9950f31cffdfb9447bd89ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923387"
 ---
 # <a name="xml-persistence-format"></a>Format de persistance XML
-ADO utilise l’encodage UTF-8 pour le flux de données XML.  
+ADO utilise l’encodage UTF-8 pour le flux XML qu’il conserve.  
   
- Le format XML ADO est divisé en deux sections, une section de schéma suivie de la section de données. Voici un exemple de fichier XML pour la table Shippers à partir de la base de données Northwind. Différentes parties du document XML sont présentées à l’exemple suivant.  
+ Le format XML ADO est divisé en deux sections : une section de schéma suivie de la section de données. Voici un exemple de fichier XML pour la table Shippers de la base de données Northwind. Les différentes parties du code XML sont présentées dans l’exemple ci-dessous.  
   
 ## <a name="remarks"></a>Notes  
   
@@ -64,11 +64,11 @@ xmlns:z="#RowsetSchema">
 </xml>  
 ```  
   
- Le schéma montre les déclarations d’espaces de noms, de la section de schéma et de la section de données. La section de schéma contient des définitions de ligne, n° messager, CompanyName et téléphone.  
+ Le schéma montre les déclarations des espaces de noms, de la section de schéma et de la section de données. La section schéma contient des définitions pour Row, ShipperID, CompanyName et Phone.  
   
- Définitions de schéma est conforme à la [spécification W3C XML-Data](http://www.w3.org/TR/1998/NOTE-XML-data/) et peut être entièrement validé (bien que la validation ne se produira pas dans Internet Explorer 5). XML-Data est actuellement le seul format de schéma pour la persistance de jeu d’enregistrements.  
+ Les définitions de schéma sont conformes à la [spécification de données XML W3C](http://www.w3.org/TR/1998/NOTE-XML-data/) et peuvent être entièrement validées (même si la validation ne se produit pas dans Internet Explorer 5). XML-Data est actuellement le seul format de schéma pris en charge pour la persistance du Recordset.  
   
- La section de données a trois lignes contenant des informations à leur sujet. Pour un ensemble de lignes vide, la section de données peut être vide, mais le \<rs : données > balises doivent être présents. Sans données, vous pouvez écrire la balise simplement \<rs : data / >. N’importe quelle balise précédé de « rs » indique qu’il est dans l’espace de noms défini par urn : schemas-microsoft-rowset.  
+ La section des données comporte trois lignes contenant des informations sur les expéditeurs. Pour un ensemble de lignes vide, la section des données peut être vide \<, mais les balises RS : Data> doivent être présentes. Sans données, vous pouvez écrire la balise sténographique comme simple \<RS : data/>. Toute balise précédée de « RS » indique qu’elle se trouve dans l’espace de noms défini par urn : schemas-microsoft-com : rowset.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Persistance des enregistrements au format XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

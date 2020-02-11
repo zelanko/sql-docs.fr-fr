@@ -18,13 +18,13 @@ ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 6613c4e94ce8c802e45fe003ac73e51b3f38072b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68032812"
 ---
-# <a name="spsrvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
+# <a name="sp_srvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Affiche les autorisations d'un rôle serveur fixe.  
@@ -32,7 +32,7 @@ ms.locfileid: "68032812"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,20 +42,20 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @srvrolename = ] 'role'` Est le nom du rôle serveur fixe pour lequel les autorisations sont retournées. *rôle* est **sysname**, avec NULL comme valeur par défaut. Si aucun rôle n'est spécifié, les autorisations de tous les rôles serveur fixes sont retournées. *rôle* peut avoir l’une des valeurs suivantes.  
+`[ @srvrolename = ] 'role'`Nom du rôle serveur fixe pour lequel les autorisations sont retournées. *role* est de **type sysname**, avec NULL comme valeur par défaut. Si aucun rôle n'est spécifié, les autorisations de tous les rôles serveur fixes sont retournées. le *rôle* peut avoir l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**sysadmin**|Administrateurs système|  
+|**administrateur système**|Administrateurs système|  
 |**securityadmin**|Administrateurs de la sécurité|  
-|**serveradmin**|Administrateurs du serveur|  
+|**ServerAdmin**|Administrateurs de serveur|  
 |**setupadmin**|Administrateurs de l'installation et de la configuration|  
 |**processadmin**|Administrateurs de processus|  
 |**diskadmin**|Administrateurs de disques|  
-|**dbcreator**|Créateurs de base de données|  
+|**rôles**|Créateurs de base de données|  
 |**bulkadmin**|Exécute les instructions BULK INSERT.|  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -63,12 +63,12 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**ServerRole**|**sysname**|Nom d'un rôle serveur fixe|  
-|**Autorisation**|**sysname**|Autorisation associée **ServerRole**|  
+|**Permission**|**sysname**|Autorisation associée à **ServerRole**|  
   
 ## <a name="remarks"></a>Notes  
- Les autorisations répertoriées comprennent les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qu'il est possible d'exécuter, ainsi que d'autres actions spéciales que les membres du rôle serveur fixe sont en mesure d'accomplir. Pour afficher une liste des rôles serveur fixes, exécutez **sp_helpsrvrole**.  
+ Les autorisations répertoriées comprennent les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qu'il est possible d'exécuter, ainsi que d'autres actions spéciales que les membres du rôle serveur fixe sont en mesure d'accomplir. Pour afficher la liste des rôles serveur fixes, exécutez **sp_helpsrvrole**.  
   
- Le **sysadmin** rôle serveur fixe dispose des autorisations de tous les autres rôles de serveur fixe.  
+ Le rôle serveur fixe **sysadmin** dispose des autorisations de tous les autres rôles serveur fixes.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  

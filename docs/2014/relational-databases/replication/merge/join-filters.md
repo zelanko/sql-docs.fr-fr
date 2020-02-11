@@ -16,13 +16,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6bfb1bf3cd43bac47dfb06e4f24c74dc4835709b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629741"
 ---
-# <a name="join-filters"></a>Filtres de jointure
+# <a name="join-filters"></a>filtres de jointure
   Un filtre de jointure permet de filtrer une table en fonction du filtrage d'une table associée dans la publication. En général, une table parente est filtrée à l'aide d'un filtre paramétré ; un ou plusieurs filtres de jointure sont ensuite définis à peu près de la même façon que vous définissez une jointure entre des tables. Les filtres de jointure étendent le filtre paramétré de telle façon que les données des tables liées soient répliquées seulement si elles correspondent à la clause du filtre de jointure.  
   
  En règle générale, les filtres de jointure suivent les relations clé primaire/clé étrangère définies pour les tables auxquelles ils sont appliqués, mais ils ne sont pas strictement limités à ces relations. Le filtre de jointure peut être basé sur toute logique comparant des données associées dans deux tables.  
@@ -43,7 +43,7 @@ ms.locfileid: "62629741"
 LoginID = SUSER_SNAME()  
 ```  
   
- Ce filtre garantit que l'abonnement de chaque employé contient seulement les données de la table **HumanResources.Employee** qui se rapportent à cet employé (une seule ligne dans le cas présent). Pour plus d’informations, voir [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).  
+ Ce filtre garantit que l'abonnement de chaque employé contient seulement les données de la table **HumanResources.Employee** qui se rapportent à cet employé (une seule ligne dans le cas présent). Pour plus d'informations, voir [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).  
   
  L'étape suivante consiste à étendre ce filtre à chacune des tables associées, à l'aide d'une syntaxe similaire à celle qui est utilisée pour spécifier une jointure entre deux tables. La première clause du filtre de jointure est :  
   
@@ -88,6 +88,6 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
   
 ## <a name="see-also"></a>Voir aussi  
  [Filtrer des données publiées en vue de la réplication de fusion](filter-published-data-for-merge-replication.md)   
- [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md)  
+ [Filtres de lignes paramétrés](parameterized-filters-parameterized-row-filters.md)  
   
   

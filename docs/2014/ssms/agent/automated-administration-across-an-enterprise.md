@@ -21,27 +21,27 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b3be16ea856b5d632ba5a0285bad2c4d2d93709c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473144"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Administration automatisée à l'échelle d'une entreprise
-  Le fait d’automatiser l’administration sur plusieurs instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est appelé *administration multiserveur*. Utilisez l'administration multiserveur dans les cas suivants :  
+  L’automatisation de l’administration sur plusieurs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instances de est appelée *administration multiserveur*. Utilisez l'administration multiserveur dans les cas suivants :  
   
 -   Gérez deux serveurs ou plus ;  
   
 -   Planifiez les flux d'informations entre les serveurs de l'entreprise pour constituer un Data Warehouse.  
   
 > [!NOTE]  
->  Dans le cadre des efforts constants de [!INCLUDE[msCoName](../../includes/msconame-md.md)] visant à réduire le coût total de possession, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a proposé deux nouvelles fonctionnalités : une méthode de gestion de serveurs appelée Gestion basée sur des stratégies et des requêtes multiserveurs qui utilisent des serveurs de configuration et des groupes de serveurs. Ces fonctionnalités peuvent être utilisées avec, ou au lieu de, certaines des fonctionnalités décrites dans cette rubrique. Pour plus d’informations, consultez [administrer des serveurs à la gestion basée sur des](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) et [administrer plusieurs serveurs à l’aide de serveurs de gestion centralisée](../../relational-databases/administer-multiple-servers-using-central-management-servers.md).  
+>  Dans le cadre des efforts constants de [!INCLUDE[msCoName](../../includes/msconame-md.md)] visant à réduire le coût total de possession, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a proposé deux nouvelles fonctionnalités : une méthode de gestion de serveurs appelée Gestion basée sur des stratégies et des requêtes multiserveurs qui utilisent des serveurs de configuration et des groupes de serveurs. Ces fonctionnalités peuvent être utilisées avec, ou au lieu de, certaines des fonctionnalités décrites dans cette rubrique. Pour plus d’informations, consultez [administrer des serveurs à l’aide de la gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) et [Administrer plusieurs serveurs à l’aide de serveurs de gestion centralisée](../../relational-databases/administer-multiple-servers-using-central-management-servers.md).  
   
  Pour tirer parti d'une administration multiserveur, vous devez disposer d'au moins un serveur maître et d’au moins un serveur cible. Un serveur maître distribue les travaux aux serveurs cibles et reçoit les événements de ces derniers. Un serveur maître stocke également la copie centrale des définitions de travaux pour les travaux exécutés sur des serveurs cibles. Les serveurs cibles se connectent régulièrement au serveur maître pour mettre à jour leur liste des travaux planifiés. Si un nouveau travail se trouve sur le serveur maître, le serveur cible le télécharge. Une fois que le serveur cible a terminé le travail, il se reconnecte au serveur maître et rend compte de l'état du travail.  
   
  L'illustration suivante décrit la relation entre serveurs maîtres et cibles :  
   
- ![Configuration de l’administration multiserveur](../../database-engine/media/multisvr.gif "Configuration de l’administration multiserveur")  
+ ![Configuration d'administration multiserveur](../../database-engine/media/multisvr.gif "Configuration d'administration multiserveur")  
   
  Si vous administrez les serveurs départementaux d'une grande société, vous pouvez définir les éléments suivants :  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62473144"
  Contient des informations décrivant la façon dont l'administration automatisée au sein d'un environnement multiserveur exploite les fonctionnalités d'autoconfiguration de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Compatibilité descendante du moteur de base de données SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [SQL Server Moteur de base de données la compatibilité descendante](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [Inscrire des serveurs](../register-servers/register-servers.md)   
  [sp_add_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql)   
  [sp_delete_targetserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql)   
@@ -92,8 +92,8 @@ ms.locfileid: "62473144"
  [sp_help_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)   
  [sp_resync_targetserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)   
  [sp_update_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql)   
- [dbo.sysjobservers &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobservers-transact-sql)   
- [sys.syslogins &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)   
- [dbo.systargetservers &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-systargetservers-transact-sql)  
+ [dbo. sysjobservers &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobservers-transact-sql)   
+ [sys. syslogins &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)   
+ [dbo. systargetservers &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-systargetservers-transact-sql)  
   
   

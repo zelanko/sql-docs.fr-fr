@@ -16,19 +16,19 @@ ms.assetid: 5d8132c0-7ca2-4f86-8336-1b34213869ad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da396bd71e64925bcd8fb74f71f8e334bf7f1d7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949402"
 ---
 # <a name="membertypeenum"></a>MemberTypeEnum
-Spécifie le paramètre pour le [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md) propriété d’un [membre](../../../ado/reference/ado-md-api/member-object-ado-md.md) objet.  
+Spécifie le paramètre pour la propriété [type](../../../ado/reference/ado-md-api/type-property-ado-md.md) d’un objet [member](../../../ado/reference/ado-md-api/member-object-ado-md.md) .  
   
-|Constante|Value|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adMemberAll**|4|Indique que le **membre** objet représente tous les membres du niveau.|  
-|**adMemberFormula**|3|Indique que le **membre** objet est calculé à l’aide d’une expression de formule.|  
-|**adMemberMeasure**|2|Indique que le **membre** objet appartient à la dimension de mesures et représente un attribut quantitatif.|  
-|**adMemberRegular**|1|Valeur par défaut. Indique que le **membre** objet représente une instance d’une entité métier.|  
+|**adMemberAll**|4|Indique que l’objet **membre** représente tous les membres du niveau.|  
+|**adMemberFormula**|3|Indique que l’objet **membre** est calculé à l’aide d’une expression de formule.|  
+|**adMemberMeasure**|2|Indique que l’objet **membre** appartient à la dimension de mesures et représente un attribut quantitatif.|  
+|**adMemberRegular**|1|valeur par défaut. Indique que l’objet **membre** représente une instance d’une entité métier.|  
 |**adMemberUnknown**|0|Impossible de déterminer le type du membre.|

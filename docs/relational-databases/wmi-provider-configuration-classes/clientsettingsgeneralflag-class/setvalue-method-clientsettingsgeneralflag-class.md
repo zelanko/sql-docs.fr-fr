@@ -18,10 +18,10 @@ ms.assetid: 34443689-a0e0-4668-a811-17532c6fd271
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: a3f5fce9c795591ca7f8af41762fc9e9438aba2b
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660110"
 ---
 # <a name="setvalue-method-clientsettingsgeneralflag-class"></a>Méthode SetValue (classe ClientSettingsGeneralFlag)
@@ -36,14 +36,14 @@ object.SetValue(Value)
 ```  
   
 ## <a name="parts"></a>Éléments  
- *object*  
+ *dessin*  
  Objet de [classe ClientSettingsGeneralFlag](../../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md) qui représente un indicateur général pour les paramètres du serveur.  
   
 #### <a name="parameters"></a>Paramètres  
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|*Value*|Valeur booléenne qui spécifie la valeur de l'indicateur.|  
+|*Valeur*|Valeur booléenne qui spécifie la valeur de l'indicateur.|  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur **uint32** , égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  

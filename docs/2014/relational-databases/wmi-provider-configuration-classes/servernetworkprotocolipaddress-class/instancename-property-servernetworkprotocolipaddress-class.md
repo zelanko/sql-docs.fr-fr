@@ -1,5 +1,5 @@
 ---
-title: InstanceName, propriété (classe ServerNetworkProtocolIPAddress) | Microsoft Docs
+title: Propriété InstanceName (classe ServerNetworkProtocolIPAddress) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 79637e9f891c70a79e5388a4932957cbff8377f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62643387"
 ---
 # <a name="instancename-property-servernetworkprotocolipaddress-class"></a>Propriété InstanceName (classe ServerNetworkProtocolIPAddress)
-  Obtient le nom de l'instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur laquelle le protocole réseau serveur est installé.  
+  Obtient le nom de l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur laquelle le protocole réseau serveur est installé.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>Éléments  
- *object*  
+ *dessin*  
  Objet de [classe ServerNetworkProtocolIPAdress](servernetworkprotocolipaddress-class.md) .  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  

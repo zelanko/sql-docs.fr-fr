@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a4e91d05bf851d425bf61dba0037cee8c48eb5ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62626774"
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>Abonnement, Historique du serveur de publication vers le serveur de distribution (abonnement transactionnel)
@@ -25,7 +25,7 @@ ms.locfileid: "62626774"
 ## <a name="options"></a>Options  
  Dans le menu **Affichage** , sélectionnez les sessions de l'Agent de lecture du journal à afficher. Sélectionnez ensuite une session particulière dans la grille étiquetée **Sessions de l'Agent de lecture du journal**. Des informations détaillées sur cette session s'affichent dans la grille étiquetée **Actions dans la session sélectionnée**. Si la session sélectionnée s'est terminée sur une erreur, la zone de texte étiquetée **Détails de l'erreur ou message de la session sélectionnée** s'affiche également.  
   
- **Affichage**  
+ **Afficher**  
  Sélectionnez les sessions de l'Agent de lecture du journal à afficher. L'Agent de lecture du journal s'exécute généralement en permanence : il se peut donc qu'il n'y ait qu'une session à afficher.  
   
  **État**  
@@ -33,31 +33,31 @@ ms.locfileid: "62626774"
   
 -   Error  
   
--   Terminé  
+-   Completed  
   
 -   Nouvel essai  
   
 -   Exécution en cours  
   
- **Start Time**  
+ **Heure de début**  
  Heure d'ouverture de la session.  
   
  **Heure de fin**  
  Heure de fin de la session. Si l'agent ne s'est pas arrêté, ce champ est vide.  
   
- **Duration**  
+ **Durée**  
  Durée d'exécution de l'Agent de lecture du journal dans cette session. Cette durée représente le temps écoulé si l'agent est en cours d'exécution et le temps total de la session si l'agent de la session s'est terminé.  
   
- **Message d'erreur**  
+ **Message d’erreur**  
  Si une session s'est terminée sur une erreur, ce champ affiche le dernier message d'erreur enregistré par l'Agent de lecture du journal. Dans le cas contraire, ce champ est vide.  
   
- **Message d'action**  
+ **Message d’action**  
  Tous les messages d'information ou d'erreur que l'Agent de lecture du journal a enregistrés pendant la session sélectionnée.  
   
- **Heure de l'action**  
+ **Heure de l’action**  
  Heure à laquelle l'action décrite dans la colonne **Message d'action** s'est déroulée.  
   
- **Détails de l'erreur ou message de la session sélectionnée**  
+ **Détails de l’erreur ou message de la session sélectionnée**  
  S'affiche uniquement si la session sélectionnée affiche une valeur **Erreur** dans la colonne **État** . La zone de texte affiche des informations d'erreur détaillées, ainsi que la commande émise au moment de l'erreur. Elle comporte également des liens vers des informations supplémentaires à propos de l'erreur.  
   
 ## <a name="see-also"></a>Voir aussi  

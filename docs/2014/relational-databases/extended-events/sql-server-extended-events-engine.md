@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89d92fc60e18926351cc94e6e6c21a32a7371ed5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638233"
 ---
 # <a name="sql-server-extended-events-engine"></a>Moteur des Événements étendus SQL Server
@@ -36,7 +36,7 @@ ms.locfileid: "62638233"
   
  ![Architecture détaillée des événements étendus](../../database-engine/media/xearchitecturedetailed.gif "Architecture détaillée des événements étendus")  
   
- Notez les points suivants :  
+ Notez les points suivants :  
   
 -   Chaque processus Windows peut avoir un ou plusieurs modules (**processus Win32**, **module Win32**). Ils sont également appelés *binaires* ou *modules exécutables*.  
   

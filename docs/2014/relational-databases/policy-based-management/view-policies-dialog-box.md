@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 40ce89f518dfdbf4d1c782121dc5ec0e935752ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676848"
 ---
 # <a name="view-policies-dialog-box"></a>Boîte de dialogue Afficher les stratégies
@@ -38,10 +38,10 @@ ms.locfileid: "62676848"
  **Mode d'évaluation**  
  Mode d'évaluation de la stratégie nommée.  
   
- **Historique**  
+ **History**  
  Cliquez sur le lien hypertexte pour afficher le rapport d'historique d'exécution.  
   
- **Évaluer**  
+ **Evaluate**  
  Cliquez sur le lien hypertexte pour ouvrir la boîte de dialogue **Évaluer les stratégies** et exécuter la stratégie.  
   
  **Dernière exécution**  

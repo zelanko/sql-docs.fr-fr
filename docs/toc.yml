@@ -6,9 +6,9 @@
   href: toc/previous-versions-sql-server.md
 - name: Vue d’ensemble
   items:
-    - name: What's New
+    - name: Nouveautés
       items:
-        - name: SQL Server 2019
+        - name: "SQL Server\_2019"
           href: sql-server/what-s-new-in-sql-server-ver15.md
         - name: "SQL Server\_2017"
           href: sql-server/what-s-new-in-sql-server-2017.md
@@ -16,7 +16,7 @@
           href: sql-server/what-s-new-in-sql-server-2016.md
     - name: Éditions et fonctionnalités
       items:
-        - name: SQL Server 2019
+        - name: "SQL Server\_2019"
           href: sql-server/editions-and-components-of-sql-server-version-15.md
         - name: "SQL Server\_2017"
           href: sql-server/editions-and-components-of-sql-server-2017.md
@@ -24,7 +24,7 @@
           href: sql-server/editions-and-components-of-sql-server-2016.md
     - name: Notes de publication
       items:
-        - name: SQL Server 2019
+        - name: "SQL Server\_2019"
           href: sql-server/sql-server-version-15-release-notes.md
         - name: "SQL Server\_2017"
           href: sql-server/sql-server-2017-release-notes.md?toc=../toc.json
@@ -46,7 +46,7 @@
           href: big-data-cluster/big-data-cluster-overview.md
         - name: Notes de publication
           href: big-data-cluster/release-notes-big-data-cluster.md
-    - name: Installation
+    - name: Installer
       items:
         - name: Découvrir
           items:
@@ -60,12 +60,20 @@
               href: big-data-cluster/deploy-big-data-tools.md
             - name: Installer azdata
               items:
-                - name: Avec Windows Installer
-                  href: big-data-cluster/deploy-install-azdata-installer.md
-                - name: Avec le gestionnaire de package Linux
-                  href: big-data-cluster/deploy-install-azdata-linux-package.md
-                - name: Avec pip
+                - name: Installer
                   href: big-data-cluster/deploy-install-azdata.md
+                - name: macOS
+                  href: big-data-cluster/deploy-install-azdata-macos.md
+                - name: Windows
+                  href: big-data-cluster/deploy-install-azdata-installer.md
+                - name: Linux avec apt
+                  href: big-data-cluster/deploy-install-azdata-linux-package.md
+                - name: Linux avec yum
+                  href: big-data-cluster/deploy-install-azdata-yum.md
+                - name: Linux avec zypper
+                  href: big-data-cluster/deploy-install-azdata-zypper.md
+                - name: Avec pip
+                  href: big-data-cluster/deploy-install-azdata-pip.md
         - name: Déployer
           items:
             - name: Conseils pour le déploiement
@@ -120,7 +128,7 @@
       items:
         - name: Configuration
           items:
-            - name: Instance maître SQL Server
+            - name: Instance principale SQL Server
               href: big-data-cluster/configure-sql-server-master-instance.md
         - name: Virtualisation de données
           items:
@@ -186,6 +194,12 @@
               href: big-data-cluster/manage-notebooks.md
             - name: Gérer avec le tableau de bord du contrôleur
               href: big-data-cluster/manage-with-controller-dashboard.md
+            - name: Sécurité
+              items:
+                - name: Mettre à jour AZDATA_PASSWORD
+                  href: big-data-cluster/change-azdata-password.md
+                - name: Gérer l’accès des utilisateurs
+                  href: big-data-cluster/manage-user-access.md
         - name: Notebooks
           items:
             - name: Vue d’ensemble des notebooks
@@ -204,7 +218,7 @@
               href: big-data-cluster/spark-hive-tools-vscode.md
             - name: Utiliser le serveur d’historique Spark
               href: big-data-cluster/spark-history-server.md
-    - name: Référence
+    - name: Informations de référence
       items:
         - name: Informations de référence sur le déploiement
           items:
@@ -488,7 +502,7 @@
                   href: relational-databases/backup-restore/online-restore-sql-server.md
                 - name: Transactions différées
                   href: relational-databases/backup-restore/deferred-transactions-sql-server.md
-        - name: Référence
+        - name: Informations de référence
           items:
             - name: Pages et boîtes de dialogue
               items:
@@ -540,7 +554,7 @@
                       href: relational-databases/backup-restore/vdi-reference/iclientvirtualdevice-getcommand.md
                 - name: IClientVirtualDeviceSet2
                   items:
-                    - name: Fermer
+                    - name: fermez
                       href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-close.md
                     - name: CreateEx
                       href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-createex.md
@@ -568,7 +582,7 @@
                       href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-allocatebuffer.md
                     - name: BeginConfiguration
                       href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-beginconfiguration.md
-                    - name: Fermer
+                    - name: fermez
                       href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-close.md
                     - name: EndConfiguration
                       href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-endconfiguration.md
@@ -621,7 +635,7 @@
         - name: Procédures
           href: database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md
           items:
-            - name: Configurer le groupe de disponibilité
+            - name: Configurer un groupe de disponibilité
               items:
                 - name: Changer la disponibilité des réplicas
                   href: database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md
@@ -807,7 +821,7 @@
                   href: database-engine/availability-groups/windows/reporting-services-with-always-on-availability-groups-sql-server.md
                 - name: Service Broker
                   href: database-engine/availability-groups/windows/service-broker-with-always-on-availability-groups-sql-server.md
-        - name: Référence
+        - name: Informations de référence
           items:
             - name: Objets système
               href: database-engine/availability-groups/windows/availability-group-system-object-reference.md
@@ -893,11 +907,11 @@
               items:
                 - name: Surveiller les performances pour les groupes de disponibilité
                   href: database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md
-                - name: "Résoudre les problèmes\_: Dépassement de RPO du groupe de disponibilité"
+                - name: 'Dépanner : dépassement de RPO du groupe de disponibilité'
                   href: database-engine/availability-groups/windows/troubleshoot-availability-group-exceeded-rpo.md
-                - name: "Résoudre les problèmes\_: Dépassement de RTO du groupe de disponibilité"
+                - name: 'Dépanner : dépassement de RTO du groupe de disponibilité'
                   href: database-engine/availability-groups/windows/troubleshoot-availability-group-exceeded-rto.md
-                - name: "Résoudre les problèmes\_: Les changements sur le réplica principal ne sont pas reflétés sur le réplica secondaire"
+                - name: "Dépanner\_: les changements sur le réplica principal ne sont pas reflétés sur le réplica secondaire"
                   href: database-engine/availability-groups/windows/troubleshoot-primary-changes-not-reflected-on-secondary.md
                 - name: Outils utiles pour la résolution des problèmes
                   href: database-engine/availability-groups/windows/useful-tools-for-troubleshooting.md
@@ -940,7 +954,7 @@
                 - name: Supprimer un cluster
                   href: sql-server/failover-clusters/install/remove-a-sql-server-failover-cluster-instance-setup.md
                 - name: Mettre à niveau un cluster
-                  href: sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
+                  href: sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md
                 - name: "Migration vers Windows Server\_2012 et 2016"
                   href: sql-server/failover-clusters/windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md
             - name: Configuration
@@ -977,8 +991,6 @@
           items:
             - name: Configuration
               items:
-                - name: Mettre à niveau
-                  href: sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md
                 - name: Modes de quorum et vote
                   href: sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
                 - name: Clustering de plusieurs sous-réseaux
@@ -1025,9 +1037,9 @@
                     - name: Établir une session
                       href: database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md
                       items:
-                        - name: 'Exemple : configurer avec l’authentification Windows (T-SQL)'
+                        - name: "Exemple\_: Configurer avec l’authentification Windows (T-SQL)"
                           href: database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md
-                        - name: 'Exemple : configurer avec des certificats (T-SQL)'
+                        - name: "Exemple\_: Configurer avec des certificats (T-SQL)"
                           href: database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md
                     - name: Mettre à niveau
                       href: database-engine/database-mirroring/upgrading-mirrored-instances.md
@@ -1101,7 +1113,7 @@
                   href: database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md
                 - name: Basculement de rôle
                   href: database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md
-                - name: "Quorum\_: Effets d’un témoin sur la disponibilité de la base de données"
+                - name: "Quorum\_: effets d'un témoin sur la disponibilité de la base de données"
                   href: database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md
                 - name: Cause possible d’échecs
                   href: database-engine/database-mirroring/possible-failures-during-database-mirroring.md
@@ -1115,7 +1127,7 @@
                   href: database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md
                 - name: Sécurité du transport
                   href: database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md
-        - name: Référence
+        - name: Informations de référence
           items:
             - name: Objets système
               href: database-engine/database-mirroring/database-mirroring-system-object-reference.md
@@ -1179,7 +1191,7 @@
               href: database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md
             - name: "Mise à niveau de la copie des journaux de transaction vers SQL Server\_2016"
               href: database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md
-        - name: Référence
+        - name: Informations de référence
           items:
             - name: Paramètres de sauvegarde des journaux de transactions
               href: relational-databases/databases/log-shipping-transaction-log-backup-settings.md
@@ -1341,7 +1353,7 @@
                   href: relational-databases/databases/contained-database-collations.md
                 - name: Bonnes pratiques de sécurité
                   href: relational-databases/databases/security-best-practices-with-contained-databases.md
-        - name: Référence
+        - name: Informations de référence
           items:
             - name: Boîtes de dialogue
               items:
@@ -1741,15 +1753,15 @@
                   href: relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md
                 - name: Considérations relatives aux performances
                   href: relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md
-        - name: Didacticiels
+        - name: Tutoriels
           items:
             - name: Utilisation du type de données hierarchyid
               href: relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md
-            - name: "Leçon\_1\_: Conversion d’une table en une structure hiérarchique"
+            - name: 'Leçon 1 : Conversion d''une table en structure hiérarchique'
               href: relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md
             - name: "Leçon\_2\_: Création et gestion de données dans une table hiérarchique"
               href: relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md
-        - name: Référence
+        - name: Informations de référence
           items:
             - name: Propriétés de colonne de table
               href: relational-databases/tables/table-column-properties-sql-server-management-studio.md
@@ -1844,7 +1856,7 @@
           href: relational-databases/user-defined-functions/rename-user-defined-functions.md
         - name: Affichage
           href: relational-databases/user-defined-functions/view-user-defined-functions.md
-    - name: Vues
+    - name: Les vues
       href: relational-databases/views/views.md
       items:
         - name: Créer
@@ -1916,7 +1928,7 @@
         - name: Collections de schémas XML
           href: relational-databases/xml/xml-schema-collections-sql-server.md
           items:
-            - name: Référence
+            - name: Informations de référence
               href: relational-databases/xml/reference-the-built-in-xml-schema-collection-sys.md
             - name: Affichage
               href: relational-databases/xml/view-a-stored-xml-schema-collection.md
@@ -1969,19 +1981,19 @@
             - name: Mode RAW
               href: relational-databases/xml/use-raw-mode-with-for-xml.md
               items:
-                - name: 'Exemple : Récupération des informations de modèle de produit au format XML'
+                - name: 'Exemple : récupération des informations de modèle de produit au format XML'
                   href: relational-databases/xml/example-retrieving-product-model-information-as-xml.md
                 - name: 'Exemple : spécification de XSINIL avec la directive ELEMENTS'
                   href: relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md
-                - name: 'Exemple : Demande de schémas comme résultats à l’aide des options XMLDATA et XMLSCHEMA'
+                - name: "Exemple\_: demande de schémas comme résultats avec les options XMLDATA et XMLSCHEMA"
                   href: relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md
-                - name: 'Exemple : Extraction de données binaires'
+                - name: "Exemple\_: extraction de données binaires"
                   href: relational-databases/xml/example-retrieving-binary-data.md
-                - name: 'Exemple : Renommage de l’élément <row>'
+                - name: "Exemple\_: renommage de l’élément <row>"
                   href: relational-databases/xml/example-renaming-the-row-element.md
-                - name: 'Exemple : Spécification d’un élément racine pour les données XML générées par FOR XML'
+                - name: 'Exemple : spécification d''un élément racine pour les données XML générées par FOR XML'
                   href: relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md
-                - name: 'Exemple : interrogation de colonnes de type XML'
+                - name: 'Exemple: interrogation de colonnes de type XML'
                   href: relational-databases/xml/example-querying-xmltype-columns.md
             - name: mode AUTO
               href: relational-databases/xml/use-auto-mode-with-for-xml.md
@@ -1990,30 +2002,30 @@
                   href: relational-databases/xml/use-the-binary-base64-option.md
                 - name: Heuristique du mode AUTO permettant de définir la forme des données XML renvoyées
                   href: relational-databases/xml/auto-mode-heuristics-in-shaping-returned-xml.md
-                - name: 'Exemples : Utilisation du mode AUTO'
+                - name: 'Exemples : utilisation du mode AUTO'
                   href: relational-databases/xml/examples-using-auto-mode.md
             - name: Mode EXPLICIT
               href: relational-databases/xml/use-explicit-mode-with-for-xml.md
               items:
-                - name: 'Exemple : Extraction d’informations sur les employés'
+                - name: 'Exemple : extraction d''informations sur les employés'
                   href: relational-databases/xml/example-retrieving-employee-information.md
-                - name: 'Exemple : Spécification de la directive ELEMENT'
+                - name: 'Exemple : spécification de la directive ELEMENT'
                   href: relational-databases/xml/example-specifying-the-element-directive.md
                 - name: 'Exemple : spécification de la directive ELEMENTXSINIL'
                   href: relational-databases/xml/example-specifying-the-elementxsinil-directive.md
-                - name: 'Exemple : Construction de frères à l’aide du mode EXPLICIT'
+                - name: 'Exemple : construction de frères à l''aide du mode EXPLICIT'
                   href: relational-databases/xml/example-constructing-siblings-with-explicit-mode.md
-                - name: 'Exemple : Spécification des directives ID et IDREF'
+                - name: "Exemple\_: spécification des directives ID et IDREF"
                   href: relational-databases/xml/example-specifying-the-id-and-idref-directives.md
-                - name: 'Exemple : Spécification des directives ID et IDREFS'
+                - name: "Exemple\_: spécification des directives ID et IDREFS"
                   href: relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md
                 - name: 'Exemple : spécification de la directive HIDE'
                   href: relational-databases/xml/example-specifying-the-hide-directive.md
-                - name: 'Exemple : Spécification de la directive ELEMENT et de l’encodage d’entité'
+                - name: "Exemple\_: spécification de la directive ELEMENT et de l’encodage d’entité"
                   href: relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md
-                - name: 'Exemple : Spécification de la directive CDATA'
+                - name: 'Exemple : spécification de la directive CDATA'
                   href: relational-databases/xml/example-specifying-the-cdata-directive.md
-                - name: 'Exemple : Spécification de la directive XMLTEXT'
+                - name: 'Exemple : spécification de la directive XMLTEXT'
                   href: relational-databases/xml/example-specifying-the-xmltext-directive.md
             - name: Mode Path
               href: relational-databases/xml/use-path-mode-with-for-xml.md
@@ -2032,7 +2044,7 @@
                   href: relational-databases/xml/columns-that-contain-a-null-value-by-default.md
                 - name: Prise en charge d'espace de noms en mode PATH
                   href: relational-databases/xml/namespace-support-in-path-mode.md
-                - name: 'Exemples : Utilisation du mode PATH'
+                - name: 'Exemples : utilisation du mode PATH'
                   href: relational-databases/xml/examples-using-path-mode.md
             - name: Requêtes imbriquées
               href: relational-databases/xml/use-nested-for-xml-queries.md
@@ -2063,7 +2075,7 @@
         - name: OPENXML
           href: relational-databases/xml/openxml-sql-server.md
           items:
-            - name: 'Exemples : Utilisation de OPENXML'
+            - name: 'Exemples : utilisation de OPENXML'
               href: relational-databases/xml/examples-using-openxml.md
             - name: Spécifier des métapropriétés
               href: relational-databases/xml/specify-metaproperties-in-openxml.md
@@ -2283,7 +2295,7 @@
               href: relational-databases/extended-stored-procedures-programming/unicode-data-and-server-code-pages.md
             - name: Déchargement d’une DLL
               href: relational-databases/extended-stored-procedures-programming/unloading-an-extended-stored-procedure-dll.md
-        - name: Référence
+        - name: Informations de référence
           href: relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md
           items:
             - name: Types de données
@@ -2512,11 +2524,11 @@
               href: language-extensions/language-extensions-overview.md
             - name: Nouveautés
               href: language-extensions/language-extensions-whats-new.md
-        - name: Installation
+        - name: Installer
           items:
             - name: Installer les extensions de langage sur Windows
               href: language-extensions/install/install-sql-server-language-extensions-on-windows.md
-        - name: Didacticiels
+        - name: Tutoriels
           items:
             - name: Rechercher une chaîne à l’aide de RegEx dans Java
               href: language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md
@@ -2605,7 +2617,7 @@
               href: relational-databases/native-client/applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md
             - name: Fonction ConnectionValidSharedMemory dans la mémoire partagée dbmslpcn.dll
               href: relational-databases/native-client/applications/connectionvalidsharedmemory-function-in-dbmslpcn-dll-shared-memory.md
-            - name: Installation
+            - name: Installer
               href: relational-databases/native-client/applications/installing-sql-server-native-client.md
             - name: Stratégies de prise en charge
               href: relational-databases/native-client/applications/support-policies-for-sql-server-native-client.md
@@ -2619,7 +2631,7 @@
               href: relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
             - name: Fichiers bibliothèque et d’en-tête
               href: relational-databases/native-client/applications/using-the-sql-server-native-client-header-and-library-files.md
-        - name: Référence
+        - name: Informations de référence
           items:
             - name: "Erreur de SQL\_Server Native Client MSSQLSERVER_50000"
               href: relational-databases/native-client/sql-server-native-client-error-mssqlserver-50000.md
@@ -2974,7 +2986,7 @@
                   href: relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md
                 - name: Obtenir une authentification Kerberos mutuelle
                   href: relational-databases/native-client-odbc-how-to/get-mutual-kerberos-authentication.md
-                - name: "Procédure\_: Insérer des lignes dans la colonne de géographie"
+                - name: "Procédure\_: insérer des lignes dans la colonne de géographie"
                   href: relational-databases/native-client-odbc-how-to/how-to-insert-rows-into-geography-column-odbc.md
                 - name: "Gestion des colonnes texte et image\_- Utiliser des colonnes de données à l’exécution"
                   href: relational-databases/native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-columns.md
@@ -3296,7 +3308,7 @@
         - name: Colonnes de texte et d’image
           href: relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md
           items:
-            - name: Colonnes de texte et d’image liées et non liées
+            - name: Colonnes de texte et d'image liées et non liées
               href: relational-databases/native-client-odbc-text-image-columns/bound-vs-unbound-text-and-image-columns.md
             - name: 'Data-at-Execution et colonnes text, ntext ou image'
               href: relational-databases/native-client-odbc-text-image-columns/data-at-execution-and-text-ntext-or-image-columns.md
@@ -3455,7 +3467,7 @@
               href: relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-triggers.md
             - name: Fonctions définies par l'utilisateur
               href: relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-user-defined-functions.md
-            - name: Vues
+            - name: Les vues
               href: relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-views.md
             - name: Autorisations
               href: relational-databases/server-management-objects-smo/tasks/granting-revoking-and-denying-permissions.md
@@ -3502,7 +3514,7 @@
       items:
         - name: Vue d’ensemble
           items:
-            - name: What's New
+            - name: Nouveautés
               href: relational-databases/sqlxml/what-s-new-in-sqlxml-4-0-sp1.md
             - name: Spécifications
               href: relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md
@@ -3517,7 +3529,7 @@
           items:
             - name: Côté client et côté serveur
               href: relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md
-            - name: Côté client et côté serveur
+            - name: Côté client contre côté serveur
               href: relational-databases/sqlxml/formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md
             - name: Côté client
               href: relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md
@@ -4105,9 +4117,9 @@
         - name: Concepts liés aux événements de serveur
           href: relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md
           items:
-            - name: 'Exemple : Création d’une alerte SQL Server Agent avec le fournisseur WMI'
+            - name: "Exemple\_: création d’une alerte SQL Server Agent avec le fournisseur WMI"
               href: relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md
-            - name: "Exemple : Utilisation du fournisseur d’événements WMI avec le .NET\_Framework"
+            - name: "Exemple\_: utilisation du fournisseur d’événements WMI avec le .NET\_Framework"
               href: relational-databases/wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md
             - name: Présentation des événements de serveur
               href: relational-databases/wmi-provider-server-events/understanding-the-wmi-provider-for-server-events.md
@@ -4147,7 +4159,7 @@
   items:
     - name: Vue d’ensemble
       items:
-        - name: What's New
+        - name: Nouveautés
           href: sql-server/install/what-s-new-in-sql-server-installation.md
         - name: Spécifications de capacité maximale
           href: sql-server/maximum-capacity-specifications-for-sql-server.md
@@ -4174,7 +4186,7 @@
       items:
         - name: Configuration matérielle et logicielle requise
           items:
-            - name: SQL Server 2019
+            - name: "SQL Server\_2019"
               href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md
             - name: "SQL Server\_2017 et antérieur"
               href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
@@ -4194,7 +4206,7 @@
               items:
                 - name: "SQL Server\_2017 et antérieur"
                   href: sql-server/sql-server-privacy.md
-                - name: SQL Server 2019
+                - name: "SQL Server\_2019"
                   href: sql-server/sql-server-privacy-ver15.md
             - name: Configurer les données d’utilisation et de diagnostic SQL Server
               href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
@@ -4203,7 +4215,6 @@
             - name: Audit local pour SQL Server
               href: sql-server/usage-and-diagnostic-data-in-local-audit.md
     - name: Installer SQL Server
-      href: database-engine/install-windows/installation-for-sql-server.md
       items:
         - name: Vue d’ensemble
           href: database-engine/install-windows/install-sql-server.md
@@ -4261,11 +4272,9 @@
         - name: "Mises à niveau des versions et des éditions prises en charge pour SQL Server\_2017"
           href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
         - name: "Mises à niveau des versions et des éditions prises en charge pour SQL Server\_2016"
-          href: database-engine/install-windows/supported-version-and-edition-upgrades.md
+          href: database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016
         - name: Préparer la mise à niveau en exécutant l’Assistant Migration des données
           href: database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md
-        - name: 'Mise à niveau à partir de SQL 2005, 2008 ou 2008 R2'
-          href: database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md
         - name: Analysis Services
           href: database-engine/install-windows/upgrade-analysis-services.md
         - name: Data Quality Services
@@ -4299,6 +4308,13 @@
               href: relational-databases/performance/upgrade-dbcompat-using-qta.md
             - name: Dernières mises à jour pour SQL Server
               href: database-engine/install-windows/latest-updates-for-microsoft-sql-server.md
+    - name: Fin de la prise en charge
+      items:
+        - name: Vue d’ensemble
+          href: sql-server/end-of-support/sql-server-end-of-life-overview.md
+          displayName: 'end of support, end of life'
+        - name: Mises à jour de la sécurité étendue
+          href: sql-server/end-of-support/sql-server-extended-security-updates.md
     - name: Configuration
       href: database-engine/configure-windows/database-engine-instances-sql-server.md
       items:
@@ -4324,6 +4340,8 @@
           href: relational-databases/in-memory-database.md
         - name: Pool de mémoires tampons hybride
           href: database-engine/configure-windows/hybrid-buffer-pool.md
+        - name: Ajouter un tampon de journal persistant
+          href: relational-databases/databases/add-persisted-log-buffer.md
         - name: Changer le mode d'authentification du serveur
           href: database-engine/configure-windows/change-server-authentication-mode.md
         - name: Service SQL Writer
@@ -4585,7 +4603,7 @@
           href: sql-server/install/uninstall-power-pivot-for-sharepoint.md
         - name: Désinstaller Reporting Services
           href: sql-server/install/uninstall-reporting-services.md
-    - name: Référence
+    - name: Informations de référence
       items:
         - name: Propriétés du serveur
           items:
@@ -4609,6 +4627,8 @@
               href: database-engine/configure-windows/server-properties-advanced-page.md
 - name: Migrer et charger des données
   items:
+    - name: Documentation sur la migration
+      href: sql-server/migrate/index.yml
     - name: SQL Server Integration Services (SSIS) >
       href: integration-services/index.md
     - name: Utilitaire de copie en bloc (bcp)
@@ -4688,7 +4708,7 @@
               items:
                 - name: Créer un domaine
                   href: data-quality-services/create-a-domain.md
-                - name: "Gestion de l’arborescence du domaine\_: Liste des domaines"
+                - name: 'Gestion de l''arborescence du domaine : Liste des domaines'
                   href: data-quality-services/domain-management-domain-list.md
                 - name: Définir des propriétés de domaine
                   href: data-quality-services/set-domain-properties.md
@@ -4830,7 +4850,7 @@
                       href: relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md
                     - name: Spécifier des options de schéma
                       href: relational-databases/replication/publish/specify-schema-options.md
-                    - name: Réplique les modifications de schéma
+                    - name: Répliquer les modifications de schéma
                       href: relational-databases/replication/publish/replicate-schema-changes.md
                     - name: Gérer des colonnes d’identité
                       href: relational-databases/replication/publish/manage-identity-columns.md
@@ -5125,7 +5145,7 @@
                   href: relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md
                 - name: Travail d’un jeu de transactions pour un serveur de publication Oracle
                   href: relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md
-                - name: Accorder une autorisation
+                - name: Accorder l’autorisation
                   href: relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md
                 - name: Gérer des espaces disque logiques Oracle
                   href: relational-databases/replication/non-sql/manage-oracle-tablespaces.md
@@ -5256,7 +5276,7 @@
                       href: relational-databases/replication/non-sql/ibm-db2-subscribers.md
                     - name: Autres abonnés non-SQL
                       href: relational-databases/replication/non-sql/other-non-sql-server-subscribers.md
-        - name: Didacticiels
+        - name: Tutoriels
           href: relational-databases/replication/replication-tutorials.md
           items:
             - name: Préparer un serveur à la réplication
@@ -5265,7 +5285,7 @@
               href: relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md
             - name: Configurer la réplication de fusion
               href: relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md
-        - name: Référence
+        - name: Informations de référence
           items:
             - name: Langage de réplication
               href: relational-databases/replication/replication-language-reference.md
@@ -5810,10 +5830,10 @@
       items:
         - name: Vue d’ensemble du comparatif des charges de travail
           href: dea/database-experimentation-assistant-get-started.md
-        - name: Capturer la trace
-          href: dea/database-experimentation-assistant-capture-trace.md
         - name: Configurer la relecture
           href: dea/database-experimentation-assistant-configure-replay.md
+        - name: Capturer la trace
+          href: dea/database-experimentation-assistant-capture-trace.md
         - name: Relire la trace
           href: dea/database-experimentation-assistant-replay-trace.md
         - name: Créer des rapports
@@ -5822,7 +5842,7 @@
           href: dea/database-experimentation-assistant-view-report.md
         - name: Exécuter sur l’invite de commandes
           href: dea/database-experimentation-assistant-run-command-prompt.md
-    - name: Assistant Migration de données (DMA)
+    - name: Assistant Migration de données Microsoft (DMA)
       href: dma/dma-overview.md
       items:
         - name: Nouveautés
@@ -5831,6 +5851,8 @@
           href: dma/dma-assesssqlonprem.md
         - name: Évaluer SQL Server Integration Services (SSIS)
           href: dma/dma-assess-ssis.md
+        - name: Enregistrer et charger des évaluations
+          href: dma/dma-save-load-assessments.md
         - name: Identifier la bonne référence SKU Azure SQL Database
           href: dma/dma-sku-recommend-sql-db.md
         - name: Mise à niveau SQL Server vers une version ultérieure
@@ -5845,663 +5867,14 @@
           href: dma/dma-bestpractices.md
         - name: Consolider les rapports d’évaluation
           href: dma/dma-consolidatereports.md
-        - name: "Rapports Power\_BI pour les évaluations"
-          href: dma/dma-powerbiassesreport.md
+        - name: Évaluer la couche d’accès aux données d’une application
+          href: dma/dma-assess-app-data-layer.md
         - name: Exécuter à partir de la ligne de commande
           href: dma/dma-commandline.md
         - name: Configurer les paramètres
           href: dma/dma-configurationsettings.md
     - name: Assistant Migration SQL Server (SSMA)
-      href: ssma/sql-server-migration-assistant.md
-      items:
-        - name: Accès
-          href: ssma/access/sql-server-migration-assistant-for-access-accesstosql.md
-          items:
-            - name: Installer SSMA
-              href: ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md
-            - name: Prise en main
-              href: ssma/access/getting-started-with-ssma-for-access-console-accesstosql.md
-            - name: What's New
-              href: ssma/access/what-s-new-in-ssma-for-access-accesstosql.md
-            - name: Préparation des bases de données Access
-              href: ssma/access/preparing-access-databases-for-migration-accesstosql.md
-            - name: Fonctionnalités Access incompatibles
-              href: ssma/access/incompatible-access-features-accesstosql.md
-            - name: Nouvelles fonctionnalités de l’interface graphique utilisateur de SSMA
-              href: ssma/access/new-gui-features-in-ssma-for-access-to-sql.md
-            - name: Schémas d’inventaire Access
-              href: ssma/access/access-inventory-schemas-accesstosql.md
-            - name: Enregistrer les métadonnées
-              href: ssma/access/save-metadata-accesstosql.md
-            - name: Connexion à SQL Server
-              href: ssma/access/connecting-to-sql-server-accesstosql.md
-            - name: Migration de données Access dans Azure SQL DB
-              href: ssma/access/migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md
-            - name: Création et gestion de projets
-              href: ssma/access/creating-and-managing-projects-accesstosql.md
-            - name: Utilisation de la console SSMA pour Access
-              href: ssma/access/working-with-ssma-for-access-console-accesstosql.md
-            - name: Ajout et suppression de fichiers de base de données
-              href: ssma/access/adding-and-removing-access-database-files-accesstosql.md
-            - name: Convertir des objets de base de données Access
-              href: ssma/access/converting-access-database-objects-accesstosql.md
-            - name: Mentions légales
-              href: ssma/access/legal-notice-ssma-for-access.md
-            - name: Se connecter à SQL Server
-              href: ssma/access/connect-to-sql-server-accesstosql.md
-            - name: Paramètres globaux
-              href: ssma/access/global-settings-output-window-accesstosql.md
-            - name: Nouveau projet (SSMA)
-              href: ssma/access/new-project-ssma-accesstosql.md
-            - name: Options de ligne de commande dans la console SSMA
-              href: ssma/access/command-line-options-in-ssma-console-accesstosql.md
-            - name: Se connecter à Azure SQL DB
-              href: ssma/access/connect-to-azure-sql-db-accesstosql.md
-            - name: Rapport d’évaluation
-              href: ssma/access/assessment-report-accesstosql.md
-            - name: Mappage de types de données sources et cibles
-              href: ssma/access/mapping-source-and-target-data-types-accesstosql.md
-            - name: Gestion des mots de passe
-              href: ssma/access/managing-passwords-accesstosql.md
-            - name: Rapport de migration des données
-              href: ssma/access/data-migration-report-accesstosql.md
-            - name: Référence de l'interface utilisateur
-              href: ssma/access/user-interface-reference-accesstosql.md
-            - name: Utilisation des exemples de fichiers de script de console
-              href: ssma/access/working-sample-console-script-filesexecuting-ssma-console-accesstosql.md
-            - name: Génération de rapports
-              href: ssma/access/generating-reports-accesstosql.md
-            - name: Exécution de la console SSMA
-              href: ssma/access/executing-the-ssma-console-accesstosql.md
-            - name: Évaluation des objets de base de données Access pour la conversion
-              href: ssma/access/assessing-access-database-objects-for-conversion-accesstosql.md
-            - name: Création des fichiers de connexion de serveur
-              href: ssma/access/creating-the-server-connection-files-accesstosql.md
-            - name: Liaison d’applications Access à Azure SQL DB
-              href: ssma/access/linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md
-            - name: Création de fichiers de valeurs de variables
-              href: ssma/access/creating-variable-value-files-accesstosql.md
-            - name: Modifier le mappage de type
-              href: ssma/access/edit-type-mapping-accesstosql.md
-            - name: Exportation d’un inventaire Access
-              href: ssma/access/exporting-an-access-inventory-accesstosql.md
-            - name: Migration de bases de données Access vers Azure SQL DB
-              href: ssma/access/migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md
-            - name: Mappage de bases de données sources et cibles
-              href: ssma/access/mapping-source-and-target-databases-accesstosql.md
-            - name: Création de fichiers de script
-              href: ssma/access/creating-script-files-accesstosql.md
-            - name: Assistant Rechercher des bases de données (Vérifier la sélection)
-              href: ssma/access/find-databases-wizard-verify-selection-accesstosql.md
-            - name: Assistant Migration
-              href: ssma/access/migration-wizard-accesstosql.md
-            - name: 'Convertir, charger et migrer'
-              href: ssma/access/convert-load-and-migrate-accesstosql.md
-            - name: Chargement d’objets de base de données convertis dans SQL Server
-              href: ssma/access/loading-converted-database-objects-into-sql-server-accesstosql.md
-            - name: Sélection d’objet avancée
-              href: ssma/access/advanced-object-selection-accesstosql.md
-            - name: Bien démarrer avec l’Assistant Migration SQL Server
-              href: ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md
-            - name: Actualiser à partir de la base de données
-              href: ssma/access/refresh-from-database-accesstosql.md
-            - name: Assistant Rechercher des bases de données (Sélectionner des fichiers)
-              href: ssma/access/find-databases-wizard-select-files-accesstosql.md
-            - name: Touches de raccourci
-              href: ssma/access/shortcut-keys-accesstosql.md
-            - name: Connexion à Azure SQL DB
-              href: ssma/access/connecting-to-azure-sql-db-accesstosql.md
-            - name: Définition des options de conversion et de migration
-              href: ssma/access/setting-conversion-and-migration-options-accesstosql.md
-            - name: Dépannage
-              href: ssma/access/troubleshooting-accesstosql.md
-            - name: Commandes de menu et autres touches de raccourci
-              href: ssma/access/menu-commands-and-other-shortcut-keys-accesstosql.md
-            - name: Assistant Rechercher des bases de données (Sélectionner des emplacements)
-              href: ssma/access/find-databases-wizard-select-locations-accesstosql.md
-            - name: Annexe - 1
-              href: ssma/access/appendix-1-accesstosql.md
-            - name: Paramètres du projet
-              items:
-                - name: Migration
-                  href: ssma/access/project-settings-migration-accesstosql.md
-                - name: Interface graphique utilisateur
-                  href: ssma/access/project-settings-gui-accesstosql.md
-                - name: Conversion
-                  href: ssma/access/project-settings-conversion-accesstosql.md
-                - name: Azure SQL DB
-                  href: ssma/access/project-settings-azure-sql-db-accesstosql.md
-                - name: Mappage de types
-                  href: ssma/access/project-settings-type-mapping-accesstosql.md
-                - name: Chargement des objets
-                  href: ssma/access/project-settings-loading-objects-accesstosql.md
-            - name: Paramètres globaux
-              items:
-                - name: Boîtes de dialogue
-                  href: ssma/access/global-settings-dialogs-accesstosql.md
-                - name: Journalisation
-                  href: ssma/access/global-settings-logging-accesstosql.md
-                - name: Éditeur
-                  href: ssma/access/global-settings-editor-accesstosql.md
-        - name: DB2
-          href: ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md
-          items:
-            - name: Installation de SSMA
-              href: ssma/db2/installing-ssma-for-db2-db2tosql.md
-            - name: Mise en route
-              href: ssma/db2/getting-started-with-ssma-for-db2-console-db2tosql.md
-            - name: What's New
-              href: ssma/db2/what-s-new-in-ssma-for-db2-db2tosql.md
-            - name: Nouvelles fonctionnalités de l’interface graphique utilisateur
-              href: ssma/db2/new-gui-features-in-ssma-for-db2-db2tosql.md
-            - name: Installation du client SSMA pour DB2
-              href: ssma/db2/installing-ssma-for-db2-client-db2tosql.md
-            - name: Référence de l'interface utilisateur
-              href: ssma/db2/user-interface-reference-db2tosql.md
-            - name: Modifier le mappage de type
-              href: ssma/db2/edit-type-mapping-db2tosql.md
-            - name: Chargement d’objets de base de données convertis dans SQL Server
-              href: ssma/db2/loading-converted-database-objects-into-sql-server-db2tosql.md
-            - name: Définition des options du projet
-              href: ssma/db2/setting-project-options-db2tosql.md
-            - name: Création de fichiers de script
-              href: ssma/db2/creating-script-files-db2tosql.md
-            - name: Dépannage
-              href: ssma/db2/troubleshooting-db2tosql.md
-            - name: Mappage des types de données DB2 et SQL Server
-              href: ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md
-            - name: Mentions légales
-              href: ssma/db2/legal-notice-db2tosql.md
-            - name: Installation des composants SSMA sur SQL Server
-              href: ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md
-            - name: Exécution de la console SSMA
-              href: ssma/db2/executing-the-ssma-console-db2tosql.md
-            - name: Touches de raccourci
-              href: ssma/db2/shortcut-keys-db2tosql.md
-            - name: Sélection d’objet avancée
-              href: ssma/db2/advanced-object-selection-db2tosql.md
-            - name: Se connecter à SQL Server
-              href: ssma/db2/connect-to-sql-server-db2tosql.md
-            - name: Connexion à SQL Server
-              href: ssma/db2/connecting-to-sql-server-db2etosql.md
-            - name: Rapport d’évaluation
-              href: ssma/db2/assessment-report-db2tosql.md
-            - name: Se connecter à DB2
-              href: ssma/db2/connect-to-db2-db2tosql.md
-            - name: Enregistrer les métadonnées
-              href: ssma/db2/save-metadata-db2tosql.md
-            - name: Évaluation des schémas DB2 pour la conversion
-              href: ssma/db2/assessing-db2-schemas-for-conversion-db2tosql.md
-            - name: Conversion de schémas DB2
-              href: ssma/db2/converting-db2-schemas-db2tosql.md
-            - name: Assistant Migration SQL Server
-              href: ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md
-            - name: Génération de rapports
-              href: ssma/db2/generating-reports-db2tosql.md
-            - name: Création des fichiers de connexion de serveur
-              href: ssma/db2/creating-the-server-connection-files-db2tosql.md
-            - name: Nouveau projet
-              href: ssma/db2/new-project-db2tosql.md
-            - name: Actualiser à partir de la base de données
-              href: ssma/db2/refresh-from-database-db2tosql.md
-            - name: Connexion à une base de données DB2
-              href: ssma/db2/connecting-to-db2-database-db2tosql.md
-            - name: Utilisation des exemples de fichiers de script de console
-              href: ssma/db2/working-with-the-sample-console-script-files-db2tosql.md
-            - name: Paramètres de migration de données
-              href: ssma/db2/data-migration-settings-db2tosql.md
-            - name: Gestion des mots de passe
-              href: ssma/db2/managing-passwords-db2tosql.md
-            - name: Suppression de composants SSMA pour DB2
-              href: ssma/db2/removing-ssma-for-db2-components-db2tosql.md
-            - name: Bien démarrer avec SSMA pour DB2
-              href: ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md
-            - name: Rapport de migration des données
-              href: ssma/db2/data-migration-report-db2tosql.md
-            - name: Utilisation de la console SSMA pour Oracle
-              href: ssma/db2/working-with-ssma-for-oracle-console-db2tosql.md
-            - name: Options de ligne de commande dans la console SSMA
-              href: ssma/db2/command-line-options-in-ssma-console-db2tosql.md
-            - name: Migration de bases de données DB2 vers SQL Server
-              href: ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md
-            - name: Commandes de menu et autres touches de raccourci
-              href: ssma/db2/menu-commands-and-other-shortcut-keys-db2tosql.md
-            - name: Création de fichiers de valeurs de variables
-              href: ssma/db2/creating-variable-value-files-db2tosql.md
-            - name: Utilisation de projets SSMA
-              href: ssma/db2/working-with-ssma-projects-db2tosql.md
-            - name: Mappage de schémas DB2 à des schémas SQL Server
-              href: ssma/db2/mapping-db2-schemas-to-sql-server-schemas-db2tosql.md
-            - name: Annexe - 1
-              href: ssma/db2/appendix-1-db2tosql.md
-            - name: Paramètres du projet
-              items:
-                - name: Migration
-                  href: ssma/db2/project-settings-migration-db2tosql.md
-                - name: Mappage de types
-                  href: ssma/db2/project-settings-type-mapping-db2tosql.md
-                - name: Conversion
-                  href: ssma/db2/project-settings-conversion-db2tosql.md
-                - name: Charger des objets système
-                  href: ssma/db2/project-settings-loading-system-objects-db2tosql.md
-                - name: Interface graphique utilisateur
-                  href: ssma/db2/project-settings-gui-db2tosql.md
-                - name: Synchronization
-                  href: ssma/db2/project-settings-synchronization-db2tosql.md
-            - name: Paramètres globaux
-              href: ssma/db2/global-settings-dialogs-db2tosql.md
-              items:
-                - name: Éditeur
-                  href: ssma/db2/global-settings-editor-db2tosql.md
-                - name: Fenêtre Sortie
-                  href: ssma/db2/global-settings-output-window-db2tosql.md
-                - name: Journalisation
-                  href: ssma/db2/global-settings-logging-db2tosql.md
-        - name: mySQL
-          href: ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md
-          items:
-            - name: Installation de SSMA
-              href: ssma/mysql/installing-ssma-for-mysql-mysqltosql.md
-            - name: Bien démarrer avec SSMA pour MySQL
-              href: ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md
-            - name: Mentions légales
-              href: ssma/mysql/legal-notice-mysqltosql.md
-            - name: Paramètres de conversion
-              href: ssma/mysql/conversion-settings-mysqltosql.md
-            - name: Installation de SSMA pour MySQL Client
-              href: ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md
-            - name: Exécution de la console SSMA
-              href: ssma/mysql/executing-the-ssma-console-mysqltosql.md
-            - name: Création des fichiers de connexion de serveur
-              href: ssma/mysql/creating-the-server-connection-files-mysqltosql.md
-            - name: Modes SQL
-              href: ssma/mysql/sql-modes-mysqltosql.md
-            - name: Se connecter à SQL Server
-              href: ssma/mysql/connect-to-sql-server-mysqltosql.md
-            - name: Connexion à Azure SQL DB
-              href: ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md
-            - name: Création de fichiers de script
-              href: ssma/mysql/creating-script-files-mysqltosql.md
-            - name: Chargement d’objets de base de données convertis dans SQL Server
-              href: ssma/mysql/loading-converted-database-objects-into-sql-server-mysqltosql.md
-            - name: Conversion de bases de données MySQL
-              href: ssma/mysql/converting-mysql-databases-mysqltosql.md
-            - name: Migration vers SQL Server - Azure SQL DB
-              href: ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md
-            - name: Options de ligne de commande dans la console SSMA
-              href: ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md
-            - name: Utilisation de projets SSMA
-              href: ssma/mysql/working-with-ssma-projects-mysqltosql.md
-            - name: Paramètres de migration de données
-              href: ssma/mysql/data-migration-settings-mysqltosql.md
-            - name: Enregistrer les métadonnées
-              href: ssma/mysql/save-metadata-mysqltosql.md
-            - name: Commandes de menu et autres touches de raccourci
-              href: ssma/mysql/menu-commands-and-other-shortcut-keys-mysqltosql.md
-            - name: Dépannage
-              href: ssma/mysql/troubleshooting-mysqltosql.md
-            - name: Se connecter à MySQL
-              href: ssma/mysql/connect-to-mysql-mysqltosql.md
-            - name: Suppression des composants SSMA pour MySQL
-              href: ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md
-            - name: Se connecter à Azure SQL DB
-              href: ssma/mysql/connect-to-azure-sql-db-mysqltosql.md
-            - name: Migration de bases de données MySQL vers Azure SQL DB
-              href: ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md
-            - name: Utilisation des exemples de fichiers de script de console
-              href: ssma/mysql/working-with-the-sample-console-script-files-mysqltosql.md
-            - name: Nouveau projet
-              href: ssma/mysql/new-project-ssma-mysqltosql.md
-            - name: Installation des composants SSMA sur SQL Server
-              href: ssma/mysql/installing-ssma-components-on-sql-server-mysqltosql.md
-            - name: Mappage de bases de données MySQL à des schémas SQL Server
-              href: ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md
-            - name: Actualiser à partir de la base de données
-              href: ssma/mysql/refresh-from-database-mysqltosql.md
-            - name: Touches de raccourci
-              href: ssma/mysql/shortcut-keys-mysqltosql.md
-            - name: Rapport d’évaluation
-              href: ssma/mysql/assessment-report-mysqltosql.md
-            - name: Rapport de migration des données
-              href: ssma/mysql/data-migration-report-mysqltosql.md
-            - name: Gestion des mots de passe
-              href: ssma/mysql/managing-passwords-mysqltosql.md
-            - name: Sélection d’objet avancée
-              href: ssma/mysql/advanced-object-selection-mysqltosql.md
-            - name: Référence de l'interface utilisateur
-              href: ssma/mysql/user-interface-reference-mysqltosql.md
-            - name: Annexe - 1
-              href: ssma/mysql/appendix-1-mysqltosql.md
-            - name: Évaluation des bases de données MySQL pour la conversion
-              href: ssma/mysql/assessing-mysql-databases-for-conversion-mysqltosql.md
-            - name: Utilisation de la console SSMA pour MySQL
-              href: ssma/mysql/working-with-ssma-for-mysql-console-mysqltosql.md
-            - name: Bien démarrer avec la console SSMA pour MySQL
-              href: ssma/mysql/getting-started-with-ssma-for-mysql-console-mysqltosql.md
-            - name: Mappage des jeux de caractères MySQL et SQL Server
-              href: ssma/mysql/mapping-mysql-and-sql-server-character-set-mysqltosql.md
-            - name: Création de fichiers de valeurs de variables
-              href: ssma/mysql/creating-variable-value-files-mysqltosql.md
-            - name: Génération de rapports
-              href: ssma/mysql/generating-reports-mysqltosql.md
-            - name: Modifier le mappage de type
-              href: ssma/mysql/edit-type-mapping-mysqltosql.md
-            - name: Mappage des types de données MySQL et SQL Server
-              href: ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md
-            - name: Nouveautés de SSMA pour MySQL
-              href: ssma/mysql/what-s-new-in-ssma-for-mysql-mysqltosql.md
-            - name: Nouvelles fonctionnalités de l’interface graphique utilisateur de SSMA pour MySQL
-              href: ssma/mysql/new-gui-features-in-ssma-for-mysql-mysqltosql.md
-            - name: Définition des options du projet
-              href: ssma/mysql/setting-project-options-mysqltosql.md
-            - name: Connexion à MySQL
-              href: ssma/mysql/connecting-to-mysql-mysqltosql.md
-            - name: Connexion à SQL Server
-              href: ssma/mysql/connecting-to-sql-server-mysqltosql.md
-            - name: Paramètres de projet
-              items:
-                - name: Interface graphique utilisateur
-                  href: ssma/mysql/project-settings-gui-mysqltosql.md
-                - name: Azure SQL DB
-                  href: ssma/mysql/project-settings-azure-sql-db-mysqltosql.md
-                - name: Mappage de types
-                  href: ssma/mysql/project-settings-type-mapping-mysqltosql.md
-                - name: Migration
-                  href: ssma/mysql/project-settings-migration-mysqltosql.md
-                - name: Synchronization
-                  href: ssma/mysql/project-settings-synchronization-mysqltosql.md
-                - name: Conversion
-                  href: ssma/mysql/project-settings-conversion-mysqltosql.md
-            - name: Paramètres globaux
-              href: ssma/mysql/global-settings-output-window-mysqltosql.md
-              items:
-                - name: Boîtes de dialogue
-                  href: ssma/mysql/global-settings-dialogs-mysqltosql.md
-                - name: Journalisation
-                  href: ssma/mysql/global-settings-logging-mysqltosql.md
-                - name: Éditeur
-                  href: ssma/mysql/global-settings-editor-mysqltosql.md
-        - name: Oracle
-          href: ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md
-          items:
-            - name: Nouveautés de SSMA
-              href: ssma/oracle/what-s-new-in-ssma-for-oracle-oracletosql.md
-            - name: Installation de SSMA
-              href: ssma/oracle/installing-ssma-for-oracle-oracletosql.md
-            - name: Mise en route
-              href: ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md
-            - name: Convertir le schéma HR Oracle en SQL Server
-              href: ssma/oracle/sql-server-linux-convert-from-oracle.md
-            - name: Mentions légales
-              href: ssma/oracle/legal-notice-ssma-for-oracle.md
-            - name: Installation du client SSMA pour Oracle
-              href: ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md
-            - name: Nouvelles fonctionnalités de l’interface graphique utilisateur de SSMA
-              href: ssma/oracle/new-gui-features-in-ssma-for-oracle-oracletosql.md
-            - name: Exécution de cas de test
-              href: ssma/oracle/running-test-cases-oracletosql.md
-            - name: Commandes de menu et autres touches de raccourci
-              href: ssma/oracle/menu-commands-and-other-shortcut-keys-oracle-to-sql.md
-            - name: Utilisation de référentiels de tests
-              href: ssma/oracle/using-test-repositories-oracletosql.md
-            - name: Création de fichiers de valeurs de variables
-              href: ssma/oracle/creating-variable-value-files-oracletosql.md
-            - name: Test des objets de base de données migrés
-              href: ssma/oracle/testing-migrated-database-objects-oracletosql.md
-            - name: Utilisation de projets SSMA
-              href: ssma/oracle/working-with-ssma-projects-oracletosql.md
-            - name: Connexion à une base de données Oracle
-              href: ssma/oracle/connecting-to-oracle-database-oracletosql.md
-            - name: Migration de données Oracle dans SQL Server
-              href: ssma/oracle/migrating-oracle-data-into-sql-server-oracletosql.md
-            - name: Conversion de schémas Oracle
-              href: ssma/oracle/converting-oracle-schemas-oracletosql.md
-            - name: Rapport de migration des données
-              href: ssma/oracle/data-migration-report-oracletosql.md
-            - name: Génération de rapports
-              href: ssma/oracle/generating-reports-oracletosql.md
-            - name: Sélection d’objet avancée
-              href: ssma/oracle/advanced-object-selection-oracletosql.md
-            - name: Utilisation des exemples de fichiers de script de console
-              href: ssma/oracle/working-with-the-sample-console-script-files-oracletosql.md
-            - name: Options de ligne de commande dans la console SSMA
-              href: ssma/oracle/command-line-options-in-ssma-console-oracletosql.md
-            - name: Touches de raccourci
-              href: ssma/oracle/shortcut-keys-oracle-to-sql.md
-            - name: Chargement d’objets de base de données convertis dans SQL Server
-              href: ssma/oracle/loading-converted-database-objects-into-sql-server-oracletosql.md
-            - name: Définition des options du projet
-              href: ssma/oracle/setting-project-options-oracletosql.md
-            - name: Gestion des sauvegardes
-              href: ssma/oracle/managing-backups-oracletosql.md
-            - name: Enregistrer les métadonnées
-              href: ssma/oracle/save-metadata-oracletosql.md
-            - name: Personnalisation de l’ordre des appels
-              href: ssma/oracle/customizing-calls-order-oracletosql.md
-            - name: Paramètres de migration de données
-              href: ssma/oracle/data-migration-settings-oracletosql.md
-            - name: Affichage des rapports de cas de test
-              href: ssma/oracle/viewing-test-case-reports-oracletosql.md
-            - name: Gestion des mots de passe
-              href: ssma/oracle/managing-passwords-oracletosql.md
-            - name: Suppression de composants SSMA pour Oracle
-              href: ssma/oracle/removing-ssma-for-oracle-components-oracletosql.md
-            - name: Actualiser à partir de la base de données
-              href: ssma/oracle/refresh-from-database-oracletosql.md
-            - name: Exécution de la console SSMA
-              href: ssma/oracle/executing-the-ssma-console-oracletosql.md
-            - name: Modifier le mappage de type
-              href: ssma/oracle/edit-type-mapping-oracletosql.md
-            - name: Bien démarrer avec la console SSMA pour Oracle
-              href: ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md
-            - name: Création de fichiers de script
-              href: ssma/oracle/creating-script-files-oracletosql.md
-            - name: Sélection et configuration des objets affectés
-              href: ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md
-            - name: Se connecter à SQL Server
-              href: ssma/oracle/connect-to-sql-server-oracletosql.md
-            - name: Utilisation de la console SSMA pour Oracle
-              href: ssma/oracle/working-with-ssma-for-oracle-console-oracletosql.md
-            - name: Évaluation des schémas Oracle pour la conversion
-              href: ssma/oracle/assessing-oracle-schemas-for-conversion-oracletosql.md
-            - name: Initialisation de cas de test
-              href: ssma/oracle/initializing-test-cases-oracletosql.md
-            - name: Installation des composants SSMA sur SQL Server
-              href: ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md
-            - name: Terminer la préparation du cas de test
-              href: ssma/oracle/finishing-test-case-preparation-oracletosql.md
-            - name: Sélection et configuration des objets à tester
-              href: ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md
-            - name: Se connecter à Oracle
-              href: ssma/oracle/connect-to-oracle-oracletosql.md
-            - name: Création de cas de test
-              href: ssma/oracle/creating-test-cases-oracletosql.md
-            - name: Dépannage
-              href: ssma/oracle/troubleshooting-oracletosql.md
-            - name: Migration de bases de données Oracle vers SQL Server
-              href: ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md
-            - name: Connexion à SQL Server
-              href: ssma/oracle/connecting-to-sql-server-oracletosql.md
-            - name: Rapport d’évaluation
-              href: ssma/oracle/assessment-report-oracletosql.md
-            - name: Nouveau projet
-              href: ssma/oracle/new-project-oracletosql.md
-            - name: Référence de l'interface utilisateur
-              href: ssma/oracle/user-interface-reference-oracletosql.md
-            - name: Mappage de schémas Oracle à des schémas SQL Server
-              href: ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md
-            - name: Mappage des types de données Oracle et SQL Server
-              href: ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md
-            - name: Création des fichiers de connexion de serveur
-              href: ssma/oracle/creating-the-server-connection-files-oracletosql.md
-            - name: Annexe - 1
-              href: ssma/oracle/appendix-1-oracletosql.md
-            - name: Paramètres du projet
-              items:
-                - name: Conversion
-                  href: ssma/oracle/project-settings-conversion-oracletosql.md
-                - name: Chargement d’objets système
-                  href: ssma/oracle/project-settings-loading-system-objects-oracletosql.md
-                - name: Synchronization
-                  href: ssma/oracle/project-settings-synchronization-oracletosql.md
-                - name: Interface graphique utilisateur
-                  href: ssma/oracle/project-settings-gui-oracletosql.md
-                - name: Mappage de types
-                  href: ssma/oracle/project-settings-type-mapping-oracletosql.md
-                - name: Migration
-                  href: ssma/oracle/project-settings-migration-oracletosql.md
-            - name: Paramètres globaux
-              items:
-                - name: Testeur
-                  href: ssma/oracle/global-settings-tester-oracletosql.md
-                - name: Éditeur
-                  href: ssma/oracle/global-settings-editor-oracletosql.md
-                - name: Journalisation
-                  href: ssma/oracle/global-settings-logging-oracletosql.md
-                - name: Boîtes de dialogue
-                  href: ssma/oracle/global-settings-dialogs-oracletosql.md
-                - name: Fenêtre Sortie
-                  href: ssma/oracle/global-settings-output-window-oracletosql.md
-        - name: Sybase
-          href: ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md
-          items:
-            - name: Installation de SSMA
-              href: ssma/sybase/installing-ssma-for-sybase-sybasetosql.md
-            - name: Bien démarrer avec SSMA pour Sybase
-              href: ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md
-            - name: Bien démarrer avec la console SSMA pour Sybase
-              href: ssma/sybase/getting-started-with-ssma-for-sybase-console-sybasetosql.md
-            - name: Mentions légales
-              href: ssma/sybase/legal-notice-ssma-for-sybase.md
-            - name: Nouveautés de SSMA
-              href: ssma/sybase/what-s-new-in-ssma-for-sybase-sybasetosql.md
-            - name: Installation du client SSMA pour Sybase
-              href: ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md
-            - name: Nouvelles fonctionnalités de l’interface graphique utilisateur de SSMA
-              href: ssma/sybase/new-gui-features-in-ssma-for-sybase-sybasetosql.md
-            - name: Nouveau projet
-              href: ssma/sybase/new-project-sybasetosql.md
-            - name: Initialisation de cas de test
-              href: ssma/sybase/initializing-test-cases-sybasetosql.md
-            - name: Utilisation des exemples de fichiers de script de console
-              href: ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md
-            - name: Migration de bases de données ASE Sybase vers Azure SQL DB
-              href: ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md
-            - name: Évaluation d’objets de base de données Sybase ASE pour la conversion
-              href: ssma/sybase/assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md
-            - name: Exécution de la console SSMA
-              href: ssma/sybase/executing-the-ssma-console-sybasetosql.md
-            - name: Création de fichiers de script
-              href: ssma/sybase/creating-script-files-sybasetosql.md
-            - name: Paramètres globaux
-              href: ssma/sybase/global-settings-dialogs-sybasetosql.md
-            - name: Connexion à SQL Server
-              href: ssma/sybase/connecting-to-sql-server-sybasetosql.md
-            - name: Sélection d’objet avancée
-              href: ssma/sybase/advanced-object-selection-sybasetosql.md
-            - name: Paramètres du projet (GUI)
-              href: ssma/sybase/project-settings-gui-sybasetosql.md
-            - name: Affichage des rapports de cas de test
-              href: ssma/sybase/viewing-test-case-reports-sybasetosql.md
-            - name: Utilisation de la console SSMA pour Sybase
-              href: ssma/sybase/working-with-ssma-for-sybase-console-sybasetosql.md
-            - name: Utilisation de référentiels de tests
-              href: ssma/sybase/using-test-repositories-sybasetosql.md
-            - name: Rapport de migration des données
-              href: ssma/sybase/data-migration-report-sybasetosql.md
-            - name: Création de cas de test
-              href: ssma/sybase/creating-test-cases-sybasetosql.md
-            - name: Enregistrer les métadonnées
-              href: ssma/sybase/save-metadata-sybasetosql.md
-            - name: Rapport d’évaluation
-              href: ssma/sybase/assessment-report-sybasetosql.md
-            - name: Suppression de composants SSMA pour Sybase
-              href: ssma/sybase/removing-ssma-for-sybase-components-sybasetosql.md
-            - name: Connexion à Sybase ASE
-              href: ssma/sybase/connecting-to-sybase-ase-sybasetosql.md
-            - name: Sélection et configuration des objets affectés
-              href: ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md
-            - name: Connexion à Azure SQL DB
-              href: ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md
-            - name: Gestion des mots de passe
-              href: ssma/sybase/managing-passwords-sybasetosql.md
-            - name: Définition des options du projet
-              href: ssma/sybase/setting-project-options-sybasetosql.md
-            - name: Se connecter à Azure SQL DB
-              href: ssma/sybase/connect-to-azure-sql-db-sybasetosql.md
-            - name: Paramètres de migration de données
-              href: ssma/sybase/data-migration-settings-sybasetosql.md
-            - name: Terminer la préparation du cas de test
-              href: ssma/sybase/finishing-test-case-preparation-sybasetosql.md
-            - name: Sélection et configuration des objets à tester
-              href: ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md
-            - name: Dépannage
-              href: ssma/sybase/troubleshooting-sybasetosql.md
-            - name: Mappage des types de données Sybase ASE et SQL Server
-              href: ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md
-            - name: Installation des composants SSMA sur SQL Server
-              href: ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md
-            - name: Migration de données Sybase ASE dans Azure SQL DB
-              href: ssma/sybase/migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md
-            - name: Se connecter à Sybase
-              href: ssma/sybase/connect-to-sybase-sybasetosql.md
-            - name: Modifier le mappage de type
-              href: ssma/sybase/edit-type-mapping-sybasetosql.md
-            - name: Convertir des objets de base de données ASE Sybase
-              href: ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md
-            - name: Chargement d’objets de base de données convertis dans SQL Server
-              href: ssma/sybase/loading-converted-database-objects-into-sql-server-sybasetosql.md
-            - name: Test des objets de base de données migrés
-              href: ssma/sybase/testing-migrated-database-objects-sybasetosql.md
-            - name: Personnalisation de l’ordre des appels
-              href: ssma/sybase/customizing-calls-order-sybasetosql.md
-            - name: Référence de l'interface utilisateur
-              href: ssma/sybase/user-interface-reference-sybasetosql.md
-            - name: Création de fichiers de valeurs de variables
-              href: ssma/sybase/creating-variable-value-files-sybasetosql.md
-            - name: Création des fichiers de connexion de serveur
-              href: ssma/sybase/creating-the-server-connection-files-sybasetosql.md
-            - name: Options de ligne de commande dans la console SSMA
-              href: ssma/sybase/command-line-options-in-ssma-console-sybasetosql.md
-            - name: Se connecter à SQL Server
-              href: ssma/sybase/connect-to-sql-server-sybasetosql.md
-            - name: Touches de raccourci
-              href: ssma/sybase/shortcut-keys-sybase-to-sql.md
-            - name: Mappage de schémas Sybase ASE à des schémas SQL Server
-              href: ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md
-            - name: Gestion des sauvegardes
-              href: ssma/sybase/managing-backups-sybasetosql.md
-            - name: Commandes de menu et autres touches de raccourci
-              href: ssma/sybase/menu-commands-and-other-shortcut-keys-sybase-to-sql.md
-            - name: Exécution de cas de test
-              href: ssma/sybase/running-test-cases-sybasetosql.md
-            - name: Génération de rapports
-              href: ssma/sybase/generating-reports-sybasetosql.md
-            - name: Utilisation de projets SSMA
-              href: ssma/sybase/working-with-ssma-projects-sybasetosql.md
-            - name: Annexe - 1
-              href: ssma/sybase/appendix-1-sybasetosql.md
-            - name: Paramètres du projet
-              items:
-                - name: Conversion
-                  href: ssma/sybase/project-settings-conversion-sybasetosql.md
-                - name: Mappage de types
-                  href: ssma/sybase/project-settings-type-mapping-sybasetosql.md
-                - name: Synchronization
-                  href: ssma/sybase/project-settings-synchronization-sybasetosql.md
-                - name: Azure SQL DB
-                  href: ssma/sybase/project-settings-azure-sql-db-sybasetosql.md
-                - name: Migration
-                  href: ssma/sybase/project-settings-migration-sybasetosql.md
-            - name: Paramètres globaux
-              href: ssma/sybase/global-settings-output-window-sybasetosql.md
-              items:
-                - name: Éditeur
-                  href: ssma/sybase/global-settings-editor-sybasetosql.md
-                - name: Journalisation
-                  href: ssma/sybase/global-settings-logging-sybasetosql.md
-                - name: Testeur
-                  href: ssma/sybase/global-settings-tester-sybasetosql.md
+      href: ssma/toc.yml
 - name: 'Gérer, superviser et optimiser'
   items:
     - name: Gérer
@@ -6547,7 +5920,7 @@
               items:
                 - name: Envoi d’un e-mail de test
                   href: relational-databases/database-mail/database-mail-sending-test-email.md
-                - name: Erreurs fréquentes
+                - name: Erreurs courantes
                   href: relational-databases/database-mail/database-mail-common-errors.md
                 - name: 'Message en file d’attente, non remis'
                   href: relational-databases/database-mail/database-mail-mail-queued-not-delivered.md
@@ -6573,7 +5946,7 @@
               href: relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md
             - name: Aire de conception de plan de maintenance
               href: relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md
-            - name: Référence
+            - name: Informations de référence
               items:
                 - name: Explorateur d’objets
                   href: relational-databases/maintenance-plans/maintenance-plans-node-object-explorer.md
@@ -6583,7 +5956,7 @@
                   href: relational-databases/maintenance-plans/maintenance-plan-design-tab.md
                 - name: Page Création de rapports et journalisation
                   href: relational-databases/maintenance-plans/maintenance-plan-reporting-and-logging-page.md
-                - name: Gérer les connexion
+                - name: Gérer les connexions
                   href: relational-databases/maintenance-plans/maintenance-plan-manage-connections.md
                 - name: Tâche Sauvegarder la base de données
                   href: relational-databases/maintenance-plans/options-in-the-back-up-database-task-for-maintenance-plan.md
@@ -6730,14 +6103,14 @@
                   href: relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md
                 - name: Vérifier le paramètre de l'option Max Worker Threads
                   href: relational-databases/policy-based-management/verify-max-worker-threads-setting.md
-            - name: "Tutoriel\_: Administration de serveurs à l’aide de la Gestion basée sur des stratégies"
+            - name: 'Didacticiel : Administration de serveurs à l''aide de la Gestion basée sur des stratégies'
               href: relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md
               items:
-                - name: "Leçon\_1\_: Créer et appliquer une stratégie Désactivé par défaut"
+                - name: "Leçon\_1\_: Créer et appliquer une stratégie désactivée par défaut"
                   href: relational-databases/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy.md
                 - name: "Leçon\_2\_: Créer et appliquer une stratégie de standards de nommage"
                   href: relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
-            - name: Référence
+            - name: Informations de référence
               items:
                 - name: Explorateur d’objets
                   href: relational-databases/policy-based-management/policy-management-node-object-explorer.md
@@ -6902,9 +6275,9 @@
           items:
             - name: Démarrages rapides
               items:
-                - name: "Démarrage rapide\_: Événements étendus dans SQL Server"
+                - name: 'Démarrage rapide : Événements étendus dans SQL Server'
                   href: relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
-            - name: Didacticiels
+            - name: Tutoriels
               items:
                 - name: Affichage avancé des données cibles provenant des événements étendus
                   href: relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md
@@ -7301,7 +6674,7 @@
                       href: relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md
                 - name: SSIS pour OLTP en mémoire
                   href: relational-databases/in-memory-oltp/sql-server-integration-services-support-for-in-memory-oltp.md
-            - name: Didacticiels
+            - name: Tutoriels
               items:
                 - name: Créer une table et une procédure optimisée en mémoire
                   href: relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
@@ -7417,7 +6790,7 @@
               href: relational-databases/resource-governor/configure-resource-governor-using-a-template.md
             - name: Afficher les propriétés du gouverneur de ressources
               href: relational-databases/resource-governor/view-resource-governor-properties.md
-            - name: Pool de ressources
+            - name: Liste de ressources partagées
               href: relational-databases/resource-governor/resource-governor-resource-pool.md
               items:
                 - name: Créer
@@ -7483,7 +6856,7 @@
               href: relational-databases/polybase/polybase-scale-out-groups.md
         - name: Guides pratiques
           items:
-            - name: Installation
+            - name: Installer
               items:
                 - name: Installer sur Windows
                   href: relational-databases/polybase/polybase-installation.md
@@ -7529,7 +6902,7 @@
                   href: relational-databases/polybase/polybase-troubleshoot-connectivity.md
                 - name: Forum aux questions de PolyBase
                   href: relational-databases/polybase/polybase-faq.md
-        - name: Référence
+        - name: Informations de référence
           items:
             - name: Référence T-SQL
               href: relational-databases/polybase/polybase-t-sql-objects.md
@@ -7658,7 +7031,7 @@
       items:
         - name: Prise en main
           items:
-            - name: Suivi
+            - name: Traçage
               href: master-data-services/tracing-master-data-services.md
             - name: Opérations de service Web par catégorie
               href: master-data-services/develop/categorized-web-service-operations-master-data-services.md
@@ -7694,7 +7067,7 @@
               items:
                 - name: Se connecter à un référentiel MDS
                   href: master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md
-            - name: "Présentation\_: Exportation de données vers Excel (Complément MDS pour Excel)"
+            - name: 'Vue d’ensemble : exportation de données vers Excel (Complément MDS pour Excel)'
               href: master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md
               items:
                 - name: Filtrer les données avant l’exportation
@@ -7710,7 +7083,7 @@
                   href: master-data-services/microsoft-excel-add-in/email-a-shortcut-query-file-mds-add-in-for-excel.md
                 - name: Actualisation des données
                   href: master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md
-            - name: "Présentation\_: Importation de données depuis Excel (Complément Master Data Services pour Excel)"
+            - name: 'Vue d’ensemble : importation de données à partir d’Excel (complément MDS pour Excel)'
               href: master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md
               items:
                 - name: Publier des données d’Excel dans MDS
@@ -7816,7 +7189,7 @@
                   href: master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md
                 - name: Initier des actions en fonction de modifications de valeurs d'attribut
                   href: master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md
-        - name: "Présentation\_: Importation de données à partir de tables"
+        - name: "Vue d’ensemble\_: Importation de données à partir de tables"
           href: master-data-services/overview-importing-data-from-tables-master-data-services.md
           items:
             - name: Importer des données à partir de tables
@@ -7956,7 +7329,7 @@
               href: master-data-services/create-a-collection-master-data-services.md
             - name: Ajouter des membres à une collection
               href: master-data-services/add-members-to-a-collection-master-data-services.md
-        - name: "Présentation\_: Exporting Data"
+        - name: "Vue d’ensemble\_: Exportation des données"
           href: master-data-services/overview-exporting-data-master-data-services.md
           items:
             - name: Créer une vue d’abonnement pour exporter des données
@@ -8148,21 +7521,21 @@
                       href: relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md
                     - name: Provisionner des clés Always Encrypted en utilisant SSMS
                       href: relational-databases/security/encryption/configure-always-encrypted-keys-using-ssms.md
-                    - name: Provisionner des clés Always Encrypted en utilisant PowerShell
+                    - name: Provisionner des clés Always Encrypted à l’aide de PowerShell
                       href: relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
                 - name: Permuter des clés Always Encrypted
                   items:
                     - name: Permuter des clés Always Encrypted en utilisant SSMS
                       href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md
-                    - name: Permuter des clés Always Encrypted en utilisant PowerShell
+                    - name: Permuter des clés Always Encrypted à l’aide de PowerShell
                       href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
                 - name: Configurer des colonnes avec Always Encrypted
                   items:
                     - name: Configurer le chiffrement de colonne à l’aide de l’Assistant Always Encrypted
                       href: relational-databases/security/encryption/always-encrypted-wizard.md
-                    - name: Configurer le chiffrement de colonne avec Always Encrypted en utilisant PowerShell
+                    - name: Configurer le chiffrement de colonne à l’aide d’Always Encrypted avec PowerShell
                       href: relational-databases/security/encryption/configure-column-encryption-using-powershell.md
-                    - name: Configurer le chiffrement de colonne avec Always Encrypted en utilisant un package DAC
+                    - name: Configurer le chiffrement de colonne en utilisant Always Encrypted avec un package DAC
                       href: relational-databases/security/encryption/configure-always-encrypted-using-dacpac.md
                 - name: Interroger des colonnes avec Always Encrypted
                   items:
@@ -8176,11 +7549,11 @@
                       href: relational-databases/security/encryption/always-encrypted-migrate-using-backup-restore.md
                     - name: Migrer des données à l’aide de l’Assistant Importation et Exportation
                       href: relational-databases/security/encryption/always-encrypted-migrate-using-import-export-wizard.md
-                    - name: Charger en masse des données chiffrées dans des colonnes avec Always Encrypted
+                    - name: Charger en masse des données chiffrées dans des colonnes à l’aide d’Always Encrypted
                       href: relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md
-                - name: Développer des applications avec Always Encrypted
+                - name: Développer des applications à l’aide d’Always Encrypted
                   items:
-                    - name: Développer des applications avec Always Encrypted
+                    - name: Développer des applications à l’aide d’Always Encrypted
                       href: relational-databases/security/encryption/always-encrypted-client-development.md
                     - name: Développer des applications avec le .NET Framework
                       href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
@@ -8191,17 +7564,21 @@
                   items:
                     - name: Configurer des enclaves VBS avec l’attestation du service Guardian hôte
                       items:
-                        - name: Planifier l’attestation du service Guardian hôte
+                        - name: Planifier l’attestation du Service Guardian hôte
                           href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-plan.md
+                        - name: Déployer le Service Guardian hôte
+                          href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md
+                        - name: Inscrire un ordinateur auprès du Service Guardian hôte
+                          href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-register.md
                 - name: Gérer les clés pour Always Encrypted avec enclaves sécurisées
                   items:
                     - name: Gérer les clés prenant en charge les enclaves
                       href: relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md
                     - name: Approvisionner des clés prenant en charge les enclaves
                       href: relational-databases/security/encryption/always-encrypted-enclaves-provision-keys.md
-                    - name: Permuter les clés prenant en charge les enclaves
+                    - name: Effectuer une rotation de clés activées pour les enclaves
                       href: relational-databases/security/encryption/always-encrypted-enclaves-rotate-keys.md
-                - name: Configurer des colonnes avec Always Encrypted avec des enclaves sécurisées
+                - name: Configurer des colonnes à l’aide d’Always Encrypted avec enclaves sécurisées
                   items:
                     - name: Configurer le chiffrement de colonne
                       href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption.md
@@ -8209,13 +7586,13 @@
                       href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-tsql.md
                     - name: Activer Always Encrypted avec enclaves sécurisées pour les colonnes chiffrées existantes
                       href: relational-databases/security/encryption/always-encrypted-enclaves-enable-for-encrypted-columns.md
-                - name: Interroger des colonnes avec Always Encrypted avec enclaves sécurisées
+                - name: Interroger des colonnes en utilisant Always Encrypted avec enclaves sécurisées
                   items:
-                    - name: Interroger des colonnes avec Always Encrypted avec enclaves sécurisées
+                    - name: Interroger des colonnes en utilisant Always Encrypted avec enclaves sécurisées
                       href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns.md
-                    - name: Interroger des colonnes avec Always Encrypted avec enclaves sécurisées en utilisant SSMS
+                    - name: Interroger des colonnes en utilisant Always Encrypted avec enclaves sécurisées avec SSMS
                       href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns-ssms.md
-                - name: Créer et utiliser des index sur des colonnes prenant en charge les enclaves
+                - name: Créer et utiliser des index sur des colonnes avec enclave
                   href: relational-databases/security/encryption/always-encrypted-enclaves-create-use-indexes.md
                 - name: Développer des applications avec Always Encrypted avec enclaves sécurisées
                   href: relational-databases/security/encryption/always-encrypted-enclaves-client-development.md
@@ -8328,7 +7705,7 @@
             - name: Always Encrypted
               href: relational-databases/security/encryption/always-encrypted-database-engine.md
               items:
-                - name: Vue d’ensemble de la gestion des clés pour Always Encrypted
+                - name: Vue d’ensemble de la gestion de clés pour Always Encrypted
                   href: relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md
                 - name: Chiffrement Always Encrypted
                   href: relational-databases/security/encryption/always-encrypted-cryptography.md
@@ -8348,7 +7725,7 @@
               href: relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md
             - name: Auditer des enregistrements
               href: relational-databases/security/auditing/sql-server-audit-records.md
-    - name: Didacticiels
+    - name: Tutoriels
       items:
         - name: Always Encrypted
           items:
@@ -8364,18 +7741,19 @@
               href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
             - name: Développer une application .NET Framework avec Always Encrypted avec enclaves sécurisées
               href: relational-databases/security/tutorial-always-encrypted-enclaves-develop-net-framework-apps.md
-    - name: Référence
+    - name: Informations de référence
       items:
         - name: 'Autorisations ou Éléments sécurisables, page'
           href: relational-databases/security/permissions-or-securables-page.md
 - name: Outils
-  href: tools/overview-sql-tools.md
   items:
+    - name: Vue d’ensemble
+      href: tools/overview-sql-tools.md
     - name: Azure Data Studio
       href: azure-data-studio/what-is.md
       items:
-        - name: Installation
-          href: azure-data-studio/download.md
+        - name: Installer
+          href: azure-data-studio/download-azure-data-studio.md
         - name: Notes de publication
           href: azure-data-studio/release-notes-azure-data-studio.md
         - name: Démarrages rapides
@@ -8388,7 +7766,7 @@
               href: azure-data-studio/quickstart-sql-dw.md
             - name: Connexion & interrogation de PostgreSQL
               href: azure-data-studio/quickstart-postgres.md
-        - name: Didacticiels
+        - name: Tutoriels
           items:
             - name: Éditeur T-SQL
               href: azure-data-studio/tutorial-sql-editor.md
@@ -8501,7 +7879,7 @@
       items:
         - name: Fichiers d’entrée XML
           items:
-            - name: Référence
+            - name: Informations de référence
               href: tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md
             - name: Exemples
               href: tools/dta/xml-input-file-samples-dta.md
@@ -8582,24 +7960,24 @@
                   href: tools/dta/tuningtimeinmin-element-dta.md
                 - name: 'Workload, élément'
                   href: tools/dta/workload-element-dta.md
-            - name: Didacticiels
+            - name: Tutoriels
               href: tools/dta/tutorial-database-engine-tuning-advisor.md
               items:
-                - name: "Leçon\_1\_: Navigation de base dans l’Assistant Paramétrage du moteur de base de données"
+                - name: 'Leçon 1 : navigation de base dans l''Assistant Paramétrage du moteur de base de données'
                   href: tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md
-                - name: "Leçon\_2\_: Utilisation de l’Assistant Paramétrage du moteur de base de données"
+                - name: 'Leçon 2 : utilisation de l''Assistant Paramétrage du moteur de base de données'
                   href: tools/dta/lesson-2-using-database-engine-tuning-advisor.md
-                - name: "Leçon\_3\_: Utilisation de l’utilitaire de ligne de commande\_dta"
+                - name: 'Leçon 3 : Utilisation de l''utilitaire de ligne de commande dta'
                   href: tools/dta/lesson-3-using-the-dta-command-prompt-utility.md
     - name: Distributed Replay
       href: tools/distributed-replay/sql-server-distributed-replay.md
       items:
-        - name: Installation
+        - name: Installer
           href: tools/distributed-replay/install-distributed-replay-overview.md
           items:
             - name: Spécifications
               href: tools/distributed-replay/distributed-replay-requirements.md
-            - name: Installation
+            - name: Installer
               href: tools/distributed-replay/install-distributed-replay.md
             - name: Suivre les étapes consécutives à l'installation
               href: tools/distributed-replay/complete-the-post-installation-steps.md
@@ -8822,29 +8200,29 @@
               href: ssdt/check-for-updates-dialog-box.md
             - name: Paramètres du projet de base de données
               href: ssdt/database-project-settings.md
-            - name: "Procédure\_: Parcourir les objets d’un projet de base de données SQL Server"
+            - name: "Procédure\_: parcourir les objets d'un projet Base de données SQL Server"
               href: ssdt/how-to-browse-objects-in-a-sql-server-database-project.md
             - name: Fenêtre Opérations des outils de données
               href: ssdt/data-tools-operations-window.md
             - name: Options de l’Éditeur T-SQL
               href: ssdt/transact-sql-editor-options.md
-            - name: "Procédure\_: Créer un projet de base de données"
+            - name: "Procédure\_: créer un nouveau projet de base de données"
               href: ssdt/how-to-create-a-new-database-project.md
-            - name: "Procédure\_: Utiliser Comparer les schémas pour comparer différentes définitions de base de données"
+            - name: "Procédure\_: utiliser le schéma pour comparer différentes définitions de base de données"
               href: ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md
-            - name: "Procédure\_: Générer et déployer dans une base de données locale"
+            - name: "Guide pratique\_: générer et déployer sur une base de données locale"
               href: ssdt/how-to-build-and-deploy-to-a-local-database.md
-            - name: "Procédure\_: Utiliser des objets Microsoft SQL\_Server\_2012 dans un projet"
+            - name: "Procédure\_: utiliser des objets Microsoft SQL\_Server\_2012 dans votre projet"
               href: ssdt/how-to-use-microsoft-sql-server-2012-objects-in-your-project.md
-            - name: "Procédure\_: Travailler avec des objets de base de données CLR"
+            - name: "Procédure\_: utilisation des objets de base de données CLR"
               href: ssdt/how-to-work-with-clr-database-objects.md
-            - name: "Procédure\_: Créer une capture instantanée d’un projet"
+            - name: "Procédure\_: créer une capture instantanée d'un projet"
               href: ssdt/how-to-create-a-snapshot-of-a-project.md
-            - name: "Procédure\_: Modifier la plateforme cible et publier un projet de base de données"
+            - name: "Guide pratique\_: Changer la plateforme cible et publier un projet de base de données"
               href: ssdt/how-to-change-target-platform-and-publish-a-database-project.md
-            - name: "Procédure\_: Convertir des projets de base de données Visual Studio\_2010 en projets de base de données SQL\_Server et recibler vers une autre plateforme"
+            - name: "Guide pratique\_: Convertir des projets de base de données Visual Studio\_2010 en projets de base de données SQL\_Server et recibler vers une autre plateforme"
               href: ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md
-            - name: "Procédure\_: Spécifier des scripts de prédéploiement et de post-déploiement"
+            - name: "Guide pratique\_: Spécifier des scripts de prédéploiement et de post-déploiement"
               href: ssdt/how-to-specify-predeployment-or-postdeployment-scripts.md
             - name: Développement de base de données orienté projet à l'aide des outils en ligne de commande
               href: ssdt/project-oriented-database-development-using-command-line-tools.md
@@ -8854,58 +8232,58 @@
             - name: Développement de base de données connectée
               href: ssdt/connected-database-development.md
               items:
-                - name: "Procédure\_: Se connecter à une base de données et parcourir les objets existants"
+                - name: "Guide pratique\_: Se connecter à une base de données et parcourir les objets existants"
                   href: ssdt/how-to-connect-to-a-database-and-browse-existing-objects.md
-                - name: "Procédure\_: Créer des objets de base de données avec le Concepteur de tables"
+                - name: "Procédure\_: créer des objets de base de données à l'aide du Concepteur de tables"
                   href: ssdt/how-to-create-database-objects-using-table-designer.md
-                - name: "Procédure\_: Mettre à jour une base de données connectée avec Power Buffer"
+                - name: "Procédure\_: mettre à jour une base de données connectée avec Power Buffer"
                   href: ssdt/how-to-update-a-connected-database-with-power-buffer.md
                 - name: Boîte de dialogue Filtrer et trier
                   href: ssdt/filter-and-sort-dialog-box.md
-                - name: "Procédure\_: Créer de nouveaux objets de base de données à l’aide de requêtes"
+                - name: "Procédure\_: créer de nouveaux objets de base de données à l'aide de requêtes"
                   href: ssdt/how-to-create-new-database-objects-using-queries.md
-                - name: "Procédure\_: Modifier une table existante à l’aide de requêtes"
+                - name: "Procédure\_: modifier une table existante à l'aide de requêtes"
                   href: ssdt/how-to-edit-an-existing-table-using-queries.md
-                - name: "Procédure\_: Afficher et modifier des données dans une table"
+                - name: "Guide pratique\_: Afficher et modifier des données dans une table"
                   href: ssdt/how-to-view-and-edit-data-in-a-table.md
-                - name: "Procédure\_: Supprimer des objets et résoudre des dépendances"
+                - name: "Guide pratique\_: Supprimer des objets et résoudre des dépendances"
                   href: ssdt/how-to-delete-objects-and-resolve-dependencies.md
-                - name: "Procédure\_: Cloner une base de données existante"
+                - name: "Procédure\_: cloner une base de données existante"
                   href: ssdt/how-to-clone-an-existing-database.md
                 - name: 'Extraire, publier et enregistrer des fichiers .dacpac'
                   href: ssdt/extract-publish-and-register-dacpac-files.md
             - name: Comparer et synchroniser des données d’une ou plusieurs tables avec des données d’une base de données de référence
               href: ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md
               items:
-                - name: "Procédure\_: Comparer et synchroniser les données de deux bases de données"
+                - name: "Guide pratique\_: Comparer et synchroniser les données de deux bases de données"
                   href: ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md
-                - name: "Procédure\_: Afficher les différences entre les données"
+                - name: 'Guide pratique : Voir les différences entre les données'
                   href: ssdt/how-to-view-data-differences.md
                 - name: Utiliser l’Éditeur T-SQL pour modifier et exécuter des scripts
                   href: ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md
-                - name: "Procédure\_: Structurer et ajouter des extraits de code dans un script T-SQL"
+                - name: "Guide pratique\_: Structurer et ajouter des extraits de code dans un script T-SQL"
                   href: ssdt/how-to-outline-and-add-snippets-to-transact-sql-script.md
-                - name: "Procédure\_: Naviguer entre des scripts"
+                - name: "Procédure\_: naviguer entre des scripts"
                   href: ssdt/how-to-navigate-between-scripts.md
-                - name: "Procédure\_: Utiliser Renommer et Refactorisation pour apporter des modifications à vos objets de base de données"
+                - name: "Guide pratique\_: Utiliser Renommer et Refactorisation pour apporter des modifications à vos objets de base de données"
                   href: ssdt/how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects.md
-                - name: "Procédure\_: Exécuter une requête partielle"
+                - name: "Procédure\_: exécuter une requête partielle"
                   href: ssdt/how-to-execute-a-partial-query.md
-                - name: "Procédure\_: Déboguer des procédures stockées"
+                - name: "Procédure\_: déboguer des procédures stockées"
                   href: ssdt/how-to-debug-stored-procedures.md
                 - name: Analyser les performances de script
                   href: ssdt/analyze-script-performance.md
             - name: 'Gérer des tables et des relations, et résoudre les erreurs'
               href: ssdt/manage-tables-relationships-and-fix-errors.md
               items:
-                - name: "Procédure\_: Utiliser le Concepteur de tables pour gérer les tables et les relations"
+                - name: "Guide pratique\_: Utiliser le Concepteur de tables pour gérer les tables et les relations"
                   href: ssdt/how-to-use-the-table-designer-to-manage-tables-and-relationships.md
-                - name: "Procédure\_: Corriger les erreurs"
+                - name: "Procédure\_: résoudre les erreurs"
                   href: ssdt/how-to-fix-errors.md
             - name: Vérification du code de la base de données à l'aide de tests unitaires SQL Server
               href: ssdt/verifying-database-code-by-using-sql-server-unit-tests.md
               items:
-                - name: "Procédure pas à pas\_: Création et exécution d’un test unitaire SQL Server"
+                - name: "Procédure pas à pas\_: Créer et exécuter un test unitaire SQL Server"
                   href: ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md
                 - name: Création et définition de tests unitaires SQL Server
                   href: ssdt/creating-and-defining-sql-server-unit-tests.md
@@ -8918,19 +8296,19 @@
                       href: ssdt/using-test-conditions-in-sql-server-unit-tests.md
                     - name: Utilisation d’assertions T-SQL dans les tests unitaires SQL Server
                       href: ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md
-                    - name: "Procédure\_: Créer un projet de test pour un test unitaire de base de données SQL Server"
+                    - name: "Procédure\_: créer un projet de test pour un test unitaire de base de données SQL Server"
                       href: ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md
-                    - name: "Procédure\_: Créer un test unitaire SQL Server vide"
+                    - name: "Procédure\_: créer un test unitaire SQL Server vide"
                       href: ssdt/how-to-create-an-empty-sql-server-unit-test.md
-                    - name: "Procédure\_: Créer des tests unitaires SQL Server pour des fonctions, des déclencheurs et des procédures stockées"
+                    - name: "Guide pratique\_: Créer des tests unitaires SQL Server pour des fonctions, des déclencheurs et des procédures stockées"
                       href: ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md
-                    - name: "Procédure\_: Ajouter des conditions de test à des tests unitaires SQL Server"
+                    - name: "Procédure\_: ajouter des conditions de test à des tests unitaires SQL Server"
                       href: ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md
-                    - name: "Procédure\_: Ouvrir un test unitaire SQL Server à modifier"
+                    - name: "Procédure\_: ouvrir un test unitaire SQL Server à modifier"
                       href: ssdt/how-to-open-a-sql-server-unit-test-to-edit.md
-                    - name: "Procédure\_: Écrire un test unitaire SQL Server qui s'exécute dans l'étendue d'une seule transaction"
+                    - name: "Procédure\_: écrire un test unitaire SQL Server qui s'exécute dans l'étendue d'une seule transaction"
                       href: ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md
-                    - name: "Procédure\_: Configurer l’exécution de test unitaire SQL Server"
+                    - name: "Procédure\_: configurer l'exécution de test unitaire SQL Server"
                       href: ssdt/how-to-configure-sql-server-unit-test-execution.md
                     - name: Vue d’ensemble des chaînes de connexion et des autorisations
                       href: ssdt/overview-of-connection-strings-and-permissions.md
@@ -8939,11 +8317,11 @@
                 - name: Exécution de tests unitaires SQL Server
                   href: ssdt/running-sql-server-unit-tests.md
                   items:
-                    - name: "Procédure\_: Déboguer des objets de base de données"
+                    - name: "Procédure\_: déboguer des objets de base de données"
                       href: ssdt/how-to-debug-database-objects.md
                     - name: "Procédure\_: exécuter des tests unitaires SQL Server en utilisant Team Foundation Build"
                       href: ssdt/how-to-run-sql-server-unit-tests-from-team-foundation-build.md
-                    - name: "Procédure\_: Exécuter des tests unitaires SQL Server"
+                    - name: "Procédure\_: exécuter des tests unitaires SQL Server"
                       href: ssdt/how-to-run-sql-server-unit-tests.md
                     - name: Interprétation des résultats des tests unitaires SQL Server
                       href: ssdt/interpreting-sql-server-unit-test-results.md
@@ -8952,11 +8330,11 @@
                 - name: Conditions de test personnalisées pour les tests unitaires SQL Server
                   href: ssdt/custom-test-conditions-for-sql-server-unit-tests.md
                   items:
-                    - name: "Procédure\_: Créer des conditions de test pour le Concepteur de test unitaire SQL Server"
+                    - name: "Procédure\_: créer des conditions de test pour le Concepteur de test unitaire SQL Server"
                       href: ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md
-                    - name: "Procédure pas à pas\_: Utiliser une condition de test personnalisée pour vérifier les résultats d’une procédure stockée"
+                    - name: "Procédure pas à pas\_: utilisation d'une condition de test personnalisée pour vérifier le résultat d'une procédure stockée"
                       href: ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md
-                    - name: "Procédure\_: Mettre à niveau une condition de test personnalisée Visual Studio\_2010 d’une version antérieure vers SQL Server Data Tools"
+                    - name: "Procédure\_: mettre à niveau une condition de test personnalisée Visual Studio\_2010 d'une version antérieure vers SQL Server Data Tools"
                       href: ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md
                 - name: "Dépannage des problèmes liés aux tests unitaires de base de données SQL\_Server"
                   href: ssdt/troubleshooting-sql-server-database-unit-testing-issues.md
@@ -8966,7 +8344,7 @@
                 - name: Personnaliser la génération et le déploiement de bases de données à l’aide de contributeurs de génération et de déploiement
                   href: ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md
                   items:
-                    - name: "Procédure pas à pas\_: Étendre la génération du projet de base de données à la génération de statistiques de modèle"
+                    - name: 'Procédure pas à pas : étendre la génération du projet de base de données à la génération de statistiques de modèle'
                       href: ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md
                     - name: "Procédure pas à pas\_: Étendre le déploiement du projet de base de données pour analyser le plan de déploiement"
                       href: ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md
@@ -8977,7 +8355,7 @@
                   items:
                     - name: "Procédure pas à pas\_: création d'un assembly de règle d'analyse statique du code personnalisée pour SQL Server"
                       href: ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md
-                - name: "Procédure\_: Installer et gérer des extensions de fonctionnalités"
+                - name: "Guide pratique\_: Installer et gérer des extensions de fonctionnalités"
                   href: ssdt/how-to-install-and-manage-feature-extensions.md
             - name: Autorisations nécessaires pour SQL Server Data Tools
               href: ssdt/required-permissions-for-sql-server-data-tools.md
@@ -8993,7 +8371,7 @@
           items:
             - name: SQL Server Management Studio (SSMS)
               href: ssms/sql-server-management-studio-ssms.md
-        - name: Didacticiels
+        - name: Tutoriels
           items:
             - name: "Connexion & interrogation de SQL\_Server"
               href: ssms/tutorials/connect-query-sql-server.md
@@ -10338,7 +9716,11 @@
       items:
         - name: Fonctionnalités et outils étendus
           href: tools/download-sql-feature-packs.md
-- name: Didacticiels
+    - name: Visual Studio Code
+      items:
+        - name: Scripts T-SQL
+          href: visual-studio-code/sql-server-develop-use-vscode.md
+- name: Tutoriels
   items:
     - name: SQL Server
       href: sql-server/tutorials-for-sql-server-2016.md
@@ -10348,9 +9730,9 @@
         - name: Mise en route
           href: relational-databases/tutorial-getting-started-with-the-database-engine.md
           items:
-            - name: "Leçon\_1\_: Connexion au moteur de base de données"
+            - name: 'Leçon 1 : Connexion au moteur de base de données'
               href: relational-databases/lesson-1-connecting-to-the-database-engine.md
-            - name: "Leçon\_2\_: Connexion depuis un autre ordinateur"
+            - name: 'Leçon 2 : Connexion depuis un autre ordinateur'
               href: relational-databases/lesson-2-connecting-from-another-computer.md
         - name: Signature de procédures stockées à l'aide d'un certificat
           href: relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md
@@ -10361,9 +9743,9 @@
     - name: Écriture d’instructions T-SQL
       href: t-sql/tutorial-writing-transact-sql-statements.md
       items:
-        - name: "Leçon\_1\_: Créer et interroger des objets de base de données"
+        - name: "Leçon 1\_: Créer et interroger des objets de base de données"
           href: t-sql/lesson-1-creating-database-objects.md
-        - name: "Leçon\_2\_: Configurer des autorisations sur des objets de base de données"
+        - name: "Leçon 2\_: Configurer des autorisations sur des objets de base de données"
           href: t-sql/lesson-2-configuring-permissions-on-database-objects.md
         - name: "Leçon\_3\_: Supprimer des objets de base de données"
           href: t-sql/lesson-3-deleting-database-objects.md
@@ -10374,19 +9756,19 @@
       items:
         - name: Nouveautés
           items:
-            - name: SQL Server 2019
+            - name: "SQL Server\_2019"
               href: linux/sql-server-linux-whats-new-2019.md
             - name: "SQL Server\_2017"
               href: linux/sql-server-linux-whats-new.md
         - name: Notes de publication
           items:
-            - name: SQL Server 2019
+            - name: "SQL Server\_2019"
               href: linux/sql-server-linux-release-notes-2019.md
             - name: "SQL Server\_2017"
               href: linux/sql-server-linux-release-notes.md
         - name: Éditions et fonctionnalités
           items:
-            - name: SQL Server 2019
+            - name: "SQL Server\_2019"
               href: linux/sql-server-linux-editions-and-components-2019.md
             - name: "SQL Server\_2017"
               href: linux/sql-server-linux-editions-and-components-2017.md
@@ -10406,7 +9788,7 @@
           href: /azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine
         - name: Exécuter et connecter - Cloud
           href: linux/quickstart-install-connect-clouds.md
-    - name: Didacticiels
+    - name: Tutoriels
       items:
         - name: Migrer à partir de Windows
           href: linux/sql-server-linux-migrate-restore-database.md
@@ -10425,7 +9807,7 @@
               href: linux/sql-server-linux-shared-disk-cluster-configure-nfs.md
             - name: SMB
               href: linux/sql-server-linux-shared-disk-cluster-configure-smb.md
-        - name: Utiliser une instance de cluster de basculement - SQL Server sur Linux
+        - name: Opérer des instances de cluster de basculement
           href: linux/sql-server-linux-shared-disk-cluster-operate.md
         - name: Déployer un cluster Pacemaker
           href: linux/sql-server-linux-deploy-pacemaker-cluster.md
@@ -10437,7 +9819,7 @@
           href: linux/sql-server-linux-replication-tutorial-tsql.md
     - name: Concepts
       items:
-        - name: Installation
+        - name: Installer
           items:
             - name: Installer SQL Server
               href: linux/sql-server-linux-setup.md
@@ -10467,7 +9849,7 @@
               href: linux/sql-server-linux-configure-pmem.md
             - name: Configurer pour envoyer des données d’utilisation et de diagnostics à Microsoft
               href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
-        - name: Conteneurs
+        - name: Containers
           items:
             - name: Configurer des conteneurs Docker
               href: linux/sql-server-linux-configure-docker.md
@@ -10633,6 +10015,8 @@
   items:
     - name: Découvrir
       items:
+        - name: Ressources éducatives
+          href: sql-server/educational-sql-resources.yml
         - name: Microsoft Virtual Academy >>
           href: 'https://mva.microsoft.com/product-training/sql-server'
         - name: SQL sur Channel 9 >>
@@ -10671,6 +10055,8 @@
           href: sql-server/sql-server-docs-contribute.md
     - name: Partenaires
       items:
+        - name: Clusters Big Data
+          href: sql-server/partner-big-data-cluster.md
         - name: Surveillance
           href: sql-server/partner-monitor-sql-server.md
         - name: Haute disponibilité et reprise d’activité après sinistre
@@ -10681,7 +10067,7 @@
           href: sql-server/partner-dev-sql-server.md
     - name: Contenu local avec la visionneuse d’aide
       href: sql-server/sql-server-help-installation.md
-- name: Référence
+- name: Informations de référence
   items:
     - name: Contenu archivé (SQL 2005 - 2012) >
       displayName: '2005, 2008, 2008 r2, 2012, previous-versions'
@@ -11524,7 +10910,7 @@
         - name: Catégorie d'événement de rapport de progression
           href: relational-databases/event-classes/progress-report-event-category.md
           items:
-            - name: "Rapport de progression\_: Classe d'événements Online Index Operation Event Class"
+            - name: 'Classe d''événements Progress Report: Online Index Operation'
               href: relational-databases/event-classes/progress-report-online-index-operation-event-class.md
         - name: Catégorie d'événement Notifications de requêtes
           href: relational-databases/event-classes/query-notifications-event-category.md
@@ -11687,25 +11073,25 @@
               href: relational-databases/event-classes/dtctransaction-event-class.md
             - name: SQLTransaction (classe d'événements)
               href: relational-databases/event-classes/sqltransaction-event-class.md
-            - name: "TM\_: Begin Tran Completed (classe d'événements)"
+            - name: 'TM: Begin Tran Completed, classe d''événements'
               href: relational-databases/event-classes/tm-begin-tran-completed-event-class.md
-            - name: "TM\_: Begin Tran Starting (classe d'événements)"
+            - name: 'TM: Begin Tran Starting, classe d''événements'
               href: relational-databases/event-classes/tm-begin-tran-starting-event-class.md
-            - name: "TM\_: Commit Tran Completed (classe d'événements)"
+            - name: 'TM: Commit Tran Completed, classe d''événements'
               href: relational-databases/event-classes/tm-commit-tran-completed-event-class.md
-            - name: "TM\_: Commit Tran Starting (classe d'événements)"
+            - name: 'TM: Commit Tran Starting, classe d''événements'
               href: relational-databases/event-classes/tm-commit-tran-starting-event-class.md
-            - name: "TM\_: Promote Tran Completed (classe d'événements)"
+            - name: 'TM: Promote Tran Completed, classe d''événements'
               href: relational-databases/event-classes/tm-promote-tran-completed-event-class.md
-            - name: "TM\_: Promote Tran Starting (classe d'événements)"
+            - name: 'TM: Promote Tran Starting, classe d''événements'
               href: relational-databases/event-classes/tm-promote-tran-starting-event-class.md
-            - name: "TM\_: Rollback Tran Completed (classe d'événements)"
+            - name: 'TM: Rollback Tran Completed, classe d''événements'
               href: relational-databases/event-classes/tm-rollback-tran-completed-event-class.md
-            - name: "TM\_: Rollback Tran Starting (classe d'événements)"
+            - name: 'TM: Rollback Tran Starting, classe d''événements'
               href: relational-databases/event-classes/tm-rollback-tran-starting-event-class.md
-            - name: "TM\_: Save Tran Completed (classe d'événements)"
+            - name: 'TM: Save Tran Completed, classe d''événements'
               href: relational-databases/event-classes/tm-save-tran-completed-event-class.md
-            - name: "TM\_: Save Tran Starting (classe d'événements)"
+            - name: 'TM: Save Tran Starting, classe d''événements'
               href: relational-databases/event-classes/tm-save-tran-starting-event-class.md
             - name: TransactionLog (classe d'événements)
               href: relational-databases/event-classes/transactionlog-event-class.md
@@ -11771,7 +11157,7 @@
               href: powershell/encode-and-decode-sql-server-identifiers.md
             - name: Placer des identificateurs SQL Server dans une séquence d'échappement
               href: powershell/escape-sql-server-identifiers.md
-        - name: Informations de référence sur les applets de commande
+        - name: Référence des applets de commande
           items:
             - name: Applets de commande SqlServer
               href: /powershell/module/sqlserver/
@@ -11828,8 +11214,6 @@
               href: relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md
             - name: sys.resource_usage
               href: relational-databases/system-catalog-views/sys-resource-usage-azure-sql-database.md
-            - name: dbo.server_quotas
-              href: relational-databases/system-catalog-views/dbo-server-quotas-azure-sql-database.md
             - name: sys.server_resource_stats
               href: relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database.md
         - name: Suivi des modifications
@@ -16228,7 +15612,6 @@
                 - name: PUBLISHINGSERVERNAME
                   href: t-sql/functions/replication-functions-publishingservername.md
             - name: Ensemble de lignes
-              href: t-sql/functions/rowset-functions-transact-sql.md
               items:
                 - name: OPENDATASOURCE
                   href: t-sql/functions/opendatasource-transact-sql.md
@@ -17675,3 +17058,5 @@
               href: xquery/string-search-in-xquery.md
             - name: Gestion des espaces de noms dans XQuery
               href: xquery/handling-namespaces-in-xquery.md
+- name: Prise en charge des bases de connaissances
+  href: kb-support/toc.yml

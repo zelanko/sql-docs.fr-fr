@@ -1,5 +1,5 @@
 ---
-title: Méthode AddNew, exemple (VBScript) | Microsoft Docs
+title: AddNew, exemple de méthode (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,18 @@ ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8329b1edd2e240e00221096bd501d3edf204e71
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921283"
 ---
 # <a name="addnew-method-example-vbscript"></a>AddNew, exemple de méthode (VBScript)
-Cet exemple utilise le [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) méthode pour créer un nouvel enregistrement avec le nom spécifié.  
+Cet exemple utilise la méthode [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) pour créer un nouvel enregistrement avec le nom spécifié.  
   
- Utilisez l’exemple suivant dans une Page ASP (Active Server). Utilisez **trouver** pour localiser le fichier Adovbs.inc et placez-le dans le répertoire que vous prévoyez d’utiliser. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le en tant que **nom AddNewVBS.asp**. Vous pouvez afficher le résultat dans n’importe quel navigateur client.  
+ Utilisez l’exemple suivant dans une page de Active Server (ASP). Utilisez **Find** pour localiser le fichier adovbs. Inc et placez-le dans le répertoire que vous prévoyez d’utiliser. Coupez et collez le code suivant dans le bloc-notes ou dans un autre éditeur de texte, puis enregistrez-le en tant que **AddNewVBS. asp**. Vous pouvez afficher le résultat dans n’importe quel navigateur client.  
   
- Pour tester l’exemple, ajoutez un nouvel enregistrement dans le formulaire HTML. Cliquez sur **ajouter un nouveau**. Consultez le [supprimer un exemple de méthode](../../../ado/reference/ado-api/delete-method-example-vbscript.md) pour supprimer les enregistrements inutiles.  
+ Pour tester l’exemple, ajoutez un nouvel enregistrement dans le formulaire HTML. Cliquez sur **Ajouter nouveau**. Consultez l' [exemple de la méthode Delete](../../../ado/reference/ado-api/delete-method-example-vbscript.md) pour supprimer les enregistrements indésirables.  
   
 ```  
 <!-- BeginAddNewVBS -->  

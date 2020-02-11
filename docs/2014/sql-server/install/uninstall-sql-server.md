@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d81180c9cbadec8816c401bc6b8c8d200e76e28b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470192"
 ---
 # <a name="uninstall-sql-server-2014"></a>Désinstaller SQL Server 2014
@@ -33,7 +33,7 @@ ms.locfileid: "62470192"
  [Désinstaller et supprimer Master Data Services](uninstall-and-remove-master-data-services.md)  
  Cette rubrique décrit le processus de désinstallation et de suppression de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] sur l'ordinateur local.  
   
- [Supprimer les objets serveur DQS](remove-data-quality-server-objects.md)  
+ [Supprimer des objets Data Quality Server](remove-data-quality-server-objects.md)  
  Cette rubrique décrit comment supprimer manuellement les objets du [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] après la désinstallation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou uniquement le composant [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] dans [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS).  
   
 ## <a name="related-sections"></a>Sections connexes  
@@ -47,6 +47,6 @@ ms.locfileid: "62470192"
 ## <a name="see-also"></a>Voir aussi  
  [Planification d'une installation SQL Server](planning-a-sql-server-installation.md)   
  [Installer SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)   
- [Mise à niveau vers SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
+ [Mettre à niveau vers SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
   
   

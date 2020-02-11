@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_db_backup_file_snapshots (Transact-SQL) | Microsoft Docs
+title: sys. fn_db_backup_file_snapshots (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2015
 ms.prod: sql
@@ -13,18 +13,18 @@ ms.assetid: 45010ff2-219f-4086-9ea4-016a6c17cddd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5159b72cb91cfdcf21129c6216cab4cf0e8d4dea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68120269"
 ---
-# <a name="sysfndbbackupfilesnapshots-transact-sql"></a>Sys.fn_db_backup_file_snapshots (Transact-SQL)
+# <a name="sysfn_db_backup_file_snapshots-transact-sql"></a>sys. fn_db_backup_file_snapshots (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Retourne des instantanés Azure associées avec les fichiers de base de données. Si la base de données spécifié est introuvable ou si les fichiers de base de données ne sont pas stockés dans le service de stockage d’objets Blob Microsoft Azure, ne retourne aucune ligne. Utilisez cette fonction système conjointement avec le **sys.sp_delete_backup_file_snapshot** procédures stockées système pour identifier et supprimer des instantanés de sauvegarde orphelins. Pour plus d’informations, consultez [Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+  Retourne les instantanés Azure associés aux fichiers de base de données. Si la base de données spécifiée est introuvable ou si les fichiers de base de données ne sont pas stockés dans le service de stockage d’objets BLOB Microsoft Azure, aucune ligne n’est retournée. Utilisez cette fonction système conjointement avec la procédure stockée système **sys. sp_delete_backup_file_snapshot** pour identifier et supprimer les instantanés de sauvegarde orphelins. Pour plus d’informations, voir [File-Snapshot Backups for Database Files in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)(en anglais).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,16 +35,16 @@ sys.fn_db_backup_file_snapshots
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Nom_base_de_données*  
- Le nom de la base de données en cours d’interrogation. Si NULL, cette fonction est exécutée dans l’étendue actuelle de la base de données.  
+ *Database_name*  
+ Nom de la base de données interrogée. Si la valeur est NULL, cette fonction est exécutée dans l’étendue de la base de données actuelle.  
   
 ## <a name="table-returned"></a>Table retournée  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|file_id|**Int**|ID du fichier pour la base de données. N'accepte pas la valeur NULL.|  
-|snapshot_time|**nvarchar(260)**|L’horodatage de l’instantané tel qu’il est retourné par l’API REST. Retourne NULL si aucun instantané n’existe.|  
-|snapshot_url|**nvarchar(360)**|L’URL complète vers l’instantané de fichier. Retourne NULL si aucun instantané n’existe.|  
+|file_id|**int**|ID de fichier de la base de données. N'accepte pas la valeur NULL.|  
+|snapshot_time|**nvarchar(260)**|Horodateur de l’instantané tel qu’il est retourné par l’API REST. Retourne la valeur NULL si aucun instantané n’existe.|  
+|snapshot_url|**nvarchar (360)**|URL complète de l’instantané de fichier. Retourne la valeur NULL si aucun instantané n’existe.|  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation VIEW DATABASE STATE sur la base de données.  

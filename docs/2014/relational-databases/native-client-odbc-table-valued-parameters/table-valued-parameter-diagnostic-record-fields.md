@@ -1,5 +1,5 @@
 ---
-title: Champs d’enregistrement de Diagnostic de paramètre table | Microsoft Docs
+title: Champs d’enregistrement de diagnostic de paramètre table | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c87e272b339357a18ef9f9a167672c1df4ed96e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62625873"
 ---
 # <a name="table-valued-parameter-diagnostic-record-fields"></a>champs d'enregistrement de diagnostic de paramètre table

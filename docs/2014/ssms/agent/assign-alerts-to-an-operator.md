@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 905114d0190a7d1e8441e98249664c985a433988
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473210"
 ---
 # <a name="assign-alerts-to-an-operator"></a>Assign Alerts to an Operator
-  Cette rubrique explique comment affecter des alertes de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à des opérateurs afin qu'ils puissent recevoir des notifications concernant des travaux dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Cette rubrique explique comment assigner [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des alertes d’agent à des opérateurs afin qu’ils puissent [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] recevoir des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] notifications concernant des travaux dans à l’aide de ou [!INCLUDE[tsql](../../includes/tsql-md.md)]de.  
   
  **Dans cette rubrique**  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62473210"
   
      [Sécurité](#Security)  
   
--   **Pour affecter des alertes à un opérateur, utilisez :**  
+-   **Pour affecter des alertes à un opérateur, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -45,9 +45,10 @@ ms.locfileid: "62473210"
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil simple, basé sur une interface graphique, qui permet de gérer le système d'alertes dans sa totalité. L’utilisation de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] est recommandée pour configurer l’infrastructure d’alertes.  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil simple, basé sur une interface graphique, qui permet de gérer le système d'alertes dans sa totalité. L’utilisation de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] est recommandée pour configurer l’infrastructure d’alertes.  
   
--   Pour envoyer une notification en réponse à une alerte, vous devez d'abord configurer l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour l'envoi de messages électroniques. Pour plus d’informations, consultez [Configurer la messagerie de SQL Server Agent en vue de l’utilisation de la messagerie de base de données](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
+-   Pour envoyer une notification en réponse à une alerte, vous devez d'abord configurer l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour l'envoi de messages électroniques. Pour plus d’informations, consultez [Configure SQL Server Agent mail to Use Database mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
   
 -   En cas d’échec au moment de l’envoi d’un message par e-mail ou d’une notification par radiomessagerie, l’échec est consigné dans le journal des erreurs du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
@@ -68,9 +69,9 @@ ms.locfileid: "62473210"
   
 4.  Cliquez avec le bouton droit sur l’opérateur auquel vous souhaitez affecter une alerte et sélectionnez **Propriétés**, puis la page **Notifications** .  
   
-5.  Dans la boîte de dialogue _Propriétés_**nom_opérateur** , sous **Sélectionner une page**, sélectionnez **Notifications**.  
+5.  Dans la boîte de dialogue**Propriétés** du _Operator_name_, sous **Sélectionner une page**, sélectionnez **notifications**.  
   
-6.  Sous **Afficher les notifications envoyées à cet utilisateur par**, sélectionnez **Alertes** pour afficher la liste des alertes envoyées à cet opérateur, ou sélectionnez **Travaux** pour afficher la liste des travaux qui envoient des notifications à cet opérateur. Cochez une ou plusieurs cases parmi les suivantes pour définir, en fonction de vos besoins, la méthode de notification pour chaque notification : **Messagerie électronique**, **Radiomessagerie** ou **Net send**.  
+6.  Sous **Afficher les notifications envoyées à cet utilisateur par**, sélectionnez **Alertes** pour afficher la liste des alertes envoyées à cet opérateur, ou sélectionnez **Travaux** pour afficher la liste des travaux qui envoient des notifications à cet opérateur. Cochez une ou plusieurs cases parmi les suivantes pour définir, en fonction de vos besoins, la méthode de notification pour chaque notification : **Messagerie électronique**, **Radiomessagerie**ou **Net send**.  
   
 7.  Lorsque vous avez terminé, cliquez sur **OK**.  
   
@@ -78,7 +79,7 @@ ms.locfileid: "62473210"
   
 #### <a name="to-assign-alerts-to-an-operator"></a>Pour affecter des alertes à un opérateur  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

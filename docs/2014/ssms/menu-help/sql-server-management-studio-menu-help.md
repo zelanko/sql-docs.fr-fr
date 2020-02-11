@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c1405c26761b41ab0ecbccfc4e2479b89a01a1f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510342"
 ---
 # <a name="sql-server-management-studio-menu-help"></a>Aide de SQL Server Management Studio
-  Cette section contient l’aide accessible par le biais de la touche F1 pour les boîtes de dialogue et les pages accessibles à partir de la barre de menus dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+  Cette section contient l’aide accessible via la touche F1 pour les boîtes de dialogue et les [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]pages disponibles à partir de la barre de menus dans.  
   
  [À propos de SQL Server Management Studio](about-sql-server-management-studio.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62510342"
   
  [Enregistrer sous](save-as.md)  
   
- [Enregistrer les modifications](save-changes.md)  
+ [Save Changes](save-changes.md)  
   
  [Boîte de dialogue Fenêtres &#40;Aide de Microsoft Document Explorer&#41;](windows-dialog-box-microsoft-document-explorer-help.md)  
   

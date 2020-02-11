@@ -14,10 +14,10 @@ ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2d48e8c51f8151f8626e971f928a245ba6776c3e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728340"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>Supprimer un attribut (Master Data Services)
@@ -63,7 +63,7 @@ ms.locfileid: "73728340"
 ## <a name="see-also"></a>Voir aussi  
  [Attributs &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
  [Attributs basés sur un domaine &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
- [Créer un attribut de texte &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
+ [Créez un attribut de texte &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
  [Créer un attribut basé sur un domaine &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
   

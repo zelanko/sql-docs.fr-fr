@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c41e8d90adc8ff6eb2058feebe3f33c10edbfa92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62631383"
 ---
-# <a name="bcpbatch"></a>bcp_batch
+# <a name="bcp_batch"></a>bcp_batch
   Valide toutes les lignes précédemment copiées en bloc à partir de variables de programme et envoyées à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par [bcp_sendrow](bcp-sendrow.md).  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -42,7 +42,7 @@ hdbc
  *hdbc*  
  Handle de connexion ODBC compatible avec la copie en bloc.  
   
-## <a name="returns"></a>Valeur renvoyée  
+## <a name="returns"></a>Retours  
  Le nombre de lignes enregistrées après le dernier appel à **bcp_batch**, ou -1 en cas d'erreur.  
   
 ## <a name="remarks"></a>Notes  
@@ -51,6 +51,6 @@ hdbc
  Vous pouvez appeler **bcp_batch** une fois chaque *n* lignes ou lorsqu'il y a une accalmie dans les données entrantes (comme dans une application de télémesure). Si une application n'appelle pas **bcp_batch** , les lignes copiées en bloc sont validées uniquement lorsque **bcp_done** est appelé.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions de copie en bloc](sql-server-driver-extensions-bulk-copy-functions.md)  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

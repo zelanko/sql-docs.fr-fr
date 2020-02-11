@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510318"
 ---
 # <a name="save-as"></a>Enregistrer sous
-  Utilisez cette boîte de dialogue pour enregistrer une instance de l'élément en cours à l'emplacement spécifié et dans un format de fichier spécifique. Pour afficher cette boîte de dialogue, cliquez sur **enregistrer**  *\<fichier >* **comme** sur le **fichier** menu (où  *\<fichier >* est le nom de l’élément actuel), ou appuyez sur ALT + F, A dans l’éditeur de Code.  
+  Utilisez cette boîte de dialogue pour enregistrer une instance de l'élément en cours à l'emplacement spécifié et dans un format de fichier spécifique. Pour afficher cette boîte de dialogue, cliquez sur **Enregistrer** * \<le fichier>* **sous** dans le menu **fichier** (où * \<fichier>* est le nom de l’élément en cours), ou appuyez sur ALT + F, A dans l’éditeur de code.  
   
 ## <a name="central-panel"></a>Volet central  
  **Enregistrer dans**  
@@ -34,10 +34,10 @@ ms.locfileid: "62510318"
 > [!TIP]
 >  Pour afficher des fichiers qui se trouvent sur le web ou sur un réseau, entrez une URL ou un chemin réseau dans la zone **Nom de fichier** . Par exemple, « <http://mywebsite> » affiche les fichiers disponibles à l’emplacement « monsiteweb », tandis que «\\\monserveur\partage » affiche les fichiers disponibles à l’emplacement « partage » sur « monserveur ».  
   
- **Enregistrer en tant que**  
+ **Type de fichier**  
  Utilisez cette option pour choisir un nouveau type de fichier pour l'élément sélectionné. Les types de fichiers proposés représentent tous les types de fichiers disponibles dans lesquels l'élément sélectionné peut être converti.  
   
- **Options d'enregistrement avancées**  
+ **Options d’enregistrement avancées**  
  Pour accéder à la boîte de dialogue **Options d’enregistrement avancées**, sélectionnez le petit rectangle à droite du bouton **Enregistrer** , puis cliquez sur **Enregistrer avec l’encodage**. Utilisez cette boîte de dialogue pour spécifier un encodage pour le fichier et les caractères à utiliser en fin de ligne.  
   
 ## <a name="left-panel"></a>Volet gauche  

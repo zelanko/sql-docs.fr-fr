@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f3296d0162136a441d141d32089a674a67e7b5b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62466082"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Modèle d'application pour partitionner des tables mémoire optimisées
@@ -34,7 +34,7 @@ ms.locfileid: "62466082"
   
 -   Ajoutez la partition active.  
   
- ![Basculement de partition](../../database-engine/media/hekaton-partitioned-tables.gif "Basculement de partition")  
+ ![Basculement de partition](../../database-engine/media/hekaton-partitioned-tables.gif "Basculement de partition.")  
 Maintenance de données actives  
   
  Les actions qui commencent par Deleting ActiveOrders doivent être effectuées pendant une période de maintenance pour éviter des requêtes sans données pendant l'intervalle entre la suppression des données et le basculement dans la table de mise en lots.  
@@ -210,6 +210,6 @@ SELECT OBJECT_NAME( object_id) , partition_number , row_count  FROM sys.dm_db_pa
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables optimisées en mémoire](memory-optimized-tables.md)  
+ [Tables à mémoire optimisée](memory-optimized-tables.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Suivi
+title: Traçage
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: fe2c0096aecd1296f7f10ce90a1acae706f3f3af
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727848"
 ---
 # <a name="tracing-master-data-services"></a>Suivi (Master Data Services)
@@ -62,7 +62,7 @@ ms.locfileid: "73727848"
   
     |Élément|Description|  
     |-------------|-----------------|  
-    |Time|Date de l’entrée de suivi.|  
+    |Temps|Date de l’entrée de suivi.|  
     |CorrelationID|Un ID de corrélation est affecté à chaque demande. Tous les suivis déclenchés par la demande partagent le même ID de corrélation.<br /><br /> Lorsqu’une erreur se produit dans l’interface utilisateur, l’ID de corrélation apparaît dans le message d’erreur.|  
     |Opération|Nom de l’opération de demande. Si la demande est une demande de l’interface utilisateur Web, le nom de l’opération correspond à l’URL. Si la demande est une demande API, le nom de l’opération correspond au nom du service.|  
     |Level|Niveau de cette entrée de suivi.|  

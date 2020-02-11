@@ -17,20 +17,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1ba38b6a3c425972ef0b893d302df78e3d835f85
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783387"
 ---
 # <a name="view-the-job-history"></a>Afficher l'historique des travaux
-  Cette rubrique décrit comment afficher le journal d'historique des travaux de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou de SQL Server Management Objects.  
+  Cette rubrique explique comment afficher le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] journal d’historique des travaux de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] l’agent [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]dans [!INCLUDE[tsql](../../includes/tsql-md.md)]à l’aide de, de ou de SQL Server Management Objects.  
   
 -   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour afficher le journal d'historique des travaux, utilisez :**  
+-   **Pour afficher le journal d’historique des travaux, utilisez :**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "72783387"
   
 #### <a name="to-view-the-job-history-log"></a>Pour afficher le journal d'historique des travaux  
   
-1.  Dans **l’Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
+1.  Dans l' [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **Explorateur d’objets,** Connectez-vous à une instance du, puis développez cette instance.  
   
 2.  Développez **SQL Server Agent**, puis **Travaux**.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "72783387"
   
 #### <a name="to-view-the-job-history-log"></a>Pour afficher le journal d'historique des travaux  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -77,9 +77,9 @@ ms.locfileid: "72783387"
     GO  
     ```  
   
- Pour plus d’informations, [consultez &#40;SP_HELP_JOBHISTORY Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql).  
+ Pour plus d’informations, consultez [sp_help_jobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql).  
   
 ##  <a name="SMO"></a>Utilisation de SQL Server Management Objects  
- **Pour afficher le journal d'historique des travaux**  
+ **Pour afficher le journal d’historique des travaux**  
   
- Appelez la méthode `EnumHistory` de la classe `Job` à l'aide d'un langage de programmation tel que Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
+ Appelez la méthode `EnumHistory` de la classe `Job` à l'aide d'un langage de programmation tel que Visual Basic, Visual C# ou PowerShell. Pour plus d'informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  

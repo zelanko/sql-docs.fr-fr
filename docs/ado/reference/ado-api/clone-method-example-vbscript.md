@@ -15,18 +15,18 @@ ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cc82f72b175373d504b7fda658f1c7ed8eb7f1ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920007"
 ---
 # <a name="clone-method-example-vbscript"></a>Clone, exemple de méthode (VBScript)
-Cet exemple utilise le [Clone](../../../ado/reference/ado-api/clone-method-ado.md) méthode pour créer des copies d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) puis permet à l’utilisateur de positionner le pointeur d’enregistrement de chaque copie indépendamment.  
+Cet exemple utilise la méthode [clone](../../../ado/reference/ado-api/clone-method-ado.md) pour créer des copies d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) , puis permet à l’utilisateur de positionner le pointeur d’enregistrement de chaque copie indépendamment.  
   
- Utilisez l’exemple suivant dans une Page ASP (Active Server). Cet exemple utilise le **Northwind** base de données distribuée avec Microsoft Access. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le sous le nom CloneVBS.asp. Vous pouvez afficher le résultat dans n’importe quel navigateur client.  
+ Utilisez l’exemple suivant dans une page de Active Server (ASP). Cet exemple utilise la base de données **Northwind** distribuée avec Microsoft Access. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte, puis enregistrez-le en tant que CloneVBS. asp. Vous pouvez afficher le résultat dans n’importe quel navigateur client.  
   
- Pour tester l’exemple, remplacez la ligne `RsCustomerList.Source = "Customers"` à `RsCustomerList.Source = "Products"` à compter d’une table plus volumineuse.  
+ Pour tester l’exemple, remplacez la ligne `RsCustomerList.Source = "Customers"` par `RsCustomerList.Source = "Products"` pour compter une plus grande table.  
   
 ```  
 <!-- BeginCloneVBS -->  

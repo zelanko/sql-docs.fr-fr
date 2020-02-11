@@ -20,31 +20,31 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ac6ad0872e813d36d9884a00f979b2a5284cd4a3
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73536157"
 ---
-# <a name="sysexternal_libraries-transact-sql"></a>sys. external_libraries (Transact-SQL)  
+# <a name="sysexternal_libraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Prend en charge la gestion des bibliothèques de packages relatives aux runtimes externes tels que R, Python et Java.
 
 > [!NOTE]
-> Dans SQL Server 2017, le langage R et la plateforme Windows sont pris en charge. R, Python et Java sur les plateformes Windows et Linux sont pris en charge dans SQL Server 2019 et versions ultérieures.
+> Dans SQL Server 2017, le langage R et la plateforme Windows sont pris en charge. R, Python et Java sur les plateformes Windows et Linux sont pris en charge dans SQL Server 2019 et ultérieur.
 
 ## <a name="sysexternal_libraries"></a>sys.external_libraries
 
 L’affichage catalogue sys. external_libraries répertorie une ligne pour chaque bibliothèque externe qui a été chargée dans la base de données.
 
-|Nom de colonne |Type de données | Description|
+|Nom de la colonne |Type de données | Description|
 |------|------|------|
 |external_library_id |int | ID de l’objet de bibliothèque externe. |
 |name |sysname |Nom de la bibliothèque externe. Est unique dans la base de données par propriétaire.|
 |principal_id |int |ID du principal propriétaire de cette bibliothèque externe. |
-|langue | sysname | Nom de la langue ou du runtime qui prend en charge la bibliothèque externe. Les valeurs valides sont « R », « Python » et « Java ». Des runtimes supplémentaires peuvent être ajoutés à l’avenir.|
-|portée |int |0 pour l’étendue publique ; 1 pour l’étendue privée |  
+|langage | sysname | Nom de la langue ou du runtime qui prend en charge la bibliothèque externe. Les valeurs valides sont « R », « Python » et « Java ». Des runtimes supplémentaires peuvent être ajoutés à l’avenir.|
+|scope |int |0 pour l’étendue publique ; 1 pour l’étendue privée |  
 |scope_desc |varchar (7) |Indique si le package est public ou privé|
 
 ## <a name="see-also"></a>Voir aussi  

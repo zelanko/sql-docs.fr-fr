@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0fee60fa1a78c2d6d0becb63b2319105016adf1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754676"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>Supprimer le témoin d'une session de mise en miroir de bases de données (SQL Server)
@@ -30,13 +30,13 @@ ms.locfileid: "62754676"
   
      [Sécurité](#Security)  
   
--   **Pour supprimer le témoin, utilisez :**  
+-   **Pour remplacer supprimer le témoin, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [Après avoir supprimé le témoin](#FollowUp)  
+-   **Suivi :**  [après avoir supprimé le témoin](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62754676"
   
 3.  Émettez l'instruction suivante :  
   
-     [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) *nom_base_de_données* SET WITNESS OFF  
+     [ALTER database](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) *database_name* SET WITNESS désactivé  
   
      où *nom_base_de_données* est le nom de la base de données en miroir.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62754676"
     ALTER DATABASE AdventureWorks2012 SET WITNESS OFF ;  
     ```  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir supprimé le témoin  
+##  <a name="FollowUp"></a>Suivi : après avoir supprimé le témoin  
  La désactivation du témoin modifie le [mode d’opération](database-mirroring-operating-modes.md)conformément au paramètre de sécurité des transactions :  
   
 -   Si la sécurité des transactions a la valeur FULL (valeur par défaut), la session utilise le mode synchrone haute sécurité sans basculement automatique.  
@@ -88,7 +88,7 @@ ms.locfileid: "62754676"
 -   Si la sécurité des transactions a la valeur OFF (désactivée), la session agit de manière asynchrone (en mode hautes performances) sans nécessiter de quorum. Lorsque la sécurité des transactions est désactivée, il est vivement recommandé de désactiver également le témoin.  
   
 > [!TIP]  
->  Le paramètre de sécurité des transactions de la base de données est enregistré pour chaque serveur partenaire dans l’affichage catalogue [sys.database_mirroring](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql) des colonnes **mirroring_safety_level** et **mirroring_safety_level_desc** .  
+>  Le paramètre de sécurité des transactions de la base de données est enregistré pour chaque serveur partenaire dans la vue de catalogue [sys.database_mirroring](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql) des colonnes **mirroring_safety_level** et **mirroring_safety_level_desc**.  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   

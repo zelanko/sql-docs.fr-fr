@@ -1,5 +1,5 @@
 ---
-title: Contrôlez les modifications de la Table de Base de l’objet Recordset (ADO) | Microsoft Docs
+title: Contrôle des modifications apportées à la table de base du recordset (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,36 +16,36 @@ ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b70920cd223223d5efb14925a6808168ca9cc16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911679"
 ---
-# <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Table unique, schéma Unique, Unique catalogue propriétés dynamique (ADO)
-Vous permet de contrôle précis des modifications apportées à une table de base de données dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) qui a été formé par une opération de jointure sur plusieurs tables de base.  
+# <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Table unique, schéma unique, propriétés de catalogue uniques-dynamique (ADO)
+Permet de contrôler étroitement les modifications apportées à une table de base particulière dans un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) formé par une opération de jointure sur plusieurs tables de base.  
   
--   **Table unique** Spécifie le nom de la table de base sur laquelle les mises à jour, insertions et suppressions sont autorisées.  
+-   **Table unique** spécifie le nom de la table de base sur laquelle les mises à jour, les insertions et les suppressions sont autorisées.  
   
--   **Schéma unique** Spécifie le *schéma*, ou le nom du propriétaire de la table.  
+-   Le **schéma unique** spécifie le *schéma*, ou le nom du propriétaire de la table.  
   
--   **Catalogue unique** Spécifie le *catalogue*, ou le nom de la base de données contenant la table.  
+-   **Unique Catalog** spécifie le *catalogue*ou le nom de la base de données contenant la table.  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Définit ou retourne un **chaîne** valeur qui est le nom d’une table, un schéma ou un catalogue.  
+ Définit ou retourne une valeur de **chaîne** qui est le nom d’une table, d’un schéma ou d’un catalogue.  
   
 ## <a name="remarks"></a>Notes  
- La table de base souhaitée est identifiée par son catalogue, schéma, ainsi que les noms de tables. Lorsque le **Unique Table** propriété est définie, les valeurs de la **schéma Unique** ou **catalogue Unique** propriétés permettent de trouver la table de base. Il est prévu, mais pas obligatoire, qu’une ou les deux le **schéma Unique** et **catalogue Unique** propriétés être définies avant le **Unique Table** propriété est définie.  
+ La table de base souhaitée est identifiée de manière unique par son nom de catalogue, de schéma et de table. Lorsque la propriété de **table unique** est définie, les valeurs des propriétés de **schéma unique** ou **unique de catalogue** sont utilisées pour rechercher la table de base. Il est prévu, mais pas obligatoire, que les propriétés de **schéma unique** et de **catalogue unique** soient définies avant que la propriété de **table unique** soit définie.  
   
- La clé primaire de la **Unique Table** est traitée comme la clé primaire de l’ensemble du **Recordset**. Il s’agit de la clé qui est utilisée pour n’importe quelle méthode nécessitant une clé primaire.  
+ La clé primaire de la **table unique** est traitée comme la clé primaire de l’ensemble du **Recordset**. Il s’agit de la clé utilisée pour toute méthode nécessitant une clé primaire.  
   
- Bien que **Unique Table** est défini, le [supprimer](../../../ado/reference/ado-api/delete-method-ado-recordset.md) méthode affecte uniquement la table nommée. Le [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), [Resync](../../../ado/reference/ado-api/resync-method.md), [mise à jour](../../../ado/reference/ado-api/update-method.md), et [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) méthodes affectent aucune table de base sous-jacente appropriée de la **Recordset**.  
+ Alors que la **table unique** est définie, la méthode [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) affecte uniquement la table nommée. Les méthodes [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), [Resync](../../../ado/reference/ado-api/resync-method.md), [Update](../../../ado/reference/ado-api/update-method.md)et [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) affectent les tables de base sous-jacentes appropriées du **Recordset**.  
   
- **Table unique** doit être spécifié avant de procéder à des resynchronisations personnalisées. Si **Unique Table** n’a pas été spécifié, le [Resync Command](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md) propriété n’a aucun effet.  
+ Une **table unique** doit être spécifiée avant d’exécuter des resynchronisations personnalisées. Si la **table unique** n’a pas été spécifiée, la propriété de [commande Resync](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md) n’aura aucun effet.  
   
- Une erreur d’exécution des résultats si une table de base unique ne peut pas être trouvée.  
+ Une erreur d’exécution se produit si une table de base unique est introuvable.  
   
- Ces propriétés dynamiques sont toutes ajoutées à la **Recordset** objet [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection lorsque le [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriété est définie sur  **adUseClient**.  
+ Ces propriétés dynamiques sont toutes ajoutées à la collection de [Propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) de l’objet **Recordset** lorsque la propriété [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) a la valeur **adUseClient**.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

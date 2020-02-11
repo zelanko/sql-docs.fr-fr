@@ -22,106 +22,106 @@ ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4630ae8d92dbf0e9b1c5bf615dd82d436a5751f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006650"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>Connexion à SQL Server (AccessToSQL)
-Pour migrer des bases de données Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez vous connecter à l’instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lorsque vous vous connectez, SSMA Obtient des métadonnées sur les bases de données dans l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et affiche les métadonnées de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées. SSMA stocke des informations sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous êtes connecté à, mais ne stocke pas les mots de passe.  
+Pour migrer des bases de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]données Access vers, vous devez vous connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l’instance cible de. Quand vous vous connectez, SSMA obtient les métadonnées relatives aux bases de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’instance de et affiche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les métadonnées de la base de données dans l’Explorateur de métadonnées. SSMA stocke des informations sur l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance de à laquelle vous êtes connecté, mais ne stocke pas les mots de passe.  
   
-Votre connexion à SQL Server reste active jusqu'à ce que vous fermiez le projet. Lorsque vous rouvrez le projet, vous devez vous reconnecter à SQL Server si vous souhaitez une connexion active au serveur. Vous pouvez travailler hors connexion jusqu'à ce que vous chargez des objets de base de données dans SQL Server et migrez des données.  
+Votre connexion à SQL Server reste active jusqu’à ce que vous fermiez le projet. Lorsque vous rouvrez le projet, vous devez vous reconnecter à SQL Server si vous souhaitez une connexion active au serveur. Vous pouvez travailler hors connexion jusqu’à ce que vous chargeant des objets de base de données dans SQL Server et migriez les données.  
   
-Métadonnées relatives à l’instance de SQL Server ne sont pas synchronisée automatiquement. Au lieu de cela, pour mettre à jour les métadonnées dans l’Explorateur de métadonnées SQL Server, vous devez manuellement mettre à jour les métadonnées de SQL Server. Pour plus d’informations, consultez la section « Synchronisation des métadonnées SQL Server » plus loin dans cette rubrique.  
+Les métadonnées relatives à l’instance de SQL Server ne sont pas synchronisées automatiquement. Au lieu de cela, pour mettre à jour les métadonnées dans SQL Server Explorateur de métadonnées, vous devez mettre à jour manuellement les métadonnées de SQL Server. Pour plus d’informations, consultez la section « synchronisation des métadonnées de SQL Server » plus loin dans cette rubrique.  
   
-## <a name="required-sql-server-permissions"></a>Autorisations requises de SQL Server  
-Le compte qui est utilisé pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nécessite des autorisations différentes selon les actions effectuées par ce compte.  
+## <a name="required-sql-server-permissions"></a>Autorisations de SQL Server requises  
+Le compte utilisé pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiert des autorisations différentes en fonction des actions effectuées par ce compte.  
   
--   Pour convertir des objets d’accès à [!INCLUDE[tsql](../../includes/tsql-md.md)] syntaxe, actualisation des métadonnées à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou pour enregistrer la syntaxe converti vers des scripts, le compte doit disposer d’autorisation pour vous connecter à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Pour convertir des objets Access [!INCLUDE[tsql](../../includes/tsql-md.md)] en syntaxe, pour actualiser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]les métadonnées à partir de ou pour enregistrer la syntaxe convertie dans des scripts, le compte doit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]avoir l’autorisation de se connecter à l’instance de.  
   
--   Pour charger des objets de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et à migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l’exigence d’autorisation minimal est l’appartenance à la **db_owner** rôle de base de données dans la base de données cible.  
+-   Pour charger des objets de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données dans et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]migrer des données vers, l’exigence d’autorisation minimale est l’appartenance au rôle de base de données **db_owner** dans la base de données cible.  
   
-## <a name="establishing-a-sql-server-connection"></a>L’établissement d’une connexion SQL Server  
-Avant de convertir des objets de base de données Access à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] syntaxe, vous devez établir une connexion à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] où vous souhaitez migrer les bases de données Access.  
+## <a name="establishing-a-sql-server-connection"></a>Établissement d’une connexion SQL Server  
+Avant de convertir des objets de base [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de données Access en syntaxe, vous devez établir une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’instance de dans laquelle vous souhaitez migrer les bases de données Access.  
   
-Lorsque vous définissez les propriétés de connexion, vous spécifiez également la base de données où les objets et les données seront migrées. Vous pouvez personnaliser ce mappage au niveau d’accès de base de données après vous être connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Source de mappage et de bases de données cibles](mapping-source-and-target-databases-accesstosql.md).  
+Lorsque vous définissez les propriétés de connexion, vous spécifiez également la base de données dans laquelle les objets et les données seront migrés. Vous pouvez personnaliser ce mappage au niveau de la base de données Access après [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vous être connecté à. Pour plus d’informations, consultez [mappage des bases de données source et cible](mapping-source-and-target-databases-accesstosql.md).  
   
 > [!IMPORTANT]  
-> Avant de vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], assurez-vous que l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d’exécution et peut accepter les connexions. Pour plus d’informations, consultez « connexion à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] moteur de base de données » dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne.  
+> Avant de vous connecter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]à, assurez-vous que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’instance de est en cours d’exécution et peut accepter des connexions. Pour plus d’informations, consultez « connexion au [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] moteur de base de données » dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne de.  
   
-**Pour vous connecter à SQL Server**  
+**Pour se connecter à SQL Server**  
   
-1.  Sur le **fichier** menu, sélectionnez **se connecter à SQL Server**.  
+1.  Dans le menu **fichier** , sélectionnez **se connecter à SQL Server**.  
   
-    Si vous aviez précédemment connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le nom de la commande sera **reconnexion à SQL Server**.  
+    Si vous vous êtes connecté [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]précédemment à, le nom de la commande sera **reconnecté à SQL Server**.  
   
-2.  Dans le **nom du serveur** zone, entrez ou sélectionnez le nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+2.  Dans la zone **nom du serveur** , entrez ou sélectionnez le nom de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de.  
   
-    -   Si vous vous connectez à l’instance par défaut sur l’ordinateur local, vous pouvez entrer **localhost** ou un point ( **.** ).  
+    -   Si vous vous connectez à l’instance par défaut sur l’ordinateur local, vous pouvez entrer **localhost** ou un point (**.**).  
   
     -   Si vous vous connectez à l’instance par défaut sur un autre ordinateur, entrez le nom de l’ordinateur.  
   
-    -   Si vous vous connectez à une instance nommée, entrez le nom d’ordinateur, une barre oblique inverse et le nom d’instance. Exemple : MyServer\MyInstance.  
+    -   Si vous vous connectez à une instance nommée, entrez le nom de l’ordinateur, une barre oblique inverse et le nom de l’instance. Par exemple : MyServer\MyInstance.  
   
-    -   Pour vous connecter à une instance utilisateur active de [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], se connecter à l’aide de canaux nommés protocole et en spécifiant le nom du canal, tel que \\ \\.\pipe\sql\query. Pour plus d’informations, consultez le [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] documentation.  
+    -   Pour vous connecter à une instance utilisateur active [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]de, connectez-vous à l’aide du protocole de canaux nommés et en \\ \\spécifiant le nom du canal, par exemple .\pipe\sql\query. Pour plus d’informations, consultez la documentation de [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)].  
   
-3.  Si votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour accepter les connexions sur un port non défini par défaut, entrez le numéro de port qui est utilisé pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexions dans le **port du serveur** boîte. L’instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le numéro de port par défaut est 1433. Pour les instances nommées, SSMA essaiera d’obtenir le numéro de port à partir de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Browser.  
+3.  Si votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configurée pour accepter les connexions sur un port autre que celui par défaut, entrez le numéro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] port utilisé pour les connexions dans la zone **port du serveur** . Pour l’instance par défaut [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de, le numéro de port par défaut est 1433. Pour les instances nommées, SSMA essaiera d’obtenir le numéro de port [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auprès du service Browser.  
   
-4.  Dans le **base de données** , entrez le nom de la base de données cible pour la migration de données et des objets.  
+4.  Dans la zone **base de données** , entrez le nom de la base de données cible pour la migration des données et des objets.  
   
     Cette option n’est pas disponible lors de la reconnexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-    Le nom de la base de données cible ne peut pas contenir des espaces ou des caractères spéciaux. Par exemple, vous pouvez migrer des bases de données Access à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données nommée « abc ». Mais vous ne pouvez pas migrer des bases de données Access à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données nommée « a b-c ».  
+    Le nom de la base de données cible ne peut pas contenir d’espaces ou de caractères spéciaux. Par exemple, vous pouvez migrer des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Access vers une base de données nommée « ABC ». Toutefois, vous ne pouvez pas migrer des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données Access vers une base de données nommée « a b-c ».  
   
-    Vous pouvez personnaliser ce mappage par base de données une fois que vous vous connectez. Pour plus d’informations, consultez [Source de mappage et de bases de données cibles](mapping-source-and-target-databases-accesstosql.md)  
+    Vous pouvez personnaliser ce mappage par base de données une fois que vous êtes connecté. Pour plus d’informations, consultez [mappage des bases de données source et cible](mapping-source-and-target-databases-accesstosql.md) .  
   
-5.  Dans le **authentification** menu déroulant, sélectionnez type d’authentification à utiliser pour la connexion. Pour utiliser le compte Windows actuel, sélectionnez **l’authentification Windows**. Pour utiliser un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion, sélectionnez **l’authentification SQL Server**, puis indiquez un nom d’utilisateur et le mot de passe.  
+5.  Dans le menu déroulant **authentification** , sélectionnez le type d’authentification à utiliser pour la connexion. Pour utiliser le compte Windows actuel, sélectionnez **authentification Windows**. Pour utiliser une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion, sélectionnez **SQL Server l’authentification**, puis entrez un nom d’utilisateur et un mot de passe.  
   
-6.  Pour une connexion sécurisée, les deux contrôles sont ajoutés, **chiffrer la connexion** case à cocher et **TrustServerCertificate** case à cocher. Uniquement lorsque **chiffrer la connexion** case à cocher est activée **TrustServerCertificate** case à cocher est visible. Lorsque **chiffrer la connexion** est checked(true) et **TrustServerCertificate** est unchecked(false), validera le certificat SSL SQL Server. La validation du certificat de serveur est une partie de la négociation SSL qui garantit qu'il s'agit du serveur correct avec lequel établir une connexion. Pour ce faire, un certificat doit être installé sur le côté client, ainsi que sur le côté serveur.  
+6.  Pour une connexion sécurisée, la case à cocher **chiffrer la connexion** et la case à cocher **TrustServerCertificate** s’ajoutent. Cette **case à cocher est activée uniquement** lorsque la case **chiffrer la connexion** est cochée. Lorsque l’option **chiffrer la connexion** est activée (true) et la valeur **TrustServerCertificate** est désactivée (false), valide le certificat SSL SQL Server. La validation du certificat de serveur est une partie de la négociation SSL qui garantit qu'il s'agit du serveur correct avec lequel établir une connexion. Pour ce faire, un certificat doit être installé côté client et du côté serveur.  
   
-7.  Cliquer sur **Se connecter**.  
+7.  Cliquez sur **Connecter**.  
   
-**Compatibilité de version supérieur**  
+**Compatibilité de version supérieure**  
   
 Il est autorisé à se connecter/se reconnecter à des versions ultérieures de SQL Server.  
   
-1.  Vous serez en mesure de se connecter à SQL Server 2008 ou SQL Server 2012, lorsque le projet créé est SQL Server 2005.  
+1.  Vous serez en mesure de vous connecter à SQL Server 2008 ou à SQL Server 2012 lorsque le projet créé est SQL Server 2005.  
   
-2.  Vous serez en mesure de se connecter à SQL Server 2012, lorsque le projet créé est SQL Server 2008, mais il n’est pas autorisé à se connecter à des versions inférieures par exemple, SQL Server 2005.  
+2.  Vous serez en mesure de vous connecter à SQL Server 2012 lorsque le projet créé est SQL Server 2008, mais qu’il n’est pas autorisé à se connecter à des versions inférieures, par exemple SQL Server 2005.  
   
-3.  Vous serez en mesure de se connecter à SQL Server 2012 uniquement lorsque le projet créé est SQL Server 2012.  
+3.  Vous ne pouvez vous connecter qu’à SQL Server 2012 lorsque le projet créé est SQL Server 2012.  
   
-4.  Compatibilité de version supérieur n’est pas valide pour SQL Azure.  
+4.  La compatibilité de version supérieure n’est pas valide pour SQL Azure.  
   
 ||||||||
 |-|-|-|-|-|-|-|
-|**PROJET Visual Studio TYPE VERSION du serveur cible**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 (version : 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 (version : 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 (Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 (Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 (Version:13.x)|SQL Azure|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|Oui|Oui|Oui|Oui|Oui||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||Oui|Oui|Oui|Oui||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||Oui|Oui|Oui||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014||||Oui|Oui||
+|**TYPE de projet et VERSION du serveur cible**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 (version : 9. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008 (version : 10. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 (version : 11. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 (version : 12. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016 (version : 13. x)|SQL Azure|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005|Oui|Oui|Oui|Oui|Oui||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008||Oui|Oui|Oui|Oui||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012|||Oui|Oui|Oui||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||Oui|Oui||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||Oui||
 |SQL Azure||||||Oui|
   
 > [!IMPORTANT]  
-> Conversion des objets de base de données est effectuée selon le type de projet, mais pas conformément à la version de SQL Server connecté à. En cas de projet SQL Server 2005, Conversion est effectuée conformément à SQL Server 2005 même si vous êtes connecté à une version ultérieure de SQL Server (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016).  
+> La conversion des objets de base de données est effectuée en fonction du type de projet, mais pas de la version de la SQL Server connectée. Dans le cas d’SQL Server projet 2005, la conversion est effectuée en fonction du SQL Server 2005, même si vous êtes connecté à une version plus récente de SQL Server (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016).  
   
-## <a name="synchronizing-sql-server-metadata"></a>Synchronisation des métadonnées du serveur SQL  
-Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schémas modifient après vous être connecté, vous pouvez synchroniser les métadonnées avec le serveur.  
+## <a name="synchronizing-sql-server-metadata"></a>Synchronisation des métadonnées de SQL Server  
+Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les schémas changent après la connexion, vous pouvez synchroniser les métadonnées avec le serveur.  
   
-**Pour synchroniser les métadonnées de SQL Server**  
+**Pour synchroniser les métadonnées SQL Server**  
   
--   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées, clic droit **bases de données**, puis sélectionnez **synchroniser avec la base de données**.  
+-   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’Explorateur de métadonnées, cliquez avec le bouton droit sur **bases de données**, puis sélectionnez **synchroniser avec la base de données**.  
   
-## <a name="reconnecting-to-sql-server"></a>Rétablir la connexion à SQL Server  
-Votre connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reste active jusqu'à ce que vous fermez le projet. Lorsque vous rouvrez le projet, vous devez vous reconnecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si vous souhaitez une connexion active au serveur. Vous pouvez travailler hors connexion jusqu'à ce que vous chargez des objets de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et migrer les données.  
+## <a name="reconnecting-to-sql-server"></a>Reconnexion à SQL Server  
+Votre connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reste active jusqu’à ce que vous fermiez le projet. Lorsque vous rouvrez le projet, vous devez vous reconnecter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si vous souhaitez une connexion active au serveur. Vous pouvez travailler hors connexion jusqu’à ce que vous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chargeant des objets de base de données dans et migriez les données.  
   
-La procédure de reconnexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est identique à la procédure pour établir une connexion.  
+La procédure de reconnexion à est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identique à celle de la procédure d’établissement d’une connexion.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
-Si vous souhaitez personnaliser le mappage entre les bases de données source et cible, consultez [Source de mappage et de bases de données cibles](mapping-source-and-target-databases-accesstosql.md) dans le cas contraire, l’étape suivante consiste à convertir des objets de base de données à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de la syntaxe [convertir objets de base de données](converting-access-database-objects-accesstosql.md)  
+Si vous souhaitez personnaliser le mappage entre les bases de données source et cible, consultez [mappage des bases de données source et cible](mapping-source-and-target-databases-accesstosql.md) . dans le cas contraire, l’étape [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suivante consiste à convertir des objets de base de données en syntaxe à l’aide de [Convert Database Objects](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Migration bases de données Access vers SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+[Migration de bases de données Access vers SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

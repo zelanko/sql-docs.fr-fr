@@ -1,5 +1,5 @@
 ---
-title: IsolationLevel et Mode, propriétés-exemple (VB) | Microsoft Docs
+title: IsolationLevel et mode, exemple de propriétés (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5826cc8edcb857ffeb10cc197134708d20468b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918414"
 ---
-# <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel et Mode, propriétés-exemple (VB)
-Cet exemple utilise le [Mode](../../../ado/reference/ado-api/mode-property-ado.md) propriété pour ouvrir une connexion exclusive et le [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) propriété pour ouvrir une transaction effectuée indépendamment des autres transactions.  
+# <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel et mode, exemple de propriétés (VB)
+Cet exemple utilise la propriété [mode](../../../ado/reference/ado-api/mode-property-ado.md) pour ouvrir une connexion exclusive, et la propriété [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) pour ouvrir une transaction exécutée de manière isolée d’autres transactions.  
   
 ```  
 'BeginIsolationLevelVB  
@@ -116,6 +116,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [IsolationLevel, propriété](../../../ado/reference/ado-api/isolationlevel-property.md)   
+ [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Propriété IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Mode, propriété (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)
