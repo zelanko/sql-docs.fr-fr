@@ -1,5 +1,5 @@
 ---
-title: Méthode GetString, exemple (VC ++) | Microsoft Docs
+title: GetString, exemple de méthode (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 4daa93aa-9727-4d1c-886a-e9d22017a1ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 501b58a0d4e69ba7ea843441d866f8580858ea5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932446"
 ---
 # <a name="getstring-method-example-vc"></a>GetString, exemple de méthode (VC++)
-Cet exemple montre la [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) (méthode).  
+Cet exemple illustre la méthode [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) .  
   
- Supposons que vous déboguez un problème d’accès aux données et que vous souhaitez un moyen rapide et simple d’imprimer le contenu actuel d’une petite [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+ Supposons que vous déboguez un problème d’accès aux données et que vous voulez un moyen simple et rapide d’imprimer le contenu actuel d’un petit [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 ## <a name="example"></a>Exemple  
   
@@ -175,7 +175,7 @@ void PrintComError(_com_error &e) {
 MD  
 ```  
   
-## <a name="sample-output"></a>Résultat de l'exemple  
+## <a name="sample-output"></a>Sortie exemple  
   
 ```  
 Enter a state (CA, IN, KS, MD, MI, OR, TN, UT): State = 'md'  

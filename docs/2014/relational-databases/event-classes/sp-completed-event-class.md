@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7bcc8cdc62616dd26eb714b78ad07296a794b55f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63050965"
 ---
-# <a name="spcompleted-event-class"></a>SP:Completed, classe d'événements
+# <a name="spcompleted-event-class"></a>SP:Completed (classe d'événements)
   La classe d'événements SP:Completed indique que l'exécution de la procédure stockée s'est terminée.  
   
 ## <a name="spcompleted-event-class-data-columns"></a>Colonnes de données de la classe d'événements SP:Completed  
@@ -31,7 +31,7 @@ ms.locfileid: "63050965"
 |ApplicationName|`nvarchar`|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette colonne est remplie avec les valeurs passées par l'application plutôt que par le nom affiché du programme.|10|Oui|  
 |ClientProcessID|`int`|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  
 |DatabaseID|`int`|ID de la base de données dans laquelle la procédure stockée est en cours d'exécution. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
-|DatabaseName|`nvarchar`|Nom de la base de données dans laquelle la procédure stockée est en cours d'exécution.|35|Oui|  
+|nom_base_de_données|`nvarchar`|Nom de la base de données dans laquelle la procédure stockée est en cours d'exécution.|35|Oui|  
 |Duration|`bigint`|Temps (en microsecondes) pris par l'événement.|13|Oui|  
 |EndTime|`datetime`|Heure de fin de l'événement. Cette colonne n'est pas remplie pour les classes d'événements de démarrage, comme SQL:BatchStarting ou SP:Starting.|15|Oui|  
 |EventClass|`int`|Type d’événement = 43.|27|Non|  

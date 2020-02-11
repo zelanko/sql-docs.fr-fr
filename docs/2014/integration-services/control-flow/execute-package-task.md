@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 37d0edcabdb0171c8ca83c79080d59fdd8aafb76
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284954"
 ---
 # <a name="execute-package-task"></a>Tâche d'exécution de package
@@ -56,7 +56,7 @@ ms.locfileid: "67284954"
   
  Dans d'autres situations, vous pouvez préférer que les packages parent et enfants échouent ensemble comme une même unité, ou bien éviter la charge de traitement supplémentaire d'un autre processus. Par exemple, si un processus enfant échoue et que les traitements ultérieurs du processus parent du package dépendent de la réussite du processus enfant, alors le package enfant doit s'exécuter dans le processus du package parent.  
   
- Par défaut, la propriété ExecuteOutOfProcess de la tâche Exécuter le Package a la valeur `False`, et le package enfant s’exécute dans le même processus que le package parent. Si vous affectez la valeur `True` à cette propriété, le package enfant s'exécute dans un processus indépendant. Cela peut ralentir le lancement du package enfant. En outre, si vous affectez la valeur `True` à la propriété, vous ne pouvez pas déboguer le package dans une installation d'outils uniquement. Vous devez installer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Pour plus d’informations, consultez [Installer Integration Services](../install-windows/install-integration-services.md).  
+ Par défaut, la propriété ExecuteOutOfProcess a de la tâche d’exécution de package a `False`la valeur, et le package enfant s’exécute dans le même processus que le package parent. Si vous affectez la valeur `True` à cette propriété, le package enfant s'exécute dans un processus indépendant. Cela peut ralentir le lancement du package enfant. En outre, si vous affectez la valeur `True` à la propriété, vous ne pouvez pas déboguer le package dans une installation d'outils uniquement. Vous devez installer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Pour plus d’informations, consultez [Installer Integration Services](../install-windows/install-integration-services.md).  
   
 ## <a name="extending-transactions"></a>Extension des transactions  
  La transaction que le package parent utilise peut être étendue au package enfant ; par conséquent, le travail réalisé par les deux packages peut être validé ou annulé. Par exemple, les insertions dans une base de données effectuées par le package parent peuvent être validées ou annulées, en fonction de celles réalisées par le package enfant, et vice versa. Pour plus d'informations, consultez [Inherited Transactions](../inherited-transactions.md).  
@@ -97,14 +97,14 @@ ms.locfileid: "67284954"
  Pour plus d’informations, consultez [Utiliser les valeurs des variables et des paramètres dans un package enfant](../use-the-values-of-variables-and-parameters-in-a-child-package.md).  
   
 ### <a name="accessing-parent-package-variables"></a>Accès aux variables de package parent  
- Les packages enfants peuvent accéder à des variables de package parent à l'aide de la tâche de script. Quand vous entrez le nom de la variable de package parent sur la page **Script** dans l’**Éditeur de tâche de script**, n’incluez pas **Utilisateur :** dans le nom de la variable. Sinon, le package enfant ne localise pas la variable quand vous exécutez le package parent. Pour plus d’informations sur l’utilisation de la tâche de Script pour accéder aux variables de package parent, consultez cette entrée de blog, [SSIS : L’accès aux variables dans un package parent](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/).  
+ Les packages enfants peuvent accéder à des variables de package parent à l'aide de la tâche de script. Quand vous entrez le nom de la variable de package parent sur la page **Script** dans l’**Éditeur de tâche de script**, n’incluez pas **Utilisateur :** dans le nom de la variable. Sinon, le package enfant ne localise pas la variable quand vous exécutez le package parent. Pour plus d’informations sur l’utilisation de la tâche de script pour accéder aux variables de package parentes, consultez cette entrée de blog, [SSIS : accès aux variables dans un package parent](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/).  
   
 ## <a name="configuring-the-execute-package-task"></a>Configuration de la tâche d'exécution de package  
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Execute Package Task Editor](../execute-package-task-editor.md)  
+-   [Éditeur de tâche d'exécution de package](../execute-package-task-editor.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   
@@ -114,6 +114,6 @@ ms.locfileid: "67284954"
   
 ## <a name="related-content"></a>Contenu associé  
 
-Entrée de blog, [SSIS : L’accès aux variables dans un package parent](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), sur andyleonard.blog. 
+Entrée de blog, [SSIS : accès aux variables dans un package parent](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), sur andyleonard. blog. 
   
   

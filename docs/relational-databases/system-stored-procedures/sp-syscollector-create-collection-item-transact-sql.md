@@ -19,18 +19,18 @@ ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7ba3753a18d8e79848b0674e4738f2d2b811143e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68032667"
 ---
-# <a name="spsyscollectorcreatecollectionitem-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
+# <a name="sp_syscollector_create_collection_item-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crée un élément de collecte dans un jeu d'éléments de collecte définis par l'utilisateur. Un élément de collecte définit les données à collecter et la fréquence de la collecte.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,29 +47,29 @@ sp_syscollector_create_collection_item
   
 ## <a name="arguments"></a>Arguments  
  [ @collection_set_id = ] *collection_set_id*  
- Identificateur local unique pour le jeu d'éléments de collecte. *collection_set_id* est **int**.  
+ Identificateur local unique pour le jeu d'éléments de collecte. *collection_set_id* est de **type int**.  
   
- [ @collector_type_uid =] '*collector_type_uid*'  
- GUID qui identifie le type de collecteur à utiliser pour cet élément *collector_type_uid* est **uniqueidentifier** sans valeur par défaut... Pour obtenir une liste de types de collecteurs, interrogez la vue système syscollector_collector_types.  
+ [ @collector_type_uid = ] '*collector_type_uid*'  
+ GUID qui identifie le type de collecteur à utiliser pour cet élément *collector_type_uid* est de type **uniqueidentifier** et n’a pas de valeur par défaut. Pour obtenir une liste de types de collecteurs, interrogez la vue système syscollector_collector_types.  
   
- [ @name =] '*nom*'  
- Nom de l'élément de collecte. *nom* est **sysname** et ne peut pas être une chaîne vide ou NULL.  
+ [ @name = ] '*nom*'  
+ Nom de l'élément de collecte. *Name* est de **type sysname** et ne peut pas être une chaîne vide ou avoir la valeur null.  
   
- *nom* doit être unique. Pour obtenir une liste de noms d'élément de collecte actuels, interrogez la vue système syscollector_collection_items.  
+ le *nom* doit être unique. Pour obtenir une liste de noms d'élément de collecte actuels, interrogez la vue système syscollector_collection_items.  
   
- [ @frequency = ] *frequency*  
- Permet de spécifier (en secondes) la fréquence de collecte des données par cet élément de collecte. *fréquence* est **int**, avec une valeur par défaut 5. La valeur minimale pouvant être spécifiée est de 5 secondes.  
+ [ @frequency = ] *fréquence*  
+ Permet de spécifier (en secondes) la fréquence de collecte des données par cet élément de collecte. *Frequency* est de **type int**, avec 5 comme valeur par défaut. La valeur minimale pouvant être spécifiée est de 5 secondes.  
   
- Si le jeu d'éléments de collecte est défini en mode non mis en cache, la fréquence est ignorée car ce mode provoque l'exécution de la collecte et du téléchargement des données selon la planification spécifiée pour le jeu d'éléments de collecte. Pour afficher le mode de collecte de l’ensemble de la collection, interrogez la [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) vue système.  
+ Si le jeu d'éléments de collecte est défini en mode non mis en cache, la fréquence est ignorée car ce mode provoque l'exécution de la collecte et du téléchargement des données selon la planification spécifiée pour le jeu d'éléments de collecte. Pour afficher le mode de collecte du jeu d’ensembles de collectes, interrogez la vue système [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) .  
   
- [ @parameters =] '*paramètres*'  
- Les paramètres d'entrée pour le type de collecteur. *paramètres* est **xml** avec NULL comme valeur par défaut. Le *paramètres* schéma doit correspondre au schéma de paramètres du type de collecteur.  
+ [ @parameters = ] '*Parameters*'  
+ Les paramètres d'entrée pour le type de collecteur. *Parameters* est de type **XML** avec NULL comme valeur par défaut. Le schéma des *paramètres* doit correspondre au schéma des paramètres du type de collecteur.  
   
  [ @collection_item_id = ] *collection_item_id*  
- Identificateur unique qui identifie l'élément du jeu d'éléments de collecte. *collection_item_id* est **int** et a pour valeur OUTPUT.  
+ Identificateur unique qui identifie l'élément du jeu d'éléments de collecte. *collection_item_id* est de **type int** et a une sortie.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
  sp_syscollector_create_collection_item doit être exécuté dans le contexte de la base de données système msdb.  
@@ -80,7 +80,7 @@ sp_syscollector_create_collection_item
  Requiert l'appartenance au rôle de base de données fixe dc_admin (avec autorisation EXECUTE) pour exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant crée un élément de collecte selon le type collecteur `Generic T-SQL Query Collector Type` et l'ajoute au jeu d'éléments de collecte appelé `Simple collection set test 2`. Pour créer la collection spécifiée définie, exécutez l’exemple B dans [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ L'exemple suivant crée un élément de collecte selon le type collecteur `Generic T-SQL Query Collector Type` et l'ajoute au jeu d'éléments de collecte appelé `Simple collection set test 2`. Pour créer le jeu d’collections spécifié, exécutez l’exemple B dans [sp_syscollector_create_collection_set &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
 ```  
 USE msdb;  

@@ -1,5 +1,5 @@
 ---
-title: Création de prédictions de série chronologique (didacticiel d’exploration de données intermédiaire) | Microsoft Docs
+title: Création de prédictions de série chronologique (didacticiel sur l’exploration de données intermédiaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ca1aa4022931c78f6139a8058c05adc707af5e77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63313890"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>Création de prédictions de série chronologique (Didacticiel intermédiaire sur l'exploration de données)
@@ -29,53 +29,53 @@ ms.locfileid: "63313890"
   
 #### <a name="to-select-a-model-and-input-table"></a>Pour sélectionner un modèle et une table d'entrée  
   
-1.  Sur le **prévision de modèle d’exploration de données** onglet du Concepteur d’exploration de données, dans le **Mining Model** , cliquez sur **sélectionner un modèle**.  
+1.  Sous l’onglet **prédiction de modèle d’exploration** de données du concepteur d’exploration de données, dans la zone modèle d' **exploration** de données, cliquez sur **Sélectionner un modèle**.  
   
-2.  Dans le **sélectionner un modèle d’exploration de données** boîte de dialogue, développez la structure Forecasting, sélectionnez le **Forecasting** de modèle dans la liste, puis cliquez sur **OK**.  
+2.  Dans la boîte de dialogue **Sélectionner le modèle d’exploration de données** , développez la structure prévision, sélectionnez le modèle **prévision** dans la liste, puis cliquez sur **OK**.  
   
-3.  Ignorer le **sélectionner une ou plusieurs tables d’entrée** boîte.  
+3.  Ignorer la zone **Sélectionner une ou plusieurs tables d’entrée** .  
   
     > [!NOTE]  
     >  Pour un modèle de série chronologique, vous n'avez pas besoin de spécifier une entrée séparée sauf si vous faites de la prédiction croisée.  
   
-4.  Dans le **Source** colonne, dans la grille sur la **prévision de modèle d’exploration de données** onglet, cliquez sur la cellule dans la première ligne vide, puis sélectionnez **modèle d’exploration de données de prévision**.  
+4.  Dans la colonne **source** , dans la grille de l’onglet **prédiction de modèle d’exploration de données** , cliquez sur la cellule de la première ligne vide, puis sélectionnez **prévision modèle d’exploration de données**.  
   
-5.  Dans le **champ** colonne, sélectionnez **Model Region**.  
+5.  Dans la colonne **champ** , sélectionnez **région du modèle**.  
   
      Cette action ajoute l'identificateur de série à la requête de prédiction pour indiquer la combinaison de modèle et de région à laquelle la prédiction s'applique.  
   
-6.  Cliquez sur la ligne vide suivante dans le **Source** colonne, puis sélectionnez **fonction de prédiction**.  
+6.  Cliquez sur la ligne vide suivante dans la colonne **source** , puis sélectionnez **fonction de prédiction**.  
   
-7.  Dans le **champ** colonne, sélectionnez **PredictTimeSeries**.  
+7.  Dans la colonne **champ** , sélectionnez **PredictTimeSeries**.  
   
     > [!NOTE]  
-    >  Vous pouvez utiliser également la fonction `Predict` avec des modèles de série chronologique. Toutefois, par défaut, la fonction Predict crée une seule prédiction pour chaque série. Par conséquent, pour spécifier plusieurs étapes de prédiction, vous devez utiliser le **PredictTimeSeries** (fonction).  
+    >  Vous pouvez utiliser également la fonction `Predict` avec des modèles de série chronologique. Toutefois, par défaut, la fonction Predict crée une seule prédiction pour chaque série. Par conséquent, pour spécifier plusieurs étapes de prédiction, vous devez utiliser la fonction **PredictTimeSeries** .  
   
-8.  Dans le **modèle d’exploration de** volet, sélectionnez la colonne du modèle d’exploration de données, **quantité.** Faites glisser Amount vers la **critères/argument** zone pour le **PredictTimeSeries** fonction que vous avez ajouté précédemment.  
+8.  Dans le volet **modèle d’exploration de données** , sélectionnez la colonne modèle d’exploration de données, **amount.** Faites glisser amount vers la zone **critères/arguments** pour la fonction **PredictTimeSeries** que vous avez ajoutée précédemment.  
   
-9. Cliquez sur le **critères/argument** , puis tapez une virgule, suivie **5**, après le nom du champ.  
+9. Cliquez sur la zone **critères/arguments** , puis tapez une virgule, suivie de **5**, après le nom du champ.  
   
-     Le texte dans le **critères/argument** boîte doit désormais afficher les éléments suivants :  
+     Le texte de la zone **critères/arguments** doit maintenant afficher les éléments suivants :  
   
      `[Forecasting].[Amount],5`  
   
-10. Dans le **Alias** colonne, tapez `PredictAmount`.  
+10. Dans la colonne **alias** , tapez `PredictAmount`.  
   
-11. Cliquez sur la ligne vide suivante dans le **Source** colonne, puis sélectionnez **fonction de prédiction** à nouveau.  
+11. Cliquez sur la ligne vide suivante dans la colonne **source** , puis sélectionnez à nouveau **fonction de prédiction** .  
   
-12. Dans le **champ** colonne, sélectionnez **PredictTimeSeries**.  
+12. Dans la colonne **champ** , sélectionnez **PredictTimeSeries**.  
   
-13. Dans le **Mining Model** volet, sélectionnez la colonne Quantity, puis faites-le glisser vers le **critères/argument** zone pour la deuxième **PredictTimeSeries** (fonction).  
+13. Dans le volet **modèle d’exploration de données** , sélectionnez la colonne Quantity, puis faites-la glisser dans la zone **critères/arguments** pour la deuxième fonction **PredictTimeSeries** .  
   
-14. Cliquez sur le **critères/argument** , puis tapez une virgule, suivie **5**, après le nom du champ.  
+14. Cliquez sur la zone **critères/arguments** , puis tapez une virgule, suivie de **5**, après le nom du champ.  
   
-     Le texte dans le **critères/argument** boîte doit désormais afficher les éléments suivants :  
+     Le texte de la zone **critères/arguments** doit maintenant afficher les éléments suivants :  
   
      `[Forecasting].[ Quantity],5`  
   
-15. Dans le **Alias** colonne, tapez `PredictQuantity`.  
+15. Dans la colonne **alias** , tapez `PredictQuantity`.  
   
-16. Cliquez sur **basculer vers l’affichage des résultats de requête**.  
+16. Cliquez sur **basculer vers l’affichage des résultats de la requête**.  
   
      Les résultats de la requête sont affichés sous forme de tableau.  
   
@@ -87,11 +87,11 @@ ms.locfileid: "63313890"
   
 |$TIME|Montant|  
 |-----------|------------|  
-|7/25/2008|99978.00|  
-|8/25/2008|145575.07|  
-|9/25/2008|116835.19|  
-|10/25/2008|116537.38|  
-|11/25/2008|107760.55|  
+|7/25/2008|99978,00|  
+|8/25/2008|145575,07|  
+|9/25/2008|116835,19|  
+|10/25/2008|116537,38|  
+|11/25/2008|107760,55|  
   
  **M200 Europe PredictQuantity**  
   
@@ -103,17 +103,17 @@ ms.locfileid: "63313890"
 |10/25/2008|57|  
 |11/25/2008|54|  
   
- **M200 North America - PredictAmount**  
+ **M200 Amérique du Nord-PredictAmount**  
   
 |$TIME|Montant|  
 |-----------|------------|  
-|7/25/2008|348533.93|  
-|8/25/2008|340097.98|  
-|9/25/2008|257986.19|  
-|10/25/2008|374658.24|  
-|11/25/2008|379241.44|  
+|7/25/2008|348533,93|  
+|8/25/2008|340097,98|  
+|9/25/2008|257986,19|  
+|10/25/2008|374658,24|  
+|11/25/2008|379241,44|  
   
- **M200 North America - PredictQuantity**  
+ **M200 Amérique du Nord-PredictQuantity**  
   
 |$TIME|Quantité|  
 |-----------|--------------|  
@@ -133,7 +133,7 @@ ms.locfileid: "63313890"
   
 #### <a name="to-flatten-the-results-in-the-results-pane"></a>Pour aplatir les résultats dans le volet Résultats  
   
-1.  Dans le Générateur de requêtes de prédiction, cliquez sur **basculer vers l’affichage de conception de requête**.  
+1.  Dans la Générateur de requêtes de prédiction, cliquez sur **basculer en mode création de requête**.  
   
      La vue se modifie pour autoriser l'édition manuelle du texte de la requête DMX.  
   
@@ -162,15 +162,15 @@ ms.locfileid: "63313890"
   
     ```  
   
-4.  Cliquez sur **basculer vers l’affichage des résultats de requête**.  
+4.  Cliquez sur **basculer vers l’affichage des résultats de la requête**.  
   
 #### <a name="to-export-prediction-query-results"></a>Pour exporter des résultats d'une requête de prédiction  
   
-1.  Cliquez sur **enregistrer les résultats de la requête**.  
+1.  Cliquez sur **enregistrer les résultats**de la requête.  
   
-2.  Dans le **enregistrer le résultat de requête Data Mining** boîte de dialogue pour **Source de données**, sélectionnez [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Vous pouvez également créer une source de données si vous souhaitez enregistrer les données dans une base de données relationnelles différente.  
+2.  Dans la boîte de dialogue Enregistrer le résultat de la **requête d’exploration de données** , pour source de **données**, sélectionnez [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Vous pouvez également créer une source de données si vous souhaitez enregistrer les données dans une base de données relationnelles différente.  
   
-3.  Dans le **nom de la Table** colonne, type de nom, de la table temporaire nouveau comme **tester les prédictions**.  
+3.  Dans la colonne nom de la **table** , tapez un nouveau nom de table temporaire, tel que **tester les prédictions**.  
   
 4.  Cliquez sur **Enregistrer**.  
   
@@ -183,9 +183,9 @@ ms.locfileid: "63313890"
  Les tâches restantes dans ce didacticiel sont facultatives et décrivent les prédictions avancées de série chronologique. Si vous décidez de continuer, vous allez apprendre à ajouter de nouvelles données à votre modèle et à créer des prédictions sur la série étendue. Vous apprendrez également comment effectuer la prédiction croisée en utilisant la tendance du modèle mais en remplaçant les données à une nouvelle série de données.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Avancée des prédictions de série chronologique &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md)  
+ [Prédictions de série chronologique avancées &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemples de requêtes de modèle de séries chronologiques](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
+ [Time Series Model Query Examples](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
   
   
