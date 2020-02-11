@@ -1,5 +1,5 @@
 ---
-title: Éditeur de tache envoyer (Page courrier) | Microsoft Docs
+title: Éditeur de tâche Envoyer un message (page courrier) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d80ca8e475bf9c2b56c11118a44e5282573f280d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055829"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>Éditeur de tâche Envoyer un message (page Courrier)
@@ -28,38 +28,38 @@ ms.locfileid: "66055829"
   
 ## <a name="options"></a>Options  
  **SMTPConnection**  
- Sélectionnez un gestionnaire de connexions SMTP dans la liste ou cliquez sur **\<Nouvelle connexion...**> pour en créer un.  
+ Sélectionnez un gestionnaire de connexions SMTP dans la liste ou cliquez sur ** \<nouvelle connexion... >** pour créer un gestionnaire de connexions.  
   
 > [!IMPORTANT]  
 >  Le gestionnaire de connexions SMTP prend en charge uniquement l'authentification anonyme et l'authentification Windows. Il ne prend pas en charge l'authentification de base.  
   
  **Rubriques connexes :** [Gestionnaire de connexions SMTP](connection-manager/smtp-connection-manager.md)  
   
- **From**  
+ **De**  
  Indique l'adresse électronique de l'expéditeur.  
   
- **Pour**  
+ **À**  
  Fournit les adresses de messagerie des destinataires séparées par un point-virgule.  
   
- **Cc**  
+ **CC**  
  Fournit les adresses de messagerie des individus destinés à recevoir une copie du message, séparées par un point-virgule.  
   
- **Cci**  
+ **Copie**  
  Fournit les adresses de messagerie des individus destinés à recevoir une copie carbone invisible (Cci) du message, séparées par un point-virgule.  
   
- **Subject**  
+ **Objet**  
  Permet de spécifier l'objet du message électronique.  
   
  **MessageSourceType**  
  Permet de sélectionner le type de source du message. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Permet de définir la source du texte du message. Si cette valeur est sélectionnée, les options dynamiques incluses dans **MessageSource**s'affichent alors.|  
 |**Connexion de fichiers**|Permet de définir la source du fichier contenant le texte du message. Si cette valeur est sélectionnée, les options dynamiques incluses dans **MessageSource**s'affichent alors.|  
 |**Variable**|Permet d'attribuer à la source une variable contenant le texte du message. Si cette valeur est sélectionnée, les options dynamiques incluses dans **MessageSource**s'affichent alors.|  
   
- **Priorité**  
+ **Priority**  
  Permet d'indiquer la priorité à appliquer au message.  
   
  **Pièces jointes**  
@@ -78,17 +78,17 @@ ms.locfileid: "66055829"
  **MessageSource**  
  Sélectionnez un gestionnaire de connexions de fichiers dans la liste ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
   
- **Rubriques connexes :** [Gestionnaire de connexions de fichiers](connection-manager/file-connection-manager.md), [Éditeur du gestionnaire de connexions de fichiers](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions de fichiers](connection-manager/file-connection-manager.md), [éditeur du gestionnaire de connexions de fichiers](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="messagesourcetype--variable"></a>MessageSourceType = Variable  
  **MessageSource**  
  Sélectionnez une variable dans la liste ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
   
- **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md)  
+ **Rubriques connexes :** [Integration Services &#40;les variables de&#41; SSIS](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tâche Envoyer un message &#40;page Général&#41;](general-page-of-integration-services-designers-options.md)   
+ [Éditeur de tâche Envoyer un message &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
  [Page Expressions](expressions/expressions-page.md)  
   
   

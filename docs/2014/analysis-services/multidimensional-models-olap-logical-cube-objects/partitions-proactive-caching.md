@@ -1,5 +1,5 @@
 ---
-title: Mise en cache proactive (Partitions) | Microsoft Docs
+title: Mise en cache proactive (partitions) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c968cb8c75fc5f1fb8e77cc98d8c6a306a62115
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727273"
 ---
 # <a name="proactive-caching-partitions"></a>Mise en cache proactive (partitions)
@@ -44,6 +44,6 @@ ms.locfileid: "62727273"
   
 ## <a name="see-also"></a>Voir aussi  
  [Stockage de dimension](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
- [Définir un stockage de partitions &#40;Analysis Services - Multidimensionnel&#41;](../multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
+ [Définir le stockage de partitions &#40;Analysis Services-multidimensionnel&#41;](../multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
   
   

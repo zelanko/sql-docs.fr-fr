@@ -1,5 +1,5 @@
 ---
-title: Éditeur de tâche de Service Web (Page Général) | Microsoft Docs
+title: Éditeur de tâche de service Web (page général) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6f993f1f2386782bf8225f22b285b9385e2f8e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054539"
 ---
 # <a name="web-service-task-editor-general-page"></a>Éditeur de tâche de service Web (page Général)
@@ -28,12 +28,12 @@ ms.locfileid: "66054539"
   
 ## <a name="options"></a>Options  
  **HTTPConnection**  
- Sélectionnez un gestionnaire de connexions dans la liste ou cliquez sur \<**Nouvelle connexion...** > pour en créer un.  
+ Sélectionnez un gestionnaire de connexions dans la liste ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
   
 > [!IMPORTANT]  
 >  Le gestionnaire de connexions HTTP prend en charge uniquement l'authentification anonyme et l'authentification de base. Il ne prend pas en charge l'authentification Windows.  
   
- **Rubriques connexes :**  [Gestionnaire de connexions HTTP](connection-manager/http-connection-manager.md), [Éditeur du gestionnaire de connexions &#40;Server Page&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ **Rubriques connexes :**  [Gestionnaire de connexions http](connection-manager/http-connection-manager.md), [éditeur du gestionnaire de connexions http &#40;page serveur&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
  Tapez le chemin d’accès qualifié complet d’un fichier WSDL qui est en local sur l’ordinateur ou cliquez sur le bouton Parcourir **(...)** et recherchez ce fichier.  
@@ -44,7 +44,7 @@ ms.locfileid: "66054539"
   
 -   Sélectionnez ce fichier vide pour l’option **WSDLFile** .  
   
--   Définissez la valeur de **OverwriteWSDLFile** à `True` à activer le fichier vide être remplacé par le fichier WSDL réel.  
+-   Affectez à **OverwriteWsdlFile** la valeur `True` pour permettre au fichier vide d’être remplacé par le fichier WSDL réel.  
   
 -   Cliquez sur **Télécharger WSDL** pour télécharger le fichier WSDL réel et remplacer le fichier vide.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66054539"
  **OverwriteWSDLFile**  
  Indiquez si le fichier WSDL de la tâche de service Web peut être remplacé.  
   
- Si vous projetez de télécharger le fichier WSDL à l’aide de la **télécharger WSDL** bouton, définissez cette valeur sur `True`.  
+ Si vous envisagez de télécharger le fichier WSDL à l’aide du bouton **Télécharger WSDL** , définissez `True`cette valeur sur.  
   
  **Nom**  
  Fournissez un nom unique pour la tâche de service Web. Ce nom sert d'étiquette à l'icône de la tâche.  
@@ -72,8 +72,8 @@ ms.locfileid: "66054539"
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tâche de service Web &#40;page Entrée&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
- [Éditeur de tâche de service Web &#40;page Output (Sortie)&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [Éditeur de tâche de service Web &#40;page d’entrée&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
+ [Éditeur de tâche de service Web &#40;page sortie&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [Page Expressions](expressions/expressions-page.md)  
   
   

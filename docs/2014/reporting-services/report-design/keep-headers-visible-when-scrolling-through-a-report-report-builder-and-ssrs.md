@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 37c3dc20ab537e7cb8bf69099dbd6d24ff384731
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105601"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>Laisser les en-têtes visibles lors du défilement d'un rapport (Générateur de rapports et SSRS)
@@ -29,18 +29,18 @@ ms.locfileid: "66105601"
   
  L'image suivante illustre une table.  
   
- ![Table](../media/table.png "Table")  
+ ![Table](../media/table.png "Table de charge de travail")  
   
  L'image suivante illustre une matrice.  
   
- ![Matrice](../media/matrix.png "Matrice")  
+ ![Matrix](../media/matrix.png "Matrix")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ### <a name="to-keep-matrix-group-headers-visible-while-scrolling"></a>Pour garder les en-têtes de groupes de matrice visibles pendant le défilement  
   
-1.  Cliquez avec le bouton droit sur la ligne, la colonne ou la poignée d’angle d’une région de données de tableau matriciel, puis cliquez sur **Propriétés du tableau matriciel**.  
+1.  Cliquez avec le bouton droit sur la ligne, la colonne ou la poignée d’angle d’une région de données de tableau matriciel, puis sélectionnez **Propriétés du tableau matriciel**.  
   
 2.  Sous l'onglet **Général** , sous **En-têtes de lignes** ou **En-têtes de colonnes**, sélectionnez **L'en-tête doit rester visible pendant le défilement**.  
   
@@ -54,13 +54,13 @@ ms.locfileid: "66105601"
   
      Le volet Groupes de lignes affiche les membres statiques et dynamiques hiérarchiques pour la hiérarchie de groupes de lignes, et le volet Groupes de colonnes affiche une vue semblable pour la hiérarchie de groupes de colonnes.  
   
-2.  Dans la partie droite du volet de regroupement, cliquez sur la flèche orientée vers le bas, puis sur **Mode avancé**.  
+2.  Sur le côté droit du volet de regroupement, cliquez sur la flèche orientée vers le bas, puis sur **mode avancé**.  
   
 3.  Cliquez sur le membre statique (ligne ou colonne) que vous souhaitez laisser visible pendant le défilement. Le volet Propriétés affiche les propriétés du **membre du tableau matriciel** .  
   
      ![Propriétés de membre de tableau matriciel](../media/grouppane-tablixmember-updated.png "Propriétés de membre de tableau matriciel")  
   
-4.  Dans le volet Propriétés, définissez **FixedData** à `True`.  
+4.  Dans le volet Propriétés, affectez à `True` **FixedData** la valeur.  
   
 5.  Répétez cette étape pour tous les membres adjacents que vous souhaitez laisser visibles pendant le défilement.  
   
@@ -72,8 +72,8 @@ ms.locfileid: "66105601"
  [Région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportation de rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
- [Afficher des en-têtes et des pieds de page de groupe &#40;Générateur de rapports et SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
- [Afficher des en-têtes de ligne et de colonne sur plusieurs pages &#40;Générateur de rapports et SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
+ [Afficher des en-têtes et des pieds de page avec un groupe &#40;Générateur de rapports et SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
+ [Afficher les en-têtes de ligne et de colonne sur plusieurs pages &#40;Générateur de rapports et SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
  [Volet de regroupement &#40;Générateur de rapports&#41;](grouping-pane-report-builder.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Résolution des problèmes des outils de connectivité des packages | Microsoft Docs
+title: Outils de dépannage connectivité des packages | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8bb86d738aed61743defa3261318e2eb7536aa84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62766162"
 ---
 # <a name="troubleshooting-tools-package-connectivity"></a>Outils de dépannage de la connectivité des packages
@@ -70,6 +70,6 @@ ms.locfileid: "62766162"
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils de dépannage pour le développement des packages](troubleshooting-tools-for-package-development.md)   
- [Outils de dépannage pour l'exécution des packages](troubleshooting-tools-for-package-execution.md)  
+ [Outils de dépannage pour l’exécution des packages](troubleshooting-tools-for-package-execution.md)  
   
   

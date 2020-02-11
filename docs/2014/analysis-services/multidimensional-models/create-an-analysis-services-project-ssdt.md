@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 313fdd08234e9dd784d45c65d7ee23cd0a0a308c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076238"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Créer un projet Analysis Services (SSDT)
@@ -31,21 +31,21 @@ ms.locfileid: "66076238"
   
  Cette rubrique contient les sections suivantes :  
   
- [Créer un nouveau projet à l'aide du modèle de projet Analysis Services](#bkmk_NewUsingTemplate)  
+ [Créer un nouveau projet à l’aide du modèle de projet Analysis Services](#bkmk_NewUsingTemplate)  
   
- [Créer un nouveau projet reposant sur une base de données Analysis Services existante](#bkmk_NewUsingWizard)  
+ [Créer un nouveau projet à l’aide d’une base de données Analysis Services existante](#bkmk_NewUsingWizard)  
   
- [Ajouter un projet Analysis Services à une solution existante](#bkmk_AddtoExistingSolution)  
+ [Ajouter un projet de Analysis Services à une solution existante](#bkmk_AddtoExistingSolution)  
   
  [Générer et déployer la solution](#bkmk_buildDeploy)  
   
  [Dossiers de projet Analysis Services](#bkmk_ProjectFolders)  
   
- [Types de fichier Analysis Services](#bkmk_FileTypes)  
+ [Types de fichiers Analysis Services](#bkmk_FileTypes)  
   
- [Modèles d'élément Analysis Services](#bkmk_ItemTemplates)  
+ [Modèles d’élément Analysis Services](#bkmk_ItemTemplates)  
   
-##  <a name="bkmk_NewUsingTemplate"></a> Créer un nouveau projet à l'aide du modèle de projet Analysis Services  
+##  <a name="bkmk_NewUsingTemplate"></a>Créer un nouveau projet à l’aide du modèle de projet Analysis Services  
  Utilisez ces instructions pour créer un projet vide dans lequel vous définissez des objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que vous pouvez ensuite déployer en tant que nouvelle base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], cliquez sur **Fichier**, pointez sur **Nouveau**, puis cliquez sur **Projet**. Dans la boîte de dialogue **Nouveau projet** , dans le volet **Types de projets** , sélectionnez **Projets Business Intelligence**.  
@@ -64,7 +64,7 @@ ms.locfileid: "66076238"
   
 6.  Cliquez sur **OK**.  
   
-##  <a name="bkmk_NewUsingWizard"></a> Créer un nouveau projet reposant sur une base de données Analysis Services existante  
+##  <a name="bkmk_NewUsingWizard"></a>Créer un nouveau projet à l’aide d’une base de données Analysis Services existante  
  Utilisez l’Assistant Importation de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour créer un projet basé sur les objets de la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existante. Lorsque vous définissez un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reposant sur une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existante, les métadonnées de cette base de données s'ouvrent dans un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Vous pouvez ensuite modifier ces objets dans le projet, sans affecter les objets originaux, puis les déployer dans la même base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] si les propriétés du déploiement spécifient cette base de données ou dans une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nouvellement créée à des fins de comparaison. Tant que les modifications ne sont pas déployées, elles n’ont aucune incidence sur la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existante.  
   
  Vous pouvez également utiliser le modèle Importer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour créer un projet dans une base de données de production dans laquelle des modifications ont été apportées directement depuis le déploiement du projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] initial.  
@@ -89,7 +89,7 @@ ms.locfileid: "66076238"
   
 7.  Ouvrez l'Explorateur de solutions pour afficher le contenu du projet.  
   
-##  <a name="bkmk_AddtoExistingSolution"></a> Ajouter un projet Analysis Services à une solution existante  
+##  <a name="bkmk_AddtoExistingSolution"></a>Ajouter un projet de Analysis Services à une solution existante  
  Si vous disposez déjà d'une solution qui contient tous les fichiers sources d'une application de gestion, vous pouvez ajouter un nouveau projet Analysis Services à cette solution.  
   
  L'ajout d'un projet existant à une solution associe, mais ne copie pas, le projet à la solution. Si le projet Analysis Services a été créé dans une autre solution, les fichiers de projet restent avec la solution d'origine pour laquelle ils ont été créés. Cela signifie que les modifications que vous apportez au projet via l'une ou l'autre solution traiteront le même ensemble de fichiers sources. Si ce comportement ne correspond pas à vos attentes, vous devez copier ou déplacer les fichiers projet dans le nouveau dossier de la solution, puis ajouter le projet à la solution.  
@@ -98,7 +98,7 @@ ms.locfileid: "66076238"
   
 2.  Sélectionnez un fichier .dwproj à ajouter à la solution.  
   
-##  <a name="bkmk_buildDeploy"></a> Générer et déployer la solution  
+##  <a name="bkmk_buildDeploy"></a>Générer et déployer la solution  
  Par défaut, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] déploie un projet sur l'instance par défaut d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sur l'ordinateur local. Vous pouvez modifier cette destination de déploiement en utilisant la boîte de dialogue **Pages de propriétés** du projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour modifier la propriété de configuration **Serveur** .  
   
 > [!NOTE]  
@@ -110,7 +110,7 @@ ms.locfileid: "66076238"
   
  Une fois le projet terminé, vous pouvez utiliser l'Assistant Déploiement pour déployer le script de déploiement, généré lorsque vous créez la solution, dans les instances de destination pour les tests, les mises en lot et le déploiement final.  
   
-##  <a name="bkmk_ProjectFolders"></a> Dossiers de projet Analysis Services  
+##  <a name="bkmk_ProjectFolders"></a>Dossiers de projet Analysis Services  
  Un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contient les dossiers répertoriés ci-dessous, lesquels permettent d’organiser les éléments inclus dans le projet.  
   
 |Dossier|Description|  
@@ -124,7 +124,7 @@ ms.locfileid: "66076238"
 |Assemblys|Contient les références aux bibliothèques COM et aux assemblys [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Vous pouvez créer des références avec la boîte de dialogue **Ajouter une référence** .|  
 |Divers|Contient tout type de fichier à l'exception des types de fichiers [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Utilisez ce dossier pour ajouter des fichiers divers, tels que les fichiers texte contenant des notes sur le projet.|  
   
-##  <a name="bkmk_FileTypes"></a> Types de fichier Analysis Services  
+##  <a name="bkmk_FileTypes"></a>Types de fichiers Analysis Services  
  Une solution [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] peut contenir plusieurs types de fichiers, en fonction des projets que vous avez inclus dans la solution et des éléments que vous avez inclus dans chaque projet pour cette solution. En règle générale, les fichiers de chaque projet dans une solution [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] sont stockés dans le dossier de la solution, dans un dossier distinct pour chaque projet.  
   
 > [!NOTE]  
@@ -134,8 +134,10 @@ ms.locfileid: "66076238"
   
 |Type de fichier|Description|  
 |---------------|-----------------|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fichier de définition de projet (.dwproj)|Contient des métadonnées sur les éléments, les configurations et les références d’assembly définis et inclus dans le projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] paramètres utilisateur du projet (.dwproj.user)|Contient les informations de configuration du projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour un utilisateur spécifique.|  
+|
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fichier de définition de projet (.dwproj)|Contient des métadonnées sur les éléments, les configurations et les références d’assembly définis et inclus dans le projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] paramètres utilisateur du projet (.dwproj.user)|Contient les informations de configuration du projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour un utilisateur spécifique.|  
 |Fichier de source de données (.ds)|Contient les éléments ASSL (Analysis Services Scripting Language) [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui définissent les métadonnées pour une source de données.|  
 |Fichier de vue de source de données (.dsv)|Contient les éléments ASSL qui définissent des métadonnées pour une vue de source de données.|  
 |Fichier de cube (.cube)|Contient les éléments ASSL qui définissent des métadonnées pour un cube, y compris des groupes de mesures, des mesures et des dimensions de cube.|  
@@ -145,23 +147,24 @@ ms.locfileid: "66076238"
 |Fichier de base de données (.database)|Contient les éléments ASSL qui définissent des métadonnées pour une base de données, y compris des types de comptes, des traductions et des autorisations de base de données.|  
 |Fichier de rôle de base de données (.role)|Contient les éléments ASSL qui définissent des métadonnées pour un rôle de base de données, y compris les membres du rôle.|  
   
-##  <a name="bkmk_ItemTemplates"></a> Modèles d'élément Analysis Services  
+##  <a name="bkmk_ItemTemplates"></a>Modèles d’élément Analysis Services  
  Si vous utilisez la boîte de dialogue **Ajouter un nouvel élément** pour ajouter de nouveaux éléments à un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vous avez la possibilité d’utiliser un modèle d’élément, qui est un script ou une instruction prédéfinie qui montre comment effectuer une action spécifiée.  
   
  Les modèles d’éléments répertoriés dans le tableau ci-dessous sont disponibles dans la catégorie Éléments du projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , dans la boîte de dialogue **Ajouter un nouvel élément** .  
   
 |Category|Modèle d'élément|Description|  
 |--------------|-------------------|-----------------|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Éléments de projet|Cube|Démarre l’Assistant Cube pour ajouter un nouveau cube au projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-||Source de données|Démarre l’Assistant Source de données pour ajouter une nouvelle source de données au projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Éléments de projet|Cube|Démarre l’Assistant Cube pour ajouter un nouveau cube au projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+||source de données|Démarre l’Assistant Source de données pour ajouter une nouvelle source de données au projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Vue de source de données|Démarre l’Assistant Source de données pour ajouter une nouvelle vue de source de données au projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Rôle de base de données|Ajoute un nouveau rôle de base de données dans le projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , puis affiche le Concepteur de rôles pour le nouveau rôle de base de données.|  
 ||Dimension|Démarre l’Assistant Dimension pour ajouter une nouvelle dimension de base de données au projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Structure d'exploration de données|Démarre l’Assistant Exploration de données pour ajouter une nouvelle structure d’exploration de données et le modèle d’exploration de données associé au projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer les propriétés d’un projet Analysis Services &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
- [Générer des projets Analysis Services &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
+ [Configurez Analysis Services propriétés du projet &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
+ [Générer des projets de Analysis Services &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
  [Déployer des projets Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

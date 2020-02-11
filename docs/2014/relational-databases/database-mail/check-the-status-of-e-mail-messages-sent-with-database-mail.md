@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 73d0cf3a374a7f3dda7797238d2c1702360aa955
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872325"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>Vérifier l'état des messages électroniques envoyés avec la messagerie de base de données
@@ -27,7 +27,7 @@ ms.locfileid: "62872325"
   
 -   **Avant de commencer :**  
   
--   **Pour afficher l’état du message électronique envoyé à l’aide de la messagerie de base de données, à l’aide de :**  [Transact-SQL](#TsqlProcedure)  
+-   **Pour afficher l’état de l’e-mail envoyé avec Database Mail, à l’aide de :**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  La messagerie de base de données conserve un exemplaire des messages électroniques sortants qu’elle affiche dans les vues **sysmail_allitems**, **sysmail_sentitems**, **sysmail_unsentitems**et **sysmail_faileditems** de la base de données **msdb** . Le programme externe de la messagerie de base de données consigne les activités de l’application dans un journal qu’elle affiche par le biais du journal d’événements des applications Windows et la vue **sysmail_event_log** dans la base de données **msdb** . Pour vérifier l'état d'un message électronique, exécutez une requête sur cette vue. Les messages peuvent présenter quatre états distincts : **sent**(envoyé), **unsent**(non envoyé), **retrying**(nouvel essai) et **failed**(échec).  
@@ -38,7 +38,7 @@ ms.locfileid: "62872325"
 > [!NOTE]  
 >  Pour obtenir un exemple de cette procédure, consultez [Exemple (Transact-SQL)](#TsqlExample)plus loin dans cette section.  
   
-1.  Sélectionnez des éléments dans la table **sysmail_allitems** , en spécifiant le ou les messages qui vous intéressent par le biais de l'option **mailitem_id** ou **sent_status**.  
+1.  Sélectionnez des éléments dans la table **sysmail_allitems** , en spécifiant le ou les messages qui vous intéressent par le biais de l’option **mailitem_id** ou **sent_status**.  
   
 2.  Pour vérifier l’état retourné par le programme externe pour les messages électroniques, définissez une jointure allant de **sysmail_allitems** à la vue **sysmail_event_log** dans la colonne **mailitem_id** , comme illustré dans la section suivante.  
   

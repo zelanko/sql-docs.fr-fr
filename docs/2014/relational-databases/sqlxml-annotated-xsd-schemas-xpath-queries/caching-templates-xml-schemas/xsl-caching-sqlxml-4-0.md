@@ -1,5 +1,5 @@
 ---
-title: Mise en cache XSL (SQLXML 4.0) | Microsoft Docs
+title: Mise en cache XSL (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 79683626400f9ef9b410a182ffd81c862575e57d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013229"
 ---
 # <a name="xsl-caching-sqlxml-40"></a>Mise en cache XSL (SQLXML 4.0)
@@ -40,7 +40,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\XSLCacheSize
  Chaque fois que la feuille de style XSL mise en cache est utilisée, l'heure de modification du fichier XSL est vérifiée pour déterminer s'il doit être actualisé. En effet, la copie du disque est plus récente que la copie du cache.  
   
 ## <a name="see-also"></a>Voir aussi  
- [La mise en cache de modèle &#40;SQLXML 4.0&#41;](template-caching-sqlxml-4-0.md)   
- [Schema Caching &#40;SQLXML 4.0&#41;](schema-caching-sqlxml-4-0.md)  
+ [Mise en cache de modèle &#40;SQLXML 4,0&#41;](template-caching-sqlxml-4-0.md)   
+ [Mise en cache de schéma &#40;SQLXML 4,0&#41;](schema-caching-sqlxml-4-0.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Créer une Session d’événements étendus à l’aide de l’Assistant (Explorateur d’objets) | Microsoft Docs
+title: Créer une session d’événements étendus à l’aide de l’Assistant (Explorateur d’objets) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -32,10 +32,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cdc50e81bcc58722a3c04fc8516b9158072533cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065057"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>Créer une session d'événements étendus à l'aide de l'Assistant (Explorateur d'objets)
@@ -51,46 +51,46 @@ ms.locfileid: "66065057"
   
 -   [Introduction](#BKMK_Welcome)  
   
--   [Définir les propriétés de Session](#BKMK_SetSessionProperties)  
+-   [Définir les propriétés de session](#BKMK_SetSessionProperties)  
   
--   [Choisissez le modèle](#BKMK_ChooseTemplate)  
+-   [Choisir un modèle](#BKMK_ChooseTemplate)  
   
--   [Sélectionnez les événements à capturer](#BKMK_SelectEventsToCapture)  
+-   [Sélectionner les événements à capturer](#BKMK_SelectEventsToCapture)  
   
 -   [Capturer les champs globaux](#BKMK_CaptureGlobalFields)  
   
--   [Définir des filtres d’événement de Session](#BKMK_SetSessionEventFilters)  
+-   [Définir des filtres d'événement de session](#BKMK_SetSessionEventFilters)  
   
--   [Spécifier le stockage des données de Session](#BKMK_SpecifySessionDataOutput)  
+-   [Spécifier le stockage des données de session](#BKMK_SpecifySessionDataOutput)  
   
 -   [Résumé](#BKMK_Summary)  
   
--   [Créer la Session d’événements](#BKMK_CreateEventSession)  
+-   [Créer une session d’événements](#BKMK_CreateEventSession)  
   
-##  <a name="BKMK_Welcome"></a> Introduction  
+##  <a name="BKMK_Welcome"></a>Présentation  
  Sur la page **Introduction** , procédez comme suit :  
   
 -   Sur la page **Introduction** de l'Assistant Nouvelle session, cliquez sur **Suivant**.  
   
      Cochez la case **Ne plus afficher cette page** si vous souhaitez utiliser l’Assistant plusieurs fois et ne souhaitez pas lire l’introduction à chaque lancement de l’Assistant.  
   
-##  <a name="BKMK_SetSessionProperties"></a> Définir les propriétés de Session  
+##  <a name="BKMK_SetSessionProperties"></a>Définir les propriétés de session  
  Sur la page **Définir les propriétés de session** , procédez comme suit :  
   
 -   Dans la zone **Nom de session** , tapez un nom explicite pour la session d'événements.  
   
      Si vous souhaitez démarrer la session lorsque vous démarrez le serveur, activez la case à cocher **Démarrer la session d'événements au démarrage du serveur** , puis cliquez sur **Suivant**.  
   
-##  <a name="BKMK_ChooseTemplate"></a> Choisissez le modèle  
+##  <a name="BKMK_ChooseTemplate"></a>Choisir un modèle  
  Sur la page **Choisir un modèle** , procédez comme suit :  
   
 -   Sélectionnez l’option **Utilisez ce modèle de session d’événements** pour sélectionner un jeu de modèles préconfigurés conçu pour les problèmes courants. Sélectionnez le modèle à utiliser dans la liste déroulante, puis cliquez sur **Suivant**.  
   
-     -ou-  
+     OU  
   
 -   Sélectionnez l’option **Ne pas utiliser de modèle** si vous ne souhaitez pas utiliser un modèle préconfiguré, puis cliquez sur **Suivant**.  
   
-##  <a name="BKMK_SelectEventsToCapture"></a> Sélectionnez les événements à capturer  
+##  <a name="BKMK_SelectEventsToCapture"></a>Sélectionner les événements à capturer  
  Sur la page **Sélectionner les événements à capturer** , procédez comme suit :  
   
 1.  Sélectionnez les événements à capturer dans la **Bibliothèque d'événements**, puis cliquez sur la flèche droite. Vous pouvez sélectionner plusieurs événements dans la bibliothèque d'événements en les sélectionnant et en appuyant sur la touche Shift ou Ctrl.  
@@ -104,7 +104,7 @@ ms.locfileid: "66065057"
     > [!NOTE]  
     >  Les événements du canal de **débogage** sont masqués par défaut. Pour afficher des événements de débogage, sélectionnez **Débogage** dans la liste déroulante **Canal** .  
   
-##  <a name="BKMK_CaptureGlobalFields"></a> Capturer les champs globaux  
+##  <a name="BKMK_CaptureGlobalFields"></a>Capturer les champs globaux  
  Vous utilisez des champs globaux (également appelés actions) pour associer une ou plusieurs actions de vos événements sélectionnés. Si vous avez sélectionné un modèle sur la page **Choisir un modèle** , tous les champs globaux définis dans le modèle sont affichés sur cette page.  
   
  Sur la page **Capturer les champs globaux** , procédez comme suit :  
@@ -116,7 +116,7 @@ ms.locfileid: "66065057"
     > [!NOTE]  
     >  Les actions sélectionnées sont triées par **Nom** , ce qui vous permet de consulter les actions associées dans l'ordre alphabétique. Vous pouvez trier par description ou par état activé/désactivé en cliquant sur l'en-tête de colonne en regard du nom de champ.  
   
-##  <a name="BKMK_SetSessionEventFilters"></a> Définir des filtres d’événement de Session  
+##  <a name="BKMK_SetSessionEventFilters"></a>Définir des filtres d’événement de session  
  Vous pouvez appliquer des filtres (également appelés prédicats) pour limiter les événements à capturer. Sur la page **Définir des filtres d'événement de session** , procédez comme suit :  
   
 1.  Si vous n’utilisez pas de modèle préconfiguré, créez vos critères de filtre, puis cliquez sur **Suivant**.  
@@ -130,8 +130,8 @@ ms.locfileid: "66065057"
     > [!NOTE]  
     >  Lorsque vous configurez une clause de groupe pour votre filtre, les parenthèses redondantes sont supprimées du filtre une fois le résultat enregistré. Par exemple, si vous créez un regroupement de filtre **Clause 1** et **Clause 2**, les parenthèses apparaîtront autour des clauses. Une fois que vous avez enregistré le filtre, les parenthèses redondantes sont supprimées. La suppression des parenthèses n'affecte pas la logique de filtre.  
   
-##  <a name="BKMK_SpecifySessionDataOutput"></a> Spécifier le stockage des données de Session  
- Vous utilisez la page **Spécifier le stockage des données de session** pour indiquer comment vous souhaitez collecter vos données pour l'analyse. Les événements étendus SQL Server utilisent des cibles pour la sortie des données. Les cibles stockent les données d'événement et peuvent effectuer des actions telles que l'écriture dans un fichier et l'agrégation des données d'événement. Décidez comment vous souhaitez collecter vos données pour l'analyse, et sur la page **Spécifier le stockage des données de session** , procédez comme suit :  
+##  <a name="BKMK_SpecifySessionDataOutput"></a>Spécifier le stockage des données de session  
+ Vous utilisez la page **Spécifier le stockage des données de session** pour indiquer comment vous souhaitez collecter vos données pour l'analyse. Les événements étendus SQL Server utilisent des cibles pour la sortie des données. Les cibles stockent les données d'événement et peuvent effectuer des actions telles que l'écriture dans un fichier et l'agrégation des données d'événement. Décidez comment vous souhaitez collecter vos données pour l'analyse, et sur la page **Spécifier le stockage des données de session**, procédez comme suit :  
   
 1.  Pour les grands groupes de données et la création d'enregistrements historiques, activez la case à cocher **Enregistrer les données dans un fichier en vue d'une analyse ultérieure** , puis procédez comme suit :  
   
@@ -153,7 +153,7 @@ ms.locfileid: "66065057"
   
     4.  Dans la zone **Nombre d’événements à conserver (par type)** , entrez ou sélectionnez le nombre d’événements (par type) à conserver en utilisant les flèches haut et bas.  
   
-##  <a name="BKMK_Summary"></a> Résumé  
+##  <a name="BKMK_Summary"></a>Tête  
  Sur la page **Résumé** , procédez comme suit :  
   
 1.  Assurez-vous que vos sélections sont correctes. Développez les nœuds de la session d'événements pour vérifier que toutes vos sélections seront incluses dans la session d'événements.  
@@ -162,7 +162,7 @@ ms.locfileid: "66065057"
   
 3.  Cliquez sur **Terminer** pour créer la session d'événements.  
   
-##  <a name="BKMK_CreateEventSession"></a> Créer la Session d’événements  
+##  <a name="BKMK_CreateEventSession"></a>Créer une session d’événements  
  Sur la page **Créer une session d'événements** , une fois votre session d'événements créée, procédez comme suit :  
   
 1.  Cliquez sur **Démarrer la session d'événements immédiatement après la création de la session** pour démarrer la session après avoir fermé l'Assistant. Vous devez démarrer la session d'événements immédiatement après avoir créé la session pour être en mesure d'observer les données actives.  
@@ -170,6 +170,6 @@ ms.locfileid: "66065057"
 2.  Pour consulter les données actives de votre session d'événements, cliquez sur **Observer les données actives à l'écran lors de leur capture** . Les données actives commenceront à afficher la trace une fois la session créée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer une session Événements étendus à l’aide de la boîte de dialogue Nouvelle session](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)  
+ [Créer une session Événements étendus à l'aide de la boîte de dialogue Nouvelle session](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)  
   
   

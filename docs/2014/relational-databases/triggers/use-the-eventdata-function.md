@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a34a3e69e157894b29db48da19f44d1e35dad746
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524252"
 ---
 # <a name="use-the-eventdata-function"></a>Utiliser la fonction EVENTDATA
@@ -49,7 +49,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- L’instruction `EVENTDATA()` du déclencheur DDL capture le texte de l’instruction `CREATE TABLE` qui n’est pas autorisé. Pour cela, à l’aide d’une instruction XQuery par rapport à la `xml` données générées par EVENTDATA et le \<CommandText > élément. Pour plus d’informations, consultez [Informations de référence sur le langage XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
+ L’instruction `EVENTDATA()` du déclencheur DDL capture le texte de l’instruction `CREATE TABLE` qui n’est pas autorisé. Cela est possible en utilisant une instruction XQuery sur les `xml` données générées par EventData et en extrayant l' \<élément CommandText>. Pour plus d’informations, consultez [Informations de référence sur le langage XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
   
 > [!CAUTION]  
 >  EVENTDATA capture les données des événements CREATE_SCHEMA ainsi que l'<élément_de_schéma> de la définition CREATE SCHEMA correspondante, s'il existe. En outre, EVENTDATA reconnaît la définition <élément_de_schéma> en tant qu'événement distinct. En conséquence, un déclencheur DDL créé à la fois sur un événement CREATE_SCHEMA et sur un événement représenté par l'<élément_de_schéma> de la définition CREATE SCHEMA, peut retourner deux fois les mêmes données d'événement, telles que les données `TSQLCommand`. Par exemple, considérez qu'un déclencheur DDL est créé sur les deux événements CREATE_SCHEMA et CREATE_TABLE et que le traitement suivant est exécuté :  
@@ -131,6 +131,6 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Événements DDL](../triggers/ddl-events.md)   
- [Groupes d'événements DDL](../triggers/ddl-event-groups.md)  
+ [Groupes d’événements DDL](../triggers/ddl-event-groups.md)  
   
   

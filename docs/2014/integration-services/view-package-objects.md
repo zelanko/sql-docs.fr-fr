@@ -20,16 +20,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 78a9b551ae44348de1c007533be3606b33c974cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62926278"
 ---
 # <a name="view-package-objects"></a>Afficher des objets de packages
   Dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , l'onglet **Explorateur de package** fournit un aperçu du package. Cet affichage reflète la hiérarchie de conteneur de l'architecture [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Le conteneur de packages est situé en haut de la hiérarchie et vous pouvez développer le package pour afficher les connexions, les exécutables, les gestionnaires d'événements, les fournisseurs d'informations, les contraintes de précédence et les variables du package.  
   
- Les exécutables, qui sont les conteneurs et les tâches du package, peuvent inclure des gestionnaires d'événements, des contraintes de précédence et des variables. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] prend en charge une hiérarchie imbriquée de conteneurs, et les conteneurs de boucles For, de boucles Foreach et de séquences peuvent inclure d'autres exécutables.  
+ Les exécutables, qui sont les conteneurs et les tâches du package, peuvent inclure des gestionnaires d'événements, des contraintes de précédence et des variables. 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] prend en charge une hiérarchie imbriquée de conteneurs, et les conteneurs de boucles For, de boucles Foreach et de séquences peuvent inclure d'autres exécutables.  
   
  Si un package contient un flux de données, l' **Explorateur de package** répertorie la tâche de flux de données et inclut un dossier **Composants** qui répertorie les composants du flux de données.  
   
@@ -37,18 +38,18 @@ ms.locfileid: "62926278"
   
  Le schéma suivant illustre l'arborescence d'un package simple.  
   
- ![Capture d’écran de l’onglet Explorateur de package](media/packageexplorer.gif "Capture d’écran de l’onglet Explorateur de package")  
+ ![Capture d'écran de l'onglet Explorateur de package](media/packageexplorer.gif "Capture d'écran de l'onglet Explorateur de package")  
   
 ### <a name="to-view-package-content"></a>Pour afficher le contenu d'un package  
   
--   [Afficher les objets de package dans l’Explorateur de package](../../2014/integration-services/view-package-objects-in-package-explorer.md)  
+-   [Afficher les objets de package dans l'Explorateur de package](../../2014/integration-services/view-package-objects-in-package-explorer.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâches Integration Services](control-flow/integration-services-tasks.md)   
  [Conteneurs Integration Services](control-flow/integration-services-containers.md)   
  [Contraintes de précédence](control-flow/precedence-constraints.md)   
  [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
- [Gestionnaires d’événements Integration Services &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)   
+ [Gestionnaires d’événements Integration Services &#40;SSIS&#41](integration-services-ssis-event-handlers.md)   
  [Journalisation Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
   
   

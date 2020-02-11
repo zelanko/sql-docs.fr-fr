@@ -15,16 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e7c3a3094309d2d1d32a840d4eee933555daa66a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755583"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>Mise en miroir de base de données et instances de cluster de basculement SQL Server
   Un cluster de basculement est composé d'un ou de plusieurs disques physiques placés dans un groupe de clusters géré par le service de cluster [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MSCS), appelé groupe de ressources, et constituant ainsi des nœuds membres du cluster. Le groupe de ressources est configuré comme une instance cluster de basculement qui héberge une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Une instance cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] apparaît sur le réseau comme s’il s’agissait d’un ordinateur unique, mais elle est dotée d’une fonctionnalité qui assure le basculement d’un nœud vers un autre si le premier devient indisponible. Pour plus d’informations, consultez [Instances de cluster de basculement AlwaysOn (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
- Les clusters de basculement garantissent une prise en charge de la haute disponibilité pour l’intégralité d’une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En cela, ils se distinguent de la fonctionnalité de mise en miroir de bases de données qui offre cette même prise en charge pour une seule base de données. La mise en miroir de base de données est mise en œuvre entre des clusters de basculement et également entre un cluster de basculement et un hôte non-cluster.  
+ Les clusters de basculement fournissent une prise en charge [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de haute disponibilité pour une instance entière, contrairement à la mise en miroir de bases de données, qui assure la prise en charge de la haute disponibilité pour une seule base de données. La mise en miroir de base de données est mise en œuvre entre des clusters de basculement et également entre un cluster de basculement et un hôte non-cluster.  
   
 > [!NOTE]  
 >  Pour une présentation de la mise en miroir de bases de données, consultez [Mise en miroir de bases de données &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "62755583"
   
  ![Basculement sur un cluster](../media/dbm-and-failover-clustering.gif "Basculement sur un cluster")  
   
- Les trois instances de serveur dans la session de mise en miroir résident sur trois clusters distincts : **Cluster_A**, **Cluster_B** et **Cluster_C**. Sur chaque cluster, une instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute comme instance cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Au début de la session de mise en miroir, l’instance cluster de basculement **Cluster_A** est le serveur principal, celle de **Cluster_B** est le serveur miroir et celle de **Cluster_C** est le témoin de la session. À un moment donné, le nœud actif de **Cluster_A** subit une défaillance, à la suite de quoi le serveur principal devient indisponible.  
+ Les trois instances de serveur dans la session de mise en miroir résident sur trois clusters distincts : **Cluster_A**, **Cluster_B**et **Cluster_C**. Sur chaque cluster, une instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute comme instance cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Au début de la session de mise en miroir, l’instance cluster de basculement **Cluster_A** est le serveur principal, celle de **Cluster_B** est le serveur miroir et celle de **Cluster_C** est le témoin de la session. À un moment donné, le nœud actif de **Cluster_A** subit une défaillance, à la suite de quoi le serveur principal devient indisponible.  
   
  Avant que le basculement du cluster ne puisse avoir lieu, la perte du serveur principal est détectée par le serveur miroir avec l'aide du témoin. Le serveur miroir restaure par progression sa base de données et la remet en ligne en tant que nouvelle base de données principale aussi rapidement que possible. Une fois le basculement du **Cluster_A** terminé, le serveur principal initial devient le serveur miroir et synchronise sa base de données avec la base de données principale actuelle sur le **Cluster_B**.  
   
@@ -55,9 +55,9 @@ ms.locfileid: "62755583"
   
  **Pour configurer un nouveau cluster de basculement SQL Server**  
   
--   [Créer un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
+-   [Créer un cluster de basculement SQL Server &#40;d’installation&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   
- **Pour configurer la mise en miroir des bases de données**  
+ **Pour configurer la mise en miroir de bases de données**  
   
 -   [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)  
   
@@ -66,6 +66,6 @@ ms.locfileid: "62755583"
 ## <a name="see-also"></a>Voir aussi  
  [Mise en miroir de bases de données &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Modes de fonctionnement de la mise en miroir de bases de données](database-mirroring-operating-modes.md)   
- [Instances de Cluster de basculement AlwaysOn (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 
+ [Instances de cluster de basculement AlwaysOn (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 
   
   

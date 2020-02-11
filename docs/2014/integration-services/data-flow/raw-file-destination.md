@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b7996ed3cc3ea209361790f23f6955f09be035e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770854"
 ---
 # <a name="raw-file-destination"></a>Destination de fichier brut
@@ -113,7 +113,7 @@ ms.locfileid: "62770854"
   
 1.  Définissez la propriété sur **CreateOnce** ou **CreateAlways**, et effectuez une itération de la boucle. Le fichier est créé. Cette opération permet de s'assurer de la correspondance entre les métadonnées des données ajoutées et le fichier.  
   
-2.  Réinitialiser la propriété WriteOption à **Append** et définissez la propriété ValidateExternalMetadata sur `False`.  
+2.  Réinitialisez la propriété WriteOption à **Append** et affectez à `False`la propriété ValidateExternalMetadata la valeur.  
   
  Si vous utilisez l’option **TruncateAppend** au lieu de l’option **Append** , celle-ci tronque les lignes ajoutées dans les itérations précédentes, puis ajoute de nouvelles lignes. L’utilisation de l’option **TruncateAppend** nécessite également que les données correspondent au format du fichier.  
   

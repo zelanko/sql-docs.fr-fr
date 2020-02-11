@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2fd28a126b3a0a7f833c6410d4e590b5dc07e5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869614"
 ---
-# <a name="mssqlserver17204"></a>MSSQLSERVER_17204
+# <a name="mssqlserver_17204"></a>MSSQLSERVER_17204
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|17204|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|17204|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBLKIO_DEVOPENFAILED|  
-|Texte du message|%ls : impossible d’ouvrir le fichier %ls pour le numéro de fichier %d.  Erreur de système d'exploitation : %ls.|  
+|Texte du message|%ls : impossible d'ouvrir le fichier %ls pour le numéro de fichier %d.  Erreur de système d'exploitation : %ls.|  
   
 ## <a name="explanation"></a>Explication  
  SQL Server n'a pas pu ouvrir le fichier spécifié en raison de l'erreur spécifiée.  

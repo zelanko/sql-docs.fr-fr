@@ -15,15 +15,15 @@ ms.assetid: bfa85e91-060e-4d70-88c3-f5c48df634f1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f13193ba437d0da0ee15bd4072fe6f53c7db5b9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68043785"
 ---
 # <a name="other-text-file-driver-programming-details"></a>Autres détails de programmation du pilote de fichier texte
 > [!NOTE]  
->  Cette section fournit des informations de fichier texte spécifiques au pilote sur les fonctions ODBC et d’autres détails de programmation. Pour obtenir des informations générales sur une fonction, consultez la rubrique appropriée sous [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette section fournit des informations spécifiques au pilote de fichier texte sur les fonctions ODBC et d’autres détails de programmation. Pour obtenir des informations générales sur une fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Cette section contient les rubriques suivantes :  
   

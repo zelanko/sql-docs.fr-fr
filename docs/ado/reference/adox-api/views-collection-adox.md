@@ -1,5 +1,5 @@
 ---
-title: Views, Collection (ADOX) | Microsoft Docs
+title: Views, collection (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,39 +17,39 @@ ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0cec2462f8726e7c580a7d6755394c6c3f07c85b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964772"
 ---
 # <a name="views-collection-adox"></a>Views, collection (ADOX)
-Contient tous les [vue](../../../ado/reference/adox-api/view-object-adox.md) objets d’un catalogue.  
+Contient tous les objets de [vue](../../../ado/reference/adox-api/view-object-adox.md) d’un catalogue.  
   
 ## <a name="remarks"></a>Notes  
- Le [Append](../../../ado/reference/adox-api/append-method-adox-views.md) méthode pour un **vues** collection est unique pour ADOX. Vous pouvez :  
+ La méthode [Append](../../../ado/reference/adox-api/append-method-adox-views.md) d’une collection **views** est unique pour ADOX. Vous pouvez :  
   
--   Ajouter une nouvelle vue à la collection avec le **Append** (méthode).  
+-   Ajoutez une nouvelle vue à la collection à l’aide de la méthode **Append** .  
   
- Les propriétés et les méthodes restantes sont des collections ADO standard. Vous pouvez :  
+ Les propriétés et les méthodes restantes sont standard pour les collections ADO. Vous pouvez :  
   
--   Accéder à une vue dans la collection avec le [élément](../../../ado/reference/ado-api/item-property-ado.md) propriété.  
+-   Accédez à une vue de la collection à l’aide de la propriété [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   
--   Retourner le nombre de vues contenues dans la collection avec le [nombre](../../../ado/reference/ado-api/count-property-ado.md) propriété.  
+-   Retourne le nombre de vues contenues dans la collection avec la propriété [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
   
--   Supprimer une vue de la collection avec le [supprimer](../../../ado/reference/adox-api/delete-method-adox-collections.md) (méthode).  
+-   Supprimez une vue de la collection à l’aide de la méthode [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) .  
   
--   Mettre à jour les objets dans la collection afin de refléter le schéma actuel de la base de données avec le [Actualiser](../../../ado/reference/ado-api/refresh-method-ado.md) (méthode).  
+-   Mettez à jour les objets de la collection pour refléter le schéma de base de données actuel avec la méthode [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient la rubrique suivante.  
   
 -   [Propriétés, méthodes et événements de la collection Views](../../../ado/reference/adox-api/views-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues et les Collections de champs exemple (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
- [Views Append, méthode-exemple (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [Views, Collection, exemple de propriété CommandText (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
- [Vues de supprimer l’exemple de méthode (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
- [Vues Refresh, exemple de méthode (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
+ [Views et Fields, exemple de collections (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
+ [Views, exemple de méthode Append (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
+ [Views, collection, CommandText, exemple de propriété (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
+ [Views, exemple de méthode Delete (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
+ [Views, exemple de méthode Refresh (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
  [Catalog, objet (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [View, objet (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)

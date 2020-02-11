@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 54995cc99aae2065112cbb510203b656c409dcac
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782130"
 ---
 # <a name="creating-and-updating-statistics"></a>Création et mise à jour des statistiques
@@ -27,7 +27,7 @@ ms.locfileid: "72782130"
  Il est possible de créer des statistiques pour n'importe quelle colonne en utilisant l'objet <xref:Microsoft.SqlServer.Management.Smo.Statistic> et <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn>. La méthode <xref:Microsoft.SqlServer.Management.Smo.Statistic.Update%2A> peut être exécutée pour mettre à jour les statistiques dans l'objet <xref:Microsoft.SqlServer.Management.Smo.Statistic>. Les résultats peuvent être affichés dans l'optimiseur de requête.  
   
 ## <a name="example"></a>Exemple  
- Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet Visual Basic Smo dans Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [créer un projet&#35; Smo Visual C dans Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet Visual Basic Smo dans Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [créer un projet Visual C&#35; Smo dans Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-and-update-statistics-in-visual-basic"></a>Création et mise à jour des statistiques en Visual Basic  
  Cet exemple de code crée une table sur une base de données existante pour laquelle l'objet <xref:Microsoft.SqlServer.Management.Smo.Statistic> et l'objet <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> sont créés.  

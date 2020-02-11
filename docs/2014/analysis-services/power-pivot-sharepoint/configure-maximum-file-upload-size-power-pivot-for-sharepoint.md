@@ -1,5 +1,5 @@
 ---
-title: Configurer la taille de téléchargement de fichier maximale (PowerPivot pour SharePoint) | Microsoft Docs
+title: Configurer la taille maximale de téléchargement de fichiers (PowerPivot pour SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b6e367d0bc73de31f46b8533cded824bdb19504
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071821"
 ---
-# <a name="configure-maximum-file-upload-size-powerpivot-for-sharepoint"></a>Configurer la taille de téléchargement de fichier maximale (PowerPivot pour SharePoint)
-  Les classeurs PowerPivot contiennent souvent des quantités importantes de données qui se traduisent par des fichiers dépassant la taille de fichier maximale autorisée pour les téléchargements SharePoint. Lorsque vous essayez de télécharger un fichier qui dépasse la limite supérieure, l'erreur suivante s'affiche dans SharePoint :  
+# <a name="configure-maximum-file-upload-size-powerpivot-for-sharepoint"></a>Configurer la taille maximale de téléchargement de fichiers (PowerPivot pour SharePoint)
+  Les classeurs PowerPivot contiennent souvent des quantités importantes de données qui se traduisent par des fichiers dépassant la taille de fichier maximale autorisée pour les téléchargements SharePoint. Lorsque vous essayez de télécharger un fichier qui dépasse la limite supérieure, l'erreur suivante s'affiche dans SharePoint :  
   
 -   « La taille du fichier spécifié est supérieure à la taille maximale de fichier prise en charge. »  
   
@@ -28,7 +28,7 @@ ms.locfileid: "66071821"
   
 ### <a name="configure-maximum-file-size-for-excel-services"></a>Configurer la taille de fichier maximale pour Excel Services  
   
-1.  Dans l'Administration centrale, sous Gestion des applications, cliquez sur **Gérer les applications de service**.  
+1.  Dans administration centrale, dans gestion des applications, cliquez sur **gérer les applications de service**.  
   
 2.  Cliquez sur le nom de votre application Excel Services.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66071821"
   
 3.  Dans le ruban Applications Web, cliquez sur la flèche bas située sur le bouton Paramètres généraux.  
   
-4.  Cliquez sur **Paramètres généraux**.  
+4.  Cliquez sur **paramètres généraux**.  
   
 5.  Faites défiler la liste jusqu’à **Taille maximale du téléchargement**.  
   

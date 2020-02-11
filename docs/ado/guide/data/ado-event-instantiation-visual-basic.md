@@ -1,5 +1,5 @@
 ---
-title: Instanciation des événements ADO Visual Basic | Microsoft Docs
+title: 'Instanciation des événements ADO : Visual Basic | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ ms.assetid: dce0a2a3-326f-4aaf-a822-6c5549833afa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ead713a37d4ecf8bdfecd0d6c485684d1ad0777f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926079"
 ---
-# <a name="ado-event-instantiation-visual-basic"></a>Instanciation des événements ADO Visual Basic
-Pour gérer des événements ADO dans Microsoft® Visual Basic®, vous devez déclarer une variable au niveau du module à l’aide du **WithEvents** mot clé. La variable peut être déclarée uniquement dans le cadre d’un module de classe et doit être déclarée au niveau du module. Ce n’est pas aussi restrictif qu’il y paraît, toutefois, étant donné que Visual Basic **formulaire** objets sont également des classes. Le plus simple pour gérer les événements ADO consiste à déclarer une variable à l’aide **WithEvents**. L’exemple suivant gère la **ConnectComplete** événement pour un **connexion** objet :  
+# <a name="ado-event-instantiation-visual-basic"></a>Instanciation des événements ADO : Visual Basic
+Pour gérer les événements ADO dans Microsoft® Visual Basic®, vous devez déclarer une variable au niveau du module à l’aide du mot clé **WithEvents** . La variable ne peut être déclarée que dans le cadre d’un module de classe et doit être déclarée au niveau du module. Cela n’est cependant pas aussi restrictif, car les objets de **formulaire** Visual Basic sont également des classes. La façon la plus simple de gérer les événements ADO consiste à déclarer une variable à l’aide de **WithEvents**. L’exemple suivant gère l’événement **ConnectComplete** pour un objet **Connection** :  
   
 ```  
 ' BeginEventExampleVB02  
@@ -65,4 +65,4 @@ End Sub
 ' EndEventExampleVB02  
 ```  
   
- Le **connexion** objet est déclaré au niveau du **formulaire** niveau à l’aide de la **WithEvents** mot clé pour activer la gestion des événements. Le Gestionnaire d’événements Form_Load crée l’objet en affectant une nouvelle **connexion** objet *connEvent* , puis ouvre la connexion. Bien sûr, une application réelle feriez d’un traitement supplémentaire dans le Gestionnaire d’événements Form_Load est est présenté ici.
+ L’objet de **connexion** est déclaré au niveau du **formulaire** à l’aide du mot clé **WithEvents** pour activer la gestion des événements. Le gestionnaire d’événements Form_Load crée en fait l’objet en assignant un nouvel objet de **connexion** à *connEvent* , puis ouvre la connexion. Bien entendu, une application réelle effectue un traitement plus grand dans le gestionnaire d’événements Form_Load que ce qui est indiqué ici.

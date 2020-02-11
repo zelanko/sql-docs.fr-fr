@@ -1,5 +1,5 @@
 ---
-title: Administration de l’utilitaire (utilitaire SQL Server) | Microsoft Docs
+title: Administration de l’utilitaire (Utilitaire SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773751"
 ---
 # <a name="utility-administration-sql-server-utility"></a>Administration de l'utilitaire (utilitaire SQL Server)
@@ -83,7 +83,7 @@ ms.locfileid: "62773751"
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
  Onglet Entrepôt de données : affiche les détails de configuration de l'entrepôt de données de gestion de l'utilitaire.  
   
- Rétention des données  
+ Conservation des données  
  Spécifiez la période de rétention des données pour les informations d'utilisation recueillies pour les instances managées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La période par défaut est d'un an. La valeur minimale est d'un mois. La plus longue valeur prise en charge est de 2 ans.  
   
  Informations de configuration de l'entrepôt de données de l'utilitaire  
@@ -91,9 +91,9 @@ ms.locfileid: "62773751"
   
 -   Nom de l’UMDW : Sysutility_mdw_\<GUID>_DATA.  
   
--   Collection de définie la fréquence de téléchargement : Toutes les 15 minutes.  
+-   fréquence de téléchargement du jeu d'éléments de collecte : toutes les 15 minutes.  
   
- Le répertoire UMDW est configurable : \<Lecteur système > : Files\Microsoft SQL Server\MSSQL10_50. < nom_ucp > \MSSQL\Data\\, où \<lecteur système > est normalement le C:\ lecteur. Le fichier journal, UMDW_\<GUID>_LOG, se trouve dans le même répertoire.  
+ Le répertoire UMDW est configurable : \<Lecteur_système:\Program Files\Microsoft SQL Server\MSSQL10_50.<Nom_UCP>\MSSQL\Data\\, où \<Lecteur_système est normalement le lecteur C:\. Le fichier journal, UMDW_\<GUID>_LOG, se trouve dans le même répertoire.  
   
 > [!NOTE]  
 >  L'emplacement du fichier UMDW (sysutility_mdw) peut être modifié à l'aide des opérations de détachement et d'attachement ou d'ALTER DATABASE. Nous recommandons l'utilisation d'ALTER DATABASE. Pour plus d’informations, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
@@ -102,7 +102,7 @@ ms.locfileid: "62773751"
  Pour rétablir les valeurs par défaut des paramètres de cet onglet, cliquez sur le bouton **Paramètres par défaut** , puis sur **Appliquer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tableau de bord utilitaire &#40;utilitaire SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
+ [Tableau de bord de l’utilitaire &#40;Utilitaire SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [Détails des applications de la couche Données déployées &#40;utilitaire SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
  [Détails de l’instance gérée &#40;utilitaire SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [Surveiller des instances de SQL Server dans l'utilitaire SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)  

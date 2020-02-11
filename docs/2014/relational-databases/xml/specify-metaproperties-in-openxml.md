@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 291d1429cdd7dbc4b4737f55b98dea2ba467512f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62679500"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Spécifier des métapropriétés dans OPENXML
@@ -58,7 +58,7 @@ ms.locfileid: "62679500"
 ## <a name="examples"></a>Exemples  
  Les exemples suivants illustrent l'utilisation d'OPENXML pour créer différentes vues d'ensembles de lignes.  
   
-### <a name="a-mapping-the-openxml-rowset-columns-to-the-metaproperties"></a>A. Mappage des colonnes de l'ensemble de lignes OPENXML aux métapropriétés  
+### <a name="a-mapping-the-openxml-rowset-columns-to-the-metaproperties"></a>R. Mappage des colonnes de l'ensemble de lignes OPENXML aux métapropriétés  
  Cet exemple utilise OPENXML pour créer une vue d'ensemble de lignes de l'exemple de document XML. Plus spécifiquement, il montre comment différents attributs de métapropriétés peuvent être mappés à des colonnes d’ensembles de lignes dans une instruction OPENXML à l’aide du paramètre *ColPattern* .  
   
  L'instruction OPENXML contient les éléments suivants :  
@@ -102,7 +102,7 @@ FROM OPENXML (@idoc, '/root/Customer/Order', 9)
 EXEC sp_xml_removedocument @idoc  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 id   oid         date                amount    parentIDNo  parentLocalName    

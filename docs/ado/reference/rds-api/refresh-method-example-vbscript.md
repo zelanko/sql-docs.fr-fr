@@ -15,17 +15,17 @@ ms.assetid: f2926578-bc60-464b-916e-ddfdb8014253
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 46e9d4d7b7e74a3e3fff1af7428714603ea6d619
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963518"
 ---
 # <a name="refresh-method-example-vbscript"></a>Refresh, exemple de méthode (VBScript)
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- L’exemple suivant montre comment définir les paramètres nécessaires de [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) en cours d’exécution. La manière dont un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) est récupéré à l’aide de la [Actualiser](../../../ado/reference/ado-api/refresh-method-ado.md) méthode est déterminée par les paramètres de la [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) et [FetchOptions ](../../../ado/reference/rds-api/fetchoptions-property-rds.md) propriétés. Pour tester cet exemple, coupez et collez le code suivant dans un document ASP normal et nommez-le **RefreshVBS.asp**. Utilisez **trouver** pour localiser le fichier Adovbs.inc et placez-le dans le répertoire que vous prévoyez d’utiliser. Le script ASP identifie votre serveur.  
+ L’exemple suivant montre comment définir les paramètres nécessaires de [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) au moment de l’exécution. La façon dont un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) est récupéré à l’aide de la méthode [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) est déterminée par les paramètres des propriétés [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) et [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) . Pour tester cet exemple, coupez et collez le code suivant dans un document ASP normal, puis nommez-le **RefreshVBS. asp**. Utilisez **Find** pour localiser le fichier adovbs. Inc et placez-le dans le répertoire que vous prévoyez d’utiliser. Le script ASP identifie votre serveur.  
   
 ```  
 <!-- BeginRefreshVBS -->  
@@ -178,7 +178,7 @@ End Sub
  [DataControl, objet (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [ExecuteOptions, propriété (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
  [FetchOptions, propriété (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)   
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Refresh, méthode (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: Activer l’écriture différée de Dimension (Dimension) (Assistant Business Intelligence) | Microsoft Docs
+title: Activer l’écriture différée de la dimension (dimension) (Assistant Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 439f46ba0fa58253572d017057bb236aa1bf2d67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081330"
 ---
 # <a name="enable-dimension-writeback-dimension-business-intelligence-wizard"></a>Activer l'écriture différée de la dimension (Dimension) (Assistant Business Intelligence)
@@ -30,9 +30,9 @@ ms.locfileid: "66081330"
  Sélectionnez la dimension pour laquelle l'Assistant activera l'écriture différée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide (F1) de l'Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
- [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Concepteur de dimensions &#40;Analysis Services - données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
- [Activer l’écriture différée de la dimension](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
+ [Aide (F1) de l’Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Concepteur de cube &#40;Analysis Services-données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Concepteur de dimensions &#40;Analysis Services-données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
+ [Activer l'écriture différée de la dimension](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   
   

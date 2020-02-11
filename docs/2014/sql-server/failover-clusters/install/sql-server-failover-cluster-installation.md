@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 49fce70b4fc01f77fe7ca54e3951f0372ba18489
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067645"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>Installation d'un cluster de basculement SQL Server
@@ -25,33 +25,36 @@ ms.locfileid: "63067645"
   
 1.  Pour installer, configurer et gérer un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , utilisez le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-    -   Identifiez les informations dont vous aurez besoin pour créer votre instance de cluster de basculement (par exemple, une ressource disque de cluster, des adresses IP et un nom réseau) et les nœuds disponibles pour le basculement. Pour plus d'informations, consultez :  
+    -   Identifiez les informations dont vous aurez besoin pour créer votre instance de cluster de basculement (par exemple, une ressource disque de cluster, des adresses IP et un nom réseau) et les nœuds disponibles pour le basculement. Pour plus d'informations :  
   
         -   [Avant l'installation du clustering de basculement](before-installing-failover-clustering.md)  
   
         -   [Considérations sur la sécurité pour une installation SQL Server](../../install/security-considerations-for-a-sql-server-installation.md)  
   
-    -   Les étapes de configuration doivent se dérouler avant l'exécution du programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ; pour cela, utilisez l'Administrateur de cluster Windows. Vous avez besoin d'un groupe WSFC pour chaque instance de cluster de basculement que vous souhaitez configurer.  
+    -   Les étapes de configuration doivent être effectuées avant d’exécuter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le programme d’installation de. Utilisez l’administrateur de clusters Windows pour les exécuter. Vous devez disposer d’un groupe WSFC pour chaque instance de cluster de basculement que vous souhaitez configurer.  
   
     -   Vous devez vous assurer que votre système satisfait la configuration minimale requise. Pour plus d’informations sur la configuration requise pour un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , consultez [Avant l’installation du clustering de basculement](before-installing-failover-clustering.md).  
   
 2.  Ajoutez ou retirez des nœuds d'une configuration de cluster de basculement sans aucune incidence sur les autres nœuds du cluster. Pour plus d’informations, consultez [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;programme d’installation&#41;](add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
-    -   Tous les nœuds d'un cluster de basculement doivent être de la même plateforme (32 bits ou 64 bits) et exécuter le même système d'exploitation et la même version. En outre, les éditions 64 bits de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doivent être installées sur un matériel 64 bits utilisant les versions 64 bits des systèmes d'exploitation Windows. Il n'existe pas de prise en charge WOW64 pour le clustering de basculement dans cette version.  
+    -   Tous les nœuds d'un cluster de basculement doivent être de la même plateforme (32 bits ou 64 bits) et exécuter le même système d'exploitation et la même version. En outre, les éditions 64 bits de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doivent être installées sur un matériel 64 bits utilisant les versions 64 bits des systèmes d'exploitation Windows. Il n'existe pas de prise en charge WOW64 pour le clustering de basculement dans cette version.  
   
 3.  Spécifiez plusieurs adresses IP pour chaque instance de cluster de basculement. Vous pouvez spécifier plusieurs adresses IP pour chaque sous-réseau. Si les adresses IP sont toutes sur le même sous-réseau, le programme d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] définit la dépendance sur AND. Si vous mettez des nœuds en cluster sur plusieurs sous-réseaux, le programme d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] définit la dépendance sur OR.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Options d’installation d’un cluster de basculement  
+## <a name="includessnoversionincludesssnoversion-mdmd-failover-cluster-installation-options"></a>
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Options d’installation d’un cluster de basculement  
   
-##### <a name="option-1-integrated-installation-with-add-node"></a>Option n°1 : Installation intégrée avec ajout de nœud  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comprend deux étapes :  
+##### <a name="option-1-integrated-installation-with-add-node"></a>Option 1 : installation intégrée avec ajout de nœud  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comprend deux étapes :  
   
 1.  Créez et configurez une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à un seul nœud. Une fois la configuration du nœud réussie, vous disposez d'une instance de cluster de basculement entièrement fonctionnelle. Celle-ci n'offre pas une haute disponibilité pour l'instant, car il n'y a qu'un seul nœud dans le cluster de basculement.  
   
 2.  Sur chaque nœud à ajouter au cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , exécutez le programme d'installation en utilisant la fonctionnalité d'ajout de nœud pour ajouter le nœud correspondant.  
   
-##### <a name="option-2-advancedenterprise-installation"></a>Option n°2 : Installation avancée/entreprise  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] L’installation avancée/entreprise d’un cluster de basculement comprend deux étapes :  
+##### <a name="option-2-advancedenterprise-installation"></a>Option 2 : installation avancée/entreprise  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] L’installation avancée/entreprise d’un cluster de basculement comprend deux étapes :  
   
 1.  Sur chaque nœud devant faire partie du cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , exécutez le programme d'installation en utilisant la fonctionnalité de préparation de cluster de basculement. Cette étape prépare les nœuds pour le clustering ; toutefois, aucune instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'est opérationnelle à la fin de cette étape.  
   
@@ -64,7 +67,8 @@ ms.locfileid: "63067645"
     >  La lettre de lecteur du système d'exploitation pour les emplacements d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit correspondre sur tous les nœuds ajoutés au cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="ip-address-configuration-during-setup"></a>Configuration d'adresse IP pendant l'installation  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Le programme d'installation vous permet de définir ou de modifier les paramètres de dépendance de ressource IP pendant les actions suivantes :  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Le programme d'installation vous permet de définir ou de modifier les paramètres de dépendance de ressource IP pendant les actions suivantes :  
   
 -   Installation intégrée – [Créer un cluster de basculement SQL Server &#40;programme d’installation&#41;](create-a-new-sql-server-failover-cluster-setup.md)  
   
@@ -76,12 +80,13 @@ ms.locfileid: "63067645"
   
  **Remarque** Les adresses IP IPV6 sont prises en charge.  Si vous configurez à la fois IPV4 et IPV6, les adresses sont traitées comme des sous-réseaux différents, et IPV6 devrait être mis en ligne en premier.  
   
-##### <a name="includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cluster de basculement de sous-réseaux multiples  
+##### <a name="includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cluster de basculement de sous-réseaux multiples  
  Vous pouvez définir des dépendances OR lorsque les nœuds du cluster se trouvent sur des sous-réseaux différents. Toutefois, chaque nœud du cluster de basculement de sous-réseaux multiples [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit être un propriétaire possible d'au moins une d'adresse IP spécifiée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Avant l'installation du clustering de basculement](before-installing-failover-clustering.md)   
- [Créer un cluster de basculement SQL Server &#40;programme d’installation&#41;](create-a-new-sql-server-failover-cluster-setup.md)   
+ [Avant l’installation du clustering de basculement](before-installing-failover-clustering.md)   
+ [Créer un cluster de basculement SQL Server &#40;d’installation&#41;](create-a-new-sql-server-failover-cluster-setup.md)   
  [Installer SQL Server 2014 à partir de l’invite de commandes](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [Mettre à niveau un cluster de basculement SQL Server](../windows/upgrade-a-sql-server-failover-cluster-instance.md)  
   

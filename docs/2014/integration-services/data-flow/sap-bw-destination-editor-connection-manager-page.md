@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e4e23849b50e8cfa0a0e8d3ef6def4fbd159381c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770845"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Éditeur de destination SAP BW (page Gestionnaire de connexions)
@@ -59,7 +59,7 @@ ms.locfileid: "62770845"
  **Type**  
  Entrez le caractère unique qui identifie le type de l'InfoSource. Le tableau suivant répertorie les valeurs à un seul caractère acceptables.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**D**|Données de transaction|  
 |**M**|Données maîtres|  
@@ -102,7 +102,7 @@ ms.locfileid: "62770845"
  **Créer**  
  Créez le type sélectionné d'objet SAP Netweaver BW.  
   
-|Type d'objet|Résultat|  
+|Type d'objet|Résultats|  
 |-----------------|------------|  
 |**InfoObject**|Créez un nouvel InfoObject à l'aide de la boîte de dialogue **Créer un nouvel InfoObject** . Pour plus d'informations sur cette boîte de dialogue, consultez [Create New InfoObject](create-new-infoobject.md).|  
 |**InfoCube**|Créez un nouvel InfoCube à l'aide de la boîte de dialogue **Créer un InfoCube pour les données de transaction** . Pour plus d'informations sur cette boîte de dialogue, consultez [Create InfoCube for Transaction Data](create-infocube-for-transaction-data.md).|  

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 56a9c380b8cc88202cdcb4c4dca54aab2d1fa4a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102394"
 ---
 # <a name="upload-a-file-or-report-report-manager"></a>Télécharger un fichier ou un rapport (Gestionnaire de rapports)
@@ -42,7 +42,7 @@ ms.locfileid: "66102394"
   
 4.  Cliquez sur **Parcourir** pour sélectionner un fichier à charger sur le serveur. Vous pouvez télécharger un fichier de définition de rapport, une image, un document ou tout autre fichier que vous souhaitez rendre accessible sur le serveur de rapports.  
   
-5.  Tapez un nom pour le nouvel élément. Ce nom peut comporter des espaces, mais il ne peut pas contenir les caractères réservés suivants : ; ? : \@ & = + , $ / * \< > |.  
+5.  Tapez un nom pour le nouvel élément. Ce nom peut comporter des espaces, mais il ne peut pas contenir les caractères réservés suivants : ; ? : \@ & = +, $/* \< > |.  
   
 6.  Pour remplacer un élément existant par le nouveau, sélectionnez **Remplacer l’élément s’il existe**.  
   
@@ -50,8 +50,8 @@ ms.locfileid: "66102394"
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer, supprimer ou modifier une source de données partagée &#40;Gestionnaire de rapports&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Page Contenu &#40;Gestionnaire de rapports&#41;](../contents-page-report-manager.md)   
- [Page Télécharger un fichier &#40;Gestionnaire de rapports&#41;](../upload-file-page-report-manager.md)   
+ [Page contenu &#40;Gestionnaire de rapports&#41;](../contents-page-report-manager.md)   
+ [Page charger un fichier &#40;Gestionnaire de rapports&#41;](../upload-file-page-report-manager.md)   
  [Télécharger des fichiers dans un dossier](../report-server/upload-files-to-a-folder.md)  
   
   

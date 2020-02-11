@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Destination de fichier (Page mappages) plats | Microsoft Docs
+title: Éditeur de destination de fichier plat (page Mappages) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7f91b32a292975ec19b21dbd855f6c5c182738aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058682"
 ---
 # <a name="flat-file-destination-editor-mappings-page"></a>Éditeur de destination de fichier plat (page Mappages)
@@ -34,7 +34,7 @@ ms.locfileid: "66058682"
  Affichez la liste des colonnes de destination disponibles. Au moyen d'une opération glisser-déplacer, mappez les colonnes de destination disponibles aux colonnes d'entrée.  
   
  **Colonne d'entrée**  
- Affichez les colonnes d'entrée sélectionnées précédemment. Vous pouvez modifier les mappages au moyen de la liste **Colonnes d'entrée disponibles**. Sélectionnez **\<ignorer>** pour exclure la colonne de la sortie.  
+ Affichez les colonnes d'entrée sélectionnées précédemment. Vous pouvez modifier les mappages au moyen de la liste **Colonnes d'entrée disponibles**. Sélectionnez ** \<ignorer>** pour exclure la colonne de la sortie.  
   
  **Colonne de destination**  
  Affiche chaque colonne de destination disponible, qu'elle soit mappée ou non.  

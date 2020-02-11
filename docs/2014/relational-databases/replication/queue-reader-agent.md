@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7f07c9be82be63d01d563499a80e049e572a4150
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63262060"
 ---
 # <a name="queue-reader-agent"></a>Agent de lecture de la file d'attente
@@ -27,7 +27,7 @@ ms.locfileid: "63262060"
 ## <a name="options"></a>Options  
  Dans le menu **Affichage** , sélectionnez les sessions de l'Agent de lecture de la file d'attente à afficher. Sélectionnez ensuite une session particulière dans la grille étiquetée **Sessions de l'Agent de lecture de la file d'attente**. Des informations détaillées sur cette session s'affichent dans la grille étiquetée **Actions dans la session sélectionnée**. Si la session sélectionnée s'est terminée sur une erreur, la zone de texte étiquetée **Détails de l'erreur ou message de la session sélectionnée** s'affiche également.  
   
- **Affichage**  
+ **Afficher**  
  Sélectionnez les sessions de l'Agent de lecture de la file d'attente à afficher. L'Agent de lecture de la file d'attente s'exécute généralement en permanence : il se peut donc qu'il n'y ait qu'une session à afficher.  
   
  **État**  
@@ -47,10 +47,10 @@ ms.locfileid: "63262060"
  **Heure de fin**  
  Heure de fin de la session. Si l'agent ne s'est pas arrêté, ce champ est vide.  
   
- **Duration**  
+ **Durée**  
  Durée d'exécution de l'Agent de lecture de la file d'attente dans cette session. Cette durée représente le temps écoulé si l'agent est en cours d'exécution et le temps total de la session si l'agent de la session s'est terminé.  
   
- **Message d'erreur**  
+ **Message d’erreur**  
  Si une session s'est terminée sur une erreur, ce champ affiche le dernier message d'erreur enregistré par l'Agent de lecture de la file d'attente. Dans le cas contraire, ce champ est vide.  
   
  **Message d'action**  

@@ -1,5 +1,5 @@
 ---
-title: Création d’une Structure de prévision et un modèle (didacticiel d’exploration de données intermédiaire) | Microsoft Docs
+title: Création d’une structure et d’un modèle de prévision (Didacticiel intermédiaire sur l’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6e631a8983705d4f58e4b193823c9a255284f346
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204808"
 ---
 # <a name="creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial"></a>Création d'une structure et d'un modèle de prévision (Didacticiel sur l'exploration de données intermédiaire)
@@ -22,48 +22,48 @@ ms.locfileid: "63204808"
   
 ### <a name="to-create-a-forecasting-mining-structure"></a>Pour créer une structure d'exploration de données de prévision  
   
-1.  Dans l’Explorateur de solutions dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], avec le bouton droit **des Structures d’exploration de données** et sélectionnez **nouvelle Structure d’exploration de données**.  
+1.  Dans Explorateur de solutions dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], cliquez avec le bouton droit sur **structures d’exploration de données** et sélectionnez **nouvelle structure d’exploration de données**.  
   
 2.  Dans la page **Assistant Exploration de données** , cliquez sur **Suivant**.  
   
-3.  Sur le **sélectionner la méthode de définition** page, vérifiez que **à partir de l’entrepôt de données ou de la base de données relationnelle existant** est sélectionnée, puis cliquez sur **suivant**.  
+3.  Sur la page **Sélectionner la méthode de définition** , vérifiez que **à partir de la base de données relationnelle ou de l’entrepôt de données existant** est sélectionné, puis cliquez sur **suivant**.  
   
-4.  Sur le **créer la Structure d’exploration de données** page sous **quelle technique d’exploration de données voulez-vous utiliser ?** , sélectionnez **Microsoft Time Series**, puis cliquez sur  **Suivant**.  
+4.  Dans la page **créer la structure d’exploration de données** , sous **quelle technique d’exploration de données voulez-vous utiliser ?**, sélectionnez **séries chronologiques Microsoft**, puis cliquez sur **suivant**.  
   
-5.  Sur le **sélectionner une vue de Source de données** page sous **vues de sources de données disponibles**, sélectionnez **SalesByRegion**.  
+5.  Dans la page **Sélectionner une vue de source de données** , sous vues de sources de **données disponibles**, sélectionnez **SalesByRegion**.  
   
-6.  Cliquer sur **Suivant**.  
+6.  Cliquez sur **Suivant**.  
   
-7.  Sur le **spécifier les Types de Table** page, vérifiez que la case à cocher dans la **cas** colonne pour la table vTimeSeries est sélectionné, puis cliquez sur **suivant**.  
+7.  Dans la page **spécifier les types des tables** , vérifiez que la case à cocher dans la colonne **cas** de la table vTimeSeries est sélectionnée, puis cliquez sur **suivant**.  
   
-8.  Sur le **spécifier les données d’apprentissage** , sélectionnez les cases à cocher dans la **clé** colonne pour les colonnes ModelRegion et ReportingDate.  
+8.  Dans la page **spécifier les données d’apprentissage** , activez les cases à cocher dans la colonne **clé** pour les colonnes ModelRegion et ReportingDate.  
   
      La colonne ReportingDate doit être sélectionnée par défaut, parce que vous avez spécifié cette colonne en tant que clé primaire logique lorsque vous avez créé la vue de source de données. En ajoutant ModelRegion comme deuxième clé, vous indiquez à l'algorithme de créer une série chronologique distincte pour chaque combinaison de modèle et région répertoriée dans ce champ.  
   
-9. Sélectionnez les cases à cocher dans la **entrée** et **prédictible** colonnes pour la quantité, colonne, puis cliquez sur **suivant**.  
+9. Activez les cases à cocher dans les colonnes **d’entrée** et **prévisibles** pour la quantité, la colonne, puis cliquez sur **suivant**.  
   
-     En sélectionnant **prédictible**, vous indiquez que vous souhaitez créer des prévisions sur les données dans cette colonne. Toutefois, étant donné que vous souhaitez baser les prévisions sur des données passées, vous devez également ajouter la colonne en tant qu'entrée.  
+     En sélectionnant **prévisible**, vous indiquez que vous souhaitez créer des prévisions sur les données de cette colonne. Toutefois, étant donné que vous souhaitez baser les prévisions sur des données passées, vous devez également ajouter la colonne en tant qu'entrée.  
   
-10. Dans la page **colonnes spécifier Type de contenu et données**, passez en revue les sélections.  
+10. Dans la page **spécifier le type de contenu et de données des colonnes**, passez en revue les sélections.  
   
-     La colonne ModelRegion est désignée comme un **clé** colonne et la colonne ReportingDate est automatiquement désignée comme un **Key Time** colonne. Il ne peut y avoir qu'une seule occurrence de chaque type de clé.  
+     La colonne ModelRegion est désignée en tant que colonne **clé** et la colonne ReportingDate est automatiquement désignée comme colonne **Key Time** . Il ne peut y avoir qu'une seule occurrence de chaque type de clé.  
   
-11. Cliquer sur **Suivant**.  
+11. Cliquez sur **Suivant**.  
   
-12. Sur le **fin de l’Assistant** page, pour **nom de la structure d’exploration de données**, type `Forecasting`.  
+12. Dans la page **fin de l’Assistant** , pour nom de la structure `Forecasting`d’exploration de **données**, tapez.  
   
     > [!NOTE]  
     >  L'option permettant d'activer l'extraction n'est pas disponible pour les modèles de série chronologique.  
   
-13. Dans **nom du modèle d’exploration de données**, type `Forecasting`, puis cliquez sur **Terminer**.  
+13. Dans **nom du modèle**d’exploration `Forecasting`de données, tapez, puis cliquez sur **Terminer**.  
   
-     Concepteur d’exploration de données s’ouvre et affiche le `Forecasting` structure d’exploration de données que vous venez de créer.  
+     Le concepteur d’exploration de données s' `Forecasting` ouvre pour afficher la structure d’exploration de données que vous venez de créer.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Modification de la Structure de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/modifying-the-forecasting-structure-intermediate-data-mining-tutorial.md)  
+ [Modification de la structure de prévision &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/modifying-the-forecasting-structure-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteur d'exploration de données](../../2014/analysis-services/data-mining/data-mining-designer.md)   
+ [Concepteur d’exploration de données](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Algorithme MTS (Microsoft Time Series)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
   
   

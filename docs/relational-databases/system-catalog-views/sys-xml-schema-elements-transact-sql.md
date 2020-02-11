@@ -1,5 +1,5 @@
 ---
-title: sys.xml_schema_elements (Transact-SQL) | Microsoft Docs
+title: sys. xml_schema_elements (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ ms.assetid: 190ed0cd-0c5e-4607-9db4-9e77cacf17d7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d43f30f15502a41882190dcdd19984d9ec042d4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037396"
 ---
-# <a name="sysxmlschemaelements-transact-sql"></a>sys.xml_schema_elements (Transact-SQL)
+# <a name="sysxml_schema_elements-transact-sql"></a>sys.xml_schema_elements (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne une ligne pour chaque composant de schéma XML qui est un Type, **symbol_space** de **E**.  
+  Retourne une ligne par composant de schéma XML qui est un type, **symbol_space** de **E**.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**\<héritée de colonnes >**|**--**|Hérite des colonnes de [sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
+|**\<colonnes héritées>**|**--**|Hérite des colonnes de [sys. xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
 |**is_default_fixed**|**bit**|1 = La valeur par défaut est une valeur fixe. Cette valeur ne peut pas être remplacée dans une instance XML.<br /><br /> 0 = La valeur par défaut n'est pas une valeur fixe pour cet élément. (Valeur par défaut.)|  
 |**is_abstract**|**bit**|1 = L'élément est abstrait et ne peut pas être utilisé dans un document de l'instance. Un membre du groupe de substitution de l'élément doit figurer dans le document de l'instance.<br /><br /> 0 = L'élément n'est pas abstrait. (Valeur par défaut.)|  
 |**is_nillable**|**bit**|1 = L'élément peut avoir la valeur NULL.<br /><br /> 0 = L'élément ne peut pas avoir la valeur NULL. (par défaut)|  
@@ -50,6 +50,6 @@ ms.locfileid: "68037396"
   
 ## <a name="see-also"></a>Voir aussi  
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Schémas XML &#40;système de Type XML&#41; affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
+ [Schémas XML &#40;les affichages catalogue du système de type XML&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

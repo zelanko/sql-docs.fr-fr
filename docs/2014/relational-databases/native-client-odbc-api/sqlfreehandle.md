@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 197d3e1d36f8513821cec9630cade8f52681a43d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63154659"
 ---
 # <a name="sqlfreehandle"></a>SQLFreeHandle
@@ -26,6 +26,6 @@ ms.locfileid: "63154659"
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLFreeHandle, fonction](https://go.microsoft.com/fwlink/?LinkId=59345)   
- [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

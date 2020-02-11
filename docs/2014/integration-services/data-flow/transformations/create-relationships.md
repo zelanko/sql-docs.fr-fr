@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 647fa27d872829a60d32c0cdc7686938ae796f2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770375"
 ---
 # <a name="create-relationships"></a>Créer des relations
@@ -28,10 +28,10 @@ ms.locfileid: "62770375"
  Pour en savoir plus sur les transformations qui utilisent la boîte de dialogue **Créer des relations** , consultez [Fuzzy Lookup Transformation](lookup-transformation.md), [Lookup Transformation](lookup-transformation.md)et [Term Lookup Transformation](term-lookup-transformation.md).  
   
 ## <a name="options"></a>Options  
- **Colonnes d’entrée**  
+ **Colonne d'entrée**  
  Permet de sélectionner des colonnes dans la liste des colonnes d'entrée disponibles.  
   
- **Colonne de recherche**  
+ **colonne de recherche**  
  Sélectionnez dans la liste des colonnes de recherche disponibles.  
   
  **Type de mappage**  
@@ -40,7 +40,7 @@ ms.locfileid: "62770375"
  Lorsque vous utilisez la correspondance floue, les lignes sont considérées correspondre à des doublons si elles sont suffisamment similaires dans toutes les colonnes ayant un type de correspondance floue. Pour optimiser les résultats de la correspondance floue, vous pouvez indiquer que des colonnes doivent utiliser la correspondance exacte au lieu de la correspondance floue. Si, par exemple, vous savez qu'une colonne ne contient pas d'erreur ou d'incohérence, vous pouvez définir la correspondance exacte sur la colonne pour que seules les lignes qui contiennent des valeurs identiques dans la colonne soient considérées comme des doublons possibles. Ceci améliore la précision de la correspondance floue dans les autres colonnes.  
   
  **Indicateurs de comparaison**  
- Pour plus d'informations sur les options de comparaison de chaînes, consultez [Comparaison des données chaînes](../comparing-string-data.md).  
+ Pour plus d’informations sur les options de comparaison de chaînes, consultez [Comparaison des données chaînes](../comparing-string-data.md).  
   
  **Similarité minimale**  
  Définissez le seuil de similarité au niveau colonne en utilisant le curseur. Plus la valeur est proche de 1, plus la valeur de recherche doit ressembler à la valeur source pour qu'elle corresponde à une correspondance. L'augmentation du seuil peut accélérer les recherches du fait que moins de candidats doivent être évalués.  

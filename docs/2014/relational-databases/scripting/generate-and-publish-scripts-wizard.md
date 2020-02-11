@@ -43,10 +43,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47bf324dd757661a6f49f18b28f810c87ca1419e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242112"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistant Générer et publier des scripts
@@ -64,7 +64,7 @@ ms.locfileid: "75242112"
   
  Pour publier une base de données sur un service d'hébergement Web, sélectionnez l'option **Publier sur le service Web** dans la page de **Définir les options de script** de l'Assistant.  
   
-###  <a name="Permissions"></a>Autorisations  
+###  <a name="Permissions"></a> Autorisations  
  L'autorisation minimale pour publier une base de données est l'appartenance au rôle de base de données fixe db_ddladmin sur la base de données d'origine. L'autorisation minimale pour publier un script de base de données sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au fournisseur d'hébergement est l'appartenance au rôle de base de données fixe db_ddladmin sur la base de données cible.  
   
  L'utilisateur doit fournir également un nom d'utilisateur et un mot de passe pour accéder à son compte de fournisseur d'hébergement pour publier avec l'Assistant. La base de données cible doit être créée au fournisseur d'hébergement avant de publier la base de données source. La publication remplace les objets dans cette base de données existante.  
@@ -80,13 +80,13 @@ ms.locfileid: "75242112"
   
     -   [Page Introduction](#Introduction)  
   
-    -   [Page choisir des objets](#ChooseObjects)  
+    -   [Page Sélectionner les objets](#ChooseObjects)  
   
-    -   [Page définir les options de script](#SetScriptOpt)  
+    -   [Page Définir les options de script](#SetScriptOpt)  
   
     -   [Page Options de script avancées](#AdvScriptOpt)  
   
-    -   [Page gérer les fournisseurs](#MgProviders)  
+    -   [Page Gérer les fournisseurs](#MgProviders)  
   
     -   [Page Options de publication avancées](#AdvPubOpts)  
   
@@ -94,12 +94,12 @@ ms.locfileid: "75242112"
   
     -   [Page Résumé](#Summary)  
   
-    -   [Page enregistrer ou publier des scripts](#SavePubScripts)  
+    -   [Page Enregistrer ou publier des scripts](#SavePubScripts)  
   
-###  <a name="Introduction"></a>Page Introduction  
+###  <a name="Introduction"></a> Page Introduction  
  Cette page décrit la procédure de création ou de publication d'un script.  
   
- **Ne plus afficher cette page** : ignorez cette page la prochaine fois que vous démarrerez l' **Assistant générer et publier des scripts**.  
+ **Ne plus afficher cette page** - Permet d’ignorer cette page la prochaine fois que vous démarrez l’ **Assistant Générer et publier des scripts**.  
   
  **>suivant** -passe à la page **choisir une méthode** .  
   
@@ -110,13 +110,13 @@ ms.locfileid: "75242112"
   
  **Script-totalité de la base de données** -cliquez sur cette option pour générer des scripts pour tous les objets de la base de données et pour inclure un script pour la base de données elle-même.  
   
- **Sélectionner des objets de base de données spécifiques** : cliquez sur cette option pour limiter l’Assistant à la génération de scripts uniquement pour les objets spécifiques de la base de données que vous choisissez :  
+ **Sélectionner des objets de base de données spécifiques** - Cliquez sur cette option pour limiter l’action de l’Assistant à la génération de scripts uniquement pour les objets de la base de données que vous choisissez :  
   
--   **Objets de base de données** : sélectionnez au moins un objet à inclure dans le script.  
+-   **Objets de base de données** - Sélectionnez au moins un objet à inclure dans le script.  
   
--   **Sélectionner tout** -sélectionne toutes les cases à cocher disponibles.  
+-   **Sélectionner tout** - Coche toutes les cases disponibles.  
   
--   **Désélectionner tout** -efface toutes les cases à cocher. Vous devez ensuite activer au moins un objet de base de données pour poursuivre.  
+-   **Désélectionner tout** - Décoche toutes les cases. Vous devez ensuite activer au moins un objet de base de données pour poursuivre.  
   
 ###  <a name="SetScriptOpt"></a>Page définir les options de script  
  Utilisez cette page pour spécifier si vous souhaitez que l'Assistant enregistre les scripts à l'emplacement de votre choix ou les utilise pour publier des objets de base de données sur un fournisseur d'hébergement Web distant. Pour publier, vous devez avoir accès à un service Web installé à l'aide des Database Publishing Services.  
@@ -172,7 +172,7 @@ ms.locfileid: "75242112"
   
 -   **Liaison de script** -génère un script pour lier les objets de règle et les objets par défaut. La valeur par défaut est **False**. Pour plus d’informations, consultez [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql) et [CREATE RULE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-rule-transact-sql).  
   
--   **Classement de script** -comprend des informations de classement dans le script. La valeur par défaut est **False**. Pour plus d’informations, consultez [Collation and Unicode Support](../collations/collation-and-unicode-support.md).  
+-   **Classement de script** -comprend des informations de classement dans le script. La valeur par défaut est **False**. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../collations/collation-and-unicode-support.md).  
   
 -   Valeurs **par défaut du script** : contient les objets par défaut utilisés pour définir les valeurs par défaut dans les colonnes de la table. La valeur par défaut est **true**. Pour plus d’informations, consultez [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql).  
   
@@ -240,11 +240,11 @@ ms.locfileid: "75242112"
   
 1.  **Convertir les UDDT en types de base** : lorsque la **valeur est true**, les types de données définis par l’utilisateur (UDDT) sont convertis en types de données de base sous-jacents qui ont été utilisés pour les créer. Utilisez **True** lorsque l'UDDT n'existe pas dans la base de données où le script s'exécutera. Lorsque cette option a la valeur **False**, les UDDT sont utilisés. La valeur par défaut est **False**.  
   
-2.  **Publier le classement** -comprend les informations de classement pour les colonnes de table. La valeur par défaut est **False**. Pour plus d’informations, consultez [Collation and Unicode Support](../collations/collation-and-unicode-support.md).  
+2.  **Publier le classement** -comprend les informations de classement pour les colonnes de table. La valeur par défaut est **False**. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../collations/collation-and-unicode-support.md).  
   
 3.  **Publier les paramètres par défaut** : contient les objets par défaut utilisés pour définir les valeurs par défaut dans les colonnes de la table. La valeur par défaut est **true**. Pour plus d’informations, consultez [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql).  
   
-4.  **Publier les objets dépendants** -publie tout objet dont la présence est requise lorsque le script de l’objet sélectionné est exécuté. La valeur par défaut est **true**.  
+4.  **Publier les objets dépendants** -publie tout objet dont la présence est requise lorsque le script de l’objet sélectionné est exécuté. La valeur par défaut est **True**.  
   
 5.  **Publier les propriétés étendues** -inclut les propriétés étendues dans le script envoyé au fournisseur pour la publication, si l’objet a des propriétés étendues. La valeur par défaut est **true**.  
   
@@ -268,7 +268,7 @@ ms.locfileid: "75242112"
   
  **Options de table/vue** -les options suivantes s’appliquent uniquement aux tables ou aux vues.  
   
-1.  **Publier les contraintes de validation** : comprend la `CHECK` création de contraintes dans le processus de publication. La valeur par défaut est **true**. Les contraintes `CHECK` exigent que les données entrées dans une table satisfassent à certaines conditions spécifiées. Pour plus d’informations, consultez [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
+1.  **Publier les contraintes de validation** : comprend la `CHECK` création de contraintes dans le processus de publication. La valeur par défaut est **True**. Les contraintes `CHECK` exigent que les données entrées dans une table satisfassent à certaines conditions spécifiées. Pour plus d’informations, consultez [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 2.  **Publier les clés étrangères** -comprend la création de clés étrangères dans le processus de publication. La valeur par défaut est **true**. Les clés étrangères indiquent et garantissent les relations entre les tables. Pour plus d'informations, consultez [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md).  
   
@@ -276,7 +276,7 @@ ms.locfileid: "75242112"
   
 4.  **Publier des index** : comprend des index sur des tables dans le processus de publication. La valeur par défaut est **true**. Les index permettent de trouver rapidement des données.  
   
-5.  **Publier les clés primaires** -comprend la création de clés primaires dans le processus de publication. La valeur par défaut est **true**. Les clés primaires identifient de manière unique chaque ligne d'une table. Pour plus d'informations, consultez [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md).  
+5.  **Publier les clés primaires** -comprend la création de clés primaires dans le processus de publication. La valeur par défaut est **True**. Les clés primaires identifient de manière unique chaque ligne d'une table. Pour plus d'informations, consultez [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md).  
   
 6.  **Publier les déclencheurs** -comprend la création de déclencheurs DML dans le processus de publication. La valeur par défaut est **true**. Un déclencheur DML est une action programmée pour s'exécuter lorsqu'un événement de langage de manipulation de données (DML, Data Manipulation Language) se produit sur le serveur de base de données. Pour plus d'informations, consultez [DML Triggers](../triggers/dml-triggers.md).  
   
@@ -337,6 +337,6 @@ ms.locfileid: "75242112"
   
 ## <a name="see-also"></a>Voir aussi  
  [Installation de SMO](../server-management-objects-smo/installing-smo.md)   
- [Copier des bases de données sur d'autres serveurs](../databases/copy-databases-to-other-servers.md)  
+ [Copier des bases de données sur d’autres serveurs](../databases/copy-databases-to-other-servers.md)  
   
   

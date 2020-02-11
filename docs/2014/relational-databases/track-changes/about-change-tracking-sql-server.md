@@ -17,14 +17,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62670919"
 ---
 # <a name="about-change-tracking-sql-server"></a>À propos du suivi des modifications (SQL Server)
-  Le suivi des modifications est une solution légère qui fournit un mécanisme efficace de suivi des modifications pour les applications. En règle générale, les développeurs d’applications devaient implémenter des mécanismes personnalisés de suivi des modifications pour permettre aux applications d’effectuer des requêtes portant sur les modifications apportées aux données d’une base de données et d’accéder aux informations liées à ces modifications. Création de ces mécanismes demandait beaucoup de travail et fréquemment à l’aide d’une combinaison de déclencheurs, `timestamp` colonnes, de nouvelles tables pour stocker les informations de suivi et processus de nettoyage personnalisés.  
+  Le suivi des modifications est une solution légère qui fournit un mécanisme efficace de suivi des modifications pour les applications. En règle générale, les développeurs d’applications devaient implémenter des mécanismes personnalisés de suivi des modifications pour permettre aux applications d’effectuer des requêtes portant sur les modifications apportées aux données d’une base de données et d’accéder aux informations liées à ces modifications. La création de ces mécanismes impliquait généralement un grand nombre de travaux et implique souvent l’utilisation d' `timestamp` une combinaison de déclencheurs, de colonnes, de nouvelles tables pour stocker les informations de suivi et de processus de nettoyage personnalisés.  
   
  La quantité d'informations relatives aux modifications varie selon les types d'applications. Les applications peuvent utiliser le suivi des modifications pour répondre aux questions suivantes sur les modifications apportées à une table utilisateur :  
   
